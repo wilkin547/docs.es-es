@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: imprimir gráficos'
+title: 'Cómo: Imprimir gráficos'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - graphics [Windows Forms], printing
 - printing [Windows Forms], graphics
 ms.assetid: 32b891e6-52ff-4fea-a9ff-2ce5db20a4c6
-ms.openlocfilehash: 2435b3bc14747a00d2a0fc03a9ebd21ae43c5369
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 15f3a507839430ce058302e7f5abd317ef84626f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740640"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182537"
 ---
-# <a name="how-to-print-graphics-in-windows-forms"></a>Impresión de gráficos en Windows Forms
-Con frecuencia, querrá imprimir gráficos en la aplicación basada en Windows. La clase <xref:System.Drawing.Graphics> proporciona métodos para dibujar objetos en un dispositivo, como una pantalla o una impresora.  
+# <a name="how-to-print-graphics-in-windows-forms"></a>Cómo: Imprimir gráficos en formularios Windows Forms
+Con frecuencia, querrá imprimir gráficos en su aplicación basada en Windows. La <xref:System.Drawing.Graphics> clase proporciona métodos para dibujar objetos en un dispositivo, como una pantalla o una impresora.  
   
 ### <a name="to-print-graphics"></a>Para imprimir gráficos  
   
-1. Agregue un componente de <xref:System.Drawing.Printing.PrintDocument> al formulario.  
+1. Agregue <xref:System.Drawing.Printing.PrintDocument> un componente al formulario.  
   
-2. En el controlador de eventos <xref:System.Drawing.Printing.PrintDocument.PrintPage>, utilice la propiedad <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> de la clase <xref:System.Drawing.Printing.PrintPageEventArgs> para indicar a la impresora qué tipo de gráficos imprimir.  
+2. En <xref:System.Drawing.Printing.PrintDocument.PrintPage> el controlador de <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> eventos, <xref:System.Drawing.Printing.PrintPageEventArgs> utilice la propiedad de la clase para indicar a la impresora qué tipo de gráficos imprimir.  
   
-     En el ejemplo de código siguiente se muestra un controlador de eventos que se usa para crear una elipse azul dentro de un rectángulo delimitador. El rectángulo tiene la siguiente ubicación y dimensiones: a partir de 100, 150 con un ancho de 250 y un alto de 250.  
+     En el ejemplo de código siguiente se muestra un controlador de eventos utilizado para crear una elipse azul dentro de un rectángulo delimitador. El rectángulo tiene la siguiente ubicación y dimensiones: comenzando en 100, 150 con un ancho de 250 y una altura de 250.  
   
     ```vb  
     Private Sub PrintDocument1_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage  
@@ -34,10 +34,10 @@ Con frecuencia, querrá imprimir gráficos en la aplicación basada en Windows. 
     ```  
   
     ```csharp  
-    private void printDocument1_PrintPage(object sender,   
+    private void printDocument1_PrintPage(object sender,
     System.Drawing.Printing.PrintPageEventArgs e)  
     {  
-       e.Graphics.FillRectangle(Brushes.Blue,   
+       e.Graphics.FillRectangle(Brushes.Blue,
          new Rectangle(100, 150, 250, 250));  
     }  
     ```  
@@ -52,7 +52,7 @@ Con frecuencia, querrá imprimir gráficos en la aplicación basada en Windows. 
        }  
     ```  
   
-     (Visual C# y visual C++) Coloque el siguiente código en el constructor del formulario para registrar el controlador de eventos.  
+     (Visual C- y Visual C++) Coloque el código siguiente en el constructor del formulario para registrar el controlador de eventos.  
   
     ```csharp  
     this.printDocument1.PrintPage += new  
@@ -70,4 +70,4 @@ Con frecuencia, querrá imprimir gráficos en la aplicación basada en Windows. 
 
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Brush>
-- [Windows Forms Print Support](windows-forms-print-support.md) (Funcionalidad para imprimir en Windows Forms)
+- [Funcionalidad para imprimir en formularios Windows Forms](windows-forms-print-support.md)

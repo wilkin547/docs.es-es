@@ -2,26 +2,26 @@
 title: Control de mensajes dudosos en MSMQ 4,0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: 0a9d4ec9657bacdbcb1273791dc7a593a9565c25
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 4b662094923c85e825edcc9025a73f1a1b42cb9b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094961"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144245"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Control de mensajes dudosos en MSMQ 4,0
-Este ejemplo muestra cómo administrar los mensajes dudosos en un servicio. Este ejemplo se basa en el ejemplo de [enlace de MSMQ de transacciones](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) . Este ejemplo utiliza `netMsmqBinding`. El servicio es una aplicación de consola autohospedada que le permite observar el servicio que recibe los mensajes en cola.
+Este ejemplo muestra cómo administrar los mensajes dudosos en un servicio. Este ejemplo se basa en el [Transacted MSMQ Binding](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) ejemplo. Este ejemplo utiliza `netMsmqBinding`. El servicio es una aplicación de consola autohospedada que le permite observar el servicio que recibe los mensajes en cola.
 
  En la comunicación con colas, el cliente se comunica con el servicio mediante una cola. Más exactamente, el cliente envía los mensajes a una cola. El servicio recibe los mensajes de la cola. El servicio y el cliente no necesitan ejecutarse simultáneamente para comunicarse mediante una cola.
 
- Un mensaje dudoso es aquel que se lee repetidamente desde una cola cuando el servicio que lo lee no puede procesarlo y, por consiguiente, termina la transacción en la que se lee el mensaje. En tales casos, se intenta de nuevo leer el mensaje. En teoría, esta acción puede continuar indefinidamente si hay un problema con el mensaje. Esto solo puede ocurrir cuando se usan transacciones para leer de la cola e invocar la operación de servicio.
+ Un mensaje dudoso es aquel que se lee repetidamente desde una cola cuando el servicio que lo lee no puede procesarlo y, por consiguiente, termina la transacción en la que se lee el mensaje. En tales casos, se intenta de nuevo leer el mensaje. En teoría, esta acción puede continuar indefinidamente si hay un problema con el mensaje. Esto solo puede ocurrir cuando se utilizan transacciones para leer desde la cola e invocar la operación de servicio.
 
  Según la versión de MSMQ, NetMsmqBinding admite la detección limitada para detectar los mensajes dudosos. Una vez detectado el mensaje como dudoso, podrá administrarse de varias maneras. De nuevo, según la versión de MSMQ, NetMsmqBinding admite desde el manejo limitado hasta un manejo completo de mensajes dudosos.
 
- En este ejemplo se muestran las instalaciones limitadas de envenenamiento proporcionadas en la plataforma Windows Server 2003 y Windows XP, así como las funciones de envenenamiento completo que se proporcionan en Windows Vista. En ambos ejemplos, el objetivo es trasladar el mensaje dudoso fuera de la cola a otra cola. Después, un servicio de mensajes dudosos puede atender a esa cola.
+ Este ejemplo ilustra las instalaciones de veneno limitado proporcionadas en la plataforma Windows Server 2003 y Windows XP y las instalaciones completas de veneno proporcionadas en Windows Vista. En ambos ejemplos, el objetivo es mover el mensaje dudoso fuera de la cola a otra cola. A continuación, un servicio de mensajes dudosos puede reparar esa cola.
 
 ## <a name="msmq-v40-poison-handling-sample"></a>MSMQ v4.0 Ejemplo de Manejo de Mensajes Dudosos
- En Windows Vista, MSMQ proporciona una utilidad de subcola dudoso que se puede usar para almacenar mensajes dudosos. Este ejemplo muestra el procedimiento recomendado para tratar los mensajes dudosos mediante Windows Vista.
+ En Windows Vista, MSMQ proporciona una instalación de subcola de veneno que se puede usar para almacenar mensajes dudosos. En este ejemplo se muestra la práctica recomendada de tratar con mensajes dudosos mediante Windows Vista.
 
  La detección de mensajes dudosos en Windows Vista es sofisticada. Hay 3 propiedades que ayudan con la detección. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> es el número de veces que un mensaje determinado se relee de la cola y se envía a la aplicación para ser procesado. Un mensaje se relee de la cola cuando se pone de nuevo en la cola porque el mensaje no se puede enviar a la aplicación o la aplicación revierte la transacción en la operación del servicio. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> es el número de veces que el mensaje se mueve a la cola de reintento. Cuando se localiza <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A>, el mensaje se mueve a la cola de reintento. La propiedad <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> es el retraso tras el que el mensaje se devuelve de la cola de reintento a la cola principal. La propiedad <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> se restablece en 0. El mensaje se vuelve a intentar. Si se ha producir un error en todos los intentos para leer el mensaje, entonces el mensaje se marca como dudoso.
 
@@ -31,11 +31,11 @@ Este ejemplo muestra cómo administrar los mensajes dudosos en un servicio. Este
 
 - Drop: para quitar el mensaje.
 
-- Move: para pasar el mensaje a la subcola de mensajes dudosos. Este valor solo está disponible en Windows Vista.
+- Mover: para mover el mensaje a la subcola de mensajes dudosos. Este valor solo está disponible en Windows Vista.
 
 - Reject: para rechazar el mensaje, devolviéndolo a la cola de mensajes con problemas de entrega del remitente. Este valor solo está disponible en Windows Vista.
 
- El ejemplo muestra cómo usar el desecho de `Move` para el mensaje dudoso. `Move` hace que el mensaje se mueva a la subcola de mensajes dudosos.
+ El ejemplo muestra cómo usar el desecho de `Move` para el mensaje dudoso. `Move`hace que el mensaje se mueva a la subcola de veneno.
 
  El contrato de servicio es `IOrderProcessor`, que define un servicio unidireccional que es adecuado para usarse con colas.
 
@@ -48,7 +48,7 @@ public interface IOrderProcessor
 }
 ```
 
- La operación de servicio muestra un mensaje que indica que está procesando la orden. Para mostrar la funcionalidad del mensaje dudoso, la operación de servicio `SubmitPurchaseOrder` produce una excepción para revertir la transacción en una invocación aleatoria del servicio. Esto provoca que el mensaje se vuelva a poner en la cola. Finalmente, el mensaje se marca como dudoso. La configuración se establece para trasladar el mensaje dudoso a la subcola de mensajes dudosos.
+ La operación de servicio muestra un mensaje que indica que está procesando la orden. Para demostrar la funcionalidad del `SubmitPurchaseOrder` mensaje dudoso, la operación de servicio produce una excepción para revertir la transacción en una invocación aleatoria del servicio. Esto provoca que el mensaje se vuelva a poner en la cola. Finalmente, el mensaje se marca como dudoso. La configuración se establece para mover el mensaje dudoso a la subcola de veneno.
 
 ```csharp
 // Service class that implements the service contract.
@@ -157,7 +157,7 @@ public class OrderProcessorService : IOrderProcessor
 ## <a name="processing-messages-from-the-poison-message-queue"></a>Procesamiento de los mensajes de la cola de mensajes dudosos
  El servicio de mensajes dudosos lee los mensajes desde la cola de mensajes dudosos final y los procesa.
 
- Los mensajes en la cola de mensajes dudosos son los que se dirigen al servicio que está procesando el mensaje, que podría ser diferente del extremo de servicio de mensajes dudosos. Por lo tanto, cuando el servicio de mensajes dudosos Lee los mensajes de la cola, el nivel de canal de WCF encuentra la desigualdad en los extremos y no envía el mensaje. En este caso, el mensaje se dirige al servicio de procesamiento de pedidos pero está siendo recibido por el servicio de mensajes dudosos. Para continuar recibiendo el mensaje aun cuando se dirige a un punto de conexión diferente, debemos agregar `ServiceBehavior` para filtrar las direcciones en las que el criterio de coincidencia sea coincidir con cualquier punto de conexión de servicio al que se dirija el mensaje. Esto es necesario para procesar correctamente los mensajes que lee desde la cola de mensajes dudosos.
+ Los mensajes en la cola de mensajes dudosos son los que se dirigen al servicio que está procesando el mensaje, que podría ser diferente del extremo de servicio de mensajes dudosos. Por lo tanto, cuando el servicio de mensajes dudosos lee los mensajes de la cola, la capa de canal WCF encuentra la discordancia en los extremos y no distribuye el mensaje. En este caso, el mensaje se dirige al servicio de procesamiento de pedidos pero está siendo recibido por el servicio de mensajes dudosos. Para continuar recibiendo el mensaje aun cuando se dirige a un punto de conexión diferente, debemos agregar `ServiceBehavior` para filtrar las direcciones en las que el criterio de coincidencia sea coincidir con cualquier punto de conexión de servicio al que se dirija el mensaje. Esto es necesario para procesar correctamente los mensajes que lee desde la cola de mensajes dudosos.
 
  La propia implementación de servicio de los mensajes dudosos es muy similar a la implementación del servicio. Implementa el contrato y procesa los pedidos. El ejemplo de código es el siguiente.
 
@@ -206,7 +206,7 @@ public class OrderProcessorService : IOrderProcessor
     }
 ```
 
- A diferencia del servicio de procesamiento de pedidos que lee los mensajes de la cola de pedidos, el servicio de mensajes dudosos Lee los mensajes de la subcola de mensajes dudosos. La cola de mensajes dudosos es una subcola de la cola principal, se denomina "dudoso" y MSMQ la genera automáticamente. Para obtener acceso a él, proporcione el nombre de la cola principal seguido de un ";" y el nombre de la subcola, en este caso, "dudoso", como se muestra en la configuración del ejemplo siguiente.
+ A diferencia del servicio de procesamiento de pedidos que lee los mensajes de la cola de pedidos, el servicio de mensajes dudosos lee los mensajes de la subcola de toxicología. La cola de veneno es una subcola de la cola principal, se denomina "veneno" y MSMQ la genera automáticamente. Para acceder a él, proporcione el nombre de la cola principal seguido de un ";" y el nombre de la subcola, en este caso -"poison", como se muestra en la siguiente configuración de ejemplo.
 
 > [!NOTE]
 > En el ejemplo para MSMQ v3.0, el nombre de la cola de mensajes dudosos no es ninguna subcola, sino la cola a la que movimos el mensaje.
@@ -273,23 +273,23 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo
 
-1. Asegúrese de que ha realizado el [procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Asegúrese de que ha realizado el procedimiento de instalación única [para los ejemplos](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)de Windows Communication Foundation .
 
 2. Si se ejecuta el servicio primero, comprobará que la cola esté presente. Si la cola no está presente, el servicio creará una. Puede ejecutar primero el servicio para crear la cola, o puede crear una a través del administrador de cola de MSMQ. Siga estos pasos para crear una cola en Windows 2008.
 
-    1. Abra Administrador del servidor en Visual Studio 2012.
+    1. Abra el Administrador del servidor en Visual Studio 2012.
 
-    2. Expanda la pestaña **características** .
+    2. Expanda la pestaña **Características.**
 
-    3. Haga clic con el botón secundario en **colas de mensajes privadas**y seleccione **nuevo**, **cola privada**.
+    3. Haga clic con el botón derecho en Colas de mensajes **privadas**y seleccione **Nuevo**, **Cola privada**.
 
-    4. Active la casilla **transaccional** .
+    4. Marque la casilla **Transaccional.**
 
     5. Escriba `ServiceModelSamplesTransacted` como nombre de la nueva cola.
 
 3. Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-4. Para ejecutar el ejemplo en una configuración de un solo equipo o entre equipos, cambie los nombres de cola para que reflejen el nombre de host real en lugar del host local y siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+4. Para ejecutar el ejemplo en una configuración de un equipo o entre equipos, cambie los nombres de cola para reflejar el nombre de host real en lugar de localhost y siga las instrucciones de Ejecución de los ejemplos de [Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
  De forma predeterminada, con el transporte de enlace `netMsmqBinding`, la seguridad está habilitada. Dos propiedades, `MsmqAuthenticationMode` y `MsmqProtectionLevel`, determinan juntas el tipo de seguridad de transporte. De manera predeterminada, el modo de autenticación está definido en `Windows` y el nivel de protección está definido en `Sign`. Para MSMQ, proporcionar la característica de autenticación y firma, debe formar parte de un dominio. Si ejecuta este ejemplo en un equipo que no forma parte de un dominio, recibirá el error siguiente: "No existe el certificado de Message Queuing interno del usuario".
 
@@ -314,13 +314,13 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
     > [!NOTE]
     > Establecer `security mode` en `None` es equivalente a definir la seguridad de `MsmqAuthenticationMode`, `MsmqProtectionLevel` y `Message` en `None`.  
   
-3. Para que el intercambio de metadatos para funcionar, registramos una dirección URL con enlace de http. Esto requiere que el servicio se ejecute en una ventana de comandos elevada. De lo contrario, obtendrá una excepción como: `Unhandled Exception: System.ServiceModel.AddressAccessDeniedException: HTTP could not register URL http://+:8000/ServiceModelSamples/service/. Your process does not have access rights to this namespace (see https://go.microsoft.com/fwlink/?LinkId=70353 for details). ---> System.Net.HttpListenerException: Access is denied`.  
+3. Para que el intercambio de metadatos para funcionar, registramos una dirección URL con enlace de http. Esto requiere que el servicio se ejecute en una ventana de comandos elevada. De lo contrario, obtendrá `Unhandled Exception: System.ServiceModel.AddressAccessDeniedException: HTTP could not register URL http://+:8000/ServiceModelSamples/service/. Your process does not have access rights to this namespace (see https://go.microsoft.com/fwlink/?LinkId=70353 for details). ---> System.Net.HttpListenerException: Access is denied`una excepción como: .  
   
 > [!IMPORTANT]
 > Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
->   
+>
+> Si este directorio no existe, vaya a Ejemplos de [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (WCF). Este ejemplo se encuentra en el siguiente directorio.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Poison\MSMQ4`

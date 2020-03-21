@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Supervisar de forma remota el estado de las impresoras
+title: 'Cómo: Supervisar de forma remota el estado de las impresoras'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - remotely surveying printer status [WPF]
 - status [WPF], printers [WPF], surveying remotely
 ms.assetid: d6324759-8292-4c23-9584-9c708887dc94
-ms.openlocfilehash: 0a7756684d5a133fa9cb014f109d14e413223ea9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 859ccb703c6c54c66d6ea7b433c67d156627e25b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69945224"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187035"
 ---
-# <a name="how-to-remotely-survey-the-status-of-printers"></a>Procedimiento Supervisar de forma remota el estado de las impresoras
-En un momento dado, en las empresas de tamaño medio y grande puede haber varias impresoras que no funcionen debido a un atasco del papel, que se queden sin papel y otras situaciones problemáticas. El amplio conjunto de propiedades de impresora expuestas en las API de Microsoft .NET Framework proporciona un medio para realizar una encuesta rápida de los Estados de las impresoras.  
+# <a name="how-to-remotely-survey-the-status-of-printers"></a>Cómo: Supervisar de forma remota el estado de las impresoras
+En un momento dado, en las empresas de tamaño medio y grande puede haber varias impresoras que no funcionen debido a un atasco del papel, que se queden sin papel y otras situaciones problemáticas. El amplio conjunto de propiedades de impresora expuestas en las API de Microsoft .NET Framework proporcionan un medio para realizar una encuesta rápida de los estados de las impresoras.  
   
 ## <a name="example"></a>Ejemplo  
  Los pasos principales para crear este tipo de utilidad son los siguientes.  
@@ -30,20 +30,20 @@ En un momento dado, en las empresas de tamaño medio y grande puede haber varias
   
 3. Dentro de cada paso del bucle de servidor, recorra en iteración todas las colas del servidor y lea cada propiedad que podría indicar que la cola no está funcionando actualmente.  
   
- El código siguiente es una serie de fragmentos de código. Para simplificar, en este ejemplo se da por hecho que hay una lista delimitada por CRLF de servidores de impresión. La variable `fileOfPrintServers` es un <xref:System.IO.StreamReader> objeto para este archivo. Puesto que cada nombre de servidor se encuentra en su propia línea, <xref:System.IO.StreamReader.ReadLine%2A> cualquier llamada de obtiene el nombre del siguiente servidor y <xref:System.IO.StreamReader>mueve el cursor al principio de la línea siguiente.  
+ El código siguiente es una serie de fragmentos de código. Para simplificar, en este ejemplo se da por hecho que hay una lista delimitada por CRLF de servidores de impresión. La `fileOfPrintServers` variable <xref:System.IO.StreamReader> es un objeto para este archivo. Puesto que cada nombre de servidor está <xref:System.IO.StreamReader.ReadLine%2A> en su propia línea, cualquier <xref:System.IO.StreamReader>llamada de obtiene el nombre del siguiente servidor y mueve el cursor 's al principio de la siguiente línea.  
   
- Dentro del bucle exterior, el código crea un <xref:System.Printing.PrintServer> objeto para el servidor de impresión más reciente y especifica que la aplicación debe tener derechos administrativos en el servidor.  
+ Dentro del bucle externo, <xref:System.Printing.PrintServer> el código crea un objeto para el servidor de impresión más reciente y especifica que la aplicación debe tener derechos administrativos para el servidor.  
   
 > [!NOTE]
-> Si hay muchos servidores, puede mejorar el rendimiento mediante el uso de los <xref:System.Printing.PrintServer.%23ctor%28System.String%2CSystem.String%5B%5D%2CSystem.Printing.PrintSystemDesiredAccess%29> constructores que solo inicializan las propiedades que va a necesitar.  
+> Si hay muchos servidores, puede mejorar el <xref:System.Printing.PrintServer.%23ctor%28System.String%2CSystem.String%5B%5D%2CSystem.Printing.PrintSystemDesiredAccess%29> rendimiento mediante los constructores que solo inicializan las propiedades que va a necesitar.  
   
- A continuación, en <xref:System.Printing.PrintServer.GetPrintQueues%2A> el ejemplo se usa para crear una colección de todas las colas del servidor y se empieza a recorrer en bucle. Este bucle interno contiene una estructura de bifurcación correspondiente a las dos maneras de comprobar el estado de la impresora:  
+ A continuación, <xref:System.Printing.PrintServer.GetPrintQueues%2A> el ejemplo se utiliza para crear una colección de todas las colas del servidor y comienza a recorrerlas en bucle. Este bucle interno contiene una estructura de bifurcación correspondiente a las dos maneras de comprobar el estado de la impresora:  
   
-- Puede leer las marcas de la <xref:System.Printing.PrintQueue.QueueStatus%2A> propiedad que es del tipo. <xref:System.Printing.PrintQueueStatus>  
+- Puede leer las marcas <xref:System.Printing.PrintQueue.QueueStatus%2A> de la <xref:System.Printing.PrintQueueStatus>propiedad que es de tipo .  
   
-- Puede leer cada propiedad pertinente como <xref:System.Printing.PrintQueue.IsOutOfPaper%2A>, y. <xref:System.Printing.PrintQueue.IsPaperJammed%2A>  
+- Puede leer cada propiedad <xref:System.Printing.PrintQueue.IsOutOfPaper%2A>relevante, <xref:System.Printing.PrintQueue.IsPaperJammed%2A>como , y .  
   
- En este ejemplo se muestran ambos métodos, por lo que al usuario se le había solicitado previamente el método para usar y respondió con "y" si quisiera usar las marcas de la <xref:System.Printing.PrintQueue.QueueStatus%2A> propiedad. A continuación encontrará los detalles de los dos métodos.  
+ En este ejemplo se muestran ambos métodos, por lo que se solicitaba previamente al usuario <xref:System.Printing.PrintQueue.QueueStatus%2A> qué método usar y respondía con "y" si quería usar las marcas de la propiedad. A continuación encontrará los detalles de los dos métodos.  
   
  Por último, los resultados se presentan al usuario.  
   
@@ -51,7 +51,7 @@ En un momento dado, en las empresas de tamaño medio y grande puede haber varias
  [!code-csharp[PrinterStatusSurvey#SurveyQueues](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#surveyqueues)]
  [!code-vb[PrinterStatusSurvey#SurveyQueues](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#surveyqueues)]  
   
- Para comprobar el estado de la impresora mediante las <xref:System.Printing.PrintQueue.QueueStatus%2A> marcas de la propiedad, compruebe cada marca pertinente para ver si está establecida. El modo estándar para ver si un bit se establece en un conjunto de marcadores de bits es realizar una operación AND lógica con el conjunto de marcadores como uno de los operandos y la propia marca como el otro. Puesto que el propio marcador solo tiene un bit establecido, el resultado del operador lógico AND es que, como máximo, se establezca ese mismo bit. Para averiguar si esto ocurre o no, basta con comparar el resultado del operador lógico AND y el propio marcador. Para obtener más información, <xref:System.Printing.PrintQueueStatus>vea, el [operador deC# & (referencia)](../../../csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)y. <xref:System.FlagsAttribute>  
+ Para comprobar el estado de <xref:System.Printing.PrintQueue.QueueStatus%2A> la impresora mediante las marcas de la propiedad, compruebe cada marca relevante para ver si está establecida. El modo estándar para ver si un bit se establece en un conjunto de marcadores de bits es realizar una operación AND lógica con el conjunto de marcadores como uno de los operandos y la propia marca como el otro. Puesto que el propio marcador solo tiene un bit establecido, el resultado del operador lógico AND es que, como máximo, se establezca ese mismo bit. Para averiguar si esto ocurre o no, basta con comparar el resultado del operador lógico AND y el propio marcador. Para obtener más <xref:System.Printing.PrintQueueStatus>información, vea , el operador <xref:System.FlagsAttribute>de& (referencia de [C)](../../../csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)y .  
   
  Para cada atributo cuyo bit esté establecido, el código agrega un aviso al informe final que se presentará al usuario. (Se trata a continuación el método **ReportAvailabilityAtThisTime** que se llama al final del código).  
   
@@ -67,13 +67,13 @@ En un momento dado, en las empresas de tamaño medio y grande puede haber varias
   
  El método **ReportAvailabilityAtThisTime** se creó por si necesita determinar si la cola está disponible en el momento actual del día.  
   
- El método no hará nada si las <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> propiedades <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> y son iguales, porque en ese caso la impresora está disponible en todo momento. Si son diferentes, el método obtiene la hora actual que se debe convertir en los minutos totales anteriores a la medianoche porque las <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> propiedades <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> y son <xref:System.Int32>s que representan los minutos-después de la <xref:System.DateTime> medianoche, no los. Por último, el método comprueba si la hora actual se encuentra entre el inicio y las horas "hasta".  
+ El método no hará <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> nada si las propiedades son iguales; porque en ese caso la impresora está disponible en todo momento. Si son diferentes, el método obtiene la hora actual que, a continuación, <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> tiene <xref:System.Int32>que convertirse en minutos <xref:System.DateTime> totales después de la medianoche porque las <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> propiedades son s que representan minutos después de la medianoche, no objetos. Por último, el método comprueba si la hora actual se encuentra entre el inicio y las horas "hasta".  
   
  [!code-cpp[PrinterStatusSurvey#UsingStartAndUntilTimes](~/samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#usingstartanduntiltimes)]
  [!code-csharp[PrinterStatusSurvey#UsingStartAndUntilTimes](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#usingstartanduntiltimes)]
  [!code-vb[PrinterStatusSurvey#UsingStartAndUntilTimes](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#usingstartanduntiltimes)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Printing.PrintQueue.StartTimeOfDay%2A>
 - <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A>
@@ -85,6 +85,6 @@ En un momento dado, en las empresas de tamaño medio y grande puede haber varias
 - <xref:System.Printing.LocalPrintServer>
 - <xref:System.Printing.EnumeratedPrintQueueTypes>
 - <xref:System.Printing.PrintQueue>
-- [Operador & (C# referencia)](../../../csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)
+- [Operador de& (referencia de C)](../../../csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)
 - [Documentos en WPF](documents-in-wpf.md)
 - [Información general sobre impresión](printing-overview.md)

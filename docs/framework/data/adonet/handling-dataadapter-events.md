@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
-ms.openlocfilehash: 8438a7b54ca19625687ab96386384cf62ae62d11
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d01198d158c4e1c64f12e8a0756c3d4e599fce74
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783799"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149549"
 ---
 # <a name="handling-dataadapter-events"></a>Controlar eventos de DataAdapter
 <xref:System.Data.Common.DataAdapter> de ADO.NET expone tres eventos que se pueden utilizar para responder a los cambios efectuados en los datos en el origen. En la siguiente tabla se muestran los eventos de `DataAdapter`.  
   
-|Evento|DESCRIPCIÓN|  
+|Evento|Descripción|  
 |-----------|-----------------|  
 |`RowUpdating`|Está a punto de comenzar una operación UPDATE, INSERT o DELETE en una fila (mediante una llamada a uno de los métodos `Update`).|  
 |`RowUpdated`|Se ha completado una operación UPDATE, INSERT o DELETE en una fila (mediante una llamada a uno de los métodos `Update`).|  
@@ -28,7 +28,7 @@ ms.locfileid: "70783799"
   
  Puede utilizar la propiedad `Status` para determinar si se ha producido o no un error durante la operación y, si lo desea, controlar las acciones que se emprenden en las filas actuales y las resultantes de la operación. Cuando se produce el evento, la propiedad `Status` toma el valor `Continue` o `ErrorsOccurred`. En la tabla siguiente se muestran los valores que se pueden asignar a la propiedad `Status` para controlar las acciones posteriores en el proceso de actualización.  
   
-|Status|DESCRIPCIÓN|  
+|Status|Descripción|  
 |------------|-----------------|  
 |`Continue`|Continuar la operación de actualización.|  
 |`ErrorsOccurred`|Anular la operación de actualización e iniciar una excepción.|  
@@ -39,7 +39,7 @@ ms.locfileid: "70783799"
   
  También puede utilizar la propiedad `ContinueUpdateOnError` para controlar los errores producidos en las filas actualizadas. Cuando `DataAdapter.ContinueUpdateOnError` tiene el valor `true` y la actualización de una fila inicia una excepción, el texto de la excepción se coloca en la información `RowError` de la fila en cuestión y el proceso continúa sin que se inicie una excepción. De esta forma, puede responder a los errores cuando se complete el proceso `Update`, a diferencia del evento `RowUpdated`, que permite responder a los errores cuando se detectan.  
   
- En el ejemplo de código siguiente se muestra cómo se pueden agregar y quitar controladores de eventos. El controlador de eventos `RowUpdating` mantiene un registro de todos los registros eliminados y una marca de tiempo asociada a cada uno de ellos. El `RowUpdated` controlador de eventos agrega información `DataSet`de error `RowError` a la propiedad de la fila de, suprime la excepción y continúa el procesamiento (creación de reflejo del `ContinueUpdateOnError`comportamiento de  =  `true`).  
+ En el ejemplo de código siguiente se muestra cómo se pueden agregar y quitar controladores de eventos. El controlador de eventos `RowUpdating` mantiene un registro de todos los registros eliminados y una marca de tiempo asociada a cada uno de ellos. El `RowUpdated` controlador de eventos agrega `RowError` información de error `DataSet`a la propiedad de la fila en `ContinueUpdateOnError`  =  `true`el , suprime la excepción y continúa el procesamiento (reflejando el comportamiento de ).  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection object.  
@@ -107,7 +107,7 @@ protected static void OnRowUpdating(
   {  
     System.IO.TextWriter tw = System.IO.File.AppendText("Deletes.log");  
     tw.WriteLine(  
-      "{0}: Customer {1} Deleted.", DateTime.Now,   
+      "{0}: Customer {1} Deleted.", DateTime.Now,
        args.Row["CustomerID", DataRowVersion.Original]);  
     tw.Close();  
   }  
@@ -131,7 +131,7 @@ protected static void OnRowUpdated(
   
  El objeto `FillErrorEventArgs` que se pasa al evento `FillError` puede contener varias propiedades que permiten reaccionar en caso de errores y resolverlos. En la tabla siguiente se muestran las propiedades del objeto `FillErrorEventArgs`.  
   
-|Propiedad|DESCRIPCIÓN|  
+|Propiedad|Descripción|  
 |--------------|-----------------|  
 |`Errors`|`Exception` que se ha producido.|  
 |`DataTable`|Objeto `DataTable` que se estaba llenando cuando ocurrió el error.|  
@@ -178,7 +178,7 @@ protected static void FillError(object sender, FillErrorEventArgs args)
     DataRow myRow = args.DataTable.Rows.Add(new object[]  
        {args.Values[0], args.Values[1], DBNull.Value});  
     //Set the RowError containing the value for the third column.  
-    myRow.RowError =   
+    myRow.RowError =
        "OverflowException Encountered. Value from data source: " +  
        args.Values[2];  
     args.Continue = true;  
@@ -186,10 +186,10 @@ protected static void FillError(object sender, FillErrorEventArgs args)
 }  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Objetos DataAdapter y DataReader](dataadapters-and-datareaders.md)
 - [Controlar eventos de DataSet](./dataset-datatable-dataview/handling-dataset-events.md)
 - [Control de eventos de DataTable](./dataset-datatable-dataview/handling-datatable-events.md)
 - [Eventos](../../../standard/events/index.md)
-- [Información general sobre ADO.NET](ado-net-overview.md)
+- [Información general de ADO.NET](ado-net-overview.md)

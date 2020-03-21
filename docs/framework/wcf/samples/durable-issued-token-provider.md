@@ -2,22 +2,22 @@
 title: Proveedor de token emitido duradero
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 62e4cca50e9a2fbbf319d66fbe85cec6cdb73b23
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 08c6837f45ba1c422cdc3df2c884aa81b50a7f2b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716458"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144752"
 ---
 # <a name="durable-issued-token-provider"></a>Proveedor de token emitido duradero
 Este ejemplo muestra cómo implementar un proveedor personalizado de tokens emitidos por el cliente.  
   
 ## <a name="discussion"></a>Discusión  
- Un proveedor de tokens en Windows Communication Foundation (WCF) se usa para proporcionar credenciales a la infraestructura de seguridad. En general, el proveedor de tokens examina el destino y emite las credenciales adecuadas de manera que la infraestructura de seguridad pueda proteger el mensaje. WCF se suministra con un proveedor de tokens de CardSpace. Los proveedores de tokens personalizados son útiles en los casos siguientes:  
+ Un proveedor de tokens en Windows Communication Foundation (WCF) se usa para proporcionar credenciales a la infraestructura de seguridad. En general, el proveedor de tokens examina el destino y emite las credenciales adecuadas de manera que la infraestructura de seguridad pueda proteger el mensaje. WCF se suministra con un proveedor de tokens CardSpace. Los proveedores de tokens personalizados son útiles en los casos siguientes:  
   
 - Si tiene un almacén de credenciales con el que el proveedor de tokens integrado no puede funcionar.  
   
-- Si desea proporcionar su propio mecanismo personalizado para transformar las credenciales desde el punto en el que el usuario proporciona detalles cuando el cliente de WCF usa las credenciales.  
+- Si desea proporcionar su propio mecanismo personalizado para transformar las credenciales desde el punto cuando el usuario proporciona los detalles a cuando el cliente WCF usa las credenciales.  
   
 - Si está creando un token personalizado.  
   
@@ -27,7 +27,7 @@ Este ejemplo muestra cómo implementar un proveedor personalizado de tokens emit
   
 - Cómo se puede configurar un cliente con un proveedor de tokens personalizado.  
   
-- Cómo se pueden almacenar en caché y proporcionar los tokens emitidos al cliente WCF.  
+- Cómo se pueden almacenar en caché y proporcionar tokens emitidos al cliente WCF.  
   
 - Cómo el cliente autentica el servidor usando el certificado X.509 del servidor.  
   
@@ -36,16 +36,16 @@ Este ejemplo muestra cómo implementar un proveedor personalizado de tokens emit
 > [!NOTE]
 > El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
   
- Este ejemplo expone el contrato de ICalculator mediante el [\<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). La configuración de este enlace en el cliente se muestra en el código siguiente.  
+ En este ejemplo se expone el contrato ICalculator mediante el [ \<>wsHttpBinding ](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). La configuración de este enlace en el cliente se muestra en el código siguiente.  
   
 ```xml  
 <bindings>
   <wsFederationHttpBinding>
     <binding name="ServiceFed">
       <security mode="Message">
-        <message issuedKeyType="SymmetricKey" 
+        <message issuedKeyType="SymmetricKey"
                  issuedTokenType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1">
-          <issuer address="http://localhost:8000/sts/windows" 
+          <issuer address="http://localhost:8000/sts/windows"
                   binding="wsHttpBinding" />
         </message>
       </security>
@@ -63,13 +63,13 @@ Este ejemplo muestra cómo implementar un proveedor personalizado de tokens emit
   <wsFederationHttpBinding>
     <binding name="ServiceFed">
       <security mode="Message">
-        <message issuedKeyType="SymmetricKey" 
+        <message issuedKeyType="SymmetricKey"
                  issuedTokenType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1">
           <issuerMetadata address="http://localhost:8000/sts/mex">
             <identity>
-              <certificateReference storeLocation="CurrentUser" 
-                                    storeName="TrustedPeople" 
-                                    x509FindType="FindBySubjectDistinguishedName" 
+              <certificateReference storeLocation="CurrentUser"
+                                    storeName="TrustedPeople"
+                                    x509FindType="FindBySubjectDistinguishedName"
                                     findValue="CN=STS" />
             </identity>
           </issuerMetadata>
@@ -91,15 +91,15 @@ Este ejemplo muestra cómo implementar un proveedor personalizado de tokens emit
   <serviceCredentials>
     <issuedTokenAuthentication>
       <knownCertificates>
-        <add storeLocation="LocalMachine" 
-              storeName="TrustedPeople" 
-              x509FindType="FindBySubjectDistinguishedName" 
+        <add storeLocation="LocalMachine"
+              storeName="TrustedPeople"
+              x509FindType="FindBySubjectDistinguishedName"
               findValue="CN=STS" />
       </knownCertificates>
     </issuedTokenAuthentication>
-    <serviceCertificate storeLocation="LocalMachine" 
-                        storeName="My" 
-                        x509FindType="FindBySubjectDistinguishedName" 
+    <serviceCertificate storeLocation="LocalMachine"
+                        storeName="My"
+                        x509FindType="FindBySubjectDistinguishedName"
                         findValue="CN=localhost" />
   </serviceCredentials>
 </behavior>  
@@ -110,7 +110,7 @@ Este ejemplo muestra cómo implementar un proveedor personalizado de tokens emit
  El Servicio de token de seguridad expone un solo punto de conexión con el wsHttpBinding estándar. El Servicio de token de seguridad responde a las solicitudes de tokens de los clientes y, siempre que el cliente se autentique utilizando una cuenta de Windows, emite un token que contiene el nombre de usuario del cliente como una notificación en el token emitido. Como parte de la creación del token, el servicio de token de seguridad firma el token usando la clave privada asociada con el certificado de CN=STS. Además, crea una clave simétrica y la cifra utilizando la clave pública asociada con el certificado de CN=localhost. Para devolver el token al cliente, el servicio de token de seguridad devuelve también la clave simétrica. El cliente presenta el token emitido al servicio de la calculadora y demuestra que conoce la clave simétrica firmando el mensaje con esa clave.  
   
 ## <a name="custom-client-credentials-and-token-provider"></a>Credenciales de cliente personalizadas y proveedor de tokens  
- En los pasos siguientes se muestra cómo desarrollar un proveedor de tokens personalizado que almacena en memoria caché los tokens emitidos y los integra con WCF: Security.  
+ Los pasos siguientes muestran cómo desarrollar un proveedor de tokens personalizado que almacena en caché los tokens emitidos e integrarlo con WCF: seguridad.  
   
 ### <a name="to-develop-a-custom-token-provider"></a>Para desarrollar un proveedor de tokens personalizado  
   
@@ -225,7 +225,7 @@ Este ejemplo muestra cómo implementar un proveedor personalizado de tokens emit
     clientFactory.Endpoint.Behaviors.Add(durableCreds);  
     ```  
   
-## <a name="running-the-sample"></a>Ejecutar el ejemplo  
+## <a name="running-the-sample"></a>Ejecución del ejemplo  
  Consulte las instrucciones siguientes para ejecutar el ejemplo. Al ejecutar el ejemplo, la solicitud para el token de seguridad se muestra en la ventana de la consola del servicio de token de seguridad. Las solicitudes y respuestas de la operación se muestran en las ventanas de la consola del cliente y el servicio. Presione ENTRAR en cualquiera de las ventanas de la consola para cerrar la aplicación.  
   
 ## <a name="the-setupcmd-batch-file"></a>Archivo por lotes Setup.cmd  
@@ -235,7 +235,7 @@ Este ejemplo muestra cómo implementar un proveedor personalizado de tokens emit
   
 1. Ejecute el archivo Setup.cmd para crear los certificados necesarios.  
   
-2. Para compilar la solución, siga las instrucciones de [creación de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md). Asegúrese de que todos los proyectos en la solución están compilados (compartido, RSTRSTR, servicio, SecurityTokenService y cliente).  
+2. Para compilar la solución, siga las instrucciones de Creación de [ejemplos](../../../../docs/framework/wcf/samples/building-the-samples.md)de Windows Communication Foundation . Asegúrese de que todos los proyectos en la solución están compilados (compartido, RSTRSTR, servicio, SecurityTokenService y cliente).  
   
 3. Asegúrese de que tanto el archivo Service.exe como el archivo SecurityTokenService.exe se ejecutan con privilegios de administrador.  
   
@@ -247,9 +247,9 @@ Este ejemplo muestra cómo implementar un proveedor personalizado de tokens emit
   
 > [!IMPORTANT]
 > Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
->   
+>
+> Si este directorio no existe, vaya a Ejemplos de [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (WCF). Este ejemplo se encuentra en el siguiente directorio.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\DurableIssuedTokenProvider`  

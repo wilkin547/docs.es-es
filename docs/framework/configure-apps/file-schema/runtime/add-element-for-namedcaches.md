@@ -5,21 +5,21 @@ helpviewer_keywords:
 - add element for <namedCaches>
 - <add> element for <namedCaches>
 ms.assetid: ce2a63a8-c829-4742-a6ea-72ee5d89f169
-ms.openlocfilehash: 076d940e0c15cf48013480fef68b8fac42cf76e9
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c1345022b79df371ad9c89a39a0a8b625e26608c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252888"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154510"
 ---
-# <a name="add-element-for-namedcaches"></a>\<Agregue > elemento para \<namedCaches >
-Agrega una `namedCache` entrada a la `namedCaches` colección de una memoria caché.  
+# <a name="add-element-for-namedcaches"></a>\<agregue> \<Element para namedCaches>
+Agrega una `namedCache` entrada `namedCaches` a la colección para una memoria caché.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. Runtime. Caching >** ](system-runtime-caching-element-cache-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<memoryCache >** ](memorycache-element-cache-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<namedCaches >** ](namedcaches-element-cache-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Agregar >**  
+[**\<configuración>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.runtime.caching>**](system-runtime-caching-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<memoryCache>**](memorycache-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<namedCaches>**](namedcaches-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<añadir>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -30,7 +30,7 @@ Agrega una `namedCache` entrada a la `namedCaches` colección de una memoria cac
  </namedCaches>  
 ```  
   
-## <a name="type"></a>Type  
+## <a name="type"></a>Tipo  
  `None`  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -38,27 +38,27 @@ Agrega una `namedCache` entrada a la `namedCaches` colección de una memoria cac
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|DESCRIPCIÓN|  
+|Atributo|Descripción|  
 |-|-|  
-|`CacheMemoryLimitMegabytes`|Valor entero que especifica el tamaño máximo permitido (en megabytes) que puede alcanzar una instancia de un <xref:System.Runtime.Caching.MemoryCache> . El valor predeterminado es 0, lo que significa que <xref:System.Runtime.Caching.MemoryCache> se utiliza de forma predeterminada la heurística de ajuste automático de tamaño de la clase.|  
+|`CacheMemoryLimitMegabytes`|Un valor entero que especifica el tamaño máximo permitido (en <xref:System.Runtime.Caching.MemoryCache> megabytes) al que puede crecer una instancia de a. El valor predeterminado es 0, <xref:System.Runtime.Caching.MemoryCache> lo que significa que la heurística de autodimensionamiento de la clase se usa de forma predeterminada.|  
 |`Name`|Nombre de la memoria caché.|  
-|`PhysicalMemoryLimitPercentage`|Un valor entero comprendido entre 0 y 100 que especifica el porcentaje máximo de memoria del equipo instalado físicamente que la memoria caché puede consumir. El valor predeterminado es 0, lo que significa que <xref:System.Runtime.Caching.MemoryCache> se utiliza de forma predeterminada la heurística de ajuste automático de tamaño de la clase.|  
-|`PollingInterval`|Valor que indica el intervalo de tiempo después del cual la implementación de caché compara la carga de memoria actual con los límites de memoria absoluto y de porcentaje que están establecidos para la instancia de caché. Este valor se especifica en formato "HH: MM: SS".|  
+|`PhysicalMemoryLimitPercentage`|Un valor entero entre 0 y 100 que especifica el porcentaje máximo de memoria del equipo instalada físicamente que puede consumir la memoria caché. El valor predeterminado es 0, <xref:System.Runtime.Caching.MemoryCache> lo que significa que la heurística de autodimensionamiento de la clase se usa de forma predeterminada.|  
+|`PollingInterval`|Valor que indica el intervalo de tiempo después del cual la implementación de caché compara la carga de memoria actual con los límites de memoria absoluto y de porcentaje que están establecidos para la instancia de caché. Este valor se introduce en formato "HH:MM:SS".|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  `None`  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<namedCaches>](namedcaches-element-cache-settings.md)|Contiene una colección de valores de configuración para las <xref:System.Runtime.Caching.MemoryCache> instancias con nombre.|  
+|[\<namedCaches>](namedcaches-element-cache-settings.md)|Contiene una colección de <xref:System.Runtime.Caching.MemoryCache> valores de configuración para las instancias con nombre.|  
   
-## <a name="remarks"></a>Comentarios  
- El `add` elemento agrega una entrada a la `namedCaches` colección para una memoria caché. Puede usar el elemento [Clear](clear-element-for-namedcaches.md) antes de usar el `add` elemento para asegurarse de que no hay otras memorias caché con nombre en la colección. Este elemento se puede utilizar en el archivo Machine. config y en el archivo Web. config.  
+## <a name="remarks"></a>Observaciones  
+ El `add` elemento agrega una `namedCaches` entrada a la colección para una memoria caché de memoria. Puede usar el elemento [clear](clear-element-for-namedcaches.md) `add` antes de usar el elemento para estar seguro de que no hay otras cachés con nombre en la colección. Este elemento se puede utilizar en el archivo machine.config y en el archivo Web.config.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo definir la configuración de `namedCache` la entrada predeterminada `namedCaches` en la colección para una memoria caché.  
+ En el ejemplo siguiente se muestra `namedCache` cómo `namedCaches` definir la configuración de la entrada predeterminada a la colección para una memoria caché.  
   
 ```xml  
 <configuration>  
@@ -66,8 +66,8 @@ Agrega una `namedCache` entrada a la `namedCaches` colección de una memoria cac
   <system.runtime.caching>  
     <memoryCache>  
       <namedCaches>  
-          <add name="Default"   
-               cacheMemoryLimitMegabytes="0"   
+          <add name="Default"
+               cacheMemoryLimitMegabytes="0"
                physicalMemoryPercentage="0"  
                pollingInterval="00:02:00" />  
       </namedCaches>  
@@ -77,6 +77,6 @@ Agrega una `namedCache` entrada a la `namedCaches` colección de una memoria cac
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [\<namedCaches (elemento > (configuración de caché)](namedcaches-element-cache-settings.md)
+- [\<NamedCaches> Element (Configuración de caché)](namedcaches-element-cache-settings.md)

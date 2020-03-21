@@ -2,12 +2,12 @@
 title: Uso de la actividad Pick
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
-ms.openlocfilehash: b0997254615ca962fd386dea70c67a8edb36c90a
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 7ca4527cc1d5bc90ed1ec4df3eef6cf2d8b93b4e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715524"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142620"
 ---
 # <a name="using-the-pick-activity"></a>Uso de la actividad Pick
 En este ejemplo se muestra cómo utilizar la actividad <xref:System.Activities.Statements.Pick>.
@@ -16,13 +16,13 @@ En este ejemplo se muestra cómo utilizar la actividad <xref:System.Activities.S
 
  En este ejemplo se pide a un usuario que escriba su nombre en la consola dentro de un determinado período de tiempo. La actividad <xref:System.Activities.Statements.Pick> del ejemplo tiene dos bifurcaciones cuya ejecución depende de si el usuario escribe su nombre en un intervalo de 5 segundos o no. Si el usuario escribe su nombre en 5 segundos, se ejecuta la primera bifurcación, que contiene una actividad `ReadLine` personalizada; de lo contrario, se ejecuta la otra bifurcación, que contiene una actividad <xref:System.Activities.Statements.Delay>. Una vez escrito el nombre de un usuario en la consola, se imprime en la consola. Si no se escribe ninguna entrada en 5 segundos, la operación agota el tiempo de espera.
 
-## <a name="demonstrates"></a>Demostraciones
+## <a name="demonstrates"></a>Muestra
  Actividad <xref:System.Activities.Statements.Pick>.
 
 ## <a name="discussion"></a>Discusión
  En este ejemplo se incluyen un flujo de trabajo de diseñador y un flujo de trabajo codificado.
 
- Flujo de trabajo del diseñador la versión del diseñador del ejemplo muestra cómo crear un flujo de trabajo en el diseñador. Están incluidos los siguientes archivos:
+ Flujo de trabajo del diseñador La versión del diseñador del ejemplo muestra cómo crear un flujo de trabajo en el diseñador. Están incluidos los siguientes archivos:
 
 - Program.cs: incluye la función `Main` que ejecuta el flujo de trabajo del ejemplo.
 
@@ -30,7 +30,7 @@ En este ejemplo se muestra cómo utilizar la actividad <xref:System.Activities.S
 
 - Sequence1.xaml: un flujo de trabajo creado mediante el diseñador que utiliza Pick.
 
- Flujo de trabajo codificado la versión codificada del ejemplo muestra cómo crear un flujo de trabajo en el diseñador. Están incluidos los siguientes archivos:
+ Flujo de trabajo codificado La versión codificada del ejemplo muestra cómo crear un flujo de trabajo en el diseñador. Están incluidos los siguientes archivos:
 
 - Program.cs: incluye la función `Main` que ejecuta el flujo de trabajo del ejemplo.
 
@@ -38,7 +38,7 @@ En este ejemplo se muestra cómo utilizar la actividad <xref:System.Activities.S
 
 #### <a name="to-use-this-sample"></a>Para utilizar este ejemplo
 
-1. Con Visual Studio 2010, abra el archivo de solución Pick. sln.
+1. Con Visual Studio 2010, abra el archivo de solución Pick.sln.
 
 2. Para compilar la solución, presione Ctrl+MAYÚS+B.
 
@@ -46,9 +46,9 @@ En este ejemplo se muestra cómo utilizar la actividad <xref:System.Activities.S
 
 > [!IMPORTANT]
 > Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
->   
+>
+> Si este directorio no existe, vaya a Ejemplos de [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (WCF). Este ejemplo se encuentra en el siguiente directorio.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Pick`

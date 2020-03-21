@@ -2,12 +2,12 @@
 title: Semántica de comparación (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: b36ce28a-2fe4-4236-b782-e5f7c054deae
-ms.openlocfilehash: 8d7868b0166f0a18824ec25e6cdf639deec665ac
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 57d81d4b581df76a4382ad5e1d72fe8250b10d43
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833943"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150459"
 ---
 # <a name="comparison-semantics-entity-sql"></a>Semántica de comparación (Entity SQL)
 El uso de cualquiera de los operadores de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] siguientes implica la comparación de las instancias de tipo:  
@@ -66,42 +66,42 @@ El uso de cualquiera de los operadores de [!INCLUDE[esql](../../../../../../incl
 ## <a name="supported-combinations"></a>Combinaciones admitidas  
  En la tabla siguiente se muestran todas las combinaciones admitidas de los operadores de comparación para cada clase de tipo:  
   
-|**Tipo**|**=**<br /><br /> **\!=**|**GROUP BY**<br /><br /> **POCO**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**IN**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**ES NULL**<br /><br /> **NO ES NULL**|  
+|**Tipo**|**=**<br /><br /> **!=**|**GROUP BY**<br /><br /> **Distintas**|**Unión**<br /><br /> **Intersect**<br /><br /> **Excepto**<br /><br /> **Establecer**<br /><br /> **OVERLAPS**|**En**|**< <**<br /><br /> **> >**|**PEDIDO POR**|**ES NULO**<br /><br /> **NO ES NULO**|  
 |-|-|-|-|-|-|-|-|  
-|Tipo de entidad|Referencia<sup>1</sup>|Todas las propiedades<sup>2</sup>|Todas las propiedades<sup>2</sup>|Todas las propiedades<sup>2</sup>|Iniciar<sup>3</sup>|Iniciar<sup>3</sup>|Referencia<sup>1</sup>|  
-|Tipo complejo|Iniciar<sup>3</sup>|Iniciar<sup>3</sup>|Iniciar<sup>3</sup>|Iniciar<sup>3</sup>|Iniciar<sup>3</sup>|Iniciar<sup>3</sup>|Iniciar<sup>3</sup>|  
-|Fila|Todas las propiedades<sup>4</sup>|Todas las propiedades<sup>4</sup>|Todas las propiedades<sup>4</sup>|Iniciar<sup>3</sup>|Iniciar<sup>3</sup>|Todas las propiedades<sup>4</sup>|Iniciar<sup>3</sup>|  
+|Tipo de entidad|Ref<sup>1</sup>|Todas las propiedades<sup>2</sup>|Todas las propiedades<sup>2</sup>|Todas las propiedades<sup>2</sup>|Lanzar<sup>3</sup>|Lanzar<sup>3</sup>|Ref<sup>1</sup>|  
+|Tipo complejo|Lanzar<sup>3</sup>|Lanzar<sup>3</sup>|Lanzar<sup>3</sup>|Lanzar<sup>3</sup>|Lanzar<sup>3</sup>|Lanzar<sup>3</sup>|Lanzar<sup>3</sup>|  
+|Row|Todas las propiedades<sup>4</sup>|Todas las propiedades<sup>4</sup>|Todas las propiedades<sup>4</sup>|Lanzar<sup>3</sup>|Lanzar<sup>3</sup>|Todas las propiedades<sup>4</sup>|Lanzar<sup>3</sup>|  
 |Tipo primitivo|Depende del proveedor|Depende del proveedor|Depende del proveedor|Depende del proveedor|Depende del proveedor|Depende del proveedor|Depende del proveedor|  
-|Conjunto múltiple|Iniciar<sup>3</sup>|Iniciar<sup>3</sup>|Iniciar<sup>3</sup>|Iniciar<sup>3</sup>|Iniciar<sup>3</sup>|Iniciar<sup>3</sup>|Iniciar<sup>3</sup>|  
+|Conjunto múltiple|Lanzar<sup>3</sup>|Lanzar<sup>3</sup>|Lanzar<sup>3</sup>|Lanzar<sup>3</sup>|Lanzar<sup>3</sup>|Lanzar<sup>3</sup>|Lanzar<sup>3</sup>|  
 |Ref|Sí<sup>5</sup>|Sí<sup>5</sup>|Sí<sup>5</sup>|Sí<sup>5</sup>|Throw|Throw|Sí<sup>5</sup>|  
-|Asociación<br /><br /> type|Iniciar<sup>3</sup>|Throw|Throw|Throw|Iniciar<sup>3</sup>|Iniciar<sup>3</sup>|Iniciar<sup>3</sup>|  
+|Asociación<br /><br /> type|Lanzar<sup>3</sup>|Throw|Throw|Throw|Lanzar<sup>3</sup>|Lanzar<sup>3</sup>|Lanzar<sup>3</sup>|  
   
- <sup>1</sup> Las referencias de las instancias de tipo de entidad dadas se comparan implícitamente, como se muestra en el ejemplo siguiente:  
+ <sup>1</sup> Las referencias de las instancias de tipo de entidad especificadas se comparan implícitamente, como se muestra en el ejemplo siguiente:  
   
 ```sql  
-SELECT p1, p2   
-FROM AdventureWorksEntities.Product AS p1   
-     JOIN AdventureWorksEntities.Product AS p2   
+SELECT p1, p2
+FROM AdventureWorksEntities.Product AS p1
+     JOIN AdventureWorksEntities.Product AS p2
 WHERE p1 != p2 OR p1 IS NULL  
 ```  
   
  Una instancia de entidad no se puede comparar con una referencia explícita. Si se intenta, se inicia una excepción. Por ejemplo, la siguiente consulta iniciaría una excepción:  
   
 ```sql  
-SELECT p1, p2   
-FROM AdventureWorksEntities.Product AS p1   
-     JOIN AdventureWorksEntities.Product AS p2   
+SELECT p1, p2
+FROM AdventureWorksEntities.Product AS p1
+     JOIN AdventureWorksEntities.Product AS p2
 WHERE p1 != REF(p2)  
 ```  
   
- <sup>2</sup> Las propiedades de los tipos complejos se alisan antes de enviarse al almacén, por lo que son comparables (siempre y cuando todas sus propiedades sean comparables). Vea también <sup>4.</sup>  
+ <sup>2</sup> Las propiedades de tipos complejos se aplanan antes de enviarse a la tienda, por lo que se vuelven comparables (siempre y cuando todas sus propiedades sean comparables). Consulte también <sup>4.</sup>  
   
- <sup>3</sup> El entorno de tiempo de ejecución de Entity Framework detecta el caso no compatible y produce una excepción significativa sin tener que atraer al proveedor o almacén.  
+ <sup>3</sup> El tiempo de ejecución de Entity Framework detecta el caso no admitido y produce una excepción significativa sin involucrar al proveedor o almacén.  
   
- <sup>4</sup> Se ha intentado comparar todas las propiedades. Si hay una propiedad que es de un tipo no comparable, como text, ntext o image, se podría iniciar una excepción de servidor.  
+ <sup>4</sup> Se intenta comparar todas las propiedades. Si hay una propiedad que es de un tipo no comparable, como text, ntext o image, se podría iniciar una excepción de servidor.  
   
- <sup>5</sup> Se comparan todos los elementos individuales de las referencias (esto incluye el nombre del conjunto de entidades y todas las propiedades clave del tipo de entidad).  
+ <sup>5</sup> Se comparan todos los elementos individuales de las referencias (esto incluye el nombre del conjunto de entidades y todas las propiedades de clave del tipo de entidad).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Información general sobre Entity SQL](entity-sql-overview.md)

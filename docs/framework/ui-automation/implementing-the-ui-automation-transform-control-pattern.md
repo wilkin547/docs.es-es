@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Transform control pattern
 - UI Automation, Transform control pattern
 ms.assetid: 5f49d843-5845-4800-9d9c-56ce0d146844
-ms.openlocfilehash: c0a46580ad2673b56fefe7228f2549a2e19d2c14
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5643bc85972ea33cc31b1a83ecf7615dbb275bc2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447057"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180052"
 ---
 # <a name="implementing-the-ui-automation-transform-control-pattern"></a>Implementación del patrón de control Transform de UI Automation
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "74447057"
   
  El patrón de control <xref:System.Windows.Automation.TransformPattern> se utsa para admitir controles que se pueden mover, cambiar de tamaño o girar dentro de un espacio bidimensional. Para obtener ejemplos de controles que implementan este patrón de control, vea [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md).  
   
-<a name="Implementation_Guidelines_and_Conventions"></a>   
+<a name="Implementation_Guidelines_and_Conventions"></a>
 ## <a name="implementation-guidelines-and-conventions"></a>Directrices y convenciones de implementación  
  Al implementar el patrón de control Transform, tenga en cuenta las siguientes directrices y convenciones:  
   
@@ -33,35 +33,35 @@ ms.locfileid: "74447057"
   
 - Todos los parámetros y los valores de propiedad son absolutos e independientes de la configuración regional.  
   
-<a name="Required_Members_for_the_IValueProvider_Interface"></a>   
+<a name="Required_Members_for_the_IValueProvider_Interface"></a>
 ## <a name="required-members-for-itransformprovider"></a>Miembros requeridos para ITransformProvider  
  Para implementar <xref:System.Windows.Automation.Provider.ITransformProvider>, se requieren las siguientes propiedades y métodos.  
   
 |Miembros requeridos|Tipo de miembro|Notas|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|Propiedad|Ninguno|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|Propiedad|Ninguno|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|Propiedad|Ninguno|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|Método|Ninguno|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|Método|Ninguno|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|Método|Ninguno|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|Propiedad|None|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|Propiedad|None|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|Propiedad|None|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|Método|None|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|Método|None|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|Método|None|  
   
  Este patrón de control no tiene eventos asociados.  
   
-<a name="Exceptions"></a>   
+<a name="Exceptions"></a>
 ## <a name="exceptions"></a>Excepciones  
  Los proveedores deben producir las siguientes excepciones.  
   
 |Tipo de excepción|Condición|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A><br /><br /> -Si el <xref:System.Windows.Automation.TransformPatternIdentifiers.CanMoveProperty> es false.|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A><br /><br /> -Si el <xref:System.Windows.Automation.TransformPatternIdentifiers.CanResizeProperty> es false.|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A><br /><br /> -Si el <xref:System.Windows.Automation.TransformPatternIdentifiers.CanRotateProperty> es false.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A><br /><br /> - Si <xref:System.Windows.Automation.TransformPatternIdentifiers.CanMoveProperty> es falso.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A><br /><br /> - Si <xref:System.Windows.Automation.TransformPatternIdentifiers.CanResizeProperty> es falso.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A><br /><br /> - Si <xref:System.Windows.Automation.TransformPatternIdentifiers.CanRotateProperty> es falso.|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Información general sobre los patrones de control de la Automatización de la interfaz de usuario](ui-automation-control-patterns-overview.md)
-- [Patrones de control compatibles en un proveedor de Automatización de la interfaz de usuario](support-control-patterns-in-a-ui-automation-provider.md)
-- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
-- [Información general sobre el árbol de la Automatización de la interfaz de usuario](ui-automation-tree-overview.md)
-- [Uso del almacenamiento en caché en la Automatización de la interfaz de usuario](use-caching-in-ui-automation.md)
+- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [Patrones de control compatibles en un proveedor de UI Automation](support-control-patterns-in-a-ui-automation-provider.md)
+- [Patrones de controles de UI Automation para clientes](ui-automation-control-patterns-for-clients.md)
+- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [Utilizar el almacenamiento en caché en la UI Automation](use-caching-in-ui-automation.md)

@@ -7,20 +7,20 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
-ms.openlocfilehash: 99d67bd621390789993caa4862e5ce379135eb92
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 6991e3f73ac180fc690ec48e1a0d15f40c915733
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215387"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154535"
 ---
-# <a name="remove-element-for-configsections"></a>\<quitar > elemento de \<configSections >
+# <a name="remove-element-for-configsections"></a>\<eliminar> \<elemento para configSections>
 
-Quita una sección o grupo de sección predefinido.
+Quita una sección o un grupo de secciones predefinidos.
 
-[ **\<configuration>** ](configuration-element.md)\
-&nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<quitar >**
+[**\<configuración>**](configuration-element.md)\
+&nbsp;&nbsp;[**\<configSections>**](configsections-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<eliminar>**
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -32,13 +32,13 @@ Quita una sección o grupo de sección predefinido.
 
 |           | Descripción |
 | --------- | ----------- |
-| **name**  | Atributo necesario.<br><br>Especifica el nombre de la sección o grupo de secciones que se va a quitar. |
+| **nombre**  | Atributo necesario.<br><br>Especifica el nombre de la sección o grupo de secciones que se va a quitar. |
 
 ## <a name="parent-element"></a>Elemento primario
 
 |     | Descripción |
 | --- | ----------- |
-| [ **\<configSections >** Element](configsections-element-for-configuration.md) | Contiene la sección de configuración y las declaraciones de espacio de nombres. |
+| [** \<configSections>** Elemento](configsections-element-for-configuration.md) | Contiene declaraciones de sección de configuración y espacio de nombres. |
 
 ## <a name="child-elements"></a>Elementos secundarios
 
@@ -46,13 +46,13 @@ None
 
 ## <a name="remarks"></a>Observaciones
 
-Puede usar el elemento **\<remove >** para quitar secciones y grupos de secciones de la aplicación que se definieron en un nivel superior en la jerarquía del archivo de configuración.
+Puede usar ** \<** el elemento remove>para quitar secciones y grupos de secciones de la aplicación que se definieron en un nivel superior en la jerarquía de archivos de configuración.
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo usar el elemento **\<remove >** en un archivo de configuración de la aplicación para quitar una sección definida previamente en el archivo de configuración del equipo.
+En el ejemplo siguiente ** \<** se muestra cómo utilizar el elemento remove>en un archivo de configuración de aplicación para quitar una sección definida previamente en el archivo de configuración del equipo.
 
-El siguiente código de archivo de configuración de máquina declara la sección **\<sampleSection >** :
+El siguiente código de archivo de configuración del equipo declara la sección ** \<sampleSection>: **
 
 ```xml
 <!-- Machine.config file -->
@@ -61,13 +61,13 @@ El siguiente código de archivo de configuración de máquina declara la secció
     <section name="sampleSection"
              type="System.Configuration.SingleTagSectionHandler" />
   </configSections>
-  <sampleSection setting1="Value1" 
-                 setting2="value two" 
+  <sampleSection setting1="Value1"
+                 setting2="value two"
                  setting3="third value" />
 </configuration>
 ```
 
-El siguiente código de archivo de configuración de la aplicación quita la sección **\<sampleSection >** . Después de la eliminación, la aplicación no puede recuperar la configuración en **\<> sampleSection**.
+El siguiente código de archivo ** \<** de configuración de la aplicación quita la sección sampleSection>. Después de la eliminación, la aplicación no puede recuperar la configuración de ** \<sampleSection>**.
 
 ```xml
 <!-- Application configuration file -->
@@ -80,8 +80,8 @@ El siguiente código de archivo de configuración de la aplicación quita la sec
 
 ## <a name="configuration-file"></a>Archivo de configuración
 
-Este elemento puede usarse en el archivo de configuración de la aplicación, el archivo de configuración del equipo (*Machine. config*) y los archivos *Web. config* que no están en el nivel de directorio de la aplicación.
+Este elemento se puede utilizar en el archivo de configuración de la aplicación, el archivo de configuración del equipo (*Machine.config*) y los archivos *Web.config* que no están en el nivel de directorio de la aplicación.
 
 ## <a name="see-also"></a>Consulte también
 
-- [Esquema del archivo de configuración para el .NET Framework](index.md)
+- [Esquema de archivo de configuración para .NET Framework](index.md)

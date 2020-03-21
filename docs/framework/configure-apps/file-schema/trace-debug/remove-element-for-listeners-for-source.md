@@ -1,5 +1,5 @@
 ---
-title: <remove> elemento de <listeners> para <source>
+title: <remove>Elemento <listeners> para for<source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/remove
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - remove element for <listeners> for <source>
 - <remove> element for <listeners> for <source>
 ms.assetid: 3ff6b578-273d-407f-b07f-8251f1f9f5d0
-ms.openlocfilehash: 75db45d4e868ce88e030ec6a43c8bdaf788a1102
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 657e6db2af9b99b3bbf03afc6aab02c58a830f2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088855"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153340"
 ---
-# <a name="remove-element-for-listeners-for-source"></a>\<quitar > elemento para \<agentes de escucha > para \<origen >
+# <a name="remove-element-for-listeners-for-source"></a>\<eliminar> \<Element para \<los agentes de escucha> para el origen>
 Quita un agente de escucha de la colección `Listeners` para un origen de seguimiento.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. diagnostics >** ](system-diagnostics-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<orígenes**](sources-element.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**origen**](source-element.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**agentes de escucha**](listeners-element-for-source.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**quitar >**
+[**\<configuración>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<fuentes>**](sources-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<fuente>**](source-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<oyentes>**](listeners-element-for-source.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<eliminar>**
 
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,7 +37,7 @@ Quita un agente de escucha de la colección `Listeners` para un origen de seguim
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|`name`|Atributo necesario.<br /><br /> Nombre del agente de escucha que se va a quitar de la colección de `Listeners`.|  
+|`name`|Atributo necesario.<br /><br /> El nombre del agente de `Listeners` escucha que se va a quitar de la colección.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -50,39 +50,39 @@ Quita un agente de escucha de la colección `Listeners` para un origen de seguim
 |`system.diagnostics`|Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.|  
 |`sources`|Contiene orígenes de seguimiento que inician mensajes de seguimiento.|  
 |`source`|Contiene un origen de seguimiento que inicia mensajes de seguimiento.|  
-|`listeners`|Especifica los agentes de escucha que recopilan, almacenan y enrutan los mensajes.|  
+|`listeners`|Especifica los agentes de escucha que recopilan, almacenan y enrutan mensajes.|  
   
-## <a name="remarks"></a>Comentarios  
- El elemento `<remove>` quita un agente de escucha especificado de la colección de `Listeners` para un origen de seguimiento.  
+## <a name="remarks"></a>Observaciones  
+ El `<remove>` elemento quita un agente `Listeners` de escucha especificado de la colección para un origen de seguimiento.  
   
- Puede quitar un elemento de la colección de `Listeners` para un origen de seguimiento mediante programación llamando al método <xref:System.Diagnostics.TraceListenerCollection.Remove%2A> en la propiedad <xref:System.Diagnostics.TraceSource.Listeners%2A> de la instancia de <xref:System.Diagnostics.TraceSource>.  
+ Puede quitar un elemento `Listeners` de la colección para <xref:System.Diagnostics.TraceListenerCollection.Remove%2A> un origen <xref:System.Diagnostics.TraceSource.Listeners%2A> de <xref:System.Diagnostics.TraceSource> seguimiento mediante programación llamando al método en la propiedad de la instancia.  
   
- Este elemento se puede usar en el archivo de configuración del equipo (Machine. config) y en el archivo de configuración de la aplicación.  
+ Este elemento se puede utilizar en el archivo de configuración del equipo (Machine.config) y el archivo de configuración de la aplicación.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo utilizar el elemento `<remove>` antes de utilizar el elemento `<add>` para agregar el agente de escucha `console` a la colección de `Listeners` para la `TraceSourceApp`de origen de seguimiento.  
+ En el ejemplo siguiente `<remove>` se muestra `<add>` cómo utilizar el `console` elemento `Listeners` antes de `TraceSourceApp`utilizar el elemento para agregar el agente de escucha a la colección para el origen de seguimiento.  
   
 ```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
-      <source name="TraceSourceApp" switchName="sourceSwitch"   
+      <source name="TraceSourceApp" switchName="sourceSwitch"
          switchType="System.Diagnostics.SourceSwitch" >  
          <listeners>  
            <remove name="Default"/>  
-           <add name="console"   
+           <add name="console"
              type="System.Diagnostics.ConsoleTraceListener" />  
          </listeners>  
       </source>  
     </sources>  
   </system.diagnostics>  
-</configuration>   
+</configuration>
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Diagnostics.TraceSource.Listeners%2A>
 - <xref:System.Diagnostics.TraceSource>
-- [Esquema de la configuración de seguimiento y depuración](index.md)
-- [\<clear>](clear-element-for-listeners-for-source.md)
+- [Esquema de configuración de seguimiento y depuración](index.md)
+- [\<>claro](clear-element-for-listeners-for-source.md)
 - [Agentes de escucha de seguimiento](../../../debug-trace-profile/trace-listeners.md)

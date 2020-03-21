@@ -2,15 +2,15 @@
 title: Direccionamiento
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-ms.openlocfilehash: 2a737552ef5ea2a8e4544f9ec2c2f84b4b994a75
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 4403ac2bf8e0e5193006f6ec19b24a9bcb00bf35
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715875"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183976"
 ---
 # <a name="addressing"></a>Direccionamiento
-El ejemplo de direccionamiento muestra varios aspectos y características de direcciones del extremo. El ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md). En este ejemplo, el servicio es hospedado por sí mismo. El cliente y el servicio son aplicaciones de consola. El servicio define varios puntos de conexión mediante una combinación de direcciones del punto de conexión absolutas y relativas.  
+El ejemplo de direccionamiento muestra varios aspectos y características de direcciones del extremo. El ejemplo se basa en la [introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md). En este ejemplo, el servicio es hospedado por sí mismo. El cliente y el servicio son aplicaciones de consola. El servicio define varios puntos de conexión mediante una combinación de direcciones del punto de conexión absolutas y relativas.  
   
 > [!NOTE]
 > El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
@@ -40,7 +40,7 @@ El ejemplo de direccionamiento muestra varios aspectos y características de dir
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- En este caso, la dirección relativa está vacía (""), por lo que la dirección del punto de conexión es igual a la dirección base. La dirección del punto de conexión real es `http://localhost:8000/servicemodelsamples/service`.
+ En este caso, la dirección relativa está vacía (""), por lo que la dirección del punto de conexión es igual a la dirección base. La dirección real `http://localhost:8000/servicemodelsamples/service`del punto de conexión es .
   
  La segunda definición de extremo también especifica una dirección relativa, como se muestra en el siguiente ejemplo de configuración.  
   
@@ -53,7 +53,7 @@ El ejemplo de direccionamiento muestra varios aspectos y características de dir
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- La dirección relativa, "test", se anexa a la dirección base. La dirección del punto de conexión real es `http://localhost:8000/servicemodelsamples/service/test`.
+ La dirección relativa, "test", se anexa a la dirección base. La dirección real `http://localhost:8000/servicemodelsamples/service/test`del punto de conexión es .
   
  La tercera definición de extremo especifica una dirección absoluta, como se muestra en el siguiente ejemplo de configuración.  
   
@@ -63,9 +63,9 @@ El ejemplo de direccionamiento muestra varios aspectos y características de dir
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- La dirección base no desempeña ningún papel en la dirección. La dirección del punto de conexión real es `http://localhost:8001/hello/servicemodelsamples`.
+ La dirección base no desempeña ningún papel en la dirección. La dirección real `http://localhost:8001/hello/servicemodelsamples`del punto de conexión es .
   
- La cuarta dirección del extremo especifica una dirección absoluta y un TCP de transporte diferente. La dirección base no desempeña ningún papel en la dirección. La dirección del punto de conexión real es `net.tcp://localhost:9000/servicemodelsamples/service`.
+ La cuarta dirección del extremo especifica una dirección absoluta y un TCP de transporte diferente. La dirección base no desempeña ningún papel en la dirección. La dirección real `net.tcp://localhost:9000/servicemodelsamples/service`del punto de conexión es .
   
 ```xml  
 <!-- The absolute address specified, different transport: -->  
@@ -118,20 +118,20 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1. Asegúrese de que ha realizado el [procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Asegúrese de que ha realizado el procedimiento de instalación única [para los ejemplos](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)de Windows Communication Foundation .  
   
 2. Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Para ejecutar el ejemplo en una configuración de uno o entre equipos, siga las instrucciones de Ejecución de [los ejemplos](../../../../docs/framework/wcf/samples/running-the-samples.md)de Windows Communication Foundation .  
   
     > [!NOTE]
     > Si usa Svcutil.exe para regenerar la configuración de este ejemplo, asegúrese de que modifica el nombre del extremo en la configuración del cliente para que coincida con el código de cliente.  
   
 > [!IMPORTANT]
 > Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
->   
+>
+> Si este directorio no existe, vaya a Ejemplos de [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (WCF). Este ejemplo se encuentra en el siguiente directorio.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Addressing`  

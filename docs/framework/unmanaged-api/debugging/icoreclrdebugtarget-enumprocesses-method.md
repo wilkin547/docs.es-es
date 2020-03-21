@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e00fd477-4f49-43d3-bd0e-3094824b1136
 topic_type:
 - apiref
-ms.openlocfilehash: 11b1072b3467f7d0a3f223fbc2151ec9ccf461ad
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 6484832e8e737b9a0d0b3eaf3ede4078729f7a4a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790804"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178436"
 ---
 # <a name="icoreclrdebugtargetenumprocesses-method"></a>ICoreClrDebugTarget::EnumProcesses (Método)
 Enumera los procesos que se ejecutan en un equipo remoto.  
@@ -31,17 +31,17 @@ Enumera los procesos que se ejecutan en un equipo remoto.
   
 ```cpp  
 HRESULT EnumProcesses (  
-       [out]  DWORD*                  pcProcs,   
+       [out]  DWORD*                  pcProcs,
        [out]  CoreClrDebugProcInfo**  ppProcs  
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parámetros  
  `pcProcs`  
  [out] Número de procesos que se devuelve en `ppProcs`. Este valor puede ser 0 (cero).  
   
  `ppProcs`  
- enuncia Matriz de estructuras [coreclrdebugprocinfo (](coreclrdebugprocinfo-structure.md) que representan los procesos que se ejecutan en el equipo remoto.  
+ [fuera] Matriz de [estructuras CoreClrDebugProcInfo](coreclrdebugprocinfo-structure.md) que representan los procesos que se ejecutan en el equipo remoto.  
   
 ## <a name="return-value"></a>Valor devuelto  
  S_OK  
@@ -53,18 +53,18 @@ HRESULT EnumProcesses (
  E_FAIL (u otros códigos devueltos de E_)  
  Otros errores.  
   
-## <a name="remarks"></a>Notas  
- Para liberar la memoria asignada por este método, llame al método [ICoreClrDebugTarget:: FreeMemory (](icoreclrdebugtarget-freememory-method.md) .  
+## <a name="remarks"></a>Observaciones  
+ Para liberar la memoria asignada por este método, llame a la [ICoreClrDebugTarget::FreeMemory](icoreclrdebugtarget-freememory-method.md) método.  
   
-## <a name="requirements"></a>Requisitos de  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CoreClrRemoteDebuggingInterfaces. h  
+ **Encabezado:** CoreClrRemoteDebuggingInterfaces.h  
   
- **Library:** mscordbi_macx86.dll  
+ **Biblioteca:** mscordbi_macx86.dll  
   
- **.NET Framework versiones:** 3,5 SP1  
+ **Versiones de .NET Framework:** 3.5 SP1  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [ICoreClrDebugTarget (interfaz)](icoreclrdebugtarget-interface.md)
+- [ICoreClrDebugTarget (Interfaz)](icoreclrdebugtarget-interface.md)

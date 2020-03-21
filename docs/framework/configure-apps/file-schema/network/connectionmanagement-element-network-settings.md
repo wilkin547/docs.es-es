@@ -8,24 +8,24 @@ helpviewer_keywords:
 - <connectionManagement> element
 - connectionManagement element
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
-ms.openlocfilehash: b769dd8d3ed0c617d0d8f908e7ef516615da09a7
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 9f1e382bbbaad2cb95e2c33bbbdfb4c505378c9e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088453"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154899"
 ---
-# <a name="connectionmanagement-element-network-settings"></a>\<elemento de > connectionManagement (configuración de red)
+# <a name="connectionmanagement-element-network-settings"></a>\<Elemento connectionManagement> (configuración de red)
 Especifica el número máximo de conexiones a un host de red.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<connectionManagement >**
+[**\<configuración>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<connectionManagement>**
 
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<connectionManagement>   
+<connectionManagement>
 </connectionManagement>  
 ```  
   
@@ -37,26 +37,26 @@ Especifica el número máximo de conexiones a un host de red.
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|**Element**|**Descripción**|  
+|**Elemento**|**Descripción**|  
 |-----------------|---------------------|  
-|[add](add-element-for-connectionmanagement-network-settings.md)|Agrega una dirección IP o nombre DNS a la lista de administración de conexión.|  
-|[clear](clear-element-for-connectionmanagement-network-settings.md)|Borra la lista de administración de conexiones.|  
-|[remove](remove-element-for-connectionmanagement-network-settings.md)|Quita una dirección IP o un nombre DNS de la lista de administración de conexiones.|  
+|[agregar](add-element-for-connectionmanagement-network-settings.md)|Agrega una dirección IP o nombre DNS a la lista de administración de conexión.|  
+|[Claro](clear-element-for-connectionmanagement-network-settings.md)|Borra la lista de administración de conexiones.|  
+|[quitar](remove-element-for-connectionmanagement-network-settings.md)|Quita una dirección IP o un nombre DNS de la lista de administración de conexiones.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|**Element**|**Descripción**|  
+|**Elemento**|**Descripción**|  
 |-----------------|---------------------|  
 |[system.net](system-net-element-network-settings.md)|Contiene valores que especifican cómo se conecta .NET Framework a la red.|  
   
-## <a name="remarks"></a>Comentarios  
- El elemento `connectionManagement` define el número máximo de conexiones a un servidor o grupo de servidores.  
+## <a name="remarks"></a>Observaciones  
+ El `connectionManagement` elemento define el número máximo de conexiones a un servidor o grupo de servidores.  
   
 ## <a name="configuration-files"></a>Archivos de configuración  
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se configura una aplicación para que use cuatro conexiones al servidor `www.contoso.com` y dos conexiones a todos los demás servidores.  
+ En el ejemplo siguiente se configura una `www.contoso.com` aplicación para utilizar cuatro conexiones al servidor y dos conexiones a todos los demás servidores.  
   
 ```xml  
 <configuration>  
@@ -69,8 +69,8 @@ Especifica el número máximo de conexiones a un host de red.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
-- [Esquema de la configuración de red](index.md)
+- [Esquema de configuración de red](index.md)

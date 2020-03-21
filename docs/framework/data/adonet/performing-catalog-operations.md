@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e60f542f-6271-495b-a9e4-48553481c2a3
-ms.openlocfilehash: 0291b6684092ec15fc672c39c909caf7781194e3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: bedeb4e9c510a3feeedc038e9c4cef6c4721e345
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783260"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149250"
 ---
 # <a name="performing-catalog-operations"></a>Realizar operaciones de catálogo
-Para ejecutar un comando para modificar una base de datos o un catálogo, como la instrucción CREATE TABLE o CREATE PROCEDURE, cree un objeto **Command** con las instrucciones SQL adecuadas y un objeto **Connection** . Ejecute el comando con el método **ExecuteNonQuery** del objeto **Command** .  
+Para ejecutar un comando para modificar una base de datos o un catálogo, como la instrucción CREATE TABLE o CREATE PROCEDURE, cree un objeto **Command** utilizando las instrucciones SQL adecuadas y un objeto **Connection.** Ejecute el comando con el método **ExecuteNonQuery** del objeto **Command.**  
   
  En el ejemplo de código siguiente se crea un procedimiento almacenado en una base de datos de Microsoft SQL Server.  
   
@@ -33,11 +33,11 @@ command.ExecuteNonQuery()
   
 ```csharp  
 // Assumes connection is a valid SqlConnection.  
-string queryString = "CREATE PROCEDURE InsertCategory  " +   
+string queryString = "CREATE PROCEDURE InsertCategory  " +
     "@CategoryName nchar(15), " +  
     "@Identity int OUT " +  
-    "AS " +   
-    "INSERT INTO Categories (CategoryName) VALUES(@CategoryName) " +   
+    "AS " +
+    "INSERT INTO Categories (CategoryName) VALUES(@CategoryName) " +
     "SET @Identity = @@Identity " +  
     "RETURN @@ROWCOUNT";  
   
@@ -45,8 +45,8 @@ SqlCommand command = new SqlCommand(queryString, connection);
 command.ExecuteNonQuery();  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Uso de comandos para modificar datos](using-commands-to-modify-data.md)
 - [Comandos y parámetros](commands-and-parameters.md)
-- [Información general sobre ADO.NET](ado-net-overview.md)
+- [Información general de ADO.NET](ado-net-overview.md)

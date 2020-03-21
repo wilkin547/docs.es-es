@@ -8,31 +8,31 @@ helpviewer_keywords:
 - timelines [WPF]
 - timing events [WPF]
 ms.assetid: 597e3280-0867-4359-a97b-5b2f4149e350
-ms.openlocfilehash: 1b0355758c7ba07d8cc1322dc165ac797e980498
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ee45441e9ad09c60d8b61ecce4ef08b0027ce29e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625666"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79145415"
 ---
 # <a name="timing-events-overview"></a>Información general sobre eventos de control de tiempo
-Este tema describe cómo utilizar los cinco eventos de control de tiempo disponible en <xref:System.Windows.Media.Animation.Timeline> y <xref:System.Windows.Media.Animation.Clock> objetos.  
+En este tema se describe cómo usar <xref:System.Windows.Media.Animation.Timeline> <xref:System.Windows.Media.Animation.Clock> los cinco eventos de tiempo disponibles y objetos.  
   
 ## <a name="prerequisites"></a>Requisitos previos  
- Para entender este tema, debe entender cómo crear y utilizar animaciones. Para empezar a trabajar con animación, vea el [información general sobre animaciones](animation-overview.md).  
+ Para entender este tema, debe entender cómo crear y utilizar animaciones. Para empezar a usar la animación, consulte Información general sobre [animaciones](animation-overview.md).  
   
- Hay varias maneras de animar propiedades en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
+ Hay varias formas de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]animar propiedades en:  
   
-- **Usar objetos storyboard** (marcado y código): Puede usar <xref:System.Windows.Media.Animation.Storyboard> objetos para organizar y distribuir animaciones a uno o varios objetos. Para obtener un ejemplo, vea [animar una propiedad utilizando un guión gráfico](how-to-animate-a-property-by-using-a-storyboard.md).  
+- Uso de **objetos de guión gráfico** (marcado y código): puede usar <xref:System.Windows.Media.Animation.Storyboard> objetos para organizar y distribuir animaciones a uno o varios objetos. Para obtener un ejemplo, vea [Animar una propiedad mediante un guión gráfico](how-to-animate-a-property-by-using-a-storyboard.md).  
   
-- **Mediante animaciones locales** (solo código): Puede aplicar <xref:System.Windows.Media.Animation.AnimationTimeline> objetos directamente a las propiedades que animan. Para obtener un ejemplo, vea [Animar una propiedad sin utilizar un guión gráfico](how-to-animate-a-property-without-using-a-storyboard.md).  
+- Uso de **animaciones locales** (solo código): puede aplicar <xref:System.Windows.Media.Animation.AnimationTimeline> objetos directamente a las propiedades que animan. Para obtener un ejemplo, vea [Animar una propiedad sin usar un guión gráfico](how-to-animate-a-property-without-using-a-storyboard.md).  
   
-- **Mediante relojes** (solo código): Puede administrar la creación de un reloj explícitamente y distribuir los relojes de animación personalmente.  Para obtener un ejemplo, vea [animar una propiedad usando un objeto AnimationClock](how-to-animate-a-property-by-using-an-animationclock.md).  
+- **Mediante relojes** (solo código): puede administrar la creación de un reloj explícitamente y distribuir los relojes de animación personalmente.  Para obtener un ejemplo, vea [Animar una propiedad mediante un AnimationClock](how-to-animate-a-property-by-using-an-animationclock.md).  
   
- Dado que puede usar en la marcación y código, utilizan los ejemplos en esta introducción <xref:System.Windows.Media.Animation.Storyboard> objetos. Sin embargo, los conceptos descritos pueden aplicarse a los otros métodos existentes para animar propiedades.  
+ Dado que puede usarlos en el marcado y <xref:System.Windows.Media.Animation.Storyboard> el código, los ejemplos de esta información general usan objetos. Sin embargo, los conceptos descritos pueden aplicarse a los otros métodos existentes para animar propiedades.  
   
 ### <a name="what-is-a-clock"></a>¿Qué es un reloj?  
- Un objeto Timeline, por sí mismo, realmente no hace nada más que describir un segmento de tiempo. Es la escala de tiempo <xref:System.Windows.Media.Animation.Clock> objeto que hace el trabajo real: mantiene el estado de tiempo de ejecución relacionados con el control de tiempo para la escala de tiempo. En la mayoría de los casos, como cuando se utilizan objetos Storyboard, se crea automáticamente un reloj para dichos objetos. También puede crear un <xref:System.Windows.Media.Animation.Clock> explícitamente mediante el <xref:System.Windows.Media.Animation.Timeline.CreateClock%2A> método. Para obtener más información acerca de <xref:System.Windows.Media.Animation.Clock> objetos, vea el [Animation and Timing System Overview](animation-and-timing-system-overview.md).  
+ Un objeto Timeline, por sí mismo, realmente no hace nada más que describir un segmento de tiempo. Es el objeto de <xref:System.Windows.Media.Animation.Clock> la línea de tiempo el que realiza el trabajo real: mantiene el estado de tiempo de ejecución relacionado con el tiempo de ejecución de la línea de tiempo. En la mayoría de los casos, como cuando se utilizan objetos Storyboard, se crea automáticamente un reloj para dichos objetos. También puede crear <xref:System.Windows.Media.Animation.Clock> un explícitamente <xref:System.Windows.Media.Animation.Timeline.CreateClock%2A> mediante el método. Para obtener <xref:System.Windows.Media.Animation.Clock> más información acerca de los objetos, vea Información general sobre el sistema de [animación y temporización](animation-and-timing-system-overview.md).  
   
 ## <a name="why-use-events"></a>¿Por qué usar eventos?  
  Con excepción de una operación, (operación de búsqueda alineada con el último ciclo), todas las operaciones de control de tiempo interactivas son asincrónicas. No hay ninguna manera de saber exactamente cuándo se ejecutarán. Esto puede ser un problema cuando hay otro código que depende de la operación de control de tiempo. Suponga que desea detener un objeto Timeline que anima un rectángulo. Una vez detenido el objeto Timeline, desea cambiar el color del rectángulo.  
@@ -49,35 +49,35 @@ Este tema describe cómo utilizar los cinco eventos de control de tiempo disponi
 [!code-csharp[events_procedural#StoryboardCurrentStateInvalidatedEvent2](~/samples/snippets/csharp/VS_Snippets_Wpf/events_procedural/CSharp/EventExample.cs#storyboardcurrentstateinvalidatedevent2)]
 [!code-vb[events_procedural#StoryboardCurrentStateInvalidatedEvent2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/events_procedural/VisualBasic/EventExample.vb#storyboardcurrentstateinvalidatedevent2)]  
   
- Para obtener un ejemplo más completo, vea [los cambios de recibir notificación cuando un reloj de estado](how-to-receive-notification-when-clock-state-changes.md).  
+ Para obtener un ejemplo más completo, vea [Recibir notificación cuando cambia](how-to-receive-notification-when-clock-state-changes.md)el estado de un reloj .  
   
 ## <a name="public-events"></a>Eventos públicos  
- El <xref:System.Windows.Media.Animation.Timeline> y <xref:System.Windows.Media.Animation.Clock> clases proporcionan cinco eventos de temporización. En la tabla siguiente se enumeran estos eventos y las condiciones que los desencadenan.  
+ Las <xref:System.Windows.Media.Animation.Timeline> <xref:System.Windows.Media.Animation.Clock> clases y proporcionan cinco eventos de temporización. En la tabla siguiente se enumeran estos eventos y las condiciones que los desencadenan.  
   
-|evento|Operación interactiva desencadenante|Otros desencadenadores|  
+|Evento|Operación interactiva desencadenante|Otros desencadenadores|  
 |-----------|--------------------------------------|--------------------|  
-|**Completed**|Omitir hasta completar|El reloj se completa.|  
+|**Completado**|Omitir hasta completar|El reloj se completa.|  
 |**CurrentGlobalSpeedInvalidated**|Pausar, reanudar, buscar, establecer la relación de velocidad, omitir hasta completar, detener|El reloj se invierte, acelera, inicia o detiene.|  
 |**CurrentStateInvalidated**|Comenzar, omitir hasta completar, detener|El reloj se inicia, detiene o completa.|  
 |**CurrentTimeInvalidated**|Comenzar, buscar, omitir hasta completar, detener|El reloj progresa.|  
-|**RemoveRequested**|Quitar||  
+|**RemoveRequested**|Remove||  
   
 ## <a name="ticking-and-event-consolidation"></a>Ciclos y consolidación de eventos  
- Al animar objetos en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], es el motor de tiempo que administra las animaciones. El motor de control de tiempo realiza el seguimiento de la progresión del tiempo y calcula el estado de cada animación. Realiza muchas de estos pasos de evaluación en un segundo. Estos pasos de evaluación se denominan "ciclos".  
+ Al animar objetos en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], es el motor de sincronización que administra las animaciones. El motor de control de tiempo realiza el seguimiento de la progresión del tiempo y calcula el estado de cada animación. Realiza muchas de estos pasos de evaluación en un segundo. Estos pasos de evaluación se denominan "ciclos".  
   
  Aunque los ciclos se producen con frecuencia, pueden ocurrir muchas cosas entre ellos. Por ejemplo, un objeto Timeline se podría detener, iniciar y detener de nuevo, en cuyo caso su estado actual habría cambiado tres veces. En teoría, el evento puede generarse varias veces en un único ciclo; sin embargo, el motor de control de tiempo consolida los eventos, para que cada evento se pueda generar como máximo una vez por ciclo.  
   
 ## <a name="registering-for-events"></a>Registro para eventos  
  Hay dos formas de registrarse para eventos de control de tiempo: con el objeto Timeline o con un objeto Clock creado a partir del objeto Timeline. Registrarse para un evento directamente con un reloj es bastante sencillo, aunque solo puede realizarse desde el código. Puede registrarse para eventos con un objeto Timeline tanto en marcado como en código. En la sección siguiente se describe cómo registrarse para eventos de reloj con un objeto Timeline.  
   
-<a name="registeringforclockeventswithatimeline"></a>   
+<a name="registeringforclockeventswithatimeline"></a>
 ## <a name="registering-for-clock-events-with-a-timeline"></a>Registrarse para eventos de reloj con un objeto Timeline  
- Aunque una escala de tiempo <xref:System.Windows.Media.Animation.Timeline.Completed>, <xref:System.Windows.Media.Animation.Timeline.CurrentGlobalSpeedInvalidated>, <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated>, <xref:System.Windows.Media.Animation.Timeline.CurrentTimeInvalidated>, y <xref:System.Windows.Media.Animation.Timeline.RemoveRequested> parecen estar asociados con la escala de tiempo, registrar para estos eventos realmente asocia un controlador de eventos con eventos el <xref:System.Windows.Media.Animation.Clock> creado para la escala de tiempo.  
+ Aunque los eventos <xref:System.Windows.Media.Animation.Timeline.Completed> <xref:System.Windows.Media.Animation.Timeline.CurrentGlobalSpeedInvalidated>, <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> <xref:System.Windows.Media.Animation.Timeline.CurrentTimeInvalidated>, <xref:System.Windows.Media.Animation.Timeline.RemoveRequested> , , y los eventos de una escala de tiempo parecen <xref:System.Windows.Media.Animation.Clock> estar asociados a la escala de tiempo, el registro de estos eventos en realidad asocia un controlador de eventos con el creado para la escala de tiempo.  
   
- Cuando se registra para el <xref:System.Windows.Media.Animation.Timeline.Completed> eventos en una escala de tiempo, por ejemplo, en realidad está indicando al sistema que se registre para el <xref:System.Windows.Media.Animation.Clock.Completed> eventos de cada reloj que se crea para la escala de tiempo. En el código, debe registrar para este evento antes de la <xref:System.Windows.Media.Animation.Clock> se crea para esta escala de tiempo; en caso contrario, no recibirá la notificación. Esto sucede automáticamente en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; el analizador se registra automáticamente para el evento antes de la <xref:System.Windows.Media.Animation.Clock> se crea.  
+ Cuando se registra <xref:System.Windows.Media.Animation.Timeline.Completed> para el evento en una línea de tiempo, por <xref:System.Windows.Media.Animation.Clock.Completed> ejemplo, en realidad está diciendo al sistema que se registre para el evento de cada reloj que se crea para la línea de tiempo. En el código, debe registrarse <xref:System.Windows.Media.Animation.Clock> para este evento antes de que se cree para esta escala de tiempo; de lo contrario, no recibirá una notificación. Esto sucede [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]automáticamente en ; el analizador se registra automáticamente para <xref:System.Windows.Media.Animation.Clock> el evento antes de que se cree.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Información general sobre sistemas de control de tiempo y animación ](animation-and-timing-system-overview.md)
+- [Información general sobre sistemas de control de tiempo y animación](animation-and-timing-system-overview.md)
 - [Información general sobre animaciones](animation-overview.md)
 - [Información general sobre comportamientos de control de tiempo](timing-behaviors-overview.md)

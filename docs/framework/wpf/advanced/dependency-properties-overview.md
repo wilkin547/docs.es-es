@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 5803d656d765f3f4fe3039e28b9c06202218fcfc
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 9bf0b168633bbf9f56694e79cf81f8051f9b8ac0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973987"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186378"
 ---
 # <a name="dependency-properties-overview"></a>Información general sobre las propiedades de dependencia
 
@@ -56,7 +56,7 @@ La convención de nomenclatura de la propiedad y su campo de respaldo <xref:Syst
 ## <a name="setting-property-values"></a>Establecimiento de valores de propiedad
 Puede establecer propiedades en el código o en XAML.
 
-### <a name="setting-property-values-in-xaml"></a>Establecimiento de valores de propiedad en XAML 
+### <a name="setting-property-values-in-xaml"></a>Establecimiento de valores de propiedad en XAML
 El siguiente ejemplo de XAML especifica el color de fondo de un botón como rojo. En este ejemplo se muestra un caso donde el analizador de XAML de WPF convirtió el tipo del valor de cadena simple de un atributo XAML en un tipo WPF (<xref:System.Windows.Media.Color>, por medio de <xref:System.Windows.Media.SolidColorBrush>) en el código generado.
 
 [!code-xaml[PropertiesOvwSupport#MostBasicProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml#mostbasicproperty)]
@@ -68,7 +68,7 @@ Como ejemplo de sintaxis sin atributos, en el ejemplo de XAML siguiente se muest
 [!code-xaml[PropertiesOvwSupport#PESyntaxProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml#pesyntaxproperty)]
 
 ### <a name="setting-properties-in-code"></a>Establecimiento de propiedades en el código
- Establecer los valores de propiedad de dependencia en el código suele ser simplemente una llamada a la implementación de conjunto expuesta por el "contenedor" de CLR.
+ Establecer valores de propiedad de dependencia en el código suele ser solo una llamada a la implementación del conjunto expuesta por el "envoltorio" de CLR.
 
 [!code-csharp[PropertiesOvwSupport#ProceduralPropertySet](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyset)]
 [!code-vb[PropertiesOvwSupport#ProceduralPropertySet](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page1.xaml.vb#proceduralpropertyset)]
@@ -78,7 +78,7 @@ Para obtener un valor de propiedad también se requiere esencialmente una llamad
 [!code-csharp[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyget)]
  [!code-vb[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page1.xaml.vb#proceduralpropertyget)]
 
-También puede llamar a las API del sistema de propiedades <xref:System.Windows.DependencyObject.GetValue%2A> y <xref:System.Windows.DependencyObject.SetValue%2A> directamente. Normalmente, esto no es necesario si se usan propiedades existentes (los contenedores son más cómodos y proporcionan una mejor exposición de la propiedad para las herramientas de desarrollo), pero la llamada directa a las API es adecuada para determinados escenarios.
+También puede llamar a las <xref:System.Windows.DependencyObject.GetValue%2A> <xref:System.Windows.DependencyObject.SetValue%2A> API del sistema de propiedades y directamente. Esto no suele ser necesario si usa propiedades existentes (los contenedores son más convenientes y proporcionan una mejor exposición de la propiedad para las herramientas de desarrollador), pero llamar a las API directamente es adecuado para determinados escenarios.
 
 Las propiedades también se pueden establecer en XAML y se puede acceder a ellas más adelante en el código a través del código subyacente. Para obtener información detallada, vea [Código subyacente y XAML en WPF](code-behind-and-xaml-in-wpf.md).
 
@@ -168,7 +168,7 @@ En el ejemplo siguiente se muestra un enlace y se establece la propiedad <xref:S
 Para más información, vea [Herencia de valores de propiedad](property-value-inheritance.md).
 
 ### <a name="wpf-designer-integration"></a>Integración de WPF Designer
-Un control personalizado con propiedades que se implementan como propiedades de dependencia recibirá el diseñador de WPF adecuado para la compatibilidad con Visual Studio. Un ejemplo es la capacidad de editar las propiedades de dependencia directas y adjuntas con la ventana **Propiedades**. Para obtener más información, consulte [Información general sobre la creación de controles](../controls/control-authoring-overview.md).
+Un control personalizado con propiedades que se implementan como propiedades de dependencia recibirá la compatibilidad adecuada con WPF Designer para Visual Studio. Un ejemplo es la capacidad de editar las propiedades de dependencia directas y adjuntas con la ventana **Propiedades**. Para obtener más información, consulte [Información general sobre la creación de controles](../controls/control-authoring-overview.md).
 
 ## <a name="dependency-property-value-precedence"></a>Prioridad de los valores de propiedades de dependencia
 Cuando se obtiene el valor de una propiedad de dependencia, potencialmente se está obteniendo un valor establecido en esa propiedad mediante cualquiera de las otras entradas basadas en propiedades que se incluyen en el sistema de propiedades de WPF. La precedencia de los valores de propiedad de dependencia existe para que distintos escenarios sobre cómo las propiedades obtienen sus valores puedan interactuar de forma predecible.
@@ -190,15 +190,15 @@ Por lo general, no querrá que los estilos siempre apliquen ni oculten siquiera 
 
 ## <a name="learning-more-about-dependency-properties"></a>Más información sobre las propiedades de dependencia  
 
-- Una propiedad adjunta es un tipo de propiedad que admite una sintaxis especializada en XAML. Una propiedad adjunta no suele tener una correspondencia de 1:1 con una propiedad de Common Language Runtime (CLR) y no es necesariamente una propiedad de dependencia. El propósito típico de una propiedad adjunta es permitir que los elementos secundarios comuniquen valores de propiedad a un elemento primario, aunque el elemento primario y el elemento secundario no posean a la vez esa propiedad como parte de las listas de miembros de clase. Un escenario principal es habilitar los elementos secundarios para que informen al elemento primario de cómo se deben mostrar en [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]; para obtener un ejemplo, vea <xref:System.Windows.Controls.DockPanel.Dock%2A> o <xref:System.Windows.Controls.Canvas.Left%2A>. Para obtener información detallada, vea [Información general sobre propiedades asociadas](attached-properties-overview.md).
+- Una propiedad adjunta es un tipo de propiedad que admite una sintaxis especializada en XAML. Una propiedad adjunta a menudo no tiene una correspondencia 1:1 con una propiedad de Common Language Runtime (CLR) y no es necesariamente una propiedad de dependencia. El propósito típico de una propiedad adjunta es permitir que los elementos secundarios comuniquen valores de propiedad a un elemento primario, aunque el elemento primario y el elemento secundario no posean a la vez esa propiedad como parte de las listas de miembros de clase. Un escenario principal es habilitar los elementos secundarios para que informen al elemento primario de cómo se deben mostrar en [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]; para obtener un ejemplo, vea <xref:System.Windows.Controls.DockPanel.Dock%2A> o <xref:System.Windows.Controls.Canvas.Left%2A>. Para obtener información detallada, vea [Información general sobre propiedades asociadas](attached-properties-overview.md).
 
 - Los desarrolladores de componentes o de aplicaciones pueden querer crear su propia propiedad de dependencia para habilitar funcionalidades, tales como el enlace de datos o la compatibilidad con estilos, o para admitir la invalidación y la coerción de valores. Para obtener más información, consulte [Propiedades de dependencia personalizadas](custom-dependency-properties.md).
 
 - Por lo general, las propiedades de dependencia deben considerarse propiedades públicas, accesibles o al menos reconocibles para cualquier llamador que tenga acceso a una instancia. Para obtener más información, consulte [Seguridad de las propiedades de dependencia](dependency-property-security.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Propiedades de dependencia personalizadas](custom-dependency-properties.md)
-- [Propiedades de dependencia de solo lectura](read-only-dependency-properties.md)
+- [Propiedades de dependencia de sólo lectura](read-only-dependency-properties.md)
 - [Información general sobre XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [Arquitectura de WPF](wpf-architecture.md)

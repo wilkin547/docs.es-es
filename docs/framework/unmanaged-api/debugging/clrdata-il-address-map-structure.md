@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 3f6928832d822422177ebd7def142422953468a0
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: e680a7a0dc3209d1988f6c84be0864572a74b3a4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274295"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179375"
 ---
 # <a name="clrdata_il_address_map-structure"></a>Estructura CLRDATA_IL_ADDRESS_MAP
 
-Define una asignación de IL a dirección.
+Define una asignación de IL para direccionar.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -40,28 +40,27 @@ typedef struct
 } CLRDATA_IL_ADDRESS_MAP;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
-| Miembro         | Descripción                                            |
+| Member         | Descripción                                            |
 | -------------- | ------------------------------------------------------ |
-| `ilOffset`     | Desplazamiento IL para el intervalo de direcciones contenido              |
-| `startAddress` | Dirección de inicio del intervalo.                        |
-| `endAddress`   | Dirección final del intervalo.                          |
-| `type`         | Tipo de los datos. Este valor no se usa actualmente |
+| `ilOffset`     | Desplazamiento de IL para el rango de direcciones contenido              |
+| `startAddress` | La dirección de inicio del rango.                        |
+| `endAddress`   | La dirección final del rango.                          |
+| `type`         | Tipo de los datos. Este valor no se utiliza actualmente |
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Esta estructura reside dentro del tiempo de ejecución y no se expone a través de los encabezados o archivos de biblioteca. Para usarlo, defina la estructura como se especificó anteriormente, `CLRDATA_ADDRESS` donde es un entero de 64 bits sin signo.
+Esta estructura se encuentra dentro del tiempo de ejecución y no se expone a través de encabezados o archivos de biblioteca. Para usarlo, defina la estructura como `CLRDATA_ADDRESS` se especificó anteriormente, donde hay un entero sin signo de 64 bits.
 
 ## <a name="requirements"></a>Requisitos
 
-**Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
-**Encabezado**: Ninguna  
-**Biblioteca** Ninguna   
-**Versiones de .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
+**Encabezado:** Ninguno  
+**Biblioteca:** Ninguna versión de **.NET Framework:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Enumeración CLRDataSourceType](clrdatasourcetype-enumeration.md)
+- [CLRDataSourceType (enumeración)](clrdatasourcetype-enumeration.md)
 - [Depuración](index.md)
 - [Estructuras de depuración](debugging-structures.md)

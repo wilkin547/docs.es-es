@@ -2,15 +2,15 @@
 title: 'Como: Crear un servicio que devuelva datos arbitrarios mediante el modelo de programación web HTTP de WCF'
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: 41d9f0e53401bcd6b57b04a38e76af5ddb9fb4cc
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c85ab6725876a2d523a18c817ce3fd89f0d2285a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976098"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184482"
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Como: Crear un servicio que devuelva datos arbitrarios mediante el modelo de programación web HTTP de WCF
-A veces los programadores deben tener un control absoluto de la forma en que se devuelven los datos desde una operación de un servicio. Este es el caso cuando una operación de servicio debe devolver datos en un formato no admitido por WCF. En este tema se describe el uso del modelo de programación WEB HTTP de WCF para crear este tipo de servicio. Este servicio tiene una operación que devuelve una secuencia.  
+A veces los programadores deben tener un control absoluto de la forma en que se devuelven los datos desde una operación de un servicio. Este es el caso cuando una operación de servicio debe devolver datos en un formato no admitido por WCF. En este tema se describe el uso del modelo de programación HTTP WEB de WCF para crear un servicio de este tipo. Este servicio tiene una operación que devuelve una secuencia.  
   
 ### <a name="to-implement-the-service-contract"></a>Para implementar el contrato de servicios  
   
@@ -25,7 +25,7 @@ A veces los programadores deben tener un control absoluto de la forma en que se 
         }  
     ```  
   
-     Dado que el método devuelve un <xref:System.IO.Stream>, WCF supone que la operación tiene control total sobre los bytes devueltos por la operación de servicio y no aplica ningún formato a los datos que se devuelven.  
+     Dado que el <xref:System.IO.Stream>método devuelve un , WCF supone que la operación tiene control completo sobre los bytes que se devuelven de la operación de servicio y no aplica ningún formato a los datos que se devuelven.  
   
 2. Implemente el contrato de servicios. El contrato tiene una sola operación (`GetImage`). Este método genera un mapa de bits y, a continuación, lo guarda en <xref:System.IO.MemoryStream> en formato .jpg. A continuación, la operación devuelve esa secuencia al llamador.  
   
@@ -53,7 +53,7 @@ A veces los programadores deben tener un control absoluto de la forma en que se 
   
      Observe la antepenúltima línea de código: `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
   
-     Esto establece el encabezado de tipo de contenido en `"image/jpeg"`. Aunque en este ejemplo se muestra cómo devolver un archivo .jpg, se puede modificar para devolver cualquier tipo de datos que se requiera, en cualquier formato. La operación debe recuperar o generar los datos y, a continuación, escribirlos en una secuencia.  
+     Esto establece el encabezado `"image/jpeg"`de tipo de contenido en . Aunque en este ejemplo se muestra cómo devolver un archivo .jpg, se puede modificar para devolver cualquier tipo de datos que se requiera, en cualquier formato. La operación debe recuperar o generar los datos y, a continuación, escribirlos en una secuencia.  
   
 ### <a name="to-host-the-service"></a>Para hospedar el servicio  
   
@@ -64,7 +64,7 @@ A veces los programadores deben tener un control absoluto de la forma en que se 
     {  
         static void Main(string[] args)  
         {  
-        }   
+        }
     }  
     ```  
   
@@ -175,6 +175,6 @@ namespace RawImageService
   
 - Al compilar el código de ejemplo, haga referencia a System.ServiceModel.dll y System.ServiceModel.Web.dll.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Modelo de programación de web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

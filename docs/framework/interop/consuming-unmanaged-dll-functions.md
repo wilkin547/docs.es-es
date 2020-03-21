@@ -14,11 +14,11 @@ helpviewer_keywords:
 - DLL functions
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 ms.openlocfilehash: 7ec1f129dcc19300dd5a4e7c5e627d9e0edf29a1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123650"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79400954"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Consumir funciones DLL no administradas
 La invocación de plataforma es un servicio que permite al código administrado llamar a funciones no administradas implementadas en bibliotecas de vínculos dinámicos (DLL), como los de la API de Windows. Busca y llama a una función exportada y calcula las referencias de sus argumentos (enteros, cadenas, matrices, estructuras etc.) a través de los límites de interoperación según sea necesario.  
@@ -39,9 +39,9 @@ La invocación de plataforma es un servicio que permite al código administrado 
   
      [Visual Basic] Use la instrucción **Declare** con las palabras clave **Function** y **Lib**. En algunos casos excepcionales, puede usar **DllImportAttribute** con las palabras clave **Shared Function**. Estos casos se explican más adelante en esta sección.  
   
-     [C#] Use **DllImportAttribute** para identificar el archivo DLL y la función. Marque el método con los modificadores **static** y **extern**.  
+     [C-] Utilice **DllImportAttribute** para identificar el archivo DLL y la función. Marque el método con los modificadores **static** y **extern**.  
   
-     [C++] Use **DllImportAttribute** para identificar el archivo DLL y la función. Marque la función o el método contenedor con **extern "C"** .  
+     [C++] Use **DllImportAttribute** para identificar el archivo DLL y la función. Marque la función o el método contenedor con **extern "C"**.  
   
 4. [Llamar a una función DLL](calling-a-dll-function.md).  
   
@@ -69,8 +69,8 @@ La invocación de plataforma es un servicio que permite al código administrado 
   
  La invocación de plataforma devuelve las excepciones generadas por la función no administrada al llamador administrado.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Interoperating with Unmanaged Code](index.md) (Interoperar con código no administrado)
+- [Interoperar con código no administrado](index.md)
 - [Ejemplos de invocación de plataforma](platform-invoke-examples.md)
 - [Serialización de interoperabilidad](interop-marshaling.md)

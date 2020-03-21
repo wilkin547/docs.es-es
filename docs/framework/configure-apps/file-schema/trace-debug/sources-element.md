@@ -9,19 +9,19 @@ helpviewer_keywords:
 - trace sources
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
-ms.openlocfilehash: a903d009f2056e65414c1792494fbbd20e224413
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 2a76816ee73f516b3c7544877a77531acaa8e09c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088815"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153274"
 ---
-# <a name="sources-element"></a>\<sources > elemento
-Especifica los orígenes de seguimiento que inician los mensajes de seguimiento.  
+# <a name="sources-element"></a>\<fuentes> Elemento
+Especifica los orígenes de seguimiento que inician mensajes de seguimiento.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. diagnostics >** ](system-diagnostics-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<orígenes >**
+[**\<configuración>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<fuentes>**
 
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,7 +41,7 @@ Especifica los orígenes de seguimiento que inician los mensajes de seguimiento.
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<source>](source-element.md)|Elemento necesario.<br /><br /> Contiene un origen de seguimiento que inicia mensajes de seguimiento.|  
+|[\<fuente>](source-element.md)|Elemento necesario.<br /><br /> Contiene un origen de seguimiento que inicia mensajes de seguimiento.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
@@ -50,22 +50,22 @@ Especifica los orígenes de seguimiento que inician los mensajes de seguimiento.
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`system.diagnostics`|Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.|  
   
-## <a name="remarks"></a>Comentarios  
- Este elemento se puede usar en el archivo de configuración del equipo (Machine. config) y en el archivo de configuración de la aplicación.  
+## <a name="remarks"></a>Observaciones  
+ Este elemento se puede utilizar en el archivo de configuración del equipo (Machine.config) y el archivo de configuración de la aplicación.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo utilizar el elemento `<sources>` para agregar el origen de seguimiento `mySource` y para establecer el nivel del modificador de origen denominado `sourceSwitch`. Se agrega un agente de escucha de seguimiento de consola que escribe información de seguimiento en la consola.  
+ En el ejemplo siguiente `<sources>` se muestra cómo `mySource` utilizar el elemento para agregar `sourceSwitch`el origen de seguimiento y establecer el nivel para el modificador de origen denominado . Se agrega un agente de escucha de seguimiento de consola que escribe información de seguimiento en la consola.  
   
 ```xml  
 <configuration>  
    <system.diagnostics>  
       <sources>  
-         <source name="mySource" switchName="sourceSwitch"   
+         <source name="mySource" switchName="sourceSwitch"
             switchType="System.Diagnostics.SourceSwitch"  >  
             <listeners>  
-               <add name="console"   
+               <add name="console"
                   type="System.Diagnostics.ConsoleTraceListener" >  
-                  <filter type="System.Diagnostics.EventTypeFilter"   
+                  <filter type="System.Diagnostics.EventTypeFilter"
                      initializeData="Error" />  
                </add>  
                <remove name="Default" />  
@@ -74,12 +74,12 @@ Especifica los orígenes de seguimiento que inician los mensajes de seguimiento.
       </sources>  
       <switches>  
          <add name="sourceSwitch" value="Warning" />  
-      </switches>    
-   </system.diagnostics>   
+      </switches>
+   </system.diagnostics>
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.DefaultTraceListener>
@@ -87,5 +87,5 @@ Especifica los orígenes de seguimiento que inician los mensajes de seguimiento.
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
 - <xref:System.Diagnostics.XmlWriterTraceListener>
-- [Esquema de la configuración de seguimiento y depuración](index.md)
-- [\<source>](source-element.md)
+- [Esquema de configuración de seguimiento y depuración](index.md)
+- [\<fuente>](source-element.md)

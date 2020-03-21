@@ -1,20 +1,20 @@
 ---
-title: < > System. serviceModel del flujo de trabajo
+title: <system.serviceModel> del flujo de trabajo
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
-ms.openlocfilehash: 757a7a132a6e765e257097d251a110297c6a40bf
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 9aa2bf0fdfd6fe4528a3fda4d05b3ba8f23637d3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70398599"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151954"
 ---
-# <a name="systemservicemodel-of-workflow"></a>\<> System. serviceModel del flujo de trabajo
+# <a name="systemservicemodel-of-workflow"></a>\<system.serviceModel> de flujo de trabajo
 Esta sección de configuración contiene todos los elementos de configuración del flujo de trabajo.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp; **\<integrado. > De ServiceModel**  
+[**\<configuración>**](../configuration-element.md)\
+&nbsp;&nbsp;**\<Sistema.>De ServiceModel**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -25,12 +25,12 @@ Esta sección de configuración contiene todos los elementos de configuración d
     <behavior name="String">  
       <bufferReceive maxPendingMessagesPerChannel="Integer" />  
       <etwTracking profileName="String" />  
-     <sendMessageChannelCache allowUnsafeCaching="Boolean" >          
+     <sendMessageChannelCache allowUnsafeCaching="Boolean" >
         <channelSettings idleTimeout="TimeSpan" leaseTimeout="TimeSpan" maxItemsInCache="Integer" />  
         <factorySettings idleTimeout="TimeSpan" leaseTimeout="TimeSpan" maxItemsInCache="Integer" />  
      </sendMessageChannelCache>  
-      <sqlWorkflowInstanceStore   
-          connectionStringName="String"   
+      <sqlWorkflowInstanceStore
+          connectionStringName="String"
           hostLockRenewalPeriod="TimeSpan"  
           instanceCompletionAction="DeleteNothing/DeleteAll"  
           instanceEncodingAction="None/GZip"  
@@ -42,12 +42,12 @@ Esta sección de configuración contiene todos los elementos de configuración d
     </behavior>  
     </serviceBehaviors>  
   </behaviors>  
-  <tracking>    
-     <participants>   
-      <add name="String"   
+  <tracking>
+     <participants>
+      <add name="String"
            profileName="String"  
-           type="String" />   
-     </participants>   
+           type="String" />
+     </participants>
     <trackingProfile name="String">  
       <workflow activityDefinitionId="String">  
           <activityScheduledQueries>  
@@ -88,7 +88,7 @@ Esta sección de configuración contiene todos los elementos de configuración d
           </workflowInstanceQuery>  
         </workflowInstanceQueries>  
       </workflow>  
-    </trackingProfile>          
+    </trackingProfile>
    </profiles>  
   </tracking>  
 </system.ServiceModel>  
@@ -102,13 +102,13 @@ Esta sección de configuración contiene todos los elementos de configuración d
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<behaviors>](behaviors-of-workflow.md)|En esta sección se define la colección **serviceBehaviors** .  Cada elemento de la colección define elementos de comportamiento utilizados por los servicios. Cada elemento de comportamiento se identifica mediante su atributo de **nombre** único.|  
-|[\<tracking>](tracking.md)|Representa una sección de configuración para definir los valores de seguimiento de un servicio de flujo de trabajo.<br /><br /> Para obtener más información sobre el seguimiento del flujo de trabajo y su configuración, consulte [seguimiento y](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) seguimiento del flujo de trabajo y [configuración del seguimiento para un flujo de trabajo](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).|  
+|[\<comportamientos>](behaviors-of-workflow.md)|En esta sección se define la colección **serviceBehaviors.**  Cada elemento de la colección define elementos de comportamiento utilizados por los servicios. Cada elemento de comportamiento se identifica por su atributo **de nombre** único.|  
+|[\<seguimiento>](tracking.md)|Representa una sección de configuración para definir los valores de seguimiento de un servicio de flujo de trabajo.<br /><br /> Para obtener más información sobre el seguimiento del flujo de trabajo y su configuración, vea [Seguimiento y seguimiento](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) del flujo de trabajo y Configuración del seguimiento de un flujo de [trabajo](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<configuration>](../configuration-element.md)|El elemento raíz para todos los elementos de configuración en un archivo de configuración .NET.|
+|[\<configuración>](../configuration-element.md)|El elemento raíz para todos los elementos de configuración en un archivo de configuración .NET.|

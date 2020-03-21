@@ -1,15 +1,15 @@
 ---
-title: Procedimiento para deserializar propiedades de datos de instancia
+title: 'Cómo: Deserializar propiedades de datos de instancia'
 ms.date: 03/30/2017
 ms.assetid: b13a3508-1b97-4359-b336-03d85fa23bc4
-ms.openlocfilehash: e037d5f8d0b221aa0eb8fdc6eceabf6efb2dc387
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 8142671fc1bc154337019e025d8443f0570106b3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989635"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143088"
 ---
-# <a name="how-to-deserialize-instance-data-properties"></a>Procedimiento para deserializar propiedades de datos de instancia
+# <a name="how-to-deserialize-instance-data-properties"></a>Cómo: Deserializar propiedades de datos de instancia
 Puede haber situaciones en las que un usuario o un administrador del flujo de trabajo desee inspeccionar manualmente el estado de una instancia de flujo de trabajo conservada. <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> proporciona una vista en la tabla de instancias que expone las cuatro columnas siguientes:  
   
 - ReadWritePrimitiveDataProperties  
@@ -20,11 +20,11 @@ Puede haber situaciones en las que un usuario o un administrador del flujo de tr
   
 - WriteOnlyComplexDataProperties  
   
- Las propiedades de datos primitivos hacen referencia a las propiedades cuyos tipos de .NET Framework se consideran "comunes" (por ejemplo, Int32 y String), mientras que las propiedades de datos complejos hacen referencia a todos los demás tipos. Una enumeración exacta de tipos primitivos se encuentra más adelante en este ejemplo de código.  
+ Las propiedades de datos primitivas hacen referencia a propiedades cuyos tipos de .NET Framework se consideran "comunes" (por ejemplo, Int32 y String), mientras que las propiedades de datos complejas hacen referencia a todos los demás tipos. Una enumeración exacta de tipos primitivos se encuentra más adelante en este ejemplo de código.  
   
  Las propiedades ReadWrite hacen referencia a las propiedades que se devuelven al tiempo de ejecución de flujo de trabajo cuando se carga una instancia. Las propiedades WriteOnly se escriben en la base de datos y no se vuelven a leer nunca.  
   
- Este ejemplo proporciona código que permite a un usuario deserializar las propiedades de datos primitivas. Dada una matriz de bytes leída de la columna ReadWritePrimitiveDataProperties o WriteOnlyPrimitiveDataProperties, este código convertirá el objeto binario grande (BLOB) <xref:System.Collections.Generic.Dictionary%602> en un \<de tipo XName, Object > donde cada valor de clave Pair representa un nombre de propiedad y su valor correspondiente.  
+ Este ejemplo proporciona código que permite a un usuario deserializar las propiedades de datos primitivas. Dada una matriz de bytes leída desde la columna ReadWritePrimitiveDataProperties o WriteOnlyPrimitiveDataProperties, <xref:System.Collections.Generic.Dictionary%602> este \<código convertirá el objeto binario grande (BLOB) en un objeto XName, objeto> donde cada par de valores de clave representa un nombre de propiedad y su valor correspondiente.  
   
  Este ejemplo no muestra cómo deserializar las propiedades de datos complejos porque no es actualmente una operación compatible.  
   
@@ -104,7 +104,7 @@ namespace PropertyReader
                     // if the instance state is compressed using GZip algorithm  
                     if (isCompressed)  
                     {  
-                        // decompress the data using the GZip   
+                        // decompress the data using the GZip
                         using (GZipStream stream = new GZipStream(memoryStream, CompressionMode.Decompress))  
                         {  
                             // create an XmlReader object and pass it on to the helper method ReadPrimitiveDataProperties  
@@ -117,7 +117,7 @@ namespace PropertyReader
                     }  
                     else  
                     {  
-                        // if the instance data is not compressed   
+                        // if the instance data is not compressed
                         // create an XmlReader object and pass it on to the helper method ReadPrimitiveDataProperties  
                         using (XmlReader reader = XmlDictionaryReader.CreateBinaryReader(memoryStream, XmlDictionaryReaderQuotas.Max))  
                         {  

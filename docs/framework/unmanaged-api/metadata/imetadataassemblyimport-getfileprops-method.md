@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c5e6216f-ae3d-4697-9688-66b69c1251ec
 topic_type:
 - apiref
-ms.openlocfilehash: beb697d80417b937876a0887e4376341185a47d9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: dae4a36537eeac58ffb17ebc1b78d935ec807cd8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447214"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175985"
 ---
 # <a name="imetadataassemblyimportgetfileprops-method"></a>IMetaDataAssemblyImport::GetFileProps (Método)
 Obtiene las propiedades del archivo con la firma de metadatos especificada.  
@@ -29,47 +29,47 @@ Obtiene las propiedades del archivo con la firma de metadatos especificada.
   
 ```cpp  
 HRESULT GetFileProps (  
-    [in]  mdFile      mdf,   
-    [out] LPWSTR      szName,   
-    [in]  ULONG       cchName,   
-    [out] ULONG       *pchName,   
-    [out] const void  **ppbHashValue,   
-    [out] ULONG       *pcbHashValue,   
+    [in]  mdFile      mdf,
+    [out] LPWSTR      szName,
+    [in]  ULONG       cchName,
+    [out] ULONG       *pchName,
+    [out] const void  **ppbHashValue,
+    [out] ULONG       *pcbHashValue,
     [out] DWORD       *pdwFileFlags  
 );  
 ```  
   
 ## <a name="parameters"></a>Parámetros  
  `mdf`  
- de Símbolo (token) de metadatos de `mdFile` que representa el archivo para el que se van a obtener las propiedades.  
+ [en] El `mdFile` token de metadatos que representa el archivo para el que se obtienen las propiedades.  
   
  `szName`  
- enuncia Nombre simple del archivo.  
+ [fuera] El nombre simple del archivo.  
   
  `cchName`  
- de Tamaño, en caracteres anchos, de `szName`.  
+ [en] El tamaño, en caracteres `szName`anchos, de .  
   
  `pchName`  
- enuncia Número de caracteres anchos realmente devueltos en `szName`.  
+ [fuera] El número de caracteres `szName`anchos realmente devueltos en .  
   
  `ppbHashValue`  
- enuncia Puntero al valor hash. Este es el hash, mediante el algoritmo SHA-1, del archivo.  
+ [fuera] Un puntero al valor hash. Este es el hash, usando el algoritmo SHA-1, del archivo.  
   
  `pcbHashValue`  
- enuncia Número de caracteres anchos en el valor hash devuelto.  
+ [fuera] El número de caracteres anchos en el valor hash devuelto.  
   
  `pdwFileFlags`  
- enuncia Puntero a las marcas que describen los metadatos aplicados a un archivo. El valor de flags es una combinación de uno o más valores de [CorFileFlags (](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) .  
+ [fuera] Puntero a las marcas que describen los metadatos aplicados a un archivo. El valor flags es una combinación de uno o varios [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) valores.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataforma:** Consulte [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataforma:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor. h  
+ **Encabezado:** Cor.h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [IMetaDataAssemblyImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

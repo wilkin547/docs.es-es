@@ -2,17 +2,17 @@
 title: Ejemplo de fuente de diagnósticos independientes
 ms.date: 03/30/2017
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-ms.openlocfilehash: 4520883b5db19c28544a5576ca600b83e37eede3
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 29d8caee48925040db9f1812f015870e3a1272bc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787931"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144011"
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>Ejemplo de fuente de diagnósticos independientes
-Este ejemplo muestra cómo crear una fuente RSS/Atom para la distribución con Windows Communication Foundation (WCF). Se trata de un programa básico de "Hola mundo" que muestra los conceptos básicos del modelo de objetos y cómo configurarlo en un servicio Windows Communication Foundation (WCF).  
+En este ejemplo se muestra cómo crear una fuente RSS/Atom para la sindicación con Windows Communication Foundation (WCF). Es un programa básico "Hello World" que muestra los conceptos básicos del modelo de objetos y cómo configurarlo en un servicio de Windows Communication Foundation (WCF).  
   
- WCF modela las fuentes de distribución como operaciones de servicio que devuelven un tipo de datos Especial, <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Las instancias de <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> pueden serializar una fuente en los formatos RSS 2.0 y Atom 1.0. El código de ejemplo siguiente muestra el contrato utilizado.  
+ Los modelos WCF sindican fuentes como operaciones de <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>servicio que devuelven un tipo de datos especial, . Las instancias de <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> pueden serializar una fuente en los formatos RSS 2.0 y Atom 1.0. El código de ejemplo siguiente muestra el contrato utilizado.  
   
 ```csharp  
 [ServiceContract(Namespace = "")]  
@@ -24,7 +24,7 @@ Este ejemplo muestra cómo crear una fuente RSS/Atom para la distribución con W
         //(the part of the request URI after the endpoint address)  
         //using the HTTP GET method. The UriTemplate specifies a relative  
         //path of 'feed', and specifies that the format is  
-        //supplied using a query string.   
+        //supplied using a query string.
         [WebGet(UriTemplate="feed?format={format}")]  
         [ServiceKnownType(typeof(Atom10FeedFormatter))]  
         [ServiceKnownType(typeof(Rss20FeedFormatter))]  
@@ -32,9 +32,9 @@ Este ejemplo muestra cómo crear una fuente RSS/Atom para la distribución con W
     }  
 ```  
   
- La operación de `GetProcesses` se anota con el atributo <xref:System.ServiceModel.Web.WebGetAttribute> que le permite controlar cómo WCF envía las solicitudes HTTP GET a las operaciones de servicio y especifica el formato de los mensajes enviados.  
+ La `GetProcesses` operación se <xref:System.ServiceModel.Web.WebGetAttribute> anota con el atributo que le permite controlar cómo WCF distribuye las solicitudes HTTP GET a las operaciones de servicio y especificar el formato de los mensajes enviados.  
   
- Al igual que cualquier servicio WCF, las fuentes de distribución pueden hospedarse automáticamente en cualquier aplicación administrada. Los servicios de distribución requieren un enlace específico (<xref:System.ServiceModel.WebHttpBinding>) y un comportamiento del extremo específico (<xref:System.ServiceModel.Description.WebHttpBehavior>) para funcionar correctamente. La nueva clase <xref:System.ServiceModel.Web.WebServiceHost> proporciona un API apropiado para crear estos puntos de conexión sin una configuración específica.  
+ Al igual que cualquier servicio WCF, las fuentes de distribución se pueden hospedar automáticamente en cualquier aplicación administrada. Los servicios de distribución requieren un enlace específico (<xref:System.ServiceModel.WebHttpBinding>) y un comportamiento del extremo específico (<xref:System.ServiceModel.Description.WebHttpBehavior>) para funcionar correctamente. La nueva clase <xref:System.ServiceModel.Web.WebServiceHost> proporciona un API apropiado para crear estos puntos de conexión sin una configuración específica.  
   
 ```csharp  
 WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http://localhost:8000/diagnostics"));  
@@ -49,9 +49,9 @@ WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http:/
 <%@ ServiceHost Language="C#|VB" Debug="true" Service="ProcessService" %>
 ```
   
- Dado que este servicio recibe las solicitudes que utilizan el HTTP GET estándar, puede utilizar cualquier cliente que reconozca RSS o Atom para tener acceso al servicio. Por ejemplo, puede ver la salida de este servicio navegando a `http://localhost:8000/diagnostics/feed/?format=atom` o `http://localhost:8000/diagnostics/feed/?format=rss` en un explorador compatible con RSS.
+ Dado que este servicio recibe las solicitudes que utilizan el HTTP GET estándar, puede utilizar cualquier cliente que reconozca RSS o Atom para tener acceso al servicio. Por ejemplo, puede ver la salida de `http://localhost:8000/diagnostics/feed/?format=atom` este `http://localhost:8000/diagnostics/feed/?format=rss` servicio navegando a o en un navegador compatible con RSS.
   
- También puede usar el [modo en que el modelo de objetos de sindicación de WCF se asigna a Atom y RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md) para leer datos sindicados y procesarlos mediante código imperativo.  
+ También puede usar el cómo el modelo de objetos de [sindicación de WCF se asigna a Atom y RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md) para leer los datos sindicados y procesarlos mediante código imperativo.  
   
 ```csharp
 XmlReader reader = XmlReader.Create( "http://localhost:8000/diagnostics/feed/?format=rss",
@@ -74,26 +74,26 @@ foreach (SyndicationItem i in feed.Items)
 }
 ```
   
-## <a name="set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo
+## <a name="set-up-build-and-run-the-sample"></a>Configurar, crear y ejecutar el ejemplo
   
-1. Asegúrese de que tiene el permiso de registro de dirección correcto para HTTP y HTTPS en el equipo, tal como se explica en el procedimiento de configuración de la [instalación de una sola vez para los ejemplos de Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
+1. Asegúrese de que tiene el permiso de registro de dirección correcto para HTTP y HTTPS en el equipo como se explica en las instrucciones de configuración en Procedimiento de instalación única [para los ejemplos](one-time-setup-procedure-for-the-wcf-samples.md)de Windows Communication Foundation .
 
 2. Compile la solución.
 
-3. Ejecute la aplicación de consola.
+3. Ejecución de la aplicación de consola.
 
-4. Mientras se ejecuta la aplicación de consola, vaya a `http://localhost:8000/diagnostics/feed/?format=atom` o `http://localhost:8000/diagnostics/feed/?format=rss` mediante un explorador compatible con RSS.
+4. Mientras se ejecuta la `http://localhost:8000/diagnostics/feed/?format=atom` aplicación `http://localhost:8000/diagnostics/feed/?format=rss` de consola, desplácese hasta un explorador compatible con RSS o mediante ella.
 
 > [!IMPORTANT]
 > Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.
+> Si este directorio no existe, vaya a Ejemplos de [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (WCF). Este ejemplo se encuentra en el siguiente directorio.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\DiagnosticsFeed`
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Modelo de programación de web HTTP de WCF](../feature-details/wcf-web-http-programming-model.md)
-- [Redifusión en WCF](../feature-details/wcf-syndication.md)
+- [Sindicación en WCF](../feature-details/wcf-syndication.md)

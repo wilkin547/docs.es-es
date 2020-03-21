@@ -1,5 +1,5 @@
 ---
-title: Campo CoreResponseData. m_StatusCode
+title: CoreResponseData.m_StatusCode Field
 ms.date: 01/29/2018
 topic_type:
 - apiref
@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: 8abe619a57cc61fc3502807f60deccbbd578f382
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: dfed9a748e959f0f751408566c7cbb4d2fa13e3c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740992"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79156078"
 ---
-# <a name="coreresponsedatam_statuscode-field"></a>CoreResponseData. m\_campo StatusCode
+# <a name="coreresponsedatam_statuscode-field"></a>Campo StatusCode\_CoreResponseData.m
 
-`CoreResponseData.m_StatusCode` es un <xref:System.Net.HttpStatusCode> que contiene el estado de la respuesta.
+`CoreResponseData.m_StatusCode`es <xref:System.Net.HttpStatusCode> un contenido del estado de la respuesta.
 
 ## <a name="syntax"></a>Sintaxis
   
@@ -28,14 +28,14 @@ public HttpStatusCode m_StatusCode
 ```
 
 > [!WARNING]
-> Esta API no está pensada para usarse directamente en el código. En su lugar, debe usar un <xref:System.Diagnostics.DiagnosticSource> para enlazar el código de red. Consulte [la guía del usuario de DiagnosticSource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
-> 
-> Microsoft no admite el uso de esta clase en una aplicación de producción en cualquier circunstancia.
+> Esta API no está diseñada para usarse directamente en el código. En su lugar, <xref:System.Diagnostics.DiagnosticSource> debe usar a para enlazar código de red. Consulte [Guía del usuario de DiagnosticSource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
+>
+> Microsoft no admite el uso de esta clase en una aplicación de producción bajo ninguna circunstancia.
 
-## <a name="requirements"></a>Requisitos de
+## <a name="requirements"></a>Requisitos
 
-**Espacio de nombres:** <xref:System.Net>
+**Espacio de nombres:**<xref:System.Net>
 
-**Ensamblado:** Sistema (en System. dll)
+**Montaje:** Sistema (en System.dll)
 
-**.NET Framework versiones:** Disponible desde 2,0.
+**Versiones de .NET Framework:** Disponible desde 2.0.

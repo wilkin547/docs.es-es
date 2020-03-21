@@ -11,12 +11,12 @@ helpviewer_keywords:
 - COM interop, HRESULTs
 - COM interop, exceptions
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
-ms.openlocfilehash: 13dcca5f35750ad3e8bd6ea4f6dd443fe9a8ee94
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e186228d1dc9a42ddfe92428f7dfad29a5789095
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123878"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181405"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>Cómo: Asignar resultados HRESULT y excepciones
 Los métodos COM informan de errores devolviendo valores HRESULT; los métodos de .NET informan de ellos iniciando excepciones. El tiempo de ejecución controla la transición entre los dos. Cada clase de excepción de .NET Framework se asigna a un valor HRESULT.  
@@ -35,7 +35,7 @@ Los métodos COM informan de errores devolviendo valores HRESULT; los métodos d
     Class NoAccessException : public ApplicationException  
     {  
         NoAccessException () {  
-        HResult = E_ACCESSDENIED;   
+        HResult = E_ACCESSDENIED;
     }  
     }  
     CMyClass::MethodThatThrows  
@@ -73,7 +73,7 @@ CMyClass::MethodThatThrows
 |**COR_E_DUPLICATEWAITOBJECT**|**DuplicateWaitObjectException**|  
 |**COR_E_ENDOFSTREAM**|**EndOfStreamException**|  
 |**COR_E_TYPELOAD**|**EntryPointNotFoundException**|  
-|**COR_E_EXCEPTION**|**Exception**|  
+|**COR_E_EXCEPTION**|**Excepción**|  
 |**COR_E_EXECUTIONENGINE**|**ExecutionEngineException**|  
 |**COR_E_FIELDACCESS**|**FieldAccessException**|  
 |**COR_E_FILENOTFOUND o ERROR_FILE_NOT_FOUND**|**FileNotFoundException**|  
@@ -134,13 +134,13 @@ CMyClass::MethodThatThrows
 |**HelpLink**|Si **IErrorInfo->HelpContext** es distinto de cero, la cadena se forma concatenando **IErrorInfo->GetHelpFile** y "#" e **IErrorInfo->GetHelpContext**. En caso contrario, se devuelve la cadena desde **IErrorInfo->GetHelpFile**.|  
 |**InnerException**|Siempre una referencia nula (**Nothing** en Visual Basic).|  
 |**Mensaje**|Cadena devuelta desde **IErrorInfo->GetDescription**.|  
-|**Source**|Cadena devuelta desde **IErrorInfo->GetSource**.|  
+|**Origen**|Cadena devuelta desde **IErrorInfo->GetSource**.|  
 |**StackTrace**|Seguimiento de la pila.|  
 |**TargetSite**|El nombre del método que devolvió el valor HRESULT con error.|  
   
  Los campos de excepción, como **Message**, **Source** y **StackTrace** no están disponibles para la excepción **StackOverflowException**.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Interoperabilidad COM avanzada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
 - [Excepciones](../../standard/exceptions/index.md)

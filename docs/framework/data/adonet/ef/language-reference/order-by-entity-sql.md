@@ -2,12 +2,12 @@
 title: ORDER BY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c0b61572-ecee-41eb-9d7f-74132ec8a26c
-ms.openlocfilehash: 2010ef9d6fe37e65824cac877074453db1b789db
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 1233971b172079aa48227d0ec520068afbdf0952
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319443"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150074"
 ---
 # <a name="order-by-entity-sql"></a>ORDER BY (Entity SQL)
 Especifica el criterio de ordenación utilizado en los objetos devueltos en una instrucción SELECT.  
@@ -15,13 +15,13 @@ Especifica el criterio de ordenación utilizado en los objetos devueltos en una 
 ## <a name="syntax"></a>Sintaxis  
   
 ```sql  
-[ ORDER BY   
+[ ORDER BY
    {  
       order_by_expression [SKIP n] [LIMIT n]  
       [ COLLATE collation_name ]  
       [ ASC | DESC ]  
    }  
-   [ ,…n ]   
+   [ ,…n ]
 ]  
 ```  
   
@@ -44,7 +44,7 @@ Especifica el criterio de ordenación utilizado en los objetos devueltos en una 
  SKIP `n`  
  Omite los `n` primeros elementos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  La cláusula ORDER BY se aplica lógicamente al resultado de la cláusula SELECT. La cláusula ORDER BY puede hacer referencia a los elementos de la lista de selección utilizando sus alias. La cláusula ORDER BY también puede hacer referencia a otras variables que estén actualmente en el ámbito. Sin embargo, si la cláusula SELECT se ha especificado con un modificador DISTINCT, la cláusula ORDER BY solo puede hacer referencia a los alias de la cláusula SELECT.  
   
  `SELECT c AS c1 FROM cs AS c ORDER BY c1.e1, c.e2`  
@@ -53,7 +53,7 @@ Especifica el criterio de ordenación utilizado en los objetos devueltos en una 
   
  Si el código recorre en iteración un conjunto ordenado, que no sea para una proyección de nivel superior, no se garantiza que los resultados mantengan su orden.  
 
-En el ejemplo siguiente, se garantiza que el orden se conserva:
+En el ejemplo siguiente, se garantiza que se conserva el orden:
 
 ```sql  
 SELECT C1.FirstName, C1.LastName  
@@ -61,7 +61,7 @@ SELECT C1.FirstName, C1.LastName
         ORDER BY C1.LastName  
 ```  
 
-En la consulta siguiente, se omite el orden de la consulta anidada:  
+En la siguiente consulta, se omite el orden de la consulta anidada:  
 
 ```sql  
 SELECT C2.FirstName, C2.LastName  
@@ -87,22 +87,22 @@ ORDER BY ...
   
 - KEY  
   
-- IZQUIERDA  
+- LEFT  
   
 - ORDER  
   
 - OUTER  
   
-- DERECHA  
+- RIGHT  
   
 - ROW  
   
-- VALUE  
+- VALOR  
   
 ## <a name="ordering-nested-queries"></a>Ordenar las consultas anidadas  
  En Entity Framework, una expresión anidada se puede colocar en cualquier parte de la consulta; el orden de una consulta anidada no se conserva.  
 
-La siguiente consulta ordenará los resultados por apellidos:  
+La siguiente consulta ordenará los resultados por el apellido:  
 
 ```sql  
 SELECT C1.FirstName, C1.LastName  
@@ -110,7 +110,7 @@ SELECT C1.FirstName, C1.LastName
         ORDER BY C1.LastName  
 ```  
 
-En la consulta siguiente, se omite el orden de la consulta anidada:  
+En la siguiente consulta, se omite el orden de la consulta anidada:  
 
 ```sql  
 SELECT C2.FirstName, C2.LastName  
@@ -128,10 +128,10 @@ SELECT C2.FirstName, C2.LastName
   
  [!code-sql[DP EntityServices Concepts#ORDERBY](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#orderby)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Expresiones de consulta](query-expressions-entity-sql.md)
 - [Referencia de Entity SQL](entity-sql-reference.md)
-- [SKIP](skip-entity-sql.md)
-- [LIMIT](limit-entity-sql.md)
-- [TOP](top-entity-sql.md)
+- [Saltar](skip-entity-sql.md)
+- [Límite](limit-entity-sql.md)
+- [Arriba](top-entity-sql.md)

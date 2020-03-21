@@ -18,18 +18,18 @@ helpviewer_keywords:
 - translating resources into languages
 - localizing resources
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
-ms.openlocfilehash: 39bb518306b6e76aea1ae4a791fca79fbbb1b6c8
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 17795db2cdec419a31fe862793c88506f9535ff9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445743"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180448"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Recuperar recursos de aplicaciones de escritorio
 
-Al trabajar con recursos localizados en aplicaciones de escritorio de .NET Framework, en principio se deberían empaquetar los recursos de la referencia cultural predeterminada o neutra con el ensamblado principal y, luego, crear un ensamblado satélite independiente para todos los idiomas o referencias culturales que admita la aplicación. Después podrá usar la clase <xref:System.Resources.ResourceManager> como se describe en la siguiente sección para obtener acceso a los recursos con nombre. Si opta por no insertar los recursos en el ensamblado principal y los ensamblados satélite, también puede obtener acceso directamente a los archivos .resources binarios, como se describe en la sección [Recuperar recursos desde archivos .resources](#from_file) , que aparece más adelante en este artículo.  Para recuperar recursos en las aplicaciones de la tienda Windows 8. x, consulte [crear y recuperar recursos en aplicaciones de la tienda Windows](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140)).  
+Al trabajar con recursos localizados en aplicaciones de escritorio de .NET Framework, en principio se deberían empaquetar los recursos de la referencia cultural predeterminada o neutra con el ensamblado principal y, luego, crear un ensamblado satélite independiente para todos los idiomas o referencias culturales que admita la aplicación. Después podrá usar la clase <xref:System.Resources.ResourceManager> como se describe en la siguiente sección para obtener acceso a los recursos con nombre. Si opta por no insertar los recursos en el ensamblado principal y los ensamblados satélite, también puede obtener acceso directamente a los archivos .resources binarios, como se describe en la sección [Recuperar recursos desde archivos .resources](#from_file), que aparece más adelante en este artículo.  Para recuperar recursos en aplicaciones de la Tienda Windows 8.x, consulta [Creación y recuperación de recursos en aplicaciones](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140))de la Tienda Windows.  
   
-<a name="from_assembly"></a>   
+<a name="from_assembly"></a>
 ## <a name="retrieving-resources-from-assemblies"></a>Recuperar recursos de ensamblados  
  La clase <xref:System.Resources.ResourceManager> proporciona acceso a los recursos en tiempo de ejecución. Puede usar el método <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> para recuperar recursos de cadena y el método <xref:System.Resources.ResourceManager.GetObject%2A?displayProperty=nameWithType> o <xref:System.Resources.ResourceManager.GetStream%2A?displayProperty=nameWithType> para recuperar recursos que no son de cadena. Cada método tiene dos sobrecargas:  
   
@@ -37,7 +37,7 @@ Al trabajar con recursos localizados en aplicaciones de escritorio de .NET Frame
   
 - Una sobrecarga que tiene dos parámetros: una cadena que contiene el nombre del recurso y un objeto <xref:System.Globalization.CultureInfo> que representa la referencia cultural cuyo recurso se debe recuperar. Si no se encuentra un recurso establecido para esa referencia cultural, el Administrador de recursos usa reglas de reserva para recuperar un recurso adecuado. Para obtener más información, consulte los métodos <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>y <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> .  
   
- El Administrador de recursos usa el proceso de reserva de recursos para controlar la forma en que la aplicación recupera los recursos específicos de referencia cultural. Para obtener más información, consulte la sección "El proceso de reserva de recursos" de [Packaging and Deploying Resources](packaging-and-deploying-resources-in-desktop-apps.md). Para obtener información sobre cómo crear una instancia de un objeto <xref:System.Resources.ResourceManager> , consulte la sección "Instantiating a ResourceManager Object" (Crear una instancia de un objeto ResourceManager) del tema de la clase <xref:System.Resources.ResourceManager> .  
+ El Administrador de recursos usa el proceso de reserva de recursos para controlar la forma en que la aplicación recupera los recursos específicos de referencia cultural. Para más información, consulte la sección "Proceso de reserva de recursos" de [Empaquetar e implementar recursos](packaging-and-deploying-resources-in-desktop-apps.md). Para obtener información sobre cómo crear una instancia de un objeto <xref:System.Resources.ResourceManager> , consulte la sección "Instantiating a ResourceManager Object" (Crear una instancia de un objeto ResourceManager) del tema de la clase <xref:System.Resources.ResourceManager> .  
   
 ### <a name="retrieving-string-data-an-example"></a>Ejemplo de recuperación de datos de cadena  
  En el ejemplo siguiente se llama al método <xref:System.Resources.ResourceManager.GetString%28System.String%29> para recuperar los recursos de cadena de la referencia cultural de interfaz de usuario actual. Incluye un recurso de cadena neutro para la referencia cultural de inglés (Estados Unidos) y recursos localizados para las referencias culturales de ruso (Rusia) y de francés (Francia). El siguiente recurso de inglés (Estados Unidos) está en un archivo denominado Strings.txt:  
@@ -88,7 +88,7 @@ al -embed:strings.ru-RU.resources -culture:ru-RU -out:ru-RU\GetString.resources.
  [!code-csharp[Conceptual.Resources.Retrieving#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/createresources.cs#4)]
  [!code-vb[Conceptual.Resources.Retrieving#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/createresources.vb#4)]  
   
- El siguiente código recupera el recurso y muestra la imagen en un control <xref:System.Windows.Forms.PictureBox> .  
+ El siguiente código recupera el recurso y muestra la imagen en un control <xref:System.Windows.Forms.PictureBox>.  
   
  [!code-csharp[Conceptual.Resources.Retrieving#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/getstream.cs#5)]
  [!code-vb[Conceptual.Resources.Retrieving#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/getstream.vb#5)]  
@@ -137,19 +137,19 @@ GetObject.exe
   
  El atributo <xref:System.Resources.SatelliteContractVersionAttribute> proporciona compatibilidad de versiones para un ensamblado principal. Al especificar este atributo en el ensamblado principal de una aplicación, puede actualizar y volver a implementar un ensamblado principal sin tener que actualizar sus ensamblados satélite. Una vez actualizado el ensamblado principal, incremente el número de versión del ensamblado principal sin modificar el número de versión del contrato satélite. Cuando el Administrador de recursos recupere los recursos solicitados, cargará la versión del ensamblado satélite especificada por este atributo.  
   
- Los ensamblados de directiva de edición ofrecen compatibilidad de las versiones de los ensamblados satélite. Puede actualizar y volver a implementar un ensamblado satélite sin tener que actualizar el ensamblado principal. Después de actualizar un ensamblado satélite, incremente su número de versión y distribúyalo con un ensamblado de directiva de edición. En el ensamblado de directiva de edición, especifique que el nuevo ensamblado satélite es compatible con su versión anterior. El Administrador de recursos usará el atributo <xref:System.Resources.SatelliteContractVersionAttribute> para determinar la versión del ensamblado satélite, pero el cargador de ensamblados se enlazará con la versión del ensamblado satélite especificada por la directiva de edición. Para obtener más información sobre los ensamblados de directiva de edición, consulte [How to: Create a Publisher Policy](../configure-apps/how-to-create-a-publisher-policy.md)(Cómo crear una directiva de edición).  
+ Los ensamblados de directiva de edición ofrecen compatibilidad de las versiones de los ensamblados satélite. Puede actualizar y volver a implementar un ensamblado satélite sin tener que actualizar el ensamblado principal. Después de actualizar un ensamblado satélite, incremente su número de versión y distribúyalo con un ensamblado de directiva de edición. En el ensamblado de directiva de edición, especifique que el nuevo ensamblado satélite es compatible con su versión anterior. El Administrador de recursos usará el atributo <xref:System.Resources.SatelliteContractVersionAttribute> para determinar la versión del ensamblado satélite, pero el cargador de ensamblados se enlazará con la versión del ensamblado satélite especificada por la directiva de edición. Para más información sobre los ensamblados de directiva del publicador, consulte [Cómo crear un archivo de directiva de edición](../configure-apps/how-to-create-a-publisher-policy.md).  
   
  Para habilitar la compatibilidad completa de versiones de ensamblados, se recomienda implementar ensamblados con nombres seguros en la [caché global de ensamblados](../app-domains/gac.md) e implementar los ensamblados que no tengan nombres seguros en el directorio de la aplicación. Si quiere implementar ensamblados con nombres seguros en el directorio de la aplicación, no podrá aumentar el número de versión de un ensamblado satélite al actualizar el ensamblado. En lugar de ello, debe llevar a cabo una actualización local en la que deberá reemplazar el código existente por el código actualizado y conservar el mismo número de versión. Por ejemplo, si quiere actualizar la versión 1.0.0.0 de un ensamblado satélite con el nombre de ensamblado especificado por completo "MyApp.resources, Version=1.0.0.0, Culture=de, PublicKeyToken=b03f5f11d50a3a", sobrescríbalo con el archivo actualizado myApp.resources.dll que se ha compilado con el mismo nombre de ensamblado especificado por completo "myApp.resources, Version=1.0.0.0, Culture=de, PublicKeyToken=b03f5f11d50a3a". Tenga en cuenta que el uso de actualizaciones locales en los archivos del ensamblado satélite dificulta que una aplicación pueda determinar con exactitud la versión de un ensamblado satélite.  
   
  Para obtener más información sobre las versiones de los ensamblados, consulte [Assembly Versioning](../../standard/assembly/versioning.md) (Versiones de los ensamblados) y [Cómo el motor en tiempo de ejecución ubica ensamblados](../deployment/how-the-runtime-locates-assemblies.md).  
   
-<a name="from_file"></a>   
+<a name="from_file"></a>
 ## <a name="retrieving-resources-from-resources-files"></a>Recuperar recursos desde archivos .resources  
  Si decide no implementar recursos en los ensamblados satélite, puede usar un objeto <xref:System.Resources.ResourceManager> para obtener acceso directo a los recursos de los archivos .resources. Para ello, debe implementar correctamente los archivos .resources. Luego, deberá usar el método <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%2A?displayProperty=nameWithType> para crear una instancia de un objeto <xref:System.Resources.ResourceManager> y especificar el directorio que contiene los archivos .resources independientes.  
   
 ### <a name="deploying-resources-files"></a>Implementar archivos .resources  
- Al insertar archivos .resources en un ensamblado de aplicación y en ensamblados satélite, todos los ensamblados satélite tienen el mismo nombre de archivo, pero se encuentran en un subdirectorio que refleja la referencia cultural del ensamblado satélite. En cambio, al obtener acceso directo a los recursos desde los archivos .resources, puede colocar todos los archivos .resources en un solo directorio, que normalmente es un subdirectorio del directorio de la aplicación. El nombre del archivo .resources predeterminado de la aplicación consta solo de un nombre de raíz, sin ninguna indicación de la referencia cultural (por ejemplo, strings.resources). Los recursos de cada referencia cultural localizada se almacenan en un archivo cuyo nombre consta del nombre de raíz seguido de la referencia cultural (por ejemplo, strings.ja.resources o strings.de-DE.resources). 
- 
+ Al insertar archivos .resources en un ensamblado de aplicación y en ensamblados satélite, todos los ensamblados satélite tienen el mismo nombre de archivo, pero se encuentran en un subdirectorio que refleja la referencia cultural del ensamblado satélite. En cambio, al obtener acceso directo a los recursos desde los archivos .resources, puede colocar todos los archivos .resources en un solo directorio, que normalmente es un subdirectorio del directorio de la aplicación. El nombre del archivo .resources predeterminado de la aplicación consta solo de un nombre de raíz, sin ninguna indicación de la referencia cultural (por ejemplo, strings.resources). Los recursos de cada referencia cultural localizada se almacenan en un archivo cuyo nombre consta del nombre de raíz seguido de la referencia cultural (por ejemplo, strings.ja.resources o strings.de-DE.resources).
+
  En la siguiente ilustración se muestra dónde deben estar ubicados los archivos de recursos en la estructura de directorio. También proporciona las convenciones de nomenclatura de los archivos .resource.  
 
  ![Ilustración en la que se muestra el directorio principal de la aplicación.](./media/retrieving-resources-in-desktop-apps/resource-application-directory.gif)  
@@ -158,7 +158,7 @@ GetObject.exe
  Una vez creados los recursos y colocados en el directorio correspondiente, debe crear un objeto <xref:System.Resources.ResourceManager> para usar los recursos llamando al método <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%28System.String%2CSystem.String%2CSystem.Type%29> . El primer parámetro especifica el nombre de la raíz del archivo .resources predeterminado de la aplicación (en el ejemplo de la sección anterior sería "strings"). El segundo parámetro especifica la ubicación de los recursos (en el ejemplo anterior, "Resources"). El tercer parámetro especifica la implementación <xref:System.Resources.ResourceSet> que se va a usar. Si el tercer parámetro es `null`, se usará la clase <xref:System.Resources.ResourceSet> en tiempo de ejecución predeterminada.  
   
 > [!NOTE]
-> No implemente ninguna aplicación ASP.NET con archivos .resources independientes, ya que se pueden producir problemas de bloqueo y se puede interrumpir la implementación de XCOPY. Se recomienda implementar los recursos ASP.NET en ensamblados satélite. Para obtener más información, consulta [ASP.NET Web Page Resources Overview](https://docs.microsoft.com/previous-versions/aspnet/ms227427(v=vs.100)).  
+> No implemente ninguna aplicación ASP.NET con archivos .resources independientes, ya que se pueden producir problemas de bloqueo y se puede interrumpir la implementación de XCOPY. Se recomienda implementar los recursos ASP.NET en ensamblados satélite. Para más información, consulte [Información general sobre recursos de páginas web ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/ms227427(v=vs.100)).  
   
  Después de crear una instancia del objeto <xref:System.Resources.ResourceManager> , debe usar los métodos <xref:System.Resources.ResourceManager.GetString%2A>, <xref:System.Resources.ResourceManager.GetObject%2A>y <xref:System.Resources.ResourceManager.GetStream%2A> como se ha descrito anteriormente para recuperar los recursos. A pesar de ello, la recuperación de recursos directamente desde los archivos .resources difiere de la recuperación de recursos insertados desde ensamblados. Al recuperar recursos desde archivos .resources, los métodos <xref:System.Resources.ResourceManager.GetString%28System.String%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%29>y <xref:System.Resources.ResourceManager.GetStream%28System.String%29> siempre recuperan los recursos de la referencia cultural predeterminada, independientemente de la referencia cultural actual. Para recuperar los recursos de la referencia cultural actual de la aplicación o de una referencia cultural en concreto, debe llamar al método <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>o <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> y especificar la referencia cultural cuyos recursos se van a recuperar. Para recuperar los recursos de la referencia cultural actual, especifique el valor de la propiedad <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> como argumento `culture` . Si el Administrador de recursos no puede recuperar los recursos de `culture`, aplicará las reglas de reserva de recursos estándar para recuperar los recursos adecuados.  
   
@@ -172,7 +172,7 @@ Prompt=What is your name?
   
  Los recursos de la referencia cultural de francés (Francia) están almacenados en el siguiente archivo, que se denomina Strings.fr-FR.txt:  
   
-```text 
+```text
 Greeting=Bon jour  
 Prompt=Comment vous appelez-vous?  
 ```  
@@ -189,7 +189,7 @@ Prompt=Как вас зовут?
  [!code-csharp[Conceptual.Resources.Retrieving#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/example3.cs#9)]
  [!code-vb[Conceptual.Resources.Retrieving#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/example3.vb#9)]  
   
- Puede compilar la versión de C# del ejemplo ejecutando el siguiente archivo por lotes. Si usa Visual Basic, reemplace `csc` por `vbc`y la extensión `.cs` por `.vb`.  
+ Puede compilar la versión de C# del ejemplo ejecutando el siguiente archivo por lotes. Si usa Visual Basic, reemplace `csc` por `vbc` y la extensión `.cs` por `.vb`.  
   
 ```console
 Md Resources  
@@ -200,10 +200,10 @@ Resgen Strings.ru-RU.txt Resources\Strings.ru-RU.resources
 csc Example.cs  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Resources.ResourceManager>
 - [Recursos de aplicaciones de escritorio](index.md)
-- [Empaquetar e implementar recursos](packaging-and-deploying-resources-in-desktop-apps.md)
+- [Packaging and Deploying Resources](packaging-and-deploying-resources-in-desktop-apps.md)
 - [Cómo el motor en tiempo de ejecución ubica ensamblados](../deployment/how-the-runtime-locates-assemblies.md)
 - [Crear y recuperar recursos en las aplicaciones de la Tienda Windows](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140))

@@ -6,19 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
-ms.openlocfilehash: 1d0431085a04d3fb817dfe0883779acc4d693084
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 04360a796b18cf1e414f1f84bff247a1e9d8ef9c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77214789"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155159"
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>Elemento personalizado para SingleTagSectionHandler
 
-Define la configuración de una sección de configuración personalizada que se define mediante una \<sección > elemento y utiliza la clase <xref:System.Configuration.SingleTagSectionHandler>.
+Define la configuración en una sección \<de configuración personalizada <xref:System.Configuration.SingleTagSectionHandler> definida por una sección> elemento y utiliza la clase.
 
-[ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp; *\<sectionName >*
+sección &nbsp; &nbsp;de configuración [** \<>Nombre**](configuration-element.md) * \<>*
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -28,13 +27,13 @@ Define la configuración de una sección de configuración personalizada que se 
 
 ## <a name="attributes"></a>Atributos
 
-Los atributos y los valores de atributo son definidos por el usuario.
+Los atributos y los valores de atributo están definidos por el usuario.
 
 ## <a name="parent-element"></a>Elemento primario
 
 |     | Descripción |
 | --- | ----------- |
-| [ **\<configuration>** ](configuration-element.md) | Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework. |
+| [**\<configuración>**](configuration-element.md) | Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework. |
 
 ## <a name="child-elements"></a>Elementos secundarios
 
@@ -42,28 +41,28 @@ None
 
 ## <a name="remarks"></a>Observaciones
 
-El elemento **\<sectionName >** es un elemento personalizado definido por una [**sección de\<>** ](section-element.md) etiqueta del elemento\<[**configSections >** ](configsections-element-for-configuration.md) . El sistema de configuración devuelve un objeto <xref:System.Collections.IDictionary> cuando se llama a <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>.
+El ** \<** elemento de>sectionName es [** \<**](section-element.md) un elemento personalizado definido por una etiqueta de>de sección en el [** \<elemento>configSections.**](configsections-element-for-configuration.md) El sistema de <xref:System.Collections.IDictionary> configuración devuelve <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>un objeto cuando se llama a .
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se declara un elemento personalizado denominado **\<> sampleSection** que contiene la configuración leída por la clase <xref:System.Configuration.SingleTagSectionHandler>:
+En el ejemplo siguiente se declara un elemento personalizado <xref:System.Configuration.SingleTagSectionHandler> denominado ** \<sampleSection>** que contiene la configuración leída por la clase:
 
 ```xml
 <configuration>
   <configSections>
-    <section name="sampleSection" 
+    <section name="sampleSection"
              type="System.Configuration.SingleTagSectionHandler" />
   </configSections>
-  <sampleSection setting1="Value1" 
-                 setting2="value two" 
+  <sampleSection setting1="Value1"
+                 setting2="value two"
                  setting3="third value" />
 </configuration>
 ```
 
 ## <a name="configuration-file"></a>Archivo de configuración
 
-Este elemento puede usarse en el archivo de configuración de la aplicación, el archivo de configuración del equipo (*Machine. config*) y los archivos *Web. config* que no están en el nivel de directorio de la aplicación.
+Este elemento se puede utilizar en el archivo de configuración de la aplicación, el archivo de configuración del equipo (*Machine.config*) y los archivos *Web.config* que no están en el nivel de directorio de la aplicación.
 
 ## <a name="see-also"></a>Consulte también
 
-- [Esquema del archivo de configuración para el .NET Framework](index.md)
+- [Esquema de archivo de configuración para .NET Framework](index.md)

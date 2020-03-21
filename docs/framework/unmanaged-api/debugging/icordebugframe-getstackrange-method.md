@@ -15,34 +15,34 @@ helpviewer_keywords:
 ms.assetid: fab037cb-fda6-40fb-9367-921e435dd5a0
 topic_type:
 - apiref
-ms.openlocfilehash: 828e4dc67cb93d0a35879e94b54c9fac6e5bda16
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7a35ce025360e0ec8b7085d68e54548026b7c7fc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124081"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178909"
 ---
 # <a name="icordebugframegetstackrange-method"></a>ICorDebugFrame::GetStackRange (Método)
-Obtiene el intervalo de direcciones absolutas de este marco de pila.  
+Obtiene el intervalo de direcciones absoluta de este marco de pila.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
 HRESULT GetStackRange (  
-    [out] CORDB_ADDRESS      *pStart,   
+    [out] CORDB_ADDRESS      *pStart,
     [out] CORDB_ADDRESS      *pEnd  
 );  
 ```  
   
 ## <a name="parameters"></a>Parámetros  
  `pStart`  
- enuncia Puntero a un `CORDB_ADDRESS` que especifica la dirección inicial del marco de pila representado por este objeto `ICorDebugFrame`.  
+ [fuera] Puntero a `CORDB_ADDRESS` un que especifica la dirección inicial del `ICorDebugFrame` marco de pila representado por este objeto.  
   
  `pEnd`  
- enuncia Puntero a un `CORDB_ADDRESS` que especifica la dirección final del marco de pila representado por este objeto `ICorDebugFrame`.  
+ [fuera] Puntero a `CORDB_ADDRESS` un que especifica la dirección final del `ICorDebugFrame` marco de pila representado por este objeto.  
   
-## <a name="remarks"></a>Comentarios  
- El intervalo de direcciones de la pila es útil para juntar juntos los seguimientos de la pila intercalados recopilados de varios motores de depuración. El intervalo numérico no proporciona información sobre el contenido del marco de pila. Solo es significativo para la comparación de las ubicaciones de los marcos de pila.  
+## <a name="remarks"></a>Observaciones  
+ El intervalo de direcciones de la pila es útil para unir los seguimientos de pila entrelazados recopilados de varios motores de depuración. El intervalo numérico no proporciona información sobre el contenido del marco de pila. Es significativo sólo para la comparación de ubicaciones de marco de pila.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

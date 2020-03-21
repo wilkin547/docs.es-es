@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6c116592-134b-4ef2-a319-680e92d013aa
 topic_type:
 - apiref
-ms.openlocfilehash: c5199794098e4d83588728eeb165aee5f81fe4c4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 35e043c56977bf644efe1dd9cee1409f50cc877f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088508"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179026"
 ---
 # <a name="icordebugarrayvaluegetdimensions-method"></a>ICorDebugArrayValue::GetDimensions (Método)
 Obtiene el número de elementos de cada dimensión de esta matriz.  
@@ -30,19 +30,19 @@ Obtiene el número de elementos de cada dimensión de esta matriz.
 ```cpp  
 HRESULT GetDimensions (  
     [in] ULONG32         cdim,  
-    [out, size_is(cdim), length_is(cdim)]   
+    [out, size_is(cdim), length_is(cdim)]
         ULONG32          dims[]  
 );  
 ```  
   
 ## <a name="parameters"></a>Parámetros  
  `cdim`  
- de Número de dimensiones de este objeto ICorDebugArrayValue.  
+ [en] El número de dimensiones de este ICorDebugArrayValue objeto.  
   
- Este valor también es el tamaño de la matriz de `dims` porque su tamaño es igual al número de dimensiones del objeto `ICorDebugArrayValue`.  
+ Este valor también es `dims` el tamaño de la matriz porque su `ICorDebugArrayValue` tamaño es igual al número de dimensiones del objeto.  
   
  `dims`  
- enuncia Matriz de enteros, cada uno de los cuales especifica el número de elementos de una dimensión en este objeto `ICorDebugArrayValue`.  
+ [fuera] Matriz de enteros, cada uno de los cuales especifica el `ICorDebugArrayValue` número de elementos de una dimensión de este objeto.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

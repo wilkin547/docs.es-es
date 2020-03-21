@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para agregar paneles a un control StatusBar
+title: 'Cómo: Agregar paneles a un control StatusBar'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,27 +10,27 @@ helpviewer_keywords:
 - status bars [Windows Forms], adding panels
 - StatusBar control [Windows Forms], adding panels
 ms.assetid: 835e3902-288c-4c38-9d69-0696d8695009
-ms.openlocfilehash: 27d65c07f0a6ec4a25d057e2c16a8b59933bb8fd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 386c8cae425c458ddf4c446a454ae4213761e651
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925105"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142204"
 ---
-# <a name="how-to-add-panels-to-a-statusbar-control"></a>Procedimiento para agregar paneles a un control StatusBar
+# <a name="how-to-add-panels-to-a-statusbar-control"></a>Cómo: Agregar paneles a un control StatusBar
 > [!IMPORTANT]
-> Los <xref:System.Windows.Forms.StatusStrip> controles <xref:System.Windows.Forms.ToolStripStatusLabel> y reemplazan y agregan funcionalidad <xref:System.Windows.Forms.StatusBar> a <xref:System.Windows.Forms.StatusBarPanel> los controles y; sin <xref:System.Windows.Forms.StatusBar> embargo <xref:System.Windows.Forms.StatusBarPanel> , los controles y se conservan por compatibilidad con versiones anteriores y uso futuro, si Elija.  
+> Los <xref:System.Windows.Forms.StatusStrip> <xref:System.Windows.Forms.ToolStripStatusLabel> controles y reemplazar y <xref:System.Windows.Forms.StatusBar> agregar <xref:System.Windows.Forms.StatusBarPanel> funcionalidad a los controles y; sin <xref:System.Windows.Forms.StatusBar> embargo, los controles y <xref:System.Windows.Forms.StatusBarPanel> se conservan tanto para la compatibilidad con versiones anteriores como para el uso futuro, si lo desea.  
   
- El área programable dentro de un control de [control StatusBar](statusbar-control-windows-forms.md) se compone de <xref:System.Windows.Forms.StatusBarPanel> instancias de la clase. Estos se agregan a través de adiciones a la <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> clase.  
+ El área programable dentro de un [StatusBar](statusbar-control-windows-forms.md) Control <xref:System.Windows.Forms.StatusBarPanel> control consta de instancias de la clase. Estos se agregan a <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> través de adiciones a la clase.  
   
-### <a name="to-add-panels-to-a-status-bar"></a>Para agregar paneles a una barra de estado  
+### <a name="to-add-panels-to-a-status-bar"></a>Para añadir paneles a una barra de estado  
   
-1. En un procedimiento, cree paneles de barra de estado agregándolos a <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>. Especifique la configuración de las propiedades de los paneles individuales mediante su índice <xref:System.Windows.Forms.StatusBar.Panels%2A> pasado a través de la propiedad.  
+1. En un procedimiento, cree paneles de barra <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>de estado agregándolos al archivo . Especifique la configuración de propiedades para paneles <xref:System.Windows.Forms.StatusBar.Panels%2A> individuales mediante su índice pasado a través de la propiedad.  
   
-     En el ejemplo de código siguiente, la ruta de acceso establecida para la ubicación del icono es la carpeta **Mis documentos** . Esta ubicación se usa porque puede suponer que la mayoría de los equipos que ejecutan el sistema operativo Windows incluirán esta carpeta. La elección de esta ubicación también permite a los usuarios con niveles de acceso mínimos del sistema ejecutar la aplicación de forma segura. En el ejemplo siguiente se requiere un formulario <xref:System.Windows.Forms.StatusBar> con un control ya agregado.  
+     En el ejemplo de código siguiente, la ruta de acceso establecida para la ubicación del icono es la carpeta **Mis documentos.** Esta ubicación se utiliza porque puede suponer que la mayoría de los equipos que ejecutan el sistema operativo Windows incluirán esta carpeta. La elección de esta ubicación también permite a los usuarios con niveles mínimos de acceso al sistema ejecutar la aplicación de forma segura. En el ejemplo siguiente se <xref:System.Windows.Forms.StatusBar> requiere un formulario con un control ya agregado.  
   
     > [!NOTE]
-    > Es <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> una colección basada en cero, por lo que el código debe continuar en consecuencia.  
+    > Es <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> una colección de base cero, por lo que el código debe proceder en consecuencia.  
   
     ```vb  
     Public Sub CreateStatusBarPanels()  
@@ -49,7 +49,7 @@ ms.locfileid: "69925105"
        StatusBar1.Panels(2).BorderStyle = StatusBarPanelBorderStyle.Raised  
     ' Set Icon property of third panel. You should replace the bolded  
     ' icon in the sample below with an icon of your own choosing.  
-       StatusBar1.Panels(2).Icon = New _   
+       StatusBar1.Panels(2).Icon = New _
        System.Drawing.Icon(System.Environment.GetFolderPath _  
        (System.Environment.SpecialFolder.Personal) _  
        & "\Icon.ico")  
@@ -77,7 +77,7 @@ ms.locfileid: "69925105"
        // Set Icon property of third panel. You should replace the bolded  
        // icon in the sample below with an icon of your own choosing.  
        // Note the escape character used (@) when specifying the path.  
-       statusBar1.Panels[2].Icon =   
+       statusBar1.Panels[2].Icon =
           new System.Drawing.Icon (System.Environment.GetFolderPath _  
        (System.Environment.SpecialFolder.Personal) _  
        + @"\Icon.ico");  
@@ -109,7 +109,7 @@ ms.locfileid: "69925105"
           statusBar1->Panels[2]->BorderStyle =  
              StatusBarPanelBorderStyle::Raised;  
           // Set Icon property of third panel.  
-          // You should replace the bolded image   
+          // You should replace the bolded image
           // in the sample below with an icon of your own choosing.  
           statusBar1->Panels[2]->Icon =  
              gcnew System::Drawing::Icon(String::Concat(  
@@ -120,12 +120,12 @@ ms.locfileid: "69925105"
        }  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [Cuadro de diálogo Editor de colecciones](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xc4yyekt(v=vs.100))
-- [Cómo: Establecer el tamaño de los paneles de la barra de estado](how-to-set-the-size-of-status-bar-panels.md)
+- [Cuadro de diálogo del editor de colección](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xc4yyekt(v=vs.100))
+- [Establecer el tamaño de los paneles de la barra de estado](how-to-set-the-size-of-status-bar-panels.md)
 - [Tutorial: Actualizar la información de la barra de estado en tiempo de ejecución](walkthrough-updating-status-bar-information-at-run-time.md)
-- [Cómo: Determinar en qué panel del control Windows Forms StatusBar se hizo clic](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [Cómo: Determinar en qué panel del control StatusBar de Windows Forms se hizo clic](determine-which-panel-wf-statusbar-control-was-clicked.md)
 - [Información general sobre StatusBar (Control)](statusbar-control-overview-windows-forms.md)

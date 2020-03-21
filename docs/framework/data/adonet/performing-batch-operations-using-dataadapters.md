@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
-ms.openlocfilehash: 8667cffb032daf0043915d3bee7127ef9b70756b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 62a61051e5b9d896f8a89ed3d2745859fc07a7ec
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794509"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149263"
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>Realizar operaciones por lotes utilizando objetos DataAdapter
 La compatibilidad con las operaciones por lotes en ADO.NET permite que un <xref:System.Data.Common.DataAdapter> agrupe operaciones INSERT, UPDATE y DELETE desde un <xref:System.Data.DataSet> o una <xref:System.Data.DataTable> al servidor, en lugar de enviar las operaciones de una en una. La reducción del número de viajes de ida y vuelta (round trip) al servidor tiene como resultado una mejora considerable del rendimiento. Las actualizaciones por lotes son compatibles con los proveedores de datos de .NET para SQL Server (<xref:System.Data.SqlClient>) y Oracle (<xref:System.Data.OracleClient>).  
@@ -24,7 +24,7 @@ La compatibilidad con las operaciones por lotes en ADO.NET permite que un <xref:
 ## <a name="using-the-updatebatchsize-property"></a>Utilizar la propiedad UpdateBatchSize  
  Al habilitar las actualizaciones por lotes, el valor de propiedad <xref:System.Data.IDbCommand.UpdatedRowSource%2A> de `UpdateCommand`, `InsertCommand` y `DeleteCommand` del DataAdapter debe establecerse en <xref:System.Data.UpdateRowSource.None> o <xref:System.Data.UpdateRowSource.OutputParameters>. Al realizar una actualización por lotes, el valor <xref:System.Data.IDbCommand.UpdatedRowSource%2A> o <xref:System.Data.UpdateRowSource.FirstReturnedRecord> de la propiedad <xref:System.Data.UpdateRowSource.Both> del comando no es válido.  
   
- En el siguiente procedimiento se muestra cómo se utiliza la propiedad `UpdateBatchSize`. El procedimiento toma dos argumentos, un <xref:System.Data.DataSet> objeto que tiene columnas que representan los campos **ProductCategoryID** y **Name** de la tabla **Production. ProductCategory** y un entero que representa el tamaño del lote (el número de filas del lote). El código crea un objeto <xref:System.Data.SqlClient.SqlDataAdapter> nuevo y se establecen las propiedades <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> y <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A>. En el código se supone que el objeto <xref:System.Data.DataSet> tiene filas modificadas. Se establece la propiedad `UpdateBatchSize` y se ejecuta la actualización.  
+ En el siguiente procedimiento se muestra cómo se utiliza la propiedad `UpdateBatchSize`. El procedimiento toma dos <xref:System.Data.DataSet> argumentos, un objeto que tiene columnas que representan los campos **ProductCategoryID** y **Name** de la tabla **Production.ProductCategory** y un entero que representa el tamaño del lote (el número de filas del lote). El código crea un objeto <xref:System.Data.SqlClient.SqlDataAdapter> nuevo y se establecen las propiedades <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> y <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A>. En el código se supone que el objeto <xref:System.Data.DataSet> tiene filas modificadas. Se establece la propiedad `UpdateBatchSize` y se ejecuta la actualización.  
   
 ```vb  
 Public Sub BatchUpdate( _  
@@ -82,7 +82,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
     string connectionString = GetConnectionString();  
   
     // Connect to the AdventureWorks database.  
-    using (SqlConnection connection = new   
+    using (SqlConnection connection = new
       SqlConnection(connectionString))  
     {  
   
@@ -92,19 +92,19 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
         // Set the UPDATE command and parameters.  
         adapter.UpdateCommand = new SqlCommand(  
             "UPDATE Production.ProductCategory SET "  
-            + "Name=@Name WHERE ProductCategoryID=@ProdCatID;",   
+            + "Name=@Name WHERE ProductCategoryID=@ProdCatID;",
             connection);  
-        adapter.UpdateCommand.Parameters.Add("@Name",   
+        adapter.UpdateCommand.Parameters.Add("@Name",
            SqlDbType.NVarChar, 50, "Name");  
-        adapter.UpdateCommand.Parameters.Add("@ProdCatID",   
+        adapter.UpdateCommand.Parameters.Add("@ProdCatID",
            SqlDbType.Int, 4, "ProductCategoryID");  
          adapter.UpdateCommand.UpdatedRowSource = UpdateRowSource.None;  
   
         // Set the INSERT command and parameter.  
         adapter.InsertCommand = new SqlCommand(  
-            "INSERT INTO Production.ProductCategory (Name) VALUES (@Name);",   
+            "INSERT INTO Production.ProductCategory (Name) VALUES (@Name);",
             connection);  
-        adapter.InsertCommand.Parameters.Add("@Name",   
+        adapter.InsertCommand.Parameters.Add("@Name",
           SqlDbType.NVarChar, 50, "Name");  
         adapter.InsertCommand.UpdatedRowSource = UpdateRowSource.None;  
   
@@ -112,7 +112,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
         adapter.DeleteCommand = new SqlCommand(  
             "DELETE FROM Production.ProductCategory "  
             + "WHERE ProductCategoryID=@ProdCatID;", connection);  
-        adapter.DeleteCommand.Parameters.Add("@ProdCatID",   
+        adapter.DeleteCommand.Parameters.Add("@ProdCatID",
           SqlDbType.Int, 4, "ProductCategoryID");  
         adapter.DeleteCommand.UpdatedRowSource = UpdateRowSource.None;  
   
@@ -126,7 +126,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
 ```  
   
 ## <a name="handling-batch-update-related-events-and-errors"></a>Controlar errores y eventos relacionados con la actualización por lotes  
- El **DataAdapter** tiene dos eventos relacionados con la actualización: **RowUpdating** y **RowUpdated**. En las versiones anteriores de ADO.NET, cuando se deshabilita el procesamiento por lotes, cada uno de estos eventos se genera una vez para cada fila procesada. **RowUpdating** se genera antes de que se produzca la actualización y se genera **RowUpdated** una vez completada la actualización de la base de datos.  
+ El **DataAdapter** tiene dos eventos relacionados con la actualización: **RowUpdating** y **RowUpdated**. En las versiones anteriores de ADO.NET, cuando se deshabilita el procesamiento por lotes, cada uno de estos eventos se genera una vez para cada fila procesada. **RowUpdating** se genera antes de que se produzca la actualización y **RowUpdated** se genera después de que se haya completado la actualización de la base de datos.  
   
 ### <a name="event-behavior-changes-with-batch-updates"></a>Cambios en el comportamiento de eventos con actualizaciones por lotes  
  Si se habilita el procesamiento por lotes, se actualizan varias filas en una única operación de base de datos. Por tanto, solo se produce un evento `RowUpdated` para cada lote, mientras que el evento `RowUpdating` se produce para cada fila procesada. Si se deshabilita el procesamiento por lotes, los dos eventos se activan con entrelazado individualizado, donde los eventos `RowUpdating` y `RowUpdated` se activan para una fila y, a continuación, se activan los eventos `RowUpdating` y `RowUpdated` para la siguiente fila, hasta que se hayan procesado todas las filas.  
@@ -141,9 +141,9 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
   
  El proveedor de datos y el servidor de bases de datos back-end determinan qué construcciones SQL son compatibles para la ejecución por lotes. Es posible que se inicie una excepción si se envía una instrucción no compatible para su ejecución.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Objetos DataAdapter y DataReader](dataadapters-and-datareaders.md)
 - [Actualizar orígenes de datos con objetos DataAdapter](updating-data-sources-with-dataadapters.md)
-- [Control de eventos de DataAdapter](handling-dataadapter-events.md)
-- [Información general sobre ADO.NET](ado-net-overview.md)
+- [Controlar eventos de DataAdapter](handling-dataadapter-events.md)
+- [Información general de ADO.NET](ado-net-overview.md)

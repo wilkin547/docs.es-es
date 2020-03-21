@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
-ms.openlocfilehash: 6e066bcbe02fa9cf498e11af431b9f6dcd4432ab
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e5135aca49a63aafa3330832c54f2d28d31d60d0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785517"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151356"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>Crear un objeto DataTable a partir de un objeto DataView
-Después de recuperar datos de un origen de datos y rellenar una <xref:System.Data.DataTable> con los mismos, puede ordenarlos, filtrarlos o limitar los datos devueltos sin volver a recuperarlos. Esto es posible gracias a la clase <xref:System.Data.DataView>. Además, si necesita crear un <xref:System.Data.DataTable> nuevo a <xref:System.Data.DataView>partir de, puede utilizar el <xref:System.Data.DataView.ToTable%2A> método para copiar todas las filas y columnas, o un subconjunto de los datos en un nuevo <xref:System.Data.DataTable>. El método <xref:System.Data.DataView.ToTable%2A> proporciona sobrecargas para:  
+Después de recuperar datos de un origen de datos y rellenar una <xref:System.Data.DataTable> con los mismos, puede ordenarlos, filtrarlos o limitar los datos devueltos sin volver a recuperarlos. Esto es posible gracias a la clase <xref:System.Data.DataView>. Además, si necesita crear <xref:System.Data.DataTable> un <xref:System.Data.DataView>nuevo a <xref:System.Data.DataView.ToTable%2A> partir de la , puede usar el método para <xref:System.Data.DataTable>copiar todas las filas y columnas, o un subconjunto de los datos en un nuevo archivo . El método <xref:System.Data.DataView.ToTable%2A> proporciona sobrecargas para:  
   
 - Crear una <xref:System.Data.DataTable> que contenga columnas que son un subconjunto de las columnas de la <xref:System.Data.DataView>.  
   
-- Cree un <xref:System.Data.DataTable> que incluya solo filas distintas <xref:System.Data.DataView>de, de forma análoga a la palabra clave DISTINCT en Transact-SQL.  
+- Cree <xref:System.Data.DataTable> un archivo que incluya <xref:System.Data.DataView>solo filas distintas de la palabra clave , de forma análoga a la palabra clave DISTINCT en Transact-SQLTransact-SQL .  
   
 ## <a name="example"></a>Ejemplo  
- En el siguiente ejemplo de aplicación de <xref:System.Data.DataTable> consola se crea un que contiene datos de la tabla **Person. contact** en la base de datos de ejemplo **AdventureWorks** . Después, <xref:System.Data.DataView> <xref:System.Data.DataTable>en el ejemplo se crea una ordenada y filtrada en función de. Después de mostrar el contenido de <xref:System.Data.DataTable> <xref:System.Data.DataView>y, en el ejemplo se <xref:System.Data.DataView> crea un <xref:System.Data.DataTable> nuevo a partir de llamando <xref:System.Data.DataView.ToTable%2A> al método, seleccionando solo un subconjunto de las columnas disponibles. Por último, se muestra el contenido de la <xref:System.Data.DataTable> nueva.  
+ En el siguiente ejemplo <xref:System.Data.DataTable> de aplicación de consola se crea un que contiene datos de la tabla **Person.Contact** de la base de datos de ejemplo **AdventureWorks.** A continuación, el ejemplo crea <xref:System.Data.DataView> un <xref:System.Data.DataTable>orden ordenado y filtrado basado en el archivo . Después de mostrar <xref:System.Data.DataTable> el <xref:System.Data.DataView>contenido de la <xref:System.Data.DataTable> y <xref:System.Data.DataView> el <xref:System.Data.DataView.ToTable%2A> , el ejemplo crea un nuevo desde el llamando al método, seleccionando solo un subconjunto de las columnas disponibles. Por último, se muestra el contenido de la <xref:System.Data.DataTable> nueva.  
   
 ```vb  
 Private Sub DemonstrateDataView()  
@@ -114,7 +114,7 @@ private static void DemonstrateDataView()
 // connectionString is assumed to be a valid connection string.  
 SqlDataAdapter adapter = new SqlDataAdapter(  
     "SELECT FirstName, LastName, EmailAddress " +  
-    "FROM Person.Contact WHERE FirstName LIKE 'Mich%'",   
+    "FROM Person.Contact WHERE FirstName LIKE 'Mich%'",
        GetConnectionString());  
 DataTable table = new DataTable();  
   
@@ -205,8 +205,8 @@ Console.WriteLine();
   
  }  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Data.DataView.ToTable%2A>
 - [Objetos DataView](dataviews.md)
-- [Información general sobre ADO.NET](../ado-net-overview.md)
+- [Información general de ADO.NET](../ado-net-overview.md)

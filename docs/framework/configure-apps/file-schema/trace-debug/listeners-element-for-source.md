@@ -7,26 +7,26 @@ helpviewer_keywords:
 - listeners element for <source>
 - <listeners> element for <source>
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
-ms.openlocfilehash: d7641611e5d8257b49bc6a6abd0a2fadfde66e91
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 0eee325e01b41a15a19e4f40f479596f9d70f73b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697300"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153417"
 ---
-# <a name="listeners-element-for-source"></a>\<agentes de escucha > elemento para \<origen >
-Agrega o quita los agentes de escucha de la colección de <xref:System.Diagnostics.TraceSource.Listeners%2A> para un <xref:System.Diagnostics.TraceSource>. Un agente de escucha dirige los resultados del seguimiento a un destino adecuado, como un registro, una ventana o un archivo de texto.  
+# <a name="listeners-element-for-source"></a>\<agentes de \<escucha> Element para el> de origen
+Agrega o quita agentes <xref:System.Diagnostics.TraceSource.Listeners%2A> de escucha <xref:System.Diagnostics.TraceSource>de la colección para un archivo . Un agente de escucha dirige la salida de seguimiento a un destino adecuado, como un registro, una ventana o un archivo de texto.  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<System. diagnostics >** ](system-diagnostics-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<orígenes >** ](sources-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[ **origen** >](source-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**agentes de escucha** >  
+[**\<configuración>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<fuentes>**](sources-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<fuente>**](source-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<oyentes>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<listeners>   
+<listeners>
   <add>...</add>  
   <remove ... />  
   <clear/>  
@@ -34,20 +34,20 @@ Agrega o quita los agentes de escucha de la colección de <xref:System.Diagnosti
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
- En las secciones siguientes se describen atributos, elementos secundarios y elementos primarios.  
+ En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
  Ninguno.  
   
-### <a name="child-elements"></a>Elemento secundario  
+### <a name="child-elements"></a>Elementos secundarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<add>](add-element-for-listeners-for-source.md)|Agrega un agente de escucha a la colección `Listeners`.|  
-|[\<remove>](remove-element-for-listeners-for-source.md)|Quita un agente de escucha de la colección de `Listeners`.|  
-|[\<clear>](clear-element-for-listeners-for-source.md)|Borra la colección `Listeners` de un origen de seguimiento.|  
+|[\<añadir>](add-element-for-listeners-for-source.md)|Agrega un agente de escucha a la colección `Listeners`.|  
+|[\<eliminar>](remove-element-for-listeners-for-source.md)|Quita un agente `Listeners` de escucha de la colección.|  
+|[\<>claro](clear-element-for-listeners-for-source.md)|Borra la colección `Listeners` de un origen de seguimiento.|  
   
-### <a name="parent-elements"></a>Elemento principal  
+### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
@@ -56,24 +56,24 @@ Agrega o quita los agentes de escucha de la colección de <xref:System.Diagnosti
 |`sources`|Contiene orígenes de seguimiento que inician mensajes de seguimiento.|  
 |`source`|Contiene un origen de seguimiento que inicia mensajes de seguimiento.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 ## <a name="configuration-file"></a>Archivo de configuración  
- Este elemento se puede usar en el archivo de configuración del equipo (Machine. config) y en el archivo de configuración de la aplicación.  
+ Este elemento se puede utilizar en el archivo de configuración del equipo (Machine.config) y el archivo de configuración de la aplicación.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo usar el elemento `<listeners>` para agregar un agente de escucha de seguimiento de consola al origen de `mySource` y para quitar el agente de escucha de seguimiento predeterminado.  
+ En el ejemplo siguiente `<listeners>` se muestra cómo utilizar el `mySource` elemento para agregar un agente de escucha de seguimiento de consola al origen y quitar el agente de escucha de seguimiento predeterminado.  
   
 ```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
-      <source name="mySource" switchName="sourceSwitch"   
+      <source name="mySource" switchName="sourceSwitch"
         switchType="System.Diagnostics.SourceSwitch">  
         <listeners>  
-          <add name="console"   
+          <add name="console"
             type="System.Diagnostics.ConsoleTraceListener">  
-            <filter type="System.Diagnostics.EventTypeFilter"   
+            <filter type="System.Diagnostics.EventTypeFilter"
               initializeData="Error"/>  
           </add>  
           <remove name="Default"/>  
@@ -87,8 +87,8 @@ Agrega o quita los agentes de escucha de la colección de <xref:System.Diagnosti
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Diagnostics.TraceListener>
-- [Esquema de la configuración de seguimiento y depuración](index.md)
+- [Esquema de configuración de seguimiento y depuración](index.md)
 - [Agentes de escucha de seguimiento](../../../debug-trace-profile/trace-listeners.md)

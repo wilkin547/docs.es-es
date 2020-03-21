@@ -3,22 +3,22 @@ title: <issuerTokenResolver>
 ms.date: 03/30/2017
 ms.assetid: f74392f6-3f5b-4880-bd8a-3a9130d31e65
 author: BrucePerlerMS
-ms.openlocfilehash: 451750a1facd9a886b53427a8d54580d1a939fa5
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 67d7e0aa5b6b05bfe8b17a1b1efebb1fbddbb0eb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968507"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152676"
 ---
-# <a name="issuertokenresolver"></a>\<issuerTokenResolver >
-Registra el solucionador de tokens de emisor que usan los controladores en la colección de controladores de tokens. La resolución de tokens del emisor se usa para resolver el token de firma en los tokens y mensajes entrantes.  
+# <a name="issuertokenresolver"></a>\<issuerTokenResolver>
+Registra el solucionador de tokens de emisor que usan los controladores en la colección de controladores de tokens. El solucionador de tokens de emisor se usa para resolver el token de firma en los tokens y mensajes entrantes.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. identityModel >** ](system-identitymodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityConfiguration >** ](identityconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<securityTokenHandlers**](securitytokenhandlers.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<securityTokenHandlerConfiguration**](securitytokenhandlerconfiguration.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<issuerTokenResolver >**  
+[**\<configuración>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<securityTokenHandlers>**](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<securityTokenHandlerConfiguration>**](securitytokenhandlerconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<issuerTokenResolver>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,27 +42,27 @@ Registra el solucionador de tokens de emisor que usan los controladores en la co
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|tipo|Especifica el tipo de solucionador de tokens del emisor. Debe ser la clase <xref:System.IdentityModel.Tokens.IssuerTokenResolver> o un tipo que se derive de la clase <xref:System.IdentityModel.Tokens.IssuerTokenResolver>. Requerido.|  
+|type|Especifica el tipo del solucionador de tokens de emisor. Debe ser <xref:System.IdentityModel.Tokens.IssuerTokenResolver> la clase o un tipo <xref:System.IdentityModel.Tokens.IssuerTokenResolver> que deriva de la clase. Necesario.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
- Ninguno  
+ None  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<securityTokenHandlerConfiguration >](securitytokenhandlerconfiguration.md)|Proporciona la configuración para una colección de controladores de tokens de seguridad.|  
+|[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|Proporciona configuración para una colección de controladores de tokens de seguridad.|  
   
-## <a name="remarks"></a>Comentarios  
- La resolución de tokens del emisor se usa para resolver el token de firma en los tokens y mensajes entrantes. Se utiliza para recuperar el material criptográfico que se usa para comprobar la firma. Debe especificar el atributo `type`. El tipo especificado puede ser <xref:System.IdentityModel.Tokens.IssuerTokenResolver> o un tipo personalizado que deriva de la clase <xref:System.IdentityModel.Tokens.IssuerTokenResolver>.  
+## <a name="remarks"></a>Observaciones  
+ El solucionador de tokens de emisor se usa para resolver el token de firma en los tokens y mensajes entrantes. Se utiliza para recuperar el material criptográfico que se utiliza para comprobar la firma. Debe especificar `type` el atributo. El tipo especificado puede <xref:System.IdentityModel.Tokens.IssuerTokenResolver> ser un tipo personalizado <xref:System.IdentityModel.Tokens.IssuerTokenResolver> o uno que deriva de la clase.  
   
- Algunos controladores de token permiten especificar la configuración de la resolución de tokens del emisor en la configuración. La configuración de los controladores de token individuales invalida los especificados en la colección de controladores de tokens de seguridad.  
+ Algunos controladores de tokens le permiten especificar la configuración del solucionador de tokens de emisor en la configuración. La configuración de los controladores de tokens individuales invalida los especificados en la colección de controladores de tokens de seguridad.  
   
 > [!NOTE]
-> La especificación del elemento `<issuerTokenResolver>` como un elemento secundario del elemento de [\<identityConfiguration](identityconfiguration.md) está en desuso, pero todavía se admite por compatibilidad con versiones anteriores. Los valores del elemento `<securityTokenHandlerConfiguration>` reemplazan a los del elemento `<identityConfiguration>`.  
+> Especificar el `<issuerTokenResolver>` elemento como un elemento secundario del elemento [ \<de>identityConfiguration](identityconfiguration.md) ha quedado en desuso, pero sigue siendo compatible con la compatibilidad con versiones anteriores. La configuración `<securityTokenHandlerConfiguration>` del elemento `<identityConfiguration>` los reemplaza en el elemento.  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente XML muestra la configuración de un solucionador de tokens de emisor que se basa en una clase personalizada que deriva de <xref:System.IdentityModel.Tokens.IssuerTokenResolver>. La resolución de tokens mantiene un diccionario de pares de clave de audiencia que se inicializa a partir de un elemento de configuración personalizado (`<AddAudienceKeyPair>`) definido para la clase. La clase invalida el método <xref:System.IdentityModel.Selectors.SecurityTokenResolver.LoadCustomConfiguration%2A> para procesar este elemento. La invalidación se muestra en el ejemplo siguiente: sin embargo, los métodos a los que llama no se muestran por motivos de brevedad. Para obtener el ejemplo completo, vea el ejemplo `CustomToken`.  
+ El siguiente XML muestra la configuración de un solucionador de <xref:System.IdentityModel.Tokens.IssuerTokenResolver>tokens de emisor que se basa en una clase personalizada que deriva de . El solucionador de tokens mantiene un diccionario de pares de clave`<AddAudienceKeyPair>`de audiencia que se inicializa a partir de un elemento de configuración personalizado ( ) definido para la clase. La clase reemplaza <xref:System.IdentityModel.Selectors.SecurityTokenResolver.LoadCustomConfiguration%2A> el método para procesar este elemento. La invalidación se muestra en el ejemplo siguiente; sin embargo, los métodos a los que llama no se muestran por brevedad. Para ver el ejemplo `CustomToken` completo, consulte el ejemplo.  
   
 ```xml  
 <issuerTokenResolver type="SimpleWebToken.CustomIssuerTokenResolver, SimpleWebToken">  
@@ -86,8 +86,8 @@ public override void LoadCustomConfiguration(System.Xml.XmlNodeList nodelist)
         this.AddAudienceKeyPair(audience, symmetricKey);  
     }  
 }  
-``` 
+```
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.IdentityModel.Tokens.IssuerTokenResolver>

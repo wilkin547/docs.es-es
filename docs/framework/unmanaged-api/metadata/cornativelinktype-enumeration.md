@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f86ff37-2dab-4e64-819a-76b3bfe828ff
 topic_type:
 - apiref
-ms.openlocfilehash: 718e41e16c07265d8a36b8f6124d99cd3490f7be
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0b613ebacdff82a29fdbc3f4caa0f2b8bb5d3f6a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436613"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176167"
 ---
 # <a name="cornativelinktype-enumeration"></a>CorNativeLinkType (Enumeración)
 Proporciona valores que indican el tipo vinculado en código nativo.  
@@ -27,7 +27,7 @@ Proporciona valores que indican el tipo vinculado en código nativo.
 ## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
-typedef enum   
+typedef enum
 {  
     nltNone       = 1,  
     nltAnsi       = 2,  
@@ -38,26 +38,26 @@ typedef enum
 } CorNativeLinkType;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
-|Miembro|Descripción|  
+|Member|Descripción|  
 |------------|-----------------|  
-|`nltNone`|Indica que no se ha especificado ninguna de las palabras clave.|  
-|`nltAnsi`|Indica que se ha especificado una palabra clave ANSI.|  
-|`nltUnicode`|Indica que se ha especificado una palabra clave de Unicode|  
-|`nltAuto`|Indica que se ha especificado una palabra clave auto.|  
-|`nltOle`|Indica que se ha especificado una palabra clave OLE.|  
-|`nltMaxValue`|No usado.|  
+|`nltNone`|Indica que no se especifica ninguna de las palabras clave.|  
+|`nltAnsi`|Indica que se especifica una palabra clave ANSI.|  
+|`nltUnicode`|Indica que se especifica una palabra clave Unicode|  
+|`nltAuto`|Indica que se especifica una palabra clave auto.|  
+|`nltOle`|Indica que se especifica una palabra clave OLE.|  
+|`nltMaxValue`|No se usa.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor. h  
+ **Encabezado:** Cor.h  
   
- **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
+ **Biblioteca:** Incluido como recurso en MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

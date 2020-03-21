@@ -2,12 +2,12 @@
 title: Correlación dúplex duradera
 ms.date: 03/30/2017
 ms.assetid: 8eb0e49a-6d3b-4f7e-a054-0d4febee2ffb
-ms.openlocfilehash: efc647b8a39f419f2165fe355529ba145663b753
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: bb73cef5190a0b146e713ef1adae24219dc2eed8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291578"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185171"
 ---
 # <a name="durable-duplex-correlation"></a>Correlación dúplex duradera
 La correlación dúplex duradera, también conocida como correlación de devolución de llamada, es útil cuando un servicio de flujo de trabajo tiene un requisito para enviar una devolución de llamada al autor de la llamada inicial. A diferencia del dúplex de WCF, la devolución de llamada puede producirse en cualquier momento en el futuro y no está vinculada a un mismo canal o a la duración del canal; el único requisito es que el autor de la llamada tenga un extremo activo que realice escuchas para el mensaje de devolución de llamada. Esto permite a dos servicios de flujo de trabajo comunicarse en una conversación de ejecución prolongada. En este tema, se proporciona información general sobre la correlación dúplex duradera.  
@@ -16,7 +16,7 @@ La correlación dúplex duradera, también conocida como correlación de devoluc
  Para usar la correlación dúplex duradera, los dos servicios deben usar un enlace habilitado para el contexto que admita operaciones bidireccionales, como <xref:System.ServiceModel.NetTcpContextBinding> o <xref:System.ServiceModel.WSHttpContextBinding>. El servicio de llamada registra <xref:System.ServiceModel.WSHttpContextBinding.ClientCallbackAddress%2A> con el enlace deseado en <xref:System.ServiceModel.Endpoint> del cliente. El servicio de recepción recibe estos datos en la llamada inicial y, a continuación, los usa en su propia <xref:System.ServiceModel.Endpoint>, en la actividad <xref:System.ServiceModel.Activities.Send> que realiza la devolución de llamada al servicio de llamada. En este ejemplo, dos servicios se comunican entre sí. El primer servicio invoca un método en el segundo servicio y, a continuación, espera una respuesta. El segundo servicio conoce el nombre del método de devolución de llamada, pero no conoce el punto de conexión del servicio que implementa este método en tiempo de diseño.  
   
 > [!NOTE]
-> El dúplex duradero solo se puede usar cuando el objeto <xref:System.ServiceModel.Channels.AddressingVersion> del extremo se configura con la propiedad <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A>. Si no es así, se produce una excepción <xref:System.InvalidOperationException> con el siguiente mensaje: "El mensaje contiene un encabezado de contexto de devolución de llamada con una referencia de punto de conexión para [AddressingVersion](http://schemas.xmlsoap.org/ws/2004/08/addressing). El contexto de devolución de llamada solo se puede transmitir cuando AddressingVersion está configurado con ' WSAddressing10 '.
+> El dúplex duradero solo se puede usar cuando el objeto <xref:System.ServiceModel.Channels.AddressingVersion> del extremo se configura con la propiedad <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A>. Si no es así, se produce una excepción <xref:System.InvalidOperationException> con el siguiente mensaje: "El mensaje contiene un encabezado de contexto de devolución de llamada con una referencia de punto de conexión para [AddressingVersion](http://schemas.xmlsoap.org/ws/2004/08/addressing). El contexto de devolución de llamada solo se puede transmitir cuando AddressingVersion se configura con 'WSAddressing10'.
   
  En el siguiente ejemplo, se hospeda un servicio de flujo de trabajo que crea una <xref:System.ServiceModel.Endpoint> de devolución de llamada mediante <xref:System.ServiceModel.WSHttpContextBinding>.  
   
@@ -51,7 +51,7 @@ Receive StartOrder = new Receive
   
 Send GetItems = new Send  
 {  
-    CorrelationInitializers =   
+    CorrelationInitializers =
     {  
         new CallbackCorrelationInitializer  
         {  
@@ -65,7 +65,7 @@ Send GetItems = new Send
         AddressUri = new Uri("http://localhost:8081/Service2"),  
         Binding = new WSHttpContextBinding  
         {  
-            ClientCallbackAddress = new Uri("http://localhost:8080/Service1/ItemsReady")                          
+            ClientCallbackAddress = new Uri("http://localhost:8080/Service1/ItemsReady")
         }  
     }  
 };  
@@ -127,7 +127,7 @@ Variable<CorrelationHandle> ItemsCallbackHandle = new Variable<CorrelationHandle
   
 Receive StartItems = new Receive  
 {  
-    CorrelationInitializers =   
+    CorrelationInitializers =
     {  
         new CallbackCorrelationInitializer  
         {  
@@ -189,7 +189,7 @@ Activity wf = new Sequence
 ```output  
 Service1 waiting at: http://localhost:8080/Service1  
 Service2 waiting at: http://localhost:8081/Service2  
-Press enter to exit.   
+Press enter to exit.
 WF1 - Started  
 WF2 - Request Received  
 WF1 - Request Submitted  

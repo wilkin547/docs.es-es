@@ -3,21 +3,21 @@ title: <certificateValidator>
 ms.date: 03/30/2017
 ms.assetid: 86161897-c20f-4ad8-9d7f-050c247251bf
 author: BrucePerlerMS
-ms.openlocfilehash: 30f81dd5948a7d366c1116cffd347c85a396f5ae
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 3f3d79d3567c1714a79423b7767ce3f454b9d52d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252123"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152793"
 ---
 # <a name="certificatevalidator"></a>\<certificateValidator>
-Especifica un tipo personalizado para la validación del certificado. Este tipo solo se utiliza si el `certificateValidationMode` atributo [ \<del elemento > certificateValidation](certificatevalidation.md) se establece en "Custom".  
+Especifica un tipo personalizado para la validación de certificados. Este tipo solo se `certificateValidationMode` utiliza si el atributo del [ \<](certificatevalidation.md) elemento certificateValidation>se establece en "Custom".  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. identityModel >** ](system-identitymodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> identityConfiguration**](identityconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> certificateValidation**](certificatevalidation.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> certificateValidator**  
+[**\<configuración>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<certificateValidation>**](certificatevalidation.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<certificateValidator>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,18 +37,18 @@ Especifica un tipo personalizado para la validación del certificado. Este tipo 
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|DESCRIPCIÓN|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
-|type|Especifica un tipo personalizado que deriva de la <xref:System.IdentityModel.Selectors.X509CertificateValidator> clase. Establezca el `certificateValidationMode` atributo [ \<](certificatevalidation.md) del elemento > de certificateValidation en "Custom" para usar este tipo. Para obtener más información sobre cómo especificar el `type` atributo, vea [referencias de tipo personalizado](../windows-workflow-foundation/index.md). Opcional.|  
+|type|Especifica un tipo personalizado que <xref:System.IdentityModel.Selectors.X509CertificateValidator> deriva de la clase. Establezca `certificateValidationMode` el atributo del [ \<](certificatevalidation.md) elemento certificateValidation>en "Custom" para usar este tipo. Para obtener más información `type` sobre cómo especificar el atributo, vea Referencias de [tipo personalizadas](../windows-workflow-foundation/index.md). Opcional.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  None  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<certificateValidation>](certificatevalidation.md)|Controla la configuración que usan los controladores de token para validar certificados.|  
+|[\<certificateValidation>](certificatevalidation.md)|Controla la configuración que usan los controladores de tokens para validar certificados.|  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -56,6 +56,6 @@ Especifica un tipo personalizado para la validación del certificado. Este tipo 
 <certificateValidation certificateValidationMode="Custom"  
                        revocationMode="Online"  
                        trustedStoreLocation="LocalMachine">  
-    <certificateValidator type="MyNamespace.CustomValidator, MyAssembly" />    
-</certificateValidation>        
+    <certificateValidator type="MyNamespace.CustomValidator, MyAssembly" />
+</certificateValidation>
 ```

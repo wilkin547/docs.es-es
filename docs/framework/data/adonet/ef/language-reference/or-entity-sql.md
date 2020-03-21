@@ -2,12 +2,12 @@
 title: '|| (OR) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 8e649648-eb9a-4380-9d74-36e62260628c
-ms.openlocfilehash: 6437b17fe1c1277701f06988ef6c02f4caf70e62
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 8c93e68095a0e0ff63532f53152f166d6c3d047c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319469"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150098"
 ---
 # <a name="-or-entity-sql"></a>|| (OR) (Entity SQL)
 Combina dos expresiones `Boolean` .  
@@ -16,7 +16,7 @@ Combina dos expresiones `Boolean` .
   
 ```sql  
 boolean_expression OR boolean_expression  
--- or   
+-- or
 boolean_expression || boolean_expression  
 ```  
   
@@ -27,18 +27,18 @@ boolean_expression || boolean_expression
 ## <a name="return-value"></a>Valor devuelto  
  `true` cuando alguna de las condiciones es `true`; de lo contrario, `false`.  
   
-## <a name="remarks"></a>Comentarios  
- OR es un operador lógico de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] . Se usa para combinar dos condiciones. Cuando se utiliza más de un operador lógico en una instrucción, los operadores OR se evalúan después de los operadores AND. Sin embargo, se puede cambiar el orden de evaluación mediante paréntesis.  
+## <a name="remarks"></a>Observaciones  
+ OR es un operador lógico de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] . Se usa para combinar dos condiciones. Cuando en una instrucción se utiliza más de un operador lógico, los operadores OR se evalúan después de los operadores AND. Sin embargo, se puede cambiar el orden de evaluación gracias a los paréntesis.  
   
- Las barras verticales dobles&#124;&#124;() tienen la misma funcionalidad que el operador o.  
+ Las barras verticales dobles (&#124;&#124;) tienen la misma funcionalidad que el operador OR.  
   
  En la tabla siguiente se muestran los valores de entrada y tipos de valor devuelto posibles.  
   
 ||`TRUE`|`FALSE`|`NULL`|  
 |-|------------|-------------|------------|  
-|`TRUE`|true|true|true|  
-|`FALSE`|true|false|NULL|  
-|`NULL`|true|NULL|NULL|  
+|`TRUE`|TRUE|TRUE|TRUE|  
+|`FALSE`|TRUE|FALSE|NULL|  
+|`NULL`|TRUE|NULL|NULL|  
   
 ## <a name="example"></a>Ejemplo  
  La siguiente consulta de Entity SQL usa el operador OR para combinar dos expresiones `Boolean` . La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
@@ -49,6 +49,6 @@ boolean_expression || boolean_expression
   
  [!code-sql[DP EntityServices Concepts 2#OR](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#or)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Referencia de Entity SQL](entity-sql-reference.md)

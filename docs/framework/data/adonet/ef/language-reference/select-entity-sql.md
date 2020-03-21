@@ -2,12 +2,12 @@
 title: SELECT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
-ms.openlocfilehash: 4142dca604c0f6dd521f45a8cadd26b9574000f0
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: de6c497e7d781d705c68092e4a13ee07b727b2b7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319364"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149914"
 ---
 # <a name="select-entity-sql"></a>SELECT (Entity SQL)
 Especifica los elementos devueltos por una consulta.  
@@ -15,7 +15,7 @@ Especifica los elementos devueltos por una consulta.
 ## <a name="syntax"></a>Sintaxis  
   
 ```sql  
-SELECT [ ALL | DISTINCT ] [ topSubclause ] aliasedExpr   
+SELECT [ ALL | DISTINCT ] [ topSubclause ] aliasedExpr
       [{ , aliasedExpr }] FROM fromClause [ WHERE whereClause ] [ GROUP BY groupByClause [ HAVING havingClause ] ] [ ORDER BY orderByClause ]  
 -- or  
 SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE whereClause ] [ GROUP BY groupByClause [ HAVING havingClause ] ] [ ORDER BY orderByClause  
@@ -28,24 +28,24 @@ SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE wh
  DISTINCT  
  Especifica que el conjunto de resultados solo puede incluir resultados únicos.  
   
- VALUE  
+ VALOR  
  Solo permite que se especifique un elemento y no agrega un contenedor de filas.  
   
  `topSubclause`  
  Cualquier expresión válida que indique el número de primeros resultados que ha de devolver la consulta, del tipo `top(expr)`.  
   
- El parámetro LIMIT del operador [order by](order-by-entity-sql.md) también permite seleccionar los primeros n elementos del conjunto de resultados.  
+ El parámetro LIMIT del operador [ORDER BY](order-by-entity-sql.md) también permite seleccionar los primeros n elementos del conjunto de resultados.  
   
  `aliasedExpr`  
  Expresión del tipo:  
   
- `expr` como `identifier` &#124; `expr`  
+ `expr`como `identifier` &#124;`expr`  
   
  `expr`  
  Literal o expresión.  
   
-## <a name="remarks"></a>Comentarios  
- La cláusula SELECT se evalúa después de que se hayan evaluado las cláusulas [from](from-entity-sql.md), [Group by](group-by-entity-sql.md)y [having](having-entity-sql.md) . La cláusula SELECT solo puede hacer referencia a elementos que están actualmente en el ámbito (de la cláusula FROM o de ámbitos externos). Si se ha especificado una cláusula GROUP BY, la cláusula SELECT solo se permite para hacer referencia a los alias para las claves GROUP BY. La referencia a los elementos de la cláusula de FROM solo se permite en funciones de agregado.  
+## <a name="remarks"></a>Observaciones  
+ La cláusula SELECT se evalúa después de que se hayan evaluado las cláusulas [FROM](from-entity-sql.md), [GROUP BY](group-by-entity-sql.md)y [HAVING.](having-entity-sql.md) La cláusula SELECT solo puede hacer referencia a elementos que están actualmente en el ámbito (de la cláusula FROM o de ámbitos externos). Si se ha especificado una cláusula GROUP BY, la cláusula SELECT solo se permite para hacer referencia a los alias para las claves GROUP BY. La referencia a los elementos de la cláusula de FROM solo se permite en funciones de agregado.  
   
  La lista de una o más expresiones de consulta que siguen a la palabra clave SELECT se conoce como lista de selección o más formalmente como proyección. La forma más general de proyección es una expresión de consulta única. Si selecciona un miembro `member1` de una colección `collection1`, generará una nueva colección de todos los valores de `member1` para cada objeto de `collection1`, como se muestra en el ejemplo siguiente.  
   
@@ -62,7 +62,7 @@ SELECT customers.Name FROM customers AS c
  También es posible utilizar la sintaxis de JOIN (FULL, INNER, LEFT, OUTER, ON y RIGHT). ON se requiere para combinaciones internas y no se permite para combinaciones cruzadas.  
   
 ## <a name="row-and-value-select-clauses"></a>Cláusulas de selección de fila y valor  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] admite dos variantes de la cláusula SELECT. La primera variante, selección de fila, se identifica mediante la palabra clave SELECT y se puede utilizar para especificar uno o más valores que se deben proyectar. Dado que un contenedor de filas se agrega implícitamente alrededor de los valores devueltos, el resultado de la expresión de consulta siempre es un conjunto múltiple de filas.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] admite dos variantes de la cláusula SELECT. La primera variante, selección de fila, se identifica mediante la palabra clave SELECT y se puede utilizar para especificar uno o varios valores que se deben proyectar. Dado que un contenedor de filas se agrega implícitamente alrededor de los valores devueltos, el resultado de la expresión de consulta siempre es un conjunto múltiple de filas.  
   
  Cada expresión de consulta en una selección de filas debe especificar un alias. Si no se especifica un alias,[!INCLUDE[esql](../../../../../../includes/esql-md.md)] intenta generar uno usando las reglas de generación de alias.  
   
@@ -72,7 +72,7 @@ SELECT customers.Name FROM customers AS c
   
 ```sql  
 SELECT 1 AS a, "abc" AS b FROM C  
-SELECT VALUE ROW(1 AS a, "abc" AS b) FROM C   
+SELECT VALUE ROW(1 AS a, "abc" AS b) FROM C
 ```  
   
 ## <a name="all-and-distinct-modifiers"></a>Modificadores All y Distinct  
@@ -85,7 +85,7 @@ SELECT VALUE ROW(1 AS a, "abc" AS b) FROM C
 SELECT * FROM T1, T2  
 ```  
   
- La expresión de consulta de Transact-SQL anterior se expresa en [!INCLUDE[esql](../../../../../../includes/esql-md.md)] de la siguiente manera.  
+ La expresión de consulta Transact-SQLTransact-SQL anterior se expresa [!INCLUDE[esql](../../../../../../includes/esql-md.md)] de la siguiente manera.  
   
 ```sql  
 SELECT a1, a2 FROM T1 AS a1, T2 AS a2  
@@ -100,8 +100,8 @@ SELECT a1, a2 FROM T1 AS a1, T2 AS a2
   
  [!code-sql[DP EntityServices Concepts#LESS](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#less)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Expresiones de consulta](query-expressions-entity-sql.md)
 - [Referencia de Entity SQL](entity-sql-reference.md)
-- [TOP](top-entity-sql.md)
+- [Arriba](top-entity-sql.md)

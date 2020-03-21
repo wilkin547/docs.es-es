@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 02c596d7-00b0-4e2c-856b-5425158fcefd
 topic_type:
 - apiref
-ms.openlocfilehash: 2c9aa6792885c685195049948a540453b1f5235e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 45d27fca888bdabedf197525c63dbd03af7ba1ee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73110310"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179086"
 ---
 # <a name="icordebugappdomaingetname-method"></a>ICorDebugAppDomain::GetName (Método)
 Obtiene el nombre del dominio de aplicación.  
@@ -31,7 +31,7 @@ Obtiene el nombre del dominio de aplicación.
 HRESULT GetName (  
     [in]  ULONG32           cchName,  
     [out] ULONG32           *pcchName,  
-    [out, size_is(cchName), length_is(*pcchName)]   
+    [out, size_is(cchName), length_is(*pcchName)]
          WCHAR              szName[]  
 );  
 ```  
@@ -41,13 +41,13 @@ HRESULT GetName (
  [in] Tamaño de la matriz `szName`. Establezca este valor en cero para poner este método en modo de consulta.  
   
  `pcchName`  
- enuncia Puntero al tamaño del nombre o número de caracteres devueltos realmente en `szName`. En el modo de consulta, este valor permite que el autor de la llamada sepa el tamaño de un búfer que se va a asignar al nombre.  
+ [fuera] Un puntero al tamaño del nombre o al `szName`número de caracteres devueltos realmente en . En el modo de consulta, este valor permite al autor de la llamada saber qué tan grande debe asignar un búfer para el nombre.  
   
  `szName`  
- enuncia Matriz que almacena el nombre del dominio de aplicación.  
+ [fuera] Matriz que almacena el nombre del dominio de aplicación.  
   
-## <a name="remarks"></a>Comentarios  
- Un depurador llama una vez al método `GetName` para obtener el tamaño de un búfer necesario para el nombre. El depurador asigna el búfer y, a continuación, llama al método una segunda vez para rellenar el búfer. La primera llamada, para obtener el tamaño del nombre, se conoce como modo de *consulta*.  
+## <a name="remarks"></a>Observaciones  
+ Un depurador `GetName` llama al método una vez para obtener el tamaño de un búfer necesario para el nombre. El depurador asigna el búfer y, a continuación, llama al método una segunda vez para rellenar el búfer. La primera llamada, para obtener el tamaño del nombre, se conoce como modo de *consulta*.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

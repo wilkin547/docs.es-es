@@ -10,12 +10,12 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), CER calls
 - generics [.NET Framework], open generic CER calls
 ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
-ms.openlocfilehash: de1735103314dfedbabe27623f579ce2c1e728af
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 7492a4c0547680a6ace85a5f7c98567770f5575a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217276"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181780"
 ---
 # <a name="opengenericcercall-mda"></a>MDA de openGenericCERCall
 
@@ -29,7 +29,7 @@ El código de la CER no se ejecuta cuando se anula un subproceso o se descarga u
 
 En tiempo de compilación JIT, una instancia que contiene un tipo de referencia de objeto solo es representativa porque el código resultante es compartido, y cada una de las variables de tipo de referencia de objeto puede ser cualquier tipo de referencia de objeto. Esto puede impedir la preparación de algunos recursos de tiempo de ejecución antes de tiempo.
 
-En concreto, los métodos con variables de tipo genérico pueden asignar lentamente recursos en segundo plano. Estas se denominan entradas de diccionario genéricas. Por ejemplo, para la instrucción `List<T> list = new List<T>();` donde `T` es una variable de tipo genérico, el tiempo de ejecución debe buscar y posiblemente crear la creación de instancias exacta en tiempo de ejecución, por ejemplo, `List<Object>, List<String>`, etc. Esto puede producir un error por diferentes motivos que se escapan al control del desarrollador, como memoria insuficiente.
+En concreto, los métodos con variables de tipo genérico pueden asignar lentamente recursos en segundo plano. Estas se denominan entradas de diccionario genéricas. Por ejemplo, para `List<T> list = new List<T>();` `T` la instrucción donde es una variable de tipo genérico, el tiempo de `List<Object>, List<String>`ejecución debe buscar y posiblemente crear la creación de instancias exacta en tiempo de ejecución, por ejemplo, , etc. Esto puede producir un error por diferentes motivos que se escapan al control del desarrollador, como memoria insuficiente.
 
 Solo se debería activar este MDA en tiempo de compilación JIT, no cuando hay una creación de instancias exactas.
 
@@ -45,11 +45,11 @@ Este MDA no tiene ningún efecto en el CLR.
 
 ## <a name="output"></a>Output
 
-A continuación se muestra un ejemplo de la salida de este MDA:
+A continuación se muestra un ejemplo de salida de este MDA:
   
  ```output
  Method 'GenericMethodWithCer', which contains at least one constrained execution region, cannot be prepared automatically since it has one or more unbound generic type parameters.
- The caller must ensure this method is prepared explicitly at run time prior to execution. 
+ The caller must ensure this method is prepared explicitly at run time prior to execution.
  method name="GenericMethodWithCer"
  declaringType name="OpenGenericCERCall"
  ```
@@ -86,7 +86,7 @@ class Program
         MyClass.GenericMethodWithCer<int>();
 
         // This call is incorrect. A shared version of the method that
-        // cannot be completely analyzed will be JIT-compiled. The 
+        // cannot be completely analyzed will be JIT-compiled. The
         // MDA will be activated at JIT-compile time, not at run time.
         MyClass.GenericMethodWithCer<String>();
     }
@@ -114,4 +114,4 @@ class MyClass
 
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnóstico de errores con asistentes para la depuración administrada](diagnosing-errors-with-managed-debugging-assistants.md)
