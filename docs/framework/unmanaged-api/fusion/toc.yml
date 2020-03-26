@@ -31,26 +31,26 @@
         - name: IAssemblyEnum (Interfaz)
           href: iassemblyenum-interface.md
           items:
-            - name: Método Clone
+            - name: Clone (Método)
               href: iassemblyenum-clone-method.md
             - name: Método GetNextAssembly
               href: iassemblyenum-getnextassembly-method.md
-            - name: Método Reset
+            - name: Reset (Método)
               href: iassemblyenum-reset-method.md
         - name: IAssemblyName (Interfaz)
           href: iassemblyname-interface.md
           items:
-            - name: Método Clone
+            - name: Clone (Método)
               href: iassemblyname-clone-method.md
             - name: Método Finalize
               href: iassemblyname-finalize-method.md
-            - name: Método GetDisplayName
+            - name: GetDisplayName (Método)
               href: iassemblyname-getdisplayname-method.md
-            - name: Método GetName
+            - name: GetName (Método)
               href: iassemblyname-getname-method.md
             - name: Método GetProperty
               href: iassemblyname-getproperty-method.md
-            - name: Método GetVersion
+            - name: GetVersion (Método)
               href: iassemblyname-getversion-method.md
             - name: Método IsEqual
               href: iassemblyname-isequal-method.md

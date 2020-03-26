@@ -87,7 +87,7 @@
               href: icorprofilercallback-exceptionunwindfunctionleave-method.md
             - name: Método FunctionUnloadStarted
               href: icorprofilercallback-functionunloadstarted-method.md
-            - name: Método Initialize
+            - name: Initialize (Método)
               href: icorprofilercallback-initialize-method.md
             - name: Método JITCachedFunctionSearchFinished
               href: icorprofilercallback-jitcachedfunctionsearchfinished-method.md
@@ -245,15 +245,15 @@
         - name: ICorProfilerFunctionEnum (Interfaz)
           href: icorprofilerfunctionenum-interface.md
           items:
-            - name: Método Clone
+            - name: Clone (Método)
               href: icorprofilerfunctionenum-clone-method.md
-            - name: Método GetCount
+            - name: GetCount (Método)
               href: icorprofilerfunctionenum-getcount-method.md
-            - name: Método Next
+            - name: Next (Método)
               href: icorprofilerfunctionenum-next-method.md
-            - name: Método Reset
+            - name: Reset (Método)
               href: icorprofilerfunctionenum-reset-method.md
-            - name: Método Skip
+            - name: Skip (Método)
               href: icorprofilerfunctionenum-skip-method.md
         - name: ICorProfilerInfo (Interfaz)
           href: icorprofilerinfo-interface.md
@@ -270,19 +270,19 @@
               href: icorprofilerinfo-getassemblyinfo-method.md
             - name: Método GetClassFromObject
               href: icorprofilerinfo-getclassfromobject-method.md
-            - name: Método GetClassFromToken
+            - name: GetClassFromToken (Método)
               href: icorprofilerinfo-getclassfromtoken-method.md
             - name: Método GetClassIDInfo
               href: icorprofilerinfo-getclassidinfo-method.md
             - name: Método GetCodeInfo
               href: icorprofilerinfo-getcodeinfo-method.md
-            - name: Método GetCurrentThreadID
+            - name: GetCurrentThreadID (Método)
               href: icorprofilerinfo-getcurrentthreadid-method.md
             - name: Método GetEventMask
               href: icorprofilerinfo-geteventmask-method.md
             - name: Método GetFunctionFromIP
               href: icorprofilerinfo-getfunctionfromip-method.md
-            - name: Método GetFunctionFromToken
+            - name: GetFunctionFromToken (Método)
               href: icorprofilerinfo-getfunctionfromtoken-method.md
             - name: Método GetFunctionInfo
               href: icorprofilerinfo-getfunctioninfo-method.md
@@ -292,7 +292,7 @@
               href: icorprofilerinfo-getilfunctionbody-method.md
             - name: Método GetILFunctionBodyAllocator
               href: icorprofilerinfo-getilfunctionbodyallocator-method.md
-            - name: Método GetILToNativeMapping
+            - name: GetILToNativeMapping (Método)
               href: icorprofilerinfo-getiltonativemapping-method.md
             - name: Método GetInprocInspectionInterface
               href: icorprofilerinfo-getinprocinspectioninterface-method.md
@@ -302,9 +302,9 @@
               href: icorprofilerinfo-getmoduleinfo-method.md
             - name: Método GetModuleMetaData
               href: icorprofilerinfo-getmodulemetadata-method.md
-            - name: Método GetObjectSize
+            - name: GetObjectSize (Método)
               href: icorprofilerinfo-getobjectsize-method.md
-            - name: Método GetThreadContext
+            - name: GetThreadContext (Método)
               href: icorprofilerinfo-getthreadcontext-method.md
             - name: Método GetThreadInfo
               href: icorprofilerinfo-getthreadinfo-method.md
@@ -320,9 +320,9 @@
               href: icorprofilerinfo-setfunctionidmapper-method.md
             - name: Método SetFunctionReJIT
               href: icorprofilerinfo-setfunctionrejit-method.md
-            - name: Método SetILFunctionBody
+            - name: SetILFunctionBody (Método)
               href: icorprofilerinfo-setilfunctionbody-method.md
-            - name: Método SetILInstrumentedCodeMap
+            - name: SetILInstrumentedCodeMap (Método)
               href: icorprofilerinfo-setilinstrumentedcodemap-method.md
         - name: ICorProfilerInfo2 (Interfaz)
           href: icorprofilerinfo2-interface.md
@@ -341,7 +341,7 @@
               href: icorprofilerinfo2-getclassfromtokenandtypeargs-method.md
             - name: Método GetClassIDInfo2
               href: icorprofilerinfo2-getclassidinfo2-method.md
-            - name: Método GetClassLayout
+            - name: GetClassLayout (Método)
               href: icorprofilerinfo2-getclasslayout-method.md
             - name: Método GetCodeInfo2
               href: icorprofilerinfo2-getcodeinfo2-method.md
@@ -480,46 +480,46 @@
         - name: ICorProfilerModuleEnum (Interfaz)
           href: icorprofilermoduleenum-interface.md
           items:
-            - name: Método Clone
+            - name: Clone (Método)
               href: icorprofilermoduleenum-clone-method.md
-            - name: Método GetCount
+            - name: GetCount (Método)
               href: icorprofilermoduleenum-getcount-method.md
-            - name: Método Next
+            - name: Next (Método)
               href: icorprofilermoduleenum-next-method.md
-            - name: Método Reset
+            - name: Reset (Método)
               href: icorprofilermoduleenum-reset-method.md
-            - name: Método Skip
+            - name: Skip (Método)
               href: icorprofilermoduleenum-skip-method.md
         - name: ICorProfilerObjectEnum (Interfaz)
           href: icorprofilerobjectenum-interface.md
           items:
-            - name: Método Clone
+            - name: Clone (Método)
               href: icorprofilerobjectenum-clone-method.md
-            - name: Método GetCount
+            - name: GetCount (Método)
               href: icorprofilerobjectenum-getcount-method.md
-            - name: Método Next
+            - name: Next (Método)
               href: icorprofilerobjectenum-next-method.md
-            - name: Método Reset
+            - name: Reset (Método)
               href: icorprofilerobjectenum-reset-method.md
-            - name: Método Skip
+            - name: Skip (Método)
               href: icorprofilerobjectenum-skip-method.md
         - name: ICorProfilerThreadEnum (Interfaz)
           href: icorprofilerthreadenum-interface.md
           items:
-            - name: Método Clone
+            - name: Clone (Método)
               href: icorprofilerthreadenum-clone-method.md
-            - name: Método GetCount
+            - name: GetCount (Método)
               href: icorprofilerthreadenum-getcount-method.md
-            - name: Método Next
+            - name: Next (Método)
               href: icorprofilerthreadenum-next-method.md
-            - name: Método Reset
+            - name: Reset (Método)
               href: icorprofilerthreadenum-reset-method.md
-            - name: Método Skip
+            - name: Skip (Método)
               href: icorprofilerthreadenum-skip-method.md
         - name: IMethodMalloc (Interfaz)
           href: imethodmalloc-interface.md
           items:
-            - name: Método Alloc
+            - name: Alloc (Método)
               href: imethodmalloc-alloc-method.md
     - name: Funciones estáticas globales para generación de perfiles
       href: profiling-global-static-functions.md

@@ -21,7 +21,7 @@
           href: building-the-samples.md
         - name: Ejecución de los ejemplos de Windows Communication Foundation
           href: running-the-samples.md
-    - name: Básica
+    - name: Básico
       href: basic.md
       items:
         - name: Introducción
@@ -43,7 +43,7 @@
               href: ajax-service-using-complex-types-sample.md
             - name: Servicio AJAX con JSON y XML
               href: ajax-service-with-json-and-xml-sample.md
-        - name: Enlace
+        - name: Enlaces
           href: binding.md
           items:
             - name: Enlace básico
@@ -202,7 +202,7 @@
                   href: one-way.md
                 - name: Sesión
                   href: session.md
-                - name: Stream
+                - name: Secuencia
                   href: stream.md
                 - name: Errores de XmlSerializer
                   href: xmlserializer-faults.md
@@ -212,12 +212,12 @@
               href: knownassemblyattribute.md
             - name: Utilizar DataContractSerializer y DataContractResolver para proporcionar la funcionalidad de NetDataContractSerializer
               href: datacontractserializer-datacontractresolver-netdatacontractserializer.md
-        - name: Detección
+        - name: de esquema JSON
           href: discovery-samples.md
           items:
             - name: Anuncios
               href: announcements-sample.md
-            - name: Básica
+            - name: Básico
               href: basic-sample.md
             - name: Configuración
               href: configuration-sample.md
@@ -262,7 +262,7 @@
           items:
             - name: Agilidad criptográfica en la seguridad de WCF
               href: cryptographic-agility-in-wcf-security.md
-        - name: Services
+        - name: Servicios
           href: services.md
           items:
             - name: Hospedaje
@@ -297,7 +297,7 @@
             - name: comportamientos
               href: behaviors.md
               items:
-                - name: Simultaneidad
+                - name: simultaneidad
                   href: concurrency.md
                 - name: Comportamiento de servicio predeterminado
                   href: default-service-behavior.md
@@ -309,7 +309,7 @@
                   href: service-transaction-behavior.md
                 - name: Comportamiento de depuración de servicio
                   href: service-debug-behavior.md
-                - name: Limitaciones
+                - name: Limitación de peticiones
                   href: throttling.md
                 - name: Seguridad de comportamiento
                   href: behavior-security.md
@@ -332,7 +332,7 @@
               href: configuration-channel-factory.md
             - name: Direccionamiento
               href: addressing.md
-            - name: Imperativa
+            - name: Imperativo
               href: imperative.md
             - name: Contratos múltiples
               href: multiple-contracts.md

@@ -264,7 +264,7 @@
           items:
             - name: Método IsTokenMarked
               href: imetadatafilter-istokenmarked-method.md
-            - name: Método MarkToken
+            - name: MarkToken (Método)
               href: imetadatafilter-marktoken-method.md
             - name: Método UnmarkAll
               href: imetadatafilter-unmarkall-method.md
@@ -385,7 +385,7 @@
               href: imetadataimport-gettyperefprops-method.md
             - name: Método GetTypeSpecFromToken
               href: imetadataimport-gettypespecfromtoken-method.md
-            - name: Método GetUserString
+            - name: GetUserString (Método)
               href: imetadataimport-getuserstring-method.md
             - name: Método IsGlobal
               href: imetadataimport-isglobal-method.md
@@ -412,7 +412,7 @@
               href: imetadataimport2-getmethodspecprops-method.md
             - name: Método GetPEKind
               href: imetadataimport2-getpekind-method.md
-            - name: Método GetVersionString
+            - name: GetVersionString (Método)
               href: imetadataimport2-getversionstring-method.md
         - name: IMetaDataInfo (Interfaz)
           href: imetadatainfo-interface.md
@@ -448,7 +448,7 @@
               href: imetadatatables-getnumtables-method.md
             - name: Método GetRow
               href: imetadatatables-getrow-method.md
-            - name: Método GetString
+            - name: GetString (Método)
               href: imetadatatables-getstring-method.md
             - name: Método GetStringHeapSize
               href: imetadatatables-getstringheapsize-method.md

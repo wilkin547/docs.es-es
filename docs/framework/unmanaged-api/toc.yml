@@ -11,7 +11,7 @@
       href: constants-unmanaged-api-reference.md
     - name: Depuración
       href: debugging/
-    - name: Almacén de símbolos de diagnósticos
+    - name: Almacén de símbolos de diagnóstico
       href: diagnostics/
     - name: Fusión
       href: fusion/

@@ -7,7 +7,7 @@
       href: how-to-modify-expression-trees.md
     - name: Procedimiento para usar árboles de expresión para crear consultas dinámicas
       href: how-to-use-expression-trees-to-build-dynamic-queries.md
-    - name: Depuración de árboles de expresiones
+    - name: Depurar árboles de expresiones
       href: debugging-expression-trees-in-visual-studio.md
     - name: Sintaxis de DebugView
       href: debugview-syntax.md
