@@ -9,31 +9,33 @@ helpviewer_keywords:
 - WPF programming model [WPF]
 - XAML [WPF], content models
 ms.assetid: 58843391-b28c-4d32-adf5-87acaf6578a1
-ms.openlocfilehash: 800711df51326e09546f559a9d4d1d84af173d4c
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: f2ed51a2ad757fe29e70c0930e962d22add8de75
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710211"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248191"
 ---
-# <a name="advanced-windows-presentation-foundation"></a><span data-ttu-id="918ca-102">Características avanzadas (Windows Presentation Foundation)</span><span class="sxs-lookup"><span data-stu-id="918ca-102">Advanced (Windows Presentation Foundation)</span></span>
-<span data-ttu-id="918ca-103">En esta sección se describen algunas características avanzadas de WPF.</span><span class="sxs-lookup"><span data-stu-id="918ca-103">This section describes some of the advanced areas in WPF.</span></span>  
-  
-## <a name="in-this-section"></a><span data-ttu-id="918ca-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="918ca-104">In This Section</span></span>
+# <a name="advanced-windows-presentation-foundation"></a><span data-ttu-id="41ad6-102">Características avanzadas (Windows Presentation Foundation)</span><span class="sxs-lookup"><span data-stu-id="41ad6-102">Advanced (Windows Presentation Foundation)</span></span>
 
-[<span data-ttu-id="918ca-105">Arquitectura de WPF</span><span class="sxs-lookup"><span data-stu-id="918ca-105">WPF Architecture</span></span>](wpf-architecture.md)  
-[<span data-ttu-id="918ca-106">XAML en WPF</span><span class="sxs-lookup"><span data-stu-id="918ca-106">XAML in WPF</span></span>](xaml-in-wpf.md)  
-[<span data-ttu-id="918ca-107">Clases de elementos base</span><span class="sxs-lookup"><span data-stu-id="918ca-107">Base Element Classes</span></span>](base-elements.md)  
-[<span data-ttu-id="918ca-108">Árbol de elementos y serialización</span><span class="sxs-lookup"><span data-stu-id="918ca-108">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
-[<span data-ttu-id="918ca-109">Sistema de propiedades de WPF</span><span class="sxs-lookup"><span data-stu-id="918ca-109">WPF Property System</span></span>](properties-wpf.md)  
-[<span data-ttu-id="918ca-110">Eventos en WPF</span><span class="sxs-lookup"><span data-stu-id="918ca-110">Events in WPF</span></span>](events-wpf.md)  
-[<span data-ttu-id="918ca-111">Entrada</span><span class="sxs-lookup"><span data-stu-id="918ca-111">Input</span></span>](input-wpf.md)  
-[<span data-ttu-id="918ca-112">Arrastrar y colocar</span><span class="sxs-lookup"><span data-stu-id="918ca-112">Drag and Drop</span></span>](drag-and-drop.md)  
-[<span data-ttu-id="918ca-113">Recursos</span><span class="sxs-lookup"><span data-stu-id="918ca-113">Resources</span></span>](resources-wpf.md)  
-[<span data-ttu-id="918ca-114">Documentos</span><span class="sxs-lookup"><span data-stu-id="918ca-114">Documents</span></span>](documents.md)  
-[<span data-ttu-id="918ca-115">Globalización y localización</span><span class="sxs-lookup"><span data-stu-id="918ca-115">Globalization and Localization</span></span>](globalization-and-localization.md)  
-[<span data-ttu-id="918ca-116">Diseño</span><span class="sxs-lookup"><span data-stu-id="918ca-116">Layout</span></span>](layout.md)  
-[<span data-ttu-id="918ca-117">Migración e interoperabilidad</span><span class="sxs-lookup"><span data-stu-id="918ca-117">Migration and Interoperability</span></span>](migration-and-interoperability.md)  
-[<span data-ttu-id="918ca-118">Rendimiento</span><span class="sxs-lookup"><span data-stu-id="918ca-118">Performance</span></span>](performance.md)  
-[<span data-ttu-id="918ca-119">Modelo de subprocesos</span><span class="sxs-lookup"><span data-stu-id="918ca-119">Threading Model</span></span>](threading-model.md)  
-[<span data-ttu-id="918ca-120">Referencia de API de WPF no administrada</span><span class="sxs-lookup"><span data-stu-id="918ca-120">Unmanaged WPF API Reference</span></span>](wpf-unmanaged-api-reference.md)  
+<span data-ttu-id="41ad6-103">En esta sección se describen algunas características avanzadas de WPF.</span><span class="sxs-lookup"><span data-stu-id="41ad6-103">This section describes some of the advanced areas in WPF.</span></span>
+
+## <a name="in-this-section"></a><span data-ttu-id="41ad6-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="41ad6-104">In This Section</span></span>
+
+<span data-ttu-id="41ad6-105">[Arquitectura WPF](wpf-architecture.md)</span><span class="sxs-lookup"><span data-stu-id="41ad6-105">[WPF Architecture](wpf-architecture.md)</span></span>\
+<span data-ttu-id="41ad6-106">[XAML en WPF](xaml-in-wpf.md)</span><span class="sxs-lookup"><span data-stu-id="41ad6-106">[XAML in WPF](xaml-in-wpf.md)</span></span>\
+<span data-ttu-id="41ad6-107">[Clases de elementos base](base-elements.md)</span><span class="sxs-lookup"><span data-stu-id="41ad6-107">[Base Element Classes](base-elements.md)</span></span>\
+<span data-ttu-id="41ad6-108">[Element Tree y serialización](element-tree-and-serialization.md)</span><span class="sxs-lookup"><span data-stu-id="41ad6-108">[Element Tree and Serialization](element-tree-and-serialization.md)</span></span>\
+<span data-ttu-id="41ad6-109">[WPF Property System](properties-wpf.md)</span><span class="sxs-lookup"><span data-stu-id="41ad6-109">[WPF Property System](properties-wpf.md)</span></span>\
+<span data-ttu-id="41ad6-110">[Eventos en WPFWPF](events-wpf.md)</span><span class="sxs-lookup"><span data-stu-id="41ad6-110">[Events in WPF](events-wpf.md)</span></span>\
+<span data-ttu-id="41ad6-111">[Entrada](input-wpf.md)</span><span class="sxs-lookup"><span data-stu-id="41ad6-111">[Input](input-wpf.md)</span></span>\
+<span data-ttu-id="41ad6-112">[Arrastrar y soltar](drag-and-drop.md)</span><span class="sxs-lookup"><span data-stu-id="41ad6-112">[Drag and Drop](drag-and-drop.md)</span></span>\
+<span data-ttu-id="41ad6-113">[Recursos](resources-wpf.md)</span><span class="sxs-lookup"><span data-stu-id="41ad6-113">[Resources](resources-wpf.md)</span></span>\
+<span data-ttu-id="41ad6-114">[Documentos](documents.md)</span><span class="sxs-lookup"><span data-stu-id="41ad6-114">[Documents](documents.md)</span></span>\
+<span data-ttu-id="41ad6-115">[Globalización y localización](globalization-and-localization.md)</span><span class="sxs-lookup"><span data-stu-id="41ad6-115">[Globalization and Localization](globalization-and-localization.md)</span></span>\
+<span data-ttu-id="41ad6-116">[Diseño](layout.md)</span><span class="sxs-lookup"><span data-stu-id="41ad6-116">[Layout](layout.md)</span></span>\
+<span data-ttu-id="41ad6-117">[Tipos migrados de WPF a System.Xaml](types-migrated-from-wpf-to-system.md)</span><span class="sxs-lookup"><span data-stu-id="41ad6-117">[Types migrated from WPF to System.Xaml](types-migrated-from-wpf-to-system.md)</span></span>\
+<span data-ttu-id="41ad6-118">[Migración e interoperabilidad](migration-and-interoperability.md)</span><span class="sxs-lookup"><span data-stu-id="41ad6-118">[Migration and Interoperability](migration-and-interoperability.md)</span></span>\
+<span data-ttu-id="41ad6-119">[Rendimiento](performance.md)</span><span class="sxs-lookup"><span data-stu-id="41ad6-119">[Performance](performance.md)</span></span>\
+<span data-ttu-id="41ad6-120">[Modelo de roscado](threading-model.md)</span><span class="sxs-lookup"><span data-stu-id="41ad6-120">[Threading Model](threading-model.md)</span></span>\
+<span data-ttu-id="41ad6-121">[Referencia de la API de WPF no administrada](wpf-unmanaged-api-reference.md)</span><span class="sxs-lookup"><span data-stu-id="41ad6-121">[Unmanaged WPF API Reference](wpf-unmanaged-api-reference.md)</span></span>\
