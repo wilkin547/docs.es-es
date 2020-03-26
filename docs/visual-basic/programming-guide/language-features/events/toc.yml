@@ -1,4 +1,4 @@
-- name: Eventos
+- name: Events
   href: index.md
   items:
     - name: 'Tutorial: Declarar y generar eventos'

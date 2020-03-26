@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: fa7138127379b069b646c4b2488d1973a3ddd628
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d5657f4081577b2a27bc3c2f6880784015c56060
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79143322"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249700"
 ---
 # <a name="whats-new-in-net-framework"></a>Novedades de .NET Framework
 
@@ -427,7 +427,7 @@ Se puede agregar SameSite para las cookies <xref:System.Web.Security.FormsAuthen
       <forms cookieSameSite="Lax">
          <!-- ...   -->
       </forms>
-   <authentication />
+   </authentication>
    <sessionState cookieSameSite="Lax"></sessionState>
 </system.web>
 ```
@@ -500,7 +500,7 @@ El flujo básico de Always Encrypted basada en enclave es el siguiente:
 A partir de .NET Framework 4.7.2, un asistente de diagnóstico puede localizar los objetos  <xref:System.Windows.Xps.Packaging.IXpsFixedPageReader.ResourceDictionaries> que se han creado desde un URI de origen determinado. (Esta característica es para uso por parte de los asistentes de diagnóstico, no por las aplicaciones de producción). Un asistente de diagnóstico, como la opción "Editar y continuar" de Visual Studio, permite al usuario editar un objeto ResourceDictionary con la intención de que los cambios se puedan aplicar a la aplicación en ejecución. Un paso para lograr esto consiste en buscar todos los objetos ResourceDictionary que la aplicación en ejecución ha creado a partir del diccionario que se está editando. Por ejemplo, una aplicación puede declarar un objeto ResourceDictionary cuyo contenido se copia desde un URI de origen determinado:
 
 ```xml
-<ResourceDictionary Source="MyRD.xaml">
+<ResourceDictionary Source="MyRD.xaml" />
 ```
 
 Un asistente de diagnóstico que edite el marcado original en *MyRD.xaml*  puede usar la característica nueva para buscar el diccionario. La característica se implementa mediante un método estático nuevo, <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetResourceDictionariesForSource%2A?displayProperty=nameWithType>. El asistente de diagnóstico llama al método nuevo mediante un URI absoluto que identifica el marcado original, como se muestra en el código siguiente:
@@ -1976,7 +1976,7 @@ ASP.NET 4.5 y 4.5.1 incorporan el enlace de modelos de formularios Web Forms, co
 
 - [Notas de la versión de ASP.NET and Web Tools para Visual Studio 2013](/aspnet/visual-studio/overview/2013/release-notes)
 
-### <a name="networking-a-namenetworking-"></a>Redes <a name="networking" />
+### <a name="networking"></a>Redes <a name="networking" />
 
 .NET Framework 4.5 proporciona una nueva interfaz de programación para aplicaciones HTTP. Para obtener más información, vea los nuevos espacios de nombres <xref:System.Net.Http?displayProperty=nameWithType> y <xref:System.Net.Http.Headers?displayProperty=nameWithType>.
 
@@ -2120,7 +2120,7 @@ Para obtener más información, vea [Novedades de Windows Workflow Foundation](.
 
 Las aplicaciones de la Tienda Windows 8.x están diseñadas para factores de forma específicos y aprovechan la eficacia del sistema operativo Windows. Un subconjunto de .NET Framework 4.5 o 4.5.1 está disponible para compilar aplicaciones de la Tienda Windows 8.x para Windows mediante C# o Visual Basic. Este subconjunto se denomina .NET para aplicaciones de la Tienda Windows 8.x y se explica en una [introducción](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)).
 
-### <a name="portable-class-libraries-a-nameportable-"></a>Bibliotecas de clases portables <a name="portable" />
+### <a name="portable-class-libraries"></a>Bibliotecas de clases portables <a name="portable" />
 
 El proyecto de Biblioteca de clases portable de Visual Studio 2012 (y versiones posteriores) permite escribir y compilar ensamblados administrados capaces de funcionar en múltiples plataformas de .NET Framework. Mediante el uso de Biblioteca de clases portable, puede elegir las plataformas de destino, como Windows Phone y .NET para aplicaciones de la Tienda Windows 8.x. Los tipos y miembros disponibles en el proyecto se restringen automáticamente a los tipos y miembros comunes de estas plataformas. Para obtener más información, consulte [Biblioteca de clases portable](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
 

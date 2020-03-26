@@ -213,9 +213,9 @@
                   href: icorruntimehost-mapfile-method.md
                 - name: Método NextDomain
                   href: icorruntimehost-nextdomain-method.md
-                - name: Método Start
+                - name: Start (Método)
                   href: icorruntimehost-start-method.md
-                - name: Método Stop
+                - name: Stop (Método)
                   href: icorruntimehost-stop-method.md
                 - name: Método SwitchInLogicalThreadState
                   href: icorruntimehost-switchinlogicalthreadstate-method.md
@@ -288,7 +288,7 @@
                   href: iclrdebugmanager-endconnection-method.md
                 - name: Método GetDacl
                   href: iclrdebugmanager-getdacl-method.md
-                - name: Método IsDebuggerAttached
+                - name: IsDebuggerAttached (Método)
                   href: iclrdebugmanager-isdebuggerattached-method.md
                 - name: Método SetConnectionTasks
                   href: iclrdebugmanager-setconnectiontasks-method.md
@@ -308,11 +308,11 @@
             - name: ICLRGCManager (Interfaz)
               href: iclrgcmanager-interface.md
               items:
-                - name: Método Collect
+                - name: Collect (Método)
                   href: iclrgcmanager-collect-method.md
                 - name: Método GetStats
                   href: iclrgcmanager-getstats-method.md
-                - name: Método SetGCStartupLimits
+                - name: SetGCStartupLimits (Método)
                   href: iclrgcmanager-setgcstartuplimits-method.md
             - name: ICLRHostBindingPolicyManager (Interfaz)
               href: iclrhostbindingpolicymanager-interface.md
@@ -368,7 +368,7 @@
             - name: ICLRReferenceAssemblyEnum (Interfaz)
               href: iclrreferenceassemblyenum-interface.md
               items:
-                - name: Método Get
+                - name: Get (Método)
                   href: iclrreferenceassemblyenum-get-method.md
             - name: ICLRRuntimeHost (Interfaz)
               href: iclrruntimehost-interface.md
@@ -385,7 +385,7 @@
                   href: iclrruntimehost-getcurrentappdomainid-method.md
                 - name: Método SetHostControl
                   href: iclrruntimehost-sethostcontrol-method.md
-                - name: Método Start
+                - name: Start (Método)
                   href: iclrruntimehost-start-method.md
                 - name: Método Stop
                   href: iclrruntimehost-stop-method.md
@@ -432,20 +432,20 @@
               items:
                 - name: Método CreateTask
                   href: iclrtaskmanager-createtask-method.md
-                - name: Método GetCurrentTask
+                - name: GetCurrentTask (Método)
                   href: iclrtaskmanager-getcurrenttask-method.md
                 - name: Método GetCurrentTaskType
                   href: iclrtaskmanager-getcurrenttasktype-method.md
-                - name: Método SetLocale
+                - name: SetLocale (Método)
                   href: iclrtaskmanager-setlocale-method.md
-                - name: Método SetUILocale
+                - name: SetUILocale (Método)
                   href: iclrtaskmanager-setuilocale-method.md
             - name: ICLRValidator (Interfaz)
               href: iclrvalidator-interface.md
               items:
-                - name: Método FormatEventInfo
+                - name: FormatEventInfo (Método)
                   href: iclrvalidator-formateventinfo-method.md
-                - name: Método Validate
+                - name: Validate (Método)
                   href: iclrvalidator-validate-method.md
             - name: ICorConfiguration (Interfaz)
               href: icorconfiguration-interface.md
@@ -502,7 +502,7 @@
               items:
                 - name: Método Collect
                   href: igchost-collect-method.md
-                - name: Método GetStats
+                - name: GetStats (Método)
                   href: igchost-getstats-method.md
                 - name: Método GetThreadStats
                   href: igchost-getthreadstats-method.md
@@ -523,11 +523,11 @@
             - name: IGCThreadControl (Interfaz)
               href: igcthreadcontrol-interface.md
               items:
-                - name: Método SuspensionEnding
+                - name: SuspensionEnding (Método)
                   href: igcthreadcontrol-suspensionending-method.md
                 - name: Método SuspensionStarting
                   href: igcthreadcontrol-suspensionstarting-method.md
-                - name: Método ThreadIsBlockingForSuspension
+                - name: ThreadIsBlockingForSuspension (Método)
                   href: igcthreadcontrol-threadisblockingforsuspension-method.md
             - name: IHostAssemblyManager (Interfaz)
               href: ihostassemblymanager-interface.md
@@ -546,7 +546,7 @@
             - name: IHostAutoEvent (Interfaz)
               href: ihostautoevent-interface.md
               items:
-                - name: Método Set
+                - name: Set (Método)
                   href: ihostautoevent-set-method.md
                 - name: Método Wait
                   href: ihostautoevent-wait-method.md
@@ -586,21 +586,21 @@
                   href: ihostiocompletionmanager-closeiocompletionport-method.md
                 - name: Método CreateIoCompletionPort
                   href: ihostiocompletionmanager-createiocompletionport-method.md
-                - name: Método GetAvailableThreads
+                - name: GetAvailableThreads (Método)
                   href: ihostiocompletionmanager-getavailablethreads-method.md
                 - name: Método GetHostOverlappedSize
                   href: ihostiocompletionmanager-gethostoverlappedsize-method.md
-                - name: Método GetMaxThreads
+                - name: GetMaxThreads (Método)
                   href: ihostiocompletionmanager-getmaxthreads-method.md
-                - name: Método GetMinThreads
+                - name: GetMinThreads (Método)
                   href: ihostiocompletionmanager-getminthreads-method.md
                 - name: Método InitializeHostOverlapped
                   href: ihostiocompletionmanager-initializehostoverlapped-method.md
                 - name: Método SetCLRIoCompletionManager
                   href: ihostiocompletionmanager-setclriocompletionmanager-method.md
-                - name: Método SetMaxThreads
+                - name: SetMaxThreads (Método)
                   href: ihostiocompletionmanager-setmaxthreads-method.md
-                - name: Método SetMinThreads
+                - name: SetMinThreads (Método)
                   href: ihostiocompletionmanager-setminthreads-method.md
             - name: IHostMalloc (Interfaz)
               href: ihostmalloc-interface.md
@@ -614,11 +614,11 @@
             - name: IHostManualEvent (Interfaz)
               href: ihostmanualevent-interface.md
               items:
-                - name: Método Reset
+                - name: Reset (Método)
                   href: ihostmanualevent-reset-method.md
                 - name: Método Set
                   href: ihostmanualevent-set-method.md
-                - name: Método Wait
+                - name: Wait (Método)
                   href: ihostmanualevent-wait-method.md
             - name: IHostMemoryManager (Interfaz)
               href: ihostmemorymanager-interface.md
@@ -677,7 +677,7 @@
               items:
                 - name: Método ReleaseSemaphore
                   href: ihostsemaphore-releasesemaphore-method.md
-                - name: Método Wait
+                - name: Wait (Método)
                   href: ihostsemaphore-wait-method.md
             - name: IHostSyncManager (Interfaz)
               href: ihostsyncmanager-interface.md
@@ -724,7 +724,7 @@
                   href: ihosttaskmanager-beginthreadaffinity-method.md
                 - name: Método CallNeedsHostHook
                   href: ihosttaskmanager-callneedshosthook-method.md
-                - name: Método CreateTask
+                - name: CreateTask (Método)
                   href: ihosttaskmanager-createtask-method.md
                 - name: Método EndDelayAbort
                   href: ihosttaskmanager-enddelayabort-method.md
@@ -854,14 +854,14 @@
             - name: ICLRDomainManager (Interfaz)
               href: iclrdomainmanager-interface.md
               items:
-                - name: Método SetAppDomainManagerType
+                - name: SetAppDomainManagerType (Método)
                   href: iclrdomainmanager-setappdomainmanagertype-method.md
                 - name: Método SetPropertiesForDefaultAppDomain
                   href: iclrdomainmanager-setpropertiesfordefaultappdomain-method.md
             - name: ICLRGCManager2 (Interfaz)
               href: iclrgcmanager2-interface.md
               items:
-                - name: Método SetGCStartupLimitsEx
+                - name: SetGCStartupLimitsEx (Método)
                   href: iclrgcmanager2-setgcstartuplimitsex-method.md
             - name: ICLRMetaHost (Interfaz)
               href: iclrmetahost-interface.md

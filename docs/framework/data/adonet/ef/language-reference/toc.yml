@@ -33,7 +33,7 @@
               href: query-expression-syntax-examples-filtering.md
             - name: 'Ejemplos de sintaxis de expresiones de consulta: Ordenación'
               href: query-expression-syntax-examples-ordering.md
-            - name: 'Ejemplos de sintaxis de expresiones de consulta: Operadores de agregación'
+            - name: 'Ejemplos de sintaxis de expresiones de consulta: Operadores de agregado'
               href: query-expression-syntax-examples-aggregate-operators.md
             - name: 'Ejemplos de sintaxis de expresiones de consulta: Particionamiento'
               href: query-expression-syntax-examples-partitioning.md
@@ -107,7 +107,7 @@
               href: identifiers-entity-sql.md
             - name: Parámetros
               href: parameters-entity-sql.md
-            - name: Variables
+            - name: variables
               href: variables-entity-sql.md
             - name: Expresiones no admitidas
               href: unsupported-expressions-entity-sql.md

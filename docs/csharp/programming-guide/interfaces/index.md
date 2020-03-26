@@ -5,16 +5,16 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: f4ee269f41e79562c113a7627816f797b083095e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb1b812fdbf1d521ed3fd86e23f430bcd04d00f6
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79157083"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249186"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfaces (Guía de programación de C#)
 
-Una interfaz contiene las definiciones de un grupo de funcionalidades relacionadas que una [clase](../../language-reference/keywords/class.md) o una [estructura](../../language-reference/builtin-types/struct.md) no abstracta deben implementar. Una interfaz puede definir métodos `static`, que deben tener una implementación. Una interfaz puede proporcionar una implementación predeterminada para cualquiera de sus miembros de instancia declarados o para todos ellos. Una interfaz no puede declarar datos de instancia, como campos, propiedades implementadas automáticamente o eventos similares a las propiedades.
+Una interfaz contiene las definiciones de un grupo de funcionalidades relacionadas que una [clase](../../language-reference/keywords/class.md) o una [estructura](../../language-reference/builtin-types/struct.md) no abstracta deben implementar. Una interfaz puede definir métodos `static`, que deben tener una implementación. A partir de C# 8.0, una interfaz puede definir una implementación predeterminada de miembros. Una interfaz no puede declarar datos de instancia, como campos, propiedades implementadas automáticamente o eventos similares a las propiedades.
 
 Mediante las interfaces puede incluir, por ejemplo, un comportamiento de varios orígenes en una clase. Esta capacidad es importante en C# porque el lenguaje no admite la herencia múltiple de clases. Además, debe usar una interfaz si desea simular la herencia de estructuras, porque no pueden heredar de otra estructura o clase.
 
@@ -54,7 +54,7 @@ Una interfaz tiene las propiedades siguientes:
 - No se puede crear una instancia de una interfaz directamente. Sus miembros se implementan por medio de cualquier clase o estructura que implementa la interfaz.
 - Una clase o estructura puede implementar varias interfaces. Una clase puede heredar una clase base y también implementar una o varias interfaces.
 
-## <a name="BKMK_RelatedSections"></a> Secciones relacionadas
+## <a name="related-sections"></a><a name="BKMK_RelatedSections"></a> Secciones relacionadas
 
 - [Propiedades de interfaz](../classes-and-structs/interface-properties.md)  
 - [Indizadores en Interfaces](../indexers/indexers-in-interfaces.md)  

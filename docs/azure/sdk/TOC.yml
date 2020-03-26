@@ -1,0 +1,19 @@
+- name: SDK de Azure para .NET
+  href: index.yml
+  items:
+    - name: Conceptos
+      expanded: true
+      items:
+        - name: Autenticación
+          href: authentication.md
+        - name: Registro
+          href: logging.md
+    - name: Descargas
+      expanded: true
+      items:
+        - name: Paquetes
+          href: 'https://www.nuget.org/packages?q=windowsazureofficial'
+        - name: Herramientas
+          href: tools.md
+    - name: referencia de API
+      href: 'https://docs.microsoft.com/dotnet/api/overview/azure/?view=azure-dotnet'

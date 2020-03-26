@@ -96,11 +96,11 @@
         - name: ISymUnmanagedConstant (Interfaz)
           href: isymunmanagedconstant-interface.md
           items:
-            - name: Método GetName
+            - name: GetName (Método)
               href: isymunmanagedconstant-getname-method.md
             - name: Método GetSignature
               href: isymunmanagedconstant-getsignature-method.md
-            - name: Método GetValue
+            - name: GetValue (Método)
               href: isymunmanagedconstant-getvalue-method.md
         - name: ISymUnmanagedDispose (Interfaz)
           href: isymunmanageddispose-interface.md
@@ -155,7 +155,7 @@
           items:
             - name: Método GetNamespace
               href: isymunmanagedmethod-getnamespace-method.md
-            - name: Método GetOffset
+            - name: GetOffset (Método)
               href: isymunmanagedmethod-getoffset-method.md
             - name: Método GetParameters
               href: isymunmanagedmethod-getparameters-method.md
@@ -171,16 +171,16 @@
               href: isymunmanagedmethod-getsequencepoints-method.md
             - name: Método GetSourceStartEnd
               href: isymunmanagedmethod-getsourcestartend-method.md
-            - name: Método GetToken
+            - name: GetToken (Método)
               href: isymunmanagedmethod-gettoken-method.md
         - name: ISymUnmanagedNamespace (Interfaz)
           href: isymunmanagednamespace-interface.md
           items:
-            - name: Método GetName
+            - name: GetName (Método)
               href: isymunmanagednamespace-getname-method.md
-            - name: Método GetNamespaces
+            - name: GetNamespaces (Método)
               href: isymunmanagednamespace-getnamespaces-method.md
-            - name: Método GetVariables
+            - name: GetVariables (Método)
               href: isymunmanagednamespace-getvariables-method.md
         - name: ISymUnmanagedReader (Interfaz)
           href: isymunmanagedreader-interface.md
@@ -193,7 +193,7 @@
               href: isymunmanagedreader-getdocumentversion-method.md
             - name: Método GetGlobalVariables
               href: isymunmanagedreader-getglobalvariables-method.md
-            - name: Método GetMethod
+            - name: GetMethod (Método)
               href: isymunmanagedreader-getmethod-method.md
             - name: Método GetMethodByVersion
               href: isymunmanagedreader-getmethodbyversion-method.md
@@ -203,7 +203,7 @@
               href: isymunmanagedreader-getmethodsfromdocumentposition-method.md
             - name: Método GetMethodVersion
               href: isymunmanagedreader-getmethodversion-method.md
-            - name: Método GetNamespaces
+            - name: GetNamespaces (Método)
               href: isymunmanagedreader-getnamespaces-method.md
             - name: Método GetSymAttribute
               href: isymunmanagedreader-getsymattribute-method.md
@@ -213,7 +213,7 @@
               href: isymunmanagedreader-getuserentrypoint-method.md
             - name: Método GetVariables
               href: isymunmanagedreader-getvariables-method.md
-            - name: Método Initialize
+            - name: Initialize (Método)
               href: isymunmanagedreader-initialize-method.md
             - name: Método ReplaceSymbolStore
               href: isymunmanagedreader-replacesymbolstore-method.md
@@ -252,7 +252,7 @@
               href: isymunmanagedscope-getnamespaces-method.md
             - name: Método GetParent
               href: isymunmanagedscope-getparent-method.md
-            - name: Método GetStartOffset
+            - name: GetStartOffset (Método)
               href: isymunmanagedscope-getstartoffset-method.md
         - name: ISymUnmanagedScope2 (Interfaz)
           href: isymunmanagedscope2-interface.md
@@ -288,11 +288,11 @@
               href: isymunmanagedvariable-getaddresskind-method.md
             - name: Método GetAttributes
               href: isymunmanagedvariable-getattributes-method.md
-            - name: Método GetEndOffset
+            - name: GetEndOffset (Método)
               href: isymunmanagedvariable-getendoffset-method.md
-            - name: Método GetName
+            - name: GetName (Método)
               href: isymunmanagedvariable-getname-method.md
-            - name: Método GetSignature
+            - name: GetSignature (Método)
               href: isymunmanagedvariable-getsignature-method.md
             - name: Método GetStartOffset
               href: isymunmanagedvariable-getstartoffset-method.md
@@ -313,7 +313,7 @@
               href: isymunmanagedwriter-defineconstant-method.md
             - name: Método DefineDocument
               href: isymunmanagedwriter-definedocument-method.md
-            - name: Método DefineField
+            - name: DefineField (Método)
               href: isymunmanagedwriter-definefield-method.md
             - name: Método DefineGlobalVariable
               href: isymunmanagedwriter-defineglobalvariable-method.md
@@ -325,7 +325,7 @@
               href: isymunmanagedwriter-definesequencepoints-method.md
             - name: Método GetDebugInfo
               href: isymunmanagedwriter-getdebuginfo-method.md
-            - name: Método Initialize
+            - name: Initialize (Método)
               href: isymunmanagedwriter-initialize-method.md
             - name: Método Initialize2
               href: isymunmanagedwriter-initialize2-method.md
@@ -333,7 +333,7 @@
               href: isymunmanagedwriter-openmethod-method.md
             - name: Método OpenNamespace
               href: isymunmanagedwriter-opennamespace-method.md
-            - name: Método OpenScope
+            - name: OpenScope (Método)
               href: isymunmanagedwriter-openscope-method.md
             - name: Método RemapToken
               href: isymunmanagedwriter-remaptoken-method.md
@@ -359,7 +359,7 @@
         - name: ISymUnmanagedWriter3 (Interfaz)
           href: isymunmanagedwriter3-interface.md
           items:
-            - name: Método Commit
+            - name: Commit (Método)
               href: isymunmanagedwriter3-commit-method.md
             - name: Método OpenMethod2
               href: isymunmanagedwriter3-openmethod2-method.md

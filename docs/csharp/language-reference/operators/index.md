@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 11c544e7fc923b0820141fb2e096ef7707f0a95f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 341d5a2e62ca7f94a8448fa0c1286cf7e599c759
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74552472"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546671"
 ---
 # <a name="c-operators-c-reference"></a>Operadores de C# (referencia de C#)
 
@@ -42,9 +42,10 @@ En la tabla siguiente se muestran los operadores de C# desde la precedencia más
 
 | Operadores | Categoría o nombre |
 | --------- | ---------------- |
-| [x.y](member-access-operators.md#member-access-operator-), [x?.y](member-access-operators.md#null-conditional-operators--and-), [x?[y]](member-access-operators.md#null-conditional-operators--and-), [f(x)](member-access-operators.md#invocation-operator-), [a&#91;i&#93;](member-access-operators.md#indexer-operator-), [x++](arithmetic-operators.md#increment-operator-), [x--](arithmetic-operators.md#decrement-operator---), [new](new-operator.md), [typeof](type-testing-and-cast.md#typeof-operator), [checked](../keywords/checked.md), [unchecked](../keywords/unchecked.md), [default](default.md), [nameof](nameof.md), [delegate](delegate-operator.md), [sizeof](sizeof.md), [stackalloc](stackalloc.md), [x->y](pointer-related-operators.md#pointer-member-access-operator--) | Principal |
+| [x.y](member-access-operators.md#member-access-expression-), [x?.y](member-access-operators.md#null-conditional-operators--and-), [x?[y]](member-access-operators.md#null-conditional-operators--and-), [f(x)](member-access-operators.md#invocation-expression-), [a&#91;i&#93;](member-access-operators.md#indexer-operator-), [x++](arithmetic-operators.md#increment-operator-), [x--](arithmetic-operators.md#decrement-operator---), [new](new-operator.md), [typeof](type-testing-and-cast.md#typeof-operator), [checked](../keywords/checked.md), [unchecked](../keywords/unchecked.md), [default](default.md), [nameof](nameof.md), [delegate](delegate-operator.md), [sizeof](sizeof.md), [stackalloc](stackalloc.md), [x->y](pointer-related-operators.md#pointer-member-access-operator--) | Principal |
 | [+x](arithmetic-operators.md#unary-plus-and-minus-operators), [-x](arithmetic-operators.md#unary-plus-and-minus-operators), [\!x](boolean-logical-operators.md#logical-negation-operator-), [~x](bitwise-and-shift-operators.md#bitwise-complement-operator-), [++x](arithmetic-operators.md#increment-operator-), [--x](arithmetic-operators.md#decrement-operator---), [^x](member-access-operators.md#index-from-end-operator-), [(T)x](type-testing-and-cast.md#cast-operator-), [await](await.md), [&x](pointer-related-operators.md#address-of-operator-), [*x](pointer-related-operators.md#pointer-indirection-operator-), [true and false](true-false-operators.md) | Unario |
 | [x..y](member-access-operators.md#range-operator-) | Intervalo |
+| [switch](../../whats-new/csharp-8.md#switch-expressions) | Expresión `switch` |
 | [x * y](arithmetic-operators.md#multiplication-operator-), [x / y](arithmetic-operators.md#division-operator-), [x % y](arithmetic-operators.md#remainder-operator-) | Multiplicativo|
 | [x + y](arithmetic-operators.md#addition-operator-), [x – y](arithmetic-operators.md#subtraction-operator--) | Aditivo |
 | [x \<\<  y](bitwise-and-shift-operators.md#left-shift-operator-), [x >> y](bitwise-and-shift-operators.md#right-shift-operator-) | Shift |
@@ -87,7 +88,7 @@ Independientemente de la prioridad y la asociatividad de los operadores, los ope
 
 Normalmente, se evalúan todos los operandos de un operador. Sin embargo, algunos operadores evalúan los operandos de forma condicional. Esto significa que el valor del operando situado más a la izquierda de este tipo de operador define si se deben evaluar otros operandos, o bien qué operandos deben evaluarse. Estos operadores son los operadores lógicos condicionales [AND (`&&`)](boolean-logical-operators.md#conditional-logical-and-operator-) y [OR (`||`)](boolean-logical-operators.md#conditional-logical-or-operator-), los [operadores de integración nula `??` y `??=`](null-coalescing-operator.md), los [operadores condicionales nulos `?.` y `?[]`](member-access-operators.md#null-conditional-operators--and-), así como el [operador condicional `?:`](conditional-operator.md). Para más información, consulte la descripción de cada operador.
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 Para obtener más información, vea la sección sobre [Operadores](~/_csharplang/spec/expressions.md#operators) de la [Especificación del lenguaje C#](~/_csharplang/spec/introduction.md).
 

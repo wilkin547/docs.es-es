@@ -5,16 +5,16 @@ author: cartermp
 ms.date: 12/27/2019
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: ce76448b69a002216125192f75d24b38e7582260
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b7856cbb12ac78830ceace6ad44214ca32444a82
+ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76730782"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80228802"
 ---
 # <a name="net-guide"></a>Guía de .NET
 
-En esta guía de .NET encontrará información sobre .NET. En función de cómo esté familiarizado con .NET, es posible que quiera ver varias secciones de esta y otras guías, como [.NET Core](../core/index.md) o [.NET Framework](../framework/index.md).
+En esta guía de .NET encontrará información sobre .NET. En función de cómo esté familiarizado con .NET, es posible que quiera ver varias secciones de esta y otras guías, como [.NET Core](../core/index.md) o [.NET Framework](../framework/index.yml).
 
 ## <a name="new-to-net"></a>Nuevo a .NET
 

@@ -3,12 +3,12 @@ title: Bienvenido a .NET
 description: Introducción a la familia de tecnologías .NET.
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 20332f4dcc0664287873a27e0064a4765b1ecde7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bfc9b55f06a5830c13df52f992d2630f1f45d8be
+ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77124226"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80228797"
 ---
 # <a name="welcome-to-net"></a>Bienvenido a .NET
 
@@ -44,7 +44,7 @@ Esta documentación trata la amplitud de .NET en plataformas y lenguajes. Puede 
 
 - [Guía de .NET](standard/index.md)
 - [Guía de .NET Core](core/index.md)
-- [Guía de .NET Framework](framework/index.md)
+- [Guía de .NET Framework](framework/index.yml)
 - [Guía de C#](csharp/index.yml)
 - [F# Guide](fsharp/index.yml)
 - [Guía de Visual Basic](visual-basic/index.yml)
