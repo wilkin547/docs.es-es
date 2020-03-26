@@ -15,19 +15,19 @@ helpviewer_keywords:
 - serialization, examples
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
-ms.openlocfilehash: d4e30984a232b17d1f40e300655c519ec1a6e191
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: e11152dc626b1e3619b9ecbc04d8a237ca9f13d3
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159915"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248048"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>Controlar la serialización XML mediante atributos
 
 Los atributos se pueden utilizar para controlar la serialización XML de un objeto o crear una secuencia XML alternativa a partir del mismo conjunto de clases. Para obtener más información sobre la creación de una secuencia XML alternativa, vea [Cómo: Especificar un nombre de elemento alternativo para una secuencia XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
 
 > [!NOTE]
-> Si el XML generado debe ajustarse a la sección 5 del documento de World Wide Web Consortium (W3C) titulado [Protocolo simple de acceso a objetos (SOAP) 1,1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/), utilice los atributos enumerados en [atributos que controlan la serialización SOAP codificada](attributes-that-control-encoded-soap-serialization.md).
+> Si el XML generado debe ajustarse a la sección 5 del documento del World Wide Web Consortium (W3C) titulada Protocolo simple de [acceso a objetos (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/), utilice los atributos enumerados en [Atributos que controlan](attributes-that-control-encoded-soap-serialization.md)la serialización SOAP codificada .
 
 La clase o nombre de miembro determina, de forma predeterminada, un nombre del elemento XML. En una clase simple denominada `Book`, un campo denominado `ISBN` generará una etiqueta del elemento XML \<ISBN> como se muestra en el ejemplo siguiente.
 
@@ -241,7 +241,7 @@ Una instancia serializada se podría parecer a lo siguiente.
 </Group>
 ```
 
-Otra manera de diferenciar las dos secuencias XML es utilizar la herramienta de definición de esquemas XML para generar los archivos de documento de esquema XML (XSD) a partir del código compilado. (Para obtener más información sobre el uso de la herramienta, vea [la herramienta de definición de esquemas XML y la serialización XML](the-xml-schema-definition-tool-and-xml-serialization.md)). Cuando no se aplica ningún atributo al campo, el esquema describe el elemento de la siguiente manera.
+Otra manera de diferenciar las dos secuencias XML es utilizar la herramienta de definición de esquemas XML para generar los archivos de documento de esquema XML (XSD) a partir del código compilado. (Para obtener más información sobre el uso de la herramienta, vea la herramienta de definición de esquemas XML y la [serialización XML](the-xml-schema-definition-tool-and-xml-serialization.md).) Cuando no se aplica ningún atributo al campo, el esquema describe el elemento de la siguiente manera.
 
 ```xml
 <xs:element minOccurs="0" maxOccurs ="1" name="Employees" type="ArrayOfEmployee" />
@@ -300,7 +300,7 @@ public class Group {
 Si esta clase está compilada, y la herramienta de definición de esquemas XML se utiliza para generar su esquema, encontraría el XML siguiente que describe `Group`.
 
 ```xml
-<xs:element name="NewGroupName" type="NewTypeName">
+<xs:element name="NewGroupName" type="NewTypeName" />
 ```
 
 En contraste, si fuera serializar una instancia de la clase, solo `NewGroupName` se buscarían en el documento XML.
@@ -319,8 +319,8 @@ Podrían darse situaciones en las que una propiedad pública o el campo no neces
 
 - [Atributos que controlan la serialización XML](attributes-that-control-xml-serialization.md)
 - [Atributos que controlan la serialización SOAP codificada](attributes-that-control-encoded-soap-serialization.md)
-- [Introducción a la serialización XML](introducing-xml-serialization.md)
+- [Introducir la serialización XML](introducing-xml-serialization.md)
 - [Ejemplos de serialización XML](examples-of-xml-serialization.md)
-- [Cómo: Especificar un nombre de elemento alternativo para una secuencia XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-- [Cómo: Serializar un objeto](how-to-serialize-an-object.md)
-- [Cómo: Deserializar un objeto](how-to-deserialize-an-object.md)
+- [Procedimiento para especificar un nombre de elemento alternativo para una secuencia XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [Procedimiento para serializar un objeto](how-to-serialize-an-object.md)
+- [Procedimiento para deserializar un objeto](how-to-deserialize-an-object.md)

@@ -2,12 +2,12 @@
 title: Proceso de contratación
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: 258ad41f52957023fd091f1668a9532ead270f39
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: ade72422d29d170e9c80f602f151ce765a1a00f7
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80111886"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291690"
 ---
 # <a name="hiring-process"></a>Proceso de contratación
 Este ejemplo muestra cómo implementar un proceso de negocio mediante actividades de mensajería y dos flujos de trabajo hospedados como servicios de flujo de trabajo. Estos flujos de trabajo son parte de la infraestructura de TI de una compañía ficticia denominada Contoso, Inc.  
@@ -97,7 +97,7 @@ Este ejemplo muestra cómo implementar un proceso de negocio mediante actividade
   
 |proyecto|Descripción|  
 |-------------|-----------------|  
-|ContosoHR|Contiene contratos de datos, objetos de negocios y clases de repositorio.|  
+|ContosoHR|Contiene contratos de datos, objetos de negocio y clases de repositorio.|  
 |HiringRequestService|Contiene la definición del flujo de trabajo del proceso de solicitud de contratación.<br /><br /> Este proyecto se implementa como una aplicación de consola que autohospeda el flujo de trabajo (archivo xaml) como servicio.|  
 |ResumeRequestService|Servicio de flujo de trabajo que recopila los currículos de los candidatos hasta que expira un tiempo de espera o alguien decide que el proceso tiene que detenerse.<br /><br /> Este proyecto se implementa como un servicio de flujo de trabajo declarativo (xamlx).|  
 |OrgService|Servicio que expone la información de la organización (empleados, vacantes, tipos de vacantes y departamentos). Puede pensar en este servicio como el módulo de organización de la compañía de un plan de recursos empresariales (ERP).<br /><br /> Este proyecto se implementa como una aplicación de consola que expone un servicio de Windows Communication Foundation (WCF).|  
@@ -122,7 +122,7 @@ Este ejemplo muestra cómo implementar un proceso de negocio mediante actividade
 |Actividades paralelas|-   <xref:System.Activities.Statements.ParallelForEach%601>se utiliza para registrarse en la Bandeja de entrada del CEO y gerentes de recursos humanos en paralelo (esperando el paso de aprobación de dos gerentes de recursos humanos).<br />-   <xref:System.Activities.Statements.Parallel>se utiliza para realizar algunas tareas de limpieza en los pasos Completados y Rechazados|HiringRequestService|  
 |Cancelación de modelo|El Diagrama de flujo utiliza <xref:System.Activities.Statements.CancellationScope> para crear el comportamiento de cancelación (en este caso, se lleva a cabo alguna limpieza).|HiringRequestService|  
 |Participante de persistencia del cliente|`HiringRequestPersistenceParticipant` guarda los datos de una variable de flujo de trabajo en una tabla almacenada en la base de datos de Recursos Humanos de Contoso.|HiringRequestService|  
-|Servicios de flujo de trabajo|`ResumeRequestService` se implementa utilizando los servicios de flujo de trabajo. La definición del Flujo de trabajo y la información del servicio se encuentran en ResumeRequestService.xamlx. El servicio se configura para utilizar la persistencia y el seguimiento.|ResumeRequestService|  
+|Servicios de flujo de trabajo|`ResumeRequestService` se implementa utilizando los servicios de flujo de trabajo. La definición de flujo de trabajo y la información de servicio se encuentran en ResumeRequestService.xamlx. El servicio se configura para utilizar la persistencia y el seguimiento.|ResumeRequestService|  
 |Temporizadores duraderos|`ResumeRequestService` utiliza temporizadores duraderos para definir la duración de la publicación de vacante (una vez que expira el tiempo de espera, se cierra la publicación de vacante).|ResumeRequestService|  
 |Transacciones|<xref:System.Activities.Statements.TransactionScope> se utiliza para garantizar la coherencia de los datos dentro de la ejecución de varias actividades (cuando se recibe un nuevo curriculum vitae).|ResumeRequestService|  
 |Transacciones|El participante de persistencia personalizado (`HiringRequestPersistenceParticipant`) y el participante de seguimiento personalizado (`HistoryFileTrackingParticipant`) usan la misma transacción.|HiringRequestService|  
@@ -159,7 +159,7 @@ Este ejemplo muestra cómo implementar un proceso de negocio mediante actividade
   
 1. Cuando se compile la solución, presione CTRL+F5 para ejecutarla sin depuración. Compruebe que todos los servicios se han iniciado.  
   
-2. Haga clic con el botón derecho en **InternalClient** en la solución y, a continuación, seleccione **Ver en el explorador**. Se muestra la página predeterminada para `InternalClient`. Asegúrese de que los servicios se están ejecutando y haga clic en el vínculo.  
+2. Haga clic con el botón secundario en **InternalClient** en la solución y, a continuación, seleccione **Ver en el explorador**. Se muestra la página predeterminada para `InternalClient`. Asegúrese de que los servicios se están ejecutando y haga clic en el vínculo.  
   
 3. Se muestra el módulo **HiringRequest.** Puede seguir el escenario que aquí se detalla.  
   

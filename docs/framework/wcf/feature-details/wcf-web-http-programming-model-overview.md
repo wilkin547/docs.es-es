@@ -2,12 +2,12 @@
 title: Información general del modelo de programación web HTTP de WCF
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: fb6ef0fdcefbc6ceec75ce30db3abf5896d85c61
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9f2350b58e3cb33613ebc8e2c3cda1e234bcde25
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184182"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291746"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Información general del modelo de programación web HTTP de WCF
 El modelo de programación HTTP WEB de Windows Communication Foundation (WCF) proporciona los elementos básicos necesarios para crear servicios HTTP WEB con WCF. Los servicios HTTP WEB de WCF están diseñados para que la gama más amplia de clientes posibles acceda a ellos, incluidos los exploradores web y tienen los siguientes requisitos únicos:  
@@ -135,7 +135,7 @@ interface ICustomer
   
  Esto significa que el modelo de programación HTTP WEB de <xref:System.IO.Stream>WCF puede controlar cualquier tipo de datos, pero, puede estar programando en .  
   
- .NET Framework 3.5 proporciona compatibilidad con datos JSON (AJAX) así como fuentes de distribución (incluidos ATOM y RSS). Para obtener más información acerca de estas características, vea Información general sobre la[distribución](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md) de WCF de formato HTTP [Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)y compatibilidad con AJAX Integration [and JSON](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md).  
+ .NET Framework 3.5 proporciona compatibilidad con datos JSON (AJAX) así como fuentes de distribución (incluidos ATOM y RSS). Para obtener más información acerca de estas características, vea [Formato HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md), Información general sobre la [distribución](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)de WCF y [Compatibilidad con AJAX Integration y JSON](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md).  
   
 ## <a name="wcf-web-http-programming-model-and-security"></a>El modelo de programación WEB HTTP de WCF y la seguridad  
 
@@ -144,7 +144,7 @@ Dado que el modelo de programación HTTP WEB de WCF no admite los protocolos WS-
 ## <a name="troubleshooting-the-wcf-web-http-programming-model"></a>Solución de problemas relacionados con el modelo de programación WEB HTTP de WCF  
  Al llamar a los servicios WEB HTTP de WCF mediante un objeto <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> para crear un canal, <xref:System.ServiceModel.Description.WebHttpBehavior> usa la clase <xref:System.ServiceModel.EndpointAddress> establecida en el archivo de configuración, aunque se pase una <xref:System.ServiceModel.EndpointAddress> diferente al <xref:System.ServiceModel.Channels.ChannelFactoryBase%601>.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Sindicación en WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
 - [Modelo de objetos de programación web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)

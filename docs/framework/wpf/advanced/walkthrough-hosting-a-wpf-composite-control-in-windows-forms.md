@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: 4e98dd41606bff559abb981397acf2582a961cef
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: 88efab8adf36989938ba5aa887a28b41eb8820f3
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80111860"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291622"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Tutorial: Hospedar un control compuesto de WPF en formularios Windows Forms
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona un entorno rico para crear aplicaciones. Sin embargo, cuando tiene una inversión sustancial en código de formularios Windows [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Forms, puede ser más eficaz ampliar la aplicación de formularios Windows Forms existente con en lugar de volver a escribirla desde cero. Un escenario común es cuando desea incrustar uno [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] o varios controles implementados con dentro de la aplicación de Windows Forms. Para obtener más información acerca de cómo personalizar controles WPFWPF, vea [Personalización](../controls/control-customization.md)de controles .  
@@ -27,7 +27,7 @@ ms.locfileid: "80111860"
   
  Para obtener una lista completa del código de las tareas que se ilustran en este tutorial, vea [Hospedar un control compuesto de WPF en el ejemplo](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WindowsFormsHostingWpfControl)de formularios Windows Forms .  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerrequisitos  
 
 Necesita Visual Studio para completar este tutorial.  
   
@@ -181,11 +181,11 @@ namespace MyControls
   
 <a name="winforms_host_section"></a>
 ## <a name="implementing-the-windows-forms-host-application"></a>Implementar la aplicación host de Windows Forms  
- La aplicación host de <xref:System.Windows.Forms.Integration.ElementHost> formularios Windows [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Forms usa un objeto para hospedar el control compuesto. La aplicación `OnButtonClick` controla el evento para recibir los datos del control compuesto. La aplicación también tiene un conjunto de botones de opción que se pueden usar para modificar la apariencia del control. En la siguiente ilustración se muestra la aplicación.  
+ La aplicación host de <xref:System.Windows.Forms.Integration.ElementHost> formularios Windows [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Forms usa un objeto para hospedar el control compuesto. La aplicación `OnButtonClick` controla el evento para recibir los datos del control compuesto. La aplicación también tiene un conjunto de botones de opción que puede utilizar para modificar la apariencia del control. En la siguiente ilustración se muestra la aplicación.  
 
 En la siguiente imagen se muestra un control compuesto WPFWPF hospedado en una aplicación de Windows Forms"  
 
- ![Scteenshot que muestra un control Avalon de Windows Form Hosting.](./media/walkthrough-hosting-a-wpf-composite-control-in-windows-forms/windows-form-hosting-avalon-control.png)  
+ ![Captura de pantalla que muestra un control Avalon de Hospedaje de formularios Windows Form.](./media/walkthrough-hosting-a-wpf-composite-control-in-windows-forms/windows-form-hosting-avalon-control.png)  
   
 ### <a name="creating-the-project"></a>Crear el proyecto  
  Para iniciar el proyecto:  
@@ -231,7 +231,7 @@ En la siguiente imagen se muestra un control compuesto WPFWPF hospedado en una a
   
 4. Agregue los <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> siguientes controles al formulario.  
   
-    |Nombre|Texto|  
+    |NOMBRE|Texto|  
     |----------|----------|  
     |groupBox1|Color de fondo|  
     |groupBox2|Color de primer plano|  
@@ -243,7 +243,7 @@ En la siguiente imagen se muestra un control compuesto WPFWPF hospedado en una a
   
 5. Agregue los <xref:System.Windows.Forms.RadioButton?displayProperty=nameWithType> siguientes <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> controles a los controles.  
   
-    |GroupBox|Nombre|Texto|  
+    |GroupBox|NOMBRE|Texto|  
     |--------------|----------|----------|  
     |groupBox1|radioBackgroundOriginal|Original|  
     |groupBox1|radioBackgroundLightGreen|LightGreen|  
@@ -264,7 +264,7 @@ En la siguiente imagen se muestra un control compuesto WPFWPF hospedado en una a
   
 6. Agregue los <xref:System.Windows.Forms.Label?displayProperty=nameWithType> siguientes controles <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>al último archivo . Estos controles muestran los [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] datos devueltos por el control compuesto.  
   
-    |GroupBox|Nombre|Texto|  
+    |GroupBox|NOMBRE|Texto|  
     |--------------|----------|----------|  
     |groupBox7|lblName|Nombre:|  
     |groupBox7|lblAddress|Dirección postal:|  
@@ -323,7 +323,7 @@ En la siguiente imagen se muestra un control compuesto WPFWPF hospedado en una a
   
  Compile y ejecute la aplicación. Haga clic en los diferentes botones de radio para ver el efecto en el control compuesto de WPF.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

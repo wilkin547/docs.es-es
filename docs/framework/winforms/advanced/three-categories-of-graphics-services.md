@@ -8,12 +8,12 @@ helpviewer_keywords:
 - vector graphics
 - typography
 ms.assetid: 068c0ef3-f6ee-4d58-a7b6-eb2531ead408
-ms.openlocfilehash: b0f2ad8293daf6ad53899a0f8be82985c24ff50d
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: fa7391ef0f7170ddb9d9d24aa5a1a03635bf46e0
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80111210"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291725"
 ---
 # <a name="three-categories-of-graphics-services"></a>Tres categorías de servicios gráficos
 Las ofertas de gráficos en Formularios Windows Forms se dividen en las siguientes tres categorías generales:  
@@ -25,7 +25,7 @@ Las ofertas de gráficos en Formularios Windows Forms se dividen en las siguient
 - Tipografía  
   
 ## <a name="2d-vector-graphics"></a>Gráficos vectoriales 2D  
- Los gráficos vectoriales bidimensionales son primitivos; como líneas, curvas y figuras; que se especifican mediante conjuntos de puntos en un sistema de coordenadas. Por ejemplo, una línea recta se especifica mediante sus dos extremos y un rectángulo se especifica mediante un punto que indica la ubicación de su esquina superior izquierda y un par de números que dan su ancho y alto. Una ruta simple se especifica mediante una matriz de puntos que están conectados por líneas rectas. Una spline de Bézier es una curva sofisticada especificada por cuatro puntos de control.  
+ Los gráficos vectoriales bidimensionales, como líneas, curvas y figuras, son primitivos especificados por conjuntos de puntos en un sistema de coordenadas. Por ejemplo, una línea recta se especifica mediante sus dos extremos y un rectángulo se especifica mediante un punto que indica la ubicación de su esquina superior izquierda y un par de números que dan su ancho y alto. Una ruta simple se especifica mediante una matriz de puntos que están conectados por líneas rectas. Una spline de Bézier es una curva sofisticada especificada por cuatro puntos de control.  
   
  GDI+GDI+GDI+ proporciona clases y estructuras que almacenan información sobre los propios primitivos, clases que almacenan información sobre cómo se dibujarán los primitivos y clases que realmente realizan el dibujo. Por ejemplo, <xref:System.Drawing.Rectangle> la estructura almacena la ubicación y el tamaño de un rectángulo; la <xref:System.Drawing.Pen> clase almacena información sobre el color de línea, el ancho de línea y el estilo de línea; y <xref:System.Drawing.Graphics> la clase tiene métodos para dibujar líneas, rectángulos, trazados y otras figuras. También hay <xref:System.Drawing.Brush> varias clases que almacenan información sobre cómo las figuras cerradas y los trazados se llenarán de colores o patrones.  
   
@@ -39,8 +39,8 @@ Las ofertas de gráficos en Formularios Windows Forms se dividen en las siguient
   
  Además, Windows Forms ofrece la opción de <xref:System.Windows.Forms.TextRenderer> dibujar texto con capacidades GDI en su clase.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Información general sobre gráficos](graphics-overview-windows-forms.md)
 - [Código administrado de GDI+](about-gdi-managed-code.md)
-- [Using Managed Graphics Classes](using-managed-graphics-classes.md) (Usar clases gráficas administradas)
+- [Utilizar clases gráficas administradas](using-managed-graphics-classes.md)

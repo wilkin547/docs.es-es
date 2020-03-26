@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: 5e99a8cbf1a3fcac2b6785128c284911949f7997
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: 05847271cf82739a6a0b609771043c02a7ffc0e9
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80111847"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291587"
 ---
 # <a name="graphics-rendering-tiers"></a>Niveles de representación de gráficos
 Un nivel de representación define un nivel de funcionalidad y rendimiento de hardware gráfico para un dispositivo que ejecuta un aplicación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -45,7 +45,7 @@ Un nivel de representación define un nivel de funcionalidad y rendimiento de ha
 ### <a name="rendering-tier-0"></a>Nivel de representación 0  
  Un valor de nivel de representación de 0 significa que no hay ninguna aceleración de gráficos mediante hardware disponible para la aplicación en el dispositivo. En este nivel del sistema, debe suponer que todos los gráficos se representarán mediante software sin aceleración de hardware. La funcionalidad de este nivel corresponde a una versión de DirectX inferior a 9.0.  
   
-### <a name="rendering-tier-1-and-rendering-tier-2"></a>Nivel de representación 1 y nivel de representación 2  
+### <a name="rendering-tier-1-and-rendering-tier-2"></a>Nivel de representación 1 y nivel de representación 2
   
 > [!NOTE]
 > A partir de .NET Framework 4, el nivel de representación 1 se ha redefinido para incluir solo hardware de gráficos que admita DirectX 9.0 o superior. El hardware de gráficos compatible con DirectX 7 u 8 ahora se define como nivel de representación 0.  
@@ -57,7 +57,7 @@ Un nivel de representación define un nivel de funcionalidad y rendimiento de ha
 |Característica|Nivel 1|Nivel 2|  
 |-------------|------------|------------|  
 |Versión DirectX|Debe ser mayor o igual que 9.0.|Debe ser mayor o igual que 9.0.|  
-|RAM de vídeo|Debe ser mayor o igual que 60MB.|Debe ser mayor o igual que 120MB.|  
+|RAM de vídeo|Debe ser mayor o igual que 60 MB.|Debe ser mayor o igual que 120 MB.|  
 |Sombreador de píxeles|El nivel de versión debe ser mayor o igual que 2.0.|El nivel de versión debe ser mayor o igual que 2.0.|  
 |Sombreador de vértices|No hay necesidad.|El nivel de versión debe ser mayor o igual que 2.0.|  
 |Unidades multitextura|No hay necesidad.|El número de unidades debe ser mayor o igual que 4.|  
@@ -72,7 +72,7 @@ Un nivel de representación define un nivel de funcionalidad y rendimiento de ha
 |Asignación MIP para 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] intenta utilizar la asignación MIP al representar contenido 3D. La asignación MIP mejora la calidad de la representación de <xref:System.Windows.Controls.Viewport3D>texturas cuando una textura ocupa un campo de visión más pequeño en un archivo .|  
 |Degradados radiales|Mientras sea compatible, <xref:System.Windows.Media.RadialGradientBrush> evite el uso de objetos grandes.|  
 |Cálculos de iluminación 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] realiza la iluminación por vértices, lo que significa que debe calcularse una intensidad de luz en cada vértice para cada material aplicado a una malla.|  
-|Representación de texto|La representación de fuentes por debajo del nivel de píxel utiliza sombreadores de píxeles disponibles en el hardware gráfico.|  
+|Representación de texto|La representación de fuentes de subpíxeles utiliza sombreadores de píxeles disponibles en el hardware de gráficos.|  
   
  Las siguientes características y funcionalidades se aceleran mediante hardware para el nivel de representación 2 únicamente:  
   
@@ -127,7 +127,7 @@ Un nivel de representación define un nivel de funcionalidad y rendimiento de ha
  ![Captura de pantalla: Herramienta de diagnóstico de DirectX](./media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
 Ventana principal de la Herramienta de diagnóstico de DirectX  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Media.RenderCapability>
 - <xref:System.Windows.Media.RenderOptions>

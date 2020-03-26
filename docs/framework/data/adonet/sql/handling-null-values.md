@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: c64f11c00174981925342f1493ef0b809a57ecb0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c45c6672983866df6c47ec84981cc7bd11637c0c
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148652"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249082"
 ---
 # <a name="handling-null-values"></a>Controlar valores Null
 Se utiliza un valor NULL en una base de datos relacional cuando el valor de una columna es desconocido o falta. Un valor NULL no es una cadena vacía (para tipos de datos de caracteres o de fecha y hora) ni un valor cero (para tipos de datos numéricos). La especificación ANSI SQL-92 indica que un valor NULL debe ser el mismo para todos los tipos de datos, de modo que todos los valores NULL se traten de manera uniforme. El espacio de nombres <xref:System.Data.SqlTypes> proporciona la semántica de NULL implementando la interfaz <xref:System.Data.SqlTypes.INullable>. Cada uno de los tipos de datos de <xref:System.Data.SqlTypes> tiene su propia propiedad `IsNull` y un valor `Null` que se puede asignar a una instancia de ese tipo de datos.  
   
 > [!NOTE]
-> En la versión 2.0 de .NET Framework se introduce la compatibilidad con tipos que admiten valores NULL, lo que permite a los programadores ampliar un tipo de valor para representar todos los valores del tipo subyacente. Estos tipos CLR que aceptan valores NULL representan una instancia de la estructura <xref:System.Nullable>. Esta funcionalidad es especialmente útil cuando se aplica la conversión boxing y la conversión unboxing de tipos de valor, lo que proporciona compatibilidad mejorada con los tipos de objeto. Los tipos CLR que aceptan valores NULL no están diseñados para el almacenamiento de valores NULL de base de datos porque un valor NULL de ANSI SQL no se comporta de la misma manera que una referencia `null` (o `Nothing` en Visual Basic). Para trabajar con valores NULL de ANSI SQL de la base de datos, utilice valores NULL de tipo <xref:System.Data.SqlTypes> en lugar de <xref:System.Nullable>. Para obtener más información sobre cómo trabajar con tipos que aceptan valores NULL de CLR en Visual Basic, vea Tipos de valor [que](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)aceptan valores NULL y, para C. , vea Tipos de [valor que aceptan valores NULL](../../../../csharp/language-reference/builtin-types/nullable-value-types.md).  
+> La versión 2.0 de .NET Framework introdujo compatibilidad con tipos de valor que aceptan valores NULL, lo que permite a los programadores extender un tipo de valor para representar todos los valores del tipo subyacente. Estos tipos de valor que aceptan <xref:System.Nullable> valores NULL de CLR representan una instancia de la estructura. Esta funcionalidad es especialmente útil cuando se aplica la conversión boxing y la conversión unboxing de tipos de valor, lo que proporciona compatibilidad mejorada con los tipos de objeto. Los tipos de valor que aceptan valores NULL de CLR no están pensados para `null` el almacenamiento `Nothing` de valores NULL de base de datos porque un valor NULL de SQL ANSI no se comporta de la misma manera que una referencia (o en Visual Basic). Para trabajar con valores NULL de ANSI SQL de la base de datos, utilice valores NULL de tipo <xref:System.Data.SqlTypes> en lugar de <xref:System.Nullable>. Para obtener más información sobre cómo trabajar con tipos que aceptan valores NULL en Visual Basic, vea Tipos de valor [que](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)aceptan valores NULL y, para C. , vea Tipos de [valor que aceptan valores NULL](../../../../csharp/language-reference/builtin-types/nullable-value-types.md).  
   
 ## <a name="nulls-and-three-valued-logic"></a>Valores NULL y la lógica de tres valores  
  Al permitir valores NULL en definiciones de columna, se introduce la lógica de tres valores en la aplicación. Una comparación puede evaluarse en una de estas tres condiciones:  
@@ -141,7 +141,7 @@ String.Equals instance method:
   Two empty strings=True
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Tipos de datos y ADO.NET](sql-server-data-types.md)
-- [Información general de ADO.NET](../ado-net-overview.md)
+- [Tipos de datos de SQL Server y ADO.NET](sql-server-data-types.md)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

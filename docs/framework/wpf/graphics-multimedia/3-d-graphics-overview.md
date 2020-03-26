@@ -8,12 +8,12 @@ helpviewer_keywords:
 - 3D graphics [WPF]
 - graphics [WPF], 3D
 ms.assetid: 67f31ed4-e36b-4b02-9889-dcce245d7afc
-ms.openlocfilehash: b8a3876030c533dd37eca0b00ebd50bccf309e53
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: e4918f7737bbe57a4f29c6c5cff1099f4f21674b
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80112393"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291817"
 ---
 # <a name="3d-graphics-overview"></a>Descripción general de los gráficos 3D
 <a name="introduction"></a>La funcionalidad 3D [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] en permite a los desarrolladores dibujar, transformar y animar gráficos 3D en código de marcado y de procedimiento. Los desarrolladores pueden combinar gráficos 2D y 3D para crear controles enriquecidos, proporcionar ilustraciones complejas de datos o mejorar la experiencia del usuario de la interfaz de una aplicación. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] El soporte 3D no está diseñado para proporcionar una plataforma de desarrollo de juegos con todas las funciones. En este tema se proporciona información [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] general sobre la funcionalidad 3D en el sistema de gráficos.  
@@ -71,7 +71,7 @@ Proyecciones ortográfica y en perspectiva
   
  La <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A> propiedad especifica una <xref:System.Windows.Point>colección de s que indican al sistema de gráficos cómo asignar las coordenadas que determinan cómo se dibuja una textura a los vértices de la malla. <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>se especifican como un valor entre cero y 1, ambos inclusive.  Al igual <xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A> que con la propiedad, el sistema de gráficos puede calcular las coordenadas de textura predeterminadas, pero puede elegir establecer diferentes coordenadas de textura para controlar la asignación de una textura que incluye parte de un patrón de repetición, por ejemplo. Encontrará más información sobre coordenadas de textura en los temas siguientes o en el SDK de Managed Direct3D.  
   
- En el ejemplo siguiente se muestra cómo crear una cara del modelo del cubo en código de procedimiento. Observe que puede dibujar el cubo completo como un solo objeto GeometryModel3D; en este ejemplo se dibuja la cara del cubo como un modelo distinto a fin de aplicar después texturas independientes a cada cara.  
+ En el ejemplo siguiente se muestra cómo crear una cara del modelo del cubo en código de procedimiento. Puede dibujar todo el cubo como un único GeometryModel3D; este ejemplo dibuja la cara del cubo como un modelo distinto para aplicar texturas separadas a cada cara más adelante.  
   
  [!code-csharp[3doverview#3DOverview3DN6](~/samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn6)]
  [!code-vb[3doverview#3DOverview3DN6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn6)]  
@@ -105,7 +105,7 @@ Proyecciones ortográfica y en perspectiva
   
 <a name="lights"></a>
 ## <a name="illuminating-the-scene"></a>Iluminación de la escena  
- Las luces de los gráficos 3D hacen lo que las luces hacen en el mundo real: hacen que las superficies sean visibles. Más concretamente, las luces determinan qué parte de una escena se incluye en la proyección. Los objetos de luz en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] crean gran variedad de efectos de luz y sombra y siguen el modelo de comportamiento de diversas luces del mundo real. Debe incluir por lo menos una luz en la escena, pues de lo contrario no habrá ningún modelo visible.  
+ Las luces de los gráficos 3D hacen lo que las luces hacen en el mundo real: hacen que las superficies sean visibles. Más concretamente, las luces determinan qué parte de una escena se incluye en la proyección. Los objetos de luz en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] crean gran variedad de efectos de luz y sombra y siguen el modelo de comportamiento de diversas luces del mundo real. Incluya al menos una luz en la escena o no habrá modelos visibles.  
   
  Las siguientes luces derivan <xref:System.Windows.Media.Media3D.Light>de la clase base:  
   
@@ -113,7 +113,7 @@ Proyecciones ortográfica y en perspectiva
   
 - <xref:System.Windows.Media.Media3D.DirectionalLight>: Se ilumina como una fuente de luz distante.  Las luces <xref:System.Windows.Media.Media3D.DirectionalLight.Direction%2A> direccionales tienen un Vector3D especificado, pero no una ubicación especificada.  
   
-- <xref:System.Windows.Media.Media3D.PointLight>: Se ilumina como una fuente de luz cercana. Las luces puntuales tienen posición y emiten la luz desde esa posición. Los objetos de la escena se iluminan dependiendo de su posición y distancia con respecto a la luz. <xref:System.Windows.Media.Media3D.PointLightBase>expone una <xref:System.Windows.Media.Media3D.PointLightBase.Range%2A> propiedad, que determina una distancia más allá de la cual los modelos no serán iluminados por la luz. PointLight también expone propiedades de atenuación que determinan cómo disminuye la intensidad de la luz con la distancia. Puede especificar interpolaciones constantes, lineales o cuadráticas para la atenuación de la luz.  
+- <xref:System.Windows.Media.Media3D.PointLight>: Se ilumina como una fuente de luz cercana. Las luces puntuales tienen posición y emiten la luz desde esa posición. Los objetos de la escena se iluminan dependiendo de su posición y distancia con respecto a la luz. <xref:System.Windows.Media.Media3D.PointLightBase>expone una <xref:System.Windows.Media.Media3D.PointLightBase.Range%2A> propiedad, que determina una distancia más allá de la cual los modelos no serán iluminados por la luz. PointLight también expone propiedades de atenuación, que determinan cómo disminuye la intensidad de la luz a lo largo de la distancia. Puede especificar interpolaciones constantes, lineales o cuadráticas para la atenuación de la luz.  
   
 - <xref:System.Windows.Media.Media3D.SpotLight>: Hereda <xref:System.Windows.Media.Media3D.PointLight>de . Los focos de luz iluminan como las luces puntuales, y tienen posición y dirección. Proyectan luz en un área en <xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A> <xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A> forma de cono establecida por y propiedades, especificadas en grados.  
   
@@ -142,7 +142,7 @@ Proyecciones ortográfica y en perspectiva
 ## <a name="animating-models"></a>Animación de modelos  
  La [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] implementación 3D participa en el mismo sistema de sincronización y animación que los gráficos 2D. En otras palabras, para animar una escena 3D, anime las propiedades de sus modelos. Es posible animar directamente las propiedades de los elementos primitivos, pero suele ser más fácil animar las transformaciones que cambian la posición o el aspecto de los modelos. Dado que las transformaciones se pueden aplicar a <xref:System.Windows.Media.Media3D.Model3DGroup> objetos, así como a modelos individuales, es posible aplicar un conjunto de animaciones a un elemento secundario de un Model3DGroup y otro conjunto de animaciones a un grupo de objetos secundarios. También puede lograr gran variedad de efectos visuales animando las propiedades de iluminación de la escena. Finalmente, si lo desea, puede animar la propia proyección, animando la posición de la cámara o el campo de visión. Para información general sobre el sistema de control de tiempo y animación de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], consulte los temas [Información general sobre animaciones](animation-overview.md), [Información general sobre objetos Storyboard](storyboards-overview.md) y [Información general sobre objetos Freezable](../advanced/freezable-objects-overview.md).  
   
- Para animar un objeto en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], se crea una escala de tiempo, se define una animación (que, en realidad, es un cambio de algún valor de propiedad a lo largo del tiempo) y se especifica la propiedad a la que aplicar la animación. Dado que todos los objetos de <xref:System.Windows.Controls.Viewport3D>una escena 3D son elementos secundarios de , las propiedades a las que apunta cualquier animación que desee aplicar a la escena son propiedades de propiedades de Viewport3D.  
+ Para animar un objeto en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], se crea una escala de tiempo, se define una animación (que, en realidad, es un cambio de algún valor de propiedad a lo largo del tiempo) y se especifica la propiedad a la que aplicar la animación. Dado que todos los objetos de <xref:System.Windows.Controls.Viewport3D>una escena 3D son elementos secundarios de , las propiedades a las que apunta cualquier animación que desee aplicar a la escena son propiedades de Viewport3D.  
   
  Supongamos que desea hacer que un modelo parezca tambalearse en su lugar. Puede optar por <xref:System.Windows.Media.Media3D.RotateTransform3D> aplicar a al modelo y animar el eje de su rotación de un vector a otro. En el ejemplo de código siguiente se muestra cómo aplicar Vector3DAnimation a la propiedad Axis de la propiedad Rotation3D de la transformación, suponiendo que RotateTransform3D es una de las diversas transformaciones aplicadas al modelo con TransformGroup.  
   
@@ -166,7 +166,7 @@ Proyecciones ortográfica y en perspectiva
   
  [!code-xaml[hostingwpfusercontrolinwf#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/HostingWpfUserControlInWf/ConeControl.xaml#1)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Controls.Viewport3D>
 - <xref:System.Windows.Media.Media3D.PerspectiveCamera>
@@ -174,6 +174,6 @@ Proyecciones ortográfica y en perspectiva
 - <xref:System.Windows.Media.Media3D.Material>
 - [Descripción general de las transformaciones 3D](3-d-transformations-overview.md)
 - [Maximizar el rendimiento de representación 3D en WPF](maximize-wpf-3d-performance.md)
-- [Temas de información](3-d-graphics-how-to-topics.md)
+- [Temas "Cómo..."](3-d-graphics-how-to-topics.md)
 - [Información general sobre formas y dibujo básico en WPF](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Pintar con imágenes, dibujos y elementos visuales](painting-with-images-drawings-and-visuals.md)

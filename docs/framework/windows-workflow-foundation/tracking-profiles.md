@@ -2,12 +2,12 @@
 title: Perfiles de seguimiento
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: 9723b8fbb0bb8f24e8c9544d8bac8252b2fc763a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 609c3f0c728e71d1bbf5335aae0b18d6f99a7181
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182727"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249043"
 ---
 # <a name="tracking-profiles"></a>Perfiles de seguimiento
 
@@ -23,6 +23,7 @@ Los perfiles de seguimiento se manifiestan como elementos XML dentro de un archi
 <system.serviceModel>
     ...
     <tracking>
+     <profiles>
       <trackingProfile name="Sample Tracking Profile">
         <workflow activityDefinitionId="*">
           <workflowInstanceQueries>
@@ -385,7 +386,7 @@ A continuación, se especifican algunos ejemplos comunes de perfiles de seguimie
   </trackingProfile>
   ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Seguimiento de SQL](./samples/sql-tracking.md)
 - [Supervisión de Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10))

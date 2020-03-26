@@ -2,12 +2,12 @@
 title: Serialización JSON independiente mediante DataContractJsonSerializer
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: 36945f2d42f22ef3aa4f27bcbe403466f124a279
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 614776a905ec319624f76876762c25bfca15a357
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184421"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249453"
 ---
 # <a name="stand-alone-json-serialization-using-datacontractjsonserializer"></a>Serialización JSON independiente mediante DataContractJsonSerializer
 
@@ -42,7 +42,7 @@ En la siguiente tabla se muestra la correspondencia entre los tipos .NET y los t
 |Colecciones, diccionarios y matrices|Array|Consulte la sección Colecciones, diccionarios y matrices en este tema.|
 |Tipos complejos (con el <xref:System.Runtime.Serialization.DataContractAttribute> o <xref:System.SerializableAttribute> aplicado)|Tipo complejo|Los miembros de datos se convierten en miembros del tipo complejo de Javascript.|
 |Tipos complejos que implementan la interfaz <xref:System.Runtime.Serialization.ISerializable>)|Tipo complejo|Igual que otros tipos complejos, pero algunos tipos <xref:System.Runtime.Serialization.ISerializable> no se admiten; vea la nota sobre la compatibilidad de ISerializable en la sección de Información avanzada de este tema.|
-|Valor `Null` para cualquier tipo|Null|Los tipos que aceptan valores null también se admiten y asignan a JSON de la misma manera que los tipos que no aceptan valores null.|
+|Valor `Null` para cualquier tipo|Null|Los tipos de valor que aceptan valores NULL también se admiten y se asignan a JSON de la misma manera que los tipos de valor que no aceptan valores NULL.|
 
 ### <a name="enumerations-and-json"></a>Enumeraciones y JSON
 
@@ -293,6 +293,6 @@ Al serializar tipos de diccionario, el objeto JSON que contiene los miembros "Cl
 
 El serializador XML codifica nombres de claves que no son nombres XML válidos. Por ejemplo, un miembro de datos con el nombre "123" tendría un\_\_nombre codificado\_\_como "\_\_x0031 x0032 x0033" porque "123" es un nombre de elemento XML no válido (comienza con un dígito). Se puede producir una situación similar con algunos juegos de caracteres internacionales no válidos en nombres de XML. Para obtener una explicación de este efecto de XML en el procesamiento JSON, consulte [Asignación entre JSON y XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Compatibilidad con JSON y otros formatos de transferencia de datos](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)

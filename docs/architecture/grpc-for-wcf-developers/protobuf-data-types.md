@@ -2,12 +2,12 @@
 title: Tipos de datos escalares de Protobuf - gRPC para desarrolladores de WCF
 description: Obtenga información sobre los tipos de datos básicos y conocidos que protobuf y gRPC admiten en .NET Core.
 ms.date: 09/09/2019
-ms.openlocfilehash: a40f51fa32ddb97ba417ec01f31e1f0187f0d544
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea3b53426ecf6f50f3bae22a537e227b07248508
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148132"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249440"
 ---
 # <a name="protobuf-scalar-data-types"></a>Tipos de datos escalares de Protobuf
 
@@ -125,7 +125,7 @@ En la tabla siguiente se muestra la lista completa de tipos de contenedor con su
 | `uint?`   | `google.protobuf.UInt32Value` |
 | `ulong?`  | `google.protobuf.UInt64Value` |
 
-Los tipos `Timestamp` conocidos `Duration` y se representan en .NET como clases, por lo que no hay necesidad de una versión que acepta valores NULL. Pero es importante comprobar si es null en las propiedades de `DateTimeOffset` `TimeSpan`esos tipos cuando se convierte a o .
+Los tipos `Timestamp` conocidos `Duration` y se representan en .NET como clases. En C-8 y posteriores, puede usar tipos de referencia que aceptan valores NULL. Pero es importante comprobar si es null en las propiedades de `DateTimeOffset` `TimeSpan`esos tipos cuando se convierte a o .
 
 ## <a name="decimals"></a>Decimals
 
