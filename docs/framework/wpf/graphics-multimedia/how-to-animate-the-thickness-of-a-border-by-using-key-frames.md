@@ -1,33 +1,33 @@
 ---
-title: Procedimiento Animar el grosor de un borde mediante fotogramas clave
+title: 'Cómo: Animar el grosor de un borde mediante fotogramas clave'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], border thickness with key frames
 - key frames [WPF], animating border thickness with
 - border thickness [WPF], animating with key frames
 ms.assetid: 3a9cb463-0a63-407d-aae7-3fbb1a559947
-ms.openlocfilehash: 101fd077bf125faadbd9a0186c2282e4b20ee78f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 884b62e88c347449ae39caa9c028d09db39b9f4b
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699037"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344695"
 ---
-# <a name="how-to-animate-the-thickness-of-a-border-by-using-key-frames"></a>Procedimiento Animar el grosor de un borde mediante fotogramas clave
-En este ejemplo se muestra cómo animar la <xref:System.Windows.Controls.Control.BorderThickness%2A> propiedad de un <xref:System.Windows.Controls.Border>.  
+# <a name="how-to-animate-the-thickness-of-a-border-by-using-key-frames"></a>Cómo: Animar el grosor de un borde mediante fotogramas clave
+En este ejemplo se <xref:System.Windows.Controls.Control.BorderThickness%2A> muestra <xref:System.Windows.Controls.Border>cómo animar la propiedad de un archivo .  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se usa el <xref:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames> clase se va a animar el <xref:System.Windows.Controls.Control.BorderThickness%2A> propiedad de un <xref:System.Windows.Controls.Border>. Esta animación utiliza tres fotogramas clave de la siguiente manera:  
+ En el ejemplo <xref:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames> siguiente se <xref:System.Windows.Controls.Control.BorderThickness%2A> utiliza <xref:System.Windows.Controls.Border>la clase para animar la propiedad de un archivo . Esta animación utiliza tres fotogramas clave de la siguiente manera:  
   
-1. Durante el primer medio segundo, utiliza una instancia de la <xref:System.Windows.Media.Animation.LinearThicknessKeyFrame> clase para aumentar gradualmente el grosor del borde. El ejemplo se utiliza <xref:System.Windows.Media.Animation.LinearThicknessKeyFrame> para crear un aumento lineal suavizado entre los valores.  
+1. Durante el primer medio segundo, <xref:System.Windows.Media.Animation.LinearThicknessKeyFrame> utiliza una instancia de la clase para aumentar gradualmente el grosor del borde. El ejemplo <xref:System.Windows.Media.Animation.LinearThicknessKeyFrame> se utiliza para crear un aumento lineal suave entre los valores.  
   
-2. Al final de la siguiente medio segundo, utiliza una instancia de la <xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame> clase para aumentar de repente el grosor del borde. Los fotogramas clave discretos como los derivan de <xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame> crean saltos súbitos entre los valores, es decir, el movimiento de la animación es brusco.  
+2. Al final del siguiente medio segundo, utiliza <xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame> una instancia de la clase para aumentar repentinamente el grosor del borde. Los fotogramas clave discretos como los derivados de <xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame> crear saltos repentinos entre los valores, es decir, el movimiento de la animación es desigual.  
   
-3. Durante los dos últimos segundos, utiliza una instancia de la <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame> clase para reducir el grosor del borde. Los fotogramas clave spline como los derivan de <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame> crean una transición variable entre los valores según los valores de la <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame.KeySpline%2A> propiedad. En este fotograma clave, la animación se inicia lentamente y se va acelerando de forma exponencial hacia el final del segmento temporal.  
+3. Durante los dos segundos finales, utiliza una instancia de la <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame> clase para disminuir el grosor del borde. Los fotogramas clave de <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame> spline como los derivados crean <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame.KeySpline%2A> una transición variable entre los valores según los valores de la propiedad. En este fotograma clave, la animación se inicia lentamente y se va acelerando de forma exponencial hacia el final del segmento temporal.  
   
  [!code-xaml[keyframes_snip#ThicknessAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/ThicknessAnimationUsingKeyFramesExample.xaml#thicknessanimationusingkeyframeswholepage)]  
   
- Para consultar el ejemplo completo, vea [Ejemplo de animación mediante fotogramas clave](https://go.microsoft.com/fwlink/?LinkID=160012).  
+ Para consultar el ejemplo completo, vea [Ejemplo de animación mediante fotogramas clave](https://github.com/microsoft/WPF-Samples/tree/master/Animation/KeyFrameAnimation).  
   
 ## <a name="see-also"></a>Vea también
 

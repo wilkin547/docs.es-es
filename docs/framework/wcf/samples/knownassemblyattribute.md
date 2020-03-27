@@ -2,12 +2,12 @@
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: 1a94acde3d0726808deebcae1437e7318f5392df
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3aacc7c73167771a632bb31164f2c551d60ce8f0
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183558"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345243"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
 Este ejemplo muestra cómo se pueden personalizar los procesos de deserialización y serialización utilizando la clase <xref:System.Runtime.Serialization.DataContractResolver>. En este ejemplo se muestra cómo agregar dinámicamente los tipos conocidos durante la serialización y deserialización.  
@@ -356,11 +356,11 @@ Lists combined:
   
 5. Si la aplicación no se ejecuta correctamente, siga estos pasos para asegurarse de que el entorno se ha configurado correctamente:  
   
-6. Asegúrese de que ha realizado el procedimiento de configuración única [para los ejemplos](https://go.microsoft.com/fwlink/?LinkId=150774)de Windows Communication Foundation .  
+6. Asegúrese de que ha realizado el procedimiento de configuración única [para los ejemplos](https://docs.microsoft.com/dotnet/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples)de Windows Communication Foundation .  
   
-7. Para compilar la solución, siga las instrucciones de Creación del ejemplo de [Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=150775).  
+7. Para compilar la solución, siga las instrucciones de Creación del ejemplo de [Windows Communication Foundation](https://docs.microsoft.com/dotnet/framework/wcf/samples/building-the-samples).  
   
-8. Para ejecutar el ejemplo en una configuración de uno o entre equipos, siga las instrucciones de Ejecución de [los ejemplos](https://go.microsoft.com/fwlink/?LinkId=150776)de Windows Communication Foundation .  
+8. Para ejecutar el ejemplo en una configuración de uno o entre equipos, siga las instrucciones de Ejecución de [los ejemplos](https://docs.microsoft.com/dotnet/framework/wcf/samples/running-the-samples)de Windows Communication Foundation .  
   
 > [!IMPORTANT]
 > Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  

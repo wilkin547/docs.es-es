@@ -1,29 +1,29 @@
 ---
-title: Procedimiento Animar un objeto String mediante fotogramas clave
+title: 'Cómo: Animar una cadena mediante fotogramas clave'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], strings with key frames
 - strings [WPF], animating with key frames
 - key frames [WPF], animating strings with
 ms.assetid: c62bc9fd-c09a-4227-bce0-0a1ab82049dd
-ms.openlocfilehash: 4a37408ad90fda12a95e66c1b44018967b376837
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c954806ca901bbfc3ab6d4bbcc237cd0e404f154
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651433"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344669"
 ---
-# <a name="how-to-animate-a-string-by-using-key-frames"></a>Procedimiento Animar un objeto String mediante fotogramas clave
-En este ejemplo se muestra cómo animar una cadena, que en este ejemplo es el <xref:System.Windows.Controls.ContentControl.Content%2A> propiedad de un <xref:System.Windows.Controls.Button> control mediante fotogramas clave.  
+# <a name="how-to-animate-a-string-by-using-key-frames"></a>Cómo: Animar una cadena mediante fotogramas clave
+En este ejemplo se muestra cómo animar una <xref:System.Windows.Controls.ContentControl.Content%2A> cadena, <xref:System.Windows.Controls.Button> que en este ejemplo es la propiedad de un control, mediante marcos de clave.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se usa el <xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames> clase se va a animar el <xref:System.Windows.Controls.ContentControl.Content%2A> propiedad de un <xref:System.Windows.Controls.Button>.  
+ En el ejemplo <xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames> siguiente se <xref:System.Windows.Controls.ContentControl.Content%2A> utiliza <xref:System.Windows.Controls.Button>la clase para animar la propiedad de un archivo .  
   
- Todos los fotogramas clave en este ejemplo utilizan una instancia de la <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame> clase porque una animación de cadena que se crea con fotogramas clave solo puede usar fotogramas clave discretos. Los fotogramas clave discretos como <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame> crean saltos súbitos entre los valores, es decir, los cambios realizados en la animación se producen rápidamente y no son sutiles.  
+ Todos los fotogramas clave de este <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame> ejemplo utilizan una instancia de la clase porque una animación de cadena que se crea con fotogramas clave solo puede utilizar fotogramas clave discretos. Los fotogramas <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame> clave discretos como crear saltos repentinos entre valores, es decir, los cambios en la animación se producen rápidamente y no son sutiles.  
   
  [!code-xaml[keyframes_snip#StringAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/StringAnimationUsingKeyFramesExample.xaml#stringanimationusingkeyframeswholepage)]  
   
- Para consultar el ejemplo completo, vea [Ejemplo de animación mediante fotogramas clave](https://go.microsoft.com/fwlink/?LinkID=160012).  
+ Para consultar el ejemplo completo, vea [Ejemplo de animación mediante fotogramas clave](https://github.com/microsoft/WPF-Samples/tree/master/Animation/KeyFrameAnimation).  
   
 ## <a name="see-also"></a>Vea también
 

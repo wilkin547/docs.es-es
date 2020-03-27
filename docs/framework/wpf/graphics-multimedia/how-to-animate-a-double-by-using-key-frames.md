@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Animar un objeto Double mediante fotogramas clave
+title: 'Cómo: Animar un objeto Double mediante fotogramas clave'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,32 +9,32 @@ helpviewer_keywords:
 - animation [WPF], Doubles with key frames
 - key frames [WPF], animating Doubles with
 ms.assetid: 3a1a7dba-7694-4907-8a2f-3408baebfa82
-ms.openlocfilehash: 73cbeab8aee566313bad8e8a18a5500374287de0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9eab794cc8411230226cddc97beaa13c1bdd9405
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010207"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344934"
 ---
-# <a name="how-to-animate-a-double-by-using-key-frames"></a>Procedimiento Animar un objeto Double mediante fotogramas clave
-En este ejemplo se muestra cómo animar el valor de una propiedad que toma un <xref:System.Double> mediante fotogramas clave.  
+# <a name="how-to-animate-a-double-by-using-key-frames"></a>Cómo: Animar un objeto Double mediante fotogramas clave
+En este ejemplo se muestra cómo animar <xref:System.Double> el valor de una propiedad que toma una mediante fotogramas clave.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se mueve un rectángulo por una pantalla. El ejemplo se usa el <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> clase se va a animar el <xref:System.Windows.Media.TranslateTransform.X%2A> propiedad de un <xref:System.Windows.Media.TranslateTransform> aplicado a un <xref:System.Windows.Shapes.Rectangle>. Esta animación, que se repite indefinidamente, utiliza tres fotogramas clave de la manera siguiente:  
+ En el ejemplo siguiente se mueve un rectángulo por una pantalla. En el <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> ejemplo se <xref:System.Windows.Media.TranslateTransform.X%2A> utiliza la <xref:System.Windows.Media.TranslateTransform> clase <xref:System.Windows.Shapes.Rectangle>para animar la propiedad de un archivo . Esta animación, que se repite indefinidamente, utiliza tres fotogramas clave de la manera siguiente:  
   
-1. Durante los primeros tres segundos, utiliza una instancia de la <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> clase para mover el rectángulo a lo largo de una ruta de acceso a un ritmo constante desde su posición inicial hasta la posición 500. Los fotogramas clave lineales como <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> crean una transición lineal suave entre valores.  
+1. Durante los primeros tres segundos, <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> utiliza una instancia de la clase para mover el rectángulo a lo largo de un trazado a una velocidad constante desde su posición inicial hasta la posición 500. Los fotogramas <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> clave lineales como crean una transición lineal suave entre los valores.  
   
-2. Al final del cuarto segundo, utiliza una instancia de la <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame> clase para mover el rectángulo a la posición siguiente. Los fotogramas clave discretos como <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame> crean saltos súbitos entre los valores. En este ejemplo, el rectángulo está en la posición inicial y aparece de pronto en la posición 500.  
+2. Al final del cuarto segundo, utiliza <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame> una instancia de la clase para mover repentinamente el rectángulo a la siguiente posición. Los fotogramas <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame> clave discretos, como crear saltos repentinos entre los valores. En este ejemplo, el rectángulo está en la posición inicial y aparece de pronto en la posición 500.  
   
-3. En los dos últimos segundos, utiliza una instancia de la <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> clase para devolver el rectángulo a su posición inicial. Los fotogramas clave spline como <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> crean una transición variable entre los valores según el valor de la <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A> propiedad. En este ejemplo, el rectángulo comienza a moverse despacio y se acelera exponencialmente hacia el final del segmento temporal.  
+3. En los últimos dos segundos, utiliza una instancia de la <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> clase para mover el rectángulo a su posición inicial. Los fotogramas <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> clave de spline como crean una <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A> transición variable entre valores según el valor de la propiedad. En este ejemplo, el rectángulo comienza a moverse despacio y se acelera exponencialmente hacia el final del segmento temporal.  
   
  [!code-csharp[keyframes_snip#AltDoubleAnimationUsingKeyFramesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/AltDoubleAnimationUsingKeyFramesExample.cs#altdoubleanimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#AltDoubleAnimationUsingKeyFramesWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/altdoubleanimationusingkeyframesexample.vb#altdoubleanimationusingkeyframeswholepage)]
  [!code-xaml[keyframes_snip#AltDoubleAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/AltDoubleAnimationUsingKeyFramesExample.xaml#altdoubleanimationusingkeyframeswholepage)]  
   
- Para consultar el ejemplo completo, vea [Ejemplo de animación mediante fotogramas clave](https://go.microsoft.com/fwlink/?LinkID=160012).  
+ Para consultar el ejemplo completo, vea [Ejemplo de animación mediante fotogramas clave](https://github.com/microsoft/WPF-Samples/tree/master/Animation/KeyFrameAnimation).  
   
- Para mantener la coherencia con otros ejemplos de animación, las versiones de código de este ejemplo utiliza un <xref:System.Windows.Media.Animation.Storyboard> objeto al que aplicar el <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>. Como alternativa, al aplicar una animación única en código, es más fácil de usar el <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> método en lugar de usar un <xref:System.Windows.Media.Animation.Storyboard>. Para obtener un ejemplo, vea [Animar una propiedad sin utilizar un guión gráfico](how-to-animate-a-property-without-using-a-storyboard.md).  
+ Para mantener la coherencia con otros ejemplos de <xref:System.Windows.Media.Animation.Storyboard> animación, <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>las versiones de código de este ejemplo utilizan un objeto para aplicar el archivo . Como alternativa, al aplicar una sola animación en el <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> código, es <xref:System.Windows.Media.Animation.Storyboard>más sencillo usar el método en lugar de usar un archivo . Para obtener un ejemplo, vea [Animar una propiedad sin usar un guión gráfico](how-to-animate-a-property-without-using-a-storyboard.md).  
   
 ## <a name="see-also"></a>Vea también
 
