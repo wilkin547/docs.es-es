@@ -144,7 +144,7 @@
               href: how-to-register-an-attached-property.md
             - name: Invalidar metadatos en una propiedad de dependencia
               href: how-to-override-metadata-for-a-dependency-property.md
-    - name: Eventos
+    - name: Events
       href: events-wpf.md
       items:
         - name: Información general sobre eventos enrutados
@@ -481,6 +481,8 @@
     - name: Migración e interoperabilidad
       href: migration-and-interoperability.md
       items:
+        - name: "Migración de WPF\_3.X a WPF\_4.5"
+          href: types-migrated-from-wpf-to-system.md
         - name: Interoperabilidad entre Windows Forms y WPF
           href: wpf-and-windows-forms-interoperation.md
           items:
@@ -508,7 +510,7 @@
               href: walkthrough-arranging-windows-forms-controls-in-wpf.md
             - name: 'Tutorial: Enlazar a datos en aplicaciones híbridas'
               href: walkthrough-binding-to-data-in-hybrid-applications.md
-            - name: 'Tutorial: Hospedar un control compuesto 3D de WPF en formularios Windows Forms'
+            - name: 'Tutorial: Hospedar un control compuesto de WPF 3D en Windows Forms'
               href: walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md
             - name: 'Tutorial: Hospedar un control compuesto de WPF en formularios Windows Forms'
               href: walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md
@@ -562,7 +564,7 @@
               href: optimizing-performance-object-behavior.md
             - name: Recursos de la aplicación
               href: optimizing-performance-application-resources.md
-            - name: Texto
+            - name: Text
               href: optimizing-performance-text.md
             - name: Enlace de datos
               href: optimizing-performance-data-binding.md
