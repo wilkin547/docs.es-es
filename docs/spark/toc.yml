@@ -35,6 +35,8 @@
       href: how-to-guides/ubuntu-instructions.md
     - name: Compilación de aplicaciones en Windows
       href: how-to-guides/windows-instructions.md
+    - name: Instalación de cuadernos interactivos en Azure HDInsight
+      href: how-to-guides/hdinsight-notebook-installation.md
 - name: Referencia
   items:
     - name: Referencia de API

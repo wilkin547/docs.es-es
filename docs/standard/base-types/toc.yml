@@ -116,9 +116,11 @@
                   href: how-to-strip-invalid-characters-from-a-string.md
                 - name: Cómo comprobar si las cadenas tienen un formato de correo electrónico válido
                   href: how-to-verify-that-strings-are-in-valid-email-format.md
-        - name: Codificación de caracteres de .NET
-          href: character-encoding.md
-    - name: Análisis de cadenas
+    - name: Codificación de caracteres de .NET
+      href: character-encoding-introduction.md
+    - name: Procedimiento para usar las clases de codificación de caracteres
+      href: character-encoding.md
+    - name: Analizar cadenas
       href: parsing-strings.md
       items:
         - name: Análisis de cadenas numéricas

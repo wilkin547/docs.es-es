@@ -254,7 +254,7 @@
               href: how-to-apply-multiple-transformations-to-a-3-d-model.md
             - name: Animar traslaciones 3D
               href: how-to-animate-3-d-translations.md
-            - name: Animar un giro 3D mediante Storyboards
+            - name: Animar un giro 3D mediante guiones gráficos
               href: how-to-animate-a-3-d-rotation-using-storyboards.md
             - name: Animar un giro 3D mediante Rotation3DAnimation
               href: how-to-animate-a-3-d-rotation-using-rotation3danimation.md

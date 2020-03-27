@@ -1,4 +1,4 @@
-- name: Guía de la arquitectura de aplicaciones .NET
+- name: Guía de arquitectura de aplicaciones .NET
   href: index.yml
 - name: Libros electrónicos
   expanded: true
@@ -9,9 +9,9 @@
       href: grpc-for-wcf-developers/
     - name: Modernización de aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows
       href: modernize-with-azure-containers/
-    - name: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
+    - name: Ciclo de vida de aplicaciones Docker en contenedores con la plataforma y las herramientas de Microsoft
       href: containerized-lifecycle/
-    - name: 'Microservicios de .NET: diseño de aplicaciones .NET en contenedor'
+    - name: 'Microservicios de .NET: Arquitectura para aplicaciones .NET en contenedor'
       href: microservices/
     - name: 'Aplicaciones sin servidor: Arquitectura, patrones e implementación de Azure'
       href: serverless/

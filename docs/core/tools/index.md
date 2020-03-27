@@ -3,12 +3,12 @@ title: CLI de .NET Core
 titleSuffix: ''
 description: Información general de la CLI de .NET Core y sus características.
 ms.date: 02/13/2020
-ms.openlocfilehash: 45a40063f70a621e807abf5e01ceecb125aecd7c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ac5988bacbef41326f2501a2cff6c3f5aa0be798
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79397603"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80110846"
 ---
 # <a name="net-core-cli-overview"></a>Información general sobre la CLI de .NET Core
 
@@ -67,7 +67,7 @@ Las herramientas son aplicaciones de consola que se instalan mediante paquetes N
 
 ## <a name="command-structure"></a>Estructura de comandos
 
-La estructura de comandos de la CLI consta del [controlador ("dotnet")](#driver), [el comando](#command) y posiblemente de los [argumentos de comandos](#arguments) y otras [opciones](#options). Este patrón se puede ver en la mayoría de las operaciones de la CLI, como la creación de una nueva aplicación de consola y su ejecución desde la línea de comandos, como muestran los siguientes comandos cuando se ejecutan desde un directorio denominado *my_app* :
+La estructura de comandos de la CLI consta del [controlador ("dotnet")](#driver), [el comando](#command) y posiblemente de los [argumentos de comandos](#arguments) y otras [opciones](#options). Este patrón se puede ver en la mayoría de las operaciones de la CLI, como la creación de una nueva aplicación de consola y su ejecución desde la línea de comandos, como muestran los siguientes comandos cuando se ejecutan desde un directorio denominado *my_app*:
 
 ```dotnetcli
 dotnet new console
@@ -95,7 +95,7 @@ El comando realiza una acción. Por ejemplo, `dotnet build` compila código. `do
 
 ### <a name="arguments"></a>Argumentos
 
-Los argumentos que se pasan en la línea de comandos son los argumentos para el comando invocado. Por ejemplo, cuando ejecuta `dotnet publish my_app.csproj`, el argumento `my_app.csproj` indica el proyecto que se publicará y se pasará al comando `publish`.
+Los argumentos que se pasan en la línea de comandos son los argumentos para el comando invocado. Por ejemplo, cuando ejecuta `dotnet publish my_app.csproj`, el argumento `my_app.csproj` indica el proyecto que se publicará y se pasa al comando `publish`.
 
 ### <a name="options"></a>Opciones
 

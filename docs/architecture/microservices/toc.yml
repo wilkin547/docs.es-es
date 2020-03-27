@@ -25,7 +25,7 @@
           href: net-core-net-framework-containers/net-container-os-targets.md
         - name: Imágenes oficiales de Docker de .NET
           href: net-core-net-framework-containers/official-net-docker-images.md
-    - name: Diseñar la arquitectura de aplicaciones basadas en contenedores y microservicios
+    - name: Diseño de la arquitectura de aplicaciones basadas en contenedores y microservicios
       href: architect-microservice-container-applications/index.md
       items:
         - name: Incluir en un contenedor aplicaciones monolíticas
@@ -65,7 +65,7 @@
       items:
         - name: Flujo de trabajo de desarrollo para aplicaciones de Docker
           href: docker-application-development-process/docker-app-development-workflow.md
-    - name: Diseñar y desarrollar aplicaciones .NET basadas en varios contenedores y microservicios
+    - name: Diseño y desarrollo de aplicaciones .NET basadas en varios contenedores y microservicios
       href: multi-container-microservice-net-applications/index.md
       items:
         - name: Diseño de una aplicación orientada a microservicios
@@ -125,7 +125,7 @@
           href: microservice-ddd-cqrs-patterns/microservice-application-layer-web-api-design.md
         - name: Implementación del nivel de aplicación de microservicios mediante la API web
           href: microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md
-    - name: Implementar aplicaciones resistentes
+    - name: Implementación de aplicaciones resistentes
       href: implement-resilient-applications/index.md
       items:
         - name: Controlar errores parciales
@@ -136,9 +136,7 @@
           href: implement-resilient-applications/implement-retries-exponential-backoff.md
         - name: Implementar conexiones SQL resistentes de Entity Framework Core
           href: implement-resilient-applications/implement-resilient-entity-framework-core-sql-connections.md
-        - name: Exploración de reintentos de llamada HTTP personalizados con retroceso exponencial
-          href: implement-resilient-applications/explore-custom-http-call-retries-exponential-backoff.md
-        - name: Uso de HttpClientFactory para implementar solicitudes HTTP resistentes
+        - name: "Uso de IHttpClientFactory para implementar solicitudes\_HTTP resistentes"
           href: implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests.md
         - name: Implementación de reintentos de llamada HTTP con retroceso exponencial con Polly
           href: implement-resilient-applications/implement-http-call-retries-exponential-backoff-polly.md
@@ -146,7 +144,7 @@
           href: implement-resilient-applications/implement-circuit-breaker-pattern.md
         - name: Seguimiento de estado
           href: implement-resilient-applications/monitor-app-health.md
-    - name: Proteger microservicios y aplicaciones web de .NET
+    - name: Protección de microservicios y aplicaciones web .NET
       href: secure-net-microservices-web-applications/index.md
       items:
         - name: Acerca de la autorización en microservicios y aplicaciones web de .NET
