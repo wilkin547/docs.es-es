@@ -1328,7 +1328,7 @@
                   displayName: 'enum, bit flags, bit field'
                 - name: Tipos de estructura
                   href: language-reference/builtin-types/struct.md
-                  displayName: struct type
+                  displayName: 'struct type, readonly'
                 - name: Tipos de valor que aceptan valores NULL
                   href: language-reference/builtin-types/nullable-value-types.md
                   displayName: '? token, ? symbol'

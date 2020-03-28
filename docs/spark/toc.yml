@@ -21,6 +21,8 @@
       href: tutorials/batch-processing.md
     - name: Streaming estructurado
       href: tutorials/streaming.md
+    - name: Análisis de sentimiento
+      href: tutorials/ml-sentiment-analysis.md
 - name: Guías de procedimientos
   items:
     - name: Depuración de la aplicación

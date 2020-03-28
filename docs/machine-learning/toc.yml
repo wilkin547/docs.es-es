@@ -3,18 +3,28 @@
 - name: Información general
   expanded: true
   items:
-    - name: API
-      items:
-        - name: La API de ML.NET
-          href: how-does-mldotnet-work.md
     - name: Generador de modelos y CLI
       items:
         - name: La herramienta Generador de modelos de ML.NET
           href: automate-training-with-model-builder.md
         - name: La interfaz de la línea de comandos de ML.NET
           href: automate-training-with-cli.md
+    - name: API
+      items:
+        - name: La API de ML.NET
+          href: how-does-mldotnet-work.md
 - name: Tutoriales
   items:
+    - name: Generador de modelos y CLI
+      items:
+        - name: Predicción de los precios (generador de modelos y regresión)
+          href: tutorials/predict-prices-with-model-builder.md
+        - name: Análisis de opiniones mediante la CLI de ML.NET
+          href: tutorials/sentiment-analysis-cli.md
+        - name: Análisis de opiniones en Razor Pages (generador de modelos y clasificación binaria)
+          href: tutorials/sentiment-analysis-model-builder.md
+        - name: Categorización de infracciones de estado (generador de modelos y clasificación multiclase)
+          href: tutorials/health-violation-classification-model-builder.md
     - name: API
       items:
         - name: Información general
@@ -41,16 +51,6 @@
           href: tutorials/object-detection-onnx.md
         - name: Clasificación de opiniones mediante TensorFlow (clasificación de texto)
           href: tutorials/text-classification-tf.md
-    - name: Generador de modelos y CLI
-      items:
-        - name: Predicción de los precios (generador de modelos y regresión)
-          href: tutorials/predict-prices-with-model-builder.md
-        - name: Análisis de opiniones mediante la CLI de ML.NET
-          href: tutorials/sentiment-analysis-cli.md
-        - name: Análisis de opiniones en Razor Pages (generador de modelos y clasificación binaria)
-          href: tutorials/sentiment-analysis-model-builder.md
-        - name: Categorización de infracciones de estado (generador de modelos y clasificación multiclase)
-          href: tutorials/health-violation-classification-model-builder.md
     - name: Infer.NET
       items:
         - name: Programación probabilística con Infer.NET
@@ -69,6 +69,16 @@
       href: resources/improve-machine-learning-model-ml-net.md
 - name: Guías de procedimientos
   items:
+    - name: Generador de modelos y CLI
+      items:
+        - name: Carga de datos en el generador de modelos
+          href: how-to-guides/load-data-model-builder.md
+        - name: Instalación de un generador de modelos
+          href: how-to-guides/install-model-builder.md
+        - name: Instalación de la CLI
+          href: how-to-guides/install-ml-net-cli.md
+        - name: Uso de la API de ML automatizado
+          href: how-to-guides/how-to-use-the-automl-api.md
     - name: API
       items:
         - name: Cargar los datos
@@ -97,16 +107,6 @@
               href: how-to-guides/serve-model-serverless-azure-functions-ml-net.md
             - name: Implementación de un modelo en una API web
               href: how-to-guides/serve-model-web-api-ml-net.md
-    - name: Generador de modelos y CLI
-      items:
-        - name: Carga de datos en el generador de modelos
-          href: how-to-guides/load-data-model-builder.md
-        - name: Instalación de un generador de modelos
-          href: how-to-guides/install-model-builder.md
-        - name: Instalación de la CLI
-          href: how-to-guides/install-ml-net-cli.md
-        - name: Uso de la API de ML automatizado
-          href: how-to-guides/how-to-use-the-automl-api.md
 - name: Referencia
   items:
     - name: Referencia de API de ML.NET

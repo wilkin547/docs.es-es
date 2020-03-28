@@ -2,12 +2,12 @@
 title: Tutoriales de C#
 description: Explore estos tutoriales de C# para obtener información sobre cómo compilar programas de C# y conocer las características de este lenguaje.
 ms.date: 10/25/2018
-ms.openlocfilehash: 8adbec3311c7a0e88475734312ecc3621042c3f3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 57d2471ef8ad06eb821a1d1d88210dfbb8dc732e
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75346797"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345094"
 ---
 # <a name="c-tutorials"></a>Tutoriales de C#
 
@@ -56,7 +56,7 @@ Todos los tutoriales de introducción posteriores a la lección Hola mundo se en
 
 ## <a name="general-tutorials"></a>Tutoriales generales
 
-Los siguientes tutoriales le permiten crear programas de C# mediante [.NET Core](../../core/index.md):
+Los siguientes tutoriales le permiten crear programas de C# mediante [.NET Core](../../core/index.yml):
 
 * [Aplicación de consola](console-teleprompter.md): muestra la E/S de consola, la estructura de una aplicación de consola y los aspectos básicos del modelo de programación asincrónica basado en tareas.
 * [Cliente de REST](console-webapiclient.md): muestra las comunicaciones web, la serialización de JSON y las características orientadas a objetos del lenguaje C#.
