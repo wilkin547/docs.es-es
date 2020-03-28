@@ -11,12 +11,12 @@ metadata:
   author: BillWagner
   ms.author: wiwagn
   ms.date: 12/19/2019
-  ms.openlocfilehash: f0660cf23bcbc6520d7b0d853e1b214dee785300
-  ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
+  ms.openlocfilehash: ca2ac70c2d55a2731ce3020753b6e36cd7307533
+  ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 03/24/2020
-  ms.locfileid: "80228552"
+  ms.lasthandoff: 03/27/2020
+  ms.locfileid: "80344650"
 highlightedContent:
   items:
   - title: Introducción a C#. Un inicio rápido interactivo.
@@ -38,7 +38,7 @@ conceptualContent:
   - title: .NET de código abierto
     summary: Más información sobre .NET Core
     links:
-    - url: core/index.md
+    - url: core/index.yml
       itemType: overview
       text: Información general sobre .NET Core
     - url: core/whats-new/dotnet-core-3-1.md
