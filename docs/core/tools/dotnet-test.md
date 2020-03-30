@@ -2,12 +2,12 @@
 title: Comando dotnet test
 description: El comando “dotnet test” se usa para ejecutar pruebas unitarias en un proyecto determinado.
 ms.date: 02/27/2020
-ms.openlocfilehash: 6e906ab396a788905c99f50e73390b765b240efc
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: a11814f9fdc6326e681a09d7d2654b968014f318
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157016"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507313"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -20,11 +20,13 @@ ms.locfileid: "78157016"
 ## <a name="synopsis"></a>Sinopsis
 
 ```dotnetcli
-dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame]
-    [-c|--configuration] [--collect] [-d|--diag] [-f|--framework]
-    [--filter] [-l|--logger] [--no-build] [--no-restore]
-    [-o|--output] [-r|--results-directory] [-s|--settings]
-    [-t|--list-tests] [-v|--verbosity] [-- <RunSettings arguments>]
+dotnet test [<PROJECT> | <SOLUTION>]
+    [-a|--test-adapter-path] [--blame] [-c|--configuration]
+    [--collect] [-d|--diag] [-f|--framework] [--filter]
+    [--interactive] [-l|--logger] [--no-build] [--nologo]
+    [--no-restore] [-o|--output] [-r|--results-directory]
+    [--runtime] [-s|--settings] [-t|--list-tests]
+    [-v|--verbosity] [[--] <RunSettings arguments>]
 
 dotnet test [-h|--help]
 ```
@@ -39,9 +41,9 @@ Los proyectos de prueba especifican el ejecutor de pruebas usando un elemento `<
 
 ## <a name="arguments"></a>Argumentos
 
-- **`PROJECT`**
+- **`PROJECT | SOLUTION`**
 
-  Ruta de acceso al proyecto de prueba. Si no se especifica, se toma como predeterminado el directorio actual.
+  Ruta de acceso a la solución o proyecto de prueba. Si no se especifica, se toma como predeterminado el directorio actual.
 
 ## <a name="options"></a>Opciones
 
@@ -49,11 +51,11 @@ Los proyectos de prueba especifican el ejecutor de pruebas usando un elemento `<
 
   Use los adaptadores de prueba personalizados en la ruta especificada de esta ejecución de pruebas.
 
-- **`-blame`**
+- **`--blame`**
 
   Ejecuta las pruebas en el modo de culpabilidad. Esta opción es útil para aislar las pruebas problemáticas que hacen que el host de prueba se bloquee. Crea un archivo de salida en el directorio actual como *Sequence.xml* que captura el orden de ejecución de pruebas antes del bloqueo.
 
-- **`c|--configuration {Debug|Release}`**
+- **`c|--configuration <CONFIGURATION>`**
 
   Define la configuración de compilación. El valor predeterminado es `Debug`, pero la configuración del proyecto podría invalidar esta configuración predeterminada del SDK.
 
@@ -77,6 +79,10 @@ Los proyectos de prueba especifican el ejecutor de pruebas usando un elemento `<
 
   Imprime una corta ayuda para el comando.
 
+- **`--interactive`**
+
+  Permite que el comando se detenga y espere una entrada o una acción del usuario. Por ejemplo, para completar la autenticación. Disponible desde el SDK de .NET Core 3.0.
+
 - **`l|--logger <LoggerUri/FriendlyName>`**
 
   Especifica un registrador para los resultados de pruebas.
@@ -84,6 +90,10 @@ Los proyectos de prueba especifican el ejecutor de pruebas usando un elemento `<
 - **`--no-build`**
 
   No compila el proyecto de prueba antes de ejecutarlo. También establece la marca - `--no-restore` de forma implícita.
+
+- **`--nologo`**
+
+  Ejecuta pruebas sin mostrar la pancarta de Microsoft TestPlatform. Disponible desde el SDK de .NET Core 3.0.
 
 - **`--no-restore`**
 
@@ -96,6 +106,10 @@ Los proyectos de prueba especifican el ejecutor de pruebas usando un elemento `<
 - **`-r|--results-directory <PATH>`**
 
   El directorio donde se guardarán los resultados de pruebas. Si el directorio especificado no existe, se crea.
+
+- **`--runtime <RUNTIME_IDENTIFIER>`**
+
+  Runtime de destino que probar.
 
 - **`-s|--settings <SETTINGS_FILE>`**
 

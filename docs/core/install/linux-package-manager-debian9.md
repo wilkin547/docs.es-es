@@ -3,19 +3,21 @@ title: 'Instalación de .NET Core en Debian 9 (administrador de paquetes): .NET
 description: Use un administrador de paquetes para instalar el SDK y el entorno de ejecución de .NET Core en Debian 9.
 author: thraka
 ms.author: adegeo
-ms.date: 12/04/2019
-ms.openlocfilehash: 32b152ff9be5135cf0ca7f8914bc9ee4f78000be
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 03/17/2020
+ms.openlocfilehash: cfe28d04edfac97938612537986498636c141be0
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76920852"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134290"
 ---
 # <a name="debian-9-package-manager---install-net-core"></a>Administrador de paquetes de Debian 9: instalación de .NET Core
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-En este artículo se describe cómo usar un administrador de paquetes para instalar .NET Core en Debian 9. Si va a instalar el entorno de ejecución, le recomendamos que instale el [entorno de ejecución de ASP.NET Core](#install-the-aspnet-core-runtime), ya que incluye los de .NET Core y ASP.NET Core.
+En este artículo se describe cómo usar un administrador de paquetes para instalar .NET Core en Debian 9.
+
+[!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
 ## <a name="register-microsoft-key-and-feed"></a>Registro de la clave y la fuente de Microsoft
 
@@ -30,9 +32,9 @@ Esto solo se debe hacer una vez por máquina.
 Abra un terminal y ejecute los comandos siguientes.
 
 ```bash
-wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.asc.gpg
+wget -O- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.asc.gpg
 sudo mv microsoft.asc.gpg /etc/apt/trusted.gpg.d/
-wget -q https://packages.microsoft.com/config/debian/9/prod.list
+wget https://packages.microsoft.com/config/debian/9/prod.list
 sudo mv prod.list /etc/apt/sources.list.d/microsoft-prod.list
 sudo chown root:root /etc/apt/trusted.gpg.d/microsoft.asc.gpg
 sudo chown root:root /etc/apt/sources.list.d/microsoft-prod.list

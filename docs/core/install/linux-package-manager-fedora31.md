@@ -3,19 +3,21 @@ title: 'Instalación de .NET Core en Fedora 31 (administrador de paquetes): .NE
 description: Use un administrador de paquetes para instalar el SDK y el runtime de .NET Core en Fedora 31.
 author: thraka
 ms.author: adegeo
-ms.date: 12/17/2019
-ms.openlocfilehash: 28bda3676f99037e565080e1ff3f9d89a67d0d69
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 03/17/2020
+ms.openlocfilehash: e6ead528c441c37d089ebb33719494353de41433
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76920784"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134249"
 ---
 # <a name="fedora-31-package-manager---install-net-core"></a>Administrador de paquetes de Fedora 31: instalación de .NET Core
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-En este artículo se explica cómo usar un administrador de paquetes para instalar .NET Core en Fedora 31. Si va a instalar el entorno de ejecución, le recomendamos que instale el [entorno de ejecución de ASP.NET Core](#install-the-aspnet-core-runtime), ya que incluye los de .NET Core y ASP.NET Core.
+En este artículo se explica cómo usar un administrador de paquetes para instalar .NET Core en Fedora 31.
+
+[!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
 ## <a name="register-microsoft-key-and-feed"></a>Registro de la clave y la fuente de Microsoft
 
@@ -31,7 +33,7 @@ Abra un terminal y ejecute los comandos siguientes.
 
 ```bash
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo wget -q -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/fedora/31/prod.repo
+sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/fedora/31/prod.repo
 ```
 
 ## <a name="install-the-net-core-sdk"></a>Instalación del SDK de .NET Core

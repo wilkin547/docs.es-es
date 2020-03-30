@@ -3,12 +3,12 @@ title: Tipos no administrados - Referencia de C#
 ms.date: 09/06/2019
 helpviewer_keywords:
 - unmanaged type [C#]
-ms.openlocfilehash: 8a4599514115aa21f17c32848ce203fea704072e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9dd2ab4e044b8a86bfe72a6fcf2481b8e1e80bf4
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846474"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507235"
 ---
 # <a name="unmanaged-types-c-reference"></a>Tipos no administrados (referencia de C#)
 
@@ -29,7 +29,7 @@ Un struct genérico puede ser el origen de los tipos no administrados y de los t
 
 [!code-csharp[unmanaged constraint in type definition](snippets/UnmanagedTypes.cs#AlwaysUnmanaged)]
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 Para obtener más información, vea la sección [Tipos de puntero](~/_csharplang/spec/unsafe-code.md#pointer-types) de [Especificación del lenguaje C#](~/_csharplang/spec/introduction.md).
 
@@ -39,4 +39,4 @@ Para obtener más información, vea la sección [Tipos de puntero](~/_csharplang
 - [Tipos de puntero](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Tipos relacionados con el intervalo y la memoria](../../../standard/memory-and-spans/index.md)
 - [sizeof (operador)](../operators/sizeof.md)
-- [stackalloc (operador)](../operators/stackalloc.md)
+- [stackalloc](../operators/stackalloc.md)

@@ -3,19 +3,21 @@ title: 'Instalación de .NET Core en SLES 12 (administrador de paquetes): .NET 
 description: Use un administrador de paquetes para instalar el SDK y el entorno de ejecución de .NET Core en SLES 12.
 author: thraka
 ms.author: adegeo
-ms.date: 12/04/2019
-ms.openlocfilehash: a6c10c6b11bc57ae4bbe814c66c563b85ce3c22b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 03/17/2020
+ms.openlocfilehash: 8358107c682274fc2b75bf72689eaa4b168a86c5
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76920727"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134215"
 ---
 # <a name="sles-12-package-manager---install-net-core"></a>Administrador de paquetes de SLES 12: instalación de .NET Core
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-En este artículo se describe cómo usar un administrador de paquetes para instalar .NET Core en SLES 12. Si va a instalar el entorno de ejecución, le recomendamos que instale el [entorno de ejecución de ASP.NET Core](#install-the-aspnet-core-runtime), ya que incluye los de .NET Core y ASP.NET Core.
+En este artículo se describe cómo usar un administrador de paquetes para instalar .NET Core en SLES 12.
+
+[!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
 ## <a name="register-microsoft-key-and-feed"></a>Registro de la clave y la fuente de Microsoft
 
