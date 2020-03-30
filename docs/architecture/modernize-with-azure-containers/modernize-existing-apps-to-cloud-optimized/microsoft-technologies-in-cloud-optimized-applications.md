@@ -2,12 +2,12 @@
 title: Tecnologías de Microsoft en aplicaciones optimizadas para la nube
 description: Modernización de las aplicaciones .NET existentes con Azure Clour y contenedores Windows | Tecnologías de Microsoft en aplicaciones optimizadas para la nube
 ms.date: 04/28/2018
-ms.openlocfilehash: 915aa99d2331c5b9c46eabef3335fb809baa9370
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c5222ba13258f9c8a40ca3b9ce240aeb9f41da63
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69578228"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546515"
 ---
 # <a name="microsoft-technologies-in-cloud-optimized-applications"></a>Tecnologías de Microsoft en aplicaciones optimizadas para la nube
 
@@ -19,7 +19,7 @@ En la lista siguiente se describen las herramientas, tecnologías y soluciones q
 
 - **Nube administrada**: cuando se elige una opción de nube administrada, se puede evitar el gasto y la complejidad de la administración y la compatibilidad de la infraestructura subyacente, las máquinas virtuales, las revisiones del sistema operativo y la configuración de red. Si decide migrar mediante IaaS, usted es responsable de todas estas tareas y de los costos asociados. En una opción de nube administrada, solo se administran las aplicaciones y los servicios que se desarrollan. Normalmente, el proveedor de servicios en la nube administra todo lo demás. Algunos ejemplos de servicios en la nube administrados de Azure son [Azure SQL Database](https://azure.microsoft.com/services/sql-database), [Azure Redis Cache](https://azure.microsoft.com/services/cache/), [Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/), [Azure Storage](https://azure.microsoft.com/services/storage/), [Azure Database for MySQL](https://azure.microsoft.com/services/mysql/), [Azure Database for PostgreSQL](https://azure.microsoft.com/services/postgresql/), [Azure Active Directory](https://azure.microsoft.com/services/active-directory/) y servicios de proceso administrados como [VMSS](https://azure.microsoft.com/services/virtual-machine-scale-sets/), [Azure App Service](https://azure.microsoft.com/services/app-service/) y [Azure Kubernetes Service](https://azure.microsoft.com/services/container-service/).
 
-- **Desarrollo de aplicaciones**: puede elegir entre muchos lenguajes al compilar aplicaciones que se ejecutan en contenedores. Esta guía se centra en [.NET](https://www.microsoft.com/net), pero puede desarrollar aplicaciones basadas en contenedores con otros lenguajes, como Node.js, Python, Spring/Java o Go.
+- **Desarrollo de aplicaciones**: puede elegir entre muchos lenguajes al compilar aplicaciones que se ejecutan en contenedores. Esta guía se centra en [.NET](https://dotnet.microsoft.com), pero puede desarrollar aplicaciones basadas en contenedores con otros lenguajes, como Node.js, Python, Spring/Java o Go.
 
 - **Supervisión, telemetría, registro y auditoría**: la capacidad de supervisar y auditar aplicaciones y contenedores que se ejecutan en la nube es fundamental para cualquier aplicación optimizada para la nube. [Azure Application Insights](https://azure.microsoft.com/services/application-insights/) y [Microsoft Operations Management Suite](https://www.microsoft.com/cloud-platform/operations-management-suite) son las principales herramientas de Microsoft que proporcionan supervisión y auditoría para las aplicaciones optimizadas para la nube.
 

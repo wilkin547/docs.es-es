@@ -2,16 +2,16 @@
 title: .NET Core y código abierto
 ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
-ms.openlocfilehash: b5aa42d0460d743bffe8f17a2603773c03c09ce0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a8f44eedddc4424b39f7aedceb4bb8f02c6feb42
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181606"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345031"
 ---
 # <a name="net-core-and-open-source"></a>.NET Core y código abierto
 
-En este artículo se proporciona una breve descripción de .NET Core y se muestra cómo encontrar más información. Para encontrar la lista completa de documentación de .NET Core, visite la [Guía de .NET Core](../../core/index.md).
+En este artículo se proporciona una breve descripción de .NET Core y se muestra cómo encontrar más información. Para encontrar la lista completa de documentación de .NET Core, visite la [Guía de .NET Core](../../core/index.yml).
 
 ## <a name="what-is-net-core"></a>¿Qué es .NET Core?  
 
@@ -46,5 +46,5 @@ La plataforma .NET Core está formada por varios componentes, entre los que se i
 ## <a name="see-also"></a>Vea también
 
 - [Tutorial de .NET: Hola mundo en 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)
-- [Guía de .NET Core](../../core/index.md)
+- [Guía de .NET Core](../../core/index.yml)
 - [Documentos sobre ASP.NET Core](/aspnet/core/)

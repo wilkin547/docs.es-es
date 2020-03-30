@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a8146db1fb54d63d4716b879ce793f7d817cef59
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64e854b06895ca54a9ab9870b85868788a731c00
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937291"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79549601"
 ---
 ### <a name="shared-framework-assemblies-removed-from-microsoftaspnetcoreapp"></a>Marco compartido: se han quitado los ensamblados de Microsoft.AspNetCore.App
 
@@ -36,7 +36,7 @@ Una referencia a `Microsoft.AspNetCore.App` ya no requiere un elemento `<Package
 
 Para obtener más información, vea [dotnet/aspnetcore#3612](https://github.com/dotnet/aspnetcore/issues/3612).
 
-Entity Framework Core se distribuye como paquetes NuGet. Este cambio alinea el modelo de envío con el resto de las bibliotecas de acceso a datos de .NET. Proporciona a Entity Framework Core la ruta más sencilla para continuar con la innovación al tiempo que admite las distintas plataformas .NET. La exclusión de Entity Framework Core del marco compartido no tiene ningún impacto en su estado como biblioteca desarrollada, admitida y mantenida por Microsoft. Continúa bajo la cobertura de la [directiva de compatibilidad de .NET Core](https://www.microsoft.com/net/platform/support-policy).
+Entity Framework Core se distribuye como paquetes NuGet. Este cambio alinea el modelo de envío con el resto de las bibliotecas de acceso a datos de .NET. Proporciona a Entity Framework Core la ruta más sencilla para continuar con la innovación al tiempo que admite las distintas plataformas .NET. La exclusión de Entity Framework Core del marco compartido no tiene ningún impacto en su estado como biblioteca desarrollada, admitida y mantenida por Microsoft. Continúa bajo la cobertura de la [directiva de compatibilidad de .NET Core](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).
 
 Json.NET y Entity Framework Core siguen funcionando con ASP.NET Core. Pero no se incluirán en el marco compartido.
 

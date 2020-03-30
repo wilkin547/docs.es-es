@@ -18,12 +18,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 037ddc8eeda418b2e4858ab98be6cd362ca0e1e2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2dc215a91c55be15e8eee488f0030f41e3492af5
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398176"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507092"
 ---
 # <a name="type-testing-and-cast-operators-c-reference"></a>Operadores de conversión y prueba de tipos (Referencia de C#)
 
@@ -113,7 +113,7 @@ Para obtener más información sobre las conversiones explícitas, vea la secci�
 
 ### <a name="other-usages-of-"></a>Otros usos de ()
 
-También puede utilizar paréntesis para [llamar a un método o invocar un delegado](member-access-operators.md#invocation-operator-).
+También puede utilizar paréntesis para [llamar a un método o invocar un delegado](member-access-operators.md#invocation-expression-).
 
 Sirven además para ajustar el orden en el que se van a evaluar operaciones en una expresión. Para obtener más información, vea [Operadores de C# (referencia de C#)](index.md).
 
