@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: d8b216bf5497cf2a1faa2fa24ba1d8b3102f6f10
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aca3b5c54bff9c2b4c5380c04dd0da162215b088
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185739"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523316"
 ---
 # <a name="configuring-tracing"></a>Configurar seguimiento
 En este tema se describe cómo se puede habilitar el seguimiento, configurar los orígenes de seguimiento para emitir trazas y establecer niveles de seguimiento, establecer el seguimiento y la propagación de actividades para admitir la correlación de seguimiento de un extremo a otro, y establecer escuchas de seguimiento para tener acceso a las trazas.  
@@ -38,7 +38,7 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
 <configuration>  
    <system.diagnostics>  
       <sources>  
-            <source name="System.ServiceModel"
+         <source name="System.ServiceModel"
                     switchValue="Information, ActivityTracing"  
                     propagateActivity="true">  
             <listeners>  
@@ -159,7 +159,7 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
 |Information|Eventos "positivos": eventos que marcan hitos exitosos|Hitos importantes y correctos de ejecución de la aplicación, independientemente de si la aplicación funciona correctamente o no.|En general, se generan mensajes útiles para supervisar y diagnosticar el estado del sistema, medir el rendimiento o el perfil. Puede usar esta información para la planeación de la capacidad y la administración del rendimiento:<br /><br /> - Se crean canales.<br />- Se crean agentes de escucha de punto final.<br />- El mensaje entra/deja el transporte.<br />- Se recupera el token de seguridad.<br />- Se lee la configuración.|Administradores<br /><br /> Desarrolladores de aplicaciones<br /><br /> Desarrolladores de productos.|  
 |Verbose|Eventos "positivos": eventos que marcan hitos exitosos.|Se emiten eventos de bajo nivel tanto para el código de usuario como para el servicio.|En general, puede utilizar este nivel para depuración u optimización de la aplicación.<br /><br /> - Encabezado del mensaje entendido.|Administradores<br /><br /> Desarrolladores de aplicaciones<br /><br /> Desarrolladores de productos.|  
 |ActivityTracing||Transmitir eventos entre actividades de procesamiento y componentes.|Este nivel permite a los administradores y programadores poner en correlación las aplicaciones que se encuentran en el mismo dominio de aplicación:<br /><br /> - Seguimientos de los límites de actividad, como inicio/parada.<br />- Rastros para traslados.|All|  
-|All||La aplicación puede funcionar correctamente. Se emiten todos los eventos.|Todos los eventos anteriores.|All|  
+|All||La aplicación puede funcionar correctamente. Se emiten todos los eventos.|Todos los eventos anteriores.|Todas|  
   
  Los niveles de Detallado a Crítico se apilan unos encima de otros, es decir, cada nivel de seguimiento incluye todos los niveles anteriores él excepto el nivel Off. Por ejemplo, una escucha que realiza escuchas en el nivel de advertencia recibe trazas de Crítico, Error, y Advertencia. Todos los niveles incluye los eventos de Detallado a Crítico y eventos de seguimiento de actividad.  
   
@@ -180,9 +180,9 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
   
  No puede utilizar el atributo `propagateActivity` con orígenes de seguimiento definidos por el usuario. Para la propagación del identificador de actividad de código de usuario, asegúrese de no establecer ServiceModel `ActivityTracing`, mientras todavía tenga el atributo ServiceModel `propagateActivity` establecido en `true`.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Rastreo](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [Seguimiento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)
-- [Cómo: Crear e inicializar agentes de escucha de seguimiento](../../../debug-trace-profile/how-to-create-and-initialize-trace-listeners.md)
+- [Procedimiento para crear e inicializar agentes de escucha de seguimiento](../../../debug-trace-profile/how-to-create-and-initialize-trace-listeners.md)
 - [Crear un agente de escucha de seguimiento personalizado](https://docs.microsoft.com/archive/msdn-magazine/2006/april/clr-inside-out-extending-system-diagnostics)
