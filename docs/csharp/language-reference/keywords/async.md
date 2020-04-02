@@ -8,12 +8,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: 92e94d6fe1c07ab5cd8f29d040401a737a1db78e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 89133339a75c70e3ac86d627065e78d555bff71d
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173658"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507209"
 ---
 # <a name="async-c-reference"></a>async (Referencia de C#)
 
@@ -26,7 +26,7 @@ public async Task<int> ExampleMethodAsync()
 }  
 ```  
 
-Si no está familiarizado con la programación asincrónica o no entiende cómo un método asincrónico usa el [operador `await`](../operators/await.md)para hacer el trabajo de larga duración sin bloquear el subproceso del autor de la llamada, lea la introducción de [Programación asincrónica con async y await](../../programming-guide/concepts/async/index.md). El siguiente código se encuentra dentro de un método asincrónico y llama al método <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType>:
+Si no está familiarizado con la programación asincrónica o no entiende cómo un método asincrónico usa el operador [`await`](../operators/await.md) para hacer el trabajo de larga duración sin bloquear el subproceso del autor de la llamada, lea la introducción de [Programación asincrónica con async y await](../../programming-guide/concepts/async/index.md). El siguiente código se encuentra dentro de un método asincrónico y llama al método <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType>:
   
 ```csharp  
 string contents = await httpClient.GetStringAsync(requestUrl);  
@@ -34,7 +34,7 @@ string contents = await httpClient.GetStringAsync(requestUrl);
   
 Un método asincrónico se ejecuta sincrónicamente hasta alcanzar la primera expresión `await`, en la que se suspende el método hasta que se complete la tarea en espera. Mientras tanto, el control vuelve al llamador del método, como se muestra en el ejemplo de la sección siguiente.  
   
-Si el método que la palabra clave `async` modifica no contiene una expresión o instrucción `await`, el método se ejecuta de forma sincrónica. Una advertencia del compilador alerta de cualquier método asincrónico que no contenga instrucciones de `await`, porque esa situación podría indicar un error. Vea [Compiler Warning (level 1) CS4014](../compiler-messages/cs4014.md) (Advertencia del compilador (nivel 1) CS4014).  
+Si el método que la palabra clave `async` modifica no contiene una expresión o instrucción `await`, el método se ejecuta de forma sincrónica. Una advertencia del compilador alerta de cualquier método asincrónico que no contenga instrucciones de `await`, porque esa situación podría indicar un error. Vea [Advertencia del compilador (nivel 1) CS4014](../compiler-messages/cs4014.md).  
   
  La palabra clave `async` es contextual en el sentido de que es una palabra clave cuando modifica un método, una expresión lambda o un método anónimo. En todos los demás contextos, se interpreta como identificador.  
   
@@ -64,7 +64,7 @@ Para ejecutar el código como una aplicación de la Tienda Windows:
 [!code-csharp[wpf-async](../../../../samples/snippets/csharp/language-reference/keywords/async/wpf/mainwindow.xaml.cs#1)]
   
 > [!IMPORTANT]
-> Para más información sobre las tareas y el código que se ejecuta mientras se espera la finalización por una tarea, vea [Programación asincrónica con async y await](../../programming-guide/concepts/async/index.md). Para obtener un ejemplo completo de WPF que usa elementos similares, vea [Walkthrough: Accessing the Web by Using Async and Await](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) (Tutorial: obtener acceso a la web con Async y Await).  
+> Para más información sobre las tareas y el código que se ejecuta mientras se espera la finalización por una tarea, vea [Programación asincrónica con async y await](../../programming-guide/concepts/async/index.md). Para obtener un ejemplo completo de WPF en el que se usan elementos similares, vea [Tutorial: Acceso a la Web usando async y await](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
 ## <a name="return-types"></a>Tipos de valor devueltos  
 Un método asincrónico puede tener los siguientes tipos de valor devuelto:
@@ -88,5 +88,5 @@ Para más información y ejemplos, vea [Tipos de valor devueltos asincrónicos](
 
 - <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>
 - [await](../operators/await.md)
-- [Tutorial: Acceso a Web mediante Async y Await](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Tutorial: Acceso a la Web usando async y await](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Programación asincrónica con Async y Await](../../programming-guide/concepts/async/index.md)

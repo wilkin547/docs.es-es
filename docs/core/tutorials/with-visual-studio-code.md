@@ -3,12 +3,12 @@ title: Introducción a C# y Visual Studio Code
 description: Obtenga información sobre cómo crear y depurar su primera aplicación .NET Core en C# mediante Visual Studio Code.
 author: kendrahavens
 ms.date: 12/05/2018
-ms.openlocfilehash: 8eaf1ba2314dcab96db615a8691afed82c5011a7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 49a1271f2bf74224e189e70bebf0d22c49408e5d
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79397888"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111067"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Introducción a C# y Visual Studio Code
 
@@ -90,7 +90,7 @@ También puede ver un breve tutorial de vídeo para obtener ayuda del programa d
 
 ## <a name="add-a-class"></a>Agregar una clase
 
-1. Para agregar una nueva clase, haga clic con el botón derecho en el Explorador de Visual Studio Code y seleccione **Nuevo archivo**. Asé se agrega un nuevo archivo a la carpeta abierta en Visual Studio Code.
+1. Para agregar una nueva clase, haga clic con el botón derecho en el Explorador de VSCode y seleccione **Nuevo archivo**. Asé se agrega un nuevo archivo a la carpeta abierta en Visual Studio Code.
 2. Asigne un nombre al archivo *MyClass.cs*. Debe guardarlo con una extensión `.cs` al final para que se reconozca como archivo csharp.
 3. Agregue el código siguiente para crear la primera clase. Asegúrese de incluir el espacio de nombres correcto para poder hacer referencia a él desde el archivo *Program.cs*:
 
@@ -143,7 +143,7 @@ También puede ver un breve tutorial de vídeo para obtener ayuda del programa d
 
 ### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a>Me faltan los recursos necesarios para compilar y depurar C# en Visual Studio Code. Mi depurador dice "Sin configuración".
 
-La extensión C# de Visual Studio Code puede generar recursos para compilar y depurar por usted. Visual Studio Code le pedirá que genere estos recursos al abrir un proyecto de C#. Aunque no genere los recursos, podrá seguir ejecutando este comando abriendo la paleta de comandos (**Vista > Paleta de comandos**) y escribiendo ">.NET: Generate Assets for Build and Debug". Al seleccionar esta opción se generan los archivos de configuración *.vscode*, *launch.json* y *tasks.json* que necesita.
+La extensión C# de Visual Studio Code puede generar recursos para compilar y depurar por usted. Visual Studio Code le pedirá que genere estos recursos al abrir un proyecto de C#. Aunque no genere los recursos, podrá seguir ejecutando este comando si abre la paleta de comandos (**Vista > Paleta de comandos**) y escribe ">.NET: Generar recursos para la compilación y depuración". Al seleccionar esta opción se generan los archivos de configuración *.vscode*, *launch.json* y *tasks.json* que necesita.
 
 ## <a name="see-also"></a>Vea también
 

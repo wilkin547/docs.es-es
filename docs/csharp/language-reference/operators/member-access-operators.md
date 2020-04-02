@@ -1,5 +1,5 @@
 ---
-title: 'Operadores de acceso a miembros: referencia de C#'
+title: 'Operadores y expresiones de acceso a miembros: referencia de C#'
 description: Obtenga información sobre los operadores de C# que puede usar para acceder a los miembros de tipos.
 ms.date: 09/18/2019
 author: pkulikov
@@ -32,25 +32,25 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 4d4bc0c192912b5fa87a8e91bc5ba0e1d4ce3598
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: da2ca4517bd007678d74ae9b76e10cad4c2696b4
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398212"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546645"
 ---
-# <a name="member-access-operators-c-reference"></a>Operadores de acceso a miembros (referencia de C#)
+# <a name="member-access-operators-and-expressions-c-reference"></a>Operadores y expresiones de acceso a miembros (referencia de C#)
 
-Puede usar los operadores siguientes cuando accede a un miembro de tipo:
+Puede usar los operadores y expresiones siguientes cuando accede a un miembro de tipo:
 
-- [`.` (acceso a miembros)](#member-access-operator-): para acceder a un miembro de un espacio de nombres o un tipo
+- [`.` (acceso a miembros)](#member-access-expression-): para acceder a un miembro de un espacio de nombres o un tipo
 - [`[]` (elemento de matriz o acceso a indizador)](#indexer-operator-): para acceder a un elemento de matriz o un indizador de tipo
 - [`?.` y `?[]` (operadores condicionales NULL)](#null-conditional-operators--and-): para realizar una operación de acceso a elementos o miembros solo si un operando es distinto de NULL
-- [`()` (invocación)](#invocation-operator-): para llamar a un método de acceso o invocar un delegado
+- [`()` (invocación)](#invocation-expression-): para llamar a un método de acceso o invocar un delegado
 - [`^` (índice desde el final) ](#index-from-end-operator-): para indicar que la posición del elemento se encuentra a partir del final de una secuencia
 - [`..` (intervalo)](#range-operator-): para especificar un intervalo de índices que puede utilizar para obtener un intervalo de elementos de secuencia
 
-## <a name="member-access-operator-"></a>Operador de acceso a miembros.
+## <a name="member-access-expression-"></a>Expresión de acceso a miembros.
 
 Use el token `.` para acceder a un miembro de un espacio de nombres o un tipo, como se muestran en los ejemplos siguientes:
 
@@ -109,7 +109,7 @@ void TraceMethod() {}
 
 ## <a name="null-conditional-operators--and-"></a>Operadores condicionales NULL ?. y ?[]
 
-Disponible en C# 6 y versiones posteriores, un operador condicional NULL aplica una operación de [acceso a miembros](#member-access-operator-), `?.`, o [acceso a elementos](#indexer-operator-), `?[]`, a su operando solo si dicho operando se evalúa como no `null`. Es decir:
+Disponible en C# 6 y versiones posteriores, un operador condicional NULL aplica una operación de [acceso a miembros](#member-access-expression-), `?.`, o [acceso a elementos](#indexer-operator-), `?[]`, a su operando solo si dicho operando se evalúa como no `null`. Es decir:
 
 - Si `a` se evalúa como `null`, el resultado de `a?.x` o `a?[x]` es `null`.
 - Si `a` se evalúa como no NULL, el resultado de `a?.x` o `a?[x]` es el mismo que el resultado de `a.x` o `a[x]`, respectivamente.
@@ -150,7 +150,7 @@ if (handler != null)
 }
 ```
 
-## <a name="invocation-operator-"></a>Operador de invocación ()
+## <a name="invocation-expression-"></a>Expresión de invocación ()
 
 Utilice paréntesis, `()`, para llamar a un [método](../../programming-guide/classes-and-structs/methods.md) o invocar un [delegado](../../programming-guide/delegates/index.md).
 
@@ -198,7 +198,7 @@ Para más información, consulte [Índices y rangos](../../tutorials/ranges-inde
 
 Los operadores `.`, `()`, `^` y `..` no se pueden sobrecargar. El operador `[]` también se considera un operador que no se puede sobrecargar. Use [indizadores](../../programming-guide/indexers/index.md) para admitir la indización con tipos definidos por el usuario.
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 Para más información, vea las secciones siguientes de la [Especificación del lenguaje C#](~/_csharplang/spec/introduction.md):
 

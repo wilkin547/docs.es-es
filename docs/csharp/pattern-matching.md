@@ -4,12 +4,12 @@ description: Información sobre las expresiones de coincidencia de patrones en C
 ms.date: 04/10/2019
 ms.technology: csharp-fundamentals
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: 0c302499543c90bd01427e2791435968d580f644
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb6baf3771024d02b2027f81fd35b8be4872cf6e
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170389"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249238"
 ---
 # <a name="pattern-matching"></a>Coincidencia de modelos
 

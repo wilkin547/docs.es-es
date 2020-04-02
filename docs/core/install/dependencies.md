@@ -5,12 +5,12 @@ author: leecow
 ms.author: leecow
 ms.date: 12/04/2019
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: ca86b3c158bb38c1293cd4303dcf4c00ea9175b1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 023b8fdf029dd6b17fe2186296d87dd7507c60b5
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78157820"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546567"
 ---
 # <a name="net-core-dependencies-and-requirements"></a>Dependencias y requisitos de .NET Core
 
@@ -41,6 +41,8 @@ Para obtener más información sobre los sistemas operativos compatibles con .NE
 
 # <a name="net-core-30"></a>[.NET Core 3.0](#tab/netcore30)
 
+*.NET Core 3.0 no se admite actualmente. Para más información, consulte la [directiva de soporte técnico de .NET Core](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).*
+
 Las versiones siguientes de Windows son compatibles con .NET Core 3.0:
 
 > [!NOTE]
@@ -56,6 +58,8 @@ Las versiones siguientes de Windows son compatibles con .NET Core 3.0:
 Para obtener más información sobre los sistemas operativos compatibles con .NET Core 3.0, las distribuciones y la directiva del ciclo de vida, vea [Versiones de SO compatibles con .NET Core 3.0](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md).
 
 # <a name="net-core-22"></a>[.NET Core 2.2](#tab/netcore22)
+
+*.NET Core 2.2 no se admite actualmente. Para más información, consulte la [directiva de soporte técnico de .NET Core](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).*
 
 Las versiones siguientes de Windows son compatibles con .NET Core 2.2:
 
@@ -132,7 +136,7 @@ Los requisitos anteriores también son necesarios si se encuentra con uno de los
 | Red Hat Enterprise Linux       | 6, 7, 8               | x64 |
 | CentOS                         | 7 (o posterior)                    | x64 |
 | Oracle Linux                   | 7 (o posterior)                    | x64 |
-| Fedora                         | 29+                   | x64 |
+| Fedora                         | 30+                   | x64 |
 | Debian                         | 9+                    | x64, ARM32, ARM64 |
 | Ubuntu                         | 16.04+                | x64, ARM32, ARM64 |
 | Linux Mint                     | 18+                   | x64 |
@@ -148,6 +152,8 @@ Para obtener más información sobre cómo instalar .NET Core 3.1 en ARM64 (ker
 > La compatibilidad con ARM64 requiere la versión 4.14 del kernel de Linux o una versión posterior. No todas las distribuciones de Linux cumplen este requisito. Por ejemplo, Ubuntu 18.04 es compatible, pero Ubuntu 16.04, no.
 
 # <a name="net-core-30"></a>[.NET Core 3.0](#tab/netcore30)
+
+*.NET Core 3.0 no se admite actualmente. Para más información, consulte la [directiva de soporte técnico de .NET Core](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).*
 
 .NET Core 3.0 considera a Linux como un único sistema operativo. Solo hay una única compilación de Linux (por arquitectura de chip) para las distribuciones de Linux compatibles.
 
@@ -174,6 +180,8 @@ Para obtener más información sobre los sistemas operativos compatibles con .NE
 Para obtener más información sobre cómo instalar .NET Core 3.0 en ARM64, vea [Installing .NET Core 3.0 on Linux ARM64](https://gist.github.com/richlander/467813274cea8abc624553ee72b28213) (Instalación de .NET Core 3.0 en Linux ARM64).
 
 # <a name="net-core-22"></a>[.NET Core 2.2](#tab/netcore22)
+
+*.NET Core 2.2 no se admite actualmente. Para más información, consulte la [directiva de soporte técnico de .NET Core](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).*
 
 .NET Core 2.2 considera a Linux como un único sistema operativo. Solo hay una única compilación de Linux (por arquitectura de chip) para las distribuciones de Linux compatibles.
 
@@ -211,7 +219,7 @@ Para obtener más información sobre los sistemas operativos compatibles con .NE
 | Red Hat Enterprise Linux       |  6, 7, 8                | x64 |
 | CentOS                         |  7 (o posterior)                     | x64 |
 | Oracle Linux                   |  7 (o posterior)                     | x64 |
-| Fedora                         |  29+                    | x64 |
+| Fedora                         |  30+                    | x64 |
 | Debian                         |  9                      | x64, ARM32 |
 | Ubuntu                         |  16.04, 18.04, 19.04 y 19.10    | x64, ARM32 |
 | Linux Mint                     |  17 y posteriores                    | x64 |

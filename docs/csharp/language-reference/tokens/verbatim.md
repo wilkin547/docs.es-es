@@ -8,12 +8,12 @@ helpviewer_keywords:
 - '@ special character [C#]'
 - '@ language element [C#]'
 ms.assetid: 89bc7e53-85f5-478a-866d-1cca003c4e8c
-ms.openlocfilehash: a3446eceb0d3c415e36ea1d2c7d8d6d34f65350d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b37f77273e767a5e5292e7707933892f57811d2a
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712421"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291772"
 ---
 # <a name="-c-reference"></a>@ (Referencia de C#)
 
@@ -23,7 +23,7 @@ El carácter especial `@` actúa como un identificador textual. Se puede usar de
 
    [!code-csharp[verbatim1](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#1)]
 
-1. Para indicar que un literal de cadena se debe interpretar literalmente. El carácter `@` de esta instancia define un *literal de cadena textual*. Las secuencias de escape sencillas (como `"\\"`, que es una barra diagonal inversa), las secuencias de escape hexadecimales (como `"\x0041"`, que es una A mayúscula) y las secuencias de escape Unicode (como `"\u0041"` que es una A mayúscula) se interpretan literalmente. Solo las secuencias de escape de comillas (`""`) no se interpretan literalmente, sino que generan una comilla simple. De igual modo, en el caso de una [cadena interpolada](interpolated.md) literal, las secuencias de escape de llave (`{{` y `}}`) no se interpretan literalmente, sino que generan caracteres de llave simple. En el siguiente ejemplo se definen dos rutas de archivo idénticas, una mediante un literal de cadena normal y otra mediante el uso de un literal de cadena textual. Este es uno de los usos más comunes de los literales de cadena textual.
+1. Para indicar que un literal de cadena se debe interpretar literalmente. El carácter `@` de esta instancia define un *literal de cadena textual*. Las secuencias de escape sencillas (como `"\\"`, que es una barra diagonal inversa), las secuencias de escape hexadecimales (como `"\x0041"`, que es una A mayúscula) y las secuencias de escape Unicode (como `"\u0041"` que es una A mayúscula) se interpretan literalmente. Solo las secuencias de escape de comillas (`""`) no se interpretan literalmente, sino que generan comillas dobles. De igual modo, en el caso de una [cadena interpolada](interpolated.md) literal, las secuencias de escape de llave (`{{` y `}}`) no se interpretan literalmente, sino que generan caracteres de llave simple. En el siguiente ejemplo se definen dos rutas de archivo idénticas, una mediante un literal de cadena normal y otra mediante el uso de un literal de cadena textual. Este es uno de los usos más comunes de los literales de cadena textual.
 
    [!code-csharp[verbatim2](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#2)]
 

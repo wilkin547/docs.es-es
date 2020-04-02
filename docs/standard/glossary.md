@@ -3,12 +3,12 @@ title: Glosario de .NET
 description: Descubra el significado de algunos de los términos usados en la documentación de .NET.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 8da1d858835210590a80a624fb8989fbfe8e0a91
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ed4dceed1a3f39c5c4ce7a278efc37bb38ed0d94
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398752"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344206"
 ---
 # <a name="net-glossary"></a>Glosario de .NET
 
@@ -46,7 +46,7 @@ Un ensamblado puede incluir tipos como interfaces, clases, estructuras, enumerac
 
 Common Language Runtime.
 
-El significado exacto depende del contexto, pero normalmente hace referencia al entorno de ejecución de .NET Framework. CLR controla la asignación y administración de memoria. CLR es también una máquina virtual que no solo ejecuta aplicaciones, sino que también genera y compila código sobre la marcha mediante un compilador [JIT](#jit). La implementación actual de Microsoft CLR es solo Windows.
+El significado exacto depende del contexto, pero Common Language Runtime normalmente hace referencia al entorno de ejecución de .NET Framework. CLR controla la asignación y administración de memoria. CLR es también una máquina virtual que no solo ejecuta aplicaciones, sino que también genera y compila código sobre la marcha mediante un compilador [JIT](#jit). La implementación actual de Microsoft CLR es solo Windows.
 
 ## <a name="coreclr"></a>CoreCLR
 
@@ -64,7 +64,7 @@ Un conjunto de bibliotecas que conforman los espacios de nombres de System.\* (y
 
 Entorno de ejecución .NET Core.
 
-A diferencia de CLR o CoreCLR, CoreRT no es una máquina virtual, lo que significa que no incluye las funciones para generar y ejecutar código sobre la marcha porque no incluye un [JIT](#jit). En cambio, incluye [GC](#gc), reflexión y capacidad de identificación del tipo en tiempo de ejecución (RTTI). Con todo, su sistema de tipos está diseñado para que no sean necesarios los metadatos para la reflexión. Esto permite tener una cadena de herramientas de [AOT](#aot) que puede vincular metadatos superfluos y (más importante) identificar código que no usa la aplicación. CoreRT está en desarrollo.
+A diferencia de CLR o CoreCLR, CoreRT no es una máquina virtual, lo que significa que no incluye las funciones para generar y ejecutar código sobre la marcha porque no incluye un [JIT](#jit). En cambio, incluye [GC](#gc), reflexión y capacidad de identificación del tipo en tiempo de ejecución (RTTI). Con todo, su sistema de tipos está diseñado para que no sean necesarios los metadatos para la reflexión. No requerir los metadatos permite tener una cadena de herramientas de [AOT](#aot) que puede vincular metadatos superfluos y (más importante) identificar código que no usa la aplicación. CoreRT está en desarrollo.
 
 Consulte [Introducción a .NET Native u CoreRT](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md).
 
@@ -98,7 +98,7 @@ Recolector de elementos no utilizados.
 
 El recolector de elementos no utilizados es una implementación de administración de memoria automática.  GC libera la memoria ocupada por objetos que ya no se usan.
 
-Vea [Garbage Collection](garbage-collection/index.md) (Recolección de elementos no utilizados).
+Vea [Recolección de elementos no utilizados](garbage-collection/index.md).
 
 ## <a name="il"></a>IL
 
@@ -124,7 +124,7 @@ Una implementación de .NET incluye lo siguiente:
 Ejemplos de implementaciones de .NET:
 
 - [.NET Framework](#net-framework)
-- [.NET Core](#net-core)
+- [Núcleo de .NET](#net-core)
 - [Plataforma universal de Windows (UWP)](#uwp)
 
 ## <a name="library"></a>biblioteca
@@ -137,7 +137,7 @@ Las palabras biblioteca y [marco de trabajo](#framework) se usan a menudo como s
 
 Un paquete de NuGet que no tiene ninguna biblioteca propia pero es solo una lista de dependencias. Los paquetes incluidos pueden establecer opcionalmente la API de una plataforma de destino.
 
-Vea [Paquetes, metapaquetes y marcos de trabajo](../core/packages.md).
+Consulte [Paquetes, metapaquetes y marcos de trabajo](../core/packages.md).
 
 ## <a name="mono"></a>Mono
 
@@ -153,7 +153,7 @@ Para más información sobre Mono, consulte la [documentación de Mono](https://
 
 ## <a name="net"></a>.NET
 
-El término que engloba [.NET Standard](#net-standard) y todas las cargas de trabajo e [implementaciones de .NET](#implementation-of-net). Siempre en mayúsculas, nunca ".Net".
+El término que engloba [.NET Standard](#net-standard) y todas las cargas de trabajo e [implementaciones de .NET](#implementation-of-net). Siempre totalmente en mayúsculas, nunca ".Net".
 
 Consulte la [Guía de la plataforma .NET](index.md).
 
@@ -161,7 +161,7 @@ Consulte la [Guía de la plataforma .NET](index.md).
 
 Una implementación multiplataforma, de alto rendimiento y de código abierto de .NET. Incluye Core Common Language Runtime (CoreCLR), el entorno de ejecución AOT de Core (CoreRT, en desarrollo), la biblioteca de clases base de Core y el SDK de Core.
 
-Vea [.NET Core](../core/index.md).
+Vea [.NET Core](../core/index.yml).
 
 ## <a name="net-core-cli"></a>CLI de .NET Core
 
@@ -179,7 +179,7 @@ Vea [Información general sobre el SDK de .NET Core](../core/sdk.md).
 
 Una implementación de .NET que se ejecuta solo en Windows. Incluye Common Language Runtime (CLR), la biblioteca de clases base y las bibliotecas de marco de trabajo de la aplicación, como ASP.NET, Windows Forms y WPF.
 
-Vea [Guía de .NET Framework](../framework/index.md).
+Vea [Guía de .NET Framework](../framework/index.yml).
 
 ## <a name="net-native"></a>.NET Native
 
@@ -205,7 +205,7 @@ Generación (de imágenes) nativas.
 
 Esta tecnología se puede considerar como un compilador JIT persistente. Normalmente, compila código en el equipo en que se ejecuta el código, pero la compilación se suele producir durante la instalación.
 
-## <a name="package"></a>Paquete
+## <a name="package"></a>paquete
 
 Un paquete de NuGet &mdash; o simplemente un paquete &mdash; es un archivo *.zip* con uno o varios ensamblados del mismo nombre junto con metadatos adicionales, como el nombre del autor.
 
@@ -269,12 +269,12 @@ Vea [Plataformas de destino](frameworks.md).
 
 Plataforma universal de Windows.
 
-Una implementación de .NET que se usa para compilar aplicaciones Windows modernas y táctiles y software para Internet de las cosas (IoT). Se ha diseñado para unificar los diferentes tipos de dispositivos de destino, incluidos equipos, tabletas, phablets, teléfonos e incluso la consola Xbox. UWP proporciona muchos servicios, como una tienda de aplicaciones centralizada, un entorno de ejecución (AppContainer) y un conjunto de API de Windows para usar en lugar de Win32 (WinRT). Pueden escribirse aplicaciones en C++, C#, Visual Basic y JavaScript. Al usar C# y Visual Basic, .NET Core proporciona las API de .NET.
+Una implementación de .NET que se usa para compilar aplicaciones Windows modernas y táctiles y software para Internet de las cosas (IoT). Se ha diseñado para unificar los diferentes tipos de dispositivos de destino, incluidos equipos, tabletas, teléfonos e incluso la consola Xbox. UWP proporciona muchos servicios, como una tienda de aplicaciones centralizada, un entorno de ejecución (AppContainer) y un conjunto de API de Windows para usar en lugar de Win32 (WinRT). Pueden escribirse aplicaciones en C++, C#, Visual Basic y JavaScript. Al usar C# y Visual Basic, .NET Core proporciona las API de .NET.
 
 ## <a name="see-also"></a>Vea también
 
 - [Guía de .NET](index.md)
-- [Guía de .NET Framework](../framework/index.md)
-- [.NET Core](../core/index.md)
+- [Guía de .NET Framework](../framework/index.yml)
+- [Núcleo de .NET](../core/index.yml)
 - [ASP.NET Overview](/aspnet/index#pivot=aspnet) (Información general de ASP.NET)
 - [ASP.NET Core Overview](/aspnet/index#pivot=core) (Información general de ASP.NET Core)

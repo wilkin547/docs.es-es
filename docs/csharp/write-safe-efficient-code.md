@@ -4,12 +4,12 @@ description: Las mejoras aplicadas recientemente al lenguaje C# permiten escribi
 ms.date: 10/23/2018
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: d4a7916b80e15c7f00fa0a7da213ed0593e0959d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 365320fef5a2f9cd123086c1baed9a786ede9f05
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78239981"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345080"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Escritura de código C# seguro y eficaz
 
@@ -21,7 +21,7 @@ Este artículo se centra en las técnicas que se deben aplicar para administrar 
 
 Este artículo se centra en estas técnicas de administración de recursos:
 
-- Declare un valor [`readonly struct`](language-reference/keywords/readonly.md#readonly-struct-example) para indicar que un tipo es **inmutable**, lo cual permite al compilador ahorrar procesos de copia usando parámetros [`in`](language-reference/keywords/in-parameter-modifier.md).
+- Declare un parámetro [`readonly struct`](language-reference/builtin-types/struct.md#readonly-struct) para expresar que un tipo es **inmutable**. Esto permite al compilador guardar copias defensivas cuando se usan parámetros [`in`](language-reference/keywords/in-parameter-modifier.md).
 - Si un tipo no puede ser inmutable, declare miembros `readonly` de `struct` para indicar que el miembro no modifica el estado.
 - Utilice una devolución [`ref readonly`](language-reference/keywords/ref.md#reference-return-values) si el valor devuelto es un valor `struct` mayor que <xref:System.IntPtr.Size?displayProperty=nameWithType> y la duración del almacenamiento es superior al método que devuelve el valor.
 - Si el tamaño de un valor `readonly struct` es mayor que <xref:System.IntPtr.Size?displayProperty=nameWithType>, deberá pasarlo como parámetro `in` por motivos de rendimiento.
@@ -72,7 +72,7 @@ Siga esta recomendación siempre que su intención de diseño sea crear un tipo 
 
 ## <a name="declare-readonly-members-when-a-struct-cant-be-immutable"></a>Declaración de miembros de solo lectura cuando una estructura no pueda ser inmutable
 
-En C# 8.0 y versiones posteriores, cuando un tipo de estructura es mutable, debe declarar los miembros que no provocan la mutación para que sean `readonly`. Por ejemplo, lo siguiente es una variación mutable de la estructura de punto 3D:
+En C# 8.0 y versiones posteriores, cuando un tipo de estructura es mutable, debe declarar los miembros que no provocan la mutación para que sean `readonly`. Plantéese usar una aplicación diferente que necesite una estructura de punto 3D, pero que admita la mutabilidad. La siguiente versión de la estructura de punto 3D agrega el modificador `readonly` solo a los miembros que no modifican la estructura. Siga este ejemplo cuando el diseño deba admitir modificaciones en el tipo de datos struct por parte de algunos miembros, pero desea obtener las ventajas de aplicar readonly en algunos miembros:
 
 ```csharp
 public struct Point3D
@@ -214,13 +214,13 @@ Con este comportamiento es más fácil adoptar parámetros `in` con el tiempo en
 
 La designación del parámetro `in` también se puede usar con tipos de referencia o valores numéricos. Sin embargo, las ventajas de ambos casos son mínimas, si las hay.
 
-## <a name="never-use-mutable-structs-as-in-in-argument"></a>No usar nunca valores struct mutables como en el argumento `in`
+## <a name="avoid-mutable-structs-as-an-in-argument"></a>Evitar structs mutables como un argumento `in`
 
 En las técnicas descritas anteriormente se explica cómo evitar copias devolviendo referencias y pasando los valores por referencia. Estas técnicas funcionan mejor cuando los tipos de argumento se declaran como tipos `readonly struct`. En caso contrario, el compilador deberá crear **copias defensivas** en muchas situaciones para aplicar la característica de solo lectura en cualquier argumento. Tenga en cuenta el comentario siguiente, en el que se calcula la distancia de un punto 3D respecto del origen:
 
 [!code-csharp[InArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
 
-La estructura `Point3D`*no* es un valor struct de solo lectura. Hay seis llamadas de acceso a propiedades en el cuerpo de este método. En el primer examen, es posible que haya pensado que esos accesos son seguros. Al fin y al cabo, un descriptor de acceso `get` no debe modificar el estado del objeto. Sin embargo, no hay ninguna regla de lenguaje que lo exija. Se trata solo de una convención habitual. Cualquier tipo podría implementar un descriptor de acceso `get` que haya modificado el estado interno. Si el compilador no dispone de ninguna garantía relativa al lenguaje, debe crear una copia temporal del argumento antes de llamar a algún miembro. El almacenamiento temporal se crea en la pila, los valores del argumento se copian al almacenamiento temporal y el valor se copia en la pila por cada acceso de miembro como argumento `this`. En muchas situaciones, estas copias perjudican tanto el rendimiento que el parámetro de paso por valor es más rápido que el de paso por referencia cuando el tipo de argumento no es un valor `readonly struct`.
+La estructura `Point3D`*no* es un valor struct de solo lectura. Hay seis llamadas de acceso a propiedades en el cuerpo de este método. En el primer examen, es posible que haya pensado que esos accesos son seguros. Al fin y al cabo, un descriptor de acceso `get` no debe modificar el estado del objeto. Sin embargo, no hay ninguna regla de lenguaje que lo exija. Se trata solo de una convención habitual. Cualquier tipo podría implementar un descriptor de acceso `get` que haya modificado el estado interno. Si el compilador no dispone de ninguna garantía relativa al lenguaje, debe crear una copia temporal del argumento antes de llamar a algún miembro no marcado con el modificador `readonly`. El almacenamiento temporal se crea en la pila, los valores del argumento se copian al almacenamiento temporal y el valor se copia en la pila por cada acceso de miembro como argumento `this`. En muchas situaciones, estas copias perjudican tanto el rendimiento que el parámetro de paso por valor es más rápido que el de paso por referencia cuando el tipo de argumento no es un valor `readonly struct`, y el método llama a los miembros no marcados con `readonly`. Si marca todos los métodos que no modifican el estado de struct como `readonly`, el compilador puede determinar con seguridad que no se modifica el estado de struct y no se necesita una copia defensiva.
 
 En lugar de ello, si en el cálculo de distancia se usa la estructura inmutable, `ReadonlyPoint3D`, no se necesitan objetos temporales:
 

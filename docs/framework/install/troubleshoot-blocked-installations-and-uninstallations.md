@@ -1,17 +1,18 @@
 ---
 title: Solución de problemas en instalaciones y desinstalaciones bloqueadas de .NET Framework
+description: Solucione los problemas que encuentre que impidan la instalación del .NET Framework. Consulte los mensajes de estado para obtener información de solución de problemas.
 ms.date: 04/18/2019
 ms.custom: updateeachrelease
 helpviewer_keywords:
 - .NET Framework, troubleshooting blocked installations
 - blocked .NET Framework installations, troubleshooting
 ms.assetid: c3fdfbc1-ed99-4202-a2b0-8c4f1646385d
-ms.openlocfilehash: edc471ad2c389a37a2ffbf739a74d4d5d0e9696f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 70cefb53d29c7a895a3e242776bae39b7636fd65
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76965989"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79506962"
 ---
 # <a name="troubleshoot-blocked-net-framework-installations-and-uninstallations"></a>Solución de problemas en instalaciones y desinstalaciones bloqueadas de .NET Framework
 

@@ -3,12 +3,12 @@ title: Creación de tipos mixin mediante métodos de interfaz predeterminados
 description: Con el uso de los miembros de interfaz predeterminados, puede extender las interfaces con implementaciones predeterminadas opcionales para los implementadores.
 ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: aaf8d34e27c9c56d95560656eb7a7b24b152c053
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ee0536ef51f9bea3e6851be23cc19fa28cc6916b
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240111"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134374"
 ---
 # <a name="tutorial-mix-functionality-in-when-creating-classes-using-interfaces-with-default-interface-methods"></a>Tutorial: Funcionalidad de combinación al crear clases mediante interfaces con métodos de interfaz predeterminados
 
@@ -117,7 +117,7 @@ En este escenario se muestra una interfaz base sin ninguna implementación. Agre
 
 [!code-csharp[Enumeration for power status](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetPowerStatus)]
 
-La implementación predeterminada presupone la alimentación de corriente alterna:
+La implementación predeterminada presupone la ausencia de alimentación:
 
 [!code-csharp[Report a default power status](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetILightInterface)]
 

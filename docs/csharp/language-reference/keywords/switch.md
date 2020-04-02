@@ -12,14 +12,16 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: e5580e81b9175cd95491fdba724bacbffa692a5e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 49b3836f17e91ae8de10d68e97fd662aae80d1ff
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345392"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249323"
 ---
 # <a name="switch-c-reference"></a>switch (referencia de C#)
+
+En este artículo se trata la instrucción `switch`: Para información sobre la expresión `switch` (introducida en C# 8.0), consulte el artículo sobre [expresiones `switch`](../operators/switch-expression.md) en la sección [expresiones y operadores](../operators/index.md).
 
 `switch` es una instrucción de selección que elige una sola *sección switch* para ejecutarla desde una lista de candidatos en función de una coincidencia de patrones con la *expresión de coincidencia*.
 
@@ -106,7 +108,7 @@ La etiqueta case `default` especifica la sección switch que se va a ejecutar si
 
 La etiqueta case `default` puede aparecer en cualquier orden en la instrucción `switch`. Independientemente de su orden en el código fuente, siempre se evalúa en último lugar, después de que se hayan evaluado las demás etiquetas `case`.
 
-## <a name="a-namepattern--pattern-matching-with-the-switch-statement"></a><a name="pattern" /> Coincidencia de patrones con la instrucción `switch`
+## <a name="pattern-matching-with-the-switch-statement"></a><a name="pattern" /> Coincidencia de patrones con la instrucción `switch`
 
 Cada instrucción `case` define un patrón que, si coincide con la expresión de coincidencia, provoca la ejecución de su sección switch contenedora. Todas las versiones de C# admiten el patrón de constante. Los demás patrones se admiten a partir de C# 7.0.
 
@@ -183,7 +185,7 @@ Sin coincidencia de patrones, este código podría escribirse del modo siguiente
 
 [!code-csharp[type-pattern2#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
 
-## <a name="a-namewhen--the-case-statement-and-the-when-clause"></a><a name="when" /> La instrucción `case` y la cláusula `when`
+## <a name="the-case-statement-and-the-when-clause"></a><a name="when" /> La instrucción `case` y la cláusula `when`
 
 A partir de C# 7.0, dado que las instrucciones case no necesitan ser mutuamente excluyentes, puede agregar una cláusula `when` para especificar una condición adicional que deba cumplirse para que la instrucción case se evalúe como true. La cláusula `when` puede ser cualquier expresión que devuelva un valor booleano.
 

@@ -3,16 +3,16 @@ title: Herramienta de desinstalación
 description: Información general de la herramienta de desinstalación de .NET Core, una herramienta guiada que permite limpiar de forma controlada los SDK y los entornos en tiempo de ejecución de .NET Core.
 author: sfoslund
 ms.date: 01/06/2020
-ms.openlocfilehash: 4944c983cbd02b456c3a09a1b03bc28ba6e458cc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 816aef6ab8bc0e51bb8befb14fde60513d4fadfc
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714551"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507326"
 ---
 # <a name="net-core-uninstall-tool"></a>Herramienta de desinstalación de .NET Core
 
-La [herramienta de desinstalación de .NET Core](https://github.com/dotnet/cli-lab/releases) (`dotnet-core-uninstall`) permite quitar los SDK y los entornos en tiempo de ejecución de .NET Core de un sistema. Hay una colección de opciones disponible para especificar las versiones que desea desinstalar.
+La [herramienta de desinstalación de .NET Core](https://aka.ms/dotnet-core-uninstall-tool) (`dotnet-core-uninstall`) permite quitar los SDK y los entornos en tiempo de ejecución de .NET Core de un sistema. Hay una colección de opciones disponible para especificar las versiones que desea desinstalar.
 
 La herramienta es compatible con Windows y macOS. Linux no se admite actualmente.
 
@@ -27,10 +27,10 @@ Debido a estas limitaciones, es posible que la herramienta no pueda desinstalar 
 
 ## <a name="install-the-tool"></a>Instalación de la herramienta
 
-Puede descargar la herramienta de desinstalación de .NET Core del repositorio de GitHub [dotnet/cli-lab](https://github.com/dotnet/cli-lab/releases).
+[Aquí](https://aka.ms/dotnet-core-uninstall-tool) puede descargar la herramienta de desinstalación de .NET Core. En el repositorio de GitHub [dotnet/cli-lab](https://github.com/dotnet/cli-lab) encontrará el código fuente.
 
 > [!NOTE]
-> La herramienta requiere elevación para desinstalar los SDK y los entornos en tiempo de ejecución de .NET Core. Por lo tanto, debe instalarse en un directorio protegido contra escritura, como *C:\Archivos de programa* en Windows o */usr/local/bin* en macOS. Consulte también [Acceso con privilegios elevados para comandos de dotnet](../tools/elevated-access.md). Puede encontrar instrucciones de instalación detalladas en la [página de versiones de GitHub](https://github.com/dotnet/cli-lab/releases).
+> La herramienta requiere elevación para desinstalar los SDK y los entornos en tiempo de ejecución de .NET Core. Por lo tanto, debe instalarse en un directorio protegido contra escritura, como *C:\Archivos de programa* en Windows o */usr/local/bin* en macOS. Consulte también [Acceso con privilegios elevados para comandos de dotnet](../tools/elevated-access.md). Para obtener más información, vea las [instrucciones de instalación detalladas](https://aka.ms/dotnet-core-uninstall-tool).
 
 ## <a name="run-the-tool"></a>Ejecución de la herramienta
 
@@ -45,6 +45,9 @@ En los pasos siguientes se muestra el enfoque recomendado para ejecutar la herra
 
 El comando `dotnet-core-uninstall list` enumera los SDK y los entornos en tiempo de ejecución de .NET Core instalados que se pueden quitar con esta herramienta. Visual Studio puede necesitar algunos SDK y entornos en tiempo de ejecución, que se muestran con una nota de por qué no se recomienda desinstalarlos.
 
+> [!NOTE]
+> En la mayoría de los casos, la salida del comando `dotnet-core-uninstall list` no coincidirá con la lista de versiones instaladas en la salida de `dotnet --info`. En concreto, esta herramienta no mostrará las versiones instaladas mediante archivos ZIP ni administradas por Visual Studio (cualquier versión instalada con Visual Studio 2019 16.3 o posterior). Una manera de comprobar si una versión está administrada por Visual Studio es verla en `Add or Remove Programs`, donde las versiones administradas de Visual Studio se marcan como tales en sus nombres para mostrar.
+
 **dotnet-core-uninstall list**
 
 #### <a name="synopsis"></a>Sinopsis
@@ -55,7 +58,7 @@ dotnet-core-uninstall list [options]
 
 #### <a name="options"></a>Opciones
 
-## <a name="windowstabwindows"></a>[Windows](#tab/windows)
+## <a name="windows"></a>[Windows](#tab/windows)
 
 * **`--aspnet-runtime`**
 
@@ -85,7 +88,7 @@ dotnet-core-uninstall list [options]
 
   Enumera todos los SDK y entornos en tiempo de ejecución de .NET Core x86 que se pueden desinstalar con esta herramienta.
 
-## <a name="macostabmacos"></a>[macOS](#tab/macos)
+## <a name="macos"></a>[macOS](#tab/macos)
 
 * **`--runtime`**
 
@@ -148,7 +151,7 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 
 #### <a name="options"></a>Opciones
 
-## <a name="windowstabwindows"></a>[Windows](#tab/windows)
+## <a name="windows"></a>[Windows](#tab/windows)
 
 * **`--all`**
 
@@ -218,7 +221,7 @@ Notas:
 2. `--all`, `--all-below`, `--all-but`, `--all-but-latest`, `--all-lower-patches`, `--all-previews`, `--all-previews-but-latest`, `--major-minor` y `[<VERSION>...]` son valores exclusivos.
 3. Si no se especifica `--x64` o `--x86`, se quitarán tanto x64 como x86.
 
-## <a name="macostabmacos"></a>[macOS](#tab/macos)
+## <a name="macos"></a>[macOS](#tab/macos)
 
 * **`--all`**
 
@@ -328,7 +331,7 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
 #### <a name="options"></a>Opciones
 
-## <a name="windowstabwindows"></a>[Windows](#tab/windows)
+## <a name="windows"></a>[Windows](#tab/windows)
 
 * **`--all`**
 
@@ -400,7 +403,7 @@ Notas:
 2. `--all`, `--all-below`, `--all-but`, `--all-but-latest`, `--all-lower-patches`, `--all-previews`, `--all-previews-but-latest`, `--major-minor` y `[<VERSION>...]` son valores exclusivos.
 3. Si no se especifica `--x64` o `--x86`, se quitarán tanto x64 como x86.
 
-## <a name="macostabmacos"></a>[macOS](#tab/macos)
+## <a name="macos"></a>[macOS](#tab/macos)
 
 * **`--all`**
 
@@ -511,13 +514,13 @@ En algunos casos, ya no necesita `NuGetFallbackFolder` y puede que desee elimina
 
 ## <a name="uninstall-the-tool"></a>Desinstalación de la herramienta.
 
-## <a name="windowstabwindows"></a>[Windows](#tab/windows)
+## <a name="windows"></a>[Windows](#tab/windows)
 
 1. Abra **Agregar o quitar programas**.
 2. Busque `Microsoft .NET Core SDK Uninstall Tool`.
 3. Seleccione **Desinstalar**.
 
-## <a name="macostabmacos"></a>[macOS](#tab/macos)
+## <a name="macos"></a>[macOS](#tab/macos)
 
 Elimine el archivo *dotnet-Core-Uninstall.tar.gz* descargado del directorio donde se instaló. Si descomprimió el contenido de este archivo en otro directorio, asegúrese de eliminar también dicho contenido.
 

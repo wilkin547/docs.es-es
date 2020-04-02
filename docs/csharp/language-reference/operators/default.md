@@ -1,25 +1,30 @@
 ---
-title: Operador default (referencia de C#)
-description: Uso del operador default para generar el valor predeterminado de un tipo
-ms.date: 08/01/2019
+title: 'Expresiones de valor predeterminado: referencia de C#'
+description: Use las expresiones de valor predeterminado para obtener el valor predeterminado de un tipo
+ms.date: 03/13/2020
+f1_keywords:
+- default_CSharpKeyword
+- default
 helpviewer_keywords:
 - default keyword [C#]
-ms.openlocfilehash: 0d37fe952e71e74f014872231a2e58663dea9d18
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2adfd8d24066e9dad50c3c18407d3ade71b4b68e
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398188"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507183"
 ---
-# <a name="default-operator-c-reference"></a>Operador default (Referencia de C#)
+# <a name="default-value-expressions-c-reference"></a>Expresiones de valor predeterminado (referencia de C#)
 
-El operador `default` genera el [valor predeterminado](../builtin-types/default-values.md) de un tipo. El argumento del operador `default` debe ser el nombre de un tipo o un parámetro de tipo.
-
-En el ejemplo siguiente se muestra el uso del operador `default`:
-
-[!code-csharp-interactive[default of T](snippets/DefaultOperator.cs#WithOperand)]
+Una expresión de valor predeterminado genera el [valor predeterminado](../builtin-types/default-values.md) de un tipo. Hay dos tipos de expresiones de valor predeterminado: la llamada al [operador predeterminado](#default-operator) y un [literal predeterminado](#default-literal).
 
 También se usa la palabra clave `default` como etiqueta de mayúsculas y minúsculas predeterminada dentro de una [instrucción `switch`](../keywords/switch.md).
+
+## <a name="default-operator"></a>operador default
+
+El argumento del operador `default` debe ser el nombre de un tipo o un parámetro de tipo, como se muestra en el ejemplo siguiente:
+
+[!code-csharp-interactive[default of T](snippets/DefaultOperator.cs#WithOperand)]
 
 ## <a name="default-literal"></a>Literal default
 
@@ -34,7 +39,7 @@ En el ejemplo siguiente se muestra el uso del literal `default`:
 
 [!code-csharp-interactive[default literal](snippets/DefaultOperator.cs#DefaultLiteral)]
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 Para más información, consulte la sección [Expresiones de valor predeterminado](~/_csharplang/spec/expressions.md#default-value-expressions) de la [especificación del lenguaje C#](~/_csharplang/spec/introduction.md).
 

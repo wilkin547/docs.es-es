@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 5193fc7aaae83cbc0c75e81835244eaaaece69a5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0947e597da93d6db1c5965b3685a509961778586
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75700203"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507053"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Uso de espacios de nombres (Guía de programación de C#)
 
@@ -42,7 +42,7 @@ Los espacios de nombres se usan mucho en programas de C# de dos maneras. En prim
   
 ## <a name="using-namespaces-to-control-scope"></a>Uso de los espacios de nombres para controlar el ámbito
 
- La palabra clave `namespace` se usa para declarar un ámbito. La capacidad de crear ámbitos en su proyecto le ayuda a organizar código y le permite crear tipos únicos globalmente. En el ejemplo siguiente, una clase denominada `SampleClass` se define en dos espacios de nombres, uno anidado dentro de otro. El [operador `.` de acceso a miembros](../../language-reference/operators/member-access-operators.md#member-access-operator-) se utiliza para diferenciar el método al que se llama.  
+ La palabra clave `namespace` se usa para declarar un ámbito. La capacidad de crear ámbitos en su proyecto le ayuda a organizar código y le permite crear tipos únicos globalmente. En el ejemplo siguiente, una clase denominada `SampleClass` se define en dos espacios de nombres, uno anidado dentro de otro. El token [`.`](../../language-reference/operators/member-access-operators.md#member-access-expression-) se usa para diferenciar a qué método se llama.  
   
  [!code-csharp[csProgGuideNamespaces#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#8)]  
   
@@ -94,6 +94,6 @@ Los espacios de nombres se usan mucho en programas de C# de dos maneras. En prim
 
 - [Guía de programación de C#](../index.md)
 - [Espacios de nombres](./index.md)
-- [Operador .](../../language-reference/operators/member-access-operators.md#member-access-operator-)
+- [Expresión de acceso a miembro](../../language-reference/operators/member-access-operators.md#member-access-expression-)
 - [Operador ::](../../language-reference/operators/namespace-alias-qualifier.md)
 - [extern alias](../../language-reference/keywords/extern-alias.md)

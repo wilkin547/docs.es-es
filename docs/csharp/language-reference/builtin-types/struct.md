@@ -1,6 +1,6 @@
 ---
 title: 'Tipos de estructura: Referencia de C#'
-ms.date: 02/24/2020
+ms.date: 03/26/2020
 f1_keywords:
 - struct_CSharpKeyword
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: b85d0df086f3ca65ed995594dd374286e1c3ba5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6a2c97b93a8f6d1d62bd8a96865a4fe6587f55d3
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847734"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345141"
 ---
 # <a name="structure-types-c-reference"></a>Tipos de estructura (Referencia de C#)
 
@@ -24,6 +24,24 @@ Un *tipo de estructura* (o *tipo struct*) es un [tipo de valor](value-types.md) 
 Los tipos de estructura tienen *semántica de valores*. Es decir, una variable de un tipo de estructura contiene una instancia del tipo. De forma predeterminada, los valores de variable se copian al asignar, pasar un argumento a un método o devolver el resultado de un método. En el caso de una variable de tipo de estructura, se copia una instancia del tipo. Para más información, vea [Tipos de valor](value-types.md).
 
 Normalmente, los tipos de estructura se usan para diseñar tipos de pequeño tamaño centrados en datos que proporcionan poco o ningún comportamiento. Por ejemplo, en .NET se usan los tipos de estructura para representar un número ([entero](integral-numeric-types.md) y [real](floating-point-numeric-types.md)), un [valor booleano](bool.md), un [caracter Unicode](char.md), una [instancia de tiempo](xref:System.DateTime). Si le interesa el comportamiento de un tipo, considere la posibilidad de definir una [clase](../keywords/class.md). Los tipos de clase tienen *semántica de referencias*. Es decir, una variable de un tipo de clase contiene una referencia a una instancia del tipo, no la propia instancia.
+
+Dado que los tipos de estructura tienen semántica del valor, le recomendamos que defina tipos de estructura *inmutables*.
+
+## <a name="readonly-struct"></a>Estructura `readonly`
+
+A partir de C# 7.2, usa el modificador `readonly` para declarar que un tipo de estructura es inmutable:
+
+[!code-csharp[readonly struct](snippets/StructType.cs#ReadonlyStruct)]
+
+Todos los miembros de datos de una estructura `readonly` debe ser de solo lectura tal como se indica a continuación:
+
+- Cualquier declaración de campo debe tener el [modificador `readonly`](../keywords/readonly.md)
+- Cualquier propiedad, incluidas las implementadas automáticamente, deben ser de solo lectura
+
+Esto garantiza que ningún miembro de una estructura `readonly` modifique el estado de la misma.
+
+> [!NOTE]
+> En una estructura `readonly`, un miembro de datos de un tipo de referencia mutable puede seguir mutando su propio estado. Por ejemplo, no puede reemplazar una instancia de <xref:System.Collections.Generic.List%601>, pero puede agregarle nuevos elementos.
 
 ## <a name="limitations-with-the-design-of-a-structure-type"></a>Limitaciones del diseño de un tipo de estructura
 
@@ -43,7 +61,7 @@ Al diseñar un tipo de estructura, tiene las mismas funciones que con un tipo de
 
 En C#, debe inicializar una variable declarada antes de poder usarla. Como una variable de tipo de estructura no puede ser `null` (a menos que sea una variable de un [tipo de valor que admite un valor NULL](nullable-value-types.md)), tendrá que crear instancias de una instancia del tipo correspondiente. Existen varias formas de hacerlo.
 
-Normalmente, para crear una instancia de un tipo de estructura, se llama a un constructor adecuado con el operador [`new`](../operators/new-operator.md). Todos los tipos de estructura tienen al menos un constructor. Se trata de un constructor sin parámetros implícito, que genera el [valor predeterminado](default-values.md) del tipo. También puede usar el operador o literal [default](../operators/default.md) para generar el valor predeterminado de un tipo.
+Normalmente, para crear una instancia de un tipo de estructura, se llama a un constructor adecuado con el operador [`new`](../operators/new-operator.md). Todos los tipos de estructura tienen al menos un constructor. Se trata de un constructor sin parámetros implícito, que genera el [valor predeterminado](default-values.md) del tipo. También puede usar una [expresión de valor predeterminado](../operators/default.md) para generar el valor predeterminado de un tipo.
 
 Si se puede acceder a todos los campos de instancia de un tipo de estructura, también puede crear una instancia de él sin el operador `new`. En ese caso, debe inicializar todos los campos de instancia antes del primer uso de la instancia. En el siguiente ejemplo se muestra cómo hacerlo:
 
@@ -62,6 +80,8 @@ Para cualquier tipo de estructura, existen conversiones [boxing y unboxing](../.
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 Para más información, vea la sección [Estructuras](~/_csharplang/spec/structs.md) de la [especificación del lenguaje C#](~/_csharplang/spec/introduction.md).
+
+Para más información sobre las estructuras `readonly`, consulte la [nota de propuesta de características](~/_csharplang/proposals/csharp-7.2/readonly-ref.md#readonly-structs).
 
 ## <a name="see-also"></a>Vea también
 

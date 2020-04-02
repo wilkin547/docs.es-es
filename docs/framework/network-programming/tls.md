@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: 49beb8aa7d488bb6f0649cfb66ce7e78695840b4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d1218e5db2ee4fc0ec044c6e0aa16187390708b0
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78848215"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134385"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Procedimientos recomendados sobre la seguridad de la capa de transporte (TLS) con .NET Framework
 
@@ -55,7 +55,7 @@ Puede formular preguntas sobre este documento en el tema de GitHub [Procedimient
 
 Para las aplicaciones ASP.NET, inspeccione el elemento `<system.web><httpRuntime targetFramework>` de _web.config_ para comprobar que está utilizando la versión deseada de .NET Framework.
 
-Para Windows Forms y otras aplicaciones, consulte [Cómo: Usar como destino una versión de .NET Framework](/visualstudio/ide/visual-studio-multi-targeting-overview).
+Para Windows Forms y otras aplicaciones, consulte [Cómo: usar una versión de .NET Framework como destino](/visualstudio/ide/visual-studio-multi-targeting-overview).
 
 Consulte las siguientes secciones para comprobar que no está utilizando una versión específica de TLS o SSL.
 
@@ -103,7 +103,7 @@ Si **no** utiliza un enlace personalizado **y** está estableciendo los ajustes 
 
 ### <a name="for-wcf-message-security-with-certificate-credentials"></a>Para la seguridad de mensaje de WCF con credenciales de certificado
 
-.NET Framework 4.7, así como sus versiones posteriores, utiliza de forma predeterminada el protocolo especificado en la propiedad <xref:System.Net.ServicePointManager.SecurityProtocol>. Cuando [ de ](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)AppContextSwitch`Switch.System.ServiceModel.DisableUsingServicePointManagerSecurityProtocols` se establece en `true`, WCF elige el mejor protocolo hasta TLS 1.0.
+.NET Framework 4.7, así como sus versiones posteriores, utiliza de forma predeterminada el protocolo especificado en la propiedad <xref:System.Net.ServicePointManager.SecurityProtocol>. Cuando `Switch.System.ServiceModel.DisableUsingServicePointManagerSecurityProtocols` de [AppContextSwitch](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) se establece en `true`, WCF elige el mejor protocolo hasta TLS 1.0.
 
 ## <a name="if-your-app-targets-a-net-framework-version-earlier-than-47"></a>Si la aplicación tiene como destino una versión de .NET Framework anterior a 4.7
 
@@ -121,7 +121,7 @@ La plataforma de WCF elige automáticamente el protocolo más alto disponible ha
 
 ### <a name="for-net-framework-35---452-and-not-wcf"></a>Para .NET Framework 3.5 - 4.5.2 y no WCF
 
-Se recomienda que actualice la aplicación a .NET Framework 4.7 o versiones posteriores. Si no puede actualizar, siga estos pasos. En algún momento en el futuro, la aplicación puede producir un error hasta que actualice a .NET Framework 4.7 o versiones posteriores.
+Se recomienda que actualice la aplicación a .NET Framework 4.7 o versiones posteriores. Si no puede actualizar, siga estos pasos.
 
 Establezca las claves del Registro [SchUseStrongCrypto](#schusestrongcrypto) y [SystemDefaultTlsVersions](#systemdefaulttlsversions) en 1. Vea [Configuración de seguridad mediante el Registro de Windows](#configuring-security-via-the-windows-registry). La versión 3.5 de .NET Framework admite la marca `SchUseStrongCrypto` solo cuando se pasa un valor explícito de TLS.
 
@@ -194,7 +194,7 @@ Todas las claves del Registro descritas a continuación tienen el mismo efecto s
 
 La clave del Registro `HKEY_LOCAL_MACHINE\SOFTWARE\[Wow6432Node\]Microsoft\.NETFramework\<VERSION>: SchUseStrongCrypto` tiene un valor de tipo DWORD. Un valor de 1 hace que la aplicación utilice una criptografía robusta. La criptografía robusta utiliza protocolos de red más seguros(TLS 1.2, TLS 1.1 y TLS 1.0) y bloquea los protocolos que no son seguros. Un valor de 0 deshabilita la criptografía robusta. Para obtener más información, consulte [La marca SCH_USE_STRONG_CRYPTO](#the-sch_use_strong_crypto-flag).
 
-Si la aplicación tiene como destino .NET Framework 4.6 o versiones posteriores, la clave se establece de manera predeterminada en un valor de 1. Este es un valor predeterminado seguro, así que lo recomendamos. Si la aplicación se ejecuta en .NET Framework 4.6, pero tiene como destino una versión anterior, la clave se establece de manera predeterminada en 0. En ese caso, debe establecer su valor explícitamente en 1.
+Si la aplicación tiene como destino .NET Framework 4.6 o versiones posteriores, la clave se establece de manera predeterminada en un valor de 1. Este es un valor predeterminado seguro, así que lo recomendamos. Si su aplicación tiene como destino .NET Framework 4.5.2 o versiones anteriores, el valor predeterminado de la clave es 0. En ese caso, debe establecer su valor explícitamente en 1.
 
 Esta clave solo debe tener un valor de 0 si necesita conectarse a servicios heredados que no son compatibles con la criptografía robusta y no se pueden actualizar.
 
@@ -204,7 +204,7 @@ La clave del Registro `HKEY_LOCAL_MACHINE\SOFTWARE\[Wow6432Node\]Microsoft\.NETF
 
 `<VERSION>` debe ser v4.0.30319 (para .NET Framework 4 y versiones posteriores) o v2.0.50727 (para .NET Framework 3.5).
 
-Si la aplicación tiene como destino .NET Framework 4.7 o versiones posteriores, la clave se establece de manera predeterminada en un valor de 1. Este es un valor predeterminado seguro, así que lo recomendamos. Si la aplicación se ejecuta en .NET Framework 4.7 o versiones posteriores, pero tiene como destino una versión anterior, la clave se establece de manera predeterminada en 0. En ese caso, debe establecer su valor explícitamente en 1.
+Si la aplicación tiene como destino .NET Framework 4.7 o versiones posteriores, la clave se establece de manera predeterminada en un valor de 1. Este es un valor predeterminado seguro, así que lo recomendamos. Si su aplicación tiene como destino .NET Framework 4.6.1 o versiones anteriores, el valor predeterminado de la clave es 0. En ese caso, debe establecer su valor explícitamente en 1.
 
 Para obtener más información, consulte [Actualización acumulativa para Windows 10 versión 1511 y Windows Server 2016 Technical Preview 4: 10 de mayo de 2016](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016).
 
@@ -238,7 +238,7 @@ Puede utilizar el registro para un control más preciso sobre los protocolos que
 
 Inicie con la clave del Registro `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols`. Bajo esa clave, puede crear cualquier subclave en el conjunto `SSL 2.0`, `SSL 3.0`, `TLS 1.0`, `TLS 1.1` y `TLS 1.2`. En cada una de esas subclaves, puede crear subclaves `Client` o `Server`. En `Client` y `Server`, puede crear valores DWORD `DisabledByDefault` (0 o 1) y `Enabled` (0 o 0xFFFFFFFF).
 
-## <a name="the-sch_use_strong_crypto-flag"></a>La marca SCH_USE_STRONG_CRYPTO
+## <a name="the-sch_use_strong_crypto-flag"></a><a name="the-sch_use_strong_crypto-flag"></a>La marca SCH_USE_STRONG_CRYPTO
 
 Cuando está habilitada (de forma predeterminada, por un conmutador `AppContext` o por el Registro de Windows), .NET Framework usa la marca `SCH_USE_STRONG_CRYPTO` cuando la aplicación solicita un protocolo de seguridad TLS. La marca `SCH_USE_STRONG_CRYPTO` puede estar habilitada de forma predeterminada, con el conmutador `AppContext` o con el Registro. El sistema operativo pasa la marca a `Schannel` para indicarle que deshabilite algoritmos criptográficos que se sabe que no son robustos, conjuntos de cifrado y versiones de protocolo TLS/SSL que pueden habilitarse en caso contrario para mejorar la interoperabilidad. Para obtener más información, consulte:
 
@@ -259,7 +259,7 @@ Para actualizar .NET Framework a fin de permitir que el sistema operativo elija 
 Vea también:
 
 - [Versiones y dependencias de .NET Framework](../migration-guide/versions-and-dependencies.md)
-- [Cómo: Determinar qué versiones de .NET Framework están instaladas](../migration-guide/how-to-determine-which-versions-are-installed.md)
+- [Cómo: Determinar qué versiones de .NET Framework están instaladas](../migration-guide/how-to-determine-which-versions-are-installed.md).
 
 ## <a name="support-for-tls-12"></a>Compatibilidad con TLS 1.2
 
@@ -276,7 +276,7 @@ Para habilitar o volver a habilitar TLS 1.2 o TLS 1.1 en un sistema que los admi
 | Windows 8.0<br>Windows Server 2012 | Compatible, y habilitado de manera predeterminada. |
 | Windows 7 SP1<br>Windows Server 2008 R2 SP1 | Compatible, pero no habilitado de manera predeterminada. Consulte la página web [Configuración del registro de seguridad de la capa (TLS) de transporte](/windows-server/security/tls/tls-registry-settings) para obtener más información sobre cómo habilitar TLS 1.2. |
 | Windows Server 2008 | La compatibilidad con TLS 1.2 y TLS 1.1 requiere una actualización. Vea [Actualización para agregar compatibilidad con TLS 1.1 y TLS 1.2 en Windows Server 2008 SP2](https://support.microsoft.com/help/4019276/update-to-add-support-for-tls-1-1-and-tls-1-2-in-windows-server-2008-s). |
-| Windows Vista | No compatible. |
+| Windows Vista | No se admite. |
 
 Para obtener información acerca de qué protocolos TLS/SSL protocolos están habilitados de forma predeterminada en cada versión de Windows, vea [Protocols in TLS/SSL (Schannel SSP)](/windows/desktop/SecAuthN/protocols-in-tls-ssl--schannel-ssp-) (Protocolos en TLS/SSL [SSP de Schannel]).
 

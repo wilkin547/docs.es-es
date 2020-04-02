@@ -1,14 +1,14 @@
 ---
 title: ¿Qué es el Generador de modelos y cómo funciona?
 description: Cómo usar el Generador de modelos de ML.NET para entrenar un modelo de Machine Learning de forma automática
-ms.date: 01/07/2020
+ms.date: 03/25/2020
 ms.custom: overview, mlnet-tooling
-ms.openlocfilehash: cff4601843ec9ca7201ea7dbdbfbcfa18f50e46e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9cf66455109908ebd9fc10e62cf4f067609b57d9
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79397810"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344783"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>¿Qué es el Generador de modelos y cómo funciona?
 
@@ -23,7 +23,7 @@ Para usar el Generador de modelos no se necesita experiencia previa con el apren
 > [!NOTE]
 > De momento, el Generador de modelos se encuentra en versión preliminar.
 
-## <a name="scenarios"></a>Escenarios
+## <a name="scenario"></a>Escenario
 
 Se pueden incorporar muchos escenarios diferentes al Generador de modelos a fin de generar un modelo de Machine Learning para la aplicación.
 
@@ -38,47 +38,41 @@ Un escenario es una descripción del tipo de predicción que se quiere realizar 
 
 En el Generador de modelos, debe seleccionar un escenario. El tipo de escenario depende del tipo de predicción que esté intentando realizar.
 
-#### <a name="predict-a-category-when-there-are-only-two-categories"></a>Predecir una categoría (que cuente solo con dos categorías)
+#### <a name="text-classification"></a>Clasificación de textos
 
-La clasificación binaria se usa para clasificar los datos en dos categorías (sí o no; correcto o incorrecto; verdadero o falso; positivo o negativo).
+La clasificación se utiliza para clasificar los datos en categorías.
 
 ![Diagrama en el que se muestran ejemplos de clasificación binaria, como detección de fraudes, mitigación de riesgos y filtrado de aplicaciones](media/binary-classification-examples.png)
 
-El análisis de opiniones se puede usar para predecir una opinión positiva o negativa de los comentarios del cliente. Es un ejemplo de la tarea de aprendizaje automático de clasificación binaria.
-
-Si el escenario requiere clasificación en dos categorías, puede usar esta plantilla con un conjunto de datos propio.
-
-#### <a name="predict-a-category-when-there-are-three-or-more-categories"></a>Predecir una categoría (que cuente con tres categorías o más)
-
-La clasificación multiclase puede usarse para clasificar los datos en tres o más clases.
-
 ![Ejemplos de clasificación multiclase que incluyen la clasificación de documentos y productos, el enrutamiento de incidencias de soporte técnico y la priorización de problemas de clientes](media/multiclass-classification-examples.png)
 
-La clasificación de problemas se puede usar para clasificar problemas de comentarios de clientes (por ejemplo, en GitHub) mediante el título y la descripción del problema. Es un ejemplo del tipo de tarea de aprendizaje automático de clasificación multiclase.
-
-Puede usar la plantilla de clasificación de problemas para el escenario si quiere clasificar los datos en tres o más categorías.
-
-#### <a name="predict-a-number"></a>Predecir un número
+#### <a name="value-prediction"></a>Predicción de valores
 
 La regresión se usa para predecir números.
 
 ![Diagrama en el que se muestran ejemplos de regresión, como la predicción de precios, la previsión de ventas y el mantenimiento predictivo](media/regression-examples.png)
 
-La predicción de precios puede usarse para predecir los precios de viviendas según la ubicación, el tamaño y otras características del inmueble. Es un ejemplo de la tarea de aprendizaje automático de regresión.
-
-Puede usar la plantilla de predicción de precios para el escenario si quiere predecir un valor numérico con un conjunto de datos propio.
-
-#### <a name="classify-images-into-categories"></a>Clasificación de imágenes en categorías
-
-Este escenario es un caso especial de clasificación multiclase, en la que los datos de entrada que se van a clasificar son un conjunto de imágenes.
+#### <a name="image-classification"></a>Clasificación de la imagen
 
 La clasificación de la imagen se puede utilizar para identificar imágenes de distintas categorías. Por ejemplo, diferentes tipos de terreno, animales o defectos de fabricación.
 
-Puede usar la plantilla de clasificación de la imagen para su escenario si tiene un conjunto de imágenes y desea clasificar las imágenes en distintas categorías.
+Puede usar el escenario de clasificación de la imagen si tiene un conjunto de imágenes y desea clasificar las imágenes en distintas categorías.
 
-#### <a name="custom-scenario"></a>Escenario personalizado
+#### <a name="recommendation"></a>Recomendación
 
-El escenario personalizado permite elegir manualmente el escenario.
+El escenario de recomendaciones predice una lista de elementos sugeridos para un usuario determinado, en función de la similitud y la diferencia entre los usuarios de otros usuarios.
+
+Puede usar el escenario de recomendación cuando tenga un conjunto de usuarios y un conjunto de "productos", como artículos para comprar, películas, libros o programas de TV, junto con un conjunto de "clasificaciones" de los usuarios de esos productos.
+
+## <a name="environment"></a>Entorno
+
+Puede entrenar el modelo de aprendizaje automático localmente en la máquina o en la nube en Azure.
+
+Al entrenar localmente, se trabaja dentro de las restricciones de los recursos del equipo (CPU, memoria y disco). Al entrenar en la nube, puede escalar verticalmente los recursos para satisfacer las demandas de su escenario, especialmente para grandes conjuntos de valores.
+
+El entrenamiento local se admite en todos los escenarios.
+
+El entrenamiento de Azure se admite para la clasificación de imágenes.
 
 ## <a name="data"></a>Datos
 
@@ -113,14 +107,15 @@ La etiqueta es el precio histórico de la vivienda para esa fila de valores de m
 
 Si aún no tiene datos propios, pruebe uno de estos conjuntos de datos:
 
-|Escenario|Tarea de Machine Learning|Datos|Etiqueta|Características|
+|Escenario|Ejemplo|Datos|Etiqueta|Características|
 |-|-|-|-|-|
-|Predicción de precios|Regresión|[datos de carreras de taxi](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|Carrera|Tiempo de viaje, distancia|
-|Detección de anomalías|Clasificación binaria|[datos de ventas de productos](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Ventas de productos|Mes|
-|Análisis de sentimiento|Clasificación binaria|[datos de comentarios de sitio web](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|Etiqueta (0 si la opinión es negativa, 1 si es positiva)|Comentario, año|
-|Detección de fraudes|Clasificación binaria|[datos de tarjetas de crédito](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Clase (1 si es fraudulenta, en caso contrario, 0)|Cantidad, V1-V28 (características anónimas)|
-|Clasificación de textos|Clasificación multiclase|[datos de problemas de GitHub](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|Área|Título, descripción|
-|Clasificación de la imagen|Clasificación multiclase|[Imágenes de flores](http://download.tensorflow.org/example_images/flower_photos.tgz)|El tipo de flor: margarita, diente de león, rosas, girasoles o tulipanes|Los propios datos de la imagen|
+|Clasificación|Predicción de anomalías de ventas|[datos de ventas de productos](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Ventas de productos|Mes|
+||Predicción de sentimiento de comentarios de sitios web|[datos de comentarios de sitio web](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|Etiqueta (0 si la opinión es negativa, 1 si es positiva)|Comentario, año|
+||Predicción de transacciones de tarjetas de crédito fraudulentas|[datos de tarjetas de crédito](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Clase (1 si es fraudulenta, en caso contrario, 0)|Cantidad, V1-V28 (características anónimas)|
+||Predecir el tipo de problema en un repositorio de GitHub|[datos de problemas de GitHub](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|Área|Título, descripción|
+|Predicción de valores|Predicción del precio de los taxis|[datos de carreras de taxi](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|Carrera|Tiempo de viaje, distancia|
+|Clasificación de la imagen|Predicción de la categoría de un problema|[imágenes de flores](http://download.tensorflow.org/example_images/flower_photos.tgz)|El tipo de flor: margarita, diente de león, rosas, girasoles o tulipanes|Los propios datos de la imagen|
+|Recomendación|Predicción de películas que le gusten a alguien|[clasificaciones de películas](http://files.grouplens.org/datasets/movielens/ml-latest-small.zip)|Usuarios, películas|Clasificaciones|
 
 ## <a name="train"></a>Entrenamiento
 
@@ -165,13 +160,13 @@ El Generador de modelos divide los datos de entrenamiento en un conjunto de entr
 
 Un escenario se asigna a una tarea de aprendizaje automático. Cada tarea de ML tiene su propio conjunto de métricas de evaluación.
 
-#### <a name="regression-for-example-price-prediction"></a>Regresión (por ejemplo, predicción de precios)
+#### <a name="value-prediction"></a>Predicción de valores
 
-La métrica predeterminada para los problemas de regresión es RSquared, y el valor de RSquared oscila entre 0 y 1. 1 es el mejor valor posible o, en otras palabras, cuanto más se acerque el valor de RSquared a 1, mejor será el rendimiento del modelo.
+La métrica predeterminada para los problemas de predicción de valores es RSquared, y el valor de RSquared oscila entre 0 y 1. 1 es el mejor valor posible o, en otras palabras, cuanto más se acerque el valor de RSquared a 1, mejor será el rendimiento del modelo.
 
-Otras métricas notificadas, como pérdida absoluta, pérdida al cuadrado y pérdida RMS son métricas adicionales, que pueden usarse para comprender el rendimiento del modelo y compararlo con otros modelos de regresión.
+Otras métricas notificadas, como pérdida absoluta, pérdida al cuadrado y pérdida RMS son métricas adicionales, que pueden usarse para comprender el rendimiento del modelo y compararlo con otros modelos de predicción de valores.
 
-#### <a name="binary-classification-for-example-sentiment-analysis"></a>Clasificación binaria (por ejemplo, Análisis de sentimiento)
+#### <a name="classification-2-categories"></a>Clasificación (2 categorías)
 
 La métrica predeterminada para los problemas de clasificación es la precisión. La precisión define la proporción de predicciones correctas que realiza el modelo en el conjunto de datos de prueba. Cuanto más cerca esté del 100 % o 1.0, mejor será el modelo.
 
@@ -179,7 +174,7 @@ Otras métricas notificadas, como AUC (área bajo la curva), que mide la tasa de
 
 Se pueden usar métricas adicionales como la puntuación F1 para controlar el equilibrio entre la precisión y la coincidencia.
 
-#### <a name="multi-class-classification-for-example-issue-classification-image-classification"></a>Clasificación multiclase (por ejemplo, Clasificación de problemas y Clasificación de la imagen)
+#### <a name="classification-3-categories"></a>Clasificación (3 categorías)
 
 La métrica predeterminada para la clasificación multiclase es la microprecisión. Cuanto más se acerque la microprecisión al 100 % o 1,0, mejor será el modelo.
 
@@ -196,7 +191,7 @@ Para obtener más información, vea [Métricas de evaluación de modelos](resour
 
 Si la puntuación de rendimiento del modelo no es tan buena como se quiere que sea, se puede:
 
-- Entrenar durante más tiempo. Con más tiempo, el motor de aprendizaje automático automatizado prueba más algoritmos y configuraciones.
+- Entrenar durante más tiempo. Con más tiempo, el motor de aprendizaje automático automatizado experimenta con más algoritmos y configuraciones.
 
 - Agregar más datos. A veces la cantidad de datos no es suficiente para entrenar un modelo de Machine Learning de alta calidad.
 

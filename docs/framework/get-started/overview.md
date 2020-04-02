@@ -7,12 +7,12 @@ helpviewer_keywords:
 - common language runtime, about
 - common language runtime, overview
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
-ms.openlocfilehash: de9cbdab5d5786b9d59d23ba675fa3f78f807716
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ace42738118cde4bcda4b78607d7bdb045d3501e
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181594"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248926"
 ---
 # <a name="overview-of-net-framework"></a>Información general acerca de .NET Framework
 
@@ -31,7 +31,7 @@ ms.locfileid: "79181594"
 - Basar toda la comunicación en estándares del sector para asegurar que el código de .NET Framework se puede integrar con otros tipos de código.
 
 > [!NOTE]
-> Para obtener una introducción general a .NET Framework para usuarios y desarrolladores, vea [Introducción](index.md).
+> Para una introducción general a .NET Framework para usuarios y desarrolladores, consulte [Introducción](index.md).
 
 .NET Framework consta de dos componentes principales: Common Language Runtime (CLR) y la biblioteca de clases de .NET Framework. Common Language Runtime es el fundamento de .NET Framework. El tiempo de ejecución se puede considerar como un agente que administra el código en tiempo de ejecución y proporciona servicios centrales, como la administración de memoria, la administración de subprocesos y la comunicación remota, al tiempo que aplica una seguridad de tipos estricta y otras formas de especificación del código que promueven su seguridad y solidez. De hecho, el concepto de administración de código es un principio básico del motor en tiempo de ejecución. El código destinado al tiempo de ejecución se denomina código administrado, a diferencia del resto de código, que se conoce como código no administrado. La biblioteca de clases es una colección completa orientada a objetos de tipos reutilizables que se puede emplear para desarrollar aplicaciones que abarcan desde las tradicionales herramientas de interfaz gráfica de usuario (GUI) o de línea de comandos hasta aplicaciones basadas en las innovaciones más recientes proporcionadas por ASP.NET, como formularios Web Forms y servicios web XML.
 
@@ -71,7 +71,7 @@ La biblioteca de clases de .NET Framework es una colección de tipos reutilizabl
 
 Por ejemplo, las clases de colección de .NET Framework implementan un conjunto de interfaces que le permiten desarrollar sus propias clases de colección. Estas se combinan a la perfección con las clases de .NET Framework.
 
-Como en cualquier biblioteca de clases orientada a objetos, los tipos de .NET Framework permiten realizar diversas tareas de programación comunes, como son la administración de cadenas, recolección de datos, conectividad de bases de datos y acceso a archivos. Además de estas tareas habituales, la biblioteca de clases incluye tipos adecuados para diversos escenarios de desarrollo especializados. Use .NET Framework para desarrollar los siguientes tipos de aplicaciones y servicios:
+Como en cualquier biblioteca de clases orientada a objetos, los tipos de .NET Framework permiten realizar diversas tareas de programación comunes, como son la administración de cadenas, la recolección de datos, la conectividad de bases de datos y el acceso a archivos. Además de estas tareas habituales, la biblioteca de clases incluye tipos adecuados para diversos escenarios de desarrollo especializados. Use .NET Framework para desarrollar los siguientes tipos de aplicaciones y servicios:
 
 - Aplicaciones de consola. Consulte [Compilar aplicaciones de consola](../../standard/building-console-apps.md).
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 51b3c1b3e3d61b23a0511ca807afef0269ac9ee4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4340ed7444681b4601dea50c93926b0ee0c07eec
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77466061"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134110"
 ---
 
 Los paquetes agregados a las fuentes del administrador de paquetes se denominan con un formato susceptible de intrusiones: `{product}-{type}-{version}`.
@@ -34,7 +34,7 @@ Versión del SDK o del entorno de ejecución que se va a instalar. En este artí
 
 - Instalación del runtime de ASP.NET Core 3.1: `aspnetcore-runtime-3.1`
 - Instalación del entorno de ejecución de ASP.NET Core 2.1: `dotnet-runtime-2.1`
-- Instalación del SDK de .NET Core 3.0: `dotnet-sdk-3.0`
+- Instalación del SDK de .NET Core 3.1: `dotnet-sdk-3.1`
 
 ### <a name="package-missing"></a>Falta el paquete
 

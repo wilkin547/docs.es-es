@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: c4e29e6437edfe549b36a04a2050f63caa0d3d2a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8727e47e13082e8550fb174c92139dfd5c17ec36
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846527"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134339"
 ---
 # <a name="char-c-reference"></a>char (referencia de C#)
 
@@ -49,7 +49,7 @@ El tipo `char` se puede convertir implícitamente en los tipos [enteros](integra
 
 No hay ninguna conversión implícita de otros tipos al tipo `char`. Sin embargo, cualquier tipo numérico [entero](integral-numeric-types.md) o de [punto flotante](floating-point-numeric-types.md) es implícitamente convertible a `char`.
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 Para obtener más información, consulte la sección [Tipos enteros](~/_csharplang/spec/types.md#integral-types) de [Especificación del lenguaje C#](~/_csharplang/spec/introduction.md).
 
@@ -59,3 +59,4 @@ Para obtener más información, consulte la sección [Tipos enteros](~/_csharpla
 - [Tipos de valor](value-types.md)
 - [Cadenas](../../programming-guide/strings/index.md)
 - <xref:System.Text.Rune?displayProperty=nameWithType>
+- [Codificación de caracteres de .NET](../../../standard/base-types/character-encoding-introduction.md)

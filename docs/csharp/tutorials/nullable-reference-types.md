@@ -4,12 +4,12 @@ description: En este tutorial avanzado se ofrece una introducción a los tipos d
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: b00050c1d151b95e330f94eb9393a4031e47d5a8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 54cf9d812999cae837483b48cdedd89d9dc40fc9
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240072"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249134"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Tutorial: Expresar la intención del diseño con mayor claridad con tipos de referencia que aceptan valores NULL y que no aceptan valores NULL
 
@@ -54,7 +54,7 @@ Esta aplicación de encuesta requiere la creación de una serie de clases:
 
 Estos tipos usarán ambas los tipos de referencia que aceptan valores NULL y los que no aceptan valores NULL para expresar qué miembros que son necesarios y cuáles opcionales. Los tipos de referencia que aceptan valores NULL comunican claramente esa intención de diseño:
 
-- Las preguntas que forman parte de la encuesta nunca pueden aceptar valores NULL: no tiene sentido formular una pregunta vacía.
+- Las preguntas que forman parte de la encuesta nunca pueden ser NULL: no tiene sentido formular una pregunta vacía.
 - Los encuestados nunca pueden aceptar valores NULL. Quiere realizar un seguimiento de las personas contactadas, incluso de los encuestados que han rechazado participar.
 - Cualquier respuesta a una pregunta puede tener valores NULL. Los encuestados pueden negarse a responder a algunas preguntas o a todas.
 
@@ -72,7 +72,7 @@ La aplicación que compilará realiza los pasos siguientes:
 1. Se pone en contacto con los encuestados hasta que el tamaño de la encuesta completada alcanza el número objetivo.
 1. Escribe estadísticas importantes en las respuestas de la encuesta.
 
-## <a name="build-the-survey-with-nullable-and-non-nullable-types"></a>Compilación de la encuesta con tipos que aceptan valores NULL y que no aceptan valores NULL
+## <a name="build-the-survey-with-nullable-and-non-nullable-reference-types"></a>Compilación de la encuesta con tipos de referencia que aceptan y no aceptan valores NULL
 
 El primer código que escriba crea la encuesta. Deberá escribir clases para modelar una pregunta de encuesta y una ejecución de encuesta. La encuesta tiene tres tipos de preguntas, que se distinguen por el formato de la respuesta: respuestas afirmativas/negativas, respuestas numéricas y respuestas de texto. Cree una clase `public SurveyQuestion`:
 

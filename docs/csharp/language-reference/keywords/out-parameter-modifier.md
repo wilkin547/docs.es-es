@@ -1,15 +1,15 @@
 ---
 title: 'Modificador del parámetro out: Referencia de C#'
-ms.date: 03/26/2019
+ms.date: 03/19/2020
 helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
-ms.openlocfilehash: f963188d77685bb81f7dc9fb3794e343114fe3c0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c713aa929673e51e8e9986c536bae782121c7756
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173567"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249349"
 ---
 # <a name="out-parameter-modifier-c-reference"></a>Modificador del parámetro out (Referencia de C#)
 La palabra clave `out` hace que los argumentos se pasen por referencia. Hace que el parámetro formal sea un alias para el argumento, que debe ser una variable. En otras palabras, cualquier operación en el parámetro se realiza en el argumento. Esto es como la palabra clave [ref](ref.md), salvo que `ref` requiere que se inicialice la variable antes de pasarla. También es como la palabra clave [in](in-parameter-modifier.md), salvo que `in` no permite que el método llamado modifique el valor del argumento. Para usar un parámetro `out`, tanto la definición de método como el método de llamada deben utilizar explícitamente la palabra clave `out`. Por ejemplo:  
@@ -46,6 +46,12 @@ Las palabras clave `in`, `ref` y `out` no pueden usarse para estos tipos de mét
 - Métodos asincrónicos, que se definen mediante el uso del modificador [async](./async.md).  
   
 - Métodos de iterador, que incluyen una instrucción [yield return](./yield.md) o `yield break`.  
+
+Además, los [métodos de extensión](../../programming-guide/classes-and-structs/extension-methods.md) tienen las restricciones siguientes:
+
+- No se puede usar la palabra clave `out` en el primer argumento de un método de extensión.
+- No se puede usar la palabra clave `ref` en el primer argumento de un método de extensión cuando el argumento no es un struct ni un tipo genérico no restringido a ser un struct.
+- No se puede usar la palabra clave `in` a menos que el primer argumento sea un struct. No se puede usar la palabra clave `in` en ningún tipo genérico, incluso cuando está restringido a ser un struct.
 
 ## <a name="declaring-out-parameters"></a>Declaración de parámetros `out`
 

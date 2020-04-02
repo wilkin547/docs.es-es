@@ -3,12 +3,12 @@ title: Creación de un cliente de REST con .NET Core
 description: Este tutorial le enseña varias características de .NET Core y el lenguaje C#.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 5796df2d2fd8c4d9aaca783d720448c90858c067
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0105db519f7accec6bf8bfbafdc6a67a444b1074
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156862"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249173"
 ---
 # <a name="rest-client"></a>Cliente REST
 
@@ -163,7 +163,7 @@ Esta característica facilita la creación de tipos que funcionan con solo un su
 
 Ahora que ha creado el tipo, vamos a deserializarlo.
 
-A continuación, usará el serializador para convertir JSON en objetos de C#. Reemplace la llamada a <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)> en su método `ProcessRepositories` por las tres líneas siguientes:
+A continuación, usará el serializador para convertir JSON en objetos de C#. Reemplace la llamada a <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)> en su método `ProcessRepositories` por las líneas siguientes:
 
 ```csharp
 var streamTask = client.GetStreamAsync("https://api.github.com/orgs/dotnet/repos");
@@ -288,23 +288,16 @@ Como paso final, vamos a agregar la información de la última operación de ins
 2016-02-08T21:27:00Z
 ```
 
-Ese formato no sigue ninguno de los formatos estándar <xref:System.DateTime> de .NET. Por este motivo, deberá escribir un método de conversión personalizado. Probablemente tampoco querrá la cadena sin formato expuesta a los usuarios de la clase `Repository`. Los atributos pueden también ayudarle a controlar eso. En primer lugar, defina una propiedad `public` que contendrá la representación de cadena de la fecha y hora en la clase `Repository` y una propiedad `LastPush` `readonly` que devuelve una cadena con formato que representa la fecha devuelta:
+Ese formato está en hora universal coordinada (UTC), por lo que obtendrá un valor <xref:System.DateTime> cuya propiedad <xref:System.DateTime.Kind%2A> es <xref:System.DateTimeKind.Utc>. Si prefiere una fecha representada en su zona horaria, deberá escribir un método de conversión personalizado. En primer lugar, defina una propiedad `public` que contendrá la representación UTC de la fecha y hora en la clase `Repository` y una propiedad `LastPush` `readonly` que devuelve la fecha convertida en la hora local:
 
 ```csharp
 [JsonPropertyName("pushed_at")]
-public string JsonDate { get; set; }
+public DateTime LastPushUtc { get; set; }
 
-public DateTime LastPush =>
-    DateTime.ParseExact(JsonDate, "yyyy-MM-ddTHH:mm:ssZ", CultureInfo.InvariantCulture);
+public DateTime LastPush => LastPushUtc.ToLocalTime();
 ```
 
-Vamos a repasar las nuevas construcciones que acabamos de definir. La propiedad `LastPush` se define utilizando un *miembro con forma de expresión* para el descriptor de acceso `get`. No hay descriptor de acceso `set`. Omitiendo el descriptor de acceso `set` es la forma en que se define una propiedad *de solo lectura* en C#. (Sí, puede crear propiedades de *solo escritura* en C#, pero su valor es limitado). El método <xref:System.DateTime.ParseExact(System.String,System.String,System.IFormatProvider)> analiza una cadena y crea un objeto <xref:System.DateTime> con un formato de fecha proporcionado, y agrega metadatos adicionales a `DateTime` mediante un objeto `CultureInfo`. Si se produce un error en la operación de análisis, el descriptor de acceso de propiedad inicia una excepción.
-
-Para usar <xref:System.Globalization.CultureInfo.InvariantCulture>, tiene que agregar el espacio de nombres <xref:System.Globalization> a las directivas `using` de `repo.cs`:
-
-```csharp
-using System.Globalization;
-```
+Vamos a repasar las nuevas construcciones que acabamos de definir. La propiedad `LastPush` se define utilizando un *miembro con forma de expresión* para el descriptor de acceso `get`. No hay descriptor de acceso `set`. Omitiendo el descriptor de acceso `set` es la forma en que se define una propiedad *de solo lectura* en C#. (Sí, puede crear propiedades de *solo escritura* en C#, pero su valor es limitado).
 
 Finalmente, agregue una instrucción más de salida en la consola y ya estará listo para compilar y ejecutar de nuevo esta aplicación:
 

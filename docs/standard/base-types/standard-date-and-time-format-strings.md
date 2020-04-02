@@ -14,12 +14,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-ms.openlocfilehash: 883902142a91e275ab64ad5d12c197c665bd9b36
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5a3ba2838458d6e6833035186dfd69b34c780317
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398476"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248139"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Cadenas con formato de fecha y hora estándar
 
@@ -54,7 +54,7 @@ Las cadenas con formato de fecha y hora estándar se pueden utilizar tanto con v
 |"T"|Patrón de hora larga.<br /><br /> Más información: [El especificador de formato de hora larga ("T")](#LongTime).|2009-06-15T13:45:30 -> 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 13:45:30 (hr-HR)<br /><br /> 2009-06-15T13:45:30 -> 01:45:30 م (ar-EG)|
 |"u"|Patrón de fecha y hora universal que se puede ordenar.<br /><br /> Más información: [El especificador de formato universal que se puede ordenar ("u")](#UniversalSortable).|Con un valor <xref:System.DateTime> de: 2009-06-15T13:45:30 -> 2009-06-15 13:45:30Z<br /><br /> Con un valor <xref:System.DateTimeOffset> de: 2009-06-15T13:45:30 -> 2009-06-15 20:45:30Z|
 |"U"|Patrón de fecha y hora completa universal.<br /><br /> Más información: [El especificador de formato completo universal ("U")](#UniversalFull).|2009-06-15T13:45:30 -> Monday, June 15, 2009 8:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 20:45:30 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 8:45:30 μμ (el-GR)|
-|"Y", "y"|Patrón de mes y año.<br /><br /> Más información: [El especificador de formato de mes y año ("Y")](#YearMonth).|2009-06-15T13:45:30 -> June, 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> juni 2009 (da-DK)<br /><br /> 2009-06-15T13:45:30 -> Juni 2009 (id-ID)|
+|"Y", "y"|Patrón de mes y año.<br /><br /> Más información: [El especificador de formato de mes y año ("Y")](#YearMonth).|2009-06-15T13:45:30 -> June 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> juni 2009 (da-DK)<br /><br /> 2009-06-15T13:45:30 -> Juni 2009 (id-ID)|
 |Cualquier otro carácter único|Especificador desconocido.|Produce una excepción <xref:System.FormatException> en tiempo de ejecución.|
 
 ## <a name="how-standard-format-strings-work"></a>Cómo funcionan las cadenas con formato estándar

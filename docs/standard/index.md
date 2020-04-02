@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 12/27/2019
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: f6496ae38827da5d00c8b278011a9c373afe0e76
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 6cca7330c10317129072b94c3973f5dec575363a
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344084"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523895"
 ---
 # <a name="net-guide"></a>Guía de .NET
 
@@ -46,7 +46,6 @@ Para obtener más información sobre los conceptos principales de .NET, vea:
 * [.NET Standard](net-standard.md)
 * [Interoperabilidad nativa](native-interop/index.md)
 * [Recolección de elementos no utilizados](garbage-collection/index.md)
-* [Tipos base de .NET](base-types/index.md)
 * [Colecciones](collections/index.md)
 * [Fechas, horas y zonas horarias](datetime/index.md)
 * [Programación asincrónica](async.md)
