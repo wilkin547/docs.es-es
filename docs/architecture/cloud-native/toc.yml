@@ -39,8 +39,8 @@
           href: front-end-communication.md
         - name: Comunicación entre servicios
           href: service-to-service-communication.md
-        - name: REST y gRPC
-          href: rest-grpc.md
+        - name: gRPC
+          href: grpc.md
         - name: Infraestructura de comunicación de la malla de servicio
           href: service-mesh-communication-infrastructure.md
     - name: Datos distribuidos
