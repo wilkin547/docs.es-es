@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Especificar un nombre de elemento alternativo para una secuencia XML'
+title: Procedimiento para especificar un nombre de elemento alternativo para una secuencia XML
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - classes, overriding
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
-ms.openlocfilehash: 6aaff20e2955fc9f121b3e60b14c0bbcf7515660
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 2dc1110b858f639624e05382a67ddccf3ea1b047
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159863"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588461"
 ---
-# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Cómo: Especificar un nombre de elemento alternativo para una secuencia XML
+# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Procedimiento para especificar un nombre de elemento alternativo para una secuencia XML
   
 Utilizando<xref:System.Xml.Serialization.XmlSerializer>, se puede generar más de una secuencia XML con el mismo conjunto de clases. Puede que desee proceder de esta forma ya que dos servicios Web XML diferentes requieren la misma información básica, con solo ligeras diferencias. Por ejemplo, imagine dos servicios Web XML que procesan órdenes para los libros y así ambos requieren los números de ISBN. Un servicio usa la etiqueta \<ISBN> mientras el segundo usa la etiqueta \<BookID>. Tiene una clase denominada `Book` que contiene un campo denominado `ISBN`. Cuando se serializa una instancia de la clase `Book`, utilizará, de forma predeterminada, el nombre de miembro (ISBN) como el nombre de elemento de etiqueta. Para el primer servicio Web XML, esto es como esperado. Pero para enviar la secuencia XML al segundo servicio Web XML, debe invalidar la serialización para que el nombre de elemento de la etiqueta sea `BookID`.  
   
@@ -44,7 +44,7 @@ Utilizando<xref:System.Xml.Serialization.XmlSerializer>, se puede generar más d
 ## <a name="example"></a>Ejemplo  
   
 ```vb  
-Public Class SerializeOverride()  
+Public Function SerializeOverride()  
     ' Creates an XmlElementAttribute with the alternate name.  
     Dim myElementAttribute As XmlElementAttribute = _  
     New XmlElementAttribute()  
@@ -64,7 +64,7 @@ End Class
 ```  
   
 ```csharp  
-public class SerializeOverride()  
+public void SerializeOverride()  
 {  
     // Creates an XmlElementAttribute with the alternate name.  
     XmlElementAttribute myElementAttribute = new XmlElementAttribute();  
@@ -96,7 +96,7 @@ public class SerializeOverride()
 - <xref:System.Xml.Serialization.XmlElementAttribute>
 - <xref:System.Xml.Serialization.XmlAttributes>
 - <xref:System.Xml.Serialization.XmlAttributeOverrides>
-- [Serialización SOAP y XML](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [Serialización de SOAP y XML](../../../docs/standard/serialization/xml-and-soap-serialization.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Cómo: Serializar un objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [Cómo: Deserializar un objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Procedimiento para serializar un objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [Procedimiento para deserializar un objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

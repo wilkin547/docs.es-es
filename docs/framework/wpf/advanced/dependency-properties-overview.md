@@ -14,22 +14,22 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 9bf0b168633bbf9f56694e79cf81f8051f9b8ac0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1df75814c45a6f1c245d43e2390b8a6ce692a779
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186378"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80587807"
 ---
 # <a name="dependency-properties-overview"></a>Información general sobre las propiedades de dependencia
 
-Windows Presentation Foundation (WPF) proporciona un conjunto de servicios que se pueden usar para ampliar la funcionalidad de la [propiedad](../../../standard/base-types/common-type-system.md#Properties) de un tipo. Colectivamente, se suele hacer referencia a estos servicios como el sistema de propiedades de WPF. Una propiedad respaldada por el sistema de propiedades de WPF se conoce como una propiedad de dependencia. En esta información general se describe el sistema de propiedades de WPF y las funcionalidades de una propiedad de dependencia. Esto incluye cómo usar las propiedades de dependencia existentes en XAML y en el código. Esta información general también presenta aspectos especializados de las propiedades de dependencia, como los metadatos de las propiedades de dependencia y el proceso de creación de una propiedad de dependencia propia en una clase personalizada.
+Windows Presentation Foundation (WPF) proporciona un conjunto de servicios que se pueden usar para ampliar la funcionalidad de la [propiedad](../../../standard/base-types/common-type-system.md#properties) de un tipo. Colectivamente, se suele hacer referencia a estos servicios como el sistema de propiedades de WPF. Una propiedad respaldada por el sistema de propiedades de WPF se conoce como una propiedad de dependencia. En esta información general se describe el sistema de propiedades de WPF y las funcionalidades de una propiedad de dependencia. Esto incluye cómo usar las propiedades de dependencia existentes en XAML y en el código. Esta información general también presenta aspectos especializados de las propiedades de dependencia, como los metadatos de las propiedades de dependencia y el proceso de creación de una propiedad de dependencia propia en una clase personalizada.
 
 ## <a name="prerequisites"></a>Requisitos previos
 En este tema se supone que tiene conocimientos básicos sobre el sistema de tipos de .NET y la programación orientada a objetos. Para seguir los ejemplos de este tema, también debe comprender el lenguaje XAML y saber cómo escribir aplicaciones de WPF. Para obtener más información, vea [Tutorial: Mi primera aplicación de escritorio WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
 ## <a name="dependency-properties-and-clr-properties"></a>Propiedades de dependencia y propiedades CLR
- En WPF, las propiedades se suelen exponer como [propiedades estándar](../../../standard/base-types/common-type-system.md#Properties) de .NET. En un nivel básico, podría interactuar directamente con estas propiedades y no llegar a saber que están implementadas como una propiedad de dependencia. Pero debería familiarizarse con todas o algunas de las características del sistema de propiedades de WPF, a fin de poder aprovechar estas características.
+ En WPF, las propiedades se suelen exponer como [propiedades estándar](../../../standard/base-types/common-type-system.md#properties) de .NET. En un nivel básico, podría interactuar directamente con estas propiedades y no llegar a saber que están implementadas como una propiedad de dependencia. Pero debería familiarizarse con todas o algunas de las características del sistema de propiedades de WPF, a fin de poder aprovechar estas características.
 
 El propósito de las propiedades de dependencia es proporcionar una manera de calcular el valor de una propiedad en función del valor de otras entradas. Estas otras entradas pueden incluir propiedades del sistema, tales como temas y preferencias del usuario, mecanismos de determinación de propiedades Just-In-Time como el enlace de datos y las animaciones o los guiones gráficos, plantillas de usos múltiples como recursos y estilos, o valores conocidos a través de relaciones primario-secundario con otros elementos del árbol de elementos. Además, una propiedad de dependencia se puede implementar para proporcionar una validación autocontenida, valores predeterminados, devoluciones de llamada que controlen los cambios en otras propiedades y un sistema que pueda forzar los valores de propiedad de acuerdo con la información de tiempo de ejecución en potencia. Las clases derivadas también pueden cambiar algunas características concretas de una propiedad existente mediante la invalidación de los metadatos de la propiedad de dependencia, en lugar de invalidar la implementación real de las propiedades existentes o de crear nuevas propiedades.
 
@@ -95,7 +95,7 @@ Una propiedad de dependencia proporciona una funcionalidad que amplía la funcio
 
 - [Invalidaciones de metadatos](#metadata-overrides)
 
-- [Herencia de valores de propiedad](#property-value-inheritance)
+- [Herencia de valor de propiedad](#property-value-inheritance)
 
 - [Integración de WPF Designer](#wpf-designer-integration)
 
@@ -196,7 +196,7 @@ Por lo general, no querrá que los estilos siempre apliquen ni oculten siquiera 
 
 - Por lo general, las propiedades de dependencia deben considerarse propiedades públicas, accesibles o al menos reconocibles para cualquier llamador que tenga acceso a una instancia. Para obtener más información, consulte [Seguridad de las propiedades de dependencia](dependency-property-security.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Propiedades de dependencia personalizadas](custom-dependency-properties.md)
 - [Propiedades de dependencia de sólo lectura](read-only-dependency-properties.md)
