@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - collections [.NET Framework]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
-ms.openlocfilehash: 3ca340e19d7340d7bea133fa62c6d8bbc3c0512a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ec14cf30159dda1f2c67ef0c0f5f0a3e52000c45
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160396"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588643"
 ---
 # <a name="collections-and-data-structures"></a>Colecciones y estructuras de datos
 A menudo, los datos similares pueden controlarse de forma más eficaz si se almacenan y manipulan como si fuesen una colección. Puede usar la clase <xref:System.Array?displayProperty=nameWithType> o las clases de los espacios de nombres <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent> y System.Collections.Immutable para agregar, quitar y modificar elementos individuales o intervalos de elementos de una colección.  
@@ -30,7 +30,7 @@ A menudo, los datos similares pueden controlarse de forma más eficaz si se alma
   
 - **Capacidad para enumerar la colección**  
   
-     Las colecciones de .NET Framework implementan <xref:System.Collections.IEnumerable?displayProperty=nameWithType> o <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> para permitir procesar una iteración en la colección. Un enumerador puede considerarse como un puntero móvil para cualquier elemento de la colección. Las instrucciones [foreach, in](../../csharp/language-reference/keywords/foreach-in.md) y [For Each...Next](../../visual-basic/language-reference/statements/for-each-next-statement.md) usan el enumerador expuesto por el método <xref:System.Collections.IEnumerable.GetEnumerator%2A> y ocultan la complejidad que supone manipular el enumerador. Además, cualquier colección que implementa <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> se considera un *tipo consultable* y se puede consultar con LINQ. Las consultas LINQ proporcionan un modelo común para acceder a los datos. Por lo general, son más concisas y legibles que los bucles `foreach` estándar y ofrecen capacidad de filtrado, ordenación y agrupación. Las consultas LINQ también pueden mejorar el rendimiento. Para obtener más información, vea [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md), [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md), [Introducción a las consultas LINQ (C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md) y [Operaciones básicas de consulta (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
+     Las colecciones de .NET Framework implementan <xref:System.Collections.IEnumerable?displayProperty=nameWithType> o <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> para permitir procesar una iteración en la colección. Un enumerador puede considerarse como un puntero móvil para cualquier elemento de la colección. Las instrucciones [foreach, in](../../csharp/language-reference/keywords/foreach-in.md) y [For Each...Next](../../visual-basic/language-reference/statements/for-each-next-statement.md) usan el enumerador expuesto por el método <xref:System.Collections.IEnumerable.GetEnumerator%2A> y ocultan la complejidad que supone manipular el enumerador. Además, cualquier colección que implementa <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> se considera un *tipo consultable* y se puede consultar con LINQ. Las consultas LINQ proporcionan un modelo común para acceder a los datos. Por lo general, son más concisas y legibles que los bucles `foreach` estándar y ofrecen capacidad de filtrado, ordenación y agrupación. Las consultas LINQ también pueden mejorar el rendimiento. Para obtener más información, vea [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md), [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md), [Introducción a las consultas LINQ (C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md) y [Operaciones básicas de consulta (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
   
 - **Capacidad de copiar el contenido de la colección en una matriz**  
   
@@ -72,7 +72,7 @@ A menudo, los datos similares pueden controlarse de forma más eficaz si se alma
 <a name="BKMK_RelatedTopics"></a>
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Título|Description|  
+|Title|Descripción|  
 |-----------|-----------------|  
 |[Seleccionar una clase de colección](../../../docs/standard/collections/selecting-a-collection-class.md)|Describe las diferentes colecciones y le ayuda a seleccionar una para su escenario.|  
 |[Tipos de colección utilizados normalmente](../../../docs/standard/collections/commonly-used-collection-types.md)|Describe los tipos de colección genéricos y no genéricos más utilizados, como <xref:System.Array?displayProperty=nameWithType>, <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> y <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.|  

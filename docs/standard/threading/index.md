@@ -6,18 +6,18 @@ helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: 7b46a7d9-c6f1-46d1-a947-ae97471bba87
-ms.openlocfilehash: d6b8a0a4e16aa3169888958fa1376bfa61526dbd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c5ca102dc98e50067d39d2f0c51a6ff75e342e9f
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73137931"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588667"
 ---
 # <a name="managed-threading"></a>Subprocesamiento administrado
 Tanto si va a desarrollar aplicaciones para equipos con uno o varios procesadores, desea que la aplicación proporcione la interacción con mayor capacidad de respuesta con el usuario, incluso si la aplicación actualmente hace otro trabajo. Usar varios subprocesos de ejecución es una de las formas más eficaces de mantener que la aplicación siga respondiendo al usuario y, al mismo tiempo, usar el procesador entre eventos de usuario o durante los mismos. Si bien esta sección presenta los conceptos básicos del subprocesamiento, se centra en los conceptos del subprocesamiento administrado y su uso.  
   
 > [!NOTE]
-> A partir de .NET Framework 4, la programación multiproceso se ha simplificado significativamente con las clases <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md), clases de colecciones simultáneas nuevas en el espacio de nombres <xref:System.Collections.Concurrent?displayProperty=nameWithType> y un nuevo modelo de programación basado en el concepto de tareas en lugar de subprocesos. Para más información, consulte [Parallel Programming](../../../docs/standard/parallel-programming/index.md) (Programación en paralelo).  
+> A partir de .NET Framework 4, la programación multiproceso se ha simplificado significativamente con las clases <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md), clases de colecciones simultáneas nuevas en el espacio de nombres <xref:System.Collections.Concurrent?displayProperty=nameWithType> y un nuevo modelo de programación basado en el concepto de tareas en lugar de subprocesos. Para más información, consulte [Programación en paralelo](../../../docs/standard/parallel-programming/index.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Principios básicos del subprocesamiento administrado](../../../docs/standard/threading/managed-threading-basics.md)  
@@ -46,10 +46,10 @@ Tanto si va a desarrollar aplicaciones para equipos con uno o varios procesadore
  [Dominios de aplicación](../../../docs/framework/app-domains/application-domains.md)  
  Proporciona información genera sobre los dominios de aplicación y de su uso en Common Language Infrastructure.  
   
- [Asynchronous File I/O](../../../docs/standard/io/asynchronous-file-i-o.md)  
+ [E/S de archivos asincrónica](../../../docs/standard/io/asynchronous-file-i-o.md)  
  Describe las ventajas de rendimiento y el funcionamiento básico de la E/S asincrónica.  
   
- [Modelo asincrónico basado en tareas [TAP]](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  
+ [Modelo asincrónico basado en tareas (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  
  Proporciona una introducción del patrón recomendado para programación asincrónica en. NET.  
   
  [Llamada a métodos sincrónicos de forma asincrónica](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
@@ -58,5 +58,5 @@ Tanto si va a desarrollar aplicaciones para equipos con uno o varios procesadore
  [Programación en paralelo](../../../docs/standard/parallel-programming/index.md)  
  Describe las bibliotecas de programación en paralelo, las que simplifican el uso de varios subprocesos en las aplicaciones.  
   
- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
+ [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)  
  Describe un sistema para ejecutar consultas en paralelo a fin de aprovechar los distintos procesadores.
