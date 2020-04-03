@@ -2,15 +2,16 @@
 title: Elección de un codificador de mensajes
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: a306896af7a73d43956638981908c12d86126a9f
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: d93d7039d034262cd47edd437d5d7d8d63890f02
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345254"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635775"
 ---
-# <a name="choosing-a-message-encoder"></a>Elección de un codificador de mensajes
-En este tema se describen los criterios para elegir entre los codificadores de mensajes que se incluyen en Windows Communication Foundation (WCF): binario, texto y mecanismo de optimización de transmisión de mensajes (MTOM).  
+# <a name="choose-a-message-encoder"></a>Elija un codificador de mensajes
+
+En este artículo se describen los criterios para elegir entre los codificadores de mensajes que se incluyen en Windows Communication Foundation (WCF): binario, texto y mecanismo de optimización de transmisión de mensajes (MTOM).  
   
  En WCF, se especifica cómo transferir datos a través de una red entre extremos mediante un *enlace,* que se compone de una secuencia de elementos de *enlace.* Un codificador de mensajes se representa mediante un elemento de enlace de codificación de mensajes en la pila de enlaces. Un enlace incluye elementos de enlace protocolares opcionales, como un elemento de enlace de seguridad o un elemento de enlace de mensajería de confianza, un elemento de enlace de la codificación de mensajes necesario y un elemento de enlace de transporte necesario.  
   
@@ -32,14 +33,14 @@ En este tema se describen los criterios para elegir entre los codificadores de m
   
 |Factor|Descripción|Codificadores que admiten este factor|  
 |------------|-----------------|---------------------------------------|  
-|Juegos de caracteres compatibles|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>y <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> soporta sólo las codificaciones Unicode UTF8 y UTF16 (*big-endian* y *little-endian*). Si se requieren otras codificaciones, como UTF7 o ASCII, se debe usar un codificador personalizado. Para obtener un codificador personalizado de ejemplo, vea [Custom Message Encoder](https://docs.microsoft.com/dotnet/framework/wcf/samples/custom-message-encoder-custom-text-encoder).|Text|  
-|Inspección|La inspección es la capacidad para examinar mensajes durante la transmisión. Las codificaciones de texto, con o sin el uso de SOAP, permiten a muchas aplicaciones inspeccionar y analizar mensajes sin el uso de herramientas especializadas. Tenga en cuenta que el uso de seguridad de transferencia en el nivel de mensaje o transporte, afecta a su capacidad para inspeccionar los mensajes. La confidencialidad evita que se examine un mensaje y la integridad evita que se modifique un mensaje.|Text|  
+|Juegos de caracteres compatibles|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>y <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> soporta sólo las codificaciones Unicode UTF8 y UTF16 (*big-endian* y *little-endian*). Si se requieren otras codificaciones, como UTF7 o ASCII, se debe usar un codificador personalizado. Para obtener un codificador personalizado de ejemplo, vea [Custom Message Encoder](https://docs.microsoft.com/dotnet/framework/wcf/samples/custom-message-encoder-custom-text-encoder).|Texto|  
+|Inspección|La inspección es la capacidad para examinar mensajes durante la transmisión. Las codificaciones de texto, con o sin el uso de SOAP, permiten a muchas aplicaciones inspeccionar y analizar mensajes sin el uso de herramientas especializadas. El uso de la seguridad de transferencia, ya sea en el nivel de mensaje o de transporte, afecta a su capacidad para inspeccionar mensajes. La confidencialidad evita que se examine un mensaje y la integridad evita que se modifique un mensaje.|Texto|  
 |Confiabilidad|La fiabilidad es la capacidad de recuperación de que dispone un codificador ante los errores de transmisión. La fiabilidad también se proporciona en el nivel de mensaje, transporte o aplicación. Todos los codificadores WCF estándar suponen que otra capa proporciona confiabilidad. El codificador tiene poca capacidad de recuperación ante los errores de transmisión.|None|  
 |Simplicidad|La simplicidad representa la facilidad con la que puede crear codificadores y decodificadores para una especificación de codificación. Las codificaciones de texto son particularmente ventajosas para proporcionar simplicidad y la codificación de texto de POX tiene la ventaja adicional de que no requiere compatibilidad para procesar SOAP.|Texto (POX)|  
-|Size|La codificación determina la cantidad de sobrecarga impuesta sobre el contenido. El tamaño de los mensajes codificados está directamente relacionado con el rendimiento máximo de las operaciones del servicio. Las codificaciones binarias generalmente son más compactas que las codificaciones de texto. Cuando el tamaño del mensaje es muy importante, considere también la posibilidad de comprimir el contenido del mensaje durante la codificación. Sin embargo, la compresión agrega costes de procesamiento para el remitente y receptor del mensaje.|Binary|  
+|Tamaño|La codificación determina la cantidad de sobrecarga impuesta sobre el contenido. El tamaño de los mensajes codificados está directamente relacionado con el rendimiento máximo de las operaciones del servicio. Las codificaciones binarias generalmente son más compactas que las codificaciones de texto. Cuando el tamaño del mensaje es muy importante, considere también la posibilidad de comprimir el contenido del mensaje durante la codificación. Sin embargo, la compresión agrega costes de procesamiento para el remitente y receptor del mensaje.|Binary|  
 |Streaming|La transmisión por secuencias permite a las aplicaciones comenzar a procesar un mensaje antes de que haya llegado el mensaje completo. El uso eficaz de la transmisión por secuencias requiere que los datos importantes de un mensaje estén disponibles al principio del mensaje para que la aplicación receptora no tenga que esperar a que llegue. Es más, las aplicaciones que utilizan la transferencia por secuencias deben organizar incrementalmente los datos en el mensaje para que el contenido no tenga dependencias hacia delante. En muchos casos, debe establecer un compromiso entre el contenido de transmisión por secuencias y tener el tamaño de transferencia más pequeño posible para ese contenido.|None|  
-|Compatibilidad con herramientas de terceros|Entre las áreas de compatibilidad de una codificación se incluyen el desarrollo y el diagnóstico. Los desarrolladores de terceros han realizado una gran inversión en bibliotecas y kits de herramientas para administrar mensajes codificados en formato POX.|Texto (POX)|  
-|Interoperabilidad|Este factor hace referencia a la capacidad de un codificador WCF para interoperar con servicios que no son WCF.|Text<br /><br /> MTOM (parcial)|  
+|Soporte de herramientas de terceros|Entre las áreas de compatibilidad de una codificación se incluyen el desarrollo y el diagnóstico. Los desarrolladores de terceros han realizado una gran inversión en bibliotecas y kits de herramientas para administrar mensajes codificados en formato POX.|Texto (POX)|  
+|Interoperabilidad|Este factor hace referencia a la capacidad de un codificador WCF para interoperar con servicios que no son WCF.|Texto<br /><br /> MTOM (parcial)|  
   
 Nota: cuando se usa el codificador binario, el uso del valor IgnoreWhitespace al crear un XMLReader no tendrá ningún efecto.  Por ejemplo, si hace lo siguiente dentro de una operación de servicio:  
 
@@ -80,7 +81,7 @@ Puesto que esta propiedad solo se expone en el binaryMessageEncodingBindingEleme
 </customBinding>
  ```
 
-Tanto el cliente como el servicio deben aceptar enviar y recibir mensajes comprimidos y, por lo tanto, la propiedad compressionFormat debe configurarse en el elemento binaryMessageEncoding tanto en el cliente como en el servicio. Se produce una ProtocolException si el servicio o el cliente no está configurado para la compresión pero el otro extremo sí lo está. Debe considerarse detenidamente habilitar la compresión. La compresión es más útil si el ancho de banda de red es un cuello de botella. En el caso en que el cuello de botella sea la CPU, la compresión reducirá el rendimiento. Se debe realizar una prueba adecuada en un entorno simulado para averiguar si esto beneficia a la aplicación  
+Tanto el cliente como el servicio deben aceptar enviar y recibir mensajes comprimidos y, por lo tanto, la propiedad compressionFormat debe configurarse en el elemento binaryMessageEncoding tanto en el cliente como en el servicio. Se produce una excepción ProtocolException si el servicio o el cliente no está configurado para la compresión, pero el otro lado sí. Se debe considerar cuidadosamente la habilitación de la compresión. La compresión es más útil si el ancho de banda de red es un cuello de botella. En el caso en que el cuello de botella sea la CPU, la compresión reducirá el rendimiento. Se debe realizar una prueba adecuada en un entorno simulado para averiguar si esto beneficia a la aplicación  
   
 ## <a name="see-also"></a>Vea también
 

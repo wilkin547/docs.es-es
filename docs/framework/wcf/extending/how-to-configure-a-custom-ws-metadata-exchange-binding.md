@@ -5,15 +5,16 @@ helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: 9676ae4053553b84488602627b28790aae22eff6
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 6459e3f0cf0ab72af8027bd6802a0e7aa574aece
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345280"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635785"
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Procedimiento para configurar un enlace de WS-Metadata Exchange personalizado
-En este tema se explica cómo configurar un enlace personalizado de intercambio de WS-Metadata. Windows Communication Foundation (WCF) incluye cuatro enlaces de metadatos definidos por el sistema, pero puede publicar metadatos mediante cualquier enlace que desee. En este tema, se mostrará cómo publicar metadatos mediante `wsHttpBinding`. Este enlace le da la opción de exponer los metadatos de una manera segura. El código de este artículo se basa en [introducción](../samples/getting-started-sample.md).  
+
+En este artículo se explica cómo configurar un enlace de intercambio WS-Metadata personalizado. Windows Communication Foundation (WCF) incluye cuatro enlaces de metadatos definidos por el sistema, pero puede publicar metadatos mediante cualquier enlace que desee. En este artículo se muestra `wsHttpBinding`cómo publicar metadatos mediante el archivo . Este enlace le da la opción de exponer los metadatos de una manera segura. El código de este artículo se basa en [introducción](../samples/getting-started-sample.md).  
   
 ### <a name="using-a-configuration-file"></a>El uso de un archivo de configuración  
   
@@ -44,7 +45,7 @@ En este tema se explica cómo configurar un enlace personalizado de intercambio 
               contract="IMetadataExchange" />  
     ```  
   
-4. Para comprobar que el punto de conexión de intercambio de metadatos está funcionando correctamente, agregue una etiqueta de punto de conexión en el archivo de configuración del cliente:  
+4. Para comprobar que el punto de conexión de intercambio de metadatos funciona correctamente, agregue una etiqueta de punto final en el archivo de configuración del cliente:  
   
     ```xml  
     <endpoint name="MyMexEndpoint"               address="http://localhost:8000/servicemodelsamples/service/mex"  
@@ -117,6 +118,6 @@ En este tema se explica cómo configurar un enlace personalizado de intercambio 
 
 - [Comportamiento de publicación de metadatos](../samples/metadata-publishing-behavior.md)
 - [Recuperación de metadatos](../samples/retrieve-metadata.md)
-- [Metadatos](../feature-details/metadata.md)
+- [Metadata](../feature-details/metadata.md)
 - [Publicación de metadatos](../feature-details/publishing-metadata.md)
 - [Publicación de puntos de conexión de metadatos](../publishing-metadata-endpoints.md)

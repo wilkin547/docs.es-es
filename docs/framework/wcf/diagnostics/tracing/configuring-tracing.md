@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: aca3b5c54bff9c2b4c5380c04dd0da162215b088
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: c5079237ff4c97dd9ef164061dc5e7499c1d6e38
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523316"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635997"
 ---
 # <a name="configuring-tracing"></a>Configurar seguimiento
 En este tema se describe cómo se puede habilitar el seguimiento, configurar los orígenes de seguimiento para emitir trazas y establecer niveles de seguimiento, establecer el seguimiento y la propagación de actividades para admitir la correlación de seguimiento de un extremo a otro, y establecer escuchas de seguimiento para tener acceso a las trazas.  
@@ -22,7 +22,7 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
 ## <a name="enabling-tracing"></a>La habilitación del seguimiento  
  Windows Communication Foundation (WCF) genera los siguientes datos para el seguimiento de diagnóstico:  
   
-- Trazas para los hitos del proceso en todos los componentes de las aplicaciones, como llamadas de operación, excepciones de código, advertencias y otros eventos de procesamiento significativos.  
+- Seguimientos de los hitos del proceso en todos los componentes de las aplicaciones, como llamadas a operaciones, excepciones de código, advertencias y otros eventos de procesamiento significativos.  
   
 - Eventos de error de Windows cuando la característica de seguimiento no funciona bien. Consulte [Registro de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   
@@ -32,7 +32,7 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
   
  Si usa puntos de extensibilidad de WCF, como invocadores de operaciones personalizadas, debe emitir sus propios seguimientos. Esto se debe a que si implementa un punto de extensibilidad, WCF ya no puede emitir los seguimientos estándar en la ruta de acceso predeterminada. Si no implementa la compatibilidad con el seguimiento manual mediante la emisión de seguimientos, puede que no vea los seguimientos que espera.  
   
- Puede configurar el seguimiento editando el archivo de configuración de la aplicación: Web.config para las aplicaciones hospedadas en web o Appname.exe.config para las aplicaciones autohospedadas. A continuación se muestra un ejemplo de dicha modificación: Para obtener más información sobre esta configuración, consulte la sección "Configuración de agentes de escucha de seguimiento para consumir seguimientos".  
+ Puede configurar el seguimiento editando el archivo de configuración de la aplicación, ya sea Web.config para aplicaciones hospedadas en Web o Appname.exe.config para aplicaciones autohospedadas. A continuación se muestra un ejemplo de dicha modificación: Para obtener más información sobre esta configuración, consulte la sección "Configuración de agentes de escucha de seguimiento para consumir seguimientos".  
   
 ```xml  
 <configuration>  
@@ -136,7 +136,7 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
  Para obtener más información sobre la creación de orígenes de seguimiento definidos por el usuario, consulte [Ampliación del seguimiento](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
   
 ## <a name="configuring-trace-listeners-to-consume-traces"></a>Configurar las escuchas para consumir trazas  
- En tiempo de ejecución, WCF alimenta los datos de seguimiento a los agentes de escucha que procesan los datos. WCF proporciona varios agentes <xref:System.Diagnostics>de escucha predefinidos para , que difieren en el formato que usan para la salida. También puede agregar tipos de escucha personalizados.  
+ En tiempo de ejecución, WCF alimenta los datos de seguimiento a los agentes de escucha, que procesan los datos. WCF proporciona varios agentes <xref:System.Diagnostics>de escucha predefinidos para , que difieren en el formato que usan para la salida. También puede agregar tipos de escucha personalizados.  
   
  Puede utilizar `add` para especificar el nombre y tipo de agente de escucha de seguimiento que desea utilizar. En nuestra configuración de ejemplo, hemos llamado `traceListener` al agente de escucha y hemos agregado el agente de escucha de seguimiento estándar de .NET Framework (`System.Diagnostics.XmlWriterTraceListener`) como el tipo que deseamos utilizar. Puede agregar cualquier número de escuchas de seguimiento para cada origen. Si la escucha de seguimiento emite el seguimiento a un archivo, debe especificar la ubicación del archivo de salida y el nombre en el archivo de configuración. Esto se hace estableciendo `initializeData` en el nombre del archivo para esa escucha. Si no especifica un nombre de archivo, se genera un nombre de archivo aleatorio basado en el tipo de escucha utilizado. Si se utiliza <xref:System.Diagnostics.XmlWriterTraceListener>, se genera un nombre de archivo sin extensión. Si implementa una escucha personalizada, también puede utilizar este atributo para recibir datos de inicialización distintos de un nombre de archivo. Por ejemplo, puede especificar un identificador de la base de datos para este atributo.  
   
@@ -157,7 +157,7 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
 |Error|Eventos "negativos": eventos que indican un procesamiento inesperado o una condición de error.|Se ha producido un procesamiento inesperado. La aplicación no pudo realizar una tarea como se esperaba. Sin embargo, la aplicación todavía está en funcionamiento y ejecutándose.|Se registran todas las excepciones.|Administradores<br /><br /> Desarrolladores de aplicaciones|  
 |Advertencia|Eventos "negativos": eventos que indican un procesamiento inesperado o una condición de error.|Se ha producido o puede producirse un posible problema, pero la aplicación todavía funciona correctamente. Sin embargo, puede no continuar funcionando correctamente.|- La aplicación está recibiendo más solicitudes de las que permite su configuración de limitación.<br />- La cola receptora está cerca de su capacidad máxima configurada.<br />- El tiempo de espera ha excedido.<br />- Las credenciales se rechazan.|Administradores<br /><br /> Desarrolladores de aplicaciones|  
 |Information|Eventos "positivos": eventos que marcan hitos exitosos|Hitos importantes y correctos de ejecución de la aplicación, independientemente de si la aplicación funciona correctamente o no.|En general, se generan mensajes útiles para supervisar y diagnosticar el estado del sistema, medir el rendimiento o el perfil. Puede usar esta información para la planeación de la capacidad y la administración del rendimiento:<br /><br /> - Se crean canales.<br />- Se crean agentes de escucha de punto final.<br />- El mensaje entra/deja el transporte.<br />- Se recupera el token de seguridad.<br />- Se lee la configuración.|Administradores<br /><br /> Desarrolladores de aplicaciones<br /><br /> Desarrolladores de productos.|  
-|Verbose|Eventos "positivos": eventos que marcan hitos exitosos.|Se emiten eventos de bajo nivel tanto para el código de usuario como para el servicio.|En general, puede utilizar este nivel para depuración u optimización de la aplicación.<br /><br /> - Encabezado del mensaje entendido.|Administradores<br /><br /> Desarrolladores de aplicaciones<br /><br /> Desarrolladores de productos.|  
+|Verbose|Eventos "positivos": eventos que marcan hitos exitosos.|Se emiten eventos de bajo nivel tanto para el código de usuario como para el mantenimiento.|En general, puede utilizar este nivel para depuración u optimización de la aplicación.<br /><br /> - Encabezado del mensaje entendido.|Administradores<br /><br /> Desarrolladores de aplicaciones<br /><br /> Desarrolladores de productos.|  
 |ActivityTracing||Transmitir eventos entre actividades de procesamiento y componentes.|Este nivel permite a los administradores y programadores poner en correlación las aplicaciones que se encuentran en el mismo dominio de aplicación:<br /><br /> - Seguimientos de los límites de actividad, como inicio/parada.<br />- Rastros para traslados.|All|  
 |All||La aplicación puede funcionar correctamente. Se emiten todos los eventos.|Todos los eventos anteriores.|Todas|  
   

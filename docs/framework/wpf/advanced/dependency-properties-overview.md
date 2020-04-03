@@ -14,18 +14,18 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 1df75814c45a6f1c245d43e2390b8a6ce692a779
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 542e0a84e4c5cfc3750c33fe29cb40d3643e91e3
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80587807"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80636022"
 ---
 # <a name="dependency-properties-overview"></a>Información general sobre las propiedades de dependencia
 
 Windows Presentation Foundation (WPF) proporciona un conjunto de servicios que se pueden usar para ampliar la funcionalidad de la [propiedad](../../../standard/base-types/common-type-system.md#properties) de un tipo. Colectivamente, se suele hacer referencia a estos servicios como el sistema de propiedades de WPF. Una propiedad respaldada por el sistema de propiedades de WPF se conoce como una propiedad de dependencia. En esta información general se describe el sistema de propiedades de WPF y las funcionalidades de una propiedad de dependencia. Esto incluye cómo usar las propiedades de dependencia existentes en XAML y en el código. Esta información general también presenta aspectos especializados de las propiedades de dependencia, como los metadatos de las propiedades de dependencia y el proceso de creación de una propiedad de dependencia propia en una clase personalizada.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerrequisitos
 En este tema se supone que tiene conocimientos básicos sobre el sistema de tipos de .NET y la programación orientada a objetos. Para seguir los ejemplos de este tema, también debe comprender el lenguaje XAML y saber cómo escribir aplicaciones de WPF. Para obtener más información, vea [Tutorial: Mi primera aplicación de escritorio WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
 ## <a name="dependency-properties-and-clr-properties"></a>Propiedades de dependencia y propiedades CLR
@@ -128,7 +128,7 @@ Las propiedades de dependencia, o bien la clase <xref:System.Windows.DependencyO
 ### <a name="styles"></a>Estilos
 Los estilos y las plantillas son dos de los principales escenarios que invitan a usar las propiedades de dependencia. Los estilos son particularmente útiles para establecer las propiedades que definen la [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] de la aplicación. Los estilos se definen normalmente como recursos en XAML. Los estilos interactúan con el sistema de propiedades porque suelen contener "establecedores" para determinadas propiedades, así como "desencadenadores" que cambian un valor de propiedad según el valor en tiempo real de otra propiedad.
 
-En el ejemplo siguiente se crea un estilo muy simple (que se definiría dentro de un diccionario <xref:System.Windows.FrameworkElement.Resources%2A>, que no se muestra), y después se aplica ese estilo directamente a la propiedad <xref:System.Windows.FrameworkElement.Style%2A> de un <xref:System.Windows.Controls.Button>. El establecedor dentro del estilo establece la propiedad <xref:System.Windows.Controls.Control.Background%2A> de un <xref:System.Windows.Controls.Button> con estilo en el color verde.
+En el ejemplo siguiente se crea un <xref:System.Windows.FrameworkElement.Resources%2A> estilo simple (que se definiría <xref:System.Windows.FrameworkElement.Style%2A> dentro de <xref:System.Windows.Controls.Button>un diccionario, no se muestra), a continuación, aplica ese estilo directamente a la propiedad para un archivo . El establecedor dentro del estilo establece la propiedad <xref:System.Windows.Controls.Control.Background%2A> de un <xref:System.Windows.Controls.Button> con estilo en el color verde.
 
 [!code-xaml[PropertiesOvwSupport#SimpleStyleDef](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#simplestyledef)]
 
@@ -146,7 +146,7 @@ En el ejemplo siguiente se anima el atributo <xref:System.Windows.Controls.Contr
 Para obtener más información sobre la animación de propiedades, consulte [Información general sobre animaciones](../graphics-multimedia/animation-overview.md) e [Información general sobre objetos Storyboard](../graphics-multimedia/storyboards-overview.md).
 
 ### <a name="metadata-overrides"></a>Invalidaciones de metadatos
-Puede cambiar ciertos comportamientos de una propiedad de dependencia mediante la invalidación de los metadatos de la propiedad cuando se deriva de la clase que originalmente registra la propiedad de dependencia. La invalidación de metadatos se basa en el identificador <xref:System.Windows.DependencyProperty>. Para invalidar los metadatos no es necesario volver a implementar la propiedad. El sistema de propiedades controla de forma nativa el cambio en los metadatos; cada clase puede contener metadatos individuales de todas las propiedades que se heredan de las clases base, por tipo.
+Puede cambiar ciertos comportamientos de una propiedad de dependencia mediante la invalidación de los metadatos de la propiedad cuando se deriva de la clase que originalmente registra la propiedad de dependencia. La invalidación de metadatos se basa en el identificador <xref:System.Windows.DependencyProperty>. La invalidación de metadatos no requiere volver a implementar la propiedad. El sistema de propiedades controla de forma nativa el cambio en los metadatos; cada clase puede contener metadatos individuales de todas las propiedades que se heredan de las clases base, por tipo.
 
 En el ejemplo siguiente se invalidan los metadatos para una propiedad de dependencia <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>. La invalidación de los metadatos de esta propiedad de dependencia concreta forma parte de un patrón de implementación que crea controles que pueden usar estilos predeterminados de temas.
 
@@ -183,18 +183,18 @@ En principio, para el primer botón, la propiedad se establece dos veces, pero s
 [!code-xaml[PropertiesOvwSupport#MiniPrecedence](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#miniprecedence)]  
 
 ### <a name="why-does-dependency-property-precedence-exist"></a>¿Por qué existe la precedencia de las propiedades de dependencia?
-Por lo general, no querrá que los estilos siempre apliquen ni oculten siquiera un valor establecido localmente de un elemento individual (de lo contrario, sería muy difícil usar estilos o elementos en general). Por lo tanto, los valores que proceden de estilos funcionan con una precedencia más baja que un valor establecido localmente. Para obtener una lista más completa de las propiedades de dependencia y conocer la procedencia del valor efectivo de una propiedad de dependencia, consulte [Prioridad de los valores de propiedades de dependencia](dependency-property-value-precedence.md).
+Normalmente, no desea que los estilos siempre se apliquen y oscurezcan incluso un valor establecido localmente de un elemento individual (de lo contrario, sería difícil usar estilos o elementos en general). Por lo tanto, los valores que proceden de estilos funcionan con una precedencia más baja que un valor establecido localmente. Para obtener una lista más completa de las propiedades de dependencia y conocer la procedencia del valor efectivo de una propiedad de dependencia, consulte [Prioridad de los valores de propiedades de dependencia](dependency-property-value-precedence.md).
 
 > [!NOTE]
 > Existen varias propiedades definidas en elementos de WPF que no son propiedades de dependencia. En general, las propiedades se implementaban como propiedades de dependencia solo cuando era necesario admitir al menos uno de los escenarios que habilitaba el sistema de propiedades: enlace de datos, estilos, animación, compatibilidad con los valores predeterminados, herencia, propiedades adjuntas o invalidación.
 
 ## <a name="learning-more-about-dependency-properties"></a>Más información sobre las propiedades de dependencia  
 
-- Una propiedad adjunta es un tipo de propiedad que admite una sintaxis especializada en XAML. Una propiedad adjunta a menudo no tiene una correspondencia 1:1 con una propiedad de Common Language Runtime (CLR) y no es necesariamente una propiedad de dependencia. El propósito típico de una propiedad adjunta es permitir que los elementos secundarios comuniquen valores de propiedad a un elemento primario, aunque el elemento primario y el elemento secundario no posean a la vez esa propiedad como parte de las listas de miembros de clase. Un escenario principal es habilitar los elementos secundarios para que informen al elemento primario de cómo se deben mostrar en [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]; para obtener un ejemplo, vea <xref:System.Windows.Controls.DockPanel.Dock%2A> o <xref:System.Windows.Controls.Canvas.Left%2A>. Para obtener información detallada, vea [Información general sobre propiedades asociadas](attached-properties-overview.md).
+- Una propiedad adjunta es un tipo de propiedad que admite una sintaxis especializada en XAML. Una propiedad adjunta a menudo no tiene una correspondencia 1:1 con una propiedad de Common Language Runtime (CLR) y no es necesariamente una propiedad de dependencia. El propósito típico de una propiedad adjunta es permitir que los elementos secundarios notifiquen los valores de propiedad a un elemento primario, incluso si el elemento primario y el elemento secundario no poseen esa propiedad como parte de las listas de miembros de clase. Un escenario principal es habilitar los elementos secundarios para que informen al elemento primario de cómo se deben mostrar en [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]; para obtener un ejemplo, vea <xref:System.Windows.Controls.DockPanel.Dock%2A> o <xref:System.Windows.Controls.Canvas.Left%2A>. Para obtener información detallada, vea [Información general sobre propiedades asociadas](attached-properties-overview.md).
 
 - Los desarrolladores de componentes o de aplicaciones pueden querer crear su propia propiedad de dependencia para habilitar funcionalidades, tales como el enlace de datos o la compatibilidad con estilos, o para admitir la invalidación y la coerción de valores. Para obtener más información, consulte [Propiedades de dependencia personalizadas](custom-dependency-properties.md).
 
-- Por lo general, las propiedades de dependencia deben considerarse propiedades públicas, accesibles o al menos reconocibles para cualquier llamador que tenga acceso a una instancia. Para obtener más información, consulte [Seguridad de las propiedades de dependencia](dependency-property-security.md).
+- Considere las propiedades de dependencia como propiedades públicas, accesibles o al menos detectables por cualquier llamador que tenga acceso a una instancia. Para obtener más información, consulte [Seguridad de las propiedades de dependencia](dependency-property-security.md).
 
 ## <a name="see-also"></a>Vea también
 
