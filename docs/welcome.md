@@ -3,12 +3,12 @@ title: Bienvenido a .NET
 description: Introducción a la familia de tecnologías .NET.
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: f5673f91545b98fb706d8f1cc03ef7746f1b19b8
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: ecdbdf13aa64de0f07b09eb73953e64d66755bb0
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345303"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635965"
 ---
 # <a name="welcome-to-net"></a>Bienvenido a .NET
 
@@ -16,7 +16,7 @@ Para obtener más información sobre cómo crear aplicaciones .NET Core, consult
 
 Cree muchos tipos de aplicaciones con .NET, como de nube, IoT y juegos, mediante herramientas multiplataforma gratis. Las aplicaciones se pueden ejecutar en Android, iOS, Linux, Mac OS y Windows. Implemente aplicaciones en servidores o equipos de sobremesa y publique en tiendas de aplicaciones para la implementación en dispositivos móviles. .NET es accesible para los estudiantes y aficionados, y todos pueden participar en una comunidad de desarrolladores internacional animada y realizar contribuciones directas a muchas de las tecnologías .NET.
 
-## <a name="news"></a>Noticias
+## <a name="news"></a>Novedades
 
 Para conocer las novedades de .NET, consulte los blogs siguientes:
 
@@ -42,11 +42,11 @@ Para obtener más información sobre las últimas características agregadas en 
 
 Esta documentación trata la amplitud de .NET en plataformas y lenguajes. Puede comenzar a trabajar con .NET y sus lenguajes en cualquiera de las siguientes secciones:
 
-- [Guía de .NET](standard/index.md)
+- [Guía de .NET](standard/index.yml)
 - [Guía de .NET Core](core/index.yml)
 - [Guía de .NET Framework](framework/index.yml)
 - [Guía de C#](csharp/index.yml)
-- [F# Guide](fsharp/index.yml)
+- [Guía de F#](fsharp/index.yml)
 - [Guía de Visual Basic](visual-basic/index.yml)
 - [Guía de ML.NET](machine-learning/index.yml)
 - [.NET para Apache Spark](spark/index.yml)
@@ -60,7 +60,7 @@ Explore vídeos en la web, dispositivos móviles, de escritorio, C#, aprendizaje
 
 [Serie de vídeos de .NET 101](https://dotnet.microsoft.com/learn/videos)
 
-## <a name="open-source"></a>Abrir origen
+## <a name="open-source"></a>Código Abierto
 
 Esta documentación es completamente de [código abierto](https://github.com/dotnet/docs). Puede contribuir de la manera que quiera, desde crear informes de problemas hasta escribir documentación. Además, gran parte del propio .NET también es de código abierto. En la lista siguiente encontrará los principales repositorios de .NET en GitHub:
 
