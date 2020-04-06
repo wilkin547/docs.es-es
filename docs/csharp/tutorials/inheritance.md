@@ -4,12 +4,12 @@ description: Aprenda a usar la herencia en bibliotecas y aplicaciones en C#.
 ms.date: 07/05/2018
 ms.technology: csharp-fundamentals
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: b72badb7833e018dfcbf5d2583b17f17c800c382
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 78833110db0e4f0382e5c0c6de7c6c8be9a16c8d
+ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156758"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80391154"
 ---
 # <a name="inheritance-in-c-and-net"></a>Herencia en C# y .NET
 
@@ -28,7 +28,7 @@ Para crear y ejecutar los ejemplos de este tutorial, use la utilidad [dotnet](..
 1. Copie y pegue el código del ejemplo en el editor de código.
 1. Escriba el comando [dotnet restore](../../core/tools/dotnet-restore.md) desde la línea de comandos para cargar o restaurar las dependencias del proyecto.
 
-  [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+   [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 1. Escriba el comando [dotnet run](../../core/tools/dotnet-run.md) para compilar y ejecutar el ejemplo.
 

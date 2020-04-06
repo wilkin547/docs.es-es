@@ -4,12 +4,12 @@ description: Conceptos clave para comprender la finalidad y el comportamiento de
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
-ms.openlocfilehash: 8a73a432bf8cc72cced77cf6c62a785b72032913
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 43fb0d792ddeb20b8a141af452a86dd50f37ba43
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72303711"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523610"
 ---
 # <a name="understanding-systemruntimeloaderassemblyloadcontext"></a>Descripción de System.Runtime.Loader.AssemblyLoadContext
 
@@ -103,8 +103,8 @@ Dado dos objetos `a` y `b`, la evaluación en el depurador de lo siguiente resul
 a.GetType().Assembly
 b.GetType().Assembly
 // In debugger look at each AssemblyLoadContext's instance and name
-System.Runtime.AssemblyLoadContext.GetLoadContext(a.GetType().Assembly)
-System.Runtime.AssemblyLoadContext.GetLoadContext(b.GetType().Assembly)
+System.Runtime.Loader.AssemblyLoadContext.GetLoadContext(a.GetType().Assembly)
+System.Runtime.Loader.AssemblyLoadContext.GetLoadContext(b.GetType().Assembly)
 ```
 
 ### <a name="resolving-type-conversion-issues"></a>Resolución de incidencias de conversión de tipos
