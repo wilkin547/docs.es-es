@@ -1,13 +1,13 @@
 ---
 title: Publicación de aplicaciones
 description: Obtenga más información sobre las formas de publicar una aplicación de .NET Core. .NET Core puede publicar aplicaciones específicas de la plataforma o multiplataforma. Puede publicar una aplicación como independiente o como dependiente del entorno de ejecución. Cada modo afecta a la forma en la que un usuario ejecuta la aplicación.
-ms.date: 01/31/2020
-ms.openlocfilehash: 3b9c3b7f29af12477874b7a31ef0de4750719de0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/01/2020
+ms.openlocfilehash: a4e5f9fe048d40c751f582bd49732cb903202db4
+ms.sourcegitcommit: 45cced471d59d5dac3f0c92abc9d4849716098a2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79397591"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665538"
 ---
 # <a name="net-core-application-publishing-overview"></a>Información general sobre la publicación de aplicaciones de .NET Core
 
@@ -15,7 +15,7 @@ Las aplicaciones que se crean con .NET Core se pueden publicar de dos modos dife
 
 La publicación de la aplicación como *independiente* genera una aplicación que incluye el entorno de ejecución y las bibliotecas de .NET Core, así como la aplicación y sus dependencias. Los usuarios de la aplicación pueden ejecutarla en un equipo que no tenga instalado el entorno de ejecución de .NET Core.
 
-La publicación de la aplicación como *dependiente del entorno de ejecución* genera una aplicación que incluye únicamente la propia aplicación y sus dependencias. Los usuarios de la aplicación tienen que instalar el entorno de ejecución de .NET Core por separado.
+La publicación de la aplicación como *dependiente del entorno de ejecución* (anteriormente, *dependiente del marco*) genera una aplicación que incluye únicamente la propia aplicación y sus dependencias. Los usuarios de la aplicación tienen que instalar el entorno de ejecución de .NET Core por separado.
 
 De forma predeterminada, ambos modos de publicación generan un archivo ejecutable específico de la plataforma. Las aplicaciones dependientes del entorno de ejecución se pueden crear sin un archivo ejecutable y son multiplataforma.
 
