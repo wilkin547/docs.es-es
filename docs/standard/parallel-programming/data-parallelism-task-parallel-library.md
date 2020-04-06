@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, data
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
-ms.openlocfilehash: 72696a41cd3b71f47fdcf43e4ece70ebeb7d34d1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f0910ae928e94b487df5a3dfd456ee9d7c0fb7df
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73123160"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80587599"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>Paralelismo de datos (biblioteca TPL)
 El *paralelismo de datos* hace referencia a los escenarios en los que la misma operación se realiza simultáneamente (es decir, en paralelo) en elementos de una colección o matriz de origen. En las operaciones paralelas de datos, se crean particiones de la colección de origen para que varios subprocesos puedan funcionar simultáneamente en segmentos diferentes.  
@@ -35,7 +35,7 @@ El *paralelismo de datos* hace referencia a los escenarios en los que la misma o
   
  Para obtener más información, consulte [Patterns for Parallel Programming: Understanding and Applying Parallel Patterns with the .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222) (Patrones para la programación paralela: comprender y aplicar patrones paralelos con .NET Framework 4).  
   
- PLINQ admite el paralelismo de datos con sintaxis declarativa o de consulta. Para más información, consulte [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md) (LINQ en paralelo [PLINQ]).  
+ PLINQ admite el paralelismo de datos con sintaxis declarativa o de consulta. Para más información, consulte [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md) (LINQ en paralelo [PLINQ]).  
   
 ## <a name="related-topics"></a>Temas relacionados  
   

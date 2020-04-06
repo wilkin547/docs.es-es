@@ -2,12 +2,12 @@
 title: Implementación del nivel de persistencia de la infraestructura con Entity Framework Core
 description: Arquitectura de microservicios de .NET para aplicaciones de .NET en contenedor | Información sobre la implementación del nivel de persistencia de la infraestructura con Entity Framework Core.
 ms.date: 01/30/2020
-ms.openlocfilehash: 63579dc74ba52551bc1ee02a57337c1b17fdf396
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2d28d9246be3e102625ed5bb67ee1ccede03c942
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401500"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523324"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementación del nivel de persistencia de infraestructura con Entity Framework Core
 
@@ -141,11 +141,11 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositor
             return _context.Buyers.Add(buyer).Entity;
         }
 
-        public async Task<Buyer> FindAsync(string BuyerIdentityGuid)
+        public async Task<Buyer> FindAsync(string buyerIdentityGuid)
         {
             var buyer = await _context.Buyers
                 .Include(b => b.Payments)
-                .Where(b => b.FullName == BuyerIdentityGuid)
+                .Where(b => b.FullName == buyerIdentityGuid)
                 .SingleOrDefaultAsync();
 
             return buyer;

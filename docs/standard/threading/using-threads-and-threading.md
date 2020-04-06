@@ -6,12 +6,12 @@ helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
-ms.openlocfilehash: 1d487edff2cdc2e63f81963bfaa1f68a06e5b36e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 14159ff9a6ca39108aec14b0ad46004e95fa3cf2
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75936841"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588424"
 ---
 # <a name="using-threads-and-threading"></a>Uso de subprocesos y subprocesamiento
 
@@ -20,7 +20,7 @@ Con .NET, se pueden escribir aplicaciones que realicen varias operaciones al mis
 Las aplicaciones que usan multithreading responden mejor a la entrada del usuario, ya que la interfaz de usuario permanece activa mientras las tareas que requieren un uso intensivo del procesador se ejecutan en subprocesos separados. El multithreading también es útil cuando se crean aplicaciones escalables, porque se pueden agregar subprocesos a medida que aumenta la carga de trabajo.
 
 > [!NOTE]
-> Si necesita más control sobre el comportamiento de los subprocesos de la aplicación, puede administrar los subprocesos por su cuenta. Pero a partir de .NET Framework 4, la programación multiproceso se ha simplificado significativamente con las clases <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, [Parallel LINQ (PLINQ)](../parallel-programming/parallel-linq-plinq.md), clases de colecciones simultáneas nuevas en el espacio de nombres <xref:System.Collections.Concurrent?displayProperty=nameWithType> y un nuevo modelo de programación basado en el concepto de tareas en lugar de subprocesos. Para obtener más información, vea [Programación en paralelo](../parallel-programming/index.md) y [Biblioteca de procesamiento paralelo basado en tareas (TPL)](../parallel-programming/task-parallel-library-tpl.md).
+> Si necesita más control sobre el comportamiento de los subprocesos de la aplicación, puede administrar los subprocesos por su cuenta. Pero a partir de .NET Framework 4, la programación multiproceso se ha simplificado significativamente con las clases <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, [Parallel LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md), clases de colecciones simultáneas nuevas en el espacio de nombres <xref:System.Collections.Concurrent?displayProperty=nameWithType> y un nuevo modelo de programación basado en el concepto de tareas en lugar de subprocesos. Para obtener más información, vea [Programación en paralelo](../parallel-programming/index.md) y [Biblioteca de procesamiento paralelo basado en tareas (TPL)](../parallel-programming/task-parallel-library-tpl.md).
 
 ## <a name="how-to-create-and-start-a-new-thread"></a>Cómo: crear e iniciar un subproceso nuevo
 

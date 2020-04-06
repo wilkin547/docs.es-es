@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 11/21/2019
 ms.topic: tutorial
 ms.custom: mvc,mlnet-tooling
-ms.openlocfilehash: e94313277a025d482105a6d78b6608d4df442c43
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6a36989f9453208e436ef8a4db2d4440aa0a1382
+ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79185839"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438190"
 ---
 # <a name="tutorial-classify-the-severity-of-restaurant-health-violations-with-model-builder"></a>Tutorial: Clasificación de la gravedad de las infracciones sanitarias en restaurantes con el Generador de modelos
 
@@ -150,6 +150,6 @@ Si tiene que hacer referencia a los proyectos generados en un momento posterior 
 
 Para más información sobre los temas mencionados en este tutorial, visite estos recursos:
 
-- [Escenarios del Generador de modelos](../automate-training-with-model-builder.md#scenarios)
+- [Escenarios del Generador de modelos](../automate-training-with-model-builder.md#scenario)
 - [Clasificación multiclase](../resources/glossary.md#multiclass-classification)
 - [Métricas de modelos de clasificación multiclase](../resources/metrics.md#evaluation-metrics-for-multi-class-classification)

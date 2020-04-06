@@ -7,12 +7,12 @@ helpviewer_keywords:
 - threading [.NET]
 - threading [.NET], multiple threads
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
-ms.openlocfilehash: ad36789579b95e0129e402765194b9f5e45a4cc1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e29c131f8459179d0641ac9a0cb8234fbba0e7d0
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73127502"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588443"
 ---
 # <a name="threads-and-threading"></a>Subprocesos y subprocesamiento
 
@@ -37,7 +37,7 @@ Si el programa realiza operaciones que pueden realizarse en paralelo, puede redu
 
 ## <a name="how-to-use-multithreading-in-net"></a>Cómo usar el multithreading en .NET
 
-A partir de .NET Framework 4, el método recomendado para utilizar el multithreading es usar las bibliotecas [TPL](../parallel-programming/task-parallel-library-tpl.md) y [PLINQ](../parallel-programming/parallel-linq-plinq.md). Para obtener más información, vea [Programación en paralelo](../parallel-programming/index.md).
+A partir de .NET Framework 4, el método recomendado para utilizar el multithreading es usar las bibliotecas [TPL](../parallel-programming/task-parallel-library-tpl.md) y [PLINQ](../parallel-programming/introduction-to-plinq.md). Para obtener más información, vea [Programación en paralelo](../parallel-programming/index.md).
 
 Las bibliotecas TPL y PLINQ se basan en los subprocesos de <xref:System.Threading.ThreadPool>. La clase <xref:System.Threading.ThreadPool?displayProperty=nameWithType> proporciona una aplicación .NET con un grupo de subprocesos de trabajo. También puede usar grupos de subprocesos. Para obtener más información, vea [Grupo de subprocesos administrado](the-managed-thread-pool.md).
 

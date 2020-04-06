@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, merge options
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
-ms.openlocfilehash: 18f233ac4c5afa63ec31e83d5fff8f0a57f9146f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 623466e0e960ea991ae92e5de432171b70bad1d2
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74203996"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588620"
 ---
 # <a name="merge-options-in-plinq"></a>Opciones de fusión mediante combinación en PLINQ
 Cuando una consulta se ejecuta en paralelo, PLINQ crea particiones de la secuencia de origen para que varios subprocesos puedan funcionar en diferentes partes al mismo tiempo, por lo general en subprocesos independientes. Si los resultados se van a usar en un subproceso, por ejemplo, en un bucle `foreach` (`For Each` en Visual Basic), los resultados de cada subproceso deben volver a combinarse en una secuencia. El tipo de combinación que PLINQ realiza depende de los operadores que están presentes en la consulta. Por ejemplo, los operadores que imponen un nuevo orden de los resultados deben almacenar en búfer todos los elementos de todos los subprocesos. Desde la perspectiva del subproceso utilizado (que también es el del usuario de la aplicación), una consulta totalmente almacenada en búfer podría ejecutarse durante un período de tiempo considerable antes de generar su primer resultado. Otros operadores, de forma predeterminada, están parcialmente almacenados en búfer; producen sus resultados en lotes. Un operador, <xref:System.Linq.ParallelEnumerable.ForAll%2A>, no se almacena en búfer de forma predeterminada. Genera inmediatamente todos los elementos de todos los subprocesos.  
@@ -65,5 +65,5 @@ Cuando una consulta se ejecuta en paralelo, PLINQ crea particiones de la secuenc
   
 ## <a name="see-also"></a>Vea también
 
-- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
 - [Especificación de opciones de combinación en PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)

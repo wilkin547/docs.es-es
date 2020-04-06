@@ -11,12 +11,12 @@ helpviewer_keywords:
 - calendars [.NET Framework], displaying dates
 - displaying date and time data
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
-ms.openlocfilehash: 455996d091f92367667e7077a4524898cd8face6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8d02b74f63ec5b6260679ae4cea04791681ec238
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73138753"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523926"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Cómo: Mostrar fechas en calendarios no gregorianos
 Los tipos <xref:System.DateTime> y <xref:System.DateTimeOffset> usan el calendario gregoriano como calendario predeterminado. Esto significa que al llamar al método `ToString` de un valor de fecha y hora se muestra la representación de cadena de esa fecha y hora en el calendario gregoriano, aunque se creara con otro calendario. Esto se muestra en el ejemplo siguiente, que usa dos maneras diferentes de crear un valor de fecha y hora con el calendario persa, pero muestra esos valores de fecha y hora en el calendario gregoriano cuando llama al método <xref:System.DateTime.ToString%2A>. En este ejemplo se reflejan dos técnicas usadas habitualmente, aunque incorrectas, para mostrar la fecha en un calendario determinado.  
@@ -81,8 +81,4 @@ Los tipos <xref:System.DateTime> y <xref:System.DateTimeOffset> usan el calendar
   
 - `DisplayDate`, un método público sobrecargado al que se pasan dos parámetros: un valor <xref:System.DateTime> o <xref:System.DateTimeOffset> para expresar en el calendario representado por el objeto `CalendarUtility`; y la referencia cultural cuyas reglas de formato se van a usar. Su comportamiento a la hora de devolver la representación de cadena de una fecha depende de si la referencia cultural cuyas reglas de formato se van a usar admite el calendario de destino.  
   
- Independientemente del calendario usado para crear un valor <xref:System.DateTime> o <xref:System.DateTimeOffset> en este ejemplo, ese valor normalmente se expresa como una fecha gregoriana. Esto se debe a que los tipos <xref:System.DateTime> y <xref:System.DateTimeOffset> no conservan ninguna información del calendario. Internamente, se representan como el número de tics transcurridos desde la medianoche del 1 de enero de 0001. La interpretación de ese número depende del calendario. En la mayoría de las referencias culturales, el calendario predeterminado es el gregoriano.  
-  
-## <a name="see-also"></a>Vea también
-
-- [Efectuar operaciones de formato](../../../docs/standard/base-types/performing-formatting-operations.md)
+ Independientemente del calendario usado para crear un valor <xref:System.DateTime> o <xref:System.DateTimeOffset> en este ejemplo, ese valor normalmente se expresa como una fecha gregoriana. Esto se debe a que los tipos <xref:System.DateTime> y <xref:System.DateTimeOffset> no conservan ninguna información del calendario. Internamente, se representan como el número de tics transcurridos desde la medianoche del 1 de enero de 0001. La interpretación de ese número depende del calendario. En la mayoría de las referencias culturales, el calendario predeterminado es el gregoriano.

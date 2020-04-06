@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach, parallel version
 - parallel programming, foreach
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
-ms.openlocfilehash: 02b94b673dc4468e68a1dadd83aab0e3bfcfaa16
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0300f8900cd18159ba3a2170cfba96f302f282a0
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160305"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588141"
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a>Procedimiento Escribir un bucle Parallel.ForEach sencillo
 
@@ -39,7 +39,7 @@ Para usar <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameW
 [!code-csharp[TPL_Parallel#07](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/nongeneric.cs#07)]
 [!code-vb[TPL_Parallel#07](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/nongeneric.vb#07)]
 
-También puede utilizar Parallel LINQ (PLINQ) para paralelizar el procesamiento de orígenes de datos <xref:System.Collections.Generic.IEnumerable%601>. PLINQ permite usar la sintaxis de consulta declarativa para expresar el comportamiento del bucle. Para más información, consulte [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).
+También puede utilizar Parallel LINQ (PLINQ) para paralelizar el procesamiento de orígenes de datos <xref:System.Collections.Generic.IEnumerable%601>. PLINQ permite usar la sintaxis de consulta declarativa para expresar el comportamiento del bucle. Para más información, consulte [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md).
 
 ## <a name="compile-and-run-the-code"></a>Compilación y ejecución del código
 
@@ -65,4 +65,4 @@ Para ejecutar la aplicación de consola desde Visual Studio, presione **F5**.
 
 - [Paralelismo de datos (biblioteca TPL)](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
 - [Programación en paralelo en .NET](../../../docs/standard/parallel-programming/index.md)
-- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
