@@ -14,12 +14,12 @@ helpviewer_keywords:
 - cheat sheet
 - .NET Framework regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
-ms.openlocfilehash: 8acf0886215c2d31f949e38401c4705ac9e2aef5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0b553f44ebc512ffd1194254fe8ebc90bcb2f763
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77124317"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523904"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Lenguaje de expresiones regulares - Referencia rápida
 
@@ -191,6 +191,5 @@ Las estructuras misceláneas modifican un modelo de expresión regular o proporc
 - <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>
 - [Expresiones regulares](regular-expressions.md)
 - [Clases de expresiones regulares](the-regular-expression-object-model.md)
-- [Ejemplos de expresiones regulares](regular-expression-examples.md)
 - [Expresiones regulares: referencia rápida (descarga en formato Word)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)
 - [Expresiones regulares: referencia rápida (descarga en formato PDF)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
