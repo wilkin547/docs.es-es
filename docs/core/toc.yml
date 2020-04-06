@@ -290,6 +290,8 @@
       href: deploying/creating-nuget-packages.md
     - name: Puesta al día del runtime de implementación autocontenida
       href: deploying/runtime-patch-selection.md
+    - name: Recorte de implementaciones autocontenidas y ejecutables
+      href: deploying/trim-self-contained.md
     - name: Almacenamiento de paquetes en tiempo de ejecución
       href: deploying/runtime-store.md
 - name: Docker
