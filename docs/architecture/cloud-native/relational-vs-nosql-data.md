@@ -1,16 +1,16 @@
 ---
-title: Datos relacionales frente a NoSQL
+title: Soluciones relacionales y datos NoSQL
 description: Obtenga información sobre datos relacionales y NoSQL en aplicaciones nativas de la nube
 author: robvet
 ms.date: 01/22/2020
-ms.openlocfilehash: 04693e30ba3848f1e51f1c69a75be5f18ead4cf1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3fb3dcc3a87e278c05f3e15d261245f4d61453d1
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79141424"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805810"
 ---
-# <a name="relational-vs-nosql-data"></a>Datos relacionales frente a NoSQL
+# <a name="relational-vs-nosql-data"></a>Soluciones relacionales y datos NoSQL
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -284,5 +284,5 @@ Una de las tareas que consumen más tiempo es migrar datos de una plataforma de 
 El servicio proporciona recomendaciones para guiarle a través de los cambios necesarios para ejecutar una migración, tanto pequeña como grande.
 
 >[!div class="step-by-step"]
->[Anterior](Database-per-microservice.md)
+>[Anterior](database-per-microservice.md)
 >[Siguiente](azure-caching.md)

@@ -9,46 +9,46 @@ helpviewer_keywords:
 - templates [WPF], ToggleButton
 - parts [WPF], ToggleButton
 ms.assetid: 54f23f30-4bcb-4f09-8ce4-376a13a255a1
-ms.openlocfilehash: a4c449a561017659db7f54fd3cdb8964742650de
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e055dcbd557f9b90eb2fe99ad15a05b6f229fd28
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283671"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805912"
 ---
 # <a name="togglebutton-styles-and-templates"></a>Estilos y plantillas de ToggleButton
 
-En este tema se describen los estilos y las plantillas del control <xref:System.Windows.Controls.Primitives.ToggleButton>. Puede modificar la <xref:System.Windows.Controls.ControlTemplate> predeterminada para dar al control una apariencia única. Para obtener más información, vea [crear una plantilla para un control](../../../desktop-wpf/themes/how-to-create-apply-template.md).
+En este tema se describen <xref:System.Windows.Controls.Primitives.ToggleButton> los estilos y plantillas para el control. Puede modificar el <xref:System.Windows.Controls.ControlTemplate> valor predeterminado para dar al control una apariencia única. Para obtener más información, vea [Crear una plantilla para un control.](../../../desktop-wpf/themes/how-to-create-apply-template.md)
 
-## <a name="togglebutton-parts"></a>Elementos ToggleButton
+## <a name="togglebutton-parts"></a>Piezas ToggleButton
 
-El control <xref:System.Windows.Controls.Primitives.ToggleButton> no tiene ninguna parte con nombre.
+El <xref:System.Windows.Controls.Primitives.ToggleButton> control no tiene ninguna parte con nombre.
 
-## <a name="togglebutton-states"></a>Estados de ToggleButton
+## <a name="togglebutton-states"></a>Estados ToggleButton
 
-En la tabla siguiente se enumeran los Estados visuales del control <xref:System.Windows.Controls.Primitives.ToggleButton>.
+En la tabla siguiente se <xref:System.Windows.Controls.Primitives.ToggleButton> enumeran los estados visuales del control.
 
 |Nombre de VisualState|Nombre de VisualStateGroup|Descripción|
 |-|-|-|
 |Normal|CommonStates|El estado predeterminado.|
 |MouseOver|CommonStates|El puntero del mouse se coloca sobre el control.|
 |Presionado|CommonStates|El control está presionado.|
-|Deshabilitado|CommonStates|El control está deshabilitado.|
+|Disabled|CommonStates|El control está deshabilitado.|
 |Con foco|FocusStates|El control tiene el foco.|
 |Sin foco|FocusStates|El control no tiene el foco.|
-|Activadas|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> es `true`.|
-|Desactivada|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> es `false`.|
-|Determina|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeState%2A> es `true`y se `null`<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A>.|
-|Válido|ValidationStates|El control utiliza la clase <xref:System.Windows.Controls.Validation> y la propiedad adjunta <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> es `false`.|
-|InvalidFocused|ValidationStates|La propiedad adjunta <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> es `true` tiene el foco.|
-|InvalidUnfocused|ValidationStates|La propiedad adjunta <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> es `true` tiene el control no tiene el foco.|
+|Activado|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> es `true`.|
+|No activado|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> es `false`.|
+|Indeterminado|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeState%2A> es `true` y <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> es `null`.|
+|Válido|ValidationStates|El control <xref:System.Windows.Controls.Validation> utiliza la <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> clase `false`y la propiedad adjunta es .|
+|InvalidFocused|ValidationStates|La <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propiedad `true` adjunta es y el control tiene el foco.|
+|InvalidUnfocused|ValidationStates|La <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propiedad `true` adjunta es y el control no tiene el foco.|
 
 > [!NOTE]
-> Si el estado visual indeterminado no existe en la plantilla de control, el estado visual desactivado se usará como estado visual predeterminado.
+> Si el estado visual Indeterminado no existe en la plantilla de control, el estado visual Desmarcado se usará como estado visual predeterminado.
 
-## <a name="togglebutton-controltemplate-example"></a>Ejemplo de ControlTemplate de ToggleButton
+## <a name="togglebutton-controltemplate-example"></a>Ejemplo de ToggleButton ControlTemplate
 
-En el ejemplo siguiente se muestra cómo definir un <xref:System.Windows.Controls.ControlTemplate> para el control <xref:System.Windows.Controls.Primitives.ToggleButton>.
+En el ejemplo siguiente <xref:System.Windows.Controls.ControlTemplate> se <xref:System.Windows.Controls.Primitives.ToggleButton> muestra cómo definir a para el control.
 
 [!code-xaml[ControlTemplateExamples#ToggleButton](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/combobox.xaml#togglebutton)]
 
@@ -58,11 +58,11 @@ En el ejemplo anterior se usa uno o varios de los recursos siguientes.
 
 Para ver un ejemplo completo, consulte [Aplicación de estilos con el ejemplo ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Estilos y plantillas de controles](control-styles-and-templates.md)
-- [Control Customization](control-customization.md) (Personalización de controles)
+- [Personalización de controles](control-customization.md)
 - [Aplicar estilos y plantillas](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Crear una plantilla para un control](../../../desktop-wpf/themes/how-to-create-apply-template.md)
