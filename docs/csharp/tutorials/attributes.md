@@ -68,7 +68,7 @@ Con lo anterior, ahora puedo usar `[MySpecial]` (o `[MySpecialAttribute]`) como 
 
 Los atributos de la biblioteca de clases base de .NET como `ObsoleteAttribute` desencadenan ciertos comportamientos en el compilador. Sin embargo, cualquier atributo que cree funcionará como metadatos y no tendrá como resultado ningún código dentro de la clase de atributo que se ejecuta. Es decisión suya actuar sobre esos metadatos en otra parte del código (más adelante en este tutorial se hablará sobre ello).
 
-Aquí hay un problema que se debe vigilar. Como se mencionó anteriormente, solo determinados tipos se puedan pasar como argumentos al usar atributos. Sin embargo, al crear un tipo de atributo, el compilador de C# no le impedirá crear esos parámetros. En el ejemplo siguiente, he creado un atributo con un constructor que se compila correctamente.
+Aquí hay un problema que se debe vigilar. Como se mencionó anteriormente, solo determinados tipos se pueden pasar como argumentos al usar atributos. Sin embargo, al crear un tipo de atributo, el compilador de C# no le impedirá crear esos parámetros. En el ejemplo siguiente, he creado un atributo con un constructor que se compila correctamente.
 
 [!code-csharp[Valid constructor used in an attribute](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeGothca1)]
 
