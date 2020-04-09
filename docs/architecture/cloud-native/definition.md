@@ -3,18 +3,18 @@ title: Definición de nativo en la nube
 description: Conozca los pilares fundamentales que proporcionan la base para los sistemas nativos de la nube
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: 27191a67b2964ac2e1636a4d7dc55d5314b78439
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 756a2565bd77fcef19a5f15579987836ff0e75a4
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401740"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989095"
 ---
 # <a name="defining-cloud-native"></a>Definición de la nube nativa
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Deja de hacer lo que estás haciendo y envía un mensaje de texto a 10 de tus colegas. Pídales que definan el término "Nativo de nube". Es muy probable que obtengas ocho respuestas diferentes. Curiosamente, dentro de seis meses, a medida que evolucionan las tecnologías y prácticas nativas de la nube, también lo hará su definición.
+Deja de hacer lo que estás haciendo y envía un mensaje de texto a diez de tus colegas. Pídales que definan el término "Nativo de la nube". Es muy probable que obtengas ocho respuestas diferentes.
 
 Cloud native consiste en cambiar la forma en que pensamos en la construcción de sistemas empresariales críticos.
 
@@ -113,7 +113,7 @@ Más allá de la orientación proporcionada a partir de la metodología de doce 
 
 La comunicación se trata en detalle Capítulo 4, *Patrones de comunicación nativos de la nube.*
 
-*Resiliencia*
+*Resistencia*
 
 Una arquitectura de microservicios mueve el sistema de la comunicación en proceso a la red. En un entorno distribuido, ¿qué hará cuando el Servicio B no responda a una llamada del Servicio A? ¿Qué sucede cuando el servicio C deja de estar disponible temporalmente y otros servicios que lo llaman apilar y degradar el rendimiento del sistema?
 

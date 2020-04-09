@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-ms.openlocfilehash: 18282d14540027e4fae4fe152d3867ad8c223c37
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f7df323dacfbee3361fe75d831f1e87df328b194
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181483"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989225"
 ---
 # <a name="default-marshaling-behavior"></a>Comportamiento de serialización predeterminado
 La serialización de interoperabilidad funciona con reglas que dictan cómo se comportan los datos asociados con parámetros de método cuando pasan entre memoria administrada y no administrada. Estas reglas integradas controlan las actividades de serialización como transformaciones de tipos de datos, si un destinatario puede cambiar los datos que recibe y devolver esos cambios al llamador, y en qué circunstancias el serializador proporciona optimizaciones de rendimiento.  
@@ -172,7 +172,7 @@ internal class DelegateTest {
   
  Un tipo con formato es un tipo complejo que contiene información que controla explícitamente la distribución de sus miembros en la memoria. La información de distribución de miembros se proporciona mediante el atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute>. La distribución puede ser uno de los siguientes valores de enumeración <xref:System.Runtime.InteropServices.LayoutKind>:  
   
-- **LayoutKind.Automatic**  
+- **LayoutKind.Auto**  
   
      Indica que Common Language Runtime puede volver a ordenar los miembros del tipo para lograr una mayor eficacia. Sin embargo, cuando un tipo de valor se pasa a código no administrado, la distribución de los miembros es predecible. Si se intenta serializar automáticamente una estructura de este tipo, se produce una excepción.  
   
@@ -378,7 +378,7 @@ interface _Graphics {
 |-----------------------|--------------|  
 |<xref:System.DateTime?displayProperty=nameWithType>|**Fecha**|  
 |<xref:System.Decimal?displayProperty=nameWithType>|**Decimal**|  
-|<xref:System.Guid?displayProperty=nameWithType>|**Guid**|  
+|<xref:System.Guid?displayProperty=nameWithType>|**GUID**|  
 |<xref:System.Drawing.Color?displayProperty=nameWithType>|**OLE_COLOR**|  
   
  El código siguiente muestra la definición de los tipos no administrados **DATE**, **GUID**, **DECIMAL** y **OLE_COLOR** de la biblioteca de tipos Stdole2.  
