@@ -9,12 +9,12 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-ms.openlocfilehash: 504e315dda4e76f56a88d97149b1515b6743668b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0273d16028315452e35f83086dbc134d6fcb66c6
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77124356"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635988"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Detalles del comportamiento de expresiones regulares
 
@@ -71,7 +71,7 @@ El motor de expresiones regulares de .NET Framework es un buscador de coincidenc
 
      Para obtener más información sobre las aserciones de búsqueda anticipada positiva, consulte [Construcciones de agrupamiento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
 
-- Búsqueda anticipada negativa: `(?!`*subexpresión*`)`. Esta característica permite coincidir con una expresión solo si no se produce una coincidencia con una subexpresión. Esto es especialmente eficaz para restringir una búsqueda, ya que a menudo resulta más sencillo proporcionar una expresión para un caso que se debe eliminar, en lugar de una expresión para los casos que se deben incluir. Por ejemplo, es difícil escribir una expresión para buscar palabras que no comienzan por "non". En el ejemplo siguiente se usa la búsqueda anticipada negativa para excluirlas.
+- Búsqueda anticipada negativa: `(?!`*subexpresión*`)`. Esta característica permite coincidir con una expresión solo si no se produce una coincidencia con una subexpresión. Esto es eficaz a fin de restringir una búsqueda, ya que a menudo resulta más sencillo proporcionar una expresión para un caso que se debe eliminar, en lugar de una expresión para los casos que se deben incluir. Por ejemplo, es difícil escribir una expresión para buscar palabras que no comienzan por "non". En el ejemplo siguiente se usa la búsqueda anticipada negativa para excluirlas.
 
      [!code-csharp[Conceptual.RegularExpressions.Design#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookahead2.cs#3)]
      [!code-vb[Conceptual.RegularExpressions.Design#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookahead2.vb#3)]
@@ -151,7 +151,6 @@ El motor de expresiones regulares de .NET Framework es un buscador de coincidenc
 |[Seguridad para subprocesos](../../../docs/standard/base-types/thread-safety-in-regular-expressions.md)|Proporciona información sobre la seguridad para subprocesos de expresiones regulares y explica cuándo se debe sincronizar el acceso a objetos de expresión regular.|
 |[Expresiones regulares de .NET Framework](../../../docs/standard/base-types/regular-expressions.md)|Proporciona información general sobre el aspecto del lenguaje de programación de expresiones regulares.|
 |[Modelo de objetos de expresión regular](../../../docs/standard/base-types/the-regular-expression-object-model.md)|Proporciona información y ejemplos de código que muestran cómo usar las clases de expresiones regulares.|
-|[Ejemplos de expresiones regulares](../../../docs/standard/base-types/regular-expression-examples.md)|Contiene ejemplos de código que muestran el uso de expresiones regulares en aplicaciones comunes.|
 |[Lenguaje de expresiones regulares: referencia rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|Ofrece información sobre el conjunto de caracteres, operadores y construcciones que se pueden usar para definir expresiones regulares.|
 
 ## <a name="reference"></a>Referencia
