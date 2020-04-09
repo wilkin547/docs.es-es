@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Cancelar una consulta PLINQ'
+title: Procedimiento para cancelar una consulta PLINQ
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - PLINQ queries, how to cancel
 - cancellation, PLINQ
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
-ms.openlocfilehash: 272f25d62cb63c60209be3bc54dc5e76fb30df54
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 312c71b787ac7b4aa092f1517d2ed5af314a22e4
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73134231"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635876"
 ---
-# <a name="how-to-cancel-a-plinq-query"></a>Cómo: Cancelar una consulta PLINQ
+# <a name="how-to-cancel-a-plinq-query"></a>Procedimiento para cancelar una consulta PLINQ
 En los siguientes ejemplos se muestran dos formas de cancelar una consulta PLINQ. El primer ejemplo muestra cómo cancelar una consulta que se compone principalmente de un cruce seguro de datos. El segundo ejemplo muestra cómo cancelar una consulta que contiene una función de usuario que es cara desde el punto de vista computacional.
 
 > [!NOTE]
@@ -33,9 +33,9 @@ El marco PLINQ no revierte una clase <xref:System.OperationCanceledException> ú
 
 Las instrucciones generales sobre la cancelación son las siguientes:
 
-1. Si realiza la cancelación de un delegado de usuario, debe informar a PLINQ sobre la clase externa <xref:System.Threading.CancellationToken> e iniciar <xref:System.OperationCanceledException>(externalCT).
+1. Si realiza la cancelación de un delegado de usuario, debe informar a PLINQ sobre la clase externa <xref:System.Threading.CancellationToken> e iniciar <xref:System.OperationCanceledException> (externalCT).
 
-2. Si se produce la cancelación y no se produce ninguna otra excepción, a continuación, debe controlar una excepción <xref:System.OperationCanceledException> en lugar de una excepción <xref:System.AggregateException>.
+2. Si se produce la cancelación y no se inicia ninguna otra excepción, controle un elemento <xref:System.OperationCanceledException> en lugar de uno <xref:System.AggregateException>.
 
 ## <a name="example"></a>Ejemplo
 
@@ -44,14 +44,14 @@ En el ejemplo siguiente se muestra cómo controlar la cancelación cuando se tie
 [!code-csharp[PLINQ#17](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#17)]
 [!code-vb[PLINQ#17](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#17)]
 
-Al controlar la cancelación en el código de usuario, no tiene que usar <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> en la definición de consulta. Sin embargo, se recomienda hacerlo porque <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> no tiene ningún efecto en el rendimiento de las consultas y permite que los operadores de consulta y el código de usuario controlen la cancelación.
+Al controlar la cancelación en el código de usuario, no tiene que usar <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> en la definición de consulta. Sin embargo, se recomienda el uso de <xref:System.Linq.ParallelEnumerable.WithCancellation%2A>, porque <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> no tiene ningún efecto en el rendimiento de las consultas y permite que los operadores de consulta y el código de usuario controlen la cancelación.
 
 Con el fin de garantizar la capacidad de respuesta del sistema, se recomienda que compruebe la cancelación una vez por cada milisegundo; sin embargo, cualquier período que transcurre hasta diez milisegundos se considera aceptable. Esta frecuencia no debe tener un impacto negativo en el rendimiento del código.
 
-Cuando se elimina un enumerador, por ejemplo cuando el código desencadena un bucle foreach (For Each en Visual Basic) que está iterando los resultados de la consulta, a continuación, se cancela la consulta, pero no se inicia ninguna excepción.
+Cuando se elimina un enumerador, por ejemplo cuando el código desencadena un bucle foreach (For Each en Visual Basic) que está iterando en los resultados de la consulta, se cancela la consulta, pero no se inicia ninguna excepción.
 
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Linq.ParallelEnumerable>
-- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
 - [Cancelación en subprocesos administrados](../../../docs/standard/threading/cancellation-in-managed-threads.md)

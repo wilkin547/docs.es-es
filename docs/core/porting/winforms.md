@@ -3,13 +3,13 @@ title: Migración de una aplicación de Windows Forms a .NET Core
 description: Se detalla cómo migrar una aplicación de Windows Forms de .NET Framework a .NET Core para Windows.
 author: Thraka
 ms.author: adegeo
-ms.date: 03/01/2019
-ms.openlocfilehash: dbd522851faa0a4fe435199914a034ee230d3455
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 01/24/2020
+ms.openlocfilehash: 80b4bb225d6a6748743d91a4c70e8b09c10cc94b
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76116027"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635508"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Procedimiento para: Migrar una aplicación de escritorio de Windows Forms a .NET Core
 
@@ -17,7 +17,7 @@ En este artículo se explica cómo migrar una aplicación de escritorio basada e
 
 En este artículo, se usan diferentes nombres para identificar los tipos de archivos que se utilizan para la migración. Al migrar su proyecto, sus archivos se nombrarán de manera diferente, así que establezca una relación mental con los que se enumeran a continuación:
 
-| Archivo | Description |
+| Archivo | Descripción |
 | ---- | ----------- |
 | **MyApps.sln** | Nombre del archivo de la solución. |
 | **MyForms.csproj** | Nombre del proyecto de Windows Forms de .NET Framework para migrar. |
@@ -26,7 +26,7 @@ En este artículo, se usan diferentes nombres para identificar los tipos de arch
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) para cualquier trabajo de diseñador que desee hacer.
+- [Visual Studio 2019 16.5, versión preliminar 1](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=community&ch=pre&rel=16) o una versión posterior para cualquier trabajo de diseñador que se quiera realizar. Se recomienda instalar la [versión preliminar de Visual Studio](https://visualstudio.microsoft.com/vs/preview/) más reciente.
 
   Instale las cargas de trabajo de Visual Studio siguientes:
   - Desarrollo de escritorio de .NET
@@ -34,10 +34,11 @@ En este artículo, se usan diferentes nombres para identificar los tipos de arch
 
 - Un proyecto de Windows Forms en funcionamiento en una solución que se construye y ejecuta sin problemas.
 - Un proyecto codificado en C#.
-- [.NET Core](https://dotnet.microsoft.com/download/dotnet-core) 3.0 o una versión posterior.
 
 > [!NOTE]
-> **Visual Studio 2017** no es compatible con proyectos de .NET Core 3.0. **Visual Studio 2019** admite proyectos de .NET Core 3.0, pero todavía no admite el diseñador visual para los proyectos de Windows Forms de .NET Core 3.0. Para usar el diseñador visual, debe tener un proyecto de Windows Forms de .NET en una solución que comparta los archivos de formularios con el proyecto de .NET Core.
+> Los proyectos de .NET Core 3.0 solo se admiten en **Visual Studio 2019** o una versión posterior. A partir de **Visual Studio 2019 16.5, versión preliminar 1**, también se admite el diseñador de Windows Forms de .NET Core.
+>
+> Para habilitar el diseñador, vaya a **Herramientas** > **Opciones** > **Entorno** > **Características de vista previa** y seleccione la opción **Usar la versión preliminar del diseñador de Windows Forms del para aplicaciones .NET Core**.
 
 ### <a name="consider"></a>Tenga en cuenta que:
 
@@ -58,10 +59,6 @@ Al migrar una aplicación de Windows Forms de .NET Framework, hay algunas cosas 
 01. Actualice los paquetes de NuGet utilizados por el proyecto.
 
     Siempre se recomienda usar las últimas versiones de los paquetes de NuGet antes de cualquier migración. Si la aplicación hace referencia a cualquier paquete de NuGet, actualícelo a la versión más reciente. Asegúrese de que la aplicación se compila correctamente. Tras la actualización, si se han producido errores en el paquete, cambie el paquete a la versión más reciente que no rompa el código.
-
-01. Visual Studio 2019 aún no admite el Diseñador de Forms para .NET Core 3.0
-
-    Actualmente, debe mantener el archivo de proyecto de Windows Forms de .NET Framework existente si desea utilizar el Diseñador de Forms de Visual Studio.
 
 ## <a name="create-a-new-sdk-project"></a>Creación de un nuevo proyecto de SDK
 
@@ -160,7 +157,7 @@ Agregue el siguiente nodo `<ItemGroup>` al proyecto. Cada instrucción incluye u
 
 Como alternativa, puede crear una entrada `<Compile>` o `<EmbeddedResource>` para cada archivo en el proyecto de .NET Framework.
 
-## <a name="add-nuget-packages"></a>Incorporación de paquetes NuGet
+## <a name="add-nuget-packages"></a>Adición de paquetes NuGet
 
 Agregue cada paquete NuGet al que hace referencia el proyecto de .NET Framework al proyecto de .NET Core.
 
@@ -188,7 +185,7 @@ Si tiene un proyecto de biblioteca de controles de Windows Forms para migrar, la
 
 Usando el ejemplo del paso anterior, vamos a expandir los proyectos y archivos con los que estamos trabajando.
 
-| Archivo | Description |
+| Archivo | Descripción |
 | ---- | ----------- |
 | **MyApps.sln** | Nombre del archivo de la solución. |
 | **MyControls.csproj** | Nombre del proyecto de controles de Windows Forms de .NET Framework para migrar. |

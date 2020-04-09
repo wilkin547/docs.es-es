@@ -3,12 +3,12 @@ title: Valores de configuración de redes
 description: Obtenga información sobre los valores del entorno de ejecución que configuran las redes para las aplicaciones de .NET Core.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 622c4afbd36d3d9004edbd9219145fa9e5d326ae
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f5ea47f0444a911dc2347a66817cabf585fd8e70
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74998838"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635425"
 ---
 # <a name="run-time-configuration-options-for-networking"></a>Opciones de configuración del entorno de ejecución para las redes
 
@@ -19,11 +19,11 @@ ms.locfileid: "74998838"
 - Introducido en .NET Core 3.0.
 
 | | Nombre de valor | Valores |
-| - | - |
+| - | - | - |
 | **runtimeconfig.json** | `System.Net.Http.SocketsHttpHandler.Http2Support` | `false`: deshabilitado.<br/>`true`: habilitado. |
 | **Variable del entorno** | `DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2SUPPORT` | `0`: deshabilitado.<br/>`1`: habilitado. |
 
-## <a name="sockets-http-handler"></a>Controlador HTTP de sockets
+## <a name="usesocketshttphandler"></a>UseSocketsHttpHandler
 
 - Configura si las API de redes de alto nivel, como <xref:System.Net.Http.HttpClient>, usan <xref:System.Net.Http.SocketsHttpHandler?displayProperty=nameWithType> o la implementación de <xref:System.Net.Http.HttpClientHandler?displayProperty=nameWithType> basada en [libcurl](https://curl.haxx.se/libcurl/).
 - Predeterminado: usar <xref:System.Net.Http.SocketsHttpHandler?displayProperty=nameWithType> (`true`).
@@ -33,3 +33,6 @@ ms.locfileid: "74998838"
 | - | - | - |
 | **runtimeconfig.json** | `System.Net.Http.UseSocketsHttpHandler` | `true`: habilita el uso de <xref:System.Net.Http.SocketsHttpHandler>.<br/>`false`: habilita el uso de <xref:System.Net.Http.HttpClientHandler>. |
 | **Variable del entorno** | `DOTNET_SYSTEM_NET_HTTP_USESOCKETSHTTPHANDLER` | `1`: habilita el uso de <xref:System.Net.Http.SocketsHttpHandler>.<br/>`0`: habilita el uso de <xref:System.Net.Http.HttpClientHandler>. |
+
+> [!NOTE]
+> A partir de .NET 5, la configuración `System.Net.Http.UseSocketsHttpHandler` ya no está disponible.

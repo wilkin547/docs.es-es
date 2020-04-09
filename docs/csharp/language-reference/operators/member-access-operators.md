@@ -1,7 +1,7 @@
 ---
 title: 'Operadores y expresiones de acceso a miembros: referencia de C#'
 description: Obtenga información sobre los operadores de C# que puede usar para acceder a los miembros de tipos.
-ms.date: 09/18/2019
+ms.date: 03/31/2020
 author: pkulikov
 f1_keywords:
 - ._CSharpKeyword
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: da2ca4517bd007678d74ae9b76e10cad4c2696b4
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: a132e527deadcffb4826c1965987fc09da470a09
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546645"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635308"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>Operadores y expresiones de acceso a miembros (referencia de C#)
 
@@ -129,6 +129,12 @@ En el siguiente ejemplo se muestra el uso de los operadores `?.` y `?[]`:
 [!code-csharp-interactive[null-conditional operators](snippets/MemberAccessOperators.cs#NullConditional)]
 
 En el ejemplo anterior también se usa el [operador de fusión de NULL `??`](null-coalescing-operator.md) para especificar una expresión alternativa que se evaluará en caso de que el resultado de la operación condicional NULL sea `null`.
+
+Si `a.x` o `a[x]` es de un tipo de valor que no admite un valor NULL, `T`, `a?.x` o `a?[x]` es del [tipo de valor que admite un valor NULL](../builtin-types/nullable-value-types.md) `T?` correspondiente. Si necesita una expresión de tipo `T`, aplique el operador de fusión de NULL `??` a una expresión condicional NULL, tal como se muestra en el ejemplo siguiente:
+
+[!code-csharp-interactive[null-conditional with null-coalescing](snippets/MemberAccessOperators.cs#NullConditionalWithNullCoalescing)]
+
+En el ejemplo anterior, si no utiliza el operador `??`, `numbers?.Length < 2` da como resultado `false` cuando `numbers` es `null`.
 
 El operador de acceso de miembro condicional NULL `?.` también se conoce con el nombre de operador Elvis.
 

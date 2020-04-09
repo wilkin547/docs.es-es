@@ -2,12 +2,12 @@
 title: Comando dotnet publish
 description: El comando dotnet publish publica el proyecto o la solución de .NET Core en un directorio.
 ms.date: 02/24/2020
-ms.openlocfilehash: c34618409c9a539043c84c7e03daa8aa249d64f6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0e18220443f3713c86c257fcf401b98ddd716ebc
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146560"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588266"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -38,7 +38,23 @@ dotnet publish [-h|--help]
 - Un archivo *.runtime.config.json* en el que se especifica el tiempo de ejecución compartido que espera la aplicación, así como otras opciones de configuración para el tiempo de ejecución (por ejemplo, el tipo de recolección de elementos no utilizados).
 - Las dependencias de la aplicación, que se copian de la caché de NuGet a la carpeta de salida.
 
-La salida del comando `dotnet publish` está lista para la implementación en un sistema de hospedaje (por ejemplo, un servidor, un equipo PC o Mac, un portátil) para la ejecución. Es la única manera admitida oficialmente para preparar la aplicación para la implementación. Dependiendo del tipo de implementación que especifique el proyecto, el sistema de hospedaje puede o no tener instalado el entorno de tiempo de ejecución compartido de .NET Core.
+La salida del comando `dotnet publish` está lista para la implementación en un sistema de hospedaje (por ejemplo, un servidor, un equipo PC o Mac, un portátil) para la ejecución. Es la única manera admitida oficialmente para preparar la aplicación para la implementación. Dependiendo del tipo de implementación que especifique el proyecto, el sistema de hospedaje puede o no tener instalado el entorno de tiempo de ejecución compartido de .NET Core. Para obtener más información, vea [Publicación de aplicaciones .NET Core con la CLI de .NET Core](../deploying/deploy-with-cli.md).
+
+### <a name="msbuild"></a>MSBuild
+
+Con el comando `dotnet publish` se llama a MSBuild, lo que invoca el destino `Publish`. Todos los parámetros pasados a `dotnet publish` se pasan a MSBuild. Los parámetros `-c` y `-o` se asignan respectivamente a las propiedades `Configuration` y `OutputPath` de MSBuild.
+
+El comando `dotnet publish` acepta opciones de MSBuild, como `-p` para establecer propiedades y `-l` para definir un registrador. Por ejemplo, se puede establecer una propiedad de MSBuild mediante el uso del formato: `-p:<NAME>=<VALUE>`. También se pueden establecer las propiedades relacionadas con la publicación si se hace referencia a un archivo *.pubxml*, por ejemplo:
+
+```dotnetcli
+dotnet publish -p:PublishProfile=Properties\PublishProfiles\FolderProfile.pubxml
+```
+
+Para obtener más información, vea los siguientes recursos:
+
+- [Referencia de la línea de comandos de MSBuild](/visualstudio/msbuild/msbuild-command-line-reference)
+- [Perfiles de publicación (.pubxml) de Visual Studio para la implementación de aplicaciones ASP.NET Core](/aspnet/core/host-and-deploy/visual-studio-publish-profiles)
+- [dotnet msbuild](dotnet-msbuild.md)
 
 ## <a name="arguments"></a>Argumentos
 
@@ -94,13 +110,27 @@ La salida del comando `dotnet publish` está lista para la implementación en un
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  Especifica la ruta de acceso del directorio de salida. Si no se especifica, el valor predeterminado es *./bin/[configuration]/[framework]/publish/* para un archivo ejecutable dependiente del tiempo de ejecución y archivos binarios multiplataforma. El valor predeterminado es *./bin/[configuration]/[framework]/[runtime]/publish/* para un archivo ejecutable independiente.
+  Especifica la ruta de acceso del directorio de salida.
+  
+  Si no se especifica, el valor predeterminado es *[project_file_folder]./bin/[configuration]/[framework]/publish/* para un archivo ejecutable dependiente del tiempo de ejecución y archivos binarios multiplataforma. El valor predeterminado es *[project_file_folder]/bin/[configuration]/[framework]/[runtime]/publish/* para un archivo ejecutable autocontenido.
 
-  Si la ruta de acceso es relativa, el directorio de salida generado es relativo a la ubicación del archivo de proyecto, no al directorio de trabajo actual.
+  - SDK de .NET Core 3.x y versiones posteriores
+  
+    Si se especifica una ruta de acceso relativa al publicar un proyecto, el directorio de salida generado es relativo al directorio de trabajo actual, no a la ubicación del archivo del proyecto.
+
+    Si se especifica una ruta de acceso relativa al publicar una solución, todas las salidas de todos los proyectos van en la carpeta especificada relativa al directorio de trabajo actual. A fin de que la salida de la publicación vaya a carpetas independientes para cada proyecto, especifique una ruta de acceso relativa mediante el uso de la propiedad `PublishDir` de MSBuild en lugar de la opción `--output`. Por ejemplo, `dotnet publish -p:PublishDir=.\publish` envía la salida de publicación de cada proyecto a una carpeta `publish` en la carpeta que contiene el archivo del proyecto.
+
+  - SDK de .NET Core 2.x
+  
+    Si se especifica una ruta de acceso relativa al publicar un proyecto, el directorio de salida generado es relativo a la ubicación del archivo del proyecto, no al directorio de trabajo actual.
+
+    Si se especifica una ruta de acceso relativa al publicar una solución, la salida de cada proyecto va a una carpeta independiente relativa a la ubicación del archivo del proyecto. Si se especifica una ruta de acceso absoluta al publicar una solución, la salida de las publicaciones de todos los proyectos van a la carpeta especificada.
 
 - **`--self-contained [true|false]`**
 
-  Publica el tiempo de ejecución de .NET Core con la aplicación para que no sea necesario tener instalado el tiempo de ejecución en la máquina de destino. Si se especifica un identificador de tiempo de ejecución, el valor predeterminado es `true`. Para obtener más información, vea [Publicación de aplicaciones .NET Core](../deploying/index.md) y [Publicación de aplicaciones .NET Core con la CLI de .NET Core](../deploying/deploy-with-cli.md).
+  Publica el tiempo de ejecución de .NET Core con la aplicación para que no sea necesario tener instalado el tiempo de ejecución en la máquina de destino. El valor predeterminado es `true` si se especifica un identificador en tiempo de ejecución y el proyecto es de tipo ejecutable (no un proyecto de biblioteca). Para obtener más información, vea [Publicación de aplicaciones .NET Core](../deploying/index.md) y [Publicación de aplicaciones .NET Core con la CLI de .NET Core](../deploying/deploy-with-cli.md).
+
+  Si se usa esta opción sin especificar `true` o `false`, el valor predeterminado es `true`. En ese caso, no coloque el argumento de la solución o el proyecto inmediatamente después de `--self-contained`, porque se espera que `true` o `false` estén en esa posición.
 
 - **`--no-self-contained`**
 
@@ -168,5 +198,8 @@ La salida del comando `dotnet publish` está lista para la implementación en un
 - [Publicación de aplicaciones .NET Core con la CLI de .NET Core](../deploying/deploy-with-cli.md)
 - [Marcos de trabajo de destino](../../standard/frameworks.md)
 - [Catálogo de identificadores de tiempo de ejecución (RID)](../rid-catalog.md)
-- [Trabajo con la certificación de macOS Catalina](../install/macos-notarization-issues.md) Para obtener más información, vea los recursos siguientes:
+- [Trabajo con la certificación de macOS Catalina](../install/macos-notarization-issues.md)
 - [Estructura de directorios de una aplicación publicada](/aspnet/core/hosting/directory-structure)
+- [Referencia de la línea de comandos de MSBuild](/visualstudio/msbuild/msbuild-command-line-reference)
+- [Perfiles de publicación (.pubxml) de Visual Studio para la implementación de aplicaciones ASP.NET Core](/aspnet/core/host-and-deploy/visual-studio-publish-profiles)
+- [dotnet msbuild](dotnet-msbuild.md)

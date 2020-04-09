@@ -11,12 +11,12 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-ms.openlocfilehash: e5815058898cac165e7a47d761ee86bb9c4cb940
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3e9c817006930a36ebdce5c5965d78f1721c7056
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73091590"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635154"
 ---
 # <a name="numerics-in-net"></a>Valores numéricos en .NET
 
@@ -42,7 +42,7 @@ Cada tipo de entero admite un conjunto de operadores aritméticos estándar. La 
 También puede trabajar con los bits individuales de un valor entero usando la clase <xref:System.BitConverter?displayProperty=nameWithType>.  
 
 > [!NOTE]  
-> Los tipos enteros sin signo no son conformes a CLS. Para más información, consulte [Independencia del lenguaje y componentes independientes del lenguaje](language-independence-and-language-independent-components.md).
+> Los tipos enteros sin signo no son conformes a CLS. Para obtener más información, consulte [Independencia del lenguaje y componentes independientes del lenguaje](language-independence-and-language-independent-components.md).
 
 ## <a name="biginteger"></a>BigInteger
 
@@ -60,11 +60,11 @@ La estructura <xref:System.Numerics.BigInteger?displayProperty=nameWithType> es 
   
 Los tipos <xref:System.Single> y <xref:System.Double> admiten valores especiales que representan un valor no numérico e infinito. Por ejemplo, el tipo <xref:System.Double> proporciona los siguientes valores: <xref:System.Double.NaN?displayProperty=nameWithType>, <xref:System.Double.NegativeInfinity?displayProperty=nameWithType> y <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>. Los métodos <xref:System.Double.IsNaN%2A?displayProperty=nameWithType>, <xref:System.Double.IsInfinity%2A?displayProperty=nameWithType>, <xref:System.Double.IsPositiveInfinity%2A?displayProperty=nameWithType> y <xref:System.Double.IsNegativeInfinity%2A?displayProperty=nameWithType> se usan para comprobar estos valores especiales.
 
-Cada tipo de punto flotante admite un conjunto de operadores aritméticos estándar. La clase <xref:System.Math?displayProperty=nameWithType> proporciona métodos para un conjunto más amplio de funciones matemáticas. .NET Core 2.0 y versiones posteriores incluyen la clase <xref:System.MathF?displayProperty=nameWithType> que proporciona métodos que aceptan argumentos del tipo <xref:System.Single>.
+Cada tipo de punto flotante admite un conjunto de operadores aritméticos estándar. La clase <xref:System.Math?displayProperty=nameWithType> proporciona métodos para un conjunto más amplio de funciones matemáticas. .NET Core 2.0 y versiones posteriores incluyen la clase <xref:System.MathF?displayProperty=nameWithType> que proporciona métodos que aceptan argumentos del tipo <xref:System.Single>.
 
 También puede trabajar con bits individuales de valores <xref:System.Double> y <xref:System.Single> usando la clase <xref:System.BitConverter?displayProperty=nameWithType>. La estructura <xref:System.Decimal?displayProperty=nameWithType> tiene sus propios métodos, <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> y <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29?displayProperty=nameWithType>, para trabajar con los bits individuales de un valor decimal, así como su propio conjunto de métodos para realizar algunas operaciones matemáticas adicionales.
   
-Los tipos <xref:System.Double> y <xref:System.Single> están diseñados para usarse con valores que, por su naturaleza, no son precisos (por ejemplo, la distancia entre dos estrellas) y para aplicaciones en las que no se necesita un alto grado de precisión y pequeño error de redondeo. Debe usar el tipo <xref:System.Decimal?displayProperty=nameWithType> para los casos en los que se necesite una mayor precisión y se deban minimizar los errores de redondeo.
+Los tipos <xref:System.Double> y <xref:System.Single> están diseñados para usarse con valores que, por su naturaleza, no son precisos (por ejemplo, la distancia entre dos estrellas) y para aplicaciones en las que no se necesita un alto grado de precisión ni un mínimo error de redondeo. Use el tipo <xref:System.Decimal?displayProperty=nameWithType> para los casos en los que se necesite una mayor precisión y se deban minimizar los errores de redondeo.
 
 > [!NOTE]
 > El tipo <xref:System.Decimal> no elimina la necesidad de redondeo. En su lugar, minimiza los errores debido al redondeo.
@@ -95,5 +95,4 @@ Los tipos habilitados para SIMD se implementan de tal forma que se pueden utiliz
 
 ## <a name="see-also"></a>Vea también
 
-- [Elementos esenciales de aplicaciones](application-essentials.md)
 - [Cadenas con formato numérico estándar](base-types/standard-numeric-format-strings.md)

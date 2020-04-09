@@ -1,21 +1,21 @@
 ---
 title: Delegados y expresiones lambda
-description: Obtenga información sobre cómo los delegados definen un tipo, que especifica una firma de método determinada, que se puede llamar directamente o pasar a otro método y llamar.
+description: Obtenga información sobre cómo los delegados, que definen un tipo que especifica una firma de método determinada, se pueden llamar directamente o pasar a otro método y llamar.
 author: richlander
 ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: 0abcc73e31eab89c422513acf778bc8bd092e788
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a9ca935814d1a7f77ded5f371ccd496c3859c523
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75345553"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635925"
 ---
 # <a name="delegates-and-lambdas"></a>Delegados y expresiones lambda
 
-Los delegados definen un tipo, que especifica una firma de método concreta. Se puede asignar un método (estático o de instancia) que satisfaga esta firma a una variable de ese tipo y luego llamarlo directamente (con los argumentos adecuados) o pasarlo como argumento a otro método y después llamarlo. El siguiente ejemplo muestra el uso de delegados.
+Los delegados definen un tipo que especifica una firma de método concreta. Se puede asignar un método (estático o de instancia) que satisfaga esta firma a una variable de ese tipo y luego llamarlo directamente (con los argumentos adecuados) o pasarlo como argumento a otro método y después llamarlo. El siguiente ejemplo muestra el uso de delegados.
 
 ```csharp
 using System;
@@ -44,11 +44,11 @@ public class Program
 * En la línea `Reverse rev = ReverseString;` se muestra que se puede asignar un método a una variable del tipo de delegado correspondiente.
 * En la línea `Console.WriteLine(rev("a string"));` se muestra cómo se usa una variable de un tipo de delegado para invocar al delegado.
 
-Para simplificar el proceso de desarrollo, .NET incluye un conjunto de tipos delegados que los programadores pueden volver a usar para no tener que crear nuevos tipos. Estos son `Func<>`, `Action<>` y `Predicate<>`, y se pueden usar en varias ubicaciones de las API de .NET sin necesidad de definir nuevos tipos delegados. Por supuesto, hay algunas diferencias entre los tres, como verá en sus firmas, que principalmente tienen que ver con la forma en que deberían emplearse:
+Para simplificar el proceso de desarrollo, .NET incluye un conjunto de tipos delegados que los programadores pueden volver a usar para no tener que crear nuevos tipos. Estos tipos son `Func<>`, `Action<>` y `Predicate<>`, y se pueden usar sin necesidad de definir nuevos tipos de delegado. Hay algunas diferencias entre los tres tipos que tienen que ver con la forma en que se van a usar:
 
-* `Action<>` se usa cuando es necesario realizar una acción mediante los argumentos del delegado.
-* `Func<>` se usa normalmente cuando se tiene una transformación a mano; es decir, cuando se necesita transformar los argumentos del delegado en un resultado diferente. Las proyecciones son un buen ejemplo de esto.
-* `Predicate<>` se usa cuando es necesario determinar si el argumento cumple la condición del delegado. También puede escribirse como `Func<T, bool>`.
+* `Action<>` se usa cuando es necesario realizar una acción mediante los argumentos del delegado. El método que encapsula no devuelve ningún valor.
+* `Func<>` se usa normalmente cuando se tiene una transformación a mano; es decir, cuando se necesita transformar los argumentos del delegado en un resultado diferente. Las proyecciones son un buen ejemplo. El método que encapsula devuelve un valor especificado.
+* `Predicate<>` se usa cuando es necesario determinar si el argumento cumple la condición del delegado. También se puede escribir como `Func<T, bool>`, lo que significa que el método devuelve un valor booleano.
 
 Ahora podemos tomar el ejemplo anterior y volver a escribirlo mediante el delegado `Func<>` en lugar de un tipo personalizado. El programa seguirá ejecutándose de la misma forma.
 
@@ -72,9 +72,9 @@ public class Program
 }
 ```
 
-En este ejemplo sencillo, tener un método definido fuera del método `Main` parece un poco superfluo. Es por ello que .NET Framework 2.0 presentó el concepto de **delegados anónimos**. Con ellos es posible crear delegados "insertados" sin tener que especificar ningún otro tipo o método. Simplemente se inserta la definición del delegado allí donde se necesita.
+En este ejemplo sencillo, tener un método definido fuera del método `Main` parece un poco superfluo. .NET Framework 2.0 ha introducido el concepto de *delegados anónimos*, que permiten crear delegados "insertados" sin necesidad de especificar ningún otro tipo o método.
 
-Para que vea un ejemplo, se va a activar y a usar el delegado anónimo para filtrar una lista de números pares e imprimirlos en la consola.
+En el ejemplo siguiente, un delegado anónimo filtra una lista solo por los números pares y, después, los imprime en la consola.
 
 ```csharp
 using System;
@@ -108,9 +108,7 @@ public class Program
 
 Como puede ver, el cuerpo del delegado es simplemente un conjunto de expresiones, como cualquier otro delegado. Pero en lugar de ser una definición independiente, se ha introducido _ad hoc_ en la llamada al método <xref:System.Collections.Generic.List%601.FindAll%2A?displayProperty=nameWithType>.
 
-Pero incluso con este enfoque, sigue habiendo mucho código del que es posible deshacerse. Aquí es donde entran en juego las **expresiones lambda**.
-
-Las expresiones lambda, o las "lambda" para abreviar, se presentaron en C# 3.0 como uno de los bloques de creación fundamentales de Language Integrated Query (LINQ). Constituyen una sintaxis más cómoda para el uso de delegados. Declaran una firma y un cuerpo de método, pero no tienen una identidad formal propia, a menos que se asignen a un delegado. A diferencia de los delegados, se pueden asignar directamente como lado izquierdo del registro de eventos, o bien en distintas cláusulas y métodos de LINQ.
+Pero incluso con este enfoque, sigue habiendo mucho código del que es posible deshacerse. Aquí es donde entran en juego las *expresiones lambda*. Las expresiones lambda, o las "lambda", para abreviar, se presentaron en C# 3.0 como uno de los bloques de compilación fundamentales de Language Integrated Query (LINQ). Constituyen una sintaxis más cómoda para el uso de delegados. Declaran una firma y un cuerpo de método, pero no tienen una identidad formal propia, a menos que se asignen a un delegado. A diferencia de los delegados, se pueden asignar directamente como lado izquierdo del registro de eventos, o bien en distintas cláusulas y métodos de LINQ.
 
 Puesto que una expresión lambda es solo otra forma de especificar un delegado, debería ser posible volver a escribir el ejemplo anterior para usar una expresión lambda en lugar de un delegado anónimo.
 
@@ -139,7 +137,7 @@ public class Program
 }
 ```
 
-En el ejemplo anterior, la expresión lambda que se usa es `i => i % 2 == 0`. Una vez más, se trata solo de una sintaxis **muy** cómoda para usar delegados, así que lo que sucede en segundo plano es similar a lo que ocurre con el delegado anónimo.
+En el ejemplo anterior, la expresión lambda que se usa es `i => i % 2 == 0`. De nuevo, constituyen una sintaxis más cómoda para el uso de delegados. Lo que sucede en segundo plano es similar a lo que ocurre con el delegado anónimo.
 
 De nuevo, las expresiones lambda son solo delegados, lo que significa que se pueden usar como controlador de eventos sin problemas, como se muestra en el siguiente fragmento de código.
 

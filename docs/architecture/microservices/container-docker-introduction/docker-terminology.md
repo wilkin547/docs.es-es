@@ -2,12 +2,12 @@
 title: Terminología de Docker
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Terminología de Docker
 ms.date: 01/30/2020
-ms.openlocfilehash: 5ffc7e791df8cbc999c6ababf62670bae46e1d5e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fdcc5ec3603579c36d7339bd3ff651713b8eba88
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77502835"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523331"
 ---
 # <a name="docker-terminology"></a>Terminología de Docker
 
@@ -17,7 +17,9 @@ En esta sección se enumeran los términos y las definiciones que debe conocer a
 
 **Dockerfile**: un archivo de texto que contiene instrucciones sobre cómo crear una imagen de Docker. Es como un script por lotes, la primera línea indica la imagen de base con la que comenzar y, a continuación, siga las instrucciones para instalar programas necesarios, copiar archivos y así sucesivamente, hasta que llegue al entorno de trabajo que necesita.
 
-**Compilación**: la acción de crear una imagen de contenedor basada en la información y el contexto que proporciona su Dockerfile, así como archivos adicionales en la carpeta en que se crea la imagen. Puede crear imágenes con el comando de **docker build** de Docker.
+**Compilación**: la acción de crear una imagen de contenedor basada en la información y el contexto que proporciona su Dockerfile, así como archivos adicionales en la carpeta en que se crea la imagen. Puede compilar imágenes con el comando de Docker:
+
+> `docker build`
 
 **Contenedor**: una instancia de una imagen de Docker. Un contenedor representa la ejecución de una sola aplicación, proceso o servicio. Está formado por el contenido de una imagen de Docker, un entorno de ejecución y un conjunto estándar de instrucciones. Al escalar un servicio, crea varias instancias de un contenedor a partir de la misma imagen. O bien, un proceso por lotes puede crear varios contenedores a partir de la misma imagen y pasar parámetros diferentes a cada instancia.
 
@@ -25,7 +27,7 @@ En esta sección se enumeran los términos y las definiciones que debe conocer a
 
 **Etiqueta**: una marca o una etiqueta que se puede aplicar a las imágenes para que se puedan identificar diferentes imágenes o versiones de la misma imagen (según el número de versión o el entorno de destino).
 
-**Compilación de varias fases**: es una característica, desde Docker 17.05 o versiones posteriores, que ayuda a reducir el tamaño de las imágenes finales. En pocas palabras, con la compilación de varias fases se puede usar, por ejemplo, una imagen base grande, que contiene el SDK, para compilar y publicar la aplicación y, a continuación, usando la carpeta de publicación con una imagen base pequeña solo en tiempo de ejecución, para generar una imagen final mucho más pequeña.
+**Compilación de varias fases**: es una característica, desde Docker 17.05 o versiones posteriores, que ayuda a reducir el tamaño de las imágenes finales. En pocas palabras, con la compilación de varias fases se puede usar, por ejemplo, una imagen base grande, que contiene el SDK, para compilar y publicar la aplicación y, después, usar la carpeta de publicación con una imagen base pequeña solo en tiempo de ejecución, para generar una imagen final mucho más pequeña.
 
 **Repositorio**: una colección de imágenes de Docker relacionadas, etiquetadas con una etiqueta que indica la versión de la imagen. Algunos repositorios contienen varias variantes de una imagen específica, como una imagen que contiene SDK (más pesada), una imagen que solo contiene runtimes (más ligera), etcétera. Estas variantes se pueden marcar con etiquetas. Un solo repositorio puede contener variantes de plataforma, como una imagen de Linux y una imagen de Windows.
 

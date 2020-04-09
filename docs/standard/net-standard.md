@@ -5,12 +5,12 @@ ms.date: 02/13/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 00b40b771a8608bad7e3f992e3c99367ff6bb131
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e6e573056132c25b912ff1eb76b9b055f6e47cfe
+ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77452596"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438218"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -100,7 +100,7 @@ El control de versiones de .NET Standard es importante para su uso. Dada una ver
 - Use bibliotecas que dependan de la misma versión de .NET Standard o de una inferior.
 - Si encuentra una biblioteca que depende de una versión superior de .NET Standard, deberá adoptar la misma versión o bien optar por no usar esa biblioteca.
 
-## <a name="targeting-net-standard"></a>.NET Standard como destino
+## <a name="target-net-standard"></a>.NET Standard como destino
 
 Puede [compilar bibliotecas estándar de .NET](../core/tutorials/libraries.md) mediante una combinación del marco `netstandard` y el metapaquete NETStandard.Library. Puede ver ejemplos de [.NET Standard como destino con herramientas de .NET Core](../core/packages.md).
 

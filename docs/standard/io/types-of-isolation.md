@@ -18,12 +18,12 @@ helpviewer_keywords:
 - isolated storage, types
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
-ms.openlocfilehash: 99e1f3f96465d05c100a0dbb2bc5218810c33754
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9bbd2c3cdca9b2eaee268738bf99189b0be78eba
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159434"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635729"
 ---
 # <a name="types-of-isolation"></a>Tipos de aislamiento
 El acceso al almacenamiento aislado siempre está restringido al usuario que lo creó. Para implementar este tipo de aislamiento, Common Language Runtime usa el mismo concepto de identidad de usuario que reconoce el sistema operativo, que es la identidad asociada con el proceso en el que se ejecuta el código cuando se abre el almacén. Esta identidad es una identidad de usuario autenticado, pero la suplantación puede hacer que la identidad del usuario actual cambie de forma dinámica.  
@@ -32,7 +32,7 @@ El acceso al almacenamiento aislado siempre está restringido al usuario que lo 
   
 - La identidad de dominio representa la evidencia de la aplicación, que en el caso de una aplicación web podría ser la dirección URL completa. Para el código hospedado en el shell, la identidad de dominio podría basarse en la ruta de acceso del directorio de la aplicación. Por ejemplo, si se ejecuta el ejecutable desde la ruta de acceso C:\Office\MyApp.exe, la identidad de dominio sería C:\Office\MyApp.exe.  
   
-- Identidad del ensamblado es la evidencia del ensamblado. Esto podría proceder de una firma digital criptográfica, que puede ser el [nombre seguro](../assembly/strong-named.md) del ensamblado, el editor de software del ensamblado o su identidad de dirección URL. Si un ensamblado tiene un nombre seguro y una identidad del editor de software, se utiliza la identidad del editor de software. Si el ensamblado procede de Internet y no está firmado, se utiliza la identidad de dirección URL. Para obtener más información sobre los ensamblados y nombres seguros, vea [Programar con ensamblados](../assembly/program.md).  
+- Identidad del ensamblado es la evidencia del ensamblado. Esto podría proceder de una firma digital criptográfica, que puede ser el [nombre seguro](../assembly/strong-named.md) del ensamblado, el editor de software del ensamblado o su identidad de dirección URL. Si un ensamblado tiene un nombre seguro y una identidad del editor de software, se utiliza la identidad del editor de software. Si el ensamblado procede de Internet y no está firmado, se utiliza la identidad de dirección URL. Para obtener más información sobre los ensamblados y nombres seguros, vea [Programar con ensamblados](/dotnet/standard/assembly/index).  
   
 - Los almacenes móviles se mueven con un usuario que tenga un perfil de usuario móvil. Los archivos se escriben en un directorio de red y se descargan en cualquier equipo en que el usuario inicia sesión. Para obtener más información sobre los perfiles de usuarios móviles, consulte <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>.  
   
@@ -48,7 +48,7 @@ El acceso al almacenamiento aislado siempre está restringido al usuario que lo 
   
  ![Diagrama que muestra el aislamiento por usuario y ensamblado.](./media/types-of-isolation/isolated-storage-types.gif)  
   
- Tenga en cuenta que, excepto para los almacenes móviles, el equipo siempre aísla de forma implícita el almacenamiento aislado, porque usa los medios de almacenamiento locales en un equipo determinado.  
+ Con la excepción de los almacenes móviles, el equipo siempre aísla de forma implícita el almacenamiento aislado, porque usa los medios de almacenamiento locales en un equipo determinado.  
   
 > [!IMPORTANT]
 > El almacenamiento aislado no está disponible para las aplicaciones de la Tienda Windows 8.x. En su lugar, use las clases de datos de la aplicación de los espacios de nombres `Windows.Storage` incluidas en la API de Windows Runtime para almacenar archivos y datos locales. Para más información, vea [Datos de aplicación](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) en el Centro de desarrollo de Windows.  

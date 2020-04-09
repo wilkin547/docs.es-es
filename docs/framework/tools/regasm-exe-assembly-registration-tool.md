@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Regasm.exe
 - registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
-ms.openlocfilehash: 0a1658e57f4a236e4bdd29c3ca224275c25ea727
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 5eeed43f3d60bd5e443226a16963557546d81e7c
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345005"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635416"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (Herramienta de registro de ensamblados)
 
@@ -36,7 +36,7 @@ regasm assemblyFile [options]
 
 |Opción|Descripción|
 |------------|-----------------|
-|**/codebase**|Crea una entrada de código base en el Registro. La entrada de código base especifica la ruta de acceso de archivo de un ensamblado que no está instalado en la caché global de ensamblados. No debe especificar esta opción si posteriormente va a instalar el ensamblado que va a registrar en la caché global de ensamblados. El argumento *assemblyFile* especificado con la opción **/codebase** debe ser un [ensamblado con nombre seguro](../../standard/assembly/strong-named.md).|
+|**/codebase**|Crea una entrada de código base en el Registro. La entrada de código base especifica la ruta de acceso del archivo de un ensamblado que no está instalado en la caché global de ensamblados. No especifique esta opción si posteriormente va a instalar el ensamblado que va a registrar en la caché global de ensamblados. El argumento *assemblyFile* especificado con la opción **/codebase** debe ser un [ensamblado con nombre seguro](../../standard/assembly/strong-named.md).|
 |**/registered**|Especifica que esta herramienta solo hará referencia a las bibliotecas de tipos que ya se hayan registrado.|
 |**/asmpath:directory**|Especifica un directorio que contiene las referencias de ensamblado. Se debe usar con la opción **/regfile**.|
 |**/nologo**|Suprime la presentación de la portada de inicio de Microsoft.|
@@ -52,9 +52,9 @@ regasm assemblyFile [options]
 
 ## <a name="remarks"></a>Comentarios
 
-Puede usar la opción **/regfile** para generar un archivo .reg que contenga las entradas del Registro en lugar de hacer los cambios en el Registro directamente. El Registro se puede actualizar en un equipo importando el archivo .reg con la herramienta Editor del Registro (Regedit.exe). Tenga en cuenta que el archivo .reg no contiene actualizaciones del Registro que se puedan realizar mediante funciones de registro definidas por el usuario.  Tenga en cuenta que la opción **/regfile** solo emite entradas del Registro para clases administradas.  Esta opción no emite entradas del Registro para `TypeLibID` ni `InterfaceID`.
+Puede usar la opción **/regfile** para generar un archivo .reg que contenga las entradas del Registro en lugar de hacer los cambios en el Registro directamente. El Registro se puede actualizar en un equipo importando el archivo .reg con la herramienta Editor del Registro (Regedit.exe). El archivo .reg no contiene actualizaciones del registro que se puedan realizar mediante funciones de registro definidas por el usuario. La opción **/regfile** solo emite entradas del registro para clases administradas. Esta opción no emite entradas del Registro para `TypeLibID` ni `InterfaceID`.
 
-Cuando se especifica la opción **/tlb**, Regasm.exe genera y registra una biblioteca de tipos donde se describen los tipos encontrados en el ensamblado. Regasm.exe coloca las bibliotecas de tipos generadas en el directorio de trabajo actual o en el directorio especificado para el archivo de salida. La generación de una biblioteca de tipos para un ensamblado que hace referencia a otros ensamblados puede provocar la generación de varias bibliotecas de tipos a la vez. Puede usar la biblioteca de tipos para proporcionar información de tipos para las herramientas de desarrollo como Visual Studio. No se debe usar la opción **/tlb** si el ensamblado que se va a registrar lo ha generado la herramienta Importador de la biblioteca de tipos ([Tlbimp.exe](tlbimp-exe-type-library-importer.md)). No se puede exportar una biblioteca de tipos de un ensamblado que se ha importado desde una biblioteca de tipos. El uso de la opción **/tlb** tiene el mismo efecto que el uso de las herramientas Exportador de la biblioteca de tipos ([Tlbexp.exe](tlbexp-exe-type-library-exporter.md)) y Regasm.exe, con la particularidad de que Tlbexp.exe no registra la biblioteca de tipos que genera.  Si usa la opción **/tlb** para registrar una biblioteca de tipos, puede usar la opción **/tlb** con la opción **/unregister** para anular el registro de la biblioteca de tipos. El uso de las dos opciones juntas anulará el registro de la biblioteca de tipos y de las entradas de la interfaz, lo que puede limpiar considerablemente el Registro.
+Cuando se especifica la opción **/tlb**, Regasm.exe genera y registra una biblioteca de tipos donde se describen los tipos encontrados en el ensamblado. Regasm.exe coloca las bibliotecas de tipos generadas en el directorio de trabajo actual o en el directorio especificado para el archivo de salida. La generación de una biblioteca de tipos para un ensamblado que hace referencia a otros ensamblados puede provocar la generación de varias bibliotecas de tipos a la vez. Puede usar la biblioteca de tipos para proporcionar información de tipos para las herramientas de desarrollo como Visual Studio. No use la opción **/tlb** si el ensamblado que se va a registrar lo ha generado la herramienta Importador de la biblioteca de tipos ([Tlbimp.exe](tlbimp-exe-type-library-importer.md)). No se puede exportar una biblioteca de tipos de un ensamblado que se ha importado desde una biblioteca de tipos. El uso de la opción **/tlb** tiene el mismo efecto que el uso de las herramientas Exportador de la biblioteca de tipos ([Tlbexp.exe](tlbexp-exe-type-library-exporter.md)) y Regasm.exe, con la particularidad de que Tlbexp.exe no registra la biblioteca de tipos que genera.  Si usa la opción **/tlb** para registrar una biblioteca de tipos, puede usar la opción **/tlb** con la opción **/unregister** para anular el registro de la biblioteca de tipos. El uso de las dos opciones juntas anulará el registro de la biblioteca de tipos y de las entradas de la interfaz, lo que puede limpiar considerablemente el Registro.
 
 Al registrar un ensamblado para que lo use COM, Regasm.exe agrega entradas al Registro del equipo local. Más concretamente, crea claves del Registro dependientes de la versión que permiten que varias versiones del mismo ensamblado se ejecuten en paralelo en un equipo. Al registrar un ensamblado por primera vez, se crea una clave de nivel superior para el ensamblado y una subclave única para la versión específica. Cada vez que se registra una nueva versión del ensamblado, Regasm.exe crea una subclave para la nueva versión.
 

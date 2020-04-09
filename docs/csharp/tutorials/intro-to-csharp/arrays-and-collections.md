@@ -3,18 +3,18 @@ title: 'Trabajo con colecciones: tutorial de introducción a C#'
 description: Conozca C# a través de la colección de listas que se presenta en este tutorial.
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: 25d20de2eae8ad1f544fa17553c173a6141ae464
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 554a4601157a7d4b873c22a46ee72b6601fc36d7
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156694"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635662"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>Obtenga información sobre cómo administrar colecciones de datos mediante el tipo de lista genérico
 
 En este tutorial de presentación se proporciona una introducción al lenguaje C# y se exponen los conceptos básicos de la clase <xref:System.Collections.Generic.List%601>.
 
-En este tutorial se supone que cuenta con una máquina que puede usar para el desarrollo. El tutorial de .NET [Hola mundo en 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) cuenta con instrucciones para configurar el entorno de desarrollo local en Windows, Linux o macOS. En [Become familiar with the development tools](local-environment.md) (Familiarizarse con las herramientas de desarrollo) puede obtener información general sobre los comandos que usará, donde hay vínculos que amplían la información.
+En este tutorial se supone que cuenta con una máquina que puede usar para el desarrollo. El tutorial de .NET [Hola mundo en 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) cuenta con instrucciones para configurar el entorno de desarrollo local en Windows, Linux o macOS. En [Familiarización con las herramientas de desarrollo de .NET](local-environment.md) puede obtener información general sobre los comandos que usará, donde hay vínculos que amplían la información.
 
 ## <a name="a-basic-list-example"></a>Un ejemplo de lista básico
 
@@ -230,4 +230,4 @@ Con cada iteración del bucle, se obtienen los dos últimos enteros de la lista,
 
 Enhorabuena, ha completado el tutorial sobre las listas. Puede continuar con el tutorial [Introducción a las clases](introduction-to-classes.md) en su propio entorno de desarrollo.
 
-Puede obtener más información sobre cómo trabajar con el tipo `List` en el tema de la [Guía de .NET](../../../standard/index.md) que trata sobre las [colecciones](../../../standard/collections/index.md). Ahí también podrá conocer muchos otros tipos de colecciones.
+Puede obtener más información sobre cómo trabajar con el tipo `List` en el artículo de la [Guía de .NET](../../../standard/index.yml) que trata sobre las [colecciones](../../../standard/collections/index.md). Ahí también podrá conocer muchos otros tipos de colecciones.

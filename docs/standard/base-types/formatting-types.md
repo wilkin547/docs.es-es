@@ -25,12 +25,12 @@ helpviewer_keywords:
 - custom formatting [.NET Framework]
 - strings [.NET Framework], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
-ms.openlocfilehash: a1f4d9107427140bcfa6b49bc8a850432fb204f7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 124c32a09a32dd90b8b96b39aa80352094030b23
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75348255"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523945"
 ---
 # <a name="format-types-in-net"></a>Tipos de formato en .NET
 
@@ -141,7 +141,7 @@ Para información sobre las cadenas de formato de enumeración, vea [Enumeration
 
 Las cadenas de formato estándar para tipos numéricos normalmente definen una cadena de resultado cuya apariencia exacta está controlada por uno o más valores de propiedad. Por ejemplo, el especificador de formato "C" da formato a un número como un valor de divisa. Al llamar al método `ToString` con el especificador de formato "C" como único parámetro, se usan los siguientes valores de propiedad del objeto <xref:System.Globalization.NumberFormatInfo> de la referencia cultural actual para definir la representación de cadena del valor numérico:
 
-- La propiedad <xref:System.Globalization.NumberFormatInfo.CurrencySymbol%2A> , que especifica el símbolo de divisa de la referencia cultural actual.
+- La propiedad <xref:System.Globalization.NumberFormatInfo.CurrencySymbol%2A>, que especifica el símbolo de divisa de la referencia cultural actual.
 
 - La propiedad <xref:System.Globalization.NumberFormatInfo.CurrencyNegativePattern%2A> o <xref:System.Globalization.NumberFormatInfo.CurrencyPositivePattern%2A> , que devuelve un entero que determina lo siguiente:
 
@@ -175,7 +175,7 @@ Las cadenas de formato estándar para valores de fecha y hora son alias de las c
 
 Para más información sobre las cadenas de formato de fecha y hora estándar, vea [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md).
 
-También se pueden emplear las cadenas de formato estándar para definir la representación de cadena de un objeto definido por la aplicación generado por el método `ToString(String)` del objeto. Puede definir los especificadores de formato estándar concretos que su objeto admite y determinar si distinguen entre mayúsculas y minúsculas o no. Su implementación del método `ToString(String)` debe aceptar lo siguiente:
+También se pueden emplear las cadenas de formato estándar para definir la representación de cadena de un objeto definido por la aplicación que genera el método `ToString(String)` del objeto. Puede definir los especificadores de formato estándar concretos que su objeto admite y determinar si distinguen entre mayúsculas y minúsculas o no. Su implementación del método `ToString(String)` debe aceptar lo siguiente:
 
 - Un especificador de formato "G" que representa un formato personalizado o común del objeto. La sobrecarga sin parámetros del método `ToString` del objeto debe llamar a su sobrecarga de `ToString(String)` y pasarle la cadena de formato estándar "G".
 
@@ -359,8 +359,7 @@ En el ejemplo siguiente se usa la clase `ByteByByteFormatter` para dar formato a
 |[Cadenas de formato TimeSpan personalizado](../../../docs/standard/base-types/custom-timespan-format-strings.md)|Describe cadenas de formato personalizado que crean formatos específicos de la aplicación para intervalos de tiempo.|
 |[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|Describe cadenas de formato estándar que se usan para crear representaciones de cadena de valores de enumeración.|
 |[Formatos compuestos](../../../docs/standard/base-types/composite-formatting.md)|Describe cómo incrustar uno o más valores con formato en una cadena. Posteriormente se puede mostrar la cadena en la consola o escrita en una secuencia.|
-|[Efectuar operaciones de formato](../../../docs/standard/base-types/performing-formatting-operations.md)|Muestra los temas en los que se proporcionan instrucciones paso a paso para realizar operaciones de formato concretas.|
-|[Analizar cadenas en .NET](../../../docs/standard/base-types/parsing-strings.md)|Describe cómo inicializar objetos en los valores descritos por representaciones de cadena de dichos objetos. El análisis es la operación inversa de la aplicación de formato.|
+|[Analizar cadenas](../../../docs/standard/base-types/parsing-strings.md)|Describe cómo inicializar objetos en los valores descritos por representaciones de cadena de dichos objetos. El análisis es la operación inversa de la aplicación de formato.|
 
 ## <a name="reference"></a>Referencia
 

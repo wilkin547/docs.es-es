@@ -8,20 +8,23 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, introduction to
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
-ms.openlocfilehash: ed1b2df57c118a0ebb6b5ffa4326b3e2eac81dec
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e9ef72c2691a4dbb9c68202b29e0f5c77dcdaa74
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75632368"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588182"
 ---
 # <a name="introduction-to-plinq"></a>Introducción a PLINQ
 
+Parallel LINQ (PLINQ) es una implementación en paralelo del patrón [Language-Integrated Query (LINQ)](../../csharp/programming-guide/concepts/linq/index.md). PLINQ implementa el conjunto completo de operadores de consulta estándar de LINQ como métodos de extensión para el espacio de nombres <xref:System.Linq> y tiene operadores adicionales para las operaciones en paralelo. PLINQ combina la simplicidad y legibilidad de la sintaxis de LINQ con la eficacia de la programación en paralelo.
+
+> [!TIP]
+> Si no está familiarizado con LINQ, ofrece un modelo unificado para consultar cualquier origen de datos enumerable en un modo con seguridad de tipos. LINQ to Objects es el nombre de las consultas LINQ que se ejecutan en colecciones en memoria, como <xref:System.Collections.Generic.List%601> y matrices. En este artículo, se da por echo que posee un conocimiento básico de LINQ. Para obtener más información, vea [Language Integrated Query (LINQ)](../../csharp/programming-guide/concepts/linq/index.md).
+
 ## <a name="what-is-a-parallel-query"></a>¿Qué es una consulta en paralelo?
 
-Language Integrated Query (LINQ) apareció por primera vez en .NET Framework 3.5. Ofrece un modelo unificado para consultar cualquier origen de datos <xref:System.Collections.IEnumerable?displayProperty=nameWithType> o <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> en un modo con seguridad de tipos. LINQ to Objects es el nombre de las consultas LINQ que se ejecutan en colecciones en memoria, como <xref:System.Collections.Generic.List%601> y matrices. En este artículo, se da por echo que posee un conocimiento básico de LINQ. Para obtener más información, vea [Language Integrated Query (LINQ) (C#)](../../csharp/programming-guide/concepts/linq/index.md) o [Language Integrated Query (LINQ) (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/index.md).
-
-Parallel LINQ (PLINQ) es una implementación en paralelo del modelo LINQ. En muchos sentidos, una consulta PLINQ se parece a una consulta LINQ to Objects no en paralelo. Las consultas PLINQ, al igual que las consultas LINQ secuenciales, funcionan en cualquier origen de datos <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601> en memoria y tienen ejecución aplazada, lo que significa que no se empiezan a ejecutar hasta que se enumera la consulta. La principal diferencia es que PLINQ intenta usar completamente todos los procesadores del sistema. Para ello, crea particiones del origen de datos en segmentos y, luego, ejecuta la consulta en cada segmento en subprocesos de trabajo independientes en paralelo en varios procesadores. En muchos casos, la ejecución en paralelo significa que la consulta se ejecuta considerablemente más rápido.
+En muchos sentidos, una consulta PLINQ se parece a una consulta LINQ to Objects no en paralelo. Las consultas PLINQ, al igual que las consultas LINQ secuenciales, funcionan en cualquier origen de datos <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601> en memoria y tienen ejecución aplazada, lo que significa que no se empiezan a ejecutar hasta que se enumera la consulta. La principal diferencia es que PLINQ intenta usar completamente todos los procesadores del sistema. Para ello, crea particiones del origen de datos en segmentos y, luego, ejecuta la consulta en cada segmento en subprocesos de trabajo independientes en paralelo en varios procesadores. En muchos casos, la ejecución en paralelo significa que la consulta se ejecuta considerablemente más rápido.
 
 A través de la ejecución en paralelo, PLINQ puede alcanzar importantes mejoras de rendimiento con respecto al código heredado en ciertos tipos de consultas, a menudo solo con agregar la operación de consulta <xref:System.Linq.ParallelEnumerable.AsParallel%2A> al origen de datos. Sin embargo, el paralelismo puede presentar sus propias complejidades y no todas las operaciones de consulta se ejecutan más rápido en PLINQ. De hecho, la paralelización en realidad ralentiza ciertas consultas. Por lo tanto, debe entender cómo ciertos problemas, como la ordenación, afectan a las consultas en paralelo. Para más información, consulte [Introducción a la velocidad en PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).
 
@@ -134,5 +137,5 @@ En muchos casos, una consulta se puede ejecutar en paralelo, pero la sobrecarga 
 
 ## <a name="see-also"></a>Vea también
 
-- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
 - [Introducción a la velocidad en PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)

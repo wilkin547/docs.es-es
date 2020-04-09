@@ -5,12 +5,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: bb1b812fdbf1d521ed3fd86e23f430bcd04d00f6
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 5e39279183f7e3745c9373df246d14d69d5ff99b
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249186"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805907"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfaces (Guía de programación de C#)
 
@@ -26,7 +26,7 @@ El nombre de una interfaz debe ser un [nombre de identificador](../inside-a-prog
 
 Cualquier clase o estructura que implementa la interfaz <xref:System.IEquatable%601> debe contener una definición para un método <xref:System.IEquatable%601.Equals%2A> que coincida con la firma que la interfaz especifica. Como resultado, puede contar con una clase que implementa `IEquatable<T>` para contener un método `Equals` con el que una instancia de la clase puede determinar si es igual a otra instancia de la misma clase.
 
-La definición de `IEquatable<T>` no proporciona una implementación para `Equals`. Una clase o estructura puede implementar varias interfaces, pero una clase solo puede heredar de una sola clase.
+La definición de `IEquatable<T>` no facilita ninguna implementación para `Equals`. Una clase o estructura puede implementar varias interfaces, pero una clase solo puede heredar de una sola clase.
 
 Para obtener más información sobre las clases abstractas, vea [Clases y miembros de clase abstractos y sellados (Guía de programación de C#)](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md).
 
