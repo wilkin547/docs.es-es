@@ -2,12 +2,12 @@
 title: Utilización del instrumental de administración de Windows (WMI) para diagnósticos
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: 0c803e3988f7a63980d991190db87c263c992b80
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b14f9401266bdf7edccd7dca12cb818cdd2cb348
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185672"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121544"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Utilización del instrumental de administración de Windows (WMI) para diagnósticos
 Windows Communication Foundation (WCF) expone los datos de inspección de un servicio en tiempo de ejecución a través de un proveedor de Instrumental de administración de Windows (WMI) de WCF.  
@@ -141,7 +141,7 @@ Windows Communication Foundation (WCF) expone los datos de inspección de un ser
     ```  
   
 ### <a name="granting-access-to-arbitrary-users-or-groups"></a>Conceder acceso a usuarios o grupos arbitrarios  
- En el ejemplo de esta sección se conceden privilegios de registro de proveedores WMI a todos los usuarios locales. Si desea conceder acceso a un usuario o grupo no integrado, debe obtener el identificador de seguridad (SID) de dicho usuario o grupo. No hay ninguna forma sencilla de obtener el SID de un usuario arbitrario. Un método consiste en iniciar sesión como el usuario deseado y, a continuación, usar el comando shell siguiente.  
+ En el ejemplo de esta sección se conceden privilegios de registro de proveedores WMI a todos los usuarios locales. Si desea conceder acceso a un usuario o grupo que no está integrado, debe obtener el identificador de seguridad (SID) de ese usuario o grupo. No hay ninguna forma sencilla de obtener el SID de un usuario arbitrario. Un método consiste en iniciar sesión como el usuario deseado y, a continuación, usar el comando shell siguiente.  
   
 ```console
 Whoami /user  
@@ -152,10 +152,11 @@ Whoami /user
 ## <a name="accessing-remote-wmi-object-instances"></a>Acceso a las instancias de objeto de WMI remotas  
  Si necesita tener acceso a instancias WMI de WCF en un equipo remoto, debe habilitar la privacidad de paquetes en las herramientas que usa para el acceso. La siguiente sección describe cómo conseguirlo mediante CIM Studio de WMI, la Herramienta de comprobación del instrumental de administración de Windows, y .NET SDK 2.0.  
   
-### <a name="wmi-cim-studio"></a>CIM Studio de WMI  
- Si ha instalado [WMI Administrative Tools](https://go.microsoft.com/fwlink/?LinkId=95185), puede utilizar WMI CIM Studio para acceder a las instancias de WMI. Las herramientas se encuentran en la carpeta siguiente  
+### <a name="wmi-cim-studio"></a>CIM Studio de WMI
+
+Si ha instalado WMI Administrative Tools, puede utilizar WMI CIM Studio para acceder a las instancias de WMI. Las herramientas se encuentran en la siguiente carpeta:
   
- **%windir%-Archivos de programa-Herramientas WMI\\**  
+*%windir%-Archivos de programa-Herramientas WMI\\*
   
 1. En la ventana Conectar al espacio de **nombres:,** escriba **root-ServiceModel** y haga clic en **Aceptar.**  
   

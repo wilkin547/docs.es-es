@@ -1,18 +1,18 @@
 ---
-title: 'Cómo: Crear contenedores COM'
+title: Procedimiento para crear contenedores COM
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM,wrappers creating
 - COM,wrappers Visual Studio
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
-ms.openlocfilehash: 623df8aa86d25d9a57d3039bee01b0ee39d402a8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 035d6439ec90426d7b68e05043ea8b6722f81d28
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123938"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121594"
 ---
-# <a name="how-to-create-com-wrappers"></a>Cómo: Crear contenedores COM
+# <a name="how-to-create-com-wrappers"></a>Procedimiento para crear contenedores COM
 
 Puede crear contenedores del Modelo de objetos componentes (COM) mediante características de Visual Studio 2005 o las herramientas Tlbimp.exe y Regasm.exe de .NET Framework. Ambos métodos generan dos tipos de contenedores COM:
 
@@ -39,7 +39,7 @@ En Visual Studio 2005, puede agregar el contenedor COM como una referencia al pr
 Ahora puede escribir código para tener acceso al objeto COM. Puede empezar por declarar el objeto, como, por ejemplo, con una instrucción `Imports` para Visual Basic o una instrucción `Using` para C#.
 
 > [!NOTE]
-> Si quiere programar componentes de Microsoft Office, instale primero los [ensamblados de interoperabilidad primarios de Microsoft Office](https://go.microsoft.com/fwlink/?LinkId=50479) (PIA) desde el Centro de descarga de Microsoft. En el paso 4, seleccione la versión más reciente de la biblioteca de objetos disponible para el producto de Office que quiere, como la **biblioteca de objetos de Microsoft Word 11.0**.  
+> Si desea programar componentes de Microsoft Office, instale primero [Microsoft Office Primary Interop Assemblies Redistributable](https://www.microsoft.com/Download/details.aspx?id=3508).
   
 ### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>Para crear un contenedor RCW mediante las herramientas de .NET Framework  
   
@@ -55,7 +55,7 @@ Ahora puede escribir código para tener acceso al objeto COM. Puede empezar por 
   
      Compruebe que dispone de un número de versión de cuatro partes completo para el ensamblado en el archivo AssemblyInfo. Este número es necesario para mantener el control de versiones en el Registro de Windows. Para más información sobre los números de versión, vea [Versiones de los ensamblados](../../standard/assembly/versioning.md).  
   
-2. En el menú **Proyecto**, haga clic en **Propiedades**.  
+2. En el menú **Proyecto** , haga clic en **Propiedades**.  
   
 3. Haga clic en la pestaña **Compilar**.  
   
@@ -74,4 +74,4 @@ Puede ejecutar Regasm.exe en un ensamblado que se encuentre en cualquier directo
 ## <a name="see-also"></a>Vea también
 
 - [Contenedor al que se puede llamar en tiempo de ejecución](../../standard/native-interop/runtime-callable-wrapper.md)
-- [Contenedor CCW (COM callable wrapper)](../../standard/native-interop/com-callable-wrapper.md)
+- [Contenedor CCW](../../standard/native-interop/com-callable-wrapper.md)
