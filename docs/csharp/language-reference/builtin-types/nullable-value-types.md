@@ -4,19 +4,19 @@ description: Información sobre los tipos de valor de C# que admiten un valor NU
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: a84b3d60269491846b783e5046a84a1d14e258a1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c13ef6a091ec6aebd4608c5ed8d2c03b067c7312
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398278"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888077"
 ---
 # <a name="nullable-value-types-c-reference"></a>Tipos de valor que admiten valores NULL (referencia de C#)
 
 Un *tipo de valor que admite un valor NULL* `T?` representa todos los valores de su [tipo de valor](value-types.md) subyacente `T` y un valor [NULL](../keywords/null.md) adicional. Por ejemplo, puede asignar cualquiera de los tres valores siguientes a una variable `bool?`: `true`, `false` o `null`. Un tipo de valor subyacente `T` no puede ser un tipo de valor que acepte valores NULL por sí mismo.
 
 > [!NOTE]
-> C# 8.0 presenta la característica de tipos de referencia que admiten un valor NULL. Para más información, consulte [Tipos de referencia que admiten un valor NULL](../../nullable-references.md). Los tipos de valor que admiten valores NULL están disponibles a partir de C# 2.
+> C# 8.0 presenta la característica de tipos de referencia que admiten un valor NULL. Para más información, consulte [Tipos de referencia que admiten un valor NULL](nullable-reference-types.md). Los tipos de valor que admiten valores NULL están disponibles a partir de C# 2.
 
 Todos los tipos que admiten valores NULL son instancias de la estructura <xref:System.Nullable%601?displayProperty=nameWithType> genérica. Puede hacer referencia a un tipo de valor que admite valores NULL con un tipo subyacente `T` en cualquiera de las formas intercambiables siguientes: `Nullable<T>` o `T?`.
 
@@ -120,7 +120,7 @@ Se puede usar el código que se presenta en el ejemplo siguiente para determinar
 [!code-csharp-interactive[whether an instance is of a nullable type](snippets/NullableValueTypes.cs#IsInstanceNullable)]
 
 > [!NOTE]
-> Los métodos que se describen en esta sección no son aplicables en el caso de los [tipos de referencia nula](../../nullable-references.md).
+> Los métodos que se describen en esta sección no son aplicables en el caso de los [tipos de referencia nula](nullable-reference-types.md).
 
 ## <a name="c-language-specification"></a>especificación del lenguaje C#
 
@@ -139,4 +139,4 @@ Para más información, vea las secciones siguientes de la [Especificación del 
 - <xref:System.Nullable%601?displayProperty=nameWithType>
 - <xref:System.Nullable?displayProperty=nameWithType>
 - <xref:System.Nullable.GetUnderlyingType%2A?displayProperty=nameWithType>
-- [Tipos de referencia que aceptan valores null](../../nullable-references.md)
+- [Tipos de referencia que aceptan valores null](nullable-reference-types.md)

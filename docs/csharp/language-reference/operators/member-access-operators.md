@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: a132e527deadcffb4826c1965987fc09da470a09
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: 90066b1e9c219f66fc0c76423679e81aa3fa6770
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635308"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81120985"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>Operadores y expresiones de acceso a miembros (referencia de C#)
 
@@ -170,7 +170,7 @@ También usa paréntesis al invocar un [constructor](../../programming-guide/cla
 
 También usa los paréntesis para ajustar el orden en el que se van a evaluar operaciones en una expresión. Para obtener más información, vea [Operadores de C# (referencia de C#)](index.md).
 
-[Expresiones de conversión](type-testing-and-cast.md#cast-operator-), que realizan conversiones de tipo explícitas, también utilizan paréntesis.
+[Expresiones de conversión](type-testing-and-cast.md#cast-expression), que realizan conversiones de tipo explícitas, también utilizan paréntesis.
 
 ## <a name="index-from-end-operator-"></a>Indexación desde el operador final ^
 
