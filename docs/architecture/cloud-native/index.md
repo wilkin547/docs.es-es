@@ -3,12 +3,12 @@ title: Diseño de aplicaciones .NET nativas en la nube para Azure
 description: Guía para crear aplicaciones nativas en la nube con la ayuda de contenedores, microservicios y características sin servidor de Azure.
 author: ardalis
 ms.date: 03/07/2019
-ms.openlocfilehash: 7f14a690d0153edc43f0ce7f4e91c9e9cd2c6858
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cf3be07f0d37aacf4f0252ef2f4d922b7be93eee
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71696770"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989069"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>Diseño de aplicaciones .NET nativas en la nube para Azure
 
@@ -26,7 +26,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2019 de Microsoft Corporation
+Copyright &copy; 2019; 2001-2003 de Microsoft Corporation.
 
 Todos los derechos reservados. No se puede reproducir ni transmitir de ninguna forma ni por ningún medio ninguna parte del contenido de este libro sin la autorización por escrito del publicador.
 
@@ -46,7 +46,7 @@ Autores:
 
 > **Steve "ardalis" Smith**: instructor y arquitecto de software de [Ardalis.com](https://ardalis.com)
 >
-> **Rob Vettor**: arquitecto principal de IP y sistemas de Microsoft de [RobVettor.com](https://robvettor.com)
+> **Rob Vettor**: arquitecto principal de IP y sistemas de Microsoft de [thinkingincloudnative.com](http://thinkingincloudnative.com/about/)
 
 Participantes y revisores:
 
