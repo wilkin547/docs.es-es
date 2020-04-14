@@ -80,8 +80,6 @@
       href: how-to-clear-bindings.md
     - name: Buscar elementos generados por un objeto DataTemplate
       href: how-to-find-datatemplate-generated-elements.md
-    - name: Enlazar a un servicio web
-      href: how-to-bind-to-a-web-service.md
 - name: Enlace de datos de WPF con LINQ to XML
   items:
     - name: Información general
