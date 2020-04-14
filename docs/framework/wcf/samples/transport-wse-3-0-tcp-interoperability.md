@@ -2,12 +2,12 @@
 title: 'Transporte: interoperabilidad de WSE 3.0 TCP'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 55c59fe3a677d3aea8de62ae714e1007cfcbb86a
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: f799f3b6968f31472acc7752846bab34351648db
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121294"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278904"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Transporte: interoperabilidad de WSE 3.0 TCP
 El ejemplo de transporte de interoperabilidad TCP de WSE 3.0 muestra cómo implementar una sesión dúplex TCP como un transporte personalizado de Windows Communication Foundation (WCF). También muestra cómo puede utilizar la extensibilidad de la capa del canal para comunicarse a través de la conexión con sistemas que ya estén implementados. Los pasos siguientes muestran cómo compilar este transporte WCF personalizado:  
@@ -39,7 +39,7 @@ El ejemplo de transporte de interoperabilidad TCP de WSE 3.0 muestra cómo imple
   
  Una vez que <xref:System.ServiceModel.Channels.Message> se codifica en bytes, se debe transmitir en la conexión. Esto requiere un sistema para definir los límites del mensaje. WSE 3.0 utiliza una versión de [DIME](https://docs.microsoft.com/archive/msdn-magazine/2002/december/sending-files-attachments-and-soap-messages-via-dime) como su protocolo de encuadre. `WriteData` encapsula la lógica con tramas para ajustar un byte[] en un conjunto de registros de DIME.  
   
- La lógica para recibir los mensajes es muy similar. La complejidad principal es administrar el hecho de que una lectura de socket puede devolver menos bytes que los que se hayan solicitado. Para recibir un mensaje, `WseTcpDuplexSessionChannel` lee los bytes fuera de la conexión, descodifica las tramas de DIME y después utiliza <xref:System.ServiceModel.Channels.MessageEncoder> para convertir el byte[] en <xref:System.ServiceModel.Channels.Message>.  
+ La lógica para recibir mensajes es similar. La complejidad principal es controlar el hecho de que una lectura de socket puede devolver menos bytes de los solicitados. Para recibir un mensaje, `WseTcpDuplexSessionChannel` lee los bytes fuera de la conexión, descodifica las tramas de DIME y después utiliza <xref:System.ServiceModel.Channels.MessageEncoder> para convertir el byte[] en <xref:System.ServiceModel.Channels.Message>.  
   
  El `WseTcpDuplexSessionChannel` base supone que recibe un socket conectado. La clase base administra el cierre del socket. Hay tres lugares que actúan de interfaz con el cierre del socket:  
   
@@ -47,7 +47,7 @@ El ejemplo de transporte de interoperabilidad TCP de WSE 3.0 muestra cómo imple
   
 - On[Begin]Close: cierra el socket de manera correcta (cierre suave).  
   
-- session.CloseOutputSession: cierra el flujo de datos saliente (medio cierre).  
+- Sesión. CloseOutputSession: cierre el flujo de datos salientes (medio cierre).  
   
 ## <a name="channel-factory"></a>Generador de canales  
  El paso siguiente para escribir el transporte de TCP es crear una implementación de <xref:System.ServiceModel.Channels.IChannelFactory> para los canales de cliente.  
@@ -170,7 +170,7 @@ Symbols:
         CONTOSO  
 ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
+## <a name="set-up-build-and-run-the-sample"></a>Configurar, crear y ejecutar el ejemplo  
   
 1. Para ejecutar este ejemplo, debe tener [instalado Web Services Enhancements (WSE) 3.0 para Microsoft .NET](https://www.microsoft.com/download/details.aspx?id=14089) y el ejemplo WSE. `TcpSyncStockService`
   
@@ -179,7 +179,7 @@ Symbols:
   
 1. Una vez instalado el ejemplo de `TcpSyncStockService`, haga lo siguiente:  
   
-    1. Abra `TcpSyncStockService` en Visual Studio (tenga en cuenta que el ejemplo de TcpSyncStockService se instala con WSE 3.0. No forma parte de este código del ejemplo).  
+    1. Abra `TcpSyncStockService` en Visual Studio. (El ejemplo TcpSyncStockService se instala con WSE 3.0. No forma parte del código de este ejemplo.)  
   
     2. Establezca el proyecto StockService como proyecto de inicio.  
   

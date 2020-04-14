@@ -2,12 +2,12 @@
 title: Serialización y metadatos
 ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
-ms.openlocfilehash: 1805b6ca06d584237303d1366222419da3e8b9ef
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7c6fe241fbf92f52abfa0eb66c37bff4d227b4e5
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128120"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81241924"
 ---
 # <a name="serialization-and-metadata"></a>Serialización y metadatos
 
@@ -28,7 +28,7 @@ Si la aplicación serializa y deserializa objetos, es posible que deba agregar e
 <Namespace Name="App.Models" Serialize="Required PublicAndInternal" />  
 ```  
   
- Para más información sobre la sintaxis usada en el ejemplo, vea [Elemento \<Namespace>](namespace-element-net-native.md).  
+ Para obtener información sobre la sintaxis utilizada en el ejemplo, vea [ \<Elemento de> de espacio de nombres](namespace-element-net-native.md).  
   
 <a name="Microsoft"></a>
 ## <a name="microsoft-serializers"></a>Serializadores de Microsoft
@@ -37,15 +37,15 @@ Si la aplicación serializa y deserializa objetos, es posible que deba agregar e
   
 ### <a name="typeof-used-in-the-constructor"></a>typeof utilizado en el constructor
 
- Si llama a un constructor de estas clases de serialización e incluye C# el operador [typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) en la llamada al método, **no tiene que realizar ningún trabajo adicional**. Por ejemplo, en cada una de las siguientes llamadas a un constructor de clase de serialización, la palabra clave `typeof` se utiliza como parte de la expresión que se pasa al constructor.  
+ Si se llama a un constructor de estas clases de serialización e incluye el operador [typeof de](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) C- en la llamada al método, **no es necesario realizar ningún trabajo adicional.** Por ejemplo, en cada una de las siguientes llamadas a un constructor de clase de serialización, la palabra clave `typeof` se utiliza como parte de la expresión que se pasa al constructor.  
   
  [!code-csharp[ProjectN#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#5)]  
   
- El compilador de .NET Native administrará automáticamente este código.  
+ El compilador de .NET Native controlará automáticamente este código.  
   
 ### <a name="typeof-used-outside-the-constructor"></a>typeof usado fuera del constructor
 
- Si se llama a un constructor de estas clases de serialización y C# se usa el operador [typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) fuera de la expresión proporcionada al parámetro <xref:System.Type> del constructor, como en el código siguiente, el compilador .net Native no puede resolver el tipo:  
+ Si se llama a un constructor de estas clases de serialización y <xref:System.Type> se usa el operador [typeof de](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) C- fuera de la expresión proporcionada al parámetro del constructor, como en el código siguiente, el compilador de .NET Native no puede resolver el tipo:  
   
  [!code-csharp[ProjectN#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#6)]  
   
@@ -55,7 +55,7 @@ Si la aplicación serializa y deserializa objetos, es posible que deba agregar e
 <Type Name="DataSet" Browse="Required Public" />  
 ```  
   
- Del mismo modo, si llama a un constructor como <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType> y proporciona una matriz de objetos de <xref:System.Type> adicionales para serializar, como en el código siguiente, el compilador de .NET Native no puede resolver estos tipos.  
+ De forma similar, si <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29> se llama a <xref:System.Type> un constructor como y proporciona una matriz de objetos adicionales para serializar, como en el código siguiente, el compilador de .NET Native no puede resolver estos tipos.  
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   
@@ -65,11 +65,11 @@ Si la aplicación serializa y deserializa objetos, es posible que deba agregar e
 <Type Name="t" Browse="Required Public" />  
 ```  
   
- Para más información sobre la sintaxis usada en el ejemplo, vea [Elemento \<Type>](type-element-net-native.md).  
+ Para obtener información sobre la sintaxis utilizada en el ejemplo, vea [ \<Elemento de>](type-element-net-native.md)de tipo .  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Runtime Directives (rd.xml) Configuration File Reference](runtime-directives-rd-xml-configuration-file-reference.md) (Referencia del archivo de configuración de directivas en tiempo de ejecución [rd.xml])
-- [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](runtime-directive-elements.md)
-- [\<tipo > elemento](type-element-net-native.md)
-- [Elemento \<Namespace>](namespace-element-net-native.md)
+- [Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elementos de directivas en tiempo de ejecución](runtime-directive-elements.md)
+- [\<Elemento de> de tipo](type-element-net-native.md)
+- [\<Elemento de> de espacio de nombres](namespace-element-net-native.md)

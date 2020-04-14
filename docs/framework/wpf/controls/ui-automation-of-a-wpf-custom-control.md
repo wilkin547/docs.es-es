@@ -10,12 +10,12 @@ helpviewer_keywords:
 - custom controls [WPF], improving accessibility
 - UI Automation [WPF], using with custom controls
 ms.assetid: 47b310fc-fbd5-4ce2-a606-22d04c6d4911
-ms.openlocfilehash: 9c33d0e5da70820041ba2a2881082d9f7d179fc5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 97db94215220ac2a68e0395bd63b7a874a745a48
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187509"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243250"
 ---
 # <a name="ui-automation-of-a-wpf-custom-control"></a>Automatización de la interfaz de usuario de un control personalizado de WPF
 [!INCLUDE[TLA#tla_uiautomation](../../../../includes/tlasharptla-uiautomation-md.md)] proporciona una única interfaz generalizada que los clientes de automatización pueden utilizar para examinar o utilizar las interfaces de usuario de una variedad de plataformas y entornos. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] permite al código de control de calidad (prueba) y a las aplicaciones de accesibilidad, tales como lectores de pantalla, examinar los elementos de la interfaz de usuario y simular la interacción del usuario con ellos desde otro código. Para más información acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] en todas las plataformas, consulte Accesibilidad.  
@@ -144,7 +144,7 @@ Public Class RangePeer2
 End Class  
 ```  
   
-Para obtener una implementación de ejemplo, vea el código fuente de [C](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp) o [Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic) que implementa y consume un NumericUpDown control personalizado.  
+Para obtener una implementación de ejemplo, vea el código fuente de [C](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp) o [Visual Basic](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic) que implementa y consume un NumericUpDown control personalizado.  
   
 ### <a name="raise-events"></a>Generar eventos  
  Los clientes de automatización pueden suscribirse a eventos de automatización. Los controles personalizados deben notificar <xref:System.Windows.Automation.Peers.AutomationPeer.RaiseAutomationEvent%2A> los cambios en el estado de control mediante una llamada al método. De forma similar, cuando cambia <xref:System.Windows.Automation.Peers.AutomationPeer.RaisePropertyChangedEvent%2A> un valor de propiedad, llame al método. El código siguiente muestra cómo obtener el objeto del mismo nivel desde el código del control, y cómo llamar a un método para generar un evento. Como optimización, el código determina si hay agentes de escucha para este tipo de evento. Generar el evento únicamente cuando hay agentes de escucha evita una sobrecarga innecesaria y ayuda a que el control siga respondiendo.  
@@ -155,6 +155,6 @@ Para obtener una implementación de ejemplo, vea el código fuente de [C](https:
 ## <a name="see-also"></a>Consulte también
 
 - [Información general sobre UI Automation](../../ui-automation/ui-automation-overview.md)
-- [Implementación del proveedor de automatización de la interfaz de usuario en el servidor](../../ui-automation/server-side-ui-automation-provider-implementation.md)
-- [Control personalizado NumericUpDown (C- ) en GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp)  
-- [Control personalizado NumericUpDown (Visual Basic) en GitHub](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic)
+- [Implementación del proveedor de UI Automation en el servidor](../../ui-automation/server-side-ui-automation-provider-implementation.md)
+- [Control personalizado NumericUpDown (C- ) en GitHub](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp)  
+- [Control personalizado NumericUpDown (Visual Basic) en GitHub](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic)

@@ -2,12 +2,12 @@
 title: Sesiones, creación de instancias y simultaneidad
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-ms.openlocfilehash: a7466d819e15f3bfe8def2d9407dcf2c6e0c7346
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 19dedddadad2f27acdeeaceb2c186a731fa79c32
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184443"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243120"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Sesiones, creación de instancias y simultaneidad
 Una *sesión* es una correlación de todos los mensajes enviados entre dos extremos. *Creación de instancias* hace referencia al control de la vida de los objetos de servicio definidos por el usuario y sus objetos <xref:System.ServiceModel.InstanceContext> relacionados. La*simultaneidad* es el término dado al control del número de subprocesos que se ejecutan al mismo tiempo en un <xref:System.ServiceModel.InstanceContext> .  
@@ -63,7 +63,7 @@ public class CalculatorService : ICalculatorInstance
 ### <a name="well-known-singleton-services"></a>Servicios conocidos singleton  
  Una variación en objetos de servicio de instancia únicos es útil a veces: puede crear un objeto de servicio y crear el host del servicio mediante ese objeto. Para hacerlo, debe establecer también la propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> en <xref:System.ServiceModel.InstanceContextMode.Single> o se producirá una excepción al abrir el host del servicio.  
   
- Utilice el constructor <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> para crear este tipo de servicio. Ofrece una alternativa para implementar un <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> personalizado cuando desee proporcionar una instancia de objeto concreta para su uso con el servicio de singleton. Puede usar esta sobrecarga cuando el tipo de implementación de servicio es difícil de construir (por ejemplo, si no implementa un constructor público sin parámetros).  
+ Utilice el constructor <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29> para crear este tipo de servicio. Ofrece una alternativa para implementar un <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> personalizado cuando desee proporcionar una instancia de objeto concreta para su uso con el servicio de singleton. Puede usar esta sobrecarga cuando el tipo de implementación de servicio es difícil de construir (por ejemplo, si no implementa un constructor público sin parámetros).  
   
  Tenga en cuenta que cuando se proporciona un objeto a este constructor, algunas características relacionadas con el comportamiento de creación de instancias de Windows Communication Foundation (WCF) funcionan de forma diferente. Por ejemplo, llamar a <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> , no tiene ningún efecto cuando se proporciona una instancia de objeto singleton. De igual forma, se omite cualquier otro mecanismo de publicación de instancia. <xref:System.ServiceModel.ServiceHost> siempre se comporta como si la propiedad <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> estuviera definida en <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> para todas las operaciones.  
   
@@ -82,7 +82,7 @@ public class CalculatorService : ICalculatorInstance
 - <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: cada instancia de servicio procesa a la vez un mensaje, pero acepta llamadas de operación reentrantes. El servicio solo acepta estas llamadas cuando llama a través de un objeto de cliente WCF.  
   
 > [!NOTE]
-> Entender y desarrollar código que use de manera segura más de un subproceso puede ser difícil de escribir correctamente. Antes de utilizar los valores <xref:System.ServiceModel.ConcurrencyMode.Multiple> o <xref:System.ServiceModel.ConcurrencyMode.Reentrant> , asegúrese de que su servicio está diseñado correctamente para estos modos. Para más información, consulte <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>.  
+> Entender y desarrollar código que use de manera segura más de un subproceso puede ser difícil de escribir correctamente. Antes de utilizar los valores <xref:System.ServiceModel.ConcurrencyMode.Multiple> o <xref:System.ServiceModel.ConcurrencyMode.Reentrant> , asegúrese de que su servicio está diseñado correctamente para estos modos. Para obtener más información, vea <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>.  
   
  El uso de simultaneidad se relaciona con el modo de creación de instancias. En <xref:System.ServiceModel.InstanceContextMode.PerCall> la creación de instancias, la simultaneidad no <xref:System.ServiceModel.InstanceContext> es relevante, porque cada mensaje es <xref:System.ServiceModel.InstanceContext>procesado por un nuevo y, por lo tanto, nunca más de un subproceso está activo en el archivo .  
   
@@ -110,8 +110,8 @@ public class CalculatorService : ICalculatorConcurrency
 ## <a name="see-also"></a>Consulte también
 
 - [Uso de sesiones](../../../../docs/framework/wcf/using-sessions.md)
-- [Cómo crear un servicio que requiere sesiones](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
-- [Control de la creación de instancias de servicio](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
-- [Concurrencia](../../../../docs/framework/wcf/samples/concurrency.md)
+- [Procedimiento para crear un servicio que requiere sesiones](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
+- [Procedimiento para controlar la creación de instancias de servicio](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
+- [Simultaneidad](../../../../docs/framework/wcf/samples/concurrency.md)
 - [Creación de instancias](../../../../docs/framework/wcf/samples/instancing.md)
 - [Sesión](../../../../docs/framework/wcf/samples/session.md)

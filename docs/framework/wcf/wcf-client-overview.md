@@ -7,18 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: 7905d540e0f06dd2863cf80381210307e3021918
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c12579062b04cfb46e14d5c3d734a7c155f8d654
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183069"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278891"
 ---
-# <a name="wcf-client-overview"></a>Introducción a un cliente WCF
+# <a name="wcf-client-overview"></a>Descripción general del cliente WCF
+
 En esta sección se describe qué hacen las aplicaciones cliente, cómo configurar, crear y usar un cliente de Windows Communication Foundation (WCF) y cómo proteger las aplicaciones cliente.  
   
 ## <a name="using-wcf-client-objects"></a>Utilización de objetos cliente WCF  
- Una aplicación cliente es una aplicación administrada que usa un cliente WCF para comunicarse con otra aplicación. Para crear una aplicación cliente para un servicio WCF requiere los pasos siguientes:  
+ Una aplicación cliente es una aplicación administrada que usa un cliente WCF para comunicarse con otra aplicación. La creación de una aplicación cliente para un servicio WCF requiere los pasos siguientes:  
   
 1. Obtenga la información del contrato de servicio, el enlace y la dirección del extremo del servicio.  
   
@@ -28,7 +29,7 @@ En esta sección se describe qué hacen las aplicaciones cliente, cómo configur
   
 4. Cierre el objeto de cliente WCF.  
   
- Las siguientes secciones explican estos pasos y proporcionan una breve introducción a las siguientes cuestiones:  
+Las siguientes secciones explican estos pasos y proporcionan una breve introducción a las siguientes cuestiones:  
   
 - Control de errores  
   
@@ -41,7 +42,7 @@ En esta sección se describe qué hacen las aplicaciones cliente, cómo configur
 - Llamada a los servicios mediante los canales cliente.  
   
 ## <a name="obtain-the-service-contract-bindings-and-addresses"></a>Obtención del contrato de servicios, los enlaces y las direcciones  
- En WCF, los servicios y los clientes modelan contratos mediante atributos administrados, interfaces y métodos. Para conectar con un servicio en una aplicación cliente, es necesario obtener la información del tipo de contrato de servicios. Normalmente, esto se hace mediante la herramienta de utilidad de metadatos de [ServiceModel (Svcutil.exe),](servicemodel-metadata-utility-tool-svcutil-exe.md)que descarga metadatos del servicio, lo convierte en un archivo de código fuente administrado en el idioma de su elección y crea un archivo de configuración de aplicación cliente que puede usar para configurar el objeto de cliente WCF. Por ejemplo, si va a crear un objeto `MyCalculatorService`de cliente WCF para invocar un , `http://computerName/MyCalculatorService/Service.svc?wsdl`y sabe que los metadatos de ese servicio `ClientCode.vb` se publican en , el ejemplo de código siguiente muestra cómo usar Svcutil.exe para obtener un archivo que contiene el contrato de servicio en código administrado.  
+ En WCF, los servicios y los clientes modelan contratos mediante atributos administrados, interfaces y métodos. Para conectar con un servicio en una aplicación cliente, es necesario obtener la información del tipo de contrato de servicios. Normalmente, esto se hace mediante la herramienta de utilidad de metadatos de [ServiceModel (Svcutil.exe),](servicemodel-metadata-utility-tool-svcutil-exe.md)que descarga metadatos del servicio, lo convierte en un archivo de código fuente administrado en el idioma de su elección y crea un archivo de configuración de aplicación cliente que puede usar para configurar el objeto de cliente WCF. Por ejemplo, si va a crear un objeto `MyCalculatorService`de cliente WCF para invocar un archivo `http://computerName/MyCalculatorService/Service.svc?wsdl`, y sabe que los metadatos de ese `ClientCode.vb` servicio se publican en , el ejemplo de código siguiente muestra cómo usar Svcutil.exe para obtener un archivo que contiene el contrato de servicio en código administrado.  
   
 ```console  
 svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/MyCalculatorService/Service.svc?wsdl  
@@ -70,7 +71,7 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
   
  Esta clase puede crearse como un objeto local, mediante uno de los constructores, configurarse y, a continuación, utilizarse para la conexión con un servicio del tipo `ISampleService`.  
   
- Se recomienda crear primero el objeto de cliente WCF y, a continuación, usarlo y cerrarlo dentro de un único bloque try/catch. No debe usar `using` la`Using` instrucción ( en Visual Basic) porque puede enmascarar excepciones en determinados modos de error. Para obtener más información, vea las secciones siguientes, así como Usar cerrar y anular para liberar recursos de [cliente WCF.](./samples/use-close-abort-release-wcf-client-resources.md)  
+ Se recomienda crear primero el objeto de cliente WCF y, a continuación, usarlo y cerrarlo dentro de un único bloque try/catch. No use la `using` instrucción (`Using` en Visual Basic) porque puede enmascarar excepciones en determinados modos de error. Para obtener más información, vea las secciones siguientes, así como Usar cerrar y anular para liberar recursos de [cliente WCF.](./samples/use-close-abort-release-wcf-client-resources.md)  
   
 ### <a name="contracts-bindings-and-addresses"></a>Contratos, enlaces y direcciones  
  Para poder crear un objeto de cliente WCF, debe configurar el objeto de cliente. En concreto, debe tener un punto de *conexión* de servicio para usar. Un punto de conexión es la combinación de un contrato de servicio, un enlace y una dirección. (Para obtener más información acerca de los puntos de conexión, vea [puntos de conexión: direcciones, enlaces y contratos](./feature-details/endpoints-addresses-bindings-and-contracts.md).) Normalmente, esta información se [ \<](../configure-apps/file-schema/wcf/endpoint-of-client.md) encuentra en el extremo>elemento de un archivo de configuración de la aplicación cliente, como el que genera la herramienta Svcutil.exe y se carga automáticamente al crear el objeto de cliente. Ambos tipos de cliente WCF también tienen sobrecargas que permiten especificar esta información mediante programación.  
@@ -79,7 +80,7 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
   
  [!code-xml[C_GeneratedCodeFiles#19](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/common/client.exe.config#19)]  
   
- Este archivo de configuración especifica un punto de conexión de destino en el elemento `<client>`. Para obtener más información sobre el <xref:System.ServiceModel.ClientBase%601.%23ctor%2A?displayProperty=nameWithType> uso <xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A?displayProperty=nameWithType> de varios extremos de destino, vea los constructores o los constructores.  
+ Este archivo de configuración especifica un punto de conexión de destino en el elemento `<client>`. Para obtener más información sobre el <xref:System.ServiceModel.ClientBase%601.%23ctor%2A> uso <xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A> de varios extremos de destino, vea los constructores o los constructores.  
   
 ## <a name="calling-operations"></a>Llamadas a operaciones  
  Una vez que haya creado y configurado un objeto de cliente, cree un bloque try/catch, llame a las operaciones de la misma manera que lo haría si el objeto fuera local y cierre el objeto de cliente WCF. Cuando la aplicación cliente llama a la primera operación, WCF abre automáticamente el canal subyacente y el canal subyacente se cierra cuando se recicla el objeto. (De manera alternativa, también puede abrir y cerrar explícitamente el canal antes o después de llamar a otras operaciones).  
@@ -127,7 +128,7 @@ Namespace Microsoft.ServiceModel.Samples
 End Interface  
 ```  
   
- Puede llamar a operaciones mediante la creación de un objeto de cliente WCF y llamar a sus métodos, como se muestra en el ejemplo de código siguiente. Tenga en cuenta que la apertura, llamada y cierre del objeto de cliente WCF se produce dentro de un único bloque try/catch. Para obtener más información, vea [Acceso a servicios mediante un cliente WCF](./feature-details/accessing-services-using-a-client.md) y Usar cerrar y anular para liberar recursos de cliente [WCF](./samples/use-close-abort-release-wcf-client-resources.md).  
+ Puede llamar a operaciones mediante la creación de un objeto de cliente WCF y llamar a sus métodos, como se muestra en el ejemplo de código siguiente. La apertura, llamada y cierre del objeto de cliente WCF se produce dentro de un único bloque try/catch. Para obtener más información, vea [Acceso a servicios mediante un cliente WCF](./feature-details/accessing-services-using-a-client.md) y Usar cerrar y anular para liberar recursos de cliente [WCF](./samples/use-close-abort-release-wcf-client-resources.md).  
   
  [!code-csharp[C_GeneratedCodeFiles#20](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#20)]  
   

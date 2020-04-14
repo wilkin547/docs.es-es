@@ -8,26 +8,27 @@ helpviewer_keywords:
 - resource files, .resx files
 - .resx files
 ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
-ms.openlocfilehash: 2bbca5712639e14370d090e95b78bb89eba134e4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3b84d77e4ac9b9889d1bc2f08e5ead6b81deecb0
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129907"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243042"
 ---
-# <a name="working-with-resx-files-programmatically"></a>Trabajar con archivos .resx mediante programación
-Como los archivos de recursos (.resx) XML deben constar de código XML bien definido e incluir un encabezado según un esquema concreto, seguido de datos en pares nombre/valor, es posible que la creación manual de estos archivos sea propensa a errores. Como alternativa, puede crear archivos .resx mediante programación con tipos y miembros de la biblioteca de clases .NET Framework. También puede usar la biblioteca de clases .NET Framework para recuperar los recursos almacenados en archivos .resx. En este tema se explica cómo se pueden utilizar los tipos y miembros del espacio de nombres <xref:System.Resources> para trabajar con archivos .resx.
+# <a name="work-with-resx-files-programmatically"></a>Trabajar con archivos .resx mediante programación
 
- Tenga en cuenta que este artículo explica cómo trabajar con archivos XML (.resx) que contienen recursos. Para obtener información sobre cómo trabajar con archivos de recursos binario que se han insertado en ensamblados, consulte el tema <xref:System.Resources.ResourceManager> .
+Como los archivos de recursos (.resx) XML deben constar de código XML bien definido e incluir un encabezado según un esquema concreto, seguido de datos en pares nombre/valor, es posible que la creación manual de estos archivos sea propensa a errores. Como alternativa, puede crear archivos .resx mediante programación con tipos y miembros de la biblioteca de clases .NET Framework. También puede usar la biblioteca de clases .NET Framework para recuperar los recursos almacenados en archivos .resx. En este artículo se explica cómo puede <xref:System.Resources> usar los tipos y miembros del espacio de nombres para trabajar con archivos .resx.
+
+En este artículo se describe cómo trabajar con archivos XML (.resx) que contienen recursos. Para obtener información sobre cómo trabajar con archivos de <xref:System.Resources.ResourceManager>recursos binarios que se han incrustado en ensamblados, vea .
 
 > [!WARNING]
-> También hay formas distintas para trabajar con archivos .resx que no son mediante programación. Cuando se agrega un archivo de recursos a un proyecto de [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link), Visual Studio proporciona una interfaz para crear y mantener un archivo .resx y lo convierte automáticamente en un archivo .resources en tiempo de compilación. También puede utilizar un editor de texto para manipular un archivo .resx directamente. Sin embargo, para evitar que se dañe el archivo, tenga cuidado de no modificar la información binaria almacenada en el archivo.
+> También hay formas distintas para trabajar con archivos .resx que no son mediante programación. Al agregar un archivo de recursos a un proyecto de [Visual Studio,](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) Visual Studio proporciona una interfaz para crear y mantener un archivo .resx y convierte automáticamente el archivo .resx en un archivo .resources en tiempo de compilación. También puede utilizar un editor de texto para manipular un archivo .resx directamente. Sin embargo, para evitar que se dañe el archivo, tenga cuidado de no modificar la información binaria almacenada en el archivo.
 
 ## <a name="create-a-resx-file"></a>Creación de un archivo .resx
 
 Puede utilizar la clase <xref:System.Resources.ResXResourceWriter?displayProperty=nameWithType> para crear un archivo .resx mediante programación, siga estos pasos:
 
-1. Cree una instancia de un objeto <xref:System.Resources.ResXResourceWriter> mediante una llamada al método <xref:System.Resources.ResXResourceWriter.%23ctor%28System.String%29?displayProperty=nameWithType> y facilite el nombre del archivo .resx. El nombre de archivo debe incluir la extensión .resx. Si crea una instancia del objeto <xref:System.Resources.ResXResourceWriter> en un bloque `using` , no es necesario que llame explícitamente al método <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=nameWithType> en el paso 3.
+1. Cree una instancia de un objeto <xref:System.Resources.ResXResourceWriter> mediante una llamada al método <xref:System.Resources.ResXResourceWriter.%23ctor%28System.String%29> y facilite el nombre del archivo .resx. El nombre de archivo debe incluir la extensión .resx. Si crea una instancia del objeto <xref:System.Resources.ResXResourceWriter> en un bloque `using` , no es necesario que llame explícitamente al método <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=nameWithType> en el paso 3.
 
 2. Llame al método <xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=nameWithType> para cada recurso que quiera agregar al archivo. Utilice las sobrecargas de este método para agregar datos binarios (matriz de bytes), de objeto y de cadena. Si el recurso es un objeto, debe ser serializable.
 
@@ -38,7 +39,7 @@ El archivo .resx resultante tiene el encabezado adecuado y una etiqueta `data` p
 > [!WARNING]
 > No utilice archivos de recursos para almacenar contraseñas, información relativa a la seguridad o datos privados.
 
-En el ejemplo siguiente se crea un archivo .resx denominado CarResources.resx que almacena seis cadenas, un icono y dos objetos definidos por la aplicación (dos objetos `Automobile` ). Tenga en cuenta que la clase `Automobile`, que se define y de la que se crea una instancia en el ejemplo, se etiqueta con el atributo <xref:System.SerializableAttribute>.
+En el ejemplo siguiente se crea un archivo .resx denominado CarResources.resx que almacena seis cadenas, un icono y dos objetos definidos por la aplicación (dos objetos `Automobile` ). La `Automobile` clase, que se define y crea una <xref:System.SerializableAttribute> instancia en el ejemplo, se etiqueta con el atributo.
 
 [!code-csharp[Conceptual.Resources.ResX#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.resx/cs/create1.cs#1)]
 [!code-vb[Conceptual.Resources.ResX#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resx/vb/create1.vb#1)]
@@ -83,8 +84,8 @@ No se puede insertar un archivo .resx en un archivo ejecutable en tiempo de ejec
 
  **al** *nombreArchivoRecursos* **-out:** *nombreArchivoEnsamblado*
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Crear archivos de recursos](creating-resource-files-for-desktop-apps.md)
-- [Resgen.exe (generador de archivos de recursos)](../tools/resgen-exe-resource-file-generator.md)
-- [Al.exe (Assembly Linker)](../tools/al-exe-assembly-linker.md)
+- [Resgen.exe (Generador de archivos de recursos)](../tools/resgen-exe-resource-file-generator.md)
+- [Al.exe (Enlazador de ensamblajes)](../tools/al-exe-assembly-linker.md)

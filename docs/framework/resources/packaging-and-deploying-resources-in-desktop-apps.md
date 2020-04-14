@@ -26,12 +26,12 @@ helpviewer_keywords:
 - localizing resources
 - neutral cultures
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
-ms.openlocfilehash: 9c8d459195693e8eb084f7e87427a3ea37dd63ba
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d64e3b5201e34541fdafa5724b0c7e8c3f6c0c0d
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129928"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243055"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>Empaquetado e implementación de recursos en aplicaciones .NET
 
@@ -53,7 +53,7 @@ Este modelo cuenta con varias ventajas:
 Al empaquetar los recursos de la aplicación, debe asignarles un nombre según las convenciones de nomenclatura de recursos que espera Common Language Runtime. El tiempo de ejecución identifica un recurso por su nombre de referencia cultural. Cada referencia cultural tiene un nombre único, que suele ser una combinación de un nombre de referencia cultural de dos letras en minúsculas asociado a un idioma y, si es necesario, un nombre de referencia cultural secundaria de dos letras en mayúsculas asociado a un país o región. El nombre de la referencia cultural secundaria va después del nombre de la referencia cultural, separado por un guion (-). Algunos ejemplos son los siguientes: ja-JP para japonés de Japón, en-US para inglés de Estados Unidos, de-DE para alemán de Alemania o de-AT para alemán de Austria. Consulte la columna **Etiqueta de idioma** en la [lista de nombres de los idiomas y las regiones compatibles con Windows](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c). Los nombres de las referencias culturales siguen el estándar definido por [BCP 47](https://tools.ietf.org/html/bcp47).
 
 > [!NOTE]
-> Existen algunas excepciones para los nombres de referencia cultural de dos letras, como `zh-Hans` para chino (simplificado).
+> Hay algunas excepciones para los nombres de `zh-Hans` referencia cultural de dos letras, como para chino (simplificado).
 
 > [!NOTE]
 > Para más información sobre cómo crear archivos de recursos, vea [Crear archivos de recursos](creating-resource-files-for-desktop-apps.md) y [Crear ensamblados satélite](creating-satellite-assemblies-for-desktop-apps.md).
@@ -71,7 +71,7 @@ Para mejorar el rendimiento de la búsqueda, aplique el atributo <xref:System.Re
 El proceso de reserva de recursos de .NET Framework conlleva los pasos siguientes:
 
 > [!TIP]
-> Es posible que pueda usar el elemento de configuración [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) para optimizar el proceso de reserva de recursos y el proceso mediante el cual el tiempo de ejecución sondea los ensamblados de recursos. Para obtener más información, vea la sección [Optimizar el proceso de reserva de recursos](packaging-and-deploying-resources-in-desktop-apps.md#Optimizing).
+> Es posible que pueda usar el [ \<elemento de configuración relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) para optimizar el proceso de reserva de recursos y el proceso por el que el tiempo de ejecución sondea los ensamblados de recursos. Para obtener más información, vea la sección [Optimizar el proceso de reserva de recursos](packaging-and-deploying-resources-in-desktop-apps.md#Optimizing).
 
 1. El tiempo de ejecución busca primero en la [caché global de ensamblados](../app-domains/gac.md) un ensamblado que coincida con la referencia cultural solicitada para la aplicación.
 
@@ -116,7 +116,7 @@ En las siguientes condiciones, puede optimizar el proceso por el que el tiempo d
 
 - El código de la aplicación no controla el evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>.
 
-Para optimizar el sondeo de ensamblados satélite, incluya el elemento [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) y establezca su atributo `enabled` en `true` en el archivo de configuración de la aplicación, como se muestra en el ejemplo siguiente.
+Optimizar el sondeo para ensamblados satélite mediante la inclusión `enabled` de `true` la [ \<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) elemento y establecer su atributo en el archivo de configuración de la aplicación, como se muestra en el ejemplo siguiente.
 
 ```xml
 <configuration>
@@ -170,7 +170,7 @@ El proceso de reserva de recursos de .NET Core conlleva los pasos siguientes:
 
 ### <a name="ultimate-fallback-to-satellite-assembly"></a>Reserva definitiva en ensamblado satélite
 
-Como alternativa, puede quitar recursos del ensamblado principal y especificar que el tiempo de ejecución debe cargar los recursos de reserva definitiva de un ensamblado satélite correspondiente a una referencia cultural específica. Para controlar el proceso de reserva, use el constructor <xref:System.Resources.NeutralResourcesLanguageAttribute.%23ctor%28System.String%2CSystem.Resources.UltimateResourceFallbackLocation%29?displayProperty=nameWithType> y proporcione un valor para el parámetro <xref:System.Resources.UltimateResourceFallbackLocation> que especifique si el Administrador de recursos debe extraer los recursos de reserva del ensamblado principal o de un ensamblado satélite.
+Como alternativa, puede quitar recursos del ensamblado principal y especificar que el tiempo de ejecución debe cargar los recursos de reserva definitiva de un ensamblado satélite correspondiente a una referencia cultural específica. Para controlar el proceso de reserva, use el constructor <xref:System.Resources.NeutralResourcesLanguageAttribute.%23ctor%28System.String%2CSystem.Resources.UltimateResourceFallbackLocation%29> y proporcione un valor para el parámetro <xref:System.Resources.UltimateResourceFallbackLocation> que especifique si el Administrador de recursos debe extraer los recursos de reserva del ensamblado principal o de un ensamblado satélite.
 
 En el ejemplo de .NET Framework siguiente se usa el atributo <xref:System.Resources.NeutralResourcesLanguageAttribute> para almacenar los recursos de reserva de una aplicación en un ensamblado satélite para el idioma francés (`fr`). El ejemplo tiene dos archivos de recursos basados en texto que definen un recurso de cadena única denominado `Greeting`. El primero, resources.fr.txt, contiene un recurso de idioma francés.
 
@@ -229,9 +229,9 @@ Bon jour!
 
 Las restricciones de tiempo o de presupuesto podrían impedir la creación de un conjunto de recursos para cada una de las referencias culturales secundarias que admite la aplicación. En su lugar, puede crear un único ensamblado satélite para la referencia cultural principal que todas las referencias culturales secundarias relacionadas puedan usar. Por ejemplo, puede proporcionar un único ensamblado satélite en inglés (en) para que lo recuperen los usuarios que soliciten recursos en inglés específicos de una región y un único ensamblado satélite en alemán (de) para los usuarios que soliciten recursos en alemán específicos de una región. Por ejemplo, las solicitudes de alemán de Alemania (de-DE), Austria (de-AT) y Suiza (de-CH) recurrirán al ensamblado satélite en alemán (de). Los recursos predeterminados constituyen la reserva final y, por tanto, deben ser los recursos que solicitará la mayoría de los usuarios de la aplicación, por lo que debe elegir cuidadosamente estos recursos. Este método implementa recursos menos específicos de la referencia cultural, pero puede reducir considerablemente los costos de localización de la aplicación.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Recursos de aplicaciones de escritorio](index.md)
+- [Recursos en aplicaciones de escritorio](index.md)
 - [Caché global de ensamblados](../app-domains/gac.md)
 - [Crear archivos de recursos](creating-resource-files-for-desktop-apps.md)
 - [Crear ensamblados satélite](creating-satellite-assemblies-for-desktop-apps.md)
