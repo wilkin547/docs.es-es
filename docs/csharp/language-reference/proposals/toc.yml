@@ -74,6 +74,8 @@
           href: ../../../../_csharplang/proposals/csharp-8.0/ranges.md
         - name: using basado en patrón y declaraciones using
           href: ../../../../_csharplang/proposals/csharp-8.0/using.md
+        - name: Funciones locales estáticas
+          href: ../../../../_csharplang/proposals/csharp-8.0/static-local-functions.md
         - name: Asignación de uso combinado de NULL
           href: ../../../../_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md
         - name: Miembros de instancia de solo lectura
