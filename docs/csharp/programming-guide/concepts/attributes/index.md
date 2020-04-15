@@ -1,12 +1,12 @@
 ---
 title: Atributos (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: 2a07035ea97bb0ff1a8f4793fe8a30d3a42c34a7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 62424163303417746a67707d9ef34185954db316
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79397645"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389537"
 ---
 # <a name="attributes-c"></a>Atributos (C#)
 
@@ -75,7 +75,7 @@ La lista de posibles valores `target` se muestra en la tabla siguiente.
 |`event`|evento|
 |`method`|Método o descriptores de acceso de propiedad `get` y `set`|
 |`param`|Parámetros de método o parámetros de descriptor de acceso de propiedad `set`|
-|`property`|Property|
+|`property`|Propiedad.|
 |`return`|Valor devuelto de un método, indexador de propiedad o descriptor de acceso de propiedad `get`|
 |`type`|Estructura, clase, interfaz, enumeración o delegado|
 
@@ -95,14 +95,14 @@ En el ejemplo siguiente, se muestra cómo aplicar atributos a métodos, parámet
 [!code-csharp[Applying attributes to different code elements](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#6)]
 
 > [!NOTE]
-> Independientemente de los destinos en los que `ValidatedContract` se define para que sea válido, debe especificarse el destino `return`, incluso si `ValidatedContract` se ha definido para que se aplique solo a los valores devueltos. En otras palabras, el compilador no usará información de `AttributeUsage` para resolver destinos de atributo ambiguos. Para obtener más información, consulte [AttributeUsage (C#)](attributeusage.md).
+> Independientemente de los destinos en los que `ValidatedContract` se define para que sea válido, debe especificarse el destino `return`, incluso si `ValidatedContract` se ha definido para que se aplique solo a los valores devueltos. En otras palabras, el compilador no usará información de `AttributeUsage` para resolver destinos de atributo ambiguos. Para obtener más información, consulte [AttributeUsage (C#)](../../../language-reference/attributes/general.md).
 
 ## <a name="common-uses-for-attributes"></a>Usos comunes de los atributos
 
 La lista siguiente incluye algunos de los usos comunes de atributos en el código:
 
-- Marcar métodos con el atributo `WebMethod` en los servicios web para indicar que el método debe ser invocable a través del protocolo SOAP. Para obtener más información, consulta <xref:System.Web.Services.WebMethodAttribute>.
-- Describir cómo serializar parámetros de método al interoperar con código nativo. Para obtener más información, consulta <xref:System.Runtime.InteropServices.MarshalAsAttribute>.
+- Marcar métodos con el atributo `WebMethod` en los servicios web para indicar que el método debe ser invocable a través del protocolo SOAP. Para obtener más información, vea <xref:System.Web.Services.WebMethodAttribute>.
+- Describir cómo serializar parámetros de método al interoperar con código nativo. Para obtener más información, vea <xref:System.Runtime.InteropServices.MarshalAsAttribute>.
 - Describir las propiedades COM para clases, métodos e interfaces.
 - Llamar al código no administrado mediante la clase <xref:System.Runtime.InteropServices.DllImportAttribute>.
 - Describir los ensamblados en cuanto a título, versión, descripción o marca.
@@ -121,7 +121,7 @@ Para obtener más información, consulte:
 - [Acceder a atributos mediante reflexión (C#)](accessing-attributes-by-using-reflection.md)  
 - [Procedimiento para: Crear una unión de C/C++ mediante atributos (C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
 - [Atributos comunes (C#)](common-attributes.md)  
-- [Información del llamador (C#)](../caller-information.md)  
+- [Información del llamador (C#)](../../../language-reference/attributes/caller-information.md)  
 
 ## <a name="see-also"></a>Vea también
 
