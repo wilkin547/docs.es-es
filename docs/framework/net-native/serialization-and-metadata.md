@@ -2,12 +2,12 @@
 title: Serialización y metadatos
 ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
-ms.openlocfilehash: 7c6fe241fbf92f52abfa0eb66c37bff4d227b4e5
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: cc9adf0e6627ef3190e74fea5d4f0f3afd581811
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81241924"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389226"
 ---
 # <a name="serialization-and-metadata"></a>Serialización y metadatos
 
@@ -15,7 +15,7 @@ Si la aplicación serializa y deserializa objetos, es posible que deba agregar e
   
 - Serializadores de terceros basados en la reflexión. Estos requieren modificaciones en el archivo de directivas en tiempo de ejecución y se describen en la sección siguiente.  
   
-- Serializadores no basados en reflexión que se encuentran en la biblioteca de clases de. NET Framework. Estos pueden exigir modificaciones en el archivo de directivas en tiempo de ejecución, y se explican en la sección [Serializadores de Microsoft](#Microsoft).  
+- Serializadores no basados en la reflexión que se encuentran en la biblioteca de clases de .NET Framework. Estos pueden exigir modificaciones en el archivo de directivas en tiempo de ejecución, y se explican en la sección [Serializadores de Microsoft](#Microsoft).  
   
 <a name="ThirdParty"></a>
 ## <a name="third-party-serializers"></a>Serializadores de terceros
@@ -59,13 +59,13 @@ Si la aplicación serializa y deserializa objetos, es posible que deba agregar e
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   
- Debe agregar entradas como la siguiente para cada tipo en el archivo de directivas de tiempo de ejecución:  
+Agregue entradas como las siguientes para cada tipo al archivo de directivas en tiempo de ejecución:  
   
 ```xml  
 <Type Name="t" Browse="Required Public" />  
 ```  
   
- Para obtener información sobre la sintaxis utilizada en el ejemplo, vea [ \<Elemento de>](type-element-net-native.md)de tipo .  
+Para obtener información sobre la sintaxis utilizada en el ejemplo, vea [ \<Elemento de>](type-element-net-native.md)de tipo .  
   
 ## <a name="see-also"></a>Consulte también
 

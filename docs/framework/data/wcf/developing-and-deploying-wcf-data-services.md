@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 61527e51ea4d28cfe4589f6bed32b3c505443c22
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 4591175da5078a194bfe69884701e5432a0c38a3
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121172"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389729"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Desarrollar e implementar servicios de datos WCF
 
@@ -42,7 +42,7 @@ Al desarrollar un servicio de datos WCF como una aplicación de ASP.NET o ASP.NE
 
 1. **Servidor IIS local**
 
-     Al crear un servicio de datos que es una aplicación de ASP.NET o ASP.NET sitio Web que se ejecuta en Internet Information Services (IIS), se recomienda desarrollar y probar el servicio de datos mediante IIS en el equipo local. Si se ejecuta el servicio de datos en IIS, se facilita el seguimiento de las solicitudes HTTP durante el proceso de depuración. De esta forma, puede predeterminar los derechos necesarios que requiere IIS para obtener acceso a los archivos, a las bases de datos y al resto de los recursos que necesita el servicio de datos. Para ejecutar el servicio de datos en IIS, debe asegurarse de que IIS y Windows Communication Foundation (WCF) están instalados y configurados correctamente y conceder acceso a cuentas de IIS en el sistema de archivos y bases de datos. Para obtener más información, consulta [How to: Develop a WCF Data Service Running on IIS](how-to-develop-a-wcf-data-service-running-on-iis.md).
+     Al crear un servicio de datos que es una aplicación de ASP.NET o ASP.NET sitio Web que se ejecuta en Internet Information Services (IIS), se recomienda desarrollar y probar el servicio de datos mediante IIS en el equipo local. Si se ejecuta el servicio de datos en IIS, se facilita el seguimiento de las solicitudes HTTP durante el proceso de depuración. De esta forma, puede predeterminar los derechos necesarios que requiere IIS para obtener acceso a los archivos, a las bases de datos y al resto de los recursos que necesita el servicio de datos. Para ejecutar el servicio de datos en IIS, asegúrese de que IIS y Windows Communication Foundation (WCF) están instalados y configurados correctamente y conceda acceso a las cuentas de IIS en el sistema de archivos y las bases de datos. Para obtener más información, consulta [How to: Develop a WCF Data Service Running on IIS](how-to-develop-a-wcf-data-service-running-on-iis.md).
 
     > [!NOTE]
     > Debe ejecutar Visual Studio con derechos de administrador para habilitar el entorno de desarrollo para configurar el servidor IIS local.
@@ -61,7 +61,7 @@ Al desarrollar un servicio de datos WCF como una aplicación de ASP.NET o ASP.NE
 
     - Este servidor no incluye las características adicionales de IIS, como la autenticación.
 
-    - Este servidor no puede controlar secuencias HTTP fragmentadas, que se envían de forma predeterminada por el cliente de Servicios de datos de WCFWCF Data Services al tener acceso a datos binarios grandes desde el servicio de datos. Para obtener más información, consulte [Proveedor de streaming](streaming-provider-wcf-data-services.md).
+    - Este servidor no puede controlar secuencias HTTP fragmentadas, que son enviadas de forma predeterminada por el cliente de Servicios de datos de WCFWCF Data Services al tener acceso a datos binarios grandes desde el servicio de datos. Para obtener más información, consulte [Proveedor de streaming](streaming-provider-wcf-data-services.md).
 
     - Este servidor tiene problemas con`.`el procesamiento del carácter de punto ( ) en una dirección URL, aunque este carácter es compatible con WCF Data Services en valores de clave.
 
@@ -74,11 +74,11 @@ Al desarrollar un servicio de datos WCF como una aplicación de ASP.NET o ASP.NE
 
 ### <a name="development-tips"></a>Sugerencias de desarrollo
 
-Debe plantearse lo siguiente cuando desarrolle un servicio de datos:
+Tenga en cuenta lo siguiente al desarrollar un servicio de datos:
 
-- Determine los requisitos de seguridad del servicio de datos, si planea autenticar a los usuarios o restringir el acceso de usuarios específicos. Para obtener más información, consulta [Securing WCF Data Services](securing-wcf-data-services.md).
+- Si planea autenticar usuarios o restringir el acceso para usuarios específicos, determine los requisitos de seguridad del servicio de datos. Para obtener más información, consulta [Securing WCF Data Services](securing-wcf-data-services.md).
 
-- Un programa de inspección HTTP puede ser muy útil cuando se depure un servicio de datos, ya que permite inspeccionar el contenido de los mensajes de solicitud y respuesta. Cualquier analizador de paquetes de red que pueda mostrar paquetes sin procesar se puede usar para inspeccionar las solicitudes HTTP al servicio de datos y las respuestas.
+- Un programa de inspección HTTP puede ser útil al depurar un servicio de datos al permitirle inspeccionar el contenido de los mensajes de solicitud y respuesta. Cualquier analizador de paquetes de red que pueda mostrar paquetes sin procesar se puede usar para inspeccionar las solicitudes HTTP al servicio de datos y las respuestas.
 
 - Al depurar un servicio de datos, es posible que desee obtener más información sobre un error del servicio de datos que durante la operación normal. Puede obtener información adicional sobre el error del servicio de datos si establece la propiedad <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> de <xref:System.Data.Services.DataServiceConfiguration> en `true` y la propiedad <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> del atributo <xref:System.ServiceModel.Description.ServiceDebugBehavior> de la clase de servicio de datos en `true`. Para obtener más información, vea el post [Depuración de servicios](https://docs.microsoft.com/archive/blogs/phaniraj/debugging-wcf-data-services)de datos WCF . También puede habilitar el seguimiento en WCF para ver las excepciones generadas en la capa de mensajería HTTP. Para obtener más información, consulta [Configuring Tracing](../../wcf/diagnostics/tracing/configuring-tracing.md).
 
@@ -119,13 +119,13 @@ El servicio de datos de WCF proporciona flexibilidad al elegir el proceso que ho
 
 ### <a name="deployment-considerations"></a>Consideraciones de implementación
 
-Debe plantearse lo siguiente cuando implemente un servicio de datos:
+Tenga en cuenta lo siguiente al implementar un servicio de datos:
 
 - Al implementar un servicio de datos que usa el proveedor de Entity Framework para tener acceso a una base de datos de SQL Server, es posible que también tenga que propagar estructuras de datos, datos o ambos con la implementación del servicio de datos. Visual Studio puede crear automáticamente scripts (archivos .sql) para hacerlo en la base de datos de destino y estos scripts se pueden incluir en el paquete de implementación web de una aplicación de ASP.NET. Para obtener más información, vea [Cómo: implementar una base](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))de datos con un proyecto de aplicación web . Para un sitio Web ASP.NET, puede hacerlo mediante el **Asistente para publicación** de bases de datos en Visual Studio. Para obtener más información, vea [Publicación](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100))de una base de datos SQL .
 
 - Dado que Servicios de datos de WCFWCF Data Services incluye una implementación básica de WCF, puede usar Windows Server AppFabric para supervisar un servicio de datos implementado en IIS que se ejecuta en Windows Server. Para obtener más información acerca del uso de Windows Server AppFabric para supervisar un servicio de datos, vea la publicación Seguimiento de SERVICIOS de [datos WCF con Windows Server AppFabric](https://docs.microsoft.com/archive/blogs/rjacobs/tracking-wcf-data-services-with-windows-server-appfabric).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Hospedaje del servicio de datos](hosting-the-data-service-wcf-data-services.md)
 - [Proteger WCF Data Services](securing-wcf-data-services.md)
