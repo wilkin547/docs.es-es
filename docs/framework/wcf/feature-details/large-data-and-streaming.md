@@ -2,12 +2,12 @@
 title: Datos de gran tamaño y secuencias
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: 91e53f66fb0f2f94a315c318eb0b203d78427bae
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4b6275a27fb1e09ecac1f8f00f56068a80a214ef
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184680"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464080"
 ---
 # <a name="large-data-and-streaming"></a>Datos de gran tamaño y secuencias
 
@@ -88,7 +88,7 @@ Windows Communication Foundation (WCF) es una infraestructura de comunicaciones 
       </wsHttpBinding>  
     </bindings>  
      …  
-<system.serviceModel>  
+</system.serviceModel>  
 ```  
   
  Tal y como se ha mencionado anteriormente, la decisión de utilizar la codificación MTOM depende del volumen de datos que está enviando. Además, como MTOM está habilitado en el nivel de enlace, habilitar MTOM afecta a todas las operaciones en un punto de conexión determinado.  
@@ -178,7 +178,7 @@ class MyData
       </basicHttpBinding>  
     </bindings>  
      …  
-<system.serviceModel>  
+</system.serviceModel>  
 ```  
   
  Cuando cree instancias de su enlace en el código, debe establecer la propiedad `TransferMode` respectiva del enlace (o el elemento de enlace del transporte si está creando un enlace personalizado) en uno de los valores previamente mencionados.  
@@ -241,4 +241,4 @@ public class UploadStreamMessage
   
 ## <a name="see-also"></a>Consulte también
 
-- [Cómo habilitar la transmisión](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+- [Procedimiento para habilitar el streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

@@ -2,12 +2,12 @@
 title: Configurar la detección en un archivo de configuración
 ms.date: 03/30/2017
 ms.assetid: b9884c11-8011-4763-bc2c-c526b80175d0
-ms.openlocfilehash: b2e604f6168e4adff36bfb0c22861124743b358d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 934b04b51b9954cf943f57f33250951048e5671b
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185332"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464203"
 ---
 # <a name="configuring-discovery-in-a-configuration-file"></a>Configurar la detección en un archivo de configuración
 Hay cuatro grupos principales de configuración usados en la detección. Este tema describirá brevemente cada uno de ellos y mostrará ejemplos de cómo configurarlos. Tras cada sección, se ofrece un vínculo a documentación más detallada sobre cada área.  
@@ -26,6 +26,7 @@ Hay cuatro grupos principales de configuración usados en la detección. Este te
           </serviceDiscovery>  
         </behavior>  
       </serviceBehaviors>  
+</behaviors>  
 ```  
   
  Una vez especificado el comportamiento, `service` haga referencia a él desde un elemento> <como se muestra en el ejemplo siguiente.  
@@ -41,7 +42,8 @@ Hay cuatro grupos principales de configuración usados en la detección. Este te
          <!-- Discovery Endpoints -->  
          <endpoint kind="udpDiscoveryEndpoint" />  
         </service>  
-    </service>  
+    </services>  
+</system.serviceModel>  
 ```  
   
  Para que un servicio sea reconocible, también debe agregar un punto de conexión de detección; en el ejemplo anterior, se agrega un punto de conexión estándar <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.  
@@ -62,6 +64,7 @@ Hay cuatro grupos principales de configuración usados en la detección. Este te
    <service name="AnnouncementListener">  
       <endpoint kind="udpAnnouncementEndpoint" />  
    </service>  
+</services>
 ```  
   
  El comportamiento <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> se usa para habilitar o deshabilitar la detección de un punto de conexión concreto.  En el siguiente ejemplo, se configura un servicio con dos puntos de conexión de la aplicación: uno con detección habilitada y uno con detección deshabilitada. Para cada punto de conexión, se agrega un comportamiento <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>.  
@@ -87,7 +90,7 @@ Hay cuatro grupos principales de configuración usados en la detección. Este te
         <endpoint kind="udpDiscoveryEndpoint" />  
       </service>  
    </services>  
-    <behaviors>  
+   <behaviors>  
       <serviceBehaviors>  
         <behavior name="helloWorldServiceBehavior">  
           <serviceDiscovery />  
@@ -102,6 +105,7 @@ Hay cuatro grupos principales de configuración usados en la detección. Este te
         </behavior>  
      </endpointBehaviors>  
    </behaviors>  
+</system.serviceModel>  
 ```  
   
  El comportamiento <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> también se puede usar para agregar metadatos personalizados a los metadatos del punto de conexión devuelto por el servicio. El ejemplo siguiente muestra cómo hacerlo.  
@@ -163,7 +167,9 @@ Hay cuatro grupos principales de configuración usados en la detección. Este te
           </discoveryClient>  
           <textMessageEncoding messageVersion="Soap11"/>  
           <httpTransport />  
-        </binding>  
+      </binding>
+   </customBinding>
+</bindings>  
 ```  
   
  Un punto de conexión de cliente debe hacer referencia a esta configuración del enlace personalizado:  
@@ -174,7 +180,7 @@ Hay cuatro grupos principales de configuración usados en la detección. Este te
                 binding="customBinding"  
                 bindingConfiguration="discoBindingConfiguration"  
                 contract="IHelloWorldService" />  
-    </client>  
+</client>  
 ```  
   
  Para obtener más información sobre los criterios de búsqueda, consulte [Búsqueda de detección y FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md). Para obtener más información acerca de los elementos de detección y enlace, vea Información [general sobre la detección](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md) de WCF  
@@ -223,7 +229,8 @@ Hay cuatro grupos principales de configuración usados en la detección. Este te
             maxReceivedMessageSize="8192"  
             maxBufferPoolSize="262144"/>  
         </standardEndpoint>  
-      </udpDiscoveryEndpoint>  
+      </udpDiscoveryEndpoint>
+</standardEndpoints>
 ```  
   
  Una vez que haya agregado la configuración de `endpoint` punto final estándar, haga referencia a la configuración en el elemento> de <para cada extremo, como se muestra en el ejemplo siguiente.  

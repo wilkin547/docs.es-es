@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: Configurar el seguimiento con WorkflowServiceHost'
+title: Procedimiento para configurar el seguimiento con WorkflowServiceHost
 ms.date: 03/30/2017
 ms.assetid: ed1485fe-7529-4351-bca3-8bb915260b17
-ms.openlocfilehash: 962dfda9fc5780cc3ac7211464bb3a9be8b7fa90
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3f78b77849d6da7dfff3bdcba90bb4d5200186a7
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185071"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464155"
 ---
-# <a name="how-to-configure-tracking-with-workflowservicehost"></a>Cómo: Configurar el seguimiento con WorkflowServiceHost
+# <a name="how-to-configure-tracking-with-workflowservicehost"></a>Procedimiento para configurar el seguimiento con WorkflowServiceHost
 En este tema, se explica cómo configurar el seguimiento para un flujo de trabajo [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] hospedado en <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Se configura a través de un archivo Web.config especificando un comportamiento de servicio.  
   
 ### <a name="configure-tracking-in-configuration"></a>Configurar el seguimiento en la configuración  
@@ -23,7 +23,7 @@ En este tema, se explica cómo configurar el seguimiento para un flujo de trabaj
            <etwTracking profileName="Sample Tracking Profile" />  
          </behavior>
        </serviceBehaviors>  
-    <behaviors>  
+    </behaviors>  
     ```  
   
     > [!NOTE]
@@ -70,6 +70,6 @@ En este tema, se explica cómo configurar el seguimiento para un flujo de trabaj
   
 ## <a name="see-also"></a>Consulte también
 
-- [Configuración simplificada de los servicios WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)
+- [Configuración simplificada de los servicios de WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)
 - [Servicios de flujo de trabajo](../../../../docs/framework/wcf/feature-details/workflow-services.md)
 - [Perfiles de seguimiento](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

@@ -2,12 +2,12 @@
 title: Configuración del cliente
 ms.date: 03/30/2017
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-ms.openlocfilehash: ff82f56639ec451c04624d22fff0bcb03f46d946
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 141b7f7fc04f98f267ce520544fb89451beac7b6
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185365"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463864"
 ---
 # <a name="client-configuration"></a>Configuración del cliente
 Puede usar la configuración de cliente de Windows Communication Foundation (WCF) para especificar la dirección, el enlace, el comportamiento y el contrato, las propiedades "ABC" del extremo de cliente, que los clientes usan para conectarse a los extremos de servicio. El [ \<](../../configure-apps/file-schema/wcf/client.md) elemento de [ \<](../../configure-apps/file-schema/wcf/endpoint-of-client.md)>de cliente tiene un elemento de extremo>cuyos atributos se utilizan para configurar los ABC de punto de conexión. Estos atributos se discuten en la sección [Configuración de los puntos finales.](#configuring-endpoints)  
@@ -41,7 +41,7 @@ Puede usar la configuración de cliente de Windows Communication Foundation (WCF
               <servicePrincipalName value="host/localhost" />  
             </identity>  
           </endpoint>  
-// Add another endpoint by adding another <endpoint> element.  
+            <!-- Add another endpoint by adding another <endpoint> element. -->
           <endpoint  
             name="endpoint2">  
            //Configure another endpoint here.  
@@ -62,10 +62,10 @@ Puede usar la configuración de cliente de Windows Communication Foundation (WCF
           </security>  
         </binding>  
         <binding name="Another Binding"  
-        //Configure this binding here.  
+          <!-- Configure this binding here. -->  
         </binding>  
           </wsHttpBinding>  
-        </bindings>  
+     </bindings>  
   
 //The behavior section references by the behaviorConfiguration endpoint attribute.  
         <behaviors>  

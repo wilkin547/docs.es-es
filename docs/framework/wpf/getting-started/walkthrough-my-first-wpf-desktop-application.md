@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 ms.topic: tutorial
 ms.custom: mvc,vs-dotnet
-ms.openlocfilehash: 65b6fe31e86380162e90820c2cf118a9d1b96b4a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: facb9ebebd9ce1904886a946277185ac2c2e4bc4
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186585"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463921"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>Tutorial: Crear la primera aplicación WPF en Visual Studio 2019
 
@@ -40,7 +40,7 @@ Al final del tutorial, habrá creado una aplicación independiente de Windows qu
 >
 > Puede alternar el idioma de código del código de ejemplo entre C- y Visual Basic mediante el selector de idioma en la parte superior de esta página.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerrequisitos
 
 - [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) con la carga de trabajo de desarrollo de **escritorio de .NET** instalada.
 
@@ -293,11 +293,11 @@ En esta sección, actualizará la interfaz de usuario de la página principal co
 
 1. En *`ExpenseItHome.xaml`*, agregue otra <xref:System.Windows.Controls.Grid.ColumnDefinitions%2A> columna <xref:System.Windows.Controls.ColumnDefinition.Width%2A> a la con un fijo de 230 píxeles:
 
-    [!code-xaml[ExpenseIt#11](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=52-55)]
+    [!code-xaml[ExpenseIt#11](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=2#NewColumn)]
 
 2. Agregue otra fila <xref:System.Windows.Controls.Grid.RowDefinitions%2A>a la , para un total de cuatro filas:
 
-    [!code-xaml[ExpenseIt#11b](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=57-62)]
+    [!code-xaml[ExpenseIt#11b](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=2#NewRows)]
 
 3. Mueva los controles a la <xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType> segunda columna estableciendo la propiedad en 1 en cada uno de los tres controles (Border, ListBox y Button).
 
@@ -482,7 +482,7 @@ En este tutorial ha aprendido varias técnicas para crear una interfaz de usuari
 
 - [Arquitectura WPF](../advanced/wpf-architecture.md)
 - [Información general de XAML (WPF)](../advanced/xaml-overview-wpf.md)
-- [Información general sobre las propiedades de dependencia](../advanced/dependency-properties-overview.md)
+- [Descripción general de las propiedades de dependencia](../advanced/dependency-properties-overview.md)
 - [Diseño](../advanced/layout.md)
 
 Para más información sobre la creación de aplicaciones, vea los temas siguientes:

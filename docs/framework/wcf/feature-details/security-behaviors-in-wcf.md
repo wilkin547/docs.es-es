@@ -2,12 +2,12 @@
 title: Comportamientos de seguridad en WCF
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-ms.openlocfilehash: f56bbd66aa61b8db9d6e720fb3a67ddbbf5e267e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9f96abac0f5f32279c5579dd01c3dd7f2dc1786c
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184530"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464056"
 ---
 # <a name="security-behaviors-in-wcf"></a>Comportamientos de seguridad en WCF
 En Windows Communication Foundation (WCF), los comportamientos modifican el comportamiento en tiempo de ejecución en el nivel de servicio o en el nivel de extremo. (Para obtener más información acerca de los comportamientos en general, vea Especificar el comportamiento en [tiempo de ejecución](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)del servicio .) *Los comportamientos* de seguridad permiten controlar las credenciales, la autenticación, la autorización y los registros de auditoría. Puede utilizar comportamientos mediante programación o a través de configuración. Este tema se centra en la configuración de los siguientes comportamientos relacionados con las funciones de seguridad:  
@@ -82,7 +82,7 @@ En Windows Communication Foundation (WCF), los comportamientos modifican el comp
   
 - Especifique el conjunto de identificadores URI válidos, agregando los URI a esta colección. Para ello, inserte un [ \<>de adición](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md) para cada URI  
   
- Para más información, consulte <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
+ Para obtener más información, vea <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
   
  Para obtener más información sobre el uso de este elemento de configuración, vea [Cómo: configurar credenciales en un servicio](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)de federación .  
   
@@ -112,6 +112,7 @@ En Windows Communication Foundation (WCF), los comportamientos modifican el comp
    </clientCredentials>  
   </behavior>  
  </endpointBehaviors>  
+</behaviors>  
 ```  
   
 #### <a name="clientcertificate-element"></a>\<elemento de> clientCertificate  
@@ -135,6 +136,9 @@ En Windows Communication Foundation (WCF), los comportamientos modifican el comp
       <issuerChannelBehaviors>  
          <add issuerAddress="http://www.contoso.com"  
                behaviorConfiguration="clientBehavior1" />
+      </issuerChannelBehaviors>  
+   </issuedToken>  
+</clientCredentials>
 ```  
   
 #### <a name="servicecertificate-element"></a>\<serviceCertificate> Element  
@@ -191,15 +195,15 @@ En Windows Communication Foundation (WCF), los comportamientos modifican el comp
  Use la [ \<>serviceSecurityAudit](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) para especificar el registro escrito en y qué tipos de eventos registrar. Para obtener más información, consulte [Auditoría](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ```xml  
-<system.serviceModel>  
-<serviceBehaviors>  
+<behaviors>
+ <serviceBehaviors>  
   <behavior name="NewBehavior">  
     <serviceSecurityAudit auditLogLocation="Application"
              suppressAuditFailure="true"  
              serviceAuthorizationAuditLevel="Success"
              messageAuthenticationAuditLevel="Success" />  
-    </behavior>  
-  </serviceBehaviors>  
+  </behavior>  
+ </serviceBehaviors>  
 </behaviors>  
 ```  
   

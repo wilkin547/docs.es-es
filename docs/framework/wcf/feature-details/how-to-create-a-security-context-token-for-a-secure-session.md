@@ -1,18 +1,18 @@
 ---
-title: 'Cómo: Crear un token de contexto de seguridad para una sesión segura'
+title: Procedimiento para crear un token de contexto de seguridad para una sesión segura
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 640676b6-c75a-4ff7-aea4-b1a1524d71b2
-ms.openlocfilehash: 02e0403f9ae5bb437145fa3a015edc69b884c4d0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4e91580035d4de23ae90cd0d59a08f321ae70a1c
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185015"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464146"
 ---
-# <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>Cómo: Crear un token de contexto de seguridad para una sesión segura
+# <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>Procedimiento para crear un token de contexto de seguridad para una sesión segura
 Mediante el uso de un token de contexto de seguridad con estado (SCT) en una sesión segura, la sesión puede soportar que el servicio se recicle. Por ejemplo, cuando un SCT sin estado se utiliza en una sesión segura y se restablece Internet Information Services (IIS), a continuación, se pierden los datos de la sesión que están asociados al servicio. Estos datos de la sesión incluyen una caché de token de SCT. Así, la próxima vez que un cliente envíe un SCT sin estado al servicio, se devuelve un error, porque no se puede recuperar la clave que está asociada a SCT. Si, sin embargo, se utiliza un SCT con estado, la clave que está asociada a SCT se contiene dentro de SCT. Dado que la clave se contiene dentro de SCT y, por tanto, dentro del mensaje, el reciclaje del servicio no afecta a la sesión segura. De forma predeterminada, Windows Communication Foundation (WCF) usa SCT sin estado en una sesión segura. En este tema se detalla cómo utilizar SCT con estado en una sesión segura.  
   
 > [!NOTE]
@@ -32,6 +32,7 @@ Mediante el uso de un token de contexto de seguridad con estado (SCT) en una ses
   
         ```xml  
         <customBinding>  
+        </customBinding>
         ```  
   
     2. Agregue [ \<](../../configure-apps/file-schema/wcf/bindings.md) un elemento secundario de enlace>elemento secundario a [ \<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
@@ -40,6 +41,7 @@ Mediante el uso de un token de contexto de seguridad con estado (SCT) en una ses
   
         ```xml  
         <binding name="StatefulSCTSecureSession">  
+        </binding>
         ```  
   
     3. Especifique el modo de autenticación para los mensajes [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) enviados a y desde este servicio agregando un elemento secundario>de seguridad a [ \<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
@@ -48,7 +50,8 @@ Mediante el uso de un token de contexto de seguridad con estado (SCT) en una ses
   
         ```xml  
         <security authenticationMode="SecureConversation"  
-                  requireSecurityContextCancellation="false">  
+                  requireSecurityContextCancellation="false">
+        </security>
         ```  
   
     4. Especifique cómo se autentica el cliente mientras se establece la sesión [ \< ](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)segura agregando un [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) elemento secundario secureConversationBootstrap>al>de seguridad.  
@@ -103,7 +106,7 @@ Mediante el uso de un token de contexto de seguridad con estado (SCT) en una ses
         <security
             requireSecurityContextCancellation="false">  
               <secureConversationBootstrap />  
-      </security>  
+        </security>  
     <httpTransport />  
   </binding>  
 </customBinding>  

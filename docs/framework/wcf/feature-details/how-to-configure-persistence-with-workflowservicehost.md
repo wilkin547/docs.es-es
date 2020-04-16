@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: Configurar la persistencia con WorkflowServiceHost'
+title: Procedimiento para configurar la persistencia con WorkflowServiceHost
 ms.date: 03/30/2017
 ms.assetid: e31cd4df-13a3-4a9a-9be8-5243e0055356
-ms.openlocfilehash: 2974b6bcbb94c5b54d91025aeabe7c2d2e94c7e8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4bfa66a895ae9af9cb87ff110dc82c8a8a922b49
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185056"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463850"
 ---
-# <a name="how-to-configure-persistence-with-workflowservicehost"></a>Cómo: Configurar la persistencia con WorkflowServiceHost
+# <a name="how-to-configure-persistence-with-workflowservicehost"></a>Procedimiento para configurar la persistencia con WorkflowServiceHost
 En este tema, se describe cómo configurar la característica Almacén de instancias de flujo de trabajo de SQL para habilitar la persistencia de los flujos de trabajo hospedados en <xref:System.ServiceModel.Activities.WorkflowServiceHost> mediante un archivo de configuración. Antes de utilizar la característica Almacén de instancias de flujo de trabajo de SQL, cree una base de datos SQL que se use para guardar instancias de flujo de trabajo. Para obtener más información, vea [Cómo: Habilitar la persistencia de SQL para flujos de trabajo y servicios](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)de flujo de trabajo .  
   
 ### <a name="to-configure-the-sql-workflow-instance-store-in-configuration"></a>Para configurar el Almacén de instancias de flujo de trabajo de SQL en Configuración  
@@ -26,7 +26,7 @@ En este tema, se describe cómo configurar la característica Almacén de instan
                  instanceLockedExceptionAction="NoRetry | SimpleRetry | AggressiveRetry"  
                  hostLockRenewalPeriod="00:00:30"
                  runnableInstancesDetectionPeriod="00:00:05">  
-            <sqlWorkflowInstanceStore/>  
+            </sqlWorkflowInstanceStore>  
         </behavior>  
     </serviceBehaviors>  
     ```  

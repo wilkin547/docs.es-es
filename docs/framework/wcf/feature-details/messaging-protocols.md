@@ -2,12 +2,12 @@
 title: Protocolos de mensajería
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-ms.openlocfilehash: d35cd496db32e1a2886f7ca06e7a3d0964f9c9b5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 814347c77b54c4450aabf0a4f3966df223360663
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184581"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463828"
 ---
 # <a name="messaging-protocols"></a>Protocolos de mensajería
 
@@ -25,7 +25,7 @@ En este tema se tratan los <xref:System.ServiceModel.Channels.TextMessageEncodin
 
 Especificación/Documento:
 
-- [Xml](https://www.w3.org/TR/REC-xml)
+- [XML](https://www.w3.org/TR/REC-xml)
 - [SOAP 1,1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)
 - [Núcleo de SOAP 1.2](https://www.w3.org/TR/soap12-part1/)
 - [WS-Addressing 2004/08](https://www.w3.org/Submission/2004/SUBM-ws-addressing-20040810/)
@@ -566,7 +566,7 @@ Un extremo WCF configurado para usar MTOM siempre enviará mensajes codificados 
 WCF usa la siguiente aserción de directiva para indicar el uso de MTOM por punto de conexión:
 
 ```xml
-<wsoma:OptimizedMimeSerialization ... />
+<wsoma:OptimizedMimeSerialization />
 ```
 
 - R4211: la aserción de directiva anterior tiene un asunto de directiva de punto de conexión y especifica que todos los mensajes enviados a y recibidos desde el punto de conexión se deben optimizar utilizando MTOM.

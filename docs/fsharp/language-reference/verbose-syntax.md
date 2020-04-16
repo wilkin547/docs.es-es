@@ -1,37 +1,37 @@
 ---
 title: Sintaxis detallada
-description: Obtenga información sobre la diferencia entre la sintaxis detallada y ligera F# en el lenguaje de programación.
+description: Conozca la diferencia entre la sintaxis detallada y ligera en el lenguaje de programación de F.
 ms.date: 05/16/2016
-ms.openlocfilehash: 575585b201acc1366980cfc5cf523c4117259084
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 722807695c56beb0d681b95a78ed8cb8c1df3ddf
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421176"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463907"
 ---
 # <a name="verbose-syntax"></a>Sintaxis detallada
 
-Hay dos formas de sintaxis disponibles para muchas construcciones en el F# lenguaje: *Sintaxis detallada* y *Sintaxis ligera*. La sintaxis detallada no se utiliza normalmente, pero tiene la ventaja de ser menos sensible a la sangría. La sintaxis ligera es más corta y usa la sangría para indicar el principio y el final de las construcciones, en lugar de palabras clave adicionales como `begin`, `end`, `in`, etc. La sintaxis predeterminada es la sintaxis ligera. En este tema se describe la F# sintaxis de las construcciones cuando la sintaxis ligera no está habilitada. La sintaxis detallada siempre está habilitada, por lo que incluso si habilita la sintaxis ligera, todavía puede usar la sintaxis detallada para algunas construcciones. Puede deshabilitar la sintaxis ligera mediante la Directiva `#light "off"`.
+Hay dos formas de sintaxis disponibles para muchas construcciones en el lenguaje F: *sintaxis detallada* y *sintaxis ligera.* La sintaxis detallada no es tan comúnmente utilizada, pero tiene la ventaja de ser menos sensible a la sangría. La sintaxis ligera es más corta y utiliza la sangría para indicar el `begin` `end`principio `in`y el final de las construcciones, en lugar de palabras clave adicionales como , , , etc. La sintaxis predeterminada es la sintaxis ligera. En este tema se describe la sintaxis para las construcciones de F- cuando la sintaxis ligera no está habilitada. La sintaxis detallada siempre está habilitada, por lo que incluso si habilita la sintaxis ligera, todavía puede usar sintaxis detallada para algunas construcciones. Puede deshabilitar la sintaxis `#light "off"` ligera mediante la directiva.
 
-## <a name="table-of-constructs"></a>Tabla de construcciones
+## <a name="table-of-constructs"></a>Tabla de Construcciones
 
-En la tabla siguiente se muestra la sintaxis ligera y detallada F# para construcciones de lenguaje en contextos en los que hay una diferencia entre las dos formas. En esta tabla, los corchetes angulares (&lt;&gt;) contienen elementos de sintaxis proporcionados por el usuario. Consulte la documentación de cada construcción de lenguaje para obtener información más detallada sobre la sintaxis utilizada en estas construcciones.
+En la tabla siguiente se muestra la sintaxis ligera y detallada para las construcciones de lenguaje de F en contextos donde hay una diferencia entre los dos formularios. En esta tabla, los&lt;&gt;corchetes angulares ( ) encierran los elementos de sintaxis proporcionados por el usuario. Consulte la documentación de cada construcción de lenguaje para obtener información más detallada sobre la sintaxis utilizada en estas construcciones.
 
 <table>
 <tr>
-<th>Construcción de lenguaje</th>
+<th>Construcción del lenguaje</th>
 <th>Sintaxis ligera</th>
 <th>Sintaxis detallada</th>
 </tr>
 <tr>
 <td>
-Expresiones compuestas
+expresiones compuestas
 </td>
 <td>
 
 ```xml
-<expression1>
-<expression2>
+<expression1 />
+<expression2 />
 ```
 
 </td><td>
@@ -44,7 +44,7 @@ Expresiones compuestas
 </tr>
 <tr><td>
 
-enlaces de `let` anidados
+enlaces anidados `let`
 
 </td><td>
 
@@ -164,7 +164,7 @@ in
 
 </td>
 </tr>
-<tr><td>record
+<tr><td>registro
 </td><td>
 
 ```fsharp
@@ -208,7 +208,7 @@ type <class-name>(<params>) =
 
 </td>
 </tr>
-<tr><td>estructura</td><td>
+<tr><td>structure</td><td>
 
 ```fsharp
 [<StructAttribute>]
@@ -227,7 +227,7 @@ type <structure-name> =
 
 </td>
 </tr>
-<tr><td>Unión discriminada</td><td>
+<tr><td>unión discriminada</td><td>
 
 ```fsharp
 type <union-name> =
@@ -311,7 +311,7 @@ interface <interface-name>
 
 </td>
 </tr>
-<tr><td>extensión de tipo</td><td>
+<tr><td>tipo de extensión</td><td>
 
 ```fsharp
 type <type-name>
@@ -350,8 +350,8 @@ module <module-name> =
 </tr>
 </table>
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Referencia del lenguaje F#](index.md)
+- [Referencia del lenguaje f](index.md)
 - [Directivas de compilador](compiler-directives.md)
 - [Instrucciones de formato de código](../style-guide/formatting.md)
