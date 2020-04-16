@@ -2,12 +2,12 @@
 title: Comando dotnet test
 description: El comando “dotnet test” se usa para ejecutar pruebas unitarias en un proyecto determinado.
 ms.date: 02/27/2020
-ms.openlocfilehash: a11814f9fdc6326e681a09d7d2654b968014f318
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 359e4522b26e2b59092d55eea3fca575d2afaf1f
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507313"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121037"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -85,7 +85,7 @@ Los proyectos de prueba especifican el ejecutor de pruebas usando un elemento `<
 
 - **`l|--logger <LoggerUri/FriendlyName>`**
 
-  Especifica un registrador para los resultados de pruebas.
+  Especifica un registrador para los resultados de pruebas. A diferencia de MSBuild, la prueba de dotnet no acepta abreviaturas: en lugar de `-l "console;v=d"` use `-l "console;verbosity=detailed"`.
 
 - **`--no-build`**
 
@@ -121,7 +121,7 @@ Los proyectos de prueba especifican el ejecutor de pruebas usando un elemento `<
 
 - **`-v|--verbosity <LEVEL>`**
 
-  Establece el nivel de detalle del comando. Los valores permitidos son `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` y `diag[nostic]`.
+  Establece el nivel de detalle del comando. Los valores permitidos son `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` y `diag[nostic]`. De manera predeterminada, es `minimal`. Para obtener más información, vea <xref:Microsoft.Build.Framework.LoggerVerbosity>.
 
 - Argumentos de `RunSettings`
 
@@ -145,10 +145,16 @@ Los proyectos de prueba especifican el ejecutor de pruebas usando un elemento `<
   dotnet test ~/projects/test1/test1.csproj
   ```
 
-- Ejecute las pruebas en el proyecto en el directorio actual y genere un archivo de resultados de prueba en formato trx:
+- Ejecute las pruebas del proyecto en el directorio actual y genere un archivo de resultados de prueba en formato trx:
 
   ```dotnetcli
   dotnet test --logger trx
+  ```
+
+- Ejecute las pruebas del proyecto en el directorio actual y regístrese con el nivel de detalle pormenorizado en la consola:
+
+  ```dotnetcli
+  dotnet test --logger "console;verbosity=detailed"
   ```
 
 ## <a name="filter-option-details"></a>Detalles de la opción de filtro
@@ -192,3 +198,4 @@ Para obtener más información y ejemplos sobre cómo usar el filtrado de prueba
 
 - [Marcos y destinos](../../standard/frameworks.md)
 - [Catálogo de identificadores de entorno de ejecución (RID) de .NET Core](../rid-catalog.md)
+- [Paso de argumentos runsettings a través de la línea de comandos](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)

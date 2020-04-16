@@ -1,21 +1,21 @@
 ---
-title: Distinción de delegados y eventos
+title: Delegados y eventos
 description: Obtenga información sobre la diferencia entre los delegados y los eventos, y cuándo usar cada una de estas características de .NET Core.
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0fdc8629-2fdb-4a7c-a433-5b9d04eaf911
-ms.openlocfilehash: 04738ac2dd82da9c577e88598d0bb737a93333c1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 51d982c9b5b16a5fc28ede5f0318bc100bb33b68
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146183"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805769"
 ---
 # <a name="distinguishing-delegates-and-events"></a>Distinción de delegados y eventos
 
 [Anterior](modern-events.md)
 
-Los desarrolladores que son nuevos en la plataforma de NET Core a menudo tienen problemas para decidir entre un diseño basado en `delegates` y uno basado en `events`. Este es un concepto difícil, porque las dos características del lenguaje son muy similares. Los eventos incluso se crean con compatibilidad de lenguaje para los delegados.
+Los desarrolladores que son nuevos en la plataforma de NET Core a menudo tienen problemas para decidir entre un diseño basado en `delegates` y uno basado en `events`. La elección de delegados o eventos suele ser difícil, ya que las dos características de lenguaje son similares. Los eventos incluso se crean con compatibilidad de lenguaje para los delegados.
 
 Ambos ofrecen un escenario de enlace en tiempo de ejecución: permiten escenarios donde un componente se comunica mediante una llamada a un método que solo se conoce en tiempo de ejecución. Ambos admiten métodos de suscriptor único y múltiple. Puede que se haga referencia a estos términos como compatibilidad con multidifusión o de conversión única. Ambos admiten una sintaxis similar para agregar y quitar controladores. Por último, para generar un evento y llamar a un delegado se usa exactamente la misma sintaxis de llamada de método. Incluso los dos admiten la misma sintaxis del método `Invoke()` para su uso con el operador `?.`.
 
@@ -36,11 +36,16 @@ Los controles de UX todavía funcionan correctamente, incluso cuando no hay ning
 
 Otra consideración es el prototipo del método que quiere para el método delegado. Como ha visto, todos los delegados que se han usado para los eventos tienen un tipo de valor devuelto void. También ha visto que hay elementos para crear controladores de eventos que pasan información de nuevo a los orígenes de eventos mediante la modificación de las propiedades del objeto de argumento del evento. Aunque estos elementos funcionan, no son tan naturales como la devolución de un valor de un método.
 
-Tenga en cuenta que estas dos heurísticas pueden estar presentes a menudo: si su método delegado devuelve un valor, probablemente afectará al algoritmo de alguna manera.
+Observe que estas dos heurísticas suelen estar presentes: si el método delegado devuelve un valor, lo más probable es que afecte de algún modo al algoritmo.
+
+## <a name="events-have-private-invocation"></a>Los eventos tienen invocación privada
+
+Las clases distintas de la clase en la que se encuentra un evento solo pueden agregar y quitar clientes de escucha de eventos; solo la clase que contiene el evento puede invocarlo. Los eventos suelen ser miembros de clase públicos.
+En cambio, a menudo los delegados se pasan como parámetros y se almacenan como miembros de clase privada si no están almacenados.
 
 ## <a name="event-listeners-often-have-longer-lifetimes"></a>Los agentes de escucha de eventos a menudo tienen una vigencia mayor
 
-Esta es una justificación ligeramente más débil. En cambio, puede encontrar que los diseños basados en eventos son más naturales cuando el origen de eventos generará eventos durante un período de tiempo largo. Puede ver ejemplos de esto para los controles de UX en muchos sistemas. Cuando se suscriba a un evento, el origen de eventos puede generar eventos durante la vigencia del programa.
+El hecho de que esos clientes de escucha de eventos tengan una duración más larga es una justificación ligeramente más débil. En cambio, puede encontrar que los diseños basados en eventos son más naturales cuando el origen de eventos generará eventos durante un período de tiempo largo. Puede ver ejemplos de diseño basado en eventos para los controles de la experiencia del usuario en muchos sistemas. Cuando se suscriba a un evento, el origen de eventos puede generar eventos durante la vigencia del programa.
 (Puede anular la suscripción de los eventos cuando ya no los necesite).
 
 Compare eso con muchos diseños basados en delegados, donde un delegado se usa como un argumento para un método, y el delegado no se usa después de que se devuelva ese método.

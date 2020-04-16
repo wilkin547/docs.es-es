@@ -2,12 +2,12 @@
 title: Tutoriales e introducción técnica
 description: Modernización de aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows | Tutoriales e introducción técnica
 ms.date: 04/28/2018
-ms.openlocfilehash: 190b33c4307b09bab0543d481e66ac9328074a0d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cff418d9b6e931a3082d8a2f8b818e7275139578
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69660882"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80987874"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Tutoriales e introducción técnica
 
@@ -62,7 +62,7 @@ En la ilustración siguiente se muestran las capturas de pantallas de las aplica
 
 ![Aplicaciones ASP.NET MVC y ASP.NET Web Forms (tecnologías existentes o heredadas)](./media/image5-2.png)
 
-Las dependencias de ASP.NET 4.x o versiones anteriores (ya sea para MVC o para Web Forms) significan que estas aplicaciones no se ejecutarán en .NET Core a menos que el código se reescriba por completo mediante ASP.NET Core MVC.
+Las dependencias de ASP.NET 4.x o versiones anteriores (ya sea para MVC o para Web Forms) significan que estas aplicaciones no se ejecutarán en .NET Core a menos que el código se reescriba por completo mediante ASP.NET Core MVC.
 
 ### <a name="scenario-2-wcf-service-and-winforms-client-app-3-tier-app"></a>Escenario 2: Servicio WCF y aplicación cliente de WinForms (aplicación de 3 niveles)
 
@@ -79,7 +79,7 @@ Las ventajas de este tutorial son sencillas: Familiarícese con el código y las
 Explore este contenido más en profundidad en la wiki de GitHub:
 
 - [Un paseo por las aplicaciones ASP.NET MVC y ASP.NET Web Forms de línea de base "heredadas"](https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-the-ASP.NET-MVC-and-WebForms-apps-implementation-code)
-- [Un paseo por la aplicación del servicio WCF y WinForms (de 3 niveles) de línea de base "heredadas"](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
+- [Un paseo por la aplicación del servicio WCF y WinForms (de tres niveles) de línea de base "heredadas"](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
 
 ## <a name="walkthrough-2-containerize-your-existing-net-applications-with-windows-containers"></a>Tutorial 2: Inclusión en contenedores de las aplicaciones .NET existentes con contenedores de Windows
 

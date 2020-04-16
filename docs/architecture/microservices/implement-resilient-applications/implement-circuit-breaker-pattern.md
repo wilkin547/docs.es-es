@@ -2,12 +2,12 @@
 title: Implementación del patrón de interruptor
 description: Aprenda a implementar el patrón de interruptor como un sistema complementario en los reintentos HTTP.
 ms.date: 03/03/2020
-ms.openlocfilehash: a79c6fcca1e29f3c30d697cb369060d59a72c121
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bebe0b4a622db928175f78f8d3e303d3d7adf170
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847250"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988890"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Implementación del patrón de interruptor
 
@@ -96,7 +96,7 @@ Después, puede comprobar el estado mediante el URI `http://localhost:5103/faili
 
 ![Captura de pantalla de la comprobación del estado de una simulación de middleware con errores.](./media/implement-circuit-breaker-pattern/failing-middleware-simulation.png)
 
-**Figura 8-5**. Comprobación del estado del middleware ASP.NET "Error": en este caso, deshabilitado
+**Figura 8-5**. Comprobación del estado del middleware ASP.NET "con errores": en este caso, deshabilitado.
 
 En este punto, el microservicio de la cesta responde con el código de estado 500 siempre que su llamada lo invoque.
 

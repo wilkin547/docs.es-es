@@ -2,12 +2,12 @@
 title: Compilación de aplicaciones ASP.NET Core 2.2 implementadas como contenedores de Linux en clústeres de AKS/Kubernetes
 description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
 ms.date: 02/25/2019
-ms.openlocfilehash: ab64a0423ceceb8285c159af276d6d97e12379d8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 83d4d0a60db4bdc112bb35bfbf61c0396646ad31
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70848757"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989030"
 ---
 # <a name="build-aspnet-core-22-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Compilación de aplicaciones ASP.NET Core 2.2 implementadas como contenedores de Linux en un orquestador de AKS/Kubernetes
 
@@ -51,7 +51,7 @@ Puede agregar compatibilidad con Docker al crear el proyecto o más adelante, po
 
 **Figura 4-38**. Adición de compatibilidad con Docker a un proyecto existente
 
-Para acabar de agregar compatibilidad con Docker, puede elegir Windows o Linux. En este caso, seleccione **Linux**, ya que AKS no es compatible con contenedores de Windows (a finales de 2018).
+Para acabar de agregar compatibilidad con Docker, puede elegir Windows o Linux. En este caso, seleccione **Linux**, ya que AKS no admite contenedores de Windows (a partir de finales de 2018).
 
 ![Cuadro de diálogo de opciones para seleccionar el sistema operativo de destino para el archivo Dockerfile.](media/select-linux-docker-support.png)
 
@@ -59,7 +59,7 @@ Para acabar de agregar compatibilidad con Docker, puede elegir Windows o Linux. 
 
 Con estos sencillos pasos, ya tiene la aplicación ASP.NET Core 2.2 en ejecución en un contenedor de Linux.
 
-Como puede ver, la integración entre Visual Studio 2017 y Docker está totalmente orientada a la productividad del desarrollador.
+Como puede ver, la integración entre Visual Studio 2017 y Docker está totalmente orientada a la productividad del desarrollador.
 
 Ahora puede ejecutar la aplicación con la tecla **F5** o el botón **Reproducir**.
 

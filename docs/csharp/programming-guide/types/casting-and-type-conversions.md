@@ -9,12 +9,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 252d509617ab5dbc53b282bac52e356396d82fab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ae8f18deff5e96d7e475df8814ad64b38d14d585
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75711901"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121389"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Conversiones de tipos (Guía de programación de C#)
 
@@ -29,7 +29,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
 - **Conversiones implícitas**: no se requiere ninguna sintaxis especial porque la conversión tiene seguridad de tipos y no se perderá ningún dato. Los ejemplos incluyen conversiones de tipos enteros más pequeños a más grandes, y conversiones de clases derivadas a clases base.  
   
-- **Conversiones explícitas**: las conversiones explícitas requieren el [operador de conversión `()`](../../language-reference/operators/type-testing-and-cast.md#cast-operator-). La conversión es necesaria si es posible que se pierda información en la conversión, o cuando es posible que la conversión no sea correcta por otros motivos. Entre los ejemplos típicos están la conversión numérica a un tipo que tiene menos precisión o un intervalo más pequeño, y la conversión de una instancia de clase base a una clase derivada.  
+- **Conversiones explícitas**: las conversiones explícitas requieren una [expresión Cast](../../language-reference/operators/type-testing-and-cast.md#cast-expression). La conversión es necesaria si es posible que se pierda información en la conversión, o cuando es posible que la conversión no sea correcta por otros motivos. Entre los ejemplos típicos están la conversión numérica a un tipo que tiene menos precisión o un intervalo más pequeño, y la conversión de una instancia de clase base a una clase derivada.  
   
 - **Conversiones definidas por el usuario**: las conversiones definidas por el usuario se realizan por medio de métodos especiales que se pueden definir para habilitar las conversiones explícitas e implícitas entre tipos personalizados que no tienen una relación de clase base-clase derivada. Para obtener más información, vea [Operadores de conversión definidos por el usuario](../../language-reference/operators/user-defined-conversion-operators.md).  
   
@@ -92,7 +92,7 @@ Para obtener más información, vea la sección sobre [conversiones](~/_csharpla
 
 - [Guía de programación de C#](../index.md)
 - [Tipos](./index.md)
-- [Operador de conversión ()](../../language-reference/operators/type-testing-and-cast.md#cast-operator-)
+- [Expresión Cast](../../language-reference/operators/type-testing-and-cast.md#cast-expression)
 - [Operadores de conversión definidos por el usuario](../../language-reference/operators/user-defined-conversion-operators.md)
 - [Conversión de tipos generalizada](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/yy580hbd(v=vs.120))
 - [Procedimiento Convertir una cadena en un número](./how-to-convert-a-string-to-a-number.md)

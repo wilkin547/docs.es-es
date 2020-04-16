@@ -2,12 +2,12 @@
 title: Orquestación de microservicios y aplicaciones de varios contenedores para una alta escalabilidad y disponibilidad
 description: Las aplicaciones de producción real deben implementarse y administrarse con orquestadores que controlen el mantenimiento, la carga de trabajo y los ciclos de vida de todos los contenedores.
 ms.date: 02/15/2019
-ms.openlocfilehash: e548e6b3816dec1e56c273c53c9fd052443eb09b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 369971455168026d768220dae6e2da5ce92bc698
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76919538"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989004"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orquestación de microservicios y aplicaciones de varios contenedores para una alta escalabilidad y disponibilidad
 
@@ -38,7 +38,7 @@ Los conceptos de un clúster y un programador están estrechamente relacionados,
 | Plataforma | Comentarios |
 |:---:|:---|
 | **Kubernetes** <br/> ![Una imagen del logotipo de Kubernetes.](./media/orchestrate-high-scalability-availability/kubernetes-container-orchestration-system-logo.png) | [*Kubernetes*](https://kubernetes.io/) es un producto de código abierto cuya funcionalidad abarca desde la infraestructura de clúster y la programación de contenedores a las capacidades de orquestación. Permite automatizar la implementación, la escala y las operaciones de contenedores de aplicaciones en varios clústeres de hosts. <br/> <br/> *Kubernetes* proporciona una infraestructura centrada en el contenedor que agrupa los contenedores de la aplicación en unidades lógicas para facilitar la administración y detección. <br/> <br/> *Kubernetes* está más desarrollado en Linux que en Windows. |
-| **Azure Kubernetes Service (AKS)** <br/> ![Una imagen del logotipo de Azure Kubernetes Service](./media/orchestrate-high-scalability-availability/azure-kubernetes-service-logo.png). | [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/) es un servicio administrado de orquestación de contenedores de Kubernetes en Azure que simplifica la administración, implementación y operaciones del clúster de Kubernetes. |
+| **Azure Kubernetes Service (AKS)** <br/> ![Una imagen del logotipo de Azure Kubernetes Service](./media/orchestrate-high-scalability-availability/azure-kubernetes-service-logo.png). | [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/) es un servicio de orquestación de contenedores de Kubernetes administrado en Azure que simplifica la administración, implementación y operaciones del clúster de Kubernetes. |
 | **Azure Service Fabric** <br/> ![Imagen del logotipo de Azure Service Fabric.](./media/orchestrate-high-scalability-availability/azure-service-fabric-logo.png) | [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) es una plataforma de microservicios de Microsoft para crear aplicaciones. Es un [orquestador](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) de servicios y crea clústeres de máquinas. Service Fabric puede implementar servicios como contenedores o procesos estándar. Puede incluso combinar servicios en procesos con servicios en contenedores dentro de la misma aplicación y el mismo clúster. <br/> <br/> Los clústeres de *Service Fabric* pueden implementarse en Azure, de forma local o en cualquier nube. Con todo, la implementación se simplifica en Azure con un enfoque administrado. <br/> <br/> *Service Fabric* proporciona [modelos de programación de Service Fabric](https://azure.microsoft.com/documentation/articles/service-fabric-choose-framework/) prescriptivos adicionales y opcionales como [servicios con estado](https://azure.microsoft.com/documentation/articles/service-fabric-reliable-services-introduction/) y [Reliable Actors](https://azure.microsoft.com/documentation/articles/service-fabric-reliable-actors-introduction/). <br/> <br/> *Service Fabric* está más desarrollado en Windows (con años de evolución en Windows) que en Linux. <br/> <br/> Tanto los contenedores de Linux como los de Windows son compatibles con Service Fabric desde 2017. |
 | **Azure Service Fabric Mesh** <br/> ![Imagen del logotipo de Azure Service Fabric Mesh.](./media/orchestrate-high-scalability-availability/azure-service-fabric-mesh-logo.png) | [*Azure Service Fabric Mesh*](https://docs.microsoft.com/azure/service-fabric-mesh/service-fabric-mesh-overview) ofrece el mismo nivel de fiabilidad, rendimiento crítico y escala que Service Fabric, pero también proporciona una plataforma totalmente administrada y sin servidor. No es necesario administrar un clúster, las máquinas virtuales, el almacenamiento o la configuración de red. Puede centrarse en el desarrollo de la aplicación. <br/> <br/> *Service Fabric Mesh* admite contenedores de Windows y Linux, lo que permite desarrollar con cualquier lenguaje de programación y marco de trabajo que elija.
 

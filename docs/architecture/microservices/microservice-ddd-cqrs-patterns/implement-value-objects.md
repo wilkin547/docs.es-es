@@ -2,12 +2,12 @@
 title: Implementar objetos de valor
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Obtenga los detalles y las opciones para implementar objetos de valor mediante las características nuevas de Entity Framework.
 ms.date: 01/30/2020
-ms.openlocfilehash: 919b23f7c1a0cd0aec8c4417f3af98469a0743dd
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 4a8a92a8dabcf09654ecd0e5dea2a7df25d7abf7
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249427"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805736"
 ---
 # <a name="implement-value-objects"></a>Implementación de objetos de valor
 
@@ -133,7 +133,7 @@ Puede ver cómo esta implementación de objeto de valor de Address no tiene ning
 
 El hecho de no tener que disponer de un campo de identificador para su uso en Entity Framework (EF) no fue posible hasta EF Core 2.0, lo que ayuda a implementar mejor los objetos de valor sin identificador. Eso es precisamente la explicación de la sección siguiente.
 
-Se podría argumentar que los objetos de valor, al ser inmutables, deben ser de solo lectura (es decir, tener propiedades get-only), y así es. Pero los objetos de valor normalmente se serializan y deserializan para recorrer colas de mensajes. Asimismo, si fueran de solo lectura, el deserializador no podría asignar los valores, por lo que simplemente se dejan como un conjunto privado, lo cual ofrece un nivel de solo lectura suficiente para que resulte práctico.
+Se podría argumentar que los objetos de valor, al ser inmutables, deben ser de solo lectura (es decir, tener propiedades get-only), y así es. Pero los objetos de valor normalmente se serializan y deserializan para recorrer colas de mensajes. Asimismo, si fueran de solo lectura, el deserializador no podría asignar los valores, por lo que simplemente se dejan como `private set`, lo cual ofrece un nivel de solo lectura suficiente para que resulte práctico.
 
 ## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20-and-later"></a>Procedimiento para conservar objetos de valor en la base de datos con EF Core 2.0 y versiones posteriores
 
@@ -186,7 +186,7 @@ Por convención, se crea una clave principal paralela para el tipo de propiedad 
 
 Es importante tener en cuenta que los tipos de propiedad nunca se detectan por convención en EF Core, por lo que se deben declarar explícitamente.
 
-En eShopOnContainers, en OrderingContext.cs, dentro del método OnModelCreating(), se aplican varias configuraciones de infraestructura. Una de ellas está relacionada con la entidad Order.
+En eShopOnContainers, en el archivo OrderingContext.cs, dentro del método `OnModelCreating()`, se aplican varias configuraciones de infraestructura. Una de ellas está relacionada con la entidad Order.
 
 ```csharp
 // Part of the OrderingContext.cs class at the Ordering.Infrastructure project
@@ -226,7 +226,7 @@ public void Configure(EntityTypeBuilder<Order> orderConfiguration)
 
 En el código anterior, el método `orderConfiguration.OwnsOne(o => o.Address)` especifica que la propiedad `Address` es una entidad de propiedad del tipo `Order`.
 
-De forma predeterminada, las convenciones de EF Core asignan a las columnas de base de datos de las propiedades del tipo de entidad de propiedad el nombre `EntityProperty_OwnedEntityProperty`. Por lo tanto, las propiedades internas de `Address` aparecerán en la tabla `Orders` con los nombres `Address_Street` y `Address_City` (y así sucesivamente para `State`, `Country` y `ZipCode`).
+De forma predeterminada, las convenciones de EF Core asignan a las columnas de base de datos de las propiedades del tipo de entidad de propiedad el nombre `EntityProperty_OwnedEntityProperty`. Por lo tanto, las propiedades internas de `Address` aparecerán en la tabla `Orders` con los nombres `Address_Street` y `Address_City` (y así sucesivamente para `State`, `Country` y `ZipCode`).
 
 Puede anexar el método fluido `Property().HasColumnName()` para cambiar el nombre de esas columnas. En el caso en que `Address` es una propiedad pública, las asignaciones serían similares a lo siguiente:
 
@@ -297,7 +297,7 @@ public class Address
 
 - No se admiten los tipos de propiedad opcionales (es decir, que aceptan valores NULL) que se asignan con el propietario en la misma tabla (es decir, mediante la división de tablas). Esto se debe a que la asignación se realiza para cada propiedad; no hay un centinela independiente para el valor complejo NULL como un todo.
 
-- No hay compatibilidad con la asignación de herencia para los tipos de propiedad, pero se deberían poder asignar dos tipos de hoja de las mismas jerarquías de herencia como otros tipos de propiedad. EF Core no deducirá que forman parte de la misma jerarquía.
+- No hay compatibilidad con la asignación de herencia para los tipos de propiedad, pero se deberían poder asignar dos tipos hoja de las mismas jerarquías de herencia como otros tipos de propiedad. EF Core no deducirá que forman parte de la misma jerarquía.
 
 #### <a name="main-differences-with-ef6s-complex-types"></a>Principales diferencias con los tipos complejos de EF6
 

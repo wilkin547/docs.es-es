@@ -3,18 +3,18 @@ title: Acerca de la autorización en microservicios y aplicaciones web de .NET
 description: 'Seguridad en microservicios y aplicaciones web de .NET: obtenga información general de las opciones de autorización principales en las aplicaciones de ASP.NET Core: basadas en roles y basadas en directivas.'
 author: mjrousos
 ms.date: 01/30/2020
-ms.openlocfilehash: f6b69faceac9a9b4819212cc04f89080f3ddad56
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 27936a33ea2bb46cedb9d10ee47a2117e1843e14
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77501765"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988211"
 ---
 # <a name="about-authorization-in-net-microservices-and-web-applications"></a>Acerca de la autorización en microservicios y aplicaciones web de .NET
 
 Después de la autenticación, las API web de ASP.NET Core deben autorizar el acceso. Este proceso permite que un servicio haga que las API estén disponibles para algunos usuarios autenticados, pero no para todos. La [autorización](/aspnet/core/security/authorization/introduction) se puede llevar a cabo según los roles de los usuarios o según una directiva personalizada, que podría incluir la inspección de notificaciones u otro tipo de heurística.
 
-Restringir el acceso a una ruta de ASP.NET Core MVC es tan fácil como aplicar un atributo Authorize al método de acción (o a la clase de controlador si todas las acciones del controlador requieren autorización), como se muestra en el ejemplo siguiente:
+Restringir el acceso a una ruta de ASP.NET Core MVC es tan fácil como aplicar un atributo Authorize al método de acción (o a la clase de controlador si todas las acciones del controlador requieren autorización), como se muestra en el ejemplo siguiente:
 
 ```csharp
 public class AccountController : Controller
@@ -94,7 +94,7 @@ services.AddAuthorization(options =>
 });
 ```
 
-Como se muestra en el ejemplo, las directivas pueden asociarse con distintos tipos de requisitos. Una vez registradas las directivas, se pueden aplicar a una acción o a un controlador pasando el nombre de la directiva como el argumento de la directiva del atributo Authorize (por ejemplo, `[Authorize(Policy="EmployeesOnly")]`). Las directivas pueden tener varios requisitos, no solo uno (como se muestra en estos ejemplos).
+Como se muestra en el ejemplo, las directivas pueden asociarse con distintos tipos de requisitos. Una vez registradas las directivas, se pueden aplicar a una acción o a un controlador pasando el nombre de la directiva como argumento de la directiva del atributo Authorize (por ejemplo, `[Authorize(Policy="EmployeesOnly")]`). Las directivas pueden tener varios requisitos, no solo uno (como se muestra en estos ejemplos).
 
 En el ejemplo anterior, la primera llamada AddPolicy es simplemente una manera alternativa de autorizar por rol. Si `[Authorize(Policy="AdministratorsOnly")]` se aplica a una API, solo los usuarios del rol Administrator podrán tener acceso a ella.
 
@@ -110,7 +110,7 @@ Si el usuario cumple el requisito, una llamada a `context.Succeed` indicará que
 
 Además de registrar los requisitos de directiva personalizada con llamadas `AddPolicy`, también debe registrar los controladores de requisito personalizado mediante la inserción de dependencias (`services.AddTransient<IAuthorizationHandler, MinimumAgeHandler>()`).
 
-Un ejemplo de un requisito de autorización personalizada y un controlador para comprobar la edad de un usuario (según una notificación `DateOfBirth`) está disponible en la [documentación de autorización](https://docs.asp.net/en/latest/security/authorization/policies.html) de ASP.NET Core.
+Un ejemplo de requisito de autorización personalizada y controlador para comprobar la edad de un usuario (según una notificación `DateOfBirth`) está disponible en la [documentación de autorización](https://docs.asp.net/en/latest/security/authorization/policies.html) de ASP.NET Core.
 
 ## <a name="additional-resources"></a>Recursos adicionales
 

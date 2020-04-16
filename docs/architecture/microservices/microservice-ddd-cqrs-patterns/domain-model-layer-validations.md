@@ -2,12 +2,12 @@
 title: Diseñar las validaciones en el nivel de modelo de dominio
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedores | Información sobre conceptos clave de las validaciones de modelo de dominio.
 ms.date: 10/08/2018
-ms.openlocfilehash: 98ccc5df84c9f6f402ecbee83b077c806d6a76fc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d2efc5f3b3267c4573409952791c6e883a01aae2
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75899668"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988510"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>Diseño de validaciones en el nivel de modelo de dominio
 
@@ -55,15 +55,15 @@ Se puede aplicar un enfoque similar en el constructor de la entidad, generando u
 
 Las anotaciones de datos, como los atributos MaxLength o Required, se pueden usar para configurar las propiedades de campo de base de datos de EF Core, como se explica en detalle en la sección [Asignación de tabla](infrastructure-persistence-layer-implemenation-entity-framework-core.md#table-mapping), pero [ya no funcionan para la validación de entidades en EF Core](https://github.com/dotnet/efcore/issues/3680) (tampoco funciona el método <xref:System.ComponentModel.DataAnnotations.IValidatableObject.Validate%2A?displayProperty=nameWithType>), tal y como lo han hecho desde EF 4.x en .NET Framework.
 
-Las anotaciones de datos y la interfaz <xref:System.ComponentModel.DataAnnotations.IValidatableObject> todavía se pueden usar para la validación del modelo durante el enlace de modelos, antes de la invocación de acciones del controlador como de costumbre, pero ese modelo está pensado para ser un ViewModel o DTO, y eso atañe a MVC o la API, no al modelo de dominio.
+Las anotaciones de datos y la interfaz <xref:System.ComponentModel.DataAnnotations.IValidatableObject> todavía se pueden usar para la validación del modelo durante el enlace de modelos, antes de la invocación de acciones del controlador como de costumbre, pero ese modelo está pensado para ser un ViewModel o DTO, y eso atañe a MVC o la API, no al modelo de dominio.
 
-Después de tener la diferencia conceptual clara, todavía puede usar anotaciones de datos y `IValidatableObject` en la clase de entidad para la validación, si las acciones reciben un parámetro de objeto de clase de entidad, lo que no se recomienda. En ese caso, la validación se producirá durante el enlace de modelos, justo antes de invocar la acción y puede comprobar la propiedad ModelState.IsValid del controlador para comprobar el resultado, pero nuevamente, ocurre en el controlador, no antes de guardar el objeto de entidad en el DbContext, tal como se había llevado a cabo desde EF 4.x.
+Después de tener la diferencia conceptual clara, todavía puede usar anotaciones de datos y `IValidatableObject` en la clase de entidad para la validación, si las acciones reciben un parámetro de objeto de clase de entidad, lo que no se recomienda. En ese caso, la validación se producirá durante el enlace de modelos, justo antes de invocar la acción y se puede comprobar la propiedad ModelState.IsValid del controlador para comprobar el resultado, pero nuevamente, ocurre en el controlador, no antes de guardar el objeto de entidad en el DbContext, tal como se había llevado a cabo desde EF 4.x.
 
 Todavía puede implementar la validación personalizada en la clase de entidad con las anotaciones de datos y el método `IValidatableObject.Validate` invalidando el método SaveChanges de DbContext.
 
 Puede ver un ejemplo de implementación de la validación de entidades de `IValidatableObject` en [este comentario en GitHub](https://github.com/dotnet/efcore/issues/3680#issuecomment-155502539). Ese ejemplo no realiza validaciones basadas en atributos, pero deberían ser fáciles de implementar mediante la reflexión en el mismo reemplazo.
 
-Pero desde la óptica del DDD, el modelo de dominio se ajusta mejor con el uso de excepciones en los métodos de comportamiento de la entidad o con la implementación de los patrones de especificación y notificación para aplicar reglas de validación.
+Aunque, desde la óptica del DDD, el modelo de dominio se ajusta mejor con el uso de excepciones en los métodos de comportamiento de la entidad o con la implementación de los patrones de especificación y notificación para aplicar reglas de validación.
 
 Puede resultar lógico usar anotaciones de datos en el nivel de aplicación en las clases ViewModel (en lugar de hacerlo en las entidades de dominio) que aceptarán la entrada a fin de permitirlas para la validación del modelo en la capa de la interfaz de usuario, pero no se debería hacer en la exclusión de validación dentro del modelo de dominio.
 

@@ -2,12 +2,12 @@
 title: Implementación de aplicaciones .NET existentes como contenedores de Windows
 description: Modernización de las aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows | Implementación de aplicaciones .NET existentes como contenedores de Windows
 ms.date: 04/29/2018
-ms.openlocfilehash: 28568ca363bfc8100f78b100f8a7f0242c4f04c9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c99c2e756320fc886203efcbf98a81e571d907e5
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73089556"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80987977"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Implementación de aplicaciones .NET existentes como contenedores de Windows
 
@@ -135,7 +135,7 @@ Ejecutar un contenedor en Windows con o sin el aislamiento de Hyper-V es una dec
 
 ## <a name="the-container-ecosystem-in-azure"></a>El ecosistema de contenedores de Azure
 
-En las secciones anteriores, se ha explicado cuáles son las ventajas de los contenedores de Docker, así como los detalles de las imágenes de contenedor específicas para aplicaciones .NET. Toda la información genérica es fundamental para desarrollar o incluir la aplicación en contenedores.
+En las secciones anteriores, se ha explicado cuáles son las ventajas de los contenedores de Docker, así como los detalles de las imágenes de contenedor específicas para aplicaciones .NET. Toda la información genérica es fundamental para desarrollar o incluir la aplicación en contenedores.
 Sin embargo, al pensar en el entorno de implementación de producción o incluso en entornos de control de calidad y desarrollo y pruebas, Microsoft Azure proporciona una amplia variedad de opciones, un ecosistema de contenedores completo en la nube (que se muestra en el diagrama siguiente). En función de las necesidades específicas de la aplicación, debe elegir uno u otro producto de Azure.
 
 ![Diagrama del ecosistema de contenedores de Azure.](./media/deploy-existing-net-apps-as-windows-containers/azure-container-ecosystem.png)

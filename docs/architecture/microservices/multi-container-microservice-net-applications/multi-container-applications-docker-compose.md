@@ -2,12 +2,12 @@
 title: Definir una aplicación de varios contenedores con docker-compose.yml
 description: Cómo se especifica la composición de microservicios para una aplicación de varios contenedores con docker-compose.yml.
 ms.date: 01/30/2020
-ms.openlocfilehash: 9143801fbbffbdc5b795a232b3333edf71f05c7c
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 029fad8bb912457872dd5817a2f76aed57dc53c6
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523650"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888233"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definir una aplicación de varios contenedores con docker-compose.yml
 
@@ -115,7 +115,7 @@ Si nos centramos en un único contenedor, el microservicio de contenedor catalog
 
 Este servicio de contenedor tiene la siguiente configuración básica:
 
-- Se basa en la imagen **eshop/catalog-api** personalizada. Por simplicidad, no hay ninguna configuración compilación: clave en el archivo. Esto significa que la imagen se debe haber compilado previamente (con docker build) o se debe haber descargado (con el comando docker pull) de cualquier registro de Docker.
+- Se basa en la imagen **eshop/catalog-api** personalizada. Por simplicidad, no hay ninguna compilación: configuración de clave en el archivo. Esto significa que la imagen se debe haber compilado previamente (con docker build) o se debe haber descargado (con el comando docker pull) de cualquier registro de Docker.
 
 - Define una variable de entorno denominada ConnectionString con la cadena de conexión para que la use Entity Framework para obtener acceso a la instancia de SQL Server que contiene el modelo de datos del catálogo. En este caso, el mismo contenedor de SQL Server contiene varias bases de datos. Por lo tanto, necesitará menos memoria en el equipo de desarrollo para Docker, aunque también podría implementar un contenedor de SQL Server para cada base de datos de microservicio.
 
@@ -177,7 +177,7 @@ Podría usar un archivo docker-compose.yml como en los ejemplos simplificados qu
 
 De forma predeterminada, Compose lee dos archivos, un archivo docker-compose.yml y un archivo docker-compose.override.yml opcional. Como se muestra en la figura 6-11, cuando se usa Visual Studio y se habilita la compatibilidad con Docker, Visual Studio también crea un archivo docker-compose.vs.debug.g.yml adicional para depurar la aplicación, como se puede ver en la carpeta obj\\Docker\\ de la carpeta de la solución principal.
 
-![Captura de pantalla de los archivos de un proyecto de docker-compose.](./media/multi-container-applications-docker-compose/docker-compose-file-visual-studio.png)
+![Archivos de un proyecto de Docker Compose.](./media/multi-container-applications-docker-compose/docker-compose-file-visual-studio.png)
 
 **Figura 6-11**. Archivos docker-compose en Visual Studio 2019
 
@@ -201,7 +201,7 @@ Un caso de uso típico es cuando se definen varios archivos compose de manera qu
 
 **Figura 6-12**. Varios archivos docker-compose invalidan los valores del archivo base docker-compose.yml
 
-Se pueden combinar varios archivos docker-compose*.yml para controlar otros entornos. Comienza con el archivo base docker-compose.yml. Este archivo base debe contener los valores de configuración básicos o estáticos que no varían según el entorno. Por ejemplo, eShopOnContainers tiene el siguiente archivo docker-compose.yml (simplificado con menos servicios) como archivo base.
+Se pueden combinar varios archivos docker-compose*.yml para controlar otros entornos. Comienza con el archivo base docker-compose.yml. Este archivo base debe contener los valores de configuración básicos o estáticos que no varían según el entorno. Por ejemplo, la aplicación eShopOnContainers tiene el siguiente archivo docker-compose.yml (simplificado con menos servicios) como archivo base.
 
 ```yml
 #docker-compose.yml (Base)
@@ -448,17 +448,17 @@ ENTRYPOINT ["dotnet", "run"]
 
 Un Dockerfile como este funcionará, pero puede optimizar considerablemente sus imágenes, sobre todo las imágenes de producción.
 
-En el modelo de microservicios y contenedores están iniciando contenedores constantemente. El método habitual de usar los contenedores no reinicia un contenedor inactivo, porque el contenedor se puede descartar. Los orquestadores (como Kubernetes y Azure Service Fabric) tan solo crean instancias de imágenes. Esto significa que tendría que efectuar una optimización precompilando la aplicación al crearla para que el proceso de creación de instancias sea más rápido. Cuando se inicia el contenedor, tendría que estar preparado para ejecutarse. No se debería restaurar y compilar en tiempo de ejecución, con los comandos `dotnet restore` y `dotnet build` desde la CLI de dotnet, como se puede ver en muchas entradas de blog sobre .NET Core y Docker.
+En el modelo de microservicios y contenedores están iniciando contenedores constantemente. El método habitual de usar los contenedores no reinicia un contenedor inactivo, porque el contenedor se puede descartar. Los orquestadores (como Kubernetes y Azure Service Fabric) tan solo crean instancias de imágenes. Esto significa que tendría que efectuar una optimización precompilando la aplicación al crearla para que el proceso de creación de instancias sea más rápido. Cuando se inicia el contenedor, tendría que estar preparado para ejecutarse. No restaure ni compile en tiempo de ejecución con los comandos `dotnet restore` y `dotnet build` de la CLI, como puede ver en las entradas de blog sobre .NET Core y Docker.
 
 El equipo de .NET ha estado trabajando mucho para convertir .NET Core y ASP.NET Core en un marco optimizado para contenedores. .NET Core no solo es un marco ligero con una superficie de memoria pequeña; el equipo se ha centrado en imágenes de Docker optimizadas para los tres escenarios principales y las han publicado en el registro de Docker Hub en *dotnet/core*, empezando por la versión 2.1:
 
 1. **Desarrollo**: La prioridad es la capacidad de iterar con rapidez y depurar cambios, donde el tamaño es secundario.
 
-2. **Compilación**: La prioridad es compilar la aplicación e incluye los archivos binarios y otras dependencias para optimizar los archivos binarios.
+2. **Compilación**: la prioridad es compilar la aplicación y la imagen incluye los archivos binarios y otras dependencias para optimizar los archivos binarios.
 
 3. **Producción**: El foco es la implementación y el inicio rápido de los contenedores, por lo que estas imágenes se limitan a los archivos binarios y el contenido necesario para ejecutar la aplicación.
 
-Para lograrlo, el equipo de .NET proporciona tres variantes básicas en [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/) (en Docker Hub):
+El equipo de .NET proporciona tres variantes básicas en [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/) (en Docker Hub):
 
 1. **sdk**: para los escenarios de desarrollo y compilación
 1. **aspnet**: para los escenarios de producción de ASP.NET

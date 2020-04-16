@@ -2,12 +2,12 @@
 title: .NET Core y código abierto
 ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
-ms.openlocfilehash: a8f44eedddc4424b39f7aedceb4bb8f02c6feb42
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 4d9d42304c58c631020d8b12bec5c038bc0c07ab
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345031"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888246"
 ---
 # <a name="net-core-and-open-source"></a>.NET Core y código abierto
 
@@ -15,19 +15,19 @@ En este artículo se proporciona una breve descripción de .NET Core y se muestr
 
 ## <a name="what-is-net-core"></a>¿Qué es .NET Core?  
 
-.NET Core es una implementación de .NET Standard para uso general, modular, multiplataforma y de código abierto. Contiene muchas de las API de .NET Framework (aunque .NET Core es un conjunto más pequeño), e incluye componentes de entorno en tiempo de ejecución, marco de trabajo, compilador y herramientas que admiten diversos sistemas operativos y destinos de chip. La implementación de .NET Core se debe principalmente a las cargas de trabajo de ASP.NET Core, pero también a la necesidad y la intención de tener una implementación más moderna. Se puede utilizar en escenarios de dispositivos, nube e incrustados/IoT.  
+.NET Core es una implementación de .NET Standard para uso general, modular, multiplataforma y de código abierto. Contiene muchas de las API de .NET Framework (aunque .NET Core es un conjunto más pequeño), e incluye componentes de entorno en tiempo de ejecución, marco, compilador y herramientas que admiten diversos sistemas operativos y destinos de chip. La implementación de .NET Core se debe principalmente a las cargas de trabajo de ASP.NET Core, pero también a la necesidad y la intención de tener una implementación más moderna. Se puede utilizar en escenarios de dispositivos, nube e insertados/IoT.  
   
 Para empezar a trabajar con .NET Core, vea el tutorial de .NET [Hola mundo en 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro).  
   
 Estas son las principales características de .NET Core:
   
-- **Multiplataforma**: .NET Core proporciona una funcionalidad clave para implementar las características de la aplicación que necesita y reutilizar este código independientemente del destino de la plataforma. En estos momentos, es compatible con los principales sistemas operativos (SO): Windows, Linux y macOS. Puede escribir aplicaciones y bibliotecas que se ejecutan sin modificaciones en todos los sistemas operativos compatibles. Para ver una lista de todos los sistemas operativos compatibles, visite [.NET Core roadmap](https://github.com/dotnet/core/blob/master/roadmap.md) (Mapa de ruta de .NET Core).
+- **Multiplataforma**: .NET Core proporciona una funcionalidad clave para implementar las características de la aplicación que necesita y reutilizar este código independientemente del destino de la plataforma. En la actualidad es compatible con los tres sistemas operativos (SO) principales: Windows, Linux y macOS. Puede escribir aplicaciones y bibliotecas que se ejecutan sin modificaciones en todos los sistemas operativos compatibles. Para ver una lista de todos los sistemas operativos compatibles, visite [.NET Core roadmap](https://github.com/dotnet/core/blob/master/roadmap.md) (Mapa de ruta de .NET Core).
   
-- **Código abierto**: .NET Core es uno de los muchos proyectos que administra [.NET Foundation](https://www.dotnetfoundation.org/) y está disponible en [GitHub](https://github.com/).  Al tratarse de un proyecto de código abierto, .NET Core favorece que el proceso de desarrollo sea más transparente y que exista una comunidad activa y comprometida.  
+- **Código abierto**: .NET Core es uno de los muchos proyectos que administra [.NET Foundation](https://www.dotnetfoundation.org/) y está disponible en [GitHub](https://github.com/). Como proyecto de código abierto, .NET Core favorece que el proceso de desarrollo sea más transparente y que exista una comunidad activa y comprometida.  
   
-- **Desarrollo flexible**: hay dos modos principalmente para desarrollar una aplicación, implementación basada en marco e implementación autocontenida. Con la implementación basada en marco, solo se instalan su aplicación y las dependencias de terceros, y la aplicación requiere la presencia de una versión de .NET Core en todo el sistema.  Con la implementación autocontenida, la versión de .NET Core que se utiliza para compilar su aplicación también se implementa junto con la aplicación y las dependencias de terceros, y se puede ejecutar paralelamente con otras versiones.    Para más información, consulte el tema [Implementación de aplicaciones .NET Core](../../core/deploying/index.md).
+- **Desarrollo flexible**: hay dos modos principalmente para desarrollar una aplicación, implementación basada en marco e implementación autocontenida. Con la implementación basada en marco, solo se instalan su aplicación y las dependencias de terceros, y la aplicación requiere la presencia de una versión de .NET Core en todo el sistema. Con la implementación autocontenida, la versión de .NET Core que se utiliza para compilar la aplicación también se implementa junto con la aplicación y las dependencias de terceros, y puede ejecutarse en paralelo con otras versiones. Para obtener más información, consulte el tema [Implementación de aplicaciones .NET Core](../../core/deploying/index.md).
 
-- **Modular**: .NET Core es modular, ya que se publica a través de NuGet en paquetes de ensamblado más reducidos. En lugar de un ensamblado grande que contiene la mayor parte de la funcionalidad básica, .NET Core está disponible como paquetes más pequeños centrados en las características. Esta característica nos permite un modelo de desarrollo más ágil y le permite optimizar su aplicación para incluir solo los paquetes de NuGet que necesita. Entre las ventajas de una menor superficie de aplicación se incluyen una mayor seguridad, mantenimiento reducido, rendimiento mejorado y menores costes en un modelo de suscripción ajustado a sus necesidades.  
+- **Modular**: .NET Core es modular, ya que se publica a través de NuGet en paquetes de ensamblado más reducidos. En lugar de un ensamblado grande que contiene la mayor parte de la función básica, .NET Core está disponible como paquetes más pequeños centrados en las características. Esta modularidad nos permite un modelo de desarrollo más ágil y le permite optimizar su aplicación para incluir solo los paquetes de NuGet que necesita. Entre las ventajas de una menor superficie de aplicación se incluyen una mayor seguridad, mantenimiento reducido, rendimiento mejorado y menores costes en un modelo de suscripción ajustado a sus necesidades.  
   
 ## <a name="the-net-core-platform"></a>Plataforma .NET Core
   

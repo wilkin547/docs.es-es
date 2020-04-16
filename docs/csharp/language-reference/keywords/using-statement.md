@@ -1,55 +1,55 @@
 ---
 title: using (Instrucción, Referencia de C#)
-ms.date: 10/15/2019
+ms.date: 04/07/2020
 helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
-ms.openlocfilehash: 52cde99fd029ce50f159b2a87fbfbf47fc79dccc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a237a90b4782e0460857c3d5d887771bcc8ccaaf
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712967"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989186"
 ---
 # <a name="using-statement-c-reference"></a>using (Instrucción, Referencia de C#)
 
-Ofrece una sintaxis adecuada que garantiza el uso correcto de objetos <xref:System.IDisposable>.
+Ofrece una sintaxis adecuada que garantiza el uso correcto de objetos <xref:System.IDisposable>. A partir de C# 8.0, la instrucción `using` garantiza el uso correcto de los objetos <xref:System.IAsyncDisposable>.
 
 ## <a name="example"></a>Ejemplo
 
 En el ejemplo siguiente se muestra cómo usar la instrucción `using`.
 
-[!code-csharp[csrefKeywordsNamespace#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#4)]
+:::code language="csharp" source="snippets/usings.cs" id="SnippetFirstExample":::
 
 A partir de C# 8.0, puede usar la siguiente sintaxis alternativa para la instrucción `using` que no requiere llaves:
 
-[!code-csharp[csrefKeywordsNamespace#New](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#ModernUsing)]
+:::code language="csharp" source="snippets/usings.cs" id="SnippetModernUsing":::
 
 ## <a name="remarks"></a>Comentarios
 
-<xref:System.IO.File> y <xref:System.Drawing.Font> son ejemplos de tipos administrados que acceden a recursos no administrados (en este caso, identificadores de archivo y contextos de dispositivo). Hay muchos otros tipos de recursos no administrados y tipos de la biblioteca de clases que los encapsulan. Todos estos tipos deben implementar la interfaz <xref:System.IDisposable>.
+<xref:System.IO.File> y <xref:System.Drawing.Font> son ejemplos de tipos administrados que acceden a recursos no administrados (en este caso, identificadores de archivo y contextos de dispositivo). Hay muchos otros tipos de recursos no administrados y tipos de la biblioteca de clases que los encapsulan. Todos estos tipos deben implementar la interfaz <xref:System.IDisposable> o la interfaz <xref:System.IAsyncDisposable>.
 
-Cuando la duración de un objeto `IDisposable` se limita a un único método, debe declarar y crear instancias del mismo en la instrucción `using`. La instrucción `using` llama al método <xref:System.IDisposable.Dispose%2A> del objeto de forma correcta y (cuando se usa tal y como se muestra anteriormente) también hace que el propio objeto salga del ámbito en cuanto se llame a <xref:System.IDisposable.Dispose%2A>. Dentro del bloque `using`, el objeto es de solo lectura y no se puede modificar ni reasignar.
+Cuando la duración de un objeto `IDisposable` se limita a un único método, debe declarar y crear instancias del mismo en la instrucción `using`. La instrucción `using` llama al método <xref:System.IDisposable.Dispose%2A> del objeto de forma correcta y (cuando se usa tal y como se muestra anteriormente) también hace que el propio objeto salga del ámbito en cuanto se llame a <xref:System.IDisposable.Dispose%2A>. Dentro del bloque `using`, el objeto es de solo lectura y no se puede modificar ni reasignar. Si el objeto implementa `IAsyncDisposable` en lugar de `IDisposable`, la instrucción `using` llama al objeto <xref:System.IAsyncDisposable.DisposeAsync%2A> y `awaits` al objeto <xref:System.Threading.Tasks.Task> devuelto.
 
-La instrucción `using` asegura que se llama al método <xref:System.IDisposable.Dispose%2A> incluso cuando se produzca una excepción en el bloque `using`. Puede lograr el mismo resultado colocando el objeto dentro de un bloque `try` y llamando luego a <xref:System.IDisposable.Dispose%2A> en un bloque `finally`; de hecho, es así cómo el compilador traduce la instrucción `using`. El ejemplo de código anterior se extiende al siguiente código en tiempo de compilación (tenga en cuenta las llaves adicionales para crear el ámbito limitado del objeto):
+La instrucción `using` asegura que se llama al método <xref:System.IDisposable.Dispose%2A> (o <xref:System.IAsyncDisposable.DisposeAsync%2A>) aunque se produzca una excepción en el bloque `using`. Puede lograr el mismo resultado colocando el objeto dentro de un bloque `try` y llamando luego a <xref:System.IDisposable.Dispose%2A> (o <xref:System.IAsyncDisposable.DisposeAsync%2A>) en un bloque `finally`; de hecho, es así cómo el compilador traduce la instrucción `using`. El ejemplo de código anterior se extiende al siguiente código en tiempo de compilación (tenga en cuenta las llaves adicionales para crear el ámbito limitado del objeto):
 
-[!code-csharp[csrefKeywordsNamespace#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#5)]
+:::code language="csharp" source="snippets/usings.cs" id="SnippetTryFinallyExample":::
 
-La nueva sintaxis de la instrucción `using` se traduce en un código muy similar. Se abre el bloque `try` en el que se declara la variable. El bloque `finally` se agrega al cierre del bloque de inclusión, normalmente, al final de un método.
+La nueva sintaxis de la instrucción `using` se traduce en un código similar. Se abre el bloque `try` en el que se declara la variable. El bloque `finally` se agrega al cierre del bloque de inclusión, normalmente, al final de un método.
 
-Vea el tema [try-finally](try-finally.md) para obtener más información sobre la instrucción `try`-`finally`.
+Consulte el artículo sobre [try-finally](try-finally.md) para obtener más información sobre la instrucción `try`-`finally`.
 
-Se pueden declarar varias instancias de un tipo en la instrucción `using`, tal y como se muestra en el ejemplo siguiente:
+Se pueden declarar varias instancias de un tipo en una sola instrucción `using`, tal y como se muestra en el ejemplo siguiente. Tenga en cuenta que no se pueden usar variables con tipo implícito (`var`) cuando se declaran varias variables en una sola instrucción:
 
-[!code-csharp[csrefKeywordsNamespace#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#6)]
+:::code language="csharp" source="snippets/usings.cs" id="SnippetDeclareMultipleVariables":::
 
-Puede combinar varias declaraciones del mismo tipo con la nueva sintaxis introducida con C# 8 también. Esto se muestra en el ejemplo siguiente:
+También puede combinar varias declaraciones del mismo tipo con la nueva sintaxis introducida con C# 8, tal y como se muestra en el ejemplo siguiente:
 
-[!code-csharp[csrefKeywordsNamespace#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#MultipleUsing)]
+:::code language="csharp" source="snippets/usings.cs" id="SnippetModernMultipleVariables":::
 
-Puede crear una instancia del objeto de recurso y luego pasar la variable a la instrucción `using`, pero esto no es un procedimiento recomendado. En este caso, después de que el control abandone el bloque `using` el objeto permanece en el ámbito, pero probablemente ya no tenga acceso a sus recursos no administrados. En otras palabras, ya no se inicializa totalmente. Si intenta usar el objeto fuera del bloque `using`, corre el riesgo de iniciar una excepción. Por este motivo, suele ser mejor crear una instancia del objeto en la instrucción `using` y limitar su ámbito al bloque `using`.
+Puede crear una instancia del objeto de recurso y luego pasar la variable a la instrucción `using`, pero esto no es un procedimiento recomendado. En este caso, después de que el control abandone el bloque `using` el objeto permanece en el ámbito, pero probablemente ya no tenga acceso a sus recursos no administrados. En otras palabras, ya no se inicializa totalmente. Si intenta usar el objeto fuera del bloque `using`, corre el riesgo de iniciar una excepción. Por este motivo, es mejor crear una instancia del objeto en la instrucción `using` y limitar su ámbito al bloque `using`.
 
-[!code-csharp[csrefKeywordsNamespace#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#7)]
+:::code language="csharp" source="snippets/usings.cs" id="SnippetDeclareBeforeUsing":::
 
 Para obtener más información sobre cómo eliminar objetos `IDisposable`, vea [Uso de objetos que implementan IDisposable](../../../standard/garbage-collection/using-objects.md).
 

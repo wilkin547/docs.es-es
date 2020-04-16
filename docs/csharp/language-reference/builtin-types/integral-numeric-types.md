@@ -32,12 +32,12 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 394a809a9a2f45f4aee652d0eca892f62f0f2e54
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4b2506f48c3e72ff838a07087c8c5d9ea63bb46c
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77093206"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121466"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Tipos numéricos enteros (referencia de C#)
 
@@ -118,9 +118,9 @@ var longVariable = (long)42;
 
 ## <a name="conversions"></a>Conversiones
 
-Puede convertir un tipo numérico entero en cualquier otro tipo numérico entero. Si el tipo de destino puede almacenar todos los valores del tipo de origen, la conversión es implícita. De lo contrario, se necesita usar el [operador de conversión `()`](../operators/type-testing-and-cast.md#cast-operator-) para invocar una conversión explícita. Para obtener más información, consulte [Conversiones numéricas integradas](numeric-conversions.md).
+Puede convertir un tipo numérico entero en cualquier otro tipo numérico entero. Si el tipo de destino puede almacenar todos los valores del tipo de origen, la conversión es implícita. De lo contrario, debe usar una [expresión Cast](../operators/type-testing-and-cast.md#cast-expression) para realizar una conversión explícita. Para obtener más información, consulte [Conversiones numéricas integradas](numeric-conversions.md).
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 Para más información, vea las secciones siguientes de la [Especificación del lenguaje C#](~/_csharplang/spec/introduction.md):
 

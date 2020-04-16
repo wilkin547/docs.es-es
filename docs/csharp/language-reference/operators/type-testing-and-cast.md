@@ -1,5 +1,5 @@
 ---
-title: 'Operadores de conversión y prueba de tipos: Referencia de C#'
+title: 'Operadores de prueba de tipos y expresión de conversión: referencia de C#'
 description: Obtenga información sobre los operadores de C# que puede usar para comprobar el tipo de resultado de la expresión y convertirla en otro tipo, si es necesario.
 ms.date: 06/21/2019
 author: pkulikov
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 2dc215a91c55be15e8eee488f0030f41e3492af5
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 5a4f1d4c0c2ddd0d3967e15090d8f8c1ac42f83e
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507092"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121414"
 ---
-# <a name="type-testing-and-cast-operators-c-reference"></a>Operadores de conversión y prueba de tipos (Referencia de C#)
+# <a name="type-testing-operators-and-cast-expression-c-reference"></a>Operadores de prueba de tipos y expresión de conversión (referencia de C#)
 
-Puede usar los siguientes operadores para realizar la comprobación de tipos o la conversión de tipos:
+Puede usar los siguientes operadores y expresiones para realizar la comprobación de tipos o la conversión de tipos:
 
 - [operador is](#is-operator): para comprobar si el tipo en tiempo de ejecución de una expresión es compatible con un tipo determinado.
 - [operador as](#as-operator): para convertir explícitamente una expresión a un tipo determinado si su tipo en tiempo de ejecución es compatible con ese tipo.
-- [operador de conversión ()](#cast-operator-): para realizar una conversión explícita.
+- [expresión Cast](#cast-expression): para realizar una conversión explícita.
 - [operador typeof](#typeof-operator): para obtener la instancia <xref:System.Type?displayProperty=nameWithType> para un tipo.
 
 ## <a name="is-operator"></a>Operador is
@@ -76,7 +76,7 @@ Para obtener más información sobre el patrón de tipo y otros patrones admitid
 
 ## <a name="as-operator"></a>Operador as
 
-El operador `as` convierte explícitamente el resultado de una expresión en una referencia determinada o un tipo de valor que acepta valores NULL. Si la conversión no es posible, el operador `as` devuelve `null`. A diferencia del [operador de conversión ()](#cast-operator-), el operador `as` no genera nunca una excepción.
+El operador `as` convierte explícitamente el resultado de una expresión en una referencia determinada o un tipo de valor que acepta valores NULL. Si la conversión no es posible, el operador `as` devuelve `null`. A diferencia de la [expresión Cast](#cast-expression), el operador `as` no genera nunca una excepción.
 
 La expresión con el formato
 
@@ -92,7 +92,7 @@ E is T ? (T)(E) : (T)null
 
 salvo que `E` solo se evalúa una vez.
 
-El operador `as` solo considera las conversiones de referencia, las que aceptan valores NULL, boxing y unboxing. No puede usar el operador `as` para realizar una conversión definida por el usuario. Para hacerlo, utilice el [operador de conversión ()](#cast-operator-).
+El operador `as` solo considera las conversiones de referencia, las que aceptan valores NULL, boxing y unboxing. No puede usar el operador `as` para realizar una conversión definida por el usuario. Para ello, use una [expresión Cast](#cast-expression).
 
 En el siguiente ejemplo se muestra el uso del operador `as`:
 
@@ -101,7 +101,7 @@ En el siguiente ejemplo se muestra el uso del operador `as`:
 > [!NOTE]
 > Como se muestra en el ejemplo anterior, se necesita comparar el resultado de la expresión `as` con `null` para comprobar si una conversión es correcta. A partir de C# 7.0, puede usar el [operador is](#type-testing-with-pattern-matching) para probar si la conversión es correcta y, si es así, asignar su resultado a una nueva variable.
 
-## <a name="cast-operator-"></a>Operador de conversión ()
+## <a name="cast-expression"></a>Expresión Cast
 
 Una expresión de conversión con el formato `(T)E` realiza una conversión explícita del resultado de la expresión `E` al tipo `T`. Si no existe ninguna conversión explícita del tipo de `E` al tipo `T`, se producirá un error en tiempo de compilación. En el tiempo de ejecución, una conversión explícita podría no completarse correctamente y una expresión de conversión podría generar una excepción.
 
@@ -141,7 +141,7 @@ Los operadores `is`, `as` y `typeof` no se pueden sobrecargar.
 
 Un tipo definido por el usuario no se puede sobrecargar el operador `()`, pero puede definir conversiones de tipos personalizadas que pueden realizarse mediante una expresión de conversión. Para obtener más información, vea [Operadores de conversión definidos por el usuario](user-defined-conversion-operators.md).
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 Para más información, vea las secciones siguientes de la [Especificación del lenguaje C#](~/_csharplang/spec/introduction.md):
 

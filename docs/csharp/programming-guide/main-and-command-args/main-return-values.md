@@ -4,12 +4,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 3d97ab2b3f53179cb184f2ad3944ea29ff5566a2
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 7061b6c1988da9f6dfac115ee555a914531df863
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345129"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805928"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Valores devueltos de Main() (Guía de programación de C#)
 
@@ -21,11 +21,11 @@ También puede devolver un valor `int`:
 
  [!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
 
-Si el valor devuelto de `Main` no se usa, la devolución de `void` permite contar con un código ligeramente más simple. En cambio, devolver un valor entero permite que el programa comunique información de estado a otros programas o scripts que invocan el archivo ejecutable. El valor devuelto de `Main` se trata como el código de salida para el proceso. Si se devuelve `void` de `Main` el código de salida será implícitamente `0`. En el ejemplo siguiente se muestra cómo se puede acceder al valor devuelto de `Main`.
+Si el valor devuelto de `Main` no se usa, la devolución de `void` permite contar con un código ligeramente más simple. En cambio, devolver un valor entero permite que el programa comunique información de estado a otros programas o scripts que invocan el archivo ejecutable. El valor devuelto de `Main` se trata como el código de salida para el proceso. Si se devuelve `void` de `Main`, el código de salida será implícitamente `0`. En el ejemplo siguiente se muestra cómo se puede acceder al valor devuelto de `Main`.
 
 ## <a name="example"></a>Ejemplo
 
-En este ejemplo se usan las herramientas de línea de comandos de [.NET Core](../../../core/index.yml). Si no está familiarizado con las herramientas de línea de comandos de .NET Core, puede obtener información sobre ellas en este [tema de introducción](../../../core/tutorials/cli-create-console-app.md).
+En este ejemplo se usan las herramientas de línea de comandos de [.NET Core](../../../core/index.yml). Si no está familiarizado con las herramientas de línea de comandos de .NET Core, puede obtener información sobre ellas en este [artículo de introducción](../../../core/tutorials/cli-create-console-app.md).
 
 Modifique el método `Main` en *program.cs* como se indica a continuación:
 
@@ -33,7 +33,7 @@ Modifique el método `Main` en *program.cs* como se indica a continuación:
 
 Cuando un programa se ejecuta en Windows, cualquier valor devuelto por la función `Main` se almacena en una variable de entorno. Esta variable de entorno se puede recuperar mediante `ERRORLEVEL` desde un archivo por lotes, o mediante `$LastExitCode` desde PowerShell.
 
-Puede compilar la aplicación mediante el comando [ de la ](../../../core/tools/dotnet.md)CLI de dotnet`dotnet build`.
+Puede compilar la aplicación mediante el comando `dotnet build` de la [CLI de dotnet](../../../core/tools/dotnet.md).
 
 Después, cree un script de PowerShell para ejecutar la aplicación y mostrar el resultado. Pegue el código siguiente en un archivo de texto y guárdelo como `test.ps1` en la carpeta que contiene el proyecto. Ejecute el script de PowerShell. Para ello, escriba `test.ps1` en el símbolo del sistema de PowerShell.
 
@@ -53,7 +53,7 @@ if ($LastExitCode -eq 0) {
 Write-Host "Return value = " $LastExitCode
 ```
 
-## <a name="sample-output"></a>Salida de ejemplo
+## <a name="sample-output"></a>Resultados de ejemplo
 
 ```txt
 Execution succeeded

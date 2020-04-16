@@ -2,12 +2,12 @@
 title: Diseño de la capa de persistencia de infraestructura
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedores | Información sobre el modelo de repositorio en el diseño de la capa de persistencia de infraestructura.
 ms.date: 10/08/2018
-ms.openlocfilehash: e10c8c1569089d5c8274df655ad7a12f2ebb7c22
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1b2665e81ade60affa84563121c04bca08537f07
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846814"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988484"
 ---
 # <a name="design-the-infrastructure-persistence-layer"></a>Diseño del nivel de persistencia de infraestructura
 
@@ -23,7 +23,7 @@ El modelo de repositorio es una manera bien documentada de trabajar con un orige
 
 ### <a name="define-one-repository-per-aggregate"></a>Definir un repositorio por agregado
 
-Para cada agregado o raíz agregada, se debe crear una clase de repositorio. En un microservicio basado en patrones de diseño controlado por dominios (DDD), el único canal que se debe usar para actualizar la base de datos deben ser los repositorios. Esto se debe a que tienen una relación uno a uno con la raíz agregada, que controla las invariables del agregado y la coherencia transaccional. Es correcto consultar la base de datos a través de otros canales (como con un enfoque CQRS), dado que las consultas no cambian el estado de la base de datos. Pero el área transaccional (es decir, las actualizaciones) siempre se debe controlar mediante los repositorios y las raíces agregadas.
+Para cada agregado o raíz agregada, se debe crear una clase de repositorio. En un microservicio basado en patrones de diseño controlado por dominios (DDD), el único canal que se debe usar para actualizar la base de datos deben ser los repositorios. Esto se debe a que tienen una relación uno a uno con la raíz agregada, que controla los elementos invariables del agregado y la coherencia transaccional. Es correcto consultar la base de datos a través de otros canales (como con un enfoque CQRS), dado que las consultas no cambian el estado de la base de datos. Pero el área transaccional (es decir, las actualizaciones) siempre se debe controlar mediante los repositorios y las raíces agregadas.
 
 Básicamente, un repositorio permite rellenar los datos en memoria que proceden de la base de datos en forma de entidades de dominio. Una vez que las entidades se encuentran en memoria, se pueden cambiar y después volver a conservar en la base de datos a través de transacciones.
 
@@ -84,7 +84,7 @@ Se pueden producir errores en las conexiones a las bases de datos y, más import
 
 En cuanto a la separación de intereses para las pruebas unitarias, la lógica funciona en entidades de dominio en memoria, ya que supone que la clase de repositorio las ha entregado. Una vez que la lógica modifica las entidades de dominio, asume que la clase del repositorio las almacenará correctamente. El aspecto importante aquí es crear pruebas unitarias para el modelo de dominio y su lógica de dominio. Las raíces agregadas son los límites de coherencia principales en DDD.
 
-Los repositorios que se implementa en eShopOnContainers se basan en la implementación de DbContext de EF Core de los patrones repositorio y unidad de trabajo mediante el seguimiento de cambios, por lo que no duplican esta funcionalidad.
+Los repositorios que se implementan en eShopOnContainers se basan en la implementación de DbContext de EF Core de los patrones de repositorio y unidad de trabajo mediante el seguimiento de cambios, por lo que no duplican esta funcionalidad.
 
 ### <a name="the-difference-between-the-repository-pattern-and-the-legacy-data-access-class-dal-class-pattern"></a>La diferencia entre el modelo de repositorio y el patrón de clases de acceso a datos (DAL) heredado
 
@@ -102,9 +102,9 @@ Los repositorios personalizados son útiles por los motivos citados anteriorment
 
 Por ejemplo, Jimmy Bogard, al proporcionar información directa para esta guía, afirmó lo siguiente:
 
-> Este probablemente será mi comentario más importante. No soy un gran defensor de los repositorios, sobre todo porque ocultan los detalles importantes del mecanismo de persistencia subyacente. Por ese motivo también prefiero MediatR para los comandos. Puedo usar toda la funcionalidad de la capa de persistencia e insertar todo ese comportamiento de dominio en las raíces agregadas. Normalmente no me interesa simular los repositorios: sigo necesitando que esa prueba de integración esté con la acción real. La elección de CQRS significaba que realmente ya no necesitábamos los repositorios.
+> Este probablemente sea mi comentario más importante. No soy un gran defensor de los repositorios, sobre todo porque ocultan los detalles importantes del mecanismo de persistencia subyacente. Por ese motivo también prefiero MediatR para los comandos. Puedo usar toda la funcionalidad de la capa de persistencia e insertar todo ese comportamiento de dominio en las raíces agregadas. Normalmente no me interesa simular los repositorios: sigo necesitando que esa prueba de integración esté con la acción real. La elección de CQRS significaba que realmente ya no necesitábamos los repositorios.
 
-Los repositorios pueden ser útiles, pero no esenciales para el diseño de DDD, de la misma forma que el patrón de agregado y el modelo de dominio enriquecido lo son. Por tanto, use el modelo de repositorio o no, como considere oportuno. En cualquier caso, se usará el modelo de repositorio siempre que se use EF Core, aunque en este caso el repositorio cubre todo el microservicio o contexto delimitado.
+Los repositorios pueden ser útiles, pero no esenciales para el diseño de DDD, de la misma forma que el patrón de agregado y el modelo de dominio enriquecido lo son. Por tanto, use el modelo de repositorio o no, como considere oportuno. En cualquier caso, se usará el modelo de repositorio siempre que se use EF Core aunque, en este caso, el repositorio abarca todo el microservicio o contexto delimitado.
 
 ## <a name="additional-resources"></a>Recursos adicionales
 

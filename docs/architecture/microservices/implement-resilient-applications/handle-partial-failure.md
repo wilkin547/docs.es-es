@@ -2,12 +2,12 @@
 title: Controlar errores parciales
 description: Obtenga información sobre cómo controlar errores parciales con elegancia. Un microservicio podría no ser totalmente funcional y aun así realizar trabajo útil.
 ms.date: 10/16/2018
-ms.openlocfilehash: f00e5349df74b543deb6ac941c751cb130b3837c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0300719360e1a2500db0af8454c91fdfe2e5b09b
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73732964"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988875"
 ---
 # <a name="handle-partial-failure"></a>Controlar errores parciales
 
@@ -19,7 +19,7 @@ Por ejemplo, considere la página de detalles Order de la aplicación de ejemplo
 
 **Figura 8-1**. Errores parciales debido a dependencias que afectan a la disponibilidad del subproceso de servicio
 
-En una aplicación basada en microservicios de gran tamaño, cualquier error parcial se puede amplificar, especialmente si la mayor parte de la interacción de los microservicios internos se basa en llamadas HTTP sincrónicas (lo que se considera un anti-patrón). Piense en un sistema que recibe millones de llamadas entrantes al día. Si el sistema tiene un diseño incorrecto basado en cadenas largas de llamadas HTTP sincrónicas, estas llamadas entrantes podrían dar lugar a muchos más millones de llamadas salientes (supongamos una proporción 1:4) a decenas de microservicios internos como dependencias sincrónicas. Esta situación se muestra en la figura 8-2, especialmente la dependencia \#3, que inicia una cadena y llama a la dependencia 4. que llama a la dependencia 5.
+En una aplicación basada en microservicios de gran tamaño, cualquier error parcial se puede amplificar, especialmente si la mayor parte de la interacción de los microservicios internos se basa en llamadas HTTP sincrónicas (lo que se considera un anti-patrón). Piense en un sistema que recibe millones de llamadas entrantes al día. Si el sistema tiene un diseño incorrecto basado en cadenas largas de llamadas HTTP sincrónicas, estas llamadas entrantes podrían dar lugar a muchos más millones de llamadas salientes (supongamos una proporción 1:4) a decenas de microservicios internos como dependencias sincrónicas. Esta situación se muestra en la figura 8-2, especialmente la dependencia \#3, que inicia una cadena y llama a la dependencia 4. que llama a la dependencia 5.
 
 ![Diagrama que muestra varias dependencias distribuidas.](./media/handle-partial-failure/multiple-distributed-dependencies.png)
 

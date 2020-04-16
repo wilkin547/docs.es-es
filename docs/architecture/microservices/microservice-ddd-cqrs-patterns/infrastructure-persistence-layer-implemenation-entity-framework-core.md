@@ -2,18 +2,18 @@
 title: Implementación del nivel de persistencia de la infraestructura con Entity Framework Core
 description: Arquitectura de microservicios de .NET para aplicaciones de .NET en contenedor | Información sobre la implementación del nivel de persistencia de la infraestructura con Entity Framework Core.
 ms.date: 01/30/2020
-ms.openlocfilehash: 2d28d9246be3e102625ed5bb67ee1ccede03c942
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 7ab3be0d6a5affda478f7ec8f6c356571e304759
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523324"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805483"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementación del nivel de persistencia de infraestructura con Entity Framework Core
 
 Al utilizar bases de datos relacionales, como SQL Server, Oracle o PostgreSQL, se recomienda implementar el nivel de persistencia basado en Entity Framework (EF). EF es compatible con LINQ y proporciona objetos fuertemente tipados para el modelo, así como una persistencia simplificada en la base de datos.
 
-Entity Framework hace mucho tiempo que forma parte de .NET Framework. Al utilizar .NET Core, también debe usar Entity Framework Core, que se ejecuta en Windows o Linux de la misma manera que .NET Core. EF Core es una reescritura completa de Entity Framework, que se implementa con una superficie mucho menor y con mejoras importantes en el rendimiento.
+Entity Framework hace mucho tiempo que forma parte de .NET Framework. Al utilizar .NET Core, también debe usar Entity Framework Core, que se ejecuta en Windows o Linux de la misma manera que .NET Core. EF Core es una reescritura completa de Entity Framework, que se implementa con una superficie mucho menor y con mejoras importantes en el rendimiento.
 
 ## <a name="introduction-to-entity-framework-core"></a>Introducción a Entity Framework Core
 
@@ -78,7 +78,7 @@ public class Order : Entity
 }
 ```
 
-Tenga en cuenta que solo se puede obtener acceso de solo lectura a la propiedad `OrderItems`, mediante `IReadOnlyCollection<OrderItem>`. Este tipo es de solo lectura, por lo que está protegido frente a las actualizaciones externas normales.
+Solo se puede tener acceso de solo lectura a la propiedad `OrderItems` con `IReadOnlyCollection<OrderItem>`. Este tipo es de solo lectura, por lo que está protegido frente a las actualizaciones externas normales.
 
 EF Core proporciona una manera de asignar el modelo de dominio a la base de datos física sin que "contamine" el modelo de dominio. Se trata de código POCO puro de .NET, puesto que la acción de asignación se implementa en el nivel de persistencia. En esa acción de asignación, debe configurar la asignación de campos a base de datos. En el siguiente ejemplo del método `OnModelCreating` de `OrderingContext` y la clase `OrderEntityTypeConfiguration`, la llamada a `SetPropertyAccessMode` indica a EF Core que debe acceder a la propiedad `OrderItems` a través de su campo.
 
@@ -88,7 +88,7 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
    // ...
    modelBuilder.ApplyConfiguration(new OrderEntityTypeConfiguration());
-   // Other entities’ configuration ...
+   // Other entities' configuration ...
 }
 
 // At OrderEntityTypeConfiguration.cs from eShopOnContainers
@@ -110,7 +110,7 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 }
 ```
 
-Al usar campos en lugar de propiedades, se conserva la entidad `OrderItem` como si tuviera una propiedad `List<OrderItem>`. Pero expone un descriptor de acceso único, el método `AddOrderItem`, para agregar nuevos elementos al pedido. Como resultado, el comportamiento y los datos permanecen unidos y son coherentes a lo largo de cualquier código de aplicación que utilice el modelo de dominio.
+Al usar campos en lugar de propiedades, se conserva la entidad `OrderItem` como si tuviera una propiedad `List<OrderItem>`. Pero expone un descriptor de acceso único, el método `AddOrderItem`, para agregar nuevos elementos al pedido. Como resultado, el comportamiento y los datos permanecen unidos y son coherentes a lo largo de cualquier código de aplicación que utilice el modelo de dominio.
 
 ## <a name="implement-custom-repositories-with-entity-framework-core"></a>Implementación de los repositorios personalizados con Entity Framework Core
 
@@ -154,7 +154,7 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositor
 }
 ```
 
-Tenga en cuenta que la interfaz IBuyerRepository proviene del nivel de modelo de dominio como un contrato. Pero la implementación del repositorio se realiza en el nivel de persistencia e infraestructura.
+La interfaz `IBuyerRepository` proviene del nivel de modelo de dominio como contrato. Pero la implementación del repositorio se realiza en el nivel de persistencia e infraestructura.
 
 DbContext de EF pasa mediante el constructor a través de la inserción de dependencias. Se comparte entre varios repositorios dentro del mismo ámbito de solicitud HTTP gracias a su duración predeterminada (`ServiceLifetime.Scoped`) en el contenedor de IoC (que también puede establecerse explícitamente con `services.AddDbContext<>`).
 
@@ -168,11 +168,11 @@ Pero los métodos de consulta reales para obtener los datos que se van a enviar 
 
 ### <a name="using-a-custom-repository-versus-using-ef-dbcontext-directly"></a>Uso de un repositorio personalizado frente al uso de DbContext EF directamente
 
-La clase DbContext de Entity Framework se basa en los patrones de unidad de trabajo y repositorio, y puede utilizarse directamente desde el código, así como desde un controlador MVC de ASP.NET Core. Esta es la forma de crear el código más sencillo, como en el microservicio de catálogo CRUD en eShopOnContainers. En los casos en los que quiera disponer del código más sencillo posible, puede utilizar directamente la clase DbContext, igual que muchos desarrolladores.
+La clase DbContext de Entity Framework se basa en los patrones de unidad de trabajo y repositorio, y puede utilizarse directamente desde el código, así como desde un controlador de ASP.NET Core MVC. Los patrones de unidad de trabajo y repositorio dan como resultado el código más sencillo, como en el microservicio de catálogo CRUD en eShopOnContainers. En los casos en los que quiera disponer del código más sencillo posible, puede utilizar directamente la clase DbContext, igual que muchos desarrolladores.
 
 Pero implementar repositorios personalizados ofrece varias ventajas al implementar aplicaciones o microservicios más complejos. Los patrones de unidad de trabajo y repositorio están diseñados para encapsular el nivel de persistencia de infraestructura de tal modo que se separe de los niveles de aplicación y de modelo de dominio. Implementar estos patrones puede facilitar el uso de repositorios ficticios que simulen el acceso a la base de datos.
 
-En la Figura 7-18 puede ver las diferencias entre no usar repositorios (directamente mediante DbContext de EF) y usar repositorios que faciliten la simulación de los repositorios.
+En la figura 7-18 puede ver las diferencias entre no usar repositorios (directamente mediante DbContext de EF) y usar repositorios que faciliten la simulación de los repositorios.
 
 ![Diagrama que muestra los componentes y el flujo de datos en los dos repositorios.](./media/infrastructure-persistence-layer-implemenation-entity-framework-core/custom-repo-versus-db-context.png)
 
@@ -219,7 +219,7 @@ El modo de creación de instancias de DbContext no se debe configurar como Servi
 
 ## <a name="the-repository-instance-lifetime-in-your-ioc-container"></a>Duración de la instancia de repositorio en su contenedor IoC
 
-De forma similar, la duración del repositorio normalmente se establece como determinada (InstancePerLifetimeScope en Autofac). También puede ser transitorio (InstancePerDependency en Autofac), pero el servicio será más eficaz en lo que respecta a la memoria si se usa la duración de ámbito.
+De forma similar, la duración del repositorio normalmente se establece como con ámbito (InstancePerLifetimeScope en Autofac). También puede ser transitorio (InstancePerDependency en Autofac), pero el servicio será más eficaz en lo que respecta a la memoria si se usa la duración de ámbito.
 
 ```csharp
 // Registering a Repository in Autofac IoC container
@@ -228,7 +228,7 @@ builder.RegisterType<OrderRepository>()
     .InstancePerLifetimeScope();
 ```
 
-Tenga en cuenta que utilizar la duración de singleton para el repositorio puede causar problemas de simultaneidad graves al establecer DbContext en una duración determinada (InstancePerLifetimeScope) (duraciones predeterminadas para DBContext).
+El uso de la duración de singleton para el repositorio puede causar problemas de simultaneidad graves al establecer DbContext en una duración con ámbito (InstancePerLifetimeScope) (las duraciones predeterminadas para DBContext).
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
@@ -243,7 +243,7 @@ Tenga en cuenta que utilizar la duración de singleton para el repositorio puede
 
 ## <a name="table-mapping"></a>Asignación de tabla
 
-La asignación de tabla identifica los datos de tabla que se van a consultar en la base de datos y que se guardarán en ella. Anteriormente, vimos cómo las entidades de domino (por ejemplo, un dominio de producto o de pedido) se podían usar para generar un esquema de base de datos relacionado. EF está diseñado basándose en el concepto de *convenciones*. Las convenciones generan preguntas como "¿Cuál será el nombre de la tabla?" o "¿Qué propiedad es la clave principal?". Normalmente las convenciones se basan en nombres convencionales, por ejemplo, es habitual que la clave principal sea una propiedad que termine con el identificador.
+La asignación de tabla identifica los datos de tabla que se van a consultar en la base de datos y que se guardarán en ella. Anteriormente, vimos cómo las entidades de domino (por ejemplo, un dominio de producto o de pedido) se podían usar para generar un esquema de base de datos relacionado. EF está diseñado basándose en el concepto de *convenciones*. Las convenciones generan preguntas como "¿Cuál será el nombre de la tabla?" o "¿Qué propiedad es la clave principal?". Las convenciones suelen basarse en nombres convencionales. Por ejemplo, es habitual que la clave principal sea una propiedad que termine con `Id`.
 
 Por convención, cada entidad se configurará para asignarse a una tabla que tenga el mismo nombre que la propiedad `DbSet<TEntity>` que expone la entidad en el contexto derivado. Si no se proporciona ningún valor `DbSet<TEntity>` a la entidad determinada, se utiliza el nombre de clase.
 
@@ -265,7 +265,7 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
    // ...
    modelBuilder.ApplyConfiguration(new OrderEntityTypeConfiguration());
-   // Other entities’ configuration ...
+   // Other entities' configuration ...
 }
 
 // At OrderEntityTypeConfiguration.cs from eShopOnContainers
@@ -422,7 +422,7 @@ public abstract class BaseSpecification<T> : ISpecification<T>
 }
 ```
 
-La siguiente especificación carga una entidad de cesta única a partir del id. o del id. de comprador al que pertenece la cesta y realiza una [carga diligente](https://docs.microsoft.com/ef/core/querying/related-data) de la colección de artículos de la cesta.
+La siguiente especificación carga una entidad de cesta única a partir del identificador de cesta o del identificador del comprador al que pertenece la cesta y realiza una [carga diligente](/ef/core/querying/related-data) de la colección `Items` de la cesta.
 
 ```csharp
 // SAMPLE QUERY SPECIFICATION IMPLEMENTATION
@@ -470,7 +470,7 @@ public IEnumerable<T> List(ISpecification<T> spec)
 
 Además de encapsular la lógica de filtro, puede especificar la forma de los datos que se van a devolver, incluidas las propiedades que se van a rellenar.
 
-Aunque no se recomienda devolver `IQueryable` desde un repositorio, se puede usar perfectamente dentro de este para crear un conjunto de resultados. Puede ver cómo se usa este enfoque en el método List anterior, en el que se utilizan expresiones `IQueryable` intermedias para generar la lista de consultas de inclusión antes de ejecutar la consulta con los criterios de especificación de la última línea.
+Aunque no se recomienda devolver `IQueryable` desde un repositorio, se puede usar perfectamente dentro de este para crear un conjunto de resultados. Puede ver cómo se usa este enfoque en el método List anterior, en el que se utilizan expresiones `IQueryable` intermedias para generar la lista de consultas de inclusión antes de ejecutar la consulta con los criterios de especificación de la última línea.
 
 ### <a name="additional-resources"></a>Recursos adicionales
 

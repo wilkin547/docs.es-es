@@ -2,12 +2,12 @@
 title: Diseño de un microservicio orientado a un DDD
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre el diseño del microservicio Ordering orientado a DDD y sus niveles de aplicación.
 ms.date: 10/08/2018
-ms.openlocfilehash: c5ac55978ca979a3ae055d9b0cd2d3c6b3187b4e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 583e103c8bd9d828731a658ea2fd2aa0758e7a12
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401536"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988744"
 ---
 # <a name="design-a-ddd-oriented-microservice"></a>Diseño de un microservicio orientado a DDD
 
@@ -71,7 +71,7 @@ Si pasamos al nivel de aplicación, podemos citar de nuevo el libro de Eric Evan
 
 **Nivel de aplicación**: define los trabajos que se supone que el software debe hacer y dirige los objetos de dominio expresivo para que resuelvan problemas. Las tareas que son responsabilidad de este nivel son significativas para la empresa o necesarias para la interacción con los niveles de aplicación de otros sistemas. Este nivel debe mantenerse estrecho. No contiene reglas de negocios ni conocimientos, sino que solo coordina tareas y delega trabajo a colaboraciones de objetos de dominio en el siguiente nivel. No tiene ningún estado que refleje la situación empresarial, pero puede tener un estado que refleje el progreso de una tarea para el usuario o el programa.
 
-Normalmente, el nivel de aplicación de microservicios en .NET se codifica como un proyecto de ASP.NET Core Web API. El proyecto implementa la interacción del microservicio, el acceso a redes remotas y la API web externa utilizada desde aplicaciones cliente o de interfaz de usuario. Incluye consultas si se utiliza un enfoque de CQRS, comandos aceptados por el microservicio e incluso comunicación guiada por eventos entre microservicios (eventos de integración). La ASP.NET Core Web API que representa el nivel de aplicación no puede contener reglas de negocios ni conocimientos del dominio (especialmente reglas de dominio para transacciones o actualizaciones); estos deben pertenecer a la biblioteca de clases del modelo de dominio. El nivel de aplicación solo debe coordinar tareas y no puede contener ni definir ningún estado de dominio (modelo de dominio). Delega la ejecución de reglas de negocios a las mismas clases de modelo de dominio (raíces agregadas y entidades de dominio) que, en última instancia, actualizarán los datos en esas entidades de dominio.
+Normalmente, el nivel de aplicación de microservicios en .NET se codifica como un proyecto de ASP.NET Core Web API. El proyecto implementa la interacción del microservicio, el acceso a redes remotas y las API web externas utilizadas desde aplicaciones cliente o de interfaz de usuario. Incluye consultas si se utiliza un enfoque de CQRS, comandos aceptados por el microservicio e incluso comunicación guiada por eventos entre microservicios (eventos de integración). La ASP.NET Core Web API que representa el nivel de aplicación no puede contener reglas de negocios ni conocimientos del dominio (especialmente reglas de dominio para transacciones o actualizaciones); estos deben pertenecer a la biblioteca de clases del modelo de dominio. El nivel de aplicación solo debe coordinar tareas y no puede contener ni definir ningún estado de dominio (modelo de dominio). Delega la ejecución de reglas de negocios a las mismas clases de modelo de dominio (raíces agregadas y entidades de dominio) que, en última instancia, actualizarán los datos en esas entidades de dominio.
 
 Básicamente, la lógica de la aplicación es el lugar en el que se implementan todos los casos de uso que dependen de un front-end determinado. Por ejemplo, la implementación relacionada con un servicio de API web.
 

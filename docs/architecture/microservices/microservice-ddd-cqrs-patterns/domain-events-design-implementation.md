@@ -2,12 +2,12 @@
 title: Eventos de dominio, diseño e implementación
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Obtenga una vista detallada de los eventos de dominio, un concepto clave para establecer la comunicación entre agregados.
 ms.date: 10/08/2018
-ms.openlocfilehash: 3bba18d4a77b47abee55c16bae8a64ed27ac9aba
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e03abba66945a6434f6a81eaa9f50d53998f346c
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74884233"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988722"
 ---
 # <a name="domain-events-design-and-implementation"></a>Eventos de dominio: diseño e implementación
 
@@ -61,7 +61,7 @@ El control de los eventos de dominio es una cuestión de la aplicación. El nive
 
 Los eventos de dominio también se pueden usar para desencadenar cualquier número de acciones de la aplicación y, lo que es más importante, deben ser abiertos para aumentar ese número en el futuro de forma desacoplada. Por ejemplo, al iniciar el pedido, es posible que le interese publicar un evento de dominio para propagar esa información a otros agregados o incluso para generar acciones de la aplicación como notificaciones.
 
-El punto clave es el número abierto de acciones que se van a ejecutar cuando se produce un evento de dominio. Con el tiempo, las acciones y reglas en el dominio y la aplicación aumentarán. La complejidad o el número de acciones de efectos secundarios aumentará cuando ocurra algo, pero si el código se acoplara con "adherencia" (es decir, la creación de objetos específicos con `new`), cada vez que necesitara agregar una acción nueva también tendría que cambiar el código funcional y probado.
+El punto clave es el número abierto de acciones que se van a ejecutar cuando se produce un evento de dominio. Con el tiempo, las acciones y reglas en el dominio y la aplicación aumentarán. La complejidad o el número de acciones de efectos secundarios aumentará cuando ocurra algo, pero si el código se acoplara con "adherencia" (es decir, la creación de objetos específicos con `new`), cada vez que necesitara agregar una acción nueva también tendría que cambiar el código funcional y probado.
 
 Este cambio podría provocar nuevos errores y este enfoque también va en contra del [principio abierto/cerrado](https://en.wikipedia.org/wiki/Open/closed_principle) de [SOLID](https://en.wikipedia.org/wiki/SOLID). No solo eso, la clase original que orquestaba las operaciones no dejaría de crecer, algo contrario al [Principio de responsabilidad única (SRP)](https://en.wikipedia.org/wiki/Single_responsibility_principle).
 

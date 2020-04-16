@@ -2,12 +2,12 @@
 title: Implementación del nivel de aplicación de microservicios mediante la API web
 description: Comprenda los procesos de inserción de dependencias y los patrones de mediador y sus detalles de implementación en la capa de aplicación de la API web.
 ms.date: 01/30/2020
-ms.openlocfilehash: a88f3bfd11ea06df085ca82ed7265cb37006fc31
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 76562d87b09a18e4a4ecb7625a2e823bc1ccff78
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77502446"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988471"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementación del nivel de aplicación de microservicios mediante la API web
 
@@ -183,7 +183,7 @@ Como se muestra en la figura 7-24, el patrón se basa en la aceptación de coman
 
 ![Diagrama que muestra el flujo de datos general del cliente a la base de datos.](./media/microservice-application-layer-implementation-web-api/high-level-writes-side.png)
 
-**Figura 7-24.** Vista general de los comandos o el "lado transaccional" en un patrón CQRS
+**Figura 7-24.** Vista general de los comandos o el "lado transaccional" en un patrón CQRS
 
 En la figura 7-24 se muestra que la aplicación de interfaz de usuario envía un comando a través de la API que llega a un elemento `CommandHandler`, que depende del modelo de dominio y de la infraestructura para actualizar la base de datos.
 
@@ -199,7 +199,7 @@ Una característica importante de un comando es que debe procesarse una sola vez
 
 Además, es importante que un comando solo se procese una vez en caso de que no sea idempotente. Un comando es idempotente si se puede ejecutar varias veces sin cambiar el resultado, ya sea debido a la naturaleza del comando, o bien al modo en que el sistema lo controla.
 
-Un procedimiento recomendado consiste en hacer que los comandos y las actualizaciones sean idempotentes cuando tenga sentido según las reglas de negocio e invariables del dominio. Para usar el mismo ejemplo, si por algún motivo (lógica de reintento, piratería, etc.) el mismo comando CreateOrder llega varias veces al sistema, debería poder identificarlo y asegurarse de que no se crean varios pedidos. Para ello, debe adjuntar algún tipo de identidad en las operaciones e identificar si el comando o la actualización ya se ha procesado.
+Un procedimiento recomendado consiste en hacer que los comandos y las actualizaciones sean idempotentes cuando tenga sentido según las reglas de negocio y los elementos invariables del dominio. Para usar el mismo ejemplo, si por algún motivo (lógica de reintento, piratería, etc.) el mismo comando CreateOrder llega varias veces al sistema, debería poder identificarlo y asegurarse de que no se crean varios pedidos. Para ello, debe adjuntar algún tipo de identidad en las operaciones e identificar si el comando o la actualización ya se ha procesado.
 
 Un comando se envía a un único receptor; no se publica. La publicación es para los eventos que notifican un hecho: que ha sucedido algo y que podría ser interesante para los receptores de eventos. En el caso de los eventos, al publicador no le interesa qué receptores obtienen el evento o las acciones que realizan. Pero los eventos de integración o de dominio son diferentes y ya se presentaron en secciones anteriores.
 
@@ -392,7 +392,7 @@ Estos son los pasos adicionales que debe realizar un controlador de comandos:
 
 - Dentro de los objetos de dominio, generar eventos de dominio mientras se ejecuta la transacción, pero de forma transparente desde el punto de vista de un controlador de comandos.
 
-- Si el resultado de la operación del agregado es correcta y una vez finalizada la transacción, generar eventos de integración. (Es posible que clases de infraestructura como repositorios también los generen).
+- Si el resultado de la operación del agregado es correcto y una vez finalizada la transacción, generar eventos de integración. (Es posible que clases de infraestructura como repositorios también los generen).
 
 #### <a name="additional-resources"></a>Recursos adicionales
 
@@ -447,7 +447,7 @@ Otra opción consiste en usar mensajes asincrónicos basados en agentes o colas 
 
 **Figura 7-26.** Uso de colas de mensajes (comunicación fuera de proceso y entre procesos) con comandos CQRS
 
-La canalización del comando también puede controlarse mediante una cola de mensajes de alta disponibilidad para entregar los comandos en el controlador adecuado. El uso de colas de mensajes para aceptar los comandos puede complicar más la canalización del comando, ya que probablemente será necesario dividir la canalización en dos procesos conectados a través de la cola de mensajes externos. Pero se debe usar si hay que ofrecer mayor escalabilidad y rendimiento según la mensajería asincrónica. Téngalo en cuenta en el caso de la figura 7-26, donde el controlador simplemente envía el mensaje de comando a la cola y vuelve. Después, los controladores de comandos procesan los mensajes a su propio ritmo. Esa es una gran ventaja de las colas: la cola de mensajes puede actuar como un búfer en casos en que se necesita hiperescalabilidad (por ejemplo, para existencias o cualquier otro escenario con un gran volumen de datos de entrada).
+La canalización del comando también puede controlarse mediante una cola de mensajes de alta disponibilidad para entregar los comandos en el controlador adecuado. El uso de colas de mensajes para aceptar los comandos puede complicar más la canalización del comando, ya que probablemente sea necesario dividir la canalización en dos procesos conectados a través de la cola de mensajes externos. Pero se debe usar si hay que ofrecer mayor escalabilidad y rendimiento según la mensajería asincrónica. Téngalo en cuenta en el caso de la figura 7-26, donde el controlador simplemente envía el mensaje de comando a la cola y vuelve. Después, los controladores de comandos procesan los mensajes a su propio ritmo. Esa es una gran ventaja de las colas: la cola de mensajes puede actuar como un búfer en casos en que se necesita hiperescalabilidad (por ejemplo, para existencias o cualquier otro escenario con un gran volumen de datos de entrada).
 
 En cambio, debido a la naturaleza asincrónica de las colas de mensajes, debe saber cómo comunicar a la aplicación cliente si el proceso del comando se ha realizado correctamente o no. Como norma, nunca debería usar comandos "Fire and Forget" (dispare y olvídese). Cada aplicación empresarial necesita saber si un comando se ha procesado correctamente, o al menos se ha validado y aceptado.
 
@@ -590,7 +590,7 @@ public class IdentifiedCommandHandler<T, R> :
 }
 ```
 
-Dado que IdentifiedCommand actúa como la envoltura de un comando de negocios, cuando el comando de negocios se debe procesar porque no es un identificador repetido, toma ese comando de negocios interno y lo vuelve a enviar al mediador, como se muestra en la última parte del código anterior al ejecutar `_mediator.Send(message.Command)` desde [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs).
+Dado que IdentifiedCommand actúa como sobre de un comando de negocios, cuando el comando de negocios se debe procesar porque no es un identificador repetido, toma ese comando de negocios interno y lo vuelve a enviar al mediador, como se muestra en la última parte del código anterior al ejecutar `_mediator.Send(message.Command)` desde [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs).
 
 Al hacerlo, se vincula y ejecuta el controlador de comandos de negocios, en este caso, [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs) que ejecuta transacciones en la base de datos Ordering, como se muestra en el código siguiente.
 

@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Des
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: a18b4dfc60c7d3971136f73f333b7225735710b3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3de70af23206b0ae0525541b3d2cb480dc5bb882
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503947"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80987912"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Desarrollo de aplicaciones ASP.NET Core MVC
 
@@ -32,7 +32,7 @@ Un modelo de página de Razor Pages combina las responsabilidades de un controla
 
 ### <a name="when-to-use-mvc"></a>Cuándo usar MVC
 
-Si va a crear API web, el patrón MVC tiene más sentido que Razor Pages. Si el proyecto va a exponer solo los puntos de conexión de la API Web, lo ideal es empezar a partir de la plantilla de proyecto de API web. De lo contrario, es fácil agregar controladores y puntos de conexión de API asociados a cualquier aplicación ASP.NET Core. Use el método MVC basado en vista si quiere realizar la migración de una aplicación existente de ASP.NET MVC 5 o versiones anteriores a ASP.NET Core MVC y quiere hacerlo de la forma más fácil posible. Una vez que haya realizado la migración inicial, podrá evaluar si tiene sentido adoptar Razor Pages para las nuevas características o incluso como una migración general.
+Si va a crear interfaces API web, el patrón MVC tiene más sentido que Razor Pages. Si el proyecto va a exponer solo los puntos de conexión de la API Web, lo ideal es empezar a partir de la plantilla de proyecto de API web. De lo contrario, es fácil agregar controladores y puntos de conexión de API asociados a cualquier aplicación ASP.NET Core. Use el método MVC basado en vista si quiere realizar la migración de una aplicación ASP.NET MVC 5 existente o versiones anteriores a ASP.NET Core MVC y quiere hacerlo de la forma más fácil posible. Una vez que haya realizado la migración inicial, podrá evaluar si tiene sentido adoptar Razor Pages para las nuevas características o incluso como migración general.
 
 Si opta por crear su aplicación web mediante Razor Pages o las vistas de MVC, la aplicación tendrá un rendimiento similar e incluirá compatibilidad con la inserción de dependencias, los filtros, el enlace de modelos, la validación y otras características.
 

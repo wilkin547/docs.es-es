@@ -2,12 +2,12 @@
 title: Aplicar enfoques CQRS y CQS en un microservicio DDD en eShopOnContainers
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre cómo se implementa CQRS en el microservicio de pedidos en eShopOnContainers.
 ms.date: 03/03/2020
-ms.openlocfilehash: 16fe46189a5b43591adebbb764d4acef2f7efbfb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eda0ee374b41a81811e92e2829b10dc8515e0ccd
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847159"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988497"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Aplicación de enfoques CQRS y CQS en un microservicio DDD en eShopOnContainers
 
@@ -15,7 +15,7 @@ El diseño del microservicio Ordering de la aplicación de referencia eShopOnCon
 
 La esencia de esos patrones y el punto importante es que las consultas son idempotentes: el estado del sistema no cambia independientemente de las veces que se consulte a ese sistema. Es decir, las consultas no sufren efectos secundarios.
 
-Por lo tanto, podría usar un modelo de datos de "lectura" distinto al modelo de dominio de "escritura" de lógica transaccional, aunque los microservicios Ordering usen la misma base de datos. Por lo tanto, se trata de un enfoque CQRS simplificado.
+Por lo tanto, podría usar un modelo de datos de "lectura" distinto al modelo de dominio de "escritura" de lógica transaccional, aunque los microservicios de ordenación usen la misma base de datos. Por lo tanto, se trata de un enfoque CQRS simplificado.
 
 Por otro lado, los comandos, que producen transacciones y actualizaciones de datos, cambian el estado del sistema. Debe tener cuidado con los comandos cuando trabaje con la complejidad y las reglas de negocio cambiantes. Ahí es donde se prefieren aplicar técnicas de DDD para tener un sistema mejor modelado.
 
@@ -25,7 +25,7 @@ Un patrón de este tipo es el patrón Aggregate, que se analiza en más detalle 
 
 Como se muestra en la figura 7-2 de la sección anterior, esta guía sugiere usar patrones DDD solo en el área transaccional o de actualizaciones del microservicio (es decir, como se desencadena con comandos). Las consultas pueden seguir un enfoque más simple y deben separarse de los comandos, según un enfoque CQRS.
 
-Para implementar el "lado de consultas", puede elegir entre varios enfoques, desde un ORM completo como EF Core, proyecciones de AutoMapper, procedimientos almacenados, vistas, vistas materializadas o un micro ORM.
+Para implementar el "lado de consultas", puede elegir entre varios enfoques, desde un ORM completo como EF Core, proyecciones de AutoMapper, procedimientos almacenados, vistas, vistas materializadas o un micro ORM.
 
 En esta guía y en eShopOnContainers (específicamente el microservicio Ordering), se ha optado por implementar consultas directas mediante un micro ORM como [Dapper](https://github.com/StackExchange/dapper-dot-net). Esto permite implementar cualquier consulta basada en instrucciones SQL para obtener el mejor rendimiento, gracias a un marco de trabajo ligero con muy poca sobrecarga.
 

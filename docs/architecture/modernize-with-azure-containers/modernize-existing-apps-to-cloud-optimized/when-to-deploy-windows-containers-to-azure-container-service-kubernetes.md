@@ -2,12 +2,12 @@
 title: Cuándo se deben implementar contenedores Windows en Azure Container Service (es decir, Kubernetes)
 description: Modernización de las aplicaciones .NET existentes con Azure Clour y contenedores Windows | Cuándo se deben implementar contenedores Windows en Azure Container Service (es decir, Kubernetes)
 ms.date: 04/30/2018
-ms.openlocfilehash: 903082deba635dd0dfc22d0186fbc589f8d05b92
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3ff51a70d4e158b831155ab4992ec32f5d98cedb
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69577948"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80987769"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-container-service-that-is-kubernetes"></a>Cuándo se deben implementar contenedores Windows en Azure Container Service (es decir, Kubernetes)
 
@@ -19,7 +19,7 @@ Todos estos orquestadores son entornos maduros si usa contenedores Linux de Dock
 
 Por ejemplo, en Kubernetes, la compatibilidad con contenedores es nativa (ciudadano de primera clase), por lo que el uso de contenedores Windows en Kubernetes también es eficaz (en versión preliminar en ACS desde principios de 2018).
 
-Nota importante: La versión evolucionada y "más PaaS" de ACS (Azure Container Service) para Kubernetes es AKS (Azure Kubernetes Service). Sin embargo, en el 2T de 2018 no se admiten aún los contenedores Windows, que pronto se admitirán.
+Nota importante: La versión evolucionada y "más PaaS" de ACS (Azure Container Service) para Kubernetes es AKS (Azure Kubernetes Service). Sin embargo, en el 2T de 2018 aún no se admiten los contenedores Windows, que pronto se admitirán.
 
 >[!div class="step-by-step"]
 >[Anterior](when-to-deploy-windows-containers-to-azure-container-instances-ACI.md)

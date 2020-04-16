@@ -2,12 +2,12 @@
 title: Diseño de un modelo de dominio de microservicio
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre los conceptos clave para diseñar un modelo de dominio orientado a un DDD
 ms.date: 01/30/2020
-ms.openlocfilehash: 628fb5c76362ec8f48367b3d69d16ea6ebd24f09
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64860d75dca645904e973a4b8927a716a1603394
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77502332"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988419"
 ---
 # <a name="design-a-microservice-domain-model"></a>Diseño de un modelo de dominio de microservicio
 
@@ -27,7 +27,7 @@ Por ejemplo, es posible que la entidad de comprador tenga la mayoría de los atr
 
 *Las entidades de dominio deben implementar el comportamiento además de los atributos de datos.*
 
-Una entidad de dominio en DDD debe implementar la lógica del dominio o el comportamiento relacionado con los datos de entidad (el objeto al que se obtiene acceso en memoria). Por ejemplo, como parte de una clase de entidad de pedido debería implementar la lógica de negocios y las operaciones como métodos para tareas como agregar un elemento de pedido, la validación de datos y el cálculo total. Los métodos de la entidad se encargan de las invariables y las reglas de la entidad en lugar de tener esas reglas distribuidas por el nivel de aplicación.
+Una entidad de dominio en DDD debe implementar la lógica del dominio o el comportamiento relacionado con los datos de entidad (el objeto al que se obtiene acceso en memoria). Por ejemplo, como parte de una clase de entidad de pedido debería implementar la lógica de negocios y las operaciones como métodos para tareas como agregar un elemento de pedido, la validación de datos y el cálculo total. Los métodos de la entidad se encargan de los elementos invariables y las reglas de la entidad en lugar de tener esas reglas distribuidas por el nivel de aplicación.
 
 En la figura 7-8 se muestra una entidad de dominio que implementa no solo los atributos de datos, sino también las operaciones o los métodos con lógica de dominio relacionada.
 
@@ -104,7 +104,7 @@ La identificación de agregados puede ser difícil. Un agregado es un grupo de o
 
 Un agregado se compone de al menos una entidad: la raíz agregada, que también se denomina entidad raíz o entidad principal. Además, puede tener varios objetos de valor y entidades secundarias, con todas las entidades y objetos trabajando de forma conjunta para implementar las transacciones y el comportamiento necesarios.
 
-El propósito de una raíz agregada es asegurar la coherencia del agregado; debe ser el único punto de entrada para las actualizaciones del agregado a través de métodos u operaciones en la clase de raíz agregada. Los cambios en las entidades dentro del agregado solo se deben realizar a través de la raíz agregada. Se encarga de proteger la coherencia del agregado, teniendo en cuenta todas las invariables y reglas de coherencia que es posible que tenga que cumplir en el agregado. Si cambia una entidad secundaria o un objeto de valor por separado, la raíz agregada no podrá garantizar que el agregado esté en un estado válido. Sería como una mesa con una pata coja. El propósito principal de la raíz agregada es mantener la coherencia.
+El propósito de una raíz agregada es asegurar la coherencia del agregado; debe ser el único punto de entrada para las actualizaciones del agregado a través de métodos u operaciones en la clase de raíz agregada. Los cambios en las entidades dentro del agregado solo se deben realizar a través de la raíz agregada. Se encarga de proteger la coherencia del agregado, teniendo en cuenta todas los elementos invariables y las reglas de coherencia con los que tenga que cumplir en el agregado. Si cambia una entidad secundaria o un objeto de valor por separado, la raíz agregada no podrá garantizar que el agregado esté en un estado válido. Sería como una mesa con una pata coja. El propósito principal de la raíz agregada es mantener la coherencia.
 
 En la figura 7-9 se pueden ver agregados de ejemplo como el de Comprador, que contiene una sola entidad (la raíz agregada Comprador). El agregado de pedido contiene varias entidades y un objeto de valor.
 

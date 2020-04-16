@@ -2,12 +2,12 @@
 title: Implementar un modelo de dominio de microservicio con .NET Core
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre la implementación de un modelo de dominio orientado a un DDD.
 ms.date: 10/08/2018
-ms.openlocfilehash: bff9cbda08e519038056268151a1721427f0ac01
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 24f700b371d998cf99cbcf260a5278d797cb39d4
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73972039"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988432"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>Implementación de un modelo de dominio de microservicio con .NET Core
 
@@ -23,7 +23,7 @@ La vista Explorador de soluciones para el proyecto Ordering.Domain, en la que se
 
 **Figura 7-10**. Estructura del modelo de dominio del microservicio Ordering de eShopOnContainers
 
-Además, la capa de modelo de dominio incluye los contratos de repositorio (interfaces) que son los requisitos de infraestructura del modelo de dominio. Es decir, estas interfaces expresan qué repositorios y métodos debe implementar la capa de infraestructura. Es fundamental que la implementación de los repositorios se coloque fuera de la capa de modelo de dominio, en la biblioteca de capas de infraestructura, para que la capa de modelo de dominio no quede "contaminada" por API o clases de tecnologías de infraestructura, como Entity Framework.
+Además, la capa de modelo de dominio incluye los contratos de repositorio (interfaces) que son los requisitos de infraestructura del modelo de dominio. Es decir, estas interfaces expresan qué repositorios y métodos debe implementar la capa de infraestructura. Es fundamental que la implementación de los repositorios se coloque fuera de la capa de modelo de dominio, en la biblioteca de capas de infraestructura, para que la capa de modelo de dominio no quede "contaminada" por la API o clases de tecnologías de infraestructura, como Entity Framework.
 
 También puede ver una carpeta [SeedWork](https://martinfowler.com/bliki/Seedwork.html) que contiene clases base personalizadas que se pueden usar como base para las entidades de dominio y los objetos de valor, para no tener código redundante en la clase de objeto de cada dominio.
 
@@ -139,7 +139,7 @@ El fragmento de código siguiente muestra la manera adecuada de programar la tar
 ```csharp
 // RIGHT ACCORDING TO DDD--CODE AT THE APPLICATION LAYER OR COMMAND HANDLERS
 // The code in command handlers or WebAPI controllers, related only to application stuff
-// There is NO code here related to OrderItem object’s business logic
+// There is NO code here related to OrderItem object's business logic
 myOrder.AddOrderItem(productId, productName, pictureUrl, unitPrice, discount, units);
 
 // The code related to OrderItem params validations or domain rules should

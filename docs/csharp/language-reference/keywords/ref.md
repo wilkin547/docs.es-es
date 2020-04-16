@@ -1,18 +1,18 @@
 ---
 title: ref (palabra clave) - Referencia de C#
-ms.date: 03/26/2019
+ms.date: 03/19/2020
 f1_keywords:
 - ref_CSharpKeyword
 - ref
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 05f0bd8566851678203a3f064b96bfff7dee18b6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d54d932ca96f1966ecc05a532a2468b7e16fac46
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398134"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805850"
 ---
 # <a name="ref-c-reference"></a>ref (Referencia de C#)
 
@@ -25,7 +25,7 @@ La palabra clave `ref` indica un valor que se ha pasado mediante referencia. Se 
 
 ## <a name="passing-an-argument-by-reference"></a>Pasar un argumento mediante referencia
 
-Cuando se usa en una lista de parámetros del método, la palabra clave `ref` indica que un argumento se ha pasado mediante referencia, no por valor. La palabra clave `ref` hace que el parámetro formal sea un alias para el argumento, que debe ser una variable. En otras palabras, cualquier operación en el parámetro se realiza en el argumento. Por ejemplo, si el autor de la llamada pasa una expresión de variable local o una expresión de acceso de elemento de matriz, y el método llamado reemplaza el objeto al que hace referencia el parámetro ref, entonces la variable local del autor de la llamada o el elemento de matriz hace ahora referencia al nuevo objeto cuando el método devuelve.
+Cuando se usa en una lista de parámetros del método, la palabra clave `ref` indica que un argumento se ha pasado mediante referencia, no por valor. La palabra clave `ref` hace que el parámetro formal sea un alias para el argumento, que debe ser una variable. En otras palabras, cualquier operación en el parámetro se realiza en el argumento. Por ejemplo, si el autor de la llamada pasa una expresión de variable local o una expresión de acceso de elemento de matriz, y el método llamado reemplaza el objeto al que hace referencia el parámetro ref, entonces la variable local del autor de la llamada o el elemento de matriz hacen ahora referencia al nuevo objeto cuando el método devuelve resultados.
 
 > [!NOTE]
 > No confunda el concepto de pasar por referencia con el concepto de tipos de referencia. Estos dos conceptos no son lo mismo. Un parámetro de método puede ser modificado por `ref` independientemente de si se trata de un tipo de valor o de un tipo de referencia. No hay ninguna conversión boxing de un tipo de valor cuando se pasa por referencia.  
@@ -59,7 +59,13 @@ En cambio, los métodos pueden sobrecargarse cuando un método tiene un parámet
  Las palabras clave `ref`, `in` y `out` no pueden usarse para estos tipos de métodos:  
   
 - Métodos asincrónicos, que se definen mediante el uso del modificador [async](async.md).  
-- Métodos de iterador, que incluyen una instrucción [yield return](yield.md) o `yield break`.  
+- Métodos de iterador, que incluyen una instrucción [yield return](yield.md) o `yield break`.
+
+Además, los [métodos de extensión](../../programming-guide/classes-and-structs/extension-methods.md) tienen las restricciones siguientes:
+
+- No se puede usar la palabra clave `out` en el primer argumento de un método de extensión.
+- No se puede usar la palabra clave `ref` en el primer argumento de un método de extensión cuando el argumento no es un struct ni un tipo genérico no restringido a ser un struct.
+- No se puede usar la palabra clave `in` a menos que el primer argumento sea un struct. No se puede usar la palabra clave `in` en ningún tipo genérico, incluso cuando está restringido a ser un struct.
 
 ## <a name="passing-an-argument-by-reference-an-example"></a>Paso de un argumento mediante referencia: Un ejemplo
 
@@ -111,7 +117,7 @@ Puede acceder a un valor por referencia de la misma manera. En algunos casos, ac
 ref VeryLargeStruct reflocal = ref veryLargeStruct;
 ```
 
-Tenga en cuenta que en ambos ejemplos la palabra clave `ref` debe usarse en ambos lugares. De lo contrario, el compilador genera el error CS8172, "No se puede inicializar una variable por referencia con un valor".
+En ambos ejemplos la palabra clave `ref` debe usarse en ambos lugares. De lo contrario, el compilador genera el error CS8172, "No se puede inicializar una variable por referencia con un valor".
 
 A partir C# 7.3, la variable de iteración de la instrucción `foreach` puede ser una variable ref local o ref readonly local. Para más información, vea el artículo sobre la [instrucción foreach](foreach-in.md).
 
@@ -140,7 +146,7 @@ El objetivo de mantener un tipo `ref struct` como una variable asignada a la pil
 - No puede encerrar un valor de `ref struct`. No puede asignar un tipo `ref struct` a una variable de tipo `object`, `dynamic` o cualquier tipo de interfaz.
 - Los tipos `ref struct` no pueden implementar interfaces.
 - No se puede declarar `ref struct` como miembro de campo de una clase o una estructura normal. Esto incluye la declaración de una propiedad implementada automáticamente, lo que crea un campo de respaldo generado por el compilador.
-- No puede declarar variables locales que sean tipos `ref struct` en métodos asincrónicos. Puede declararlas en los métodos sincrónicos que devuelven tipos similares a <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> o `Task`.
+- No puede declarar variables locales que sean tipos `ref struct` en métodos asincrónicos. Puede declararlas en los métodos sincrónicos que devuelven tipos similares a <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> o `Task`.
 - No puede declarar las variables locales de `ref struct` en iteradores.
 - No puede capturar variables `ref struct` en expresiones lambda o funciones locales.
 
