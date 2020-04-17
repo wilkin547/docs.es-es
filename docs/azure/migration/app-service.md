@@ -3,16 +3,16 @@ title: Migración de una aplicación web o un servicio de .NET a Azure App Servi
 description: Obtenga información sobre cómo migrar una aplicación web o un servicio de .NET desde el entorno local a Azure App Service.
 ms.topic: conceptual
 ms.date: 08/11/2018
-ms.openlocfilehash: c9ef679743ce00add422110b11f2bfbdd8343530
-ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
+ms.openlocfilehash: 57f3b981a1d94c2193160f55f9c8242da694c169
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "81433239"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607880"
 ---
 # <a name="migrate-your-net-web-app-or-service-to-azure-app-service"></a>Migración de una aplicación web o un servicio de .NET a Azure App Service
 
-[App Service](https://docs.microsoft.com/azure/app-service/app-service-web-overview#why-use-web-apps) es un servicio de plataforma informática totalmente administrado que está optimizado para hospedar sitios web y aplicaciones web escalables. En este artículo se proporciona información sobre cómo levantar y cambiar una aplicación existente a Azure App Service, las modificaciones que se deben tener en cuenta y los recursos adicionales para [pasar a la nube.](https://azure.microsoft.com/migration/web-applications/) La mayoría de servicios (API web y WCF) y sitios web de ASP.NET (Webforms y MVC) pueden moverse directamente a Azure App Service sin realizar ningún cambio. Algunos pueden necesitar cambios menores, mientras que otros pueden necesitar cierta refactorización.
+[App Service](https://docs.microsoft.com/azure/app-service/overview) es un servicio de plataforma informática totalmente administrado que está optimizado para hospedar sitios web y aplicaciones web escalables. En este artículo se proporciona información sobre cómo levantar y cambiar una aplicación existente a Azure App Service, las modificaciones que se deben tener en cuenta y los recursos adicionales para [pasar a la nube.](https://azure.microsoft.com/migration/web-applications/) La mayoría de servicios (API web y WCF) y sitios web de ASP.NET (Webforms y MVC) pueden moverse directamente a Azure App Service sin realizar ningún cambio. Algunos pueden necesitar cambios menores, mientras que otros pueden necesitar cierta refactorización.
 
 ¿Ya está listo para comenzar? [Publique su una aplicación ASP.NET + SQL en Azure App Service](https://tutorials.visualstudio.com/azure-webapp-migrate/intro).
 
@@ -100,7 +100,7 @@ Puede que tenga que actualizar las opciones de configuración de DNS según los 
 ## <a name="azure-app-service-with-windows-containers"></a>Azure App Service con contenedores de Windows
 Si la aplicación no se puede migrar directamente a App Service, considere la posibilidad de que App Service use contenedores de Windows, lo que permite usar la GAC, los componentes COM, archivos MSI, acceso completo a las API de .NET FX, DirectX, etc.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Cómo determinar si la aplicación cumple los requisitos para App Service](https://appmigration.microsoft.com/)
 * [Traslado de la base de datos a la nube](https://go.microsoft.com/fwlink/?linkid=863217)

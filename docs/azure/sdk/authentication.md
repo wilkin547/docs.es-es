@@ -3,12 +3,12 @@ title: Autenticación con las bibliotecas de Azure para .NET
 description: Autenticación en las bibliotecas de Azure para .NET
 ms.date: 08/22/2018
 ms.custom: azure-sdk-dotnet
-ms.openlocfilehash: e562b60da0a2d34f716e80d3d5d0d0b5e55b0cdb
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: f6af813cd1423be8784b769b272756b2c8258392
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "81433149"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607874"
 ---
 # <a name="authenticate-with-the-azure-libraries-for-net"></a>Autenticación con las bibliotecas de Azure para .NET
 
@@ -45,7 +45,7 @@ var account = CloudStorageAccount.Parse(storageConnectionString);
 // Do things with the account here...
 ```
 
-Las cadenas de conexión de servicio se usan en otros servicios de Azure como [CosmosDB](/azure/documentdb/documentdb-dotnet-application#a-nametoc395637769astep-5-wiring-up-azure-cosmos-db), [Azure Cache para Redis](/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache)y [Service Bus](/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues) y puede obtener esas cadenas mediante Azure Portal, la CLI o PowerShell. También puede usar las bibliotecas de administración de Azure para .NET para consultar recursos para generar cadenas de conexión en el código.
+Las cadenas de conexión de servicio se usan en otros servicios de Azure como [CosmosDB](https://docs.microsoft.com/azure/cosmos-db/), [Azure Cache para Redis](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache)y [Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues). Puede obtener esas cadenas mediante Azure Portal, la CLI o PowerShell. También puede usar las bibliotecas de administración de Azure para .NET para consultar recursos para generar cadenas de conexión en el código.
 
 Este fragmento de código usa las bibliotecas de administración para crear una cadena de conexión de la cuenta de almacenamiento:
 

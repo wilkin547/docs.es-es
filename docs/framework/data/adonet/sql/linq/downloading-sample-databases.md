@@ -3,12 +3,12 @@ title: Obtenga las bases de datos de SQL Server de ejemplo para ADO.NET ejemplos
 description: Descargue las bases de datos de SQL Server de ejemplo utilizadas en los ejemplos de código de la documentación de ADO.NET, así como SQL Server y las herramientas de administración
 ms.date: 01/11/2019
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
-ms.openlocfilehash: 19d659cbe8f39d27b71dc59c738355f12fce92a0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3449f502834f449f5023bd52457d45ffaf9b0fa1
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148392"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607989"
 ---
 # <a name="get-the-sample-databases-for-adonet-code-samples"></a>Obtenga las bases de datos de ejemplo para ejemplos de código ADO.NET
 
@@ -54,7 +54,7 @@ Si desea ver o modificar una base de datos que ha descargado, puede usar SQL Ser
 
 [Descarga de SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms)
 
-También puede ver y administrar bases de datos en el entorno de desarrollo integrado (IDE) de Visual Studio. En [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017), conéctese a la base de datos desde el Explorador de objetos de SQL **ServerSQL Server**o cree una conexión de datos a la base de datos en el **Explorador**de servidores . Abra estos paneles del explorador desde el menú **Ver.**
+También puede ver y administrar bases de datos en el entorno de desarrollo integrado (IDE) de Visual Studio. En [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019), conéctese a la base de datos desde el Explorador de objetos de SQL **ServerSQL Server**o cree una conexión de datos a la base de datos en el **Explorador**de servidores . Abra estos paneles del explorador desde el menú **Ver.**
 
 ## <a name="get-sql-server-express"></a><a name="get_sql"></a>Obtener SQL Server Express
 
@@ -62,8 +62,8 @@ SQL Server Express es una edición gratuita de nivel de entrada de SQL Server qu
   
 [SQL Server Express Edition](https://www.microsoft.com/sql-server/sql-server-editions-express)
 
-Si usa [Visual Studio,](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)SQL Server Express LocalDB se incluye en la edición gratuita de la comunidad de Visual Studio, así como en las ediciones Professional y superior.  
+Si usa [Visual Studio,](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)SQL Server Express LocalDB se incluye en la edición gratuita de la comunidad de Visual Studio, así como en las ediciones Professional y superior.  
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Introducción](getting-started.md)
