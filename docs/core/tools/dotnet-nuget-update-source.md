@@ -2,12 +2,12 @@
 title: Comando dotnet nuget update source
 description: El comando dotnet nuget update source actualiza un origen existente en los archivos de configuración de NuGet.
 ms.date: 03/20/2020
-ms.openlocfilehash: 38335e07f91850756c7671413e1193c2578e7e7e
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 42b1aec95cdd57e53f966400f6692a3d0150c16c
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80148475"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463476"
 ---
 # <a name="dotnet-nuget-update-source"></a>dotnet nuget update source
 
@@ -20,10 +20,11 @@ ms.locfileid: "80148475"
 ## <a name="synopsis"></a>Sinopsis
 
 ```dotnetcli
-dotnet nuget update source <NAME> [--source] [--username]
-    [--password] [--store-password-in-clear-text] [--valid-authentication-types]
-    [--configfile]
-dotnet nuget update source [-h|--help]
+dotnet nuget update source <NAME> [--source <SOURCE>] [--username <USER>]
+    [--password <PASSWORD>] [--store-password-in-clear-text]
+    [--valid-authentication-types <TYPES>] [--configfile <FILE>]
+
+dotnet nuget update source -h|--help
 ```
 
 ## <a name="description"></a>Descripción
@@ -38,15 +39,15 @@ El comando `dotnet nuget update source` actualiza un origen existente en los arc
 
 ## <a name="options"></a>Opciones
 
-- **`--configfile`**
+- **`--configfile <FILE>`**
 
   Archivo de configuración de NuGet. Si se especifica, solo se usará la configuración de este archivo. Si no se especifica, se utilizará la jerarquía de archivos de configuración del directorio actual. Para más información, consulte [Configuraciones comunes de NuGet](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
 
-- **`-p|--password`**
+- **`-p|--password <PASSWORD>`**
 
   Contraseña que se debe usar al conectarse a un origen autenticado.
 
-- **`-s|--source`**
+- **`-s|--source <SOURCE>`**
 
   Ruta de acceso al origen del paquete.
 
@@ -54,11 +55,11 @@ El comando `dotnet nuget update source` actualiza un origen existente en los arc
 
   Deshabilita el cifrado de la contraseña para permitir el almacenamiento de las credenciales de origen del paquete portátil.
 
-- **`-u|--username`**
+- **`-u|--username <USER>`**
 
   Nombre de usuario que se usará al conectarse a un origen autenticado.
 
-- **`--valid-authentication-types`**
+- **`--valid-authentication-types <TYPES>`**
 
   Lista separada por comas de tipos de autenticación válidos para este origen. Establézcalo en `basic` si el servidor anuncia NTLM o Negotiate y las credenciales deben enviarse mediante el mecanismo básico, por ejemplo, cuando se usa una instancia de PAT con Azure DevOps Server local. Otros valores válidos son `negotiate`, `kerberos`, `ntlm` y `digest`, pero es poco probable que estos valores sean útiles.
 

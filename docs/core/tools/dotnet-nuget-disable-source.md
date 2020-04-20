@@ -2,12 +2,12 @@
 title: Comando dotnet nuget disable source
 description: El comando dotnet nuget disable source deshabilita un origen existente en los archivos de configuración de NuGet.
 ms.date: 03/20/2020
-ms.openlocfilehash: 5aa16c842bcddeead180fdeec3d9dcdda33f7ed9
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 54acb40b1944eaff347107e8f3439578ec8e0f3c
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80148481"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463566"
 ---
 # <a name="dotnet-nuget-disable-source"></a>dotnet nuget disable source
 
@@ -20,8 +20,9 @@ ms.locfileid: "80148481"
 ## <a name="synopsis"></a>Sinopsis
 
 ```dotnetcli
-dotnet nuget disable source <NAME> [--configfile]
-dotnet nuget disable source [-h|--help]
+dotnet nuget disable source <NAME> [--configfile <FILE>]
+
+dotnet nuget disable source -h|--help
 ```
 
 ## <a name="description"></a>Descripción
@@ -36,7 +37,7 @@ El comando `dotnet nuget disable source` deshabilita un origen existente en los 
 
 ## <a name="options"></a>Opciones
 
-- **`--configfile`**
+- **`--configfile <FILE>`**
 
   Archivo de configuración de NuGet. Si se especifica, solo se usará la configuración de este archivo. Si no se especifica, se utilizará la jerarquía de archivos de configuración del directorio actual. Para más información, consulte [Configuraciones comunes de NuGet](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - formatting numbers [.NET Framework]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-ms.openlocfilehash: 1eb9c3c189d7bba3a12fdcd0c3d600a66bf819ca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5961cce4601a89b34708b7090207edfed63b5b08
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75348305"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242990"
 ---
 # <a name="custom-numeric-format-strings"></a>Cadenas con formato numérico personalizado
 
@@ -265,7 +265,7 @@ Independientemente de la cadena de formato, si el valor de un tipo de punto flot
 
 Los valores de configuración del elemento **Configuración regional y de idioma** del Panel de control influyen en la cadena de resultado generada por una operación de formato. Estos valores de configuración se utilizan para inicializar el objeto <xref:System.Globalization.NumberFormatInfo> asociado a la referencia cultural del subproceso actual, y la referencia cultural del subproceso actual proporciona valores que se utilizan para controlar el formato. Los equipos que usan configuraciones diferentes generarán cadenas de resultado distintas.
 
-Asimismo, si se usa el constructor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> para crear instancias de un nuevo objeto <xref:System.Globalization.CultureInfo> que representa la misma referencia cultural que la referencia cultural del sistema actual, cualquier personalización establecida por el elemento **Configuración regional y de idioma** del Panel de control se aplicará al nuevo objeto <xref:System.Globalization.CultureInfo> . Puede usar el constructor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> para crear un objeto <xref:System.Globalization.CultureInfo> que no refleje las personalizaciones de un sistema.
+Asimismo, si se usa el constructor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29> para crear instancias de un nuevo objeto <xref:System.Globalization.CultureInfo> que representa la misma referencia cultural que la referencia cultural del sistema actual, cualquier personalización establecida por el elemento **Configuración regional y de idioma** del Panel de control se aplicará al nuevo objeto <xref:System.Globalization.CultureInfo> . Puede usar el constructor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29> para crear un objeto <xref:System.Globalization.CultureInfo> que no refleje las personalizaciones de un sistema.
 
 ### <a name="rounding-and-fixed-point-format-strings"></a>Cadenas de formato de punto fijo y redondeo
 

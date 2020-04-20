@@ -16,12 +16,12 @@ helpviewer_keywords:
 - standard numeric format strings
 - formatting numbers [.NET Framework]
 - format specifiers, standard numeric format strings
-ms.openlocfilehash: 04ac99c6b5100c3749eefc219e51b4d0084bef06
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9b0c784a1c7b6b428636a1a4c99ec8e2bb76a9e0
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398464"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242717"
 ---
 # <a name="standard-numeric-format-strings"></a>Cadenas con formato numérico estándar
 
@@ -355,7 +355,7 @@ En el ejemplo siguiente se da formato a valores <xref:System.Int32> con el espec
 
 Los valores de configuración del elemento **Configuración regional y de idioma** del Panel de control influyen en la cadena de resultado generada por una operación de formato. Esas configuraciones se usan para inicializar el objeto <xref:System.Globalization.NumberFormatInfo> asociado a la referencia cultural del subproceso actual, que proporciona valores que se usan para controlar el formato. Los equipos que usan configuraciones diferentes generarán cadenas de resultado distintas.
 
-Asimismo, si se utiliza el constructor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> para crear instancias de un nuevo objeto <xref:System.Globalization.CultureInfo> que representa la misma referencia cultural que la referencia cultural del sistema actual, cualquier personalización establecida por el elemento **Configuración regional y de idioma** del Panel de control se aplicará al nuevo objeto <xref:System.Globalization.CultureInfo>. Puede usar el constructor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> para crear un objeto <xref:System.Globalization.CultureInfo> que no refleje las personalizaciones de un sistema.
+Asimismo, si se utiliza el constructor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29> para crear instancias de un nuevo objeto <xref:System.Globalization.CultureInfo> que representa la misma referencia cultural que la referencia cultural del sistema actual, cualquier personalización establecida por el elemento **Configuración regional y de idioma** del Panel de control se aplicará al nuevo objeto <xref:System.Globalization.CultureInfo>. Puede usar el constructor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29> para crear un objeto <xref:System.Globalization.CultureInfo> que no refleje las personalizaciones de un sistema.
 
 ### <a name="numberformatinfo-properties"></a>Propiedades NumberFormatInfo
 

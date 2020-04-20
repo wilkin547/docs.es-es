@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 12/23/2019
 ms.custom: mvc,mlnet-tooling
 ms.topic: tutorial
-ms.openlocfilehash: 2243aad0e787a3a594bde3dfa9884f104eab74e8
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: 832124e6d027b240c4d06692ee87c84f57b982d3
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546697"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243341"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>Análisis de opiniones mediante la CLI de ML.NET
 
@@ -45,7 +45,7 @@ Puede ejecutar los proyectos del código de C# generado desde Visual Studio o co
 
 Vamos a usar un conjunto de datos existente utilizado para un escenario de "análisis de sentimiento", que es una tarea de aprendizaje automático de clasificación binaria. Puede usar su propio conjunto de datos de forma similar, y el modelo y el código se generarán automáticamente.
 
-1. Descargue el [archivo ZIP del conjunto de datos UCI Sentiment Labeled Sentences (vea la referencia en la nota siguiente)](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) y descomprímalo en la carpeta de su elección.
+1. Descargue el [archivo ZIP del conjunto de datos UCI Sentiment Labeled Sentences (vea la referencia en la nota siguiente)](http://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) y descomprímalo en la carpeta de su elección.
 
     > [!NOTE]
     > Los conjuntos de datos que se utilizan en este tutorial provienen de "From Group to Individual Labels using Deep Features", Kotzias et. al., KDD 2015, and hosted at the UCI Machine Learning Repository - Dua, D. and Karra Taniskidou, E. (2017). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml ]. Irvine, CA: University of California, School of Information and Computer Science.

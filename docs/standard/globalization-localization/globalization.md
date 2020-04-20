@@ -13,12 +13,12 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-ms.openlocfilehash: fe03bbdd7d037a9f1fb4985b62b447c6ef9c6535
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c08f4309d7673d7e7fb1c6bd84307e4323411d9e
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79174789"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242691"
 ---
 # <a name="globalization"></a>Globalización
 
@@ -336,7 +336,7 @@ En general, no realice ninguna suposición sobre los valores de propiedades <xre
 
 - .NET es compatible con referencias culturales de reemplazo. Esto permite definir una nueva referencia cultural personalizada que complementa las referencias culturales estándares existentes o reemplaza por completo una referencia cultural estándar existente.
 
-- En sistemas Windows, el usuario puede personalizar la configuración específica de la referencia cultural mediante la aplicación **Región e idioma** del Panel de control. Al crear una instancia de un objeto <xref:System.Globalization.CultureInfo>, puede determinar si muestra estas personalizaciones de usuario mediante una llamada al constructor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>. Normalmente, en las aplicaciones de usuario final hay que respetar las preferencias del usuario para que este pueda ver los datos en un formato que espera.
+- En sistemas Windows, el usuario puede personalizar la configuración específica de la referencia cultural mediante la aplicación **Región e idioma** del Panel de control. Al crear una instancia de un objeto <xref:System.Globalization.CultureInfo>, puede determinar si muestra estas personalizaciones de usuario mediante una llamada al constructor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29>. Normalmente, en las aplicaciones de usuario final hay que respetar las preferencias del usuario para que este pueda ver los datos en un formato que espera.
 
 ## <a name="see-also"></a>Vea también
 

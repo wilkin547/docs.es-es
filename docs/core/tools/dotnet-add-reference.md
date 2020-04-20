@@ -2,30 +2,31 @@
 title: Comando dotnet add reference
 description: El comando dotnet add reference constituye una opción práctica para agregar referencias entre proyectos.
 ms.date: 02/14/2020
-ms.openlocfilehash: 84ea25e94efc8d84aebfeccf62c30a64551c5019
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f2bd67d181784c4858b8971d05053d196df7818e
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503786"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463743"
 ---
 # <a name="dotnet-add-reference"></a>dotnet add reference
 
 **Este artículo se aplica a:** ✔️ SDK de .NET Core 2.x y versiones posteriores
 
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
-
-## <a name="name"></a>Name
+## <a name="name"></a>NOMBRE
 
 `dotnet add reference` Agrega referencias entre proyectos (P2P) .
 
 ## <a name="synopsis"></a>Sinopsis
 
-`dotnet add [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help] [--interactive]`
+```dotnetcli
+dotnet add [<PROJECT>] reference [-f|--framework <FRAMEWORK>]
+     [--interactive] <PROJECT_REFERENCES>
 
-## <a name="description"></a>Description
+dotnet add reference -h|--help
+```
+
+## <a name="description"></a>Descripción
 
 El comando `dotnet add reference` constituye una opción práctica para agregar referencias de proyecto a un proyecto. Después de ejecutar el comando, los elementos `<ProjectReference>` se agregan al archivo del proyecto.
 
@@ -49,13 +50,13 @@ El comando `dotnet add reference` constituye una opción práctica para agregar 
 
 ## <a name="options"></a>Opciones
 
-- **`-h|--help`**
-
-  Imprime una corta ayuda para el comando.
-
 - **`-f|--framework <FRAMEWORK>`**
 
   Agrega referencias de proyecto solo cuando apunta a un[marco](../../standard/frameworks.md) específico.
+
+- **`-h|--help`**
+
+  Imprime una corta ayuda para el comando.
 
 - **`--interactive`**
 

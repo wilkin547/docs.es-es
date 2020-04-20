@@ -2,12 +2,12 @@
 title: Comando dotnet help
 description: El comando dotnet help muestra documentación en línea más detallada para el comando especificado.
 ms.date: 02/14/2020
-ms.openlocfilehash: f5d9221ae18653451a3bf97dc82fae396ae4e288
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a59e74a318118b6fd39d1895df02d76daa6fc9e1
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503732"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463689"
 ---
 # <a name="dotnet-help-reference"></a>Referencia de dotnet help
 
@@ -19,7 +19,9 @@ ms.locfileid: "77503732"
 
 ## <a name="synopsis"></a>Sinopsis
 
-`dotnet help <COMMAND_NAME> [-h|--help]`
+```dotnetcli
+dotnet help <COMMAND_NAME> [-h|--help]
+```
 
 ## <a name="description"></a>Description
 

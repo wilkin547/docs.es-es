@@ -11,12 +11,12 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-ms.openlocfilehash: 063cac1de6634125d7dabad9d627bceff877e567
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: 1a294a577d10b3e621871b168344f2b0610693dd
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546742"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242743"
 ---
 # <a name="how-to-use-character-encoding-classes-in-net"></a>Procedimiento para usar clases de codificación de caracteres en .NET
 
@@ -37,7 +37,7 @@ Todas las clases de codificación de caracteres de .NET heredan de la clase <xre
 
 - Llame al constructor de clase de la codificación. Se pueden crear instancias de los objetos para las codificaciones ASCII, UTF-7, UTF-8, UTF-16 y UTF-32 de esta manera. De forma predeterminada, cada objeto usa la reserva de reemplazo para controlar las cadenas que no puede codificar y los bytes que no puede descodificar, pero puede especificar que se debe producir una excepción en su lugar. Para más información, consulte [Reserva de reemplazo](../../../docs/standard/base-types/character-encoding.md#Replacement) y [Reserva de excepción](../../../docs/standard/base-types/character-encoding.md#Exception).
 
-- Llame al constructor <xref:System.Text.Encoding.%23ctor%28System.Int32%29?displayProperty=nameWithType> y pásele un entero que represente la codificación. Los objetos de codificación estándar usan la reserva de reemplazo, y los objetos de codificación para la página de códigos y el juego de caracteres de doble byte (DBCS) usan el retroceso de ajuste perfecto para controlar las cadenas que no pueden codificar y los bytes que no pueden descodificar. Para más información, consulte [Reserva con ajuste perfecto](../../../docs/standard/base-types/character-encoding.md#BestFit).
+- Llame al constructor <xref:System.Text.Encoding.%23ctor%28System.Int32%29> y pásele un entero que represente la codificación. Los objetos de codificación estándar usan la reserva de reemplazo, y los objetos de codificación para la página de códigos y el juego de caracteres de doble byte (DBCS) usan el retroceso de ajuste perfecto para controlar las cadenas que no pueden codificar y los bytes que no pueden descodificar. Para más información, consulte [Reserva con ajuste perfecto](../../../docs/standard/base-types/character-encoding.md#BestFit).
 
 - Llame al método <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType>, que devuelve cualquier estándar, página de códigos o codificación DBCS disponible en .NET. Las sobrecargas permiten especificar un objeto de reserva para el codificador y para el descodificador.
 

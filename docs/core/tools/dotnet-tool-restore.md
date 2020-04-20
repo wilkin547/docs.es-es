@@ -2,12 +2,12 @@
 title: Comando dotnet tool restore
 description: El comando dotnet tool restore instala en el equipo las herramientas locales de .NET Core que se encuentran en el ámbito del directorio actual.
 ms.date: 02/14/2020
-ms.openlocfilehash: cb46f70afb58e482b6aedfddfbf5f3a0c40674f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a518c2d45bbe9522bddfed4bbef61b30f1ad634b
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146442"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463343"
 ---
 # <a name="dotnet-tool-restore"></a>dotnet tool restore
 
@@ -21,11 +21,12 @@ ms.locfileid: "79146442"
 
 ```dotnetcli
 dotnet tool restore <PACKAGE_NAME>
-    [--configfile] [--add-source] [tool-manifest]
-    [--disable-parallel] [--ignore-failed-sources]
-    [--no-cache] [-interactive] [-v|--verbosity]
+    [--configfile <FILE>] [--add-source <SOURCE>]
+    [tool-manifest <PATH_TO_MANIFEST_FILE>] [--disable-parallel]
+    [--ignore-failed-sources] [--no-cache] [--interactive]
+    [-v|--verbosity <LEVEL>]
 
-dotnet tool restore <-h|--help>
+dotnet tool restore -h|--help
 ```
 
 ## <a name="description"></a>Descripción

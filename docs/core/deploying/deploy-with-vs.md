@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 11a322278ce3ff38964fe2fa389e0b4a58897ec4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f2299ac807c845dab482306cc4c710560bb7f1e7
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77449028"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607867"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Implementación de aplicaciones de .NET Core con Visual Studio
 
@@ -75,9 +75,9 @@ La implementación de una implementación dependiente de la plataforma con una o
 
 1. Si `Newtonsoft.Json` ya está instalado en el sistema, agréguelo al proyecto seleccionando el proyecto en el panel derecho de la pestaña **Administrar paquetes para la solución**.
 
-Una implementación dependiente del marco con dependencias de terceros solo es tan portátil como sus dependencias de terceros. Por ejemplo, si una biblioteca de terceros solo admite macOS, la aplicación no se puede portar a sistemas Windows. Esto ocurre si la dependencia de terceros propiamente dicha depende del código nativo. Un buen ejemplo de esto es [el servidor Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), que requiere una dependencia nativa de [libuv](https://github.com/libuv/libuv). Cuando se crea una FDD para una aplicación con esta clase de dependencia de terceros, el resultado publicado contiene una carpeta para cada [identificador en tiempo de ejecución (RID)](../rid-catalog.md) que admita la dependencia nativa (y que exista en su paquete de NuGet).
+Una implementación dependiente del marco con dependencias de terceros solo es tan portátil como sus dependencias de terceros. Por ejemplo, si una biblioteca de terceros solo admite macOS, la aplicación no se puede portar a sistemas Windows. Esto ocurre si la dependencia de terceros propiamente dicha depende del código nativo. Un buen ejemplo de esto es [el servidor Kestrel](/aspnet/core/fundamentals/servers/kestrel), que requiere una dependencia nativa de [libuv](https://github.com/libuv/libuv). Cuando se crea una FDD para una aplicación con esta clase de dependencia de terceros, el resultado publicado contiene una carpeta para cada [identificador en tiempo de ejecución (RID)](../rid-catalog.md) que admita la dependencia nativa (y que exista en su paquete de NuGet).
 
-## <a name="simpleSelf"></a> Implementación independiente sin dependencias de terceros
+## <a name="self-contained-deployment-without-third-party-dependencies"></a><a name="simpleSelf"></a> Implementación independiente sin dependencias de terceros
 
 La implementación de una implementación independiente sin dependencias de terceros implica crear el proyecto, modificar el archivo *csproj* y compilar, probar y publicar la aplicación. Un sencillo ejemplo escrito en C# ilustra el proceso. Empiece por crear, codificar y probar el proyecto, como haría en el caso de una implementación dependiente del marco de trabajo:
 

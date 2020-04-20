@@ -2,12 +2,12 @@
 title: Comando dotnet nuget add source
 description: El comando dotnet nuget add source agrega un nuevo origen de paquete a los archivos de configuración de NuGet.
 ms.date: 03/20/2020
-ms.openlocfilehash: c1e398699c7482a69b750cde718e6f9178b5c4bd
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 319501e026f1c3102006b0be5357f127b8e366a7
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80148493"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463600"
 ---
 # <a name="dotnet-nuget-add-source"></a>dotnet nuget add source
 
@@ -20,10 +20,11 @@ ms.locfileid: "80148493"
 ## <a name="synopsis"></a>Sinopsis
 
 ```dotnetcli
-dotnet nuget add source <PACKAGE_SOURCE_PATH> [--name] [--username]
-    [--password] [--store-password-in-clear-text] [--valid-authentication-types]
-    [--configfile]
-dotnet nuget add source [-h|--help]
+dotnet nuget add source <PACKAGE_SOURCE_PATH> [--name <SOURCE_NAME>] [--username <USER>]
+    [--password <PASSWORD>] [--store-password-in-clear-text]
+    [--valid-authentication-types <TYPES>] [--configfile <FILE>]
+
+dotnet nuget add source -h|--help
 ```
 
 ## <a name="description"></a>Descripción
@@ -38,15 +39,15 @@ El comando `dotnet nuget add source` agrega un nuevo origen de paquete a los arc
 
 ## <a name="options"></a>Opciones
 
-- **`--configfile`**
+- **`--configfile <FILE>`**
 
   Archivo de configuración de NuGet. Si se especifica, solo se usará la configuración de este archivo. Si no se especifica, se utilizará la jerarquía de archivos de configuración del directorio actual. Para más información, consulte [Configuraciones comunes de NuGet](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
 
-- **`-n|--name`**
+- **`-n|--name <SOURCE_NAME>`**
 
   Nombre del origen.
 
-- **`-p|--password`**
+- **`-p|--password <PASSWORD>`**
 
   Contraseña que se debe usar al conectarse a un origen autenticado.
 
@@ -54,11 +55,11 @@ El comando `dotnet nuget add source` agrega un nuevo origen de paquete a los arc
 
   Deshabilita el cifrado de la contraseña para permitir el almacenamiento de las credenciales de origen del paquete portátil.
 
-- **`-u|--username`**
+- **`-u|--username <USER>`**
 
   Nombre de usuario que se usará al conectarse a un origen autenticado.
 
-- **`--valid-authentication-types`**
+- **`--valid-authentication-types <TYPES>`**
 
   Lista separada por comas de tipos de autenticación válidos para este origen. Establézcalo en `basic` si el servidor anuncia NTLM o Negotiate y las credenciales deben enviarse mediante el mecanismo básico, por ejemplo, cuando se usa una instancia de PAT con Azure DevOps Server local. Otros valores válidos son `negotiate`, `kerberos`, `ntlm` y `digest`, pero es poco probable que estos valores sean útiles.
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-ms.openlocfilehash: 689ca9f7278dcf91b12bc62b5255a968388bb9f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 725884d8ab6d6d9009ad1cdd7bc185889cd5e485
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398788"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243068"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Independencia del lenguaje y componentes independientes del lenguaje
 
@@ -527,7 +527,7 @@ En el ejemplo siguiente se define una clase `DescriptionAttribute` que se deriva
 
 ## <a name="the-clscompliantattribute-attribute"></a>CLSCompliantAttribute (Atributo)
 
-El atributo <xref:System.CLSCompliantAttribute> se usa para indicar si un elemento del programa es conforme a Common Language Specification. El constructor <xref:System.CLSCompliantAttribute.%23ctor%28System.Boolean%29?displayProperty=nameWithType> contiene un único parámetro obligatorio, `isCompliant`, que indica si el elemento del programa es conforme a CLS.
+El atributo <xref:System.CLSCompliantAttribute> se usa para indicar si un elemento del programa es conforme a Common Language Specification. El constructor <xref:System.CLSCompliantAttribute.%23ctor%28System.Boolean%29> contiene un único parámetro obligatorio, `isCompliant`, que indica si el elemento del programa es conforme a CLS.
 
 En tiempo de compilación, el compilador detecta los elementos que supuestamente deberían ser conformes a CLS y emite una advertencia. El compilador no emite advertencias relacionadas con los tipos o miembros cuya no conformidad se declara explícitamente.
 

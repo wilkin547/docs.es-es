@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 51eb0e758f1ae8fb41c842ef9b32a9f8928af9ac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c592039b3b12eedcfceda45c2f54403a8e04b5d5
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73120743"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242678"
 ---
 # <a name="handling-io-errors-in-net"></a>Control de errores de E/S en .NET
 
@@ -39,7 +39,7 @@ Dado que el sistema de archivos es un recurso del sistema operativo, los método
 
 Por ejemplo, en el sistema operativo Windows, una llamada al método que devuelve un código de error `ERROR_FILE_NOT_FOUND`, o bien 0 x 02, se asigna a <xref:System.IO.FileNotFoundException>, y un código de error `ERROR_PATH_NOT_FOUND`, o bien 0 x 03, se asigna a <xref:System.IO.DirectoryNotFoundException>.
 
-Sin embargo, las condiciones precisas en las que el sistema operativo devuelve códigos de error concretos no suelen estar documentadas o, en caso de estarlo, la documentación suele ser escasa. Como resultado, pueden producirse excepciones inesperadas. Por ejemplo, puesto que está trabajando con un directorio en lugar de un archivo, cabría esperar que proporcionar una ruta de acceso de directorio no válida para el constructor <xref:System.IO.DirectoryInfo.%23ctor%2A?displayProperty=nameWithType> produzca <xref:System.IO.DirectoryNotFoundException>. Sin embargo, también puede producir <xref:System.IO.FileNotFoundException>.
+Sin embargo, las condiciones precisas en las que el sistema operativo devuelve códigos de error concretos no suelen estar documentadas o, en caso de estarlo, la documentación suele ser escasa. Como resultado, pueden producirse excepciones inesperadas. Por ejemplo, puesto que está trabajando con un directorio en lugar de un archivo, cabría esperar que proporcionar una ruta de acceso de directorio no válida para el constructor <xref:System.IO.DirectoryInfo.%23ctor%2A> produzca <xref:System.IO.DirectoryNotFoundException>. Sin embargo, también puede producir <xref:System.IO.FileNotFoundException>.
 
 ## <a name="exception-handling-in-io-operations"></a>Control de excepciones en operaciones de E/S
 

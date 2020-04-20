@@ -12,12 +12,12 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-ms.openlocfilehash: a53d7517485d2a0b02b6f11928f478a7da3f9503
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf352d6494a823d4f7b24eb2876d9bffa5877b2b
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73972111"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242782"
 ---
 # <a name="regular-expression-options"></a>Opciones de expresiones regulares
 
@@ -40,7 +40,7 @@ De forma predeterminada, al comparar una cadena de entrada con los caracteres li
 
 Las opciones de las expresiones regulares se pueden especificar de tres modos:
 
-- En el parámetro `options` de un constructor de clases <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> o método de coincidencia de patrones estático (`Shared` en Visual Basic), como <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> o <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>. El parámetro `options` es una combinación OR bit a bit de valores enumerados de <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.
+- En el parámetro `options` de un constructor de clases <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> o método de coincidencia de patrones estático (`Shared` en Visual Basic), como <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%29> o <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>. El parámetro `options` es una combinación OR bit a bit de valores enumerados de <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.
 
   Cuando se proporcionan opciones a una instancia <xref:System.Text.RegularExpressions.Regex> mediante el parámetro `options` de un constructor de clase, las opciones se asignan a la propiedad <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>. Sin embargo, la propiedad <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> no refleja las opciones insertadas en el mismo patrón de expresión regular.
 

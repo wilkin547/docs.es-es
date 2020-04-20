@@ -2,12 +2,12 @@
 title: Comando dotnet nuget list source
 description: El comando dotnet nuget list source muestra todos los orígenes existentes de los archivos de configuración de NuGet.
 ms.date: 03/20/2020
-ms.openlocfilehash: 4d7bc3dbd3ab5eb14c1ebf592044b685d28355cd
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 8b14413949bd60ddeed977d19eec9bb99982da70
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80148499"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463547"
 ---
 # <a name="dotnet-nuget-list-source"></a>dotnet nuget list source
 
@@ -20,8 +20,9 @@ ms.locfileid: "80148499"
 ## <a name="synopsis"></a>Sinopsis
 
 ```dotnetcli
-dotnet nuget list source [--format] [--configfile]
-dotnet nuget list source [-h|--help]
+dotnet nuget list source [--format [Detailed|Short]] [--configfile <FILE>]
+
+dotnet nuget list source -h|--help
 ```
 
 ## <a name="description"></a>Descripción
@@ -30,11 +31,11 @@ El comando `dotnet nuget list source` muestra todos los orígenes existentes de 
 
 ## <a name="options"></a>Opciones
 
-- **`--configfile`**
+- **`--configfile <FILE>`**
 
   Archivo de configuración de NuGet. Si se especifica, solo se usará la configuración de este archivo. Si no se especifica, se utilizará la jerarquía de archivos de configuración del directorio actual. Para más información, consulte [Configuraciones comunes de NuGet](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
 
-- **`--format`**
+- **`--format [Detailed|Short]`**
 
   Formato de la salida del comando de lista: `Detailed` (valor predeterminado) y `Short`.
 
