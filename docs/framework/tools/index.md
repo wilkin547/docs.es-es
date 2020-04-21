@@ -7,12 +7,12 @@ helpviewer_keywords:
 - tools [.NET Framework]
 - running .NET Framework tools
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
-ms.openlocfilehash: 4503e2cff18f4aa901d20c76cfe4076a7fed3600
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 60a9cb241f289cacc7437174f112114e843aca47
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75715769"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645562"
 ---
 # <a name="net-framework-tools"></a>Herramientas de .NET Framework
 
@@ -36,7 +36,7 @@ Genera un archivo que tiene un manifiesto del ensamblado de módulos o archivos 
 Convierte definiciones de tipos de una biblioteca de tipos COM para un control ActiveX en un control de Windows Forms.
 
 - [Caspol.exe (Herramienta de la directiva de seguridad de acceso del código)](caspol-exe-code-access-security-policy-tool.md)  
-Esta herramienta le permite ver y configurar la directiva de seguridad correspondiente a los niveles de directiva de equipo, de usuario y de empresa. En .NET Framework 4 y versiones posteriores, esta herramienta no afecta a la directiva de seguridad de acceso del código (CAS), a menos que el elemento [\<legacyCasPolicy>](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) esté establecido en `true`. Para más información, consulte [Cambios de seguridad](../security/security-changes.md).
+Esta herramienta le permite ver y configurar la directiva de seguridad correspondiente a los niveles de directiva de equipo, de usuario y de empresa. En .NET Framework 4 y versiones posteriores, esta herramienta no afecta a la directiva de seguridad de acceso del código (CAS), a menos que el elemento [\<legacyCasPolicy>](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) esté establecido en `true`. Para más información, consulte [Cambios de seguridad](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).
 
 - [Cert2spc.exe (Herramienta de prueba de certificados del publicador de software)](cert2spc-exe-software-publisher-certificate-test-tool.md)  
 Crea un certificado de publicador de software (SPC) a partir de uno o varios certificados X.509. Esta herramienta sólo se utiliza para pruebas.
@@ -104,7 +104,7 @@ Convierte archivos de texto ( *.txt* o *.restext*) y archivos de formato de recu
 - [SecAnnotate.exe (Herramienta Anotador de seguridad de .NET)](secannotate-exe-net-security-annotator-tool.md)  
 Identifica las partes `SecurityCritical` y `SecuritySafeCritical` de un ensamblado.
 
-- [SignTool.exe (Sign Tool)](signtool-exe.md)  
+- [SignTool.exe (Herramienta de firma)](signtool-exe.md)  
 Firma digitalmente los archivos, comprueba las firmas de los mismos y les agrega una marca de tiempo.
 
 - [Sn.exe (Herramienta de nombre seguro)](sn-exe-strong-name-tool.md)  

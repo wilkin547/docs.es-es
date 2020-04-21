@@ -1,12 +1,12 @@
 ---
 title: Atributos (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: 62424163303417746a67707d9ef34185954db316
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 0379bb76cf18ff836bd14aafb9cb97c30aee8ec7
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389537"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645482"
 ---
 # <a name="attributes-c"></a>Atributos (C#)
 
@@ -81,7 +81,7 @@ La lista de posibles valores `target` se muestra en la tabla siguiente.
 
 Debe especificar el valor de destino `field` para aplicar un atributo al campo de respaldo creado para una [propiedad implementada automáticamente](../../../properties.md).
 
-En el ejemplo siguiente se muestra cómo aplicar atributos a ensamblados y módulos. Para obtener más información, vea [Atributos comunes (C#)](common-attributes.md).
+En el ejemplo siguiente se muestra cómo aplicar atributos a ensamblados y módulos. Para obtener más información, vea [Atributos comunes (C#)](../../../language-reference/attributes/global.md).
 
 ```csharp
 using System;
@@ -120,7 +120,7 @@ Para obtener más información, consulte:
 - [Crear atributos personalizados (C#)](creating-custom-attributes.md)  
 - [Acceder a atributos mediante reflexión (C#)](accessing-attributes-by-using-reflection.md)  
 - [Procedimiento para: Crear una unión de C/C++ mediante atributos (C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
-- [Atributos comunes (C#)](common-attributes.md)  
+- [Atributos comunes (C#)](../../../language-reference/attributes/global.md)  
 - [Información del llamador (C#)](../../../language-reference/attributes/caller-information.md)  
 
 ## <a name="see-also"></a>Vea también
