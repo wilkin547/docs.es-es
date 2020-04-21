@@ -3,18 +3,18 @@ title: Introducción a Azure File Storage mediante F#
 description: Almacene datos de archivo en la nube con el Almacenamiento de archivos de Azure y monte un recurso compartido de archivos de nube desde una máquina virtual (VM) de Azure o desde una aplicación local con Windows.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 2088442e05ba36b388a3324942ebbf8c7eb263dd
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 1b38ee53f2f73f7b7f4ee12f712f487cb726d41e
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607472"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739592"
 ---
 # <a name="get-started-with-azure-file-storage-using-f"></a>Introducción a Azure File Storage con F\#
 
 Almacenamiento de archivos de Azure es un servicio que ofrece recursos compartidos de archivos en la nube mediante el [protocolo Bloque de mensajes del servidor (SMB)](https://msdn.microsoft.com/library/windows/desktop/aa365233.aspx)estándar. Se admiten SMB 2.1 y SMB 3.0. Con Almacenamiento de archivos de Azure puede migrar aplicaciones heredadas basadas en recursos compartidos de archivos a Azure con rapidez y sin necesidad de costosas reescrituras. Las aplicaciones que se ejecutan en máquinas virtuales de Azure o en servicios en la nube o desde clientes locales pueden montar un recurso compartido de archivos en la nube, igual que una aplicación de escritorio monta un recurso compartido SMB típico. Cualquier número de componentes de aplicación puede montar y acceder simultáneamente al recurso compartido de Almacenamiento de archivos.
 
-Para obtener información general conceptual sobre el almacenamiento de archivos, consulte la guía de [.NET para el almacenamiento](https://docs.microsoft.com/azure/storage/storage-dotnet-how-to-use-files)de archivos.
+Para obtener información general conceptual sobre el almacenamiento de archivos, consulte [la guía de .NET para](https://docs.microsoft.com/azure/storage/storage-dotnet-how-to-use-files)el almacenamiento de archivos.
 
 ## <a name="prerequisites"></a>Prerrequisitos
 
@@ -73,7 +73,7 @@ Este ejemplo muestra cómo crear un recurso compartido de archivos si aún no ex
 
 ## <a name="create-a-root-directory-and-a-subdirectory"></a>Crear un directorio raíz y un subdirectorio
 
-Aquí, usted consigue el directorio raíz y consigue un sub-directorio de la raíz. Creas ambos si aún no existen.
+Aquí, obtendrá el directorio raíz y obtenga un subdirectorio de la raíz. Creas ambos si aún no existen.
 
 [!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L41-L43)]
 
@@ -133,7 +133,7 @@ Puede habilitar las métricas para el almacenamiento de archivos desde [Azure Po
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Consulte los vínculos siguientes para obtener más información acerca Azure File Storage.
+Para obtener más información acerca de Azure File Storage, consulte estos vínculos.
 
 ### <a name="conceptual-articles-and-videos"></a>Artículos y vídeos conceptuales
 

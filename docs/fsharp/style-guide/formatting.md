@@ -2,19 +2,19 @@
 title: Instrucciones de formato de código de F#
 description: Obtenga información sobre las directrices para dar formato al código de F.
 ms.date: 11/04/2019
-ms.openlocfilehash: 2086b515b8ec9b69a44e2e65ca06fb320670dff2
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: b8be70dd29a04e71614308164e541b99a1724305
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278943"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739553"
 ---
 # <a name="f-code-formatting-guidelines"></a>Instrucciones de formato de código de F#
 
 En este artículo se ofrecen directrices sobre cómo dar formato al código para que el código de F es:
 
-* Generalmente visto como más legible
-* Está de acuerdo con las convenciones aplicadas por las herramientas de formato en Visual Studio y otros editores
+* Más legible
+* De acuerdo con las convenciones aplicadas por las herramientas de formato en Visual Studio y otros editores
 * Similar a otro código en línea
 
 Estas directrices se basan en una guía completa de las [convenciones](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) de formato de F de [Anh-Dung Phan](https://github.com/dungpa).
@@ -27,7 +27,7 @@ De forma predeterminada, F- utiliza espacios en blanco significativos. Las sigui
 
 Cuando se requiere sangría, debe utilizar espacios, no tabulaciones. Se requiere al menos un espacio. Su organización puede crear estándares de codificación para especificar el número de espacios que se utilizarán para la sangría; dos, tres o cuatro espacios de sangría en cada nivel donde se produce la sangría es típico.
 
-**Recomendamos 4 espacios por sangría.**
+**Recomendamos cuatro espacios por sangría.**
 
 Dicho esto, la sangría de los programas es un asunto subjetivo. Las variaciones están bien, pero la primera regla que debe seguir es la coherencia de la *sangría.* Elija un estilo de sangría generalmente aceptado y utilícelo sistemáticamente en todo el código base.
 
@@ -43,7 +43,7 @@ Utilice siempre espacios en blanco alrededor de expresiones aritméticas binaria
 let subtractThenAdd x = x - 1 + 3
 ```
 
-Los `-` operadores unarios siempre deben tener el valor que están negando inmediatamente a continuación:
+Los `-` operadores unarios siempre deben ir seguidos inmediatamente por el valor que están negando:
 
 ```fsharp
 // OK
@@ -100,7 +100,7 @@ let myFun (a: decimal) b c = a + b + c
 let myFunBad (a:decimal)(b)c = a + b + c
 ```
 
-### <a name="place-parameters-on-a-new-line-for-very-long-member-definitions"></a>Coloque los parámetros en una nueva línea para definiciones de miembromuy largas
+### <a name="place-parameters-on-a-new-line-for-long-member-definitions"></a>Coloque los parámetros en una nueva línea para las definiciones de miembros largos
 
 Si tiene una definición de miembro muy larga, coloque los parámetros en nuevas líneas y indentelas un ámbito.
 
@@ -180,7 +180,7 @@ let f x = x + 1 // Increment by one.
 
 ## <a name="naming-conventions"></a>Convenciones de nomenclatura
 
-### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>Utilice camelCase para funciones y valores enlazados a clases, enlazados a expresiones y con patrón
+### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>Utilice camelCase para funciones y valores enlazados a clases, enlazados a expresiones y enlazados a patrones
 
 Es común y aceptado estilo de F - para usar camelCase para todos los nombres enlazados como variables locales o en coincidencias de patrones y definiciones de función.
 
@@ -287,7 +287,7 @@ Los espacios de nombres, excepciones, eventos y nombres de proyecto/proyectos`.d
 
 Históricamente, algunas bibliotecas de F - han utilizado guiones bajos en los nombres. Sin embargo, esto ya no se acepta ampliamente, en parte porque entra en conflicto con las convenciones de nomenclatura de .NET. Dicho esto, algunos programadores de F - utilizan subrayados en gran medida, en parte por razones históricas, y la tolerancia y el respeto es importante. Sin embargo, ten en cuenta que el estilo a menudo no es del agrado por otros que tienen la opción de usarlo.
 
-Algunas excepciones incluyen la interoperación con componentes nativos, donde los guiones bajos son muy comunes.
+Una excepción incluye la interoperación con componentes nativos, donde los guiones bajos son comunes.
 
 ### <a name="use-standard-f-operators"></a>Utilice operadores estándar de F -
 
@@ -325,7 +325,7 @@ Para todos los demás tipos, utilice el formulario de prefijo.
 
 ## <a name="formatting-tuples"></a>Tuplas de formato
 
-Una creación de instancias de tupla debe ser entreparénte, y las comas `(1, 2)`delimitadoras dentro deben ir seguidas de un único espacio, por ejemplo: , . `(x, y, z)`
+Una creación de instancias de tupla debe ser entreparénte, y las comas delimitadoras dentro de ella deben ir seguidas de un único espacio, por ejemplo: `(1, 2)`, `(x, y, z)`.
 
 Se acepta comúnmente para omitir paréntesis en la coincidencia de patrones de tuplas:
 
@@ -354,7 +354,7 @@ En resumen, prefiere las instancias de tupla entre paréntesis, pero cuando se u
 
 ## <a name="formatting-discriminated-union-declarations"></a>Formato de declaraciones sindicales discriminadas
 
-Sangría `|` en la definición de tipo por 4 espacios:
+Sangría `|` en la definición de tipo por cuatro espacios:
 
 ```fsharp
 // OK
@@ -393,7 +393,7 @@ let tree1 =
 
 ## <a name="formatting-record-declarations"></a>Formato de declaraciones de registros
 
-Sangra `{` en la definición de tipo por 4 espacios e inicia la lista de campos en la misma línea:
+Sangra `{` en la definición de tipo por cuatro espacios e inicia la lista de campos en la misma línea:
 
 ```fsharp
 // OK
@@ -508,7 +508,7 @@ let rainbow2 =
         Lackeys = ["Zippy"; "George"; "Bungle"] }
 ```
 
-Y al igual que con la guía de registros, es posible que desee dedicar líneas separadas para las llaves y aplicar sangría a un ámbito a la derecha con la expresión. Tenga en cuenta que en algunos casos especiales, como ajustar un valor con un valor opcional sin paréntesis, es posible que deba mantener una llave en una línea:
+Y al igual que con la guía de registros, es posible que desee dedicar líneas separadas para las llaves y aplicar sangría a un ámbito a la derecha con la expresión. En algunos casos especiales, como ajustar un valor con un valor opcional sin paréntesis, es posible que deba mantener una llave en una línea:
 
 ```fsharp
 type S = { F1: int; F2: string }
@@ -691,7 +691,7 @@ lambdaList
     | Var v -> 1)
 ```
 
-Coincidencia de patrones `let` en `let rec` funciones definidas por o `let`debe `function` sangrar 4 espacios después de iniciar , incluso si se utiliza la palabra clave:
+La coincidencia de `let` patrones `let rec` en funciones definidas por `let`o `function` debe sangrar cuatro espacios después de iniciar , incluso si se utiliza la palabra clave:
 
 ```fsharp
 let rec sizeLambda acc = function
@@ -824,7 +824,7 @@ module A2 =
 
 ### <a name="formatting-object-expressions-and-interfaces"></a>Formato de expresiones e interfaces de objetos
 
-Las expresiones e interfaces de objeto `member` deben alinearse de la misma manera con la sangría después de 4 espacios.
+Las expresiones e interfaces de objeto `member` deben alinearse de la misma manera con sangría después de cuatro espacios.
 
 ```fsharp
 let comparer =

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: 5086401f4616074d364c1d387b751116120d5969
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: b207db459776c9f8fa7ea247d01071eeb8c995cf
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81388999"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739296"
 ---
 # <a name="attached-properties-overview"></a>Información general sobre propiedades asociadas
 
@@ -20,11 +20,11 @@ Una propiedad adjunta es un concepto definido por XAML. Una propiedad adjunta es
 
 ## <a name="prerequisites"></a>Requisitos previos<a name="prerequisites"></a>
 
-En este tema, se supone que entiende las propiedades de dependencia desde la perspectiva de un consumidor de propiedades de dependencia existentes en las clases [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] y que ha leído [Información general sobre las propiedades de dependencia](dependency-properties-overview.md). Para seguir los ejemplos de este tema, también debe comprender XAML y saber cómo escribir aplicaciones WPFWPF.
+En este artículo se supone que entiende las propiedades de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] dependencia desde la perspectiva de un consumidor de propiedades de dependencia existentes en las clases y ha leído información general sobre [propiedades](dependency-properties-overview.md)de dependencia . Para seguir los ejemplos de este artículo, también debe comprender XAML y saber cómo escribir aplicaciones WPFWPF.
 
 ## <a name="why-use-attached-properties"></a>Por qué usar propiedades adjuntas<a name="attached_properties_usage"></a>
 
-Un objetivo de una propiedad adjunta es permitir que distintos elementos secundarios especifiquen valores únicos para una propiedad que, en realidad, está definida en un elemento primario. Una aplicación concreta de este escenario es hacer que los elementos secundarios notifiquen al elemento primario cómo se presentarán en la [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Un ejemplo <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> es la propiedad. La <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> propiedad se crea como una propiedad adjunta porque está diseñada para <xref:System.Windows.Controls.DockPanel>establecerse <xref:System.Windows.Controls.DockPanel> en elementos que se encuentran dentro de un , en lugar de en sí mismo. La <xref:System.Windows.Controls.DockPanel> clase define <xref:System.Windows.DependencyProperty> el <xref:System.Windows.Controls.DockPanel.DockProperty>campo estático <xref:System.Windows.Controls.DockPanel.GetDock%2A> denominado <xref:System.Windows.Controls.DockPanel.SetDock%2A> y, a continuación, proporciona los métodos y como descriptores de acceso públicos para la propiedad adjunta.
+Un propósito de una propiedad adjunta es permitir que diferentes elementos secundarios especifiquen valores únicos para una propiedad que se define en un elemento primario. Una aplicación concreta de este escenario es hacer que los elementos secundarios notifiquen al elemento primario cómo se presentarán en la [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Un ejemplo <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> es la propiedad. La <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> propiedad se crea como una propiedad adjunta porque está diseñada para <xref:System.Windows.Controls.DockPanel> establecerse <xref:System.Windows.Controls.DockPanel> en elementos que están contenidos en un lugar que en sí mismo. La <xref:System.Windows.Controls.DockPanel> clase define <xref:System.Windows.DependencyProperty> el <xref:System.Windows.Controls.DockPanel.DockProperty>campo estático <xref:System.Windows.Controls.DockPanel.GetDock%2A> denominado <xref:System.Windows.Controls.DockPanel.SetDock%2A> y, a continuación, proporciona los métodos y como descriptores de acceso públicos para la propiedad adjunta.
 
 ## <a name="attached-properties-in-xaml"></a>Propiedades adjuntas en XAML<a name="attached_properties_xaml"></a>
 
@@ -34,13 +34,13 @@ A continuación se muestra un <xref:System.Windows.Controls.DockPanel.Dock%2A?di
 
 [!code-xaml[PropertiesOvwSupport#APBasicUsage](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml#apbasicusage)]
 
-Tenga en cuenta que el uso es algo similar a una propiedad estática; Siempre hace referencia <xref:System.Windows.Controls.DockPanel> al tipo que posee y registra la propiedad adjunta, en lugar de hacer referencia a cualquier instancia especificada por name.
+El uso es algo similar a una propiedad estática; Siempre hace referencia <xref:System.Windows.Controls.DockPanel> al tipo que posee y registra la propiedad adjunta, en lugar de hacer referencia a cualquier instancia especificada por name.
 
-Además, dado que una propiedad adjunta en XAML es un atributo que se establece en el marcado, solamente la operación set tiene alguna relevancia. No se puede obtener directamente una propiedad en XAML, aunque hay algunos mecanismos indirectos para comparar valores, como los desencadenadores en estilos (para obtener más información, consulte [Aplicar estilos y plantillas](../controls/styling-and-templating.md)).
+Además, dado que una propiedad adjunta en XAML es un atributo que se establece en el marcado, solamente la operación set tiene alguna relevancia. No se puede obtener directamente una propiedad en XAML, aunque hay algunos mecanismos indirectos para comparar valores, como los desencadenadores en estilos (para obtener más información, consulte [Aplicar estilos y plantillas](../../../desktop-wpf/fundamentals/styles-templates-overview.md)).
 
 ### <a name="attached-property-implementation-in-wpf"></a>Implementación de propiedades adjuntas en WPF
 
-En [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], la mayoría de las propiedades adjuntas que existen en WPFWPF tipos que están relacionados con la presentación de la interfaz de usuario se implementan como propiedades de dependencia. Las propiedades adjuntas son un concepto XAML, mientras que las propiedades de dependencia son un concepto DE WPFWPF. Dado que las propiedades adjuntas de WPFWPF son propiedades de dependencia, admiten conceptos de propiedad de dependencia como metadatos de propiedad y valores predeterminados de los metadatos de esa propiedad.
+En [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], la mayoría de las propiedades adjuntas relacionadas con la interfaz de usuario en WPFWPF tipos se implementan como propiedades de dependencia. Las propiedades adjuntas son un concepto XAML, mientras que las propiedades de dependencia son un concepto DE WPFWPF. Dado que las propiedades adjuntas de WPFWPF son propiedades de dependencia, admiten conceptos de propiedad de dependencia como metadatos de propiedad y valores predeterminados de los metadatos de esa propiedad.
 
 ## <a name="how-attached-properties-are-used-by-the-owning-type"></a>Cómo se utilizan las propiedades adjuntas por el tipo de propiedad<a name="howused"></a>
 
@@ -91,7 +91,7 @@ Como mencionamos anteriormente, debe realizar el registro como una propiedad adj
 
 Si la clase está definiendo la propiedad adjunta estrictamente para su uso <xref:System.Windows.DependencyObject>en otros tipos, la clase no tiene que derivar de . Pero es necesario derivar <xref:System.Windows.DependencyObject> de si sigue el modelo general de WPFWPF de tener la propiedad adjunta también ser una propiedad de dependencia.
 
-Defina la propiedad adjunta como una `public static readonly` propiedad de <xref:System.Windows.DependencyProperty>dependencia declarando un campo de tipo . Este campo se define mediante el <xref:System.Windows.DependencyProperty.RegisterAttached%2A> valor devuelto del método. El nombre del campo debe coincidir con el `Property`nombre de la propiedad adjunta, anexado con la cadena , para seguir el patrón WPF establecido de nombrar los campos de identificación frente a las propiedades que representan. El proveedor de propiedades adjunta también debe proporcionar **Get_PropertyName_** estáticos y **métodos de Set_PropertyName_** como descriptores de acceso para la propiedad adjunta; si no lo hace, el sistema de propiedades no podrá utilizar la propiedad adjunta.
+Defina la propiedad adjunta como una `public static readonly` propiedad de <xref:System.Windows.DependencyProperty>dependencia declarando un campo de tipo . Este campo se define mediante el <xref:System.Windows.DependencyProperty.RegisterAttached%2A> valor devuelto del método. El nombre del campo debe coincidir con el `Property`nombre de la propiedad adjunta, anexado con la cadena , para seguir el patrón WPF establecido de nombrar los campos de identificación frente a las propiedades que representan. El proveedor de propiedades adjunta también debe proporcionar **Get_PropertyName_** estáticos y **métodos de Set_PropertyName_** como descriptores de acceso para la propiedad adjunta; si no lo hace, el sistema de propiedades no puede utilizar la propiedad adjunta.
 
 > [!NOTE]
 > Si omite el descriptor de acceso get de la propiedad adjunta, el enlace de datos de la propiedad no funcionará en herramientas de diseño, como Visual Studio y Blend para Visual Studio.
