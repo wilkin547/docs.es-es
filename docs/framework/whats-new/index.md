@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: d5657f4081577b2a27bc3c2f6880784015c56060
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: f56ba7d68be107e697d3f732767f0a5f11c1a622
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249700"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644227"
 ---
 # <a name="whats-new-in-net-framework"></a>Novedades de .NET Framework
 
@@ -695,7 +695,7 @@ Puede ver un [ejemplo de las mejoras de criptografía de .NET Framework 4.7](htt
 
 **Mayor compatibilidad para caracteres de control mediante DataContractJsonSerializer**
 
-En .NET Framework 4.7, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> serializa los caracteres de control en conformidad con el estándar ECMAScript 6. Este comportamiento está habilitado de manera predeterminada para aplicaciones que tienen .NET Framework 4.7 como destino y es una característica opcional para las aplicaciones que se ejecutan en .NET Framework 4.7 pero tienen como destino una versión anterior de .NET Framework. Para más información, consulte [Cambios de redestinación en .NET Framework 4.7](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
+En .NET Framework 4.7, la clase <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> serializa los caracteres de control en conformidad con el estándar ECMAScript 6. Este comportamiento está habilitado de manera predeterminada para aplicaciones que tienen .NET Framework 4.7 como destino y es una característica opcional para las aplicaciones que se ejecutan en .NET Framework 4.7, pero tienen como destino una versión anterior de .NET Framework. Para obtener más información, consulte la sección [Compatibilidad de aplicaciones](../migration-guide/application-compatibility.md).
 
 <a name="net47" />
 
@@ -768,11 +768,11 @@ En .NET Framework 4.7, WPF incluye las siguientes mejoras:
 
 **Compatibilidad con una pila de entrada táctil o de lápiz basada en mensajes WM_POINTER de Windows**
 
-Ahora tiene la opción de usar una pila de entrada táctil o de lápiz basada en [mensajes WM_POINTER](https://docs.microsoft.com/previous-versions/windows/desktop/InputMsg/messages) en lugar de Windows Ink Services Platform (WISP). Se trata de una característica opcional de .NET Framework. Para más información, consulte [Cambios de redestinación en .NET Framework 4.7](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
+Ahora tiene la opción de usar una pila de entrada táctil o de lápiz basada en [mensajes WM_POINTER](https://docs.microsoft.com/previous-versions/windows/desktop/InputMsg/messages) en lugar de Windows Ink Services Platform (WISP). Se trata de una característica opcional de .NET Framework. Para obtener más información, consulte la sección [Compatibilidad de aplicaciones](../migration-guide/application-compatibility.md).
 
 **Nueva implementación para API de impresión de WPF**
 
-Las API de impresión de WPF de la clase <xref:System.Printing.PrintQueue?displayProperty=nameWithType> llaman a la [API Print Document Package](/windows/desktop/printdocs/tailored-app-printing-api) de Windows en lugar de a la [API XPS Print](/windows/desktop/printdocs/xps-printing), que está en desuso. Para ver el impacto que este cambio tiene en la compatibilidad de aplicaciones, consulte [Cambios de redestinación en .NET Framework 4.7](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
+Las API de impresión de WPF de la clase <xref:System.Printing.PrintQueue?displayProperty=nameWithType> llaman a la [API Print Document Package](/windows/desktop/printdocs/tailored-app-printing-api) de Windows en lugar de a la [API XPS Print](/windows/desktop/printdocs/xps-printing), que está en desuso. Para ver el impacto que este cambio tiene en la compatibilidad de aplicaciones, consulte la sección [Compatibilidad de aplicaciones](../migration-guide/application-compatibility.md).
 
 <a name="v462" />
 
