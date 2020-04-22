@@ -2,181 +2,195 @@
 title: Comando dotnet sln
 description: El comando dotnet-sln proporciona una opción conveniente para agregar, quitar y enumerar los proyectos en un archivo de solución.
 ms.date: 02/14/2020
-ms.openlocfilehash: b2455c04a46b2a10b8142d8ddc2d8129f2154b27
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 231287477d986f9ec4a5404cc5278e76c297faa4
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77543487"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463398"
 ---
-# <a name="dotnet-sln"></a><span data-ttu-id="dc028-103">dotnet sln</span><span class="sxs-lookup"><span data-stu-id="dc028-103">dotnet sln</span></span>
+# <a name="dotnet-sln"></a><span data-ttu-id="c3226-103">dotnet sln</span><span class="sxs-lookup"><span data-stu-id="c3226-103">dotnet sln</span></span>
 
-<span data-ttu-id="dc028-104">**Este artículo se aplica a:** ✔️ SDK de .NET Core 2.x y versiones posteriores</span><span class="sxs-lookup"><span data-stu-id="dc028-104">**This article applies to:** ✔️ .NET Core 2.x SDK and later versions</span></span>
+<span data-ttu-id="c3226-104">**Este artículo se aplica a:** ✔️ SDK de .NET Core 2.x y versiones posteriores</span><span class="sxs-lookup"><span data-stu-id="c3226-104">**This article applies to:** ✔️ .NET Core 2.x SDK and later versions</span></span>
 
-## <a name="name"></a><span data-ttu-id="dc028-105">Name</span><span class="sxs-lookup"><span data-stu-id="dc028-105">Name</span></span>
+## <a name="name"></a><span data-ttu-id="c3226-105">NOMBRE</span><span class="sxs-lookup"><span data-stu-id="c3226-105">Name</span></span>
 
-<span data-ttu-id="dc028-106">`dotnet sln`: enumera o modifica los proyectos en un archivo de solución de .NET Core.</span><span class="sxs-lookup"><span data-stu-id="dc028-106">`dotnet sln` - Lists or modifies the projects in a .NET Core solution file.</span></span>
+<span data-ttu-id="c3226-106">`dotnet sln`: enumera o modifica los proyectos en un archivo de solución de .NET Core.</span><span class="sxs-lookup"><span data-stu-id="c3226-106">`dotnet sln` - Lists or modifies the projects in a .NET Core solution file.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="dc028-107">Sinopsis</span><span class="sxs-lookup"><span data-stu-id="dc028-107">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="c3226-107">Sinopsis</span><span class="sxs-lookup"><span data-stu-id="c3226-107">Synopsis</span></span>
 
 ```dotnetcli
-dotnet sln [<SOLUTION_FILE>] [command] [-h|--help]
+dotnet sln [<SOLUTION_FILE>] [command]
+
+dotnet sln [command] -h|--help
 ```
 
-## <a name="description"></a><span data-ttu-id="dc028-108">Description</span><span class="sxs-lookup"><span data-stu-id="dc028-108">Description</span></span>
+## <a name="description"></a><span data-ttu-id="c3226-108">Descripción</span><span class="sxs-lookup"><span data-stu-id="c3226-108">Description</span></span>
 
-<span data-ttu-id="dc028-109">El comando `dotnet sln` proporciona una opción conveniente para enumerar y modificar los proyectos en un archivo de solución.</span><span class="sxs-lookup"><span data-stu-id="dc028-109">The `dotnet sln` command provides a convenient way to list and modify projects in a solution file.</span></span>
+<span data-ttu-id="c3226-109">El comando `dotnet sln` proporciona una opción conveniente para enumerar y modificar los proyectos en un archivo de solución.</span><span class="sxs-lookup"><span data-stu-id="c3226-109">The `dotnet sln` command provides a convenient way to list and modify projects in a solution file.</span></span>
 
-<span data-ttu-id="dc028-110">Para usar el comando `dotnet sln`, debe existir el archivo de solución.</span><span class="sxs-lookup"><span data-stu-id="dc028-110">To use the `dotnet sln` command, the solution file must already exist.</span></span> <span data-ttu-id="dc028-111">Si necesita crear uno, use el comando [dotnet new](dotnet-new.md), como en el ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="dc028-111">If you need to create one, use the [dotnet new](dotnet-new.md) command, as in the following example:</span></span>
+<span data-ttu-id="c3226-110">Para usar el comando `dotnet sln`, debe existir el archivo de solución.</span><span class="sxs-lookup"><span data-stu-id="c3226-110">To use the `dotnet sln` command, the solution file must already exist.</span></span> <span data-ttu-id="c3226-111">Si necesita crear uno, use el comando [dotnet new](dotnet-new.md), como en el ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="c3226-111">If you need to create one, use the [dotnet new](dotnet-new.md) command, as in the following example:</span></span>
 
 ```dotnetcli
 dotnet new sln
 ```
 
-## <a name="arguments"></a><span data-ttu-id="dc028-112">Argumentos</span><span class="sxs-lookup"><span data-stu-id="dc028-112">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="c3226-112">Argumentos</span><span class="sxs-lookup"><span data-stu-id="c3226-112">Arguments</span></span>
 
 - **`SOLUTION_FILE`**
 
-  <span data-ttu-id="dc028-113">El archivo de solución que se va a usar.</span><span class="sxs-lookup"><span data-stu-id="dc028-113">The solution file to use.</span></span> <span data-ttu-id="dc028-114">Si se omite este argumento, el comando busca uno en el directorio actual.</span><span class="sxs-lookup"><span data-stu-id="dc028-114">If this argument is omitted, the command searches the current directory for one.</span></span> <span data-ttu-id="dc028-115">Si encuentra varios archivos de solución o no encuentra ninguno, se produce un error en el comando.</span><span class="sxs-lookup"><span data-stu-id="dc028-115">If it finds no solution file or multiple solution files, the command fails.</span></span>
+  <span data-ttu-id="c3226-113">El archivo de solución que se va a usar.</span><span class="sxs-lookup"><span data-stu-id="c3226-113">The solution file to use.</span></span> <span data-ttu-id="c3226-114">Si se omite este argumento, el comando busca uno en el directorio actual.</span><span class="sxs-lookup"><span data-stu-id="c3226-114">If this argument is omitted, the command searches the current directory for one.</span></span> <span data-ttu-id="c3226-115">Si encuentra varios archivos de solución o no encuentra ninguno, se produce un error en el comando.</span><span class="sxs-lookup"><span data-stu-id="c3226-115">If it finds no solution file or multiple solution files, the command fails.</span></span>
 
-## <a name="options"></a><span data-ttu-id="dc028-116">Opciones</span><span class="sxs-lookup"><span data-stu-id="dc028-116">Options</span></span>
+## <a name="options"></a><span data-ttu-id="c3226-116">Opciones</span><span class="sxs-lookup"><span data-stu-id="c3226-116">Options</span></span>
 
 - **`-h|--help`**
 
-  <span data-ttu-id="dc028-117">Imprime una descripción de cómo usar el comando.</span><span class="sxs-lookup"><span data-stu-id="dc028-117">Prints out a description of how to use the command.</span></span>
+  <span data-ttu-id="c3226-117">Imprime una descripción de cómo usar el comando.</span><span class="sxs-lookup"><span data-stu-id="c3226-117">Prints out a description of how to use the command.</span></span>
 
-## <a name="commands"></a><span data-ttu-id="dc028-118">Comandos</span><span class="sxs-lookup"><span data-stu-id="dc028-118">Commands</span></span>
+## <a name="commands"></a><span data-ttu-id="c3226-118">Comandos</span><span class="sxs-lookup"><span data-stu-id="c3226-118">Commands</span></span>
 
 ### `list`
 
-<span data-ttu-id="dc028-119">Enumera todos los proyectos en un archivo de solución.</span><span class="sxs-lookup"><span data-stu-id="dc028-119">Lists all projects in a solution file.</span></span>
+<span data-ttu-id="c3226-119">Enumera todos los proyectos en un archivo de solución.</span><span class="sxs-lookup"><span data-stu-id="c3226-119">Lists all projects in a solution file.</span></span>
 
-#### <a name="synopsis"></a><span data-ttu-id="dc028-120">Sinopsis</span><span class="sxs-lookup"><span data-stu-id="dc028-120">Synopsis</span></span>
+#### <a name="synopsis"></a><span data-ttu-id="c3226-120">Sinopsis</span><span class="sxs-lookup"><span data-stu-id="c3226-120">Synopsis</span></span>
 
 ```dotnetcli
 dotnet sln list [-h|--help]
 ```
 
-#### <a name="arguments"></a><span data-ttu-id="dc028-121">Argumentos</span><span class="sxs-lookup"><span data-stu-id="dc028-121">Arguments</span></span>
+#### <a name="arguments"></a><span data-ttu-id="c3226-121">Argumentos</span><span class="sxs-lookup"><span data-stu-id="c3226-121">Arguments</span></span>
 
 - **`SOLUTION_FILE`**
 
-  <span data-ttu-id="dc028-122">El archivo de solución que se va a usar.</span><span class="sxs-lookup"><span data-stu-id="dc028-122">The solution file to use.</span></span> <span data-ttu-id="dc028-123">Si se omite este argumento, el comando busca uno en el directorio actual.</span><span class="sxs-lookup"><span data-stu-id="dc028-123">If this argument is omitted, the command searches the current directory for one.</span></span> <span data-ttu-id="dc028-124">Si encuentra varios archivos de solución o no encuentra ninguno, se produce un error en el comando.</span><span class="sxs-lookup"><span data-stu-id="dc028-124">If it finds no solution file or multiple solution files, the command fails.</span></span>
+  <span data-ttu-id="c3226-122">El archivo de solución que se va a usar.</span><span class="sxs-lookup"><span data-stu-id="c3226-122">The solution file to use.</span></span> <span data-ttu-id="c3226-123">Si se omite este argumento, el comando busca uno en el directorio actual.</span><span class="sxs-lookup"><span data-stu-id="c3226-123">If this argument is omitted, the command searches the current directory for one.</span></span> <span data-ttu-id="c3226-124">Si encuentra varios archivos de solución o no encuentra ninguno, se produce un error en el comando.</span><span class="sxs-lookup"><span data-stu-id="c3226-124">If it finds no solution file or multiple solution files, the command fails.</span></span>
 
-#### <a name="options"></a><span data-ttu-id="dc028-125">Opciones</span><span class="sxs-lookup"><span data-stu-id="dc028-125">Options</span></span>
+#### <a name="options"></a><span data-ttu-id="c3226-125">Opciones</span><span class="sxs-lookup"><span data-stu-id="c3226-125">Options</span></span>
 
 - **`-h|--help`**
 
-  <span data-ttu-id="dc028-126">Imprime una descripción de cómo usar el comando.</span><span class="sxs-lookup"><span data-stu-id="dc028-126">Prints out a description of how to use the command.</span></span>
+  <span data-ttu-id="c3226-126">Imprime una descripción de cómo usar el comando.</span><span class="sxs-lookup"><span data-stu-id="c3226-126">Prints out a description of how to use the command.</span></span>
   
 ### `add`
 
-<span data-ttu-id="dc028-127">Agrega uno o varios proyectos al archivo de solución.</span><span class="sxs-lookup"><span data-stu-id="dc028-127">Adds one or more projects to the solution file.</span></span>
+<span data-ttu-id="c3226-127">Agrega uno o varios proyectos al archivo de solución.</span><span class="sxs-lookup"><span data-stu-id="c3226-127">Adds one or more projects to the solution file.</span></span>
 
-#### <a name="synopsis"></a><span data-ttu-id="dc028-128">Sinopsis</span><span class="sxs-lookup"><span data-stu-id="dc028-128">Synopsis</span></span>
+#### <a name="synopsis"></a><span data-ttu-id="c3226-128">Sinopsis</span><span class="sxs-lookup"><span data-stu-id="c3226-128">Synopsis</span></span>
 
 ```dotnetcli
-dotnet sln [<SOLUTION_FILE>] add [--in-root] [-s|--solution-folder] <PROJECT_PATH> [<PROJECT_PATH>...]
+dotnet sln [<SOLUTION_FILE>] add [--in-root] [-s|--solution-folder <PATH>] <PROJECT_PATH> [<PROJECT_PATH>...]
 dotnet sln add [-h|--help]
 ```
 
-#### <a name="arguments"></a><span data-ttu-id="dc028-129">Argumentos</span><span class="sxs-lookup"><span data-stu-id="dc028-129">Arguments</span></span>
+#### <a name="arguments"></a><span data-ttu-id="c3226-129">Argumentos</span><span class="sxs-lookup"><span data-stu-id="c3226-129">Arguments</span></span>
 
 - **`SOLUTION_FILE`**
 
-  <span data-ttu-id="dc028-130">El archivo de solución que se va a usar.</span><span class="sxs-lookup"><span data-stu-id="dc028-130">The solution file to use.</span></span> <span data-ttu-id="dc028-131">Si no se especifica, el comando busca uno en el directorio actual y produce un error si hay varios archivos de solución.</span><span class="sxs-lookup"><span data-stu-id="dc028-131">If it is unspecified, the command searches the current directory for one and fails if there are multiple solution files.</span></span>
+  <span data-ttu-id="c3226-130">El archivo de solución que se va a usar.</span><span class="sxs-lookup"><span data-stu-id="c3226-130">The solution file to use.</span></span> <span data-ttu-id="c3226-131">Si no se especifica, el comando busca uno en el directorio actual y produce un error si hay varios archivos de solución.</span><span class="sxs-lookup"><span data-stu-id="c3226-131">If it is unspecified, the command searches the current directory for one and fails if there are multiple solution files.</span></span>
 
 - **`PROJECT_PATH`**
 
-  <span data-ttu-id="dc028-132">La ruta de acceso al proyecto o los proyectos que se van a agregar a la solución.</span><span class="sxs-lookup"><span data-stu-id="dc028-132">The path to the project or projects to add to the solution.</span></span> <span data-ttu-id="dc028-133">Las expansiones del [patrón comodines](https://en.wikipedia.org/wiki/Glob_(programming)) de shell de Unix y Linux se procesan correctamente mediante el comando `dotnet sln`.</span><span class="sxs-lookup"><span data-stu-id="dc028-133">Unix/Linux shell [globbing pattern](https://en.wikipedia.org/wiki/Glob_(programming)) expansions are processed correctly by the `dotnet sln` command.</span></span>
+  <span data-ttu-id="c3226-132">La ruta de acceso al proyecto o los proyectos que se van a agregar a la solución.</span><span class="sxs-lookup"><span data-stu-id="c3226-132">The path to the project or projects to add to the solution.</span></span> <span data-ttu-id="c3226-133">Las expansiones del [patrón comodines](https://en.wikipedia.org/wiki/Glob_(programming)) de shell de Unix y Linux se procesan correctamente mediante el comando `dotnet sln`.</span><span class="sxs-lookup"><span data-stu-id="c3226-133">Unix/Linux shell [globbing pattern](https://en.wikipedia.org/wiki/Glob_(programming)) expansions are processed correctly by the `dotnet sln` command.</span></span>
 
-#### <a name="options"></a><span data-ttu-id="dc028-134">Opciones</span><span class="sxs-lookup"><span data-stu-id="dc028-134">Options</span></span>
+#### <a name="options"></a><span data-ttu-id="c3226-134">Opciones</span><span class="sxs-lookup"><span data-stu-id="c3226-134">Options</span></span>
 
 - **`-h|--help`**
 
-  <span data-ttu-id="dc028-135">Imprime una descripción de cómo usar el comando.</span><span class="sxs-lookup"><span data-stu-id="dc028-135">Prints out a description of how to use the command.</span></span>
+  <span data-ttu-id="c3226-135">Imprime una descripción de cómo usar el comando.</span><span class="sxs-lookup"><span data-stu-id="c3226-135">Prints out a description of how to use the command.</span></span>
 
 - **`--in-root`**
 
-  <span data-ttu-id="dc028-136">Coloca el proyecto en la raíz de la solución, en lugar de crear una carpeta de la solución.</span><span class="sxs-lookup"><span data-stu-id="dc028-136">Places the projects in the root of the solution, rather than creating a solution folder.</span></span> <span data-ttu-id="dc028-137">Disponible desde el SDK de .NET Core 3.0.</span><span class="sxs-lookup"><span data-stu-id="dc028-137">Available since .NET Core 3.0 SDK.</span></span>
+  <span data-ttu-id="c3226-136">Coloca el proyecto en la raíz de la solución, en lugar de crear una carpeta de la solución.</span><span class="sxs-lookup"><span data-stu-id="c3226-136">Places the projects in the root of the solution, rather than creating a solution folder.</span></span> <span data-ttu-id="c3226-137">Disponible desde el SDK de .NET Core 3.0.</span><span class="sxs-lookup"><span data-stu-id="c3226-137">Available since .NET Core 3.0 SDK.</span></span>
 
-- **`-s|--solution-folder`**
+- **`-s|--solution-folder <PATH>`**
 
-  <span data-ttu-id="dc028-138">La ruta de acceso de la carpeta de la solución de destino a la que se van a agregar los proyectos.</span><span class="sxs-lookup"><span data-stu-id="dc028-138">The destination solution folder path to add the projects to.</span></span> <span data-ttu-id="dc028-139">Disponible desde el SDK de .NET Core 3.0.</span><span class="sxs-lookup"><span data-stu-id="dc028-139">Available since .NET Core 3.0 SDK.</span></span>
+  <span data-ttu-id="c3226-138">La ruta de acceso de la carpeta de la solución de destino a la que se van a agregar los proyectos.</span><span class="sxs-lookup"><span data-stu-id="c3226-138">The destination solution folder path to add the projects to.</span></span> <span data-ttu-id="c3226-139">Disponible desde el SDK de .NET Core 3.0.</span><span class="sxs-lookup"><span data-stu-id="c3226-139">Available since .NET Core 3.0 SDK.</span></span>
 
 ### `remove`
 
-<span data-ttu-id="dc028-140">Quita un proyecto o varios proyectos del archivo de solución.</span><span class="sxs-lookup"><span data-stu-id="dc028-140">Removes a project or multiple projects from the solution file.</span></span>
+<span data-ttu-id="c3226-140">Quita un proyecto o varios proyectos del archivo de solución.</span><span class="sxs-lookup"><span data-stu-id="c3226-140">Removes a project or multiple projects from the solution file.</span></span>
 
-#### <a name="synopsis"></a><span data-ttu-id="dc028-141">Sinopsis</span><span class="sxs-lookup"><span data-stu-id="dc028-141">Synopsis</span></span>
+#### <a name="synopsis"></a><span data-ttu-id="c3226-141">Sinopsis</span><span class="sxs-lookup"><span data-stu-id="c3226-141">Synopsis</span></span>
 
 ```dotnetcli
 dotnet sln [<SOLUTION_FILE>] remove <PROJECT_PATH> [<PROJECT_PATH>...]
 dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
 ```
 
-#### <a name="arguments"></a><span data-ttu-id="dc028-142">Argumentos</span><span class="sxs-lookup"><span data-stu-id="dc028-142">Arguments</span></span>
+#### <a name="arguments"></a><span data-ttu-id="c3226-142">Argumentos</span><span class="sxs-lookup"><span data-stu-id="c3226-142">Arguments</span></span>
 
 - **`SOLUTION_FILE`**
 
-  <span data-ttu-id="dc028-143">El archivo de solución que se va a usar.</span><span class="sxs-lookup"><span data-stu-id="dc028-143">The solution file to use.</span></span> <span data-ttu-id="dc028-144">Si se deja sin especificar, el comando busca uno en el directorio actual y produce un error si hay varios archivos de solución.</span><span class="sxs-lookup"><span data-stu-id="dc028-144">If is left unspecified, the command searches the current directory for one and fails if there are multiple solution files.</span></span>
+  <span data-ttu-id="c3226-143">El archivo de solución que se va a usar.</span><span class="sxs-lookup"><span data-stu-id="c3226-143">The solution file to use.</span></span> <span data-ttu-id="c3226-144">Si se deja sin especificar, el comando busca uno en el directorio actual y produce un error si hay varios archivos de solución.</span><span class="sxs-lookup"><span data-stu-id="c3226-144">If is left unspecified, the command searches the current directory for one and fails if there are multiple solution files.</span></span>
 
 - **`PROJECT_PATH`**
 
-  <span data-ttu-id="dc028-145">La ruta de acceso al proyecto o los proyectos que se van a agregar a la solución.</span><span class="sxs-lookup"><span data-stu-id="dc028-145">The path to the project or projects to add to the solution.</span></span> <span data-ttu-id="dc028-146">Las expansiones del [patrón comodines](https://en.wikipedia.org/wiki/Glob_(programming)) de shell de Unix y Linux se procesan correctamente mediante el comando `dotnet sln`.</span><span class="sxs-lookup"><span data-stu-id="dc028-146">Unix/Linux shell [globbing pattern](https://en.wikipedia.org/wiki/Glob_(programming)) expansions are processed correctly by the `dotnet sln` command.</span></span>
+  <span data-ttu-id="c3226-145">La ruta de acceso al proyecto o los proyectos que se van a agregar a la solución.</span><span class="sxs-lookup"><span data-stu-id="c3226-145">The path to the project or projects to add to the solution.</span></span> <span data-ttu-id="c3226-146">Las expansiones del [patrón comodines](https://en.wikipedia.org/wiki/Glob_(programming)) de shell de Unix y Linux se procesan correctamente mediante el comando `dotnet sln`.</span><span class="sxs-lookup"><span data-stu-id="c3226-146">Unix/Linux shell [globbing pattern](https://en.wikipedia.org/wiki/Glob_(programming)) expansions are processed correctly by the `dotnet sln` command.</span></span>
 
-#### <a name="options"></a><span data-ttu-id="dc028-147">Opciones</span><span class="sxs-lookup"><span data-stu-id="dc028-147">Options</span></span>
+#### <a name="options"></a><span data-ttu-id="c3226-147">Opciones</span><span class="sxs-lookup"><span data-stu-id="c3226-147">Options</span></span>
 
 - **`-h|--help`**
 
-  <span data-ttu-id="dc028-148">Imprime una descripción de cómo usar el comando.</span><span class="sxs-lookup"><span data-stu-id="dc028-148">Prints out a description of how to use the command.</span></span>
+  <span data-ttu-id="c3226-148">Imprime una descripción de cómo usar el comando.</span><span class="sxs-lookup"><span data-stu-id="c3226-148">Prints out a description of how to use the command.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="dc028-149">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="dc028-149">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="c3226-149">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="c3226-149">Examples</span></span>
 
-- <span data-ttu-id="dc028-150">Enumere los proyectos en una solución:</span><span class="sxs-lookup"><span data-stu-id="dc028-150">List the projects in a solution:</span></span>
+- <span data-ttu-id="c3226-150">Enumere los proyectos en una solución:</span><span class="sxs-lookup"><span data-stu-id="c3226-150">List the projects in a solution:</span></span>
 
   ```dotnetcli
   dotnet sln todo.sln list
   ```
 
-- <span data-ttu-id="dc028-151">Agregue un proyecto de C# a una solución:</span><span class="sxs-lookup"><span data-stu-id="dc028-151">Add a C# project to a solution:</span></span>
+- <span data-ttu-id="c3226-151">Agregue un proyecto de C# a una solución:</span><span class="sxs-lookup"><span data-stu-id="c3226-151">Add a C# project to a solution:</span></span>
 
   ```dotnetcli
   dotnet sln add todo-app/todo-app.csproj
   ```
 
-- <span data-ttu-id="dc028-152">Quite un proyecto de C# de una solución:</span><span class="sxs-lookup"><span data-stu-id="dc028-152">Remove a C# project from a solution:</span></span>
+- <span data-ttu-id="c3226-152">Quite un proyecto de C# de una solución:</span><span class="sxs-lookup"><span data-stu-id="c3226-152">Remove a C# project from a solution:</span></span>
 
   ```dotnetcli
   dotnet sln remove todo-app/todo-app.csproj
   ```
 
-- <span data-ttu-id="dc028-153">Agregue varios proyectos de C# a la raíz de una solución:</span><span class="sxs-lookup"><span data-stu-id="dc028-153">Add multiple C# projects to the root of a solution:</span></span>
+- <span data-ttu-id="c3226-153">Agregue varios proyectos de C# a la raíz de una solución:</span><span class="sxs-lookup"><span data-stu-id="c3226-153">Add multiple C# projects to the root of a solution:</span></span>
 
   ```dotnetcli
   dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj --in-root
   ```
 
-- <span data-ttu-id="dc028-154">Agregue varios proyectos de C# a una solución:</span><span class="sxs-lookup"><span data-stu-id="dc028-154">Add multiple C# projects to a solution:</span></span>
+- <span data-ttu-id="c3226-154">Agregue varios proyectos de C# a una solución:</span><span class="sxs-lookup"><span data-stu-id="c3226-154">Add multiple C# projects to a solution:</span></span>
 
   ```dotnetcli
   dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj
   ```
 
-- <span data-ttu-id="dc028-155">Quite varios proyectos de C# de una solución:</span><span class="sxs-lookup"><span data-stu-id="dc028-155">Remove multiple C# projects from a solution:</span></span>
+- <span data-ttu-id="c3226-155">Quite varios proyectos de C# de una solución:</span><span class="sxs-lookup"><span data-stu-id="c3226-155">Remove multiple C# projects from a solution:</span></span>
 
   ```dotnetcli
   dotnet sln todo.sln remove todo-app/todo-app.csproj back-end/back-end.csproj
   ```
 
-- <span data-ttu-id="dc028-156">Agregue varios proyectos de C# a una solución mediante un patrón de comodines (solo para Unix y Linux):</span><span class="sxs-lookup"><span data-stu-id="dc028-156">Add multiple C# projects to a solution using a globbing pattern (Unix/Linux only):</span></span>
+- <span data-ttu-id="c3226-156">Agregue varios proyectos de C# a una solución mediante un patrón de comodines (solo para Unix y Linux):</span><span class="sxs-lookup"><span data-stu-id="c3226-156">Add multiple C# projects to a solution using a globbing pattern (Unix/Linux only):</span></span>
 
   ```dotnetcli
   dotnet sln todo.sln add **/*.csproj
   ```
 
-- <span data-ttu-id="dc028-157">Quite varios proyectos de C# de una solución mediante un patrón de comodines (solo para Unix y Linux):</span><span class="sxs-lookup"><span data-stu-id="dc028-157">Remove multiple C# projects from a solution using a globbing pattern (Unix/Linux only):</span></span>
+- <span data-ttu-id="c3226-157">Agregue varios proyectos de C# a una solución mediante un patrón de comodines (solo Windows PowerShell):</span><span class="sxs-lookup"><span data-stu-id="c3226-157">Add multiple C# projects to a solution using a globbing pattern (Windows PowerShell only):</span></span>
+
+  ```dotnetcli
+  dotnet sln todo.sln add (ls **/*.csproj)
+  ```
+
+- <span data-ttu-id="c3226-158">Quite varios proyectos de C# de una solución mediante un patrón de comodines (solo para Unix y Linux):</span><span class="sxs-lookup"><span data-stu-id="c3226-158">Remove multiple C# projects from a solution using a globbing pattern (Unix/Linux only):</span></span>
 
   ```dotnetcli
   dotnet sln todo.sln remove **/*.csproj
+  ```
+
+- <span data-ttu-id="c3226-159">Quite varios proyectos de C# a una solución mediante un patrón de comodines (solo Windows PowerShell):</span><span class="sxs-lookup"><span data-stu-id="c3226-159">Remove multiple C# projects from a solution using a globbing pattern (Windows PowerShell only):</span></span>
+
+  ```dotnetcli
+  dotnet sln todo.sln remove (ls **/*.csproj)
   ```
