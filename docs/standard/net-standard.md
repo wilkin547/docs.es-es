@@ -5,12 +5,12 @@ ms.date: 02/13/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: e6e573056132c25b912ff1eb76b9b055f6e47cfe
-ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
+ms.openlocfilehash: 34074b420547cff802f1835656540be7b8eb58b4
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438218"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607485"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -112,7 +112,7 @@ Para obtener más información, consulte [Modo de compatibilidad de .NET Framewo
 
 ## <a name="net-standard-libraries-and-visual-studio"></a>Bibliotecas de .NET standard y Visual Studio
 
-Para crear bibliotecas de .NET Standard en Visual Studio, asegúrese de tener la [versión 15.3 de Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) o una posterior instalada en Windows, o [la versión 7.1 de Visual Studio para Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) o una posterior instalada en macOS.
+Para crear bibliotecas de .NET Standard en Visual Studio, asegúrese de tener [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o la versión 15.3 de Visual Studio 2017 o posterior instalada en Windows, o bien la [versión 7.1 de Visual Studio para Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) o posterior instalada en macOS.
 
 Si solo necesita consumir bibliotecas de .NET Standard 2.0 en sus proyectos, también puede hacerlo en Visual Studio 2015. Sin embargo, necesitará tener el cliente 3.6 de NuGet o uno posterior instalado. Puede descargar el cliente de NuGet para Visual Studio 2015 desde la página de [descargas de NuGet](https://www.nuget.org/downloads).
 

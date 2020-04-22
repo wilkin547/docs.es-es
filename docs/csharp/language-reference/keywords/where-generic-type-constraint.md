@@ -1,21 +1,21 @@
 ---
 title: 'where (restricción de tipo genérico): Referencia de C#'
-ms.date: 04/12/2018
+ms.date: 04/15/2020
 f1_keywords:
 - whereconstraint
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: d236420c5019f7529b729155b13df50807dc1dab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5a56b8058735d3ca786520a82424c79d1975bfc4
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77626716"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463014"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (restricción de tipo genérico) (Referencia de C#)
 
-La cláusula `where` en una definición genérica especifica restricciones en los tipos que se usan como argumentos para los parámetros de tipo en un tipo genérico, método, delegado o función local. Las restricciones pueden especificar interfaces o clases base, o bien requerir que un tipo genérico sea una referencia, un valor o un tipo no administrado. Declaran las funcionalidades que debe poseer el argumento de tipo.
+La cláusula `where` en una definición genérica especifica restricciones en los tipos que se usan como argumentos para los parámetros de tipo en un tipo genérico, método, delegado o función local. Las restricciones pueden especificar interfaces o clases base, o bien requerir que un tipo genérico sea una referencia, un valor o un tipo no administrado. Declaran las funcionalidades que debe tener el argumento de tipo.
 
 Por ejemplo, se puede declarar una clase genérica, `MyGenericClass`, de modo que el parámetro de tipo `T` implemente la interfaz <xref:System.IComparable%601>:
 
@@ -24,13 +24,17 @@ Por ejemplo, se puede declarar una clase genérica, `MyGenericClass`, de modo qu
 > [!NOTE]
 > Para obtener más información sobre la cláusula where en una expresión de consulta, vea [where (Cláusula)](where-clause.md).
 
-La cláusula `where` también puede incluir una restricción de clase base. La restricción de clase base indica que un tipo que se usará como argumento de tipo para ese tipo genérico tiene la clase especificada como clase base (o es la clase base) para que se use como argumento de tipo para ese tipo genérico. Si se usa la restricción de clase base, debe aparecer antes que cualquier otra restricción de ese parámetro de tipo. Algunos tipos no están permitidos como restricción de clase base: <xref:System.Object>, <xref:System.Array> y <xref:System.ValueType>. Antes de C# 7.3, tampoco se permitían <xref:System.Enum>, <xref:System.Delegate> y <xref:System.MulticastDelegate> como restricciones de clase base. En el ejemplo siguiente se muestran los tipos que ahora se pueden especificar como clase base:
+La cláusula `where` también puede incluir una restricción de clase base. La restricción de clase base indica que un tipo que se va a usar como argumento de tipo para ese tipo genérico tiene la clase especificada como clase base, o bien es la clase base. Si se usa la restricción de clase base, debe aparecer antes que cualquier otra restricción de ese parámetro de tipo. Algunos tipos no están permitidos como restricción de clase base: <xref:System.Object>, <xref:System.Array> y <xref:System.ValueType>. Antes de C# 7.3, tampoco se permitían <xref:System.Enum>, <xref:System.Delegate> ni <xref:System.MulticastDelegate> como restricciones de clase base. En el ejemplo siguiente se muestran los tipos que ahora se pueden especificar como clase base:
 
 [!code-csharp[using an interface constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#2)]
+
+En un contexto que admite un valor NULL en C# 8.0 y versiones posteriores, se aplica la nulabilidad del tipo de clase base. Si la clase base no acepta valores NULL (por ejemplo, `Base`), el argumento de tipo no debe aceptar valores NULL. Si la clase base admite un valor NULL (por ejemplo, `Base?`), el argumento de tipo puede ser un tipo de referencia que acepte o no valores NULL. El compilador emite una advertencia si el argumento de tipo es un tipo de referencia que admite un valor NULL cuando la clase base no acepta valores NULL.
 
 La cláusula `where` puede especificar que el tipo es `class` o `struct`. La restricción `struct` elimina la necesidad de especificar una restricción de clase base de `System.ValueType`. El tipo `System.ValueType` no se puede usar como restricción de clase base. En el ejemplo siguiente se muestran las restricciones `class` y `struct`:
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#3)]
+
+En un contexto que admite un valor NULL en C# 8.0 y versiones posteriores, la restricción `class` requiere que un tipo sea un tipo de referencia que no acepte valores NULL. Para permitir tipos de referencia que admitan un valor NULL, use la restricción `class?`, que permite tipos de referencia que aceptan y que no aceptan valores NULL.
 
 La cláusula `where` puede incluir la restricción `notnull`. La restricción `notnull` limita el parámetro de tipo a tipos que no aceptan valores NULL. Ese tipo puede ser un [tipo de valor](../builtin-types/value-types.md) o un tipo de referencia que no acepta valores NULL. La restricción `notnull` está disponible a partir C# 8.0 para el código compilado en un contexto [`nullable enable`](../../nullable-references.md#nullable-contexts). A diferencia de otras restricciones, si un argumento de tipo infringe la restricción `notnull`, el compilador genera una advertencia en lugar de un error. Las advertencias solo se generan en un contexto `nullable enable`.
 
@@ -65,7 +69,7 @@ Para obtener información sobre los delegados genéricos, vea [Delegados genéri
 
 Para obtener más información sobre la sintaxis y el uso de restricciones, vea [Restricciones de tipos de parámetros](../../programming-guide/generics/constraints-on-type-parameters.md).
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

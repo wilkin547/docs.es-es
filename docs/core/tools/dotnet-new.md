@@ -1,32 +1,36 @@
 ---
 title: Comando dotnet new
 description: El comando dotnet new crea proyectos de .NET Core basados en la plantilla especificada.
-ms.date: 02/13/2020
-ms.openlocfilehash: d3c609419596b123f5bfb3ca85cf292a61154a70
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/10/2020
+ms.openlocfilehash: 4ad0d7e54f93582237ed9457b562957018916d36
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398032"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463610"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
 **Este artículo se aplica a:** ✔️ SDK de .NET Core 2.0 y versiones posteriores
 
-## <a name="name"></a>Name
+## <a name="name"></a>NOMBRE
 
 `dotnet new`: crea un nuevo proyecto, archivo de configuración o solución según la plantilla especificada.
 
 ## <a name="synopsis"></a>Sinopsis
 
 ```dotnetcli
-dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install] [-lang|--language] [-n|--name]
-    [--nuget-source] [-o|--output] [-u|--uninstall] [--update-apply] [--update-check] [Template options]
-dotnet new <TEMPLATE> [-l|--list] [--type]
-dotnet new [-h|--help]
+dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install {PATH|NUGET_ID}]
+    [-lang|--language {C#|F#|VB}] [-n|--name <OUTPUT_NAME>]
+    [--nuget-source <SOURCE>] [-o|--output <OUTPUT_DIRECTORY>]
+    [-u|--uninstall] [--update-apply] [--update-check] [Template options]
+
+dotnet new <TEMPLATE> [-l|--list] [--type <TYPE>]
+
+dotnet new -h|--help
 ```
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descripción
 
 El comando `dotnet new` crea un proyecto de .NET Core u otros artefactos basados en una plantilla.
 
@@ -74,7 +78,7 @@ El comando llama al [motor de plantillas](https://github.com/dotnet/templating) 
 | ASP.NET Core con React.js                   | [react](#spa)                   | [C#]         | Web/MVC/SPA                           | 2.0        |
 | ASP.NET Core con React.js y Redux         | [reactredux](#reactredux)       | [C#]         | Web/MVC/SPA                           | 2.0        |
 | Biblioteca de clases de Razor                          | [razorclasslib](#razorclasslib) | [C#]         | Web/Razor/Biblioteca/Biblioteca de clases de Razor | 2.1        |
-| ASP.NET Core Web API                         | [webapi](#webapi)               | [C#], F#     | Web/WebAPI                            | 1.0        |
+| API web de ASP.NET Core                         | [webapi](#webapi)               | [C#], F#     | Web/WebAPI                            | 1.0        |
 | Servicio gRPC de ASP.NET Core                    | [grpc](#web-others)             | [C#]         | Web/gRPC                              | 3.0        |
 | Archivo de búfer de protocolo                         | [proto](#namespace)             |              | Web/gRPC                              | 3.0        |
 | Archivo dotnet gitignore                        | `gitignore`                     |              | Configuración                                | 3.0        |
@@ -96,7 +100,7 @@ El comando llama al [motor de plantillas](https://github.com/dotnet/templating) 
 
 - **`-h|--help`**
 
-  Imprime la ayuda para el comando. Puede invocarse para el propio comando `dotnet new` o para cualquier plantilla. Por ejemplo, `dotnet new mvc --help`.
+  Imprime la ayuda para el comando. Puede invocarse para el propio comando `dotnet new` o para cualquier plantilla. Por ejemplo: `dotnet new mvc --help`.
 
 - **`-i|--install <PATH|NUGET_ID>`**
 
@@ -104,7 +108,7 @@ El comando llama al [motor de plantillas](https://github.com/dotnet/templating) 
   
   Si ya hay instalada una versión de la plantilla al ejecutar este comando, la plantilla se actualizará a la versión especificada o a la versión estable más reciente si no se ha especificado ninguna versión.
 
-  Para obtener información sobre cómo crear plantillas personalizadas, consulte [Custom templates for dotnet new](custom-templates.md) (Plantillas personalizadas para dotnet new).
+  Para obtener información sobre cómo crear plantillas personalizadas, consulte [Plantillas personalizadas para dotnet new](custom-templates.md).
 
 - **`-l|--list`**
 
@@ -115,13 +119,13 @@ El comando llama al [motor de plantillas](https://github.com/dotnet/templating) 
   El lenguaje de la plantilla que se va a crear. El lenguaje aceptado cambia según la plantilla (vea los valores predeterminados en la sección [argumentos](#arguments)). No es válido para algunas plantillas.
 
   > [!NOTE]
-  > Algunos shells interpretan `#` como un carácter especial. En esos casos, incluya el valor del parámetro de lenguaje entre comillas. Por ejemplo, `dotnet new console -lang "F#"`.
+  > Algunos shells interpretan `#` como un carácter especial. En esos casos, incluya el valor del parámetro de lenguaje entre comillas. Por ejemplo: `dotnet new console -lang "F#"`.
 
 - **`-n|--name <OUTPUT_NAME>`**
 
   El nombre de la salida creada. Si no se especifica ningún nombre, se usa el nombre del directorio actual.
 
-- **`--nuget-source`**
+- **`--nuget-source <SOURCE>`**
 
   Especifica un origen de NuGet para usarlo durante la instalación. Disponible a partir del SDK de .NET Core 2.1.
 
@@ -129,9 +133,9 @@ El comando llama al [motor de plantillas](https://github.com/dotnet/templating) 
 
   La ubicación para colocar la salida generada. El valor predeterminado es el directorio actual.
 
-- **`--type`**
+- **`--type <TYPE>`**
 
-  Filtra plantillas en función de los tipos disponibles. Los valores predefinidos son "project", "item" u "other".
+  Filtra plantillas en función de los tipos disponibles. Los valores predefinidos son `project`, `item` u `other`.
 
 - **`-u|--uninstall [PATH|NUGET_ID]`**
 
@@ -198,7 +202,7 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
 ***
 
-### <a name="wpf"></a> wpf, wpflib, wpfcustomcontrollib, wpfusercontrollib
+### <a name="wpf-wpflib-wpfcustomcontrollib-wpfusercontrollib"></a><a name="wpf"></a> wpf, wpflib, wpfcustomcontrollib, wpfusercontrollib
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -216,7 +220,7 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
 ***
 
-### <a name="winforms"></a> winforms, winformslib
+### <a name="winforms-winformslib"></a><a name="winforms"></a> winforms, winformslib
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -230,7 +234,7 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
 ***
 
-### <a name="web-others"></a> worker, grpc
+### <a name="worker-grpc"></a><a name="web-others"></a> worker, grpc
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -246,7 +250,7 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
 ***
 
-### <a name="test"></a> mstest, xunit
+### <a name="mstest-xunit"></a><a name="test"></a> mstest, xunit
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -306,7 +310,7 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
 ***
 
-### <a name="namespace"></a> viewimports, proto
+### <a name="viewimports-proto"></a><a name="namespace"></a> viewimports, proto
 
 - **`-na|--namespace <NAMESPACE_NAME>`**
 
@@ -413,7 +417,7 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
 ***
 
-### <a name="web-options"></a> mvc, webapp
+### <a name="mvc-webapp"></a><a name="web-options"></a> mvc, webapp
 
 - **`-au|--auth <AUTHENTICATION_TYPE>`**
 
@@ -497,9 +501,13 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
   Incluye BrowserLink en el proyecto. Opción no disponible en el SDK de .NET Core 2.2 y 3.1.
 
+- **`-rrc|--razor-runtime-compilation`**
+
+  Determina si el proyecto está configurado para usar la [compilación en tiempo de ejecución de Razor](/aspnet/core/mvc/views/view-compilation#runtime-compilation) en las compilaciones de depuración. Opción disponible a partir del SDK de .NET Core 3.1.
+
 ***
 
-### <a name="spa"></a> angular, react
+### <a name="angular-react"></a><a name="spa"></a> angular, react
 
 - **`-au|--auth <AUTHENTICATION_TYPE>`**
 
@@ -727,7 +735,7 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
 ## <a name="see-also"></a>Vea también
 
-- [Custom templates for dotnet new](custom-templates.md) (Plantillas personalizadas para dotnet new)
+- [Plantillas personalizadas para dotnet new](custom-templates.md)
 - [Creación de una plantilla personalizada para dotnet new](../tutorials/cli-templates-create-item-template.md)
 - [Repositorio de GitHub dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)
 - [Available templates for dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new) (Plantillas disponibles para dotnet new)

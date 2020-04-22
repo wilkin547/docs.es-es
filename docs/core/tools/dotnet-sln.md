@@ -2,28 +2,30 @@
 title: Comando dotnet sln
 description: El comando dotnet-sln proporciona una opción conveniente para agregar, quitar y enumerar los proyectos en un archivo de solución.
 ms.date: 02/14/2020
-ms.openlocfilehash: b2455c04a46b2a10b8142d8ddc2d8129f2154b27
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 231287477d986f9ec4a5404cc5278e76c297faa4
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77543487"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463398"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
 **Este artículo se aplica a:** ✔️ SDK de .NET Core 2.x y versiones posteriores
 
-## <a name="name"></a>Name
+## <a name="name"></a>NOMBRE
 
 `dotnet sln`: enumera o modifica los proyectos en un archivo de solución de .NET Core.
 
 ## <a name="synopsis"></a>Sinopsis
 
 ```dotnetcli
-dotnet sln [<SOLUTION_FILE>] [command] [-h|--help]
+dotnet sln [<SOLUTION_FILE>] [command]
+
+dotnet sln [command] -h|--help
 ```
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descripción
 
 El comando `dotnet sln` proporciona una opción conveniente para enumerar y modificar los proyectos en un archivo de solución.
 
@@ -76,7 +78,7 @@ Agrega uno o varios proyectos al archivo de solución.
 #### <a name="synopsis"></a>Sinopsis
 
 ```dotnetcli
-dotnet sln [<SOLUTION_FILE>] add [--in-root] [-s|--solution-folder] <PROJECT_PATH> [<PROJECT_PATH>...]
+dotnet sln [<SOLUTION_FILE>] add [--in-root] [-s|--solution-folder <PATH>] <PROJECT_PATH> [<PROJECT_PATH>...]
 dotnet sln add [-h|--help]
 ```
 
@@ -100,7 +102,7 @@ dotnet sln add [-h|--help]
 
   Coloca el proyecto en la raíz de la solución, en lugar de crear una carpeta de la solución. Disponible desde el SDK de .NET Core 3.0.
 
-- **`-s|--solution-folder`**
+- **`-s|--solution-folder <PATH>`**
 
   La ruta de acceso de la carpeta de la solución de destino a la que se van a agregar los proyectos. Disponible desde el SDK de .NET Core 3.0.
 
@@ -175,8 +177,20 @@ dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
   dotnet sln todo.sln add **/*.csproj
   ```
 
+- Agregue varios proyectos de C# a una solución mediante un patrón de comodines (solo Windows PowerShell):
+
+  ```dotnetcli
+  dotnet sln todo.sln add (ls **/*.csproj)
+  ```
+
 - Quite varios proyectos de C# de una solución mediante un patrón de comodines (solo para Unix y Linux):
 
   ```dotnetcli
   dotnet sln todo.sln remove **/*.csproj
+  ```
+
+- Quite varios proyectos de C# a una solución mediante un patrón de comodines (solo Windows PowerShell):
+
+  ```dotnetcli
+  dotnet sln todo.sln remove (ls **/*.csproj)
   ```

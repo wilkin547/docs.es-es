@@ -2,12 +2,12 @@
 title: Comando dotnet restore
 description: Aprenda a restaurar dependencias y herramientas específicas del proyecto con el comando dotnet restore.
 ms.date: 02/27/2020
-ms.openlocfilehash: e74027ba70ddf6905a12f9691caeb0a406428ad6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f49f0cda4424a4cc54ab7d4d4c6f729919dc7e60
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78157029"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463431"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -20,12 +20,14 @@ ms.locfileid: "78157029"
 ## <a name="synopsis"></a>Sinopsis
 
 ```dotnetcli
-dotnet restore [<ROOT>] [--configfile] [--disable-parallel]
-    [--force] [--ignore-failed-sources] [--no-cache]
-    [--no-dependencies] [--packages] [-r|--runtime]
-    [-s|--source] [-v|--verbosity] [--interactive]
+dotnet restore [<ROOT>] [--configfile <FILE>] [--disable-parallel]
+    [-f|--force] [--force-evaluate] [--ignore-failed-sources]
+    [--interactive] [--lock-file-path <LOCK_FILE_PATH>] [--locked-mode]
+    [--no-cache] [--no-dependencies] [--packages <PACKAGES_DIRECTORY>]
+    [-r|--runtime <RUNTIME_IDENTIFIER>] [-s|--source <SOURCE>]
+    [--use-lockfile] [-v|--verbosity <LEVEL>]
 
-dotnet restore [-h|--help]
+dotnet restore -h|--help
 ```
 
 ## <a name="description"></a>Descripción
@@ -92,6 +94,10 @@ En ocasiones, es posible que no sea conveniente ejecutar `dotnet restore` de for
 
   Fuerza la resolución de todas las dependencias, incluso si la última restauración se realizó correctamente. Especificar esta marca es lo mismo que eliminar el archivo *project.assets.json*.
 
+- **`--force-evaluate`**
+
+  Fuerza la restauración para volver a evaluar todas las dependencias aunque ya exista un archivo de bloqueo.
+
 - **`-h|--help`**
 
   Imprime una corta ayuda para el comando.
@@ -99,6 +105,18 @@ En ocasiones, es posible que no sea conveniente ejecutar `dotnet restore` de for
 - **`--ignore-failed-sources`**
 
   Solo se advierte sobre los orígenes con error si hay paquetes que satisfagan el requisito de versión.
+
+- **`--interactive`**
+
+  Permite que el comando se detenga y espere la entrada o acción del usuario (por ejemplo, completar la autenticación). Desde .NET Core 2.1.400.
+
+- **`--lock-file-path <LOCK_FILE_PATH>`**
+
+  Ubicación de salida donde se escribe el archivo de bloqueo del proyecto. De forma predeterminada es *PROJECT_ROOT\packages.lock.json*.
+
+- **`--locked-mode`**
+
+  No permite actualizar el archivo de bloqueo del proyecto.
 
 - **`--no-cache`**
 
@@ -120,13 +138,13 @@ En ocasiones, es posible que no sea conveniente ejecutar `dotnet restore` de for
 
   Especifica un origen de paquetes de NuGet que se usará durante la operación de restauración. Este valor invalida todos los orígenes especificados en los archivos *nuget.config*. Al especificar esta opción varias veces, se pueden proporcionar varios orígenes.
 
-- **`--verbosity <LEVEL>`**
+- **`--use-lockfile`**
+
+  Habilita la generación del archivo de bloqueo del proyecto y su uso con la restauración.
+
+- **`-v|--verbosity <LEVEL>`**
 
   Establece el nivel de detalle del comando. Los valores permitidos son `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` y `diag[nostic]`. El valor predeterminado es `minimal`.
-
-- **`--interactive`**
-
-  Permite que el comando se detenga y espere la entrada o acción del usuario (por ejemplo, completar la autenticación). Desde .NET Core 2.1.400.
 
 ## <a name="examples"></a>Ejemplos
 

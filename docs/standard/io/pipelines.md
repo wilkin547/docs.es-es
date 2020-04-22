@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: b18b2bf31787fa58e614cd4f057fba9037fe8ad8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8822e731ae805e83d4072c5bd78dff3fcf9a31a1
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77627557"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81462521"
 ---
 # <a name="systemiopipelines-in-net"></a>System.IO.Pipelines en .NET
 
@@ -172,7 +172,7 @@ A menudo, es eficiente la reutilización del objeto `Pipe`. Para restablecer la 
 * El primer argumento determina la cantidad de memoria consumida.
 * El segundo argumento determina la cantidad de búfer observado.
 
-Marcar los datos como consumidos significa que la canalización puede devolver la memoria al grupo de búferes subyacente. Cuando se marcan los datos como observados, estos controlan lo que hace la siguiente llamada a `PipeReader.ReadAsync`. Marcar todo como observado significa que la siguiente llamada a `PipeReader.ReadAsync` no se devolverá hasta que haya más datos escritos en la canalización. Cualquier otro valor hará que la siguiente llamada a `PipeReader.ReadAsync` se devuelva de inmediato con los datos observados *y* los no observados, pero los datos ya se han consumido.
+Marcar los datos como consumidos significa que la canalización puede devolver la memoria al grupo de búferes subyacente. Cuando se marcan los datos como observados, estos controlan lo que hace la siguiente llamada a `PipeReader.ReadAsync`. Marcar todo como observado significa que la siguiente llamada a `PipeReader.ReadAsync` no se devolverá hasta que haya más datos escritos en la canalización. Cualquier otro valor hará que la siguiente llamada a `PipeReader.ReadAsync` se devuelva de inmediato con los datos observados *y* los no observados, pero no con los que ya se han consumido.
 
 ### <a name="read-streaming-data-scenarios"></a>Escenarios de lectura de datos de streaming
 

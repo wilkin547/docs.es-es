@@ -3,12 +3,12 @@ title: Procedimiento para modificar el contenido de cadenas - Guía de C#
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 260e4022c514db0cee3c1459b9d746a1c8e2addd
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 8e9bbe76c689d3c3f9f238ca9dd95cc7fcf98b18
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121132"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389515"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Procedimiento para modificar el contenido de cadenas en C\#
 
@@ -16,7 +16,7 @@ En este artículo se muestran varias técnicas para producir una `string` modifi
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-En este artículo se muestran varias técnicas. Puede reemplazar el texto existente. Puede buscar patrones y reemplazar el texto coincidente por otro texto. Puede tratar una cadena con una secuencia de caracteres. También puede usar métodos de conveniencia para eliminar espacios en blanco. Debe elegir la técnica con mayor coincidencia con su caso.
+En este artículo se muestran varias técnicas. Puede reemplazar el texto existente. Puede buscar patrones y reemplazar el texto coincidente por otro texto. Puede tratar una cadena con una secuencia de caracteres. También puede usar métodos de conveniencia para eliminar espacios en blanco. Elija la técnica con mayor coincidencia con el escenario.
 
 ## <a name="replace-text"></a>Reemplazo de texto
 
@@ -48,7 +48,7 @@ Puede quitar texto de una cadena con el método <xref:System.String.Remove%2A?di
 
 Puede usar [expresiones regulares](../../standard/base-types/regular-expressions.md) para reemplazar texto que coincida con patrones por texto nuevo, posiblemente definido por un patrón. En el ejemplo siguiente se usa la clase <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> para encontrar un patrón en una cadena de origen y reemplazarlo con un uso de mayúsculas y minúsculas adecuado. Con el método <xref:System.Text.RegularExpressions.Regex.Replace(System.String,System.String,System.Text.RegularExpressions.MatchEvaluator,System.Text.RegularExpressions.RegexOptions)?displayProperty=nameWithType> se usa una función que proporciona la lógica del reemplazo de uno de los argumentos. En este ejemplo, la función `LocalReplaceMatchCase` es una **función local** declarada dentro del método de ejemplo. `LocalReplaceMatchCase` usa la clase <xref:System.Text.StringBuilder?displayProperty=nameWithType> para crear la cadena de reemplazo con un uso de mayúsculas y minúsculas adecuado.
 
-Las expresiones regulares son más útiles al buscar y reemplazar texto que sigue un patrón, en vez de texto que ya conoce. Vea [Cómo buscar cadenas](search-strings.md) para obtener más información. Con el patrón de búsqueda "the\s" se busca la palabra "the" seguida de un carácter de espacio en blanco. Con esa parte del patrón se asegura de que no se busca "there" en la cadena de origen. Para obtener más información sobre los elementos de lenguaje de expresiones regulares, vea [Lenguaje de expresiones regulares - Referencia rápida](../../standard/base-types/regular-expression-language-quick-reference.md).
+Las expresiones regulares son más útiles al buscar y reemplazar texto que sigue un patrón, en vez de texto que ya conoce. Para obtener más información, vea [Procedimiento para buscar cadenas](search-strings.md). Con el patrón de búsqueda "the\s" se busca la palabra "the" seguida de un carácter de espacio en blanco. Con esa parte del patrón se asegura de que no se busca "there" en la cadena de origen. Para obtener más información sobre los elementos de lenguaje de expresiones regulares, vea [Lenguaje de expresiones regulares - Referencia rápida](../../standard/base-types/regular-expression-language-quick-reference.md).
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#5)]
 
@@ -58,7 +58,7 @@ Con el método <xref:System.Text.StringBuilder.ToString%2A?displayProperty=nameW
 
 Puede producir un matriz de caracteres a partir de una cadena, modificar el contenido de la matriz y crear después una cadena a partir del contenido modificado de la matriz.
 
-En el siguiente ejemplo se muestra cómo reemplazar un conjunto de caracteres en una cadena. En primer lugar, se usa el método <xref:System.String.ToCharArray?displayProperty=nameWithName> para crear una matriz de caracteres. Se usa el método <xref:System.String.IndexOf%2A> para encontrar el índice de inicio de la palabra "fox". Los siguientes tres caracteres se reemplazan por otra palabra. Por último, se construye una cadena nueva a partir de la matriz de carácter actualizada.
+En el siguiente ejemplo se muestra cómo reemplazar un conjunto de caracteres en una cadena. En primer lugar, se usa el método <xref:System.String.ToCharArray?displayProperty=nameWithType> para crear una matriz de caracteres. Se usa el método <xref:System.String.IndexOf%2A> para encontrar el índice de inicio de la palabra "fox". Los siguientes tres caracteres se reemplazan por otra palabra. Por último, se construye una cadena nueva a partir de la matriz de carácter actualizada.
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#6)]
 

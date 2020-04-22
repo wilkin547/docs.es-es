@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Convertir cadenas en DateTime'
+title: Conversión de cadenas en DateTime
 description: Aprenda técnicas de análisis de cadenas que representan fechas y horas para crear un valor DateTime a partir de la cadena de fecha y hora.
 ms.date: 02/15/2018
 ms.technology: dotnet-standard
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - base types, parsing strings
 - DateTime object
 - time strings
-ms.openlocfilehash: 9555304e570226b2ed3b040735cf099b5a018f93
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4b3f0bdb3ade784f929718a3350ed3dec0c572f1
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78156548"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242652"
 ---
-# <a name="parsing-date-and-time-strings-in-net"></a>Analizar cadenas de fecha y hora en .NET
+# <a name="parse-date-and-time-strings-in-net"></a>Análisis de cadenas de fecha y hora en .NET
 
 El análisis de cadenas para convertirlas en objetos <xref:System.DateTime> requiere que se especifique información sobre cómo se representan las fechas y horas en forma de texto. Las distintas referencias culturales usan distintos órdenes de día, mes y año. Algunas representaciones horarias usan el reloj de 24 horas y otras especifican "a. m." y "p. m.". Algunas aplicaciones solo necesitan la fecha. Otras solo necesitan la hora. Pero otras necesitan especificar la fecha y la hora. Los métodos que convierten cadenas a objeto <xref:System.DateTime> permiten especificar información detallada sobre los formatos esperados y los elementos de fecha y hora que precisa la aplicación. Hay tres subtareas para convertir correctamente el texto en un objeto <xref:System.DateTime>:
 
@@ -56,7 +56,7 @@ En el ejemplo siguiente se muestra el uso del método <xref:System.DateTime.Pars
 > Todos los ejemplos de C# en este artículo se ejecutan en el explorador. Presione el botón **Ejecutar** para ver el resultado. También puede modificarlos para experimentar.
 
 > [!NOTE]
-> Estos ejemplos están disponibles en el repositorio de documentos de GitHub para [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/conversions) y [Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/how-to/conversions). También, puede descargar el proyecto como un archivo ZIP para [C#](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/conversions.zip) o [Visual Basic](https://github.com/dotnet/samples/raw/master/snippets/visualbasic/how-to/conversions.zip).
+> Estos ejemplos están disponibles en el repositorio de documentos de GitHub para [C#](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/conversions) y [Visual Basic](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic/how-to/conversions). También, puede descargar el proyecto como un archivo ZIP para [C#](https://github.com/dotnet/docs/blob/master/samples/snippets/csharp/how-to/conversions.zip) o [Visual Basic](https://github.com/dotnet/docs/blob/master/samples/snippets/visualbasic/how-to/conversions.zip).
 
 [!code-csharp-interactive[Parsing.DateAndTime#1](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#1)]
 [!code-vb[Parsing.DateAndTime#1](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#1)]

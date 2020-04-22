@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: c12579062b04cfb46e14d5c3d734a7c155f8d654
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: b314b61584e45ac5e80a248e639bdac427ba4a57
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278891"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "82021724"
 ---
 # <a name="wcf-client-overview"></a>Descripción general del cliente WCF
 
@@ -42,7 +42,7 @@ Las siguientes secciones explican estos pasos y proporcionan una breve introducc
 - Llamada a los servicios mediante los canales cliente.  
   
 ## <a name="obtain-the-service-contract-bindings-and-addresses"></a>Obtención del contrato de servicios, los enlaces y las direcciones  
- En WCF, los servicios y los clientes modelan contratos mediante atributos administrados, interfaces y métodos. Para conectar con un servicio en una aplicación cliente, es necesario obtener la información del tipo de contrato de servicios. Normalmente, esto se hace mediante la herramienta de utilidad de metadatos de [ServiceModel (Svcutil.exe),](servicemodel-metadata-utility-tool-svcutil-exe.md)que descarga metadatos del servicio, lo convierte en un archivo de código fuente administrado en el idioma de su elección y crea un archivo de configuración de aplicación cliente que puede usar para configurar el objeto de cliente WCF. Por ejemplo, si va a crear un objeto `MyCalculatorService`de cliente WCF para invocar un archivo `http://computerName/MyCalculatorService/Service.svc?wsdl`, y sabe que los metadatos de ese `ClientCode.vb` servicio se publican en , el ejemplo de código siguiente muestra cómo usar Svcutil.exe para obtener un archivo que contiene el contrato de servicio en código administrado.  
+ En WCF, los servicios y los clientes modelan contratos mediante atributos administrados, interfaces y métodos. Para conectar con un servicio en una aplicación cliente, es necesario obtener la información del tipo de contrato de servicios. Normalmente, se obtiene información de tipo para el contrato de servicio mediante la herramienta de utilidad de metadatos de [ServiceModel (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md). La utilidad descarga metadatos del servicio, lo convierte en un archivo de código fuente administrado en el idioma de su elección y crea un archivo de configuración de aplicación cliente que puede usar para configurar el objeto de cliente WCF. Por ejemplo, si va a crear un objeto `MyCalculatorService`de cliente WCF para invocar un archivo `http://computerName/MyCalculatorService/Service.svc?wsdl`, y sabe que los metadatos de ese `ClientCode.vb` servicio se publican en , el ejemplo de código siguiente muestra cómo usar Svcutil.exe para obtener un archivo que contiene el contrato de servicio en código administrado.  
   
 ```console  
 svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/MyCalculatorService/Service.svc?wsdl  

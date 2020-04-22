@@ -2,12 +2,12 @@
 title: Adiciones al formato csproj para .NET Core
 description: Conozca las diferencias entre los archivos csproj de .NET Core y los existentes
 ms.date: 04/08/2019
-ms.openlocfilehash: 9d9e212c9531828a8c2dd51fdd7488c17be41ba2
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: fadc6de43f522129970e48bc72914cf187fe3f82
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134065"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607711"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Adiciones al formato csproj para .NET Core
 
@@ -145,7 +145,7 @@ Elemento `<PackageReference>` que especifica una [dependencia de NuGet en el pro
 
 #### <a name="version"></a>Versión
 
-El atributo `Version` necesario especifica la versión del paquete que se va a restaurar. El atributo respeta las reglas del esquema de [versiones de NuGet](/nuget/reference/package-versioning#version-ranges-and-wildcards). El comportamiento predeterminado es una versión mínima, incluida una coincidencia. Por ejemplo, la especificación de `Version="1.2.3"` es equivalente a la notación de NuGet `[1.2.3, )` y significa que el paquete resuelto tendrá la versión 1.2.3 si está disponible o, de lo contrario, una superior.
+El atributo `Version` necesario especifica la versión del paquete que se va a restaurar. El atributo respeta las reglas del esquema de [intervalo de versiones de NuGet](/nuget/concepts/package-versioning#version-ranges). El comportamiento predeterminado es una versión mínima, incluida una coincidencia. Por ejemplo, la especificación de `Version="1.2.3"` es equivalente a la notación de NuGet `[1.2.3, )` y significa que el paquete resuelto tendrá la versión 1.2.3 si está disponible o, de lo contrario, una superior.
 
 #### <a name="includeassets-excludeassets-and-privateassets"></a>IncludeAssets, ExcludeAssets y PrivateAssets
 

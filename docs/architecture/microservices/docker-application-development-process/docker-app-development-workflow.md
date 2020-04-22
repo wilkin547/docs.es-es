@@ -2,12 +2,12 @@
 title: Flujo de trabajo de desarrollo para aplicaciones de Docker
 description: Comprenda los detalles del flujo de trabajo para desarrollar aplicaciones basadas en Docker. Comience paso a paso, profundice en algunos detalles para optimizar Dockerfiles y termine con el flujo de trabajo simplificado disponible cuando se usa Visual Studio.
 ms.date: 01/30/2020
-ms.openlocfilehash: c58ea2436027968143777a19286a1a0a72107717
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f380c840e186c345f9222aa6b0cf1097a74874e
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401512"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389198"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Flujo de trabajo de desarrollo para aplicaciones de Docker
 
@@ -286,7 +286,7 @@ El archivo resultante es entonces:
  7  COPY . .
  8  RUN dotnet restore /ignoreprojectextensions:.dcproj
  9  WORKDIR /src/src/Services/Catalog/Catalog.API
-10  RUN dotnet publish Catalog.API.csproj -c Release -0 /app
+10  RUN dotnet publish Catalog.API.csproj -c Release -o /app
 11
 12  FROM base AS final
 13  WORKDIR /app
@@ -479,7 +479,7 @@ Después de la ejecución del comando docker-compose up, la aplicación y sus co
 
 #### <a name="using-visual-studio"></a>Uso de Visual Studio
 
-La ejecución de una aplicación de varios contenedores mediante Visual Studio 2019 no puede ser más sencilla. Simplemente presione **Ctrl-F5** para ejecutar o **F5** para depurar, como de costumbre, con lo que se configura el proyecto **docker-compose** como proyecto de inicio.  Visual Studio controla toda la configuración necesaria, por lo que puede crear puntos de interrupción como de costumbre y depurar lo que finalmente se convierte en procesos independientes que se ejecutan en "servidores remotos", con el depurador adjuntado. Así de fácil.
+La ejecución de una aplicación de varios contenedores mediante Visual Studio 2019 no puede ser más sencilla. Simplemente presione **Ctrl-F5** para ejecutar o **F5** para depurar, como de costumbre, con lo que se configura el proyecto **docker-compose** como proyecto de inicio.  Visual Studio controla toda la configuración necesaria, por lo que puede crear puntos de interrupción como de costumbre y depurar lo que finalmente se convierte en procesos independientes que se ejecutan en "servidores remotos", con el depurador ya adjuntado, con facilidad.
 
 Como se ha mencionado antes, cada vez que se agrega compatibilidad con soluciones de Docker a un proyecto de una solución, ese proyecto se configura en el archivo global (nivel de solución) docker-compose.yml, lo que permite ejecutar o depurar la solución completa al mismo tiempo. Visual Studio inicia un contenedor para cada proyecto que tiene habilitada la compatibilidad con soluciones de Docker y realiza todos los pasos internos automáticamente (dotnet publish, docker build, etc.).
 

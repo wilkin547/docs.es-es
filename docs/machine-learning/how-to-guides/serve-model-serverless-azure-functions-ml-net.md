@@ -5,12 +5,12 @@ ms.date: 02/21/2020
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 33afd568bb12b855a3888bec31f2e9bbc3c720da
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f340805200a14e0e145ffe1bf20f8059df63555
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77628675"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81608054"
 ---
 # <a name="deploy-a-model-to-azure-functions"></a>Implementación de un modelo en Azure Functions
 
@@ -21,7 +21,7 @@ Aprenda cómo implementar un modelo de Machine Learning de ML.NET previamente en
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- [Visual Studio 2017, versión 15.6 o posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con la carga de trabajo "Desarrollo multiplataforma de .NET Core" y el "desarrollo de Azure" instalados.
+- [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o posterior, o bien Visual Studio 2017 versión 15.6 o posterior con las cargas de trabajo "Desarrollo multiplataforma de .NET Core" y "Desarrollo de Azure" instaladas.
 - [Herramientas de Azure Functions](/azure/azure-functions/functions-develop-vs#check-your-tools-version)
 - PowerShell
 - Modelo previamente entrenado. Use el [tutorial de análisis de sentimiento de ML.NET](../tutorials/sentiment-analysis.md) para generar su propio modelo o descargue este [modelo de Machine Learning de análisis de sentimiento entrenado previamente](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip).

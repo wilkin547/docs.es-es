@@ -6,18 +6,18 @@ author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc,mlnet-tooling
-ms.openlocfilehash: 98c9f28ca4ce6365ed4cf4ff1566a33dbe8f35ca
-ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
+ms.openlocfilehash: 7761240055c90ae9c713b1c460e9e83316d256f9
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438228"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278956"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Tutorial: Análisis del sentimiento de los comentarios del sitio web en una aplicación web con el Generador de modelos de ML.NET
 
-Aprenda a analizar el sentimiento de los comentarios en tiempo real dentro de una aplicación web.
+Aprenda a analizar la opinión de los comentarios en tiempo real dentro de una aplicación web.
 
-En este tutorial se muestra cómo crear una aplicación Razor Pages de ASP.NET Core que clasifica los sentimientos de los comentarios del sitio web en tiempo real.
+En este tutorial se muestra cómo crear una aplicación Razor Pages de ASP.NET Core que clasifica las opiniones de los comentarios del sitio web en tiempo real.
 
 En este tutorial aprenderá a:
 
@@ -103,7 +103,7 @@ El tiempo necesario para el entrenamiento del modelo es proporcional a la cantid
 
 ## <a name="evaluate-the-model"></a>Evaluar el modelo
 
-El resultado del paso de entrenamiento será un modelo que tenga el mejor rendimiento. En el paso de evaluación de la herramienta Generador de modelos, la sección de salida contendrá el algoritmo usado por el modelo con el mejor rendimiento en la entrada **Mejor modelo** junto con las métricas en **Modelo de mayor precisión**. Además de una tabla resumen que contiene los cinco mejores modelos y sus métricas.
+El resultado del paso de entrenamiento será un modelo que tiene el mejor rendimiento. En el paso de evaluación de la herramienta Generador de modelos, la sección de salida contendrá el algoritmo que usa el modelo con el mejor rendimiento en la entrada **Mejor modelo** junto con las métricas de **Modelo de mayor precisión**. Además, se muestra una tabla de resumen que contiene los cinco mejores modelos y sus métricas.
 
 Si no está satisfecho con las métricas de precisión, una forma sencilla de intentar mejorar la precisión del modelo es aumentar la cantidad de tiempo para entrenar el modelo o usar más datos. En caso contrario, seleccione el vínculo de **código** para ir al paso final de la herramienta Generador de modelos.
 
@@ -124,7 +124,7 @@ Se crearán dos proyectos como resultado del proceso de entrenamiento.
 
 ### <a name="configure-the-predictionengine-pool"></a>Configuración del grupo PredictionEngine
 
-Para hacer una sola predicción, debe crear un [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602). [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) no es seguro para subprocesos. Además, tiene que crear una instancia de ella en cualquier lugar en que se necesite dentro de la aplicación. A medida que crece la aplicación, este proceso puede volverse difícil de administrar. Para mejorar el rendimiento y la seguridad para subprocesos, use una combinación de inserción de dependencias y el servicio `PredictionEnginePool`, que crea un [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) de objetos de [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) para su uso en toda la aplicación.
+Para realizar una sola predicción, tendrá que crear un objeto <xref:Microsoft.ML.PredictionEngine%602>. <xref:Microsoft.ML.PredictionEngine%602> no es seguro para subprocesos. Además, tiene que crear una instancia en cualquier lugar en que se necesite dentro de la aplicación. A medida que crece la aplicación, este proceso puede volverse difícil de administrar. Para mejorar el rendimiento y la seguridad para subprocesos, use una combinación de inserción de dependencias y el servicio `PredictionEnginePool`, que crea un elemento <xref:Microsoft.Extensions.ObjectPool.ObjectPool%601> de objetos <xref:Microsoft.ML.PredictionEngine%602> para usarlo en toda la aplicación.
 
 1. Instale el paquete *Microsoft.Extensions.ML* de NuGet:
 
@@ -277,7 +277,7 @@ Los resultados que devuelve el `OnGetAnalyzeSentiment` se mostrarán de manera d
 
 ## <a name="run-the-application"></a>Ejecutar la aplicación
 
-Ahora que la aplicación está configurada, ejecútela. Debería iniciarse en el explorador.
+Ahora que la aplicación está configurada, ejecútela. Se debería iniciar en el explorador.
 
 Cuando se inicie la aplicación, escriba *¡El Generador de modelos es genial!* en el área de texto. El sentimiento de predicción que aparece debe ser *Not Toxic* (No tóxico).
 

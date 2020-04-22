@@ -3,12 +3,12 @@ title: Valores de configuración del recolector de elementos no utilizados
 description: Obtenga información sobre los valores del entorno de ejecución para configurar el modo en el que el recolector de elementos no utilizados administra la memoria de las aplicaciones de .NET Core.
 ms.date: 01/09/2020
 ms.topic: reference
-ms.openlocfilehash: 044083d69601f5092724a46d358b2ee5673d428d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dfb641eeda03d1acaa4771bd6253fcb33c4082a6
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76733520"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607815"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>Opciones de configuración del entorno de ejecución para la recolección de elementos no utilizados
 
@@ -117,8 +117,8 @@ Para obtener más información sobre algunos de estos valores, vea la entrada de
 
 - Limita el número de montones creados por el recolector de elementos no utilizados.
 - Solo se aplica a la recolección de elementos no utilizados del servidor.
-- Si la afinidad del procesador de GC está habilitada, que es el valor predeterminado de esta opción, el valor del recuento de montones establece afinidad entre `n` montones o subprocesos de GC en los primeros `n` procesadores. (Utilice la configuración pertinente para establecer la afinidad entre una máscara o entre rangos para especificar exactamente los procesadores entre los que se va a establecer afinidad).
-- Si está deshabilitada la afinidad del procesador de GC, esta configuración limita el número de montones de GC.
+- Si la [afinidad del procesador de GC](#systemgcnoaffinitizecomplus_gcnoaffinitize) está habilitada (el valor predeterminado) el valor del recuento de montones establece afinidad entre `n` montones o subprocesos de GC en los primeros `n` procesadores. (Use los valores [affinitize mask](#systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask) o [affinitize ranges](#systemgcgcheapaffinitizerangescomplus_gcheapaffinitizeranges) para especificar exactamente los procesadores entre los que se va a establecer afinidad).
+- Si la [afinidad del procesador de GC](#systemgcnoaffinitizecomplus_gcnoaffinitize) está deshabilitada, esta configuración limita el número de montones de GC.
 - Para obtener más información, vea la sección [Comentarios de GCHeapCount](../../framework/configure-apps/file-schema/runtime/gcheapcount-element.md#remarks).
 
 | | Nombre de valor | Valores | Versión introducida |
@@ -145,7 +145,7 @@ Ejemplo:
 ### <a name="systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask"></a>System.GC.HeapAffinitizeMask/COMPlus_GCHeapAffinitizeMask
 
 - Especifica los procesadores exactos que deben usar los subprocesos del recolector de elementos no utilizados.
-- Si la afinidad del procesador está deshabilitada estableciendo `System.GC.NoAffinitize` en `true`, esta configuración se omite.
+- Si la [afinidad del procesador de GC](#systemgcnoaffinitizecomplus_gcnoaffinitize) está deshabilitada, esta configuración se ignora.
 - Solo se aplica a la recolección de elementos no utilizados del servidor.
 - El valor es una máscara de bits que define los procesadores que están disponibles para el proceso. Por ejemplo, un valor decimal de 1023 (o un valor hexadecimal de 0x3FF o 3FF si utiliza la variable de entorno) es 0011 1111 1111 en notación binaria. Esto especifica que se usarán los 10 primeros procesadores. Para especificar los 10 procesadores siguientes, es decir, los procesadores 10-19, especifique un valor decimal de 1047552 (o un valor hexadecimal de 0xFFC00 o FFC00), que es equivalente a un valor binario de 1111 1111 1100 0000 0000.
 
@@ -170,9 +170,9 @@ Ejemplo:
 ### <a name="systemgcgcheapaffinitizerangescomplus_gcheapaffinitizeranges"></a>System.GC.GCHeapAffinitizeRanges/COMPlus_GCHeapAffinitizeRanges
 
 - Especifica la lista de procesadores que se van a usar para los subprocesos del recolector de elementos no utilizados.
-- Este valor es similar a `System.GC.HeapAffinitizeMask`, salvo que permite especificar más de 64 procesadores.
+- Este valor es similar a [System.GC.HeapAffinitizeMask](#systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask), salvo que permite especificar más de 64 procesadores.
 - En el caso de los sistemas operativos Windows, agregue el prefijo con el [grupo de CPU](/windows/win32/procthread/processor-groups) correspondiente al número o el rango del procesador, por ejemplo, "0:1-10,0:12,1:50-52,1:70".
-- Si la afinidad del procesador está deshabilitada estableciendo `System.GC.NoAffinitize` en `true`, esta configuración se omite.
+- Si la [afinidad del procesador de GC](#systemgcnoaffinitizecomplus_gcnoaffinitize) está deshabilitada, esta configuración se ignora.
 - Solo se aplica a la recolección de elementos no utilizados del servidor.
 - Para obtener más información, vea el artículo del blog de Maoni Stephens sobre la [mejora de la configuración de la CPU para la GC en máquinas con > 64 CPU](https://devblogs.microsoft.com/dotnet/making-cpu-configuration-better-for-gc-on-machines-with-64-cpus/).
 
@@ -239,6 +239,11 @@ Ejemplo:
 ### <a name="systemgcheaphardlimitcomplus_gcheaphardlimit"></a>System.GC.HeapHardLimit/COMPlus_GCHeapHardLimit
 
 - Especifica el tamaño máximo de confirmación, en bytes, para el montón de GC y la contabilidad de GC.
+- Esta configuración solo se aplica a los equipos de 64 bits.
+- El valor predeterminado, que solo se aplica en ciertos casos, es el menor de 20 MB o 75 % del límite de memoria del contenedor. El valor predeterminado se aplica si:
+
+  - El proceso se ejecuta dentro de un contenedor que tiene un límite de memoria especificado.
+  - No se ha establecido [System.GC.HeapHardLimitPercent](#systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent).
 
 | | Nombre de valor | Valores | Versión introducida |
 | - | - | - | - |
@@ -262,7 +267,14 @@ Ejemplo:
 
 ### <a name="systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent"></a>System.GC.HeapHardLimitPercent/COMPlus_GCHeapHardLimitPercent
 
-- Especifica el uso del montón de GC como porcentaje de la memoria total.
+- Especifica el uso del montón de GC permitido como porcentaje de la memoria física total.
+- Si también se establece [System.GC.HeapHardLimit](#systemgcheaphardlimitcomplus_gcheaphardlimit), este valor se omite.
+- Esta configuración solo se aplica a los equipos de 64 bits.
+- Si el proceso se ejecuta dentro de un contenedor que tiene un límite de memoria especificado, el porcentaje se calcula como un porcentaje de ese límite de memoria.
+- El valor predeterminado, que solo se aplica en ciertos casos, es el menor de 20 MB o 75 % del límite de memoria del contenedor. El valor predeterminado se aplica si:
+
+  - El proceso se ejecuta dentro de un contenedor que tiene un límite de memoria especificado.
+  - No se ha establecido [System.GC.HeapHardLimit](#systemgcheaphardlimitcomplus_gcheaphardlimit).
 
 | | Nombre de valor | Valores | Versión introducida |
 | - | - | - | - |

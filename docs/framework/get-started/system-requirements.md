@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operating systems supported
 - hardware requirements
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
-ms.openlocfilehash: 6f67d01b4af4a72fb09e5f2aa225e226e268eee2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 571075f7d0f330cf88ac9618376876b4f72e75ed
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181584"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389474"
 ---
 # <a name="net-framework-system-requirements"></a>Requisitos de sistema de .NET Framework
 
@@ -54,14 +54,14 @@ Necesita tener privilegios de administrador para poder instalar .NET Framework.
 
 | Sistema operativo | Ediciones compatibles | Preinstalado con el sistema operativo | Instalable por separado |
 | ---------------- | ------------------ | ------------------------ | ---------------------- |
-| Actualización del 10 de mayo de 2019 de Windows 2019 | 32 bits y 64 bits | .NET Framework 4.8 | -- |
-| Actualización de octubre de 2018 de Windows 10 | 32 bits y 64 bits | .NET Framework 4.7.2 | .NET Framework 4.8 |
-| Actualización de abril de 2018 de Windows 10 | 32 bits y 64 bits | .NET Framework 4.7.2 |.NET Framework 4.8|
-| Windows 10 Fall Creators Update | 32 bits y 64 bits | .NET Framework 4.7.1 | .NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
-| Windows 10 Creators Update | 32 bits y 64 bits | .NET Framework 4.7 | .NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
-| Actualización de aniversario de Windows 10 | 32 bits y 64 bits | .NET Framework 4.6.2 |.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8  |
-| Actualización de noviembre de Windows 10 | 32 bits y 64 bits | .NET Framework 4.6.1 | .NET Framework 4.6.2 |
-| Windows 10 | 32 bits y 64 bits | .NET Framework 4.6 | .NET Framework 4.6.1 <br/><br/> .NET Framework 4.6.2 |
+| Actualización del 10 de mayo de 2019 de Windows 2019<br/> (versión 1903) | 32 bits y 64 bits | .NET Framework 4.8 | -- |
+| Actualización de octubre de 2018 de Windows 10<br/> (versión 1809) | 32 bits y 64 bits | .NET Framework 4.7.2 | .NET Framework 4.8 |
+| Actualización de abril de 2018 de Windows 10<br/> (versión 1803) | 32 bits y 64 bits | .NET Framework 4.7.2 |.NET Framework 4.8|
+| Windows 10 Fall Creators Update<br/> (versión 1709) | 32 bits y 64 bits | .NET Framework 4.7.1 | .NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
+| Windows 10 Creators Update<br/> (versión 1703) | 32 bits y 64 bits | .NET Framework 4.7 | .NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
+| Actualización de aniversario de Windows 10<br/> (versión 1607) | 32 bits y 64 bits | .NET Framework 4.6.2 |.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8  |
+| Actualización de noviembre de Windows 10<br/> (versión 1511) | 32 bits y 64 bits | .NET Framework 4.6.1 | .NET Framework 4.6.2 |
+| Windows 10<br/> (versión 1507) | 32 bits y 64 bits | .NET Framework 4.6 | .NET Framework 4.6.1 <br/><br/> .NET Framework 4.6.2 |
 | Windows 8.1 | 32 bits, 64 bits y ARM | .NET Framework 4.5.1 | .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
 | Windows 8 | 32 bits, 64 bits y ARM | .NET Framework 4.5 | .NET Framework 4.5.1<br /><br />.NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1 |
 | Windows 7 SP1|32 bits y 64 bits | -- | .NET Framework 4<br /><br /> .NET Framework 4.5<br /><br /> .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |

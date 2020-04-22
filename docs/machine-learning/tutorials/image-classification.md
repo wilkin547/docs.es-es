@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo transferir el conocimiento de un m
 ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 1e5478f53c82f36ddafe19e3659e2234ff9687b4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: be21a94f571a1676d2a4bce2196dec34bf008121
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78241031"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607576"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>Tutorial: Generación de un modelo de clasificación de imágenes de ML.NET desde un modelo entrenado previamente de TensorFlow
 
@@ -37,7 +37,7 @@ En este tutorial, usará parte de un modelo de TensorFlow (entrenado para clasif
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-* [Visual Studio 2017, versión 15.6 o posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con la carga de trabajo "Desarrollo multiplataforma de .NET Core" instalada.
+* [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o posterior, o bien Visual Studio 2017 versión 15.6 o posterior con la carga de trabajo "Desarrollo multiplataforma de .NET Core" instalada.
 * [El archivo ZIP del directorio de recursos del tutorial](https://github.com/dotnet/samples/blob/master/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)
 * [El modelo de Machine Learning de InceptionV1](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
 

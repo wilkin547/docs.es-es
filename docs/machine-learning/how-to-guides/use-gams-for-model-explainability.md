@@ -3,12 +3,12 @@ title: Interpretación de modelos ML.NET con modelos aditivos generalizados
 description: Uso de modelos aditivos generalizados y funciones de forma para la interpretabilidad del modelo en ML.NET
 ms.date: 01/30/2020
 ms.custom: mvc,how-to
-ms.openlocfilehash: 6df19eff4fec98c5815a9f8f4d8e4e9a80cba6ed
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 29eac7a609ada57283a7c5b55b935e30709930dd
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77092478"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243133"
 ---
 # <a name="use-generalized-additive-models-and-shape-functions-for-model-interpretability-in-mlnet"></a>Uso de modelos aditivos generalizados y funciones de forma para la interpretabilidad del modelo en ML.NET
 
@@ -50,4 +50,4 @@ for (int i = 0; i < myFeatureBins.Length; i++)
 
 ![Gráfico de función de forma de modelos aditivos generalizados](./media/use-gams-for-model-explainability/gam-shape-function-graph.png)
 
-Para ver un ejemplo de cómo entrenar un modelo de GAM e inspeccionar e interpretar los resultados, consulte el [repositorio de GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/blob/master/docs/samples/Microsoft.ML.Samples/Dynamic/GeneralizedAdditiveModels.cs).
+Para obtener un ejemplo de cómo entrenar un modelo de GAM e inspeccionar e interpretar los resultados, vea el [ejemplo de instructor de clasificación binaria](https://github.com/dotnet/machinelearning/blob/master/docs/samples/Microsoft.ML.Samples/Dynamic/Trainers/BinaryClassification/Gam.cs).

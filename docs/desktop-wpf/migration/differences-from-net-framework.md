@@ -4,12 +4,12 @@ description: Describe las diferencias entre la implementación de .NET Framework
 author: thraka
 ms.date: 09/21/2019
 ms.author: adegeo
-ms.openlocfilehash: 4386654aad205e3c9f2cbd986d7b812e261e737f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 341e576f17c522fbcbb9c417176e9d4a13ab1b18
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "81433137"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021840"
 ---
 # <a name="differences-in-wpf"></a>Diferencias en WPF
 
@@ -40,7 +40,7 @@ Cuando el `<PackageReference>`proyecto usa , los paquetes no se almacenan localm
 
 .NET Core o WPF para .NET Core no admiten la seguridad de acceso de código (CAS). Todas las funciones relacionadas con CAS se tratan bajo la suposición de plena confianza. WPF para .NET Core quita el código relacionado con CAS. La superficie de API pública de estos tipos todavía existe para garantizar que las llamadas a estos tipos se realicen correctamente.
 
-Los tipos relacionados con CAS definidos públicamente se movieron fuera de los ensamblados WPFWPF y en los ensamblados CoreFX. Los ensamblados de WPFWPF tienen el acceso a tipos establecido en la nueva ubicación de los tipos movidos.
+Los tipos relacionados con CAS definidos públicamente se movieron fuera de los ensamblados WPFWPF y en los ensamblados de biblioteca de .NET principal. Los ensamblados de WPFWPF tienen el acceso a tipos establecido en la nueva ubicación de los tipos movidos.
 
 | Ensamblaje de origen | Ensamblaje de destino | Tipo                |
 | --------------- | --------------- | ------------------- |

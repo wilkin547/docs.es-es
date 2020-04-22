@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 98d303c99693a8aadb23da509a700772db69c0e0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17d85b9e9734fae0bb69f94da8c08669216ab0ae
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146663"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242873"
 ---
 # <a name="exposing-net-core-components-to-com"></a>Exposición de los componentes de .NET Core a COM
 
@@ -92,5 +92,7 @@ Puede encontrar un [ejemplo de servidor COM](https://github.com/dotnet/samples/t
 ## <a name="additional-notes"></a>Notas adicionales
 
 A diferencia de lo que ocurre en .NET Framework, .NET Core no admite la generación de una biblioteca de tipos COM (TLB) a partir de un ensamblado de .NET Core. La instrucción es escribir manualmente un archivo IDL o un encabezado C/C++ para las declaraciones nativas de las interfaces COM.
+
+No se admiten [implementaciones autocontenidas](../deploying/index.md#publish-self-contained) de componentes COM. Solo se admiten las [implementaciones dependientes del runtime](../deploying/index.md#publish-runtime-dependent) de los componentes COM.
 
 Además, la carga de .NET Framework y .NET Core en el mismo proceso presenta limitaciones de diagnóstico. La limitación principal es la depuración de componentes administrados, ya que no es posible depurar .NET Framework y .NET Core al mismo tiempo. Asimismo, las dos instancias en tiempo de ejecución no comparten ensamblados administrados. Esto significa que no es posible compartir tipos de .NET reales entre los dos tiempos de ejecución, por lo que todas las interacciones deben restringirse a los contratos de interfaz COM expuestos.

@@ -4,12 +4,12 @@ description: ML.NET ofrece la posibilidad de agregar aprendizaje automático en 
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: 169250adf81992ad0025e78eb9c8f151107bcf40
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0929005e02ad9b43636213735f8c7232aa6d4f42
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79185864"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607776"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>¿Qué es ML.NET y cómo funciona?
 
@@ -28,7 +28,7 @@ Algunos ejemplos del tipo de predicciones que puede hacer con ML.NET:
 |Clasificación y categorización|Clasifique automáticamente los comentarios del cliente en positivos y negativos.|
 |Valores continuos de regresión y predicción|Prediga el precio de la vivienda según el tamaño y la ubicación.|
 |Detección de anomalías|Detecte transacciones bancarias fraudulentas. |
-|Recomendaciones|Sugerencias de productos que pueden interesar a los compradores en Internet en función de compras anteriores|
+|Recomendaciones|Sugiera productos que los compradores en línea pueden comprar, en función de sus compras anteriores.|
 |Series temporales y datos secuenciales|Haga una previsión del tiempo y de las ventas de productos|
 |Clasificación de la imagen|Clasifique las patologías de imágenes médicas|
 
@@ -230,7 +230,7 @@ Puede transformar datos de entrada en predicciones de forma masiva o una entrada
     var price = predEngine.Predict(size);
 ```
 
-El método `CreatePredictionEngine()` toma una clase de entrada y una clase de salida. Los atributos de código o los nombres de campo determinan los nombres de las columnas de datos utilizadas durante el entrenamiento del modelo y la predicción. Puede leer más sobre [cómo realizar una sola predicción](./how-to-guides/single-predict-model-ml-net.md) en la sección de instrucciones.
+El método `CreatePredictionEngine()` toma una clase de entrada y una clase de salida. Los atributos de código o los nombres de campo determinan los nombres de las columnas de datos utilizadas durante el entrenamiento del modelo y la predicción. Para obtener más información, vea [Realización de predicciones con un modelo entrenado](how-to-guides/machine-learning-model-predictions-ml-net.md).
 
 ### <a name="data-models-and-schema"></a>Esquema y modelos de datos
 

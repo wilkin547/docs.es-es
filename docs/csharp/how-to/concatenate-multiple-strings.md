@@ -7,12 +7,12 @@ helpviewer_keywords:
 - concatenating strings [C#]
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
-ms.openlocfilehash: 9a0640a7ce73fa8454442cd301157bf5c265f9de
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bbdeba4ee3526140de29ac0d7c97e9a593729d47
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713899"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389534"
 ---
 # <a name="how-to-concatenate-multiple-strings-c-guide"></a>Procedimiento para concatenar varias cadenas (Guía de C#)
 
@@ -37,7 +37,7 @@ En algunas expresiones, es más fácil concatenar cadenas mediante la interpolac
 
 Otro método para concatenar cadenas es <xref:System.String.Format%2A?displayProperty=nameWithType>. Este método funciona bien para compilar una cadena a partir de un número reducido de cadenas de componente.
 
-En otros casos, puede combinar cadenas en un bucle, donde no sabe cuántas cadenas de origen se combinan, y el número real de cadenas de origen puede ser bastante elevado. La clase <xref:System.Text.StringBuilder> se diseñó para estos escenarios. El código siguiente usa el método <xref:System.Text.StringBuilder.Append%2A> de la clase <xref:System.Text.StringBuilder> para concatenar cadenas.  
+En otros casos, puede combinar cadenas en un bucle, donde no sabe cuántas cadenas de origen se combinan, y el número real de cadenas de origen puede ser elevado. La clase <xref:System.Text.StringBuilder> se diseñó para estos escenarios. El código siguiente usa el método <xref:System.Text.StringBuilder.Append%2A> de la clase <xref:System.Text.StringBuilder> para concatenar cadenas.  
   
 [!code-csharp-interactive[string concatenation using string builder](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#4)]  
 
@@ -51,7 +51,7 @@ Por último, puede usar [LINQ](../programming-guide/concepts/linq/index.md) y el
 
 [!code-csharp-interactive[string concatenation using LINQ expressions](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#6)]  
 
-Eche un vistazo al código de nuestro [repositorio de GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings) y pruebe estos ejemplos. O bien, puede descargar los ejemplos [como un archivo ZIP](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
+Eche un vistazo al [código de ejemplo](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings) y pruebe estos ejemplos. También puede descargar los ejemplos [como archivo ZIP](../../../samples/snippets/csharp/how-to/strings.zip).
 
 ## <a name="see-also"></a>Vea también
 

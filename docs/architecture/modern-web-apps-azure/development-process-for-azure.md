@@ -4,12 +4,12 @@ description: Aplicaciones web modernas con ASP.NET Core y Azure | Proceso de des
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 7a641c1b6665af6e9e78ef182174b360041d74aa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 640cfebea3c70314be4a597bc07b0dc6854f5848
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77450053"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607898"
 ---
 # <a name="development-process-for-azure"></a>Proceso de desarrollo para Azure
 
@@ -58,13 +58,13 @@ Cree un Azure App Service donde se va a implementar la aplicación. Vaya a la ho
 
 El proceso de compilación de CI realizará una compilación automatizada siempre que se confirme código nuevo en el repositorio de control de código fuente del proyecto. Esto ofrece información inmediata de que el código se compila (y, de forma ideal, que pasa las pruebas automatizadas) y que potencialmente se puede implementar. Esta compilación de CI generará un artefacto de paquete de implementación web y lo publicará para su uso por el proceso de CD.
 
-[Definir el proceso de compilación de CI](https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core#ci)
+[Definir el proceso de compilación de CI](https://docs.microsoft.com/azure/devops/pipelines/ecosystems/dotnet-core)
 
 Asegúrese de habilitar la integración continua para que el sistema ponga en cola una compilación cada vez que alguien del equipo confirme código nuevo. Pruebe la compilación y compruebe que está generando un paquete de implementación web como uno de sus artefactos.
 
 Cuando la compilación se realice correctamente, el proceso de CD implementará los resultados de la compilación de CI en la aplicación web de Azure. Para configurar esto, se crea y configura una *Versión*, que se implementará en Azure App Service.
 
-[Definir el proceso de publicación de CD](https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core#cd)
+[Implementación de una aplicación web de Azure](https://docs.microsoft.com/azure/devops/pipelines/targets/webapp)
 
 Una vez que se configura la canalización de CI/CD, puede realizar actualizaciones en la aplicación web y confirmarlas en el control de código fuente para que se implementen.
 
@@ -84,11 +84,11 @@ El desarrollo de la aplicación ASP.NET Core para su implementación en Azure no
 
 Cuando esté listo para compartir el código con el equipo, debe insertar los cambios desde el repositorio de origen local al repositorio de código fuente compartido del equipo. Si ha estado trabajando en una rama personalizada, este paso normalmente implica combinar el código en una rama compartida (posiblemente por medio de una [solicitud de incorporación de cambios](https://docs.microsoft.com/azure/devops/git/pull-requests)).
 
-#### <a name="step-3-build-server-continuous-integration-build-test-package"></a>Paso 3. Servidor de compilación: integración continua. Compilar, probar, empaquetar
+#### <a name="step-3-build-server-continuous-integration-build-test-package"></a>Paso 3. Servidor de compilación: Integración continua. Compilar, probar, empaquetar
 
 Siempre que se realiza una confirmación nueva en el repositorio de código de la aplicación compartido, se desencadena una compilación nueva en el servidor de compilación. Como parte del proceso de integración continua, esta compilación debe compilar totalmente la aplicación y ejecutar pruebas automatizadas para confirmar que todo funciona según lo previsto. El resultado final del proceso de CI debe ser una versión empaquetada de la aplicación web, lista para la implementación.
 
-#### <a name="step-4-build-server-continuous-delivery"></a>Paso 4. Servidor de compilación: entrega continua
+#### <a name="step-4-build-server-continuous-delivery"></a>Paso 4. Servidor de compilación: Entrega continua.
 
 Una vez realizada correctamente la compilación, el proceso de CD recogerá los artefactos de compilación generados. Esto incluirá un paquete de implementación web. El servidor de compilación implementará este paquete en Azure App Service, reemplazando cualquier servicio existente con el recién creado. Normalmente, este paso tiene como destino un entorno de ensayo, pero algunas aplicaciones se implementan directamente en producción a través de un proceso de CD.
 
