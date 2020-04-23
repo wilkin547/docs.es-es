@@ -2,12 +2,12 @@
 title: Instrucciones de formato de código de F#
 description: Obtenga información sobre las directrices para dar formato al código de F.
 ms.date: 11/04/2019
-ms.openlocfilehash: b8be70dd29a04e71614308164e541b99a1724305
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: dd48380a90ee92b2c1edaaabc116fa1cd8010390
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739553"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102494"
 ---
 # <a name="f-code-formatting-guidelines"></a>Instrucciones de formato de código de F#
 
@@ -579,10 +579,10 @@ Al generar matrices y listas `->` mediante `do ... yield` programación, prefier
 
 ```fsharp
 // Preferred
-let squares = [ for x in 1..10 -> x*x ]
+let squares = [ for x in 1..10 -> x * x ]
 
 // Not preferred
-let squares' = [ for x in 1..10 do yield x*x ]
+let squares' = [ for x in 1..10 do yield x * x ]
 ```
 
 Las versiones anteriores del `yield` lenguaje F- requerían especificar en situaciones en las que los datos se pueden generar condicionalmente o puede haber expresiones consecutivas que se evaluarán. Prefiere omitir `yield` estas palabras clave a menos que deba compilar con una versión de lenguaje de F. anterior:
@@ -816,10 +816,10 @@ let function1 a b = a - b * b
 ```fsharp
 // A1 and A2 are local modules.
 module A1 =
-    let function1 a b = a*a + b*b
+    let function1 a b = a * a + b * b
 
 module A2 =
-    let function2 a b = a*a - b*b
+    let function2 a b = a * a - b * b
 ```
 
 ### <a name="formatting-object-expressions-and-interfaces"></a>Formato de expresiones e interfaces de objetos
@@ -878,7 +878,7 @@ type MyRecord =
 
 ### <a name="formatting-attributes-on-parameters"></a>Formato de atributos en parámetros
 
-Los atributos también se pueden colocar en parámetros. En este caso, coloque entonces en la misma línea que el parámetro y antes del nombre:
+Los atributos también se pueden colocar en los parámetros. En este caso, coloque entonces en la misma línea que el parámetro y antes del nombre:
 
 ```fsharp
 // Defines a class that takes an optional value as input defaulting to false.

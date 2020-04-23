@@ -9,12 +9,12 @@ helpviewer_keywords:
 - gcConcurrent element
 - <gcConcurrent> element
 ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
-ms.openlocfilehash: 5957337aa960a0d5f445249b410dbfaddb7b08e9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 249518ae7477d284d50f9010757db83b7752c657
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400984"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102923"
 ---
 # <a name="gcconcurrent-element"></a>\<gcConcurrent> elemento
 
@@ -82,7 +82,7 @@ El siguiente archivo de configuración deshabilita la recolección de elementos 
 
 Si hay un valor **gcConcurrentSetting** en el archivo de configuración del equipo, define el valor predeterminado para todas las aplicaciones de .NET Framework. El archivo de configuración del equipo reemplaza el archivo de configuración de la aplicación.
 
-Para obtener más información sobre la recolección de elementos no utilizados simultánea y en segundo plano, vea las secciones Recolección de [elementos no utilizados simultánea,](../../../../standard/garbage-collection/fundamentals.md#concurrent-garbage-collection) [Recolección](../../../../standard/garbage-collection/fundamentals.md#background-workstation-garbage-collection)de elementos no utilizados de estación de trabajo en segundo plano y [Recolección](../../../../standard/garbage-collection/fundamentals.md#background-server-garbage-collection) de elementos no utilizados del servidor en segundo plano en el artículo Fundamentos de la [recolección de elementos no utilizados.](../../../../standard/garbage-collection/fundamentals.md)
+Para obtener más información sobre la recolección de elementos no utilizados simultánea y en segundo plano, vea Recolección de [elementos no utilizados](../../../../standard/garbage-collection/background-gc.md)en segundo plano .
 
 ## <a name="example"></a>Ejemplo
 
@@ -99,5 +99,5 @@ En el ejemplo siguiente se habilita la recolección de elementos no utilizados e
 ## <a name="see-also"></a>Consulte también
 
 - [Esquema de la configuración de Common Language Runtime](index.md)
-- [Esquema del archivo de configuración](../index.md)
+- [Esquema de los archivos de configuración](../index.md)
 - [Fundamentos de la recolección de elementos no utilizados](../../../../standard/garbage-collection/fundamentals.md)

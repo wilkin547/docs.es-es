@@ -8,12 +8,12 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-ms.openlocfilehash: 95ae438e9fb52cc584d18a981bffb66147eb4a77
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 8d5cd73bb9393533cb669581420e24297cb5ff71
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242821"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102936"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides> elemento
 
@@ -40,7 +40,7 @@ Define uno o varios modificadores usados por la clase <xref:System.AppContext> p
 
 ### <a name="value-attribute"></a>valor Atributo
 
-|Valor|Descripción|
+|Value|Descripción|
 |-----------|-----------------|
 |"nombre-valor"|Un nombre de conmutador predefinido`true` junto `false`con su valor ( o ). Varios pares de nombre/valor del conmutador están separados por punto y coma (";"). Para obtener una lista de nombres de modificador predefinidos admitidos por .NET Framework, vea la sección Comentarios.|
 
@@ -59,9 +59,9 @@ Define uno o varios modificadores usados por la clase <xref:System.AppContext> p
 
  El `value` atributo `<AppContextSwitchOverrides>` del elemento consta de una sola cadena que consta de uno o varios pares de nombre/valor delimitados por punto y coma.  Cada nombre identifica un modificador de compatibilidad y su`true` `false`valor correspondiente es un valor booleano ( o ) que indica si el modificador está establecido. De forma predeterminada, `false`el modificador es , y las bibliotecas proporcionan la nueva funcionalidad. Sólo proporcionan la funcionalidad anterior si se establece el switch `true`(es decir, su valor es ). Esto permite a las bibliotecas proporcionar un nuevo comportamiento para una API existente, al tiempo que permite a los llamadores que dependen del comportamiento anterior optar por no participar en la nueva funcionalidad.
 
- .NET Framework admite los siguientes modificadores:
+.NET Framework admite los siguientes modificadores:
 
-|Cambiar nombre|Descripción|Introducida|
+|Cambiar nombre|Descripción|Inclusión|
 |-----------------|-----------------|----------------|
 |`Switch.MS.Internal.`<br/>`DoNotApplyLayoutRoundingToMarginsAndBorderThickness`|Controla si Windows Presentation Foundation usa un algoritmo heredado para el diseño de control. Para más información, consulte [Mitigación: diseño de WPF](../../../migration-guide/mitigation-wpf-layout.md).|.NET Framework 4.6|
 |`Switch.MS.Internal.`<br/>`UseSha1AsDefaultHashAlgorithmForDigitalSignatures`|Controla si el algoritmo predeterminado utilizado para firmar partes de un paquete por PackageDigitalSignatureManager es SHA1 o SHA256.<br>Debido a problemas de colisión con SHA1, Microsoft recomienda SHA256.|.NET Framework 4.7.1|
@@ -141,7 +141,7 @@ Define uno o varios modificadores usados por la clase <xref:System.AppContext> p
 
  Los desarrolladores de bibliotecas también pueden definir modificadores personalizados para permitir que los llamadores opten por no cambiar la funcionalidad introducida en versiones posteriores de sus bibliotecas. Para obtener más información, vea la clase <xref:System.AppContext>.
 
-## <a name="switches-in-aspnet-applications"></a>Interruptores en aplicaciones ASP.NET
+## <a name="switches-in-aspnet-apps"></a>Cambia en aplicaciones ASP.NET
 
 Puede configurar una aplicación de ASP.NET para [ \<](../appsettings/add-element-for-appsettings.md) usar la configuración de compatibilidad agregando un elemento Agregar>a la [ \<](../appsettings/index.md) sección appSettings>del archivo web.config.
 
@@ -179,6 +179,7 @@ En el ejemplo `<add>` siguiente se utiliza `<appSettings>` el elemento para agre
 
 ## <a name="see-also"></a>Consulte también
 
+- [Mitigar nuevos comportamientos en .NET Framework 4.6 y versiones posteriores](../../../migration-guide/mitigations.md)
 - <xref:System.AppContext?displayProperty=nameWithType>
 - [\<> en tiempo de ejecución elemento](runtime-element.md)
 - [\<configuración> Elemento](../configuration-element.md)
