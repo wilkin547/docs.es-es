@@ -130,6 +130,8 @@
           href: additional-security-considerations-in-windows-forms.md
     - name: Implementación de ClickOnce para formularios Windows Forms
       href: clickonce-deployment-for-windows-forms.md
+    - name: "Mejoras de accesibilidad con .NET Core\_3.0"
+      href: windows-forms-accessibility-improvements.md
     - name: Procedimiento para obtener acceso a colecciones con claves en formularios Windows Forms
       href: how-to-access-keyed-collections-in-windows-forms.md
     - name: Mejorar las aplicaciones de Windows Forms
