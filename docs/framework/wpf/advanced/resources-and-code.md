@@ -11,15 +11,15 @@ helpviewer_keywords:
 - procedural code [WPF], accessing resources from
 - resources [WPF], creating with procedural code
 ms.assetid: c1cfcddb-e39c-41c8-a7f3-60984914dfae
-ms.openlocfilehash: 2917c9d15a6195c2d67781d6b2cfb0a5f1c136d3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8074562ddb865b482cf123743796ac68bb529f85
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187164"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646244"
 ---
 # <a name="resources-and-code"></a>Recursos y código
-Esta información general se centra en cómo obtener acceso a los recursos de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] o crearlos mediante código en lugar de sintaxis [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Para obtener más información sobre el uso de recursos generales y recursos desde una perspectiva de la sintaxis [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], consulte [Recursos XAML](xaml-resources.md).  
+Esta información general se centra en cómo obtener acceso a los recursos de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] o crearlos mediante código en lugar de sintaxis [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Para obtener más información sobre el uso de recursos generales y recursos desde una perspectiva de la sintaxis [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], consulte [Recursos XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md).  
 
 <a name="accessing"></a>
 ## <a name="accessing-resources-from-code"></a>Obtener acceso a recursos desde código  
@@ -46,5 +46,5 @@ Esta información general se centra en cómo obtener acceso a los recursos de [!
   
 ## <a name="see-also"></a>Consulte también
 
-- [Recursos XAML](xaml-resources.md)
+- [Recursos XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md)
 - [Aplicar estilos y plantillas](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

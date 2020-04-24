@@ -6,12 +6,12 @@ helpviewer_keywords:
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-ms.openlocfilehash: 696772da1ebee405493f2ff0e1481daf93d08ec7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aed4350f1a7084b7894a70ac9d6d00cf25b39e34
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187017"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646198"
 ---
 # <a name="trees-in-wpf"></a>Árboles en WPF
 En muchas tecnologías, los elementos y componentes se organizan en una estructura de árbol en la que los desarrolladores manipulan directamente los nodos de objeto en el árbol para modificar la representación o el comportamiento de una aplicación. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] también usa varias metáforas de la estructura de árbol para definir las relaciones entre los elementos de programa. En su mayor parte, los desarrolladores de WPF pueden crear una aplicación en código o definir partes de la aplicación en código XAML mientras piensan conceptualmente en la metáfora de árbol de objetos, pero estarán llamando a una API concreta o usando un marcado concreto para llamarla, en lugar de usar una API de manipulación de árbol de objetos general como se usaría en DOM XML. WPFWPF expone dos clases auxiliares <xref:System.Windows.LogicalTreeHelper> que <xref:System.Windows.Media.VisualTreeHelper>proporcionan una vista de metáfora de árbol y . Los términos árbol visual y árbol lógico también se usan en la documentación de WPF porque estos mismos árboles son útiles para entender el comportamiento de ciertas características clave de WPF. En este tema se define lo que representan el árbol visual y el árbol <xref:System.Windows.LogicalTreeHelper> lógico, se describe cómo se relacionan estos árboles con un concepto general de árbol de objetos e introducen y <xref:System.Windows.Media.VisualTreeHelper>s.  
@@ -37,7 +37,7 @@ En muchas tecnologías, los elementos y componentes se organizan en una estructu
   
  Sin embargo, el árbol lógico no es el gráfico de objetos completo que existe para la interfaz de usuario de la aplicación en tiempo de ejecución, incluso con los elementos de sintaxis implícita XAML factorizados. La razón principal de esto son los objetos visuales y las plantillas. Por ejemplo, <xref:System.Windows.Controls.Button>considere el archivo . El árbol lógico <xref:System.Windows.Controls.Button> notifica el `Content`objeto y también su cadena. Pero este botón es más complejo en el árbol de objetos en tiempo de ejecución. En particular, el botón sólo aparece en <xref:System.Windows.Controls.Button> la pantalla de la forma en que lo hace porque se aplicó una plantilla de control específica. Los objetos visuales que proceden de una <xref:System.Windows.Controls.Border> plantilla aplicada (como la plantilla definida de gris oscuro alrededor del botón visual) no se notifican en el árbol lógico, incluso si está mirando el árbol lógico durante el tiempo de ejecución (por ejemplo, controlar un evento de entrada de la interfaz de usuario visible y, a continuación, leer el árbol lógico). Para buscar los elementos visuales de la plantilla, sería necesario examinar el árbol visual en su lugar.  
   
- Para más información sobre cómo se asigna la sintaxis de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] al gráfico de objetos creado, y la sintaxis implícita en XAML, vea [Detalles de la sintaxis XAML](xaml-syntax-in-detail.md) o [Información general sobre XAML (WPF)](xaml-overview-wpf.md).  
+ Para más información sobre cómo se asigna la sintaxis de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] al gráfico de objetos creado, y la sintaxis implícita en XAML, vea [Detalles de la sintaxis XAML](xaml-syntax-in-detail.md) o [Información general sobre XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md).  
   
 <a name="tree_property_inheritance_event_routing"></a>
 ### <a name="the-purpose-of-the-logical-tree"></a>Finalidad del árbol lógico  

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
-ms.openlocfilehash: 2ec8c0a99f4e2431aed0d8c24168b7329de669f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2aab0fc8adaf17a8e9820a6269a740ef09540cda
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187528"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646485"
 ---
 # <a name="controls"></a>Controles
 <a name="introduction"></a>
@@ -54,7 +54,7 @@ ms.locfileid: "79187528"
   
  [!code-xaml[ControlsOverview#5](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml#5)]  
   
- También puede aplicar un estilo solo a determinados controles de un tipo específico asignando una clave al estilo y especificando esa clave en la `Style` propiedad del control.  Para obtener más información acerca de los estilos, vea [Estilo y plantillas](styling-and-templating.md).  
+ También puede aplicar un estilo solo a determinados controles de un tipo específico asignando una clave al estilo y especificando esa clave en la `Style` propiedad del control.  Para obtener más información acerca de los estilos, vea [Estilo y plantillas](../../../desktop-wpf/fundamentals/styles-templates-overview.md).  
   
 ### <a name="creating-a-controltemplate"></a>Creación de una plantilla de control  
  A <xref:System.Windows.Style> le permite establecer propiedades en varios controles a la vez, pero <xref:System.Windows.Controls.Control> a veces es <xref:System.Windows.Style>posible que desee personalizar la apariencia de un más allá de lo que puede hacer mediante la creación de un archivo . Las clases <xref:System.Windows.Controls.Control> que heredan de la clase tienen un <xref:System.Windows.Controls.ControlTemplate>, que define la estructura y la apariencia de un <xref:System.Windows.Controls.Control>archivo . La <xref:System.Windows.Controls.Control.Template%2A> propiedad <xref:System.Windows.Controls.Control> de a es public, <xref:System.Windows.Controls.Control> <xref:System.Windows.Controls.ControlTemplate> por lo que puede dar un que es diferente de su valor predeterminado. A menudo puede <xref:System.Windows.Controls.ControlTemplate> especificar <xref:System.Windows.Controls.Control> un nuevo for a en lugar de <xref:System.Windows.Controls.Control>heredar de un control para personalizar la apariencia de un archivo .  
@@ -99,7 +99,7 @@ ms.locfileid: "79187528"
   
 ## <a name="see-also"></a>Consulte también
 
-- [Aplicar estilos y plantillas](styling-and-templating.md)
+- [Aplicar estilos y plantillas](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Agrupar controles por categoría](controls-by-category.md)
 - [Biblioteca de controles](control-library.md)
 - [Información general sobre plantillas de datos](../data/data-templating-overview.md)
@@ -107,4 +107,4 @@ ms.locfileid: "79187528"
 - [Entrada](../advanced/input-wpf.md)
 - [Habilitar un comando](../advanced/how-to-enable-a-command.md)
 - [Tutoriales: Crear un botón animado personalizado](walkthroughs-create-a-custom-animated-button.md)
-- [Control Customization](control-customization.md) (Personalización de controles)
+- [Personalización de controles](control-customization.md)

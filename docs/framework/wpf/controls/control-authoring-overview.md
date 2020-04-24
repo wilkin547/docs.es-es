@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: 2326520039085beb5f5294e23db67b67f9d7d7da
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: a6ab5463cc28aa590454ae1304714d3d12ee7c6b
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243276"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646133"
 ---
 # <a name="control-authoring-overview"></a>Visión general de la creación de control
 
@@ -38,7 +38,7 @@ Históricamente, si quería obtener una experiencia personalizada con un control
 
 - **desencadenantes.** A <xref:System.Windows.Trigger> le permite cambiar dinámicamente la apariencia y el comportamiento de un control sin crear un nuevo control. Por ejemplo, supongamos <xref:System.Windows.Controls.ListBox> que tiene varios controles en <xref:System.Windows.Controls.ListBox> la aplicación y desea que los elementos de cada uno estén en negrita y rojo cuando se seleccionan. El primer instinto podría ser crear una <xref:System.Windows.Controls.ListBox> clase <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A> que herede y reemplace el método para cambiar la apariencia del elemento <xref:System.Windows.Controls.ListBoxItem> seleccionado, pero un mejor enfoque es agregar un desencadenador a un estilo de un que cambia la apariencia del elemento seleccionado. Un desencadenador permite cambiar los valores de propiedad o realizar acciones según el valor de una propiedad. Un <xref:System.Windows.EventTrigger> le permite realizar acciones cuando se produce un evento.
 
-Para más información sobre los estilos, las plantillas y los desencadenadores, consulte [Aplicar estilos y plantillas](styling-and-templating.md).
+Para más información sobre los estilos, las plantillas y los desencadenadores, consulte [Aplicar estilos y plantillas](../../../desktop-wpf/fundamentals/styles-templates-overview.md).
 
 En general, si el control refleja la funcionalidad de un control existente, pero quiere que el control tenga un aspecto diferente, primero debe considerar si puede usar cualquiera de los métodos descritos en esta sección para cambiar la apariencia del control existente.
 

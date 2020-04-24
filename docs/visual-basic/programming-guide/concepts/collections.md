@@ -2,12 +2,12 @@
 title: Colecciones
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: ba16d04e781bcf69356b1f603d92e104816a0860
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 232b9ec7b5975092e73daf0a7384fa816f55f72f
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401416"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646343"
 ---
 # <a name="collections-visual-basic"></a>Colecciones (Visual Basic)
 
@@ -224,7 +224,7 @@ Cuando se usa la clase de Visual Basic `Collection`, el primer elemento de una c
 
 Siempre que sea posible, debe usar las colecciones genéricas del espacio de nombres <xref:System.Collections.Generic?displayProperty=nameWithType> o del espacio de nombres <xref:System.Collections.Concurrent> en lugar de la clase de Visual Basic `Collection`.
 
-Para más información, consulte <xref:Microsoft.VisualBasic.Collection>.
+Para obtener más información, vea <xref:Microsoft.VisualBasic.Collection>.
 
 <a name="BKMK_KeyValuePairs"></a>
 
@@ -536,7 +536,7 @@ End Class
 
 <a name="BKMK_Iterators"></a>
 
-## <a name="iterators"></a>Iteradores
+## <a name="iterators"></a>Iterators
 
 Los *iteradores* se usan para efectuar una iteración personalizada en una colección. Un iterador puede ser un método o un descriptor de acceso `get`. Un iterador utiliza un [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) instrucción para devolver cada elemento de la colección de uno en uno.
 
@@ -572,10 +572,10 @@ End Function
 
 - [Inicializadores de colección](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
 - [Conceptos de programación (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)
-- [Option Strict (instrucción)](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
-- [Parallel LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)
-- [Colecciones y Estructuras de Datos](../../../standard/collections/index.md)
+- [Parallel LINQ (PLINQ)](../../../standard/parallel-programming/introduction-to-plinq.md)
+- [Colecciones y estructuras de datos](../../../standard/collections/index.md)
 - [Seleccionar una clase de colección](../../../standard/collections/selecting-a-collection-class.md)
 - [Comparaciones y ordenaciones en colecciones](../../../standard/collections/comparisons-and-sorts-within-collections.md)
-- [Cuándo usar colecciones genéricas](../../../standard/collections/when-to-use-generic-collections.md)
+- [Cuándo utilizar colecciones genéricas](../../../standard/collections/when-to-use-generic-collections.md)

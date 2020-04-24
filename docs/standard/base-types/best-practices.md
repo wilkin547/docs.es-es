@@ -10,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.openlocfilehash: 9b09f5a2505888c6154a58a3512c94c51f89295b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ff04b4950f48f2ba06f60b65cc3a46f1295711f3
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77124427"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243159"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Procedimientos recomendados con expresiones regulares en .NET
 
@@ -219,7 +219,7 @@ Si sus expresiones regulares procesan datos de entrada que prácticamente coinci
 
 El intervalo de tiempo de espera de la expresión regular define el período de tiempo que el motor de expresiones regulares buscará una coincidencia única antes de que el tiempo se agote. El intervalo de tiempo de espera predeterminado es <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType>, que significa que no se agotará el tiempo de la expresión regular. Puede invalidar este valor y definir un intervalo de tiempo de espera de la siguiente manera:
 
-- Proporcionando un valor de tiempo de espera al crear una instancia del objeto <xref:System.Text.RegularExpressions.Regex> llamando al constructor <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType>.
+- Proporcionando un valor de tiempo de espera al crear una instancia del objeto <xref:System.Text.RegularExpressions.Regex> llamando al constructor <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29>.
 
 - Llamando a un método estático de coincidencia de patrones, como <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> o <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType>, que incluya un parámetro `matchTimeout`.
 

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 6fc54bb9e38768e390201ea77243d3df4cd67f10
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7b0f269bd4dce8ddaaaa72c3760a4d7a0e3eb8b9
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151746"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646011"
 ---
 # <a name="code-access-security-and-adonet"></a>Seguridad de acceso del código y ADO.NET
 .NET Framework ofrece seguridad basada en roles y seguridad de acceso del código (CAS); ambas se implementan utilizando una infraestructura común proporcionada por Common Language Runtime (CLR). En el mundo del código no administrado, la mayoría de las aplicaciones se ejecutan mediante los permisos del usuario o de la entidad de seguridad. Por consiguiente, los sistemas de equipos pueden resultar dañados y se pueden poner en peligro los datos privados si un usuario con un nivel elevado de privilegios ejecuta software malintencionado o que contenga errores.  
@@ -50,7 +50,7 @@ ms.locfileid: "79151746"
  En función del tipo de aplicación que cree, deberá considerar también la posibilidad de implementar permisos basados en roles en la base de datos. Para obtener más información sobre la seguridad basada en roles en SQL Server, vea Seguridad de [SQL Server](./sql/sql-server-security.md).  
   
 ## <a name="assemblies"></a>Ensamblados  
- Los ensamblados componen la unidad fundamental de implementación, control de versiones, reutilización, ámbito de activación y permisos de seguridad en una aplicación de .NET Framework. Un ensamblado proporciona una colección de tipos y recursos creados para funcionar en conjunto y formar una unidad lógica de funcionalidad. En CLR, un tipo no existe si no es en el contexto de un ensamblado. Para obtener más información sobre cómo crear e implementar ensamblados, vea [Programación con ensamblados](../../../standard/assembly/program.md).  
+ Los ensamblados componen la unidad fundamental de implementación, control de versiones, reutilización, ámbito de activación y permisos de seguridad en una aplicación de .NET Framework. Un ensamblado proporciona una colección de tipos y recursos creados para funcionar en conjunto y formar una unidad lógica de funcionalidad. En CLR, un tipo no existe si no es en el contexto de un ensamblado. Para obtener más información sobre cómo crear e implementar ensamblados, vea [Programación con ensamblados](../../../standard/assembly/index.md).  
   
 ### <a name="strong-naming-assemblies"></a>Ensamblados con nombre seguro  
  Un nombre seguro, o firma digital, consta de la identidad del ensamblado, que incluye su nombre de texto sencillo, el número de versión, la información de referencia cultural (si se proporciona), así como una clave pública y una firma digital. La firma digital se genera a partir de un archivo de ensamblado que usa la clave privada correspondiente. El archivo de ensamblado contiene el manifiesto del ensamblado, que contiene los nombres y códigos hash de todos los archivos que forman el ensamblado.  
@@ -199,4 +199,4 @@ Failed, as expected: Request failed.
 - [Proteger aplicaciones de ADO.NET](securing-ado-net-applications.md)
 - [Seguridad del código nativo y del código de .NET Framework](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
 - [Seguridad basada en roles](../../../standard/security/role-based-security.md)
-- [Información general de ADO.NET](ado-net-overview.md)
+- [Información general sobre ADO.NET](ado-net-overview.md)

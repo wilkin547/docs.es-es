@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: dbff4bed59c8d1e861555676578b52528e2aebbe
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5f8bb862ce443fd7397036b10f69cda65a6960bc
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186183"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646141"
 ---
 # <a name="xaml-syntax-in-detail"></a>Detalles de la sintaxis XAML
 En este tema se definen los términos que se usan para describir los elementos de la sintaxis XAML. Estos términos se usan con frecuencia en el resto de esta documentación, tanto para la documentación de WPF específicamente como para los otros marcos que usan XAML o los conceptos XAML básicos habilitados por la compatibilidad con el lenguaje XAML en el nivel System.Xaml. En este tema se amplía la terminología básica introducida en el tema Información general sobre [XAML (WPF).](../../../desktop-wpf/fundamentals/xaml.md)  
@@ -130,7 +130,7 @@ En este tema se definen los términos que se usan para describir los elementos d
   
  También puede asignar un nombre a cualquier evento de cualquier objeto al que se pueda acceder a través del espacio de nombres predeterminado mediante un *typeName*. nombre parcialmente calificado del *evento;* esta sintaxis admite la asociación de controladores para eventos enrutados donde el controlador está diseñado para controlar el enrutamiento de eventos desde elementos secundarios, pero el elemento primario no tiene también ese evento en su tabla members. Esta sintaxis se asemeja a una sintaxis de evento adjunta, pero el evento aquí no es un evento adjunto verdadero. En su lugar, hace referencia a un evento con un nombre completo. Para obtener más información, consulte [Información general sobre eventos enrutados](routed-events-overview.md).  
   
- Para algunos escenarios, los nombres de propiedad a veces se proporcionan como el valor de un atributo, en lugar del nombre del atributo. Ese nombre de propiedad también puede incluir calificadores, como la propiedad especificada en el formulario *ownerType*. *dependencyPropertyName*. Este escenario es común al escribir estilos o plantillas en XAML. Las reglas de procesamiento para los nombres de propiedad proporcionados como un valor de atributo son diferentes y se rigen por el tipo de la propiedad que se establece o por los comportamientos de determinados subsistemas WPFWPF. Para obtener más información, consulte [Estilo y plantillas](../controls/styling-and-templating.md).  
+ Para algunos escenarios, los nombres de propiedad a veces se proporcionan como el valor de un atributo, en lugar del nombre del atributo. Ese nombre de propiedad también puede incluir calificadores, como la propiedad especificada en el formulario *ownerType*. *dependencyPropertyName*. Este escenario es común al escribir estilos o plantillas en XAML. Las reglas de procesamiento para los nombres de propiedad proporcionados como un valor de atributo son diferentes y se rigen por el tipo de la propiedad que se establece o por los comportamientos de determinados subsistemas WPFWPF. Para obtener más información, consulte [Estilo y plantillas](../../../desktop-wpf/fundamentals/styles-templates-overview.md).  
   
  Otro uso de los nombres de propiedad es cuando un valor de atributo describe una relación propiedad-propiedad. Esta característica se utiliza para el enlace de datos <xref:System.Windows.PropertyPath> y para destinos de guión gráfico, y está habilitada por la clase y su convertidor de tipos. Para obtener una descripción más completa de la semántica de búsqueda, vea [Sintaxis XAML PropertyPath](propertypath-xaml-syntax.md).  
   
@@ -173,7 +173,7 @@ En este tema se definen los términos que se usan para describir los elementos d
   
  En las páginas de referencia de .NET para tipos de colección, esta sintaxis con la omisión deliberada del elemento de objeto para una colección se observa ocasionalmente en las secciones de sintaxis XAML como sintaxis de colección implícita.  
   
- Con la excepción del elemento raíz, cada elemento de objeto de un archivo XAML anidado como un elemento secundario de otro elemento es realmente un elemento que es uno o ambos de los siguientes casos: un miembro de una propiedad de colección implícita de su elemento primario , o un elemento que especifica el valor de la propiedad de contenido XAML para el elemento primario (las propiedades de contenido XAML se tratarán en una sección próxima). En otras palabras, la relación de los elementos primarios y secundarios en una página de marcado es realmente un único objeto en la raíz, y cada elemento de objeto debajo de la raíz es una única instancia que proporciona un valor de propiedad del elemento primario, o uno de los elementos dentro de un colección que también es un valor de propiedad de tipo de colección del elemento primario. Este concepto de raíz única es común con XML y se refuerza con <xref:System.Windows.Markup.XamlReader.Load%2A>frecuencia en el comportamiento de las API que cargan XAML como .  
+ Con la excepción del elemento raíz, cada elemento de objeto de un archivo XAML anidado como un elemento secundario de otro elemento es realmente un elemento que es uno o ambos de los siguientes casos: un miembro de una propiedad de colección implícita de su elemento primario o un elemento que especifica el valor de la propiedad de contenido XAML para el elemento primario (las propiedades de contenido XAML se tratarán en una sección próxima). En otras palabras, la relación de los elementos primarios y secundarios en una página de marcado es realmente un único objeto en la raíz y cada elemento de objeto debajo de la raíz es una única instancia que proporciona un valor de propiedad del elemento primario o uno de los elementos de una colección que también es un valor de propiedad de tipo de colección del elemento primario. Este concepto de raíz única es común con XML y se refuerza con <xref:System.Windows.Markup.XamlReader.Load%2A>frecuencia en el comportamiento de las API que cargan XAML como .  
   
  El ejemplo siguiente es una sintaxis con<xref:System.Windows.Media.GradientStopCollection>el elemento object para una colección ( ) especificada explícitamente.  
   
@@ -227,7 +227,7 @@ En este tema se definen los términos que se usan para describir los elementos d
   
 <a name="content_properties_and_collection_syntax_combined"></a>
 ## <a name="content-properties-and-collection-syntax-combined"></a>Propiedades de contenido y sintaxis de colección combinadas  
- Para aceptar más de un único elemento de objeto como contenido, el tipo de la propiedad content debe ser específicamente un tipo de colección. De forma similar a la sintaxis de elemento de propiedad para los tipos de colección, un procesador XAML debe identificar los tipos que son tipos de colección. Si un elemento tiene una propiedad de contenido XAML y el tipo de la propiedad de contenido XAML es una colección, no es necesario especificar el tipo de colección implícita en el marcado como un elemento de objeto y no es necesario especificar la propiedad de contenido XAML como una propiedad Elemento. Por lo tanto, el modelo de contenido aparente en el marcado ahora puede tener más de un elemento secundario asignado como contenido. A continuación se muestra <xref:System.Windows.Controls.Panel> la sintaxis de contenido para una clase derivada. Todas <xref:System.Windows.Controls.Panel> las clases derivadas establecen <xref:System.Windows.Controls.Panel.Children%2A>la propiedad de contenido <xref:System.Windows.Controls.UIElementCollection>XAML , que requiere un valor de tipo .  
+ Para aceptar más de un único elemento de objeto como contenido, el tipo de la propiedad content debe ser específicamente un tipo de colección. De forma similar a la sintaxis de elemento de propiedad para los tipos de colección, un procesador XAML debe identificar los tipos que son tipos de colección. Si un elemento tiene una propiedad de contenido XAML y el tipo de la propiedad de contenido XAML es una colección, no es necesario especificar el tipo de colección implícita en el marcado como un elemento de objeto y no es necesario especificar la propiedad de contenido XAML como un elemento de propiedad. Por lo tanto, el modelo de contenido aparente en el marcado ahora puede tener más de un elemento secundario asignado como contenido. A continuación se muestra <xref:System.Windows.Controls.Panel> la sintaxis de contenido para una clase derivada. Todas <xref:System.Windows.Controls.Panel> las clases derivadas establecen <xref:System.Windows.Controls.Panel.Children%2A>la propiedad de contenido <xref:System.Windows.Controls.UIElementCollection>XAML , que requiere un valor de tipo .  
   
  [!code-xaml[XAMLOvwSupport#SyntaxContent](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page5.xaml#syntaxcontent)]  
   
@@ -316,8 +316,8 @@ En este tema se definen los términos que se usan para describir los elementos d
 ## <a name="see-also"></a>Consulte también
 
 - [Información general sobre XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
-- [Características de lenguaje (x:) de espacios de nombres XAML](../../../desktop-wpf/xaml-services/namespace-language-features.md)
+- [Espacio de nombres de XAML (x:) Características del lenguaje](../../../desktop-wpf/xaml-services/namespace-language-features.md)
 - [Extensiones XAML de WPF](wpf-xaml-extensions.md)
-- [Descripción general de las propiedades de dependencia](dependency-properties-overview.md)
+- [Información general sobre las propiedades de dependencia](dependency-properties-overview.md)
 - [Clases TypeConverter y XAML](typeconverters-and-xaml.md)
 - [Clases XAML y personalizadas para WPF](xaml-and-custom-classes-for-wpf.md)

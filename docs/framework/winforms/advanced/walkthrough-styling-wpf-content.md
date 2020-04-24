@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: contenido de WPF de estilo'
+title: 'Tutorial: Estilo WPF contenido'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF Designer [Windows Forms], styling WPF content
@@ -9,57 +9,57 @@ ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: e52297f51c74fc3dba93c987fd5b9bd5b6801777
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 07241d41e3fbf270a76bd241765bfa369ee265d5
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76732546"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646329"
 ---
-# <a name="walkthrough-style-wpf-content"></a>Tutorial: contenido de WPF de estilo
+# <a name="walkthrough-style-wpf-content"></a>Tutorial: Estilo WPF contenido
 
-En este artículo se muestra cómo aplicar el estilo a un control de Windows Presentation Foundation (WPF) hospedado en Windows Forms.
+En este artículo se muestra cómo aplicar estilos a un control de Windows Presentation Foundation (WPF) hospedado en un formulario Windows Forms.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 Necesita Visual Studio para completar este tutorial.
 
 ## <a name="create-the-project"></a>Creación del proyecto
 
-Abra Visual Studio y cree un nuevo proyecto de aplicación de Windows Forms en Visual Basic C# o visual denominado `StylingWpfContent`.
+Abra Visual Studio y cree un nuevo proyecto de aplicación `StylingWpfContent`de formularios Windows Forms en Visual Basic o Visual C. denominado .
 
 > [!NOTE]
 > Al hospedar contenido de WPF, solo se admiten proyectos de C# y Visual Basic.
 
-## <a name="create-the-wpf-control-types"></a>Crear los tipos de control WPF
+## <a name="create-the-wpf-control-types"></a>Crear los tipos de control WPFWPF
 
 Después de agregar un tipo de control WPF al proyecto, puede hospedarlo en un control <xref:System.Windows.Forms.Integration.ElementHost>.
 
-1. Agregue un nuevo proyecto de <xref:System.Windows.Controls.UserControl> de WPF a la solución. Use el nombre predeterminado del tipo de control, `UserControl1.xaml`. Para obtener más información, vea [Tutorial: crear nuevo contenido de WPF en Windows Forms en tiempo de diseño](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).
+1. Agregue un nuevo proyecto de <xref:System.Windows.Controls.UserControl> de WPF a la solución. Use el nombre predeterminado del tipo de control, `UserControl1.xaml`. Para obtener más información, vea [Tutorial: crear nuevo contenido de WPF en formularios Windows Forms en tiempo](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)de diseño .
 
 2. En la vista Diseño, asegúrese de que `UserControl1` está seleccionado.
 
-3. En la ventana **propiedades** , establezca el valor de las propiedades <xref:System.Windows.FrameworkElement.Width%2A> y <xref:System.Windows.FrameworkElement.Height%2A> en **200**.
+3. En la ventana **Propiedades,** establezca <xref:System.Windows.FrameworkElement.Width%2A> <xref:System.Windows.FrameworkElement.Height%2A> el valor de las propiedades y en **200**.
 
-4. Agregue un control <xref:System.Windows.Controls.Button?displayProperty=nameWithType> al <xref:System.Windows.Controls.UserControl> y establezca el valor de la propiedad <xref:System.Windows.Controls.ContentControl.Content%2A> en **Cancelar**.
+4. Agregue <xref:System.Windows.Controls.Button?displayProperty=nameWithType> un control <xref:System.Windows.Controls.UserControl> al valor y <xref:System.Windows.Controls.ContentControl.Content%2A> establezca el valor de la propiedad en **Cancelar**.
 
-5. Agregue un segundo control <xref:System.Windows.Controls.Button?displayProperty=nameWithType> al <xref:System.Windows.Controls.UserControl> y establezca el valor de la propiedad <xref:System.Windows.Controls.ContentControl.Content%2A> en **OK**.
+5. Agregue un <xref:System.Windows.Controls.Button?displayProperty=nameWithType> segundo <xref:System.Windows.Controls.UserControl> control al valor <xref:System.Windows.Controls.ContentControl.Content%2A> y establezca el valor de la propiedad en **OK**.
 
 6. Compile el proyecto.
 
-## <a name="apply-a-style-to-a-wpf-control"></a>Aplicar un estilo a un control WPF
+## <a name="apply-a-style-to-a-wpf-control"></a>Aplicar un style a un control WPFWPF
 
 Puede aplicar diferentes estilos a un control WPF para cambiar su apariencia y comportamiento.
 
 1. Abra `Form1` en el Diseñador de Windows Forms.
 
-1. En el **cuadro de herramientas**, haga doble clic en `UserControl1` para crear una instancia de `UserControl1` en el formulario.
+1. En el **cuadro**de `UserControl1` herramientas , `UserControl1` haga doble clic para crear una instancia del formulario.
 
    La instancia de `UserControl1` se hospeda en un nuevo control <xref:System.Windows.Forms.Integration.ElementHost> llamado `elementHost1`.
 
-1. En el panel de etiquetas inteligentes de `elementHost1`, haga clic en **editar contenido hospedado** en la lista desplegable.
+1. En el panel `elementHost1`de etiquetas inteligentes para , haga clic en **Editar contenido hospedado** en la lista desplegable.
 
-   `UserControl1` se abre en WPF Designer.
+   `UserControl1`Se abre en el Diseñador wpfWPF.
 
 1. En la vista XAML, inserte el código XAML siguiente después de la etiqueta de apertura `<UserControl>`. Este código XAML crea un degradado con un borde de degradado en contraste. Al hacer clic en el control, los degradados cambian para generar el aspecto de un botón presionado. Para obtener más información, consulte [Aplicar estilos y plantillas](../../../desktop-wpf/fundamentals/styles-templates-overview.md).
 
@@ -111,13 +111,13 @@ Puede aplicar diferentes estilos a un control WPF para cambiar su apariencia y c
    </UserControl.Resources>
    ```
 
-1. Aplique el estilo de `SimpleButton` definido en el paso anterior al botón Cancelar insertando el código XAML siguiente en la etiqueta de `<Button>` del botón **Cancelar** .
+1. Aplique `SimpleButton` el estilo definido en el paso anterior al botón `<Button>` Cancelar insertando el siguiente XAML en la etiqueta del botón **Cancelar.**
 
    ```xaml
    Style="{StaticResource SimpleButton}
    ```
 
-   La declaración del botón será similar al código XAML siguiente:
+   La declaración de botón será similar al siguiente XAML:
 
    ```xaml
    <Button Height="23" Margin="41,52,98,0" Name="button1" VerticalAlignment="Top"
@@ -130,7 +130,7 @@ Puede aplicar diferentes estilos a un control WPF para cambiar su apariencia y c
 
 1. El nuevo estilo se aplica al control de botón.
 
-1. En el menú **depurar** , seleccione **iniciar depuración** para ejecutar la aplicación.
+1. En el menú **Depurar,** seleccione **Iniciar depuración** para ejecutar la aplicación.
 
 1. Haga clic en los botones **Aceptar** y **Cancelar** y vea las diferencias.
 
@@ -141,5 +141,5 @@ Puede aplicar diferentes estilos a un control WPF para cambiar su apariencia y c
 - [Migración e interoperabilidad](../../wpf/advanced/migration-and-interoperability.md)
 - [Utilizar controles WPF](using-wpf-controls.md)
 - [Diseño de XAML en Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
-- [Información general sobre XAML (WPF)](../../wpf/advanced/xaml-overview-wpf.md)
+- [Información general sobre XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [Aplicar estilos y plantillas](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

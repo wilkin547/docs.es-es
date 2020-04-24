@@ -5,12 +5,12 @@ helpviewer_keywords:
 - generatePublisherEvidence element
 - <generatePublisherEvidence> element
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
-ms.openlocfilehash: 24a5ea02992a5bce681b5bab4fb7f75505bd225d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c2ba4a7244b7849e28eac38fb34a2cdd0d1f1048
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79154119"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645354"
 ---
 # <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence> (Elemento)
 Especifica si el <xref:System.Security.Policy.Publisher> tiempo de ejecución crea pruebas para la seguridad de acceso al código (CAS).  
@@ -37,7 +37,7 @@ Especifica si el <xref:System.Security.Policy.Publisher> tiempo de ejecución cr
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |`false`|No crea <xref:System.Security.Policy.Publisher> evidencia.|  
 |`true`|Crea <xref:System.Security.Policy.Publisher> evidencia. Este es el valor predeterminado.|  
@@ -55,7 +55,7 @@ Especifica si el <xref:System.Security.Policy.Publisher> tiempo de ejecución cr
 ## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]
-> En .NET Framework 4 y versiones posteriores, este elemento no tiene ningún efecto en los tiempos de carga del ensamblado. Para obtener más información, consulte la sección "Simplificación de directivas de seguridad" en [Cambios](../../../security/security-changes.md)de seguridad .  
+> En .NET Framework 4 y versiones posteriores, este elemento no tiene ningún efecto en los tiempos de carga del ensamblado. Para obtener más información, consulte la sección "Simplificación de directivas de seguridad" en [Cambios](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)de seguridad .  
   
  Common Language Runtime (CLR) intenta comprobar la firma Authenticode en tiempo de carga para crear <xref:System.Security.Policy.Publisher> evidencia para el ensamblado. Sin embargo, de forma <xref:System.Security.Policy.Publisher> predeterminada, la mayoría de las aplicaciones no necesitan evidencia. La directiva CAS estándar <xref:System.Security.Policy.PublisherMembershipCondition>no confía en el . Debe evitar el costo de inicio innecesario asociado con la comprobación de la firma del publicador a <xref:System.Security.Permissions.PublisherIdentityPermission> menos que la aplicación se ejecute en un equipo con directiva CAS personalizada o tenga la intención de satisfacer las demandas en un entorno de confianza parcial. (Las demandas de permisos de identidad siempre se realizan correctamente en un entorno de plena confianza.)  
   
@@ -79,4 +79,4 @@ Especifica si el <xref:System.Security.Policy.Publisher> tiempo de ejecución cr
 ## <a name="see-also"></a>Consulte también
 
 - [Esquema de la configuración de Common Language Runtime](index.md)
-- [Esquema del archivo de configuración](../index.md)
+- [Esquema de archivo de configuración](../index.md)

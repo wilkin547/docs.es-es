@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 542e0a84e4c5cfc3750c33fe29cb40d3643e91e3
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: c73a61b8c251b12d5b3dac67535632322779a6af
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80636022"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644051"
 ---
 # <a name="dependency-properties-overview"></a>Información general sobre las propiedades de dependencia
 
@@ -123,7 +123,7 @@ En el ejemplo siguiente se establece la propiedad <xref:System.Windows.Controls.
 > [!NOTE]
 > Los enlaces se tratan como un valor local, lo que significa que si establece otro valor local, eliminará el enlace. Para obtener más información, consulte [Prioridad de los valores de propiedades de dependencia](dependency-property-value-precedence.md).
 
-Las propiedades de dependencia, o bien la clase <xref:System.Windows.DependencyObject>, no admiten de forma nativa <xref:System.ComponentModel.INotifyPropertyChanged> para fines de generación de notificaciones de cambios en el valor de propiedad de origen <xref:System.Windows.DependencyObject> para las operaciones de enlace de datos. Para obtener más información acerca de cómo crear propiedades para su uso en un enlace de datos capaz de notificar los cambios en un destino de enlace de datos, consulte [Información general sobre el enlace de datos](../data/data-binding-overview.md).
+Las propiedades de dependencia, o bien la clase <xref:System.Windows.DependencyObject>, no admiten de forma nativa <xref:System.ComponentModel.INotifyPropertyChanged> para fines de generación de notificaciones de cambios en el valor de propiedad de origen <xref:System.Windows.DependencyObject> para las operaciones de enlace de datos. Para obtener más información acerca de cómo crear propiedades para su uso en un enlace de datos capaz de notificar los cambios en un destino de enlace de datos, consulte [Información general sobre el enlace de datos](../../../desktop-wpf/data/data-binding-overview.md).
 
 ### <a name="styles"></a>Estilos
 Los estilos y las plantillas son dos de los principales escenarios que invitan a usar las propiedades de dependencia. Los estilos son particularmente útiles para establecer las propiedades que definen la [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] de la aplicación. Los estilos se definen normalmente como recursos en XAML. Los estilos interactúan con el sistema de propiedades porque suelen contener "establecedores" para determinadas propiedades, así como "desencadenadores" que cambian un valor de propiedad según el valor en tiempo real de otra propiedad.
@@ -134,7 +134,7 @@ En el ejemplo siguiente se crea un <xref:System.Windows.FrameworkElement.Resourc
 
 [!code-xaml[PropertiesOvwSupport#SimpleStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#simplestyle)]
 
-Para obtener más información, consulte [Aplicar estilos y plantillas](../controls/styling-and-templating.md).
+Para obtener más información, consulte [Aplicar estilos y plantillas](../../../desktop-wpf/fundamentals/styles-templates-overview.md).
 
 ### <a name="animations"></a>Animaciones
 Las propiedades de dependencia se pueden animar. Cuando una animación está aplicada y en ejecución, el valor animado funciona con una precedencia más alta que cualquier otro valor (por ejemplo, un valor local) que tenga la propiedad.
@@ -196,7 +196,7 @@ Normalmente, no desea que los estilos siempre se apliquen y oscurezcan incluso u
 
 - Considere las propiedades de dependencia como propiedades públicas, accesibles o al menos detectables por cualquier llamador que tenga acceso a una instancia. Para obtener más información, consulte [Seguridad de las propiedades de dependencia](dependency-property-security.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Propiedades de dependencia personalizadas](custom-dependency-properties.md)
 - [Propiedades de dependencia de sólo lectura](read-only-dependency-properties.md)

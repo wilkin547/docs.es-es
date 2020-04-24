@@ -8,18 +8,18 @@ helpviewer_keywords:
 - secure coding, dangerous permissions
 - permissions [.NET Framework], dangerous
 ms.assetid: 1929e854-23a0-4bb1-94be-e8aa3b609e32
-ms.openlocfilehash: 026697feec7afe950628639c5e595ba0a0220b97
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 15d28ff7d11b5d15ce44d9ab1f56548256850ff8
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217142"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645760"
 ---
 # <a name="dangerous-permissions-and-policy-administration"></a>Permisos peligrosos y administración de directivas
 Varias de las operaciones protegidas para las que .NET Framework proporciona permisos pueden permitir potencialmente burlar el sistema de seguridad. Estos peligrosos permisos solo se deben conceder a código de confianza y únicamente cuando sea necesario. No suele haber ninguna defensa contra código malintencionado si se le conceden estos permisos.  
   
 > [!NOTE]
-> En el .NET Framework 4, ha habido cambios importantes en el modelo de seguridad .NET Framework y la terminología. Para obtener más información sobre estos cambios, consulte [cambios de seguridad](../security/security-changes.md).  
+> En .NET Framework 4, se han producido cambios importantes en el modelo de seguridad y la terminología de .NET Framework. Para obtener más información acerca de estos cambios, vea [Cambios](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)de seguridad .  
   
  Estos permisos peligrosos se explican en la tabla siguiente.  
   

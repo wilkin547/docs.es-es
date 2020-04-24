@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [.NET Framework], code access security
 ms.assetid: 4eaa6535-d9fe-41a1-91d8-b437cfc16921
-ms.openlocfilehash: 08d708e8f98bd2fe06757df3033a512e2fe1f3c2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 352fa41cb9d3136f853b068d0101a6dcab5dfd7c
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400996"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645773"
 ---
 # <a name="code-access-security-basics"></a>Conceptos básicos sobre la seguridad de acceso del código
 
@@ -53,7 +53,7 @@ Seguridad de acceso del código no elimina la posibilidad de que se produzcan er
 La sintaxis de seguridad declarativa utiliza [atributos](../../standard/attributes/index.md) para colocar información de seguridad en los [metadatos](../../standard/metadata-and-self-describing-components.md) del código. Los atributos se pueden colocar en el nivel de ensamblado, clase o miembro para indicar el tipo de solicitud, petición o invalidación que desea usar. Las solicitudes se usan en aplicaciones destinadas a Common Language Runtime para informar al sistema de seguridad de runtime sobre los permisos que la aplicación necesita o no desea. Las peticiones e invalidaciones se usan en las bibliotecas para ayudar a proteger los recursos de los llamadores o para invalidar el comportamiento de seguridad predeterminado.
 
 > [!NOTE]
-> En .NET Framework 4, se han producido cambios importantes en el modelo de seguridad y la terminología de .NET Framework. Para obtener más información acerca de estos cambios, vea [Cambios](../security/security-changes.md)de seguridad .
+> En .NET Framework 4, se han producido cambios importantes en el modelo de seguridad y la terminología de .NET Framework. Para obtener más información acerca de estos cambios, vea [Cambios](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)de seguridad .
 
 Para usar llamadas de seguridad declarativas, debe inicializar los datos de estado del objeto de permiso para que represente la forma concreta del permiso necesario. Cada permiso integrado tiene un atributo al que se pasa una enumeración <xref:System.Security.Permissions.SecurityAction> para describir el tipo de operación de seguridad que se desea realizar. Sin embargo, los permisos también aceptan parámetros propios exclusivos.
 

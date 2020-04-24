@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], TemplateBinding markup extension
 - TemplateBinding markup extensions [WPF]
 ms.assetid: 1d25bbfc-dbc2-499d-9f12-419d23d4ac6a
-ms.openlocfilehash: 8cebbf717f66b072bc84b2068193ff2fe76ea87b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8c631a5a78db90187f0375181d4d4d1832159b7d
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187279"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646170"
 ---
 # <a name="templatebinding-markup-extension"></a>Extensión de marcado TemplateBinding
 Vincula el valor de una propiedad de una plantilla de control para que sea el valor de otra propiedad del control con plantilla.  
@@ -64,7 +64,7 @@ Vincula el valor de una propiedad de una plantilla de control para que sea el va
 
 - <xref:System.Windows.Style>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Aplicar estilos y plantillas](../controls/styling-and-templating.md)
+- [Aplicar estilos y plantillas](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Información general sobre XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [Extensiones de marcado y XAML de WPF](markup-extensions-and-wpf-xaml.md)
 - [Extensión de marcado RelativeSource](relativesource-markupextension.md)

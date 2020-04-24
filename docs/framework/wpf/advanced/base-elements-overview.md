@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
-ms.openlocfilehash: 7d52d951d4fa4df83bbcca6b4cb479e18e532d2a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f6519675ebf3624152e1077e7582f04e38b1dce9
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79141633"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644039"
 ---
 # <a name="base-elements-overview"></a>Información general sobre elementos base
 Un alto porcentaje [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] de clases en se derivan de cuatro clases que se conocen comúnmente en la documentación del SDK como las clases de elemento base. Estas clases <xref:System.Windows.FrameworkElement> <xref:System.Windows.ContentElement>son <xref:System.Windows.UIElement> <xref:System.Windows.FrameworkContentElement>, , , y . La <xref:System.Windows.DependencyObject> clase también está relacionada, porque es <xref:System.Windows.UIElement> una clase base común de ambos y<xref:System.Windows.ContentElement>  
@@ -47,7 +47,7 @@ Un alto porcentaje [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
   
 - Compatibilidad con estilos y guiones gráficos. Para obtener más <xref:System.Windows.Style> información, vea información general sobre [guiones gráficos](../graphics-multimedia/storyboards-overview.md).  
   
-- Compatibilidad con el enlace de datos. Para obtener más información, vea [Información general sobre el enlace](../data/data-binding-overview.md)de datos .  
+- Compatibilidad con el enlace de datos. Para obtener más información, vea [Información general sobre el enlace](../../../desktop-wpf/data/data-binding-overview.md)de datos .  
   
 - Compatibilidad con las referencias de recursos dinámicos. Para obtener más información, consulte [Recursos XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md).  
   
@@ -67,7 +67,7 @@ Un alto porcentaje [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
   
 - Compatibilidad con estilos y guiones gráficos. Para obtener más <xref:System.Windows.Style> información, consulte Información [general sobre animaciones](../graphics-multimedia/animation-overview.md).  
   
-- Compatibilidad con el enlace de datos. Para obtener más información, vea [Información general sobre el enlace](../data/data-binding-overview.md)de datos .  
+- Compatibilidad con el enlace de datos. Para obtener más información, vea [Información general sobre el enlace](../../../desktop-wpf/data/data-binding-overview.md)de datos .  
   
 - Compatibilidad con las referencias de recursos dinámicos. Para obtener más información, consulte [Recursos XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md).  
   
@@ -99,6 +99,6 @@ Un alto porcentaje [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
 ## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Controls.Control>
-- [Descripción general de las propiedades de dependencia](dependency-properties-overview.md)
+- [Información general sobre las propiedades de dependencia](dependency-properties-overview.md)
 - [Información general sobre la creación de controles](../controls/control-authoring-overview.md)
 - [Arquitectura de WPF](wpf-architecture.md)
