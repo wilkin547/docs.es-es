@@ -39,7 +39,7 @@ Proporciona un ejemplo de cómo crear un servicio en Visual Basic y Visual C#.
 
 Explica los elementos del lenguaje utilizados en la programación de servicios.
 
-[Creación de servicios de Windows](how-to-create-windows-services.md)
+[Cómo: Creación de servicios de Windows](how-to-create-windows-services.md)
 
 Describe el proceso de creación y configuración de servicios de Windows mediante la plantilla de proyecto de servicio de Windows.
 

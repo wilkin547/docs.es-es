@@ -34,16 +34,16 @@ Se describe cómo usar los componentes de .NET Framework desde las aplicaciones 
 [Consumir funciones DLL no administradas](consuming-unmanaged-dll-functions.md)  
 Se describe cómo llamar a funciones DLL no administradas mediante la invocación de plataforma.
 
-[Serialización para interoperabilidad](interop-marshaling.md)  
+[Serialización de interoperabilidad](interop-marshaling.md)  
 Se describe la serialización de la interoperabilidad COM y la invocación de plataforma.
 
-[Asignar resultados HRESULT y excepciones](how-to-map-hresults-and-exceptions.md)  
+[Cómo: Asignar resultados HRESULT y excepciones](how-to-map-hresults-and-exceptions.md)  
 Se describe la asignación entre las excepciones y los valores HRESULT.
 
 [Equivalencia de tipos y tipos de interoperabilidad incrustados](type-equivalence-and-embedded-interop-types.md)  
 Describe cómo la información de tipo para tipos COM está insertada en los ensamblados y cómo Common Language Runtime determina la equivalencia de los tipos COM insertados.
 
-[Cómo: Generar ensamblados de interoperabilidad primarios mediante Tlbimp.exe](how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md)  
+[Cómo: para generar ensamblados de interoperabilidad primarios mediante Tlbimp.exe](how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md)  
 Describe cómo producir ensamblados de interoperabilidad primarios con *Tlbimp.exe*  (importador de bibliotecas de tipos).
 
 [Cómo: Registrar ensamblados de interoperabilidad primarios](how-to-register-primary-interop-assemblies.md)  

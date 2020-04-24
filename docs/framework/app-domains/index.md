@@ -7,12 +7,12 @@ helpviewer_keywords:
 - application domains, programming
 - programming application domains
 ms.assetid: 96d3b8e3-bef8-4da0-9a81-9841e23a94e9
-ms.openlocfilehash: 2c849d27c70971d17bf4359ee7ae1081ee976a5f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3f66eacaf30f8001cdbf3a486e5ce1c878712e2f
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73119818"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644272"
 ---
 # <a name="programming-with-application-domains-and-assemblies"></a>Programar con dominios de aplicación y ensamblados
 
@@ -28,7 +28,7 @@ Proporciona vínculos a todos los temas de procedimientos que se encuentran en l
 [Utilizar dominios de aplicación](use.md)  
 Proporciona ejemplos sobre cómo crear, configurar y usar dominios de aplicación.  
   
-[Programar con ensamblados](../../standard/assembly/program.md)  
+[Programar con ensamblados](../../standard/assembly/index.md)  
 Describe cómo crear, firmar y establecer atributos en los ensamblados.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  

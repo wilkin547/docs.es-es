@@ -33,7 +33,7 @@ En esta sección se describen las tareas de programación sobre las que necesita
  [Acceso a los servicios web de la aplicación](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)  
  Contiene documentación sobre cómo acceder a los servicios web a los que hace referencia la aplicación con el objeto `My.WebServices`.  
   
- [Accessing Application Settings](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
+ [Acceso a la configuración de la aplicación](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
  Contiene documentación sobre el acceso a la configuración de una aplicación con el objeto `My.Settings`.  
   
  [Procesar unidades, directorios y archivos](drives-directories-files/index.md)  

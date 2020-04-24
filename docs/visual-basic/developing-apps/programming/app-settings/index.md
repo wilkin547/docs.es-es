@@ -26,7 +26,7 @@ Esta sección contiene temas en los que se describe el objeto `My.Settings` y la
 
  En la siguiente tabla se incluyen ejemplos que muestran cómo acceder a los formularios de una aplicación.  
   
-|Para|Vea|  
+|En|Vea|  
 |--------|---------|  
 |Actualizar el valor de una configuración de usuario|[Cómo: Cambiar la configuración del usuario en Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
 |Mostrar configuración de aplicación y usuario en una cuadrícula de propiedades|[Cómo: Crear cuadrículas de propiedades para la configuración del usuario en Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  

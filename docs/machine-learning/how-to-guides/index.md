@@ -2,12 +2,12 @@
 title: Guías paso a paso de ML.NET
 description: Obtenga información sobre cómo realizar tareas específicas para ayudarle con la creación de soluciones de IA personalizadas y la integración de Machine Learning en sus aplicaciones .NET.
 ms.date: 03/01/2019
-ms.openlocfilehash: 25c5cb6247c202e3ef51d0ed25b3b213fdca7a56
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: e83db6f1f754357b7e204485ea545feef9ad4a95
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607537"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102455"
 ---
 # <a name="net-machine-learning-how-to-guides"></a>Guías paso a paso de aprendizaje automático de .NET
 
@@ -27,15 +27,9 @@ En la sección de procedimientos de la guía de ML.NET encontrará respuestas r�
 
 * [Entrenamiento de un modelo de regresión para predecir un valor mediante ML.NET](train-machine-learning-model-ml-net.md)
 
-### <a name="evaluate-the-model-quality"></a>Evaluación de la calidad del modelo
-
-* [Cálculo de métricas para evaluar la calidad del modelo](verify-model-quality-ml-net.md)
-
 ### <a name="model-explainability"></a>Explicación del modelo
 
 * [Determinación de la importancia de características de modelos con importancia de característica de permutación](explain-machine-learning-model-permutation-feature-importance-ml-net.md)
-
-* [Uso de modelos aditivos generalizados y funciones de forma para la explicación del modelo](use-gams-for-model-explainability.md)
 
 ## <a name="run"></a>Run
 
