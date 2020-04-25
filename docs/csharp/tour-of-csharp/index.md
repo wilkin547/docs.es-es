@@ -2,12 +2,12 @@
 title: Un paseo por C# - Guía de C#
 description: ¿Nuevo en C#? Conozca los conceptos básicos del lenguaje.
 ms.date: 02/26/2020
-ms.openlocfilehash: bf5a200f2ee777698ae8564f348ffc117d9abab0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7476356ceab39d5cccb6ccbeb991653f08a324ea
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79156849"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82141046"
 ---
 # <a name="a-tour-of-the-c-language"></a>Paseo por el lenguaje C#
 
@@ -40,7 +40,7 @@ dotnet run
 
 El programa produce el siguiente resultado:
 
-```console
+```dotnetcli
 Hello, World!
 ```
 
