@@ -10,26 +10,26 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: cef2ae26ec4fccd25ca193ba7d441969f36b25a8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7bdf3b11557d94ab39c93a21ac53b917e3a1767d
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187089"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82141120"
 ---
 # <a name="packaging-fonts-with-applications"></a>Empaquetar fuentes con aplicaciones
-En este tema se proporciona información [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] general sobre cómo empaquetar fuentes con la aplicación.  
+En este tema se proporciona información general sobre cómo empaquetar fuentes [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] con la aplicación.  
   
 > [!NOTE]
-> Como con la mayoría de los tipos de software, los archivos de fuentes se otorgan bajo licencia, no se venden. Las licencias que rigen el uso de fuentes varían de un proveedor a otro, pero en general la mayoría de las licencias, incluidas las que cubren las fuentes que Microsoft suministra con aplicaciones y Windows, no permiten que las fuentes se incrusten en las aplicaciones o se redistribuyan de otro modo. Así pues, como programador, su responsabilidad es asegurarse de disponer de los derechos de licencia necesarios para cualquier fuente que incruste en una aplicación o redistribuya de cualquier otro modo.  
+> Como con la mayoría de los tipos de software, los archivos de fuentes se otorgan bajo licencia, no se venden. Las licencias que rigen el uso de las fuentes varían de un proveedor a otro, pero en general, la mayoría de las licencias, incluidas las que abarcan las fuentes que Microsoft suministra con las aplicaciones y las ventanas, no permiten incrustar las fuentes dentro de aplicaciones ni redistribuirlas de ningún otro modo. Así pues, como programador, su responsabilidad es asegurarse de disponer de los derechos de licencia necesarios para cualquier fuente que incruste en una aplicación o redistribuya de cualquier otro modo.  
 
 <a name="introduction_to_packaging_fonts"></a>
 ## <a name="introduction-to-packaging-fonts"></a>Introducción al empaquetado de fuentes  
- Puede empaquetar fácilmente fuentes [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] como recursos dentro de sus aplicaciones para mostrar texto de la interfaz de usuario y otros tipos de contenido basado en texto. Las fuentes pueden ser independientes de los archivos de ensamblado de la aplicación o incrustadas en dichos archivos. También puede crear una biblioteca de fuentes solo de recursos, a la que puede hacer referencia la aplicación.  
+ Puede empaquetar fuentes fácilmente como recursos dentro de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] las aplicaciones para mostrar el texto de la interfaz de usuario y otros tipos de contenido basado en texto. Las fuentes pueden ser independientes de los archivos de ensamblado de la aplicación o incrustadas en dichos archivos. También puede crear una biblioteca de fuentes solo de recursos, a la que puede hacer referencia la aplicación.  
   
- Las fuentes OpenType y TrueType® contienen una marca de tipo, fsType, que indica los derechos de licencia de incrustación de fuentes para la fuente. Sin embargo, este tipo de marca solo hace referencia a fuentes incrustadas almacenadas en un documento: no hace referencia a fuentes incrustadas en una aplicación. Puede recuperar los derechos de incrustación de <xref:System.Windows.Media.GlyphTypeface> fuente para <xref:System.Windows.Media.GlyphTypeface.EmbeddingRights%2A> una fuente creando un objeto y haciendo referencia a su propiedad. Consulte la sección "Métricas de OS/2 y Windows" de la [especificación OpenType](https://www.microsoft.com/typography/otspec/os2.htm) para obtener más información sobre la marca fsType.  
+ Las fuentes OpenType y TrueType® contienen una marca de tipo, fsType, que indica los derechos de licencia de incrustación de fuentes para la fuente. Sin embargo, este tipo de marca solo hace referencia a fuentes incrustadas almacenadas en un documento: no hace referencia a fuentes incrustadas en una aplicación. Puede recuperar los derechos de incrustación de fuentes para una fuente creando <xref:System.Windows.Media.GlyphTypeface> un objeto y haciendo <xref:System.Windows.Media.GlyphTypeface.EmbeddingRights%2A> referencia a su propiedad. Consulte la sección "OS/2 y métricas de Windows" de la [especificación OpenType](https://www.microsoft.com/typography/otspec/os2.htm) para obtener más información sobre la marca fstype.  
   
- El sitio Web [de Microsoft Typography](https://docs.microsoft.com/typography/) incluye información de contacto que puede ayudarle a localizar un proveedor de fuentes determinado o a encontrar un proveedor de fuentes para el trabajo personalizado.  
+ El sitio web de [tipografía de Microsoft](https://docs.microsoft.com/typography/) incluye información de contacto que puede ayudarle a encontrar un proveedor de fuentes determinado o a encontrar un proveedor de fuentes para el trabajo personalizado.  
   
 <a name="adding_fonts_as_content_items"></a>
 ## <a name="adding-fonts-as-content-items"></a>Agregar fuentes como elementos de contenido  
@@ -81,19 +81,19 @@ En este tema se proporciona información [!INCLUDE[TLA#tla_winclient](../../../.
 ```  
   
 > [!NOTE]
-> Cuando agregue fuentes como recursos a la aplicación, `<Resource>` asegúrese de `<EmbeddedResource>` que está estableciendo el elemento y no el elemento en el archivo de proyecto de la aplicación. No `<EmbeddedResource>` se admite el elemento para la acción de compilación.  
+> Al agregar fuentes como recursos a la aplicación, asegúrese de que está estableciendo el `<Resource>` elemento, y no el `<EmbeddedResource>` elemento en el archivo de proyecto de la aplicación. No `<EmbeddedResource>` se admite el elemento para la acción de compilación.  
   
  En el ejemplo de marcado siguiente se muestra cómo hacer referencia a los recursos de fuentes de la aplicación.  
   
  [!code-xaml[FontSnippets#FontPackageSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml#fontpackagesnippet1)]  
   
 ### <a name="referencing-font-resource-items-from-code"></a>Hacer referencia a elementos de recursos de fuentes desde el código  
- Para hacer referencia a los elementos de recursos de fuente desde el código, debe proporcionar una referencia de recurso de fuente de dos partes: el identificador uniforme de recursos base (URI); y la referencia de ubicación de fuente. Estos valores se utilizan como <xref:System.Windows.Media.FontFamily.%23ctor%2A> parámetros para el método. En el ejemplo de código siguiente se muestra cómo hacer `resources`referencia a los recursos de fuente de la aplicación en el subdirectorio del proyecto denominado .  
+ Para hacer referencia a elementos de recursos de fuentes desde el código, debe proporcionar una referencia de recurso de fuente de dos partes: el identificador uniforme de recursos (URI) base; y la referencia de la ubicación de fuentes. Estos valores se usan como parámetros para el <xref:System.Windows.Media.FontFamily.%23ctor%2A> método. En el ejemplo de código siguiente se muestra cómo hacer referencia a los recursos de fuente de la aplicación en `resources`el subdirectorio del proyecto denominado.  
   
  [!code-csharp[FontSnippets#FontPackageSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml.cs#fontpackagesnippet2)]
  [!code-vb[FontSnippets#FontPackageSnippet2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontpackagesnippets.xaml.vb#fontpackagesnippet2)]  
   
- El identificador uniforme de recursos (URI) base puede incluir el subdirectorio de la aplicación donde reside el recurso de fuente. En este caso, la referencia de ubicación de fuente no necesitaría especificar`./`un directorio, pero tendría que incluir un interlineado " ", lo que indica que el recurso de fuente está en el mismo directorio especificado por el identificador de recursos uniforme base (URI). En el ejemplo de código siguiente se muestra una manera alternativa de hacer referencia al elemento de recursos de fuentes: es equivalente al ejemplo de código anterior.  
+ El identificador uniforme de recursos (URI) base puede incluir el subdirectorio de la aplicación donde reside el recurso de fuente. En este caso, la referencia de ubicación de fuentes no necesitaría especificar un directorio, pero tendría que incluir un "`./`" inicial, que indica que el recurso de fuente está en el mismo directorio especificado por el identificador uniforme de recursos (URI). En el ejemplo de código siguiente se muestra una manera alternativa de hacer referencia al elemento de recursos de fuentes: es equivalente al ejemplo de código anterior.  
   
  [!code-csharp[FontSnippets#FontPackageSnippet5](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml.cs#fontpackagesnippet5)]
  [!code-vb[FontSnippets#FontPackageSnippet5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontpackagesnippets.xaml.vb#fontpackagesnippet5)]  
@@ -119,12 +119,12 @@ En este tema se proporciona información [!INCLUDE[TLA#tla_winclient](../../../.
  [!code-vb[FontSnippets#FontPackageSnippet4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/pages/homepage.xaml.vb#fontpackagesnippet4)]  
   
 ### <a name="enumerating-fonts-in-an-application"></a>Enumerar fuentes en una aplicación  
- Para enumerar las fuentes como elementos de <xref:System.Windows.Media.Fonts.GetFontFamilies%2A> <xref:System.Windows.Media.Fonts.GetTypefaces%2A> recursos en la aplicación, utilice el método o. En el ejemplo siguiente <xref:System.Windows.Media.Fonts.GetFontFamilies%2A> se muestra cómo <xref:System.Windows.Media.FontFamily> utilizar el método para devolver la colección de objetos de la ubicación de fuente de la aplicación. En este caso, la aplicación contiene un subdirectorio llamado "resources".  
+ Para enumerar las fuentes como elementos de recursos en la aplicación, use <xref:System.Windows.Media.Fonts.GetFontFamilies%2A> el <xref:System.Windows.Media.Fonts.GetTypefaces%2A> método o. En el ejemplo siguiente se muestra cómo utilizar <xref:System.Windows.Media.Fonts.GetFontFamilies%2A> el método para devolver la colección <xref:System.Windows.Media.FontFamily> de objetos de la ubicación de fuentes de la aplicación. En este caso, la aplicación contiene un subdirectorio llamado "resources".  
   
  [!code-csharp[FontSnippets#FontsSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml.cs#fontssnippet3)]
  [!code-vb[FontSnippets#FontsSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontfamilysnippets.xaml.vb#fontssnippet3)]  
   
- En el ejemplo siguiente <xref:System.Windows.Media.Fonts.GetTypefaces%2A> se muestra cómo <xref:System.Windows.Media.Typeface> utilizar el método para devolver la colección de objetos de la ubicación de fuente de la aplicación. En este caso, la aplicación contiene un subdirectorio llamado "resources".  
+ En el ejemplo siguiente se muestra cómo utilizar <xref:System.Windows.Media.Fonts.GetTypefaces%2A> el método para devolver la colección <xref:System.Windows.Media.Typeface> de objetos de la ubicación de fuentes de la aplicación. En este caso, la aplicación contiene un subdirectorio llamado "resources".  
   
  [!code-csharp[FontSnippets#FontsSnippet7](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml.cs#fontssnippet7)]
  [!code-vb[FontSnippets#FontsSnippet7](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontfamilysnippets.xaml.vb#fontssnippet7)]  
@@ -139,7 +139,7 @@ En este tema se proporciona información [!INCLUDE[TLA#tla_winclient](../../../.
   <OutputType>library</OutputType>  
   ...  
 </PropertyGroup>  
-...  
+...
 <ItemGroup>  
   <Resource Include="Kooten.ttf" />  
   <Resource Include="Pesca.ttf" />  
@@ -152,17 +152,17 @@ En este tema se proporciona información [!INCLUDE[TLA#tla_winclient](../../../.
  [!code-xaml[OpenTypeFontsSample#OpenTypeFontsSample1](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontsSample/CS/Kootenay.xaml#opentypefontssample1)]  
   
 > [!NOTE]
-> Este SDK contiene un conjunto de fuentes OpenType de ejemplo que puede usar con [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicaciones. Las fuentes se definen en una biblioteca solo de recursos. Para obtener más información, vea [Sample OpenType Font Pack](sample-opentype-font-pack.md).  
+> Este SDK contiene un conjunto de fuentes OpenType de ejemplo que puede usar con [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] las aplicaciones. Las fuentes se definen en una biblioteca solo de recursos. Para obtener más información, vea [paquete de fuentes OpenType de ejemplo](sample-opentype-font-pack.md).  
   
 <a name="limitations_on_font_usage"></a>
 ## <a name="limitations-on-font-usage"></a>Limitaciones de uso de fuentes  
- En la lista siguiente se describen varias limitaciones en el empaquetado y el uso de fuentes en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicaciones:  
+ En la lista siguiente se describen varias limitaciones en el empaquetado y el uso [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] de fuentes en aplicaciones:  
   
-- **Bits de permisos de incrustación de fuentes: las aplicaciones ** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no comprueban ni exigen ningún bit de permisos de incrustación de fuentes. Consulte la sección [Fuentes Introduction_to_Packing](#introduction_to_packaging_fonts) para obtener más información.  
+- **Bits de permisos de incrustación de fuentes: las aplicaciones ** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no comprueban ni exigen ningún bit de permisos de incrustación de fuentes. Vea la sección [fuentes de Introduction_to_Packing](#introduction_to_packaging_fonts) para obtener más información.  
   
-- **Fuentes de sitio de origen:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] las aplicaciones no permiten una referencia de fuente a un identificador uniforme de recursos (URI) http o ftp.  
+- **Fuentes de sitio de origen:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] las aplicaciones no admiten una referencia de fuente a un identificador uniforme de recursos (URI) de http o FTP.  
   
-- **URI absoluto mediante la notación pack::** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] las <xref:System.Windows.Media.FontFamily> aplicaciones no permiten crear un objeto mediante programación mediante "pack:" como parte de la referencia del identificador uniforme absoluto de recursos (URI) a una fuente. Por ejemplo, `"pack://application:,,,/resources/#Pericles Light"` es una referencia de fuente no válida.  
+- **URI absoluto mediante el Pack: Notation:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] las aplicaciones no le permiten crear un <xref:System.Windows.Media.FontFamily> objeto mediante programación usando "Pack:" como parte de la referencia absoluta del identificador uniforme de recursos (URI) a una fuente. Por ejemplo, `"pack://application:,,,/resources/#Pericles Light"` es una referencia de fuente no válida.  
   
 - **Incrustación de fuentes automática:** durante el tiempo de diseño, no hay ninguna compatibilidad para buscar el uso de fuentes de la aplicación ni para incrustar fuentes automáticamente en los recursos de la aplicación.  
   
@@ -170,7 +170,7 @@ En este tema se proporciona información [!INCLUDE[TLA#tla_winclient](../../../.
   
 - En casos donde hay una referencia incorrecta, la aplicación vuelve a usar una fuente disponible.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Documents.Typography>
 - <xref:System.Windows.Media.FontFamily>
