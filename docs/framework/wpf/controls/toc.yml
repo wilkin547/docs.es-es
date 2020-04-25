@@ -393,7 +393,7 @@
       href: styles-and-templates.md
       items:
         - name: Aplicar estilos y plantillas
-          href: styling-and-templating.md
+          href: ../../../desktop-wpf/fundamentals/styles-templates-overview.md
         - name: Personalización de un control existente con un objeto ControlTemplate
           href: ../../../desktop-wpf/themes/how-to-create-apply-template.md
         - name: Procedimiento para buscar elementos generados por un objeto ControlTemplate
