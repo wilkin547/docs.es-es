@@ -5,16 +5,20 @@ metadata:
   title: Documentación de .NET
   description: Obtenga más información sobre .NET, una plataforma para el desarrollo de contenido de código abierto que permite crear una gran variedad de tipos de aplicaciones.
   ms.topic: landing-page
-  ms.date: 03/27/2020
-  ms.openlocfilehash: 5984996b59cfb89e5f165bf966722093c0992eea
-  ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+  ms.date: 04/22/2020
+  ms.openlocfilehash: 67fa6bb8c14ef3fad05b4874553a9ce75f811833
+  ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 04/03/2020
-  ms.locfileid: "80636139"
+  ms.lasthandoff: 04/24/2020
+  ms.locfileid: "82135820"
 landingContent:
 - title: Más información sobre .NET
   linkLists:
+  - linkListType: download
+    links:
+    - text: Descarga del SDK de .NET
+      url: https://dotnet.microsoft.com/download
   - linkListType: overview
     links:
     - text: Paseo por .NET

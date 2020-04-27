@@ -5,16 +5,20 @@ metadata:
   title: 'Documentos de Visual Basic: inicio, tutoriales y referencias.'
   description: 'Aprenda a programar en Visual Basic en .NET: para desarrolladores noveles, desarrolladores poco familiarizados con Visual Basic y desarrolladores con experiencia en Visual Basic.'
   ms.topic: landing-page
-  ms.date: 11/27/2019
-  ms.openlocfilehash: 9019ed13a6e9a02710ec063a6538a406f4940e21
-  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.date: 04/22/2020
+  ms.openlocfilehash: 0dba96b4d42085680a8e0aa25456ec756e8c9b42
+  ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 03/15/2020
-  ms.locfileid: "75303433"
+  ms.lasthandoff: 04/24/2020
+  ms.locfileid: "82135794"
 landingContent:
 - title: Primeros pasos
   linkLists:
+  - linkListType: download
+    links:
+    - text: Descarga del SDK de .NET
+      url: https://dotnet.microsoft.com/download
   - linkListType: get-started
     links:
     - text: Compilación de una aplicación "Hola mundo" con .NET Core

@@ -20,11 +20,13 @@
       href: install/how-to-detect-installed-versions.md
     - name: Administradores de paquetes de Linux
       items:
-        - name: Ubuntu 19.10
+        - name: "Ubuntu\_20.04"
+          href: install/linux-package-manager-ubuntu-2004.md
+        - name: "Ubuntu\_19.10"
           href: install/linux-package-manager-ubuntu-1910.md
         - name: "Ubuntu\_19.04"
           href: install/linux-package-manager-ubuntu-1904.md
-        - name: Ubuntu 18.04
+        - name: "Ubuntu\_18.04"
           href: install/linux-package-manager-ubuntu-1804.md
         - name: "Ubuntu\_16.04"
           href: install/linux-package-manager-ubuntu-1604.md
@@ -351,7 +353,7 @@
     - name: Portabilidad de los proyectos de Windows Forms
       href: porting/winforms.md
     - name: Portabilidad de los proyectos de WPF
-      href: porting/wpf.md
+      href: ../desktop-wpf/migration/convert-project-from-net-framework.md
     - name: Portabilidad de los proyectos de C++/CLI
       href: porting/cpp-cli.md
 - name: Pruebas unitarias
@@ -418,7 +420,7 @@
         - name: Creación de una aplicación de .NET Core con complementos
           href: tutorials/creating-app-with-plugin-support.md
         - name: Uso y depuración de la descargabilidad de ensamblado en .NET Core
-          href: ../standard/assembly/unloadability-howto.md
+          href: ../standard/assembly/unloadability.md
 - name: Empaquetado de distribución de .NET Core
   href: distribution-packaging.md
 - name: "Exposición de los componentes de .NET\_Core a COM"

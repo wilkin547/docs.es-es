@@ -3,19 +3,21 @@ title: 'Aplicaciones sin servidor: Arquitectura, patrones e implementación de A
 description: Guía sobre la arquitectura sin servidor. Obtenga información sobre cuándo, cómo y por qué implementar una arquitectura sin servidor (en lugar de una infraestructura como servicio [IaaS] o una plataforma como servicio [PaaS]) para las aplicaciones empresariales.
 author: JEREMYLIKNESS
 ms.author: jeliknes
-ms.date: 06/26/2018
-ms.openlocfilehash: 9dea7dbccb5c9e125f792e6a7287a7dd2fad26f1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/22/2020
+ms.openlocfilehash: 16e658a99feda6537189a45b53da514e67766999
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73093546"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135701"
 ---
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>Aplicaciones sin servidor: Arquitectura, patrones e implementación de Azure
 
-![Captura de pantalla en la que se muestra la portada del libro electrónico Aplicaciones sin servidor.](./media/index/serverless-apps-cover.jpg)
+![Captura de pantalla en la que se muestra la portada del libro electrónico Aplicaciones sin servidor.](./media/index/serverless-apps-cover-v3.png)
 
-> DESCARGA disponible en: <https://aka.ms/serverless-ebook>
+**EDICIÓN 3.0** — Actualizado a Azure Functions 3
+
+> DESCARGA disponible en: <https://aka.ms/serverlessbookpdf>
 
 PUBLICADO POR
 
@@ -27,7 +29,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2018 de Microsoft Corporation
+Copyright &copy; 2018-2020 de Microsoft Corporation
 
 Todos los derechos reservados. No se puede reproducir ni transmitir de ninguna forma ni por ningún medio ninguna parte del contenido de este libro sin la autorización por escrito del publicador.
 
@@ -43,7 +45,7 @@ El resto de marcas y logotipos pertenece a sus respectivos propietarios.
 
 Autor:
 
-> **[Jeremy Likness](https://twitter.com/jeremylikness)** , promotor de la nube sénior, Microsoft Corp.
+> **[Jeremy Likness](https://twitter.com/jeremylikness)** , director de programas de datos de .NET, Microsoft Corp.
 
 Colaborador:
 
@@ -97,7 +99,7 @@ Las infraestructuras como servicio todavía conllevan una gran sobrecarga porque
 - Mantener actualizado el sistema operativo.
 - Supervisar la aplicación.
 
-La siguiente evolución redujo la sobrecarga proporcionando una plataforma como servicio (PaaS). Con dicha plataforma, el proveedor de nube controla los sistemas operativos, las revisiones de seguridad e, incluso, los paquetes necesarios para admitir una plataforma concreta. En lugar de compilar una VM, configurar después .NET Framework y mantener los servidores de Internet Information Services (IIS), los desarrolladores solo tienen que elegir una "destino de la plataforma", como una "aplicación web " o un "punto de conexión de API", e implementar el código directamente. Por lo tanto, los interrogantes relacionados con la infraestructura quedan reducidos a estos:
+La siguiente evolución redujo la sobrecarga proporcionando una plataforma como servicio (PaaS). Con dicha plataforma, el proveedor de nube controla los sistemas operativos, las revisiones de seguridad e, incluso, los paquetes necesarios para admitir una plataforma concreta. En lugar de compilar una VM, configurar después .NET y mantener los servidores de Internet Information Services (IIS), los desarrolladores solo tienen que elegir un "destino de la plataforma", como una "aplicación web " o un "punto de conexión de API" e implementar el código directamente. Por lo tanto, los interrogantes relacionados con la infraestructura quedan reducidos a estos:
 
 - ¿Qué tamaños de servicio son necesarios?
 - ¿Cómo se escalan horizontalmente los servicios (añadir más servidores o nodos)?
