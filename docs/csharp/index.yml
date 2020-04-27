@@ -6,12 +6,12 @@ metadata:
   description: 'Aprenda a programar en C#: para desarrolladores noveles, desarrolladores poco familiarizados con C# y desarrolladores con experiencia en C#'
   ms.topic: landing-page
   ms.date: 11/19/2019
-  ms.openlocfilehash: 2bec49d0832a7d00d0fea247166a9ec073f37e11
-  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.openlocfilehash: a0de519e518cac70bac831cf689042e104cd1389
+  ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 03/15/2020
-  ms.locfileid: "75339169"
+  ms.lasthandoff: 04/23/2020
+  ms.locfileid: "82102728"
 landingContent:
 - title: Aprender a programar en C#
   linkLists:
@@ -71,14 +71,14 @@ landingContent:
       url: whats-new/csharp-8.md
   - linkListType: overview
     links:
-    - text: Coincidencia de patrones
+    - text: Detección de patrones
       url: pattern-matching.md
     - text: Tipos de referencia que aceptan valores NULL
       url: nullable-references.md
   - linkListType: concept
     links:
-    - text: Anotación de API para la nulabilidad
-      url: nullable-attributes.md
+    - text: Elección de una estrategia de migración que acepte valores NULL
+      url: nullable-migration-strategies.md
   - linkListType: tutorial
     links:
     - text: Generación y consumo de secuencias asincrónicas
@@ -111,5 +111,5 @@ landingContent:
       url: language-reference/operators/index.md
     - text: Configurar la versión del lenguaje
       url: language-reference/configure-language-version.md
-    - text: especificación del lenguaje C#
+    - text: Especificación del lenguaje C#
       url: ../../_csharplang/spec/introduction.md

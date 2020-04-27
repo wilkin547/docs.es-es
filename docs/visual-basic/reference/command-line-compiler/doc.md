@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
 ms.openlocfilehash: a818fd46bd93682f0bede1d22b8cbc2ca6467a40
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75716739"
@@ -30,12 +30,12 @@ o
   
 ## <a name="arguments"></a>Argumentos  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
 |`+` &#124; `-`|Opcional. Si se especifica + o solo `-doc`, el compilador genera información de documentación y la coloca en un archivo XML. Especificar `-` es el equivalente a no especificar `-doc`, lo que causa que no se cree ninguna información de documentación.|  
 |`file`|Es necesario si se usa `-doc:`. Especifica el archivo XML de salida, que se rellena con los comentarios de los archivos de código fuente de la compilación. Si el nombre de archivo contiene un espacio, escríbalo entre comillas (" ").|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  La opción `-doc` controla si el compilador genera un archivo XML que contiene los comentarios de documentación. Si usa la sintaxis `-doc:file`, el parámetro `file` especifica el nombre del archivo XML. Si usa `-doc` o `-doc+`, el compilador toma el nombre del archivo XML desde el archivo ejecutable o la biblioteca que el compilador va a crear. Si usa `-doc-` o no especifica la opción `-doc`, el compilador no crea un archivo XML.  
   
  En los archivos de código fuente, los comentarios de documentación pueden preceder a las siguientes definiciones:  
@@ -52,7 +52,7 @@ o
   
 |Para definir -doc en el entorno de desarrollo integrado de Visual Studio|  
 |---|  
-|1. tener un proyecto seleccionado en **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**. <br />2. Haga clic en la pestaña **compilar** .<br />3. establezca el valor en el cuadro **generar archivo de documentación XML** .|  
+|1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**. <br />2.  Haga clic en la pestaña **Compilar**.<br />3.  Establezca el valor en el cuadro **Generar archivo de documentación XML**.|  
   
 ## <a name="example"></a>Ejemplo  
  Vea [Documentar el código con XML (Visual Basic)](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md) para obtener un ejemplo.  

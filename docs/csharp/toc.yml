@@ -119,8 +119,8 @@
       href: programming-guide/types/index.md
     - name: Tipos de referencia que aceptan valores NULL
       href: nullable-references.md
-    - name: Actualización de firmas de API a referencias que aceptan valores NULL
-      href: nullable-attributes.md
+    - name: Elección de una estrategia para habilitar tipos de referencia que acepten valores NULL
+      href: nullable-migration-strategies.md
     - name: Espacios de nombres
       href: programming-guide/namespaces/index.md
     - name: Tipos básicos
@@ -1200,6 +1200,8 @@
               href: programming-guide/xmldoc/exception.md
             - name: <include>
               href: programming-guide/xmldoc/include.md
+            - name: <inheritdoc>
+              href: programming-guide/xmldoc/inheritdoc.md
             - name: <list>
               href: programming-guide/xmldoc/list.md
             - name: <para>

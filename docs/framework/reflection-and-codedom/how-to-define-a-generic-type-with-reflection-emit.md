@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Definir un tipo genérico con emisión de reflexión'
+title: Procedimiento para definir un tipo genérico con emisión de reflexión
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 ms.openlocfilehash: b553fd2235c73cf879474dc4f44f958dddcb649c
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73130157"
 ---
-# <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Cómo: Definir un tipo genérico con emisión de reflexión
+# <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Procedimiento para definir un tipo genérico con emisión de reflexión
 En este tema se muestra cómo crear un tipo genérico simple con dos parámetros de tipo, cómo aplicar restricciones de clase, restricciones de interfaz y restricciones especiales a los parámetros de tipo, y cómo crear miembros que usen los parámetros de tipo de la clase como tipos de parámetro y tipos de valor devuelto.  
   
 > [!IMPORTANT]
-> Un método no es genérico sólo porque pertenece a un tipo genérico y utiliza los parámetros de tipo de ese tipo genérico. Un método sólo es genérico si tiene su propia lista de parámetros de tipo. La mayoría de los métodos de los tipos genéricos no son genéricos, como en este ejemplo. Para obtener un ejemplo de emisión de un método genérico, vea [How to: Define a Generic Method with Reflection Emit (Cómo: Definir un método genérico con emisión de reflexión)](how-to-define-a-generic-method-with-reflection-emit.md).  
+> Un método no es genérico sólo porque pertenece a un tipo genérico y utiliza los parámetros de tipo de ese tipo genérico. Un método sólo es genérico si tiene su propia lista de parámetros de tipo. La mayoría de los métodos de los tipos genéricos no son genéricos, como en este ejemplo. Para obtener un ejemplo de emisión de un método genérico, vea [Procedimiento para definir un tipo genérico con emisión de reflexión](how-to-define-a-generic-method-with-reflection-emit.md).  
   
 ### <a name="to-define-a-generic-type"></a>Para definir un tipo genérico  
   
@@ -69,7 +69,7 @@ En este tema se muestra cómo crear un tipo genérico simple con dos parámetros
      [!code-csharp[EmitGenericType#21](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#21)]
      [!code-vb[EmitGenericType#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#21)]  
   
-8. Defina un método que use los parámetros del tipo genérico. Tenga en cuenta que estos métodos no son genéricos a menos que tengan sus propias listas de parámetros de tipo. El código siguiente define un método `static` (`Shared` en Visual Basic) que toma una matriz de `TFirst` y devuelve un tipo `List<TFirst>` (`List(Of TFirst)` en Visual Basic) que contiene todos los elementos de la matriz. Para definir este método, es necesario crear el tipo `List<TFirst>`. Para ello, se llama a <xref:System.Type.MakeGenericType%2A> en la definición de tipo genérico, `List<T>`. (El `T` se omite cuando se usa el operador de `typeof` (`GetType` en Visual Basic) para obtener la definición de tipo genérico). El tipo de parámetro se crea mediante el método <xref:System.Type.MakeArrayType%2A>.  
+8. Defina un método que use los parámetros del tipo genérico. Tenga en cuenta que estos métodos no son genéricos a menos que tengan sus propias listas de parámetros de tipo. El código siguiente define un método `static` (`Shared` en Visual Basic) que toma una matriz de `TFirst` y devuelve un tipo `List<TFirst>` (`List(Of TFirst)` en Visual Basic) que contiene todos los elementos de la matriz. Para definir este método, es necesario crear el tipo `List<TFirst>`. Para ello, se llama a <xref:System.Type.MakeGenericType%2A> en la definición de tipo genérico, `List<T>`. (`T` se omite cuando se usa el operador `typeof` [`GetType` en Visual Basic] para obtener la definición de tipo genérico). El tipo de parámetro se crea con el método <xref:System.Type.MakeArrayType%2A>.  
   
      [!code-cpp[EmitGenericType#22](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#22)]
      [!code-csharp[EmitGenericType#22](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#22)]
@@ -79,7 +79,7 @@ En este tema se muestra cómo crear un tipo genérico simple con dos parámetros
   
      El método <xref:System.Type.GetConstructor%2A> no se admite en un <xref:System.Reflection.Emit.GenericTypeParameterBuilder>, por lo que no es posible obtener el constructor de `List<TFirst>` directamente. En primer lugar, es necesario obtener el constructor de la definición de tipo genérico `List<T>` y luego llamar a un método que lo convierta en el constructor correspondiente de `List<TFirst>`.  
   
-     El constructor usado para este ejemplo de código toma un tipo `IEnumerable<T>`. Pero tenga en cuenta que no es la definición de tipo genérico de la interfaz genérica <xref:System.Collections.Generic.IEnumerable%601>; en su lugar, debe sustituirse el parámetro de tipo `T` de `List<T>` por el parámetro de tipo `T` de `IEnumerable<T>`. (Esto parece confuso solo porque ambos tipos tienen parámetros de tipo con el nombre `T`. Este es el motivo por el que este ejemplo de código usa los nombres `TFirst` y `TSecond`). Para obtener el tipo del argumento del constructor, empiece con la definición de tipo genérico `IEnumerable<T>` y llame a <xref:System.Type.MakeGenericType%2A> con el primer parámetro de tipo genérico de `List<T>`. La lista de argumentos del constructor se debe pasar como matriz, con un único argumento en este caso.  
+     El constructor usado para este ejemplo de código toma un tipo `IEnumerable<T>`. Pero tenga en cuenta que no es la definición de tipo genérico de la interfaz genérica <xref:System.Collections.Generic.IEnumerable%601>; en su lugar, debe sustituirse el parámetro de tipo `T` de `List<T>` por el parámetro de tipo `T` de `IEnumerable<T>`. (Esto parece confuso solo porque ambos tipos tienen parámetros de tipo con el nombre `T`. Por eso este ejemplo de código usa los nombres `TFirst` y `TSecond`). Para obtener el tipo del argumento del constructor, comience con la definición de tipo genérico `IEnumerable<T>` y llame a <xref:System.Type.MakeGenericType%2A> con el primer parámetro de tipo genérico de `List<T>`. La lista de argumentos del constructor se debe pasar como matriz, con un único argumento en este caso.  
   
     > [!NOTE]
     > La definición de tipo genérico se expresa como `IEnumerable<>` cuando se usa el operador `typeof` de C#, o como `IEnumerable(Of )` cuando se usa el operador `GetType` de Visual Basic.  
@@ -96,7 +96,7 @@ En este tema se muestra cómo crear un tipo genérico simple con dos parámetros
      [!code-csharp[EmitGenericType#8](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#8)]
      [!code-vb[EmitGenericType#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#8)]  
   
-11. Invoque al método. `ExampleMethod` no es genérico, pero el tipo al que pertenece sí lo es, así que para obtener un elemento <xref:System.Reflection.MethodInfo> que pueda invocarse es necesario crear un tipo construido de la definición de tipo para `Sample`. El tipo construido usa la clase `Example`, que satisface las restricciones de `TFirst` porque es un tipo de referencia y tiene un constructor sin parámetros predeterminado, y la clase `ExampleDerived`, que satisface las restricciones de `TSecond`. (El código de `ExampleDerived` se puede encontrar en la sección de código de ejemplo). Estos dos tipos se pasan a <xref:System.Type.MakeGenericType%2A> para crear el tipo construido. Luego se obtiene <xref:System.Reflection.MethodInfo> mediante el método <xref:System.Type.GetMethod%2A>.  
+11. Invoque al método. `ExampleMethod` no es genérico, pero el tipo al que pertenece sí lo es, así que para obtener un elemento <xref:System.Reflection.MethodInfo> que pueda invocarse es necesario crear un tipo construido de la definición de tipo para `Sample`. El tipo construido usa la clase `Example`, que satisface las restricciones de `TFirst` porque es un tipo de referencia y tiene un constructor sin parámetros predeterminado, y la clase `ExampleDerived`, que satisface las restricciones de `TSecond`. (El código de `ExampleDerived` puede encontrarse en la sección de código de ejemplo). Estos dos tipos se pasan a <xref:System.Type.MakeGenericType%2A> para crear el tipo construido. Luego se obtiene <xref:System.Reflection.MethodInfo> mediante el método <xref:System.Type.GetMethod%2A>.  
   
      [!code-cpp[EmitGenericType#9](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#9)]
      [!code-csharp[EmitGenericType#9](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#9)]

@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: e56c485b-6b67-4345-8e66-fd21835a6092
 ms.openlocfilehash: d647a8cd73fa714e86454687a25501259f894f6d
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73120710"
@@ -37,4 +37,4 @@ COM se diferencia del modelo de objetos del runtime de .NET en varios aspectos i
 - [Contenedor al que se puede llamar en tiempo de ejecución](runtime-callable-wrapper.md)
 - [Contenedor CCW (COM callable wrapper)](com-callable-wrapper.md)
 - [Personalización de los contenedores estándar en .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
-- [Cómo: Personalizar contenedores RCW en .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/56kh4hy7(v=vs.100))
+- [Cómo: Personalización de los contenedores RCW en .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/56kh4hy7(v=vs.100))

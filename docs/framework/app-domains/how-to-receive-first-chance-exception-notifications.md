@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Recibir notificaciones de excepciones de primera oportunidad'
+title: Procedimiento para recibir notificaciones de excepciones de primera oportunidad
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
 ms.openlocfilehash: da60dfca424f7c10e810b5e083ff7fa63a688218
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73119874"
 ---
-# <a name="how-to-receive-first-chance-exception-notifications"></a>Cómo: Recibir notificaciones de excepciones de primera oportunidad
+# <a name="how-to-receive-first-chance-exception-notifications"></a>Procedimiento para recibir notificaciones de excepciones de primera oportunidad
 El evento <xref:System.AppDomain.FirstChanceException> de la clase <xref:System.AppDomain> permite recibir una notificación de que se ha producido una excepción antes de que Common Language Runtime empiece a buscar controladores de excepciones.
 
  El evento se genera en el nivel de dominio de aplicación. Un subproceso de ejecución puede pasar a través de varios dominios de aplicación, así que una excepción no controlada en un dominio de aplicación podría controlarse en otro. La notificación se produce en cada dominio de aplicación que haya agregado un controlador para el evento, hasta que un dominio de aplicación controle la excepción.
@@ -64,7 +64,7 @@ El evento <xref:System.AppDomain.FirstChanceException> de la clase <xref:System.
      [!code-csharp[System.AppDomain.FirstChanceException_howto#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#2)]
      [!code-vb[System.AppDomain.FirstChanceException_howto#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#2)]
 
-     Puede controlar este evento en el dominio de aplicación predeterminado de la misma manera. Use la propiedad <xref:System.AppDomain.CurrentDomain%2A?displayProperty=nameWithType> `static` (`Shared` en Visual Basic) en `Main()` para obtener una referencia al dominio de aplicación predeterminado.
+     Puede controlar este evento en el dominio de aplicación predeterminado de la misma manera. Use la propiedad <xref:System.AppDomain.CurrentDomain%2A?displayProperty=nameWithType>`static` (`Shared` en Visual Basic) en `Main()` para obtener una referencia al dominio de aplicación predeterminado.
 
 #### <a name="to-demonstrate-first-chance-exception-notifications-in-the-application-domain"></a>Para mostrar notificaciones de primera excepción en el dominio de aplicación
 
