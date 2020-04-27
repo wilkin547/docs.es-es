@@ -1,5 +1,5 @@
 ---
-title: 'Ejemplo de interoperabilidad COM: cliente COM y servidor .NET'
+title: 'Ejemplo de interoperabilidad COM: Cliente COM y servidor .NET'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,16 +10,16 @@ helpviewer_keywords:
 ms.assetid: a219cb2c-9fa2-4c90-9b26-939e0788f178
 ms.openlocfilehash: 5a72f3f23f4601b8b0a2ee8c6f5df66ae0bc66a3
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181501"
 ---
-# <a name="com-interop-sample-com-client-and-net-server"></a><span data-ttu-id="0515e-102">Ejemplo de interoperabilidad COM: cliente COM y servidor .NET</span><span class="sxs-lookup"><span data-stu-id="0515e-102">COM Interop Sample: COM Client and .NET Server</span></span>
-<span data-ttu-id="0515e-103">En este ejemplo se muestra la interoperación de un [cliente COM](#cpconcominteropsamplecomclientnetserveranchor1) y un [servidor .NET](#cpconcominteropsamplecomclientnetserveranchor2) que realiza cálculos de hipotecas.</span><span class="sxs-lookup"><span data-stu-id="0515e-103">This sample demonstrates the interoperation of a [COM Client](#cpconcominteropsamplecomclientnetserveranchor1) and a [.NET Server](#cpconcominteropsamplecomclientnetserveranchor2) that performs mortgage calculations.</span></span> <span data-ttu-id="0515e-104">En este ejemplo, el cliente crea y llama a una instancia de la clase administrada `Loan`, pasa cuatro argumentos (uno de ellos igual a cero) a la instancia y muestra los cálculos.</span><span class="sxs-lookup"><span data-stu-id="0515e-104">In this example, the client creates and calls an instance of the managed `Loan` class, passes four arguments (one of those four being equal to zero) to the instance, and displays the computations.</span></span> <span data-ttu-id="0515e-105">A lo largo de esta sección aparecen ejemplos de código de este ejemplo.</span><span class="sxs-lookup"><span data-stu-id="0515e-105">Code examples from this sample appear throughout this section.</span></span>  
+# <a name="com-interop-sample-com-client-and-net-server"></a><span data-ttu-id="c55dc-102">Ejemplo de interoperabilidad COM: Cliente COM y servidor .NET</span><span class="sxs-lookup"><span data-stu-id="c55dc-102">COM Interop Sample: COM Client and .NET Server</span></span>
+<span data-ttu-id="c55dc-103">En este ejemplo se muestra la interoperación de un [cliente COM](#cpconcominteropsamplecomclientnetserveranchor1) y un [servidor .NET](#cpconcominteropsamplecomclientnetserveranchor2) que realiza cálculos de hipotecas.</span><span class="sxs-lookup"><span data-stu-id="c55dc-103">This sample demonstrates the interoperation of a [COM Client](#cpconcominteropsamplecomclientnetserveranchor1) and a [.NET Server](#cpconcominteropsamplecomclientnetserveranchor2) that performs mortgage calculations.</span></span> <span data-ttu-id="c55dc-104">En este ejemplo, el cliente crea y llama a una instancia de la clase administrada `Loan`, pasa cuatro argumentos (uno de ellos igual a cero) a la instancia y muestra los cálculos.</span><span class="sxs-lookup"><span data-stu-id="c55dc-104">In this example, the client creates and calls an instance of the managed `Loan` class, passes four arguments (one of those four being equal to zero) to the instance, and displays the computations.</span></span> <span data-ttu-id="c55dc-105">A lo largo de esta sección aparecen ejemplos de código de este ejemplo.</span><span class="sxs-lookup"><span data-stu-id="c55dc-105">Code examples from this sample appear throughout this section.</span></span>  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor1"></a>
-## <a name="com-client"></a><span data-ttu-id="0515e-106">Cliente COM</span><span class="sxs-lookup"><span data-stu-id="0515e-106">COM Client</span></span>  
+## <a name="com-client"></a><span data-ttu-id="c55dc-106">Cliente COM</span><span class="sxs-lookup"><span data-stu-id="c55dc-106">COM Client</span></span>  
   
 ```cpp  
 // ConLoan.cpp : Defines the entry point for the console application.  
@@ -86,7 +86,7 @@ int main(int argc, char* argv[])
 ```  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor2"></a>
-## <a name="net-server"></a><span data-ttu-id="0515e-107">Servidor .NET</span><span class="sxs-lookup"><span data-stu-id="0515e-107">.NET Server</span></span>  
+## <a name="net-server"></a><span data-ttu-id="c55dc-107">Servidor .NET</span><span class="sxs-lookup"><span data-stu-id="c55dc-107">.NET Server</span></span>  
   
 ```vb  
 Imports System  
@@ -387,6 +387,6 @@ namespace LoanLib {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0515e-108">Consulte también</span><span class="sxs-lookup"><span data-stu-id="0515e-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c55dc-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="c55dc-108">See also</span></span>
 
-- [<span data-ttu-id="0515e-109">Exponer componentes de .NET Framework en COM</span><span class="sxs-lookup"><span data-stu-id="0515e-109">Exposing .NET Framework Components to COM</span></span>](exposing-dotnet-components-to-com.md)
+- [<span data-ttu-id="c55dc-109">Exponer componentes de .NET Framework en COM</span><span class="sxs-lookup"><span data-stu-id="c55dc-109">Exposing .NET Framework Components to COM</span></span>](exposing-dotnet-components-to-com.md)
