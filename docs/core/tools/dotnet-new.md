@@ -2,12 +2,12 @@
 title: Comando dotnet new
 description: El comando dotnet new crea proyectos de .NET Core basados en la plantilla especificada.
 ms.date: 04/10/2020
-ms.openlocfilehash: 4ad0d7e54f93582237ed9457b562957018916d36
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 1979f98a6005a414acc64c5eaa086a88aca9f033
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463610"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102832"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -35,6 +35,10 @@ dotnet new -h|--help
 El comando `dotnet new` crea un proyecto de .NET Core u otros artefactos basados en una plantilla.
 
 El comando llama al [motor de plantillas](https://github.com/dotnet/templating) para crear los artefactos en el disco basándose en las opciones y la plantilla especificadas.
+
+### <a name="implicit-restore"></a>Restauración implícita
+
+[!INCLUDE[dotnet restore note](~/includes/dotnet-restore-note.md)]
 
 ## <a name="arguments"></a>Argumentos
 

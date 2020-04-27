@@ -1,15 +1,15 @@
 ---
 title: Escritura de código C# seguro y eficaz
 description: Las mejoras aplicadas recientemente al lenguaje C# permiten escribir código seguro verificable que anteriormente se hubiera asociado a código no seguro.
-ms.date: 10/23/2018
+ms.date: 03/17/2020
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: 365320fef5a2f9cd123086c1baed9a786ede9f05
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: c324f3603c69555b40efa56d8e26c046c28f3a7c
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345080"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "82021489"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Escritura de código C# seguro y eficaz
 
@@ -22,11 +22,11 @@ Este artículo se centra en las técnicas que se deben aplicar para administrar 
 Este artículo se centra en estas técnicas de administración de recursos:
 
 - Declare un parámetro [`readonly struct`](language-reference/builtin-types/struct.md#readonly-struct) para expresar que un tipo es **inmutable**. Esto permite al compilador guardar copias defensivas cuando se usan parámetros [`in`](language-reference/keywords/in-parameter-modifier.md).
-- Si un tipo no puede ser inmutable, declare miembros `readonly` de `struct` para indicar que el miembro no modifica el estado.
+- Si un tipo no puede ser inmutable, declare miembros `struct` [`readonly`](language-reference/builtin-types/struct.md#readonly-instance-members) para indicar que el miembro no modifica el estado.
 - Utilice una devolución [`ref readonly`](language-reference/keywords/ref.md#reference-return-values) si el valor devuelto es un valor `struct` mayor que <xref:System.IntPtr.Size?displayProperty=nameWithType> y la duración del almacenamiento es superior al método que devuelve el valor.
 - Si el tamaño de un valor `readonly struct` es mayor que <xref:System.IntPtr.Size?displayProperty=nameWithType>, deberá pasarlo como parámetro `in` por motivos de rendimiento.
 - No pase nunca un elemento `struct` como parámetro `in` a menos que se declare con el modificador `readonly` o que el método solo llame a los miembros de `readonly` de la estructura. Infringir esta guía puede afectar negativamente al rendimiento y podría provocar un comportamiento oculto.
-- Use un valor [`ref struct`](language-reference/keywords/ref.md#ref-struct-types), o bien un valor `readonly ref struct` como <xref:System.Span%601> o <xref:System.ReadOnlySpan%601>, para que funcione con la memoria como secuencia de bytes.
+- Use un valor [`ref struct`](language-reference/builtin-types/struct.md#ref-struct), o bien un valor `readonly ref struct` como <xref:System.Span%601> o <xref:System.ReadOnlySpan%601>, para que funcione con la memoria como secuencia de bytes.
 
 Estas técnicas obligan a equilibrar dos objetivos contrapuestos en relación con las **referencias** y los **valores**. Las variables que son [tipos de referencia](programming-guide/types/index.md#reference-types) contienen una referencia a la ubicación en la memoria. Las variables que son [tipos de valor](programming-guide/types/index.md#value-types) contienen directamente su valor. Estas son diferencias clave importantes para administrar recursos de memoria. Los **tipos de valor** suelen copiarse cuando se pasan a un método o se devuelven desde uno. Este comportamiento incluye la copia del valor de `this` al llamar a los miembros de un tipo de valor. El costo de dicha copia está relacionado con el tamaño del tipo. Los **tipos de referencia** se asignan en el montón administrado. Cada nuevo objeto requiere una nueva asignación, y se debe reclamar posteriormente. Ambas operaciones llevan cierto tiempo. La referencia se copia cuando un tipo de referencia se pasa como argumento a un método o se devuelve desde un método.
 
@@ -113,7 +113,7 @@ public struct Point3D
 
 En el ejemplo anterior se muestran muchas de las ubicaciones en las que puede aplicar el modificador `readonly`: métodos, propiedades y descriptores de acceso de propiedad. Si usa propiedades implementadas automáticamente, el compilador agrega el modificador `readonly` al descriptor de acceso `get` para las propiedades de lectura y escritura. El compilador agrega el modificador `readonly` a las declaraciones de propiedad implementadas automáticamente para las propiedades con solo un descriptor de acceso `get`.
 
-Agregar el modificador `readonly` a los miembros que no mutan el estado proporciona dos ventajas relacionadas. En primer lugar, el compilador aplica su intención. Ese miembro no puede mutar el estado de la estructura ni tener acceso a un miembro que no esté marcado también como `readonly`. En segundo lugar, el compilador no crea copias defensivas de parámetros `in` al obtener acceso a un miembro de `readonly`. El compilador puede hacer que esta optimización sea segura, ya que garantiza que un miembro de `readonly` no modifique `struct`.
+Agregar el modificador `readonly` a los miembros que no mutan el estado proporciona dos ventajas relacionadas. En primer lugar, el compilador aplica su intención. Ese miembro no puede mutar el estado de la estructura. En segundo lugar, el compilador no crea copias defensivas de parámetros `in` al obtener acceso a un miembro de `readonly`. El compilador puede hacer que esta optimización sea segura, ya que garantiza que un miembro de `readonly` no modifique `struct`.
 
 ## <a name="use-ref-readonly-return-statements-for-large-structures-when-possible"></a>Uso de instrucciones `ref readonly return` para grandes estructuras en la medida de lo posible
 

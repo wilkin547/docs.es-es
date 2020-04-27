@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 58cb3580c8701773452ae8338f036a94bbee80c5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9544b65f31772d0f4cee918528a73171fec4de99
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77449414"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021804"
 ---
 ### <a name="change-in-default-value-of-useshellexecute"></a>Cambio del valor predeterminado de UseShellExecute
 
@@ -29,7 +29,7 @@ Si la aplicación se basa en el comportamiento anterior, llame a <xref:System.Di
 
 #### <a name="category"></a>Categoría
 
-CoreFX
+Bibliotecas de Core .NET
 
 #### <a name="affected-apis"></a>API afectadas
 

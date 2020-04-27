@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 58d1c8cd3aff52703522391c14348bd81c108587
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 820825f0545aa78729414c388385b339225b1235
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74568146"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021546"
 ---
 ### <a name="custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively"></a>No se puede recurrir de formar recursiva a las instancias personalizadas de EncoderFallbackBuffer
 
@@ -38,7 +38,7 @@ Si una aplicación usa un objeto <xref:System.Text.EncoderFallback> personalizad
 
 #### <a name="category"></a>Categoría
 
-CoreFX
+Bibliotecas de Core .NET
 
 #### <a name="affected-apis"></a>API afectadas
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e6e10b2ec451c07bf397cbdcac51ef57c29dab47
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cc3251e3b31143bd95793b407e50cf76e0e30142
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74568219"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021663"
 ---
 ### <a name="json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception"></a>Cambio del tipo de excepción del serializador de JSON de `JsonException` a `NotSupportedException`
 
@@ -33,7 +33,7 @@ Si al deserializar detecta <xref:System.Text.Json.JsonException>, es posible que
 
 #### <a name="category"></a>Categoría
 
-CoreFX
+Bibliotecas de Core .NET
 
 #### <a name="affected-apis"></a>API afectadas
 

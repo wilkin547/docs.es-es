@@ -4,12 +4,12 @@ description: Aprenda a usar MetadataLoadContext, que es una API que le permite c
 author: MSDN-WhiteKnight
 ms.date: 03/10/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: d2589d51a6e0611504c0133d293d3fdfae32553c
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 90c84147c52199afc42a2efc297bc7fe40658ec7
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242665"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82141203"
 ---
 # <a name="how-to-inspect-assembly-contents-using-metadataloadcontext"></a>Procedimiento Inspección del contenido de un ensamblado con MetadataLoadContext
 
@@ -41,4 +41,4 @@ En el siguiente ejemplo de código se crea la clase <xref:System.Reflection.Meta
 
 ## <a name="example"></a>Ejemplo
 
-Para obtener un ejemplo de código completo, vea el [ejemplo Inspección del contenido de un ensamblado mediante MetadataLoadContext](https://github.com/dotnet/samples/tree/master/core/assembly/MetadataLoadContext).
+Para obtener un ejemplo de código completo, vea el [ejemplo Inspección del contenido de un ensamblado mediante MetadataLoadContext](https://docs.microsoft.com/samples/dotnet/samples/inspect-assembly-contents-using-metadataloadcontext/).

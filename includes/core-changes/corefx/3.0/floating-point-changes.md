@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ce4f09908b1025e8e5a0380c9bf035c6b0db479a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 22dbb1e982f83687a9e0eb288ed72c78c676db77
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74568141"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021587"
 ---
 ### <a name="floating-point-formatting-and-parsing-behavior-changed"></a>Cambios en los comportamientos de formato y análisis de los números de punto flotante
 
@@ -26,7 +26,7 @@ En la sección “Posible impacto en el código existente” de la entrada de bl
 
 #### <a name="category"></a>Categoría
 
-CoreFX
+Bibliotecas de Core .NET
 
 #### <a name="affected-apis"></a>API afectadas
 
