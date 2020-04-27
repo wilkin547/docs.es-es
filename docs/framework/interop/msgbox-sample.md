@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: 9e0edff6-cc0d-4d5c-a445-aecf283d9c3a
 ms.openlocfilehash: b970a5a193f82ca141c030491febce5ef352eb70
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181345"
@@ -42,9 +42,9 @@ En este ejemplo se muestra cómo pasar tipos de cadena por valor como parámetro
  [!code-csharp[Conceptual.Interop.Marshaling#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/msgbox.cs#6)]
  [!code-vb[Conceptual.Interop.Marshaling#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/msgbox.vb#6)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Serialización de cadenas](marshaling-strings.md)
-- [Cálculo de referencias predeterminado para cadenas](default-marshaling-for-strings.md)
+- [Serialización predeterminada para cadenas](default-marshaling-for-strings.md)
 - [Crear prototipos en código administrado](creating-prototypes-in-managed-code.md)
 - [Especificar un juego de caracteres](specifying-a-character-set.md)

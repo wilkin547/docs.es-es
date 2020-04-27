@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
 ms.openlocfilehash: e3ff86cc80887d14fdffe50f256409cb70ff2d88
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710380"
@@ -39,7 +39,7 @@ La recomendación de la versión 1.0 de las transformaciones XLT (XSLT) del W3C 
 |El resultado de la creación de instancias del contenido de `xsl:processing-instruction` contiene la cadena "--" o finaliza con "-".|7.4|Recuperar|  
 |El resultado de la creación de instancias del contenido de `xsl:comment` crea nodos que no son de texto.|7.4|Error*|  
 |La plantilla de un elemento de enlace de variables devuelve un nodo de atributo o un nodo de espacio de nombres.|11.2|Error*|  
-|Se produce un error al recuperar el recurso del identificador URI pasado a la función de documento.|12.1|Error de :|  
+|Se produce un error al recuperar el recurso del identificador URI pasado a la función de documento.|12.1|Error|  
 |La referencia de URI de la función de documento contiene un identificador de fragmento y se produce un error al procesarlo.|12.1|Recuperar*|  
 |Hay varios atributos con el mismo nombre, aunque con valores diferentes, que no son elementos cdata-section con nombre de `xsl:output` con la misma prioridad de importación.|16|Recuperar|  
 |El procesador no es compatible con la codificación del atributo de codificación `xsl:output`.|16.1|Recuperar|  

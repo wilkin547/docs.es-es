@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: a3f752bb-8945-4e1b-8163-71def6e9f137
 ms.openlocfilehash: d854f474845322ae6df1da5788890a69720a5272
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181487"
@@ -22,7 +22,7 @@ En este ejemplo se muestra cómo un [cliente .NET](#cpconcominteropsamplenetclie
  En este ejemplo, el cliente crea y llama a una instancia de la coclase **Loan**, pasa cuatro argumentos (uno de ellos igual a cero) a la instancia y muestra los cálculos. A lo largo de esta sección aparecen fragmentos de código de este ejemplo.  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor1"></a>
-## <a name="net-client"></a>Cliente de .NET  
+## <a name="net-client"></a>Cliente .NET  
   
 ```vb  
 Imports System  
@@ -297,6 +297,6 @@ static double Round(double value, short digits)
 }  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Exponer componentes COM en .NET Framework](exposing-com-components.md)

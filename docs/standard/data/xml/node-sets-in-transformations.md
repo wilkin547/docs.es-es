@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: ad034f0e-ff8b-4a71-9a4c-528c754263c4
 ms.openlocfilehash: 2828b95f6a4050dd05b38e7ab6ef740ee4eb16b4
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710562"
@@ -38,7 +38,7 @@ Los conjuntos de nodos son uno de los cuatro tipos de datos básicos devueltos p
 </xsl:stylesheet>  
 ```  
   
-## <a name="input"></a>Input  
+## <a name="input"></a>Entrada  
   
 ```xml  
 <bookstore>  
@@ -56,7 +56,7 @@ Los conjuntos de nodos son uno de los cuatro tipos de datos básicos devueltos p
 </bookstore>  
 ```  
   
-## <a name="output"></a>Resultados  
+## <a name="output"></a>Salida  
   
 ```output  
 ******  

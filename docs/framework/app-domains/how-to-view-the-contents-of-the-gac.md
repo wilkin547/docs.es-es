@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Consultar el contenido de la memoria caché global de ensamblados'
+title: Procedimiento para consultar el contenido de la caché global de ensamblados
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c5f786a0-969b-4f14-9f02-e77c3384d9af
 ms.openlocfilehash: b5d8b31e7eb23789878da620f3a4517056a1ee3e
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73119828"
 ---
-# <a name="how-to-view-the-contents-of-the-global-assembly-cache"></a>Consultar el contenido de la memoria caché global de ensamblados
+# <a name="how-to-view-the-contents-of-the-global-assembly-cache"></a>Procedimiento para consultar el contenido de la caché global de ensamblados
 
 Use la [herramienta de caché global de ensamblados (gacutil.exe)](../tools/gacutil-exe-gac-tool.md) para ver el contenido de la caché global de ensamblados.
 

@@ -11,7 +11,7 @@ ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
 ms.openlocfilehash: e5ff40d8413acf64e7a8a129a7b268f58780d591
 ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053486"
@@ -162,7 +162,7 @@ Para establecer un mecanismo de sondeo sencillo, use el componente <xref:System.
    Private eventId As Integer = 1
    ```
 
-En lugar de ejecutar todo el trabajo en el subproceso principal, puede ejecutar las tareas mediante el uso de subprocesos de trabajo en segundo plano. Para obtener más información, consulta <xref:System.ComponentModel.BackgroundWorker?displayProperty=fullName>.
+En lugar de ejecutar todo el trabajo en el subproceso principal, puede ejecutar las tareas mediante el uso de subprocesos de trabajo en segundo plano. Para obtener más información, vea <xref:System.ComponentModel.BackgroundWorker?displayProperty=fullName>.
 
 ### <a name="define-what-occurs-when-the-service-is-stopped"></a>Definición de qué ocurre al detener el servicio
 
@@ -542,7 +542,7 @@ Ahora que ha creado el servicio, puede hacer lo siguiente:
 
 - Explorar el componente <xref:System.ServiceProcess.ServiceController>, que permite enviar comandos al servicio instalado.
 
-- En lugar de crear el registro de eventos cuando se ejecuta la aplicación, use un instalador para crearlo al instalar la aplicación. El instalador elimina el registro de eventos cuando se desinstala la aplicación. Para obtener más información, consulta <xref:System.Diagnostics.EventLogInstaller>.
+- En lugar de crear el registro de eventos cuando se ejecuta la aplicación, use un instalador para crearlo al instalar la aplicación. El instalador elimina el registro de eventos cuando se desinstala la aplicación. Para obtener más información, vea <xref:System.Diagnostics.EventLogInstaller>.
 
 ## <a name="see-also"></a>Vea también
 

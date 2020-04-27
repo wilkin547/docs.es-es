@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Asignar resultados HRESULT y excepciones'
+title: Procedimiento para asignar resultados HRESULT y excepciones
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
 ms.openlocfilehash: e186228d1dc9a42ddfe92428f7dfad29a5789095
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181405"
 ---
-# <a name="how-to-map-hresults-and-exceptions"></a>Cómo: Asignar resultados HRESULT y excepciones
+# <a name="how-to-map-hresults-and-exceptions"></a>Procedimiento para asignar resultados HRESULT y excepciones
 Los métodos COM informan de errores devolviendo valores HRESULT; los métodos de .NET informan de ellos iniciando excepciones. El tiempo de ejecución controla la transición entre los dos. Cada clase de excepción de .NET Framework se asigna a un valor HRESULT.  
   
  Las clases de excepción definidas por el usuario pueden especificar el valor HRESULT que sea necesario. Estas clases de excepción pueden cambiar dinámicamente el valor HRESULT que se devuelve cuando se genera la excepción si se establece el campo **HResult** en el objeto de excepción. Se proporciona información adicional sobre la excepción al cliente a través de la interfaz **IErrorInfo**, que se implementa en el objeto .NET en el proceso no administrado.  
@@ -73,7 +73,7 @@ CMyClass::MethodThatThrows
 |**COR_E_DUPLICATEWAITOBJECT**|**DuplicateWaitObjectException**|  
 |**COR_E_ENDOFSTREAM**|**EndOfStreamException**|  
 |**COR_E_TYPELOAD**|**EntryPointNotFoundException**|  
-|**COR_E_EXCEPTION**|**Excepción**|  
+|**COR_E_EXCEPTION**|**Exception**|  
 |**COR_E_EXECUTIONENGINE**|**ExecutionEngineException**|  
 |**COR_E_FIELDACCESS**|**FieldAccessException**|  
 |**COR_E_FILENOTFOUND o ERROR_FILE_NOT_FOUND**|**FileNotFoundException**|  
@@ -140,7 +140,7 @@ CMyClass::MethodThatThrows
   
  Los campos de excepción, como **Message**, **Source** y **StackTrace** no están disponibles para la excepción **StackOverflowException**.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interoperabilidad COM avanzada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
 - [Excepciones](../../standard/exceptions/index.md)

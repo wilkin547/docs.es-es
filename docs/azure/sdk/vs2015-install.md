@@ -5,7 +5,7 @@ ms.date: 10/19/2017
 ms.custom: azure-sdk-dotnet
 ms.openlocfilehash: a29709d56f2debe04d49ee4eafdc27acd4ca480f
 ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/19/2020
 ms.locfileid: "81433155"
@@ -24,11 +24,11 @@ La manera más rápida y sencilla de instalar el **Azure SDK para Visual Studio 
 
 3. En la siguiente pantalla, haga clic en **Acepto**. El Instalador de plataforma web comenzará la descarga e instalación de los componentes que ha seleccionado.
 
-4. Una vez finalizada la instalación, se mostrará una pantalla de confirmación. Haga clic en **Finalizar** Ya puede cerrar el Instalador de plataforma web.
+4. Una vez finalizada la instalación, se mostrará una pantalla de confirmación. Haga clic en **Finalizar**. Ya puede cerrar el Instalador de plataforma web.
 
 ## <a name="verifying-the-installation"></a>Comprobación de la instalación
 
-1. En Visual Studio 2015, haga clic en el menú **Herramientas** y, después, en **Extensiones y actualizaciones...**.
+1. En Visual Studio 2015, haga clic en el menú **Herramientas** y, después, en **Extensiones y actualizaciones...** .
 
 2. La lista contendrá varias herramientas de Azure, como **Microsoft Azure App Service Tools**, **Microsoft Azure Storage Connected Service** y **Service Fabric Tools**.
 

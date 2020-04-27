@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 ms.openlocfilehash: 712040c3482b51c4dafe0ee87fdda8cd848fb7fc
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73123614"
@@ -106,7 +106,7 @@ extern "C" int MessageBox(
 ### <a name="platform-invoke-examples"></a>Ejemplos de invocación de plataforma  
  Los ejemplos de invocación de plataforma de esta sección muestran el uso del atributo `RegistryPermission` con los modificadores del recorrido de la pila.  
   
- En el ejemplo siguiente se omiten los modificadores <xref:System.Security.Permissions.SecurityAction> `Assert`, `Deny` y `PermitOnly`.  
+ En el ejemplo siguiente se omiten los modificadores <xref:System.Security.Permissions.SecurityAction>`Assert`, `Deny` y `PermitOnly`.  
   
 ```csharp  
 [DllImport("MyClass.dll", EntryPoint = "CallRegistryPermission")]  

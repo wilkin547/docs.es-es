@@ -13,7 +13,7 @@ ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
 author: ghogen
 ms.openlocfilehash: dd2a9c4485e151d4cb1c9d5ae3a95a69fcc416d4
 ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053581"

@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: e78b14f1-e487-43cd-9c6d-1a07483f1730
 ms.openlocfilehash: 914f72b5e4840555541943620ca2df1f629b0604
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73123522"
@@ -38,7 +38,7 @@ En esta sección se resume el proceso necesario para exponer un componente COM e
   
 ## <a name="see-also"></a>Vea también
 
-- [Interoperating with Unmanaged Code](index.md) (Interoperar con código no administrado)
+- [Interoperar con código no administrado](index.md)
 - [Consideraciones de diseño para interoperaciones](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))
 - [Ejemplo de interoperabilidad COM: cliente .NET y servidor COM](com-interop-sample-net-client-and-com-server.md)
 - [Independencia del lenguaje y componentes independientes del lenguaje](../../standard/language-independence-and-language-independent-components.md)

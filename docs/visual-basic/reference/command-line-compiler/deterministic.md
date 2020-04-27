@@ -7,7 +7,7 @@ helpviewer_keywords:
 - -deterministic compiler option [Visual Basic]
 ms.openlocfilehash: 9b611a72656bdd570eccec8a0585bf5ce6fa55f6
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75716789"
@@ -22,7 +22,7 @@ Hace que el compilador genere un ensamblado cuya salida byte a byte es idéntica
 -deterministic
 ```
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Comentarios
 
 De forma predeterminada, la salida del compilador para un conjunto determinado de entradas es única, ya que el compilador agrega una marca de tiempo y un GUID que se genera a partir de números aleatorios. Use la opción `-deterministic` para generar un *ensamblado determinista*, cuyo contenido binario es idéntico en todas las compilaciones, siempre y cuando la entrada siga siendo la misma.
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - reflection,partial trust
 - link demands
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
-ms.openlocfilehash: 1d5289ce15c213024af576c99fe039f5d6c1a247
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.openlocfilehash: 1bdaf3abd39797274236ace4cb2967d2e7d199b2
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130063"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644188"
 ---
 # <a name="security-considerations-for-reflection"></a>Consideraciones de seguridad sobre la reflexión
 
@@ -57,9 +57,9 @@ Un miembro es crítico para la seguridad si tiene el <xref:System.Security.Secur
 
 Estas reglas son las mismas independientemente de si el código compilado accede directamente al miembro crítico para la seguridad, o si se accede a ese miembro él mediante reflexión.
 
-El código de aplicación que se ejecuta desde la línea de comandos se ejecuta con plena confianza. Siempre y cuando no esté marcado como transparente, puede usar la reflexión para obtener acceso a los miembros críticos para la seguridad. Cuando se ejecuta el mismo código con confianza parcial (por ejemplo, en un dominio de aplicación en espacio aislado), el nivel de confianza del ensamblado determina si puede tener acceso a código crítico para la seguridad: si el ensamblado tiene un nombre seguro y está instalado en la caché global de ensamblados, es un ensamblado de confianza y puede llamar a los miembros críticos para la seguridad. Si no es de confianza, se vuelve transparente aunque no esté marcado como tal y no tiene acceso a los miembros críticos para la seguridad.
+El código de aplicación que se ejecuta desde la línea de comandos se ejecuta con plena confianza. Siempre y cuando no esté marcado como transparente, puede usar la reflexión para obtener acceso a los miembros críticos para la seguridad. Cuando se ejecuta el mismo código con confianza parcial (por ejemplo, en un dominio de aplicación en el espacio aislado), el nivel de confianza del ensamblado determina si puede acceder a código crítico para la seguridad: si el ensamblado tiene un nombre seguro y se instala en la caché global de ensamblados, es un ensamblado de confianza y puede llamar a miembros críticos para la seguridad. Si no es de confianza, se vuelve transparente aunque no esté marcado como tal y no tiene acceso a los miembros críticos para la seguridad.
 
-Para obtener más información sobre el modelo de seguridad en .NET Framework 4, consulte [Cambios en la seguridad](../security/security-changes.md).
+Para obtener más información sobre el modelo de seguridad en .NET Framework 4, consulte [Cambios en la seguridad](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).
 
 ## <a name="reflection-and-transparency"></a>Reflexión y transparencia
 
@@ -86,7 +86,7 @@ Para usar la reflexión para invocar a los miembros que son inaccesibles según 
   > [!NOTE]
   > De forma predeterminada, la directiva de seguridad deniega este permiso al código que se origina desde Internet. Este permiso nunca debe concederse al código que se origina desde Internet.
 
-- Para permitir que el código invoque miembros no públicos, siempre que el conjunto de permisos del ensamblado que contiene el miembro invocado sea igual o un subconjunto del conjunto de permisos del código del ensamblado que contiene la llamada: el código debe tener concedido <xref:System.Security.Permissions.ReflectionPermission> con la marca <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.
+- Para permitir que el código invoque miembros no públicos, siempre que el conjunto de permisos del ensamblado que contiene el miembro invocado sea igual (o un subconjunto) al conjunto de permisos del código del ensamblado que contiene la llamada: el código debe tener concedido <xref:System.Security.Permissions.ReflectionPermission> con la marca <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.
 
 Por ejemplo, suponga que concede a un dominio de aplicación permisos de Internet más <xref:System.Security.Permissions.ReflectionPermission> con la marca <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> y, a continuación, ejecuta una aplicación de Internet con dos ensamblados, A y B.
 
@@ -115,9 +115,9 @@ Evite escribir miembros públicos que toman parámetros <xref:System.Reflection.
 - <xref:System.Security.Permissions.ReflectionPermissionFlag>
 - <xref:System.Security.Permissions.ReflectionPermission>
 - <xref:System.Security.Permissions.SecurityPermission>
-- [Cambios de seguridad](../security/security-changes.md)
+- [Cambios de seguridad](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)
 - [Seguridad de acceso del código](../misc/code-access-security.md)
 - [Problemas de seguridad en la emisión de la reflexión](security-issues-in-reflection-emit.md)
-- [Viewing Type Information](viewing-type-information.md) (Ver información tipos)
+- [Ver información tipos](viewing-type-information.md)
 - [Aplicar atributos](../../standard/attributes/applying-attributes.md)
 - [Acceso a atributos personalizados](accessing-custom-attributes.md)

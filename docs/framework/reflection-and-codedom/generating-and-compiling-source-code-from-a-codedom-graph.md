@@ -28,7 +28,7 @@ helpviewer_keywords:
 ms.assetid: 6c864c8e-6dd3-4a65-ace0-36879d9a9c42
 ms.openlocfilehash: a8d3bf7363cb887834a1c251aead05c75e2e3fe8
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73130222"
@@ -89,7 +89,7 @@ El espacio de nombres <xref:System.CodeDom.Compiler> proporciona interfaces para
  [!code-vb[CodeDomExample#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#23)]  
   
 ## <a name="languages-with-initial-support"></a>Lenguajes con compatibilidad inicial  
- .NET Framework proporciona compiladores y generadores de código para los siguientes lenguajes: C#, Visual Basic, C++ y JScript. La compatibilidad de CodeDOM se puede extender a otros lenguajes si se implementan generadores y compiladores de código específicos del lenguaje.  
+ .NET Framework proporciona compiladores y generadores de código para los lenguajes siguientes: C#, Visual Basic, C++ y JScript. La compatibilidad de CodeDOM se puede extender a otros lenguajes si se implementan generadores y compiladores de código específicos del lenguaje.  
   
 ## <a name="see-also"></a>Vea también
 

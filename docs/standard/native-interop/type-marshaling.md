@@ -4,7 +4,7 @@ description: Obtenga información sobre cómo .NET serializa los tipos en una re
 ms.date: 01/18/2019
 ms.openlocfilehash: 91b8f3d6cb53fd7a0adea7ea9669e7459e81445f
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75706271"
@@ -13,7 +13,7 @@ ms.locfileid: "75706271"
 
 La **serialización** es el proceso de transformación de tipos cuando tienen que cruzar el límite entre administrado y nativo.
 
-La serialización es necesaria porque los tipos del código administrado y del código no administrado son diferentes. En el código administrado, por ejemplo, tiene un `String`, mientras que en las cadenas del mundo no administrado pueden ser Unicode ("anchas"), no Unicode, terminada en null, ASCII, etc. De forma predeterminada, el subsistema P/Invoke intenta hacer lo correcto en función del comportamiento predeterminado, que se describe en este artículo. Pero en aquellas situaciones en las que necesita un control adicional, puede emplear el atributo [MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute) para especificar qué tipo se espera en el lado no administrado. Por ejemplo, si queremos que la cadena se envíe como una cadena ANSI terminada en un valor nulo, podemos hacerlo de la manera siguiente:
+La serialización es necesaria porque los tipos del código administrado y del código no administrado son diferentes. En el código administrado, por ejemplo, tiene `String`, mientras que en el entorno no administrado, las cadenas pueden ser Unicode ("anchas"), no Unicode, terminadas en un valor nulo, ASCII, etc. De forma predeterminada, el subsistema de P/Invoke intenta hacer "lo correcto" según el comportamiento predeterminado, tal y como se describe en este artículo. Pero en aquellas situaciones en las que necesita un control adicional, puede emplear el atributo [MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute) para especificar qué tipo se espera en el lado no administrado. Por ejemplo, si queremos que la cadena se envíe como una cadena ANSI terminada en un valor nulo, podemos hacerlo de la manera siguiente:
 
 ```csharp
 [DllImport("somenativelibrary.dll")]
@@ -62,9 +62,9 @@ En la tabla siguiente se incluyen las reglas de serialización predeterminadas q
 |-----------|-------------------------|---------------------|
 | `object`  | `VARIANT`               | `IUnknown*`         |
 | `System.Array` | Interfaz COM | No se permite sin un atributo `[MarshalAs]` |
-| `System.ArgIterator` | `va_list` | No admitido |
-| `System.Collections.IEnumerator` | `IEnumVARIANT*` | No admitido |
-| `System.Collections.IEnumerable` | `IDispatch*` | No admitido |
+| `System.ArgIterator` | `va_list` | No permitido |
+| `System.Collections.IEnumerator` | `IEnumVARIANT*` | No permitido |
+| `System.Collections.IEnumerable` | `IDispatch*` | No permitido |
 | `System.DateTimeOffset` | `int64_t` que representa el número de tics desde la medianoche del 1 de enero de 1601 || `int64_t` que representa el número de tics desde la medianoche del 1 de enero de 1601 |
 
 Algunos tipos solo pueden serializarse como parámetros y no como campos. Estas herramientas se muestran en la tabla siguiente:

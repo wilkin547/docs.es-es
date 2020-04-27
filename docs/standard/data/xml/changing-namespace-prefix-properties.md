@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: d5c87cbe-4d69-429f-aad5-3103c2ca2770
 ms.openlocfilehash: b1df520d00d3a98b2e518092d4eff51b5d0b7741
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78158030"
@@ -32,7 +32,7 @@ e.Prefix = "b";
 Console.WriteLine(doc.InnerXml);  
 ```  
   
- **Resultado**  
+ **Salida**  
   
 ```xml  
 <b:test xmlns:a="123" xmlns:b="456" />  
@@ -56,7 +56,7 @@ e.Prefix = "a";
 Console.WriteLine(doc.InnerXml);  
 ```  
   
- **Resultado**  
+ **Salida**  
   
 ```xml  
 <a:test xmlns="123" xmlns:a="123" />  

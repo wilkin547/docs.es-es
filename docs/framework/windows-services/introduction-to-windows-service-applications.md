@@ -24,7 +24,7 @@ ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
 author: ghogen
 ms.openlocfilehash: 8ff1adaa025dc11417c3dcfdaf42ea203828be57
 ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053519"
@@ -72,7 +72,7 @@ Los servicios de Microsoft Windows, anteriormente conocidos como servicios NT, l
 ## <a name="services-and-the-servicecontroller-component"></a>Servicios y el componente ServiceController  
  El componente <xref:System.ServiceProcess.ServiceController> se utiliza para conectarse a un servicio instalado y manipular su estado; mediante un componente <xref:System.ServiceProcess.ServiceController>, puede iniciar y detener un servicio, hacer una pausa y continuar su funcionamiento, y enviar comandos personalizados a un servicio. Sin embargo, no es necesario usar un componente <xref:System.ServiceProcess.ServiceController> cuando se crea una aplicación de servicio. De hecho, en la mayoría de los casos el componente <xref:System.ServiceProcess.ServiceController> debería existir en una aplicación independiente de la aplicación de servicio de Windows que define el servicio.  
   
- Para obtener más información, consulta <xref:System.ServiceProcess.ServiceController>.  
+ Para obtener más información, vea <xref:System.ServiceProcess.ServiceController>.  
   
 ## <a name="requirements"></a>Requisitos  
   

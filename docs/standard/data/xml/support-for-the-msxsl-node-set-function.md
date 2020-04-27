@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: d0cbf517-d9f6-4097-9851-4fa62903decd
 ms.openlocfilehash: 5022b298cb20796edbc54e951d8b06043697d832
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78155599"
@@ -43,7 +43,7 @@ La función `msxsl:node-set` permite convertir un fragmento del árbol de result
 </xsl:stylesheet>  
 ```  
   
-## <a name="output"></a>Resultado  
+## <a name="output"></a>Salida  
  El resultado de la transformación es  
   
 ```xml  

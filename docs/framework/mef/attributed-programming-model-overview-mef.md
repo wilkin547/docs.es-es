@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
 ms.openlocfilehash: c6b1093d2e821a55cc5513b077a270748a780b71
 ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75347626"
@@ -199,7 +199,7 @@ public class MyClass
 }
 ```
 
-Cuando el tipo de contrato se deduce de la palabra clave `dynamic` , coincidirá con cualquier tipo de contrato. En este caso, una importación debería especificar **siempre** un nombre de contrato con el que coincidir. (Si no se especifica ningún nombre de contrato, se considerará que la importación no coincide con ninguna exportación). Las dos exportaciones siguientes coincidirían con la importación anterior.
+Cuando el tipo de contrato se deduce de la palabra clave `dynamic` , coincidirá con cualquier tipo de contrato. En este caso, una importación debería especificar **siempre** un nombre de contrato con el que coincidir. (Si no se especifica ningún nombre de contrato, se considerará que la importación no coincide con ninguna exportación). Estas dos exportaciones coincidirían con la importación anterior.
 
 ```vb
 <Export("TheString", GetType(IMyAddin))>
@@ -341,7 +341,7 @@ Cuando el constructor de una parte requiere un valor importado, ese objeto no pu
 
 El atributo `Import` especifica un requisito para que la parte funcione. Si no se puede satisfacer una importación, se producirá un error en la composición de esa parte, que no estará disponible.
 
-Puede especificar que una importación sea *opcional* utilizando la propiedad `AllowDefault` . En este caso, la composición se realizará correctamente incluso si la importación no coincide con ninguna exportación disponible, y la propiedad de importación se establecerá en el valor predeterminado para su tipo de propiedad (`null` para las propiedades de objeto, `false` para valores booleanos o cero para propiedades numéricas). La siguiente clase usa una importación opcional.
+Puede especificar que una importación sea *opcional* utilizando la propiedad `AllowDefault` . En este caso, la composición tendrá éxito aun cuando la importación no coincida con las exportaciones disponibles, y la propiedad de importación estará establecida en el valor predeterminado para su tipo de propiedad (`null` para las propiedades de objeto, `false` para valores booleanos o cero para las propiedades numéricas). La siguiente clase utiliza una importación opcional.
 
 ```vb
 Public Class MyClass1
@@ -685,7 +685,7 @@ public class NumFour : NumThree
 }
 ```
 
-Si hay metadatos asociados al atributo `InheritedExport` , también se heredarán. (Para obtener más información, vea la sección anterior "metadatos y vistas de metadatos"). La subclase no puede modificar los metadatos heredados. Sin embargo, si se vuelve a declarar el atributo `InheritedExport` con el mismo nombre y tipo de contrato, pero con nuevos metadatos, la subclase puede reemplazar los metadatos heredados por los nuevos metadatos. La clase siguiente muestra este principio. La parte `MegaLogger` hereda de `Logger` e incluye el atributo `InheritedExport` . Puesto que `MegaLogger` vuelve a declarar nuevos metadatos denominados Status, no hereda los metadatos Name y Version de `Logger`.
+Si hay metadatos asociados al atributo `InheritedExport` , también se heredarán. (Para obtener más información, vea la sección anterior "Metadatos y vistas de metadatos"). La subclase no puede modificar los metadatos heredados. Sin embargo, si se vuelve a declarar el atributo `InheritedExport` con el mismo nombre y tipo de contrato, pero con nuevos metadatos, la subclase puede reemplazar los metadatos heredados por los nuevos metadatos. La clase siguiente muestra este principio. La parte `MegaLogger` hereda de `Logger` e incluye el atributo `InheritedExport` . Puesto que `MegaLogger` vuelve a declarar nuevos metadatos denominados Status, no hereda los metadatos Name y Version de `Logger`.
 
 ```vb
 <InheritedExport(GetType(IPlugin))>
@@ -745,7 +745,7 @@ public class MegaLogger : Logger        {
 }
 ```
 
-Al volver a declarar el atributo `InheritedExport` para reemplazar los metadatos, asegúrese de que los tipos de contrato son los mismos. (En el ejemplo anterior, `IPlugin` es el tipo de contrato). Si difieren, en lugar de reemplazar, el segundo atributo creará una segunda exportación independiente del elemento. Generalmente, esto significa que tendrá que especificar el tipo de contrato explícitamente al reemplazar un atributo `InheritedExport` , como se muestra en el ejemplo anterior.
+Al volver a declarar el atributo `InheritedExport` para reemplazar los metadatos, asegúrese de que los tipos de contrato son los mismos. (En el ejemplo anterior, `IPlugin` es el tipo del contrato). Si difieren, el segundo atributo creará, en lugar de reemplazar, una segunda exportación independiente de la parte. Generalmente, esto significa que tendrá que especificar el tipo de contrato explícitamente al reemplazar un atributo `InheritedExport` , como se muestra en el ejemplo anterior.
 
 Puesto que no se pueden crear instancias de interfaces directamente, por lo general no se pueden decorar con atributos `Export` o `Import` . Sin embargo, una interfaz se puede decorar con un atributo `InheritedExport` en el nivel de interfaz y esa exportación junto con los metadatos asociados las heredarán las clases implementadoras. Sin embargo, la propia interfaz no estará disponible como una parte.
 
@@ -982,5 +982,5 @@ Para los contenedores de composición duraderos, el consumo de memoria de las pa
 
 ## <a name="see-also"></a>Vea también
 
-- [Channel 9 Video: Open Up Your Applications with the Managed Extensibility Framework](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328) (Vídeo de Channel 9: Abrir las aplicaciones con Managed Extensibility Framework)
-- [Channel 9 Video: Managed Extensibility Framework (MEF) 2.0](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20) [Vídeo de Channel 9: Managed Extensibility Framework (MEF) 2.0]
+- [Vídeo de Channel 9: Abrir las aplicaciones con Managed Extensibility Framework](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)
+- [Vídeo de Channel 9: Managed Extensibility Framework (MEF) 2.0](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)

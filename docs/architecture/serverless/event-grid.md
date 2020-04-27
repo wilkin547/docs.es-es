@@ -3,13 +3,13 @@ title: 'Azure Event Grid: Aplicaciones sin servidor'
 description: Azure Event Grid es una solución sin servidor para la entrega y el enrutamiento confiables de eventos a escala masiva según un modelo de pago por evento.
 author: JEREMYLIKNESS
 ms.author: jeliknes
-ms.date: 06/26/2018
-ms.openlocfilehash: 3c577139c12567e762aabd58c9dc29457fa37aa1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/06/2020
+ms.openlocfilehash: 408e1b9cd1b1e5316c7c6a17bb1b0c76a38f9e11
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72522715"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135716"
 ---
 # <a name="event-grid"></a>Event Grid
 
@@ -132,14 +132,12 @@ En este capítulo ha conocido más información sobre la plataforma sin servidor
 - [Azure Logic Apps](https://docs.microsoft.com/azure/logic-apps)
 - [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging)
 - [Azure Table Storage](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview)
-- [Comparación entre las versiones 1.x y 2.x de Functions](https://docs.microsoft.com/azure/azure-functions/functions-versions)
 - [Conexión a orígenes de datos locales con la puerta de enlace de datos local de Azure](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway)
 - [Creación de su primera función en Azure Portal](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function)
 - [Crear la primera función desde la CLI de Azure](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function-azure-cli)
 - [Creación de la primera función mediante Visual Studio](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio)
 - [Lenguajes que admite Functions](https://docs.microsoft.com/azure/azure-functions/supported-languages)
 - [Supervisión de Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-monitoring)
-- [Uso de Azure Functions Proxies](https://docs.microsoft.com/azure/azure-functions/functions-proxies)
 
 >[!div class="step-by-step"]
 >[Anterior](logic-apps.md)

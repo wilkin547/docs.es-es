@@ -6,12 +6,12 @@ helpviewer_keywords:
 - common language runtime, application domains
 - runtime, application domains
 ms.assetid: c6d99815-e022-4d2c-9420-1d7ab5b9d504
-ms.openlocfilehash: d6bbc2648608e9542158e0f281984174447633a4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6ee02a3f27a645f19fd6a327052939586fac4aa9
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119726"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645437"
 ---
 # <a name="using-application-domains"></a>Utilizar dominios de aplicación
 
@@ -57,7 +57,7 @@ Representa un dominio de aplicación. Proporciona métodos para crear y controla
 [Ensamblados de .NET](../../standard/assembly/index.md)  
 Proporciona información general sobre las funciones que desempeñan los ensamblados.  
   
-[Programar con ensamblados](../../standard/assembly/program.md)  
+[Programar con ensamblados](../../standard/assembly/index.md)  
 Describe cómo crear, firmar y establecer atributos en los ensamblados.  
   
 [Emitir métodos y ensamblados dinámicos](../reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  

@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
 ms.openlocfilehash: 504057bd5e10498d39b2bce908742fc20b112c52
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710510"
@@ -20,16 +20,16 @@ En este tema se describen las opciones de salida XSLT disponibles. Puede especif
   
 |Nombre del atributo|Comportamiento|  
 |--------------------|--------------|  
-|method|Compatible.|  
-|Versión de|Se omite. La versión es siempre 1.0 para XML y 4.0 para HTML.|  
+|método|Se admite.|  
+|version|ignorado. La versión es siempre 1.0 para XML y 4.0 para HTML.|  
 |encoding|Se omite cuando la salida se envía a <xref:System.IO.TextWriter>. Se utiliza en su lugar la propiedad <xref:System.IO.TextWriter.Encoding%2A?displayProperty=nameWithType>.|  
-|omit-xml-declaration|Compatible.|  
-|standalone|Compatible.|  
-|doctype-public|Compatible.|  
-|doctype-system|Compatible.|  
-|cdata-section-elements|Compatible.|  
-|indent|Compatible.|  
-|media-type|Compatible.|  
+|omit-xml-declaration|Se admite.|  
+|independiente|Se admite.|  
+|doctype-public|Se admite.|  
+|doctype-system|Se admite.|  
+|cdata-section-elements|Se admite.|  
+|indent|Se admite.|  
+|media-type|Se admite.|  
   
 #### <a name="sending-output-to-an-xmlwriter"></a>Envío de la salida a XmlWriter  
  Si la hoja de estilos utiliza el elemento `xsl:output` y el tipo de salida es un objeto <xref:System.Xml.XmlWriter>, debería utilizar la propiedad <xref:System.Xml.Xsl.XslCompiledTransform.OutputSettings%2A?displayProperty=nameWithType> cuando cree el objeto <xref:System.Xml.XmlWriter>. La propiedad <xref:System.Xml.Xsl.XslCompiledTransform.OutputSettings%2A?displayProperty=nameWithType> devuelve un objeto <xref:System.Xml.XmlWriterSettings> que contiene información derivada del elemento `xsl:output` de una hoja de estilos compilada. Este objeto <xref:System.Xml.XmlWriterSettings> se puede pasar al método <xref:System.Xml.XmlWriter.Create%2A?displayProperty=nameWithType> para crear un objeto <xref:System.Xml.XmlWriter> con los valores correctos.  
@@ -40,10 +40,10 @@ En este tema se describen las opciones de salida XSLT disponibles. Puede especif
 #### <a name="xmlwriter"></a>XmlWriter  
  La clase <xref:System.Xml.XmlWriter> escribe archivos o secuencias XML. Puede especificar las características que se van a permitir en el objeto <xref:System.Xml.XmlWriter>, incluyendo las opciones de salida, utilizando la clase <xref:System.Xml.XmlWriterSettings>. La clase <xref:System.Xml.XmlWriter> es una parte integral de la estructura <xref:System.Xml>. Utilice este tipo de salida para canalizar los resultados de la salida en otro proceso XML.  
   
-#### <a name="string"></a>Cadena  
+#### <a name="string"></a>String  
  Utilice este tipo de salida para especificar el identificador URI del archivo de salida.  
   
-#### <a name="stream"></a>Stream  
+#### <a name="stream"></a>Secuencia  
  Una secuencia es una abstracción de una secuencia de bytes como, por ejemplo, un archivo, un dispositivo de entrada/salida, una canalización de comunicación entre procesos o un socket TCP/IP. La clase <xref:System.IO.Stream> y sus clases derivadas proporcionan una vista genérica de estos diferentes tipos de entrada y salida, aislando al programador de los detalles específicos del sistema operativo y los dispositivos subyacentes.  
   
  Utilice este tipo de salida para enviar datos a una <xref:System.IO.FileStream>, <xref:System.IO.MemoryStream> o a un flujo de salida (`Response.OutputStream`).  

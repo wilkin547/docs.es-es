@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 7e7303a9-4064-4738-b4e7-b75974ed70d2
 ms.openlocfilehash: bf119ff547df59cd369d688fd81ab058893614f2
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73130013"
@@ -24,7 +24,7 @@ La clase <xref:System.Type?displayProperty=nameWithType> es fundamental para la 
  Use <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> o <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> para obtener objetos **Type** de ensamblados no cargados y pasar el nombre de los tipos que quiera. Use <xref:System.Type.GetType%2A?displayProperty=nameWithType> para obtener objetos **Type** de un ensamblado que ya está cargado. Use <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType> y <xref:System.Reflection.Module.GetTypes%2A?displayProperty=nameWithType> para obtener objetos **Type** de módulo.  
   
 > [!NOTE]
-> Si quiere examinar y manipular tipos y métodos genéricos, vea la información adicional proporcionada en [Reflection and Generic Types](reflection-and-generic-types.md) (Reflexión y tipos genéricos) y [How to: Examine and Instantiate Generic Types with Reflection](how-to-examine-and-instantiate-generic-types-with-reflection.md) (Cómo: Examinar y crear instancias de tipos genéricos mediante la reflexión).  
+> Si quiere examinar y manipular tipos y métodos genéricos, vea la información adicional proporcionada en [Reflexión y tipos genéricos](reflection-and-generic-types.md) y [Cómo: Examinar y crear instancias de tipos genéricos mediante la reflexión](how-to-examine-and-instantiate-generic-types-with-reflection.md).  
   
  En el ejemplo siguiente se muestra la sintaxis necesaria para obtener el objeto <xref:System.Reflection.Assembly> y el módulo de un ensamblado.  
   
@@ -88,4 +88,4 @@ La clase <xref:System.Type?displayProperty=nameWithType> es fundamental para la 
 - <xref:System.Reflection.FieldInfo>
 - <xref:System.Reflection.EventInfo>
 - <xref:System.Reflection.ParameterInfo>
-- [Reflection and Generic Types](reflection-and-generic-types.md) (Reflexión y tipos genéricos)
+- [Reflexión y tipos genéricos](reflection-and-generic-types.md)

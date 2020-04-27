@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Implementar funciones de devolución de llamada'
+title: Procedimiento para implementar funciones de devolución de llamada
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
 ms.openlocfilehash: b7aae1e70ac736d60bed1e79291235db1c220281
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181414"
 ---
-# <a name="how-to-implement-callback-functions"></a>Cómo: Implementar funciones de devolución de llamada
+# <a name="how-to-implement-callback-functions"></a>Procedimiento para implementar funciones de devolución de llamada
 El procedimiento y el ejemplo siguiente muestran cómo una aplicación administrada, mediante la invocación de la plataforma, puede imprimir el valor del identificador de cada ventana en el equipo local. En concreto, el uso del procedimiento y el ejemplo usan la función **EnumWindows** para recorrer la lista de ventanas y una función de devolución de llamada administrada (denominada CallBack) para imprimir el valor del identificador de ventana.  
   
 ### <a name="to-implement-a-callback-function"></a>Para implementar una función de devolución de llamada  
@@ -32,7 +32,7 @@ El procedimiento y el ejemplo siguiente muestran cómo una aplicación administr
   
      Generalmente, las funciones de devolución de llamada devuelven valores distintos de cero para indicar que se ha realizado correctamente y cero para indicar que se ha producido un error. En este ejemplo, el valor devuelto se establece explícitamente en **true** para continuar la enumeración.  
   
-3. Cree un delegado y páselo como argumento a la función **EnumWindows**.  La invocación de la plataforma convierte automáticamente el delegado a un formato de devolución de llamada conocido.  
+3. Cree un delegado y páselo como argumento a la función **EnumWindows**. La invocación de la plataforma convierte automáticamente el delegado a un formato de devolución de llamada conocido.  
   
 4. Asegúrese de que el recolector de elementos no utilizados no reclama al delegado antes de que la función de devolución de llamada complete su tarea. Al pasar a un delegado como parámetro o pasar a un delegado contenido como campo en una estructura, se queda sin recopilar mientras dure la llamada. Por lo tanto, como ocurre en el siguiente ejemplo de enumeración, la función de devolución de llamada completa su tarea antes de que vuelva la llamada y no requiere que el llamador administrado realice ninguna acción adicional.  
   
@@ -127,7 +127,7 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Funciones de devolución de llamada](callback-functions.md)
 - [Llamar a una función DLL](calling-a-dll-function.md)

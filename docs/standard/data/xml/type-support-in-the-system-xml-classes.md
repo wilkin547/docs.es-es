@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 63570538-06e3-4401-ad4d-ac50be90c7bf
 ms.openlocfilehash: cec47d40a0353639bc17b880265f7c15f2f53ac4
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710107"
@@ -26,7 +26,7 @@ En la versión 2.0 de .NET Framework, se han mejorado las clases XML principales
 > [!NOTE]
 > En la versión 1.0 de .NET Framework, se necesitaba la clase <xref:System.Xml.XmlConvert> para realizar la conversión entre esquemas XML y tipos CLR.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Asignación de tipos de datos XML a tipos CLR](../../../../docs/standard/data/xml/mapping-xml-data-types-to-clr-types.md)  
  Describe las asignaciones predeterminadas de tipos de datos XML en tipos CLR.  
   

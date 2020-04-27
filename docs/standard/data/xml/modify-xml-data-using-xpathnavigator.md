@@ -9,7 +9,7 @@ dev_langs:
 ms.assetid: 03a7c5a1-b296-4af4-b209-043c958dc0a5
 ms.openlocfilehash: 906de1ded4961b7c67d48a010555d139df97cded
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710640"
@@ -30,10 +30,10 @@ La clase <xref:System.Xml.XPath.XPathNavigator> incluye un conjunto de métodos 
 |---------------------------------------------------------------------------------------------------------------------------------------------|------------------|  
 |<xref:System.Xml.XPath.XPathNodeType.Root>|No se admite.|  
 |<xref:System.Xml.XPath.XPathNodeType.Element>|El contenido del elemento.|  
-|<xref:System.Xml.XPath.XPathNodeType.Attribute>|Valor del atributo.|  
-|<xref:System.Xml.XPath.XPathNodeType.Text>|Contenido del texto.|  
+|<xref:System.Xml.XPath.XPathNodeType.Attribute>|El valor del atributo.|  
+|<xref:System.Xml.XPath.XPathNodeType.Text>|Contenido de texto.|  
 |<xref:System.Xml.XPath.XPathNodeType.ProcessingInstruction>|El contenido, sin incluir el destino.|  
-|<xref:System.Xml.XPath.XPathNodeType.Comment>|Contenido del comentario.|  
+|<xref:System.Xml.XPath.XPathNodeType.Comment>|El contenido del comentario.|  
 |<xref:System.Xml.XPath.XPathNodeType.Namespace>|No admitido.|  
   
 > [!NOTE]

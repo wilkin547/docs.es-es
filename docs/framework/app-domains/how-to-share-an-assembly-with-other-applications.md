@@ -2,12 +2,12 @@
 title: Procedimiento para compartir un ensamblado con otras aplicaciones
 ms.date: 08/19/2019
 ms.assetid: c30e972b-1693-4e05-b115-c31831fdf9f2
-ms.openlocfilehash: b1ef195458dd2de95eeb5e25089339e55d9e3fbb
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: b4c183c3fc0b04121be8bbc2db4027887cbc3132
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972886"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644289"
 ---
 # <a name="how-to-share-an-assembly-with-other-applications"></a>Procedimiento para compartir un ensamblado con otras aplicaciones
 Los ensamblados pueden ser privados o compartidos: de forma predeterminada, la mayoría de los programas sencillos constan de un ensamblado privado porque no se diseñaron para ser usados por otras aplicaciones.  
@@ -30,4 +30,4 @@ Para compartir un ensamblado:
 
 - [Guía de programación de C#](../../../api/index.md)
 - [Conceptos de programación (Visual Basic)](../../../api/index.md)
-- [Programación con ensamblados](../../standard/assembly/program.md)
+- [Programación con ensamblados](../../standard/assembly/index.md)

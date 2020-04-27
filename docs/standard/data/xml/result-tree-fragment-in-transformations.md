@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
 ms.openlocfilehash: e454c1194e8c280042857f106e22d0d0509417e3
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78156366"
@@ -33,7 +33,7 @@ En el caso del elemento `parameter`, el valor se asigna a (`Qname`) de varias fo
 
 En el caso del elemento `variable`, el valor se asigna también de varias formas. Puede asignar un valor mediante la devolución del contenido de la expresión XPath en el atributo `select` o asignándole el contenido del cuerpo de la plantilla.
 
-Tanto para el elemento `parameter` como para el elemento `variable`, si se asigna un valor mediante la expresión XPath, se devolverá uno de los cuatro tipos básicos de XPath:tipo booleano, tipo de cadena, tipo numérico o tipo de conjunto de nodos. Cuando se asigna un valor mediante un cuerpo de plantilla que no está vacío, se devuelve un tipo de dato que no es de XPath, que será un fragmento del árbol de resultados.
+Tanto para el elemento `parameter` como para el `variable`, si se asigna un valor mediante la expresión XPath, se devolverá uno de los cuatro tipos básicos de XPath: booleano, de cadena, numérico o de conjunto de nodos. Cuando se asigna un valor mediante un cuerpo de plantilla que no está vacío, se devuelve un tipo de dato que no es de XPath, que será un fragmento del árbol de resultados.
 
 Cuando se enlaza una variable a un fragmento del árbol de resultados en lugar de uno de los cuatro tipos de datos básicos de XPath, esta es la única vez que una consulta XPath devuelve un tipo que no pertenece a uno de los cuatro tipos de objetos de XPath. Los fragmentos del árbol de resultados y el comportamiento de estos se analizan en la [especificación del consorcio W3C](https://www.w3.org/TR/xslt-10/), [de la sección 11.1, Fragmentos de árboles de resultados](https://www.w3.org/TR/xslt-10/#section-Result-Tree-Fragments), a la [sección 11.6, Cómo pasar parámetros a plantillas](https://www.w3.org/TR/xslt-10/#section-Passing-Parameters-to-Templates). Además, en la [sección 1, Introducción](https://www.w3.org/TR/xslt-10/#section-Introduction), se analiza la forma en que las plantillas pueden contener elementos del espacio de nombres XSLT que devuelven o crean fragmentos de árboles de resultados.
 
@@ -111,7 +111,7 @@ Este es otro ejemplo que muestra una variable, que es un RTF, y, por tanto, un t
 
 El resultado de transformar cualquier XML con esta hoja de estilos se muestra en la siguiente salida.
 
-## <a name="output"></a>Resultado
+## <a name="output"></a>Salida
 
 ```xml
 <first_book xmlns:user="urn:books">Book1</first_book>

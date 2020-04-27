@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: 49819f1d-a1bd-4201-affe-5afe6d9712e1
 ms.openlocfilehash: f9ca5575e2a042d68fc490494f2e86991d58b80c
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351705"
@@ -41,11 +41,11 @@ Causa que el compilador trate como un error la primera ocurrencia de una adverte
   
 |Para establecer -warnaserror a fin de tratar todas las advertencias como errores en el IDE de Visual Studio|  
 |---|  
-|1. tener un proyecto seleccionado en **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**. <br />2. Haga clic en la pestaña **compilar** .<br />3. Asegúrese de que la casilla **deshabilitar todas las advertencias** esté desactivada.<br />4. Active la casilla **tratar todas las advertencias como errores** .|  
+|1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**. <br />2.  Haga clic en la pestaña **Compilar**.<br />3.  Asegúrese de que la casilla **Deshabilitar todas las advertencias** está desactivada.<br />4.  Active la casilla **Tratar todas las advertencias como errores**.|  
   
 |Para establecer - warnaserror a fin de tratar advertencias específicas como errores en el IDE de Visual Studio|  
 |---|  
-|1. tener un proyecto seleccionado en **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**.<br />2. Haga clic en la pestaña **compilar** .<br />3. Asegúrese de que la casilla **deshabilitar todas las advertencias** esté desactivada.<br />4. Asegúrese de que la casilla **tratar todas las advertencias como errores** esté desactivada.<br />5. Seleccione **error** en la columna **notificación** adyacente a la advertencia que se debe tratar como un error.|  
+|1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**.<br />2.  Haga clic en la pestaña **Compilar**.<br />3.  Asegúrese de que la casilla **Deshabilitar todas las advertencias** está desactivada.<br />4.  Asegúrese de que la casilla **Tratar todas las advertencias como errores** está desactivada.<br />5.  Seleccione **Error** en la columna **Notificación** adyacente a la advertencia que se debe tratar como un error.|  
   
 ## <a name="example"></a>Ejemplo  
  El siguiente código compila `In.vb` y ordena al compilador que muestre un error para la primera ocurrencia de cada advertencia que encuentra.  

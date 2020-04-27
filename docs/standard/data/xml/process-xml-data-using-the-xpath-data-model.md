@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 536c6fce-1453-4654-9c72-bca54d47e081
 ms.openlocfilehash: f964864577cf08eb074bdfb9af7f7daf3ffb37b9
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710445"
@@ -17,7 +17,7 @@ El espacio de nombres <xref:System.Xml?displayProperty=nameWithType> proporciona
   
  En las siguientes secciones se describe la funcionalidad de la clase <xref:System.Xml.XPath.XPathNavigator> basándose en la clase que la devuelve.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Lectura de datos XML con XPathDocument y XmlDocument](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)  
  Se describe cómo crear un objeto de clase <xref:System.Xml.XPath.XPathDocument> de solo lectura para leer un documento XML y cómo crear un objeto de clase <xref:System.Xml.XmlDocument> editable para leer y editar un documento XML. En este tema también se describe cómo devolver un objeto <xref:System.Xml.XPath.XPathNavigator> desde cada clase para navegar por un documento XML y editarlo.  
   

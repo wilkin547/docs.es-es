@@ -5,13 +5,13 @@ ms.technology: dotnet-standard
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
 ms.openlocfilehash: 4a53ba4fe16a3653b1be380da49e6b75cb347a28
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710679"
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a>Modificación de nodos, contenido y valores en un documento XML
-Existen muchas formas de modificar los nodos y el contenido de un documento. Puede:  
+Existen muchas formas de modificar los nodos y el contenido de un documento. Puede realizar lo siguiente:  
   
 - Cambiar el valor de los nodos utilizando la propiedad <xref:System.Xml.XmlNode.Value%2A>.  
   
@@ -27,9 +27,9 @@ Existen muchas formas de modificar los nodos y el contenido de un documento. Pue
   
 |Tipo de nodo|Datos cambiados|  
 |---------------|------------------|  
-|Attribute|Valor del atributo.|  
+|Atributo|El valor del atributo.|  
 |CDATASection|El contenido de CDATASection.|  
-|Comentario|Contenido del comentario.|  
+|Comentario|El contenido del comentario.|  
 |ProcessingInstruction|El contenido, sin incluir el destino.|  
 |Text|El contenido del texto.|  
 |XmlDeclaration|El contenido de la declaración, sin incluir el marcado `<?xml` y `?>`.|  

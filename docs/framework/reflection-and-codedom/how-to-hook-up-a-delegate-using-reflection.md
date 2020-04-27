@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Enlazar un delegado mediante la reflexión'
+title: Procedimiento para enlazar un delegado mediante la reflexión
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 ms.openlocfilehash: d748d9f8bdd0b4d831880548d4aceb1c77a0b0c4
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79180506"
 ---
-# <a name="how-to-hook-up-a-delegate-using-reflection"></a>Cómo: Enlazar un delegado mediante la reflexión
+# <a name="how-to-hook-up-a-delegate-using-reflection"></a>Procedimiento para enlazar un delegado mediante la reflexión
 Cuando se usa la reflexión para cargar y ejecutar ensamblados, no se pueden usar características del lenguaje como el operador `+=` de C# o la [instrucción AddHandler](../../visual-basic/language-reference/statements/addhandler-statement.md) de Visual Basic para enlazar eventos. Los procedimientos siguientes muestran cómo enlazar un método existente a un evento obteniendo todos los tipos necesarios mediante reflexión y cómo crear un método dinámico utilizando la emisión de la reflexión y enlazarlo a un evento.  
   
 > [!NOTE]
@@ -78,7 +78,7 @@ Cuando se usa la reflexión para cargar y ejecutar ensamblados, no se pueden usa
      [!code-csharp[HookUpDelegate#9](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#9)]
      [!code-vb[HookUpDelegate#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#9)]  
   
-2. Genere un cuerpo del método. Este método carga una cadena, llama a la sobrecarga del método <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> que toma una cadena, saca el valor devuelto de la pila (porque el controlador no tiene tipo de valor devuelto) y vuelve. Para obtener más información sobre cómo emitir métodos dinámicos, vea [Cómo: Definir y ejecutar métodos dinámicos](how-to-define-and-execute-dynamic-methods.md).  
+2. Genere un cuerpo del método. Este método carga una cadena, llama a la sobrecarga del método <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> que toma una cadena, saca el valor devuelto de la pila (porque el controlador no tiene tipo de valor devuelto) y vuelve. Para más información sobre cómo emitir métodos dinámicos, vea [Cómo: Definir y ejecutar métodos dinámicos](how-to-define-and-execute-dynamic-methods.md).  
   
      [!code-cpp[HookUpDelegate#10](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#10)]
      [!code-csharp[HookUpDelegate#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#10)]
@@ -103,7 +103,7 @@ Cuando se usa la reflexión para cargar y ejecutar ensamblados, no se pueden usa
  [!code-csharp[HookUpDelegate#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#1)]
  [!code-vb[HookUpDelegate#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#1)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Emit.DynamicMethod>

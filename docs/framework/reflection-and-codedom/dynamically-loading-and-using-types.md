@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 ms.openlocfilehash: 940f334ec6a42c4d8da461d634051ff979b8f98d
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73130259"
@@ -68,7 +68,7 @@ End Module
   
  El conjunto de miembros disponibles está integrado por los miembros definidos en el tipo o en cualquier tipo base. Si se especifica <xref:System.Reflection.BindingFlags>, se devolverán en el conjunto miembros de cualquier tipo de accesibilidad. Si no se especifica **BindingFlags.NonPublic**, el enlazador deberá imponer reglas de accesibilidad. Cuando especifique la marca de enlace **Public** o **NonPublic**, también debe especificar la marca de enlace **Instance** o **Static**. En caso contrario, no se devolverá ningún miembro.  
   
- Si solo hay un miembro con el nombre especificado, no es necesaria la devolución de la llamada y el enlace se realiza en dicho método. En el caso 1 del ejemplo de código se ilustra este punto: solo hay disponible un método **PrintBob** y, por lo tanto, no es necesaria la devolución de la llamada.  
+ Si solo hay un miembro con el nombre especificado, no es necesaria la devolución de la llamada y el enlace se realiza en dicho método. En el caso 1 del ejemplo de código se ilustra este punto: solo hay disponible un método **PrintBob** y, por tanto, no es necesaria la devolución de la llamada.  
   
  Si hay más de un miembro en el conjunto disponible, todos estos métodos se pasan a **BindToMethod**, que selecciona el método apropiado y lo devuelve. En el caso 2 del ejemplo de código, hay dos métodos denominados **PrintValue**. Mediante una llamada a **BindToMethod**, se selecciona el método apropiado.  
   
@@ -100,5 +100,5 @@ End Module
 
 - <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
-- [Viewing Type Information](viewing-type-information.md) (Ver información tipos)
+- [Ver información tipos](viewing-type-information.md)
 - [Conversión de tipos en .NET Framework](../../standard/base-types/type-conversion.md)

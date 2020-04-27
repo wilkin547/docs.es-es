@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: ce2df341-a1a4-4e97-8e1b-cd45b8e3e71e
 ms.openlocfilehash: dd3292620cafc4e5d2494b3b5e18e04691910dc4
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75711199"
@@ -115,7 +115,7 @@ public class Sample
 
 Este ejemplo muestra el siguiente resultado:
 
-**Resultado**
+**Salida**
 
 Muestra todos los atributos en la colección.
 
@@ -131,7 +131,7 @@ La información de una colección de atributos puede recuperarse por nombre o po
 
 Como **XmlAttributeCollection** es una colección y se puede iterar por nombre o por índice, este ejemplo muestra la selección del primer atributo en la colección mediante un índice de base cero y mediante **baseuri.xml** como archivo de entrada.
 
-### <a name="input"></a>Input
+### <a name="input"></a>Entrada
 
 ```xml
 <!-- XML fragment -->

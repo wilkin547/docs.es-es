@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
 ms.openlocfilehash: b37cb0f4bf9a85053d70d549ae005c7d50a50bc0
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710809"
@@ -54,7 +54,7 @@ Algunos comportamientos son únicos de la implementación de la clase <xref:Syst
 
 ## <a name="xslsort"></a>xsl:sort
 
-Al utilizar una transformación para ordenar, en la recomendación de XSLT versión 1.0 de W3C se realizan algunas observaciones, Son:
+Al utilizar una transformación para ordenar, en la recomendación de XSLT versión 1.0 de W3C se realizan algunas observaciones, Son estos:
 
 - Aunque dos procesadores XSLT pueden ser compatibles, pueden ordenar de forma diferente.
 
@@ -67,7 +67,7 @@ En la siguiente tabla se muestra el comportamiento de ordenación implementado p
 |Tipo de datos|Comportamiento de ordenación|
 |---------------|----------------------|
 |Text|Los datos se ordenan con el método String.Compare de Common Language Runtime (CLR) y la referencia cultural local. Cuando el tipo de datos es "text", la ordenación en la clase <xref:System.Xml.Xsl.XslTransform> se comporta de forma idéntica a la comparación de cadenas de CLR.|
-|Número|Los valores numéricos se tratan como números XPath y se ordenan según los detalles descritos en la [sección 3.5 de la recomendación de XML Path Language (XPath) Version 1.0](https://www.w3.org/TR/1999/REC-xpath-19991116/#numbers) del W3C.|
+|número|Los valores numéricos se tratan como números XPath y se ordenan según los detalles descritos en la [sección 3.5 de la recomendación de XML Path Language (XPath) Version 1.0](https://www.w3.org/TR/1999/REC-xpath-19991116/#numbers) del W3C.|
 
 ## <a name="optional-features-supported"></a>Características opcionales admitidas
 

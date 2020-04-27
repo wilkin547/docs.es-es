@@ -9,7 +9,7 @@ dev_langs:
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
 ms.openlocfilehash: dbe02242f9bb8654e3f12d87b6ff6c2aea1f76b1
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710120"
@@ -22,7 +22,7 @@ Al atravesar un esquema XML con la API del Modelo de objetos de esquema (SOM), s
 
 Las siguientes propiedades de la clase <xref:System.Xml.Schema.XmlSchema> proporcionan acceso a la colección de todos los elementos globales que se agregan al esquema XML.
 
-|La propiedad|Tipo de objeto almacenado en la colección o matriz|
+|Propiedad.|Tipo de objeto almacenado en la colección o matriz|
 |--------------|---------------------------------------------------|
 |<xref:System.Xml.Schema.XmlSchema.Elements%2A>|<xref:System.Xml.Schema.XmlSchemaElement>|
 |<xref:System.Xml.Schema.XmlSchema.Attributes%2A>|<xref:System.Xml.Schema.XmlSchemaAttribute>|

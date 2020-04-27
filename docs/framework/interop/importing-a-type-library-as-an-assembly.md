@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
 ms.openlocfilehash: e1a21175bcabc72b86a328d4f73ecec37140c304
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73107596"
@@ -28,9 +28,9 @@ Las definiciones de tipos COM residen normalmente en una biblioteca de tipos. Po
 
 Hay dos maneras de hacer que esta información de tipos esté disponible para la aplicación:
 
-- Usar ensamblados de interoperabilidad solo de tiempo de diseño: a partir de .NET Framework 4, puede indicar al compilador que inserte información de tipos del ensamblado de interoperabilidad en el ejecutable. El compilador solo inserta la información de tipos que la aplicación usa. No es necesario implementar el ensamblado de interoperabilidad con la aplicación. Esta es la técnica recomendada.
+- Mediante ensamblados de interoperabilidad solo de tiempo de diseño: A partir de .NET Framework 4, se puede indicar al compilador que inserte información de tipos del ensamblado de interoperabilidad en el archivo ejecutable. El compilador solo inserta la información de tipos que la aplicación usa. No es necesario implementar el ensamblado de interoperabilidad con la aplicación. Esta es la técnica recomendada.
 
-- Implementar ensamblados de interoperabilidad: puede crear una referencia estándar al ensamblado de interoperabilidad. En este caso, el ensamblado de interoperabilidad debe implementarse con la aplicación. Si emplea esta técnica y no usa ningún componente COM privado, haga siempre referencia al ensamblado de interoperabilidad primario (PIA) publicado por el autor del componente COM que va a incorporar en el código administrado. Para más información sobre cómo generar y usar ensamblados de interoperabilidad primarios, vea [Ensamblados de interoperabilidad primarios](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).
+- Mediante la implementación de ensamblados de interoperabilidad: se puede crear una referencia estándar al ensamblado de interoperabilidad. En este caso, el ensamblado de interoperabilidad debe implementarse con la aplicación. Si emplea esta técnica y no usa ningún componente COM privado, haga siempre referencia al ensamblado de interoperabilidad primario (PIA) publicado por el autor del componente COM que va a incorporar en el código administrado. Para más información sobre generar y usar ensamblados de interoperabilidad primarios, vea [Ensamblados de interoperabilidad primarios](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).
 
 Al usar ensamblados de interoperabilidad solo de tiempo de diseño, se puede insertar información de tipos del ensamblado de interoperabilidad primario publicado por el autor del componente COM. En cambio, no es necesario implementar el ensamblado de interoperabilidad primario con la aplicación.
 
@@ -44,7 +44,7 @@ Después de encontrar la biblioteca de tipos que contiene la implementación del
 
 - Programa para la mejora
 
-  Visual Studio convierte automáticamente los tipos COM de una biblioteca de tipos a metadatos en un ensamblado. Para obtener instrucciones, consulte [Cómo: agregar referencias a bibliotecas de tipos](how-to-add-references-to-type-libraries.md).
+  Visual Studio convierte automáticamente los tipos COM de una biblioteca de tipos a metadatos en un ensamblado. Para obtener instrucciones, vea [Cómo: Adición de referencias a bibliotecas de tipos](how-to-add-references-to-type-libraries.md).
 
 - [TlbImp.exe (Importador de la biblioteca de tipos)](../tools/tlbimp-exe-type-library-importer.md)
 

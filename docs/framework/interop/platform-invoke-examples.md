@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 15926806-f0b7-487e-93a6-4e9367ec689f
 ms.openlocfilehash: 358d1ce662d56b8c31124f4b3264ec25a0f94586
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181329"
@@ -29,7 +29,7 @@ En los ejemplos siguientes se muestra cómo definir y llamar a la función **Mes
   
  Para obtener ejemplos adicionales, vea [Serialización de datos con invocación de plataforma](marshaling-data-with-platform-invoke.md).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - [Crear prototipos en código administrado](creating-prototypes-in-managed-code.md)

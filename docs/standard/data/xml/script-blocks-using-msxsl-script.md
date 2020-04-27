@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
 ms.openlocfilehash: a63452df16e452a90eff3977ac8726cc0a5ac439
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710198"
@@ -66,7 +66,7 @@ La clase <xref:System.Xml.Xsl.XslCompiledTransform> admite scripts incrustados m
 ### <a name="importing-namespaces-and-assemblies"></a>Importación de espacios de nombres y ensamblajes  
  La clase <xref:System.Xml.Xsl.XslCompiledTransform> predefine un conjunto de ensamblajes y espacios de nombres que admite de manera predeterminada el elemento `msxsl:script`. Sin embargo, puede utilizar las clases y los miembros que pertenecen a un espacio de nombres que no está en la lista predefinida importando el ensamblaje y el espacio de nombres del bloque `msxsl:script`.  
   
-#### <a name="assemblies"></a>Assemblies  
+#### <a name="assemblies"></a>Ensamblados  
  Se hace referencia a los dos siguientes ensamblajes de manera predeterminada:  
   
 - System.dll  
@@ -89,10 +89,10 @@ La clase <xref:System.Xml.Xsl.XslCompiledTransform> admite scripts incrustados m
   
  El atributo `name` contiene el nombre del ensamblaje y el atributo `href` contiene la ruta al ensamblaje. El nombre del ensamblaje puede ser un nombre completo como, por ejemplo, "System.Data, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", o un nombre corto como, por ejemplo, "System.Web".  
   
-#### <a name="namespaces"></a>Espacios de nombres de  
+#### <a name="namespaces"></a>Espacios de nombres  
  Los siguientes espacios de nombres están incluidos de manera predeterminada:  
   
-- System  
+- Sistema  
   
 - System.Collection  
   
@@ -131,7 +131,7 @@ La clase <xref:System.Xml.Xsl.XslCompiledTransform> admite scripts incrustados m
 #### <a name="calcxsl"></a>calc.xsl  
  [!code-xml[XSLT_Script#3](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Script/XML/calc.xsl#3)]  
   
-### <a name="output"></a>Resultados  
+### <a name="output"></a>Salida  
   
 ```xml  
 <circles xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:user="urn:my-scripts">  

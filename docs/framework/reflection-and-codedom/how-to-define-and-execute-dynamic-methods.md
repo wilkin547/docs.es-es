@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Definir y ejecutar métodos dinámicos'
+title: Procedimiento para definir y ejecutar métodos dinámicos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
 ms.openlocfilehash: 7da9d0bea755b90f73077fcd56558ed66a80e2eb
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73130148"
 ---
-# <a name="how-to-define-and-execute-dynamic-methods"></a>Cómo: Definir y ejecutar métodos dinámicos
+# <a name="how-to-define-and-execute-dynamic-methods"></a>Procedimiento para definir y ejecutar métodos dinámicos
 En los procedimientos siguientes se muestra cómo definir y ejecutar un método dinámico simple y un método dinámico enlazado a una instancia de una clase. Para obtener más información sobre los métodos dinámicos, vea la clase <xref:System.Reflection.Emit.DynamicMethod> y [Reflection Emit Dynamic Method Scenarios](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100)) (Escenarios de métodos dinámicos de emisión de reflexión).  
   
 ### <a name="to-define-and-execute-a-dynamic-method"></a>Para definir y ejecutar un método dinámico  

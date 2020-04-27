@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
 ms.openlocfilehash: e54990785cafd6061c6d53c13af6476a4b46e20e
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78160357"
@@ -47,9 +47,9 @@ DateTime date = new DateTime (2001, 08, 04);
 writer.WriteElementString("Date", XmlConvert.ToString(date));  
 ```  
   
- **Resultado**  
+ **Salida**  
   
- `<Date>2001-08-04T00:00:00</Date>`Operador  
+ `<Date>2001-08-04T00:00:00</Date>`.  
   
  En el código siguiente se convierte un número entero en una cadena:  
   
@@ -65,7 +65,7 @@ Int32 value = 200;
 writer.WriteElementString("Number", XmlConvert.ToString(value));  
 ```  
   
- **Resultado**  
+ **Salida**  
   
  `<Number>200</Number>`  
   

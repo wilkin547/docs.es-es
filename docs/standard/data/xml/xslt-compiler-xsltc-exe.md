@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
 ms.openlocfilehash: 83d880da65c2fc0730819f0a51c4e8b29deb4c8f
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709730"
@@ -21,9 +21,9 @@ El compilador XSLT (xsltc.exe) compila hojas de estilo XSLT y genera un ensambla
 xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]  
 ```  
   
-## <a name="argument"></a>Argument  
+## <a name="argument"></a>Argumento  
   
-|Argument|Descripción|  
+|Argumento|Descripción|  
 |--------------|-----------------|  
 |`sourceFile`|Especifica el nombre de la hoja de estilos. La hoja de estilos debe ser un archivo local o bien estar ubicada en la intranet.|  
   
@@ -32,16 +32,16 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 |Opción|Descripción|  
 |------------|-----------------|  
 |`/c[lass]:` `name`|Especifica el nombre de la clase para la hoja de estilos siguiente. El nombre de la clase puede ser completo.<br /><br /> De forma predeterminada, el nombre de la clase es igual al de la hoja de estilos. Por ejemplo, si se compila la hoja de estilos customer.xsl, el nombre predeterminado de la clase será customers.|  
-|`/debug[`+&#124;-`]`|Especifica si se debe generar o no información de depuración.<br /><br /> Si se especifica la opción `+` o `/debug`, el compilador generará información de depuración y la almacenará en el archivo de base de datos del programa (PDB). El nombre del archivo PDB generado será `assemblyName`.pdb.<br /><br /> Si se especifica la opción `-`, que será la utilizada en caso de que no especifique `/debug`, no se generará información de depuración. Se genera un ensamblado listo para ser distribuido. **Nota:** Si se compila en modo de depuración, es posible que ello afecte significativamente al rendimiento del XSLT.|  
+|`/debug[`+&#124;-`]`|Especifica si se debe generar o no información de depuración.<br /><br /> Si se especifica la opción `+` o `/debug`, el compilador generará información de depuración y la almacenará en el archivo de base de datos del programa (PDB). El nombre del archivo PDB generado será `assemblyName`.pdb.<br /><br /> Si se especifica la opción `-`, que será la utilizada en caso de que no especifique `/debug`, no se generará información de depuración. Se genera un ensamblado listo para ser distribuido. **Nota:**  Si se compila en modo de depuración, es posible que ello afecte significativamente al rendimiento del XSLT.|  
 |`/help`|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
 |`/nologo`|Suprime el mensaje de copyright del compilador.|  
-|`/platform:` `string`|Especifica las plataformas en las que se podrá ejecutar el ensamblado. A continuación se describen los valores permitidos para las plataformas:<br /><br /> `x86` compila el ensamblado de forma que el CLR de 32 bits compatible con x86 pueda ejecutarlo.<br /><br /> `x64` compila el ensamblado de forma que el CLR de 64 bits pueda ejecutarlo en equipos compatibles con el conjunto de instrucciones AMD64 o EM64T.<br /><br /> Itanium compila el ensamblado de forma que Common Language Runtime de 64 bits pueda ejecutarlo en equipos que tengan un procesador Itanium.<br /><br /> `anycpu` compila en ensamblado de forma que se pueda ejecutar en cualquier plataforma. Esta es la opción predeterminada.|  
+|`/platform:` `string`|Especifica las plataformas en las que se podrá ejecutar el ensamblado. A continuación se describen los valores permitidos para las plataformas:<br /><br /> `x86` compila el ensamblado de forma que el CLR de 32 bits compatible con x86 pueda ejecutarlo.<br /><br /> `x64` compila el ensamblado de forma que el CLR de 64 bits pueda ejecutarlo en equipos compatibles con el conjunto de instrucciones AMD64 o EM64T.<br /><br /> Itanium compila el ensamblado de forma que Common Language Runtime de 64 bits pueda ejecutarlo en equipos que tengan un procesador Itanium.<br /><br /> `anycpu` compila en ensamblado de forma que se pueda ejecutar en cualquier plataforma. Este es el valor predeterminado.|  
 |`/out:` `assemblyName`|Especifica el nombre del ensamblado que se va a generar. De forma predeterminada, el nombre del ensamblado es el mismo que el de la hoja de estilos, o bien de la primera hoja de estilos, en caso de existir varias.<br /><br /> Si la hoja de estilos contiene scripts, éstos se guardarán en un ensamblado aparte. Los nombres de los ensamblados de scripts se generarán a partir del nombre del ensamblado principal. Por ejemplo, si especificó que el nombre del ensamblado sería CustOrders.dll, el nombre del primer ensamblado de script será CustOrders_Script1.dll.|  
 |`/settings:` `document+-, script+-, DTD+-,`|Especifica si se permiten o no funciones `document()`, scripts XSLT o definiciones de tipo de documento (DTD) en la hoja de estilos.<br /><br /> De forma predeterminada, no habrá compatibilidad con DTD, con las funciones `document()` y con los scripts.|  
 |`@` `file`|Le permite especificar un archivo que contenga las opciones del compilador.|  
 |`?`|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Las soluciones XSLT puede estar compuestas por múltiples módulos de hojas de estilos. La herramienta xsltc.exe genera ensamblados a partir de hojas de estilos. Dichos ensamblados se pueden pasar al método <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>. Esto puede ayudar a reducir los costos de implementación en ciertos escenarios de XSLT.  
   
 > [!NOTE]
@@ -83,5 +83,5 @@ xsltc booksort.xsl output.xsl
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Xml.Xsl.XslCompiledTransform>
-- [Realización de una transformación XSLT mediante un ensamblado](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)
+- [Cómo: Realizar una transformación XSLT mediante un ensamblado](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)
 - [Transformaciones XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
