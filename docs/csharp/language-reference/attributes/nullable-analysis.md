@@ -2,12 +2,12 @@
 title: 'Atributos reservados de C#: Análisis estático que admite un valor NULL'
 ms.date: 04/14/2020
 description: El compilador interpreta estos atributos para proporcionar un mejor análisis estático para los tipos de referencia que aceptan y que no aceptan valores NULL.
-ms.openlocfilehash: 0315d78db7517541efe578d8675c0f2fe45f5aea
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 33521133a6a01196e6e1ab9c3cdc191a24f1ecf3
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389815"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102715"
 ---
 # <a name="reserved-attributes-contribute-to-the-compilers-null-state-static-analysis"></a>Los atributos reservados contribuyen al análisis estático del estado NULL del compilador.
 
@@ -129,7 +129,7 @@ public Customer FindCustomer(string lastName, string firstName)
 
 Probablemente haya escrito un método como este para devolver `null` cuando no se encuentra el nombre que se busca. `null` indica claramente que no se ha encontrado el registro. En este ejemplo, es probable que cambie el tipo de valor devuelto de `Customer` a `Customer?`. Al declarar el valor devuelto como un tipo de referencia que admite un valor NULL, se especifica claramente la intención de esta API.
 
-Por los motivos descritos en [Definiciones genéricas y nulabilidad](../../nullable-attributes.md#generic-definitions-and-nullability), esa técnica no funciona con los métodos genéricos. Puede tener un método genérico que siga un patrón similar:
+Por los motivos descritos en [Definiciones genéricas y nulabilidad](../../nullable-migration-strategies.md#generic-definitions-and-nullability), esa técnica no funciona con los métodos genéricos. Puede tener un método genérico que siga un patrón similar:
 
 ```csharp
 public T Find<T>(IEnumerable<T> sequence, Func<T, bool> match)

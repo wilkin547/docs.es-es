@@ -2,12 +2,12 @@
 title: 'Control de versiones del lenguaje C#: Guía de C#'
 description: Obtenga información sobre cómo se determina la versión del lenguaje C# en función del proyecto y los motivos de esa decisión. Obtenga información sobre cómo invalidar el valor predeterminado de forma manual.
 ms.date: 02/21/2020
-ms.openlocfilehash: ef7275aad7638f52ecbfca1dfbdb962ae242fb48
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 850c4a860878593d80aaa3b7b38efaff9e003f43
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398236"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102664"
 ---
 # <a name="c-language-versioning"></a>Control de versiones del lenguaje C#
 
@@ -20,7 +20,7 @@ C# 8.0 (y versiones posteriores) solo se admite en .NET Core 3.x y versiones m
 - La implementación de miembro de interfaz predeterminada requiere nuevas características en el CLR de .NET Core 3.0.
 - Las secuencias asincrónicas requieren los nuevos tipos <xref:System.IAsyncDisposable?displayProperty=nameWithType>, <xref:System.Collections.Generic.IAsyncEnumerable%601?displayProperty=nameWithType> y <xref:System.Collections.Generic.IAsyncEnumerator%601?displayProperty=nameWithType>.
 - Los índices y los intervalos requieren los nuevos tipos <xref:System.Index?displayProperty=nameWithType> y <xref:System.Range?displayProperty=nameWithType>.
-- Los tipos de referencia que admiten un valor NULL hacen uso de varios [atributos](../nullable-attributes.md) para proporcionar mejores advertencias. Esos atributos se han agregado en .NET Core 3.0. Otras plataformas de destino no se han anotado con ninguno de estos atributos. Esto significa que es posible que las advertencias que admiten un valor NULL no reflejen con precisión los posibles problemas.
+- Los tipos de referencia que admiten un valor NULL hacen uso de varios [atributos](attributes/nullable-analysis.md) para proporcionar mejores advertencias. Esos atributos se han agregado en .NET Core 3.0. Otras plataformas de destino no se han anotado con ninguno de estos atributos. Esto significa que es posible que las advertencias que admiten un valor NULL no reflejen con precisión los posibles problemas.
 
 ## <a name="defaults"></a>Valores predeterminados
 

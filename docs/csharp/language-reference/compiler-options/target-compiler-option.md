@@ -9,12 +9,12 @@ helpviewer_keywords:
 - assemblies [C#], compiling
 - -target compiler options [C#]
 ms.assetid: a18bbd8e-bbf7-49e7-992c-717d0eb1f76f
-ms.openlocfilehash: af7bd917f57c8752a2026fbb98aa8b22adc98db7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea5481810e629d911c4d5aba62e60c98d0783f34
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74204516"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644354"
 ---
 # <a name="-target-c-compiler-options"></a>-target (Opciones del compilador de C#)
 La opción del compilador **-target** se puede especificar en uno de estos cuatro formatos:  
@@ -37,7 +37,7 @@ La opción del compilador **-target** se puede especificar en uno de estos cuatr
  [/target:winmdobj](./target-winmdobj-compiler-option.md)  
  Para crear un archivo .winmdobj intermedio.  
   
- A menos que se especifique **-target:module**, **-target** hace que se coloque un manifiesto de ensamblado de .NET Framework en un archivo de salida. Para obtener más información, vea [Ensamblados en .NET](../../../standard/assembly/index.md) y [Atributos comunes](../../programming-guide/concepts/attributes/common-attributes.md).  
+ A menos que se especifique **-target:module**, **-target** hace que se coloque un manifiesto de ensamblado de .NET Framework en un archivo de salida. Para obtener más información, vea [Ensamblados en .NET](../../../standard/assembly/index.md) y [Atributos comunes](../attributes/global.md).  
   
  El manifiesto de ensamblado se coloca en el primer archivo de salida .exe de la compilación o en el primer archivo DLL si no hay ningún archivo de salida .exe. Por ejemplo, en la siguiente línea de comandos, el manifiesto se colocará en `1.exe`:  
   

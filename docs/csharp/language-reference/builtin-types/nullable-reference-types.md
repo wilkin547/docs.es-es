@@ -2,12 +2,12 @@
 title: 'Tipos de referencia que aceptan valores NULL: referencia de C#'
 description: Información sobre los tipos de referencia que aceptan valores NULL de C# y su uso
 ms.date: 04/06/2020
-ms.openlocfilehash: cbc7397ac76b43b79a4168f4c61fe2c631b4a46b
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: cb61b162b06faa51faabbcdd91e55618cdeaca73
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888291"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102702"
 ---
 # <a name="nullable-reference-types-c-reference"></a>Tipos de referencia que aceptan valores NULL (referencia de C#)
 
@@ -61,11 +61,11 @@ En el fragmento de código siguiente se muestra dónde el compilador emite adver
 
 :::code language="csharp" source="snippets/NullableReferenceTypes.cs" id="SnippetLocalWarnings":::
 
-En los ejemplos anteriores se muestra el análisis estático del compilador para determinar el estado NULL de las variables de referencia. El compilador aplica las reglas de lenguaje a las asignaciones y comprobaciones de valores NULL para informar de su análisis.  El compilador no puede hacer suposiciones sobre la semántica de métodos o propiedades. Si llama a métodos que realizan comprobaciones de valores NULL, el compilador no puede saber que estos métodos afectan al estado NULL de una variable. Hay una serie de atributos que puede agregar a las API para informar al compilador sobre la semántica de los argumentos y los valores devueltos. Estos atributos se han aplicado a muchas API comunes de las bibliotecas de .NET Core. Por ejemplo, <xref:System.String.IsNullOrEmpty%2A> se ha actualizado y el compilador interpreta correctamente ese método como una comprobación de valores NULL. Para obtener más información sobre los atributos que se aplican al análisis estático de estado NULL, consulte el artículo sobre [atributos que aceptan valores NULL](../../nullable-attributes.md).
+En los ejemplos anteriores se muestra el análisis estático del compilador para determinar el estado NULL de las variables de referencia. El compilador aplica las reglas de lenguaje a las asignaciones y comprobaciones de valores NULL para informar de su análisis.  El compilador no puede hacer suposiciones sobre la semántica de métodos o propiedades. Si llama a métodos que realizan comprobaciones de valores NULL, el compilador no puede saber que estos métodos afectan al estado NULL de una variable. Hay una serie de atributos que puede agregar a las API para informar al compilador sobre la semántica de los argumentos y los valores devueltos. Estos atributos se han aplicado a muchas API comunes de las bibliotecas de .NET Core. Por ejemplo, <xref:System.String.IsNullOrEmpty%2A> se ha actualizado y el compilador interpreta correctamente ese método como una comprobación de valores NULL. Para obtener más información sobre los atributos que se aplican al análisis estático de estado NULL, consulte el artículo sobre [atributos que aceptan valores NULL](../attributes/nullable-analysis.md).
 
 ## <a name="setting-the-nullable-context"></a>Establecimiento del contexto que acepta valores NULL
 
-Hay dos formas de controlar el contexto que acepta valores NULL. En el nivel de proyecto, puede agregar la configuración del proyecto `<Nullable>enable</Nullable>`. En un archivo C# de código fuente único, puede agregar el pragma `#nullable enable` para habilitar el contexto que acepta valores NULL. Consulte el artículo sobre cómo [establecer una estrategia que acepte valores NULL](../../nullable-attributes.md).
+Hay dos formas de controlar el contexto que acepta valores NULL. En el nivel de proyecto, puede agregar la configuración del proyecto `<Nullable>enable</Nullable>`. En un archivo C# de código fuente único, puede agregar el pragma `#nullable enable` para habilitar el contexto que acepta valores NULL. Consulte el artículo sobre cómo [establecer una estrategia que acepte valores NULL](../../nullable-migration-strategies.md).
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 

@@ -3,12 +3,12 @@ title: 'Estructura del programa de C#: un paseo por el lenguaje C#'
 description: Conozca más acerca de los bloques de compilación básicos de un programa de C#.
 ms.date: 02/25/2020
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-ms.openlocfilehash: c09c11a4dd957b29b2adb7aaa8d68a50f30620b6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c0a4dcaed7b53a7da7008d6000b3bec2ffe3ee7b
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156836"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82141015"
 ---
 # <a name="program-structure"></a>Estructura del programa
 
@@ -16,7 +16,7 @@ Los principales conceptos organizativos en C# son ***programas***, ***espacios d
 
 Puede crear un proyecto de biblioteca denominado *acme* mediante el comando `dotnet new`:
 
-```console
+```dotnetcli
 dotnet new classlib -o acme
 ```
 
@@ -26,7 +26,7 @@ En ese proyecto, declare una clase denominada `Stack` en un espacio de nombres l
 
 El nombre completo de esta clase es `Acme.Collections.Stack`. La clase contiene varios miembros: un campo denominado `top`, dos métodos denominados `Push` y `Pop`, y una clase anidada denominada `Entry`. La clase `Entry` contiene además tres miembros: un campo denominado `next`, un campo denominado `data` y un constructor. El comando:
 
-```console
+```dotnetcli
 dotnet build
 ```
 
@@ -48,7 +48,7 @@ El archivo *csproj* del proyecto del programa anterior debe incluir un nodo de r
 
 Después de agregarlo, `dotnet build` crea un ensamblado ejecutable denominado `example.exe` que, cuando se ejecuta, produce esta salida:
 
-```console
+```dotnetcli
 100
 10
 1
