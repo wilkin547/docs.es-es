@@ -2,12 +2,12 @@
 title: Patrones de resistencia de las aplicaciones
 description: Diseño de aplicaciones .NET nativas en la nube para Azure | Patrones de resistencia de aplicaciones
 ms.date: 06/30/2019
-ms.openlocfilehash: 13811efaa88e0bd2824add1c8712b78b18d46375
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6805603f349578655b2535c7346af368c5ce1841
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841892"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82199695"
 ---
 # <a name="application-resiliency-patterns"></a>Patrones de resistencia de las aplicaciones
 
@@ -33,7 +33,7 @@ Como se recomienda en el capítulo 1, los desarrolladores de Microsoft que crean
 
 A continuación, vamos a expandir los patrones de reintento y de disyuntor.
 
-### <a name="retry-pattern"></a>Patrón de reintento
+### <a name="retry-pattern"></a>Patrón Retry
 
 En un entorno de nube nativo distribuido, las llamadas a los servicios y a los recursos en la nube pueden producir errores debido a errores transitorios (de corta duración), que normalmente se corrigen después de un breve período de tiempo. La implementación de una estrategia de reintento ayuda a un servicio nativo de la nube a administrar estos escenarios.
 
@@ -56,7 +56,7 @@ Es importante aumentar el período de interrupción antes de reintentar la llama
 
 Aunque el patrón de reintento puede ayudar a salvar una solicitud en un error parcial, existen situaciones en las que los errores pueden deberse a eventos imprevistos que requerirán períodos más largos de tiempo para resolverse. La gravedad de estos errores puede ir desde una pérdida parcial de conectividad hasta el fallo total del servicio. En estas situaciones, es poco puntual que una aplicación vuelva a intentar continuamente una operación que es improbable que se realice correctamente.
 
-Para empeorar todo, la ejecución de operaciones de reintento continuo en un servicio que no responde puede pasar a un escenario de denegación de servicio autoimpuesta en el que se inunda el servicio con llamadas continuas que agotan los recursos como la memoria, los subprocesos y la base de datos conexiones, que provocan errores en partes no relacionadas del sistema que utilizan los mismos recursos.
+Para empeorar todo, la ejecución de operaciones de reintento continuo en un servicio que no responde puede pasar a un escenario de denegación de servicio autoimpuesta en el que se inunda el servicio con llamadas continuas que agotan los recursos como la memoria, los subprocesos y las conexiones de base de datos, lo que provoca errores en partes no relacionadas del sistema que usan los mismos recursos.
 
 En estas situaciones, sería preferible que la operación produjera un error inmediatamente y solo intentara invocar el servicio si es probable que se realizara correctamente.
 

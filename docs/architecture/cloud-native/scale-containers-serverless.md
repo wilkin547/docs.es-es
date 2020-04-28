@@ -1,30 +1,33 @@
 ---
 title: Escalado de contenedores y aplicaciones sin servidor
-description: Escalado de aplicaciones nativas en la nube con Azure Kubernetes Service para satisfacer la demanda de los usuarios mediante el aumento de los recursos individuales del equipo o el aumento del número de máquinas en un clúster de aplicaciones.
-ms.date: 09/23/2019
-ms.openlocfilehash: 2d0537fb3ed56beb4eccbf9b8c34a5d87793413b
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+description: Escalado de aplicaciones nativas en la nube con Azure Kubernetes Service para satisfacer la demanda de los usuarios.
+ms.date: 04/13/2020
+ms.openlocfilehash: b4580e6994611ad394bbaa2d5bb07f64c2798569
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "73841016"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82199929"
 ---
 # <a name="scaling-containers-and-serverless-applications"></a>Escalado de contenedores y aplicaciones sin servidor
 
-Hay dos formas típicas de escalar una aplicación: escalar verticalmente y escalar horizontalmente. El primero hace referencia a la adición de funcionalidades a un host, mientras que la última hace referencia a agregar al número total de hosts. Una analogía común que se usa para pensar en esto es cómo conseguirse a usted mismo y a algunos amigos de la ciudad. Si solo es un amigo, podría saltar a su coche de carreras de dos plazas. Pero si es tres o cuatro, es posible que necesite realizar una de las SUVs o un furgoneta, escalando verticalmente para aumentar la capacidad. Sin embargo, cuando el número total salta hasta una docena o más, es probable que necesite realizar varios vehículos (a menos que alguien impulse un bus), que muestra el concepto de escalado horizontal mediante la adición de más instancias (en este caso, más vehículos). Veamos cómo se aplica a nuestras aplicaciones.
+Hay dos formas de escalar una aplicación: hacia arriba o hacia fuera. El primero hace referencia a agregar capacidad a un solo recurso, mientras que el último hace referencia a la adición de más recursos para aumentar la capacidad.
 
 ## <a name="the-simple-solution-scaling-up"></a>Solución simple: escalado vertical
 
-El proceso de actualización de los servidores existentes para darles más recursos (CPU, memoria, velocidad de e/s de disco, velocidad de e/s de red) se conoce como *escalado*vertical. En las aplicaciones nativas de la nube, el escalado vertical no se refiere normalmente a la compra e instalación de hardware real en máquinas físicas, así que elegir un plan más capaz en una lista de opciones disponibles. Normalmente, las aplicaciones nativas en la nube se escalan verticalmente mediante la modificación del tamaño de la máquina virtual (VM) que se usa para hospedar los nodos individuales en el grupo de nodos de Kubernetes. Los conceptos de Kubernetes, como los nodos, los clústeres y los pods se describen en [la sección siguiente](leverage-containers-orchestrators.md). Azure admite una amplia variedad de tamaños de máquina virtual que ejecutan [Windows](https://docs.microsoft.com/azure/virtual-machines/windows/sizes?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) y [Linux](https://docs.microsoft.com/azure/virtual-machines/linux/sizes). Para escalar verticalmente la aplicación, cree un nuevo grupo de nodos con un tamaño de máquina virtual de nodo mayor y, a continuación, migre las cargas de trabajo al nuevo grupo. Esto requiere [varios grupos de nodos para el clúster de AKS](https://docs.microsoft.com/azure/aks/use-multiple-node-pools), una característica que se encuentra actualmente en versión preliminar. Las aplicaciones sin servidor se escalan verticalmente eligiendo un [plan Premium](https://docs.microsoft.com/azure/azure-functions/functions-scale) y tamaños de instancia Premium o eligiendo un plan de App Service dedicado diferente.
+La actualización de un servidor host existente con mayor CPU, memoria, velocidad de e/s de disco y velocidad de e/s de red se conoce como *escalado*vertical. El escalado vertical de una aplicación nativa en la nube implica la elección de más recursos para el proveedor en la nube. Por ejemplo, puede tener un nuevo grupo de nodos con máquinas virtuales de mayor tamaño en el clúster de Kubernetes. A continuación, migre los servicios en contenedores al nuevo grupo.
+
+Las aplicaciones sin servidor se escalan verticalmente eligiendo el [plan de funciones Premium](https://docs.microsoft.com/azure/azure-functions/functions-scale) o los tamaños de instancia Premium de un plan de App Service dedicado.
 
 ## <a name="scaling-out-cloud-native-apps"></a>Escalado horizontal de aplicaciones nativas en la nube
 
-Las aplicaciones nativas para la nube admiten el escalado horizontal mediante la adición de nodos o pods adicionales a las solicitudes de servicio. Esto puede realizarse manualmente ajustando los valores de configuración de la aplicación (por ejemplo, [escalando un grupo de nodos](https://docs.microsoft.com/azure/aks/use-multiple-node-pools#scale-a-node-pool-manually)) o mediante el *escalado automático*. El escalado automático ajusta los recursos usados por una aplicación para responder a la demanda, de forma similar a como un termostato responde a la temperatura mediante una llamada a para calefacción o refrigeración adicional. Al usar el escalado automático, se deshabilita el escalado manual.
+A menudo, las aplicaciones nativas en la nube experimentan grandes fluctuaciones en la demanda y requieren una escala en el aviso de un momento. Favorecen el escalado horizontal. El escalado horizontal se realiza horizontalmente agregando equipos adicionales (denominados nodos) o instancias de aplicación a un clúster existente. En Kubernetes, se puede escalar manualmente ajustando los valores de configuración de la aplicación (por ejemplo, [escalando un grupo de nodos](https://docs.microsoft.com/azure/aks/use-multiple-node-pools#scale-a-node-pool-manually)) o mediante el escalado automático.
 
-Los clústeres de AKS se pueden escalar de una de estas dos maneras:
+Los clústeres de AKS se pueden escalar automáticamente de una de estas dos maneras:
 
-- El [escalador automático del clúster](https://docs.microsoft.com/azure/aks/cluster-autoscaler) supervisa los pods que no se pueden programar en los nodos debido a las restricciones de recursos. Agrega nodos adicionales según sea necesario.
-- El **escalador automático del Pod horizontal** usa el servidor de métricas en un clúster de Kubernetes para supervisar las demandas de recursos de los pods. Si un servicio necesita más recursos, el escalado automático aumenta el número de pods.
+En primer lugar, el [escalador automático del Pod horizontal](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-scale#autoscale-pods) supervisa la demanda de recursos y escala automáticamente las réplicas de POD para que se cumplan. Cuando aumenta el tráfico, se aprovisionan réplicas adicionales automáticamente para escalar horizontalmente los servicios. Del mismo modo, cuando la demanda disminuye, se quitan del escalado en los servicios. Defina la métrica en la que se va a escalar, por ejemplo, el uso de la CPU. También puede especificar el número mínimo y máximo de réplicas que se van a ejecutar. AKS supervisa esa métrica y escala en consecuencia.
+
+A continuación, la característica de [escalado automático del clúster de AKS](https://docs.microsoft.com/azure/aks/cluster-autoscaler) le permite escalar automáticamente los nodos de proceso en un clúster de Kubernetes para satisfacer la demanda. Con él, puede Agregar automáticamente nuevas máquinas virtuales al conjunto de escalado de máquinas virtuales de Azure subyacente siempre que se necesite más capacidad de proceso de. También quita los nodos cuando ya no son necesarios.
 
 En la figura 3-13 se muestra la relación entre estos dos servicios de escalado.
 
@@ -32,18 +35,13 @@ En la figura 3-13 se muestra la relación entre estos dos servicios de escalado.
 
 **Figura 3-13**. Escalado horizontal de un plan de App Service.
 
-Estos servicios también pueden reducir el número de pods o nodos según sea necesario. Estos dos servicios pueden funcionar juntos y, a menudo, se implementan juntos en un clúster. Cuando se combina, el escalador automático del Pod horizontal se centra en ejecutar el número de pods necesarios para satisfacer la demanda de la aplicación. El escalador automático del clúster se centra en ejecutar el número de nodos necesarios para admitir los pods programados.
+En conjunto, ambos garantizan un número óptimo de instancias de contenedor y nodos de proceso para admitir la demanda fluctuante. El escalador automático del Pod horizontal optimiza el número de pods requeridos. El escalador automático del clúster optimiza el número de nodos necesarios.
 
-### <a name="scaling-azure-functions"></a>Azure Functions de escalado
+### <a name="scaling-azure-functions"></a>Escalado de Azure Functions
 
-Azure Functions admite automáticamente el escalado horizontal. El plan de consumo predeterminado agrega (y quita) recursos dinámicamente en función del número de eventos que entran en la activación. Solo se le cobrará por los recursos de proceso que se usan cuando se ejecutan las funciones en función del número de ejecuciones, el tiempo de ejecución y la memoria usada. Con el plan Premium, obtiene estas mismas características, pero también puede controlar los tamaños de instancia que se usan, tener instancias ya preparadas (para evitar retrasos de inicio en frío) y configurar máquinas virtuales dedicadas en las que ejecutar las funciones. Aunque la configuración predeterminada debe proporcionar una solución económica y escalable para la mayoría de las aplicaciones, la opción Premium permite a los desarrolladores disponer de flexibilidad para los requisitos de Azure Functions personalizados.
+Azure Functions escalar horizontalmente de forma automática a petición. Los recursos del servidor se asignan y se quitan dinámicamente según el número de eventos desencadenados. Solo se cobran los recursos de proceso consumidos cuando se ejecutan las funciones. La facturación se basa en el número de ejecuciones, el tiempo de ejecución y la memoria usada.
 
-## <a name="references"></a>Referencias
-
-- [Grupos de varios nodos de AKS](https://docs.microsoft.com/azure/aks/use-multiple-node-pools)
-- [Escalador automático de clústeres de AKS](https://docs.microsoft.com/azure/aks/cluster-autoscaler)
-- [Tutorial: escalado de aplicaciones en AKS](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-scale)
-- [Escalado y hospedaje Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-scale)
+Aunque el plan de consumo predeterminado proporciona una solución económica y escalable para la mayoría de las aplicaciones, la opción Premium permite a los desarrolladores disponer de flexibilidad para los requisitos de Azure Functions personalizados. La actualización al plan Premium proporciona control sobre los tamaños de instancia, instancias previamente preparadas (para evitar retrasos de inicio en frío) y máquinas virtuales dedicadas.
 
 >[!div class="step-by-step"]
 >[Anterior](deploy-containers-azure.md)

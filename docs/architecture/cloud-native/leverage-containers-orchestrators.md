@@ -1,75 +1,98 @@
 ---
 title: Aprovechamiento de contenedores y orquestadores
-description: Aprovechamiento de contenedores Docker y Kubernetes Orchestrators en Azure
-ms.date: 06/30/2019
-ms.openlocfilehash: 44b2fff8c9c88717d83e41a421b9817e2cc68135
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+description: Aprovechar los contenedores de Docker y los orquestadores de Kubernetes en Azure
+ms.date: 04/13/2020
+ms.openlocfilehash: 3d94433250f02a8df2c27ebc89a101e1e8d15030
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989043"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82199838"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>Aprovechamiento de contenedores y orquestadores
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Los contenedores y los orquestadores están diseñados para resolver problemas comunes a los enfoques de implementación monolíticos.
+Los contenedores y los orquestadores están diseñados para solucionar problemas comunes a los enfoques de implementación monolíticas.
 
-## <a name="challenges-with-monolithic-deployments"></a>Desafíos con despliegues monolíticos
+## <a name="challenges-with-monolithic-deployments"></a>Desafíos con las implementaciones monolíticas
 
-Tradicionalmente, la mayoría de las aplicaciones se han implementado como una sola unidad. Estas aplicaciones se conocen como monolito. Este enfoque general de implementación de aplicaciones como unidades individuales, incluso si se componen de varios módulos o ensamblados, se conoce como arquitectura monolítica, como se muestra en la figura 3-1.
+Tradicionalmente, la mayoría de las aplicaciones se han implementado como una sola unidad. Estas aplicaciones se conocen como monolito. Este enfoque general de la implementación de aplicaciones como unidades únicas incluso si están compuestas de varios módulos o ensamblados se conoce como arquitectura monolítica, como se muestra en la figura 3-1.
 
 ![Arquitectura monolítica.](./media/monolithic-architecture.png)
 
 **Figura 3-1**. Arquitectura monolítica.
 
-Aunque tienen el beneficio de la simplicidad, las arquitecturas monolíticas se enfrentan a una serie de desafíos:
+Aunque tienen la ventaja de simplicidad, las arquitecturas monolíticas se enfrentan a una serie de desafíos:
 
-### <a name="deployments"></a>Implementaciones
+### <a name="deployment"></a>Implementación
 
-La implementación en aplicaciones monolíticas normalmente requiere reiniciar toda la aplicación, incluso si solo se reemplaza un módulo pequeño. Dependiendo del número de máquinas que hospedan la aplicación, esto puede provocar tiempo de inactividad durante las implementaciones.
+Las aplicaciones monolíticas requieren una implementación completa de toda la aplicación, incluso si solo se ha realizado un pequeño cambio. Las implementaciones completas pueden ser costosas y propensas a errores. Además, requieren un reinicio de la aplicación, lo que afecta temporalmente a la falta de disponibilidad.
 
-### <a name="hosting"></a>Hospedaje
+### <a name="scaling"></a>Ampliación
 
-Las aplicaciones monolíticas se hospedan completamente en una sola instancia de máquina. Esto puede requerir hardware de mayor capacidad de lo que cualquier módulo de una aplicación distribuida necesitaría. Además, si alguna parte de la aplicación se convierte en un cuello de botella, toda la aplicación debe implementarse en nodos de máquina adicionales para escalar horizontalmente.
+Una aplicación monolítica se hospeda por completo en una sola instancia de máquina, lo que a menudo requiere hardware de alta capacidad. Si alguna parte del monolito requiere escalado, se debe implementar otra copia de toda la aplicación en otro equipo. Con un monolito, no es posible escalar los componentes de la aplicación de forma individual; es todo o nada. El escalado de componentes que no requieren escalado produce un uso de recursos ineficaz y costoso.
 
 ### <a name="environment"></a>Entorno
 
-Las aplicaciones monolíticas se implementan normalmente en un entorno de hospedaje existente (sistema operativo, marcos instalados, etc.). Es posible que este entorno no coincida con el entorno en el que se desarrolló o probó la aplicación. Las incoherencias en el entorno de la aplicación son una fuente común de problemas para las implementaciones monolíticas.
+Las aplicaciones monolíticas suelen implementarse en un entorno de hospedaje con un sistema operativo, un tiempo de ejecución y dependencias de biblioteca preinstalados. Es posible que este entorno no coincida con el momento en el que se desarrolló o probó la aplicación. Las incoherencias entre entornos de aplicación son una fuente común de problemas en las implementaciones monolíticas.
 
-### <a name="coupling"></a>Acoplamiento
+### <a name="coupling"></a>Socia
 
-Es probable que las aplicaciones monolíticas tengan una gran cantidad de acoplamiento entre diferentes partes de la aplicación y entre la aplicación y su entorno. Esto puede dificultar la factorización de un servicio o preocupación en particular más adelante, con el fin de aumentar su escalabilidad o intercambio en una implementación alternativa. Este acoplamiento también conduce a impactos potenciales mucho mayores para los cambios en el sistema, lo que requiere pruebas exhaustivas en aplicaciones más grandes.
+Es probable que una aplicación monolítica experimente un acoplamiento alto entre sus componentes funcionales. Sin límites estrictos, los cambios del sistema suelen producir efectos secundarios no deseados y costosos. Las nuevas características y correcciones se vuelven difíciles de implementar y requieren mucho tiempo. Las actualizaciones requieren pruebas exhaustivas. El acoplamiento también dificulta la refactorización de los componentes o el intercambio en implementaciones alternativas. Incluso cuando se construye con una separación estricta de problemas, la arquitectura de erosión se establece en, ya que la base de código monolítica se deteriora con "casos especiales".
 
-### <a name="technology-choice"></a>Elección de tecnología
+### <a name="platform-lock-in"></a>Bloqueo de plataforma
 
-Las aplicaciones monolíticas se crean e implementan como una unidad. Esto ofrece simplicidad y uniformidad, pero puede ser una barrera para la innovación. Aunque una nueva característica o módulo en el sistema podría ser más adecuado para una plataforma o marco más moderno, es probable que se construya utilizando el enfoque actual de la aplicación en aras de la coherencia, así como la facilidad de desarrollo e implementación.
+Una aplicación monolítica se construye con una sola pila de tecnología. A la vez que ofrece uniformidad, este compromiso puede convertirse en una barrera para la innovación. Las nuevas características y componentes se crearán con la pila actual de la aplicación, incluso si las tecnologías más modernas pueden ser una mejor opción. Un riesgo a largo plazo es que la pila de tecnología esté obsoleta y obsoleta. Rediseñar una aplicación completa en una plataforma nueva y más moderna es más costosa y arriesgada.
 
-## <a name="what-are-the-benefits-of-containers-and-orchestrators"></a>¿Cuáles son los beneficios de los contenedores y orquestadores?
+## <a name="what-are-the-benefits-of-containers-and-orchestrators"></a>¿Cuáles son las ventajas de los contenedores y los orquestadores?
 
-Docker es la plataforma de creación de imágenes y administración de contenedores más popular y le permite trabajar rápidamente con contenedores en Linux y Windows. Los contenedores proporcionan entornos de aplicaciones independientes pero reproducibles que se ejecutan de la misma manera en cualquier sistema. Esto los hace perfectos para desarrollar y hospedar aplicaciones y componentes de aplicaciones en aplicaciones nativas de la nube. Los contenedores están aislados entre sí, por lo que dos contenedores en el mismo hardware host pueden tener diferentes versiones de software e incluso sistema operativo instalados, sin que las dependencias causen conflictos.
+Presentamos los contenedores en el capítulo 1. Hemos resaltado el modo en que Cloud Native Computing Foundation (CNCF) clasifica la inclusión en contenedores como el primer paso de su [mapa de rastros nativo](https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png) de la nube para empresas que comienzan su viaje nativo en la nube. En esta sección se describen las ventajas de los contenedores.
 
-Además, los contenedores se definen mediante archivos simples que se pueden proteger en el control de código fuente. A diferencia de los servidores completos, incluso las máquinas virtuales, que con frecuencia requieren trabajo manual para aplicar actualizaciones o instalar servicios adicionales, la infraestructura de contenedor puede controlarse fácilmente. Por lo tanto, las aplicaciones creadas para ejecutarse en contenedores se pueden desarrollar, probar e implementar con herramientas automatizadas como parte de una canalización de compilación.
+Docker es la plataforma de administración de contenedores más conocida. Funciona con contenedores en Linux o Windows. Los contenedores proporcionan entornos de aplicación independientes pero reproducibles que se ejecutan de la misma manera en cualquier sistema. Este aspecto hace que sean perfectos para el desarrollo y el hospedaje de servicios nativos de la nube. Los contenedores están aislados entre sí. Dos contenedores del mismo hardware del host pueden tener diferentes versiones de software, sin causar conflictos.
 
-Los contenedores son inmutables. Una vez que tenga la definición de un contenedor, puede volver a crear ese contenedor y se ejecutará exactamente de la misma manera. Esta inmutabilidad se presta al diseño basado en componentes. Si algunas partes de una aplicación no cambian tan a menudo como otras, ¿por qué volver a implementar toda la aplicación cuando puede implementar las partes que cambian con más frecuencia? Diferentes características y preocupaciones transversales de una aplicación se pueden dividir en unidades separadas. En la figura 3-2 se muestra cómo una aplicación monolítica puede aprovechar los contenedores y los microservicios delegando ciertas características o funcionalidades. La funcionalidad restante en la propia aplicación también se ha contenedorizado.
+Los contenedores se definen mediante archivos simples basados en texto que se convierten en artefactos del proyecto y se protegen en el control de código fuente. Mientras que los servidores completos y las máquinas virtuales requieren un esfuerzo manual para actualizar, los contenedores se controlan fácilmente con la versión. Las aplicaciones compiladas para ejecutarse en contenedores se pueden desarrollar, probar e implementar mediante herramientas automatizadas como parte de una canalización de compilación.
 
-![Romper una aplicación monolítica para usar microservicios en el back-end. ](./media/breaking-up-monolith-with-backend-microservices.png)
- **Figura 3-2**. Romper una aplicación monolítica para usar microservicios en el back-end.
+Los contenedores son inmutables. Una vez definido un contenedor, puede volver a crearlo y ejecutarlo exactamente de la misma manera. Esta inmutabilidad se presta a un diseño basado en componentes. Si algunas partes de una aplicación evolucionan de forma diferente a otras, ¿por qué volver a implementar toda la aplicación cuando se puede implementar solo los elementos que cambian con más frecuencia? Las distintas características y aspectos transversales de una aplicación se pueden dividir en unidades independientes. En la figura 3-2 se muestra cómo una aplicación monolítica puede aprovechar las ventajas de los contenedores y los microservicios mediante la delegación de ciertas características o funcionalidades. La funcionalidad restante en la propia aplicación también se ha contenedor.
 
-Las aplicaciones nativas de la nube creadas con contenedores independientes se benefician de la capacidad de implementar tanto o tan poco de una aplicación como sea necesario. Los servicios individuales se pueden hospedar en nodos con recursos adecuados para cada servicio. El entorno en el que se ejecuta cada servicio es inmutable, se puede compartir entre desarrollo, prueba y producción y se puede versionarse fácilmente. El acoplamiento entre diferentes áreas de la aplicación se produce explícitamente como llamadas o mensajes entre servicios, no como dependencias en tiempo de compilación dentro del monolito. Y cualquier parte dada de la aplicación general puede elegir la tecnología que tenga más sentido para esa característica o capacidad sin necesidad de cambios en el resto de la aplicación.
+![Dividir una aplicación monolítica para usar microservicios en el back-end. ](./media/breaking-up-monolith-with-backend-microservices.png)
+ **Figura 3-2**. Dividir una aplicación monolítica para usar microservicios en el back-end.
 
-## <a name="what-are-the-scaling-benefits"></a>¿Cuáles son los beneficios de escalado?
+Cada servicio en la nube nativo se compila e implementa en un contenedor independiente. Cada se puede actualizar según sea necesario. Los servicios individuales se pueden hospedar en nodos con recursos adecuados para cada servicio. El entorno en el que se ejecuta cada servicio es inmutable, compartido entre los entornos de desarrollo, pruebas y producción, y con una versión sencilla. El acoplamiento entre distintas áreas de la aplicación se produce explícitamente como llamadas o mensajes entre servicios, no las dependencias en tiempo de compilación dentro del monolito. También puede elegir la tecnología que mejor se adapte a una funcionalidad determinada sin necesidad de realizar cambios en el resto de la aplicación.
 
-Los servicios creados en contenedores pueden aprovechar las ventajas de escalado proporcionadas por herramientas de orquestación como Kubernetes. Por el diseño de contenedores sólo saben de sí mismos. Una vez que comience a tener varios contenedores que necesitan trabajar juntos, puede valer la pena organizarlos a un nivel superior. ¡Organizar un gran número de contenedores y sus dependencias compartidas, como la configuración de red, es donde entran las herramientas de orquestación para salvar el día! Kubernetes es una plataforma de orquestación de contenedores diseñada para automatizar la implementación, el escalado y la administración de aplicaciones en contenedores. Crea una capa de abstracción encima de grupos de contenedores y los organiza en *pods.* Los pods se ejecutan en máquinas de trabajo denominadas *nodos*. Todo el grupo organizado se conoce como un *clúster*. La Figura 3-3 muestra los diferentes componentes de un clúster de Kubernetes.
+Los servicios en contenedores requieren una administración automatizada. No sería factible administrar manualmente un gran conjunto de contenedores implementados de forma independiente. Por ejemplo, considere las siguientes tareas:
 
-![Componentes de clúster de Kubernetes. ](./media/kubernetes-cluster-components.png)
- **Figura 3-3**. Componentes de clúster de Kubernetes.
+- ¿Cómo se aprovisionarán las instancias de contenedor en un clúster de muchas máquinas?
+- Una vez implementado, ¿cómo se detectarán los contenedores y se comunicarán entre sí?
+- ¿Cómo se pueden escalar o reducir horizontalmente los contenedores a petición?
+- ¿Cómo se supervisa el estado de cada contenedor?
+- ¿Cómo se protege un contenedor frente a errores de hardware y software?
+- ¿Cómo se actualizan los contenedores de una aplicación activa sin tiempo de inactividad?
 
-Kubernetes tiene compatibilidad integrada para escalar clústeres para satisfacer la demanda. En combinación con microservicios en contenedores, esto proporciona aplicaciones nativas de la nube con la capacidad de responder de forma rápida y eficiente a los picos de demanda con recursos adicionales cuando y donde se necesitan.
+Los orquestadores de contenedores abordan y automatizan estos y otros problemas.
 
-### <a name="declarative-versus-imperative"></a>Declarativo versus imperativo
+En el sistema ecológico nativo de la nube, Kubernetes se ha convertido en el orquestador de contenedores de facto. Es una plataforma de código abierto administrada por Cloud Native Computing Foundation (CNCF). Kubernetes automatiza la implementación, el escalado y los aspectos operativos de las cargas de trabajo en contenedores en un clúster de máquinas. Sin embargo, instalar y administrar Kubernetes es muy complejo.
 
-Kubernetes admite la configuración de objetos declarativos e imperativos. El enfoque imperativo implica ejecutar varios comandos que indican a Kubernetes qué hacer en cada paso del camino. *Ejecute* esta imagen. *Elimine* este pod. *Exponga* este puerto. Con el enfoque declarativo, se utiliza un archivo de configuración que describe *lo que desea* en lugar de qué *hacer* y Kubernetes determina qué hacer para lograr el estado final deseado. Si ya ha configurado el clúster mediante comandos imperativos, `kubectl get svc SERVICENAME -o yaml > service.yaml`puede exportar un manifiesto declarativo mediante . Esto producirá un archivo de manifiesto como este:
+Un enfoque mucho mejor es aprovechar Kubernetes como servicio administrado de un proveedor en la nube. La nube de Azure incluye una plataforma Kubernetes totalmente administrada titulada [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/). AKS abstrae la complejidad y la sobrecarga operativa de la administración de Kubernetes. Utilice Kubernetes como servicio en la nube; Microsoft asume la responsabilidad de administrarla y respaldarla. AKS también se integra estrechamente con otros servicios de Azure y herramientas de desarrollo.
+
+AKS es una tecnología basada en clústeres. Un grupo de máquinas virtuales federadas, o nodos, se implementa en la nube de Azure. Juntos, forman un entorno de alta disponibilidad o un clúster. El clúster aparece como una entidad única y sin problemas para la aplicación nativa en la nube. En el capó, AKS implementa los servicios en contenedores en estos nodos después de una estrategia predefinida que distribuye uniformemente la carga.
+
+## <a name="what-are-the-scaling-benefits"></a>¿Cuáles son las ventajas de escalado?
+
+Los servicios basados en contenedores pueden aprovechar las ventajas de escalado que proporcionan las herramientas de orquestación como Kubernetes. Los contenedores de diseño solo lo saben. Una vez que tenga varios contenedores que necesiten trabajar juntos, debe organizarlos en un nivel superior. La organización de un gran número de contenedores y sus dependencias compartidas, como la configuración de red, es donde se encuentran las herramientas de orquestación para ahorrar el día. Kubernetes crea una capa de abstracción a través de grupos de contenedores y los organiza en *pods*. Los pods se ejecutan en equipos de trabajo a los que se hace referencia como *nodos*. Esta estructura organizada se conoce como *clúster*. En la figura 3-3 se muestran los distintos componentes de un clúster de Kubernetes.
+
+![Componentes del clúster de Kubernetes. ](./media/kubernetes-cluster-components.png)
+ **Figura 3-3**. Componentes del clúster de Kubernetes.
+
+Escalar cargas de trabajo en contenedores es una característica clave de los orquestadores de contenedores. AKS admite el escalado automático en dos dimensiones: instancias de contenedor y nodos de proceso. Juntos proporcionan a AKS la capacidad de responder de forma rápida y eficaz a los picos de demanda y agregar recursos adicionales. Veremos el escalado en AKS más adelante en este capítulo.
+
+### <a name="declarative-versus-imperative"></a>Declarativos e imperativos
+
+Kubernetes admite la configuración declarativa e imperativa. El enfoque imperativo implica la ejecución de varios comandos que indican a Kubernetes qué hacer para cada paso del proceso. Ejecute esta imagen. Elimine este Pod. Exponga este puerto. Con el enfoque declarativo, se crea un archivo de configuración, denominado manifiesto, para describir lo que se desea en lugar de lo que se debe hacer. Kubernetes lee el manifiesto y transforma el estado final deseado en el estado final real.
+
+Los comandos imperativos son excelentes para el aprendizaje y la experimentación interactiva. Sin embargo, querrá crear mediante declaración los archivos de manifiesto de Kubernetes para adoptar una infraestructura como enfoque de código, lo que proporciona implementaciones confiables y repetibles. El archivo de manifiesto se convierte en un artefacto del proyecto y se usa en la canalización de CI/CD para automatizar las implementaciones de Kubernetes.
+
+Si ya ha configurado el clúster mediante comandos imperativos, puede exportar un manifiesto declarativo `kubectl get svc SERVICENAME -o yaml > service.yaml`mediante el uso de. Este comando genera un manifiesto similar al que se muestra a continuación:
 
 ```yaml
 apiVersion: v1
@@ -97,69 +120,69 @@ status:
   loadBalancer: {}
 ```
 
-Al usar la configuración declarativa, puede obtener una vista previa `kubectl diff -f FOLDERNAME` de los cambios que se realizarán antes de confirmarlos mediante el uso en la carpeta donde se encuentran los archivos de configuración. Una vez que esté seguro de que `kubectl apply -f FOLDERNAME`desea aplicar los cambios, ejecute . Agregar `-R` para procesar recursivamente una jerarquía de carpetas.
+Al usar la configuración declarativa, puede obtener una vista previa de los cambios que se realizarán antes de `kubectl diff -f FOLDERNAME` confirmarlos mediante el uso de en la carpeta donde se encuentran los archivos de configuración. Una vez que esté seguro de que desea aplicar los cambios, `kubectl apply -f FOLDERNAME`ejecute. Agregue `-R` para procesar recursivamente una jerarquía de carpetas.
 
-Además de los servicios, puede usar la configuración declarativa para otras características de Kubernetes, como *las implementaciones.* Las implementaciones de implementación usan las implementaciones declarativas para actualizar los recursos del clúster. Las implementaciones se usan para implementar nuevos cambios, escalar verticalmente para admitir más carga o revertir a una revisión anterior. Si un clúster es inestable, las implementaciones declarativas proporcionan un mecanismo para devolver automáticamente el clúster a un estado deseado.
+También puede usar la configuración declarativa con otras características de Kubernetes, una de las cuales se implementa. Las implementaciones declarativas ayudan a administrar versiones, actualizaciones y escalado. Indican al controlador de implementación de Kubernetes cómo implementar nuevos cambios, escalar horizontalmente la carga o revertir a una revisión anterior. Si un clúster es inestable, una implementación declarativa devolverá automáticamente el clúster a un estado deseado. Por ejemplo, si un nodo debe bloquearse, el mecanismo de implementación volverá a implementar un reemplazo para alcanzar el estado deseado.
 
-El uso de la configuración declarativa permite que la infraestructura se represente como código que se puede proteger y versionar junto con el código de la aplicación. Esto proporciona un control de cambios mejorado y una mejor compatibilidad para la implementación continua mediante una canalización de compilación e implementación vinculada a los cambios de control de código fuente.
+El uso de la configuración declarativa permite representar la infraestructura como código que se puede proteger y controlar con versiones junto con el código de la aplicación. Proporciona un control de cambios mejorado y una mejor compatibilidad con la implementación continua mediante una canalización de compilación e implementación.
 
 ## <a name="what-scenarios-are-ideal-for-containers-and-orchestrators"></a>¿Qué escenarios son ideales para contenedores y orquestadores?
 
-Los siguientes escenarios son ideales para usar contenedores y orquestadores.
+Los siguientes escenarios son ideales para el uso de contenedores y orquestadores.
 
 ### <a name="applications-requiring-high-uptime-and-scalability"></a>Aplicaciones que requieren un alto tiempo de actividad y escalabilidad
 
-Las aplicaciones individuales que tienen altos requisitos de escalabilidad y tiempo de actividad son candidatos ideales para arquitecturas nativas de la nube mediante microservicios, contenedores y orquestadores. Estas aplicaciones se pueden desarrollar en contenedores con entornos versionados, se pueden probar exhaustivamente antes de ir a producción y se pueden implementar en producción sin tiempo de inactividad. El uso de clústeres de Kubernetes garantiza que estas aplicaciones también se pueden escalar a petición y recuperarse automáticamente de errores de nodo.
+Las aplicaciones individuales que tienen requisitos elevados de tiempo y escalabilidad son ideales para las arquitecturas nativas de la nube con microservicios, contenedores y orquestadores. Se pueden desarrollar en contenedores, probar en entornos con versiones e implementarse en producción sin tiempo de inactividad. El uso de clústeres de Kubernetes garantiza que estas aplicaciones también se pueden escalar a petición y recuperarse automáticamente de los errores de nodo.
 
-### <a name="large-numbers-of-applications"></a>Gran número de solicitudes
+### <a name="large-numbers-of-applications"></a>Gran cantidad de aplicaciones
 
-Las organizaciones que implementan y deben mantener posteriormente un gran número de aplicaciones se benefician de contenedores y orquestadores. El esfuerzo inicial de configurar entornos en contenedores y clústeres de Kubernetes es principalmente un costo fijo. La implementación, el mantenimiento y la actualización de aplicaciones individuales tiene un costo que varía con el número de aplicaciones que se deben mantener. Más allá de un cierto número bastante pequeño de aplicaciones, la complejidad de mantener aplicaciones personalizadas supera manualmente el costo de implementar una solución mediante contenedores y orquestadores.
+Las organizaciones que implementan y mantienen un gran número de aplicaciones se benefician de los contenedores y los orquestadores. El esfuerzo por adelantado de la configuración de entornos en contenedor y clústeres de Kubernetes es principalmente un costo fijo. La implementación, el mantenimiento y la actualización de aplicaciones individuales tiene un costo que varía con el número de aplicaciones. Además de un pequeño número de aplicaciones, la complejidad de mantener las aplicaciones personalizadas manualmente supera el costo de la implementación de una solución mediante contenedores y orquestadores.
 
-## <a name="when-should-you-avoid-using-containers-and-orchestrators"></a>¿Cuándo debe evitar el uso de contenedores y orquestadores?
+## <a name="when-should-you-avoid-using-containers-and-orchestrators"></a>¿Cuándo debe evitarse el uso de contenedores y orquestadores?
 
-Si no está dispuesto o no puede crear su aplicación siguiendo los principios de la aplicación Twelve-Factor, probablemente será mejor evitar contenedores y orquestadores. En estos casos, puede ser mejor seguir adelante con una plataforma de hospedaje basada en VM, o posiblemente algún sistema híbrido en el que puede desactivar ciertas partes de funcionalidad en contenedores independientes o incluso funciones sin servidor.
+Si no puede compilar la aplicación siguiendo los principios de la aplicación de doce factores, considere la posibilidad de evitar contenedores y orquestadores. En estos casos, considere la posibilidad de una plataforma de hospedaje basada en VM, o posiblemente de algún sistema híbrido. Con él, siempre puede rotar determinados fragmentos de funcionalidad en contenedores independientes o incluso en funciones sin servidor.
 
-## <a name="development-resources"></a>Recursos para el desarrollo
+## <a name="development-resources"></a>Recursos de desarrollo
 
-En esta sección se muestra una breve lista de recursos de desarrollo que pueden ayudarle a empezar a usar contenedores y orquestadores para la siguiente aplicación. Si está buscando instrucciones sobre cómo diseñar la aplicación de arquitectura de microservicios nativa de la nube, lea el complemento de este libro, [.NET Microservices: Architecture for Containerized .NET Applications](https://aka.ms/microservicesebook).
+En esta sección se muestra una breve lista de recursos de desarrollo que pueden ayudarle a empezar a usar contenedores y orquestadores para la siguiente aplicación. Si busca instrucciones sobre cómo diseñar su aplicación de arquitectura de microservicios nativa en la nube, lea la guía de este libro, [microservicios de .net: arquitectura para aplicaciones .net en contenedor](https://aka.ms/microservicesebook).
 
-### <a name="local-kubernetes-development"></a>Desarrollo local de Kubernetes
+### <a name="local-kubernetes-development"></a>Desarrollo de Kubernetes local
 
-Las implementaciones de Kubernetes proporcionan un gran valor en entornos de producción, pero también puede ejecutarlas localmente. Aunque la mayor parte del tiempo es bueno poder trabajar en aplicaciones individuales o microservicios de forma independiente, a veces es bueno poder ejecutar todo el sistema localmente tal como se ejecutará cuando se implemente en producción. Hay varias maneras de lograr esto, dos de las cuales son Minikube y Docker Desktop. Visual Studio también proporciona herramientas para el desarrollo de Docker.
+Las implementaciones de Kubernetes proporcionan un gran valor en entornos de producción, pero también se pueden ejecutar localmente en el equipo de desarrollo. Aunque puede trabajar en microservicios individuales de forma independiente, puede haber ocasiones en las que necesite ejecutar todo el sistema de forma local, tal como se ejecutará cuando se implemente en producción. Hay varias herramientas que pueden ayudar: Minikube y Docker Desktop. Visual Studio también proporciona herramientas para el desarrollo de Docker.
 
 ### <a name="minikube"></a>Minikube
 
-¿Qué es Minikube? El proyecto Minikube dice que "Minikube implementa un clúster de Kubernetes local en macOS, Linux y Windows." Sus objetivos principales son "ser la mejor herramienta para el desarrollo de aplicaciones locales de Kubernetes y admitir todas las características de Kubernetes que se ajusten". La instalación de Minikube es independiente de Docker, pero Minikube admite hipervisores diferentes a los compatibles con Docker Desktop. Minikube admite actualmente las siguientes características de Kubernetes:
+¿Qué es Minikube? El proyecto Minikube indica "Minikube implementa un clúster de Kubernetes local en macOS, Linux y Windows". Sus principales objetivos son "para ser la mejor herramienta para el desarrollo de aplicaciones de Kubernetes locales y para admitir todas las características de Kubernetes que caben". La instalación de Minikube es independiente de Docker, pero Minikube admite hipervisores diferentes de los admitidos por Docker Desktop. Las siguientes características de Kubernetes son compatibles actualmente con Minikube:
 
 - DNS
 - NodePorts
 - ConfigMaps y secretos
 - Paneles
-- Tiempos de ejecución de contenedores: Docker, rkt, CRI-O y contenedores
-- Habilitación de la interfaz de red de contenedor (CNI)
+- Runtimes de contenedor: Docker, RKT, CRI-O y contenedores
+- Habilitar la interfaz de red de contenedor (CNI)
 - Entrada
 
-Después de instalar Minikube, puede empezar `minikube start` a usarlo rápidamente ejecutando el comando, que descarga una imagen e iniciar el clúster de Kubernetes local. Una vez iniciado el clúster, se interactúa con `kubectl` él mediante los comandos estándar de Kubernetes.
+Después de instalar Minikube, puede empezar a usarlo rápidamente mediante la ejecución `minikube start` del comando, que descarga una imagen e inicia el clúster de Kubernetes local. Una vez iniciado el clúster, puede interactuar con él mediante los comandos estándar `kubectl` de Kubernetes.
 
 ### <a name="docker-desktop"></a>Docker Desktop
 
-También puede trabajar con Kubernetes directamente desde Docker Desktop en Windows. Esta es su única opción si usa contenedores de Windows y también es una excelente opción para contenedores que no son de Windows. La aplicación de configuración estándar de Docker Desktop se utiliza para configurar Kubernetes que se ejecutan desde Docker Desktop.
+También puede trabajar con Kubernetes directamente desde Docker Desktop en Windows. Es la única opción si usa contenedores de Windows y es una opción excelente para los contenedores que no son de Windows. En la figura 3-4 se muestra cómo habilitar la compatibilidad con Kubernetes local cuando se ejecuta Docker Desktop.
 
 ![Configuración de Kubernetes en Docker Desktop](./media/docker-desktop-kubernetes.png)
 
 **Figura 3-4**. Configuración de Kubernetes en Docker Desktop.
 
-Docker Desktop ya es la herramienta más popular para configurar y ejecutar aplicaciones en contenedores localmente. Cuando trabaja con Docker Desktop, puede desarrollar localmente con el mismo conjunto exacto de imágenes de contenedor de Docker que implementará en producción. Docker Desktop está diseñado para "crear, probar y enviar" aplicaciones en contenedores localmente. Una vez que las imágenes se han enviado a un registro de imágenes como Azure Container Registry o Docker Hub, los servicios como Azure Kubernetes Service (AKS) administran la aplicación en producción.
+Docker Desktop es la herramienta más popular para configurar y ejecutar aplicaciones en contenedores localmente. Al trabajar con Docker Desktop, puede desarrollar localmente con el mismo conjunto de imágenes de contenedor de Docker que va a implementar en producción. Docker Desktop está diseñado para "compilar, probar y enviar" aplicaciones en contenedores localmente. Es compatible con contenedores de Linux y Windows. Una vez que inserte las imágenes en un registro de imágenes, como Azure Container Registry o Docker Hub, AKS puede extraerlos e implementarlos en producción.
 
-### <a name="visual-studio-docker-tooling"></a>Visual Studio Docker Tooling
+### <a name="visual-studio-docker-tooling"></a>Herramientas de Docker de Visual Studio
 
-Visual Studio admite el desarrollo de Docker para aplicaciones web. Al crear una nueva aplicación ASP.NET Core, se le da la opción de configurarla con compatibilidad con Docker como parte del proceso de creación del proyecto, como se muestra en la figura 3-5.
+Visual Studio admite el desarrollo de Docker para aplicaciones basadas en Web. Al crear una nueva aplicación de ASP.NET Core, tiene la opción de configurarla con compatibilidad con Docker, como se muestra en la figura 3-5.
 
-![Compatibilidad con Docker de Visual Studio Enable](./media/visual-studio-enable-docker-support.png)
+![Compatibilidad de Docker con Visual Studio](./media/visual-studio-enable-docker-support.png)
 
-**Figura 3-5**. Compatibilidad con Docker de Visual Studio Enable
+**Figura 3-5**. Compatibilidad de Docker con Visual Studio
 
-Cuando se selecciona esta opción, el `Dockerfile` proyecto se crea con una en su raíz, que se puede usar para compilar y hospedar la aplicación en un contenedor de Docker. En la Figura 3-6 se muestra un Dockerfile de ejemplo.
+Cuando se selecciona esta opción, el proyecto se crea con un `Dockerfile` en su raíz, que se puede usar para compilar y hospedar la aplicación en un contenedor de Docker. En la ilustración 3 se muestra un Dockerfile de ejemplo -6. git
 
 ```docker
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.0-stretch-slim AS base
@@ -184,34 +207,27 @@ COPY --from=publish /app .
 ENTRYPOINT ["dotnet", "WebApplication3.dll"]
 ```
 
-**Figura 3-6**. Visual Studio generó Dockerfile
+**Figura 3-6**. Dockerfile generado por Visual Studio
 
-El comportamiento predeterminado cuando se ejecuta la aplicación está configurado para usar Docker también. En la figura 3-7 se muestran las diferentes opciones de ejecución disponibles en un nuevo proyecto ASP.NET Core creado con compatibilidad con Docker agregada.
+El comportamiento predeterminado cuando se ejecuta la aplicación también se configura para usar Docker. En la figura 3-7 se muestran las diferentes opciones de ejecución disponibles en un nuevo proyecto de ASP.NET Core creado con compatibilidad con Docker agregada.
 
 ![Opciones de ejecución de Docker de Visual Studio](./media/visual-studio-docker-run-options.png)
 
 **Figura 3-7**. Opciones de ejecución de Docker de Visual Studio
 
-Además del desarrollo local, [Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/) proporciona una forma cómoda para que varios desarrolladores trabajen con sus propias configuraciones de Kubernetes en Azure. Como puede ver en la Figura 3-7, también puede ejecutar la aplicación en Azure Dev Spaces.
+Además del desarrollo local, [Azure dev Spaces](https://docs.microsoft.com/azure/dev-spaces/) proporciona una forma cómoda para que varios desarrolladores trabajen con sus propias configuraciones de Kubernetes en Azure. Como puede ver en la figura 3-7, también puede ejecutar la aplicación en Azure Dev Spaces.
 
-Si no agrega compatibilidad con Docker a la aplicación ASP.NET Core al crearla, siempre puede agregarla más adelante. En el Explorador de soluciones de Visual Studio, haga clic con el botón derecho en el proyecto y seleccione **Agregar** > **compatibilidad con Docker**, como se muestra en la figura 3-8.
+Además, en cualquier momento puede Agregar compatibilidad con Docker a una aplicación de ASP.NET Core existente. En el explorador de soluciones de Visual Studio, haga clic con el botón derecho en el proyecto y **agregue** > **compatibilidad con Docker**, como se muestra en la figura 3-8.
 
-![Visual Studio Agregar compatibilidad con Docker](./media/visual-studio-add-docker-support.png)
+![Compatibilidad con Docker de Visual Studio](./media/visual-studio-add-docker-support.png)
 
-**Figura 3-8**. Visual Studio Agregar compatibilidad con Docker
+**Figura 3-8**. Compatibilidad con Docker de Visual Studio
 
-Además de la compatibilidad con Docker, también puede agregar compatibilidad con orquestaciones de contenedores, que también se muestra en la figura 3-8. De forma predeterminada, el orquestador utiliza Kubernetes y Helm. Una vez que haya elegido `azds.yaml` el orquestador, se `charts` agregará un archivo a la raíz del proyecto y se agregará una carpeta que contiene los gráficos Helm utilizados para configurar e implementar la aplicación en Kubernetes. La figura 3-9 muestra los archivos resultantes en un nuevo proyecto.
+También puede Agregar compatibilidad con orquestación de contenedores, que también se muestra en la figura 3-8. De forma predeterminada, el orquestador usa Kubernetes y Helm. Una vez elegido el orquestador, se `azds.yaml` agrega un archivo a la raíz del proyecto y `charts` se agrega una carpeta que contiene los gráficos de Helm usados para configurar e implementar la aplicación en Kubernetes. En la figura 3-9 se muestran los archivos resultantes de un nuevo proyecto.
 
-![Compatibilidad con Visual Studio Add Orchestrator](./media/visual-studio-add-orchestrator-support.png)
+![Compatibilidad con agregar orquestador de Visual Studio](./media/visual-studio-add-orchestrator-support.png)
 
-**Figura 3-9**. Compatibilidad con Visual Studio Add Orchestrator
-
-## <a name="references"></a>Referencias
-
-- [¿Qué es Kubernetes?](https://blog.newrelic.com/engineering/what-is-kubernetes/)
-- [Instalación de Kubernetes con Minikube](https://kubernetes.io/docs/setup/learning-environment/minikube/)
-- [MiniKube vs Docker Desktop](https://medium.com/containers-101/local-kubernetes-for-windows-minikube-vs-docker-desktop-25a1c6d3b766)
-- [Visual Studio Tools para Docker](https://docs.microsoft.com/dotnet/standard/containerized-lifecycle-architecture/design-develop-containerized-apps/visual-studio-tools-for-docker)
+**Figura 3-9**. Compatibilidad con agregar orquestador de Visual Studio
 
 >[!div class="step-by-step"]
 >[Anterior](scale-applications.md)
