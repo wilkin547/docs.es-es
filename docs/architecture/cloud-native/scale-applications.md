@@ -1,25 +1,27 @@
 ---
 title: Escalado de aplicaciones nativas en la nube
 description: Escalado de aplicaciones nativas en la nube con Azure Kubernetes Service y Azure Functions para satisfacer la demanda de los usuarios de una manera rentable.
-ms.date: 09/23/2019
-ms.openlocfilehash: 5f4aac5804c5498c331787083c943a6ea1b69748
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.date: 04/13/2020
+ms.openlocfilehash: 91d925778e9dfcf8a1ec2486fe8961037409f207
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "73841034"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82199950"
 ---
-# <a name="scaling-cloud-native-applications"></a><span data-ttu-id="a6b79-103">Escalado de aplicaciones nativas en la nube</span><span class="sxs-lookup"><span data-stu-id="a6b79-103">Scaling cloud-native applications</span></span>
+# <a name="scaling-cloud-native-applications"></a><span data-ttu-id="6f7fe-103">Escalado de aplicaciones nativas en la nube</span><span class="sxs-lookup"><span data-stu-id="6f7fe-103">Scaling cloud-native applications</span></span>
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-<span data-ttu-id="a6b79-104">Una de las ventajas más frecuentes de pasar a un entorno de hospedaje en la nube es la escalabilidad.</span><span class="sxs-lookup"><span data-stu-id="a6b79-104">One of the most-often touted advantages of moving to a cloud hosting environment is scalability.</span></span> <span data-ttu-id="a6b79-105">La escalabilidad, o la capacidad de una aplicación para aceptar la carga de usuarios adicional sin degradar innecesariamente el rendimiento de cada usuario, se suele conseguir al dividir las aplicaciones en pequeñas partes a las que se les puede dar cada uno de los recursos que requieran.</span><span class="sxs-lookup"><span data-stu-id="a6b79-105">Scalability, or the ability for an application to accept additional user load without unduly degrading performance for each user, is most often achieved by breaking up applications into small pieces that can each be given whatever resources they require.</span></span> <span data-ttu-id="a6b79-106">En este capítulo, se presentan las tecnologías que permiten escalar aplicaciones nativas en la nube para satisfacer la demanda de los usuarios.</span><span class="sxs-lookup"><span data-stu-id="a6b79-106">In this chapter, we introduce the technologies that enable cloud-native applications to scale to meet user demand.</span></span> <span data-ttu-id="a6b79-107">Estas tecnologías incluyen:</span><span class="sxs-lookup"><span data-stu-id="a6b79-107">These technologies include:</span></span>
+<span data-ttu-id="6f7fe-104">Una de las ventajas más frecuentes de pasar a un entorno de hospedaje en la nube es la escalabilidad.</span><span class="sxs-lookup"><span data-stu-id="6f7fe-104">One of the most-often touted advantages of moving to a cloud hosting environment is scalability.</span></span> <span data-ttu-id="6f7fe-105">Escalabilidad, o la capacidad de una aplicación para aceptar la carga de usuarios adicional sin poner en peligro el rendimiento de cada usuario.</span><span class="sxs-lookup"><span data-stu-id="6f7fe-105">Scalability, or the ability for an application to accept additional user load without compromising performance for each user.</span></span> <span data-ttu-id="6f7fe-106">La mayoría de las veces se consigue dividiendo una aplicación en pequeñas partes a las que se les puede dar cada uno de los recursos que requieran.</span><span class="sxs-lookup"><span data-stu-id="6f7fe-106">It's most often achieved by breaking up an application into small pieces that can each be given whatever resources they require.</span></span> <span data-ttu-id="6f7fe-107">Los proveedores de nube permiten una escalabilidad masiva en cualquier momento y lugar del mundo.</span><span class="sxs-lookup"><span data-stu-id="6f7fe-107">Cloud vendors enable massive scalability anytime and anywhere in the world.</span></span>
 
-- <span data-ttu-id="a6b79-108">Contenedores</span><span class="sxs-lookup"><span data-stu-id="a6b79-108">Containers</span></span>
-- <span data-ttu-id="a6b79-109">Orquestadores</span><span class="sxs-lookup"><span data-stu-id="a6b79-109">Orchestrators</span></span>
-- <span data-ttu-id="a6b79-110">Informática sin servidor</span><span class="sxs-lookup"><span data-stu-id="a6b79-110">Serverless computing</span></span>
+ <span data-ttu-id="6f7fe-108">En este capítulo, se describen las tecnologías que permiten escalar aplicaciones nativas en la nube para satisfacer la demanda de los usuarios.</span><span class="sxs-lookup"><span data-stu-id="6f7fe-108">In this chapter, we discuss technologies that enable cloud-native applications to scale to meet user demand.</span></span> <span data-ttu-id="6f7fe-109">Estas tecnologías incluyen:</span><span class="sxs-lookup"><span data-stu-id="6f7fe-109">These technologies include:</span></span>
+
+- <span data-ttu-id="6f7fe-110">Contenedores</span><span class="sxs-lookup"><span data-stu-id="6f7fe-110">Containers</span></span>
+- <span data-ttu-id="6f7fe-111">Orquestadores</span><span class="sxs-lookup"><span data-stu-id="6f7fe-111">Orchestrators</span></span>
+- <span data-ttu-id="6f7fe-112">Informática sin servidor</span><span class="sxs-lookup"><span data-stu-id="6f7fe-112">Serverless computing</span></span>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="a6b79-111">[Anterior](centralized-configuration.md)
->[Siguiente](leverage-containers-orchestrators.md)</span><span class="sxs-lookup"><span data-stu-id="a6b79-111">[Previous](centralized-configuration.md)
+><span data-ttu-id="6f7fe-113">[Anterior](centralized-configuration.md)
+>[Siguiente](leverage-containers-orchestrators.md)</span><span class="sxs-lookup"><span data-stu-id="6f7fe-113">[Previous](centralized-configuration.md)
 [Next](leverage-containers-orchestrators.md)</span></span>
