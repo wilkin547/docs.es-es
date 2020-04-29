@@ -44,7 +44,7 @@
         - name: Infraestructura de comunicación de la malla de servicio
           href: service-mesh-communication-infrastructure.md
     - name: Datos distribuidos
-      href: database-per-microservice.md
+      href: distributed-data.md
       items:
         - name: Soluciones relacionales y datos NoSQL
           href: relational-vs-nosql-data.md
