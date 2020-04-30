@@ -488,7 +488,11 @@
     - name: Colecciones seguras para subprocesos
       href: collections/thread-safe/
 - name: Valores numéricos en .NET
-  href: numerics.md
+  items:
+    - name: Información general
+      href: numerics.md
+    - name: Tipos habilitados para SIMD
+      href: simd.md
 - name: 'Fechas, horas y zonas horarias'
   href: datetime/
 - name: Events
