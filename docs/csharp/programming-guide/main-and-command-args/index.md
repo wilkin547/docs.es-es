@@ -12,12 +12,12 @@ helpviewer_keywords:
 - command line [C#], arguments
 - command-line arguments [C#], Main method
 ms.assetid: 73a17231-cf96-44ea-aa8a-54807c6fb1f4
-ms.openlocfilehash: 0571ec6dbc42f103ec922a6b2b13a52510640a78
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 190216b01ea416aedbca270a6d7a5acbf0c2e797
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75700606"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82200124"
 ---
 # <a name="main-and-command-line-arguments-c-programming-guide"></a>Main() y argumentos de la línea de comandos (Guía de programación de C#)
 
@@ -47,6 +47,8 @@ public static async Task<int> Main() { }
 public static async Task Main(string[] args) { }
 public static async Task<int> Main(string[] args) { }
 ```
+
+En los ejemplos anteriores se usa el modificador de acceso público. Es el procedimiento habitual, pero no es necesario.
 
 Al agregar los tipos de valor devuelto `async`, `Task` y `Task<int>`, se simplifica el código de programa cuando las aplicaciones de consola tienen que realizar tareas de inicio y `await` de operaciones asincrónicas en `Main`.
 
