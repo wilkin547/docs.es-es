@@ -2,15 +2,16 @@
 title: Extensión del seguimiento
 ms.date: 03/30/2017
 ms.assetid: 2b971a99-16ec-4949-ad2e-b0c8731a873f
-ms.openlocfilehash: ad46f09c69e94146f9e1569eb506cb350a2a9307
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: e61265210640d2b801ad55b9dc5a357cc4f161a7
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141236"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728390"
 ---
-# <a name="extending-tracing"></a>Extensión del seguimiento
-Este ejemplo muestra cómo extender la característica de seguimiento de Windows Communication Foundation (WCF) escribiendo seguimientos de actividad definidos por el usuario en el código del cliente y del servicio. Esto permite al usuario crear actividades de seguimiento y seguimientos de grupo en las unidades lógicas de trabajo. También es posible poner en correlación las actividades a través de las transferencias (dentro del mismo punto de conexión) y propagación (a través de los puntos de conexión). En este ejemplo, el seguimiento se habilita para el cliente y el servicio. Para obtener más información sobre cómo habilitar el seguimiento en los archivos de configuración de cliente y de servicio, vea [seguimiento y registro de mensajes](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).  
+# <a name="extend-tracing"></a>Extender seguimiento
+
+Este ejemplo muestra cómo extender la característica de seguimiento de Windows Communication Foundation (WCF) escribiendo seguimientos de actividad definidos por el usuario en el código del cliente y del servicio. Escribir seguimientos de actividad definidos por el usuario permite al usuario crear actividades de seguimiento y seguimientos de grupo en unidades lógicas de trabajo. También es posible poner en correlación las actividades a través de las transferencias (dentro del mismo punto de conexión) y propagación (a través de los puntos de conexión). En este ejemplo, el seguimiento se habilita para el cliente y el servicio. Para obtener más información sobre cómo habilitar el seguimiento en los archivos de configuración de cliente y de servicio, vea [seguimiento y registro de mensajes](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).  
   
  Este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
@@ -29,8 +30,8 @@ Este ejemplo muestra cómo extender la característica de seguimiento de Windows
 ## <a name="tracing-and-activity-propagation"></a>Propagación de seguimiento y de actividad  
  El seguimiento de la actividad definida por el usuario permite al usuario crear sus propias actividades de seguimiento para agrupar los seguimientos en unidades lógicas de trabajo, poner en correlación las actividades a través de las transferencias y la propagación, y reducir el costo de rendimiento del seguimiento de WCF (por ejemplo, el costo de espacio en disco de un archivo de registro).  
   
-### <a name="adding-custom-sources"></a>Adición de orígenes personalizados  
- Los seguimientos definidos por el usuario pueden añadirse tanto al código de cliente como de servicio. La adición de orígenes de seguimiento a los archivos de configuración de cliente o de servicio permite grabar y mostrar estos seguimientos personalizados en la [herramienta de visor de seguimiento de servicio (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). El código siguiente muestra cómo agregar un origen de seguimiento definido por el usuario denominado `ServerCalculatorTraceSource` al archivo de configuración.  
+### <a name="add-custom-sources"></a>Agregar orígenes personalizados  
+ Los seguimientos definidos por el usuario pueden añadirse tanto al código de cliente como de servicio. La adición de orígenes de seguimiento al cliente o los archivos de configuración de servicio permite que estos seguimientos personalizados se registren y se muestren en la [herramienta de visor de seguimiento de servicio (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). El código siguiente muestra cómo agregar un origen de seguimiento definido por el usuario denominado `ServerCalculatorTraceSource` al archivo de configuración.  
   
 ```xml  
 <system.diagnostics>  
@@ -67,7 +68,7 @@ Este ejemplo muestra cómo extender la característica de seguimiento de Windows
 ....
 ```  
   
-### <a name="correlating-activities"></a>Cómo poner en correlación las actividades  
+### <a name="correlate-activities"></a>Correlación de actividades  
  Para poner en correlación directamente las actividades con los extremos, el atributo `propagateActivity` debe estar establecido en `true` en el origen de seguimiento `System.ServiceModel`. Además, para propagar los seguimientos sin pasar por las actividades de WCF, el seguimiento de la actividad de ServiceModel debe estar desactivado. Esto puede verse en el siguiente ejemplo de código:  
   
 > [!NOTE]
@@ -85,10 +86,10 @@ Este ejemplo muestra cómo extender la característica de seguimiento de Windows
 </system.diagnostics>  
 ```  
   
-### <a name="lessening-performance-cost"></a>Disminución del coste de rendimiento  
- Al establecer `ActivityTracing` en desactivado en el origen de seguimiento de `System.ServiceModel`, se genera un archivo de seguimiento que contiene solo seguimientos de actividad definidos por el usuario sin ninguno de los seguimientos de actividad de ServiceModel incluidos. Esto genera un archivo de registro de mucho menor tamaño. Sin embargo, se pierde la oportunidad de correlacionar los seguimientos de procesamiento de WCF.  
+### <a name="lessen-performance-cost"></a>Reducir el costo de rendimiento  
+ Al establecer `ActivityTracing` en desactivado en el origen de seguimiento de `System.ServiceModel`, se genera un archivo de seguimiento que contiene solo seguimientos de actividad definidos por el usuario sin ninguno de los seguimientos de actividad de ServiceModel incluidos. La exclusión de los seguimientos de actividad de ServiceModel da como resultado un archivo de registro mucho más pequeño. Sin embargo, se pierde la oportunidad de correlacionar los seguimientos de procesamiento de WCF.  
   
-##### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
+## <a name="set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
 1. Asegúrese de que ha realizado el [procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   

@@ -2,12 +2,12 @@
 title: Validación de seguridad
 ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
-ms.openlocfilehash: d635ae72b71df18934acd1016ac3e799d2c4aea1
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 90d335f32c43ecf575c69cf800ab69bee05f39ee
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82140504"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728383"
 ---
 # <a name="security-validation"></a>Validación de seguridad
 Este ejemplo muestra cómo utilizar un comportamiento personalizado para validar los servicios en un equipo a fin de asegurarse de que cumplen criterios específicos. En este ejemplo, el comportamiento personalizado valida estos servicios analizando cada extremo en el servicio y comprobando si contienen elementos de enlace seguros. Este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -78,9 +78,9 @@ public void Validate(ServiceDescription serviceDescription,
 > [!NOTE]
 > Al agregar el comportamiento a todos los servicios, la sugerencia es realizar una copia de seguridad del archivo Machine.config antes de realizar cualquier modificación.  
   
- Ahora ejecute el cliente proporcionado en el directorio client\bin de este ejemplo. Se ha producido una excepción con el siguiente mensaje: "no se pudo activarhttp://localhost/servicemodelsamples/service.svcel servicio solicitado," ". Se espera este mensaje porque el comportamiento que valida el punto de conexión considera inseguro al punto de conexión y evita que se inicie el servicio. El comportamiento también produce una excepción interna que describe qué punto de conexión es inseguro y escribe un mensaje en el visor de eventos en el origen "System.ServiceModel 4.0.0.0" y la categoría "WebHost". También es posible activar el seguimiento en el servicio en este ejemplo. Esto le permite al usuario ver las excepciones iniciadas por el comportamiento que valida el extremo abriendo los seguimientos de servicio resultantes mediante la herramienta Service Trace Viewer.  
+ Ahora ejecute el cliente proporcionado en el directorio client\bin de este ejemplo. Se produce una excepción con el siguiente mensaje: "no se pudo activar elhttp://localhost/servicemodelsamples/service.svcservicio solicitado," ". Se espera este mensaje porque el comportamiento que valida el punto de conexión considera inseguro al punto de conexión y evita que se inicie el servicio. El comportamiento también produce una excepción interna que describe qué punto de conexión es inseguro y escribe un mensaje en el visor de eventos en el origen "System.ServiceModel 4.0.0.0" y la categoría "WebHost". También es posible activar el seguimiento en el servicio en este ejemplo. Esto le permite al usuario ver las excepciones iniciadas por el comportamiento que valida el extremo abriendo los seguimientos de servicio resultantes mediante la herramienta Service Trace Viewer.  
   
-#### <a name="to-view-failed-endpoint-validation-exception-messages-in-the-event-viewer"></a>Para ver los mensajes de excepción de validación del extremo en el visor de eventos  
+### <a name="view-failed-endpoint-validation-exception-messages-in-the-event-viewer"></a>Ver los mensajes de excepción de validación de punto de conexión con errores en el Visor de eventos  
   
 1. Haga clic en el menú **Inicio** y seleccione **Ejecutar..**..  
   
@@ -90,7 +90,7 @@ public void Validate(ServiceDescription serviceDescription,
   
 4. Haga doble clic en el evento "System. ServiceModel 4.0.0.0" recientemente agregado en la categoría "webhost" en la ventana de la **aplicación** para ver los mensajes de extremo no seguros.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
+## <a name="set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
 1. Asegúrese de que ha realizado el [procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   

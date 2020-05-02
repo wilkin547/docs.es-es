@@ -2,12 +2,12 @@
 title: Ejemplo de seguridad de la detección
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 94de324469d0d649a184dec5847e1a5c4cbba2cc
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 44022ee756f189347aaec606427ecb3c4c5ffa95
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141157"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728418"
 ---
 # <a name="discovery-security-sample"></a>Ejemplo de seguridad de la detección
 
@@ -16,7 +16,7 @@ La especificación de la detección no requiere que los puntos de conexión que 
  El canal personalizado se aplica encima de la pila del canal existente para los puntos de conexión de anuncio y detección. De esta manera, se aplica un encabezado de firma para cada mensaje enviado. La firma se comprueba en los mensajes recibidos, y cuando no coincide o cuando los mensajes no tienen una firma, los mensajes se quitan. Para firmar y comprobar los mensajes, el ejemplo utiliza los certificados.  
   
 ## <a name="discussion"></a>Discusión  
- WCF es muy extensible y permite a los usuarios la posibilidad de personalizar los canales según deseen. En el ejemplo se implementa un elemento de enlace seguro de detección que crea canales seguros. Los canales seguros aplican y comprueban las firmas de los mensajes, y se aplican encima de la pila actual.  
+ WCF es extensible y permite a los usuarios personalizar los canales según sea necesario. En el ejemplo se implementa un elemento de enlace seguro de detección que crea canales seguros. Los canales seguros aplican y comprueban las firmas de los mensajes, y se aplican encima de la pila actual.  
   
  El elemento de enlace seguro crea generadores de canales seguros y agentes de escucha del canal.  
   
@@ -40,7 +40,7 @@ La especificación de la detección no requiere que los puntos de conexión que 
   
  Para calcular la firma, el ejemplo determina los elementos de firma expandidos. Se crea una firma XML (`SignedInfo`), utilizando el prefijo del espacio de nombres `ds`, tal y como requiere la especificación de la detección WS. En la firma se hace referencia al cuerpo y a todos los encabezados en los espacios de nombres de direccionamiento y detección, de modo que no se puedan alterar. Cada elemento al que se hace referencia se transforma utilizando la canonización exclusiva (http://www.w3.org/2001/10/xml-exc-c14n# ) y, a continuación, se calcula un valor dehttp://www.w3.org/2000/09/xmldsig#sha1 síntesis de SHA-1 (). En función de todos los elementos a los que se hace referencia y sus valores de síntesis, el valor de firmahttp://www.w3.org/2000/09/xmldsig#rsa-sha1 se calcula utilizando el algoritmo RSA ().  
   
- Los mensajes se firman con un certificado especificado por el cliente. Cuando se crea el elemento de enlace, se debe especificar la ubicación del almacén, el nombre y el nombre de asunto del certificado. El `KeyId` de la firma compacta representa el identificador de clave del token de firma y es el identificador de clave de asunto (SKI) del token de firma o (si el SKI no existe) un valor hash SHA-1 de la clave pública del token de firma.  
+ Los mensajes se firman con un certificado especificado por el cliente. La ubicación del almacén, el nombre y el nombre del sujeto del certificado deben especificarse al crear el elemento de enlace. El `KeyId` de la firma compacta representa el identificador de clave del token de firma y es el identificador de clave de asunto (SKI) del token de firma o (si el SKI no existe) un valor hash SHA-1 de la clave pública del token de firma.  
   
 ## <a name="secure-channel-listener"></a>Agente de escucha del canal seguro  
  El agente de escucha del canal seguro crea canales dúplex o de entrada que comprueban la firma compacta en los mensajes recibidos. Para comprobar la firma, el `KeyId` especificado en la firma compacta adjuntada al mensaje se utiliza para seleccionar un certificado del almacén especificado. Si el mensaje no tiene ninguna firma o su comprobación no es correcta, los mensajes se quitan. Para utilizar el enlace seguro, el ejemplo define un generador que crea objetos <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> y <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> personalizados con el elemento de enlace seguro de detección agregado. Estos extremos seguros se pueden utilizar en agentes de escucha de anuncio de detección y en los servicios que pueden detectarse.  
