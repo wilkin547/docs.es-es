@@ -3,12 +3,12 @@ title: Herramienta de desinstalación
 description: Información general de la herramienta de desinstalación de .NET Core, una herramienta guiada que permite limpiar de forma controlada los SDK y los entornos en tiempo de ejecución de .NET Core.
 author: sfoslund
 ms.date: 01/06/2020
-ms.openlocfilehash: 816aef6ab8bc0e51bb8befb14fde60513d4fadfc
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 45cf0841391d02636770e98666e2897d2598fab4
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507326"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595720"
 ---
 # <a name="net-core-uninstall-tool"></a>Herramienta de desinstalación de .NET Core
 
@@ -297,7 +297,7 @@ Notas:
 
 `dotnet-core-uninstall remove` desinstala los SDK y los entornos en tiempo de ejecución de .NET Core especificados por una colección de opciones. La herramienta no se puede usar para desinstalar los SDK y entornos en tiempo de ejecución con la versión 5.0 o posterior.
 
-Dado que esta herramienta tiene un comportamiento destructivo, es **altamente** recomendable que realice un simulacro antes de ejecutar el comando remove. El simulacro le mostrará qué SDK y entornos en tiempo de ejecución de .NET Core se quitarán cuando use el comando `remove`. Consulte [¿Puedo quitar una versión?](../versions/remove-runtime-sdk-versions.md#should-i-remove-a-version) para saber qué SDK y entornos en tiempo de ejecución se pueden quitar de forma segura.
+Dado que esta herramienta tiene un comportamiento destructivo, es **altamente** recomendable que realice un simulacro antes de ejecutar el comando remove. El simulacro le mostrará qué SDK y entornos en tiempo de ejecución de .NET Core se quitarán cuando use el comando `remove`. Consulte [¿Puedo quitar una versión?](../install/remove-runtime-sdk-versions.md#should-i-remove-a-version) para saber qué SDK y entornos en tiempo de ejecución se pueden quitar de forma segura.
 
 > [!CAUTION]
 > Tenga en cuenta las siguientes advertencias:
@@ -510,7 +510,7 @@ Notas:
 
 ### <a name="step-4---delete-the-nuget-fallback-folder-optional"></a>Paso 4: Eliminar la carpeta de reserva de NuGet (opcional)
 
-En algunos casos, ya no necesita `NuGetFallbackFolder` y puede que desee eliminarlo. Para más información sobre cómo eliminar esta carpeta, consulte [Quitar NuGetFallbackFolder](../versions/remove-runtime-sdk-versions.md#remove-the-nuget-fallback-folder).
+En algunos casos, ya no necesita `NuGetFallbackFolder` y puede que desee eliminarlo. Para más información sobre cómo eliminar esta carpeta, consulte [Quitar NuGetFallbackFolder](../install/remove-runtime-sdk-versions.md#remove-the-nuget-fallback-folder).
 
 ## <a name="uninstall-the-tool"></a>Desinstalación de la herramienta.
 
