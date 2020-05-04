@@ -3,12 +3,12 @@ title: Novedades de C# 7.0 | Guía de C#
 description: Obtenga información general de las nuevas características de la versión 7.0 del lenguaje C#.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: a6ac5c00ceb2ce8e5e56e2a86a8cde937d5108e2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1291de95b88b3de16fb94fb376fb4153dd4a5862
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398344"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102676"
 ---
 # <a name="whats-new-in-c-70"></a>Novedades de C# 7.0
 
@@ -107,7 +107,7 @@ En el ejemplo siguiente se define un método `QueryCityDataForYears` que devuelv
 
 Para obtener más información, vea [Descartes](../discards.md).
 
-## <a name="pattern-matching"></a>Coincidencia de patrones
+## <a name="pattern-matching"></a>Detección de patrones
 
 La *coincidencia de patrones* es una característica que permite implementar la distribución de métodos en propiedades distintas al tipo de un objeto. Probablemente ya esté familiarizado con la distribución de métodos en función del tipo de un objeto. En la programación orientada a objetos, los métodos virtuales y de invalidación proporcionan la sintaxis del lenguaje para implementar la distribución de métodos en función del tipo de un objeto. Las clases base y derivadas proporcionan distintas implementaciones.
 Las expresiones de coincidencia de patrones extienden este concepto para que se puedan implementar fácilmente patrones de distribución similares para tipos y elementos de datos que no se relacionan mediante una jerarquía de herencia.
@@ -211,7 +211,7 @@ La misma técnica se puede emplear con métodos `async` para asegurarse de que l
 [!code-csharp[TaskExample](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#TaskExample "Task returning method with local function")]
 
 > [!NOTE]
-> Algunos de los diseños que se admiten con funciones locales también se podrían realizar con *expresiones lambda*. Para más información, consulte [Funciones locales frente a expresiones lambda](../local-functions-vs-lambdas.md).
+> Algunos de los diseños que se admiten con funciones locales también se pueden realizar con *expresiones lambda*. Para más información, consulte [Funciones locales frente a expresiones lambda](../programming-guide/classes-and-structs/local-functions.md#local-functions-vs-lambda-expressions).
 
 ## <a name="more-expression-bodied-members"></a>Más miembros con forma de expresión
 
@@ -222,7 +222,7 @@ En C# 6 se presentaron los [miembros con forma de expresión](csharp-6.md#expres
 > [!NOTE]
 > En este ejemplo no se requiere un finalizador, pero se muestra para demostrar la sintaxis. No debe implementar un finalizador en la clase salvo que sea necesario para liberar recursos no administrados. También debe plantearse el uso de la clase <xref:System.Runtime.InteropServices.SafeHandle> en lugar de administrar directamente los recursos no administrados.
 
-Estas nuevas ubicaciones de miembros con forma de expresión representan un hito importante en el lenguaje C#: estas características las han implementado miembros de la comunidad que trabajan en el proyecto de código abierto [Roslyn](https://github.com/dotnet/Roslyn).
+Estas nuevas ubicaciones para los miembros con forma de expresión representan un hito importante para el lenguaje C#: miembros de la comunidad que trabajan en el proyecto [Roslyn](https://github.com/dotnet/Roslyn) de código abierto implementaron estas características.
 
 Cambiar un método a un miembro con cuerpo de expresión es un [cambio compatible con un elemento binario](version-update-considerations.md#binary-compatible-changes).
 

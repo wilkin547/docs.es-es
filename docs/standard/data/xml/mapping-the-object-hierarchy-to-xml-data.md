@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 450e350b-6a68-4634-a2a5-33f4dc33baf0
 ms.openlocfilehash: 642a7e5321d0150865f74a66a811914bc9f5d21d
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78160032"
@@ -30,7 +30,7 @@ Cuando un documento XML está en la memoria, la representación conceptual es un
   
  La entrada se representa en la memoria como el siguiente árbol de nodos con la propiedad de tipo de nodo asignada:  
   
- ![árbol de nodos de ejemplo](../../../../docs/standard/data/xml/media/simple-xml.gif "Simple_XML")  
+ ![Ejemplo de árbol de nodos](../../../../docs/standard/data/xml/media/simple-xml.gif "Simple_XML")  
 Representación de árbol de nodo de libro y título  
   
  El elemento `book` se convierte en un objeto **XmlElement**, el siguiente elemento, `title`, también se convierte en un objeto **XmlElement**, mientras que el contenido del elemento se convierte en un objeto **XmlText**. Al observar los métodos y las propiedades del objeto **XmlElement**, estos difieren de los disponibles en un objeto **XmlText**. Por tanto, es fundamental saber en qué tipo de nodo se convierte el marcado XML, puesto que determina las acciones que se pueden realizar.  
@@ -176,7 +176,7 @@ public class Sample
   
  La salida del ejemplo revela la asignación de los datos a los tipos de nodo.  
   
- **Resultado**  
+ **Salida**  
   
 ```xml  
 <?xml version='1.0'?><!--This is a sample XML document --><!DOCTYPE Items [<!ENTITY number "123">]<Items><Item>Test with an entity: 123</Item><Item>test with a child element <more> stuff</Item><Item>test with a CDATA section <![CDATA[<456>]]> def</Item><Item>Test with a char entity: A</Item><--Fourteen chars in this element.--><Item>1234567890ABCD</Item></Items>  
@@ -184,7 +184,7 @@ public class Sample
   
  Si se toma una línea de la entrada cada vez y se utiliza la salida generada por el código, se puede utilizar la tabla siguiente para analizar qué prueba de nodo genera qué línea de salida y, por tanto, se puede comprender en qué tipo de nodo se convierten los datos XML.  
   
-|Entrada|Resultado|Prueba de tipo de nodo|  
+|Entrada|Salida|Prueba de tipo de nodo|  
 |-----------|------------|--------------------|  
 |\<?xml version="1.0"?>|\<?xml version='1.0'?>|XmlNodeType.XmlDeclaration|  
 |\<!-- Este es un ejemplo de documento XML -->|\<!--Este es un ejemplo de documento XML -->|XmlNodeType.Comment|  

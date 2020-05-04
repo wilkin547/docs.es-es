@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 465ef2a0-f909-4ac1-9a56-0ead5c849698
 ms.openlocfilehash: 5ed80ac370e34d6b62bb2b601cb7bd978228a302
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78159824"
 ---
-# <a name="schemaimporterextensions-element"></a>\<elemento > schemaImporterExtensions
+# <a name="schemaimporterextensions-element"></a>Elemento \<schemaImporterExtensions>
 Contiene tipos que son utilizados por <xref:System.Xml.Serialization.XmlSchemaImporter> para asignar de los tipos XSD a los tipos de .NET Framework. Para más información sobre los archivos de configuración, vea [Configuration File Schema](../../../docs/framework/configure-apps/file-schema/index.md) (Esquema de archivos de configuración).  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -26,13 +26,13 @@ Contiene tipos que son utilizados por <xref:System.Xml.Serialization.XmlSchemaIm
   
 ## <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|Description|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<agregar > elemento para \<schemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)|Agrega tipos que son usados por <xref:System.Xml.Serialization.XmlSchemaImporter> para crear las asignaciones.|  
+|Elemento [\<add> de \<schemaImporterExtensions>](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)|Agrega tipos que son usados por <xref:System.Xml.Serialization.XmlSchemaImporter> para crear las asignaciones.|  
   
 ## <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Description|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |[Elemento \<system.xml.serialization>](../../../docs/standard/serialization/system-xml-serialization-element.md)|El elemento de nivel superior para controlar la serialización XML.|  
   
@@ -56,5 +56,5 @@ Contiene tipos que son utilizados por <xref:System.Xml.Serialization.XmlSchemaIm
 - <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>
 - [Esquema de los archivos de configuración](../../../docs/framework/configure-apps/file-schema/index.md)
 - [Elemento \<dateTimeSerialization>](../../../docs/standard/serialization/datetimeserialization-element.md)
-- [\<agregar > elemento para \<schemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
+- Elemento [\<add> de \<schemaImporterExtensions>](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
 - [Elemento \<system.xml.serialization>](../../../docs/standard/serialization/system-xml-serialization-element.md)

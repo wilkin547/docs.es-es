@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
 ms.openlocfilehash: 11e329fa8f0c059b6c2f1c8ccb1d6bd0d0f0030a
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181338"
@@ -23,7 +23,7 @@ Muchas funciones no administradas esperan que el usuario pase, como parámetro d
 |-------------------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|  
 |`DoWork(MyType x);`<br /><br /> No requiere ningún nivel de direccionamiento indirecto.|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> No agrega ningún nivel de direccionamiento indirecto.|No es posible porque ya hay un nivel de direccionamiento indirecto.|  
 |`DoWork(MyType* x);`<br /><br /> Requiere un nivel de direccionamiento indirecto.|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> Agrega un nivel de direccionamiento indirecto.|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> No agrega ningún nivel de direccionamiento indirecto.|  
-|`DoWork(MyType** x);`<br /><br /> Requiere dos niveles de direccionamiento indirecto.|No es posible porque no se puede usar **ByRef** **ByRef** ni `ref` `ref`.|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> Agrega un nivel de direccionamiento indirecto.|  
+|`DoWork(MyType** x);`<br /><br /> Requiere dos niveles de direccionamiento indirecto.|No es posible porque no se puede usar **ByRef** **ByRef** o `ref` `ref`.|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> Agrega un nivel de direccionamiento indirecto.|  
   
  La tabla describe las siguientes directrices para las declaraciones de invocación de plataforma:  
   
@@ -173,7 +173,7 @@ public class TestPlatformInvoke
 }  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Llamar a una función DLL](calling-a-dll-function.md)
 - <xref:System.Runtime.InteropServices.StructLayoutAttribute>

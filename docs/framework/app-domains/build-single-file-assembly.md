@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: compilar un ensamblado de un solo archivo .NET Framework'
+title: Procedimiento para compilar un ensamblado de un solo archivo de .NET Framework
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assembly manifest, single-file assemblies
@@ -13,14 +13,14 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
-ms.openlocfilehash: af1bfb89b01a316a858cbb45bf19a26a16d90016
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.openlocfilehash: b7cb06da74a21dab6f60f0d4c3ac1748fcbe4526
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119947"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644300"
 ---
-# <a name="how-to-build-a-net-framework-single-file-assembly"></a>Cómo: compilar un ensamblado de un solo archivo .NET Framework
+# <a name="how-to-build-a-net-framework-single-file-assembly"></a>Procedimiento para compilar un ensamblado de un solo archivo de .NET Framework
 
 Un ensamblado de único archivo, que es el tipo de ensamblado más sencillo, contiene información y la implementación del tipo, así como el [manifiesto del ensamblado](../../standard/assembly/manifest.md). Puede usar los compiladores de la línea de comandos o Visual Studio para crear un ensamblado de un solo archivo que tenga como destino .NET Framework. De forma predeterminada, el compilador crea un archivo de ensamblado con la extensión *.exe*.
 
@@ -88,5 +88,5 @@ vbc -out:myCodeLibrary.dll -t:library myCode.vb
 
 - [Creación de ensamblados](../../standard/assembly/create.md)
 - [Ensamblados de varios archivos](multifile-assemblies.md)
-- [Cómo: compilar un ensamblado de un solo archivo](build-multifile-assembly.md)
-- [Programación con ensamblados](../../standard/assembly/program.md)
+- [Cómo: Compilar un ensamblado de varios archivos](build-multifile-assembly.md)
+- [Programación con ensamblados](../../standard/assembly/index.md)

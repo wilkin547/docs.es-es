@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 90fda55c-7730-41e9-bc4b-6423a4b920af
 ms.openlocfilehash: 180a4942dd4b701b56fe4788d5f8cd8607faaedd
 ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/03/2019
 ms.locfileid: "73459263"
 ---
-# <a name="datetimeserialization-element"></a>\<elemento > dateTimeSerialization
+# <a name="datetimeserialization-element"></a>Elemento \<dateTimeSerialization>
 Determina el modo de serialización XML de los objetos <xref:System.DateTime>.  
   
  \<configuration>  
@@ -57,5 +57,5 @@ Determina el modo de serialización XML de los objetos <xref:System.DateTime>.
 - <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>
 - [Esquema de los archivos de configuración](../../../docs/framework/configure-apps/file-schema/index.md)
 - [Elemento \<schemaImporterExtensions>](../../../docs/standard/serialization/schemaimporterextensions-element.md)
-- [\<agregar > elemento para \<schemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
+- [Elemento \<add> para \<schemaImporterExtensions>](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
 - [Elemento \<system.xml.serialization>](../../../docs/standard/serialization/system-xml-serialization-element.md)

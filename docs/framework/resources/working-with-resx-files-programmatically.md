@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
 ms.openlocfilehash: 3b84d77e4ac9b9889d1bc2f08e5ead6b81deecb0
 ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/13/2020
 ms.locfileid: "81243042"
 ---
 # <a name="work-with-resx-files-programmatically"></a>Trabajar con archivos .resx mediante programación
 
-Como los archivos de recursos (.resx) XML deben constar de código XML bien definido e incluir un encabezado según un esquema concreto, seguido de datos en pares nombre/valor, es posible que la creación manual de estos archivos sea propensa a errores. Como alternativa, puede crear archivos .resx mediante programación con tipos y miembros de la biblioteca de clases .NET Framework. También puede usar la biblioteca de clases .NET Framework para recuperar los recursos almacenados en archivos .resx. En este artículo se explica cómo puede <xref:System.Resources> usar los tipos y miembros del espacio de nombres para trabajar con archivos .resx.
+Como los archivos de recursos (.resx) XML deben constar de código XML bien definido e incluir un encabezado según un esquema concreto, seguido de datos en pares nombre/valor, es posible que la creación manual de estos archivos sea propensa a errores. Como alternativa, puede crear archivos .resx mediante programación con tipos y miembros de la biblioteca de clases .NET Framework. También puede usar la biblioteca de clases .NET Framework para recuperar los recursos almacenados en archivos .resx. En este artículo se explica cómo se pueden usar los tipos y miembros del espacio de nombres <xref:System.Resources> para trabajar con archivos .resx.
 
-En este artículo se describe cómo trabajar con archivos XML (.resx) que contienen recursos. Para obtener información sobre cómo trabajar con archivos de <xref:System.Resources.ResourceManager>recursos binarios que se han incrustado en ensamblados, vea .
+Se explica cómo trabajar con archivos XML (.resx) que contienen recursos. Para obtener información sobre cómo trabajar con archivos de recursos binarios que se han insertado en ensamblados, vea <xref:System.Resources.ResourceManager>.
 
 > [!WARNING]
-> También hay formas distintas para trabajar con archivos .resx que no son mediante programación. Al agregar un archivo de recursos a un proyecto de [Visual Studio,](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) Visual Studio proporciona una interfaz para crear y mantener un archivo .resx y convierte automáticamente el archivo .resx en un archivo .resources en tiempo de compilación. También puede utilizar un editor de texto para manipular un archivo .resx directamente. Sin embargo, para evitar que se dañe el archivo, tenga cuidado de no modificar la información binaria almacenada en el archivo.
+> También hay formas distintas para trabajar con archivos .resx que no son mediante programación. Cuando se agrega un archivo de recursos a un proyecto de [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link), Visual Studio proporciona una interfaz para crear y mantener un archivo .resx y lo convierte automáticamente en un archivo .resources en tiempo de compilación. También puede utilizar un editor de texto para manipular un archivo .resx directamente. Sin embargo, para evitar que se dañe el archivo, tenga cuidado de no modificar la información binaria almacenada en el archivo.
 
 ## <a name="create-a-resx-file"></a>Creación de un archivo .resx
 
@@ -39,7 +39,7 @@ El archivo .resx resultante tiene el encabezado adecuado y una etiqueta `data` p
 > [!WARNING]
 > No utilice archivos de recursos para almacenar contraseñas, información relativa a la seguridad o datos privados.
 
-En el ejemplo siguiente se crea un archivo .resx denominado CarResources.resx que almacena seis cadenas, un icono y dos objetos definidos por la aplicación (dos objetos `Automobile` ). La `Automobile` clase, que se define y crea una <xref:System.SerializableAttribute> instancia en el ejemplo, se etiqueta con el atributo.
+En el ejemplo siguiente se crea un archivo .resx denominado CarResources.resx que almacena seis cadenas, un icono y dos objetos definidos por la aplicación (dos objetos `Automobile` ). La clase `Automobile`, que se define y de la que se crea una instancia en el ejemplo, se etiqueta con el atributo <xref:System.SerializableAttribute>.
 
 [!code-csharp[Conceptual.Resources.ResX#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.resx/cs/create1.cs#1)]
 [!code-vb[Conceptual.Resources.ResX#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resx/vb/create1.vb#1)]
@@ -70,22 +70,22 @@ No se puede insertar un archivo .resx en un archivo ejecutable en tiempo de ejec
 
  Para convertir un archivo .resx en un archivo .resources, utilice el [generador de archivos de recursos (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md), que tiene la siguiente sintaxis básica:
 
- **Resgen.exe** *nombreArchivo.resx*
+ **Resgen.exe** *.nombre_de_archivo_resx*
 
  El resultado es un archivo de recursos binario que tiene el mismo nombre de archivo raíz que el archivo .resx y una extensión de archivo .resources. Este archivo puede compilarse en un archivo ejecutable o una biblioteca en tiempo de compilación. Si está utilizando el compilador de Visual Basic, use la siguiente sintaxis para insertar un archivo .resources en el archivo ejecutable de la aplicación:
 
- **vbc** *nombreArchivo* **.vb -resource:** *nombreArchivo.resources*
+ **vbc** *nombre_de_archivo* **.vb -resource:** *.nombre_de_archivo_del_recurso*
 
  Si está utilizando C#, la sintaxis es la que se indica a continuación:
 
- **csc** *nombreArchivo* **.cs -resource:** *nombreArchivo.resources*
+ **csc** *nombre_de_archivo* **.cs -resource:** *.nombre_de_archivo_del_recurso*
 
  También se puede insertar el archivo .resources en un ensamblado satélite con [Assembly Linker (AL.exe)](../tools/al-exe-assembly-linker.md), que tiene la siguiente sintaxis básica:
 
- **al** *nombreArchivoRecursos* **-out:** *nombreArchivoEnsamblado*
+ **al** *nombre_de_archivo_del_recurso* **-out:** *.nombre_de_archivo_del_ensamblado*
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Crear archivos de recursos](creating-resource-files-for-desktop-apps.md)
-- [Resgen.exe (Generador de archivos de recursos)](../tools/resgen-exe-resource-file-generator.md)
-- [Al.exe (Enlazador de ensamblajes)](../tools/al-exe-assembly-linker.md)
+- [Resgen.exe (generador de archivos de recursos)](../tools/resgen-exe-resource-file-generator.md)
+- [Al.exe (Assembly Linker)](../tools/al-exe-assembly-linker.md)

@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: d0791df8-04e3-46b4-a6be-fe0ed09267e8
 ms.openlocfilehash: 1bc9b228e61ccb0852ae489d44c5b692c54b642d
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61922595"
 ---
 # <a name="how-to-override-encoded-soap-xml-serialization"></a>Procedimiento para invalidar la serialización XML SOAP codificada
 
-El proceso para invalidar serialización XML de objetos como los mensajes SOAP es similar al proceso para invalidar la serialización XML estándar. Para obtener información sobre cómo invalidar la serialización XML estándar, vea [Cómo: Especifique un nombre de elemento alternativo para un Stream XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
+El proceso para invalidar serialización XML de objetos como los mensajes SOAP es similar al proceso para invalidar la serialización XML estándar. Para obtener más información sobre la invalidación de la serialización XML estándar, vea [Cómo: Especificar un nombre de elemento alternativo para una secuencia XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
 
 ## <a name="to-override-serialization-of-objects-as-soap-messages"></a>Para invalidar serialización de objetos como mensajes SOAP
 
@@ -285,4 +285,4 @@ public class Run
 - [Serialización XML con servicios web XML](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)
 - [Cómo: Serializar un objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
 - [Cómo: Deserializar un objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
-- [Cómo: Serializar un objeto como un Stream XML con codificación SOAP](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
+- [Cómo: Serializar un objeto como secuencia XML con codificación SOAP](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)

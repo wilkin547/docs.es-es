@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: Migrar código administrado DCOM a WCF'
+title: Procedimiento Migrar código administrado DCOM a WCF
 ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 ms.openlocfilehash: 2576e88c25ae381e90ec7d613efb648048145b3b
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181390"
 ---
-# <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Cómo: Migrar código administrado DCOM a WCF
+# <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Procedimiento Migrar código administrado DCOM a WCF
 Windows Communication Foundation (WCF) es la opción recomendada y segura para reemplazar al modelo de objetos de componentes distribuidos (DCOM) en las llamadas de código administrado entre servidores y clientes en un entorno distribuido. En este artículo se muestra cómo migrar el código de DCOM a WCF en los escenarios siguientes.  
   
 - El servicio remoto devuelve un objeto por valor al cliente.  
@@ -301,7 +301,7 @@ public interface ISessionBoundObject
     }  
 ```  
   
- A continuación se muestra la implementación de este servicio. Esta implementación mantiene un generador de canales de singleton para crear objetos con sesión.  Cuando se llama a `GetInstanceAddress`, este crea un canal y crea un objeto <xref:System.ServiceModel.EndpointAddress10> que apunta a la dirección remota asociada a este canal.   <xref:System.ServiceModel.EndpointAddress10> es un tipo de datos que se puede devolver al cliente por valor.
+ En el siguiente ejemplo se muestra la implementación de esta función. Esta implementación mantiene un generador de canales de singleton para crear objetos con sesión.  Cuando se llama a `GetInstanceAddress`, este crea un canal y crea un objeto <xref:System.ServiceModel.EndpointAddress10> que apunta a la dirección remota asociada a este canal.   <xref:System.ServiceModel.EndpointAddress10> es un tipo de datos que se puede devolver al cliente por valor.
   
 ```csharp  
 public class SessionBoundFactory : ISessionBoundFactory  
@@ -328,7 +328,7 @@ public class SessionBoundFactory : ISessionBoundFactory
   
 2. En la sección `<services>`, declare los extremos de servicio para el generador y el objeto con sesión.  Esto permite al cliente comunicarse con los puntos de conexión de servicio, adquirir el <xref:System.ServiceModel.EndpointAddress10> y crear el canal con sesión.  
   
- A continuación se muestra un archivo de configuración de ejemplo con estas opciones:  
+ En el siguiente ejemplo se muestra un archivo de configuración con estas opciones:  
   
 ```xml  
 <configuration>  
@@ -420,7 +420,7 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
 }  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Programación básica de WCF](../wcf/basic-wcf-programming.md)
 - [Diseño e implementación de servicios](../wcf/designing-and-implementing-services.md)

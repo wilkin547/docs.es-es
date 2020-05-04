@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Quitar un ensamblado de la memoria caché global de ensamblados'
+title: Procedimiento para quitar un ensamblado de la memoria caché global de ensamblados
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: acdcc588-b458-436d-876c-726de68244c1
 ms.openlocfilehash: c7d85222f35a61154e3eec70d8c9dad2ca6a32f3
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73119851"
 ---
-# <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>Cómo: Quitar un ensamblado de la memoria caché global de ensamblados
+# <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>Procedimiento para quitar un ensamblado de la memoria caché global de ensamblados
 
 Hay dos formas de quitar un ensamblado de la caché global de ensamblados (GAC):
 
@@ -37,7 +37,7 @@ En este comando, *nombre del ensamblado* es el nombre del ensamblado que se va a
 > [!WARNING]
 > No debe utilizar Gacutil.exe para quitar ensamblados en sistemas de producción porque existe la posibilidad de que alguna aplicación necesite aún el ensamblado. En su lugar, debe usar el instalador de Windows, que mantiene un recuento de referencias para cada ensamblado que se instala en la GAC.
 
-En el ejemplo siguiente se quita un ensamblado denominado `hello.dll` de la caché global de ensamblados:
+En el ejemplo siguiente se quita un ensamblado llamado `hello.dll` de la caché global de ensamblados:
 
 ```console
 gacutil -u hello
@@ -53,5 +53,5 @@ En la aplicación **Programas y características** del **Panel de Control**, sel
 ## <a name="see-also"></a>Vea también
 
 - [Trabajar con ensamblados y la memoria caché global de ensamblados](working-with-assemblies-and-the-gac.md)
-- [Instalar un ensamblado en la memoria caché global de ensamblados](install-assembly-into-gac.md)
+- [Cómo: Instalar un ensamblado en la caché global de ensamblados](install-assembly-into-gac.md)
 - [Gacutil.exe (Herramienta Caché global de ensamblados)](../tools/gacutil-exe-gac-tool.md)

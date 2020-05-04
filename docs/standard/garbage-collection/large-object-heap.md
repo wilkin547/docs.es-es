@@ -1,32 +1,32 @@
 ---
-title: 'Montón de objetos grandes en Windows: .NET'
+title: Montón de objetos grandes en Windows
 ms.date: 05/02/2018
 helpviewer_keywords:
 - large object heap (LOH)"
 - LOH
 - garbage collection, large object heap
 - GC [.NET ], large object heap
-ms.openlocfilehash: 5125b76dd26ffa4fb363ecf8449f65b490f57b93
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ab9beca58b3d6118bc0f5121b6f5dec71a9f9f36
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74283619"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102273"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Montón de objetos grandes en sistemas Windows
 
-El recolector de elementos no utilizados de .NET divide los objetos en pequeños y grandes. Cuando un objeto es grande, algunos de sus atributos son más importantes que si fuera pequeño. Por ejemplo, su compactación (es decir, copiarlo en memoria en cualquier parte del montón) puede resultar cara. Por este motivo, el recolector de elementos no utilizados de .NET coloca los objetos grandes en el montón de objetos grandes. En este tema, veremos el montón de objetos grandes en profundidad. Nos centraremos en qué caracteriza a un objeto como objeto grande, cómo se recolectan estos objetos grandes y qué tipo de implicaciones de rendimiento conllevan los objetos grandes.
+El recolector de elementos no utilizados de .NET divide los objetos en pequeños y grandes. Cuando un objeto es grande, algunos de sus atributos son más importantes que si fuera pequeño. Por ejemplo, su compactación (es decir, copiarlo en memoria en cualquier parte del montón) puede resultar cara. Por este motivo, el recolector de elementos no utilizados de .NET coloca los objetos grandes en el montón de objetos grandes. En este artículo nos centraremos en qué caracteriza a un objeto como objeto grande, cómo se recolectan objetos grandes y qué tipo de implicaciones de rendimiento conllevan los objetos grandes.
 
 > [!IMPORTANT]
-> En este tema se describe el montón de objetos grandes en .NET Framework y .NET Core cuando se ejecutan únicamente en sistemas Windows. No se aborda el montón de objetos grandes en implementaciones de .NET en otras plataformas.
+> También hablaremos del montón de objetos grandes en .NET Framework y .NET Core solo cuando se ejecutan en sistemas Windows. No se aborda el montón de objetos grandes en implementaciones de .NET en otras plataformas.
 
-## <a name="how-an-object-ends-up-on-the-large-object-heap-and-how-gc-handles-them"></a>Cómo los objetos acaban en el montón de objetos grandes y cómo el recolector de elementos no utilizados los administra
+## <a name="how-an-object-ends-up-on-the-loh"></a>Cómo termina un objeto en el montón de objetos grandes
 
 Si un objeto tiene un tamaño mayor o igual que 85 000 bytes, se considera un objeto grande. Este número venía determinado por el ajuste de rendimiento. Cuando una solicitud de asignación de objeto es de 85 000 o más bytes, el tiempo de ejecución la asigna al montón de objetos grandes.
 
-Para entender lo que esto significa, viene bien examinar algunos conceptos básicos relativos al recolector de elementos no utilizados de .NET.
+Para entender lo que esto significa, viene bien examinar algunos conceptos básicos relativos al recolector de elementos no utilizados.
 
-El recolector de elementos no utilizados de .NET es un recolector generacional; es decir, tiene tres generaciones: generación 0, generación 1 y generación 2. El motivo para tener tres generaciones reside en que, en una aplicación bien ajustada, la mayoría de los objetos no pasa de la generación 0. Por ejemplo, en una aplicación de servidor, las asignaciones asociadas a cada solicitud deben agotarse después de que la solicitud finalice. Las solicitudes de asignación al vuelo pasarán a la generación 1 y allí dejarán de estar activas. Básicamente, la generación 1 actúa de búfer entre las áreas de objetos jóvenes y las áreas de objetos de larga vida.
+El recolector de elementos no utilizados es un recolector generacional; es decir, tiene tres generaciones: generación 0, generación 1 y generación 2. El motivo para tener tres generaciones reside en que, en una aplicación bien ajustada, la mayoría de los objetos no pasa de la generación 0. Por ejemplo, en una aplicación de servidor, las asignaciones asociadas a cada solicitud deben agotarse después de que la solicitud finalice. Las solicitudes de asignación al vuelo pasarán a la generación 1 y allí dejarán de estar activas. Básicamente, la generación 1 actúa de búfer entre las áreas de objetos jóvenes y las áreas de objetos de larga vida.
 
 Los objetos pequeños siempre se asignan en la generación 0 y, según cuál sea su duración, pueden subir a la generación 1 o a la generación 2. Los objetos grandes siempre se asignan a la generación 2.
 
@@ -64,7 +64,7 @@ Figura 3: Montón de objetos grandes después de una recolección de elementos n
 
 ## <a name="when-is-a-large-object-collected"></a>¿Cuándo se recolecta un objeto grande?
 
-Por lo general, una recolección de elementos no utilizados tiene lugar cuando se cumple una de las tres condiciones siguientes:
+Por lo general, una recolección de elementos no utilizados tiene lugar bajo una de las tres condiciones siguientes:
 
 - La asignación supera el umbral de la generación 0 o de objeto grande.
 
@@ -122,7 +122,7 @@ Las asignaciones del montón de objetos grandes afectan al rendimiento de las si
 
 De estos tres factores, los dos primeros suelen ser más importantes que el tercero. En consecuencia, se recomienda asignar un grupo de objetos grandes y reutilizarlos en vez de asignar temporales.
 
-## <a name="collecting-performance-data-for-the-loh"></a>Recolección de datos de rendimiento para el montón de objetos grandes
+## <a name="collect-performance-data-for-the-loh"></a>Recolección de datos de rendimiento para el montón de objetos grandes
 
 Antes de recopilar datos de rendimiento para un área específica, conviene haber hecho ya lo siguiente:
 
@@ -310,6 +310,6 @@ Este comando entra en el depurador y muestra la pila de llamadas solo si se llam
 
 En CLR 2.0 se ha incluido una característica denominada *acumulación de memoria virtual* que puede resultar útil si se encuentra en una situación en la que los segmentos (incluidos los de los montones de objetos pequeños y de objetos grandes) se adquieren y liberan con frecuencia. Para establecer un valor de acumulación de memoria virtual, hay que especificar una marca de inicio denominada `STARTUP_HOARD_GC_VM` a través de la API de hospedaje. En vez de liberar los segmentos vacíos para el sistema operativo, CLR anula la confirmación de la memoria de estos segmentos y los coloca en una lista en espera (cabe decir que CLR no lleva esto a cabo en segmentos que son demasiado grandes). Más adelante, CLR usa esos segmentos para cumplir nuevas solicitudes de segmento. La próxima vez que la aplicación necesite un nuevo segmento, CLR usará uno de esta lista en espera (si encuentra uno lo suficientemente grande).
 
-La acumulación de memoria virtual también es útil en aplicaciones que quiere retener los segmentos ya adquiridos; es el caso, por ejemplo, de algunas aplicaciones de servidor que son aplicaciones dominantes que se ejecutan en el sistema, para evitar que se produzcan excepciones por memoria insuficiente.
+La acumulación de memoria virtual también es útil en aplicaciones que quieren retener los segmentos ya adquiridos; es el caso, por ejemplo, de algunas aplicaciones de servidor que son aplicaciones dominantes que se ejecutan en el sistema, para evitar que se produzcan excepciones por memoria insuficiente.
 
 Se recomienda encarecidamente tener cuidado al usar esta característica en la aplicación y garantizar que esta tiene un uso de memoria bastante estable.

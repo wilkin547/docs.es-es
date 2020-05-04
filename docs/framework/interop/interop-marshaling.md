@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 ms.openlocfilehash: 70514811a9d236dc485f64fc34297cdb057a1512
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73124276"
@@ -42,7 +42,7 @@ COM también dispone de un administrador de serialización que serializa datos e
 
 ### <a name="com-clients-and-managed-servers"></a>Clientes COM y servidores administrados
 
-Un servidor administrado exportado con una biblioteca de tipos registrada por la [herramienta de registro de ensamblados (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) tiene una entrada del Registro `ThreadingModel` establecida en `Both`. Este valor indica que el servidor puede activarse en un contenedor uniproceso (STA) o en un contenedor multiproceso (MTA). El objeto de servidor se crea en el mismo contenedor que el llamador, como se muestra en la tabla siguiente:
+Un servidor administrado exportado con una biblioteca de tipos registrada por la [herramienta de registro de ensamblados (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) tiene una entrada del Registro `ThreadingModel` establecida en `Both`. Este valor indica que el servidor puede activarse en un contenedor uniproceso (STA) o en un contenedor multiproceso (MTA). El objeto de servidor se crea en el mismo apartamento que su llamador, como se muestra en la siguiente tabla:
 
 |Cliente COM|Servidor .NET|Requisitos de serialización|
 |----------------|-----------------|-----------------------------|
@@ -51,7 +51,7 @@ Un servidor administrado exportado con una biblioteca de tipos registrada por la
 
 Dado que el cliente y el servidor están en el mismo apartamento, el servicio de serialización de interoperabilidad controla automáticamente toda la serialización de datos. La ilustración siguiente muestra cómo opera el servicio de serialización de interoperabilidad entre montones administrados y no administrados dentro del mismo apartamento de estilo COM.
 
-![Serialización de interoperabilidad entre montones administrados y no administrados](./media/interop-marshaling/interop-heaps-managed-and-unmanaged.gif "Proceso de serialización en el mismo apartamento")
+![Serialización de la interoperabilidad entre montones administrados y no administrados](./media/interop-marshaling/interop-heaps-managed-and-unmanaged.gif "Proceso de serialización en el mismo apartamento")
 
 Si planea exportar un servidor administrado, tenga en cuenta que el cliente COM determina el apartamento del servidor. Un servidor administrado llamado por un cliente COM inicializado en un MTA debe garantizar la seguridad de subprocesos.
 
@@ -66,7 +66,7 @@ El autor del componente establece la afinidad del subproceso de un servidor COM.
 |MTA (valor predeterminado)|MTA<br /><br /> STA|Serialización de interoperabilidad.<br /><br /> Serialización de interoperabilidad y COM.|
 |STA|MTA<br /><br /> STA|Serialización de interoperabilidad y COM.<br /><br /> Serialización de interoperabilidad.|
 
-Cuando un cliente administrado y un servidor no administrado están en el mismo apartamento, el servicio de serialización de interoperabilidad controla toda la serialización de datos. Sin embargo, cuando el cliente y el servidor se inicializan en apartamentos diferentes, también es necesaria la serialización de COM. En la ilustración siguiente se muestran los elementos de una llamada entre apartamentos:
+Cuando un cliente administrado y un servidor no administrado están en el mismo apartamento, el servicio de serialización de interoperabilidad controla toda la serialización de datos. Sin embargo, cuando el cliente y el servidor se inicializan en apartamentos diferentes, también es necesaria la serialización de COM. En la siguiente ilustración se muestran los elementos de una llamada entre apartamentos:
 
 ![Serialización COM](./media/interop-marshaling/single-process-across-multi-apartment.gif "Llamada entre apartamentos entre un cliente .NET y un objeto COM")
 
@@ -87,7 +87,7 @@ Al igual que con la serialización entre apartamentos, la serialización de COM 
 - Un cliente COM que invoca a un servidor administrado en un host remoto usa COM distribuido (DCOM).
 - Un cliente administrado que invoca a un servidor COM en un host remoto usa DCOM.
 
-En la ilustración siguiente se muestra cómo el cálculo de referencias de interoperabilidad y el cálculo de referencias COM proporcionan canales de comunicaciones entre los límites del proceso y del host:
+En la siguiente ilustración se muestra cómo la serialización de interoperabilidad y la serialización de COM proporcionan canales de comunicación a través de procesos y límites de hosts:
 
 ![Serialización COM](./media/interop-marshaling/interop-and-com-marshaling.gif "Serialización entre procesos")
 
@@ -95,7 +95,7 @@ En la ilustración siguiente se muestra cómo el cálculo de referencias de inte
 
 Common Language Runtime conserva la identidad de las referencias administradas y no administradas. En la siguiente ilustración se muestra el flujo de referencias directas no administradas (fila superior) y de referencias directas administradas (fila inferior) entre procesos y límites de hosts.
 
-![Contenedor al que se puede llamar de COM y en tiempo de ejecución](./media/interop-marshaling/interop-direct-ref-across-process.gif "Paso de referencia entre límites de hosts y procesos")
+![Contenedor CCW y contenedor RCW](./media/interop-marshaling/interop-direct-ref-across-process.gif "Paso de referencia entre límites de hosts y procesos")
 
 En esta ilustración:
 
@@ -109,9 +109,9 @@ El número de límites de procesos entre llamador y destinatario es irrelevante;
 
 ### <a name="managed-remoting"></a>Comunicación remota administrada
 
-El runtime también proporciona comunicación remota administrada que puede usarse para establecer un canal de comunicaciones entre objetos administrados a través varios procesos y límites de hosts. La comunicación remota administrada puede alojar un firewall entre los componentes que se comunican, tal como se muestra en la siguiente ilustración:
+El runtime también proporciona comunicación remota administrada que puede usarse para establecer un canal de comunicaciones entre objetos administrados a través varios procesos y límites de hosts. La comunicación remota administrada puede hospedar un firewall entre los componentes de la comunicación, como se muestra en la siguiente ilustración:
 
-![SOAP o TcpChannel](./media/interop-marshaling/interop-remote-soap-or-tcp.gif "Llamadas remotas a través de firewalls que usan SOAP o la clase TcpChannel") Llamadas remotas a través de firewalls mediante SOAP o la clase TcpChannel
+![SOAP o TcpChannel](./media/interop-marshaling/interop-remote-soap-or-tcp.gif "Llamadas remotas a través de firewalls que usan SOAP o la clase TcpChannel") Llamadas remotas a través de firewalls que usan SOAP o la clase TcpChannel
 
 Algunas llamadas no administradas pueden canalizarse mediante SOAP, como las llamadas entre componentes de servicio y COM.
 
@@ -123,9 +123,9 @@ Algunas llamadas no administradas pueden canalizarse mediante SOAP, como las lla
 |[Serialización de datos con invocación de plataforma](marshaling-data-with-platform-invoke.md)|Describe cómo se declaran parámetros de método y se pasan argumentos a funciones exportadas por bibliotecas no administradas.|
 |[Serialización de datos con la interoperabilidad COM](marshaling-data-with-com-interop.md)|Describe cómo se personalizan los contenedores COM para alterar el comportamiento de la serialización.|
 |[Cómo: Migrar código administrado DCOM a WCF](how-to-migrate-managed-code-dcom-to-wcf.md)|Describe cómo se migra de DCOM a WCF.|
-|[Asignar resultados HRESULT y excepciones](how-to-map-hresults-and-exceptions.md)|Describe cómo se asignan excepciones personalizadas a valores HRESULT y proporciona la asignación completa de cada HRESULT a su clase de excepción comparable en .NET Framework.|
+|[Cómo: Asignar resultados HRESULT y excepciones](how-to-map-hresults-and-exceptions.md)|Describe cómo se asignan excepciones personalizadas a valores HRESULT y proporciona la asignación completa de cada HRESULT a su clase de excepción comparable en .NET Framework.|
 |[Interoperar mediante tipos genéricos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))|Describe qué acciones se admiten al usar tipos genéricos para la interoperabilidad COM.|
-|[Interoperating with Unmanaged Code](index.md) (Interoperar con código no administrado)|Describe los servicios de interoperabilidad proporcionados por Common Language Runtime.|
+|[Interoperar con código no administrado](index.md)|Describe los servicios de interoperabilidad proporcionados por Common Language Runtime.|
 |[Interoperabilidad COM avanzada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Proporciona vínculos a más información sobre la incorporación de componentes COM en una aplicación de .NET Framework.|
 |[Consideraciones de diseño para interoperaciones](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))|Proporciona sugerencias para escribir componentes COM integrados.|
 

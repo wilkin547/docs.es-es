@@ -3,12 +3,12 @@ title: Glosario de .NET
 description: Descubra el significado de algunos de los términos usados en la documentación de .NET.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: d8f16579ea4dcbc9260aac83e16d3fbd30db519c
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: e7608ee7e68300d691df51aed923db0e8b518165
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635582"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102481"
 ---
 # <a name="net-glossary"></a>Glosario de .NET
 
@@ -57,6 +57,9 @@ Este CLR se crea a partir del mismo código base que el CLR. Originalmente, Core
 ## <a name="corefx"></a>CoreFX
 
 Biblioteca de clases base (BCL) de .NET Core
+
+> [!TIP]
+> *Fx* significa *framework* (marco).
 
 Un conjunto de bibliotecas que conforman los espacios de nombres de System.\* (y hasta cierto punto Microsoft.\*). BCL es un marco de nivel inferior de uso general donde se compilan marcos de trabajo de la aplicación de nivel superior, como ASP.NET Core. El código fuente de la BCL de .NET Core se encuentra en el [repositorio del entorno de ejecución de .NET Core](https://github.com/dotnet/runtime). En cambio, la mayoría de las API de .NET Core también están disponibles en .NET Framework, por lo que puede considerar CoreFX como una bifurcación de la BCL de .NET Framework.
 

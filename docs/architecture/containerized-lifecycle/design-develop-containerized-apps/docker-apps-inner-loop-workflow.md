@@ -2,12 +2,12 @@
 title: Flujo de trabajo de desarrollo de bucle interior para aplicaciones de Docker
 description: Conozca el flujo de trabajo de "bucle interno" del desarrollo de aplicaciones de Docker.
 ms.date: 02/15/2019
-ms.openlocfilehash: 615cfd08f46609c4e100ea3e72b541fe2c1ae62a
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: bce047bd5ba75f9ef652a294ff6a15656fc5ac34
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989017"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738415"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Flujo de trabajo de desarrollo de bucle interior para aplicaciones de Docker
 
@@ -54,7 +54,7 @@ Con las últimas versiones de Docker para Mac y Windows, desarrollar aplicacione
 
 Además, necesitará un editor de código para que realmente pueda desarrollar su aplicación al tiempo que usa la CLI de Docker.
 
-Microsoft ofrece Visual Studio Code, que es un editor de código ligero compatible con Windows, Linux y macOS y que proporciona IntelliSense con [compatibilidad con numerosos lenguajes](https://code.visualstudio.com/docs/languages/overview) (JavaScript,. NET, Go, Java, Ruby, Python y la mayoría de lenguajes modernos), [depuración](https://code.visualstudio.com/Docs/editor/debugging), [integración con Git](https://code.visualstudio.com/Docs/editor/versioncontrol) y [compatibilidad con extensiones](https://code.visualstudio.com/docs/extensions/overview). Este editor es muy adecuado para desarrolladores de macOS y Linux. En Windows, también puede usar Visual Studio.
+Microsoft ofrece Visual Studio Code, que es un editor de código ligero compatible con Windows, Linux y macOS y que proporciona IntelliSense con [compatibilidad con numerosos lenguajes](https://code.visualstudio.com/docs/languages/overview) (JavaScript,. NET, Go, Java, Ruby, Python y la mayoría de lenguajes modernos), [depuración](https://code.visualstudio.com/Docs/editor/debugging), [integración con Git](https://code.visualstudio.com/Docs/editor/versioncontrol) y [compatibilidad con extensiones](https://code.visualstudio.com/docs/extensions/overview). Este editor es muy adecuado para desarrolladores de macOS y Linux. En Windows, también puede usar Visual Studio.
 
 > [!TIP]
 > Para instrucciones sobre cómo instalar Visual Studio Code para Windows, Linux o macOS, vaya a <https://code.visualstudio.com/docs/setup/setup-overview/>.
@@ -156,7 +156,7 @@ Por cada servicio personalizado que incluya su aplicación, deberá crear una im
 >
 > Por lo tanto, cada desarrollador debe realizar en primer lugar todo el proceso de bucle interno para probarlo localmente y continuar desarrollando hasta que quiera insertar una característica completa o cambiarla al sistema de control de código fuente.
 
-Para crear una imagen en su entorno local y con el DockerFile, puede usar el comando de compilación de Docker, tal y como se muestra en la figura 4-25 (también puede ejecutar `docker-compose up --build` para aplicaciones compuestas por varios contenedores y servicios).
+Para crear una imagen en su entorno local y con el archivo DockerFile, puede usar el comando de compilación de Docker, tal y como se muestra en la figura 4-25 (también puede ejecutar `docker-compose up --build` en aplicaciones compuestas por varios contenedores y servicios).
 
 ![Captura de pantalla que muestra la salida de la consola del comando de compilación de Docker.](./media/docker-apps-inner-loop-workflow/run-docker-build-command.png)
 

@@ -1,6 +1,6 @@
 ---
 title: + Operadores + y += (referencia de C#)
-ms.date: 05/24/2019
+ms.date: 04/23/2020
 f1_keywords:
 - +_CSharpKeyword
 - +=_CSharpKeyword
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - event subscription [C#]
 - += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: cafd07f4b4aefdcc4b43750d61c155fe3d65aa46
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 18364d80b8117fd4074c2c4231eac07c76829bb3
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398104"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135742"
 ---
 # <a name="-and--operators-c-reference"></a>Operadores + y += (referencia de C#)
 
@@ -28,7 +28,7 @@ Para obtener información acerca del operador aritmético `+`, consulte las secc
 
 ## <a name="string-concatenation"></a>Concatenación de cadenas
 
-Cuando uno o ambos operandos son de tipo [cadena](../builtin-types/reference-types.md#the-string-type), el operador `+` concatena las representaciones de cadena de sus operandos:
+Cuando uno o ambos operandos son de tipo [string](../builtin-types/reference-types.md#the-string-type), el operador `+` concatena las representaciones de cadena de sus operandos (la representación de cadena de `null` es una cadena vacía):
 
 [!code-csharp-interactive[string concatenation](snippets/AdditionOperator.cs#AddStrings)]
 
@@ -72,7 +72,7 @@ También usa el operador `+=` para especificar un método de controlador de even
 
 Un tipo definido por el usuario puede [sobrecargar](operator-overloading.md) el operador `+`. Cuando se sobrecarga un operador `+` binario, el operador `+=` también se sobrecarga de modo implícito. Un tipo definido por el usuario no puede sobrecargar de forma explícita el operador `+=`.
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 Para más información, consulte las secciones [Operador unario más](~/_csharplang/spec/expressions.md#unary-plus-operator) y [Operador de suma](~/_csharplang/spec/expressions.md#addition-operator) de la [especificación del lenguaje C#](~/_csharplang/spec/introduction.md).
 

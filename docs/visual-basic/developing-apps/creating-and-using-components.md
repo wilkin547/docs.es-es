@@ -6,16 +6,16 @@ helpviewer_keywords:
 ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
 ms.openlocfilehash: 2fefdff9dc27915066e3d92efd8439adffed9fc5
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74330298"
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Crear y utilizar componentes en Visual Basic
 
-Un *componente* es una clase que implementa la interfaz <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> o que deriva directa o indirectamente de una clase que implementa <xref:System.ComponentModel.IComponent>. Un componente .NET Framework es un objeto reutilizable, puede interactuar con otros objetos y proporciona control sobre los recursos externos y la compatibilidad en tiempo de diseño.  
+Un *componente* es una clase que implementa la interfaz <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> o que deriva directa o indirectamente de una clase que implementa <xref:System.ComponentModel.IComponent>. Un componente de .NET Framework es un objeto que se puede reutilizar, puede interactuar con otros objetos y proporciona control sobre recursos externos y sobre la compatibilidad en tiempo de diseño.  
   
- Una característica importante de los componentes es que se pueden diseñar, lo que significa que se puede usar una clase que es un componente en el entorno de desarrollo integrado de Visual Studio. Los componentes se pueden agregar al cuadro de herramientas, se pueden arrastrar y soltar en un formulario y se pueden manipular en una superficie de diseño. Observe que la compatibilidad en tiempo de diseño de los componentes está integrada en el .NET Framework; un desarrollador de componentes no tiene que realizar ningún trabajo adicional para aprovechar las ventajas de la funcionalidad básica en tiempo de diseño.  
+ Una característica importante de los componentes es que se pueden diseñar, lo que significa que se puede usar una clase que es un componente en el entorno de desarrollo integrado de Visual Studio. Los componentes se pueden agregar al cuadro de herramientas, se pueden arrastrar y soltar en un formulario y se pueden manipular en una superficie de diseño. Observe que la compatibilidad en tiempo de diseño de los componentes está integrada en .NET Framework; un desarrollador de componentes no tiene que efectuar ninguna tarea adicional para aprovechar las funcionalidades base del tiempo de diseño.  
   
  Un *control* es similar a un componente, ya que ambos se pueden diseñar, con la diferencia de que un control proporciona una interfaz de usuario, mientras que un componente no. Un control debe derivar de una de las clases de control base: <xref:System.Windows.Forms.Control> o <xref:System.Web.UI.Control>.  
   

@@ -4,7 +4,7 @@ description: Conozca los procedimientos recomendados para interactuar con compon
 ms.date: 01/18/2019
 ms.openlocfilehash: e5d96471e796dca712d25d2d9e2609508180d83f
 ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/30/2020
 ms.locfileid: "80391226"
@@ -17,17 +17,17 @@ ms.locfileid: "80391226"
 
 La guía de esta sección se aplica a todos los escenarios de interoperabilidad.
 
-- ✔️ UTILICE la misma nomenclatura y uso de mayúsculas y minúsculas para los métodos y parámetros que el método nativo al que desea llamar.
+- ✔️ USE la misma nomenclatura y uso de mayúsculas y minúsculas para los métodos y parámetros que el método nativo al que quiere llamar.
 - ✔️ PLANTÉESE usar la misma nomenclatura y uso de mayúsculas y minúsculas para los valores constantes.
-- ✔️ UTILICE los tipos de .NET que se asignen lo más cerca posible del tipo nativo. Por ejemplo, en C#, utilice `uint` cuando el tipo nativo es `unsigned int`.
-- ✔️ UTILICE solamente atributos `[In]` y `[Out]` cuando quiera que el comportamiento sea diferente al predeterminado.
+- ✔️ USE los tipos de .NET que se asignen lo más cerca posible del tipo nativo. Por ejemplo, en C#, utilice `uint` cuando el tipo nativo es `unsigned int`.
+- ✔️ USE solamente atributos `[In]` y `[Out]` cuando quiera que el comportamiento sea diferente al predeterminado.
 - ✔️ PLANTÉESE usar <xref:System.Buffers.ArrayPool%601?displayProperty=nameWithType> para agrupar los búferes de matriz nativa.
 - ✔️ PLANTÉESE encapsular las declaraciones P/Invoke en una clase con el mismo nombre y uso de mayúsculas y minúsculas que la biblioteca nativa.
   - De esta forma, los atributos `[DllImport]` usan la característica de lenguaje `nameof` de C# para pasar el nombre de la biblioteca nativa y garantizar que no escribió mal el nombre de la biblioteca nativa.
 
 ## <a name="dllimport-attribute-settings"></a>Configuración del atributo DllImport
 
-| Configuración | Default | Recomendación | Detalles |
+| Parámetro | Default | Recomendación | Detalles |
 |---------|---------|----------------|---------|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>   | `true` |  Mantener el valor predeterminado  | Cuando se establece explícitamente en false, los valores devueltos de HRESULT con errores se convierten en excepciones (y el valor devuelto en la definición se convierte en NULL).|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> | `false`  | Depende de la API  | Establezca este valor en true si la API utiliza GetLastError y use Marshal.GetLastWin32Error para obtener el valor. Si la API establece una condición que indica que tiene un error, obtenga el error antes de realizar otras llamadas para evitar que accidentalmente se sobrescriba.|
@@ -36,22 +36,22 @@ La guía de esta sección se aplica a todos los escenarios de interoperabilidad.
 
 ## <a name="string-parameters"></a>Parámetros de cadena
 
-Cuando el juego de caracteres es Unicode o el argumento se marca explícitamente como `[MarshalAs(UnmanagedType.LPWSTR)]` _y_ la cadena se pasa por valor (`ref` ni `out`), la cadena se anclará y se usará directamente mediante código nativo (en lugar de una copia).
+Cuando el juego de caracteres es Unicode o el argumento se marca explícitamente como `[MarshalAs(UnmanagedType.LPWSTR)]` _y_  la cadena se pasa por valor (`ref` ni `out`), la cadena se anclará y se usará directamente mediante código nativo (en lugar de una copia).
 
 Recuerde marcar `[DllImport]` como `Charset.Unicode`, a menos que explícitamente desee un tratamiento ANSI de las cadenas.
 
-❌NO utilice `[Out] string` parámetros. Los parámetros de cadena pasados por valor con el atributo `[Out]` pueden llegar a desestabilizar el entorno de ejecución si la cadena es una cadena internalizada. Obtenga más información sobre el internamiento de cadenas en la documentación de <xref:System.String.Intern%2A?displayProperty=nameWithType>.
+❌ NO USE parámetros `[Out] string`. Los parámetros de cadena pasados por valor con el atributo `[Out]` pueden llegar a desestabilizar el entorno de ejecución si la cadena es una cadena internalizada. Obtenga más información sobre el internamiento de cadenas en la documentación de <xref:System.String.Intern%2A?displayProperty=nameWithType>.
 
-❌Parámetros AVOID. `StringBuilder` La serialización `StringBuilder`*siempre* crea una copia del búfer nativo. Por lo tanto, puede ser extremadamente ineficaz. Siga el escenario típico de una llamada a una API de Windows que toma una cadena:
+❌ EVITE los parámetros `StringBuilder`. La serialización `StringBuilder`*siempre* crea una copia del búfer nativo. Por lo tanto, puede ser extremadamente ineficaz. Siga el escenario típico de una llamada a una API de Windows que toma una cadena:
 
-1. Crear un SB de la capacidad deseada (asigna capacidad administrada)**{1}**
+1. Cree un SB de la capacidad deseada (asigna la capacidad administrada) **{1}** .
 2. Invocar
-   1. Asigna un búfer nativo**{2}**
-   2. Copia el contenido si `[In]` _(el valor predeterminado de un `StringBuilder` parámetro)_.
-   3. Copia el búfer de nativo en una matriz administrada recién asignada si `[Out]` **{3}** _(también el valor predeterminado de`StringBuilder`)_.
-3. `ToString()`asigna otra matriz administrada**{4}**
+   1. Asigna un búfer nativo **{2}** .
+   2. Copia el contenido si `[In]` _(el valor predeterminado de un `StringBuilder` parámetro)_
+   3. Copia el búfer nativo en una matriz administrada recién asignada si `[Out]` **{3}** _(también el valor predeterminado de`StringBuilder`)_
+3. `ToString()` asigna otra matriz administrada **{4}** .
 
-Son *{4}* asignaciones para obtener una cadena de código nativo. Lo mejor que puede hacer para limitar esto consiste en reutilizar `StringBuilder` en otra llamada, pero esta todavía solo guarda la asignación *1*. Es mucho mejor usar y almacenar en caché un búfer de caracteres de `ArrayPool`; después, puede llegar a la asignación de `ToString()` en las llamadas posteriores.
+Es decir, asignaciones *{4}* para obtener una cadena del código nativo. Lo mejor que puede hacer para limitar esto consiste en reutilizar `StringBuilder` en otra llamada, pero esta todavía solo guarda la asignación *1*. Es mucho mejor usar y almacenar en caché un búfer de caracteres de `ArrayPool`; después, puede llegar a la asignación de `ToString()` en las llamadas posteriores.
 
 El otro problema con `StringBuilder` es que siempre copia la copia de seguridad del búfer de retorno en el primer valor NULL. Si la cadena pasada anterior no está terminada o es una cadena terminada en doble NULL, el valor P/Invoke será incorrecto en el mejor de los casos.
 
@@ -61,11 +61,11 @@ Si *usa*`StringBuilder`, un último problema es que la capacidad **no** incluyen
 
 Para obtener más información sobre la serialización cadenas, vea [Cálculo de referencias predeterminado para cadenas](../../framework/interop/default-marshaling-for-strings.md) y [Personalización de la serialización de campos de cadena](customize-parameter-marshaling.md#customizing-string-parameters).
 
-> __Específica de Windows__ Para `[Out]` las cadenas, `CoTaskMemFree` CLR usará de `SysStringFree` forma predeterminada cadenas `UnmanagedType.BSTR`libres o para cadenas marcadas como .
-> **Para la mayoría de las API con un búfer** de cadena de salida: El recuento de caracteres pasado debe incluir el valor null. Si el valor devuelto es menor que el número de caracteres pasados, la llamada se realiza correctamente y el valor es el número de caracteres *sin* el carácter NULL. En caso contrario, el número es el tamaño del búfer necesario *incluyendo* el carácter NULL.
+> __Específico para Windows__ Para las cadenas `[Out]`, CLR utilizará `CoTaskMemFree` de forma predeterminada para liberar las cadenas o `SysStringFree` para las cadenas que están marcadas como `UnmanagedType.BSTR`.
+> **Para la mayoría de las API con un búfer de cadena de salida:** El número de caracteres pasados debe incluir el valor NULL. Si el valor devuelto es menor que el número de caracteres pasados, la llamada se realiza correctamente y el valor es el número de caracteres *sin* el carácter NULL. En caso contrario, el número es el tamaño del búfer necesario *incluyendo* el carácter NULL.
 >
-> - Pasar en 5, obtener 4: la cadena tiene 4 caracteres de largo con un null final.
-> - Pasar en 5, obtener 6: la cadena tiene 5 caracteres de longitud, necesita un búfer de 6 caracteres para contener el valor null.
+> - Pase 5 y obtenga 4: la cadena tiene 4 caracteres de longitud con un valor NULL final.
+> - Pase 5 y obtenga 6: la cadena tiene 5 caracteres de longitud y necesita un búfer de 6 caracteres para contener el valor NULL.
 > [Tipos de datos de Windows para cadenas](/windows/desktop/Intl/windows-data-types-for-strings)
 
 ## <a name="boolean-parameters-and-fields"></a>Parámetros y campos booleanos
@@ -80,13 +80,13 @@ Los GUID se pueden usar directamente en las firmas. Muchas de las API de Windows
 |------|-------------|
 | `KNOWNFOLDERID` | `REFKNOWNFOLDERID` |
 
-❌NO se `[MarshalAs(UnmanagedType.LPStruct)]` use para `ref` nada que no sea parámetros GUID.
+❌ NO USE `[MarshalAs(UnmanagedType.LPStruct)]` para parámetros GUID que no sean `ref`.
 
 ## <a name="blittable-types"></a>Tipos que pueden transferirse en bloque de bits
 
 Los tipos que pueden transferirse en bloque de bits son tipos que tienen la misma representación de nivel de bits en código administrado y nativo. Por lo tanto, no es necesario convertirlos a otro formato para serializarlos con código nativo como punto de partida o destino, y como se mejora el rendimiento, deben preferirse estos tipos.
 
-**Tipos de blittables:**
+**Tipos que pueden transferirse en bloque de bits:**
 
 - `byte`, `sbyte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `single`, `double`
 - Matrices unidimensionales no anidadas de tipos que puede transferirse en bloque de bits (por ejemplo, `int[]`).
@@ -120,18 +120,18 @@ Puede ver si un tipo puede transferirse en bloque de bits al intentar crear un c
 
 ✔️ CREE estructuras que puedan transferirse en bloque de bits cuando sea posible.
 
-Para más información, consulte:
+Para obtener más información, consulte:
 
 - [Tipos que pueden o que no pueden transferirse en bloque de bits](../../framework/interop/blittable-and-non-blittable-types.md)
-- [Tipo de cálculo de referencias](type-marshaling.md)
+- [Serialización de tipos](type-marshaling.md)
 
 ## <a name="keeping-managed-objects-alive"></a>Forma de mantener activos los objetos administrados
 
 `GC.KeepAlive()` asegurará que un objeto permanezca dentro del ámbito hasta que se alcance el método KeepAlive.
 
-[`HandleRef`](xref:System.Runtime.InteropServices.HandleRef)permite que el marshaller mantenga un objeto vivo durante la duración de una P/Invoke. Se puede usar en lugar de `IntPtr` en firmas de método. `SafeHandle` reemplaza esta clase de forma eficaz y se debe usar en su lugar.
+[`HandleRef`](xref:System.Runtime.InteropServices.HandleRef) permite que el serializador mantenga un objeto activo para la duración de P/Invoke. Se puede usar en lugar de `IntPtr` en firmas de método. `SafeHandle` reemplaza esta clase de forma eficaz y se debe usar en su lugar.
 
-[`GCHandle`](xref:System.Runtime.InteropServices.GCHandle)permite anclar un objeto administrado y obtener el puntero nativo a él. El patrón básico es el siguiente:
+[`GCHandle`](xref:System.Runtime.InteropServices.GCHandle) permite anclar un objeto administrado y obtener el puntero nativo. El patrón básico es el siguiente:
 
 ```csharp
 GCHandle handle = GCHandle.Alloc(obj, GCHandleType.Pinned);
@@ -201,7 +201,7 @@ Un tipo `PVOID` de Windows que es un tipo `void*` de C se pueden serializar como
 
 [Tipos de datos de Windows](/windows/desktop/WinProg/windows-data-types)
 
-[Rangos de tipos de datos](/cpp/cpp/data-type-ranges)
+[Intervalos de tipo de datos](/cpp/cpp/data-type-ranges)
 
 ## <a name="structs"></a>Estructuras
 
@@ -217,9 +217,9 @@ Los punteros a las estructuras en definiciones deben pasarse por `ref` o usar `u
 
 ✔️ USE el tipo `sizeof()` de C# en lugar de `Marshal.SizeOf<MyStruct>()` para las estructuras que pueden transferirse en bloque de bits con el fin de mejorar el rendimiento.
 
-❌EVITAR `System.Delegate` el `System.MulticastDelegate` uso o los campos para representar campos de puntero de función en estructuras.
+❌ EVITE el uso de campos `System.Delegate` o `System.MulticastDelegate` para representar campos de puntero de función en estructuras.
 
-Dado <xref:System.Delegate?displayProperty=fullName> <xref:System.MulticastDelegate?displayProperty=fullName> que y no tienen una firma necesaria, no garantizan que el delegado pasado coincidirá con la firma que espera el código nativo. Además, en .NET Framework y .NET Core, el cálculo de referencias de una estructura que contiene una `System.Delegate` o `System.MulticastDelegate` desde su representación nativa en un objeto administrado puede desestabilizar el tiempo de ejecución si el valor del campo en la representación nativa no es un puntero de función que ajusta un delegado administrado. En .NET 5 y versiones `System.Delegate` `System.MulticastDelegate` posteriores, no se admite el cálculo de referencias de una representación nativa a un objeto administrado. Utilice un tipo de `System.Delegate` `System.MulticastDelegate`delegado específico en lugar de o .
+Dado que <xref:System.Delegate?displayProperty=fullName> y <xref:System.MulticastDelegate?displayProperty=fullName> no tienen una firma obligatoria, no garantizan que el delegado que se pasa coincida con la firma que el código nativo espera. Además, en .NET Framework y .NET Core, la serialización de una estructura que contenga `System.Delegate` o `System.MulticastDelegate` desde su representación nativa a un objeto administrado puede desestabilizar el entorno de ejecución si el valor del campo en la representación nativa no es un puntero de función que encapsula un delegado administrado. En .NET 5 y versiones posteriores, no se admite la serialización de un campo `System.Delegate` o `System.MulticastDelegate` de una representación nativa a un objeto administrado. Use un tipo de delegado específico en lugar de `System.Delegate` o `System.MulticastDelegate`.
 
 ### <a name="fixed-buffers"></a>Búferes fijos
 

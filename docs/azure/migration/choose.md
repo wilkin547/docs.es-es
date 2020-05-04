@@ -6,14 +6,14 @@ ms.author: cesardl
 ms.date: 03/01/2020
 ms.openlocfilehash: a8ad946b03f97272cb8685620858af6b21a372dc
 ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/09/2020
 ms.locfileid: "81433353"
 ---
 # <a name="choose-the-right-azure-hosting-option"></a>Elección de la opción de hospedaje de Azure correcta
 
-En este artículo se proporcionan consideraciones y comparaciones entre las varias opciones que tiene en Azure al migrar las aplicaciones de .NET Framework existentes de local a Azure.
+En este artículo se ofrecen consideraciones y comparaciones entre las distintas opciones disponibles en Azure para migrar aplicaciones de .NET Framework existentes desde el entorno local a Azure.
 
 Las áreas fundamentales que debe tener en cuenta a la hora de migrar aplicaciones de .NET existentes a Azure son:
 
@@ -30,13 +30,13 @@ En la tabla siguiente se muestran varias comparaciones y recomendaciones para ay
 
 |                 | Máquinas virtuales de Azure | Azure App Service | Contenedores de Windows |
 |-----------------|-----------|-------------------|--------------------|
-|Cuándo se usa      |<ul><li>La aplicación tiene fuertes dependencias en las instalaciones de .msi local y de servidor.</li><li>Desea la ruta de migración de aplicaciones más sencilla</li></ul>|La aplicación no tiene ninguna dependencia en el servidor, es una aplicación web ASP.NET (MVC, WebForm) limpia o una aplicación de N niveles (Web API, WCF) con acceso a un servidor de base de datos. |<ul><li>La aplicación tiene dependencias en el servidor original, pero esas dependencias pueden incluirse en la imagen Windows de Docker.</li><li>¿Quieres modernizar la aplicación para que esté [lista para devOps en la nube?](../../architecture/modernize-with-azure-containers/modernize-existing-apps-to-cloud-optimized/reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications.md)</li></ul>|
-|Ventajas y beneficios  |<ul><li>Ruta de migración más sencilla</li><li>Entorno familiar. El entorno de implementación es una máquina virtual, por lo que es similar a los servidores locales.</li></ul> |Mantenimiento de PaaS continuado, la forma de más sencilla de administrar y escalar aplicaciones en Azure. |<ul><li>Preparado para el futuro, Cloud DevOps-Ready con dependencias incluidas en los contenedores de la aplicación.</li><li>Casi no es necesario refactorizar el código de .NET /C.</li></ul> |
-|Desventajas             |Es IaaS. El mantenimiento es costoso. Debe administrar la infraestructura de la máquina virtual sobre redes, equilibrador de carga, escalado horizontal, administración de IIS, etc. |<ul><li>No todas las aplicaciones son [compatibles](https://appmigration.microsoft.com/assessment)</li><li>Es posible que algunas aplicaciones deban refactorizarse e incluso volver a diseñarse ligeramente, por lo que admiten Azure App Service.</li></ul> |<ul><li>Curva de aprendizaje de habilidades de Docker</li><li>Algunos cambios en el código y la configuración de la aplicación</li></ul>|
-|Requisitos |Máquina virtual Windows Server con los mismos requisitos que la aplicación en el entorno local | Requisitos de Azure App Service especificados en Comprobaciones de [preparación](https://github.com/Azure/App-Service-Migration-Assistant/wiki/Readiness-Checks). |<ul><li>[Docker Engine - Enterprise para Windows Server 2019](https://azuremarketplace.microsoft.com/marketplace/apps/cloud-infrastructure-services.docker-windows-2019)<br />or</li><li>[Azure Container Service (AKS)](https://azure.microsoft.com/services/container-service/) (el orquestador de Kubernetes)<br />or<li>Orquestador de [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)</li></ul> |
-|Cómo migrar |Consulte [Migración a máquinas virtuales de Azure](vm.md) | Consulte [Migración a Azure App Service](app-service.md) | Siga las consideraciones, escenarios y tutoriales que se explican en el libro electrónico Modernización de [aplicaciones .NET existentes con contenedores](https://aka.ms/liftandshiftwithcontainersebook) de Azure y Windows |
+|Cuándo utilizarlo      |<ul><li>La aplicación tiene fuertes dependencias en las instalaciones de .msi local y de servidor.</li><li>Desea la ruta de migración de aplicaciones más sencilla</li></ul>|La aplicación no tiene ninguna dependencia en el servidor, es una aplicación web ASP.NET (MVC, WebForm) limpia o una aplicación de N niveles (Web API, WCF) con acceso a un servidor de base de datos. |<ul><li>La aplicación tiene dependencias en el servidor original, pero esas dependencias pueden incluirse en la imagen Windows de Docker.</li><li>Quiere modernizar la aplicación para que esté [preparada para DevOps en la nube](../../architecture/modernize-with-azure-containers/modernize-existing-apps-to-cloud-optimized/reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications.md)</li></ul>|
+|Ventajas y beneficios  |<ul><li>Ruta de migración más sencilla</li><li>Entorno familiar. El entorno de implementación es una máquina virtual, por lo que es similar a los servidores locales.</li></ul> |Mantenimiento de PaaS continuado, la forma de más sencilla de administrar y escalar aplicaciones en Azure. |<ul><li>Preparada para el futuro, preparada para DevOps en la nube con dependencias incluidas en los contenedores de la aplicación.</li><li>Casi no es necesario refactorizar el código de .NET o C#.</li></ul> |
+|Desventajas             |Es IaaS. El mantenimiento es costoso. Tiene que administrar la infraestructura de la máquina virtual relacionada con las redes, el equilibrador de carga, la escalabilidad horizontal, la administración de IIS, etc. |<ul><li>No todas las aplicaciones son [compatibles](https://appmigration.microsoft.com/assessment)</li><li>Es posible que sea necesario refactorizar algunas aplicaciones e, incluso, volver a diseñarlas ligeramente, para que admitan Azure App Service.</li></ul> |<ul><li>Curva de aprendizaje de los conocimientos de Docker</li><li>Algunos cambios en el código y la configuración de la aplicación</li></ul>|
+|Requisitos |Máquina virtual Windows Server con los mismos requisitos que la aplicación en el entorno local | Requisitos de Azure App Service especificados en [Comprobaciones de disponibilidad](https://github.com/Azure/App-Service-Migration-Assistant/wiki/Readiness-Checks). |<ul><li>[Motor de Docker: Enterprise para Windows Server 2019](https://azuremarketplace.microsoft.com/marketplace/apps/cloud-infrastructure-services.docker-windows-2019)<br />o</li><li>[Azure Container Service (AKS)](https://azure.microsoft.com/services/container-service/) (el orquestador de Kubernetes)<br />o<li>Orquestador de [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)</li></ul> |
+|Cómo migrar |Consulte [Migración a máquinas virtuales de Azure](vm.md) | Consulte [Migración a Azure App Service](app-service.md) | Siga las consideraciones, los escenarios y los tutoriales que se explican en el libro electrónico [Modernización de las aplicaciones .NET existentes con Azure y Windows Containers](https://aka.ms/liftandshiftwithcontainersebook) |
 
-El siguiente diagrama de diagrama de flujo muestra un árbol de decisión al planear una migración a Azure para las aplicaciones de .NET Framework existentes. Si es viable, pruebe primero la opción A, pero la opción B es la ruta más fácil de realizar.
+En el diagrama de flujo siguiente se muestra un árbol de decisión al planear una migración a Azure para las aplicaciones existentes de .NET Framework. Si es posible, pruebe primero la opción A, pero la opción B es más fácil de realizar.
 
 ![Diagrama que muestra el árbol de decisión de hospedaje](../media/migration/choose/decision-tree.png)
 
@@ -55,13 +55,13 @@ Azure Virtual Network permite:
 - Proteja sus conexiones con una red VPN IPsec o ExpressRoute
 - Obtenga control detallado del tráfico entre las subredes
 - Cree topologías de red sofisticadas con aplicaciones virtuales
-- Obtenga un entorno aislado y altamente seguro para sus aplicaciones
+- Obtener un entorno aislado y de alta seguridad para las aplicaciones
 
 Para empezar a crear su propia red virtual, consulte la [documentación de Azure Virtual Network](https://docs.microsoft.com/azure/virtual-network/).
 
 ## <a name="authentication-and-authorization-considerations-when-migrating-to-azure"></a>Consideraciones sobre autenticación y autorización para migrar a Azure
 
-Una de las principales preocupaciones de una organización a la hora de trasladarse a la nube es la seguridad. La mayoría de las empresas han invertido una cantidad sustancial de tiempo, dinero e ingeniería en el diseño y desarrollo de un modelo de seguridad, y es importante que puedan aprovechar las inversiones existentes, como almacenes de identidades y soluciones de inicio de sesión único.
+Una de las principales preocupaciones de una organización a la hora de trasladarse a la nube es la seguridad. La mayoría de las empresas ha invertido una cantidad considerable de tiempo, dinero e ingeniería en diseñar y desarrollar un modelo de seguridad, y es importante que puedan aprovechar las inversiones existentes, como los almacenes de identidades y las soluciones de inicio de sesión único.
 
 Muchas aplicaciones B2E empresariales de .NET existentes que se ejecutan en entornos locales usan Active Directory para la autenticación y administración de identidades. Azure AD Connect permite integrar sus directorios locales con Azure Active Directory. Para comenzar, consulte [Integración de los directorios locales con Azure Active Directory](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect).
 
@@ -72,4 +72,4 @@ Otras opciones de protocolo de autenticación son [OAuth](https://en.wikipedia.o
 ## <a name="next-steps"></a>Pasos siguientes
 
 > [!div class="nextstepaction"]
-> [Migrar una aplicación web ASP.NET a Azure App Service](app-service.md)
+> [Migración de una aplicación web ASP.NET a Azure App Service](app-service.md)

@@ -5,12 +5,12 @@ author: leecow
 ms.author: leecow
 ms.date: 12/04/2019
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 023b8fdf029dd6b17fe2186296d87dd7507c60b5
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: 42765d4402dfa17d4e962b2ecaf7a83e91853c76
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546567"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82140992"
 ---
 # <a name="net-core-dependencies-and-requirements"></a>Dependencias y requisitos de .NET Core
 
@@ -95,7 +95,7 @@ Para obtener más información sobre los sistemas operativos compatibles con .NE
 
 <!-- markdownlint-disable MD001 -->
 
-### <a name="windows-7--vista--81--server-2008-r2"></a>Windows 7, Vista, 8.1, Server 2008 R2
+### <a name="windows-7--vista--81--server-2008-r2--server-2012-r2"></a><a name="additional-deps"></a> Windows 7 / Vista / 8.1 / Server 2008 R2 / Server 2012 R2
 
 Se necesitan dependencias adicionales en caso de instalar el SDK o el entorno de ejecución de .NET en las versiones siguientes de Windows:
 
@@ -113,6 +113,10 @@ Instale el software siguiente:
 Los requisitos anteriores también son necesarios si se encuentra con uno de los errores siguientes:
 
 > El programa no se puede iniciar porque el archivo *api-ms-win-crt-runtime-l1-1-0.dll* falta en el equipo. Intente volver a instalar el programa para corregir este problema.
+>
+> \- o -
+>
+> El programa no se puede iniciar porque falta el archivo *api-ms-win-cor-timezone-l1-1-0.dll* en el equipo. Intente volver a instalar el programa para corregir este problema.
 >
 > \- o -
 >

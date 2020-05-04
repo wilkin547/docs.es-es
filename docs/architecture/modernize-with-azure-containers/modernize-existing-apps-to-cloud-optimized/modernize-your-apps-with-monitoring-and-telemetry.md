@@ -2,12 +2,12 @@
 title: Modernización de aplicaciones con supervisión y telemetría
 description: Modernización de las aplicaciones .NET existentes con Azure Clour y contenedores Windows | Modernice sus aplicaciones con supervisión y telemetría
 ms.date: 04/30/2018
-ms.openlocfilehash: 3d629e89a73c870d4b6396c6b1d0ecbe95b79ead
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a5101f150d6548406db8638904fb4ab6375edf9c
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72393850"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739183"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Modernización de aplicaciones con supervisión y telemetría
 
@@ -27,11 +27,11 @@ En la figura 4-10 se muestra un ejemplo de cómo Application Insights supervisa 
 
 [Azure Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-overview) forma parte de la [solución de supervisión global de Microsoft Azure](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview). También es un servicio de [Operations Management Suite (OMS)](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview). Log Analytics supervisa los entornos locales y en la nube (OMS para el entorno local) para ayudar a mantener la disponibilidad y el rendimiento. Recopila los datos generados por los recursos en los entornos local y de nube y mediante otras herramientas de supervisión, para proporcionar análisis entre varios orígenes.
 
-En cuanto a los registros de infraestructura de Azure, Log Analytics, como servicio de Azure, ingiere los datos de registro y métricas de otros servicios de Azure (mediante [Azure Monitor](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor)), máquinas virtuales de Azure, contenedores de Docker y otras infraestructuras en la nube o locales. Log Analytics ofrece una búsqueda de registros flexible y análisis predefinidos para estos datos. Proporciona herramientas enriquecidas que puede usar para analizar los datos de diversos orígenes, permite consultas complejas en todos los registros y puede generar alertas activas según las condiciones especificadas. Incluso puede recopilar datos personalizados en el repositorio central de Log Analytics, donde puede consultarlos y visualizarlos. También puede aprovechar las soluciones integradas de Log Analytics para obtener información de forma inmediata sobre la seguridad y la funcionalidad de la infraestructura.
+En cuanto a los registros de infraestructura de Azure, Log Analytics, como servicio de Azure, ingiere los datos de registro y métricas de otros servicios de Azure (mediante [Azure Monitor](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor)), máquinas virtuales de Azure, contenedores de Docker y otras infraestructuras en la nube o locales. Log Analytics ofrece una búsqueda de registros flexible y análisis predefinidos para estos datos. Proporciona herramientas enriquecidas que puede usar para analizar los datos de diversos orígenes, permite consultas complejas en todos los registros y puede generar alertas activas según las condiciones especificadas. Incluso puede recopilar datos personalizados en el repositorio central de Log Analytics, donde puede consultarlos y visualizarlos. También puede aprovechar las soluciones integradas de Log Analytics para obtener conclusiones de forma inmediata sobre la seguridad y la funcionalidad de la infraestructura.
 
 Puede acceder a Log Analytics a través del portal de OMS o de Azure Portal, que se ejecuta en cualquier explorador, y le proporciona acceso a las opciones de configuración y a varias herramientas para analizar y realizar acciones sobre los datos recopilados.
 
-La [solución de supervisión de contenedores](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers) de Log Analytics le ayuda a ver y administrar los hosts de contenedores de Docker y Windows en una sola ubicación. La solución muestra qué contenedores están en ejecución, qué imagen de contenedor están ejecutando y dónde se ejecutan los contenedores. Puede ver información detallada de auditoría, incluidos los comandos que se usan con los contenedores. Y, para solucionar los problemas de los contenedores, puede ver y buscar registros centralizados sin tener que ver los hosts de Docker o Windows de forma remota. Puede encontrar los contenedores que están causando ruido o realizando un consumo excesivo de recursos en un host. También puede ver la información centralizada acerca de la CPU, la memoria, el almacenamiento y el uso y el rendimiento de la red en relación con los contenedores. En equipos con Windows, puede centralizar y comparar registros de Windows Server, Hyper-V y contenedores de Docker. La solución es compatible con los siguientes orquestadores de contenedores:
+La [solución de supervisión de contenedores](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers) de Log Analytics le ayuda a ver y administrar los hosts de contenedores de Docker y Windows en una sola ubicación. La solución muestra qué contenedores están en ejecución, qué imagen de contenedor están ejecutando y dónde se ejecutan los contenedores. Puede ver información detallada de auditoría, incluidos los comandos que se usan con los contenedores. También puede solucionar problemas de los contenedores si examina y busca registros centralizados, sin tener que ver los hosts de Docker o Windows de forma remota. Puede encontrar los contenedores que están causando ruido o realizando un consumo excesivo de recursos en un host. También puede ver la información centralizada acerca de la CPU, la memoria, el almacenamiento y el uso y el rendimiento de la red en relación con los contenedores. En equipos con Windows, puede centralizar y comparar registros de Windows Server, Hyper-V y contenedores de Docker. La solución es compatible con los siguientes orquestadores de contenedores:
 
 - Docker Swarm
 

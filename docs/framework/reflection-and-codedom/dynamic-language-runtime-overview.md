@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 ms.openlocfilehash: a38ed15769d1186ef78733d68d9d8b51b3eb262d
 ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446897"
@@ -51,7 +51,7 @@ Algunos ejemplos de lenguajes desarrollados con DLR son los siguientes:
 
 - IronPython. Disponible como software de código abierto en el sitio web de [GitHub](https://github.com/IronLanguages/ironpython2).
 
-- IronRuby. Disponible como software de código abierto en el sitio web de [ironruby](http://ironruby.net/) .
+- IronRuby. Disponible como software de código abierto en el sitio web de [IronRuby](http://ironruby.net/).
 
 ## <a name="primary-dlr-advantages"></a>Principales ventajas de DLR
  DLR ofrece las ventajas que se indican a continuación.
@@ -96,4 +96,4 @@ DLR usa enlazadores en los sitios de llamada para comunicarse no solo con .NET F
 - [Common Language Runtime](../../standard/clr.md)
 - [Árboles de expresión (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md)
 - [Árboles de expresión (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md)
-- [Walkthrough: Creating and Using Dynamic Objects](../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md) (Tutorial: Crear y usar objetos dinámicos [C# y Visual Basic])
+- [Tutorial: Crear y usar objetos dinámicos](../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

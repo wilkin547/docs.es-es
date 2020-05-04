@@ -4,12 +4,12 @@ description: Descubra cómo usar ML.NET en un escenario de clasificación multic
 ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 50980cd933054825bf21f955b0341dd8e66f3e62
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f158b8dce81e00f652496cad4ec9217c516b3e9d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78239942"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739713"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-mlnet"></a>Tutorial: Clasificación multiclase de incidencias de soporte técnico con ML.NET
 
@@ -29,8 +29,7 @@ Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/s
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-* [Visual Studio 2017, versión 15.6 o posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con la carga de trabajo "Desarrollo multiplataforma de .NET Core" instalada.
-
+* [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o posterior, o bien Visual Studio 2017 versión 15.6 o posterior con la carga de trabajo "Desarrollo multiplataforma de .NET Core" instalada.
 * [Archivo de problemas de GitHub delimitado por pestañas (issues_train.tsv)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv).
 * [Prueba de problemas de GitHub delimitado por pestañas (issues_test.tsv)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv).
 
@@ -146,7 +145,7 @@ Como quiere predecir la etiqueta de GitHub de área para un `GitHubIssue`, utili
 
 [!code-csharp[MapValueToKey](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#MapValueToKey)]
 
-A continuación, llame a `mlContext.Transforms.Text.FeaturizeText` que transforma las columnas de texto (`Title` y `Description`) en un vector numérico para cada una de nombre `TitleFeaturized` y `DescriptionFeaturized`. Anexe la caracterización para ambas columnas a la canalización usando el siguiente código:
+Después, llame a `mlContext.Transforms.Text.FeaturizeText` que transforma las columnas de texto (`Title` y `Description`) en un vector numérico para cada una de nombre `TitleFeaturized` y `DescriptionFeaturized`. Anexe la caracterización para ambas columnas a la canalización usando el siguiente código:
 
 [!code-csharp[FeaturizeText](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#FeaturizeText)]
 

@@ -1,94 +1,94 @@
 ---
 title: Cadenas de conexión
 ms.date: 12/13/2019
-description: Las palabras clave admitidas y los valores de las cadenas de conexión.
+description: Las palabras clave y los valores admitidos de las cadenas de conexión.
 ms.openlocfilehash: bb54d152bac62a86c2a49192cf678a745159164e
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "79401200"
 ---
 # <a name="connection-strings"></a>Cadenas de conexión
 
-Se utiliza una cadena de conexión para especificar cómo conectarse a la base de datos. Las cadenas de conexión de Microsoft.Data.Sqlite siguen la [sintaxis estándar de ADO.NET](../../../framework/data/adonet/connection-strings.md) como una lista separada por punto y coma de palabras clave y valores.
+Una cadena de conexión que se usa para especificar cómo conectarse a la base de datos. Las cadenas de conexión de Microsoft.Data.SQLite siguen la [sintaxis de ADO.NET](../../../framework/data/adonet/connection-strings.md) estándar como una lista de palabras clave y valores separados por punto y coma.
 
 ## <a name="keywords"></a>Palabras clave
 
-Las siguientes palabras clave de cadena de conexión se pueden utilizar con Microsoft.Data.Sqlite:
+Se pueden usar las palabras clave de cadena de conexión siguientes con Microsoft.Data.SQLite:
 
 ### <a name="data-source"></a>Origen de datos
 
 Ruta de acceso al archivo de base de datos. *DataSource* (sin espacio) y *Filename* son alias de esta palabra clave.
 
-SQLite trata las rutas de acceso relativas al directorio de trabajo actual. También se pueden especificar rutas absolutas.
+SQLite trata las rutas de acceso relativas al directorio de trabajo actual. También se pueden especificar rutas de acceso absolutas.
 
-Si **está vacío**, SQLite crea una base de datos temporal en disco que se elimina cuando se cierra la conexión.
+Si está **vacío**, SQLite crea una base de datos temporal en disco que se elimina al cerrar la conexión.
 
-Si `:memory:`, se utiliza una base de datos en memoria. Para obtener más información, consulte [Bases de datos en memoria](in-memory-databases.md).
+Si es `:memory:`, se usa una base de datos en memoria. Para más información, vea [Bases de datos en memoria](in-memory-databases.md).
 
-Las rutas de `|DataDirectory|` acceso que comienzan con la cadena de sustitución se tratan igual que las rutas relativas. Si se establece, las rutas de acceso se realizan en relación con el valor de propiedad de dominio de aplicación DataDirectory.
+Las rutas de acceso que comienzan con la cadena de sustitución `|DataDirectory|` se tratan igual que las rutas de acceso relativas. Si se establecen, las rutas de acceso son relativas al valor de propiedad de dominio de aplicación DataDirectory.
 
-Esta palabra clave también admite [nombres de archivo URI](https://www.sqlite.org/uri.html).
+Esta palabra clave también admite [nombres de archivo de URI](https://www.sqlite.org/uri.html).
 
-### <a name="mode"></a>Mode
+### <a name="mode"></a>Modo
 
-El modo de conexión.
+Modo de conexión.
 
-| Value           | Descripción                                                                                        |
+| Valor           | Descripción                                                                                        |
 | --------------- | -------------------------------------------------------------------------------------------------- |
-| ReadWriteCreate | Abre la base de datos para leerla y escribirla y la crea si no existe. Este es el valor predeterminado. |
-| ReadWrite       | Abre la base de datos para leer y escribir.                                                        |
+| ReadWriteCreate | Abre la base de datos para lectura y escritura, y la crea si no existe. Este es el valor predeterminado. |
+| ReadWrite       | Abre la base de datos para lectura y escritura.                                                        |
 | ReadOnly        | Abre la base de datos en modo de solo lectura.                                                              |
 | Memoria          | Abre una base de datos en memoria.                                                                       |
 
-### <a name="cache"></a>Cache
+### <a name="cache"></a>instancias y claves
 
-El modo de almacenamiento en caché utilizado por la conexión.
+Modo de almacenamiento en caché que usa la conexión.
 
-| Value   | Descripción                                                                                    |
+| Valor   | Descripción                                                                                    |
 | ------- | ---------------------------------------------------------------------------------------------- |
-| Valor predeterminado | Utiliza el modo predeterminado de la biblioteca SQLite subyacente. Este es el valor predeterminado.                   |
-| Privada | Cada conexión utiliza una memoria caché privada.                                                          |
-| Compartido  | Las conexiones comparten una memoria caché. Este modo puede cambiar el comportamiento del bloqueo de transacciones y tablas. |
+| Default | Usa el modo predeterminado de la biblioteca de SQLite subyacente. Este es el valor predeterminado.                   |
+| Private | Cada conexión usa una caché privada.                                                          |
+| Shared  | Las conexiones comparten una caché. Este modo puede cambiar el comportamiento del bloqueo de transacciones y tablas. |
 
 ### <a name="password"></a>Contraseña
 
-La clave de cifrado. Cuando se `PRAGMA key` especifica, se envía inmediatamente después de abrir la conexión.
+La clave de cifrado. Cuando se especifica, `PRAGMA key` se envía inmediatamente después de abrir la conexión.
 
 > [!WARNING]
-> La contraseña no tiene ningún efecto cuando la biblioteca SQLite nativa no admite el cifrado.
+> La contraseña no tiene ningún efecto cuando la biblioteca de SQLite nativa no admite el cifrado.
 
 ### <a name="foreign-keys"></a>Claves externas
 
-Valor que indica si se deben habilitar las restricciones de clave externa.
+Un valor que indica si se deben habilitar restricciones de clave externa.
 
-| Value   | Descripción
+| Valor   | Descripción
 | ------- | --- |
-| True    | Envía `PRAGMA foreign_keys = 1` inmediatamente después de abrir la conexión.
-| False   | Envía `PRAGMA foreign_keys = 0` inmediatamente después de abrir la conexión.
-| (vacío) | No envía `PRAGMA foreign_keys`. Este es el valor predeterminado. |
+| True    | Se envía `PRAGMA foreign_keys = 1` inmediatamente después de abrir la conexión.
+| False   | Se envía `PRAGMA foreign_keys = 0` inmediatamente después de abrir la conexión.
+| (vacío) | No se envía `PRAGMA foreign_keys`. Este es el valor predeterminado. |
 
-No es necesario habilitar claves externas si, como en e_sqlite3, SQLITE_DEFAULT_FOREIGN_KEYS se usó para compilar la biblioteca SQLite nativa.
+No es necesario habilitar las claves externas si, como en e_sqlite3, se ha usado SQLITE_DEFAULT_FOREIGN_KEYS para compilar la biblioteca nativa de SQLite.
 
-### <a name="recursive-triggers"></a>Desencadenantes recursivos
+### <a name="recursive-triggers"></a>Desencadenadores recursivos
 
-Valor que indica si se deben habilitar desencadenadores recursivos.
+Un valor que indica si se van a habilitar los desencadenadores recursivos.
 
-| Value | Descripción                                                                 |
+| Valor | Descripción                                                                 |
 | ----- | --------------------------------------------------------------------------- |
-| True  | Envía `PRAGMA recursive_triggers` inmediatamente después de abrir la conexión. |
-| False | No envía `PRAGMA recursive_triggers`. Este es el valor predeterminado.              |
+| True  | Se envía `PRAGMA recursive_triggers` inmediatamente después de abrir la conexión. |
+| False | No se envía `PRAGMA recursive_triggers`. Este es el valor predeterminado.              |
 
-## <a name="connection-string-builder"></a>Creador de cadenas de conexión
+## <a name="connection-string-builder"></a>Generador de cadenas de conexión
 
-Puede utilizarcomo <xref:Microsoft.Data.Sqlite.SqliteConnectionStringBuilder> una forma fuertemente tipada de crear cadenas de conexión. También se puede utilizar para evitar ataques de inyección de cadenas de conexión.
+Puede usar <xref:Microsoft.Data.Sqlite.SqliteConnectionStringBuilder> como una manera fuertemente tipada de crear cadenas de conexión. También se pueda usar para evitar ataques de inyección de cadenas de conexión.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/EncryptionSample/Program.cs?name=snippet_ConnectionStringBuilder)]
 
 ## <a name="examples"></a>Ejemplos
 
-### <a name="basic"></a>Básica
+### <a name="basic"></a>Básico
 
 Una cadena de conexión básica con una memoria caché compartida para mejorar la simultaneidad.
 
@@ -104,7 +104,7 @@ Una base de datos cifrada.
 Data Source=Encrypted.db;Password=MyEncryptionKey
 ```
 
-### <a name="read-only"></a>Solo lectura
+### <a name="read-only"></a>De sólo lectura
 
 Una base de datos de solo lectura que la aplicación no puede modificar.
 
@@ -114,22 +114,22 @@ Data Source=Reference.db;Mode=ReadOnly
 
 ### <a name="in-memory"></a>En memoria
 
-Una base de datos privada en memoria.
+Una base de datos en memoria privada.
 
 ```ConnectionString
 Data Source=:memory:
 ```
 
-### <a name="sharable-in-memory"></a>Apoderable en memoria
+### <a name="sharable-in-memory"></a>En memoria que se pueda compartir
 
-Una base de datos en memoria que se puede que se pueda hacer de forma personal identificada con el nombre *Sharable*.
+Una base de datos en memoria que se puede compartir y que se identifica mediante el nombre *Compartible*.
 
 ```ConnectionString
 Data Source=Sharable;Mode=Memory;Cache=Shared
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Cadenas de conexión de ADO.NET](../../../framework/data/adonet/connection-strings.md)
 * [Bases de datos en memoria](in-memory-databases.md)
-* [Transactions](transactions.md)
+* [Transacciones](transactions.md)

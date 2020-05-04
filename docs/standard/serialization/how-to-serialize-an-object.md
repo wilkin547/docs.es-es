@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Serializar un objeto'
+title: Procedimiento para serializar un objeto
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a1207d05-32b2-4953-8582-959607991227
 ms.openlocfilehash: 3e24d890d47747c51086214530073fc551321079
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78159889"
 ---
-# <a name="how-to-serialize-an-object"></a>Cómo: Serializar un objeto
+# <a name="how-to-serialize-an-object"></a>Procedimiento para serializar un objeto
 Para serializar un objeto, primero cree el objeto que será serializado y establezca Debe determinar el formato de transporte en el que la secuencia XML estará almacenada, o como una secuencia o como un archivo, para ello. Por ejemplo, si la secuencia XML debe estar guardada en un formulario permanente, cree un objeto <xref:System.IO.FileStream>.  
   
 > [!NOTE]
@@ -53,4 +53,4 @@ Para serializar un objeto, primero cree el objeto que será serializado y establ
 ## <a name="see-also"></a>Vea también
 
 - [Introducción a la serialización XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [Cómo: Deserializar un objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Cómo: para deserializar un objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

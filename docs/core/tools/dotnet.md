@@ -2,12 +2,12 @@
 title: comando dotnet
 description: Aprenda sobre el comando dotnet (el controlador genérico para la CLI de .NET Core) y su uso.
 ms.date: 02/13/2020
-ms.openlocfilehash: 8692d419afd528bf49e1dc7dc1a7a5fd698b363b
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 6a08297499d955db44e342dc82fed25b7b9b8171
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134070"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739076"
 ---
 # <a name="dotnet-command"></a>comando dotnet
 
@@ -22,26 +22,27 @@ ms.locfileid: "80134070"
 Para obtener información sobre los comandos disponibles y el entorno:
 
 ```dotnetcli
-dotnet [-h|--help] [--version] [--info]
-    [--list-runtimes] [--list-sdks]
+dotnet [--version] [--info] [--list-runtimes] [--list-sdks]
+
+dotnet -h|--help
 ```
 
 Para ejecutar un comando (se requiere la instalación de un SDK):
 
 ```dotnetcli
-dotnet <COMMAND> [-d|--diagnostics] [-h|--help] [--verbosity]
+dotnet <COMMAND> [-d|--diagnostics] [-h|--help] [--verbosity <LEVEL>]
     [command-options] [arguments]
 ```
 
 Para ejecutar una aplicación:
 
 ```dotnetcli
-dotnet [--additionalprobingpath] [--additional-deps]
-    [--fx-version]  [--roll-forward]
+dotnet [--additionalprobingpath <PATH>] [--additional-deps <PATH>]
+    [--fx-version <VERSION>]  [--roll-forward <SETTING>]
     <PATH_TO_APPLICATION> [arguments]
 
-dotnet exec [--additionalprobingpath] [--additional-deps]
-    [--fx-version]  [--roll-forward]
+dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
+    [--fx-version <VERSION>]  [--roll-forward <SETTING>]
     <PATH_TO_APPLICATION> [arguments]
 ```
 
@@ -57,7 +58,7 @@ El comando `dotnet` tiene dos funciones:
 
 - Ejecuta aplicaciones de .NET Core.
 
-  Hay que especificar la ruta de acceso al archivo `.dll` de una aplicación para poder ejecutarla. Por ejemplo, `dotnet myapp.dll` ejecuta la aplicación `myapp`. Vea [Implementación de aplicaciones .NET Core](../deploying/index.md) para obtener más información sobre las opciones de implementación.
+  Hay que especificar la ruta de acceso al archivo `.dll` de una aplicación para poder ejecutarla.  Ejecutar la aplicación significa buscar y ejecutar el punto de entrada, que en el caso de las aplicaciones de consola es el método `Main`. Por ejemplo, `dotnet myapp.dll` ejecuta la aplicación `myapp`. Vea [Implementación de aplicaciones .NET Core](../deploying/index.md) para obtener más información sobre las opciones de implementación.
 
 ## <a name="options"></a>Opciones
 
@@ -77,7 +78,7 @@ Las siguientes opciones son para usar `dotnet` por sí mismo. Por ejemplo: `dotn
 
 - **`--list-runtimes`**
 
-  Muestra una lista de los runtime de .NET Core instalados.
+  Muestra una lista de los runtime de .NET Core instalados. Una versión x86 del SDK muestra solo los runtime x86 y una versión x64 solo los runtime x64.
 
 - **`--list-sdks`**
 
@@ -263,7 +264,7 @@ dotnet myapp.dll
 
 - `DOTNET_NOLOGO`
 
-  Especifica si los mensajes de bienvenida y de telemetría de .NET Core se muestran en la primera ejecución. Establézcala en `true` para silenciar estos mensajes (valores `true`, `1` o `yes` aceptados) o en `false` para permitirlos (valores `false`, `0` o `no` aceptados). Si no se establece, el valor predeterminado es `false` y los mensajes se mostrarán en la primera ejecución. Tenga en cuenta que esta marca no tiene ningún efecto en la telemetría (consulte `DOTNET_CLI_TELEMETRY_OPTOUT` para excluirse del envío de telemetría).
+  Especifica si los mensajes de bienvenida y de telemetría de .NET Core se muestran en la primera ejecución. Establézcala en `true` para silenciar estos mensajes (valores `true`, `1` o `yes` aceptados) o en `false` para permitirlos (valores `false`, `0` o `no` aceptados). Si no se establece, el valor predeterminado es `false` y los mensajes se mostrarán en la primera ejecución. Esta marca no tiene ningún efecto en la telemetría (consulte `DOTNET_CLI_TELEMETRY_OPTOUT` para excluirse del envío de telemetría).
 
 - `DOTNET_CLI_TELEMETRY_OPTOUT`
 

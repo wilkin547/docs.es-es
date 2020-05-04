@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
 ms.openlocfilehash: 9a5822a097828f818da020735c3822e86eb3236b
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75716634"
@@ -24,12 +24,12 @@ Especifica la ubicación de los ensamblados a los que se hace referencia.
   
 ## <a name="arguments"></a>Argumentos  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
-|`dirList`|Obligatoria. Lista de directorios delimitados por punto y coma para que el compilador busque si un ensamblado al que se hace referencia no se encuentra en el directorio de trabajo actual (el directorio desde el que se invoca al compilador) o en el directorio del sistema del Common Language Runtime. Si el nombre del directorio contiene un espacio, incluya el nombre entre comillas ("").|  
+|`dirList`|Obligatorio. Lista delimitada por punto y coma de directorios para que el compilador busque un ensamblado al que se hace referencia si no lo encuentra en el directorio de trabajo actual (el directorio desde el que se invoca al compilador) o en el directorio del sistema de Common Language Runtime. Si el nombre del directorio contiene un espacio, escríbalo entre comillas (" ").|  
   
-## <a name="remarks"></a>Notas  
- La opción `-libpath` especifica la ubicación de los ensamblados a los que hace referencia la opción [-Reference](../../../visual-basic/reference/command-line-compiler/reference.md) .  
+## <a name="remarks"></a>Comentarios  
+ La opción `-libpath` especifica la ubicación de los ensamblados a los que se hace referencia con la opción [-reference](../../../visual-basic/reference/command-line-compiler/reference.md).  
   
  El compilador busca referencias a ensamblados que no presentan la ruta completa en el siguiente orden:  
   
@@ -41,16 +41,16 @@ Especifica la ubicación de los ensamblados a los que se hace referencia.
   
 4. Directorios especificados por la variable de entorno LIB.  
   
- La opción `-libpath` es aditiva; Si se especifica más de una vez, se anexa a los valores anteriores.  
+ La opción `-libpath` es sumatoria; si se especifica más de una vez, se anexa a valores ya existentes.  
   
- Use `-reference` para especificar una referencia de ensamblado.  
+ Use `-reference` para especificar una referencia a un ensamblado.  
   
-|Para Set-LIBPATH en el entorno de desarrollo integrado de Visual Studio|  
+|Para establecer -libpath en el entorno de desarrollo integrado de Visual Studio|  
 |---|  
-|1. tener un proyecto seleccionado en **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**. <br />2. Haga clic en la pestaña **referencias** .<br />3. Haga clic en el botón rutas de acceso de **referencia** ....<br />4. en el cuadro de diálogo rutas de acceso de **referencia** , escriba el nombre del directorio en el cuadro **carpeta:** .<br />5. Haga clic en **Agregar carpeta**.|  
+|1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**. <br />2.  Haga clic en la pestaña **Referencias**.<br />3.  Haga clic en el botón **Rutas de acceso de referencia...** .<br />4.  En el cuadro de diálogo **Rutas de acceso de referencia**, escriba el nombre del directorio en el cuadro **Carpeta:** .<br />5.  Haga clic en **Agregar carpeta**.|  
   
 ## <a name="example"></a>Ejemplo  
- El código siguiente compila `T2.vb` para crear un archivo. exe. El compilador busca en el directorio de trabajo, en el directorio raíz de la unidad C:, y en el directorio New assemblies de la unidad C: para las referencias de ensamblado.  
+ El código siguiente compila `T2.vb` para crear un archivo. exe. El compilador busca las referencias de ensamblado en el directorio de trabajo, en el directorio raíz de la unidad C:, y en el directorio New Assemblies (Ensamblados nuevos) de la unidad C:.  
   
 ```console  
 vbc -libpath:c:\;"c:\New Assemblies" -reference:t2.dll t2.vb  

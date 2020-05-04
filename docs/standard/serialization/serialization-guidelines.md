@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
 ms.openlocfilehash: 067f32a026e3354e6c4256602ed17fd7d7bde0b8
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78159798"
@@ -69,7 +69,7 @@ Este documento enumera las instrucciones que se deben tener en cuenta al diseña
      [!code-csharp[SerializationGuidelines#3](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#3)]
      [!code-vb[SerializationGuidelines#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#3)]  
   
-     El atributo <xref:System.Runtime.Serialization.OnDeserializedAttribute> es el atributo de devolución de llamada más utilizado. Los demás atributos de la familia son <xref:System.Runtime.Serialization.OnDeserializingAttribute>, <xref:System.Runtime.Serialization.OnSerializingAttribute>y <xref:System.Runtime.Serialization.OnSerializedAttribute>. Se pueden utilizar para marcar devoluciones de llamada que se ejecutan antes de la deserialización, antes de la serialización y, por último, después de la serialización, respectivamente.  
+     El atributo <xref:System.Runtime.Serialization.OnDeserializedAttribute> es el atributo de devolución de llamada más utilizado. Los demás atributos de la familia son <xref:System.Runtime.Serialization.OnDeserializingAttribute>, <xref:System.Runtime.Serialization.OnSerializingAttribute> y <xref:System.Runtime.Serialization.OnSerializedAttribute>. Se pueden utilizar para marcar devoluciones de llamada que se ejecutan antes de la deserialización, antes de la serialización y, por último, después de la serialización, respectivamente.  
   
 4. CONSIDERE la posibilidad de usar <xref:System.Runtime.Serialization.KnownTypeAttribute> para indicar tipos concretos que se deberían utilizar al deserializar un gráfico de objetos complejo.  
   
@@ -103,7 +103,7 @@ Este documento enumera las instrucciones que se deben tener en cuenta al diseña
      [!code-csharp[SerializationGuidelines#6](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#6)]
      [!code-vb[SerializationGuidelines#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#6)]  
   
-2. CONSIDERE la posibilidad de implementar la interfaz <xref:System.Xml.Serialization.IXmlSerializable> si desea un mayor control sobre la forma del XML serializado del que se proporciona aplicando los atributos de serialización XML. Dos métodos de la interfaz, <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> y <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>, permiten controlar por completo la secuencia XML serializada. También puede controlar el esquema XML que se genera para el tipo aplicando el atributo <xref:System.Xml.Serialization.XmlSchemaProviderAttribute>.  
+2. CONSIDERE la posibilidad de implementar la interfaz <xref:System.Xml.Serialization.IXmlSerializable> si desea un mayor control sobre la forma del XML serializado del que se proporciona aplicando los atributos de serialización XML. Dos métodos de la interfaz, <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> y <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>, permiten controlar totalmente la secuencia XML serializada. También puede controlar el esquema XML que se genera para el tipo aplicando el atributo <xref:System.Xml.Serialization.XmlSchemaProviderAttribute>.  
   
 #### <a name="supporting-runtime-serialization"></a>Admitir la serialización en tiempo de ejecución  
  La *serialización en tiempo de ejecución* es una tecnología usada por .NET Remoting. Si piensa que sus tipos se transportarán mediante .NET Remoting, debe asegurarse de que admitan la serialización en tiempo de ejecución.  

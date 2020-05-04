@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: eb984aa5-ac98-4d0b-a0d2-24238d7bc8dc
 ms.openlocfilehash: 6013b92206e00a77a8ca30d38846c87372c3873e
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344266"
@@ -32,13 +32,13 @@ o
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Si incluye esta opción en una compilación, no se crea ningún archivo de salida y no se realiza ninguna compilación.  
+ Si esta opción se incluye en una compilación, no se crea ningún archivo de salida y no hay ninguna compilación.  
   
 > [!NOTE]
-> La opción `-help` no está disponible en el entorno de desarrollo de Visual Studio; solo está disponible al compilar desde la línea de comandos.  
+> La opción `-help` no está disponible en el entorno de desarrollo de Visual Studio; solo está disponible cuando se compila desde la línea de comandos.  
   
 ## <a name="example"></a>Ejemplo  
- En el código siguiente se muestra la ayuda desde la línea de comandos.  
+ El siguiente código muestra la ayuda de la línea de comandos.  
   
 ```console  
 vbc -help  

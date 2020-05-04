@@ -2,12 +2,12 @@
 title: 'Expresión switch: referencia de C#'
 description: Obtenga información sobre cómo usar la expresión switch de C# para la coincidencia de patrones y otra introspección de datos
 ms.date: 03/19/2020
-ms.openlocfilehash: 9e609bcea0f92f492b5f9b07840e47f75c1b71e4
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: f53cbe873c841271f64496e4e5ff1f11750c7b8a
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249763"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82140666"
 ---
 # <a name="switch-expression-c-reference"></a>Expresión switch (referencia de C#)
 

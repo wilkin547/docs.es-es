@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 ms.openlocfilehash: 9bf57e0f74a353fb6512a24214e9479c1d813aab
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78160214"
@@ -29,7 +29,7 @@ Esta clase <xref:System.Xml.Xsl.XslTransform> admite scripts incrustados mediant
   
  donde `msxsl` es un prefijo enlazado al espacio de nombres `urn:schemas-microsoft-com:xslt`.  
   
- El atributo `language` no es obligatorio, pero si se especifica, su valor debe ser uno de los siguientes: `C#`, `VB`, `JScript`, `JavaScript`, `VisualBasic`o `CSharp`. Si no se especifica, el lenguaje predeterminado es JScript. `language-name` no distingue entre mayúsculas y minúsculas, entonces 'JavaScript' y 'javascript' son equivalentes.  
+ El atributo `language` no es obligatorio, pero si se especifica, su valor deberá ser uno de los siguientes: `C#`, `VB`, `JScript`, `JavaScript`, `VisualBasic` o `CSharp`. Si no se especifica, el lenguaje predeterminado es JScript. `language-name` no distingue entre mayúsculas y minúsculas, entonces 'JavaScript' y 'javascript' son equivalentes.  
   
  El atributo `implements-prefix` es obligatorio. Este atributo se utiliza para declarar un espacio de nombres y asociarlo con el bloque del script. El valor de este atributo es el prefijo que representa el espacio de nombres. Este espacio de nombres puede definirse en cualquier parte de la hoja de estilos.  
   
@@ -47,7 +47,7 @@ Esta clase <xref:System.Xml.Xsl.XslTransform> admite scripts incrustados mediant
   
  Las funciones se pueden declarar dentro del elemento `msxsl:script`. La tabla siguiente muestra los espacios de nombres que se admiten de forma predeterminada. Es posible utilizar clases fuera de los espacios de nombres enumerados. Sin embargo, el nombre de las clases debe estar completo.  
   
-|Espacios de nombres predeterminados|Description|  
+|Espacios de nombres predeterminados|Descripción|  
 |------------------------|-----------------|  
 |Sistema|Clase del sistema.|  
 |System.Collection|Clases de colección|  
@@ -64,13 +64,13 @@ Esta clase <xref:System.Xml.Xsl.XslTransform> admite scripts incrustados mediant
   
 |Tipo|Clase equivalente .NET Framework (tipo)|Tipo de XPath o tipo XSLT|  
 |----------|----------------------------------------------|-----------------------------|  
-|Cadena|System.String|XPath|  
+|String|System.String|XPath|  
 |Booleano|System.Boolean|XPath|  
 |número|System.Double|XPath|  
 |Fragmento del árbol de resultados|System.Xml.XPath.XPathNavigator|XSLT|  
 |Conjunto de nodos|System.Xml.XPath.XPathNodeIterator|XPath|  
   
- Si la función de script utiliza uno de los siguientes tipos numéricos: Int16, UInt16, Int32, UInt32, Int64, UInt64, Single o Decimal, se convierten obligatoriamente en Double, que se asigna al número de tipo W3C XPath. El resto de los tipos se convierten obligatoriamente en tipos String con el método `ToString`.  
+ Si la función de script utiliza uno de los siguientes tipos numéricos: Int16, UInt16, Int32, UInt32, Int64, UInt64, Single o Decimal, se convierten obligatoriamente en Double, que se asigna a un número de tipo W3C XPath. El resto de los tipos se convierten obligatoriamente en tipos String con el método `ToString`.  
   
  Si la función del script utiliza un tipo distinto a los mencionados anteriormente o si no se compila al cargar la hoja de estilos en el objeto <xref:System.Xml.Xsl.XslTransform>, se inicia una excepción.  
   
@@ -214,7 +214,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-## <a name="output"></a>Resultado  
+## <a name="output"></a>Salida  
   
 ```xml  
 <circles xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:user="urn:my-scripts">  

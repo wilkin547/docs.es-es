@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: ad3fa320-4b8f-4e5c-b549-01157591007a
 ms.openlocfilehash: 05cc41cef7da07581d4f0ec8e584858b913d1a80
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710276"
@@ -41,7 +41,7 @@ La clase **XmlDocument** utiliza la propiedad **XmlResolver** de **XmlDocument**
   
 |Propiedad XmlResolver|Función|Notas|  
 |--------------------------|--------------|-----------|  
-|La clase **XmlResolver** que utiliza el objeto **XmlDocument** es la misma clase que la que utiliza **XmlReader**.|El objeto **XmlDocument** utiliza la clase **XmlResolver** asignada a **XmlReader**.<br /><br /> No se puede establecer la propiedad **XmlDocument.Resolver**, independientemente del nivel de confianza de **XmlDocument** porque obtiene una clase **XmlResolver** de **XmlReader**. No se puede intentar invalidar la configuración de **XmlResolver** de XmlReader estableciendo la propiedad **XmlResolver** de **XmlDocument**.|La clase **XmlReader** puede ser **XmlTextReader**, validando <xref:System.Xml.XmlReader>, o un lector de escritura personalizada. Si el sistema de lectura utilizado admite la resolución de entidades, las entidades externas se resuelven. Si el sistema de lectura que se ha pasado no admite las referencias de entidad, entonces no se resuelven.|  
+|La clase **XmlResolver** que utiliza el objeto **XmlDocument** es la misma clase que la que utiliza **XmlReader**.|El objeto **XmlDocument** utiliza la clase **XmlResolver** asignada a **XmlReader**.<br /><br /> No se puede establecer la propiedad **XmlDocument.Resolver**, independientemente del nivel de confianza de **XmlDocument** porque obtiene una clase **XmlResolver** de **XmlReader**. No se puede intentar invalidar la configuración de **XmlReaders** **XmlResolver** estableciendo la propiedad **XmlResolver** de **XmlDocument**.|La clase **XmlReader** puede ser **XmlTextReader**, validando <xref:System.Xml.XmlReader>, o un lector de escritura personalizada. Si el sistema de lectura utilizado admite la resolución de entidades, las entidades externas se resuelven. Si el sistema de lectura que se ha pasado no admite las referencias de entidad, entonces no se resuelven.|  
   
  El ajuste de XmlResolver para contener las credenciales correctas permite el acceso a los recursos externos.  
   

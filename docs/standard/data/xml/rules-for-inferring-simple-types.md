@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
 ms.openlocfilehash: 17429e77f7764873e607a8feaa62da1cc6e014a4
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710237"
@@ -27,7 +27,7 @@ Describe cómo la clase <xref:System.Xml.Schema.XmlSchemaInference> deduce el ti
 |booleano|True, false, 0, 1.|  
 |byte|Enteros en un intervalo de -128 a 127.|  
 |unsignedByte|Enteros en un intervalo de 0 a 255.|  
-|corto|Enteros en un intervalo de –32768 a 32767.|  
+|short|Enteros en un intervalo de –32768 a 32767.|  
 |unsignedShort|Enteros en un intervalo de 0 a 65535.|  
 |int|Enteros en un intervalo de –2147483648 a 2147483647.|  
 |unsignedInt|Enteros en un intervalo de 0 a 4294967295.|  
@@ -35,11 +35,11 @@ Describe cómo la clase <xref:System.Xml.Schema.XmlSchemaInference> deduce el ti
 |unsignedLong|Enteros en un intervalo de 0 a 18446744073709551615.|  
 |enteros|Un número finito de dígitos posiblemente prefijado con "-".|  
 |decimal|Valores numéricos que contienen dígitos de precisión del 0 a 28.|  
-|flotante|Decimales opcionalmente seguidos por "E" o "e" seguidos de un valor entero representando el exponente. Los valores decimales pueden estar en el intervalo de -16777216 a 16777216. Los valores del exponente pueden estar en el intervalo de –149 a 104.<br /><br /> Float permite que valores especiales representen valores infinitos y no numéricos. Los valores especiales para float son: 0, -0, INF, - INF, NaN.|  
-|doble|Lo mismo que float excepto que los valores decimales pueden estar en el intervalo de -9007199254740992 a 9007199254740992, y los valores del exponente pueden estar en el intervalo de –1075 a 970.<br /><br /> Double permite que valores especiales representen valores infinitos y no numéricos. Los valores especiales para float son: 0, -0, INF, - INF, NaN.|  
+|float|Decimales opcionalmente seguidos por "E" o "e" seguidos de un valor entero representando el exponente. Los valores decimales pueden estar en el intervalo de -16777216 a 16777216. Los valores del exponente pueden estar en el intervalo de –149 a 104.<br /><br /> Float permite que valores especiales representen valores infinitos y no numéricos. Los valores especiales para float son: 0, -0, INF, -INF, NaN.|  
+|double|Lo mismo que float excepto que los valores decimales pueden estar en el intervalo de -9007199254740992 a 9007199254740992, y los valores del exponente pueden estar en el intervalo de –1075 a 970.<br /><br /> Double permite que valores especiales representen valores infinitos y no numéricos. Los valores especiales para float son: 0, -0, INF, -INF, NaN.|  
 |duration|El formato de duración W3C.|  
 |dateTime|El formato dateTime W3C.|  
-|tiempo|El formato time W3C.|  
+|hora|El formato time W3C.|  
 |date|Los valores de años están restringidos de 0001 a 9999.|  
 |gYearMonth|El formato W3C de mes y año gregoriano.|  
 |cadena|Uno o más caracteres Unicode.|  
@@ -67,7 +67,7 @@ Describe cómo la clase <xref:System.Xml.Schema.XmlSchemaInference> deduce el ti
 
 Los siguientes son atributos que definen el esquema que son omitidos durante la deducción del sistema.  
   
-|Attribute|Descripción|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |`xsi:type`|Si un elemento se encuentra con tipo `xsi:type` especificado, el `xsi:type` es omitido.|  
 |`xsi:nil`|Si se encuentra un elemento con un atributo `xsi:nil`, su declaración de elemento en el esquema deducido tiene el valor de `nillable="true"`. Un elemento con un atributo `xsi:nil` establecido en `true` no puede tener elementos secundarios.|  

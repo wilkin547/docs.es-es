@@ -3,12 +3,12 @@ title: 'Ramas y bucles: tutorial de introducción a C#'
 description: En este tutorial sobre ramas y bucles, escribirá código de C# para explorar la sintaxis del lenguaje que admite ramas y bucles condicionales para ejecutar instrucciones de forma repetida.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 44b634e3c2120116ee7fd66770398a6b66c8ed8c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d8c10a7462b7c27c5353aee6d957732a8d161015
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73739129"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135950"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Obtenga información sobre la lógica condicional con instrucciones de rama y bucle
 
@@ -247,6 +247,42 @@ Experimente con estas partes por su cuenta. Pruebe todos los pasos siguientes:
 - Cambie la condición para que se detenga en un valor diferente.
 
 Cuando haya terminado, escriba algo de código para practicar con lo que ha aprendido.
+
+## <a name="created-nested-loops"></a>Bucles anidados creados
+
+Se puede anidar un bucle `while`, `do` o `for` dentro de otro para crear una matriz mediante la combinación de cada elemento del bucle externo con cada elemento del bucle interno. Vamos a crear un conjunto de pares alfanuméricos para representar filas y columnas.
+
+Un bucle `for` puede generar las filas:
+
+```csharp
+for (int row = 1; row < 11; row++)
+{
+    Console.WriteLine($"The row is {row}");
+}
+```
+
+Otro bucle puede generar las columnas:
+
+```csharp
+for (char column = 'a'; column < 'k'; column++)
+{
+    Console.WriteLine($"The column is {column}");
+}
+```
+
+Puede anidar un bucle dentro de otro para formar pares:
+
+```csharp
+for (int row = 1; row < 11; row++)
+{
+    for (char column = 'a'; column < 'k'; column++)
+    {
+        Console.WriteLine($"The cell is ({row}, {column})");
+    }
+}
+```
+
+Puede ver que el bucle externo se incrementa una vez con cada ejecución completa del bucle interno. Invierta el anidamiento de filas y columnas, y vea los cambios por sí mismo.
 
 ## <a name="combine-branches-and-loops"></a>Combinación de ramas y bucles
 

@@ -2,12 +2,12 @@
 title: Comando dotnet restore
 description: Aprenda a restaurar dependencias y herramientas específicas del proyecto con el comando dotnet restore.
 ms.date: 02/27/2020
-ms.openlocfilehash: f49f0cda4424a4cc54ab7d4d4c6f729919dc7e60
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: cc8f374468ba95baccf058ac0b0a0175672cdf01
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463431"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158312"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -32,11 +32,34 @@ dotnet restore -h|--help
 
 ## <a name="description"></a>Descripción
 
-El comando `dotnet restore` usa NuGet para restaurar las dependencias, así como las herramientas específicas del proyecto que se especifican en el archivo project.json. De forma predeterminada, la restauración de dependencias y herramientas se ejecuta en paralelo.
+El comando `dotnet restore` usa NuGet para restaurar las dependencias, así como las herramientas específicas del proyecto que se especifican en el archivo project.json.  En la mayoría de los casos, no es necesario usar explícitamente el comando `dotnet restore`, ya que una restauración de NuGet se ejecuta implícitamente si es necesario al ejecutar los siguientes comandos:
 
-Para restaurar las dependencias, NuGet necesita las fuentes donde se encuentran los paquetes. Las fuente se proporcionan normalmente mediante el archivo de configuración *nuget.config*. Cuando se instala el SDK de .NET Core, se proporciona un archivo de configuración predeterminado. Puede especificar más fuentes creando su propio archivo *nuget.config* en el directorio del proyecto. Puede invalidar las fuentes *nuget.config* con la opción - `-s`.
+- [`dotnet new`](dotnet-new.md)
+- [`dotnet build`](dotnet-build.md)
+- [`dotnet build-server`](dotnet-build-server.md)
+- [`dotnet run`](dotnet-run.md)
+- [`dotnet test`](dotnet-test.md)
+- [`dotnet publish`](dotnet-publish.md)
+- [`dotnet pack`](dotnet-pack.md)
+
+A veces, puede que no sea conveniente ejecutar la restauración de NuGet implícita con estos comandos. Por ejemplo, algunos sistemas automatizados, como los sistemas de compilación, deben llamar a `dotnet restore` explícitamente para controlar cuándo se produce la restauración a fin de controlar el uso de la red. Para evitar la restauración de NuGet implícita, puede usar la marca `--no-restore` con cualquiera de estos comandos para deshabilitar la restauración implícita.
+
+### <a name="specify-feeds"></a>Especificación de fuentes
+
+Para restaurar las dependencias, NuGet necesita las fuentes donde se encuentran los paquetes. Las fuente se proporcionan normalmente mediante el archivo de configuración *nuget.config*. Cuando se instala el SDK de .NET Core, se proporciona un archivo de configuración predeterminado. Para especificar fuentes adicionales, realice una de las acciones siguientes:
+
+- Cree su propio archivo *nuget.config* en el directorio del proyecto. Para obtener más información, vea [Configuraciones comunes de NuGet](/nuget/consume-packages/configuring-nuget-behavior) y [Diferencias de nuget.config](#nugetconfig-differences) más adelante en este artículo.
+- Use comandos de `dotnet nuget` como [`dotnet nuget add source`](dotnet-nuget-add-source.md).
+
+Puede invalidar las fuentes *nuget.config* con la opción `-s`.
+
+Para obtener información sobre cómo usar las fuentes autenticadas, vea [Consumir paquetes desde fuentes autenticadas](/nuget/consume-packages/consuming-packages-authenticated-feeds).
+
+### <a name="global-packages-folder"></a>Carpeta de paquetes globales
 
 Para las dependencias, puede especificar dónde se colocan los paquetes restaurados durante la operación de restauración mediante el argumento `--packages`. Si no se especifica, se usa la caché de paquetes NuGet predeterminada, que se encuentra en el directorio `.nuget/packages` del directorio de inicio del usuario en todos los sistemas operativos. Por ejemplo, */home/usuario1* en Linux o *C:\Usuarios\usuario1* en Windows.
+
+### <a name="project-specific-tooling"></a>Herramientas específicas del proyecto
 
 Para herramientas específicas del proyecto, `dotnet restore` restaura primero el paquete en el que se empaqueta la herramienta y, a continuación, continúa con la restauración de las dependencias de la herramienta especificadas en su project.json.
 
@@ -57,22 +80,6 @@ Hay tres configuraciones específicas que `dotnet restore` omite:
 - [trustedSigners](/nuget/schema/nuget-config-file#trustedsigners-section)
 
   Esta configuración no es aplicable porque [NuGet ya no admite la comprobación multiplataforma](https://github.com/NuGet/Home/issues/7939) de los paquetes de confianza.
-
-## <a name="implicit-restore"></a>Restauración implícita
-
-El comando `dotnet restore` se ejecuta de forma implícita si es necesario al ejecutar los comandos siguientes:
-
-- [`dotnet new`](dotnet-new.md)
-- [`dotnet build`](dotnet-build.md)
-- [`dotnet build-server`](dotnet-build-server.md)
-- [`dotnet run`](dotnet-run.md)
-- [`dotnet test`](dotnet-test.md)
-- [`dotnet publish`](dotnet-publish.md)
-- [`dotnet pack`](dotnet-pack.md)
-
-En la mayoría de los casos, no es necesario usar el comando `dotnet restore` de forma explícita.
-
-En ocasiones, es posible que no sea conveniente ejecutar `dotnet restore` de forma implícita. Por ejemplo, algunos sistemas automatizados, como los sistemas de compilación, deben llamar a `dotnet restore` explícitamente para controlar cuándo se produce la restauración a fin de controlar el uso de la red. Para evitar que `dotnet restore` se ejecute de forma implícita, se puede usar la marca `--no-restore` con cualquiera de estos comandos para deshabilitar la restauración implícita.
 
 ## <a name="arguments"></a>Argumentos
 
@@ -120,7 +127,7 @@ En ocasiones, es posible que no sea conveniente ejecutar `dotnet restore` de for
 
 - **`--no-cache`**
 
-  Especifica que no se almacenen en caché los paquetes y las solicitudes HTTP.
+  Especifica que no se almacenen en caché las solicitudes HTTP.
 
 - **`--no-dependencies`**
 

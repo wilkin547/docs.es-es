@@ -9,24 +9,24 @@ helpviewer_keywords:
 ms.assetid: de930027-9108-4f0c-b97c-5e7db4d6ef79
 ms.openlocfilehash: d06df4bd023892429b2aaefdd624398a6546d06d
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74330206"
 ---
 # <a name="default-object-instances-provided-by-myforms-and-mywebservices-visual-basic"></a>Instancias de objeto predeterminadas proporcionadas por My.Forms y My.WebServices (Visual Basic)
 
-Los objetos [My. Forms](../../../visual-basic/language-reference/objects/my-forms-object.md) y [My. webservices](../../../visual-basic/language-reference/objects/my-webservices-object.md) proporcionan acceso a los formularios, orígenes de datos y servicios Web XML utilizados por la aplicación. Para ello, proporcionan colecciones de *instancias predeterminadas* de cada uno de estos objetos.  
+Los objetos [My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md) y [My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md) proporcionan acceso a formularios, orígenes de datos y servicios web XML utilizados por la aplicación. Para ello, proporcionan colecciones de *instancias predeterminadas* de cada uno de estos objetos.  
   
 ## <a name="default-instances"></a>Instancias predeterminadas  
 
- Una instancia predeterminada es una instancia de la clase proporcionada por el motor en tiempo de ejecución y no es necesario que se declare y cree una instancia de mediante las instrucciones `Dim` y `New`. En el ejemplo siguiente se muestra cómo se podría haber declarado y creado una instancia de una instancia de una clase <xref:System.Windows.Forms.Form> denominada `Form1`y cómo se puede obtener una instancia predeterminada de esta clase <xref:System.Windows.Forms.Form> a través de `My.Forms`.  
+ Una instancia predeterminada es una instancia de la clase proporcionada por el runtime y que no es necesario declarar y ni crear una instancia mediante las instrucciones `Dim` y `New`. En el ejemplo siguiente se muestra cómo se podría haber declarado y creado una instancia de una clase <xref:System.Windows.Forms.Form> denominada `Form1` y cómo ahora se puede obtener una instancia predeterminada de esta clase <xref:System.Windows.Forms.Form> a través de `My.Forms`.  
   
  [!code-vb[VbVbcnMy#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#5)]  
   
  [!code-vb[VbVbcnMy#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#6)]  
   
- El objeto `My.Forms` devuelve una colección de instancias predeterminadas para cada clase `Form` que existe en el proyecto. Del mismo modo, `My.WebServices` proporciona una instancia predeterminada de la clase de proxy para cada servicio Web al que se haya creado una referencia en la aplicación.  
+ El objeto `My.Forms` devuelve una colección de instancias predeterminadas para todas las clases `Form` que existen en el proyecto. Del mismo modo, `My.WebServices` proporciona una instancia predeterminada de la clase de proxy para cada servicio web para el que se haya creado una referencia en la aplicación.  
   
 ## <a name="see-also"></a>Vea también
 

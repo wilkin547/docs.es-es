@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c828a558-094b-441e-9065-790b87315fa0
 ms.openlocfilehash: 4f47623aa305ae6e98625acc3d199a76e27d2ea5
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78159941"
 ---
-# <a name="add-element-for-schemaimporterextensions"></a>\<agregar > elemento para \<schemaImporterExtensions >
+# <a name="add-element-for-schemaimporterextensions"></a>Elemento \<add> para \<schemaImporterExtensions>
 Agrega tipos utilizados por <xref:System.Xml.Serialization.XmlSchemaImporter> para asignar los tipos XSD a los tipos de .NET Framework. Para más información sobre los archivos de configuración, vea [Configuration File Schema](../../../docs/framework/configure-apps/file-schema/index.md) (Esquema de archivos de configuración).  
   
  \<configuration>  
@@ -31,7 +31,7 @@ Agrega tipos utilizados por <xref:System.Xml.Serialization.XmlSchemaImporter> pa
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Description|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |**name**|Un nombre sencillo que se utiliza para buscar la instancia.|  
 |**type**|Obligatorio. Especifica la clase de extensión de esquema que se agrega. El valor del atributo **type** debe estar en una línea e incluye el nombre de tipo completo. Cuando el ensamblado se encuentra en la caché global de ensamblados (GAC), también debe incluir la versión, la referencia cultural y el token de clave pública del ensamblado firmado.|  
@@ -41,7 +41,7 @@ Agrega tipos utilizados por <xref:System.Xml.Serialization.XmlSchemaImporter> pa
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Description|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |\<schemaImporterExtensions>|Contiene los tipos que utiliza <xref:System.Xml.Serialization.XmlSchemaImporter> .|  
   

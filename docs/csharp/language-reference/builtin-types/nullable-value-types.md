@@ -4,12 +4,12 @@ description: Información sobre los tipos de valor de C# que admiten un valor NU
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: c13ef6a091ec6aebd4608c5ed8d2c03b067c7312
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: fcd49d7d25b0ad23363db8cb61596004b2e87a8d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888077"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738996"
 ---
 # <a name="nullable-value-types-c-reference"></a>Tipos de valor que admiten valores NULL (referencia de C#)
 
@@ -46,13 +46,13 @@ En el ejemplo siguiente se usa la propiedad `HasValue` para comprobar si la vari
 
 [!code-csharp-interactive[use HasValue](snippets/NullableValueTypes.cs#HasValue)]
 
-También se puede comparar una variable de un tipo de valor que admite un valor NULL con `null` en lugar de usar la propiedad `HasValue`, como se muestra en el ejemplo siguiente:
+También se puede comparar una variable de un tipo de valor que admite valores NULL con `null` en lugar de usar la propiedad `HasValue`, como se muestra en el ejemplo siguiente:
 
 [!code-csharp-interactive[use comparison with null](snippets/NullableValueTypes.cs#CompareWithNull)]
 
 ## <a name="conversion-from-a-nullable-value-type-to-an-underlying-type"></a>Conversión de un tipo de valor que admite un valor NULL a un tipo subyacente
 
-Si desea asignar un valor de un tipo que admite valores NULL a una variable de tipo de valor que no admite valores NULL, puede que tenga que especificar el valor que se va a asignar en lugar de `null`. Use el [operador de fusión de NULL `??`](../operators/null-coalescing-operator.md) para hacerlo (también puede usar el método <xref:System.Nullable%601.GetValueOrDefault(%600)?displayProperty=nameWithType> con el mismo fin):
+Si desea asignar un valor de un tipo que admite valores NULL a una variable de tipo de valor que no admite valores NULL, puede que tenga que especificar el valor que se va a asignar en lugar de `null`. Use el [operador de fusión de NULL `??`](../operators/null-coalescing-operator.md) para ello (también puede usar el método <xref:System.Nullable%601.GetValueOrDefault(%600)?displayProperty=nameWithType> con el mismo fin):
 
 [!code-csharp-interactive[?? operator](snippets/NullableValueTypes.cs#NullCoalescing)]
 
@@ -90,7 +90,7 @@ Si existe una [conversión definida por el usuario](../operators/user-defined-co
 
 ## <a name="boxing-and-unboxing"></a>Conversión boxing y conversión unboxing
 
-La `T?`conversión boxing[ de una instancia de un tipo de valor que acepta valores NULL ](../../programming-guide/types/boxing-and-unboxing.md) se realiza de la siguiente manera:
+La [conversión boxing](../../programming-guide/types/boxing-and-unboxing.md) de una instancia de un tipo de valor que acepta valores NULL `T?` se realiza de la siguiente manera:
 
 - Si <xref:System.Nullable%601.HasValue%2A> devuelve `false`, se genera la referencia nula.
 - Si <xref:System.Nullable%601.HasValue%2A> devuelve `true`, se aplica la conversión boxing al correspondiente valor del tipo de valor subyacente `T`, no a la instancia de <xref:System.Nullable%601>.
@@ -122,7 +122,7 @@ Se puede usar el código que se presenta en el ejemplo siguiente para determinar
 > [!NOTE]
 > Los métodos que se describen en esta sección no son aplicables en el caso de los [tipos de referencia nula](nullable-reference-types.md).
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 Para más información, vea las secciones siguientes de la [Especificación del lenguaje C#](~/_csharplang/spec/introduction.md):
 

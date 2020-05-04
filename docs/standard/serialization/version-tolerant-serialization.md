@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
 ms.openlocfilehash: 9886e2f20ef7954b01ea1f46a9eabdb9ea2cc12d
 ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75348430"
@@ -43,7 +43,7 @@ En la lista de características se incluyen las siguientes:
 
 Hay además, una característica para declarar cuando se ha agregado un nuevo campo opcional. Ésta es la propiedad <xref:System.Runtime.Serialization.OptionalFieldAttribute.VersionAdded%2A> del atributo <xref:System.Runtime.Serialization.OptionalFieldAttribute>.
 
-Estas características se describen con más detalle en las secciones siguientes.
+Estas opciones se tratan con más detalle en las secciones siguientes.
 
 ### <a name="tolerance-of-extraneous-or-unexpected-data"></a>Tolerancia de datos extraños o inesperados
 
@@ -121,7 +121,7 @@ End Class
 
 Las devoluciones de llamada de la serialización son un mecanismo que proporciona los enlaces en el proceso de serialización/deserialización en cuatro puntos.
 
-|Attribute|Cuando se llama al método asociado.|Uso típico|
+|Atributo|Cuando se llama al método asociado.|Uso típico|
 |---------------|------------------------------------------|-----------------|
 |<xref:System.Runtime.Serialization.OnDeserializingAttribute>|Antes de la deserialización.\*|Inicialice los valores predeterminados para los campos opcionales.|
 |<xref:System.Runtime.Serialization.OnDeserializedAttribute>|Después de la deserialización.|Corrija valores de campo opcionales basados en el contenido de otros campos.|
@@ -151,7 +151,7 @@ End Sub
 
 El uso previsto de estos métodos es para las versiones. Durante la deserialización, un campo opcional no se puede inicializar correctamente si faltan los datos para el campo. Esto se puede corregir si se crea el método que asigna el valor correcto y luego se aplica el atributo **OnDeserializingAttribute** u **OnDeserializedAttribute** al método.
 
-El ejemplo siguiente muestra el método en el contexto de un tipo. Si una versión anterior de una aplicación envía una instancia de la clase `Address` a una versión posterior de la aplicación, faltarán los datos de campo `CountryField`. Pero después de la deserialización, el campo se establecerá en un valor predeterminado "Japan".
+El ejemplo siguiente muestra el método en el contexto de un tipo. Si una versión anterior de una aplicación envía una instancia de la clase `Address` a una versión posterior de la aplicación, faltarán los datos de campo `CountryField`. Pero después de la deserialización, el campo se establecerá en el valor predeterminado "Japan".
 
 ```csharp
 [Serializable]
@@ -262,7 +262,7 @@ End Class
 
 ## <a name="serializationbinder"></a>SerializationBinder
 
-Algunos usuarios pueden necesitar controlar qué clase serializar y deserializar porque se necesita una versión diferente de la clase en el servidor y el cliente. <xref:System.Runtime.Serialization.SerializationBinder> es una clase abstracta usada para controlar los tipos reales empleados durante la serialización y la deserialización. Para usar esta clase, obtenga una clase de <xref:System.Runtime.Serialization.SerializationBinder> y omita los métodos <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> y <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A>. Para obtener más información, vea [controlar la serialización y deserialización con SerializationBinder](../../framework/wcf/feature-details/controlling-serialization-and-deserialization-with-serializationbinder.md).
+Algunos usuarios pueden necesitar controlar qué clase serializar y deserializar porque se necesita una versión diferente de la clase en el servidor y el cliente. <xref:System.Runtime.Serialization.SerializationBinder> es una clase abstracta usada para controlar los tipos reales empleados durante la serialización y la deserialización. Para usar esta clase, obtenga una clase de <xref:System.Runtime.Serialization.SerializationBinder> y omita los métodos <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> y <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A>. Para obtener más información, vea [Control de la serialización y la deserialización con SerializationBinder](../../framework/wcf/feature-details/controlling-serialization-and-deserialization-with-serializationbinder.md).
 
 ## <a name="best-practices"></a>Procedimientos recomendados
 

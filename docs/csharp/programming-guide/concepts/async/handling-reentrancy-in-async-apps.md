@@ -2,12 +2,12 @@
 title: Controlar la reentrada en aplicaciones asincrónicas (C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: 67fbbd294ffe6219b58065f974543b2dd483a92c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d46a87ed2200dc92b8e3d23be80306a31a01e501
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77451868"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738302"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>Controlar la reentrada en aplicaciones asincrónicas (C#)
 
@@ -33,7 +33,7 @@ Cuando se incluye código asincrónico en una aplicación, hay que tener en cuen
 > [!NOTE]
 > La versión 1.2 de Seguridad de la capa de transporte (TLS) es ahora la versión mínima que se usará en el desarrollo de la aplicación. Si la aplicación tiene como destino una versión de .NET Framework anterior a la 4.7, consulte el artículo siguiente para obtener [Prácticas recomendadas de Seguridad de la capa de transporte (TLS) con .NET Framework](../../../../framework/network-programming/tls.md).
 
-## <a name="BKMK_RecognizingReentrancy"></a> Reconocer la reentrada
+## <a name="recognizing-reentrancy"></a><a name="BKMK_RecognizingReentrancy"></a> Reconocer la reentrada
 
 En el ejemplo de este tema, los usuarios hacen clic en un botón **Start** (Iniciar) para iniciar una aplicación asincrónica que descarga una serie de sitios web y calcula el número total de bytes que se descargan. Una versión sincrónica del ejemplo respondería de la misma forma independientemente de cuántas veces un usuario elija el botón porque, tras la primera vez, el subproceso de UI omite esos eventos hasta que finaliza la ejecución de la aplicación. Sin embargo, en una aplicación asincrónica, el subproceso de UI continúa respondiendo y podría volver a introducir la operación asincrónica antes de que finalice.
 
@@ -91,7 +91,7 @@ TOTAL bytes returned:  890591
 
 Al final de este tema puede revisar el código que genera este resultado. Si quiere experimentar con el código, descargue la solución en el equipo local y ejecute el proyecto WebsiteDownload o use el código que aparece al final de este tema para crear su propio proyecto. Para más información e instrucciones, vea [Revisión y ejecución de la aplicación de ejemplo](#BKMD_SettingUpTheExample).
 
-## <a name="BKMK_HandlingReentrancy"></a> Controlar la reentrada
+## <a name="handling-reentrancy"></a><a name="BKMK_HandlingReentrancy"></a> Controlar la reentrada
 
 La reentrada se puede controlar de varias maneras en función de lo que se desee de la aplicación. Este tema presenta los siguientes ejemplos:
 
@@ -107,7 +107,7 @@ La reentrada se puede controlar de varias maneras en función de lo que se desee
 
   Permita que todas las operaciones solicitadas se ejecuten de forma asincrónica, pero coordine la presentación de salida para que los resultados de cada operación aparecen juntos y en orden.
 
-### <a name="BKMK_DisableTheStartButton"></a> Deshabilitar el botón de inicio
+### <a name="disable-the-start-button"></a><a name="BKMK_DisableTheStartButton"></a> Deshabilitar el botón de inicio
 
 Puede bloquear el botón **Start** mientras se ejecuta una operación si lo deshabilita en la parte superior del controlador de eventos `StartButton_Click`. A continuación, cuando finalice la operación, puede habilitar de nuevo el botón desde un bloque `finally` de modo que los usuarios puedan volver a ejecutar la aplicación.
 
@@ -140,7 +140,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
 
 Como resultado de los cambios, el botón no responde mientras `AccessTheWebAsync` está descargando los sitios web, por lo que no se puede volver a introducir el proceso.
 
-### <a name="BKMK_CancelAndRestart"></a> Cancelar y reiniciar la operación
+### <a name="cancel-and-restart-the-operation"></a><a name="BKMK_CancelAndRestart"></a> Cancelar y reiniciar la operación
 
 En lugar de deshabilitar el botón **Start**, puede mantenerlo activo y, si el usuario vuelve a seleccionarlo, cancelar la operación que ya se está ejecutando y permitir que la última operación iniciada continúe.
 
@@ -301,7 +301,7 @@ TOTAL bytes returned:  890591
 
 Para eliminar las listas parciales, quite el comentario de la primera línea de código en `StartButton_Click` para borrar el cuadro de texto cada vez que el usuario reinicie la operación.
 
-### <a name="BKMK_RunMultipleOperations"></a> Ejecutar varias operaciones y poner en cola el resultado
+### <a name="run-multiple-operations-and-queue-the-output"></a><a name="BKMK_RunMultipleOperations"></a> Ejecutar varias operaciones y poner en cola el resultado
 
 Este tercer ejemplo es el más complicado porque la aplicación inicia otra operación asincrónica cada vez que el usuario selecciona el botón **Start** y todas las operaciones se ejecutan hasta completarse. Todas las operaciones solicitadas descargan los sitios web de la lista de forma asincrónica, pero la salida de las operaciones se presenta de manera secuencial. Es decir, la actividad de descarga real se intercala, según se muestra en la salida de [Reconocer la reentrada](#BKMK_RecognizingReentrancy), pero la lista de resultados de cada grupo se presenta por separado.
 
@@ -547,14 +547,14 @@ La salida muestra los siguientes patrones.
 
     Una vez que un grupo introduce `StartButton_Click`, la operación no completa una expresión await hasta que la operación introduce `FinishOneGroupAsync`. Por lo tanto, ninguna otra operación puede lograr el control durante ese segmento de código.
 
-## <a name="BKMD_SettingUpTheExample"></a> Revisión y ejecución de la aplicación de ejemplo
+## <a name="reviewing-and-running-the-example-app"></a><a name="BKMD_SettingUpTheExample"></a> Revisión y ejecución de la aplicación de ejemplo
 
 Para entender mejor la aplicación de ejemplo, puede descargarla, compilarla usted mismo o revisar el código al final de este tema sin necesidad de implementar la aplicación.
 
 > [!NOTE]
 > Para ejecutar el ejemplo como aplicación de escritorio de Windows Presentation Foundation (WPF), debe tener instalado en el equipo Visual Studio 2012 o posterior, y .NET Framework 4.5 o posterior.
 
-### <a name="BKMK_DownloadingTheApp"></a> Descargar la aplicación
+### <a name="downloading-the-app"></a><a name="BKMK_DownloadingTheApp"></a> Descargar la aplicación
 
 1. Descargue el archivo comprimido de [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) (Ejemplos asincrónicos: reentrada en aplicaciones de escritorio de .NET).
 
@@ -568,7 +568,7 @@ Para entender mejor la aplicación de ejemplo, puede descargarla, compilarla ust
 
 6. Elija las teclas CTRL+F5 para compilar y ejecutar el proyecto.
 
-### <a name="BKMK_BuildingTheApp"></a> Compilar la aplicación
+### <a name="building-the-app"></a><a name="BKMK_BuildingTheApp"></a> Compilar la aplicación
 
 La sección siguiente proporciona el código para compilar el ejemplo como una aplicación de WPF.
 
@@ -586,7 +586,7 @@ La sección siguiente proporciona el código para compilar el ejemplo como una a
 
 5. Asigne un nombre al proyecto `WebsiteDownloadWPF`, elija la versión 4.6 de .NET Framework o una posterior y, después, haga clic en el botón **Aceptar**.
 
-     El nuevo proyecto aparece en el **Explorador de soluciones**.
+     El proyecto nuevo aparece en el **Explorador de soluciones**.
 
 6. En el Editor de código de Visual Studio, elija la pestaña **MainWindow.xaml** .
 
@@ -616,7 +616,7 @@ La sección siguiente proporciona el código para compilar el ejemplo como una a
 
      Agregue una referencia para <xref:System.Net.Http>, si aún no está seleccionada.
 
-9. En el **Explorador de soluciones**, abra el menú contextual de MainWindow.xaml.cs y después seleccione **Ver código**.
+9. En el **Explorador de soluciones**, abra el menú contextual de MainWindow.xaml.cs y después elija **Ver código**.
 
 10. Reemplace el código del archivo MainWindow.xaml.cs por el código siguiente.
 
@@ -730,5 +730,5 @@ La sección siguiente proporciona el código para compilar el ejemplo como una a
 
 ## <a name="see-also"></a>Vea también
 
-- [Walkthrough: Accessing the Web by Using async and await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md) (Tutorial: Acceso a web usando Async y Await [C#])
-- [Asynchronous Programming with async and await (C#)](./index.md) (Programación asincrónica con async y await (C#))
+- [Tutorial: Acceso a web usando Async y Await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Programación asincrónica con Async y Await (C#)](./index.md)

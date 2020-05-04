@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 51f0edc3-993d-4051-b7f2-77753694d3d1
 ms.openlocfilehash: 2bbdced0f984b653a58afba9685683e8c0891271
 ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/15/2020
 ms.locfileid: "81389796"
@@ -17,8 +17,8 @@ ms.locfileid: "81389796"
 # <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>Procedimiento para usar la herramienta de definición de esquema XML para generar clases y documentos de esquema XML
 La herramienta XML Schema Definition (Xsd.exe) le permite generar un esquema XML que describe una clase o generar la clase definida por un esquema XML. Los procedimientos siguientes muestran cómo realizar estas operaciones.
 
-La herramienta Dedefinición de esquemas XML (Xsd.exe) normalmente se puede encontrar en la siguiente ruta de acceso:
-_C:\\Archivos de programa\\(x86)\\\\Microsoft SDKs Windows .\\\\\\_
+La herramienta de definición de esquema XML (Xsd.exe) suele estar en la siguiente ruta de acceso:\
+_C:\\Archivos de programa (x86)\\Microsoft SDKs\\Windows\\{versión}\\bin\\NETFX {versión} Tools\\_
 
 ### <a name="to-generate-classes-that-conform-to-a-specific-schema"></a>Para generar clases que cumplen con un esquema concreto  
   
@@ -30,7 +30,7 @@ _C:\\Archivos de programa\\(x86)\\\\Microsoft SDKs Windows .\\\\\\_
     xsd mySchema.xsd  
     ```  
   
-     La herramienta solo puede procesar esquemas que hagan referencia a la especificación de World Wide Web Consortium XML del 16 de marzo de 2001. En otras palabras, el espaciohttp://www.w3.org/2001/XMLSchemade nombres de esquema XML debe ser " " como se muestra en el ejemplo siguiente.  
+     La herramienta solo puede procesar esquemas que hagan referencia a la especificación de World Wide Web Consortium XML del 16 de marzo de 2001. En otras palabras, el espacio de nombres del esquema XML debe ser "http://www.w3.org/2001/XMLSchema" como se muestra en el ejemplo siguiente.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
@@ -55,12 +55,12 @@ _C:\\Archivos de programa\\(x86)\\\\Microsoft SDKs Windows .\\\\\\_
   
      Se escribirá el esquema (o esquemas), comenzando con "schema0.xsd" del nombre.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Data.DataSet>
 - [Herramienta de definición de esquema XML y serialización XML](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)
-- [Introducir la serialización XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [Herramienta de definición de esquemas XML (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
+- [Introducción a la serialización XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
+- [Herramienta de definición de esquema XML (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Procedimiento para serializar un objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [Procedimiento para deserializar un objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Cómo: para serializar un objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [Cómo: para deserializar un objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

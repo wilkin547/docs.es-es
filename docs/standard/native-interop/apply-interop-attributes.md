@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
 ms.openlocfilehash: ca104c512641774217de5e270dc50b7393fc5725
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78159252"
@@ -28,7 +28,7 @@ El espacio de nombres <xref:System.Runtime.InteropServices> proporciona tres cat
 ## <a name="design-time-attributes"></a>Atributos en tiempo de diseño  
  Puede ajustar el resultado del proceso de conversión realizado por las API y las herramientas de interoperabilidad COM mediante atributos en tiempo de diseño. En la tabla siguiente se describen los atributos que se pueden aplicar al código fuente administrado. En ocasiones, es posible que las herramientas de interoperabilidad COM también apliquen los atributos descritos en esta tabla.  
   
-|Atributo|Description|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |<xref:System.Runtime.InteropServices.AutomationProxyAttribute>|Especifica si el tipo debe serializarse mediante el contador de referencias de Automation o un proxy personalizado y código auxiliar.|  
 |<xref:System.Runtime.InteropServices.ClassInterfaceAttribute>|Controla el tipo de interfaz generada para una clase.|  
@@ -56,7 +56,7 @@ El espacio de nombres <xref:System.Runtime.InteropServices> proporciona tres cat
 ## <a name="conversion-tool-attributes"></a>Atributos de la herramienta de conversión  
  En la tabla siguiente se describen los atributos que las herramientas de interoperabilidad COM aplican durante el proceso de conversión. Estos atributos no se aplican en tiempo de diseño.  
   
-|Atributo|Description|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |<xref:System.Runtime.InteropServices.ComAliasNameAttribute>|Indica el alias COM de un parámetro o tipo de campo. Puede usarse para parámetros de atributo, campos o valores devueltos.|  
 |<xref:System.Runtime.InteropServices.ComConversionLossAttribute>|Indica que se perdió la información sobre una clase o interfaz cuando se importó desde una biblioteca de tipos a un ensamblado.|  

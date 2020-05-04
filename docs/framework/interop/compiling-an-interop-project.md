@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: 6fcf6588-5e25-41af-b4ae-780974f2c3df
 ms.openlocfilehash: 32102910ae674a97e941e1346a1898585f503527
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73123685"
@@ -22,15 +22,15 @@ Los proyectos de interoperabilidad COM que hacen referencia a uno o más ensambl
 
  Hay dos maneras de hacer referencia a ensamblados de interoperabilidad:
 
-- Tipos de interoperabilidad incrustados: a partir de los .NET Framework 4 y Visual Studio 2010, puede indicar al compilador que inserte información de tipos de un ensamblado de interoperabilidad en el archivo ejecutable. Esta es la técnica recomendada.
+- Tipos de interoperabilidad insertados: A partir de .NET Framework 4 y Visual Studio 2010, se puede indicar al compilador que inserte información de tipos de un ensamblado de interoperabilidad en el archivo ejecutable. Esta es la técnica recomendada.
 
-- Implementar ensamblados de interoperabilidad: puede crear una referencia estándar a un ensamblado de interoperabilidad. En este caso, el ensamblado de interoperabilidad debe implementarse con la aplicación.
+- Implementación de ensamblados de interoperabilidad: se puede crear una referencia estándar a un ensamblado de interoperabilidad. En este caso, el ensamblado de interoperabilidad debe implementarse con la aplicación.
 
  Las diferencias entre estas dos técnicas se explican con más detalle en [Usar tipos COM en código administrado](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100)).
 
- En Tutorial: incrustar tipos [de ensamblados administrados en Visual Studio](../../standard/assembly/embed-types-visual-studio.md)se muestra cómo incrustar tipos de interoperabilidad con Visual Studio.
+ La inserción de tipos de interoperabilidad con Visual Studio se describe en [Tutorial: Insertar tipos de ensamblados administrados en Visual Studio](../../standard/assembly/embed-types-visual-studio.md).
 
- Para hacer referencia a un ensamblado de interoperabilidad con un compilador de línea de comandos e incrustar información de tipos en los ejecutables, use los modificadores [-Link (C# opciones del compilador)](../../csharp/language-reference/compiler-options/link-compiler-option.md) o [-Link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) y especifique el nombre del ensamblado de interoperabilidad.
+ Para hacer referencia a un ensamblado de interoperabilidad con un compilador de línea de comandos e insertar información de tipos en los archivos ejecutables, use el modificador del compilador [-link (opciones del compilador de C#)](../../csharp/language-reference/compiler-options/link-compiler-option.md) o [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md), y especifique el nombre del ensamblado de interoperabilidad.
 
 > [!NOTE]
 > Las aplicaciones de Visual C++ no pueden insertar información de tipos, pero pueden interoperar con aplicaciones o complementos que lo hagan.
@@ -42,5 +42,5 @@ Los proyectos de interoperabilidad COM que hacen referencia a uno o más ensambl
 - [Exponer componentes COM en .NET Framework](exposing-com-components.md)
 - [Independencia del lenguaje y componentes independientes del lenguaje](../../standard/language-independence-and-language-independent-components.md)
 - [Uso de tipos COM en código administrado](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
-- [Tutorial: Incrustar los tipos de los ensamblados administrados en Visual Studio](../../standard/assembly/embed-types-visual-studio.md)
+- [Tutorial: Insertar tipos de ensamblados administrados en Visual Studio](../../standard/assembly/embed-types-visual-studio.md)
 - [Importar una biblioteca de tipos como un ensamblado](importing-a-type-library-as-an-assembly.md)

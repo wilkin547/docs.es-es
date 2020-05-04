@@ -3,12 +3,12 @@ title: Valores de configuración del recolector de elementos no utilizados
 description: Obtenga información sobre los valores del entorno de ejecución para configurar el modo en el que el recolector de elementos no utilizados administra la memoria de las aplicaciones de .NET Core.
 ms.date: 01/09/2020
 ms.topic: reference
-ms.openlocfilehash: dfb641eeda03d1acaa4771bd6253fcb33c4082a6
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: ec575bdd17c8a7c290673b7085074bbba94cedef
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607815"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102871"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>Opciones de configuración del entorno de ejecución para la recolección de elementos no utilizados
 
@@ -24,7 +24,7 @@ En esta página, la configuración se organiza en grupos. La configuración de c
 
 ## <a name="flavors-of-garbage-collection"></a>Tipos de recolección de elementos no utilizados
 
-Los dos tipos principales de recolección de elementos no utilizados son la GC de estación de trabajo y la de servidor. Para obtener más información sobre la diferencia entre estos dos tipos, vea [Fundamentos de la recolección de elementos no utilizados](../../standard/garbage-collection/fundamentals.md#workstation-and-server-garbage-collection).
+Los dos tipos principales de recolección de elementos no utilizados son la GC de estación de trabajo y la de servidor. Para más información sobre la diferencia entre estos dos tipos, consulte [Recolección de elementos no utilizados de estación de trabajo y de servidor](../../standard/garbage-collection/workstation-server-gc.md).
 
 Los subtipos de la recolección de elementos no utilizados son en segundo plano y no simultáneos.
 
@@ -72,7 +72,7 @@ Archivo del proyecto:
 
 - Configura si está habilitada la recolección de elementos no utilizados en segundo plano (simultánea).
 - Predeterminado: habilitado (`true`).
-- Para obtener más información, vea [Recolección de elementos no utilizados en segundo plano](../../standard/garbage-collection/fundamentals.md#background-workstation-garbage-collection) y [Recolección de elementos no utilizados de servidor en segundo plano](../../standard/garbage-collection/fundamentals.md#background-server-garbage-collection).
+- Para más información, consulte [Recolección de elementos no utilizados en segundo plano](../../standard/garbage-collection/background-gc.md).
 
 | | Nombre de valor | Valores | Versión introducida |
 | - | - | - | - |
@@ -240,7 +240,7 @@ Ejemplo:
 
 - Especifica el tamaño máximo de confirmación, en bytes, para el montón de GC y la contabilidad de GC.
 - Esta configuración solo se aplica a los equipos de 64 bits.
-- El valor predeterminado, que solo se aplica en ciertos casos, es el menor de 20 MB o 75 % del límite de memoria del contenedor. El valor predeterminado se aplica si:
+- El valor predeterminado, que solo se aplica en ciertos casos, es el mayor de 20 MB o de 75 % del límite de memoria del contenedor. El valor predeterminado se aplica si:
 
   - El proceso se ejecuta dentro de un contenedor que tiene un límite de memoria especificado.
   - No se ha establecido [System.GC.HeapHardLimitPercent](#systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent).

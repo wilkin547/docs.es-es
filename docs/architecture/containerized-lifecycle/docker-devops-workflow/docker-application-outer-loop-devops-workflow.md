@@ -2,12 +2,12 @@
 title: Pasos del flujo de trabajo de DevOps de bucle externo para una aplicación de Docker
 description: Conozca los pasos del "bucle exterior" del flujo de trabajo de DevOps.
 ms.date: 02/15/2019
-ms.openlocfilehash: fdda1b6a2deb08ed97867583fcc8048d4dba880c
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 44bd73bf88a743e5350e422d3ea000ca075f7383
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988978"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "82021301"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Pasos del flujo de trabajo de DevOps de bucle externo para una aplicación de Docker
 
@@ -184,7 +184,7 @@ Desde el punto de vista de CD, y más concretamente de Azure DevOps Services, pu
 
 **Figura 5-9**. Implementación de aplicaciones distribuidas en Container Service
 
-En principio, al implementar en ciertos clústeres u orquestadores, tradicionalmente se usarían mecanismos y scripts de implementación específicos por cada orquestador (es decir, Kubernetes y Service Fabric tienen mecanismos de implementación diferentes), en lugar de la herramienta `docker-compose` (más sencilla y fácil de usar) basada en el archivo de definición `docker-compose.yml`. Aun así, gracias a la tarea de implementación de Docker de Azure DevOps Services, que aparece en la figura 5-10, ahora también puede realizar la implementación en los orquestadores admitidos mediante el archivo `docker-compose.yml`, que ya conoce, puesto que la herramienta realiza automáticamente la "traducción" (del archivo `docker-compose.yml` al formato que requiere el orquestador).
+En principio, al implementar en ciertos clústeres u orquestadores, tradicionalmente se usarían mecanismos y scripts de implementación específicos por cada orquestador (es decir, Kubernetes y Service Fabric tienen mecanismos de implementación diferentes), en lugar de la herramienta `docker-compose` (más sencilla y fácil de usar) basada en el archivo de definición `docker-compose.yml`. Aun así, gracias a la tarea de implementación de Docker de Azure DevOps Services, que aparece en la figura 5-10, ahora también puede realizar la implementación en los orquestadores admitidos usando el archivo `docker-compose.yml`, que ya conoce, puesto que la herramienta realiza automáticamente la "traducción" (del archivo `docker-compose.yml` al formato que requiere el orquestador).
 
 ![Captura de pantalla que muestra la tarea Implementar en Kubernetes.](./media/docker-application-outer-loop-devops-workflow/add-deploy-to-kubernetes-task.png)
 

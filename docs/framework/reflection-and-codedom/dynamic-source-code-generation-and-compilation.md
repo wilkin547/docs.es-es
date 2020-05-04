@@ -1,5 +1,5 @@
 ---
-title: Generación y compilación de código fuente dinámico
+title: Generación y compilación dinámicas de código fuente
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Code Document Object Model
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: d077a3e8-bd81-4bdf-b6a3-323857ea30fb
 ms.openlocfilehash: 7379bac07de9b78369d3742fa3288f6fea6a573f
 ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/29/2019
 ms.locfileid: "75544988"
 ---
-# <a name="compile-and-generate-dynamic-source-code"></a>Compilar y generar código fuente dinámico
+# <a name="compile-and-generate-dynamic-source-code"></a>Compilación y generación de código fuente dinámico
 
 .NET Framework incluye un mecanismo denominado Code Document Object Model (CodeDOM) que permite que los desarrolladores de programas que emiten código de origen generen código fuente en varios lenguajes de programación en tiempo de ejecución, en función de un único modelo que representa el código que se va a representar.  
   
@@ -35,7 +35,7 @@ El modelado de código fuente independiente del lenguaje puede resultar valioso 
 
   Describe los usos comunes y muestra cómo se compila un gráfico de objetos simple mediante CodeDOM.  
   
-- [Generar código fuente y compilar un programa a partir de un gráfico CodeDOM](generating-and-compiling-source-code-from-a-codedom-graph.md)  
+- [Generación de código fuente y compilación de un programa a partir de un gráfico CodeDOM](generating-and-compiling-source-code-from-a-codedom-graph.md)  
 
   Describe cómo generar código fuente y compilar el código generado con un compilador externo mediante el uso de las clases definidas en el espacio de nombres `System.CodeDom.Compiler`.  
   
@@ -59,4 +59,4 @@ El modelado de código fuente independiente del lenguaje puede resultar valioso 
   
 ## <a name="related-sections"></a>Secciones relacionadas  
 
-- La [referencia rápida de CodeDom](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100)) proporciona una forma rápida para que los desarrolladores busquen los elementos CodeDom que representan elementos de código fuente.
+- La [Referencia rápida de CodeDOM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100)) proporciona a los desarrolladores una forma rápida de encontrar los elementos CodeDOM que representan elementos de código fuente.

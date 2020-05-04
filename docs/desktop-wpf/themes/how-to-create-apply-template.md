@@ -1,6 +1,6 @@
 ---
-title: Crear una plantilla en WPF - .NET Desktop
-description: Aprenda a crear y hacer referencia a una plantilla de control en Windows Presentation Foundation y .NET Core.
+title: 'Creación de una plantilla en WPF: Escritorio de .NET'
+description: Obtenga información sobre cómo crear una plantilla de control y hacer referencia a esta en Windows Presentation Foundation y .NET Core.
 author: thraka
 ms.author: adegeo
 ms.date: 11/15/2019
@@ -30,32 +30,32 @@ helpviewer_keywords:
 - templates [WPF], custom for existing controls
 ms.openlocfilehash: c901864d387b8de976bbfa9a9b3c14a7d5a0b4d8
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/21/2019
 ms.locfileid: "81432543"
 ---
-# <a name="create-a-template-for-a-control"></a>Crear una plantilla para un control
+# <a name="create-a-template-for-a-control"></a>Creación de una plantilla de un control
 
-Con Windows Presentation Foundation (WPF), puede personalizar la estructura visual y el comportamiento de un control existente con su propia plantilla reutilizable. Las plantillas se pueden aplicar globalmente a la aplicación, ventanas y páginas, o directamente a los controles. La mayoría de los escenarios que requieren que cree un nuevo control se pueden cubrir creando en su lugar una nueva plantilla para un control existente.
+Con Windows Presentation Foundation (WPF), puede usar su propia plantilla reutilizable para personalizar la estructura visual y el comportamiento de un control existente. Las plantillas se pueden aplicar de forma global a la aplicación, las ventanas y las páginas, o bien directamente a los controles. La mayoría de los escenarios en los que es necesario crear un control se pueden solventar creando en su lugar una plantilla para un control existente.
 
 [!INCLUDE [desktop guide under construction](../../../includes/desktop-guide-preview-note.md)]
 
-En este artículo, explorará la <xref:System.Windows.Controls.ControlTemplate> creación <xref:System.Windows.Controls.Button> de un nuevo para el control.
+En este artículo, veremos cómo crear un objeto <xref:System.Windows.Controls.ControlTemplate> para el control <xref:System.Windows.Controls.Button>.
 
-## <a name="when-to-create-a-controltemplate"></a>Cuándo crear un ControlTemplate
+## <a name="when-to-create-a-controltemplate"></a>Cuándo crear un objeto ControlTemplate
 
-Los controles tienen muchas <xref:System.Windows.Controls.Border.Background%2A> <xref:System.Windows.Controls.Control.Foreground%2A>propiedades, <xref:System.Windows.Controls.Control.FontFamily%2A>como , , y . Estas propiedades controlan diferentes aspectos de la apariencia del control, pero los cambios que puede realizar estableciendo estas propiedades son limitados. Por ejemplo, puede <xref:System.Windows.Controls.Control.Foreground%2A> establecer la <xref:System.Windows.Controls.Control.FontStyle%2A> propiedad en <xref:System.Windows.Controls.CheckBox>azul y en cursiva en un archivo . Si desea personalizar la apariencia del control más allá de lo que puede <xref:System.Windows.Controls.ControlTemplate>hacer la configuración de las otras propiedades del control, cree un archivo .
+Los controles tienen muchas propiedades, como <xref:System.Windows.Controls.Border.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A> y <xref:System.Windows.Controls.Control.FontFamily%2A>. Estas propiedades se encargan de distintos aspectos relacionados con la apariencia del control, pero los cambios que se pueden realizar configurando estas propiedades son limitados. Por ejemplo, la propiedad <xref:System.Windows.Controls.Control.Foreground%2A> se puede establecer en azul y <xref:System.Windows.Controls.Control.FontStyle%2A> en cursiva en un objeto <xref:System.Windows.Controls.CheckBox>. Si queremos personalizar la apariencia del control de forma diferente a como lo hace la configuración de las demás propiedades del control, hay que crear un objeto <xref:System.Windows.Controls.ControlTemplate>.
 
-En la mayoría de las interfaces de usuario, un botón tiene la misma apariencia general: un rectángulo con algún texto. Si desea crear un botón redondeado, puede crear un nuevo control que herede del botón o volver a crear la funcionalidad del botón. Además, el nuevo control de usuario proporcionaría el objeto visual circular.
+En la mayoría de las interfaces de usuario, los botones tienen la misma apariencia en general: un rectángulo con texto. Si quisiéramos crear un botón redondeado, podríamos crear un control que herede del botón o que vuelva a crear la funcionalidad del botón y que, además, aporte el elemento visual circular.
 
-Puede evitar la creación de nuevos controles personalizando el diseño visual de un control existente. Con un botón redondeado, se crea un <xref:System.Windows.Controls.ControlTemplate> diseño visual con el diseño visual deseado.
+Para no tener que crear más controles, se puede personalizar el diseño visual de un control existente. En el caso del botón redondeado, hay que crear un objeto <xref:System.Windows.Controls.ControlTemplate> con el diseño visual que buscamos.
 
-Por otro lado, si necesita un control con nueva funcionalidad, propiedades diferentes y <xref:System.Windows.Controls.UserControl>nueva configuración, crearía un nuevo archivo .
+Por otra parte, si necesitamos un control con nueva funcionalidad, con propiedades diferentes y con nuevas configuraciones, crearíamos un objeto <xref:System.Windows.Controls.UserControl>.
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
-Cree una nueva aplicación WPF y en *MainWindow.xaml* (u otra ventana ** \<** de su elección) establezca las siguientes propiedades en el elemento>Window:
+Cree una aplicación de WPF y, en *MainWindow.xaml* (o en otra ventana de su elección), configure las siguientes propiedades en el elemento **\<Window>** :
 
 |     |     |
 | --- | --- |
@@ -63,52 +63,52 @@ Cree una nueva aplicación WPF y en *MainWindow.xaml* (u otra ventana ** \<** de
 | **[!OP.NO-LOC(SizeToContent)]** | `WidthAndHeight` |
 | **[!OP.NO-LOC(MinWidth)]**      | `250` |
 
-Establezca el contenido del elemento ** \<Window>** en el siguiente XAML:
+Configure el contenido del elemento **\<Window>** en el siguiente código XAML:
 
 [!code-xaml[Initial](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window1.xaml#Initial)]
 
-Al final, el archivo *MainWindow.xaml* debe ser similar al siguiente:
+Al final del proceso, el archivo *MainWindow.xaml* debe tener un aspecto similar al siguiente:
 
 [!code-xaml[InitialWhole](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window1.xaml#InitialWhole)]
 
-Si ejecuta la aplicación, tiene el siguiente aspecto:
+Si la aplicación se ejecuta, tendrá el siguiente aspecto:
 
-![Ventana WPF con dos botones sin estilo](media/create-apply-template/unstyled-button.png)
+![Ventana de WPF con dos botones sin estilo](media/create-apply-template/unstyled-button.png)
 
 ## <a name="create-a-controltemplate"></a>Creación de una clase ControlTemplate
 
-La forma más común <xref:System.Windows.Controls.ControlTemplate> de declarar a `Resources` es como un recurso en la sección de un archivo XAML. Dado que las plantillas son recursos, obedecen las mismas reglas de ámbito que se aplican a todos los recursos. En pocas palabras, donde se declara una plantilla afecta a dónde se puede aplicar la plantilla. Por ejemplo, si declara la plantilla en el elemento raíz del archivo XAML de definición de aplicación, la plantilla se puede usar en cualquier lugar de la aplicación. Si define la plantilla en una ventana, solo los controles de esa ventana pueden usar la plantilla.
+La forma más común de declarar un objeto <xref:System.Windows.Controls.ControlTemplate> es como un recurso en la sección `Resources` de un archivo XAML. Dado que las plantillas son recursos, siguen las mismas reglas de ámbito que se aplican a todos los recursos. Simplemente, la ubicación de la declaración de una plantilla afecta a dónde se puede aplicar la plantilla. Por ejemplo, si declara una plantilla en el elemento raíz del archivo XAML de definición de la aplicación, puede usar en cualquier parte de esta. Si la plantilla se define en una ventana, solo los controles de esa ventana podrán usarla.
 
-Para empezar, agregue `Window.Resources` un elemento al archivo *MainWindow.xaml:*
+Para empezar, agregue un elemento `Window.Resources` al archivo *MainWindow.xaml*:
 
 [!code-xaml[WindowResStart](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window2.xaml#WindowResStart)]
 
-Cree un nuevo ** \<>ControlTemplate** con las siguientes propiedades establecidas:
+Cree un elemento **\<ControlTemplate>** con las siguientes propiedades configuradas:
 
 |     |     |
 | --- | --- |
 | **x:Key**         | `roundbutton` |
 | **TargetType**    | `Button` |
 
-Esta plantilla de control será simple:
+Esta plantilla de control será sencilla:
 
-- un elemento raíz para el control, un<xref:System.Windows.Controls.Grid>
-- y <xref:System.Windows.Shapes.Ellipse> dibujar la apariencia redondeada del botón
-- <xref:System.Windows.Controls.ContentPresenter> a para mostrar el contenido del botón especificado por el usuario
+- Un elemento raíz del control, un elemento <xref:System.Windows.Controls.Grid>
+- Un elemento <xref:System.Windows.Shapes.Ellipse> para trazar el aspecto redondeado del botón
+- Un elemento <xref:System.Windows.Controls.ContentPresenter> para mostrar el contenido del botón especificado por el usuario
 
 [!code-xaml[ControlTemplate](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window3.xaml#ControlTemplate)]
 
 ### <a name="templatebinding"></a>TemplateBinding
 
-Al crear un <xref:System.Windows.Controls.ControlTemplate>nuevo , es posible que desee usar las propiedades públicas para cambiar la apariencia del control. El [TemplateBinding](../../framework/wpf/advanced/templatebinding-markup-extension.md) extensión de marcado enlaza una propiedad <xref:System.Windows.Controls.ControlTemplate> de un elemento que se encuentra en el a una propiedad pública definida por el control. Cuando se usa [TemplateBinding](../../framework/wpf/advanced/templatebinding-markup-extension.md), se habilitan las propiedades del control para que actúen como parámetros de la plantilla. Es decir, cuando se establece una propiedad de un control, ese valor se pasa al elemento que tiene la extensión [TemplateBinding](../../framework/wpf/advanced/templatebinding-markup-extension.md).
+Al crear un elemento <xref:System.Windows.Controls.ControlTemplate>, puede que quiera seguir usando las propiedades públicas para cambiar la apariencia del control. La extensión de marcado [TemplateBinding](../../framework/wpf/advanced/templatebinding-markup-extension.md) enlaza una propiedad de un elemento que está en el elemento <xref:System.Windows.Controls.ControlTemplate> a una propiedad pública que está definida por el control. Cuando se usa [TemplateBinding](../../framework/wpf/advanced/templatebinding-markup-extension.md), se habilitan propiedades en el control que actúan como parámetros de la plantilla. Es decir, cuando se establece una propiedad de un control, ese valor se pasa al elemento que tiene la extensión [TemplateBinding](../../framework/wpf/advanced/templatebinding-markup-extension.md).
 
-### <a name="ellipse"></a>Elipse
+### <a name="ellipse"></a>Ellipse
 
-Observe que **:::no-loc text="Fill":::** **:::no-loc text="Stroke":::** las propiedades y del ** \<elemento de>** <xref:System.Windows.Controls.Control.Background> Ellipse están enlazadas a las propiedades y propiedades del <xref:System.Windows.Controls.Control.Foreground> control.
+Cabe decir que las propiedades **:::no-loc text="Fill":::** y **:::no-loc text="Stroke":::** del elemento **\<Ellipse>** están enlazadas a las propiedades <xref:System.Windows.Controls.Control.Foreground> y <xref:System.Windows.Controls.Control.Background> del control.
 
 ### <a name="contentpresenter"></a>ContentPresenter
 
-Un [ \<Elemento de>ContentPresenter](xref:System.Windows.Controls.ContentPresenter) también se agrega a la plantilla. Dado que esta plantilla está diseñada para un botón, tenga en cuenta que el botón hereda de <xref:System.Windows.Controls.ContentControl>. El botón presenta el contenido del elemento. Puede establecer cualquier cosa dentro del botón, como texto sin formato o incluso otro control. Ambos de los siguientes son botones válidos:
+También se agrega a la plantilla un elemento [\<ContentPresenter>](xref:System.Windows.Controls.ContentPresenter). Dado que esta plantilla está diseñada para un botón, tenga en cuenta que el botón hereda de <xref:System.Windows.Controls.ContentControl>. El botón presenta el contenido del elemento. Se puede establecer cualquier elemento dentro del botón, como texto sin formato o incluso otro control. Los dos botones siguientes son válidos:
 
 ```xaml
 <Button>My Text</Button>
@@ -120,9 +120,9 @@ Un [ \<Elemento de>ContentPresenter](xref:System.Windows.Controls.ContentPresent
 </Button>
 ```
 
-En los dos ejemplos anteriores, el texto y la casilla de verificación se establecen como la propiedad [Button.Content.](xref:System.Windows.Controls.ContentControl.Content) Lo que se establece como el contenido se puede presentar a través de un ** \<ContentPresenter>**, que es lo que hace la plantilla.
+En estos dos ejemplos, el texto y la casilla se configuran como la propiedad [Button.Content](xref:System.Windows.Controls.ContentControl.Content). Lo que se establezca como contenido se puede mostrar a través de un elemento **\<ContentPresenter>** , que es lo que la plantilla hace.
 
-Si <xref:System.Windows.Controls.ControlTemplate> se aplica <xref:System.Windows.Controls.ContentControl> a un tipo, como un `Button`, <xref:System.Windows.Controls.ContentPresenter> se busca en el árbol de elementos. Si `ContentPresenter` se encuentra, la plantilla enlaza automáticamente <xref:System.Windows.Controls.ContentControl.Content> la `ContentPresenter`propiedad del control a la .
+Si el elemento <xref:System.Windows.Controls.ControlTemplate> se aplica a un tipo <xref:System.Windows.Controls.ContentControl>, como un elemento `Button`, se busca un elemento <xref:System.Windows.Controls.ContentPresenter> en el árbol de elementos. Si se halla el elemento `ContentPresenter`, la plantilla enlaza automáticamente la propiedad <xref:System.Windows.Controls.ContentControl.Content> del control a `ContentPresenter`.
 
 ## <a name="use-the-template"></a>Uso de la plantilla
 
@@ -130,78 +130,78 @@ Busque los botones que se declararon al principio de este artículo.
 
 [!code-xaml[Initial](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window1.xaml#Initial)]
 
-Establezca la propiedad <xref:System.Windows.Controls.Control.Template> del segundo `roundbutton` botón en el recurso:
+Establezca la propiedad <xref:System.Windows.Controls.Control.Template> del segundo botón en el recurso `roundbutton`:
 
 [!code-xaml[StyledButton](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window3.xaml#StyledButton)]
 
 Si ejecuta el proyecto y observa el resultado, verá que el botón tiene un fondo redondeado.
 
-![Ventana WPF con un botón ovalado de plantilla](media/create-apply-template/styled-button.png)
+![Ventana de WPF con un botón ovalado de plantilla](media/create-apply-template/styled-button.png)
 
-Es posible que haya notado que el botón no es un círculo, pero está sesgado. Debido a la forma en que funciona el ** \<elemento elipse>,** siempre se expande para rellenar el espacio disponible. Haga que el círculo sea **:::no-loc text="width":::** uniforme **:::no-loc text="height":::** cambiando las propiedades y el botón al mismo valor:
+Posiblemente se haya dado cuenta de que el botón no es un círculo perfecto, sino que está distorsionado. El elemento **\<Ellipse>** funciona de forma que se expande para rellenar el espacio disponible. Para que el círculo sea uniforme, cambie las propiedades **:::no-loc text="width":::** y **:::no-loc text="height":::** del botón al mismo valor:
 
 [!code-xaml[StyledButtonSize](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window3.xaml#StyledButtonSize)]
 
-![Ventana WPF con un botón circular de plantilla](media/create-apply-template/styled-uniform-button.png)
+![Ventana de WPF con un botón circular de plantilla](media/create-apply-template/styled-uniform-button.png)
 
-## <a name="add-a-trigger"></a>Añadir un disparador
+## <a name="add-a-trigger"></a>Incorporación de un desencadenador
 
-Aunque un botón con una plantilla aplicada tiene un aspecto diferente, se comporta igual que cualquier otro botón. Si pulsa el botón, el <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento se activa. Sin embargo, es posible que haya notado que cuando mueve el ratón sobre el botón, los objetos visuales del botón no cambian. Todas estas interacciones visuales se definen mediante la plantilla.
+Aunque un botón que tiene una plantilla aplicada tiene un aspecto diferente, se comporta igual que cualquier otro botón. Si se presiona, se activa el evento <xref:System.Windows.Controls.Primitives.ButtonBase.Click>. Pese a ello, posiblemente se haya dado cuenta de que, al mover el ratón por el botón, sus elementos visuales no cambian. Todas estas interacciones visuales están definidas por la plantilla.
 
-Con los sistemas de propiedades y eventos dinámicos que WPFWPF proporciona, puede ver una propiedad específica para un valor y, a continuación, cambiar el estilo de la plantilla cuando corresponda. En este ejemplo, verá la propiedad <xref:System.Windows.UIElement.IsMouseOver> del botón. Cuando el ratón está sobre el control, el estilo de la ** \<Elipse>** con un nuevo color. Este tipo de desencadenador se conoce como *PropertyTrigger*.
+Gracias a los sistemas de propiedades y eventos dinámicos que WPF proporciona, se puede ver una propiedad específica de un valor y, después, volver a aplicar el estilo de la plantilla cuando sea necesario. En este ejemplo, veremos la propiedad <xref:System.Windows.UIElement.IsMouseOver> del botón. Cuando el ratón esté sobre el control, aplique el estilo **\<Ellipse>** con un nuevo color. Este tipo de desencadenador se conoce como *PropertyTrigger*.
 
-Para que esto funcione, deberá agregar un ** \<** nombre a la>Ellipse a la que puede hacer referencia. Asír como el nombre **backgroundElement**.
+Para que funcione, hay que agregar un nombre al elemento **\<Ellipse>** al que poder hacer referencia. Asígnele el nombre **backgroundElement**.
 
 [!code-xaml[EllipseName](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window4.xaml#EllipseName)]
 
-A continuación, <xref:System.Windows.Trigger> agregue un nuevo a la [ControlTemplate.Triggers](xref:System.Windows.Controls.ControlTemplate.Triggers) colección. El desencadenador observará el `IsMouseOver` `true`evento para el valor .
+Después, agregue un nuevo elemento <xref:System.Windows.Trigger> a la colección [ControlTemplate.Triggers](xref:System.Windows.Controls.ControlTemplate.Triggers). El desencadenador inspeccionará el evento `IsMouseOver` en busca del valor `true`.
 
 [!code-xaml[ControlTemplate](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window4.xaml?name=ControlTemplate&highlight=6-10)]
 
-A continuación, agregue un ** \<>Setter** al ** \<desencadenador>** que cambia el **Fill** propiedad de la ** \<Ellipse>** a un nuevo color.
+Después, agregue un elemento **\<Setter>** al elemento **\<Trigger>** , que cambia la propiedad **Fill** de **\<Ellipse>** a un nuevo color.
 
 [!code-xaml[MouseOver](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window5.xaml#MouseOver)]
 
-Ejecute el proyecto. Tenga en cuenta que al mover el ratón sobre el botón, el color de la ** \<Elipse>** cambia.
+Ejecute el proyecto. Fíjese en que, al mover el ratón por el botón, el color de **\<Ellipse>** cambia.
 
-![ratón se mueve sobre el botón WPF para cambiar el color de relleno](media/create-apply-template/mouse-move-over-button.gif)
+![El ratón se mueve por el botón de WPF para cambiar el color de relleno](media/create-apply-template/mouse-move-over-button.gif)
 
-## <a name="use-a-visualstate"></a>Usar un VisualState
+## <a name="use-a-visualstate"></a>Uso de un elemento VisualState
 
-Los estados visuales se definen y desencadenan mediante un control. Por ejemplo, cuando el mouse se mueve `CommonStates.MouseOver` en la parte superior del control, se desencadena el estado. Puede animar los cambios de propiedad en función del estado actual del control. En la sección anterior, se usaba un `AliceBlue` `IsMouseOver` `true` ** \<>PropertyTrigger** para cambiar el primer plano del botón a cuando la propiedad era . En su lugar, cree un estado visual que anime el cambio de este color, proporcionando una transición suave. Para obtener más información acerca de *VisualStates*, vea [Estilos y plantillas en WPF](../fundamentals/styles-templates-overview.md#visual-states).
+Los estados visuales se definen y desencadenan a través de un control. Por ejemplo, cuando el ratón se mueve por el control, se desencadena el estado `CommonStates.MouseOver`. Los cambios de propiedad se pueden animar en función del estado actual del control. En la sección anterior, usamos un elemento **\<PropertyTrigger>** para cambiar el primer plano del botón a `AliceBlue` cuando la propiedad `IsMouseOver` era `true`. Esta vez, cree un estado visual que anime el cambio de este color a través de una transición suave. Para más información sobre los elementos *VisualState*, vea [Estilos y plantillas en WPF](../fundamentals/styles-templates-overview.md#visual-states).
 
-Para convertir el ** \<PropertyTrigger>** en un estado visual animado, En primer lugar, quite el ** \<ControlTemplate.Triggers>** elemento de la plantilla.
+Para convertir el elemento **\<PropertyTrigger>** a un estado visual animado, quite en primer lugar el elemento **\<ControlTemplate.Triggers>** de la plantilla.
 
 [!code-xaml[CleanTemplate](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window5.xaml#CleanTemplate)]
 
-A continuación, ** \<** en la cuadrícula>raíz de la plantilla de control, agregue el `CommonStates` ** \<VisualStateManager.VisualStateGroups>** elemento con un ** \<VisualStateGroup>** para . Defina dos `Normal` estados `MouseOver`y .
+Después, en el elemento raíz **\<Grid>** de la plantilla de control, agregue el elemento **\<VisualStateManager.VisualStateGroups>** con un elemento **\<VisualStateGroup>** para `CommonStates`. Defina dos estados, `Normal` y `MouseOver`.
 
 [!code-xaml[VisualState](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window6.xaml#VisualState)]
 
-Las animaciones definidas en un ** \<>VisualState** se aplican cuando se desencadena ese estado. Cree animaciones para cada estado. Las animaciones se colocan dentro de un ** \<elemento de>Storyboard.** Para obtener más información acerca de los guiones gráficos, vea Información general sobre [guiones gráficos](../../framework/wpf/graphics-multimedia/storyboards-overview.md).
+Cuando ese estado se desencadene, se aplicarán las animaciones definidas en el elemento **\<VisualState>** . Cree animaciones para cada estado. Las animaciones se colocan en un elemento **\<Storyboard>** . Para más información sobre los elementos Storyboard, vea [Información general sobre los elementos Storyboard](../../framework/wpf/graphics-multimedia/storyboards-overview.md).
 
 - Normal
 
-  Este estado anima el relleno de elipse, `Background` restableciéndolo al color del control.
+  Este estado anima el relleno de la elipse y lo restaura al color `Background` del control.
 
   [!code-xaml[NormalState](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window6.xaml#NormalState)]
 
 - MouseOver
 
-  Este estado anima `Background` el color de `Yellow`elipse a un nuevo color: .
+  Este estado anima el color `Background` de la elipse hacia un nuevo color: `Yellow`.
 
   [!code-xaml[MouseOverState](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window6.xaml#MouseOverState)]
 
-El ** \<>ControlTemplate** ahora debería tener el siguiente aspecto.
+Ahora, **\<ControlTemplate>** debería tener el siguiente aspecto.
 
 [!code-xaml[FinalTemplate](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window7.xaml#FinalTemplate)]
 
-Ejecute el proyecto. Tenga en cuenta que al mover el ratón sobre el botón, el color de la ** \<Elipse>** se anima.
+Ejecute el proyecto. Fíjese en que, al mover el ratón por el botón, el color de **\<Ellipse>** se anima.
 
-![ratón se mueve sobre el botón WPF para cambiar el color de relleno](media/create-apply-template/mouse-move-over-button-visualstate.gif)
+![El ratón se mueve por el botón de WPF para cambiar el color de relleno](media/create-apply-template/mouse-move-over-button-visualstate.gif)
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-- [Crear un estilo para un control en WPFWPF](../fundamentals/styles-templates-create-apply-style.md)
+- [Creación de un estilo de un control en WPF](../fundamentals/styles-templates-create-apply-style.md)
 - [Estilos y plantillas en WPF](../fundamentals/styles-templates-overview.md)
-- [Descripción general de los recursos XAML](../fundamentals/xaml-resources-define.md)
+- [Información general de los recursos XAML](../fundamentals/xaml-resources-define.md)

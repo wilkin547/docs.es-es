@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: fc0eec26073c299887b4748d0ad37e21c7294e84
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 7a6b0b15de4295506ff03b8566c06010b918566c
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81274974"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158412"
 ---
-### <a name="winforms-apis-now-throw-argumentnullexception"></a>Las API de WinForms inician ahora la excepción ArgumentNullException
+### <a name="winforms-methods-now-throw-argumentnullexception"></a>Los métodos de WinForms inician ahora la excepción ArgumentNullException
 
 Algunos métodos de Windows Forms inician ahora una <xref:System.ArgumentNullException> para los argumentos NULL, donde antes iniciaban una <xref:System.NullReferenceException>.
 

@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 88373fe2-4a6b-44f9-8a62-8a3e348e3a46
 ms.openlocfilehash: 73a432db9a3fcb6587184e27e6dfe9ba49010e92
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709613"
@@ -80,7 +80,7 @@ Para obtener más información sobre niveles de seguridad y evidencia y sobre c�
 
 Para obtener más información sobre niveles de seguridad y evidencia y sobre cómo afectan a la función `document()`, vea [Resolver hojas de estilos XSLT y documentos externos](../../../../docs/standard/data/xml/resolving-external-xslt-style-sheets-and-documents.md).
 
-Una hoja de estilos se puede suministrar con varios parámetros de entrada. Asimismo puede llamar también a funciones en objetos de extensión. Tanto los parámetros como los objetos de extensión se suministran a la hoja de estilos mediante la clase <xref:System.Xml.Xsl.XsltArgumentList>. Para obtener más información sobre <xref:System.Xml.Xsl.XsltArgumentList>, consulte <xref:System.Xml.Xsl.XsltArgumentList>.
+Una hoja de estilos se puede suministrar con varios parámetros de entrada. Asimismo puede llamar también a funciones en objetos de extensión. Tanto los parámetros como los objetos de extensión se suministran a la hoja de estilos mediante la clase <xref:System.Xml.Xsl.XsltArgumentList>. Para obtener más información acerca de <xref:System.Xml.Xsl.XsltArgumentList>, vea <xref:System.Xml.Xsl.XsltArgumentList>.
 
 ## <a name="recommended-secure-use-of-xsltransform-class"></a>Uso seguro recomendado de la clase XslTransform
 
@@ -178,7 +178,7 @@ Console.WriteLine("Passing " + tmpDoc.OuterXml + " to print_root.xsl");
 xslt.Transform(tmpDoc, null, Console.Out, null);
 ```
 
-En el ejemplo se usan los archivos Library. XML y print_root. xsl como entrada y se genera lo siguiente en la consola:
+En el ejemplo se han usado los archivos library.xml y print_root.xsl como entrada y el resultado que se muestra en la consola es el siguiente:
 
 ```console
 Passing <book genre="novel" ISBN="1-861001-57-5"><title>Pride And Prejudice</title></book> to print_root.xsl

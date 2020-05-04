@@ -2,12 +2,12 @@
 title: Almacenamiento de paquetes en tiempo de ejecución
 description: Aprenda a usar el almacenamiento de paquetes en tiempo de ejecución para destinar manifiestos que usa .NET Core.
 ms.date: 08/12/2017
-ms.openlocfilehash: ba3182b682e8a47397ac09ed46afe25190d34e5f
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 4395370c3bb2d97511d549a63813022fb8cac4b7
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134276"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158299"
 ---
 # <a name="runtime-package-store"></a>Almacenamiento de paquetes en tiempo de ejecución
 
@@ -106,6 +106,12 @@ Implemente la aplicación publicada resultante en un entorno que tenga los paque
 
 Especifique varios manifiestos de destino al publicar una aplicación repitiendo la opción y la ruta (por ejemplo, `--manifest manifest1.xml --manifest manifest2.xml`). Cuando realice esto, la aplicación se reduce para la unión de los paquetes especificados en los archivos de manifiesto de destino que se proporcionan para el comando.
 
+Si implementa una aplicación con una dependencia de manifiesto que está presente en la implementación (el ensamblado está presente en la carpeta *bin*), el almacenamiento de paquetes en tiempo de ejecución *no se usa* en el host de ese ensamblado. El ensamblado de la carpeta *bin* se usa independientemente de su presencia en el almacenamiento de paquetes en tiempo de ejecución en el host.
+
+La versión de la dependencia indicada en el manifiesto debe coincidir con la versión de la dependencia en el almacenamiento de paquetes en tiempo de ejecución. Si no coinciden las versiones entre la dependencia del manifiesto de destino y la versión que existe en el almacenamiento de paquetes en tiempo de ejecución, y la aplicación no incluye la versión necesaria del paquete en su implementación, se produce un error en el inicio de la aplicación. La excepción incluye el nombre del manifiesto de destino que se ha llamado para el ensamblado del almacenamiento de paquetes en tiempo de ejecución, que le ayuda a solucionar los errores de coincidencia.
+
+Cuando la implementación se *reduce* en su publicación, solo las versiones específicas de los paquetes de manifiesto que indique se retienen del resultado publicado. Los paquetes de las versiones indicadas deben estar presentes en el host para que se inicie la aplicación.
+
 ## <a name="specifying-target-manifests-in-the-project-file"></a>Especificar los manifiestos de destino en el archivo del proyecto
 
 Una alternativa de especificar manifiestos de destino con el comando [`dotnet publish`](../tools/dotnet-publish.md) es especificarlos en el archivo de proyecto como una lista de rutas separadas por punto y coma en una etiqueta **\<TargetManifestFiles>** .
@@ -118,15 +124,15 @@ Una alternativa de especificar manifiestos de destino con el comando [`dotnet pu
 
 Especifique los manifiestos de destino en el archivo de proyecto solo cuando el entorno de destino de la aplicación sea muy conocido, como para los proyectos de .NET Core. Este no es el caso de los proyectos de código abierto. Los usuarios de un proyecto de código abierto normalmente lo implementan en diferentes entornos de producción. Estos entornos de producción generalmente tienen diferentes conjuntos de paquetes preinstalados. No puede realizar presuposiciones sobre el manifiesto de destino en dichos entornos, por lo que debe usar la opción `--manifest` de [`dotnet publish`](../tools/dotnet-publish.md).
 
-## <a name="aspnet-core-implicit-store"></a>Almacenamiento implícito de ASP.NET Core
+## <a name="aspnet-core-implicit-store-net-core-20-only"></a>Almacenamiento implícito de ASP.NET Core(solo .NET Core 2.0)
 
 El almacenamiento implícito de ASP.NET Core solo se aplica a ASP.NET Core 2.0. Se recomienda encarecidamente que las aplicaciones usen ASP.NET Core 2.1 y versiones posteriores, que **no** usan almacenamiento implícito. ASP.NET Core 2.1 y versiones posteriores usan el marco de trabajo compartido.
 
-La característica de almacenamiento de paquetes en tiempo de ejecución se usa implícitamente por una aplicación de ASP.NET Core cuando la aplicación se implementa como una aplicación de [implementación dependiente del marco (FDD)](index.md#publish-runtime-dependent). Los destinos en [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk) incluyen manifiestos que hacen referencia al almacenamiento de paquetes implícito en el sistema de destino. Además, cualquier aplicación de FDD que depende del paquete `Microsoft.AspNetCore.All` tiene como resultado una aplicación publicada que contiene solo la aplicación y sus activos y no los paquetes que se muestran en el metapaquete `Microsoft.AspNetCore.All`. Se presupone que esos paquetes están presentes en el sistema de destino.
+En el caso de .NET Core 2.0, una aplicación de ASP NET Core usa implícitamente la característica de almacenamiento de paquetes en tiempo de ejecución cuando la aplicación se implementa como aplicación de [implementación dependiente del entorno de ejecución](index.md#publish-runtime-dependent). Los destinos en [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk) incluyen manifiestos que hacen referencia al almacenamiento de paquetes implícito en el sistema de destino. Además, cualquier aplicación dependiente del entorno de ejecución que dependa del paquete `Microsoft.AspNetCore.All` se traducirá en una aplicación publicada que solo contiene la aplicación y sus recursos, pero no los paquetes que se muestran en el metapaquete `Microsoft.AspNetCore.All`. Se presupone que esos paquetes están presentes en el sistema de destino.
 
 El almacenamiento de paquetes en tiempo de ejecución está instalado en el host cuando el SDK de .NET Core está instalado. Otros instaladores pueden proporcionar el almacenamiento de paquetes en tiempo de ejecución, incluidas las instalaciones Zip/tarball del SDK de .NET Core, `apt-get`, Red Hat Yum, la agrupación de hospedaje de Windows Server para .NET Core y las instalaciones manuales de almacenamiento de paquetes en tiempo de ejecución.
 
-Al implementar una aplicación de [implementación dependiente del marco (FDD)](index.md#publish-runtime-dependent), asegúrese de que el entorno de destino tiene el SDK de .NET Core instalado. Si la aplicación se implementa en un entorno que no incluye ASP.NET Core, puede rechazar el almacenamiento implícito especificando **\<PublishWithAspNetCoreTargetManifest>** en `false` en el archivo de proyecto como se muestra en el ejemplo siguiente:
+Al implementar una aplicación de [implementación dependiente del entorno de ejecución](index.md#publish-runtime-dependent), asegúrese de que el entorno de destino tiene el SDK de .NET Core instalado. Si la aplicación se implementa en un entorno que no incluye ASP.NET Core, puede rechazar el almacenamiento implícito especificando **\<PublishWithAspNetCoreTargetManifest>** en `false` en el archivo de proyecto como se muestra en el ejemplo siguiente:
 
 ```xml
 <PropertyGroup>
@@ -135,13 +141,7 @@ Al implementar una aplicación de [implementación dependiente del marco (FDD)](
 ```
 
 > [!NOTE]
-> Para las aplicaciones de [implementación independiente (SCD)](index.md#publish-self-contained), se presupone que el sistema de destino no contiene necesariamente los paquetes de manifiesto necesarios. Por lo tanto, **\<PublishWithAspNetCoreTargetManifest>** no puede establecerse en `true` para una aplicación de SCD.
-
-Si implementa una aplicación con una dependencia de manifiesto que está presente en la implementación (el ensamblado está presente en la carpeta *bin*), el almacenamiento de paquetes en tiempo de ejecución *no se usa* en el host de ese ensamblado. El ensamblado de la carpeta *bin* se usa independientemente de su presencia en el almacenamiento de paquetes en tiempo de ejecución en el host.
-
-La versión de la dependencia indicada en el manifiesto debe coincidir con la versión de la dependencia en el almacenamiento de paquetes en tiempo de ejecución. Si no coinciden las versiones entre la dependencia del manifiesto de destino y la versión que existe en el almacenamiento de paquetes en tiempo de ejecución, y la aplicación no incluye la versión necesaria del paquete en su implementación, se produce un error en el inicio de la aplicación. La excepción incluye el nombre del manifiesto de destino que se ha llamado para el ensamblado del almacenamiento de paquetes en tiempo de ejecución, que le ayuda a solucionar los errores de coincidencia.
-
-Cuando la implementación se *reduce* en su publicación, solo las versiones específicas de los paquetes de manifiesto que indique se retienen del resultado publicado. Los paquetes de las versiones indicadas deben estar presentes en el host para que se inicie la aplicación.
+> En el caso de las aplicaciones de [implementación independiente](index.md#publish-self-contained), se presupone que el sistema de destino no contiene necesariamente los paquetes de manifiesto necesarios. Por lo tanto, **\<PublishWithAspNetCoreTargetManifest>** no puede establecerse en `true` para una aplicación independiente.
 
 ## <a name="see-also"></a>Vea también
 

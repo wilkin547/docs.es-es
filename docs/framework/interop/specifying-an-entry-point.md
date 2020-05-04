@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
 ms.openlocfilehash: c5f8f735dd3e8c359f88044a532c29303237acc8
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181310"
@@ -17,7 +17,7 @@ ms.locfileid: "79181310"
 
 Un punto de entrada identifica la ubicación de una función en un archivo DLL. En un proyecto administrado, el nombre original o el punto de entrada ordinal de una función de destino identifica dicha función dentro de los límites de la interoperabilidad. Además, puede asignarle otro nombre al punto de entrada, lo que supone en realidad un cambio de nombre de la función.  
   
- La siguiente es una lista de posibles razones para cambiar el nombre de una función DLL:  
+ En la lista siguiente se muestran los motivos posible para cambiar el nombre de una función DLL:  
   
 - Para no utilizar nombres de función de la API que distinguen mayúsculas de minúsculas  
   
@@ -90,7 +90,7 @@ extern "C" int MsgBox(
     HWND hWnd, String* lpText, String* lpCaption, unsigned int uType);
 ```
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - [Crear prototipos en código administrado](creating-prototypes-in-managed-code.md)

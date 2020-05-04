@@ -1,13 +1,13 @@
 ---
 title: 'Novedades de C# 8.0: Guía de C#'
 description: Obtenga información general sobre las nuevas características disponibles en C# 8.0.
-ms.date: 09/20/2019
-ms.openlocfilehash: 0013f621268e2a4f1b916b226d83d18c68445ed1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/07/2020
+ms.openlocfilehash: c29041972bf7ff608b73ddc9ea3cfcd253905a49
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398332"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82200085"
 ---
 # <a name="whats-new-in-c-80"></a>Novedades de C# 8.0
 
@@ -25,6 +25,7 @@ C# 8.0 agrega las siguientes características y mejoras al lenguaje C#:
 - [Estructuras ref descartables](#disposable-ref-structs)
 - [Tipos de referencia que aceptan valores null](#nullable-reference-types)
 - [Secuencias asincrónicas](#asynchronous-streams)
+- [Asincrónica descartable](#asynchronous-disposable)
 - [Índices y rangos](#indices-and-ranges)
 - [Asignación de uso combinado de NULL](#null-coalescing-assignment)
 - [Tipos construidos no administrados](#unmanaged-constructed-types)
@@ -75,7 +76,7 @@ El compilador le advierte cuando es necesario crear una copia defensiva.  La pro
 public readonly double Distance => Math.Sqrt(X * X + Y * Y);
 ```
 
-Tenga en cuenta que el modificador `readonly` es necesario en una propiedad de solo lectura. El compilador no presupone que los descriptores de acceso `get` no modifican el estado; debe declarar `readonly` explícitamente. Las propiedades implementadas automáticamente son una excepción; el compilador tratará todos los captadores implementados automáticamente como de solo lectura, por lo que aquí no es necesario agregar el modificador `readonly` a las propiedades `X` y `Y`.
+Tenga en cuenta que el modificador `readonly` es necesario en una propiedad de solo lectura. El compilador no presupone que los descriptores de acceso `get` no modifican el estado; debe declarar `readonly` explícitamente. Las propiedades implementadas automáticamente son una excepción; el compilador tratará todos los captadores implementados automáticamente como `readonly`, por lo que aquí no es necesario agregar el modificador `readonly` a las propiedades `X` e `Y`.
 
 El compilador aplica la regla por la que los miembros `readonly` no modifican el estado. El método siguiente no se compilará a menos que se quite el modificador `readonly`:
 
@@ -87,7 +88,9 @@ public readonly void Translate(int xOffset, int yOffset)
 }
 ```
 
-Esta característica permite especificar la intención del diseño para que el compilador pueda aplicarla, y realizar optimizaciones basadas en dicha intención. Puede obtener más información sobre los miembros de solo lectura en el artículo de referencia de lenguaje en [`readonly`](../language-reference/keywords/readonly.md#readonly-member-examples).
+Esta característica permite especificar la intención del diseño para que el compilador pueda aplicarla, y realizar optimizaciones basadas en dicha intención.
+
+Para obtener más información, vea la sección [Miembros de instancia `readonly`](../language-reference/builtin-types/struct.md#readonly-instance-members) del artículo [Tipos de estructura](../language-reference/builtin-types/struct.md).
 
 ## <a name="default-interface-methods"></a>Métodos de interfaz predeterminados
 
@@ -393,6 +396,10 @@ await foreach (var number in GenerateSequence())
 
 Puede probar secuencias asincrónicas por su cuenta en nuestro tutorial sobre la [creación y consumo de secuencias asincrónicas](../tutorials/generate-consume-asynchronous-stream.md). Los elementos de secuencia se procesan de forma predeterminada en el contexto capturado. Si quiere deshabilitar la captura del contexto, use el método de extensión <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType>. Para obtener más información sobre los contextos de sincronización y la captura del contexto actual, vea el artículo sobre el [consumo del patrón asincrónico basado en tareas](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).
 
+## <a name="asynchronous-disposable"></a>Asincrónica descartable
+
+A partir C# 8.0, el lenguaje admite tipos descartables asincrónicos que implementan la interfaz <xref:System.IAsyncDisposable?displayProperty=nameWithType>. El operando de una expresión `using` puede implementar <xref:System.IDisposable> o <xref:System.IAsyncDisposable>. En el caso de `IAsyncDisposable`, el compilador genera código para `await` el <xref:System.Threading.Tasks.Task> devuelto desde <xref:System.IAsyncDisposable.DisposeAsync%2A?displayProperty=nameWithType>. Para más información, consulte la [instrucción `using`](../language-reference/keywords/using-statement.md).
+
 ## <a name="indices-and-ranges"></a>Índices y rangos
 
 Los índices y rangos proporcionan una sintaxis concisa para acceder a elementos únicos o intervalos en una secuencia.
@@ -520,7 +527,7 @@ A partir de C# 8.0, si el resultado de una expresión [stackalloc](../language-
 
 ```csharp
 Span<int> numbers = stackalloc[] { 1, 2, 3, 4, 5, 6 };
-var ind = numbers.IndexOfAny(stackalloc[] { 2, 4, 6 ,8 });
+var ind = numbers.IndexOfAny(stackalloc[] { 2, 4, 6, 8 });
 Console.WriteLine(ind);  // output: 1
 ```
 

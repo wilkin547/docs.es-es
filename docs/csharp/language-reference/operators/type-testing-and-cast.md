@@ -18,12 +18,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 5a4f1d4c0c2ddd0d3967e15090d8f8c1ac42f83e
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: bc293c359af5744eebc63c0d0f94b4cebe3d450a
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121414"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "82021243"
 ---
 # <a name="type-testing-operators-and-cast-expression-c-reference"></a>Operadores de prueba de tipos y expresión de conversión (referencia de C#)
 
@@ -123,7 +123,7 @@ El operador `typeof` obtiene la instancia <xref:System.Type?displayProperty=name
 
 [!code-csharp-interactive[typeof operator](snippets/TypeTestingAndConversionOperators.cs#TypeOf)]
 
-También puede usar el operador `typeof` con tipos genéricos sin enlazar. El nombre de un tipo genérico sin enlazar debe contener el número apropiado de comas, que es inferior en una unidad al número de parámetros de tipo. En el siguiente ejemplo se muestra el uso del operador `typeof` con un tipo genérico sin enlazar:
+También se puede usar el operador `typeof` con tipos genéricos sin enlazar. El nombre de un tipo genérico sin enlazar debe contener el número apropiado de comas, que es inferior en una unidad al número de parámetros de tipo. En el siguiente ejemplo se muestra el uso del operador `typeof` con un tipo genérico sin enlazar:
 
 [!code-csharp-interactive[typeof unbound generic](snippets/TypeTestingAndConversionOperators.cs#TypeOfUnboundGeneric)]
 

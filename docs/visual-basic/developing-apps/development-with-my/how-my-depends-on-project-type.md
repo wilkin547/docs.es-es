@@ -6,32 +6,32 @@ helpviewer_keywords:
 ms.assetid: c188b38e-bd9d-4121-9983-41ea6a94d28e
 ms.openlocfilehash: 975b8feb001bcab22185be0a360b0512de099b79
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74330265"
 ---
 # <a name="how-my-depends-on-project-type-visual-basic"></a>Cómo My depende del tipo de proyecto (Visual Basic)
 
-`My` expone solo los objetos que requiere un tipo de proyecto determinado. Por ejemplo, el objeto `My.Forms` está disponible en una aplicación Windows Forms, pero no está disponible en una aplicación de consola. En este tema se describe qué objetos `My` están disponibles en diferentes tipos de proyectos.  
+`My` expone solo los objetos que un tipo de proyecto determinado requiere. Por ejemplo, el objeto `My.Forms` estará disponible en una aplicación de Windows Forms, pero no en una aplicación de consola. En este tema se describe qué objetos `My` hay disponibles en diferentes tipos de proyectos.  
   
-## <a name="my-in-windows-applications-and-web-sites"></a>Mis en aplicaciones y sitios web de Windows  
+## <a name="my-in-windows-applications-and-web-sites"></a>My en aplicaciones de Windows y sitios web  
 
- `My` expone solo los objetos que son útiles en el tipo de proyecto actual; suprime los objetos que no son aplicables. Por ejemplo, la siguiente imagen muestra el modelo de objetos de `My` en un proyecto de Windows Forms.  
+ `My` expone solo los objetos que son útiles en el tipo de proyecto actual y suprime los que no procedan. Por ejemplo, en la siguiente imagen se muestra el modelo de objetos de `My` en un proyecto de Windows Forms.  
   
- ![Diagrama que muestra el modelo My Object en una aplicación Windows Forms.](./media/how-my-depends-on-project-type/my-object-model-windows-forms.png)  
+ ![Diagrama que muestra el modelo de objetos de My en una aplicación de Windows Forms](./media/how-my-depends-on-project-type/my-object-model-windows-forms.png)  
   
- En un proyecto de sitio web, `My` expone objetos que son relevantes para un desarrollador web (como los objetos `My.Request` y `My.Response`) mientras se suprimen objetos que no son relevantes (como el objeto `My.Forms`). En la imagen siguiente se muestra el modelo de objetos de `My` en un proyecto de sitio web:  
+ En un proyecto de sitio web, `My` expone los objetos que son relevantes para un desarrollador web (como `My.Request` y `My.Response`) y suprime los que no lo sean (como `My.Forms`). En la siguiente imagen se muestra el modelo de objetos de `My` en un proyecto de sitio web:  
   
- ![Diagrama que muestra el modelo My Object en una aplicación Web.](./media/how-my-depends-on-project-type/my-object-model-web.png)  
+ ![Diagrama que muestra el modelo de objetos de My en una aplicación web](./media/how-my-depends-on-project-type/my-object-model-web.png)  
   
 ## <a name="project-details"></a>Detalles del proyecto  
 
- En la tabla siguiente se muestra qué objetos `My` están habilitados de forma predeterminada para ocho tipos de proyecto: aplicación para Windows, biblioteca de clases, aplicación de consola, biblioteca de controles de Windows, biblioteca de controles Web, servicio de Windows, vacío y sitio Web.  
+ En la siguiente tabla se muestra qué objetos de `My` están habilitados de forma predeterminada para ocho tipos de proyecto: aplicación de Windows, biblioteca de clases, aplicación de consola, biblioteca de controles de Windows, biblioteca de controles web, servicio de Windows, vacío y sitio web.  
   
- Hay tres versiones del objeto `My.Application`, dos versiones del objeto `My.Computer` y dos versiones de `My.User` objeto; los detalles sobre estas versiones se proporcionan en las notas a pie de la tabla.  
+ Hay tres versiones del objeto `My.Application`, dos versiones del objeto `My.Computer` y dos versiones del objeto `My.User`. En las notas al pie de la tabla encontrará detalles sobre estas versiones.  
   
-|My (objeto)|Aplicación de Windows|Biblioteca de clases|Aplicación de consola|Biblioteca de controles de Windows|Biblioteca de controles Web|Servicio de Windows|Vacío|Sitio web|  
+|Objeto de My|Aplicación Windows|Biblioteca de clases|Aplicación de consola|Biblioteca de controles de Windows|Biblioteca de controles web|Servicio de Windows|Empty|Sitio web|  
 |---|---|---|---|---|---|---|---|---|  
 |`My.Application`|**Sí** <sup>1</sup>|**Sí** <sup>2</sup>|**Sí** <sup>3</sup>|**Sí** <sup>2</sup>|No|**Sí** <sup>3</sup>|No|No|  
 |`My.Computer`|**Sí** <sup>4</sup>|**Sí** <sup>4</sup>|**Sí** <sup>4</sup>|**Sí** <sup>4</sup>|**Sí** <sup>5</sup>|**Sí** <sup>4</sup>|No|**Sí** <sup>5</sup>|  
@@ -44,19 +44,19 @@ ms.locfileid: "74330265"
 |`My.User`|**Sí** <sup>6</sup>|**Sí** <sup>6</sup>|**Sí** <sup>6</sup>|**Sí** <sup>6</sup>|**Sí** <sup>7</sup>|**Sí** <sup>6</sup>|No|**Sí** <sup>7</sup>|  
 |`My.WebServices`|**Sí**|**Sí**|**Sí**|**Sí**|**Sí**|**Sí**|No|No|  
   
- <sup>1</sup> Windows Forms versión de `My.Application`. Deriva de la versión de la consola (vea la nota 3); agrega compatibilidad para interactuar con las ventanas de la aplicación y proporciona el modelo de aplicación Visual Basic.  
+ <sup>1</sup> Versión de Windows Forms de `My.Application`. Deriva de la versión de consola (ver nota 3); agrega compatibilidad para interactuar con ventanas de la aplicación y proporciona el modelo de aplicación de Visual Basic.  
   
- versión de <sup>la biblioteca de</sup> `My.Application`. Proporciona la funcionalidad básica que necesita una aplicación: proporciona miembros para escribir en el registro de la aplicación y obtener acceso a la información de la aplicación.  
+ <sup>2</sup> Versión de biblioteca de `My.Application`. Ofrece la funcionalidad básica que una aplicación necesita: proporciona miembros para escribir en el registro de la aplicación y acceder a la información de la aplicación.  
   
- <sup>3</sup> versión de la consola de `My.Application`. Deriva de la versión de la biblioteca (vea la nota 2) y agrega miembros adicionales para tener acceso a los argumentos de la línea de comandos de la aplicación e información de implementación de ClickOnce.  
+ <sup>3</sup> Versión de consola de `My.Application`. Deriva de la versión de biblioteca (ver nota 2) y agrega más miembros para acceder a argumentos de la línea de comandos de la aplicación y a información de implementación de ClickOnce.  
   
- <sup>4</sup> versión de Windows de `My.Computer`. Deriva de la versión del servidor (vea la nota 5) y proporciona acceso a objetos útiles en un equipo cliente, como el teclado, la pantalla y el mouse.  
+ <sup>4</sup> Versión de Windows de `My.Computer`. Deriva de la versión de servidor (ver nota 5) y da acceso a objetos útiles en un equipo cliente, como el teclado, la pantalla y el ratón.  
   
- <sup>5</sup> versión del servidor de `My.Computer`. Proporciona información básica sobre el equipo, como el nombre, el acceso al reloj, etc.  
+ <sup>5</sup> Versión de servidor de `My.Computer`. Proporciona información básica sobre el equipo, como el nombre, acceso al reloj, etc.  
   
- <sup>6</sup> versión de Windows de `My.User`. Este objeto está asociado a la identidad actual del subproceso.  
+ <sup>6</sup> Versión de Windows de `My.User`. Este objeto está asociado a la identidad actual del subproceso.  
   
- <sup>7</sup> versión Web de `My.User`. Este objeto está asociado a la identidad del usuario de la solicitud HTTP actual de la aplicación.  
+ <sup>7</sup> Versión web de `My.User`. Este objeto está asociado a la identidad del usuario de la solicitud HTTP actual de la aplicación.  
   
 ## <a name="see-also"></a>Vea también
 

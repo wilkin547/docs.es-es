@@ -2,12 +2,12 @@
 title: Arquitectura de las herramientas de la línea de comandos de .NET Core
 description: Obtenga información sobre las capas de herramientas de .NET Core y sobre lo que ha cambiado en versiones recientes.
 ms.date: 03/06/2017
-ms.openlocfilehash: fde1a0acb6af9dd65aa3466b4ea37473b2eab6fb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e1a9fe59225c17d54f6e7213d2b3c3fa70ee58e0
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77092920"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102884"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>Introducción de alto nivel de los cambios en las herramientas de .NET Core
 
@@ -30,7 +30,7 @@ Comencemos con un repaso rápido de la disposición en capas de Preview 2, como 
 
 ![Arquitectura de alto nivel de herramientas de Preview 2](media/cli-msbuild-architecture/p2-arch.png)
 
-La disposición en capas de las herramientas en la Versión preliminar 2 es sencilla. En el fondo, la base es la CLI de .NET Core. El resto de herramientas de mayor nivel, como Visual Studio o Visual Studio Code, dependen de la CLI, y se basan en esta, para compilar proyectos, restaurar dependencias, etc. Por ejemplo, si se quisiera realizar una operación de restauración con Visual Studio, se llamaría al comando `dotnet restore` ([vea la nota](#dotnet-restore-note)) de la CLI.
+La disposición en capas de las herramientas en la Versión preliminar 2 es sencilla. En el fondo, la base es la CLI de .NET Core. El resto de herramientas de mayor nivel, como Visual Studio o Visual Studio Code, dependen de la CLI, y se basan en esta, para compilar proyectos, restaurar dependencias, etc. Por ejemplo, si se quisiera realizar una operación de restauración con Visual Studio, se llamaría al comando `dotnet restore` de la CLI.
 
 Con el paso al nuevo sistema de proyecto, el diagrama anterior cambia:
 
@@ -41,7 +41,7 @@ La principal diferencia es que la CLI ya no es la base; este papel es ocupado ah
 > [!NOTE]
 > Un "destino" es un término de MSBuild que indica una operación con nombre que puede invocar MSBuild. Normalmente está unido a una o varias tareas que ejecutan alguna lógica que se supone que debe hacer el destino. MSBuild admite muchos destinos predefinidos, como `Copy` o `Execute`; también permite a los usuarios escribir sus propias tareas mediante código administrado y definir destinos para ejecutar esas tareas. Para obtener más información, consulte [Tareas de MSBuild](/visualstudio/msbuild/msbuild-tasks).
 
-Todos los conjuntos de herramientas consumen ahora el componente de SDK compartido y sus destinos, incluida la CLI. Por ejemplo, Visual Studio 2019 no llama al comando `dotnet restore` ([vea la nota](#dotnet-restore-note)) para restaurar las dependencias de los proyectos de .NET Core. En su lugar, usa el destino "Restauración" directamente. Como son destinos de MSBuild, también puede usar MSBuild sin procesar para ejecutarlos mediante el comando [dotnet msbuild](dotnet-msbuild.md).
+Todos los conjuntos de herramientas consumen ahora el componente de SDK compartido y sus destinos, incluida la CLI. Por ejemplo, Visual Studio 2019 no llama al comando `dotnet restore` para restaurar las dependencias de los proyectos de .NET Core. En su lugar, usa el destino "Restauración" directamente. Como son destinos de MSBuild, también puede usar MSBuild sin procesar para ejecutarlos mediante el comando [dotnet msbuild](dotnet-msbuild.md).
 
 ### <a name="cli-commands"></a>Comandos de la CLI
 
@@ -73,5 +73,6 @@ Este comando publica una aplicación en una carpeta `pub` mediante la configurac
 
 Las excepciones destacadas a esta regla son los comandos `new` y `run`. No se han implementado como destinos de MSBuild.
 
-<a name="dotnet-restore-note"></a>
+### <a name="implicit-restore"></a>Restauración implícita
+
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

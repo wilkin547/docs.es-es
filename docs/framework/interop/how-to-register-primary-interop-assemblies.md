@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Registrar ensamblados de interoperabilidad primarios'
+title: Procedimiento para registrar ensamblados de interoperabilidad primarios
 ms.date: 03/30/2017
 helpviewer_keywords:
 - registering primary interop assemblies
@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 ms.openlocfilehash: c799e4ead2932f1c376a57488df30390ad48b90f
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73107681"
 ---
-# <a name="how-to-register-primary-interop-assemblies"></a>Cómo: Registrar ensamblados de interoperabilidad primarios
+# <a name="how-to-register-primary-interop-assemblies"></a>Procedimiento para registrar ensamblados de interoperabilidad primarios
 
 Las clases solo se pueden serializar con la interoperabilidad COM y siempre se serializan como interfaces. En algunos casos, la interfaz usada para calcular las referencias de la clase se conoce como interfaz de clase. Para obtener información sobre cómo invalidar la interfaz de clase con una interfaz de su elección, vea [Contenedor CCW](../../standard/native-interop/com-callable-wrapper.md).
 
@@ -36,7 +36,7 @@ Use la [herramienta Registro de ensamblados (Regasm.exe)](../tools/regasm-exe-as
 
 1. En el símbolo del sistema, escriba:
 
-     **regasm** *nombre_de_ensamblado*
+     **regasm** *assemblyname*
 
      En este comando, *nombre_de_ensamblado* es el nombre de archivo del ensamblado que se va a registrar. Regasm.exe agrega una entrada para el ensamblado de interoperabilidad primario bajo la misma clave del Registro que la biblioteca de tipos original.
 

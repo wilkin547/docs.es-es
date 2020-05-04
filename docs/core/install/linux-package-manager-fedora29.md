@@ -4,12 +4,12 @@ description: Use un administrador de paquetes para instalar el SDK y el entorno 
 author: thraka
 ms.author: adegeo
 ms.date: 03/17/2020
-ms.openlocfilehash: bf75231ddf1cbf96668e949e20b24a0c0f6b4154
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: d1cbe38f4f104a8e178d8bcfd1fa1bd6d7645261
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134286"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645320"
 ---
 # <a name="fedora-29-package-manager---install-net-core"></a>Administrador de paquetes de Fedora 29: instalación de .NET Core
 
@@ -19,12 +19,12 @@ En este artículo se describe cómo usar un administrador de paquetes para insta
 
 [!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
-## <a name="register-microsoft-key-and-feed"></a>Registro de la clave y la fuente de Microsoft
+## <a name="add-microsoft-repository-key-and-feed"></a>Adición de la clave y la fuente del repositorio de Microsoft
 
 Antes de instalar .NET, deberá realizar lo siguiente:
 
-- Registrar la clave de Microsoft.
-- Registrar el repositorio del producto.
+- Agregar la clave de firma del paquete de Microsoft a la lista de claves de confianza.
+- Agregar el repositorio al administrador de paquetes.
 - Instalar las dependencias necesarias.
 
 Esto solo se debe hacer una vez por máquina.

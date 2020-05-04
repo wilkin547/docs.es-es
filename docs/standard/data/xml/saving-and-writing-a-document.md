@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 097b0cb1-5743-4c3a-86ef-caf5cbe6750d
 ms.openlocfilehash: 0af160b720b9eddd9e72689c920316bffdc6d21e
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710224"
@@ -20,7 +20,7 @@ Cuando cargue y guarde un <xref:System.Xml.XmlDocument>, el documento guardado p
   
 - Todos los espacios en blanco entre los atributos se reducen a un carácter de un solo espacio.  
   
-- Se cambia el espacio en blanco entre los elementos. Se conserva el espacio blanco importante, pero no se conserva el poco importante. Sin embargo, cuando se guarda el documento, utilizará el modo de **sangría** <xref:System.Xml.XmlTextWriter> de forma predeterminada para imprimir con claridad el resultado para que sea más legible.  
+- Se cambia el espacio en blanco entre los elementos. Se conserva el espacio blanco importante, pero no se conserva el poco importante. No obstante, cuando se guarda el documento, se usa el modo <xref:System.Xml.XmlTextWriter> **Sangría** de manera predeterminada para imprimir con claridad el resultado con el fin de que sea más legible.  
   
 - De manera predeterminada, el carácter de la comilla que se utiliza delante y detrás de los valores de los atributos se cambia por la comilla doble. Puede utilizar la propiedad <xref:System.Xml.XmlTextReader.QuoteChar%2A> en <xref:System.Xml.XmlTextWriter>para establecer el carácter de la comilla como doble o simple.  
   
@@ -33,7 +33,7 @@ Cuando cargue y guarde un <xref:System.Xml.XmlDocument>, el documento guardado p
 ## <a name="writing-an-xmldeclaration"></a>Escribir una declaración XmlDeclaration  
  Los miembros <xref:System.Xml.XmlDocument> y <xref:System.Xml.XmlDeclaration> de <xref:System.Xml.XmlNode.OuterXml%2A>, <xref:System.Xml.XmlNode.InnerXml%2A> y <xref:System.Xml.XmlNode.WriteTo%2A>, además de los métodos <xref:System.Xml.XmlDocument> de <xref:System.Xml.XmlDocument.Save%2A> y <xref:System.Xml.XmlDocument.WriteContentTo%2A>, crean una declaración XML.  
   
- Para las propiedades <xref:System.Xml.XmlDocument> de <xref:System.Xml.XmlNode.OuterXml%2A>, <xref:System.Xml.XmlDocument.InnerXml%2A>, y los métodos <xref:System.Xml.XmlDocument.Save%2A>, <xref:System.Xml.XmlDocument.WriteTo%2A> y <xref:System.Xml.XmlDocument.WriteContentTo%2A>, la codificación escrita en la declaración XML se obtiene del nodo <xref:System.Xml.XmlDeclaration>. Si no hay ningún nodo de <xref:System.Xml.XmlDeclaration>, <xref:System.Xml.XmlDeclaration> no se escribe. Si no hay ninguna codificación en el nodo <xref:System.Xml.XmlDeclaration>, la codificación no se escribe en la declaración XML.  
+ Para las propiedades <xref:System.Xml.XmlDocument> de <xref:System.Xml.XmlNode.OuterXml%2A>, <xref:System.Xml.XmlDocument.InnerXml%2A>, y los métodos <xref:System.Xml.XmlDocument.Save%2A>, <xref:System.Xml.XmlDocument.WriteTo%2A> y <xref:System.Xml.XmlDocument.WriteContentTo%2A>, la codificación escrita en la declaración XML se obtiene del nodo <xref:System.Xml.XmlDeclaration>. Si no existe ningún nodo <xref:System.Xml.XmlDeclaration>, <xref:System.Xml.XmlDeclaration> no se escribe. Si no hay codificación en el nodo <xref:System.Xml.XmlDeclaration>, la codificación no se escribe en la declaración XML.  
   
  Los métodos <xref:System.Xml.XmlDocument.Save%2A?displayProperty=nameWithType> y <xref:System.Xml.XmlDocument.Save%2A?displayProperty=nameWithType> siempre escriben una declaración <xref:System.Xml.XmlDeclaration>. Estos métodos toman la codificación del sistema de escritura que está escribiendo. Es decir, el valor de codificación en el sistema de escritura invalida la codificación en el documento y en la declaración <xref:System.Xml.XmlDeclaration>. Por ejemplo, el siguiente código no escribe una codificación en la declaración XML que se encuentra en el archivo de salida `out.xml`.  
   
@@ -53,7 +53,7 @@ doc.Save(tw);
   
  Para el método <xref:System.Xml.XmlDocument.Save%2A>, la declaración XML se escribe utilizando el método <xref:System.Xml.XmlWriter.WriteStartDocument%2A> en la clase <xref:System.Xml.XmlWriter>. Por lo tanto, al sobrescribir el método <xref:System.Xml.XmlWriter.WriteStartDocument%2A>, cambia la forma de escribir el principio del documento.  
   
- En el caso de los miembros de <xref:System.Xml.XmlDeclaration> de <xref:System.Xml.XmlNode.OuterXml%2A>, <xref:System.Xml.XmlDeclaration.WriteTo%2A>y <xref:System.Xml.XmlNode.InnerXml%2A>, si no se establece la propiedad <xref:System.Xml.XmlDeclaration.Encoding%2A>, no se escribe ninguna codificación. De lo contrario, la codificación escrita en la declaración XML es la misma que la codificación que se encuentra en la propiedad <xref:System.Xml.XmlDeclaration.Encoding%2A>.  
+ Para los miembros <xref:System.Xml.XmlDeclaration> de <xref:System.Xml.XmlNode.OuterXml%2A>, <xref:System.Xml.XmlDeclaration.WriteTo%2A> y <xref:System.Xml.XmlNode.InnerXml%2A>, si no se establece la propiedad <xref:System.Xml.XmlDeclaration.Encoding%2A>, no se escribe la codificación. De lo contrario, la codificación escrita en la declaración XML es la misma que la que se encuentra en la propiedad <xref:System.Xml.XmlDeclaration.Encoding%2A>.  
   
 ## <a name="writing-document-content-using-the-outerxml-property"></a>Escribir el contenido de un documento con la propiedad OuterXml  
  La propiedad <xref:System.Xml.XmlNode.OuterXml%2A> es una extensión de Microsoft de los estándares del Modelo de objetos de documento (DOM) XML del W3C (World Wide Web Consortium). La propiedad <xref:System.Xml.XmlNode.OuterXml%2A> se utiliza para obtener el marcado de todo el documento XML o tan solo el de un nodo y sus nodos secundarios. <xref:System.Xml.XmlNode.OuterXml%2A>devuelve el marcado que representa el nodo en concreto y todos sus nodos secundarios.  

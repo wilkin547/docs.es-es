@@ -4,7 +4,7 @@ ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
 ms.openlocfilehash: e5dcc9ec7cf6f996c97262b14020552286c530da
 ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71353141"
@@ -25,7 +25,7 @@ Para obtener más información sobre la serialización, revise los comentarios d
 
 ### <a name="to-build-the-sample-using-visual-studio"></a>Para compilar el ejemplo con Visual Studio
 
-1. Abra el explorador de archivos y navegue a uno de los subdirectorios específicos del lenguaje del ejemplo.
+1. Abra el Explorador de archivos y navegue hasta uno de los subdirectorios específicos del lenguaje del ejemplo.
 
 2. Haga doble clic en el icono del archivo SerializationCS.sln, SerializationJSL.sln o SerializationVB.sln, dependiendo del lenguaje de programación elegido, para abrir el archivo en Visual Studio.
 
@@ -72,11 +72,11 @@ Las viñetas siguientes describen brevemente las clases y las tecnologías que s
 
 - Serialización en tiempo de ejecución
 
-  - <xref:System.Runtime.Serialization.IFormatter> se usa para hacer referencia a un objeto <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> o <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>.
+  - <xref:System.Runtime.Serialization.IFormatter> Se usa para hacer referencia a un objeto <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> o <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>.
 
-  - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> se utiliza para serializar una lista vinculada en un flujo en formato binario. El formateador binario utiliza un formato que solo entiende el tipo <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Sin embargo, los datos son concisos.
+  - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> Se usa para serializar una lista vinculada a una secuencia en formato binario. El formateador binario utiliza un formato que solo entiende el tipo <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Sin embargo, los datos son concisos.
 
-  - <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> se utiliza para serializar una lista vinculada en un flujo en el formato SOAP. SOAP es un formato estándar.
+  - <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> Se usa para serializar una lista vinculada a una secuencia en formato SOAP. SOAP es un formato estándar.
 
 - E/S de secuencia
 

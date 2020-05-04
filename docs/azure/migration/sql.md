@@ -5,7 +5,7 @@ ms.topic: how-to
 ms.date: 11/15/2017
 ms.openlocfilehash: dac35970f2d77e232c2ee1a5e3a1f6e7bfec2317
 ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/26/2020
 ms.locfileid: "81433329"
@@ -16,12 +16,12 @@ En este artículo, se proporciona un breve esquema de las dos opciones para migr
 
 Azure tiene dos opciones principales para migrar una base de datos de SQL Server de producción:
 
-1. [SQL Server en máquinas virtuales de Azure](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview): una instancia de SQL Server instalada y hospedada en una máquina Virtual Windows que se ejecuta en Azure, también conocida como Infraestructura como servicio (IaaS).
-2. [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview): un servicio de base de datos de Azure SQL completamente administrado, también conocido como Plataforma como servicio (PaaS).
+1. [SQL Server en Máquinas virtuales de Azure](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview): una instancia de SQL Server instalada y hospedada en una máquina Virtual Windows que se ejecuta en Azure, también conocida como Infraestructura como servicio (IaaS).
+2. [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview): un servicio de base de datos de Azure SQL completamente administrado, también conocido como Plataforma como servicio (PaaS).
 
 Ambos tiene ventajas y desventajas que debe evaluar antes de migrar.
 
-## <a name="get-started"></a>Introducción
+## <a name="get-started"></a>Primeros pasos
 
 Las siguientes guías de migración será útiles, según qué servicio use:
 
@@ -31,7 +31,7 @@ Las siguientes guías de migración será útiles, según qué servicio use:
 Además, los vínculos siguientes a contenido conceptual le ayudarán a comprender mejor las máquinas virtuales:
 
 * [Alta disponibilidad y recuperación ante desastres para SQL Server en Azure Virtual Machines](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-high-availability-dr)
-* [Prácticas recomendadas de rendimiento para SQL Server en Azure Virtual Machines](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-performance)
+* [Prácticas recomendadas para mejorar el rendimiento para SQL Server en Azure Virtual Machines](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-performance)
 * [Estrategias de desarrollo y patrones de aplicación de SQL Server en Azure Virtual Machines](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-app-patterns-dev-strategies)
 
 Y los vínculos siguientes le ayudarán a comprender mejor Azure SQL Database:
@@ -42,15 +42,15 @@ Y los vínculos siguientes le ayudarán a comprender mejor Azure SQL Database:
 
 ## <a name="choosing-iaas-or-paas"></a>Elección de IaaS o PaaS
 
-Al evaluar dónde migrar la base de datos, determine si IaaS o PaaS es más adecuado para usted.
+Al evaluar dónde quiere migrar la base de datos, decida qué es lo más adecuado: IaaS o PaaS.
 
-**Elija SQL Server en máquinas virtuales de Azure si:**
+**Elija SQL Server en máquinas virtuales de Azure si:**
 
 * Desea migrar mediante “lift and shift” la base de datos y las aplicaciones ningún cambio, o muy pocos.
 * Prefiere tener control total sobre el servidor de base de datos y la máquina virtual donde se ejecuta.
 * Ya tiene licencias de SQL Server y Windows Server, y tiene previsto usarlas.
 
-**Elija Azure SQL Database si:**
+**Elija Azure SQL Database si:**
 
 * Desea modernizar las aplicaciones y va a realizar la migración para usar otros servicios de PaaS en Azure.
 * No desea administrar el servidor de base de datos y la máquina virtual donde se ejecuta.
@@ -63,10 +63,10 @@ En la tabla siguiente se describen las diferencias entre cada servicio según lo
 | Migración | Requiere cambios mínimos en la base de datos. | Puede requerir cambios en la base de datos si usa características no disponibles en Azure SQL, según determine el [Asistente para la migración de datos](https://www.microsoft.com/download/details.aspx?id=53595), o si tiene otras dependencias tales como archivos ejecutables instalados localmente.|
 | Administración de la disponibilidad, la recuperación y las actualizaciones | La disponibilidad y la recuperación se configuran manualmente. Las actualizaciones se pueden automatizar con [VM Scale Sets](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade). | Se administra automáticamente. |
 | Configuración del sistema operativo subyacente | Configuración manual. | Se administra automáticamente. |
-| Administración del tamaño de base de datos | Admite hasta 64 TB de almacenamiento por instancia de SQL ServerSQL Server . | Admite 4 TB de almacenamiento antes de necesitar una partición horizontal. |
+| Administración del tamaño de base de datos | Admite hasta 64 TB de almacenamiento por cada instancia de SQL Server. | Admite 4 TB de almacenamiento antes de necesitar una partición horizontal. |
 | Administración de los costos | Debe administrar los costos de las licencias de SQL Server, los costos de las licencias de Windows Server y los costos de las máquinas virtuales (en función del número de núcleos, la memoria RAM y el almacenamiento). | Debe administrar los costos del servicio (en función del número de [eDTU o DTU](https://docs.microsoft.com/azure/sql-database/sql-database-what-is-a-dtu), el almacenamiento y el número de bases de datos si usa un grupo elástico). También debe administrar el costo de los SLA. |
 
-Para obtener más información sobre las diferencias entre los dos, lea Elegir una opción de SQL Server en la nube: [Azure SQL Database o SQL Server en máquinas virtuales](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas)de Azure .
+Para más información acerca de las diferencias entre los dos, lea Selección de una opción de SQL Server en la nube: [Azure SQL Database (PaaS) o SQL Server on Azure VMs (IaaS)](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas).
 
 ## <a name="faq"></a>Preguntas más frecuentes
 
@@ -74,9 +74,9 @@ Para obtener más información sobre las diferencias entre los dos, lea Elegir u
 
     Sí. Todas las herramientas de Microsoft SQL funcionan con ambos servicios. Sin embargo, SSRS no forma parte de Azure SQL Database. Se recomienda ejecutarlo en una máquina virtual de Azure y, a continuación, hacer que apunte a la instancia de base de datos.
 
-* **Quiero ir PaaS pero no estoy seguro de si mi base de datos es compatible. ¿Hay herramientas para ayudar?**
+* **Quiero cambiar a PaaS pero no estoy seguro de si mi base de datos es compatible. ¿Hay alguna herramienta que pueda ayudar?**
 
-    Sí. El [Asistente para la migración de datos](https://www.microsoft.com/download/details.aspx?id=53595) es una herramienta que se usa como parte de la migración a Azure SQL Database. [Azure Database Migration Service](https://azure.microsoft.com/campaigns/database-migration/) es un servicio de vista previa que puede usar para IaaS o PaaS.
+    Sí. El [Asistente para la migración de datos](https://www.microsoft.com/download/details.aspx?id=53595) es una herramienta que se usa como parte de la migración a Azure SQL Database. [Azure Database Migration Service](https://azure.microsoft.com/campaigns/database-migration/) es un servicio en versión preliminar que puede usar para IaaS o PaaS.
 
 * **¿Puedo calcular los costos?**
 

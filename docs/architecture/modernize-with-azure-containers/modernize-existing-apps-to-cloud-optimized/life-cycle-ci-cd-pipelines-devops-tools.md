@@ -2,12 +2,12 @@
 title: Modernización del ciclo de vida de la aplicación con canalizaciones de CI/CD y herramientas de DevOps en la nube
 description: Modernización de las aplicaciones .NET existentes con Azure Clour y contenedores Windows | Modernización del ciclo de vida de la aplicación con canalizaciones de CI/CD y herramientas de DevOps en la nube
 ms.date: 04/30/2018
-ms.openlocfilehash: ac2d9a1e9ab432cf69cb3da670fc91c681f802c2
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: afb7bae7780a766329ca604d192b2d7353e32bf5
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80987860"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739161"
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>Modernización del ciclo de vida de la aplicación con canalizaciones de CI/CD y herramientas de DevOps en la nube
 
@@ -21,7 +21,7 @@ Azure DevOps Services admite la integración y la implementación continuas de a
 
 - [Implementación en Azure Kubernetes Service](https://docs.microsoft.com/azure/devops/pipelines/apps/cd/deploy-aks?tabs=dotnet-core)
 
-Pero también puede implementar en [Docker Swarm](https://blog.jcorioland.io/archives/2016/11/29/full-ci-cd-pipeline-to-deploy-multi-containers-application-on-azure-container-service-docker-swarm-using-visual-studio-team-services.html) o DC/OS mediante tareas de Azure DevOps Services basadas en scripts.
+Pero también puede implementar en [Docker Swarm](https://blog.jcorioland.io/archives/2016/11/29/full-ci-cd-pipeline-to-deploy-multi-containers-application-on-azure-container-service-docker-swarm-using-visual-studio-team-services.html) o DC/OS mediante tareas de Azure DevOps Services basadas en scripts.
 
 Para facilitar aún más la agilidad de la implementación, estas herramientas proporcionan excelentes experiencias de implementación en la secuencia desarrollo-pruebas-producción para cargas de trabajo de contenedor, con diversas soluciones de desarrollo y CI/CD.
 

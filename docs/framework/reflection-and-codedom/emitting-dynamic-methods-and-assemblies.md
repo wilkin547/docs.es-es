@@ -9,7 +9,7 @@ helpviewer_keywords:
 - assemblies [.NET Framework], emitting dynamic assemblies
 ms.openlocfilehash: fda5a20eb7798086ec10415889454b4a8beba5f3
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79180528"
@@ -34,20 +34,20 @@ La emisión de la reflexión permite lo siguiente:
   
 Además de los tipos administrados del espacio de nombres <xref:System.Reflection.Emit>, hay interfaces de metadatos no administradas que se describen en la documentación de referencia [Interfaces de metadatos](../unmanaged-api/metadata/metadata-interfaces.md). La emisión de reflexión administrada proporciona una comprobación más estricta de los errores semánticos y un mayor nivel de abstracción de los metadatos que las interfaces de metadatos no administradas.  
   
-Otro recurso útil para trabajar con metadatos y MSIL es la documentación de Common Language Infrastructure (CLI), especialmente la sección II sobre la definición y la semántica de los metadatos y la partición III sobre el conjunto de instrucciones de CIL. La documentación está disponible en línea en el sitio web de [Ecma.](https://www.ecma-international.org/publications/standards/Ecma-335.htm)  
+Otro recurso útil para trabajar con metadatos y MSIL es la documentación de Common Language Infrastructure (CLI), especialmente "Partition II: Metadata Definition and Semantics (Partición II: definición y semántica de los metadatos)" y "Partition III: CIL Instruction Set (Partición III: conjunto de instrucciones CIL)". La documentación está disponible en línea en el [sitio web de Ecma](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
   
 ## <a name="in-this-section"></a>En esta sección
   
-[Los problemas de seguridad en la reflexión emiten](security-issues-in-reflection-emit.md)  
+[Problemas de seguridad de la emisión de la reflexión](security-issues-in-reflection-emit.md)  
 Describe los problemas de seguridad relacionados con la creación de ensamblados dinámicos mediante emisión de la reflexión.  
 
-[Cómo: Definir y ejecutar métodos dinámicos](how-to-define-and-execute-dynamic-methods.md) Muestra cómo ejecutar un método dinámico simple y un método dinámico enlazado a una instancia de una clase.
+[Cómo: para definir y ejecutar métodos dinámicos](how-to-define-and-execute-dynamic-methods.md) Se muestra cómo ejecutar un método dinámico simple y un método dinámico enlazado a una instancia de una clase.
 
-[Cómo: Definir un tipo genérico con emisión](how-to-define-a-generic-type-with-reflection-emit.md) de reflexión Muestra cómo crear un tipo genérico simple con dos parámetros de tipo, cómo aplicar restricciones de clase, interfaz y especiales a los parámetros de tipo y cómo crear miembros que usan los parámetros de tipo de la clase como tipos de parámetro y tipos de valor devuelto.
+[Cómo: para definir un tipo genérico con emisión de reflexión](how-to-define-a-generic-type-with-reflection-emit.md) Se muestra cómo crear un tipo genérico simple con dos parámetros de tipo, cómo aplicar restricciones de clase, interfaz y especiales a los parámetros de tipo y cómo crear miembros que usen los parámetros de tipo de la clase como tipos de parámetro y de valor devuelto.
 
-[Cómo: Definir un método genérico con emisión](how-to-define-a-generic-method-with-reflection-emit.md) de reflexión Muestra cómo crear, emitir e invocar un método genérico simple.
+[Cómo: para definir un tipo genérico con emisión de reflexión](how-to-define-a-generic-method-with-reflection-emit.md) Muestra cómo crear, emitir e invocar un método genérico simple.
 
-[Ensamblajes coleccionables para la generación](collectible-assemblies.md) de tipos dinámicos Presenta ensamblados coleccionables, que son ensamblados dinámicos que se pueden descargar sin descargar el dominio de aplicación en el que se crearon.
+[Ensamblados recopilables para la generación dinámica de tipos](collectible-assemblies.md) Presenta los ensamblados recopilables, que son ensamblados dinámicos que se pueden descargar sin descargar el dominio de aplicación en el que se han creado.
   
 ## <a name="reference"></a>Referencia  
 

@@ -10,31 +10,31 @@ helpviewer_keywords:
 ms.assetid: 5bfbb487-5f47-4267-969a-39dfb917beeb
 ms.openlocfilehash: 27a20a5a3525353ffbced729b8ac9c98b3e48fc1
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350853"
 ---
 # <a name="sample-compilation-command-lines-visual-basic"></a>Líneas de comandos de compilación de ejemplo (Visual Basic)
 
-Como alternativa a la compilación de programas Visual Basic desde Visual Studio, puede compilar desde la línea de comandos para generar archivos ejecutables (. exe) o archivos de biblioteca de vínculos dinámicos (. dll).
+Como alternativa a la compilación de programas de Visual Basic desde Visual Studio, se pueden realizar compilaciones desde la línea de comandos para generar archivos ejecutables (.exe) o archivos de biblioteca de vínculos dinámicos (.dll).
 
-El compilador de línea de comandos de Visual Basic admite un conjunto completo de opciones que controlan los archivos de entrada y salida, los ensamblados y las opciones de depuración y preprocesador. Cada opción está disponible en dos formas intercambiables: `-option` y `/option`. En esta documentación solo se muestra el formulario `-option`.
+El compilador de línea de comandos de Visual Basic admite un conjunto completo de opciones con las que se controlan los archivos de entrada y salida, los ensamblados y las opciones de depuración y preprocesador. Cada opción está disponible en dos formas intercambiables: `-option` y `/option`. En esta documentación solo se muestra la forma `-option`.
 
-En la tabla siguiente se enumeran algunas líneas de comandos de ejemplo que puede modificar para su propio uso.
+En la siguiente tabla se muestran algunas líneas de comandos de ejemplo que puede modificar para uso propio.
 
-|Para|Uso|
+|En|Usar|
 |--------|---------|
-|Compile File. VB y cree File. exe|`vbc -reference:Microsoft.VisualBasic.dll File.vb`|
-|Compile File. VB y cree File. dll|`vbc -target:library File.vb`|
-|Compile File. VB y cree My. exe|`vbc -out:My.exe File.vb`|
-|Compile File. VB y cree una biblioteca y un ensamblado de referencia denominado File. dll.|`vbc -target:library -ref:.\debug\bin\ref\file.dll File.vb`|
-|Compilar todos los archivos Visual Basic en el directorio actual, con optimizaciones en y el símbolo de `DEBUG` definido, produciendo archivo2. exe|`vbc -define:DEBUG=1 -optimize -out:File2.exe *.vb`|
-|Compilar todos los archivos Visual Basic en el directorio actual, generando una versión de depuración de archivo2. dll sin mostrar el logotipo o las advertencias|`vbc -target:library -out:File2.dll -nowarn -nologo -debug *.vb`|
-|Compilar todos los archivos Visual Basic del directorio actual en un archivo. dll|`vbc -target:library -out:Something.dll *.vb`|
+|Compilar File.vb y crear File.exe|`vbc -reference:Microsoft.VisualBasic.dll File.vb`|
+|Compilar File.vb y crear File.dll|`vbc -target:library File.vb`|
+|Compilar File.vb y crear My.exe|`vbc -out:My.exe File.vb`|
+|Compilar File.vb y crear una biblioteca y un ensamblado de referencia llamado File.dll|`vbc -target:library -ref:.\debug\bin\ref\file.dll File.vb`|
+|Compilar todos los archivos de Visual Basic del directorio actual, con las optimizaciones activadas y el símbolo `DEBUG` definido, creando así File2.exe|`vbc -define:DEBUG=1 -optimize -out:File2.exe *.vb`|
+|Compilar todos los archivos de Visual Basic del directorio actual, creando una versión de depuración de File2.dll sin mostrar el logotipo ni advertencias|`vbc -target:library -out:File2.dll -nowarn -nologo -debug *.vb`|
+|Compilar todos los archivos de Visual Basic del directorio actual en un archivo Something.dll|`vbc -target:library -out:Something.dll *.vb`|
 
 > [!TIP]
-> Al compilar un proyecto mediante el IDE de Visual Studio, puede mostrar información sobre el comando de **VBC** asociado con sus opciones del compilador en la ventana salida. Para mostrar esta información, abra el [cuadro de diálogo Opciones, proyectos y soluciones, compilar y ejecutar](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)y, a continuación, establezca el nivel de detalle de la salida de la **compilación del proyecto de MSBuild** en **normal** o en un nivel más alto de detalle.
+> Cuando se compila un proyecto con el IDE de Visual Studio, se puede mostrar información sobre el comando asociado **vbc** con sus opciones de compilador en la ventana salida. Para ver esta información, abra el cuadro de diálogo [Opciones - Proyectos y soluciones - Compilar y ejecutar](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run) y establezca **Detalles de la salida de la compilación del proyecto de MSBuild** en **Normal** o en un nivel de detalle más alto.
 
 ## <a name="see-also"></a>Vea también
 

@@ -9,7 +9,7 @@ helpviewer_keywords:
 - -refout compiler option [Visual Basic]
 ms.openlocfilehash: 3649a24a52cc6a448ea7cf4d850915adf02147fb
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348648"
@@ -29,11 +29,11 @@ La opción **-refout** especifica una ruta de archivo donde el ensamblado de ref
 ## <a name="arguments"></a>Argumentos
 
 `filepath`  
-Ruta de acceso y nombre de archivo del ensamblado de referencia. Por lo general, debe estar en una subcarpeta del ensamblado principal. La convención recomendada (que se usa por MSBuild) es colocar el ensamblado de referencia en una subcarpeta "ref/" con relación al ensamblado principal. Todas las carpetas de `filepath` deben existir; el compilador no los crea.
+Ruta de acceso y nombre de archivo del servicio ensamblado de referencia. Generalmente debe estar en una subcarpeta del ensamblado principal. La convención recomendada (que se usa por MSBuild) es colocar el ensamblado de referencia en una subcarpeta "ref/" con relación al ensamblado principal. Todas las carpetas de `filepath` deben existir; el compilador no las crea.
 
 ## <a name="remarks"></a>Comentarios
 
-Visual Basic admite el modificador de `-refout` a partir de la versión 15,3.
+Visual Basic admite el modificador `-refout` a partir de la versión 15.3.
 
 Los ensamblados de referencia son un tipo especial de ensamblado que contiene solo la cantidad mínima de metadatos necesarios para representar la superficie de la API pública de la biblioteca. Incluyen declaraciones para todos los miembros que son significativos al hacer referencia a un ensamblado en las herramientas de compilación, pero excluyen todas las implementaciones de miembros y las declaraciones de miembros privados que no tienen ningún impacto observable en su contrato de API. Para obtener más información, consulte [Ensamblados de referencia](../../../standard/assembly/reference-assemblies.md) en la Guía de .NET.
 

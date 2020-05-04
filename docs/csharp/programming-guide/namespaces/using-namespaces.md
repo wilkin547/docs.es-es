@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 0947e597da93d6db1c5965b3685a509961778586
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: b4326be8c9e299a96477096ec21864ec69037abe
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507053"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738243"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Uso de espacios de nombres (Guía de programación de C#)
 
@@ -36,7 +36,7 @@ Los espacios de nombres se usan mucho en programas de C# de dos maneras. En prim
   
 ## <a name="namespace-aliases"></a>Alias de espacios de nombres
 
- También puede utilizar la [directiva `using`](../../language-reference/keywords/using-directive.md) para crear un alias para un espacio de nombres. Use el [calificador de alias de espacio de nombres `::`](../../language-reference/operators/namespace-alias-qualifier.md) para tener acceso a los miembros del espacio de nombres con alias. En el ejemplo siguiente se muestra cómo crear y usar un alias para un espacio de nombres:
+ También puede usar la [directiva `using`](../../language-reference/keywords/using-directive.md) para crear un alias de un espacio de nombres. Use el [calificador de alias de espacio de nombres `::`](../../language-reference/operators/namespace-alias-qualifier.md) para tener acceso a los miembros del espacio de nombres con alias. En el ejemplo siguiente se muestra cómo crear y usar un alias para un espacio de nombres:
   
 [!code-csharp[csProgGuideNamespaces#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#5)]
   

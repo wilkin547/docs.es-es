@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
 ms.openlocfilehash: e0de715a3ed33eedf212fc3e0e9930c9cbaa0a38
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73123592"
@@ -242,7 +242,7 @@ En la tabla siguiente se muestran los valores posibles para la enumeración **Ty
 |No se admite.|**VT_CY**|
 |No se admite.|**VT_VARIANT**|
 
-El valor de la variante COM se determina mediante una llamada a la interfaz **IConvertible.To** *Tipo*, donde **To** *Tipo* es la rutina de conversión que se corresponde con el tipo que se devolvió desde **IConvertible.GetTypeCode**. Por ejemplo, un objeto que devuelve **TypeCode.Double** de **IConvertible.GetTypeCode** se serializa como una variante COM de tipo **VT_R8**. Puede obtener el valor de la variante (almacenado en el campo **dblVal** de la variante COM) si convierte a la interfaz **IConvertible** y llama al método <xref:System.IConvertible.ToDouble%2A>.
+El valor de la variante COM se determina realizando una llamada a la interfaz **IConvertible.To** *Tipo*, donde **To** *Tipo* es la rutina de conversión que se corresponde con el tipo que se devolvió desde **IConvertible.GetTypeCode**. Por ejemplo, un objeto que devuelve **TypeCode.Double** de **IConvertible.GetTypeCode** se serializa como una variante COM de tipo **VT_R8**. Puede obtener el valor de la variante (almacenado en el campo **dblVal** de la variante COM) si convierte a la interfaz **IConvertible** y llama al método <xref:System.IConvertible.ToDouble%2A>.
 
 ## <a name="marshaling-variant-to-object"></a>Serialización de Variant en Object
 
@@ -312,12 +312,12 @@ En la tabla siguiente se resumen las reglas de propagación para variantes y obj
 
 |De|En|Los cambios se propagan|
 |----------|--------|-----------------------------|
-|**Variante**  *v*|**Objeto**  *o*|Never|
-|**Objeto**  *o*|**Variante**  *v*|Never|
-|**Variante**   ***\****  *pv*|**Objeto de ref**  *o*|Siempre|
-|**Objeto de ref**  *o*|**Variante**   ***\****  *pv*|Siempre|
-|**Variante**  *v* **(VT_BYREF** *&#124;* **VT_\*)**|**Objeto**  *o*|Never|
-|**Variante**  *v* **(VT_BYREF** *&#124;* **VT_)**|**Objeto de ref**  *o*|Solo si el tipo no ha cambiado.|
+|**Variante**  *v*|**Objeto**  *o*|Nunca|
+|**Objeto**  *o*|**Variante**  *v*|Nunca|
+|**Variante**   ***\****  *pv*|**Objeto de referencia**  *o*|Siempre|
+|**Objeto de referencia**  *o*|**Variante**   ***\****  *pv*|Siempre|
+|**Variante**  *v* **(VT_BYREF** *&#124;* **VT_\*)**|**Objeto**  *o*|Nunca|
+|**Variante**  *v* **(VT_BYREF** *&#124;* **VT_)**|**Objeto de referencia**  *o*|Solo si el tipo no ha cambiado.|
 
 ## <a name="see-also"></a>Vea también
 

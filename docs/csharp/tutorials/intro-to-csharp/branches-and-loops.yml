@@ -11,12 +11,12 @@ metadata:
   interactive: csharp
   nextTutorialHref: list-collection.yml
   nextTutorialTitle: Colección de listas
-  ms.openlocfilehash: ab709b6b30b5a173e2faf08b577e4d7a3d9a9034
-  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.openlocfilehash: b0a967ea2e5212887d617e76b4ecb445cfbb8b55
+  ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 03/14/2020
-  ms.locfileid: "73969424"
+  ms.lasthandoff: 04/24/2020
+  ms.locfileid: "82135937"
 items:
 - durationInMinutes: 1
   content: >
@@ -173,6 +173,9 @@ items:
     > [!NOTE]
 
     > Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).
+- title: Bucles anidados creados
+  durationInMinutes: 10
+  content: "Un bucle `while`, `do` o `for` se puede anidar dentro de otro bucle para crear una matriz mediante la combinación de cada elemento del bucle externo con cada elemento del bucle interno. Vamos a crear un conjunto de pares alfanuméricos para representar filas y columnas.\n\nUn bucle `for` puede generar las filas:\n\n```csharp\nfor (int row = 1; row < 11; row++)\n{\n  Console.WriteLine($\"The row is {row}\");\n}\n```\n\nOtro bucle puede generar las columnas:\n\n```csharp\nfor (char column = 'a'; column < 'k'; column++)\n{\n  Console.WriteLine($\"The column is {column}\");\n}\n```\n\nPuede anidar un bucle dentro de otro para formar pares:\n  \n```csharp\nfor (int row = 1; row < 11; row++)\n{\n  for (char column = 'a'; column < 'k'; column++)\n  {\n    Console.WriteLine($\"The cell is ({row}, {column})\");\n  }\n}\n```\n\nPuede ver que el bucle externo se incrementa una vez con cada ejecución completa del bucle interno. Invierta el anidamiento de filas y columnas, y vea los cambios por sí mismo.\n"
 - title: Combinación de ramas y bucles
   durationInMinutes: 12
   content: >

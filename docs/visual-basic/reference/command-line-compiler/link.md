@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
 ms.openlocfilehash: c15f55f3a3c2b4e404767ddf96e258bc1e9771d7
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75716749"
 ---
-# <a name="-link-visual-basic"></a>-Link (Visual Basic)
+# <a name="-link-visual-basic"></a>-link (Visual Basic)
 Hace que el compilador facilite al proyecto que se está compilando información de tipos COM en los ensamblados especificados.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,12 +35,12 @@ o
   
 ## <a name="arguments"></a>Argumentos  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
-|`fileList`|Obligatoria. Lista delimitada por comas de nombres de archivos de ensamblado. Si el nombre de archivo contiene un espacio, escríbalo entre comillas.|  
+|`fileList`|Obligatorio. Lista delimitada por comas de nombres de archivos de ensamblado. Si el nombre de archivo contiene un espacio, escríbalo entre comillas.|  
   
-## <a name="remarks"></a>Notas  
- La opción `-link` permite implementar una aplicación que tiene información de tipo incrustada. La aplicación puede usar los tipos de un ensamblado en tiempo de ejecución que implementan la información de tipo incrustada sin necesidad de una referencia al ensamblado en tiempo de ejecución. Si hay varias versiones del ensamblado en tiempo de ejecución publicadas, la aplicación que contiene la información de tipo incrustada puede trabajar con las distintas versiones sin tener que volver a compilar. Para obtener un ejemplo, vea [Tutorial: Incrustar los tipos de los ensamblados administrados](../../../standard/assembly/embed-types-visual-studio.md).  
+## <a name="remarks"></a>Comentarios  
+ La opción `-link` permite implementar una aplicación que tiene información de tipo incrustada. La aplicación puede usar los tipos de un ensamblado en tiempo de ejecución que implementan la información de tipo incrustada sin necesidad de una referencia al ensamblado en tiempo de ejecución. Si hay varias versiones del ensamblado en tiempo de ejecución publicadas, la aplicación que contiene la información de tipo incrustada puede trabajar con las distintas versiones sin tener que volver a compilar. Para obtener un ejemplo, vea [Tutorial: Insertar los tipos de los ensamblados administrados](../../../standard/assembly/embed-types-visual-studio.md).  
   
  La opción `-link` resulta de especial utilidad cuando se trabaja con la interoperabilidad COM. Puede incrustar tipos COM para que la aplicación ya no necesite un ensamblado de interoperabilidad primario (PIA) en el equipo de destino. La opción `-link` indica al compilador que incruste la información de tipo COM del ensamblado de interoperabilidad al que se hace referencia en el código compilado resultante. El tipo COM se identifica mediante el valor de CLSID (GUID). Como resultado, la aplicación se puede ejecutar en un equipo de destino que tenga instalados los mismos tipos COM con los mismos valores de CLSID. Las aplicaciones que automatizan Microsoft Office son un buen ejemplo. Dado que las aplicaciones como Office suelen mantener el mismo valor de CLSID en las distintas versiones, la aplicación puede usar los tipos COM a los que se hace referencia siempre que .NET Framework 4 o posterior esté instalado en el equipo de destino y la aplicación emplee métodos, propiedades o eventos que estén incluidos en los tipos COM a los que se hace referencia.  
   
@@ -57,9 +57,9 @@ o
   
 - Se invoca a un campo, una propiedad, un evento o un método que tiene un tipo de parámetro o un tipo de valor devuelto del ensamblado B.  
   
- Use [-LIBPATH](libpath.md) para especificar el directorio en el que se encuentran una o varias de las referencias de ensamblado.  
+ Use [-libpath](libpath.md) para especificar el directorio en el que se encuentran una o varias de las referencias de ensamblado.  
   
- Al igual que la opción del compilador [-Reference](reference.md) , la opción del compilador `-link` usa el archivo de respuesta VBC. RSP, que hace referencia a los ensamblados .NET Framework utilizados con frecuencia. Use la opción del compilador [-noconfig](noconfig.md) si no desea que el compilador use el archivo Vbc. rsp.  
+ Como sucede con [-reference](reference.md), la opción del compilador `-link` usa el archivo de respuesta Vbc.rsp, que hace referencia a ensamblados de .NET Framework que se usan con frecuencia. Use la opción del compilador [-noconfig](noconfig.md) si no quiere que el compilador utilice el archivo Vbc.rsp.  
   
  La forma abreviada de `-link` es `-l`.  
   
@@ -83,7 +83,7 @@ o
  [!code-vb[VbLinkCompiler#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vblinkcompiler/vb/module1.vb#5)]  
   
 ## <a name="example"></a>Ejemplo  
- La línea de comandos siguiente compila los ensamblados de referencia y `OfficeApp.vb` de archivos de origen de `COMData1.dll` y `COMData2.dll` para generar `OfficeApp.exe`.  
+ En la línea de comandos siguiente se compila el archivo de código fuente `OfficeApp.vb` y se hace referencia a ensamblados de `COMData1.dll` y `COMData2.dll` para generar `OfficeApp.exe`.  
   
 ```console  
 vbc -link:COMData1.dll,COMData2.dll -out:OfficeApp.exe OfficeApp.vb  
@@ -92,8 +92,8 @@ vbc -link:COMData1.dll,COMData2.dll -out:OfficeApp.exe OfficeApp.vb
 ## <a name="see-also"></a>Vea también
 
 - [Compilador de línea de comandos de Visual Basic](index.md)
-- [Tutorial: Incrustación de los tipos de los ensamblados administrados](../../../standard/assembly/embed-types-visual-studio.md)
-- [-Reference (Visual Basic)](reference.md)
+- [Tutorial: Inserción de tipos de ensamblados administrados](../../../standard/assembly/embed-types-visual-studio.md)
+- [-reference (Visual Basic)](reference.md)
 - [-noconfig](noconfig.md)
 - [-libpath](libpath.md)
 - [Líneas de comandos de compilación de ejemplo](sample-compilation-command-lines.md)

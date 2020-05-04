@@ -8,7 +8,7 @@ helpviewer_keywords:
 - collectible assemblies, retrieving
 ms.openlocfilehash: 02c7048e0321282463aa3558287d1d13c5e4f8d2
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79180543"
@@ -57,20 +57,20 @@ Para realizar el seguimiento de la duración, se considera que en el ensamblado 
 
 Las siguientes restricciones se aplican a los ensamblados recopilables:
 
-- **Referencias estáticas** Los tipos de un ensamblado dinámico normal no pueden tener referencias estáticas a tipos definidos en un ensamblado coleccionable. Por ejemplo, si define un tipo normal que hereda de un tipo de un ensamblado recopilable, se produce una excepción <xref:System.NotSupportedException>. Un tipo de un ensamblado recopilable puede tener referencias estáticas a un tipo de otro ensamblado recopilable, pero esto amplía la duración del ensamblado al que se hace referencia a la duración del ensamblado que hace referencia.
+- **Referencias estáticas** Los tipos de un ensamblado dinámico normal no pueden tener referencias estáticas a los tipos definidos en un ensamblado recopilable. Por ejemplo, si define un tipo normal que hereda de un tipo de un ensamblado recopilable, se produce una excepción <xref:System.NotSupportedException>. Un tipo de un ensamblado recopilable puede tener referencias estáticas a un tipo de otro ensamblado recopilable, pero esto amplía la duración del ensamblado al que se hace referencia a la duración del ensamblado que hace referencia.
 
-- **Interoperabilidad COM** No se puede definir ninguna interfaz COM dentro de un ensamblado coleccionable y no se pueden convertir instancias de tipos dentro de un ensamblado coleccionable en objetos COM. Un tipo de un ensamblado recopilable no puede actuar como contenedor CCW ni contenedor RCW. Pero los tipos de los ensamblados recopilables pueden usar objetos que implementen interfaces COM.
+- **Interoperabilidad COM** No se pueden definir interfaces COM dentro de un ensamblado recopilable, ni ninguna instancia de tipos de un ensamblado recopilable se puede convertir en objetos COM. Un tipo de un ensamblado recopilable no puede actuar como contenedor CCW ni contenedor RCW. Pero los tipos de los ensamblados recopilables pueden usar objetos que implementen interfaces COM.
 
-- **Invocación de plataforma** Los métodos <xref:System.Runtime.InteropServices.DllImportAttribute> que tienen el atributo no se compilarán cuando se declaren en un ensamblado coleccionable. La instrucción <xref:System.Reflection.Emit.OpCodes.Calli?displayProperty=nameWithType> no se puede usar en la implementación de un tipo de un ensamblado recopilable, y estos tipos no se pueden serializar en código no administrado. Pero se puede llamar al código nativo mediante el uso de un punto de entrada declarado en un ensamblado no recopilable.
+- **Invocación de plataforma** Los métodos que tienen el atributo <xref:System.Runtime.InteropServices.DllImportAttribute> no se compilan cuando se declaran en un ensamblado recopilable. La instrucción <xref:System.Reflection.Emit.OpCodes.Calli?displayProperty=nameWithType> no se puede usar en la implementación de un tipo de un ensamblado recopilable, y estos tipos no se pueden serializar en código no administrado. Pero se puede llamar al código nativo mediante el uso de un punto de entrada declarado en un ensamblado no recopilable.
 
-- **Marshaling** Los objetos (en particular, los delegados) que se definen en ensamblados coleccionables no se pueden serializar. Se trata de una restricción para todos los tipos transitorios emitidos.
+- **Serialización** No se pueden serializar los objetos (en particular, los delegados) definidos en ensamblados recopilables. Se trata de una restricción para todos los tipos transitorios emitidos.
 
-- **Carga de montaje** La emisión de reflexión es el único mecanismo que se admite para cargar ensamblados coleccionables. Los ensamblados cargados mediante cualquier otra forma de carga de ensamblados no se pueden descargar.
+- **Carga de ensamblados** La emisión de la reflexión es el único mecanismo admitido para cargar ensamblados recopilables. Los ensamblados cargados mediante cualquier otra forma de carga de ensamblados no se pueden descargar.
 
-- **Objetos enlazados al contexto** No se admiten variables estáticas de contexto. Los tipos de un ensamblado recopilable no pueden extender <xref:System.ContextBoundObject>. Pero el código de los ensamblados recopilables puede usar objetos enlazados a un contexto definidos en otro lugar.
+- **Objetos enlazados por contexto** No se admiten las variables estáticas de contexto. Los tipos de un ensamblado recopilable no pueden extender <xref:System.ContextBoundObject>. Pero el código de los ensamblados recopilables puede usar objetos enlazados a un contexto definidos en otro lugar.
 
-- **Datos estáticos de subprocesos** No se admiten variables estáticas de subprocesos.
+- **Datos estáticos de subproceso** No se admiten las variables estáticas de subproceso.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Emitir métodos y ensamblados dinámicos](emitting-dynamic-methods-and-assemblies.md)

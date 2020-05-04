@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 911d4460-dd91-4958-85b2-2ca3299f9ec6
 ms.openlocfilehash: 6a0cc110c2b8bcd97b9f5c16a344db5a63046353
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709808"
@@ -345,7 +345,7 @@ validator.ValidateEndElement(null);
 validator.ValidateEndElement(null);
 ```
 
- En el ejemplo se toma como entrada el siguiente XML:
+ En el ejemplo se toma como entrada el siguiente XML:
 
 ```xml
 <xs:schema xmlns:xs="http://www.w3c.org/2001/XMLSchema">
@@ -359,7 +359,7 @@ validator.ValidateEndElement(null);
 </xs:schema>
 ```
 
-En el ejemplo se toma como entrada el siguiente esquema XSD:
+En el ejemplo se toma como entrada el siguiente esquema XSD:
 
 ```xml
 <book>
@@ -440,9 +440,9 @@ En la siguiente tabla se describe la transición de estado de la clase <xref:Sys
 
 |Estado|Transición|
 |-----------|----------------|
-|Validate|<xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> &#124; TopLevel*) <xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|
+|Validar|<xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> &#124; TopLevel*) <xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|
 |TopLevel|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; Element|
-|Elemento|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>* (\*de contenido<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A>) <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>&#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> contenido\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>&#124;|
+|Elemento|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>* (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> Content\*)? <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> Content\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> &#124;|
 |Contenido|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; Element|
 
 > [!NOTE]
@@ -476,7 +476,7 @@ En la siguiente tabla se describen los resultados de las llamadas a estos métod
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>|Si contentType del elemento del contexto es Mixed, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> devuelve la secuencia de elementos esperada en la siguiente posición.<br /><br /> Si contentType del elemento del contexto es TextOnly o Empty, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> devuelve una matriz vacía.<br /><br /> Si contentType del elemento del contexto es ElementOnly, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> devuelve la secuencia de elementos esperada en la siguiente posición, pero ya se ha producido un error de validación.|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> devuelve la lista de atributos del elemento del contexto no validada.|Como anteriormente.|
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A>|Si el espacio en blanco del contexto es un espacio en blanco de nivel superior, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> devuelve una matriz vacía.<br /><br /> De lo contrario, el comportamiento del método <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> es el mismo que en <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>.|Si el espacio en blanco del contexto es un espacio en blanco de nivel superior, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> devuelve una matriz vacía.<br /><br /> De lo contrario, el comportamiento del método <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> es el mismo que en <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>.|Como anteriormente.|
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> devuelve la secuencia de elementos esperada después del elemento del contexto (posibles elementos relacionados).|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> devuelve la lista de atributos del elemento del contexto no validada.<br /><br /> Si el elemento del contexto no tiene elemento primario, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> devuelve una lista vacía (el elemento del contexto es el elemento primario del elemento actual en el que se ha llamado a <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>).|Como anteriormente.|
-|<xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>|Igual que <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>.|Igual que <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>.|Como anteriormente.|
+|<xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>|Igual a <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>.|Igual a <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>.|Como anteriormente.|
 |<xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|Devuelve una matriz vacía.|Devuelve una matriz vacía.|Como anteriormente.|
 
 > [!NOTE]

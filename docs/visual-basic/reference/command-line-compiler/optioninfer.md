@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
 ms.openlocfilehash: d7209e431b84e52e487bccbf73bd633a346efde0
 ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72775617"
@@ -26,7 +26,7 @@ Permite el uso de la inferencia de tipo de variable local en declaraciones de va
   
 ## <a name="arguments"></a>Argumentos  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
 |`+` &#124; `-`|Opcional. Especifique `-optioninfer+` para habilitar la inferencia de tipo de variable local o `-optioninfer-` para bloquearla. La opción `-optioninfer`, sin ningún valor especificado, es igual a `-optioninfer+`. El valor predeterminado cuando el modificador `-optioninfer` no está presente también es `-optioninfer+`. El valor predeterminado se establece en el archivo de respuesta vbc.rsp.|  
   
@@ -34,13 +34,13 @@ Permite el uso de la inferencia de tipo de variable local en declaraciones de va
 > Puede utilizar la opción `-noconfig` para conservar los valores predeterminados internos del compilador en lugar de los especificados en vbc.rsp. El valor predeterminado del compilador para esta opción es `-optioninfer-`.  
   
 ## <a name="remarks"></a>Comentarios  
- Si el archivo de código fuente contiene una [instrucción Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md), la instrucción reemplaza la `-optioninfer` configuración del compilador de línea de comandos.  
+ Si el archivo de código fuente contiene una [instrucción Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md), la declaración reemplaza la configuración `-optioninfer` del compilador de la línea de comandos.  
   
-### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>Para Set-optioninfer (en el IDE de Visual Studio  
+### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>Para establecer -optioninfer en el IDE de Visual Studio  
   
-1. Seleccione un proyecto en **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**.  
+1. Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**.  
   
-2. En la pestaña **compilar** , modifique el valor del cuadro **Option Infer** .  
+2. En la pestaña **Compilar**, modifique el valor del cuadro **Option infer**.  
   
 ## <a name="example"></a>Ejemplo  
  El siguiente código compila `test.vb` con la inferencia de tipo de variable local habilitada.  
@@ -58,7 +58,7 @@ vbc -optioninfer+ test.vb
 - [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [Option Infer (instrucción)](../../../visual-basic/language-reference/statements/option-infer-statement.md)
 - [Inferencia de tipo de variable local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [Valores predeterminados de Visual Basic, Proyectos, Cuadro de diálogo Opciones](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
+- [Valores predeterminados de Visual Basic, Proyectos, Opciones (Cuadro de diálogo)](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
 - [Página Compilación, Diseñador de proyectos (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
 - [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
 - [Compilación desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)

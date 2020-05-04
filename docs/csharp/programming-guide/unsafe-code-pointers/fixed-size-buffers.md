@@ -1,16 +1,16 @@
 ---
 title: 'Búferes de tamaño fijo: Guía de programación de C#'
-ms.date: 04/20/2018
+ms.date: 04/23/2020
 helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 6770497b23212f1786b4f4a620ed2b650079c44b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5920dd125ded34969d60feb299568b56402056ab
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79157031"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82140551"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Búferes de tamaño fijo (Guía de programación de C#)
 
@@ -38,15 +38,39 @@ En el ejemplo anterior se muestra cómo acceder a campos `fixed` sin anclar, lo 
 
 Otra matriz de tamaño fijo común es la matriz [bool](../../language-reference/builtin-types/bool.md). Los elementos de una matriz `bool` siempre tienen un byte de tamaño. Las matrices `bool` no son adecuadas para crear matrices de bits o búferes.
 
-> [!NOTE]
-> Con excepción de la memoria creada con [stackalloc](../../language-reference/operators/stackalloc.md), el compilador de C# y Common Language Runtime (CLR) no realizan ninguna comprobación de saturación del búfer de seguridad. Como sucede con todo código no seguro, se ha de tener precaución.
+Los búferes de tamaño fijo se compilan con el atributo <xref:System.Runtime.CompilerServices.UnsafeValueTypeAttribute?displayProperty=nameWithType>, que indica a Common Language Runtime (CLR) que un tipo contiene una matriz no administrada que puede provocar un desbordamiento. Esto es similar a la memoria creada mediante [stackalloc](../../language-reference/operators/stackalloc.md), que habilita automáticamente las características de detección de saturación del búfer en CLR. En el ejemplo anterior se muestra cómo podría existir un búfer de tamaño fijo en un `unsafe struct`.
 
-Los búferes no seguros son diferentes de las matrices normales en los siguientes puntos:
+```csharp
+internal unsafe struct Buffer
+{
+    public fixed char fixedBuffer[128];
+}
+```
 
-- Solo se pueden usar búferes no seguros en un contexto no seguro.
-- Los búferes no seguros siempre son vectores o matrices unidimensionales.
-- La declaración de la matriz debe incluir un recuento, por ejemplo, `char id[8]`. No se puede usar `char id[]`.
-- Los búferes no seguros solo pueden ser campos de instancias de structs en un contexto no seguro.
+El código de C# generado por el compilador para `Buffer` se atribuye de la siguiente forma:
+
+```csharp
+internal struct Buffer
+{
+    [StructLayout(LayoutKind.Sequential, Size = 256)]
+    [CompilerGenerated]
+    [UnsafeValueType]
+    public struct <fixedBuffer>e__FixedBuffer
+    {
+        public char FixedElementField;
+    }
+
+    [FixedBuffer(typeof(char), 128)]
+    public <fixedBuffer>e__FixedBuffer fixedBuffer;
+}
+```
+
+Los búferes de tamaño fijo son diferentes de las matrices normales en los siguientes puntos:
+
+- Solo se pueden usar en un contexto [no seguro](../../language-reference/keywords/unsafe.md).
+- Solo pueden ser campos de instancia de structs.
+- Siempre son vectores o matrices unidimensionales.
+- La declaración debe incluir la longitud, como `fixed char id[8]`. No se puede usar `fixed char id[]`.
 
 ## <a name="see-also"></a>Vea también
 

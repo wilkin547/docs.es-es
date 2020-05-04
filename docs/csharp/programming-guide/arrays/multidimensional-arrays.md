@@ -5,12 +5,12 @@ helpviewer_keywords:
 - arrays [C#], multidimensional
 - multidimensional arrays [C#]
 ms.assetid: 020ce02e-7dff-4273-8e53-bf0b33747232
-ms.openlocfilehash: eb49f4386b6106328f1613b5ec70794ac26fc9b7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ee5fae36ff844fadad7e1b6a766020319b67a83c
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75715045"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021750"
 ---
 # <a name="multidimensional-arrays-c-programming-guide"></a>Matrices multidimensionales (Guía de programación de C#)
 
@@ -28,7 +28,7 @@ Las matrices pueden tener varias dimensiones. Por ejemplo, la siguiente declarac
   
  [!code-csharp[csProgGuideArrays#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#13)]  
   
- También se puede inicializar la matriz sin especificar el intervalo.  
+ También se puede inicializar la matriz sin especificar el rango.  
   
  [!code-csharp[csProgGuideArrays#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#14)]  
   

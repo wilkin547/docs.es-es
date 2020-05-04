@@ -4,7 +4,7 @@ ms.date: 08/07/2017
 ms.assetid: e1ff4740-20a1-4c76-a8ad-d857db307054
 ms.openlocfilehash: 1a7fa7c3e5561fc9e48cf627a703abc747a72ba0
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78159837"
@@ -17,7 +17,7 @@ ms.locfileid: "78159837"
 ## <a name="persistent-storage"></a>Almacenamiento persistente
 Es a menudo necesario almacenar el valor de los campos de un objeto en el disco y a continuación, más tarde, recuperar estos datos. Aunque esto es fácil de lograr sin confiar en la serialización, este enfoque es a menudo embarazoso y propenso a errores y se vuelve progresivamente más complejo al necesitar realizar el seguimiento de una jerarquía de objetos. Imagine escribir una aplicación empresarial grande, que contiene miles de objetos, y tener que escribir el código para guardar y restaurar los campos y propiedades a y desde el disco para cada objeto. La serialización proporciona un mecanismo conveniente para lograr este objetivo.
 
-Common Language Runtime administra cómo se almacenan los objetos en memoria y proporciona un mecanismo de serialización automatizado mediante [reflexión](../../../docs/framework/reflection-and-codedom/reflection.md). Cuando se serializa un objeto, el nombre de la clase, el ensamblado y todos los miembros de datos de la instancia de clase se escribe en el almacenamiento. Los objetos almacenan a menudo referencias a otras instancias en variables miembro. Cuando se serializa la clase, las pistas de motor de serialización hacen referencia a los objetos, ya serializados, para asegurarse de que no se serializa el mismo objeto más de una vez. La arquitectura de serialización proporcionada con el .NET Framework controla correctamente los gráficos de objetos y las referencias circulares automáticamente. El único requisito de los gráficos de objetos es que todos los objetos, a los que hace referencia el objeto serializado, también se deben marcar como `Serializable` (para más información, vea [Serialización básica](basic-serialization.md)). Si no se hace esto, se producirá una excepción cuando el serializador intente serializar el objeto sin marca.
+Common Language Runtime administra cómo se almacenan los objetos en memoria y proporciona un mecanismo de serialización automatizado mediante [reflexión](../../../docs/framework/reflection-and-codedom/reflection.md). Cuando se serializa un objeto, el nombre de la clase, el ensamblado y todos los miembros de datos de la instancia de clase se escribe en el almacenamiento. Los objetos almacenan a menudo referencias a otras instancias en variables miembro. Cuando se serializa la clase, las pistas de motor de serialización hacen referencia a los objetos, ya serializados, para asegurarse de que no se serializa el mismo objeto más de una vez. La arquitectura de serialización proporcionada correctamente con .NET Framework controla de forma automática gráficos de objetos y referencias circulares. El único requisito de los gráficos de objetos es que todos los objetos, a los que hace referencia el objeto serializado, también se deben marcar como `Serializable` (para más información, vea [Serialización básica](basic-serialization.md)). Si no se hace esto, se producirá una excepción cuando el serializador intente serializar el objeto sin marca.
 
 Cuando se deserializa la clase serializada, se vuelve a crear la clase y se restauran automáticamente los valores de todos los miembros de datos.
 
@@ -30,7 +30,7 @@ Cuando un objeto deriva de `MarshalByRefObject`, se pasa una referencia al objet
  [Serialización binaria](../../../docs/standard/serialization/binary-serialization.md)  
  Describe el mecanismo de la serialización binaria que está incluido con Common Language Runtime.  
   
- \ [.NET Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
+ [Comunicación remota de .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
  Describe los diversos métodos de comunicaciones disponibles en .NET Framework para las comunicaciones remotas.  
   
  [Serialización SOAP y XML](../../../docs/standard/serialization/xml-and-soap-serialization.md)  

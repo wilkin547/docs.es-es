@@ -1,18 +1,18 @@
 ---
 title: ref (palabra clave) - Referencia de C#
-ms.date: 03/19/2020
+ms.date: 04/21/2020
 f1_keywords:
 - ref_CSharpKeyword
 - ref
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: d54d932ca96f1966ecc05a532a2468b7e16fac46
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: 07e1b49605c83908f7b9af25e0cb2599a97257c5
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805850"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102078"
 ---
 # <a name="ref-c-reference"></a>ref (Referencia de C#)
 
@@ -21,7 +21,7 @@ La palabra clave `ref` indica un valor que se ha pasado mediante referencia. Se 
 - En una firma del método y en una llamada al método, para pasar un argumento a un método mediante referencia. Para más información, vea [Pasar un argumento mediante referencia](#passing-an-argument-by-reference).
 - En una firma del método, para devolver un valor al autor de la llamada mediante referencia. Para obtener más información, consulte [Valores devueltos de referencia](#reference-return-values).
 - En un cuerpo de miembro, para indicar que un valor devuelto de referencia se almacena localmente como una referencia que el autor de la llamada pretende modificar o, en general, que una variable local accede a otro valor por referencia. Para más información, vea [Variables locales de tipo ref](#ref-locals).
-- En una declaración `struct` para declarar `ref struct` o `readonly ref struct`. Para más información, vea [Tipo de estructura de referencia](#ref-struct-types).
+- En una declaración `struct` para declarar `ref struct` o `readonly ref struct`. Para obtener más información, vea la sección [ struct `ref`](../builtin-types/struct.md#ref-struct) del artículo [tipos de estructura](../builtin-types/struct.md).
 
 ## <a name="passing-an-argument-by-reference"></a>Pasar un argumento mediante referencia
 
@@ -77,7 +77,7 @@ Para obtener más información sobre cómo pasar tipos de referencia por valor y
   
 ## <a name="reference-return-values"></a>Valores devueltos de referencia
 
-Los valores devueltos de referencia (o valores devueltos de tipo ref) son valores que devuelve un método mediante referencia al autor de la llamada. Es decir, el autor de la llamada puede modificar el valor devuelto por un método, y ese cambio se refleja en el estado del objeto que contiene el método.
+Los valores devueltos de referencia (o valores devueltos de tipo ref) son valores que devuelve un método mediante referencia al autor de la llamada. Es decir, el autor de la llamada puede modificar el valor devuelto por un método, y ese cambio se refleja en el estado del objeto del método de llamada.
 
 Un valor devuelto de referencia se define mediante la palabra clave `ref`:
 
@@ -94,6 +94,10 @@ return ref DecimalArray[0];
 ```
 
 Para que el autor de la llamada modifique el estado del objeto, el valor devuelto de referencia debe almacenarse en una variable que se defina explícitamente como una [variable local de tipo ref](#ref-locals).
+
+Este es un ejemplo de valor devuelto de referencia más completo que muestra la firma y el cuerpo del método.
+
+[!code-csharp[FindReturningRef](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#FindReturningRef "Find returning by reference")]
 
 El método llamado también puede declarar el valor devuelto como `ref readonly` para devolver el valor por referencia y exigir que el código de llamada no pueda modificar el valor devuelto. El método de llamada puede evitar copiar el valor devuelto mediante el almacenamiento del valor en una variable de tipo [ref readonly](#ref-readonly-locals).
 
@@ -136,23 +140,6 @@ En el ejemplo siguiente se define una clase `Book` que tiene dos campos <xref:Sy
 Cuando el autor de la llamada almacena el valor devuelto mediante el método `GetBookByTitle` como una variable local de tipo ref, los cambios que el autor de la llamada realiza en el valor devuelto se reflejan en el objeto `BookCollection`, como se muestra en el ejemplo siguiente.
 
 [!code-csharp[csrefKeywordsMethodParams#6](~/samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#5)]
-
-## <a name="ref-struct-types"></a>Tipos de estructura de referencia
-
-La incorporación del modificador `ref` a una declaración `struct` define que las instancias de ese tipo se deben asignar a la pila. En otras palabras, las instancias de estos tipos no se pueden crear nunca en el montón como un miembro de otra clase. La principal motivación para esta característica era <xref:System.Span%601> y las estructuras relacionadas.
-
-El objetivo de mantener un tipo `ref struct` como una variable asignada a la pila presenta varias reglas que el compilador exige para todos los tipos `ref struct`.
-
-- No puede encerrar un valor de `ref struct`. No puede asignar un tipo `ref struct` a una variable de tipo `object`, `dynamic` o cualquier tipo de interfaz.
-- Los tipos `ref struct` no pueden implementar interfaces.
-- No se puede declarar `ref struct` como miembro de campo de una clase o una estructura normal. Esto incluye la declaración de una propiedad implementada automáticamente, lo que crea un campo de respaldo generado por el compilador.
-- No puede declarar variables locales que sean tipos `ref struct` en métodos asincrónicos. Puede declararlas en los métodos sincrónicos que devuelven tipos similares a <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> o `Task`.
-- No puede declarar las variables locales de `ref struct` en iteradores.
-- No puede capturar variables `ref struct` en expresiones lambda o funciones locales.
-
-Estas restricciones aseguran que no se usará por error un valor `ref struct` de manera que pueda promoverlo al montón administrado.
-
-Puede combinar modificadores para declarar una estructura como `readonly ref`. `readonly ref struct` combina las ventajas y las restricciones de las declaraciones `ref struct` y `readonly struct`.
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 

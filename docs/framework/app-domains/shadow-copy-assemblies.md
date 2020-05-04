@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 ms.openlocfilehash: 9fc8a4aeeeca40f71ed9114a9db40b9a56e5fe6b
 ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74204572"
@@ -18,7 +18,7 @@ ms.locfileid: "74204572"
 Las instantáneas permiten que los ensamblados que se usan en un dominio de aplicación se actualicen sin descargar el dominio de aplicación. Esto es especialmente útil para las aplicaciones que tienen que estar disponibles continuamente, como los sitios de ASP.NET.
 
 > [!IMPORTANT]
-> No se admite la copia sombra en aplicaciones de la tienda Windows 8. x.
+> En las aplicaciones de la Tienda Windows 8.x no se admite la generación de instantáneas.
 
 Common Language Runtime bloquea el archivo de ensamblado al cargar el ensamblado, por lo que no se puede actualizar el archivo hasta que se descarga el ensamblado. La única manera de descargar un ensamblado de un dominio de aplicación es descargar el dominio de aplicación, por lo que en circunstancias normales, no se puede actualizar un ensamblado en el disco hasta que todos los dominios de aplicación que lo están usando se descargan.
 

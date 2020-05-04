@@ -5,7 +5,7 @@ ms.date: 08/22/2018
 ms.custom: azure-sdk-dotnet
 ms.openlocfilehash: f6af813cd1423be8784b769b272756b2c8258392
 ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/17/2020
 ms.locfileid: "81607874"
@@ -45,7 +45,7 @@ var account = CloudStorageAccount.Parse(storageConnectionString);
 // Do things with the account here...
 ```
 
-Las cadenas de conexión de servicio se usan en otros servicios de Azure como [CosmosDB](https://docs.microsoft.com/azure/cosmos-db/), [Azure Cache para Redis](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache)y [Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues). Puede obtener esas cadenas mediante Azure Portal, la CLI o PowerShell. También puede usar las bibliotecas de administración de Azure para .NET para consultar recursos para generar cadenas de conexión en el código.
+Las cadenas de conexión de servicio se usan en otros servicios de Azure como [CosmosDB](https://docs.microsoft.com/azure/cosmos-db/), [Azure Cache for Redis](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache) y [Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues). Puede obtener esas cadenas mediante Azure Portal, la CLI o PowerShell. También puede usar las bibliotecas de administración de Azure para .NET para consultar recursos para generar cadenas de conexión en el código.
 
 Este fragmento de código usa las bibliotecas de administración para crear una cadena de conexión de la cuenta de almacenamiento:
 
@@ -76,7 +76,7 @@ Otras bibliotecas requieren que la aplicación se ejecute con una [entidad de se
 
 Ahora que ya está creada la entidad de servicio, hay dos opciones disponibles para autenticarse en la entidad de servicio para crear y administrar los recursos.
 
-Para ambas opciones, deberá agregar los siguientes paquetes NuGet al proyecto.
+Para las dos opciones, tendrá que agregar los siguientes paquetes NuGet al proyecto.
 
 ```powershell
 Install-Package Microsoft.Azure.Management.Fluent

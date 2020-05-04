@@ -7,56 +7,56 @@ helpviewer_keywords:
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
 ms.openlocfilehash: aa47304cf2bded93bdb95ffe7dfa35bb37d9a643
 ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/12/2019
 ms.locfileid: "73976459"
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Información general sobre el modelo de aplicaciones de Visual Basic
 
-Visual Basic proporciona un modelo bien definido para controlar el comportamiento de las aplicaciones de Windows Forms: el modelo de aplicación de Visual Basic. Este modelo incluye eventos para controlar el inicio y el apagado de la aplicación, así como eventos para detectar excepciones no controladas. También proporciona compatibilidad para desarrollar aplicaciones de instancia única. El modelo de aplicación es extensible, por lo que los desarrolladores que necesitan más control pueden personalizar sus métodos reemplazables.  
+Visual Basic proporciona un modelo bien definido para controlar el comportamiento de las aplicaciones de Windows Forms: el modelo de aplicación de Visual Basic. Este modelo incluye eventos para controlar el inicio y el cierre de la aplicación, así como eventos para detectar excepciones no controladas. También proporciona compatibilidad para desarrollar aplicaciones de instancia única. El modelo de aplicación es ampliable, por lo que los desarrolladores que necesiten un mayor control pueden personalizar sus métodos reemplazables.  
   
 ## <a name="uses-for-the-application-model"></a>Usos del modelo de aplicación  
 
- Una aplicación típica necesita realizar tareas al iniciarse y cerrarse. Por ejemplo, cuando se inicia, la aplicación puede mostrar una pantalla de presentación, establecer conexiones con bases de datos, cargar un estado guardado, etc. Cuando se cierra la aplicación, puede cerrar las conexiones de base de datos, guardar el estado actual, etc. Además, la aplicación puede ejecutar código específico cuando la aplicación se cierra de forma inesperada, como durante una excepción no controlada.  
+ Una aplicación al uso necesita realizar tareas al iniciarse y al cerrarse. Por ejemplo, cuando se inicia, la aplicación puede mostrar una pantalla de presentación, establecer conexiones con bases de datos, cargar un estado guardado, etc. Y, cuando se cierra, puede finalizar esas conexiones de base de datos, guardar el estado actual, etc. Además, la aplicación puede ejecutar código específico si se cierra de forma inesperada, como durante una excepción no controlada.  
   
- El modelo de aplicación de Visual Basic facilita la creación de una aplicación *de instancia única* . Una aplicación de instancia única difiere de una aplicación normal en que solo se puede ejecutar una instancia de la aplicación a la vez. Un intento de iniciar otra instancia de una aplicación de una sola instancia da como resultado la notificación de la instancia original (por medio del evento `StartupNextInstance`) que se realizó otro intento de inicio. La notificación incluye los argumentos de línea de comandos de la instancia subsiguiente. A continuación, se cierra la instancia subsiguiente de la aplicación antes de que se pueda realizar cualquier inicialización.  
+ El modelo de aplicación de Visual Basic permite crear una aplicación *de instancia única* fácilmente. Una aplicación de instancia única se distingue de una aplicación normal en que solo se puede ejecutar una instancia de la aplicación a la vez. Cualquier intento de iniciar otra instancia de una aplicación de instancia única dará como resultado el envío de una notificación a la instancia original (por medio del evento `StartupNextInstance`) para indicar que ha habido otro intento de inicio. Esta notificación incluye los argumentos de línea de comandos de la esa instancia posterior. Tras ello, la instancia posterior de la aplicación se cierra antes de que se pueda inicializarse.  
   
- Se inicia una aplicación de instancia única y comprueba si se trata de la primera instancia o de una instancia posterior de la aplicación:  
+ Una aplicación de instancia única se inicia y comprueba si se trata de la primera instancia o de una instancia posterior de la aplicación:  
   
 - Si es la primera instancia, se inicia como de costumbre.  
   
-- Cada intento posterior de iniciar la aplicación, mientras se ejecuta la primera instancia, da como resultado un comportamiento muy diferente. El siguiente intento notifica a la primera instancia sobre los argumentos de la línea de comandos y, a continuación, sale inmediatamente. La primera instancia controla el evento `StartupNextInstance` para determinar qué son los argumentos de línea de comandos de la instancia subsiguiente y continúa ejecutándose.  
+- Mientras esta primera instancia se está ejecutando, cualquier intento posterior de iniciar la aplicación da como resultado un comportamiento muy diferente. El siguiente intento notifica a la primera instancia sobre los argumentos de la línea de comandos y, seguidamente, finaliza. La primera instancia controla el evento `StartupNextInstance` para determinar cuáles eran los argumentos de la línea de comandos de la instancia posterior, y sigue ejecutándose.  
   
-     En este diagrama se muestra cómo una instancia subsiguiente señala la primera instancia:  
+     En este diagrama se muestra cómo una instancia posterior señala a la primera instancia:  
   
-     ![Diagrama que muestra una imagen de aplicación de una sola instancia.](./media/overview-of-the-visual-basic-application-model/single-instance-application.gif)  
+     ![Diagrama que muestra una imagen de una aplicación de instancia única.](./media/overview-of-the-visual-basic-application-model/single-instance-application.gif)  
   
- Al controlar el evento `StartupNextInstance`, puede controlar el comportamiento de la aplicación de instancia única. Por ejemplo, Microsoft Outlook normalmente se ejecuta como una aplicación de instancia única. Cuando Outlook se está ejecutando e intenta volver a iniciar Outlook, el enfoque se desplaza a la instancia original, pero no se abre otra instancia.  
+ Al controlar el evento `StartupNextInstance`, se puede controlar el comportamiento de la aplicación de instancia única. Por ejemplo, Microsoft Outlook suele ejecutarse como una aplicación de instancia única. Si Outlook se está ejecutando y se intenta volver a iniciar, el foco se desplaza a la instancia original, pero no se abre otra instancia.  
   
 ## <a name="events-in-the-application-model"></a>Eventos en el modelo de aplicación  
 
- Los siguientes eventos se encuentran en el modelo de aplicación:  
+ En el modelo de aplicación podemos encontrar los siguientes eventos:  
   
-- **Inicio**de la aplicación. La aplicación genera el evento <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> cuando se inicia. Al controlar este evento, puede agregar código que inicialice la aplicación antes de que se cargue el formulario principal. El evento `Startup` también proporciona para cancelar la ejecución de la aplicación durante esa fase del proceso de inicio, si se desea.  
+- **Inicio de la aplicación**. La aplicación genera el evento <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> cuando se inicia. Al controlar este evento, se puede agregar código que inicialice la aplicación antes de que el formulario principal se cargue. El evento `Startup` también permite cancelar la ejecución de la aplicación durante esa fase del proceso de inicio, si se quiere.  
   
-     Puede configurar la aplicación para mostrar una pantalla de presentación mientras se ejecuta el código de inicio de la aplicación. De forma predeterminada, el modelo de aplicación suprime la pantalla de presentación cuando se usa el argumento de línea de comandos `/nosplash` o `-nosplash`.  
+     La aplicación se puede configurar para mostrar una pantalla de presentación mientras se ejecuta el código de inicio de la aplicación. El modelo de aplicación suprime de forma predeterminada la pantalla de presentación si se usa el argumento de línea de comandos `/nosplash` o `-nosplash`.  
   
-- **Aplicaciones de una sola instancia**. El evento <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> se genera cuando se inicia una instancia subsiguiente de una aplicación de instancia única. El evento pasa los argumentos de línea de comandos de la instancia subsiguiente.  
+- **Aplicaciones de instancia única**. El evento <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> se genera cuando se inicia una instancia posterior de una aplicación de instancia única. El evento pasa los argumentos de la línea de comandos de esa instancia posterior.  
   
-- **Excepciones no controladas**. Si la aplicación encuentra una excepción no controlada, genera el evento <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>. El controlador para ese evento puede examinar la excepción y determinar si se va a continuar la ejecución.  
+- **Excepciones no controladas**. Si la aplicación detecta una excepción no controlada, genera el evento <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>. El controlador de ese evento puede examinar la excepción y determinar si la ejecución puede proseguir.  
   
      El evento `UnhandledException` no se genera en algunas circunstancias. Para obtener más información, vea <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>.  
   
-- **Cambios de conectividad de red**. Si cambia la disponibilidad de la red del equipo, la aplicación genera el evento <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>.  
+- **Cambios de conectividad de red**. Si la disponibilidad de la red del equipo cambia, la aplicación genera el evento <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>.  
   
      El evento `NetworkAvailabilityChanged` no se genera en algunas circunstancias. Para obtener más información, vea <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>.  
   
-- **Cierre**de la aplicación. La aplicación proporciona el evento <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> para indicar cuándo está a punto de cerrarse. En ese controlador de eventos, puede asegurarse de que se completan las operaciones que debe realizar la aplicación (cerrando y guardando, por ejemplo). Puede configurar la aplicación para que se cierre cuando se cierre el formulario principal, o para que se cierre solo cuando se cierren todos los formularios.  
+- **Cierre de la aplicación**. La aplicación proporciona el evento <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> para indicar cuándo se va a cerrar. Este controlador de eventos permite garantizar que se realicen todas las operaciones que la aplicación debe llevar a cabo (guardar y cerrar, por ejemplo). La aplicación se puede configurar para cerrarse cuando lo haga el formulario principal, o solamente cuando se cierren todos los formularios.  
   
 ## <a name="availability"></a>Disponibilidad  
 
- De forma predeterminada, el modelo de aplicación Visual Basic está disponible para los proyectos de Windows Forms. Si configura la aplicación para que use un objeto de inicio diferente, o inicia el código de aplicación con un `Sub Main`personalizado, ese objeto o clase puede necesitar proporcionar una implementación de la clase <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> para utilizar el modelo de aplicación. Para obtener información sobre cómo cambiar el objeto de inicio, vea [Página de aplicación, diseñador de proyectos (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
+ El modelo de aplicación Visual Basic está disponible de forma predeterminada para los proyectos de Windows Forms. Si la aplicación se configura para que use un objeto de inicio distinto o inicie el código de aplicación con un objeto `Sub Main` personalizado, puede que ese objeto o clase deba proporcionar una implementación de la clase <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> para usar el modelo de aplicación. Para más información sobre cómo cambiar el objeto de inicio, vea [Página de aplicación, Diseñador de proyectos (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
 ## <a name="see-also"></a>Vea también
 

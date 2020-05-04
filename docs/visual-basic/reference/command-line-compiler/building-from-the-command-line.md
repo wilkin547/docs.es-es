@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
 ms.openlocfilehash: c7219c0497bb87f0cc44f27229eaf25f9b3eebce
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344790"
@@ -24,19 +24,19 @@ ms.locfileid: "74344790"
 
 Un proyecto de Visual Basic se compone de uno o varios archivos de código fuente independientes. Durante el proceso conocido como compilación, estos archivos se reúnen en un paquete, un único archivo ejecutable que se puede ejecutar como una aplicación.
 
-Visual Basic proporciona un compilador de línea de comandos como alternativa a la compilación de programas desde el entorno de desarrollo integrado (IDE) de Visual Studio. El compilador de línea de comandos está diseñado para situaciones en las que no necesita el conjunto completo de características en el IDE, por ejemplo, cuando usa o escribe en equipos con memoria de sistema o espacio de almacenamiento limitados.
+Visual Basic proporciona un compilador de línea de comandos como alternativa a la compilación de programas desde el entorno de desarrollo integrado (IDE) de Visual Studio. El compilador de línea de comandos está diseñado para situaciones en las que no se necesita el conjunto completo de características en el IDE; por ejemplo, cuando se usan equipos con memoria de sistema o espacio de almacenamiento limitados, o se escribe para estos equipos.
 
-Para compilar archivos de código fuente desde el IDE de Visual Studio, elija el comando **compilar** en el menú **compilar** .
+Para compilar los archivos de código fuente desde el IDE de Visual Studio, elija el comando **Compilar** en el menú **Compilar**.
 
 > [!TIP]
-> Al compilar archivos de proyecto mediante el IDE de Visual Studio, puede mostrar información sobre el comando de **VBC** asociado y sus modificadores en la ventana de salida. Para mostrar esta información, abra el [cuadro de diálogo Opciones, proyectos y soluciones, compilar y ejecutar](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)y, a continuación, establezca el nivel de detalle de la salida de la **compilación del proyecto de MSBuild** en **normal** o en un nivel más alto de detalle. Para obtener más información, consulte [Cómo: Ver, guardar y configurar archivos de registro de compilación](/visualstudio/ide/how-to-view-save-and-configure-build-log-files).
+> Al compilar archivos de proyecto mediante el IDE de Visual Studio, puede mostrar información acerca del comando **vbc** asociado y sus modificadores en la ventana de resultados. Para mostrar esta información, abra el [cuadro de diálogo Opciones, Proyectos y soluciones, Compilar y ejecutar](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run) y, posteriormente, establezca el **nivel de detalle del resultado de la compilación del proyecto de MSBuild** en **Normal** o en un nivel más alto de detalle. Para obtener más información, vea [Cómo: Ver, guardar y configurar archivos de registro de compilación](/visualstudio/ide/how-to-view-save-and-configure-build-log-files).
 
-Puede compilar archivos de proyecto (. vbproj) en un símbolo del sistema mediante MSBuild. Para obtener más información, vea [referencia de la línea de comandos](/visualstudio/msbuild/msbuild-command-line-reference) y [Tutorial: usar MSBuild](/visualstudio/msbuild/walkthrough-using-msbuild).
+Puede compilar archivos de proyecto (.vbproj) en un símbolo del sistema mediante MSBuild. Para más información, consulte [Referencia de la línea de comandos](/visualstudio/msbuild/msbuild-command-line-reference) y [Tutorial: Usar MSBuild](/visualstudio/msbuild/walkthrough-using-msbuild).
 
-## <a name="in-this-section"></a>Esta sección
+## <a name="in-this-section"></a>En esta sección
 
-[Cómo: invocar el compilador de línea de comandos](../../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) \
-Describe cómo invocar el compilador de línea de comandos en el símbolo del sistema de MS-DOS o en un subdirectorio específico.
+[Cómo: Invocación del compilador de la línea de comandos](../../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) \
+Describe cómo invocar el compilador de línea de comandos en el símbolo del sistema MS-DOS o en un subdirectorio específico.
 
 [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md) \
 Proporciona una lista de líneas de comandos de ejemplo que puede modificar para su propio uso.
@@ -44,9 +44,9 @@ Proporciona una lista de líneas de comandos de ejemplo que puede modificar para
 ## <a name="related-sections"></a>Secciones relacionadas
 
 [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md) \
-Proporciona listas de opciones del compilador organizadas en orden alfabético o por propósito.
+Proporciona listas de opciones del compilador organizadas en orden alfabético o por finalidad.
 
- \ de [compilación condicional](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+[Compilación condicional](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md) \
 Describe cómo compilar secciones de código determinadas.
 
 [Compilar y limpiar proyectos y soluciones en Visual Studio](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio) \

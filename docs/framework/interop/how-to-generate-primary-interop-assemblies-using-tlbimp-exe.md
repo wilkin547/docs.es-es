@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Generar ensamblados de interoperabilidad primarios mediante Tlbimp.exe'
+title: Procedimiento para generar ensamblados de interoperabilidad primarios mediante Tlbimp.exe
 ms.date: 03/30/2017
 helpviewer_keywords:
 - primary interop assemblies, generating
@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 ms.openlocfilehash: e46295b89b042452cb6e303302a8b88d68d58426
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73123910"
 ---
-# <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Cómo: Generar ensamblados de interoperabilidad primarios mediante Tlbimp.exe
+# <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Procedimiento para generar ensamblados de interoperabilidad primarios mediante Tlbimp.exe
 
 Hay dos maneras de generar un ensamblado de interoperabilidad primario:
 
@@ -37,7 +37,7 @@ Es necesario disponer de un par de claves criptográficas para firmar un ensambl
 
 1. En el símbolo del sistema, escriba:
 
-    **tlbimp** *archivo_tlb*  **/primary /keyfile:** *nombre_de_archivo* **/out:** *nombre_de_ensamblado*
+    **tlbimp** *tlbfile*  **/primary /keyfile:** *filename* **/out:** *assemblyname*
 
     En este comando, *archivo_tlb* es el archivo que contiene la biblioteca de tipos COM, *nombre_de_archivo* es el nombre del contenedor o archivo que contiene el par de claves y *nombre_de_ensamblado* es el nombre del ensamblado que se va a firmar con un nombre seguro.
 

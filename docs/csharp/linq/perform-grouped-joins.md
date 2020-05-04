@@ -1,14 +1,14 @@
 ---
 title: Realizar combinaciones agrupadas (LINQ en C#)
 description: Obtenga información sobre cómo realizar combinaciones agrupadas con LINQ en C#.
-ms.date: 12/01/2016
+ms.date: 04/22/2020
 ms.assetid: 9667daf9-a5fd-4b43-a5c4-a9c2b744000e
-ms.openlocfilehash: dfb75b55336d8ca486d5f10b187e955d20cd06fd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 740a861da7dfb9653a874d5baf67eeb2030555b4
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "61689143"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135755"
 ---
 # <a name="perform-grouped-joins"></a>Realizar combinaciones agrupadas
 
@@ -18,6 +18,9 @@ Por ejemplo, una clase o una tabla de base de datos relacional denominada `Stude
 
 > [!NOTE]
 > Cada elemento de la primera colección aparece en el conjunto de resultados de una combinación agrupada, independientemente de si se encuentran elementos correlacionados en la segunda colección. En el caso de que no se encuentren elementos correlacionados, la secuencia de elementos correlacionados para ese elemento estaría vacía. Por consiguiente, el selector de resultados tiene acceso a cada uno de los elementos de la primera colección. Esto difiere del selector de resultados en una combinación no agrupada, que no puede acceder a los elementos de la primera colección que no tienen ninguna coincidencia en la segunda colección.
+
+> [!WARNING]
+> <xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType> no tiene ningún equivalente directo en términos de base de datos relacional tradicional. Sin embargo, este método implementa un superconjunto de combinaciones internas y combinaciones externas izquierdas. Ambas operaciones se pueden escribir en términos de una combinación agrupada. Para obtener más información, consulte [Operaciones de combinación](../programming-guide/concepts/linq/join-operations.md) y [Entity Framework Core, GroupJoin](https://docs.microsoft.com/ef/core/querying/complex-query-operators#groupjoin).
 
 En el primer ejemplo de este artículo se muestra cómo realizar una combinación agrupada. En el segundo ejemplo se muestra cómo usar una combinación agrupada para crear elementos XML.
 
@@ -39,4 +42,4 @@ Las combinaciones agrupadas resultan ideales para crear XML con LINQ to XML. El 
 - <xref:System.Linq.Enumerable.GroupJoin%2A>
 - [Realizar combinaciones internas](perform-inner-joins.md)
 - [Realizar operaciones de combinación externa izquierda](perform-left-outer-joins.md)
-- [Tipos anónimos](../programming-guide/classes-and-structs/anonymous-types.md)
+- [Tipos anónimos (Guía de programación de C#)](../programming-guide/classes-and-structs/anonymous-types.md).

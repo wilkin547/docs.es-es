@@ -1,18 +1,18 @@
 ---
 title: 'Expresión nameof: referencia de C#'
-ms.date: 07/12/2019
+ms.date: 04/23/2020
 f1_keywords:
 - nameof_CSharpKeyword
 - nameof
 helpviewer_keywords:
 - nameof expression [C#]
 ms.assetid: 33601bf3-cc2c-4496-846d-f9679bccf2a7
-ms.openlocfilehash: 5a68161be7bb03122d2a63ccef4365c5853862b2
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: d71acf0cf7d5cdcfa5310455af2120fa1f82d567
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507144"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135924"
 ---
 # <a name="nameof-expression-c-reference"></a>Expresión nameof (referencia de C#)
 
@@ -21,6 +21,10 @@ Una expresión `nameof` genera el nombre de una variable, un tipo o un miembro c
 [!code-csharp-interactive[nameof expression](snippets/NameOfOperator.cs#Examples)]
 
 Como se muestra en el ejemplo anterior, en el caso de un tipo y un espacio de nombres, el nombre generado por lo general no está [completo](~/_csharplang/spec/basic-concepts.md#fully-qualified-names).
+
+En el caso de [identificadores textuales](../tokens/verbatim.md), el carácter `@` no es parte de un nombre, como se muestra en el ejemplo siguiente:
+
+[!code-csharp-interactive[nameof verbatim](snippets/NameOfOperator.cs#Verbatim)]
 
 La expresión `nameof` se evalúa en tiempo de compilación y no tiene efecto en tiempo de ejecución.
 

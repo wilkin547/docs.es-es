@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Agregar referencias a bibliotecas de tipos'
+title: Procedimiento para agregar referencias a bibliotecas de tipos
 ms.date: 03/30/2017
 helpviewer_keywords:
 - importing type library
@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
 ms.openlocfilehash: 1e82a499b77cc6d1d49eaf13e243201bbdc4c5fe
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181446"
 ---
-# <a name="how-to-add-references-to-type-libraries"></a>Cómo: Agregar referencias a bibliotecas de tipos
+# <a name="how-to-add-references-to-type-libraries"></a>Procedimiento para agregar referencias a bibliotecas de tipos
 Visual Studio genera un ensamblado de interoperabilidad que contiene metadatos cuando se agrega una referencia a una biblioteca de tipos. Si el ensamblado de interoperabilidad principal está disponible, Visual Studio usa el ensamblado existente antes de generar un nuevo ensamblado de interoperabilidad.  
   
 ### <a name="to-add-a-reference-to-a-type-library-in-visual-studio"></a>Para agregar una referencia a una biblioteca de tipos en Visual Studio  
@@ -27,7 +27,7 @@ Visual Studio genera un ensamblado de interoperabilidad que contiene metadatos c
   
 4. Seleccione la biblioteca de tipos en la lista o busque el archivo .tlb.  
   
-5. Elija **Ok**.  
+5. Elija **Aceptar**.  
   
 6. En el Explorador de soluciones, abra el menú contextual de la referencia que acaba de agregar y elija **Propiedades**.  
   
@@ -38,14 +38,14 @@ Visual Studio genera un ensamblado de interoperabilidad que contiene metadatos c
   
 ### <a name="to-add-a-reference-to-a-type-library-for-command-line-compilation"></a>Para agregar una referencia a una biblioteca de tipos para la compilación en la línea de comandos  
   
-1. Genere un ensamblado de interoperabilidad, como se describe en [Cómo: Generar ensamblados de interoperabilidad a partir de bibliotecas de tipos](how-to-generate-interop-assemblies-from-type-libraries.md).  
+1. Genere un ensamblado de interoperabilidad tal y como se describe en [Cómo: Generar ensamblados de interoperabilidad a partir de bibliotecas de tipos](how-to-generate-interop-assemblies-from-type-libraries.md).  
   
-2. Use la opción del compilador [-link (Opciones del compilador de C)](../../csharp/language-reference/compiler-options/link-compiler-option.md) o [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) con el nombre del ensamblado de interoperabilidad para incrustar información de tipo para los tipos COM en los ejecutables.  
+2. Use la opción del compilador [-link (Opciones del compilador de C#)](../../csharp/language-reference/compiler-options/link-compiler-option.md) o [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) con el nombre del ensamblado de interoperabilidad para insertar la información sobre los tipos COM en los archivos ejecutables.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Importar una biblioteca de tipos como un ensamblado](importing-a-type-library-as-an-assembly.md)
 - [Exponer componentes COM en .NET Framework](exposing-com-components.md)
-- [Tutorial: Incrustar los tipos de los ensamblados administrados en Visual Studio](../../standard/assembly/embed-types-visual-studio.md)
+- [Tutorial: Insertar tipos de ensamblados administrados en Visual Studio](../../standard/assembly/embed-types-visual-studio.md)
 - [-link (Opciones del compilador de C#)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
 - [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)

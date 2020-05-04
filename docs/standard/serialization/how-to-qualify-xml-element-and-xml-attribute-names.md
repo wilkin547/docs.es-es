@@ -1,5 +1,5 @@
 ---
-title: Cómo calificar nombres de atributos XML y elementos XML
+title: Procedimiento para calificar elementos XML y nombres de atributo de XML
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
 ms.openlocfilehash: db0795dd83cc96aba49dd435c875e98a9a6c18cb
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78159876"
 ---
-# <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>Cómo calificar nombres de atributos XML y elementos XML
+# <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>Procedimiento para calificar elementos XML y nombres de atributo de XML
 
-Los espacios de nombres XML contenidos en instancias de la clase <xref:System.Xml.Serialization.XmlSerializerNamespaces> deben ajustarse a la especificación de World Wide Web Consortium (W3C) denominada [espacios de nombres en XML](https://www.w3.org/TR/REC-xml-names/).
+Los espacios de nombres XML contenidos por instancias de la clase <xref:System.Xml.Serialization.XmlSerializerNamespaces> deben cumplir con la especificación de World Wide Web Consortium (W3C) llamada [Espacios de nombres en XML](https://www.w3.org/TR/REC-xml-names/).
 
 Los espacios de nombres XML proporcionan una método para calificar los nombres de elementos y atributos XML en documentos XML. Un nombre calificado se compone de un prefijo y un nombre local, separados por dos puntos. El prefijo funciona únicamente como marcador de posición y está asignado a un identificador URI que especifica un espacio de nombres. La combinación del espacio de nombres del URI, universalmente administrado, y el nombre local genera un nombre del que se garantiza que es universalmente único.
 
@@ -169,6 +169,6 @@ public class Price
 - [Introducción a la serialización XML](introducing-xml-serialization.md)
 - [XmlSerializer (clase)](xref:System.Xml.Serialization.XmlSerializer)
 - [Atributos que controlan la serialización XML](attributes-that-control-xml-serialization.md)
-- [Cómo: Especificar un nombre de elemento alternativo para una secuencia XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-- [Cómo: Serializar un objeto](how-to-serialize-an-object.md)
-- [Cómo: Deserializar un objeto](how-to-deserialize-an-object.md)
+- [Cómo: para especificar un nombre de elemento alternativo para una secuencia XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [Cómo: para serializar un objeto](how-to-serialize-an-object.md)
+- [Cómo: para deserializar un objeto](how-to-deserialize-an-object.md)

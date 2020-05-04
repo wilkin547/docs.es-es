@@ -4,14 +4,14 @@ description: Obtenga información sobre los conceptos básicos que necesita sabe
 ms.date: 03/15/2020
 ms.openlocfilehash: 64defed4433647c2a0dcce91493d9ec77d21b541
 ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/17/2020
 ms.locfileid: "81607886"
 ---
 # <a name="introduction-to-azure-and-net"></a>Introducción a Azure y .NET
 
-En este documento se proporciona información general sobre los conceptos y servicios clave con los que los desarrolladores de .NET deben estar familiarizados para empezar a desarrollar aplicaciones con los servicios de Azure.
+Este documento proporciona información general sobre los conceptos clave y los servicios de .NET con los que los desarrolladores deben estar familiarizados para comenzar a desarrollar aplicaciones con los servicios de Azure.
 
 ## <a name="key-concepts"></a>Conceptos clave
 
@@ -32,11 +32,11 @@ En este documento se proporciona información general sobre los conceptos y serv
 
 El hospedaje en Azure se puede dividir en tres categorías.
 
-* **Infraestructura como servicio (IaaS)**: con IaaS, se aprovisionan las máquinas virtuales que se necesitan junto con los componentes de red y almacenamiento asociados. A continuación, el usuario implementa el software y las aplicaciones que desee en esas máquinas virtuales. Este modelo es lo más parecido a un entorno local tradicional, salvo que Microsoft administra la infraestructura. El usuario administra las máquinas virtuales individuales, incluidos el sistema operativo, el software personalizado y las actualizaciones de seguridad.
+* **Infraestructura como servicio (IaaS)** : Con IaaS puede aprovisionar las máquinas virtuales que necesite, junto con la red y los componentes de almacenamiento asociados. A continuación, el usuario implementa el software y las aplicaciones que desee en esas máquinas virtuales. Este modelo es lo más parecido a un entorno local tradicional, salvo que Microsoft administra la infraestructura. El usuario administra las máquinas virtuales individuales, incluidos el sistema operativo, el software personalizado y las actualizaciones de seguridad.
 
-* **Plataforma como servicio (PaaS)**: PaaS proporciona un entorno de hospedaje administrado en el que se implementa la aplicación sin necesidad de administrar las máquinas virtuales o los recursos de red. Por ejemplo, en lugar de crear máquinas virtuales individuales, se crea un recuento de instancias y el servicio aprovisiona, configura y administra los recursos necesarios. Azure App Service es un ejemplo de un servicio de PaaS.
+* **Plataforma como servicio (PaaS)** : PaaS proporciona un entorno de hospedaje administrado en el que se implementa la aplicación sin necesidad de administrar las máquinas virtuales o los recursos de red. Por ejemplo, en lugar de crear máquinas virtuales individuales, se crea un recuento de instancias y el servicio aprovisiona, configura y administra los recursos necesarios. Azure App Service es un ejemplo de un servicio de PaaS.
   
-* **Funciones como servicio (FaaS)**: conocidas comúnmente como informática sin servidor, FaaS va más allá de PaaS al abstraer las preocupaciones del entorno de hospedaje. En lugar de crear instancias de proceso y después implementar el código en esas instancias, se implementa el código y el servicio lo ejecuta automáticamente. No es necesario administrar los recursos de proceso. La plataforma escala sin problemas el código hasta el nivel necesario para controlar el tráfico y se paga solo cuando se ejecuta el código. Azure Functions es un servicio de FaaS.
+* **Funciones como servicio (FaaS)** : conocidas comúnmente como informática sin servidor, FaaS va más allá de PaaS al abstraer las preocupaciones del entorno de hospedaje. En lugar de crear instancias de proceso y después implementar el código en esas instancias, se implementa el código y el servicio lo ejecuta automáticamente. No es necesario administrar los recursos de proceso. La plataforma escala sin problemas el código hasta el nivel necesario para controlar el tráfico y se paga solo cuando se ejecuta el código. Azure Functions es un servicio de FaaS.
 
 Por lo general, cuanto más favorece la aplicación los modelos FaaS y PaaS, más ventajas obtendrá de la ejecución en la nube. A continuación se muestra un resumen de las tres opciones de hospedaje más comunes en Azure y cuándo optar por ellas.
 
@@ -47,17 +47,17 @@ Por lo general, cuanto más favorece la aplicación los modelos FaaS y PaaS, má
 * [Azure Virtual Machines](https://docs.microsoft.com/azure/virtual-machines/): si App Service no satisface sus necesidades para hospedar una aplicación existente debido a dependencias específicas, las máquinas virtuales serán el lugar más fácil para empezar. Para empezar a trabajar con Virtual Machines y ASP.NET o WCF, consulte [Implementación de una aplicación ASP.NET en una máquina virtual de Azure](https://tutorials.visualstudio.com/aspnet-vm/intro).
 
 > [!TIP]
-> Para obtener más información sobre cómo elegir un servicio, consulte Elegir un servicio de proceso de Azure para la [aplicación.](https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-decision-tree)
+> Para más información acerca de cómo elegir un servicio, vea [Elección de un servicio de proceso de Azure para la aplicación](https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-decision-tree).
 
-## <a name="choose-a-data-storage-service"></a>Elija un servicio de almacenamiento de datos
+## <a name="choose-a-data-storage-service"></a>Elección de un servicio de almacenamiento de datos
 
 Azure ofrece varios servicios para almacenar los datos según sus necesidades. Los servicios de datos más comunes para los desarrolladores de .NET son:
 
-* [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/): si desea migrar una aplicación que ya utiliza SQL Server a la nube, Azure SQL Database es un lugar lógico para comenzar. Para comenzar, consulte [Tutorial: Creación de una aplicación ASP.NET en Azure con SQL Database](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-dotnet-sqldatabase).
+* [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/): si desea migrar una aplicación que ya utiliza SQL Server a la nube, Azure SQL Database es un lugar lógico para comenzar. Para empezar, consulte [Tutorial: Compilación de una aplicación ASP.NET en Azure con SQL Database](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-dotnet-sqldatabase).
 
-* [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/): Azure Cosmos DB es una base de datos moderna diseñada para la nube. Cuando se inicia una aplicación nueva que todavía no tiene una dependencia de una base de datos específica, puede evaluar Azure Cosmos DB. Cosmos DB es una buena elección para las nuevas aplicaciones web, móviles, de juegos y de IoT donde la escala automática, el rendimiento predecible, los tiempos de respuesta rápidos y la capacidad de consultar datos sin esquema son importantes. Para comenzar, consulte [Guía de inicio rápido: Creación de una aplicación web de .NET con Azure Cosmos DB y SQL API en Azure Portal](https://docs.microsoft.com/azure/cosmos-db/create-sql-api-dotnet).
+* [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/): Azure Cosmos DB es una base de datos moderna diseñada para la nube. Cuando se inicia una aplicación nueva que todavía no tiene una dependencia de una base de datos específica, puede evaluar Azure Cosmos DB. Cosmos DB es una buena elección para las nuevas aplicaciones web, móviles, de juegos y de IoT donde la escala automática, el rendimiento predecible, los tiempos de respuesta rápidos y la capacidad de consultar datos sin esquema son importantes. Para comenzar, consulte [Inicio rápido: Compilación de una aplicación web para .NET con Azure Cosmos DB y SQL API en Azure Portal](https://docs.microsoft.com/azure/cosmos-db/create-sql-api-dotnet).
 
-* [Azure Blob Storage](https://docs.microsoft.com/azure/storage/): Azure Blob Storage está optimizado para almacenar y recuperar objetos binarios grandes, como imágenes, archivos y secuencias. Los almacenes de objetos permiten la administración de cantidades enormes de datos no estructurados. Para empezar, consulte [Guía de inicio rápido: Uso de .NET para crear un blob en el almacenamiento de objetos](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-dotnet).
+* [Azure Blob Storage](https://docs.microsoft.com/azure/storage/): Azure Blob Storage está optimizado para almacenar y recuperar objetos binarios grandes, como imágenes, archivos y secuencias. Los almacenes de objetos permiten la administración de cantidades enormes de datos no estructurados. Para comenzar, consulte [Inicio rápido: Use .NET para crear un blob en el almacenamiento de objetos](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-dotnet).
 
 > [!TIP]
 > Para más información, consulte [Elección del almacén de datos apropiado](https://docs.microsoft.com/azure/architecture/guide/technology-choices/data-store-overview).
@@ -69,13 +69,13 @@ Si usa Visual Studio, puede agregar compatibilidad con algunos servicios de Azur
 ## <a name="diagnosing-problems-in-the-cloud"></a>Diagnóstico de problemas en la nube
 Una vez que se implementa la aplicación en Azure, es posible encontrar casos en los que funciona en desarrollo, pero no en Azure. A continuación se muestran dos buenos lugares para empezar cuando se diagnostican problemas:
 
-* **Depuración remota desde Visual Studio**: la mayoría de los servicios de proceso de Azure (incluidos los servicios que se describen en este documento) admiten la depuración remota con Visual Studio y la adquisición de registros. Para explorar las funcionalidades de Visual Studio con la aplicación, abra la ventana de herramientas de Cloud Explorer escribiendo "Cloud Explorer" en la barra de herramientas de inicio rápido de Visual Studio (en la esquina superior derecha) y, a continuación, busque la aplicación en el árbol. Para más información, consulte [Solución de problemas de una aplicación web en Azure App Service con Visual Studio](https://docs.microsoft.com/azure/app-service/web-sites-dotnet-troubleshoot-visual-studio#remotedebug).
+* **Depuración remota en Visual Studio**: la mayoría de los servicios de proceso de Azure (incluidos los servicios que se describen en este documento) admiten la depuración remota con Visual Studio y la adquisición de registros. Para explorar las funcionalidades de Visual Studio con la aplicación, abra la ventana de herramientas de Cloud Explorer escribiendo "Cloud Explorer" en la barra de herramientas de inicio rápido de Visual Studio (en la esquina superior derecha) y, a continuación, busque la aplicación en el árbol. Para más información, consulte [Solución de problemas de una aplicación web en Azure App Service con Visual Studio](https://docs.microsoft.com/azure/app-service/web-sites-dotnet-troubleshoot-visual-studio#remotedebug).
 
 * **Application Insights**: [Application Insights](https://docs.microsoft.com/azure/application-insights/) es una solución de supervisión de rendimiento de aplicaciones (APM) completa que captura datos de diagnóstico, datos de telemetría y datos de rendimiento de las aplicaciones automáticamente. Para empezar a recopilar datos de diagnóstico de la aplicación, consulte [Inicio de la supervisión de la aplicación web ASP.NET](https://docs.microsoft.com/azure/application-insights/quick-monitor-portal).
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-* [Implemente su primera aplicación web de ASP.NET Core en Azure](https://docs.microsoft.com/azure/app-service/app-service-web-get-started-dotnet)
-* [Más información sobre la autenticación en Azure SDK para .NET](./sdk/authentication.md)
+* [Creación de una aplicación web ASP.NET Core en Azure](https://docs.microsoft.com/azure/app-service/app-service-web-get-started-dotnet)
+* [Obtenga información sobre la autenticación en el SDK de Azure para .NET](./sdk/authentication.md)
 * [Diagnóstico de errores en las aplicaciones en la nube](https://blogs.msdn.microsoft.com/webdev/2018/02/07/diagnosing-errors-on-your-cloud-apps)
 * Descargue el libro electrónico gratuito [Guía de inicio rápido de Azure para desarrolladores de .NET](https://www.microsoft.com/net/download/thank-you/azure-quick-start-ebook).

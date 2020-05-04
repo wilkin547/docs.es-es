@@ -4,22 +4,22 @@ titleSuffix: ''
 description: Más información sobre las tecnologías de .NET Framework no disponibles en .NET Core
 author: cartermp
 ms.date: 04/30/2019
-ms.openlocfilehash: 7dfec63870950f12ec933ebf09041b3c8ce2cbb5
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: f95205330837551085b8f58dfbdfcd702356c98f
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607802"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506836"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>Tecnologías de .NET Framework no disponibles en .NET Core
 
 Varias tecnologías disponibles para las bibliotecas de .NET Framework no están disponibles para su uso con .NET Core, por ejemplo, dominios de aplicaciones, comunicación remota, seguridad de acceso del código (CAS), transparencia de seguridad y System.EnterpriseServices. Si las bibliotecas se basan en una o varias de estas tecnologías, considere los enfoques alternativos que se describen a continuación. Para obtener más información sobre la compatibilidad de API, consulte [Cambios importantes en .NET Core](../compatibility/breaking-changes.md).
 
-El hecho de que una API o tecnología no estén implementadas actualmente no implica que sea incompatible deliberadamente. Busque los repositorios de GitHub para .NET Core para ver si un problema particular que encuentre se debe al diseño. Si no encuentra dicho indicador, registre una incidencia en el [repositorio dotnet/runtime](https://github.com/dotnet/runtime/issues) para solicitar API y tecnologías específicas. Los problemas que migran solicitudes se marcan con la etiqueta [port-to-core](https://github.com/dotnet/runtime/labels/port-to-core).
+El hecho de que una API o tecnología no estén implementadas actualmente no implica que sea incompatible deliberadamente. Busque los repositorios de GitHub para .NET Core para ver si un problema particular que encuentre se debe al diseño. Si no encuentra dicho indicador, registre una incidencia en el [repositorio dotnet/runtime](https://github.com/dotnet/runtime/issues) para solicitar API y tecnologías específicas.
 
 ## <a name="appdomains"></a>Dominios de aplicaciones
 
-Los dominios de aplicación aíslan las aplicaciones entre sí. Los dominios de aplicación requieren la compatibilidad con el runtime y suelen ser muy caros. No se admite la creación de dominios de aplicación adicionales y no existen planes para agregar esta funcionalidad en el futuro. En el caso del aislamiento del código, use contenedores o procesos independientes como alternativa. Para cargar ensamblados de forma dinámica, use la clase <xref:System.Runtime.Loader.AssemblyLoadContext>.
+Los dominios de aplicación aíslan las aplicaciones entre sí. Los dominios de aplicación requieren la compatibilidad con el runtime y suelen ser caros. No se admite la creación de dominios de aplicación adicionales y no existen planes para agregar esta funcionalidad en el futuro. En el caso del aislamiento del código, use contenedores o procesos independientes como alternativa. Para cargar ensamblados de forma dinámica, use la clase <xref:System.Runtime.Loader.AssemblyLoadContext>.
 
 Para facilitar la migración de código de .NET Framework, .NET Core expone algunas de las superficies de la API <xref:System.AppDomain>. Algunas de las API funcionan con normalidad (por ejemplo, <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>), algunos miembros no hacen nada (por ejemplo, <xref:System.AppDomain.SetCachePath%2A>) y algunos de ellos generan <xref:System.PlatformNotSupportedException> (por ejemplo, <xref:System.AppDomain.CreateDomain%2A>). Compruebe los tipos que usa con el [`System.AppDomain` origen de referencia](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Private.CoreLib/src/System/AppDomain.cs) en el [repositorio de GitHub dotnet/runtime](https://github.com/dotnet/runtime). Asegúrese de seleccionar la rama que coincida con su versión implementada.
 

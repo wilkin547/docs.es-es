@@ -8,13 +8,13 @@ helpviewer_keywords:
 ms.assetid: 9a93fb53-c080-497b-bf9b-441022dbbc39
 ms.openlocfilehash: 2a1dd19189ff65413255b9bc137e1a7f0227bbe1
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75716646"
 ---
-# <a name="-imports-visual-basic"></a>-Imports (Visual Basic)
-Importa los espacios de nombres de un ensamblado especificado.  
+# <a name="-imports-visual-basic"></a>-imports (Visual Basic)
+Importa espacios de nombres desde un ensamblado especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -24,21 +24,21 @@ Importa los espacios de nombres de un ensamblado especificado.
   
 ## <a name="arguments"></a>Argumentos  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
-|`namespaceList`|Obligatoria. Lista delimitada por comas de los espacios de nombres que se van a importar.|  
+|`namespaceList`|Obligatorio. Lista delimitada por comas de los espacios de nombres que se van a importar.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  La opción `-imports` importa cualquier espacio de nombres definido en el conjunto actual de archivos de código fuente o desde cualquier ensamblado al que se hace referencia.  
   
- Los miembros de un espacio de nombres especificado con `-imports` están disponibles para todos los archivos de código fuente de la compilación. Use la [instrucción Imports (espacio de nombres y tipo de .net)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) para usar un espacio de nombres en un solo archivo de código fuente.  
+ Los miembros de un espacio de nombres especificado con `-imports` están disponibles para todos los archivos de código fuente de la compilación. Utilice la [Instrucción Imports (Tipo y espacio de nombres de .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) para usar un espacio de nombres en un solo archivo de código fuente.  
   
-|Para establecer las importaciones en el entorno de desarrollo integrado de Visual Studio|  
+|Para establecer -imports en el entorno de desarrollo integrado de Visual Studio|  
 |---|  
-|1. tener un proyecto seleccionado en **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**. <br />2. Haga clic en la pestaña **referencias** .<br />3. Escriba el nombre del espacio de nombres en el cuadro situado junto al botón **Agregar importación de usuario** .<br />4. Haga clic en el botón **Agregar importación de usuario** .|  
+|1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**. <br />2.  Haga clic en la pestaña **Referencias**.<br />3.  Escriba el nombre del espacio de nombres en el cuadro situado junto al botón **Agregar importación del usuario**.<br />4.  Haga clic en el botón **Agregar importación del usuario**.|  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente código se compila cuando se especifica `-imports:system.globalization`. Sin él, la compilación correcta requiere que una instrucción `Imports System.Globalization` esté incluida al principio del archivo de código fuente, o que la propiedad esté completa como `System.Globalization.CultureInfo.CurrentCulture.Name`.
+ El código siguiente se compila cuando se especifica `-imports:system.globalization`. Si no se especifica, la compilación correcta requiere que se incluya una instrucción `Imports System.Globalization` al principio del archivo de código fuente, o bien que la propiedad se complete como `System.Globalization.CultureInfo.CurrentCulture.Name`.
 
 ```vb
 Module Example

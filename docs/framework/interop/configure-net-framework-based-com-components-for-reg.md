@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 ms.openlocfilehash: 9e273bd3e4bf2bb6945fe48c850783a54fa9a869
 ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/26/2020
 ms.locfileid: "80291756"
@@ -24,7 +24,7 @@ La activación sin registro de los componentes de .NET Framework solo es un poco
   
  En este tema se describe cómo asociar un manifiesto de aplicación a una aplicación, cómo asociar un manifiesto de componente a un componente y cómo incrustar un manifiesto de componente en un ensamblado.  
   
-## <a name="create-an-application-manifest"></a>Crear un manifiesto de aplicación  
+## <a name="create-an-application-manifest"></a>Creación de un manifiesto de aplicación  
   
 1. Mediante un editor XML, cree (o modifique) el manifiesto de aplicación propiedad de la aplicación COM que está interoperando con uno o más componentes administrados.  
   
@@ -77,9 +77,9 @@ La activación sin registro de los componentes de .NET Framework solo es un poco
   
 5. Nombre el archivo de manifiesto y guárdelo. El nombre de un manifiesto de aplicación es el nombre del ensamblado ejecutable seguido de la extensión .manifest. Por ejemplo, el nombre del archivo de manifiesto de la aplicación de myComApp.exe es myComApp.exe.manifest.  
   
-El manifiesto de aplicación se puede instalar en el mismo directorio que la aplicación COM. Opcionalmente, se puede agregar como recurso al archivo .exe de la aplicación. Para obtener más información, consulte Acerca de los [ensamblados en paralelo](/windows/desktop/SbsCs/about-side-by-side-assemblies-).  
+El manifiesto de aplicación se puede instalar en el mismo directorio que la aplicación COM. Opcionalmente, se puede agregar como recurso al archivo .exe de la aplicación. Para más información, vea [Acerca de los ensamblados en paralelo](/windows/desktop/SbsCs/about-side-by-side-assemblies-).  
   
-## <a name="create-a-component-manifest"></a>Crear un manifiesto de componente  
+## <a name="create-a-component-manifest"></a>Creación de un manifiesto de componente  
   
 1. Mediante un editor XML, cree un manifiesto de componente para describir el ensamblado administrado.  
   
@@ -110,12 +110,12 @@ El manifiesto de aplicación se puede instalar en el mismo directorio que la apl
     |Atributo|Descripción|Obligatorio|  
     |---------------|-----------------|--------------|  
     |`clsid`|El identificador que especifica la clase que ha de ser activada.|Sí|  
-    |`description`|Cadena que informa al usuario sobre el componente. De manera predeterminada, es una cadena vacía.|Sin |  
+    |`description`|Cadena que informa al usuario sobre el componente. De manera predeterminada, es una cadena vacía.|No|  
     |`name`|Cadena que representa la clase administrada.|Sí|  
-    |`progid`|Identificador que hay que usar para la activación del enlace en tiempo de ejecución.|Sin |  
-    |`threadingModel`|Modelo de subprocesos COM. El valor predeterminado es "Both".|Sin |  
-    |`runtimeVersion`|Especifica la versión de Common Language Runtime (CLR) que se va a utilizar. Si no especifica este atributo y el CLR aún no se ha cargado, el componente se cargará con la última versión de CLR instalada antes de la versión 4. Si especifica v1.0.3705, v1.1.4322 o v2.0.50727, la versión se actualizará automáticamente a la última versión de CLR instalada antes de la versión version 4 (normalmente, v2.0.50727). Si ya se ha cargado otra versión de CLR y la versión especificada se puede cargar en paralelo y en el mismo proceso, se cargará la versión especificada; de lo contrario, se usará la versión de CLR ya cargada. Esto puede dar lugar a un error de carga.|Sin |  
-    |`tlbid`|Identificador de la biblioteca de tipos que contiene información de tipos sobre la clase.|Sin |  
+    |`progid`|Identificador que hay que usar para la activación del enlace en tiempo de ejecución.|No|  
+    |`threadingModel`|Modelo de subprocesos COM. El valor predeterminado es "Both".|No|  
+    |`runtimeVersion`|Especifica la versión de Common Language Runtime (CLR) que se va a utilizar. Si no especifica este atributo y el CLR aún no se ha cargado, el componente se cargará con la última versión de CLR instalada antes de la versión 4. Si especifica v1.0.3705, v1.1.4322 o v2.0.50727, la versión se actualizará automáticamente a la última versión de CLR instalada antes de la versión version 4 (normalmente, v2.0.50727). Si ya se ha cargado otra versión de CLR y la versión especificada se puede cargar en paralelo y en el mismo proceso, se cargará la versión especificada; de lo contrario, se usará la versión de CLR ya cargada. Esto puede dar lugar a un error de carga.|No|  
+    |`tlbid`|Identificador de la biblioteca de tipos que contiene información de tipos sobre la clase.|No|  
   
      Todos los atributos distinguen mayúsculas de minúsculas. Se pueden obtener los CLSID, ProgIDs, modelos de subprocesos y la versión del motor en tiempo de ejecución visualizando la biblioteca de tipos exportada para el ensamblado con OLE/COM ObjectViewer (Oleview.exe).  
   

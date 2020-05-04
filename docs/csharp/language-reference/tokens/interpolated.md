@@ -10,12 +10,12 @@ helpviewer_keywords:
 - string interpolation [C#]
 - interpolated string [C#]
 author: pkulikov
-ms.openlocfilehash: 97bc606569b83bd14cd3b32495deb8e529747e9c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2b95fa5fe5cecd4825e8c17a33f7795c6c9480c6
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76980124"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738378"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - Interpolación de cadenas: referencia de C#
 
@@ -37,7 +37,7 @@ La estructura de un elemento con una expresión de interpolación es como se mue
 
 Los elementos entre corchetes son opcionales. En esta tabla se describe cada elemento:
 
-|Elemento|Description|
+|Elemento|Descripción|
 |-------------|-----------------|
 |`interpolationExpression`|Expresión que genera un resultado al que se va a aplicar formato. La representación de cadena de `null` es <xref:System.String.Empty?displayProperty=nameWithType>.|
 |`alignment`|La expresión constante cuyo valor define el número mínimo de caracteres en la representación de cadena del resultado de la expresión. Si es positivo, la representación de cadena está alineada a la derecha; si es negativo, está alineada a la izquierda. Para más información, vea [Alignment (Componente)](../../../standard/base-types/composite-formatting.md#alignment-component).|
@@ -60,7 +60,7 @@ En este ejemplo, se muestra cómo incluir una llave en una cadena de resultado y
 Las cadenas textuales interpoladas comienzan por el carácter `$`, seguido del carácter `@`. Para más información sobre las cadenas textuales, vea los temas [string](../builtin-types/reference-types.md) e [Identificador textual](verbatim.md).
 
 > [!NOTE]
-> A partir C# 8.0, puede usar los tokens `$` y `@` en cualquier orden; tanto `$@"..."` como `@$"..."` son cadenas textuales interpoladas válidas. En versiones de C# anteriores, el token `$` debe aparecer delante del token `@`.
+> A partir de C# 8.0, puede usar los tokens `$` y `@` en cualquier orden; tanto `$@"..."` como `@$"..."` son cadenas textuales interpoladas válidas. En versiones de C# anteriores, el token `$` debe aparecer delante del token `@`.
 
 ## <a name="implicit-conversions-and-how-to-specify-iformatprovider-implementation"></a>Conversiones implícitas y cómo especificar la implementación de `IFormatProvider`
 
@@ -74,7 +74,7 @@ Hay tres conversiones implícitas de una cadena interpolada:
       - Método <xref:System.FormattableString.Invariant%2A> que genera una cadena de resultado para <xref:System.Globalization.CultureInfo.InvariantCulture>.
       - Un método <xref:System.FormattableString.ToString(System.IFormatProvider)> que genera una cadena de resultado para una referencia cultural especificada.
 
-    También puede usar el método <xref:System.FormattableString.ToString(System.IFormatProvider)> para proporcionar una implementación definido por el usuario de la interfaz <xref:System.IFormatProvider> que admite formatos personalizados. Para más información, consulte la sección [Formato personalizado con ICustomFormatter](../../../standard/base-types/formatting-types.md#custom-formatting-with-icustomformatter) del artículo [Aplicar formato a tipos en .NET](../../../standard/base-types/formatting-types.md).
+    También puede usar el método <xref:System.FormattableString.ToString(System.IFormatProvider)> para proporcionar una implementación definida por el usuario de la interfaz <xref:System.IFormatProvider> que admite formatos personalizados. Para más información, consulte la sección [Formato personalizado con ICustomFormatter](../../../standard/base-types/formatting-types.md#custom-formatting-with-icustomformatter) del artículo [Aplicar formato a tipos en .NET](../../../standard/base-types/formatting-types.md).
 
 1. Conversión de una cadena interpolada a una instancia <xref:System.IFormattable> que también permite crear varias cadenas de resultado con contenido específico de la referencia cultural de una sola instancia <xref:System.IFormattable>.
 
@@ -84,7 +84,7 @@ En el ejemplo siguiente, se usa la conversión implícita a <xref:System.Formatt
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-Si no está familiarizado con la interpolación de cadenas, vea el tutorial interactivo [Interpolación de cadenas en C#](../../tutorials/exploration/interpolated-strings.yml). También puede consultar otro tutorial de [interpolación de cadenas en C#](../../tutorials/string-interpolation.md) que muestra cómo usar cadenas interpoladas para generar cadenas con formato.
+Si no está familiarizado con la interpolación de cadenas, vea el tutorial interactivo [Interpolación de cadenas en C#](../../tutorials/exploration/interpolated-strings.yml). También puede consultar otro tutorial de [interpolación de cadenas en C#](../../tutorials/string-interpolation.md) que muestra cómo usar cadenas interpoladas para generar cadenas con formato.
 
 ## <a name="compilation-of-interpolated-strings"></a>Compilación de cadenas interpoladas
 
@@ -92,7 +92,7 @@ Si una cadena interpolada tiene el tipo `string`, normalmente se transforma en u
 
 Si una cadena interpolada tiene el tipo <xref:System.IFormattable> o <xref:System.FormattableString>, el compilador genera una llamada al método <xref:System.Runtime.CompilerServices.FormattableStringFactory.Create%2A?displayProperty=nameWithType>.
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 Para obtener más información, vea la sección [Interpolated strings](~/_csharplang/spec/expressions.md#interpolated-strings) (Cadenas interpoladas) de la [especificación del lenguaje C#](~/_csharplang/spec/introduction.md).
 

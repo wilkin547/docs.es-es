@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: b5e52844-4820-47c0-a61d-de2da33e9f54
 ms.openlocfilehash: 4faa481a6331863112b7dba65bdbccb69cd12b7d
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709964"
@@ -14,7 +14,7 @@ ms.locfileid: "75709964"
 
 La clase Modelo de objetos de documento XML (DOM) es una representación en la memoria de un documento XML. DOM permite leer, manipular y modificar un documento XML mediante programación. La clase **XmlReader** también lee XML, aunque proporciona acceso de solo avance y de solo lectura sin almacenamiento en memoria caché. Esto significa que no hay funciones para editar los valores de un atributo o contenido de un elemento, ni la posibilidad de agregar y quitar nodos con **XmlReader**. La edición es la función principal de DOM. Es la forma común y estructurada mediante la que se representan datos XML en la memoria, aunque los datos XML reales se almacenan de forma lineal cuando se encuentran en un archivo o proceden de otro objeto. A continuación se muestran datos XML:
 
-## <a name="input"></a>Input
+## <a name="input"></a>Entrada
 
 ```xml
 <?xml version="1.0"?>
@@ -33,7 +33,7 @@ La clase Modelo de objetos de documento XML (DOM) es una representación en la m
 
 En la ilustración siguiente se muestra cómo se estructura la memoria cuando se leen estos datos XML en la estructura DOM.
 
-![Estructura del documento XML](../../../../docs/standard/data/xml/media/xml-to-domtree.gif "XML_To_DOMTree") Estructura del documento XML
+![XML document structure](../../../../docs/standard/data/xml/media/xml-to-domtree.gif "XML_To_DOMTree") Estructura de documentos XML
 
 Dentro de la estructura de los documentos XML, cada círculo de esta ilustración representa un nodo, que se denomina objeto **XmlNode**. El objeto **XmlNode** es el objeto básico del árbol de DOM. La clase **XmlDocument**, que extiende la clase **XmlNode**, admite métodos para realizar operaciones en el documento en conjunto (por ejemplo, cargarlo en la memoria o guardar el código XML en un archivo). Además, la clase **XmlDocument** proporciona un medio para ver y manipular los nodos de todo el documento XML. Las clases **XmlNode** y **XmlDocument** han mejorado el rendimiento y la capacidad de uso y disponen de métodos y propiedades para realizar lo siguiente:
 

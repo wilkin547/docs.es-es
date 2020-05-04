@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 ms.openlocfilehash: f7df323dacfbee3361fe75d831f1e87df328b194
 ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/09/2020
 ms.locfileid: "80989225"
@@ -331,7 +331,7 @@ public class Point {
 ### <a name="value-types-used-in-com-interop"></a>Tipos de valor utilizados en la interoperabilidad COM  
  Los tipos con formato también pueden pasarse a llamadas de métodos de interoperabilidad COM. De hecho, cuando se exportan a una biblioteca de tipos, los tipos de valor se convierten automáticamente en estructuras. Como se muestra en el ejemplo siguiente, el tipo de valor `Point` se convierte en una definición de tipo (typedef) con el nombre `Point`. Todas las referencias al tipo de valor `Point` en otro lugar de la biblioteca de tipos se reemplazan por el typedef `Point`.  
   
- **Representación de la biblioteca de tipos**  
+ **Representación de biblioteca de tipos**  
   
 ```cpp  
 typedef struct tagPoint {  
@@ -346,7 +346,7 @@ interface _Graphics {
 }  
 ```  
   
- Las mismas reglas usadas para serializar valores y referencias para llamadas de invocación de plataforma se usan al serializar a través de interfaces COM. Por ejemplo, cuando una instancia del tipo de valor `Point` se pasa de .NET Framework a COM, `Point` se pasa por valor. Si el tipo de valor `Point` se pasa por referencia, un puntero a un `Point` se pasa en la pila. El serializador de interoperabilidad no admite niveles superiores de direccionamiento indirecto (**Point ** \*\*) en ninguna dirección.  
+ Las mismas reglas usadas para serializar valores y referencias para llamadas de invocación de plataforma se usan al serializar a través de interfaces COM. Por ejemplo, cuando una instancia del tipo de valor `Point` se pasa de .NET Framework a COM, `Point` se pasa por valor. Si el tipo de valor `Point` se pasa por referencia, un puntero a un `Point` se pasa en la pila. El serializador de interoperabilidad no admite niveles superiores de direccionamiento indirecto (**Point** \*\*) en ninguna dirección.  
   
 > [!NOTE]
 > Las estructuras que tienen el valor de enumeración <xref:System.Runtime.InteropServices.LayoutKind> establecido en **Explicit** no se pueden usar en la interoperabilidad COM porque la biblioteca de tipos exportada no puede expresar una distribución explícita.  
@@ -376,8 +376,8 @@ interface _Graphics {
   
 |Tipo de valor System|Tipo IDL|  
 |-----------------------|--------------|  
-|<xref:System.DateTime?displayProperty=nameWithType>|**Fecha**|  
-|<xref:System.Decimal?displayProperty=nameWithType>|**Decimal**|  
+|<xref:System.DateTime?displayProperty=nameWithType>|**DATE**|  
+|<xref:System.Decimal?displayProperty=nameWithType>|**DECIMAL**|  
 |<xref:System.Guid?displayProperty=nameWithType>|**GUID**|  
 |<xref:System.Drawing.Color?displayProperty=nameWithType>|**OLE_COLOR**|  
   
@@ -437,10 +437,10 @@ interface IValueTypes : IDispatch {
 };  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Tipos que pueden o que no pueden transferirse en bloque de bits](blittable-and-non-blittable-types.md)
 - [Copiar y fijar](copying-and-pinning.md)
-- [Cálculo de referencias predeterminado para matrices](default-marshaling-for-arrays.md)
+- [Serialización predeterminada para matrices](default-marshaling-for-arrays.md)
 - [Serialización predeterminada para objetos](default-marshaling-for-objects.md)
-- [Cálculo de referencias predeterminado para cadenas](default-marshaling-for-strings.md)
+- [Serialización predeterminada para cadenas](default-marshaling-for-strings.md)

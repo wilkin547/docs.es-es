@@ -2,12 +2,12 @@
 title: Aplicaciones SOA
 description: Tenga en cuenta que los contenedores también pueden ser una opción de implementación útil para las aplicaciones SOA.
 ms.date: 02/15/2019
-ms.openlocfilehash: aa56ada7b14a465fb3dafd02b03b815782ac765b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f8619cb50a7d90b911db9ff2c8ef37c3c5fde210
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "68672362"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738385"
 ---
 # <a name="service-oriented-applications"></a>Aplicaciones orientadas a servicios
 
@@ -17,7 +17,7 @@ Esos servicios se pueden implementar ahora como contenedores de Docker, con lo q
 
 Los contenedores de Docker son útiles (pero no obligatorios) para las arquitecturas orientadas a servicios tradicionales y las arquitecturas de microservicios más avanzadas.
 
-En definitiva, las soluciones de agrupación en clústeres de contenedores resultan útiles tanto para una arquitectura tradicional de SOA como para una arquitectura de microservicios más avanzada en la que cada microservicio posee su modelo de datos. Y, gracias a varias bases de datos, también se puede escalar horizontalmente el nivel de datos en lugar de trabajar con bases de datos monolíticas compartidas por los servicios SOA. No obstante, la discusión sobre la división de los datos se centra exclusivamente en la arquitectura y el diseño.
+En definitiva, las soluciones de agrupación en clústeres de contenedores resultan útiles tanto para una arquitectura tradicional de SOA como para una arquitectura de microservicios más avanzada en la que cada microservicio posee su modelo de datos. Y, gracias a varias bases de datos, también puede escalar horizontalmente el nivel de datos en lugar de trabajar con bases de datos monolíticas compartidas por los servicios SOA. No obstante, la discusión sobre la división de los datos se centra exclusivamente en la arquitectura y el diseño.
 
 >[!div class="step-by-step"]
 >[Anterior](state-and-data-in-docker-applications.md)

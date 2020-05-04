@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: a416192f-8102-458e-bc0a-0b8f3f784da9
 ms.openlocfilehash: 2301f30a55e136b9a75a414d9325e4cf71c161da
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78159538"
 ---
 # <a name="xml-serialization-with-xml-web-services"></a>Serialización XML con servicios Web XML
-La serialización XML es el mecanismo de transporte subyacente utilizado en la arquitectura de los servicios Web XML, realizada por la clase <xref:System.Xml.Serialization.XmlSerializer>. Para controlar el XML generado por un servicio web XML, puede aplicar los atributos de [Atributos que controlan la serialización XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) y [Atributos que controlan la serialización SOAP codificada](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md) a las clases, los valores devueltos, los parámetros y los campos de un archivo usados para crear un servicio web XML (.asmx). Para obtener más información sobre cómo crear un servicio Web XML, vea [servicios Web XML mediante ASP.net](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ba0z6a33(v=vs.100)).  
+La serialización XML es el mecanismo de transporte subyacente utilizado en la arquitectura de los servicios Web XML, realizada por la clase <xref:System.Xml.Serialization.XmlSerializer>. Para controlar el XML generado por un servicio web XML, puede aplicar los atributos de [Atributos que controlan la serialización XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) y [Atributos que controlan la serialización SOAP codificada](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md) a las clases, los valores devueltos, los parámetros y los campos de un archivo usados para crear un servicio web XML (.asmx). Para más información sobre cómo crear un servicio web XML, vea [Servicios web XML con ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ba0z6a33(v=vs.100)).  
   
 ## <a name="literal-and-encoded-styles"></a>Estilos literales y codificados  
- El XML generado por un servicio Web XML se puede formatear de una de estas dos formas, ya sea literal o codificado, como se explica en personalizar el formato de los [mensajes SOAP](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100)). Hay, por consiguiente, dos conjuntos de atributos que controlan la serialización XML. Los atributos que se mencionan en [Atributos que controlan la serialización XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) están diseñados para controlar el XML de estilo literal. Los atributos mencionados en [Atributos que controlan la serialización SOAP codificada](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md) controlan el estilo codificado. Aplicando selectivamente estos atributos, puede entallar una aplicación para devolver uno o ambos estilos. Además, estos atributos se pueden aplicar (según corresponda) a los valores devueltos y parámetros.  
+ Se puede aplicar formato al XML generado por un servicio web XML de dos maneras distintas, estilo literal o codificado, como se explica en [Personalizar el formato de mensajes SOAP](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100)). Hay, por consiguiente, dos conjuntos de atributos que controlan la serialización XML. Los atributos que se mencionan en [Atributos que controlan la serialización XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) están diseñados para controlar el XML de estilo literal. Los atributos mencionados en [Atributos que controlan la serialización SOAP codificada](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md) controlan el estilo codificado. Aplicando selectivamente estos atributos, puede entallar una aplicación para devolver uno o ambos estilos. Además, estos atributos se pueden aplicar (según corresponda) a los valores devueltos y parámetros.  
   
 ### <a name="example-of-using-both-styles"></a>Ejemplo de utilizar ambos estilos  
  Al estar creando un servicio Web XML, puede utilizar ambos conjuntos de atributos en los métodos. En el ejemplo de código siguiente, la clase denominada `MyService` contiene dos métodos de servicios Web XML, `MyLiteralMethod` y `MyEncodedMethod`. Ambos métodos realizan la misma función: devolviendo una instancia de la clase `Order`. En la clase `Order`, los atributos <xref:System.Xml.Serialization.XmlTypeAttribute> y <xref:System.Xml.Serialization.SoapTypeAttribute> se aplican al campo `OrderID` y ambos tienen la propiedad `ElementName` establecida en valores diferentes.  
@@ -262,8 +262,8 @@ public class Order {
 
 - [Serialización SOAP y XML](xml-and-soap-serialization.md)
 - [Atributos que controlan la serialización SOAP codificada](attributes-that-control-encoded-soap-serialization.md)
-- [Cómo: Serializar un objeto como secuencia XML con codificación SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
-- [Cómo: Invalidar la serialización XML SOAP codificada](how-to-override-encoded-soap-xml-serialization.md)
+- [Cómo: serializar un objeto como secuencia XML con codificación SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
+- [Cómo: invalidar la serialización XML SOAP codificada](how-to-override-encoded-soap-xml-serialization.md)
 - [Introducción a la serialización XML](introducing-xml-serialization.md)
-- [Cómo: Serializar un objeto](how-to-serialize-an-object.md)
-- [Cómo: Deserializar un objeto](how-to-deserialize-an-object.md)
+- [Cómo: serializar un objeto](how-to-serialize-an-object.md)
+- [Cómo: deserializar un objeto](how-to-deserialize-an-object.md)

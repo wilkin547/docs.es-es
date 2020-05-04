@@ -3,12 +3,12 @@ title: Historia de C# - Guía de C#
 description: ¿Qué aspecto tenía el lenguaje en sus primeras versiones y cómo ha evolucionado desde entonces?
 author: erikdietrich
 ms.date: 04/08/2020
-ms.openlocfilehash: f321b9c742fed6fb1efaf8fbb1914c203dd6391b
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: ed9555bcef1c71964937c2bc18fedbc7da94f0db
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389108"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738151"
 ---
 # <a name="the-history-of-c"></a>Historia de C\#
 
@@ -17,7 +17,7 @@ En este artículo se proporciona un historial de cada versión principal del len
 > [!IMPORTANT]
 > El lenguaje C# se basa en tipos y métodos en lo que la especificación de C# define como una *biblioteca estándar* para algunas de las características. La plataforma .NET ofrece los tipos y métodos en un número de paquetes. Un ejemplo es el procesamiento de excepciones. Cada expresión o instrucción `throw` se comprueba para asegurarse de que el objeto que se genera deriva de <xref:System.Exception>. Del mismo modo, cada `catch` se comprueba para asegurarse de que el tipo que se captura deriva de <xref:System.Exception>. Cada versión puede agregar requisitos nuevos. Para usar las características más recientes del lenguaje en entornos anteriores, es posible que tenga que instalar bibliotecas específicas. Estas dependencias están documentadas en la página de cada versión específica. Puede obtener más información sobre las [relaciones entre lenguaje y biblioteca](relationships-between-language-and-library.md) para tener más antecedentes sobre esta dependencia.
 
-Las herramientas de compilación de C# consideran que la última versión principal del lenguaje es la versión predeterminada. Puede haber versiones secundarias entre versiones principales, que se detallan en los otros artículos de esta sección. Para usar las características más recientes en una versión secundaria, tendrá que [configurar la versión del idioma de compilador](../language-reference/configure-language-version.md) y seleccionar la versión. Ha habido tres versiones secundarias desde C# 7.0:
+Las herramientas de compilación de C# consideran que la última versión principal del lenguaje es la versión predeterminada. Puede haber versiones secundarias entre versiones principales, que se detallan en los otros artículos de esta sección. Para usar las características más recientes en una versión secundaria, tendrá que [configurar la versión del idioma de compilador](../language-reference/configure-language-version.md) y seleccionar la versión. Ha habido tres versiones secundarias desde C# 7.0:
 
 - [C# 7.3](csharp-7-3.md):
   - C# 7.3 está disponible a partir de la [versión 15.7 de Visual Studio 2017](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) y el [SDK de .NET Core 2.1](../../core/whats-new/dotnet-core-2-1.md).

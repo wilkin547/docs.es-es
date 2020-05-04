@@ -4,12 +4,12 @@ description: Use un administrador de paquetes para instalar el SDK y el entorno 
 author: thraka
 ms.author: adegeo
 ms.date: 03/17/2020
-ms.openlocfilehash: fd6f42684aa9fb3ea9429b80f858459698a1b825
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 038f5579f99f700ce47dc67be2fd344f01cf800c
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134326"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595625"
 ---
 # <a name="debian-10-package-manager---install-net-core"></a>Administrador de paquetes de Debian 10: instalación de .NET Core
 
@@ -19,12 +19,12 @@ En este artículo se describe cómo usar un administrador de paquetes para insta
 
 [!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
-## <a name="register-microsoft-key-and-feed"></a>Registro de la clave y la fuente de Microsoft
+## <a name="add-microsoft-repository-key-and-feed"></a>Adición de la clave y la fuente del repositorio de Microsoft
 
 Antes de instalar .NET, deberá realizar lo siguiente:
 
-- Registrar la clave de Microsoft.
-- Registrar el repositorio del producto.
+- Agregar la clave de firma del paquete de Microsoft a la lista de claves de confianza.
+- Agregar el repositorio al administrador de paquetes.
 - Instalar las dependencias necesarias.
 
 Esto solo se debe hacer una vez por máquina.
@@ -32,7 +32,7 @@ Esto solo se debe hacer una vez por máquina.
 Abra un terminal y ejecute los comandos siguientes.
 
 ```bash
-wget -O- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.asc.gpg
+wget -O - https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.asc.gpg
 sudo mv microsoft.asc.gpg /etc/apt/trusted.gpg.d/
 wget https://packages.microsoft.com/config/debian/10/prod.list
 sudo mv prod.list /etc/apt/sources.list.d/microsoft-prod.list

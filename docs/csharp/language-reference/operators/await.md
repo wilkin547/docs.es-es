@@ -7,16 +7,16 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 9f541ae9c26eb12acdcf9a8c59bab98c4772c3b0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 83ee51fcbcc5911c688e30542cefb1c56578a578
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173450"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82141023"
 ---
 # <a name="await-operator-c-reference"></a>Operador await (referencia de C#)
 
-El operador `await` suspende la evaluación del método [async](../keywords/async.md) envolvente hasta que se completa la operación asincrónica representada por su operando. Cuando se completa la operación asincrónica, el operador `await` devuelve el resultado de la operación, si existe. Cuando el operador `await` se aplica al operando que representa la operación ya completada, devuelve el resultado de la operación inmediatamente sin suspender el método envolvente. El operador `await` no bloquea el subproceso que evalúa el método async. Cuando el operador `await` suspende el método async envolvente, el control vuelve al autor de la llamada del método.
+El operador `await` suspende la evaluación del método [async](../keywords/async.md) envolvente hasta que se completa la operación asincrónica representada por su operando. Cuando se completa la operación asincrónica, el operador `await` devuelve el resultado de la operación, si existe. Cuando el operador `await` se aplica al operando que representa una operación ya completada, devuelve el resultado de la operación inmediatamente sin suspender el método envolvente. El operador `await` no bloquea el subproceso que evalúa el método async. Cuando el operador `await` suspende el método async envolvente, el control vuelve al autor de la llamada del método.
 
 En el ejemplo siguiente, el método <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=nameWithType> devuelve la instancia `Task<byte[]>`, que representa una operación asincrónica que genera una matriz de bytes cuando se completa. Hasta que se complete la operación, el operador `await` suspende el método `DownloadDocsMainPageAsync`. Cuando se suspende `DownloadDocsMainPageAsync`, se devuelve el control `Main` al método, que es el autor de la llamada a `DownloadDocsMainPageAsync`. El método `Main` se ejecuta hasta que necesita el resultado de la operación asincrónica realizada por el método `DownloadDocsMainPageAsync`. Cuando <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> obtiene todos los bytes, se evalúa el resto del método `DownloadDocsMainPageAsync`. Después, se evalúa el resto del método `Main`.
 

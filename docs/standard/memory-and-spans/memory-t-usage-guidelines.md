@@ -4,12 +4,12 @@ ms.date: 10/01/2018
 helpviewer_keywords:
 - Memory&lt;T&gt; and Span&lt;T&gt; best practices
 - using Memory&lt;T&gt; and Span&lt;T&gt;
-ms.openlocfilehash: 0a614f628faa98be778c627573e4dddc462c9107
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b89969f212da6ac90d0fb0d1bf388626e136b92e
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73121957"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158598"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Instrucciones de uso de Memory\<T> y Span\<T>
 
@@ -23,7 +23,7 @@ Puesto que los búferes se pueden pasar entre las API, y que se, a veces, se pue
 
 - **Propiedad**. El propietario de una instancia de búfer es responsable de la administración de la duración, por ejemplo, destruir el búfer cuando ya no se use. Todos los búferes tienen un único propietario. Por lo general, el propietario es el componente que creó el búfer o que recibió el búfer de una fábrica. También se puede transferir la propiedad; **Component-A** puede ceder el control del búfer a **Component-B**, momento en que **Component-A** ya no puede usar más el búfer, y **Component-B** pasa a ser responsable de destruir el búfer cuando ya no se usa.
 
-- **Consumo**. El consumidor de una instancia de búfer puede usar la instancia de búfer leyéndolo y, posiblemente, escribir en él. Los búferes pueden tener un consumidor a la vez, a menos que se proporcione algún mecanismo de sincronización externo. Tenga en cuenta que el consumidor activo de un búfer no es necesariamente el propietario del búfer.
+- **Consumo**. El consumidor de una instancia de búfer puede usar la instancia de búfer leyéndolo y, posiblemente, escribir en él. Los búferes pueden tener un consumidor a la vez, a menos que se proporcione algún mecanismo de sincronización externo. El consumidor activo de un búfer no es necesariamente el propietario del búfer.
 
 - **Concesión**. La concesión es el período durante el cual un componente concreto puede ser el consumidor del búfer.
 
@@ -86,7 +86,7 @@ En este código:
 
 - Los métodos `WriteInt32ToBuffer` y `DisplayBufferToConsole` aceptan <xref:System.Memory%601> como API pública. Por lo tanto, son consumidores del búfer. Y solo lo consumen de uno en uno.
 
-Aunque el método `WriteInt32ToBuffer` está diseñado para escribir un valor en el búfer, el método`DisplayBufferToConsole`, no. Para reflejar esto, podría haber aceptado un argumento de tipo <xref:System.ReadOnlyMemory%601>. Para obtener más información sobre <xref:System.ReadOnlyMemory%601>, consulte [Regla 2: Use ReadOnlySpan\<T> o ReadOnlyMemory\<T> si el búfer debe ser de solo lectura](#rule-2).
+Aunque el método `WriteInt32ToBuffer` está diseñado para escribir un valor en el búfer, el método`DisplayBufferToConsole`, no. Para reflejar esto, podría haber aceptado un argumento de tipo <xref:System.ReadOnlyMemory%601>. Para más información sobre <xref:System.ReadOnlyMemory%601>, vea [Regla 2: Use ReadOnlySpan\<T> o ReadOnlyMemory\<T> si el búfer debe ser de solo lectura](#rule-2).
 
 ### <a name="ownerless-memoryt-instances"></a>Instancias de Memory\<T> "sin propietario"
 
@@ -110,7 +110,7 @@ Dado que un bloque de memoria tiene un propietario, pero está diseñado para pa
 
 - Si bien la naturaleza asignada a la pila de <xref:System.Span%601> optimiza el rendimiento y convierte a <xref:System.Span%601> en el tipo preferido para funcionar en un bloque de memoria, también somete a <xref:System.Span%601> a algunas restricciones principales. Es importante saber cuándo usar <xref:System.Span%601> y <xref:System.Memory%601>.
 
-A continuación, se muestran recomendaciones para usar correctamente <xref:System.Memory%601> y sus tipos relacionados. Tenga en cuenta que la guía que se aplica a <xref:System.Memory%601> y <xref:System.Span%601> también se aplica a <xref:System.ReadOnlyMemory%601> y <xref:System.ReadOnlySpan%601>, a menos que se indique explícitamente lo contrario.
+A continuación, se muestran recomendaciones para usar correctamente <xref:System.Memory%601> y sus tipos relacionados. Las instrucciones que se aplican a <xref:System.Memory%601> y a <xref:System.Span%601> son válidas también para <xref:System.ReadOnlyMemory%601> y <xref:System.ReadOnlySpan%601>, a menos que se indique expresamente lo contrario.
 
 **Regla 1: Para una API sincrónica, use Span\<T> en lugar de Memory\<T> como un parámetro si es posible.**
 
@@ -336,7 +336,7 @@ public unsafe Task<int> ManagedWrapperAsync(Memory<byte> data)
 private static void MyCompletedCallbackImplementation(IntPtr state, int result)
 {
     GCHandle handle = (GCHandle)state;
-    var actualState = (MyCompletedCallbackState)state;
+    var actualState = (MyCompletedCallbackState)(handle.Target);
     handle.Free();
     actualState.MemoryHandle.Dispose();
 

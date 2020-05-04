@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Emitir código en escenarios que no son de plena confianza'
+title: 'Tutorial: Emisión de código en escenarios que no son de plena confianza'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 ms.openlocfilehash: fd420c9754494b95c55df403edec87743572db03
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73129989"
 ---
-# <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Tutorial: Emitir código en escenarios que no son de plena confianza
+# <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Tutorial: Emisión de código en escenarios que no son de plena confianza
 
 La emisión de reflexión usa el mismo conjunto de API con confianza completa o parcial, pero algunas características requieren permisos especiales en entornos de confianza parcial. Además, la emisión de reflexión tiene una característica, los métodos dinámicos hospedados de forma anónima, diseñada para su uso en entornos de confianza parcial y por ensamblados transparentes en seguridad.
 
@@ -69,7 +69,7 @@ En el procedimiento siguiente se crea un dominio de aplicación en un espacio ai
 2. Cree un objeto <xref:System.AppDomainSetup> para inicializar el dominio de aplicación con una ruta de aplicación.
 
     > [!IMPORTANT]
-    > Para simplificar, en este ejemplo de código se usa la carpeta actual. Para ejecutar código que procede de Internet, use una carpeta independiente para el código que no es de confianza, tal y como se describe en [Cómo: Ejecutar código de confianza parcial en un espacio aislado](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md).
+    > Para simplificar, en este ejemplo de código se usa la carpeta actual. Para ejecutar código que procede de Internet, use una carpeta independiente para el código que no es de confianza, como se describe en [Cómo: Ejecutar código de confianza parcial en un espacio aislado](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md).
 
     [!code-csharp[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#3)]
     [!code-vb[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#3)]

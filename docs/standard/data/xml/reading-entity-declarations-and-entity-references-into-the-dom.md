@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 86dba977-5cc4-4567-964f-027ffabc47b2
 ms.openlocfilehash: fa650e75d7661eeafea74146f5cbb61878978575
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710406"
@@ -33,7 +33,7 @@ Una entidad es una declaración que establece un nombre que se va a utilizar en 
   
  que expande la referencia de entidad y se reemplaza `&publisher;` por el contenido de Microsoft Press, se proporciona el siguiente código XML expandido.  
   
- **Resultado**  
+ **Salida**  
   
 ```xml  
 <author>Fred</author>  
@@ -42,13 +42,13 @@ Una entidad es una declaración que establece un nombre que se va a utilizar en 
   
  Hay muchos tipos de entidades. En el diagrama siguiente se muestra la división de los tipos de entidades y terminología.  
   
- ![diagrama de flujo de la jerarquía de tipos de entidad](../../../../docs/standard/data/xml/media/entity-hierarchy.gif "Entity_hierarchy")  
+ ![Diagrama de flujo de la jerarquía de tipos de entidad](../../../../docs/standard/data/xml/media/entity-hierarchy.gif "Entity_hierarchy")  
   
  La forma predeterminada para la implementación Microsoft .NET Framework de Document Object Model (DOM) XML es preservar las referencias de entidades y no expandir las entidades cuando se carga XML. Esto implica que, al cargar un documento en DOM, se crea un nodo **XmlEntityReference** que contiene la variable de referencia `&publisher;` con nodos secundarios que representan el contenido de la entidad declarado en la DTD.  
   
  El diagrama siguiente muestra los nodos **XmlEntity** y **XmlText** creados a partir de la declaración de entidad `<!ENTITY publisher "Microsoft Press">`.  
   
- ![nodos creados a partir de la declaración de entidad](../../../../docs/standard/data/xml/media/xml-entitydeclaration-node2.png "xml_entitydeclaration_node2")  
+ ![Nodos creados a partir de la declaración de entidad](../../../../docs/standard/data/xml/media/xml-entitydeclaration-node2.png "xml_entitydeclaration_node2")  
   
  Las diferencias existentes al expandir o no referencias de entidad determinan los nodos generados en el árbol DOM, en la memoria. Las diferencias en los nodos generados se explican en los temas [Se preservan las referencias de entidad](../../../../docs/standard/data/xml/entity-references-are-preserved.md) y [Se expanden las referencias de entidad pero no se preservan](../../../../docs/standard/data/xml/entity-references-are-expanded-and-not-preserved.md).  
   

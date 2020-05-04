@@ -6,7 +6,7 @@ helpviewer_keywords:
 - marshaling data, COM interop
 ms.openlocfilehash: ae41713d5349321725599c0c38d7c6fc515c374b
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181373"
@@ -23,7 +23,7 @@ La interoperabilidad COM proporciona compatibilidad para usar objetos COM desde 
  Las secciones siguientes se vinculan a los temas que describen los procesos para personalizar los contenedores de interoperabilidad si puede (o debe) suministrar información adicional sobre tipos al contador al serializador.  
   
 ## <a name="in-this-section"></a>En esta sección  
-[Cómo: Crear Envoltorios Manualmente](how-to-create-wrappers-manually.md) Describe cómo crear un contenedor COM manualmente en código fuente administrado.
+[Cómo: para la creación manual de contenedores](how-to-create-wrappers-manually.md) Describe cómo crear manualmente un contenedor COM en código fuente administrado.
 
  [Cómo: Migrar código administrado DCOM a WCF](how-to-migrate-managed-code-dcom-to-wcf.md)  
  Describe cómo migrar código DCOM administrado a WCF para obtener la solución más segura.  
@@ -47,5 +47,5 @@ La interoperabilidad COM proporciona compatibilidad para usar objetos COM desde 
  [Resumen de la conversión de bibliotecas de tipos en ensamblados](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))  
  Describe el proceso de conversión de la importación de biblioteca de tipos a ensamblado.  
   
- [Interoperar utilizando tipos genéricos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))  
+ [Interoperar mediante tipos genéricos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))  
  Describe qué acciones se admiten al usar tipos genéricos para la interoperabilidad COM.

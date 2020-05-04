@@ -2,13 +2,13 @@
 title: Tutorial Depuración de una fuga de memoria
 description: Obtenga información sobre cómo depurar una fuga de memoria en .NET Core.
 ms.topic: tutorial
-ms.date: 12/17/2019
-ms.openlocfilehash: 014945394f87edd02c94f7c3b28043bd07470d8b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/20/2020
+ms.openlocfilehash: d47992bab9dab64cf7f88ff679eef407dd891b5a
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76737736"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021360"
 ---
 # <a name="tutorial-debug-a-memory-leak-in-net-core"></a>Tutorial: Depuración de una fuga de memoria en .NET Core
 
@@ -137,7 +137,7 @@ En este tutorial, ya ha terminado con el [destino de depuración de ejemplo](htt
 
 ### <a name="analyze-the-core-dump"></a>Análisis del volcado de memoria principal
 
-Ahora que ha generado un volcado de memoria principal, use la herramienta [dotnet-dump)](dotnet-dump.md) para analizar el volcado de memoria:
+Ahora que ha generado un volcado de memoria principal, use la herramienta [dotnet-dump](dotnet-dump.md) para analizar el volcado de memoria:
 
 ```dotnetcli
 dotnet-dump analyze core_20190430_185145
@@ -146,7 +146,7 @@ dotnet-dump analyze core_20190430_185145
 Donde `core_20190430_185145` es el nombre del volcado de memoria principal que desea analizar.
 
 > [!NOTE]
-> Si ve un error que indica que no se encuentra *libdl.so*, es posible que tenga que instalar el paquete *libc6-dev*. Para más información, consulte [Requisitos previos para .NET Core en Linux](../linux-prerequisites.md).
+> Si ve un error que indica que no se encuentra *libdl.so*, es posible que tenga que instalar el paquete *libc6-dev*. Para más información, consulte [Requisitos previos para .NET Core en Linux](../install/dependencies.md?pivots=os-linux).
 
 Se le mostrará un mensaje en el que puede escribir comandos SOS. Normalmente, lo primero que desea ver es el estado general del montón administrado:
 

@@ -1,21 +1,21 @@
 ---
 title: Cifrado
 ms.date: 12/13/2019
-description: Obtenga información acerca de cómo cifrar el archivo de base de datos.
+description: Obtenga información sobre cómo cifrar el archivo de base de datos.
 ms.openlocfilehash: ccdd4b6b8642b3cde1c2667c9ca432a9b0ef21f2
 ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75450487"
 ---
 # <a name="encryption"></a>Cifrado
 
-SQLite no admite el cifrado de archivos de base de datos de forma predeterminada. En su lugar, debe usar una versión modificada de SQLite como [Ver](https://www.hwaci.com/sw/sqlite/see.html), [SQLCipher](https://www.zetetic.net/sqlcipher/), [SQLiteCrypt](http://www.sqlite-crypt.com/)o [wxSQLite3](https://utelle.github.io/wxsqlite3). En este artículo se muestra el uso de una compilación no compatible de código abierto de SQLCipher, pero la información también se aplica a otras soluciones, ya que generalmente siguen el mismo patrón.
+SQLite no permite cifrar archivos de base de datos de forma predeterminada. En su lugar, hay que usar una versión modificada de SQLite, como [SEE](https://www.hwaci.com/sw/sqlite/see.html), [SQLCipher](https://www.zetetic.net/sqlcipher/), [SQLiteCrypt](http://www.sqlite-crypt.com/) o [wxSQLite3](https://utelle.github.io/wxsqlite3). En este artículo se explica cómo usar una versión de código abierto y no compatible de SQLCipher, pero esta información es igualmente válida en otras soluciones, ya que básicamente siguen el mismo patrón.
 
-## <a name="installation"></a>Instalación de
+## <a name="installation"></a>Instalación
 
-### <a name="net-core-clitabnetcore-cli"></a>[CLI de .NET Core](#tab/netcore-cli)
+### <a name="net-core-cli"></a>[CLI de .NET Core](#tab/netcore-cli)
 
 ```dotnetcli
 dotnet remove package Microsoft.Data.Sqlite
@@ -23,7 +23,7 @@ dotnet add package Microsoft.Data.Sqlite.Core
 dotnet add package SQLitePCLRaw.bundle_e_sqlcipher
 ```
 
-### <a name="visual-studiotabvisual-studio"></a>[Visual Studio](#tab/visual-studio)
+### <a name="visual-studio"></a>[Visual Studio](#tab/visual-studio)
 
 ``` PowerShell
 Remove-Package Microsoft.Data.Sqlite
@@ -33,18 +33,18 @@ Install-Package SQLitePCLRaw.bundle_e_sqlcipher
 
 ---
 
-Para obtener más información sobre el uso de una biblioteca nativa diferente para el cifrado, consulte [versiones personalizadas de SQLite](custom-versions.md).
+Para más información sobre cómo usar otra biblioteca nativa para el cifrado, vea [Versiones personalizadas de SQLite](custom-versions.md).
 
-## <a name="specify-the-key"></a>Especificar la clave
+## <a name="specify-the-key"></a>Especificación de la clave
 
-Para habilitar el cifrado, especifique la clave mediante la palabra clave de cadena de conexión `Password`. Use <xref:Microsoft.Data.Sqlite.SqliteConnectionStringBuilder> para agregar o actualizar el valor de los datos proporcionados por el usuario y evitar ataques de inyección de cadenas de conexión.
+Para permitir el cifrado, especifique la clave por medio de la palabra clave de cadena de conexión `Password`. Use <xref:Microsoft.Data.Sqlite.SqliteConnectionStringBuilder> para agregar o actualizar el valor de la entrada del usuario y evitar ataques de inyección de cadenas de conexión.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/EncryptionSample/Program.cs?name=snippet_ConnectionStringBuilder)]
 
-## <a name="rekeying-the-database"></a>Regenerar la clave de la base de datos
+## <a name="rekeying-the-database"></a>Generación de una nueva clave de base de datos
 
-Si desea cambiar la clave de cifrado de una base de datos, emita una instrucción `PRAGMA rekey`. Para descifrar la base de datos, especifique `NULL`.
+Si quiere cambiar la clave de cifrado de una base de datos, emita una instrucción `PRAGMA rekey`. Para descifrar la base de datos, especifique `NULL`.
 
-Desafortunadamente, SQLite no admite parámetros en `PRAGMA` instrucciones. En su lugar, use la función `quote()` para evitar la inyección de SQL.
+Desafortunadamente, SQLite no admite el uso de parámetros en las instrucciones `PRAGMA`. En su lugar, use la función `quote()` para evitar la inyección de código SQL.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/EncryptionSample/Program.cs?name=snippet_Rekey)]

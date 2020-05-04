@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 3ce45919-388a-418c-8968-6df0372c73ec
 ms.openlocfilehash: 02027a238bc9a2f82963ea841584d2bb3c6446c6
 ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 06/27/2019
 ms.locfileid: "67410548"
 ---
-# <a name="systemxmlserialization-element"></a>\<System.Xml.Serialization > elemento
+# <a name="systemxmlserialization-element"></a>Elemento \<system.xml.serialization>
 
 El elemento de nivel superior para controlar la serialización XML. Para más información sobre los archivos de configuración, vea [Configuration File Schema](../../../docs/framework/configure-apps/file-schema/index.md) (Esquema de archivos de configuración).
 
@@ -73,4 +73,4 @@ El ejemplo de código siguiente muestra cómo especificar el modo de la serializ
 - [Esquema de los archivos de configuración](../../../docs/framework/configure-apps/file-schema/index.md)
 - [Elemento \<dateTimeSerialization>](../../../docs/standard/serialization/datetimeserialization-element.md)
 - [Elemento \<schemaImporterExtensions>](../../../docs/standard/serialization/schemaimporterextensions-element.md)
-- [\<Agregar > elemento para \<schemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
+- Elemento [\<add> de \<schemaImporterExtensions>](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)

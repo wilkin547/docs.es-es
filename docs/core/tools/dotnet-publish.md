@@ -2,12 +2,12 @@
 title: Comando dotnet publish
 description: El comando dotnet publish publica el proyecto o la solución de .NET Core en un directorio.
 ms.date: 02/24/2020
-ms.openlocfilehash: 0e18220443f3713c86c257fcf401b98ddd716ebc
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 78ed8098be1b6887fc6a2a647fd169e2bf7f7fd1
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588266"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102806"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -20,13 +20,16 @@ ms.locfileid: "80588266"
 ## <a name="synopsis"></a>Sinopsis
 
 ```dotnetcli
-dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration]
-    [-f|--framework] [--force] [--interactive] [--manifest]
-    [--no-build] [--no-dependencies] [--no-restore] [--nologo]
-    [-o|--output] [-r|--runtime] [--self-contained]
-    [--no-self-contained] [-v|--verbosity] [--version-suffix]
+dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
+    [-f|--framework <FRAMEWORK>] [--force] [--interactive]
+    [--manifest <PATH_TO_MANIFEST_FILE>] [--no-build] [--no-dependencies]
+    [--no-restore] [--nologo] [-o|--output <OUTPUT_DIRECTORY>]
+    [-p:PublishReadyToRun=true] [-p:PublishSingleFile=true] [-p:PublishTrimmed=true]
+    [-r|--runtime <RUNTIME_IDENTIFIER>] [--self-contained [true|false]]
+    [--no-self-contained] [-v|--verbosity <LEVEL>]
+    [--version-suffix <VERSION_SUFFIX>]
 
-dotnet publish [-h|--help]
+dotnet publish -h|--help
 ```
 
 ## <a name="description"></a>Descripción
@@ -39,6 +42,10 @@ dotnet publish [-h|--help]
 - Las dependencias de la aplicación, que se copian de la caché de NuGet a la carpeta de salida.
 
 La salida del comando `dotnet publish` está lista para la implementación en un sistema de hospedaje (por ejemplo, un servidor, un equipo PC o Mac, un portátil) para la ejecución. Es la única manera admitida oficialmente para preparar la aplicación para la implementación. Dependiendo del tipo de implementación que especifique el proyecto, el sistema de hospedaje puede o no tener instalado el entorno de tiempo de ejecución compartido de .NET Core. Para obtener más información, vea [Publicación de aplicaciones .NET Core con la CLI de .NET Core](../deploying/deploy-with-cli.md).
+
+### <a name="implicit-restore"></a>Restauración implícita
+
+[!INCLUDE[dotnet restore note](~/includes/dotnet-restore-note.md)]
 
 ### <a name="msbuild"></a>MSBuild
 
@@ -114,6 +121,12 @@ Para obtener más información, vea los siguientes recursos:
   
   Si no se especifica, el valor predeterminado es *[project_file_folder]./bin/[configuration]/[framework]/publish/* para un archivo ejecutable dependiente del tiempo de ejecución y archivos binarios multiplataforma. El valor predeterminado es *[project_file_folder]/bin/[configuration]/[framework]/[runtime]/publish/* para un archivo ejecutable autocontenido.
 
+  En un proyecto web, si la carpeta de salida se encuentra en la carpeta del proyecto, los comandos `dotnet publish` posteriores dan como resultado carpetas de salida anidadas. Por ejemplo, si la carpeta del proyecto es *myproject* y la carpeta de salida de la publicación es *myproject/publish*, y ejecuta `dotnet publish` dos veces, la segunda ejecución coloca los archivos de contenido, como *.config* y *.json*, en *myproject/publish/publish*. Para evitar el anidamiento de carpetas de publicación, especifique una que no esté directamente en la carpeta del proyecto, o bien excluya la carpeta de publicación del proyecto. Para excluir una carpeta de publicación denominada *publishoutput*, agregue el elemento siguiente a un elemento `PropertyGroup` en el archivo *.csproj*:
+
+  ```xml
+  <DefaultItemExcludes>$(DefaultItemExcludes);publishoutput**</DefaultItemExcludes>
+  ```
+
   - SDK de .NET Core 3.x y versiones posteriores
   
     Si se especifica una ruta de acceso relativa al publicar un proyecto, el directorio de salida generado es relativo al directorio de trabajo actual, no a la ubicación del archivo del proyecto.
@@ -125,6 +138,26 @@ Para obtener más información, vea los siguientes recursos:
     Si se especifica una ruta de acceso relativa al publicar un proyecto, el directorio de salida generado es relativo a la ubicación del archivo del proyecto, no al directorio de trabajo actual.
 
     Si se especifica una ruta de acceso relativa al publicar una solución, la salida de cada proyecto va a una carpeta independiente relativa a la ubicación del archivo del proyecto. Si se especifica una ruta de acceso absoluta al publicar una solución, la salida de las publicaciones de todos los proyectos van a la carpeta especificada.
+
+- **`-p:PublishReadyToRun=true`**
+
+  Compila los ensamblados de aplicación con el formato ReadyToRun (R2R). R2R es una forma de compilación Ahead Of Time (AOT). Para obtener más información, vea [Imágenes ReadyToRun](../whats-new/dotnet-core-3-0.md#readytorun-images). Disponible desde el SDK de .NET Core 3.0.
+
+  Se recomienda especificar esta opción en un perfil de publicación en lugar de hacerlo en la línea de comandos. Para obtener más información, vea [MSBuild](#msbuild).
+
+- **`-p:PublishSingleFile=true`**
+
+  Empaqueta la aplicación en un ejecutable de archivo único específico de la plataforma. El archivo ejecutable es autoextraíble y contiene todas las dependencias (incluidas las nativas) necesarias para ejecutar la aplicación. Cuando la aplicación se ejecuta por primera vez, se extrae en un directorio que se basa en el nombre de la aplicación y el identificador de compilación. El inicio es más rápido cuando se vuelve a ejecutar la aplicación. No es necesario extraer la aplicación por segunda vez a menos que se haya usado una versión nueva. Disponible desde el SDK de .NET Core 3.0.
+
+  Para obtener más información sobre la publicación de archivos únicos, vea el [documento de diseño del programa de instalación de conjunto de archivos únicos](https://github.com/dotnet/designs/blob/master/accepted/2020/single-file/design.md).
+
+  Se recomienda especificar esta opción en un perfil de publicación en lugar de hacerlo en la línea de comandos. Para obtener más información, vea [MSBuild](#msbuild).
+
+- **`-p:PublishTrimmed=true`**
+
+  Recorta las bibliotecas no utilizadas para reducir el tamaño de implementación de una aplicación cuando se publica un ejecutable independiente. Para obtener más información, vea [Recorte de implementaciones autocontenidas y ejecutables](../deploying/trim-self-contained.md). Disponible desde el SDK de .NET Core 3.0.
+
+  Se recomienda especificar esta opción en un perfil de publicación en lugar de hacerlo en la línea de comandos. Para obtener más información, vea [MSBuild](#msbuild).
 
 - **`--self-contained [true|false]`**
 
@@ -203,3 +236,4 @@ Para obtener más información, vea los siguientes recursos:
 - [Referencia de la línea de comandos de MSBuild](/visualstudio/msbuild/msbuild-command-line-reference)
 - [Perfiles de publicación (.pubxml) de Visual Studio para la implementación de aplicaciones ASP.NET Core](/aspnet/core/host-and-deploy/visual-studio-publish-profiles)
 - [dotnet msbuild](dotnet-msbuild.md)
+- [ILLInk.Tasks](https://aka.ms/dotnet-illink)

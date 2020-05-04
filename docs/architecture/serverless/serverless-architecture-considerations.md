@@ -3,13 +3,13 @@ title: 'Consideraciones sobre la arquitectura sin servidor: aplicaciones sin ser
 description: Comprenda los desafíos de diseñar aplicaciones sin servidor, desde la administración de estados y el almacenamiento persistente hasta el escalado, el registro, el seguimiento y el diagnóstico.
 author: JEREMYLIKNESS
 ms.author: jeliknes
-ms.date: 06/26/2018
-ms.openlocfilehash: c856683cf6910be98661e634246cd003b93a6d76
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/06/2020
+ms.openlocfilehash: 3c07e1149e6af41a6b9a9317238e5c71015d2c4e
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72522430"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135677"
 ---
 # <a name="serverless-architecture-considerations"></a>Consideraciones sobre la arquitectura sin servidor
 
@@ -23,7 +23,7 @@ Hay varias soluciones para adoptar el estado sin poner en peligro las ventajas d
 
 - Usar un almacén de datos temporal o una memoria caché distribuida, como Redis
 - Almacenar el estado en una base de datos, como SQL o CosmosDB
-- Controlar el estado a través de un motor de flujo de trabajo como funciones duraderas
+- Controlar el estado a través de un motor de flujo de trabajo como [funciones duraderas](https://docs.microsoft.com/azure/azure-functions/durable/durable-functions-overview)
 
 En resumidas cuentas, debe ser consciente de la necesidad de cualquier administración de estados en aquellos procesos que tiene en mente implementar con sin servidor.
 
@@ -79,7 +79,7 @@ Para más información, consulte [Implementar el patrón de interruptor](../micr
 
 ## <a name="versioning-and-greenblue-deployments"></a>Control de versiones e implementaciones azul-verde
 
-Una ventaja importante de sin servidor es la capacidad de actualizar una función específica sin tener que volver a implementar toda la aplicación. Para que las actualizaciones se realicen correctamente, se deben realizar versiones de las funciones de modo que los servicios que las llaman se enruten a la versión correcta del código. Una estrategia para implementar nuevas versiones también es importante. Un enfoque habitual es usar "implementaciones azul-verde". La implementación verde es la función actual. Una nueva versión "azul" se implementa en producción y se prueba. Al superarse las pruebas, las versiones verde y azul se intercambian, de modo que la nueva versión se pone en marcha. Si se detecta algún problema, pueden volver a intercambiarse. La compatibilidad con el control de versiones y las implementaciones azul-verde requiere una combinación de creación de las funciones para alojar los cambios de versión y trabajo con la plataforma sin servidor para controlar las implementaciones. Un posible enfoque consiste en usar servidores proxy, que se describen en el capítulo [Plataforma sin servidor de Azure](azure-functions.md#proxies).
+Una ventaja importante de sin servidor es la capacidad de actualizar una función específica sin tener que volver a implementar toda la aplicación. Para que las actualizaciones se realicen correctamente, se deben realizar versiones de las funciones de modo que los servicios que las llaman se enruten a la versión correcta del código. Una estrategia para implementar nuevas versiones también es importante. Un enfoque habitual es usar "implementaciones azul-verde". La implementación verde es la función actual. Una nueva versión "azul" se implementa en producción y se prueba. Al superarse las pruebas, las versiones verde y azul se intercambian, de modo que la nueva versión se pone en marcha. Si se detecta algún problema, pueden volver a intercambiarse. La compatibilidad con el control de versiones y las implementaciones azul-verde requiere una combinación de creación de las funciones para alojar los cambios de versión y trabajo con la plataforma sin servidor para controlar las implementaciones.
 
 >[!div class="step-by-step"]
 >[Anterior](serverless-architecture.md)

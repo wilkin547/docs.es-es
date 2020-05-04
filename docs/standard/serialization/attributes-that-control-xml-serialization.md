@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: 414b820f-a696-4206-b576-2711d85490c7
 ms.openlocfilehash: 0d1aee4650ea29083348af482e445011289e9581
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61794971"
@@ -48,6 +48,6 @@ Se pueden aplicar atributos a clases y a miembros de clase en la siguiente tabla
 - [Serialización SOAP y XML](../../../docs/standard/serialization/xml-and-soap-serialization.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [Controlar la serialización XML mediante atributos](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
-- [Cómo: Especifique un nombre de elemento alternativo para un Stream XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [Cómo: Especificar un nombre de elemento alternativo para una secuencia XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
 - [Cómo: Serializar un objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
 - [Cómo: Deserializar un objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

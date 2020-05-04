@@ -32,12 +32,12 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 4b2506f48c3e72ff838a07087c8c5d9ea63bb46c
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 51ea64065ea8422e5885022105545780bc916f06
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121466"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739004"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Tipos numéricos enteros (referencia de C#)
 
@@ -109,7 +109,7 @@ byte b = 300;   // CS0031: Constant value '300' cannot be converted to a 'byte'
 
 Como se muestra en el ejemplo anterior, si el valor del literal no está dentro del intervalo del tipo de destino, se produce el error [CS0031](../../misc/cs0031.md) del compilador.
 
-También puede usar una conversión para convertir el valor representado por un literal entero al tipo que no sea el tipo determinado del literal:
+También puede usar una conversión para convertir el valor representado por un literal entero en un tipo que no sea el determinado del literal:
 
 ```csharp
 var signedByte = (sbyte)42;

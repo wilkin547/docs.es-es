@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
 ms.openlocfilehash: f0094ac572834b2cf0d74fb53c94877da55669e2
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181457"
@@ -29,11 +29,11 @@ En una aplicación que consta únicamente de código administrado, Common Langua
   
  Como se muestra en la tabla siguiente, cualquier instancia de una matriz administrada debe ser de un tipo de elemento, rango y límite inferior específico.  
   
-|Tipo de matriz administrada|Tipo de elemento|Rank|Límite inferior|Notación de firma|  
+|Tipo de matriz administrada|Tipo de elemento|Rango|Límite inferior|Notación de firma|  
 |------------------------|------------------|----------|-----------------|------------------------|  
-|**ELEMENT_TYPE_ARRAY**|Especificado por el tipo.|Especificado por el rango.|Especificado opcionalmente por los límites.|*tipo* **[** *n*,*m* **]**|  
+|**ELEMENT_TYPE_ARRAY**|Especificado por el tipo.|Especificado por el rango.|Especificado opcionalmente por los límites.|*type* **[** *n*,*m* **]**|  
 |**ELEMENT_TYPE_CLASS**|Desconocido|Desconocido|Desconocido|**System.Array**|  
-|**ELEMENT_TYPE_SZARRAY**|Especificado por el tipo.|1|0|*tipo* **[** *n* **]**|  
+|**ELEMENT_TYPE_SZARRAY**|Especificado por el tipo.|1|0|*type* **[** *n* **]**|  
   
 ## <a name="unmanaged-arrays"></a>Matrices no administradas  
  Las matrices no administradas son matrices seguras de estilo COM o matrices de estilo C de longitud fija o variable. Las matrices seguras se describen a sí mismas y contienen el tipo, rango y límites de los datos de la matriz asociada. Las matrices de estilo C son matrices con tipo unidimensionales con un límite inferior fijo de 0. El servicio de serialización proporciona compatibilidad limitada para ambos tipos de matrices.  
@@ -43,15 +43,15 @@ En una aplicación que consta únicamente de código administrado, Common Langua
   
 |Tipo no administrado|Tipo importado|  
 |--------------------|-------------------|  
-|**SafeArray(** *Tipo* **)**|**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType***>**<br /><br /> Rango = 1, límite inferior = 0. El tamaño se conoce solo si se proporciona en la firma administrada. Las matrices seguras que no son de rango = 1 o límite inferior = 0 no se pueden serializar como **SZARRAY**.|  
-|*Tipo*  **[]**|**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType***>**<br /><br /> Rango = 1, límite inferior = 0. El tamaño se conoce solo si se proporciona en la firma administrada.|  
+|**SafeArray(** *Type* **)**|**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType* **>**<br /><br /> Rango = 1, límite inferior = 0. El tamaño se conoce solo si se proporciona en la firma administrada. Las matrices seguras que no son de rango = 1 o límite inferior = 0 no se pueden serializar como **SZARRAY**.|  
+|*Type*  **[]**|**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType* **>**<br /><br /> Rango = 1, límite inferior = 0. El tamaño se conoce solo si se proporciona en la firma administrada.|  
   
 ### <a name="safe-arrays"></a>Matrices seguras  
  Cuando se importa una matriz segura desde una biblioteca de tipos a un ensamblado .NET, la matriz se convierte en una matriz unidimensional de un tipo conocido (como **int**). Las mismas reglas de conversión de tipos que se aplican a los parámetros también se aplican a los elementos de la matriz. Por ejemplo, una matriz segura de tipos **BSTR** se convierte en una matriz administrada de cadenas y una matriz segura de variantes se convierte en una matriz administrada de objetos. El tipo de elemento **SAFEARRAY** se captura de la biblioteca de tipos y se guarda en el valor **SAFEARRAY** de la enumeración <xref:System.Runtime.InteropServices.UnmanagedType>.  
   
  Como el rango y los límites de la matriz segura no pueden determinarse a partir de la biblioteca de tipos, el rango se considera igual a 1 y el límite inferior igual a 0. El rango y los límites se deben definir en la firma administrada generada por [TlbImp.exe (Importador de la biblioteca de tipos)](../tools/tlbimp-exe-type-library-importer.md). Si el rango pasado al método en tiempo de ejecución difiere, se inicia una excepción <xref:System.Runtime.InteropServices.SafeArrayRankMismatchException>. Si difiere el tipo de la matriz pasado en tiempo de ejecución, se inicia una excepción <xref:System.Runtime.InteropServices.SafeArrayTypeMismatchException>. En el ejemplo siguiente se muestran las matrices seguras en código administrado y no administrado.  
   
- **Prototipo no administrado**  
+ **Firma no administrada**  
   
 ```cpp
 HRESULT New1([in] SAFEARRAY( int ) ar);  
@@ -91,7 +91,7 @@ void New3([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_BSTR)]
   
  Debe definir manualmente las bibliotecas de tipos que contienen matrices de longitud variable, como se muestra en el ejemplo siguiente.  
   
- **Prototipo no administrado**  
+ **Firma no administrada**  
   
 ```cpp
 HRESULT New1(int ar[10]);  
@@ -120,7 +120,7 @@ void New2([MarshalAs(UnmanagedType.LPArray,
   
  Aunque puede aplicar los atributos **size_is** o **length_is** a una matriz en código fuente de lenguaje de definición de interfaz (IDL) para transmitir el tamaño a un cliente, el compilador del Lenguaje de definición de interfaz de Microsoft (MIDL) no transmite esa información a la biblioteca de tipos. Sin conocer el tamaño, el servicio de serialización de interoperabilidad no puede serializar los elementos de matriz. Por tanto, las matrices de longitud variable se importan como argumentos por referencia. Por ejemplo:  
   
- **Prototipo no administrado**  
+ **Firma no administrada**  
   
 ```cpp
 HRESULT New1(int ar[]);  
@@ -182,9 +182,9 @@ void New3(ref String ar);
   
 |Tipo de matriz administrada|Exportado como|  
 |------------------------|-----------------|  
-|**tipo ELEMENT_TYPE_SZARRAY** **\<** *type***>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *tipo* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> El tipo se proporciona en la firma. El rango siempre es 1, el límite inferior es siempre 0. El tamaño siempre se conoce en tiempo de ejecución.|  
-|**ELEMENT_TYPE_ARRAY** **\<** *rango* **>** **\<** *rank* **\<** *bounds* **>** de tipo [ límites ] **>**|**UnmanagedType.SafeArray(** *tipo* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> El tipo, el rango y los límites se proporcionan en la firma. El tamaño siempre se conoce en tiempo de ejecución.|  
-|**ELEMENT_TYPE_CLASS****\<**<xref:System.Array?displayProperty=nameWithType>**>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *tipo* **)**<br /><br /> El tipo, el rango, los límites y el tamaño siempre se conocen en tiempo de ejecución.|  
+|**ELEMENT_TYPE_SZARRAY** **\<** *type* **>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> El tipo se proporciona en la firma. El rango siempre es 1, el límite inferior es siempre 0. El tamaño siempre se conoce en tiempo de ejecución.|  
+|**ELEMENT_TYPE_ARRAY** **\<** *type* **>** **\<** *rank* **>** [ **\<** *bounds* **>** ]|**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> El tipo, el rango y los límites se proporcionan en la firma. El tamaño siempre se conoce en tiempo de ejecución.|  
+|**ELEMENT_TYPE_CLASS** **\<** <xref:System.Array?displayProperty=nameWithType> **>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> El tipo, el rango, los límites y el tamaño siempre se conocen en tiempo de ejecución.|  
   
  Hay una limitación en la automatización OLE relacionada con las matrices de estructuras que contienen LPSTR o LPWSTR.  Por tanto, los campos **String** tienen que serializarse como **UnmanagedType.BSTR**. De lo contrario, se producirá una excepción.  
   
@@ -358,9 +358,9 @@ public struct MyStruct {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Comportamiento de serialización predeterminado](default-marshaling-behavior.md)
+- [Comportamiento predeterminado del cálculo de referencias](default-marshaling-behavior.md)
 - [Tipos que pueden o que no pueden transferirse en bloque de bits](blittable-and-non-blittable-types.md)
 - [Atributos direccionales](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
 - [Copiar y fijar](copying-and-pinning.md)

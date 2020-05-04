@@ -22,7 +22,7 @@ helpviewer_keywords:
 ms.assetid: 0444ddf3-c3f6-44ed-a999-f710d9c3e0cf
 ms.openlocfilehash: c4cab79976acae236de5a8eaad5a42cdba7d04f9
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73130007"
@@ -79,7 +79,7 @@ CodeDOM proporciona tipos que representan muchos tipos comunes de elementos de c
 #### <a name="linking-code-elements-into-the-object-graph"></a>Vincular elementos de código al gráfico de objetos  
  Todos los elementos de código que forman un gráfico CodeDOM deben estar vinculados a <xref:System.CodeDom.CodeCompileUnit>, que es el elemento raíz del árbol, mediante una serie de referencias entre elementos a los que se hace directamente referencia desde las propiedades del objeto raíz del gráfico. Establezca un objeto en una propiedad de un objeto de contenedor para establecer una referencia desde el objeto de contenedor.  
   
- La siguiente instrucción agrega el espacio de nombres **CodeNamespace** `samples` a la propiedad de colección **Namespaces** del objeto raíz **CodeCompileUnit**.  
+ La instrucción siguiente agrega el **CodeNamespace** `samples` a la propiedad de colección **Namespaces** del objeto raíz **CodeCompileUnit**.  
   
  [!code-cpp[CodeDomExample#15](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source2.cpp#15)]
  [!code-csharp[CodeDomExample#15](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source2.cs#15)]

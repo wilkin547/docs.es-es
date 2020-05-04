@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 00833027-1428-4586-83c1-42f5de3323d1
 ms.openlocfilehash: c1383dbb5419eadbfb7c07f288ee46b1ca11cf5c
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710003"
@@ -30,7 +30,7 @@ xsc.Add("urn:newbooks-schema", "newbooks.xdr")
 xsc.Add("urn:newbooks-schema", "newbooks.xdr");
 ```
 
-En el ejemplo de código siguiente se crea un **XmlValidatingReader** que toma **XmlTextReader** y agrega un esquema XDR, HeadCount. XDR, a **XmlSchemaCollection**:
+En el ejemplo de código siguiente se crea una clase **XmlValidatingReader** que acepta una clase **XmlTextReader** y agrega un esquema XDR, HeadCount.xdr, a **XmlSchemaCollection**:
 
 ```vb
 Imports System.IO

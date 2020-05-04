@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: 1aa0239e-511a-4c29-957d-fd72877b350a
 ms.openlocfilehash: 8c7789c6af7b82ecb40ecd73d09f64aa1da3fd4b
 ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "72005058"
@@ -27,28 +27,28 @@ Especifica que el compilador debe compilar sin una referencia a la biblioteca de
   
 ## <a name="arguments"></a>Argumentos  
  \-  
- Compile sin una referencia a la biblioteca en tiempo de ejecución de Visual Basic.  
+ Se compila sin una referencia a la biblioteca en tiempo de ejecución de Visual Basic.  
   
  \+  
- Compilar con una referencia a la biblioteca en tiempo de ejecución de Visual Basic predeterminada.  
+ Se compila con una referencia a la biblioteca en tiempo de ejecución de Visual Basic predeterminada.  
   
  \*  
- Compile sin una referencia a la biblioteca en tiempo de ejecución de Visual Basic e inserte la funcionalidad básica de la biblioteca en tiempo de ejecución de Visual Basic en el ensamblado.  
+ Se compila sin una referencia a la biblioteca en tiempo de ejecución de Visual Basic y se inserta la funcionalidad básica de esa biblioteca en el ensamblado.  
   
  `path`  
- Compilar con una referencia a la biblioteca especificada (DLL).  
+ Se compila con una referencia a la biblioteca especificada (DLL).  
   
 ## <a name="remarks"></a>Comentarios  
- La opción del compilador `-vbruntime` le permite especificar que el compilador debe compilar sin una referencia a la biblioteca en tiempo de ejecución de Visual Basic. Si compila sin una referencia a la biblioteca en tiempo de ejecución de Visual Basic, se registran errores o advertencias en construcciones de código o de lenguaje que generan una llamada a una aplicación auxiliar de Visual Basic en tiempo de ejecución. (Una *aplicación auxiliar en tiempo de ejecución de Visual Basic* es una función definida en Microsoft. VisualBasic. dll a la que se llama en tiempo de ejecución para ejecutar una semántica específica del lenguaje).  
+ La opción de compilación `-vbruntime` permite especificar que el compilador debe compilar sin una referencia a la biblioteca de tiempo de ejecución de Visual Basic. Si se compila sin una referencia a la biblioteca en tiempo de ejecución de Visual Basic, los errores o las advertencias se registran en construcciones de lenguaje o código que generan una llamada a una aplicación auxiliar en tiempo de ejecución de Visual Basic (una *aplicación auxiliar en tiempo de ejecución de Visual Basic* es una función definida en Microsoft.VisualBasic.dll a la que se llama en tiempo de ejecución para ejecutar una semántica de lenguaje específica).  
   
- La opción `-vbruntime+` produce el mismo comportamiento que se produce si no se especifica ningún modificador `-vbruntime`. Puede usar la opción `-vbruntime+` para invalidar los conmutadores `-vbruntime` anteriores.  
+ La opción `-vbruntime+` produce el mismo comportamiento que sucede cuando no se especifica ningún modificador `-vbruntime`. Puede usar la opción `-vbruntime+` para invalidar modificadores `-vbruntime` anteriores.  
   
- La mayoría de los objetos del tipo `My` no están disponibles cuando se usan las opciones `-vbruntime-` o `-vbruntime:path`.  
+ La mayoría de los objetos de tipo `My` no están disponibles cuando se usan las opciones `-vbruntime-` o `-vbruntime:path`.  
   
-## <a name="embedding-visual-basic-runtime-core-functionality"></a>Incrustar Visual Basic funcionalidad básica en tiempo de ejecución  
- La opción `-vbruntime*` le permite compilar sin una referencia a una biblioteca en tiempo de ejecución. En su lugar, la funcionalidad básica de la biblioteca en tiempo de ejecución de Visual Basic se incrusta en el ensamblado del usuario. Puede usar esta opción si la aplicación se ejecuta en plataformas que no contienen el tiempo de ejecución de Visual Basic.  
+## <a name="embedding-visual-basic-runtime-core-functionality"></a>Inserción de funcionalidad básica en tiempo de ejecución de Visual Basic  
+ La opción `-vbruntime*` permite compilar sin una referencia a una biblioteca en tiempo de ejecución. En su lugar, la funcionalidad básica de la biblioteca en tiempo de ejecución de Visual Basic se inserta en el ensamblado del usuario. Esta opción se puede usar si la aplicación se ejecuta en plataformas que no contienen el tiempo de ejecución de Visual Basic.  
   
- Los siguientes miembros en tiempo de ejecución están incrustados:  
+ Se insertan los siguientes miembros de tiempo de ejecución:  
   
 - Clase <xref:Microsoft.VisualBasic.CompilerServices.Conversions>  
   
@@ -58,37 +58,37 @@ Especifica que el compilador debe compilar sin una referencia a la biblioteca de
   
 - Método <xref:Microsoft.VisualBasic.Strings.ChrW%28System.Int32%29>  
   
-- <xref:Microsoft.VisualBasic.Constants.vbBack> (constante)  
+- Constante <xref:Microsoft.VisualBasic.Constants.vbBack>  
   
-- <xref:Microsoft.VisualBasic.Constants.vbCr> (constante)  
+- Constante <xref:Microsoft.VisualBasic.Constants.vbCr>  
   
-- <xref:Microsoft.VisualBasic.Constants.vbCrLf> (constante)  
+- Constante <xref:Microsoft.VisualBasic.Constants.vbCrLf>  
   
-- <xref:Microsoft.VisualBasic.Constants.vbFormFeed> (constante)  
+- Constante <xref:Microsoft.VisualBasic.Constants.vbFormFeed>  
   
-- <xref:Microsoft.VisualBasic.Constants.vbLf> (constante)  
+- Constante <xref:Microsoft.VisualBasic.Constants.vbLf>  
   
-- <xref:Microsoft.VisualBasic.Constants.vbNewLine> (constante)  
+- Constante <xref:Microsoft.VisualBasic.Constants.vbNewLine>  
   
-- <xref:Microsoft.VisualBasic.Constants.vbNullChar> (constante)  
+- Constante <xref:Microsoft.VisualBasic.Constants.vbNullChar>  
   
-- <xref:Microsoft.VisualBasic.Constants.vbNullString> (constante)  
+- Constante <xref:Microsoft.VisualBasic.Constants.vbNullString>  
   
-- <xref:Microsoft.VisualBasic.Constants.vbTab> (constante)  
+- Constante <xref:Microsoft.VisualBasic.Constants.vbTab>  
   
-- <xref:Microsoft.VisualBasic.Constants.vbVerticalTab> (constante)  
+- Constante <xref:Microsoft.VisualBasic.Constants.vbVerticalTab>  
   
 - Algunos objetos del tipo `My`  
   
- Si se compila con la opción `-vbruntime*` y el código hace referencia a un miembro de la biblioteca en tiempo de ejecución de Visual Basic que no está incrustada con la funcionalidad básica, el compilador devuelve un error que indica que el miembro no está disponible.  
+ Si se compila con la opción `-vbruntime*` y el código hace referencia a un miembro de la biblioteca en tiempo de ejecución de Visual Basic que no tiene insertada la funcionalidad básica, el compilador devuelve un error que indica que el miembro no está disponible.  
   
-## <a name="referencing-a-specified-library"></a>Hacer referencia a una biblioteca especificada  
- Puede usar el argumento `path` para compilar con una referencia a una biblioteca en tiempo de ejecución personalizada en lugar de la biblioteca en tiempo de ejecución de Visual Basic predeterminada.  
+## <a name="referencing-a-specified-library"></a>Referencia a una biblioteca especificada  
+ El argumento `path` se puede usar para compilar con una referencia a una biblioteca en tiempo de ejecución personalizada, en lugar de a la biblioteca en tiempo de ejecución de Visual Basic predeterminada.  
   
- Si el valor del argumento `path` es una ruta de acceso completa a un archivo DLL, el compilador usará ese archivo como la biblioteca en tiempo de ejecución. Si el valor del argumento `path` no es una ruta de acceso completa a un archivo DLL, el compilador de Visual Basic buscará primero el archivo DLL identificado en la carpeta actual. A continuación, buscará en la ruta de acceso que ha especificado mediante la opción del compilador [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md) . Si no se utiliza la opción del compilador `-sdkpath`, el compilador buscará el archivo DLL identificado en la carpeta de .NET Framework (`%systemroot%\Microsoft.NET\Framework\versionNumber`).  
+ Si el valor del argumento `path` es una ruta de acceso completa a un archivo DLL, el compilador usará ese archivo como la biblioteca en tiempo de ejecución. Si el valor del argumento `path` no es una ruta de acceso completa a un archivo DLL, el compilador de Visual Basic buscará primero el archivo DLL identificado en la carpeta actual. Después, buscará en la ruta de acceso que se haya especificado, usando para ello la opción de compilador [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md). Si no se usa la opción de compilador `-sdkpath`, el compilador buscará el archivo DLL identificado en la carpeta de .NET Framework (`%systemroot%\Microsoft.NET\Framework\versionNumber`).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo usar la opción `-vbruntime` para compilar con una referencia a una biblioteca personalizada.  
+ En el siguiente ejemplo se muestra cómo usar la opción `-vbruntime` para compilar con una referencia a una biblioteca personalizada.  
   
 ```console
 vbc -vbruntime:C:\VBLibraries\CustomVBLibrary.dll  
@@ -96,7 +96,7 @@ vbc -vbruntime:C:\VBLibraries\CustomVBLibrary.dll
   
 ## <a name="see-also"></a>Vea también
 
-- [Visual Basic Core: nuevo modo de compilación en Visual Studio 2010 SP1](https://devblogs.microsoft.com/vbteam/vb-core-new-compilation-mode-in-visual-studio-2010-sp1/)
+- [Visual Basic Core: nuevo modo de compilación en Visual Studio 2010 SP1](https://devblogs.microsoft.com/vbteam/vb-core-new-compilation-mode-in-visual-studio-2010-sp1/)
 - [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)

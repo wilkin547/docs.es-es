@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
 ms.openlocfilehash: e11152dc626b1e3619b9ecbc04d8a237ca9f13d3
 ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/25/2020
 ms.locfileid: "80248048"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>Controlar la serialización XML mediante atributos
 
-Los atributos se pueden utilizar para controlar la serialización XML de un objeto o crear una secuencia XML alternativa a partir del mismo conjunto de clases. Para obtener más información sobre la creación de una secuencia XML alternativa, vea [Cómo: Especificar un nombre de elemento alternativo para una secuencia XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
+Los atributos se pueden utilizar para controlar la serialización XML de un objeto o crear una secuencia XML alternativa a partir del mismo conjunto de clases. Para obtener más información sobre la creación de una secuencia XML alternativa vea [Procedimiento para especificar un nombre de elemento alternativo para una secuencia XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
 
 > [!NOTE]
-> Si el XML generado debe ajustarse a la sección 5 del documento del World Wide Web Consortium (W3C) titulada Protocolo simple de [acceso a objetos (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/), utilice los atributos enumerados en [Atributos que controlan](attributes-that-control-encoded-soap-serialization.md)la serialización SOAP codificada .
+> Si el código XML generado se ajusta a la sección 5 del documento [Protocolo simple de acceso a objetos (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/), del Consorcio WWC (W3C), use los atributos enumerados en [Atributos que controlan la serialización SOAP codificada](attributes-that-control-encoded-soap-serialization.md).
 
 La clase o nombre de miembro determina, de forma predeterminada, un nombre del elemento XML. En una clase simple denominada `Book`, un campo denominado `ISBN` generará una etiqueta del elemento XML \<ISBN> como se muestra en el ejemplo siguiente.
 
@@ -70,7 +70,7 @@ Para obtener más información sobre atributos, vea [Atributos](../../../docs/st
 
 ## <a name="controlling-array-serialization"></a>Controlar la serialización de la matriz
 
-Los atributos <xref:System.Xml.Serialization.XmlArrayAttribute> y <xref:System.Xml.Serialization.XmlArrayItemAttribute> están diseñados para controlar la serialización de las matrices. Con estos atributos, puede controlar el nombre de elemento, espacio de nombres y tipo de datos de esquemas XML (XSD) (como se define en el documento de World Wide Web Consortium [www.w3.org] titulado "Esquema XML parte 2: Tipos de datos"). También puede especificar los tipos que pueden estar incluidos en una matriz.
+Los atributos <xref:System.Xml.Serialization.XmlArrayAttribute> y <xref:System.Xml.Serialization.XmlArrayItemAttribute> están diseñados para controlar la serialización de las matrices. Con estos atributos, puede controlar el nombre de elemento, el espacio de nombres y el tipo de datos del esquema XML (XSD) (como se define en el documento de World Wide Web Consortium [www.w3.org] titulado "Esquema XML parte 2: tipos de datos"). También puede especificar los tipos que pueden estar incluidos en una matriz.
 
 <xref:System.Xml.Serialization.XmlArrayAttribute> determinará las propiedades del elemento envolvente XML que resulta cuando se serializa una matriz. Por ejemplo, de forma predeterminada, serializar la matriz siguiente producirá un elemento XML denominado `Employees`. El elemento `Employees` contendrá una serie de elementos denominados según el tipo de matriz `Employee`.
 
@@ -241,7 +241,7 @@ Una instancia serializada se podría parecer a lo siguiente.
 </Group>
 ```
 
-Otra manera de diferenciar las dos secuencias XML es utilizar la herramienta de definición de esquemas XML para generar los archivos de documento de esquema XML (XSD) a partir del código compilado. (Para obtener más información sobre el uso de la herramienta, vea la herramienta de definición de esquemas XML y la [serialización XML](the-xml-schema-definition-tool-and-xml-serialization.md).) Cuando no se aplica ningún atributo al campo, el esquema describe el elemento de la siguiente manera.
+Otra manera de diferenciar las dos secuencias XML es utilizar la herramienta de definición de esquemas XML para generar los archivos de documento de esquema XML (XSD) a partir del código compilado. (Para obtener más información sobre el uso de la herramienta, vea [La herramienta de definición de esquema XML y serialización XML](the-xml-schema-definition-tool-and-xml-serialization.md)). Cuando no se aplica ningún atributo al campo, el esquema describe el elemento de la manera siguiente.
 
 ```xml
 <xs:element minOccurs="0" maxOccurs ="1" name="Employees" type="ArrayOfEmployee" />
@@ -319,8 +319,8 @@ Podrían darse situaciones en las que una propiedad pública o el campo no neces
 
 - [Atributos que controlan la serialización XML](attributes-that-control-xml-serialization.md)
 - [Atributos que controlan la serialización SOAP codificada](attributes-that-control-encoded-soap-serialization.md)
-- [Introducir la serialización XML](introducing-xml-serialization.md)
+- [Introducción a la serialización XML](introducing-xml-serialization.md)
 - [Ejemplos de serialización XML](examples-of-xml-serialization.md)
-- [Procedimiento para especificar un nombre de elemento alternativo para una secuencia XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-- [Procedimiento para serializar un objeto](how-to-serialize-an-object.md)
-- [Procedimiento para deserializar un objeto](how-to-deserialize-an-object.md)
+- [Cómo: para especificar un nombre de elemento alternativo para una secuencia XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [Cómo: para serializar un objeto](how-to-serialize-an-object.md)
+- [Cómo: para deserializar un objeto](how-to-deserialize-an-object.md)
