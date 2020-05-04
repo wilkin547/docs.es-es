@@ -14,19 +14,21 @@
       href: install/runtime.md
     - name: Dependencias y SO admitidos
       href: install/dependencies.md
+    - name: Eliminación de entornos de ejecución y SDK obsoletos
+      href: install/remove-runtime-sdk-versions.md
+    - name: Administración de plantillas de .NET
+      href: install/templates.md
     - name: Incidencias de certificación notarial en macOS
       href: install/macos-notarization-issues.md
     - name: Cómo comprobar las versiones de .NET Core
       href: install/how-to-detect-installed-versions.md
     - name: Administradores de paquetes de Linux
       items:
-        - name: "Ubuntu\_20.04"
-          href: install/linux-package-manager-ubuntu-2004.md
-        - name: "Ubuntu\_19.10"
+        - name: Ubuntu 19.10
           href: install/linux-package-manager-ubuntu-1910.md
         - name: "Ubuntu\_19.04"
           href: install/linux-package-manager-ubuntu-1904.md
-        - name: "Ubuntu\_18.04"
+        - name: Ubuntu 18.04
           href: install/linux-package-manager-ubuntu-1804.md
         - name: "Ubuntu\_16.04"
           href: install/linux-package-manager-ubuntu-1604.md
@@ -36,6 +38,8 @@
           href: install/linux-package-manager-debian10.md
         - name: Debian 9
           href: install/linux-package-manager-debian9.md
+        - name: "Fedora\_32"
+          href: install/linux-package-manager-fedora32.md
         - name: "Fedora\_31"
           href: install/linux-package-manager-fedora31.md
         - name: "Fedora\_30"
@@ -393,8 +397,6 @@
       href: versions/index.md
     - name: Selección de la versión de .NET Core
       href: versions/selection.md
-    - name: Eliminación de entornos de ejecución y SDK obsoletos
-      href: versions/remove-runtime-sdk-versions.md
 - name: Catálogo de identificadores de tiempo de ejecución (RID)
   href: rid-catalog.md
 - name: Administración y carga de dependencias
