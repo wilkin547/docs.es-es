@@ -2,13 +2,13 @@
 title: Diseño de aplicaciones .NET nativas en la nube para Azure
 description: Guía para crear aplicaciones nativas en la nube con la ayuda de contenedores, microservicios y características sin servidor de Azure.
 author: ardalis
-ms.date: 03/07/2019
-ms.openlocfilehash: cf3be07f0d37aacf4f0252ef2f4d922b7be93eee
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.date: 04/23/2020
+ms.openlocfilehash: 24d5c75fc5d2e5623892e8f83daea52553d13765
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989069"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507395"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>Diseño de aplicaciones .NET nativas en la nube para Azure
 
@@ -44,19 +44,25 @@ El resto de marcas y logotipos pertenece a sus respectivos propietarios.
 
 Autores:
 
-> **Steve "ardalis" Smith**: instructor y arquitecto de software de [Ardalis.com](https://ardalis.com)
+> **Rob Vettor**, arquitecto principal de IP y sistemas de [thinkingincloudnative.com](http://thinkingincloudnative.com/about/), Microsoft
 >
-> **Rob Vettor**: arquitecto principal de IP y sistemas de Microsoft de [thinkingincloudnative.com](http://thinkingincloudnative.com/about/)
+> **Steve "ardalis" Smith**, instructor y arquitecto de software de [Ardalis.com](https://ardalis.com)
 
 Participantes y revisores:
 
 > **Cesar de la Torre**, administrador de programas principal, equipo de .NET, Microsoft
 >
 > **Nish Anil**, director de administración de programas, equipo de .NET, Microsoft
+>
+> **Jeremy Likness**, director de administración de programas, equipo de .NET, Microsoft
+>
+> **Cecil Phillip**, director de promoción de la nube, Microsoft
+
+Más información sobre eShopOnContainers
 
 Editores:
 
-> **Maira Wenzel**, desarrolladora de contenidos sénior, equipo de .NET, Microsoft
+> **Maira Wenzel**, directora de administración de programas, equipo de .NET, Microsoft
 
 ## <a name="who-should-use-this-guide"></a>Destinatarios de esta guía
 

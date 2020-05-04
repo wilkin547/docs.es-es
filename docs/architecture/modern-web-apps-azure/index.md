@@ -4,12 +4,12 @@ description: Es una guía en la que se proporcionan instrucciones de un extremo 
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/4/2019
-ms.openlocfilehash: 18449ea02b7f9e89744a0f3088f80b7a51a807da
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 936a068507116033ad178f26e77945f30f70387e
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80987899"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507198"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>Diseño de aplicaciones web modernas con ASP.NET Core y Azure
 
@@ -50,6 +50,12 @@ Autor:
 Editores:
 
 > **Maira Wenzel**
+
+## <a name="action-links"></a>Vínculos de acción
+
+- Este libro electrónico también está disponible en formato PDF (solo versión en inglés) [Descargar](https://aka.ms/webappebook)
+
+- Clonación o bifurcación de la aplicación de referencia [eShopOnWeb on GitHub](https://github.com/dotnet-architecture/eShopOnWeb)
 
 ## <a name="introduction"></a>Introducción
 
@@ -102,7 +108,7 @@ Otros destinatarios secundarios son los responsables de tomar decisiones técnic
 
 ## <a name="how-you-can-use-this-guide"></a>Cómo leer esta guía
 
-Esta guía se ha comprimido en un documento relativamente pequeño que se centra en la creación de aplicaciones web con modernas tecnologías de .NET y Microsoft Azure. Por lo tanto, se puede leer completa para proporcionar una base de conocimiento sobre estas aplicaciones y sus consideraciones técnicas. La guía, junto con su aplicación de ejemplo, también puede servir como punto inicial o referencia. Use la aplicación de ejemplo asociada como una plantilla para las aplicaciones propias o para consultar cómo se pueden organizar los componentes de la aplicación. Consulte los principios y la cobertura de la arquitectura, las opciones tecnológicas y las consideraciones para la toma de decisiones de esta guía a la hora de sopesar estas opciones para su propia aplicación.
+Esta guía se ha comprimido en un documento relativamente pequeño que se centra en la creación de aplicaciones web con modernas tecnologías de .NET y Azure. Por lo tanto, se puede leer completa para proporcionar una base de conocimiento sobre estas aplicaciones y sus consideraciones técnicas. La guía, junto con su aplicación de ejemplo, también puede servir como punto inicial o referencia. Use la aplicación de ejemplo asociada como una plantilla para las aplicaciones propias o para consultar cómo se pueden organizar los componentes de la aplicación. Consulte los principios y la cobertura de la arquitectura, las opciones tecnológicas y las consideraciones para la toma de decisiones de esta guía a la hora de sopesar estas opciones para su propia aplicación.
 
 No dude en reenviar esta guía a su equipo para ayudarlo a garantizar una comprensión común de estas consideraciones y oportunidades. El hecho de que todos los usuarios trabajen a partir de un conjunto común de principios subyacentes y terminología permite garantizar una aplicación coherente de las prácticas y los patrones de diseño.
 
