@@ -9,12 +9,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: eafd8f78c3d8de1ba064021111f869571d5a570f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 76872f3ba3ed5106a4cb5bfdd918ae607acc092d
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160331"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507525"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (Language Integrated Query)
 
@@ -161,7 +161,7 @@ La respuesta a esta pregunta es **no** si...
 
 ## <a name="essential-samples"></a>Ejemplos básicos
 
-Para obtener una lista realmente completa de ejemplos de LINQ, visite [101 ejemplos de LINQ](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b).
+Para obtener una lista realmente completa de ejemplos de LINQ, visite [101 ejemplos de LINQ](https://docs.microsoft.com/samples/dotnet/try-samples/101-linq-samples/).
 
 Lo siguiente es una demostración rápida de algunas de las piezas básicas de LINQ. No pretende ser exhaustivo, ya que LINQ ofrece considerablemente más funcionalidad que la que se muestra aquí.
 
@@ -394,6 +394,6 @@ Las tareas paralelizables vinculadas a la CPU que se pueden expresar fácilmente
 
 ## <a name="further-resources"></a>Recursos adicionales:
 
-* [Ejemplos de LINQ 101](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
+* [Ejemplos de LINQ 101](https://docs.microsoft.com/samples/dotnet/try-samples/101-linq-samples/)
 * [Linqpad](https://www.linqpad.net/), un entorno de área de juegos y motor de consultas a bases de datos para C#/F#/Visual Basic
 * [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), un libro electrónico para aprender cómo se implementa LINQ to Objects

@@ -3,12 +3,12 @@ title: Información general sobre el SDK de .NET Core
 description: Obtenga información sobre el SDK de .NET Core, que es un conjunto de bibliotecas y herramientas utilizadas para crear proyectos .NET Core.
 ms.date: 07/31/2019
 ms.technology: dotnet-cli
-ms.openlocfilehash: c2723e0e28c889f91f79ea3c0b26aa38f69fb41c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7eb06e4fd94ed2a73af2741e98e21e02728c27e4
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78157471"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595746"
 ---
 # <a name="net-core-sdk-overview"></a>Información general sobre el SDK de .NET Core
 
@@ -35,5 +35,5 @@ De forma predeterminada, el SDK se instala en paralelo (SxS), lo que significa q
 
 - [Información general sobre la CLI de .NET Core](tools/index.md)
 - [Introducción a la creación de versiones de .NET Core](versions/index.md)
-- [Cómo quitar los componentes .NET Core Runtime y SDK](versions/remove-runtime-sdk-versions.md)
+- [Cómo quitar los componentes .NET Core Runtime y SDK](install/remove-runtime-sdk-versions.md)
 - [Selección de la versión de .NET Core que se va a usar](versions/selection.md)

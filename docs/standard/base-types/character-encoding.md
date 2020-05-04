@@ -11,12 +11,12 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-ms.openlocfilehash: 1a294a577d10b3e621871b168344f2b0610693dd
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 8e0cf961f4d6b481c354bdc854806f971458ce21
+ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242743"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82624948"
 ---
 # <a name="how-to-use-character-encoding-classes-in-net"></a>Procedimiento para usar clases de codificación de caracteres en .NET
 
@@ -103,7 +103,7 @@ Los métodos de codificación y descodificación de una clase derivada de <xref:
 
 Hay disponible un objeto <xref:System.Text.Encoder> para una codificación determinada desde la propiedad <xref:System.Text.Encoding.GetEncoder%2A?displayProperty=nameWithType> de esa codificación. Hay disponible un objeto <xref:System.Text.Decoder> para una codificación determinada desde la propiedad <xref:System.Text.Encoding.GetDecoder%2A?displayProperty=nameWithType> de esa codificación. Para las operaciones de descodificación, tenga en cuenta que las clases derivadas de <xref:System.Text.Decoder> incluyen un método <xref:System.Text.Decoder.GetChars%2A?displayProperty=nameWithType> , pero no tienen un método que se corresponda con <xref:System.Text.Encoding.GetString%2A?displayProperty=nameWithType>.
 
-En el ejemplo siguiente se muestra la diferencia entre el uso de los métodos <xref:System.Text.Encoding.GetChars%2A?displayProperty=nameWithType> y <xref:System.Text.Decoder.GetChars%2A?displayProperty=nameWithType> para descodificar una matriz de bytes Unicode. En el ejemplo se codifica una cadena que contiene algunos caracteres Unicode en un archivo y, a continuación, se usan los dos métodos de descodificación para descodificarlos de diez bytes en diez bytes. Puesto que hay un par suplente en los bytes décimo y undécimo, se descodifica en llamadas a métodos independientes. Como muestra el resultado, el método <xref:System.Text.Encoding.GetChars%2A?displayProperty=nameWithType> no puede descodificar los bytes correctamente y, en su lugar, los reemplaza con U+FFFD (carácter de reemplazo). Por otra parte, el método <xref:System.Text.Decoder.GetChars%2A?displayProperty=nameWithType> puede descodificar correctamente la matriz de bytes para obtener la cadena original.
+En el ejemplo siguiente se muestra la diferencia entre el uso de los métodos <xref:System.Text.Encoding.GetString%2A?displayProperty=nameWithType> y <xref:System.Text.Decoder.GetChars%2A?displayProperty=nameWithType> para descodificar una matriz de bytes Unicode. En el ejemplo se codifica una cadena que contiene algunos caracteres Unicode en un archivo y, a continuación, se usan los dos métodos de descodificación para descodificarlos de diez bytes en diez bytes. Puesto que hay un par suplente en los bytes décimo y undécimo, se descodifica en llamadas a métodos independientes. Como muestra el resultado, el método <xref:System.Text.Encoding.GetString%2A?displayProperty=nameWithType> no puede descodificar los bytes correctamente y, en su lugar, los reemplaza con U+FFFD (carácter de reemplazo). Por otra parte, el método <xref:System.Text.Decoder.GetChars%2A?displayProperty=nameWithType> puede descodificar correctamente la matriz de bytes para obtener la cadena original.
 
 [!code-csharp[Conceptual.Encoding#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.encoding/cs/stream1.cs#10)]
 [!code-vb[Conceptual.Encoding#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/stream1.vb#10)]
