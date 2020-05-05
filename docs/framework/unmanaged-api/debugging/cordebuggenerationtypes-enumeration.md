@@ -1,5 +1,5 @@
 ---
-title: CorDebugGenerationTypes (enumeración)
+title: CorDebugGenerationTypes (Enumeración)
 ms.date: 03/30/2017
 api_name:
 - CorDebugGenerationTypes
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 9f25b64f-eedd-4ae5-8b0e-cfdfb9b6c5d8
 topic_type:
 - apiref
-ms.openlocfilehash: 6133b34a60fd06c1b75d69783760741b8de62071
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0443f58b79e60111756308cc4843daf86d1fc823
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789343"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795873"
 ---
-# <a name="cordebuggenerationtypes-enumeration"></a>CorDebugGenerationTypes (enumeración)
+# <a name="cordebuggenerationtypes-enumeration"></a>CorDebugGenerationTypes (Enumeración)
 Especifica la generación de una región de memoria en el montón administrado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,25 +35,25 @@ typedef enum CorDebugGenerationTypes {
 } CorDebugRegionTypes;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
-|Nombre de miembro|Descripción|  
+|Nombre del miembro|Descripción|  
 |-----------------|-----------------|  
 |`CorDebug_Gen0`|Generación 0.|  
-|`CorDebug_Gen1`|Generación 1.|  
-|`CorDebug_Gen2`|Generación 2|  
+|`CorDebug_Gen1`|Generación 1|  
+|`CorDebug_Gen2`|Generación 2.|  
 |`CorDebug_LOH`|Montón de objetos grandes.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
