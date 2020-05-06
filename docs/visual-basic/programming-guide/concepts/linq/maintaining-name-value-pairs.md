@@ -2,12 +2,12 @@
 title: Mantener pares nombre-valor
 ms.date: 07/20/2015
 ms.assetid: 57ac2072-d9f5-432b-84f0-a889c62fd813
-ms.openlocfilehash: ed9c7f0aae2fe646cd723321f45455f89dd7c370
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b8c9487330239e7e6365055d5f08a02f2dbb0e37
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74331662"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796163"
 ---
 # <a name="maintaining-namevalue-pairs-visual-basic"></a>Mantener pares de nombre/valor (Visual Basic)
 Son muchas las aplicaciones que necesitan mantener información que se almacena mejor en forma de pares de nombre/valor. Esta información podría contener datos sobre configuración o valores globales. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] incluye métodos que facilitan la operación de mantener un conjunto de pares nombre/valor. Puede almacenar la información como atributos o como un conjunto de elementos secundarios.  
@@ -17,7 +17,7 @@ Son muchas las aplicaciones que necesitan mantener información que se almacena 
 ## <a name="setattributevalue-and-setelementvalue"></a>SetAttributeValue y SetElementValue  
  Los dos métodos que facilitan el mantenimiento de pares nombre/valor son <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> y <xref:System.Xml.Linq.XElement.SetElementValue%2A>. La semántica de ambos métodos es muy similar.  
   
- <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> puede Agregar, modificar o quitar atributos de un elemento.  
+ <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> permite agregar, modificar o eliminar atributos de un elemento.  
   
 - Si llama al método <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> con el nombre de un atributo que no existe, éste creará un nuevo atributo y lo agregará al elemento especificado.  
   
@@ -25,7 +25,7 @@ Son muchas las aplicaciones que necesitan mantener información que se almacena 
   
 - Si llama al método <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> con el nombre de un atributo ya existente y pasando nulo en el contenido, se eliminará el atributo de su elemento primario.  
   
- <xref:System.Xml.Linq.XElement.SetElementValue%2A> puede Agregar, modificar o quitar elementos secundarios de un elemento.  
+ <xref:System.Xml.Linq.XElement.SetElementValue%2A> permite agregar, modificar o eliminar elementos secundarios de un elemento.  
   
 - Si llama al método <xref:System.Xml.Linq.XElement.SetElementValue%2A> con el nombre de un elemento secundario que no existe, éste creará un nuevo elemento y lo agregará al elemento especificado.  
   
@@ -100,7 +100,7 @@ Console.WriteLine(root)
   <Bottom>122</Bottom>  
   <Right>300</Right>  
   <DefaultColor>Color.Red</DefaultColor>  
-</Root>  
+</Root>
 ----  
 <Root>  
   <Top>10</Top>  
@@ -108,14 +108,14 @@ Console.WriteLine(root)
   <Bottom>122</Bottom>  
   <Right>300</Right>  
   <DefaultColor>Color.Red</DefaultColor>  
-</Root>  
-----  
+</Root>
+----
 <Root>  
   <Top>10</Top>  
   <Left>20</Left>  
   <Bottom>122</Bottom>  
   <Right>300</Right>  
-</Root>  
+</Root>
 ```  
   
 ## <a name="see-also"></a>Vea también

@@ -1,5 +1,5 @@
 ---
-title: CorDebugGCType (enumeración)
+title: CorDebugGCType (Enumeración)
 ms.date: 03/30/2017
 api_name:
 - CorDebugGCType
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 880ca92a-42d4-42a5-9b9c-c2848eb39c6a
 topic_type:
 - apiref
-ms.openlocfilehash: 6f4c96517375df4cd249b72953bf37812a498c0c
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 8dd070d2c895a94ac996be81e672bd67f59b83b7
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789361"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795903"
 ---
-# <a name="cordebuggctype-enumeration"></a>CorDebugGCType (enumeración)
+# <a name="cordebuggctype-enumeration"></a>CorDebugGCType (Enumeración)
 Indica si el recolector de elementos no utilizados se está ejecutando en una estación de trabajo o en un servidor.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -33,25 +33,25 @@ typedef enum CorDebugGCType {
 } CorDebugGCType;  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parámetros  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
-|Nombre de miembro|Descripción|  
+|Nombre del miembro|Descripción|  
 |-----------------|-----------------|  
 |`CorDebugWorkstationGC`|El recolector de elementos no utilizados se está ejecutando en una estación de trabajo.|  
 |`CorDebugServerGC`|El recolector de elementos no utilizados se está ejecutando en un servidor.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 

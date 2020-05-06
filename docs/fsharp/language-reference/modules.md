@@ -1,17 +1,17 @@
 ---
 title: Módulos
-description: Obtenga información sobre F# cómo un módulo es una agrupación de F# código, como valores, tipos y valores de función, en F# un programa.
+description: 'Obtenga información sobre cómo un módulo de F # es una agrupación de código de F #, como valores, tipos y valores de función, en un programa de F #.'
 ms.date: 04/24/2017
-ms.openlocfilehash: fbde0c8b001d88614ba2de49c4aa7bfa098c6945
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 5f99bbd8069478bf0c7db2800ae545f31926728a
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425054"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794369"
 ---
 # <a name="modules"></a>Módulos
 
-En F# el contexto del lenguaje, un *módulo* es una agrupación de F# código, como valores, tipos y valores de función, en un F# programa. Agrupar el código en módulos ayuda a mantener junto el código relacionado y a evitar conflictos de nombres en los programas.
+En el contexto del lenguaje F #, un *módulo* es una agrupación de código de f #, como valores, tipos y valores de función, en un programa de f #. Agrupar el código en módulos ayuda a mantener junto el código relacionado y a evitar conflictos de nombres en los programas.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -26,13 +26,13 @@ module [accessibility-modifier] module-name =
 
 ## <a name="remarks"></a>Comentarios
 
-Un F# módulo es una agrupación de F# construcciones de código como tipos, valores, valores de función y código en enlaces de `do`. Se implementa como una clase de Common Language Runtime (CLR) que solo tiene miembros estáticos. Hay dos tipos de declaraciones de módulo, dependiendo de si el archivo completo está incluido en el módulo: una declaración de módulo de nivel superior y una declaración de módulo local. Una declaración de módulo de nivel superior incluye el archivo completo en el módulo. Una declaración de módulo de nivel superior solo puede aparecer como la primera declaración de un archivo.
+Un módulo de F # es una agrupación de construcciones de código de F #, como tipos, valores, valores de función y `do` código en enlaces. Se implementa como una clase de Common Language Runtime (CLR) que solo tiene miembros estáticos. Hay dos tipos de declaraciones de módulo, dependiendo de si el archivo completo está incluido en el módulo: una declaración de módulo de nivel superior y una declaración de módulo local. Una declaración de módulo de nivel superior incluye el archivo completo en el módulo. Una declaración de módulo de nivel superior solo puede aparecer como la primera declaración de un archivo.
 
 En la sintaxis de la declaración de módulo de nivel superior, el *espacio* de nombres completo opcional es la secuencia de nombres de espacios de nombres anidados que contiene el módulo. El espacio de nombres completo no tiene que declararse previamente.
 
 No es necesario aplicar sangría a las declaraciones en un módulo de nivel superior. Tiene que aplicar sangría a todas las declaraciones en los módulos locales. En una declaración de módulo local, solo las declaraciones a las que se aplica la sangría en la declaración de módulo forman parte del módulo.
 
-Si un archivo de código no comienza con una declaración de módulo de nivel superior o una declaración de espacio de nombres, todo el contenido del archivo, incluidos los módulos locales, pasa a formar parte de un módulo de nivel superior creado implícitamente que tiene el mismo nombre que el archivo, sin la extensión. con la primera letra convertida en mayúsculas. Por ejemplo, considere el siguiente archivo.
+Si un archivo de código no comienza con una declaración de módulo de nivel superior o una declaración de espacio de nombres, todo el contenido del archivo, incluidos los módulos locales, pasa a formar parte de un módulo de nivel superior creado implícitamente que tiene el mismo nombre que el archivo, sin la extensión, con la primera letra convertida en mayúsculas. Por ejemplo, considere el siguiente archivo.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6601.fs)]
 
@@ -40,13 +40,13 @@ Este archivo se compilaría como si estuviera escrito de esta manera:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6602.fs)]
 
-Si tiene varios módulos en un archivo, debe usar una declaración de módulo local para cada módulo. Si se declara un espacio de nombres envolvente, estos módulos forman parte del espacio de nombres envolvente. Si no se declara un espacio de nombres envolvente, los módulos forman parte del módulo de nivel superior creado implícitamente. En el ejemplo de código siguiente se muestra un archivo de código que contiene varios módulos. El compilador crea implícitamente un módulo de nivel superior denominado `Multiplemodules`y `MyModule1` y `MyModule2` están anidados en ese módulo de nivel superior.
+Si tiene varios módulos en un archivo, debe usar una declaración de módulo local para cada módulo. Si se declara un espacio de nombres envolvente, estos módulos forman parte del espacio de nombres envolvente. Si no se declara un espacio de nombres envolvente, los módulos forman parte del módulo de nivel superior creado implícitamente. En el ejemplo de código siguiente se muestra un archivo de código que contiene varios módulos. El compilador crea implícitamente un módulo de nivel `Multiplemodules`superior denominado `MyModule1` y `MyModule2` y se anidan en ese módulo de nivel superior.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6603.fs)]
 
-Si tiene varios archivos en un proyecto o en una única compilación, o si está compilando una biblioteca, debe incluir una declaración de espacio de nombres o una declaración de módulo en la parte superior del archivo. El F# compilador solo determina un nombre de módulo implícitamente cuando solo hay un archivo en un proyecto o una línea de comandos de compilación, y se crea una aplicación.
+Si tiene varios archivos en un proyecto o en una única compilación, o si está compilando una biblioteca, debe incluir una declaración de espacio de nombres o una declaración de módulo en la parte superior del archivo. El compilador de F # solo determina implícitamente un nombre de módulo cuando solo hay un archivo en un proyecto o una línea de comandos de compilación, y se crea una aplicación.
 
-El *modificador de accesibilidad* puede ser uno de los siguientes: `public`, `private``internal`. Para más información, vea [Access Control](access-control.md) (Control de acceso). El valor predeterminado es que sea pública.
+El *modificador Accessibility* puede ser uno de los siguientes: `public`, `private`,. `internal` Para obtener más información, consulta [Access Control](access-control.md). El valor predeterminado es public.
 
 ## <a name="referencing-code-in-modules"></a>Referencia al código en módulos
 
@@ -54,7 +54,7 @@ Al hacer referencia a funciones, tipos y valores de otro módulo, debe usar un n
 
 `Namespace1.Namespace2.ModuleName.Identifier`
 
-Puede abrir el módulo o uno o varios de los espacios de nombres para simplificar el código. Para obtener más información sobre cómo abrir los espacios de nombres y los módulos, consulte [declaraciones de importación: palabra clave `open`](import-declarations-the-open-keyword.md).
+Puede abrir el módulo o uno o varios de los espacios de nombres para simplificar el código. Para obtener más información sobre cómo abrir espacios de nombres y módulos, vea [Import declarations: `open` The keyword](import-declarations-the-open-keyword.md).
 
 En el ejemplo de código siguiente se muestra un módulo de nivel superior que contiene todo el código hasta el final del archivo.
 
@@ -70,13 +70,13 @@ Los módulos se pueden anidar. Se debe aplicar sangría a los módulos internos 
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6607.fs)]
 
-Pero el módulo `Z` es un elemento relacionado con el módulo `Y` en el código siguiente.
+Pero el `Z` módulo es un elemento relacionado `Y` con el módulo en el código siguiente.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6608.fs)]
-El módulo `Z` también es un módulo relacionado en el código siguiente, ya que no se aplica ninguna sangría a las demás declaraciones de `Y`del módulo.
+El `Z` módulo también es un módulo relacionado en el código siguiente, ya que no tiene ninguna sangría en lo que se refiere a otras `Y`declaraciones del módulo.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6609.fs)]
-Por último, si el módulo externo no tiene ninguna declaración y va seguido inmediatamente de otra declaración de módulo, se supone que la nueva declaración de módulo es un módulo interno, pero el compilador le advierte si la segunda definición de módulo no tiene sangría más allá de la lugar.
+Por último, si el módulo externo no tiene ninguna declaración y va seguido inmediatamente de otra declaración de módulo, se supone que la nueva declaración de módulo es un módulo interno, pero el compilador le advierte si la segunda definición de módulo no tiene una sangría más alejada que la primera.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6610.fs)]
 Para eliminar la advertencia, aplique una sangría al módulo interno.
@@ -88,7 +88,7 @@ Si desea que todo el código de un archivo esté en un módulo externo único y 
 
 ## <a name="recursive-modules"></a>Módulos recursivos
 
-F#4,1 presenta la noción de módulos que permiten que todo el código contenido sea recursivo mutuamente.  Esto se hace a través de `module rec`.  El uso de `module rec` puede aliviar algunos problemas al no poder escribir código referencial mutuamente entre tipos y módulos.  El siguiente es un ejemplo de esto:
+F # 4,1 presenta el concepto de módulos que permiten que todo el código contenido sea recursivo.  Esto se hace a `module rec`través de.  El uso `module rec` de puede aliviar algunos problemas al no poder escribir código referencial mutuamente entre tipos y módulos.  El siguiente es un ejemplo de esto:
 
 ```fsharp
 module rec RecursiveModule =
@@ -97,8 +97,6 @@ module rec RecursiveModule =
 
     // This exception depends on the type below.
     exception DontSqueezeTheBananaException of Banana
-
-    type BananaPeel() = class end
 
     type Banana(orientation : Orientation) =
         member val IsPeeled = false with get, set
@@ -128,12 +126,12 @@ module rec RecursiveModule =
             | Down -> b |> peelSides
 ```
 
-Tenga en cuenta que la `DontSqueezeTheBananaException` de excepción y la clase `Banana` hacen referencia entre sí.  Además, el módulo `BananaHelpers` y la clase `Banana` también hacen referencia entre sí.  Esto no sería posible F# si se quitara la palabra clave `rec` del módulo `RecursiveModule`.
+Tenga en cuenta que `DontSqueezeTheBananaException` la excepción y `Banana` la clase hacen referencia entre sí.  Además, el módulo `BananaHelpers` y la clase `Banana` también hacen referencia entre sí.  Esto no sería posible si se hubiera quitado la `rec` palabra clave del `RecursiveModule` módulo en F #.
 
-Esta capacidad también es posible en los [espacios](namespaces.md) de F# nombres con 4,1.
+Esta capacidad también es posible en los [espacios de nombres](namespaces.md) con F # 4,1.
 
 ## <a name="see-also"></a>Vea también
 
-- [Referencia del lenguaje F#](index.md)
+- [Referencia del lenguaje F #](index.md)
 - [Espacios de nombres](namespaces.md)
-- [F#RFC FS-1009: permite tipos y módulos de referencia mutuamente a través de ámbitos mayores en los archivos](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)
+- [F # RFC FS-1009: permite tipos y módulos mutuamente referenciables en ámbitos mayores en archivos](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)

@@ -10,12 +10,12 @@ api_type:
 ms.assetid: 1d4424ab-5143-4e50-a84a-ceeb4ddf3bba
 topic_type:
 - apiref
-ms.openlocfilehash: 239e3a82df0e6010278669f9f429bfad0d163319
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d94422d25da91cd2a6653a95cbd852c3930a151a
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133725"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795695"
 ---
 # <a name="cordebugstatechange-enumeration"></a>Enumeración CorDebugStateChange
 
@@ -31,26 +31,26 @@ typedef enum CorDebugStateChange
 } CorDebugStateChange;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
-| Miembro            | Descripción                                                              |
+| Member            | Descripción                                                              |
 | ----------------- | ------------------------------------------------------------------------ |
 | `PROCESS_RUNNING` | El proceso alcanzó un nuevo estado de memoria por ejecución directa.            |
 | `FLUSH_ALL`       | La memoria del proceso puede ser diferente de forma arbitraria de lo que era anteriormente. |
 
 ## <a name="remarks"></a>Comentarios
 
- Un miembro de la enumeración `CorDebugStateChange` se proporciona como argumento cuando el depurador llama al método `ProcessStateChanged` con [ICorDebugProcess4::P rocessstatechanged](icordebugprocess4-processstatechanged-method.md) o [método icordebugprocess6::P rocessstatechanged](icordebugprocess6-processstatechanged-method.md)
+ Un miembro de la `CorDebugStateChange` enumeración se proporciona como argumento cuando el depurador llama `ProcessStateChanged` al método con [ICorDebugProcess4::P rocessStateChanged](icordebugprocess4-processstatechanged-method.md) o [método icordebugprocess6::P rocessstatechanged](icordebugprocess6-processstatechanged-method.md)
 
 ## <a name="requirements"></a>Requisitos
 
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).
 
  **Encabezado:** CorDebug.idl, CorDebug.h
 
  **Biblioteca:** CorGuids.lib
 
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
 
 ## <a name="see-also"></a>Vea también
 

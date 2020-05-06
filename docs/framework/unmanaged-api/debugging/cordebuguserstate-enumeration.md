@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5f6c2bcd-8102-4e3b-abc5-86ab0bd62def
 topic_type:
 - apiref
-ms.openlocfilehash: c142b9656af2031b10de239645da76835c435655
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d502b4098016fb14793bccd6feb641e92e3c2611
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789225"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795643"
 ---
 # <a name="cordebuguserstate-enumeration"></a>CorDebugUserState (Enumeración)
 Indica el estado de uso de un subproceso.  
@@ -40,9 +40,9 @@ typedef enum CorDebugUserState {
 } CorDebugUserState;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
-|{2&gt;Value&lt;2}|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |`USER_STOP_REQUESTED`|Se ha solicitado una terminación del subproceso.|  
 |`USER_SUSPEND_REQUESTED`|Se ha solicitado una suspensión del subproceso.|  
@@ -54,19 +54,19 @@ typedef enum CorDebugUserState {
 |`USER_UNSAFE_POINT`|El subproceso está en un punto no seguro. Es decir, el subproceso está en un punto de la ejecución donde puede bloquear la recolección de elementos no utilizados.<br /><br /> Los eventos de depuración se pueden enviar desde puntos no seguros, pero si se suspende un subproceso en un punto no seguro, es muy probable que se produzca un interbloqueo hasta que se reanude el subproceso. Los puntos Safe y Unsafe se determinan mediante la implementación Just-in-Time (JIT) y la recolección de elementos no utilizados.|  
 |`USER_THREADPOOL`|El subproceso procede del grupo de subprocesos.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El estado de usuario de un subproceso es el estado que tiene el subproceso cuando el depurador lo examina. Un subproceso puede tener una combinación de Estados de usuario.  
   
  Use el método [ICorDebugThread:: getuserstate (](icordebugthread-getuserstate-method.md) para recuperar el estado de usuario de un subproceso.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fe248069-b33c-48e1-a777-06ac9b239c54
 topic_type:
 - apiref
-ms.openlocfilehash: 92aee981aca3bac32c0ef264799e486315ca5103
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 288d7bfdf18be5cef032227c537032966fa68df4
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789256"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795708"
 ---
 # <a name="cordebugstepreason-enumeration"></a>CorDebugStepReason (Enumeración)
 Indica el resultado de un paso individual.  
@@ -38,9 +38,9 @@ typedef enum CorDebugStepReason {
 } CorDebugStepReason;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
-|Miembro|Descripción|  
+|Member|Descripción|  
 |------------|-----------------|  
 |`STEP_NORMAL`|La ejecución paso a paso se completó normalmente, dentro de la misma función.|  
 |`STEP_RETURN`|La ejecución continuará normalmente, después de que se devuelva la función.|  
@@ -50,16 +50,16 @@ typedef enum CorDebugStepReason {
 |`STEP_INTERCEPT`|El control se pasó a un interceptor.|  
 |`STEP_EXIT`|El subproceso se cerró antes de que se completara el paso.|  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [StepComplete (método)](icordebugmanagedcallback-stepcomplete-method.md)
+- [Método StepComplete](icordebugmanagedcallback-stepcomplete-method.md)
 - [Enumeraciones de depuración](debugging-enumerations.md)
