@@ -2,12 +2,12 @@
 title: Comando dotnet new
 description: El comando dotnet new crea proyectos de .NET Core basados en la plantilla especificada.
 ms.date: 04/10/2020
-ms.openlocfilehash: 1979f98a6005a414acc64c5eaa086a88aca9f033
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 9a68baafa7ac3e6ad2fdc8f1c6e8621d6e15f1ff
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102832"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506862"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -46,14 +46,14 @@ El comando llama al [motor de plantillas](https://github.com/dotnet/templating) 
 
   La plantilla de la que se va a crear una instancia cuando se invoca el comando. Cada plantilla puede tener opciones específicas que puede pasar. Para obtener más información, vea [Opciones de plantilla](#template-options).
 
-  Puede ejecutar `dotnet new --list` para ver una lista de todas las plantillas instaladas. Si el valor `TEMPLATE` no es una coincidencia exacta con el texto de la columna **Plantillas** o **Nombre corto** de la tabla devuelta, se realiza una coincidencia de subcadena con esas dos columnas.
+  Puede ejecutar `dotnet new --list` o `dotnet new -l` para ver una lista de todas las plantillas instaladas. Si el valor `TEMPLATE` no es una coincidencia exacta con el texto de la columna **Plantillas** o **Nombre corto** de la tabla devuelta, se realiza una coincidencia de subcadena con esas dos columnas.
 
   A partir del SDK de .NET Core 3.0, la CLI busca plantillas en NuGet.org al invocar el comando `dotnet new` en las siguientes condiciones:
 
   - Si la CLI no encuentra ninguna coincidencia de plantilla al invocar `dotnet new`, ni siquiera parcial.
   - Si hay disponible una versión más reciente de la plantilla. En este caso, se crea el proyecto o el artefacto, pero la CLI le advierte de que hay una versión actualizada de la plantilla.
 
-  El comando contiene una lista predeterminada de plantillas. Use `dotnet new -l` para obtener una lista de las plantillas disponibles. En la tabla siguiente se muestran las plantillas que vienen preinstaladas en el SDK de .NET Core. El lenguaje predeterminado de la plantilla se muestra entre corchetes. Haga clic en el vínculo del nombre corto para ver las opciones específicas de la plantilla.
+  En la tabla siguiente se muestran las plantillas que vienen preinstaladas en el SDK de .NET Core. El lenguaje predeterminado de la plantilla se muestra entre corchetes. Haga clic en el vínculo del nombre corto para ver las opciones específicas de la plantilla.
 
 | Plantillas                                    | Nombre corto                      | Lenguaje     | Etiquetas                                  | Inclusión |
 |----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
@@ -84,19 +84,19 @@ El comando llama al [motor de plantillas](https://github.com/dotnet/templating) 
 | Biblioteca de clases de Razor                          | [razorclasslib](#razorclasslib) | [C#]         | Web/Razor/Biblioteca/Biblioteca de clases de Razor | 2.1        |
 | API web de ASP.NET Core                         | [webapi](#webapi)               | [C#], F#     | Web/WebAPI                            | 1.0        |
 | Servicio gRPC de ASP.NET Core                    | [grpc](#web-others)             | [C#]         | Web/gRPC                              | 3.0        |
-| Archivo de búfer de protocolo                         | [proto](#namespace)             |              | Web/gRPC                              | 3.0        |
 | Archivo dotnet gitignore                        | `gitignore`                     |              | Configuración                                | 3.0        |
 | archivo global.json                             | [globaljson](#globaljson)       |              | Configuración                                | 2.0        |
 | Configuración de NuGet                                 | `nugetconfig`                   |              | Configuración                                | 1.0        |
 | Archivo de manifiesto de la herramienta local dotnet              | `tool-manifest`                 |              | Configuración                                | 3.0        |
 | Configuración web                                   | `webconfig`                     |              | Configuración                                | 1.0        |
 | Archivo de solución                                | `sln`                           |              | Soluciones                              | 1.0        |
+| Archivo de búfer de protocolo                         | [proto](#namespace)             |              | Web/gRPC                              | 3.0        |
 
 ## <a name="options"></a>Opciones
 
 - **`--dry-run`**
 
-  Muestra un resumen de lo que sucedería si se ejecutara el comando determinado. Disponible a partir del SDK de .NET Core 2.2.
+  Muestra un resumen de lo que sucedería si se ejecutara el comando determinado y el resultado fuera la creación de una plantilla. Disponible a partir del SDK de .NET Core 2.2.
 
 - **`--force`**
 
@@ -139,7 +139,7 @@ El comando llama al [motor de plantillas](https://github.com/dotnet/templating) 
 
 - **`--type <TYPE>`**
 
-  Filtra plantillas en función de los tipos disponibles. Los valores predefinidos son `project`, `item` u `other`.
+  Filtra plantillas en función de los tipos disponibles. Los valores predefinidos son `project`, `item` y `other`.
 
 - **`-u|--uninstall [PATH|NUGET_ID]`**
 
@@ -507,7 +507,7 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
 - **`-rrc|--razor-runtime-compilation`**
 
-  Determina si el proyecto está configurado para usar la [compilación en tiempo de ejecución de Razor](/aspnet/core/mvc/views/view-compilation#runtime-compilation) en las compilaciones de depuración. Opción disponible a partir del SDK de .NET Core 3.1.
+  Determina si el proyecto está configurado para usar la [compilación en tiempo de ejecución de Razor](/aspnet/core/mvc/views/view-compilation#runtime-compilation) en las compilaciones de depuración. Opción disponible a partir del SDK de .NET Core 3.1.201.
 
 ***
 

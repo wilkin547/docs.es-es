@@ -3,18 +3,18 @@ title: Comando dotnet nuget push
 description: El comando dotnet nuget push inserta un paquete en el servidor y lo publica.
 author: karann-msft
 ms.date: 02/14/2020
-ms.openlocfilehash: 96f8d008c8306a0782d5149360a24bb4097a1ec4
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 8b0437d7f4ada2b56af50e30717d131668c21f7e
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463519"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728355"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
 **Este artículo se aplica a:** ✔️ SDK de .NET Core 2.x y versiones posteriores
 
-## <a name="name"></a>Name
+## <a name="name"></a>NOMBRE
 
 `dotnet nuget push`: inserta un paquete en el servidor y lo publica.
 
@@ -30,9 +30,11 @@ dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output]
 dotnet nuget push -h|--help
 ```
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descripción
 
 El comando `dotnet nuget push` inserta un paquete en el servidor y lo publica. El comando push usa los detalles del servidor y de las credenciales encontrados en el archivo de configuración NuGet del sistema o en la cadena de archivos de configuración. Para más información sobre los archivos de configuración, consulte [Configuring NuGet Behavior](/nuget/consume-packages/configuring-nuget-behavior) (Configuración del comportamiento de NuGet). La configuración predeterminada de NuGet se obtiene mediante la carga de *%AppData%\NuGet\NuGet.config* (Windows) o *$HOME/.local/share* (Linux/macOS), y luego la carga de cualquier archivo *nuget.config* o *.nuget\nuget.config* comenzando desde la raíz de la unidad y finalizando en el directorio actual.
+
+El comando inserta un paquete existente. No crea un paquete. Para crear un paquete, use [`dotnet pack`](dotnet-pack.md).
 
 ## <a name="arguments"></a>Argumentos
 
@@ -68,7 +70,7 @@ El comando `dotnet nuget push` inserta un paquete en el servidor y lo publica. E
 
 - **`--no-service-endpoint`**
 
-  No agrega "api/v2/paquete" a la dirección URL de origen. Opción disponible a partir del SDK de .NET Core 2.1.
+  No agrega "api/v2/paquete" a la dirección URL de origen. Opción disponible desde el SDK de .NET Core 2.1.
 
 - **`-s|--source <SOURCE>`**
 
@@ -92,7 +94,7 @@ El comando `dotnet nuget push` inserta un paquete en el servidor y lo publica. E
 
 ## <a name="examples"></a>Ejemplos
 
-- Inserta *foo.nupkg* en el origen de inserción predeterminado, y especifica una clave de API:
+- Inserte *foo.nupkg* en el origen de inserción predeterminado y especifique una clave de API:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a
@@ -110,25 +112,25 @@ El comando `dotnet nuget push` inserta un paquete en el servidor y lo publica. E
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/
   ```
 
-- Inserta *foo.nupkg* en el origen de inserción predeterminado:
+- Inserte *foo.nupkg* en el origen de inserción predeterminado:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg
   ```
 
-- Inserta *foo.symbols.nupkp* en el origen de símbolos predeterminado:
+- Inserte *foo.symbols.nupkp* en el origen de símbolos predeterminado:
 
   ```dotnetcli
   dotnet nuget push foo.symbols.nupkg
   ```
 
-- Inserta *foo.nupkg* en el origen de inserción predeterminado, y especifica un tiempo de espera de 360 segundos:
+- Inserte *foo.nupkg* en el origen de inserción predeterminado y especifique un tiempo de espera de 360 segundos:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg --timeout 360
   ```
 
-- Inserta todos los archivos *.nupkg*  del directorio actual en el origen de inserción predeterminado:
+- Inserte todos los archivos *.nupkg*  del directorio actual en el origen de inserción predeterminado:
 
   ```dotnetcli
   dotnet nuget push *.nupkg
@@ -138,8 +140,17 @@ El comando `dotnet nuget push` inserta un paquete en el servidor y lo publica. E
   > Si este comando no funciona, es posible que se deba a un error presente en versiones anteriores del SDK (SDK de .NET Core 2.1 y versiones anteriores).
   > Para solucionar este problema, actualice la versión de su SDK o ejecute el siguiente comando en su lugar: `dotnet nuget push **/*.nupkg`
 
-- Envía todos los archivos *.nupkg* aunque un servidor HTTP(S) devuelva una respuesta de conflicto 409:
+- Inserte todos los archivos *.nupkg*, aunque un servidor HTTP(S) devuelva una respuesta de conflicto 409:
 
   ```dotnetcli
   dotnet nuget push *.nupkg --skip-duplicate
   ```
+
+- Inserte todos los archivos *.nupkg*  del directorio actual en un directorio de fuente local:
+
+  ```dotnetcli
+  dotnet nuget push *.nupkg -s c:\mydir
+  ```
+
+  Este comando no almacena paquetes en una estructura de carpetas jerárquica, lo que se recomienda para optimizar el rendimiento. Para obtener más información, vea [Fuentes locales](//nuget/hosting-packages/local-feeds).
+  

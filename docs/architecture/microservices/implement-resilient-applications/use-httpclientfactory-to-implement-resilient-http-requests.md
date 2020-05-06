@@ -2,12 +2,12 @@
 title: Uso de IHttpClientFactory para implementar solicitudes HTTP resistentes
 description: Aprenda a utilizar IHttpClientFactory, disponible a partir de .NET Core 2.1, para crear instancias de `HttpClient`, lo que le facilita su uso en sus aplicaciones.
 ms.date: 03/03/2020
-ms.openlocfilehash: 088fb6c7e10ad656247ee4065da5c13d383b2cf7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ade26208a931faa456c8e267def2caef7a3f32de
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847224"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507304"
 ---
 # <a name="use-ihttpclientfactory-to-implement-resilient-http-requests"></a>Uso de IHttpClientFactory para implementar solicitudes HTTP resistentes
 
@@ -21,7 +21,7 @@ Aunque esta clase implementa `IDisposable`, no se aconseja declarar y crear inst
 
 Por tanto, `HttpClient` está diseñado para que se cree una instancia una vez y se reutilice durante la vida de una aplicación. Crear una instancia de una clase `HttpClient` para cada solicitud agotará el número de sockets disponibles bajo cargas pesadas. Ese problema generará errores `SocketException`. Los enfoques posibles para solucionar ese problema se basan en la creación del objeto `HttpClient` como singleton o estático, como se explica en este [artículo de Microsoft sobre el uso de HttpClient](../../../csharp/tutorials/console-webapiclient.md). Puede tratarse de una buena solución para las aplicaciones de consola de corta duración o elementos similares que se ejecutan varias veces al día.
 
-Otro problema al que los desarrolladores deben hacer frente es cuando se usa una instancia compartida de `HttpClient` en procesos de larga duración. En una situación en la que se crean instancias del HttpClient como un singleton o un objeto estático, los cambios de DNS no se pueden controlar, tal y como se describe en este [problema](https://github.com/dotnet/corefx/issues/11224) del repositorio de GitHub sobre dotnet/corefx.
+Otro problema al que los desarrolladores deben hacer frente es cuando se usa una instancia compartida de `HttpClient` en procesos de larga duración. En una situación en la que se crean instancias del HttpClient como un singleton o un objeto estático, los cambios de DNS no se pueden controlar, tal y como se describe en esta [incidencia](https://github.com/dotnet/runtime/issues/18348) del repositorio de GitHub sobre dotnet/runtime.
 
 Realmente el problema no está en `HttpClient`, sino en el [constructor predeterminado de HttpClient](https://docs.microsoft.com/dotnet/api/system.net.http.httpclient.-ctor?view=netcore-3.1#System_Net_Http_HttpClient__ctor), ya que crea una instancia concreta de <xref:System.Net.Http.HttpMessageHandler>, que es la que plantea los problemas de *agotamiento de sockets* y los cambios de DNS mencionados anteriormente.
 

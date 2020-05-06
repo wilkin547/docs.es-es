@@ -1,5 +1,5 @@
 ---
-title: CorGCReferenceType (enumeración)
+title: CorGCReferenceType (Enumeración)
 ms.date: 03/30/2017
 api_name:
 - CorGCReferenceType
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: d9f16439-5a36-4474-8ffd-4f0b2c2bb686
 topic_type:
 - apiref
-ms.openlocfilehash: 17d47b6242bb12ff5ca3cfbde3e4ec183b9c19fc
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d156f103c3812c91da380e722a1c6c95d621df4c
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793873"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860916"
 ---
-# <a name="corgcreferencetype-enumeration"></a>CorGCReferenceType (enumeración)
+# <a name="corgcreferencetype-enumeration"></a>CorGCReferenceType (Enumeración)
 Identifica el origen de un objeto que se va a recolectar como elemento no utilizado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -46,9 +46,9 @@ typedef enum {
 } CorGCReferenceType  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
-|Nombre de miembro|Descripción|  
+|Nombre del miembro|Descripción|  
 |-----------------|-----------------|  
 |`CorHandleStrong`|Identificador a una referencia segura de la tabla de identificadores de objetos.|  
 |`CorHandleStrongPinning`|Identificador de una referencia segura anclada de la tabla de identificadores de objetos.|  
@@ -64,22 +64,22 @@ typedef enum {
 |`CorHandleWeakOnly`|Devuelve solo las referencias débiles de la tabla de identificadores. Este valor solo lo usa el método [ICorDebugProcess5:: enumeratehandles (](icordebugprocess5-enumeratehandles-method.md) .|  
 |`CorHandleAll`|Devuelve todas las referencias de la tabla de identificadores. Este valor solo lo usa el método [ICorDebugProcess5:: enumeratehandles (](icordebugprocess5-enumeratehandles-method.md) .|  
   
-## <a name="remarks"></a>Notas  
- La enumeración `CorGCReferenceType` se utiliza como sigue:  
+## <a name="remarks"></a>Comentarios  
+ La `CorGCReferenceType` enumeración se usa como se indica a continuación:  
   
-- Como valor del campo `type` de la estructura [COR_GC_REFERENCE](cor-gc-reference-structure.md) , indica el origen de una referencia o un identificador.  
+- Como valor del `type` campo de la estructura [COR_GC_REFERENCE](cor-gc-reference-structure.md) , indica el origen de una referencia o un identificador.  
   
-- Como `types` argumento al método [ICorDebugProcess5:: enumeratehandles (](icordebugprocess5-enumeratehandles-method.md) , especifica los tipos de identificadores que se van a incluir en la enumeración.  
+- Como `types` argumento para el método [ICorDebugProcess5:: enumeratehandles (](icordebugprocess5-enumeratehandles-method.md) , especifica los tipos de identificadores que se van a incluir en la enumeración.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Enumeraciones de depuración](debugging-enumerations.md)

@@ -11,12 +11,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: 6e3742991820a8805b3c9b57767079940899d8fc
-  ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+  ms.openlocfilehash: 77180064f810cf70b1ec0ef3d72bbd9005b78a47
+  ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 03/18/2020
-  ms.locfileid: "79507014"
+  ms.lasthandoff: 04/30/2020
+  ms.locfileid: "82595915"
 items:
 - durationInMinutes: 1
   content: >
@@ -197,6 +197,9 @@ items:
     Console.WriteLine($"[{trimmedGreeting}]");
 
     ```
+
+
+    Los corchetes `[` y `]` ayudan a visualizar lo que hacen los métodos `Trim`, `TrimStart` y `TrimEnd`. Los corchetes muestran dónde empieza y acaba el espacio en blanco.
 
 
     Este ejemplo refuerza un par de conceptos importantes para trabajar con cadenas. Los métodos que manipulan cadenas devuelven nuevos objetos de cadena en lugar de realizar modificaciones en contexto. Puede observar que cada llamada a cualquiera de los métodos `Trim` devuelve una cadena nueva, pero no modifica el mensaje original.

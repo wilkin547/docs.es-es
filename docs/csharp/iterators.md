@@ -4,18 +4,18 @@ description: Obtenga información sobre cómo usar iteradores de C# integrados y
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: 1933ecf83e9fa234f9b88c815d8ab527997c97f2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: efa755c2243c18fb51b653abccb2bfc702bbc055
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398728"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507382"
 ---
 # <a name="iterators"></a>Iterators
 
 Prácticamente todos los programas que escriba tendrán alguna necesidad de recorrer en iteración una colección. Va a escribir código que examine cada elemento de una colección.
 
-También va a crear métodos de iterador, que son los métodos que genera un iterador para los elementos de esa clase. Se pueden usar para:
+También va a crear métodos de iterador, que son los métodos que genera un iterador (un objeto que atraviesa un contenedor, especialmente listas) para los elementos de esa clase. Se pueden usar para:
 
 + Realizar una acción en cada elemento de una colección.
 + Enumerar una colección personalizada.

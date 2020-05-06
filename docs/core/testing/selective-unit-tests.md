@@ -2,21 +2,28 @@
 title: Ejecución de pruebas unitarias selectivas
 description: Cómo usar una expresión de filtro para ejecutar pruebas unitarias selectivas con el comando de prueba de dotnet en .NET Core.
 author: smadala
-ms.date: 03/22/2017
-ms.openlocfilehash: b9156300587215e68c01c609e298dbc1a2c53d11
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/29/2020
+ms.openlocfilehash: 50642126f3b470180ddd303ed4a2d2d90bfa5b8f
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77543513"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728179"
 ---
-# <a name="running-selective-unit-tests"></a>Ejecución de pruebas unitarias selectivas
+# <a name="run-selective-unit-tests"></a>Ejecución de pruebas unitarias selectivas
 
 Con el comando `dotnet test` en .NET Core, se puede usar una expresión de filtro para ejecutar pruebas selectivas. En este artículo se muestra cómo filtrar qué pruebas se ejecutan. En los siguientes ejemplos, se utiliza `dotnet test`. Si está usando `vstest.console.exe`, reemplace `--filter` por `--testcasefilter:`.
 
-> [!NOTE]
-> El uso de filtros que incluyen el signo de exclamación (!) en `*nix` requiere el escape debido a que `!` está reservado. Por ejemplo, este filtro omite todas las pruebas si el espacio de nombres contiene IntegrationTests: `dotnet test --filter FullyQualifiedName\!~IntegrationTests`.
-> Observe la barra diagonal inversa que precede al signo de exclamación.
+## <a name="character-escaping"></a>Escape de caracteres
+
+El uso de filtros que incluyen el signo de exclamación (!) en `*nix` requiere el escape debido a que `!` está reservado. Por ejemplo, este filtro omite todas las pruebas si el espacio de nombres contiene IntegrationTests: `dotnet test --filter FullyQualifiedName\!~IntegrationTests`.
+Observe la barra diagonal inversa que precede al signo de exclamación.
+
+En el caso de los valores `FullyQualifiedName` que incluyen una coma para los parámetros de tipo genérico, escape la coma con `%2C`. Por ejemplo:
+
+```dotnetcli
+dotnet test --filter "FullyQualifiedName=MyNamespace.MyTestsClass<ParameterType1%2CParameterType2>.MyTestMethod"
+```
 
 ## <a name="mstest"></a>MSTest
 
@@ -97,7 +104,7 @@ En el ejemplo de código, los rasgos definidos con claves `Category` y `Priority
 | Expresión | Resultado |
 | ---------- | ------ |
 | `dotnet test --filter XUnit` | Ejecuta pruebas cuyo `FullyQualifiedName` contenga `XUnit`.  Disponible en `vstest 15.1+`. |
-| `dotnet test --filter Category=CategoryA` | Ejecuta las pruebas que tienen `[Trait("Category", "CategoryA")]`. |
+| `dotnet test --filter Category=CategoryA` | Ejecuta pruebas que tienen `[Trait("Category", "CategoryA")]`. |
 
 **Usar operadores condicionales | y &amp;**
 
@@ -148,3 +155,5 @@ namespace NUnitNamespace
 | <code>dotnet test --filter "FullyQualifiedName~UnitTest1&#124;TestCategory=CategoryA"</code> | Ejecuta pruebas que tienen `UnitTest1` en `FullyQualifiedName` **o** en las que `TestCategory` es `CategoryA`. |
 | `dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"` | Ejecuta pruebas que tienen `UnitTest1` en `FullyQualifiedName` **y** en las que `TestCategory` es `CategoryA`. |
 | <code>dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)&#124;Priority=1"</code> | Ejecuta pruebas que tienen `FullyQualifiedName` con `UnitTest1` **y** en las que `TestCategory` es `CategoryA` **o** en las que `Priority` es 1. |
+
+Para obtener más información, vea [Filtro TestCase](https://github.com/Microsoft/vstest-docs/blob/master/docs/filter.md).

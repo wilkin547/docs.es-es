@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: c24bdce64eb7e208bf3830940d7beab1ebf92e78
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e10d1792a8dc0b57ddd121ec09854e8e1824cade
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179187"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860805"
 ---
 # <a name="dacpmoduledata-structure"></a>Estructura DacpModuleData
 
@@ -44,20 +44,20 @@ struct DacpModuleData
 
 | Member    | Descripción                                                             |
 | --------- | ----------------------------------------------------------------------- |
-| `Address` | Dirección del objeto module.                                           |
-| `File`    | Un puntero al archivo ejecutable portátil (PE).                       |
-| `ilBase`  | La dirección de la base de la imagen cargada.                                 |
-| `payLoad` | Un búfer de carga útil para la información de módulo adicional utilizada por el tiempo de ejecución. |
+| `Address` | Dirección del objeto de módulo.                                           |
+| `File`    | Puntero al archivo portable ejecutable (PE).                       |
+| `ilBase`  | Dirección de la base de la imagen cargada.                                 |
+| `payLoad` | Búfer de carga para la información adicional del módulo que utiliza el motor en tiempo de ejecución. |
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
-Esta estructura se encuentra dentro del tiempo de ejecución y no se expone a través de encabezados o archivos de biblioteca. Para utilizarla, defina la estructura como se especificó anteriormente.
+Esta estructura reside dentro del tiempo de ejecución y no se expone a través de los encabezados o archivos de biblioteca. Para usarlo, defina la estructura tal y como se especificó anteriormente.
 
 ## <a name="requirements"></a>Requisitos
-**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
-**Encabezado:** Ninguno  
-**Biblioteca:** Ninguno  
-**Versiones de .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
+**Encabezado:** Ninguna  
+**Biblioteca:** Ninguna  
+**.NET Framework versiones:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Consulte también
 

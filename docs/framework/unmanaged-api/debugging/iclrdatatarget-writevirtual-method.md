@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d627e8b7-a605-40ac-b9bb-da9a3f1b66d9
 topic_type:
 - apiref
-ms.openlocfilehash: bd2f67c2d7230d3873b4dc0df73ac1be778a0828
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6a7a7736837f7e6bbf1ad4982e78a75550abbeab
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179096"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860505"
 ---
 # <a name="iclrdatatargetwritevirtual-method"></a>ICLRDataTarget::WriteVirtual (Método)
 Escribe datos del búfer especificado en la dirección de memoria virtual especificada.  
@@ -39,26 +39,26 @@ HRESULT WriteVirtual (
   
 ## <a name="parameters"></a>Parámetros  
  `address`  
- [en] Un CLRDATA_ADDRESS que almacena la dirección de memoria virtual.  
+ de CLRDATA_ADDRESS que almacena la dirección de memoria virtual.  
   
  `buffer`  
- [en] Puntero a un búfer que almacena los datos que se van a escribir.  
+ de Puntero a un búfer que almacena los datos que se van a escribir.  
   
  `bytesRequested`  
- [en] El número de bytes que se van a escribir.  
+ de Número de bytes que se van a escribir.  
   
  `bytesWritten`  
- [fuera] Un puntero al número real de bytes que se escribieron.  
+ enuncia Puntero al número real de bytes que se escribieron.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** ClrData.idl, ClrData.h  
+ **Encabezado:** ClrData. idl, ClrData. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte también
 
-- [ICLRDataTarget (interfaz)](iclrdatatarget-interface.md)
+- [ICLRDataTarget (Interfaz)](iclrdatatarget-interface.md)

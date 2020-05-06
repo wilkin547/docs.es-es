@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f8d50cb3-ec4f-4529-8fe3-bd61fd28e13c
 topic_type:
 - apiref
-ms.openlocfilehash: cdf88ef193df71a638fff43add1a9648d8631731
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 1f33fb98712939d1e687798547b784819f164d63
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789129"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860724"
 ---
 # <a name="enumerateclrs-function"></a>EnumerateCLRs (Función)
 Proporciona un mecanismo para enumerar los CLR de un proceso.  
@@ -37,7 +37,7 @@ HRESULT EnumerateCLRs (
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parámetros  
  `debuggeePID`  
  [in] Identificador del proceso desde el que se van a enumerar los CLR cargados.  
   
@@ -63,7 +63,7 @@ HRESULT EnumerateCLRs (
  E_FAIL (u otros códigos devueltos de E_)  
  No se pueden enumerar los CLR cargados.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Para un proceso de destino identificado por `debuggeePID`, la función devuelve una matriz de rutas de acceso, `ppStringArrayOut`, a los CLR cargados en el proceso; una matriz de identificadores de eventos, `ppHandleArrayOut`, que puede contener un evento de inicio continuo para el CLR en el mismo índice; y el tamaño de las matrices, `pdwArrayLengthOut`, que especifica el número de CLR que hay cargados.  
   
  En el sistema operativo Windows, `debuggeePID` se asigna a un identificador de procesos del sistema operativo.  
@@ -72,8 +72,8 @@ HRESULT EnumerateCLRs (
   
  Se puede llamar a esta función con ambos parámetros de matriz establecidos en NULL para devolver el número de los CLR en el proceso de destino. A partir de este número, un llamador puede deducir el tamaño del búfer que se creará: `(sizeof(HANDLE) * count) + (sizeof(LPWSTR) * count) + (sizeof(WCHAR*) * count * MAX_PATH)`.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** dbgshim. h  
   

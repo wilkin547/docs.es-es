@@ -2,13 +2,13 @@
 title: Introducción a C# y Visual Studio Code
 description: Obtenga información sobre cómo crear y depurar su primera aplicación .NET Core en C# mediante Visual Studio Code.
 author: kendrahavens
-ms.date: 12/05/2018
-ms.openlocfilehash: 6722b97cee5ca3672c9dddece6e61f4d13de05a9
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.date: 04/23/2020
+ms.openlocfilehash: 3dd7c4602fbb27e29bad977f8d3df34b6061bc23
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805821"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506919"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Introducción a C# y Visual Studio Code
 
@@ -22,39 +22,28 @@ ms.locfileid: "80805821"
 
 ## <a name="hello-world"></a>Hello World
 
-Se va a empezar con un programa "Hola mundo" sencillo basado en .NET Core:
+Empiece con un sencillo programa "Hola mundo" basado en .NET Core:
 
 1. Abrir un proyecto:
 
     - Abra Visual Studio Code.
-    - Haga clic en el icono del explorador en el menú de la izquierda y después haga clic en **Abrir carpeta**.
-    - Seleccione **Archivo** > **Abrir carpeta** en el menú principal para abrir la carpeta en la que quiere que esté el proyecto de C# y haga clic en **Seleccionar carpeta**. En el ejemplo se va a crear una carpeta para el proyecto denominada *HelloWorld*.
+    - Seleccione **Archivo** > **Abrir carpeta** en el menú principal.
+    - Cree una carpeta denominada *HelloWorld* y haga clic en **Seleccionar carpeta**. De forma predeterminada, el nombre de la carpeta se convierte en el nombre del proyecto y del espacio de nombres. Más adelante en el tutorial, agregará código que supone que el espacio de nombres del proyecto es `HelloWorld`.
 
-      ![Abrir carpeta de Visual Studio Code](media/with-visual-studio-code/vs-code-open-folder.png)
-
-2. Inicializar un proyecto de C#:
+1. Inicializar un proyecto de C#:
 
     - Abra el terminal de Visual Studio Code seleccionando **Ver** > **Terminal** en el menú principal.
     - En la ventana de terminal, escriba `dotnet new console`.
-    - Este comando crea un archivo *Program.cs* en la carpeta con un programa "Hola mundo" sencillo ya escrito, junto con un archivo de proyecto de C# denominado *HelloWorld.csproj*.
+
+      Este comando crea un archivo *Program.cs* en la carpeta con un programa "Hola mundo" sencillo ya escrito, junto con un archivo de proyecto de C# denominado *HelloWorld.csproj*.
 
       ![El nuevo comando de dotnet](media/with-visual-studio-code/dotnet-new-command.png)
 
-3. Resolver los recursos de compilación:
+1. Ejecutar el programa "Hola mundo":
 
-    - En **.NET Core 1.x**, escriba `dotnet restore`. Al ejecutar `dotnet restore`, se concede acceso a los paquetes de .NET Core necesarios para compilar el proyecto.
-
-      ![El comando de restauración de dotnet](media/with-visual-studio-code/dotnet-restore-command.png)
-
-      [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
-
-4. Ejecutar el programa "Hola mundo":
-
-    - Escriba `dotnet run`.
+    - En la ventana de terminal, escriba `dotnet run`.
 
       ![El comando de ejecución de dotnet](media/with-visual-studio-code/dotnet-run-command.png)
-
-También puede ver un breve tutorial de vídeo para obtener ayuda del programa de instalación en [Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core), [macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core-on-MacOS) o [Linux](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu).
 
 ## <a name="debug"></a>Depuración
 
@@ -62,26 +51,26 @@ También puede ver un breve tutorial de vídeo para obtener ayuda del programa d
 
     ![Abrir el archivo Program.cs](media/with-visual-studio-code/open-program-cs.png)
 
-2. Visual Studio Code debe pedirle que agregue los recursos que faltan para compilar y depurar la aplicación. Seleccione **Sí**.
+1. Visual Studio Code le pedirá que agregue los recursos que faltan para compilar y depurar la aplicación. Seleccione **Sí**.
 
     ![Solicitud de los recursos que faltan](media/with-visual-studio-code/missing-assets.png)
 
-3. Para abrir la vista Depurar, haga clic en el icono de depuración en el menú de la izquierda.
+1. Para abrir la vista Depurar, haga clic en el icono de depuración en el menú de la izquierda.
 
     ![Apertura de la pestaña Depurar en Visual Studio Code](media/with-visual-studio-code/open-debug-tab.png)
 
-4. Busque la flecha verde en la parte superior del panel. Asegúrese de que **.NET Core Launch (consola)** está seleccionado en el menú desplegable que está junto a la flecha.
+1. Busque la flecha verde en la parte superior del panel. Asegúrese de que **.NET Core Launch (consola)** está seleccionado en el menú desplegable que está junto a la flecha.
 
     ![Selección de .NET Core en Visual Studio Code](media/with-visual-studio-code/select-net-core.png)
 
-5. Agregue un punto de interrupción al proyecto; para ello, haga clic en el **margen del editor**, que es el espacio a la izquierda de los números de línea del editor, junto a la línea 9 o mueva el cursor del texto de la línea 9 en el editor y presione <kbd>F9</kbd>.
+1. Agregue un punto de interrupción al proyecto; para ello, haga clic en el **margen del editor**, que es el espacio a la izquierda de los números de línea del editor, junto a la línea 9 o mueva el cursor del texto de la línea 9 en el editor y presione <kbd>F9</kbd>.
 
     ![Establecer un punto de interrupción](media/with-visual-studio-code/set-breakpoint-vs-code.png)
 
-6. Para empezar a depurar, presione <kbd>F5</kbd> o seleccione la flecha verde. El depurador detiene la ejecución del programa cuando alcanza el punto de interrupción establecido en el paso anterior.
+1. Para empezar a depurar, presione <kbd>F5</kbd> o seleccione la flecha verde. El depurador detiene la ejecución del programa cuando alcanza el punto de interrupción establecido en el paso anterior.
     - Mientras depura, puede ver las variables locales en el panel superior izquierdo o usar la consola de depuración.
 
-7. Seleccione la flecha azul de la parte superior para continuar la depuración o seleccione el cuadrado rojo de la parte superior para detenerla.
+1. Seleccione la flecha azul de la parte superior para continuar la depuración o seleccione el cuadrado rojo de la parte superior para detenerla.
 
     ![Ejecución y depuración en Visual Studio Code](media/with-visual-studio-code/run-debug-vs-code.png)
 
@@ -90,9 +79,9 @@ También puede ver un breve tutorial de vídeo para obtener ayuda del programa d
 
 ## <a name="add-a-class"></a>Agregar una clase
 
-1. Para agregar una nueva clase, haga clic con el botón derecho en el Explorador de VSCode y seleccione **Nuevo archivo**. Asé se agrega un nuevo archivo a la carpeta abierta en Visual Studio Code.
-2. Asigne un nombre al archivo *MyClass.cs*. Debe guardarlo con una extensión `.cs` al final para que se reconozca como archivo csharp.
-3. Agregue el código siguiente para crear la primera clase. Asegúrese de incluir el espacio de nombres correcto para poder hacer referencia a él desde el archivo *Program.cs*:
+1. Para agregar una nueva clase, haga clic con el botón derecho en el Explorador de VSCode, debajo de *Program.cs*, y seleccione **Nuevo archivo**. Asé se agrega un nuevo archivo a la carpeta abierta en Visual Studio Code.
+1. Asigne un nombre al archivo *MyClass.cs*. Debe guardarlo con una extensión `.cs` al final para que se reconozca como archivo csharp.
+1. Agregue el código siguiente para crear la primera clase.
 
     ``` csharp
     using System;
@@ -109,7 +98,7 @@ También puede ver un breve tutorial de vídeo para obtener ayuda del programa d
     }
     ```
 
-4. Llame a la nueva clase con el método principal de *Program.cs* agregando el código siguiente:
+1. Llame a la nueva clase desde el método `Main`. Para ello, reemplace el código en *Program.cs* por el código siguiente:
 
     ```csharp
     using System;
@@ -127,13 +116,15 @@ También puede ver un breve tutorial de vídeo para obtener ayuda del programa d
     }
     ```
 
-5. Guarde los cambios y vuelva a ejecutar el programa. El nuevo mensaje debe aparecer con la cadena anexada.
+1. Guarde los cambios.
+
+1. Ejecute el programa otra vez.
 
     ```dotnetcli
     dotnet run
     ```
 
-    Obtendrá la siguiente salida:
+    El nuevo mensaje aparecerá con la cadena anexada.
 
     ```console
     Hello World! Happy coding!

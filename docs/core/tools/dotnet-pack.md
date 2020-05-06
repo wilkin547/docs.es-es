@@ -1,13 +1,13 @@
 ---
 title: Comando dotnet
 description: El comando dotnet pack crea paquetes de NuGet para el proyecto de .NET Core.
-ms.date: 02/14/2020
-ms.openlocfilehash: 2df096a088a177b77256b5d717f31e185507b249
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.date: 04/28/2020
+ms.openlocfilehash: 26a8581f55a8dc9e61aa52e62ed94c73eefd3e03
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102819"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595759"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -178,8 +178,14 @@ Los proyectos web no están empaquetados de forma predeterminada. Para invalidar
   dotnet pack --runtime win10-x64
   ```
 
-- Empaquete el proyecto mediante un [archivo .nuspec](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec):
+- Empaquete el proyecto mediante un archivo *.nuspec*:
 
   ```dotnetcli
   dotnet pack ~/projects/app1/project.csproj -p:NuspecFile=~/projects/app1/project.nuspec -p:NuspecBasePath=~/projects/app1/nuget
   ```
+
+  Para obtener información sobre cómo usar `NuspecFile`, `NuspecBasePath` y `NuspecProperties`, vea los siguientes recursos:
+  
+  - [Empaquetado mediante un archivo .nuspec](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec)
+  - [Puntos de extensión avanzados para crear un paquete personalizado](https://docs.microsoft.com/nuget/reference/msbuild-targets#advanced-extension-points-to-create-customized-package)
+  - [Propiedades globales](https://docs.microsoft.com/visualstudio/msbuild/msbuild-properties?view=vs-2019#global-properties)

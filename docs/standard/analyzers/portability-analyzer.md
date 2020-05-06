@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo usar la herramienta Analizador de 
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 397d9f08a0dd28f80d653ac5044d6acfa2418727
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 8d019bef5fddac9f7c3d93e416cea061905c82ff
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344309"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728446"
 ---
 # <a name="the-net-portability-analyzer"></a>Analizador de portabilidad de .NET
 
@@ -27,14 +27,14 @@ Cuando haya convertido el proyecto para que tenga como destino la nueva platafor
 
 ## <a name="how-to-use-the-net-portability-analyzer"></a>Cómo usar el Analizador de portabilidad de .NET
 
-Para empezar a usar el Analizador de portabilidad de .NET en Visual Studio, primero debe descargar e instalar la extensión desde [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer). Funciona en Visual Studio 2017 y versiones posteriores. Puede configurarlo en Visual Studio en **Analizar** > **Portability Analyzer Settings** (Configuración del Analizador de portabilidad) y seleccionando las plataformas de destino, que son las plataformas y versiones de .NET en las que desea evaluar las brechas de portabilidad en comparación con la plataforma y versión con la que se ha creado el ensamblado actual.
+Para empezar a usar el Analizador de portabilidad de .NET en Visual Studio, primero debe descargar e instalar la extensión desde [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer). Funciona en Visual Studio 2017 y versiones posteriores. Configúrelo en Visual Studio, en **Analizar** > **Portability Analyzer Settings** (Configuración del Analizador de portabilidad), y seleccionando las plataformas de destino, que son las plataformas y versiones de .NET en las que se quiere evaluar las brechas de portabilidad en comparación con la plataforma y versión con la que se ha creado el ensamblado actual.
 
 ![Captura de pantalla del analizador de portabilidad.](./media/portability-analyzer/portability-screenshot.png)
 
 También puede usar la aplicación de consola ApiPort, descárguela desde [el repositorio de ApiPort](https://aka.ms/apiportdownload). Puede usar la opción de comando `listTargets` para mostrar la lista de destinos disponible y elegir las plataformas de destino especificando la opción de comando `-t` o `--target`.
 
 ### <a name="analyze-portability"></a>Análisis de portabilidad
-Para analizar todo el proyecto en Visual Studio, haga clic con el botón derecho en el proyecto en **Explorador de soluciones** y seleccione **Analyze Assembly Portability** (Analizar la portabilidad del ensamblado). También puede ir al menú **Analizar** y seleccionar **Analyze Assembly Portability** (Analizar la portabilidad del ensamblado). Desde allí, seleccione el ejecutable o .dll del proyecto.
+Para analizar todo el proyecto en Visual Studio, haga clic con el botón derecho en el proyecto en **Explorador de soluciones** y seleccione **Analyze Assembly Portability** (Analizar la portabilidad del ensamblado). También puede ir al menú **Analizar** y seleccionar **Analyze Assembly Portability** (Analizar la portabilidad del ensamblado). Desde allí, seleccione el ejecutable o DLL del proyecto.
 
 ![Captura de pantalla del analizador de portabilidad del Explorador de soluciones.](./media/portability-analyzer/portability-solution-explorer.png)
 
@@ -67,12 +67,12 @@ La sección **Detalles** del informe enumera las API que faltan desde cualquiera
 - Miembro de destino: el método no está presente en una plataforma de destino
 - Nombre del ensamblado: el ensamblado de .NET Framework en el que se encuentra la API que falta.
 - Cada una de las plataformas de destino seleccionada es una columna, como ".NET Core": El valor de "No compatible" significa que la API no se admite en esta plataforma de destino.
-- Cambios recomendados: API o tecnología recomendada a la que realizar el cambio. Actualmente, este campo está vacío o no está actualizado para muchas de las API. Debido a la gran cantidad de API, nos enfrentamos a gran desafío para mantenerlas actualizadas. Estamos examinando soluciones alternativas para proporcionar información útil a los clientes.
+- Cambios recomendados: la API o tecnología recomendada a la que realizar el cambio. Actualmente, este campo está vacío o no está actualizado para muchas de las API. Debido a la gran cantidad de API, nos enfrentamos a un gran desafío para mantenerlas actualizadas. Estamos examinando soluciones alternativas para proporcionar información útil a los clientes.
 
 #### <a name="missing-assemblies"></a>Ensamblados que faltan
 
 ![Captura de pantalla de los ensamblados que faltan.](./media/portability-analyzer/api-catalog-missing-assemblies.png)
 
-Puede encontrar la sección Ensamblados que faltan en el informe. En él se indica que esta lista de ensamblados hace referencia a los ensamblados analizados y no analizados. Si se trata un ensamblado que posee, inclúyalo en la ejecución del analizador de portabilidad de API para que pueda obtener informe detallado de portabilidad a nivel de API. Si se trata de una biblioteca de terceros, busque si tienen la versión más reciente compatible con la plataforma de destino. Si es así, le recomendamos que migre a la versión más reciente. Finalmente, sería de esperar que esta lista incluya todos los ensamblados de terceros que dependen de la aplicación y confirmar que tienen una versión compatible con la plataforma de destino.
+Puede encontrar la sección Ensamblados que faltan en el informe. Esta sección contiene una lista de ensamblados a los que hacen referencia los ensamblados analizados y que no se han analizado. Si se trata un ensamblado que posee, inclúyalo en la ejecución del analizador de portabilidad de API para que pueda obtener un informe detallado de portabilidad a nivel de API. Si se trata de una biblioteca de terceros, compruebe si hay una versión más reciente que admita la plataforma de destino y considere la posibilidad de usar dicha versión más reciente. Finalmente, la lista debe incluir todos los ensamblados de terceros de los que depende la aplicación que tengan una versión compatible con la plataforma de destino.
 
 Para obtener más información sobre el Analizador de portabilidad de .NET, visite la [documentación de GitHub](https://github.com/Microsoft/dotnet-apiport#documentation) y el vídeo de Channel 9 [A Brief Look at the .NET Portability Analyzer](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer) (Información breve sobre el Analizador de portabilidad de .NET).

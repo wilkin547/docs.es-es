@@ -1,7 +1,7 @@
 ---
 title: 'Operadores y expresiones de acceso a miembros: referencia de C#'
 description: Obtenga información sobre los operadores de C# que puede usar para acceder a los miembros de tipos.
-ms.date: 03/31/2020
+ms.date: 04/17/2020
 author: pkulikov
 f1_keywords:
 - ._CSharpKeyword
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 90066b1e9c219f66fc0c76423679e81aa3fa6770
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 37a6cb7cd32a9d60607aec51b1994e4717c5349a
+ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81120985"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82624870"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>Operadores y expresiones de acceso a miembros (referencia de C#)
 
@@ -138,6 +138,9 @@ En el ejemplo anterior, si no utiliza el operador `??`, `numbers?.Length < 2` da
 
 El operador de acceso de miembro condicional NULL `?.` también se conoce con el nombre de operador Elvis.
 
+> [!NOTE]
+> En C# 8, el [operador null-forgiving](null-forgiving.md) finaliza la lista de operaciones null-conditional anteriores. Por ejemplo, la expresión `x?.y!.z` se analiza como `(x?.y)!.z`. Debido a esta interpretación, `z` se evalúa incluso si `x` es `null`, lo que puede dar lugar a <xref:System.NullReferenceException>.
+
 ### <a name="thread-safe-delegate-invocation"></a>Invocación de delegado seguro para subprocesos
 
 Use el operador `?.` para comprobar si un delegado es distinto de NULL y se invoca de forma segura para subprocesos (por ejemplo, cuando se [genera un evento](../../../standard/events/how-to-raise-and-consume-events.md)), tal como se muestra en el código siguiente:
@@ -155,6 +158,8 @@ if (handler != null)
     handler(…);
 }
 ```
+
+Es un modo seguro para subprocesos de asegurarse de que solo se invoca un `handler` que no es NULL. Dado que las instancias de delegado son inmutables, ningún subproceso puede cambiar el valor al que hace referencia la variable local `handler`. En concreto, si el código que ha ejecutado otro subproceso cancela la suscripción del evento `PropertyChanged` y `PropertyChanged` se convierte en `null` antes de que se invoque `handler`, el valor al que hace referencia `handler` queda intacto. El operador `?.` evalúa el operando de la izquierda no más de una vez, lo que garantiza que no se pueda cambiar a `null` después de verificarse como no NULL.
 
 ## <a name="invocation-expression-"></a>Expresión de invocación ()
 

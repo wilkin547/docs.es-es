@@ -4,12 +4,12 @@ ms.date: 04/07/2020
 helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
-ms.openlocfilehash: a237a90b4782e0460857c3d5d887771bcc8ccaaf
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 3c479faeeb66865b8c368edba881429a7cb956ec
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989186"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82199682"
 ---
 # <a name="using-statement-c-reference"></a>using (Instrucción, Referencia de C#)
 
@@ -31,7 +31,7 @@ A partir de C# 8.0, puede usar la siguiente sintaxis alternativa para la instru
 
 Cuando la duración de un objeto `IDisposable` se limita a un único método, debe declarar y crear instancias del mismo en la instrucción `using`. La instrucción `using` llama al método <xref:System.IDisposable.Dispose%2A> del objeto de forma correcta y (cuando se usa tal y como se muestra anteriormente) también hace que el propio objeto salga del ámbito en cuanto se llame a <xref:System.IDisposable.Dispose%2A>. Dentro del bloque `using`, el objeto es de solo lectura y no se puede modificar ni reasignar. Si el objeto implementa `IAsyncDisposable` en lugar de `IDisposable`, la instrucción `using` llama al objeto <xref:System.IAsyncDisposable.DisposeAsync%2A> y `awaits` al objeto <xref:System.Threading.Tasks.Task> devuelto.
 
-La instrucción `using` asegura que se llama al método <xref:System.IDisposable.Dispose%2A> (o <xref:System.IAsyncDisposable.DisposeAsync%2A>) aunque se produzca una excepción en el bloque `using`. Puede lograr el mismo resultado colocando el objeto dentro de un bloque `try` y llamando luego a <xref:System.IDisposable.Dispose%2A> (o <xref:System.IAsyncDisposable.DisposeAsync%2A>) en un bloque `finally`; de hecho, es así cómo el compilador traduce la instrucción `using`. El ejemplo de código anterior se extiende al siguiente código en tiempo de compilación (tenga en cuenta las llaves adicionales para crear el ámbito limitado del objeto):
+La instrucción `using` asegura que se llama al método <xref:System.IDisposable.Dispose%2A> (o <xref:System.IAsyncDisposable.DisposeAsync%2A>) aunque se produzca una excepción en el bloque `using`. Puede obtener el mismo resultado si coloca el objeto dentro de un bloque `try` y llama a <xref:System.IDisposable.Dispose%2A> (o <xref:System.IAsyncDisposable.DisposeAsync%2A>) en un bloque `finally`; de hecho, es así como el compilador traduce la instrucción `using`. El ejemplo de código anterior se extiende al siguiente código en tiempo de compilación (tenga en cuenta las llaves adicionales para crear el ámbito limitado del objeto):
 
 :::code language="csharp" source="snippets/usings.cs" id="SnippetTryFinallyExample":::
 

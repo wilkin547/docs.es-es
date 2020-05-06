@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 62e0630c-8cb7-45d2-b622-5a472abfd8cf
 topic_type:
 - apiref
-ms.openlocfilehash: 41b2e009f8f017a72147232015ea2357ae922ca1
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 16d15101534b88d7da4093dab73b48b5c09a192c
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793649"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860404"
 ---
 # <a name="iclrdebuggingcanunloadnow-method"></a>ICLRDebugging::CanUnloadNow (Método)
 Determina si una biblioteca proporcionada por una interfaz [ICLRDebuggingLibraryProvider (](iclrdebugginglibraryprovider-interface.md) todavía está en uso o se puede descargar.  
@@ -31,7 +31,7 @@ Determina si una biblioteca proporcionada por una interfaz [ICLRDebuggingLibrary
 HRESULT CanUnloadNow(HMODULE hModule);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parámetros  
  `hmodule`  
  de La dirección base de un módulo en el proceso de destino.  
   
@@ -40,25 +40,25 @@ HRESULT CanUnloadNow(HMODULE hModule);
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|Se puede descargar el módulo al que hace referencia `hmodule`.|  
-|S_FALSE|El módulo al que hace referencia `hmodule` todavía está en uso.|  
+|S_OK|Se `hmodule` puede descargar el módulo al que hace referencia.|  
+|S_FALSE|El módulo al que hace referencia `hmodule` está todavía en uso.|  
 |COR_E_NOT_CLR|El módulo indicado no es un módulo CLR.|  
   
 ## <a name="exceptions"></a>Excepciones  
   
-## <a name="remarks"></a>Notas  
- Este método comprueba si se han liberado todas las instancias de las interfaces de `ICorDebug*` y ningún subproceso está actualmente dentro de una llamada al método [ICLRDebugging:: openvirtualprocess (](iclrdebugging-openvirtualprocess-method.md) .  
+## <a name="remarks"></a>Comentarios  
+ Este método comprueba si se han liberado todas las `ICorDebug*` instancias de las interfaces y ningún subproceso está actualmente dentro de una llamada al método [ICLRDebugging:: openvirtualprocess (](iclrdebugging-openvirtualprocess-method.md) .  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Interfaces de depuración](debugging-interfaces.md)
+- [Interfaces para depuración](debugging-interfaces.md)
 - [Depuración](index.md)

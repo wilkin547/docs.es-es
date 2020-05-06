@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 4dbe6a2c295e5afae1b6761f0c7b695fdb906428
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 1755526636bed6d78663112e4c2ad5ab7c3f731c
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102912"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860836"
 ---
 # <a name="dacpgetmoduleaddressrequest-method"></a>Método DacpGetModuleAddress::Request
 
-Realiza una solicitud para rellenar la estructura desde la estructura de tiempo de ejecución determinada.
+Realiza una solicitud para rellenar la estructura a partir de la estructura en tiempo de ejecución especificada.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -39,20 +39,20 @@ HRESULT Request(
 ## <a name="parameters"></a>Parámetros
 
 `pDataModule`\
-[en] Un puntero al módulo de datos de semillas.
+de Un puntero al módulo de datos de inicialización.
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
-Esta estructura se encuentra dentro del tiempo de ejecución y no se expone a través de encabezados o archivos de biblioteca. Para usarlo, la forma más fácil es imitar la implementación:
+Esta estructura reside dentro del tiempo de ejecución y no se expone a través de los encabezados o archivos de biblioteca. Para usarlo, la manera más fácil es imitar la implementación:
 
-- Devuelve el valor obtenido `Request` al llamar `IXCLRDataModule*` al método en el parámetro con los siguientes parámetros:`((uint32) 0xf0000000, 0, 0, (uint32) sizeof(*this), (uint8*) this)`
+- Devuelva el valor obtenido de la `Request` llamada al método `IXCLRDataModule*` en el parámetro con los parámetros siguientes:`((uint32) 0xf0000000, 0, 0, (uint32) sizeof(*this), (uint8*) this)`
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md)\
-**Encabezado:** Ninguno
-**Biblioteca:** Ninguno
-**Versiones de .NET Framework:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
+**Plataformas:** Consulte [los requisitos del sistema](../../get-started/system-requirements.md)\
+**Encabezado:** Ninguna
+**Biblioteca:** Ninguna
+**.NET Framework versiones:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
 ## <a name="see-also"></a>Consulte también
 

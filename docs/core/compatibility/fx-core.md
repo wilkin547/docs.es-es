@@ -3,12 +3,12 @@ title: Cambios importantes de .NET Framework a .NET Core
 titleSuffix: ''
 description: Enumera los cambios importantes de .NET Framework a .NET Core.
 ms.date: 12/18/2019
-ms.openlocfilehash: f712be14d7debc4b3008f8459e6ee925754b25f0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: df5907e05c6a2aed478d64cc40c5d6f051f92f96
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77449415"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595707"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>Cambios importantes para la migración desde .NET Framework a .NET Core
 
@@ -17,10 +17,12 @@ Si va a migrar una aplicación desde .NET Framework a .NET Core, los cambios má
 > [!NOTE]
 > Este artículo no es una lista completa de los cambios importantes entre .NET Framework y .NET Core. Aquí se agregan los principales cambios importantes a medida que se conocen.
 
-## <a name="corefx"></a>CoreFX
+## <a name="core-net-libraries"></a>Bibliotecas de Core .NET
 
 - [Cambio del valor predeterminado de UseShellExecute](#change-in-default-value-of-useshellexecute)
 - [UnauthorizedAccessException producida por FileSystemInfo.Attributes](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes)
+- [No se admite el control de excepciones de estado de proceso dañado](#handling-corrupted-state-exceptions-is-not-supported)
+- [Las propiedades UriBuilder ya no anteponen caracteres iniciales](#uribuilder-properties-no-longer-prepend-leading-characters)
 
 ### <a name="net-core-21"></a>.NET Core 2.1
 
@@ -31,6 +33,14 @@ Si va a migrar una aplicación desde .NET Framework a .NET Core, los cambios má
 ### <a name="net-core-10"></a>.NET Core 1.0
 
 [!INCLUDE [UnauthorizedAccessException thrown by FileSystemInfo.Attributes](~/includes/core-changes/corefx/1.0/filesysteminfo-attributes-exceptions.md)]
+
+***
+
+[!INCLUDE [corrupted-state-exceptions](~/includes/core-changes/corefx/1.0/corrupted-state-exceptions.md)]
+
+***
+
+[!INCLUDE [uribuilder-behavior-changes](../../../includes/core-changes/corefx/1.0/uribuilder-behavior-changes.md)]
 
 ***
 

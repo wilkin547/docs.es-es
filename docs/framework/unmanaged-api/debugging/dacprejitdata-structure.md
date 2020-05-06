@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 46031f29da6916eeaeea863ebef6924a720d7155
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4436ece72b0a6a405fc41cba5413093fc42ce750
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793812"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860777"
 ---
 # <a name="dacprejitdata-structure"></a>Estructura DacpReJitData
 
@@ -47,25 +47,25 @@ struct MSLAYOUT DacpReJitData
 };
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
-| Miembro           | Descripción                                                                                      |
+| Member           | Descripción                                                                                      |
 | ---------------- | ------------------------------------------------------------------------------------------------ |
 | `rejitID`        | El número de revisión de ReJit para un método.                                                          |
 | `flags`          | Marca que indica el estado actual de la instrumentación ReJit del método para la versión especificada. |
 | `NativeCodeAddr` | Dirección base de la implementación de rejitted del método.                                         |
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Comentarios
 
-Esta estructura reside dentro del tiempo de ejecución y no se expone a través de los encabezados o archivos de biblioteca. Para usarlo, defina la estructura tal y como se especificó anteriormente. La estructura también se debe definir utilizando `ms_struct` Packing si no se usan los compiladores de Microsoft.
+Esta estructura reside dentro del tiempo de ejecución y no se expone a través de los encabezados o archivos de biblioteca. Para usarlo, defina la estructura tal y como se especificó anteriormente. La estructura también debe definirse mediante `ms_struct` Packing si no se usan los compiladores de Microsoft.
 
-## <a name="requirements"></a>Requisitos de
-**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos
+**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
 **Encabezado:** Ninguna  
 **Biblioteca:** Ninguna  
-**.NET Framework versiones:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**.NET Framework versiones:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Depuración](index.md)
 - [Estructuras de depuración](debugging-structures.md)

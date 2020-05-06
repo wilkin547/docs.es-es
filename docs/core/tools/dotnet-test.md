@@ -1,13 +1,13 @@
 ---
 title: Comando dotnet test
 description: El comando “dotnet test” se usa para ejecutar pruebas unitarias en un proyecto determinado.
-ms.date: 02/27/2020
-ms.openlocfilehash: f9df03cda01bdaf649394a58e96903e764193338
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.date: 04/29/2020
+ms.openlocfilehash: a8218b6596601069b89a60ad018adf89a1f47cf6
+ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463373"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82624896"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -37,11 +37,15 @@ dotnet test -h|--help
 
 ## <a name="description"></a>Descripción
 
-El comando `dotnet test` se usa para ejecutar pruebas unitarias en un proyecto determinado. El comando `dotnet test` inicia la aplicación de la consola de ejecutor de pruebas especificada para un proyecto. El ejecutor de pruebas ejecuta las pruebas que se definen para un marco de pruebas unitarias (por ejemplo, MSTest, NUnit o xUnit) y notifica el éxito o fracaso de cada prueba. Si todas las pruebas son correctas, el ejecutor de pruebas devuelve 0 como un código de salida; en caso contrario, si se produce algún error en una prueba, devuelve 1. El ejecutor de pruebas y la biblioteca de pruebas unitarias se empaquetan como paquetes de NuGet y se restauran como dependencias ordinarias para el proyecto.
+El comando `dotnet test` se usa para ejecutar pruebas unitarias en un proyecto determinado. El comando `dotnet test` inicia la aplicación de la consola de ejecutor de pruebas especificada para un proyecto. El ejecutor de pruebas ejecuta las pruebas que se definen para un marco de pruebas unitarias (por ejemplo, MSTest, NUnit o xUnit) y notifica el éxito o fracaso de cada prueba. Si todas las pruebas son correctas, el ejecutor de pruebas devuelve 0 como un código de salida; en caso contrario, si se produce algún error en una prueba, devuelve 1. En el caso de los proyectos con varios destinos, las pruebas se ejecutan para cada plataforma de destino. El ejecutor de pruebas y la biblioteca de pruebas unitarias se empaquetan como paquetes de NuGet y se restauran como dependencias ordinarias para el proyecto.
 
 Los proyectos de prueba especifican el ejecutor de pruebas usando un elemento `<PackageReference>` ordinario, como se puede ver en este archivo de proyecto de ejemplo:
 
 [!code-xml[XUnit Basic Template](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
+
+### <a name="implicit-restore"></a>Restauración implícita
+
+[!INCLUDE[dotnet restore note](~/includes/dotnet-restore-note.md)]
 
 ## <a name="arguments"></a>Argumentos
 
@@ -51,7 +55,7 @@ Los proyectos de prueba especifican el ejecutor de pruebas usando un elemento `<
 
 ## <a name="options"></a>Opciones
 
-- **`a|--test-adapter-path <PATH_TO_ADAPTER>`**
+- **`-a|--test-adapter-path <PATH_TO_ADAPTER>`**
 
   Use los adaptadores de prueba personalizados en la ruta especificada de esta ejecución de pruebas.
 
@@ -59,19 +63,19 @@ Los proyectos de prueba especifican el ejecutor de pruebas usando un elemento `<
 
   Ejecuta las pruebas en el modo de culpabilidad. Esta opción es útil para aislar las pruebas problemáticas que hacen que el host de prueba se bloquee. Crea un archivo de salida en el directorio actual como *Sequence.xml* que captura el orden de ejecución de pruebas antes del bloqueo.
 
-- **`c|--configuration <CONFIGURATION>`**
+- **`-c|--configuration <CONFIGURATION>`**
 
   Define la configuración de compilación. El valor predeterminado es `Debug`, pero la configuración del proyecto podría invalidar esta configuración predeterminada del SDK.
 
-- **`-collect <DATA_COLLECTOR_FRIENDLY_NAME>`**
+- **`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`**
 
   Habilita el recopilador de datos para la ejecución de pruebas. Para obtener más información, consulte [Monitor and analyze test run](https://aka.ms/vstest-collect) (Supervisar y analizar ejecuciones de pruebas).
 
-- **`d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
+- **`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
 
-  Habilita el modo de diagnóstico para la plataforma de prueba y escribe mensajes de diagnóstico en el archivo especificado.
+  Habilita el modo de diagnóstico de la plataforma de prueba y escribe mensajes de diagnóstico en el archivo especificado.
 
-- **`f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   Busca archivos binarios de prueba para un [marco](../../standard/frameworks.md) específico.
 
@@ -79,7 +83,7 @@ Los proyectos de prueba especifican el ejecutor de pruebas usando un elemento `<
 
   Filtra las pruebas del proyecto actual con la expresión dada. Para más información, consulte la sección [Detalles de la opción de filtro](#filter-option-details). Para obtener más información y ejemplos sobre cómo usar el filtrado de pruebas unitarias selectivas, vea [Ejecución de pruebas unitarias selectivas](../testing/selective-unit-tests.md).
 
-- **`h|--help`**
+- **`-h|--help`**
 
   Imprime una corta ayuda para el comando.
 
@@ -87,7 +91,7 @@ Los proyectos de prueba especifican el ejecutor de pruebas usando un elemento `<
 
   Permite que el comando se detenga y espere una entrada o una acción del usuario. Por ejemplo, para completar la autenticación. Disponible desde el SDK de .NET Core 3.0.
 
-- **`l|--logger <LOGGER_URI/FRIENDLY_NAME>`**
+- **`-l|--logger <LOGGER_URI/FRIENDLY_NAME>`**
 
   Especifica un registrador para los resultados de pruebas. A diferencia de MSBuild, la prueba de dotnet no acepta abreviaturas: en lugar de `-l "console;v=d"` use `-l "console;verbosity=detailed"`.
 
@@ -105,11 +109,11 @@ Los proyectos de prueba especifican el ejecutor de pruebas usando un elemento `<
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  Directorio donde se encuentran los archivos binarios que se ejecutarán.
+  Directorio donde se encuentran los archivos binarios que se ejecutarán. Si no se especifica la ruta de acceso predeterminada es `./bin/<configuration>/<framework>/`.  En el caso de los proyectos con varias plataformas de destino (a través de la propiedad `TargetFrameworks`), también debe definir `--framework` al especificar esta opción. `dotnet test` siempre ejecuta las pruebas desde el directorio de salida. Puede usar <xref:System.AppDomain.BaseDirectory%2A?displayProperty=nameWithType> para consumir recursos de prueba en el directorio de salida.
 
 - **`-r|--results-directory <PATH>`**
 
-  El directorio donde se guardarán los resultados de pruebas. Si el directorio especificado no existe, se crea.
+  El directorio donde se guardarán los resultados de pruebas. Si el directorio especificado no existe, se crea. El valor predeterminado es `TestResults` en el directorio que contiene el archivo del proyecto.
 
 - **`--runtime <RUNTIME_IDENTIFIER>`**
 
@@ -117,7 +121,10 @@ Los proyectos de prueba especifican el ejecutor de pruebas usando un elemento `<
 
 - **`-s|--settings <SETTINGS_FILE>`**
 
-  El archivo `.runsettings` que se usará para ejecutar las pruebas. [Configuración de pruebas unitarias con un archivo `.runsettings`.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
+  El archivo `.runsettings` que se usará para ejecutar las pruebas. Tenga en cuenta que el elemento `TargetPlatform` (x86|x64) no tiene ningún efecto en `dotnet test`. Para ejecutar pruebas destinadas a x86, instale la versión x86 de .NET Core. El valor de bits de *dotnet.exe* que se encuentra en la ruta de acceso es lo que se usará para ejecutar las pruebas. Para obtener más información, vea los siguientes recursos:
+
+  - [Configuración de pruebas unitarias con un archivo `.runsettings`.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
+  - [Configuración de una serie de pruebas](https://github.com/Microsoft/vstest-docs/blob/master/docs/configure.md)
 
 - **`-t|--list-tests`**
 
@@ -127,13 +134,13 @@ Los proyectos de prueba especifican el ejecutor de pruebas usando un elemento `<
 
   Establece el nivel de detalle del comando. Los valores permitidos son `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` y `diag[nostic]`. De manera predeterminada, es `minimal`. Para obtener más información, vea <xref:Microsoft.Build.Framework.LoggerVerbosity>.
 
-- Argumentos de `RunSettings`
+- Argumentos de **`RunSettings`**
 
   Los argumentos se pasan como configuraciones de `RunSettings` para la prueba. Los argumentos se especifican como `[name]=[value]` pares después de "-- " (tenga en cuenta el espacio después de --). Se usa un espacio para separar varios pares de `[name]=[value]`.
 
   Ejemplo: `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
 
-  Para obtener más información, vea [vstest.console.exe: Passing RunSettings args](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md) (vstest.console.exe: paso de argumentos RunSettings).
+  Para obtener más información, vea [Paso de argumentos de RunSettings a través de la línea de comandos](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md).
 
 ## <a name="examples"></a>Ejemplos
 

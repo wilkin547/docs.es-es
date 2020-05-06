@@ -4,12 +4,12 @@ description: Use un administrador de paquetes para instalar el SDK y el entorno 
 author: thraka
 ms.author: adegeo
 ms.date: 03/17/2020
-ms.openlocfilehash: b86b97bf17165f2f7a70e80ff581750ba39be375
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: be5a21db8c3942bfe8827dfbce41bcf88aec342a
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134174"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595666"
 ---
 # <a name="sles-15-package-manager---install-net-core"></a>Administrador de paquetes de SLES 15: instalación de .NET Core
 
@@ -19,12 +19,12 @@ En este artículo se describe cómo usar un administrador de paquetes para insta
 
 [!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
-## <a name="register-microsoft-key-and-feed"></a>Registro de la clave y la fuente de Microsoft
+## <a name="add-microsoft-repository-key-and-feed"></a>Adición de la clave y la fuente del repositorio de Microsoft
 
 Antes de instalar .NET, deberá realizar lo siguiente:
 
-- Registrar la clave de Microsoft.
-- Registrar el repositorio del producto.
+- Agregar la clave de firma del paquete de Microsoft a la lista de claves de confianza.
+- Agregar el repositorio al administrador de paquetes.
 - Instalar las dependencias necesarias.
 
 Esto solo se debe hacer una vez por máquina.
@@ -33,6 +33,12 @@ Abra un terminal y ejecute el comando siguiente.
 
 ```bash
 sudo rpm -Uvh https://packages.microsoft.com/config/sles/15/packages-microsoft-prod.rpm
+```
+
+Actualmente, el paquete de instalación del repositorio de Microsoft de SLES 15 instala el archivo *microsoft-prod.repo* en el directorio incorrecto, lo que impide que zypper pueda encontrar los paquetes de .NET Core. Para corregir este problema, cree un symlink en el directorio apropiado.
+
+```bash
+sudo ln -s /etc/yum.repos.d/microsoft-prod.repo /etc/zypp/repos.d/microsoft-prod.repo
 ```
 
 ## <a name="install-the-net-core-sdk"></a>Instalación del SDK de .NET Core
