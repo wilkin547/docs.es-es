@@ -18,12 +18,12 @@ helpviewer_keywords:
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
-ms.openlocfilehash: d761d8ed7488e99f29d4844d061867915a624b96
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
-ms.translationtype: MT
+ms.openlocfilehash: 708ed6a232950cb69796f105f6f198749ed53a24
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960008"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82200020"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Calcular las referencias de clases, estructuras y uniones
 
@@ -31,18 +31,19 @@ Las clases y las estructuras son similares en .NET Framework. Ambas pueden tener
 
 En la tabla siguiente se enumeran las opciones de serialización para clases, estructuras y uniones, se describe su uso y se proporciona un vínculo al ejemplo de invocación de la plataforma correspondiente.
 
-|Tipo de|Descripción|Ejemplo|
+|Tipo|Descripción|Ejemplo|
 |----------|-----------------|------------|
-|Clase por valor.|Pasa una clase con miembros de tipo entero como un parámetro In/Out, al igual que el caso administrado.|[Ejemplo de SysTime](#systime-sample)|
-|Estructura por valor.|Pasa las estructuras como parámetros In.|[Ejemplo de estructuras](#structures-sample)|
-|Estructura por referencia.|Pasa estructuras como parámetros In/Out.|[OSInfo (ejemplo)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/795sy883(v=vs.100))|
+|Clase por valor.|Pasa una clase con miembros de tipo entero como un parámetro In/Out, al igual que el caso administrado.|[Ejemplo SysTime](#systime-sample)|
+|Estructura por valor.|Pasa las estructuras como parámetros In.|[Ejemplo Structs](#structures-sample)|
+|Estructura por referencia.|Pasa estructuras como parámetros In/Out.|[Ejemplo OSInfo](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/795sy883(v=vs.100))|
 |Estructura con estructuras anidadas (simplificada).|Pasa una clase que representa una estructura con estructuras anidadas en la función no administrada. La estructura se simplifica en una gran estructura en el prototipo administrado.|[Ejemplo FindFile](#findfile-sample)|
-|Estructura con un puntero a otra estructura.|Pasa una estructura que contiene un puntero a una segunda estructura como miembro.|[Ejemplo de estructuras](#structures-sample)|
-|Matriz de estructuras con enteros por valor.|Pasa una matriz de estructuras que solo contienen enteros como un parámetro In/Out. Los miembros de la matriz se pueden cambiar.|[Ejemplo de matrices](marshaling-different-types-of-arrays.md)|
-|Matriz de estructuras con enteros y cadenas por referencia.|Pasa una matriz de estructuras que contienen enteros y cadenas como un parámetro Out. La función llamada asigna memoria para la matriz.|[Ejemplo de OutArrayOfStructs](#outarrayofstructs-sample)|
-|Uniones con tipos de valor.|Pasa uniones con tipos de valor (entero y doble).|[Ejemplo uniones](#unions-sample)|
-|Uniones con tipos mixtos.|Pasa uniones con tipos mixtos (entero y cadena).|[Ejemplo uniones](#unions-sample)|
-|Valores NULL en la estructura.|Pasa una referencia nula (**Nothing** en Visual Basic) en lugar de una referencia a un tipo de valor.|[Ejemplo de HandleRef](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/hc662t8k(v=vs.85))|
+|Estructura con un puntero a otra estructura.|Pasa una estructura que contiene un puntero a una segunda estructura como miembro.|[Ejemplo Structs](#structures-sample)|
+|Matriz de estructuras con enteros por valor.|Pasa una matriz de estructuras que solo contienen enteros como un parámetro In/Out. Los miembros de la matriz se pueden cambiar.|[Ejemplo Arrays](marshaling-different-types-of-arrays.md)|
+|Matriz de estructuras con enteros y cadenas por referencia.|Pasa una matriz de estructuras que contienen enteros y cadenas como un parámetro Out. La función llamada asigna memoria para la matriz.|[Ejemplo OutArrayOfStructs](#outarrayofstructs-sample)|
+|Uniones con tipos de valor.|Pasa uniones con tipos de valor (entero y doble).|[Ejemplo Unions](#unions-sample)|
+|Uniones con tipos mixtos.|Pasa uniones con tipos mixtos (entero y cadena).|[Ejemplo Unions](#unions-sample)|
+|Struct con diseño específico de la plataforma.|Pasa un tipo con definiciones de empaquetado nativo.|[Ejemplo de plataforma](#platform-sample)|
+|Valores NULL en la estructura.|Pasa una referencia nula (**Nothing** en Visual Basic) en lugar de una referencia a un tipo de valor.|[Ejemplo HandleRef](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/hc662t8k(v=vs.85))|
 
 ## <a name="structures-sample"></a>Ejemplo Structs
 
@@ -221,6 +222,85 @@ La clase `NativeMethods` contiene los prototipos para los métodos `TestUnion` y
 [!code-cpp[Conceptual.Interop.Marshaling#29](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/unions.cpp#29)]
 [!code-csharp[Conceptual.Interop.Marshaling#29](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/unions.cs#29)]
 [!code-vb[Conceptual.Interop.Marshaling#29](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/unions.vb#29)]
+
+## <a name="platform-sample"></a>Ejemplo de plataforma
+
+En algunos escenarios, los diseños de `struct` y `union` pueden variar en función de la plataforma de destino. Por ejemplo, considere la definición del tipo [`STRRET`](/windows/win32/api/shtypes/ns-shtypes-strret) en un escenario COM:
+
+```c++
+#include <pshpack8.h> /* Defines the packing of the struct */
+typedef struct _STRRET
+    {
+    UINT uType;
+    /* [switch_is][switch_type] */ union
+        {
+        /* [case()][string] */ LPWSTR pOleStr;
+        /* [case()] */ UINT uOffset;
+        /* [case()] */ char cStr[ 260 ];
+        }  DUMMYUNIONNAME;
+    }  STRRET;
+#include <poppack.h>
+```
+
+El `struct` anterior se declara con los encabezados de Windows que influyen en el diseño de memoria del tipo. Cuando se definen en un entorno administrado, estos detalles de diseño son necesarios para interoperar correctamente con código nativo.
+
+La definición administrada correcta de este tipo en un proceso de 32 bits es:
+
+``` CSharp
+[StructLayout(LayoutKind.Explicit, Size = 264)]
+public struct STRRET_32
+{
+    [FieldOffset(0)]
+    public uint uType;
+
+    [FieldOffset(4)]
+    public IntPtr pOleStr;
+
+    [FieldOffset(4)]
+    public uint uOffset;
+
+    [FieldOffset(4)]
+    public IntPtr cStr;
+}
+```
+
+En un proceso de 64 bits, el tamaño *y* los desplazamientos de los campos son diferentes. El diseño correcto es:
+
+``` CSharp
+[StructLayout(LayoutKind.Explicit, Size = 272)]
+public struct STRRET_64
+{
+    [FieldOffset(0)]
+    public uint uType;
+
+    [FieldOffset(8)]
+    public IntPtr pOleStr;
+
+    [FieldOffset(8)]
+    public uint uOffset;
+
+    [FieldOffset(8)]
+    public IntPtr cStr;
+}
+```
+
+Si no se considera correctamente el diseño nativo en un escenario de interoperabilidad, pueden producirse bloqueos aleatorios o, aún peor, cálculos incorrectos.
+
+De forma predeterminada, los ensamblados de .NET se pueden ejecutar tanto en las versiones de 32 bits como en las de 64 bits del runtime de .NET. La aplicación debe esperar hasta el tiempo de ejecución para decidir qué definiciones anteriores usar.
+
+El fragmento de código siguiente es un ejemplo de cómo elegir entre las definiciones de 32 bits y 64 bits en tiempo de ejecución.
+
+```CSharp
+if (IntPtr.Size == 8)
+{
+    // Use the STRRET_64 definition
+}
+else
+{
+    Debug.Assert(IntPtr.Size == 4);
+    // Use the STRRET_32 definition
+}
+```
 
 ## <a name="systime-sample"></a>SysTime (ejemplo)
 

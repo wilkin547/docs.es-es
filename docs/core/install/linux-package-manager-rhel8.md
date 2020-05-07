@@ -3,19 +3,19 @@ title: 'Instalación de .NET Core en el administrador de paquetes de Linux RHEL
 description: Use un administrador de paquetes para instalar el SDK y el entorno de ejecución de .NET Core en RHEL 8.
 author: thraka
 ms.author: adegeo
-ms.date: 03/17/2020
-ms.openlocfilehash: b564a386eb67b6e414a832ad3bca10d3d09022bd
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.date: 05/01/2020
+ms.openlocfilehash: 8829e842e920e6abd4184b5140f80bb016acace2
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134192"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728240"
 ---
 # <a name="rhel-8-package-manager---install-net-core"></a>Administrador de paquetes de RHEL 8: instalación de .NET Core
 
 [!INCLUDE [package-manager-switcher](includes/package-manager-switcher.md)]
 
-En este artículo se describe cómo usar un administrador de paquetes para instalar .NET Core en RHEL 8.
+En este artículo se describe cómo usar un administrador de paquetes para instalar .NET Core en Red Hat Enterprise Linux (RHEL) 8.
 
 [!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
@@ -25,30 +25,31 @@ Para instalar .NET Core desde Red Hat en RHEL, primero debe registrarse con el a
 
 ## <a name="install-the-net-core-sdk"></a>Instalación del SDK de .NET Core
 
-Después de registrarse con el administrador de suscripciones, está a punto para instalar y habilitar el SDK de .NET Core. En el terminal, ejecute los comandos siguientes.
+Después de registrarse con el administrador de suscripciones, está a punto para instalar y habilitar el SDK de .NET Core. En el terminal, ejecute el comando siguiente.
 
 ```bash
-sudo dnf update
 sudo dnf install dotnet-sdk-3.1
 ```
 
 ## <a name="install-the-aspnet-core-runtime"></a>Instalación del entorno de ejecución de ASP.NET Core
 
-Después de registrarse con el administrador de suscripciones, está a punto para instalar y habilitar el entorno de ejecución de ASP.NET Core. En el terminal, ejecute los comandos siguientes.
+Después de registrarse con el administrador de suscripciones, está a punto para instalar y habilitar el entorno de ejecución de ASP.NET Core. En el terminal, ejecute el comando siguiente.
 
 ```bash
-sudo dnf update
 sudo dnf install aspnetcore-runtime-3.1
 ```
 
 ## <a name="install-the-net-core-runtime"></a>Instalación del entorno de ejecución de .NET Core
 
-Después de registrarse con el administrador de suscripciones, está a punto para instalar y habilitar el entorno de ejecución de .NET Core. En el terminal, ejecute los comandos siguientes.
+Después de registrarse con el administrador de suscripciones, está a punto para instalar y habilitar el entorno de ejecución de .NET Core. En el terminal, ejecute el comando siguiente.
 
 ```bash
-sudo dnf update
 sudo dnf install dotnet-runtime-3.1
 ```
+
+## <a name="how-to-install-other-versions"></a>Procedimiento para instalar otras versiones
+
+[!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
 
 ## <a name="see-also"></a>Vea también
 

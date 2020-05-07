@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: da3769eb-1828-4aa1-b9ed-db4842136a43
 topic_type:
 - apiref
-ms.openlocfilehash: 0332fae46d6a65cfb7cc0b929cc2fd0d97e1790e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e285df37d83ff73fe29fe293380a4053cb5a9eea
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179158"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860555"
 ---
 # <a name="iclrdatatargetreadvirtual-method"></a>ICLRDataTarget::ReadVirtual (Método)
-Lee los datos de la dirección de memoria virtual especificada en el búfer especificado.  
+Lee datos de la dirección de memoria virtual especificada en el búfer especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,26 +39,26 @@ HRESULT ReadVirtual (
   
 ## <a name="parameters"></a>Parámetros  
  `address`  
- [en] Un CLRDATA_ADDRESS que almacena la dirección de memoria virtual.  
+ de CLRDATA_ADDRESS que almacena la dirección de memoria virtual.  
   
  `buffer`  
- [fuera] Puntero a un búfer que recibe los datos.  
+ enuncia Un puntero a un búfer que recibe los datos.  
   
  `bytesRequested`  
- [en] La longitud del búfer.  
+ de Longitud del búfer.  
   
  `bytesRead`  
- [fuera] Puntero al número de bytes devueltos.  
+ enuncia Puntero al número de bytes devueltos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** ClrData.idl, ClrData.h  
+ **Encabezado:** ClrData. idl, ClrData. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte también
 
-- [ICLRDataTarget (interfaz)](iclrdatatarget-interface.md)
+- [ICLRDataTarget (Interfaz)](iclrdatatarget-interface.md)

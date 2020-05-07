@@ -1,13 +1,13 @@
 ---
 title: Terminología de Docker
 description: Descubra la terminología básica que se usa habitualmente al trabajar con Docker.
-ms.date: 02/15/2019
-ms.openlocfilehash: c352bf7235e8a3dc2d52bbbfe4390863fff9991f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/16/2020
+ms.openlocfilehash: 34e50596eca21ec5b5505493414056814455d745
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "68673542"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507330"
 ---
 # <a name="docker-terminology"></a>Terminología de Docker
 
@@ -15,9 +15,13 @@ En esta sección se enumeran los términos y las definiciones que debe conocer a
 
 **Imagen de contenedor**: un paquete con todas las dependencias y la información necesarias para crear un contenedor. Una imagen incluye todas las dependencias (por ejemplo, los marcos), así como la configuración de implementación y ejecución que usará el runtime de un contenedor. Normalmente, una imagen se deriva de varias imágenes base que son capas que se apilan unas encima de otras para formar el sistema de archivos del contenedor. Una vez que se crea una imagen, esta es inmutable.
 
-**Dockerfile**: un archivo de texto que contiene instrucciones sobre cómo crear una imagen de Docker. Es como un script por lotes; la primera línea indica la imagen base con la que se comienza y, después, deben seguirse las instrucciones para instalar programas necesarios, copiar archivos, etc., hasta obtener el entorno de trabajo que se necesita.
+**Dockerfile**: archivo de texto que contiene instrucciones sobre cómo compilar una imagen de Docker. Es como un script por lotes; la primera línea indica la imagen base con la que se comienza y, después, deben seguirse las instrucciones para instalar programas necesarios, copiar archivos, etc., hasta obtener el entorno de trabajo que se necesita.
 
-**Compilación**: la acción de crear una imagen de contenedor basada en la información y el contexto que proporciona su Dockerfile, así como archivos adicionales en la carpeta en que se crea la imagen. Puede crear imágenes con el comando **`docker build`** de Docker.
+**Compilación**: la acción de crear una imagen de contenedor basada en la información y el contexto que proporciona su Dockerfile, así como archivos adicionales en la carpeta en que se crea la imagen. Puede compilar imágenes con el siguiente comando de Docker:
+
+```bash
+docker build
+```
 
 **Contenedor**: una instancia de una imagen de Docker. Un contenedor representa la ejecución de una sola aplicación, proceso o servicio. Está formado por el contenido de una imagen de Docker, un entorno de ejecución y un conjunto estándar de instrucciones. Al escalar un servicio, crea varias instancias de un contenedor a partir de la misma imagen. O bien, un proceso por lotes puede crear varios contenedores a partir de la misma imagen y pasar parámetros diferentes a cada instancia.
 
@@ -25,13 +29,13 @@ En esta sección se enumeran los términos y las definiciones que debe conocer a
 
 **Etiqueta**: una marca o una etiqueta que se puede aplicar a las imágenes para que se puedan identificar diferentes imágenes o versiones de la misma imagen (según el número de versión o el entorno de destino).
 
-**Compilación de varias fases**: es una característica, desde Docker 17.05 o versiones posteriores, que ayuda a reducir el tamaño de las imágenes finales. En pocas palabras, con la compilación de varias fases se puede usar, por ejemplo, una imagen base grande, que contiene el SDK, para compilar y publicar la aplicación y, a continuación, usando la carpeta de publicación con una imagen base pequeña solo en tiempo de ejecución, para generar una imagen final mucho más pequeña.
+**Compilación de varias fases**: es una característica, desde Docker 17.05 o versiones posteriores, que ayuda a reducir el tamaño de las imágenes finales. En pocas palabras, con la compilación de varias fases se puede usar, por ejemplo, una imagen base grande, que contiene el SDK, para compilar y publicar la aplicación y, después, usar la carpeta de publicación con una imagen base pequeña solo en tiempo de ejecución, para generar una imagen final mucho más pequeña.
 
 **Repositorio**: una colección de imágenes de Docker relacionadas, etiquetadas con una etiqueta que indica la versión de la imagen. Algunos repositorios contienen varias variantes de una imagen específica, como una imagen que contiene SDK (más pesada), una imagen que solo contiene runtimes (más ligera), etcétera. Estas variantes se pueden marcar con etiquetas. Un solo repositorio puede contener variantes de plataforma, como una imagen de Linux y una imagen de Windows.
 
 **Registro**: servicio que proporciona acceso a los repositorios. El registro predeterminado para la mayoría de las imágenes públicas es [Docker Hub](https://hub.docker.com/) (propiedad de Docker como una organización). Normalmente, un registro contiene repositorios procedentes de varios equipos. Las empresas suelen tener registros privados para almacenar y administrar imágenes que han creado. Azure Container Registry es otro ejemplo.
 
-**Imagen multiarquitectura**: para escenarios multiarquitectura, es una característica que simplifica la selección de la imagen apropiada, según la plataforma donde se está ejecutando Docker. Por ejemplo, cuando un archivo Dockerfile solicita una imagen base **`FROM mcr.microsoft.com/dotnet/core/sdk:2.2`** del registro, realmente obtiene **`2.2-nanoserver-1709`** , **`2.2-nanoserver-1803`** , **`2.2-nanoserver-1809`** o **`2.2-stretch`** , en función del sistema operativo y la versión donde se ejecuta Docker.
+**Imagen multiarquitectura**: En el caso de la arquitectura múltiple, es una característica que simplifica la selección de la imagen adecuada, según la plataforma donde se ejecuta Docker. Por ejemplo, si un elemento Dockerfile solicita una imagen base **FROM mcr.microsoft.com/dotnet/core/sdk:3.1** del registro, en realidad obtendrá **3.1-sdk-nanoserver-1909**, **3.1-sdk-nanoserver-1809** o **3.1-sdk-buster-slim**, según el sistema operativo en el que se ejecute Docker y la versión.
 
 **Docker Hub**: registro público para cargar imágenes y trabajar con ellas. Docker Hub proporciona hospedaje de imágenes de Docker, registros públicos o privados, desencadenadores de compilación y enlaces web e integración con GitHub y Bitbucket.
 

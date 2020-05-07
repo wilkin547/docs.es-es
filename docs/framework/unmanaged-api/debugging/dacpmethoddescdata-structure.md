@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: cc54664ea8ad61005de3f3fae7407946d1c861b2
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d623fe862eaf5902fd89d0e512dd07f73a03246f
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793845"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860820"
 ---
 # <a name="dacpmethoddescdata-structure"></a>Estructura DacpMethodDescData
 
@@ -52,16 +52,16 @@ struct DacpMethodDescData
 };
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
-| Miembro                       | Descripción                                                                                     |
+| Member                       | Descripción                                                                                     |
 | ---------------------------- | ----------------------------------------------------------------------------------------------- |
 | `bHasNativeCode`             | Indica si el tiempo de ejecución tiene código nativo disponible para la creación de instancias dada del método. |
 | `bIsDynamic`                 | Indica si el método se genera dinámicamente a través de la generación de código ligero.           |
 | `wSlotNumber`                | El número de ranura del método en la tabla de métodos.                                                   |
 | `NativeCodeAddr`             | Dirección nativa inicial del método.                                                            |
 | `data`                       | Puntero a un búfer utilizado internamente por el motor en tiempo de ejecución.                                             |
-| `MethodDescPtr`              | Puntero al `MethodDesc` en tiempo de ejecución.                                                     |
+| `MethodDescPtr`              | Puntero a `MethodDesc` en el tiempo de ejecución.                                                     |
 | `nativeCodeInfo`             | Puntero a un búfer utilizado internamente por el motor en tiempo de ejecución para realizar el seguimiento de los métodos.                            |
 | `moduleInfo`                 | Puntero a un búfer utilizado internamente por el motor en tiempo de ejecución para obtener información del módulo.                      |
 | `MDToken`                    | Token asociado al método especificado.                                                         |
@@ -73,18 +73,18 @@ struct DacpMethodDescData
 | `rejitDataRequested`         | Rejit información de la dirección nativa solicitada.                                             |
 | `cJittedRejitVersions`       | Número de veces que se ha rejitted el método a través de la instrumentación.                           |
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Comentarios
 
 Esta estructura reside dentro del tiempo de ejecución y no se expone a través de los encabezados o archivos de biblioteca. Para usarlo, defina la estructura tal y como se especificó anteriormente.
 
-## <a name="requirements"></a>Requisitos de
-**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos
+**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
 **Encabezado:** Ninguna  
 **Biblioteca:** Ninguna  
-**.NET Framework versiones:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**.NET Framework versiones:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Depuración](index.md)
 - [Estructuras de depuración](debugging-structures.md)
-- [Tipos de datos comunes](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)
+- [Tipos de datos comunes](../common-data-types-unmanaged-api-reference.md)

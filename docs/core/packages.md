@@ -2,13 +2,13 @@
 title: 'Paquetes, metapaquetes y marcos de trabajo: .NET Core'
 description: Aprenda la terminología sobre paquetes, metapaquetes y marcos de trabajo.
 author: richlander
-ms.date: 06/20/2016
-ms.openlocfilehash: 657519edf1c0860ee3222c71ce85723e19029a9d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/29/2020
+ms.openlocfilehash: a6575226feb71b96f1fe5070406c118081a8cbf0
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79397936"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595590"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Paquetes, metapaquetes y marcos
 
@@ -55,7 +55,7 @@ Normalmente, en lugar de incluir cada paquete, es más fácil y más sólido inc
 
 Un metapaquete es una conversión de paquetes NuGet que se usa para describir un conjunto de paquetes que tienen sentido de forma conjunta. Para representar este conjunto de paquetes, lo transforma en dependencias. De manera opcional, el metapaquete puede especificar un marco a fin de establecer uno para este conjunto de paquetes.
 
-De manera predeterminada, las versiones anteriores de las herramientas de .NET Core (las herramientas basadas en project.json y csproj) especificaban un marco y un metapaquete. Pero, actualmente, el marco de destino hace referencia implícitamente al metapaquete, de manera que cada uno está asociado a un marco de destino. Por ejemplo, el marco `netstandard1.6` hace referencia al metapaquete de la versión 1.6.0 de NetStandard.Library. De manera similar, el marco `netcoreapp2.1` hace referencia al metapaquete de la versión 2.1.0 de Microsoft.NETCore.App. Para obtener más información, vea [Implicit metapackage package reference in the .NET Core SDK](https://github.com/dotnet/core/blob/master/release-notes/1.0/sdk/1.0-rc3-implicit-package-refs.md) (Referencia del paquete implícita del metapaquete en el SDK de .NET Core).
+De manera predeterminada, las versiones anteriores de las herramientas de .NET Core (las herramientas basadas en *project.json* y *\*.csproj*) especificaban un marco y un metapaquete. Pero, actualmente, el marco de destino hace referencia implícitamente al metapaquete, de manera que cada uno está asociado a un marco de destino. Por ejemplo, el marco `netstandard1.6` hace referencia al metapaquete de la versión 1.6.0 de NETStandard.Library. De manera similar, el marco `netcoreapp2.1` hace referencia al metapaquete de la versión 2.1.0 de Microsoft.NETCore.App. Para obtener más información, vea [Implicit metapackage package reference in the .NET Core SDK](https://github.com/dotnet/core/blob/master/release-notes/1.0/sdk/1.0-rc3-implicit-package-refs.md) (Referencia del paquete implícita del metapaquete en el SDK de .NET Core).
 
 Dirigirse a un marco y hacer referencia implícitamente a un metapaquete significa que, realmente, se está agregando una referencia a cada uno de sus paquetes dependientes como un gesto único. Esto hace que todas las bibliotecas de esos paquetes estén disponibles para IntelliSense (o una experiencia similar) y para publicar la aplicación.
 
@@ -120,7 +120,7 @@ El marco `netstandard` hace referencia implícitamente al metapaquete [`NETStand
 </Project>
 ```
 
-En cambio, las referencias del metapaquete y el marco en el archivo del proyecto no necesitan coincidir, y puede usar el elemento `<NetStandardImplicitPackageVersion>` en su archivo del proyecto para especificar una versión de marco que sea anterior a la del metapaquete. Por ejemplo, el siguiente archivo del proyecto es válido.
+Al agregar el elemento `<NetStandardImplicitPackageVersion>` al archivo de proyecto, que especifica implícitamente una versión de metapaquete, puede especificar una versión de marco anterior a la del metapaquete. El elemento `<NetStandardImplicitPackageVersion>` solo es aplicable cuando el destino es .NET Core y .NET Standard. Por ejemplo, el siguiente archivo del proyecto es válido.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">

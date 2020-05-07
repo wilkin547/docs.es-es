@@ -1,13 +1,13 @@
 ---
 title: Contenedores como base para la colaboración de DevOps
 description: Descripción del papel clave de los contenedores en la optimización de DevOps.
-ms.date: 02/15/2019
-ms.openlocfilehash: 8258f4331212d92376d64fef318adcdff492f61f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/16/2020
+ms.openlocfilehash: 83bebc92a242a5ac2906d9997b7b278f87f0db96
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73094499"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507354"
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>Contenedores como base para la colaboración de DevOps
 
@@ -23,7 +23,7 @@ En el bloque de la izquierda de la figura 2-1, los desarrolladores escriben y e
 
 El bloque de DevOps define las canalizaciones de compilación e integración continua (CI) mediante el archivo Dockerfile que se proporciona en el repositorio de código. El sistema de CI extrae las imágenes del contenedor base del registro de Docker seleccionado y compila las imágenes de Docker personalizadas para la aplicación. Después, las imágenes se validan y se insertan en el registro de Docker que se usa para las implementaciones en varios entornos.
 
-En el bloque de la derecha, los equipos de operaciones administran la infraestructura y las aplicaciones implementadas en producción al mismo tiempo que supervisan el entorno y las aplicaciones, de modo que puedan proporcionar comentarios e información al equipo de desarrollo sobre la manera en que podría mejorarse la aplicación. Las aplicaciones de contenedor suelen ejecutarse en producción a través de orquestadores de contenedores.
+En el bloque de la derecha, los equipos de operaciones administran la infraestructura y las aplicaciones implementadas en producción al mismo tiempo que supervisan el entorno y las aplicaciones, de modo que puedan proporcionar comentarios e información al equipo de desarrollo sobre la manera en que podría mejorarse la aplicación. Las aplicaciones de contenedor normalmente se ejecutan en producción mediante orquestadores de contenedores como [Kubernetes](https://kubernetes.io/). Asimismo, con frecuencia se emplean [gráficos de Helm](https://helm.sh/) para configurar unidades de implementación, en lugar de archivos docker-compose.
 
 Los dos equipos colaboran mediante una plataforma fundamental (contenedores de Docker) que proporciona una "separación de intereses" de forma contractual, al tiempo que mejora en gran medida la colaboración de los dos equipos en el ciclo de vida de la aplicación. Los desarrolladores poseen el contenido del contenedor, su entorno operativo y las interdependencias del contenedor, mientras que los equipos de operaciones toman las imágenes compiladas junto con el manifiesto y las ejecutan en su sistema de orquestación.
 

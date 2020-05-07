@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b259821d-4fa7-464d-85cf-304dfffc8089
 topic_type:
 - apiref
-ms.openlocfilehash: 2716adcc8c79c8003202561ea2011c2469a6bc5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 340d2de09562ea9b767203a7fa839cdc6b729b3b
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179228"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860892"
 ---
 # <a name="createcordbobject-function"></a>CreateCordbObject (Función)
 Crea una interfaz de depurador ([ICorDebug](icordebug-interface.md)) que proporciona funcionalidad para crear instancias de una sesión de depuración administrada en un proceso remoto.  
@@ -40,7 +40,7 @@ HRESULT CordbCreateObject (
  [in] Versión de depuración del proceso de destino. Este parámetro debe ser CorDebugVersion_2_0 para la depuración remota.  
   
  `ppCordb`  
- [fuera] Puntero a un puntero a un objeto que se convertirá a un [ICorDebug](icordebug-interface.md) interfaz y se devolverá.  
+ enuncia Puntero a un puntero a un objeto que se convertirá en una interfaz [ICorDebug](icordebug-interface.md) y se devolverá.  
   
 ## <a name="return-value"></a>Valor devuelto  
  S_OK  
@@ -55,14 +55,14 @@ HRESULT CordbCreateObject (
  E_FAIL (u otros códigos devueltos de E_)  
  Otros errores.  
   
-## <a name="remarks"></a>Observaciones  
- El [ICorDebug](icordebug-interface.md) interfaz `ppCordb` que se devuelve en es la interfaz de depuración de nivel superior para todos los servicios de depuración administrados.  
+## <a name="remarks"></a>Comentarios  
+ La interfaz [ICorDebug](icordebug-interface.md) que se devuelve en `ppCordb` es la interfaz de depuración de nivel superior para todos los servicios de depuración administrados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** CoreClrRemoteDebuggingInterfaces.h  
+ **Encabezado:** CoreClrRemoteDebuggingInterfaces. h  
   
- **Biblioteca:** mscordbi_macx86.dll  
+ **Biblioteca:** mscordbi_macx86. dll  
   
- **Versiones de .NET Framework:** 3.5 SP1
+ **.NET Framework versiones:** 3,5 SP1
