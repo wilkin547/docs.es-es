@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 077e6c7f-f857-480c-bebb-76ee1de4e8fc
 topic_type:
 - apiref
-ms.openlocfilehash: a862dd3f6a9c10c6b3a5a0bb41208d351c4ca9f1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9fb2f960098e970b4d3d9f0be499f4d9fda6558e
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125693"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82893898"
 ---
 # <a name="icordebugclass2setjmcstatus-method"></a>ICorDebugClass2::SetJMCStatus (Método)
 Para cada método de la clase, establece un valor que indica si el método es código definido por el usuario.  
@@ -35,18 +35,18 @@ HRESULT SetJMCStatus (
   
 ## <a name="parameters"></a>Parámetros  
  `bIsJustMyCode`  
- de Se establece en `true` para indicar que el método es código definido por el usuario; de lo contrario, establézcalo en `false`.  
+ de Se establece `true` en para indicar que el método es código definido por el usuario; en caso contrario, `false`establezca en.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Un stepper de solo mi código (JMC) omitirá el código no definido por el usuario. El código definido por el usuario debe ser un subconjunto del código depurable.  
   
- `SetJMCStatus` devuelve un valor HRESULT de S_FALSE si no puede establecer el valor para ningún método, aunque establezca correctamente el valor de todos los demás métodos.  
+ `SetJMCStatus`Devuelve un valor HRESULT de S_FALSE si no puede establecer el valor para ningún método, aunque establezca correctamente el valor de todos los demás métodos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

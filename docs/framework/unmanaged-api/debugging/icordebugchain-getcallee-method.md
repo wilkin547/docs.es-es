@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 19560c79-abdc-4bdf-a5fe-eb362a59edc0
 topic_type:
 - apiref
-ms.openlocfilehash: 5d28af09faae84b0482d438ae33f593f250490c1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ba9a4e32216fd6fad285397bfc48fbc54f602b88
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73196340"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894650"
 ---
 # <a name="icordebugchaingetcallee-method"></a>ICorDebugChain::GetCallee (Método)
 Obtiene la cadena a la que llamó esta cadena.  
@@ -35,16 +35,16 @@ HRESULT GetCallee (
   
 ## <a name="parameters"></a>Parámetros  
  `ppChain`  
- enuncia Puntero a la dirección de un objeto ICorDebugChain que representa la cadena a la que se ha llamado. Si esta cadena se está ejecutando actualmente (es decir, si esta cadena no está esperando a que devuelva una cadena llamada), `ppChain` será null.  
+ enuncia Puntero a la dirección de un objeto ICorDebugChain que representa la cadena a la que se ha llamado. Si esta cadena se está ejecutando actualmente (es decir, si esta cadena no está esperando a que devuelva una cadena llamada) `ppChain` , será null.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Esta cadena esperará a que se devuelva la cadena llamada antes de reanudar la ejecución. La cadena llamada puede estar en otro subproceso en el caso de las llamadas de serialización entre subprocesos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
