@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 50dbb9af-58a1-41f4-b56d-3da20011884f
 topic_type:
 - apiref
-ms.openlocfilehash: 52bfe669d3b078657916554255a11cecfc07d484
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2d065d956319076d3b92eddafd4a2c25ffbfbac1
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73085088"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976270"
 ---
 # <a name="icordebugevalgetresult-method"></a>ICorDebugEval::GetResult (Método)
 Obtiene los resultados de esta evaluación.  
@@ -37,16 +37,16 @@ HRESULT GetResult (
  `ppResult`  
  enuncia Puntero a la dirección de un objeto ICorDebugValue que representa los resultados de esta evaluación, si la evaluación se completa con normalidad.  
   
-## <a name="remarks"></a>Comentarios  
- El método `GetResult` es válido solo después de que se complete la evaluación.  
+## <a name="remarks"></a>Observaciones  
+ El `GetResult` método es válido solo después de que se complete la evaluación.  
   
  Si la evaluación se completa normalmente, `ppResult` especifica los resultados. Si finaliza con una excepción, el resultado es la excepción que se produce. Si la evaluación era para un nuevo objeto, el resultado es la referencia al nuevo objeto.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

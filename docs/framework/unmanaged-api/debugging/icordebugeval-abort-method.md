@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7070b6d0-f2e0-44ff-b124-0944cd807e69
 topic_type:
 - apiref
-ms.openlocfilehash: 78402e5e099815fe309618e692285de91b8b29f7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 98a9b285323bc3ad94b4f555e72a4b3242519801
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124237"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976296"
 ---
 # <a name="icordebugevalabort-method"></a>ICorDebugEval::Abort (Método)
 Anula el cálculo que este objeto ICorDebugEval está realizando actualmente.  
@@ -31,14 +31,14 @@ Anula el cálculo que este objeto ICorDebugEval está realizando actualmente.
 HRESULT Abort ();  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- Si la evaluación está anidada y no es la más reciente, puede producirse un error en el método `Abort`.  
+## <a name="remarks"></a>Observaciones  
+ Si la evaluación está anidada y no es la más reciente, puede producirse `Abort` un error en el método.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

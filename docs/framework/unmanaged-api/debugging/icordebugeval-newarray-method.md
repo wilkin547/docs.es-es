@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cc79a67d-5368-434d-a943-209db90491b9
 topic_type:
 - apiref
-ms.openlocfilehash: 13ac5379992f4e768b09a03d31591143ba9bf627
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 496a6a7e01dec8aa90ba4e849c431ccd499ef53d
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788720"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976205"
 ---
 # <a name="icordebugevalnewarray-method"></a>ICorDebugEval::NewArray (Método)
 Asigna una nueva matriz del tipo de elemento y las dimensiones especificadas.  
@@ -39,7 +39,7 @@ HRESULT NewArray (
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parámetros  
  `elementType`  
  de Un valor de la enumeración CorElementType que especifica el tipo de elemento de la matriz.  
   
@@ -55,11 +55,11 @@ HRESULT NewArray (
  `lowBounds`  
  [in] Opcional. Límite inferior de cada dimensión de la matriz. Si se omite este valor, se supone un límite inferior de cero para cada dimensión.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La matriz siempre se crea en el dominio de aplicación en el que se está ejecutando el subproceso.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   

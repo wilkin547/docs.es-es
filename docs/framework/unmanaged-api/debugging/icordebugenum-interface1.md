@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 80be7efe-2c32-4b9f-8c52-40c6f6268219
 topic_type:
 - apiref
-ms.openlocfilehash: cc5598f9cbec4b97bb75f83fb18ccf8742904272
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 7575be3f5074243b251c80b8dd5bdbb12e5d50fd
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76783005"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976335"
 ---
 # <a name="icordebugenum-interface"></a>Interfaz ICorDebugEnum
 
@@ -29,13 +29,13 @@ Actúa como la interfaz base abstracta para los enumeradores que se usan en una 
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Clone (método)](icordebugenum-clone-method.md)|Crea una copia de este objeto `ICorDebugEnum`.|  
-|[GetCount (método)](icordebugenum-getcount-method.md)|Obtiene el número de elementos de la enumeración.|  
-|[Reset (método)](icordebugenum-reset-method.md)|Mueve el cursor al principio de la enumeración.|  
-|[Skip (método)](icordebugenum-skip-method.md)|Mueve el cursor hacia delante en la enumeración el número de elementos especificado.|  
+|[Método Clone](icordebugenum-clone-method.md)|Crea una copia de este objeto `ICorDebugEnum`.|  
+|[Método GetCount](icordebugenum-getcount-method.md)|Obtiene el número de elementos de la enumeración.|  
+|[Reset (Método)](icordebugenum-reset-method.md)|Mueve el cursor al principio de la enumeración.|  
+|[Método Skip](icordebugenum-skip-method.md)|Mueve el cursor hacia delante en la enumeración el número de elementos especificado.|  
   
-## <a name="remarks"></a>Notas  
- Los enumeradores siguientes derivan de `ICorDebugEnum`:  
+## <a name="remarks"></a>Observaciones  
+ Los enumeradores siguientes derivan `ICorDebugEnum`de:  
   
 - ICorDebugAppDomainEnum (  
   
@@ -51,17 +51,17 @@ Actúa como la interfaz base abstracta para los enumeradores que se usan en una 
   
 - Icordebugerrorinfoenum (  
   
-- [ICorDebugExceptionObjectCallStackEnum](icordebugexceptionobjectcallstackenum-interface.md)  
+- [Icordebugexceptionobjectcallstackenum (](icordebugexceptionobjectcallstackenum-interface.md)  
   
 - ICorDebugFrameEnum (  
   
-- [ICorDebugGCReferenceEnum](icordebuggcreferenceenum-interface.md)  
+- [Icordebuggcreferenceenum (](icordebuggcreferenceenum-interface.md)  
   
-- [ICorDebugGuidToTypeEnum](icordebugguidtotypeenum-interface.md)  
+- [Icordebugguidtotypeenum (](icordebugguidtotypeenum-interface.md)  
   
-- [ICorDebugHeapEnum](icordebugheapenum-interface.md)  
+- [Icordebugheapenum (](icordebugheapenum-interface.md)  
   
-- [ICorDebugHeapSegmentEnum](icordebugheapsegmentenum-interface.md)  
+- [Icordebugheapsegmentenum (](icordebugheapsegmentenum-interface.md)  
   
 - ICorDebugModuleEnum (  
   
@@ -82,15 +82,15 @@ Actúa como la interfaz base abstracta para los enumeradores que se usan en una 
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Interfaces de depuración](debugging-interfaces.md)
+- [Interfaces para depuración](debugging-interfaces.md)

@@ -2,12 +2,12 @@
 title: Método ICorDebugDataTarget2::GetSymbolProviderForImage
 ms.date: 03/30/2017
 ms.assetid: b7c0a2f0-e904-43b3-98e1-d669e8a589e8
-ms.openlocfilehash: 500d36b414be686071990a6e1b40dd8759d02ae9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7800630be0ed9afb321d607046be308088781388
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178936"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976452"
 ---
 # <a name="icordebugdatatarget2getsymbolproviderforimage-method"></a>Método ICorDebugDataTarget2::GetSymbolProviderForImage
 Devuelve el proveedor de símbolos de un módulo a partir de la dirección base de ese módulo.  
@@ -23,10 +23,10 @@ HRESULT GetSymbolProviderForImage(
   
 ## <a name="parameters"></a>Parámetros  
  `imageBaseAddress`  
- [en] Un [valor CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) que representa la dirección base de un módulo.  
+ de [CORDB_ADDRESS](../common-data-types-unmanaged-api-reference.md) valor que representa la dirección base de un módulo.  
   
  `ppSymProvider`  
- [fuera] Un puntero a la dirección de un [ICorDebugSymbolProvider](icordebugsymbolprovider-interface.md) objeto.  
+ enuncia Puntero a la dirección de un objeto [ICorDebugSymbolProvider](icordebugsymbolprovider-interface.md) .  
   
 ## <a name="remarks"></a>Observaciones  
   
@@ -34,15 +34,15 @@ HRESULT GetSymbolProviderForImage(
 > Este método solo está disponible con .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Consulte también
 
-- [ICorDebugDataTarget2 (interfaz)](icordebugdatatarget2-interface.md)
-- [Interfaces de depuración](debugging-interfaces.md)
+- [Interfaz ICorDebugDataTarget2](icordebugdatatarget2-interface.md)
+- [Interfaces para depuración](debugging-interfaces.md)
