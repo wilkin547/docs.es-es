@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7f470c5c-e1c0-4d8d-aad8-830f113ae751
 topic_type:
 - apiref
-ms.openlocfilehash: 4ac26ef4449dc02230f26b1247616b4587d217b7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1cf0080945ad78565fae3fedb454ceba7825cb4a
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73085159"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976244"
 ---
 # <a name="icordebugevalcallfunction-method"></a>ICorDebugEval::CallFunction (Método)
 
@@ -49,13 +49,13 @@ de El número de argumentos de la función.
 `ppArgs`\
 de Matriz de punteros, cada uno de los cuales señala a un objeto ICorDebugValue que especifica un argumento que se va a pasar a la función.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Si la función es virtual, `CallFunction` realizará el envío virtual. Si la función está en un dominio de aplicación diferente, se producirá una transición siempre y cuando todos los argumentos estén también en ese dominio de aplicación.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).
 
 **Encabezado:** CorDebug.idl, CorDebug.h
 
@@ -63,6 +63,6 @@ Si la función es virtual, `CallFunction` realizará el envío virtual. Si la fu
 
 **.NET Framework versiones:** 1,1, 1,0
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [CallParameterizedFunction (método)](icordebugeval2-callparameterizedfunction-method.md)
+- [Método CallParameterizedFunction](icordebugeval2-callparameterizedfunction-method.md)
