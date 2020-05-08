@@ -14,37 +14,37 @@ helpviewer_keywords:
 ms.assetid: b5589171-a4a0-4c00-bbdc-6e0a42233b75
 topic_type:
 - apiref
-ms.openlocfilehash: 127022fb8e9f9559ccb0f0c877d25db67eea3037
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: cce0efa925683b5361a5422112db3f8231e2dfb4
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76784010"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82893274"
 ---
-# <a name="icordebugcodeenum-interface"></a><span data-ttu-id="90b78-102">Interfaz ICorDebugCodeEnum</span><span class="sxs-lookup"><span data-stu-id="90b78-102">ICorDebugCodeEnum Interface</span></span>
+# <a name="icordebugcodeenum-interface"></a><span data-ttu-id="bcdd6-102">Interfaz ICorDebugCodeEnum</span><span class="sxs-lookup"><span data-stu-id="bcdd6-102">ICorDebugCodeEnum Interface</span></span>
 
-<span data-ttu-id="90b78-103">Implementa los métodos "ICorDebugEnum" y enumera las matrices "ICorDebugCode".</span><span class="sxs-lookup"><span data-stu-id="90b78-103">Implements "ICorDebugEnum" methods, and enumerates "ICorDebugCode" arrays.</span></span>  
+<span data-ttu-id="bcdd6-103">Implementa los métodos "ICorDebugEnum" y enumera las matrices "ICorDebugCode".</span><span class="sxs-lookup"><span data-stu-id="bcdd6-103">Implements "ICorDebugEnum" methods, and enumerates "ICorDebugCode" arrays.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="90b78-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="90b78-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="bcdd6-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="bcdd6-104">Methods</span></span>  
   
-|<span data-ttu-id="90b78-105">Método</span><span class="sxs-lookup"><span data-stu-id="90b78-105">Method</span></span>|<span data-ttu-id="90b78-106">Descripción</span><span class="sxs-lookup"><span data-stu-id="90b78-106">Description</span></span>|  
+|<span data-ttu-id="bcdd6-105">Método</span><span class="sxs-lookup"><span data-stu-id="bcdd6-105">Method</span></span>|<span data-ttu-id="bcdd6-106">Descripción</span><span class="sxs-lookup"><span data-stu-id="bcdd6-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="90b78-107">Next (método)</span><span class="sxs-lookup"><span data-stu-id="90b78-107">Next Method</span></span>](icordebugcodeenum-next-method.md)|<span data-ttu-id="90b78-108">Obtiene el número especificado de instancias de `ICorDebugCode` de la enumeración, comenzando en la posición actual.</span><span class="sxs-lookup"><span data-stu-id="90b78-108">Gets the specified number of `ICorDebugCode` instances from the enumeration, starting at the current position.</span></span>|  
+|[<span data-ttu-id="bcdd6-107">Next (Método)</span><span class="sxs-lookup"><span data-stu-id="bcdd6-107">Next Method</span></span>](icordebugcodeenum-next-method.md)|<span data-ttu-id="bcdd6-108">Obtiene el número especificado de `ICorDebugCode` instancias de la enumeración, comenzando en la posición actual.</span><span class="sxs-lookup"><span data-stu-id="bcdd6-108">Gets the specified number of `ICorDebugCode` instances from the enumeration, starting at the current position.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="90b78-109">Notas</span><span class="sxs-lookup"><span data-stu-id="90b78-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bcdd6-109">Observaciones</span><span class="sxs-lookup"><span data-stu-id="bcdd6-109">Remarks</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="90b78-110">Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.</span><span class="sxs-lookup"><span data-stu-id="90b78-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+> <span data-ttu-id="bcdd6-110">Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.</span><span class="sxs-lookup"><span data-stu-id="bcdd6-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="90b78-111">Requisitos de</span><span class="sxs-lookup"><span data-stu-id="90b78-111">Requirements</span></span>  
- <span data-ttu-id="90b78-112">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="90b78-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bcdd6-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="bcdd6-111">Requirements</span></span>  
+ <span data-ttu-id="bcdd6-112">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bcdd6-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="90b78-113">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="90b78-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="bcdd6-113">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="bcdd6-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="90b78-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="90b78-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="bcdd6-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bcdd6-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="90b78-115">**.NET Framework versiones:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="90b78-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="bcdd6-115">**.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bcdd6-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="90b78-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="90b78-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bcdd6-116">Consulta también</span><span class="sxs-lookup"><span data-stu-id="bcdd6-116">See also</span></span>
 
-- [<span data-ttu-id="90b78-117">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="90b78-117">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="bcdd6-117">Interfaces para depuración</span><span class="sxs-lookup"><span data-stu-id="bcdd6-117">Debugging Interfaces</span></span>](debugging-interfaces.md)

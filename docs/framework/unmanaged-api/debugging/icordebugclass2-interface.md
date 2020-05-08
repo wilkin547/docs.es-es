@@ -14,39 +14,39 @@ helpviewer_keywords:
 ms.assetid: 5416de70-43f2-4cdf-a11f-d570759c9c0c
 topic_type:
 - apiref
-ms.openlocfilehash: 795e9f4862992d95eeef98a986545cca47d828c6
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: ff15297eb479f7474c9f07123a29263fb4da3205
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76784140"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82893972"
 ---
-# <a name="icordebugclass2-interface"></a><span data-ttu-id="aeb79-102">Interfaz ICorDebugClass2</span><span class="sxs-lookup"><span data-stu-id="aeb79-102">ICorDebugClass2 Interface</span></span>
+# <a name="icordebugclass2-interface"></a><span data-ttu-id="9d912-102">Interfaz ICorDebugClass2</span><span class="sxs-lookup"><span data-stu-id="9d912-102">ICorDebugClass2 Interface</span></span>
 
-<span data-ttu-id="aeb79-103">Representa una clase genérica o una clase con un parámetro de método de tipo <xref:System.Type>.</span><span class="sxs-lookup"><span data-stu-id="aeb79-103">Represents a generic class or a class with a method parameter of type <xref:System.Type>.</span></span> <span data-ttu-id="aeb79-104">Esta interfaz extiende [ICorDebugClass](icordebugclass-interface.md).</span><span class="sxs-lookup"><span data-stu-id="aeb79-104">This interface extends [ICorDebugClass](icordebugclass-interface.md).</span></span>  
+<span data-ttu-id="9d912-103">Representa una clase genérica o una clase con un parámetro de método de tipo <xref:System.Type>.</span><span class="sxs-lookup"><span data-stu-id="9d912-103">Represents a generic class or a class with a method parameter of type <xref:System.Type>.</span></span> <span data-ttu-id="9d912-104">Esta interfaz extiende [ICorDebugClass](icordebugclass-interface.md).</span><span class="sxs-lookup"><span data-stu-id="9d912-104">This interface extends [ICorDebugClass](icordebugclass-interface.md).</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="aeb79-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="aeb79-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="9d912-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="9d912-105">Methods</span></span>  
   
-|<span data-ttu-id="aeb79-106">Método</span><span class="sxs-lookup"><span data-stu-id="aeb79-106">Method</span></span>|<span data-ttu-id="aeb79-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="aeb79-107">Description</span></span>|  
+|<span data-ttu-id="9d912-106">Método</span><span class="sxs-lookup"><span data-stu-id="9d912-106">Method</span></span>|<span data-ttu-id="9d912-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="9d912-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="aeb79-108">GetParameterizedType (método)</span><span class="sxs-lookup"><span data-stu-id="aeb79-108">GetParameterizedType Method</span></span>](icordebugclass2-getparameterizedtype-method.md)|<span data-ttu-id="aeb79-109">Obtiene la declaración de tipos para esta clase.</span><span class="sxs-lookup"><span data-stu-id="aeb79-109">Gets the type declaration for this class.</span></span>|  
-|[<span data-ttu-id="aeb79-110">SetJMCStatus (método)</span><span class="sxs-lookup"><span data-stu-id="aeb79-110">SetJMCStatus Method</span></span>](icordebugclass2-setjmcstatus-method.md)|<span data-ttu-id="aeb79-111">Para cada método de esta clase, establece un valor que indica si el método es código definido por el usuario.</span><span class="sxs-lookup"><span data-stu-id="aeb79-111">For each method of this class, sets a value that indicates whether the method is user-defined code.</span></span>|  
+|[<span data-ttu-id="9d912-108">Método GetParameterizedType</span><span class="sxs-lookup"><span data-stu-id="9d912-108">GetParameterizedType Method</span></span>](icordebugclass2-getparameterizedtype-method.md)|<span data-ttu-id="9d912-109">Obtiene la declaración de tipos para esta clase.</span><span class="sxs-lookup"><span data-stu-id="9d912-109">Gets the type declaration for this class.</span></span>|  
+|[<span data-ttu-id="9d912-110">SetJMCStatus (Método)</span><span class="sxs-lookup"><span data-stu-id="9d912-110">SetJMCStatus Method</span></span>](icordebugclass2-setjmcstatus-method.md)|<span data-ttu-id="9d912-111">Para cada método de esta clase, establece un valor que indica si el método es código definido por el usuario.</span><span class="sxs-lookup"><span data-stu-id="9d912-111">For each method of this class, sets a value that indicates whether the method is user-defined code.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="aeb79-112">Notas</span><span class="sxs-lookup"><span data-stu-id="aeb79-112">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9d912-112">Observaciones</span><span class="sxs-lookup"><span data-stu-id="9d912-112">Remarks</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="aeb79-113">Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.</span><span class="sxs-lookup"><span data-stu-id="aeb79-113">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+> <span data-ttu-id="9d912-113">Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.</span><span class="sxs-lookup"><span data-stu-id="9d912-113">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="aeb79-114">Requisitos de</span><span class="sxs-lookup"><span data-stu-id="aeb79-114">Requirements</span></span>  
- <span data-ttu-id="aeb79-115">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="aeb79-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9d912-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9d912-114">Requirements</span></span>  
+ <span data-ttu-id="9d912-115">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9d912-115">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="aeb79-116">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="aeb79-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="9d912-116">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9d912-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="aeb79-117">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="aeb79-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9d912-117">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9d912-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="aeb79-118">**.NET Framework versiones:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="aeb79-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="9d912-118">**.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9d912-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="aeb79-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="aeb79-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9d912-119">Consulta también</span><span class="sxs-lookup"><span data-stu-id="9d912-119">See also</span></span>
 
-- [<span data-ttu-id="aeb79-120">ICorDebugClass (interfaz)</span><span class="sxs-lookup"><span data-stu-id="aeb79-120">ICorDebugClass Interface</span></span>](icordebugclass-interface.md)
-- [<span data-ttu-id="aeb79-121">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="aeb79-121">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="9d912-120">Interfaz ICorDebugClass</span><span class="sxs-lookup"><span data-stu-id="9d912-120">ICorDebugClass Interface</span></span>](icordebugclass-interface.md)
+- [<span data-ttu-id="9d912-121">Interfaces para depuración</span><span class="sxs-lookup"><span data-stu-id="9d912-121">Debugging Interfaces</span></span>](debugging-interfaces.md)
