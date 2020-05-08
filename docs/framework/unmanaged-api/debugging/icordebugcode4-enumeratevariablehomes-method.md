@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 802c01ff-8b80-4733-b6dd-03ab6ff7fa11
 topic_type:
 - apiref
-ms.openlocfilehash: ca452b230e2508f2d69c9aa38f274db506f3a906
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5f731b1459542c3f5378790b21f2ea576e89ad97
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76784087"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82893343"
 ---
 # <a name="icordebugcode4enumeratevariablehomes-method"></a>Interfaces icordebugcode4:: EnumerateVariableHomes (método)
 Obtiene un enumerador para las variables locales y los argumentos de una función.  
@@ -33,23 +33,23 @@ HRESULT EnumerateVariableHomes(
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parámetros  
  `ppEnum`  
  Puntero a la dirección de un objeto de interfaz [ICorDebugVariableHomeEnum](icordebugvariablehomeenum-interface.md) que es un enumerador para las variables locales y los argumentos de una función.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El objeto de interfaz [ICorDebugVariableHomeEnum](icordebugvariablehomeenum-interface.md) es un enumerador estándar derivado de la interfaz "ICorDebugEnum" que le permite enumerar objetos [ICorDebugVariableHome](icordebugvariablehome-interface.md) . La colección puede incluir varios objetos [ICorDebugVariableHome](icordebugvariablehome-interface.md) para la misma ranura o índice de argumento si tienen casas diferentes en distintos puntos de la función.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ICorDebugCode4 (interfaz)](icordebugcode4-interface.md)
-- [Interfaces de depuración](debugging-interfaces.md)
+- [Interfaz ICorDebugCode4](icordebugcode4-interface.md)
+- [Interfaces para depuración](debugging-interfaces.md)

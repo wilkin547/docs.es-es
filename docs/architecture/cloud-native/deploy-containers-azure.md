@@ -2,12 +2,12 @@
 title: Implementación de contenedores en Azure
 description: Implementación de contenedores en Azure con Azure Container Registry, Azure Kubernetes Service y Azure Dev Spaces.
 ms.date: 04/13/2020
-ms.openlocfilehash: 6238460c6129583c34e6b328c38ed9042f32f3d6
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 57a4739d39b8ad022d699d54255f56f16d305440
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199565"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895599"
 ---
 # <a name="deploying-containers-in-azure"></a>Implementación de contenedores en Azure
 
@@ -81,7 +81,7 @@ Una vez que implemente una imagen en un registro, como ACR, puede configurar AKS
 
 Como sucede con la mayoría de los recursos de Azure, puede crear un clúster de Azure Kubernetes Service mediante el portal, la línea de comandos o las herramientas de automatización como Helm o terraform. Para empezar a trabajar con un nuevo clúster, debe proporcionar la siguiente información:
 
-- Suscripción a Azure
+- Suscripción de Azure
 - Resource group
 - Nombre del clúster de Kubernetes
 - Region
@@ -95,7 +95,7 @@ Esta información es suficiente para comenzar. Como parte del proceso de creaci�
 - Escala
 - Autenticación
 - Redes
-- monitoring
+- Supervisión
 - Etiquetas
 
 [En esta guía de inicio rápido se explica cómo implementar un clúster de AKS mediante el Azure portal](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal).
@@ -108,8 +108,8 @@ Los desarrolladores comparten una instancia en ejecución (desarrollo) en un cl�
 
 Para comprender el valor de Azure Dev Spaces, déjenos compartir este presupuesto de Gabe Monroy, PM Lead of containers en Microsoft Azure:
 
-> Imagine que es un nuevo empleado que intenta corregir un error en una aplicación de microservicios compleja formada por docenas de componentes, cada uno con su propia configuración y servicios de respaldo. Para empezar, debe configurar el entorno de desarrollo local para que pueda imitar la producción, como la configuración del IDE, la creación de una cadena de herramientas, dependencias de servicio en contenedor, un entorno de Kubernetes local, simulacros para servicios de respaldo, etc. Con todo el tiempo necesario para configurar el entorno de desarrollo, la corrección del primer error puede tardar días.
-> O bien, puede usar espacios de desarrollo y AKS.
+> "Imagine que es un nuevo empleado que intenta corregir un error en una aplicación de microservicios compleja formada por docenas de componentes, cada uno con su propia configuración y servicios de respaldo. Para empezar, debe configurar el entorno de desarrollo local para que pueda imitar la producción, como la configuración del IDE, la creación de una cadena de herramientas, dependencias de servicio en contenedor, un entorno de Kubernetes local, simulacros para servicios de respaldo, etc. Con todo el tiempo necesario para configurar el entorno de desarrollo, la corrección del primer error puede tardar días.
+> O bien, puede usar los espacios de desarrollo y AKS ".
 
 El proceso para trabajar con Azure Dev Spaces implica los siguientes pasos:
 

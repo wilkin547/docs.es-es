@@ -3,12 +3,12 @@ title: Definición de nativo en la nube
 description: Obtenga información sobre los pilares básicos que proporcionan el cimientos para sistemas nativos en la nube.
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: ba11cb1cf0d9d7ef9734ad49aee1df22f285fc4c
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 33977ff736fc5cbfcf86ed6479e8d0b927b87a63
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199786"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895617"
 ---
 # <a name="defining-cloud-native"></a>Definir nativo en la nube
 
@@ -34,9 +34,9 @@ Estas son algunas compañías que han implementado estas técnicas. Piense en la
 
 | Compañía | Experiencia |
 | :-------- | :-------- |
-| [Netflix](https://www.infoq.com/news/2013/06/netflix/) | Tiene 600 y servicios en producción. Implementa cien veces al día. |
-| [Uber](https://eng.uber.com/micro-deploy/) | Tiene más de 1000 servicios almacenados en producción. Implementa varios miles de compilaciones cada semana. |
-| [WeChat](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf) | Tiene más de 300 servicios en producción. Realiza casi 1.000 cambios al día. |
+| [Netflix](https://www.infoq.com/news/2013/06/netflix/) | Tiene 600 y servicios en producción. Implementa cientos de veces al día. |
+| [Uber](https://eng.uber.com/micro-deploy/) | Tiene más de 1000 servicios en producción. Implementa varios miles de veces cada semana. |
+| [WeChat](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf) | Tiene más de 300 servicios en producción. Implementa 1.000 veces al día. |
 
 Como puede ver, Netflix, Uber y WeChat exponen sistemas que se componen de cientos de microservicios independientes. Este estilo arquitectónico les permite responder rápidamente a las condiciones de mercado. Pueden actualizar de forma instantánea pequeñas áreas de una aplicación dinámica y compleja, y escalarlas individualmente según sea necesario.
 
@@ -80,7 +80,7 @@ En la tabla siguiente se resalta la metodología de doce factores:
 | :-------- | :-------- | :-------- |
 | 1 | Código base | Una única base de código para cada microservicio, almacenada en su propio repositorio. Con el control de versiones, se puede implementar en varios entornos (QA, ensayo, producción). |
 | 2 | Dependencias | Cada microservicio aísla y empaqueta sus propias dependencias, y adopta los cambios sin afectar a todo el sistema. |
-| 3 | Configuraciones  | La información de configuración se mueve fuera del microservicio y se externaliza a través de una herramienta de administración de configuración fuera del código. La misma implementación se puede propagar entre entornos con la configuración correcta aplicada.  |
+| 3 | Configurations  | La información de configuración se mueve fuera del microservicio y se externaliza a través de una herramienta de administración de configuración fuera del código. La misma implementación se puede propagar entre entornos con la configuración correcta aplicada.  |
 | 4 | Servicios de respaldo | Los recursos auxiliares (almacenes de datos, memorias caché, agentes de mensajes) deben exponerse a través de una dirección URL direccionable. Al hacerlo, se desacopla el recurso de la aplicación, lo que permite que sea intercambiable.  |
 | 5 | Compilación, lanzamiento, ejecución | Cada versión debe exigir una separación estricta entre las fases de compilación, lanzamiento y ejecución. Cada una debe etiquetarse con un identificador único y admitir la capacidad de revertir. Los sistemas de CI/CD modernos ayudan a completar este principio. |
 | 6 | Procesos | Cada microservicio debe ejecutarse en su propio proceso, aislado de otros servicios en ejecución. Externalizar el estado necesario para un servicio de respaldo, como una caché distribuida o un almacén de datos. |
@@ -95,7 +95,7 @@ En el libro, [más allá de la aplicación de doce factores](https://content.pi
 
 |    |  Nuevo factor | Explicación  |
 | :-------- | :-------- | :-------- |
-| 13 | API primero | Haga todo un servicio. Suponga que el código lo utilizará un cliente front-end, una puerta de enlace u otro servicio. |
+| 13 | Primera API | Haga todo un servicio. Suponga que el código lo utilizará un cliente front-end, una puerta de enlace u otro servicio. |
 | 14 | Telemetría | En una estación de trabajo, tiene una visibilidad profunda de la aplicación y su comportamiento. En la nube, no. Asegúrese de que el diseño incluye la recopilación de datos de supervisión, específicos del dominio y del estado o del sistema. |
 | 15 | Autenticación/autorización  | Implemente la identidad desde el principio. Tenga en cuenta las características de [RBAC (control de acceso basado en roles)](https://docs.microsoft.com/azure/role-based-access-control/overview) disponibles en nubes públicas.  |
 
@@ -167,7 +167,7 @@ Anteriormente en el capítulo, se comparaba una aplicación de comercio electró
 
 - Cada microservicio se puede escalar de manera independiente. En lugar de escalar toda la aplicación como una sola unidad, solo se escalan horizontalmente los servicios que requieren más potencia de procesamiento o ancho de banda de red. Este enfoque específico del escalado proporciona un mayor control del sistema y ayuda a reducir los costos generales a medida que se escalan partes del sistema, no todo.
 
-Una excelente guía de referencia para comprender los microservicios es [microservicios de .net: arquitectura para aplicaciones .net en contenedor](https://docs.microsoft.com/dotnet/standard/microservices-architecture/). El libro profundiza en el diseño y la arquitectura de los microservicios. Es un complemento para una [arquitectura de referencia de microservicios de pila completa](https://github.com/dotnet-architecture/eShopOnContainers) disponible como descarga gratuita de Microsoft.
+Una excelente guía de referencia para comprender los microservicios es [microservicios de .net: arquitectura para aplicaciones .net en contenedor](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook). El libro profundiza en el diseño y la arquitectura de los microservicios. Es un complemento para una [arquitectura de referencia de microservicios de pila completa](https://github.com/dotnet-architecture/eShopOnContainers) disponible como descarga gratuita de Microsoft.
 
 ### <a name="developing-microservices"></a>Desarrollo de microservicios
 
@@ -227,7 +227,7 @@ En la tabla siguiente se describen las tareas comunes de orquestación.
 | :-------- | :-------- |
 | Scheduling | Aprovisionar automáticamente las instancias de contenedor.|
 | Afinidad/antiafinidad | Aprovisione contenedores cercanos o alejados entre sí, ayudando a la disponibilidad y al rendimiento. |
-| Seguimiento de estado | Detectar y corregir errores automáticamente.|
+| Supervisión del estado | Detectar y corregir errores automáticamente.|
 | Conmutación por error | Reaprovisionamiento automático de la instancia con errores en máquinas correctas.|
 | Ampliación | Agregue o quite automáticamente la instancia de contenedor para satisfacer la demanda.|
 | Redes | Administrar una superposición de redes para la comunicación del contenedor.|

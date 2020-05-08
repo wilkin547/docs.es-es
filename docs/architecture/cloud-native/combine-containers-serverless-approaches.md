@@ -2,12 +2,12 @@
 title: Combinación de contenedores y enfoques sin servidor para servicios nativos de la nube
 description: Combinación de contenedores y Kubernetes con enfoques sin servidor
 ms.date: 04/23/2020
-ms.openlocfilehash: fe9e9fd5d07132971d64bc6433a762fb7bd22048
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: a6ae17543c9075ca84126a4c19f9f51887f7fe9a
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199669"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895645"
 ---
 # <a name="combining-containers-and-serverless-approaches"></a>Combinación de los enfoques sin servidor y los contenedores
 
@@ -35,7 +35,11 @@ Cuando se cree el proyecto, incluirá un Dockerfile y el tiempo de ejecución de
 
 ## <a name="how-to-combine-serverless-and-kubernetes-with-keda"></a>Cómo combinar sin servidor y Kubernetes con KEDA
 
-Azure Functions se escala automáticamente para satisfacer la demanda en función de la tasa de eventos que tienen como destino. Siempre puede aprovechar AKS para hospedar sus funciones y usar el escalado automático basado en eventos basado en Kubernetes o KEDA. Cuando no se producen eventos, KEDA se puede reducir verticalmente a cero instancias. [Más información sobre el escalado de Azure Functions con keda](https://docs.microsoft.com/azure/azure-functions/functions-kubernetes-keda).
+En este capítulo, ha visto que la plataforma de Azure Functions se escala horizontalmente de forma automática para satisfacer la demanda. Sin embargo, cuando se implementan funciones en contenedor en AKS, se pierde la funcionalidad de escalado integrada. Al rescate viene [basado en Kubernetes (keda)](https://docs.microsoft.com/azure/azure-functions/functions-kubernetes-keda). Habilita el escalado automático específico para incluir funciones en `event-driven Kubernetes workloads,` contenedor.
+
+KEDA proporciona funcionalidad de escalado orientada a eventos al tiempo de ejecución de las funciones en un contenedor de Docker. KEDA se puede escalar desde cero instancias (cuando no se producen eventos) `n instances`, en función de la carga. Habilita el escalado automático mediante la exposición de métricas personalizadas al escalador automático de Kubernetes (escalado automático del Pod horizontal). El uso de contenedores de Functions con KEDA hace posible replicar las capacidades de la función sin servidor en cualquier clúster de Kubernetes.
+
+Merece la pena mencionar que el proyecto KEDA está ahora administrado por Cloud Native Computing Foundation (CNCF).
 
 >[!div class="step-by-step"]
 >[Anterior](leverage-serverless-functions.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 505a7f6c-d92b-42b4-b539-433f5102ea9b
 topic_type:
 - apiref
-ms.openlocfilehash: ed5b39ed4b2a14c071bf23fb04efbad6834e8a9d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 528db447df4d71d67441b05ad29e6a900c59afbb
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76783972"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82892822"
 ---
 # <a name="icordebugcomobjectvalue-interface"></a>Interfaz ICorDebugComObjectValue
 Proporciona métodos para recuperar información asociada a un contenedor RCW (Runtime Callable wrapper).  
@@ -28,22 +28,22 @@ Proporciona métodos para recuperar información asociada a un contenedor RCW (R
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[GetCachedInterfacePointers (método)](icordebugcomobjectvalue-getcachedinterfacepointers-method.md)|Obtiene los punteros de interfaz sin formato almacenados en memoria caché en el RCW actual.|  
-|[GetCachedInterfaceTypes (método)](icordebugcomobjectvalue-getcachedinterfacetypes-method.md)|Proporciona un enumerador para los tipos de interfaz en los que el objeto actual se ha usado como mayúsculas o minúsculas como.|  
+|[Método GetCachedInterfacePointers](icordebugcomobjectvalue-getcachedinterfacepointers-method.md)|Obtiene los punteros de interfaz sin formato almacenados en memoria caché en el RCW actual.|  
+|[Método GetCachedInterfaceTypes](icordebugcomobjectvalue-getcachedinterfacetypes-method.md)|Proporciona un enumerador para los tipos de interfaz en los que el objeto actual se ha usado como mayúsculas o minúsculas como.|  
   
-## <a name="remarks"></a>Notas  
- Para comprobar si una instancia de una interfaz "ICorDebugValue" representa un RCW, un depurador llama a `QueryInterface` de "ICorDebugValue" con `IID_ICorDebugComObjectValue`.  
+## <a name="remarks"></a>Observaciones  
+ Para comprobar si una instancia de una interfaz "ICorDebugValue" representa un RCW, un depurador `QueryInterface` llama a "ICorDebugValue" `IID_ICorDebugComObjectValue`con.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [Interfaces de depuración](debugging-interfaces.md)
+- [Interfaces para depuración](debugging-interfaces.md)
 - [Depuración](index.md)

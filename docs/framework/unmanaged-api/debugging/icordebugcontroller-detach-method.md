@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 06fae364-f2c6-4a50-aa7e-3da9f2684dc3
 topic_type:
 - apiref
-ms.openlocfilehash: b98077914d680c908587649fdd517aca9c8dcd40
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 480fec4897dac73594515ba8bc0f0e96ceb79ace
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125437"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82892913"
 ---
 # <a name="icordebugcontrollerdetach-method"></a>ICorDebugController::Detach (Método)
 Desasocia el depurador del dominio del proceso o de la aplicación.  
@@ -31,18 +31,18 @@ Desasocia el depurador del dominio del proceso o de la aplicación.
 HRESULT Detach ();  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  El dominio del proceso o de la aplicación continúa la ejecución con normalidad, pero el objeto "ICorDebugProcess" o "ICorDebugAppDomain" ya no es válido y no se producirán más devoluciones de llamada.  
   
  En la versión .NET Framework 2,0, si está habilitada la depuración no administrada, este método producirá un error debido a las limitaciones del sistema operativo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6c116592-134b-4ef2-a319-680e92d013aa
 topic_type:
 - apiref
-ms.openlocfilehash: 35e043c56977bf644efe1dd9cee1409f50cc877f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fa2be894af6e44d09c25a736f45acba56052f9fa
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179026"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895040"
 ---
 # <a name="icordebugarrayvaluegetdimensions-method"></a>ICorDebugArrayValue::GetDimensions (Método)
 Obtiene el número de elementos de cada dimensión de esta matriz.  
@@ -37,18 +37,18 @@ HRESULT GetDimensions (
   
 ## <a name="parameters"></a>Parámetros  
  `cdim`  
- [en] El número de dimensiones de este ICorDebugArrayValue objeto.  
+ de Número de dimensiones de este objeto ICorDebugArrayValue.  
   
- Este valor también es `dims` el tamaño de la matriz porque su `ICorDebugArrayValue` tamaño es igual al número de dimensiones del objeto.  
+ Este valor también es el tamaño de la `dims` matriz porque su tamaño es igual al número de dimensiones del `ICorDebugArrayValue` objeto.  
   
  `dims`  
- [fuera] Matriz de enteros, cada uno de los cuales especifica el `ICorDebugArrayValue` número de elementos de una dimensión de este objeto.  
+ enuncia Matriz de enteros, cada uno de los cuales especifica el número de elementos de una dimensión en este `ICorDebugArrayValue` objeto.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 97e493f5-3a62-4ec7-b42f-4af57bf71f57
 topic_type:
 - apiref
-ms.openlocfilehash: 166f6bb50849df8550871958d7034fdf2a841abb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bbf43f3936823b9a8e562cb32cfa2eef08840033
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089115"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895186"
 ---
 # <a name="icordebugappdomain2getarrayorpointertype-method"></a>ICorDebugAppDomain2::GetArrayOrPointerType (Método)
 Obtiene una matriz del tipo especificado, o un puntero o una referencia al tipo especificado.  
@@ -47,9 +47,9 @@ HRESULT GetArrayOrPointerType (
  de Un puntero a un objeto ICorDebugType que representa el tipo de matriz, puntero o referencia que se va a crear.  
   
  `ppType`  
- enuncia Puntero a la dirección de un objeto `ICorDebugType` que representa la matriz construida, el tipo de puntero o el tipo de referencia.  
+ enuncia Puntero a la dirección de un `ICorDebugType` objeto que representa la matriz construida, el tipo de puntero o el tipo de referencia.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  El valor de *elementType* debe ser uno de los siguientes:  
   
 - ELEMENT_TYPE_PTR  
@@ -61,10 +61,10 @@ HRESULT GetArrayOrPointerType (
  Si el valor de *elementType* es ELEMENT_TYPE_PTR o ELEMENT_TYPE_BYREF, *nRank* debe ser cero.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

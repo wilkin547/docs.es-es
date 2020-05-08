@@ -2,12 +2,12 @@
 title: Método de ICorDebugAppDomain4::GetObjectForCCW
 ms.date: 03/30/2017
 ms.assetid: 2cacdb85-e7b8-42e7-b310-c3e8c22e5d33
-ms.openlocfilehash: 10d32314e46aba4f030b294cadc3cbb36e8742f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a175a6b6c91c284348580e1d9dc9ef0c5f5fc5df
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179048"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895119"
 ---
 # <a name="icordebugappdomain4getobjectforccw-method"></a>Método de ICorDebugAppDomain4::GetObjectForCCW
 Obtiene un objeto administrado de un puntero de contenedor CCW (COM callable wrapper).  
@@ -26,20 +26,20 @@ HRESULT GetObjectForCCW(
  [in] Puntero de contenedor CCW (COM callable wrapper).  
   
  `ppManagedObject`  
- [fuera] Puntero a la dirección de un objeto "ICorDebugValue" que representa el objeto administrado que corresponde al puntero CCW especificado.  
+ enuncia Puntero a la dirección de un objeto "ICorDebugValue" que representa el objeto administrado que corresponde al puntero CCW especificado.  
   
 ## <a name="remarks"></a>Observaciones  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 - [Interfaz de ICorDebugAppDomain4](icordebugappdomain4-interface.md)
-- [Interfaces de depuración](debugging-interfaces.md)
+- [Interfaces para depuración](debugging-interfaces.md)

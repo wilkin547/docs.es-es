@@ -3,12 +3,12 @@ title: Patrones de comunicación nativa en la nube
 description: Más información sobre las principales preocupaciones sobre la comunicación de servicios en aplicaciones nativas en la nube
 author: robvet
 ms.date: 08/31/2019
-ms.openlocfilehash: 3bda9baa516b7bd8f893e0f58bbe5e2bfde2b61d
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: b3edc0817fb76ad99a1344b17d600eb747187f86
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "73841148"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895629"
 ---
 # <a name="cloud-native-communication-patterns"></a>Patrones de comunicación nativa en la nube
 
@@ -44,7 +44,7 @@ Aunque ofrecen muchas ventajas, los microservicios no son comer. Ahora, las llam
 
 - El cifrado/descifrado de mensajes es importante.
 
-El libro [microservicios de .net: arquitectura para aplicaciones .net en contenedor](https://docs.microsoft.com/dotnet/standard/microservices-architecture/), disponible de forma gratuita de Microsoft, proporciona una cobertura detallada de los patrones de comunicación para las aplicaciones de microservicios. En este capítulo, se proporciona información general de alto nivel de estos patrones junto con las opciones de implementación disponibles en la nube de Azure.
+El libro [microservicios de .net: arquitectura para aplicaciones .net en contenedor](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook), disponible de forma gratuita de Microsoft, proporciona una cobertura detallada de los patrones de comunicación para las aplicaciones de microservicios. En este capítulo, se proporciona información general de alto nivel de estos patrones junto con las opciones de implementación disponibles en la nube de Azure.
 
 En este capítulo, primero abordaremos la comunicación entre las aplicaciones front-end y los microservicios de back-end. A continuación, veremos que los microservicios de back-end se comunican entre sí. Exploraremos la tecnología de comunicación up y gRPC. Por último, veremos nuevos patrones de comunicación innovadores con la tecnología de la malla de servicio. También veremos cómo la nube de Azure proporciona diferentes tipos de *servicios de respaldo* para admitir la comunicación nativa en la nube.
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5416de70-43f2-4cdf-a11f-d570759c9c0c
 topic_type:
 - apiref
-ms.openlocfilehash: 795e9f4862992d95eeef98a986545cca47d828c6
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: ff15297eb479f7474c9f07123a29263fb4da3205
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76784140"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82893972"
 ---
 # <a name="icordebugclass2-interface"></a>Interfaz ICorDebugClass2
 
@@ -29,24 +29,24 @@ Representa una clase genérica o una clase con un parámetro de método de tipo 
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[GetParameterizedType (método)](icordebugclass2-getparameterizedtype-method.md)|Obtiene la declaración de tipos para esta clase.|  
-|[SetJMCStatus (método)](icordebugclass2-setjmcstatus-method.md)|Para cada método de esta clase, establece un valor que indica si el método es código definido por el usuario.|  
+|[Método GetParameterizedType](icordebugclass2-getparameterizedtype-method.md)|Obtiene la declaración de tipos para esta clase.|  
+|[SetJMCStatus (Método)](icordebugclass2-setjmcstatus-method.md)|Para cada método de esta clase, establece un valor que indica si el método es código definido por el usuario.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ICorDebugClass (interfaz)](icordebugclass-interface.md)
-- [Interfaces de depuración](debugging-interfaces.md)
+- [Interfaz ICorDebugClass](icordebugclass-interface.md)
+- [Interfaces para depuración](debugging-interfaces.md)

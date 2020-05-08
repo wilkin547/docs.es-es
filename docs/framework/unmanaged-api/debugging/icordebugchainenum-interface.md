@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6639335c-48e1-4e74-a4f3-70a6a0f54af1
 topic_type:
 - apiref
-ms.openlocfilehash: 1f94e2e1f6b376a1998ba4fbcc940147eb16272a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4556ebbd05e0660da14fb59d806c8feb0b45b9bb
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76784204"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894229"
 ---
 # <a name="icordebugchainenum-interface"></a>Interfaz ICorDebugChainEnum
 
@@ -29,22 +29,22 @@ Implementa los métodos ICorDebugEnum y enumera las matrices ICorDebugChain.
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Next (método)](icordebugchainenum-next-method.md)|Obtiene el número especificado de instancias de `ICorDebugChain` de la enumeración, comenzando en la posición actual.|  
+|[Next (Método)](icordebugchainenum-next-method.md)|Obtiene el número especificado de `ICorDebugChain` instancias de la enumeración, comenzando en la posición actual.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [Interfaces de depuración](debugging-interfaces.md)
+- [Interfaces para depuración](debugging-interfaces.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6fd5eaa4-1997-4910-82f5-3887480db764
 topic_type:
 - apiref
-ms.openlocfilehash: 10584442d7e0bd61e6decaf2b494dfe39f339d6d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5644c20ec5df2606c7258131573691997f424e50
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088414"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895016"
 ---
 # <a name="icordebugarrayvaluegetelementatposition-method"></a>ICorDebugArrayValue::GetElementAtPosition (Método)
 Obtiene el elemento en la posición especificada y trata la matriz como una matriz unidimensional de base cero.  
@@ -41,14 +41,14 @@ HRESULT GetElementAtPosition (
  `ppValue`  
  enuncia Puntero a la dirección de un objeto ICorDebugValue que representa el valor del elemento.  
   
-## <a name="remarks"></a>Comentarios  
- El diseño de una matriz de varias dimensiones sigue el C++ estilo del diseño de la matriz.  
+## <a name="remarks"></a>Observaciones  
+ El diseño de una matriz de varias dimensiones sigue el estilo de C++ del diseño de la matriz.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

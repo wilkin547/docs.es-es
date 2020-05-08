@@ -2,12 +2,12 @@
 title: Agrupaciones de aplicaciones nativas en la nube
 description: Diseño de aplicaciones .NET nativas en la nube para Azure | Agrupaciones de aplicaciones nativas en la nube
 ms.date: 06/30/2019
-ms.openlocfilehash: 0c67035af08d3c337ff027f3742e1ce8a83f8d0f
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 6f85ca14ff4d17f9c7a90a9ace51a1448b89fcb3
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "73840746"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895682"
 ---
 # <a name="cloud-native-application-bundles"></a>Agrupaciones de aplicaciones nativas en la nube
 
@@ -72,7 +72,7 @@ El núcleo de un CNAB es un archivo denominado `bundle.json`. Este archivo defin
 
 **Figura 11-13** : un archivo de terraform de ejemplo
 
-En el `bundle.json` también se define un conjunto de parámetros que se pasan en terraform. La parametrización de la agrupación permite la instalación en diversos entornos diferentes.
+`bundle.json` También define un conjunto de parámetros que se pasan en terraform. La parametrización de la agrupación permite la instalación en diversos entornos diferentes.
 
 El formato CNAB también es flexible, lo que permite su uso en cualquier nube. Incluso se puede usar en soluciones locales como [OpenStack](https://www.openstack.org/).
 
@@ -82,3 +82,4 @@ Hay tantas herramientas excelentes en el espacio de DevOps estos días, así com
 
 >[!div class="step-by-step"]
 >[Anterior](infrastructure-as-code.md)
+>[Siguiente](summary.md)
