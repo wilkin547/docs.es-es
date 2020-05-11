@@ -3,12 +3,12 @@ title: Comando dotnet nuget push
 description: El comando dotnet nuget push inserta un paquete en el servidor y lo publica.
 author: karann-msft
 ms.date: 02/14/2020
-ms.openlocfilehash: 8b0437d7f4ada2b56af50e30717d131668c21f7e
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 1e7831de4c041591b3602e405418f89f1d1d27d1
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728355"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895453"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -152,5 +152,4 @@ El comando inserta un paquete existente. No crea un paquete. Para crear un paque
   dotnet nuget push *.nupkg -s c:\mydir
   ```
 
-  Este comando no almacena paquetes en una estructura de carpetas jerárquica, lo que se recomienda para optimizar el rendimiento. Para obtener más información, vea [Fuentes locales](//nuget/hosting-packages/local-feeds).
-  
+  Este comando no almacena paquetes en una estructura de carpetas jerárquica, lo que se recomienda para optimizar el rendimiento. Para obtener más información, vea [Fuentes locales](/nuget/hosting-packages/local-feeds).  

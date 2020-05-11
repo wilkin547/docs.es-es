@@ -2,12 +2,12 @@
 title: 'Interpolación de cadenas: tutorial de C#'
 description: En este tutorial se muestra cómo usar la característica de interpolación de cadenas de C# para incluir resultados de expresión con formato en una cadena mayor.
 ms.date: 10/23/2018
-ms.openlocfilehash: 22637895f241585bac4909479f225bf3cb581614
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: d1b78670361e8b333499d12b68c0364ad9e40a85
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738282"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796059"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>Uso de la interpolación de cadenas para construir cadenas con formato
 
@@ -165,4 +165,4 @@ El resultado tiene un aspecto similar a este:
 
 Ha completado el tutorial sobre interpolación de cadenas.
 
-Para más información, vea el tema [Interpolación de cadenas](../../language-reference/tokens/interpolated.md) y el tutorial [Interpolación de cadenas en C#](../../tutorials/string-interpolation.md).
+Para más información, vea el tema [Interpolación de cadenas](../../language-reference/tokens/interpolated.md) y el tutorial [Interpolación de cadenas en C#](../string-interpolation.md).

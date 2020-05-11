@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -win32res compiler option [C#]
 - win32res compiler option [C#]
 ms.assetid: 3c33f750-6948-4c7e-a27e-bef98f77255b
-ms.openlocfilehash: 39f02c4c2e060c4be40002a2f48b0da31004a9ae
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3bb1614fcf28c62a9000c9b96af2f046f329fb1e
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69606198"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794382"
 ---
 # <a name="-win32res-c-compiler-options"></a>-win32res (Opciones del compilador de C#)
 La opción **-win32res** inserta un recurso de Win32 en el archivo de salida.  
@@ -30,7 +30,7 @@ La opción **-win32res** inserta un recurso de Win32 en el archivo de salida.
  El archivo de recursos que quiere agregar a su archivo de salida.  
   
 ## <a name="remarks"></a>Comentarios  
- Se puede crear un archivo de recursos de Win32 con el [compilador de recursos](../../language-reference/compiler-options/resource-compiler-option.md). Cuando se compila un programa de Visual C++, se invoca el compilador de recursos y se crea un archivo .res a partir del archivo .rc.  
+ Se puede crear un archivo de recursos de Win32 con el [compilador de recursos](resource-compiler-option.md). Cuando se compila un programa de Visual C++, se invoca el compilador de recursos y se crea un archivo .res a partir del archivo .rc.  
   
  Un recurso de Win32 puede contener información de versión o de mapa de bits (icono) que ayudaría a identificar la aplicación en el Explorador de archivos. Si no especifica **-win32res**, el compilador generará información de versión basada en la versión del ensamblado.  
   

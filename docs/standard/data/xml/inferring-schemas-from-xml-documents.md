@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: f3d97d53-614d-4a04-a174-87965b7405f6
-ms.openlocfilehash: 5c2d997d9006a3f1eb971eac20982b9dd5677ebf
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 2d991a7835d22af2c780b020d6884f626908665e
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710757"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796176"
 ---
 # <a name="inferring-schemas-from-xml-documents"></a>Deducción de esquemas a partir de documentos XML
 Este tema describe cómo utilizar la clase <xref:System.Xml.Schema.XmlSchemaInference> para deducir un lenguaje de definición de esquema XML (XSD) a partir de la estructura de un documento XML.  
@@ -29,7 +29,7 @@ Este tema describe cómo utilizar la clase <xref:System.Xml.Schema.XmlSchemaInfe
     <child>One</child>  
     <child>Two</child>  
 </parent>  
-<parent attribute1="A">  
+<parent attribute1="A" />
 ```  
   
  En el ejemplo de arriba, cuando el atributo `attribute1` se encuentra con un valor de `6` mediante el proceso <xref:System.Xml.Schema.XmlSchemaInference>, se asume que es del tipo `xs:unsignedByte`. Cuando el segundo elemento `parent` se encuentra mediante el proceso <xref:System.Xml.Schema.XmlSchemaInference>, la restricción se pierde modificando el tipo `xs:string` porque el valor del atributo `attribute1` es ahora `A`. De forma similar, el atributo `minOccurs` para todos los elementos `child` deducidos en el esquema se pierden a `minOccurs="0"` porque el segundo elemento primario no tiene elementos secundarios.  

@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: 930329b922f585ac4763e6a66d3b192ae839f14f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5f85b88236c2e643f97453c64173a3f4f7159a35
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398200"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795006"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Operadores lógicos booleanos (referencia de C#)
 
@@ -157,7 +157,8 @@ Los operadores `&`, `|` y `^` admiten la asignación compuesta, como se muestra 
 
 [!code-csharp-interactive[compound assignment](snippets/BooleanLogicalOperators.cs#CompoundAssignment)]
 
-Los operadores lógicos condicionales `&&` y `||` no admiten la asignación compuesta.
+> [!NOTE]
+> Los operadores lógicos condicionales `&&` y `||` no admiten la asignación compuesta.
 
 ## <a name="operator-precedence"></a>Prioridad de operadores
 

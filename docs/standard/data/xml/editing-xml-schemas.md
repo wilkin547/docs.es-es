@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
-ms.openlocfilehash: d7d9f8e0d4ec2f343b50e68e942bf94e93576f25
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a295fee225d7eb5793b725db93e47fc73addf4ef
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710952"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794590"
 ---
 # <a name="editing-xml-schemas"></a>Edición de esquemas XML
 
@@ -60,8 +60,7 @@ A continuación se ofrece el esquema del cliente modificado que se creó en el t
         <xs:element name="LastName" type="tns:LastNameType" />
         <xs:element name="PhoneNumber">           <xs:simpleType>             <xs:restriction base="xs:string">               <xs:pattern value="\d{3}-\d{3}-\d(4)" />             </xs:restriction>           </xs:simpleType>         </xs:element>
       </xs:sequence>
-      <xs:attribute name="CustomerId" type="xs:positiveInteger" use="required" /
->
+      <xs:attribute name="CustomerId" type="xs:positiveInteger" use="required" />
     </xs:complexType>
   </xs:element>
   <xs:simpleType name="LastNameType">
@@ -124,8 +123,7 @@ A continuación se ofrece el esquema del cliente modificado que se creó en el t
         <xs:element name="FirstName" type="tns:FirstNameComplexType" />
         <xs:element name="LastName" type="tns:LastNameType" />
       </xs:sequence>
-      <xs:attribute name="CustomerId" type="xs:positiveInteger" use="required" /
->
+      <xs:attribute name="CustomerId" type="xs:positiveInteger" use="required" />
     </xs:complexType>
   </xs:element>
   <xs:simpleType name="LastNameType">

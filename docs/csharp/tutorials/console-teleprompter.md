@@ -4,12 +4,12 @@ description: Este tutorial le enseña varias características de .NET Core y el 
 ms.date: 03/06/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 09ce36e7a61f576dc4449976ce676701dc57c9cd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 06affa01b67edeea09088834cf131adb55650bbb
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76921131"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794668"
 ---
 # <a name="console-app"></a>Aplicación de consola
 
@@ -313,4 +313,4 @@ RunTeleprompter().Wait();
 
 En este tutorial se han mostrado varias características en torno al lenguaje C# y las bibliotecas .NET Core, relacionadas con el trabajo en aplicaciones de consola. Puede partir de este conocimiento para explorar más sobre el lenguaje y las clases aquí presentadas. Ha visto los conceptos básicos de E/S de archivo y consola, el uso con bloqueo y sin bloqueo de la programación asincrónica basada en tareas, un paseo por el lenguaje C# y cómo se organizan los programas en C#. También ha conocido la interfaz de la línea de comandos y la CLI de .NET Core.
 
-Para obtener más información sobre la E/S de archivo, consulte el tema [E/S de archivos y secuencias](../../standard/io/index.md). Para obtener más información sobre el modelo de programación asincrónica que se ha usado en este tutorial, vea los temas [Programación asincrónica basada en tareas](../..//standard/parallel-programming/task-based-asynchronous-programming.md) y [Programación asincrónica](../async.md).
+Para obtener más información sobre la E/S de archivo, consulte el tema [E/S de archivos y secuencias](../../standard/io/index.md). Para obtener más información sobre el modelo de programación asincrónica que se ha usado en este tutorial, vea los temas [Programación asincrónica basada en tareas](../../standard/parallel-programming/task-based-asynchronous-programming.md) y [Programación asincrónica](../async.md).

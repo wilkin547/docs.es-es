@@ -3,12 +3,12 @@ title: Comparación entre project.json y csproj
 description: Vea una asignación entre los elementos project.json y csproj.
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: abe515007b47b415ac33e3350a29edced1784d68
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: feaa7e9cde7e1aa4dfe94d699b14a018fc728f27
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77451110"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794629"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Una asignación entre propiedades project.json y csproj
 
@@ -675,4 +675,4 @@ Para obtener más información, consulte [Including content in a package](/nuget
 
 ## <a name="see-also"></a>Vea también
 
-- [Introducción de alto nivel de cambios en la CLI](../tools/cli-msbuild-architecture.md)
+- [Introducción de alto nivel de cambios en la CLI](cli-msbuild-architecture.md)

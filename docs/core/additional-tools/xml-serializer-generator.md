@@ -5,12 +5,12 @@ author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 094dd1227033e167050ad73121b3005a592a0ae4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c3f1fcda8a8a6abc58d35bf37e51485bb3590fa3
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75714519"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794642"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>Usar el generador de serializador XML de Microsoft en .NET Core
 
@@ -50,7 +50,7 @@ dotnet new console
 
 ### <a name="add-a-reference-to-the-microsoftxmlserializergenerator-package-in-the-myapp-project"></a>Agregue una referencia al paquete Microsoft.XmlSerializer.Generator en el proyecto de MyApp
 
-Use el comando [`dotnet add package`](../tools//dotnet-add-package.md) para agregar la referencia en el proyecto.
+Use el comando [`dotnet add package`](../tools/dotnet-add-package.md) para agregar la referencia en el proyecto.
 
 Tipo:
 
@@ -64,7 +64,7 @@ Abra el editor de código para empezar. Todavía estamos trabajando desde el dir
 
 Abra *MyApp.csproj* en el editor de texto.
 
-Después de ejecutar el comando [`dotnet add package`](../tools//dotnet-add-package.md), se agregan estas líneas al archivo de proyecto *MyApp.csproj*:
+Después de ejecutar el comando [`dotnet add package`](../tools/dotnet-add-package.md), se agregan estas líneas al archivo de proyecto *MyApp.csproj*:
 
  ```xml
  <ItemGroup>

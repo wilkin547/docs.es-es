@@ -3,12 +3,12 @@ title: Administrar espacios de nombres en un documento XML
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
-ms.openlocfilehash: 7b219788895ab2f89fa285c2e1b7de62639bfcf9
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 1b3e57c0a8a37574a92d23cf1d623301cc54b984
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160045"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796157"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>Administrar espacios de nombres en un documento XML
 Los espacios de nombres XML asocian nombres de elementos y de atributos de un documento XML con identificadores URI personalizados y predefinidos. Para crear estas asociaciones, puede definir los prefijos de los URI del espacio de nombres y usar dichos prefijos para calificar los nombres de los elementos y de los atributos en los datos XML. Los espacios de nombres evitan conflictos de nombres de elementos y atributos y permiten que los elementos y atributos con el mismo nombre se traten y se validen de forma diferente.  
@@ -25,7 +25,8 @@ Los espacios de nombres XML asocian nombres de elementos y de atributos de un do
   
 ```xml  
 <mybook:BOOK xmlns:mybook="http://www.contoso.com/books.dtd">  
-<bb:BOOK xmlns:bb="urn:blueyonderairlines">  
+<bb:BOOK xmlns:bb="urn:blueyonderairlines" />
+</mybook>
 ```  
   
  Para indicar que un elemento es parte de un espacio de nombres en particular, agréguele el prefijo de espacio de nombres. Por ejemplo, si el elemento `Author` pertenece al espacio de nombres `mybook`, se declara como `<mybook:Author>`.  
@@ -53,6 +54,8 @@ Los espacios de nombres XML asocian nombres de elementos y de atributos de un do
   
 ```xml  
 <BOOK xmlns="http://www.contoso.com/books.dtd">  
+...
+</BOOK>
 ```  
   
 ## <a name="managing-namespaces"></a>Administrar los espacios de nombres  

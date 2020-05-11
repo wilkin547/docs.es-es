@@ -4,12 +4,12 @@ description: Sepa cómo implementar una aplicación de .NET para Apache Spark en
 ms.date: 01/23/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c5308530831fa288bf637849c1342f51769c3ad4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3b00823034cbcb271cb7e169df40122f1144462a
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77503962"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895714"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>Tutorial: Implementación de una aplicación de .NET para Apache Spark en Databricks
 
@@ -28,7 +28,7 @@ En este tutorial aprenderá a:
 
 Antes de empezar, haga las tareas siguientes:
 
-* Si no tiene una cuenta de Azure, cree una [cuenta gratuita](https://azure.microsoft.com/free/).
+* Si no tiene una cuenta de Azure, cree una [cuenta gratuita](https://azure.microsoft.com/free/dotnet/).
 * Inicie sesión en [Azure Portal](https://portal.azure.com/).
 * Complete el tutorial [.NET para Apache Spark: comenzar en 10 minutos](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro).
 
@@ -36,7 +36,7 @@ Antes de empezar, haga las tareas siguientes:
 
 > [!Note]
 > Este tutorial no puede llevarse a cabo mediante una **suscripción de evaluación gratuita de Azure**.
-> Si tiene una cuenta gratuita, vaya a su perfil y cambiar la suscripción a **pago por uso**. Para más información consulte el sitio de [cuentas gratuitas de Azure](https://azure.microsoft.com/free/). Después, [quite el límite de gasto](https://docs.microsoft.com/azure/billing/billing-spending-limit#why-you-might-want-to-remove-the-spending-limit) y [solicite un aumento de la cuota](https://docs.microsoft.com/azure/azure-supportability/resource-manager-core-quotas-request) para las vCPU de su región. Cuando crea su área de trabajo de Azure Databricks, puede seleccionar el plan de tarifa de la **Trial (Premium - 14-Days Free DBUs)** para que el área de trabajo acceda a las DBU Premium de Azure Databricks gratis durante 14 días.
+> Si tiene una cuenta gratuita, vaya a su perfil y cambiar la suscripción a **pago por uso**. Para más información consulte el sitio de [cuentas gratuitas de Azure](https://azure.microsoft.com/free/dotnet/). Después, [quite el límite de gasto](https://docs.microsoft.com/azure/billing/billing-spending-limit#why-you-might-want-to-remove-the-spending-limit) y [solicite un aumento de la cuota](https://docs.microsoft.com/azure/azure-supportability/resource-manager-core-quotas-request) para las vCPU de su región. Cuando crea su área de trabajo de Azure Databricks, puede seleccionar el plan de tarifa de la **Trial (Premium - 14-Days Free DBUs)** para que el área de trabajo acceda a las DBU Premium de Azure Databricks gratis durante 14 días.
 
 En esta sección, creará un área de trabajo de Azure Databricks mediante Azure Portal.
 

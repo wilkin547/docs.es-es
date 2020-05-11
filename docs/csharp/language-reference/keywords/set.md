@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - set keyword [C#]
 ms.assetid: 30d7e4e5-cc2e-4635-a597-14a724879619
-ms.openlocfilehash: 0b293709abe64a0a82d8575f6793a07ca6c9533b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cdd84c824cc4dc93f4433f07e9978d22cba3f245
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173502"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795071"
 ---
 # <a name="set-c-reference"></a>set (Referencia de C#)
 
@@ -36,7 +36,7 @@ En los casos sencillos en los que los descriptores de acceso `get` y `set` de un
 
 ## <a name="see-also"></a>Vea también
 
-- [Referencia de C#](../../language-reference/index.md)
+- [Referencia de C#](../index.md)
 - [Guía de programación de C#](../../programming-guide/index.md)
 - [Palabras clave de C#](index.md)
 - [Propiedades](../../programming-guide/classes-and-structs/properties.md)

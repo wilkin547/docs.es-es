@@ -4,12 +4,12 @@ description: Descripción de los detalles del algoritmo de carga de ensamblado s
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
-ms.openlocfilehash: bfdc1d8179d46a13b3d137a87397fa3e573da33c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17f29a9aca79019daa91736e586bf1b6b753a9ec
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72303627"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82859534"
 ---
 # <a name="satellite-assembly-loading-algorithm"></a>Algoritmo de carga de ensamblado satélite
 
@@ -40,6 +40,7 @@ El proceso de reserva de recursos de .NET Core conlleva los pasos siguientes:
         >
         > [!NOTE]
         > En Linux y macOS, el subdirectorio distingue entre mayúsculas y minúsculas y debe cumplir lo siguiente:
+        >
         > - Coincidir exactamente con mayúsculas y minúsculas.
         > - Estar en minúsculas.
 

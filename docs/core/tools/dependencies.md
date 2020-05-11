@@ -6,12 +6,12 @@ no-loc:
 - dotnet remove package
 - dotnet list package
 ms.date: 02/25/2020
-ms.openlocfilehash: 367be7eb04d58bffc0846de1d035a5801e8d9376
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3e1d807ea69e66e31b277a92cd6a1dc0e76531b5
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398044"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795552"
 ---
 # <a name="manage-dependencies-in-net-core-applications"></a>Administración de dependencias en aplicaciones .NET Core
 
@@ -78,5 +78,5 @@ dotnet remove package Microsoft.EntityFrameworkCore
 
 ## <a name="see-also"></a>Vea también
 
-* [Paquetes NuGet en archivos de proyecto](../project-sdk/msbuild-props.md#nuget-packages)
+* [Referencias de paquete en archivos de proyecto](../project-sdk/msbuild-props.md#reference-properties)
 * [Comando dotnet list package](dotnet-remove-package.md)
