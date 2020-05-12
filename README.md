@@ -1,12 +1,14 @@
 ---
-ms.openlocfilehash: 1e84a0c3636f36794ca7795ac54d192d3cb44217
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c6dcca8384cbd97a968b77e4bc834afa1f683298
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79141099"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895670"
 ---
 # <a name="net-docs"></a>Documentos de .NET
+
+![Markdownlint](https://github.com/dotnet/docs/workflows/Markdownlint/badge.svg)
 
 Este repositorio contiene documentación conceptual de .NET. El [sitio de documentación de .NET](https://docs.microsoft.com/dotnet) se ha creado a partir de varios repositorios, además de este:
 

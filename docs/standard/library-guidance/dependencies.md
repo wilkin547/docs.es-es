@@ -2,12 +2,12 @@
 title: Dependencias y bibliotecas de .NET
 description: Procedimientos recomendados para administrar las dependencias de NuGet en las bibliotecas de. NET.
 ms.date: 10/02/2018
-ms.openlocfilehash: 6a260b54c45a0cd231059ab3bc6f2707ef7fb20e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 265e92e86d22c778f65476e7f1383d32e4964655
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76731479"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895705"
 ---
 # <a name="dependencies"></a>Dependencias
 
@@ -40,7 +40,7 @@ Una referencia de paquete especifica el intervalo de paquetes válidos que permi
 <PackageReference Include="ExamplePackage" Version="1.0" />
 ```
 
-Las reglas que NuGet usa al resolver dependencias son [complejas](/nuget/consume-packages/dependency-resolution), pero NuGet siempre busca la versión aplicable más baja. NuGet prefiere la versión más baja aplicable en lugar de usar la más alta disponible porque la más baja tendrá los menores problemas de compatibilidad.
+Las reglas que NuGet usa al resolver dependencias son [complejas](/nuget/consume-packages/dependency-resolution), pero NuGet busca [de forma predeterminada](/nuget/consume-packages/install-use-packages-visual-studio#install-and-update-options) la versión aplicable más baja. NuGet prefiere la versión más baja aplicable en lugar de usar la más alta disponible porque la más baja tendrá los menores problemas de compatibilidad.
 
 Debido a la regla de versión más baja aplicable de NuGet, no es necesario colocar una versión superior o un intervalo exacto en referencias de paquete para evitar la obtención de la versión más reciente. NuGet ya intenta encontrar la versión más compatible y más baja automáticamente.
 

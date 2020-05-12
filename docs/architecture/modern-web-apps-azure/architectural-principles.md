@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Pri
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: ffc890bf8cd6b07bd70d8fc7b2b8cfeaf474ae35
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e291888bee25a9c87259560ca4b12635ee73c3c7
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77450276"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975412"
 ---
 # <a name="architectural-principles"></a>Principios de la arquitectura
 
@@ -66,7 +66,7 @@ Cuando este principio se aplica a la arquitectura de la aplicación y se lleva a
 
 ### <a name="dont-repeat-yourself-dry"></a>Una vez y solo una (DRY)
 
-La aplicación debe evitar especificar el comportamiento relacionado con un determinado concepto en varios lugares, ya que esto es una fuente de errores frecuente. En algún momento, un cambio en los requisitos hará que sea necesario cambiar este comportamiento y la probabilidad de que se produzca un error al actualizar al menos una instancia del comportamiento dará como resultado el comportamiento incoherente del sistema.
+La aplicación debe evitar especificar el comportamiento relacionado con un determinado concepto en varios lugares, ya que esto es una fuente de errores frecuente. En algún momento, un cambio en los requisitos requerirá cambiar este comportamiento. Es probable que al menos una instancia del comportamiento no se pueda actualizar, y se producirá un comportamiento incoherente del sistema.
 
 En lugar de duplicar la lógica, se puede encapsular en una construcción de programación. Convierta esta construcción en la única autoridad sobre este comportamiento y haga que cualquier otro elemento de la aplicación que requiera este comportamiento use la nueva construcción.
 
