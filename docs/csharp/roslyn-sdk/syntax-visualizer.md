@@ -3,12 +3,12 @@ title: Explorar código con el Visualizador de sintaxis Roslyn en Visual Studio
 description: El Visualizador de sintaxis proporciona una herramienta visual para explorar los modelos que genera el SDK de .NET Compiler Platform para el código.
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: 27e5a1f0b31dd2af2ac779223538b03cdb4db0c5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c7a34fda909bd044a9e65a8353d5626b533730e3
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156992"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975932"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Explorar código con el Visualizador de sintaxis Roslyn en Visual Studio
 
@@ -75,7 +75,7 @@ Pruebe lo mismo con el nodo **SubBlock** correspondiente al método `Main()` en 
 
 ---
 
-El visor de gráficos de sintaxis tiene una opción para mostrar una leyenda con su esquema de color. También puede pasar el puntero sobre determinados elementos en el gráfico de sintaxis para ver las propiedades correspondientes a ese elemento.
+El visor de gráficos de sintaxis tiene una opción para mostrar una leyenda para su esquema de color. También puede pasar el puntero sobre determinados elementos en el gráfico de sintaxis para ver las propiedades correspondientes a ese elemento.
 
 Puede ver gráficos de sintaxis de elementos diferentes en el árbol de manera repetida y los gráficos siempre se mostrarán en la misma ventana dentro de Visual Studio. Puede acoplar esta ventana en una ubicación cómoda en Visual Studio para no tener que cambiar entre pestañas para ver un nuevo gráfico de sintaxis. La parte inferior, debajo de las ventanas del editor de código, suele resultar cómoda.
 
@@ -89,7 +89,7 @@ Otra opción consiste en colocar la ventana del gráfico de sintaxis en un segun
 
 El Visualizador de sintaxis permite realizar una inspección rudimentaria de símbolos e información semántica. Escriba `double x = 1 + 1;` dentro de Main() en el ejemplo de C#. Después, seleccione la expresión `1 + 1` en la ventana del editor de código. El visualizador resalta el nodo **AddExpression** en el visualizador. Haga clic con el botón derecho en **AddExpression** y elija **View Symbol (if any)** [Ver símbolo (si existe)]. Tenga en cuenta que la mayoría de los elementos de menú tienen el calificador "si existe". El Visualizador de sintaxis inspecciona las propiedades de un nodo, incluidas las propiedades que es posible que no estén presentes para todos los nodos.
 
-La cuadrícula de propiedades en el visualizador se actualiza como se muestra en esta imagen: el símbolo de la expresión es **SynthesizedIntrinsicOperatorSymbol** con **Variante = Método**.
+La cuadrícula de propiedades del visualizador se actualiza tal como se muestra en la figura siguiente: El símbolo de la expresión es un símbolo **SynthesizedIntrinsicOperatorSymbol** con **Kind = Method**.
 
 ![Propiedades de símbolo](media/syntax-visualizer/symbol-properties.png)
 
@@ -139,4 +139,4 @@ Puede leer más sobre las API para realizar análisis semánticos en el document
 
 ## <a name="closing-the-syntax-visualizer"></a>Cerrar el Visualizador de sintaxis
 
-Puede cerrar la ventana del visualizador cuando no esté usándolo para examinar el código fuente. El Visualizador de sintaxis se actualiza a medida que navega por el código, y modifica o cambia el código fuente. Puede distraerse cuando no esté usándolo.
+Puede cerrar la ventana del visualizador cuando no esté usándolo para examinar el código fuente. Syntax Visualizer se actualiza a medida que navega por el código, y modifica o cambia el código fuente. Puede distraerse cuando no esté usándolo.

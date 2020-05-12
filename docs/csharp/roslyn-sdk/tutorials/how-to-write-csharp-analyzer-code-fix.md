@@ -3,12 +3,12 @@ title: 'Tutorial: Crear el primer analizador y la corrección de código'
 description: En este tutorial se proporcionan instrucciones detalladas para compilar un analizador y la corrección del código con el SDK del compilador de .NET (API de Roslyn).
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: f6fc21c010f9b5fcd5e709ef822639c020a7c93b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d6c3ddff288bf114e1c257ae77ebf3a419913990
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240555"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895451"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Tutorial: Crear el primer analizador y la corrección de código
 

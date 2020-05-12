@@ -1,14 +1,14 @@
 ---
 title: Información general de global.json
 description: Obtenga información sobre cómo usar el archivo global.json para establecer la versión del SDK de .NET Core al ejecutar comandos de la CLI de .NET Core.
-ms.date: 04/21/2020
+ms.date: 05/01/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 5384b59cccb629a5409d26a8df7c81b3999fc95f
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: 15d8e6191394b9ba67b1e5eb5e8ae54ebaf61bef
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021350"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795513"
 ---
 # <a name="globaljson-overview"></a>Información general de global.json
 
@@ -85,6 +85,12 @@ En la siguiente tabla se muestran los posibles valores de la clave `rollForward`
 | `latestMajor` | Usa el SDK de .NET Core instalado superior con una versión principal que es mayor o igual que el valor especificado. <br> Si no se encuentra, se produce un error. |
 | `disable`     | No se pone al día. Se requiere una coincidencia exacta. |
 
+### <a name="msbuild-sdks"></a>msbuild-sdks
+
+Tipo: `object`
+
+Permite controlar la versión del SDK del proyecto en un lugar, en vez de hacerlo en cada proyecto individual. Para más información, vea [Resolución de los SDK de proyecto](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved).
+
 ## <a name="examples"></a>Ejemplos
 
 En el ejemplo siguiente se muestra cómo no usar versiones preliminares:
@@ -97,12 +103,12 @@ En el ejemplo siguiente se muestra cómo no usar versiones preliminares:
 }
 ```
 
-En el ejemplo siguiente se muestra cómo usar la versión superior instalada que es mayor o igual que la versión especificada:
+En este ejemplo se muestra cómo usar la versión superior instalada que es mayor o igual que la versión especificada. El JSON mostrado no permite ninguna versión del SDK anterior a 2.2.200 y permite 2.2.200 o cualquier versión posterior, incluidos 3.0.xxx y 3.1.xxx.
 
 ```json
 {
   "sdk": {
-    "version": "3.1.100",
+    "version": "2.2.200",
     "rollForward": "latestMajor"
   }
 }
@@ -119,23 +125,23 @@ En el ejemplo siguiente se muestra cómo usar la versión exacta especificada:
 }
 ```
 
-En el ejemplo siguiente se muestra cómo usar la versión de revisión y banda de características más reciente instalada de una versión principal y secundaria concreta:
+En este ejemplo se muestra cómo usar la versión de revisión y banda de características más reciente instalada de una versión principal y secundaria concreta. El JSON mostrado no permite ninguna versión del SDK anterior a 3.1.102 y permite 3.1.102 o cualquier versión 3.1.xxx posterior, como 3.1.103 o 3.1.200.
 
 ```json
 {
   "sdk": {
-    "version": "3.1.000",
+    "version": "3.1.102",
     "rollForward": "latestFeature"
   }
 }
 ```
 
-En el ejemplo siguiente se muestra cómo usar la versión de revisión superior instalada de una versión específica (con el formato 3.1.1xx):
+En este ejemplo se muestra cómo usar la versión de revisión superior instalada de una versión específica. El JSON mostrado no permite ninguna versión del SDK anterior a 3.1.102 y permite 3.1.102 o cualquier versión 3.1.1xx posterior, como 3.1.103 o 3.1.199.
 
 ```json
 {
   "sdk": {
-    "version": "3.1.100",
+    "version": "3.1.102",
     "rollForward": "latestPatch"
   }
 }

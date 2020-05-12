@@ -3,12 +3,12 @@ title: Introducción a la transformación de sintaxis (API de Roslyn)
 description: Introducción para recorrer y consultar árboles de sintaxis.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 5045dca839daba1070b34720e72cc9c4f7b94828
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 232fe5fcba35f152dbc3f00b2f2c092b5df0dd35
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240615"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794798"
 ---
 # <a name="get-started-with-syntax-transformation"></a>Introducción a la transformación de sintaxis
 
@@ -59,7 +59,7 @@ Vuelva a ejecutar el código y observe los resultados. Está creando un árbol d
 
 [!code-csharp[create the full identifier](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#CreateFullNamespace "Build the System.Collections.Generic identifier")]
 
-Ejecute el programa nuevamente para ver si ha creado el árbol para agregar el código.
+Ejecute el programa de nuevo para ver si ha creado el árbol para agregar el código.
 
 ### <a name="create-a-modified-tree"></a>Creación de un árbol modificado
 
