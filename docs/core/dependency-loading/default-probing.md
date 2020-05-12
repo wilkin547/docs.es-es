@@ -4,12 +4,12 @@ description: Información general de la lógica de sondeo System.Runtime.Loader.
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
-ms.openlocfilehash: 500ee6ee863b1f311970a9e718936f57f7d4efd6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1e347c716c2d739a1bd03be056b57fdbda6c678f
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398008"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82859515"
 ---
 # <a name="default-probing"></a>Sondeo predeterminado
 
@@ -21,7 +21,7 @@ Cuando se inicia el runtime, el host de tiempo de ejecución proporciona un conj
 
 Cada propiedad de sondeo es opcional. Si está presente, cada propiedad es un valor de cadena que contiene una lista delimitada de rutas de acceso absolutas. El delimitador es ";" en Windows y ":" en el resto de plataformas.
 
-|Nombre de la propiedad                 |Description  |
+|Nombre de la propiedad                 |Descripción  |
 |------------------------------|---------|
 |`TRUSTED_PLATFORM_ASSEMBLIES`   | Lista de rutas de acceso de archivos de ensamblado de plataforma y aplicación. |
 |`PLATFORM_RESOURCE_ROOTS`       | Lista de rutas de acceso de directorio para buscar ensamblados de recursos satélite. |
@@ -40,6 +40,8 @@ Además, los archivos *\*.deps.json* para cualquier marco al que se hace referen
 
 Por último, se puede usar la variable de entorno `ADDITIONAL_DEPS` para agregar dependencias adicionales.
 
+Las propiedades `APP_PATHS` y `APP_NI_PATHS` no se rellenan de forma predeterminada y se omiten en la mayoría de las aplicaciones.
+
 ### <a name="how-do-i-see-the-probing-properties-from-managed-code"></a>Cómo ver las propiedades de sondeo desde un código administrado
 
 Cada propiedad está disponible mediante una llamada a la función <xref:System.AppContext.GetData(System.String)?displayProperty=nameWithType> con el nombre de la propiedad de la tabla anterior.
@@ -48,7 +50,7 @@ Cada propiedad está disponible mediante una llamada a la función <xref:System.
 
 El host de tiempo de ejecución de .NET Core generará mensajes de seguimiento útiles cuando se habiliten determinadas variables de entorno:
 
-|Variable de entorno        |Description  |
+|Variable de entorno        |Descripción  |
 |----------------------------|---------|
 |`COREHOST_TRACE=1`          |Habilita el seguimiento.|
 |`COREHOST_TRACEFILE=<path>` |Realiza un seguimiento de una ruta de acceso de archivo en lugar del elemento `stderr` predeterminado.|

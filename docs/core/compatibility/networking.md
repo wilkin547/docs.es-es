@@ -1,22 +1,31 @@
 ---
 title: Cambios importantes en las redes
 description: Enumera los cambios importantes en las redes en .NET Core.
-ms.date: 10/03/2019
-ms.openlocfilehash: d5d445827554d2c898e07dac53d8a571ebdf9359
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 05/05/2020
+ms.openlocfilehash: 07e0b2e062ce244cd6312bbe08bcc63db4c74347
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77092998"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82859624"
 ---
 # <a name="networking-breaking-changes"></a>Cambios importantes en las redes
 
 En esta página se documentan los siguientes cambios importantes:
 
-- [El valor predeterminado de HttpRequestMessage.Version ha cambiado a 1.1](#default-value-of-httprequestmessageversion-changed-to-11)
+| Cambio importante | Versión introducida |
+| - | - |
+| [El valor predeterminado de HttpRequestMessage.Version ha cambiado a 1.1](#default-value-of-httprequestmessageversion-changed-to-11) | 3.0 |
+| [WebClient.CancelAsync no siempre se cancela inmediatamente](#webclientcancelasync-doesnt-always-cancel-immediately) | 2.0 |
 
 ## <a name="net-core-30"></a>.NET Core 3.0
 
 [!INCLUDE[Default value of HttpRequestMessage.Version changed to 1.1](~/includes/core-changes/networking/3.0/httprequestmessage-version-change.md)]
+
+***
+
+## <a name="net-core-20"></a>.NET Core 2.0
+
+[!INCLUDE [behavior-change-webclient-cancelasync](../../../includes/core-changes/networking/2.0/behavior-change-webclient-cancelasync.md)]
 
 ***

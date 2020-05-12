@@ -2,12 +2,12 @@
 title: Comando dotnet test
 description: El comando “dotnet test” se usa para ejecutar pruebas unitarias en un proyecto determinado.
 ms.date: 04/29/2020
-ms.openlocfilehash: a8218b6596601069b89a60ad018adf89a1f47cf6
-ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
+ms.openlocfilehash: ef71e48daa7c4a6f33961d05a2f3def122087b0e
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82624896"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975438"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -20,7 +20,7 @@ ms.locfileid: "82624896"
 ## <a name="synopsis"></a>Sinopsis
 
 ```dotnetcli
-dotnet test [<PROJECT> | <SOLUTION>]
+dotnet test [<PROJECT> | <SOLUTION> | <DIRECTORY> | <DLL>]
     [-a|--test-adapter-path <PATH_TO_ADAPTER>] [--blame]
     [-c|--configuration <CONFIGURATION>]
     [--collect <DATA_COLLECTOR_FRIENDLY_NAME>]
@@ -37,11 +37,15 @@ dotnet test -h|--help
 
 ## <a name="description"></a>Descripción
 
-El comando `dotnet test` se usa para ejecutar pruebas unitarias en un proyecto determinado. El comando `dotnet test` inicia la aplicación de la consola de ejecutor de pruebas especificada para un proyecto. El ejecutor de pruebas ejecuta las pruebas que se definen para un marco de pruebas unitarias (por ejemplo, MSTest, NUnit o xUnit) y notifica el éxito o fracaso de cada prueba. Si todas las pruebas son correctas, el ejecutor de pruebas devuelve 0 como un código de salida; en caso contrario, si se produce algún error en una prueba, devuelve 1. En el caso de los proyectos con varios destinos, las pruebas se ejecutan para cada plataforma de destino. El ejecutor de pruebas y la biblioteca de pruebas unitarias se empaquetan como paquetes de NuGet y se restauran como dependencias ordinarias para el proyecto.
+El comando `dotnet test` se usa para ejecutar pruebas unitarias en una solución determinada. El comando `dotnet test` compila la solución y ejecuta una aplicación host de prueba para cada proyecto de prueba de la solución. El host de prueba ejecuta las pruebas en el proyecto especificado mediante un marco de pruebas (por ejemplo, MSTest, NUnit o xUnit) e informa del éxito o el error de cada prueba. Si todas las pruebas son correctas, el ejecutor de pruebas devuelve 0 como un código de salida; en caso contrario, si se produce algún error en una prueba, devuelve 1.
+
+En el caso de los proyectos con varios destinos, las pruebas se ejecutan para cada plataforma de destino. El host de pruebas y el marco de pruebas unitarias se empaquetan como paquetes NuGet y se restauran como dependencias ordinarias para el proyecto.
 
 Los proyectos de prueba especifican el ejecutor de pruebas usando un elemento `<PackageReference>` ordinario, como se puede ver en este archivo de proyecto de ejemplo:
 
 [!code-xml[XUnit Basic Template](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
+
+Donde `Microsoft.NET.Test.Sdk` es el host de prueba y `xunit` es el marco de pruebas. Y `xunit.runner.visualstudio` es un adaptador de prueba, que permite que el marco xUnit funcione con el host de prueba.
 
 ### <a name="implicit-restore"></a>Restauración implícita
 
@@ -49,19 +53,24 @@ Los proyectos de prueba especifican el ejecutor de pruebas usando un elemento `<
 
 ## <a name="arguments"></a>Argumentos
 
-- **`PROJECT | SOLUTION`**
+- **`PROJECT | SOLUTION | DIRECTORY | DLL`**
 
-  Ruta de acceso a la solución o proyecto de prueba. Si no se especifica, se toma como predeterminado el directorio actual.
+  - Ruta de acceso al proyecto de prueba.
+  - Ruta de acceso a la solución.
+  - Ruta de acceso a un directorio que contiene un proyecto o una solución.
+  - Ruta de acceso a un archivo *.dll* del proyecto de prueba.
+
+  Si no se especifica, se busca un proyecto o una solución en el directorio actual.
 
 ## <a name="options"></a>Opciones
 
 - **`-a|--test-adapter-path <PATH_TO_ADAPTER>`**
 
-  Use los adaptadores de prueba personalizados en la ruta especificada de esta ejecución de pruebas.
+  Ruta de acceso a un directorio en el que se van hacer búsquedas de adaptadores de prueba adicionales. Solo se inspeccionan los archivos *.dll* con el sufijo `.TestAdapter.dll`. Si no se especifica, la búsqueda se realiza en el directorio del archivo *.dll* de la prueba.
 
 - **`--blame`**
 
-  Ejecuta las pruebas en el modo de culpabilidad. Esta opción es útil para aislar las pruebas problemáticas que hacen que el host de prueba se bloquee. Crea un archivo de salida en el directorio actual como *Sequence.xml* que captura el orden de ejecución de pruebas antes del bloqueo.
+  Ejecuta las pruebas en el modo de culpabilidad. Esta opción es útil para aislar las pruebas problemáticas que hacen que el host de prueba se bloquee. Cuando se detecta un bloqueo, crea un archivo de secuencia en `TestResults/<Guid>/<Guid>_Sequence.xml` que captura el orden de las pruebas ejecutadas antes del bloqueo.
 
 - **`-c|--configuration <CONFIGURATION>`**
 
@@ -73,11 +82,11 @@ Los proyectos de prueba especifican el ejecutor de pruebas usando un elemento `<
 
 - **`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
 
-  Habilita el modo de diagnóstico de la plataforma de prueba y escribe mensajes de diagnóstico en el archivo especificado.
+  Habilita el modo de diagnóstico de la plataforma de prueba y escribe mensajes de diagnóstico en el archivo especificado y en los archivos que hay junto a él. El proceso que registra los mensajes determina qué archivos se crean, como `*.host_<date>.txt` para el registro del host de prueba y `*.datacollector_<date>.txt` para el registro del recopilador de datos.
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Busca archivos binarios de prueba para un [marco](../../standard/frameworks.md) específico.
+  Fuerza el uso del host de prueba de `dotnet` o .NET Framework para los archivos binarios de prueba. Esta opción solo determina el tipo de host que se va a usar. La versión de Framework real que se va a usar viene determinada por *runtimeConfig.json* del proyecto de prueba. Si no se especifica, se usa el [atributo de ensamblado TargetFramework](/dotnet/api/system.runtime.versioning.targetframeworkattribute) para determinar el tipo de host. Si ese atributo se quita de *.dll*, se usa el host de .NET Framework.
 
 - **`--filter <EXPRESSION>`**
 
@@ -136,7 +145,7 @@ Los proyectos de prueba especifican el ejecutor de pruebas usando un elemento `<
 
 - Argumentos de **`RunSettings`**
 
-  Los argumentos se pasan como configuraciones de `RunSettings` para la prueba. Los argumentos se especifican como `[name]=[value]` pares después de "-- " (tenga en cuenta el espacio después de --). Se usa un espacio para separar varios pares de `[name]=[value]`.
+ Los argumentos `RunSettings` insertados se pasan como los últimos argumentos en la línea de comandos después de "-- " (fíjese en el espacio después de --). Los argumentos `RunSettings` insertados se especifican como pares de `[name]=[value]`. Se usa un espacio para separar varios pares de `[name]=[value]`.
 
   Ejemplo: `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
 
@@ -166,6 +175,12 @@ Los proyectos de prueba especifican el ejecutor de pruebas usando un elemento `<
 
   ```dotnetcli
   dotnet test --logger "console;verbosity=detailed"
+  ```
+  
+  - Ejecute las pruebas del proyecto en el directorio actual e informe de las pruebas que estaban en curso cuando se bloqueó el host de prueba:
+
+  ```dotnetcli
+  dotnet test --blame
   ```
 
 ## <a name="filter-option-details"></a>Detalles de la opción de filtro

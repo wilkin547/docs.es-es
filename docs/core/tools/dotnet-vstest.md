@@ -2,20 +2,23 @@
 title: Comando dotnet vstest
 description: El comando dotnet vstest compila un proyecto y todas sus dependencias.
 ms.date: 02/27/2020
-ms.openlocfilehash: e8fa94cf12ca2fe5fb99c6e3c1dcdb52185798c0
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: f7db58f4aab59354b8c69ce0371324c23482dafe
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463286"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975399"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
 **Este artículo se aplica a:** ✔️ SDK de .NET Core 2.1 y versiones posteriores
 
+> [!IMPORTANT]
+> El comando `dotnet vstest` se sustituye por `dotnet test`, que ahora se puede usar para ejecutar ensamblados. Vea [`dotnet test`](dotnet-test.md).
+
 ## <a name="name"></a>NOMBRE
 
-`dotnet-vstest`: ejecuta pruebas desde los archivos especificados.
+`dotnet-vstest`: permite ejecutar pruebas a partir de los ensamblados especificados.
 
 ## <a name="synopsis"></a>Sinopsis
 

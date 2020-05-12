@@ -3,12 +3,12 @@ title: Modelo de objetos y conceptos del SDK de .NET Compiler Platform
 description: En este tema se proporciona la información necesaria para trabajar de forma eficaz con el SDK de .NET Compiler. Aprenderá sobre las capas de API, los tipos principales implicados y el modelo de objetos general.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: e563260e21fb8807017db90ff63e30fec0415a48
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 529ce6fbdef22964251c8b22abbd5d8aadab633d
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156966"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975945"
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>Descripción del modelo del SDK de .NET Compiler Platform
 
