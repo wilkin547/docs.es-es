@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 24e990d0561f1f0faade2c8e62ca640e4daba93f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f9eac406b96e682793b784ca76593885d95365dd
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78848085"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82844579"
 ---
 
 > [!div class="op_single_selector"]
@@ -13,9 +13,11 @@ ms.locfileid: "78848085"
 > - [Ubuntu 19.04: x64](../linux-package-manager-ubuntu-1904.md)
 > - [Ubuntu 18.04: x64](../linux-package-manager-ubuntu-1804.md)
 > - [Ubuntu 16.04: x64](../linux-package-manager-ubuntu-1604.md)
+> - [CentOS 8: x64](../linux-package-manager-centos8.md)
 > - [CentOS 7: x64](../linux-package-manager-centos7.md)
 > - [Debian 10: x64](../linux-package-manager-debian10.md)
 > - [Debian 9: x64](../linux-package-manager-debian9.md)
+> - [Fedora 32 - x64](../linux-package-manager-fedora32.md)
 > - [Fedora 31: x64](../linux-package-manager-fedora31.md)
 > - [Fedora 30: x64](../linux-package-manager-fedora30.md)
 > - [Fedora 29: x64](../linux-package-manager-fedora29.md)
@@ -25,4 +27,4 @@ ms.locfileid: "78848085"
 > - [SLES 15: x64](../linux-package-manager-sles15.md)
 > - [SLES 12: x64](../linux-package-manager-sles12.md)
 
-<span data-ttu-id="082df-116">_Las instalaciones del administrador de paquetes solo se admiten en la arquitectura_ **x64**.</span><span class="sxs-lookup"><span data-stu-id="082df-116">_Package manager installs are only supported on the **x64** architecture_.</span></span> <span data-ttu-id="082df-117">Otras arquitecturas, como **ARM**, deben [instalar manualmente el SDK de .NET Core](../sdk.md?pivots=os-linux#download-and-manually-install) o [instalar manualmente el entorno de ejecución de .NET Core](../runtime.md?pivots=os-linux#download-and-manually-install).</span><span class="sxs-lookup"><span data-stu-id="082df-117">Other architectures, such as **ARM**, must [manually install the .NET Core SDK](../sdk.md?pivots=os-linux#download-and-manually-install) or [manually install the .NET Core Runtime](../runtime.md?pivots=os-linux#download-and-manually-install).</span></span> <span data-ttu-id="082df-118">Para obtener más información, vea [Dependencias y requisitos de .NET Core](../dependencies.md) .</span><span class="sxs-lookup"><span data-stu-id="082df-118">For more information, see [.NET Core dependencies and requirements](../dependencies.md).</span></span>
+<span data-ttu-id="40240-118">_Las instalaciones del administrador de paquetes solo se admiten en la arquitectura _**x64**.</span><span class="sxs-lookup"><span data-stu-id="40240-118">_Package manager installs are only supported on the **x64** architecture_.</span></span> <span data-ttu-id="40240-119">Otras arquitecturas, como **ARM**, deben [instalar manualmente el SDK de .NET Core](../sdk.md?pivots=os-linux#download-and-manually-install) o [instalar manualmente el entorno de ejecución de .NET Core](../runtime.md?pivots=os-linux#download-and-manually-install).</span><span class="sxs-lookup"><span data-stu-id="40240-119">Other architectures, such as **ARM**, must [manually install the .NET Core SDK](../sdk.md?pivots=os-linux#download-and-manually-install) or [manually install the .NET Core Runtime](../runtime.md?pivots=os-linux#download-and-manually-install).</span></span> <span data-ttu-id="40240-120">Para obtener más información, vea [Dependencias y requisitos de .NET Core](../dependencies.md) .</span><span class="sxs-lookup"><span data-stu-id="40240-120">For more information, see [.NET Core dependencies and requirements](../dependencies.md).</span></span>

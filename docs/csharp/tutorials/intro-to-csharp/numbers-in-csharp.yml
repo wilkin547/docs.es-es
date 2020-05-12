@@ -11,16 +11,16 @@ metadata:
   nextTutorialTitle: Bifurcaciones y bucles en C#
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 48268c6e839ae4f72aae0e872c837b153325b68b
-  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.openlocfilehash: ac4f7318dc25fef9f612649f2c3f57a5142f3ead
+  ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 03/14/2020
-  ms.locfileid: "77504015"
+  ms.lasthandoff: 05/06/2020
+  ms.locfileid: "82860949"
 items:
 - durationInMinutes: 1
   content: >
-    En este tutorial se ofrece información sobre el uso de los tipos numéricos en C# de forma interactiva, con el uso del explorador para escribir código de C# y ver los resultados de la compilación y ejecución del código. Contiene una serie de lecciones que ofrecen información detallada sobre los números y las operaciones matemáticas en C#. En ellas se enseñan los aspectos básicos del lenguaje C#.
+    En este tutorial se explican los tipos numéricos en C# de manera interactiva, mediante el explorador. Escribirá en C# y verá el resultado de compilar y ejecutar el código. Contiene una serie de lecciones que ofrecen información detallada sobre los números y las operaciones matemáticas en C#. En ellas se enseñan los aspectos básicos del lenguaje C#.
 - title: Análisis de las operaciones matemáticas con enteros
   durationInMinutes: 4
   content: >
@@ -40,10 +40,10 @@ items:
     ```
 
 
-    Si está ejecutando esto en su entorno, en su lugar debe seguir las instrucciones de la [versión local](numbers-in-csharp-local.md).
+    Si está trabajando en su entorno, en su lugar debe seguir las instrucciones de la [versión local](numbers-in-csharp-local.md).
 
 
-    Ya ha visto una de las operaciones matemáticas fundamentales con enteros. El tipo `int` representa un **entero**, que puede ser un número entero positivo o negativo. Use el símbolo `+` para la suma. Otros operadores matemáticos comunes con enteros son:
+    Ha visto una de las operaciones matemáticas fundamentales con enteros. El tipo `int` representa un **entero**, que puede ser un número entero positivo o negativo. Use el símbolo `+` para la suma. Otros operadores matemáticos comunes con enteros son:
 
 
     - `-` para resta
@@ -91,7 +91,7 @@ items:
     ```
 
 
-    Si lo desea, también puede experimentar con la realización de varias operaciones matemáticas en la misma línea.
+    Si quiere, también puede probar a escribir varias operaciones matemáticas en la misma línea.
 
 
     > [!TIP]
@@ -99,11 +99,6 @@ items:
     > Cuando explore C# o cualquier otro lenguaje de programación, cometerá errores al escribir código. El **compilador** buscará dichos errores y los notificará. Si la salida contiene mensajes de error, revise detenidamente el ejemplo de código y el código de la ventana interactiva para saber qué debe corregir.
 
     > Este ejercicio le ayudará a aprender la estructura del código de C#.
-
-
-    > [!NOTE]
-
-    > Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).
 - title: Análisis sobre el orden de las operaciones
   durationInMinutes: 7
   content: >
@@ -163,7 +158,7 @@ items:
     Puede que haya observado un comportamiento interesante de los enteros. La división de enteros siempre genera un entero como resultado, incluso cuando se espera que el resultado incluya un decimal o una parte de una fracción.
 
 
-    Si no ha observado este comportamiento, pruebe lo siguiente:
+    Si no ha observado este comportamiento, pruebe este código:
 
 
     ```csharp
@@ -182,11 +177,6 @@ items:
 
 
     Vuelva a seleccionar **Ejecutar** para ver los resultados.
-
-
-    > [!NOTE]
-
-    > Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).
 - title: Información sobre los límites y la precisión de los enteros
   durationInMinutes: 5
   content: >
@@ -247,98 +237,14 @@ items:
     La respuesta es un número negativo muy grande porque un desbordamiento "se ajusta" desde el valor de entero más alto posible al más bajo.
 
 
-    Hay otros tipos numéricos con distintos límites y precisiones que podría usar si el tipo `int` no satisface sus necesidades. Veámoslo a continuación.
-
-
-    > [!NOTE]
-
-    > Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).
+    Hay otros tipos numéricos con distintos límites y precisiones que podría usar si el tipo `int` no satisface sus necesidades. Ahora vamos a explorar estos tipos de números.
 - title: Operaciones con el tipo double
   durationInMinutes: 5
-  content: >
-    El tipo numérico `double` representa números de punto flotante de doble precisión. Puede que no esté familiarizado con estos términos. Un número de **punto flotante** resulta útil para representar números no enteros cuya magnitud puede ser muy grande o pequeña. **Doble precisión** significa que estos números se almacenan con mayor precisión que en el caso de la **precisión sencilla**. En los equipos modernos, es más habitual utilizar números con doble precisión que con precisión sencilla.
-
-    Comencemos a explorar. Pruebe el código siguiente en la ventana interactiva y observe el resultado:
-
-
-    ```csharp
-
-    double a = 5;
-
-    double b = 4;
-
-    double c = 2;
-
-    double d = (a + b) / c;
-
-    Console.WriteLine(d);
-
-    ```
-
-
-    Tenga en cuenta que la respuesta incluye la parte decimal del cociente. Pruebe una expresión algo más complicada con tipos double:
-
-
-    ```csharp
-
-    double a = 19;
-
-    double b = 23;
-
-    double c = 8;
-
-    double d = (a + b) / c;
-
-    Console.WriteLine(d);
-
-    ```
-
-
-    El intervalo de un valor double es mucho más amplio que en el caso de los valores enteros. Pruebe el código siguiente en la ventana interactiva:
-
-
-    ```csharp
-
-    double max = double.MaxValue;
-
-    double min = double.MinValue;
-
-    Console.WriteLine($"The range of double is {min} to {max}");
-
-    ```
-
-
-    Estos valores se imprimen en notación científica. El número a la izquierda de `E` es la mantisa. El número a la derecha es el exponente, como una potencia de diez.
-
-
-    Al igual que sucede con los números decimales en las operaciones matemáticas, los tipos double en C# pueden presentar errores de redondeo. Pruebe este código:
-
-
-    ```csharp
-
-    double third = 1.0 / 3.0;
-
-    Console.WriteLine(third);
-
-    ```
-
-
-    Sabe que repetir `0.3` no es exactamente lo mismo que `1/3`.
-
-
-    ***Desafío***
-
-
-    Pruebe otros cálculos con números grandes, números pequeños, multiplicaciones y divisiones con el tipo `double`.  Intente realizar cálculos más complicados.
-
-
-    > [!NOTE]
-
-    > Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).
-- title: Operaciones con tipos de punto fijo
+  content: "El tipo numérico `double` representa números de punto flotante de doble precisión. Puede que no esté familiarizado con estos términos. Un número de **punto flotante** resulta útil para representar números no enteros cuya magnitud puede ser muy grande o pequeña. La **precisión doble** es un término relativo que describe el número de dígitos binarios que se usan para almacenar el valor. El número de **precisión doble** tiene el doble del número de dígitos binarios que la **precisión sencilla**. En los equipos modernos, es más habitual utilizar números con doble precisión que con precisión sencilla. Los números de **precisión sencilla** se declaran mediante la palabra clave `float`.\nComencemos a explorar. Pruebe el código siguiente en la ventana interactiva y observe el resultado:\n\n```csharp\ndouble a = 5;\ndouble b = 4;\ndouble c = 2;\ndouble d = (a + b) / c;\nConsole.WriteLine(d);\n```\n\nTenga en cuenta que la respuesta incluye la parte decimal del cociente. Pruebe una expresión algo más complicada con tipos double:\n\n```csharp\ndouble a = 19;\ndouble b = 23;\ndouble c = 8;\ndouble d = (a + b) / c;\nConsole.WriteLine(d);\n```\n\nEl intervalo de un valor double es mucho más amplio que en el caso de los valores enteros. Pruebe el código siguiente en la ventana interactiva:\n\n```csharp\ndouble max = double.MaxValue;\ndouble min = double.MinValue;\nConsole.WriteLine($\"The range of double is {min} to {max}\");\n```\n\nEstos valores se imprimen en notación científica. El número a la izquierda de `E` es la mantisa. El número a la derecha es el exponente, como una potencia de diez.\n\nAl igual que sucede con los números decimales en las operaciones matemáticas, los tipos double en C# pueden presentar errores de redondeo. Pruebe este código:\n\n```csharp\ndouble third = 1.0 / 3.0;\nConsole.WriteLine(third);\n```\n\nSabe que `0.3` es `3/10`, y no exactamente igual que `1/3`. Del mismo modo, `0.33` es `33/100`. Esto está más cerca de `1/3`, pero aún no es exacto. \n\n***Desafío***\n\nPruebe otros cálculos con números grandes, números pequeños, multiplicaciones y divisiones con el tipo `double`.  Intente realizar cálculos más complicados.\n"
+- title: Trabajo con tipos decimales
   durationInMinutes: 8
   content: >
-    Hasta el momento ha visto los tipos numéricos básicos en C#: los tipos integer y double.  Sin embargo, hay otro tipo más que debe aprender: el tipo `decimal`. El tipo `decimal` tiene un intervalo más pequeño, pero mayor precisión que `double`. El término **punto fijo** significa que el punto decimal o el punto binario no se mueven. Observemos lo siguiente:
+    Hasta el momento ha visto los tipos numéricos básicos en C#: los tipos integer y double.  Pero hay otro tipo más que debe conocer: `decimal`. El tipo `decimal` tiene un intervalo más pequeño, pero mayor precisión que `double`. Observemos lo siguiente:
 
 
     ```csharp
@@ -379,15 +285,21 @@ items:
     Observe que la expresión matemática con el tipo decimal tiene más dígitos a la derecha del punto decimal.
 
 
-    ***Desafío***
-
-
-    Ahora que ya conoce los diferentes tipos numéricos, escriba código para calcular el área de un círculo cuyo radio sea de 2,50 centímetros. Recuerde que el área de un circulo es igual al valor de su radio elevado al cuadrado multiplicado por Pi. Sugerencia: .NET contiene una constante de Pi, <xref:System.Math.PI?displayProperty=nameWithType>, que puede usar para ese valor.
+    El sufijo `M` en los números es la forma de indicar que una constante debe usar el tipo `decimal`. De no ser así, el compilador asume el tipo de `double`.
 
 
     > [!NOTE]
 
-    > Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).
+    > La letra `M` se eligió como la letra más distintiva visualmente entre las palabras clave `double` y `decimal`.
+
+
+    Observe que la expresión matemática con el tipo decimal tiene más dígitos a la derecha del punto decimal.
+
+
+    ***Desafío***
+
+
+    Ahora que ya conoce los diferentes tipos numéricos, escriba código para calcular el área de un círculo cuyo radio sea de 2,50 centímetros. Recuerde que el área de un circulo es igual al valor de su radio elevado al cuadrado multiplicado por Pi. Sugerencia: .NET contiene una constante de Pi, <xref:System.Math.PI?displayProperty=nameWithType>, que puede usar para ese valor. <xref:System.Math.PI?displayProperty=nameWithType>, al igual que todas las constantes declaradas en el espacio de nombres `System.Math`, es un valor `double`. Por ese motivo, debe usar `double` en lugar de valores `decimal` para este desafío.
 
 
     Debe obtener una respuesta entre 19 y 20.
@@ -409,16 +321,11 @@ items:
 
 
     Si lo desea, pruebe con otras fórmulas.
-
-
-    > [!NOTE]
-
-    > Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).
 - content: >
     Ha completado el tutorial interactivo "Números en C#". Puede seleccionar el vínculo **Ramas y bucles** siguiente para iniciar el siguiente tutorial interactivo, o bien puede visitar el [sitio de .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) para descargar el SDK de .NET Core, crear un proyecto en el equipo y continuar la codificación. La sección "Pasos siguientes" le lleva de vuelta a estos tutoriales.
 
 
-    Puede obtener más información sobre los números en C# en los temas siguientes:
+    En estos temas encontrará más información sobre los números en C#:
 
 
     - [Tipos numéricos integrales](../../language-reference/builtin-types/integral-numeric-types.md)
