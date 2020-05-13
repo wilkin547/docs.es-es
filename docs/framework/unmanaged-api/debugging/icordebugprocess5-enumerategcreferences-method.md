@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 86c397c3-81d8-463e-a248-3cbe06c44d9d
 topic_type:
 - apiref
-ms.openlocfilehash: a97c14d83f99c847bb8569a33e175ab6eb5bccd8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0d98df05291ed8405addcfd183d7e02332e4e025
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178621"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209700"
 ---
-# <a name="icordebugprocess5enumerategcreferences-method"></a><span data-ttu-id="f2f50-102">ICorDebugProcess5::EnumerateGCReferences (Método)</span><span class="sxs-lookup"><span data-stu-id="f2f50-102">ICorDebugProcess5::EnumerateGCReferences Method</span></span>
-<span data-ttu-id="f2f50-103">Obtiene un enumerador para todos los objetos que se van a recopilar como elementos no utilizados en un proceso.</span><span class="sxs-lookup"><span data-stu-id="f2f50-103">Gets an enumerator for all objects that are to be garbage-collected in a process.</span></span>  
+# <a name="icordebugprocess5enumerategcreferences-method"></a><span data-ttu-id="4afbf-102">ICorDebugProcess5::EnumerateGCReferences (Método)</span><span class="sxs-lookup"><span data-stu-id="4afbf-102">ICorDebugProcess5::EnumerateGCReferences Method</span></span>
+<span data-ttu-id="4afbf-103">Obtiene un enumerador para todos los objetos que se van a recopilar de elementos no utilizados en un proceso.</span><span class="sxs-lookup"><span data-stu-id="4afbf-103">Gets an enumerator for all objects that are to be garbage-collected in a process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f2f50-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="f2f50-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4afbf-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="4afbf-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumerateGCReferences(  
@@ -34,26 +34,26 @@ HRESULT EnumerateGCReferences(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f2f50-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="f2f50-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4afbf-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="4afbf-105">Parameters</span></span>  
  `enumerateWeakReferences`  
- <span data-ttu-id="f2f50-106">[en] Un valor booleano que indica si también se van a enumerar las referencias débiles.</span><span class="sxs-lookup"><span data-stu-id="f2f50-106">[in] A Boolean value that indicates whether weak references are also to be enumerated.</span></span> <span data-ttu-id="f2f50-107">Si `enumerateWeakReferences` `true`es `ppEnum` , el enumerador incluye referencias seguras y referencias débiles.</span><span class="sxs-lookup"><span data-stu-id="f2f50-107">If `enumerateWeakReferences` is `true`, the `ppEnum` enumerator includes both strong references and weak references.</span></span> <span data-ttu-id="f2f50-108">Si `enumerateWeakReferences` `false`es , el enumerador solo incluye referencias seguras.</span><span class="sxs-lookup"><span data-stu-id="f2f50-108">If `enumerateWeakReferences` is `false`, the enumerator includes only strong references.</span></span>  
+ <span data-ttu-id="4afbf-106">de Valor booleano que indica si también se deben enumerar las referencias débiles.</span><span class="sxs-lookup"><span data-stu-id="4afbf-106">[in] A Boolean value that indicates whether weak references are also to be enumerated.</span></span> <span data-ttu-id="4afbf-107">Si `enumerateWeakReferences` es `true` , el `ppEnum` enumerador incluye las referencias fuertes y las referencias débiles.</span><span class="sxs-lookup"><span data-stu-id="4afbf-107">If `enumerateWeakReferences` is `true`, the `ppEnum` enumerator includes both strong references and weak references.</span></span> <span data-ttu-id="4afbf-108">Si `enumerateWeakReferences` es `false` , el enumerador incluye solo referencias seguras.</span><span class="sxs-lookup"><span data-stu-id="4afbf-108">If `enumerateWeakReferences` is `false`, the enumerator includes only strong references.</span></span>  
   
  `ppEnum`  
- <span data-ttu-id="f2f50-109">[fuera] Puntero a la dirección de un [ICorDebugGCReferenceEnum](icordebuggcreferenceenum-interface.md) que es un enumerador para los objetos que se van a recopilar como elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="f2f50-109">[out] A pointer to the address of an [ICorDebugGCReferenceEnum](icordebuggcreferenceenum-interface.md) that is an enumerator for the objects to be garbage-collected.</span></span>  
+ <span data-ttu-id="4afbf-109">enuncia Puntero a la dirección de un [icordebuggcreferenceenum (](icordebuggcreferenceenum-interface.md) que es un enumerador para los objetos que se van a recolectar como elemento no utilizado.</span><span class="sxs-lookup"><span data-stu-id="4afbf-109">[out] A pointer to the address of an [ICorDebugGCReferenceEnum](icordebuggcreferenceenum-interface.md) that is an enumerator for the objects to be garbage-collected.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f2f50-110">Observaciones</span><span class="sxs-lookup"><span data-stu-id="f2f50-110">Remarks</span></span>  
- <span data-ttu-id="f2f50-111">Este método proporciona una manera de determinar la cadena de enraizamiento completa para cualquier objeto administrado en un proceso y se puede usar para determinar por qué un objeto sigue vivo.</span><span class="sxs-lookup"><span data-stu-id="f2f50-111">This method provides a way to determine the full rooting chain for any managed object in a process and can be used to determine why an object is still alive.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4afbf-110">Observaciones</span><span class="sxs-lookup"><span data-stu-id="4afbf-110">Remarks</span></span>  
+ <span data-ttu-id="4afbf-111">Este método proporciona una manera de determinar la cadena de raíz completa de cualquier objeto administrado en un proceso y se puede usar para determinar por qué un objeto sigue estando activo.</span><span class="sxs-lookup"><span data-stu-id="4afbf-111">This method provides a way to determine the full rooting chain for any managed object in a process and can be used to determine why an object is still alive.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f2f50-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f2f50-112">Requirements</span></span>  
- <span data-ttu-id="f2f50-113">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f2f50-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4afbf-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="4afbf-112">Requirements</span></span>  
+ <span data-ttu-id="4afbf-113">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4afbf-113">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f2f50-114">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f2f50-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="4afbf-114">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4afbf-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f2f50-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f2f50-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4afbf-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4afbf-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f2f50-116">**Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f2f50-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="4afbf-116">**.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4afbf-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f2f50-117">Consulte también</span><span class="sxs-lookup"><span data-stu-id="f2f50-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4afbf-117">Consulte también</span><span class="sxs-lookup"><span data-stu-id="4afbf-117">See also</span></span>
 
-- [<span data-ttu-id="f2f50-118">ICorDebugProcess5 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="f2f50-118">ICorDebugProcess5 Interface</span></span>](icordebugprocess5-interface.md)
-- [<span data-ttu-id="f2f50-119">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="f2f50-119">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="4afbf-118">ICorDebugProcess5 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="4afbf-118">ICorDebugProcess5 Interface</span></span>](icordebugprocess5-interface.md)
+- [<span data-ttu-id="4afbf-119">Interfaces para depuración</span><span class="sxs-lookup"><span data-stu-id="4afbf-119">Debugging Interfaces</span></span>](debugging-interfaces.md)
