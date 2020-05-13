@@ -4,12 +4,12 @@ description: Aprenda a crear componentes de interfaz de usuario reutilizables co
 author: danroth27
 ms.author: daroth
 ms.date: 09/18/2019
-ms.openlocfilehash: 79fb2338a981389c3750e884ce6606351c84738a
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 1a5f6b63143c4fd7a276219b9c4877e9e355c996
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506771"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378320"
 ---
 # <a name="build-reusable-ui-components-with-blazor"></a>Cree componentes de interfaz de usuario reutilizables con un increíble
 
@@ -26,7 +26,7 @@ Increíbles también admite la encapsulación de la interfaz de usuario a travé
 
 ## <a name="an-introduction-to-razor"></a>Introducción a Razor
 
-Razor es un lenguaje de plantillas de marcado ligero basado en HTML y C#. Con Razor, puede realizar una transición sin problemas entre código de marcado y C# para definir la lógica de representación de componentes. Cuando se compila el archivo *. Razor* , la lógica de representación se captura de forma estructurada en una clase .net. El nombre de la clase compilada se toma del nombre de archivo *. Razor* . El espacio de nombres se toma del espacio de nombres predeterminado para el proyecto y la ruta de acceso de la carpeta, o bien `@namespace` se puede especificar explícitamente el espacio de nombres mediante la Directiva (más información sobre las directivas de Razor a continuación).
+Razor es un lenguaje de plantillas de marcado ligero basado en HTML y C#. Con Razor, puede realizar una transición sin problemas entre código de marcado y C# para definir la lógica de representación de componentes. Cuando se compila el archivo *. Razor* , la lógica de representación se captura de forma estructurada en una clase .net. El nombre de la clase compilada se toma del nombre de archivo *. Razor* . El espacio de nombres se toma del espacio de nombres predeterminado para el proyecto y la ruta de acceso de la carpeta, o bien se puede especificar explícitamente el espacio de nombres mediante la `@namespace` Directiva (más información sobre las directivas de Razor a continuación).
 
 La lógica de representación de un componente se crea mediante el marcado HTML normal con lógica dinámica agregada mediante C#. El `@` carácter se usa para realizar la transición a C#. Razor suele ser una forma inteligente de averiguar cuándo ha cambiado a HTML. Por ejemplo, el siguiente componente representa una `<p>` etiqueta con la hora actual:
 
@@ -49,7 +49,7 @@ Razor también facilita el uso del flujo de control de C# en la lógica de repre
 }
 ```
 
-O bien, puede generar una lista de elementos mediante un bucle `foreach` normal de C# como el siguiente:
+O bien, puede generar una lista de elementos mediante un bucle normal de C# `foreach` como el siguiente:
 
 ```razor
 <ul>
@@ -69,7 +69,7 @@ Las directivas de Razor, como las directivas de formularios Web Forms de ASP.NET
 - Espacios de nombres importados
 - Rutas
 
-Las directivas de Razor comienzan `@` con el carácter y suelen usarse al principio de una nueva línea al principio del archivo. Por ejemplo, la `@namespace` Directiva define el espacio de nombres del componente:
+Las directivas de Razor comienzan con el `@` carácter y suelen usarse al principio de una nueva línea al principio del archivo. Por ejemplo, la `@namespace` Directiva define el espacio de nombres del componente:
 
 ```razor
 @namespace MyComponentNamespace
@@ -106,7 +106,7 @@ En la tabla siguiente se resumen los distintos atributos de las directivas de Ra
 |`@key`       |Especifica una clave que va a usar el algoritmo de comparación para conservar los elementos de una colección.|`<DetailsEditor @key="person" Details="person.Details" />`|
 |`@ref`       |Captura una referencia al componente o elemento HTML.|`<MyDialog @ref="myDialog" />`|
 
-Los distintos atributos de directiva utilizados por el increíbles`@onclick`( `@bind`, `@ref`,, etc.) se describen en las secciones siguientes y en los capítulos posteriores.
+Los distintos atributos de directiva utilizados por el increíbles ( `@onclick` , `@bind` ,, etc `@ref` .) se describen en las secciones siguientes y en los capítulos posteriores.
 
 Muchas de las sintaxis que se usan en los archivos *. aspx* y *. ascx* tienen sintaxis paralelas en Razor. A continuación se muestra una comparación sencilla de las sintaxis de los formularios Web Forms de ASP.NET y Razor.
 
@@ -118,7 +118,7 @@ Muchas de las sintaxis que se usan en los archivos *. aspx* y *. ascx* tienen si
 |Comentarios                     |`<%-- --%>`         |`<%-- Commented --%>`|`@* *@`       |`@* Commented *@`|
 |Enlace de datos                 |`<%# %>`            |`<%# Bind("Name") %>`|`@bind`       |`<input @bind="username" />`|
 
-Para agregar miembros a la clase de componente Razor, use `@code` la Directiva. Esta técnica es similar a usar un `<script runat="server">...</script>` bloque en una página o control de usuario de formularios web forms ASP.net.
+Para agregar miembros a la clase de componente Razor, use la `@code` Directiva. Esta técnica es similar a usar un `<script runat="server">...</script>` bloque en una página o control de usuario de formularios web forms ASP.net.
 
 ```razor
 @code {
@@ -145,10 +145,10 @@ Además del HTML normal, los componentes también pueden usar otros componentes 
 
 A diferencia de los formularios Web Forms de ASP.NET, los componentes de increíbles:
 
-- No use un prefijo de elemento (por `asp:`ejemplo,).
+- No use un prefijo de elemento (por ejemplo, `asp:` ).
 - No es necesario registrarse en la página o en el *archivo Web. config*.
 
-Piense en los componentes de Razor como en los tipos de .NET, ya que eso es exactamente lo que son. Si se hace referencia al ensamblado que contiene el componente, el componente está disponible para su uso. Para poner el espacio de nombres del componente en el ámbito `@using` , aplique la Directiva:
+Piense en los componentes de Razor como en los tipos de .NET, ya que eso es exactamente lo que son. Si se hace referencia al ensamblado que contiene el componente, el componente está disponible para su uso. Para poner el espacio de nombres del componente en el ámbito, aplique la `@using` Directiva:
 
 ```razor
 @using MyComponentLib
@@ -168,7 +168,7 @@ Si el espacio de nombres de un componente no está en el ámbito, puede especifi
 
 En los formularios Web Forms de ASP.NET, puede fluir los parámetros y los datos a los controles mediante propiedades públicas. Estas propiedades se pueden establecer en el marcado mediante atributos o establecerse directamente en el código. Los componentes increíbles funcionan de manera similar, aunque las propiedades del componente también se deben marcar con el `[Parameter]` atributo para que se consideren parámetros de componente.
 
-El componente `Counter` siguiente define un parámetro de componente `IncrementAmount` denominado que se puede utilizar para especificar la cantidad que `Counter` se debe incrementar cada vez que se haga clic en el botón.
+El `Counter` componente siguiente define un parámetro de componente denominado `IncrementAmount` que se puede utilizar para especificar la cantidad que `Counter` se debe incrementar cada vez que se haga clic en el botón.
 
 ```razor
 <h1>Counter</h1>
@@ -218,7 +218,7 @@ public partial class Counter : System.Web.UI.UserControl
 }
 ```
 
-En increíble, puede registrar Controladores para eventos de la interfaz de usuario DOM directamente mediante atributos de directiva del `@on{event}`formulario. El `{event}` marcador de posición representa el nombre del evento. Por ejemplo, puede realizar escuchas de clics de botón de la siguiente manera:
+En increíble, puede registrar Controladores para eventos de la interfaz de usuario DOM directamente mediante atributos de directiva del formulario `@on{event}` . El `{event}` marcador de posición representa el nombre del evento. Por ejemplo, puede realizar escuchas de clics de botón de la siguiente manera:
 
 ```razor
 <button @onclick="OnClick">Click me!</button>
@@ -231,7 +231,7 @@ En increíble, puede registrar Controladores para eventos de la interfaz de usua
 }
 ```
 
-Los controladores de eventos pueden aceptar un argumento opcional específico del evento para proporcionar más información sobre el evento. Por ejemplo, los eventos del mouse pueden `MouseEventArgs` tomar un argumento, pero no es necesario.
+Los controladores de eventos pueden aceptar un argumento opcional específico del evento para proporcionar más información sobre el evento. Por ejemplo, los eventos del mouse pueden tomar un `MouseEventArgs` argumento, pero no es necesario.
 
 ```razor
 <button @onclick="OnClick">Click me!</button>
@@ -266,7 +266,7 @@ Los controladores de eventos se pueden ejecutar de forma sincrónica o asincrón
 }
 ```
 
-Una vez que se controla un evento, el componente se representa para tener en cuenta los cambios de estado de componente. Con los controladores de eventos asincrónicos, el componente se representa inmediatamente después de que se complete la ejecución del controlador. El componente se representará de *nuevo* después de `Task` que se complete la asincrónica. Este modo de ejecución asincrónica proporciona una oportunidad para representar una interfaz de usuario adecuada mientras la `Task` asincrónica todavía está en curso.
+Una vez que se controla un evento, el componente se representa para tener en cuenta los cambios de estado de componente. Con los controladores de eventos asincrónicos, el componente se representa inmediatamente después de que se complete la ejecución del controlador. El componente se representará de *nuevo* después de que se complete la asincrónica `Task` . Este modo de ejecución asincrónica proporciona una oportunidad para representar una interfaz de usuario adecuada mientras la asincrónica `Task` todavía está en curso.
 
 ```razor
 <button @onclick="ShowMessage">Get message</button>
@@ -296,7 +296,7 @@ Una vez que se controla un evento, el componente se representa para tener en cue
 }
 ```
 
-Los componentes también pueden definir sus propios eventos definiendo un parámetro de componente `EventCallback<TValue>`de tipo. Las devoluciones de llamada de evento admiten todas las variaciones de los controladores de eventos de la interfaz de usuario DOM: argumentos opcionales, sincrónicos o asincrónicos, grupos de métodos o expresiones lambda.
+Los componentes también pueden definir sus propios eventos definiendo un parámetro de componente de tipo `EventCallback<TValue>` . Las devoluciones de llamada de evento admiten todas las variaciones de los controladores de eventos de la interfaz de usuario DOM: argumentos opcionales, sincrónicos o asincrónicos, grupos de métodos o expresiones lambda.
 
 ```razor
 <button class="btn btn-primary" @onclick="OnClick">Click me!</button>
@@ -311,7 +311,7 @@ Los componentes también pueden definir sus propios eventos definiendo un parám
 
 Increíbles proporciona un mecanismo sencillo para enlazar datos de un componente de interfaz de usuario al estado del componente. Este enfoque difiere de las características de los formularios Web Forms de ASP.NET para enlazar datos de orígenes de datos a controles de interfaz de usuario. Trataremos el control de los datos de diferentes orígenes de datos en la sección tratamiento de los [datos](data.md) .
 
-Para crear un enlace de datos bidireccional desde un componente de interfaz de usuario al estado del componente, use `@bind` el atributo de directiva. En el ejemplo siguiente, el valor de la casilla está enlazado al `isChecked` campo.
+Para crear un enlace de datos bidireccional desde un componente de interfaz de usuario al estado del componente, use el `@bind` atributo de directiva. En el ejemplo siguiente, el valor de la casilla está enlazado al `isChecked` campo.
 
 ```razor
 <input type="checkbox" @bind="isChecked" />
@@ -321,7 +321,7 @@ Para crear un enlace de datos bidireccional desde un componente de interfaz de u
 }
 ```
 
-Cuando se representa el componente, el valor de la casilla se establece en el valor del `isChecked` campo. Cuando el usuario activa la casilla, se activa `onchange` el evento y el `isChecked` campo se establece en el nuevo valor. En `@bind` este caso, la sintaxis es equivalente al marcado siguiente:
+Cuando se representa el componente, el valor de la casilla se establece en el valor del `isChecked` campo. Cuando el usuario activa la casilla, `onchange` se activa el evento y el `isChecked` campo se establece en el nuevo valor. `@bind`En este caso, la sintaxis es equivalente al marcado siguiente:
 
 ```razor
 <input value="@isChecked" @onchange="(UIChangeEventArgs e) => isChecked = e.Value" />
@@ -367,9 +367,9 @@ Password: <input
 }
 ```
 
-Para encadenar un enlace de datos a un elemento de la interfaz de usuario subyacente, establezca el valor y controle el evento directamente en `@bind` el elemento de la interfaz de usuario en lugar de usar el atributo.
+Para encadenar un enlace de datos a un elemento de la interfaz de usuario subyacente, establezca el valor y controle el evento directamente en el elemento de la interfaz de usuario en lugar de usar el `@bind` atributo.
 
-Para enlazar a un parámetro de componente, `@bind-{Parameter}` use un atributo para especificar el parámetro al que desea enlazar.
+Para enlazar a un parámetro de componente, use un `@bind-{Parameter}` atributo para especificar el parámetro al que desea enlazar.
 
 ```razor
 <PasswordBox @bind-Password="password" />
@@ -381,7 +381,7 @@ Para enlazar a un parámetro de componente, `@bind-{Parameter}` use un atributo 
 
 ## <a name="state-changes"></a>Cambios de estado
 
-Si el estado del componente ha cambiado fuera de un evento de interfaz de usuario o una devolución de llamada de evento normal, el componente debe indicar manualmente que se debe volver a representar. Para indicar que el estado de un componente ha cambiado, llame `StateHasChanged` al método en el componente.
+Si el estado del componente ha cambiado fuera de un evento de interfaz de usuario o una devolución de llamada de evento normal, el componente debe indicar manualmente que se debe volver a representar. Para indicar que el estado de un componente ha cambiado, llame al `StateHasChanged` método en el componente.
 
 En el ejemplo siguiente, un componente muestra un mensaje de un `AppState` servicio que puede ser actualizado por otras partes de la aplicación. El componente registra su `StateHasChanged` método con el `AppState.OnChange` evento para que se represente el componente cada vez que se actualice el mensaje.
 
@@ -395,7 +395,7 @@ public class AppState
 
     public void UpdateMessage(string message)
     {
-        shortlist.Add(itinerary);
+        Message = message;
         NotifyStateChanged();
     }
 
@@ -418,7 +418,7 @@ public class AppState
 
 ## <a name="component-lifecycle"></a>Ciclo de vida de los componentes
 
-El marco de trabajo de formularios Web Forms de ASP.NET tiene métodos de ciclo de vida bien definidos para módulos, páginas y controles. Por ejemplo, el control siguiente implementa controladores de eventos para los `Init`eventos de `Load`ciclo de `UnLoad` vida, y:
+El marco de trabajo de formularios Web Forms de ASP.NET tiene métodos de ciclo de vida bien definidos para módulos, páginas y controles. Por ejemplo, el control siguiente implementa controladores de eventos para los `Init` eventos de `Load` ciclo de `UnLoad` vida, y:
 
 *Counter.ascx.cs*
 
@@ -433,11 +433,11 @@ public partial class Counter : System.Web.UI.UserControl
 
 Los componentes increíbles también tienen un ciclo de vida bien definido. El ciclo de vida de un componente se puede usar para inicializar el estado del componente e implementar comportamientos de componentes avanzados.
 
-Todos los métodos del ciclo de vida de los componentes de la extraordinariamente tienen versiones sincrónicas y asincrónicas. La representación de componentes es sincrónica. No se puede ejecutar la lógica asincrónica como parte de la representación de componentes. Toda la lógica asincrónica debe ejecutarse como parte de `async` un método de ciclo de vida.
+Todos los métodos del ciclo de vida de los componentes de la extraordinariamente tienen versiones sincrónicas y asincrónicas. La representación de componentes es sincrónica. No se puede ejecutar la lógica asincrónica como parte de la representación de componentes. Toda la lógica asincrónica debe ejecutarse como parte de un `async` método de ciclo de vida.
 
 ### <a name="oninitialized"></a>Inicializado
 
-Los `OnInitialized` métodos `OnInitializedAsync` y se utilizan para inicializar el componente. Normalmente, un componente se inicializa una vez que se representa por primera vez. Una vez inicializado un componente, se puede representar varias veces antes de que se elimine. El `OnInitialized` método es similar al `Page_Load` evento en las páginas y controles de formularios Web Forms de ASP.net.
+Los `OnInitialized` `OnInitializedAsync` métodos y se utilizan para inicializar el componente. Normalmente, un componente se inicializa una vez que se representa por primera vez. Una vez inicializado un componente, se puede representar varias veces antes de que se elimine. El `OnInitialized` método es similar al `Page_Load` evento en las páginas y controles de formularios Web Forms de ASP.net.
 
 ```csharp
 protected override void OnInitialized() { ... }
@@ -446,7 +446,7 @@ protected override async Task OnInitializedAsync() { await ... }
 
 ### <a name="onparametersset"></a>OnParametersSet
 
-Se `OnParametersSet` llama `OnParametersSetAsync` a los métodos y cuando un componente ha recibido parámetros de su elemento primario y el valor se asigna a propiedades. Estos métodos se ejecutan después de la inicialización del componente y *cada vez que se representa el componente*.
+`OnParametersSet` `OnParametersSetAsync` Se llama a los métodos y cuando un componente ha recibido parámetros de su elemento primario y el valor se asigna a propiedades. Estos métodos se ejecutan después de la inicialización del componente y *cada vez que se representa el componente*.
 
 ```csharp
 protected override void OnParametersSet() { ... }
@@ -455,7 +455,7 @@ protected override async Task OnParametersSetAsync() { await ... }
 
 ### <a name="onafterrender"></a>OnAfterRender
 
-Se `OnAfterRender` llama `OnAfterRenderAsync` a los métodos y una vez que un componente ha terminado de representar. Las referencias de elementos y componentes se rellenan en este punto (más información sobre estos conceptos a continuación). En este momento se habilita la interactividad con el explorador. Las interacciones con el DOM y la ejecución de JavaScript pueden tener lugar de forma segura.
+`OnAfterRender` `OnAfterRenderAsync` Se llama a los métodos y una vez que un componente ha terminado de representar. Las referencias de elementos y componentes se rellenan en este punto (más información sobre estos conceptos a continuación). En este momento se habilita la interactividad con el explorador. Las interacciones con el DOM y la ejecución de JavaScript pueden tener lugar de forma segura.
 
 ```csharp
 protected override void OnAfterRender(bool firstRender)
@@ -474,13 +474,13 @@ protected override async Task OnAfterRenderAsync(bool firstRender)
 }
 ```
 
-`OnAfterRender`no `OnAfterRenderAsync` se llama a y *al representarse en el servidor*.
+`OnAfterRender`no se llama a y `OnAfterRenderAsync` *al representarse en el servidor*.
 
-El `firstRender` parámetro es `true` la primera vez que se representa el componente; de lo contrario, su `false`valor es.
+El `firstRender` parámetro es `true` la primera vez que se representa el componente; de lo contrario, su valor es `false` .
 
 ### <a name="idisposable"></a>IDisposable
 
-Los componentes increíbles pueden implementar `IDisposable` para desechar los recursos cuando el componente se quita de la interfaz de usuario. Un componente de Razor puede `IDispose` implementar mediante la `@implements` Directiva:
+Los componentes increíbles pueden implementar `IDisposable` para desechar los recursos cuando el componente se quita de la interfaz de usuario. Un componente de Razor puede implementar mediante `IDispose` la `@implements` Directiva:
 
 ```razor
 @using System
@@ -525,13 +525,13 @@ Los componentes increíbles pueden capturar referencias a un elemento. A diferen
 
 ## <a name="templated-components"></a>Componentes con plantilla
 
-En los formularios Web Forms de ASP.NET, puede crear *controles con plantilla*. Los controles con plantilla permiten al desarrollador especificar una parte del código HTML que se usa para representar un control de contenedor. La mecánica de la creación de controles de servidor con plantilla es compleja, pero habilita escenarios eficaces para representar los datos de forma personalizable. Entre los ejemplos de controles con `Repeater` plantilla `DataList`se incluyen y.
+En los formularios Web Forms de ASP.NET, puede crear *controles con plantilla*. Los controles con plantilla permiten al desarrollador especificar una parte del código HTML que se usa para representar un control de contenedor. La mecánica de la creación de controles de servidor con plantilla es compleja, pero habilita escenarios eficaces para representar los datos de forma personalizable. Entre los ejemplos de controles con plantilla se incluyen `Repeater` y `DataList` .
 
-Los componentes increíbles también se pueden incluir en la plantilla definiendo los parámetros `RenderFragment` de `RenderFragment<T>`componente de tipo o. `RenderFragment` Representa un fragmento de marcado de Razor que se puede representar mediante el componente. Un `RenderFragment<T>` es un fragmento de marcado de Razor que toma un parámetro que se puede especificar cuando se representa el fragmento de representación.
+Los componentes increíbles también se pueden incluir en la plantilla definiendo los parámetros de componente de tipo `RenderFragment` o `RenderFragment<T>` . `RenderFragment`Representa un fragmento de marcado de Razor que se puede representar mediante el componente. Un `RenderFragment<T>` es un fragmento de marcado de Razor que toma un parámetro que se puede especificar cuando se representa el fragmento de representación.
 
 ### <a name="child-content"></a>Contenido secundario
 
-Los componentes increíbles pueden capturar su contenido secundario como `RenderFragment` y representar ese contenido como parte de la representación de componentes. Para capturar contenido secundario, defina un parámetro de componente de `RenderFragment` tipo y asígnele `ChildContent`el nombre.
+Los componentes increíbles pueden capturar su contenido secundario como `RenderFragment` y representar ese contenido como parte de la representación de componentes. Para capturar contenido secundario, defina un parámetro de componente de tipo `RenderFragment` y asígnele el nombre `ChildContent` .
 
 *ChildContentComponent. Razor*
 
@@ -556,7 +556,7 @@ Después, un componente primario puede proporcionar contenido secundario mediant
 
 ### <a name="template-parameters"></a>Parámetros de plantilla
 
-Un componente increíblemente con plantilla también puede definir varios parámetros de componente de tipo `RenderFragment` o `RenderFragment<T>`. El parámetro de un `RenderFragment<T>` puede especificarse cuando se invoca. Para especificar un parámetro de tipo genérico para un componente, use `@typeparam` la Directiva Razor.
+Un componente increíblemente con plantilla también puede definir varios parámetros de componente de tipo `RenderFragment` o `RenderFragment<T>` . El parámetro de un `RenderFragment<T>` puede especificarse cuando se invoca. Para especificar un parámetro de tipo genérico para un componente, use la `@typeparam` Directiva Razor.
 
 *SimpleListView. Razor*
 
@@ -584,7 +584,7 @@ Un componente increíblemente con plantilla también puede definir varios parám
 }
 ```
 
-Cuando se usa un componente con plantilla, los parámetros de plantilla se pueden especificar utilizando los elementos secundarios que coinciden con los nombres de los parámetros. Los argumentos de componente `RenderFragment<T>` de tipo pasados como elementos tienen un parámetro `context`implícito denominado. Puede cambiar el nombre de este parámetro de implementación mediante el `Context` atributo en el elemento secundario. Los parámetros de tipo genérico se pueden especificar mediante un atributo que coincida con el nombre del parámetro de tipo. Si es posible, se infiere el parámetro de tipo:
+Cuando se usa un componente con plantilla, los parámetros de plantilla se pueden especificar utilizando los elementos secundarios que coinciden con los nombres de los parámetros. Los argumentos de componente de tipo `RenderFragment<T>` pasados como elementos tienen un parámetro implícito denominado `context` . Puede cambiar el nombre de este parámetro de implementación mediante el `Context` atributo en el elemento secundario. Los parámetros de tipo genérico se pueden especificar mediante un atributo que coincida con el nombre del parámetro de tipo. Si es posible, se infiere el parámetro de tipo:
 
 ```razor
 <SimpleListView Items="messages" TItem="string">
@@ -609,7 +609,7 @@ La salida de este componente tiene el siguiente aspecto:
 
 ## <a name="code-behind"></a>Código subyacente
 
-Normalmente, un componente más rápido se crea en un solo archivo *. Razor* . Sin embargo, también es posible separar el código y el marcado mediante un archivo de código subyacente. Para usar un archivo de componente, agregue un archivo de C# que coincida con el nombre de archivo del archivo de componente, pero con una extensión *. CS* agregada (*Counter.Razor.CS*). Use el archivo de C# para definir una clase base para el componente. Puede asignar a la clase base cualquier cosa que desee, pero es habitual asignar un nombre a la clase igual a la clase de componente, pero con `Base` una extensión agregada (`CounterBase`). La clase basada en componente también debe derivarse `ComponentBase`de. Después, en el archivo de componente de Razor, `@inherits` agregue la Directiva para especificar la clase base del componente`@inherits CounterBase`().
+Normalmente, un componente más rápido se crea en un solo archivo *. Razor* . Sin embargo, también es posible separar el código y el marcado mediante un archivo de código subyacente. Para usar un archivo de componente, agregue un archivo de C# que coincida con el nombre de archivo del archivo de componente, pero con una extensión *. CS* agregada (*Counter.Razor.CS*). Use el archivo de C# para definir una clase base para el componente. Puede asignar a la clase base cualquier cosa que desee, pero es habitual asignar un nombre a la clase igual a la clase de componente, pero con una `Base` extensión agregada ( `CounterBase` ). La clase basada en componente también debe derivarse de `ComponentBase` . Después, en el archivo de componente de Razor, agregue la `@inherits` Directiva para especificar la clase base del componente ( `@inherits CounterBase` ).
 
 *Counter. Razor*
 

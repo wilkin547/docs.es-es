@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bd9936a6-cc24-4869-8761-0988664464e6
 topic_type:
 - apiref
-ms.openlocfilehash: bab6b7f683b5563cf362366dfb007f83caeee12d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4883c208468db0096bed3ff8cf4a8ed50a5d7cc6
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791935"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379229"
 ---
 # <a name="icordebugremotetarget-interface"></a>ICorDebugRemoteTarget (Interfaz)
 Proporciona métodos que permiten a los desarrolladores depurar aplicaciones basadas en Silverlight en el entorno de Common Language Runtime (CLR).  
@@ -43,13 +43,13 @@ interface ICorDebugRemoteTarget  : IUnknown
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[ICorDebugRemoteTarget::GetHostName (método)](icordebugremotetarget-gethostname-method.md)|Devuelve el nombre de host o la dirección IP de un equipo remoto.|  
+|[ICorDebugRemoteTarget::GetHostName (Método)](icordebugremotetarget-gethostname-method.md)|Devuelve el nombre de host o la dirección IP de un equipo remoto.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  No se admite la depuración en modo mixto (es decir, código administrado y nativo) en Windows 95, Windows 98 o Windows ME, ni en plataformas que no sean x86 (como IA-64 y AMD64).  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cordebug. idl  
   
@@ -57,8 +57,8 @@ interface ICorDebugRemoteTarget  : IUnknown
   
  **.NET Framework versiones:** 3,5 SP1  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [ICorDebugRemote (interfaz)](icordebugremote-interface.md)
-- [ICorDebug (interfaz)](icordebug-interface.md)
-- [Interfaces de depuración](debugging-interfaces.md)
+- [ICorDebugRemote (Interfaz)](icordebugremote-interface.md)
+- [ICorDebug (Interfaz)](icordebug-interface.md)
+- [Interfaces para depuración](debugging-interfaces.md)

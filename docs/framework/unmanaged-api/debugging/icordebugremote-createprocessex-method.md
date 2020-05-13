@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 41af93c7-e448-4251-8d4d-413d38c635f2
 topic_type:
 - apiref
-ms.openlocfilehash: cfec84483d387630623f77c176c668171303dd0f
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4b2689f04228c9ecbbbb18531a0aefd3c40e3072
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791988"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83377977"
 ---
 # <a name="icordebugremotecreateprocessex-method"></a>ICorDebugRemote::CreateProcessEx (Método)
 Inicia un proceso en un equipo remoto en el depurador.  
@@ -45,7 +45,7 @@ HRESULT CreateProcessEx (
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parámetros  
  `pRemoteTarget`  
  de Puntero a una [interfaz ICorDebugRemoteTarget](icordebugremotetarget-interface.md). Se utiliza para determinar el equipo remoto en el que se va a iniciar el proceso.  
   
@@ -92,11 +92,11 @@ HRESULT CreateProcessEx (
  E_FAIL (u otros códigos devueltos de E_)  
  No se puede iniciar el proceso en el equipo remoto y devolver una "ICorDebugProcess interface" para la depuración.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  En Silverlight no se admite la depuración en modo mixto.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cordebug. idl  
   
@@ -104,9 +104,9 @@ HRESULT CreateProcessEx (
   
  **.NET Framework versiones:** 4,5, 4, 3,5 SP1  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [ICorDebugRemote (interfaz)](icordebugremote-interface.md)
-- [ICorDebug (interfaz)](icordebug-interface.md)
+- [ICorDebugRemote (Interfaz)](icordebugremote-interface.md)
+- [ICorDebug (Interfaz)](icordebug-interface.md)
 
-- [Interfaces de depuración](debugging-interfaces.md)
+- [Interfaces para depuración](debugging-interfaces.md)

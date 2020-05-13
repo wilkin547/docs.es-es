@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4083b505-5b59-44fb-8c5d-129db6a96c10
 topic_type:
 - apiref
-ms.openlocfilehash: 89576e2b3d5fb4df0cccfdd28c80a5cb67331597
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5f80125a67e634dda05b9427b5f46db8f21b29f8
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791896"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379202"
 ---
 # <a name="icordebugstackwalkgetframe-method"></a>ICorDebugStackWalk::GetFrame (Método)
 Obtiene el marco actual del objeto [ICorDebugStackWalk](icordebugstackwalk-interface.md) .  
@@ -31,7 +31,7 @@ Obtiene el marco actual del objeto [ICorDebugStackWalk](icordebugstackwalk-inter
 HRESULT GetFrame([out] ICorDebugFrame ** pFrame);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parámetros  
  `pFrame`  
  de Puntero a la dirección del objeto de marco creado que representa el marco actual en la pila.  
   
@@ -48,20 +48,20 @@ HRESULT GetFrame([out] ICorDebugFrame ** pFrame);
   
 ## <a name="exceptions"></a>Excepciones  
   
-## <a name="remarks"></a>Notas  
- `ICorDebugStackWalk` solo devuelve marcos de pila reales. Use el método [ICorDebugThread3:: GetActiveInternalFrames (](icordebugthread3-getactiveinternalframes-method.md) para devolver Marcos internos. (Los marcos internos son estructuras de datos insertadas en la pila por el motor en tiempo de ejecución para almacenar datos temporales).  
+## <a name="remarks"></a>Observaciones  
+ `ICorDebugStackWalk`Devuelve solo los marcos de pila reales. Use el método [ICorDebugThread3:: GetActiveInternalFrames (](icordebugthread3-getactiveinternalframes-method.md) para devolver Marcos internos. (Los marcos internos son estructuras de datos insertadas en la pila por el motor en tiempo de ejecución para almacenar datos temporales).  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [ICorDebugStackWalk (interfaz)](icordebugstackwalk-interface.md)
-- [Interfaces de depuración](debugging-interfaces.md)
+- [ICorDebugStackWalk (Interfaz)](icordebugstackwalk-interface.md)
+- [Interfaces para depuración](debugging-interfaces.md)
 - [Depuración](index.md)

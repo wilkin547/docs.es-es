@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 796de687-7dd4-4b7b-a10b-8bf22dc7779f
 topic_type:
 - apiref
-ms.openlocfilehash: 6de2cb7c1a1423c5bd38a6f2e5d01c39166ab119
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 82a7689bb1848d89f5dee4482d8dc7685c9c5b5c
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791317"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378335"
 ---
 # <a name="icordebugthreadenum-interface"></a>Interfaz ICorDebugThreadEnum
 Implementa los métodos ICorDebugEnum y enumera las matrices ICorDebugThread.  
@@ -28,22 +28,22 @@ Implementa los métodos ICorDebugEnum y enumera las matrices ICorDebugThread.
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Next (método)](icordebugthreadenum-next-method.md)|Obtiene el número especificado de instancias de `ICorDebugThread` de la enumeración, comenzando en la posición actual.|  
+|[Next (Método)](icordebugthreadenum-next-method.md)|Obtiene el número especificado de `ICorDebugThread` instancias de la enumeración, comenzando en la posición actual.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Interfaces de depuración](debugging-interfaces.md)
+- [Interfaces para depuración](debugging-interfaces.md)

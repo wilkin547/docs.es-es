@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f5cdc135-6db4-4b32-9dd1-260ec58b774f
 topic_type:
 - apiref
-ms.openlocfilehash: 6c076dd2912a22e4f9492492a2d7a9fb73db88e8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ab1351af042aba5042cc7a04614bc3cf14f7d7ae
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139037"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379460"
 ---
 # <a name="icordebugstepper2setjmc-method"></a>ICorDebugStepper2::SetJMC (Método)
 Establece un valor que especifica si esta ICorDebugStepper solo se realiza a través del código creado por el desarrollador de una aplicación. Este proceso también se conoce como depuración solo mi código (JMC).  
@@ -35,13 +35,13 @@ HRESULT SetJMC (
   
 ## <a name="parameters"></a>Parámetros  
  `fIsJMCStepper`  
- de Se establece en `true` para el paso solo a través del código creado por el desarrollador de una aplicación. de lo contrario, establézcalo en `false`.  
+ de Establezca en `true` para recorrer solo el código creado por el desarrollador de la aplicación; de lo contrario, establézcalo en `false` .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

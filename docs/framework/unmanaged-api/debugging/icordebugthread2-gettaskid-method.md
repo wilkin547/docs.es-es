@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6ba3c6ee-4ba1-4c98-bf1e-8531acd3da09
 topic_type:
 - apiref
-ms.openlocfilehash: d5f2838007504e56ad44614a6778083be046629f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 841af546cc3586529fe290c69e686438f634b90d
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140075"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83377781"
 ---
 # <a name="icordebugthread2gettaskid-method"></a>ICorDebugThread2::GetTaskID (Método)
 Obtiene el identificador de la tarea que se ejecuta en este subproceso.  
@@ -37,14 +37,14 @@ HRESULT GetTaskID (
  `pTaskId`  
  enuncia Puntero al identificador de la tarea que se ejecuta en el subproceso representado por este objeto ICorDebugThread2.  
   
-## <a name="remarks"></a>Comentarios  
- Una tarea solo se puede ejecutar en el subproceso si el subproceso está asociado a una conexión. `GetTaskID` devuelve cero en `pTaskId` si el subproceso no está asociado a una conexión.  
+## <a name="remarks"></a>Observaciones  
+ Una tarea solo se puede ejecutar en el subproceso si el subproceso está asociado a una conexión. `GetTaskID`devuelve cero en `pTaskId` si el subproceso no está asociado a una conexión.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

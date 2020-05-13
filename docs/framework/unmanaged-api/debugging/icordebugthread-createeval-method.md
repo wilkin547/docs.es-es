@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 36605067-33d3-4579-9c72-fb0e551ab0f1
 topic_type:
 - apiref
-ms.openlocfilehash: 0c622e0eba27f501446d2b7d9d264ee0834e869c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f66ef88646c314502dcb610cec8ce822cab1fca2
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133615"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379280"
 ---
 # <a name="icordebugthreadcreateeval-method"></a>ICorDebugThread::CreateEval (Método)
 Crea un objeto ICorDebugEval que recopila y expone la funcionalidad de esta expresión ICorDebugThread.  
@@ -35,16 +35,16 @@ HRESULT CreateEval (
   
 ## <a name="parameters"></a>Parámetros  
  `ppEval`  
- enuncia Puntero a la dirección de un objeto `ICorDebugEval` que recopila y expone la funcionalidad de este subproceso.  
+ enuncia Puntero a la dirección de un `ICorDebugEval` objeto que recopila y expone la funcionalidad de este subproceso.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  El objeto de evaluación hará que se inserte una nueva cadena en el subproceso antes de realizar su cálculo. Esto interrumpe el cálculo que se está llevando a cabo en el subproceso hasta que se completa la evaluación.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f967c93d-9a7f-4aaf-99a1-a1317899ff3f
 topic_type:
 - apiref
-ms.openlocfilehash: 0c455706b0d644d2444e9fbdf49c5a5d4f5295a9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c025afac1b53b23636a6160a475704011999d434
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122387"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379043"
 ---
 # <a name="icordebugthreadenumnext-method"></a>ICorDebugThreadEnum::Next (Método)
 Obtiene el número de instancias de ICorDebugThread especificadas de la enumeración, comenzando en la posición actual.  
@@ -38,19 +38,19 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parámetros  
  `celt`  
- de Número de instancias de `ICorDebugThread` que se van a recuperar.  
+ de El número de `ICorDebugThread` instancias que se van a recuperar.  
   
  `threads`  
- enuncia Matriz de punteros, cada uno de los cuales señala a un objeto `ICorDebugThread` que representa un subproceso.  
+ enuncia Matriz de punteros, cada uno de los cuales apunta a un `ICorDebugThread` objeto que representa un subproceso.  
   
  `pceltFetched`  
- enuncia Puntero al número de instancias de `ICorDebugThread` devueltas realmente. Este valor puede ser null si `celt` es uno.  
+ enuncia Puntero al número de `ICorDebugThread` instancias devueltas realmente. Este valor puede ser null si `celt` es uno.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

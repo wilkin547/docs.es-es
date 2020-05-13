@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fdf91864-48ea-4aa6-b70c-361b7a3184c7
 topic_type:
 - apiref
-ms.openlocfilehash: 32e899622b9c649a08e3bca1b6645f70dcbcbb19
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 40de06d47654337542d2c80dc325f8201335312a
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178547"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379154"
 ---
 # <a name="icordebugregistersetgetregisters-method"></a>ICorDebugRegisterSet::GetRegisters (Método)
 Obtiene el valor de cada registro (en el equipo que está ejecutando código actualmente) especificado por la máscara de bits.  
@@ -38,27 +38,27 @@ HRESULT GetRegisters (
   
 ## <a name="parameters"></a>Parámetros  
  `mask`  
- [en] Una máscara de bits que especifica qué valores de registro se van a recuperar. Cada bit corresponde a un registro. Si un bit se establece en uno, se recupera el valor del registro; de lo contrario, el valor del registro no se recupera.  
+ de Máscara de bits que especifica los valores de registro que se van a recuperar. Cada bit corresponde a un registro. Si un bit se establece en uno, se recupera el valor del registro; de lo contrario, no se recupera el valor del registro.  
   
  `regCount`  
- [en] El número de valores de registro que se van a recuperar.  
+ de Número de valores de registro que se van a recuperar.  
   
  `regBuffer`  
- [fuera] Matriz de `CORDB_REGISTER` objetos, cada uno de los cuales recibe un valor de un registro.  
+ enuncia Matriz de `CORDB_REGISTER` objetos, cada uno de los cuales recibe un valor de un registro.  
   
 ## <a name="remarks"></a>Observaciones  
- El tamaño de la matriz debe ser igual al número de bits establecido en uno en la máscara de bits. El `regCount` parámetro especifica el número de elementos en el búfer que recibirá los valores de registro. Si `regCount` el valor es demasiado pequeño para el número de registros indicado por la máscara, los registros numerados más altos se truncarán del conjunto. Si `regCount` el valor es demasiado `regBuffer` grande, los elementos no utilizados no se modificarán.  
+ El tamaño de la matriz debe ser igual al número de bits establecido en uno en la máscara de bits. El `regCount` parámetro especifica el número de elementos en el búfer que recibirán los valores de registro. Si el `regCount` valor es demasiado pequeño para el número de registros indicados por la máscara, los registros con mayor número se truncarán del conjunto. Si el `regCount` valor es demasiado grande, los elementos no utilizados no se `regBuffer` modificarán.  
   
- Si la máscara de bits especifica un `GetRegisters` registro que no está disponible, devuelve un valor indeterminado para ese registro.  
+ Si la máscara de bits especifica un registro que no está disponible, `GetRegisters` devuelve un valor indeterminado para ese registro.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte también
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9c76b587-f941-4fa1-8b86-f3494fb10c8e
 topic_type:
 - apiref
-ms.openlocfilehash: a81842132769934a6f5f34e6dc462bba77b3854a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c630daa50d465622c421381ac080eaa8d9d8d01d
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138686"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379074"
 ---
 # <a name="icordebugthread2getconnectionid-method"></a>ICorDebugThread2::GetConnectionID (Método)
 Obtiene el identificador de conexión de este objeto ICorDebugThread2.  
@@ -35,18 +35,18 @@ HRESULT GetConnectionID (
   
 ## <a name="parameters"></a>Parámetros  
  `pdwConnectionId`  
- enuncia `CONNID` que representa el identificador de conexión.  
+ enuncia `CONNID`Que representa el identificador de conexión.  
   
-## <a name="remarks"></a>Comentarios  
- El método `GetConnectionID` devuelve cero en el parámetro `pdwConnectionId`, si este subproceso no forma parte de una conexión.  
+## <a name="remarks"></a>Observaciones  
+ El `GetConnectionID` método devuelve cero en el `pdwConnectionId` parámetro, si este subproceso no forma parte de una conexión.  
   
- Si este subproceso está conectado a una instancia de Microsoft SQL Server 2005 Analysis Services (SSAS), el `CONNID` se asigna a un identificador de proceso de servidor (SPID).  
+ Si este subproceso está conectado a una instancia de Microsoft SQL Server 2005 Analysis Services (SSAS), se `CONNID` asigna a un identificador de proceso de servidor (SPID).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

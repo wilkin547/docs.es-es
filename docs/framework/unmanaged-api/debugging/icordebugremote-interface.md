@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 53d073c6-fa02-40d2-82e1-b9452bb6abaa
 topic_type:
 - apiref
-ms.openlocfilehash: 0cc79c0a93fa4f05b8c793a8b7fb0b9b3f031b1a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: ef11aa48f679592126f736c2877c697f02cb5e62
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791964"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379241"
 ---
 # <a name="icordebugremote-interface"></a>ICorDebugRemote (Interfaz)
 Proporciona la capacidad de iniciar o de adjuntar un depurador administrado a un proceso remoto de destino.  
@@ -60,14 +60,14 @@ interface ICorDebugRemote : IUnknown
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[ICorDebugRemote::CreateProcessEx (método)](icordebugremote-createprocessex-method.md)|Crea un proceso en un equipo remoto para la depuración administrada.|  
-|[ICorDebugRemote::DebugActiveProcessEx (método)](icordebugremote-debugactiveprocessex-method.md)|Inicia un proceso en un equipo remoto en el depurador.|  
+|[ICorDebugRemote::CreateProcessEx (Método)](icordebugremote-createprocessex-method.md)|Crea un proceso en un equipo remoto para la depuración administrada.|  
+|[ICorDebugRemote::DebugActiveProcessEx (Método)](icordebugremote-debugactiveprocessex-method.md)|Inicia un proceso en un equipo remoto en el depurador.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Actualmente, esta funcionalidad solo se admite para depurar un destino de aplicación basado en Silverlight que se ejecute en un equipo remoto de Macintosh.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
@@ -75,9 +75,9 @@ interface ICorDebugRemote : IUnknown
   
  **.NET Framework versiones:** 4,5, 4, 3,5 SP1  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [ICorDebugRemoteTarget (interfaz)](icordebugremotetarget-interface.md)
-- [ICorDebug (interfaz)](icordebug-interface.md)
+- [ICorDebugRemoteTarget (Interfaz)](icordebugremotetarget-interface.md)
+- [ICorDebug (Interfaz)](icordebug-interface.md)
 
-- [Interfaces de depuración](debugging-interfaces.md)
+- [Interfaces para depuración](debugging-interfaces.md)

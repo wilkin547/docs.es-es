@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b0df5c5d-9a2e-47bf-894c-6f8a9fe24a1f
 topic_type:
 - apiref
-ms.openlocfilehash: b78bff2994cefc6c35a4bd59133338392c3a1b24
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b95e9f3a0d584511a2bcf156ed2c50a98f96d071
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791975"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379062"
 ---
 # <a name="icordebugremotedebugactiveprocessex-method"></a>ICorDebugRemote::DebugActiveProcessEx (Método)
 Inicia un proceso en un equipo remoto en el depurador.  
@@ -36,7 +36,7 @@ HRESULT DebugActiveProcessEx (
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parámetros  
  `pRemoteTarget`  
  de Puntero a una [interfaz ICorDebugRemoteTarget](icordebugremotetarget-interface.md). Este parámetro se usa para determinar el equipo en el que se está ejecutando el proceso.  
   
@@ -44,7 +44,7 @@ HRESULT DebugActiveProcessEx (
  de IDENTIFICADOR del proceso al que se va a adjuntar el depurador.  
   
  `win32Attach`  
- [in] `true` si el depurador debe comportarse como el depurador de Win32 para el proceso y enviar las devoluciones de llamada no administradas; de lo contrario, `false`.  
+ [in] `true` Si el depurador debe comportarse como el depurador de Win32 para el proceso y enviar las devoluciones de llamada no administradas; en caso contrario, `false` .  
   
  `ppProcess`  
  enuncia Puntero a la dirección de un objeto "ICorDebugProcess" que representa el proceso al que se ha adjuntado el depurador.  
@@ -56,11 +56,11 @@ HRESULT DebugActiveProcessEx (
  E_FAIL (u otros códigos devueltos de E_)  
  No se puede asociar al proceso en el equipo remoto.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  En Silverlight no se admite la depuración en modo mixto.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
@@ -68,9 +68,9 @@ HRESULT DebugActiveProcessEx (
   
  **.NET Framework versiones:** 4,5, 4, 3,5 SP1  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [ICorDebugRemote (interfaz)](icordebugremote-interface.md)
-- [ICorDebug (interfaz)](icordebug-interface.md)
+- [ICorDebugRemote (Interfaz)](icordebugremote-interface.md)
+- [ICorDebug (Interfaz)](icordebug-interface.md)
 
-- [Interfaces de depuración](debugging-interfaces.md)
+- [Interfaces para depuración](debugging-interfaces.md)

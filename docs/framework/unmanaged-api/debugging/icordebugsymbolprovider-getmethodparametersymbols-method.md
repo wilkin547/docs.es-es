@@ -2,12 +2,12 @@
 title: ICorDebugSymbolProvider::GetMethodParameterSymbols (método)
 ms.date: 03/30/2017
 ms.assetid: 58b7c0b9-f6ad-4b49-b92d-0e421cfd0ec6
-ms.openlocfilehash: a940077e50ff251111ca6eedaee49401775644d3
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 051002b547aaa9745ae4efb516211123089c3128
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791596"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379596"
 ---
 # <a name="icordebugsymbolprovidergetmethodparametersymbols-method"></a>ICorDebugSymbolProvider::GetMethodParameterSymbols (método)
 Obtiene los símbolos de parámetro del método a partir de la dirección virtual relativa (RVA) de ese método.  
@@ -23,7 +23,7 @@ HRESULT GetMethodParameterSymbols(
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parámetros  
  `nativeRVA`  
  [in] Dirección virtual relativa nativa del método.  
   
@@ -36,22 +36,22 @@ HRESULT GetMethodParameterSymbols(
  `pcFetchedSymbols`  
  enuncia Puntero a una matriz [ICorDebugVariableSymbol](icordebugvariablesymbol-interface.md) que contiene los símbolos locales del método.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]
 > Este método solo está disponible con .NET Native.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [GetMethodLocalSymbols (método)](icordebugsymbolprovider-getmethodlocalsymbols-method.md)
-- [ICorDebugSymbolProvider (interfaz)](icordebugsymbolprovider-interface.md)
-- [Interfaces de depuración](debugging-interfaces.md)
+- [Método GetMethodLocalSymbols](icordebugsymbolprovider-getmethodlocalsymbols-method.md)
+- [Interfaz ICorDebugSymbolProvider](icordebugsymbolprovider-interface.md)
+- [Interfaces para depuración](debugging-interfaces.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a1ebfc69-46a6-4225-8788-b7cfb2f15e1d
 topic_type:
 - apiref
-ms.openlocfilehash: a6f2f536d360ffe41caf2a96c8b051f9167343c2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 945e4ac88634c9103a722a180a4fe92a554ca53b
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138953"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378894"
 ---
 # <a name="icordebugstringvaluegetlength-method"></a>ICorDebugStringValue::GetLength (Método)
 Obtiene el número de caracteres de la cadena a la que hace referencia este ICorDebugStringValue.  
@@ -35,13 +35,13 @@ HRESULT GetLength (
   
 ## <a name="parameters"></a>Parámetros  
  `pcchString`  
- enuncia Un puntero a un valor que especifica la longitud de la cadena a la que hace referencia este objeto `ICorDebugStringValue`.  
+ enuncia Un puntero a un valor que especifica la longitud de la cadena a la que hace referencia este `ICorDebugStringValue` objeto.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
