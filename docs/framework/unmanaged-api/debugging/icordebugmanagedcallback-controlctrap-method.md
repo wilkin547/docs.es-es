@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0500854e-2121-43d9-a028-64312da35258
 topic_type:
 - apiref
-ms.openlocfilehash: 63f7bf8c09480b9ce2cfb8eb8dc66e4a6133ef8f
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 33a68d11a8d17e46533b4f83bbf87aafe171e612
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777485"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212404"
 ---
 # <a name="icordebugmanagedcallbackcontrolctrap-method"></a>ICorDebugManagedCallback::ControlCTrap (Método)
 Notifica al depurador que se ha capturado CTRL + C en el proceso que se está depurando.  
@@ -33,7 +33,7 @@ HRESULT ControlCTrap (
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parámetros  
  `pProcess`  
  de Un puntero a un objeto ICorDebugProcess que representa el proceso en el que se intercepta CTRL + C.  
   
@@ -44,18 +44,18 @@ HRESULT ControlCTrap (
 |S_OK|El depurador controlará la captura CTRL + C.|  
 |S_FALSE|El depurador no controlará la captura CTRL + C.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Todos los dominios de aplicación dentro del proceso se detienen para esta devolución de llamada.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [ICorDebugManagedCallback (interfaz)](icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback (Interfaz)](icordebugmanagedcallback-interface.md)

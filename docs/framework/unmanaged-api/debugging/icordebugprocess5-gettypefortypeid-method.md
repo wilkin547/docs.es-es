@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e0eed5a8-fa6d-4818-bd00-7babcea30325
 topic_type:
 - apiref
-ms.openlocfilehash: bb25c9235e4fcded5c230d2d417b9d41bbdd9b19
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: ea7f7a9d4589e4f08b1b1e20b4d073bb5f822714
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792337"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212768"
 ---
 # <a name="icordebugprocess5gettypefortypeid-method"></a>ICorDebugProcess5::GetTypeForTypeID (Método)
 Convierte un identificador de tipo en un valor de ICorDebugType.  
@@ -34,26 +34,26 @@ HRESULT GetTypeForTypeID(
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parámetros  
  `id`  
  de El identificador de tipo.  
   
  `ppType`  
  enuncia Puntero a la dirección de un objeto ICorDebugType.  
   
-## <a name="remarks"></a>Notas  
- En algunos casos, los métodos que devuelven un identificador de tipo pueden devolver un valor de `COR_TYPEID` null. Si este valor se pasa como el argumento `id`, se producirá un error en el método `GetTypeForTypeID` y se devolverá `E_FAIL`.  
+## <a name="remarks"></a>Observaciones  
+ En algunos casos, los métodos que devuelven un identificador de tipo pueden devolver un `COR_TYPEID` valor null. Si este valor se pasa como `id` argumento, el `GetTypeForTypeID` método producirá un error y devolverá `E_FAIL` .  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [ICorDebugProcess5 (interfaz)](icordebugprocess5-interface.md)
-- [Interfaces de depuración](debugging-interfaces.md)
+- [ICorDebugProcess5 (Interfaz)](icordebugprocess5-interface.md)
+- [Interfaces para depuración](debugging-interfaces.md)

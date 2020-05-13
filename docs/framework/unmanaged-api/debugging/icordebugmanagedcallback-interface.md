@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b47f1d61-c7dc-4196-b926-0b08c94f7041
 topic_type:
 - apiref
-ms.openlocfilehash: 9a33b90bf39103756ab4fd07157739633997fb61
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: cb2b69c5e6dfed4e0cb4e4e324c4ec6ad664f3e7
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788398"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212755"
 ---
 # <a name="icordebugmanagedcallback-interface"></a>ICorDebugManagedCallback (Interfaz)
 Proporciona métodos que permiten procesar las devoluciones de llamada del depurador.  
@@ -28,54 +28,54 @@ Proporciona métodos que permiten procesar las devoluciones de llamada del depur
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Break (método)](icordebugmanagedcallback-break-method.md)|Notifica al depurador cuando se ejecuta una instrucción <xref:System.Reflection.Emit.OpCodes.Break> en la secuencia de código.|  
-|[Breakpoint (método)](icordebugmanagedcallback-breakpoint-method.md)|Notifica al depurador cuando se encuentra un punto de interrupción.|  
-|[BreakpointSetError (método)](icordebugmanagedcallback-breakpointseterror-method.md)|Notifica al depurador que el Common Language Runtime (CLR) no pudo enlazar con precisión un punto de interrupción establecido antes de que una función se compilara Just-in-Time (JIT).|  
-|[ControlCTrap (método)](icordebugmanagedcallback-controlctrap-method.md)|Notifica al depurador que se ha capturado CTRL + C en el proceso que se está depurando.|  
-|[CreateAppDomain (método)](icordebugmanagedcallback-createappdomain-method.md)|Notifica al depurador que se ha creado un dominio de aplicación.|  
-|[CreateProcess (método)](icordebugmanagedcallback-createprocess-method.md)|Notifica al depurador cuando un proceso se ha adjuntado o Iniciado por primera vez.|  
-|[CreateThread (método)](icordebugmanagedcallback-createthread-method.md)|Notifica al depurador que un subproceso ha empezado a ejecutar código administrado.|  
-|[DebuggerError (método)](icordebugmanagedcallback-debuggererror-method.md)|Notifica al depurador que se ha producido un error al intentar controlar un evento desde CLR.|  
-|[EditAndContinueRemap (método)](icordebugmanagedcallback-editandcontinueremap-method.md)|Opción obsoleta. Notifica al depurador que se ha enviado un evento de reasignación al IDE.|  
-|[EvalComplete (método)](icordebugmanagedcallback-evalcomplete-method.md)|Notifica al depurador que se ha completado una evaluación.|  
-|[EvalException (método)](icordebugmanagedcallback-evalexception-method.md)|Notifica al depurador que se ha finalizado una evaluación con una excepción no controlada.|  
-|[Exception (método)](icordebugmanagedcallback-exception-method.md)|Notifica al depurador que se ha producido una excepción del código administrado.|  
-|[ExitAppDomain (método)](icordebugmanagedcallback-exitappdomain-method.md)|Notifica al depurador que se ha salido de un dominio de aplicación.|  
-|[ExitProcess (método)](icordebugmanagedcallback-exitprocess-method.md)|Notifica al depurador que se ha salido de un proceso.|  
-|[ExitThread (método)](icordebugmanagedcallback-exitthread-method.md)|Notifica al depurador que un subproceso que estaba ejecutando código administrado ha salido.|  
-|[LoadAssembly (método)](icordebugmanagedcallback-loadassembly-method.md)|Notifica al depurador que se ha cargado correctamente un ensamblado CLR.|  
-|[LoadClass (método)](icordebugmanagedcallback-loadclass-method.md)|Notifica al depurador que se ha cargado una clase.|  
-|[LoadModule (método)](icordebugmanagedcallback-loadmodule-method.md)|Notifica al depurador que un módulo CLR se ha cargado correctamente.|  
-|[LogMessage (método)](icordebugmanagedcallback-logmessage-method.md)|Notifica al depurador que un subproceso administrado de CLR ha llamado a un método en la clase <xref:System.Diagnostics.EventLog> para registrar un evento.|  
-|[LogSwitch (método)](icordebugmanagedcallback-logswitch-method.md)|Notifica al depurador que un subproceso administrado de CLR ha llamado a un método en la clase <xref:System.Diagnostics.Switch> para crear, modificar o eliminar un modificador de depuración o traza.|  
-|[NameChange (método)](icordebugmanagedcallback-namechange-method.md)|Notifica al depurador que el nombre de un dominio de aplicación o un subproceso ha cambiado.|  
-|[StepComplete (método)](icordebugmanagedcallback-stepcomplete-method.md)|Notifica al depurador que se ha completado un paso.|  
-|[UnloadAssembly (método)](icordebugmanagedcallback-unloadassembly-method.md)|Notifica al depurador que se ha descargado un ensamblado CLR.|  
-|[UnloadClass (método)](icordebugmanagedcallback-unloadclass-method.md)|Notifica al depurador que se está descargando una clase.|  
-|[UnloadModule (método)](icordebugmanagedcallback-unloadmodule-method.md)|Notifica al depurador que se ha descargado un módulo CLR (DLL).|  
-|[UpdateModuleSymbols (método)](icordebugmanagedcallback-updatemodulesymbols-method.md)|Notifica al depurador que los símbolos para un módulo CLR han cambiado.|  
+|[Método Break](icordebugmanagedcallback-break-method.md)|Notifica al depurador cuando <xref:System.Reflection.Emit.OpCodes.Break> se ejecuta una instrucción en la secuencia de código.|  
+|[Método Breakpoint](icordebugmanagedcallback-breakpoint-method.md)|Notifica al depurador cuando se encuentra un punto de interrupción.|  
+|[Método BreakpointSetError](icordebugmanagedcallback-breakpointseterror-method.md)|Notifica al depurador que el Common Language Runtime (CLR) no pudo enlazar con precisión un punto de interrupción establecido antes de que una función se compilara Just-in-Time (JIT).|  
+|[Método ControlCTrap](icordebugmanagedcallback-controlctrap-method.md)|Notifica al depurador que se ha capturado CTRL + C en el proceso que se está depurando.|  
+|[Método CreateAppDomain](icordebugmanagedcallback-createappdomain-method.md)|Notifica al depurador que se ha creado un dominio de aplicación.|  
+|[Método CreateProcess](icordebugmanagedcallback-createprocess-method.md)|Notifica al depurador cuando un proceso se ha adjuntado o Iniciado por primera vez.|  
+|[Método CreateThread](icordebugmanagedcallback-createthread-method.md)|Notifica al depurador que un subproceso ha empezado a ejecutar código administrado.|  
+|[Método DebuggerError](icordebugmanagedcallback-debuggererror-method.md)|Notifica al depurador que se ha producido un error al intentar controlar un evento desde CLR.|  
+|[Método EditAndContinueRemap](icordebugmanagedcallback-editandcontinueremap-method.md)|En desuso. Notifica al depurador que se ha enviado un evento de reasignación al IDE.|  
+|[Método EvalComplete](icordebugmanagedcallback-evalcomplete-method.md)|Notifica al depurador que se ha completado una evaluación.|  
+|[Método EvalException](icordebugmanagedcallback-evalexception-method.md)|Notifica al depurador que se ha finalizado una evaluación con una excepción no controlada.|  
+|[Método Exception](icordebugmanagedcallback-exception-method.md)|Notifica al depurador que se ha producido una excepción del código administrado.|  
+|[Método ExitAppDomain](icordebugmanagedcallback-exitappdomain-method.md)|Notifica al depurador que se ha salido de un dominio de aplicación.|  
+|[ExitProcess (Método)](icordebugmanagedcallback-exitprocess-method.md)|Notifica al depurador que se ha salido de un proceso.|  
+|[Método ExitThread](icordebugmanagedcallback-exitthread-method.md)|Notifica al depurador que un subproceso que estaba ejecutando código administrado ha salido.|  
+|[Método LoadAssembly](icordebugmanagedcallback-loadassembly-method.md)|Notifica al depurador que se ha cargado correctamente un ensamblado CLR.|  
+|[Método LoadClass](icordebugmanagedcallback-loadclass-method.md)|Notifica al depurador que se ha cargado una clase.|  
+|[Método LoadModule](icordebugmanagedcallback-loadmodule-method.md)|Notifica al depurador que un módulo CLR se ha cargado correctamente.|  
+|[Método LogMessage](icordebugmanagedcallback-logmessage-method.md)|Notifica al depurador que un subproceso administrado de CLR ha llamado a un método en la <xref:System.Diagnostics.EventLog> clase para registrar un evento.|  
+|[Método LogSwitch](icordebugmanagedcallback-logswitch-method.md)|Notifica al depurador que un subproceso administrado de CLR ha llamado a un método en la <xref:System.Diagnostics.Switch> clase para crear, modificar o eliminar un modificador de depuración o traza.|  
+|[Método NameChange](icordebugmanagedcallback-namechange-method.md)|Notifica al depurador que el nombre de un dominio de aplicación o un subproceso ha cambiado.|  
+|[Método StepComplete](icordebugmanagedcallback-stepcomplete-method.md)|Notifica al depurador que se ha completado un paso.|  
+|[Método UnloadAssembly](icordebugmanagedcallback-unloadassembly-method.md)|Notifica al depurador que se ha descargado un ensamblado CLR.|  
+|[Método UnloadClass](icordebugmanagedcallback-unloadclass-method.md)|Notifica al depurador que se está descargando una clase.|  
+|[Método UnloadModule](icordebugmanagedcallback-unloadmodule-method.md)|Notifica al depurador que se ha descargado un módulo CLR (DLL).|  
+|[Método UpdateModuleSymbols](icordebugmanagedcallback-updatemodulesymbols-method.md)|Notifica al depurador que los símbolos para un módulo CLR han cambiado.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Todas las devoluciones de llamada se serializan, se llaman en el mismo subproceso y se llama con el proceso en el estado Synchronized.  
   
- Cada implementación de devolución de llamada debe llamar a [ICorDebugController:: Continue](icordebugcontroller-continue-method.md) para reanudar la ejecución. Si no se llama a `ICorDebugController::Continue` antes de que se devuelva la devolución de llamada, el proceso seguirá detenido y no se producirán más devoluciones de llamada de eventos hasta que se llame a `ICorDebugController::Continue`.  
+ Cada implementación de devolución de llamada debe llamar a [ICorDebugController:: Continue](icordebugcontroller-continue-method.md) para reanudar la ejecución. Si `ICorDebugController::Continue` no se llama a antes de que se devuelva la devolución de llamada, el proceso seguirá detenido y no se producirán más devoluciones de llamada de eventos hasta que `ICorDebugController::Continue` se llame a.  
   
- Un depurador debe implementar [ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md) si está depurando .NET Framework aplicaciones de la versión 2,0. Se pasa una instancia de `ICorDebugManagedCallback` o `ICorDebugManagedCallback2` como el objeto de devolución de llamada a [ICorDebug:: SetManagedHandler (](icordebug-setmanagedhandler-method.md).  
+ Un depurador debe implementar [ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md) si está depurando .NET Framework aplicaciones de la versión 2,0. Una instancia de `ICorDebugManagedCallback` o `ICorDebugManagedCallback2` se pasa como el objeto de devolución de llamada a [ICorDebug:: SetManagedHandler (](icordebug-setmanagedhandler-method.md).  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [ICorDebug (interfaz)](icordebug-interface.md)
-- [ICorDebugManagedCallback2 (interfaz)](icordebugmanagedcallback2-interface.md)
-- [Interfaces de depuración](debugging-interfaces.md)
+- [ICorDebug (Interfaz)](icordebug-interface.md)
+- [ICorDebugManagedCallback2 (Interfaz)](icordebugmanagedcallback2-interface.md)
+- [Interfaces para depuración](debugging-interfaces.md)

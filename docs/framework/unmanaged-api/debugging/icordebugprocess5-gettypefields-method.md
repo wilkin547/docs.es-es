@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a0ad3ee-dacb-47e9-abae-4536bcc4804b
 topic_type:
 - apiref
-ms.openlocfilehash: 29006eba3d3a523fd24a461207ab12222a639782
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a2c7f7b722abac6acf71d3b64276862441695a5f
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178591"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212794"
 ---
 # <a name="icordebugprocess5gettypefields-method"></a>ICorDebugProcess5::GetTypeFields (Método)
 Proporciona información sobre los campos que pertenecen a un tipo.  
@@ -38,30 +38,30 @@ HRESULT GetTypeFields(
   
 ## <a name="parameters"></a>Parámetros  
  `id`  
- [en] Identificador del tipo cuya información de campo se recupera.  
+ de Identificador del tipo cuya información de campo se recupera.  
   
  `celt`  
- [en] El número de [objetos COR_FIELD](cor-field-structure.md) cuya información de campo se va a recuperar.  
+ de El número de objetos de [COR_FIELD](cor-field-structure.md) cuya información de campo se va a recuperar.  
   
  `fields`  
- [fuera] Matriz de [objetos COR_FIELD](cor-field-structure.md) que proporcionan información sobre los campos que pertenecen al tipo.  
+ enuncia Matriz de objetos [COR_FIELD](cor-field-structure.md) que proporcionan información sobre los campos que pertenecen al tipo.  
   
  `pceltNeeded`  
- [fuera] Puntero al número de [objetos COR_FIELD](cor-field-structure.md) incluidos en `fields`.  
+ enuncia Puntero al número de objetos [COR_FIELD](cor-field-structure.md) incluidos en `fields` .  
   
 ## <a name="remarks"></a>Observaciones  
- El `celt` parámetro, que especifica el número de campos cuya `fields`información de campo utiliza `COR_TYPE_LAYOUT::numFields` el método para rellenar , debe corresponder al valor del campo.  
+ El `celt` parámetro, que especifica el número de campos cuya información de campo utiliza el método para rellenar `fields` , debe corresponderse con el valor del `COR_TYPE_LAYOUT::numFields` campo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte también
 
 - [ICorDebugProcess5 (Interfaz)](icordebugprocess5-interface.md)
-- [Interfaces de depuración](debugging-interfaces.md)
+- [Interfaces para depuración](debugging-interfaces.md)

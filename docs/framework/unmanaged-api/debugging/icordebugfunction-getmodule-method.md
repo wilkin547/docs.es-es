@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5031a5d3-2564-412a-9007-e36d4631308a
 topic_type:
 - apiref
-ms.openlocfilehash: e49bf6a7db9edb9e5ae489cc0655eea54406643d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 41ad10fecca2ba1831d9e0d1120d3d1be0be92ad
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137881"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212976"
 ---
 # <a name="icordebugfunctiongetmodule-method"></a>ICorDebugFunction::GetModule (Método)
 Obtiene el módulo en el que se define esta función.  
@@ -38,10 +38,10 @@ HRESULT GetModule (
  enuncia Puntero a la dirección de un objeto ICorDebugModule que representa el módulo en el que se define esta función.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

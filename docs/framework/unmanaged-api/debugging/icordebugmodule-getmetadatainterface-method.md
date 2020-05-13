@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 30d906f2-cf35-4fa9-9d4c-0c31b58c9f3a
 topic_type:
 - apiref
-ms.openlocfilehash: fb96949e22b4edfc0e64780a54bb38da44eb8369
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8f3cc16054d4b5340c9460e9c3fbcba6e563567a
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129543"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212560"
 ---
 # <a name="icordebugmodulegetmetadatainterface-method"></a>ICorDebugModule::GetMetaDataInterface (Método)
 Obtiene un objeto de interfaz de metadatos que se puede utilizar para examinar los metadatos del módulo.  
@@ -39,20 +39,20 @@ HRESULT GetMetaDataInterface (
  de IDENTIFICADOR de referencia que especifica la interfaz de metadatos.  
   
  `ppObj`  
- enuncia Puntero a la dirección de un objeto `T:IUnknown` que es una de las [interfaces de metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md).  
+ enuncia Puntero a la dirección de un `T:IUnknown` objeto que es una de las [interfaces de metadatos](../metadata/metadata-interfaces.md).  
   
-## <a name="remarks"></a>Comentarios  
- El depurador puede utilizar el método `GetMetaDataInterface` para realizar una copia de los metadatos originales de un módulo, que debe hacer para poder editar ese módulo. El depurador llama a `GetMetaDataInterface` para obtener un objeto de interfaz [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) para el módulo y, a continuación, llama a [IMetaDataEmit:: savetomemory (](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetomemory-method.md) para guardar una copia de los metadatos del módulo en la memoria.  
+## <a name="remarks"></a>Observaciones  
+ El depurador puede utilizar el `GetMetaDataInterface` método para realizar una copia de los metadatos originales de un módulo, que debe hacer para editar ese módulo. El depurador llama `GetMetaDataInterface` a para obtener un objeto de interfaz [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) para el módulo y, a continuación, llama a [IMetaDataEmit:: savetomemory (](../metadata/imetadataemit-savetomemory-method.md) para guardar una copia de los metadatos del módulo en la memoria.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Metadatos](../../../../docs/framework/unmanaged-api/metadata/index.md)
+- [Metadatos](../metadata/index.md)

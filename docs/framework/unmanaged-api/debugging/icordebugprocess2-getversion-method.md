@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e11d5a75-61d9-4548-aedf-79c26079bd17
 topic_type:
 - apiref
-ms.openlocfilehash: 5f618f6779f6931785bba18f70fb1ac9baf46753
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 391b848d3b3f66f6af6bf3adbefb6e94d526e748
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137191"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213509"
 ---
 # <a name="icordebugprocess2getversion-method"></a>ICorDebugProcess2::GetVersion (Método)
 
@@ -37,18 +37,18 @@ HRESULT GetVersion (
 ## <a name="parameters"></a>Parámetros
 
 `version`\
-enuncia Puntero a una estructura COR_VERSION que almacena el número de versión del Runtime.
+enuncia Puntero a una estructura de COR_VERSION que almacena el número de versión del motor en tiempo de ejecución.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El método `GetVersion` devuelve un código de error si no se ha cargado ningún tiempo de ejecución en el proceso.
+El `GetVersion` método devuelve un código de error si no se ha cargado ningún tiempo de ejecución en el proceso.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).
 
 **Encabezado:** CorDebug.idl, CorDebug.h
 
 **Biblioteca:** CorGuids.lib
 
-**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+**.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

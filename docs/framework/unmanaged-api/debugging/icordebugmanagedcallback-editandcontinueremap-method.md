@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 24a8fcce-317e-48ff-aefc-d86123ada935
 topic_type:
 - apiref
-ms.openlocfilehash: 9cb956c0262fdcdb5971d049ea7b057aa4d952c0
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 78b87b5c566b0d760a205757430123665fb2fcd3
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76781905"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213717"
 ---
 # <a name="icordebugmanagedcallbackeditandcontinueremap-method"></a>ICorDebugManagedCallback::EditAndContinueRemap (Método)
 Este método está en desuso. Notifica al depurador que se ha enviado un evento de reasignación al entorno de desarrollo integrado (IDE).  
@@ -36,18 +36,18 @@ HRESULT EditAndContinueRemap (
 );  
 ```  
   
-## <a name="remarks"></a>Notas  
- Se llama al método `EditAndContinueRemap` cuando se ha intentado ejecutar el código en una versión anterior de una función actualizada. El Common Language Runtime llama al método `EditAndContinueRemap` para enviar un evento de reasignación al IDE.  
+## <a name="remarks"></a>Observaciones  
+ `EditAndContinueRemap`Se llama al método cuando se ha intentado ejecutar el código en una versión anterior de una función actualizada. El Common Language Runtime llama al `EditAndContinueRemap` método para enviar un evento de reasignación al IDE.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [ICorDebugManagedCallback (interfaz)](icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback (Interfaz)](icordebugmanagedcallback-interface.md)

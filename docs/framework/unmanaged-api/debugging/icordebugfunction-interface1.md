@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 783faea9-8083-41c1-b04a-51a81ac4c8f3
 topic_type:
 - apiref
-ms.openlocfilehash: ba0e0b1b2bac785e28f41e09dda74841121a748d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 6b7b6969c1f207decbf47217e98b7fee3aa9ce54
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794505"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213249"
 ---
 # <a name="icordebugfunction-interface"></a>Interfaz ICorDebugFunction
 
@@ -29,36 +29,36 @@ Representa una función o un método administrado.
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[CreateBreakpoint (método)](icordebugfunction-createbreakpoint-method.md)|Crea un punto de interrupción al principio de esta función.|  
-|[GetClass (método)](icordebugfunction-getclass-method.md)|Obtiene un objeto ICorDebugClass que representa la clase de la que es miembro esta función.|  
-|[GetCurrentVersionNumber (método)](icordebugfunction-getcurrentversionnumber-method.md)|Obtiene el número de versión de la edición más reciente realizada en esta función.|  
-|[GetILCode (método)](icordebugfunction-getilcode-method.md)|Obtiene el código del lenguaje intermedio de Microsoft (MSIL) de esta función.|  
-|[GetLocalVarSigToken (método)](icordebugfunction-getlocalvarsigtoken-method.md)|Obtiene el símbolo (token) de metadatos de la firma de variable local de la función representada por esta instancia de `ICorDebugFunction`.|  
-|[GetModule (método)](icordebugfunction-getmodule-method.md)|Obtiene el módulo en el que se define esta función.|  
-|[GetNativeCode (método)](icordebugfunction-getnativecode-method.md)|Obtiene el código nativo de esta función.|  
-|[GetToken (método)](icordebugfunction-gettoken-method.md)|Obtiene el símbolo (token) de metadatos de esta función.|  
+|[Método CreateBreakpoint](icordebugfunction-createbreakpoint-method.md)|Crea un punto de interrupción al principio de esta función.|  
+|[Método GetClass](icordebugfunction-getclass-method.md)|Obtiene un objeto ICorDebugClass que representa la clase de la que es miembro esta función.|  
+|[Método GetCurrentVersionNumber](icordebugfunction-getcurrentversionnumber-method.md)|Obtiene el número de versión de la edición más reciente realizada en esta función.|  
+|[Método GetILCode](icordebugfunction-getilcode-method.md)|Obtiene el código del lenguaje intermedio de Microsoft (MSIL) de esta función.|  
+|[GetLocalVarSigToken (Método)](icordebugfunction-getlocalvarsigtoken-method.md)|Obtiene el símbolo (token) de metadatos de la firma de variable local de la función representada por esta `ICorDebugFunction` instancia.|  
+|[GetModule (Método)](icordebugfunction-getmodule-method.md)|Obtiene el módulo en el que se define esta función.|  
+|[Método GetNativeCode](icordebugfunction-getnativecode-method.md)|Obtiene el código nativo de esta función.|  
+|[GetToken (Método)](icordebugfunction-gettoken-method.md)|Obtiene el símbolo (token) de metadatos de esta función.|  
   
-## <a name="remarks"></a>Notas  
- La interfaz `ICorDebugFunction` no representa una función con parámetros de tipo genérico. Por ejemplo, una instancia de `ICorDebugFunction` representaría `Func<T>` pero no `Func<string>`. Llame a [ICorDebugILFrame2:: EnumerateTypeParameters (](icordebugilframe2-enumeratetypeparameters-method.md) para obtener los parámetros de tipo genérico.  
+## <a name="remarks"></a>Observaciones  
+ La `ICorDebugFunction` interfaz no representa una función con parámetros de tipo genérico. Por ejemplo, una `ICorDebugFunction` instancia de representaría `Func<T>` pero no `Func<string>` . Llame a [ICorDebugILFrame2:: EnumerateTypeParameters (](icordebugilframe2-enumeratetypeparameters-method.md) para obtener los parámetros de tipo genérico.  
   
- La relación entre el símbolo (token) de metadatos de un método, `mdMethodDef`y el objeto `ICorDebugFunction` de un método depende de si se permite editar y continuar en la función:  
+ La relación entre el token de metadatos de un método, `mdMethodDef` , y el objeto de un método `ICorDebugFunction` depende de si se permite editar y continuar en la función:  
   
-- Si no se permite editar y continuar en la función, existe una relación uno a uno entre el objeto de `ICorDebugFunction` y el token de `mdMethodDef`. Es decir, la función tiene un objeto `ICorDebugFunction` y un token `mdMethodDef`.  
+- Si no se permite editar y continuar en la función, existe una relación uno a uno entre el `ICorDebugFunction` objeto y el `mdMethodDef` token. Es decir, la función tiene un `ICorDebugFunction` objeto y un `mdMethodDef` token.  
   
-- Si se permite editar y continuar en la función, existe una relación de varios a uno entre el objeto de `ICorDebugFunction` y el token de `mdMethodDef`. Es decir, la función puede tener muchas instancias de `ICorDebugFunction`, una para cada versión de la función, pero solo un token de `mdMethodDef`.  
+- Si se permite editar y continuar en la función, existe una relación de varios a uno entre el `ICorDebugFunction` objeto y el `mdMethodDef` token. Es decir, la función puede tener muchas instancias de `ICorDebugFunction` , una por cada versión de la función, pero solo un `mdMethodDef` token.  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:**  CorGuids. lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Interfaces de depuración](debugging-interfaces.md)
+- [Interfaces para depuración](debugging-interfaces.md)

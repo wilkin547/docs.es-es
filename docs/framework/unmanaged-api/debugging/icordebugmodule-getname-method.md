@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: db499637-7ba9-421e-b8b1-35856995e80b
 topic_type:
 - apiref
-ms.openlocfilehash: b27e7a2cdcbfc3a88a734230118d99c2dd5c700e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 55342c803756aa10c2e7c835d9e1d58b439bb36c
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129537"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212547"
 ---
 # <a name="icordebugmodulegetname-method"></a>ICorDebugModule::GetName (Método)
 Obtiene el nombre de archivo del módulo.  
@@ -45,16 +45,16 @@ HRESULT GetName(
  `szName`  
  enuncia Matriz que almacena el nombre devuelto.  
   
-## <a name="remarks"></a>Comentarios  
- El método `GetName` devuelve un HRESULT S_OK si el nombre de archivo del módulo coincide con el nombre en el disco. `GetName` devuelve un valor de HRESULT S_FALSE si se ha fabricado el nombre, por ejemplo para un módulo dinámico o en memoria.  
+## <a name="remarks"></a>Observaciones  
+ El `GetName` método devuelve un S_OK HRESULT si el nombre de archivo del módulo coincide con el nombre en el disco. `GetName`Devuelve un S_FALSE HRESULT si se ha fabricado el nombre, por ejemplo para un módulo dinámico o en memoria.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también

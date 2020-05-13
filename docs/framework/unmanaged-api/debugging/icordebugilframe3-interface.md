@@ -10,37 +10,37 @@ api_type:
 ms.assetid: 15212cb5-93d4-4025-bec9-d4b9919eb1fe
 topic_type:
 - apiref
-ms.openlocfilehash: 739c648173d45a9c147ea2a4e469a3a4b518e893
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 59221b09cc1c5d2d01c1007b649a4bb01de57f04
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794333"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213769"
 ---
 # <a name="icordebugilframe3-interface"></a>ICorDebugILFrame3 (Interfaz)
-Proporciona un método que encapsula el valor devuelto de una función. `ICorDebugILFrame3` es una extensión lógica de las interfaces ICorDebugILFrame e ICorDebugILFrame2.  
+Proporciona un método que encapsula el valor devuelto de una función. `ICorDebugILFrame3`es una extensión lógica de las interfaces ICorDebugILFrame e ICorDebugILFrame2.  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[GetReturnValueForILOffset (método)](icordebugilframe3-getreturnvalueforiloffset-method.md)|Obtiene un objeto ICorDebugValue que encapsula el valor devuelto de una función.|  
+|[Método GetReturnValueForILOffset](icordebugilframe3-getreturnvalueforiloffset-method.md)|Obtiene un objeto ICorDebugValue que encapsula el valor devuelto de una función.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [ICorDebugCode3 (interfaz)](icordebugcode3-interface.md)
-- [Interfaces de depuración](debugging-interfaces.md)
+- [ICorDebugCode3 (Interfaz)](icordebugcode3-interface.md)
+- [Interfaces para depuración](debugging-interfaces.md)

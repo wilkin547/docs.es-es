@@ -15,38 +15,38 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 1bdc958f2516bcd7c2eb74312fbf478e6d49535a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fcf725ea98fa4351e72cf592f92968ee2233ecb0
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948813"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213587"
 ---
 # <a name="icordebugprocess4-interface"></a>Interfaz ICorDebugProcess4
 
-Proporciona compatibilidad para fuera del control de ejecución del proceso.
+Proporciona compatibilidad para el control de ejecución fuera de proceso.
 
 ## <a name="methods"></a>Métodos
 
 | Método                                                                 | Descripción                                                                                             |
 | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| [ProcessStateChanged](icordebugprocess4-processstatechanged-method.md) | Notifica a la canalización ICorDebug que fuera del depurador de proceso continúa la ejecución del depurado. |
+| [ProcessStateChanged](icordebugprocess4-processstatechanged-method.md) | Notifica a la canalización ICorDebug que el depurador fuera de proceso está continuando la ejecución del depurador. |
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Esta interfaz reside en el tiempo de ejecución y no se expone a través de los encabezados o archivos de biblioteca. Sin embargo, es una interfaz COM que deriva de `IUnknown` con GUID `E930C679-78AF-4953-8AB7-B0AABF0F9F80` que puede obtenerse a través de los mecanismos de COM habituales.
+Esta interfaz reside dentro del tiempo de ejecución y no se expone a través de los encabezados o archivos de biblioteca. Sin embargo, es una interfaz COM que se deriva de `IUnknown` con `E930C679-78AF-4953-8AB7-B0AABF0F9F80` el GUID que se puede obtener a través de los mecanismos com habituales.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).
 
-**Encabezado**: Ninguna
+**Encabezado:** Ninguna
 
 **Biblioteca:** Ninguna
 
-**Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
+**.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Interfaces de depuración](debugging-interfaces.md)
+- [Interfaces para depuración](debugging-interfaces.md)
 - [Depuración](index.md)

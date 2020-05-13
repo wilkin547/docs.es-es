@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e28e51d3-8f73-494f-bcd4-48bac239fbe1
 topic_type:
 - apiref
-ms.openlocfilehash: 9677fd14f50cf93eac7eeaef784082d45e8884c7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cab25738c9f4727fe3970cc1db15c38e68b08de6
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137687"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212924"
 ---
 # <a name="icordebugframegetchain-method"></a>ICorDebugFrame::GetChain (Método)
 Obtiene un puntero a la cadena de la que forma parte este marco.  
@@ -38,10 +38,10 @@ HRESULT GetChain (
  enuncia Puntero a la dirección de un objeto ICorDebugChain que representa la cadena que contiene este marco.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

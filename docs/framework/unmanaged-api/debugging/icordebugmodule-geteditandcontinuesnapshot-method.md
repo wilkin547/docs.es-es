@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fad94e1e-78be-440f-aa43-e0c66e0b102e
 topic_type:
 - apiref
-ms.openlocfilehash: 7f9b3e32467a99371f54449128994d990030dbfb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5bb8ec0110aec5ffd442dd8e8d8ee3f96fe4b6db
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73109621"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212625"
 ---
 # <a name="icordebugmodulegeteditandcontinuesnapshot-method"></a>ICorDebugModule::GetEditAndContinueSnapshot (Método)
-Desusado.  
+En desuso.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,10 +34,10 @@ HRESULT GetEditAndContinueSnapshot(
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

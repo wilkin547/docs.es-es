@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2a62dae5-dd8a-4696-b817-0e1e586c24a0
 topic_type:
 - apiref
-ms.openlocfilehash: 0b53c80157bfd99a766eb691e8a8a2e6b9659a95
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 79a6c70399d5059d6959ac6127f22807138c00fa
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137746"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213119"
 ---
 # <a name="icordebugfunctionbreakpointgetfunction-method"></a>ICorDebugFunctionBreakpoint::GetFunction (Método)
 Obtiene un puntero de interfaz a una ICorDebugFunction que hace referencia a la función en la que se establece el punto de interrupción.  
@@ -38,10 +38,10 @@ HRESULT GetFunction (
  enuncia Puntero a la dirección de la función en la que se establece el punto de interrupción.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

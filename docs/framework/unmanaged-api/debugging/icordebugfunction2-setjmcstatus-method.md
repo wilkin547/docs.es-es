@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 22c27b01-2869-4214-b840-5921f7c874fc
 topic_type:
 - apiref
-ms.openlocfilehash: 758364b2d63343e464b727d5a1c1817533a6acea
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7da12554ba1db9a467aa03c01bfb3b584125b129
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137793"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213197"
 ---
 # <a name="icordebugfunction2setjmcstatus-method"></a>ICorDebugFunction2::SetJMCStatus (Método)
 Marca la función representada por este ICorDebugFunction2 para Solo mi código Stepping.  
@@ -35,7 +35,7 @@ HRESULT SetJMCStatus (
   
 ## <a name="parameters"></a>Parámetros  
  `bIsJustMyCode`  
- de Establezca en `true` para marcar la función como código de usuario; de lo contrario, establézcalo en `false`.  
+ de Establezca en `true` para marcar la función como código de usuario; de lo contrario, establézcalo en `false` .  
   
 ## <a name="return-values"></a>Valores devueltos  
   
@@ -44,14 +44,14 @@ HRESULT SetJMCStatus (
 |`S_OK`|La función se marcó correctamente.|  
 |`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|No se pudo marcar la función como código de usuario porque no se puede depurar.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Una Solo mi código stepper omitirá el código que no es de usuario. El código de usuario debe ser un subconjunto del código depurable.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

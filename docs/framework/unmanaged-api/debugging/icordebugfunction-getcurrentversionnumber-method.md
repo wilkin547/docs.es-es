@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c3af1575-cbe6-457a-bc08-c53460edcbc8
 topic_type:
 - apiref
-ms.openlocfilehash: 5e080e9aa89816b24aa2eb1b6b1be823922e86fb
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b47580022b98ea02584a94b3f74b3fd1c276f297
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794521"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212912"
 ---
 # <a name="icordebugfunctiongetcurrentversionnumber-method"></a>ICorDebugFunction::GetCurrentVersionNumber (Método)
 Obtiene el número de versión de la edición más reciente realizada en la función representada por este objeto ICorDebugFunction.  
@@ -33,18 +33,18 @@ HRESULT GetCurrentVersionNumber (
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parámetros  
  `pnCurrentVersion`  
  enuncia Un puntero a un valor entero que es el número de versión de la edición más reciente realizada a esta función.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El número de versión de la última edición realizada a esta función puede ser mayor que el número de versión de la propia función. Use el método [ICorDebugFunction2:: GetVersionNumber (](icordebugfunction2-getversionnumber-method.md) o el método [ICorDebugCode:: GetVersionNumber (](icordebugcode-getversionnumber-method.md) para recuperar el número de versión de la función.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

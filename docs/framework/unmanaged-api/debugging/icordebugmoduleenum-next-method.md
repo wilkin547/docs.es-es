@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9ff3fcd6-38fe-41f8-bfd3-f0ab6c7d77ca
 topic_type:
 - apiref
-ms.openlocfilehash: 6c4262c18e4efcbbca1b3e2a327fec7d4b609a31
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d7ad4a6b25fe6d53ab0b21066345451ae7c22c16
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73096924"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213340"
 ---
 # <a name="icordebugmoduleenumnext-method"></a>ICorDebugModuleEnum::Next (Método)
-Obtiene el número de instancias de "ICorDebugModule" especificadas por `celt` de la enumeración, comenzando en la posición actual.  
+Obtiene el número de instancias de "ICorDebugModule" especificadas por `celt` en la enumeración, comenzando en la posición actual.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,21 +38,21 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parámetros  
  `celt`  
- de Número de instancias de `ICorDebugModule` que se van a recuperar.  
+ de El número de `ICorDebugModule` instancias que se van a recuperar.  
   
  `modules`  
- enuncia Matriz de punteros, cada uno de los cuales señala a un objeto `ICorDebugModule`.  
+ enuncia Matriz de punteros, cada uno de los cuales señala a un `ICorDebugModule` objeto.  
   
  `pceltFetched`  
- enuncia Puntero al número de instancias de `ICorDebugModule` devueltas realmente. Este valor puede ser null si `celt` es uno.  
+ enuncia Puntero al número de `ICorDebugModule` instancias devueltas realmente. Este valor puede ser null si `celt` es uno.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también

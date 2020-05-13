@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0863f644-58e8-45a0-b0c3-a28e99b20938
 topic_type:
 - apiref
-ms.openlocfilehash: 2b64122489481c6b0fde605015720d0a56ba8fe2
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 9ee6f43c94b8ff2e765d2a0dde0697c4c895a94f
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788322"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212378"
 ---
 # <a name="icordebugmanagedcallbackupdatemodulesymbols-method"></a>ICorDebugManagedCallback::UpdateModuleSymbols (Método)
 Notifica al depurador que los símbolos para un módulo de Common Language Runtime han cambiado.  
@@ -35,7 +35,7 @@ HRESULT UpdateModuleSymbols (
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parámetros  
  `pAppDomain`  
  de Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene el módulo en el que los símbolos han cambiado.  
   
@@ -43,24 +43,24 @@ HRESULT UpdateModuleSymbols (
  de Un puntero a un objeto ICorDebugModule que representa el módulo en el que los símbolos han cambiado.  
   
  `pSymbolStream`  
- de Puntero a un objeto de `IStream` COM de Win32 que contiene los símbolos modificados.  
+ de Un puntero a un objeto COM Win32 `IStream` que contiene los símbolos modificados.  
   
-## <a name="remarks"></a>Notas  
- Este método proporciona una oportunidad para actualizar la vista del depurador de los símbolos de un módulo llamando a [ISymUnmanagedReader:: UpdateSymbolStore (](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) o [ISymUnmanagedReader:: replacesymbolstore (](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-replacesymbolstore-method.md).  
+## <a name="remarks"></a>Observaciones  
+ Este método proporciona una oportunidad para actualizar la vista del depurador de los símbolos de un módulo llamando a [ISymUnmanagedReader:: UpdateSymbolStore (](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) o [ISymUnmanagedReader:: replacesymbolstore (](../diagnostics/isymunmanagedreader-replacesymbolstore-method.md).  
   
  Esta devolución de llamada puede producirse varias veces para el mismo módulo.  
   
  Un depurador debe intentar enlazar puntos de interrupción sin enlazar en el nivel de origen.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [ICorDebugManagedCallback (interfaz)](icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback (Interfaz)](icordebugmanagedcallback-interface.md)
