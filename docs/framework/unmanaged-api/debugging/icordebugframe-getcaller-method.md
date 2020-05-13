@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bfdc946b-8238-4eb9-8a85-884049fb0fd4
 topic_type:
 - apiref
-ms.openlocfilehash: 843399b7e3de522e2c4574963897430aa60a5a50
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b29de0b70daa783197e78fe985d379d4124bc140
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73114792"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205148"
 ---
 # <a name="icordebugframegetcaller-method"></a>ICorDebugFrame::GetCaller (Método)
 Obtiene un puntero al objeto ICorDebugFrame en la cadena actual que llamó a este marco.  
@@ -35,13 +35,13 @@ HRESULT GetCaller (
   
 ## <a name="parameters"></a>Parámetros  
  `ppFrame`  
- enuncia Puntero a la dirección de un objeto `ICorDebugFrame` que representa el marco que realiza la llamada. Este valor es NULL si el marco llamado es el marco más externo de la cadena actual.  
+ enuncia Puntero a la dirección de un `ICorDebugFrame` objeto que representa el marco que realiza la llamada. Este valor es NULL si el marco llamado es el marco más externo de la cadena actual.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

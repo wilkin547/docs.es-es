@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f93cc2ec-0a12-4499-9bf6-405dc58c9a81
 topic_type:
 - apiref
-ms.openlocfilehash: 566d4323bfd76a2189e1a8280465eb2dcde2a03a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: a338116f6eae670cad785807ed580039fbd7fb78
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792674"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83207408"
 ---
 # <a name="icordebugobjectvalue2-interface"></a>Interfaz ICorDebugObjectValue2
 
@@ -29,22 +29,22 @@ Extiende la interfaz "ICorDebugObjectValue" para admitir la herencia y las inval
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[GetVirtualMethodAndType (método)](icordebugobjectvalue2-getvirtualmethodandtype-method.md)|`GetVirtualMethodAndType` aún no se ha implementado.|  
+|[Método GetVirtualMethodAndType](icordebugobjectvalue2-getvirtualmethodandtype-method.md)|`GetVirtualMethodAndType`todavía no se ha implementado.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Interfaces de depuración](debugging-interfaces.md)
+- [Interfaces para depuración](debugging-interfaces.md)

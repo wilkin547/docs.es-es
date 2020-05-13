@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 879d2311-0ff1-4616-a8b3-959ea5868b2e
 topic_type:
 - apiref
-ms.openlocfilehash: 39175e338e4fd98dd4af1325138da732ed81c764
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7bf73266f0269cfcd5371c5155856800036cc066
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137920"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209843"
 ---
 # <a name="icordebugframegetfunction-method"></a>ICorDebugFrame::GetFunction (Método)
 Obtiene la función que contiene el código asociado a este marco de pila.  
@@ -37,14 +37,14 @@ HRESULT GetFunction (
  `ppFunction`  
  enuncia Puntero a la dirección de un objeto ICorDebugFunction que representa la función que contiene el código asociado a este marco de pila.  
   
-## <a name="remarks"></a>Comentarios  
- Puede producirse un error en el método `GetFunction` si el marco no está asociado a ninguna función determinada.  
+## <a name="remarks"></a>Observaciones  
+ El `GetFunction` método puede producir un error si el marco no está asociado a ninguna función determinada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

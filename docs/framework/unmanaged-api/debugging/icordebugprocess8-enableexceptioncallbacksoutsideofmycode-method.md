@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - cpp
 ms.assetid: b3af44ec-7d41-425b-aed9-0c4379e5cbe9
-ms.openlocfilehash: 2c0da899b3f6f3c229c6f5e5b4cafe48fdc19742
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e54dd051f0dbd9c1964d381c2e05189c375fa66d
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792169"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210142"
 ---
 # <a name="icordebugprocess8enableexceptioncallbacksoutsideofmycode-method"></a>Método de ICorDebugProcess8::EnableExceptionCallbacksOutsideOfMyCode
 [Se admite en el .NET Framework 4,6 y versiones posteriores]  
@@ -24,11 +24,11 @@ HRESULT EnableExceptionCallbacksOutsideOfMyCode(
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parámetros  
  `enableExceptionsOutsideOfJMC`  
  [in]  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Si el valor de `enableExceptionsOutsideOfJMC` es `false`:  
   
 - Una excepción DEBUG_EXCEPTION_FIRST_CHANCE no generará una devolución de llamada al depurador.  
@@ -37,16 +37,16 @@ HRESULT EnableExceptionCallbacksOutsideOfMyCode(
   
  El valor predeterminado de `enableExceptionsOutsideOfJMC` es `true`.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [ICorDebugProcess8 (interfaz)](icordebugprocess8-interface.md)
-- [Interfaces de depuración](debugging-interfaces.md)
+- [Interfaz de ICorDebugProcess8](icordebugprocess8-interface.md)
+- [Interfaces para depuración](debugging-interfaces.md)

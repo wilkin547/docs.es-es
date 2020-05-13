@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e2aae09-49cb-4fbd-81e5-e29cd864a88b
 topic_type:
 - apiref
-ms.openlocfilehash: 22722e4d602bdb9df9877b2199b4d4271a4d3105
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 759ba7bd46f8231143e743aa5ffcabffeb99c3b6
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792730"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205111"
 ---
 # <a name="icordebugnativeframe2ischild-method"></a>ICorDebugNativeFrame2::IsChild (Método)
 Determina si el marco actual es un marco secundario.  
@@ -31,7 +31,7 @@ Determina si el marco actual es un marco secundario.
 HRESULT IsChild([out] BOOL * pIsChild);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parámetros  
  `pIsChild`  
  enuncia Valor booleano que especifica si el marco actual es un marco secundario.  
   
@@ -46,20 +46,20 @@ HRESULT IsChild([out] BOOL * pIsChild);
   
 ## <a name="exceptions"></a>Excepciones  
   
-## <a name="remarks"></a>Notas  
- El método `IsChild` devuelve `true` si el objeto de marco en el que se llama al método es un elemento secundario de otro marco. Si este es el caso, use el método [ismatchingparentframe (](icordebugnativeframe2-ismatchingparentframe-method.md) para comprobar si un marco es su elemento primario.  
+## <a name="remarks"></a>Observaciones  
+ El `IsChild` método devuelve `true` si el objeto de marco en el que se llama al método es un elemento secundario de otro marco. Si este es el caso, use el método [ismatchingparentframe (](icordebugnativeframe2-ismatchingparentframe-method.md) para comprobar si un marco es su elemento primario.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [ICorDebugNativeFrame2 (interfaz)](icordebugnativeframe2-interface.md)
-- [Interfaces de depuración](debugging-interfaces.md)
+- [ICorDebugNativeFrame2 (Interfaz)](icordebugnativeframe2-interface.md)
+- [Interfaces para depuración](debugging-interfaces.md)
 - [Depuración](index.md)

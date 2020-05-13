@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da278a29-dc2e-4bf7-96ce-801bdc4d7025
 topic_type:
 - apiref
-ms.openlocfilehash: b7a33fd6e2178e0e9188b81f516b231702fb6460
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6b598352f734cf47514a82de1d0fca65d430a9ab
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122711"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209973"
 ---
 # <a name="icordebuginternalframegetframetype-method"></a>ICorDebugInternalFrame::GetFrameType (Método)
 Obtiene el tipo de este marco interno.  
@@ -35,16 +35,16 @@ HRESULT GetFrameType (
   
 ## <a name="parameters"></a>Parámetros  
  `pType`  
- enuncia Un puntero a un valor de la enumeración CorDebugInternalFrameType (que indica el tipo de marco interno representado por este objeto `ICorDebugInternalFrame`.  
+ enuncia Un puntero a un valor de la enumeración CorDebugInternalFrameType (que indica el tipo de marco interno representado por este `ICorDebugInternalFrame` objeto.  
   
-## <a name="remarks"></a>Comentarios  
- El tipo de marco interno nunca será STUBFRAME_NONE. Los depuradores deben omitir correctamente los tipos de Marcos internos no reconocidos.  
+## <a name="remarks"></a>Observaciones  
+ El tipo de marco interno nunca se STUBFRAME_NONE. Los depuradores deben omitir correctamente los tipos de Marcos internos no reconocidos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

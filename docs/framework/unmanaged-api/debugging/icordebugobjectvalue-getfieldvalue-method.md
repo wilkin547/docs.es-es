@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c96770b0-3e09-47bb-bd29-20353b043459
 topic_type:
 - apiref
-ms.openlocfilehash: 002c6cccb3ddf29b831ba5e14baa5e51f1b82433
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 660bc13e8109994f59444c0adebbc97f54de0b43
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73095879"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83207587"
 ---
 # <a name="icordebugobjectvaluegetfieldvalue-method"></a>ICorDebugObjectValue::GetFieldValue (Método)
 Obtiene el valor del campo especificado de la clase especificada para este valor de objeto.  
@@ -40,23 +40,23 @@ HRESULT GetFieldValue (
  de Un puntero a un objeto "ICorDebugClass" que representa la clase para la que se va a obtener el valor del campo.  
   
  `fieldDef`  
- de `mdFieldDef` token que hace referencia a los metadatos que describen el campo.  
+ de `mdFieldDef`Token que hace referencia a los metadatos que describen el campo.  
   
  `ppValue`  
  enuncia Un puntero a un objeto "ICorDebugValue" que representa el valor del campo especificado.  
   
-## <a name="remarks"></a>Comentarios  
- La clase, especificada en el parámetro `pClass`, debe estar en la jerarquía de la clase del valor del objeto y el campo debe ser un campo de esa clase.  
+## <a name="remarks"></a>Observaciones  
+ La clase, especificada en el `pClass` parámetro, debe estar en la jerarquía de la clase del valor del objeto y el campo debe ser un campo de esa clase.  
   
- El método `GetFieldValue` seguirá teniendo éxito para los objetos genéricos y las clases genéricas. Por ejemplo, si el Diccionario\<V > hereda del diccionario\<cadena, V >, y el valor del objeto es de tipo Dictionary\<Int32 >, pasando el objeto `ICorDebugClass` para el Diccionario\<K, V > obtendrá correctamente un campo de Dictionary\<String, Int32 >.  
+ El `GetFieldValue` método seguirá teniendo éxito para los objetos genéricos y las clases genéricas. Por ejemplo, si el diccionario \< v> hereda de la cadena del diccionario \< , V> y el valor del objeto es del tipo de Diccionario de \< Int32>, al pasar el `ICorDebugClass` objeto del diccionario \< K, V> obtendrá correctamente un campo de cadena de diccionario \< , Int32>.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también

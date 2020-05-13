@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2221fd06-9e27-4113-972e-2530db8c3594
 topic_type:
 - apiref
-ms.openlocfilehash: f5af8e559b4fbfeb60530372185ca10104ade987
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5d0b231b4014e60a9e8778c6b9d6ed7758b2d8c5
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178852"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83208478"
 ---
 # <a name="icordebugheapenumnext-method"></a>ICorDebugHeapEnum::Next (Método)
-Obtiene el número especificado de [instancias de COR_HEAPOBJECT](cor-heapobject-structure.md) que contienen información sobre los objetos del montón administrado.  
+Obtiene el número especificado de instancias de [COR_HEAPOBJECT](cor-heapobject-structure.md) que contienen información sobre los objetos del montón administrado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,24 +39,24 @@ HRESULT Next(
  [in] Número de objetos que se van a recuperar.  
   
  objetos  
- [fuera] Matriz de punteros, cada uno de los cuales apunta a un [objeto COR_HEAPOBJECT](cor-heapobject-structure.md) que proporciona información sobre un objeto en el montón administrado.  
+ enuncia Matriz de punteros, cada uno de los cuales apunta a un [COR_HEAPOBJECT](cor-heapobject-structure.md) objeto que proporciona información sobre un objeto en el montón administrado.  
   
  pceltFetched  
- [fuera] Puntero al número de [objetos](cor-heapobject-structure.md) `objects`COR_HEAPOBJECT realmente devueltos en . Este valor puede ser `null` si `celt` es 1.  
+ enuncia Puntero al número de objetos [COR_HEAPOBJECT](cor-heapobject-structure.md) realmente devueltos en `objects` . Este valor puede ser `null` si `celt` es 1.  
   
 ## <a name="remarks"></a>Observaciones  
  El campo `COR_HEAPOBJECT.type` es el identificador de una interfaz COM contada como referencia anidada. Esta referencia debe liberarla el llamador de `ICorDebugHeapEnum::Next`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte también
 
-- [ICorDebugHeapEnum (interfaz)](icordebugheapenum-interface.md)
-- [Interfaces de depuración](debugging-interfaces.md)
+- [ICorDebugHeapEnum (Interfaz)](icordebugheapenum-interface.md)
+- [Interfaces para depuración](debugging-interfaces.md)

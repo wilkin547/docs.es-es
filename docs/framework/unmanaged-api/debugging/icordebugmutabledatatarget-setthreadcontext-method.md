@@ -2,12 +2,12 @@
 title: ICorDebugMutableDataTarget::SetThreadContext (método)
 ms.date: 03/30/2017
 ms.assetid: 8c0d01d5-67e5-4522-9ccf-c8f3a78cb4fd
-ms.openlocfilehash: 063c7954543174caece6f3dcbe005a4b2d059c64
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: a6df6bf030ad339f5d02b95cd191b30db60aa167
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792841"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210155"
 ---
 # <a name="icordebugmutabledatatargetsetthreadcontext-method"></a>ICorDebugMutableDataTarget::SetThreadContext (método)
 Establece el contexto (valores de registro) para un subproceso.  
@@ -20,7 +20,7 @@ HRESULT SetThreadContext(
    [in] ULONG32 contextSize,   [in, size_is(contextSize)] const BYTE * pContext);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parámetros  
  `dwThreadID`  
  [in] Identificador de subproceso definido por el sistema operativo.  
   
@@ -30,19 +30,19 @@ HRESULT SetThreadContext(
  `pContext`  
  [in] Puntero a los bytes que se van a escribir.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método `SetThreadContext` actualiza el contexto actual para el subproceso especificado por el argumento `dwThreadID` definido por el sistema operativo. El formato del registro de contexto viene determinado por la plataforma indicada por el método [ICorDebugDataTarget:: GetPlatform (](icordebugdatatarget-getplatform-method.md) . En Windows, se trata de una estructura de [contexto](/windows/win32/api/winnt/ns-winnt-arm64_nt_context) .  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [ICorDebugMutableDataTarget (interfaz)](icordebugmutabledatatarget-interface.md)
-- [Interfaces de depuración](debugging-interfaces.md)
+- [Interfaz ICorDebugMutableDataTarget](icordebugmutabledatatarget-interface.md)
+- [Interfaces para depuración](debugging-interfaces.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 937de6a0-6fbf-4ddc-80ea-a6217b73e62b
 topic_type:
 - apiref
-ms.openlocfilehash: e104f8c522af2ee4cd42332b7459f4a2fd185511
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 603ab20b57dc4ba736b0342797d0be649a5bebc4
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792686"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83207491"
 ---
 # <a name="icordebugobjectvalue-interface"></a>Interfaz ICorDebugObjectValue
 
@@ -29,29 +29,29 @@ Subclase de "ICorDebugValue" que representa un valor que contiene un objeto.
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[GetClass (método)](icordebugobjectvalue-getclass-method.md)|Obtiene un puntero de interfaz a la <xref:System.Type> de Common Language Runtime (CLR) del objeto al que hace referencia este `ICorDebugObjectValue`.|  
-|[GetContext (método)](icordebugobjectvalue-getcontext-method.md)|Sin implementar.|  
-|[GetFieldValue (método)](icordebugobjectvalue-getfieldvalue-method.md)|Obtiene un puntero de interfaz a un [ICorDebugValue](icordebugvalue-interface.md) que representa el valor del campo especificado de la clase especificada.|  
-|[GetManagedCopy (método)](icordebugobjectvalue-getmanagedcopy-method.md)|Obsoleta. No llame a este método.|  
-|[GetVirtualMethod (método)](icordebugobjectvalue-getvirtualmethod-method.md)|Sin implementar.|  
-|[IsValueClass (método)](icordebugobjectvalue-isvalueclass-method.md)|Obtiene un valor que indica si el objeto al que hace referencia este `ICorDebugObjectValue` es un tipo de valor.|  
-|[SetFromManagedCopy (método)](icordebugobjectvalue-setfrommanagedcopy-method.md)|Obsoleta. No llame a este método.|  
+|[Método GetClass](icordebugobjectvalue-getclass-method.md)|Obtiene un puntero de interfaz al Common Language Runtime (CLR) <xref:System.Type> del objeto al que `ICorDebugObjectValue` hace referencia.|  
+|[Método GetContext](icordebugobjectvalue-getcontext-method.md)|No implementado.|  
+|[Método GetFieldValue](icordebugobjectvalue-getfieldvalue-method.md)|Obtiene un puntero de interfaz a un [ICorDebugValue](icordebugvalue-interface.md) que representa el valor del campo especificado de la clase especificada.|  
+|[Método GetManagedCopy](icordebugobjectvalue-getmanagedcopy-method.md)|Obsoleto. No llame a este método.|  
+|[Método GetVirtualMethod](icordebugobjectvalue-getvirtualmethod-method.md)|No implementado.|  
+|[Método IsValueClass](icordebugobjectvalue-isvalueclass-method.md)|Obtiene un valor que indica si el objeto al que hace referencia este objeto `ICorDebugObjectValue` es un tipo de valor.|  
+|[Método SetFromManagedCopy](icordebugobjectvalue-setfrommanagedcopy-method.md)|Obsoleto. No llame a este método.|  
   
-## <a name="remarks"></a>Notas  
- Un `ICorDebugObjectValue` sigue siendo válido hasta que se continúa el proceso que se está depurando.  
+## <a name="remarks"></a>Observaciones  
+ Un `ICorDebugObjectValue` sigue siendo válido hasta que continúe el proceso que se está depurando.  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Interfaces de depuración](debugging-interfaces.md)
+- [Interfaces para depuración](debugging-interfaces.md)

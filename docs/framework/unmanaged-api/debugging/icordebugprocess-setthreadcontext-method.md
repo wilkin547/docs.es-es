@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a7b50175-2bf1-40be-8f65-64aec7aa1247
 topic_type:
 - apiref
-ms.openlocfilehash: 66d544bbc0511ea76565376c8f10294f1758026b
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: c9e403dc8cbb75a1e93c426a9e0b3a2083f1f10e
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792569"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210467"
 ---
 # <a name="icordebugprocesssetthreadcontext-method"></a>ICorDebugProcess::SetThreadContext (Método)
 Establece el contexto para el subproceso dado en este proceso.  
@@ -35,7 +35,7 @@ HRESULT SetThreadContext(
     BYTE context[]);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parámetros  
  `threadID`  
  de IDENTIFICADOR del subproceso para el que se va a establecer el contexto.  
   
@@ -47,18 +47,18 @@ HRESULT SetThreadContext(
   
  El contexto especifica la arquitectura del procesador en el que se ejecuta el subproceso.  
   
-## <a name="remarks"></a>Notas  
- El depurador debe llamar a este método en lugar de a la función `SetThreadContext` de Win32, porque el subproceso puede estar realmente en un estado "secuestrado", en el que su contexto ha cambiado temporalmente. Este método solo se debe usar cuando un subproceso está en código nativo. Use [ICorDebugRegisterSet](icordebugregisterset-interface.md) para subprocesos en código administrado. Nunca debe modificar el contexto de un subproceso durante un evento de depuración fuera de banda (OOB).  
+## <a name="remarks"></a>Observaciones  
+ El depurador debe llamar a este método en lugar de a la función de Win32 `SetThreadContext` , ya que el subproceso puede estar realmente en un estado "secuestrado", en el que su contexto ha cambiado temporalmente. Este método solo se debe usar cuando un subproceso está en código nativo. Use [ICorDebugRegisterSet](icordebugregisterset-interface.md) para subprocesos en código administrado. Nunca debe modificar el contexto de un subproceso durante un evento de depuración fuera de banda (OOB).  
   
  Los datos pasados deben ser una estructura de contexto para la plataforma actual.  
   
  Este método puede dañar el tiempo de ejecución si se usa de forma incorrecta.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

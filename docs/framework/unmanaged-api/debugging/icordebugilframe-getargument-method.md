@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e2fd423-f643-4c27-ba5f-41b5ebc3b416
 topic_type:
 - apiref
-ms.openlocfilehash: 01c7cb2e4359a477c26f995602dbf29668e567c0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d715f5842bb7f75da5311d34bf7d4596f0801a92
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131022"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210285"
 ---
 # <a name="icordebugilframegetargument-method"></a>ICorDebugILFrame::GetArgument (Método)
 Obtiene el valor del argumento especificado en este marco de pila del lenguaje intermedio de Microsoft (MSIL).  
@@ -39,16 +39,16 @@ HRESULT GetArgument (
  de Índice del argumento de este marco de pila de MSIL.  
   
  `ppValue`  
- enuncia Puntero a la dirección de un objeto ICorDebugValue que representa el valor recuperado.  
+ [out] Puntero a la dirección de un objeto ICorDebugValue que representa el valor recuperado.  
   
-## <a name="remarks"></a>Comentarios  
- El método `GetArgument` se puede utilizar en un marco de pila de MSIL o en un marco compilado Just-in-Time (JIT).  
+## <a name="remarks"></a>Observaciones  
+ El `GetArgument` método se puede utilizar en un marco de pila de MSIL o en un marco compilado Just-in-Time (JIT).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

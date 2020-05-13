@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b63a507a-ca97-4be0-8e4f-401cce2125f6
 topic_type:
 - apiref
-ms.openlocfilehash: c11e286d8c33d6823127d9a6d5989064e2299bc4
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 3a820381f1c4605d620d74a5915c3e08de69d9fb
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792143"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210129"
 ---
 # <a name="icordebugprocessenum-interface"></a>Interfaz ICorDebugProcessEnum
 Implementa los métodos ICorDebugEnum y enumera las matrices ICorDebugProcess.  
@@ -28,22 +28,22 @@ Implementa los métodos ICorDebugEnum y enumera las matrices ICorDebugProcess.
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Next (método)](icordebugprocessenum-next-method.md)|Obtiene el número especificado de instancias de `ICorDebugProcess` de la enumeración, comenzando en la posición actual.|  
+|[Next (Método)](icordebugprocessenum-next-method.md)|Obtiene el número especificado de `ICorDebugProcess` instancias de la enumeración, comenzando en la posición actual.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Interfaces de depuración](debugging-interfaces.md)
+- [Interfaces para depuración](debugging-interfaces.md)

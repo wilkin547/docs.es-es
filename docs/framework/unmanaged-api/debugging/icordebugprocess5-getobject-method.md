@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c8111502-5a20-447f-9dc2-76e8acd7ed5a
 topic_type:
 - apiref
-ms.openlocfilehash: 4b48132ee60bcaebb218d8f583de6558372f5055
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: de570507c4312f09def0908b9d56e5371c63527e
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178603"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83207292"
 ---
 # <a name="icordebugprocess5getobject-method"></a>ICorDebugProcess5::GetObject (Método)
 Convierte una dirección de objeto en un objeto "ICorDebugObjectValue".  
@@ -36,24 +36,24 @@ HRESULT GetObject(
   
 ## <a name="parameters"></a>Parámetros  
  `addr`  
- [en] La dirección del objeto.  
+ de Dirección del objeto.  
   
  `ppObject`  
- [fuera] Puntero a la dirección de un objeto "ICorDebugObjectValue".  
+ enuncia Puntero a la dirección de un objeto "ICorDebugObjectValue".  
   
 ## <a name="remarks"></a>Observaciones  
- Si `addr` no apunta a un objeto `GetObject` administrado `E_FAIL`válido, el método devuelve .  
+ Si no `addr` señala a un objeto administrado válido, el `GetObject` método devuelve `E_FAIL` .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte también
 
 - [ICorDebugProcess5 (Interfaz)](icordebugprocess5-interface.md)
-- [Interfaces de depuración](debugging-interfaces.md)
+- [Interfaces para depuración](debugging-interfaces.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f7653317-7e48-4163-be03-f50f1a4b0f70
 topic_type:
 - apiref
-ms.openlocfilehash: 852c77be0dc8ef91933bacbbd3d6b3f5a69ae8c8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ab2121605f974fdf3f9053214a4d29d8b0dd72db
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139390"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83211543"
 ---
 # <a name="icordebugprocessistransitionstub-method"></a>ICorDebugProcess::IsTransitionStub (Método)
 Obtiene un valor que indica si una dirección está dentro de un código auxiliar que producirá una transición a código administrado.  
@@ -35,21 +35,21 @@ HRESULT IsTransitionStub(
   
 ## <a name="parameters"></a>Parámetros  
  `address`  
- de Un valor `CORDB_ADDRESS` que especifica la dirección en cuestión.  
+ de `CORDB_ADDRESS`Valor que especifica la dirección en cuestión.  
   
  `pbTransitionStub`  
- enuncia Un puntero a un valor booleano que es `true` si la dirección especificada está dentro de un código auxiliar que producirá una transición a código administrado. de lo contrario, *`pbTransitionStub` es `false`.  
+ enuncia Un puntero a un valor booleano que es `true` si la dirección especificada está dentro de un código auxiliar que producirá una transición a código administrado; de lo contrario, * `pbTransitionStub` es `false` .  
   
-## <a name="remarks"></a>Comentarios  
- El código de paso no administrado puede utilizar el método `IsTransitionStub` para decidir cuándo devolver el control de versiones al stepper administrado.  
+## <a name="remarks"></a>Observaciones  
+ El `IsTransitionStub` código de paso no administrado puede utilizar el método para decidir cuándo devolver el control de versiones al stepper administrado.  
   
  También puede identificar los códigos auxiliares de transición examinando la información del archivo portable ejecutable (PE).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 32e4d6fa-e5a3-413e-9166-d5e2871d3114
 topic_type:
 - apiref
-ms.openlocfilehash: c573e6b768aee1e8b681dcf2e828dc24d409025b
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 105e56f2508eabbb6876a09d35e6abfbfc08950b
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793011"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212248"
 ---
 # <a name="icordebugmodule-interface"></a>Interfaz ICorDebugModule
 
@@ -29,39 +29,39 @@ Representa un módulo de Common Language Runtime (CLR), que es un archivo ejecut
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[CreateBreakpoint (método)](icordebugmodule-createbreakpoint-method.md)|Sin implementar.|  
-|[EnableClassLoadCallbacks (método)](icordebugmodule-enableclassloadcallbacks-method.md)|Determina si se llama a las devoluciones de llamada [ICorDebugManagedCallback:: loadClass](icordebugmanagedcallback-loadclass-method.md) y [ICorDebugManagedCallback:: UnloadClass (](icordebugmanagedcallback-unloadclass-method.md) para este módulo.|  
-|[EnableJITDebugging (método)](icordebugmodule-enablejitdebugging-method.md)|Determina si el compilador Just-in-Time (JIT) conserva la información de depuración de los métodos de este módulo.|  
-|[GetAssembly (método)](icordebugmodule-getassembly-method.md)|Obtiene el ensamblado contenedor de este módulo.|  
-|[GetBaseAddress (método)](icordebugmodule-getbaseaddress-method.md)|Obtiene la dirección base del módulo.|  
-|[GetClassFromToken (método)](icordebugmodule-getclassfromtoken-method.md)|Obtiene el ICorDebugClass de los metadatos.|  
-|[GetEditAndContinueSnapshot (método)](icordebugmodule-geteditandcontinuesnapshot-method.md)|Opción obsoleta.|  
-|[GetFunctionFromRVA (método)](icordebugmodule-getfunctionfromrva-method.md)|Sin implementar.|  
-|[GetFunctionFromToken (método)](icordebugmodule-getfunctionfromtoken-method.md)|Obtiene la función especificada por el token de metadatos.|  
-|[GetGlobalVariableValue (método)](icordebugmodule-getglobalvariablevalue-method.md)|Obtiene un objeto de valor para la variable global especificada.|  
-|[GetMetaDataInterface (método)](icordebugmodule-getmetadatainterface-method.md)|Obtiene un puntero de interfaz de metadatos que se puede utilizar para examinar los metadatos del módulo.|  
-|[GetName (método)](icordebugmodule-getname-method.md)|Obtiene el nombre de archivo del módulo.|  
-|[GetProcess (método)](icordebugmodule-getprocess-method.md)|Obtiene el proceso contenedor de este módulo.|  
-|[GetSize (método)](icordebugmodule-getsize-method.md)|Obtiene el tamaño del módulo en bytes.|  
-|[GetToken (método)](icordebugmodule-gettoken-method.md)|Obtiene el token para la entrada de la tabla para este módulo.|  
-|[IsDynamic (método)](icordebugmodule-isdynamic-method.md)|Indica si el módulo es dinámico.|  
-|[IsInMemory (método)](icordebugmodule-isinmemory-method.md)|Indica si este módulo solo existe en la memoria.|  
+|[Método CreateBreakpoint](icordebugmodule-createbreakpoint-method.md)|No implementado.|  
+|[Método EnableClassLoadCallbacks](icordebugmodule-enableclassloadcallbacks-method.md)|Determina si se llama a las devoluciones de llamada [ICorDebugManagedCallback:: loadClass](icordebugmanagedcallback-loadclass-method.md) y [ICorDebugManagedCallback:: UnloadClass (](icordebugmanagedcallback-unloadclass-method.md) para este módulo.|  
+|[Método EnableJITDebugging](icordebugmodule-enablejitdebugging-method.md)|Determina si el compilador Just-in-Time (JIT) conserva la información de depuración de los métodos de este módulo.|  
+|[Método GetAssembly](icordebugmodule-getassembly-method.md)|Obtiene el ensamblado contenedor de este módulo.|  
+|[GetBaseAddress (Método)](icordebugmodule-getbaseaddress-method.md)|Obtiene la dirección base del módulo.|  
+|[Método GetClassFromToken](icordebugmodule-getclassfromtoken-method.md)|Obtiene el ICorDebugClass de los metadatos.|  
+|[Método GetEditAndContinueSnapshot](icordebugmodule-geteditandcontinuesnapshot-method.md)|En desuso.|  
+|[Método GetFunctionFromRVA](icordebugmodule-getfunctionfromrva-method.md)|No implementado.|  
+|[Método GetFunctionFromToken](icordebugmodule-getfunctionfromtoken-method.md)|Obtiene la función especificada por el token de metadatos.|  
+|[Método GetGlobalVariableValue](icordebugmodule-getglobalvariablevalue-method.md)|Obtiene un objeto de valor para la variable global especificada.|  
+|[Método GetMetaDataInterface](icordebugmodule-getmetadatainterface-method.md)|Obtiene un puntero de interfaz de metadatos que se puede utilizar para examinar los metadatos del módulo.|  
+|[Método GetName](icordebugmodule-getname-method.md)|Obtiene el nombre de archivo del módulo.|  
+|[Método GetProcess](icordebugmodule-getprocess-method.md)|Obtiene el proceso contenedor de este módulo.|  
+|[Método GetSize](icordebugmodule-getsize-method.md)|Obtiene el tamaño del módulo en bytes.|  
+|[GetToken (Método)](icordebugmodule-gettoken-method.md)|Obtiene el token para la entrada de la tabla para este módulo.|  
+|[Método IsDynamic](icordebugmodule-isdynamic-method.md)|Indica si el módulo es dinámico.|  
+|[Método IsInMemory](icordebugmodule-isinmemory-method.md)|Indica si este módulo solo existe en la memoria.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [ICorDebug (interfaz)](icordebug-interface.md)
-- [Interfaces de depuración](debugging-interfaces.md)
+- [ICorDebug (Interfaz)](icordebug-interface.md)
+- [Interfaces para depuración](debugging-interfaces.md)
