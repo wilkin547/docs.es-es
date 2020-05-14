@@ -11,14 +11,14 @@ metadata:
   author: mamccrea
   ms.author: mamccrea
   ms.date: 09/11/2019
-  ms.openlocfilehash: b75740fa84fd7c6fa383129075a082c4ea2ccdcc
-  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.openlocfilehash: 5b477daf0f52d48a6f068fa8eafeb1b787d19c39
+  ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 03/15/2020
-  ms.locfileid: "77542811"
+  ms.lasthandoff: 05/12/2020
+  ms.locfileid: "83212232"
 landingContent:
-- title: Información sobre .NET para Apache Spark
+- title: Aspectos básicos de .NET para Apache Spark
   linkLists:
   - linkListType: whats-new
     links:
@@ -34,7 +34,7 @@ landingContent:
       url: /dotnet/api/?view=spark-dotnet
     - text: GitHub
       url: https://github.com/dotnet/spark
-- title: Primeros pasos
+- title: Empezar a trabajar en 10 minutos
   linkLists:
   - linkListType: tutorial
     links:
@@ -58,3 +58,15 @@ landingContent:
     links:
     - text: Depuración de la aplicación
       url: how-to-guides/debug.md
+    - text: Implementación de archivos binarios UDF y de trabajo
+      url: how-to-guides/deploy-worker-udf-binaries.md
+- title: Procesamiento de macrodatos
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Procesamiento por lotes
+      url: tutorials/batch-processing.md
+    - text: Streaming estructurado
+      url: tutorials/streaming.md
+    - text: Análisis de sentimiento
+      url: tutorials/ml-sentiment-analysis.md

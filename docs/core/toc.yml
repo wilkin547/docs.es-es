@@ -401,6 +401,8 @@
       href: versions/selection.md
 - name: Catálogo de identificadores de tiempo de ejecución (RID)
   href: rid-catalog.md
+- name: Nombres del manifiesto de recurso
+  href: resources/manifest-file-names.md
 - name: Administración y carga de dependencias
   items:
     - name: Administración de dependencias
