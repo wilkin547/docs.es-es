@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c312ae6d-c8dc-48d6-9f1e-ead515c88fdf
 topic_type:
 - apiref
-ms.openlocfilehash: 74b3c7bed54f3735efbd5d2c56962d427518f71a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d5962de8cc2762f6ecf4864c5255da0fe83918e4
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790944"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396528"
 ---
 # <a name="icordebugvariablehomeenum-interface"></a>Interfaz ICorDebugVariableHomeEnum
 Proporciona un enumerador para las variables locales y los argumentos de una función.  
@@ -28,23 +28,23 @@ Proporciona un enumerador para las variables locales y los argumentos de una fun
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Next (método)](icordebugvariablehomeenum-next-method.md)|Obtiene el número especificado de instancias de [ICorDebugVariableHome](icordebugvariablehome-interface.md) que contienen información sobre las variables locales y los argumentos de una función.|  
+|[Next (Método)](icordebugvariablehomeenum-next-method.md)|Obtiene el número especificado de instancias de [ICorDebugVariableHome](icordebugvariablehome-interface.md) que contienen información sobre las variables locales y los argumentos de una función.|  
   
-## <a name="remarks"></a>Notas  
- La interfaz de `ICorDebugVariableHomeEnum` implementa la interfaz ICorDebugEnum.  
+## <a name="remarks"></a>Comentarios  
+ La `ICorDebugVariableHomeEnum` interfaz implementa la interfaz ICorDebugEnum.  
   
- Una instancia de `ICorDebugVariableHomeEnum` se rellena con instancias de [ICorDebugVariableHome](icordebugvariablehome-interface.md) llamando al método [interfaces icordebugcode4:: EnumerateVariableHomes](icordebugcode4-enumeratevariablehomes-method.md) . Cada instancia de [ICorDebugVariableHome](icordebugvariablehome-interface.md) de la colección representa una variable local o un argumento de una función. Los objetos [ICorDebugVariableHome](icordebugvariablehome-interface.md) de la colección se pueden enumerar llamando al método [ICorDebugVariableHomeEnum:: Next](icordebugvariablehomeenum-next-method.md) .  
+ Una `ICorDebugVariableHomeEnum` instancia se rellena con instancias de [ICorDebugVariableHome](icordebugvariablehome-interface.md) llamando al método [interfaces icordebugcode4:: EnumerateVariableHomes](icordebugcode4-enumeratevariablehomes-method.md) . Cada instancia de [ICorDebugVariableHome](icordebugvariablehome-interface.md) de la colección representa una variable local o un argumento de una función. Los objetos [ICorDebugVariableHome](icordebugvariablehome-interface.md) de la colección se pueden enumerar llamando al método [ICorDebugVariableHomeEnum:: Next](icordebugvariablehomeenum-next-method.md) .  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [ICorDebugVariableHome (interfaz)](icordebugvariablehome-interface.md)
-- [Interfaces de depuración](debugging-interfaces.md)
+- [Interfaz ICorDebugVariableHome](icordebugvariablehome-interface.md)
+- [Interfaces para depuración](debugging-interfaces.md)

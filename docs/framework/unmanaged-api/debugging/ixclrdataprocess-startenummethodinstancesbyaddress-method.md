@@ -1,5 +1,5 @@
 ---
-title: Método IXCLRDataProcess::StartEnumMethodInstancesByAddress
+title: 'IXCLRDataProcess:: StartEnumMethodInstancesByAddress (método)'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataProcess::StartEnumMethodInstancesByAddress Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: d7c395e68ad5d8042f9850f25757a5aa445e5c40
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e28fa73300e147ac07a2d325fbf517480bb73797
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752677"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83394946"
 ---
-# <a name="ixclrdataprocessstartenummethodinstancesbyaddress-method"></a>Método IXCLRDataProcess::StartEnumMethodInstancesByAddress
+# <a name="ixclrdataprocessstartenummethodinstancesbyaddress-method"></a>IXCLRDataProcess:: StartEnumMethodInstancesByAddress (método)
 
-Proporciona un identificador para enumerar las instancias de método de `AppDomain` a partir de una dirección determinada.
+Proporciona un identificador para enumerar las instancias de método de que `AppDomain` empiezan en una dirección determinada.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -41,24 +41,24 @@ HRESULT StartEnumMethodInstancesByAddress(
 ## <a name="parameters"></a>Parámetros
 
 `address`\
-[in] La dirección de la primera instancia de método.
+de Dirección de la primera instancia de método.
 
 `appDomain`\
-[in] El dominio de aplicación de las instancias de método.
+de AppDomain de las instancias de método.
 
 `handle`\
-[out] Un identificador para enumerar las instancias de método.
+enuncia Identificador para enumerar las instancias de método.
 
 ## <a name="remarks"></a>Comentarios
 
-El método proporcionado forma parte de la `IXCLRDataProcess` interfaz y corresponde a la ranura de la tabla de métodos virtuales 27.
+El método proporcionado forma parte de la `IXCLRDataProcess` interfaz y corresponde a la ranura 28 de la tabla del método virtual.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
-**Encabezado**: None  
-**Biblioteca:** None  
-**Versiones de .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Encabezado:** Ninguna  
+**Biblioteca:** Ninguna  
+**.NET Framework versiones:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Vea también
 

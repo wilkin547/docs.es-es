@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6ef8ac9b-9803-4b65-8b13-25f3e0b1bc6b
 topic_type:
 - apiref
-ms.openlocfilehash: 762c637696fdf79ccab6702918b5bf962ea55903
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e95f96847c6e069758362fb6febc28dc31911bc9
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178417"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396295"
 ---
 # <a name="icorpublishappdomaingetname-method"></a>ICorPublishAppDomain::GetName (Método)
 Obtiene el nombre del dominio de aplicación representado por este [ICorPublishAppDomain](icorpublishappdomain-interface.md).  
@@ -41,25 +41,25 @@ HRESULT GetName (
  [in] Tamaño de la matriz `szName`.  
   
  `pcchName`  
- [fuera] Puntero al número de caracteres anchos, incluido `szName` el carácter nulo, devuelto en la matriz.  
+ enuncia Puntero al número de caracteres anchos, incluido el carácter nulo, devuelto en la `szName` matriz.  
   
  `szName`  
- [fuera] Matriz en la que almacenar el nombre.  
+ enuncia Matriz en la que se va a almacenar el nombre.  
   
-## <a name="remarks"></a>Observaciones  
- Si `szName` no es null, el `GetName` `cchName` método copia hasta caracteres `szName`(incluido el terminador nulo) en . Si se devuelve un `pcchName`valor distinto de null en , el número real de `szName` caracteres del nombre (incluido el terminador nulo) se almacena en la matriz.  
+## <a name="remarks"></a>Comentarios  
+ Si `szName` no es null, el `GetName` método copia hasta `cchName` caracteres (incluido el terminador null) en `szName` . Si se devuelve un valor distinto de NULL en `pcchName` , el número real de caracteres del nombre (incluido el terminador nulo) se almacena en la `szName` matriz.  
   
- El `GetName` método devuelve un S_OK HRESULT independientemente de cuántos caracteres se copiaron.  
+ El `GetName` método devuelve un S_OK HRESULT independientemente del número de caracteres que se hayan copiado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** CorPub.idl, CorPub.h  
+ **Encabezado:** CorPub. idl, CorPub. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorPublishAppDomain (Interfaz)](icorpublishappdomain-interface.md)

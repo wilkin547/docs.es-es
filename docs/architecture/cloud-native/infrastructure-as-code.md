@@ -1,25 +1,29 @@
 ---
 title: Infraestructura como código
-description: Diseño de aplicaciones .NET nativas en la nube para Azure | Infraestructura como código
-ms.date: 06/30/2019
-ms.openlocfilehash: 3957da68ac28774f899f49fb181a29c2435902f8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+description: Adopción de infraestructura como código (IaC) con aplicaciones nativas de la nube
+ms.date: 05/12/2020
+ms.openlocfilehash: 309dd8610ab3b72a6c6da5297f109f822520c5ff
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841784"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395347"
 ---
 # <a name="infrastructure-as-code"></a>Infraestructura como código
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Las aplicaciones nativas de la nube tienden a hacer uso de todo tipo de componentes de plataforma como servicio (PaaS) fantásticos. En una plataforma en la nube como Azure, estos componentes pueden incluir elementos como Storage, Service Bus y Signalr Service. A medida que las aplicaciones son más complicadas, es probable que el número de estos servicios en uso crezca. Del mismo modo que la entrega continua rompió el modelo tradicional de implementación en un entorno de forma manual, el rápido ritmo de cambio también dañó el modelo de tener un grupo de ti centralizado para administrar entornos.
+Los sistemas nativos en la nube adoptan microservicios, contenedores y un diseño moderno del sistema para lograr la velocidad y la agilidad. Proporcionan fases automatizadas de compilación y versión para garantizar un código coherente y de calidad. Pero eso es solo parte de la historia. ¿Cómo se aprovisionan los entornos de nube en los que se ejecutan estos sistemas?
 
-También se pueden automatizar los entornos de compilación. Hay una amplia gama de herramientas muy compensadas que pueden facilitar el proceso.
+Las modernas aplicaciones nativas en la nube adoptan la práctica ampliamente aceptada de [infraestructura como código](https://docs.microsoft.com/azure/devops/learn/what-is-infrastructure-as-code), o `IaC` .  Con IaC, puede automatizar el aprovisionamiento de plataforma. Esencialmente, aplica prácticas de ingeniería de software, como pruebas y control de versiones a las prácticas de DevOps. La infraestructura y las implementaciones son automatizadas, coherentes y repetibles. Del mismo modo que la entrega continua automatiza el modelo tradicional de implementaciones manuales, la infraestructura como código (IaC) está evolucionando el modo en que se administran los entornos de aplicación.
 
-## <a name="azure-resource-manager-templates"></a>Plantillas de Azure Resource Manager
+Herramientas como Azure Resource Manager (ARM), terraform y la interfaz de la línea de comandos (CLI) de Azure le permiten crear un script de la infraestructura de la nube que necesita mediante declaración.
 
-Azure Resource Manager plantillas son un lenguaje basado en JSON para definir varios recursos en Azure. El esquema básico tiene un aspecto similar al de la figura 11-10.
+## <a name="azure-resource-manager-templates"></a>Plantillas del Administrador de recursos de Azure
+
+ARM significa [Azure Resource Manager](https://azure.microsoft.com/documentation/articles/resource-group-overview/). Es un motor de aprovisionamiento de API que se integra en Azure y se expone como un servicio de API. ARM permite implementar, actualizar, eliminar y administrar los recursos contenidos en el grupo de recursos de Azure en una única operación coordinada. El motor se proporciona con una plantilla basada en JSON que especifica los recursos necesarios y su configuración. ARM organiza automáticamente la implementación en el orden correcto que respeta las dependencias. El motor de garantiza Idempotencia. Si ya existe un recurso deseado con la misma configuración, se omitirá el aprovisionamiento.
+
+Azure Resource Manager plantillas son un lenguaje basado en JSON para definir varios recursos en Azure. El esquema básico tiene un aspecto similar al de la figura 10-14.
 
 ```json
 {
@@ -34,7 +38,7 @@ Azure Resource Manager plantillas son un lenguaje basado en JSON para definir va
 }
 ```
 
-**Figura 11-10** : el esquema de una plantilla de administrador de recursos
+**Figura 10-14** : el esquema de una plantilla de administrador de recursos
 
 Dentro de esta plantilla, se puede definir un contenedor de almacenamiento dentro de la sección de recursos, como por ejemplo:
 
@@ -54,21 +58,21 @@ Dentro de esta plantilla, se puede definir un contenedor de almacenamiento dentr
   ],
 ```
 
-**Figura 11-11** : ejemplo de una cuenta de almacenamiento definida en una plantilla de administrador de recursos
+**Figura 10-15** : ejemplo de una cuenta de almacenamiento definida en una plantilla de administrador de recursos
 
-Las plantillas se pueden parametrizar para que se pueda reutilizar una plantilla con distintas configuraciones para definir entornos de desarrollo, QA y producción. Esto ayuda a eliminar sorpresas al migrar a un entorno superior que está configurado de forma diferente en los entornos inferiores. Normalmente, los recursos definidos en una plantilla se crean dentro de un único grupo de recursos en Azure (es posible definir varios grupos de recursos en una sola plantilla de Administrador de recursos pero inusual). Esto facilita la eliminación de un entorno con solo eliminar el grupo de recursos en su totalidad. El análisis de costos también se puede ejecutar en el nivel de grupo de recursos, lo que permite una rápida contabilización de la cantidad de costos de cada entorno.
+Una plantilla de ARM se puede parametrizar con información de entorno y configuración dinámica. De este modo, se puede reutilizar para definir diferentes entornos, como desarrollo, QA o producción. Normalmente, la plantilla crea todos los recursos de un único grupo de recursos de Azure. Es posible definir varios grupos de recursos en una sola plantilla de Administrador de recursos, si es necesario. Puede eliminar todos los recursos de un entorno eliminando el propio grupo de recursos. El análisis de costos también se puede ejecutar en el nivel de grupo de recursos, lo que permite una rápida contabilización de la cantidad de costos de cada entorno.
 
-Hay muchas plantillas de ejemplo definidas en el proyecto de [plantillas de inicio rápido de Azure](https://github.com/Azure/azure-quickstart-templates) en github que dará una partida al iniciarse en una plantilla nueva o al agregarse a una existente.
+Hay muchos ejemplos o plantillas de ARM disponibles en el proyecto de [plantillas de inicio rápido de Azure](https://github.com/Azure/azure-quickstart-templates) en github. Pueden ayudar a acelerar la creación de una nueva plantilla o la modificación de una existente.
 
-Administrador de recursos plantillas se pueden ejecutar de varias maneras. Quizás la manera más sencilla consiste en pegarlos simplemente en el Azure Portal. En el caso de las implementaciones experimentales, este método puede ser muy rápido. También se pueden ejecutar como parte de un proceso de compilación o lanzamiento en Azure DevOps. Hay tareas que aprovecharán las conexiones en Azure para ejecutar las plantillas. Los cambios en las plantillas de Administrador de recursos se aplican de forma incremental, lo que significa que para agregar un nuevo recurso, solo es necesario agregarlo a la plantilla. Las herramientas controlarán la diferenciación del grupo de recursos actual con el grupo de recursos deseado definido en la plantilla. Los recursos se crearán o modificarán, de modo que coincidan con lo que se define en la plantilla.  
+Administrador de recursos plantillas se pueden ejecutar de muchas maneras. Quizás la manera más sencilla consiste en pegarlos simplemente en el Azure Portal. En el caso de las implementaciones experimentales, este método puede ser rápido. También se pueden ejecutar como parte de un proceso de compilación o lanzamiento en Azure DevOps. Hay tareas que aprovecharán las conexiones en Azure para ejecutar las plantillas. Los cambios en las plantillas de Administrador de recursos se aplican de forma incremental, lo que significa que para agregar un nuevo recurso, solo es necesario agregarlo a la plantilla. Las herramientas de conciliarán las diferencias entre los recursos actuales y los definidos en la plantilla. Los recursos se crearán o modificarán, de modo que coincidan con lo que se define en la plantilla.  
 
 ## <a name="terraform"></a>Terraform
 
-Un inconveniente percibido de las plantillas de Administrador de recursos es que son específicas de la nube de Azure. No es habitual crear aplicaciones que incluyen recursos de más de una nube, pero en los casos en los que el negocio se basa en un tiempo de actividad increíble, el costo de admitir varias nubes podría merecer la pena. Si había un lenguaje de plantillas que podría usarse en todas las nubes, también podría permitir que los conocimientos para desarrolladores fueran mucho más portátiles.
+A menudo, las aplicaciones nativas de la nube están construidas para ser `cloud agnostic` . Es decir, la aplicación no está estrechamente acoplada a un determinado proveedor de la nube y se puede implementar en cualquier nube pública.
 
-Existen varias tecnologías que hacen eso. La oferta más madura en ese espacio se conoce como [terraform](https://www.terraform.io/). Terraform es compatible con todos los principales reproductores en la nube, como Azure, Google Cloud Platform, AWS y alicloud, y también admite docenas de reproductores menores como Heroku y DigitalOcean. En lugar de usar JSON como lenguaje de definición de plantillas, usa el YAML ligeramente más conciso.
+[Terraform](https://www.terraform.io/) es una herramienta de plantillas comerciales que puede aprovisionar aplicaciones nativas en la nube en todos los principales reproductores en la nube: Azure, Google Cloud Platform, AWS y alicloud. En lugar de usar JSON como lenguaje de definición de plantillas, usa el YAML ligeramente más conciso.
 
-En la figura 11-12 se muestra un archivo terraform de ejemplo que hace lo mismo que la plantilla de Administrador de recursos anterior (Figura 11-11):
+En la figura 10-16 se muestra un archivo terraform de ejemplo que hace lo mismo que la plantilla de Administrador de recursos anterior (Figura 10-15):
 
 ```terraform
 provider "azurerm" {
@@ -90,14 +94,40 @@ resource "azurerm_storage_account" "testsa" {
 }
 ```
 
-**Figura 11-12** : ejemplo de una plantilla de administrador de recursos
+**Figura 10-16** : ejemplo de una plantilla de administrador de recursos
 
-Terraform realiza un mejor trabajo de proporcionar mensajes de error razonables cuando no se puede implementar un recurso debido a un error en la plantilla. Se trata de un área en la que Administrador de recursos plantillas tienen algunos desafíos continuos. También hay una tarea de validación muy útil que se puede usar en la fase de compilación para detectar los errores de plantilla con antelación.
+Terraform también proporciona mensajes de error intuitivos para las plantillas de problemas. También hay una tarea de validación útil que se puede usar en la fase de compilación para detectar los errores de plantilla con antelación.
 
-Al igual que con las plantillas de Administrador de recursos, existen herramientas de línea de comandos que se pueden usar para implementar plantillas terraform. También hay tareas creadas por la comunidad en Azure Pipelines que pueden validar y aplicar plantillas terraform.
+Al igual que con las plantillas de Administrador de recursos, las herramientas de línea de comandos están disponibles para implementar plantillas terraform. También hay tareas creadas por la comunidad en Azure Pipelines que pueden validar y aplicar plantillas terraform.
 
-En caso de que la plantilla terraform o Administrador de recursos genere valores interesantes, como la cadena de conexión a una base de datos recién creada, se pueden capturar en la canalización de compilación y usarse en tareas posteriores.
+A veces, las plantillas terraform y ARM generan valores significativos, como una cadena de conexión a una base de datos recién creada. Esta información se puede capturar en la canalización de compilación y usarse en tareas posteriores.
+
+## <a name="azure-cli-scripts-and-tasks"></a>CLI de Azure scripts y tareas
+
+Por último, puede aprovechar [CLI de Azure](https://docs.microsoft.com/cli/azure/) para crear un script de la infraestructura de la nube mediante declaración. CLI de Azure scripts se pueden crear, encontrar y compartir para aprovisionar y configurar prácticamente cualquier recurso de Azure. La CLI es fácil de usar con una curva de aprendizaje suave. Los scripts se ejecutan dentro de PowerShell o bash. También son fáciles de depurar, especialmente cuando se comparan con las plantillas de ARM.
+
+CLI de Azure scripts funcionan bien cuando es necesario anular y volver a implementar la infraestructura. Actualizar un entorno existente puede ser complicado. Muchos comandos de la CLI no son idempotente. Esto significa que volverá a crear el recurso cada vez que se ejecuten, incluso si el recurso ya existe. Siempre es posible agregar código que Compruebe la existencia de cada recurso antes de crearlo. Pero, si lo hace, el script puede ser más difícil de administrar.
+
+Estos scripts también se pueden insertar en las canalizaciones de Azure DevOps como `Azure CLI tasks` . La ejecución de la canalización invoca el script.
+
+En la figura 10-17 se muestra un fragmento de código de YAML que muestra la versión de CLI de Azure y los detalles de la suscripción. Observe cómo los comandos de CLI de Azure se incluyen en un script en línea.
+
+```yaml
+- task: AzureCLI@2
+  displayName: Azure CLI
+  inputs:
+    azureSubscription: <Name of the Azure Resource Manager service connection>
+    scriptType: ps
+    scriptLocation: inlineScript
+    inlineScript: |
+      az --version
+      az account show
+```
+
+**Figura 10-17** -script de CLI de Azure
+
+En el artículo [¿Qué es la infraestructura como código](https://docs.microsoft.com/azure/devops/learn/what-is-infrastructure-as-code)? Author Sam Guckenheimer describe cómo "los equipos que implementan IaC pueden ofrecer entornos estables rápidamente y a escala. Los equipos evitan la configuración manual de los entornos y aplican la coherencia al representar el estado deseado de sus entornos a través del código. Las implementaciones de infraestructura con IaC se pueden repetir y evitan problemas en tiempo de ejecución causados por el desfase de la configuración o las dependencias que faltan. Los equipos de DevOps pueden trabajar junto con un conjunto unificado de prácticas y herramientas para ofrecer aplicaciones y su infraestructura de soporte de forma rápida, confiable y a escala ".
 
 >[!div class="step-by-step"]
->[Anterior](devops.md)
+>[Anterior](feature-flags.md)
 >[Siguiente](application-bundles.md)

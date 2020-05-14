@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f5ef94dd-dfee-49d3-a398-b110f8906dd8
 topic_type:
 - apiref
-ms.openlocfilehash: 09394acb07b8595f99d9ecc873eb0985cdd79316
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: db1721fed6414310556ceac493275e069a781ac8
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134597"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83397143"
 ---
 # <a name="icordebugvalueenumnext-method"></a>ICorDebugValueEnum::Next (Método)
 Obtiene el número especificado de instancias de "ICorDebugValue" de la enumeración, comenzando en la posición actual.  
@@ -38,21 +38,21 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parámetros  
  `celt`  
- de Número de instancias de `ICorDebugValue` que se van a recuperar.  
+ de El número de `ICorDebugValue` instancias que se van a recuperar.  
   
  `values`  
- enuncia Matriz de punteros, cada uno de los cuales señala a un objeto `ICorDebugValue`.  
+ enuncia Matriz de punteros, cada uno de los cuales señala a un `ICorDebugValue` objeto.  
   
  `pceltFetched`  
- enuncia Puntero al número de instancias de `ICorDebugValue` devueltas realmente. Este valor puede ser null si `celt` es uno.  
+ enuncia Puntero al número de `ICorDebugValue` instancias devueltas realmente. Este valor puede ser null si `celt` es uno.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también

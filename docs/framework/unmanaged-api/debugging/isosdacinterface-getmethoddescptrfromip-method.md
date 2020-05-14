@@ -1,5 +1,5 @@
 ---
-title: Método ISOSDacInterface::GetMethodDescPtrFromIP
+title: 'ISOSDacInterface:: GetMethodDescPtrFromIP (método)'
 ms.date: 02/01/2019
 api.name:
 - ISOSDacInterface::GetMethodDescPtrFromIP Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: cd256250021436e611142de11c3625a21aeec814
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c8d91c11205e06857b4a6e7edfedcd087270d00
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764742"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396934"
 ---
-# <a name="isosdacinterfacegetmethoddescptrfromip-method"></a>Método ISOSDacInterface::GetMethodDescPtrFromIP
+# <a name="isosdacinterfacegetmethoddescptrfromip-method"></a>ISOSDacInterface:: GetMethodDescPtrFromIP (método)
 
-Recupera el puntero de la MethodDesc correspondiente del método que contiene la dirección de instrucción nativo especificado.
+Recupera el puntero de la MethodDesc correspondiente al método que contiene la dirección de instrucción nativa especificada.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -40,21 +40,21 @@ HRESULT GetMethodDescPtrFromIP(
 ## <a name="parameters"></a>Parámetros
 
 `ip`\
-[in] Una dirección dentro del método en tiempo de ejecución.
+de Una dirección dentro del método en tiempo de ejecución.
 
 `ppMD`\
-[out] La dirección de la `MethodDesc` para el método concreto.
+enuncia La dirección de `MethodDesc` para el método determinado.
 
 ## <a name="remarks"></a>Comentarios
 
-El método proporcionado forma parte de la [ `ISOSDacInterface` interfaz](isosdacinterface-interface.md) y corresponde a la ranura de la tabla de métodos virtuales 21.
+El método proporcionado forma parte de la [ `ISOSDacInterface` interfaz](isosdacinterface-interface.md) y corresponde a la ranura 22 de la tabla del método virtual.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
-**Encabezado**: None  
-**Biblioteca:** None  
-**Versiones de .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Encabezado:** Ninguna  
+**Biblioteca:** Ninguna  
+**.NET Framework versiones:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Vea también
 

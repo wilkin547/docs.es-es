@@ -2,12 +2,12 @@
 title: IdentityServer para aplicaciones nativas en la nube
 description: Diseño de aplicaciones .NET nativas en la nube para Azure | IdentityServer
 ms.date: 06/30/2019
-ms.openlocfilehash: 48d0b95a40682f3127127851781b4d0e26e44630
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 536a4cbdbdaee47f3a5a0d9f93b2736270d9ea7a
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76728580"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83394878"
 ---
 # <a name="identityserver-for-cloud-native-applications"></a>IdentityServer para aplicaciones nativas para la nube
 
@@ -25,8 +25,9 @@ Normalmente, las aplicaciones deben admitir algunos o todos los escenarios sigui
 - Otras aplicaciones que acceden a las API Web de back-end (sin una interfaz de usuario o usuario activa).
 - Cualquier aplicación puede necesitar interactuar con otras API Web, usando su propia identidad o delegando la identidad del usuario.
 
-![tipos y escenarios de aplicación](./media/application-types.png)
-la **figura 8-1**. Tipos y escenarios de aplicaciones.
+![Escenarios y tipos de aplicación](./media/application-types.png)
+
+**Figura 8-1**. Tipos y escenarios de aplicaciones.
 
 En cada uno de estos escenarios, la funcionalidad expuesta debe protegerse contra el uso no autorizado. Como mínimo, normalmente esto requiere la autenticación del usuario o la entidad de seguridad que realiza una solicitud para un recurso. Esta autenticación puede usar uno de varios protocolos comunes, como SAML2p, WS-FED o OpenID Connect. La comunicación con las API normalmente usa el protocolo OAuth2 y su compatibilidad con los tokens de seguridad. La separación de estas cuestiones críticas de seguridad transversales y sus detalles de implementación de las propias aplicaciones garantiza la coherencia y mejora la seguridad y el mantenimiento. El outsourcing de estos problemas con un producto dedicado, como IdentityServer, ayuda a la necesidad de que cada aplicación resuelva estos problemas por sí mismo.
 
@@ -47,7 +48,7 @@ IdentityServer4 es de código abierto y está disponible para su uso. Puede agre
 
 ## <a name="configuration"></a>Configuración
 
-IdentityServer admite distintos tipos de protocolos y proveedores de autenticación social que se pueden configurar como parte de cada instalación personalizada. Esto se hace normalmente en la clase `Startup` de la aplicación ASP.NET Core en el método `ConfigureServices`. La configuración implica especificar los protocolos admitidos y las rutas de acceso a los servidores y extremos que se usarán. En la figura 8-2 se muestra una configuración de ejemplo tomada del proyecto de IU de inicio rápido de IdentityServer4:
+IdentityServer admite distintos tipos de protocolos y proveedores de autenticación social que se pueden configurar como parte de cada instalación personalizada. Esto se hace normalmente en la clase de la aplicación ASP.NET Core `Startup` en el `ConfigureServices` método. La configuración implica especificar los protocolos admitidos y las rutas de acceso a los servidores y extremos que se usarán. En la figura 8-2 se muestra una configuración de ejemplo tomada del proyecto de IU de inicio rápido de IdentityServer4:
 
 ```csharp
 public class Startup
@@ -92,11 +93,11 @@ public class Startup
 
 **Figura 8-2**. Configuración de IdentityServer.
 
-IdentityServer también hospeda un sitio de demostración público que se puede usar para probar diversos protocolos y configuraciones. Se encuentra en [https://demo.identityserver.io/](https://demo.identityserver.io/) e incluye información sobre cómo configurar su comportamiento en función del `client_id` que se le proporciona.
+IdentityServer también hospeda un sitio de demostración público que se puede usar para probar diversos protocolos y configuraciones. Se encuentra en [https://demo.identityserver.io/](https://demo.identityserver.io/) e incluye información sobre cómo configurar su comportamiento en función del que `client_id` se le proporciona.
 
 ## <a name="javascript-clients"></a>Clientes de JavaScript
 
-Muchas aplicaciones nativas en la nube aprovechan las API del lado servidor y las aplicaciones de página única de cliente enriquecidas (Spa) en el front-end. IdentityServer envía un [cliente de JavaScript](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html) (`oidc-client.js`) a través de NPM que se puede Agregar a Spa para permitirles usar IdentityServer para el inicio de sesión, cierre de sesión y la autenticación basada en tokens de las API Web.
+Muchas aplicaciones nativas en la nube aprovechan las API del lado servidor y las aplicaciones de página única de cliente enriquecidas (Spa) en el front-end. IdentityServer envía un [cliente de JavaScript](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html) ( `oidc-client.js` ) a través de NPM que se puede Agregar a Spa para permitirles usar IdentityServer para el inicio de sesión, el cierre de sesión y la autenticación basada en tokens de las API Web.
 
 ## <a name="references"></a>Referencias
 

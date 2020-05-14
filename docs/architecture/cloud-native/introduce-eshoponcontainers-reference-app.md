@@ -2,12 +2,12 @@
 title: Presentación de la aplicación de referencia eShopOnContainers
 description: Introducción a la aplicación de referencia de microservicios nativos en la nube de eShopOnContainers para ASP.NET Core y Azure.
 ms.date: 06/30/2019
-ms.openlocfilehash: 8d4ad982716a07613ebbef6668afab69d5a8b4f6
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: b97b62268db1d9990f762d9769233ad72551c226
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895536"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395400"
 ---
 # <a name="introducing-eshoponcontainers-reference-app"></a>Presentación de la aplicación de referencia eShopOnContainers
 
@@ -50,7 +50,7 @@ La aplicación también tiene los siguientes requisitos no funcionales:
 
 Se puede acceder a la aplicación eShopOnContainers desde clientes Web o móviles que tienen acceso a la aplicación a través de HTTPS que tienen como destino la aplicación de servidor de ASP.NET Core MVC o una puerta de enlace de API adecuada. Las puertas de enlace de API ofrecen varias ventajas, como separar los servicios back-end de clientes front-end individuales y proporcionar una mejor seguridad. La aplicación también usa un patrón relacionado conocido como back-ends-para-frontends (BFF), que recomienda crear puertas de enlace de API independientes para cada cliente front-end. La arquitectura de referencia muestra la división de las puertas de enlace de API en función de si la solicitud procede de un cliente web o móvil.
 
-La funcionalidad de la aplicación se divide en una serie de microservicios distintos. Hay servicios responsables de la autenticación y la identidad, la enumeración de elementos del catálogo de productos, la administración de las cestas de la compra de los usuarios y la realización de pedidos. Cada uno de estos servicios independientes tiene su propio almacenamiento persistente. Tenga en cuenta que no hay un único almacén de datos maestros con el que todos los servicios interactúan. En su lugar, la coordinación y la comunicación entre los servicios se realizan según sea necesario y mediante el uso de un bus de mensajes.
+La funcionalidad de la aplicación se divide en una serie de microservicios distintos. Hay servicios responsables de la autenticación y la identidad, la enumeración de elementos del catálogo de productos, la administración de las cestas de la compra de los usuarios y la realización de pedidos. Cada uno de estos servicios independientes tiene su propio almacenamiento persistente. No hay un único almacén de datos maestros con el que todos los servicios interactúan. En su lugar, la coordinación y la comunicación entre los servicios se realizan según sea necesario y mediante el uso de un bus de mensajes.
 
 Cada uno de los microservicios diferentes está diseñado de manera diferente, en función de sus requisitos individuales. Esto significa que su pila de tecnología puede ser diferente, aunque todas se han creado con .NET Core y están diseñadas para la nube. Los servicios más sencillos proporcionan acceso básico de creación, lectura, actualización y eliminación (CRUD) a los almacenes de datos subyacentes, mientras que los servicios más avanzados utilizan patrones y enfoques de diseño controlados por el dominio para administrar la complejidad empresarial.
 

@@ -1,5 +1,5 @@
 ---
-title: Método IXCLRDataMethodInstance::GetILAddressMap
+title: 'IXCLRDataMethodInstance:: GetILAddressMap (método)'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataMethodInstance::GetILAddressMap Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 66e4768acff7ab735c6ac9e8f8f51a9511f7e371
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7c4dcf59ce159434d5012120043f5bb548d49731
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744688"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396812"
 ---
-# <a name="ixclrdatamethodinstancegetiladdressmap-method"></a>Método IXCLRDataMethodInstance::GetILAddressMap
+# <a name="ixclrdatamethodinstancegetiladdressmap-method"></a>IXCLRDataMethodInstance:: GetILAddressMap (método)
 
-Obtiene el IL a la información de asignación de dirección.
+Obtiene el IL para direccionar la información de asignación.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -41,24 +41,24 @@ HRESULT GetILAddressMap(
 ## <a name="parameters"></a>Parámetros
 
 `mapLen`\
-[in] La longitud de la matriz proporcionada de mapas.
+de La longitud de la matriz de asignaciones proporcionada.
 
 `mapNeeded`\
-[out] El número de entradas de mapa que necesita el método.
+enuncia El número de entradas de mapa que necesita el método.
 
 `maps`\
-[out, size_is(mapLen)] La matriz para almacenar las entradas de mapa.
+[out, size_is (Arcen)] Matriz para almacenar las entradas de asignación.
 
 ## <a name="remarks"></a>Comentarios
 
-El método proporcionado forma parte de la `IXCLRDataMethodInstance` interfaz y corresponde a la ranura de la tabla de métodos virtuales 14.
+El método proporcionado forma parte de la `IXCLRDataMethodInstance` interfaz y corresponde a la ranura 15 de la tabla del método virtual.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
-**Encabezado**: None  
-**Biblioteca:** None  
-**Versiones de .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Encabezado:** Ninguna  
+**Biblioteca:** Ninguna  
+**.NET Framework versiones:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Vea también
 

@@ -2,12 +2,12 @@
 title: Resumen
 description: Un resumen de las conclusiones principales del libro electrónico guía de arquitectura de aplicaciones .NET nativas en la nube para Azure.
 ms.date: 04/29/2020
-ms.openlocfilehash: 97f20771aae73ed88d2dadefa7ba89d64eb62fcd
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 8cad8df1f69e159caf88d3ee119278dff8726385
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82899711"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395316"
 ---
 # <a name="summary"></a>Resumen
 
@@ -17,11 +17,11 @@ En Resumen, estas son algunas conclusiones importantes de esta guía:
 
 - ** [Cloud Native Computing Foundation](https://www.cncf.io/) (CNCF)** es un consorcio de código abierto influyente de más de 300 grandes corporaciones. Es responsable de impulsar la adopción de la informática nativa en la nube a través de pilas de tecnología y en la nube.
 
-- Las **instrucciones de CNCF** recomiendan que las aplicaciones nativas de la nube adopten seis pilares importantes, como se muestra en la figura 12-1:
+- Las **instrucciones de CNCF** recomiendan que las aplicaciones nativas de la nube adopten seis pilares importantes, como se muestra en la figura 11-1:
 
   ![Pilares básicos de la nube nativos](./media/cloud-native-foundational-pillars.png)
 
-  **Figura 12-1**. Pilares básicos de la nube nativos
+  **Figura 11-1**. Pilares básicos de la nube nativos
 
 - Estos pilares nativos de la nube incluyen:
   - La nube y su modelo de servicio subyacente
@@ -45,7 +45,7 @@ En Resumen, estas son algunas conclusiones importantes de esta guía:
 
 - La **resistencia** es la capacidad del sistema de reaccionar ante errores y seguir siendo funcional. Los sistemas nativos en la nube adoptan una arquitectura distribuida en la que el error es inevitable. Las aplicaciones deben construirse para responder a los errores de forma elegante y volver rápidamente a un estado totalmente funcional.
 
-- Las **mallas de servicio** son una capa de infraestructura configurable con capacidades integradas para controlar la comunicación del servicio y otros desafíos transversales. Desacoplan responsabilidades transversales del código de negocio. Estas responsabilidades se trasladan a un proxy de servicio. Al que se hace `Sidecar pattern`referencia como, el proxy se implementa en un proceso independiente para proporcionar aislamiento del código de negocio.
+- Las **mallas de servicio** son una capa de infraestructura configurable con capacidades integradas para controlar la comunicación del servicio y otros desafíos transversales. Desacoplan responsabilidades transversales del código de negocio. Estas responsabilidades se trasladan a un proxy de servicio. Al que se hace referencia como `Sidecar pattern` , el proxy se implementa en un proceso independiente para proporcionar aislamiento del código de negocio.
 
 - La **observación** es una consideración de diseño clave para las aplicaciones nativas en la nube. A medida que los servicios se distribuyen a través de un clúster de nodos, el registro, la supervisión y las alertas centralizados, se convierten en obligatorios. Azure Monitor es una colección de herramientas basadas en la nube diseñadas para proporcionar visibilidad sobre el estado del sistema.
 

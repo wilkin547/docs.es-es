@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: b6393d7fa4853c230203521e665bbe89d7b228e2
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 72560de9777b2d826418e63b4a4fcccf1e4fa8b9
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790439"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396478"
 ---
 # <a name="ixclrdatamethoddefinitionenuminstance-method"></a>IXCLRDataMethodDefinition:: EnumInstance (método)
 
@@ -37,7 +37,7 @@ HRESULT EnumInstance(
 );
 ```
 
-## <a name="parameters"></a>Parameters
+## <a name="parameters"></a>Parámetros
 
 `handle`\
 [in, out] Identificador para enumerar las instancias de.
@@ -45,16 +45,16 @@ HRESULT EnumInstance(
 `instance`\
 enuncia Instancia enumerada.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Comentarios
 
-El método proporcionado forma parte de la interfaz `IXCLRDataMethodDefinition` y corresponde a la cuarta ranura de la tabla del método virtual.
+El método proporcionado forma parte de la `IXCLRDataMethodDefinition` interfaz y corresponde a la sexta ranura de la tabla del método virtual.
 
-## <a name="requirements"></a>Requisitos de
+## <a name="requirements"></a>Requisitos
 
 **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
 **Encabezado:** Ninguna  
 **Biblioteca:** Ninguna  
-**.NET Framework versiones:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**.NET Framework versiones:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Vea también
 

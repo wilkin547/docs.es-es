@@ -1,5 +1,5 @@
 ---
-title: Método ISOSDacInterface::GetMethodDescData
+title: 'ISOSDacInterface:: GetMethodDescData (método)'
 ms.date: 01/16/2019
 api.name:
 - ISOSDacInterface::GetMethodDescData Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: ea54fdd83b9470db4a08daceaa695e450f5ca1af
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e4c44379d9db0f5e98f3ca66ec0486961ec2df3a
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764826"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396946"
 ---
-# <a name="isosdacinterfacegetmethoddescdata-method"></a>Método ISOSDacInterface::GetMethodDescData
+# <a name="isosdacinterfacegetmethoddescdata-method"></a>ISOSDacInterface:: GetMethodDescData (método)
 
-Obtiene los datos para el puntero de MethodDesc determinado.
+Obtiene los datos para el puntero de MethodDesc dado.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -44,33 +44,33 @@ HRESULT GetMethodDescData(
 ## <a name="parameters"></a>Parámetros
 
 `methodDesc`\
-[in] La dirección de la MethodDesc.
+de Dirección de la MethodDesc.
 
 `ip`\
-[in] La dirección IP del método.
+de Dirección IP del método.
 
 `data`\
-[out] Los datos asociados con el MethodDesc devuelto desde las API internas.
+enuncia Los datos asociados al MethodDesc tal y como se devuelven desde las API internas.
 
 `cRevertedRejitVersions`\
-[out] El número de versiones de rejit revertida.
+enuncia Número de versiones revertidas de rejit.
 
 `rgRevertedRejitData`\
-[out] Los datos asociados con las versiones de rejit revertida devuelto desde las API internas.
+enuncia Los datos asociados a las versiones revertidas de rejit devueltas por las API internas.
 
 `pcNeededRevertedRejitData`\
-[out] El número de bytes necesarios para almacenar los datos asociados con las versiones de ReJit revertidas.
+enuncia El número de bytes necesarios para almacenar los datos asociados a las versiones revertidas de ReJit.
 
 ## <a name="remarks"></a>Comentarios
 
-El método proporcionado forma parte de la `ISOSDacInterface` interfaz y corresponde a la ranura de la tabla de métodos virtuales 20. Para poder utilizarlos, [ `CLRDATA_ADDRESS` ](../common-data-types-unmanaged-api-reference.md) debe definirse como un entero de 64 bits sin signo.
+El método proporcionado forma parte de la `ISOSDacInterface` interfaz y corresponde a la ranura 21 de la tabla del método virtual. Para poder utilizarlos, [`CLRDATA_ADDRESS`](../common-data-types-unmanaged-api-reference.md) debe definirse como un entero de 64 bits sin signo.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
-**Encabezado**: None  
-**Biblioteca:** None  
-**Versiones de .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Encabezado:** Ninguna  
+**Biblioteca:** Ninguna  
+**.NET Framework versiones:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Vea también
 

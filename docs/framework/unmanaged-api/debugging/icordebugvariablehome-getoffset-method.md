@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f025c2e5-3f6c-4be8-9ffe-c8b214617dfe
 topic_type:
 - apiref
-ms.openlocfilehash: a6f93ec3c7ffe415c41dcf094dbde2f0a08969f6
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 75a165e2fd517f36d779a934a5bdd9c41956411a
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790998"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396760"
 ---
 # <a name="icordebugvariablehomegetoffset-method"></a>ICorDebugVariableHome:: GetOffset (método)
 Obtiene el desplazamiento del registro base para una variable.  
@@ -33,27 +33,27 @@ HRESULT GetOffset(
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parámetros  
  `pOffset`  
  enuncia Desplazamiento del registro base.  
   
 ## <a name="return-value"></a>Valor devuelto  
  El método devuelve los siguientes valores:  
   
-|{2&gt;Value&lt;2}|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |`S_OK`|La variable está en una ubicación de memoria relativa de registro.|  
 |`E_FAIL`|La variable no está en una ubicación de memoria relativa de registro.|  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [ICorDebugVariableHome (interfaz)](icordebugvariablehome-interface.md)
+- [Interfaz ICorDebugVariableHome](icordebugvariablehome-interface.md)

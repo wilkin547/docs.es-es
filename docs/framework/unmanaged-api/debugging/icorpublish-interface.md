@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 87c4fcb2-7703-4a2e-afb6-42973381b960
 topic_type:
 - apiref
-ms.openlocfilehash: c4a24d879ebd9e8813ea0ac4597818569f4ae6fa
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 1bd2f537cfa6a27c24ba91ea7caa29dc9e71a74e
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790721"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396323"
 ---
 # <a name="icorpublish-interface"></a>ICorPublish (Interfaz)
 Actúa como la interfaz general para publicar información sobre procesos e información sobre los dominios de aplicación en esos procesos.  
@@ -28,19 +28,19 @@ Actúa como la interfaz general para publicar información sobre procesos e info
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[EnumProcesses (método)](icorpublish-enumprocesses-method.md)|Obtiene una instancia de [ICorPublishProcessEnum (](icorpublishprocessenum-interface.md) que contiene los procesos administrados que se ejecutan en este equipo.|  
-|[GetProcess (método)](icorpublish-getprocess-method.md)|Obtiene una instancia de [ICorPublishProcess](icorpublishprocess-interface.md) que representa el proceso con el identificador especificado.|  
+|[Método EnumProcesses](icorpublish-enumprocesses-method.md)|Obtiene una instancia de [ICorPublishProcessEnum (](icorpublishprocessenum-interface.md) que contiene los procesos administrados que se ejecutan en este equipo.|  
+|[Método GetProcess](icorpublish-getprocess-method.md)|Obtiene una instancia de [ICorPublishProcess](icorpublishprocess-interface.md) que representa el proceso con el identificador especificado.|  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorPub. idl, CorPub. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Interfaces de depuración](debugging-interfaces.md)
+- [Interfaces para depuración](debugging-interfaces.md)
 - [CorpubPublish (coclase)](corpubpublish-coclass.md)

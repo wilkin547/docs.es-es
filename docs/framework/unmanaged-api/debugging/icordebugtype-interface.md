@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 94e02e31-67ea-4b00-8148-a46740a4571d
 topic_type:
 - apiref
-ms.openlocfilehash: 8210e67f4bdd615ff65d9bd3474043fc45fd8883
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5e88652ff75223e30e6abc454f1e1af91494c7b2
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791259"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396701"
 ---
 # <a name="icordebugtype-interface"></a>Interfaz ICorDebugType
 Representa un tipo, ya sea básico o complejo (es decir, definido por el usuario). Si el tipo es genérico, `ICorDebugType` representa el tipo genérico con instancias.  
@@ -28,31 +28,31 @@ Representa un tipo, ya sea básico o complejo (es decir, definido por el usuario
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[EnumerateTypeParameters (método)](icordebugtype-enumeratetypeparameters-method.md)|Obtiene un puntero de interfaz a un ICorDebugTypeEnum que hace referencia a los parámetros de <xref:System.Type> genéricos de la clase a la que hace referencia este `ICorDebugType`.|  
-|[GetBase (método)](icordebugtype-getbase-method.md)|Obtiene un puntero de interfaz a un `ICorDebugType` que hace referencia a la clase base de la clase a la que hace referencia este `ICorDebugType`, si existe uno.|  
-|[GetClass (método)](icordebugtype-getclass-method.md)|Obtiene un puntero de interfaz a un ICorDebugClass que hace referencia al constructor con tipo de este `ICorDebugType`.|  
-|[GetFirstTypeParameter (método)](icordebugtype-getfirsttypeparameter-method.md)|Obtiene un puntero de interfaz a un `ICorDebugType` que hace referencia al primer parámetro <xref:System.Type> genérico del constructor de la clase a la que hace referencia este `ICorDebugType`.|  
-|[GetRank (método)](icordebugtype-getrank-method.md)|Obtiene el número de dimensiones de un tipo de matriz.|  
-|[GetStaticFieldValue (método)](icordebugtype-getstaticfieldvalue-method.md)|Obtiene un puntero de interfaz a un ICorDebugValue que contiene el valor del campo estático al que hace referencia el token de campo especificado en el marco de pila especificado.|  
-|[GetType (método)](icordebugtype-gettype-method.md)|Obtiene un valor de CorElementType que describe el tipo nativo del Common Language Runtime <xref:System.Type> al que hace referencia este `ICorDebugType`.|  
+|[Método EnumerateTypeParameters](icordebugtype-enumeratetypeparameters-method.md)|Obtiene un puntero de interfaz a un ICorDebugTypeEnum que hace referencia a los parámetros genéricos <xref:System.Type> de la clase a la que hace referencia `ICorDebugType` .|  
+|[Método GetBase](icordebugtype-getbase-method.md)|Obtiene un puntero de interfaz a `ICorDebugType` que hace referencia a la clase base de la clase a la que hace referencia `ICorDebugType` , si existe una.|  
+|[Método GetClass](icordebugtype-getclass-method.md)|Obtiene un puntero de interfaz a un ICorDebugClass que hace referencia al constructor con tipo de este `ICorDebugType` .|  
+|[Método GetFirstTypeParameter](icordebugtype-getfirsttypeparameter-method.md)|Obtiene un puntero de interfaz a un `ICorDebugType` que hace referencia al primer parámetro genérico del <xref:System.Type> constructor de la clase a la que hace referencia `ICorDebugType` .|  
+|[Método GetRank](icordebugtype-getrank-method.md)|Obtiene el número de dimensiones de un tipo de matriz.|  
+|[Método GetStaticFieldValue](icordebugtype-getstaticfieldvalue-method.md)|Obtiene un puntero de interfaz a un ICorDebugValue que contiene el valor del campo estático al que hace referencia el token de campo especificado en el marco de pila especificado.|  
+|[Método GetType](icordebugtype-gettype-method.md)|Obtiene un valor de CorElementType que describe el tipo nativo del Common Language Runtime <xref:System.Type> al que hace referencia este `ICorDebugType` .|  
   
-## <a name="remarks"></a>Notas  
- Si el tipo es genérico, `ICorDebugClass` representa el tipo sin instancia. La interfaz `ICorDebugType` representa un tipo genérico con instancias. Por ejemplo, la tabla hash\<K, V > se representará mediante `ICorDebugClass`, mientras que la tabla Hashtable\<Int32, > de cadena se representará mediante `ICorDebugType`.  
+## <a name="remarks"></a>Comentarios  
+ Si el tipo es genérico, `ICorDebugClass` representa el tipo sin instancia. La `ICorDebugType` interfaz representa un tipo genérico con instancias. Por ejemplo, la tabla hash \< K, V> sería representada por `ICorDebugClass` , mientras que la tabla hash \< Int32, String> se representaría mediante `ICorDebugType` .  
   
- Los tipos no genéricos están representados por `ICorDebugClass` y `ICorDebugType`. La última interfaz se presentó en la .NET Framework versión 2,0 para tratar con la creación de instancias de tipo.  
+ Los tipos no genéricos están representados por `ICorDebugClass` y `ICorDebugType` . La última interfaz se presentó en la .NET Framework versión 2,0 para tratar con la creación de instancias de tipo.  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Interfaces de depuración](debugging-interfaces.md)
+- [Interfaces para depuración](debugging-interfaces.md)
