@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: a247c792-45e1-4538-9e1f-b46acca4a463
 topic_type:
 - apiref
-ms.openlocfilehash: 906ca2540e421953b3ce39300aa7b2376f789929
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 467ba53f90081f0c3499fb22acab96b5e380a3f4
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137098"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395844"
 ---
-# <a name="icordebugvaluegetaddress-method"></a><span data-ttu-id="65ebf-102">ICorDebugValue::GetAddress (Método)</span><span class="sxs-lookup"><span data-stu-id="65ebf-102">ICorDebugValue::GetAddress Method</span></span>
-<span data-ttu-id="65ebf-103">Obtiene la dirección de este objeto "ICorDebugValue", que está en proceso de depuración.</span><span class="sxs-lookup"><span data-stu-id="65ebf-103">Gets the address of this "ICorDebugValue" object, which is in the process of being debugged.</span></span>  
+# <a name="icordebugvaluegetaddress-method"></a><span data-ttu-id="5fa12-102">ICorDebugValue::GetAddress (Método)</span><span class="sxs-lookup"><span data-stu-id="5fa12-102">ICorDebugValue::GetAddress Method</span></span>
+<span data-ttu-id="5fa12-103">Obtiene la dirección de este objeto "ICorDebugValue", que está en proceso de depuración.</span><span class="sxs-lookup"><span data-stu-id="5fa12-103">Gets the address of this "ICorDebugValue" object, which is in the process of being debugged.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="65ebf-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="65ebf-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5fa12-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="5fa12-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetAddress (  
@@ -33,20 +33,20 @@ HRESULT GetAddress (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="65ebf-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="65ebf-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5fa12-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="5fa12-105">Parameters</span></span>  
  `pAddress`  
- <span data-ttu-id="65ebf-106">enuncia Puntero a un objeto `CORDB_ADDRESS` que especifica la dirección de este objeto de valor.</span><span class="sxs-lookup"><span data-stu-id="65ebf-106">[out] Pointer to a `CORDB_ADDRESS` object that specifies the address of this value object.</span></span>  
+ <span data-ttu-id="5fa12-106">enuncia Puntero a un `CORDB_ADDRESS` objeto que especifica la dirección de este objeto de valor.</span><span class="sxs-lookup"><span data-stu-id="5fa12-106">[out] Pointer to a `CORDB_ADDRESS` object that specifies the address of this value object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="65ebf-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="65ebf-107">Remarks</span></span>  
- <span data-ttu-id="65ebf-108">Si el valor no está disponible, se devuelve 0 (cero).</span><span class="sxs-lookup"><span data-stu-id="65ebf-108">If the value is unavailable, 0 (zero) is returned.</span></span> <span data-ttu-id="65ebf-109">Esto puede ocurrir si el valor es, al menos, parcialmente en registros o almacenados en un identificador del recolector de elementos no utilizados (`GCHandle`).</span><span class="sxs-lookup"><span data-stu-id="65ebf-109">This could happen if the value is at least partly in registers or stored in a garbage collector handle (`GCHandle`).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5fa12-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="5fa12-107">Remarks</span></span>  
+ <span data-ttu-id="5fa12-108">Si el valor no está disponible, se devuelve 0 (cero).</span><span class="sxs-lookup"><span data-stu-id="5fa12-108">If the value is unavailable, 0 (zero) is returned.</span></span> <span data-ttu-id="5fa12-109">Esto puede ocurrir si el valor es, al menos, parcialmente en registros o almacenados en un identificador de recolector de elementos no utilizados ( `GCHandle` ).</span><span class="sxs-lookup"><span data-stu-id="5fa12-109">This could happen if the value is at least partly in registers or stored in a garbage collector handle (`GCHandle`).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="65ebf-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="65ebf-110">Requirements</span></span>  
- <span data-ttu-id="65ebf-111">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="65ebf-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5fa12-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="5fa12-110">Requirements</span></span>  
+ <span data-ttu-id="5fa12-111">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5fa12-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="65ebf-112">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="65ebf-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="5fa12-112">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5fa12-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="65ebf-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="65ebf-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5fa12-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5fa12-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="65ebf-114">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="65ebf-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="5fa12-114">**.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5fa12-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="65ebf-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="65ebf-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5fa12-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="5fa12-115">See also</span></span>
