@@ -86,9 +86,11 @@
       items:
         - name: Seguridad de Azure para aplicaciones nativas en la nube
           href: azure-security.md
-    - name: DevOps nativo en la nube
+    - name: DevOps
       href: devops.md
       items:
+        - name: Marcas de característica
+          href: feature-flags.md
         - name: Infraestructura como código
           href: infrastructure-as-code.md
         - name: Agrupaciones de aplicaciones nativas en la nube
