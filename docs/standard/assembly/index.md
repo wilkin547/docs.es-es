@@ -1,5 +1,6 @@
 ---
 title: Ensamblados de .NET
+description: Los ensamblados son las unidades fundamentales de implementación, control de versiones, reutilización, ámbito de activación y permisos de seguridad para las aplicaciones basadas en .NET.
 ms.date: 08/15/2019
 ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
 helpviewer_keywords:
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: b61d079a86bdd4a809d44ad128f19a7b358c8384
-ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
+ms.openlocfilehash: 87030bf9770c464709559b2fb8f4c0004009e48d
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80228674"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379912"
 ---
 # <a name="assemblies-in-net"></a>Ensamblados de .NET
 
-Los ensamblados componen las unidades fundamentales de implementación, control de versiones, reutilización, ámbito de activación y permisos de seguridad para las aplicaciones basadas en .NET. Un ensamblado es una colección de tipos y recursos compilados para funcionar en conjunto y formar una unidad lógica de funcionalidad. Los ensamblados adoptan la forma de un archivo ejecutable (*.exe*) o de biblioteca de vínculos dinámicos (*.dll*), y son los bloques de creación de las aplicaciones .NET. Proporcionan a Common Language Runtime la información necesaria para conocer las implementaciones de tipos.
+Los ensamblados componen las unidades fundamentales de implementación, control de versiones, reutilización, ámbito de activación y permisos de seguridad para las aplicaciones basadas en .NET. Un ensamblado es una colección de tipos y recursos compilados para funcionar en conjunto y formar una unidad lógica de funcionalidad. Los ensamblados adoptan la forma de un archivo ejecutable ( *.exe*) o de biblioteca de vínculos dinámicos ( *.dll*), y son los bloques de creación de las aplicaciones .NET. Proporcionan a Common Language Runtime la información necesaria para conocer las implementaciones de tipos.
 
 En .NET Core y .NET Framework, puede crear un ensamblado a partir de uno o varios archivos de código fuente. En .NET Framework, los ensamblados pueden contener uno o varios módulos. Esto permite que los proyectos más grandes se planeen para que varios desarrolladores individuales puedan trabajar en archivos de código fuente o módulos independientes, que se combinan para crear un ensamblado único. Para más información sobre los módulos, vea el tema [Procedimiento para compilar un ensamblado de varios archivos](../../framework/app-domains/build-multifile-assembly.md).
 
@@ -116,4 +117,4 @@ En C#, puede usar dos versiones del mismo ensamblado en una misma aplicación. P
 - [Cómo: para cargar y descargar ensamblados](load-unload.md)
 - [Cómo: para usar y depurar la descargabilidad de ensamblados en .NET Core](unloadability.md)
 - [Cómo: para determinar si un archivo es un ensamblado](identify.md)
-- [How to: Inspect assembly contents using MetadataLoadContext](inspect-contents-using-metadataloadcontext.md) (Procedimiento para inspeccionar el contenido de un ensamblado con MetadataLoadContext)
+- [Cómo: Inspect assembly contents using MetadataLoadContext](inspect-contents-using-metadataloadcontext.md) (Procedimiento para inspeccionar el contenido de un ensamblado con MetadataLoadContext)
