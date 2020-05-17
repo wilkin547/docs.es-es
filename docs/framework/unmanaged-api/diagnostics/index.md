@@ -6,22 +6,22 @@ helpviewer_keywords:
 - unmanaged API reference [.NET Framework], diagnostics symbol store
 - native API reference [.NET Framework], diagnostics symbol store
 ms.assetid: ee1fbb7a-b0f9-482f-8cd0-6df37e6586a2
-ms.openlocfilehash: 2bf393f1a2f44d265038282713265fefc80bc66f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 044ed9caaf0633e84c783103a338891017fd1ac1
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74445503"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442103"
 ---
 # <a name="diagnostics-symbol-store-unmanaged-api-reference"></a>Almacén de símbolos de diagnósticos (Referencia de la API no administrada)
 La API de almacén de símbolos de diagnóstico permite a un compilador generar información sobre símbolos para que la use un depurador.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Interfaces de almacén de símbolos de diagnósticos](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
+ [Interfaces de almacén de símbolos de diagnósticos](diagnostics-symbol-store-interfaces.md)  
  Describe las interfaces no administradas que utiliza la API de almacén de símbolos de diagnóstico.  
   
- [Enumeraciones de almacén de símbolos de diagnósticos](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)  
+ [Enumeraciones de almacén de símbolos de diagnósticos](diagnostics-symbol-store-enumerations.md)  
  Describe las enumeraciones no administradas que utiliza la API de almacén de símbolos de diagnóstico.  
   
- [Estructuras de almacén de símbolos de diagnósticos](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)  
+ [Estructuras de almacén de símbolos de diagnósticos](diagnostics-symbol-store-structures.md)  
  Describe las estructuras no administradas que utiliza la API de almacén de símbolos de diagnóstico.
