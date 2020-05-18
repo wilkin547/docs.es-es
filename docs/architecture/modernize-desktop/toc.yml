@@ -1,0 +1,15 @@
+- name: "Modernización de aplicaciones de escritorio en Windows\_10 con .NET Core\_3.1"
+  href: index.md
+  items:
+    - name: 'Aplicaciones de escritorio modernas, ¿por qué?'
+      href: why-modern-applications.md
+    - name: ¿Qué novedades hay en .NET Core para escritorio?
+      href: whats-new-dotnet-core.md
+    - name: Migración de aplicaciones de escritorio modernas
+      href: migrate-modern-applications.md
+    - name: "Migración a Windows\_10"
+      href: windows-migration.md
+    - name: "Ejemplo de migración a .NET Core\_3.1"
+      href: example-migration-core.md
+    - name: Implementación de aplicaciones de escritorio modernas
+      href: deploy-modern-applications.md
