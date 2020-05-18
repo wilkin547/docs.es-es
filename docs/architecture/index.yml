@@ -6,12 +6,12 @@ metadata:
   description: Conozca los procedimientos recomendados para diseñar la arquitectura de aplicaciones .NET, así como para compilarlas y migrarlas.
   ms.topic: landing-page
   ms.date: 03/19/2020
-  ms.openlocfilehash: 6e3573416191603e1e166979f955eaae6b74022c
-  ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
+  ms.openlocfilehash: dc358f45532625bd5474b01af630674a170baf0b
+  ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 03/24/2020
-  ms.locfileid: "80228598"
+  ms.lasthandoff: 05/15/2020
+  ms.locfileid: "83418984"
 landingContent:
 - title: Desarrollo de aplicaciones ASP.NET Core
   linkLists:
@@ -53,3 +53,9 @@ landingContent:
       url: containerized-lifecycle/index.md
     - text: DevOps de ASP.NET Core con Azure
       url: /aspnet/core/azure/devops/
+- title: Modernización de aplicaciones de escritorio
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Modernización de aplicaciones de escritorio en Windows 10 con .NET Core 3.1
+      url: modernize-desktop/index.md
