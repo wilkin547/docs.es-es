@@ -99,7 +99,7 @@ Tal y como se muestra en el ejemplo, se puede usar una instancia de <xref:System
 
 ## <a name="how-to-create-a-result-string-using-the-invariant-culture"></a>Cómo crear una cadena de resultado usando la referencia de cultura invariable
 
-Puede usar el método estático <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> junto con el método <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> para resolver una cadena interpolada en una cadena de resultado de <xref:System.Globalization.CultureInfo.InvariantCulture>. En el siguiente ejemplo se muestra cómo hacerlo:
+Puede usar el método estático <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> junto con el método <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> para resolver una cadena interpolada en una cadena de resultado de <xref:System.Globalization.CultureInfo.InvariantCulture>. En el siguiente ejemplo se muestra cómo hacerlo:
 
 [!code-csharp-interactive[format with invariant culture](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#7)]
 

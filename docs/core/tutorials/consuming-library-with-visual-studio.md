@@ -44,7 +44,7 @@ Así como incluyó pruebas unitarias en la misma solución que la biblioteca de 
 
    ![Menú contextual del proyecto de Visual Studio para establecer el proyecto de inicio](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
 
-1. Inicialmente, el proyecto no tiene acceso a la biblioteca de clases. Para permitir que se llame a métodos de la biblioteca de clases, puede crear una referencia a la biblioteca de clases. En el **Explorador de soluciones**, haga clic con el botón derecho en el nodo `ShowCase`Dependencias**del proyecto** y seleccione **Agregar referencia**.
+1. Inicialmente, el proyecto no tiene acceso a la biblioteca de clases. Para permitir que se llame a métodos de la biblioteca de clases, puede crear una referencia a la biblioteca de clases. En el **Explorador de soluciones**, haga clic con el botón derecho en el nodo **Dependencias** del proyecto `ShowCase` y seleccione **Agregar referencia**.
 
    ![Menú contextual Agregar referencia de Visual Studio](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
 

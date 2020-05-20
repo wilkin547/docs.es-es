@@ -91,7 +91,7 @@ El *operador condicional NULL* realiza comprobaciones NULL de una forma mucho m�
 
 [!code-csharp[NullConditional](../../../samples/snippets/csharp/new-in-6/program.cs#NullConditional)]
 
-En el ejemplo anterior, se asigna `first` a la variable `null` si el objeto person es `null`. De lo contrario, se le asigna el valor de la propiedad `FirstName`. Y lo más importante es que `?.` significa que esta línea de código no genera una excepción `NullReferenceException` si la variable `person` es `null`. En su lugar, se cortocircuita y devuelve `null`. También puede usar un operador condicional NULL para el acceso de matriz o indizador. Reemplace `[]` por `?[]` en la expresión de índice.
+En el ejemplo anterior, se asigna `null` a la variable `first` si el objeto person es `null`. De lo contrario, se le asigna el valor de la propiedad `FirstName`. Y lo más importante es que `?.` significa que esta línea de código no genera una excepción `NullReferenceException` si la variable `person` es `null`. En su lugar, se cortocircuita y devuelve `null`. También puede usar un operador condicional NULL para el acceso de matriz o indizador. Reemplace `[]` por `?[]` en la expresión de índice.
 
 La siguiente expresión devuelve `string`, independientemente del valor de `person`. A menudo se usa esta construcción con el operador de *fusión nula* para asignar valores predeterminados cuando una de las propiedades es `null`. Si la expresión se cortocircuita, se asigna tipo al valor `null` devuelto para que coincida con la expresión completa.
 

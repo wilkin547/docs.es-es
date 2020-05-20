@@ -38,7 +38,7 @@ También se puede usar el tipo de C# `long`, que tiene como alias `Int64`:
 long num = long.Parse(args[0]);
 ```
 
-También puede usar el método `Convert` de la clase `ToInt64` para hacer lo mismo:
+También puede usar el método `ToInt64` de la clase `Convert` para hacer lo mismo:
 
 ```csharp
 long num = Convert.ToInt64(s);

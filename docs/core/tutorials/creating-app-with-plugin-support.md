@@ -148,7 +148,7 @@ if (command == null)
 command.Execute();
 ```
 
-Y, por último, agregue los métodos estáticos denominados `Program` y `LoadPlugin` a la clase `CreateCommands`, como se muestra aquí:
+Y, por último, agregue los métodos estáticos denominados `LoadPlugin` y `CreateCommands` a la clase `Program`, como se muestra aquí:
 
 ```csharp
 static Assembly LoadPlugin(string relativePath)

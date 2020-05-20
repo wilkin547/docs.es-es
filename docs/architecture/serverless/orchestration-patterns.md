@@ -149,7 +149,7 @@ public static async Task CheckStockPrice([OrchestrationTrigger] DurableOrchestra
 }
 ```
 
-El método `DurableOrchestrationContext` de `CreateTimer` configura la programación de la siguiente invocación del bucle para comprobar si hay cambios en los precios de las acciones. `DurableOrchestrationContext` también tiene una propiedad `CurrentUtcDateTime` para obtener el valor de fecha y hora actual en formato UTC. Es mejor usar esta propiedad en lugar de `DateTime.UtcNow` porque se simula con facilidad para la realización de pruebas.
+El método `CreateTimer` de `DurableOrchestrationContext` configura la programación de la siguiente invocación del bucle para comprobar si hay cambios en los precios de las acciones. `DurableOrchestrationContext` también tiene una propiedad `CurrentUtcDateTime` para obtener el valor de fecha y hora actual en formato UTC. Es mejor usar esta propiedad en lugar de `DateTime.UtcNow` porque se simula con facilidad para la realización de pruebas.
 
 ## <a name="recommended-resources"></a>Recursos recomendados
 

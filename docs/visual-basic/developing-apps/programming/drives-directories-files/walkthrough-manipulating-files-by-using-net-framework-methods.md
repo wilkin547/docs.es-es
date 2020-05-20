@@ -83,7 +83,7 @@ Para agregar la capacidad de escribir en un archivo a través de la aplicación,
 
      [!code-vb[VbVbcnMyFileSystem#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#39)]
 
-4. Por último, adjunte el código para borrar <xref:System.Windows.Forms.TextBox>. Agregue el código siguiente al evento `Clear` del botón <xref:System.Windows.Forms.Control.Click>.
+4. Por último, adjunte el código para borrar <xref:System.Windows.Forms.TextBox>. Agregue el código siguiente al evento <xref:System.Windows.Forms.Control.Click> del botón `Clear`.
 
      [!code-vb[VbVbcnMyFileSystem#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#40)]
 
@@ -130,7 +130,7 @@ Agregue los controles de la siguiente tabla al formulario y establezca los valor
 
 ### <a name="to-enable-deletion-and-modification-of-entries"></a>Para habilitar la eliminación y la modificación de entradas
 
-1. Agregue el código siguiente al evento `Display` del botón <xref:System.Windows.Forms.Control.Click>, después de `DisplayEntry.Text = ReadString`.
+1. Agregue el código siguiente al evento <xref:System.Windows.Forms.Control.Click> del botón `Display`, después de `DisplayEntry.Text = ReadString`.
 
      [!code-vb[VbVbcnMyFileSystem#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#43)]
 
