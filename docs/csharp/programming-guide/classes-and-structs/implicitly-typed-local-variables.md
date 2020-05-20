@@ -74,7 +74,7 @@ El establecimiento de tipos implícitos con la palabra clave `var` solo puede ap
 private var bookTitles;
 ```
 
-`bookTitles` es un campo de clase dado el tipo `var`. Como el campo no tiene ninguna expresión que evaluar, es imposible que el compilador pueda inferir el tipo `bookTitles` que se supone que es. Además, agregar una expresión al campo (como se haría con una variable local) también es suficiente:
+`bookTitles` es un campo de clase dado el tipo `var`. Como el campo no tiene ninguna expresión que evaluar, es imposible que el compilador pueda inferir el tipo `bookTitles` que se supone que es. Además, agregar una expresión al campo (como se haría con una variable local) también es insuficiente:
 
 ```csharp
 private var bookTitles = new List<string>();
