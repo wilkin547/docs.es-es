@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a71563c0-62f2-4eb4-970c-825d61827613
 topic_type:
 - apiref
-ms.openlocfilehash: 4d2de38e5e506873a6db262dcec19c7af9d8a0d0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 093c5e3e64395c8946acd9201990d132e8111fc7
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446092"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610592"
 ---
 # <a name="isymunmanagedvariablegetaddresskind-method"></a>ISymUnmanagedVariable::GetAddressKind (Método)
 Obtiene el tipo de dirección de esta variable.  
@@ -34,7 +34,7 @@ HRESULT GetAddressKind(
   
 ## <a name="parameters"></a>Parámetros  
  `pRetVal`  
- enuncia Puntero a un `ULONG32` que recibe el valor. Los valores posibles se definen en la enumeración [corsymaddrkind (](../../../../docs/framework/unmanaged-api/diagnostics/corsymaddrkind-enumeration.md) .  
+ enuncia Un puntero a un `ULONG32` que recibe el valor. Los valores posibles se definen en la enumeración [corsymaddrkind (](corsymaddrkind-enumeration.md) .  
   
 ## <a name="return-value"></a>Valor devuelto  
  S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
@@ -42,6 +42,6 @@ HRESULT GetAddressKind(
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ISymUnmanagedVariable (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [ISymUnmanagedVariable (Interfaz)](isymunmanagedvariable-interface.md)
