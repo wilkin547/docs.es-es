@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3a3a9446-7a4e-4836-9b27-5c536c15993d
 topic_type:
 - apiref
-ms.openlocfilehash: 9600573a0a730cee10247d5644d587e75856cdd9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f72a66354bfc907dab7ebc24de515bdfb20ddfb2
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141181"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703602"
 ---
 # <a name="iclrhostbindingpolicymanagerevaluatepolicy-method"></a>ICLRHostBindingPolicyManager::EvaluatePolicy (Método)
 Evalúa la Directiva de enlace en nombre del host.  
@@ -46,7 +46,7 @@ HRESULT EvaluatePolicy (
  de Un puntero a un búfer que contiene los datos de la Directiva.  
   
  `cbAppPolicySize`  
- de Tamaño del búfer de `pbApplicationPolicy`.  
+ de Tamaño del `pbApplicationPolicy` búfer.  
   
  `pwzPostPolicyReferenceIdentity`  
  enuncia Referencia al ensamblado después de la evaluación de los nuevos datos de la Directiva.  
@@ -55,33 +55,33 @@ HRESULT EvaluatePolicy (
  [in, out] Puntero al tamaño del búfer de referencia de identidad del ensamblado después de la evaluación de los datos de la nueva Directiva.  
   
  `pdwPoliciesApplied`  
- enuncia Puntero a una combinación lógica o de valores de [ebindpolicylevels (](../../../../docs/framework/unmanaged-api/hosting/ebindpolicylevels-enumeration.md) , que indica qué directivas se han aplicado.  
+ enuncia Puntero a una combinación lógica o de valores de [ebindpolicylevels (](ebindpolicylevels-enumeration.md) , que indica qué directivas se han aplicado.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
 |S_OK|La evaluación se completó correctamente.|  
-|E_INVALIDARG|`pwzReferenceIdentity` o `pbApplicationPolicy` es una referencia nula.|  
+|E_INVALIDARG|`pwzReferenceIdentity`O `pbApplicationPolicy` es una referencia nula.|  
 |ERROR_INSUFFICIENT_BUFFER|`cbAppPolicySize` es demasiado pequeño.|  
 |HOST_E_CLRNOTAVAILABLE|El Common Language Runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
 |HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
 |HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
-|E_FAIL|Se produjo un error grave desconocido. Una vez que un método devuelve E_FAIL, el CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
+|E_FAIL|Se produjo un error grave desconocido. Después de que un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
- El método `EvaluatePolicy` permite que el host influya en la Directiva de enlace para mantener los requisitos de control de versiones de ensamblado específicos del host. El propio motor de directivas permanece dentro de CLR.  
+## <a name="remarks"></a>Observaciones  
+ El `EvaluatePolicy` método permite al host influir en la Directiva de enlace para mantener los requisitos de control de versiones de ensamblado específicos del host. El propio motor de directivas permanece dentro de CLR.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
  **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ICLRHostBindingPolicyManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)
+- [ICLRHostBindingPolicyManager (Interfaz)](iclrhostbindingpolicymanager-interface.md)

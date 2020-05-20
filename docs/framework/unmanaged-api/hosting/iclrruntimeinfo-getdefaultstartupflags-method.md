@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 35c2173e-3b0b-4b2a-950d-e0a01c6df052
 topic_type:
 - apiref
-ms.openlocfilehash: 0ce822533b0699f3467dc08044aa4dab59285a77
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8513787f48ae89632816face386bbcda20555dac
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120312"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703882"
 ---
 # <a name="iclrruntimeinfogetdefaultstartupflags-method"></a>ICLRRuntimeInfo::GetDefaultStartupFlags (Método)
 Obtiene las marcas de inicio y el archivo de configuración de host que se usarán para iniciar el tiempo de ejecución.  
@@ -42,7 +42,7 @@ HRESULT GetDefaultStartupFlags(
  enuncia Puntero a la ruta de acceso al directorio del archivo de configuración del host actual.  
   
  `pcchHostConfigFile`  
- [in, out] En la entrada, tamaño de `pwzHostConfigFile`para evitar las saturaciones del búfer. Si `pwzHostConfigFile` es null, el método devuelve el tamaño necesario de `pwzHostConfigFile` para la asignación previa.  
+ [in, out] En la entrada, el tamaño de `pwzHostConfigFile` , para evitar las saturaciones del búfer. Si `pwzHostConfigFile` es null, el método devuelve el tamaño necesario de `pwzHostConfigFile` para la asignación previa.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos, así como los errores HRESULT que indican un error del método.  
@@ -51,20 +51,20 @@ HRESULT GetDefaultStartupFlags(
 |-------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
   
-## <a name="remarks"></a>Comentarios  
- Este método devuelve los valores de marca predeterminados (`STARTUP_CONCURRENT_GC` y `NULL`), o los valores proporcionados por una llamada anterior al [método ICLRRuntimeInfo:: SetDefaultStartupFlags (](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-setdefaultstartupflags-method.md), o los valores establecidos por cualquiera de los métodos `CorBind*` si están enlazados a este Runtime.  
+## <a name="remarks"></a>Observaciones  
+ Este método devuelve los valores de marca predeterminados ( `STARTUP_CONCURRENT_GC` y `NULL` ), o los valores proporcionados por una llamada anterior al [método ICLRRuntimeInfo:: SetDefaultStartupFlags (](iclrruntimeinfo-setdefaultstartupflags-method.md), o los valores establecidos por cualquiera de los `CorBind*` métodos si están enlazados a este Runtime.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Metahost. h  
   
  **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ICLRRuntimeInfo (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [Hospedar aplicaciones de WPF](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ICLRRuntimeInfo (Interfaz)](iclrruntimeinfo-interface.md)
+- [Interfaces de hospedaje](hosting-interfaces.md)
+- [Hospedar aplicaciones de WPF](index.md)

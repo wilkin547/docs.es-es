@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 22fc0a3f-dce4-4766-9a3c-9fab15f4b4ca
 topic_type:
 - apiref
-ms.openlocfilehash: f89307ad7ed41f872ad66a99be03663ac1f30f13
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2e22b8a2d0213b3bd766d80218d6f396721a90e1
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140973"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703768"
 ---
 # <a name="iclrmetahostenumerateloadedruntimes-method"></a>ICLRMetaHost::EnumerateLoadedRuntimes (Método)
-Devuelve una enumeración que incluye un puntero de interfaz [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) válido para cada versión del Common Language Runtime (CLR) que se carga en un proceso determinado. Este método reemplaza a la función [GetVersionFromProcess (](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md) .  
+Devuelve una enumeración que incluye un puntero de interfaz [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) válido para cada versión del Common Language Runtime (CLR) que se carga en un proceso determinado. Este método reemplaza a la función [GetVersionFromProcess (](getversionfromprocess-function.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,7 +39,7 @@ HRESULT EnumerateLoadedRuntimes (
  de Identificador del proceso para inspeccionar los tiempos de ejecución cargados.  
   
  `ppEnumerator`  
- enuncia <xref:Microsoft.VisualStudio.OLE.Interop.IEnumUnknown> enumeración de las interfaces [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) correspondientes a cada CLR que carga el proceso.  
+ enuncia Una <xref:Microsoft.VisualStudio.OLE.Interop.IEnumUnknown> enumeración de las interfaces [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) correspondientes a cada CLR que carga el proceso.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
@@ -49,19 +49,19 @@ HRESULT EnumerateLoadedRuntimes (
 |S_OK|El método se completó correctamente.|  
 |E_POINTER|`ppEnumerator` es null.|  
   
-## <a name="remarks"></a>Comentarios  
- Este método muestra todos los tiempos de ejecución cargados, incluso si se cargaron con funciones desusadas como [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md).  
+## <a name="remarks"></a>Observaciones  
+ Este método muestra todos los tiempos de ejecución cargados, incluso si se cargaron con funciones desusadas como [CorBindToRuntime](corbindtoruntime-function.md).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Metahost. h  
   
  **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ICLRMetaHost (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
-- [Hospedar aplicaciones de WPF](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ICLRMetaHost (Interfaz)](iclrmetahost-interface.md)
+- [Hospedar aplicaciones de WPF](index.md)

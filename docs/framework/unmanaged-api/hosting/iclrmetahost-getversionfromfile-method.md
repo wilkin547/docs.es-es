@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55bb3eb4-f665-42fc-973c-465567570e82
 topic_type:
 - apiref
-ms.openlocfilehash: a237dff63015cda2cf2ca86a64bb4028ec9b6e2c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 40efc256dde13d645d43f50bb574d73b5668919c
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140918"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703738"
 ---
 # <a name="iclrmetahostgetversionfromfile-method"></a>ICLRMetaHost::GetVersionFromFile (Método)
-Obtiene la versión de compilación .NET Framework original de un ensamblado (almacenada en los metadatos), dada su ruta de acceso al archivo. Este método reemplaza a la función [GetFileVersion (](../../../../docs/framework/unmanaged-api/hosting/getfileversion-function.md) .  
+Obtiene la versión de compilación .NET Framework original de un ensamblado (almacenada en los metadatos), dada su ruta de acceso al archivo. Este método reemplaza a la función [GetFileVersion (](getfileversion-function.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,7 +40,7 @@ HRESULT GetVersionFromFile (
  de Ruta de acceso completa del archivo de ensamblado.  
   
  `pwzbuffer`  
- enuncia La versión de compilación de .NET Framework almacenada en los metadatos, en el formato "v*A*. *B*[. *X*] ". *A*, *B*y *X* son números decimales que corresponden a la versión principal, la versión secundaria y el número de compilación. La longitud de esta cadena se limita a MAX_PATH.  
+ enuncia La versión de compilación de .NET Framework almacenada en los metadatos, en el formato "v*A*. *B*[.* X*] ". *A*, *B*y *X* son números decimales que corresponden a la versión principal, la versión secundaria y el número de compilación. La longitud de esta cadena se limita a MAX_PATH.  
   
 > [!NOTE]
 > Esta salida coincide con el nombre de directorio para la versión .NET Framework, tal y como aparece en C:\Windows\Microsoft.NET\Framework.  
@@ -60,15 +60,15 @@ HRESULT GetVersionFromFile (
 |HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|El búfer es demasiado pequeño.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Metahost. h  
   
  **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ICLRMetaHost (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
-- [Hospedar aplicaciones de WPF](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ICLRMetaHost (Interfaz)](iclrmetahost-interface.md)
+- [Hospedar aplicaciones de WPF](index.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f21c1612-9c5d-4abc-a337-577086d29c17
 topic_type:
 - apiref
-ms.openlocfilehash: 8f479443e168c3fc7c627c3227e59f1e8b54f0e0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5afa7b37b804b6a11a894e0e6c7708c7787a20ae
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120503"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703368"
 ---
 # <a name="iclrreferenceassemblyenumget-method"></a>ICLRReferenceAssemblyEnum::Get (Método)
 Obtiene la identidad del ensamblado en el índice proporcionado.  
@@ -43,13 +43,13 @@ HRESULT Get (
  enuncia Búfer que contiene los datos de identidad del ensamblado.  
   
  `pcchBufferSize`  
- [in, out] Tamaño del búfer de `pwzBuffer`.  
+ [in, out] Tamaño del `pwzBuffer` búfer.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`Get` devolvió correctamente.|  
+|S_OK|`Get`se devolvió correctamente.|  
 |ERROR_INSUFFICIENT_BUFFER|`pwzBuffer` es demasiado pequeño.|  
 |ERROR_NO_MORE_ITEMS|La enumeración no contiene más elementos.|  
 |HOST_E_CLRNOTAVAILABLE|El Common Language Runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
@@ -58,19 +58,19 @@ HRESULT Get (
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Si un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
- normalmente se llama a `Get` dos veces. La primera llamada proporciona un valor null para `pwzBuffer`y establece `pcchBufferSize` en el tamaño adecuado para `pwzBuffer`. La segunda llamada proporciona un `pwzBuffer`con un tamaño adecuado y contiene los datos de identidad del ensamblado canónico al finalizar.  
+## <a name="remarks"></a>Observaciones  
+ `Get`normalmente se llama dos veces. La primera llamada proporciona un valor null para `pwzBuffer` , y establece `pcchBufferSize` en el tamaño adecuado para `pwzBuffer` . La segunda llamada proporciona un tamaño adecuado `pwzBuffer` y contiene los datos de identidad del ensamblado canónico al finalizar.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
  **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ICLRAssemblyReferenceList (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
-- [ICLRReferenceAssemblyEnum (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrreferenceassemblyenum-interface.md)
+- [ICLRAssemblyReferenceList (Interfaz)](iclrassemblyreferencelist-interface.md)
+- [ICLRReferenceAssemblyEnum (Interfaz)](iclrreferenceassemblyenum-interface.md)

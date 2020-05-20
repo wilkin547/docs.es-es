@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8fd7daf-8f8d-4ad7-92ae-019db244cec1
 topic_type:
 - apiref
-ms.openlocfilehash: 0b59532d18848f1896977aa37f0a9f54a939aa75
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 55cd444ffedc92ba74239421ae548ffd930e6ab7
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120378"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703928"
 ---
 # <a name="iclrruntimehoststop-method"></a>ICLRRuntimeHost::Stop (Método)
 Detiene la ejecución de código por el Common Language Runtime (CLR).  
@@ -38,7 +38,7 @@ HRESULT Stop();
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`Stop` devolvió correctamente.|  
+|S_OK|`Stop`se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|CLR no se ha cargado en un proceso o CLR está en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
 |HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
 |HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
@@ -46,14 +46,14 @@ HRESULT Stop();
 |E_FAIL|Se produjo un error grave desconocido. Si un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
  **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ICLRRuntimeHost (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+- [ICLRRuntimeHost (Interfaz)](iclrruntimehost-interface.md)

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: a7732bfc-689a-4926-88fd-4f81e6f9ed78
 topic_type:
 - apiref
-ms.openlocfilehash: cedda39aeebc62c6bf43f42ae2daf6f6f515fd27
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2690a5c2e7c499d68ef9e903c62bff8f85e72e8e
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120271"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703869"
 ---
 # <a name="iclrruntimeinfogetprocaddress-method"></a>ICLRRuntimeInfo::GetProcAddress (Método)
 Obtiene la dirección de una función especificada que se exportó desde el Common Language Runtime (CLR) asociado a esta interfaz.  
   
- Este método reemplaza a la función [GetRealProcAddress (](../../../../docs/framework/unmanaged-api/hosting/getrealprocaddress-function.md) .  
+ Este método reemplaza a la función [GetRealProcAddress (](getrealprocaddress-function.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -51,20 +51,20 @@ HRESULT GetProcAddress(
 |E_POINTER|`pszProcName` o `ppProc` es null.|  
 |CLR_E_SHIM_RUNTIMEEXPORT|La función especificada no es una función exportada.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Este método hace que el CLR se cargue pero no se inicialice.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Metahost. h  
   
  **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ICLRRuntimeInfo (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [Hospedar aplicaciones de WPF](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ICLRRuntimeInfo (Interfaz)](iclrruntimeinfo-interface.md)
+- [Interfaces de hospedaje](hosting-interfaces.md)
+- [Hospedar aplicaciones de WPF](index.md)

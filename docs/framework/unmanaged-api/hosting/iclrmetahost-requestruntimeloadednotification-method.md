@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0d5ccc4d-0193-41f5-af54-45d7b70d5321
 topic_type:
 - apiref
-ms.openlocfilehash: 23f868bba2dc058d99f1c5c09e9b311b1ff3634a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6813f72f9d27aeff90f797a6ca9370b22e03e6f0
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140891"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703696"
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>ICLRMetaHost::RequestRuntimeLoadedNotification (Método)
-Proporciona una función de devolución de llamada que se garantiza que se llamará cuando una versión de Common Language Runtime (CLR) se cargue por primera vez, pero no se haya iniciado todavía. Este método reemplaza a la función [LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md) .  
+Proporciona una función de devolución de llamada que se garantiza que se llamará cuando una versión de Common Language Runtime (CLR) se cargue por primera vez, pero no se haya iniciado todavía. Este método reemplaza a la función [LockClrVersion](lockclrversion-function.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,7 +44,7 @@ HRESULT RequestRuntimeLoadedNotification (
 |S_OK|El método se completó correctamente.|  
 |E_POINTER|`pCallbackFunction` es null.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  La devolución de llamada funciona de la siguiente manera:  
   
 - La devolución de llamada se invoca solo cuando se carga por primera vez un tiempo de ejecución.  
@@ -76,27 +76,27 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
     typedef HRESULT (__stdcall *CallbackThreadUnsetFnPtr)();  
     ```  
   
- Si el host intenta cargar o hacer que otro tiempo de ejecución se cargue de forma reentrante, los parámetros `pfnCallbackThreadSet` y `pfnCallbackThreadUnset` que se proporcionan en la función de devolución de llamada deben usarse de la siguiente manera:  
+ Si el host intenta cargar o hacer que otro Runtime se cargue de forma reentrante, los `pfnCallbackThreadSet` `pfnCallbackThreadUnset` parámetros y que se proporcionan en la función de devolución de llamada deben usarse de la siguiente manera:  
   
-- se debe llamar a `pfnCallbackThreadSet` por el subproceso que puede producir una carga en tiempo de ejecución antes de que se intente realizar una carga de este tipo.  
+- `pfnCallbackThreadSet`debe ser invocado por el subproceso que puede producir una carga en tiempo de ejecución antes de que se intente una carga de este tipo.  
   
-- se debe llamar a `pfnCallbackThreadUnset` cuando el subproceso ya no produzca esta carga en tiempo de ejecución (y antes de devolver desde la devolución de llamada inicial).  
+- `pfnCallbackThreadUnset`se debe llamar a cuando el subproceso ya no producirá una carga de este tipo en tiempo de ejecución (y antes de devolver desde la devolución de llamada inicial).  
   
-- `pfnCallbackThreadSet` y `pfnCallbackThreadUnset` son no reentrantes.  
+- `pfnCallbackThreadSet`y `pfnCallbackThreadUnset` son no reentrantes.  
   
 > [!NOTE]
-> Las aplicaciones host no deben llamar a `pfnCallbackThreadSet` y `pfnCallbackThreadUnset` fuera del ámbito del parámetro `pCallbackFunction`.  
+> Las aplicaciones host no deben llamar a `pfnCallbackThreadSet` y `pfnCallbackThreadUnset` fuera del ámbito del `pCallbackFunction` parámetro.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Metahost. h  
   
  **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ICLRMetaHost (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
-- [Hospedar aplicaciones de WPF](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ICLRMetaHost (Interfaz)](iclrmetahost-interface.md)
+- [Hospedar aplicaciones de WPF](index.md)

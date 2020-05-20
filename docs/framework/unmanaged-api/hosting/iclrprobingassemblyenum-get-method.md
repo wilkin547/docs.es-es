@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fdb67a77-782f-44cf-a8a1-b75999b0f3c8
 topic_type:
 - apiref
-ms.openlocfilehash: 2ff1f9428a92d091a51a4cca12d69d98da0ecba2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ea66c142afc097d1003df4e7f5f5b960a91e2ab0
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120531"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703386"
 ---
 # <a name="iclrprobingassemblyenumget-method"></a>ICLRProbingAssemblyEnum::Get (Método)
 Obtiene la identidad del ensamblado en el índice especificado.  
@@ -43,13 +43,13 @@ HRESULT Get (
  enuncia Búfer que contiene los datos de identidad del ensamblado.  
   
  `pcchBufferSize`  
- [in, out] Tamaño del búfer de `pwzBuffer`.  
+ [in, out] Tamaño del `pwzBuffer` búfer.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`Get` devolvió correctamente.|  
+|S_OK|`Get`se devolvió correctamente.|  
 |ERROR_INSUFFICIENT_BUFFER|`pwzBuffer` es demasiado pequeño.|  
 |ERROR_NO_MORE_ITEMS|La enumeración no contiene más elementos.|  
 |HOST_E_CLRNOTAVAILABLE|El Common Language Runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
@@ -58,21 +58,21 @@ HRESULT Get (
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Si un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a cualquier método de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  La identidad del índice 0 es la identidad específica de la arquitectura del procesador. La identidad del índice 1 es el ensamblado independiente de la arquitectura para el lenguaje intermedio de Microsoft (MSIL). La identidad del índice 2 no contiene información de arquitectura.  
   
- normalmente se llama a `Get` dos veces. La primera llamada proporciona un valor null para `pwzBuffer`y establece `pcchBufferSize` en el tamaño adecuado para `pwzBuffer`. La segunda llamada proporciona un `pwzBuffer`con un tamaño adecuado y contiene los datos de identidad del ensamblado canónico al finalizar.  
+ `Get`normalmente se llama dos veces. La primera llamada proporciona un valor null para `pwzBuffer` , y establece `pcchBufferSize` en el tamaño adecuado para `pwzBuffer` . La segunda llamada proporciona un tamaño adecuado `pwzBuffer` y contiene los datos de identidad del ensamblado canónico al finalizar.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
  **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ICLRProbingAssemblyEnum (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrprobingassemblyenum-interface.md)
-- [ICLRAssemblyIdentityManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [ICLRProbingAssemblyEnum (Interfaz)](iclrprobingassemblyenum-interface.md)
+- [ICLRAssemblyIdentityManager (Interfaz)](iclrassemblyidentitymanager-interface.md)

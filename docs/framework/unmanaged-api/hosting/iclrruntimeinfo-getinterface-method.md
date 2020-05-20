@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: cc7b0e5b-48c3-4509-8ebb-611ddb1f7ec2
 topic_type:
 - apiref
-ms.openlocfilehash: 295deeec2e8eb42ccaa4d0cfb8b08b32438d047c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c8ac959c192814562488ab916c8462b0baa0d8e6
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120252"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703650"
 ---
 # <a name="iclrruntimeinfogetinterface-method"></a>ICLRRuntimeInfo::GetInterface (Método)
-Carga el CLR en el proceso actual y devuelve punteros de interfaz en tiempo de ejecución, como [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md), [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)y [IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md).  
+Carga el CLR en el proceso actual y devuelve punteros de interfaz en tiempo de ejecución, como [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md), [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)y [IMetaDataDispenserEx](../metadata/imetadatadispenser-interface.md).  
   
- Este método sustituye todas las funciones de `CorBindTo`* en la sección [funciones de hospedaje de CLR en desuso](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) .  
+ Este método sustituye todas las `CorBindTo` funciones * de la sección [funciones de hospedaje de CLR en desuso](deprecated-clr-hosting-functions.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,7 +41,7 @@ HRESULT GetInterface(
  de La interfaz CLSID para la coclase.  
   
  `riid`  
- de IID de la interfaz `rclsid` solicitada.  
+ de IID de la interfaz solicitada `rclsid` .  
   
  `ppUnk`  
  enuncia Puntero a la interfaz consultada.  
@@ -56,10 +56,10 @@ HRESULT GetInterface(
 |E_OUTOFMEMORY|No hay suficiente memoria disponible para controlar la solicitud.|  
 |CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|Un tiempo de ejecución diferente ya estaba enlazado a la Directiva de activación heredada de la versión 2 de CLR.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Este método hace que el CLR se cargue pero no se inicialice.  
   
- En la tabla siguiente se muestran las combinaciones admitidas para `rclsid` y `riid`.  
+ En la tabla siguiente se muestran las combinaciones admitidas para `rclsid` y `riid` .  
   
 |`rclsid`|`riid`|  
 |--------------|------------|  
@@ -73,16 +73,16 @@ HRESULT GetInterface(
 |CLSID_CLRStrongName|IID_ICLRStrongName|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Metahost. h  
   
  **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ICLRRuntimeInfo (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [Hospedar aplicaciones de WPF](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ICLRRuntimeInfo (Interfaz)](iclrruntimeinfo-interface.md)
+- [Interfaces de hospedaje](hosting-interfaces.md)
+- [Hospedar aplicaciones de WPF](index.md)

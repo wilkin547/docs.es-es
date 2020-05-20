@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b944cf49-918d-4c4e-993b-77d097a52550
 topic_type:
 - apiref
-ms.openlocfilehash: 4068166438c524ad1c0ed4efe455b1f66b6641d5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e634b3876d51d461446ed3f5ae537ac1db1545bd
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140828"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703506"
 ---
 # <a name="iclroneventmanagerregisteractiononevent-method"></a>ICLROnEventManager::RegisterActionOnEvent (Método)
 Registra un puntero de devolución de llamada para el evento especificado.  
@@ -36,40 +36,40 @@ HRESULT RegisterActionOnEvent (
   
 ## <a name="parameters"></a>Parámetros  
  `event`  
- de Uno de los valores de [EClrEvent](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md) , que indica el evento para el que se va a registrar el puntero de devolución de llamada descrito por `pAction`.  
+ de Uno de los valores de [EClrEvent](eclrevent-enumeration.md) , que indica el evento para el que se va a registrar el puntero de devolución de llamada descrito por `pAction` .  
   
  `pAction`  
- de Un puntero a un objeto [IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) al que se llama cuando se activa el evento registrado.  
+ de Un puntero a un objeto [IActionOnCLREvent](iactiononclrevent-interface.md) al que se llama cuando se activa el evento registrado.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`RegisterActionOnEvent` devolvió correctamente.|  
+|S_OK|`RegisterActionOnEvent`se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|El Common Language Runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
 |HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
 |HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
-|E_FAIL|Se produjo un error grave desconocido. Una vez que un método devuelve E_FAIL, el CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
+|E_FAIL|Se produjo un error grave desconocido. Después de que un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
- El host puede registrar devoluciones de llamada para uno o ambos de los dos tipos de eventos descritos por `EClrEvent`. El host obtiene la interfaz de `ICLROnEventManager` llamando al método [ICLRControl:: GetCLRManager (](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) .  
+## <a name="remarks"></a>Observaciones  
+ El host puede registrar devoluciones de llamada para uno de los dos tipos de eventos descritos por o ambos `EClrEvent` . El host obtiene la `ICLROnEventManager` interfaz llamando al método [ICLRControl:: GetCLRManager (](iclrcontrol-getclrmanager-method.md) .  
   
 > [!NOTE]
-> Los eventos que `RegisterActionOnEvent` registra se pueden desencadenar más de una vez y desde distintos subprocesos para indicar una descarga o la deshabilitación de CLR.  
+> Los eventos que `RegisterActionOnEvent` se registran se pueden desencadenar más de una vez y desde distintos subprocesos para indicar una descarga o la deshabilitación de CLR.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
  **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [EClrEvent (enumeración)](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md)
-- [IActionOnCLREvent (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md)
-- [ICLRControl (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [ICLROnEventManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md)
+- [EClrEvent (Enumeración)](eclrevent-enumeration.md)
+- [IActionOnCLREvent (Interfaz)](iactiononclrevent-interface.md)
+- [ICLRControl (Interfaz)](iclrcontrol-interface.md)
+- [ICLROnEventManager (Interfaz)](iclroneventmanager-interface.md)
