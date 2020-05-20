@@ -10,7 +10,7 @@ ms.locfileid: "67858501"
 
 |   |   |
 |---|---|
-|Detalles|Debido a un error de .NET Framework 4.5, los controladores de eventos para los eventos <xref:System.Windows.Controls.DataGrid> en los que se elimina una fila pueden provocar que se inicie una excepción <xref:System.NullReferenceException?displayProperty=name> si tienen acceso a las propiedades <xref:System.Windows.Controls.DataGrid> o <xref:System.Windows.Controls.Primitives.Selector.SelectedItem?displayProperty=name> de <xref:System.Windows.Controls.Primitives.MultiSelector.SelectedItems?displayProperty=name>.|
+|Detalles|Debido a un error de .NET Framework 4.5, los controladores de eventos para los eventos <xref:System.Windows.Controls.DataGrid> en los que se elimina una fila pueden provocar que se inicie una excepción <xref:System.NullReferenceException?displayProperty=name> si tienen acceso a las propiedades <xref:System.Windows.Controls.Primitives.Selector.SelectedItem?displayProperty=name> o <xref:System.Windows.Controls.Primitives.MultiSelector.SelectedItems?displayProperty=name> de <xref:System.Windows.Controls.DataGrid>.|
 |Sugerencia|Este problema se ha corregido en .NET Framework 4.6 y se puede solucionar mediante la actualización a esa versión de .NET Framework.|
 |Ámbito|Secundaria|
 |Versión|4.5|
