@@ -1,13 +1,14 @@
 ---
 title: Información general de Windows Workflow
+description: En este artículo se describen los flujos de trabajo de Workflow Foundation, que son modelos que describen los procesos del mundo real.
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-ms.openlocfilehash: ada5ec75d130c9c518c5129db6c12b61c3acbf45
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: ec1a00b37abe2cb842735fb98e1c113a97943758
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802536"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421480"
 ---
 # <a name="windows-workflow-overview"></a>Información general de Windows Workflow
 Un flujo de trabajo es un conjunto de unidades de elementos denominadas *actividades* que se almacenan como un modelo que describe un proceso real. Los flujos de trabajo proporcionan una manera de describir el orden de ejecución y las relaciones de dependencia entre las partes de trabajo de ejecución corta o prolongada. Este trabajo pasa a través del modelo desde el principio hasta al final y las actividades pueden ser ejecutadas por personas o por funciones de sistema.  
@@ -23,9 +24,9 @@ Un flujo de trabajo es un conjunto de unidades de elementos denominadas *activid
   
  Cada una de estas clases ajusta el tiempo de ejecución de la actividad principal, representado como una clase <xref:System.Activities.ActivityInstance> responsable de la ejecución de la actividad. Puede haber varios objetos <xref:System.Activities.ActivityInstance> ejecutándose simultáneamente dentro de un dominio de aplicación.  
   
- Los tres objetos de interacción de host anteriores se crean a partir de un árbol de actividades al que se hace referencia como programa de flujo de trabajo. Con estos tipos o un host personalizado que incluye <xref:System.Activities.ActivityInstance>, los flujos de trabajo se pueden ejecutar dentro de cualquier proceso de Windows, incluidas las aplicaciones de consola, las aplicaciones basadas en formularios, los servicios de Windows, los sitios Web ASP.NET y los servicios Windows Communication Foundation (WCF).  
+ Los tres objetos de interacción de host anteriores se crean a partir de un árbol de actividades al que se hace referencia como programa de flujo de trabajo. Con estos tipos o un host personalizado que contiene <xref:System.Activities.ActivityInstance> , los flujos de trabajo se pueden ejecutar dentro de cualquier proceso de Windows, incluidas las aplicaciones de consola, las aplicaciones basadas en formularios, los servicios de Windows, los sitios Web ASP.net y los servicios de Windows Communication Foundation (WCF).  
   
- ![Componentes del flujo de trabajo en el proceso de host](./media/44c79d1d-178b-4487-87ed-3e33015a3842.gif "44c79d1d-178b-4487-87ed-3e33015a3842")  
+ ![Componentes de flujo de trabajo del proceso de host](./media/44c79d1d-178b-4487-87ed-3e33015a3842.gif "44c79d1d-178b-4487-87ed-3e33015a3842")  
 Componentes de flujo de trabajo del proceso de host  
   
 ## <a name="interaction-between-workflow-components"></a>Interacción entre los componentes de flujo de trabajo  
@@ -41,6 +42,6 @@ Componentes de flujo de trabajo del proceso de host
   
 - Una actividad personalizada que se deriva de la clase abstracta <xref:System.Activities.CodeActivity>. <xref:System.Activities.CodeActivity> puede tener acceso a características del tiempo de ejecución (como el seguimiento y las propiedades) usando el <xref:System.Activities.CodeActivityContext> que está disponible como parámetro del método <xref:System.Activities.CodeActivity.Execute%2A>. Para obtener más información sobre estas características de tiempo de ejecución, vea [seguimiento de flujo de trabajo y](workflow-tracking-and-tracing.md) [propiedades de ejecución de flujo](workflow-execution-properties.md)de trabajo y seguimiento.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 - [BizTalk Server 2006 o WF? Elección de la herramienta de flujo de trabajo correcta para el proyecto](https://docs.microsoft.com/previous-versions/dotnet/articles/cc303238(v=msdn.10))

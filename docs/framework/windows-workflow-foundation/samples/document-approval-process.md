@@ -1,13 +1,14 @@
 ---
 title: Proceso de aprobación de un documento
+description: En este ejemplo se muestran muchas características de Windows Workflow Foundation y Windows Communication Foundation en un escenario de proceso de aprobación de documentos.
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: cee43aff991f9482de7b3172174eb0e786ec1fe6
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 18b4f978e9234daf22395f0d2f6f0889d0edf966
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710849"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421415"
 ---
 # <a name="document-approval-process"></a>Proceso de aprobación de un documento
 
@@ -18,7 +19,7 @@ Este ejemplo muestra el uso conjunto de muchas características de Windows Workf
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Application\DocumentApprovalProcess`
 
@@ -26,7 +27,7 @@ Este ejemplo muestra el uso conjunto de muchas características de Windows Workf
 
 En el gráfico siguiente se muestra el flujo de trabajo del proceso de aprobación de documentos:
 
-![Flujo de trabajo de proceso de aprobación de un documento](./media/document-approval-process/document-approval-process.jpg)
+![Flujo de trabajo del proceso de aprobación de un documento](./media/document-approval-process/document-approval-process.jpg)
 
 Desde la perspectiva del cliente, el proceso de aprobación funciona del siguiente modo:
 
@@ -78,7 +79,7 @@ Desde el punto de vista de la aplicación de administrador de aprobaciones, el p
 
 9. El resultado del flujo de trabajo del proceso de aprobación se envía al cliente.
 
-## <a name="using-the-sample"></a>Usar el ejemplo
+## <a name="using-the-sample"></a>Utilizar el ejemplo
 
 ##### <a name="to-set-up-the-database"></a>Para configurar la base de datos
 
@@ -90,7 +91,7 @@ Desde el punto de vista de la aplicación de administrador de aprobaciones, el p
 
 2. Para compilar la solución, presione Ctrl+MAYÚS+B.
 
-3. Para ejecutar la solución, inicie la aplicación del administrador de aprobaciones; para ello, haga clic con el botón secundario en el proyecto ApprovalManager en el **Explorador de soluciones** y haga clic en **depurar**->**iniciar** nueva instancia en el menú contextual.
+3. Para ejecutar la solución, inicie la aplicación del administrador de aprobaciones; para ello, haga clic con el botón secundario en el proyecto ApprovalManager en el **Explorador de soluciones** y haga clic en **depurar** -> **iniciar** nueva instancia en el menú contextual.
 
     Espere a que el resultado del administrador le indique que está listo.
 
@@ -140,7 +141,7 @@ Desde el punto de vista de la aplicación de administrador de aprobaciones, el p
 
 6. En el cliente `UserType1`, seleccione el tipo de aprobación única en el menú desplegable y escriba un nombre de documento y su contenido. Haga clic en **solicitar aprobación**.
 
-7. En los clientes `UserType2`, aparecerá un documento a la espera de aprobación. Selecciónelo y presione **aprobar**, el documento se pasa al cliente de `UserType3`.
+7. En los clientes `UserType2`, aparecerá un documento a la espera de aprobación. Selecciónelo y presione **aprobar**; el documento se pasa al `UserType3` cliente.
 
     Si el primer quórum `UserType2` aprueba el documento, el documento se pasa al cliente `UserType3`.
 

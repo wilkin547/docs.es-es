@@ -1,21 +1,22 @@
 ---
-title: 'Cómo: Habilitar persistencia para flujos de trabajo y servicios de flujo de trabajo'
+title: Procedimiento para habilitar la persistencia para flujos de trabajo y servicios de flujo de trabajo
+description: Aprenda a configurar el almacén de instancias de flujo de trabajo de SQL para habilitar la persistencia para flujos de trabajo y servicios de flujo de trabajo mediante programación y mediante un archivo de configuración.
 ms.date: 03/30/2017
 ms.assetid: 2b1c8bf3-9866-45a4-b06d-ee562393e503
-ms.openlocfilehash: 5d0eeb8ad40f2f4f3349ab48487316014a561a1b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 31fe6e3f06989e9a42254747565342cf97e4b9f1
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460895"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421519"
 ---
-# <a name="how-to-enable-persistence-for-workflows-and-workflow-services"></a>Cómo: Habilitar persistencia para flujos de trabajo y servicios de flujo de trabajo
+# <a name="how-to-enable-persistence-for-workflows-and-workflow-services"></a>Procedimiento para habilitar la persistencia para flujos de trabajo y servicios de flujo de trabajo
 
 En este tema se describe cómo habilitar la persistencia para los flujos de trabajo y los servicios de flujo de trabajo.
 
 ## <a name="enable-persistence-for-workflows"></a>Habilitar persistencia para los flujos de trabajo
 
-Puede asociar un almacén de instancias con **WorkflowApplication** mediante la propiedad <xref:System.Activities.WorkflowApplication.InstanceStore%2A> de la clase <xref:System.Activities.WorkflowApplication>. El método <xref:System.Activities.WorkflowApplication.Persist%2A> guarda o conserva un flujo de trabajo en el almacén de instancias asociado a la aplicación. El método <xref:System.Activities.WorkflowApplication.Unload%2A> conserva un flujo de trabajo en el almacén de instancias y, a continuación, descarga la instancia de la memoria. El método **Load** carga un flujo de trabajo en la memoria utilizando los datos de flujo de trabajo almacenados en el almacén de persistencia de la instancia.
+Puede asociar un almacén de instancias con **WorkflowApplication** mediante la <xref:System.Activities.WorkflowApplication.InstanceStore%2A> propiedad de la <xref:System.Activities.WorkflowApplication> clase. El método <xref:System.Activities.WorkflowApplication.Persist%2A> guarda o conserva un flujo de trabajo en el almacén de instancias asociado a la aplicación. El método <xref:System.Activities.WorkflowApplication.Unload%2A> conserva un flujo de trabajo en el almacén de instancias y, a continuación, descarga la instancia de la memoria. El método **Load** carga un flujo de trabajo en la memoria utilizando los datos de flujo de trabajo almacenados en el almacén de persistencia de la instancia.
 
 El método **Persist** realiza los siguientes pasos:
 
@@ -37,7 +38,7 @@ Los métodos de **persistencia** y **descarga** se bloquearán mientras un flujo
 
 ## <a name="enable-persistence-for-workflow-services-in-code"></a>Habilitar persistencia para los servicios de flujo de trabajo en código
 
-El miembro **DurableInstancingOptions** de la clase <xref:System.ServiceModel.WorkflowServiceHost> tiene una propiedad denominada **InstanceStore** que puede usar para asociar un almacén de instancias a **WorkflowServiceHost**.
+El miembro **DurableInstancingOptions** de la <xref:System.ServiceModel.WorkflowServiceHost> clase tiene una propiedad denominada **InstanceStore** que puede usar para asociar un almacén de instancias a **WorkflowServiceHost**.
 
 ```csharp
 // wsh is an instance of WorkflowServiceHost class

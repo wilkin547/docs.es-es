@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bd6ccde5-d578-48d8-abed-b474fbd48d13
 topic_type:
 - apiref
-ms.openlocfilehash: 97f0d81c389ffd0bd8a69df2ca39322d726f98bc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 89be772ee3d8a6fc5acb74d5ebe6d3c691764f89
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176635"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441960"
 ---
 # <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a>ISymENCUnmanagedMethod::GetDocumentsForMethod (Método)
 Obtiene los documentos en los que este método tiene líneas.  
@@ -36,20 +36,20 @@ HRESULT GetDocumentsForMethod(
   
 ## <a name="parameters"></a>Parámetros  
  `cDocs`  
- [en] La longitud del búfer `pcDocs`a la que apunta .  
+ de Longitud del búfer al que apunta `pcDocs` .  
   
  `pcDocs`  
- [fuera] Puntero a `ULONG32` un que recibe el tamaño, en caracteres, del búfer necesario para contener los documentos.  
+ enuncia Un puntero a un `ULONG32` que recibe el tamaño, en caracteres, del búfer necesario para contener los documentos.  
   
  `documents`  
- [en] El búfer que contiene los documentos.  
+ de Búfer que contiene los documentos.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método se realiza correctamente; de lo contrario, un código de error.  
+ S_OK si el método se ejecuta correctamente; de lo contrario, un código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** CorSym.idl, CorSym.h  
+ **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
-- [ISymENCUnmanagedMethod (Interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+- [ISymENCUnmanagedMethod (Interfaz)](isymencunmanagedmethod-interface.md)

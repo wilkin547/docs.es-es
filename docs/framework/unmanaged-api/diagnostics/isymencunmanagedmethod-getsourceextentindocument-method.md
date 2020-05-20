@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9c5566ab-4ec7-4b61-9753-839bb90ae78c
 topic_type:
 - apiref
-ms.openlocfilehash: b8e72745eff09c6707afe5a5f20a1ddf38b239ae
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3ac8bb3a20ce82b734a572832a9cbb75fa2568c4
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448619"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441908"
 ---
 # <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a>ISymENCUnmanagedMethod::GetSourceExtentInDocument (Método)
 Obtiene la línea de inicio más pequeña y la línea de finalización más grande para el método en un documento específico.  
@@ -39,10 +39,10 @@ HRESULT GetSourceExtentInDocument(
  de Puntero al documento.  
   
  `pstartLine`  
- enuncia Puntero a un `ULONG32` que recibe la línea de inicio.  
+ enuncia Un puntero a un `ULONG32` que recibe la línea de inicio.  
   
  `pendLine`  
- enuncia Puntero a un `ULONG32` que recibe la línea final.  
+ enuncia Un puntero a un `ULONG32` que recibe la línea final.  
   
 ## <a name="return-value"></a>Valor devuelto  
  S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
@@ -50,6 +50,6 @@ HRESULT GetSourceExtentInDocument(
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ISymENCUnmanagedMethod (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+- [ISymENCUnmanagedMethod (Interfaz)](isymencunmanagedmethod-interface.md)

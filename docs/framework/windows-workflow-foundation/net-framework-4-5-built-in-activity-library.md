@@ -1,13 +1,14 @@
 ---
 title: Biblioteca de actividades integrada de .NET Framework 4.5
+description: En este artículo se describe la nueva biblioteca de actividades con funcionalidad ampliada que forma parte de .NET Framework 4,5.
 ms.date: 03/30/2017
 ms.assetid: e559e87b-6aed-491d-9546-e92bcec16fdf
-ms.openlocfilehash: 6d47c36a55829684a0eefb2a560e65f7b91462a7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4ce4420759512ec3adfff70bf0c365014d96ec7b
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786014"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421493"
 ---
 # <a name="net-framework-45-built-in-activity-library"></a>Biblioteca de actividades integrada de .NET Framework 4.5
 
@@ -17,11 +18,11 @@ ms.locfileid: "61786014"
 
 - [Diagrama de flujo](flowchart-activities-in-wf.md)
 
-- [Equipo de estado](state-machine-activities-in-wf.md)
+- [Máquina de estados](state-machine-activities-in-wf.md)
 
 - [Actividades de mensajería](../wcf/feature-details/messaging-activities.md)
 
-- [Tiempo de ejecución](runtime-activities-in-wf.md)
+- [Runtime](runtime-activities-in-wf.md)
 
 - [Elementos primitivos](primitives-activities-in-wf.md)
 
@@ -29,8 +30,8 @@ ms.locfileid: "61786014"
 
 - [Colección](collection-activities-in-wf.md)
 
-- [Control de errores](error-handling-activities-in-wf.md)
+- [Tratamiento de errores](error-handling-activities-in-wf.md)
 
 - [Migración](migration-activity-in-wf.md)
 
-Las actividades de la biblioteca de actividades integradas se pueden componer en flujos de trabajo, o bien puede utilizar junto con actividades personalizadas. Las actividades de la biblioteca integrada de actividades están selladas; no están pensadas para su uso para crear nueva funcionalidad mediante herencia.
+Las actividades de la biblioteca de actividades integrada pueden estar compuestas en flujos de trabajo o usarse junto con actividades personalizadas. Las actividades de la biblioteca integrada de actividades están selladas; no están pensadas para su uso para crear nueva funcionalidad mediante herencia.

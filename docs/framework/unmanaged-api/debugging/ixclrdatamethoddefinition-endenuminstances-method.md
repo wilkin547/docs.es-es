@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: febe6766c7a35228820421eee975c777988efd1f
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 7271c9594a679af205c404f59ff6731821aa0acf
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396491"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420999"
 ---
 # <a name="ixclrdatamethoddefinitionendenuminstances-method"></a>IXCLRDataMethodDefinition:: EndEnumInstances (método)
 
@@ -41,18 +41,18 @@ HRESULT EndEnumInstances(
 `handle`\
 enuncia Identificador para enumerar las instancias de.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El método proporcionado forma parte de la `IXCLRDataMethodDefinition` interfaz y corresponde a la séptima ranura de la tabla del método virtual.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
 **Encabezado:** Ninguna  
 **Biblioteca:** Ninguna  
 **.NET Framework versiones:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 - [Depuración](index.md)
 - [Interfaz IXCLRDataMethodDefinition](ixclrdatamethoddefinition-interface.md)

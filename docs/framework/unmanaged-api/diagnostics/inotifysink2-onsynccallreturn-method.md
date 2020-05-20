@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c1bda761-6292-4750-a14b-7d5db8f33456
 topic_type:
 - apiref
-ms.openlocfilehash: d2d90d33ce7a8135f40a0fb4039a2418dd1987ac
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ff1dabcfc366607639cd98be4392f8dd59dc83a1
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435969"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442012"
 ---
 # <a name="inotifysink2onsynccallreturn-method"></a>INotifySink2::OnSyncCallReturn (Método)
 Se invoca cuando se devuelve una llamada.  
@@ -38,7 +38,7 @@ HRESULT OnSyncCallReturn
   
 ## <a name="parameters"></a>Parámetros  
  `in_CallID`  
- de IDENTIFICADOR de la llamada que se devuelve desde. Vea [estructura de CALL_ID](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
+ de IDENTIFICADOR de la llamada que se devuelve desde. Vea [estructura de CALL_ID](call-id-structure.md).  
   
  `in_pBuffer`  
  de Búfer de llamadas.  
@@ -52,8 +52,8 @@ HRESULT OnSyncCallReturn
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** ProtocolNotify2. idl  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [INotifySink2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
-- [INotifySource2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [INotifyConnection2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [INotifySink2 (Interfaz)](inotifysink2-interface.md)
+- [INotifySource2 (Interfaz)](inotifysource2-interface.md)
+- [INotifyConnection2 (Interfaz)](inotifyconnection2-interface.md)

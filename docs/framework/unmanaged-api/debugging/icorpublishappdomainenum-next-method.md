@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ad37cd10-0339-4d08-9b0e-4b3428bb4dc3
 topic_type:
 - apiref
-ms.openlocfilehash: 6f7f400c51ded0b98c0c2286cb6f90bbd77e47d7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c5ac38005410ae6ed9c2f4160e926987791ad604
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178397"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421220"
 ---
 # <a name="icorpublishappdomainenumnext-method"></a>ICorPublishAppDomainEnum::Next (Método)
 Obtiene el número especificado de dominios de aplicación que existen actualmente en el proceso, comenzando en la posición actual.  
@@ -38,23 +38,23 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parámetros  
  `celt`  
- [en] El número de elementos que se van a recuperar.  
+ de Número de elementos que se van a recuperar.  
   
  `objects`  
- [fuera] Puntero a la matriz de objetos [ICorPublishAppDomain](icorpublishappdomain-interface.md) recuperados, cada uno de los cuales representa un dominio de aplicación.  
+ enuncia Puntero a la matriz de objetos [ICorPublishAppDomain](icorpublishappdomain-interface.md) recuperados, cada uno de los cuales representa un dominio de aplicación.  
   
  `pceltFetched`  
- [fuera] Puntero al número de dominios de aplicación devueltos realmente. Este valor puede `celt` ser null si es uno.  
+ enuncia Puntero al número de dominios de aplicación devueltos realmente. Este valor puede ser null si `celt` es uno.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** CorPub.idl, CorPub.h  
+ **Encabezado:** CorPub. idl, CorPub. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 - [ICorPublishAppDomainEnum (Interfaz)](icorpublishappdomainenum-interface.md)

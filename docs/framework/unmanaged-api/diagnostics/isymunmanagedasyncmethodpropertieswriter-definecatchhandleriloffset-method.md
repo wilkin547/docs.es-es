@@ -2,12 +2,12 @@
 title: ISymUnmanagedAsyncMethodPropertiesWriter::DefineCatchHandlerILOffset (Método)
 ms.date: 03/30/2017
 ms.assetid: 92af7896-2201-408d-8b1b-23e28001eeac
-ms.openlocfilehash: b108c8c87d3afdbfacb569ab501274e5c45c2e2e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 58dde2fcce3f4bf578907171e5b575c30c678cfc
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129187"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441778"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriterdefinecatchhandleriloffset-method"></a>ISymUnmanagedAsyncMethodPropertiesWriter::DefineCatchHandlerILOffset (Método)
 Establece el desplazamiento IL para el controlador Catch generado por el compilador que ajusta un método asincrónico.  
@@ -32,6 +32,6 @@ HRESULT DefineCatchHandlerILOffset(    [in] ULONG32 catchHandlerOffset);
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ISymUnmanagedAsyncMethodPropertiesWriter (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md)
+- [ISymUnmanagedAsyncMethodPropertiesWriter (Interfaz)](isymunmanagedasyncmethodpropertieswriter-interface.md)

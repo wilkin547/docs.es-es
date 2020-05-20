@@ -1,16 +1,17 @@
 ---
 title: Usar WorkflowInvoker y WorkflowApplication
+description: En este artículo se describe el hospedaje de flujos de trabajo mediante WorkflowInvoker y WorkflowApplication en Windows Workflow Foundation.
 ms.date: 03/30/2017
 ms.assetid: cd0e583c-a3f9-4fa2-b247-c7b3368c48a7
-ms.openlocfilehash: 5d09fc3c902b1993b32edf3e9f92393433281636
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 50ad291bc73818092e7a08d489d6860636f9c379
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182702"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421324"
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>Usar WorkflowInvoker y WorkflowApplication
-Windows Workflow Foundation (WF) proporciona varios métodos para hospedar flujos de trabajo. <xref:System.Activities.WorkflowInvoker> proporciona una manera sencilla de invocar un flujo de trabajo como si fuera una llamada al método y se puede usar solo para los flujos de trabajo que no usan la persistencia. <xref:System.Activities.WorkflowApplication> proporciona un modelo más enriquecido para ejecutar flujos de trabajo que incluye notificación de eventos de ciclo de vida, control de ejecución, reanudación de marcadores y persistencia. <xref:System.ServiceModel.Activities.WorkflowServiceHost> proporciona compatibilidad para las actividades de mensajería y se usa principalmente con servicios de flujo de trabajo. Este tema presenta el hospedaje del flujo de trabajo con <xref:System.Activities.WorkflowInvoker> y <xref:System.Activities.WorkflowApplication>. Para obtener más información <xref:System.ServiceModel.Activities.WorkflowServiceHost>acerca de cómo hospedar flujos de trabajo con , vea [Información general](../wcf/feature-details/hosting-workflow-services-overview.md)sobre servicios de [flujo](../wcf/feature-details/workflow-services.md) de trabajo y servicios de flujo de trabajo de hospedaje .  
+Windows Workflow Foundation (WF) proporciona varios métodos para hospedar flujos de trabajo. <xref:System.Activities.WorkflowInvoker> proporciona una manera sencilla de invocar un flujo de trabajo como si fuera una llamada al método y se puede usar solo para los flujos de trabajo que no usan la persistencia. <xref:System.Activities.WorkflowApplication> proporciona un modelo más enriquecido para ejecutar flujos de trabajo que incluye notificación de eventos de ciclo de vida, control de ejecución, reanudación de marcadores y persistencia. <xref:System.ServiceModel.Activities.WorkflowServiceHost> proporciona compatibilidad para las actividades de mensajería y se usa principalmente con servicios de flujo de trabajo. Este tema presenta el hospedaje del flujo de trabajo con <xref:System.Activities.WorkflowInvoker> y <xref:System.Activities.WorkflowApplication>. Para obtener más información sobre el hospedaje de flujos de trabajo con <xref:System.ServiceModel.Activities.WorkflowServiceHost> , vea Introducción a los servicios de [flujo](../wcf/feature-details/workflow-services.md) de trabajo y [host Workflow Services](../wcf/feature-details/hosting-workflow-services-overview.md).  
   
 ## <a name="using-workflowinvoker"></a>Usar WorkflowInvoker  
  <xref:System.Activities.WorkflowInvoker> proporciona un modelo para ejecutar un flujo de trabajo como si fuera una llamada al método. Para invocar un flujo de trabajo mediante <xref:System.Activities.WorkflowInvoker>, llame al método <xref:System.Activities.WorkflowInvoker.Invoke%2A> y pase la definición del flujo de trabajo que se vaya a invocar. En este ejemplo, se invoca una actividad <xref:System.Activities.Statements.WriteLine> mediante <xref:System.Activities.WorkflowInvoker>.  
@@ -24,7 +25,7 @@ Windows Workflow Foundation (WF) proporciona varios métodos para hospedar flujo
 > [!NOTE]
 > La excepción <xref:System.TimeoutException> solo se produce si se agota el tiempo de espera y el flujo de trabajo queda inactivo durante la ejecución. Un flujo de trabajo que tarda en completarse más tiempo que el especificado por el intervalo de tiempo de espera se completa correctamente si el flujo de trabajo no queda inactivo.  
   
- <xref:System.Activities.WorkflowInvoker> también proporciona versiones asincrónicas del método de invocación. Para más información, vea <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> y <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A>.  
+ <xref:System.Activities.WorkflowInvoker> también proporciona versiones asincrónicas del método de invocación. Para obtener más información, vea <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> y <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A>.  
   
 ### <a name="setting-input-arguments-of-a-workflow"></a>Definir argumentos de entrada de un flujo de trabajo  
  Los datos se pueden pasar a un flujo de trabajo mediante un diccionario de parámetros de entrada, con claves por nombre de argumento, que se asignan a los argumentos de entrada del flujo de trabajo. En este ejemplo, se invoca <xref:System.Activities.Statements.WriteLine> y el valor de su argumento <xref:System.Activities.Statements.WriteLine.Text%2A> se especifica con el diccionario de parámetros de entrada.  
@@ -60,14 +61,14 @@ Windows Workflow Foundation (WF) proporciona varios métodos para hospedar flujo
  [!code-csharp[CFX_WorkflowApplicationExample#30](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#30)]  
   
 ### <a name="retrieving-output-arguments-of-a-workflow"></a>Recuperar argumentos de salida de un flujo de trabajo  
- Cuando un flujo de trabajo se completa, se puede recuperar cualquier parámetro de salida en el controlador <xref:System.Activities.WorkflowApplication.Completed%2A> teniendo acceso al diccionario <xref:System.Activities.WorkflowApplicationCompletedEventArgs.Outputs%2A?displayProperty=nameWithType>. En el siguiente ejemplo, se hospeda un flujo de trabajo utilizando <xref:System.Activities.WorkflowApplication>. Una <xref:System.Activities.WorkflowApplication> instancia se construye mediante una definición `DiceRoll` de flujo de trabajo que consta de una sola actividad. La actividad `DiceRoll` tiene dos argumentos de salida que representan los resultados de la operación de tirar los dados. Cuando se completa el flujo de trabajo, las salidas se recuperan en el controlador <xref:System.Activities.WorkflowApplication.Completed%2A>.  
+ Cuando un flujo de trabajo se completa, se puede recuperar cualquier parámetro de salida en el controlador <xref:System.Activities.WorkflowApplication.Completed%2A> teniendo acceso al diccionario <xref:System.Activities.WorkflowApplicationCompletedEventArgs.Outputs%2A?displayProperty=nameWithType>. En el siguiente ejemplo, se hospeda un flujo de trabajo utilizando <xref:System.Activities.WorkflowApplication>. Una <xref:System.Activities.WorkflowApplication> instancia de se construye utilizando una definición de flujo de trabajo que consta de una sola `DiceRoll` actividad. La actividad `DiceRoll` tiene dos argumentos de salida que representan los resultados de la operación de tirar los dados. Cuando se completa el flujo de trabajo, las salidas se recuperan en el controlador <xref:System.Activities.WorkflowApplication.Completed%2A>.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#130](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#130)]  
   
  [!code-csharp[CFX_WorkflowApplicationExample#21](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#21)]  
   
 > [!NOTE]
-> <xref:System.Activities.WorkflowApplication> y <xref:System.Activities.WorkflowInvoker> toman un diccionario de argumentos de entrada y devuelven un diccionario de argumentos `out`. Estos parámetros, propiedades y valores devueltos del diccionario son del tipo `IDictionary<string, object>`. La instancia real de la clase de diccionario que se pasa puede ser cualquier clase que implemente `IDictionary<string, object>`. En estos ejemplos, se usa `Dictionary<string, object>`. Para obtener más información <xref:System.Collections.Generic.IDictionary%602> acerca <xref:System.Collections.Generic.Dictionary%602>de los diccionarios, consulte y .  
+> <xref:System.Activities.WorkflowApplication> y <xref:System.Activities.WorkflowInvoker> toman un diccionario de argumentos de entrada y devuelven un diccionario de argumentos `out`. Estos parámetros, propiedades y valores devueltos del diccionario son del tipo `IDictionary<string, object>`. La instancia real de la clase de diccionario que se pasa puede ser cualquier clase que implemente `IDictionary<string, object>`. En estos ejemplos, se usa `Dictionary<string, object>`. Para obtener más información acerca de los diccionarios, vea <xref:System.Collections.Generic.IDictionary%602> y <xref:System.Collections.Generic.Dictionary%602> .  
   
 ### <a name="passing-data-into-a-running-workflow-using-bookmarks"></a>Pasar datos en un flujo de trabajo en ejecución mediante marcadores  
  Los marcadores son el mecanismo por el que una actividad puede esperar de forma pasiva a que se reanude y, además, un mecanismo para pasar los datos a una instancia de flujo de trabajo en ejecución. Si una actividad está esperando los datos, puede crear <xref:System.Activities.Bookmark> y registrar un método de devolución de llamada que se va a llamar cuando se reanude <xref:System.Activities.Bookmark>, tal y como se muestra en el siguiente ejemplo.  
@@ -85,13 +86,13 @@ Windows Workflow Foundation (WF) proporciona varios métodos para hospedar flujo
  El siguiente ejemplo de código es similar al ejemplo anterior salvo que los marcadores activos se enumeran antes de que se reanude el marcador. Se inicia el flujo de trabajo, y una vez se ha creado el objeto <xref:System.Activities.Bookmark> y se ha quedado inactivo el flujo de trabajo, se llama al método <xref:System.Activities.WorkflowApplication.GetBookmarks%2A>. Cuando se completa el flujo de trabajo, se muestra la siguiente salida en la consola.  
   
  **¿Cómo se llama?**  
-**BookmarkName: UserName - OwnerDisplayName: ReadLine**
-**Steve**
-**Hello, Steve**
+**BookmarkName: username-OwnerDisplayName: readline** 
+ **Steve** 
+ **Hola, Steve**
 
 [!code-csharp[CFX_WorkflowApplicationExample#14](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#14)]  
   
- El siguiente ejemplo de código inspecciona el objeto <xref:System.Activities.WorkflowApplicationIdleEventArgs> pasado al controlador de la propiedad <xref:System.Activities.WorkflowApplication.Idle%2A> de una instancia de <xref:System.Activities.WorkflowApplication>. En este ejemplo, el flujo de trabajo que va a estar inactivo tiene un objeto <xref:System.Activities.Bookmark> con el nombre `EnterGuess`, que una actividad denominada `ReadInt` posee. Este ejemplo de código se basa en [Cómo: Ejecutar un flujo](how-to-run-a-workflow.md)de trabajo , que forma parte del Tutorial de [introducción](getting-started-tutorial.md). Si el controlador de la propiedad <xref:System.Activities.WorkflowApplication.Idle%2A> en ese paso se modifica para contener el código de este ejemplo, se muestra la siguiente salida.  
+ El siguiente ejemplo de código inspecciona el objeto <xref:System.Activities.WorkflowApplicationIdleEventArgs> pasado al controlador de la propiedad <xref:System.Activities.WorkflowApplication.Idle%2A> de una instancia de <xref:System.Activities.WorkflowApplication>. En este ejemplo, el flujo de trabajo que va a estar inactivo tiene un objeto <xref:System.Activities.Bookmark> con el nombre `EnterGuess`, que una actividad denominada `ReadInt` posee. Este ejemplo de código se basa en [Cómo: ejecutar un flujo de trabajo](how-to-run-a-workflow.md), que forma parte del [tutorial de introducción](getting-started-tutorial.md). Si el controlador de la propiedad <xref:System.Activities.WorkflowApplication.Idle%2A> en ese paso se modifica para contener el código de este ejemplo, se muestra la siguiente salida.  
   
  **BookmarkName: EnterGuess - OwnerDisplayName: ReadInt**
 

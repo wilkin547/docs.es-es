@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: e4c44379d9db0f5e98f3ca66ec0486961ec2df3a
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 105149d0abf312c33a8498e7428e3a8b23d6ae7d
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396946"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421025"
 ---
 # <a name="isosdacinterfacegetmethoddescdata-method"></a>ISOSDacInterface:: GetMethodDescData (método)
 
@@ -61,18 +61,18 @@ enuncia Los datos asociados a las versiones revertidas de rejit devueltas por la
 `pcNeededRevertedRejitData`\
 enuncia El número de bytes necesarios para almacenar los datos asociados a las versiones revertidas de ReJit.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El método proporcionado forma parte de la `ISOSDacInterface` interfaz y corresponde a la ranura 21 de la tabla del método virtual. Para poder utilizarlos, [`CLRDATA_ADDRESS`](../common-data-types-unmanaged-api-reference.md) debe definirse como un entero de 64 bits sin signo.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
 **Encabezado:** Ninguna  
 **Biblioteca:** Ninguna  
 **.NET Framework versiones:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 - [Depuración](index.md)
 - [Interfaz ISOSDacInterface](isosdacinterface-interface.md)

@@ -1,16 +1,17 @@
 ---
 title: Variables y argumentos
+description: En este artículo se describen las variables, que representan el almacenamiento de datos, y los argumentos, que representan el flujo de datos hacia y desde una actividad en Workflow Foundation.
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
-ms.openlocfilehash: f975f46a1858d204d12588f7570b7ea5a365e650
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 47b8a7bddc8c3a9a8427bcb3e93760a63e5fa976
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182691"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421311"
 ---
 # <a name="variables-and-arguments"></a>Variables y argumentos
-En Windows Workflow Foundation (WF), las variables representan el almacenamiento de datos y argumentos representan el flujo de datos dentro y fuera de una actividad. Una actividad tiene un conjunto de argumentos y constituyen la firma de la actividad. Además, una actividad puede mantener una lista de variables a las que un desarrollador de software puede agregar o quitar variables durante el diseño de un flujo de trabajo. Los argumentos se enlazan mediante una expresión que devuelve un valor.  
+En Windows Workflow Foundation (WF), las variables representan el almacenamiento de datos y los argumentos representan el flujo de datos dentro y fuera de una actividad. Una actividad tiene un conjunto de argumentos y constituyen la firma de la actividad. Además, una actividad puede mantener una lista de variables a las que un desarrollador de software puede agregar o quitar variables durante el diseño de un flujo de trabajo. Los argumentos se enlazan mediante una expresión que devuelve un valor.  
   
 ## <a name="variables"></a>variables  
  Las variables son las ubicaciones de almacenamiento para los datos. Las variables se declaran como parte de la definición de un flujo de trabajo. Las variables asumen los valores en el tiempo de ejecución y estos valores se almacenan como parte del estado de una instancia de flujo de trabajo. La definición de variable especifica el tipo de la variable y, opcionalmente, el nombre. El siguiente código muestra cómo declarar una variable, asignar un valor a él mediante una actividad <xref:System.Activities.Statements.Assign%601> y, a continuación, muestra su valor en la consola usando una actividad <xref:System.Activities.Statements.WriteLine>.  
@@ -141,4 +142,4 @@ public sealed class Add : CodeActivity<int>
 }  
 ```  
   
- Para obtener más información sobre cómo trabajar con argumentos, variables y expresiones en el código, vea Creación de flujos de [trabajo, actividades y expresiones mediante código imperativo](authoring-workflows-activities-and-expressions-using-imperative-code.md) y [argumentos necesarios y grupos](required-arguments-and-overload-groups.md)de sobrecarga .
+ Para obtener más información sobre cómo trabajar con argumentos, variables y expresiones en el código, vea [crear flujos de trabajo, actividades y expresiones mediante código imperativo](authoring-workflows-activities-and-expressions-using-imperative-code.md) y [argumentos necesarios y grupos de sobrecargas](required-arguments-and-overload-groups.md).

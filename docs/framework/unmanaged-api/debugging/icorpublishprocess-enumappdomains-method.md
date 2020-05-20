@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7da621fc-e7d0-4c00-9439-5c93619d7414
 topic_type:
 - apiref
-ms.openlocfilehash: 4799c1d04e8172c604eeec50f2b841a6db063949
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0c3b5da52b78150198fa9f910bf01b4657e4eba8
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790583"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421168"
 ---
 # <a name="icorpublishprocessenumappdomains-method"></a>ICorPublishProcess::EnumAppDomains (Método)
 Obtiene un enumerador para los dominios de aplicación en el proceso al que hace referencia esta [ICorPublishProcess](icorpublishprocess-interface.md).  
@@ -33,24 +33,24 @@ HRESULT EnumAppDomains (
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parámetros  
  `ppEnum`  
  enuncia Un puntero a la dirección de una instancia de [ICorPublishAppDomainEnum (](icorpublishappdomainenum-interface.md) que permite la iteración a través de la colección de dominios de aplicación en este proceso.  
   
-## <a name="remarks"></a>Notas  
- La lista de dominios de aplicación se basa en una instantánea de los dominios de aplicación que existen cuando se llama al método `EnumAppDomains`. Este método se puede llamar más de una vez para crear una nueva lista actualizada. Las llamadas subsiguientes de este método no afectarán a las listas existentes.  
+## <a name="remarks"></a>Observaciones  
+ La lista de dominios de aplicación se basa en una instantánea de los dominios de aplicación que existen cuando `EnumAppDomains` se llama al método. Este método se puede llamar más de una vez para crear una nueva lista actualizada. Las llamadas subsiguientes de este método no afectarán a las listas existentes.  
   
- Si el proceso se ha terminado, `EnumAppDomains` producirá un error con el valor HRESULT CORDBG_E_PROCESS_TERMINATED.  
+ Si se ha finalizado el proceso, `EnumAppDomains` se producirá un error HRESULT con el valor CORDBG_E_PROCESS_TERMINATED.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorPub. idl, CorPub. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ICorPublishProcess (interfaz)](icorpublishprocess-interface.md)
+- [ICorPublishProcess (Interfaz)](icorpublishprocess-interface.md)

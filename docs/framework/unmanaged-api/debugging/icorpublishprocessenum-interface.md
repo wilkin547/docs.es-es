@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aac8fcf9-ac09-437c-bd5c-2fda14ae1007
 topic_type:
 - apiref
-ms.openlocfilehash: 188ff8feabd704d828256a09aca20f9db2227f2c
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 657d2d638a419ba88d4cf7152f4505de1bd23706
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790506"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421077"
 ---
 # <a name="icorpublishprocessenum-interface"></a>ICorPublishProcessEnum (Interfaz)
 Una subclase de la interfaz [ICorPublishEnum](icorpublishenum-interface.md) que proporciona métodos para atravesar una colección de objetos [ICorPublishProcess](icorpublishprocess-interface.md) .  
@@ -28,23 +28,23 @@ Una subclase de la interfaz [ICorPublishEnum](icorpublishenum-interface.md) que 
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Next (método)](icorpublishprocessenum-next-method.md)|Obtiene el número especificado de instancias de `ICorPublishProcess` de la colección, comenzando en la posición actual.|  
+|[Next (Método)](icorpublishprocessenum-next-method.md)|Obtiene el número especificado de `ICorPublishProcess` instancias de la colección, comenzando en la posición actual.|  
   
-## <a name="remarks"></a>Notas  
- La interfaz de `ICorPublishProcessEnum` implementa los métodos de la interfaz abstracta, [ICorPublishEnum](icorpublishenum-interface.md).  
+## <a name="remarks"></a>Observaciones  
+ La `ICorPublishProcessEnum` interfaz implementa los métodos de la interfaz abstracta, [ICorPublishEnum](icorpublishenum-interface.md).  
   
- El método [ICorPublish:: EnumProcesses](icorpublish-enumprocesses-method.md) crea una instancia `ICorPublishProcessEnum`. El recorrido de la colección de objetos de `ICorPublishProcess` se basa en los criterios de filtro dados en el momento en que se creó la instancia de `ICorPublishProcessEnum`.  
+ `ICorPublishProcessEnum`El método [ICorPublish:: EnumProcesses](icorpublish-enumprocesses-method.md) crea una instancia. El recorrido de la colección de `ICorPublishProcess` objetos se basa en los criterios de filtro dados en el momento en que `ICorPublishProcessEnum` se creó la instancia.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorPub. idl, CorPub. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [Interfaces de depuración](debugging-interfaces.md)
+- [Interfaces para depuración](debugging-interfaces.md)
 - [CorpubPublish (coclase)](corpubpublish-coclass.md)

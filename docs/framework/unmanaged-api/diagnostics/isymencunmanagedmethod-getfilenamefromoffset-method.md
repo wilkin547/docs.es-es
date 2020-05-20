@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 00e2e194-12f5-436e-a997-2b9d3e844d4f
 topic_type:
 - apiref
-ms.openlocfilehash: 74002ce9c76eebaa3ea5860b09cd3e7c9a884f8d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 857410187edf1c712865626a3327dd4c92cc211f
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448655"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441934"
 ---
 # <a name="isymencunmanagedmethodgetfilenamefromoffset-method"></a>ISymENCUnmanagedMethod::GetFileNameFromOffset (Método)
 Obtiene el nombre de archivo de la línea asociada a un desplazamiento.  
@@ -38,13 +38,13 @@ HRESULT GetFileNameFromOffset(
   
 ## <a name="parameters"></a>Parámetros  
  `dwOffset`  
- de `ULONG32` que contiene el desplazamiento.  
+ de Un `ULONG32` que contiene el desplazamiento.  
   
  `cchName`  
- de `ULONG32` que indica el tamaño del búfer de `szName`.  
+ de `ULONG32`Que indica el tamaño del `szName` búfer.  
   
  `pcchName`  
- enuncia Puntero a un `ULONG32` que recibe el tamaño, en caracteres, del búfer necesario para contener los nombres de archivo.  
+ enuncia Un puntero a un `ULONG32` que recibe el tamaño, en caracteres, del búfer necesario para contener los nombres de archivo.  
   
  `szName`  
  enuncia Búfer que contiene los nombres de archivo.  
@@ -55,6 +55,6 @@ HRESULT GetFileNameFromOffset(
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ISymENCUnmanagedMethod (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+- [ISymENCUnmanagedMethod (Interfaz)](isymencunmanagedmethod-interface.md)

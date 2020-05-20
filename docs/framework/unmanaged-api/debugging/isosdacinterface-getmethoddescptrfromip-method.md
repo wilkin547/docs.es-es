@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 0c8d91c11205e06857b4a6e7edfedcd087270d00
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: c3de9e5ffe23a13c126343c6f74f042bf1239609
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396934"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421012"
 ---
 # <a name="isosdacinterfacegetmethoddescptrfromip-method"></a>ISOSDacInterface:: GetMethodDescPtrFromIP (método)
 
@@ -45,18 +45,18 @@ de Una dirección dentro del método en tiempo de ejecución.
 `ppMD`\
 enuncia La dirección de `MethodDesc` para el método determinado.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El método proporcionado forma parte de la [ `ISOSDacInterface` interfaz](isosdacinterface-interface.md) y corresponde a la ranura 22 de la tabla del método virtual.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
 **Encabezado:** Ninguna  
 **Biblioteca:** Ninguna  
 **.NET Framework versiones:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 - [Depuración](index.md)
 - [Interfaz ISOSDacInterface](isosdacinterface-interface.md)

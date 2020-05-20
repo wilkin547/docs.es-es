@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3eb41151-a228-43e3-ba8f-e6dd3ceb8542
 topic_type:
 - apiref
-ms.openlocfilehash: 401dfbea0da309db24f3052f462daa66e8bbef4a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 332d60418c744a9391c7c0afc20248c2239b090c
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449267"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441625"
 ---
 # <a name="isymunmanagedconstantgetsignature-method"></a>ISymUnmanagedConstant::GetSignature (Método)
 Obtiene la firma de la constante.  
@@ -37,10 +37,10 @@ HRESULT GetSignature(
   
 ## <a name="parameters"></a>Parámetros  
  `cSig`  
- de Longitud del búfer al que apunta el parámetro `pcSig`.  
+ de Longitud del búfer al que apunta el `pcSig` parámetro.  
   
  `pcSig`  
- enuncia Puntero a un `ULONG32` que recibe el tamaño, en caracteres, del búfer necesario para contener la firma.  
+ enuncia Un puntero a un `ULONG32` que recibe el tamaño, en caracteres, del búfer necesario para contener la firma.  
   
  `sig`  
  enuncia Búfer que almacena la firma.  
@@ -51,8 +51,8 @@ HRESULT GetSignature(
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ISymUnmanagedConstant (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)
-- [GetName (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getname-method.md)
-- [GetValue (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getvalue-method.md)
+- [ISymUnmanagedConstant (Interfaz)](isymunmanagedconstant-interface.md)
+- [Método GetName](isymunmanagedconstant-getname-method.md)
+- [Método GetValue](isymunmanagedconstant-getvalue-method.md)

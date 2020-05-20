@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b22fbe19-b30f-4696-8175-e6b91da9edab
 topic_type:
 - apiref
-ms.openlocfilehash: f23df98abc5355f0b25d7253b5f2ae808b3446a1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f4f925282d65cd9cbc8eb1c8825f358602de68ed
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449372"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441700"
 ---
 # <a name="isymunmanagedbinder-interface"></a>ISymUnmanagedBinder (Interfaz)
 Representa un enlazador de símbolos para código no administrado.  
@@ -31,14 +31,14 @@ Representa un enlazador de símbolos para código no administrado.
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[GetReaderForFile (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)|Dada una interfaz de metadatos y un nombre de archivo, devuelve la estructura [ISymUnmanagedReader](isymunmanagedreader-interface.md) correcta que leerá los símbolos de depuración asociados al módulo.|  
-|[GetReaderFromStream (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderfromstream-method.md)|Dada una interfaz de metadatos y una secuencia que contiene el almacén de símbolos, devuelve la estructura [ISymUnmanagedReader](isymunmanagedreader-interface.md) correcta que leerá los símbolos de depuración del almacén de símbolos determinado.|  
+|[Método GetReaderForFile](isymunmanagedbinder-getreaderforfile-method.md)|Dada una interfaz de metadatos y un nombre de archivo, devuelve la estructura [ISymUnmanagedReader](isymunmanagedreader-interface.md) correcta que leerá los símbolos de depuración asociados al módulo.|  
+|[Método GetReaderFromStream](isymunmanagedbinder-getreaderfromstream-method.md)|Dada una interfaz de metadatos y una secuencia que contiene el almacén de símbolos, devuelve la estructura [ISymUnmanagedReader](isymunmanagedreader-interface.md) correcta que leerá los símbolos de depuración del almacén de símbolos determinado.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [Interfaces de almacén de símbolos de diagnósticos](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
-- [ISymUnmanagedBinder2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)
-- [ISymUnmanagedBinder3 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)
+- [Interfaces de almacén de símbolos de diagnósticos](diagnostics-symbol-store-interfaces.md)
+- [ISymUnmanagedBinder2 (Interfaz)](isymunmanagedbinder2-interface.md)
+- [ISymUnmanagedBinder3 (Interfaz)](isymunmanagedbinder3-interface.md)
