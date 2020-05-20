@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c7e99879-421f-43ce-b193-34733cf30085
 topic_type:
 - apiref
-ms.openlocfilehash: dbf876a514ce106c566a168f688eb3a22d3a1ea2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 06a331e24622e0a155d974ca869818a6532baa1f
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449047"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615545"
 ---
 # <a name="isymunmanageddocumentwritersetchecksum-method"></a>ISymUnmanagedDocumentWriter::SetCheckSum (Método)
 Establece la información de suma de comprobación.  
@@ -39,7 +39,7 @@ HRESULT SetCheckSum(
  de GUID que representa el identificador del algoritmo.  
   
  `checkSumSize`  
- de `ULONG32` que indica el tamaño, en bytes, del búfer de `checkSum`.  
+ de `ULONG32`Que indica el tamaño, en bytes, del `checkSum` búfer.  
   
  `checkSum`  
  de Búfer que almacena la información de la suma de comprobación.  
@@ -50,6 +50,6 @@ HRESULT SetCheckSum(
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ISymUnmanagedDocumentWriter (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)
+- [ISymUnmanagedDocumentWriter (Interfaz)](isymunmanageddocumentwriter-interface.md)

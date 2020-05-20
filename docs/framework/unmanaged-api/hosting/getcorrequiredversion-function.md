@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1588fe7b-c378-4f4b-9c4b-48647f1119cc
 topic_type:
 - apiref
-ms.openlocfilehash: 661eb758e1651901bb56810640a68f0de0b4e851
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6b9fd62102056a8d5f859ac913f4786f04c1df7e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136477"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617248"
 ---
 # <a name="getcorrequiredversion-function"></a>GetCORRequiredVersion (Función)
 Obtiene el número de versión de Common Language Runtime (CLR) necesario.  
@@ -47,14 +47,14 @@ HRESULT GetCORRequiredVersion (
  enuncia Número de bytes devueltos en el búfer.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
  **Biblioteca:** MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [Funciones de hospedaje de CLR en desuso](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Funciones de hospedaje de CLR en desuso](deprecated-clr-hosting-functions.md)

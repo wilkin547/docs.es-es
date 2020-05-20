@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d1e0b654-ccaf-4fa2-9aa3-8e007813c84d
 topic_type:
 - apiref
-ms.openlocfilehash: 879e20be20ca2eaa8533bd8b8fd6c59304fb70a4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8056750e3d0107e27339a85c8cf814632dcece47
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131168"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616364"
 ---
 # <a name="eclrassemblyidentityflags-enumeration"></a>ECLRAssemblyIdentityFlags (Enumeración)
 Indica el tipo de la identidad de un ensamblado.  
@@ -39,12 +39,12 @@ typedef enum _CLRAssemblyIdentityFlags {
 |`CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT`|La identidad está en formato canónico.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [Enumeraciones para hosts](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [Enumeraciones para hosts](hosting-enumerations.md)

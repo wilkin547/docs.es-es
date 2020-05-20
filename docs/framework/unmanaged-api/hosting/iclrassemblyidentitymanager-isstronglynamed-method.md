@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 954bd386-2076-4d00-9d46-38c728aa9cab
 topic_type:
 - apiref
-ms.openlocfilehash: 288620eba867160e13a5ebee501a9afcf5623cce
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d388f366671f50c3dcb3bd9d387300dd1bbb168f
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126648"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615909"
 ---
 # <a name="iclrassemblyidentitymanagerisstronglynamed-method"></a>ICLRAssemblyIdentityManager::IsStronglyNamed (Método)
 Obtiene un valor que indica si el ensamblado especificado tiene un nombre seguro.  
@@ -39,7 +39,7 @@ RESULT IsStronglyNamed (
  de Datos de identidad del ensamblado canónico opaco del ensamblado que se va a evaluar.  
   
  `pbIsStronglyNamed`  
- [out] `true`, si el ensamblado al que hace referencia el parámetro `pwzAssemblyIdentity` tiene un nombre seguro; de lo contrario, `false`.  
+ [out] `true` si el ensamblado al que hace referencia el `pwzAssemblyIdentity` parámetro tiene un nombre seguro; de lo contrario, `false` .  
   
 ## <a name="return-value"></a>Valor devuelto  
   
@@ -53,14 +53,14 @@ RESULT IsStronglyNamed (
 |E_FAIL|Se produjo un error grave desconocido. Si un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
  **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ICLRAssemblyIdentityManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [ICLRAssemblyIdentityManager (Interfaz)](iclrassemblyidentitymanager-interface.md)

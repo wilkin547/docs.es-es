@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 90368606-506e-40df-be1f-8d595159203f
 topic_type:
 - apiref
-ms.openlocfilehash: 8f9761cc8bc881cd694f5d9620e5c4ab5987a2ed
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fc0de164b9489c9661bc6cb0ffb681f75e88ea26
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176401"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617014"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen (Clase)
-Proporciona funcionalidad para crear un archivo ejecutable portátil nativo (PE). Normalmente, los compiladores usarán la interfaz para generar su ejecutable de salida compilado.  
+Proporciona funcionalidad para crear un archivo ejecutable portable (PE) nativo. Los compiladores usarán normalmente la interfaz para generar su archivo ejecutable de salida compilado.  
   
 > [!NOTE]
-> `ICeeFileGen`admite la infraestructura de .NET Framework y no está diseñada para usarse directamente desde el código.  
+> `ICeeFileGen`admite la infraestructura de .NET Framework y no está diseñada para utilizarse directamente desde el código.  
   
- Esta interfaz ha quedado en desuso y se eliminará en una versión futura.  
+ Esta interfaz está en desuso y se quitará en una versión futura.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -235,12 +235,12 @@ public:
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** ICeeFileGen.h  
+ **Encabezado:** ICeeFileGen. h  
   
- **Versión de .NET Framework:** 1.0  
+ **Versión de .NET Framework:** 1,0  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
-- [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Interfaces de hospedaje](hosting-interfaces.md)

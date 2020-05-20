@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 16dc49cb-2c60-4ac8-9c35-020e9afba3f8
 topic_type:
 - apiref
-ms.openlocfilehash: 4590d2734ea89bc1bc8a30db1c7ecac5effafd7b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 637e1aed003e211654141ab397c9c0b4724753c2
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429756"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615493"
 ---
 # <a name="isymunmanagedreadergetvariables-method"></a>ISymUnmanagedReader::GetVariables (Método)
 Devuelve una variable no local, dados su elemento primario y su nombre.  
@@ -44,7 +44,7 @@ HRESULT GetVariables (
  [in] Tamaño de la matriz `pVars`.  
   
  `pcVars`  
- enuncia Puntero a la variable que recibe el número de variables devueltas en `pVars`.  
+ enuncia Puntero a la variable que recibe el número de variables devueltas en `pVars` .  
   
  `pVars`  
  enuncia Puntero a la variable que recibe las variables.  
@@ -55,6 +55,6 @@ HRESULT GetVariables (
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ISymUnmanagedReader (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader (Interfaz)](isymunmanagedreader-interface.md)

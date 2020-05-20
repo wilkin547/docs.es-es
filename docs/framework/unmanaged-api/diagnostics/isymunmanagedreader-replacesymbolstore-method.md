@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 43257761-8cb1-4eaf-8fb5-1f3980cb66cd
 topic_type:
 - apiref
-ms.openlocfilehash: 60c3537a80c39f758f46e6f2f0a5f2bcd27350b5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: db2137146ded5200e05bbf88e23ae599f3eb7dec
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445732"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615454"
 ---
 # <a name="isymunmanagedreaderreplacesymbolstore-method"></a>ISymUnmanagedReader::ReplaceSymbolStore (Método)
-Reemplaza el almacén de símbolos existente con un almacén de símbolos delta. Este método es similar al método [UpdateSymbolStore (](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) , salvo que el Delta dado actúa como un reemplazo completo en lugar de una actualización.  
+Reemplaza el almacén de símbolos existente con un almacén de símbolos delta. Este método es similar al método [UpdateSymbolStore (](isymunmanagedreader-updatesymbolstore-method.md) , salvo que el Delta dado actúa como un reemplazo completo en lugar de una actualización.  
   
 > [!NOTE]
-> Solo se debe especificar uno de los parámetros `filename` o `pIStream`, no ambos. Si se especifica `filename`, el almacén de símbolos se actualizará con los símbolos de ese archivo. Si se especifica `pIStream`, el almacén se actualizará con los datos de la <xref:System.Runtime.InteropServices.ComTypes.IStream>.  
+> Solo se debe especificar uno de los `filename` `pIStream` parámetros o, no ambos. Si `filename` se especifica, el almacén de símbolos se actualizará con los símbolos de ese archivo. Si `pIStream` se especifica, el almacén se actualizará con los datos de <xref:System.Runtime.InteropServices.ComTypes.IStream> .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,7 +41,7 @@ HRESULT ReplaceSymbolStore (
  de Nombre del archivo que contiene el almacén de símbolos.  
   
  `pIStream`  
- de El flujo de archivo, que se usa como alternativa al parámetro `filename`.  
+ de El flujo de archivo, que se usa como alternativa al `filename` parámetro.  
   
 ## <a name="return-value"></a>Valor devuelto  
  S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
@@ -49,6 +49,6 @@ HRESULT ReplaceSymbolStore (
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ISymUnmanagedReader (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader (Interfaz)](isymunmanagedreader-interface.md)

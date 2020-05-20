@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 20bdf8ff-2d15-4c64-8950-6888f642d6c0
 topic_type:
 - apiref
-ms.openlocfilehash: 6904271ed90cf733b9221178927bc680d76b58a6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9a3a6c07a9cace0ac9834cdb05925a301285204c
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176583"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615324"
 ---
 # <a name="isymunmanagedsourceservermodulegetsourceserverdata-method"></a>ISymUnmanagedSourceServerModule::GetSourceServerData (Método)
-Devuelve los datos del servidor de origen para el módulo. El autor de la `CoTaskMemFree`llamada debe liberar recursos mediante .  
+Devuelve los datos del servidor de origen para el módulo. El llamador debe liberar recursos mediante `CoTaskMemFree` .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,17 +35,17 @@ HRESULT GetSourceServerData(
   
 ## <a name="parameters"></a>Parámetros  
  `pDataByteCount`  
- [fuera] Puntero a `ULONG32` un que recibe el tamaño, en bytes, de los datos del servidor de origen.  
+ enuncia Un puntero a un `ULONG32` que recibe el tamaño, en bytes, de los datos del servidor de origen.  
   
  `ppData`  
- [fuera] Un puntero al `pDataByteCount` valor devuelto.  
+ enuncia Puntero al valor devuelto `pDataByteCount` .  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método se realiza correctamente; de lo contrario, E_FAIL o algún otro código de error.  
+ S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** CorSym.idl, CorSym.h  
+ **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
-- [ISymUnmanagedSourceServerModule (Interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-interface.md)
+- [ISymUnmanagedSourceServerModule (Interfaz)](isymunmanagedsourceservermodule-interface.md)

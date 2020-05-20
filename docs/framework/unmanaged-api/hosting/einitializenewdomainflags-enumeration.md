@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - EInitializeNewDomainFlags enumeration [.NET Framework hosting]
 ms.assetid: 3a120ab2-f5ef-4c9b-8595-d3ed7247c342
-ms.openlocfilehash: 3693285e13d0650f7662e2187471027cc4c40704
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7ff10f84d8d270d31c5d560fb3c9bd3c81cf3e24
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129413"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616234"
 ---
 # <a name="einitializenewdomainflags-enumeration"></a>EInitializeNewDomainFlags (Enumeración)
 Permite al host proporcionar información sobre la inicialización de un dominio de aplicación en el tiempo de ejecución.  
@@ -36,21 +36,21 @@ typedef enum {
 |Miembro|Descripción|  
 |------------|-----------------|  
 |`eInitializeNewDomainFlags_None`|Sin marcas.|  
-|`eInitializeNewDomainFlags_NoSecurityChanges`|Informa al Common Language Runtime (CLR) de que el host no realizará cambios en el estado de seguridad del dominio de aplicación en el método <xref:System.AppDomainManager.InitializeNewDomain%2A>.|  
+|`eInitializeNewDomainFlags_NoSecurityChanges`|Informa al Common Language Runtime (CLR) de que el host no realizará cambios en el estado de seguridad del dominio de aplicación en el <xref:System.AppDomainManager.InitializeNewDomain%2A> método.|  
   
-## <a name="remarks"></a>Comentarios  
- El método [ICLRDomainManager:: setappdomainmanagertype (](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md) toma un parámetro de tipo `EInitializeNewDomainFlags`.  
+## <a name="remarks"></a>Observaciones  
+ El método [ICLRDomainManager:: setappdomainmanagertype (](iclrdomainmanager-setappdomainmanagertype-method.md) toma un parámetro de tipo `EInitializeNewDomainFlags` .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
  **Biblioteca:** MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [Enumeraciones para hosts](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
-- [SetAppDomainManagerType (método)](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md)
+- [Enumeraciones para hosts](hosting-enumerations.md)
+- [SetAppDomainManagerType (Método)](iclrdomainmanager-setappdomainmanagertype-method.md)

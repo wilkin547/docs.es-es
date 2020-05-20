@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICLRDomainManager interface [.NET Framework hosting]
 ms.assetid: f08b2390-d872-4521-a815-e9c237c4c45d
-ms.openlocfilehash: aa874205cf14232e7a69ed2215086e33c0beab4d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: dda243ccbf18f396c1bcc03358997ea0f06c42a8
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129340"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615714"
 ---
 # <a name="iclrdomainmanager-interface"></a>ICLRDomainManager (Interfaz)
 Permite al host especificar el administrador del dominio de aplicación que se utilizará para inicializar el dominio de aplicación predeterminado y para especificar las propiedades de inicialización.  
@@ -26,22 +26,22 @@ Permite al host especificar el administrador del dominio de aplicación que se u
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[SetAppDomainManagerType (método)](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md)|Especifica el tipo, derivado de la clase <xref:System.AppDomainManager?displayProperty=nameWithType>, del administrador del dominio de aplicación que se utilizará para inicializar el dominio de aplicación predeterminado.|  
-|[SetPropertiesForDefaultAppDomain (método)](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setpropertiesfordefaultappdomain-method.md)|Establece las propiedades que se usarán para inicializar el dominio de aplicación predeterminado.|  
+|[SetAppDomainManagerType (Método)](iclrdomainmanager-setappdomainmanagertype-method.md)|Especifica el tipo, derivado de la <xref:System.AppDomainManager?displayProperty=nameWithType> clase, del administrador del dominio de aplicación que se utilizará para inicializar el dominio de aplicación predeterminado.|  
+|[Método SetPropertiesForDefaultAppDomain](iclrdomainmanager-setpropertiesfordefaultappdomain-method.md)|Establece las propiedades que se usarán para inicializar el dominio de aplicación predeterminado.|  
   
-## <a name="remarks"></a>Comentarios  
- Para obtener una instancia de esta interfaz, llame al método [ICLRControl:: GetCLRManager (](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) con el IID de tipo de administrador `IID_ICLRDomainManager`.  
+## <a name="remarks"></a>Observaciones  
+ Para obtener una instancia de esta interfaz, llame al método [ICLRControl:: GetCLRManager (](iclrcontrol-getclrmanager-method.md) con el IID de tipo de administrador `IID_ICLRDomainManager` .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Metahost. h  
   
  **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [Hospedar aplicaciones de WPF](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [Interfaces de hospedaje](hosting-interfaces.md)
+- [Hospedar aplicaciones de WPF](index.md)

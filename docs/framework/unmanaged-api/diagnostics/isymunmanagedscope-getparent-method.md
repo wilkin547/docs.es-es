@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c7963c87-6ec5-49b3-a5cd-e0fe0c43f9b4
 topic_type:
 - apiref
-ms.openlocfilehash: 512dd4055a0aad8498db6ef2241c9363aecee9c7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 95ae081d61200e4fd020609a4d23783f265d2cc6
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446289"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615363"
 ---
 # <a name="isymunmanagedscopegetparent-method"></a>ISymUnmanagedScope::GetParent (Método)
 Obtiene el ámbito primario de este ámbito.  
@@ -34,7 +34,7 @@ HRESULT GetParent(
   
 ## <a name="parameters"></a>Parámetros  
  `pRetVal`  
- enuncia Puntero a la interfaz [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) devuelta.  
+ enuncia Puntero a la interfaz [ISymUnmanagedScope](isymunmanagedscope-interface.md) devuelta.  
   
 ## <a name="return-value"></a>Valor devuelto  
  S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
@@ -42,7 +42,7 @@ HRESULT GetParent(
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ISymUnmanagedScope (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
-- [GetChildren (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getchildren-method.md)
+- [ISymUnmanagedScope (Interfaz)](isymunmanagedscope-interface.md)
+- [Método GetChildren](isymunmanagedscope-getchildren-method.md)

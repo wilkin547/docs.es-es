@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4a17d723-86b9-4f27-bd0d-b70c3259011c
 topic_type:
 - apiref
-ms.openlocfilehash: e052d9b7b2abd57b176dfe3b00afac626d422c58
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ccc787aa1c820a486d9a513055c9c9834b90bd1a
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446460"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615441"
 ---
 # <a name="isymunmanagedreaderupdatesymbolstore-method"></a>ISymUnmanagedReader::UpdateSymbolStore (Método)
 Actualiza el almacén de símbolos existente con un almacén de símbolos delta. Este método se usa en escenarios de edición y continuación para actualizar el almacén de símbolos de modo que coincida con las diferencias con el archivo portable ejecutable (PE) original.  
   
 > [!NOTE]
-> Solo se debe especificar uno de los parámetros `filename` o `pIStream`, no ambos. Si se especifica `filename`, el almacén de símbolos se actualizará con los símbolos de ese archivo. Si se especifica `pIStream`, el almacén se actualizará con los datos de la <xref:System.Runtime.InteropServices.ComTypes.IStream>.  
+> Solo se debe especificar uno de los `filename` `pIStream` parámetros o, no ambos. Si `filename` se especifica, el almacén de símbolos se actualizará con los símbolos de ese archivo. Si `pIStream` se especifica, el almacén se actualizará con los datos de <xref:System.Runtime.InteropServices.ComTypes.IStream> .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,7 +41,7 @@ HRESULT UpdateSymbolStore (
  de Nombre del archivo que contiene el almacén de símbolos.  
   
  `pIStream`  
- de El flujo de archivo, que se usa como alternativa al parámetro `filename`.  
+ de El flujo de archivo, que se usa como alternativa al `filename` parámetro.  
   
 ## <a name="return-value"></a>Valor devuelto  
  S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
@@ -49,6 +49,6 @@ HRESULT UpdateSymbolStore (
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ISymUnmanagedReader (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader (Interfaz)](isymunmanagedreader-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c6cbbea-c27c-4695-bda3-17c1910d8ddb
 topic_type:
 - apiref
-ms.openlocfilehash: a7dae98d1f2dc2448bd3a5df2d6143b7be0bb734
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: aa906e314c408b7653e611b07d7ad21d4519b715
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129257"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616988"
 ---
 # <a name="iclrgcmanagercollect-method"></a>ICLRGCManager::Collect (Método)
 Fuerza una recolección de elementos no utilizados para la generación especificada.  
@@ -41,31 +41,31 @@ HRESULT Collect (
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`Collect` devolvió correctamente.|  
+|S_OK|`Collect`se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|El Common Language Runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
 |HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
 |HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
-|E_FAIL|Se produjo un error grave desconocido. Una vez que un método devuelve E_FAIL, el CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
+|E_FAIL|Se produjo un error grave desconocido. Después de que un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
- El método `Collect` fuerza al recolector de elementos no utilizados de CLR a realizar una recolección, independientemente de su estado actual.  
+## <a name="remarks"></a>Observaciones  
+ El `Collect` método obliga al recolector de elementos no utilizados de CLR a realizar una recolección, independientemente de su estado actual.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
  **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [Administración automática de la memoria](../../../standard/automatic-memory-management.md)
+- [Administración de memoria automática](../../../standard/automatic-memory-management.md)
 - [Recolección de elementos no utilizados](../../../standard/garbage-collection/index.md)
-- [ICLRControl (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [ICLRGCManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)
-- [Interfaces de hospedaje de CLR](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)
-- [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [Hospedar aplicaciones de WPF](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ICLRControl (Interfaz)](iclrcontrol-interface.md)
+- [ICLRGCManager (Interfaz)](iclrgcmanager-interface.md)
+- [Interfaces de hospedaje de CLR](clr-hosting-interfaces.md)
+- [Interfaces de hospedaje](hosting-interfaces.md)
+- [Hospedar aplicaciones de WPF](index.md)

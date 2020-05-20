@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c7ae84d6-81e8-4cb7-a1f9-d48b6cde5d79
 topic_type:
 - apiref
-ms.openlocfilehash: 70c1d87ae32fb70f8d9f6e32b527394022459526
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 68a0f9ec8793d465a6fa3b1cb6936eddd7be4c8f
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446435"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615415"
 ---
 # <a name="isymunmanagedreader2getmethodsindocument-method"></a>ISymUnmanagedReader2::GetMethodsInDocument (Método)
 Obtiene todos los métodos que tienen información de línea en el documento proporcionado.  
@@ -41,10 +41,10 @@ HRESULT GetMethodsInDocument(
  de Puntero al documento.  
   
  `cMethod`  
- de `ULONG32` que indica el tamaño de la matriz de `pRetVal`.  
+ de `ULONG32`Que indica el tamaño de la `pRetVal` matriz.  
   
  `pcMethod`  
- enuncia Puntero a un `ULONG32` que recibe el tamaño del búfer necesario para contener los métodos.  
+ enuncia Un puntero a un `ULONG32` que recibe el tamaño del búfer necesario para contener los métodos.  
   
  `pRetVal`  
  enuncia Puntero al búfer que recibe los métodos.  
@@ -55,6 +55,6 @@ HRESULT GetMethodsInDocument(
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ISymUnmanagedReader2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)
+- [ISymUnmanagedReader2 (Interfaz)](isymunmanagedreader2-interface.md)

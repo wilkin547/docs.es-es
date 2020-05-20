@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3f958d41-e82e-4ec3-ae6f-16c7b3b31e3e
 topic_type:
 - apiref
-ms.openlocfilehash: 15ce6b589beb6c8b30ff4e8b16440c8110cc466b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 30e8df6e2dcdfed15badaa6c0996ee6c912315d2
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136893"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616544"
 ---
 # <a name="cormarkthreadinthreadpool-function"></a>CorMarkThreadInThreadPool (Función)
 Marca el subproceso de grupo de subprocesos que se está ejecutando actualmente para la ejecución de código administrado. A partir de la versión 2,0 de .NET Framework, esta función no tiene ningún efecto. No es necesario y se puede quitar del código. Esta función está en desuso en el .NET Framework 4.  
@@ -31,14 +31,14 @@ void CorMarkThreadInThreadPool ();
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
  **Biblioteca:** MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [Funciones de hospedaje de CLR en desuso](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Funciones de hospedaje de CLR en desuso](deprecated-clr-hosting-functions.md)

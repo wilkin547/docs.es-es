@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8f0dd2fe-7df7-464e-91f4-5518c586bb5f
 topic_type:
 - apiref
-ms.openlocfilehash: ca34d1d84d6f9960d021c35566f8412df321464d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 07d2de5d12fd769cb5cce243d9e721bb6fc185a7
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429737"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615480"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>ISymUnmanagedReader::Initialize (Método)
 Inicializa el lector de símbolos con la interfaz de importador de metadatos a la que se asociará este lector, junto con el nombre de archivo del módulo.  
@@ -43,7 +43,7 @@ HRESULT Initialize (
  de La interfaz de importador de metadatos a la que se asociará este lector.  
   
  `filename`  
- de Nombre de archivo del módulo. En su lugar, puede usar el parámetro `pIStream`.  
+ de Nombre de archivo del módulo. En su lugar, puede usar el `pIStream` parámetro.  
   
  `searchPath`  
  de Ruta de acceso que se va a buscar. Este parámetro es opcional.  
@@ -54,12 +54,12 @@ HRESULT Initialize (
 ## <a name="return-value"></a>Valor devuelto  
  S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
-## <a name="remarks"></a>Comentarios  
- Solo tiene que especificar uno de los parámetros `filename` o `pIStream`, no ambos. El parámetro `searchPath` es opcional.  
+## <a name="remarks"></a>Observaciones  
+ Solo tiene que especificar uno de los `filename` `pIStream` parámetros o, no ambos. El `searchPath` es opcional.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ISymUnmanagedReader (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader (Interfaz)](isymunmanagedreader-interface.md)

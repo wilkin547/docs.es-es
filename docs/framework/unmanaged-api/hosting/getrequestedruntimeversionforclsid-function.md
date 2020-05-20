@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 5bb12f9a-0612-434b-b4ed-2db636a20bec
 topic_type:
 - apiref
-ms.openlocfilehash: 6132e94544b30486b70ecfec49c1ddd5e3c0f50b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 899d6e74902e47f1f41b849bd5c25048baa175f7
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178118"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617144"
 ---
 # <a name="getrequestedruntimeversionforclsid-function"></a>GetRequestedRuntimeVersionForCLSID (Función)
-Obtiene la información de versión de Common Language Runtime `CLSID`(CLR) adecuada para la clase con el archivo .  
+Obtiene la información de versión de Common Language Runtime (CLR) adecuada para la clase con el especificado `CLSID` .  
   
- Esta función ha quedado en desuso en .NET Framework 4.  
+ Esta función está en desuso en el .NET Framework 4.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,23 +40,23 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
   
 ## <a name="parameters"></a>Parámetros  
  `rclsid`  
- [en]  El `CLSID` componente.  
+ de  `CLSID`Del componente.  
   
  `pVersion`  
- [fuera]  Un búfer que contiene la cadena de número de versión una vez completado correctamente.  
+ enuncia  Un búfer que contiene la cadena del número de versión cuando se completa correctamente.  
   
  `cchBuffer`  
- [en]  El tamaño, en caracteres `pVersion` anchos, del búfer.  
+ de  Tamaño, en caracteres anchos, del `pVersion` búfer.  
   
  `dwLength`  
- [fuera] La longitud, en bytes, del búfer devuelto.  
+ enuncia La longitud, en bytes, del búfer devuelto.  
   
  `dwResolutionFlags`  
- [en]  Uno de los valores CLSID_RESOLUTION_FLAGS. Se admiten los valores siguientes:  
+ de  Uno de los valores de CLSID_RESOLUTION_FLAGS. Se admiten los valores siguientes:  
   
-- CLSID_RESOLUTION_DEFAULT: (0x0) Especifica que se debe utilizar el comportamiento de interoperabilidad predeterminado.  
+- CLSID_RESOLUTION_DEFAULT: (0X0) especifica que debe usarse el comportamiento predeterminado de interoperabilidad.  
   
-- CLSID_RESOLUTION_REGISTERED: (0x1) Especifica que se debe buscar en el registro y aplicar la directiva de correcciones de archivos.  
+- CLSID_RESOLUTION_REGISTERED: (0x1) especifica que se debe buscar en el registro y que se aplique la Directiva de correcciones de compatibilidad (shim).  
   
 ## <a name="return-value"></a>Valor devuelto  
   
@@ -64,17 +64,17 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
 |-------------|-----------------|  
 |S_OK|La función se devolvió correctamente.|  
 |E_INVALIDARG|Uno de los parámetros tiene un tipo o formato no válido.|  
-|ERROR_INSUFFICIENT_BUFFER|El `pVersion` búfer no es lo suficientemente grande como para contener toda la cadena de versión.|  
-|REGDB_E_CLASSNOTREG|No hay ninguna clase registrada `CLSID`con el archivo .|  
-|E_POINTER|`dwLength`es null, `cchBuffer` o es lo suficientemente `pVersion` grande como para contener la cadena de versión, pero es null.|  
+|ERROR_INSUFFICIENT_BUFFER|El `pVersion` búfer no es suficientemente grande para contener la cadena de versión completa.|  
+|REGDB_E_CLASSNOTREG|No hay ninguna clase registrada con el especificado `CLSID` .|  
+|E_POINTER|`dwLength`es null, o `cchBuffer` es lo suficientemente grande como para contener la cadena de versión, pero `pVersion` es NULL.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** MScorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
-- [Funciones de hospedaje de CLR en desuso](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Funciones de hospedaje de CLR en desuso](deprecated-clr-hosting-functions.md)

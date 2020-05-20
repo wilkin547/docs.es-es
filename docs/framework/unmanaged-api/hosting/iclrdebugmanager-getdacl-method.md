@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7115e920-aaff-440a-824e-39497139c6f6
 topic_type:
 - apiref
-ms.openlocfilehash: a18e1efd246b0d6895d18ae0e7089a78703eae0e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 933edf734a0e02b4ac9c88d9f193277d963adada
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129429"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615805"
 ---
 # <a name="iclrdebugmanagergetdacl-method"></a>ICLRDebugManager::GetDacl (Método)
 Este método no se implementa.  
@@ -41,20 +41,20 @@ HRESULT GetDacl (
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|E_NOTIMPL|No se ha implementado el método.|  
+|E_NOTIMPL|El método no está implementado.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
  **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ICLRControl (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [ICLRDebugManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)
-- [SetDacl (método)](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setdacl-method.md)
-- [IHostControl (interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)
+- [ICLRControl (Interfaz)](iclrcontrol-interface.md)
+- [ICLRDebugManager (Interfaz)](iclrdebugmanager-interface.md)
+- [Método SetDacl](iclrdebugmanager-setdacl-method.md)
+- [IHostControl (Interfaz)](ihostcontrol-interface.md)

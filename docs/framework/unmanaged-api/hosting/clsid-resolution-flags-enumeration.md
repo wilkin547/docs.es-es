@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: cd8b9879-962a-4811-aa46-2e2b6bae0d84
 topic_type:
 - apiref
-ms.openlocfilehash: d52f9f0bc2ff27d7849a80a424714aa84d3688fe
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5ac015f958d9504bbd14a66ead86548b8df32764
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136997"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616780"
 ---
 # <a name="clsid_resolution_flags-enumeration"></a>CLSID_RESOLUTION_FLAGS (Enumeración)
-Contiene valores que indican cómo el Common Language Runtime (CLR) debe resolver un `CLSID`.  
+Contiene valores que indican cómo debe resolver el Common Language Runtime (CLR) `CLSID` .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,12 +41,12 @@ typedef enum {
 |`CLSID_RESOLUTION_REGISTERED`|Indica que el tiempo de ejecución busca en el registro y aplica la Directiva de correcciones de compatibilidad.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [Enumeraciones para hosts](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [Enumeraciones para hosts](hosting-enumerations.md)

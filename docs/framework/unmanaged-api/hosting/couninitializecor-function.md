@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 50a95b8b-9766-470e-bb29-2c7ecddfd4a1
 topic_type:
 - apiref
-ms.openlocfilehash: eddc2f29da0efd9e56df710203b1d7621ffc27a0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8a8c2764398d737192190f91646d45f4edf3a0e4
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136864"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616483"
 ---
 # <a name="couninitializecor-function"></a>CoUninitializeCor (Función)
 `CoUninitializeCor` está obsoleto.  
@@ -31,9 +31,9 @@ ms.locfileid: "73136864"
 STDAPI_(void) CoUninitializeCor(void);  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  No se puede descargar el Common Language Runtime de un proceso. Para quitar completamente el Runtime de un proceso en ejecución, debe cerrar ese proceso.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [Funciones estáticas globales para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+- [Funciones estáticas globales para metadatos](../metadata/metadata-global-static-functions.md)

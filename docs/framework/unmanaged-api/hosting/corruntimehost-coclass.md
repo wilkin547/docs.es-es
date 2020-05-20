@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5833740b-7d67-44b4-865c-b5bf45e291e3
 topic_type:
 - apiref
-ms.openlocfilehash: 512009e053605e2018f1fcbafa422c1a36ddecc1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fe378307ce2bda6e1a267e46433ead70a0e2299e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136906"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616531"
 ---
 # <a name="corruntimehost-coclass"></a>CorRuntimeHost (Coclase)
 Proporciona interfaces para administrar las aplicaciones que se ejecutan en el Common Language Runtime.  
@@ -40,21 +40,21 @@ coclass CorRuntimeHost {
   
 |Interfaz|Descripción|  
 |---------------|-----------------|  
-|[ICorConfiguration (interfaz)](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)|Proporciona métodos para configurar el Common Language Runtime (CLR).|  
-|[ICorRuntimeHost (interfaz)](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)|Proporciona métodos que permiten al host iniciar y detener el Common Language Runtime explícitamente, para crear y configurar dominios de aplicación, para tener acceso al dominio predeterminado y para enumerar todos los dominios que se ejecutan en el proceso.|  
-|[IDebuggerInfo (interfaz)](../../../../docs/framework/unmanaged-api/hosting/idebuggerinfo-interface.md)|Proporciona métodos para obtener información sobre el estado de los servicios de depuración.|  
-|[IGCHost (interfaz)](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)|Proporciona métodos para obtener información sobre el sistema de recolección de elementos no utilizados y para controlar algunos aspectos de la recolección de elementos no utilizados.|  
+|[ICorConfiguration (Interfaz)](icorconfiguration-interface.md)|Proporciona métodos para configurar el Common Language Runtime (CLR).|  
+|[ICorRuntimeHost (Interfaz)](icorruntimehost-interface.md)|Proporciona métodos que permiten al host iniciar y detener el Common Language Runtime explícitamente, para crear y configurar dominios de aplicación, para tener acceso al dominio predeterminado y para enumerar todos los dominios que se ejecutan en el proceso.|  
+|[IDebuggerInfo (Interfaz)](idebuggerinfo-interface.md)|Proporciona métodos para obtener información sobre el estado de los servicios de depuración.|  
+|[IGCHost (Interfaz)](igchost-interface.md)|Proporciona métodos para obtener información sobre el sistema de recolección de elementos no utilizados y para controlar algunos aspectos de la recolección de elementos no utilizados.|  
 |IValidator|Proporciona métodos para la validación de imágenes ejecutables portables e informes detallados de errores de validación.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. idl  
   
  **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [Coclases para el hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)
+- [Coclases para el hospedaje](hosting-coclasses.md)

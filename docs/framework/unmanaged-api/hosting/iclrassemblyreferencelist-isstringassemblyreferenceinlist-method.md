@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e6121cc3-2f11-42c7-bdae-47808581ff71
 topic_type:
 - apiref
-ms.openlocfilehash: 4dc91723f009d46f9c57b1c99aa66ba7a1b127e4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 91f174cab4986882df795eb531baedfc0dd43962
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126632"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615870"
 ---
 # <a name="iclrassemblyreferencelistisstringassemblyreferenceinlist-method"></a>ICLRAssemblyReferenceList::IsStringAssemblyReferenceInList (Método)
 Obtiene un valor que indica si el nombre proporcionado coincide con el nombre de un ensamblado de la lista.  
@@ -43,20 +43,20 @@ HRESULT IsStringAssemblyReferenceInList (
 |-------------|-----------------|  
 |S_OK|La cadena aparece en la lista.|  
 |S_FALSE|La cadena no aparece en la lista.|  
-|E_FAIL|Se produjo un error grave desconocido. Una vez que un método devuelve E_FAIL, el Common Language Runtime ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
+|E_FAIL|Se produjo un error grave desconocido. Después de que un método devuelva E_FAIL, el Common Language Runtime ya no se podrá usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
  **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ICLRAssemblyIdentityManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
-- [ICLRAssemblyReferenceList (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
-- [IHostAssemblyManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)
-- [IHostAssemblyStore (interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)
+- [ICLRAssemblyIdentityManager (Interfaz)](iclrassemblyidentitymanager-interface.md)
+- [ICLRAssemblyReferenceList (Interfaz)](iclrassemblyreferencelist-interface.md)
+- [IHostAssemblyManager (Interfaz)](ihostassemblymanager-interface.md)
+- [IHostAssemblyStore (Interfaz)](ihostassemblystore-interface.md)

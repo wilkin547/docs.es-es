@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0117e080-05f9-4772-885d-e1847230947c
 topic_type:
 - apiref
-ms.openlocfilehash: 3a6da0e845fa50d090cdf0808b211a5806c40961
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8841fab0517353849ef99594bcbd03dda772c766
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178215"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616507"
 ---
 # <a name="_corvalidateimage-function"></a>_CorValidateImage (Función)
-Valida las imágenes del módulo administrado y notifica al cargador del sistema operativo una vez cargadas.  
+Valida las imágenes del módulo administrado y notifica al cargador del sistema operativo una vez que se han cargado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,51 +35,51 @@ STDAPI _CorValidateImage (
   
 ## <a name="parameters"></a>Parámetros  
  `ImageBase`  
- [en] Puntero a la ubicación inicial de la imagen para validarla como código administrado. La imagen ya debe estar cargada en la memoria.  
+ de Puntero a la ubicación inicial de la imagen que se va a validar como código administrado. La imagen ya debe estar cargada en la memoria.  
   
  `FileName`  
- [en] El nombre de archivo de la imagen.  
+ de Nombre de archivo de la imagen.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Esta función devuelve `E_INVALIDARG` `E_OUTOFMEMORY`los `E_UNEXPECTED`valores `E_FAIL`estándar , , , y , así como los siguientes valores.  
+ Esta función devuelve los valores estándar `E_INVALIDARG` , `E_OUTOFMEMORY` , `E_UNEXPECTED` y `E_FAIL` , así como los valores siguientes.  
   
 |Valor devuelto|Descripción|  
 |------------------|-----------------|  
-|`STATUS_INVALID_IMAGE_FORMAT`|La imagen no es válida. Este valor tiene el HRESULT 0xC000007BL.|  
-|`STATUS_SUCCESS`|La imagen es válida. Este valor tiene el HRESULT 0x00000000L.|  
+|`STATUS_INVALID_IMAGE_FORMAT`|La imagen no es válida. Este valor tiene HRESULT 0xC000007BL.|  
+|`STATUS_SUCCESS`|La imagen es válida. Este valor tiene HRESULT 0x00000000L.|  
   
 ## <a name="remarks"></a>Observaciones  
- En Windows XP y versiones posteriores, el cargador del sistema operativo comprueba si hay módulos administrados examinando el bit del directorio del descriptor COM en el encabezado de formato de archivo de objeto común (COFF). Un bit de conjunto indica un módulo administrado. Si el cargador detecta un módulo administrado, carga MsCorEE.dll y llama, `_CorValidateImage`que realiza las siguientes acciones:  
+ En Windows XP y versiones posteriores, el cargador del sistema operativo comprueba los módulos administrados examinando el bit del directorio de descriptores COM en el encabezado Common Object File Format (COFF). Un bit establecido indica un módulo administrado. Si el cargador detecta un módulo administrado, carga MsCorEE. dll y llama a `_CorValidateImage` , que realiza las acciones siguientes:  
   
 - Confirma que la imagen es un módulo administrado válido.  
   
-- Cambia el punto de entrada de la imagen a un punto de entrada en Common Language Runtime (CLR).  
+- Cambia el punto de entrada de la imagen a un punto de entrada en el Common Language Runtime (CLR).  
   
-- Para las versiones de 64 bits de Windows, modifica la imagen que está en memoria transformándola de formato PE32 a PE32+.  
+- En las versiones de Windows de 64 bits, modifica la imagen que está en la memoria transformando el formato de PE32 a PE32 +.  
   
 - Vuelve al cargador cuando se cargan las imágenes del módulo administrado.  
   
- Para las imágenes ejecutables, el cargador del sistema operativo llama a la función [_CorExeMain,](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) independientemente del punto de entrada especificado en el ejecutable. Para las imágenes de ensamblado DLL, el cargador llama a la función [_CorDllMain.](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md)  
+ En el caso de las imágenes ejecutables, el cargador del sistema operativo llama a la función [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) , independientemente del punto de entrada especificado en el archivo ejecutable. En el caso de las imágenes de ensamblado de DLL, el cargador llama a la función [_CorDllMain](cordllmain-function.md) .  
   
  `_CorExeMain`o `_CorDllMain` realiza las siguientes acciones:  
   
 - Inicializa el CLR.  
   
-- Busca el punto de entrada administrado desde el encabezado CLR del ensamblado.  
+- Busca el punto de entrada administrado del encabezado CLR del ensamblado.  
   
 - Comienza la ejecución.  
   
- El cargador llama a la función [_CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md) cuando se descargan imágenes de módulo sadministradas. Sin embargo, esta función no realiza ninguna acción; simplemente regresa.  
+ El cargador llama a la función [_CorImageUnloading](corimageunloading-function.md) cuando se descargan las imágenes del módulo administrado. Sin embargo, esta función no realiza ninguna acción; simplemente devuelve.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Biblioteca:** Incluido como recurso en MsCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
-- [Funciones estáticas globales para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+- [Funciones estáticas globales para metadatos](../metadata/metadata-global-static-functions.md)

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: fd9085ff-7beb-4c38-97f0-037cd8ba4f65
 topic_type:
 - apiref
-ms.openlocfilehash: 154beef9398029f31dcb4d081019b9f292238af4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5c77a332593ba470d2e29b87cba182a770d5db7e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176479"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616442"
 ---
 # <a name="customdumpitem-structure"></a>CustomDumpItem (Estructura)
-Describe un elemento que se agregará a un volcado personalizado en los informes de errores.  
+Describe un elemento que se va a agregar a un volcado de memoria personalizado en el informe de errores.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,25 +35,25 @@ struct {
 } CustomDumpItem;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-|Member|Descripción|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`itemKind`|Un [ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md) valor que indica el tipo de elemento que se va a agregar.|  
-|`pReserved`|No se usa actualmente. Los elementos agregados a la unión no deben ser mayores que el tamaño del puntero. Si `struct` se requiere a, debe asignarlo por separado y apuntar a él.|  
+|`itemKind`|Valor de [ecustomdumpitemkind (](ecustomdumpitemkind-enumeration.md) que indica el tipo de elemento que se va a agregar.|  
+|`pReserved`|No se usa actualmente. Los elementos agregados a la Unión no deben ser mayores que el tamaño del puntero. Si `struct` es necesario, debe asignarlo por separado y apuntar a él.|  
   
 ## <a name="remarks"></a>Observaciones  
- [ICLRErrorReportingManager::BeginCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) toma un `CustomDumpItem`parámetro de tipo .  
+ [ICLRErrorReportingManager:: BeginCustomDump](iclrerrorreportingmanager-begincustomdump-method.md) toma un parámetro de tipo `CustomDumpItem` .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** MSCorEE.idl  
+ **Encabezado:** MSCorEE. idl  
   
- **Biblioteca:** Incluido como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
-- [Estructuras de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [Estructuras de hospedaje](hosting-structures.md)

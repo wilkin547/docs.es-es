@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5de13327-96c6-4697-a89e-b8bf40717855
 topic_type:
 - apiref
-ms.openlocfilehash: c1d796c6ef5f707f865a60023899d3b451c2085b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c3011149b9b23e776ad3baac9e41f3c42213654d
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131954"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616832"
 ---
 # <a name="clrcreateinstance-function"></a>CLRCreateInstance (Función)
-Proporciona una de las tres interfaces: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)o [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).  
+Proporciona una de las tres interfaces: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)o [ICLRDebugging](../debugging/iclrdebugging-interface.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,13 +37,13 @@ HRESULT CLRCreateInstance(
   
 ## <a name="parameters"></a>Parámetros  
  `clsid`  
- de Uno de los tres identificadores de clase: los, CLSID_CLRMetaHostPolicy o CLSID_CLRDebugging.  
+ de Uno de los tres identificadores de clase: CLSID_CLRMetaHost, CLSID_CLRMetaHostPolicy o CLSID_CLRDebugging.  
   
  `riid`  
  de Uno de los tres identificadores de interfaz (IID): IID_ICLRMetaHost, IID_ICLRMetaHostPolicy o IID_ICLRDebugging.  
   
  `ppInterface`  
- enuncia Una de las tres interfaces: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)o [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).  
+ enuncia Una de las tres interfaces: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)o [ICLRDebugging](../debugging/iclrdebugging-interface.md).  
   
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
@@ -53,12 +53,12 @@ HRESULT CLRCreateInstance(
 |S_OK|El método se completó correctamente.|  
 |E_POINTER|`ppInterface` es null.|  
   
-## <a name="remarks"></a>Comentarios  
- En la tabla siguiente se muestran las combinaciones admitidas para `clsid` y `riid`.  
+## <a name="remarks"></a>Observaciones  
+ En la tabla siguiente se muestran las combinaciones admitidas para `clsid` y `riid` .  
   
 |`clsid`|`riid`|  
 |--------------|------------|  
-|Los|IID_ICLRMetaHost|  
+|CLSID_CLRMetaHost|IID_ICLRMetaHost|  
 |CLSID_CLRMetaHostPolicy|IID_ICLRMetaHostPolicy|  
 |CLSID_CLRDebugging|IID_ICLRDebugging|  
   
@@ -81,14 +81,14 @@ hr = CLRCreateInstance (CLSID_CLRDebugging, IID_ICLRDebugging,
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Metahost. h  
   
  **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [Hospedar aplicaciones de WPF](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [Hospedar aplicaciones de WPF](index.md)

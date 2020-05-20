@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0d144ed4-bdb0-4cac-960c-cb90f4dca173
 topic_type:
 - apiref
-ms.openlocfilehash: 2063856389b122b150a2d2744169a4a567592287
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b12ecfdaf7c90589ce2e96b39f7437444cb91b09
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446450"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615428"
 ---
 # <a name="isymunmanagedreader2getmethodbyversionpreremap-method"></a>ISymUnmanagedReader2::GetMethodByVersionPreRemap (Método)
 Obtiene un método del lector de símbolos, dado un token de método y un número de versión de edición y continuación. Los números de versión se inician en 1 y se incrementan cada vez que se cambia el método como resultado de una operación de editar y continuar.  
@@ -42,14 +42,14 @@ HRESULT GetMethodByVersionPreRemap(
  de Versión del método.  
   
  `pRetVal`  
- enuncia Puntero a la interfaz [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) devuelta.  
+ enuncia Puntero a la interfaz [ISymUnmanagedMethod](isymunmanagedmethod-interface.md) devuelta.  
   
 ## <a name="return-value"></a>Valor devuelto  
  S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** CorSym. idl. CorSym.h  
+ **Encabezado:** CorSym. idl. CorSym. h  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ISymUnmanagedReader2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)
+- [ISymUnmanagedReader2 (Interfaz)](isymunmanagedreader2-interface.md)

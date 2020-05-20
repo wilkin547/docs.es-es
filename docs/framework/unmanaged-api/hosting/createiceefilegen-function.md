@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e36e1fd8-8456-4359-bdc3-3ec1765f041f
 topic_type:
 - apiref
-ms.openlocfilehash: de27851b4afc3eccad46531848c68723bff346d5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 294b82efd66704014aab1b73171afe9165f17664
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136832"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616455"
 ---
 # <a name="createiceefilegen-function"></a>CreateICeeFileGen (Función)
-Crea un objeto [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) .  
+Crea un objeto [ICeeFileGen](iceefilegen-class.md) .  
   
  Esta función está en desuso en el .NET Framework 4.  
   
@@ -38,25 +38,25 @@ HRESULT CreateICeeFileGen (
   
 ## <a name="parameters"></a>Parámetros  
  `ceeFileGen`  
- enuncia Puntero a la dirección de un nuevo objeto de `ICeeFileGen`.  
+ enuncia Puntero a la dirección de un nuevo `ICeeFileGen` objeto.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los códigos de error COM estándar.  
   
-## <a name="remarks"></a>Comentarios  
- El objeto `ICeeFileGen` se usa para crear archivos ejecutables portables (PE) de Common Language Runtime (CLR).  
+## <a name="remarks"></a>Observaciones  
+ El `ICeeFileGen` objeto se usa para crear archivos ejecutables portables (PE) de Common Language Runtime (CLR).  
   
- Llame a la función [DestroyICeeFileGen (](../../../../docs/framework/unmanaged-api/hosting/destroyiceefilegen-function.md) para destruir el objeto `ICeeFileGen` cuando termine.  
+ Llame a la función [DestroyICeeFileGen (](destroyiceefilegen-function.md) para destruir el `ICeeFileGen` objeto cuando termine.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** ICeeFileGen. h  
   
  **Biblioteca:** MSCorPE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [Funciones de hospedaje de CLR en desuso](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Funciones de hospedaje de CLR en desuso](deprecated-clr-hosting-functions.md)

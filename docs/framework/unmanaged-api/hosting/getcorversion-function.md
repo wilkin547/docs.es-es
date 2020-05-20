@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2f09cd37-bf3a-4cc5-87b0-adc42a7eed31
 topic_type:
 - apiref
-ms.openlocfilehash: 1f40f27651d2d75cf2c3e4d7d1c21e1f47d402af
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 23d68e8e4bbd87779e3b49f0c40f5a5ab9f5124f
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178191"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617222"
 ---
 # <a name="getcorversion-function"></a>GetCORVersion (Función)
-Devuelve el número de versión de Common Language Runtime (CLR) que se ejecuta en el proceso actual.  
+Devuelve el número de versión del Common Language Runtime (CLR) que se ejecuta en el proceso actual.  
   
- Esta función ha quedado en desuso en .NET Framework 4.  
+ Esta función está en desuso en el .NET Framework 4.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,23 +39,23 @@ HRESULT GetCORVersion (
   
 ## <a name="parameters"></a>Parámetros  
  `pbuffer`  
- Puntero a un búfer en el que CLR devuelve una cadena que especifica la versión del tiempo de ejecución que se carga actualmente en el proceso. La cadena devuelta toma la misma forma que las cadenas pasadas a [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), por ejemplo, "v1.0.1216". Si el tiempo de ejecución aún no se ha cargado en el proceso, la función devuelve la información de directorio adecuada para la versión más reciente del tiempo de ejecución instalado en el equipo.  
+ Un puntero a un búfer en el que CLR devuelve una cadena que especifica la versión del Runtime que está cargada actualmente en el proceso. La cadena devuelta tiene el mismo formato que las cadenas que se pasan a [CorBindToRuntimeEx](corbindtoruntimeex-function.md), por ejemplo, "v 1.0.1216". Si el tiempo de ejecución aún no se ha cargado en el proceso, la función devuelve la información de directorio adecuada para la versión más reciente del motor en tiempo de ejecución instalada en el equipo.  
   
  `cchBuffer`  
- El número de`WCHAR`caracteres ( s) que se pueden mantener en `pbuffer`.  
+ Número de caracteres `WCHAR` que se pueden mantener en `pbuffer` .  
   
  `dwLength`  
- Puntero al número de caracteres `pbuffer`devueltos en . Si `pbuffer` es un puntero nulo, el tiempo de ejecución devuelve E_POINTER. Si el número de caracteres `pbuffer` es mayor, a continuación, la longitud de , el tiempo de ejecución devuelve ERROR_INSUFFICIENT_BUFFER.  
+ Puntero al número de caracteres realmente devueltos en `pbuffer` . Si `pbuffer` es un puntero nulo, el tiempo de ejecución devuelve E_POINTER. Si el número de caracteres es mayor que la longitud de `pbuffer` , el tiempo de ejecución devuelve ERROR_INSUFFICIENT_BUFFER.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** MScorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Mscoree.dll  
+ **Biblioteca:** MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
-- [Funciones de hospedaje de CLR en desuso](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Funciones de hospedaje de CLR en desuso](deprecated-clr-hosting-functions.md)

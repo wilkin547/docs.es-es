@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 60600178-c2b5-4cab-b3a5-f0f61acebaf1
 topic_type:
 - apiref
-ms.openlocfilehash: 134a89d62a0fc455a9579de1e577103f1fe6abcf
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3685707f1983ffec413e9cea2df5034ac53f643a
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449123"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615597"
 ---
 # <a name="isymunmanageddocumentgeturl-method"></a>ISymUnmanagedDocument::GetURL (Método)
 Devuelve el localizador uniforme de recursos (URL) para este documento.  
@@ -47,6 +47,6 @@ HRESULT GetURL(
 ## <a name="return-value"></a>Valor devuelto  
  S_OK si el método se ejecuta correctamente; de lo contrario, un código de error.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ISymUnmanagedDocument (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [ISymUnmanagedDocument (Interfaz)](isymunmanageddocument-interface.md)

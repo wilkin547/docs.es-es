@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: f1f2fab1-400b-488f-95f2-d49c4fca3556
 topic_type:
 - apiref
-ms.openlocfilehash: 4c914e00987053b1c1e9e00bf8e54632175e1de8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6bbf8366054c58543444a4b710a687198f365e6e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178160"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617209"
 ---
 # <a name="getrealprocaddress-function"></a>GetRealProcAddress (Función)
-Obtiene la dirección de la función especificada que se exporta desde la última versión instalada de Common Language Runtime (CLR).  
+Obtiene la dirección de la función especificada que se exporta de la última versión instalada del Common Language Runtime (CLR).  
   
- Esta función ha quedado en desuso en .NET Framework 4.  
+ Esta función está en desuso en el .NET Framework 4.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,13 +37,13 @@ HRESULT GetRealProcAddress (
   
 ## <a name="parameters"></a>Parámetros  
  `pwszProcName`  
- [en] El nombre de la función.  
+ de Nombre de la función.  
   
  `ppv`  
- [fuera] La ubicación que recibe un puntero a la dirección de la función.  
+ enuncia La ubicación que recibe un puntero a la dirección de la función.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Este método devuelve códigos de error estándar del modelo de objetos componentes (COM), tal como se define en WinError.h, además de los siguientes valores definidos en CorError.h.  
+ Este método devuelve los códigos de error del modelo de objetos componentes (COM) estándar, tal y como se define en WinError. h, además de los siguientes valores definidos en CorError. h.  
   
 |Código de retorno|Descripción|  
 |-----------------|-----------------|  
@@ -52,14 +52,14 @@ HRESULT GetRealProcAddress (
 |CLR_E_SHIM_RUNTIMEEXPORT|La función no se exporta desde el tiempo de ejecución.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** MScorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Mscoree.dll  
+ **Biblioteca:** MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
-- [Funciones de hospedaje de CLR en desuso](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Funciones de hospedaje de CLR en desuso](deprecated-clr-hosting-functions.md)

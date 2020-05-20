@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ea8af0d5-4133-4472-8a1f-50570d7e85fa
 topic_type:
 - apiref
-ms.openlocfilehash: 49a60b6b9b076138d8ff1f8a15041e9a6bacfede
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: dbe4129cf4160a1a9b31bc6f418095ea4b392d57
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129253"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617001"
 ---
 # <a name="iclrerrorreportingmanager-interface"></a>ICLRErrorReportingManager (Interfaz)
 Proporciona métodos que permiten al host configurar volcados de pila personalizados para el informe de errores.  
@@ -28,26 +28,26 @@ Proporciona métodos que permiten al host configurar volcados de pila personaliz
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[BeginCustomDump (método)](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md)|Especifica la configuración de los volcados de pila personalizados para el informe de errores.|  
-|[EndCustomDump (método)](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-endcustomdump-method.md)|Borra la configuración de volcado de la pila personalizada establecida por una llamada anterior a `BeginCustomDump`.|  
-|[GetBucketParametersForCurrentException (método)](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-getbucketparametersforcurrentexception-method.md)|Obtiene el depósito de Watson para la excepción actual en el subproceso que realiza la llamada.|  
+|[Método BeginCustomDump](iclrerrorreportingmanager-begincustomdump-method.md)|Especifica la configuración de los volcados de pila personalizados para el informe de errores.|  
+|[Método EndCustomDump](iclrerrorreportingmanager-endcustomdump-method.md)|Borra la configuración de volcado de la pila personalizada establecida por una llamada anterior a `BeginCustomDump` .|  
+|[Método GetBucketParametersForCurrentException](iclrerrorreportingmanager-getbucketparametersforcurrentexception-method.md)|Obtiene el depósito de Watson para la excepción actual en el subproceso que realiza la llamada.|  
   
-## <a name="remarks"></a>Comentarios  
- El método `BeginCustomDump` establece la configuración personalizada del volcado de la pila. El método `EndCustomDump` borra la configuración de volcado de la pila personalizada y libera cualquier estado asociado. Se debe llamar después de completar el volcado de memoria personalizado.  
+## <a name="remarks"></a>Observaciones  
+ El `BeginCustomDump` método establece la configuración personalizada del volcado de la pila. El `EndCustomDump` método borra la configuración de volcado de la pila personalizada y libera cualquier estado asociado. Se debe llamar después de completar el volcado de memoria personalizado.  
   
 > [!IMPORTANT]
-> Si no se llama a `EndCustomDump`, se produce una pérdida de memoria.  
+> Si no se llama a `EndCustomDump` , se produce una pérdida de memoria.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
  **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ECustomDumpItemKind (enumeración)](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md)
-- [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [ECustomDumpItemKind (Enumeración)](ecustomdumpitemkind-enumeration.md)
+- [Interfaces de hospedaje](hosting-interfaces.md)
