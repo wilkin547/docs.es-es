@@ -1,17 +1,15 @@
 ---
 title: Agrupaciones de aplicaciones nativas en la nube
 description: Diseño de aplicaciones .NET nativas en la nube para Azure | Agrupaciones de aplicaciones nativas en la nube
-ms.date: 05/12/2020
-ms.openlocfilehash: c16a9cba1fe31e025532ba98d644114a319bb9de
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: fc6ee96078650dccd2ebeb3e65a0a00c4e05ecdb
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395488"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614349"
 ---
 # <a name="cloud-native-application-bundles"></a>Agrupaciones de aplicaciones nativas en la nube
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Una propiedad clave de las aplicaciones nativas en la nube es que aprovechan las capacidades de la nube para acelerar el desarrollo. Este diseño suele significar que una aplicación completa utiliza diferentes tipos de tecnologías. Las aplicaciones pueden enviarse en contenedores de Docker, algunos servicios pueden usar Azure Functions, mientras que otras pueden ejecutarse directamente en máquinas virtuales asignadas en servidores de gran tamaño con la aceleración de GPU de hardware. Dos aplicaciones nativas en la nube no son las mismas, por lo que resulta difícil proporcionar un único mecanismo para enviarlas.
 

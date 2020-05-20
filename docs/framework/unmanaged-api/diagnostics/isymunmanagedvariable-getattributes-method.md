@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 80f168af-a6a6-4c8f-b9e6-8a82dc834ed5
 topic_type:
 - apiref
-ms.openlocfilehash: cfc28dfcda7bf4b3d1fc6fe3530a212ee76fadd2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 29869abdd39f61c6c9cb51d6b2be50fa462c5b70
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446078"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615259"
 ---
 # <a name="isymunmanagedvariablegetattributes-method"></a>ISymUnmanagedVariable::GetAttributes (Método)
 Obtiene las marcas de atributo para esta variable.  
@@ -34,7 +34,7 @@ HRESULT GetAttributes(
   
 ## <a name="parameters"></a>Parámetros  
  `pRetVal`  
- enuncia Puntero a un `ULONG32` que recibe los atributos. El valor devuelto será uno de los valores definidos en la enumeración [corsymvarflag (](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md) .  
+ enuncia Un puntero a un `ULONG32` que recibe los atributos. El valor devuelto será uno de los valores definidos en la enumeración [corsymvarflag (](corsymvarflag-enumeration.md) .  
   
 ## <a name="return-value"></a>Valor devuelto  
  S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
@@ -42,6 +42,6 @@ HRESULT GetAttributes(
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ISymUnmanagedVariable (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [ISymUnmanagedVariable (Interfaz)](isymunmanagedvariable-interface.md)

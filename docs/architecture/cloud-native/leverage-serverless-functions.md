@@ -1,17 +1,15 @@
 ---
 title: Aprovechamiento de funciones sin servidor
 description: Aprovechamiento de Azure Functions sin servidor en aplicaciones nativas de la nube
-ms.date: 04/13/2020
-ms.openlocfilehash: 176499e3cd0349cd689b9d13d1c237a6343d13f3
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.date: 05/13/2020
+ms.openlocfilehash: 53a0fdd29630b2a4368f3aa37ddfc5f93df10a24
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199747"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613868"
 ---
 # <a name="leveraging-serverless-functions"></a>Aprovechamiento de funciones sin servidor
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 En el espectro desde la administración de máquinas físicas hasta el aprovechamiento de funcionalidades de la nube, las vidas sin servidor se encuentran en el extremo extremo. Su única responsabilidad es el código y solo pagará cuando se ejecute el código. Azure Functions proporciona una manera de crear funcionalidades sin servidor en las aplicaciones nativas de la nube.
 
@@ -54,8 +52,8 @@ Las soluciones sin servidor se aprovisionan y escalan a petición. Cuando se inv
 
 En la figura 3-10 se muestra un patrón de inicio en frío. Tenga en cuenta los pasos adicionales necesarios cuando la aplicación esté en frío.
 
-![En frío frente a](./media/cold-start-warm-start.png)
-Inicio en caliente,**figura 3-10**. Inicio en frío frente a Inicio en caliente.
+![En frío frente a Inicio en caliente, ](./media/cold-start-warm-start.png)
+ **figura 3-10**. Inicio en frío frente a Inicio en caliente.
 
 Para evitar que el frío se inicie por completo, puede cambiar de un [plan de consumo a un plan dedicado](https://azure.microsoft.com/blog/understanding-serverless-cold-start/). También puede configurar una o varias [instancias previamente preparadas](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan#pre-warmed-instances) con la actualización del plan Premium. En estos casos, cuando necesite agregar otra instancia, ya está activa y lista para ir. Estas opciones pueden ayudar a mitigar el problema de inicio en frío asociado a la informática sin servidor.
 

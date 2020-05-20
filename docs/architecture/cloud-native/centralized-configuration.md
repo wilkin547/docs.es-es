@@ -1,17 +1,15 @@
 ---
 title: Configuración centralizada
 description: Centralizar la configuración de aplicaciones nativas en la nube con la configuración de App de Azure y el almacén de AzureKey.
-ms.date: 04/19/2020
-ms.openlocfilehash: 53bdc03370b04af4d830fe7abbd8aebad81e9650
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: d389d29dcdb1db5162d95370d181ab5a85d72dc8
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895655"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614232"
 ---
 # <a name="centralized-configuration"></a>Configuración centralizada
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 A diferencia de una aplicación monolítica en la que todo se ejecuta dentro de una única instancia, una aplicación nativa en la nube se compone de servicios independientes distribuidos entre máquinas virtuales, contenedores y regiones geográficas. La administración de los valores de configuración para docenas de servicios interdependientes puede resultar complicada. Las copias duplicadas de los valores de configuración en diferentes ubicaciones es propensa a errores y difíciles de administrar. La configuración centralizada es un requisito fundamental para las aplicaciones distribuidas nativas en la nube.
 

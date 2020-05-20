@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: dd31c210-6829-45eb-927e-cc53932638b7
 topic_type:
 - apiref
-ms.openlocfilehash: 2b901a3dac499f1ce3f843c59122dd8fd5022147
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f8eb4cb6bad95295e10a72812fa8dbb0adfcc898
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427963"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614791"
 ---
 # <a name="isymunmanagedwritergetdebuginfo-method"></a>ISymUnmanagedWriter::GetDebugInfo (Método)
-Devuelve la información necesaria para que un compilador escriba la entrada del directorio de depuración en el encabezado de archivo portable ejecutable (PE). El escritor de símbolos rellena todos los campos excepto `TimeDateStamp` y `PointerToRawData`. (El compilador es responsable de establecer estos dos campos de forma adecuada).  
+Devuelve la información necesaria para que un compilador escriba la entrada del directorio de depuración en el encabezado de archivo portable ejecutable (PE). El escritor de símbolos rellena todos los campos excepto `TimeDateStamp` y `PointerToRawData` . (El compilador es responsable de establecer estos dos campos de forma adecuada).  
   
- Un compilador debe llamar a este método, emitir el BLOB de datos al archivo PE, establecer el campo `PointerToRawData` del IMAGE_DEBUG_DIRECTORY para que apunte a los datos emitidos y escribir el IMAGE_DEBUG_DIRECTORY en el archivo PE. El compilador también debe establecer el campo `TimeDateStamp` para que sea igual al `TimeDateStamp` del archivo PE que se está generando.  
+ Un compilador debe llamar a este método, emitir el BLOB de datos al archivo PE, establecer el `PointerToRawData` campo del IMAGE_DEBUG_DIRECTORY para que apunte a los datos emitidos y escribir el IMAGE_DEBUG_DIRECTORY en el archivo PE. El compilador también debe establecer el `TimeDateStamp` campo en el mismo valor del `TimeDateStamp` archivo PE que se está generando.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,7 +43,7 @@ HRESULT GetDebugInfo(
  [in, out] Un puntero a un IMAGE_DEBUG_DIRECTORY que el escritor de símbolos rellenará.  
   
  `cData`  
- de `DWORD` que contiene el tamaño de los datos de depuración.  
+ de Un `DWORD` que contiene el tamaño de los datos de depuración.  
   
  `pcData`  
  enuncia Un puntero a un `DWORD` que recibe el tamaño del búfer necesario para contener los datos de depuración.  
@@ -57,6 +57,6 @@ HRESULT GetDebugInfo(
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ISymUnmanagedWriter (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [ISymUnmanagedWriter (Interfaz)](isymunmanagedwriter-interface.md)

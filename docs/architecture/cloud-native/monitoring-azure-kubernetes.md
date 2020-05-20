@@ -1,17 +1,15 @@
 ---
 title: Supervisión en Azure Kubernetes Service
 description: Supervisión en Azure Kubernetes Service
-ms.date: 02/05/2020
-ms.openlocfilehash: 5c46b9e8599f70d430ad26cf1364343454d30a16
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.date: 05/13/2020
+ms.openlocfilehash: 138acf9d27fb4a676ec422c848097a6bea98fa42
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450068"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613829"
 ---
 # <a name="monitoring-in-azure-kubernetes-services"></a>Supervisión en Azure Kubernetes Service
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 El registro integrado en Kubernetes es primitivo. Sin embargo, hay algunas opciones excelentes para obtener los registros de Kubernetes y en un lugar donde se pueden analizar correctamente. Si necesita supervisar los clústeres de AKS, la configuración de la pila elástica para Kubernetes es una solución excelente.
 
@@ -19,8 +17,8 @@ El registro integrado en Kubernetes es primitivo. Sin embargo, hay algunas opcio
 
 [Azure monitor para contenedores](https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-overview) admite el consumo de registros no solo de Kubernetes, sino también de otros motores de orquestación como DC/os, Docker Swarm y Red Hat OpenShift.
 
-![consumo de registros de varios contenedores](./media/containers-diagram.png)
-la **figura 7-10**. Consumo de registros de varios contenedores
+![Consumo de registros de varios contenedores ](./media/containers-diagram.png)
+ **figura 7-10**. Consumo de registros de varios contenedores
 
 [Prometheus](https://prometheus.io/) es una conocida solución de supervisión de métricas de código abierto. Forma parte de la base de cálculo nativa de la nube. Normalmente, el uso de Prometheus requiere la administración de un servidor de Prometheus con su propio almacén. Sin embargo, [Azure monitor para contenedores proporciona integración directa con puntos de conexión de métricas de Prometheus](https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-prometheus-integration), por lo que no es necesario un servidor independiente.
 
@@ -30,8 +28,8 @@ La instalación de los recopiladores de registros es diferente en los clústeres
 
 Independientemente del orquestador o del sistema operativo que ejecute el demonio de Azure Monitor, la información de registro se reenvía a las mismas herramientas de Azure Monitor con las que los usuarios están familiarizados. Esto garantiza una experiencia paralela en entornos que mezclen distintos orígenes de registro, como un entorno híbrido de Kubernetes/Azure Functions.
 
-![un panel de ejemplo que muestra información de registro y métrica de varios contenedores en ejecución.](./media/containers-dashboard.png)
-**figura 7-11**. Un panel de ejemplo que muestra información de registro y métrica de varios contenedores en ejecución.
+![Un panel de ejemplo que muestra información de registro y métrica de varios contenedores en ejecución. ](./media/containers-dashboard.png)
+ **Figura 7-11**. Un panel de ejemplo que muestra información de registro y métrica de varios contenedores en ejecución.
 
 ## <a name="logfinalize"></a>Log. Finalize ()
 

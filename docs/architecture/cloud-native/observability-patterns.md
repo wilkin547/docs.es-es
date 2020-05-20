@@ -1,17 +1,15 @@
 ---
 title: Patrones de observación
 description: Patrones de observación para aplicaciones nativas de la nube
-ms.date: 02/05/2020
-ms.openlocfilehash: a821235835b4553760b19887d500a29ca75e133e
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.date: 05/13/2020
+ms.openlocfilehash: db6a56358923025cbcca9478908474227e5da96d
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448541"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613816"
 ---
 # <a name="observability-patterns"></a>Patrones de observación
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Al igual que los patrones se han desarrollado para ayudar en el diseño del código de las aplicaciones, hay patrones para las aplicaciones operativas de una forma confiable. Han surgido tres patrones útiles para el mantenimiento de las aplicaciones: **registro**, **supervisión**y **alertas**.
 
@@ -21,20 +19,20 @@ Sea cual sea el cuidado que tengamos, las aplicaciones casi siempre se comportan
 
 ### <a name="challenges-when-logging-with-cloud-native-applications"></a>Desafíos al registrar con aplicaciones nativas de la nube
 
-En las aplicaciones tradicionales, los archivos de registro se almacenan normalmente en el equipo local. De hecho, en sistemas operativos similares a Unix, hay una estructura de carpetas definida para contener los registros, normalmente en `/var/log`.
+En las aplicaciones tradicionales, los archivos de registro se almacenan normalmente en el equipo local. De hecho, en sistemas operativos similares a Unix, hay una estructura de carpetas definida para contener los registros, normalmente en `/var/log` .
 
-![el registro en un archivo en una aplicación monolítica.](./media/single-monolith-logging.png)
-**figura 7-1**. Registro en un archivo en una aplicación monolítica.
+![Registro en un archivo en una aplicación monolítica. ](./media/single-monolith-logging.png)
+ **Figura 7-1**. Registro en un archivo en una aplicación monolítica.
 
 La utilidad del registro en un archivo plano en un solo equipo se reduce enormemente en un entorno de nube. Es posible que las aplicaciones que producen registros no tengan acceso al disco local o que el disco local sea muy transitorio, ya que los contenedores se ordenan en torno a las máquinas físicas. Incluso un simple escalado vertical de aplicaciones monolíticas en varios nodos puede hacer que sea difícil encontrar el archivo de registro basado en archivos adecuado.
 
-![registro en archivos de una aplicación monolítica escalada.](./media/multiple-node-monolith-logging.png)
-**figura 7-2**. Registro en archivos en una aplicación monolítica escalada.
+![Registro en archivos en una aplicación monolítica escalada. ](./media/multiple-node-monolith-logging.png)
+ **Figura 7-2**. Registro en archivos en una aplicación monolítica escalada.
 
 Las aplicaciones nativas en la nube desarrolladas mediante una arquitectura de microservicios también presentan algunos desafíos para los registradores basados en archivos. Las solicitudes de usuario ahora pueden abarcar varios servicios que se ejecutan en equipos diferentes y pueden incluir funciones sin servidor sin acceso a un sistema de archivos local. Sería muy difícil poner en correlación los registros de un usuario o una sesión en estos muchos servicios y máquinas.
 
-![registro en archivos locales en una aplicación de microservicios.](./media/local-log-file-per-service.png)
-**figura 7-3**. Registro en archivos locales en una aplicación de microservicios.
+![Registro en archivos locales en una aplicación de microservicios. ](./media/local-log-file-per-service.png)
+ **Figura 7-3**. Registro en archivos locales en una aplicación de microservicios.
 
 Por último, el número de usuarios en algunas aplicaciones nativas de la nube es alto. Imagine que cada usuario genera cien líneas de mensajes de registro cuando inicia sesión en una aplicación. En aislamiento, que es administrable, pero que se multiplican por más de 100.000 usuarios y el volumen de registros es lo suficientemente grande como para admitir el uso eficaz de los registros.
 
@@ -43,7 +41,7 @@ Por último, el número de usuarios en algunas aplicaciones nativas de la nube e
 Cada lenguaje de programación tiene herramientas que permiten escribir registros y, por lo general, la sobrecarga de escribir estos registros es baja. Muchas de las bibliotecas de registro de proporcionan el registro de diferentes tipos de críticas, que se pueden optimizar en tiempo de ejecución. Por ejemplo, la [biblioteca Serilog](https://serilog.net/) es una conocida biblioteca de registro estructurado para .net que proporciona los siguientes niveles de registro:
 
 * Verbose
-* Depurar
+* Depuración
 * Information
 * Advertencia
 * Error
@@ -57,8 +55,8 @@ Debido a los desafíos asociados al uso de registros basados en archivos en apli
 
 También resulta útil seguir algunas prácticas estándar al compilar el registro que abarca muchos servicios. Por ejemplo, la generación de un [identificador de correlación](https://blog.rapid7.com/2016/12/23/the-value-of-correlation-ids/) al principio de una interacción larga y, a continuación, su registro en cada mensaje relacionado con dicha interacción, facilita la búsqueda de todos los mensajes relacionados. Una solo necesita buscar un único mensaje y extraer el identificador de correlación para buscar todos los mensajes relacionados. Otro ejemplo es asegurarse de que el formato del registro es el mismo para todos los servicios, sea cual sea el lenguaje o la biblioteca de registro que usa. Esta estandarización hace que la lectura de registros sea mucho más sencilla. En la figura 7-4 se muestra cómo una arquitectura de microservicios puede aprovechar el registro centralizado como parte de su flujo de trabajo.
 
-![registros de varios orígenes se ingestan en un almacén de registros centralizado.](./media/centralized-logging.png)
-**figura 7-4**. Los registros de varios orígenes se ingestan en un almacén de registro centralizado.
+![Los registros de varios orígenes se ingestan en un almacén de registro centralizado. ](./media/centralized-logging.png)
+ **Figura 7-4**. Los registros de varios orígenes se ingestan en un almacén de registro centralizado.
 
 ## <a name="challenges-with-detecting-and-responding-to-potential-app-health-issues"></a>Desafíos con la detección y respuesta a posibles problemas de estado de las aplicaciones
 

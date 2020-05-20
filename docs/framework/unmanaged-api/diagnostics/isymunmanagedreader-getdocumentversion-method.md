@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a51f1f64-e084-44c5-830c-2222da5a6bbf
 topic_type:
 - apiref
-ms.openlocfilehash: 3bc578be680951a1d41c92fb2169c860882b2e31
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c2cc541b2a78f16d5ca6b19405794faa825a9d72
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448307"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615038"
 ---
 # <a name="isymunmanagedreadergetdocumentversion-method"></a>ISymUnmanagedReader::GetDocumentVersion (Método)
-Obtiene la versión especificada del documento especificado. La versión del documento comienza en 1 y se incrementa cada vez que se actualiza el documento mediante el método [UpdateSymbolStore (](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) . Si el parámetro `pbCurrent` es `true`, se trata de la versión más reciente del documento.  
+Obtiene la versión especificada del documento especificado. La versión del documento comienza en 1 y se incrementa cada vez que se actualiza el documento mediante el método [UpdateSymbolStore (](isymunmanagedreader-updatesymbolstore-method.md) . Si el `pbCurrent` parámetro es `true` , esta es la versión más reciente del documento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,7 +42,7 @@ HRESULT GetDocumentVersion (
  enuncia Puntero a una variable que recibe la versión del documento especificado.  
   
  `pbCurrent`  
- enuncia Un puntero a una variable que recibe `true` si se trata de la versión más reciente del documento o `false` si no es la versión más reciente.  
+ enuncia Un puntero a una variable que recibe `true` si se trata de la versión más reciente del documento, o `false` si no es la versión más reciente.  
   
 ## <a name="return-value"></a>Valor devuelto  
  S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
@@ -50,6 +50,6 @@ HRESULT GetDocumentVersion (
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ISymUnmanagedReader (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader (Interfaz)](isymunmanagedreader-interface.md)

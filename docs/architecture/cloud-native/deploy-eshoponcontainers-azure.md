@@ -1,17 +1,15 @@
 ---
 title: Implementación de eShopOnContainers en Azure
 description: Implementación de la aplicación eShopOnContainers con Azure Kubernetes Service, Helm y DevSpaces.
-ms.date: 04/20/2020
-ms.openlocfilehash: a3eacedac946cb25cf3cced305d7921e29f0d204
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 93a2848f095d7593e1e169f4a6c6c1818a76217d
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895595"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614102"
 ---
 # <a name="deploying-eshoponcontainers-to-azure"></a>Implementación de eShopOnContainers en Azure
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 La aplicación eShopOnContainers se puede implementar en una variedad de plataformas de Azure. El enfoque recomendado es implementar la aplicación en Azure Kubernetes Services (AKS). Helm, una herramienta de implementación de Kubernetes, está disponible para reducir la complejidad de la implementación. Opcionalmente, los desarrolladores pueden implementar Azure Dev Spaces para Kubernetes con el fin de simplificar el proceso de desarrollo.
 
@@ -57,8 +55,8 @@ Observe cómo la plantilla describe un conjunto dinámico de pares clave-valor. 
 
 Encontrará los gráficos de eShopOnContainers Helm en la carpeta/K8S/Helm. En la figura 2-6 se muestra cómo se organizan los distintos componentes de la aplicación en una estructura de carpetas que usa Helm para definir y administrar las implementaciones.
 
-![eShopOnContainers arquitectura](./media/eshoponcontainers-helm-folder.png)
-de la**figura 2-6**. La carpeta eShopOnContainers Helm
+![eShopOnContainers arquitectura de la ](./media/eshoponcontainers-helm-folder.png)
+ **figura 2-6**. La carpeta eShopOnContainers Helm
 
 Cada componente individual se instala mediante un `helm install` comando. eShop incluye un script "implementar todo" que recorre los componentes y los instala mediante sus respectivos gráficos de Helm. El resultado es un proceso repetible, con versiones de la aplicación en el control de código fuente, que cualquier persona del equipo puede implementar en un clúster de AKS con un comando de script de una línea.
 
@@ -72,13 +70,13 @@ Los desarrolladores comparten una instancia en ejecución (desarrollo) en un cl�
 
 En la figura 2-7, puede ver que Developer Susie ha implementado una versión actualizada del microservicio Bikes en su espacio de desarrollo. Después, puede probar los cambios mediante una dirección URL personalizada que empiece por el nombre de su espacio (susie.s.dev.myapp.eus.azds.io).
 
-![eShopOnContainers arquitectura](./media/azure-devspaces-one.png)
-de la**figura 2-7**. Developer Susie implementa su propia versión del microservicio Bikes y la prueba.
+![eShopOnContainers arquitectura de la ](./media/azure-devspaces-one.png)
+ **figura 2-7**. Developer Susie implementa su propia versión del microservicio Bikes y la prueba.
 
 Al mismo tiempo, el desarrollador John está personalizando el microservicio de reservas y necesita probar sus cambios. Implementa sus cambios en su propio espacio de desarrollo sin entrar en conflicto con los cambios de Susie como se muestra en la figura 2-8. A continuación, Juan prueba sus cambios con su propia dirección URL, que tiene como prefijo el nombre de su espacio (john.s.dev.myapp.eus.azds.io).
 
-![eShopOnContainers arquitectura](./media/azure-devspaces-two.png)
-de la**figura 2-8**. El desarrollador John implementa su propia versión del microservicio de reservas y la prueba sin conflictos con otros desarrolladores.
+![eShopOnContainers arquitectura de la ](./media/azure-devspaces-two.png)
+ **figura 2-8**. El desarrollador John implementa su propia versión del microservicio de reservas y la prueba sin conflictos con otros desarrolladores.
 
 Con Azure Dev Spaces, los equipos pueden trabajar directamente con AKS mientras cambian, implementan y prueban sus cambios de forma independiente. Este enfoque reduce la necesidad de entornos hospedados dedicados independientes, ya que todos los desarrolladores tienen su propio entorno de AKS. Los desarrolladores pueden trabajar con Azure Dev Spaces mediante su CLI o iniciar su aplicación para Azure Dev Spaces directamente desde Visual Studio. [Obtenga más información sobre cómo funciona Azure Dev Spaces y está configurado.](https://docs.microsoft.com/azure/dev-spaces/how-dev-spaces-works)
 

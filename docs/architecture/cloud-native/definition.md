@@ -2,21 +2,19 @@
 title: Definición de nativo en la nube
 description: Obtenga información sobre los pilares básicos que proporcionan el cimientos para sistemas nativos en la nube.
 author: robvet
-ms.date: 08/20/2019
-ms.openlocfilehash: 33977ff736fc5cbfcf86ed6479e8d0b927b87a63
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: e8b07fe7758d90f6ba97b81d0efa9d2fb5058d49
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895617"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614189"
 ---
 # <a name="defining-cloud-native"></a>Definir nativo en la nube
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+Detenga lo que está haciendo y el texto 10 de sus compañeros. Pídales que definan el término "Cloud Native". Buena oportunidad obtendrá diez respuestas diferentes.
 
-Detenga lo que está haciendo y el texto 10 de sus compañeros. Pídales que definan el término "Cloud Native". Buena oportunidad obtendrá ocho respuestas diferentes.
-
-La nube nativa es todo lo que se trata de cambiar el modo en que pensamos en la creación de sistemas empresariales críticos.
+La nube nativa es todo lo que se trata de cambiar la forma en que piensa crear sistemas empresariales críticos.
 
 Los sistemas nativos de la nube están diseñados para adoptar un cambio rápido, gran escala y resistencia.
 
@@ -72,7 +70,7 @@ La plataforma en la nube de Azure admite este tipo de infraestructura muy elást
 
 Una metodología ampliamente aceptada para construir aplicaciones basadas en la nube es la [aplicación de doce factores](https://12factor.net/). Describe un conjunto de principios y prácticas que los desarrolladores siguen para crear aplicaciones optimizadas para entornos modernos en la nube. Se presta especial atención a la portabilidad entre entornos y la automatización declarativa.
 
-Aunque es aplicable a cualquier aplicación basada en Web, muchos profesionales la consideran como una base sólida para la creación de aplicaciones nativas en la nube. Los sistemas basados en estos principios pueden implementar y escalar rápidamente y agregar características para reaccionar rápidamente a los cambios de mercado.
+Aunque es aplicable a cualquier aplicación basada en Web, muchos profesionales consideran doce factores como una base sólida para la creación de aplicaciones nativas en la nube. Los sistemas basados en estos principios pueden implementar y escalar rápidamente y agregar características para reaccionar rápidamente a los cambios de mercado.
 
 En la tabla siguiente se resalta la metodología de doce factores:
 
@@ -91,7 +89,7 @@ En la tabla siguiente se resalta la metodología de doce factores:
 | 11 | Registro | Tratar los registros generados por los microservicios como flujos de eventos. Procesarlos con un agregador de eventos y propagar los datos a herramientas de administración de datos y minería de datos, como Azure Monitor o Splunk y, finalmente, el archivo a largo plazo. |
 | 12 | Procesos de administración | Ejecutar tareas administrativas o de administración como procesos de un solo uso. Las tareas pueden incluir la limpieza de datos y el análisis de extracción de un informe. Las herramientas que ejecutan estas tareas deben invocarse desde el entorno de producción, pero independientemente de la aplicación. |
 
-En el libro, [más allá de la aplicación de doce factores](https://content.pivotal.io/blog/beyond-the-twelve-factor-app), cree Kevin Hoffman detalla cada uno de los 12 factores originales (escritos en 2011). Además, el libro proporciona tres factores adicionales que reflejan el diseño de la aplicación en la nube actual de hoy en día.
+En el libro, [más allá de la aplicación de doce factores](https://content.pivotal.io/blog/beyond-the-twelve-factor-app), cree Kevin Hoffman detalla cada uno de los 12 factores originales (escritos en 2011). Además, comenta tres factores adicionales que reflejan el diseño de la aplicación en la nube actual de hoy en día.
 
 |    |  Nuevo factor | Explicación  |
 | :-------- | :-------- | :-------- |
@@ -105,7 +103,7 @@ Haremos referencia a muchos de los 12 factores de este capítulo y a lo largo de
 
 Además de las instrucciones proporcionadas en la metodología de doce factores, hay varias decisiones de diseño críticas que debe tomar al construir sistemas distribuidos.
 
-*Comunicaci*
+*Comunicación*
 
 ¿Cómo se comunican las aplicaciones cliente front-end con los servicios principales de back-end? ¿Permitirá la comunicación directa? O bien, ¿puede abstraer los servicios back-end con una fachada de puerta de enlace que proporcione flexibilidad, control y seguridad?
 
@@ -125,7 +123,7 @@ Por diseño, cada microservicio encapsula sus propios datos y expone las operaci
 
 Los datos distribuidos se describen en el capítulo 5 de detalles, *patrones de datos nativos de la nube*.
 
-*Identidad*
+*Identity*
 
 ¿Cómo identificará el servicio quién tiene acceso a él y qué permisos tiene?
 
@@ -155,7 +153,7 @@ La figura 1-4 contrasta un enfoque de aplicación monolítica con un enfoque de 
 
 Tenga en cuenta cómo los microservicios promocionan el principio de "un código base, una aplicación" de la [aplicación de doce factores](https://12factor.net/), descrito anteriormente en el capítulo.
 
-> *Factor \#1 especifica "un único código base para cada microservicio, almacenado en su propio repositorio. Con el control de versiones, se puede implementar en varios entornos.*
+> *Factor \# 1 especifica "un único código base para cada microservicio, almacenado en su propio repositorio. Con el control de versiones, se puede implementar en varios entornos.*
 
 ### <a name="why-microservices"></a>¿Por qué microservicios?
 
@@ -197,7 +195,7 @@ Observe cómo cada contenedor mantiene su propio conjunto de dependencias y tiem
 
 Tenga en cuenta que el modelo de contenedor adopta el principio "dependencias" de la [aplicación de doce factores](https://12factor.net/).
 
-> *Factor \#2 especifica que "cada microservicio aísla y empaqueta sus propias dependencias, adoptando cambios sin afectar al sistema completo".*
+> *Factor \# 2 especifica que "cada microservicio aísla y empaqueta sus propias dependencias, adoptando cambios sin afectar al sistema completo".*
 
 Los contenedores admiten cargas de trabajo de Windows y Linux. La nube de Azure adopta ambos. Curiosamente, es Linux, no Windows Server, que se ha convertido en el sistema operativo más popular de Azure.
 
@@ -236,9 +234,9 @@ En la tabla siguiente se describen las tareas comunes de orquestación.
 
 Tenga en cuenta cómo los orquestadores adoptan los principios de eliminación y simultaneidad de la [aplicación de doce factores](https://12factor.net/), descritos anteriormente en el capítulo.
 
-> *Factor \#9 especifica que "las instancias de servicio deben ser descartables, lo que favorece el inicio rápido para aumentar las oportunidades de escalabilidad y cierres correctos para dejar el sistema en un estado correcto. Los contenedores de Docker junto con un orquestador satisfacen de forma inherente este requisito ".*
+> *Factor \# 9 especifica que "las instancias de servicio deben ser descartables, lo que favorece el inicio rápido para aumentar las oportunidades de escalabilidad y cierres correctos para dejar el sistema en un estado correcto. Los contenedores de Docker junto con un orquestador satisfacen de forma inherente este requisito ".*
 
-> *Factor \#8 especifica que "los servicios se escalan horizontalmente en un gran número de pequeños procesos idénticos (copias) en lugar de escalar verticalmente una única instancia grande en el equipo más eficaz disponible".*
+> *Factor \# 8 especifica que "los servicios se escalan horizontalmente en un gran número de pequeños procesos idénticos (copias) en lugar de escalar verticalmente una única instancia grande en el equipo más eficaz disponible".*
 
 Aunque existen varios orquestadores de contenedor, [Kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/) se ha convertido en el estándar de facto para el mundo nativo de la nube. Es una plataforma portátil, extensible y de código abierto para administrar cargas de trabajo en contenedores.
 
@@ -258,7 +256,7 @@ Los sistemas nativos en la nube dependen de muchos recursos auxiliares distintos
 
 Los servicios de respaldo promocionan el principio "Estados" de la [aplicación de doce factores](https://12factor.net/), que se explicó anteriormente en el capítulo.
 
->*Factor \#6* especifica que "cada microservicio debe ejecutarse en su propio proceso, aislado de otros servicios en ejecución. Externalizar el estado necesario para un servicio de respaldo, como una caché distribuida o un almacén de datos ".
+>*Factor \# 6* especifica que "cada microservicio debe ejecutarse en su propio proceso, aislado de otros servicios en ejecución. Externalizar el estado necesario para un servicio de respaldo, como una caché distribuida o un almacén de datos ".
 
 Podría hospedar sus propios servicios de respaldo, pero a continuación se responsabilizaría de la concesión de licencias, el aprovisionamiento y la administración de esos recursos.
 
@@ -268,9 +266,9 @@ Los sistemas nativos en la nube favorecen los servicios de respaldo administrado
 
 Un procedimiento recomendado consiste en tratar un servicio de respaldo como un *recurso adjunto*, enlazado dinámicamente a un microservicio con información (una dirección URL y credenciales) almacenada en una configuración externa. Esta guía se ha escrito en la [aplicación de doce factores](https://12factor.net/), descrita anteriormente en el capítulo.
 
->*Factor \#4* especifica que los servicios de respaldo deben exponerse a través de una dirección URL direccionable. Al hacerlo, se desacopla el recurso de la aplicación, lo que permite que sea intercambiable. "
+>*Factor \# 4* especifica que los servicios de respaldo deben exponerse a través de una dirección URL direccionable. Al hacerlo, se desacopla el recurso de la aplicación, lo que permite que sea intercambiable. "
 
->*Factor \#3* especifica que "la información de configuración se mueve fuera del microservicio y se externaliza a través de una herramienta de administración de configuración fuera del código".
+>*Factor \# 3* especifica que "la información de configuración se mueve fuera del microservicio y se externaliza a través de una herramienta de administración de configuración fuera del código".
 
 Con este patrón, un servicio de respaldo se puede adjuntar y separar sin cambios de código. Puede promover un microservicio de QA a un entorno de ensayo. Actualice la configuración del microservicio para que apunte a los servicios de respaldo en el almacenamiento provisional e inserte la configuración en el contenedor a través de una variable de entorno.
 
@@ -298,7 +296,7 @@ En el artículo [¿Qué es la infraestructura como código](https://docs.microso
 
 La [aplicación de doce factores](https://12factor.net/), descrita anteriormente, llama a pasos independientes al transformar el código completado en una aplicación en ejecución.
 
-> *Factor \#5* especifica que "cada versión debe exigir una separación estricta entre las fases de compilación, lanzamiento y ejecución. Cada una debe etiquetarse con un identificador único y admitir la capacidad de revertir ".
+> *Factor \# 5* especifica que "cada versión debe exigir una separación estricta entre las fases de compilación, lanzamiento y ejecución. Cada una debe etiquetarse con un identificador único y admitir la capacidad de revertir ".
 
 Los sistemas de CI/CD modernos ayudan a completar este principio. Proporcionan pasos de implementación independientes y ayudan a garantizar un código coherente y de calidad que esté disponible para los usuarios.
 

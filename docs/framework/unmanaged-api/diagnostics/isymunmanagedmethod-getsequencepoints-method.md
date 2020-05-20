@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f909ac48-3d8f-49fb-a369-e3d9959151cd
 topic_type:
 - apiref
-ms.openlocfilehash: 75d477af7395a9b7d3328b2a5787f810733f3749
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 451cfecde7e14fad9d3fed3367112e1fb59796e5
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448877"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615150"
 ---
 # <a name="isymunmanagedmethodgetsequencepoints-method"></a>ISymUnmanagedMethod::GetSequencePoints (Método)
 Obtiene todos los puntos de secuencia de este método.  
@@ -41,7 +41,7 @@ HRESULT GetSequencePoints(
   
 ## <a name="parameters"></a>Parámetros  
  `cPoints`  
- de `ULONG32` que recibe el tamaño de las matrices `offsets`, `documents`, `lines`, `columns`, `endLines`y `endColumns`.  
+ de `ULONG32`Que recibe el tamaño de las `offsets` matrices, `documents` , `lines` , `columns` , `endLines` y `endColumns` .  
   
  `pcPoints`  
  enuncia Un puntero a un `ULONG32` que recibe la longitud del búfer necesario para contener los puntos de secuencia.  
@@ -70,6 +70,6 @@ HRESULT GetSequencePoints(
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ISymUnmanagedMethod (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [ISymUnmanagedMethod (Interfaz)](isymunmanagedmethod-interface.md)

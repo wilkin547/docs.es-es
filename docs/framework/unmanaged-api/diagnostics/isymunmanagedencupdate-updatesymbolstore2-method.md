@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 35588317-6184-485c-ab41-4b15fc1765d9
 topic_type:
 - apiref
-ms.openlocfilehash: 393984241412f543b6ac082484cf5e23edb2d9f4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f363bed8e7002bf898755b434c919f8722dea3fb
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448982"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614505"
 ---
 # <a name="isymunmanagedencupdateupdatesymbolstore2-method"></a>ISymUnmanagedENCUpdate::UpdateSymbolStore2 (Método)
 Permite a un compilador omitir las funciones que no se han modificado desde la secuencia de la base de datos de programa (PDB), siempre que la información de línea cumpla los requisitos. La información de línea correcta se puede determinar con la información de línea de PDB antigua y una diferencia para todas las líneas de la función.  
@@ -39,10 +39,10 @@ HRESULT UpdateSymbolStore2(
  de Puntero a una [IStream](/windows/desktop/api/objidl/nn-objidl-istream) que contiene la información de la línea.  
   
  `pDeltaLines`  
- de Puntero a una estructura [symlinedelta (](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md) que contiene las líneas que han cambiado.  
+ de Puntero a una estructura [symlinedelta (](symlinedelta-structure.md) que contiene las líneas que han cambiado.  
   
  `cDeltaLines`  
- de `ULONG` que representa el número de líneas que han cambiado.  
+ de `ULONG`Que representa el número de líneas que han cambiado.  
   
 ## <a name="return-value"></a>Valor devuelto  
  S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
@@ -50,6 +50,6 @@ HRESULT UpdateSymbolStore2(
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ISymUnmanagedENCUpdate (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+- [ISymUnmanagedENCUpdate (Interfaz)](isymunmanagedencupdate-interface.md)

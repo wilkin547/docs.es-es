@@ -1,17 +1,15 @@
 ---
 title: Identidad
 description: Diseño de aplicaciones .NET nativas en la nube para Azure | Identidad
-ms.date: 09/23/2019
-ms.openlocfilehash: 4cc7c04bf323d2589777df466321f6801f511b6f
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.date: 05/13/2020
+ms.openlocfilehash: 9fa48977e58e2ca5a5f3e231372a4791640a85fd
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "73840350"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614024"
 ---
 # <a name="identity"></a>Identidad
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 La mayoría de las aplicaciones de software deben tener algún conocimiento del usuario o proceso que las llama. El usuario o proceso que interactúa con una aplicación se conoce como una entidad de seguridad, y el proceso de autenticación y autorización de estas entidades de seguridad se conoce como administración de identidades, o simplemente *identidad*. Las aplicaciones sencillas pueden incluir toda la administración de identidades dentro de la aplicación, pero este enfoque no se escala bien con muchas aplicaciones y muchos tipos de entidades de seguridad. Windows admite el uso de Active Directory para proporcionar autenticación y autorización centralizadas.
 
@@ -29,7 +27,7 @@ Normalmente, el STS solo es responsable de autenticar la entidad de seguridad. L
 
 ## <a name="references"></a>Referencias
 
-- [Plataforma de Microsoft Identity](https://docs.microsoft.com/azure/active-directory/develop/)
+- [Plataforma de identidad de Microsoft](https://docs.microsoft.com/azure/active-directory/develop/)
 
 >[!div class="step-by-step"]
 >[Anterior](azure-monitor.md)

@@ -1,17 +1,15 @@
 ---
 title: Supervisión y estado
 description: Supervisión y estado
-ms.date: 09/23/2019
-ms.openlocfilehash: 6274040318b5442478e9cc291c4f223bdf533110
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.date: 05/13/2020
+ms.openlocfilehash: 28e98bbdb39a68d8961d4f3ab48cde5a07a4762b
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73842024"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613803"
 ---
 # <a name="monitoring-and-health"></a>Supervisión y estado
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Los microservicios y las aplicaciones nativas en la nube se dirigen a mano con buenas prácticas de DevOps. DevOps es un gran número de cosas para muchas personas, pero quizás una de las mejores definiciones proviene del defensor de la nube y del experto en DevOps Donovan Brown:
 

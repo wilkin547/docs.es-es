@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 843c904a-8176-4d8f-bd47-b4d4c29f4c5c
 topic_type:
 - apiref
-ms.openlocfilehash: 94d1aa5bba87e8ca11b58bdf89a697e1ccf500b1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 674089f8a1076342a2479c64e253b7dda53ade87
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428024"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615207"
 ---
 # <a name="isymunmanagedwriterdefineglobalvariable-method"></a>ISymUnmanagedWriter::DefineGlobalVariable (Método)
 Define una única variable global.  
@@ -41,13 +41,13 @@ HRESULT DefineGlobalVariable(
   
 ## <a name="parameters"></a>Parámetros  
  `name`  
- de Puntero a un `WCHAR` que define el nombre de la variable global.  
+ de Puntero a `WCHAR` que define el nombre de la variable global.  
   
  `attributes`  
  de Atributos de la variable global.  
   
  `cSig`  
- de `ULONG32` que indica el tamaño, en caracteres, del búfer de `signature`.  
+ de `ULONG32`Que indica el tamaño, en caracteres, del `signature` búfer.  
   
  `signature`  
  de Firma de la variable global.  
@@ -70,8 +70,8 @@ HRESULT DefineGlobalVariable(
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ISymUnmanagedWriter (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [DefineLocalVariable (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)
-- [DefineGlobalVariable2 (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-defineglobalvariable2-method.md)
+- [ISymUnmanagedWriter (Interfaz)](isymunmanagedwriter-interface.md)
+- [Método DefineLocalVariable](isymunmanagedwriter-definelocalvariable-method.md)
+- [Método DefineGlobalVariable2](isymunmanagedwriter2-defineglobalvariable2-method.md)

@@ -2,17 +2,15 @@
 title: Patrones de comunicación nativa en la nube
 description: Más información sobre las principales preocupaciones sobre la comunicación de servicios en aplicaciones nativas en la nube
 author: robvet
-ms.date: 08/31/2019
-ms.openlocfilehash: b3edc0817fb76ad99a1344b17d600eb747187f86
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 3d678df44b5fef68427846e59f446b7408795625
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895629"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614219"
 ---
 # <a name="cloud-native-communication-patterns"></a>Patrones de comunicación nativa en la nube
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Al construir un sistema nativo en la nube, la comunicación se convierte en una decisión de diseño significativa. ¿Cómo se comunica una aplicación cliente front-end con un microservicio de back-end? ¿Cómo se comunican entre sí los microservicios de back-end? ¿Cuáles son los principios, patrones y procedimientos recomendados que se deben tener en cuenta al implementar la comunicación en aplicaciones nativas de la nube?
 

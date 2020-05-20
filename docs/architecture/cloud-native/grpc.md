@@ -2,17 +2,15 @@
 title: gRPC
 description: Obtenga información sobre gRPC, su rol en aplicaciones nativas de la nube y cómo difiere de la comunicación HTTP RESTful.
 author: robvet
-ms.date: 03/31/2020
-ms.openlocfilehash: 01dd4c934f0b39041ea377691067edf4dbe20378
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: f34b267d7f5c6b4e593841c80df44d1ccbde95ae
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895568"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614050"
 ---
 # <a name="grpc"></a>gRPC
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Hasta ahora en este libro nos hemos centrado en la comunicación [basada en REST](https://docs.microsoft.com/azure/architecture/best-practices/api-design) . Hemos visto que REST es un estilo arquitectónico flexible que define las operaciones basadas en CRUD en recursos de entidad. Los clientes interactúan con los recursos a través de HTTP con un modelo de comunicación de solicitud-respuesta. Aunque REST está ampliamente implementado, una tecnología de comunicación más reciente, gRPC, ha obtenido un gran impulso de la comunidad nativa en la nube.
 
@@ -39,9 +37,9 @@ gRPC es ligero y de alto rendimiento. Puede ser hasta 8X más rápido que la ser
 
 ## <a name="protocol-buffers"></a>Búferes de protocolo
 
-gRPC adopta una tecnología de código abierto denominada [búferes de protocolo](https://developers.google.com/protocol-buffers/docs/overview). Proporcionan un formato de serialización neutro y de alta eficacia de la plataforma para serializar los mensajes estructurados que los servicios envían entre sí. Con un lenguaje de definición de interfaz (IDL) multiplataforma, los desarrolladores definen un contrato de servicio para cada microservicio. El contrato, implementado como un archivo basado `.proto` en texto, describe los métodos, las entradas y las salidas de cada servicio. Se puede usar el mismo archivo de contrato para clientes y servicios de gRPC creados en distintas plataformas de desarrollo.
+gRPC adopta una tecnología de código abierto denominada [búferes de protocolo](https://developers.google.com/protocol-buffers/docs/overview). Proporcionan un formato de serialización neutro y de alta eficacia de la plataforma para serializar los mensajes estructurados que los servicios envían entre sí. Con un lenguaje de definición de interfaz (IDL) multiplataforma, los desarrolladores definen un contrato de servicio para cada microservicio. El contrato, implementado como un archivo basado en texto `.proto` , describe los métodos, las entradas y las salidas de cada servicio. Se puede usar el mismo archivo de contrato para clientes y servicios de gRPC creados en distintas plataformas de desarrollo.
 
-Mediante el uso del archivo proto, el compilador protobuf, `protoc`, genera código de cliente y servicio para la plataforma de destino. El código incluye los componentes siguientes:
+Mediante el uso del archivo proto, el compilador protobuf, `protoc` , genera código de cliente y servicio para la plataforma de destino. El código incluye los componentes siguientes:
 
 - Objetos fuertemente tipados, compartidos por el cliente y el servicio, que representan las operaciones de servicio y los elementos de datos de un mensaje.
 - Una clase base fuertemente tipada con la infraestructura de red necesaria que el servicio gRPC remoto puede heredar y extender.

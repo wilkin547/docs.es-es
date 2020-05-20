@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55773dbc-9053-46e3-8a3c-86caa9d91fb4
 topic_type:
 - apiref
-ms.openlocfilehash: 5afd48b36355835647ab8d06691f2bd2058b00cb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8015056b110fe8a5b5122b1bc81143980b780047
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426738"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614986"
 ---
 # <a name="isymunmanagedreadergetmethodfromdocumentposition-method"></a>ISymUnmanagedReader::GetMethodFromDocumentPosition (Método)
 Devuelve el método que contiene el punto de interrupción en la posición especificada de un documento.  
@@ -46,7 +46,7 @@ HRESULT GetMethodFromDocumentPosition (
  de Columna del documento especificado.  
   
  `pRetVal`  
- enuncia Puntero a la dirección de un objeto de [interfaz ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) que representa el método que contiene el punto de interrupción.  
+ enuncia Puntero a la dirección de un objeto de [interfaz ISymUnmanagedMethod](isymunmanagedmethod-interface.md) que representa el método que contiene el punto de interrupción.  
   
 ## <a name="return-value"></a>Valor devuelto  
  S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
@@ -54,6 +54,6 @@ HRESULT GetMethodFromDocumentPosition (
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ISymUnmanagedReader (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader (Interfaz)](isymunmanagedreader-interface.md)

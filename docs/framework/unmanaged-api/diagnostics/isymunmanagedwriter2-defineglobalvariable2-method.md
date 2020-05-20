@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 04d569d6-a151-4957-9872-f3f694c3e4a9
 topic_type:
 - apiref
-ms.openlocfilehash: 12475b1ac8a1a81e565aa689eac2ae1a9b55e73a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ed3c841c34b71b30f740117899353aa289e478d5
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438287"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614713"
 ---
 # <a name="isymunmanagedwriter2defineglobalvariable2-method"></a>ISymUnmanagedWriter2::DefineGlobalVariable2 (Método)
 Define una única variable global.  
@@ -66,7 +66,7 @@ HRESULT DefineGlobalVariable2(
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** CorSym. idl  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ISymUnmanagedWriter2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
-- [DefineGlobalVariable (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineglobalvariable-method.md)
+- [ISymUnmanagedWriter2 (Interfaz)](isymunmanagedwriter2-interface.md)
+- [Método DefineGlobalVariable](isymunmanagedwriter-defineglobalvariable-method.md)

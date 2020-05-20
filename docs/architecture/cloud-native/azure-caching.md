@@ -2,17 +2,15 @@
 title: Almacenamiento en caché en una aplicación nativa en la nube
 description: Obtenga información sobre las estrategias de almacenamiento en caché en una aplicación nativa en la nube.
 author: robvet
-ms.date: 01/22/2020
-ms.openlocfilehash: 2da61a01fc53233d1934df813fcba3b91a495c43
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 05/17/2020
+ms.openlocfilehash: a109db59d7b2005ea97922eef07ae4869e4894a7
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76795120"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614297"
 ---
 # <a name="caching-in-a-cloud-native-app"></a>Almacenamiento en caché en una aplicación nativa en la nube
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Las ventajas del almacenamiento en caché se entienden bien. La técnica funciona mediante la copia temporal de los datos a los que se accede con frecuencia desde un almacén de datos de back-end a un *almacenamiento rápido* que se encuentra más cerca de la aplicación. El almacenamiento en caché se implementa a menudo...
 
@@ -32,15 +30,15 @@ Considere también el almacenamiento en caché para evitar cálculos repetitivos
 
 ## <a name="caching-architecture"></a>Arquitectura de almacenamiento en caché
 
-Las aplicaciones nativas en la nube suelen implementar una arquitectura de almacenamiento en caché distribuida. La memoria caché se hospeda como un servicio de [respaldo](./definition.md#backing-services)basado en la nube, independiente de los microservicios. En la figura 5-20 se muestra la arquitectura.
+Las aplicaciones nativas en la nube suelen implementar una arquitectura de almacenamiento en caché distribuida. La memoria caché se hospeda como un servicio de [respaldo](./definition.md#backing-services)basado en la nube, independiente de los microservicios. En la figura 5-15 se muestra la arquitectura.
 
 ![Almacenamiento en caché en una aplicación nativa en la nube](media/caching-in-a-cloud-native-app.png)
 
-**Figura 5-19**: almacenamiento en caché en una aplicación nativa en la nube
+**Figura 5-15**: almacenamiento en caché en una aplicación nativa en la nube
 
 En la ilustración anterior, observe cómo la memoria caché es independiente y compartida por los microservicios. En este escenario, la [puerta de enlace de API](./front-end-communication.md)invoca la memoria caché. Como se describe en el capítulo 4, la puerta de enlace actúa como front-end para todas las solicitudes entrantes. La caché distribuida aumenta la capacidad de respuesta del sistema al devolver los datos almacenados en caché siempre que sea posible. Además, la separación de la memoria caché de los servicios permite escalar vertical u horizontalmente la memoria caché de forma independiente para satisfacer mayores demandas de tráfico.
 
-En la ilustración se muestra un patrón de almacenamiento en caché común conocido como [patrón de reserva de caché](https://docs.microsoft.com/azure/architecture/patterns/cache-aside). En el caso de una solicitud entrante, primero se consulta la caché (paso \#1) para obtener una respuesta. Si se encuentra, los datos se devuelven inmediatamente. Si los datos no existen en la memoria caché (lo que se conoce como un error de [caché](https://www.techopedia.com/definition/6308/cache-miss)), se recuperan de una base de datos local en un servicio de nivel inferior (\#paso 2). A continuación, se escribe en la memoria caché para las solicitudes futuras (paso \#3) y se devuelve al autor de la llamada. Se debe tener cuidado de expulsar periódicamente los datos almacenados en caché para que el sistema siga siendo puntual y coherente.
+En la ilustración anterior se muestra un patrón de almacenamiento en caché común conocido como el [patrón de reserva de caché](https://docs.microsoft.com/azure/architecture/patterns/cache-aside). En el caso de una solicitud entrante, primero se consulta la caché (paso \# 1) para obtener una respuesta. Si se encuentra, los datos se devuelven inmediatamente. Si los datos no existen en la memoria caché (lo que se conoce como un error de [caché](https://www.techopedia.com/definition/6308/cache-miss)), se recuperan de una base de datos local en un servicio de nivel inferior (paso \# 2). A continuación, se escribe en la caché para las solicitudes futuras (paso \# 3) y se devuelve al autor de la llamada. Se debe tener cuidado de expulsar periódicamente los datos almacenados en caché para que el sistema siga siendo puntual y coherente.
 
 A medida que crece la memoria caché compartida, es posible que resulte beneficioso particionar sus datos en varios nodos. Esto puede ayudar a minimizar la contención y mejorar la escalabilidad. Muchos servicios de almacenamiento en caché admiten la capacidad de agregar y quitar nodos de forma dinámica y de reequilibrar los datos entre las particiones. Normalmente, este enfoque implica la agrupación en clústeres. La agrupación en clústeres expone una colección de nodos federados como una sola memoria caché sin problemas. Sin embargo, internamente, los datos están dispersos en los nodos después de una estrategia de distribución predefinida que equilibra la carga uniformemente.
 

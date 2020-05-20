@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0bed524e-cc48-4bf0-b9fa-25d665e63ddb
 topic_type:
 - apiref
-ms.openlocfilehash: c7e9d2fe94c33127d8b105333ad6dac9d6cc5af6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c6d21f40c260890c9c88dcdfccd7e31161024ba3
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446371"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614869"
 ---
 # <a name="isymunmanagedscopegetchildren-method"></a>ISymUnmanagedScope::GetChildren (Método)
 Obtiene los elementos secundarios de este ámbito.  
@@ -37,7 +37,7 @@ HRESULT GetChildren(
   
 ## <a name="parameters"></a>Parámetros  
  `cChildren`  
- de `ULONG32` que indica el tamaño de la matriz de `children`.  
+ de `ULONG32`Que indica el tamaño de la `children` matriz.  
   
  `pcChildren`  
  enuncia Un puntero a un `ULONG32` que recibe el tamaño del búfer necesario para contener los elementos secundarios.  
@@ -51,7 +51,7 @@ HRESULT GetChildren(
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ISymUnmanagedScope (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
-- [GetParent (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getparent-method.md)
+- [ISymUnmanagedScope (Interfaz)](isymunmanagedscope-interface.md)
+- [Método GetParent](isymunmanagedscope-getparent-method.md)

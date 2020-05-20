@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7fbbac42-b966-406d-9ae9-67bf3aea74ce
 topic_type:
 - apiref
-ms.openlocfilehash: b8bbedb4c60a2df6070373f2b6a104fff094869a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: cda30f3c73bf75c37ff79fc415e02382b053807e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448968"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614492"
 ---
 # <a name="isymunmanagedmethodgetnamespace-method"></a>ISymUnmanagedMethod::GetNamespace (Método)
 Obtiene el espacio de nombres en el que se define este método.  
@@ -34,7 +34,7 @@ HRESULT GetNamespace(
   
 ## <a name="parameters"></a>Parámetros  
  `pRetVal`  
- enuncia Puntero que se establece en la interfaz [ISymUnmanagedNamespace](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md) devuelta.  
+ enuncia Puntero que se establece en la interfaz [ISymUnmanagedNamespace](isymunmanagednamespace-interface.md) devuelta.  
   
 ## <a name="return-value"></a>Valor devuelto  
  S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
@@ -42,6 +42,6 @@ HRESULT GetNamespace(
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ISymUnmanagedMethod (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [ISymUnmanagedMethod (Interfaz)](isymunmanagedmethod-interface.md)

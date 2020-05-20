@@ -1,17 +1,16 @@
 ---
-title: Marcas de características
+title: Marcas de característica
 description: Implementar marcas de características en aplicaciones nativas en la nube que aprovechan App de Azure configuración
-ms.date: 05/03/2020
-ms.openlocfilehash: 72e1bfe777854a74fcac926811caf97e59986146
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+author: robvet
+ms.date: 05/13/2020
+ms.openlocfilehash: 607bd14a415a25b382f550e697542cf749a21772
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83398324"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614076"
 ---
-# <a name="feature-flags"></a>Marcas de características
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+# <a name="feature-flags"></a>Marcas de característica
 
 En el capítulo 1, afirmamos que la nube nativa es mucho más rápida y ágil. Los usuarios esperan una capacidad de respuesta rápida, características innovadoras y sin tiempo de inactividad. `Feature flags`son una técnica de implementación moderna que ayuda a aumentar la agilidad de las aplicaciones nativas en la nube. Permiten implementar nuevas características en un entorno de producción, pero restringen su disponibilidad. Con el gesto de un conmutador, puede activar una nueva característica para usuarios específicos sin necesidad de reiniciar la aplicación ni implementar código nuevo. Separan la versión de las nuevas características de la implementación del código.
 

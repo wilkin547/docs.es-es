@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4d834721-ad8d-439d-b356-c6b4aef022fc
 topic_type:
 - apiref
-ms.openlocfilehash: 3bdc79a6b6d81f6f0998f052f8bea1bf8af55402
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ff888d3e2b86efeea3f4e3d33528f731d85886bf
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446107"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615272"
 ---
 # <a name="isymunmanagedvariablegetaddressfield3-method"></a>ISymUnmanagedVariable::GetAddressField3 (Método)
 Obtiene el tercer campo de dirección para esta variable. Su significado depende del tipo de dirección.  
@@ -42,9 +42,9 @@ HRESULT GetAddressField3(
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ISymUnmanagedVariable (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
-- [GetAddressField1 (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddressfield1-method.md)
-- [GetAddressField2 (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddressfield2-method.md)
-- [GetAddressKind (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddresskind-method.md)
+- [ISymUnmanagedVariable (Interfaz)](isymunmanagedvariable-interface.md)
+- [Método GetAddressField1](isymunmanagedvariable-getaddressfield1-method.md)
+- [Método GetAddressField2](isymunmanagedvariable-getaddressfield2-method.md)
+- [Método GetAddressKind](isymunmanagedvariable-getaddresskind-method.md)

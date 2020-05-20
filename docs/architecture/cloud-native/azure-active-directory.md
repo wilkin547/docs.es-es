@@ -2,16 +2,14 @@
 title: Azure Active Directory
 description: Diseño de aplicaciones .NET nativas en la nube para Azure | Azure Active Directory
 ms.date: 06/30/2019
-ms.openlocfilehash: 207043507a9052c47683383a98cef6417a1a2740
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 03f5ea8e84bc3c4a2a88a63d4b109aabf0c64f36
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "73840734"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614284"
 ---
 # <a name="azure-active-directory"></a>Azure Active Directory
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Microsoft Azure Active Directory (Azure AD) ofrece administración de identidades y acceso como servicio. Los clientes la usan para configurar y mantener a los usuarios, la información que debe almacenar sobre ellos, quién puede tener acceso a esa información, quién puede administrarla y qué aplicaciones pueden acceder a ella. AAD puede autenticar a los usuarios para las aplicaciones configuradas para usarlos, lo que proporciona una experiencia de inicio de sesión único (SSO). Puede usarse por sí mismo o estar integrado con Windows AD que se ejecuta en el entorno local.
 
@@ -21,7 +19,7 @@ Azure AD admite pantallas de inicio de sesión con personalización de marca de 
 
 ## <a name="references"></a>Referencias
 
-- [Plataforma de Microsoft Identity](https://docs.microsoft.com/azure/active-directory/develop/)
+- [Plataforma de identidad de Microsoft](https://docs.microsoft.com/azure/active-directory/develop/)
 
 >[!div class="step-by-step"]
 >[Anterior](authentication-authorization.md)

@@ -1,17 +1,15 @@
 ---
 title: Seguridad
 description: Diseño de aplicaciones .NET nativas en la nube para Azure | Bursátil
-ms.date: 06/30/2019
-ms.openlocfilehash: 848255de70038798417a558543d0b1ea8cff1e37
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.date: 05/13/2020
+ms.openlocfilehash: 9afbc2c960fdd16721e1d3aa7fd01d5c0c1fe2f9
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "73840998"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613673"
 ---
 # <a name="security"></a>Seguridad
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 No se trata de un día en el que las noticias no contengan algún caso de que una compañía esté atacada o pierda de algún modo los datos de sus clientes. Incluso los países no son inmunes a los problemas creados al tratar la seguridad como una idea. Durante años, las empresas han tratado la seguridad de los datos de los clientes y, de hecho, todas las redes como algo de "bonito". Los servidores de Windows se dejaron sin revisión, las versiones anteriores de PHP mantenían la ejecución y las bases de datos de MongoDB a la izquierda se abren en todo el mundo.
 

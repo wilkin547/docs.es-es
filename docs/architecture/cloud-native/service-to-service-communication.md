@@ -2,17 +2,15 @@
 title: Comunicación entre servicios
 description: Obtenga información sobre cómo los microservicios de back-end nativos en la nube se comunican con otros microservicios de back-end.
 author: robvet
-ms.date: 09/09/2019
-ms.openlocfilehash: 556617a9e2df5a4d9ff9adb9d19e714ca94930ea
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: dec06cc28ac177381b882f9e441e19e5c51bd5ad
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895496"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613712"
 ---
 # <a name="service-to-service-communication"></a>Comunicación entre servicios
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Al pasar del cliente front-end, ahora se abordan los microservicios de back-end que se comunican entre sí.
 
@@ -50,7 +48,7 @@ La ejecución de una solicitud poco frecuente que realiza una única llamada HTT
 
 **Figura 4-9**. Encadenamiento de consultas HTTP
 
-Por supuesto, puede imaginarse el riesgo en el diseño que se muestra en la imagen anterior. ¿Qué ocurre si \#se produce un error en el paso 3? ¿O \#el paso 8 produce un error? ¿Cómo se recupera? ¿Qué ocurre \#si el paso 6 es lento porque el servicio subyacente está ocupado? ¿Cómo se puede continuar? Incluso si todo funciona correctamente, piense en la latencia que podría tener esta llamada, que es la suma de la latencia de cada paso.
+Por supuesto, puede imaginarse el riesgo en el diseño que se muestra en la imagen anterior. ¿Qué ocurre si \# se produce un error en el paso 3? ¿O el paso \# 8 produce un error? ¿Cómo se recupera? ¿Qué ocurre si \# el paso 6 es lento porque el servicio subyacente está ocupado? ¿Cómo se puede continuar? Incluso si todo funciona correctamente, piense en la latencia que podría tener esta llamada, que es la suma de la latencia de cada paso.
 
 El gran grado de acoplamiento en la imagen anterior sugiere que los servicios no se modelaron de forma óptima. El equipo volvería a revisar su diseño.
 
@@ -144,7 +142,7 @@ En la figura 4-14 se describe la arquitectura de alto nivel de una cola de Servi
 
 En la ilustración anterior, observe la relación punto a punto. Dos instancias del mismo proveedor están poniendo en cola los mensajes en una sola cola de Service Bus. Cada mensaje se consume solo en una de las tres instancias de consumidor de la derecha. A continuación, se describe cómo implementar la mensajería en la que es posible que todos los consumidores puedan estar interesados en el mismo mensaje.
 
-## <a name="events"></a>Events
+## <a name="events"></a>Eventos
 
 Message Queue Server es una manera eficaz de implementar la comunicación en la que un productor puede enviar un mensaje de forma asincrónica a un consumidor. Sin embargo, ¿qué ocurre cuando *muchos consumidores diferentes* están interesados en el mismo mensaje? Una cola de mensajes dedicada para cada consumidor no se podría escalar bien y resultaría difícil de administrar.
 
@@ -166,7 +164,7 @@ Con los eventos, pasamos de la tecnología de puesta en cola a los *temas*. Un [
 
 **Figura 4-16**. Arquitectura de temas
 
-En la ilustración anterior, los publicadores envían mensajes al tema. Al final, los suscriptores reciben mensajes de las suscripciones. En el centro, el tema reenvía los mensajes a las suscripciones en función de un conjunto de *reglas*, que se muestra en los cuadros azul oscuro. Las reglas actúan como un filtro que reenvía mensajes específicos a una suscripción. En este caso, se enviará un evento "CreateOrder" \#a la suscripción \#1 y a la suscripción 3 \#, pero no a la suscripción 2. Un evento "OrderCompleted" se enviaría a la \#suscripción 2 y \#a la suscripción 3.
+En la ilustración anterior, los publicadores envían mensajes al tema. Al final, los suscriptores reciben mensajes de las suscripciones. En el centro, el tema reenvía los mensajes a las suscripciones en función de un conjunto de *reglas*, que se muestra en los cuadros azul oscuro. Las reglas actúan como un filtro que reenvía mensajes específicos a una suscripción. En este caso, se enviará un evento "CreateOrder" a la suscripción \# 1 y a la suscripción \# 3, pero no a la suscripción \# 2. Un evento "OrderCompleted" se enviaría a la suscripción \# 2 y a la suscripción \# 3.
 
 La nube de Azure admite dos servicios de temas distintos: Azure Service Bus temas y Azure EventGrid.
 

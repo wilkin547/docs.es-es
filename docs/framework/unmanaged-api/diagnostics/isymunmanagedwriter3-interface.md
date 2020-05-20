@@ -14,28 +14,28 @@ helpviewer_keywords:
 ms.assetid: a034c21e-e371-4360-b470-29e88288948f
 topic_type:
 - apiref
-ms.openlocfilehash: 115d4b58b01606c29719fb88ab7dbf5a858b1251
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 006045ce101884119f676e4f6324815eb21a10a4
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438168"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614661"
 ---
 # <a name="isymunmanagedwriter3-interface"></a>ISymUnmanagedWriter3 (Interfaz)
-Representa un escritor de símbolos y proporciona métodos para definir documentos, puntos de secuencia, ámbitos léxicos y variables. Esta interfaz extiende la interfaz [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) .  
+Representa un escritor de símbolos y proporciona métodos para definir documentos, puntos de secuencia, ámbitos léxicos y variables. Esta interfaz extiende la interfaz [ISymUnmanagedWriter](isymunmanagedwriter-interface.md) .  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Commit (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-commit-method.md)|Confirma los cambios escritos hasta el momento en la secuencia.|  
-|[OpenMethod2 (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-openmethod2-method.md)|Abre un método y proporciona su desplazamiento de sección real en la imagen.|  
+|[Commit (método)](isymunmanagedwriter3-commit-method.md)|Confirma los cambios escritos hasta el momento en la secuencia.|  
+|[Método OpenMethod2](isymunmanagedwriter3-openmethod2-method.md)|Abre un método y proporciona su desplazamiento de sección real en la imagen.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [Interfaces de almacén de símbolos de diagnósticos](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
-- [ISymUnmanagedWriter (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [ISymUnmanagedWriter2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
+- [Interfaces de almacén de símbolos de diagnósticos](diagnostics-symbol-store-interfaces.md)
+- [ISymUnmanagedWriter (Interfaz)](isymunmanagedwriter-interface.md)
+- [ISymUnmanagedWriter2 (Interfaz)](isymunmanagedwriter2-interface.md)

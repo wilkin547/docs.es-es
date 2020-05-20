@@ -1,24 +1,22 @@
 ---
 title: Asignación de eShopOnContainers a los servicios de Azure
 description: Asignación de eShopOnContainers a servicios de Azure como Azure Kubernetes Service, API Gateway y Azure Service Bus.
-ms.date: 04/20/2020
-ms.openlocfilehash: 26fce71ba71f7da643b669396ab59affe592649a
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 271707404f7fb51aec59c6f682ddaefd0bac82cc
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895511"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613842"
 ---
 # <a name="mapping-eshoponcontainers-to-azure-services"></a>Asignación de eShopOnContainers a los servicios de Azure
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Aunque no es necesario, Azure es idóneo para admitir eShopOnContainers porque el proyecto se creó para ser una aplicación nativa en la nube. La aplicación se compila con .NET Core, por lo que se puede ejecutar en contenedores de Linux o Windows, en función del host de Docker. La aplicación se compone de varios microservicios autónomos, cada uno con sus propios datos. Los diferentes microservicios exhiben diferentes enfoques, desde operaciones CRUD simples hasta patrones DDD y CQRS más complejos. Los microservicios se comunican con los clientes a través de HTTP y entre sí a través de la comunicación basada en mensajes. La aplicación también admite varias plataformas para los clientes, ya que adopta HTTP como protocolo de comunicación estándar e incluye ASP.NET Core y Xamarin Mobile Apps que se ejecutan en plataformas Android, iOS y Windows.
 
 La arquitectura de la aplicación se muestra en la figura 2-5. A la izquierda se encuentran las aplicaciones cliente, divididas en aplicaciones móviles, web tradicionales y de aplicación de una sola página web (SPA). A la derecha están los componentes del lado servidor que componen el sistema y cada uno de ellos se puede hospedar en los contenedores de Docker y en los clústeres de Kubernetes. La aplicación web tradicional se basa en la ASP.NET Core aplicación MVC que se muestra en amarillo. Esta aplicación y las aplicaciones móviles y Web SPA se comunican con los microservicios individuales a través de una o varias puertas de enlace de API. Las puertas de enlace de API siguen el patrón "back-ends para front-ends" (BFF), lo que significa que cada puerta de enlace está diseñada para admitir un cliente de front-end determinado. Los microservicios individuales se enumeran a la derecha de las puertas de enlace de API e incluyen la lógica de negocios y algún tipo de almacén de persistencia. Los diferentes servicios hacen uso de SQL Server bases de datos, instancias de caché en Redis y almacenes MongoDB/CosmosDB. En el extremo derecho se encuentra el bus de eventos del sistema, que se usa para la comunicación entre los microservicios.
 
-![eShopOnContainers arquitectura](./media/eshoponcontainers-architecture.png)
-de la**figura 2-5**. Arquitectura de eShopOnContainers.
+![eShopOnContainers arquitectura de la ](./media/eshoponcontainers-architecture.png)
+ **figura 2-5**. Arquitectura de eShopOnContainers.
 
 Todos los componentes del lado servidor de esta arquitectura se asignan fácilmente a los servicios de Azure.
 

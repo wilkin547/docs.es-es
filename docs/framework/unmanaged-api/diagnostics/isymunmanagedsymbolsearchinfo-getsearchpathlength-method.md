@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 274e73cf-8333-47ba-ac12-70214e2b0112
 topic_type:
 - apiref
-ms.openlocfilehash: 319ba58b5d012cbc0f9ddac0b83e5f3ae2ae062a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0be7297fbb71302035e71fbbf2c8b5e2a7faa2da
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446171"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615298"
 ---
 # <a name="isymunmanagedsymbolsearchinfogetsearchpathlength-method"></a>ISymUnmanagedSymbolSearchInfo::GetSearchPathLength (Método)
 Obtiene la longitud de la ruta de acceso de búsqueda.  
@@ -34,7 +34,7 @@ HRESULT GetSearchPathLength(
   
 ## <a name="parameters"></a>Parámetros  
  `pcchPath`  
- enuncia Puntero a un `ULONG32` que recibe el tamaño, en caracteres, del búfer necesario para contener la longitud de la ruta de acceso de búsqueda.  
+ enuncia Un puntero a un `ULONG32` que recibe el tamaño, en caracteres, del búfer necesario para contener la longitud de la ruta de acceso de búsqueda.  
   
 ## <a name="return-value"></a>Valor devuelto  
  S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
@@ -42,6 +42,6 @@ HRESULT GetSearchPathLength(
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ISymUnmanagedSymbolSearchInfo (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md)
+- [ISymUnmanagedSymbolSearchInfo (Interfaz)](isymunmanagedsymbolsearchinfo-interface.md)

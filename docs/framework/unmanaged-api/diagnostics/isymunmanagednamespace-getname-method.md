@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 657bf91d-005a-4ea4-9298-04d1291c0bc3
 topic_type:
 - apiref
-ms.openlocfilehash: 43f32ac85bebc12d0a9253205aae3f1de0dc9e5b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 84b2f1226c84713483499c7ff777838058cb0f95
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433963"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615116"
 ---
 # <a name="isymunmanagednamespacegetname-method"></a>ISymUnmanagedNamespace::GetName (Método)
 Obtiene el nombre de este espacio de nombres.  
@@ -37,7 +37,7 @@ HRESULT GetName(
   
 ## <a name="parameters"></a>Parámetros  
  `cchName`  
- de `ULONG32` que indica el tamaño del búfer de `szName`.  
+ de `ULONG32`Que indica el tamaño del `szName` búfer.  
   
  `pcchName`  
  enuncia Un puntero a un `ULONG32` que recibe el tamaño, en caracteres, del búfer necesario para contener el nombre del espacio de nombres, incluida la terminación null.  
@@ -51,6 +51,6 @@ HRESULT GetName(
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ISymUnmanagedNamespace (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
+- [ISymUnmanagedNamespace (Interfaz)](isymunmanagednamespace-interface.md)

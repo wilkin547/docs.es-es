@@ -2,17 +2,15 @@
 title: Infraestructura de comunicación de la malla de servicio
 description: Más información sobre cómo las tecnologías de la malla de servicio simplifican la comunicación de microservicios nativa en la nube
 author: robvet
-ms.date: 03/03/2020
-ms.openlocfilehash: 89bc4d307d725e7e31e020ef156c4c5967dd2a1c
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.date: 05/13/2020
+ms.openlocfilehash: 1b11024cd029433c756812850e2665b7836a13d3
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199955"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613697"
 ---
 # <a name="service-mesh-communication-infrastructure"></a>Infraestructura de comunicación de la malla de servicio
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 En este capítulo, hemos explorado los desafíos de la comunicación de microservicios. Dijimos que los equipos de desarrollo deben ser sensibles a la manera en que los servicios back-end se comunican entre sí. Idealmente, la menor comunicación entre servicios, mejor. Sin embargo, la prevención no siempre es posible, ya que los servicios back-end se basan a menudo en otro para completar las operaciones.
 

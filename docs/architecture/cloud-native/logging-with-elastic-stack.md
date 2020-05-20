@@ -1,17 +1,15 @@
 ---
 title: Registro con pila elástica
 description: Registro con la pila elástica, Logstash y Kibana
-ms.date: 02/05/2020
-ms.openlocfilehash: 6863c66b63854fe3ecaabe2919beded2926ea64c
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.date: 05/13/2020
+ms.openlocfilehash: e886141fa691b75b882b5d67eae4ceb242e8089f
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448932"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613855"
 ---
 # <a name="logging-with-elastic-stack"></a>Registro con pila elástica
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Existen muchas herramientas de registro centralizadas y varían en lo que se refiere a las herramientas gratuitas de código abierto y a opciones más costosas. En muchos casos, las herramientas gratuitas son tan buenas como o mejores que las ofertas de pago. Una de estas herramientas es una combinación de tres componentes de código abierto: búsqueda elástica, Logstash y Kibana.
 
@@ -30,8 +28,8 @@ KUBE_ENABLE_NODE_LOGGING=true
 
 Con esto se instalará Elasticsearch en el clúster y se le enviarán todos los registros de clúster.
 
-![un ejemplo de un panel de Kibana que muestra los resultados de una consulta en los registros ingeridos de Kubernetes](./media/kibana-dashboard.png)
-**figura 7-6**. Un ejemplo de un panel de Kibana que muestra los resultados de una consulta en los registros que se introducen en Kubernetes
+![Un ejemplo de un panel de Kibana que muestra los resultados de una consulta en los registros ingeridos de la ](./media/kibana-dashboard.png)
+ **figura 7-6**de Kubernetes. Un ejemplo de un panel de Kibana que muestra los resultados de una consulta en los registros que se introducen en Kubernetes
 
 ## <a name="what-are-the-advantages-of-elastic-stack"></a>¿Cuáles son las ventajas de la pila elástica?
 
@@ -81,7 +79,7 @@ La búsqueda elástica es un eficaz motor de búsqueda que puede indexar los reg
 
 Los mensajes de registro que se han diseñado para contener parámetros o que han tenido parámetros divididos de ellos a través del procesamiento de Logstash, se pueden consultar directamente, ya que Elasticsearch conserva esta información.
 
-En la figura 7-9 se muestra una consulta que busca las 10 páginas principales visitadas por `jill@example.com`.
+En la figura 7-9 se muestra una consulta que busca las 10 páginas principales visitadas por `jill@example.com` .
 
 ```
 "query": {

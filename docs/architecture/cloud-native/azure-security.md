@@ -1,17 +1,15 @@
 ---
 title: Seguridad de Azure para aplicaciones nativas en la nube
 description: Diseño de aplicaciones .NET nativas en la nube para Azure | Seguridad de Azure para aplicaciones nativas en la nube
-ms.date: 06/30/2019
-ms.openlocfilehash: 27ef6c8313f1573ca686e8489a84f64a56116fa4
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: a39b64477eb9e896c6603e5609ede653bfee1e07
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83394728"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614258"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>Seguridad de Azure para aplicaciones nativas en la nube
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Las aplicaciones nativas en la nube pueden ser más fáciles y más difíciles de proteger que las aplicaciones tradicionales. En el inconveniente, debe proteger aplicaciones más pequeñas y dedicar más energía a la creación de la infraestructura de seguridad. La naturaleza heterogénea de los lenguajes de programación y los estilos en la mayoría de las implementaciones de servicio también significa que debe prestar más atención a los boletines de seguridad de muchos proveedores diferentes.
 
@@ -229,7 +227,7 @@ Aunque este nivel de cifrado no va a ser suficiente para todo el tiempo, debe in
 
 En cualquier aplicación, hay una serie de lugares en los que los datos se colocan en el disco. El propio código de aplicación se carga desde algún mecanismo de almacenamiento. La mayoría de las aplicaciones también utilizan algún tipo de base de datos, como SQL Server, Cosmos DB o incluso el Table Storage sorprendentemente eficaz. Todas estas bases de datos usan almacenamiento de gran cifrado para asegurarse de que nadie distinto de las aplicaciones con los permisos adecuados puede leer los datos. Incluso los operadores del sistema no pueden leer los datos que se han cifrado. Así, los clientes pueden estar seguros de que la información secreta sigue siendo secreta.
 
-### <a name="storage"></a>Almacenamiento
+### <a name="storage"></a>Storage
 
 La subyacente de gran parte de Azure es el motor de Azure Storage. Los discos de máquina virtual se montan encima de Azure Storage. Azure Kubernetes Services se ejecuta en máquinas virtuales que, a su vez, se hospedan en Azure Storage. Incluso las tecnologías sin servidor, como Azure Functions aplicaciones y Azure Container Instances, se ejecutan fuera del disco que forma parte de Azure Storage.
 

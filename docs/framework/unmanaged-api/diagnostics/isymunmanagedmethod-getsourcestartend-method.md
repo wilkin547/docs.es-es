@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2a420900-01f1-4461-8777-3a34a6dc1426
 topic_type:
 - apiref
-ms.openlocfilehash: 01ab69b73a7bc4929e2ebd49b3847f8d7c4646a2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 25e797fdf563a01ab727f16e7173eec2552eeb27
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448865"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614427"
 ---
 # <a name="isymunmanagedmethodgetsourcestartend-method"></a>ISymUnmanagedMethod::GetSourceStartEnd (Método)
 Obtiene las posiciones de documento inicial y final para el origen de este método. La primera posición de la matriz es el inicio y la segunda posición de la matriz es el final.  
@@ -46,7 +46,7 @@ HRESULT GetSourceStartEnd(
  de Columnas inicial y final de los documentos de origen correspondientes.  
   
  `pRetVal`  
- [out] `true` si se definieron las posiciones; de lo contrario, `false`.  
+ [out] `true` Si se definieron las posiciones; en caso contrario, `false` .  
   
 ## <a name="return-value"></a>Valor devuelto  
  S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
@@ -54,6 +54,6 @@ HRESULT GetSourceStartEnd(
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ISymUnmanagedMethod (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [ISymUnmanagedMethod (Interfaz)](isymunmanagedmethod-interface.md)

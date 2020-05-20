@@ -1,17 +1,15 @@
 ---
 title: Infraestructura como código
 description: Adopción de infraestructura como código (IaC) con aplicaciones nativas de la nube
-ms.date: 05/12/2020
-ms.openlocfilehash: 309dd8610ab3b72a6c6da5297f109f822520c5ff
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: cfc9e1f0b2733048d5921de5a0400998c282b1fa
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395347"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613959"
 ---
 # <a name="infrastructure-as-code"></a>Infraestructura como código
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Los sistemas nativos en la nube adoptan microservicios, contenedores y un diseño moderno del sistema para lograr la velocidad y la agilidad. Proporcionan fases automatizadas de compilación y versión para garantizar un código coherente y de calidad. Pero eso es solo parte de la historia. ¿Cómo se aprovisionan los entornos de nube en los que se ejecutan estos sistemas?
 

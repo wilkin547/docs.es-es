@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7d58caac-2e75-4dfa-9249-32d8a624b247
 topic_type:
 - apiref
-ms.openlocfilehash: c956f5d68c992f1b08988e59038e8667b391f734
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 650a64e72b410cddfbee7dce676ddbb5a3b8b3d3
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448918"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614453"
 ---
 # <a name="isymunmanagedmethodgetrootscope-method"></a>ISymUnmanagedMethod::GetRootScope (Método)
 Obtiene el ámbito léxico raíz dentro de este método. Este ámbito abarca el método completo.  
@@ -34,7 +34,7 @@ HRESULT GetRootScope(
   
 ## <a name="parameters"></a>Parámetros  
  `pRetVal`  
- enuncia Puntero que se establece en la interfaz [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) devuelta.  
+ enuncia Puntero que se establece en la interfaz [ISymUnmanagedScope](isymunmanagedscope-interface.md) devuelta.  
   
 ## <a name="return-value"></a>Valor devuelto  
  S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
@@ -42,6 +42,6 @@ HRESULT GetRootScope(
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [ISymUnmanagedMethod (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [ISymUnmanagedMethod (Interfaz)](isymunmanagedmethod-interface.md)

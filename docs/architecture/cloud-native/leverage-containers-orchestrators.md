@@ -1,17 +1,15 @@
 ---
 title: Aprovechamiento de contenedores y orquestadores
 description: Aprovechar los contenedores de Docker y los orquestadores de Kubernetes en Azure
-ms.date: 04/13/2020
-ms.openlocfilehash: 64c6c0666398d9ccbc87efad18017bf278568fc4
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 5d0b7f41caecb3422a4416514de2fdd54e94539a
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895549"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613928"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>Aprovechamiento de contenedores y orquestadores
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Los contenedores y los orquestadores están diseñados para solucionar problemas comunes a los enfoques de implementación monolíticas.
 
@@ -19,7 +17,7 @@ Los contenedores y los orquestadores están diseñados para solucionar problemas
 
 Tradicionalmente, la mayoría de las aplicaciones se han implementado como una sola unidad. Estas aplicaciones se conocen como monolito. Este enfoque general de la implementación de aplicaciones como unidades únicas incluso si están compuestas de varios módulos o ensamblados se conoce como arquitectura monolítica, como se muestra en la figura 3-1.
 
-![Arquitectura monolítica.](./media/monolithic-architecture.png)
+![Arquitectura monolítica.](./media/monolithic-design.png)
 
 **Figura 3-1**. Arquitectura monolítica.
 
@@ -57,8 +55,9 @@ Los contenedores son inmutables. Una vez definido un contenedor, puede volver a 
 
 Los contenedores son inmutables. Una vez definido un contenedor, puede volver a crearlo y ejecutarlo exactamente de la misma manera. Esta inmutabilidad se presta a un diseño basado en componentes. Si algunas partes de una aplicación evolucionan de forma diferente a otras, ¿por qué volver a implementar toda la aplicación cuando se puede implementar solo los elementos que cambian con más frecuencia? Las distintas características y aspectos transversales de una aplicación se pueden dividir en unidades independientes. En la figura 3-2 se muestra cómo una aplicación monolítica puede aprovechar las ventajas de los contenedores y los microservicios mediante la delegación de ciertas características o funcionalidades. La funcionalidad restante en la propia aplicación también se ha contenedor.
 
-![Dividir una aplicación monolítica para usar microservicios en el back-end. ](./media/breaking-up-monolith-with-backend-microservices.png)
- **Figura 3-2**. Dividir una aplicación monolítica para usar microservicios en el back-end.
+![Dividir una aplicación monolítica para usar microservicios en el back-end.](./media/cloud-native-design.png)
+
+**Figura 3-2**. Descomponer una aplicación monolítica para adoptar microservicios.
 
 Cada servicio en la nube nativo se compila e implementa en un contenedor independiente. Cada se puede actualizar según sea necesario. Los servicios individuales se pueden hospedar en nodos con recursos adecuados para cada servicio. El entorno en el que se ejecuta cada servicio es inmutable, compartido entre los entornos de desarrollo, pruebas y producción, y con una versión sencilla. El acoplamiento entre distintas áreas de la aplicación se produce explícitamente como llamadas o mensajes entre servicios, no las dependencias en tiempo de compilación dentro del monolito. También puede elegir la tecnología que mejor se adapte a una funcionalidad determinada sin necesidad de realizar cambios en el resto de la aplicación.
 
@@ -111,7 +110,7 @@ Kubernetes admite la configuración declarativa e imperativa. El enfoque imperat
 
 Los comandos imperativos son excelentes para el aprendizaje y la experimentación interactiva. Sin embargo, querrá crear mediante declaración los archivos de manifiesto de Kubernetes para adoptar una infraestructura como enfoque de código, lo que proporciona implementaciones confiables y repetibles. El archivo de manifiesto se convierte en un artefacto del proyecto y se usa en la canalización de CI/CD para automatizar las implementaciones de Kubernetes.
 
-Si ya ha configurado el clúster mediante comandos imperativos, puede exportar un manifiesto declarativo `kubectl get svc SERVICENAME -o yaml > service.yaml`mediante el uso de. Este comando genera un manifiesto similar al que se muestra a continuación:
+Si ya ha configurado el clúster mediante comandos imperativos, puede exportar un manifiesto declarativo mediante el uso de `kubectl get svc SERVICENAME -o yaml > service.yaml` . Este comando genera un manifiesto similar al que se muestra a continuación:
 
 ```yaml
 apiVersion: v1
@@ -139,7 +138,7 @@ status:
   loadBalancer: {}
 ```
 
-Al usar la configuración declarativa, puede obtener una vista previa de los cambios que se realizarán antes de `kubectl diff -f FOLDERNAME` confirmarlos mediante el uso de en la carpeta donde se encuentran los archivos de configuración. Una vez que esté seguro de que desea aplicar los cambios, `kubectl apply -f FOLDERNAME`ejecute. Agregue `-R` para procesar recursivamente una jerarquía de carpetas.
+Al usar la configuración declarativa, puede obtener una vista previa de los cambios que se realizarán antes de confirmarlos mediante el uso de `kubectl diff -f FOLDERNAME` en la carpeta donde se encuentran los archivos de configuración. Una vez que esté seguro de que desea aplicar los cambios, ejecute `kubectl apply -f FOLDERNAME` . Agregue `-R` para procesar recursivamente una jerarquía de carpetas.
 
 También puede usar la configuración declarativa con otras características de Kubernetes, una de las cuales se implementa. Las implementaciones declarativas ayudan a administrar versiones, actualizaciones y escalado. Indican al controlador de implementación de Kubernetes cómo implementar nuevos cambios, escalar horizontalmente la carga o revertir a una revisión anterior. Si un clúster es inestable, una implementación declarativa devolverá automáticamente el clúster a un estado deseado. Por ejemplo, si un nodo debe bloquearse, el mecanismo de implementación volverá a implementar un reemplazo para alcanzar el estado deseado.
 
@@ -181,7 +180,7 @@ Las implementaciones de Kubernetes proporcionan un gran valor en entornos de pro
 - Habilitar la interfaz de red de contenedor (CNI)
 - Entrada
 
-Después de instalar Minikube, puede empezar a usarlo rápidamente mediante la ejecución `minikube start` del comando, que descarga una imagen e inicia el clúster de Kubernetes local. Una vez iniciado el clúster, puede interactuar con él mediante los comandos estándar `kubectl` de Kubernetes.
+Después de instalar Minikube, puede empezar a usarlo rápidamente mediante la ejecución del `minikube start` comando, que descarga una imagen e inicia el clúster de Kubernetes local. Una vez iniciado el clúster, puede interactuar con él mediante los comandos estándar de Kubernetes `kubectl` .
 
 ### <a name="docker-desktop"></a>Docker Desktop
 
@@ -204,26 +203,26 @@ Visual Studio admite el desarrollo de Docker para aplicaciones basadas en Web. A
 Cuando se selecciona esta opción, el proyecto se crea con un `Dockerfile` en su raíz, que se puede usar para compilar y hospedar la aplicación en un contenedor de Docker. En la ilustración 3 se muestra un Dockerfile de ejemplo -6. git
 
 ```docker
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.0-stretch-slim AS base
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.0-stretch AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["WebApplication3/WebApplication3.csproj", "WebApplication3/"]
-RUN dotnet restore "WebApplication3/WebApplication3.csproj"
+COPY ["eShopWeb/eShopWeb.csproj", "eShopWeb/"]
+RUN dotnet restore "eShopWeb/eShopWeb.csproj"
 COPY . .
-WORKDIR "/src/WebApplication3"
-RUN dotnet build "WebApplication3.csproj" -c Release -o /app
+WORKDIR "/src/eShopWeb"
+RUN dotnet build "eShopWeb.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "WebApplication3.csproj" -c Release -o /app
+RUN dotnet publish "eShopWeb.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
-COPY --from=publish /app .
-ENTRYPOINT ["dotnet", "WebApplication3.dll"]
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "eShopWeb.dll"]
 ```
 
 **Figura 3-6**. Dockerfile generado por Visual Studio
@@ -236,13 +235,17 @@ El comportamiento predeterminado cuando se ejecuta la aplicación también se co
 
 Además del desarrollo local, [Azure dev Spaces](https://docs.microsoft.com/azure/dev-spaces/) proporciona una forma cómoda para que varios desarrolladores trabajen con sus propias configuraciones de Kubernetes en Azure. Como puede ver en la figura 3-7, también puede ejecutar la aplicación en Azure Dev Spaces.
 
-Además, en cualquier momento puede Agregar compatibilidad con Docker a una aplicación de ASP.NET Core existente. En el explorador de soluciones de Visual Studio, haga clic con el botón derecho en el proyecto y **agregue** > **compatibilidad con Docker**, como se muestra en la figura 3-8.
+Además, en cualquier momento puede Agregar compatibilidad con Docker a una aplicación de ASP.NET Core existente. En el explorador de soluciones de Visual Studio, haga clic con el botón derecho en el proyecto y **agregue**  >  **compatibilidad con Docker**, como se muestra en la figura 3-8.
+
+![Compatibilidad con Docker de Visual Studio](./media/visual-studio-add-docker-support.png)
 
 **Figura 3-8**. Incorporación de compatibilidad con Docker a Visual Studio
 
-También puede Agregar compatibilidad con orquestación de contenedores, que también se muestra en la figura 3-8. De forma predeterminada, el orquestador usa Kubernetes y Helm. Una vez elegido el orquestador, se `azds.yaml` agrega un archivo a la raíz del proyecto y `charts` se agrega una carpeta que contiene los gráficos de Helm usados para configurar e implementar la aplicación en Kubernetes. En la figura 3-9 se muestran los archivos resultantes de un nuevo proyecto.
+También puede Agregar compatibilidad con orquestación de contenedores, que también se muestra en la figura 3-8. De forma predeterminada, el orquestador usa Kubernetes y Helm. Una vez elegido el orquestador, `azds.yaml` se agrega un archivo a la raíz del proyecto y `charts` se agrega una carpeta que contiene los gráficos de Helm usados para configurar e implementar la aplicación en Kubernetes. En la figura 3-9 se muestran los archivos resultantes de un nuevo proyecto.
 
-También puede Agregar compatibilidad con orquestación de contenedores, que también se muestra en la figura 3-8. De forma predeterminada, el orquestador usa Kubernetes y Helm. Una vez elegido el orquestador, se `azds.yaml` agrega un archivo a la raíz del proyecto y `charts` se agrega una carpeta que contiene los gráficos de Helm usados para configurar e implementar la aplicación en Kubernetes. En la figura 3-9 se muestran los archivos resultantes de un nuevo proyecto.
+También puede Agregar compatibilidad con orquestación de contenedores, que también se muestra en la figura 3-8. De forma predeterminada, el orquestador usa Kubernetes y Helm. Una vez elegido el orquestador, `azds.yaml` se agrega un archivo a la raíz del proyecto y `charts` se agrega una carpeta que contiene los gráficos de Helm usados para configurar e implementar la aplicación en Kubernetes. En la figura 3-9 se muestran los archivos resultantes de un nuevo proyecto.
+
+![Compatibilidad con agregar orquestador de Visual Studio](./media/visual-studio-add-orchestrator-support.png)
 
 **Figura 3-9**. Agregar compatibilidad con orquestación a Visual Studio
 

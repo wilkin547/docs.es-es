@@ -2,19 +2,19 @@
 title: Diseño de aplicaciones .NET nativas en la nube para Azure
 description: Guía para crear aplicaciones nativas en la nube con la ayuda de contenedores, microservicios y características sin servidor de Azure.
 author: ardalis
-ms.date: 04/23/2020
-ms.openlocfilehash: 24d5c75fc5d2e5623892e8f83daea52553d13765
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.date: 05/13/2020
+ms.openlocfilehash: 1607c1bbcc9bbb3c9fe19840a2827aa5ea083728
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507395"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614009"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>Diseño de aplicaciones .NET nativas en la nube para Azure
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
 ![imagen de portada](./media/cover.png)
+
+**EDICIÓN 1.0**
 
 PUBLICADO POR
 
@@ -26,7 +26,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright &copy; 2019; 2001-2003 de Microsoft Corporation.
+Copyright &copy; 2020 de Microsoft Corporation
 
 Todos los derechos reservados. No se puede reproducir ni transmitir de ninguna forma ni por ningún medio ninguna parte del contenido de este libro sin la autorización por escrito del publicador.
 
@@ -58,11 +58,13 @@ Participantes y revisores:
 >
 > **Cecil Phillip**, director de promoción de la nube, Microsoft
 
-Más información sobre eShopOnContainers
-
 Editores:
 
 > **Maira Wenzel**, directora de administración de programas, equipo de .NET, Microsoft
+
+## <a name="version"></a>Versión
+
+Esta guía se ha redactado para **.NET Core 3.1**, junto con muchas actualizaciones adicionales relacionadas con la misma "ola" de tecnologías (es decir, Azure y otras tecnologías de terceros) que coincidan en el tiempo con .NET Core 3.1.
 
 ## <a name="who-should-use-this-guide"></a>Destinatarios de esta guía
 
@@ -83,6 +85,10 @@ Esta guía empieza definiendo el enfoque nativo en la nube y presenta una aplica
 - DevOps
 
 Esta guía está disponible en formato PDF y en línea. No dude en reenviar este documento o los vínculos a la versión en línea a su equipo para que todos los miembros puedan consultarla. La mayoría de estos temas presentan unos conocimientos sólidos de los principios y los patrones subyacentes, así como los inconvenientes de las decisiones relacionadas con estos temas. Con este documento, nuestro objetivo es facilitar a los equipos y sus responsables la información necesaria para tomar decisiones fundamentadas en lo que respecta al diseño, el desarrollo y el hospedaje de las aplicaciones.
+
+## <a name="send-your-feedback"></a>Envíe sus comentarios
+
+Nos gustaría recibir sus comentarios al respecto para contribuir al desarrollo constante del libro y sus ejemplos relacionados. Si tiene algún comentario sobre cómo mejorar este libro, escríbalo en la sección pertinente situada en la parte inferior de cualquier página creada en [Problemas de GitHub](https://github.com/dotnet/docs/issues).
 
 >[!div class="step-by-step"]
 >[Siguiente](introduction.md)

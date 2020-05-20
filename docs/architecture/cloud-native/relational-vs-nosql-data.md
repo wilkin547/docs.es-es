@@ -2,17 +2,15 @@
 title: Soluciones relacionales y datos NoSQL
 description: Más información sobre los datos relacionales y NoSQL en aplicaciones nativas de la nube
 author: robvet
-ms.date: 01/22/2020
-ms.openlocfilehash: a2561b0abfc1975badfafeeb4fa2f2c6429814be
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.date: 05/17/2020
+ms.openlocfilehash: cc47faa4fcd4468de9ddc468e488297db4289ff5
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507369"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613790"
 ---
 # <a name="relational-vs-nosql-data"></a>Soluciones relacionales y datos NoSQL
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Relacional y NoSQL son dos tipos de sistemas de base de datos que se implementan normalmente en aplicaciones nativas en la nube. Se compilan de forma diferente, almacenan los datos de manera diferente y se accede a ellos de forma diferente. En esta sección, veremos ambos. Más adelante en este capítulo, veremos una tecnología de base de datos emergente denominada *NewSQL*.
 
@@ -83,7 +81,6 @@ En función de los requisitos de datos específicos, un microservicio basado en 
 | La recuperación de datos es sencilla y tiende a ser plana | Trabaja con consultas e informes complejos|
 | Los datos requieren una distribución geográfica amplia | Los usuarios están más centralizados |
 | La aplicación se implementará en hardware estándar, como con nubes públicas. | La aplicación se implementará en hardware grande y de alto nivel. |
-|||
 
 En las secciones siguientes, exploraremos las opciones disponibles en la nube de Azure para almacenar y administrar los datos nativos de la nube.
 
@@ -134,7 +131,7 @@ Sin embargo, Microsoft continúa su compromiso de mantener Azure como una "plata
 
 ### <a name="azure-database-for-mysql"></a>Azure Database for MySQL
 
-[MySQL](https://en.wikipedia.org/wiki/MySQL) es una base de datos relacional de código abierto y un pilar para aplicaciones basadas en la [pila de software LAMP](https://en.wikipedia.org/wiki/LAMP_(software_bundle)). Ampliamente elegido para cargas de trabajo de *lectura intensiva* , se usa en muchas organizaciones de gran tamaño, como Facebook, Twitter y YouTube. La edición Community está disponible de forma gratuita, mientras que la edición Enterprise requiere una compra de licencias. Creado originalmente en 1995, el producto fue adquirido por Sun Microsystems en 2008. Oracle adquirió Sun y MySQL en 2010.
+[MySQL](https://en.wikipedia.org/wiki/MySQL)   es una base de datos relacional de código abierto y un pilar para aplicaciones basadas en la [pila de software LAMP](https://en.wikipedia.org/wiki/LAMP_(software_bundle)). Ampliamente elegido para cargas de trabajo de *lectura intensiva* , se usa en muchas organizaciones de gran tamaño, como Facebook, Twitter y YouTube. La edición Community está disponible de forma gratuita, mientras que la edición Enterprise requiere una compra de licencias. Creado originalmente en 1995, el producto fue adquirido por Sun Microsystems en 2008. Oracle adquirió Sun y MySQL en 2010.
 
 [Azure Database for MySQL](https://azure.microsoft.com/services/mysql/) es un servicio de base de datos relacional administrado basado en el motor de servidor de MySQL de código abierto. Usa MySQL Community Edition. El servidor de Azure MySQL es el punto administrativo para el servicio. Es el mismo motor de MySQL Server que se usa para las implementaciones locales. El motor puede crear una sola base de datos por servidor o varias bases de datos por cada servidor que comparta recursos. Puede seguir administrando los datos con las mismas herramientas de código abierto sin tener que aprender nuevas habilidades ni administrar máquinas virtuales.
 
@@ -150,7 +147,7 @@ MariaDB tiene una comunidad sólida y la usan muchas grandes empresas. Aunque Or
 
 [PostgreSQL](https://www.postgresql.org/) es una base de datos relacional de código abierto con más de 30 años de desarrollo activo. PostgresSQL tiene una reputación sólida para la confiabilidad y la integridad de los datos. Es una característica enriquecida, compatible con SQL y se considera más eficaz que MySQL, especialmente para cargas de trabajo con consultas complejas y escrituras pesadas. Muchas grandes empresas, como Apple, Red Hat y Fujitsu, han creado productos con PostgreSQL.
 
-[Azure Database for PostgreSQL](https://azure.microsoft.com/services/postgresql/) es un servicio de base de datos relacional totalmente administrado, basado en el motor de base de datos Postgres de código abierto. El servicio admite muchas plataformas de desarrollo, como C++, Java, Python, node,\#C y php. Puede migrar las bases de datos de PostgreSQL a ella mediante la herramienta [de la interfaz de la línea de comandos](https://datamigration.microsoft.com/scenario/postgresql-to-azurepostgresql?step=1) o el servicio de migración de datos de Azure.
+[Azure Database for PostgreSQL](https://azure.microsoft.com/services/postgresql/) es un servicio de base de datos relacional totalmente administrado, basado en el motor de base de datos Postgres de código abierto. El servicio admite muchas plataformas de desarrollo, como C++, Java, Python, node, C \# y php. Puede migrar las bases de datos de PostgreSQL a ella mediante la herramienta [de la interfaz de la línea de comandos](https://datamigration.microsoft.com/scenario/postgresql-to-azurepostgresql?step=1) o el servicio de migración de datos de Azure.
 
 Azure Database for PostgreSQL está disponible con dos opciones de implementación:
 
@@ -190,21 +187,30 @@ Con el Cosmos DB [API](https://docs.microsoft.com/azure/cosmos-db/distribute-dat
 
 ### <a name="multi-model-support"></a>Compatibilidad con varios modelos
 
-Al volver a platformar aplicaciones monolíticas en una arquitectura nativa en la nube, los equipos de desarrollo a veces tienen que migrar almacenes de datos NoSQL de código abierto. Cosmos DB puede ayudarle a mantener su inversión en estos almacenes de datos NoSQL con su plataforma de datos de *varios modelos* . En la figura 5-13 se muestran las [API de compatibilidad](https://www.wikiwand.com/en/Cosmos_DB)NoSQL compatibles.
+Al volver a platformar aplicaciones monolíticas en una arquitectura nativa en la nube, los equipos de desarrollo a veces tienen que migrar almacenes de datos NoSQL de código abierto. Cosmos DB puede ayudarle a mantener su inversión en estos almacenes de datos NoSQL con su plataforma de datos de *varios modelos* . En la tabla siguiente se muestran las [API de compatibilidad](https://www.wikiwand.com/en/Cosmos_DB)NoSQL admitidas.
 
-![Proveedores de Cosmos DB](./media/cosmos-db-providers.png)
-
-**Figura 5-13**: proveedores de Cosmos dB
+| Proveedor | Descripción  |
+| :-------- | :-------- |
+| API DE SQL | API propietaria que admite documentos JSON y consultas basadas en SQL |
+| API de Mongo DB | Admite API de Mongo DB y documentos JSON|
+| API de Gremlin | Admite Gremlin API con nodos basados en gráficos y representaciones de datos perimetrales |
+| Cassandra API | Admite la API de Casandra para representaciones de datos de columnas anchas |  
+| Table API  | Admite Azure Table Storage con mejoras Premium |  
+| API de etcd | Habilita Cosmos DB como una memoria auxiliar para los clústeres de Azure Kubernetes Service |
 
 Los equipos de desarrollo pueden migrar las bases de datos existentes de Mongo, Gremlin o Cassandra a Cosmos DB con cambios mínimos en los datos o en el código. En el caso de las nuevas aplicaciones, los equipos de desarrollo pueden elegir entre las opciones de código abierto o el modelo integrado de la API de SQL.
 
 > Internamente, Cosmos almacena los datos en un formato de estructura simple formado por tipos de datos primitivos. Para cada solicitud, el motor de base de datos traduce los datos primitivos en la representación del modelo que ha seleccionado.
 
-En la ilustración anterior, 5-13, tenga en cuenta la opción [TABLE API](https://docs.microsoft.com/azure/cosmos-db/table-introduction) . Esta API es una evolución de Azure Table Storage. Ambos comparten el mismo modelo de tabla subyacente, pero el Cosmos DB Table API agrega mejoras Premium que no están disponibles en la API de Azure Storage. Estas características se contrastan en la figura 5-4.
+En la tabla anterior, tenga en cuenta la opción [TABLE API](https://docs.microsoft.com/azure/cosmos-db/table-introduction) . Esta API es una evolución de Azure Table Storage. Ambos comparten el mismo modelo de tabla subyacente, pero el Cosmos DB Table API agrega mejoras Premium que no están disponibles en la API de Azure Storage. En la tabla siguiente se contrastan las características.
 
-![Azure Table API](media/azure-table-api.png)
-
-**Figura 5-14**: proveedores de Azure Table API
+|  | Azure Table Storage  | Azure Cosmos DB  |
+| :-------- | :-------- |:-------- |
+| Latencia | Rápido | Latencia de milisegundos de un solo dígito para lecturas y escrituras en cualquier parte del mundo |
+| Throughput | Límite de 20.000 operaciones por tabla | 10 millones operaciones por tabla |
+| Distribución global | Una sola región con una región de lectura secundaria única opcional | Distribuciones llave en mano a todas las regiones con conmutación automática por error |
+| Indización | Solo disponible para las propiedades de clave de fila y partición | Indexación automática de todas las propiedades |
+| Precios | Basado en el almacenamiento | Basado en el rendimiento |
 
 Los microservicios que usan Azure Table Storage pueden migrar fácilmente a la Table API de Cosmos DB. No se requiere ningún cambio de código.
 
@@ -214,17 +220,21 @@ Anteriormente en la sección *relacional frente a NoSQL* , analizamos el asunto 
 
 La mayoría de las bases de datos distribuidas permiten a los desarrolladores elegir entre dos modelos de coherencia: coherencia fuerte y coherencia final. La *coherencia fuerte* es el estándar Gold de programación de datos. Garantiza que una consulta siempre devolverá los datos más actuales, incluso si el sistema debe incurrir en latencia de espera para que una actualización se replique en todas las copias de la base de datos. Aunque una base de datos configurada para la *coherencia final* devolverá los datos inmediatamente, incluso si no son la copia más reciente. La última opción permite una mayor disponibilidad, mayor escala y mayor rendimiento.
 
-Azure Cosmos DB ofrece cinco [modelos de coherencia](https://docs.microsoft.com/azure/cosmos-db/consistency-levels) bien definidos que se muestran en la figura 5-15.
+Azure Cosmos DB ofrece cinco [modelos de coherencia](https://docs.microsoft.com/azure/cosmos-db/consistency-levels) bien definidos que se muestran en la figura 5-13.
 
 ![Gráfico de coherencia Cosmos DB](./media/cosmos-consistency-level-graph.png)
 
-**Figura 5-15**: niveles de coherencia de Cosmos dB
+**Figura 5-13**: niveles de coherencia de Cosmos dB
 
- Estas opciones le permiten tomar decisiones precisas e inconvenientes para la coherencia, la disponibilidad y el rendimiento de los datos. En la figura 5-16 se describe cada nivel.
+ Estas opciones le permiten tomar decisiones precisas e inconvenientes para la coherencia, la disponibilidad y el rendimiento de los datos. Los niveles se muestran en la tabla siguiente.
 
-![Niveles de coherencia Cosmos DB](./media/cosmos-db-consistency-levels.png)
-
-**Figura 5-16**: Descripción del nivel de coherencia de Cosmos dB
+| Nivel de coherencia | Descripción  |
+| :-------- | :-------- |
+| Ocasional | No hay garantía de ordenación para las lecturas. Finalmente, las réplicas convergerán. |
+| Prefijo constante | Las lecturas siguen siendo eventuales, pero los datos se devuelven en el orden en que se escriben. |
+| Sesión | Garantiza que se pueden leer los datos escritos durante la sesión actual. Es el nivel de coherencia predeterminado. |
+| De obsolescencia entrelazada | Lee las escrituras finales por el intervalo que especifique. |  
+| Alta  | Se garantiza que las lecturas devuelven la última versión confirmada de un elemento. Un cliente nunca ve una lectura parcial o no confirmada. |  
 
 En el artículo que se [encuentra detrás de la bola: Cosmos dB se han explicado los niveles de coherencia](https://blog.jeremylikness.com/blog/2018-03-23_getting-behind-the-9ball-cosmosdb-consistency-levels/), el administrador de programas de Microsoft Jeremy Likness proporciona una excelente explicación de los cinco modelos.
 
@@ -236,11 +246,11 @@ Los datos de Cosmos DB se administran mediante la creación de bases de datos, c
 
 Los contenedores residen en una base de datos de Cosmos DB y representan una agrupación de elementos independiente del esquema. Los elementos son los datos que se agregan al contenedor. Se representan como documentos, filas, nodos o bordes. Todos los elementos agregados a un contenedor se indexan automáticamente.
 
-Para particionar el contenedor, los elementos se dividen en subconjuntos distintos denominados particiones lógicas. Las particiones lógicas se rellenan en función del valor de una clave de partición asociada a cada elemento de un contenedor. En la figura 5-18 se muestran dos contenedores cada uno con una partición lógica basada en un valor de clave de partición.
+Para particionar el contenedor, los elementos se dividen en subconjuntos distintos denominados particiones lógicas. Las particiones lógicas se rellenan en función del valor de una clave de partición asociada a cada elemento de un contenedor. En la figura 5-14 se muestran dos contenedores cada uno con una partición lógica basada en un valor de clave de partición.
 
 ![Mecanismos de creación de particiones Cosmos DB](./media/cosmos-db-partitioning.png)
 
-**Figura 5-18**: mecanismos de creación de particiones Cosmos dB
+**Figura 5-14**: mecanismos de creación de particiones Cosmos dB
 
 Observe en la ilustración anterior cómo cada elemento incluye una clave de partición de ' City ' o ' aeropuerto '. La clave determina la partición lógica del elemento. Los elementos con un código de ciudad se asignan al contenedor de la izquierda, y los elementos con un código de aeropuerto, al contenedor de la derecha. Al combinar el valor de la clave de partición con el valor de ID se crea el índice de un elemento, que identifica de forma única el elemento.
 
@@ -248,16 +258,16 @@ Internamente, Cosmos DB administra automáticamente la ubicación de las [partic
 
 ## <a name="newsql-databases"></a>Bases de datos de NewSQL
 
-*NewSQL* es una tecnología de base de datos emergente que combina la escalabilidad distribuida de NoSQL con las garantías acid de una base de datos relacional. Las bases de datos de NewSQL son importantes para los sistemas empresariales que deben procesar grandes volúmenes de datos, en entornos distribuidos, con compatibilidad total transaccional y cumplimiento de ACID. Aunque una base de datos NoSQL puede proporcionar una escalabilidad masiva, no garantiza la coherencia de los datos. Los problemas intermitentes de los datos incoherentes pueden suponer una carga en el equipo de desarrollo. Los desarrolladores deben crear medidas de seguridad en su código de microservicio para administrar los problemas causados por datos incoherentes.
+*NewSQL*   es una tecnología de base de datos emergente que combina la escalabilidad distribuida de NoSQL con las garantías ACID de una base de datos relacional. Las bases de datos de NewSQL son importantes para los sistemas empresariales que deben procesar grandes volúmenes de datos, en entornos distribuidos, con compatibilidad total transaccional y cumplimiento de ACID. Aunque una base de datos NoSQL puede proporcionar una escalabilidad masiva, no garantiza la coherencia de los datos. Los problemas intermitentes de los datos incoherentes pueden suponer una carga en el equipo de desarrollo. Los desarrolladores deben crear medidas de seguridad en su código de microservicio para administrar los problemas causados por datos incoherentes.
 
 Cloud Native Computing Foundation (CNCF) incluye varios proyectos de base de datos NewSQL.
 
-| Proyecto | Características |
+| proyecto | Características |
 | :-------- | :-------- |
-| BASE de Cockroach |Base de datos relacional compatible con ACID que se escala globalmente. Agregar un nuevo nodo a un clúster y CockroachDB se encarga de equilibrar los datos entre las instancias y las zonas geográficas. Crea, administra y distribuye las réplicas para garantizar la confiabilidad. Es de código abierto y está disponible libremente.  |
+| BASE de Cockroach |Base de datos relacional compatible con ACID que se escala globalmente. Agregar un nuevo nodo a un clúster y CockroachDB se encarga de equilibrar los datos entre las instancias y las zonas geográficas. Crea, administra y distribuye réplicas para garantizar la confiabilidad. Es de código abierto y está disponible libremente.  |
 | TiDB | Una base de datos de código abierto que admite cargas de trabajo de procesamiento analítico y transaccional híbridos (HTAP). Es compatible con MySQL y ofrece escalabilidad horizontal, coherencia alta y alta disponibilidad.  TiDB actúa como un servidor MySQL. Puede seguir usando las bibliotecas de cliente de MySQL existentes, sin necesidad de realizar cambios de código completos en la aplicación. |
 | YugabyteDB | Una base de datos SQL distribuida de código abierto y de alto rendimiento. Admite una latencia de consulta baja, resistencia contra errores y distribución de datos global. YugabyteDB es compatible con PostgressSQL y controla las cargas de trabajo de OLTP y escalabilidad horizontal de Internet. El producto también admite NoSQL y es compatible con Cassandra. |
-|Vitess | Vitess es una solución de base de datos para implementar, escalar y administrar clústeres de gran tamaño de instancias de MySQL. Se puede ejecutar en una arquitectura de nube pública o privada. Combina y extiende muchas características importantes de MySQL y características tanto del soporte de particionamiento vertical como horizontal. Creado por YouTube, Vitess ha estado atendiendo todo el tráfico de base de datos de YouTube desde 2011. |
+|Vitess | Vitess es una solución de base de datos para implementar, escalar y administrar clústeres de gran tamaño de instancias de MySQL. Puede ejecutarse en una arquitectura de nube pública o privada. Vitess combina y extiende muchas características y características de MySQL importantes, así como la compatibilidad con el particionamiento vertical y horizontal. Creado por YouTube, Vitess ha estado atendiendo todo el tráfico de base de datos de YouTube desde 2011. |
 
 Los proyectos de código abierto de la ilustración anterior están disponibles desde Cloud Native Computing Foundation. Tres de las ofertas son productos de base de datos completos, que incluyen compatibilidad con .NET Core. El otro, Vitess, es un sistema de agrupación en clústeres de bases de datos que escala horizontalmente grandes clústeres de instancias de MySQL.
 
