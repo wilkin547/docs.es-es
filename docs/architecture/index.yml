@@ -6,12 +6,12 @@ metadata:
   description: Conozca los procedimientos recomendados para diseñar la arquitectura de aplicaciones .NET, así como para compilarlas y migrarlas.
   ms.topic: landing-page
   ms.date: 03/19/2020
-  ms.openlocfilehash: dc358f45532625bd5474b01af630674a170baf0b
-  ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+  ms.openlocfilehash: ff3b842d33ea3fd5d9cbed5b39b2757933c1a616
+  ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/15/2020
-  ms.locfileid: "83418984"
+  ms.lasthandoff: 05/19/2020
+  ms.locfileid: "83613647"
 landingContent:
 - title: Desarrollo de aplicaciones ASP.NET Core
   linkLists:
@@ -27,7 +27,7 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
-    - text: Diseño de la arquitectura de aplicaciones .NET nativas en la nube para Azure (versión preliminar)
+    - text: Diseño de aplicaciones .NET nativas en la nube para Azure
       url: cloud-native/index.md
     - text: 'Aplicaciones sin servidor: Arquitectura, patrones e implementación de Azure'
       url: serverless/index.md
