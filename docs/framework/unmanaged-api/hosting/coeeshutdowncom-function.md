@@ -18,39 +18,39 @@ helpviewer_keywords:
 ms.assetid: b634cae2-632f-4737-9be4-92d0652844d7
 topic_type:
 - apiref
-ms.openlocfilehash: 4e85a9a98bf0550fa906f8b905c73890948f4ac1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3eb8bffee9d30a89c39a900e600ebf171456b9f3
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124939"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616794"
 ---
-# <a name="coeeshutdowncom-function"></a><span data-ttu-id="e45f1-102">CoEEShutDownCOM (Función)</span><span class="sxs-lookup"><span data-stu-id="e45f1-102">CoEEShutDownCOM Function</span></span>
-<span data-ttu-id="e45f1-103">Obliga al Common Language Runtime (CLR) a liberar todos los punteros de interfaz que contiene dentro de contenedores RCW (Runtime Callable wrappers).</span><span class="sxs-lookup"><span data-stu-id="e45f1-103">Forces the common language runtime (CLR) to release all interface pointers it holds inside runtime callable wrappers (RCW).</span></span> <span data-ttu-id="e45f1-104">Esto tiene el efecto de liberar todas las memorias caché de RCW.</span><span class="sxs-lookup"><span data-stu-id="e45f1-104">This has the effect of releasing all RCW caches.</span></span> <span data-ttu-id="e45f1-105">Esta función global está en desuso en el .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="e45f1-105">This global function is deprecated in the .NET Framework 4.</span></span> <span data-ttu-id="e45f1-106">En su lugar, use el punto de entrada para un tiempo de ejecución específico.</span><span class="sxs-lookup"><span data-stu-id="e45f1-106">Instead, use the entry point for a specific runtime.</span></span>  
+# <a name="coeeshutdowncom-function"></a><span data-ttu-id="06917-102">CoEEShutDownCOM (Función)</span><span class="sxs-lookup"><span data-stu-id="06917-102">CoEEShutDownCOM Function</span></span>
+<span data-ttu-id="06917-103">Obliga al Common Language Runtime (CLR) a liberar todos los punteros de interfaz que contiene dentro de contenedores RCW (Runtime Callable wrappers).</span><span class="sxs-lookup"><span data-stu-id="06917-103">Forces the common language runtime (CLR) to release all interface pointers it holds inside runtime callable wrappers (RCW).</span></span> <span data-ttu-id="06917-104">Esto tiene el efecto de liberar todas las memorias caché de RCW.</span><span class="sxs-lookup"><span data-stu-id="06917-104">This has the effect of releasing all RCW caches.</span></span> <span data-ttu-id="06917-105">Esta función global está en desuso en el .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="06917-105">This global function is deprecated in the .NET Framework 4.</span></span> <span data-ttu-id="06917-106">En su lugar, use el punto de entrada para un tiempo de ejecución específico.</span><span class="sxs-lookup"><span data-stu-id="06917-106">Instead, use the entry point for a specific runtime.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e45f1-107">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="e45f1-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="06917-107">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="06917-107">Syntax</span></span>  
   
 ```cpp  
 void CoEEShutDownCOM ();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="e45f1-108">Comentarios</span><span class="sxs-lookup"><span data-stu-id="e45f1-108">Remarks</span></span>  
- <span data-ttu-id="e45f1-109">En primer lugar, la función `CoEEShutDownCOM` libera todos los RCW en todos los contextos y en todas las cachés y, a continuación, quita cualquier notificación de desactivación existente en el programa de instalación.</span><span class="sxs-lookup"><span data-stu-id="e45f1-109">The `CoEEShutDownCOM` function first releases all the RCWs in all contexts and in all caches, and then removes any tear-down notification existing in setup.</span></span> <span data-ttu-id="e45f1-110">No se produce ninguna descarga del archivo DLL.</span><span class="sxs-lookup"><span data-stu-id="e45f1-110">No DLL unloading occurs.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="06917-108">Observaciones</span><span class="sxs-lookup"><span data-stu-id="06917-108">Remarks</span></span>  
+ <span data-ttu-id="06917-109">La `CoEEShutDownCOM` función libera primero todos los RCW en todos los contextos y en todas las cachés y, a continuación, quita cualquier notificación de desactivación existente en el programa de instalación.</span><span class="sxs-lookup"><span data-stu-id="06917-109">The `CoEEShutDownCOM` function first releases all the RCWs in all contexts and in all caches, and then removes any tear-down notification existing in setup.</span></span> <span data-ttu-id="06917-110">No se produce ninguna descarga del archivo DLL.</span><span class="sxs-lookup"><span data-stu-id="06917-110">No DLL unloading occurs.</span></span>  
   
 > [!CAUTION]
-> <span data-ttu-id="e45f1-111">Esta función afecta a todos los Runtimes que se cargan en el proceso.</span><span class="sxs-lookup"><span data-stu-id="e45f1-111">This function affects all runtimes that are loaded into the process.</span></span>  
+> <span data-ttu-id="06917-111">Esta función afecta a todos los Runtimes que se cargan en el proceso.</span><span class="sxs-lookup"><span data-stu-id="06917-111">This function affects all runtimes that are loaded into the process.</span></span>  
   
- <span data-ttu-id="e45f1-112">A partir de la .NET Framework 4, llame al punto de entrada de esta función en el tiempo de ejecución específico que desee modificar.</span><span class="sxs-lookup"><span data-stu-id="e45f1-112">Beginning with the .NET Framework 4, call the entry point for this function on the specific runtime you want to affect.</span></span> <span data-ttu-id="e45f1-113">Para obtener el punto de entrada, llame al método [ICLRRuntimeInfo:: GetProcAddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md) y especifique "coeeshutdowncom (".</span><span class="sxs-lookup"><span data-stu-id="e45f1-113">To get the entry point, call the [ICLRRuntimeInfo::GetProcAddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md) method and specify "CoEEShutDownCOM".</span></span>  
+ <span data-ttu-id="06917-112">A partir de la .NET Framework 4, llame al punto de entrada de esta función en el tiempo de ejecución específico que desee modificar.</span><span class="sxs-lookup"><span data-stu-id="06917-112">Beginning with the .NET Framework 4, call the entry point for this function on the specific runtime you want to affect.</span></span> <span data-ttu-id="06917-113">Para obtener el punto de entrada, llame al método [ICLRRuntimeInfo:: GetProcAddress](iclrruntimeinfo-getprocaddress-method.md) y especifique "coeeshutdowncom (".</span><span class="sxs-lookup"><span data-stu-id="06917-113">To get the entry point, call the [ICLRRuntimeInfo::GetProcAddress](iclrruntimeinfo-getprocaddress-method.md) method and specify "CoEEShutDownCOM".</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e45f1-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e45f1-114">Requirements</span></span>  
- <span data-ttu-id="e45f1-115">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e45f1-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="06917-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="06917-114">Requirements</span></span>  
+ <span data-ttu-id="06917-115">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="06917-115">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e45f1-116">**Encabezado:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="e45f1-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="06917-116">**Encabezado:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="06917-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="e45f1-117">**Biblioteca:** Se incluye como recurso en MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="e45f1-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="06917-117">**Biblioteca:** Se incluye como recurso en MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="06917-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="e45f1-118">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e45f1-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="06917-118">**.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="06917-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e45f1-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="e45f1-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="06917-119">Consulta también</span><span class="sxs-lookup"><span data-stu-id="06917-119">See also</span></span>
 
-- [<span data-ttu-id="e45f1-120">Funciones estáticas globales para metadatos</span><span class="sxs-lookup"><span data-stu-id="e45f1-120">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+- [<span data-ttu-id="06917-120">Funciones estáticas globales para metadatos</span><span class="sxs-lookup"><span data-stu-id="06917-120">Metadata Global Static Functions</span></span>](../metadata/metadata-global-static-functions.md)
