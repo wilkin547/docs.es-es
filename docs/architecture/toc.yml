@@ -15,12 +15,12 @@
       href: microservices/
     - name: 'Aplicaciones sin servidor: Arquitectura, patrones e implementación de Azure'
       href: serverless/
+    - name: Diseño de aplicaciones .NET nativas en la nube para Azure
+      href: cloud-native/
     - name: "Modernización de aplicaciones de escritorio en Windows\_10 con .NET Core\_3.1"
       href: modernize-desktop/
 - name: Libros electrónicos en versión preliminar
   expanded: true
   items:
-    - name: Diseño de aplicaciones .NET nativas en la nube para Azure
-      href: cloud-native/
     - name: Blazor para desarrolladores de ASP.NET Web Forms
       href: blazor-for-web-forms-developers/
