@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: c6a1f797-dbf4-40f5-ab99-d9b4bfb26148
 topic_type:
 - apiref
-ms.openlocfilehash: 7eea63cae27c08260177dfc7746046b975434611
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: aba551a1973a41a909869316cda07e8d655e9882
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428036"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614843"
 ---
-# <a name="isymunmanagedwriterdefinefield-method"></a><span data-ttu-id="4afcf-102">ISymUnmanagedWriter::DefineField (Método)</span><span class="sxs-lookup"><span data-stu-id="4afcf-102">ISymUnmanagedWriter::DefineField Method</span></span>
-<span data-ttu-id="4afcf-103">Define una única variable que no está dentro de un método.</span><span class="sxs-lookup"><span data-stu-id="4afcf-103">Defines a single variable that is not within a method.</span></span> <span data-ttu-id="4afcf-104">Este método se usa para determinados campos de clases, campos de bits, etc.</span><span class="sxs-lookup"><span data-stu-id="4afcf-104">This method is used for certain fields in classes, bit fields, and so on.</span></span>  
+# <a name="isymunmanagedwriterdefinefield-method"></a><span data-ttu-id="39053-102">ISymUnmanagedWriter::DefineField (Método)</span><span class="sxs-lookup"><span data-stu-id="39053-102">ISymUnmanagedWriter::DefineField Method</span></span>
+<span data-ttu-id="39053-103">Define una única variable que no está dentro de un método.</span><span class="sxs-lookup"><span data-stu-id="39053-103">Defines a single variable that is not within a method.</span></span> <span data-ttu-id="39053-104">Este método se usa para determinados campos de clases, campos de bits, etc.</span><span class="sxs-lookup"><span data-stu-id="39053-104">This method is used for certain fields in classes, bit fields, and so on.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4afcf-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="4afcf-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="39053-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="39053-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineField(  
@@ -40,40 +40,40 @@ HRESULT DefineField(
     [in] ULONG32      addr3);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4afcf-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="4afcf-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="39053-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="39053-106">Parameters</span></span>  
  `parent`  
- <span data-ttu-id="4afcf-107">de El tipo de metadatos o el token del método.</span><span class="sxs-lookup"><span data-stu-id="4afcf-107">[in] The metadata type or method token.</span></span>  
+ <span data-ttu-id="39053-107">de El tipo de metadatos o el token del método.</span><span class="sxs-lookup"><span data-stu-id="39053-107">[in] The metadata type or method token.</span></span>  
   
  `name`  
- <span data-ttu-id="4afcf-108">de Nombre del campo.</span><span class="sxs-lookup"><span data-stu-id="4afcf-108">[in] The field name.</span></span>  
+ <span data-ttu-id="39053-108">de Nombre del campo.</span><span class="sxs-lookup"><span data-stu-id="39053-108">[in] The field name.</span></span>  
   
  `attributes`  
- <span data-ttu-id="4afcf-109">de Atributos del campo.</span><span class="sxs-lookup"><span data-stu-id="4afcf-109">[in] The field attributes.</span></span>  
+ <span data-ttu-id="39053-109">de Atributos del campo.</span><span class="sxs-lookup"><span data-stu-id="39053-109">[in] The field attributes.</span></span>  
   
  `cSig`  
- <span data-ttu-id="4afcf-110">de `ULONG32` que es el tamaño, en caracteres, del búfer necesario para contener la firma del campo.</span><span class="sxs-lookup"><span data-stu-id="4afcf-110">[in] A `ULONG32` that is the size, in characters, of the buffer required to contain the field signature.</span></span>  
+ <span data-ttu-id="39053-110">de `ULONG32`Que es el tamaño, en caracteres, del búfer necesario para contener la firma del campo.</span><span class="sxs-lookup"><span data-stu-id="39053-110">[in] A `ULONG32` that is the size, in characters, of the buffer required to contain the field signature.</span></span>  
   
  `signature`  
- <span data-ttu-id="4afcf-111">de Matriz de firmas de campo.</span><span class="sxs-lookup"><span data-stu-id="4afcf-111">[in] The array of field signatures.</span></span>  
+ <span data-ttu-id="39053-111">de Matriz de firmas de campo.</span><span class="sxs-lookup"><span data-stu-id="39053-111">[in] The array of field signatures.</span></span>  
   
  `addrKind`  
- <span data-ttu-id="4afcf-112">de Tipo de dirección.</span><span class="sxs-lookup"><span data-stu-id="4afcf-112">[in] The address type.</span></span>  
+ <span data-ttu-id="39053-112">de Tipo de dirección.</span><span class="sxs-lookup"><span data-stu-id="39053-112">[in] The address type.</span></span>  
   
  `addr1`  
- <span data-ttu-id="4afcf-113">de Primera dirección de la especificación de campo.</span><span class="sxs-lookup"><span data-stu-id="4afcf-113">[in] The first address for the field specification.</span></span>  
+ <span data-ttu-id="39053-113">de Primera dirección de la especificación de campo.</span><span class="sxs-lookup"><span data-stu-id="39053-113">[in] The first address for the field specification.</span></span>  
   
  `addr2`  
- <span data-ttu-id="4afcf-114">de Segunda dirección de la especificación de campo.</span><span class="sxs-lookup"><span data-stu-id="4afcf-114">[in] The second address for the field specification.</span></span>  
+ <span data-ttu-id="39053-114">de Segunda dirección de la especificación de campo.</span><span class="sxs-lookup"><span data-stu-id="39053-114">[in] The second address for the field specification.</span></span>  
   
  `addr3`  
- <span data-ttu-id="4afcf-115">de Tercera dirección de la especificación de campo.</span><span class="sxs-lookup"><span data-stu-id="4afcf-115">[in] The third address for the field specification.</span></span>  
+ <span data-ttu-id="39053-115">de Tercera dirección de la especificación de campo.</span><span class="sxs-lookup"><span data-stu-id="39053-115">[in] The third address for the field specification.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="4afcf-116">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="4afcf-116">Return Value</span></span>  
- <span data-ttu-id="4afcf-117">S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.</span><span class="sxs-lookup"><span data-stu-id="4afcf-117">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="39053-116">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="39053-116">Return Value</span></span>  
+ <span data-ttu-id="39053-117">S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.</span><span class="sxs-lookup"><span data-stu-id="39053-117">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4afcf-118">Requisitos</span><span class="sxs-lookup"><span data-stu-id="4afcf-118">Requirements</span></span>  
- <span data-ttu-id="4afcf-119">**Encabezado:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="4afcf-119">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="39053-118">Requisitos</span><span class="sxs-lookup"><span data-stu-id="39053-118">Requirements</span></span>  
+ <span data-ttu-id="39053-119">**Encabezado:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="39053-119">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4afcf-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="4afcf-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="39053-120">Consulta también</span><span class="sxs-lookup"><span data-stu-id="39053-120">See also</span></span>
 
-- [<span data-ttu-id="4afcf-121">ISymUnmanagedWriter (interfaz)</span><span class="sxs-lookup"><span data-stu-id="4afcf-121">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="39053-121">ISymUnmanagedWriter (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="39053-121">ISymUnmanagedWriter Interface</span></span>](isymunmanagedwriter-interface.md)
