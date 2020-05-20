@@ -1,23 +1,24 @@
 ---
 title: Novedades de Windows Workflow Foundation
+description: Obtenga información sobre los cambios de Windows Workflow Foundation en .NET Framework 4. Los flujos de trabajo son más fáciles de crear, ejecutar y mantener.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Workflow Foundation [WF], what's new
 - WF [WF], what's new
 ms.assetid: 11f96014-001e-41a0-bcc2-d0684a52fa43
-ms.openlocfilehash: 8f79c6d2a564571f8b753f322a79e91a01b1cf2f
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: b25b71a61f8a96d59c79e780d9fe5cd03abfa299
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74142004"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419348"
 ---
 # <a name="whats-new-in-windows-workflow-foundation"></a>Novedades de Windows Workflow Foundation
 
 Windows Workflow Foundation (WF) en .NET Framework 4 cambia varios paradigmas de desarrollo de las versiones anteriores. Los flujos de trabajo son ahora más fáciles de crear, ejecutar, mantener e implementan un host de nuevas funciones. Para obtener más información sobre cómo migrar las aplicaciones de flujo de trabajo de .net 3,0 y .NET 3,5 para usar la versión más reciente, consulte la [Guía de migración](migration-guidance.md).  
   
 ## <a name="workflow-activity-model"></a>Modelo de la actividad de flujo de trabajo  
- La actividad es ahora la unidad base para crear un flujo de trabajo, en lugar de usar las clases <xref:System.Workflow.Activities.SequentialWorkflowActivity> o <xref:System.Workflow.Activities.StateMachineWorkflowActivity>. La clase <xref:System.Activities.Activity> proporciona la abstracción básica del comportamiento del flujo de trabajo. Los autores de actividad pueden implementar <xref:System.Activities.CodeActivity> para la funcionalidad de actividad personalizada básica o <xref:System.Activities.NativeActivity> para la funcionalidad de actividad personalizada que usa toda la riqueza del runtime. <xref:System.Activities.Activity> es una clase que usan los autores de actividad para expresar nuevos comportamientos de forma declarativa en términos de otros objetos <xref:System.Activities.NativeActivity>, <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>o <xref:System.Activities.DynamicActivity>, tanto si están desarrollados de forma personalizada como si están incluidos en la [biblioteca de actividades integrada](net-framework-4-5-built-in-activity-library.md).  
+ La actividad es ahora la unidad base para crear un flujo de trabajo, en lugar de usar las clases <xref:System.Workflow.Activities.SequentialWorkflowActivity> o <xref:System.Workflow.Activities.StateMachineWorkflowActivity>. La clase <xref:System.Activities.Activity> proporciona la abstracción básica del comportamiento del flujo de trabajo. Los autores de actividad pueden implementar <xref:System.Activities.CodeActivity> para la funcionalidad de actividad personalizada básica o <xref:System.Activities.NativeActivity> para la funcionalidad de actividad personalizada que usa toda la riqueza del runtime. <xref:System.Activities.Activity>es una clase que usan los autores de actividad para expresar nuevos comportamientos de forma declarativa en términos de otros <xref:System.Activities.NativeActivity> <xref:System.Activities.CodeActivity> objetos,, <xref:System.Activities.AsyncCodeActivity> o <xref:System.Activities.DynamicActivity> , tanto si están desarrollados de forma personalizada como si están incluidos en la [biblioteca de actividades integrada](net-framework-4-5-built-in-activity-library.md).  
   
 ## <a name="rich-composite-activity-options"></a>Opciones de actividad compuestas y enriquecidas  
  <xref:System.Activities.Statements.Flowchart> es una nueva actividad eficaz de flujo de control que permite a los autores modelar bucles arbitrarios y bifurcaciones condicionales. <xref:System.Activities.Statements.Flowchart> proporciona un modelo de programación controlado por eventos que anteriormente solo se podía implementar con <xref:System.Workflow.Activities.StateMachineWorkflowActivity>. Los flujos de trabajo de procedimiento se benefician de las nuevas actividades de control de flujo que modelan las estructuras de control de flujo tradicionales, como <xref:System.Activities.Statements.TryCatch> y <xref:System.Activities.Statements.Switch%601>.  

@@ -1,24 +1,25 @@
 ---
-title: Persistencia de flujo de trabajo
+title: Persistencia del flujo de trabajo
+description: .NET Framework 4.6.1 incluye la clase SqlWorkflowInstanceStore, que permite la persistencia de datos de flujo de trabajo y metadatos en una base de datos de SQL Server.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], persistence
 ms.assetid: 39e69d1f-b771-4c16-9e18-696fa43b65b2
-ms.openlocfilehash: c49e287c6132103d4bb85a8ae892a76f9b582274
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 1178bd3800fce95be96e601a17bfeff2c05cfceb
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837537"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419309"
 ---
-# <a name="workflow-persistence"></a>Persistencia de flujo de trabajo
+# <a name="workflow-persistence"></a>Persistencia del flujo de trabajo
 La persistencia del flujo de trabajo es la captura duradera de un estado de la instancia de flujo de trabajo, independientemente de la información del proceso o del equipo. Esto sirve para proporcionar un punto de recuperación conocido para la instancia de flujo de trabajo en caso de error del sistema, para conservar la memoria descargando instancias de flujo de trabajo que no están funcionando de forma activa o para mover el estado de la instancia de flujo de trabajo de un nodo a otro en una granja de servidores.  
   
  La persistencia permite procesar la agilidad, escalabilidad, recuperación en caso de error y la capacidad de administrar la memoria más eficazmente. El proceso de persistencia incluye la identificación de un punto de persistencia, la recopilación de los datos que se van a guardar y finalmente la delegación del almacenamiento real de los datos a un proveedor de persistencia.  
   
  Para habilitar la persistencia de un flujo de trabajo, debe asociar un almacén de instancias con **WorkflowApplication** o **WorkflowServiceHost** tal y como se mencionó en [Cómo: habilitar la persistencia para flujos de trabajo y servicios de flujo de trabajo](how-to-enable-persistence-for-workflows-and-workflow-services.md). **WorkflowApplication** y **WorkflowServiceHost** usan el almacén de instancias asociado a ellos para habilitar la persistencia de las instancias de flujo de trabajo en un almacén de persistencia y cargar instancias de flujo de trabajo en memoria basándose en los datos de instancia de flujo de trabajo almacenados en el almacén de persistencia.  
   
- El [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] se suministra con la clase **SqlWorkflowInstanceStore** , que permite la persistencia de datos y metadatos sobre las instancias de flujo de trabajo en una base de datos SQL Server 2005 o SQL Server 2008. Vea [almacén de instancias de flujo de trabajo de SQL](sql-workflow-instance-store.md) para obtener más detalles.  
+ Se [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] incluye con la clase **SqlWorkflowInstanceStore** , que permite la persistencia de datos y metadatos sobre las instancias de flujo de trabajo en una base de datos SQL Server 2005 o SQL Server 2008. Vea [almacén de instancias de flujo de trabajo de SQL](sql-workflow-instance-store.md) para obtener más detalles.  
   
  Para almacenar y cargar los datos específicos de la aplicación junto con la información relacionada con la instancia de flujo de trabajo, puede crear participantes de persistencia que extienden la clase <xref:System.Activities.Persistence.PersistenceParticipant>. Los participantes de persistencia participan en el proceso de persistencia para guardar los datos serializables personalizados en el almacén de persistencia, para cargar los datos del almacén de instancias en la memoria y para realizar cualquier lógica adicional en una transacción de persistencia. Para obtener más información, consulte [participantes de persistencia](persistence-participants.md).  
   
@@ -41,7 +42,7 @@ La persistencia del flujo de trabajo es la captura duradera de un estado de la i
   
 - Cuando una instancia de un flujo de trabajo desarrollada con una versión anterior de Windows Workflow Foundation encuentra un punto de persistencia durante la ejecución interoperable.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
   
 - [Almacén de instancias de flujo de trabajo de SQL](sql-workflow-instance-store.md)  
   
@@ -53,4 +54,4 @@ La persistencia del flujo de trabajo es la captura duradera de un estado de la i
   
 - [Instancias de flujo de trabajo no persistentes](non-persisted-workflow-instances.md)  
   
-- [Pausa y reanudación de un flujo de trabajo](pausing-and-resuming-a-workflow.md)
+- [Pausar y reanudar un flujo de trabajo](pausing-and-resuming-a-workflow.md)

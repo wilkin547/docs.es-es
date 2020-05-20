@@ -1,16 +1,17 @@
 ---
 title: Procedimiento para crear una actividad
+description: 'En este artículo se muestra cómo crear dos actividades en Workflow Foundation: una que usa código para implementar su lógica y otra definida mediante otras actividades.'
 ms.date: 09/14/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
-ms.openlocfilehash: 6d74af6af6cea0d65c33db67ecbfd71ac1d5c346
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: dae099d102b0c85d09a1ef8bcce56e8a9096bd20
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636960"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419595"
 ---
 # <a name="how-to-create-an-activity"></a>Procedimiento para crear una actividad
 
@@ -21,24 +22,24 @@ Las actividades son la unidad básica de comportamiento en [!INCLUDE[wf1](../../
 
 ## <a name="create-the-activity-library-project"></a>Crear el proyecto de biblioteca de actividades
 
-1. Abra Visual Studio y elija **New** > **proyecto** desde el **archivo** menú.
+1. Abra Visual Studio y elija **nuevo**  >  **proyecto** en el menú **archivo** .
 
-2. En el **nuevo proyecto** cuadro de diálogo, en el **instalado** categoría, seleccione **Visual C#** > **flujo de trabajo** (o **Visual Basic** > **flujo de trabajo**).
+2. En el cuadro de diálogo **nuevo proyecto** , en la categoría **instalado** , seleccione flujo de trabajo de **Visual C#**  >  **Workflow** (o **Visual Basic**  >  **flujo de trabajo**).
 
     > [!NOTE]
-    > Si no ve el **flujo de trabajo** categoría de plantilla, es posible que deba instalar el **Windows Workflow Foundation** componente de Visual Studio. Elija la **abrir Visual Studio Installer** vínculo en el lado izquierdo de la **nuevo proyecto** cuadro de diálogo. En el instalador de Visual Studio, seleccione el **componentes individuales** ficha. A continuación, en el **las actividades de desarrollo** categoría, seleccione el **Windows Workflow Foundation** componente. Elija **modificar** para instalar el componente.
+    > Si no ve la categoría de la plantilla de **flujo de trabajo** , es posible que deba instalar el componente de **Windows Workflow Foundation** de Visual Studio. Elija el vínculo **abrir instalador de Visual Studio** en el lado izquierdo del cuadro de diálogo **nuevo proyecto** . En Instalador de Visual Studio, seleccione la pestaña **componentes individuales** . A continuación, en la categoría **actividades de desarrollo** , seleccione el componente **Windows Workflow Foundation** . Elija **modificar** para instalar el componente.
 
-3. Seleccione el **biblioteca de actividades** plantilla de proyecto. Tipo `NumberGuessWorkflowActivities` en el **nombre** cuadro y, a continuación, haga clic en **Aceptar**.
+3. Seleccione la plantilla de proyecto **biblioteca de actividades** . Escriba `NumberGuessWorkflowActivities` en el cuadro **Nombre** y, a continuación, haga clic en **Aceptar**.
 
-4. Haga clic en **Activity1.xaml** en **el Explorador de soluciones** y elija **eliminar**. Haga clic en **Aceptar** para confirmar.
+4. Haga clic con el botón secundario en **Activity1.xaml** en el **Explorador de soluciones** y elija **Eliminar**. Haga clic en **Aceptar** para confirmar la operación.
 
-## <a name="create-the-readint-activity"></a>Creación de la actividad ReadInt
+## <a name="create-the-readint-activity"></a>Crear la actividad ReadInt
 
-1. Elija **Agregar nuevo elemento** desde el **proyecto** menú.
+1. Elija **Agregar nuevo elemento** en el menú **proyecto** .
 
-2. En el **instalado** > **elementos comunes** nodo, seleccione **flujo de trabajo**. Seleccione **actividad Code** desde el **flujo de trabajo** lista.
+2. En el **Installed**  >  nodo**elementos comunes** instalados, seleccione **flujo de trabajo**. Seleccione **actividad de código** en la lista **flujo de trabajo** .
 
-3. Tipo `ReadInt` en el **nombre** cuadro y, a continuación, haga clic en **agregar**.
+3. Escriba `ReadInt` en el cuadro **Nombre** y, a continuación, haga clic en **Agregar**.
 
 4. Reemplace la definición de `ReadInt` existente con la siguiente.
 
@@ -48,65 +49,65 @@ Las actividades son la unidad básica de comportamiento en [!INCLUDE[wf1](../../
     > [!NOTE]
     > La actividad `ReadInt` se deriva de <xref:System.Activities.NativeActivity%601> en lugar de <xref:System.Activities.CodeActivity>, que es el valor predeterminado para la plantilla de actividades de código. <xref:System.Activities.CodeActivity%601> puede usarse si la actividad proporciona un único resultado, que se expone a través del argumento <xref:System.Activities.Activity%601.Result%2A>, pero <xref:System.Activities.CodeActivity%601> no admite el uso de marcadores, por lo que se usa <xref:System.Activities.NativeActivity%601>.
 
-## <a name="create-the-prompt-activity"></a>Creación de la actividad Prompt
+## <a name="create-the-prompt-activity"></a>Crear la actividad prompt
 
-1. Presione **Ctrl**+**MAYÚS**+**B** para compilar el proyecto. La compilación del proyecto permite que la actividad `ReadInt` de este proyecto se use para compilar la actividad personalizada de este paso.
+1. Presione **Ctrl** + **MAYÚS** + **B** para compilar el proyecto. La compilación del proyecto permite que la actividad `ReadInt` de este proyecto se use para compilar la actividad personalizada de este paso.
 
-2. Elija **Agregar nuevo elemento** desde el **proyecto** menú.
+2. Elija **Agregar nuevo elemento** en el menú **proyecto** .
 
-3. En el **instalado** > **elementos comunes** nodo, seleccione **flujo de trabajo**. Seleccione **actividad** desde el **flujo de trabajo** lista.
+3. En el **Installed**  >  nodo**elementos comunes** instalados, seleccione **flujo de trabajo**. Seleccione **Actividad** en la lista **Flujo de trabajo**.
 
-4. Tipo `Prompt` en el **nombre** cuadro y, a continuación, haga clic en **agregar**.
+4. Escriba `Prompt` en el cuadro **Nombre** y, a continuación, haga clic en **Agregar**.
 
-5. Haga doble clic en **Prompt.xaml** en **el Explorador de soluciones** para mostrarlo en el diseñador, si aún no se muestra.
+5. Haga doble clic en **prompt. Xaml** en **Explorador de soluciones** para mostrarlo en el diseñador si aún no se muestra.
 
-6. Haga clic en **argumentos** en el lado inferior izquierdo del Diseñador de actividad para mostrar el **argumentos** panel.
+6. Haga clic en **Argumentos** en el lado inferior izquierdo del Diseñador de actividad para mostrar el panel **Argumentos**.
 
-7. Haga clic en **crear argumento**.
+7. Haga clic en **Crear argumento**.
 
-8. Tipo `BookmarkName` en el **nombre** cuadro, seleccione **en** desde el **dirección** lista desplegable, seleccione **cadena** desde el **Tipo de argumento** lista desplegable y, a continuación, presione **ENTRAR** para guardar el argumento.
+8. Escriba `BookmarkName` en el cuadro **nombre** , seleccione **en en** la lista desplegable **Dirección** , seleccione **cadena** en la lista desplegable **tipo de argumento** y, a continuación, presione **entrar** para guardar el argumento.
 
-9. Haga clic en **crear argumento**.
+9. Haga clic en **Crear argumento**.
 
-10. Tipo `Result` en el **nombre** cuadro situado debajo de la recién agregada `BookmarkName` argumento, seleccione **Out** desde el **dirección** lista desplegable, seleccione **Int32** desde el **tipo de argumento** lista desplegable y, a continuación, presione **ENTRAR**.
+10. Escriba `Result` en el cuadro **nombre** que se encuentra debajo del argumento recién agregado `BookmarkName` , seleccione **salida** en la lista desplegable **Dirección** , seleccione **Int32** en la lista desplegable **tipo de argumento** y, a continuación, presione **entrar**.
 
-11. Haga clic en **crear argumento**.
+11. Haga clic en **Crear argumento**.
 
-12. Tipo `Text` en el **nombre** cuadro, seleccione **en** desde el **dirección** lista desplegable, seleccione **cadena** desde el **Tipo de argumento** lista desplegable y, a continuación, presione **ENTRAR** para guardar el argumento.
+12. Escriba `Text` en el cuadro **nombre** , seleccione **en en** la lista desplegable **Dirección** , seleccione **cadena** en la lista desplegable **tipo de argumento** y, a continuación, presione **entrar** para guardar el argumento.
 
      Estos tres argumentos se enlazan a los argumentos correspondientes de las actividades <xref:System.Activities.Statements.WriteLine> y `ReadInt` que se agregan a la actividad `Prompt` en los siguientes pasos.
 
-13. Haga clic en **argumentos** en el lado inferior izquierdo del Diseñador de actividad para cerrar el **argumentos** panel.
+13. Haga clic en **Argumentos** en el lado inferior izquierdo del Diseñador de actividad para cerrar el panel **Argumentos**.
 
-14. Arrastre un **secuencia** actividad desde la **flujo de Control** sección de la **cuadro de herramientas** y colóquela en la **colocar actividad aquí** etiqueta de la **Prompt** Diseñador de actividad.
-
-    > [!TIP]
-    > Si el **cuadro de herramientas** no se muestra la ventana, seleccione **cuadro de herramientas** desde el **vista** menú.
-
-15. Arrastre un **WriteLine** actividad desde la **primitivas** sección de la **cuadro de herramientas** y colóquela en la **colocar actividad aquí** etiqueta de la **Secuencia** actividad.
-
-16. Enlazar el **texto** argumento de la **WriteLine** actividad a la **texto** argumento de la **Prompt** actividad escribiendo `Text` en el **escriba una expresión de C#** o **escriba una expresión de VB** cuadro el **propiedades** ventana y, a continuación, presione el **ficha** clave de dos veces. Esto descarta la ventana de miembros de la lista de IntelliSense y guarda el valor de propiedad moviendo la selección fuera de la propiedad. Esta propiedad también puede establecerse escribiendo `Text` en el **escriba una expresión de C#** o **escriba una expresión de VB** cuadro en la propia actividad.
+14. Arrastre una actividad **Sequence** de la sección **flujo de control** del **cuadro de herramientas** y colóquela en la etiqueta **colocar actividad aquí** del diseñador de actividad **prompt** .
 
     > [!TIP]
-    > Si el **ventana propiedades** no se muestra, seleccione **ventana propiedades** desde el **vista** menú.
+    > Si no está visible la ventana **Cuadro de herramientas**, seleccione **Cuadro de herramientas** en el menú **Ver**.
 
-17. Arrastre un **ReadInt** actividad desde la **NumberGuessWorkflowActivities** sección de la **cuadro de herramientas** y colóquelo el **secuencia** actividad para que siga a la **WriteLine** actividad.
+15. Arrastre una **actividad WriteLine** de la sección **primitivas** del **cuadro de herramientas** y colóquela en la etiqueta **colocar actividad aquí** de la actividad **Sequence** .
 
-18. Enlazar el **BookmarkName** argumento de la **ReadInt** actividad a la **BookmarkName** argumento de la **Prompt** actividad escribiendo `BookmarkName` en el **escriba una expresión de VB** cuadro a la derecha de la **BookmarkName** argumento en el **ventana propiedades**y, a continuación, presione el **Ficha** dos veces para cerrar la ventana de IntelliSense lista de miembros y guardar la propiedad de clave.
+16. Enlace el argumento de **texto** de la actividad **WriteLine** al argumento de **texto** de la actividad **prompt** escribiendo `Text` en el cuadro **Escriba una expresión de C#** o **Escriba una expresión de VB** en la ventana **propiedades** y, a continuación, presione la tecla **Tab** dos veces. Esto descarta la ventana de miembros de la lista de IntelliSense y guarda el valor de propiedad moviendo la selección fuera de la propiedad. Esta propiedad también se puede establecer escribiendo `Text` en el cuadro **Escriba una expresión de C#** o **Escriba una expresión de VB** en la propia actividad.
 
-19. Enlazar el **resultado** argumento de la **ReadInt** actividad a la **resultado** argumento de la **Prompt** actividad escribiendo `Result` en el **escriba una expresión de VB** cuadro a la derecha de la **resultado** argumento en el **ventana propiedades**y, a continuación, presione el **ficha** clave dos veces.
+    > [!TIP]
+    > Si no se muestra la **ventana Propiedades** , seleccione **ventana Propiedades** en el menú **Ver** .
 
-20. Presione **Ctrl**+**MAYÚS**+**B** para compilar la solución.
+17. Arrastre una actividad **ReadInt** desde la sección **NumberGuessWorkflowActivities** del **cuadro de herramientas** y colóquela en la actividad **Sequence** para que siga la actividad **WriteLine** .
+
+18. Enlace el **argumento bookmarkname** de la **actividad ReadInt** al argumento **bookmarkname** de la actividad **prompt** escribiendo `BookmarkName` en el cuadro **Escriba una expresión de VB** a la derecha del argumento **bookmarkname** en la **ventana Propiedades**y, a continuación, presione la tecla **Tab** dos veces para cerrar la ventana de lista de miembros de IntelliSense y guardar la propiedad.
+
+19. Enlace el argumento **result** de la **actividad ReadInt** al argumento **result** de la actividad **prompt** escribiendo `Result` en el cuadro **Escriba una expresión de VB** a la derecha del argumento **result** en la **ventana Propiedades**y, a continuación, presione la tecla **Tab** dos veces.
+
+20. Presione **Ctrl** + **MAYÚS** + **B** para compilar la solución.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener instrucciones sobre cómo crear un flujo de trabajo mediante el uso de estas actividades, vea el paso siguiente en el tutorial, [Cómo: crear un flujo de trabajo](how-to-create-a-workflow.md).
+Para obtener instrucciones sobre cómo crear un flujo de trabajo mediante estas actividades, vea el siguiente paso del tutorial, [Cómo: crear un flujo de trabajo](how-to-create-a-workflow.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 - <xref:System.Activities.CodeActivity>
 - <xref:System.Activities.NativeActivity%601>
-- [Diseño e implementación de actividades personalizadas](designing-and-implementing-custom-activities.md)
-- [Tutorial de introducción](getting-started-tutorial.md)
-- [Cómo: Crear un flujo de trabajo](how-to-create-a-workflow.md)
-- [Uso de ExpressionTextBox en un diseñador de actividad personalizado](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+- [Diseñar e implementar actividades personalizadas](designing-and-implementing-custom-activities.md)
+- [Tutorial de Introducción](getting-started-tutorial.md)
+- [Procedimiento para crear un flujo de trabajo](how-to-create-a-workflow.md)
+- [Uso de la ExpressionTextBox en un diseñador de actividad personalizado](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

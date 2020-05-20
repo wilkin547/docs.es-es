@@ -1,5 +1,5 @@
 ---
-title: Método IXCLRDataProcess::GetAppDomainByUniqueId
+title: 'IXCLRDataProcess:: GetAppDomainByUniqueId (método)'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataProcess::GetAppDomainByUniqueId Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 8b468d40ef8eb523ba8881627fae15cf9b7c7b80
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb02ffed09cbcc31e653bfd3165050c247908c5d
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775270"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420791"
 ---
-# <a name="ixclrdataprocessgetappdomainbyuniqueid-method"></a>Método IXCLRDataProcess::GetAppDomainByUniqueId
+# <a name="ixclrdataprocessgetappdomainbyuniqueid-method"></a>IXCLRDataProcess:: GetAppDomainByUniqueId (método)
 
-Obtiene un `AppDomain` en un proceso según su identificador único.
+Obtiene un `AppDomain` en un proceso basado en su identificador único.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -40,21 +40,21 @@ HRESULT GetAppDomainByUniqueID(
 ## <a name="parameters"></a>Parámetros
 
 `id`\
-[in] El identificador único del dominio de aplicación
+de Identificador único del AppDomain.
 
 `appDomain`\
-[out] El dominio de aplicación
+enuncia AppDomain
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El método proporcionado forma parte de la `IXCLRDataProcess` interfaz y corresponde a la ranura de la tabla de métodos virtuales 20. El `IXCLRDataAppDomain*` devuelto se usa para la interacción con otras API.
+El método proporcionado forma parte de la `IXCLRDataProcess` interfaz y corresponde a la ranura del vigésimo de la tabla del método virtual. El `IXCLRDataAppDomain*` devuelto se usa para la interacción con otras API.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).
-**Encabezado**: Ninguno **biblioteca:** Ninguno **versiones de .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
+**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).
+**Encabezado:** Ninguna **biblioteca:** ninguna **.NET Framework versiones:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 - [Depuración](index.md)
 - [Interfaz IXCLRDataProcess](ixclrdataprocess-interface.md)

@@ -1,13 +1,14 @@
 ---
 title: Arquitectura de Windows Workflow
+description: Windows Workflow Foundation encapsula unidades de trabajo como actividades, que se ejecutan en un entorno con control de flujo, control de excepciones y otras características.
 ms.date: 03/30/2017
 ms.assetid: 1d4c6495-d64a-46d0-896a-3a01fac90aa9
-ms.openlocfilehash: e2effc0f53153057b8a9034e4dc80cb19bbe7685
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 22ebeb7d95342ad6843e0721da8b213ed4a4d9b6
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834859"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420141"
 ---
 # <a name="windows-workflow-architecture"></a>Arquitectura de Windows Workflow
 Windows Workflow Foundation (WF) eleva el nivel de abstracción para desarrollar aplicaciones interactivas de ejecución prolongada. Las unidades de trabajo se encapsulan como actividades. Las actividades se ejecutan en un entorno que proporcione los medios para el control de flujo, el control de excepciones, la propagación de errores, la persistencia de los datos de estado, la carga y descarga de flujos de trabajo en progreso de la memoria, el seguimiento y el flujo de la transacción.  
@@ -43,10 +44,10 @@ xmlns="http://schemas.microsoft.com/2009/workflow">
 ## <a name="activity-life-cycle"></a>Ciclo de vida de la actividad  
  La instancia de una actividad empieza en el estado <xref:System.Activities.ActivityInstanceState.Executing>. A menos que se encuentren excepciones, permanece en este estado hasta que todas las actividades secundarias se hayan terminado de ejecutar y se hayan completado otros trabajos pendientes (objetos <xref:System.Activities.Bookmark>, por ejemplo). Una vez llegado este punto, cambia al estado <xref:System.Activities.ActivityInstanceState.Closed>. El elemento primario de una instancia de actividad puede pedir a un elemento secundario que cancele; si el elemento secundario puede cancelarse, se completa en el estado <xref:System.Activities.ActivityInstanceState.Canceled>. Si una excepción se produce durante la ejecución, el tiempo en ejecución coloca la actividad <xref:System.Activities.ActivityInstanceState.Faulted> en el estado de error y propaga la excepción a la cadena primaria de actividades. A continuación se muestran los tres Estados de finalización de una actividad:
   
-- **Subtítulos** La actividad ha completado su trabajo y ha salido.  
+- **Cerrado:** La actividad ha completado su trabajo y ha salido.  
   
-- **Cancelado** La actividad ha abandonado correctamente su trabajo y ha salido. En este estado, el trabajo no se revierte de manera explícita.  
+- **Cancelado:** La actividad ha abandonado correctamente su trabajo y ha salido. En este estado, el trabajo no se revierte de manera explícita.  
   
-- **Error** La actividad ha encontrado un error y ha salido sin completar su trabajo.  
+- Con **errores:** La actividad ha encontrado un error y ha salido sin completar su trabajo.  
   
  Las actividades permanecen en el estado <xref:System.Activities.ActivityInstanceState.Executing> cuando se conservan o descargan.

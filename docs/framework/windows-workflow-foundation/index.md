@@ -1,16 +1,17 @@
 ---
 title: Windows Workflow Foundation
+description: Este artículo contiene recursos que describen el modelo de programación, ejemplos y herramientas de la Windows Workflow Foundation.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WF [WF]
 - Windows Workflow Foundation [WF]
 ms.assetid: 9a23ea6b-d600-483e-89cd-8889cfec5f66
-ms.openlocfilehash: 159af9941e8e44defbdd01ed3c128c8327836f7a
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 177c9edbd25b003129079ee4d758e79841420d54
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141990"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419491"
 ---
 # <a name="windows-workflow-foundation"></a>Windows Workflow Foundation
 En esta sección se describe el modelo de programación, ejemplos y herramientas del Windows Workflow Foundation (WF).  
@@ -31,13 +32,13 @@ En esta sección se describe el modelo de programación, ejemplos y herramientas
  [Información general conceptual de Windows Workflow](conceptual-overview.md)  
  Un conjunto de temas en los que se tratan los conceptos más importantes que hay detrás de Windows Workflow Foundation.  
   
- [Tutorial de introducción](getting-started-tutorial.md)  
+ [Tutorial de Introducción](getting-started-tutorial.md)  
  Un conjunto de temas del tutorial que le muestran cómo programar aplicaciones Windows Workflow Foundation.  
   
  [Programación de Windows Workflow Foundation](programming.md)  
  Conjunto de temas del manual que debería saber para convertirse en un programador [!INCLUDE[wf1](../../../includes/wf1-md.md)] competente.  
   
- [Extensión de Windows Workflow Foundation](extend.md)  
+ [Ampliar Windows Workflow Foundation](extend.md)  
  Un conjunto de temas en los que se explica cómo ampliar o personalizar Windows Workflow Foundation para satisfacer sus necesidades.  
   
  [Glosario de Windows Workflow Foundation para .NET Framework 4.5](glossary.md)  

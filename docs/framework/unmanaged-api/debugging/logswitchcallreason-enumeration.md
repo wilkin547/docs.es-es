@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5bbb8d1b-bbc4-47b0-b1b1-2d54cc0be291
 topic_type:
 - apiref
-ms.openlocfilehash: 29781666c106755f96f945325e3a8953bf93b211
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4d29bb3886ffb51e1dfb9654f4d70ef7c568fd43
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790348"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420713"
 ---
 # <a name="logswitchcallreason-enumeration"></a>LogSwitchCallReason (Enumeración)
 Indica la operación que se realizó en un conmutador de depuración/seguimiento.  
@@ -42,15 +42,15 @@ typedef enum LogSwitchCallReason {
 |`SWITCH_MODIFY`|Se modificó un modificador de depuración o traza.|  
 |`SWITCH_DELETE`|Se eliminó un modificador de depuración o traza.|  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 - [Enumeraciones de depuración](debugging-enumerations.md)

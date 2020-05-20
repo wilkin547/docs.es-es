@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: e7e53615e38d0ab76f9e7c0a753be3c13780057d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6a6def8fc10f04b89aa8d8c735025b01f9b6ddfb
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178370"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420765"
 ---
 # <a name="ixclrdataprocess-interface"></a>Interfaz IXCLRDataProcess
 
@@ -32,26 +32,26 @@ Proporciona métodos para consultar información sobre un proceso.
 
 | Método                                                                                                                                               | Descripción                                                                                     |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| [GetAppDomainByUniqueId](ixclrdataprocess-getappdomainbyuniqueid-method.md)                       | Obtiene un `AppDomain` proceso en un proceso por su identificador único.                                              |
+| [GetAppDomainByUniqueId](ixclrdataprocess-getappdomainbyuniqueid-method.md)                       | Obtiene un `AppDomain` en un proceso por su identificador único.                                              |
 | [StartEnumModules](ixclrdataprocess-startenummodules-method.md)                                   | Proporciona un identificador para enumerar los módulos de un proceso.                                        |
 | [EnumModule](ixclrdataprocess-enummodule-method.md)                                               | Enumera los módulos de este proceso.                                                         |
-| [EndEnumModules](ixclrdataprocess-endenummodules-method.md)                                       | Libera los recursos utilizados por los iteradores internos utilizados durante la enumeración del módulo.               |
-| [StartEnumMethodInstancesByAddress](ixclrdataprocess-startenummethodinstancesbyaddress-method.md) | Proporciona un identificador para enumerar las `AppDomain` instancias de método de inicio en una dirección determinada. |
+| [EndEnumModules](ixclrdataprocess-endenummodules-method.md)                                       | Libera los recursos utilizados por los iteradores internos utilizados durante la enumeración de módulos.               |
+| [StartEnumMethodInstancesByAddress](ixclrdataprocess-startenummethodinstancesbyaddress-method.md) | Proporciona un identificador para enumerar las instancias de método de que `AppDomain` empiezan en una dirección determinada. |
 | [EnumMethodInstanceByAddress](ixclrdataprocess-enummethodinstancebyaddress-method.md)             | Enumera las instancias de método de este proceso a partir de un desplazamiento de dirección.                  |
-| [EndEnumMethodInstancesByAddress](ixclrdataprocess-endenummethodinstancesbyaddress-method.md)     | Libera los recursos utilizados por los iteradores internos utilizados durante la enumeración de instancias.             |
+| [EndEnumMethodInstancesByAddress](ixclrdataprocess-endenummethodinstancesbyaddress-method.md)     | Libera los recursos utilizados por los iteradores internos utilizados durante la enumeración de la instancia.             |
 
 ## <a name="remarks"></a>Observaciones
 
-Esta interfaz se encuentra dentro del tiempo de ejecución y no se expone a través de encabezados o archivos de biblioteca. Sin embargo, es una interfaz `IUnknown` COM `5c552ab6-fc09-4cb3-8e36-22fa03c798b7` que deriva de con GUID que se puede obtener a través de los mecanismos COM habituales.
+Esta interfaz reside dentro del tiempo de ejecución y no se expone a través de los encabezados o archivos de biblioteca. Sin embargo, es una interfaz COM que se deriva de `IUnknown` con `5c552ab6-fc09-4cb3-8e36-22fa03c798b7` el GUID que se puede obtener a través de los mecanismos com habituales.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
-**Encabezado:** Ninguno  
-**Biblioteca:** Ninguno  
-**Versiones de .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).
+**Encabezado:** Ninguna  
+**Biblioteca:** Ninguna  
+**.NET Framework versiones:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 - [Depuración](index.md)
-- [Interfaces de depuración](debugging-interfaces.md)
+- [Interfaces para depuración](debugging-interfaces.md)

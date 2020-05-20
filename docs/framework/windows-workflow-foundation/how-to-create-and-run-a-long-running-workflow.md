@@ -1,16 +1,17 @@
 ---
 title: Cómo crear y ejecutar un flujo de trabajo de ejecución prolongada
+description: En este artículo se muestra cómo crear una aplicación host Windows Forms que admita iniciar y reanudar varias instancias de flujo de trabajo y la persistencia del flujo de trabajo.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
-ms.openlocfilehash: 10eb4e2947bed9cea89f1cda05272aa3fa0fadaa
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 557b3512e534198d47c0c6f6b0a7c5f92bb71739
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204891"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419556"
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>Cómo crear y ejecutar un flujo de trabajo de ejecución prolongada
 
@@ -33,9 +34,9 @@ Una de las características centrales de Windows Workflow Foundation (WF) es la 
 
     Seleccione los dos archivos siguientes y haga clic en **abrir**.
 
-    - *SqlWorkflowInstanceStoreLogic. SQL*
+    - *SqlWorkflowInstanceStoreLogic.sql*
 
-    - *SqlWorkflowInstanceStoreSchema. SQL*
+    - *SqlWorkflowInstanceStoreSchema.sql*
 
 3. Elija **SqlWorkflowInstanceStoreSchema. SQL** en el menú **ventana** . Asegúrese de que **WF45GettingStartedTutorial** está seleccionado en la lista desplegable **bases de datos disponibles** y elija **Ejecutar** en el menú **consulta** .
 
@@ -55,7 +56,7 @@ Una de las características centrales de Windows Workflow Foundation (WF) es la 
 ## <a name="to-create-the-workflow-host-form"></a>Para crear el formulario de host de flujo de trabajo
 
 > [!NOTE]
-> Los pasos de este procedimiento describen cómo agregar y configurar el formulario manualmente. Si lo desea, puede descargar los archivos de solución para el tutorial y agregar el formulario completo al proyecto. Para descargar los archivos del tutorial, consulte [Windows Workflow Foundation (WF45)-Introducción tutorial](https://go.microsoft.com/fwlink/?LinkID=248976). Una vez descargados los archivos, haga clic con el botón derecho en **NumberGuessWorkflowHost** y elija **Agregar referencia**. Agregue una referencia a **System. Windows. Forms** y **System. Drawing**. Estas referencias se agregan automáticamente si agrega un nuevo formulario desde el menú **Agregar**, **nuevo elemento** , pero se debe agregar manualmente al importar un formulario. Una vez agregadas las referencias, haga clic con el botón derecho en **NumberGuessWorkflowHost** en **Explorador de soluciones** y elija **Agregar**, **elemento existente**. Vaya a la carpeta `Form` en los archivos de proyecto, seleccione **WorkflowHostForm.CS** (o **WorkflowHostForm. VB**) y haga clic en **Agregar**. Si decide importar el formulario, puede omitir hasta la sección siguiente [para agregar las propiedades y los métodos auxiliares del formulario](#to-add-the-properties-and-helper-methods-of-the-form).
+> Los pasos de este procedimiento describen cómo agregar y configurar el formulario manualmente. Si lo desea, puede descargar los archivos de solución para el tutorial y agregar el formulario completo al proyecto. Para descargar los archivos del tutorial, consulte [Windows Workflow Foundation (WF45)-Introducción tutorial](https://go.microsoft.com/fwlink/?LinkID=248976). Una vez descargados los archivos, haga clic con el botón derecho en **NumberGuessWorkflowHost** y elija **Agregar referencia**. Agregue una referencia a **System. Windows. Forms** y **System. Drawing**. Estas referencias se agregan automáticamente si agrega un nuevo formulario desde el menú **Agregar**, **nuevo elemento** , pero se debe agregar manualmente al importar un formulario. Una vez agregadas las referencias, haga clic con el botón derecho en **NumberGuessWorkflowHost** en **Explorador de soluciones** y elija **Agregar**, **elemento existente**. Vaya a la `Form` carpeta en los archivos de proyecto, seleccione **WorkflowHostForm.CS** (o **WorkflowHostForm. VB**) y haga clic en **Agregar**. Si decide importar el formulario, puede omitir hasta la sección siguiente [para agregar las propiedades y los métodos auxiliares del formulario](#to-add-the-properties-and-helper-methods-of-the-form).
 
 1. Haga clic con el botón secundario en **NumberGuessWorkflowHost** en **Explorador de soluciones** y elija **Agregar**, **nuevo elemento**.
 
@@ -63,7 +64,7 @@ Una de las características centrales de Windows Workflow Foundation (WF) es la 
 
 3. Configure las siguientes propiedades en el formulario.
 
-    |Propiedad|Valor|
+    |Propiedad|Value|
     |--------------|-----------|
     |FormBorderStyle|FixedSingle|
     |MaximizeBox|False|
@@ -73,12 +74,12 @@ Una de las características centrales de Windows Workflow Foundation (WF) es la 
 
     |Control|Propiedad: valor|
     |-------------|---------------------|
-    |**Button**|Nombre: NewGame<br /><br /> Ubicación: 13, 13<br /><br /> Tamaño: 75, 23<br /><br /> Texto: nuevo juego|
-    |**Etiqueta**|Ubicación: 94, 18<br /><br /> Texto: adivine un número de 1 a|
+    |**Botón**|Nombre: NewGame<br /><br /> Ubicación: 13, 13<br /><br /> Tamaño: 75, 23<br /><br /> Texto: nuevo juego|
+    |**Label**|Ubicación: 94, 18<br /><br /> Texto: adivine un número de 1 a|
     |**ComboBox**|Nombre: NumberRange<br /><br /> DropDownStyle: DropDownList<br /><br /> Elementos: 10, 100, 1000<br /><br /> Ubicación: 228, 12<br /><br /> Tamaño: 143, 21|
-    |**Etiqueta**|Ubicación: 13, 43<br /><br /> Texto: tipo de flujo de trabajo|
+    |**Label**|Ubicación: 13, 43<br /><br /> Texto: tipo de flujo de trabajo|
     |**ComboBox**|Nombre: WorkflowType<br /><br /> DropDownStyle: DropDownList<br /><br /> Elementos: StateMachineNumberGuessWorkflow, FlowchartNumberGuessWorkflow, SequentialNumberGuessWorkflow<br /><br /> Ubicación: 94, 40<br /><br /> Tamaño: 277, 21|
-    |**Etiqueta**|Nombre: WorkflowVersion<br /><br /> Ubicación: 13, 362<br /><br /> Texto: versión del flujo de trabajo|
+    |**Label**|Nombre: WorkflowVersion<br /><br /> Ubicación: 13, 362<br /><br /> Texto: versión del flujo de trabajo|
     |**GroupBox**|Ubicación: 13, 67<br /><br /> Tamaño: 358, 287<br /><br /> Texto: juego|
 
     > [!NOTE]
@@ -86,12 +87,12 @@ Una de las características centrales de Windows Workflow Foundation (WF) es la 
 
     |Control|Propiedad: valor|
     |-------------|---------------------|
-    |**Etiqueta**|Ubicación: 7, 20<br /><br /> Text: ID. de instancia de flujo de trabajo|
+    |**Label**|Ubicación: 7, 20<br /><br /> Text: ID. de instancia de flujo de trabajo|
     |**ComboBox**|Nombre: InstanceId<br /><br /> DropDownStyle: DropDownList<br /><br /> Ubicación: 121, 17<br /><br /> Tamaño: 227, 21|
-    |**Etiqueta**|Ubicación: 7, 47<br /><br /> Texto: Guess|
+    |**Label**|Ubicación: 7, 47<br /><br /> Texto: Guess|
     |**TextBox**|Nombre: Guess<br /><br /> Ubicación: 50, 44<br /><br /> Tamaño: 65, 20|
-    |**Button**|Nombre: EnterGuess<br /><br /> Ubicación: 121, 42<br /><br /> Tamaño: 75, 23<br /><br /> Texto: escriba Guess|
-    |**Button**|Nombre: QuitGame<br /><br /> Ubicación: 274, 42<br /><br /> Tamaño: 75, 23<br /><br /> Texto: salir|
+    |**Botón**|Nombre: EnterGuess<br /><br /> Ubicación: 121, 42<br /><br /> Tamaño: 75, 23<br /><br /> Texto: escriba Guess|
+    |**Botón**|Nombre: QuitGame<br /><br /> Ubicación: 274, 42<br /><br /> Tamaño: 75, 23<br /><br /> Texto: salir|
     |**TextBox**|Nombre: WorkflowStatus<br /><br /> Ubicación: 10, 73<br /><br /> Multiline: true<br /><br /> ReadOnly: true<br /><br /> Barras de desplazamiento: vertical<br /><br /> Tamaño: 338, 208|
 
 5. Establezca la propiedad **AcceptButton** del formulario en **EnterGuess**.
@@ -165,7 +166,7 @@ Los pasos de esta sección agregan propiedades y métodos del asistente a la cla
     }
     ```
 
-    En el cuadro combinado de `InstanceId` se muestra una lista de los identificadores de instancia de flujo de trabajo persistentes y la propiedad `WorkflowInstanceId` devuelve el flujo de trabajo seleccionado actualmente.
+    En el `InstanceId` cuadro combinado se muestra una lista de los identificadores de instancia de flujo de trabajo persistentes y la `WorkflowInstanceId` propiedad devuelve el flujo de trabajo seleccionado actualmente.
 
 5. Agregue un controlador para el evento del formulario `Load`. Para agregar el controlador, cambie a la **vista Diseño** para el formulario, haga clic en el icono **eventos** en la parte superior de la ventana **propiedades** y haga doble clic en **cargar**.
 
@@ -212,7 +213,7 @@ Los pasos de esta sección agregan propiedades y métodos del asistente a la cla
 
     Cuando el formulario se carga, se configura `SqlWorkflowInstanceStore`, los intervalos y los cuadros combinados de tipo de flujo de trabajo se establecen en valores predeterminados y las instancias de flujo de trabajo persistentes se agregan al cuadro combinado `InstanceId`.
 
-7. Agregue un controlador `SelectedIndexChanged` para `InstanceId`. Para agregar el controlador, cambie a la **vista Diseño** para el formulario, seleccione el cuadro combinado `InstanceId`, haga clic en el icono **eventos** en la parte superior de la ventana **propiedades** y haga doble clic en **SelectedIndexChanged**.
+7. Agregue un controlador `SelectedIndexChanged` para `InstanceId`. Para agregar el controlador, cambie a **la vista Diseño** para el formulario, seleccione el `InstanceId` cuadro combinado, haga clic en el icono **eventos** en la parte superior de la ventana **propiedades** y haga doble clic en **SelectedIndexChanged**.
 
     ```vb
     Private Sub InstanceId_SelectedIndexChanged(sender As Object, e As EventArgs) Handles InstanceId.SelectedIndexChanged
@@ -321,7 +322,7 @@ Los pasos de esta sección agregan propiedades y métodos del asistente a la cla
     }
     ```
 
-    `ListPersistedWorkflows` consulta el almacén de instancias para las instancias de flujo de trabajo persistentes y agrega los identificadores de instancia al cuadro combinado de `cboInstanceId`.
+    `ListPersistedWorkflows` consulta el almacén de instancias con respecto a las instancias de flujo de trabajo persistentes y agrega los identificadores de instancia al cuadro combinado `cboInstanceId`.
 
 10. Agregue el siguiente método `UpdateStatus` y el delegado correspondiente a la clase de formulario. Este método actualiza la ventana de estado en el formulario con el estado del flujo de trabajo en funcionamiento.
 
@@ -432,7 +433,7 @@ Los pasos de esta sección agregan propiedades y métodos del asistente a la cla
     wfApp.InstanceStore = store;
     ```
 
-3. A continuación, cree una instancia `StringWriter` y agréguela a la colección `Extensions` de `WorkflowApplication`. Cuando se agrega un `StringWriter` a las extensiones, captura todos los `WriteLine` resultado de la actividad. Cuando el flujo de trabajo se vuelve inactivo, el resultado de `WriteLine` puede extraerse desde `StringWriter` y mostrarse en el formulario.
+3. A continuación, cree una instancia `StringWriter` y agréguela a la colección `Extensions` de `WorkflowApplication`. Cuando `StringWriter` se agrega a las extensiones, captura todos los resultados de la `WriteLine` actividad. Cuando el flujo de trabajo se vuelve inactivo, el resultado de `WriteLine` puede extraerse desde `StringWriter` y mostrarse en el formulario.
 
     ```vb
     ' Add a StringWriter to the extensions. This captures the output
@@ -542,7 +543,7 @@ Los pasos de esta sección agregan propiedades y métodos del asistente a la cla
     };
     ```
 
-    La enumeración <xref:System.Activities.PersistableIdleAction> tiene tres valores: <xref:System.Activities.PersistableIdleAction.None>, <xref:System.Activities.PersistableIdleAction.Persist> y <xref:System.Activities.PersistableIdleAction.Unload>. <xref:System.Activities.PersistableIdleAction.Persist> hace que el flujo de trabajo se conserve pero no hace que el flujo de trabajo se descargue. <xref:System.Activities.PersistableIdleAction.Unload> hace que el flujo de trabajo se conserve y se descargue.
+    La enumeración <xref:System.Activities.PersistableIdleAction> tiene tres valores: <xref:System.Activities.PersistableIdleAction.None>, <xref:System.Activities.PersistableIdleAction.Persist> y <xref:System.Activities.PersistableIdleAction.Unload>. <xref:System.Activities.PersistableIdleAction.Persist> hace que el flujo de trabajo sea persistente pero no hace que se descargue. <xref:System.Activities.PersistableIdleAction.Unload> hace que el flujo de trabajo sea persistente y se descargue.
 
     El siguiente ejemplo es el método `ConfigureWorkflowApplication` completado.
 
@@ -649,7 +650,7 @@ Los pasos de esta sección agregan propiedades y métodos del asistente a la cla
 
 ## <a name="to-enable-starting-and-resuming-multiple-workflow-types"></a>Para habilitar el inicio y la reanudación de varios tipos de flujo de trabajo
 
-Para reanudar una instancia de flujo de trabajo, el host tiene que proporcionar la definición de flujo de trabajo. En este tutorial hay tres tipos de flujo de trabajo, y los pasos siguientes del tutorial presentan varias versiones de estos tipos. `WorkflowIdentity` proporciona una manera para que una aplicación host asocie información de identificación con una instancia de flujo de trabajo persistente. Los pasos de esta sección muestran cómo crear una clase de utilidad para contribuir a la asignación de la identidad de flujo de trabajo desde una instancia de flujo de trabajo persistente a la definición de flujo de trabajo correspondiente. Para obtener más información sobre `WorkflowIdentity` y el control de versiones, vea [usar WorkflowIdentity y control de versiones](using-workflowidentity-and-versioning.md).
+Para reanudar una instancia de flujo de trabajo, el host tiene que proporcionar la definición de flujo de trabajo. En este tutorial hay tres tipos de flujo de trabajo, y los pasos siguientes del tutorial presentan varias versiones de estos tipos. `WorkflowIdentity` proporciona una manera para que una aplicación de host asocie información de identificación con una instancia de flujo de trabajo persistente. Los pasos de esta sección muestran cómo crear una clase de utilidad para contribuir a la asignación de la identidad de flujo de trabajo desde una instancia de flujo de trabajo persistente a la definición de flujo de trabajo correspondiente. Para obtener más información sobre `WorkflowIdentity` y el control de versiones, vea [usar WorkflowIdentity y control de versiones](using-workflowidentity-and-versioning.md).
 
 1. Haga clic con el botón secundario en **NumberGuessWorkflowHost** en **Explorador de soluciones** y elija **Agregar**, **clase**. Escriba `WorkflowVersionMap` en el cuadro **nombre** y haga clic en **Agregar**.
 
@@ -763,11 +764,11 @@ Para reanudar una instancia de flujo de trabajo, el host tiene que proporcionar 
     }
     ```
 
-    `WorkflowVersionMap` contiene tres identidades de flujo de trabajo que se asignan a las tres definiciones de flujo de trabajo de este tutorial y se usa en las secciones siguientes cuando se inician y reanudan los flujos de trabajo.
+    `WorkflowVersionMap` contiene tres identidades de flujo de trabajo que se asignan a las tres definiciones de flujo de trabajo de este tutorial y se usan en las secciones siguientes al iniciar o al reanudar los flujos de trabajo.
 
 ## <a name="to-start-a-new-workflow"></a>Para iniciar un nuevo flujo de trabajo
 
-1. Agregue un controlador `Click` para `NewGame`. Para agregar el controlador, cambie a la **vista Diseño** del formulario y haga doble clic en `NewGame`. Se agrega un controlador `NewGame_Click` y la vista cambia a vista de código para el formulario. Siempre que el usuario haga clic en este botón se inicia un nuevo flujo de trabajo.
+1. Agregue un controlador `Click` para `NewGame`. Para agregar el controlador, cambie a la **vista Diseño** del formulario y haga doble clic en `NewGame` . Se agrega un controlador `NewGame_Click` y la vista cambia a vista de código para el formulario. Siempre que el usuario haga clic en este botón se inicia un nuevo flujo de trabajo.
 
     ```vb
     Private Sub NewGame_Click(sender As Object, e As EventArgs) Handles NewGame.Click
@@ -794,7 +795,7 @@ Para reanudar una instancia de flujo de trabajo, el host tiene que proporcionar 
     inputs.Add("MaxNumber", Convert.ToInt32(NumberRange.SelectedItem));
     ```
 
-3. A continuación, agregue el siguiente código que inicia el flujo de trabajo. ph x="1" /&gt; y la definición de flujo de trabajo correspondiente al tipo de flujo de trabajo seleccionado se recuperan mediante la clase del asistente `WorkflowIdentity`. A continuación, se crea una nueva instancia de `WorkflowApplication` mediante la definición de flujo de trabajo, `WorkflowIdentity`, y el diccionario de argumentos de entrada.
+3. A continuación, agregue el siguiente código que inicia el flujo de trabajo. ph x="1" /&gt; y la definición de flujo de trabajo correspondiente al tipo de flujo de trabajo seleccionado se recuperan mediante la clase del asistente `WorkflowVersionMap`. A continuación, se crea una nueva instancia de `WorkflowApplication` mediante la definición de flujo de trabajo, `WorkflowIdentity`, y el diccionario de argumentos de entrada.
 
     ```vb
     Dim identity As WorkflowIdentity = Nothing
@@ -962,7 +963,7 @@ Para reanudar una instancia de flujo de trabajo, el host tiene que proporcionar 
 
 ## <a name="to-resume-a-workflow"></a>Para reanudar un flujo de trabajo
 
-1. Agregue un controlador `Click` para `EnterGuess`. Para agregar el controlador, cambie a la **vista Diseño** del formulario y haga doble clic en `EnterGuess`. Siempre que el usuario haga clic en este botón se reanudará un flujo de trabajo.
+1. Agregue un controlador `Click` para `EnterGuess`. Para agregar el controlador, cambie a la **vista Diseño** del formulario y haga doble clic en `EnterGuess` . Siempre que el usuario haga clic en este botón se reanudará un flujo de trabajo.
 
     ```vb
     Private Sub EnterGuess_Click(sender As Object, e As EventArgs) Handles EnterGuess.Click
@@ -1174,7 +1175,7 @@ Para reanudar una instancia de flujo de trabajo, el host tiene que proporcionar 
 
 ## <a name="to-terminate-a-workflow"></a>Para finalizar un flujo de trabajo
 
-1. Agregue un controlador `Click` para `QuitGame`. Para agregar el controlador, cambie a la **vista Diseño** del formulario y haga doble clic en `QuitGame`. Siempre que el usuario haga clic en este botón se finalizará el flujo de trabajo seleccionado actualmente.
+1. Agregue un controlador `Click` para `QuitGame`. Para agregar el controlador, cambie a la **vista Diseño** del formulario y haga doble clic en `QuitGame` . Siempre que el usuario haga clic en este botón se finalizará el flujo de trabajo seleccionado actualmente.
 
     ```vb
     Private Sub QuitGame_Click(sender As Object, e As EventArgs) Handles QuitGame.Click
@@ -1244,7 +1245,7 @@ Para reanudar una instancia de flujo de trabajo, el host tiene que proporcionar 
     wfApp.Terminate("User resigns.");
     ```
 
-## <a name="to-build-and-run-the-application"></a>Para compilar y ejecutar la aplicación
+## <a name="to-build-and-run-the-application"></a>Para generar y ejecutar la aplicación
 
 1. Haga doble clic en **Program.CS** (o **Module1. vb**) en **Explorador de soluciones** para mostrar el código.
 
