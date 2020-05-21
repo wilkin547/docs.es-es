@@ -365,32 +365,40 @@
     - name: Portabilidad de los proyectos de C++/CLI
       href: porting/cpp-cli.md
 - name: Pruebas unitarias
-  href: testing/index.md
+  displayName: 'xUnit,NUnit,MSTest,unit testing,testing'
   items:
     - name: Información general
       href: testing/index.md
     - name: Procedimientos recomendados para pruebas unitarias
       href: testing/unit-testing-best-practices.md
-    - name: 'Pruebas unitarias de C# con xUnit'
-      href: testing/unit-testing-with-dotnet-test.md
-    - name: 'Pruebas unitarias de C# con NUnit'
-      href: testing/unit-testing-with-nunit.md
-    - name: 'Pruebas unitarias de C# con MSTest'
-      href: testing/unit-testing-with-mstest.md
-    - name: 'Pruebas unitarias de F# con xUnit'
-      href: testing/unit-testing-fsharp-with-dotnet-test.md
-    - name: 'Pruebas unitarias de F# con NUnit'
-      href: testing/unit-testing-fsharp-with-nunit.md
-    - name: 'Pruebas unitarias de F# con MSTest'
-      href: testing/unit-testing-fsharp-with-mstest.md
-    - name: Pruebas unitarias de VB con xUnit
-      href: testing/unit-testing-visual-basic-with-dotnet-test.md
-    - name: Pruebas unitarias de VB con NUnit
-      href: testing/unit-testing-visual-basic-with-nunit.md
-    - name: Pruebas unitarias de VB con MSTest
-      href: testing/unit-testing-visual-basic-with-mstest.md
+    - name: xUnit
+      items:
+        - name: 'Pruebas unitarias de C#'
+          href: testing/unit-testing-with-dotnet-test.md
+        - name: 'Pruebas unitarias de F#'
+          href: testing/unit-testing-fsharp-with-dotnet-test.md
+        - name: Pruebas unitarias de VB
+          href: testing/unit-testing-visual-basic-with-dotnet-test.md
+    - name: NUnit
+      items:
+        - name: 'Pruebas unitarias de C#'
+          href: testing/unit-testing-with-nunit.md
+        - name: 'Pruebas unitarias de F#'
+          href: testing/unit-testing-fsharp-with-nunit.md
+        - name: Pruebas unitarias de VB
+          href: testing/unit-testing-visual-basic-with-nunit.md
+    - name: MSTest
+      items:
+        - name: 'Pruebas unitarias de C#'
+          href: testing/unit-testing-with-mstest.md
+        - name: 'Pruebas unitarias de F#'
+          href: testing/unit-testing-fsharp-with-mstest.md
+        - name: Pruebas unitarias de VB
+          href: testing/unit-testing-visual-basic-with-mstest.md
     - name: Ejecución de pruebas unitarias selectivas
       href: testing/selective-unit-tests.md
+    - name: Ordenación de pruebas unitarias
+      href: testing/order-unit-tests.md
     - name: Salida publicada de una prueba unitaria
       href: testing/unit-testing-published-output.md
     - name: "Pruebas unitarias dinámicas de proyectos de .NET Core con Visual\_Studio"
