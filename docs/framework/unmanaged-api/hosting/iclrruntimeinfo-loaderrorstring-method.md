@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: 52c543ab-9ef5-4ee7-b836-c0ffc35cd45b
 topic_type:
 - apiref
-ms.openlocfilehash: 20f2041599e85b8df20a7a9cf44680da9f17244e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: da6efae38cd70a68feea56b12e86be23fde7f0cb
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73195928"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762193"
 ---
 # <a name="iclrruntimeinfoloaderrorstring-method"></a>ICLRRuntimeInfo::LoadErrorString (Método)
 Convierte un valor HRESULT en un mensaje de error adecuado para la referencia cultural especificada.  
   
  Este método sustituye a las siguientes funciones:  
   
-- [Loadstringrc (](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)  
+- [Loadstringrc (](loadstringrc-function.md)  
   
-- [Loadstringrcex (](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md)  
+- [Loadstringrcex (](loadstringrcex-function.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -64,16 +64,16 @@ HRESULT LoadErrorString(
 |E_INVALIDARG|`pwzBuffer` es null.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Metahost. h  
   
  **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
-- [ICLRRuntimeInfo (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [Hospedar aplicaciones de WPF](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ICLRRuntimeInfo (Interfaz)](iclrruntimeinfo-interface.md)
+- [Interfaces de hospedaje](hosting-interfaces.md)
+- [Hospedar aplicaciones de WPF](index.md)

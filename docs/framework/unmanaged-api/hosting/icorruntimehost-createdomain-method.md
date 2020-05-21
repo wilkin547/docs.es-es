@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b96c5ef3-a9df-4c7c-9952-432d3272cb5c
 topic_type:
 - apiref
-ms.openlocfilehash: 7c3e37fdb8a5afc973c913b1cfa56ab2e9f4fa52
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 74f17c77e74edb1226dda2d9ebaa9486e1769ce4
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127731"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762362"
 ---
 # <a name="icorruntimehostcreatedomain-method"></a>ICorRuntimeHost::CreateDomain (Método)
-Crea un dominio de aplicación. El autor de la llamada recibe un puntero de interfaz de tipo <xref:System._AppDomain> a una instancia de tipo <xref:System.AppDomain?displayProperty=nameWithType>.  
+Crea un dominio de aplicación. El autor de la llamada recibe un puntero de interfaz de tipo <xref:System._AppDomain> a una instancia de tipo <xref:System.AppDomain?displayProperty=nameWithType> .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,7 +40,7 @@ HRESULT CreateDomain (
  de Parámetro opcional que se usa para proporcionar un nombre descriptivo al dominio. Este nombre descriptivo puede mostrarse en las interfaces de usuario como depuradores para identificar el dominio.  
   
  `pIdentityArray`  
- de Matriz opcional de punteros a `IIdentity` instancias que representan la evidencia asignada a través de la Directiva de seguridad para establecer un conjunto de permisos. Un objeto `IIdentity` se puede obtener llamando al método [createevidence (](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createevidence-method.md) .  
+ de Matriz opcional de punteros a `IIdentity` instancias que representan la evidencia asignada a través de la Directiva de seguridad para establecer un conjunto de permisos. Un `IIdentity` objeto se puede obtener llamando al método [createevidence (](icorruntimehost-createevidence-method.md) .  
   
  `pAppDomain`  
  enuncia Puntero de interfaz de tipo <xref:System._AppDomain> a una instancia de <xref:System.AppDomain?displayProperty=nameWithType> que se puede utilizar para controlar aún más el dominio.  
@@ -55,7 +55,7 @@ HRESULT CreateDomain (
 |HOST_E_CLRNOTAVAILABLE|CLR no se ha cargado en un proceso o CLR está en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
@@ -63,8 +63,8 @@ HRESULT CreateDomain (
   
  **.NET Framework versiones:** 1,0, 1,1  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
-- [ICorRuntimeHost (interfaz)](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [ICorRuntimeHost (Interfaz)](icorruntimehost-interface.md)

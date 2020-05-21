@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c3601255-d894-4d7c-b1df-c31334551700
 topic_type:
 - apiref
-ms.openlocfilehash: f6ef7e06d94cb22d266949927cb15105b1602d3a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 265ab5ae03b7b42c4f5f429df5d659d60e55f18e
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139532"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83760724"
 ---
 # <a name="icorruntimehostlocksheldbylogicalthread-method"></a>ICorRuntimeHost::LocksHeldByLogicalThread (Método)
 Recupera el número de bloqueos que contiene el subproceso actual.  
@@ -40,7 +40,7 @@ HRESULT LocksHeldByLogicalThread(
  enuncia Puntero al número de bloqueos que el subproceso actual contiene.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
@@ -48,6 +48,6 @@ HRESULT LocksHeldByLogicalThread(
   
  **.NET Framework versiones:** 1,0, 1,1  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
-- [ICorRuntimeHost (interfaz)](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [ICorRuntimeHost (Interfaz)](icorruntimehost-interface.md)

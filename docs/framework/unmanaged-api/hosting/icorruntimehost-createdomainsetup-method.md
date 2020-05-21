@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c21dab60-fb65-47d9-8a94-7fd47ca53b48
 topic_type:
 - apiref
-ms.openlocfilehash: 217874e625604613e67170a118a7bc3616e02c4d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: aa1ce70311cd4ef0204c1c31efee8bd7b313c81d
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139649"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762336"
 ---
 # <a name="icorruntimehostcreatedomainsetup-method"></a>ICorRuntimeHost::CreateDomainSetup (Método)
-Obtiene un puntero de interfaz de tipo IAppDomainSetup a una instancia de <xref:System.AppDomainSetup?displayProperty=nameWithType>. `IAppDomainSetup` proporciona métodos para configurar aspectos de un dominio de aplicación antes de que se cree.  
+Obtiene un puntero de interfaz de tipo IAppDomainSetup a una <xref:System.AppDomainSetup?displayProperty=nameWithType> instancia de. `IAppDomainSetup`proporciona métodos para configurar aspectos de un dominio de aplicación antes de que se cree.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,7 +35,7 @@ HRESULT CreateDomainSetup (
   
 ## <a name="parameters"></a>Parámetros  
  `pAppDomainSetup`  
- enuncia Puntero de interfaz a una instancia de <xref:System.AppDomainSetup?displayProperty=nameWithType>. Este parámetro se escribe como `IUnknown`, por lo que los llamadores generalmente deben llamar a `QueryInterface` en este puntero para obtener un puntero de interfaz de tipo `IAppDomainSetup`.  
+ enuncia Puntero de interfaz a una <xref:System.AppDomainSetup?displayProperty=nameWithType> instancia de. Este parámetro tiene el tipo `IUnknown` , por lo que los llamadores generalmente deben llamar a `QueryInterface` en este puntero para obtener un puntero de interfaz de tipo `IAppDomainSetup` .  
   
 ## <a name="return-value"></a>Valor devuelto  
   
@@ -47,10 +47,10 @@ HRESULT CreateDomainSetup (
 |HOST_E_CLRNOTAVAILABLE|CLR no se ha cargado en un proceso o CLR está en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
   
 ## <a name="remarks"></a>Comentarios  
- Normalmente, el puntero devuelto por este método se pasa como un parámetro al método [createdomainex (](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) .  
+ Normalmente, el puntero devuelto por este método se pasa como un parámetro al método [createdomainex (](icorruntimehost-createdomainex-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
@@ -58,10 +58,10 @@ HRESULT CreateDomainSetup (
   
  **Versión de .NET Framework:** 1,0, 1,1  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
 - <xref:System.AppDomainSetup>
 - <xref:System.IAppDomainSetup?displayProperty=nameWithType>
-- [ICorRuntimeHost (interfaz)](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [ICorRuntimeHost (Interfaz)](icorruntimehost-interface.md)

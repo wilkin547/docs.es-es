@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c66f3ac5-6489-484a-9bed-c31b711cee01
 topic_type:
 - apiref
-ms.openlocfilehash: c450d83669a3bc548c15ed5800dc73438b9a84a6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ccad76e1c8a49222d4f527f8b7b18d4e40ff8cae
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127694"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83760412"
 ---
 # <a name="icorruntimehoststart-method"></a>ICorRuntimeHost::Start (Método)
 Inicia el Common Language Runtime (CLR).  
@@ -41,10 +41,10 @@ HRESULT Start ();
 |HOST_E_CLRNOTAVAILABLE|CLR no se ha cargado en un proceso o CLR está en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
   
 ## <a name="remarks"></a>Comentarios  
- Normalmente no es necesario llamar al método `Start`, porque CLR se inicia automáticamente en la primera solicitud para ejecutar el código administrado.  
+ Normalmente no es necesario llamar al `Start` método, ya que CLR se inicia automáticamente tras la primera solicitud para ejecutar el código administrado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
@@ -52,6 +52,6 @@ HRESULT Start ();
   
  **.NET Framework versiones:** 1,0, 1,1  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
-- [ICorRuntimeHost (interfaz)](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [ICorRuntimeHost (Interfaz)](icorruntimehost-interface.md)

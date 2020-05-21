@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c6ff45fc-905d-4c6e-b00c-97c6c7c55d99
 topic_type:
 - apiref
-ms.openlocfilehash: 8f2d74531233f2ba423c39126ddc43e499cbb5d8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6dbb3360132186c38c007fb5fa12a3724ca145aa
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176375"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762102"
 ---
 # <a name="iclrstrongnamegethashfromfilew-method"></a>ICLRStrongName::GetHashFromFileW (Método)
 Genera un hash a partir del contenido del archivo especificado por una cadena Unicode.  
@@ -39,36 +39,36 @@ HRESULT GetHashFromFileW (
   
 ## <a name="parameters"></a>Parámetros  
  `wszFilePath`  
- [en] El nombre Unicode del archivo que se ha hash.  
+ de Nombre Unicode del archivo al que se va a aplicar un algoritmo hash.  
   
  `piHashAlg`  
- [adentro, fuera] El algoritmo que se va a utilizar al generar el hash. Los algoritmos válidos son los definidos por Win32 CryptoAPI. Si `piHashAlg` se establece en 0, se utiliza el algoritmo predeterminado CALG_SHA-1.  
+ [in, out] Algoritmo que se va a utilizar al generar el hash. Los algoritmos válidos son los definidos por la CryptoAPI de Win32. Si `piHashAlg` se establece en 0, se usa el algoritmo predeterminado CALG_SHA-1.  
   
  `pbHash`  
- [fuera] Matriz de bytes que contiene el hash generado.  
+ enuncia Matriz de bytes que contiene el hash generado.  
   
  `cchHash`  
- [en] El tamaño máximo del búfer `pbHash`al que apunta .  
+ de Tamaño máximo del búfer al que apunta `pbHash` .  
   
  `pchHash`  
- [fuera] El tamaño, en `pbHash`bytes, de .  
+ enuncia Tamaño, en bytes, de `pbHash` .  
   
 ## <a name="return-value"></a>Valor devuelto  
- `S_OK`si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (consulte [Valores HRESULT comunes](/windows/win32/seccrypto/common-hresult-values) para obtener una lista).  
+ `S_OK`Si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](/windows/win32/seccrypto/common-hresult-values) para una lista).  
   
-## <a name="remarks"></a>Observaciones  
- Este método es el mismo que el [método ICLRStrongName::GetHashFromFile,](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md) excepto que la especificación de nombre de archivo es Unicode en lugar de ANSI.  
+## <a name="remarks"></a>Comentarios  
+ Este método es el mismo que el método [ICLRStrongName:: gethashfromfile (](iclrstrongname-gethashfromfile-method.md) , salvo que la especificación del nombre de archivo es Unicode en lugar de ANSI.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** MetaHost.h  
+ **Encabezado:** Metahost. h  
   
- **Biblioteca:** Incluido como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
-- [Método GetHashFromFile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md)
-- [ICLRStrongName (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [Método GetHashFromFile](iclrstrongname-gethashfromfile-method.md)
+- [ICLRStrongName (Interfaz)](iclrstrongname-interface.md)
