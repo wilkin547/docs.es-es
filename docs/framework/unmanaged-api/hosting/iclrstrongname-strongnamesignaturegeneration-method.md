@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4cdb1284-947a-4ed4-94c1-c5ff5cdfce56
 topic_type:
 - apiref
-ms.openlocfilehash: e58ac181c4e472c469076b880ff71e0c6afa30fe
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a8c9eab719f6a4f233490e544f67cf779ea10b20
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178053"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83763049"
 ---
 # <a name="iclrstrongnamestrongnamesignaturegeneration-method"></a>ICLRStrongName::StrongNameSignatureGeneration (Método)
 Genera una firma de nombres seguros para el ensamblado especificado.  
@@ -40,49 +40,49 @@ HRESULT StrongNameSignatureGeneration (
   
 ## <a name="parameters"></a>Parámetros  
  `wszFilePath`  
- [en] La ruta de acceso al archivo que contiene el manifiesto del ensamblado para el que se generará la firma de nombre seguro.  
+ de La ruta de acceso al archivo que contiene el manifiesto del ensamblado para el que se generará la firma de nombre seguro.  
   
  `wszKeyContainer`  
- [en] El nombre del contenedor de claves que contiene el par de claves pública y privada.  
+ de Nombre del contenedor de claves que contiene el par de claves pública y privada.  
   
- Si `pbKeyBlob` es `wszKeyContainer` null, debe especificar un contenedor válido dentro del proveedor de servicios criptográficos (CSP). En este caso, el par de claves almacenado en el contenedor se utiliza para firmar el archivo.  
+ Si `pbKeyBlob` es null, `wszKeyContainer` debe especificar un contenedor válido dentro del proveedor de servicios criptográficos (CSP). En este caso, el par de claves almacenado en el contenedor se usa para firmar el archivo.  
   
- Si `pbKeyBlob` no es null, se supone que el par de claves está contenido en el objeto binario grande (BLOB) clave.  
+ Si `pbKeyBlob` no es null, se supone que el par de claves está incluido en el objeto binario grande (BLOB) de clave.  
   
- Las claves deben ser claves de firma Rivest-Shamir-Adleman (RSA) de 1024 bits. No se admiten otros tipos de claves en este momento.  
+ Las claves deben ser claves de firma de Rivest-Shamir-Adleman (RSA) de 1024 bits. En este momento no se admite ningún otro tipo de clave.  
   
  `pbKeyBlob`  
- [en] Un puntero al par de claves pública y privada. Este par tiene el formato creado `CryptExportKey` por la función Win32. Si `pbKeyBlob` es null, se supone `wszKeyContainer` que el contenedor de claves especificado por contiene el par de claves.  
+ de Puntero al par de claves pública y privada. Este par está en el formato creado por la función de Win32 `CryptExportKey` . Si `pbKeyBlob` es null, se supone que el contenedor de claves especificado por `wszKeyContainer` contiene el par de claves.  
   
  `cbKeyBlob`  
- [en] El tamaño, en `pbKeyBlob`bytes, de .  
+ de Tamaño, en bytes, de `pbKeyBlob` .  
   
  `ppbSignatureBlob`  
- [fuera] Puntero a la ubicación a la que Common Language Runtime devuelve la firma. Si `ppbSignatureBlob` es null, el tiempo de ejecución `wszFilePath`almacena la firma en el archivo especificado por .  
+ enuncia Puntero a la ubicación en la que el Common Language Runtime devuelve la firma. Si `ppbSignatureBlob` es null, el Runtime almacena la firma en el archivo especificado por `wszFilePath` .  
   
- Si `ppbSignatureBlob` no es null, Common Language Runtime asigna espacio en el que devolver la firma. El llamador debe liberar este espacio mediante el método [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) .  
+ Si `ppbSignatureBlob` no es null, el Common Language Runtime asigna espacio en el que se va a devolver la firma. El autor de la llamada debe liberar este espacio mediante el método [ICLRStrongName:: StrongNameFreeBuffer](iclrstrongname-strongnamefreebuffer-method.md) .  
   
  `pcbSignatureBlob`  
- [fuera] El tamaño, en bytes, de la firma devuelta.  
+ enuncia Tamaño, en bytes, de la firma devuelta.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `S_OK`si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (consulte [Valores HRESULT comunes](/windows/win32/seccrypto/common-hresult-values) para obtener una lista).  
+ `S_OK`Si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](/windows/win32/seccrypto/common-hresult-values) para una lista).  
   
-## <a name="remarks"></a>Observaciones  
- Especifique null `wszFilePath` for para calcular el tamaño de la firma sin crear la firma.  
+## <a name="remarks"></a>Comentarios  
+ Especifique NULL para `wszFilePath` para calcular el tamaño de la firma sin crear la firma.  
   
- La firma se puede almacenar directamente en el archivo o devolver se devuelve al autor de la llamada.  
+ La firma puede almacenarse directamente en el archivo o devolverse al autor de la llamada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** MetaHost.h  
+ **Encabezado:** Metahost. h  
   
- **Biblioteca:** Incluido como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
-- [Método StrongNameSignatureGenerationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)
-- [ICLRStrongName (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [Método StrongNameSignatureGenerationEx](iclrstrongname-strongnamesignaturegenerationex-method.md)
+- [ICLRStrongName (Interfaz)](iclrstrongname-interface.md)

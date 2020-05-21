@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 29ac7898-a7c7-433e-8f79-cd5237e0bab8
 topic_type:
 - apiref
-ms.openlocfilehash: e4a62cc35de18f91324bfd428c24bb329fc9783b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5500f2b84f00e039cbc3f669b49be467789955f0
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133256"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762739"
 ---
 # <a name="icorthreadpoolcorqueueuserworkitem-method"></a>ICorThreadpool::CorQueueUserWorkItem (Método)
 Este método es compatible con la infraestructura de .NET Framework y no está diseñado para utilizarse directamente desde el código.  
@@ -37,14 +37,14 @@ HRESULT CorQueueUserWorkItem (
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
  **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
-- [ICorThreadpool (interfaz)](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-interface.md)
+- [ICorThreadpool (Interfaz)](icorthreadpool-interface.md)

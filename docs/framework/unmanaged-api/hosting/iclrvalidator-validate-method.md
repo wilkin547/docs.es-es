@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0b1b432a-d234-4002-839b-81366c3a8bdc
 topic_type:
 - apiref
-ms.openlocfilehash: 427895ffea94e6c657d775ebdeb8571070a61c6e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 18492f3e95947a3a11da9d5d303651c04d764a8f
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178059"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762635"
 ---
 # <a name="iclrvalidatorvalidate-method"></a>ICLRValidator::Validate (Método)
-Valida el ejecutable portátil (PE) o el lenguaje intermedio de Microsoft (MSIL) en el archivo especificado.  
+Valida el ejecutable portable (PE) o el lenguaje intermedio de Microsoft (MSIL) en el archivo especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,49 +42,49 @@ HRESULT Validate (
   
 ## <a name="parameters"></a>Parámetros  
  `veh`  
- [en] Puntero a `IVEHandler` una instancia que controla los errores de validación.  
+ de Puntero a una `IVEHandler` instancia de que controla los errores de validación.  
   
  `ulAppDomainId`  
- [en] Identificador del <xref:System.AppDomain>archivo .  
+ de Identificador del actual <xref:System.AppDomain> .  
   
  `ulFlags`  
- [en] Combinación de [valores ValidatorFlags,](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) que indica el tipo de validación que se debe realizar.  
+ de Combinación de valores de [ValidatorFlags (](validatorflags-enumeration.md) , que indica el tipo de validación que se debe realizar.  
   
  `ulMaxError`  
- [en] El número máximo de errores que se permiten antes de salir de la validación.  
+ de Número máximo de errores que se permiten antes de salir de la validación.  
   
  `token`  
  [in] Sin utilizar.  
   
  `fileName`  
- [en] El nombre del archivo que se va a validar.  
+ de Nombre del archivo que se va a validar.  
   
  `pe`  
- [en] Un puntero al búfer de archivos.  
+ de Puntero al búfer de archivos.  
   
  `ulSize`  
- [en] El tamaño, en bytes, del archivo que se va a validar.  
+ de Tamaño, en bytes, del archivo que se va a validar.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`Validate`regresó con éxito.|  
-|HOST_E_CLRNOTAVAILABLE|Common Language Runtime (CLR) no se ha cargado en un proceso o CLR está en un estado en el que no puede ejecutar código administrado o procesar la llamada correctamente.|  
-|HOST_E_TIMEOUT|Se adelantó la llamada.|  
-|HOST_E_NOT_OWNER|El autor de la llamada no es el propietario de la cerradura.|  
-|HOST_E_ABANDONED|Un evento se canceló mientras un hilo bloqueado o fibra lo esperaba.|  
-|E_FAIL|Se ha producido un fallo catastrófico desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar dentro del proceso. Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|`Validate`se devolvió correctamente.|  
+|HOST_E_CLRNOTAVAILABLE|El Common Language Runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
+|HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
+|HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
+|HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
+|E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** IValidator.idl, IValidator.h  
+ **Encabezado:** IValidator. idl, IValidator. h  
   
- **Biblioteca:** Incluido como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
-- [ICLRValidator (Interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)
+- [ICLRValidator (Interfaz)](iclrvalidator-interface.md)

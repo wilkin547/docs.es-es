@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7df1e492-8014-43ea-80d1-a4743e9b1c17
 topic_type:
 - apiref
-ms.openlocfilehash: b6569b5dab89a88a24cf2dfc873da9740e5af505
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d830635b911fa5d80382e432f283c455c41af7a8
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133379"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762687"
 ---
 # <a name="icorruntimehostswitchinlogicalthreadstate-method"></a>ICorRuntimeHost::SwitchInLogicalThreadState (Método)
 Este método es compatible con la infraestructura de .NET Framework y no está diseñado para utilizarse directamente desde el código.  
@@ -38,7 +38,7 @@ HRESULT SwitchInLogicalThreadState(
  de Cookie que indica la fibra que se va a usar.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
@@ -46,6 +46,6 @@ HRESULT SwitchInLogicalThreadState(
   
  **Versión de .NET Framework:** 1,0, 1,1  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
-- [ICorRuntimeHost (interfaz)](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [ICorRuntimeHost (Interfaz)](icorruntimehost-interface.md)

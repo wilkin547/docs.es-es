@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0f5a2ec8-e776-4fd8-bda6-937b6834575a
 topic_type:
 - apiref
-ms.openlocfilehash: a0bcc62a1715fb455f0affee64a351cabe0ba3f6
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 82e18db2f5b911f0e7895959119edd7d2c722f3b
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901123"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83763140"
 ---
 # <a name="iclrstrongnamestrongnamegetblobfromimage-method"></a>ICLRStrongName::StrongNameGetBlobFromImage (Método)
 Obtiene una representación binaria de la imagen de ensamblado en la dirección de memoria especificada.  
@@ -36,32 +36,32 @@ HRESULT StrongNameGetBlobFromImage (
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parámetros  
  `pbBase`  
  de Dirección de memoria del manifiesto del ensamblado asignado.  
   
  `dwLength`  
- de Tamaño, en bytes, de la imagen en `pbBase`.  
+ de Tamaño, en bytes, de la imagen en `pbBase` .  
   
  `pbBlob`  
  de Búfer que va a contener la representación binaria de la imagen.  
   
  `pcbBlob`  
- [in, out] Tamaño máximo solicitado, en bytes, de `pbBlob`. Cuando se devuelve, el tamaño real, en bytes, de `pbBlob`.  
+ [in, out] Tamaño máximo solicitado, en bytes, de `pbBlob` . Después de la devolución, el tamaño real, en bytes, de `pbBlob` .  
   
 ## <a name="return-value"></a>Valor devuelto  
- `S_OK` si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](/windows/win32/seccrypto/common-hresult-values) para una lista).  
+ `S_OK`Si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](/windows/win32/seccrypto/common-hresult-values) para una lista).  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Metahost. h  
   
  **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
-- [StrongNameGetBlob (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md)
-- [ICLRStrongName (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [Método StrongNameGetBlob](iclrstrongname-strongnamegetblob-method.md)
+- [ICLRStrongName (Interfaz)](iclrstrongname-interface.md)
