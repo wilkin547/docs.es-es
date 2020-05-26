@@ -2,12 +2,12 @@
 title: Implementación del nivel de persistencia de la infraestructura con Entity Framework Core
 description: Arquitectura de microservicios de .NET para aplicaciones de .NET en contenedor | Información sobre la implementación del nivel de persistencia de la infraestructura con Entity Framework Core.
 ms.date: 01/30/2020
-ms.openlocfilehash: 7ab3be0d6a5affda478f7ec8f6c356571e304759
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: c91980504b0f9de859c6d211f3a1f47435b2d3cc
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805483"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396259"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementación del nivel de persistencia de infraestructura con Entity Framework Core
 
@@ -117,7 +117,7 @@ Al usar campos en lugar de propiedades, se conserva la entidad `OrderItem` como
 En el nivel de implementación, un repositorio no es más que una clase con código de persistencia de datos coordinada por una unidad de trabajo (DBContext en EF Core) al realizar actualizaciones, como se muestra en la clase siguiente:
 
 ```csharp
-// using statements...
+// using directives...
 namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositories
 {
     public class BuyerRepository : IBuyerRepository

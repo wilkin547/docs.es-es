@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0bfbc527-bea2-43ce-b041-69186f4440dd
 topic_type:
 - apiref
-ms.openlocfilehash: 20ad5485b8603cc7de1c27c00d53c8939871d525
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8475362ede5ea28009d5abc54c286d6f2a6fed0f
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178037"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804638"
 ---
 # <a name="ihostmallocdebugalloc-method"></a>IHostMAlloc::DebugAlloc (Método)
-Solicita que el host asigne la cantidad especificada de memoria del montón y, además, realice un seguimiento de dónde se asignó la memoria.  
+Solicita que el host asigne la cantidad de memoria especificada del montón y, además, realiza un seguimiento del lugar en el que se asignó la memoria.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,45 +39,45 @@ HRESULT DebugAlloc (
   
 ## <a name="parameters"></a>Parámetros  
  `cbSize`  
- [en] El tamaño, en bytes, de la solicitud de asignación de memoria actual.  
+ de Tamaño, en bytes, de la solicitud de asignación de memoria actual.  
   
  `dwCriticalLevel`  
- [en] Uno de los [eMemoryCriticalLevel](../../../../docs/framework/unmanaged-api/hosting/ememorycriticallevel-enumeration.md) valores, que indica el impacto de un error de asignación.  
+ de Uno de los valores de [ememorycriticallevel (](ememorycriticallevel-enumeration.md) , que indica el impacto de un error de asignación.  
   
  `pszFileName`  
- [en] El archivo de código del ejecutable que se está depurando.  
+ de El archivo de código del ejecutable que se está depurando.  
   
  `iLineNo`  
- [en] El número `pszFileName` de línea en el que se solicitó la asignación.  
+ de El número de línea en el `pszFileName` que se solicitó la asignación.  
   
  `ppMem`  
- [fuera] Un puntero a la memoria asignada, o null si no se pudo completar la solicitud.  
+ enuncia Puntero a la memoria asignada o null si no se pudo completar la solicitud.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`DebugAlloc`regresó con éxito.|  
-|HOST_E_CLRNOTAVAILABLE|El CLR no se ha cargado en un proceso o CLR está en un estado en el que no puede ejecutar código administrado o procesar la llamada correctamente.|  
-|HOST_E_TIMEOUT|Se adelantó la llamada.|  
-|HOST_E_NOT_OWNER|El autor de la llamada no es el propietario de la cerradura.|  
-|HOST_E_ABANDONED|Un evento se canceló mientras un hilo bloqueado o fibra lo esperaba.|  
-|E_FAIL|Se ha producido un fallo catastrófico desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar dentro del proceso. Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|`DebugAlloc`se devolvió correctamente.|  
+|HOST_E_CLRNOTAVAILABLE|CLR no se ha cargado en un proceso o CLR está en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
+|HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
+|HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
+|HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
+|E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
 |E_OUTOFMEMORY|No había suficiente memoria disponible para completar la solicitud de asignación.|  
   
 ## <a name="remarks"></a>Observaciones  
- El CLR obtiene un puntero de interfaz a un [IHostMalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md) instancia mediante una llamada a la [IHostMemoryManager::CreateMalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md) método. `DebugAlloc`permite que el tiempo de ejecución obtenga información de archivo de código para su uso durante la depuración.  
+ CLR obtiene un puntero de interfaz a una instancia de [IHostMAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md) llamando al método [IHostMemoryManager:: CreateMAlloc (](ihostmemorymanager-createmalloc-method.md) . `DebugAlloc`permite al motor en tiempo de ejecución obtener información del archivo de código para su uso durante la depuración.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** MScorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Incluido como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte también
 
-- [IHostMemoryManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
-- [IHostMalloc (interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)
+- [IHostMemoryManager (Interfaz)](ihostmemorymanager-interface.md)
+- [IHostMalloc (Interfaz)](ihostmalloc-interface.md)

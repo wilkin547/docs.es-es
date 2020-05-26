@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo escribir código para examinar la 
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 1283d7d957c72558652b96cb428efd0f071f0184
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5734e1be6b59bfe3eae97f29d1bd91e7e3a3623f
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146013"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761868"
 ---
 # <a name="interpreting-expressions"></a>Interpretación de expresiones
 
@@ -51,7 +51,7 @@ Comencemos con el ejemplo de adición de la instrucción de esta sección.
 Expression<Func<int>> sum = () => 1 + 2;
 ```
 
-> No estoy usando `var` para declarar este árbol de expresión, y no es posible porque el lado derecho de la asignación tiene un tipo implícito. Para comprender esto mejor, lea [aquí](implicitly-typed-lambda-expressions.md).
+> No estoy usando `var` para declarar este árbol de expresión, y no es posible porque el lado derecho de la asignación tiene un tipo implícito.
 
 El nodo raíz es `LambdaExpression`. Para obtener el código interesante en el lado derecho del operador `=>`, necesita buscar uno de los elementos secundarios de `LambdaExpression`. Haremos esto con todas las expresiones de esta sección. El nodo primario nos ayuda a encontrar el tipo de valor devuelto de `LambdaExpression`.
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 18485a27-cae3-4c6a-baa8-f7df601122d5
 topic_type:
 - apiref
-ms.openlocfilehash: 107644270dbc9b14912dac9b97fc716aaeba7f4f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c50c109dc786a0749cca1543d10b7d172e03f0b1
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133217"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83805352"
 ---
 # <a name="icorthreadpool-interface"></a>ICorThreadpool (Interfaz)
 Proporciona métodos para tener acceso al grupo de subprocesos.  
@@ -31,27 +31,27 @@ Proporciona métodos para tener acceso al grupo de subprocesos.
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[CorRegisterWaitForSingleObject (método)](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corregisterwaitforsingleobject-method.md)|Reservado para uso interno.|  
-|[CorUnregisterWait (método)](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corunregisterwait-method.md)|Reservado para uso interno.|  
-|[CorQueueUserWorkItem (método)](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corqueueuserworkitem-method.md)|Reservado para uso interno.|  
-|[CorCreateTimer (método)](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corcreatetimer-method.md)|Reservado para uso interno.|  
-|[CorChangeTimer (método)](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corchangetimer-method.md)|Reservado para uso interno.|  
-|[CorDeleteTimer (método)](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-cordeletetimer-method.md)|Reservado para uso interno.|  
-|[CorBindIoCompletionCallback (método)](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corbindiocompletioncallback-method.md)|Reservado para uso interno.|  
-|[CorCallOrQueueUserWorkItem (método)](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corcallorqueueuserworkitem-method.md)|Reservado para uso interno.|  
-|[CorSetMaxThreads (método)](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corsetmaxthreads-method.md)|Reservado para uso interno.|  
-|[CorGetMaxThreads (método)](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corgetmaxthreads-method.md)|Reservado para uso interno.|  
-|[CorGetAvailableThreads (método)](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corgetavailablethreads-method.md)|Reservado para uso interno.|  
+|[Método CorRegisterWaitForSingleObject](icorthreadpool-corregisterwaitforsingleobject-method.md)|Reservado para uso interno.|  
+|[Método CorUnregisterWait](icorthreadpool-corunregisterwait-method.md)|Reservado para uso interno.|  
+|[Método CorQueueUserWorkItem](icorthreadpool-corqueueuserworkitem-method.md)|Reservado para uso interno.|  
+|[Método CorCreateTimer](icorthreadpool-corcreatetimer-method.md)|Reservado para uso interno.|  
+|[Método CorChangeTimer](icorthreadpool-corchangetimer-method.md)|Reservado para uso interno.|  
+|[Método CorDeleteTimer](icorthreadpool-cordeletetimer-method.md)|Reservado para uso interno.|  
+|[Método CorBindIoCompletionCallback](icorthreadpool-corbindiocompletioncallback-method.md)|Reservado para uso interno.|  
+|[Método CorCallOrQueueUserWorkItem](icorthreadpool-corcallorqueueuserworkitem-method.md)|Reservado para uso interno.|  
+|[Método CorSetMaxThreads](icorthreadpool-corsetmaxthreads-method.md)|Reservado para uso interno.|  
+|[Método CorGetMaxThreads](icorthreadpool-corgetmaxthreads-method.md)|Reservado para uso interno.|  
+|[Método CorGetAvailableThreads](icorthreadpool-corgetavailablethreads-method.md)|Reservado para uso interno.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
  **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Interfaces de hospedaje](hosting-interfaces.md)

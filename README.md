@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c6dcca8384cbd97a968b77e4bc834afa1f683298
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: b90821d0d3495f6006d1d97b3d3377e984c74c5e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895670"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613595"
 ---
 # <a name="net-docs"></a>Documentos de .NET
 
@@ -12,7 +12,6 @@ ms.locfileid: "82895670"
 
 Este repositorio contiene documentación conceptual de .NET. El [sitio de documentación de .NET](https://docs.microsoft.com/dotnet) se ha creado a partir de varios repositorios, además de este:
 
-- [Ejemplos y fragmentos de código](https://github.com/dotnet/samples)
 - [Referencia de API](https://github.com/dotnet/dotnet-api-docs)
 - [Referencia del SDK de .NET Compiler Platform](https://github.com/dotnet/roslyn-api-docs)
 

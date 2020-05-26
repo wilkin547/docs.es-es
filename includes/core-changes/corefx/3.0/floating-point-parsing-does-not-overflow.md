@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 87ada29e70a94c39e7ffb74767b99d49c52444af
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: 935d9b2368ea4a0eeca7943dcbd584d24d2a6633
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021650"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721404"
 ---
 ### <a name="floating-point-parsing-operations-no-longer-fail-or-throw-an-overflowexception"></a>Las operaciones de análisis de punto flotante ya no producen un error o lanzan una excepción OverflowException
 
@@ -43,7 +43,7 @@ Bibliotecas de Core .NET
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `Overload:System.Double.Parse`
 - `Overload:System.Double.TryParse`

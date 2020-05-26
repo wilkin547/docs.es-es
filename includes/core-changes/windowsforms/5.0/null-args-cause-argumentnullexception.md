@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 7a6b0b15de4295506ff03b8566c06010b918566c
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: ab8d801f3cdcfbeb6de20146754b26e3713d7dd6
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158412"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702458"
 ---
 ### <a name="winforms-methods-now-throw-argumentnullexception"></a>Los métodos de WinForms inician ahora la excepción ArgumentNullException
 
@@ -49,7 +49,7 @@ A partir de .NET 5.0 (versión preliminar 2):
 
 <!-- 
 
-### Affected APIs
+#### Affected APIs
 
 - `M:System.Windows.Forms.Control.ControlCollection.#ctor(System.Windows.Forms.Control)`
 - `M:System.Windows.Forms.TabControl.GetToolTipText(System.Object)`

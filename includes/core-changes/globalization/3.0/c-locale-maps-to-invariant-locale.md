@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d35de48dd22003c851cf5dba9e8517ec48b9217b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c0551fa086644497c631cd9b6d7058398ff9ccfa
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74567783"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702299"
 ---
 ### <a name="c-locale-maps-to-the-invariant-locale"></a>La configuración regional de “C” se asigna a la configuración regional invariable
 
@@ -20,18 +20,20 @@ La asignación de “C” a la referencia cultural en_US_POSIX causaba confusió
 
 3.0
 
-### <a name="recommended-action"></a>Acción recomendada
+#### <a name="recommended-action"></a>Acción recomendada
 
 Nada más aparte de conocer este cambio. Este cambio solo afecta a las aplicaciones que usan la asignación de configuración regional de “C”.
 
-### <a name="category"></a>Categoría
+#### <a name="category"></a>Categoría
 
 Globalización
 
-### <a name="affected-apis"></a>API afectadas
+#### <a name="affected-apis"></a>API afectadas
 
 Este cambio afecta a todas las API de intercalación y de referencia cultural.
 
 <!--
+
+#### Affected APIs
 
 -->

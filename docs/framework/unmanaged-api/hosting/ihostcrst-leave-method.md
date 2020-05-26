@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: dfc51d9e-b36d-4dba-9ea1-4f63fa0601ae
 topic_type:
 - apiref
-ms.openlocfilehash: 050af068579d84b984ed83377d0c201e281bd154
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 08af77c3a158b97cd698dbaeebdc7cdf1b9acfc3
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130535"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804890"
 ---
 # <a name="ihostcrstleave-method"></a>IHostCrst::Leave (Método)
-Deja la sección crítica representada por la instancia actual de [IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md).  
+Deja la sección crítica representada por la instancia actual de [IHostCrst](ihostcrst-interface.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,27 +35,27 @@ HRESULT Leave ();
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`Leave` devolvió correctamente.|  
+|S_OK|`Leave`se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|El Common Language Runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
 |HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
 |HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
-|E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, el CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
+|E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
- `Leave` permite que el CLR se comunique directamente con la implementación de subprocesos del host, en lugar de usar la función de `LeaveCriticalSection` de Win32 correspondiente. Un subproceso que toma la propiedad de la sección crítica representada por la instancia de `IHostCrst` actual debe llamar a `Leave` una vez cada vez que entra en la sección crítica.  
+## <a name="remarks"></a>Observaciones  
+ `Leave`permite que el CLR se comunique directamente con la implementación de subprocesos del host, en lugar de usar la función de Win32 correspondiente `LeaveCriticalSection` . Un subproceso que toma la propiedad de la sección crítica representada por la `IHostCrst` instancia actual debe llamar `Leave` una vez para cada vez que entra en la sección crítica.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
  **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [ICLRSyncManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [IHostCrst (interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)
-- [IHostSyncManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- [ICLRSyncManager (Interfaz)](iclrsyncmanager-interface.md)
+- [IHostCrst (Interfaz)](ihostcrst-interface.md)
+- [IHostSyncManager (Interfaz)](ihostsyncmanager-interface.md)

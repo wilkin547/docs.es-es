@@ -2,12 +2,12 @@
 title: Tipos de valor devueltos asincrónicos (C#)
 ms.date: 04/14/2020
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 73a6e1924652c8635377547e2faddc864ac5540a
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: c2584f1e285a7ab76eb43f9a211a8d2a51c2c55e
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389133"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761881"
 ---
 # <a name="async-return-types-c"></a>Tipos de valor devueltos asincrónicos (C#)
 
@@ -26,7 +26,7 @@ El tipo de valor devuelto <xref:System.Threading.Tasks.Task%601> se usa para un 
   
 En el ejemplo siguiente, el método asincrónico `GetLeisureHours` contiene una instrucción `return` que devuelve un entero. Por tanto, la declaración del método debe tener un tipo de valor devuelto de `Task<int>`.  El método asincrónico <xref:System.Threading.Tasks.Task.FromResult%2A> es un marcador de posición para una operación que devuelve una cadena.
   
-:::code language="csharp" source="./snippets/async-returns1.cs" id="SnippetFirstExample":::
+:::code language="csharp" source="./snippets/async-return-types/async-returns1.cs" id="SnippetFirstExample":::
 
 Cuando se llama a `GetLeisureHours` desde una expresión await en el método `ShowTodaysInfo`, esta recupera el valor entero (el valor de `leisureHours`) que está almacenado en la tarea que devuelve el método `GetLeisureHours`. Para más información sobre las expresiones await, vea [await](../../../language-reference/operators/await.md).  
   
@@ -35,14 +35,14 @@ Puede comprender mejor cómo `await` recupera el resultado de `Task<T>` si separ
 > [!IMPORTANT]
 > La propiedad <xref:System.Threading.Tasks.Task%601.Result%2A> es una propiedad de bloqueo. Si se intenta acceder a ella antes de que termine su tarea, se bloquea el subproceso que está activo actualmente hasta que finaliza la tarea y el valor está disponible. En la mayoría de los casos, se debe tener acceso al valor usando `await` en lugar de tener acceso directamente a la propiedad. <br/> En el ejemplo anterior se ha recuperado el valor de la propiedad <xref:System.Threading.Tasks.Task%601.Result%2A> para bloquear el subproceso principal de manera que el método `ShowTodaysInfo` pueda terminar la ejecución antes de que finalice la aplicación.  
 
-:::code language="csharp" source="./snippets/async-returns1a.cs" id="SnippetSecondVersion":::
+:::code language="csharp" source="./snippets/async-return-types/async-returns1a.cs" id="SnippetSecondVersion":::
 
 ## <a name="task-return-type"></a>Tipo de valor devuelto Task  
 Los métodos asincrónicos que no contienen una instrucción `return` o que contienen una instrucción `return` que no devuelve un operando tienen normalmente un tipo de valor devuelto de <xref:System.Threading.Tasks.Task>. Dichos métodos devuelven `void` si se ejecutan de manera sincrónica. Si se usa un tipo de valor devuelto <xref:System.Threading.Tasks.Task> para un método asincrónico, un método de llamada puede usar un operador `await` para suspender la finalización del llamador hasta que finalice el método asincrónico llamado.  
   
 En el ejemplo siguiente, el método asincrónico `WaitAndApologize` no contiene una instrucción `return`, de manera que el método devuelve un objeto <xref:System.Threading.Tasks.Task>. La devolución de `Task` permite que se espere a `WaitAndApologize`. El tipo <xref:System.Threading.Tasks.Task> no incluye una propiedad `Result` porque no tiene ningún valor devuelto.  
 
-:::code language="csharp" source="./snippets/async-returns2.cs" id="SnippetTaskReturn":::
+:::code language="csharp" source="./snippets/async-return-types/async-returns2.cs" id="SnippetTaskReturn":::
 
 Se espera a `WaitAndApologize` mediante una instrucción await en lugar de una expresión await, similar a la instrucción de llamada para un método sincrónico que devuelve void. En este caso, la aplicación de un operador await no genera un valor.  
   
@@ -50,7 +50,7 @@ Igual que en el ejemplo <xref:System.Threading.Tasks.Task%601> anterior, puede s
   
 El código siguiente separa la llamada del método `WaitAndApologize` de la espera de la tarea que el método devuelve.  
 
-:::code language="csharp" source="./snippets/async-returns2a.cs" id="SnippetAwaitTask":::
+:::code language="csharp" source="./snippets/async-return-types/async-returns2a.cs" id="SnippetAwaitTask":::
 
 ## <a name="void-return-type"></a>Tipo de valor devuelto Void
 
@@ -62,7 +62,7 @@ Para obtener más información sobre cómo capturar excepciones en métodos asin
   
 En el ejemplo siguiente se muestra el comportamiento de un controlador de eventos asincrónicos. En el código de ejemplo, un controlador de eventos asincrónicos debe informar al subproceso principal de que ha terminado. Después, el subproceso principal puede esperar a que un controlador de eventos asincrónicos finalice antes de salir del programa.
 
-:::code language="csharp" source="./snippets/async-returns3.cs":::
+:::code language="csharp" source="./snippets/async-return-types/async-returns3.cs":::
 
 ## <a name="generalized-async-return-types-and-valuetasktresult"></a>Tipos de valor devueltos asincrónicos generalizados y ValueTask\<TResult\>
 
@@ -72,13 +72,13 @@ Como <xref:System.Threading.Tasks.Task> y <xref:System.Threading.Tasks.Task%601>
 
 .NET proporciona la estructura <xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType> como una implementación ligera de un valor de devolución de tareas generalizado. Para usar el tipo <xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType>, debe agregar el paquete NuGet de `System.Threading.Tasks.Extensions` a su proyecto. En el ejemplo siguiente se usa la estructura <xref:System.Threading.Tasks.ValueTask%601> para recuperar el valor de dos tiradas de dado.
   
-:::code language="csharp" source="./snippets/async-valuetask.cs":::
+:::code language="csharp" source="./snippets/async-return-types/async-valuetask.cs":::
 
 ## <a name="async-streams-with-iasyncenumerablet"></a>Secuencias asincrónicas con IAsyncEnumerable\<T\>
 
 A partir de C# 8.0, un método asincrónico puede devolver una *secuencia asincrónica*, representada por <xref:System.Collections.Generic.IAsyncEnumerable%601>. Una secuencia asincrónica proporciona una manera de enumerar los elementos leídos de una secuencia cuando se generan elementos en fragmentos con llamadas asincrónicas repetidas. En el ejemplo siguiente se muestra un método asincrónico que genera una secuencia asincrónica:
 
-:::code language="csharp" source="./snippets/AsyncStreams.cs" id="SnippetGenerateAsyncStream":::
+:::code language="csharp" source="./snippets/async-return-types/AsyncStreams.cs" id="SnippetGenerateAsyncStream":::
 
 En el ejemplo anterior, las líneas de una cadena se leen de forma asincrónica. Una vez que se ha leído cada línea, el código enumera cada palabra de la cadena. Los autores de la llamada enumerarían cada palabra mediante la instrucción `await foreach`. El método espera cuando necesita leer de forma asincrónica la línea siguiente de la cadena de origen.
 

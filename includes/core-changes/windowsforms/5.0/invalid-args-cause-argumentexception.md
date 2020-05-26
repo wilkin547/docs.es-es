@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5212c5d9513a8ef5f51693857d0ddb60db4e49b9
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: f1fc70075ef09a4f036c69788342c07ee51d72ce
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158413"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702498"
 ---
 ### <a name="winforms-methods-now-throw-argumentexception"></a>Los métodos de WinForms inician ahora la excepción ArgumentException
 
@@ -41,7 +41,7 @@ Windows Forms
 
 <!-- 
 
-### Affected APIs
+#### Affected APIs
 
 - `M:System.Windows.Forms.TabControl.GetToolTipText(System.Object)`
 

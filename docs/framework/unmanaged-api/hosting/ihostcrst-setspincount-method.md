@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 863fc8ce-9b8a-477e-8dd8-75c8544bb43a
 topic_type:
 - apiref
-ms.openlocfilehash: a8642235cda359b849c49a35ab565397402c37d2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2436809f35d5c46416f48987cc92feb51d291a6a
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130512"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804883"
 ---
 # <a name="ihostcrstsetspincount-method"></a>IHostCrst::SetSpinCount (Método)
-Establece el número de giros de la instancia de [IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) actual.  
+Establece el número de giros de la instancia de [IHostCrst](ihostcrst-interface.md) actual.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,35 +35,35 @@ HRESULT SetSpinCount (
   
 ## <a name="parameters"></a>Parámetros  
  `dwSpinCount`  
- de Nuevo número de giros de la instancia de `IHostCrst` actual.  
+ de Nuevo número de giros de la `IHostCrst` instancia actual.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`SetSpinCount` devolvió correctamente.|  
+|S_OK|`SetSpinCount`se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|El Common Language Runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
 |HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
 |HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
-|E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, el CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
+|E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
- En sistemas de varios procesadores, si la sección crítica representada por la instancia de `IHostCrst` actual no está disponible, un subproceso de llamada gira `dwSpinCount` veces antes de llamar a [IHostSemaphore:: wait](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-wait-method.md) en un semáforo asociado a la sección crítica. Si la sección crítica se vuelve gratuita durante la operación de giro, el subproceso que realiza la llamada evita la operación de espera.  
+## <a name="remarks"></a>Observaciones  
+ En sistemas de varios procesadores, si la sección crítica representada por la `IHostCrst` instancia actual no está disponible, un subproceso de llamada gira los `dwSpinCount` tiempos antes de llamar a [IHostSemaphore:: wait](ihostsemaphore-wait-method.md) en un semáforo asociado a la sección crítica. Si la sección crítica se vuelve gratuita durante la operación de giro, el subproceso que realiza la llamada evita la operación de espera.  
   
- El uso de `dwSpinCount` es idéntico al uso del parámetro con el mismo nombre en la función de `InitializeCriticalSectionAndSpinCount` de Win32.  
+ El uso de `dwSpinCount` es idéntico al uso del parámetro con el mismo nombre en la función de Win32 `InitializeCriticalSectionAndSpinCount` .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
  **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [ICLRSyncManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [IHostCrst (interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)
-- [IHostSyncManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- [ICLRSyncManager (Interfaz)](iclrsyncmanager-interface.md)
+- [IHostCrst (Interfaz)](ihostcrst-interface.md)
+- [IHostSyncManager (Interfaz)](ihostsyncmanager-interface.md)

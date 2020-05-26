@@ -740,18 +740,6 @@
                                   href: programming-guide/concepts/linq/intermediate-materialization.md
                                 - name: Encadenar operadores de consulta estándar
                                   href: programming-guide/concepts/linq/chaining-standard-query-operators-together.md
-                            - name: 'Tutorial: Encadenar consultas'
-                              items:
-                                - name: Ejecución y evaluación diferidas en LINQ to XML
-                                  href: programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md
-                                - name: Ejemplo de ejecución diferida
-                                  href: programming-guide/concepts/linq/deferred-execution-example.md
-                                - name: Ejemplo de encadenamiento de consultas
-                                  href: programming-guide/concepts/linq/chaining-queries-example.md
-                                - name: Materialización intermedia
-                                  href: programming-guide/concepts/linq/intermediate-materialization.md
-                                - name: Encadenar operadores de consulta estándar
-                                  href: programming-guide/concepts/linq/chaining-standard-query-operators-together.md
                             - name: 'Tutorial: Manipulación de contenido en un documento WordprocessingML'
                               items:
                                 - name: Forma de documentos de WordprocessingML

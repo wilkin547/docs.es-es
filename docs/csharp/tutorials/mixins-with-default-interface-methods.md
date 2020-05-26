@@ -3,12 +3,12 @@ title: Creación de tipos mixin mediante métodos de interfaz predeterminados
 description: Con el uso de los miembros de interfaz predeterminados, puede extender las interfaces con implementaciones predeterminadas opcionales para los implementadores.
 ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: ee0536ef51f9bea3e6851be23cc19fa28cc6916b
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 0095d76eadfe0c6a1b30bf8a0c5000509f5e1bf9
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134374"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396711"
 ---
 # <a name="tutorial-mix-functionality-in-when-creating-classes-using-interfaces-with-default-interface-methods"></a>Tutorial: Funcionalidad de combinación al crear clases mediante interfaces con métodos de interfaz predeterminados
 
@@ -53,21 +53,21 @@ Vamos a crear el código para mostrar estas diferencias.
 
 Empiece por crear la interfaz que define el comportamiento de todas las luces:
 
-[!code-csharp[Declare base interface](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/UnusedExampleCode.cs?name=SnippetILightInterfaceV1)]
+[!code-csharp[Declare base interface](./snippets/mixins-with-default-interface-methods/UnusedExampleCode.cs?name=SnippetILightInterfaceV1)]
 
 Un accesorio básico de luces de techo puede implementar esta interfaz, tal como se muestra en el código siguiente:
 
-[!code-csharp[First overhead light](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/UnusedExampleCode.cs?name=SnippetOverheadLightV1)]
+[!code-csharp[First overhead light](./snippets/mixins-with-default-interface-methods/UnusedExampleCode.cs?name=SnippetOverheadLightV1)]
 
 En este tutorial, el código no dispone de dispositivos IoT, pero emula esas actividades escribiendo mensajes en la consola. Puede explorar el código sin automatizar los dispositivos de hogar.
 
 A continuación, vamos a definir la interfaz para una luz que se pueda apagar automáticamente después de un tiempo de espera:
 
-[!code-csharp[pure Timer interface](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/UnusedExampleCode.cs?name=SnippetPureTimerInterface)]
+[!code-csharp[pure Timer interface](./snippets/mixins-with-default-interface-methods/UnusedExampleCode.cs?name=SnippetPureTimerInterface)]
 
 Podría agregar una implementación básica a la luz de techo, pero una solución mejor es modificar esta definición de interfaz para proporcionar una implementación predeterminada `virtual`:
 
-[!code-csharp[Timer interface](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ITimerLight.cs?name=SnippetTimerLightFinal)]
+[!code-csharp[Timer interface](./snippets/mixins-with-default-interface-methods/ITimerLight.cs?name=SnippetTimerLightFinal)]
 
 Al agregar ese cambio, la clase `OverheadLight` puede implementar la función de temporizador mediante la declaración de la compatibilidad con la interfaz:
 
@@ -77,7 +77,7 @@ public class OverheadLight : ITimerLight { }
 
 Un tipo de luz diferente puede admitir un protocolo más sofisticado. Puede proporcionar su propia implementación de `TurnOnFor`, como se muestra en el código siguiente:
 
-[!code-csharp[Override the timer function](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/HalogenLight.cs?name=SnippetHalogenLight)]
+[!code-csharp[Override the timer function](./snippets/mixins-with-default-interface-methods/HalogenLight.cs?name=SnippetHalogenLight)]
 
 A diferencia de los métodos de clase virtual de invalidación, la declaración de `TurnOnFor` en la clase `HalogenLight` no utiliza la palabra clave `override`.
 
@@ -85,19 +85,19 @@ A diferencia de los métodos de clase virtual de invalidación, la declaración 
 
 Las ventajas de los métodos de interfaz predeterminados resultan más claras a medida que se introducen funcionalidades más avanzadas. El uso de interfaces permite combinar las funcionalidades. También permite que cada autor de clase elija entre la implementación predeterminada y una implementación personalizada. Vamos a agregar una interfaz con una implementación predeterminada para una luz parpadeante:
 
-[!code-csharp[Define the blinking light interface](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/IBlinkingLight.cs?name=SnippetBlinkingLight)]
+[!code-csharp[Define the blinking light interface](./snippets/mixins-with-default-interface-methods/IBlinkingLight.cs?name=SnippetBlinkingLight)]
 
 La implementación predeterminada permite que cualquier luz parpadee. La luz de techo puede agregar las funcionalidades de temporizador y de parpadeo mediante la implementación predeterminada:
 
-[!code-csharp[Use the default blink function](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/OverheadLight.cs?name=SnippetOverheadLight)]
+[!code-csharp[Use the default blink function](./snippets/mixins-with-default-interface-methods/OverheadLight.cs?name=SnippetOverheadLight)]
 
 Un nuevo tipo de luz, la clase `LEDLight`, admite la función de temporizador y la función de parpadeo directamente. Este estilo de luz implementa las interfaces `ITimerLight` y `IBlinkingLight`, e invalida el método `Blink`:
 
-[!code-csharp[Override the blink function](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/LEDLight.cs?name=SnippetLEDLight)]
+[!code-csharp[Override the blink function](./snippets/mixins-with-default-interface-methods/LEDLight.cs?name=SnippetLEDLight)]
 
 La clase `ExtraFancyLight` podría admitir funciones de parpadeo y de temporizador directamente:
 
-[!code-csharp[Override the blink and timer function](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ExtraFancyLight.cs?name=SnippetExtraFancyLight)]
+[!code-csharp[Override the blink and timer function](./snippets/mixins-with-default-interface-methods/ExtraFancyLight.cs?name=SnippetExtraFancyLight)]
 
 La clase `HalogenLight` que ha creado anteriormente no admite el parpadeo. Por lo tanto, no agregue la interfaz `IBlinkingLight` a la lista de interfaces compatibles.
 
@@ -105,21 +105,21 @@ La clase `HalogenLight` que ha creado anteriormente no admite el parpadeo. Por l
 
 A continuación, vamos a escribir código de prueba. Puede usar la característica de C# de [coincidencia de patrones](../pattern-matching.md) para determinar las funcionalidades de una luz mediante el examen de las interfaces que admite.  El método siguiente ejercita las funcionalidades admitidas por cada luz:
 
-[!code-csharp[Test a light's capabilities](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/Program.cs?name=SnippetTestLightFunctions)]
+[!code-csharp[Test a light's capabilities](./snippets/mixins-with-default-interface-methods/Program.cs?name=SnippetTestLightFunctions)]
 
 El código siguiente en el método `Main` crea cada tipo de luz secuencialmente y lo prueba:
 
-[!code-csharp[Test a light's capabilities](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/Program.cs?name=SnippetMainMethod)]
+[!code-csharp[Test a light's capabilities](./snippets/mixins-with-default-interface-methods/Program.cs?name=SnippetMainMethod)]
 
 ## <a name="how-the-compiler-determines-best-implementation"></a>Cómo determina el compilador la mejor implementación
 
 En este escenario se muestra una interfaz base sin ninguna implementación. Agregar un método a la interfaz `ILight` presenta nuevas complejidades. Las reglas del lenguaje que rigen los métodos de interfaz predeterminados minimizan el efecto en las clases concretas que implementan varias interfaces derivadas. Vamos a mejorar la interfaz original con un nuevo método para mostrar cómo cambia su uso. Cada luz del indicador puede informar de su estado de energía como un valor enumerado:
 
-[!code-csharp[Enumeration for power status](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetPowerStatus)]
+[!code-csharp[Enumeration for power status](./snippets/mixins-with-default-interface-methods/ILight.cs?name=SnippetPowerStatus)]
 
 La implementación predeterminada presupone la ausencia de alimentación:
 
-[!code-csharp[Report a default power status](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetILightInterface)]
+[!code-csharp[Report a default power status](./snippets/mixins-with-default-interface-methods/ILight.cs?name=SnippetILightInterface)]
 
 Estos cambios se compilan correctamente, aunque la clase `ExtraFancyLight` declara la compatibilidad con la interfaz de `ILight` y las interfaces derivadas `ITimerLight` y `IBlinkingLight`. Solo hay una implementación "más cercana" declarada en la interfaz `ILight`. Cualquier clase que declare una invalidación se convertirá en la implementación "más cercana". Ha visto ejemplos en las clases anteriores que reemplazaron los miembros de otras interfaces derivadas.
 
