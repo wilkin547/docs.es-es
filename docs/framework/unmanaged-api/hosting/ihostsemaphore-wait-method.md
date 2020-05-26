@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0da962a3-ce55-44dd-ab7a-14ad7105af4a
 topic_type:
 - apiref
-ms.openlocfilehash: bf09f7bc6c3e3aabfc16f9cad277c46be024b01d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 22d570711c293dd8c0cc6fefd198dd46d6489bea
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139454"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83803537"
 ---
-# <a name="ihostsemaphorewait-method"></a><span data-ttu-id="a30ae-102">IHostSemaphore::Wait (Método)</span><span class="sxs-lookup"><span data-stu-id="a30ae-102">IHostSemaphore::Wait Method</span></span>
-<span data-ttu-id="a30ae-103">Hace que la instancia actual de [IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md) espere hasta que sea propiedad o transcurra el período de tiempo especificado.</span><span class="sxs-lookup"><span data-stu-id="a30ae-103">Causes the current [IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md) instance to wait until it is owned or the specified amount of time elapses.</span></span>  
+# <a name="ihostsemaphorewait-method"></a><span data-ttu-id="007e5-102">IHostSemaphore::Wait (Método)</span><span class="sxs-lookup"><span data-stu-id="007e5-102">IHostSemaphore::Wait Method</span></span>
+<span data-ttu-id="007e5-103">Hace que la instancia actual de [IHostSemaphore](ihostsemaphore-interface.md) espere hasta que sea propiedad o transcurra el período de tiempo especificado.</span><span class="sxs-lookup"><span data-stu-id="007e5-103">Causes the current [IHostSemaphore](ihostsemaphore-interface.md) instance to wait until it is owned or the specified amount of time elapses.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a30ae-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="a30ae-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="007e5-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="007e5-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Wait (  
@@ -34,38 +34,38 @@ HRESULT Wait (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a30ae-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="a30ae-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="007e5-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="007e5-105">Parameters</span></span>  
  `dwMilliseconds`  
- <span data-ttu-id="a30ae-106">de Número de milisegundos que se va a esperar antes de devolver, si la instancia de `IHostSemaphore` actual no es propiedad.</span><span class="sxs-lookup"><span data-stu-id="a30ae-106">[in] The number of milliseconds to wait before returning, if the current `IHostSemaphore` instance is not owned.</span></span>  
+ <span data-ttu-id="007e5-106">de Número de milisegundos que se va a esperar antes de devolver, si la `IHostSemaphore` instancia actual no es propiedad.</span><span class="sxs-lookup"><span data-stu-id="007e5-106">[in] The number of milliseconds to wait before returning, if the current `IHostSemaphore` instance is not owned.</span></span>  
   
  `option`  
- <span data-ttu-id="a30ae-107">de Uno de los valores de [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) , que especifica qué acción debe realizar el host si esta operación se bloquea.</span><span class="sxs-lookup"><span data-stu-id="a30ae-107">[in] One of the [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) values, specifying what action the host should take if this operation blocks.</span></span>  
+ <span data-ttu-id="007e5-107">de Uno de los valores de [WAIT_OPTION](wait-option-enumeration.md) , que especifica qué acción debe realizar el host si esta operación se bloquea.</span><span class="sxs-lookup"><span data-stu-id="007e5-107">[in] One of the [WAIT_OPTION](wait-option-enumeration.md) values, specifying what action the host should take if this operation blocks.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a30ae-108">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="a30ae-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="007e5-108">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="007e5-108">Return Value</span></span>  
   
-|<span data-ttu-id="a30ae-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="a30ae-109">HRESULT</span></span>|<span data-ttu-id="a30ae-110">Descripción</span><span class="sxs-lookup"><span data-stu-id="a30ae-110">Description</span></span>|  
+|<span data-ttu-id="007e5-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="007e5-109">HRESULT</span></span>|<span data-ttu-id="007e5-110">Descripción</span><span class="sxs-lookup"><span data-stu-id="007e5-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="a30ae-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="a30ae-111">S_OK</span></span>|<span data-ttu-id="a30ae-112">`Wait` devolvió correctamente.</span><span class="sxs-lookup"><span data-stu-id="a30ae-112">`Wait` returned successfully.</span></span>|  
-|<span data-ttu-id="a30ae-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="a30ae-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="a30ae-114">El Common Language Runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.</span><span class="sxs-lookup"><span data-stu-id="a30ae-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="a30ae-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="a30ae-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="a30ae-116">Se agotó el tiempo de espera de la llamada.</span><span class="sxs-lookup"><span data-stu-id="a30ae-116">The call timed out.</span></span>|  
-|<span data-ttu-id="a30ae-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="a30ae-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="a30ae-118">El autor de la llamada no posee el bloqueo.</span><span class="sxs-lookup"><span data-stu-id="a30ae-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="a30ae-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="a30ae-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="a30ae-120">Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.</span><span class="sxs-lookup"><span data-stu-id="a30ae-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="a30ae-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="a30ae-121">E_FAIL</span></span>|<span data-ttu-id="a30ae-122">Se produjo un error grave desconocido.</span><span class="sxs-lookup"><span data-stu-id="a30ae-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="a30ae-123">Cuando un método devuelve E_FAIL, el CLR ya no se puede usar en el proceso.</span><span class="sxs-lookup"><span data-stu-id="a30ae-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="a30ae-124">Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="a30ae-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="a30ae-125">HOST_E_DEADLOCK</span><span class="sxs-lookup"><span data-stu-id="a30ae-125">HOST_E_DEADLOCK</span></span>|<span data-ttu-id="a30ae-126">El host detectó un interbloqueo durante el intervalo de espera y eligió la instancia de `IHostSemaphore` actual como sujeto del interbloqueo.</span><span class="sxs-lookup"><span data-stu-id="a30ae-126">The host detected a deadlock during the wait interval, and chose the current `IHostSemaphore` instance as a deadlock victim.</span></span>|  
+|<span data-ttu-id="007e5-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="007e5-111">S_OK</span></span>|<span data-ttu-id="007e5-112">`Wait`se devolvió correctamente.</span><span class="sxs-lookup"><span data-stu-id="007e5-112">`Wait` returned successfully.</span></span>|  
+|<span data-ttu-id="007e5-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="007e5-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="007e5-114">El Common Language Runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.</span><span class="sxs-lookup"><span data-stu-id="007e5-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="007e5-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="007e5-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="007e5-116">Se agotó el tiempo de espera de la llamada.</span><span class="sxs-lookup"><span data-stu-id="007e5-116">The call timed out.</span></span>|  
+|<span data-ttu-id="007e5-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="007e5-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="007e5-118">El autor de la llamada no posee el bloqueo.</span><span class="sxs-lookup"><span data-stu-id="007e5-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="007e5-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="007e5-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="007e5-120">Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.</span><span class="sxs-lookup"><span data-stu-id="007e5-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="007e5-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="007e5-121">E_FAIL</span></span>|<span data-ttu-id="007e5-122">Se produjo un error grave desconocido.</span><span class="sxs-lookup"><span data-stu-id="007e5-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="007e5-123">Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso.</span><span class="sxs-lookup"><span data-stu-id="007e5-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="007e5-124">Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="007e5-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="007e5-125">HOST_E_DEADLOCK</span><span class="sxs-lookup"><span data-stu-id="007e5-125">HOST_E_DEADLOCK</span></span>|<span data-ttu-id="007e5-126">El host detectó un interbloqueo durante el intervalo de espera y eligió la `IHostSemaphore` instancia actual como sujeto del interbloqueo.</span><span class="sxs-lookup"><span data-stu-id="007e5-126">The host detected a deadlock during the wait interval, and chose the current `IHostSemaphore` instance as a deadlock victim.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="a30ae-127">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a30ae-127">Requirements</span></span>  
- <span data-ttu-id="a30ae-128">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a30ae-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="007e5-127">Requisitos</span><span class="sxs-lookup"><span data-stu-id="007e5-127">Requirements</span></span>  
+ <span data-ttu-id="007e5-128">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="007e5-128">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a30ae-129">**Encabezado:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="a30ae-129">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="007e5-129">**Encabezado:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="007e5-129">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="a30ae-130">**Biblioteca:** Se incluye como recurso en MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="a30ae-130">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="007e5-130">**Biblioteca:** Se incluye como recurso en MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="007e5-130">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="a30ae-131">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a30ae-131">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="007e5-131">**.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="007e5-131">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a30ae-132">Vea también</span><span class="sxs-lookup"><span data-stu-id="a30ae-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="007e5-132">Consulte también</span><span class="sxs-lookup"><span data-stu-id="007e5-132">See also</span></span>
 
-- [<span data-ttu-id="a30ae-133">ICLRSyncManager (interfaz)</span><span class="sxs-lookup"><span data-stu-id="a30ae-133">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [<span data-ttu-id="a30ae-134">IHostAutoEvent (interfaz)</span><span class="sxs-lookup"><span data-stu-id="a30ae-134">IHostAutoEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)
-- [<span data-ttu-id="a30ae-135">IHostManualEvent (interfaz)</span><span class="sxs-lookup"><span data-stu-id="a30ae-135">IHostManualEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)
-- [<span data-ttu-id="a30ae-136">IHostSemaphore (interfaz)</span><span class="sxs-lookup"><span data-stu-id="a30ae-136">IHostSemaphore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)
-- [<span data-ttu-id="a30ae-137">IHostSyncManager (interfaz)</span><span class="sxs-lookup"><span data-stu-id="a30ae-137">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- [<span data-ttu-id="007e5-133">ICLRSyncManager (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="007e5-133">ICLRSyncManager Interface</span></span>](iclrsyncmanager-interface.md)
+- [<span data-ttu-id="007e5-134">IHostAutoEvent (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="007e5-134">IHostAutoEvent Interface</span></span>](ihostautoevent-interface.md)
+- [<span data-ttu-id="007e5-135">IHostManualEvent (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="007e5-135">IHostManualEvent Interface</span></span>](ihostmanualevent-interface.md)
+- [<span data-ttu-id="007e5-136">IHostSemaphore (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="007e5-136">IHostSemaphore Interface</span></span>](ihostsemaphore-interface.md)
+- [<span data-ttu-id="007e5-137">IHostSyncManager (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="007e5-137">IHostSyncManager Interface</span></span>](ihostsyncmanager-interface.md)
