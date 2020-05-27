@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ac298ebd-0815-47e4-a823-30b31baab903
 topic_type:
 - apiref
-ms.openlocfilehash: 108492ba298e9f8429b2acd890ab3404365bc602
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e8cb1486ccea11ba6edcf7bbb781a9bf210b496d
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130522"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804899"
 ---
 # <a name="ihostcrst-interface"></a>IHostCrst (Interfaz)
 Actúa como la representación del host de una sección crítica para el subprocesamiento.  
@@ -28,25 +28,25 @@ Actúa como la representación del host de una sección crítica para el subproc
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Enter (método)](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-enter-method.md)|Entra en la sección crítica.|  
-|[Leave (método)](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-leave-method.md)|Deja la sección crítica.|  
-|[SetSpinCount (método)](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-setspincount-method.md)|Establece el número de giros de la sección crítica.|  
-|[TryEnter (método)](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-tryenter-method.md)|Intenta entrar en la sección crítica e informa de éxito o error inmediatamente.|  
+|[Método Enter](ihostcrst-enter-method.md)|Entra en la sección crítica.|  
+|[Método Leave](ihostcrst-leave-method.md)|Deja la sección crítica.|  
+|[Método SetSpinCount](ihostcrst-setspincount-method.md)|Establece el número de giros de la sección crítica.|  
+|[TryEnter](ihostcrst-tryenter-method.md)|Intenta entrar en la sección crítica e informa de éxito o error inmediatamente.|  
   
-## <a name="remarks"></a>Comentarios  
- `IHostCrst` permite que el Common Language Runtime (CLR) se comunique directamente con la representación del host de una sección crítica, en lugar de usar funciones de Win32 como `EnterCriticalSection` o `LeaveCriticalSection`.  
+## <a name="remarks"></a>Observaciones  
+ `IHostCrst`permite que el Common Language Runtime (CLR) se comunique directamente con la representación del host de una sección crítica, en lugar de usar funciones de Win32 como `EnterCriticalSection` o `LeaveCriticalSection` .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
  **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [ICLRSyncManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [IHostSyncManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
-- [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [ICLRSyncManager (Interfaz)](iclrsyncmanager-interface.md)
+- [IHostSyncManager (Interfaz)](ihostsyncmanager-interface.md)
+- [Interfaces de hospedaje](hosting-interfaces.md)

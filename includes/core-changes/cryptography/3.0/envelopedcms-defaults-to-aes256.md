@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b90991affe158286f535f3cc17232efd0b730fec
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: d23c6cc9f8ee9c912ce5c9509d157692d1a18f90
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81275332"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721736"
 ---
 ### <a name="envelopedcms-defaults-to-aes-256-encryption"></a>EnvelopedCms utiliza de forma predeterminada el cifrado AES-256
 
@@ -53,7 +53,7 @@ Criptografía
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `M:System.Security.Cryptography.Pkcs.EnvelopedCms.#ctor`
 - `M:System.Security.Cryptography.Pkcs.EnvelopedCms.#ctor(System.Security.Cryptography.Pkcs.ContentInfo)`

@@ -1,5 +1,6 @@
 ---
 title: Controlar la serialización XML mediante atributos
+description: Los atributos se pueden utilizar para controlar la serialización XML de un objeto o crear una secuencia XML alternativa a partir del mismo conjunto de clases.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - serialization, examples
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
-ms.openlocfilehash: e11152dc626b1e3619b9ecbc04d8a237ca9f13d3
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 4fc7667a2123a106b995a1ea3a31da4551ca650e
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80248048"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83375962"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>Controlar la serialización XML mediante atributos
 
@@ -321,6 +322,6 @@ Podrían darse situaciones en las que una propiedad pública o el campo no neces
 - [Atributos que controlan la serialización SOAP codificada](attributes-that-control-encoded-soap-serialization.md)
 - [Introducción a la serialización XML](introducing-xml-serialization.md)
 - [Ejemplos de serialización XML](examples-of-xml-serialization.md)
-- [Cómo: para especificar un nombre de elemento alternativo para una secuencia XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-- [Cómo: para serializar un objeto](how-to-serialize-an-object.md)
-- [Cómo: para deserializar un objeto](how-to-deserialize-an-object.md)
+- [Cómo: Especificar un nombre de elemento alternativo para una secuencia XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [Cómo: Serialización de un objeto](how-to-serialize-an-object.md)
+- [Cómo: Deserialización de un objeto](how-to-deserialize-an-object.md)

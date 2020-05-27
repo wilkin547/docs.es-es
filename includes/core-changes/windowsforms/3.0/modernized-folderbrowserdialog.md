@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 645df8080abd21e4db95903a301a36b79a698858
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: 11c04441dcec260f0bfb90f6ed2b919b1545b382
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888148"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721480"
 ---
 ### <a name="modernization-of-the-folderbrowserdialog"></a>Modernización de FolderBrowserDialog
 
@@ -46,7 +46,7 @@ Windows Forms
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `T:System.Windows.Forms.FolderBrowserDialog`
 

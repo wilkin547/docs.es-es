@@ -4,12 +4,12 @@ description: 'Aprenda los conceptos de pruebas unitarias en C# y .NET Core: cree
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: c9e3d63a2cf4f560591459833340b729ffec1b95
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d8cf0e29c8a482b39bd7e99bcde1fd60301f046f
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240901"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702949"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>Prueba unitaria de C# en .NET Core mediante pruebas de dotnet y xUnit
 
@@ -52,18 +52,18 @@ Las instrucciones siguientes proporcionan los pasos para crear la solución de p
 * Reemplace el código de *PrimeService.cs* por el código siguiente:
   
   ```csharp
-    using System;
+  using System;
 
-    namespace Prime.Services
-    {
-        public class PrimeService
-        {
-            public bool IsPrime(int candidate)
-            {
-                throw new NotImplementedException("Not implemented.");
-            }
-        }
-    }
+  namespace Prime.Services
+  {
+      public class PrimeService
+      {
+          public bool IsPrime(int candidate)
+          {
+              throw new NotImplementedException("Not implemented.");
+          }
+      }
+  }
   ```
 
 * El código anterior:
@@ -85,7 +85,7 @@ Las instrucciones siguientes proporcionan los pasos para crear la solución de p
   ```
 
 * El comando anterior:
-  * Crea el proyecto *PrimeService.Tests* en el directorio *PrimeService.Tests*. El proyecto de prueba usa [xUnit](https://xunit.github.io/) como biblioteca de pruebas.
+  * Crea el proyecto *PrimeService.Tests* en el directorio *PrimeService.Tests*. El proyecto de prueba usa [xUnit](https://xunit.net/) como biblioteca de pruebas.
   * Configura el ejecutor de pruebas agregando los siguientes `<PackageReference />`elementos al archivo del proyecto:
     * "Microsoft.NET.Test.Sdk"
     * "xunit"
@@ -190,7 +190,6 @@ Assert.False(result, "1 should not be prime");
 La copia de código de prueba cuando solamente es un parámetro el que cambia da lugar a la duplicación de código y al sobredimensionamiento de pruebas. Los siguientes atributos de xUnit habilitan la escritura de un conjunto de pruebas similares:
 
 - Un elemento `[Theory]` representa un conjunto de pruebas que ejecutan el mismo código, pero tienen diferentes argumentos de entrada.
-
 - Un atributo `[InlineData]` especifica valores para esas entradas.
 
 En lugar de crear pruebas nuevas, aplique los atributos de xUnit anteriores para crear una sola teoría. Reemplace el código siguiente:
@@ -230,6 +229,6 @@ El método `IsPrime` completado no es un algoritmo eficaz para probar los númer
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
-- [Sitio oficial de xUnit.net](https://xunit.github.io)
+- [Sitio oficial de xUnit.net](https://xunit.net)
 - [Probar la lógica del controlador en ASP.NET Core](/aspnet/core/mvc/controllers/testing)
 - [`dotnet add reference`](../tools/dotnet-add-reference.md)

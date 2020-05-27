@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 10409db9-9fd2-4e4d-b8cd-cf6fec0afaa2
 topic_type:
 - apiref
-ms.openlocfilehash: f2d2665382559596563d9b155d2afa4d99c91ee7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c5b150b161acba3820ced367049f08153dd091aa
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141259"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83842444"
 ---
 # <a name="ihostthreadpoolmanagersetminthreads-method"></a>IHostThreadPoolManager::SetMinThreads (Método)
 Establece el número mínimo de subprocesos inactivos que el host debe mantener en previsión de las solicitudes.  
@@ -41,30 +41,30 @@ HRESULT SetMinThreads (
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`SetMinThreads` devolvió correctamente.|  
+|S_OK|`SetMinThreads`se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|El Common Language Runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
 |HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
 |HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
-|E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, el CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
-|E_NOTIMPL|El host no proporciona una implementación de `SetMinThreads`.|  
+|E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
+|E_NOTIMPL|El host no proporciona una implementación de `SetMinThreads` .|  
   
-## <a name="remarks"></a>Comentarios  
- No es necesario que un host proporcione una implementación de `SetMinThreads`. En este caso, debe devolver un valor HRESULT de E_NOTIMPL.  
+## <a name="remarks"></a>Notas  
+ No es necesario que un host proporcione una implementación de `SetMinThreads` . En este caso, debe devolver un valor HRESULT de E_NOTIMPL.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
  **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Threading.ThreadPool.SetMinThreads%2A>
 - <xref:System.Threading.ThreadPool>
-- [GetMinThreads (método)](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getminthreads-method.md)
-- [SetMaxThreads (método)](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-setmaxthreads-method.md)
-- [IHostThreadPoolManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)
+- [Método GetMinThreads](ihostthreadpoolmanager-getminthreads-method.md)
+- [Método SetMaxThreads](ihostthreadpoolmanager-setmaxthreads-method.md)
+- [IHostThreadPoolManager (Interfaz)](ihostthreadpoolmanager-interface.md)

@@ -2,12 +2,12 @@
 title: Opciones de configuración de runtime
 description: Aprenda a configurar aplicaciones .NET Core mediante opciones de configuración de tiempo de ejecución.
 ms.date: 01/21/2020
-ms.openlocfilehash: d49707b93e272f0e527ff536a80140ec98e5c1a8
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 68690689fd4f936e3af76ab647f0b58d8ec6ca27
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506792"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761959"
 ---
 # <a name="net-core-run-time-configuration-settings"></a>Opciones de configuración en tiempo de ejecución de .NET Core
 
@@ -20,13 +20,16 @@ ms.locfileid: "82506792"
 > [!NOTE]
 > Esta documentación está en desarrollo. Si observa que la información que se presenta aquí está incompleta o es inexacta, [abra una incidencia](https://github.com/dotnet/docs/issues) para informarnos sobre ella o [envíe una solicitud de incorporación de cambios](https://github.com/dotnet/docs/pulls) para solucionarla. Para obtener información sobre el envío de solicitudes de incorporación de cambios para el repositorio dotnet/docs, consulte la [guía del colaborador](https://docs.microsoft.com/contribute/dotnet/dotnet-contribute).
 
-.NET Core ofrece los siguientes mecanismos para configurar el comportamiento de aplicaciones de runtime:
+.NET Core ofrece los siguientes mecanismos para configurar el comportamiento de las aplicaciones en tiempo de ejecución:
 
 - El [archivo runtimeconfig.json](#runtimeconfigjson)
 
 - [Propiedades de MSBuild](#msbuild-properties)
 
 - [Variables de entorno](#environment-variables)
+
+> [!TIP]
+> El hecho de configurar una opción relativa al tiempo de ejecución mediante el uso de una variable de entorno aplica la configuración a todas las aplicaciones de .NET Core. Sin embargo, si se configura una opción relativa al tiempo de ejecución en *runtimeconfig.json* o en el archivo del proyecto, la configuración solo afectará a la aplicación en cuestión.
 
 Algunos valores de configuración también se pueden establecer mediante programación llamando al método <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType>.
 
@@ -106,11 +109,11 @@ Este es un ejemplo de archivo de proyecto de estilo SDK con propiedades de MSBui
 </Project>
 ```
 
-Las propiedades de MSBuild para configurar el comportamiento de runtime se indican en los artículos individuales de cada área, por ejemplo, la [recolección de elementos no utilizados](garbage-collector.md).
+Las propiedades de MSBuild para configurar el comportamiento de runtime se indican en los artículos individuales de cada área, por ejemplo, la [recolección de elementos no utilizados](garbage-collector.md). También se enumeran en la sección sobre la [configuración del tiempo de ejecución](../project-sdk/msbuild-props.md#run-time-configuration-properties) de la referencia de las propiedades de MSBuild para los proyectos de estilo de SDK.
 
 ## <a name="environment-variables"></a>Variables de entorno
 
-Las variables de entorno se pueden usar para proporcionar información de configuración del entorno de ejecución. Los botones de configuración especificados como variables de entorno generalmente tienen el prefijo **COMPlus_** .
+Las variables de entorno se pueden usar para proporcionar información de configuración del entorno de ejecución. El hecho de configurar una opción relativa al tiempo de ejecución mediante el uso de una variable de entorno aplica la configuración a todas las aplicaciones de .NET Core. Los botones de configuración especificados como variables de entorno generalmente tienen el prefijo **COMPlus_** .
 
 Puede definir variables de entorno desde el Panel de control de Windows, en la línea de comandos o mediante programación llamando al método <xref:System.Environment.SetEnvironmentVariable(System.String,System.String)?displayProperty=nameWithType> en sistemas basados en Windows y Unix.
 

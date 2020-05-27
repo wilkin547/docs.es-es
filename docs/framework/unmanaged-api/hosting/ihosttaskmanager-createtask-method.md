@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a6f8ad36-61e1-42b0-9db2-add575646d18
 topic_type:
 - apiref
-ms.openlocfilehash: fef2f56fd000a8610a40661a30aa306ae5a7884e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7079a915c0402df62afa5648317619af82c943b0
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177999"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83841989"
 ---
 # <a name="ihosttaskmanagercreatetask-method"></a>IHostTaskManager::CreateTask (Método)
 Solicita que el host cree una nueva tarea.  
@@ -38,44 +38,44 @@ HRESULT CreateTask (
   
 ## <a name="parameters"></a>Parámetros  
  `stacksize`  
- [en] El tamaño solicitado, en bytes, de la pila solicitada, o 0 (cero) para el tamaño predeterminado.  
+ de Tamaño solicitado, en bytes, de la pila solicitada o 0 (cero) para el tamaño predeterminado.  
   
  `pStartAddress`  
- [en] Un puntero a la función que se va a ejecutar la tarea.  
+ de Puntero a la función que va a ejecutar la tarea.  
   
  `pParameter`  
- [en] Un puntero a los datos de usuario que se pasarán a la función, o null si la función no toma ningún parámetro.  
+ de Un puntero a los datos de usuario que se van a pasar a la función, o null si la función no toma ningún parámetro.  
   
  `ppTask`  
- [fuera] Puntero a la dirección de una instancia [de IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) creada por el host, o null si no se puede crear la tarea. La tarea permanece en un estado suspendido hasta que se inicia explícitamente mediante una llamada a [IHostTask::Start](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md).  
+ enuncia Un puntero a la dirección de una instancia de [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) creada por el host, o null si no se puede crear la tarea. La tarea permanece en estado suspendido hasta que se inicia explícitamente mediante una llamada a [IHostTask:: Start](ihosttask-start-method.md).  
   
 ## <a name="return-value"></a>Valor devuelto  
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`CreateTask`regresó con éxito.|  
-|HOST_E_CLRNOTAVAILABLE|Common Language Runtime (CLR) no se ha cargado en un proceso o CLR está en un estado en el que no puede ejecutar código administrado o procesar la llamada correctamente.|  
-|HOST_E_TIMEOUT|Se adelantó la llamada.|  
-|HOST_E_NOT_OWNER|El autor de la llamada no es el propietario de la cerradura.|  
-|HOST_E_ABANDONED|Un evento se canceló mientras un hilo bloqueado o fibra lo esperaba.|  
-|E_FAIL|Se ha producido un fallo catastrófico desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar dentro del proceso. Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|`CreateTask`se devolvió correctamente.|  
+|HOST_E_CLRNOTAVAILABLE|El Common Language Runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
+|HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
+|HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
+|HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
+|E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
 |E_OUTOFMEMORY|No había suficiente memoria disponible para crear la tarea solicitada.|  
   
-## <a name="remarks"></a>Observaciones  
- El CLR `CreateTask` llama para solicitar que el host cree una nueva tarea. El host devuelve un `IHostTask` puntero de interfaz a una instancia. La tarea devuelta debe permanecer suspendida hasta que `IHostTask::Start`se inicie explícitamente mediante una llamada a .  
+## <a name="remarks"></a>Notas  
+ CLR llama `CreateTask` a para solicitar que el host cree una nueva tarea. El host devuelve un puntero de interfaz a una `IHostTask` instancia de. La tarea devuelta debe permanecer suspendida hasta que se inicie explícitamente mediante una llamada a `IHostTask::Start` .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** MScorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Incluido como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [ICLRTask (Interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
-- [ICLRTaskManager (Interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [IHostTask (Interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [IHostTaskManager (Interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [ICLRTask (Interfaz)](iclrtask-interface.md)
+- [ICLRTaskManager (Interfaz)](iclrtaskmanager-interface.md)
+- [IHostTask (Interfaz)](ihosttask-interface.md)
+- [IHostTaskManager (Interfaz)](ihosttaskmanager-interface.md)

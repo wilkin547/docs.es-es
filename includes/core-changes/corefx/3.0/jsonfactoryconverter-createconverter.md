@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3bce796191e0ebe6dbe4650457abe5a20c383f02
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 43da6233b70927e7320874772976b9e93a0bd69f
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79147567"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721544"
 ---
 ### <a name="jsonfactoryconvertercreateconverter-signature-changed"></a>Ha cambiado la firma de JsonFactoryConverter.CreateConverter
 
@@ -52,7 +52,7 @@ Es necesario actualizar y volver a compilar las clases derivadas.
 
 <!-- For tool use only
 
-### Affected APIs
+#### Affected APIs
 
 - `M:System.Text.Json.Serialization.JsonConverterFactory.CreateConverter(System.Type,System.Text.Json.JsonSerializerOptions)`
 

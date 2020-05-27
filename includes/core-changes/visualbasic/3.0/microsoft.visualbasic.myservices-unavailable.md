@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d207a937917da78f6b902ad8ca4f02fa9a46c2e1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: acb8ed44b7d18b257731e32339f087c8fe5fdd4a
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76116379"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721641"
 ---
 ### <a name="types-in-microsoftvisualbasicmyservices-namespace-not-available"></a>Los tipos del espacio de nombres Microsoft.VisualBasic.MyServices no están disponibles
 
@@ -41,7 +41,7 @@ Visual Basic
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `N:Microsoft.VisualBasic.MyServices`
 

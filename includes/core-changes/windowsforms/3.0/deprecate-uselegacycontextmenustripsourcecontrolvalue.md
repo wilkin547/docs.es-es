@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5aca2b8b3ca6572194692888eae3c5614245b481
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3ada05a13ec7acde1d8374ed733d0d51cdfb408c
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937026"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721498"
 ---
 ### <a name="uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported"></a>No se admite el modificador de compatibilidad UseLegacyContextMenuStripSourceControlValue
 
@@ -34,7 +34,7 @@ Windows Forms
 
 <!-- 
 
-### Affected APIs
+#### Affected APIs
 
 - `P:System.Windows.Forms.ContextMenuStrip.SourceControl`
 

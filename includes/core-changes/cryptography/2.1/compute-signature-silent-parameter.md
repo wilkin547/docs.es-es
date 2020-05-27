@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9583d868ee01117d7bd6e465e7d89a734489d1a8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b861dbaa02c97a03c015fdf4e63d25c40c90ea0a
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77449235"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83720925"
 ---
 ### <a name="boolean-parameter-of-signedcmscomputesignature-is-respected"></a>Se respeta el parámetro booleano de SignedCms.ComputeSignature
 
@@ -24,17 +24,17 @@ La compatibilidad con los mensajes CMS/PKCS #7 se presentó en .NET Core en la 
 
 Para asegurarse de que aparece una solicitud de PIN si esta se exige, las aplicaciones de escritorio deben llamar a <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> y establecer el parámetro booleano en `false`. El comportamiento resultante es el mismo que en .NET Framework independientemente de si el contexto silencioso está deshabilitado.
 
-### <a name="category"></a>Categoría
+#### <a name="category"></a>Categoría
 
 Criptografía
 
-### <a name="affected-apis"></a>API afectadas
+#### <a name="affected-apis"></a>API afectadas
 
 - <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType>
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `M:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)`
 

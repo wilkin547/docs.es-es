@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b736ab743a628fdcbc53c5ee51551e5dad986885
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: 4a34a64eba72ea24c1d830566565ce4fbee8e5b7
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888150"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721367"
 ---
 ### <a name="cellformatting-event-not-raised-if-tooltip-is-shown"></a>El evento CellFormatting no se produce si se muestra información en pantalla.
 
@@ -34,7 +34,7 @@ None
 
 <!-- 
 
-### Affected APIs
+#### Affected APIs
 
 Not detectable via API analysis.
 

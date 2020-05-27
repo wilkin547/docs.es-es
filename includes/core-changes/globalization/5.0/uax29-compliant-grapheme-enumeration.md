@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f131933f3cf7890939854c46f115e8deb8da1cc2
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: c0c1c9c9d8e3aeb6f689f754d09b50b208b54112
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888180"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702325"
 ---
 ### <a name="stringinfo-and-textelementenumerator-are-now-uax29-compliant"></a>StringInfo y TextElementEnumerator ahora son compatibles con UAX29
 
@@ -91,21 +91,23 @@ Estos cambios forman parte de un conjunto más amplio de mejoras de Unicode y UT
 
 .NET 5.0 (versión preliminar 1)
 
-### <a name="recommended-action"></a>Acción recomendada
+#### <a name="recommended-action"></a>Acción recomendada
 
 No tiene que realizar ninguna acción. Las aplicaciones se comportarán automáticamente de forma más conforme a los estándares en diversos escenarios relacionados con la globalización.
 
-### <a name="category"></a>Categoría
+#### <a name="category"></a>Categoría
 
 Globalización
 
-### <a name="affected-apis"></a>API afectadas
+#### <a name="affected-apis"></a>API afectadas
 
 - <xref:System.Globalization.StringInfo?displayProperty=fullName>
 - <xref:System.Globalization.TextElementEnumerator?displayProperty=fullName>
 - <xref:Microsoft.VisualBasic.Strings.StrReverse%2A?displayProperty=fullName>
 
 <!--
+
+#### Affected APIs
 
 - `T:System.Globalization.StringInfo`
 - `T:System.Globalization.TextElementEnumerator`

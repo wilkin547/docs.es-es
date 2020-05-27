@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3f0e8fb4d0d727b40cff5de7cfdc7529bf32dac4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cb8c0532bb2bcfbcd619cd382f3d236b431c3480
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937042"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721612"
 ---
 ### <a name="donotloadlatestricheditcontrol-compatibility-switch-not-supported"></a>No se admite el modificador de compatibilidad DoNotLoadLatestRichEditControl
 
@@ -34,7 +34,7 @@ Windows Forms
 
 <!-- 
 
-### Affected APIs
+#### Affected APIs
 
 -  `T:System.Windows.Forms.RichTextBox` 
 
