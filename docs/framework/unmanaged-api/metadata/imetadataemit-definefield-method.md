@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6b5be4fc-2e86-499c-8b09-833160bca767
 topic_type:
 - apiref
-ms.openlocfilehash: 8ca5ab70f60de4d783800fb18612a8f04cb9cee1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ccc4843864f375c167acdb12575c282dbe3a49e1
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177714"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004821"
 ---
 # <a name="imetadataemitdefinefield-method"></a>IMetaDataEmit::DefineField (Método)
-Crea una definición para un campo con la firma de metadatos especificada y obtiene un token a esa definición de campo.  
+Crea una definición para un campo con la firma de metadatos especificada y obtiene un token para esa definición de campo.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,42 +43,42 @@ HRESULT DefineField (
   
 ## <a name="parameters"></a>Parámetros  
  `td`  
- [en] El `mdTypeDef` token para la clase o interfaz envolvente.  
+ de `mdTypeDef`Token de la clase o interfaz envolvente.  
   
  `szName`  
- [en] El nombre del campo en Unicode.  
+ de Nombre del campo en Unicode.  
   
  `dwFieldFlags`  
- [en] Los atributos de campo. Esta es una `CorFieldAttr` máscara de bits de valores.  
+ de Atributos del campo. Se trata de una máscara de máscara de `CorFieldAttr` valores.  
   
  `pvSigBlob`  
- [en] La firma de campo como BLOB.  
+ de La firma del campo como un BLOB.  
   
  `cbSigBlob`  
- [en] El recuento de `pvSigBlob`bytes en .  
+ de Recuento de bytes de `pvSigBlob` .  
   
  `dwCPlusTypeFlag`  
- [en] El `ELEMENT_TYPE_` *\** valor constante for. Este es `CorElementType` un valor. Si no define un valor constante `ELEMENT_TYPE_END`para el campo, utilice .  
+ de `ELEMENT_TYPE_` *\** Para el valor constante. Este es un `CorElementType` valor. Si no se define un valor constante para el campo, use `ELEMENT_TYPE_END` .  
   
  `pValue`  
- [en] El valor constante para el campo.  
+ de Valor constante para el campo.  
   
  `cchValue`  
- [en] El tamaño en caracteres `pValue`(Unicode) de .  
+ de El tamaño en caracteres (Unicode) de `pValue` .  
   
  `pmd`  
- [fuera] El `mdFieldDef` token asignado.  
+ enuncia El `mdFieldDef` token asignado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MSCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte también
 
-- [IMetaDataEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit (Interfaz)](imetadataemit-interface.md)
+- [IMetaDataEmit2 (Interfaz)](imetadataemit2-interface.md)

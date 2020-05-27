@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 845ab77e-9639-47f5-99fb-f3b619e3e779
 topic_type:
 - apiref
-ms.openlocfilehash: 38b9ea2ffab439f55f0a6d34d7f42c7669629168
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8dc7f439cac56c2d55916ff8631ec3095c67680d
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177920"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008890"
 ---
 # <a name="iceegenallocatemethodbuffer-method"></a>ICeeGen::AllocateMethodBuffer (Método)
-Crea un búfer del tamaño especificado para un método y obtiene la dirección virtual relativa del método.  
+Crea un búfer con el tamaño especificado para un método y obtiene la dirección virtual relativa del método.  
   
- Este método está obsoleto y no se debe utilizar.  
+ Este método está obsoleto y no debe usarse.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,23 +39,23 @@ HRESULT AllocateMethodBuffer (
   
 ## <a name="parameters"></a>Parámetros  
  `cchBuffer`  
- [en] La longitud del búfer que se va a crear.  
+ de Longitud del búfer que se va a crear.  
   
  `lpBuffer`  
- [fuera] El búfer devuelto.  
+ enuncia Búfer devuelto.  
   
  `RVA`  
- [fuera] La dirección virtual relativa del método.  
+ enuncia Dirección virtual relativa del método.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte también
 
-- [ICeeGen (Interfaz)](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [ICeeGen (Interfaz)](iceegen-interface.md)

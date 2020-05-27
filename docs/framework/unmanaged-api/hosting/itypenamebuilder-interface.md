@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1f88e62e-2762-44d1-83b1-095f8734c0bc
 topic_type:
 - apiref
-ms.openlocfilehash: 917dfe19d6d25f3fcc9dc8c2898c1a2f6e7b382f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f4443228a07982f4ce86a754576426aa03640e08
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125245"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008678"
 ---
 # <a name="itypenamebuilder-interface"></a>ITypeNameBuilder (Interfaz)
 Proporciona métodos para generar un nombre de tipo.  
@@ -27,14 +27,14 @@ Proporciona métodos para generar un nombre de tipo.
  Esta interfaz es compatible con la infraestructura de .NET Framework y no está diseñada para utilizarse directamente desde el código.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
  **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Interfaces de hospedaje](hosting-interfaces.md)

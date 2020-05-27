@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 2d64315a-1af1-4c60-aedf-f8a781914aea
 topic_type:
 - apiref
-ms.openlocfilehash: 34ecfc2f01f22971e135358806adeea632e02f8b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: feb81b86190f953b50f43f244f4e58a0a482f86e
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448027"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84003924"
 ---
 # <a name="imetadataemitmergeend-method"></a>IMetaDataEmit::MergeEnd (Método)
 
-Combina en el ámbito actual todos los ámbitos de metadatos especificados por una o varias llamadas anteriores a [IMetaDataEmit:: Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md).
+Combina en el ámbito actual todos los ámbitos de metadatos especificados por una o varias llamadas anteriores a [IMetaDataEmit:: Merge](imetadataemit-merge-method.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -38,7 +38,7 @@ Este método no toma ningún parámetro.
 
 ## <a name="remarks"></a>Comentarios
 
-Esta rutina desencadena la combinación real de metadatos, de todos los ámbitos de importación especificados por las llamadas anteriores a `IMetaDataEmit::Merge`, en el ámbito de salida actual.
+Esta rutina desencadena la combinación real de metadatos, de todos los ámbitos de importación especificados por las llamadas anteriores a `IMetaDataEmit::Merge` , en el ámbito de salida actual.
 
 Las condiciones especiales siguientes se aplican a la combinación:
 
@@ -48,31 +48,31 @@ Las condiciones especiales siguientes se aplican a la combinación:
 
   Si ya se han establecido las propiedades del módulo para el ámbito actual, no se importa ninguna propiedad del módulo. Sin embargo, si no se han establecido las propiedades del módulo en el ámbito actual, se importan solo una vez, cuando se encuentran por primera vez. Si las propiedades del módulo se encuentran de nuevo, son duplicados. Si se comparan los valores de todas las propiedades del módulo (excepto MVID) y no se encuentra ningún duplicado, se produce un error.
 
-- En las definiciones de tipo (`TypeDef`), no se combina ningún duplicado en el ámbito actual. `TypeDef` objetos se comprueban en busca de duplicados en cada *nombre de objeto completo* + *GUID* + *número de versión*. Si hay una coincidencia en el nombre o el GUID, y cualquiera de los otros dos elementos es diferente, se genera un error. De lo contrario, si los tres elementos coinciden, `MergeEnd` realiza una comprobación de cursor para asegurarse de que las entradas son realmente duplicados; Si no es así, se produce un error. Esta comprobación de cursor busca:
+- En las definiciones de tipo ( `TypeDef` ), no se combina ningún duplicado en el ámbito actual. `TypeDef`los objetos se comprueban en busca de duplicados en cada número de versión del GUID del *nombre de objeto completo*  +  *GUID*  +  *version number*. Si hay una coincidencia en el nombre o el GUID, y cualquiera de los otros dos elementos es diferente, se genera un error. De lo contrario, si los tres elementos coinciden, `MergeEnd` realiza una comprobación de cursor para asegurarse de que las entradas son realmente duplicados; si no es así, se produce un error. Esta comprobación de cursor busca:
 
-  - Las mismas declaraciones de miembros, que se producen en el mismo orden. Los miembros marcados como `mdPrivateScope` (vea la enumeración [cormethodattr (](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) ) no se incluyen en esta comprobación; se combinan de forma especial.
+  - Las mismas declaraciones de miembros, que se producen en el mismo orden. Los miembros que se marcan como `mdPrivateScope` (vea la enumeración [cormethodattr (](cormethodattr-enumeration.md) ) no se incluyen en esta comprobación; se combinan de forma especial.
 
   - El mismo diseño de clase.
 
-  Esto significa que un objeto de `TypeDef` siempre debe estar definido por completo y de forma constante en cada ámbito de metadatos en el que se declara; Si sus implementaciones de miembros (para una clase) se distribuyen entre varias unidades de compilación, se supone que la definición completa está presente en todos los ámbitos y no incremental en cada ámbito. Por ejemplo, si los nombres de parámetro son relevantes para el contrato, deben emitirse de la misma manera en todos los ámbitos; Si no son relevantes, no se deben emitir en metadatos.
+  Esto significa que un `TypeDef` objeto siempre debe estar definido de forma completa y coherente en cada ámbito de metadatos en el que se declara; si sus implementaciones de miembro (para una clase) se distribuyen entre varias unidades de compilación, se supone que la definición completa está presente en todos los ámbitos y no incremental en cada ámbito. Por ejemplo, si los nombres de parámetro son relevantes para el contrato, deben emitirse de la misma manera en todos los ámbitos; Si no son relevantes, no se deben emitir en metadatos.
 
-  La excepción es que un objeto `TypeDef` puede tener miembros incrementales marcados como `mdPrivateScope`. Al encontrarlos, `MergeEnd` los agrega incrementalmente al ámbito actual sin tener en cuenta los duplicados. Dado que el compilador entiende el ámbito privado, el compilador debe ser responsable de aplicar las reglas.
+  La excepción es que un `TypeDef` objeto puede tener miembros incrementales marcados como `mdPrivateScope` . Al encontrarlos, `MergeEnd` los agrega incrementalmente al ámbito actual sin tener en cuenta los duplicados. Dado que el compilador entiende el ámbito privado, el compilador debe ser responsable de aplicar las reglas.
 
 - Las direcciones virtuales relativas (RVA) no se importan ni se combinan; se espera que el compilador vuelva a emitir esta información.
 
-- Los atributos personalizados solo se combinan cuando se combina el elemento al que están adjuntos. Por ejemplo, los atributos personalizados asociados a una clase se combinan cuando la clase se encuentra por primera vez. Si los atributos personalizados están asociados a un `TypeDef` o `MemberDef` que es específico de la unidad de compilación (por ejemplo, la marca de tiempo de una compilación de miembro), no se combinan y depende del compilador quitar o actualizar dichos metadatos.
+- Los atributos personalizados solo se combinan cuando se combina el elemento al que están adjuntos. Por ejemplo, los atributos personalizados asociados a una clase se combinan cuando la clase se encuentra por primera vez. Si los atributos personalizados están asociados a un objeto `TypeDef` o `MemberDef` que es específico de la unidad de compilación (por ejemplo, la marca de tiempo de una compilación de miembro), no se combinan y depende del compilador quitar o actualizar dichos metadatos.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).
 
 **Encabezado:** Cor. h
 
 **Biblioteca:** Se utiliza como recurso en MSCorEE. dll
 
-**Versiones de .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
+**.NET Framework versiones:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [IMetaDataEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit (Interfaz)](imetadataemit-interface.md)
+- [IMetaDataEmit2 (Interfaz)](imetadataemit2-interface.md)

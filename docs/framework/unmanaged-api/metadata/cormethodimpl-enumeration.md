@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbb3caf-20da-4a4b-8983-77376e72b990
 topic_type:
 - apiref
-ms.openlocfilehash: a76a7a2d4ad68e367e38e175377aff40ce399346
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b32e8f0b03ef6d550c384f3d932cc295a7270028
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450198"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007668"
 ---
 # <a name="cormethodimpl-enumeration"></a>CorMethodImpl (Enumeración)
 Contiene valores que describen las características de implementación de un método.  
@@ -71,15 +71,15 @@ typedef enum CorMethodImpl {
 |`miNoInlining`|Especifica que el método no se puede insertar.|  
 |`miAggressiveInlining`|Especifica que el método debe insertarse si es posible.|  
 |`miNoOptimization`|Especifica que el método no se debe optimizar.|  
-|`miMaxMethodImplVal`|Valor máximo válido para un `CorMethodImpl`.|  
+|`miMaxMethodImplVal`|Valor máximo válido para `CorMethodImpl` .|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorHdr. h  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumeraciones para metadatos](metadata-enumerations.md)

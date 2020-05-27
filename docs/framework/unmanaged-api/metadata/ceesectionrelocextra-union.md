@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: d9568cf6-7f98-4cd6-ab36-0a2bd509afcc
 topic_type:
 - apiref
-ms.openlocfilehash: 7becace679b62a635d8231c3d42213f247f44190
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d11fefe220fdb00457cc48a6cd166673350be049
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444166"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84006043"
 ---
 # <a name="ceesectionrelocextra-union"></a>CeeSectionRelocExtra (Unión)
-Representa un desplazamiento de dirección que se usa en la interfaz [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) para reubicar una sección.  
+Representa un desplazamiento de dirección que se usa en la interfaz [ICeeGen](iceegen-interface.md) para reubicar una sección.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,14 +39,14 @@ typedef union  {
 |`highAdj`|Ajuste de la dirección superior para la sección.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
  **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Uniones de metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-unions.md)
+- [Uniones de metadatos](metadata-unions.md)

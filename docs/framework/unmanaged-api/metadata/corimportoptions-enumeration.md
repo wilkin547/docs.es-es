@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4e5d03cb-97c9-4ff4-8dbd-17d94ee374d3
 topic_type:
 - apiref
-ms.openlocfilehash: 44d1776e2902988353ef4fd58aca20e56203b9da
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3be8a004be752af8a8675a3499bdb6cbfd785840
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442849"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009202"
 ---
 # <a name="corimportoptions-enumeration"></a>CorImportOptions (Enumeración)
 Contiene valores de marca que controlan el comportamiento durante la importación de un ensamblado fuera del ámbito actual.  
@@ -57,12 +57,12 @@ typedef enum CorImportOptions {
 |`MDImportOptionAllExportedTypes`|Indica que se deben enumerar todos los tipos exportados, incluidos los eliminados.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorHdr. h  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumeraciones para metadatos](metadata-enumerations.md)

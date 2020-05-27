@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0b284b18-0084-4b3a-912a-5ebe9f29c88b
 topic_type:
 - apiref
-ms.openlocfilehash: c88b7a401a19b1bd0e02edab7ef7bbee1372199e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 612463bca18c23fac0b086adde2d208a0fbc5ae5
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432080"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008175"
 ---
 # <a name="imetadataassemblyemitdefineassemblyref-method"></a>IMetaDataAssemblyEmit::DefineAssemblyRef (Método)
 Crea una estructura `AssemblyRef` que contiene los metadatos para el ensamblado al que este ensamblado hace referencia y devuelve el token de metadatos asociado.  
@@ -42,10 +42,10 @@ HRESULT DefineAssemblyRef (
   
 ## <a name="parameters"></a>Parámetros  
  `pbPublicKeyOrToken`  
- de La clave pública del publicador del ensamblado al que se hace referencia. La función auxiliar [StrongNameTokenFromAssembly (](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md) se puede usar para obtener el hash de la clave pública que se va a pasar como este parámetro.  
+ de La clave pública del publicador del ensamblado al que se hace referencia. La función auxiliar [StrongNameTokenFromAssembly (](../strong-naming/strongnametokenfromassembly-function.md) se puede usar para obtener el hash de la clave pública que se va a pasar como este parámetro.  
   
  `cbPublicKeyOrToken`  
- de Tamaño en bytes de `pbPublicKeyOrToken`.  
+ de Tamaño en bytes de `pbPublicKeyOrToken` .  
   
  `szName`  
  de Nombre del texto legible del ensamblado. Este valor no debe superar los 1024 caracteres.  
@@ -57,28 +57,28 @@ HRESULT DefineAssemblyRef (
  de Los datos hash asociados al ensamblado al que se hace referencia. Opcional.  
   
  `cbHashValue`  
- de Tamaño en bytes de `pbHashValue`.  
+ de Tamaño en bytes de `pbHashValue` .  
   
  `dwAssemblyRefFlags`  
- de Combinación bit a bit de los valores de [corassemblyflags (](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) que influyen en el comportamiento del motor de ejecución.  
+ de Combinación bit a bit de los valores de [corassemblyflags (](corassemblyflags-enumeration.md) que influyen en el comportamiento del motor de ejecución.  
   
  `pmdar`  
- enuncia Puntero al token de metadatos de `AssemblyRef` devuelto.  
+ enuncia Puntero al `AssemblyRef` token de metadatos devuelto.  
   
 ## <a name="remarks"></a>Comentarios  
- Se debe definir una `AssemblyRef` estructura de metadatos para cada ensamblado al que hace referencia este ensamblado.  
+ `AssemblyRef`Se debe definir una estructura de metadatos para cada ensamblado al que haga referencia este ensamblado.  
   
  En tiempo de ejecución, los detalles de un ensamblado al que se hace referencia se pasan al solucionador del ensamblado con una indicación de que representan la información "como generada". A continuación, la resolución de ensamblado aplica la Directiva.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
  **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [IMetaDataAssemblyEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyEmit (Interfaz)](imetadataassemblyemit-interface.md)

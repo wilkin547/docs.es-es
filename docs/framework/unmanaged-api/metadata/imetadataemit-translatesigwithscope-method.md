@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 47915d33-b7bf-409e-b484-4ee1df15de22
 topic_type:
 - apiref
-ms.openlocfilehash: 2662af41fbd2cdc3ce8a6df1e036dfc5b22ff6a3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7ef6dbc46806febc6fba89b39a8b894377225c23
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175556"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84003989"
 ---
 # <a name="imetadataemittranslatesigwithscope-method"></a>IMetaDataEmit::TranslateSigWithScope (Método)
 Importa un ensamblado en el ámbito actual y obtiene una nueva firma de metadatos para el ámbito combinado.  
@@ -45,51 +45,51 @@ HRESULT TranslateSigWithScope (
   
 ## <a name="parameters"></a>Parámetros  
  `pAssemImport`  
- [en] La interfaz para el ensamblado de importación (donde se define la firma).  
+ de Interfaz para el ensamblado de importación (donde se define la firma).  
   
  `pbHashValue`  
- [en] El blob hash para el ensamblado.  
+ de Objeto binario hash para el ensamblado.  
   
  `cbHashValue`  
- [en] El recuento de `pbHashValue`bytes en .  
+ de Recuento de bytes de `pbHashValue` .  
   
  `import`  
- [en] La interfaz para el ámbito de metadatos de importación.  
+ de La interfaz para importar el ámbito de metadatos.  
   
  `pbSigBlob`  
- [en] La firma que se va a importar.  
+ de Firma que se va a importar.  
   
  `cbSigBlob`  
- [en] El tamaño, en `pbSigBlob`bytes, de .  
+ de Tamaño, en bytes, de `pbSigBlob` .  
   
  `pAssemEmit`  
- [en] La interfaz para el ensamblado de exportación.  
+ de Interfaz para el ensamblado de exportación.  
   
  `emit`  
- [en] La interfaz para el ámbito de metadatos de exportación.  
+ de La interfaz para el ámbito de exportación de metadatos.  
   
  `pvTranslatedSig`  
- [fuera] El búfer que contiene el blob de firma traducido.  
+ enuncia Búfer que va a contener el BLOB de firma traducido.  
   
  `cbTranslatedSigMax`  
- [en] La capacidad, en `pvTranslatedSig`bytes, de .  
+ de Capacidad, en bytes, de `pvTranslatedSig` .  
   
  `pcbTranslatedSig`  
- [fuera] El número de bytes reales en la firma traducida.  
+ enuncia Número de bytes reales de la firma traducida.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MSCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte también
 
-- [IMetaDataAssemblyEmit (Interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
-- [IMetaDataAssemblyImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
-- [IMetaDataEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataAssemblyEmit (Interfaz)](imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyImport (Interfaz)](imetadataassemblyimport-interface.md)
+- [IMetaDataEmit (Interfaz)](imetadataemit-interface.md)
+- [IMetaDataEmit2 (Interfaz)](imetadataemit2-interface.md)
+- [IMetaDataImport (Interfaz)](imetadataimport-interface.md)

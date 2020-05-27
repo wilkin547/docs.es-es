@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c4c1dc2-d40d-4173-bbe6-7058fb21c98f
 topic_type:
 - apiref
-ms.openlocfilehash: eb3ecbf39376e7126b5ec93a26badcbf5076d1db
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 479cb25ad8e1c263d3539a4203ac5bea781eb931
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175790"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009384"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>IMetaDataEmit::DefineProperty (Método)
-Crea una definición de propiedad para el `get` `set` tipo especificado, con los descriptores de acceso especificados y de método, y obtiene un token a esa definición de propiedad.  
+Crea una definición de propiedad para el tipo especificado, con los `get` descriptores de acceso de los métodos y especificados `set` , y obtiene un token para esa definición de propiedad.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -46,51 +46,51 @@ HRESULT DefineProperty (
   
 ## <a name="parameters"></a>Parámetros  
  `td`  
- [en] El token para la clase o interfaz en la que se está definiendo la propiedad.  
+ de Token de la clase o interfaz en la que se define la propiedad.  
   
  `szProperty`  
  [in] Nombre de la propiedad.  
   
  `dwPropFlags`  
- [en] Las marcas de propiedad.  
+ de Marcas de propiedad.  
   
  `pvSig`  
- [en] La firma de la propiedad.  
+ de Firma de la propiedad.  
   
  `cbSig`  
- [en] El recuento de `pvSig`bytes en .  
+ de Recuento de bytes de `pvSig` .  
   
  `dwCPlusTypeFlag`  
- [en] El tipo del valor predeterminado de la propiedad.  
+ de Tipo del valor predeterminado de la propiedad.  
   
  `pValue`  
- [en] El valor predeterminado de la propiedad.  
+ de Valor predeterminado de la propiedad.  
   
  `cchValue`  
- [en] El recuento de caracteres `pValue`(Unicode) en .  
+ de Recuento de caracteres (Unicode) en `pValue` .  
   
  `mdSetter`  
- [en] El método que establece el valor de propiedad.  
+ de El método que establece el valor de propiedad.  
   
  `mdGetter`  
- [en] El método que obtiene el valor de propiedad.  
+ de Método que obtiene el valor de propiedad.  
   
  `rmdOtherMethods[]`  
- [en] Matriz de otros métodos asociados a la propiedad. Termine la matriz `mdTokenNil`con un archivo .  
+ de Matriz de otros métodos asociados a la propiedad. Finalice la matriz con un `mdTokenNil` .  
   
  `pmdProp`  
- [fuera] El `mdProperty` token asignado.  
+ enuncia El `mdProperty` token asignado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MSCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte también
 
-- [IMetaDataEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit (Interfaz)](imetadataemit-interface.md)
+- [IMetaDataEmit2 (Interfaz)](imetadataemit2-interface.md)
