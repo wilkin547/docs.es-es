@@ -1,22 +1,22 @@
 ---
-ms.openlocfilehash: c9547cdc2f127cf13a3610118a26736930fcd8bd
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: 13da0ef6155d65fbc894c5747cc36bb3483ba518
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021612"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721695"
 ---
-### <a name="change-in-semantics-of-stringnull-in-utf8jsonwriter"></a><span data-ttu-id="10a0e-101">Cambio en la semántica de `(string)null` en Utf8JsonWriter</span><span class="sxs-lookup"><span data-stu-id="10a0e-101">Change in semantics of `(string)null` in Utf8JsonWriter</span></span>
+### <a name="change-in-semantics-of-stringnull-in-utf8jsonwriter"></a><span data-ttu-id="7bad9-101">Cambio en la semántica de `(string)null` en Utf8JsonWriter</span><span class="sxs-lookup"><span data-stu-id="7bad9-101">Change in semantics of `(string)null` in Utf8JsonWriter</span></span>
 
-<span data-ttu-id="10a0e-102">En la versión preliminar 7 de .NET Core 3.0, la cadena NULL se trata como la cadena vacía en <xref:System.Text.Json.Utf8JsonWriter>.</span><span class="sxs-lookup"><span data-stu-id="10a0e-102">In .NET Core 3.0 Preview 7, the null string is treated as the empty string in <xref:System.Text.Json.Utf8JsonWriter>.</span></span> <span data-ttu-id="10a0e-103">A partir de la versión preliminar 8 de .NET Core 3.0, la cadena NULL produce una excepción cuando se usa como nombre de propiedad y emite el token JSON NULL cuando se usa como valor.</span><span class="sxs-lookup"><span data-stu-id="10a0e-103">Starting with .NET Core 3.0 Preview 8, the null string throws an exception when used as a property name, and it emits the JSON null token when used as a value.</span></span>
+<span data-ttu-id="7bad9-102">En la versión preliminar 7 de .NET Core 3.0, la cadena NULL se trata como la cadena vacía en <xref:System.Text.Json.Utf8JsonWriter>.</span><span class="sxs-lookup"><span data-stu-id="7bad9-102">In .NET Core 3.0 Preview 7, the null string is treated as the empty string in <xref:System.Text.Json.Utf8JsonWriter>.</span></span> <span data-ttu-id="7bad9-103">A partir de la versión preliminar 8 de .NET Core 3.0, la cadena NULL produce una excepción cuando se usa como nombre de propiedad y emite el token JSON NULL cuando se usa como valor.</span><span class="sxs-lookup"><span data-stu-id="7bad9-103">Starting with .NET Core 3.0 Preview 8, the null string throws an exception when used as a property name, and it emits the JSON null token when used as a value.</span></span>
 
-#### <a name="change-description"></a><span data-ttu-id="10a0e-104">Descripción del cambio</span><span class="sxs-lookup"><span data-stu-id="10a0e-104">Change description</span></span>
+#### <a name="change-description"></a><span data-ttu-id="7bad9-104">Descripción del cambio</span><span class="sxs-lookup"><span data-stu-id="7bad9-104">Change description</span></span>
 
-<span data-ttu-id="10a0e-105">En la versión preliminar 7 de .NET Core 3.0, la cadena `null` se trató como `""` tanto al escribir nombres de propiedad como al escribir valores.</span><span class="sxs-lookup"><span data-stu-id="10a0e-105">In .NET Core 3.0 Preview 7, the `null` string was treated as `""` both when writing property names and when writing values.</span></span>  
+<span data-ttu-id="7bad9-105">En la versión preliminar 7 de .NET Core 3.0, la cadena `null` se trató como `""` tanto al escribir nombres de propiedad como al escribir valores.</span><span class="sxs-lookup"><span data-stu-id="7bad9-105">In .NET Core 3.0 Preview 7, the `null` string was treated as `""` both when writing property names and when writing values.</span></span>  
 
-<span data-ttu-id="10a0e-106">A partir de la versión preliminar 8 de .NET Core 3.0, un nombre de propiedad `null` produce una `ArgumentNullException` y un valor `null` se trata como llamada a <xref:System.Text.Json.Utf8JsonWriter.WriteNull%2A?displayProperty=nameWithType> o <xref:System.Text.Json.Utf8JsonWriter.WriteNullValue?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="10a0e-106">Starting with .NET Core 3.0 Preview 8, a `null` property name throws an `ArgumentNullException`, and a `null` value is treated as a call to <xref:System.Text.Json.Utf8JsonWriter.WriteNull%2A?displayProperty=nameWithType> or <xref:System.Text.Json.Utf8JsonWriter.WriteNullValue?displayProperty=nameWithType>.</span></span>
+<span data-ttu-id="7bad9-106">A partir de la versión preliminar 8 de .NET Core 3.0, un nombre de propiedad `null` produce una `ArgumentNullException` y un valor `null` se trata como llamada a <xref:System.Text.Json.Utf8JsonWriter.WriteNull%2A?displayProperty=nameWithType> o <xref:System.Text.Json.Utf8JsonWriter.WriteNullValue?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="7bad9-106">Starting with .NET Core 3.0 Preview 8, a `null` property name throws an `ArgumentNullException`, and a `null` value is treated as a call to <xref:System.Text.Json.Utf8JsonWriter.WriteNull%2A?displayProperty=nameWithType> or <xref:System.Text.Json.Utf8JsonWriter.WriteNullValue?displayProperty=nameWithType>.</span></span>
 
-<span data-ttu-id="10a0e-107">Observe el código siguiente:</span><span class="sxs-lookup"><span data-stu-id="10a0e-107">Consider the following code:</span></span>
+<span data-ttu-id="7bad9-107">Observe el código siguiente:</span><span class="sxs-lookup"><span data-stu-id="7bad9-107">Consider the following code:</span></span>
 
 ```csharp
 string propertyName1 = null;
@@ -40,39 +40,39 @@ using (Utf8JsonWriter writer = new Utf8JsonWriter(stream))
 }
 ```
 
-<span data-ttu-id="10a0e-108">Si se ejecuta con la versión preliminar 7 de .NET Core 3.0, el escritor produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="10a0e-108">If run with .NET Core 3.0 Preview 7, the writer produces the following output:</span></span>
+<span data-ttu-id="7bad9-108">Si se ejecuta con la versión preliminar 7 de .NET Core 3.0, el escritor produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="7bad9-108">If run with .NET Core 3.0 Preview 7, the writer produces the following output:</span></span>
 
 ```js
 [{"":"","prop2":""},""]
 ```
 
-<span data-ttu-id="10a0e-109">A partir de la versión preliminar 8 de .NET Core 3.0, la llamada a `writer.WriteString(propertyName1, propertyValue1)` produce una <xref:System.ArgumentNullException>.</span><span class="sxs-lookup"><span data-stu-id="10a0e-109">Starting with .NET Core 3.0 Preview 8, the call to `writer.WriteString(propertyName1, propertyValue1)` throws an <xref:System.ArgumentNullException>.</span></span>  <span data-ttu-id="10a0e-110">Si `propertyName1 = null` se reemplaza por `propertyName1 = string.Empty`, el resultado ahora sería:</span><span class="sxs-lookup"><span data-stu-id="10a0e-110">If `propertyName1 = null` is replaced with `propertyName1 = string.Empty`, the output would now be:</span></span>
+<span data-ttu-id="7bad9-109">A partir de la versión preliminar 8 de .NET Core 3.0, la llamada a `writer.WriteString(propertyName1, propertyValue1)` produce una <xref:System.ArgumentNullException>.</span><span class="sxs-lookup"><span data-stu-id="7bad9-109">Starting with .NET Core 3.0 Preview 8, the call to `writer.WriteString(propertyName1, propertyValue1)` throws an <xref:System.ArgumentNullException>.</span></span>  <span data-ttu-id="7bad9-110">Si `propertyName1 = null` se reemplaza por `propertyName1 = string.Empty`, el resultado ahora sería:</span><span class="sxs-lookup"><span data-stu-id="7bad9-110">If `propertyName1 = null` is replaced with `propertyName1 = string.Empty`, the output would now be:</span></span>
 
 ```js
 [{"":null,"prop2":null},null]
 ```
 
-<span data-ttu-id="10a0e-111">Este cambio se realizó para alinearse mejor con las expectativas del autor de llamada para los valores de `null`.</span><span class="sxs-lookup"><span data-stu-id="10a0e-111">This change was made to better align with caller expectations for `null` values.</span></span>
+<span data-ttu-id="7bad9-111">Este cambio se realizó para alinearse mejor con las expectativas del autor de llamada para los valores de `null`.</span><span class="sxs-lookup"><span data-stu-id="7bad9-111">This change was made to better align with caller expectations for `null` values.</span></span>
 
-#### <a name="version-introduced"></a><span data-ttu-id="10a0e-112">Versión introducida</span><span class="sxs-lookup"><span data-stu-id="10a0e-112">Version introduced</span></span>
+#### <a name="version-introduced"></a><span data-ttu-id="7bad9-112">Versión introducida</span><span class="sxs-lookup"><span data-stu-id="7bad9-112">Version introduced</span></span>
 
-<span data-ttu-id="10a0e-113">3.0 (versión preliminar 8)</span><span class="sxs-lookup"><span data-stu-id="10a0e-113">3.0 Preview 8</span></span>
+<span data-ttu-id="7bad9-113">3.0 (versión preliminar 8)</span><span class="sxs-lookup"><span data-stu-id="7bad9-113">3.0 Preview 8</span></span>
 
-#### <a name="recommended-action"></a><span data-ttu-id="10a0e-114">Acción recomendada</span><span class="sxs-lookup"><span data-stu-id="10a0e-114">Recommended action</span></span>
+#### <a name="recommended-action"></a><span data-ttu-id="7bad9-114">Acción recomendada</span><span class="sxs-lookup"><span data-stu-id="7bad9-114">Recommended action</span></span>
 
-<span data-ttu-id="10a0e-115">Al escribir nombres y valores de propiedad con la clase <xref:System.Text.Json.Utf8JsonWriter>:</span><span class="sxs-lookup"><span data-stu-id="10a0e-115">When writing property names and values with the <xref:System.Text.Json.Utf8JsonWriter> class:</span></span>
+<span data-ttu-id="7bad9-115">Al escribir nombres y valores de propiedad con la clase <xref:System.Text.Json.Utf8JsonWriter>:</span><span class="sxs-lookup"><span data-stu-id="7bad9-115">When writing property names and values with the <xref:System.Text.Json.Utf8JsonWriter> class:</span></span>
 
-- <span data-ttu-id="10a0e-116">Asegúrese de que las cadenas que no sean de `null` se usen como nombres de propiedad.</span><span class="sxs-lookup"><span data-stu-id="10a0e-116">Ensure non-`null` strings are used as property names.</span></span>
+- <span data-ttu-id="7bad9-116">Asegúrese de que las cadenas que no sean de `null` se usen como nombres de propiedad.</span><span class="sxs-lookup"><span data-stu-id="7bad9-116">Ensure non-`null` strings are used as property names.</span></span>
 
-- <span data-ttu-id="10a0e-117">Si se desea que se produzca el comportamiento anterior, utilice una invocación de uso combinado de NULL; por ejemplo, `writer.WriteString(propertyName1 ?? "", propertyValue1)`.</span><span class="sxs-lookup"><span data-stu-id="10a0e-117">If the previous behavior is desired, use a null coalescing invocation; for example, `writer.WriteString(propertyName1 ?? "", propertyValue1)`.</span></span>
+- <span data-ttu-id="7bad9-117">Si se desea que se produzca el comportamiento anterior, utilice una invocación de uso combinado de NULL; por ejemplo, `writer.WriteString(propertyName1 ?? "", propertyValue1)`.</span><span class="sxs-lookup"><span data-stu-id="7bad9-117">If the previous behavior is desired, use a null coalescing invocation; for example, `writer.WriteString(propertyName1 ?? "", propertyValue1)`.</span></span>
 
-- <span data-ttu-id="10a0e-118">Si no es conveniente escribir un literal `null` para un valor de cadena `null`, utilice una invocación de uso combinado de NULL; por ejemplo, `writer.WriteString(propertyName2, propertyValue2 ?? "")`.</span><span class="sxs-lookup"><span data-stu-id="10a0e-118">If writing a `null` literal for a `null` string value is not desirable, use a null coalescing invocation; for example, `writer.WriteString(propertyName2, propertyValue2 ?? "")`.</span></span>
+- <span data-ttu-id="7bad9-118">Si no es conveniente escribir un literal `null` para un valor de cadena `null`, utilice una invocación de uso combinado de NULL; por ejemplo, `writer.WriteString(propertyName2, propertyValue2 ?? "")`.</span><span class="sxs-lookup"><span data-stu-id="7bad9-118">If writing a `null` literal for a `null` string value is not desirable, use a null coalescing invocation; for example, `writer.WriteString(propertyName2, propertyValue2 ?? "")`.</span></span>
 
-#### <a name="category"></a><span data-ttu-id="10a0e-119">Categoría</span><span class="sxs-lookup"><span data-stu-id="10a0e-119">Category</span></span>
+#### <a name="category"></a><span data-ttu-id="7bad9-119">Categoría</span><span class="sxs-lookup"><span data-stu-id="7bad9-119">Category</span></span>
 
-<span data-ttu-id="10a0e-120">Bibliotecas de Core .NET</span><span class="sxs-lookup"><span data-stu-id="10a0e-120">Core .NET libraries</span></span>
+<span data-ttu-id="7bad9-120">Bibliotecas de Core .NET</span><span class="sxs-lookup"><span data-stu-id="7bad9-120">Core .NET libraries</span></span>
 
-#### <a name="affected-apis"></a><span data-ttu-id="10a0e-121">API afectadas</span><span class="sxs-lookup"><span data-stu-id="10a0e-121">Affected APIs</span></span>
+#### <a name="affected-apis"></a><span data-ttu-id="7bad9-121">API afectadas</span><span class="sxs-lookup"><span data-stu-id="7bad9-121">Affected APIs</span></span>
 
 - <xref:System.Text.Json.Utf8JsonWriter.WriteBase64String(System.String,System.ReadOnlySpan%7BSystem.Byte%7D)?displayProperty=nameWithType>
 - <xref:System.Text.Json.Utf8JsonWriter.WriteBoolean(System.String,System.Boolean)?displayProperty=nameWithType>
@@ -98,7 +98,7 @@ using (Utf8JsonWriter writer = new Utf8JsonWriter(stream))
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `M:System.Text.Json.Utf8JsonWriter.WriteBase64String(System.String,System.ReadOnlySpan{System.Byte})`
 - `M:System.Text.Json.Utf8JsonWriter.WriteBoolean(System.String,System.Boolean)`
