@@ -12,18 +12,18 @@ helpviewer_keywords:
 - command line [C#], arguments
 - command-line arguments [C#], Main method
 ms.assetid: 73a17231-cf96-44ea-aa8a-54807c6fb1f4
-ms.openlocfilehash: 190216b01ea416aedbca270a6d7a5acbf0c2e797
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 723884dd448232777ae2cfeac5bfcf5ea24363b0
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200124"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007746"
 ---
 # <a name="main-and-command-line-arguments-c-programming-guide"></a>Main() y argumentos de la línea de comandos (Guía de programación de C#)
 
 El método `Main` es el punto de entrada de una aplicación de C# (las bibliotecas y los servicios no requieren un método `Main` como punto de entrada). Cuando se inicia la aplicación, el método `Main` es el primero que se invoca.
 
- Solo puede haber un punto de entrada en un programa de C#. Si hay más de una clase que tiene un método `Main`, debe compilar el programa con la opción del compilador **/main** para especificar qué método `Main` desea utilizar como punto de entrada. Para obtener más información, vea [-main (Opciones del compilador de C#)](../../language-reference/compiler-options/main-compiler-option.md).
+Solo puede haber un punto de entrada en un programa de C#. Si hay más de una clase que tiene un método `Main`, debe compilar el programa con la opción del compilador `-main` para especificar qué método `Main` desea utilizar como punto de entrada. Para obtener más información, vea [-main (Opciones del compilador de C#)](../../language-reference/compiler-options/main-compiler-option.md).
 
 [!code-csharp[csProgGuideMain#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#17)]
 
