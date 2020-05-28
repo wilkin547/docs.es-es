@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 748f1ab2-fbcb-4f55-89ec-8d23d81ebc80
 topic_type:
 - apiref
-ms.openlocfilehash: a8dc09ee9f0f0fd79060bb86c599ab40a285153b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 038e2ec20e5fd01edf9835080e0f7a15ec862fd9
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448762"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008942"
 ---
-# <a name="corvalidatormoduletype-enumeration"></a><span data-ttu-id="1d690-102">CorValidatorModuleType (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="1d690-102">CorValidatorModuleType Enumeration</span></span>
-<span data-ttu-id="1d690-103">Especifica el tipo de un módulo.</span><span class="sxs-lookup"><span data-stu-id="1d690-103">Specifies the type of a module.</span></span>  
+# <a name="corvalidatormoduletype-enumeration"></a><span data-ttu-id="d38da-102">CorValidatorModuleType (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="d38da-102">CorValidatorModuleType Enumeration</span></span>
+<span data-ttu-id="d38da-103">Especifica el tipo de un módulo.</span><span class="sxs-lookup"><span data-stu-id="d38da-103">Specifies the type of a module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1d690-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="1d690-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d38da-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="d38da-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum  
@@ -39,27 +39,27 @@ typedef enum
 } CorValidatorModuleType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="1d690-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="1d690-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="d38da-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="d38da-105">Members</span></span>  
   
-|<span data-ttu-id="1d690-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="1d690-106">Member</span></span>|<span data-ttu-id="1d690-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="1d690-107">Description</span></span>|  
+|<span data-ttu-id="d38da-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="d38da-106">Member</span></span>|<span data-ttu-id="d38da-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="d38da-107">Description</span></span>|  
 |------------|-----------------|  
-|`ValidatorModuleTypeInvalid`|<span data-ttu-id="1d690-108">El módulo es un tipo no válido.</span><span class="sxs-lookup"><span data-stu-id="1d690-108">The module is an invalid type.</span></span>|  
-|`ValidatorModuleTypeMin`|<span data-ttu-id="1d690-109">Valor mínimo de la enumeración `CorValidatorModuleType`.</span><span class="sxs-lookup"><span data-stu-id="1d690-109">The minimum value of the `CorValidatorModuleType` enum.</span></span>|  
-|`ValidatorModuleTypePE`|<span data-ttu-id="1d690-110">El módulo es un archivo ejecutable portable (PE).</span><span class="sxs-lookup"><span data-stu-id="1d690-110">The module is a portable executable (PE) file.</span></span>|  
-|`ValidatorModuleTypeObj`|<span data-ttu-id="1d690-111">El módulo es un archivo. obj.</span><span class="sxs-lookup"><span data-stu-id="1d690-111">The module is a .obj file.</span></span>|  
-|`ValidatorModuleTypeEnc`|<span data-ttu-id="1d690-112">El módulo es una sesión de depurador de edición y continuación.</span><span class="sxs-lookup"><span data-stu-id="1d690-112">The module is an edit-and-continue debugger session.</span></span>|  
-|`ValidatorModuleTypeIncr`|<span data-ttu-id="1d690-113">El módulo es uno que se ha compilado incrementalmente.</span><span class="sxs-lookup"><span data-stu-id="1d690-113">The module is one that has been incrementally built.</span></span>|  
-|`ValidatorModuleTypeMax`|<span data-ttu-id="1d690-114">Valor máximo de la enumeración `CorValidatorModuleType`.</span><span class="sxs-lookup"><span data-stu-id="1d690-114">The maximum value of the `CorValidatorModuleType` enum.</span></span>|  
+|`ValidatorModuleTypeInvalid`|<span data-ttu-id="d38da-108">El módulo es un tipo no válido.</span><span class="sxs-lookup"><span data-stu-id="d38da-108">The module is an invalid type.</span></span>|  
+|`ValidatorModuleTypeMin`|<span data-ttu-id="d38da-109">Valor mínimo de la `CorValidatorModuleType` enumeración.</span><span class="sxs-lookup"><span data-stu-id="d38da-109">The minimum value of the `CorValidatorModuleType` enum.</span></span>|  
+|`ValidatorModuleTypePE`|<span data-ttu-id="d38da-110">El módulo es un archivo ejecutable portable (PE).</span><span class="sxs-lookup"><span data-stu-id="d38da-110">The module is a portable executable (PE) file.</span></span>|  
+|`ValidatorModuleTypeObj`|<span data-ttu-id="d38da-111">El módulo es un archivo. obj.</span><span class="sxs-lookup"><span data-stu-id="d38da-111">The module is a .obj file.</span></span>|  
+|`ValidatorModuleTypeEnc`|<span data-ttu-id="d38da-112">El módulo es una sesión de depurador de edición y continuación.</span><span class="sxs-lookup"><span data-stu-id="d38da-112">The module is an edit-and-continue debugger session.</span></span>|  
+|`ValidatorModuleTypeIncr`|<span data-ttu-id="d38da-113">El módulo es uno que se ha compilado incrementalmente.</span><span class="sxs-lookup"><span data-stu-id="d38da-113">The module is one that has been incrementally built.</span></span>|  
+|`ValidatorModuleTypeMax`|<span data-ttu-id="d38da-114">Valor máximo de la `CorValidatorModuleType` enumeración.</span><span class="sxs-lookup"><span data-stu-id="d38da-114">The maximum value of the `CorValidatorModuleType` enum.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="1d690-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="1d690-115">Requirements</span></span>  
- <span data-ttu-id="1d690-116">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1d690-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d38da-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="d38da-115">Requirements</span></span>  
+ <span data-ttu-id="d38da-116">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d38da-116">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1d690-117">**Encabezado:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="1d690-117">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="d38da-117">**Encabezado:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="d38da-117">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="1d690-118">**Biblioteca:** Se incluye como recurso en MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="1d690-118">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="d38da-118">**Biblioteca:** Se incluye como recurso en MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="d38da-118">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="1d690-119">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1d690-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="d38da-119">**.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d38da-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1d690-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="1d690-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d38da-120">Consulte también</span><span class="sxs-lookup"><span data-stu-id="d38da-120">See also</span></span>
 
-- [<span data-ttu-id="1d690-121">Enumeraciones para metadatos</span><span class="sxs-lookup"><span data-stu-id="1d690-121">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="d38da-121">Enumeraciones para metadatos</span><span class="sxs-lookup"><span data-stu-id="d38da-121">Metadata Enumerations</span></span>](metadata-enumerations.md)

@@ -4,50 +4,56 @@ description: Siga los tutoriales para aprender a compilar aplicaciones y bibliot
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: 84784787465bec43cc460d34ca84e4baa5a15d7d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9fb87180bb001a7f54d93c6e95631562103c49e8
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77625939"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83840928"
 ---
-# <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a><span data-ttu-id="458b9-103">Explore estos tutoriales para obtener información sobre las herramientas de .NET Core y el SDK de .NET Core</span><span class="sxs-lookup"><span data-stu-id="458b9-103">Learn .NET Core and the .NET Core SDK tools by exploring these tutorials</span></span>
+# <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a><span data-ttu-id="f7919-103">Explore estos tutoriales para obtener información sobre las herramientas de .NET Core y el SDK de .NET Core</span><span class="sxs-lookup"><span data-stu-id="f7919-103">Learn .NET Core and the .NET Core SDK tools by exploring these tutorials</span></span>
 
-<span data-ttu-id="458b9-104">Los siguientes tutoriales están disponibles para aprender sobre .NET Core.</span><span class="sxs-lookup"><span data-stu-id="458b9-104">The following tutorials are available for learning about .NET Core.</span></span>
+<span data-ttu-id="f7919-104">Los siguientes tutoriales están disponibles para aprender sobre .NET Core.</span><span class="sxs-lookup"><span data-stu-id="f7919-104">The following tutorials are available for learning about .NET Core.</span></span>
 
-## <a name="create-applications-with-visual-studio"></a><span data-ttu-id="458b9-105">Creación de aplicaciones con Visual Studio</span><span class="sxs-lookup"><span data-stu-id="458b9-105">Create applications with Visual Studio</span></span>
+## <a name="use-visual-studio"></a><span data-ttu-id="f7919-105">Usar Visual Studio</span><span class="sxs-lookup"><span data-stu-id="f7919-105">Use Visual Studio</span></span>
 
-- [<span data-ttu-id="458b9-106">Creación de una aplicación de consola Hola mundo</span><span class="sxs-lookup"><span data-stu-id="458b9-106">Create a Hello World console application</span></span>](with-visual-studio.md)
-- [<span data-ttu-id="458b9-107">Depuración de la aplicación Hola mundo</span><span class="sxs-lookup"><span data-stu-id="458b9-107">Debug your Hello World application</span></span>](debugging-with-visual-studio.md)
-- [<span data-ttu-id="458b9-108">Publicación de la aplicación Hola mundo</span><span class="sxs-lookup"><span data-stu-id="458b9-108">Publish your Hello World application</span></span>](publishing-with-visual-studio.md)
-- [<span data-ttu-id="458b9-109">Compilación de una biblioteca de clases</span><span class="sxs-lookup"><span data-stu-id="458b9-109">Build a class library</span></span>](library-with-visual-studio.md)
-- [<span data-ttu-id="458b9-110">Prueba de una biblioteca de clases</span><span class="sxs-lookup"><span data-stu-id="458b9-110">Test a class library</span></span>](testing-library-with-visual-studio.md)
-- [<span data-ttu-id="458b9-111">Uso de una biblioteca de clases</span><span class="sxs-lookup"><span data-stu-id="458b9-111">Consume a class library</span></span>](consuming-library-with-visual-studio.md)
-- [<span data-ttu-id="458b9-112">Azure Cosmos DB: Introducción a la API de SQL y .NET Core</span><span class="sxs-lookup"><span data-stu-id="458b9-112">Azure Cosmos DB: Get started with the SQL API and .NET Core</span></span>](/azure/cosmos-db/sql-api-dotnetcore-get-started)
+- [<span data-ttu-id="f7919-106">Creación de una aplicación de consola</span><span class="sxs-lookup"><span data-stu-id="f7919-106">Create a console app</span></span>](with-visual-studio.md)
+- [<span data-ttu-id="f7919-107">Creación de una aplicación de consola en F#</span><span class="sxs-lookup"><span data-stu-id="f7919-107">Create an F# console app</span></span>](../../fsharp/get-started/get-started-visual-studio.md)
+- [<span data-ttu-id="f7919-108">Depuración de una aplicación</span><span class="sxs-lookup"><span data-stu-id="f7919-108">Debug an app</span></span>](debugging-with-visual-studio.md)
+- [<span data-ttu-id="f7919-109">Publicación de una aplicación</span><span class="sxs-lookup"><span data-stu-id="f7919-109">Publish an app</span></span>](publishing-with-visual-studio.md)
+- [<span data-ttu-id="f7919-110">Creación de una biblioteca de clases</span><span class="sxs-lookup"><span data-stu-id="f7919-110">Create a class library</span></span>](library-with-visual-studio.md)
+- [<span data-ttu-id="f7919-111">Prueba unitaria de una biblioteca de clases</span><span class="sxs-lookup"><span data-stu-id="f7919-111">Unit test a class library</span></span>](testing-library-with-visual-studio.md)
+- [<span data-ttu-id="f7919-112">Uso de una biblioteca de clases</span><span class="sxs-lookup"><span data-stu-id="f7919-112">Use a class library</span></span>](consuming-library-with-visual-studio.md)
+- [<span data-ttu-id="f7919-113">Instalación y uso de un paquete</span><span class="sxs-lookup"><span data-stu-id="f7919-113">Install and use a package</span></span>](/nuget/quickstart/install-and-use-a-package-in-visual-studio)
+- [<span data-ttu-id="f7919-114">Creación y publicación de un paquete</span><span class="sxs-lookup"><span data-stu-id="f7919-114">Create and publish a package</span></span>](/nuget/quickstart/create-and-publish-a-package-using-visual-studio)
 
-## <a name="build-applications-with-visual-studio-code"></a><span data-ttu-id="458b9-113">Compilación de aplicaciones con Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="458b9-113">Build applications with Visual Studio Code</span></span>
+## <a name="use-visual-studio-code"></a><span data-ttu-id="f7919-115">Usar Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="f7919-115">Use Visual Studio Code</span></span>
 
-- [<span data-ttu-id="458b9-114">Introducción a C# y Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="458b9-114">Get started with C# and Visual Studio Code</span></span>](with-visual-studio-code.md)
-- [<span data-ttu-id="458b9-115">Introducción a .NET Core en macOS</span><span class="sxs-lookup"><span data-stu-id="458b9-115">Get started with .NET Core on macOS</span></span>](using-on-macos.md)
+<span data-ttu-id="f7919-116">Elija estos tutoriales si quiere usar Visual Studio Code u otro editor de código.</span><span class="sxs-lookup"><span data-stu-id="f7919-116">Choose these tutorials if you want to use Visual Studio Code or some other code editor.</span></span> <span data-ttu-id="f7919-117">Todos usan la CLI para tareas de desarrollo de .NET Core, por lo que se pueden utilizar con cualquier editor de código.</span><span class="sxs-lookup"><span data-stu-id="f7919-117">All use the CLI for .NET Core development tasks, so all can be used with any code editor.</span></span>
 
-## <a name="build-applications-with-visual-studio-for-mac"></a><span data-ttu-id="458b9-116">Compilación de aplicaciones con Visual Studio para Mac</span><span class="sxs-lookup"><span data-stu-id="458b9-116">Build applications with Visual Studio for Mac</span></span>
+- [<span data-ttu-id="f7919-118">Creación de una aplicación de consola</span><span class="sxs-lookup"><span data-stu-id="f7919-118">Create a console app</span></span>](with-visual-studio-code.md)
+- [<span data-ttu-id="f7919-119">Creación y publicación de una aplicación de consola</span><span class="sxs-lookup"><span data-stu-id="f7919-119">Create a console app and publish it</span></span>](cli-create-console-app.md)
+- [<span data-ttu-id="f7919-120">Creación de una aplicación de consola en F#</span><span class="sxs-lookup"><span data-stu-id="f7919-120">Create an F# console app</span></span>](../../fsharp/get-started/get-started-vscode.md)
+- [<span data-ttu-id="f7919-121">Creación y prueba unitaria de una biblioteca en macOS</span><span class="sxs-lookup"><span data-stu-id="f7919-121">Create a library and unit test it - macOS</span></span>](using-on-macos.md)
+- [<span data-ttu-id="f7919-122">Instalación y uso de un paquete</span><span class="sxs-lookup"><span data-stu-id="f7919-122">Install and use a package</span></span>](/nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli)
+- [<span data-ttu-id="f7919-123">Creación y publicación de un paquete</span><span class="sxs-lookup"><span data-stu-id="f7919-123">Create and publish a package</span></span>](/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli)
 
-- [<span data-ttu-id="458b9-117">Introducción a .NET Core en macOS con Visual Studio para Mac</span><span class="sxs-lookup"><span data-stu-id="458b9-117">Get started with .NET Core on macOS using Visual Studio for Mac</span></span>](using-on-mac-vs.md)
-- [<span data-ttu-id="458b9-118">Creación de una solución completa de .NET Core en macOS con Visual Studio para Mac</span><span class="sxs-lookup"><span data-stu-id="458b9-118">Building a complete .NET Core solution on macOS using Visual Studio for Mac</span></span>](using-on-mac-vs-full-solution.md)
+## <a name="use-visual-studio-for-mac"></a><span data-ttu-id="f7919-124">Uso de Visual Studio para Mac</span><span class="sxs-lookup"><span data-stu-id="f7919-124">Use Visual Studio for Mac</span></span>
 
-## <a name="build-applications-with-the-net-core-cli"></a><span data-ttu-id="458b9-119">Compilación de aplicaciones con la CLI de .NET Core</span><span class="sxs-lookup"><span data-stu-id="458b9-119">Build applications with the .NET Core CLI</span></span>
+- [<span data-ttu-id="f7919-125">Creación de una aplicación de consola</span><span class="sxs-lookup"><span data-stu-id="f7919-125">Create a console app</span></span>](using-on-mac-vs.md)
+- [<span data-ttu-id="f7919-126">Creación y prueba unitaria de una biblioteca</span><span class="sxs-lookup"><span data-stu-id="f7919-126">Create a library and unit test it</span></span>](using-on-mac-vs-full-solution.md)
+- [<span data-ttu-id="f7919-127">Instalación y uso de un paquete</span><span class="sxs-lookup"><span data-stu-id="f7919-127">Install and use a package</span></span>](/nuget/quickstart/install-and-use-a-package-in-visual-studio-mac)
 
-- [<span data-ttu-id="458b9-120">Introducción a .NET Core en Windows/Linux/macOS con la CLI de .NET Core</span><span class="sxs-lookup"><span data-stu-id="458b9-120">Get started with .NET Core on Windows/Linux/macOS using the .NET Core CLI</span></span>](cli-create-console-app.md)
-- [<span data-ttu-id="458b9-121">Organización y prueba de proyectos con la CLI de .NET Core</span><span class="sxs-lookup"><span data-stu-id="458b9-121">Organizing and testing projects with the .NET Core CLI</span></span>](testing-with-cli.md)
-- [<span data-ttu-id="458b9-122">Introducción a F#</span><span class="sxs-lookup"><span data-stu-id="458b9-122">Get started with F#</span></span>](../../fsharp/get-started/get-started-command-line.md)
+## <a name="advanced-topics"></a><span data-ttu-id="f7919-128">Temas avanzados</span><span class="sxs-lookup"><span data-stu-id="f7919-128">Advanced topics</span></span>
 
-## <a name="other"></a><span data-ttu-id="458b9-123">Otros</span><span class="sxs-lookup"><span data-stu-id="458b9-123">Other</span></span>
+- [<span data-ttu-id="f7919-129">Procedimiento para crear bibliotecas</span><span class="sxs-lookup"><span data-stu-id="f7919-129">How to create libraries</span></span>](libraries.md)
+- [<span data-ttu-id="f7919-130">Prueba unitaria de una aplicación con xUnit</span><span class="sxs-lookup"><span data-stu-id="f7919-130">Unit test an app with xUnit</span></span>](testing-with-cli.md)
+- [<span data-ttu-id="f7919-131">Prueba unitaria en C#, VB y F# con NUnit, xUnit o MSTest</span><span class="sxs-lookup"><span data-stu-id="f7919-131">Unit test using C#/VB/F# with NUnit/xUnit/MSTest</span></span>](../testing/index.md)
+- [<span data-ttu-id="f7919-132">Prueba unitaria dinámica con Visual Studio</span><span class="sxs-lookup"><span data-stu-id="f7919-132">Live unit test with Visual Studio</span></span>](/visualstudio/test/live-unit-testing-start)
+- [<span data-ttu-id="f7919-133">Creación de plantillas para la CLI</span><span class="sxs-lookup"><span data-stu-id="f7919-133">Create templates for the CLI</span></span>](cli-templates-create-item-template.md)
+- [<span data-ttu-id="f7919-134">Creación y uso de herramientas para la CLI</span><span class="sxs-lookup"><span data-stu-id="f7919-134">Create and use tools for the CLI</span></span>](../tools/global-tools-how-to-create.md)
+- [<span data-ttu-id="f7919-135">Creación de una aplicación con complementos</span><span class="sxs-lookup"><span data-stu-id="f7919-135">Create an app with plugins</span></span>](creating-app-with-plugin-support.md)
 
-- [<span data-ttu-id="458b9-124">Pruebas unitarias de .NET Core mediante pruebas de dotnet</span><span class="sxs-lookup"><span data-stu-id="458b9-124">Unit Testing in .NET Core using dotnet test</span></span>](../testing/unit-testing-with-dotnet-test.md)
-- [<span data-ttu-id="458b9-125">Pruebas unitarias con MSTest y .NET Core</span><span class="sxs-lookup"><span data-stu-id="458b9-125">Unit testing with MSTest and .NET Core</span></span>](../testing/unit-testing-with-mstest.md)
-- [<span data-ttu-id="458b9-126">Desarrollo de bibliotecas con herramientas multiplataforma</span><span class="sxs-lookup"><span data-stu-id="458b9-126">Developing Libraries with Cross Platform Tools</span></span>](libraries.md)
-- [<span data-ttu-id="458b9-127">Hospedaje de .NET Core desde código nativo</span><span class="sxs-lookup"><span data-stu-id="458b9-127">Hosting .NET Core from native code</span></span>](netcore-hosting.md)
-- [<span data-ttu-id="458b9-128">Creación de plantillas para la CLI</span><span class="sxs-lookup"><span data-stu-id="458b9-128">Create templates for the CLI</span></span>](cli-templates-create-item-template.md)
-- [<span data-ttu-id="458b9-129">Creación y uso de herramientas para la CLI</span><span class="sxs-lookup"><span data-stu-id="458b9-129">Create and use tools for the CLI</span></span>](../tools/global-tools-how-to-create.md)
+## <a name="create-web-apps"></a><span data-ttu-id="f7919-136">Creación de aplicaciones web</span><span class="sxs-lookup"><span data-stu-id="f7919-136">Create web apps</span></span>
 
-<span data-ttu-id="458b9-130">Para ver tutoriales sobre el desarrollo de aplicaciones web ASP.NET Core, vea la [documentación de ASP.NET Core](/aspnet/core/).</span><span class="sxs-lookup"><span data-stu-id="458b9-130">For tutorials about developing ASP.NET Core web applications, see the [ASP.NET Core documentation](/aspnet/core/).</span></span>
+<span data-ttu-id="f7919-137">Para ver tutoriales sobre el desarrollo de aplicaciones web ASP.NET Core, vea la [documentación de ASP.NET Core](/aspnet/core/).</span><span class="sxs-lookup"><span data-stu-id="f7919-137">For tutorials about developing ASP.NET Core web applications, see the [ASP.NET Core documentation](/aspnet/core/).</span></span>

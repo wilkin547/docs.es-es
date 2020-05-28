@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b74d7629-5f46-458f-8d67-2456a1e7030c
 topic_type:
 - apiref
-ms.openlocfilehash: 69c3ee366dbb8505e0df744037c480da996bb836
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aee258c49e6726ebef990257456fd273b01b9ef0
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175621"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007850"
 ---
-# <a name="imetadataemitsetmoduleprops-method"></a><span data-ttu-id="ed863-102">IMetaDataEmit::SetModuleProps (Método)</span><span class="sxs-lookup"><span data-stu-id="ed863-102">IMetaDataEmit::SetModuleProps Method</span></span>
-<span data-ttu-id="ed863-103">Actualiza las referencias a un módulo definido por una llamada anterior a [IMetaDataEmit::DefineModuleRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md).</span><span class="sxs-lookup"><span data-stu-id="ed863-103">Updates references to a module defined by a prior call to [IMetaDataEmit::DefineModuleRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md).</span></span>  
+# <a name="imetadataemitsetmoduleprops-method"></a><span data-ttu-id="a8213-102">IMetaDataEmit::SetModuleProps (Método)</span><span class="sxs-lookup"><span data-stu-id="a8213-102">IMetaDataEmit::SetModuleProps Method</span></span>
+<span data-ttu-id="a8213-103">Actualiza las referencias a un módulo definido por una llamada anterior a [IMetaDataEmit::D efinemoduleref](imetadataemit-definemoduleref-method.md).</span><span class="sxs-lookup"><span data-stu-id="a8213-103">Updates references to a module defined by a prior call to [IMetaDataEmit::DefineModuleRef](imetadataemit-definemoduleref-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ed863-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ed863-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a8213-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="a8213-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetModuleProps (
@@ -33,20 +33,20 @@ HRESULT SetModuleProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ed863-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="ed863-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a8213-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="a8213-105">Parameters</span></span>  
  `szName`  
- <span data-ttu-id="ed863-106">[en] El nombre del módulo en Unicode.</span><span class="sxs-lookup"><span data-stu-id="ed863-106">[in] The module name in Unicode.</span></span> <span data-ttu-id="ed863-107">Este es el nombre de archivo solamente y no el nombre de ruta de acceso completo.</span><span class="sxs-lookup"><span data-stu-id="ed863-107">This is the file name only and not the full path name.</span></span>  
+ <span data-ttu-id="a8213-106">de Nombre del módulo en Unicode.</span><span class="sxs-lookup"><span data-stu-id="a8213-106">[in] The module name in Unicode.</span></span> <span data-ttu-id="a8213-107">Este es el nombre de archivo únicamente y no el nombre completo de la ruta de acceso.</span><span class="sxs-lookup"><span data-stu-id="a8213-107">This is the file name only and not the full path name.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ed863-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ed863-108">Requirements</span></span>  
- <span data-ttu-id="ed863-109">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ed863-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a8213-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a8213-108">Requirements</span></span>  
+ <span data-ttu-id="a8213-109">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a8213-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ed863-110">**Encabezado:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="ed863-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="a8213-110">**Encabezado:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="a8213-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="ed863-111">**Biblioteca:** Se utiliza como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ed863-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="a8213-111">**Biblioteca:** Se utiliza como recurso en MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="a8213-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="ed863-112">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ed863-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a8213-112">**.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a8213-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ed863-113">Consulte también</span><span class="sxs-lookup"><span data-stu-id="ed863-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a8213-113">Consulte también</span><span class="sxs-lookup"><span data-stu-id="a8213-113">See also</span></span>
 
-- [<span data-ttu-id="ed863-114">IMetaDataEmit (interfaz)</span><span class="sxs-lookup"><span data-stu-id="ed863-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="ed863-115">IMetaDataEmit2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="ed863-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="a8213-114">IMetaDataEmit (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="a8213-114">IMetaDataEmit Interface</span></span>](imetadataemit-interface.md)
+- [<span data-ttu-id="a8213-115">IMetaDataEmit2 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="a8213-115">IMetaDataEmit2 Interface</span></span>](imetadataemit2-interface.md)
