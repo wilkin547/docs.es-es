@@ -2,15 +2,15 @@
 title: Procedimiento para especificar las credenciales de seguridad de los canales
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: e5b2b56da1989b9a7110a1ad3eee814560942c89
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 72fdcd18fba2eabe8255f73acd240e12e57d56ea
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972446"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144713"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Procedimiento para especificar las credenciales de seguridad de los canales
-El moniker del servicio Windows Communication Foundation (WCF) permite que las aplicaciones COM llamen a servicios WCF. La mayoría de los servicios WCF requieren que el cliente especifique las credenciales para la autenticación y autorización. Al llamar a un servicio WCF desde un cliente WCF, puede especificar estas credenciales en código administrado o en un archivo de configuración de la aplicación. Al llamar a un servicio WCF desde una aplicación com, puede usar la <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interfaz para especificar las credenciales. Este tema describe varias maneras de especificar credenciales mediante la interfaz <xref:System.ServiceModel.ComIntegration.IChannelCredentials>.  
+El moniker del servicio Windows Communication Foundation (WCF) permite que las aplicaciones COM llamen a servicios WCF. La mayoría de los servicios WCF requieren que el cliente especifique las credenciales para la autenticación y autorización. Al llamar a un servicio WCF desde un cliente WCF, puede especificar estas credenciales en código administrado o en un archivo de configuración de la aplicación. Al llamar a un servicio WCF desde una aplicación COM, puede usar la <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interfaz para especificar las credenciales. Este tema describe varias maneras de especificar credenciales mediante la interfaz <xref:System.ServiceModel.ComIntegration.IChannelCredentials>.  
   
 > [!NOTE]
 > <xref:System.ServiceModel.ComIntegration.IChannelCredentials> es una interfaz basada en IDispatch y no se obtiene la funcionalidad IntelliSense en el entorno de Visual Studio.  
@@ -27,7 +27,7 @@ El moniker del servicio Windows Communication Foundation (WCF) permite que las a
   
 4. Agregue `bindingNamespace="http://Microsoft.ServiceModel.Samples"` a la etiqueta del punto de conexión en el archivo app. config para el servicio.  
   
-5. Compile el ejemplo de seguridad del mensaje y ejecute Service.exe. Utilice Internet Explorer y busque el URI del servicio (http://localhost:8000/ServiceModelSamples/Service) para asegurarse de que el servicio está funcionando.  
+5. Compile el ejemplo de seguridad del mensaje y ejecute Service.exe. Use Internet Explorer y busque el URI del servicio ( `http://localhost:8000/ServiceModelSamples/Service` ) para asegurarse de que el servicio está funcionando.  
   
 6. Abra Visual Basic 6.0 y cree un nuevo archivo .exe estándar. Agregue un botón al formulario y haga doble clic en él para agregar el código siguiente al controlador de clic:  
   
@@ -134,7 +134,7 @@ El moniker del servicio Windows Communication Foundation (WCF) permite que las a
 ## <a name="see-also"></a>Vea también
 
 - [Federación](../../../../docs/framework/wcf/feature-details/federation.md)
-- [Procedimientos: Configurar credenciales en un Servicio de federación](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [Procedimientos: Creación de un cliente federado](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Procedimiento para configurar las credenciales en un servicio de federación](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Procedimiento para crear un cliente federado](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [Seguridad de los mensajes](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
 - [Enlaces y seguridad](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

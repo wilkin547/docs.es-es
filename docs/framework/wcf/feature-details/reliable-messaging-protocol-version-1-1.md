@@ -2,18 +2,18 @@
 title: Protocolo de mensajería de confianza versión 1,1
 ms.date: 03/30/2017
 ms.assetid: 0da47b82-f8eb-42da-8bfe-e56ce7ba6f59
-ms.openlocfilehash: 9320787317131f42c4a82c6114a16fdea87567f4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ad0a77842c10965749eab4e76bb123938e07e9d5
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283311"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144726"
 ---
 # <a name="reliable-messaging-protocol-version-11"></a>Protocolo de mensajería de confianza versión 1,1
 
 En este tema se tratan los detalles de implementación de Windows Communication Foundation (WCF) para el protocolo WS-ReliableMessaging de febrero 2007 (versión 1,1) necesario para la interoperación mediante el transporte HTTP. WCF sigue la especificación WS-ReliableMessaging con las restricciones y aclaraciones explicadas en este tema. Tenga en cuenta que el protocolo WS-ReliableMessaging versión 1,1 se implementa a partir de .NET Framework 3,5.
 
-El <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>implementa el protocolo WS-ReliableMessaging de febrero de 2007.
+Implementa el protocolo WS-ReliableMessaging de febrero de 2007 en WCF <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> .
 
 Para su comodidad, el tema utiliza las siguientes funciones:
 
@@ -25,48 +25,48 @@ Para su comodidad, el tema utiliza las siguientes funciones:
 
 |Prefijo|Espacio de nombres|
 |-|-|
-|wsrm|http://docs.oasis-open.org/ws-rx/wsrm/200702|
-|netrm|http://schemas.microsoft.com/ws/2006/05/rm|
-|s|http://www.w3.org/2003/05/soap-envelope|
-|wsa|http://schemas.xmlsoap.org/ws/2005/08/addressing|
-|wsse|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wssecurity-secext-1.0.xsd|
-|wsrmp|http://docs.oasis-open.org/ws-rx/wsrmp/200702|
-|netrmp|http://schemas.microsoft.com/ws-rx/wsrmp/200702|
+|wsrm|`http://docs.oasis-open.org/ws-rx/wsrm/200702`|
+|netrm|`http://schemas.microsoft.com/ws/2006/05/rm`|
+|s|`http://www.w3.org/2003/05/soap-envelope`|
+|wsa|`http://schemas.xmlsoap.org/ws/2005/08/addressing`|
+|wsse|`http://docs.oasis-open.org/wss/2004/01/oasis-200401-wssecurity-secext-1.0.xsd`|
+|wsrmp|`http://docs.oasis-open.org/ws-rx/wsrmp/200702`|
+|netrmp|`http://schemas.microsoft.com/ws-rx/wsrmp/200702`|
 |wsp|(Directiva WS-Policy 1.2 o WS-Policy 1.5)|
 
 ## <a name="messaging"></a>Mensajería
 
 ### <a name="sequence-creation"></a>Creación de secuencias
 
-WCF implementa `CreateSequence` y `CreateSequenceResponse` mensajes para establecer una secuencia de mensajería confiable. Las siguientes restricciones son aplicables:
+WCF implementa `CreateSequence` mensajes y `CreateSequenceResponse` para establecer una secuencia de mensajería confiable. Las siguientes restricciones son aplicables:
 
-- B1101: el iniciador de WCF usa la misma referencia de extremo que la `ReplyTo`, `AcksTo` y `Offer/Endpoint`del mensaje de `CreateSequence`.
+- B1101: el iniciador de WCF usa la misma referencia de extremo que el `CreateSequence` del mensaje `ReplyTo` , `AcksTo` y `Offer/Endpoint` .
 
 - R1102: las referencias de punto de conexión `AcksTo`, `ReplyTo` y `Offer/Endpoint` en el mensaje `CreateSequence` deben tener valores de dirección con representaciones de cadena idénticas, de tal modo que coincidan por octetos.
 
-  - El respondedor de WCF comprueba que la parte del URI de las referencias de extremo `AcksTo`, `ReplyTo` y `Endpoint` es idéntica antes de crear una secuencia.
+  - El respondedor de WCF comprueba que la parte del URI de `AcksTo` las `ReplyTo` `Endpoint` referencias de extremo y son idénticas antes de crear una secuencia.
 
 - R1103: las referencias de punto de conexión `AcksTo`, `ReplyTo` y `Offer/Endpoint` en el mensaje `CreateSequence` deberían tener el mismo conjunto de parámetros de referencia.
 
-  - WCF no exige, pero supone que los parámetros de referencia de las referencias de extremo `AcksTo`, `ReplyTo` y `Offer/Endpoint` en `CreateSequence` son idénticos y usan los parámetros de referencia de la referencia de extremo `ReplyTo` para las confirmaciones y los mensajes de secuencia inversa.
+  - WCF no exige, pero supone que los parámetros de referencia de `AcksTo` `ReplyTo` y `Offer/Endpoint` las referencias de extremo en `CreateSequence` son idénticos y usa parámetros de referencia de la `ReplyTo` referencia de extremo para las confirmaciones y los mensajes de secuencia inversa.
 
-- B1104: el iniciador de WCF no genera el elemento `Expires` o `Offer/Expires` opcional en el mensaje de `CreateSequence`.
+- B1104: el iniciador de WCF no genera el `Expires` elemento opcional o `Offer/Expires` en el `CreateSequence` mensaje.
 
-- B1105: al obtener acceso al mensaje de `CreateSequence`, el respondedor de WCF usa el valor `Expires` en el elemento `CreateSequence` como el valor `Expires` en el elemento `CreateSequenceResponse`. De lo contrario, el respondedor de WCF Lee y omite los valores de `Expires` y `Offer/Expires`.
+- B1105: al obtener acceso al `CreateSequence` mensaje, el respondedor de WCF usa el `Expires` valor del `CreateSequence` elemento como el `Expires` valor del `CreateSequenceResponse` elemento. De lo contrario, el respondedor de WCF Lee y omite los `Expires` `Offer/Expires` valores y.
 
-- B1106: al obtener acceso al mensaje de `CreateSequenceResponse`, el iniciador de WCF lee el valor de `Expires` opcional, pero no lo usa.
+- B1106: al obtener acceso al `CreateSequenceResponse` mensaje, el iniciador de WCF lee el valor opcional, `Expires` pero no lo usa.
 
-- B1107: el iniciador y el respondedor de WCF siempre generan el elemento de `IncompleteSequenceBehavior` opcional en los elementos `CreateSequence/Offer` y `CreateSequenceResponse`.
+- B1107: el iniciador y respondedor de WCF siempre genera el `IncompleteSequenceBehavior` elemento opcional en los `CreateSequence/Offer` `CreateSequenceResponse` elementos y.
 
-- B1108: WCF usa solo los valores `DiscardFollowingFirstGap` y `NoDiscard` en el elemento `IncompleteSequenceBehavior`.
+- B1108: WCF solo usa los `DiscardFollowingFirstGap` valores y del `NoDiscard` `IncompleteSequenceBehavior` elemento.
 
   - WS-ReliableMessaging utiliza el mecanismo `Offer` para establecer las dos secuencias correlacionadas inversas que forman una sesión.
 
-- B1109: si `CreateSequence` contiene un elemento `Offer`, el respondedor WCF unidireccional rechaza la secuencia proporcionada respondiendo con una `CreateSequenceResponse` sin un elemento `Accept`.
+- B1109: Si `CreateSequence` contiene un `Offer` elemento, el respondedor de WCF unidireccional rechaza la secuencia proporcionada respondiendo con una `CreateSequenceResponse` sin un `Accept` elemento.
 
 - B1110: Si un respondedor de mensajería de confianza rechaza la secuencia ofrecida, el iniciador de WCF genera un error en la secuencia recién establecida.
 
-- B1111: si `CreateSequence` no contiene un elemento `Offer`, el respondedor WCF bidireccional rechaza la secuencia proporcionada respondiendo a un error de `CreateSequenceRefused`.
+- B1111: Si `CreateSequence` no contiene un `Offer` elemento, el respondedor de WCF bidireccional rechaza la secuencia proporcionada respondiendo con un `CreateSequenceRefused` error.
 
 - R1112: cuando dos secuencias inversas se establecen utilizando el mecanismo `Offer`, la propiedad `[address]` de la referencia de punto de conexión `CreateSequenceResponse/Accept/AcksTo` debe coincidir con el URI de destino del mensaje `CreateSequence` byte a byte.
 
@@ -128,9 +128,9 @@ Ejemplo de mensaje `CreateSequenceResponse`.
 
 ### <a name="closing-a-sequence"></a>Cierre de una secuencia
 
-WCF usa los mensajes de `CloseSequence` y `CloseSequenceResponse` para un cierre Iniciado por el origen de mensajería de confianza. El destino de la mensajería de confianza de WCF no inicia el cierre y el origen de la mensajería de confianza de WCF no admite el apagado Iniciado por el destino de la mensajería de confianza. Las siguientes restricciones son aplicables:
+WCF usa los `CloseSequence` `CloseSequenceResponse` mensajes y para un cierre Iniciado por el origen de mensajería de confianza. El destino de la mensajería de confianza de WCF no inicia el cierre y el origen de la mensajería de confianza de WCF no admite el apagado Iniciado por el destino de la mensajería de confianza. Las siguientes restricciones son aplicables:
 
-- B1201: el origen de la mensajería de confianza de WCF siempre envía un mensaje de `CloseSequence` para cerrar la secuencia.
+- B1201: el origen de la mensajería de confianza de WCF siempre envía un `CloseSequence` mensaje para cerrar la secuencia.
 
 - B1202: el origen de la mensajería de confianza espera la confirmación del intervalo completo de mensajes de secuencia antes de enviar el mensaje `CloseSequence`.
 
@@ -138,7 +138,7 @@ WCF usa los mensajes de `CloseSequence` y `CloseSequenceResponse` para un cierre
 
 - R1204: el destino de la mensajería de confianza no debe iniciar el cierre mediante el envío de un mensaje `CloseSequence`.
 
-- B1205: al recibir un mensaje de `CloseSequence`, el origen de mensajería confiable de WCF considera que la secuencia está incompleta y envía un error.
+- B1205: al recibir un `CloseSequence` mensaje, el origen de mensajería confiable de WCF considera que la secuencia está incompleta y envía un error.
 
  Ejemplo de mensaje `CloseSequence`.
 
@@ -161,7 +161,7 @@ WCF usa los mensajes de `CloseSequence` y `CloseSequenceResponse` para un cierre
 </s:Envelope>
 ```
 
-Ejemplo de mensaje de `CloseSequenceResponse`:
+Mensaje de ejemplo `CloseSequenceResponse` :
 
 ```xml
 <s:Envelope>
@@ -186,15 +186,15 @@ Ejemplo de mensaje de `CloseSequenceResponse`:
 
 ### <a name="sequence-termination"></a>Finalización de secuencia
 
-WCF usa principalmente el protocolo de enlace de `TerminateSequence/TerminateSequenceResponse` después de completar el protocolo de enlace de `CloseSequence/CloseSequenceResponse`. El destino de la mensajería de confianza de WCF no inicia la terminación y el origen de la mensajería de confianza no admite una terminación iniciada por el destino de la mensajería de confianza. Las siguientes restricciones son aplicables:
+WCF usa principalmente el `TerminateSequence/TerminateSequenceResponse` Protocolo de enlace después de completar el `CloseSequence/CloseSequenceResponse` Protocolo de enlace. El destino de la mensajería de confianza de WCF no inicia la terminación y el origen de la mensajería de confianza no admite una terminación iniciada por el destino de la mensajería de confianza. Las siguientes restricciones son aplicables:
 
-- B1301: el iniciador de WCF solo envía el mensaje de `TerminateSequence` después de la finalización correcta del Protocolo de enlace de `CloseSequence/CloseSequenceResponse`.
+- B1301: el iniciador de WCF solo envía el `TerminateSequence` mensaje después de la finalización correcta del `CloseSequence/CloseSequenceResponse` Protocolo de enlace.
 
-- R1302: WCF valida que el elemento `LastMsgNumber` es coherente en todos los mensajes `CloseSequence` y `TerminateSequence` de una secuencia determinada. Esto significa que `LastMsgNumber` no está presente en todos los mensajes `CloseSequence` y `TerminateSequence`, o está presente y es idéntico en todos los mensajes `CloseSequence` y `TerminateSequence`.
+- R1302: WCF valida que el `LastMsgNumber` elemento es coherente en todos los `CloseSequence` `TerminateSequence` mensajes y para una secuencia determinada. Esto significa que `LastMsgNumber` no está presente en todos los mensajes `CloseSequence` y `TerminateSequence`, o está presente y es idéntico en todos los mensajes `CloseSequence` y `TerminateSequence`.
 
 - B1303: al recibir un mensaje `TerminateSequence` después del protocolo de enlace `CloseSequence/CloseSequenceResponse`, el destino de la mensajería de confianza responde con un mensaje `TerminateSequenceResponse`. Puesto que el origen de la mensajería de confianza recibe la confirmación definitiva antes de enviar el mensaje `TerminateSequence`, el destino de la mensajería de confianza sabe sin duda que finaliza la secuencia y reclama recursos inmediatamente.
 
-- B1304: al recibir un mensaje de `TerminateSequence` antes del Protocolo de enlace de `CloseSequence/CloseSequenceResponse`, el destino de la mensajería de confianza de WCF responde con un mensaje de `TerminateSequenceResponse`. Si el destino de la mensajería de confianza determina que no hay incoherencias en la secuencia, el destino de la mensajería de confianza espera durante un tiempo especificado por el destino de la aplicación antes de reclamar recursos, para permitir al cliente que reciba la confirmación final. De lo contrario, el destino de la mensajería de confianza reclama recursos inmediatamente e indica al destino de la aplicación que la secuencia finaliza de manera dudosa iniciando el evento `Faulted`.
+- B1304: al recibir un `TerminateSequence` mensaje antes del `CloseSequence/CloseSequenceResponse` Protocolo de enlace, el destino de la mensajería de confianza de WCF responde con un `TerminateSequenceResponse` mensaje. Si el destino de la mensajería de confianza determina que no hay incoherencias en la secuencia, el destino de la mensajería de confianza espera durante un tiempo especificado por el destino de la aplicación antes de reclamar recursos, para permitir al cliente que reciba la confirmación final. De lo contrario, el destino de la mensajería de confianza reclama recursos inmediatamente e indica al destino de la aplicación que la secuencia finaliza de manera dudosa iniciando el evento `Faulted`.
 
 Ejemplo de mensaje `TerminateSequence`.
 
@@ -217,7 +217,7 @@ Ejemplo de mensaje `TerminateSequence`.
 </s:Envelope>
 ```
 
-Ejemplo de mensaje de `TerminateSequenceResponse`:
+Mensaje de ejemplo `TerminateSequenceResponse` :
 
 ```xml
 <s:Envelope>
@@ -244,7 +244,7 @@ Ejemplo de mensaje de `TerminateSequenceResponse`:
 
 A continuación, se muestra una lista de restricciones que se aplican a las secuencias:
 
-- B1401: WCF genera y obtiene acceso a los números de secuencia que no son mayores que el valor inclusivo máximo de `xs:long`, 9223372036854775807.
+- B1401: WCF genera y obtiene acceso a los números de secuencia que no son mayores que el `xs:long` valor inclusivo máximo de 9223372036854775807.
 
 Ejemplo de encabezado `Sequence`.
 
@@ -257,7 +257,7 @@ Ejemplo de encabezado `Sequence`.
 
 ### <a name="request-acknowledgement"></a>Solicitar confirmación
 
-WCF usa el encabezado `AckRequested` como un mecanismo Keep-Alive.
+WCF usa el `AckRequested` encabezado como un mecanismo Keep-Alive.
 
 Ejemplo de encabezado `AckRequested`.
 
@@ -271,9 +271,9 @@ Ejemplo de encabezado `AckRequested`.
 
 WCF usa un mecanismo de "reutilizable" para las confirmaciones de secuencias proporcionadas en la mensajería de confianza de WS. Las siguientes restricciones son aplicables:
 
-- R1601: cuando dos secuencias inversas se establecen mediante el mecanismo de `Offer`, el encabezado de `SequenceAcknowledgement` se puede incluir en cualquier mensaje de aplicación que se transmita al destinatario previsto. El extremo remoto debe poder tener acceso a un encabezado `SequenceAcknowledgement` superpuesto.
+- R1601: cuando dos secuencias inversas se establecen utilizando el `Offer` mecanismo, el `SequenceAcknowledgement` encabezado puede estar incluido en cualquier mensaje de aplicación transmitido al destinatario previsto. El extremo remoto debe poder tener acceso a un encabezado `SequenceAcknowledgement` superpuesto.
 
-- B1602: WCF no genera `SequenceAcknowledgement` encabezados que contengan elementos `Nack`. WCF valida que cada elemento de `Nack` contiene un número de secuencia, pero de lo contrario omite el elemento `Nack` y el valor.
+- B1602: WCF no genera `SequenceAcknowledgement` encabezados que contengan `Nack` elementos. WCF valida que cada `Nack` elemento contiene un número de secuencia, pero de lo contrario omite el `Nack` elemento y el valor.
 
  Ejemplo de encabezado `SequenceAcknowledgement`.
 
@@ -288,9 +288,9 @@ WCF usa un mecanismo de "reutilizable" para las confirmaciones de secuencias pro
 
 A continuación se muestra una lista de restricciones que se aplican a la implementación de WCF de errores de WS-ReliableMessaging. Las siguientes restricciones son aplicables:
 
-- B1701: WCF no genera errores de `MessageNumberRollover`.
+- B1701: WCF no genera `MessageNumberRollover` errores.
 
-- B1702: sobre SOAP 1,2, cuando el extremo de servicio alcanza su límite de conexiones y no puede procesar nuevas conexiones, WCF genera un subcódigo de error anidado `CreateSequenceRefused`, `netrm:ConnectionLimitReached`, tal y como se muestra en el ejemplo siguiente.
+- B1702: sobre SOAP 1,2, cuando el extremo de servicio alcanza su límite de conexiones y no puede procesar nuevas conexiones, WCF genera un `CreateSequenceRefused` subcódigo de error anidado, `netrm:ConnectionLimitReached` , como se muestra en el ejemplo siguiente.
 
 ```xml
 <s:Envelope>
@@ -320,7 +320,7 @@ A continuación se muestra una lista de restricciones que se aplican a la implem
 
 Dado que WS-ReliableMessaging usa WS-Addressing, la implementación de WS-ReliableMessaging de WCF puede generar y transmitir errores de WS-Addressing. En esta sección se tratan los errores de WS-Addressing que WCF genera y transmite explícitamente en la capa de WS-ReliableMessaging:
 
-- B1801: WCF genera y transmite el error `Message Addressing Header Required` cuando se cumple una de las siguientes condiciones:
+- B1801: WCF genera y transmite el `Message Addressing Header Required` error cuando se cumple una de las siguientes condiciones:
 
   - A un mensaje `CreateSequence`, `CloseSequence`, o `TerminateSequence` le falta un encabezado `MessageId`.
 
@@ -328,7 +328,7 @@ Dado que WS-ReliableMessaging usa WS-Addressing, la implementación de WS-Reliab
 
   - A un mensaje `CreateSequenceResponse`, `CloseSequenceResponse`, o `TerminateSequenceResponse` le falta un encabezado `RelatesTo`.
 
-- B1802: WCF genera y transmite el error de `Endpoint Unavailable` para indicar que no hay ningún extremo escuchando que pueda procesar la secuencia en función del examen de los encabezados de direccionamiento en el mensaje de `CreateSequence`.
+- B1802: WCF genera y transmite el `Endpoint Unavailable` error para indicar que no hay ningún extremo escuchando que pueda procesar la secuencia en función del examen de los encabezados de direccionamiento en el `CreateSequence` mensaje.
 
 ## <a name="protocol-composition"></a>Composición de protocolos
 
@@ -358,7 +358,7 @@ WCF proporciona protección para las secuencias de WS-ReliableMessaging mediante
 
 - B2304:La secuencia de WS-ReliableMessaging o un par de secuencias inversas correlacionadas siempre se enlazan a una única sesión de WS-SecureConversation.
 
-- R2305: cuando se crea con WS-Secure Conversation, el respondedor de WCF requiere que el mensaje de `CreateSequence` contenga el elemento `wsse:SecurityTokenReference` y el encabezado `wsrm:UsesSequenceSTR`.
+- R2305: cuando se crea con WS-Secure Conversation, el respondedor de WCF requiere que el `CreateSequence` mensaje contenga el `wsse:SecurityTokenReference` elemento y el `wsrm:UsesSequenceSTR` encabezado.
 
  Ejemplo de encabezado `UsesSequenceSTR`.
 
@@ -370,31 +370,31 @@ WCF proporciona protección para las secuencias de WS-ReliableMessaging mediante
 
 WCF no admite la composición con sesiones SSL/TLS:
 
-- B2401: WCF no genera el encabezado `wsrm:UsesSequenceSSL`.
+- B2401: WCF no genera el `wsrm:UsesSequenceSSL` encabezado.
 
-- R2402: un iniciador de mensajería de confianza no debe enviar un mensaje de `CreateSequence` con un encabezado de `wsrm:UsesSequenceSSL` a un respondedor de WCF.
+- R2402: un iniciador de mensajería de confianza no debe enviar un `CreateSequence` mensaje con un `wsrm:UsesSequenceSSL` encabezado a un respondedor de WCF.
 
 ### <a name="composition-with-ws-policy"></a>Composición con WS-Policy
 
 WCF admite dos versiones de WS-Policy: WS-Policy 1,2 y WS-Policy 1,5.
 
-## <a name="ws-reliablemessaging-ws-policy-assertion"></a>Aserción de WS-Policy de WS-ReliableMessaging
+## <a name="ws-reliablemessaging-ws-policy-assertion"></a>Aserción de WS-Policy de WS-ReliableMessaging 
 
 WCF usa la aserción WS-Policy de WS-ReliableMessaging `wsrm:RMAssertion` para describir las capacidades de los extremos. A continuación se muestra una lista de restricciones que se aplican a WCF:
 
-- B3001: WCF asocia `wsrmn:RMAssertion` aserción de WS-Policy a elementos de `wsdl:binding`. WCF admite datos adjuntos para `wsdl:binding` y `wsdl:port` elementos.
+- B3001: WCF adjunta `wsrmn:RMAssertion` la aserción de WS-Policy a `wsdl:binding` los elementos. WCF admite datos adjuntos `wsdl:binding` a `wsdl:port` elementos y.
 
-- B3002: WCF nunca genera la etiqueta `wsp:Optional`.
+- B3002: WCF nunca genera la `wsp:Optional` etiqueta.
 
-- B3003: al obtener acceso a la aserción `wsrmp:RMAssertion` WS-Policy, WCF omite la etiqueta de `wsp:Optional` y trata la Directiva de WS-RM como obligatoria.
+- B3003: al obtener acceso a la `wsrmp:RMAssertion` aserción de WS-Policy, WCF omite la `wsp:Optional` etiqueta y trata la Directiva de WS-RM como obligatoria.
 
-- R3004: dado que WCF no se compone con sesiones SSL/TLS, WCF no acepta la Directiva que especifica `wsrmp:SequenceTransportSecurity`.
+- R3004: dado que WCF no se compone con sesiones SSL/TLS, WCF no acepta la Directiva que especifica `wsrmp:SequenceTransportSecurity` .
 
-- B3005: WCF siempre genera el elemento `wsrmp:DeliveryAssurance`.
+- B3005: WCF siempre genera el `wsrmp:DeliveryAssurance` elemento.
 
-- B3006: WCF siempre especifica la garantía de entrega `wsrmp:ExactlyOnce`.
+- B3006: WCF siempre especifica la `wsrmp:ExactlyOnce` garantía de entrega.
 
-- B3007: WCF genera y Lee las siguientes propiedades de la aserción de WS-ReliableMessaging y proporciona control sobre ellas en el`ReliableSessionBindingElement`WCF:
+- B3007: WCF genera y Lee las siguientes propiedades de la aserción de WS-ReliableMessaging y proporciona control sobre ellas en WCF `ReliableSessionBindingElement` :
 
   - `netrmp:InactivityTimeout`
 
@@ -422,9 +422,9 @@ WCF usa la aserción WS-Policy de WS-ReliableMessaging `wsrm:RMAssertion` para d
 
 WCF usa la extensibilidad de WS-ReliableMessaging para proporcionar un control adicional más estrecho opcional sobre el flujo de mensajes de secuencia.
 
-El control de flujo se habilita estableciendo la propiedad <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled?displayProperty=nameWithType> en `true`. A continuación se muestra una lista de restricciones que se aplican a WCF:
+El control de flujo se habilita estableciendo la <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled?displayProperty=nameWithType> propiedad en `true` . A continuación se muestra una lista de restricciones que se aplican a WCF:
 
-- B4001: cuando está habilitado el control de flujo de la mensajería de confianza, WCF genera un `netrm:BufferRemaining` elemento en la extensibilidad de elementos del encabezado de `SequenceAcknowledgement`, tal y como se muestra en el ejemplo siguiente.
+- B4001: cuando está habilitado el control de flujo de la mensajería de confianza, WCF genera un `netrm:BufferRemaining` elemento en la extensibilidad de elementos del `SequenceAcknowledgement` encabezado, tal y como se muestra en el ejemplo siguiente.
 
   ```xml
   <wsrm:SequenceAcknowledgement>
@@ -434,13 +434,13 @@ El control de flujo se habilita estableciendo la propiedad <xref:System.ServiceM
   </wsrm:SequenceAcknowledgement>
   ```
 
-- B4002: incluso cuando está habilitado el control de flujo de mensajería de confianza, WCF no requiere un elemento de `netrm:BufferRemaining` en el encabezado de `SequenceAcknowledgement`.
+- B4002: incluso cuando está habilitado el control de flujo de mensajería de confianza, WCF no requiere un `netrm:BufferRemaining` elemento en el `SequenceAcknowledgement` encabezado.
 
 - B4003: el destino de la mensajería confiable de WCF usa `netrm:BufferRemaining` para indicar cuántos mensajes nuevos puede almacenar en búfer.
 
-- B4004: cuando está habilitado el control de flujo de mensajería de confianza, el origen de mensajería confiable de WCF usa el valor de `netrm:BufferRemaining` para limitar la transmisión de mensajes.
+- B4004: cuando está habilitado el control de flujo de la mensajería de confianza, el origen de mensajería confiable de WCF usa el valor de `netrm:BufferRemaining` para limitar la transmisión de mensajes.
 
-- B4005: WCF genera `netrm:BufferRemaining` valores enteros entre 0 y 4096, ambos incluidos, y Lee valores enteros entre 0 y el valor de `maxInclusive` de `xs:int`214748364, ambos incluidos.
+- B4005: WCF genera `netrm:BufferRemaining` valores enteros entre 0 y 4096, ambos inclusive, y Lee valores enteros entre 0 y `xs:int` el `maxInclusive` valor 214748364, ambos inclusive.
 
 ## <a name="message-exchange-patterns"></a>Modelos de intercambio de mensajes
 
@@ -458,19 +458,19 @@ WCF proporciona un patrón de intercambio de mensajes unidireccional utilizando 
 
 #### <a name="createsequence-exchange"></a>Intercambio de CreateSequence
 
-El iniciador de WCF transmite un mensaje `CreateSequence` sin ningún elemento `Offer` en una solicitud HTTP y espera el mensaje `CreateSequenceResponse` en la respuesta HTTP. El respondedor de WCF crea una secuencia y transmite el mensaje de `CreateSequenceResponse` sin ningún elemento `Accept` en la respuesta HTTP.
+El iniciador de WCF transmite un `CreateSequence` mensaje sin `Offer` elemento en una solicitud HTTP y espera el `CreateSequenceResponse` mensaje en la respuesta http. El respondedor de WCF crea una secuencia y transmite el `CreateSequenceResponse` mensaje sin ningún `Accept` elemento en la respuesta http.
 
 #### <a name="sequenceacknowledgement"></a>SequenceAcknowledgement
 
-El iniciador de WCF procesa las confirmaciones en la respuesta de todos los mensajes excepto los mensajes de error y mensajes de `CreateSequence`. El respondedor de WCF siempre transmite una confirmación independiente en la respuesta HTTP a todos los mensajes de secuencia y `AckRequested`.
+El iniciador de WCF procesa las confirmaciones en la respuesta de todos los mensajes excepto el `CreateSequence` mensaje y los mensajes de error. El respondedor de WCF siempre transmite una confirmación independiente en la respuesta HTTP a todas las secuencias y `AckRequested` mensajes.
 
 #### <a name="closesequence-exchange"></a>Intercambio de CloseSequence
 
-El iniciador de WCF transmite un mensaje de `CloseSequence` en una solicitud HTTP y espera el mensaje de `CreateSequenceResponse` en la respuesta HTTP. El respondedor de WCF transmite el mensaje de `CloseSequenceResponse` en la respuesta HTTP.
+El iniciador de WCF transmite un `CloseSequence` mensaje en una solicitud HTTP y espera el `CreateSequenceResponse` mensaje en la respuesta http. El respondedor de WCF transmite el `CloseSequenceResponse` mensaje en la respuesta http.
 
 #### <a name="terminatesequence-exchange"></a>Intercambio de TerminateSequence
 
-El iniciador de WCF transmite un mensaje de `TerminateSequence` en una solicitud HTTP y espera el mensaje de `TerminateSequenceResponse` en la respuesta HTTP. El respondedor de WCF transmite el mensaje de `TerminateSequenceResponse` en la respuesta HTTP.
+El iniciador de WCF transmite un `TerminateSequence` mensaje en una solicitud HTTP y espera el `TerminateSequenceResponse` mensaje en la respuesta http. El respondedor de WCF transmite el `TerminateSequenceResponse` mensaje en la respuesta http.
 
 ### <a name="one-way-addressable-initiator"></a>Iniciador unidireccional y direccionable
 
@@ -480,7 +480,7 @@ WCF proporciona un patrón de intercambio de mensajes unidireccional utilizando 
 
 #### <a name="createsequence-exchange"></a>Intercambio de CreateSequence
 
-El iniciador de WCF transmite un mensaje `CreateSequence` sin ningún elemento `Offer` en una solicitud HTTP. El respondedor de WCF crea una secuencia y transmite el mensaje de `CreateSequenceResponse` sin ningún elemento `Accept` en una solicitud HTTP.
+El iniciador de WCF transmite un `CreateSequence` mensaje sin `Offer` elemento en una solicitud HTTP. El respondedor de WCF crea una secuencia y transmite el `CreateSequenceResponse` mensaje sin ningún `Accept` elemento en una solicitud HTTP.
 
 ### <a name="duplex-addressable-initiator"></a>Iniciador dúplex y direccionable
 
@@ -490,7 +490,7 @@ WCF proporciona un patrón de intercambio de mensajes bidireccional totalmente a
 
 #### <a name="createsequence-exchange"></a>Intercambio de CreateSequence
 
-El iniciador de WCF transmite un mensaje `CreateSequence` con un elemento `Offer` en una solicitud HTTP. El respondedor de WCF garantiza que el `CreateSequence` tenga un elemento `Offer` y, a continuación, crea una secuencia y transmite el mensaje `CreateSequenceResponse` con un elemento `Accept`.
+El iniciador de WCF transmite un `CreateSequence` mensaje con un `Offer` elemento en una solicitud HTTP. El respondedor de WCF garantiza que `CreateSequence` tiene un `Offer` elemento y, a continuación, crea una secuencia y transmite el `CreateSequenceResponse` mensaje con un `Accept` elemento.
 
 #### <a name="sequence-lifetime"></a>Duración de la secuencia
 
@@ -508,11 +508,11 @@ WCF proporciona un modelo de intercambio de mensajes de solicitud-respuesta unid
 
 #### <a name="createsequence-exchange"></a>Intercambio de CreateSequence
 
-El iniciador de WCF transmite un mensaje `CreateSequence` con un elemento `Offer` en una solicitud HTTP y espera el mensaje `CreateSequenceResponse` en la respuesta HTTP. El respondedor de WCF crea una secuencia y transmite el mensaje de `CreateSequenceResponse` con un elemento `Accept` en la respuesta HTTP.
+El iniciador de WCF transmite un `CreateSequence` mensaje con un `Offer` elemento en una solicitud HTTP y espera el `CreateSequenceResponse` mensaje en la respuesta http. El respondedor de WCF crea una secuencia y transmite el `CreateSequenceResponse` mensaje con un `Accept` elemento en la respuesta http.
 
 #### <a name="one-way-message"></a>Mensaje unidireccional
 
-Para completar correctamente un intercambio de mensajes unidireccional, el iniciador de WCF transmite un mensaje de secuencia de solicitud en la solicitud HTTP y recibe un mensaje de `SequenceAcknowledgement` independiente en la respuesta HTTP. La `SequenceAcknowledgement` debe confirmar el mensaje transmitido.
+Para completar correctamente un intercambio de mensajes unidireccional, el iniciador de WCF transmite un mensaje de secuencia de solicitud en la solicitud HTTP y recibe un `SequenceAcknowledgement` mensaje independiente en la respuesta http. La `SequenceAcknowledgement` debe confirmar el mensaje transmitido.
 
 El respondedor de WCF puede responder a la solicitud con una confirmación, un error o una respuesta con un cuerpo vacío y un código de Estado HTTP 202.
 
@@ -526,23 +526,23 @@ Debido a la presencia de mensajes unidireccionales y al control de tiempo de las
 
 #### <a name="retrying-replies"></a>Reintento de respuestas
 
-WCF se basa en la correlación de solicitud-respuesta HTTP para la correlación del Protocolo de intercambio de mensajes bidireccional. Debido a esto, el iniciador de WCF no deja de reintentar un mensaje de secuencia de solicitud cuando se confirma el mensaje de la secuencia de solicitud, sino cuando la respuesta HTTP lleva una `SequenceAcknowledgement`, una respuesta de la aplicación o un error. El respondedor de WCF reintenta las respuestas en la respuesta HTTP de la solicitud a la que se correlaciona la respuesta.
+WCF se basa en la correlación de solicitud-respuesta HTTP para la correlación del Protocolo de intercambio de mensajes bidireccional. Debido a esto, el iniciador de WCF no deja de reintentar un mensaje de secuencia de solicitud cuando se confirma el mensaje de secuencia de solicitud, sino cuando la respuesta HTTP lleva una, una respuesta de la `SequenceAcknowledgement` aplicación o un error. El respondedor de WCF reintenta las respuestas en la respuesta HTTP de la solicitud a la que se correlaciona la respuesta.
 
 #### <a name="closesequence-exchange"></a>Intercambio de CloseSequence
 
-Después de recibir todos los mensajes de secuencia de respuesta y las confirmaciones de todos los mensajes de secuencia de solicitud unidireccional, el iniciador de WCF transmite un mensaje de `CloseSequence` para la secuencia de solicitud en una solicitud HTTP y espera el `CloseSequenceResponse` en la respuesta HTTP.
+Después de recibir todos los mensajes de secuencia de respuesta y las confirmaciones de todos los mensajes de secuencia de solicitud unidireccional, el iniciador de WCF transmite un `CloseSequence` mensaje para la secuencia de solicitud en una solicitud HTTP y espera la `CloseSequenceResponse` en la respuesta http.
 
-Al cerrar implícitamente la secuencia de la solicitud, se cierra la secuencia de la respuesta. Esto significa que el iniciador de WCF incluye el `SequenceAcknowledgement` final de la secuencia de respuesta en el mensaje de `CloseSequence` y la secuencia de respuesta no tiene un `CloseSequence` Exchange.
+Al cerrar implícitamente la secuencia de la solicitud, se cierra la secuencia de la respuesta. Esto significa que el iniciador de WCF incluye el final de la secuencia `SequenceAcknowledgement` de respuesta en el `CloseSequence` mensaje y la secuencia de respuesta no tiene un `CloseSequence` intercambio.
 
-El respondedor de WCF garantiza que todas las respuestas se reconocen y transmite el mensaje de `CloseSequenceResponse` en la respuesta HTTP.
+El respondedor de WCF garantiza que todas las respuestas se reconocen y transmite el `CloseSequenceResponse` mensaje en la respuesta http.
 
 #### <a name="terminatesequence-exchange"></a>Intercambio de TerminateSequence
 
-Después de recibir el mensaje de `CloseSequenceResponse`, el iniciador de WCF transmite un mensaje de `TerminateSequence` para la secuencia de solicitud en una solicitud HTTP y espera la `TerminateSequenceResponse` en la respuesta HTTP.
+Después de recibir el `CloseSequenceResponse` mensaje, el iniciador de WCF transmite un `TerminateSequence` mensaje para la secuencia de solicitud en una solicitud HTTP y espera la `TerminateSequenceResponse` en la respuesta http.
 
-Al igual que en el intercambio de `CloseSequence`, al finalizar la secuencia de solicitud, se finaliza la secuencia de respuesta. Esto significa que el iniciador de WCF incluye el `SequenceAcknowledgement` final de la secuencia de respuesta en el mensaje de `TerminateSequence` y la secuencia de respuesta no tiene un `TerminateSequence` Exchange.
+Al igual que en el intercambio de `CloseSequence`, al finalizar la secuencia de solicitud, se finaliza la secuencia de respuesta. Esto significa que el iniciador de WCF incluye el final de la secuencia `SequenceAcknowledgement` de respuesta en el `TerminateSequence` mensaje y la secuencia de respuesta no tiene un `TerminateSequence` intercambio.
 
-El respondedor de WCF transmite el mensaje de `TerminateSequenceResponse` en la respuesta HTTP.
+El respondedor de WCF transmite el `TerminateSequenceResponse` mensaje en la respuesta http.
 
 ### <a name="requestreply-addressable-initiator"></a>Iniciador direccionable de solicitud-respuesta
 
@@ -552,18 +552,18 @@ WCF proporciona un patrón de intercambio de mensajes de solicitud-respuesta con
 
 #### <a name="createsequence-exchange"></a>Intercambio de CreateSequence
 
-El iniciador de WCF transmite un mensaje `CreateSequence` con un elemento `Offer` en una solicitud HTTP. El respondedor de WCF garantiza que el `CreateSequence` tiene un elemento `Offer`, a continuación, crea una secuencia y transmite el mensaje `CreateSequenceResponse` con un elemento `Accept`.
+El iniciador de WCF transmite un `CreateSequence` mensaje con un `Offer` elemento en una solicitud HTTP. El respondedor de WCF garantiza que `CreateSequence` tiene un `Offer` elemento, a continuación, crea una secuencia y transmite el `CreateSequenceResponse` mensaje con un `Accept` elemento.
 
 #### <a name="requestreply-correlation"></a>Correlación entre solicitud y respuesta
 
 Lo siguiente se aplica a todas las solicitudes y respuestas correlacionadas:
 
-- WCF garantiza que todos los mensajes de solicitud de aplicación llevan una referencia de extremo `ReplyTo` y un `MessageId`.
+- WCF garantiza que todos los mensajes de solicitud de aplicación llevan una `ReplyTo` referencia de extremo y un `MessageId` .
 
-- WCF aplica la referencia de punto de conexión local como `ReplyTo`de cada mensaje de solicitud de aplicación. La referencia del punto de conexión local es la `CreateSequence` del mensaje `ReplyTo` para el iniciador y la `CreateSequence` del mensaje `To` para el respondedor.
+- WCF aplica la referencia de punto de conexión local como cada mensaje de solicitud de aplicación `ReplyTo` . La referencia del punto de conexión local es la `CreateSequence` del mensaje `ReplyTo` para el iniciador y la `CreateSequence` del mensaje `To` para el respondedor.
 
-- WCF garantiza que los mensajes de solicitud entrantes llevan un `MessageId` y un `ReplyTo`.
+- WCF garantiza que los mensajes de solicitud entrantes lleven un `MessageId` y un `ReplyTo` .
 
-- WCF garantiza que el URI de la referencia de extremo de `ReplyTo` de todos los mensajes de solicitud de aplicación coincide con la referencia de punto de conexión local tal como se definió anteriormente.
+- WCF garantiza que el `ReplyTo` URI de la referencia de extremo de todos los mensajes de solicitud de aplicación coincide con la referencia de punto de conexión local tal y como se definió anteriormente.
 
-- WCF garantiza que todas las respuestas llevan los encabezados `RelatesTo` y `To` correctos después de las reglas de correlación de solicitud/respuesta de `wsa`.
+- WCF garantiza que todas las respuestas llevan los `RelatesTo` encabezados y correctos `To` después de `wsa` las reglas de correlación de solicitud/respuesta.

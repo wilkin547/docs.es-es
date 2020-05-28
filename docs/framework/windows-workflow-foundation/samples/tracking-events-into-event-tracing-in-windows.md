@@ -2,12 +2,12 @@
 title: Seguimiento de eventos en Seguimiento de eventos para Windows
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: 2c397bcfa809a1306e9c31bf3f652b055d997f38
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: fa5d86e327bc9c6eca85ed2908775de5f647f410
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094584"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144895"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Seguimiento de eventos en Seguimiento de eventos para Windows
 
@@ -27,7 +27,7 @@ Windows Workflow Foundation proporciona una infraestructura de seguimiento para 
 
 En la siguiente tabla se detallan los registros de seguimiento que emite el tiempo de ejecución del flujo de trabajo.
 
-|Registro de seguimiento|Descripción|
+|Registro de seguimiento|Description|
 |---------------------|-----------------|
 |Registros de seguimiento de instancia de flujo de trabajo.|Describe el ciclo de vida de la instancia de flujo de trabajo. Por ejemplo, se emite un registro de instancia cuando el flujo de trabajo se inicia o se completa.|
 |Registros de seguimiento de estado de actividad.|Describe la ejecución de la actividad. Estos registros indican el estado de una actividad de flujo de trabajo; por ejemplo, cuándo se programa una actividad, cuándo se completa o cuándo se produce un error.|
@@ -47,11 +47,11 @@ El participante de seguimiento se suscribe un subconjunto de los registros de se
 
 3. Presione F5 para ejecutar la solución.
 
-    De forma predeterminada, el servicio está escuchando en el puerto 53797 (http://localhost:53797/SampleWorkflowService.xamlx).
+    De forma predeterminada, el servicio está escuchando en el puerto 53797 ( `http://localhost:53797/SampleWorkflowService.xamlx` ).
 
 4. Con el explorador de archivos, abra el cliente de prueba WCF.
 
-    El cliente de prueba de WCF (WcfTestClient. exe) se encuentra en la carpeta de instalación \<Visual Studio 2010 > carpeta \Common7\IDE\
+    El cliente de prueba de WCF (WcfTestClient. exe) se encuentra en la \<Visual Studio 2010 installation folder> carpeta \Common7\IDE\
 
     La carpeta de instalación predeterminada de Visual Studio 2010 es C:\Archivos de Programa\microsoft Visual Studio 10,0.
 
@@ -61,7 +61,7 @@ El participante de seguimiento se suscribe un subconjunto de los registros de se
 
 6. Abra la aplicación Visor de eventos.
 
-    Antes de invocar el servicio, inicie Visor de eventos en el menú **Inicio** , seleccione **ejecutar** y escriba `eventvwr.exe`. Asegúrese de que el registro de eventos escucha eventos de seguimiento emitidos desde el servicio de flujo de trabajo.
+    Antes de invocar el servicio, inicie Visor de eventos en el menú **Inicio** , seleccione **Ejecutar** y escriba `eventvwr.exe` . Asegúrese de que el registro de eventos escucha eventos de seguimiento emitidos desde el servicio de flujo de trabajo.
 
 7. En la vista de árbol del Visor de eventos, vaya a **visor de eventos**, **registros de aplicaciones y servicios**y **Microsoft**. Haga clic con el botón derecho en **Microsoft** y seleccione **Ver** y, a continuación, **muestre los registros analíticos y de depuración** para habilitar los registros analíticos
 
@@ -138,7 +138,7 @@ El perfil de seguimiento de supervisión de estado emite registros de instancia 
 > [!NOTE]
 > Existe un problema conocido en el Visor de eventos en virtud del cual el visor no puede descodificar eventos de ETW. Es posible que vea un mensaje de error similar el siguiente.
 >
-> No se encuentra la descripción del ID. de evento \<ID > desde el origen Microsoft-Windows-servidor de aplicaciones-aplicaciones. El componente que provoca este evento no está instalado en el equipo local o la instalación está dañada. Puede instalar o reparar el componente en el equipo local.
+> No se encuentra la descripción del ID. \<id> de evento del origen Microsoft-Windows-servidor de aplicaciones-aplicaciones. El componente que provoca este evento no está instalado en el equipo local o la instalación está dañada. Puede instalar o reparar el componente en el equipo local.
 >
 > Si encuentra este error, haga clic en actualizar en el panel de acciones. El evento debería descodificarse ahora correctamente.
 
@@ -147,10 +147,10 @@ El perfil de seguimiento de supervisión de estado emite registros de instancia 
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Ejemplos de supervisión de AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

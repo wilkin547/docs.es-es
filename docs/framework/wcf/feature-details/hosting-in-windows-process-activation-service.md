@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: aa782c46d6530bb30055c536dd10d78f9ab9f79f
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 1882feee4e8071f1d32fb59ab02519c6e6fe2684
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75963775"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84143568"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Hospedaje en Servicio de activación de procesos de Windows
 El Servicio de activación de procesos de Windows (WAS) administra la activación y la duración de los procesos de trabajo que contienen aplicaciones que hospedan los servicios de Windows Communication Foundation (WCF). El modelo de proceso de WAS generaliza el proceso IIS 6.0 para el servidor HTTP mediante la eliminación de la dependencia en HTTP. Esto permite a los servicios WCF usar protocolos HTTP y que no sean HTTP, como net. TCP, en un entorno de hospedaje que admita la activación basada en mensaje y ofrece la posibilidad de hospedar un gran número de aplicaciones en un equipo determinado.  
@@ -34,11 +34,11 @@ El Servicio de activación de procesos de Windows (WAS) administra la activació
   
  La siguiente tabla muestra varios escenarios de direccionamiento posibles para sitios WAS con enlaces de sitio HTTP y que no sean HTTP.  
   
-|Escenario|Enlaces de sitios|Ruta de acceso de la aplicación|URI base de aplicación|  
+|Escenario|Enlaces de sitio|Ruta de acceso de la aplicación|URI base de aplicación|  
 |--------------|-------------------|----------------------|---------------------------|  
-|Solo HTTP|http: *: 80:\*|/appTwo|http://localhost/appTwo/|  
-|HTTP y que no sea HTTP|http: *: 80:\*<br /><br /> net. TCP: 808:\*|/appTwo|http://localhost/appTwo/<br />net.tcp://localhost/appTwo/|  
-|Solo no HTTP|net.pipe: *|/appThree|net.pipe://appThree/|  
+|Solo HTTP|http: *: 80:\*|/appTwo|`http://localhost/appTwo/`|  
+|HTTP y que no sea HTTP|http: *: 80:\*<br /><br /> net. TCP: 808:\*|/appTwo|`http://localhost/appTwo/`<br />`net.tcp://localhost/appTwo/`|  
+|Solo no HTTP|net.pipe: *|/appThree|`net.pipe://appThree/`|  
   
  Los servicios y recursos dentro de una aplicación también se pueden direccionar. Dentro de una aplicación, los recursos de la aplicación se direccionan en relación a la ruta de acceso base de la aplicación. Por ejemplo, suponga que un sitio con un nombre de equipo contoso.com tiene enlaces del sitio para los protocolos HTTP y Net.TCP. Suponga también que el sitio contiene una aplicación ubicada en /Billing (facturación), que expone un servicio en GetOrders.svc. A continuación, si el servicio GetOrders.svc expuso un extremo con una dirección relativa de SecureEndpoint, el extremo de servicio se expondría en los dos URI siguientes:  
   
@@ -52,6 +52,6 @@ El Servicio de activación de procesos de Windows (WAS) administra la activació
 
 - [Arquitectura de activación de WAS](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)
 - [Configuración de WAS para su uso con WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
-- [Instalación y configuración de los componentes de activación de WFC](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
-- [Cómo: hospedar un servicio WCF en WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
+- [Procedimiento para instalar y configurar los componentes de activación de WFC](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
+- [Procedimiento para hospedar un servicio WCF en WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
 - [Características de hospedaje de Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

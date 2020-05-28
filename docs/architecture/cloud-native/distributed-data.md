@@ -3,12 +3,12 @@ title: Datos distribuidos
 description: Compare el almacenamiento de datos en aplicaciones monolíticas y nativas en la nube.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 2eff37dcc57ae39daac0ba10d10322be5eb4e321
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 28513f8691c06cf58ed14d57bf7830bb35d94852
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614141"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144401"
 ---
 # <a name="distributed-data"></a>Datos distribuidos
 
@@ -120,7 +120,7 @@ En la figura 5-7 se muestra una implementación del patrón CQRS.
 
 **Figura 5-7**. Implementación de CQRS
 
-En la ilustración anterior, se implementan los modelos de comando y consulta independientes. Cada operación de escritura de datos se guarda en el almacén de escritura y, a continuación, se propaga al almacén de lectura. Preste mucha atención a cómo funciona el proceso de propagación de datos en el principio de [coherencia eventual](http://www.cloudcomputingpatterns.org/eventual_consistency/). El modelo de lectura finalmente se sincroniza con el modelo de escritura, pero puede haber algún retraso en el proceso. Analizamos la coherencia final en la sección siguiente.
+En la ilustración anterior, se implementan los modelos de comando y consulta independientes. Cada operación de escritura de datos se guarda en el almacén de escritura y, a continuación, se propaga al almacén de lectura. Preste mucha atención a cómo funciona el proceso de propagación de datos en el principio de [coherencia eventual](https://www.cloudcomputingpatterns.org/eventual_consistency/). El modelo de lectura finalmente se sincroniza con el modelo de escritura, pero puede haber algún retraso en el proceso. Analizamos la coherencia final en la sección siguiente.
 
 Esta separación permite que las lecturas y escrituras se escalen de forma independiente. Las operaciones de lectura utilizan un esquema optimizado para las consultas, mientras que las escrituras usan un esquema optimizado para las actualizaciones. Las consultas de lectura incluyen datos desnormalizados, mientras que la lógica de negocios compleja se puede aplicar al modelo de escritura. También puede imponer una seguridad más estricta en las operaciones de escritura que las que exponen lecturas.
 
