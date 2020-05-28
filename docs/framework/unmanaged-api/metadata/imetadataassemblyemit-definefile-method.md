@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c065aadf-c1ca-4981-bde6-597042cb29c4
 topic_type:
 - apiref
-ms.openlocfilehash: cabd6a47e5d6fc2a4cea87b16d349d9c778b3507
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 61d81c94e3a9c092b5d45791962635c761e8da8a
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176063"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008149"
 ---
 # <a name="imetadataassemblyemitdefinefile-method"></a>IMetaDataAssemblyEmit::DefineFile (Método)
 Crea una estructura de metadatos `File` que contiene los metadatos para el ensamblado al que se refiere este ensamblado y devuelve el token de metadatos asociado.  
@@ -39,32 +39,32 @@ HRESULT DefineFile (
   
 ## <a name="parameters"></a>Parámetros  
  `szName`  
- [en] El nombre del archivo que se va a consumir.  
+ de Nombre del archivo que se va a consumir.  
   
  `pbHashValue`  
- [en] Puntero a los datos hash asociados al ensamblado.  
+ de Puntero a los datos hash asociados al ensamblado.  
   
  `cbHashValue`  
- [en] El tamaño en `pbHashValue`bytes de .  
+ de Tamaño en bytes de `pbHashValue` .  
   
  `dwFileFlags`  
- [en] Una combinación `FileFlags` bit a bit de valores que especifican la configuración de la propiedad.  
+ de Combinación bit a bit de `FileFlags` valores que especifican la configuración de propiedades.  
   
  `pmdf`  
- [fuera] Un puntero al `File` token devuelto.  
+ enuncia Puntero al token devuelto `File` .  
   
-## <a name="remarks"></a>Observaciones  
- Se `File` debe definir una estructura de metadatos para cada archivo que formaba parte de este ensamblado en el momento en que se creó este ensamblado, excluyendo el archivo que contiene los metadatos.  
+## <a name="remarks"></a>Comentarios  
+ Se `File` debe definir una estructura de metadatos para cada archivo que formaba parte de este ensamblado en el momento en que se compiló este ensamblado, excluyendo el archivo que contiene los metadatos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataforma:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataforma:** Consulte [requisitos del sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte también
 
-- [IMetaDataAssemblyEmit (Interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyEmit (Interfaz)](imetadataassemblyemit-interface.md)

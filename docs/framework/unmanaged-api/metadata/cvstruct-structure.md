@@ -1,5 +1,5 @@
 ---
-title: CVStruct (estructura)
+title: CVStruct (Estructura)
 ms.date: 03/30/2017
 api_name:
 - CVStruct
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: e9e4e497-d5fb-464b-991c-3bdd824664fd
 topic_type:
 - apiref
-ms.openlocfilehash: 19ee3097dfe80ba9dcbdaf316db0fd165b50abc6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 84791eba7c95d3278bd4650bd7d660e98fcb79d8
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436429"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008929"
 ---
-# <a name="cvstruct-structure"></a>CVStruct (estructura)
+# <a name="cvstruct-structure"></a>CVStruct (Estructura)
 Contiene información que se utiliza al instalar un módulo o una imagen compuesta.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -40,19 +40,19 @@ typedef struct {
 |Miembro|Descripción|  
 |------------|-----------------|  
 |Principal|Número de compilación de la versión principal.|  
-|Secundaria|Número de compilación de la versión secundaria.|  
+|Minor|Número de compilación de la versión secundaria.|  
 |Sub|Número de subcompilación.|  
-|Compilar|Número de compilación.|  
+|Build|Número de compilación.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
  **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Estructuras de metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
+- [Estructuras de metadatos](metadata-structures.md)

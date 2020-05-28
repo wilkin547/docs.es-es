@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f9a80f1a-55af-4459-b095-8441aae16119
 topic_type:
 - apiref
-ms.openlocfilehash: e6c3c9b842bd823e8975661964480fd801779b2d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ce6f5993b9c1aeb63e121b3567ee468cea1c9318
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450121"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007525"
 ---
 # <a name="correftodefcheck-enumeration"></a>CorRefToDefCheck (Enumeración)
 Especifica marcas para controlar qué elementos referenciados se convierten en sus definiciones para optimizar el código.  
@@ -40,19 +40,19 @@ typedef enum CorRefToDefCheck {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`MDRefToDefDefault`|Especifica que las referencias de tipo y las referencias de miembro deben convertirse en definiciones. Este es el valor predeterminado (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).|  
+|`MDRefToDefDefault`|Especifica que las referencias de tipo y las referencias de miembro deben convertirse en definiciones. Este es el valor predeterminado ( `MDTypeRefToDef` &#124; `MDMemberRefToDef` ).|  
 |`MDRefToDefAll`|Especifica que todos los elementos a los que se hace referencia deben convertirse en definiciones.|  
 |`MDRefToDefNone`|Especifica que no se deben convertir los elementos a los que se hace referencia en definiciones.|  
 |`MDTypeRefToDef`|Especifica que solo se deben convertir las referencias de tipo en definiciones de tipo.|  
 |`MDMemberRefToDef`|Especifica que solo se deben convertir las referencias de miembro en definiciones. Es decir, las referencias de miembro se deben convertir en definiciones de método o definiciones de campo.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorHdr. h  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumeraciones para metadatos](metadata-enumerations.md)

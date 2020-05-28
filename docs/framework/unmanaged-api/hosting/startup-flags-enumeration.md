@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f043594-0c45-4bc6-988e-a6793f0d8d06
 topic_type:
 - apiref
-ms.openlocfilehash: 1799e0af91fa6074f174120b29e2302a27230c62
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b4694efffa0a3dd6fed1f97fc2359c5eb335d440
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141456"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84006420"
 ---
 # <a name="startup_flags-enumeration"></a>STARTUP_FLAGS (Enumeración)
 Contiene valores que indican el comportamiento de inicio de Common Language Runtime (CLR). De manera predeterminada, la recolección de elementos no utilizados es no simultánea y solo se carga la biblioteca de clases base en el área neutral con respecto al dominio.  
@@ -69,18 +69,18 @@ typedef enum {
 |`STARTUP_DISABLE_COMMITTHREADSTACK`|Especifica que no se debería confirmar la pila de subprocesos completa cuando el subproceso inicia el funcionamiento.|  
 |`STARTUP_ALWAYSFLOW_IMPERSONATION`|Especifica que las suplantaciones administradas y las suplantaciones logradas a través de la invocación de plataforma fluirán por puntos asincrónicos. De forma predeterminada, solo las suplantaciones administradas fluirán por puntos asincrónicos.|  
 |`STARTUP_TRIM_GC_COMMIT`|Especifica que la recolección de elementos no utilizados usará el espacio menos confirmado cuando quede poca memoria del sistema. Vea `gcTrimCommitOnLowMemory` en [optimización para el hospedaje web compartido](../../../standard/garbage-collection/optimization-for-shared-web-hosting.md).|  
-|`STARTUP_ETW`|Especifica que el seguimiento de eventos para Windows (ETW) está habilitado para los eventos de Common Language Runtime. A partir de Windows Vista, el seguimiento de eventos siempre está habilitado, por lo que esta marca no tiene ningún efecto. Consulte [control del registro de .NET Framework](../../../../docs/framework/performance/controlling-logging.md).|  
-|`STARTUP_ARM`|Especifica que la supervisión de recursos de dominio de aplicación está habilitada. Vea la propiedad <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> y [\<elemento de > appDomainResourceMonitoring](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md).|  
+|`STARTUP_ETW`|Especifica que el seguimiento de eventos para Windows (ETW) está habilitado para los eventos de Common Language Runtime. A partir de Windows Vista, el seguimiento de eventos siempre está habilitado, de modo que esta marca no tiene ningún efecto. Consulte [control del registro de .NET Framework](../../performance/controlling-logging.md).|  
+|`STARTUP_ARM`|Especifica que la supervisión de recursos de dominio de aplicación está habilitada. Vea la <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> propiedad y el [ \<appDomainResourceMonitoring> elemento](../../configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md).|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
  **Biblioteca:** MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Enumeraciones para hosts](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [Enumeraciones para hosts](hosting-enumerations.md)

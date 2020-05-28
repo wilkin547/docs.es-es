@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 27064ca2-4186-4433-90a7-3b297785e891
 topic_type:
 - apiref
-ms.openlocfilehash: fadd1974cd4fa8a51a06700835f46df24e37d7fd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c33ede841324820da16e33d35bbf5e8f8e75924f
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175777"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009377"
 ---
 # <a name="imetadataemitdefinesecurityattributeset-method"></a>IMetaDataEmit::DefineSecurityAttributeSet (Método)
-Crea un conjunto de permisos de seguridad para adjuntar al objeto al que hace referencia el token especificado.  
+Crea un conjunto de permisos de seguridad que se van a adjuntar al objeto al que hace referencia el token especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,27 +38,27 @@ HRESULT DefineSecurityAttributeSet (
   
 ## <a name="parameters"></a>Parámetros  
  `tkObj`  
- [en] El token al que se adjunta la información de seguridad.  
+ de El token al que se adjunta la información de seguridad.  
   
  `rSecAttrs`  
- [en] Una matriz `COR_SECATTR` de estructuras.  
+ de Matriz de `COR_SECATTR` estructuras.  
   
  `cSecAttrs`  
- [en] El número de `rSecAttrs`elementos en .  
+ de Número de elementos de `rSecAttrs` .  
   
  `pulErrorAttr`  
- [fuera] Si se produce un error `rSecAttrs` en el método, especifica el índice en del elemento que causó el problema.  
+ enuncia Si se produce un error en el método, especifica el índice `rSecAttrs` del elemento que provocó el problema.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MSCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte también
 
-- [IMetaDataEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit (Interfaz)](imetadataemit-interface.md)
+- [IMetaDataEmit2 (Interfaz)](imetadataemit2-interface.md)

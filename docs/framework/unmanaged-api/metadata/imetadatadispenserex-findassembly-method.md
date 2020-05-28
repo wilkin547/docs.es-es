@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3afe7252-5f28-48d9-a74d-1927566c404c
 topic_type:
 - apiref
-ms.openlocfilehash: 2d974b7368dd01062d2d310d076dce05e102eb81
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 50aebb09924b93a622e5b7d84e65e41ee91f6018
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442283"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84006199"
 ---
 # <a name="imetadatadispenserexfindassembly-method"></a>IMetaDataDispenserEx::FindAssembly (Método)
 Este método no se implementa. Si se llama, devuelve E_NOTIMPL.  
@@ -41,13 +41,13 @@ HRESULT FindAssembly(
   
 ## <a name="parameters"></a>Parámetros  
  `szAppBase`  
- de No se usa.  
+ [in] No se utiliza.  
   
  `szPrivateBin`  
- de No se usa.  
+ [in] No se utiliza.  
   
  `szGlobalBin`  
- de No se usa.  
+ [in] No se utiliza.  
   
  `szAssemblyName`  
  de Ensamblado que se va a buscar.  
@@ -56,21 +56,21 @@ HRESULT FindAssembly(
  enuncia Nombre simple del ensamblado.  
   
  `cchName`  
- de Tamaño, en bytes, de `szName`.  
+ de Tamaño, en bytes, de `szName` .  
   
  `pcName`  
- enuncia Número de caracteres devueltos realmente en `szName`.  
+ enuncia Número de caracteres devueltos realmente en `szName` .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataforma:** Consulte [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataforma:** Consulte [requisitos del sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
  **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [IMetaDataDispenserEx (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [IMetaDataDispenser (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+- [IMetaDataDispenserEx (Interfaz)](imetadatadispenserex-interface.md)
+- [IMetaDataDispenser (Interfaz)](imetadatadispenser-interface.md)

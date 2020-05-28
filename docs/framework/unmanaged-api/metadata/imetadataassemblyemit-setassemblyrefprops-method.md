@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 70a32bf3-9051-4f96-ae87-11356d06a073
 topic_type:
 - apiref
-ms.openlocfilehash: 6ad6bbb8a4c69f575bbeba3a297c46e049a97325
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fb381a872cbeb787da0c6920f2cdeef434fb33ea
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176050"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008097"
 ---
 # <a name="imetadataassemblyemitsetassemblyrefprops-method"></a>IMetaDataAssemblyEmit::SetAssemblyRefProps (Método)
 Modifica la estructura de metadatos `AssemblyRef` especificada.  
@@ -42,41 +42,41 @@ HRESULT SetAssemblyRefProps (
   
 ## <a name="parameters"></a>Parámetros  
  `ar`  
- [en] El token de metadatos `AssemblyRef` que especifica la estructura de metadatos que se va a modificar.  
+ de Token de metadatos que especifica la `AssemblyRef` estructura de metadatos que se va a modificar.  
   
  `pbPublicKeyOrToken`  
- [en] La clave pública del publicador del ensamblado al que se hace referencia.  
+ de La clave pública del publicador del ensamblado al que se hace referencia.  
   
  `cbPublicKeyOrToken`  
- [en] El tamaño en `pbPublicKeyOrToken`bytes de .  
+ de Tamaño en bytes de `pbPublicKeyOrToken` .  
   
  `szName`  
- [en] El nombre de texto legible del ensamblado.  
+ de Nombre del texto legible del ensamblado.  
   
  `pMetaData`  
- [en] Puntero a una instancia de ASSEMBLYMETADATA que contiene la información de versión, plataforma y configuración regional del ensamblado.  
+ de Un puntero a una instancia de ASSEMBLYMETADATA (que contiene la versión, la plataforma y la información de configuración regional para el ensamblado.  
   
  `pbHashValue`  
- [en] Puntero a los datos hash asociados al ensamblado.  
+ de Puntero a los datos hash asociados al ensamblado.  
   
  `cbHashValue`  
- [en] El tamaño en `pbHashValue`bytes de .  
+ de Tamaño en bytes de `pbHashValue` .  
   
  `dwAssemblyRefFlags`  
- [en] Combinación bit a bit de [assemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) valores que especifican atributos del ensamblado al que se hace referencia.  
+ de Combinación bit a bit de valores de [AssemblyRefFlags (](assemblyrefflags-enumeration.md) que especifican los atributos del ensamblado al que se hace referencia.  
   
-## <a name="remarks"></a>Observaciones  
- Para crear `AssemblyRef` una estructura de metadatos, utilice el [IMetaDataAssemblyEmit::DefineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md) método.  
+## <a name="remarks"></a>Comentarios  
+ Para crear una `AssemblyRef` estructura de metadatos, use el método [IMetaDataAssemblyEmit::D efineassemblyref](imetadataassemblyemit-defineassemblyref-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte también
 
-- [IMetaDataAssemblyEmit (Interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyEmit (Interfaz)](imetadataassemblyemit-interface.md)

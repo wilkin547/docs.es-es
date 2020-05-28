@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b9b4bf2f-1098-43d6-9619-a99b4bda1940
 topic_type:
 - apiref
-ms.openlocfilehash: 428b022ed560648f59798154d5987d382938c280
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 027694cee1b3e4d990796ba31300918f6d859679
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176076"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008201"
 ---
 # <a name="imaptokenmap-method"></a>IMapToken::Map (Método)
 Asigna una relación entre los ensamblados mediante firmas de metadatos.  
@@ -36,23 +36,23 @@ HRESULT Map (
   
 ## <a name="parameters"></a>Parámetros  
  `tkImp`  
- [en] El token de metadatos que representa el objeto de código importado.  
+ de Token de metadatos que representa el objeto de código importado.  
   
  `tkEmit`  
- [en] El token de metadatos que representa el objeto de código emitido.  
+ de Token de metadatos que representa el objeto de código emitido.  
   
-## <a name="remarks"></a>Observaciones  
- Cuando el token se vuelve a asignar durante una combinación, el token original tiene el ámbito en el ámbito de metadatos importado (origen) y el nuevo token tiene un ámbito en el ámbito de metadatos emitido (destino).  
+## <a name="remarks"></a>Comentarios  
+ Cuando se produce la reasignación del token durante una combinación, el ámbito del token original se encuentra en el ámbito de metadatos (origen) importado y el ámbito del nuevo token se encuentra en el ámbito de los metadatos emitidos (de destino).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte también
 
-- [IMapToken (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)
+- [IMapToken (Interfaz)](imaptoken-interface.md)
