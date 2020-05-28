@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 4e0c3521-e54d-43c1-9857-cc76b49b8ffc
 topic_type:
 - apiref
-ms.openlocfilehash: 74088d1cd018bb07406fc7d00ff83d783a98b663
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 779a8f88b7521aa4b0a75594552981b41714ee3f
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450228"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007681"
 ---
-# <a name="cormethodattr-enumeration"></a><span data-ttu-id="932ec-102">CorMethodAttr (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="932ec-102">CorMethodAttr Enumeration</span></span>
-<span data-ttu-id="932ec-103">Contiene valores que describen las características de un método.</span><span class="sxs-lookup"><span data-stu-id="932ec-103">Contains values that describe the features of a method.</span></span>  
+# <a name="cormethodattr-enumeration"></a><span data-ttu-id="c6a58-102">CorMethodAttr (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="c6a58-102">CorMethodAttr Enumeration</span></span>
+<span data-ttu-id="c6a58-103">Contiene valores que describen las características de un método.</span><span class="sxs-lookup"><span data-stu-id="c6a58-103">Contains values that describe the features of a method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="932ec-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="932ec-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c6a58-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="c6a58-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorMethodAttr {  
@@ -62,42 +62,42 @@ typedef enum CorMethodAttr {
 } CorMethodAttr;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="932ec-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="932ec-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="c6a58-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="c6a58-105">Members</span></span>  
   
-|<span data-ttu-id="932ec-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="932ec-106">Member</span></span>|<span data-ttu-id="932ec-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="932ec-107">Description</span></span>|  
+|<span data-ttu-id="c6a58-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="c6a58-106">Member</span></span>|<span data-ttu-id="c6a58-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="c6a58-107">Description</span></span>|  
 |------------|-----------------|  
-|`mdMemberAccessMask`|<span data-ttu-id="932ec-108">Especifica el acceso a miembros.</span><span class="sxs-lookup"><span data-stu-id="932ec-108">Specifies member access.</span></span>|  
-|`mdPrivateScope`|<span data-ttu-id="932ec-109">Especifica que no se puede hacer referencia al miembro.</span><span class="sxs-lookup"><span data-stu-id="932ec-109">Specifies that the member cannot be referenced.</span></span>|  
-|`mdPrivate`|<span data-ttu-id="932ec-110">Especifica que solo el tipo primario puede tener acceso al miembro.</span><span class="sxs-lookup"><span data-stu-id="932ec-110">Specifies that the member is accessible only by the parent type.</span></span>|  
-|`mdFamANDAssem`|<span data-ttu-id="932ec-111">Especifica que solo los subtipos de este ensamblado pueden obtener acceso al miembro.</span><span class="sxs-lookup"><span data-stu-id="932ec-111">Specifies that the member is accessible by subtypes only in this assembly.</span></span>|  
-|`mdAssem`|<span data-ttu-id="932ec-112">Especifica que el miembro es accesible para cualquier persona del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="932ec-112">Specifies that the member is accessibly by anyone in the assembly.</span></span>|  
-|`mdFamily`|<span data-ttu-id="932ec-113">Especifica que solo se puede tener acceso al miembro por tipo y subtipos.</span><span class="sxs-lookup"><span data-stu-id="932ec-113">Specifies that the member is accessible only by type and subtypes.</span></span>|  
-|`mdFamORAssem`|<span data-ttu-id="932ec-114">Especifica que el miembro es accesible por las clases derivadas y por otros tipos del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="932ec-114">Specifies that the member is accessible by derived classes and by other types in its assembly.</span></span>|  
-|`mdPublic`|<span data-ttu-id="932ec-115">Especifica que todos los tipos con acceso al ámbito pueden obtener acceso al miembro.</span><span class="sxs-lookup"><span data-stu-id="932ec-115">Specifies that the member is accessible by all types with access to the scope.</span></span>|  
-|`mdStatic`|<span data-ttu-id="932ec-116">Especifica que el miembro se define como parte del tipo en lugar de como miembro de una instancia de.</span><span class="sxs-lookup"><span data-stu-id="932ec-116">Specifies that the member is defined as part of the type rather than as a member of an instance.</span></span>|  
-|`mdFinal`|<span data-ttu-id="932ec-117">Especifica que el método no se puede invalidar.</span><span class="sxs-lookup"><span data-stu-id="932ec-117">Specifies that the method cannot be overridden.</span></span>|  
-|`mdVirtual`|<span data-ttu-id="932ec-118">Especifica que el método se puede invalidar.</span><span class="sxs-lookup"><span data-stu-id="932ec-118">Specifies that the method can be overridden.</span></span>|  
-|`mdHideBySig`|<span data-ttu-id="932ec-119">Especifica que el método se oculta por nombre y firma, en lugar de simplemente por nombre.</span><span class="sxs-lookup"><span data-stu-id="932ec-119">Specifies that the method hides by name and signature, rather than just by name.</span></span>|  
-|`mdVtableLayoutMask`|<span data-ttu-id="932ec-120">Especifica el diseño de la tabla virtual.</span><span class="sxs-lookup"><span data-stu-id="932ec-120">Specifies virtual table layout.</span></span>|  
-|`mdReuseSlot`|<span data-ttu-id="932ec-121">Especifica que se reutilizará la ranura utilizada para este método en la tabla virtual.</span><span class="sxs-lookup"><span data-stu-id="932ec-121">Specifies that the slot used for this method in the virtual table be reused.</span></span> <span data-ttu-id="932ec-122">Este es el valor predeterminado.</span><span class="sxs-lookup"><span data-stu-id="932ec-122">This is the default.</span></span>|  
-|`mdNewSlot`|<span data-ttu-id="932ec-123">Especifica que el método siempre obtiene una nueva ranura en la tabla virtual.</span><span class="sxs-lookup"><span data-stu-id="932ec-123">Specifies that the method always gets a new slot in the virtual table.</span></span>|  
-|`mdCheckAccessOnOverride`|<span data-ttu-id="932ec-124">Especifica que el método puede ser invalidado por los mismos tipos en los que está visible.</span><span class="sxs-lookup"><span data-stu-id="932ec-124">Specifies that the method can be overridden by the same types to which it is visible.</span></span>|  
-|`mdAbstract`|<span data-ttu-id="932ec-125">Especifica que el método no está implementado.</span><span class="sxs-lookup"><span data-stu-id="932ec-125">Specifies that the method is not implemented.</span></span>|  
-|`mdSpecialName`|<span data-ttu-id="932ec-126">Especifica que el método es especial y que su nombre describe cómo.</span><span class="sxs-lookup"><span data-stu-id="932ec-126">Specifies that the method is special, and that its name describes how.</span></span>|  
-|`mdPinvokeImpl`|<span data-ttu-id="932ec-127">Especifica que la implementación del método se reenvía mediante PInvoke.</span><span class="sxs-lookup"><span data-stu-id="932ec-127">Specifies that the method implementation is forwarded using PInvoke.</span></span>|  
-|`mdUnmanagedExport`|<span data-ttu-id="932ec-128">Especifica que el método es un método administrado exportado a código no administrado.</span><span class="sxs-lookup"><span data-stu-id="932ec-128">Specifies that the method is a managed method exported to unmanaged code.</span></span>|  
-|`mdReservedMask`|<span data-ttu-id="932ec-129">Reservado para uso interno por el Common Language Runtime.</span><span class="sxs-lookup"><span data-stu-id="932ec-129">Reserved for internal use by the common language runtime.</span></span>|  
-|`mdRTSpecialName`|<span data-ttu-id="932ec-130">Especifica que el Common Language Runtime debe comprobar la codificación del nombre del método.</span><span class="sxs-lookup"><span data-stu-id="932ec-130">Specifies that the common language runtime should check the encoding of the method name.</span></span>|  
-|`mdHasSecurity`|<span data-ttu-id="932ec-131">Especifica que el método tiene seguridad asociada.</span><span class="sxs-lookup"><span data-stu-id="932ec-131">Specifies that the method has security associated with it.</span></span>|  
-|`mdRequireSecObject`|<span data-ttu-id="932ec-132">Especifica que el método llama a otro método que contiene código de seguridad.</span><span class="sxs-lookup"><span data-stu-id="932ec-132">Specifies that the method calls another method containing security code.</span></span>|  
+|`mdMemberAccessMask`|<span data-ttu-id="c6a58-108">Especifica el acceso a miembros.</span><span class="sxs-lookup"><span data-stu-id="c6a58-108">Specifies member access.</span></span>|  
+|`mdPrivateScope`|<span data-ttu-id="c6a58-109">Especifica que no se puede hacer referencia al miembro.</span><span class="sxs-lookup"><span data-stu-id="c6a58-109">Specifies that the member cannot be referenced.</span></span>|  
+|`mdPrivate`|<span data-ttu-id="c6a58-110">Especifica que solo el tipo primario puede tener acceso al miembro.</span><span class="sxs-lookup"><span data-stu-id="c6a58-110">Specifies that the member is accessible only by the parent type.</span></span>|  
+|`mdFamANDAssem`|<span data-ttu-id="c6a58-111">Especifica que solo los subtipos de este ensamblado pueden obtener acceso al miembro.</span><span class="sxs-lookup"><span data-stu-id="c6a58-111">Specifies that the member is accessible by subtypes only in this assembly.</span></span>|  
+|`mdAssem`|<span data-ttu-id="c6a58-112">Especifica que el miembro es accesible para cualquier persona del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="c6a58-112">Specifies that the member is accessibly by anyone in the assembly.</span></span>|  
+|`mdFamily`|<span data-ttu-id="c6a58-113">Especifica que solo se puede tener acceso al miembro por tipo y subtipos.</span><span class="sxs-lookup"><span data-stu-id="c6a58-113">Specifies that the member is accessible only by type and subtypes.</span></span>|  
+|`mdFamORAssem`|<span data-ttu-id="c6a58-114">Especifica que el miembro es accesible por las clases derivadas y por otros tipos del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="c6a58-114">Specifies that the member is accessible by derived classes and by other types in its assembly.</span></span>|  
+|`mdPublic`|<span data-ttu-id="c6a58-115">Especifica que todos los tipos con acceso al ámbito pueden obtener acceso al miembro.</span><span class="sxs-lookup"><span data-stu-id="c6a58-115">Specifies that the member is accessible by all types with access to the scope.</span></span>|  
+|`mdStatic`|<span data-ttu-id="c6a58-116">Especifica que el miembro se define como parte del tipo en lugar de como miembro de una instancia de.</span><span class="sxs-lookup"><span data-stu-id="c6a58-116">Specifies that the member is defined as part of the type rather than as a member of an instance.</span></span>|  
+|`mdFinal`|<span data-ttu-id="c6a58-117">Especifica que el método no se puede invalidar.</span><span class="sxs-lookup"><span data-stu-id="c6a58-117">Specifies that the method cannot be overridden.</span></span>|  
+|`mdVirtual`|<span data-ttu-id="c6a58-118">Especifica que el método se puede invalidar.</span><span class="sxs-lookup"><span data-stu-id="c6a58-118">Specifies that the method can be overridden.</span></span>|  
+|`mdHideBySig`|<span data-ttu-id="c6a58-119">Especifica que el método se oculta por nombre y firma, en lugar de simplemente por nombre.</span><span class="sxs-lookup"><span data-stu-id="c6a58-119">Specifies that the method hides by name and signature, rather than just by name.</span></span>|  
+|`mdVtableLayoutMask`|<span data-ttu-id="c6a58-120">Especifica el diseño de la tabla virtual.</span><span class="sxs-lookup"><span data-stu-id="c6a58-120">Specifies virtual table layout.</span></span>|  
+|`mdReuseSlot`|<span data-ttu-id="c6a58-121">Especifica que se reutilizará la ranura utilizada para este método en la tabla virtual.</span><span class="sxs-lookup"><span data-stu-id="c6a58-121">Specifies that the slot used for this method in the virtual table be reused.</span></span> <span data-ttu-id="c6a58-122">Este es el valor predeterminado.</span><span class="sxs-lookup"><span data-stu-id="c6a58-122">This is the default.</span></span>|  
+|`mdNewSlot`|<span data-ttu-id="c6a58-123">Especifica que el método siempre obtiene una nueva ranura en la tabla virtual.</span><span class="sxs-lookup"><span data-stu-id="c6a58-123">Specifies that the method always gets a new slot in the virtual table.</span></span>|  
+|`mdCheckAccessOnOverride`|<span data-ttu-id="c6a58-124">Especifica que el método puede ser invalidado por los mismos tipos en los que está visible.</span><span class="sxs-lookup"><span data-stu-id="c6a58-124">Specifies that the method can be overridden by the same types to which it is visible.</span></span>|  
+|`mdAbstract`|<span data-ttu-id="c6a58-125">Especifica que el método no está implementado.</span><span class="sxs-lookup"><span data-stu-id="c6a58-125">Specifies that the method is not implemented.</span></span>|  
+|`mdSpecialName`|<span data-ttu-id="c6a58-126">Especifica que el método es especial y que su nombre describe cómo.</span><span class="sxs-lookup"><span data-stu-id="c6a58-126">Specifies that the method is special, and that its name describes how.</span></span>|  
+|`mdPinvokeImpl`|<span data-ttu-id="c6a58-127">Especifica que la implementación del método se reenvía mediante PInvoke.</span><span class="sxs-lookup"><span data-stu-id="c6a58-127">Specifies that the method implementation is forwarded using PInvoke.</span></span>|  
+|`mdUnmanagedExport`|<span data-ttu-id="c6a58-128">Especifica que el método es un método administrado exportado a código no administrado.</span><span class="sxs-lookup"><span data-stu-id="c6a58-128">Specifies that the method is a managed method exported to unmanaged code.</span></span>|  
+|`mdReservedMask`|<span data-ttu-id="c6a58-129">Reservado para uso interno por el Common Language Runtime.</span><span class="sxs-lookup"><span data-stu-id="c6a58-129">Reserved for internal use by the common language runtime.</span></span>|  
+|`mdRTSpecialName`|<span data-ttu-id="c6a58-130">Especifica que el Common Language Runtime debe comprobar la codificación del nombre del método.</span><span class="sxs-lookup"><span data-stu-id="c6a58-130">Specifies that the common language runtime should check the encoding of the method name.</span></span>|  
+|`mdHasSecurity`|<span data-ttu-id="c6a58-131">Especifica que el método tiene seguridad asociada.</span><span class="sxs-lookup"><span data-stu-id="c6a58-131">Specifies that the method has security associated with it.</span></span>|  
+|`mdRequireSecObject`|<span data-ttu-id="c6a58-132">Especifica que el método llama a otro método que contiene código de seguridad.</span><span class="sxs-lookup"><span data-stu-id="c6a58-132">Specifies that the method calls another method containing security code.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="932ec-133">Requisitos</span><span class="sxs-lookup"><span data-stu-id="932ec-133">Requirements</span></span>  
- <span data-ttu-id="932ec-134">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="932ec-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c6a58-133">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c6a58-133">Requirements</span></span>  
+ <span data-ttu-id="c6a58-134">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c6a58-134">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="932ec-135">**Encabezado:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="932ec-135">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="c6a58-135">**Encabezado:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="c6a58-135">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="932ec-136">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="932ec-136">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c6a58-136">**.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c6a58-136">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="932ec-137">Vea también</span><span class="sxs-lookup"><span data-stu-id="932ec-137">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c6a58-137">Consulte también</span><span class="sxs-lookup"><span data-stu-id="c6a58-137">See also</span></span>
 
-- [<span data-ttu-id="932ec-138">Enumeraciones para metadatos</span><span class="sxs-lookup"><span data-stu-id="932ec-138">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="c6a58-138">Enumeraciones para metadatos</span><span class="sxs-lookup"><span data-stu-id="c6a58-138">Metadata Enumerations</span></span>](metadata-enumerations.md)
