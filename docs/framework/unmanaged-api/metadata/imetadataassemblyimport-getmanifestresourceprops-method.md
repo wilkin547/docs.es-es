@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 00be4789-ac63-4397-b2ec-1629a5c5a585
 topic_type:
 - apiref
-ms.openlocfilehash: d87d0d46ede65cf44c84edba92fe246174088a4e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c0b6d53ce3be3aed6a577bf6e38a281928499848
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177655"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009033"
 ---
 # <a name="imetadataassemblyimportgetmanifestresourceprops-method"></a>IMetaDataAssemblyImport::GetManifestResourceProps (Método)
 Obtiene el conjunto de propiedades del recurso de manifiesto con la firma de metadatos especificada.  
@@ -41,35 +41,35 @@ HRESULT GetManifestResourceProps (
   
 ## <a name="parameters"></a>Parámetros  
  `mdmr`  
- [en] Un `mdManifestResource` token que representa el recurso para el que se obtienen las propiedades.  
+ de `mdManifestResource`Token que representa el recurso para el que se van a obtener las propiedades.  
   
  `szName`  
- [fuera] El nombre del recurso.  
+ enuncia Nombre del recurso.  
   
  `cchName`  
- [en] El tamaño, en caracteres `szName`anchos, de .  
+ de Tamaño, en caracteres anchos, de `szName` .  
   
  `pchName`  
- [fuera] Un puntero al número de caracteres `szName`anchos realmente devueltos en .  
+ enuncia Puntero al número de caracteres anchos realmente devueltos en `szName` .  
   
  `ptkImplementation`  
- [fuera] Puntero a `mdFile` un token `mdAssemblyRef` o un token que representa el archivo o ensamblado, respectivamente, que contiene el recurso.  
+ enuncia Un puntero a un `mdFile` token o `mdAssemblyRef` token que representa el archivo o ensamblado, respectivamente, que contiene el recurso.  
   
  `pdwOffset`  
- [fuera] Puntero a un valor que especifica el desplazamiento al principio del recurso dentro del archivo.  
+ enuncia Un puntero a un valor que especifica el desplazamiento al principio del recurso dentro del archivo.  
   
  `pdwResourceFlags`  
- [fuera] Puntero a marcas que describen los metadatos aplicados a un recurso. El valor flags es una combinación de uno o varios [CorManifestResourceFlags](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md) valores.  
+ enuncia Puntero a las marcas que describen los metadatos aplicados a un recurso. El valor de flags es una combinación de uno o más valores de [CorManifestResourceFlags (](cormanifestresourceflags-enumeration.md) .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte también
 
-- [IMetaDataAssemblyImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataAssemblyImport (Interfaz)](imetadataassemblyimport-interface.md)

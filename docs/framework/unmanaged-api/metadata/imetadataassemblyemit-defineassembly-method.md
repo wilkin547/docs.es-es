@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a0637d66-74bf-4f2d-8137-9ff838bccece
 topic_type:
 - apiref
-ms.openlocfilehash: 14bd352099890e4ca36321d550b8e982d4373231
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17c91200730431c4c6e230b8c1561ce7c4863868
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177887"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008188"
 ---
 # <a name="imetadataassemblyemitdefineassembly-method"></a>IMetaDataAssemblyEmit::DefineAssembly (Método)
-Crea `Assembly` una estructura que contiene metadatos para el ensamblado especificado y devuelve el token de metadatos asociado.  
+Crea una `Assembly` estructura que contiene metadatos para el ensamblado especificado y devuelve el token de metadatos asociado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,38 +41,38 @@ HRESULT DefineAssembly (
   
 ## <a name="parameters"></a>Parámetros  
  `pbPublicKey`  
- [en] La clave pública que identifica el publicador del ensamblado, o NULL si el ensamblado no tiene un nombre seguro.  
+ de La clave pública que identifica al publicador del ensamblado, o NULL si el ensamblado no tiene un nombre seguro.  
   
  `cbPublicKey`  
- [en] El tamaño en `pbPublicKey`bytes de .  
+ de Tamaño en bytes de `pbPublicKey` .  
   
  `uHashAlgId`  
- [en] Identificador del algoritmo hash que se va a usar para cifrar los archivos del ensamblado o NULL para especificar el algoritmo SHA-1.  
+ de Identificador del algoritmo hash que se va a utilizar para cifrar los archivos del ensamblado, o NULL para especificar el algoritmo SHA-1.  
   
  `szName`  
- [en] El nombre de texto legible del ensamblado. Este valor no debe superar los 1024 caracteres.  
+ de Nombre del texto legible del ensamblado. Este valor no debe superar los 1024 caracteres.  
   
  `pMetaData`  
- [en] Puntero a una instancia de ASSEMBLYMETADATA que contiene la información de versión, plataforma y configuración regional del ensamblado.  
+ de Un puntero a una instancia de ASSEMBLYMETADATA (que contiene la versión, la plataforma y la información de configuración regional para el ensamblado.  
   
  `dwAssemblyFlags`  
- [en] Combinación de [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) valores que describen las características del ensamblado.  
+ de Combinación de valores [corassemblyflags (](corassemblyflags-enumeration.md) que describen las características del ensamblado.  
   
  `pmda`  
- [fuera] Un puntero al token de metadatos.  
+ enuncia Puntero al token de metadatos.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Solo `Assembly` se puede definir una estructura de metadatos dentro de un manifiesto.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Biblioteca:** Incluido como recurso en MsCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte también
 
-- [IMetaDataAssemblyEmit (Interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyEmit (Interfaz)](imetadataassemblyemit-interface.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 748f1ab2-fbcb-4f55-89ec-8d23d81ebc80
 topic_type:
 - apiref
-ms.openlocfilehash: a8dc09ee9f0f0fd79060bb86c599ab40a285153b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 038e2ec20e5fd01edf9835080e0f7a15ec862fd9
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448762"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008942"
 ---
 # <a name="corvalidatormoduletype-enumeration"></a>CorValidatorModuleType (Enumeración)
 Especifica el tipo de un módulo.  
@@ -44,22 +44,22 @@ typedef enum
 |Miembro|Descripción|  
 |------------|-----------------|  
 |`ValidatorModuleTypeInvalid`|El módulo es un tipo no válido.|  
-|`ValidatorModuleTypeMin`|Valor mínimo de la enumeración `CorValidatorModuleType`.|  
+|`ValidatorModuleTypeMin`|Valor mínimo de la `CorValidatorModuleType` enumeración.|  
 |`ValidatorModuleTypePE`|El módulo es un archivo ejecutable portable (PE).|  
 |`ValidatorModuleTypeObj`|El módulo es un archivo. obj.|  
 |`ValidatorModuleTypeEnc`|El módulo es una sesión de depurador de edición y continuación.|  
 |`ValidatorModuleTypeIncr`|El módulo es uno que se ha compilado incrementalmente.|  
-|`ValidatorModuleTypeMax`|Valor máximo de la enumeración `CorValidatorModuleType`.|  
+|`ValidatorModuleTypeMax`|Valor máximo de la `CorValidatorModuleType` enumeración.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
  **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumeraciones para metadatos](metadata-enumerations.md)

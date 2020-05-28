@@ -262,7 +262,7 @@ Internamente, Cosmos DB administra automáticamente la ubicación de las [partic
 
 Cloud Native Computing Foundation (CNCF) incluye varios proyectos de base de datos NewSQL.
 
-| proyecto | Características |
+| Project | Características |
 | :-------- | :-------- |
 | BASE de Cockroach |Base de datos relacional compatible con ACID que se escala globalmente. Agregar un nuevo nodo a un clúster y CockroachDB se encarga de equilibrar los datos entre las instancias y las zonas geográficas. Crea, administra y distribuye réplicas para garantizar la confiabilidad. Es de código abierto y está disponible libremente.  |
 | TiDB | Una base de datos de código abierto que admite cargas de trabajo de procesamiento analítico y transaccional híbridos (HTAP). Es compatible con MySQL y ofrece escalabilidad horizontal, coherencia alta y alta disponibilidad.  TiDB actúa como un servidor MySQL. Puede seguir usando las bibliotecas de cliente de MySQL existentes, sin necesidad de realizar cambios de código completos en la aplicación. |

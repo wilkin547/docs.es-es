@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e47a72f1-9609-48ed-bb34-97170d7f6890
 topic_type:
 - apiref
-ms.openlocfilehash: 09a351db65c7ed310d3eb68c71a5207ed6040dd4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dd97c479f12e7bdb015b39a802b398ca2b0bcd3f
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177968"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007642"
 ---
 # <a name="cornativetype-enumeration"></a>CorNativeType (Enumeración)
 Contiene valores que describen los tipos nativos no administrados.  
@@ -85,66 +85,66 @@ typedef enum CorNativeType {
 } CorNativeType;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-|Member|Descripción|  
+|Miembro|Descripción|  
 |------------|-----------------|  
 |`NATIVE_TYPE_END`|Obsoleto.|  
 |`NATIVE_TYPE_VOID`|Obsoleto.|  
-|`NATIVE_TYPE_BOOLEAN`|Un valor booleano de 4 bytes, donde TRUE es distinto de cero y FALSE es cero.|  
-|`NATIVE_TYPE_I1`|Un valor entero de 8 bits con signo.|  
-|`NATIVE_TYPE_U1`|Un valor entero de 8 bits sin signo.|  
-|`NATIVE_TYPE_I2`|Un valor entero de 16 bits con signo.|  
-|`NATIVE_TYPE_U2`|Un valor entero de 16 bits sin signo.|  
+|`NATIVE_TYPE_BOOLEAN`|Valor booleano de 4 bytes, donde TRUE es distinto de cero y FALSE es cero.|  
+|`NATIVE_TYPE_I1`|Valor entero de 8 bits con signo.|  
+|`NATIVE_TYPE_U1`|Valor entero de 8 bits sin signo.|  
+|`NATIVE_TYPE_I2`|Valor entero de 16 bits con signo.|  
+|`NATIVE_TYPE_U2`|Valor entero de 16 bits sin signo.|  
 |`NATIVE_TYPE_I4`|Un valor entero de 32 bits con signo.|  
 |`NATIVE_TYPE_U4`|Valor entero de 32 bits sin signo.|  
-|`NATIVE_TYPE_I8`|Un valor entero de 64 bits con signo.|  
-|`NATIVE_TYPE_U8`|Un valor entero de 64 bits sin signo.|  
-|`NATIVE_TYPE_R4`|Un valor numérico de punto flotante de 4 bytes.|  
-|`NATIVE_TYPE_R8`|Un valor numérico de punto flotante de 8 bytes.|  
+|`NATIVE_TYPE_I8`|Valor entero de 64 bits con signo.|  
+|`NATIVE_TYPE_U8`|Valor entero de 64 bits sin signo.|  
+|`NATIVE_TYPE_R4`|Valor numérico de punto flotante de 4 bytes.|  
+|`NATIVE_TYPE_R8`|Valor numérico de punto flotante de 8 bytes.|  
 |`NATIVE_TYPE_SYSCHAR`|Obsoleto.|  
 |`NATIVE_TYPE_VARIANT`|Obsoleto.|  
-|`NATIVE_TYPE_CURRENCY`|Un tipo COM numérico que <xref:System.Decimal> corresponde al tipo administrado.|  
+|`NATIVE_TYPE_CURRENCY`|Tipo COM numérico que corresponde al <xref:System.Decimal> tipo administrado.|  
 |`NATIVE_TYPE_PTR`|Obsoleto.|  
 |`NATIVE_TYPE_DECIMAL`|Obsoleto.|  
 |`NATIVE_TYPE_DATE`|Obsoleto.|  
 |`NATIVE_TYPE_BSTR`|Interoperabilidad COM.|  
-|`NATIVE_TYPE_LPSTR`|Un valor de cadena LPSTR.|  
-|`NATIVE_TYPE_LPWSTR`|Un valor de cadena LPWSTR.|  
-|`NATIVE_TYPE_LPTSTR`|Un valor de cadena LPTSTR.|  
-|`NATIVE_TYPE_FIXEDSYSSTRING`|Un valor de cadena fijo definido por el sistema.|  
+|`NATIVE_TYPE_LPSTR`|Valor de cadena LPSTR.|  
+|`NATIVE_TYPE_LPWSTR`|Valor de cadena LPWSTR.|  
+|`NATIVE_TYPE_LPTSTR`|Valor de cadena LPTSTR.|  
+|`NATIVE_TYPE_FIXEDSYSSTRING`|Valor de cadena fijo definido por el sistema.|  
 |`NATIVE_TYPE_OBJECTREF`|Obsoleto.|  
 |`NATIVE_TYPE_IUNKNOWN`|Interoperabilidad COM.|  
 |`NATIVE_TYPE_IDISPATCH`|Interoperabilidad COM.|  
-|`NATIVE_TYPE_STRUCT`|Un valor de estructura nativa.|  
+|`NATIVE_TYPE_STRUCT`|Valor de estructura nativa.|  
 |`NATIVE_TYPE_INTF`|Interoperabilidad COM.|  
 |`NATIVE_TYPE_SAFEARRAY`|Interoperabilidad COM.|  
-|`NATIVE_TYPE_FIXEDARRAY`|Un valor de matriz de longitud fija.|  
-|`NATIVE_TYPE_INT`|Un valor entero nativo de 16 bits con signo.|  
-|`NATIVE_TYPE_UINT`|Un valor entero nativo de 16 bits sin signo.|  
-|`NATIVE_TYPE_NESTEDSTRUCT`|Obsoleto.<br /><br /> Usa NATIVE_TYPE_STRUCT.|  
+|`NATIVE_TYPE_FIXEDARRAY`|Valor de matriz de longitud fija.|  
+|`NATIVE_TYPE_INT`|Valor entero de 16 bits con signo nativo.|  
+|`NATIVE_TYPE_UINT`|Valor entero de 16 bits sin signo nativo.|  
+|`NATIVE_TYPE_NESTEDSTRUCT`|Obsoleto.<br /><br /> Use NATIVE_TYPE_STRUCT.|  
 |`NATIVE_TYPE_BYVALSTR`|Interoperabilidad COM.|  
 |`NATIVE_TYPE_ANSIBSTR`|Interoperabilidad COM.|  
-|`NATIVE_TYPE_TBSTR`|Interoperabilidad COM.<br /><br /> Seleccione BSTR o ANSIBSTR dependiendo de la plataforma.|  
-|`NATIVE_TYPE_VARIANTBOOL`|Un valor booleano de 2 bytes, donde TRUE es -1 y FALSE es cero.|  
+|`NATIVE_TYPE_TBSTR`|Interoperabilidad COM.<br /><br /> Seleccione BSTR o ANSIBSTR en función de la plataforma.|  
+|`NATIVE_TYPE_VARIANTBOOL`|Valor booleano de 2 bytes, donde TRUE es-1 y FALSE es cero.|  
 |`NATIVE_TYPE_FUNC`|Puntero de función.|  
-|`NATIVE_TYPE_ASANY`|Una referencia a cualquier tipo nativo.|  
-|`NATIVE_TYPE_ARRAY`|Una referencia a una matriz con miembros de un tipo no especificado.|  
+|`NATIVE_TYPE_ASANY`|Referencia a cualquier tipo nativo.|  
+|`NATIVE_TYPE_ARRAY`|Referencia a una matriz con miembros de un tipo no especificado.|  
 |`NATIVE_TYPE_LPSTRUCT`|Un puntero entero de 32 bits a una estructura.|  
-|`NATIVE_TYPE_CUSTOMMARSHALER`|Un tipo nativo de serializador personalizado.<br /><br /> Esto debe ir seguido de una cadena con el siguiente formato: "Nombre de tipo nativo/0Nombre de tipo de serializador personalizado nombre/0Cookie opcional/0" o ".Nombre de tipo de cálculo de referencias personalizados nombre/0Cookie opcional/0"|  
+|`NATIVE_TYPE_CUSTOMMARSHALER`|Un tipo nativo de contador de referencias personalizado.<br /><br /> Debe ir seguido de una cadena con el formato siguiente: "nombre de tipo nativo/nombre de tipo de contador de referencias de 0Custom/cookie de 0Optional/0" o "{GUID de tipo nativo}/0Custom de contador de referencias nombre de tipo/0Optional cookie/0"|  
 |`NATIVE_TYPE_ERROR`|Interoperabilidad COM.<br /><br /> Con ELEMENT_TYPE_I4 este tipo se asigna a VT_HRESULT.|  
-|`NATIVE_TYPE_IINSPECTABLE`|Un `IInspectable` tipo nativo.|  
-|`NATIVE_TYPE_HSTRING`|Un `HString`nativo .|  
+|`NATIVE_TYPE_IINSPECTABLE`|Tipo nativo `IInspectable` .|  
+|`NATIVE_TYPE_HSTRING`|Un nativo `HString` .|  
 |`NATIVE_TYPE_MAX`|Valor no válido.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** CorHdr.h  
+ **Encabezado:** CorHdr. h  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte también
 
 - <xref:System.Runtime.InteropServices.UnmanagedType>
-- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumeraciones para metadatos](metadata-enumerations.md)

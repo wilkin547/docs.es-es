@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e2a06ee4-b8ee-49c7-935a-c1031a29eef2
 topic_type:
 - apiref
-ms.openlocfilehash: 277e2584049fae397cf91281a65d05b0b49d9454
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 1855c73849c35bf709b0af261a88e6cd7a40abfb
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448080"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008305"
 ---
 # <a name="iceegengetsectiondatalen-method"></a>ICeeGen::GetSectionDataLen (Método)
 Obtiene la longitud de la sección especificada.  
@@ -44,17 +44,17 @@ HRESULT GetSectionDataLen (
  enuncia La longitud devuelta de la sección especificada.  
   
 ## <a name="remarks"></a>Comentarios  
- Llame solo a `GetSectionDataLen` si tiene requisitos de sección especiales que no se controlan mediante otros métodos.  
+ Llame `GetSectionDataLen` solo si tiene requisitos de sección especiales que no se controlan mediante otros métodos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
  **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [ICeeGen (interfaz)](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [ICeeGen (Interfaz)](iceegen-interface.md)

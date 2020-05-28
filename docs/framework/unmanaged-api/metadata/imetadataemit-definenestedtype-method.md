@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1e994de6-4628-459c-b967-b34be1e9fe4f
 topic_type:
 - apiref
-ms.openlocfilehash: 3b8fd9876563bace52a6088747d1ca4ed26ea872
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2b24c2ca6907dfdb63ad934ec30557c246db174c
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175816"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004361"
 ---
 # <a name="imetadataemitdefinenestedtype-method"></a>IMetaDataEmit::DefineNestedType (Método)
-Crea la firma de metadatos de `mdTypeDef` una definición de tipo, devuelve un token para ese `tdEncloser` tipo y especifica que el tipo definido es un miembro del tipo al que hace referencia el parámetro.  
+Crea la firma de metadatos de una definición de tipo, devuelve un `mdTypeDef` token para ese tipo y especifica que el tipo definido es un miembro del tipo al que hace referencia el `tdEncloser` parámetro.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,33 +40,33 @@ HRESULT DefineNestedType (
   
 ## <a name="parameters"></a>Parámetros  
  `szTypeDef`  
- [en] El nombre del tipo en Unicode.  
+ de Nombre del tipo en Unicode.  
   
  `dwTypeDefFlags`  
- [en] `TypeDef` atributos. Esta es una `CorTypeAttr` máscara de bits de valores.  
+ [in] `TypeDef` sus. Se trata de una máscara de máscara de `CorTypeAttr` valores.  
   
  `tkExtends`  
- [en] El token de la clase base. Esto es `mdTypeDef` un `mdTypeRef` token o un token.  
+ de Token de la clase base. Este es un `mdTypeDef` `mdTypeRef` token o.  
   
  `rtkImplements`[]  
- [en] Matriz de tokens que especifican las interfaces que implementa esta clase o interfaz.  
+ de Matriz de tokens que especifican las interfaces que esta clase o interfaz implementa.  
   
  `tdEncloser`  
- [en] El token del tipo envolvente. El último elemento de `mdTokenNil`la matriz debe ser .  
+ de Token del tipo envolvente. El último elemento de la matriz debe ser `mdTokenNil` .  
   
  `ptd`  
- [fuera] El `mdTypeDef` token asignado.  
+ enuncia El `mdTypeDef` token asignado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MSCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte también
 
-- [IMetaDataEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit (Interfaz)](imetadataemit-interface.md)
+- [IMetaDataEmit2 (Interfaz)](imetadataemit2-interface.md)

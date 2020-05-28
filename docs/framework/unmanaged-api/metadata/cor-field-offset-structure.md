@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cced5298-277f-4a5a-8ecf-a0050c1096ea
 topic_type:
 - apiref
-ms.openlocfilehash: 646952d5cd55b74081a0ba6171a6eee6b0138512
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 70fb637cd1edf81be140b0e3306e3b0a483653a6
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443967"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007993"
 ---
 # <a name="cor_field_offset-structure"></a>COR_FIELD_OFFSET (Estructura)
 Almacena el desplazamiento, dentro de una clase, del campo especificado.  
@@ -37,21 +37,21 @@ typedef struct COR_FIELD_OFFSET {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`ridOfField`|Un token de metadatos de `mdFieldDef` que representa el campo.|  
+|`ridOfField`|`mdFieldDef`Token de metadatos que representa el campo.|  
 |`ulOffset`|Desplazamiento del campo dentro de su clase.|  
   
 ## <a name="remarks"></a>Comentarios  
- Los métodos [IMetaDataImport:: GetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getclasslayout-method.md) y [IMetaDataEmit:: setclasslayout (](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setclasslayout-method.md) toman un parámetro de tipo `COR_FIELD_OFFSET`.  
+ Los métodos [IMetaDataImport:: GetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getclasslayout-method.md) y [IMetaDataEmit:: setclasslayout (](imetadataemit-setclasslayout-method.md) toman un parámetro de tipo `COR_FIELD_OFFSET` .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorHdr. h, Corprof. idl  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Estructuras de metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
-- [IMetaDataEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Estructuras de metadatos](metadata-structures.md)
+- [IMetaDataEmit (Interfaz)](imetadataemit-interface.md)
+- [IMetaDataImport (Interfaz)](imetadataimport-interface.md)

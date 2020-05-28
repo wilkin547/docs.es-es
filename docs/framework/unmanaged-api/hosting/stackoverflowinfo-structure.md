@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 519389f2-0217-436c-99d4-93a76ebce5b5
 topic_type:
 - apiref
-ms.openlocfilehash: 1072026f92edbc646653c6dd74ec8e22d5b887e5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 941093b9a0856c2b716ba359c854473f3c9ea26a
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73105919"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84006524"
 ---
 # <a name="stackoverflowinfo-structure"></a>StackOverflowInfo (Estructura)
 Almacena el tipo de desbordamiento que se ha producido y la información sobre la excepción que se produjo debido al desbordamiento.  
@@ -37,21 +37,21 @@ typedef struct _StackOverflowInfo {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`soType`|Valor de la enumeración [StackOverflowType (](../../../../docs/framework/unmanaged-api/hosting/stackoverflowtype-enumeration.md) que especifica el tipo de desbordamiento.|  
-|`pExceptionInfo`|Un puntero a un objeto de `EXCEPTION_POINTERS` de Win32, que contiene un registro de excepción con una descripción independiente del equipo de una excepción y un registro de contexto con una descripción dependiente del equipo del contexto del procesador en el momento de la excepción.|  
+|`soType`|Valor de la enumeración [StackOverflowType (](stackoverflowtype-enumeration.md) que especifica el tipo de desbordamiento.|  
+|`pExceptionInfo`|Un puntero a un `EXCEPTION_POINTERS` objeto Win32, que contiene un registro de excepción con una descripción independiente de la máquina de una excepción y un registro de contexto con una descripción dependiente del equipo del contexto del procesador en el momento de la excepción.|  
   
 ## <a name="remarks"></a>Comentarios  
- Se pasa un objeto `StackOverflowInfo` al método [IActionOnCLREvent:: onEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) para eventos de `Event_StackOverflow`.  
+ Un `StackOverflowInfo` objeto se pasa al método [IActionOnCLREvent:: onEvent](iactiononclrevent-onevent-method.md) para `Event_StackOverflow` los eventos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. idl  
   
  **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Estructuras de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [Estructuras de hospedaje](hosting-structures.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9bede0ec-5fdf-42a2-b5b7-bee64056acb6
 topic_type:
 - apiref
-ms.openlocfilehash: b1586184c91619994ba0dfc9d5dcc277c10f99cf
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b6936081ca3dbadb4f802a6856fafb53f6cef3fa
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436452"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008968"
 ---
 # <a name="cortypeattr-enumeration"></a>CorTypeAttr (Enumeración)
 Contiene valores que indican los metadatos de tipo.  
@@ -103,7 +103,7 @@ typedef enum CorTypeAttr {
 |`tdAnsiClass`|Especifica que este tipo interpreta LPTSTR como ANSI.|  
 |`tdUnicodeClass`|Especifica que este tipo interpreta LPTSTR como Unicode.|  
 |`tdAutoClass`|Especifica que este tipo interpreta LPTSTR automáticamente.|  
-|`tdCustomFormatClass`|Especifica que el tipo tiene una codificación no estándar, tal y como se especifica en `CustomFormatMask`.|  
+|`tdCustomFormatClass`|Especifica que el tipo tiene una codificación no estándar, tal y como especifica `CustomFormatMask` .|  
 |`tdCustomFormatMask`|Use esta máscara para obtener información de codificación no estándar para la interoperabilidad nativa. El significado de los valores de estos dos bits no se especifica.|  
 |`tdBeforeFieldInit`|Especifica que el tipo se debe inicializar antes del primer intento de obtener acceso a un campo estático.|  
 |`tdForwarder`|Especifica que el tipo se exporta y un reenviador de tipos.|  
@@ -112,12 +112,12 @@ typedef enum CorTypeAttr {
 |`tdHasSecurity`|Especifica que el tipo tiene seguridad asociada.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorHdr. h  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumeraciones para metadatos](metadata-enumerations.md)

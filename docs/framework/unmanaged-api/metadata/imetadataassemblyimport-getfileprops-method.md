@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c5e6216f-ae3d-4697-9688-66b69c1251ec
 topic_type:
 - apiref
-ms.openlocfilehash: dae4a36537eeac58ffb17ebc1b78d935ec807cd8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 78c192f10f629a0c1316ae7af7fc774819f4de8f
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175985"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007486"
 ---
 # <a name="imetadataassemblyimportgetfileprops-method"></a>IMetaDataAssemblyImport::GetFileProps (Método)
 Obtiene las propiedades del archivo con la firma de metadatos especificada.  
@@ -41,35 +41,35 @@ HRESULT GetFileProps (
   
 ## <a name="parameters"></a>Parámetros  
  `mdf`  
- [en] El `mdFile` token de metadatos que representa el archivo para el que se obtienen las propiedades.  
+ de `mdFile`Token de metadatos que representa el archivo para el que se van a obtener las propiedades.  
   
  `szName`  
- [fuera] El nombre simple del archivo.  
+ enuncia Nombre simple del archivo.  
   
  `cchName`  
- [en] El tamaño, en caracteres `szName`anchos, de .  
+ de Tamaño, en caracteres anchos, de `szName` .  
   
  `pchName`  
- [fuera] El número de caracteres `szName`anchos realmente devueltos en .  
+ enuncia Número de caracteres anchos realmente devueltos en `szName` .  
   
  `ppbHashValue`  
- [fuera] Un puntero al valor hash. Este es el hash, usando el algoritmo SHA-1, del archivo.  
+ enuncia Puntero al valor hash. Este es el hash, mediante el algoritmo SHA-1, del archivo.  
   
  `pcbHashValue`  
- [fuera] El número de caracteres anchos en el valor hash devuelto.  
+ enuncia Número de caracteres anchos en el valor hash devuelto.  
   
  `pdwFileFlags`  
- [fuera] Puntero a las marcas que describen los metadatos aplicados a un archivo. El valor flags es una combinación de uno o varios [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) valores.  
+ enuncia Puntero a las marcas que describen los metadatos aplicados a un archivo. El valor de flags es una combinación de uno o más valores de [CorFileFlags (](corfileflags-enumeration.md) .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataforma:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataforma:** Consulte [requisitos del sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte también
 
-- [IMetaDataAssemblyImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataAssemblyImport (Interfaz)](imetadataassemblyimport-interface.md)

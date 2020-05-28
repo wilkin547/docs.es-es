@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6ae2c4be-212c-4e74-9288-40a11dc26522
 topic_type:
 - apiref
-ms.openlocfilehash: d28a0c8b7ee85f023026dde6f3cc8f3a8406aa64
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: dea69e18fc517eddddc5b99950a6f3b16ee3e426
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450302"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007408"
 ---
 # <a name="corfieldattr-enumeration"></a>CorFieldAttr (Enumeración)
 Contiene valores que describen los metadatos de un campo.  
@@ -61,7 +61,7 @@ typedef enum CorFieldAttr {
 |Miembro|Descripción|  
 |------------|-----------------|  
 |`fdFieldAccessMask`|Especifica la información de accesibilidad.|  
-|`fdPrivateScope`|Especifica que no se puede hacer referencia al campo.|  
+|`fdPrivateScope`|Indica que no se pueden crear referencias al campo.|  
 |`fdPrivate`|Especifica que el campo es accesible únicamente por su tipo primario.|  
 |`fdFamANDAssem`|Especifica que el campo es accesible por las clases derivadas de su ensamblado.|  
 |`fdAssembly`|Especifica que todos los tipos del ensamblado pueden obtener acceso al campo.|  
@@ -81,12 +81,12 @@ typedef enum CorFieldAttr {
 |`fdHasFieldRVA`|Especifica que el campo tiene una dirección virtual relativa.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorHdr. h  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Enumeraciones para metadatos](metadata-enumerations.md)

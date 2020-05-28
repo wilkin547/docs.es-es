@@ -57,7 +57,7 @@ Estos gráficos se pueden incrustar en el Azure Portal adecuado a través del us
 ![Un ejemplo Power BI panel ](./media/azure-monitor.png)
  **figura 7-15**. Un ejemplo Power BI panel.
 
-## <a name="alerts"></a>Alerts
+## <a name="alerts"></a>Alertas
 
 A veces, tener paneles de datos no es suficiente. Si nadie está activo para ver los paneles, puede seguir siendo de muchas horas antes de que se solucione un problema, o incluso cuando se detecte. Con este fin, Azure Monitor también proporciona una solución de [alerta](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-overview)de muesca. Las alertas se pueden desencadenar en una amplia variedad de condiciones, entre las que se incluyen:
 
