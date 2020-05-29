@@ -1,18 +1,18 @@
 ---
 title: Propiedades de MSBuild para Microsoft.NET.Sdk
-description: Referencia de las propiedades de MSBuild admitidas por el SDK de .NET Core.
+description: Referencia de las propiedades y los elementos de MSBuild admitidos por el SDK de .NET Core.
 ms.date: 02/14/2020
 ms.topic: reference
-ms.openlocfilehash: 800ff59310d8437d7f770bf20a5bdf37714f8515
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: cda56b3e23592a341d9fe672fc1f1530adcdab49
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795578"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83206106"
 ---
-# <a name="msbuild-properties-for-net-core-sdk-projects"></a>Propiedades de MSBuild para proyectos del SDK de .NET Core
+# <a name="msbuild-reference-for-net-core-sdk-projects"></a>Referencia de MSBuild para proyectos del SDK de .NET Core
 
-En esta página se describen las propiedades de MSBuild para configurar proyectos de .NET Core. Puede especificar *metadatos* para cada propiedad como elementos secundarios de la propiedad.
+Esta página es una referencia de las propiedades y los elementos de MSBuild que puede usar para configurar proyectos de .NET Core.
 
 > [!NOTE]
 > Esta página es un trabajo en curso y no muestra todas las propiedades de MSBuild útiles para el SDK de .NET Core. Para obtener una lista de las propiedades comunes de MSBuild, vea [Propiedades comunes de MSBuild](/visualstudio/msbuild/common-msbuild-project-properties).
@@ -78,7 +78,7 @@ Puede especificar propiedades como `PackageId`, `PackageVersion`, `PackageIcon`,
 </PropertyGroup>
 ```
 
-## <a name="publish-properties"></a>Publicación de propiedades
+## <a name="publish-properties-and-items"></a>Publicación de propiedades y elementos
 
 - [RuntimeIdentifier](#runtimeidentifier)
 - [RuntimeIdentifiers](#runtimeidentifiers)
@@ -136,7 +136,23 @@ Para obtener más información sobre la implementación, vea [Implementación de
 
 ## <a name="compile-properties"></a>Propiedades de compilación
 
+- [EmbeddedResourceUseDependentUponConvention](#embeddedresourceusedependentuponconvention)
 - [LangVersion](#langversion)
+
+### <a name="embeddedresourceusedependentuponconvention"></a>EmbeddedResourceUseDependentUponConvention
+
+La propiedad `EmbeddedResourceUseDependentUponConvention` define si los nombres del archivo de manifiesto del recurso se generan a partir de la información de tipo de los archivos de código fuente que se ubican conjuntamente con archivos de recursos. Por ejemplo, si *Form1.resx* está en la misma carpera que *Form1.cs*, y `EmbeddedResourceUseDependentUponConvention` se establece en `true`, el archivo *.resources* generado toma su nombre del primer tipo que se define en *Form1.cs*. Por ejemplo, si `MyNamespace.Form1` es el primer tipo definido en *Form1.cs*, el nombre de archivo generado es *myNameSpace.Form1.Resources*.
+
+> [!NOTE]
+> Si se especifican los metadatos `LogicalName`, `ManifestResourceName` o `DependentUpon` para un elemento `EmbeddedResource`, el nombre del archivo de manifiesto generado para ese archivo de recurso se basa en esos metadatos.
+
+De forma predeterminada, en un nuevo proyecto de .NET Core, esta propiedad se establece en `true`. Si se establece en `false` y no se especifica ningún metadato `LogicalName`, `ManifestResourceName` o `DependentUpon` para el elemento `EmbeddedResource` del archivo de proyecto, el nombre del archivo de manifiesto del recurso se basa en el espacio de nombres raíz del proyecto y en la ruta de acceso relativa al archivo *.resx*. Para más información, consulte [Denominación de los archivos de manifiesto de recurso](../resources/manifest-file-names.md).
+
+```xml
+<PropertyGroup>
+  <EmbeddedResourceUseDependentUponConvention>true</EmbeddedResourceUseDependentUponConvention>
+</PropertyGroup>
+```
 
 ### <a name="langversion"></a>LangVersion
 
@@ -254,7 +270,7 @@ La propiedad `TieredCompilationQuickJitForLoops` configura si el compilador JIT 
 </PropertyGroup>
 ```
 
-## <a name="reference-properties"></a>Propiedades de referencia
+## <a name="reference-properties-and-items"></a>Referencia de propiedades y elementos
 
 - [AssetTargetFallback](#assettargetfallback)
 - [PackageReference](#packagereference)
@@ -276,7 +292,7 @@ Puede establecer la propiedad `AssetTargetFallback` en una o varias [versiones d
 
 ### <a name="packagereference"></a>PackageReference
 
-`PackageReference` define una referencia a un paquete NuGet. Por ejemplo, es posible que quiera hacer referencia a un único paquete en lugar de a un [metapaquete](../packages.md#metapackages).
+El elemento `PackageReference` define una referencia a un paquete NuGet. Por ejemplo, es posible que quiera hacer referencia a un único paquete en lugar de a un [metapaquete](../packages.md#metapackages).
 
 El atributo `Include` especifica el identificador del paquete. El atributo `Version` especifica la versión o el intervalo de versiones. Para obtener más información sobre cómo especificar una versión mínima, una máxima, un intervalo o una coincidencia exacta, vea [Intervalos de versiones](/nuget/concepts/package-versioning#version-ranges). También puede agregar los metadatos `IncludeAssets`, `ExcludeAssets` y `PrivateAssets` a una referencia de proyecto.
 
@@ -308,7 +324,7 @@ El fragmento del archivo de proyecto de este ejemplo hace referencia a un proyec
 
 El elemento `Reference` define una referencia a un archivo de ensamblado.
 
-El atributo `Include` especifica el nombre del archivo y el elemento secundario `HintPath` especifica la ruta de acceso al ensamblado.
+El atributo `Include` especifica el nombre del archivo y los metadatos `HintPath` especifican la ruta de acceso al ensamblado.
 
 ```xml
 <ItemGroup>

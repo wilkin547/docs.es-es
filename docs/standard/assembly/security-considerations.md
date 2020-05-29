@@ -1,5 +1,6 @@
 ---
 title: Consideraciones de seguridad sobre ensamblados
+description: Cuando se compila un ensamblado .NET, se pueden especificar los permisos que son necesarios para su ejecución. En este artículo se describen los ensamblados con nombre seguro y las herramientas de firma.
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], security
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - security [.NET Framework], assemblies
 - integrity with assemblies
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
-ms.openlocfilehash: 77c9f9131b556e0b8fa639cd723bf1ca8cd6602e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7f897241b121cf1bd52d02ee5f487aeafafc3cb0
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73972305"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378656"
 ---
 # <a name="assembly-security-considerations"></a>Consideraciones de seguridad sobre ensamblados
 Cuando se compila un ensamblado, se puede especificar el conjunto de permisos que son necesarios para la ejecución del mismo. La concesión de permisos específicos para un ensamblado se basa en la evidencia.  
@@ -47,7 +48,7 @@ Cuando se compila un ensamblado, se puede especificar el conjunto de permisos qu
  > [!WARNING]
  > Para garantizar la seguridad, no confíe únicamente en el uso de nombres seguros. Estos solo proporcionan una identidad única.
 
- Se puede firmar un ensamblado de dos formas diferentes y, a la vez, complementarias: con un nombre seguro o utilizando [SignTool.exe (Sign Tool)](../../framework/tools/signtool-exe.md). Al firmar un ensamblado con un nombre seguro, se agrega un cifrado mediante clave pública al archivo que contiene el manifiesto del ensamblado. La firma mediante nombres seguros ayuda a comprobar la unicidad del nombre, impide la simulación de nombres y proporciona a los llamadores alguna identidad cuando se resuelve una referencia.  
+ Se puede firmar un ensamblado de dos formas diferentes y, a la vez, complementarias: con un nombre seguro o utilizando [SignTool.exe (Herramienta de firma)](../../framework/tools/signtool-exe.md). Al firmar un ensamblado con un nombre seguro, se agrega un cifrado mediante clave pública al archivo que contiene el manifiesto del ensamblado. La firma mediante nombres seguros ayuda a comprobar la unicidad del nombre, impide la simulación de nombres y proporciona a los llamadores alguna identidad cuando se resuelve una referencia.  
   
  No hay ningún nivel de confianza asociado a un nombre seguro, lo que hace que [SignTool.exe (Sign Tool)](../../framework/tools/signtool-exe.md) adquiera un carácter importante. Las dos herramientas de firma requieren que una compañía de software demuestre su identidad a una autoridad de terceros y obtenga un certificado. Este certificado se incrusta en el archivo y el administrador puede utilizarlo para decidir si debe confiar en la autenticidad del código.  
   
@@ -64,4 +65,4 @@ Cuando se compila un ensamblado, se puede especificar el conjunto de permisos qu
 
 - [Ensamblados con nombre seguro](strong-named.md)
 - [Ensamblados de .NET](index.md)
-- [SignTool.exe (Sign Tool)](../../framework/tools/signtool-exe.md)
+- [SignTool.exe (Herramienta de firma)](../../framework/tools/signtool-exe.md)

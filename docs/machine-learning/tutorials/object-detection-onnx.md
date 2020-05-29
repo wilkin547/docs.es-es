@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: d9677c6c9da542123146fc9eef9c311ef30c174e
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 2bf44ec1657307161c13f88f7d1628b2c930fd05
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81608015"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83805522"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Tutorial: Detección de objetos con ONNX en ML.NET
 
@@ -34,7 +34,7 @@ En este tutorial aprenderá a:
 - [Paquete NuGet de Microsoft.ML](https://www.nuget.org/packages/Microsoft.ML/)
 - [Paquete NuGet de Microsoft.ML.ImageAnalytics](https://www.nuget.org/packages/Microsoft.ML.ImageAnalytics/)
 - [Paquete NuGet de Microsoft.ML.OnnxTransformer](https://www.nuget.org/packages/Microsoft.ML.OnnxTransformer/)
-- [Modelo previamente entrenado de Tiny YOLOv2](https://github.com/onnx/models/tree/master/vision/object_detection_segmentation/tiny_yolov2)
+- [Modelo previamente entrenado de Tiny YOLOv2](https://github.com/onnx/models/tree/master/vision/object_detection_segmentation/tiny-yolov2)
 - [Netron](https://github.com/lutzroeder/netron) (opcional)
 
 ## <a name="onnx-object-detection-sample-overview"></a>Información general del ejemplo de detección de objetos de ONNX
@@ -64,7 +64,7 @@ Hay diferentes tipos de redes neuronales, las más comunes son perceptrón multi
 
 ### <a name="understand-the-model"></a>Entender el modelo
 
-La detección de objetos es una tarea de procesamiento de imágenes. Por lo tanto, la mayoría de los modelos de aprendizaje profundo entrenados para solucionar este problema son CNN. El modelo que se usa en este tutorial es el Tiny YOLOv2, una versión más compacta del modelo YOLOv2 que se describe en el documento: ["YOLO9000: Better, Faster, Stronger" de Redmon y Fadhari](https://arxiv.org/pdf/1612.08242.pdf). Tiny YOLOv2 se entrena en el conjunto de datos Pascal VOC y se compone de 15 capas que pueden predecir 20 clases diferentes de objetos. Dado que Tiny YOLOv2 es una versión comprimida del modelo YOLOv2 original, se logra velocidad a cambio de precisión. Los diferentes niveles que componen el modelo se pueden visualizar mediante herramientas como Netron. Al inspeccionar el modelo, se produciría una asignación de las conexiones entre todas las capas que componen la red neuronal, donde cada capa contendría el nombre de la capa, junto con las dimensiones de la entrada y la salida correspondientes. Las estructuras de datos que se usan para describir las entradas y salidas del modelo se conocen como tensores. Los tensores se pueden considerar como contenedores que almacenan datos en N dimensiones. En el caso de Tiny YOLOv2, el nombre de la capa de entrada es `image` y espera un tensor de dimensiones `3 x 416 x 416`. El nombre de la capa de salida es `grid` y genera un tensor de salida de dimensiones `125 x 13 x 13`.
+La detección de objetos es una tarea de procesamiento de imágenes. Por lo tanto, la mayoría de los modelos de aprendizaje profundo entrenados para solucionar este problema son CNN. El modelo que se usa en este tutorial es el Tiny YOLOv2, una versión más compacta del modelo YOLOv2 que se describe en el documento: ["YOLO9000: Better, Faster, Stronger" de Redmon y Farhadi](https://arxiv.org/pdf/1612.08242.pdf). Tiny YOLOv2 se entrena en el conjunto de datos Pascal VOC y se compone de 15 capas que pueden predecir 20 clases diferentes de objetos. Dado que Tiny YOLOv2 es una versión comprimida del modelo YOLOv2 original, se logra velocidad a cambio de precisión. Los diferentes niveles que componen el modelo se pueden visualizar mediante herramientas como Netron. Al inspeccionar el modelo, se produciría una asignación de las conexiones entre todas las capas que componen la red neuronal, donde cada capa contendría el nombre de la capa, junto con las dimensiones de la entrada y la salida correspondientes. Las estructuras de datos que se usan para describir las entradas y salidas del modelo se conocen como tensores. Los tensores se pueden considerar como contenedores que almacenan datos en N dimensiones. En el caso de Tiny YOLOv2, el nombre de la capa de entrada es `image` y espera un tensor de dimensiones `3 x 416 x 416`. El nombre de la capa de salida es `grid` y genera un tensor de salida de dimensiones `125 x 13 x 13`.
 
 ![Capa de entrada dividida en capas ocultas y, luego, la capa de salida](./media/object-detection-onnx/netron-model-map-layers.png)
 

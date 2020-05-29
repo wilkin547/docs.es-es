@@ -1,5 +1,6 @@
 ---
 title: Detalles de serialización XML
+description: La serialización convierte un objeto en un formato que se pueda transportar. En este artículo se proporciona información general sobre la serialización XML y la clase XmlSerializer.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: d644e80cbf5ac17fca4df039d915c847a1936217
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 7534ad702039b37a85a24223576320aea8052e9e
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588452"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421272"
 ---
 # <a name="xml-serialization"></a>serialización XML
 
@@ -92,7 +93,7 @@ Para obtener más ejemplos de serialización, vea [Examples of XML Serialization
 
 ## <a name="items-that-can-be-serialized"></a>Elementos que se pueden serializar
 
-Los elementos siguientes se pueden serializar mediante la clase **XmLSerializer**:
+Los elementos siguientes se pueden serializar mediante la clase **XmlSerializer**:
 
 - Las propiedades de lectura y escritura públicas y campos de clases públicas.
 
@@ -185,5 +186,5 @@ Para obtener una lista completa de asignaciones de tipo, vea la propiedad **Data
 - [Serialización](index.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [Ejemplos de serialización XML](examples-of-xml-serialization.md)
-- [Cómo: serializar un objeto](how-to-serialize-an-object.md)
-- [Cómo: deserializar un objeto](how-to-deserialize-an-object.md)
+- [Cómo: Serialización de un objeto](how-to-serialize-an-object.md)
+- [Cómo: Deserialización de un objeto](how-to-deserialize-an-object.md)

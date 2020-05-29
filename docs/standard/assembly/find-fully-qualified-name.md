@@ -1,5 +1,6 @@
 ---
 title: Procedimiento para buscar el nombre completo de un ensamblado
+description: En este artículo se muestra cómo obtener el nombre completo de un ensamblado de .NET Framework o de .NET Core.
 ms.date: 08/20/2019
 helpviewer_keywords:
 - names [.NET Framework], fully qualified type names
@@ -10,12 +11,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 49ebaeabee7a346fb84f09e5a9e34590d1ea9811
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 346d50dc7f279ce46c9803ad60479d3111739c25
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74348196"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378943"
 ---
 # <a name="how-to-find-an-assemblys-fully-qualified-name"></a>Procedimiento para buscar el nombre completo de un ensamblado
 

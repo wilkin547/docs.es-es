@@ -3,19 +3,19 @@ title: Valores de configuración de los subprocesos
 description: Obtenga información sobre los valores del entorno de ejecución que configuran los subprocesos para las aplicaciones de .NET Core.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 68b8e93ca6ec3f708a7a627307655ada1955500a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1c7c16993a07ef95223481791153b75ab2f61533
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789849"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761933"
 ---
 # <a name="run-time-configuration-options-for-threading"></a>Opciones de configuración del entorno de ejecución para subprocesos
 
 ## <a name="cpu-groups"></a>Grupos de CPU
 
 - Configura si los subprocesos se distribuyen automáticamente entre los grupos de CPU.
-- Predeterminado: deshabilitado (`0`).
+- Si se omite esta configuración, los subprocesos no se distribuyen entre los grupos de CPU. Esto es equivalente a establecer el valor en `0`.
 
 | | Nombre de valor | Valores |
 | - | - | - |

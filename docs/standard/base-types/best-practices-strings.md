@@ -18,12 +18,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: e633b6c1d03a3d1cd70e277395da10f70f315f16
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 0fb7ec8d9de8fae7a0443984511e538d38d93c7a
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523974"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441011"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Procedimientos recomendados para el uso de cadenas en .NET
 
@@ -317,18 +317,20 @@ Para especificar explícitamente que se debe dar formato a una cadena mediante l
 
 - Cuando se usen los métodos <xref:System.String.Format%2A?displayProperty=nameWithType> y `ToString`, llame a una sobrecarga que tenga un parámetro `provider`, como <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> o <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType>, y pásela a la propiedad <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>, a una instancia <xref:System.Globalization.CultureInfo> que represente la referencia cultural que se quiera o a la propiedad <xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType>.
 
-- Para la concatenación de cadenas, no permita que el compilador realice ninguna de las conversiones implícitas. En su lugar, realice una conversión explícita mediante una llamada a una sobrecarga `ToString` que tenga un parámetro `provider`. Por ejemplo, el compilador utiliza implícitamente la referencia cultural actual cuando convierte un valor <xref:System.Double> en una cadena en el código de C# siguiente:
+- Para la concatenación de cadenas, no permita que el compilador realice ninguna de las conversiones implícitas. En su lugar, realice una conversión explícita mediante una llamada a una sobrecarga `ToString` que tenga un parámetro `provider`. Por ejemplo, el compilador utiliza implícitamente la referencia cultural actual cuando convierte un valor <xref:System.Double> en una cadena en el código siguiente:
 
-  [!code-csharp[Implicit String Conversion](~/samples/snippets/standard/base-types/string-practices/cs/tostring.cs#1)]
+  [!code-csharp[Implicit String Conversion](./snippets/best-practices-strings/csharp/tostring/Program.cs#1)]
+  [!code-vb[Implicit String Conversion](./snippets/best-practices-strings/vb/tostring/Program.vb#1)]
 
-  En su lugar, se puede especificar explícitamente la referencia cultural cuyas convenciones de formato se usan en la conversión mediante una llamada al método <xref:System.Double.ToString(System.IFormatProvider)?displayProperty=nameWithType>, tal como hace el código de C# siguiente:
+  En su lugar, se puede especificar explícitamente la referencia cultural cuyas convenciones de formato se usan en la conversión mediante una llamada al método <xref:System.Double.ToString(System.IFormatProvider)?displayProperty=nameWithType>, tal como hace el código siguiente:
 
-  [!code-csharp[Explicit String Conversion](~/samples/snippets/standard/base-types/string-practices/cs/tostring.cs#2)]
+  [!code-csharp[Explicit String Conversion](./snippets/best-practices-strings/csharp/tostring/Program.cs#2)]
+  [!code-vb[Implicit String Conversion](./snippets/best-practices-strings/vb/tostring/Program.vb#2)]
 
 - Para la interpolación de cadenas, en lugar de asignar una cadena interpolada a una instancia <xref:System.String>, asígnela a un elemento <xref:System.FormattableString>. Después, se puede llamar al método <xref:System.FormattableString.ToString?displayProperty=nameWithType> para generar una cadena de resultado que refleje las convenciones de la referencia cultural actual, o bien puede llamar al método <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> para generar una cadena de resultado que refleje las convenciones de la referencia cultural especificada. También se puede pasar la cadena que admite formato al método estático <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> con el fin de generar una cadena de resultado que refleje las convenciones de la referencia cultural invariable. En el ejemplo siguiente se muestra este enfoque. (La salida del ejemplo refleja una referencia cultural actual de en-US).
 
-  [!code-csharp[String interpolation](~/samples/snippets/standard/base-types/string-practices/cs/formattable.cs)]
-  [!code-vb[String interpolation](~/samples/snippets/standard/base-types/string-practices/vb/formattable.vb)]
+  [!code-csharp[String interpolation](./snippets/best-practices-strings/csharp/formattable/Program.cs)]
+  [!code-vb[String interpolation](./snippets/best-practices-strings/vb/formattable/Program.vb)]
 
 Puede conservar datos que no son de cadena como datos binarios o como datos con formato. Si decide guardarlos como datos con formato, debe llamar a una sobrecarga del método de formato que incluya un parámetro `provider` y pasarle la propiedad <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> . La referencia cultural de todos los idiomas proporciona un formato coherente para los datos con formato que es independiente de la referencia cultural y del equipo. En cambio, si se conservan datos a los que se aplica formato con referencias culturales distintas de la referencia cultural de todos los idiomas, se presentan varias limitaciones:
 

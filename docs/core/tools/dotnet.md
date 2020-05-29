@@ -2,12 +2,12 @@
 title: comando dotnet
 description: Aprenda sobre el comando dotnet (el controlador genérico para la CLI de .NET Core) y su uso.
 ms.date: 02/13/2020
-ms.openlocfilehash: 6a08297499d955db44e342dc82fed25b7b9b8171
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 88e92b3ff5e8f68b980015a817434dd2d67df93a
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739076"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378838"
 ---
 # <a name="dotnet-command"></a>comando dotnet
 
@@ -110,7 +110,7 @@ Las siguientes opciones son para usar `dotnet` con un comando. Por ejemplo: `dot
 
 ### <a name="runtime-options"></a>Definición de tiempo de ejecución
 
-Las siguientes opciones están disponibles cuando `dotnet` ejecuta una aplicación. Por ejemplo: `dotnet myapp.dll --fx-version 3.1.1`.
+Las siguientes opciones están disponibles cuando `dotnet` ejecuta una aplicación. Por ejemplo: `dotnet myapp.dll --roll-forward Major`.
 
 - **`--additionalprobingpath <PATH>`**
 
@@ -120,23 +120,13 @@ Las siguientes opciones están disponibles cuando `dotnet` ejecuta una aplicaci�
 
   Ruta de acceso a un archivo *.deps.json* adicional. Un archivo *deps.json* contiene una lista de dependencias, dependencias de compilación e información de versión que se usa para resolver conflictos de ensamblado. Para más información, vea [Runtime Configuration Files (Archivos de configuración en tiempo de ejecución)](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) en GitHub.
 
-- **`--fx-version <VERSION>`**
+- **`--depsfile <PATH_TO_DEPSFILE>`**
 
-  Versión del runtime de .NET Core que se va a usar para ejecutar la aplicación.
+  Ruta de acceso al archivo *deps.json*. Un archivo *deps.json* es un archivo de configuración que contiene información sobre las dependencias necesarias para ejecutar la aplicación. El SDK de .NET Core genera este archivo.
 
 - **`--runtimeconfig`**
 
   Ruta de acceso a un archivo *runtimeconfig.json*. Un archivo *runtimeconfig.json* es un archivo de configuración que contiene opciones de configuración en tiempo de ejecución. Para obtener más información, vea [Opciones de configuración en tiempo de ejecución de .NET Core](../run-time-config/index.md#runtimeconfigjson).
-
-- **`--roll-forward-on-no-candidate-fx <N>`** **Disponible en el SDK de .NET Core 2.x.**
-
-  Define el comportamiento cuando el marco de trabajo compartido necesario no está disponible. `N` puede ser:
-
-  - `0`: se deshabilita la puesta al día incluso de las versiones secundarias.
-  - `1`: puesta al día de la versión secundaria, pero no de la versión principal. Éste es el comportamiento predeterminado.
-  - `2`: puesta al día de las versiones principales y secundarias.
-
-   Para obtener más información, vea [Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward) (Puesta al día).
 
 - **`--roll-forward <SETTING>`** **Disponible a partir del SDK de .NET Core 3.0.**
 
@@ -149,9 +139,27 @@ Las siguientes opciones están disponibles cuando `dotnet` ejecuta una aplicaci�
   - `LatestMajor`: la aplicación se pone al día con la última versión principal y la última versión secundaria, aunque la versión principal solicitada esté presente. Se destina a escenarios de hospedaje de componentes.
   - `Disable`: la aplicación no se pone al día. Solo se enlaza a la versión especificada. No se recomienda esta directiva para uso general, ya que deshabilita la capacidad de puesta al día con las revisiones más recientes. Este valor solo se recomienda a efectos de pruebas.
 
-A excepción de `Disable`, todos los valores usarán la última versión de revisión disponible.
+  A excepción de `Disable`, todos los valores usarán la última versión de revisión disponible.
 
-El comportamiento de puesta al día también se puede configurar en una propiedad de archivo de proyecto, en una propiedad de archivo de configuración de runtime y en una variable de entorno. Para obtener más información, vea [Puesta al día del runtime de versiones principales](../whats-new/dotnet-core-3-0.md#major-version-runtime-roll-forward).
+  El comportamiento de puesta al día también se puede configurar en una propiedad de archivo de proyecto, en una propiedad de archivo de configuración de runtime y en una variable de entorno. Para obtener más información, vea [Puesta al día del runtime de versiones principales](../whats-new/dotnet-core-3-0.md#major-version-runtime-roll-forward).
+
+- **`--roll-forward-on-no-candidate-fx <N>`** **Disponible en el SDK de .NET Core 2.x.**
+
+  Define el comportamiento cuando el marco de trabajo compartido necesario no está disponible. `N` puede ser:
+
+  - `0`: se deshabilita la puesta al día incluso de las versiones secundarias.
+  - `1`: puesta al día de la versión secundaria, pero no de la versión principal. Éste es el comportamiento predeterminado.
+  - `2`: puesta al día de las versiones principales y secundarias.
+
+  Para obtener más información, vea [Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward) (Puesta al día).
+
+  A partir de .NET Core 3.0, esta opción se sustituye por `--roll-forward` y es la que debe usarse.
+
+- **`--fx-version <VERSION>`**
+
+  Versión del runtime de .NET Core que se va a usar para ejecutar la aplicación.
+
+  Esta opción reemplaza la versión de la primera referencia de marco en el archivo `.runtimeconfig.json` de la aplicación. Esto significa que solo funciona según lo esperado si solo hay una referencia de marco. Si la aplicación tiene más de una referencia de marco, el uso de esta opción puede hacer que se produzcan errores.
 
 ## <a name="dotnet-commands"></a>comandos de dotnet
 
@@ -274,13 +282,21 @@ dotnet myapp.dll
 
   Especifica si desde la ubicación global se resuelve .NET Core Runtime, el marco de trabajo compartido o el SDK. Si no se define, establece el valor predeterminado de 1 (`true` lógico). Establézcalo en 0 (`false` lógico) para no resolver desde la ubicación global y tener instalaciones de .NET Core aisladas. Para más información sobre las búsquedas de varios niveles, vea [Multi-level SharedFX Lookup](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md) (Búsqueda SharedFX de varios niveles).
 
-- `DOTNET_ROLL_FORWARD` **Disponible a partir del SDK de .NET Core 3.x.**
+- `DOTNET_ROLL_FORWARD` **Disponible a partir de .NET Core 3.x.**
 
   Determina el comportamiento de puesta al día. Para obtener más información, vea la opción `--roll-forward` más arriba en este mismo artículo.
 
-- `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` **Disponible en el SDK de .NET Core 2.x.**
+- `DOTNET_ROLL_FORWARD_TO_PRERELEASE` **Disponible a partir de .NET Core 3.x.**
+
+  Si se establece en `1` (habilitado), permite la puesta al día a una versión preliminar desde una versión de lanzamiento. De forma predeterminada (`0`: deshabilitado), cuando se solicita una versión de lanzamiento de .NET Core en tiempo de ejecución, la puesta al día solo tendrá en cuenta las versiones de lanzamiento instaladas.
+
+  Para obtener más información, vea [Roll forward](../whats-new/dotnet-core-3-0.md#major-version-runtime-roll-forward) (Puesta al día).
+
+- `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` **Disponible en .NET Core 2.x.**
 
   Deshabilita la puesta al día de versiones secundarias, si está establecido en `0`. Para obtener más información, vea [Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward) (Puesta al día).
+
+  Este valor se ha sustituido en .NET Core 3.0 por `DOTNET_ROLL_FORWARD`, y esta es la configuración que debe usarse.
 
 - `DOTNET_CLI_UI_LANGUAGE`
 
@@ -306,9 +322,25 @@ dotnet myapp.dll
 
   Lista de ensamblados de los que cargar y ejecutar enlaces de inicio.
 
+- `DOTNET_BUNDLE_EXTRACT_BASE_DIR` **Disponible a partir de .NET Core 3.x.**
+
+  Especifica un directorio en el que se extrae una aplicación de un solo archivo antes de ejecutarse.
+
+  Para más información, consulte [Archivos ejecutables de único archivo](../whats-new/dotnet-core-3-0.md#single-file-executables).
+
 - `COREHOST_TRACE`, `COREHOST_TRACEFILE`, `COREHOST_TRACE_VERBOSITY`
 
   Controla el seguimiento de diagnósticos de los componentes de hospedaje, como `dotnet.exe`, `hostfxr` y `hostpolicy`.
+
+  * `COREHOST_TRACE=[0/1]`: el valor predeterminado es `0` (el seguimiento está deshabilitado). Si se establece en `1`, se habilita el seguimiento de diagnósticos.
+  * `COREHOST_TRACEFILE=<file path>`: solo tiene efecto si el seguimiento se habilita a través de `COREHOST_TRACE=1`. Cuando se establece, la información de seguimiento se escribe en el archivo especificado; en caso contrario, la información de seguimiento se escribe en `stderr`. **Disponible a partir de .NET Core 3.x.**
+  * `COREHOST_TRACE_VERBOSITY=[1/2/3/4]`: el valor predeterminado es `4`. La configuración solo se usa cuando el seguimiento está habilitado a través de `COREHOST_TRACE=1`. **Disponible a partir de .NET Core 3.x.**
+    * `4`: se escribe toda la información de seguimiento.
+    * `3`: solo se escriben mensajes informativos, de advertencia y de error.
+    * `2`: solo se escriben mensajes de advertencia y de error.
+    * `1`: solo se escriben mensajes de error.
+
+  La forma habitual de obtener información de seguimiento detallada sobre el inicio de la aplicación es establecer `COREHOST_TRACE=1` y `COREHOST_TRACEFILE=host_trace.txt` y, luego, ejecutar la aplicación. Se creará un nuevo archivo `host_trace.txt` en el directorio actual con la información detallada.
 
 ## <a name="see-also"></a>Vea también
 

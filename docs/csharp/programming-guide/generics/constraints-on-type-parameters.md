@@ -6,12 +6,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 0035f7d8aa862b4bd1b09a6f122a89786a6e295b
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 376befe4c969ac653e234479c8946d7fd4242999
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738249"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442220"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Restricciones de tipos de parámetros (Guía de programación de C#)
 
@@ -113,7 +113,7 @@ A partir de C# 7.3, también puede especificar el tipo <xref:System.Enum?display
 
 [!code-csharp[using the enum constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#18)]
 
-Los métodos empleados usan la reflexión, lo que tiene consecuencias en el rendimiento. Puede llamar a este método para compilar una recopilación que se almacene en caché y se vuelva a usar, en lugar de repetir las llamadas que requieren reflexión.
+`Enum.GetValues` y `Enum.GetName` usan reflexión, lo que tiene consecuencias en el rendimiento. Puede llamar a `EnumNamedValues` para compilar una recopilación que se almacene en caché y se vuelva a usar, en lugar de repetir las llamadas que requieren reflexión.
 
 Podría usarla como se muestra en el ejemplo siguiente para crear una enumeración y compilar un diccionario con sus nombres y valores:
 

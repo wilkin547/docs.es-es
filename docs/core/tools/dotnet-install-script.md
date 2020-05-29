@@ -1,13 +1,13 @@
 ---
 title: Scripts de dotnet-install
 description: Obtenga información sobre los scripts de dotnet-install para instalar el SDK de .NET Core y el entorno de ejecución compartido.
-ms.date: 01/23/2020
-ms.openlocfilehash: 591413a17db577560bd0324995066c8ea7a35895
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.date: 04/30/2020
+ms.openlocfilehash: 9f5cef9cfcca1d8b344021efe803c063a7393f8e
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463673"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83802722"
 ---
 # <a name="dotnet-install-scripts-reference"></a>referencia de scripts de dotnet-install
 
@@ -31,7 +31,7 @@ dotnet-install.ps1 [-Architecture <ARCHITECTURE>] [-AzureFeed]
 dotnet-install.ps1 -Help
 ```
 
-Linux/macOs:
+Linux/macOS:
 
 ```bash
 dotnet-install.sh  [--architecture <ARCHITECTURE>] [--azure-feed]
@@ -62,6 +62,8 @@ De forma predeterminada, el script agrega la ubicación de instalación a $PATH 
 Antes de ejecutar el script, instale las [dependencias](../install/dependencies.md) necesarias.
 
 Puede instalar una versión específica mediante el argumento `-Version|--version`. La versión debe especificarse como una versión de tres partes (por ejemplo, `2.1.0`). Si no se proporciona, usa la versión `latest`.
+
+Los scripts de instalación no actualizan el Registro en Windows. Solo descargan los archivos binarios comprimidos y los copian en una carpeta. Si desea que se actualicen los valores de las claves del Registro, use los instaladores de .NET Core.
 
 ## <a name="options"></a>Opciones
 
@@ -98,7 +100,7 @@ Puede instalar una versión específica mediante el argumento `-Version|--versio
 
 - **`-InstallDir|--install-dir <DIRECTORY>`**
 
-  Especifica la ruta de instalación. Si no existe el directorio, se crea. El valor predeterminado es *%LocalAppData%\Microsoft\dotnet*. Los archivos binarios se colocan directamente en el directorio.
+  Especifica la ruta de instalación. Si no existe el directorio, se crea. El valor predeterminado es *%LocalAppData%\Microsoft\dotnet* en Windows y */usr/share/dotnet* en Linux/macOS. Los archivos binarios se colocan directamente en el directorio.
 
 - **`-JSonFile|--jsonfile <JSONFILE>`**
 

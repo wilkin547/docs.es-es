@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo usar la herramienta Analizador de 
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 8d019bef5fddac9f7c3d93e416cea061905c82ff
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 94dd6de8839b03bbdc33ae1ed03599853241d40b
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728446"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209371"
 ---
 # <a name="the-net-portability-analyzer"></a>Analizador de portabilidad de .NET
 
@@ -19,8 +19,8 @@ Cuando haya convertido el proyecto para que tenga como destino la nueva platafor
 
 ## <a name="common-targets"></a>Destinos comunes
 
-- [.NET Core](../../core/index.yml): tiene un diseño modular, emplea el modo en paralelo y tiene como destino escenarios multiplataforma. El modo en paralelo permite adoptar nuevas versiones de .NET Core sin que ello afecte a otras aplicaciones. Si su objetivo es portar su aplicación a .NET Core compatible con varias plataformas, éste es el destino recomendado.
-- .[NET Standard](../../standard/net-standard.md): Incluye las API de .NET Standard disponibles en todas las implementaciones de .NET. Si su objetivo es que la biblioteca se ejecute en todas las plataformas compatibles con .NET, éste es el destino recomendado.
+- [.NET Core](../../core/index.yml): tiene un diseño modular, admite la instalación en paralelo y está dirigido a escenarios multiplataforma. La instalación en paralelo permite adoptar nuevas versiones de .NET Core sin que ello afecte a otras aplicaciones. Si su objetivo es portar su aplicación a .NET Core para que sea compatible con varias plataformas, este es el destino recomendado.
+- .[NET Standard](../../standard/net-standard.md): Incluye las API de .NET Standard disponibles en todas las implementaciones de .NET. Si su objetivo es que la biblioteca se ejecute en todas las plataformas compatibles con .NET, este es el destino recomendado.
 - [ASP.NET Core](/aspnet/core): Un marco web moderno basado en .NET Core. Si su objetivo es portar su aplicación web a .NET Core para que sea compatible con varias plataformas, éste es el destino recomendado.
 - .NET Core + [extensiones de plataforma](../../core/porting/windows-compat-pack.md): Incluye las API de .NET Core además del paquete de compatibilidad de Windows, que proporciona muchas de las tecnologías disponibles de .NET Framework. Se trata de un destino recomendado para la portabilidad de la aplicación de .NET Framework a .NET Core en Windows.
 - .NET standard + [extensiones de la plataforma](../../core/porting/windows-compat-pack.md): Incluye las API de .NET Standard además del paquete de compatibilidad de Windows, que proporciona muchas de las tecnologías disponibles de .NET Framework. Se trata de un destino recomendado para la portabilidad de la biblioteca de .NET Framework a .NET Core en Windows.
@@ -67,7 +67,7 @@ La sección **Detalles** del informe enumera las API que faltan desde cualquiera
 - Miembro de destino: el método no está presente en una plataforma de destino
 - Nombre del ensamblado: el ensamblado de .NET Framework en el que se encuentra la API que falta.
 - Cada una de las plataformas de destino seleccionada es una columna, como ".NET Core": El valor de "No compatible" significa que la API no se admite en esta plataforma de destino.
-- Cambios recomendados: la API o tecnología recomendada a la que realizar el cambio. Actualmente, este campo está vacío o no está actualizado para muchas de las API. Debido a la gran cantidad de API, nos enfrentamos a un gran desafío para mantenerlas actualizadas. Estamos examinando soluciones alternativas para proporcionar información útil a los clientes.
+- Cambios recomendados: la API o tecnología recomendada a la que realizar el cambio. Actualmente, este campo está vacío o no está actualizado para muchas de las API. Debido al gran número de API, nos enfrentamos a un gran desafío para mantenerlas actualizadas. Estamos examinando soluciones alternativas para proporcionar información útil a los clientes.
 
 #### <a name="missing-assemblies"></a>Ensamblados que faltan
 

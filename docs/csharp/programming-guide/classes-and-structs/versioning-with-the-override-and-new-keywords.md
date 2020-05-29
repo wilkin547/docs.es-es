@@ -5,25 +5,25 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: 089d5d7c7a95e2de4629f53255d9d9790fd5508a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7bcc7e68810c97142cebca7595266a0e4a69ed51
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705397"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83207935"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Control de versiones con las palabras clave Override y New (Guía de programación de C#)
 El lenguaje C# está diseñado para que las versiones entre clases [base](../../language-reference/keywords/base.md) y derivadas de diferentes bibliotecas puedan evolucionar y mantener la compatibilidad con versiones anteriores. Esto significa, por ejemplo, que la introducción de un nuevo miembro en una [clase](../../language-reference/keywords/class.md) base con el mismo nombre que un miembro de una clase derivada es totalmente compatible con C# y no lleva a un comportamiento inesperado. Además, implica que una clase debe declarar explícitamente si un método está pensado para reemplazar un método heredado o si se trata de un nuevo método que oculta un método heredado de nombre similar.  
   
  En C#, las clases derivadas pueden contener métodos con el mismo nombre que los métodos de clase base.  
-  
-- El método de clase base debe definirse como [virtual](../../language-reference/keywords/virtual.md).  
-  
+
 - Si el método de la clase derivada no va precedido por las palabras clave [new](../../language-reference/keywords/new-modifier.md) u [override](../../language-reference/keywords/override.md), el compilador emite una advertencia y el método se comporta como si la palabra clave `new` estuviese presente.  
   
 - Si el método de la clase derivada va precedido de la palabra clave `new`, el método se define como independiente del método de la clase base.  
   
 - Si el método de la clase derivada va precedido de la palabra clave `override`, los objetos de la clase derivada llamarán a ese método y no al método de la clase base.  
+
+- Para aplicar la palabra clave `override` al método de la clase derivada, se debe definir el método de clase base como [virtual](../../language-reference/keywords/virtual.md).
   
 - El método de clase base puede llamarse desde dentro de la clase derivada mediante la palabra clave `base`.  
   
@@ -61,7 +61,7 @@ El lenguaje C# está diseñado para que las versiones entre clases [base](../../
   
  [!code-csharp[csProgGuideInheritance#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#31)]  
   
- Con la palabra clave `new` se indica al compilador que su definición oculta la definición contenida en la clase base. Este es el comportamiento predeterminado.  
+ Con la palabra clave `new` se indica al compilador que su definición oculta la definición contenida en la clase base. Éste es el comportamiento predeterminado.  
   
 ## <a name="override-and-method-selection"></a>Selección de método y reemplazo  
  Cuando se llama a un método en una clase, el compilador de C# selecciona el mejor método para llamar si hay más de uno compatible con la llamada, como cuando hay dos métodos con el mismo nombre y parámetros que son compatibles con el parámetro pasado. Los métodos siguientes serían compatibles:  
@@ -76,7 +76,7 @@ El lenguaje C# está diseñado para que las versiones entre clases [base](../../
   
  [!code-csharp[csProgGuideInheritance#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#34)]  
   
- Para obtener otros ejemplos de `new` y `override`, vea [Knowing When to Use Override and New Keywords](./knowing-when-to-use-override-and-new-keywords.md) (Saber cuándo usar las palabras clave override y new [Guía de programación de C#]).  
+ Para obtener otros ejemplos de `new` y `override`, vea [Saber cuándo utilizar las palabras clave Override y New (Guía de programación de C#)](./knowing-when-to-use-override-and-new-keywords.md).  
   
 ## <a name="see-also"></a>Vea también
 

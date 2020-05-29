@@ -1,21 +1,21 @@
 ---
 title: Valores de configuración de globalización
 description: Obtenga información sobre los valores del entorno de ejecución que configuran aspectos de globalización de una aplicación de .NET Core, por ejemplo, el procedimiento para analizar las fechas japonesas.
-ms.date: 11/27/2019
+ms.date: 05/18/2020
 ms.topic: reference
-ms.openlocfilehash: 7668c345181d7c08cfca9c5cb76b8addd76223ec
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 56228e9a6cb6dbab6a22bdc00d11212e1019776b
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506810"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761972"
 ---
 # <a name="run-time-configuration-options-for-globalization"></a>Opciones de configuración del entorno de ejecución para globalización
 
 ## <a name="invariant-mode"></a>Modo invariable
 
 - Determina si una aplicación de .NET Core se ejecuta en modo invariable de globalización sin tener acceso a los datos y el comportamiento concretos de la referencia cultural.
-- Predeterminado: ejecutar la aplicación con acceso a los datos culturales (`false`).
+- Si se omite esta configuración, la aplicación se ejecuta con acceso a los datos culturales. Esto es equivalente a establecer el valor en `false`.
 - Para obtener más información, vea [Modo invariable de globalización de .NET Core](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md).
 
 | | Nombre de valor | Valores |
@@ -53,7 +53,7 @@ Archivo del proyecto:
 ## <a name="era-year-ranges"></a>Rangos de años de la era
 
 - Determina si las comprobaciones de rango para los calendarios que admiten varias eras son relajadas o si las fechas que desbordan el intervalo de fechas de una era producen un elemento <xref:System.ArgumentOutOfRangeException>.
-- Predeterminado: las comprobaciones de intervalo son relajadas (`false`).
+- Si se omite este valor, las comprobaciones de intervalo son distendidas. Esto es equivalente a establecer el valor en `false`.
 - Para obtener más información, vea [Calendarios, eras e intervalos de fechas: comprobaciones de intervalos relajadas](../../standard/datetime/working-with-calendars.md#calendars-eras-and-date-ranges-relaxed-range-checks).
 
 | | Nombre de valor | Valores |
@@ -64,7 +64,7 @@ Archivo del proyecto:
 ## <a name="japanese-date-parsing"></a>Análisis de fechas japonesas
 
 - Determina si una cadena cuyo valor del año contiene "1" o "Gannen" se analiza correctamente o si solo se admite "1".
-- Predeterminado: analizar cadenas que contengan "1" o "Gannen" como año (`false`).
+- Si se omite este valor, las cadenas que contienen "1" o "Gannen" como año se analizan correctamente. Esto es equivalente a establecer el valor en `false`.
 - Para obtener más información, vea [Representación de fechas en calendarios con varias eras](../../standard/datetime/working-with-calendars.md#represent-dates-in-calendars-with-multiple-eras).
 
 | | Nombre de valor | Valores |
@@ -75,10 +75,21 @@ Archivo del proyecto:
 ## <a name="japanese-year-format"></a>Formato de año japonés
 
 - Determina si el primer año de una era de calendario japonés tiene formato "Gannen" o un número.
-- Predeterminado: dar formato al primer año como "Gannen" (`false`).
+- Si se omite esta configuración, el primer año tiene formato "Gannen". Esto es equivalente a establecer el valor en `false`.
 - Para obtener más información, vea [Representación de fechas en calendarios con varias eras](../../standard/datetime/working-with-calendars.md#represent-dates-in-calendars-with-multiple-eras).
 
 | | Nombre de valor | Valores |
 | - | - | - |
 | **runtimeconfig.json** | `Switch.System.Globalization.FormatJapaneseFirstYearAsANumber` | `false`: dar formato como "Gannen".<br/>`true`: dar formato como número. |
 | **Variable del entorno** | N/D | N/D |
+
+## <a name="nls"></a>NLS
+
+- Determina si .NET usa las API de globalización de compatibilidad con el idioma nacional (NLS) o componentes internacionales para Unicode (ICU) para aplicaciones de Windows. .NET 5.0 y versiones posteriores usan las API de globalización de ICU de forma predeterminada en la actualización de mayo de 2019 de Windows 10 o versiones posteriores.
+- Si se omite esta configuración, .NET usa las API de globalización de ICU forma predeterminada. Esto es equivalente a establecer el valor en `false`.
+- Para obtener más información, consulte [Las API de globalización usan bibliotecas ICU en Windows](../compatibility/3.1-5.0.md#globalization-apis-use-icu-libraries-on-windows).
+
+| | Nombre de valor | Valores | Inclusión |
+| - | - | - | - |
+| **runtimeconfig.json** | `System.Globalization.UseNls` | `false` -Uso de API de globalización de ICU<br/>`true` -Uso de API de globalización de NLS | .NET 5.0 |
+| **Variable del entorno** | `DOTNET_SYSTEM_GLOBALIZATION_USENLS` | `false` -Uso de API de globalización de ICU<br/>`true` -Uso de API de globalización de NLS | .NET 5.0 |

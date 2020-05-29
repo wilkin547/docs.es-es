@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: be5c26c81480dc2854b849dd7f2b1c46ee3e526a
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 422cb7b20e2644ab44f9573f101fb6b53ab1dd2f
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989173"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378822"
 ---
 # <a name="whats-new-in-net-core-30"></a>Novedades de .NET Core 3.0
 
@@ -233,6 +233,8 @@ Se pone al día con la última versión principal y la última versión secundar
 No se pone al día. Solo se enlaza a la versión especificada. No se recomienda esta directiva para uso general, ya que deshabilita la capacidad de puesta al día con las revisiones más recientes. Este valor solo se recomienda a efectos de pruebas.
 
 Además del valor **Disable**, todos los valores usarán la última versión de revisión disponible.
+
+De forma predeterminada, si la versión solicitada (como se especifica en `.runtimeconfig.json` para la aplicación) es una versión de lanzamiento, solo se tienen en cuenta las versiones de lanzamiento para la puesta al día. Se omiten las versiones preliminares. Si no hay ninguna versión de lanzamiento que coincida, se tienen en cuenta las versiones preliminares. Este comportamiento se puede cambiar estableciendo `DOTNET_ROLL_FORWARD_TO_PRERELEASE=1`, en cuyo caso siempre se tienen en cuenta todas las versiones.
 
 ### <a name="build-copies-dependencies"></a>Compilación de dependencias de copias
 

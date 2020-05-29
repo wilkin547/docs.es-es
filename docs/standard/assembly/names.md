@@ -1,16 +1,17 @@
 ---
 title: Nombres de ensamblado
+description: Conozca los nombres de ensamblados .NET y su efecto en el ámbito del ensamblado y el uso por una aplicación, y aprenda también sobre la propiedad FullName.
 ms.date: 08/19/2019
 helpviewer_keywords:
 - names [.NET Framework], assemblies
 - assemblies [.NET Framework], names
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
-ms.openlocfilehash: 7a1a4d2512ebb002a3153fe2d51f47157136744d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5a499f4f04c84de8d6542d7107d7a707b808e47f
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73733100"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379889"
 ---
 # <a name="assembly-names"></a>Nombres de ensamblado
 Un nombre de ensamblado se almacena en los metadatos y tiene un importante impacto en el ámbito del ensamblado y en su uso por parte de una aplicación. Un ensamblado con nombre seguro tiene un nombre completo que incluye nombre, referencia cultural, clave pública y número de versión. Se conoce como el nombre para mostrar y en los ensamblados cargados puede obtenerse mediante la propiedad <xref:System.Reflection.Assembly.FullName%2A>.

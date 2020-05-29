@@ -1,5 +1,6 @@
 ---
 title: Herramienta de definición de esquema XML y serialización XML
+description: La herramienta de definición de esquema XML genera archivos de clase de C# o Visual Basic para un esquema XSD y genera un esquema XML a partir de una biblioteca o un archivo ejecutable.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Xsd.exe
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - XML Schema Definition tool
 - serialization, XML Schema Definition tool
 ms.assetid: 3c03f855-f931-47ff-bbc6-50c0367a16e4
-ms.openlocfilehash: b51b9a0112893d9a7838155f4af051e7079c8cdd
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 258e66643dae64aec7280419911f5ac9193a2ada
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588390"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83380099"
 ---
 # <a name="the-xml-schema-definition-tool-and-xml-serialization"></a>Herramienta de definición de esquema XML y serialización XML
 
@@ -30,7 +31,7 @@ Para más información sobre cómo usar la herramienta, vea [Herramienta de defi
 - [Introducción a la serialización XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
 - [Herramienta de definición de esquema XML (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Cómo: serializar un objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [Cómo: deserializar un objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Cómo: Serialización de un objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [Cómo: Deserializar un objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
 - [Cómo: Usar la herramienta de definición de esquema XML para generar clases y documentos de esquema XML](../../../docs/standard/serialization/xml-schema-def-tool-gen.md)
 - [Compatibilidad con enlaces del esquema XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sh1e66zd(v=vs.100))

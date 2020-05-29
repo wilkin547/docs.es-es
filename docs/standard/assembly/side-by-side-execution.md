@@ -1,16 +1,17 @@
 ---
 title: Ensamblados y ejecución en paralelo
+description: Aprenda sobre la ejecución en paralelo, que es la capacidad de almacenar y ejecutar varias versiones de una aplicación o de un componente en el mismo equipo.
 ms.date: 08/20/2019
 helpviewer_keywords:
 - side-by-side execution [.NET Framework]
 - assemblies [.NET Framework], side-by-side execution
 ms.assetid: e42036ee-7590-47d1-b884-cc856e39bd5d
-ms.openlocfilehash: 234efba66d87b520b54d6d113afcc4bba0bfe06a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 74b5710c7e8ad60873fb83a3699ce3992ead6e07
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73138658"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378630"
 ---
 # <a name="assemblies-and-side-by-side-execution"></a>Ensamblados y ejecución en paralelo
 

@@ -1,5 +1,6 @@
 ---
 title: Contenedor al que se puede llamar en tiempo de ejecución
+description: CLR expone objetos COM mediante un contenedor RCW, que administra las llamadas entre un cliente .NET y un objeto COM.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM interop, COM wrappers
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - runtime callable wrappers
 - interoperation with unmanaged code, COM wrappers
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
-ms.openlocfilehash: 0b448379fba965060fdf3bf067e65374f40d1fc2
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 6868c79791d960dd1ae55ab09d4ac3b40ce52655
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156015"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420492"
 ---
 # <a name="runtime-callable-wrapper"></a>Contenedor al que se puede llamar en tiempo de ejecución
 Common Language Runtime expone objetos COM mediante un proxy denominado el contenedor RCW (Runtime Callable Wrapper). Aunque el contenedor RCW aparece como un objeto corriente para los clientes .NET, su función principal es calcular referencias de llamadas entre un cliente .NET y un objeto COM.  

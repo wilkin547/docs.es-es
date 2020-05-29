@@ -1,5 +1,6 @@
 ---
 title: Retraso de la firma de un ensamblado
+description: En este artículo se describe la firma diferida o parcial, que reserva espacio en el archivo PE para la firma de nombre seguro, pero aplaza la firma real.
 ms.date: 08/19/2019
 helpviewer_keywords:
 - deferring assembly signing
@@ -12,12 +13,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 113df1ad3fc3ac1e27ebfef572494c1f15a3dbb5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7b5c8c8463fdc573782fa457bf5671c72a7e25f7
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73733164"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378504"
 ---
 # <a name="delay-sign-an-assembly"></a>Retraso de la firma de un ensamblado
 

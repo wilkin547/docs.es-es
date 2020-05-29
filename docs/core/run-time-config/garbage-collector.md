@@ -3,12 +3,12 @@ title: Valores de configuración del recolector de elementos no utilizados
 description: Obtenga información sobre los valores del entorno de ejecución para configurar el modo en el que el recolector de elementos no utilizados administra la memoria de las aplicaciones de .NET Core.
 ms.date: 01/09/2020
 ms.topic: reference
-ms.openlocfilehash: ec575bdd17c8a7c290673b7085074bbba94cedef
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: d7e3d040cd634eeb020beff806c60f834cc02585
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102871"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761985"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>Opciones de configuración del entorno de ejecución para la recolección de elementos no utilizados
 
@@ -33,7 +33,7 @@ Use la configuración siguiente para seleccionar los tipos de la recolección de
 ### <a name="systemgcservercomplus_gcserver"></a>System.GC.Server/COMPlus_gcServer
 
 - Configura si la aplicación usa la recolección de elementos no utilizados de estación de trabajo o la de servidor.
-- Predeterminado: recolección de elementos no utilizados de estación de trabajo (`false`).
+- Predeterminado: recolección de elementos no utilizados de estación de trabajo. Esto es equivalente a establecer el valor en `false`.
 
 | | Nombre de valor | Valores | Versión introducida |
 | - | - | - | - |
@@ -71,7 +71,7 @@ Archivo del proyecto:
 ### <a name="systemgcconcurrentcomplus_gcconcurrent"></a>System.GC.Concurrent/COMPlus_gcConcurrent
 
 - Configura si está habilitada la recolección de elementos no utilizados en segundo plano (simultánea).
-- Predeterminado: habilitado (`true`).
+- Predeterminado: uso de GC en segundo plano. Esto es equivalente a establecer el valor en `true`.
 - Para más información, consulte [Recolección de elementos no utilizados en segundo plano](../../standard/garbage-collection/background-gc.md).
 
 | | Nombre de valor | Valores | Versión introducida |
@@ -200,7 +200,7 @@ Ejemplo:
   Cuando un equipo Windows de 64 bits tiene varios grupos de CPU, es decir, hay más de 64 procesadores, la habilitación de este elemento amplía la recolección de elementos no utilizados en todos los grupos de CPU. El recolector de elementos no utilizados usa todos los núcleos para crear y equilibrar montones.
 
 - Solo se aplica a la recolección de elementos no utilizados del servidor en sistemas operativos Windows de 64 bits.
-- Predeterminado: deshabilitado (`0`).
+- Predeterminado: GC no se extiende por los grupos de CPU. Esto es equivalente a establecer el valor en `0`.
 - Para obtener más información, vea el artículo del blog de Maoni Stephens sobre la [mejora de la configuración de la CPU para la GC en máquinas con > 64 CPU](https://devblogs.microsoft.com/dotnet/making-cpu-configuration-better-for-gc-on-machines-with-64-cpus/).
 
 | | Nombre de valor | Valores | Versión introducida |
@@ -216,7 +216,7 @@ Ejemplo:
 
 - Especifica si *establecer afinidad* entre subprocesos de recolección de elementos no utilizados con procesadores. El hecho de establecer afinidad entre un subproceso de GC significa que solo puede ejecutarse en su CPU concreta. Se crea un montón para cada subproceso de GC.
 - Solo se aplica a la recolección de elementos no utilizados del servidor.
-- Predeterminado: establecer afinidad entre subprocesos de recolección de elementos no utilizados con procesadores (`false`).
+- Predeterminado: establecer afinidad entre subprocesos de recolección de elementos no utilizados con procesadores. Esto es equivalente a establecer el valor en `false`.
 
 | | Nombre de valor | Valores | Versión introducida |
 | - | - | - | - |
@@ -299,7 +299,7 @@ Ejemplo:
 ### <a name="systemgcretainvmcomplus_gcretainvm"></a>System.GC.RetainVM/COMPlus_GCRetainVM
 
 - Configura si los segmentos que se deben eliminar se ponen en una lista en espera para usarlos en el futuro o se devuelven al sistema operativo (SO).
-- Predeterminado: devolver los segmentos al sistema operativo (`false`).
+- Predeterminado: devolver los segmentos al sistema operativo. Esto es equivalente a establecer el valor en `false`.
 
 | | Nombre de valor | Valores | Versión introducida |
 | - | - | - | - |
@@ -338,7 +338,7 @@ Archivo del proyecto:
 ### <a name="complus_gclargepages"></a>COMPlus_GCLargePages
 
 - Especifica si se deben usar páginas grandes cuando se establece un límite máximo de montones.
-- Predeterminado: deshabilitado (`0`).
+- Predeterminado: no utilizar páginas grandes cuando se establezca un límite rígido de montones. Esto es equivalente a establecer el valor en `0`.
 - Se trata de un valor de configuración experimental.
 
 | | Nombre de valor | Valores | Versión introducida |
@@ -351,7 +351,7 @@ Archivo del proyecto:
 ### <a name="complus_gcallowverylargeobjects"></a>COMPlus_gcAllowVeryLargeObjects
 
 - Configura la compatibilidad del recolector de elementos no utilizados en plataformas de 64 bits para matrices de más de 2 gigabytes (GB) de tamaño total.
-- Predeterminado: habilitado (`1`).
+- Predeterminado: GC admite matrices de más de 2 GB. Esto es equivalente a establecer el valor en `1`.
 - Esta opción puede quedar obsoleta en una versión futura de .NET.
 
 | | Nombre de valor | Valores | Versión introducida |

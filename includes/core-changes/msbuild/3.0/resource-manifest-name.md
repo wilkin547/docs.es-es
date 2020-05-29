@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 16ee73bfc0ab33b04ea3e2fa6d0eec521a9b8634
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f24a29a00a1bff34a452c43716d76bf72ef277b5
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78967979"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83206228"
 ---
-### <a name="resource-manifest-file-names"></a>Nombres de archivo de manifiesto del recurso
+### <a name="resource-manifest-file-name-change"></a>Cambio de nombre de archivo de manifiesto del recurso
 
-A partir de .NET Core 3.0, ha cambiado el nombre del archivo de manifiesto del recurso generado.
+A partir de .NET Core 3.0, en el caso predeterminado, MSBuild genera un nombre de archivo de manifiesto diferente para los archivos de recursos.
 
 #### <a name="version-introduced"></a>Versión introducida
 
@@ -16,70 +16,28 @@ A partir de .NET Core 3.0, ha cambiado el nombre del archivo de manifiesto del
 
 #### <a name="change-description"></a>Descripción del cambio
 
-Antes de .NET Core 3.0, cuando se establecían los metadatos [DependentUpon](/visualstudio/msbuild/common-msbuild-project-items#compile) de un archivo de recursos ( *.resx*) en el archivo del proyecto de MSBuild, el nombre generado del manifiesto era *Namespace.ClassName.Resources*. Si no se establecía [DependentUpon](/visualstudio/msbuild/common-msbuild-project-items#compile), el nombre generado del manifiesto era *Namespace.Classname.FolderPathRelativeToRoot.Culture.resources*.
+Antes de .NET Core 3.0, si no se especificaban los metadatos `LogicalName`, `ManifestResourceName` o `DependentUpon` para un elemento de `EmbeddedResource` del archivo del proyecto, MSBuild generaba un nombre de archivo de manifiesto con el patrón `<RootNamespace>.<ResourceFilePathFromProjectRoot>.resources`. Si `RootNamespace` no está definido en el archivo del proyecto, se toma como valor predeterminado el nombre del proyecto. Por ejemplo, el nombre de manifiesto generado para un archivo de recursos denominado *Form1.resx* en el directorio raíz del proyecto era *suproject.Form1.Resources*.
 
-A partir de .NET Core 3.0, si un archivo *.resx* está en la misma ubicación que un archivo de origen que tiene el mismo nombre (por ejemplo, en las aplicaciones de Windows Forms), el nombre de manifiesto del recurso se genera a partir del nombre completo del primer tipo del archivo de origen. Por ejemplo, si *Type.cs* está en la misma ubicación que *Type.resx*, el nombre generado del manifiesto es *Namespace.Classname.resources*. Con todo, si modifica cualquiera de los atributos de la propiedad `EmbeddedResource` del archivo *.resx*, el nombre de archivo de manifiesto generado puede ser diferente:
+A partir de .NET Core 3.0, si un archivo de recursos está ubicado conjuntamente con un archivo de código fuente del mismo nombre (por ejemplo, *Form1.resx* y *Form1.cs*), MSBuild usa la información de tipo del archivo de código fuente para generar el nombre del archivo de manifiesto con el patrón `<Namespace>.<ClassName>.resources`. El espacio de nombres y el nombre de clase se extraen del primer tipo del archivo de código fuente ubicado conjuntamente. Por ejemplo, el nombre de manifiesto generado para un archivo de recursos denominado *Form1.resx* que se ubica conjuntamente con un archivo de código fuente denominado *Form1.cs* es *myNameSpace.Form1.Resources*. Lo más importante que hay que tener en cuenta es que la primera parte del nombre de archivo es diferente en versiones anteriores de .NET Core (*myNameSpace* en lugar de *MyProject*).
 
-- Si se establece el atributo `LogicalName` en la propiedad `EmbeddedResource`, ese valor se usa como nombre de archivo de manifiesto del recurso.
+> [!NOTE]
+> Si tiene los metadatos `LogicalName`, `ManifestResourceName` o `DependentUpon` especificados en un elemento `EmbeddedResource` del archivo del proyecto, este cambio no afecta a ese archivo de recursos.
 
-  Ejemplos:
-
-  ```xml
-  <EmbeddedResource Include="X.resx" LogicalName="SomeName.resources" />
-  -or-
-  <EmbeddedResource Include="X.fr-FR.resx" LogicalName="SomeName.resources" />
-  ```
-
-  **Nombre de archivo de manifiesto del recurso generado**: *SomeName.resources* (independientemente del nombre del archivo *.resx*, de la referencia cultural o de cualquier otro metadato).
-
-- Si no se establece `LogicalName`, pero el atributo `ManifestResourceName` se establece en la propiedad `EmbeddedResource`, se usa su valor, combinado con la extensión de archivo *.resources*, como nombre de archivo de manifiesto del recurso.
-
-  Ejemplos:
-
-  ```xml
-  <EmbeddedResource Include="X.resx" ManifestResourceName="SomeName" />
-  -or-
-  <EmbeddedResource Include="X.fr-FR.resx" ManifestResourceName="SomeName.fr-FR" />
-  ```
-
-  **Nombre de archivo de manifiesto del recurso generado**: *SomeName.resources* o *SomeName.fr-FR.resources*.
-
-- Si no se aplican las reglas anteriores y el atributo `DependentUpon` del elemento `EmbeddedResource` se establece en un archivo de origen, el nombre del tipo de la primera clase del archivo de origen se usa en el nombre de archivo de manifiesto del recurso. Más concretamente, el nombre de archivo generado es *Namespace.Classname\[.Culture].resources*.
-
-  Ejemplos:
-
-  ```xml
-  <EmbeddedResource Include="X.resx" DependentUpon="MyTypes.cs">
-  -or-
-  <EmbeddedResource Include="X.fr-FR.resx" DependentUpon="MyTypes.cs">
-  ```
-
-  **Nombre de archivo de manifiesto del recurso generado**: *Namespace.Classname.resources* o *Namespace.Classname.fr-FR.resources* (donde `Namespace.Classname` es el nombre de la primera clase de *MyTypes.cs*).
-
-- Si no se aplican las reglas anteriores, `EmbeddedResourceUseDependentUponConvention` es `true` (el valor predeterminado de .NET Core) y hay un archivo de origen en la misma ubicación que un archivo *.resx* que tiene el mismo nombre de archivo base, el archivo *.resx* se hace dependiente del archivo de origen correspondiente y el nombre generado es el mismo que en la regla anterior. Esta es la regla de "configuración predeterminada" de los proyectos de .NET Core.
-  
-  Ejemplos:
-  
-  Los archivos *MyTypes.cs* y *MyTypes.resx* o *MyTypes.fr-FR.resx* existen en la misma carpeta.
-  
-  **Nombre de archivo de manifiesto del recurso generado**: *Namespace.Classname.resources* o *Namespace.Classname.fr-FR.resources* (donde `Namespace.Classname` es el nombre de la primera clase de *MyTypes.cs*).
-
-- Si no se aplica ninguna de las reglas anteriores, el nombre de archivo de manifiesto del recurso generado es *RootNamespace.RelativePathWithDotsForSlashes.\[Culture.]resources*. La ruta de acceso relativa es el valor del atributo `Link` del elemento `EmbeddedResource` si se ha establecido. En caso contrario, la ruta de acceso relativa es el valor del atributo `Identity` del elemento `EmbeddedResource`. En Visual Studio, esta es la ruta de acceso de la raíz del proyecto al archivo en el Explorador de soluciones.
+Este cambio importante se presentó con la incorporación de la propiedad `EmbeddedResourceUseDependentUponConvention` a los proyectos de .NET Core. De forma predeterminada, los archivos de recursos no se enumeran explícitamente en un archivo de proyecto de .NET Core, por lo que no tienen metadatos `DependentUpon` para especificar cómo nombrar el archivo *.resources* generado. Cuando `EmbeddedResourceUseDependentUponConvention` se establece en `true`, que es el valor predeterminado, MSBuild busca un archivo de código fuente ubicado conjuntamente y extrae un espacio de nombres y un nombre de clase de ese archivo. Si establece `EmbeddedResourceUseDependentUponConvention` en `false`, MSBuild genera el nombre del manifiesto según el comportamiento anterior, que combina `RootNamespace` y la ruta de acceso relativa del archivo.
 
 #### <a name="recommended-action"></a>Acción recomendada
 
-Si no le satisfacen los nombres de manifiesto generados, puede:
+En la mayoría de los casos, no se requiere ninguna acción por parte del desarrollador y la aplicación seguirá funcionando. Sin embargo, si este cambio invalida la aplicación, puede:
 
-- Modificar los metadatos del archivo de recursos según una de las reglas de nomenclatura descritas anteriormente.
+- Cambiar el código para que espere el nuevo nombre de manifiesto.
 
-- Establecer `EmbeddedResourceUseDependentUponConvention` en `false` en el archivo del proyecto para rechazar la nueva convención por completo:
+- Rechazar la nueva convención de nomenclatura mediante el establecimiento de `EmbeddedResourceUseDependentUponConvention` en `false` en el archivo del proyecto.
 
-   ```xml
-   <EmbeddedResourceUseDependentUponConvention>false</EmbeddedResourceUseDependentUponConvention>
-   ```
-
-   > [!NOTE]
-   > Si los atributos `LogicalName` o `ManifestResourceName` están presentes, se seguirán usando sus valores en el nombre del archivo generado.
+  ```xml
+  <PropertyGroup>
+    <EmbeddedResourceUseDependentUponConvention>false</EmbeddedResourceUseDependentUponConvention>
+  </PropertyGroup>
+  ```
 
 #### <a name="category"></a>Categoría
 

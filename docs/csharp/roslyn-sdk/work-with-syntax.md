@@ -3,29 +3,29 @@ title: Usar el modelo de sintaxis del SDK de .NET Compiler Platform
 description: En este tema se proporciona una descripción de los tipos que se usan para entender y manipular nodos de sintaxis.
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: 87b79c3af4958299fcd966dcc4b04868f88675c7
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: fdb13095c2b91e54d58988a51a51b05652e57ea6
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82975919"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83208400"
 ---
 # <a name="work-with-syntax"></a>Trabajar con sintaxis
 
-El **árbol de sintaxis** es una estructura de datos fundamental expuesta por las API del compilador. Estos árboles representan la estructura léxica y sintáctica del código fuente. Tienen dos importantes finalidades:
+El *árbol de sintaxis* es una estructura de datos fundamental expuesta por las API del compilador. Estos árboles representan la estructura léxica y sintáctica del código fuente. Tienen dos importantes finalidades:
 
-1. Permitir herramientas, como un IDE, complementos, herramientas de análisis de código y refactorizaciones, para ver y procesar la estructura sintáctica del código fuente del proyecto de un usuario.
-2. Habilitar herramientas, como refactorizaciones y un IDE, para crear, modificar y reorganizar el código fuente de forma natural sin tener que usar ediciones de texto directas. Al crear y manipular árboles, las herramientas pueden crear y reorganizar fácilmente el código fuente.
+- Permitir herramientas, como un IDE, complementos, herramientas de análisis de código y refactorizaciones, y ver y procesar la estructura sintáctica del código fuente del proyecto de un usuario.
+- Habilitar herramientas, como refactorizaciones y un IDE, para crear, modificar y reorganizar el código fuente de forma natural sin tener que usar ediciones de texto directas. Al crear y manipular árboles, las herramientas pueden crear y reorganizar fácilmente el código fuente.
 
 ## <a name="syntax-trees"></a>Árboles de sintaxis
 
 Los árboles de sintaxis son la estructura principal usada para la compilación, el análisis de código, los enlaces, la refactorización, las características de IDE y la generación de código. Ninguna parte del código fuente se entiende sin que primero se haya identificado y clasificado en alguno de los elementos de lenguaje estructural conocidos.
 
-Los árboles de sintaxis tienen tres atributos clave. El primer atributo es que los árboles de sintaxis contienen toda la información de origen con plena fidelidad. Esto significa que el árbol de sintaxis contiene cada fragmento de información del texto de origen, cada construcción gramatical, cada token léxico y todo lo demás, incluidos los espacios en blanco, los comentarios y las directivas de preprocesador. Por ejemplo, cada literal mencionado en el origen se representa exactamente como se ha escrito. Los árboles de sintaxis también representan errores del código fuente cuando el programa está incompleto o tiene un formato incorrecto mediante la representación de tokens omitidos o que faltan en el árbol de sintaxis.
+Los árboles de sintaxis tienen tres atributos clave. El primer atributo es que los árboles de sintaxis contienen toda la información de origen con plena fidelidad. Esto significa que el árbol de sintaxis contiene cada fragmento de información del texto de origen, cada construcción gramatical, cada token léxico y todo lo demás, incluidos los espacios en blanco, los comentarios y las directivas de preprocesador. Por ejemplo, cada literal mencionado en el origen se representa exactamente como se ha escrito. Los árboles de sintaxis también capturan los errores del código fuente cuando el programa está incompleto o tiene un formato incorrecto mediante la representación de los tokens omitidos o que faltan.
 
-Esto habilita el segundo atributo de los árboles de sintaxis. Un árbol de sintaxis obtenido del analizador puede generar el texto exacto a partir del que se ha analizado. Es posible obtener la representación de texto del subárbol cuya raíz está en ese nodo desde cualquier nodo de sintaxis. Esto significa que los árboles de sintaxis se pueden usar como una manera de crear y editar texto de origen. Al crear un árbol, implícitamente se ha creado el texto equivalente, mientras que al editar un árbol de sintaxis o crear uno nuevo a partir de los cambios en uno existente, se ha editado realmente el texto.
+El segundo atributo de los árboles de sintaxis es que pueden generar el texto exacto desde el que se analizaron. Es posible obtener la representación de texto del subárbol cuya raíz está en ese nodo desde cualquier nodo de sintaxis. Esta posibilidad significa que los árboles de sintaxis se pueden usar como una manera de crear y editar texto de origen. Al crear un árbol, ha creado de manera implícita el texto equivalente, mientras que al editar un árbol de sintaxis o crear uno a partir de los cambios en uno existente, ha editado realmente el texto.
 
-El tercer atributo de los árboles de sintaxis es que son inmutables y seguros para subprocesos.  Esto significa que una vez obtenido un árbol, es una instantánea del estado actual del código y nunca cambia. Esto permite que varios usuarios interactúen con el mismo árbol de sintaxis a la vez en distintos subprocesos sin que se produzca ningún bloqueo ni duplicación. Dado que los árboles son inmutables y no permiten ninguna modificación directa, los métodos de fábrica ayudan a crear y modificar los árboles de sintaxis mediante la creación de instantáneas adicionales del árbol. Los árboles son eficaces en su forma de volver a usar nodos subyacentes, así que es posible volver a crear una nueva versión rápidamente y con poca memoria adicional.
+El tercer atributo de los árboles de sintaxis es que son inmutables y seguros para subprocesos. Una vez obtenido un árbol, es una instantánea del estado actual del código y nunca cambia. Esto permite que varios usuarios interactúen con el mismo árbol de sintaxis a la vez en distintos subprocesos sin que se produzca ningún bloqueo ni duplicación. Dado que los árboles son inmutables y no permiten ninguna modificación directa, los métodos de fábrica ayudan a crear y modificar los árboles de sintaxis mediante la creación de instantáneas adicionales del árbol. Los árboles son eficaces en su forma de volver a usar nodos subyacentes, así que es posible volver a crear una nueva versión rápidamente y con poca memoria adicional.
 
 Un árbol de sintaxis es literalmente una estructura de datos de árbol donde los elementos estructurales no terminales son primarios con respecto a otros elementos. Cada árbol de sintaxis se compone de nodos, tokens y curiosidades.
 
@@ -95,6 +95,6 @@ Por ejemplo, una sola clase <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExp
 
 Aunque el texto de origen contenga errores de sintaxis, se expone un árbol de sintaxis completo con recorrido de ida y vuelta al origen. Si el analizador detecta código que no se ajusta a la sintaxis definida del lenguaje, usa una de estas dos técnicas para crear un árbol de sintaxis.
 
-En primer lugar, si el analizador espera un determinado tipo de token pero no lo encuentra, puede insertar un token que falta en el árbol de sintaxis en la ubicación esperada del token. Un token que falta representa el token real esperado, aunque tiene un intervalo vacío y su propiedad <xref:Microsoft.CodeAnalysis.SyntaxNode.IsMissing?displayProperty=nameWithType> devuelve `true`.
+- Si el analizador espera un determinado tipo de token, pero no lo encuentra, puede insertar un token que falta en el árbol de sintaxis en la ubicación esperada del token. Un token que falta representa el token real esperado, aunque tiene un intervalo vacío y su propiedad <xref:Microsoft.CodeAnalysis.SyntaxNode.IsMissing?displayProperty=nameWithType> devuelve `true`.
 
-En segundo lugar, el analizador puede omitir tokens hasta encontrar uno en el que pueda seguir analizando. En este caso, los tokens omitidos se adjuntan como un nodo de curiosidades con el tipo <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SkippedTokensTrivia>.
+- El analizador puede omitir tokens hasta encontrar uno en el que pueda seguir analizando. En este caso, los tokens omitidos se adjuntan como un nodo de curiosidades con el tipo <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SkippedTokensTrivia>.

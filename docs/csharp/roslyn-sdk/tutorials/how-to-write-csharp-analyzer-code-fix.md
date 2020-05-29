@@ -3,12 +3,12 @@ title: 'Tutorial: Crear el primer analizador y la corrección de código'
 description: En este tutorial se proporcionan instrucciones detalladas para compilar un analizador y la corrección del código con el SDK del compilador de .NET (API de Roslyn).
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: d6c3ddff288bf114e1c257ae77ebf3a419913990
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 23ebf4befc75e08592890d85f2dda51251f59cd6
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895451"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396282"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Tutorial: Crear el primer analizador y la corrección de código
 
@@ -235,7 +235,7 @@ Después aplique formato a la nueva declaración para que coincida con las regla
 
 [!code-csharp[Format the new declaration](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#FormatLocal  "Format the new declaration")]
 
-Se requiere un nuevo espacio de nombres para este código. Agregue la siguiente instrucción `using` al principio del archivo:
+Se requiere un nuevo espacio de nombres para este código. Agregue la siguiente directiva `using` al principio del archivo:
 
 ```csharp
 using Microsoft.CodeAnalysis.Formatting;
@@ -497,7 +497,7 @@ Parece mucho código. Pero no lo es. Reemplace la línea que declara e inicializ
 
 [!code-csharp[Replace Var designations](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#ReplaceVar "Replace a var designation with the explicit type")]
 
-Deberá agregar una instrucción `using` para usar el tipo <xref:Microsoft.CodeAnalysis.Simplification.Simplifier>:
+Deberá agregar una directiva `using` para usar el tipo <xref:Microsoft.CodeAnalysis.Simplification.Simplifier>:
 
 ```csharp
 using Microsoft.CodeAnalysis.Simplification;

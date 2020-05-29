@@ -1,17 +1,18 @@
 ---
 title: <xmlSerializer> (Elemento)
+description: El elemento <xmlSerializer> especifica si se realiza una comprobación adicional del progreso de XmlSerializer.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <xmlSerializer> element
 - XML serialization, configuration
 - xmlSerializer element
 ms.assetid: d129d10c-3eb7-45d9-8098-5fa853825e47
-ms.openlocfilehash: b83ecda30bba8af1f3175eb6ad08593b07a80e6c
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 68037959893ec307a896ea86d21e40a9d7aa824c
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249544"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83380033"
 ---
 # <a name="xmlserializer-element"></a>\<xmlSerializer> (Elemento)
 Especifica si se hace una comprobación adicional de progreso de <xref:System.Xml.Serialization.XmlSerializer>.  

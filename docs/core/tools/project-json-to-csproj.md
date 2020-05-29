@@ -3,12 +3,12 @@ title: Comparación entre project.json y csproj
 description: Vea una asignación entre los elementos project.json y csproj.
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: feaa7e9cde7e1aa4dfe94d699b14a018fc728f27
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: a997b48f645ed58d15610a68aee7c67411f9763f
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794629"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205829"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Una asignación entre propiedades project.json y csproj
 
@@ -38,7 +38,7 @@ El nuevo formato, \*.csproj, está basado en XML. En el ejemplo siguiente se mue
 }
 ```
 
-Ya no se admite. En csproj, viene determinado por el nombre de archivo del proyecto, que normalmente coincide con el nombre del directorio. Por ejemplo, `MyProjectName.csproj`.
+Ya no se admite. En csproj, viene determinado por el nombre de archivo del proyecto, que normalmente coincide con el nombre del directorio. Por ejemplo: `MyProjectName.csproj`.
 
 De forma predeterminada, el nombre de archivo del proyecto también especifica el valor de las propiedades `<AssemblyName>` y `<PackageId>`.
 
@@ -179,7 +179,7 @@ Use la propiedad `TargetFrameworks` para definir la lista de los marcos de traba
 </PropertyGroup>
 ```
 
-Tenga en cuenta que el valor `<RuntimeFrameworkVersion>` del proyecto migrado viene determinado por la versión del SDK que ha instalado.
+El valor `<RuntimeFrameworkVersion>` del proyecto migrado viene determinado por la versión del SDK que ha instalado.
 
 ### <a name="top-level-dependencies"></a>Dependencias de nivel superior
 
@@ -485,8 +485,7 @@ Consulte también [Archivos](#files).
 </PropertyGroup>
 ```
 
-No hay ningún equivalente del elemento `owners` en MSBuild.
-Para `summary`, puede usar la propiedad `<Description>` de MSBuild, aunque el valor de `summary` no se migra automáticamente a esa propiedad, ya que esta se asigna al elemento [`description`](#other-common-root-level-options).
+No hay ningún equivalente del elemento `owners` en MSBuild. En `summary`, puede usar la propiedad `<Description>` de MSBuild. El valor de `summary` no se migra automáticamente a esa propiedad, ya que está asignada al elemento [`description`](#other-common-root-level-options).
 
 ## <a name="scripts"></a>scripts
 
@@ -499,7 +498,7 @@ Para `summary`, puede usar la propiedad `<Description>` de MSBuild, aunque el va
 }
 ```
 
-Su equivalente en MSBuild es [target](/visualstudio/msbuild/msbuild-targets):
+Sus equivalentes en MSBuild son [destinos](/visualstudio/msbuild/msbuild-targets):
 
 ```xml
 <Target Name="MyPreCompileTarget" BeforeTargets="Build">
@@ -528,7 +527,7 @@ Su equivalente en MSBuild es [target](/visualstudio/msbuild/msbuild-targets):
 }
 ```
 
-Todos los valores de configuración de este grupo, excepto la propiedad “System.GC.Server”, se colocan en un archivo denominado *runtimeconfig.template.json* en la carpeta del proyecto, con opciones elevadas al objeto raíz durante el proceso de migración:
+Todos los valores de configuración de este grupo, excepto la propiedad `System.GC.Server`, se colocan en un archivo denominado *runtimeconfig.template.json* en la carpeta del proyecto, con opciones elevadas al objeto raíz durante el proceso de migración:
 
 ```json
 {
@@ -541,7 +540,7 @@ Todos los valores de configuración de este grupo, excepto la propiedad “Syste
 }
 ```
 
-Se migra la propiedad “System.GC.Server” al archivo csproj:
+La propiedad `System.GC.Server` se migra en el archivo csproj:
 
 ```xml
 <PropertyGroup>
@@ -569,7 +568,7 @@ En cambio, puede establecer todos esos valores en csproj, así como en propiedad
 }
 ```
 
-No se admite en csproj. En su lugar, debe incluir archivos de contenido en el archivo *.nuspec*.
+No se admite en csproj. En su lugar, cree archivos de contenido de inclusión en el archivo *.nuspec*.
 Para obtener más información, consulte [Including content files](/nuget/schema/nuspec#including-content-files) (Incluir archivos de contenido).
 
 ## <a name="files"></a>archivos
@@ -621,8 +620,7 @@ En MSBuild, esto se hace mediante [elementos](/visualstudio/msbuild/common-msbui
 ```
 
 > [!NOTE]
-> El SDK de .NET Core agrega automáticamente muchos de los [patrones globales](https://en.wikipedia.org/wiki/Glob_(programming)) predeterminados.
-> Para obtener más información, consulte [Default Compile Item Values](https://aka.ms/sdkimplicititems) (Valores de elementos de compilación predeterminados).
+> El SDK de .NET Core agrega automáticamente muchos de los [patrones globales](https://en.wikipedia.org/wiki/Glob_(programming)) predeterminados. Para más información, consulte [Inclusiones de compilación predeterminadas](../project-sdk/overview.md#default-compilation-includes).
 
 Todos los elementos `ItemGroup` de MSBuild admiten `Include`, `Exclude` y `Remove`.
 

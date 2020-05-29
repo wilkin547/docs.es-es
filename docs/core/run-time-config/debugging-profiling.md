@@ -3,19 +3,19 @@ title: Depuración de la configuración de la generación de perfiles
 description: Obtenga información sobre los valores del entorno de ejecución que configuran la depuración y la generación de perfiles para las aplicaciones de .NET Core.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: c57cfa7233f48def890ded3c9d589b7f268147df
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5efd0f776da4b7ce6ff7f3bdfda24feec6e00f79
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74998862"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761998"
 ---
 # <a name="run-time-configuration-options-for-debugging-and-profiling"></a>Opciones de configuración del ejecución para la depuración y la generación de perfiles
 
 ## <a name="enable-diagnostics"></a>Habilitación de diagnósticos
 
 - Configura si el depurador, el generador de perfiles y los diagnósticos de EventPipe están habilitados o deshabilitados.
-- Predeterminado: habilitado (`1`).
+- Si se omite esta configuración, se habilitan los diagnósticos. Esto es equivalente a establecer el valor en `1`.
 
 | | Nombre de valor | Valores |
 | - | - | - |
@@ -25,7 +25,7 @@ ms.locfileid: "74998862"
 ## <a name="enable-profiling"></a>Habilitación de la generación de perfiles
 
 - Configura si la generación de perfiles está habilitada para el proceso que se ejecuta actualmente.
-- Predeterminado: deshabilitado (`0`).
+- Si se omite esta configuración, la generación de perfiles está deshabilitada. Esto es equivalente a establecer el valor en `0`.
 
 | | Nombre de valor | Valores |
 | - | - | - |
@@ -56,7 +56,7 @@ ms.locfileid: "74998862"
 ## <a name="write-perf-map"></a>Escritura del mapa de rendimiento
 
 - Habilita o deshabilita la escritura de */tmp/perf-$pid.map* en los sistemas Linux.
-- Predeterminado: deshabilitado (`0`).
+- Si se omite esta configuración, la escritura del mapa de rendimiento está deshabilitada. Esto es equivalente a establecer el valor en `0`.
 
 | | Nombre de valor | Valores |
 | - | - | - |
@@ -65,10 +65,13 @@ ms.locfileid: "74998862"
 
 ## <a name="perf-log-markers"></a>Marcadores del registro de rendimiento
 
-- Cuando `COMPlus_PerfMapEnabled` se establece en `1`, habilita o deshabilita la señal especificada que se va a aceptar y omitir como marcador en los registros de rendimiento.
-- Predeterminado: deshabilitado (`0`).
+- Habilita o deshabilita la señal especificada que se va a aceptar y omitir como marcador en los registros de rendimiento.
+- Si se omite este valor, la señal especificada no se pasa por alto. Esto es equivalente a establecer el valor en `0`.
 
 | | Nombre de valor | Valores |
 | - | - | - |
 | **runtimeconfig.json** | N/D | N/D |
 | **Variable del entorno** | `COMPlus_PerfMapIgnoreSignal` | `0`: deshabilitado.<br/>`1`: habilitado. |
+
+> [!NOTE]
+> Este valor se omite si se omite [COMPlus_PerfMapEnabled](#write-perf-map) o se establece en `0` (es decir, deshabilitado).

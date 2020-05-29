@@ -2,12 +2,12 @@
 title: Comando dotnet
 description: El comando dotnet pack crea paquetes de NuGet para el proyecto de .NET Core.
 ms.date: 04/28/2020
-ms.openlocfilehash: 26a8581f55a8dc9e61aa52e62ed94c73eefd3e03
-ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+ms.openlocfilehash: 00cda2c52a12a7a3aef5f61291120f522536131d
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82595759"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442233"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -64,7 +64,7 @@ Los proyectos web no están empaquetados de forma predeterminada. Para invalidar
 
 `PROJECT | SOLUTION`
 
-  El archivo de proyecto o solución para empaquetar. Es una ruta de acceso a un [archivo csproj](csproj.md), a un archivo de solución o a un directorio. Si no se especifica, el comando busca un archivo del proyecto o de la solución en el directorio actual.
+  El archivo de proyecto o solución para empaquetar. Es una ruta de acceso a un [archivo csproj](csproj.md), un archivo vbproj, un archivo fsproj, un archivo de solución o un directorio. Si no se especifica, el comando busca un archivo del proyecto o de la solución en el directorio actual.
 
 ## <a name="options"></a>Opciones
 

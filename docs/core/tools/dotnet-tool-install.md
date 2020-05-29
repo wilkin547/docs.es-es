@@ -2,12 +2,12 @@
 title: Comando dotnet tool install
 description: El comando dotnet tool install instala la herramienta especificada de .NET Core en el equipo.
 ms.date: 02/14/2020
-ms.openlocfilehash: 723d25caa6009288dbb55d55f173b04d7b983450
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 067f90124833da537370a36934ff212aba7577f3
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463359"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702816"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
@@ -55,7 +55,7 @@ Las herramientas globales se instalan en los siguientes directorios de forma pre
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |
 
-Las herramientas locales se agregan a un archivo *tool-manifest.json* en un directorio *.config* en el directorio actual. Si aún no existe un archivo de manifiesto, créelo ejecutando el siguiente comando:
+Las herramientas locales se agregan a un archivo *dotnet-tools.json* en un directorio *.config* en el directorio actual. Si aún no existe un archivo de manifiesto, créelo ejecutando el siguiente comando:
 
 ```dotnetcli
 dotnet new tool-manifest

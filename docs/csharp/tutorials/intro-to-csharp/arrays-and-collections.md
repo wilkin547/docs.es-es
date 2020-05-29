@@ -3,12 +3,12 @@ title: 'Trabajo con colecciones: tutorial de introducción a C#'
 description: Conozca C# a través de la colección de listas que se presenta en este tutorial.
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: 554a4601157a7d4b873c22a46ee72b6601fc36d7
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: c99f5582702120db238de1206de42d964837cdbd
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635662"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396891"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>Obtenga información sobre cómo administrar colecciones de datos mediante el tipo de lista genérico
 
@@ -44,7 +44,7 @@ namespace list_tutorial
 
 Reemplace `<name>` por su propio nombre. Guarde *Program.cs*. Escriba `dotnet run` en la ventana de la consola para probarlo.
 
-Hasta ahora, solo ha creado una lista de cadenas, ha agregado tres nombres a dicha lista y ha impreso los nombres en MAYÚSCULA. Los conceptos aplicados ya se han aprendido en los tutoriales anteriores para recorrer en bucle la lista.
+Ha creado una lista de cadenas, ha agregado tres nombres a esa lista y ha impreso los nombres en MAYÚSCULA. Los conceptos aplicados ya se han aprendido en los tutoriales anteriores para recorrer en bucle la lista.
 
 El código para mostrar los nombres usa la característica [interpolación de cadenas](../../language-reference/tokens/interpolated.md).  Si un valor de `string` va precedido del carácter `$`, significa que puede insertar código de C# en la declaración de cadena. La cadena real reemplaza a ese código de C# con el valor que genera. En este ejemplo, reemplaza `{name.ToUpper()}` con cada nombre, convertido a mayúsculas, porque se llama al método <xref:System.String.ToUpper%2A>.
 
@@ -86,7 +86,7 @@ Guarde el archivo y vuelva a escribir `dotnet run` para ver los resultados.
 
 ## <a name="search-and-sort-lists"></a>Búsqueda y orden en las listas
 
-En los ejemplos se usan listas relativamente pequeñas, pero las aplicaciones a menudo pueden crear listas que contengan muchos más elementos, en ocasiones, con una numeración que engloba millares. Para encontrar elementos en estas colecciones más grandes, debe buscar diferentes elementos en la lista. El método <xref:System.Collections.Generic.List%601.IndexOf%2A> busca un elemento y devuelve su índice. Agregue este código en la parte inferior del método `Main`:
+En los ejemplos se usan listas relativamente pequeñas, pero las aplicaciones a menudo pueden crear listas que contengan muchos más elementos, en ocasiones, con una numeración que engloba millares. Para encontrar elementos en estas colecciones más grandes, debe buscar diferentes elementos en la lista. El método <xref:System.Collections.Generic.List%601.IndexOf%2A> busca un elemento y devuelve su índice. Si el elemento no está en la lista, `IndexOf` devuelve `-1`. Agregue este código en la parte inferior del método `Main`:
 
 ```csharp
 var index = names.IndexOf("Felipe");
@@ -111,7 +111,7 @@ else
 }
 ```
 
-Los elementos de la lista también se pueden ordenar. El método <xref:System.Collections.Generic.List%601.Sort%2A> ordena todos los elementos de la lista en su orden normal (por orden alfabético si se trata de cadenas). Agregue este código en la parte inferior del método `Main`:
+Los elementos de la lista también se pueden ordenar. El método <xref:System.Collections.Generic.List%601.Sort%2A> clasifica todos los elementos de la lista en su orden normal (por orden alfabético si se trata de cadenas). Agregue este código en la parte inferior del método `Main`:
 
 ```csharp
 names.Sort();

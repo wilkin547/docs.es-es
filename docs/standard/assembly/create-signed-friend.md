@@ -1,16 +1,17 @@
 ---
 title: Procedimiento para crear ensamblados de confianza firmados
+description: En este artículo se muestra cómo usar ensamblados de confianza con ensamblados que tienen nombres seguros. Se incluye información sobre la seguridad de .NET.
 ms.date: 08/19/2019
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 9912fa70014a8828e994cf528644aaa7cb351fea
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b6176afed44e32911a37a0d753cea2bae7d8554e
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159499"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378543"
 ---
 # <a name="how-to-create-signed-friend-assemblies"></a>Procedimiento para crear ensamblados de confianza firmados
 En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados que tienen nombres seguros. Ambos ensamblados deben tener nombres seguros. Aunque los dos ensamblados de este ejemplo usan las mismas claves, es posible usar claves diferentes para dos ensamblados.  

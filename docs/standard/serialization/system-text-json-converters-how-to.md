@@ -1,36 +1,32 @@
 ---
-title: 'Procedimiento para escribir convertidores personalizados para la serialización de JSON: .NET'
-ms.date: 01/10/2020
+title: ''
+ms.date: ''
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
-helpviewer_keywords:
-- JSON serialization
-- serializing objects
-- serialization
-- objects, serializing
-- converters
-ms.openlocfilehash: 310967f39c3aa7a46d79087bcbf0cb016f7d7284
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+helpviewer_keywords: []
+ms.openlocfilehash: 69c11df8217ac6dbdddd98c550f084075b901ea6
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159577"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703607"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>Procedimiento para escribir convertidores personalizados para la serialización de JSON (cálculo de referencias) en .NET
 
-En este artículo se muestra cómo crear convertidores personalizados para las clases de serialización de JSON que se proporcionan en el espacio de nombres <xref:[!OP.NO-LOC(System.Text.Json)]>. Para disponer de una introducción a `[!OP.NO-LOC(System.Text.Json)]`, vea [Cómo serializar y deserializar JSON en .NET](system-text-json-how-to.md).
+En este artículo se muestra cómo crear convertidores personalizados para las clases de serialización de JSON que se proporcionan en el espacio de nombres <xref:System.Text.Json>. Para disponer de una introducción a `System.Text.Json`, vea [Cómo serializar y deserializar JSON en .NET](system-text-json-how-to.md).
 
-Un *convertidor* es una clase que convierte un objeto o un valor en JSON; también admite conversiones a partir de este formato. El espacio de nombres `[!OP.NO-LOC(System.Text.Json)]` tiene convertidores integrados para la mayoría de los tipos primitivos que se asignan a primitivos de JavaScript. Puede escribir convertidores personalizados:
+Un *convertidor* es una clase que convierte un objeto o un valor en JSON; también admite conversiones a partir de este formato. El espacio de nombres `System.Text.Json` tiene convertidores integrados para la mayoría de los tipos primitivos que se asignan a primitivos de JavaScript. Puede escribir convertidores personalizados:
 
 * Para reemplazar el comportamiento predeterminado de un convertidor integrado. Por ejemplo, puede que quiera que los valores `DateTime` se representen con el formato mm/dd/aaaa, en lugar del formato ISO 8601-1:2019 predeterminado.
 * Para admitir un tipo de valor personalizado. Por ejemplo, una estructura `PhoneNumber`.
 
-También puede escribir convertidores personalizados para personalizar o extender `[!OP.NO-LOC(System.Text.Json)]` con funcionalidad no incluida en la versión actual. Los siguientes escenarios se describen más adelante en este artículo:
+También puede escribir convertidores personalizados para personalizar o extender `System.Text.Json` con funcionalidad no incluida en la versión actual. Los siguientes escenarios se describen más adelante en este artículo:
 
 * [Deserialización de tipos inferidos en las propiedades de objeto](#deserialize-inferred-types-to-object-properties).
 * [Compatibilidad para diccionarios con una clave que no sea de cadena](#support-dictionary-with-non-string-key).
 * [Compatibilidad con la deserialización polimórfica](#support-polymorphic-deserialization).
+* [Compatibilidad con el recorrido de ida y vuelta para Stack\<T>](#support-round-trip-for-stackt).
 
 ## <a name="custom-converter-patterns"></a>Patrones de convertidores personalizados
 
@@ -54,13 +50,13 @@ El patrón básico crea una clase que puede controlar un tipo. El patrón de fá
 
 El ejemplo siguiente es un convertidor que reemplaza la serialización predeterminada para un tipo de datos existente. El convertidor usa el formato mm/dd/aaaa para las propiedades `DateTimeOffset`.
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DateTimeOffsetConverter.cs)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/DateTimeOffsetConverter.cs)]
 
 ## <a name="sample-factory-pattern-converter"></a>Convertidor de patrones de fábrica de ejemplo
 
 En el código siguiente se muestra un convertidor personalizado que funciona con `Dictionary<Enum,TValue>`. El código sigue el patrón de fábrica porque el primer parámetro de tipo genérico es `Enum` y el segundo es abierto. El método `CanConvert` devuelve `true` solo para un elemento `Dictionary` con dos parámetros genéricos, el primero de los cuales es un tipo `Enum`. El convertidor interno obtiene un convertidor existente para controlar el tipo que se proporciona en tiempo de ejecución para `TValue`.
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DictionaryTKeyEnumTValueConverter.cs)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/DictionaryTKeyEnumTValueConverter.cs)]
 
 El código anterior es el mismo que el que se muestra en [Compatibilidad para diccionarios con una clave que no sea de cadena](#support-dictionary-with-non-string-key), más adelante en este artículo.
 
@@ -68,18 +64,18 @@ El código anterior es el mismo que el que se muestra en [Compatibilidad para di
 
 En los pasos siguientes se explica cómo crear un convertidor siguiendo el patrón básico:
 
-* Cree una clase que derive de <xref:[!OP.NO-LOC(System.Text.Json)].Serialization.JsonConverter%601>, donde `T` es el tipo que se va a serializar y deserializar.
-* Reemplace el método `Read` para deserializar el JSON de entrada y convertirlo al tipo `T`. Use el elemento <xref:[!OP.NO-LOC(System.Text.Json)].Utf8JsonReader> que se pasa al método para leer el JSON.
-* Invalide el método `Write` para serializar el objeto de entrada de tipo `T`. Use el elemento <xref:[!OP.NO-LOC(System.Text.Json)].Utf8JsonWriter> que se pasa al método para escribir el JSON.
+* Cree una clase que derive de <xref:System.Text.Json.Serialization.JsonConverter%601>, donde `T` es el tipo que se va a serializar y deserializar.
+* Reemplace el método `Read` para deserializar el JSON de entrada y convertirlo al tipo `T`. Use el elemento <xref:System.Text.Json.Utf8JsonReader> que se pasa al método para leer el JSON.
+* Invalide el método `Write` para serializar el objeto de entrada de tipo `T`. Use el elemento <xref:System.Text.Json.Utf8JsonWriter> que se pasa al método para escribir el JSON.
 * Reemplace el método `CanConvert` solo si es necesario. La implementación predeterminada devuelve `true` cuando el tipo que se va a convertir es de tipo `T`. Por lo tanto, los convertidores que solo admiten el tipo `T` no necesitan reemplazar este método. Para obtener un ejemplo de un convertidor que necesita reemplazar este método, consulte la sección sobre la [deserialización polimórfica](#support-polymorphic-deserialization), más adelante en este artículo.
 
-Puede hacer referencia al [código fuente de convertidores integrados](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/[!OP.NO-LOC(System.Text.Json)]/src/[!OP.NO-LOC(System/Text/Json)]/Serialization/Converters/) como implementaciones de referencia para escribir convertidores personalizados.
+Puede hacer referencia al [código fuente de convertidores integrados](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters/) como implementaciones de referencia para escribir convertidores personalizados.
 
 ## <a name="steps-to-follow-the-factory-pattern"></a>Pasos para seguir el patrón de fábrica
 
 En los pasos siguientes se explica cómo crear un convertidor siguiendo el patrón de fábrica:
 
-* Cree una clase que derive de <xref:[!OP.NO-LOC(System.Text.Json)].Serialization.JsonConverterFactory>.
+* Cree una clase que derive de <xref:System.Text.Json.Serialization.JsonConverterFactory>.
 * Reemplace el método `CanConvert` para devolver "true" cuando el tipo que se va a convertir sea uno que el convertidor puede controlar. Por ejemplo, si el convertidor es para `List<T>`, solo puede controlar `List<int>`, `List<string>` y `List<DateTime>`.
 * Invalide el método `CreateConverter` para devolver una instancia de una clase de convertidor que controlará el tipo de conversión que se proporciona en tiempo de ejecución.
 * Cree la clase de convertidor de la que el método `CreateConverter` crea instancias.
@@ -90,33 +86,33 @@ El tipo `Enum` es similar a un tipo genérico abierto: un convertidor para `Enum
 
 ## <a name="error-handling"></a>Control de errores
 
-Si necesita producir una excepción en el código de control de errores, considere la posibilidad de iniciar una excepción <xref:[!OP.NO-LOC(System.Text.Json)].JsonException> sin un mensaje. Este tipo de excepción crea automáticamente un mensaje que incluye la ruta de acceso a la parte del JSON que causó el error. Por ejemplo, la instrucción `throw new JsonException();` genera un mensaje de error como el ejemplo siguiente:
+Si necesita producir una excepción en el código de control de errores, considere la posibilidad de iniciar una excepción <xref:System.Text.Json.JsonException> sin un mensaje. Este tipo de excepción crea automáticamente un mensaje que incluye la ruta de acceso a la parte del JSON que causó el error. Por ejemplo, la instrucción `throw new JsonException();` genera un mensaje de error como el ejemplo siguiente:
 
 ```
-Unhandled exception. [!OP.NO-LOC(System.Text.Json)].JsonException:
+Unhandled exception. System.Text.Json.JsonException:
 The JSON value could not be converted to System.Object.
 Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 ```
 
-Si proporciona un mensaje (por ejemplo, `throw new JsonException("Error occurred")`), la excepción sigue proporcionando la ruta de acceso en la propiedad <xref:[!OP.NO-LOC(System.Text.Json)].JsonException.Path>.
+Si proporciona un mensaje (por ejemplo, `throw new JsonException("Error occurred")`), la excepción sigue proporcionando la ruta de acceso en la propiedad <xref:System.Text.Json.JsonException.Path>.
 
 ## <a name="register-a-custom-converter"></a>Registro de un convertidor personalizado
 
 *Registre* un convertidor personalizado para que los métodos `Serialize` y `Deserialize` lo utilicen. Elija uno de los enfoques siguientes:
 
-* Agregue una instancia de la clase de convertidor a la colección <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializerOptions.Converters?displayProperty=nameWithType>.
-* Aplique el atributo [[JsonConverter]](xref:[!OP.NO-LOC(System.Text.Json)].Serialization.JsonConverterAttribute) a las propiedades que requieren el convertidor personalizado.
-* Aplique el atributo [[JsonConverter]](xref:[!OP.NO-LOC(System.Text.Json)].Serialization.JsonConverterAttribute) a una clase o una estructura que represente un tipo de valor personalizado.
+* Agregue una instancia de la clase de convertidor a la colección <xref:System.Text.Json.JsonSerializerOptions.Converters?displayProperty=nameWithType>.
+* Aplique el atributo [[JsonConverter]](xref:System.Text.Json.Serialization.JsonConverterAttribute) a las propiedades que requieren el convertidor personalizado.
+* Aplique el atributo [[JsonConverter]](xref:System.Text.Json.Serialization.JsonConverterAttribute) a una clase o una estructura que represente un tipo de valor personalizado.
 
 ## <a name="registration-sample---converters-collection"></a>Ejemplo de registro: colección de convertidores
 
 Este es un ejemplo que hace que <xref:System.ComponentModel.DateTimeOffsetConverter> sea el valor predeterminado para propiedades de tipo <xref:System.DateTimeOffset>:
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RegisterConverterWithConvertersCollection.cs?name=SnippetSerialize)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/RegisterConverterWithConvertersCollection.cs?name=SnippetSerialize)]
 
 Suponga que serializa una instancia del tipo siguiente:
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWF)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWF)]
 
 Este es un ejemplo de salida JSON que muestra que se ha usado el convertidor personalizado:
 
@@ -130,35 +126,35 @@ Este es un ejemplo de salida JSON que muestra que se ha usado el convertidor per
 
 En el código siguiente se usa el mismo enfoque para realizar una deserialización mediante el convertidor `DateTimeOffset` personalizado:
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RegisterConverterWithConvertersCollection.cs?name=SnippetDeserialize)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/RegisterConverterWithConvertersCollection.cs?name=SnippetDeserialize)]
 
 ## <a name="registration-sample---jsonconverter-on-a-property"></a>Ejemplo de registro: [JsonConverter] en una propiedad
 
 El código siguiente selecciona un convertidor personalizado para la propiedad `Date`:
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithConverterAttribute)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithConverterAttribute)]
 
 El código para serializar `WeatherForecastWithConverterAttribute` no requiere el uso de `JsonSerializeOptions.Converters`:
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RegisterConverterWithAttributeOnProperty.cs?name=SnippetSerialize)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/RegisterConverterWithAttributeOnProperty.cs?name=SnippetSerialize)]
 
 El código que se va a deserializar tampoco requiere el uso de `Converters`:
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RegisterConverterWithAttributeOnProperty.cs?name=SnippetDeserialize)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/RegisterConverterWithAttributeOnProperty.cs?name=SnippetDeserialize)]
 
 ## <a name="registration-sample---jsonconverter-on-a-type"></a>Ejemplo de registro: [JsonConverter] en un tipo
 
 Este es el código que crea una estructura y le aplica el atributo `[JsonConverter]`:
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/Temperature.cs)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/Temperature.cs)]
 
 Este es el convertidor personalizado para la estructura anterior:
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/TemperatureConverter.cs)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/TemperatureConverter.cs)]
 
 El atributo `[JsonConvert]` de la estructura registra el convertidor personalizado como valor predeterminado para las propiedades de tipo `Temperature`. El convertidor se usa automáticamente en la propiedad `TemperatureCelsius` del tipo siguiente al serializarla o deserializarla:
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithTemperatureStruct)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithTemperatureStruct)]
 
 ## <a name="converter-registration-precedence"></a>Prioridad de registro del convertidor
 
@@ -179,6 +175,7 @@ En las secciones siguientes se proporcionan ejemplos de convertidor que abordan 
 * [Deserialización de los tipos inferidos en propiedades de objeto](#deserialize-inferred-types-to-object-properties)
 * [Compatibilidad para diccionarios con una clave que no sea de cadena](#support-dictionary-with-non-string-key)
 * [Compatibilidad con la deserialización polimórfica](#support-polymorphic-deserialization)
+* [Compatibilidad con el recorrido de ida y vuelta para Stack\<T>](#support-round-trip-for-stackt).
 
 ### <a name="deserialize-inferred-types-to-object-properties"></a>Deserialización de los tipos inferidos en propiedades de objeto
 
@@ -195,15 +192,15 @@ En escenarios que requieren inferencia de tipos, el código siguiente muestra un
 * Cadenas, en `string`
 * Todo lo demás, en `JsonElement`
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/ObjectToInferredTypesConverter.cs)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/ObjectToInferredTypesConverter.cs)]
 
 El código siguiente registra el convertidor:
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DeserializeInferredTypesToObject.cs?name=SnippetRegister)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/DeserializeInferredTypesToObject.cs?name=SnippetRegister)]
 
 Este es un ejemplo de tipo con propiedades `object`:
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithObjectProperties)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithObjectProperties)]
 
 El siguiente ejemplo de JSON para deserializar contiene valores que se deserializarán como `DateTime`, `long` y `string`:
 
@@ -225,15 +222,15 @@ La compatibilidad integrada con colecciones de diccionarios es para `Dictionary<
 
 En el código siguiente se muestra un convertidor personalizado que funciona con `Dictionary<Enum,TValue>`:
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DictionaryTKeyEnumTValueConverter.cs)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/DictionaryTKeyEnumTValueConverter.cs)]
 
 El código siguiente registra el convertidor:
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripDictionaryTkeyEnumTValue.cs?name=SnippetRegister)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripDictionaryTkeyEnumTValue.cs?name=SnippetRegister)]
 
 El convertidor puede serializar y deserializar la propiedad `TemperatureRanges` de la siguiente clase que usa el elemento `Enum` siguiente:
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithEnumDictionary)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithEnumDictionary)]
 
 La salida JSON de la serialización es similar al ejemplo siguiente:
 
@@ -259,13 +256,13 @@ Suponga, por ejemplo, que tiene una clase base abstracta `Person`, con clases de
 
 En el código siguiente se muestra una clase base, dos clases derivadas y un convertidor personalizado para ellas. El convertidor usa una propiedad de discriminador para realizar la deserialización polimórfica. El discriminador de tipo no se encuentra en las definiciones de clase, pero se crea durante la serialización y se lee durante la deserialización.
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/Person.cs?name=SnippetPerson)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/Person.cs?name=SnippetPerson)]
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/PersonConverterWithTypeDiscriminator.cs)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/PersonConverterWithTypeDiscriminator.cs)]
 
 El código siguiente registra el convertidor:
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripPolymorphic.cs?name=SnippetRegister)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripPolymorphic.cs?name=SnippetRegister)]
 
 El convertidor puede deserializar el JSON que se creó con el mismo convertidor para serializar, por ejemplo:
 
@@ -285,6 +282,26 @@ El convertidor puede deserializar el JSON que se creó con el mismo convertidor 
 ```
 
 El código del convertidor en el ejemplo anterior lee y escribe cada propiedad manualmente. Una alternativa es llamar a `Deserialize` o `Serialize` para realizar parte del trabajo. Para obtener un ejemplo, vea [esta publicación de StackOverflow](https://stackoverflow.com/a/59744873/12509023).
+
+### <a name="support-round-trip-for-stackt"></a>Compatibilidad con el recorrido de ida y vuelta para Stack\<T>
+
+Si deserializa una cadena JSON en un objeto <xref:System.Collections.Generic.Stack%601> y después serializa ese objeto, el contenido de la pila está en orden inverso. Este comportamiento se aplica a los siguientes tipos e interfaz, así como a los tipos definidos por el usuario que derivan de ellos:
+
+* <xref:System.Collections.Stack>
+* <xref:System.Collections.Generic.Stack%601>
+* <xref:System.Collections.Concurrent.ConcurrentStack%601>
+* <xref:System.Collections.Immutable.ImmutableStack%601>
+* <xref:System.Collections.Immutable.IImmutableStack%601>
+
+Para admitir la serialización y deserialización que conserva el orden original en la pila, se requiere un convertidor personalizado.
+
+En el código siguiente se muestra un convertidor personalizado que permite el recorrido de ida y vuelta hacia y desde objetos `Stack<T>`:
+
+[!code-csharp[](snippets/system-text-json-how-to/csharp/JsonConverterFactoryForStackOfT.cs)]
+
+El código siguiente registra el convertidor:
+
+[!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripStackOfT.cs?name=SnippetRegister)]
 
 ## <a name="other-custom-converter-samples"></a>Otros ejemplos de convertidor personalizado
 

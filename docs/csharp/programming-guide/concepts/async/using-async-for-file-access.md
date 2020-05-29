@@ -2,12 +2,12 @@
 title: Usar Async en acceso a archivos (C#)
 ms.date: 07/20/2015
 ms.assetid: bb018fea-5313-4c80-ab3f-7c24b2145bd9
-ms.openlocfilehash: e6b0370049d9b9315de6a72d0e84c080aac12481
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8e0a62c2263ed3fd11eb4accb54978ef439ac010
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69595535"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396955"
 ---
 # <a name="using-async-for-file-access-c"></a>Usar Async en acceso a archivos (C#)
 Puede usar la característica async para acceder a archivos. Con la característica async, se puede llamar a métodos asincrónicos sin usar devoluciones de llamada ni dividir el código en varios métodos o expresiones lambda. Para convertir código sincrónico en asincrónico, basta con llamar a un método asincrónico y no a un método sincrónico y agregar algunas palabras clave al código.  
@@ -27,7 +27,7 @@ Puede usar la característica async para acceder a archivos. Con la característ
 ## <a name="running-the-examples"></a>Ejecutar los ejemplos  
  Para ejecutar los ejemplos de este tema, puede crear una **aplicación WPF** o una **aplicación de Windows Forms** y luego agregar un **botón**. En el evento `Click` del botón, agregue una llamada al primer método de cada ejemplo.  
   
- En los ejemplos siguientes, se incluyen las instrucciones `using` siguientes.  
+ En los ejemplos siguientes, se incluyen las directivas `using` siguientes.  
   
 ```csharp  
 using System;  
@@ -176,6 +176,6 @@ public async Task ProcessWriteMultAsync()
   
 ## <a name="see-also"></a>Vea también
 
-- [Asynchronous Programming with async and await (C#)](./index.md) (Programación asincrónica con async y await (C#))
-- [Async Return Types (C#)](./async-return-types.md) (Tipos de valor devuelto de async [C#])
-- [Control Flow in Async Programs (C#)](./control-flow-in-async-programs.md) (Flujo de control en programas asincrónicos [C#])
+- [Programación asincrónica con Async y Await (C#)](./index.md)
+- [Tipos de valor devueltos asincrónicos (C#)](./async-return-types.md)
+- [Controlar el flujo en los programas asincrónicos (C#)](./control-flow-in-async-programs.md)

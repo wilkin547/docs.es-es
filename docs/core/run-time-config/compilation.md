@@ -3,12 +3,12 @@ title: Valores de configuración de la compilación
 description: Obtenga información sobre los valores del entorno de ejecución que configuran cómo funciona el compilador JIT para las aplicaciones de .NET Core.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 4db20ee6d36fe3d3d66f473644b70c02d4e02cb3
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: cfcf9b5fc8d11a4ae35ab9b152f32133cd6930bf
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506849"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762011"
 ---
 # <a name="run-time-configuration-options-for-compilation"></a>Opciones de configuración del entorno de ejecución para compilación
 
@@ -98,7 +98,7 @@ Archivo del proyecto:
 - Configura si el compilador JIT usa JIT rápido en métodos que contienen bucles.
 - La habilitación de JIT rápido para bucles puede mejorar el rendimiento de inicio. Pero los bucles de ejecución prolongada se pueden bloquear en código menos optimizado durante períodos largos.
 - Si [JIT rápido](#quick-jit) está deshabilitado, este valor no tiene ningún efecto.
-- Predeterminado: deshabilitado (`false`).
+- Si se omite esta configuración, el método JIT rápido no se utiliza para los métodos que contienen bucles. Esto es equivalente a establecer el valor en `false`.
 
 | | Nombre de valor | Valores |
 | - | - | - |
@@ -136,7 +136,7 @@ Archivo del proyecto:
 
 - Configura si el entorno de ejecución de .NET Core usa código precompilado para las imágenes con datos de ReadyToRun disponibles. Al deshabilitar esta opción, se fuerza al entorno de ejecución a compilar código de marco mediante JIT.
 - Para obtener más información, vea [ReadyToRun](../whats-new/dotnet-core-3-0.md#readytorun-images).
-- Predeterminado: habilitado (`1`).
+- Si se omite esta configuración, .NET usa datos ReadyToRun cuando están disponibles. Esto es equivalente a establecer el valor en `1`.
 
 | | Nombre de valor | Valores |
 | - | - | - |

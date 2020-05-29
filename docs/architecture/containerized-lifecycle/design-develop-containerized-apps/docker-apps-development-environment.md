@@ -1,13 +1,13 @@
 ---
 title: Entorno de desarrollo para aplicaciones de Docker
 description: Familiarícese con las opciones de herramientas de desarrollo más importantes que son compatibles con el ciclo de vida de desarrollo de Docker.
-ms.date: 02/15/2019
-ms.openlocfilehash: 35236e75f47e830d0970ca9cfd074d9a69e6f85c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/16/2020
+ms.openlocfilehash: b1df16db88fa85f794407c989f5428030c4cddf7
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "71214294"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83394886"
 ---
 # <a name="development-environment-for-docker-apps"></a>Entorno de desarrollo para aplicaciones de Docker
 
@@ -26,7 +26,7 @@ Si prefiere un editor ligero y multiplataforma que admita cualquier lenguaje de 
 
 ### <a name="visual-studio-with-docker-tools-windows-development-machine"></a>Visual Studio con herramientas de Docker (equipo de desarrollo de Windows)
 
-Se recomienda usar Visual Studio 2017 (o versiones posteriores) con las herramientas de Docker integradas habilitadas. Con Visual Studio, puede desarrollar, ejecutar y validar las aplicaciones directamente en el entorno de Docker seleccionado. Presione F5 para depurar la aplicación (de un solo contenedor o de varios contenedores) directamente en un host de Docker, o bien presione CTRL+F5 para editar y actualizar la aplicación sin tener que volver a compilar el contenedor. Esta es la opción más sencilla y más eficaz para los desarrolladores de Windows que crean contenedores de Docker para Linux o Windows.
+Se recomienda usar Visual Studio 2019 con las herramientas de Docker integradas habilitadas. Con Visual Studio, puede desarrollar, ejecutar y validar las aplicaciones directamente en el entorno de Docker seleccionado. Presione F5 para depurar la aplicación (de un solo contenedor o de varios contenedores) directamente en un host de Docker, o bien presione CTRL+F5 para editar y actualizar la aplicación sin tener que volver a compilar el contenedor. Esta es la opción más sencilla y más eficaz para los desarrolladores de Windows que crean contenedores de Docker para Linux o Windows.
 
 ### <a name="visual-studio-for-mac-mac-development-machine"></a>Visual Studio para Mac (equipo de desarrollo de Mac)
 
@@ -41,7 +41,7 @@ Puede desarrollar aplicaciones de Docker mediante el uso de herramientas de Micr
 - Ir
 - Java
 - Ruby
-- Plantillas de
+- Python
 
 Básicamente, puede usar cualquier lenguaje moderno compatible con Docker en Linux o Windows.
 

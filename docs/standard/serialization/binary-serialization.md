@@ -1,5 +1,6 @@
 ---
 title: Serialización binaria
+description: En este artículo se describe la serialización binaria y los tipos para los que .NET Core la admite. Tenga en cuenta los peligros de la serialización binaria y sus alternativas.
 ms.date: 01/02/2018
 helpviewer_keywords:
 - binary serialization
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - serialization, cross-framework
 ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
 author: ViktorHofer
-ms.openlocfilehash: 9df9b73a1a1347b952d76b76c9058578f5e9f401
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4ed76437b743da842d6ba07d29fe7985f824abf0
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401272"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421285"
 ---
 # <a name="binary-serialization"></a>Serialización binaria
 

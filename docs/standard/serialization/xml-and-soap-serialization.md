@@ -1,5 +1,6 @@
 ---
 title: Serialización de SOAP y XML
+description: En esta introducción se describe la serialización XML, que también se puede usar para serializar objetos en secuencias XML que se ajustan a la especificación SOAP.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - SOAP, XML serialization
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - XML serialization
 - serialization
 ms.assetid: 832ac524-21bc-419a-a27b-ca8bfc45840f
-ms.openlocfilehash: dcb2ed1703473be582a12f430d2e051d8a420230
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 6b7d6f59694a28207758fa7772781eed073917e4
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588374"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379540"
 ---
 # <a name="xml-and-soap-serialization"></a>Serialización de SOAP y XML
 

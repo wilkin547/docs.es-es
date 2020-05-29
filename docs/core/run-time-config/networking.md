@@ -3,12 +3,12 @@ title: Valores de configuración de redes
 description: Obtenga información sobre los valores del entorno de ejecución que configuran las redes para las aplicaciones de .NET Core.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 8d02087ad7260cc78c096090bf3b06a716d34678
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 6b5e03b127f95911b712b66c0be8a4f5a2929fc2
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989108"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761946"
 ---
 # <a name="run-time-configuration-options-for-networking"></a>Opciones de configuración del entorno de ejecución para las redes
 
@@ -16,7 +16,7 @@ ms.locfileid: "80989108"
 
 - Configura si está habilitada la compatibilidad con el protocolo HTTP/2.
 
-- Predeterminado: deshabilitado (`false`).
+- Si se omite esta configuración, la compatibilidad con el protocolo HTTP/2 está deshabilitada. Esto es equivalente a establecer el valor en `false`.
 
 - Introducido en .NET Core 3.0.
 
@@ -32,7 +32,7 @@ ms.locfileid: "80989108"
   > [!NOTE]
   > Es posible que esté usando las API para redes de alto nivel en lugar de crear directamente instancias de la clase <xref:System.Net.Http.HttpClientHandler>. Este valor también afecta a la pila del protocolo HTTP que usan las API para redes de alto nivel, como <xref:System.Net.Http.HttpClient> y [HttpClientFactory](https://docs.microsoft.com/previous-versions/aspnet/hh995280(v%3dvs.118)).
 
-- Predeterminado: usar <xref:System.Net.Http.SocketsHttpHandler> (`true`).
+- Si se omite este valor, <xref:System.Net.Http.HttpClientHandler> utiliza <xref:System.Net.Http.SocketsHttpHandler>. Esto es equivalente a establecer el valor en `true`.
 
 - Se puede configurar este valor mediante programación llamando al método <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType>.
 

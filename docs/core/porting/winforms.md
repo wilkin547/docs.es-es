@@ -4,12 +4,12 @@ description: Se detalla cómo migrar una aplicación de Windows Forms de .NET Fr
 author: Thraka
 ms.author: adegeo
 ms.date: 01/24/2020
-ms.openlocfilehash: 80b4bb225d6a6748743d91a4c70e8b09c10cc94b
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: efa73428c816eddc00c62c2275d3457c92284388
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635508"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83206133"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Procedimiento para: Migrar una aplicación de escritorio de Windows Forms a .NET Core
 
@@ -26,9 +26,10 @@ En este artículo, se usan diferentes nombres para identificar los tipos de arch
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- [Visual Studio 2019 16.5, versión preliminar 1](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=community&ch=pre&rel=16) o una versión posterior para cualquier trabajo de diseñador que se quiera realizar. Se recomienda instalar la [versión preliminar de Visual Studio](https://visualstudio.microsoft.com/vs/preview/) más reciente.
+- [Visual Studio 2019 16.5, versión preliminar 1](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=community&ch=pre&rel=16) o una versión posterior para cualquier trabajo de diseñador que se quiera realizar. Se recomienda actualizar a la [versión preliminar de Visual Studio](https://visualstudio.microsoft.com/vs/preview/) más reciente.
 
   Instale las cargas de trabajo de Visual Studio siguientes:
+  
   - Desarrollo de escritorio de .NET
   - Desarrollo multiplataforma de .NET Core
 

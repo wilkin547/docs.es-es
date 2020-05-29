@@ -3,12 +3,12 @@ title: 'Ramas y bucles: tutorial de introducción a C#'
 description: En este tutorial sobre ramas y bucles, escribirá código de C# para explorar la sintaxis del lenguaje que admite ramas y bucles condicionales para ejecutar instrucciones de forma repetida.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: d8c10a7462b7c27c5353aee6d957732a8d161015
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: d67cfe359634783bb542e9ac34df52a095b45c20
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135950"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396880"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Obtenga información sobre la lógica condicional con instrucciones de rama y bucle
 
@@ -72,7 +72,7 @@ La instrucción que sigue a la palabra clave `else` se ejecuta solo si la condic
 > El lenguaje C# no considera significativos los espacios en blanco ni las sangrías.
 > La instrucción que sigue a la palabra clave `if` o `else` se ejecutará en función de la condición. Todos los ejemplos de este tutorial siguen una práctica común para aplicar sangría a las líneas en función del flujo de control de las instrucciones.
 
-Dado que la sangría no es significativa, debe usar `{` y `}` para indicar si desea que más de una instrucción forme parte del bloque que se ejecuta de forma condicional. Los programadores de C# suelen usar esas llaves en todas las cláusulas `if` y `else`. El siguiente ejemplo es igual al que acaba de crear. Modifique el código anterior para que coincida con el código siguiente:
+Dado que la sangría no es significativa, debe usar `{` y `}` para indicar si desea que más de una instrucción forme parte del bloque que se ejecuta de forma condicional. Los programadores de C# suelen usar esas llaves en todas las cláusulas `if` y `else`. El siguiente ejemplo es igual que el que acaba de crear. Modifique el código anterior para que coincida con el código siguiente:
 
 ```csharp
 int a = 5;
@@ -209,7 +209,7 @@ En este ejemplo aparece otro operador nuevo. El código `++` que aparece despué
 > [!IMPORTANT]
 > Asegúrese de que la condición del bucle `while` cambia a false mientras ejecuta el código. En caso contrario, se crea un **bucle infinito** donde nunca finaliza el programa. Esto no está demostrado en este ejemplo, ya que tendrá que forzar al programa a cerrar mediante **CTRL-C** u otros medios.
 
-El bucle `while` prueba la condición antes de ejecutar el código que sigue a `while`. El bucle `do` ... `while` primero ejecuta el código y después comprueba la condición. Lo que ocurre con el bucle se muestra en el ejemplo de código siguiente:
+El bucle `while` prueba la condición antes de ejecutar el código que sigue a `while`. El bucle `do` ... `while` primero ejecuta el código y después comprueba la condición. El bucle *do while* se muestra en el código siguiente:
 
 ```csharp
 int counter = 0;
@@ -233,7 +233,7 @@ for (int index = 0; index < 10; index++)
 }
 ```
 
-Funciona de la misma forma que los bucles `while` y `do` que ya ha usado. La instrucción `for` consta de tres partes que controlan su funcionamiento.
+El código anterior funciona de la misma forma que los bucles `while` y `do` que ya ha usado. La instrucción `for` consta de tres partes que controlan su funcionamiento.
 
 La primera parte es el **inicializador de for**: `int index = 0;` declara que `index` es la variable de bucle y establece su valor inicial en `0`.
 
@@ -241,12 +241,14 @@ La parte central es la **condición de for**: `index < 10` declara que este bucl
 
 La última parte es el **iterador de for**: `index++` especifica cómo modificar la variable de bucle después de ejecutar el bloque que sigue a la instrucción `for`. En este caso, especifica que `index` debe incrementarse en uno cada vez que el bloque se ejecuta.
 
-Experimente con estas partes por su cuenta. Pruebe todos los pasos siguientes:
+Experimente usted mismo. Pruebe cada una de las siguientes variaciones:
 
 - Cambie el inicializador para que se inicie en un valor distinto.
 - Cambie la condición para que se detenga en un valor diferente.
 
 Cuando haya terminado, escriba algo de código para practicar con lo que ha aprendido.
+
+Hay otra instrucción de bucle que no se trata en este tutorial: la instrucción `foreach`. La instrucción `foreach` repite su instrucción con cada elemento de una secuencia de elementos. Se usa más a menudo con *colecciones*, por lo que se trata en el siguiente tutorial.
 
 ## <a name="created-nested-loops"></a>Bucles anidados creados
 
@@ -298,7 +300,7 @@ Ha completado el tutorial "Bifurcaciones y bucles".
 
 Puede continuar con el tutorial [Matrices y colecciones](arrays-and-collections.md) en su propio entorno de desarrollo.
 
-Puede obtener más información sobre estos conceptos en los temas siguientes:
+Puede aprender más sobre estos conceptos en los artículos siguientes:
 
 - [Instrucciones If y else](../../language-reference/keywords/if-else.md)
 - [Instrucción while](../../language-reference/keywords/while.md)

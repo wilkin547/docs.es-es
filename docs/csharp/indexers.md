@@ -4,12 +4,12 @@ description: Obtenga información sobre los indexadores de C# y cómo implementa
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 8e583b8a7cedab61ea6fdd56587608907610b6b4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e9b1cb18157982f068f1c1e4546e637f2bd707cb
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79145689"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83394696"
 ---
 # <a name="indexers"></a>Indizadores
 
@@ -313,7 +313,7 @@ public class HistoricalWeatherData
 
 Este ejemplo crea un indizador que asigna los datos meteorológicos en dos argumentos diferentes: una ciudad (representada por `string`) y una fecha (representada por `DateTime`). El almacenamiento interno usa dos clases `Dictionary` para representar el diccionario bidimensional. La API pública ya no representa el almacenamiento subyacente. En su lugar, las características del lenguaje de los indizadores le permiten crear una interfaz pública que representa la abstracción, aunque el almacenamiento subyacente debe usar distintos tipos de colección básica.
 
-Hay dos partes de este código que pueden resultar desconocidas para algunos desarrolladores, las dos instrucciones `using`:
+Hay dos partes de este código que pueden resultar desconocidas para algunos desarrolladores, Estas dos directivas `using`:
 
 ```csharp
 using DateMeasurements = System.Collections.Generic.Dictionary<System.DateTime, IndexersSamples.Common.Measurements>;

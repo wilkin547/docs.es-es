@@ -1,5 +1,6 @@
 ---
 title: Contenedores COM
+description: Los clientes COM y los objetos .NET interactúan mediante un contenedor CCW y un contenedor RCW. CLR crea contenedores automáticamente.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - wrapper classes
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, COM wrappers
 - COM callable wrappers
 ms.assetid: e56c485b-6b67-4345-8e66-fd21835a6092
-ms.openlocfilehash: d647a8cd73fa714e86454687a25501259f894f6d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f1cf84b8f15de1e3bd19a391767f5573f01ff806
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120710"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420518"
 ---
 # <a name="com-wrappers"></a>Contenedores COM
 COM se diferencia del modelo de objetos del runtime de .NET en varios aspectos importantes:  

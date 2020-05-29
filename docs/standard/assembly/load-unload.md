@@ -1,13 +1,14 @@
 ---
-title: Procedimiento para cargar y descargar ensamblados
+title: Procedimiento Carga y descarga de ensamblados
+description: CLR carga automáticamente los ensamblados .NET a los que hace referencia un programa. También puede cargar dinámicamente ensamblados específicos en el dominio de aplicación actual.
 ms.date: 08/19/2019
 ms.assetid: 6a4f490f-3576-471f-9533-003737cad4a3
-ms.openlocfilehash: a520ffd41c3465737be7494d374cbcf64e3f1b85
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e6f1ede055dd3f68bced4eba527b2fc65f7d5715
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78155781"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378678"
 ---
 # <a name="how-to-load-and-unload-assemblies"></a>Procedimiento Carga y descarga de ensamblados
 Common Language Runtime cargará automáticamente los ensamblados a los que hace referencia el programa, pero también es posible cargar dinámicamente ensamblados específicos en el dominio de aplicación actual. Para obtener más información, vea [Cómo: Cargar ensamblados en un dominio de aplicación](../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md).

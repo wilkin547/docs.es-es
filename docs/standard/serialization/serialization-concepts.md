@@ -1,13 +1,14 @@
 ---
 title: Conceptos de serialización
+description: La serialización se puede utilizar para capturar el estado de un objeto para que se pueda crear una copia, o para enviar un objeto por valor de un dominio de aplicación a otro.
 ms.date: 08/07/2017
 ms.assetid: e1ff4740-20a1-4c76-a8ad-d857db307054
-ms.openlocfilehash: 1a7fa7c3e5561fc9e48cf627a703abc747a72ba0
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 0592dee188f1c1e5a429438c594d045f8ba268c6
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159837"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378736"
 ---
 # <a name="serialization-concepts"></a>Conceptos de serialización
 ¿Por qué desearía utilizar la serialización? Las dos razones más importantes son conservar así el estado de un objeto a los medios de almacenamiento, de manera que una copia exacta se puede recrear en una copia intermedia posterior y para enviar por valor el objeto de un dominio de aplicación a otro. Por ejemplo, la serialización se utiliza para guardar el estado de sesión en ASP.NET y copiar los objetos en el Portapapeles en Windows Forms. La comunicación remota se utiliza también para pasar por valor los objetos de un dominio de aplicación a otro.

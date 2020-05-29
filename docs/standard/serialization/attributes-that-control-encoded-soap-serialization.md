@@ -1,5 +1,6 @@
 ---
 title: Atributos que controlan la serialización SOAP codificada
+description: En este artículo se muestra un conjunto especial de atributos que se encuentran en el espacio de nombres System.Xml.Serialization necesario para ajustarse a la especificación SOAP.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - SOAP, XML serialization
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - attributes [.NET Framework], XML serialization
 - serialization, attributes
 ms.assetid: 93ee258c-9c0f-4a08-897c-c10db7a00f91
-ms.openlocfilehash: 2961d9abc6c32e78b5a61e8f2bbea5cfcf6677bd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9e99856c3ac70b122c0def23e36bbc3059c5891c
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794945"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378458"
 ---
 # <a name="attributes-that-control-encoded-soap-serialization"></a>Atributos que controlan la serialización SOAP codificada
 

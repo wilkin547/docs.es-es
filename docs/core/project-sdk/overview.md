@@ -1,14 +1,15 @@
 ---
 title: Información general sobre el SDK de proyectos de .NET Core
+titleSuffix: ''
 description: Obtenga información sobre los SDK de proyectos de .NET Core.
 ms.date: 02/02/2020
 ms.topic: conceptual
-ms.openlocfilehash: d0ac01dca31dffea482745126e00c34b1da20774
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 88ec1bf2c4917c69b80b997d090219097694d2bc
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389669"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83206059"
 ---
 # <a name="net-core-project-sdks"></a>SDK de proyectos de .NET Core
 
@@ -82,7 +83,7 @@ Si el proyecto tiene varias plataformas de destino, para centrar los resultados 
 
 ### <a name="default-compilation-includes"></a>Inclusiones de compilación predeterminadas
 
-Las inclusiones y exclusiones predeterminadas para los elementos de compilación y los recursos insertados se definen en el SDK. A diferencia de los proyectos de .NET Framework que no son de SDK, no es necesario especificar estos elementos en el archivo del proyecto, ya que los valores predeterminados cubren los casos de uso más comunes. Esto da lugar a archivos del proyecto más pequeños y más fáciles de entender, así como de editar de forma manual si fuera necesario.
+Las inclusiones y exclusiones predeterminadas de los elementos de compilación, los recursos insertados y los elementos `None` se definen en el SDK. A diferencia de los proyectos de .NET Framework que no son de SDK, no es necesario especificar estos elementos en el archivo del proyecto, ya que los valores predeterminados cubren los casos de uso más comunes. Como resultado, el archivo de proyecto es más pequeño y más fácil de entender y editar manualmente, si es necesario.
 
 En la tabla siguiente se muestra qué elementos y qué [globs](https://en.wikipedia.org/wiki/Glob_(programming)) se incluyen y excluyen en el SDK de .NET Core:
 
@@ -95,39 +96,43 @@ En la tabla siguiente se muestra qué elementos y qué [globs](https://en.wikipe
 > [!NOTE]
 > De forma predeterminada, las carpetas `./bin` y `./obj` (representadas por las propiedades de MSBuild `$(BaseOutputPath)` y `$(BaseIntermediateOutputPath)`) se excluyen de los globs. Las exclusiones se representan por medio de la propiedad `$(DefaultItemExcludes)`.
 
-Si define de forma explícita estos elementos en el archivo del proyecto, es probable que reciba el error siguiente:
+#### <a name="build-errors"></a>Errores de compilación
 
-**Se han incluido elementos de compilación duplicados. El SDK de .NET incluye elementos de compilación del directorio del proyecto de forma predeterminada. Puede quitar estos elementos del archivo del proyecto, o bien establecer la propiedad "EnableDefaultCompileItems" en "false" si quiere incluirlos de forma explícita en el archivo del proyecto.**
+Si define explícitamente cualquiera de estos elementos en el archivo del proyecto, es probable que obtenga un error de compilación "NETSDK1022" similar al siguiente:
 
-Para resolver el error, quite los elementos `Compile` explícitos que coincidan con los implícitos enumerados en la tabla anterior, o bien establezca la propiedad `EnableDefaultCompileItems` en `false` para deshabilitar la inclusión implícita:
+  > Se han incluido elementos de compilación duplicados. El SDK de .NET incluye elementos de compilación del directorio del proyecto de forma predeterminada. Puede quitar estos elementos del archivo de proyecto o establecer la propiedad “EnableDefaultCompileItems” en “false” si quiere incluirlos explícitamente en el archivo del proyecto.
 
-```xml
-<PropertyGroup>
-  <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-</PropertyGroup>
-```
+  > Se incluyeron elementos "EmbeddedResource" duplicados. El SDK de .NET incluye elementos "EmbeddedResource" del directorio del proyecto de forma predeterminada. Puede quitar estos elementos del archivo del proyecto, o bien establecer la propiedad "EnableDefaultEmbeddedResourceItems" en "false" si quiere incluirlos en él de forma explícita.
 
-Si, por ejemplo, quiere especificar que algunos archivos se publiquen con la aplicación, puede seguir usando los mecanismos de MSBuild conocidos para ello, por ejemplo, el elemento `Content`.
+Para resolver los errores, lleve a cabo una de las siguientes acciones:
 
-`EnableDefaultCompileItems` solo deshabilita los globs `Compile`, pero no afecta a otros, como el glob `None` implícito, que también se aplica a los elementos \*.cs. Por eso, en el Explorador de soluciones de Visual Studio se muestran los elementos \*.cs como parte del proyecto, incluidos como elementos `None`. Para deshabilitar el glob `None` implícito, establezca `EnableDefaultNoneItems` en `false`:
+- Quite los elementos `Compile`, `EmbeddedResource` o `None` explícitos que coincidan con los implícitos enumerados en la tabla anterior.
 
-```xml
-<PropertyGroup>
-  <EnableDefaultNoneItems>false</EnableDefaultNoneItems>
-</PropertyGroup>
-```
+- Establezca la propiedad `EnableDefaultItems` en `false` para deshabilitar toda la inclusión de archivos implícita:
 
-Para deshabilitar *todos* los globs implícitos, establezca la propiedad `EnableDefaultItems` en `false`:
+  ```xml
+  <PropertyGroup>
+    <EnableDefaultItems>false</EnableDefaultItems>
+  </PropertyGroup>
+  ```
 
-```xml
-<PropertyGroup>
-  <EnableDefaultItems>false</EnableDefaultItems>
-</PropertyGroup>
-```
+  Si quiere especificar que se publiquen archivos con la aplicación, puede seguir usando los mecanismos de MSBuild conocidos para ello, por ejemplo, el elemento `Content`.
+
+- Deshabilite de forma selectiva solo los globs `Compile`, `EmbeddedResource` o `None` estableciendo la propiedad `EnableDefaultCompileItems`, `EnableDefaultEmbeddedResourceItems` o `EnableDefaultNoneItems` en `false`:
+
+  ```xml
+  <PropertyGroup>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+    <EnableDefaultNoneItems>false</EnableDefaultNoneItems>
+  </PropertyGroup>
+  ```
+
+  Si solo deshabilita los globs `Compile`, el Explorador de soluciones de Visual Studio sigue mostrando elementos \*.cs como parte del proyecto, incluidos como elementos `None`. Para deshabilitar el glob `None` implícito, establezca `EnableDefaultNoneItems` en `false`.
 
 ## <a name="customize-the-build"></a>Personalización de la compilación
 
-Hay varias maneras de [personalizar una compilación](/visualstudio/msbuild/customize-your-build). Es posible que quiera invalidar una propiedad y pasarla como argumento a un comando [msbuild](/visualstudio/msbuild/msbuild-command-line-reference) o [dotnet](../tools/index.md). También puede agregar la propiedad al archivo del proyecto o a un archivo *Directory.Build.props*. Para obtener una lista de propiedades útiles para los proyectos de .NET Core, vea [Propiedades de MSBuild para proyectos de SDK de .NET Core](msbuild-props.md).
+Hay varias maneras de [personalizar una compilación](/visualstudio/msbuild/customize-your-build). Es posible que quiera invalidar una propiedad y pasarla como argumento a un comando [msbuild](/visualstudio/msbuild/msbuild-command-line-reference) o [dotnet](../tools/index.md). También puede agregar la propiedad al archivo del proyecto o a un archivo *Directory.Build.props*. Para obtener una lista de propiedades útiles para los proyectos de .NET Core, consulte [Referencia de MSBuild para proyectos de SDK de .NET Core](msbuild-props.md).
 
 ### <a name="custom-targets"></a>Destinos personalizados
 

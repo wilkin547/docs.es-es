@@ -1,13 +1,13 @@
 ---
 title: 'Control de versiones del lenguaje C#: Guía de C#'
 description: Obtenga información sobre cómo se determina la versión del lenguaje C# en función del proyecto y los motivos de esa decisión. Obtenga información sobre cómo invalidar el valor predeterminado de forma manual.
-ms.date: 02/21/2020
-ms.openlocfilehash: 850c4a860878593d80aaa3b7b38efaff9e003f43
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.date: 05/20/2020
+ms.openlocfilehash: bbe5b12e378cf47b7c9b2c8576088e949e526a9a
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102664"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83803004"
 ---
 # <a name="c-language-versioning"></a>Control de versiones del lenguaje C#
 
@@ -17,23 +17,23 @@ Las reglas de este artículo se aplican al compilador ofrecido con Visual Studi
 
 C# 8.0 (y versiones posteriores) solo se admite en .NET Core 3.x y versiones más recientes. Muchas de las características más recientes requieren características de biblioteca y runtime introducidas en .NET Core 3.x:
 
-- La implementación de miembro de interfaz predeterminada requiere nuevas características en el CLR de .NET Core 3.0.
-- Las secuencias asincrónicas requieren los nuevos tipos <xref:System.IAsyncDisposable?displayProperty=nameWithType>, <xref:System.Collections.Generic.IAsyncEnumerable%601?displayProperty=nameWithType> y <xref:System.Collections.Generic.IAsyncEnumerator%601?displayProperty=nameWithType>.
-- Los índices y los intervalos requieren los nuevos tipos <xref:System.Index?displayProperty=nameWithType> y <xref:System.Range?displayProperty=nameWithType>.
-- Los tipos de referencia que admiten un valor NULL hacen uso de varios [atributos](attributes/nullable-analysis.md) para proporcionar mejores advertencias. Esos atributos se han agregado en .NET Core 3.0. Otras plataformas de destino no se han anotado con ninguno de estos atributos. Esto significa que es posible que las advertencias que admiten un valor NULL no reflejen con precisión los posibles problemas.
+- [La implementación de interfaz predeterminada](../whats-new/csharp-8.md#default-interface-methods) requiere nuevas características en el CLR de .NET Core 3.0.
+- Las [secuencias asincrónicas](../whats-new/csharp-8.md#asynchronous-streams) requieren los nuevos tipos <xref:System.IAsyncDisposable?displayProperty=nameWithType>, <xref:System.Collections.Generic.IAsyncEnumerable%601?displayProperty=nameWithType> y <xref:System.Collections.Generic.IAsyncEnumerator%601?displayProperty=nameWithType>.
+- Los [índices y los intervalos](../whats-new/csharp-8.md#indices-and-ranges) requieren los nuevos tipos <xref:System.Index?displayProperty=nameWithType>y <xref:System.Range?displayProperty=nameWithType>.
+- Los [tipos de referencia que admiten un valor NULL](../whats-new/csharp-8.md#nullable-reference-types) hacen uso de varios [atributos](attributes/nullable-analysis.md) para proporcionar mejores advertencias. Esos atributos se han agregado en .NET Core 3.0. Otras plataformas de destino no se han anotado con ninguno de estos atributos. Esto significa que es posible que las advertencias que admiten un valor NULL no reflejen con precisión los posibles problemas.
 
 ## <a name="defaults"></a>Valores predeterminados
 
 El compilador determina un valor predeterminado según estas reglas:
 
-|Marco de destino|version|Versión predeterminada del lenguaje C#|
-|----------------|-------|---------------------------|
-|.NET Core|3.x|C# 8.0|
-|.NET Core|2.x|C# 7.3|
-|.NET Standard|2.1|C# 8.0|
-|.NET Standard|2.0|C# 7.3|
-|.NET Standard|1.x|C# 7.3|
-|.NET Framework|todo|C# 7.3|
+| Marco de destino | version | Versión predeterminada del lenguaje C# |
+|------------------|---------|-----------------------------|
+| .NET Core        | 3.x     | C# 8.0                      |
+| .NET Core        | 2.x     | C# 7.3                      |
+| .NET Standard    | 2.1     | C# 8.0                      |
+| .NET Standard    | 2.0     | C# 7.3                      |
+| .NET Standard    | 1.x     | C# 7.3                      |
+| .NET Framework   | todo     | C# 7.3                      |
 
 Cuando el proyecto tiene como destino un marco en versión preliminar que tenga una versión de lenguaje preliminar correspondiente, la versión de lenguaje que se usa es la que está en versión preliminar. Puede usar las características más recientes con esa versión preliminar en cualquier entorno, sin que afecte a los proyectos que tienen como destino una versión de .NET Core publicada.
 
@@ -75,19 +75,32 @@ Las compilaciones de todos los subdirectorios del directorio que contenga ese ar
 
 En la siguiente tabla se muestran las versiones actuales del lenguaje C#. Es posible que el compilador no entienda necesariamente todos los valores si es más antiguo. Si instala .NET Core 3.0 o posterior, tiene acceso a todo lo que aparece.
 
-|Valor|Significado|
-|------------|-------------|
-|preview|El compilador acepta toda la sintaxis de lenguaje válida de la última versión preliminar.|
-|latest|El compilador acepta la sintaxis de la última versión del compilador (incluida las versión secundaria).|
-|latestMajor|El compilador acepta la sintaxis de la versión principal más reciente del compilador.|
-|8.0|El compilador acepta solo la sintaxis que se incluye en C# 8.0 o versiones anteriores.|
-|7.3|El compilador acepta solo la sintaxis que se incluye en C# 7.3 o versiones anteriores.|
-|7.2|El compilador acepta solo la sintaxis que se incluye en C# 7.2 o versiones anteriores.|
-|7.1|El compilador acepta solo la sintaxis que se incluye en C# 7.1 o versiones anteriores.|
-|7|El compilador acepta solo la sintaxis que se incluye en C# 7.0 o versiones anteriores.|
-|6|El compilador acepta solo la sintaxis que se incluye en C# 6.0 o versiones anteriores.|
-|5|El compilador acepta solo la sintaxis que se incluye en C# 5.0 o versiones anteriores.|
-|4|El compilador acepta solo la sintaxis que se incluye en C# 4.0 o versiones anteriores.|
-|3|El compilador acepta solo la sintaxis que se incluye en C# 3.0 o versiones anteriores.|
-|ISO-2|El compilador acepta solo la sintaxis que se incluye en ISO/IEC 23270:2006 C# (2.0). |
-|ISO-1|El compilador acepta solo la sintaxis que se incluye en ISO/IEC 23270:2003 C# (1.0/1.2). |
+[!INCLUDE [langversion-table](includes/langversion-table.md)]
+
+> [!TIP]
+> Abra el [Símbolo del sistema para desarrolladores de Visual Studio](../../framework/tools/developer-command-prompt-for-vs.md) y ejecute el siguiente comando para ver la lista de versiones de idioma disponibles en la máquina.
+>
+> ```CMD
+> csc -langversion:?
+> ```
+>
+> Al cuestionar la opción de compilación [ -langversion ](compiler-options/langversion-compiler-option.md) de este modo, se imprimirá algo similar a lo siguiente:
+>
+> ```CMD
+> Supported language versions:
+> default
+> 1
+> 2
+> 3
+> 4
+> 5
+> 6
+> 7.0
+> 7.1
+> 7.2
+> 7.3
+> 8.0 (default)
+> latestmajor
+> preview
+> latest
+> ```

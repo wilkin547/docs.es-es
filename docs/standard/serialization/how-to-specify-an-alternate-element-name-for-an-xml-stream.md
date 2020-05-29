@@ -1,5 +1,6 @@
 ---
 title: Procedimiento para especificar un nombre de elemento alternativo para una secuencia XML
+description: Aprenda a crear una secuencia XML con un nombre de elemento alternativo, por ejemplo, para los servicios Web XML que requieran la misma información con ligeras diferencias.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - classes, overriding
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
-ms.openlocfilehash: 2dc1110b858f639624e05382a67ddccf3ea1b047
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: d9851226b602226e00648d8742bf0a49c902c33b
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588461"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83377395"
 ---
 # <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Procedimiento para especificar un nombre de elemento alternativo para una secuencia XML
   
@@ -98,5 +99,5 @@ public void SerializeOverride()
 - <xref:System.Xml.Serialization.XmlAttributeOverrides>
 - [Serialización SOAP y XML](../../../docs/standard/serialization/xml-and-soap-serialization.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Cómo: para serializar un objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [Cómo: para deserializar un objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Cómo: Serialización de un objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [Cómo: Deserialización de un objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

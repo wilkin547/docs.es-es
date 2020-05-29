@@ -1,5 +1,6 @@
 ---
 title: 'Serialización y deserialización de JSON con C#: .NET'
+description: En esta introducción se describe la funcionalidad del espacio de nombres System.Text.Json para serializar y deserializar con JSON en .NET.
 ms.date: 01/10/2020
 no-loc:
 - System.Text.Json
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 660a2831aa6a807486fc47eae880bcd11347c547
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 909d979d46b30939e304af071de65d230febd92d
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159551"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83380136"
 ---
 # <a name="json-serialization-and-deserialization-marshalling-and-unmarshalling-in-net---overview"></a>Serialización y deserialización de JSON en .NET: información general
 
@@ -39,5 +40,5 @@ La biblioteca también proporciona clases para trabajar con un Document Object M
 * [Procedimiento para escribir convertidores](system-text-json-converters-how-to.md)
 * [Código fuente System.Text.Json](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json)
 * [Referencia de API System.Text.Json](xref:System.Text.Json)
-* [System.Text.JsonReferencia de API .Serialization](xref:System.Text.Json.Serialization)
+* [Referencia de API de System.Text.Json.Serialization](xref:System.Text.Json.Serialization)
 <!-- * [Roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->

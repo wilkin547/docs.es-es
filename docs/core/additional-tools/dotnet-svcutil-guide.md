@@ -3,18 +3,18 @@ title: Introducción a la herramienta svcutil de WCF
 description: Información general sobre la herramienta dotnet-svcutil de WCF de Microsoft que agrega funciones para proyectos de .NET Core y ASP.NET Core, similares a la herramienta svcutil de WCF para proyectos de .NET Framework.
 author: mlacouture
 ms.date: 02/22/2019
-ms.openlocfilehash: 1f500c9355112183a135c2b639807c7cd62fbbfc
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: fde42f7d040fba91f51ce6faa58282ed0206a853
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021257"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396215"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>Herramienta dotnet-svcutil de WCF para .NET Core
 
 La herramienta **dotnet-svcutil** de Windows Communication Foundation (WCF) es una herramienta de .NET que recupera metadatos de un servicio web en una ubicación de red o de un archivo WSDL, y genera una clase de WCF que contiene métodos de proxy de cliente que acceden a las operaciones del servicio web.
 
-Similar a la herramienta [**Service Model Metadata - svcutil**](../../framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para proyectos de .NET Framework, **dotnet-svcutil** es una herramienta de línea de comandos para generar una referencia de servicio web compatible con proyectos de .NET Core y .NET Standard.
+Similar a la herramienta [**de utilidad de metadatos de ServiceModel (Svcutil.exe)** ](../../framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para proyectos de .NET Framework, **dotnet-svcutil** es una herramienta de línea de comandos para generar una referencia de servicio web compatible con proyectos de .NET Core y .NET Standard.
 
 La herramienta **dotnet-svcutil** es una alternativa al proveedor de servicios conectados de Visual Studio [**WCF Web Service Reference**](wcf-web-service-reference-guide.md) que se distribuyó por primera vez en la versión 15.5 de Visual Studio 2017. La herramienta multiplataforma **dotnet-svcutil**, como herramienta de .NET, está disponible en Linux, macOS y Windows.
 
@@ -119,7 +119,7 @@ El archivo generado se guarda como _HelloSvcutil/ServiceReference1/Reference.cs_
 
 2. Busque el nombre de la clase de cliente y la operación que quiera usar. `Reference.cs` contendrá una clase que se hereda de `System.ServiceModel.ClientBase`, con métodos que pueden usarse para llamar a las operaciones del servicio. En este ejemplo, quiere llamar a la operación _Hello_ del servicio _SayHello_. `ServiceReference.SayHelloClient` es el nombre de la clase de cliente, y tiene un método llamado `HelloAsync` que se puede usar para llamar a la operación.
 
-3. Abra el archivo `Startup.cs` en el editor y agregue una instrucción using al espacio de nombres de la referencia de servicio en la parte superior:
+3. Abra el archivo `Startup.cs` en el editor y agregue una directiva `using` al espacio de nombres de la referencia de servicio en la parte superior:
 
     ```csharp
     using ServiceReference;
@@ -153,7 +153,7 @@ El archivo generado se guarda como _HelloSvcutil/ServiceReference1/Reference.cs_
 
 6. Vaya a la dirección URL indicada en la consola (por ejemplo, `http://localhost:5000`) en el explorador web.
 
-Debería ver el siguiente resultado: "Hello dotnet-svcutil!".
+Debería ver los siguientes resultados: "Hello dotnet-svcutil!"
 
 Para obtener una descripción detallada de los parámetros de la herramienta `dotnet-svcutil`, invoque la herramienta pasando el parámetro de ayuda del siguiente modo:
 # <a name="dotnet-svcutil-2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)

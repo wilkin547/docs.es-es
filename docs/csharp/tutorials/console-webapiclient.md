@@ -3,12 +3,12 @@ title: Creación de un cliente de REST con .NET Core
 description: Este tutorial le enseña varias características de .NET Core y el lenguaje C#.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 0105db519f7accec6bf8bfbafdc6a67a444b1074
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 4a3a76d1ec9893c2c3e0353e305a19e59c586fe5
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249173"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420388"
 ---
 # <a name="rest-client"></a>Cliente REST
 
@@ -77,9 +77,7 @@ using System.Threading.Tasks;
 
 Si compila el proyecto en este momento, obtendrá una advertencia generada para este método, porque no contiene ningún operador `await` y se ejecutará de forma sincrónica. Por ahora omítala; agregará los operadores `await` a medida que rellena el método.
 
-A continuación, cambie el nombre del espacio de nombres definido en la instrucción `namespace` de su valor predeterminado de `ConsoleApp` a `WebAPIClient`. Más adelante definiremos una clase `repo` en este espacio de nombres.
-
-A continuación, actualice el método `Main` para llamar a este método. El método `ProcessRepositories` devuelve una tarea. No debe salir del programa antes de que esta finalice. Por lo tanto, debe cambiar la firma de `Main`. Agregue el modificador `async` y cambie el tipo de valor devuelto a `Task`. A continuación, en el cuerpo del método, agregue una llamada a `ProcessRepositories`. Agregue la palabra clave `await` a esa llamada al método:
+Luego, actualice el método `Main` para llamar al método `ProcessRepositories`. El método `ProcessRepositories` devuelve una tarea. No debe salir del programa antes de que esta finalice. Por lo tanto, debe cambiar la firma de `Main`. Agregue el modificador `async` y cambie el tipo de valor devuelto a `Task`. A continuación, en el cuerpo del método, agregue una llamada a `ProcessRepositories`. Agregue la palabra clave `await` a esa llamada al método:
 
 ```csharp
 static async Task Main(string[] args)
@@ -173,6 +171,7 @@ var repositories = await JsonSerializer.DeserializeAsync<List<Repository>>(await
 Está usando un nuevo espacio de nombres, por lo que deberá agregarlo también en la parte superior del archivo:
 
 ```csharp
+using System.Collections.Generic;
 using System.Text.Json;
 ```
 

@@ -1,7 +1,7 @@
 ---
 title: Operadores aritméticos (referencia de C#)
 description: Obtenga información sobre los operadores de C# que realizan operaciones de multiplicación, división, resto, suma y resta con tipos numéricos.
-ms.date: 03/27/2019
+ms.date: 05/11/2020
 author: pkulikov
 f1_keywords:
 - ++_CSharpKeyword
@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: ea9bf9e065b2953fd20e0503a19d1dc143064c5d
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: d004ab466bc053ed286d85bcbee2766d8a087286
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738732"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83207240"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Operadores aritméticos (referencia de C#)
 
@@ -42,6 +42,8 @@ Los operadores siguientes realizan operaciones aritméticas con operandos de tip
 - Operadores binarios [`*` (multiplicación)](#multiplication-operator-), [`/` (división)](#division-operator-), [`%` (resto)](#remainder-operator-), [`+` (suma)](#addition-operator-) y [`-` (resta)](#subtraction-operator--).
 
 Estos operadores se admiten en todos los tipos numéricos [enteros](../builtin-types/integral-numeric-types.md) y de [punto flotante](../builtin-types/floating-point-numeric-types.md).
+
+En el caso de tipos enteros, dichos operadores (excepto los operadores `++` y `--`) se definen para los tipos `int`, `uint`, `long` y `ulong`. Cuando los operandos son de otro tipo entero (`sbyte`, `byte`, `short`, `ushort` o `char`), sus valores se convierten en el tipo `int`, que también es el tipo de resultado de una operación. Cuando los operandos son de distintos tipos enteros o de punto flotante, sus valores se convierten al tipo contenedor más cercano, si ese tipo existe. Para obtener más información, vea la sección [Promociones numéricas](~/_csharplang/spec/expressions.md#numeric-promotions) de [Especificación del lenguaje C#](~/_csharplang/spec/introduction.md). Los operadores `++` y `--` se definen para todos los tipos numéricos enteros y de punto flotante y el tipo [char](../builtin-types/char.md).
 
 ## <a name="increment-operator-"></a>Operador de incremento ++
 

@@ -2,12 +2,12 @@
 title: SourceLink y bibliotecas de .NET
 description: Prácticas recomendadas para el uso de SourceLink para mejorar la depuración de las bibliotecas de .NET.
 ms.date: 01/15/2019
-ms.openlocfilehash: 3d768ae6e79efa23a8402ea37bc34cd58cd52c8c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0261019087bce8e9d088a90c5e36bdd0b22f556b
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76744539"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212430"
 ---
 # <a name="source-link"></a>SourceLink
 
@@ -37,6 +37,10 @@ Puede usar el [Explorador de paquetes NuGet](https://github.com/NuGetPackageExpl
 ✔️ ES RECOMENDABLE publicar archivos de símbolos (`*.pdb`).
 
 > Para obtener la mejor experiencia de depuración, la biblioteca debe publicar archivos de símbolos, además de usar SourceLink. Para más información sobre los archivos de símbolos y los paquetes de símbolos, consulte [Paquetes de símbolos](./nuget.md#symbol-packages).
+
+✔️ CONSIDERE la posibilidad de habilitar compilaciones deterministas.
+
+> Las compilaciones deterministas permiten comprobar que el binario resultante se compiló a partir del origen especificado y proporcionan trazabilidad. Para más información sobre las compilaciones deterministas y las instrucciones para habilitarlas, consulte [Compilaciones deterministas](https://github.com/clairernovotny/DeterministicBuilds).
 
 >[!div class="step-by-step"]
 >[Anterior](dependencies.md)

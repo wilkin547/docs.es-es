@@ -3,12 +3,12 @@ title: 'Clases y objetos: tutorial de introducción a C#'
 description: Creación del primer programa con C# y análisis de los conceptos orientados a objetos
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: b6ad72997647b80b981f1a1871e384791404bdf7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5edb2d7b11caace2d794b7958dfeb75ef502ee2b
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156598"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396863"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>Exploración de la programación orientada a objetos con clases y objetos
 
@@ -47,7 +47,7 @@ Este archivo contendrá la definición de una ***cuenta bancaria***. La programa
 
 ## <a name="define-the-bank-account-type"></a>Definición del tipo de cuenta bancaria
 
-Puede empezar por crear los datos básicos de una clase que define dicho comportamiento. El resultado debería tener un aspecto similar a este:
+Puede empezar por crear los datos básicos de una clase que define dicho comportamiento. Cree un archivo con el comando **File:New**. Asígnele el nombre *BankAccount.cs*. Agregue el código siguiente al archivo *BankAccount.cs*:
 
 ```csharp
 using System;
@@ -79,7 +79,7 @@ Antes de avanzar, se va a dar un repaso a lo que ha compilado.  La declaración 
 
 La primera característica que se va a implementar es la apertura de una cuenta bancaria. Cuando un cliente abre una cuenta, debe proporcionar un saldo inicial y la información sobre el propietario o los propietarios de esa cuenta.
 
-La creación de un objeto del tipo `BankAccount` conlleva definir un ***constructor*** que asigne dichos valores. Un ***constructor*** es un miembro que tiene el mismo nombre que la clase. Se utiliza para inicializar los objetos de ese tipo de clase. Agregue el siguiente constructor al tipo `BankAccount`:
+La creación de un objeto del tipo `BankAccount` conlleva definir un ***constructor*** que asigne dichos valores. Un ***constructor*** es un miembro que tiene el mismo nombre que la clase. Se utiliza para inicializar los objetos de ese tipo de clase. Agregue el siguiente constructor al tipo `BankAccount`. Coloque el siguiente código encima de la declaración de `MakeDeposit`.
 
 ```csharp
 public BankAccount(string name, decimal initialBalance)
@@ -96,17 +96,17 @@ var account = new BankAccount("<name>", 1000);
 Console.WriteLine($"Account {account.Number} was created for {account.Owner} with {account.Balance} initial balance.");
 ```
 
-Escriba `dotnet run` para ver lo que sucede.  
+Vamos a ejecutar lo que se ha creado hasta ahora. Si usa Visual Studio, seleccione **Iniciar sin depurar** en el menú **Ejecutar**. Si va a usar una línea de comandos, escriba `dotnet run` en el directorio en el que ha creado el proyecto.
 
 ¿Ha observado que el número de cuenta está en blanco? Es el momento de solucionarlo. El número de cuenta debe asignarse cuando se construye el objeto. Sin embargo, el autor de la llamada no es el responsable de crearlo. El código de la clase `BankAccount` debe saber cómo asignar nuevos números de cuenta.  Una manera sencilla de hacerlo es empezar con un número de diez dígitos. Increméntelo cuando cree cada cuenta. Por último, almacene el número de cuenta actual cuando se construya un objeto.
 
-Agregue la siguiente declaración de miembro a la clase `BankAccount`:
+Agregue una declaración de miembro a la clase `BankAccount`. Coloque la siguiente línea de código después de la llave de apertura `{` al principio de la clase `BankAccount`:
 
 ```csharp
 private static int accountNumberSeed = 1234567890;
 ```
 
-Se trata de un miembro de datos. Tiene el estado `private`, lo que significa que solo se puede acceder a él con el código incluido en la clase `BankAccount`. Es una forma de separar las responsabilidades públicas (como tener un número de cuenta) de la implementación privada (cómo se generan los números de cuenta). También es `static`, lo que significa que se comparte entre todos los objetos `BankAccount`. El valor de una variable no estática es único para cada instancia del objeto `BankAccount`. Agregue las dos líneas siguientes al constructor para asignar el número de cuenta:
+Se trata de un miembro de datos. Tiene el estado `private`, lo que significa que solo se puede acceder a él con el código incluido en la clase `BankAccount`. Es una forma de separar las responsabilidades públicas (como tener un número de cuenta) de la implementación privada (cómo se generan los números de cuenta). También es `static`, lo que significa que se comparte entre todos los objetos `BankAccount`. El valor de una variable no estática es único para cada instancia del objeto `BankAccount`. Agregue las dos líneas siguientes al constructor para asignar el número de cuenta: Colóquelas después de la línea donde pone `this.Balance = initialBalance`:
 
 ```csharp
 this.Number = accountNumberSeed.ToString();
@@ -123,7 +123,7 @@ Se va a empezar por crear un tipo para representar una transacción. Se trata de
 
 [!code-csharp[Transaction](~/samples/snippets/csharp/classes-quickstart/Transaction.cs)]
 
-Ahora se va a agregar <xref:System.Collections.Generic.List%601> de objetos `Transaction` a la clase `BankAccount`. Agregue la declaración siguiente:
+Ahora se va a agregar <xref:System.Collections.Generic.List%601> de objetos `Transaction` a la clase `BankAccount`. Agregue la siguiente declaración después del constructor en el archivo *BankAccount.cs*:
 
 [!code-csharp[TransactionDecl](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#TransactionDeclaration)]
 
@@ -141,7 +141,7 @@ En este ejemplo se muestra un aspecto importante de las ***propiedades***. Ahora
 
 Después, implemente los métodos `MakeDeposit` y `MakeWithdrawal`. Estos métodos exigirán las dos reglas finales: el saldo inicial debe ser positivo y ningún reintegro debe generar un saldo negativo.
 
-Esta operación introduce el concepto de las ***excepciones***. La forma habitual de indicar que un método no puede completar su trabajo correctamente consiste en generar una excepción. El tipo de excepción y el mensaje asociado a ella describen el error. En este caso, el método `MakeDeposit` genera una excepción si el importe del depósito es negativo. El método `MakeWithdrawal` genera una excepción si la cantidad retirada es negativa o si la aplicación del reintegro resulta en un saldo negativo:
+Esta operación introduce el concepto de las ***excepciones***. La forma habitual de indicar que un método no puede completar su trabajo correctamente consiste en generar una excepción. El tipo de excepción y el mensaje asociado a ella describen el error. En este caso, el método `MakeDeposit` genera una excepción si el importe del depósito es negativo. El método `MakeWithdrawal` genera una excepción si la cantidad retirada es negativa o si la aplicación del reintegro tiene como resultado un saldo negativo: Agregue el código siguiente después de la declaración de la lista `allTransactions`:
 
 [!code-csharp[DepositAndWithdrawal](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal)]
 
@@ -151,7 +151,7 @@ El constructor debe obtener un cambio para que agregue una transacción inicial,
 
 [!code-csharp[Constructor](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#Constructor)]
 
-<xref:System.DateTime.Now?displayProperty=nameWithType> es una propiedad que devuelve la fecha y hora actuales. Agregue algunos depósitos y reintegros en el método `Main` para probar esta operación:
+<xref:System.DateTime.Now?displayProperty=nameWithType> es una propiedad que devuelve la fecha y hora actuales. Para probar esto, agregue algunos depósitos y reintegros en el método `Main`, a continuación del código que crea un elemento `BankAccount`:
 
 ```csharp
 account.MakeWithdrawal(500, DateTime.Now, "Rent payment");
@@ -160,7 +160,7 @@ account.MakeDeposit(100, DateTime.Now, "Friend paid me back");
 Console.WriteLine(account.Balance);
 ```
 
-Después, compruebe si detecta las condiciones de error al tratar de crear una cuenta con un saldo negativo:
+Después, compruebe si detecta las condiciones de error al tratar de crear una cuenta con un saldo negativo. Agregue el código siguiente después del código anterior que acaba de agregar:
 
 ```csharp
 // Test that the initial balances must be positive.
@@ -175,7 +175,7 @@ catch (ArgumentOutOfRangeException e)
 }
 ```
 
-Use las [instrucciones `try` y `catch`](../../language-reference/keywords/try-catch.md) para marcar un bloque de código que puede generar excepciones y para detectar los errores que se esperan. Puede usar la misma técnica para probar el código que genera una excepción para un saldo negativo:
+Use las [instrucciones `try` y `catch`](../../language-reference/keywords/try-catch.md) para marcar un bloque de código que puede generar excepciones y para detectar los errores que se esperan. Puede usar la misma técnica para probar el código que genera una excepción para un saldo negativo. Agregue el código siguiente al final del método `Main`:
 
 ```csharp
 // Test for a negative balance.
@@ -206,10 +206,10 @@ Agregue esta línea para probarla en *Program.cs*:
 Console.WriteLine(account.GetAccountHistory());
 ```
 
-Escriba `dotnet run` para ver los resultados.
+Ejecute el programa para ver los resultados.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Si se ha quedado bloqueado, puede consultar el origen de este tutorial [en el repositorio de GitHub](https://github.com/dotnet/samples/tree/master/csharp/classes-quickstart/).
+Si se ha quedado bloqueado, puede consultar el origen de este tutorial [en el repositorio de GitHub](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/classes-quickstart/).
 
 Enhorabuena, ha completado todos nuestros tutoriales de introducción a C#. Si le interesa obtener más información, continúe con más [tutoriales](../index.md).

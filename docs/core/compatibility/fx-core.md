@@ -3,12 +3,12 @@ title: Cambios importantes de .NET Framework a .NET Core
 titleSuffix: ''
 description: Enumera los cambios importantes de .NET Framework a .NET Core.
 ms.date: 05/05/2020
-ms.openlocfilehash: bb18e38fecc0805dfafe6a16c853ae04fd2a2913
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: f830d4571f21752900b35a7462bf0881673d6d2e
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82859941"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420453"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>Cambios importantes para la migración desde .NET Framework a .NET Core
 
@@ -23,6 +23,7 @@ Si va a migrar una aplicación desde .NET Framework a .NET Core, los cambios má
 - [UnauthorizedAccessException producida por FileSystemInfo.Attributes](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes)
 - [No se admite el control de excepciones de estado de proceso dañado](#handling-corrupted-state-exceptions-is-not-supported)
 - [Las propiedades UriBuilder ya no anteponen caracteres iniciales](#uribuilder-properties-no-longer-prepend-leading-characters)
+- [Process.StartInfo produce una excepción InvalidOperationException para los procesos que no se iniciaron](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start)
 
 ### <a name="net-core-21"></a>.NET Core 2.1
 
@@ -44,6 +45,10 @@ Si va a migrar una aplicación desde .NET Framework a .NET Core, los cambios má
 
 ***
 
+[!INCLUDE [startinfo-throws-exception](../../../includes/core-changes/corefx/1.0/startinfo-throws-exception.md)]
+
+***
+
 ## <a name="cryptography"></a>Criptografía
 
 - [Se respeta el parámetro booleano de SignedCms.ComputeSignature](#boolean-parameter-of-signedcmscomputesignature-is-respected)
@@ -51,6 +56,16 @@ Si va a migrar una aplicación desde .NET Framework a .NET Core, los cambios má
 ### <a name="net-core-21"></a>.NET Core 2.1
 
 [!INCLUDE [Boolean parameter of SignedCms.ComputeSignature is respected](~/includes/core-changes/cryptography/2.1/compute-signature-silent-parameter.md)]
+
+***
+
+## <a name="msbuild"></a>MSBuild
+
+- [Cambio de nombre de archivo de manifiesto del recurso](#resource-manifest-file-name-change)
+
+### <a name="net-core-30"></a>.NET Core 3.0
+
+[!INCLUDE[Resource file names](~/includes/core-changes/msbuild/3.0/resource-manifest-name.md)]
 
 ***
 

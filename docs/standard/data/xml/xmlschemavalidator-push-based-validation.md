@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 911d4460-dd91-4958-85b2-2ca3299f9ec6
-ms.openlocfilehash: 6a0cc110c2b8bcd97b9f5c16a344db5a63046353
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d5b2fe4325000023acc98580a2a6d014f56fecbd
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709808"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419114"
 ---
 # <a name="xmlschemavalidator-push-based-validation"></a>Validación basada en inserción de XmlSchemaValidator
 
@@ -456,7 +456,7 @@ En la siguiente tabla se describe cómo los signos de puntuación que se encuent
 |------------|-----------------|
 |&#124;|Se puede llamar al método o al estado (al que está antes o después de la barra).|
 |?|El método o estado que precede al signo de interrogación es opcional, pero si se llama, solo se puede llamar una vez.|
-|*|El método o estado que precede al símbolo * es opcional y se puede llamar más de una vez.|
+|\*|El método o estado que precede al símbolo \* es opcional y se puede llamar más de una vez.|
 
 ## <a name="validation-context"></a>Contexto de validación
 

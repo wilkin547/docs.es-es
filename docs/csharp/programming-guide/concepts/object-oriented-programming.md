@@ -1,13 +1,13 @@
 ---
 title: Programación orientada a objetos (C#)
-ms.date: 02/08/2020
+ms.date: 05/13/2020
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 2b6be3384f76fa210c2b52c55ecf9bd865df43a6
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 541d1a2581a3241f35fc8478040c007b6581e3b2
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200098"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396688"
 ---
 # <a name="object-oriented-programming-c"></a>Programación orientada a objetos (C#)
 
@@ -92,7 +92,6 @@ La mayoría de las propiedades tienen métodos o procedimientos tanto para estab
 Para obtener más información, consulte:
 
 - [get](../../language-reference/keywords/get.md)
-
 - [set](../../language-reference/keywords/set.md)
 
 #### <a name="methods"></a>Métodos
@@ -104,7 +103,7 @@ Para definir un método de una clase:
 ```csharp
 class SampleClass
 {
-    public int sampleMethod(string sampleParam)
+    public int SampleMethod(string sampleParam)
     {
         // Insert code here
     }
@@ -116,8 +115,8 @@ Una clase puede tener varias implementaciones o *sobrecargas* del mismo método 
 Para sobrecargar un método:
 
 ```csharp
-public int sampleMethod(string sampleParam) {}
-public int sampleMethod(int sampleParam) {}
+public int SampleMethod(string sampleParam) { }
+public int SampleMethod(int sampleParam) { }
 ```
 
 En la mayoría de los casos, un método se declara dentro de una definición de clase. En cambio, C# también admite los *métodos de extensión*, que le permiten agregar métodos a una clase existente fuera de la definición de la clase actual.
@@ -156,9 +155,7 @@ Para obtener más información sobre los finalizadores y la recolección de elem
 Cuando ocurre algo interesante, los eventos habilitan una clase u objeto para notificarlo a otras clases u objetos. La clase que envía (o genera) el evento recibe el nombre de *publicador* y las clases que reciben (o controlan) el evento se denominan *suscriptores*. Para obtener más información sobre los eventos y la forma en que se generan y controlan, vea [Eventos](../../../standard/events/index.md).
 
 - Para declarar un evento en una clase, use la palabra clave [event](../../language-reference/keywords/event.md).
-
 - Para generar un evento, invoque al delegado de eventos.
-
 - Para suscribirse a un evento, use el operador `+=`; para anular la suscripción de un evento, use el operador `-=`.
 
 #### <a name="nested-classes"></a>Clases anidadas
@@ -187,14 +184,14 @@ Todas las clases y miembros de clase pueden especificar el nivel de acceso que p
 
 Están disponibles los siguientes modificadores de acceso:
 
-|Modificador de C#|Definición|
-|------------------|----------------|
-|[public](../../language-reference/keywords/public.md)|Puede obtener acceso al tipo o miembro cualquier otro código del mismo ensamblado o de otro ensamblado que haga referencia a éste.|
-|[private](../../language-reference/keywords/private.md)|Solamente puede obtener acceso al tipo o miembro el código de la misma clase.|
-|[protected](../../language-reference/keywords/protected.md)|Solamente puede obtener acceso al tipo o miembro el código de la misma clase o de una clase derivada.|
-|[internal](../../language-reference/keywords/internal.md)|Puede obtener acceso al tipo o miembro cualquier código del mismo ensamblado, pero no de un ensamblado distinto.|
-|[protected internal](../../language-reference/keywords/protected-internal.md)|Puede obtener acceso al tipo o miembro cualquier código del mismo ensamblado o cualquier clase derivada de otro ensamblado.|
-|[private protected](../../language-reference/keywords/private-protected.md)|Un código de la misma clase o de una clase derivada dentro del ensamblado de clase base puede acceder al tipo o miembro en cuestión.|
+| Modificador de C# | Definición |
+|--|--|
+| [public](../../language-reference/keywords/public.md) | Puede obtener acceso al tipo o miembro cualquier otro código del mismo ensamblado o de otro ensamblado que haga referencia a éste. |
+| [private](../../language-reference/keywords/private.md) | Solamente puede obtener acceso al tipo o miembro el código de la misma clase. |
+| [protected](../../language-reference/keywords/protected.md) | Solamente puede obtener acceso al tipo o miembro el código de la misma clase o de una clase derivada. |
+| [internal](../../language-reference/keywords/internal.md) | Puede obtener acceso al tipo o miembro cualquier código del mismo ensamblado, pero no de un ensamblado distinto. |
+| [protected internal](../../language-reference/keywords/protected-internal.md) | Puede obtener acceso al tipo o miembro cualquier código del mismo ensamblado o cualquier clase derivada de otro ensamblado. |
+| [private protected](../../language-reference/keywords/private-protected.md) | Un código de la misma clase o de una clase derivada dentro del ensamblado de clase base puede acceder al tipo o miembro en cuestión. |
 
 Para obtener más información, consulte [Modificadores de acceso](../classes-and-structs/access-modifiers.md).
 
@@ -212,15 +209,18 @@ Una vez creadas las instancias de una clase, puede asignar valores a las propied
 // Set a property value.
 sampleObject.sampleProperty = "Sample String";
 // Call a method.
-sampleObject.sampleMethod();
+sampleObject.SampleMethod();
 ```
 
 Para asignar valores a las propiedades durante el proceso de creación de instancias de una clase, use los inicializadores de objeto:
 
 ```csharp
 // Set a property value.
-SampleClass sampleObject = new SampleClass
-    { FirstProperty = "A", SecondProperty = "B" };
+var sampleObject = new SampleClass
+{
+    FirstProperty = "A",
+    SecondProperty = "B"
+};
 ```
 
 Para obtener más información, consulte:
@@ -259,8 +259,11 @@ Para crear una instancia de un tipo anónimo:
 
 ```csharp
 // sampleObject is an instance of a simple anonymous type.
-var sampleObject =
-    new { FirstProperty = "A", SecondProperty = "B" };
+var sampleObject = new
+{
+    FirstProperty = "A",
+    SecondProperty = "B"
+};
 ```
 
 Para obtener más información, consulte: [Tipos anónimos](../classes-and-structs/anonymous-types.md).
@@ -275,7 +278,7 @@ La herencia permite crear una nueva clase que reutiliza, extiende y modifica el 
 Para heredar de una clase base:
 
 ```csharp
-class DerivedClass:BaseClass {}
+class DerivedClass:BaseClass { }
 ```
 
 De forma predeterminada, todas las clases se pueden heredar. Sin embargo, puede especificar si una clase no se debe usar como clase base o bien crear una clase que solo se pueda usar como clase base.
@@ -295,7 +298,6 @@ public abstract class B { }
 Para obtener más información, consulte:
 
 - [sealed](../../language-reference/keywords/sealed.md)
-
 - [abstract](../../language-reference/keywords/abstract.md)
 
 ### <a name="overriding-members"></a>Reemplazar miembros
@@ -304,12 +306,12 @@ De forma predeterminada, una clase derivada hereda todos los miembros de su clas
 
 Los siguientes modificadores se utilizan para controlar cómo se reemplazan propiedades y métodos:
 
-|Modificador de C#|Definición|
-|------------------|----------------|
-|[virtual](../../language-reference/keywords/virtual.md)|Permite invalidar un miembro de una clase derivada.|
-|[override](../../language-reference/keywords/override.md)|Invalida un miembro virtual (invalidable) definido en la clase base.|
-|[abstract](../../language-reference/keywords/abstract.md)|Requiere que se invalide un miembro de clase en la clase derivada.|
-|[new (modificador)](../../language-reference/keywords/new-modifier.md)|Oculta un miembro heredado de una clase base.|
+| Modificador de C# | Definición |
+|--|--|
+| [virtual](../../language-reference/keywords/virtual.md) | Permite invalidar un miembro de una clase derivada. |
+| [override](../../language-reference/keywords/override.md) | Invalida un miembro virtual (invalidable) definido en la clase base. |
+| [abstract](../../language-reference/keywords/abstract.md) | Requiere que se invalide un miembro de clase en la clase derivada. |
+| [new (modificador)](../../language-reference/keywords/new-modifier.md) | Oculta un miembro heredado de una clase base. |
 
 ## <a name="interfaces"></a>Interfaces
 
@@ -320,7 +322,7 @@ Para definir una interfaz:
 ```csharp
 interface ISampleInterface
 {
-    void doSomething();
+    void DoSomething();
 }
 ```
 
@@ -329,7 +331,7 @@ Para implementar una interfaz en una clase:
 ```csharp
 class SampleClass : ISampleInterface
 {
-    void ISampleInterface.doSomething()
+    void ISampleInterface.DoSomething()
     {
         // Method implementation.
     }
@@ -354,15 +356,14 @@ public class SampleGeneric<T>
 Para crear una instancia de una clase genérica:
 
 ```csharp
-SampleGeneric<string> sampleObject = new SampleGeneric<string>();
+var sampleObject = new SampleGeneric<string>();
 sampleObject.Field = "Sample string";
 ```
 
 Para obtener más información, consulte:
 
-- [Genéricos](../../../standard/generics/index.md)
-
-- [Genéricos](../generics/index.md)
+- [Elementos genéricos en .NET](../../../standard/generics/index.md)
+- [Aspectos genéricos: Guía de programación de C#](../generics/index.md)
 
 ## <a name="delegates"></a>Delegados
 
@@ -383,10 +384,11 @@ Para crear una referencia a un método que coincida con la firma especificada po
 class SampleClass
 {
     // Method that matches the SampleDelegate signature.
-    public static void sampleMethod(string message)
+    public static void SampleMethod(string message)
     {
         // Add code here.
     }
+
     // Method that instantiates the delegate.
     void SampleDelegate()
     {

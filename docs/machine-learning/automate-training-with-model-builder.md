@@ -3,12 +3,12 @@ title: ¿Qué es el Generador de modelos y cómo funciona?
 description: Cómo usar el Generador de modelos de ML.NET para entrenar un modelo de Machine Learning de forma automática
 ms.date: 03/25/2020
 ms.custom: overview, mlnet-tooling
-ms.openlocfilehash: 9cf66455109908ebd9fc10e62cf4f067609b57d9
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 4afdbfd1682a30647b09d05d51a5c73c214fe2bd
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344783"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616936"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>¿Qué es el Generador de modelos y cómo funciona?
 
@@ -114,7 +114,7 @@ Si aún no tiene datos propios, pruebe uno de estos conjuntos de datos:
 ||Predicción de transacciones de tarjetas de crédito fraudulentas|[datos de tarjetas de crédito](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Clase (1 si es fraudulenta, en caso contrario, 0)|Cantidad, V1-V28 (características anónimas)|
 ||Predecir el tipo de problema en un repositorio de GitHub|[datos de problemas de GitHub](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|Área|Título, descripción|
 |Predicción de valores|Predicción del precio de los taxis|[datos de carreras de taxi](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|Carrera|Tiempo de viaje, distancia|
-|Clasificación de la imagen|Predicción de la categoría de un problema|[imágenes de flores](http://download.tensorflow.org/example_images/flower_photos.tgz)|El tipo de flor: margarita, diente de león, rosas, girasoles o tulipanes|Los propios datos de la imagen|
+|Clasificación de la imagen|Predicción de la categoría de una flor |[imágenes de flores](http://download.tensorflow.org/example_images/flower_photos.tgz)|El tipo de flor: margarita, diente de león, rosas, girasoles o tulipanes|Los propios datos de la imagen|
 |Recomendación|Predicción de películas que le gusten a alguien|[clasificaciones de películas](http://files.grouplens.org/datasets/movielens/ml-latest-small.zip)|Usuarios, películas|Clasificaciones|
 
 ## <a name="train"></a>Entrenamiento

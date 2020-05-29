@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Pri
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: e291888bee25a9c87259560ca4b12635ee73c3c7
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: a3444071abae89780304a9687e486f3842283a33
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82975412"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396242"
 ---
 # <a name="architectural-principles"></a>Principios de la arquitectura
 
@@ -24,7 +24,7 @@ Las soluciones de software se deben diseñar y crear con el mantenimiento en men
 
 Un principio fundamental durante el desarrollo es la **separación de intereses**. Este principio afirma que el software se debe separar en función de los tipos de trabajo que realiza. Por ejemplo, considere una aplicación que incluye lógica para identificar los elementos de interés que se van a mostrar al usuario y que da formato a estos elementos de una manera determinada para hacerlos más evidentes. El comportamiento responsable de elegir a qué elementos dar formato se debe mantener separado del comportamiento responsable de dar formato a los elementos, puesto que estos son intereses independientes que solo se relacionan entre sí de manera casual.
 
-Arquitectónicamente, las aplicaciones se pueden crear de forma lógica para seguir este principio mediante la separación del comportamiento de negocios principal de la lógica de la interfaz de usuario y la infraestructura. Idealmente, la lógica y las reglas de negocios deben residir en un proyecto independiente, que no debería depender de otros proyectos de la aplicación. Esto ayuda a garantizar que el modelo de negocio sea fácil de probar y pueda evolucionar sin que se esté estrechamente unido a detalles de implementación de bajo nivel. La separación de intereses es una consideración clave detrás del uso de capas en arquitecturas de aplicación.
+Desde el punto de vista de la arquitectura, las aplicaciones se pueden crear de forma lógica para seguir este principio mediante la separación del comportamiento de negocios principal de la lógica de la interfaz de usuario y la infraestructura. Idealmente, la lógica y las reglas de negocios deben residir en un proyecto independiente, que no debería depender de otros proyectos de la aplicación. Esta separación ayuda a garantizar que el modelo de negocio sea fácil de probar y pueda evolucionar sin que esté estrechamente unido a detalles de implementación de bajo nivel. La separación de intereses es una consideración clave detrás del uso de capas en arquitecturas de aplicación.
 
 ### <a name="encapsulation"></a>Encapsulación
 
@@ -34,7 +34,7 @@ En las clases, la encapsulación se logra mediante la limitación del acceso ext
 
 ### <a name="dependency-inversion"></a>Inversión de dependencias
 
-La dirección de dependencia dentro de la aplicación debe estar en la dirección de la abstracción, no de los detalles de implementación. La mayoría de las aplicaciones se escriben de manera que la dependencia de tiempo de compilación fluya en la dirección de ejecución del tiempo de ejecución. Esto genera un gráfico de dependencias directas. Es decir, si el módulo A llama a una función en el módulo B, que llama a una función en el módulo C, A dependerá en tiempo de compilación de B, que a su vez dependerá de C, como se muestra en la figura 4-1.
+La dirección de dependencia dentro de la aplicación debe estar en la dirección de la abstracción, no de los detalles de implementación. La mayoría de las aplicaciones se escriben de manera que la dependencia del tiempo de compilación fluya en la dirección de ejecución del tiempo de ejecución, lo que produce un gráfico de dependencias directas. Es decir, si el módulo A llama a una función en el módulo B, que llama a una función en el módulo C, A dependerá en tiempo de compilación de B, que a su vez dependerá de C, como se muestra en la figura 4-1.
 
 ![Gráfico de dependencias directas](./media/image4-1.png)
 
@@ -52,7 +52,7 @@ La **Inversión de dependencias** es una parte fundamental de la creación de ap
 
 **Los métodos y las clases deben requerir explícitamente todos los objetos de colaboración que necesiten para funcionar correctamente.** Los constructores de clases proporcionan una oportunidad para que las clases identifiquen lo que necesitan para poder tener un estado válido y funcionar correctamente. Si se definen clases que se pueden construir y a las que se puede llamar, pero que solo funcionarán correctamente si existen determinados componentes globales o de infraestructura, estas clases *no estarán siendo honestas* con sus clientes. El contrato de constructor indica al cliente que solo necesita los elementos especificados (posiblemente ninguno si la clase solo usa un constructor sin parámetros), pero después, en tiempo de ejecución, en realidad el objeto necesita algo más.
 
-Si siguen el principio de dependencias explícitas, las clases y métodos estarán siendo sinceros con sus clientes con respecto a lo que necesitan para poder funcionar. Esto hace que el código sea más autoexplicativo y los contratos de codificación más fáciles de usar, puesto que los usuarios confiarán en eso siempre que proporcionen lo que se necesita en forma de parámetros de método o constructor, los objetos con los trabajan se comportarán correctamente en tiempo de ejecución.
+Si siguen el principio de dependencias explícitas, las clases y métodos estarán siendo sinceros con sus clientes con respecto a lo que necesitan para poder funcionar. Seguir el principio hace que el código sea más autoexplicativo y los contratos de codificación más fáciles de usar, puesto que los usuarios confiarán en que siempre que proporcionen lo que se necesita en forma de parámetros de método o constructor, los objetos con los trabajan se comportarán correctamente en tiempo de ejecución.
 
 ### <a name="single-responsibility"></a>Responsabilidad única
 
@@ -66,7 +66,7 @@ Cuando este principio se aplica a la arquitectura de la aplicación y se lleva a
 
 ### <a name="dont-repeat-yourself-dry"></a>Una vez y solo una (DRY)
 
-La aplicación debe evitar especificar el comportamiento relacionado con un determinado concepto en varios lugares, ya que esto es una fuente de errores frecuente. En algún momento, un cambio en los requisitos requerirá cambiar este comportamiento. Es probable que al menos una instancia del comportamiento no se pueda actualizar, y se producirá un comportamiento incoherente del sistema.
+La aplicación debe evitar especificar el comportamiento relacionado con un determinado concepto en varios lugares, ya que esta práctica es una fuente de errores frecuente. En algún momento, un cambio en los requisitos requerirá cambiar este comportamiento. Es probable que al menos una instancia del comportamiento no se pueda actualizar, y que el sistema se comporte de manera incoherente.
 
 En lugar de duplicar la lógica, se puede encapsular en una construcción de programación. Convierta esta construcción en la única autoridad sobre este comportamiento y haga que cualquier otro elemento de la aplicación que requiera este comportamiento use la nueva construcción.
 

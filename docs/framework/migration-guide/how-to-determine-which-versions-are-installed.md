@@ -10,12 +10,12 @@ helpviewer_keywords:
 - versions, determining for .NET Framework
 - .NET Framework, determining version
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
-ms.openlocfilehash: 8469f977c6ed9691c81a2a8354935557b5c27171
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d25e4ae97877462b2a3b90e51262fb656921e392
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77093841"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205497"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Procedimiento para determinar qué versiones de .NET Framework están instaladas
 
@@ -61,7 +61,7 @@ El valor REG_DWORD de **Release** del Registro representa la versión de .NET F
 | .NET Framework 4.7     | En Windows 10 Creators Update: 460798<br />En todos los demás sistemas operativos Windows (incluidos otros sistemas operativos Windows 10): 460805 |
 | .NET Framework 4.7.1   | En Windows 10 Fall Creators Update y Windows Server, versión 1709: 461308<br/>En todos los demás sistemas operativos Windows (incluidos otros sistemas operativos Windows 10): 461310 |
 | .NET Framework 4.7.2   | En la actualización de Windows 10 de abril de 2018 y Windows Server, versión 1803: 461808<br/>En todos los sistemas operativos diferentes de la Actualización de abril de 2018 de Windows 10 y Windows Server, versión 1803: 461814 |
-| .NET Framework 4.8     | En la actualización de Windows 10 de mayo de 2019 y en la de noviembre de 2019: 528040<br/>En Windows 10 y Windows Server, versión 1909: 528209<br/>En todos los demás sistemas operativos Windows (incluidos otros sistemas operativos Windows 10): 528049 |
+| .NET Framework 4.8     | En la actualización de Windows 10 de mayo de 2019 y en la de noviembre de 2019: 528040<br/>En la actualización de mayo de 2020 de Windows 10: 528209<br/>En todos los demás sistemas operativos Windows (incluidos otros sistemas operativos Windows 10): 528049 |
 
 ### <a name="minimum-version"></a>Versión mínima
 

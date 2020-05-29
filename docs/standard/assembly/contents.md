@@ -1,19 +1,20 @@
 ---
-title: Contenido de un ensamblado
+title: Contenido de los ensamblados
+description: En este artículo se describe el contenido de un ensamblado .NET, que puede incluir metadatos de ensamblado, metadatos de tipo, código MSIL y recursos.
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework]
 - assemblies [.NET Core]
 - single-file assemblies
 ms.assetid: 28116714-da77-45f7-826d-fa035d121948
-ms.openlocfilehash: bee9d5422ec3101b2486f233ae0816ae3643f4e7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 94df452162ed7290fab7fa267d2624e6d844a587
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75345572"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378566"
 ---
-# <a name="assembly-contents"></a>Contenido de un ensamblado
+# <a name="assembly-contents"></a>Contenido de los ensamblados
 
 En general, un ensamblado estático está formado por cuatro elementos:
 
