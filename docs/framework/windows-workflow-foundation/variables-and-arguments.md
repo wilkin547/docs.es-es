@@ -3,12 +3,12 @@ title: Variables y argumentos
 description: En este artículo se describen las variables, que representan el almacenamiento de datos, y los argumentos, que representan el flujo de datos hacia y desde una actividad en Workflow Foundation.
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
-ms.openlocfilehash: 47b8a7bddc8c3a9a8427bcb3e93760a63e5fa976
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 5cce9931e9b0a37d5fafbfb84527ffd543a0a50f
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421311"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201954"
 ---
 # <a name="variables-and-arguments"></a>Variables y argumentos
 En Windows Workflow Foundation (WF), las variables representan el almacenamiento de datos y los argumentos representan el flujo de datos dentro y fuera de una actividad. Una actividad tiene un conjunto de argumentos y constituyen la firma de la actividad. Además, una actividad puede mantener una lista de variables a las que un desarrollador de software puede agregar o quitar variables durante el diseño de un flujo de trabajo. Los argumentos se enlazan mediante una expresión que devuelve un valor.  

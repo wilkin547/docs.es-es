@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 2917a8d9b42d831566855271a2f2110637db586f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b968c599cf061fbd03b7ba8fb19470f6ace11a55
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174477"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202170"
 ---
 # <a name="table-valued-parameters"></a>Parámetros con valores de tabla
 Los parámetros con valores de tabla proporcionan una manera sencilla de serializar varias filas de datos de una aplicación cliente en SQL Server sin necesidad de ir y volver repetidas veces ni de ninguna lógica especial de servidor para procesar los datos. Puede usar parámetros con valores de tabla para encapsular filas de datos en una aplicación cliente y enviar los datos al servidor en un único comando con parámetros. Las filas de datos entrantes se almacenan en una variable de tabla en la que, a continuación, se puede operar mediante el uso de Transact-SQL.  
@@ -25,7 +25,7 @@ Los parámetros con valores de tabla proporcionan una manera sencilla de seriali
 |Resource|Descripción|  
 |--------------|-----------------|  
 |[Usar parámetros con valores de tabla (motor de base de datos)](/sql/relational-databases/tables/use-table-valued-parameters-database-engine)|Describe cómo crear y usar parámetros con valores de tabla.|  
-|[Tipos de tablas definidas por el usuario](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))|Describe los tipos de tabla definidos por el usuario que se usan para declarar parámetros con valores de tabla.|  
+|[Tipos de tabla definidos por el usuario](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))|Describe los tipos de tabla definidos por el usuario que se usan para declarar parámetros con valores de tabla.|  
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>Pasar varias filas de versiones previas de SQL Server  
  Antes de la incorporación de los parámetros con valores de tabla a SQL Server 2008, las opciones para pasar varias filas de datos a un procedimiento almacenado o a un comando SQL con parámetros eran limitadas. Un desarrollador podría elegir entre las siguientes opciones para pasar varias filas al servidor:  
@@ -39,7 +39,7 @@ Los parámetros con valores de tabla proporcionan una manera sencilla de seriali
 - Use el programa de la utilidad `bcp` o el objeto <xref:System.Data.SqlClient.SqlBulkCopy> para cargar muchas filas de datos en una tabla. Aunque esta técnica es muy eficaz, no admite el procesamiento del lado servidor a menos que los datos se carguen en una tabla temporal o una variable de tabla.  
   
 ## <a name="creating-table-valued-parameter-types"></a>Crear tipos de parámetros con valores de tabla  
- Los parámetros con valores de tabla se basan en estructuras de tabla fuertemente tipadas definidas mediante instrucciones CREATE TYPE de Transact-SQL. Debe crear un tipo de tabla y definir la estructura en SQL Server para poder usar los parámetros con valores de tabla en las aplicaciones de cliente. Para obtener más información sobre la creación de tipos de tabla, vea [Tipos de tabla definidos por](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))el usuario .  
+ Los parámetros con valores de tabla se basan en estructuras de tabla fuertemente tipadas definidas mediante instrucciones CREATE TYPE de Transact-SQL. Debe crear un tipo de tabla y definir la estructura en SQL Server para poder usar los parámetros con valores de tabla en las aplicaciones de cliente. Para obtener más información sobre la creación de tipos de tabla, vea [tipos de tabla definidos por el usuario](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)).  
   
  La instrucción siguiente crea un tipo de tabla denominado CategoryTableType que consta de las columnas CategoryID y CategoryName:  
   
@@ -272,10 +272,10 @@ tvpParam.SqlDbType = SqlDbType.Structured
 insertCommand.ExecuteNonQuery()  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
-- [Configuración de parámetros y tipos de datos de parámetros](../configuring-parameters-and-parameter-data-types.md)
+- [Configurar parámetros y tipos de datos de parámetros](../configuring-parameters-and-parameter-data-types.md)
 - [Comandos y parámetros](../commands-and-parameters.md)
 - [Parámetros de DataAdapter](../dataadapter-parameters.md)
-- [Operaciones de datos de SQL Server en ADO.NET](sql-server-data-operations.md)
+- [SQL Server operaciones de datos en ADO.NET](sql-server-data-operations.md)
 - [Información general de ADO.NET](../ado-net-overview.md)

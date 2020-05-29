@@ -9,22 +9,22 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: 99fe377e8fff193c4f8bb566946b95c61c1b3693
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 8ae4b4b9938f72f4f4fc011e180cd69440ec3dd9
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568878"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201754"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>Consultar el servicio de datos (Data Services de WCF)
 
-La biblioteca de cliente de WCF Data Services permite ejecutar consultas en un servicio de datos usando patrones de programación de .NET Framework conocidos, incluido el uso de Language Integrated Query (LINQ). La biblioteca de cliente traduce una consulta, que se define en el cliente como instancia de la clase <xref:System.Data.Services.Client.DataServiceQuery%601>, en un mensaje de solicitud HTTP GET. La Biblioteca recibe el mensaje de respuesta y lo traduce en instancias de las clases del servicio de datos de cliente. El seguimiento de estas clases lo realiza la clase <xref:System.Data.Services.Client.DataServiceContext> a la que pertenece <xref:System.Data.Services.Client.DataServiceQuery%601>.
+La biblioteca de cliente de WCF Data Services permite ejecutar consultas en un servicio de datos usando patrones de programación de .NET Framework conocidos, incluido el uso de Language Integrated Query (LINQ). La biblioteca de cliente traduce una consulta, que se define en el cliente como instancia de la clase <xref:System.Data.Services.Client.DataServiceQuery%601>, en un mensaje de solicitud HTTP GET. La biblioteca recibe el mensaje de respuesta y lo traduce en instancias de las clases del servicio de datos de cliente. El seguimiento de estas clases lo realiza la clase <xref:System.Data.Services.Client.DataServiceContext> a la que pertenece <xref:System.Data.Services.Client.DataServiceQuery%601>.
 
 ## <a name="data-service-queries"></a>Consultas del servicio de datos
 
 La clase <xref:System.Data.Services.Client.DataServiceQuery%601> genérica representa una consulta que devuelve una colección de cero o más instancias de tipo de entidad. Una consulta del servicio de datos siempre pertenece al contexto de un servicio de datos existente. Este contexto mantiene la información necesaria del URI del servicio y la de los metadatos para crear y ejecutar la consulta.
 
-Cuando se usa el cuadro de diálogo **Agregar referencia de servicio** para agregar un servicio de datos a una aplicación cliente basada en .NET Framework, se crea una clase de contenedor de entidades que hereda de la clase <xref:System.Data.Services.Client.DataServiceContext>. Esta clase incluye propiedades que devuelven instancias de <xref:System.Data.Services.Client.DataServiceQuery%601> con tipo. Existe una propiedad para cada conjunto de entidades que expone el servicio de datos. Estas propiedades facilitan la creación de una instancia de <xref:System.Data.Services.Client.DataServiceQuery%601> con tipo.
+Cuando se usa el cuadro de diálogo **Agregar referencia de servicio** para agregar un servicio de datos a una aplicación cliente basada en .NET Framework, se crea una clase de contenedor de entidades que hereda de la <xref:System.Data.Services.Client.DataServiceContext> clase. Esta clase incluye propiedades que devuelven instancias de <xref:System.Data.Services.Client.DataServiceQuery%601> con tipo. Existe una propiedad para cada conjunto de entidades que expone el servicio de datos. Estas propiedades facilitan la creación de una instancia de <xref:System.Data.Services.Client.DataServiceQuery%601> con tipo.
 
 Las consultas se ejecutan en los escenarios siguientes:
 
@@ -45,11 +45,11 @@ Cuando se ejecuta la siguiente consulta, devuelve todas las entidades `Customers
 
 Para obtener más información, vea [Cómo: ejecutar consultas de servicio de datos](how-to-execute-data-service-queries-wcf-data-services.md).
 
-El cliente de WCF Data Services admite consultas para objetos enlazados en tiempo de ejecución, como cuando se usa el C#tipo dinámico en. Sin embargo, por razones de rendimiento siempre debe redactar consultas fuertemente tipadas en el servicio de datos. El cliente no admite los objetos de tipo y dinámicos de la clase <xref:System.Tuple>.
+El cliente de WCF Data Services admite consultas para objetos enlazados en tiempo de ejecución, como cuando se usa el tipo *dinámico* en C#. Sin embargo, por motivos de rendimiento, siempre debe crear consultas fuertemente tipadas en el servicio de datos. El cliente no admite los objetos de tipo y dinámicos de la clase <xref:System.Tuple>.
 
 ## <a name="linq-queries"></a>Consultas LINQ
 
-Dado que la clase <xref:System.Data.Services.Client.DataServiceQuery%601> implementa la interfaz de <xref:System.Linq.IQueryable%601> definida por LINQ, la biblioteca de cliente de WCF Data Services puede transformar consultas LINQ en datos del conjunto de entidades en un URI que representa una expresión de consulta evaluada en un recurso del servicio de datos. En el siguiente ejemplo hay una consulta LINQ que es equivalente a la clase <xref:System.Data.Services.Client.DataServiceQuery%601> anterior que devuelve `Orders` con un costo de flete de más de 30 dólares y ordena los resultados por el costo del flete:
+Dado <xref:System.Data.Services.Client.DataServiceQuery%601> que la clase implementa la <xref:System.Linq.IQueryable%601> interfaz definida por LINQ, la biblioteca de cliente de WCF Data Services puede transformar consultas LINQ en datos del conjunto de entidades en un URI que representa una expresión de consulta evaluada en un recurso del servicio de datos. En el siguiente ejemplo hay una consulta LINQ que es equivalente a la clase <xref:System.Data.Services.Client.DataServiceQuery%601> anterior que devuelve `Orders` con un costo de flete de más de 30 dólares y ordena los resultados por el costo del flete:
 
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionslinqspecific)]
 [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionslinqspecific)]
@@ -131,7 +131,7 @@ En algunos escenarios, es útil saber el número total de entidades de una entid
 
 Además, puede obtener el recuento total de entidades del conjunto como valor de las estructuras <xref:System.Int32> o <xref:System.Int64> llamando a los métodos <xref:System.Linq.Enumerable.Count%2A> o <xref:System.Linq.Enumerable.LongCount%2A>, respectivamente. Cuando se llama a estos métodos, no se devuelve ningún objeto <xref:System.Data.Services.Client.QueryOperationResponse%601>; solo se devuelve el valor de recuento. Para obtener más información, vea [Cómo: determinar el número de entidades devueltas por una consulta](number-of-entities-returned-by-a-query-wcf.md).
 
-## <a name="in-this-section"></a>Esta sección
+## <a name="in-this-section"></a>En esta sección
 
 - [Proyecciones de consultas](query-projections-wcf-data-services.md)
 
@@ -139,18 +139,18 @@ Además, puede obtener el recuento total de entidades del conjunto como valor de
 
 - [Consideraciones sobre LINQ](linq-considerations-wcf-data-services.md)
 
-- [Cómo: ejecutar consultas de servicios de datos](how-to-execute-data-service-queries-wcf-data-services.md)
+- [Procedimiento para ejecutar consultas de servicios de datos](how-to-execute-data-service-queries-wcf-data-services.md)
 
-- [Adición de opciones de consulta a una consulta de servicio de datos](how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)
+- [Procedimiento para agregar opciones de consulta a una consulta de servicio de datos](how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)
 
-- [Determinación del número de entidades devueltas por una consulta](number-of-entities-returned-by-a-query-wcf.md)
+- [Procedimiento para determinar el número de entidades devueltas por una consulta](number-of-entities-returned-by-a-query-wcf.md)
 
-- [Especificación de las credenciales del cliente para una solicitud de servicio de datos](specify-client-creds-for-a-data-service-request-wcf.md)
+- [Procedimiento para especificar las credenciales del cliente para una solicitud de servicio de datos](specify-client-creds-for-a-data-service-request-wcf.md)
 
-- [Establecimiento de los encabezados en la solicitud de cliente](how-to-set-headers-in-the-client-request-wcf-data-services.md)
+- [Procedimiento para establecer encabezados en la solicitud de cliente](how-to-set-headers-in-the-client-request-wcf-data-services.md)
 
-- [Resultados de consulta del proyecto](how-to-project-query-results-wcf-data-services.md)
+- [Procedimiento relativo a los resultados de la consulta del proyecto](how-to-project-query-results-wcf-data-services.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-- [Biblioteca cliente de Servicios de datos de WCF](wcf-data-services-client-library.md)
+- [Biblioteca cliente de Data Services de WCF](wcf-data-services-client-library.md)

@@ -2,17 +2,17 @@
 title: Extremos de servicio y direccionamiento de la cola
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: ec932e83a2b37330f54be545a45358a5ab055423
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 8b323993a698dac219e0f2be43e9b508a19065dd
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744621"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202425"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Extremos de servicio y direccionamiento de la cola
 En este tema se aborda cómo los clientes direccionan servicios que leen de las colas y cómo los puntos de conexión de servicio se asignan a las colas. Como recordatorio, en la siguiente ilustración se muestra la implementación de la aplicación en cola de Windows Communication Foundation clásico (WCF).  
   
- ![Diagrama de aplicaciones en cola](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Distributed-Queue-Figure")  
+ ![Diagrama de aplicaciones puestas en cola](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Distributed-Queue-Figure")  
   
  Para que el cliente pueda enviar el mensaje al servicio, el cliente direcciona el mensaje a la cola de destino. Para que el servicio pueda leer mensajes de la cola, establece su dirección de escucha en la cola de destino. El direccionamiento en WCF es un identificador uniforme de recursos (URI), mientras que los nombres de cola de Message Queuing (MSMQ) no están basados en URI. Por lo tanto, es esencial entender cómo direccionar las colas creadas en MSMQ mediante WCF.  
   
@@ -30,15 +30,15 @@ En este tema se aborda cómo los clientes direccionan servicios que leen de las 
   
  El direccionamiento de una cola en WCF se basa en el siguiente patrón:  
   
- net. MSMQ://\<*nombre de host*>/[Private/] \<*nombre de cola*>  
+ net. MSMQ:// \<*host-name*> /[Private/]\<*queue-name*>  
   
  donde:  
   
-- \<*nombre de host*> es el nombre del equipo que hospeda la cola de destino.  
+- \<*host-name*>es el nombre del equipo que hospeda la cola de destino.  
   
 - [privado] es opcional. Se utiliza al direccionar una cola de destino que es una cola privada. Para direccionar una cola pública, no debe especificar privado. Tenga en cuenta que, a diferencia de las rutas de acceso de MSMQ, no hay "$" en el formulario URI de WCF.  
   
-- \<*nombre*de la cola > es el nombre de la cola. El nombre de la cola también puede hacer referencia a una subcola. Por lo tanto, \<*nombre de cola*> = \<> *Name-of-Queue*[; *subqueue-Name*].  
+- \<*queue-name*>es el nombre de la cola. El nombre de la cola también puede hacer referencia a una subcola. Por lo tanto, \<*queue-name*>  =  \<*name-of-queue*> [;* subqueue-Name*].  
   
  Ejemplo1: Para direccional una cola privada PurchaseOrders hospedada en el equipo abc atadatum.com, el URI sería net.msmq://abc.adatum.com/private/PurchaseOrders.  
   
@@ -72,9 +72,9 @@ En este tema se aborda cómo los clientes direccionan servicios que leen de las 
   
 |Dirección de cola basada en URI WCF|Utilizar la propiedad de Active Directory|Propiedad del protocolo de transferencia de la cola|Nombres de formato de MSMQ resultantes|  
 |----------------------------------|-----------------------------------|--------------------------------------|---------------------------------|  
-|Net. MSMQ://\<nombre del equipo >/Private/ABC|False (valor predeterminado)|Native (valor predeterminado)|DIRECT=OS:machine-name\private$\abc|  
-|Net. MSMQ://\<nombre del equipo >/Private/ABC|False|SRMP|DIRECT =http://machine/msmq/private$/ABC|  
-|Net. MSMQ://\<nombre del equipo >/Private/ABC|True|Nativa|PUBLIC=some-guid (el GUID de la cola)|  
+|`Net.msmq://<machine-name>/private/abc`|False (valor predeterminado)|Native (valor predeterminado)|`DIRECT=OS:machine-name\private$\abc`|  
+|`Net.msmq://<machine-name>/private/abc`|False|SRMP|`DIRECT=http://machine/msmq/private$/abc`|  
+|`Net.msmq://<machine-name>/private/abc`|True|Nativo|`PUBLIC=some-guid`(el GUID de la cola)|  
   
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>Leer los mensajes de la cola de mensajes no enviados o la cola de mensajes dudosos  
  Para leer los mensajes de una cola de mensajes dudosos que es una subcola de la cola de destino, abra `ServiceHost` con la dirección de la subcola.  
@@ -87,23 +87,23 @@ En este tema se aborda cómo los clientes direccionan servicios que leen de las 
   
  Al utilizar una cola de mensajes no enviados personalizada, observe que la cola de mensajes no enviados debe estar situada en el equipo local. Como tal, el URI para la cola de mensajes no enviados está restringido a la forma:  
   
- net. MSMQ://localhost/[Private/] \<> *de nombre de cola de mensajes no enviados personalizado*.  
+ net. MSMQ://localhost/[Private/] \<*custom-dead-letter-queue-name*> .  
   
  Un servicio WCF comprueba que todos los mensajes que recibe se dirigieron a la cola concreta en la que escucha. Si la cola de destino del mensaje no coincide con la cola donde se encuentra, el servicio no procesa el mensaje. Se trata de una cuestión que los servicios que escuchan a una cola de mensajes no enviados deben abordar porque cualquier mensaje en la cola de mensajes no enviados debía ser entregado a otra parte. Para leer los mensajes de una cola de mensajes no enviados o de una cola de mensajes dudosos, debe utilizarse `ServiceBehavior` con el parámetro <xref:System.ServiceModel.AddressFilterMode.Any>. Para obtener un ejemplo, vea [colas de mensajes con problemas de entrega](../../../../docs/framework/wcf/samples/dead-letter-queues.md).  
   
 ## <a name="msmqintegrationbinding-and-service-addressing"></a>MsmqIntegrationBinding y direccionamiento del servicio  
  `MsmqIntegrationBinding` se utiliza para la comunicación con aplicaciones MSMQ tradicionales. Para facilitar la interoperación con una aplicación MSMQ existente, WCF solo admite el direccionamiento de nombres de formato. Por consiguiente, los mensajes enviados utilizando este enlace deben cumplir el esquema del URI:  
   
- MSMQ. FormatName:\<*nombre de formato de msmq*>>  
+ MSMQ. FormatName:\<*MSMQ-format-name*>>  
   
  MSMQ-Format-Name tiene el formato especificado por MSMQ en [About Message Queuing](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms706032(v=vs.85)).  
   
  Observe que solo puede utilizar los nombres de formato directos, y los nombres de formato públicos y privados (requiere la integración de Active Directory) al recibir los mensajes de una cola utilizando `MsmqIntegrationBinding`. Sin embargo, se aconseja que utilice los nombres de formato directos. Por ejemplo, en Windows Vista, el uso de cualquier otro nombre de formato produce un error porque el sistema intenta abrir una subcola, que solo se puede abrir con nombres de formato directo.  
   
- Al direccionar SRMP utilizando `MsmqIntegrationBinding`, no hay ningún requisito para agregar /msmq/ en el nombre de formato directo para ayudar a Internet Information Services (IIS) con la distribución. Por ejemplo: al direccionar una cola ABC mediante el protocolo SRMP, en lugar de DIRECT =http://adatum.com/msmq/private$/ABC, debe usar DIRECT =http://adatum.com/private$/ABC.  
+ Al direccionar SRMP utilizando `MsmqIntegrationBinding`, no hay ningún requisito para agregar /msmq/ en el nombre de formato directo para ayudar a Internet Information Services (IIS) con la distribución. Por ejemplo: al direccionar una cola ABC mediante el protocolo SRMP, en lugar de `DIRECT=http://adatum.com/msmq/private$/abc` , debe usar `DIRECT=http://adatum.com/private$/abc` .  
   
  Observe que no puede utilizar net.msmq:// direccionando con `MsmqIntegrationBinding`. Dado que `MsmqIntegrationBinding` admite el direccionamiento de nombres de formato de MSMQ de forma libre, puede utilizar un servicio WCF que use este enlace para utilizar las características de multidifusión y lista de distribución en MSMQ. Una excepción es especificar `CustomDeadLetterQueue` al utilizar `MsmqIntegrationBinding`. Debe tener la forma net.msmq://, similar a cómo se especifica utilizando `NetMsmqBinding`.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 - [Alojamiento web de una aplicación en cola](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

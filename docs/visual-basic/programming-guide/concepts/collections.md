@@ -2,12 +2,12 @@
 title: Colecciones
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: 232b9ec7b5975092e73daf0a7384fa816f55f72f
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: d27761ba7a955d1dc8843ad168a82a9c9c27a6f6
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81646343"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202447"
 ---
 # <a name="collections-visual-basic"></a>Colecciones (Visual Basic)
 
@@ -22,7 +22,7 @@ Una colección es una clase, por lo que debe declarar una instancia de la clase 
 Si la colección contiene elementos de un solo tipo de datos, puede usar una de las clases del espacio de nombres <xref:System.Collections.Generic?displayProperty=nameWithType>. Una colección genérica cumple la seguridad de tipos para que ningún otro tipo de datos se pueda agregar a ella. Cuando recupera un elemento de una colección genérica, no tiene que determinar su tipo de datos ni convertirlo.
 
 > [!NOTE]
-> Para los ejemplos de este tema, `System.Collections.Generic` incluya `System.Linq` [instrucciones Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) para los espacios de nombres y.
+> Para ver los ejemplos de este tema, incluya instrucciones [Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) para los `System.Collections.Generic` espacios de `System.Linq` nombres y.
 
 <a name="BKMK_SimpleCollection"></a>
 
@@ -30,7 +30,7 @@ Si la colección contiene elementos de un solo tipo de datos, puede usar una de 
 
 Los ejemplos de esta sección usan la clase genérica <xref:System.Collections.Generic.List%601>, que le permite trabajar con una lista de objetos fuertemente tipados.
 
-En el ejemplo siguiente se crea una lista de cadenas y, a continuación, recorre en iteración las cadenas mediante un [For Each... Siguiente](../../../visual-basic/language-reference/statements/for-each-next-statement.md) declaración.
+En el ejemplo siguiente se crea una lista de cadenas y, a continuación, se recorre en iteración las cadenas mediante una... [ Instrucción siguiente](../../../visual-basic/language-reference/statements/for-each-next-statement.md) .
 
 ```vb
 ' Create a list of strings.
@@ -63,7 +63,7 @@ Next
 'Output: chinook coho pink sockeye
 ```
 
-Puede utilizar un [For... Instrucción Next](../../../visual-basic/language-reference/statements/for-next-statement.md) `For Each` en lugar de una instrucción para recorrer en iteración una colección. Esto se consigue con el acceso a los elementos de la colección mediante la posición de índice. El índice de los elementos comienza en 0 y termina en el número de elementos menos 1.
+Puede usar una [... Instrucción Next](../../../visual-basic/language-reference/statements/for-next-statement.md) en lugar de una `For Each` instrucción para recorrer en iteración una colección. Esto se consigue con el acceso a los elementos de la colección mediante la posición de índice. El índice de los elementos comienza en 0 y termina en el número de elementos menos 1.
 
 El ejemplo siguiente recorre en iteración los elementos de una colección mediante `For…Next` en lugar de `For Each`.
 
@@ -95,7 +95,7 @@ Next
 'Output: chinook pink sockeye
 ```
 
-El ejemplo siguiente quita elementos de una lista genérica. En lugar `For Each` de una declaración, un [For... Se](../../../visual-basic/language-reference/statements/for-next-statement.md) utiliza la siguiente instrucción que itera en orden descendente. Esto es porque el método <xref:System.Collections.Generic.List%601.RemoveAt%2A> hace que los elementos después de un elemento quitado tengan un valor de índice inferior.
+El ejemplo siguiente quita elementos de una lista genérica. En lugar de una `For Each` instrucción, una instrucción [for... ](../../../visual-basic/language-reference/statements/for-next-statement.md)Se usa la siguiente instrucción que recorre en iteración en orden descendente. Esto es porque el método <xref:System.Collections.Generic.List%601.RemoveAt%2A> hace que los elementos después de un elemento quitado tengan un valor de índice inferior.
 
 ```vb
 Dim numbers As New List(Of Integer) From
@@ -296,7 +296,7 @@ Private Function BuildDictionary2() As Dictionary(Of String, Element)
 End Function
 ```
 
-En el ejemplo siguiente se usa el método <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> y la propiedad <xref:System.Collections.Generic.Dictionary%602.Item%2A> de `Dictionary` para encontrar rápidamente un elemento por clave. La `Item` propiedad permite tener acceso `elements` a un `elements(symbol)` elemento de la colección mediante el código de Visual Basic.
+En el ejemplo siguiente se usa el método <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> y la propiedad <xref:System.Collections.Generic.Dictionary%602.Item%2A> de `Dictionary` para encontrar rápidamente un elemento por clave. La `Item` propiedad le permite tener acceso a un elemento de la `elements` colección utilizando el `elements(symbol)` código de Visual Basic.
 
 ```vb
 Private Sub FindInDictionary(ByVal symbol As String)
@@ -330,7 +330,7 @@ End Sub
 
 ## <a name="using-linq-to-access-a-collection"></a>Uso de LINQ para tener acceso a una colección
 
-LINQ (Language-Integrated Query) puede usar para tener acceso a las colecciones. Las consultas LINQ proporcionan capacidades de filtrado, ordenación y agrupación. Para obtener más información, vea [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md).
+LINQ (Language-Integrated Query) puede usar para tener acceso a las colecciones. Las consultas LINQ proporcionan capacidades de filtrado, ordenación y agrupación. Para obtener más información, vea [Introducción con LINQ en Visual Basic](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md).
 
 El ejemplo siguiente ejecuta una consulta LINQ en una `List` genérica. La consulta LINQ devuelve otra colección que contiene los resultados.
 
@@ -458,7 +458,7 @@ End Class
 
 ## <a name="defining-a-custom-collection"></a>Definición de una colección personalizada
 
-Puede definir una colección implementando la interfaz <xref:System.Collections.Generic.IEnumerable%601> o <xref:System.Collections.IEnumerable>. Para obtener información adicional, consulte [Enumeración de una colección](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hwyysy67(v=vs.100)).
+Puede definir una colección implementando la interfaz <xref:System.Collections.Generic.IEnumerable%601> o <xref:System.Collections.IEnumerable>. Para obtener más información, vea [enumerar una colección](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hwyysy67(v=vs.100)).
 
 Aunque puede definir una colección personalizada, es mejor usar las colecciones incluidas en .NET Framework. Estas colecciones se describen en la sección [Tipos de colecciones](#kinds-of-collections) de este tema.
 
@@ -538,13 +538,13 @@ End Class
 
 ## <a name="iterators"></a>Iterators
 
-Los *iteradores* se usan para efectuar una iteración personalizada en una colección. Un iterador puede ser un método o un descriptor de acceso `get`. Un iterador utiliza un [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) instrucción para devolver cada elemento de la colección de uno en uno.
+Los *iteradores* se usan para efectuar una iteración personalizada en una colección. Un iterador puede ser un método o un descriptor de acceso `get`. Un iterador usa una instrucción [yield](../../../visual-basic/language-reference/statements/yield-statement.md) para devolver cada elemento de la colección de uno en uno.
 
-Llamar a un iterador mediante un [For Each... Siguiente](../../../visual-basic/language-reference/statements/for-each-next-statement.md) declaración. Cada iteración del bucle `For Each` llama al iterador. Cuando se alcanza una instrucción `Yield` en el iterador, se devuelve una expresión y se conserva la ubicación actual en el código. La ejecución se reinicia desde esa ubicación la próxima vez que se llama al iterador.
+Se llama a un iterador mediante un método [for each... Instrucción siguiente](../../../visual-basic/language-reference/statements/for-each-next-statement.md) . Cada iteración del bucle `For Each` llama al iterador. Cuando se alcanza una instrucción `Yield` en el iterador, se devuelve una expresión y se conserva la ubicación actual en el código. La ejecución se reinicia desde esa ubicación la próxima vez que se llama al iterador.
 
-Para obtener más información, vea [Iterators (Visual Basic)](../../../visual-basic/programming-guide/concepts/iterators.md).
+Para obtener más información, vea [iteradores (Visual Basic)](../../../visual-basic/programming-guide/concepts/iterators.md).
 
-El siguiente ejemplo usa el método del iterador. El método de `Yield` iterador tiene una instrucción que está dentro de un [For... Siguiente](../../../visual-basic/language-reference/statements/for-next-statement.md) bucle. En el método `ListEvenNumbers`, cada iteración del cuerpo de la instrucción `For Each` crea una llamada al método iterador, que continúa con la siguiente instrucción `Yield`.
+El siguiente ejemplo usa el método del iterador. El método iterador tiene una `Yield` instrucción que está dentro [de un... Siguiente](../../../visual-basic/language-reference/statements/for-next-statement.md) bucle. En el método `ListEvenNumbers`, cada iteración del cuerpo de la instrucción `For Each` crea una llamada al método iterador, que continúa con la siguiente instrucción `Yield`.
 
 ```vb
 Public Sub ListEvenNumbers()
@@ -568,11 +568,11 @@ As IEnumerable(Of Integer)
 End Function
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 - [Inicializadores de colección](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
 - [Conceptos de programación (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)
-- [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Option Strict (instrucción)](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
 - [Parallel LINQ (PLINQ)](../../../standard/parallel-programming/introduction-to-plinq.md)
 - [Colecciones y estructuras de datos](../../../standard/collections/index.md)

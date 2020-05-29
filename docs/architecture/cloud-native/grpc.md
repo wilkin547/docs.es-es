@@ -3,12 +3,12 @@ title: gRPC
 description: Obtenga información sobre gRPC, su rol en aplicaciones nativas de la nube y cómo difiere de la comunicación HTTP RESTful.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: f34b267d7f5c6b4e593841c80df44d1ccbde95ae
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 35a8325dd82e946d88b09b223287e2871be88ffa
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614050"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201333"
 ---
 # <a name="grpc"></a>gRPC
 
@@ -83,7 +83,7 @@ Favorecer gRPC para los siguientes escenarios:
 
 En el momento en que se redactó este documento, gRPC se usa principalmente con los servicios back-end. La mayoría de los exploradores modernos no pueden proporcionar el nivel de control HTTP/2 necesario para admitir un cliente de gRPC de front-end. Dicho esto, hay una [iniciativa temprana](https://devblogs.microsoft.com/aspnet/grpc-web-experiment/) que permite la comunicación de gRPC desde aplicaciones basadas en explorador creadas con tecnologías webassembly de JavaScript o increíbles. [GRPC-web para .net](https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-WEB.md) permite que una aplicación ASP.net Core gRPC admita características de gRPC en aplicaciones de explorador:
 
-- Clientes generados por código fuertemente tipados
+- Clientes fuertemente tipados y generados por código
 - Mensajes protobuf de Compact
 - Streaming de servidor
 
