@@ -2,12 +2,12 @@
 title: Implementación de un bus de eventos con RabbitMQ para el entorno de desarrollo o de prueba
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedores | Uso de RabbitMQ para implementar la mensajería de un bus de eventos para entornos de integración con fines de desarrollo de entornos de prueba.
 ms.date: 10/02/2018
-ms.openlocfilehash: 12e37fabfe915b4d2089d27f7852528a9a037d3c
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 32259c76fe81d324ba3ea9b35f7fddc6a0f9cdbc
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988302"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144297"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Implementación de un bus de eventos con RabbitMQ para el entorno de desarrollo o de prueba
 
@@ -117,7 +117,7 @@ En escenarios de producción, compruebe los recursos adicionales siguientes, esp
 Soluciones listas para la producción compatibles con RabbitMQ.
 
 - **EasyNetQ**: cliente de la API de .NET de código abierto para RabbitMQ \
-  <http://easynetq.com/>
+  <https://easynetq.com/>
 
 - **MassTransit** \
   <https://masstransit-project.com/>

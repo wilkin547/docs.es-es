@@ -4,12 +4,12 @@ titleSuffix: ''
 description: Obtenga información sobre los SDK de proyectos de .NET Core.
 ms.date: 02/02/2020
 ms.topic: conceptual
-ms.openlocfilehash: 88ec1bf2c4917c69b80b997d090219097694d2bc
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 67dede3caabd2967adca22e7563376c761829655
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206059"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144244"
 ---
 # <a name="net-core-project-sdks"></a>SDK de proyectos de .NET Core
 
@@ -21,8 +21,8 @@ Los siguientes SDK están disponibles para .NET Core:
 
 | ID | Descripción | Repositorio|
 | - | - | - |
-| `Microsoft.NET.Sdk` | El SDK de .NET Core | https://github.com/dotnet/sdk |
-| `Microsoft.NET.Sdk.Web` | El [SDK web](/aspnet/core/razor-pages/web-sdk) de .NET Core | https://github.com/aspnet/websdk |
+| `Microsoft.NET.Sdk` | El SDK de .NET Core | <https://github.com/dotnet/sdk> |
+| `Microsoft.NET.Sdk.Web` | El [SDK web](/aspnet/core/razor-pages/web-sdk) de .NET Core | <https://github.com/aspnet/websdk> |
 | `Microsoft.NET.Sdk.Razor` | El [SDK de Razor](/aspnet/core/razor-pages/sdk) de .NET Core |
 | `Microsoft.NET.Sdk.Worker` | El SDK del servicio de trabajo de .NET Core |
 | `Microsoft.NET.Sdk.WindowsDesktop` | El SDK WinForms y WPF de .NET Core |

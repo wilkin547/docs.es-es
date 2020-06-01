@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Des
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 3de70af23206b0ae0525541b3d2cb480dc5bb882
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 955d4ec4a0bd0ddf2d022d4154fc6528b2abf3d0
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80987912"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144557"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Desarrollo de aplicaciones ASP.NET Core MVC
 
@@ -422,7 +422,7 @@ Tenga especial cuidado al crear una implementación de criptografía, una perten
 > ### <a name="references--security"></a>Referencias: seguridad
 >
 > - **Introducción a la seguridad de ASP.NET Core**  
->   https://docs.microsoft.com/aspnet/core/security/
+>   <https://docs.microsoft.com/aspnet/core/security/>
 > - **Exigir SSL en una aplicación ASP.NET básica**  
 >   <https://docs.microsoft.com/aspnet/core/security/enforcing-ssl>
 > - **Introducción a Identity**  
@@ -493,7 +493,7 @@ Considere las formas en que las aplicaciones se comunican directamente con las a
 > - **SignalR de ASP.NET Core**  
 >   <https://github.com/dotnet/aspnetcore/tree/master/src/SignalR>
 > - **Administrador de WebSocket**  
->   https://github.com/radu-matei/websocket-manager
+>   <https://github.com/radu-matei/websocket-manager>
 
 ## <a name="domain-driven-design--should-you-apply-it"></a>¿Se debe aplicar el diseño controlado por dominios?
 

@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 2bf44ec1657307161c13f88f7d1628b2c930fd05
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 199245aa0017d9232e3c9889c7845c3b9ec9877b
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805522"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144752"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Tutorial: Detección de objetos con ONNX en ML.NET
 
@@ -102,7 +102,7 @@ Ahora que tiene un conocimiento general de lo que es ONNX y de cómo funciona Ti
 
 1. Copie el directorio `assets` en el directorio de proyecto *ObjectDetection*. Este directorio y sus subdirectorios contienen los archivos de imagen (excepto los del modelo de Tiny YOLOv2, que descargará y agregará en el paso siguiente) que se necesitan en este tutorial.
 
-1. Descargue el [modelo de Tiny YOLOv2](https://onnxzoo.blob.core.windows.net/models/opset_8/tiny_yolov2/tiny_yolov2.tar.gz) de [ONNX Model Zoo](https://github.com/onnx/models/tree/master/vision/object_detection_segmentation/tiny_yolov2) y descomprímalo.
+1. Descargue el [modelo de Tiny YOLOv2](https://onnxzoo.blob.core.windows.net/models/opset_8/tiny_yolov2/tiny_yolov2.tar.gz) de [ONNX Model Zoo](https://github.com/onnx/models/tree/master/vision/object_detection_segmentation/tiny-yolov2) y descomprímalo.
 
     Abra el símbolo del sistema y escriba el comando siguiente:
 

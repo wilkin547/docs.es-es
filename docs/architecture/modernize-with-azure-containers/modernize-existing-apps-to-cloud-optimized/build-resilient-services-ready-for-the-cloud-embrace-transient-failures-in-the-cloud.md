@@ -2,12 +2,12 @@
 title: 'Creación de servicios resistentes y aptos para la nube: aceptación de errores transitorios en la nube'
 description: 'Modernización de las aplicaciones .NET existentes con Azure Clour y contenedores Windows | Creación de servicios resistentes y aptos para la nube: aceptación de errores transitorios en la nube'
 ms.date: 04/30/2018
-ms.openlocfilehash: e516dc675ceb8def25c6d676bced0ea7f253b2d5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 899084ac00d9be0df47ef88c026f4e8c19722bb6
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74711250"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144257"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Creación de servicios resistentes y aptos para la nube: aceptación de errores transitorios en la nube
 
@@ -55,7 +55,7 @@ Para obtener información sobre cómo implementar estrategias para controlar err
 
 - **Biblioteca Polly para una comunicación HTTP resistente**
 
-    https://github.com/App-vNext/Polly
+    <https://github.com/App-vNext/Polly>
 
 >[!div class="step-by-step"]
 >[Anterior](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)

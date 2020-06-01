@@ -2,12 +2,12 @@
 title: Diseño de un modelo de dominio de microservicio
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre los conceptos clave para diseñar un modelo de dominio orientado a un DDD
 ms.date: 01/30/2020
-ms.openlocfilehash: 64860d75dca645904e973a4b8927a716a1603394
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 234d6e518eac8de5b2f130b91adb32b6a24a7265
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988419"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144596"
 ---
 # <a name="design-a-microservice-domain-model"></a>Diseño de un modelo de dominio de microservicio
 
@@ -133,14 +133,14 @@ Para identificar y trabajar con agregados se requiere investigación y experienc
 
 #### <a name="additional-resources"></a>Recursos adicionales
 
-- **Vaughn Vernon. Diseño eficaz de agregados - Parte I: modelado de un único agregado** (de <http://dddcommunity.org/>) \
-  <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_1.pdf>
+- **Vaughn Vernon. Diseño eficaz de agregados - Parte I: modelado de un único agregado** (de <https://dddcommunity.org/>) \
+  <https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_1.pdf>
 
-- **Vaughn Vernon. Diseño eficaz de agregados - Parte II: hacer que los agregados funcionen de forma conjunta** (de <http://dddcommunity.org/>) \
-  <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf>
+- **Vaughn Vernon. Diseño eficaz de agregados - Parte II: hacer que los agregados funcionen de forma conjunta** (de <https://dddcommunity.org/>) \
+  <https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf>
 
-- **Vaughn Vernon. Diseño eficaz de agregados - Parte III: obtención de datos mediante la detección** (de <http://dddcommunity.org/>) \
-  <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_3.pdf>
+- **Vaughn Vernon. Diseño eficaz de agregados - Parte III: obtención de datos mediante la detección** (de <https://dddcommunity.org/>) \
+  <https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_3.pdf>
 
 - **Sergey Grybniak. Patrones de diseño tácticos de diseño guiado por el dominio** \
   <https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part>

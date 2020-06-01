@@ -2,12 +2,12 @@
 title: Aplicar enfoques CQRS y CQS en un microservicio DDD en eShopOnContainers
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre cómo se implementa CQRS en el microservicio de pedidos en eShopOnContainers.
 ms.date: 03/03/2020
-ms.openlocfilehash: eda0ee374b41a81811e92e2829b10dc8515e0ccd
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 0fd38a93a1056cda4abd2f9f89ee9efc626985c8
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988497"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144284"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Aplicación de enfoques CQRS y CQS en un microservicio DDD en eShopOnContainers
 
@@ -48,7 +48,7 @@ Solo hay una arquitectura de aplicación: la arquitectura del sistema o la aplic
   <https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf>
 
 - **Udi Dahan. CQRS aclarado** \
-  <http://udidahan.com/2009/12/09/clarified-cqrs/>
+  <https://udidahan.com/2009/12/09/clarified-cqrs/>
 
 >[!div class="step-by-step"]
 >[Anterior](apply-simplified-microservice-cqrs-ddd-patterns.md)

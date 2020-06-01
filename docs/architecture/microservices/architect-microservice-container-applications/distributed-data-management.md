@@ -2,12 +2,12 @@
 title: Desafíos y soluciones de la administración de datos distribuidos
 description: Descubra cuáles son los desafíos y soluciones de la administración de datos distribuidos en el mundo de los microservicios.
 ms.date: 09/20/2018
-ms.openlocfilehash: c30de24591d5a73fd34087f34a69e9c7ed54cd35
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8b91879e879db293ed61bd5f3c49dc391b9d8f5a
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "71834459"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144323"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Desafíos y soluciones de la administración de datos distribuidos
 
@@ -105,7 +105,7 @@ El uso de comunicación asincrónica se explica con más detalle más adelante e
   <https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction>
 
 - **Udi Dahan. Service Oriented Composition (Composición orientada a servicios)**  \
-  <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
+  <https://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
 >[!div class="step-by-step"]
 >[Anterior](logical-versus-physical-architecture.md)

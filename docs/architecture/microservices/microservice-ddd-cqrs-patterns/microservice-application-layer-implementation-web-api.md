@@ -2,12 +2,12 @@
 title: Implementación del nivel de aplicación de microservicios mediante la API web
 description: Comprenda los procesos de inserción de dependencias y los patrones de mediador y sus detalles de implementación en la capa de aplicación de la API web.
 ms.date: 01/30/2020
-ms.openlocfilehash: 76562d87b09a18e4a4ecb7625a2e823bc1ccff78
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 3efa4939bb8762534af398d4e92361e81e668b85
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988471"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144609"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementación del nivel de aplicación de microservicios mediante la API web
 
@@ -214,7 +214,7 @@ En el siguiente ejemplo se muestra la clase `CreateOrderCommand` simplificada. S
 // plus being able to update the data just once, when creating the object
 // through the constructor.
 // References on immutable commands:
-// http://cqrs.nu/Faq
+// https://cqrs.nu/Faq
 // https://docs.spine3.org/motivation/immutability.html
 // http://blog.gauffin.org/2012/06/griffin-container-introducing-command-support/
 // https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties

@@ -2,12 +2,12 @@
 title: Implementar un modelo de dominio de microservicio con .NET Core
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre la implementación de un modelo de dominio orientado a un DDD.
 ms.date: 10/08/2018
-ms.openlocfilehash: 24f700b371d998cf99cbcf260a5278d797cb39d4
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 8aff06a2e37dc87e5ba4f556e9b808598ff3653a
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988432"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144583"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>Implementación de un modelo de dominio de microservicio con .NET Core
 
@@ -177,7 +177,7 @@ Por ejemplo, en el ejemplo de código OrderAggregate anterior, hay varios campos
   <https://docs.microsoft.com/archive/msdn-magazine/2013/august/data-points-coding-for-domain-driven-design-tips-for-data-focused-devs>
 
 - **Udi Dahan. Cómo crear modelos de dominio totalmente encapsulados** \
-  <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
+  <https://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
 > [!div class="step-by-step"]
 > [Anterior](microservice-domain-model.md)

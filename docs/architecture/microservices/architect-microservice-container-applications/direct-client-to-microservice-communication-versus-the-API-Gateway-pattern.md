@@ -2,12 +2,12 @@
 title: Diferencias entre el patrón de puerta de enlace de API y la comunicación directa de cliente a microservicio
 description: Obtenga más información sobre las diferencias y los usos del patrón de puerta de enlace de API y la comunicación directa de cliente a microservicio.
 ms.date: 01/07/2019
-ms.openlocfilehash: 47e9a383c1fcb6c9fec38cb376b60a4ab839077d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5c2f3bd32396b45a6209550f5b7a07c88795ccc0
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401560"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144336"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Diferencias entre el patrón de puerta de enlace de API y la comunicación directa de cliente a microservicio
 
@@ -183,7 +183,7 @@ Después de las secciones iniciales de explicación de arquitectura y patrones, 
   <https://azure.microsoft.com/services/api-management/>
 
 - **Udi Dahan. Service Oriented Composition (Composición orientada a servicios)**  \
-  <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
+  <https://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
 - **Clemens Vasters. Mensajería y microservicios en GOTO 2016; vídeo** \
   <https://www.youtube.com/watch?v=rXi5CLjIQ9k>
