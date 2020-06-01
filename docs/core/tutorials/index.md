@@ -4,12 +4,12 @@ description: Siga los tutoriales para aprender a compilar aplicaciones y bibliot
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: 9fb87180bb001a7f54d93c6e95631562103c49e8
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 5a33158bdf02c5ac81379cfcdabb2f79230033e2
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83840928"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202191"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Explore estos tutoriales para obtener información sobre las herramientas de .NET Core y el SDK de .NET Core
 
@@ -29,9 +29,10 @@ Los siguientes tutoriales están disponibles para aprender sobre .NET Core.
 
 ## <a name="use-visual-studio-code"></a>Usar Visual Studio Code
 
-Elija estos tutoriales si quiere usar Visual Studio Code u otro editor de código. Todos usan la CLI para tareas de desarrollo de .NET Core, por lo que se pueden utilizar con cualquier editor de código.
+Elija estos tutoriales si quiere usar Visual Studio Code u otro editor de código. Todos usan la CLI para tareas de desarrollo de .NET Core, por lo que, salvo el relativo a la depuración, se pueden utilizar con cualquier editor de código.
 
 - [Creación de una aplicación de consola](with-visual-studio-code.md)
+- [Depuración de una aplicación](debugging-with-visual-studio-code.md)
 - [Creación y publicación de una aplicación de consola](cli-create-console-app.md)
 - [Creación de una aplicación de consola en F#](../../fsharp/get-started/get-started-vscode.md)
 - [Creación y prueba unitaria de una biblioteca en macOS](using-on-macos.md)
