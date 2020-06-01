@@ -2,12 +2,12 @@
 title: Orientación general
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Orientación general
 ms.date: 09/11/2018
-ms.openlocfilehash: 2fa66d7593b764a8df4d9acc20f93d3f8fb26174
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e3bb4b8cf3e371c31d783fe4cfafeac282fb72b8
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73089649"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144570"
 ---
 # <a name="general-guidance"></a>Orientación general
 
@@ -38,10 +38,10 @@ Utilizar .NET Framework en Docker puede mejorar sus experiencias de implementaci
 ### <a name="additional-resources"></a>Recursos adicionales
 
 - **Libro electrónico: Modernize existing .NET Framework applications with Azure and Windows Containers** (Libro electrónico: Modernización de las aplicaciones .NET Framework existentes con contenedores de Azure y de Windows)  
-    https://aka.ms/liftandshiftwithcontainersebook
+    <https://aka.ms/liftandshiftwithcontainersebook>
 
 - **Sample apps: Modernization of legacy ASP.NET web apps by using Windows Containers** (Aplicaciones de ejemplo: Modernización de aplicaciones web de ASP.NET heredadas mediante contenedores de Windows)  
-    https://aka.ms/eshopmodernizing
+    <https://aka.ms/eshopmodernizing>
 
 >[!div class="step-by-step"]
 >[Anterior](index.md)
