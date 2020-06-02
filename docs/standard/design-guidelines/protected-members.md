@@ -10,12 +10,12 @@ helpviewer_keywords:
 - unsealed classes
 - customizing class behavior
 ms.assetid: aa0b58ee-3956-494d-ab48-471ae5db8740
-ms.openlocfilehash: 44d342662e1aaeb51f14470f354f2dadd9a6f18d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: afcb92e48996d594fcedc5b579922b179f754b9d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743650"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286124"
 ---
 # <a name="protected-members"></a>Miembros protegidos
 Los miembros protegidos por sí mismos no proporcionan ninguna extensibilidad, pero pueden realizar la extensibilidad mediante subclases más eficaces. Se pueden usar para exponer opciones de personalización avanzadas sin complicar innecesariamente la interfaz pública principal.
@@ -34,5 +34,5 @@ Los miembros protegidos por sí mismos no proporcionan ninguna extensibilidad, p
 
 ## <a name="see-also"></a>Consulte también
 
-- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)
-- [Diseño de extensibilidad](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
+- [Directrices de diseño de marco](index.md)
+- [Diseñar extensibilidad](designing-for-extensibility.md)

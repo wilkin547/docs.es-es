@@ -9,15 +9,15 @@ helpviewer_keywords:
 - overloaded members
 - signatures, members
 ms.assetid: 964ba19e-8b94-4b5b-b1e3-5a0b531a0bb1
-ms.openlocfilehash: c9cb178e838aab99c22089b527a6bd2e86b325de
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 6a2cd6d4dd293a7f4a408e1ee97a125c9454be41
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76727838"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289010"
 ---
 # <a name="member-overloading"></a>Sobrecarga de miembro
-La sobrecarga de miembros implica la creación de dos o más miembros en el mismo tipo que solo difieren en el número o tipo de parámetros, pero tienen el mismo nombre. Por ejemplo, en el siguiente caso, el método `WriteLine` está sobrecargado:
+La sobrecarga de miembros implica la creación de dos o más miembros en el mismo tipo que solo difieren en el número o tipo de parámetros, pero tienen el mismo nombre. Por ejemplo, en el siguiente caso, el `WriteLine` método está sobrecargado:
 
 ```csharp
 public static class Console {
@@ -34,19 +34,19 @@ public static class Console {
 
  ✔️ intente usar nombres de parámetro descriptivos para indicar el valor predeterminado usado por las sobrecargas más cortas.
 
- ❌ evitar los nombres de parámetro que varían arbitrariamente en las sobrecargas. Si un parámetro de una sobrecarga representa la misma entrada que un parámetro en otra sobrecarga, los parámetros deben tener el mismo nombre.
+ ❌Evite los nombres de parámetro que varían arbitrariamente en las sobrecargas. Si un parámetro de una sobrecarga representa la misma entrada que un parámetro en otra sobrecarga, los parámetros deben tener el mismo nombre.
 
- ❌ evitar ser incoherentes en el orden de los parámetros en los miembros sobrecargados. Los parámetros con el mismo nombre deben aparecer en la misma posición en todas las sobrecargas.
+ ❌Evite ser incoherentes en el orden de los parámetros en los miembros sobrecargados. Los parámetros con el mismo nombre deben aparecer en la misma posición en todas las sobrecargas.
 
  ✔️ hacer solo la sobrecarga más larga virtual (si se requiere extensibilidad). Las sobrecargas más cortas simplemente deben llamar a a través de una sobrecarga más larga.
 
- ❌ no use los modificadores `ref` o `out` para sobrecargar los miembros.
+ ❌No use `ref` `out` los modificadores o para sobrecargar los miembros.
 
  Algunos lenguajes no pueden resolver llamadas a sobrecargas como esta. Además, estas sobrecargas suelen tener una semántica completamente diferente y probablemente no deberían ser sobrecargas, sino dos métodos independientes.
 
- ❌ no tienen sobrecargas con parámetros en la misma posición y tipos similares, pero con una semántica diferente.
+ ❌NO tener sobrecargas con parámetros en la misma posición y tipos similares con semántica diferente.
 
- ✔️ permitir que se pasen `null` para los argumentos opcionales.
+ ✔️ permitir `null` que se pasen los argumentos opcionales.
 
  ✔️ usar la sobrecarga de miembros en lugar de definir miembros con argumentos predeterminados.
 
@@ -58,5 +58,5 @@ public static class Console {
 
 ## <a name="see-also"></a>Consulte también
 
-- [Instrucciones de diseño de miembros](../../../docs/standard/design-guidelines/member.md)
-- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)
+- [Instrucciones para el diseño de miembros](member.md)
+- [Directrices de diseño de marco](index.md)

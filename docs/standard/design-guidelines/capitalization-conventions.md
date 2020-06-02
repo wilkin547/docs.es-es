@@ -9,12 +9,12 @@ helpviewer_keywords:
 - case sensitivity, capitalization conventions
 - names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
-ms.openlocfilehash: 8af4a15e1e5b34c38b14c6b547cf44801bbf13e6
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 10d628700a9cbf0e842416878ec2c7febfa3d6f5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741759"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84280405"
 ---
 # <a name="capitalization-conventions"></a>Normas referentes al uso de minúsculas y mayúsculas
 En las instrucciones de este capítulo se diseña un método sencillo para usar el caso que, cuando se aplica de forma coherente, facilitan la lectura de los identificadores de tipos, miembros y parámetros.
@@ -62,7 +62,7 @@ En las instrucciones de este capítulo se diseña un método sencillo para usar 
 ## <a name="capitalizing-compound-words-and-common-terms"></a>Poner en mayúsculas palabras compuestas y términos comunes
  La mayoría de los términos compuestos se tratan como palabras únicas para el uso de mayúsculas.
 
- ❌ no poner en mayúsculas cada palabra en lo que se denomina palabras compuestas de formato cerrado.
+ ❌No ponga en mayúsculas cada palabra en lo que se denomina palabras compuestas de formato cerrado.
 
  Se trata de palabras compuestas escritas como una sola palabra, como el punto de conexión. En lo que respecta a las directrices de mayúsculas y minúsculas, trate una palabra compuesta de formato cerrado como una sola palabra. Use un diccionario actual para determinar si una palabra compuesta está escrita en formato cerrado.
 
@@ -97,7 +97,7 @@ En las instrucciones de este capítulo se diseña un método sencillo para usar 
 ## <a name="case-sensitivity"></a>Distinción entre mayúsculas y minúsculas
  No es necesario que los lenguajes que se pueden ejecutar en CLR admitan la distinción de mayúsculas y minúsculas, aunque algunos sí lo hacen. Aunque su lenguaje lo admita, otros lenguajes que puedan tener acceso a su marco de trabajo no lo admiten. Por lo tanto, las API a las que se puede tener acceso externamente no pueden basarse solo en mayúsculas y minúsculas para distinguir entre dos nombres en el mismo contexto.
 
- ❌ no suponen que todos los lenguajes de programación distinguen mayúsculas de minúsculas. pero no lo son. Los nombres no pueden diferir solo en mayúsculas y minúsculas.
+ ❌NO asuma que todos los lenguajes de programación distinguen mayúsculas de minúsculas. pero no lo son. Los nombres no pueden diferir solo en mayúsculas y minúsculas.
 
  *Partes © 2005, 2009 Microsoft Corporation. Todos los derechos reservados.*
 
@@ -105,5 +105,5 @@ En las instrucciones de este capítulo se diseña un método sencillo para usar 
 
 ## <a name="see-also"></a>Consulte también
 
-- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)
-- [Instrucciones de nomenclatura](../../../docs/standard/design-guidelines/naming-guidelines.md)
+- [Directrices de diseño de marco](index.md)
+- [Instrucciones de nomenclatura](naming-guidelines.md)

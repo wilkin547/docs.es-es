@@ -1,13 +1,14 @@
 ---
 title: Introducción a la integración con CLR de SQL Server
+description: La integración de CLR con SQL Server admite procedimientos almacenados, desencadenadores, funciones definidas por el usuario, tipos definidos por el usuario y agregados definidos por el usuario en código administrado.
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
-ms.openlocfilehash: 41dd89af4f45c673cf6b7283fc39aaf91fd9963c
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: fa2ef68792d09cf94b3e0680a14bd79f9b593999
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452414"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286435"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>Introducción a la integración con CLR de SQL Server
 Common Language Runtime (CLR) es el núcleo de Microsoft .NET Framework y proporciona el entorno de ejecución de todo el código de .NET Framework. Se hace referencia al código que se ejecuta en CLR como código administrado. CLR proporciona varias funciones y servicios necesarios para la ejecución de programas, que incluyen la compilación Just-In-Time (JIT), la asignación y administración de memoria, el forzado de la seguridad de tipos, el control de excepciones, la administración de subprocesos y la seguridad.  
@@ -20,7 +21,7 @@ Common Language Runtime (CLR) es el núcleo de Microsoft .NET Framework y propor
   
  **Documentación de SQL Server**  
   
-- [Información general sobre integración de Common Language Runtime (CLR)](/sql/relational-databases/clr-integration/common-language-runtime-integration-overview)  
+- [Información general sobre integración CLR (Common Language Runtime)](/sql/relational-databases/clr-integration/common-language-runtime-integration-overview)  
   
 ## <a name="enabling-clr-integration"></a>Habilitar la integración con CLR  
  La característica de integración con Common Language Runtime (CLR) está desactivada de forma predeterminada en Microsoft SQL Server y se debe habilitar para utilizar los objetos que se implementan mediante la integración con CLR. Para habilitar la integración con CLR mediante Transact-SQL, utilice la opción `clr enabled` del procedimiento almacenado `sp_configure` como se muestra:  
@@ -68,4 +69,4 @@ GO
 ## <a name="see-also"></a>Consulte también
 
 - [Seguridad de acceso del código y ADO.NET](../code-access-security.md)
-- [Información general sobre ADO.NET](../ado-net-overview.md)
+- [Información general de ADO.NET](../ado-net-overview.md)

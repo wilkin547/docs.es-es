@@ -1,20 +1,21 @@
 ---
 title: Procedimiento para eliminar filas de la base de datos
+description: Aprenda a eliminar filas en una base de datos quitando LINQ to SQL objetos de una colección relacionada con la tabla. LINQ to SQL traduce las eliminaciones en comandos DELETE de SQL.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2144c99b-8055-4080-a5c6-1ea14335e2a3
-ms.openlocfilehash: 421735567c527ac9a70cc5eefdbd7570599faac7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d08621e834961e1db9312cac36bd2e69133142b5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782006"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286396"
 ---
 # <a name="how-to-delete-rows-from-the-database"></a>Procedimiento para eliminar filas de la base de datos
 
-Puede eliminar filas en una base de datos quitando los [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] objetos correspondientes de su colección relacionada con la tabla. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]convierte los cambios en los comandos SQL `DELETE` adecuados.
+Puede eliminar filas en una base de datos quitando los [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] objetos correspondientes de su colección relacionada con la tabla. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]convierte los cambios en los comandos SQL adecuados `DELETE` .
 
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no admite ni reconoce las operaciones de eliminación en cascada. Si desea eliminar una fila de una tabla que tiene restricciones, deberá realizar una de las siguientes tareas:
 
@@ -29,7 +30,7 @@ Puede eliminar filas en una base de datos quitando los [!INCLUDE[vbtecdlinq](../
 >
 > Los desarrolladores que usan Visual Studio pueden usar el Object Relational Designer para desarrollar procedimientos almacenados con el mismo propósito.
 
-En los pasos siguientes se asume que un objeto <xref:System.Data.Linq.DataContext> válido le conecta a la base de datos Northwind. Para obtener más información, consulte [Cómo Conectarse a una base](how-to-connect-to-a-database.md)de datos.
+En los pasos siguientes se asume que un objeto <xref:System.Data.Linq.DataContext> válido le conecta a la base de datos Northwind. Para obtener más información, consulte [Cómo: conectarse a una base de datos](how-to-connect-to-a-database.md).
 
 ### <a name="to-delete-a-row-in-the-database"></a>Para eliminar una fila en la base de datos
 
@@ -53,8 +54,8 @@ En este segundo ejemplo, el objetivo es quitar un pedido (#10250). En primer lug
 [!code-csharp[DLinqCascadeWorkaround#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCascadeWorkaround/cs/Program.cs#1)]
 [!code-vb[DLinqCascadeWorkaround#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCascadeWorkaround/vb/Module1.vb#1)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Procedimientos: Administrar conflictos de cambios](how-to-manage-change-conflicts.md)
-- [Procedimientos: Asignar procedimientos almacenados para realizar actualizaciones, inserciones y eliminaciones (Object Relational Designer)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)
-- [Realización y envío de cambios de datos](making-and-submitting-data-changes.md)
+- [Procedimiento para administrar conflictos de cambios](how-to-manage-change-conflicts.md)
+- [Cómo: Asignar procedimientos almacenados para realizar actualizaciones, inserciones y eliminaciones (Object Relational Designer)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)
+- [Realizar y enviar cambios de datos](making-and-submitting-data-changes.md)

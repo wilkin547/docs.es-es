@@ -8,19 +8,19 @@ helpviewer_keywords:
 - assemblies [.NET Framework], names
 - DLLs, names
 ms.assetid: e800b610-31b4-4949-9c14-cb60e9f254be
-ms.openlocfilehash: f3c5997f777c937e9726b271afa0ae6d7a19b37d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 138ae8154b0d10fb813f0c98ceb7c58a2471b780
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744171"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291960"
 ---
 # <a name="names-of-assemblies-and-dlls"></a>Nombres de ensamblados y bibliotecas DLL
 Un ensamblado es la unidad de implementación e identidad para los programas de código administrado. Aunque los ensamblados pueden abarcar uno o varios archivos, normalmente un ensamblado se asigna uno a uno con un archivo DLL. Por lo tanto, en esta sección solo se describen las convenciones de nomenclatura de archivos DLL, que se pueden asignar a las convenciones de nomenclatura de ensamblados.
 
  ✔️ Elija nombres para los archivos dll de ensamblado que sugieran grandes fragmentos de funcionalidad, como System. Data.
 
- No es necesario que los nombres de ensamblado y DLL se correspondan con los nombres de espacios de nombres, pero es razonable seguir el nombre del espacio de nombres al asignar nombres a los ensamblados. Una buena regla general es asignar un nombre a la DLL basándose en el prefijo común de los espacios de nombres contenidos en el ensamblado. Por ejemplo, se podría llamar a un ensamblado con dos espacios de nombres, `MyCompany.MyTechnology.FirstFeature` y `MyCompany.MyTechnology.SecondFeature`, `MyCompany.MyTechnology.dll`.
+ No es necesario que los nombres de ensamblado y DLL se correspondan con los nombres de espacios de nombres, pero es razonable seguir el nombre del espacio de nombres al asignar nombres a los ensamblados. Una buena regla general es asignar un nombre a la DLL basándose en el prefijo común de los espacios de nombres contenidos en el ensamblado. Por ejemplo, `MyCompany.MyTechnology.FirstFeature` `MyCompany.MyTechnology.SecondFeature` se podría llamar a un ensamblado con dos espacios de nombres, y `MyCompany.MyTechnology.dll` .
 
  ✔️ considere la posibilidad de asignar nombres a los archivos dll según el siguiente patrón:
 
@@ -36,5 +36,5 @@ Un ensamblado es la unidad de implementación e identidad para los programas de 
 
 ## <a name="see-also"></a>Consulte también
 
-- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)
-- [Instrucciones de nomenclatura](../../../docs/standard/design-guidelines/naming-guidelines.md)
+- [Directrices de diseño de marco](index.md)
+- [Instrucciones de nomenclatura](naming-guidelines.md)

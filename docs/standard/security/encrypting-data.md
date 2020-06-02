@@ -11,18 +11,18 @@ helpviewer_keywords:
 - cryptography [.NET Framework], asymmetric
 - asymmetric encryption
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
-ms.openlocfilehash: 669b9c77ca0102ed94d8743cf37b18c0d0c528dc
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 3230836b93ea191e5de27717a918038f2f8dead6
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159408"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288360"
 ---
 # <a name="encrypting-data"></a>Cifrar datos
 El cifrado simétrico y el cifrado asimétrico se efectúan mediante procesos distintos. El cifrado simétrico se realiza en secuencias y, por tanto, resulta útil para cifrar grandes cantidades de datos. El cifrado asimétrico se realiza en un pequeño número de bytes y, por tanto, solo resulta útil para pequeñas cantidades de datos.  
   
 ## <a name="symmetric-encryption"></a>Cifrado simétrico  
- Las clases de criptografía simétrica administrada se usan con una clase de secuencia especial llamada <xref:System.Security.Cryptography.CryptoStream> que cifra los datos leídos en la secuencia. La clase **CryptoStream** se inicializa con una clase de secuencia administrada, una clase que implementa la interfaz <xref:System.Security.Cryptography.ICryptoTransform> (creada a partir de una clase que implementa un algoritmo criptográfico) y una enumeración <xref:System.Security.Cryptography.CryptoStreamMode> que describe el tipo de acceso permitido a **CryptoStream**. La clase **CryptoStream** puede inicializarse usando cualquier clase que derive de la clase <xref:System.IO.Stream> , incluidas <xref:System.IO.FileStream>, <xref:System.IO.MemoryStream>y <xref:System.Net.Sockets.NetworkStream>. Mediante estas clases, puede realizar el cifrado simétrico en diversos objetos de secuencia.  
+ Las clases de criptografía simétrica administrada se usan con una clase de secuencia especial llamada <xref:System.Security.Cryptography.CryptoStream> que cifra los datos leídos en la secuencia. La clase **CryptoStream** se inicializa con una clase de secuencia administrada, una clase que implementa la interfaz <xref:System.Security.Cryptography.ICryptoTransform> (creada a partir de una clase que implementa un algoritmo criptográfico) y una enumeración <xref:System.Security.Cryptography.CryptoStreamMode> que describe el tipo de acceso permitido a **CryptoStream**. La clase **CryptoStream** puede inicializarse usando cualquier clase que derive de la <xref:System.IO.Stream> clase, incluidas <xref:System.IO.FileStream> , <xref:System.IO.MemoryStream> y <xref:System.Net.Sockets.NetworkStream> . Mediante estas clases, puede realizar el cifrado simétrico en diversos objetos de secuencia.  
   
  En el ejemplo siguiente se muestra cómo crear una nueva instancia de la clase <xref:System.Security.Cryptography.RijndaelManaged> , que implementa el algoritmo de cifrado Rijndael, y usarla para realizar el cifrado en una clase **CryptoStream** . En este ejemplo, **CryptoStream** se inicializa con un objeto de secuencia llamado `myStream` que puede ser cualquier tipo de secuencia administrada. Se pasan la clave y el IV que se usan para el cifrado al método **CreateEncryptor** de la clase **RijndaelManaged** . En este caso, se usan la clave predeterminada y el IV generados desde `rmCrypto` . Por último, se pasa **CryptoStreamMode.Write y** , que especifica el acceso de escritura a la secuencia.  
   
@@ -260,8 +260,8 @@ class Class1
 }  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Generar claves para cifrado y descifrado](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
-- [Descifrar datos](../../../docs/standard/security/decrypting-data.md)
-- [Servicios criptográficos](../../../docs/standard/security/cryptographic-services.md)
+- [Generar claves para cifrado y descifrado](generating-keys-for-encryption-and-decryption.md)
+- [Descifrar datos](decrypting-data.md)
+- [Servicios criptográficos](cryptographic-services.md)

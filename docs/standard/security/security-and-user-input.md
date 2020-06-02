@@ -1,6 +1,6 @@
 ---
 title: Seguridad e introducción de datos por el usuario
-description: El código puede pasar datos introducidos por el usuario como parámetros a otro código, lo que puede afectar a la seguridad. Puede realizar la comprobación de rango para rechazar la entrada problemática.
+description: El código podría pasar datos especificados por el usuario como parámetros a otro código, lo que puede afectar a la seguridad. Puede realizar la comprobación de intervalo para rechazar entradas problemáticas.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - secure coding, user input
 - code security, user input
 ms.assetid: 9141076a-96c9-4b01-93de-366bb1d858bc
-ms.openlocfilehash: fa9f8d4708e928c51e446d8369c9b4556fc6fb77
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 995af30385790a88718193e7abad1db7bc4b56c3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186107"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84275950"
 ---
 # <a name="security-and-user-input"></a>Seguridad e introducción de datos por el usuario
 
@@ -24,7 +24,7 @@ Estos son los errores de seguridad más sutiles y más difíciles de localizar p
 
 A continuación se indican algunas consideraciones importantes que afectan a los datos de usuario:
 
-- Los datos de usuario de una respuesta del servidor se ejecutan en el contexto del sitio del servidor en el cliente. Si el servidor web toma datos de usuario y los inserta en la ** \<** página Web devuelta, podría incluir, por ejemplo, un script>etiqueta y ejecutarlos como si fueran del servidor.
+- Los datos de usuario de una respuesta del servidor se ejecutan en el contexto del sitio del servidor en el cliente. Si el servidor Web toma los datos de usuario y los inserta en la página web devuelta, podría incluir, por ejemplo, una **\<script>** etiqueta y ejecutar como si desde el servidor.
 
 - Recuerde que el cliente puede solicitar cualquier dirección URL.
 
@@ -60,4 +60,4 @@ A continuación se indican algunas consideraciones importantes que afectan a los
 
 ## <a name="see-also"></a>Consulte también
 
-- [Instrucciones de codificación segura](../../../docs/standard/security/secure-coding-guidelines.md)
+- [Instrucciones de codificación segura](secure-coding-guidelines.md)

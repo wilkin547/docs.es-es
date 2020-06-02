@@ -6,12 +6,12 @@ helpviewer_keywords:
 - member design guidelines, properties
 - properties [.NET Framework], design guidelines
 ms.assetid: 127cbc0c-cbed-48fd-9c89-7c5d4f98f163
-ms.openlocfilehash: 8b6570b1b7c292729b78f2fe52f24f73319efe6c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: c49b42ab369ace582c76d7f326da309415e8c45b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743655"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291947"
 ---
 # <a name="property-design"></a>Diseño de propiedades
 Aunque las propiedades son técnicamente muy similares a los métodos, son bastante diferentes en cuanto a sus escenarios de uso. Deberían aparecer como campos inteligentes. Tienen la sintaxis de llamada de los campos y la flexibilidad de los métodos.
@@ -20,11 +20,11 @@ Aunque las propiedades son técnicamente muy similares a los métodos, son basta
 
  Tenga en cuenta que si el tipo de la propiedad es un tipo de referencia mutable, el valor de la propiedad se puede cambiar aunque la propiedad sea de solo lectura.
 
- ❌ no proporcionan propiedades o propiedades solo de conjunto con el establecedor con una accesibilidad más amplia que el captador.
+ ❌NO proporcione propiedades o propiedades de solo conjunto con el establecedor que tenga una accesibilidad más amplia que el captador.
 
  Por ejemplo, no utilice propiedades con un establecedor público y un captador protegido.
 
- Si no se puede proporcionar el captador de propiedad, implemente la funcionalidad como un método en su lugar. Considere la posibilidad de iniciar el nombre del método con `Set` y siga con lo que hubiera llamado a la propiedad. Por ejemplo, <xref:System.AppDomain> tiene un método denominado `SetCachePath` en lugar de tener una propiedad de solo establecimiento denominada `CachePath`.
+ Si no se puede proporcionar el captador de propiedad, implemente la funcionalidad como un método en su lugar. Considere la posibilidad de iniciar el nombre del método con `Set` y siga con lo que habría llamado a la propiedad. Por ejemplo, <xref:System.AppDomain> tiene un método denominado `SetCachePath` en lugar de tener una propiedad de solo conjunto denominada `CachePath` .
 
  ✔️ proporcionan valores predeterminados razonables para todas las propiedades, asegurándose de que los valores predeterminados no dan lugar a un agujero de seguridad ni a un código ineficaz.
 
@@ -34,7 +34,7 @@ Aunque las propiedades son técnicamente muy similares a los métodos, son basta
 
  ✔️ conservar el valor anterior si un establecedor de propiedad produce una excepción.
 
- ❌ Evite iniciar excepciones a partir de captadores de propiedad.
+ ❌Evite iniciar excepciones desde captadores de propiedad.
 
  Los captadores de propiedad deben ser operaciones simples y no deben tener ninguna condición previa. Si un captador puede producir una excepción, probablemente se debe volver a diseñar para que sea un método. Tenga en cuenta que esta regla no se aplica a los indexadores, donde se esperan excepciones como resultado de la validación de los argumentos.
 
@@ -47,40 +47,40 @@ Aunque las propiedades son técnicamente muy similares a los métodos, son basta
 
  ✔️ considere la posibilidad de proporcionar indexadores en tipos que representan colecciones de elementos.
 
- ❌ evitar el uso de propiedades indizadas con más de un parámetro.
+ ❌Evite el uso de propiedades indizadas con más de un parámetro.
 
- Si el diseño requiere varios parámetros, reconsidere si la propiedad realmente representa un descriptor de acceso a una colección lógica. Si no es así, use los métodos en su lugar. Considere la posibilidad de iniciar el nombre del método con `Get` o `Set`.
+ Si el diseño requiere varios parámetros, reconsidere si la propiedad realmente representa un descriptor de acceso a una colección lógica. Si no es así, use los métodos en su lugar. Considere la posibilidad de iniciar el nombre del método con `Get` o `Set` .
 
- ❌ evitar indizadores con tipos de parámetros distintos de <xref:System.Int32?displayProperty=nameWithType>, <xref:System.Int64?displayProperty=nameWithType>, <xref:System.String?displayProperty=nameWithType>, <xref:System.Object?displayProperty=nameWithType>o una enumeración.
+ ❌Evite los indizadores con tipos de parámetros distintos de <xref:System.Int32?displayProperty=nameWithType> ,, <xref:System.Int64?displayProperty=nameWithType> <xref:System.String?displayProperty=nameWithType> , <xref:System.Object?displayProperty=nameWithType> o una enumeración.
 
- Si el diseño requiere otros tipos de parámetros, vuelva a evaluar de forma segura si la API representa realmente un descriptor de acceso a una colección lógica. En caso contrario, utilice un método. Considere la posibilidad de iniciar el nombre del método con `Get` o `Set`.
+ Si el diseño requiere otros tipos de parámetros, vuelva a evaluar de forma segura si la API representa realmente un descriptor de acceso a una colección lógica. En caso contrario, utilice un método. Considere la posibilidad de iniciar el nombre del método con `Get` o `Set` .
 
- ✔️ usar el nombre `Item` para las propiedades indizadas, a menos que haya un nombre claramente mejor (por ejemplo, vea la propiedad <xref:System.String.Chars%2A> en `System.String`).
+ ✔️ usar el nombre `Item` para las propiedades indizadas, a menos que haya un nombre más claramente mejor (por ejemplo, vea la <xref:System.String.Chars%2A> propiedad en `System.String` ).
 
- En C#, los indizadores se llaman de forma predeterminada Item. El <xref:System.Runtime.CompilerServices.IndexerNameAttribute> se puede usar para personalizar este nombre.
+ En C#, los indizadores se llaman de forma predeterminada Item. <xref:System.Runtime.CompilerServices.IndexerNameAttribute>Se puede usar para personalizar este nombre.
 
- ❌ no proporcionan un indexador y métodos que sean semánticamente equivalentes.
+ ❌NO proporcione un indexador y métodos que sean semánticamente equivalentes.
 
- ❌ no proporcionan más de una familia de indexadores sobrecargados en un tipo.
+ ❌NO proporcione más de una familia de indexadores sobrecargados en un tipo.
 
- Lo exige el C# compilador.
+ Esto lo exige el compilador de C#.
 
- ❌ no utilizan propiedades indizadas no predeterminadas.
+ ❌No utilice propiedades indizadas no predeterminadas.
 
- Lo exige el C# compilador.
+ Esto lo exige el compilador de C#.
 
 ### <a name="property-change-notification-events"></a>Eventos de notificación de cambio de propiedad
- A veces resulta útil proporcionar un evento que notifique al usuario los cambios en un valor de propiedad. Por ejemplo, `System.Windows.Forms.Control` genera un evento `TextChanged` después de que el valor de su propiedad `Text` haya cambiado.
+ A veces resulta útil proporcionar un evento que notifique al usuario los cambios en un valor de propiedad. Por ejemplo, `System.Windows.Forms.Control` genera un `TextChanged` evento después de que el valor de su `Text` propiedad haya cambiado.
 
  ✔️ considere la posibilidad de generar eventos de notificación de cambios cuando se modifiquen los valores de propiedad en las API de alto nivel (normalmente los componentes del diseñador).
 
  Si hay un buen escenario para que un usuario sepa cuándo está cambiando una propiedad de un objeto, el objeto debe generar un evento de notificación de cambios para la propiedad.
 
- Sin embargo, no es probable que merezca la pena la sobrecarga de generar tales eventos para las API de bajo nivel, como los tipos base o las colecciones. Por ejemplo, <xref:System.Collections.Generic.List%601> no generaría estos eventos cuando se agrega un nuevo elemento a la lista y cambia la propiedad `Count`.
+ Sin embargo, no es probable que merezca la pena la sobrecarga de generar tales eventos para las API de bajo nivel, como los tipos base o las colecciones. Por ejemplo, <xref:System.Collections.Generic.List%601> no generaría estos eventos cuando se agrega un nuevo elemento a la lista y la `Count` propiedad cambia.
 
  ✔️ considere la posibilidad de generar eventos de notificación de cambios cuando el valor de una propiedad cambia a través de fuerzas externas.
 
- Si un valor de propiedad cambia a través de una fuerza externa (de forma distinta a llamando a los métodos del objeto), los eventos de generación indican al desarrollador que el valor está cambiando y ha cambiado. Un buen ejemplo es la `Text` propiedad de un control de cuadro de texto. Cuando el usuario escribe texto en un `TextBox`, el valor de la propiedad cambia automáticamente.
+ Si un valor de propiedad cambia a través de una fuerza externa (de forma distinta a llamando a los métodos del objeto), los eventos de generación indican al desarrollador que el valor está cambiando y ha cambiado. Un buen ejemplo es la `Text` propiedad de un control de cuadro de texto. Cuando el usuario escribe texto en un `TextBox` , el valor de la propiedad cambia automáticamente.
 
  *Partes © 2005, 2009 Microsoft Corporation. Todos los derechos reservados.*
 
@@ -88,5 +88,5 @@ Aunque las propiedades son técnicamente muy similares a los métodos, son basta
 
 ## <a name="see-also"></a>Consulte también
 
-- [Instrucciones de diseño de miembros](../../../docs/standard/design-guidelines/member.md)
-- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)
+- [Instrucciones para el diseño de miembros](member.md)
+- [Directrices de diseño de marco](index.md)

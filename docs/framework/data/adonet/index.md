@@ -1,14 +1,15 @@
 ---
 title: ADO.NET
+description: Obtenga información sobre ADO.NET, las clases que exponen servicios de acceso a datos para los programadores de .NET Framework para la creación de aplicaciones distribuidas de uso compartido de datos.
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: cca3075a73a7bb45fd6154f760adfcda9064345c
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 4f9b2ca42a2c25c1463b7d1ca38b4b8920b2dafd
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094402"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286732"
 ---
 # <a name="adonet"></a>ADO.NET
 
@@ -18,7 +19,7 @@ ADO.NET es un conjunto de clases que exponen servicios de acceso a datos para pr
  [Novedades de ADO.NET](whats-new.md)  
  Presenta características nuevas en ADO.NET.  
   
- [Información general sobre ADO.NET](ado-net-overview.md)  
+ [Información general de ADO.NET](ado-net-overview.md)  
  Proporciona una introducción al diseño y a los componentes de ADO.NET.  
   
  [Entity Framework](/ef/ef6/index)  
@@ -37,7 +38,7 @@ ADO.NET es un conjunto de clases que exponen servicios de acceso a datos para pr
  Proporciona información sobre LINQ to DataSet, incluidos ejemplos de programación.  
   
  [Recuperar y modificar datos en ADO.NET](retrieving-and-modifying-data.md)  
- Describe cómo conectarse a un origen de datos y cómo recuperar y modificar datos mediante `Commands`, `DataReaders`y `DataAdapters`.  
+ Describe cómo conectarse a un origen de datos y cómo recuperar y modificar datos mediante `Commands` , `DataReaders` y `DataAdapters` .  
   
  [SQL Server y ADO.NET](./sql/index.md)  
  Describe cómo trabajar con las características y la funcionalidad específicas de SQL Server.  
@@ -47,15 +48,15 @@ ADO.NET es un conjunto de clases que exponen servicios de acceso a datos para pr
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Language Integrated Query (LINQ) (C#)](../../../csharp/programming-guide/concepts/linq/index.md)  
- Proporciona vínculos a temas y ejemplos de LINQ C#mediante.  
+ Proporciona vínculos a temas y ejemplos de LINQ con C#.  
   
  [Language Integrated Query (LINQ) (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/index.md)  
  Proporciona vínculos a temas y ejemplos de LINQ mediante Visual Basic.  
   
- [Servicios de datos de WCF 4.5](../wcf/index.md)  
+ [WCF Data Services 4.5](../wcf/index.md)  
  Describe cómo usar WCF Data Services para implementar servicios de datos en Internet o en una intranet que implementa el Open Data Protocol (OData).  
   
- [Guía de desarrollo para .NET Framework](../../development-guide.md)  
+ [Guía de desarrollo de .NET Framework](../../development-guide.md)  
  Proporciona vínculos a información acerca de las tareas de desarrollo estándar en .NET Framework.  
   
  [Ejemplos y tutoriales](../../../samples-and-tutorials/index.md)  
@@ -63,5 +64,5 @@ ADO.NET es un conjunto de clases que exponen servicios de acceso a datos para pr
   
 ## <a name="see-also"></a>Consulte también
 
-- [Obtener acceso a los datos en Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)
-- [Información general sobre ADO.NET](ado-net-overview.md)
+- [Obtener acceso a datos en Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)
+- [Información general de ADO.NET](ado-net-overview.md)

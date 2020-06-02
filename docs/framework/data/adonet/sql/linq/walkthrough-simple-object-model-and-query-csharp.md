@@ -1,13 +1,14 @@
 ---
 title: 'Tutorial: Modelo de objetos simple y consultas (C#)'
+description: Siga este tutorial para crear una clase de entidad que modela una tabla en una base de datos de ejemplo. A continuación, cree una consulta simple para enumerar los clientes en una ubicación determinada.
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: a9b3b57e37331cd13f2cd30b8a7663f2fb39d8c1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4637fabecc1726d8fec12857a667073912cfbed5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792133"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286306"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>Tutorial: Modelo de objetos simple y consultas (C#)
 
@@ -19,7 +20,7 @@ Este tutorial está orientado a código por diseño, para que sea más sencillo 
 
 Este tutorial se escribió con la configuración de desarrollo de Visual C#.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerrequisitos
 
 - Este tutorial utiliza una carpeta dedicada ("c:\linqtest5") que contiene los archivos. Cree esta carpeta antes de empezar el tutorial.
 
@@ -43,13 +44,13 @@ Este tutorial se compone de seis tareas principales:
 
 ## <a name="creating-a-linq-to-sql-solution"></a>Crear una solución LINQ to SQL
 
-En esta primera tarea, creará una solución de Visual Studio que contiene las referencias necesarias para compilar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] y ejecutar un proyecto.
+En esta primera tarea, creará una solución de Visual Studio que contiene las referencias necesarias para compilar y ejecutar un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proyecto.
 
 ### <a name="to-create-a-linq-to-sql-solution"></a>Para crear una solución LINQ to SQL
 
 1. En el menú **archivo** de Visual Studio, elija **nuevo**y, a continuación, haga clic en **proyecto**.
 
-2. En el panel **tipos de proyecto** del cuadro de diálogo **nuevo proyecto** , haga clic en **Visual C#** .
+2. En el panel **tipos de proyecto** del cuadro de diálogo **nuevo proyecto** , haga clic en **Visual C#**.
 
 3. En el panel **Plantillas**, haga clic en **Aplicación de consola**.
 
@@ -117,7 +118,7 @@ También declarará `Table<Customer>` para que actúe como la tabla lógica con 
 
 ## <a name="creating-a-simple-query"></a>Crear una consulta simple
 
-En este paso, creará una consulta para buscar los clientes de la tabla de base de datos Customers que se encuentran en Londres. En este paso, el código de la consulta simplemente la describe. No la ejecuta. Este enfoque se conoce como *ejecución aplazada*. Para obtener más información, vea [Introduction to LINQ queries (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md) [Introducción a las consultas LINQ (C#)].
+En este paso, creará una consulta para buscar los clientes de la tabla de base de datos Customers que se encuentran en Londres. En este paso, el código de la consulta simplemente la describe. No la ejecuta. Este enfoque se conoce como *ejecución aplazada*. Para obtener más información, vea [Introducción a las consultas LINQ (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).
 
 También generará un resultado de registro para mostrar los comandos SQL que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] genera. Esta característica de registro (que utiliza <xref:System.Data.Linq.DataContext.Log%2A>) es útil para la depuración, así como para determinar que los comandos que se envían a la base de datos representan la consulta de manera precisa.
 
@@ -160,10 +161,10 @@ En este paso es donde realmente ejecutará la consulta. Las expresiones de consu
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-El [Tutorial: El tema consultas en variasC#relaciones](walkthrough-querying-across-relationships-csharp.md) () continúa donde finaliza este tutorial. El tutorial consulta a través de relaciones [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] muestra cómo puede realizar consultas entre tablas, de forma similar a las *combinaciones* en una base de datos relacional.
+El tema [Tutorial: realizar consultas en varias relaciones (C#)](walkthrough-querying-across-relationships-csharp.md) continúa donde finaliza este tutorial. El tutorial consulta a través de relaciones muestra cómo [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] puede realizar consultas entre tablas, de forma similar a las *combinaciones* en una base de datos relacional.
 
 Si desea seguir los pasos del tutorial Realizar consultas en varias relaciones, no olvide guardar la solución del tutorial que acaba de completar, que es un requisito previo.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Aprendizaje con tutoriales](learning-by-walkthroughs.md)
+- [Aprender con tutoriales](learning-by-walkthroughs.md)

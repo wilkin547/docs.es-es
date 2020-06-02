@@ -7,12 +7,12 @@ helpviewer_keywords:
 - unsealed classes
 - inheritance, classes
 ms.assetid: 9a3bd505-90f5-4053-9f0d-3cf5fa3d3ebf
-ms.openlocfilehash: 6804a79e8beee1d42e313509966b46239e66c25f
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 8e332a6382cf644c82d5e26cf5234cea08dcc693
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743552"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289556"
 ---
 # <a name="unsealed-classes"></a>Clases no selladas
 Las clases selladas no se pueden heredar de e impiden la extensibilidad. Por el contrario, las clases que se pueden heredar de se denominan clases no selladas.
@@ -29,6 +29,6 @@ Las clases selladas no se pueden heredar de e impiden la extensibilidad. Por el 
 
 ## <a name="see-also"></a>Consulte también
 
-- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)
-- [Diseño de extensibilidad](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
-- [Sellado](../../../docs/standard/design-guidelines/sealing.md)
+- [Directrices de diseño de marco](index.md)
+- [Diseñar extensibilidad](designing-for-extensibility.md)
+- [Sellar](sealing.md)

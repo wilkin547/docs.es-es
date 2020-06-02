@@ -1,16 +1,17 @@
 ---
 title: Habilitación de conjuntos de resultados activos múltiples
+description: Obtenga información sobre cómo habilitar o deshabilitar MARS en una cadena de conexión, que funciona con SQL Server para que pueda ejecutar varios lotes en una sola conexión en ADO.NET.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: 72125be835298218e5445fe1915d6a17f5008bb2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 43bdfebce291c3c1d6c90104c5fef440b295934b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148730"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286486"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Habilitación de conjuntos de resultados activos múltiples
 Los conjuntos de resultados activos múltiples (MARS) son una característica que funciona con SQL Server y que permite la ejecución de varios lotes en una sola conexión. Cuando MARS está habilitado para su uso con SQL Server, cada objeto de comando usado agrega una sesión a la conexión.  
@@ -68,7 +69,7 @@ string connectionString = "Data Source=MSSQL1;" +
  Las operaciones MARS no son seguras para subprocesos.  
   
 ### <a name="connection-pooling"></a>Agrupar conexiones  
- Las conexiones habilitadas para MARS se agrupan como cualquier otra conexión. Si una aplicación abre dos conexiones, una con MARS habilitado y otra con MARS deshabilitado, las dos conexiones se ubican en grupos independientes. Para más información, consulte el artículo sobre la [agrupación de conexiones de SQL Server (ADO.NET)](../sql-server-connection-pooling.md).  
+ Las conexiones habilitadas para MARS se agrupan como cualquier otra conexión. Si una aplicación abre dos conexiones, una con MARS habilitado y otra con MARS deshabilitado, las dos conexiones se ubican en grupos independientes. Para obtener más información, vea [Agrupación de conexiones de SQL Server (ADO.NET)](../sql-server-connection-pooling.md).  
   
 ### <a name="sql-server-batch-execution-environment"></a>Entorno de ejecución por lotes de SQL Server  
  Cuando se abre una conexión, se define un entorno predeterminado. A continuación, este entorno se copia en una sesión de MARS lógica.  
@@ -94,7 +95,7 @@ string connectionString = "Data Source=MSSQL1;" +
   
  Mensaje: Contexto de transacción en uso por otra sesión.  
   
- Origen: Proveedor de datos SqlClient de .NET  
+ Origen: proveedor de datos SqlClient de .NET  
   
  Se esperaba: (NULL)  
   

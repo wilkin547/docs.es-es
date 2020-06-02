@@ -1,23 +1,24 @@
 ---
 title: Agrupación de conexiones de SQL Server
+description: Obtenga información sobre cómo ADO.NET minimiza el costo de abrir conexiones mediante SQL Server agrupación de conexiones, lo que reduce la sobrecarga de las nuevas conexiones.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 149511bd4e84baabf11eca014257127b587830df
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1a95aab9e09d69a3d26b3404d4cb2b70371a3fe8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149003"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286564"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Agrupación de conexiones de SQL Server (ADO.NET)
 La conexión a un servidor de bases de datos suele constar de varios pasos que requieren mucho tiempo. Se debe establecer un canal físico, como un socket o una canalización con nombre, debe tener lugar el protocolo de enlace con el servidor, se debe analizar la información de la cadena de conexión, el servidor debe autenticar la conexión, se deben ejecutar comprobaciones para la inscripción en la transacción actual, etc.  
   
- En la práctica, la mayoría de las aplicaciones solamente utilizan unas cuantas configuraciones diferentes para las conexiones. Esto significa que durante la ejecución de la aplicación, muchas conexiones idénticas se abrirán y cerrarán de forma repetida. Para minimizar el costo de abrir conexiones, ADO.NET utiliza una técnica de optimización denominada *agrupación*de conexiones.  
+ En la práctica, la mayoría de las aplicaciones solamente utilizan unas cuantas configuraciones diferentes para las conexiones. Esto significa que durante la ejecución de la aplicación, muchas conexiones idénticas se abrirán y cerrarán de forma repetida. Para minimizar el costo de la apertura de conexiones, ADO.NET usa una técnica de optimización denominada *agrupación*de conexiones.  
   
- La agrupación de conexiones reduce el número de veces que es necesario abrir nuevas conexiones. El *agrupador* mantiene la propiedad de la conexión física. Para administrar las conexiones, mantiene un conjunto de conexiones activas para cada configuración de conexión dada. Cada vez que un usuario llama a `Open` en una conexión, el agrupador comprueba si hay una conexión disponible en el grupo. Si hay disponible una conexión agrupada, la devuelve a la persona que llama en lugar de abrir una nueva. Cuando la aplicación llama a `Close` en la conexión, el agrupador la devuelve al conjunto agrupado de conexiones activas en lugar de cerrarla. Una vez que la conexión vuelve al grupo, ya está preparada para volverse a utilizar en la siguiente llamada a `Open`.  
+ La agrupación de conexiones reduce el número de veces que es necesario abrir nuevas conexiones. El *concentrador* mantiene la propiedad de la conexión física. Para administrar las conexiones, mantiene un conjunto de conexiones activas para cada configuración de conexión dada. Cada vez que un usuario llama a `Open` en una conexión, el agrupador comprueba si hay una conexión disponible en el grupo. Si hay disponible una conexión agrupada, la devuelve a la persona que llama en lugar de abrir una nueva. Cuando la aplicación llama a `Close` en la conexión, el agrupador la devuelve al conjunto agrupado de conexiones activas en lugar de cerrarla. Una vez que la conexión vuelve al grupo, ya está preparada para volverse a utilizar en la siguiente llamada a `Open`.  
   
  Solo se pueden agrupar conexiones con la misma configuración. ADO.NET mantiene varios grupos al mismo tiempo, uno para cada configuración. Las conexiones se dividen en grupos por cadena de conexión, y por identidad de Windows si se utiliza seguridad integrada. Las conexiones también se agrupan en función de si están incluidas en una transacción. Cuando se usa <xref:System.Data.SqlClient.SqlConnection.ChangePassword%2A>, la instancia de <xref:System.Data.SqlClient.SqlCredential> afecta al grupo de conexiones. Distintas instancias de <xref:System.Data.SqlClient.SqlCredential> usarán diferentes grupos de conexiones, incluso si el identificador de usuario y la contraseña son iguales.  
   
@@ -67,12 +68,12 @@ using (SqlConnection connection = new SqlConnection(
  El agrupador de conexiones satisface las solicitudes de conexión al reasignar las conexiones conforme se liberan de nuevo en el grupo. Si se ha alcanzado el tamaño máximo del grupo y no hay disponible ninguna conexión que se pueda utilizar, la solicitud se pone en la cola. A continuación, el concentrador intenta reclamar las conexiones hasta que se agota el tiempo de espera (el valor predeterminado es 15 segundos). Si no puede satisfacer la solicitud antes de que se agote el tiempo de espera de la conexión, se inicia una excepción.  
   
 > [!CAUTION]
-> Se recomienda encarecidamente cerrar siempre la conexión cuando se termine de utilizar para que regrese al grupo. Puede hacerlo mediante los `Close` `Dispose` métodos `Connection` o del objeto, o `using` abriendo todas las `Using` conexiones dentro de una instrucción en C- o una instrucción en Visual Basic. Es posible que las conexiones que no se cierran explícitamente no se puedan agregar ni puedan regresar al grupo. Para obtener más información, vea [Using Statement](../../../csharp/language-reference/keywords/using-statement.md) o [How to: Dispose of a System Resource](../../../visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) for Visual Basic.  
+> Se recomienda encarecidamente cerrar siempre la conexión cuando se termine de utilizar para que regrese al grupo. Para ello, puede usar los `Close` métodos o `Dispose` del `Connection` objeto o abrir todas las conexiones dentro de una `using` instrucción en C#, o una `Using` instrucción de Visual Basic. Es posible que las conexiones que no se cierran explícitamente no se puedan agregar ni puedan regresar al grupo. Para obtener más información, vea [using (instrucción](../../../csharp/language-reference/keywords/using-statement.md) ) o [Cómo: desechar un recurso del sistema](../../../visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) para Visual Basic.  
   
 > [!NOTE]
-> No llame a `Close` o a `Dispose` en un objeto `Connection`, un objeto `DataReader` o cualquier otro objeto administrado en el método `Finalize` de la clase. En un finalizador, libere solo los recursos no administrados que pertenezcan directamente a su clase. Si la clase no dispone de recursos no administrados, no incluya un método `Finalize` en la definición de clase. Para obtener más información, consulte [Recolección de elementos no utilizados](../../../standard/garbage-collection/index.md).  
+> No llame a `Close` o a `Dispose` en un objeto `Connection`, un objeto `DataReader` o cualquier otro objeto administrado en el método `Finalize` de la clase. En un finalizador, libere solo los recursos no administrados que pertenezcan directamente a su clase. Si la clase no dispone de recursos no administrados, no incluya un método `Finalize` en la definición de clase. Para obtener más información, consulte recolección de [elementos no utilizados](../../../standard/garbage-collection/index.md).  
   
-Para obtener más información acerca de los eventos asociados con las conexiones de apertura y cierre, vea Clase de evento de inicio de [sesión](/sql/relational-databases/event-classes/audit-login-event-class) de auditoría y Clase de evento de cierre de [sesión](/sql/relational-databases/event-classes/audit-logout-event-class) de auditoría en la documentación de SQL Server.  
+Para obtener más información sobre los eventos asociados a la apertura y el cierre de conexiones, vea [Audit login Event Class](/sql/relational-databases/event-classes/audit-login-event-class) y [Audit Logout Event Class](/sql/relational-databases/event-classes/audit-logout-event-class) en la documentación de SQL Server.  
   
 ## <a name="removing-connections"></a>Cómo quitar conexiones  
  El agrupador de conexiones quita una conexión del grupo después de haber estado inactiva unos 4-8 minutos o si detecta que se ha roto la conexión con el servidor. Tenga en cuenta que una conexión rota solo puede detectarse después de intentar comunicarse con el servidor. Si se encuentra que una conexión ya no está conectada al servidor, se marca como no válida. Las conexiones no válidas se quitan del grupo de conexión solo cuando se cierran o reclaman.  
@@ -80,7 +81,7 @@ Para obtener más información acerca de los eventos asociados con las conexione
  Si existe una conexión en un servidor que ha desaparecido, se puede extraer del grupo aunque el agrupador de conexiones no haya detectado la conexión rota y la haya marcado como no válida. El motivo es que la sobrecarga de comprobar que la conexión es aún válida eliminaría los beneficios de tener un concentrador y ocasionaría que se produjera otro viaje de ida y vuelta (round trip) al servidor. Cuando esto ocurre, el primer intento para usar la conexión detectará que ésta se ha roto y se iniciará una excepción.  
   
 ## <a name="clearing-the-pool"></a>Borrado del grupo  
- ADO.NET 2.0 introdujo dos nuevos métodos para borrar el pool: <xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A> y <xref:System.Data.SqlClient.SqlConnection.ClearPool%2A>. `ClearAllPools` borra los grupos de conexión de un proveedor dado, y `ClearPool` borra el grupo de conexión que está asociado a una conexión concreta. Si en el momento de la llamada se están usando conexiones, se marcan de forma adecuada. Cuando se cierran, se descartan en lugar de devolverse al grupo.  
+ ADO.NET 2,0 presentó dos nuevos métodos para borrar el Grupo: <xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A> y <xref:System.Data.SqlClient.SqlConnection.ClearPool%2A> . `ClearAllPools` borra los grupos de conexión de un proveedor dado, y `ClearPool` borra el grupo de conexión que está asociado a una conexión concreta. Si en el momento de la llamada se están usando conexiones, se marcan de forma adecuada. Cuando se cierran, se descartan en lugar de devolverse al grupo.  
   
 ## <a name="transaction-support"></a>Compatibilidad con transacciones  
  Las conexiones se extraen del grupo y se asignan en función del contexto de transacción. A menos que se especifique `Enlist=false` en la cadena de conexión, el grupo de conexión garantiza que la conexión está dada de alta en el contexto de <xref:System.Transactions.Transaction.Current%2A>. Cuando se cierra una conexión y se devuelve al grupo con una transacción `System.Transactions` dada de alta, se reserva de forma que la siguiente solicitud de ese grupo de conexiones con la misma transacción `System.Transactions` devolverá la misma conexión, si está disponible. Si se emite dicha solicitud y no hay conexiones agrupadas disponibles, se extrae una conexión de la parte sin transacción del grupo y se le da de alta. Si no hay conexiones disponibles en cualquier área del grupo, se crea y da de alta una nueva conexión.  
@@ -88,7 +89,7 @@ Para obtener más información acerca de los eventos asociados con las conexione
  Cuando se cierra una conexión, se libera de nuevo en el grupo y en la subdivisión adecuada en función de su contexto de transacción. Por lo tanto, puede cerrar la conexión sin generar un error, incluso aunque aún haya pendiente una transacción distribuida. Esto permite confirmar o anular la transacción distribuida más adelante.  
   
 ## <a name="controlling-connection-pooling-with-connection-string-keywords"></a>Control de la agrupación de conexiones con palabras clave de cadena de conexión  
- La propiedad `ConnectionString` del objeto <xref:System.Data.SqlClient.SqlConnection> admite pares clave-valor de cadena de conexión que se pueden utilizar para ajustar el comportamiento de la lógica de agrupación de conexiones. Para más información, consulte <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
+ La propiedad `ConnectionString` del objeto <xref:System.Data.SqlClient.SqlConnection> admite pares clave-valor de cadena de conexión que se pueden utilizar para ajustar el comportamiento de la lógica de agrupación de conexiones. Para obtener más información, vea <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
 ## <a name="pool-fragmentation"></a>Fragmentación de grupos  
  La fragmentación de grupos es un problema común en muchas aplicaciones web en las que la aplicación puede crear gran cantidad de grupos que no se liberan hasta que finaliza el proceso. El resultado es un gran número de conexiones abiertas que consumen memoria, lo que da lugar a un bajo rendimiento.  
@@ -124,10 +125,10 @@ using (SqlConnection connection = new SqlConnection(
 ```  
   
 ## <a name="application-roles-and-connection-pooling"></a>Roles de aplicación y agrupación de conexiones  
- Una vez activada una función de aplicación de SQL Server al llamar al procedimiento almacenado de sistema `sp_setapprole`, no se puede restablecer el contexto de seguridad de la conexión. Sin embargo, cuando se habilita la agrupación, la conexión se devuelve al grupo y se produce un error al utilizar de nuevo la conexión agrupada. Para obtener más información, vea el artículo de Knowledge Base, "Errores de rol de[aplicación SQL con agrupación](https://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)de recursos OLE DB ."  
+ Una vez activada una función de aplicación de SQL Server al llamar al procedimiento almacenado de sistema `sp_setapprole`, no se puede restablecer el contexto de seguridad de la conexión. Sin embargo, cuando se habilita la agrupación, la conexión se devuelve al grupo y se produce un error al utilizar de nuevo la conexión agrupada. Para obtener más información, vea el artículo de Knowledge base "[errores de rol de aplicación SQL con agrupación de recursos de OLE DB](https://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)".  
   
 ### <a name="application-role-alternatives"></a>Alternativas a los roles de aplicación  
- Se recomienda aprovechar las ventajas de los mecanismos de seguridad que se pueden usar en lugar de roles de aplicación. Para obtener más información, vea Crear roles de [aplicación en SQL Server](./sql/creating-application-roles-in-sql-server.md).  
+ Se recomienda aprovechar las ventajas de los mecanismos de seguridad que se pueden usar en lugar de roles de aplicación. Para obtener más información, vea [crear roles de aplicación en SQL Server](./sql/creating-application-roles-in-sql-server.md).  
   
 ## <a name="see-also"></a>Consulte también
 

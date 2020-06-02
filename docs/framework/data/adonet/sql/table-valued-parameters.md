@@ -1,16 +1,17 @@
 ---
 title: Parámetros con valores de tabla
+description: Obtenga información sobre cómo calcular las referencias de varias filas de datos de una aplicación cliente para SQL Server mediante el uso de parámetros con valores de tabla.
 ms.date: 10/12/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: b968c599cf061fbd03b7ba8fb19470f6ace11a55
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 7b1f0a6c416f660f06cea099197ba136f84407f9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202170"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286202"
 ---
 # <a name="table-valued-parameters"></a>Parámetros con valores de tabla
 Los parámetros con valores de tabla proporcionan una manera sencilla de serializar varias filas de datos de una aplicación cliente en SQL Server sin necesidad de ir y volver repetidas veces ni de ninguna lógica especial de servidor para procesar los datos. Puede usar parámetros con valores de tabla para encapsular filas de datos en una aplicación cliente y enviar los datos al servidor en un único comando con parámetros. Las filas de datos entrantes se almacenan en una variable de tabla en la que, a continuación, se puede operar mediante el uso de Transact-SQL.  
@@ -129,7 +130,7 @@ tvpParam.SqlDbType = SqlDbType.Structured
 ```  
   
 ## <a name="passing-a-table-valued-parameter-to-a-stored-procedure"></a><a name="passing"></a>Pasar un parámetro con valores de tabla a un procedimiento almacenado  
- En este ejemplo se muestra cómo pasar datos de parámetros con valores de tabla a un procedimiento almacenado. El código extrae las filas agregadas a un nuevo objeto <xref:System.Data.DataTable> mediante el método <xref:System.Data.DataTable.GetChanges%2A>. A continuación, el código define <xref:System.Data.SqlClient.SqlCommand>, estableciendo la propiedad <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> en <xref:System.Data.CommandType.StoredProcedure>. El valor <xref:System.Data.SqlClient.SqlParameter> se rellena con el método <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> y el valor <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> se establece en `Structured`. A continuación, se ejecuta <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> utilizando el método <xref:System.Data.SqlClient.SqlCommand>.  
+ En este ejemplo se muestra cómo pasar datos de parámetros con valores de tabla a un procedimiento almacenado. El código extrae las filas agregadas a un nuevo objeto <xref:System.Data.DataTable> mediante el método <xref:System.Data.DataTable.GetChanges%2A>. A continuación, el código define <xref:System.Data.SqlClient.SqlCommand>, estableciendo la propiedad <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> en <xref:System.Data.CommandType.StoredProcedure>. El valor <xref:System.Data.SqlClient.SqlParameter> se rellena con el método <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> y el valor <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> se establece en `Structured`. A continuación, se ejecuta <xref:System.Data.SqlClient.SqlCommand> utilizando el método <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A>.  
   
 ```csharp  
 // Assumes connection is an open SqlConnection object.  
@@ -272,7 +273,7 @@ tvpParam.SqlDbType = SqlDbType.Structured
 insertCommand.ExecuteNonQuery()  
 ```  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [Configurar parámetros y tipos de datos de parámetros](../configuring-parameters-and-parameter-data-types.md)
 - [Comandos y parámetros](../commands-and-parameters.md)

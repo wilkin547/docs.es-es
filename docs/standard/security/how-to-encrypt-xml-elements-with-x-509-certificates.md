@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Cifrar elementos XML con certificados X.509'
+title: Procedimiento para cifrar elementos XML con certificados X.509
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,21 +14,21 @@ helpviewer_keywords:
 - X.509 certificates
 - certificates, X.509 certificates
 ms.assetid: 761f1c66-631c-47af-aa86-ad9c50cfa453
-ms.openlocfilehash: 7f74e4e46ba760b7a943b2e2728e487ee87ae204
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9cdd8e52be11eeba86ec406510f40f1a08809ff8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706076"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277224"
 ---
-# <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>Cómo: Cifrar elementos XML con certificados X.509
-Puede usar las clases en el espacio de nombres <xref:System.Security.Cryptography.Xml> para cifrar un elemento dentro de un documento XML.  El cifrado XML es un método estándar para intercambiar o almacenar datos XML cifrados sin preocuparse de que los datos puedan leerse con facilidad.  Para obtener más información sobre el estándar de cifrado XML, consulte la especificación de World Wide Web Consortium (W3C) para el cifrado XML ubicado en <https://www.w3.org/TR/xmldsig-core/>.  
+# <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>Procedimiento para cifrar elementos XML con certificados X.509
+Puede usar las clases en el espacio de nombres <xref:System.Security.Cryptography.Xml> para cifrar un elemento dentro de un documento XML.  El cifrado XML es un método estándar para intercambiar o almacenar datos XML cifrados sin preocuparse de que los datos puedan leerse con facilidad.  Para obtener más información sobre el estándar de cifrado XML, consulte la especificación de World Wide Web Consortium (W3C) para el cifrado XML ubicado en <https://www.w3.org/TR/xmldsig-core/> .  
   
  Puede usar el cifrado de XML para reemplazar cualquier elemento o documento XML con un elemento <`EncryptedData`> que contenga los datos XML cifrados. El elemento <`EncryptedData`> puede contener subelementos con información sobre las claves y los procesos usados durante el cifrado.  El cifrado XML permite que un documento contenga varios elementos cifrados y permite cifrar varias veces un elemento.  El ejemplo de código de este procedimiento muestra cómo crear un elemento <`EncryptedData`> junto con otros subelementos que se pueden usar posteriormente durante el descifrado.  
   
  En este ejemplo se cifra un elemento XML mediante dos claves. Se genera un certificado X.509 de prueba mediante la [herramienta de creación de certificados (Makecert.exe)](/windows/desktop/SecCrypto/makecert) y se guarda el certificado en un almacén de certificados. A continuación, en el ejemplo se recupera el certificado mediante programación y se usa para cifrar un elemento XML mediante el método <xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A>. Internamente, el método <xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A> crea una clave de sesión independiente y la usa para cifrar el documento XML. Este método cifra la clave de sesión y la guarda junto con el XML cifrado dentro de un nuevo elemento <`EncryptedData`>.  
   
- Para descifrar el elemento XML, basta con llamar al método <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A>, que recupera automáticamente el certificado X.509 del almacén y realiza las operaciones de descifrado necesarias.  Para más información sobre la manera de descifrar un elemento XML cifrado mediante este procedimiento, vea [Cómo: Descifrar elementos XML con certificados X.509](../../../docs/standard/security/how-to-decrypt-xml-elements-with-x-509-certificates.md).  
+ Para descifrar el elemento XML, basta con llamar al método <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A>, que recupera automáticamente el certificado X.509 del almacén y realiza las operaciones de descifrado necesarias.  Para más información sobre la manera de descifrar un elemento XML cifrado mediante este procedimiento, vea [Cómo: Descifrar elementos XML con certificados X.509](how-to-decrypt-xml-elements-with-x-509-certificates.md).  
   
  Este ejemplo resulta adecuado en aquellas situaciones en las que varias aplicaciones tienen que compartir datos cifrados o en las que una aplicación tiene que guardar datos cifrados entre los intervalos en los que se ejecuta.  
   
@@ -114,7 +114,7 @@ Puede usar las clases en el espacio de nombres <xref:System.Security.Cryptograph
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
  El certificado X.509 usado en este ejemplo se usa únicamente para pruebas.  Las aplicaciones deben usar un certificado X.509 generado por una entidad de certificación de confianza o un certificado generado por Microsoft Windows Certificate Server.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Security.Cryptography.Xml>
-- [Cómo: Descifrar elementos XML con certificados X.509](../../../docs/standard/security/how-to-decrypt-xml-elements-with-x-509-certificates.md)
+- [Procedimiento para descifrar elementos XML con certificados X.509](how-to-decrypt-xml-elements-with-x-509-certificates.md)

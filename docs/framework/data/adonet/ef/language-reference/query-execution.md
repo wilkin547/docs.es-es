@@ -1,29 +1,30 @@
 ---
 title: Ejecución de la consulta
+description: Obtenga información sobre las distintas formas en que se ejecuta una consulta LINQ to Entities, incluida la ejecución diferida de consultas, la ejecución inmediata de consultas y la ejecución de la tienda.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c0e6cf23-63ac-47dd-bfe9-d5bdca826fac
-ms.openlocfilehash: e372744eea3eed7fc3f7ee9c8bbdd711c95b586e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e776df6d35b6cc8c24cd83e902bc4d050347343b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149978"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286797"
 ---
 # <a name="query-execution"></a>Ejecución de la consulta
 Una vez creada por un usuario una consulta LINQ, se convierte en un árbol de comandos. Un árbol de comandos es una representación de una consulta que es compatible con Entity Framework. Posteriormente, el árbol de comandos se ejecuta en el origen de datos. En el momento de la ejecución de la consulta, se evalúan todas las expresiones de consulta (es decir, todos los componentes de la consulta), incluidas las expresiones que se utilizan en la materialización del resultado.  
   
- El momento en que se ejecutan las expresiones de consulta puede variar. Las consultas LINQ siempre se ejecutan cuando se recorre en iteración la variable de consulta, no cuando se crea la citada variable de consulta. Esto se denomina *ejecución diferida*. También se puede obligar a que la consulta se ejecute inmediatamente, lo que es útil para almacenar en caché los resultados de la consulta. Esto se describe más adelante en este tema.  
+ El momento en que se ejecutan las expresiones de consulta puede variar. Las consultas LINQ siempre se ejecutan cuando se recorre en iteración la variable de consulta, no cuando se crea la citada variable de consulta. Esto se denomina *ejecución aplazada*. También se puede obligar a que la consulta se ejecute inmediatamente, lo que es útil para almacenar en caché los resultados de la consulta. Esto se describe más adelante en este tema.  
   
  Cuando se ejecuta una consulta de LINQ to Entities, algunas de sus expresiones podrían ejecutarse en el servidor y ciertas partes podrían ejecutarse de forma local en el cliente. La evaluación en el cliente de una expresión se lleva a cabo antes de ejecutar la consulta en el servidor. Si una expresión se evalúa en el cliente, el resultado de esa evaluación se sustituye por la expresión en la consulta, y ésta se ejecuta entonces en el servidor. Dado que las consultas se ejecutan en el origen de datos, la configuración de este reemplaza el comportamiento especificado en el cliente. Por ejemplo, la precisión numérica y el tratamiento de los valores NULL dependen de la configuración de servidor. Cualquier excepción que se produzca durante la ejecución de la consulta en el servidor se pasa directamente al cliente.  
 
 > [!TIP]
-> Para obtener un resumen práctico de los operadores de consulta en formato de tabla, que le permite identificar rápidamente el comportamiento de ejecución de un operador, vea [Clasificación de operadores de consulta estándar por manier of Execution (C-).](../../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)
+> Para obtener un breve resumen de los operadores de consulta en formato de tabla, lo que permite identificar rápidamente el comportamiento de ejecución de un operador, vea [clasificación de operadores de consulta estándar por modo de ejecución (C#)](../../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md).
 
 ## <a name="deferred-query-execution"></a>Ejecución de consultas en diferido  
- En una consulta que devuelve una secuencia de valores, la variable de consulta por sí misma nunca conserva los resultados de la consulta y solo almacena los comandos de la misma. La ejecución de la consulta se aplaza hasta que la variable de consulta se recorre en iteración en un bucle `foreach` o `For Each`. Esto se conoce como *ejecución diferida;* es decir, la ejecución de la consulta se produce en algún momento después de que se construye la consulta. Esto significa que se puede ejecutar una consulta con la frecuencia que se desee. Esto es útil cuando, por ejemplo, se tiene una base de datos que otras aplicaciones están actualizando. En su aplicación puede crear una consulta para recuperar la información más reciente y ejecutar de forma repetida la consulta, devolviendo cada vez la información actualizada.  
+ En una consulta que devuelve una secuencia de valores, la variable de consulta por sí misma nunca conserva los resultados de la consulta y solo almacena los comandos de la misma. La ejecución de la consulta se aplaza hasta que la variable de consulta se recorre en iteración en un bucle `foreach` o `For Each`. Esto se conoce como *ejecución aplazada*; es decir, la ejecución de la consulta se produce una vez después de la construcción de la consulta. Esto significa que se puede ejecutar una consulta con la frecuencia que se desee. Esto es útil cuando, por ejemplo, se tiene una base de datos que otras aplicaciones están actualizando. En su aplicación puede crear una consulta para recuperar la información más reciente y ejecutar de forma repetida la consulta, devolviendo cada vez la información actualizada.  
   
  La ejecución aplazada permite combinar varias consultas o ampliar una consulta. Cuando se amplía una consulta, se modifica para incluir las nuevas operaciones. La ejecución eventual reflejará los cambios. En el siguiente ejemplo, la primera consulta devuelve todos los productos. La segunda consulta amplía la primera usando `Where` para devolver todos los productos del tamaño "L":  
   
@@ -47,7 +48,7 @@ Una vez creada por un usuario una consulta LINQ, se convierte en un árbol de co
   
  Ciertas operaciones se ejecutan siempre en el cliente, como el enlace de valores, subexpresiones, subconsultas de cierres, y la materialización de objetos en los resultados de la consulta. La consecuencia final es que estos elementos (por ejemplo, los valores de parámetro) no se pueden actualizar durante la ejecución. Los tipos anónimos se pueden crear alineados en el origen de datos, pero no se debe suponer que esto se vaya a producir. Las agrupaciones alineadas también se pueden crear en el almacén, pero no se debe suponer que esto tenga lugar en cada instancia. En general, es preferible no hacer suposiciones sobre lo que se crea en el servidor.  
   
- En esta sección se describen los escenarios en que el código se ejecuta localmente en el cliente. Para obtener más información acerca de qué tipos de expresiones se ejecutan localmente, vea [Expresiones en LINQ to Entities Queries](expressions-in-linq-to-entities-queries.md).  
+ En esta sección se describen los escenarios en que el código se ejecuta localmente en el cliente. Para obtener más información sobre los tipos de expresiones que se ejecutan localmente, vea [expresiones en consultas de LINQ to Entities](expressions-in-linq-to-entities-queries.md).  
   
 ### <a name="literals-and-parameters"></a>Literales y parámetros  
  Las variables locales, como la variable `orderID` del ejemplo siguiente, se evalúan en el cliente.  
