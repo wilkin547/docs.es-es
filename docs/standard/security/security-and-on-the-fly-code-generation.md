@@ -1,6 +1,6 @@
 ---
 title: Seguridad y generación de código inmediata
-description: Generar código en nombre de código de menor confianza que se ejecuta en una confianza más alta es un problema de seguridad, especialmente cuando un autor de la llamada puede influir en la generación de código.
+description: La generación de código en nombre del código de menor confianza que se ejecuta en una confianza mayor es un problema de seguridad, sobre todo cuando un llamador puede influir en la generación de código.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - security [.NET Framework], on-the-fly code generation
 - secure coding, on-the-fly code generation
 ms.assetid: 6d221724-bb21-4d76-90c3-0ee2a2e69be2
-ms.openlocfilehash: 34ebda27a81ca29ebb27a721b77b735a12be882e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7e5168aa9305c559cf5ea2fb197b2c23ce2a05b0
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186799"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291037"
 ---
 # <a name="security-and-on-the-fly-code-generation"></a>Seguridad y generación de código inmediata
 Algunas bibliotecas funcionan generando código y ejecutándolo para realizar algunas operaciones para el llamador. El problema fundamental es generar código en nombre de código de menor confianza y ejecutarlo con una confianza superior. El problema empeora cuando el llamador puede influir en la generación de código, por lo que debe asegurarse de generar solo código que considere seguro.  
@@ -27,4 +27,4 @@ Algunas bibliotecas funcionan generando código y ejecutándolo para realizar al
   
 ## <a name="see-also"></a>Consulte también
 
-- [Instrucciones de codificación segura](../../../docs/standard/security/secure-coding-guidelines.md)
+- [Instrucciones de codificación segura](secure-coding-guidelines.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Crear un objeto WindowsPrincipal'
+title: Procedimiento para crear un objeto WindowsPrincipal
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - security [.NET Framework], principals
 - principal objects, creating
 ms.assetid: 56eb10ca-e61d-4ed2-af7a-555fc4c25a25
-ms.openlocfilehash: 30af18b7d7b86621586c7da66eda1b37356d5565
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 6064c98c4e1e5153f4e0de4849de196228972a89
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159785"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284434"
 ---
-# <a name="how-to-create-a-windowsprincipal-object"></a>Cómo: Crear un objeto WindowsPrincipal
+# <a name="how-to-create-a-windowsprincipal-object"></a>Procedimiento para crear un objeto WindowsPrincipal
 Hay dos maneras de crear un objeto <xref:System.Security.Principal.WindowsPrincipal>, dependiendo de si el código debe realizar la validación basada en rol una sola vez o varias veces.  
   
  Si el código debe realizar la validación basada en rol varias veces, el primero de los procedimientos indicados a continuación produce menos sobrecarga. Cuando solo hace falta llevar a cabo una vez validaciones basadas en rol, puede crear un objeto <xref:System.Security.Principal.WindowsPrincipal> usando el segundo de los procedimientos indicados a continuación.  
@@ -75,6 +75,6 @@ Hay dos maneras de crear un objeto <xref:System.Security.Principal.WindowsPrinci
   
 3. Una vez que se ha creado el objeto de entidad de seguridad, dispone de varios métodos para validarlo.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Objetos Principal e Identity](../../../docs/standard/security/principal-and-identity-objects.md)
+- [Objetos Principal e Identity](principal-and-identity-objects.md)

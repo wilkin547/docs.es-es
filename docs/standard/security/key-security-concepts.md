@@ -11,24 +11,24 @@ helpviewer_keywords:
 - permissions [.NET Framework]
 - security [.NET Framework], about security
 ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
-ms.openlocfilehash: b7bcb7e56ca14d129eadcaeac19452d4a443713d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1ec811430056b7db575d6db229a3afe618850e49
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401284"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291245"
 ---
 # <a name="key-security-concepts"></a>Conceptos clave de seguridad
 Microsoft .NET Framework ofrece seguridad basada en roles para ayudar a solucionar problemas de seguridad relativos a código móvil y para permitir que los componentes determinen qué usuarios tienen autorización para operar.  
   
 ## <a name="type-safety-and-security"></a>Protección y seguridad de tipos  
- El código seguro de tipos sólo tiene acceso a las ubicaciones de memoria para las que tiene autorización. (Para esta discusión, la seguridad de tipo se refiere específicamente a la seguridad del tipo de memoria y no debe confundirse con la seguridad de tipo en un aspecto más amplio.) Por ejemplo, el código con seguridad de tipos no puede leer valores de los campos privados de otro objeto. Sólo puede obtener acceso a tipos siguiendo métodos permitidos y perfectamente definidos.  
+ El código seguro de tipos sólo tiene acceso a las ubicaciones de memoria para las que tiene autorización. (En este debate, la seguridad de tipos se refiere específicamente a la seguridad de tipos de memoria y no debe confundirse con la seguridad de tipos en un respeto más amplio). Por ejemplo, el código seguro de tipos no puede leer valores de los campos privados de otro objeto. Sólo puede obtener acceso a tipos siguiendo métodos permitidos y perfectamente definidos.  
   
- Durante la compilación Just-in-time (JIT), un proceso opcional de comprobación examina los metadatos y el lenguaje intermedio de Microsoft (MSIL) de los métodos a compilar a código máquina nativo, para comprobar si tienen seguridad de tipos. Este proceso se omite si el código tiene permiso para evitar la comprobación. Para información sobre la comprobación, consulte [Proceso de ejecución administrada](../../../docs/standard/managed-execution-process.md).  
+ Durante la compilación Just-in-time (JIT), un proceso opcional de comprobación examina los metadatos y el lenguaje intermedio de Microsoft (MSIL) de los métodos a compilar a código máquina nativo, para comprobar si tienen seguridad de tipos. Este proceso se omite si el código tiene permiso para evitar la comprobación. Para información sobre la comprobación, consulte [Proceso de ejecución administrada](../managed-execution-process.md).  
   
  Aunque la comprobación de la seguridad de tipos no es obligatoria para la ejecución de código administrado, la seguridad de tipos desempeña un rol crucial en el aislamiento del ensamblado y la exigencia de seguridad. Cuando el código tiene seguridad de tipos, Common Language Runtime puede aislar totalmente ensamblados entre sí. Este aislamiento ayuda a garantizar que los ensamblados no puedan ejercer influencias negativas entre sí y aumenta la confiabilidad de la aplicación. Los componentes seguros de tipos se pueden ejecutar de forma segura en el mismo proceso aunque dispongan de confianza en diferentes niveles. Cuando el código no tiene seguridad de tipos, pueden producirse efectos secundarios no deseados. Por ejemplo, el runtime no puede evitar la llamada de código administrado en código nativo (no administrado) ni la realización de operaciones malintencionadas. Cuando el código tiene seguridad de tipos, el mecanismo de exigencia de seguridad del motor en tiempo de ejecución garantiza que no tiene acceso a código nativo salvo que tenga permiso explícito para ello. El código sin seguridad de tipos debe haber obtenido permiso <xref:System.Security.Permissions.SecurityPermission> con el miembro de enumeración <xref:System.Security.Permissions.SecurityPermissionAttribute.SkipVerification%2A> transferido para la ejecución.  
   
- Para obtener más información, vea [Conceptos básicos sobre la seguridad de acceso del código](../../../docs/framework/misc/code-access-security-basics.md).  
+ Para obtener más información, vea [Conceptos básicos sobre la seguridad de acceso del código](../../framework/misc/code-access-security-basics.md).  
   
 ## <a name="principal"></a>Principal  
  Una entidad de seguridad (principal) representa la identidad y el rol de un usuario y actúa en nombre del usuario. La seguridad basada en roles de .NET Framework admite tres tipos de entidades de seguridad:  
@@ -39,7 +39,7 @@ Microsoft .NET Framework ofrece seguridad basada en roles para ayudar a solucion
   
 - Una aplicación puede definir entidades de seguridad personalizadas que se adapten a las necesidades de esa aplicación en particular. Asimismo, se puede ampliar la noción básica de la identidad y los roles de la entidad de seguridad.  
   
- Para más información, consulte [Objetos Principal e Identity](../../../docs/standard/security/principal-and-identity-objects.md).  
+ Para más información, consulte [Objetos Principal e Identity](principal-and-identity-objects.md).  
   
 ## <a name="authentication"></a>Authentication  
  La autenticación es el proceso de detectar y comprobar la identidad de una entidad de seguridad mediante el análisis de las credenciales del usuario y la validación de esas credenciales en alguna autoridad. Su código puede usar fácilmente la información obtenida durante la autenticación. También puede usar la seguridad basada en roles de .NET Framework para autenticar al usuario actual y para determinar si esa entidad de seguridad puede tener acceso a su código. Vea las sobrecargas del método <xref:System.Security.Principal.WindowsPrincipal.IsInRole%2A?displayProperty=nameWithType> para obtener ejemplos de cómo autenticar la entidad de seguridad para roles específicos. Por ejemplo, puede usar la sobrecarga <xref:System.Security.Principal.WindowsPrincipal.IsInRole%28System.String%29?displayProperty=nameWithType> para determinar si el usuario actual es miembro del grupo Administradores.  

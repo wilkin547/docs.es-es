@@ -8,12 +8,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], type design guidelines
 - types [.NET Framework], design guidelines
 ms.assetid: 6b49314e-8bba-43ea-97ca-4e0255812f95
-ms.openlocfilehash: 2a3cca0139974cbc92ce85a19db73dfb3d13d1a0
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 17bd300277a039818a3d563c8f2d5f99eb2fc68d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743568"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289569"
 ---
 # <a name="type-design-guidelines"></a>Instrucciones de diseño de tipos
 Desde la perspectiva de CLR, solo hay dos categorías de tipos: tipos de referencia y tipos de valor, pero para la finalidad de un debate sobre el diseño del marco, dividimos los tipos en grupos más lógicos, cada uno con sus propias reglas de diseño específicas.
@@ -33,10 +33,10 @@ Desde la perspectiva de CLR, solo hay dos categorías de tipos: tipos de referen
  ✔️ asegurarse de que cada tipo es un conjunto bien definido de miembros relacionados, no solo una colección aleatoria de funcionalidad no relacionada.
 
 ## <a name="in-this-section"></a>En esta sección
- [Elección entre clase y struct clase](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md) [abstracta diseño](../../../docs/standard/design-guidelines/abstract-class.md) de clases [estáticas](../../../docs/standard/design-guidelines/static-class.md) [diseño](../../../docs/standard/design-guidelines/interface.md) de clases [estructura](../../../docs/standard/design-guidelines/struct.md) [Enum Design](../../../docs/standard/design-guidelines/enum.md) de diseño de clase [tipo anidado](../../../docs/standard/design-guidelines/nested-types.md) *partes © 2005, 2009 Microsoft Corporation. Todos los derechos reservados.*
+ [Elección entre clase y struct clase](choosing-between-class-and-struct.md) [abstracta diseño](abstract-class.md) de clases [estáticas](static-class.md) [diseño](interface.md) de clases [estructura](struct.md) [Enum Design](enum.md) de diseño de clase [tipo anidado](nested-types.md) *partes © 2005, 2009 Microsoft Corporation. Todos los derechos reservados.*
 
  *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*
 
 ## <a name="see-also"></a>Consulte también
 
-- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)
+- [Directrices de diseño de marco](index.md)

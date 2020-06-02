@@ -1,13 +1,14 @@
 ---
 title: Objetos DataAdapter y DataReader
+description: Obtenga información sobre ADO.NET DataReader, que recupera datos de una base de datos, y DataAdapter, que recupera datos de un origen de datos y rellena un DataSet.
 ms.date: 03/30/2017
 ms.assetid: cc952ca2-ec19-46ab-9189-15174b52cb74
-ms.openlocfilehash: 20c6d514e70d2e4db451e0fff02e72688bf7d0ba
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 17463d65266baa53521bed9603c8abd96923277b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786652"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286978"
 ---
 # <a name="dataadapters-and-datareaders"></a>Objetos DataAdapter y DataReader
 Puede usar ADO.NET **DataReader** para recuperar una secuencia de datos de solo lectura y de solo avance desde una base de datos. Los resultados se devuelven cuando se ejecuta la consulta y se almacenan en el búfer de red en el cliente hasta que se solicitan mediante el método **Read** del **DataReader**. El uso de **DataReader** puede aumentar el rendimiento de la aplicación al recuperar los datos tan pronto como estén disponibles y, de forma predeterminada, almacenar solo una fila a la vez en la memoria, lo que reduce la sobrecarga del sistema.  
@@ -17,7 +18,7 @@ Puede usar ADO.NET **DataReader** para recuperar una secuencia de datos de solo 
  Cada proveedor de datos .NET Framework incluido con .NET Framework tiene un objeto <xref:System.Data.Common.DbDataReader> y un objeto <xref:System.Data.Common.DbDataAdapter>, el proveedor de datos .NET Framework para OLE DB incluye un objeto <xref:System.Data.OleDb.OleDbDataReader> y un objeto <xref:System.Data.OleDb.OleDbDataAdapter>, el proveedor de datos .NET Framework para SQL Server incluye un objeto <xref:System.Data.SqlClient.SqlDataReader> y un objeto <xref:System.Data.SqlClient.SqlDataAdapter>, el proveedor de datos .NET Framework para ODBC incluye un objeto <xref:System.Data.Odbc.OdbcDataReader> y un objeto <xref:System.Data.Odbc.OdbcDataAdapter>, y el proveedor de datos .NET Framework para Oracle incluyes un objeto <xref:System.Data.OracleClient.OracleDataReader> y un objeto <xref:System.Data.OracleClient.OracleDataAdapter>.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Recuperación de datos utilizando un objeto DataReader](retrieving-data-using-a-datareader.md)  
+ [Recuperar datos utilizando un objeto DataReader](retrieving-data-using-a-datareader.md)  
  Describe el objeto **datareader** ADO.net y cómo usarlo para devolver una secuencia de resultados de un origen de datos.  
   
  [Rellenar un conjunto de datos desde un objeto DataAdapter](populating-a-dataset-from-a-dataadapter.md)  
@@ -32,22 +33,22 @@ Puede usar ADO.NET **DataReader** para recuperar una secuencia de datos de solo 
  [Correspondencias de DataTable y DataColumn en un objeto DataAdapter](dataadapter-datatable-and-datacolumn-mappings.md)  
  Describe cómo configurar `DataTableMappings` y `ColumnMappings` para `DataAdapter`.  
   
- [Paginación de un resultado de consulta](paging-through-a-query-result.md)  
+ [Paginar un resultado de consulta](paging-through-a-query-result.md)  
  Proporciona un ejemplo de cómo ver los resultados de una consulta como páginas de datos.  
   
  [Actualizar orígenes de datos con objetos DataAdapter](updating-data-sources-with-dataadapters.md)  
  Describe cómo se utiliza `DataAdapter` para resolver modificaciones en `DataSet` en la base de datos.  
   
- [Control de eventos de DataAdapter](handling-dataadapter-events.md)  
+ [Controlar eventos de DataAdapter](handling-dataadapter-events.md)  
  Describe los eventos de `DataAdapter` y cómo utilizarlos.  
   
- [Realización de operaciones por lotes utilizando objetos DataAdapter](performing-batch-operations-using-dataadapters.md)  
+ [Realizar operaciones por lotes utilizando objetos DataAdapter](performing-batch-operations-using-dataadapters.md)  
  Describe cómo mejorar el rendimiento de la aplicación mediante la reducción del número de viajes de ida y vuelta (round trip) al servidor SQL Server al aplicar las actualizaciones desde el `DataSet`.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Conexión a un origen de datos](connecting-to-a-data-source.md)
+- [Conectarse a un origen de datos](connecting-to-a-data-source.md)
 - [Comandos y parámetros](commands-and-parameters.md)
 - [Transacciones y simultaneidad](transactions-and-concurrency.md)
 - [Objetos DataSet, DataTable y DataView](./dataset-datatable-dataview/index.md)
-- [Información general sobre ADO.NET](ado-net-overview.md)
+- [Información general de ADO.NET](ado-net-overview.md)

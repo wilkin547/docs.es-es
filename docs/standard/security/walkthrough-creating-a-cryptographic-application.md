@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cryptography [NET Framework], cryptographic application example
 - cryptography [NET Framework], application example
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
-ms.openlocfilehash: 6e2d9b8bebdfd2ea5d5507cc73d444fa8bf785fb
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 246028566c59e5c8a77b26a21729d3f143d38d07
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705839"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289712"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>Tutorial: Crear una aplicación criptográfica
 En este tutorial se muestra cómo cifrar y descifrar contenido. Los ejemplos de código están diseñados para una aplicación de Windows Forms. Esta aplicación no muestra escenarios del mundo real, como el uso de tarjetas inteligentes. En su lugar, muestra los aspectos básicos del cifrado y el descifrado.  
@@ -43,15 +43,15 @@ En este tutorial se muestra cómo cifrar y descifrar contenido. Los ejemplos de 
 |Importar una clave pública|Carga la clave desde un archivo XML en el contenedor de claves.|  
 |Probar la aplicación|Enumera los procedimientos para probar esta aplicación.|  
   
-## <a name="prerequisites"></a>Requisitos previos  
- Necesita los componentes siguientes para completar este tutorial:  
+## <a name="prerequisites"></a>Prerrequisitos  
+ Necesitará los componentes siguientes para completar este tutorial:  
   
 - Referencias a los espacios de nombres <xref:System.IO> y <xref:System.Security.Cryptography>.  
   
 ## <a name="creating-a-windows-forms-application"></a>Crear una aplicación de Windows Forms  
  La mayoría de los ejemplos de código de este tutorial están diseñados para actuar como controladores de eventos de los controles de botón. En la tabla siguiente se enumeran los controles necesarios para que la aplicación de ejemplo y los nombres necesarios coincidan con los ejemplos de código.  
   
-|Control|Name|Propiedad de texto (según sea necesario)|  
+|Control|Nombre|Propiedad de texto (según sea necesario)|  
 |-------------|----------|---------------------------------|  
 |<xref:System.Windows.Forms.Button>|`buttonEncryptFile`|Cifrar archivo|  
 |<xref:System.Windows.Forms.Button>|`buttonDecryptFile`|Descifrar archivo|  
@@ -80,7 +80,7 @@ En este tutorial se muestra cómo cifrar y descifrar contenido. Los ejemplos de 
  [!code-vb[CryptoWalkThru#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#2)]  
   
 ## <a name="encrypting-a-file"></a>Cifrar un archivo  
- Esta tarea implica dos métodos: el método de control de eventos para el botón `Encrypt File` (`buttonEncryptFile_Click`) y el método `EncryptFile`. El primer método muestra un cuadro de diálogo para seleccionar un archivo y pasa el nombre del archivo al segundo método, que lleva a cabo el cifrado.  
+ Esta tarea implica dos métodos: el método de control de eventos para el `Encrypt File` botón ( `buttonEncryptFile_Click` ) y el `EncryptFile` método. El primer método muestra un cuadro de diálogo para seleccionar un archivo y pasa el nombre del archivo al segundo método, que lleva a cabo el cifrado.  
   
  El contenido cifrado, la clave y el vector de inicialización (IV) se guardan en un <xref:System.IO.FileStream>, conocido como paquete de cifrado.  
   
@@ -104,7 +104,7 @@ En este tutorial se muestra cómo cifrar y descifrar contenido. Los ejemplos de 
   
 - Clave cifrada  
   
-- Vector de inicialización (IV)  
+- IV  
   
 - Texto cifrado  
   
@@ -175,7 +175,7 @@ En este tutorial se muestra cómo cifrar y descifrar contenido. Los ejemplos de 
  [!code-csharp[CryptoWalkThru#7](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#7)]
  [!code-vb[CryptoWalkThru#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#7)]  
   
-## <a name="testing-the-application"></a>Probar la aplicación  
+## <a name="testing-the-application"></a>Prueba de la aplicación  
  Después de haber compilado la aplicación, ejecute los siguientes escenarios de prueba.  
   
 #### <a name="to-create-keys-encrypt-and-decrypt"></a>Para crear claves, cifrar y descifrar  
@@ -208,6 +208,6 @@ En este tutorial se muestra cómo cifrar y descifrar contenido. Los ejemplos de 
   
 2. Haga clic en el botón `Decrypt File` y seleccione el archivo que acaba de cifrar. Esta acción se llevará a cabo correctamente porque dispone del par de claves completo para efectuar el descifrado.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [Servicios criptográficos](cryptographic-services.md)
