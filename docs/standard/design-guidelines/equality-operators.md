@@ -9,25 +9,25 @@ helpviewer_keywords:
 - Equals method
 - == operator (equality) [.NET Framework]
 ms.assetid: bc496a91-fefb-4ce0-ab4c-61f09964119a
-ms.openlocfilehash: 34fc8eef5270369419b76899f0dbe1ace106caf6
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: bd36b98af25db2921c164ac359188997d379a270
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741695"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84280055"
 ---
 # <a name="equality-operators"></a>Operadores de igualdad
 En esta sección se describe la sobrecarga de los operadores de igualdad y se hace referencia a `operator==` y `operator!=` como operadores de igualdad.
 
- ❌ no sobrecargan uno de los operadores de igualdad y no el otro.
+ ❌No sobrecargue uno de los operadores de igualdad y no el otro.
 
  ✔️ Asegúrese de que <xref:System.Object.Equals%2A?displayProperty=nameWithType> y los operadores de igualdad tienen exactamente la misma semántica y características de rendimiento similares.
 
- Esto suele significar que `Object.Equals` debe invalidarse cuando se sobrecargan los operadores de igualdad.
+ Esto suele significar que `Object.Equals` se debe invalidar Cuando se sobrecargan los operadores de igualdad.
 
- ❌ evitar que se inicien excepciones desde operadores de igualdad.
+ ❌Evite iniciar excepciones desde operadores de igualdad.
 
- Por ejemplo, devuelve false si uno de los argumentos es null en lugar de producir `NullReferenceException`.
+ Por ejemplo, devuelve false si uno de los argumentos es null en lugar de producirse `NullReferenceException` .
 
 ## <a name="equality-operators-on-value-types"></a>Operadores de igualdad en tipos de valor
  ✔️ sobrecargan los operadores de igualdad en los tipos de valor, si la igualdad es significativa.
@@ -35,13 +35,13 @@ En esta sección se describe la sobrecarga de los operadores de igualdad y se ha
  En la mayoría de los lenguajes de programación, no hay ninguna implementación predeterminada de `operator==` para los tipos de valor.
 
 ## <a name="equality-operators-on-reference-types"></a>Operadores de igualdad en tipos de referencia
- ❌ evitar la sobrecarga de operadores de igualdad en tipos de referencia mutable.
+ ❌Evite sobrecargar los operadores de igualdad en tipos de referencia mutable.
 
  Muchos lenguajes tienen operadores de igualdad integrados para los tipos de referencia. Los operadores integrados normalmente implementan la igualdad de referencia y muchos desarrolladores se sorprenden cuando se cambia el comportamiento predeterminado a la igualdad de valores.
 
  Este problema se mitiga en los tipos de referencia inmutables porque la inmutabilidad dificulta la diferencia entre la igualdad de referencia y la igualdad de valores.
 
- ❌ evitar la sobrecarga de operadores de igualdad en tipos de referencia si la implementación sería significativamente más lenta que la de igualdad de referencia.
+ ❌Evite sobrecargar los operadores de igualdad en los tipos de referencia si la implementación sería significativamente más lenta que la de igualdad de referencia.
 
  *Partes © 2005, 2009 Microsoft Corporation. Todos los derechos reservados.*
 
@@ -49,5 +49,5 @@ En esta sección se describe la sobrecarga de los operadores de igualdad y se ha
 
 ## <a name="see-also"></a>Consulte también
 
-- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)
-- [Instrucciones de uso](../../../docs/standard/design-guidelines/usage-guidelines.md)
+- [Directrices de diseño de marco](index.md)
+- [Instrucciones de uso](usage-guidelines.md)

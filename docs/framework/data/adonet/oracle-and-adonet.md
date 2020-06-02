@@ -1,17 +1,18 @@
 ---
 title: Oracle y ADO.NET
+description: Obtenga información sobre las características y los comportamientos del proveedor de datos de .NET Framework para Oracle, que proporciona acceso a una base de datos de Oracle mediante la interfaz de llamada de Oracle.
 titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: 5683f2b4ba57021ff6dda3a51baca016f886b605
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 8757352a7444fad802ea88ba58e0fe643c86cbb8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980085"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286694"
 ---
 # <a name="oracle-and-adonet"></a>Oracle y ADO.NET
 > [!NOTE]
@@ -21,7 +22,7 @@ ms.locfileid: "76980085"
   
  El proveedor de datos de .NET Framework para Oracle proporciona acceso a una base de datos de Oracle mediante Oracle Call Interface (OCI), tal y como lo proporciona el software cliente de Oracle. La funcionalidad del proveedor de datos está diseñada para ser similar a la de los .NET Framework proveedores de datos para SQL Server, OLE DB y ODBC.  
   
- Para utilizar el proveedor de datos de .NET Framework para Oracle, una aplicación debe hacer referencia al espacio de nombres <xref:System.Data.OracleClient> como se indica a continuación:  
+ Para utilizar el proveedor de datos de .NET Framework para Oracle, una aplicación debe hacer referencia al espacio de nombres de la <xref:System.Data.OracleClient> siguiente manera:  
   
 ```vb  
 Imports System.Data.OracleClient  
@@ -37,7 +38,7 @@ using System.Data.OracleClient;
 csc /r:System.Data.OracleClient.dll  
 ```  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Requisitos del sistema](system-requirements-for-the-dotnet-data-provider-for-oracle.md)  
  Describe los requisitos para usar el proveedor de datos de .NET Framework para Oracle y describe una serie de problemas que se deben tener en cuenta al utilizarlos.  
   
@@ -78,7 +79,7 @@ csc /r:System.Data.OracleClient.dll
  [Objetos DbProviderFactory](dbproviderfactories.md)  
  Describe clases genéricas que permiten escribir código independiente del proveedor en ADO.NET.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [ADO.NET](index.md)
-- [Información general sobre ADO.NET](ado-net-overview.md)
+- [Información general de ADO.NET](ado-net-overview.md)

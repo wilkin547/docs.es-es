@@ -1,22 +1,23 @@
 ---
 title: Aislamiento de instantáneas en SQL Server
+description: Lea información general sobre el aislamiento de instantáneas y las versiones de fila en SQL Server y aprenda a administrar la simultaneidad con niveles de aislamiento.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 8313ffc8eef70c1e5efc24b09a160edb7cec1595
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7fa769448dd922925a5eccf4c85bd1840155df68
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174269"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286254"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>Aislamiento de instantáneas en SQL Server
 El aislamiento de instantánea mejora la simultaneidad de las aplicaciones OLTP.  
   
 ## <a name="understanding-snapshot-isolation-and-row-versioning"></a>Descripción del aislamiento de instantáneas y la versión de fila  
- Una vez habilitado el aislamiento de instantáneas, se deben mantener las versiones de fila actualizadas para cada transacción.  Antes de SQL Server 2019, estas versiones se almacenaban en **tempdb**. SQL Server 2019 presenta una nueva característica, Accelerated Database Recovery (ADR) que requiere su propio conjunto de versiones de fila.  Por lo tanto, a partir de SQL Server 2019, si ADR no está habilitado, las versiones de fila se mantienen en **tempdb** como siempre.  Si LA ADR está habilitada, todas las versiones de fila, tanto relacionadas con el aislamiento de instantáneas como con la ADR, se mantienen en el almacén de versiones persistentes (PVS) de ADR, que se encuentra en la base de datos de usuarios en un grupo de archivos que el usuario especifica. Un número de secuencia de transacción único identifica cada transacción, y estos números únicos se registran para cada versión de fila. La transacción funciona con las versiones de fila más recientes que tienen un número de secuencia antes del número de secuencia de transacción. La transacción omite las versiones de fila más recientes creadas después de que se haya iniciado la transacción.  
+ Una vez habilitado el aislamiento de instantánea, se deben mantener las versiones de fila actualizadas para cada transacción.  Antes de SQL Server 2019, estas versiones se almacenaban en **tempdb**. SQL Server 2019 presenta una nueva característica, una recuperación de base de datos acelerada (ADR) que requiere su propio conjunto de versiones de fila.  Por tanto, a partir de SQL Server 2019, si ADR no está habilitado, las versiones de fila se mantienen en **tempdb** como siempre.  Si el ADR está habilitado, todas las versiones de fila, relacionadas con el aislamiento de instantáneas y la ADR, se mantienen en el almacén de versiones persistente (PVS) de ADR, que se encuentra en la base de datos de usuario de un grupo de archivos que el usuario especifica. Un número de secuencia de transacción único identifica cada transacción, y estos números únicos se registran para cada versión de fila. La transacción funciona con las versiones de fila más recientes que tienen un número de secuencia antes del número de secuencia de transacción. La transacción omite las versiones de fila más recientes creadas después de que se haya iniciado la transacción.  
   
  El término "instantánea" refleja el hecho de que todas las consultas de la transacción ven la misma versión, o instantánea, de la base de datos, en función del estado de la base de datos en el momento en que se inicia la transacción. En una transacción de instantánea no se adquieren bloqueos en las filas o las páginas de datos subyacentes, lo que permite que se ejecuten otras transacciones sin que una transacción anterior sin completarse las bloquee. Las transacciones que modifican datos no bloquean las transacciones que leen datos, y las transacciones que leen datos no bloquean las transacciones que escriben datos, como ocurre normalmente en el nivel de aislamiento READ COMMITTED predeterminado de SQL Server. Este comportamiento de no bloqueo también reduce notablemente la probabilidad de que se produzcan interbloqueos en las transacciones complejas.  
   
@@ -97,7 +98,7 @@ SqlTransaction sqlTran =
   
 - Se abre una segunda conexión y se inicia una segunda transacción con el nivel de aislamiento SNAPSHOT para leer los datos de la tabla **TestSnapshot**. Dado que el aislamiento de instantánea está habilitado, esta transacción puede leer los datos que existían antes de que se iniciara sqlTransaction1.  
   
-- Se abre una tercera conexión y se inicia una transacción con el nivel de aislamiento READ COMMITTED para intentar leer los datos de la tabla. En este caso, el código no puede leer los datos porque no puede leer más allá de los bloqueos colocados en la tabla en la primera transacción y se agota el tiempo de espera. El mismo resultado se produciría si se utilizaran los niveles de aislamiento REPEATABLE READ y SERIALIZABLE porque estos niveles de aislamiento tampoco pueden leer más allá de los bloqueos colocados en la primera transacción.  
+- Se abre una tercera conexión y se inicia una transacción con el nivel de aislamiento READ COMMITTED para intentar leer los datos de la tabla. En este caso, el código no puede leer los datos porque no puede leer más allá de los bloqueos colocados en la tabla en la primera transacción y se agota el tiempo de espera. Se produciría el mismo resultado si se utilizaran los niveles de aislamiento REPEATable READ y SERIALIZABLE, ya que estos niveles de aislamiento tampoco pueden leer más allá de los bloqueos colocados en la primera transacción.  
   
 - Se abre una cuarta conexión y se inicia una transacción con el nivel de aislamiento READ UNCOMMITTED, que realiza una lectura de datos sucios del valor sin confirmar en sqlTransaction1. Este valor nunca puede existir realmente en la base de datos si la primera transacción no se confirma.  
   

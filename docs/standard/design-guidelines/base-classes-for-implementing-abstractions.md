@@ -6,19 +6,19 @@ helpviewer_keywords:
 - abstractions [.NET Framework]
 - base classes, abstractions
 ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
-ms.openlocfilehash: b22923338f8488b6f7684e565f62d9afc16e6aa0
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 6af63373b7cbb571265f14ac36028953525fcc7f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741773"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84280574"
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>Clases base para implementar abstracciones
 En realidad, una clase se convierte en una clase base cuando se deriva otra clase de ella. En esta sección, sin embargo, una clase base es una clase diseñada principalmente para proporcionar una abstracción común o para que otras clases reutilicen alguna implementación predeterminada a través de la herencia. Las clases base normalmente se encuentran en medio de las jerarquías de herencia, entre una abstracción en la raíz de una jerarquía y varias implementaciones personalizadas en la parte inferior.
 
- Sirven como aplicaciones auxiliares de implementación para implementar abstracciones. Por ejemplo, una de las abstracciones del marco de trabajo para colecciones ordenadas de elementos es la interfaz <xref:System.Collections.Generic.IList%601>. Implementar <xref:System.Collections.Generic.IList%601> no es trivial y, por tanto, el marco de trabajo proporciona varias clases base, como <xref:System.Collections.ObjectModel.Collection%601> y <xref:System.Collections.ObjectModel.KeyedCollection%602>, que sirven de ayuda para implementar colecciones personalizadas.
+ Sirven como aplicaciones auxiliares de implementación para implementar abstracciones. Por ejemplo, una de las abstracciones del marco de trabajo para colecciones ordenadas de elementos es la <xref:System.Collections.Generic.IList%601> interfaz. La implementación de <xref:System.Collections.Generic.IList%601> no es trivial y, por tanto, el marco de trabajo proporciona varias clases base, como <xref:System.Collections.ObjectModel.Collection%601> y <xref:System.Collections.ObjectModel.KeyedCollection%602> , que sirven de ayuda para implementar colecciones personalizadas.
 
- Las clases base no suelen ser adecuadas para servir como abstracciones por sí mismas, porque tienden a contener demasiada implementación. Por ejemplo, la clase base `Collection<T>` contiene una gran cantidad de implementación relacionada con el hecho de que implementa la interfaz de `IList` no genérica (para integrar mejor con colecciones no genéricas) y al hecho de que es una colección de elementos almacenados en memoria en uno de sus campos.
+ Las clases base no suelen ser adecuadas para servir como abstracciones por sí mismas, porque tienden a contener demasiada implementación. Por ejemplo, la `Collection<T>` clase base contiene una gran cantidad de implementación relacionada con el hecho de que implementa la `IList` interfaz no genérica (para integrar mejor con colecciones no genéricas) y el hecho de que es una colección de elementos almacenados en memoria en uno de sus campos.
 
  Como se explicó anteriormente, las clases base pueden proporcionar una ayuda valiosa para los usuarios que necesitan implementar abstracciones, pero al mismo tiempo pueden ser una responsabilidad importante. Agregan el área expuesta y aumentan la profundidad de las jerarquías de herencia y, por tanto, complican conceptualmente el marco. Por lo tanto, las clases base deben usarse solo si proporcionan un valor significativo a los usuarios del marco. Deben evitarse si proporcionan valor solo a los implementadores de Framework, en cuyo caso se debe tener en cuenta la delegación a una implementación interna en lugar de la herencia de una clase base.
 
@@ -26,7 +26,7 @@ En realidad, una clase se convierte en una clase base cuando se deriva otra clas
 
  ✔️ considere la posibilidad de colocar las clases base en un espacio de nombres independiente de los tipos de escenario principal. Por definición, las clases base están pensadas para escenarios de extensibilidad avanzada y, por lo tanto, no son interesantes para la mayoría de los usuarios.
 
- ❌ Evite el nombre de las clases base con un sufijo "base" si la clase está pensada para su uso en las API públicas.
+ ❌Evite el nombre de las clases base con un sufijo "base" si la clase está pensada para su uso en las API públicas.
 
  *Partes © 2005, 2009 Microsoft Corporation. Todos los derechos reservados.*
 
@@ -34,5 +34,5 @@ En realidad, una clase se convierte en una clase base cuando se deriva otra clas
 
 ## <a name="see-also"></a>Consulte también
 
-- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)
-- [Diseño de extensibilidad](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
+- [Directrices de diseño de marco](index.md)
+- [Diseñar extensibilidad](designing-for-extensibility.md)

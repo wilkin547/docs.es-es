@@ -1,5 +1,5 @@
 ---
-title: servicios criptográficos
+title: Servicios criptográficos
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -24,20 +24,20 @@ helpviewer_keywords:
 - cryptography [.NET Framework], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-ms.openlocfilehash: c1783a578d0b55b0b62a1ffb870802faca97623f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e67b1feb27b6eae7062e7b3e02ac79c8929f1df1
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187012"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288412"
 ---
-# <a name="cryptographic-services"></a>servicios criptográficos
+# <a name="cryptographic-services"></a>Servicios criptográficos
 
 Las redes públicas como Internet no proporcionan un medio de comunicación segura entre entidades. La comunicación en esas redes es susceptible de que terceras personas, sin autorización, tengan acceso a ella o la modifiquen. La criptografía ayuda a proteger los datos para que no puedan ser vistos, proporciona mecanismos para la detección de datos modificados y facilita un medio de comunicación seguro en canales que, de otra forma, no serían seguros. Por ejemplo, los datos pueden cifrarse con un algoritmo criptográfico y transmitirse en un estado cifrado a una tercera persona, que posteriormente los descifrará. Si un tercero intercepta los datos cifrados, le resultará difícil descifrarlos.
 
 En .NET Framework, las clases del espacio de nombres <xref:System.Security.Cryptography?displayProperty=nameWithType> se ocupan de administrar muchos de los detalles de criptografía. Algunas son contenedores de la interfaz de programación de aplicaciones criptográficas (CryptoAPI) no administrada de Microsoft, mientras que otras son meramente implementaciones administradas. No necesita ser un experto en criptografía para utilizar estas clases. Cuando crea una nueva instancia de una de las clases de algoritmos de cifrado, se generan automáticamente claves para facilitar el uso y las propiedades predeterminadas son lo más seguras posible.
 
-Esta información general proporciona una sinopsis de los métodos y prácticas de cifrado admitidos por .NET Framework, incluidos los manifiestos ClickOnce, Suite B y la compatibilidad con criptografía de próxima generación (CNG) introducidaen en .NET Framework 3.5.
+En esta información general se proporciona una sinopsis de los métodos y las prácticas de cifrado compatibles con el .NET Framework, incluidos los manifiestos de ClickOnce, Suite B y la compatibilidad de Cryptography Next Generation (CNG) introducida en el .NET Framework 3,5.
 
 Para obtener más información sobre la criptografía y sobre los servicios, componentes y herramientas de Microsoft que permiten agregar seguridad criptográfica a las aplicaciones, vea la sección Seguridad de Desarrollo para Win32 y COM de esta documentación.
 
@@ -82,11 +82,11 @@ Un modo de comprometer los datos cifrados con un cifrado CBC consiste en realiza
 
 La desventaja del cifrado de clave secreta es que presupone que dos partes acuerdan una clave y un vector de inicialización, y que se comunican sus valores. El vector de inicialización no se considera secreto y se transmite como texto simple con el mensaje. Sin embargo, la clave debe mantenerse en secreto a salvo de usuarios no autorizados. Debido a estos problemas, el cifrado de clave secreta a menudo se utiliza junto con el cifrado de clave pública para comunicar en privado los valores de la clave y el vector de inicialización.
 
-Supongamos que Alicia y Roberto son dos personas que desean comunicarse a través de un canal que no es seguro. Ellos podrían utilizar el cifrado de clave secreta del modo siguiente: Alicia y Roberto están de acuerdo en utilizar un algoritmo determinado (AES, por ejemplo) con una clave y un vector de inicialización determinados. Alice compone un mensaje y crea una secuencia de red (quizás una canalización con nombre o un correo electrónico de red) en el que enviar el mensaje. A continuación, cifra el texto utilizando la clave y el vector de inicialización y envía el mensaje cifrado y el vector de inicialización a Roberto a través de intranet. Roberto recibe el texto cifrado y lo descifra utilizando el vector de inicialización y la clave acordada anteriormente. Si se intercepta la transmisión, el interceptor no puede recuperar el mensaje original, porque no conoce la clave. En este caso, solo debe mantenerse en secreto la clave. En un ejemplo real, Alicia o Roberto genera una clave secreta y utiliza el cifrado (asimétrico) de clave pública para transferir la clave (simétrica) secreta a la otra parte. Para obtener más información sobre el cifrado de clave pública, vea la sección siguiente.
+Supongamos que Alicia y Roberto son dos personas que desean comunicarse a través de un canal que no es seguro. Ellos podrían utilizar el cifrado de clave secreta del modo siguiente: Alicia y Roberto están de acuerdo en utilizar un algoritmo determinado (AES, por ejemplo) con una clave y un vector de inicialización determinados. Alice redacta un mensaje y crea una secuencia de red (quizás una canalización con nombre o correo electrónico de red) en la que se va a enviar el mensaje. A continuación, cifra el texto utilizando la clave y el vector de inicialización y envía el mensaje cifrado y el vector de inicialización a Roberto a través de intranet. Roberto recibe el texto cifrado y lo descifra utilizando el vector de inicialización y la clave acordada anteriormente. Si se intercepta la transmisión, el interceptor no puede recuperar el mensaje original porque no conoce la clave. En este caso, solo debe mantenerse en secreto la clave. En un ejemplo real, Alicia o Roberto genera una clave secreta y utiliza el cifrado (asimétrico) de clave pública para transferir la clave (simétrica) secreta a la otra parte. Para obtener más información sobre el cifrado de clave pública, vea la sección siguiente.
 
-.NET Framework proporciona las siguientes clases que implementan algoritmos de cifrado de clave secreta:
+El .NET Framework proporciona las siguientes clases que implementan algoritmos de cifrado de clave secreta:
 
-- <xref:System.Security.Cryptography.AesManaged>(introducido en .NET Framework 3.5).
+- <xref:System.Security.Cryptography.AesManaged>(introducido en el .NET Framework 3,5).
 
 - <xref:System.Security.Cryptography.DESCryptoServiceProvider>.
 
@@ -122,7 +122,7 @@ En la lista siguiente se incluyen comparaciones entre algoritmos criptográficos
 
 - Los algoritmos de clave pública son muy lentos comparados con los de clave secreta y no están diseñados para cifrar grandes cantidades de datos. Son útiles solo para transferir cantidades muy pequeñas de información. Normalmente, el cifrado de clave pública se utiliza para cifrar la clave y el vector de inicialización que serán utilizados por un algoritmo de clave secreta. Después de transferir la clave y el vector de inicialización, el cifrado de clave secreta se utiliza para el resto de la sesión.
 
-.NET Framework proporciona las siguientes clases que implementan algoritmos de cifrado de clave pública:
+El .NET Framework proporciona las siguientes clases que implementan algoritmos de cifrado de clave pública:
 
 - <xref:System.Security.Cryptography.DSACryptoServiceProvider>
 
@@ -149,7 +149,7 @@ Para utilizar criptografía de clave pública con el objeto de firmar digitalmen
 > [!NOTE]
 > Cualquiera puede comprobar una firma, ya que la clave pública del remitente es de dominio público y normalmente se incluye en el formato de firma digital. Este método no mantiene la confidencialidad del mensaje; para que sea secreto, también se debe cifrar.
 
-.NET Framework proporciona las siguientes clases que implementan algoritmos de firma digital:
+El .NET Framework proporciona las siguientes clases que implementan algoritmos de firma digital:
 
 - <xref:System.Security.Cryptography.DSACryptoServiceProvider>
 
@@ -167,7 +167,7 @@ Dos partes (Alicia y Roberto) podrían utilizar una función hash para asegurar 
 
 - Alicia enviaría a Roberto el mensaje de texto simple y el mensaje al que aplicó el algoritmo hash (firma digital). Roberto recibiría el mensaje y le aplicaría el algoritmo hash. A continuación, compararía su valor hash con el valor hash que recibió de Alicia. Si los dos valores hash son idénticos, el mensaje no se ha modificado. Si los valores no son idénticos, el mensaje se modificó después de que Alicia lo escribiera.
 
-  Desgraciadamente, este método no determina la autenticidad del remitente. Cualquiera puede suplantar a Alicia y enviar un mensaje a Roberto. Pueden utilizar el mismo algoritmo hash para firmar su mensaje, y todo lo que Roberto podría determinar es que el mensaje coincide con su firma. Esta es una forma de ataque de tipo "Man in the middle". Para obtener más información, vea Ejemplo de comunicación segura de [criptografía de próxima generación (CNG).](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100))
+  Desgraciadamente, este método no determina la autenticidad del remitente. Cualquiera puede suplantar a Alicia y enviar un mensaje a Roberto. Pueden utilizar el mismo algoritmo hash para firmar su mensaje, y todo lo que Roberto podría determinar es que el mensaje coincide con su firma. Esta es una forma de ataque de tipo "Man in the middle". Para obtener más información, vea [ejemplo de comunicación segura de Cryptography Next Generation (CNG)](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100)).
 
 - Alicia envía el mensaje de texto simple a Roberto a través de un canal público que no es seguro. Envía a Roberto el mensaje al que aplicó el algoritmo hash a través de un canal privado seguro. Roberto recibe el mensaje de texto simple, le aplica un algoritmo hash y compara el valor hash con el valor hash que se intercambió de forma privada. Si los valores hash coinciden, Roberto sabe dos cosas:
 
@@ -183,7 +183,7 @@ Dos partes (Alicia y Roberto) podrían utilizar una función hash para asegurar 
 
 Ninguno de los métodos anteriores evitará que alguien lea los mensajes de Alicia, ya que se transmiten en texto simple. Para conseguir una seguridad total, normalmente se necesitarán firmas digitales (firma del mensaje) y mecanismos de cifrado.
 
-.NET Framework proporciona las siguientes clases que implementan algoritmos hash:
+El .NET Framework proporciona las siguientes clases que implementan algoritmos hash:
 
 - <xref:System.Security.Cryptography.HMACSHA1>.
 
@@ -212,13 +212,13 @@ Ninguno de los métodos anteriores evitará que alguien lea los mensajes de Alic
 
 ## <a name="random-number-generation"></a>generación de números aleatorios
 
-La generación de números aleatorios es propia de muchas operaciones criptográficas. Por ejemplo, las claves criptográficas deben ser lo más aleatorias posible para que no se puedan reproducir. Los generadores de números aleatorios criptográficos deben generar resultados que, mediante cálculos, no se pueden predecir con una probabilidad mayor del cincuenta por ciento. Por tanto, cualquier método para predecir el siguiente bit del resultado no debe ser más eficaz que el cálculo aleatorio. Las clases de .NET Framework usan generadores de números aleatorios para generar claves criptográficas.
+La generación de números aleatorios es propia de muchas operaciones criptográficas. Por ejemplo, las claves criptográficas deben ser lo más aleatorias posible para que no se puedan reproducir. Los generadores de números aleatorios criptográficos deben generar resultados que, mediante cálculos, no se pueden predecir con una probabilidad mayor del cincuenta por ciento. Por tanto, cualquier método para predecir el siguiente bit del resultado no debe ser más eficaz que el cálculo aleatorio. Las clases de la .NET Framework utilizan generadores de números aleatorios para generar claves criptográficas.
 
 La clase <xref:System.Security.Cryptography.RNGCryptoServiceProvider> es una implementación de un algoritmo generador de números aleatorios.
 
 ## <a name="clickonce-manifests"></a>Manifiestos de ClickOnce
 
-En .NET Framework 3.5, las siguientes clases de criptografía le permiten obtener y comprobar información sobre las firmas de manifiesto para las aplicaciones que se implementan mediante la [tecnología ClickOnce:](/visualstudio/deployment/clickonce-security-and-deployment)
+En el .NET Framework 3,5, las siguientes clases de criptografía permiten obtener y comprobar información sobre las firmas de manifiesto para las aplicaciones que se implementan mediante la [tecnología ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment):
 
 - La clase <xref:System.Security.Cryptography.ManifestSignatureInformation> obtiene información sobre una firma de manifiesto cuando se utiliza la sobrecarga de su método <xref:System.Security.Cryptography.ManifestSignatureInformation.VerifySignature%2A> .
 
@@ -238,7 +238,7 @@ En .NET Framework 3.5, las siguientes clases de criptografía le permiten obtene
 
 ## <a name="suite-b-support"></a>Compatibilidad con Suite B
 
-.NET Framework 3.5 admite el conjunto de algoritmos criptográficos Suite B publicado por la Agencia de Seguridad Nacional (NSA). Para obtener más información sobre Suite B, vea la [hoja informativa sobre la criptografía de Suite B de la NSA](https://www.nsa.gov/what-we-do/information-assurance/).
+El .NET Framework 3,5 admite el conjunto Suite B de algoritmos criptográficos publicados por National Security Agency (NSA). Para obtener más información sobre Suite B, vea la [hoja informativa sobre la criptografía de Suite B de la NSA](https://www.nsa.gov/what-we-do/information-assurance/).
 
 Se incluyen los siguientes algoritmos:
 
@@ -254,11 +254,11 @@ Los contenedores de código administrado para las implementaciones certificadas 
 
 ## <a name="cryptography-next-generation-cng-classes"></a>Clases de criptografía de próxima generación (CNG)
 
-Las clases de Criptografía de próxima generación (CNG) proporcionan un contenedor administrado en torno a funciones CNG nativas. (CNG es el reemplazo de CryptoAPI.) Estas clases tienen "Cng" como parte de sus nombres. La clase contenedora de claves <xref:System.Security.Cryptography.CngKey> es fundamental en estas clases contenedoras CNG, pues abstrae el almacenamiento y el uso de claves CNG. Esta clase permite almacenar de forma segura un par de claves o una clave pública y hacer referencia a ella utilizando un nombre de cadena simple. La clase de firma <xref:System.Security.Cryptography.ECDsaCng> y la clase de cifrado <xref:System.Security.Cryptography.ECDiffieHellmanCng> basadas en curvas elípticas pueden utilizar los objetos <xref:System.Security.Cryptography.CngKey> .
+Las clases de Criptografía de próxima generación (CNG) proporcionan un contenedor administrado en torno a funciones CNG nativas. (CNG es el sustituto de CryptoAPI). Estas clases tienen "CNG" como parte de sus nombres. La clase contenedora de claves <xref:System.Security.Cryptography.CngKey> es fundamental en estas clases contenedoras CNG, pues abstrae el almacenamiento y el uso de claves CNG. Esta clase permite almacenar de forma segura un par de claves o una clave pública y hacer referencia a ella utilizando un nombre de cadena simple. La clase de firma <xref:System.Security.Cryptography.ECDsaCng> y la clase de cifrado <xref:System.Security.Cryptography.ECDiffieHellmanCng> basadas en curvas elípticas pueden utilizar los objetos <xref:System.Security.Cryptography.CngKey> .
 
 La clase <xref:System.Security.Cryptography.CngKey> se utiliza en otras numerosas operaciones, entre las que se incluyen la apertura, creación, eliminación y exportación de claves. También proporciona acceso al identificador de clave subyacente que se va a utilizar en las llamadas directas a las funciones nativas.
 
-.NET Framework 3.5 también incluye una variedad de clases de CNG compatibles, como las siguientes:
+El .NET Framework 3,5 también incluye una serie de clases CNG compatibles, como las siguientes:
 
 - <xref:System.Security.Cryptography.CngProvider> mantiene un proveedor de almacenamiento de claves.
 
@@ -268,8 +268,8 @@ La clase <xref:System.Security.Cryptography.CngKey> se utiliza en otras numerosa
 
 ## <a name="related-topics"></a>Temas relacionados
 
-|Título|Descripción|
+|Title|Descripción|
 |-----------|-----------------|
-|[Modelo de criptografía](../../../docs/standard/security/cryptography-model.md)|Describe la forma de implementar la criptografía en la biblioteca de clases base.|
-|[Tutorial: Crear una aplicación criptográfica](../../../docs/standard/security/walkthrough-creating-a-cryptographic-application.md)|Explica el cifrado básico y las tareas de descifrado.|
-|[Configurar clases de criptografía](../../../docs/framework/configure-apps/configure-cryptography-classes.md)|Describe la forma de asignar nombres de algoritmo a clases criptográficas e identificadores de objetos a un algoritmo criptográfico.|
+|[Modelo de criptografía](cryptography-model.md)|Describe la forma de implementar la criptografía en la biblioteca de clases base.|
+|[Tutorial: Crear una aplicación criptográfica](walkthrough-creating-a-cryptographic-application.md)|Explica el cifrado básico y las tareas de descifrado.|
+|[Configurar clases de criptografía](../../framework/configure-apps/configure-cryptography-classes.md)|Describe la forma de asignar nombres de algoritmo a clases criptográficas e identificadores de objetos a un algoritmo criptográfico.|

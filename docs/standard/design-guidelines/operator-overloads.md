@@ -8,43 +8,43 @@ helpviewer_keywords:
 - member design guidelines, operators
 - overloaded operators
 ms.assetid: 37585bf2-4c27-4dee-849a-af70e3338cc1
-ms.openlocfilehash: 0999e94c8d77396b237522e89c51206ce1226718
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 893b7d1f76dfb059a0ddca77dfd8654812e9ae12
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401224"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289738"
 ---
 # <a name="operator-overloads"></a>Sobrecargas de operador
-Las sobrecargas de operador permiten que los tipos de marco aparezcan como si fueran primitivas de lenguaje integradas.
+Las sobrecargas de operador permiten que los tipos de marco aparezcan como si fueran primitivos de lenguaje integrados.
 
- Aunque se permite y útil en algunas situaciones, las sobrecargas del operador deben utilizarse con precaución. Hay muchos casos en los que se ha abusado de la sobrecarga de operadores, como cuando los diseñadores de marcos de trabajo comenzaron a usar operadores para operaciones que deberían ser métodos simples. Las siguientes directrices deben ayudarle a decidir cuándo y cómo usar la sobrecarga del operador.
+ Aunque se permite y útil en algunas situaciones, las sobrecargas de operador deben usarse con precaución. Hay muchos casos en los que la sobrecarga de operadores se ha desusado, por ejemplo, cuando los diseñadores de Marcos empezaron a usar operadores para las operaciones que deberían ser métodos simples. Las instrucciones siguientes le ayudarán a decidir cuándo y cómo usar la sobrecarga de operadores.
 
- ❌EVITAR la definición de sobrecargas de operador, excepto en tipos que deben sentirse como tipos primitivos (incorporados).
+ ❌Evite definir sobrecargas de operador, excepto en los tipos que deben sentir como tipos primitivos (integrados).
 
- ✔️ CONSIDER que define las sobrecargas de operador en un tipo que debe sentirse como un tipo primitivo.
+ ✔️ considere la posibilidad de definir sobrecargas de operador en un tipo que se parezca a un tipo primitivo.
 
- Por <xref:System.String?displayProperty=nameWithType> ejemplo, `operator==` `operator!=` tiene y ha definido.
+ Por ejemplo, <xref:System.String?displayProperty=nameWithType> tiene `operator==` y ha `operator!=` definido.
 
- ✔️ DO define nadeos en estructuras que representan números (como <xref:System.Decimal?displayProperty=nameWithType>).
+ ✔️ definir sobrecargas de operador en Structs que representan números (como <xref:System.Decimal?displayProperty=nameWithType> ).
 
- ❌NO sea lindo al definir las sobrecargas del operador.
+ ❌NO se debe aplicar a la definición de sobrecargas de operador.
 
- La sobrecarga del operador es útil en los casos en los que es inmediatamente obvio cuál será el resultado de la operación. Por ejemplo, tiene sentido poder restar <xref:System.DateTime> `DateTime` uno de <xref:System.TimeSpan>otro y obtener un archivo . Sin embargo, no es adecuado utilizar el operador de unión lógica para unir dos consultas de base de datos o usar el operador shift para escribir en una secuencia.
+ La sobrecarga de operadores es útil en los casos en los que es inmediatamente obvio cuál será el resultado de la operación. Por ejemplo, tiene sentido poder restar un <xref:System.DateTime> de otro `DateTime` y obtener <xref:System.TimeSpan> . Sin embargo, no es apropiado usar el operador de Unión lógica para unir dos consultas de base de datos o usar el operador Shift para escribir en una secuencia.
 
  ❌NO proporcione sobrecargas de operador a menos que al menos uno de los operandos sea del tipo que define la sobrecarga.
 
- ✔️ DO sobrecarga a los operadores de forma simétrica.
+ ✔️ operadores de sobrecarga de manera simétrica.
 
- Por ejemplo, si `operator==`sobrecarga el archivo `operator!=`, también debe sobrecargar el archivo . Del mismo modo, `operator<`si sobrecarga el `operator>`archivo , también debe sobrecargar el archivo , y así sucesivamente.
+ Por ejemplo, si sobrecarga el `operator==` , también debe sobrecargar `operator!=` . Del mismo modo, si sobrecarga el `operator<` , también debe sobrecargar el `operator>` , y así sucesivamente.
 
- ✔️ CONSIDERA proporcionar métodos con nombres descriptivos que corresponden a cada operador sobrecargado.
+ ✔️ considere la posibilidad de proporcionar métodos con nombres descriptivos que se correspondan con cada operador sobrecargado.
 
- Muchos lenguajes no admiten la sobrecarga del operador. Por este motivo, se recomienda que los tipos que sobrecargan operadores incluyen un método secundario con un nombre específico de dominio adecuado que proporciona una funcionalidad equivalente.
+ Muchos lenguajes no admiten la sobrecarga de operadores. Por esta razón, se recomienda que los tipos que sobrecargan operadores incluyan un método secundario con un nombre específico del dominio adecuado que proporcione una funcionalidad equivalente.
 
  La tabla siguiente contiene una lista de operadores y los nombres de método descriptivos correspondientes.
 
-|Símbolo del operador de C-|Nombre de los metadatos|Nombre descriptivo|
+|Símbolo del operador de C#|Nombre de metadatos|Nombre descriptivo|
 |-------------------------|-------------------|-------------------|
 |`N/A`|`op_Implicit`|`To<TypeName>/From<TypeName>`|
 |`N/A`|`op_Explicit`|`To<TypeName>/From<TypeName>`|
@@ -85,27 +85,27 @@ Las sobrecargas de operador permiten que los tipos de marco aparezcan como si fu
 |`+ (unary)`|`op_UnaryPlus`|`Plus`|
 |`~`|`op_OnesComplement`|`OnesComplement`|
 
-### <a name="overloading-operator-"></a>Operador de sobrecarga ( Sobrecarga del operador)
- La `operator ==` sobrecarga es bastante complicada. La semántica del operador debe ser compatible con otros <xref:System.Object.Equals%2A?displayProperty=nameWithType>miembros, como .
+### <a name="overloading-operator-"></a>Sobrecargar operador = =
+ La sobrecarga `operator ==` es bastante complicada. La semántica del operador debe ser compatible con otros miembros, como <xref:System.Object.Equals%2A?displayProperty=nameWithType> .
 
 ### <a name="conversion-operators"></a>Operadores de conversión
  Los operadores de conversión son operadores unarios que permiten la conversión de un tipo a otro. Los operadores deben definirse como miembros estáticos en el operando o en el tipo de valor devuelto. Hay dos tipos de operadores de conversión: implícito y explícito.
 
- ❌NO proporcione un operador de conversión si los usuarios finales no esperan claramente dicha conversión.
+ ❌NO proporcione un operador de conversión si los usuarios finales no esperan claramente esa conversión.
 
  ❌NO defina operadores de conversión fuera del dominio de un tipo.
 
- Por <xref:System.Int32>ejemplo, <xref:System.Double>, <xref:System.Decimal> , y son <xref:System.DateTime> todos los tipos numéricos, mientras que no lo es. Por lo tanto, no debe `Double(long)` haber `DateTime`ningún operador de conversión para convertir a a un archivo . Un constructor es preferible en tal caso.
+ Por ejemplo, <xref:System.Int32> , <xref:System.Double> y <xref:System.Decimal> son todos los tipos numéricos, mientras que <xref:System.DateTime> no es. Por consiguiente, no debería haber ningún operador de conversión para convertir un `Double(long)` en `DateTime` . En tal caso, se prefiere un constructor.
 
- ❌NO proporcione un operador de conversión implícito si la conversión es potencialmente con pérdida.
+ ❌NO proporcione un operador de conversión implícito si la conversión es potencialmente perdida.
 
- Por ejemplo, no debe haber `Double` una `Int32` `Double` conversión implícita `Int32`de a porque tiene un rango más amplio que . Se puede proporcionar un operador de conversión explícito incluso si la conversión es potencialmente con pérdida.
+ Por ejemplo, no debería haber una conversión implícita de `Double` a `Int32` porque `Double` tiene un intervalo más amplio que `Int32` . Se puede proporcionar un operador de conversión explícito aunque la conversión sea potencialmente perdida.
 
- ❌NO produzca excepciones de conversiones implícitas.
+ ❌NO genere excepciones a partir de conversiones implícitas.
 
- Es muy difícil para los usuarios finales entender lo que está sucediendo, porque es posible que no sean conscientes de que se está produciendo una conversión.
+ Es muy difícil que los usuarios finales sepan lo que sucede, ya que es posible que no sean conscientes de que se está llevando a cabo una conversión.
 
- ✔️ produce <xref:System.InvalidCastException?displayProperty=nameWithType> si una llamada a un operador de conversión da como resultado una conversión con pérdida y el contrato del operador no permite conversiones con pérdida.
+ ✔️ se inician <xref:System.InvalidCastException?displayProperty=nameWithType> si una llamada a un operador de conversión produce una conversión de pérdida y el contrato del operador no permite conversiones de pérdida.
 
  *Partes © 2005, 2009 Microsoft Corporation. Todos los derechos reservados.*
 
@@ -113,5 +113,5 @@ Las sobrecargas de operador permiten que los tipos de marco aparezcan como si fu
 
 ## <a name="see-also"></a>Consulte también
 
-- [Instrucciones de diseño de miembros](../../../docs/standard/design-guidelines/member.md)
-- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)
+- [Instrucciones para el diseño de miembros](member.md)
+- [Directrices de diseño de marco](index.md)

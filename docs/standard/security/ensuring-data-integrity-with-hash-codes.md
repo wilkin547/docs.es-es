@@ -14,12 +14,12 @@ helpviewer_keywords:
 - encryption [.NET Framework], hash
 - hash
 ms.assetid: 33660f33-b70f-4dca-8c87-ab35cfc2961a
-ms.openlocfilehash: 98bdce59ccbbb3b1d00ea5521169214c2bd7a10b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4938cd75af32caa4f9da6ed682f18e9f6c73ad5b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706206"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288347"
 ---
 # <a name="ensuring-data-integrity-with-hash-codes"></a>Asegurar la integridad de los datos mediante códigos hash
 Un valor hash es un valor numérico de longitud fija que solo identifica datos. Los valores hash representan grandes cantidades de datos como valores numéricos mucho menores, por lo que se usan con firmas digitales. Puede firmar un valor hash de forma más eficaz que un valor mayor. Los valores hash también son útiles para comprobar la integridad de datos enviados a través de canales no seguros. El valor hash de los datos recibidos puede compararse con el valor hash de los datos porque se envió para determinar si se alteraron los datos.  
@@ -39,7 +39,7 @@ Un valor hash es un valor numérico de longitud fija que solo identifica datos. 
  `59 4 248 102 77 97 142 201 210 12 224 93 25 41 100 197 213 134 130 135`  
   
 ## <a name="verifying-a-hash"></a>Comprobar un valor hash  
- Los datos pueden compararse con un valor hash para determinar su integridad. Normalmente, el valor hash de los datos se calcula en un momento determinado y se protege de algún modo. Posteriormente, se puede calcular de nuevo el valor hash de los datos y compararse con el valor protegido. Si coinciden los dos valores hash, los datos no se han alterado. En caso contrario, los datos se han dañado. Para que este sistema funcione, el valor hash protegido debe cifrarse o mantenerse fuera del alcance de quienes no sean de confianza.  
+ Los datos pueden compararse con un valor hash para determinar su integridad. Normalmente, el valor hash de los datos se calcula en un momento determinado y se protege de algún modo. Posteriormente, se puede calcular de nuevo el valor hash de los datos y compararse con el valor protegido.  Si coinciden los dos valores hash, los datos no se han alterado. En caso contrario, los datos se han dañado. Para que este sistema funcione, el valor hash protegido debe cifrarse o mantenerse fuera del alcance de quienes no sean de confianza.  
   
  En el ejemplo siguiente, se compara el valor hash anterior de una cadena con un valor hash nuevo. En este ejemplo, se recorre cada byte de los valores hash y se realiza una comparación.  
   
@@ -58,6 +58,6 @@ The hash codes match.
 The hash codes do not match.  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [Servicios criptográficos](cryptographic-services.md)

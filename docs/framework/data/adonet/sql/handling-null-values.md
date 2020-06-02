@@ -1,22 +1,23 @@
 ---
 title: Controlar valores Null
+description: Obtenga información sobre cómo el proveedor de datos de .NET Framework para SQL Server controla NULL y cómo obtener información sobre NULL y SqlBoolean, la lógica de tres valores y la asignación de valores NULL.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: c45c6672983866df6c47ec84981cc7bd11637c0c
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: a4d086d81f1c2c959780366cfeb59f2d265bc40c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249082"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286460"
 ---
 # <a name="handling-null-values"></a>Controlar valores Null
 Se utiliza un valor NULL en una base de datos relacional cuando el valor de una columna es desconocido o falta. Un valor NULL no es una cadena vacía (para tipos de datos de caracteres o de fecha y hora) ni un valor cero (para tipos de datos numéricos). La especificación ANSI SQL-92 indica que un valor NULL debe ser el mismo para todos los tipos de datos, de modo que todos los valores NULL se traten de manera uniforme. El espacio de nombres <xref:System.Data.SqlTypes> proporciona la semántica de NULL implementando la interfaz <xref:System.Data.SqlTypes.INullable>. Cada uno de los tipos de datos de <xref:System.Data.SqlTypes> tiene su propia propiedad `IsNull` y un valor `Null` que se puede asignar a una instancia de ese tipo de datos.  
   
 > [!NOTE]
-> La versión 2.0 de .NET Framework introdujo compatibilidad con tipos de valor que aceptan valores NULL, lo que permite a los programadores extender un tipo de valor para representar todos los valores del tipo subyacente. Estos tipos de valor que aceptan <xref:System.Nullable> valores NULL de CLR representan una instancia de la estructura. Esta funcionalidad es especialmente útil cuando se aplica la conversión boxing y la conversión unboxing de tipos de valor, lo que proporciona compatibilidad mejorada con los tipos de objeto. Los tipos de valor que aceptan valores NULL de CLR no están pensados para `null` el almacenamiento `Nothing` de valores NULL de base de datos porque un valor NULL de SQL ANSI no se comporta de la misma manera que una referencia (o en Visual Basic). Para trabajar con valores NULL de ANSI SQL de la base de datos, utilice valores NULL de tipo <xref:System.Data.SqlTypes> en lugar de <xref:System.Nullable>. Para obtener más información sobre cómo trabajar con tipos que aceptan valores NULL en Visual Basic, vea Tipos de valor [que](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)aceptan valores NULL y, para C. , vea Tipos de [valor que aceptan valores NULL](../../../../csharp/language-reference/builtin-types/nullable-value-types.md).  
+> La versión 2,0 de .NET Framework incorporó compatibilidad con tipos de valor que aceptan valores NULL, que permiten a los programadores extender un tipo de valor para representar todos los valores del tipo subyacente. Estos tipos de valor que aceptan valores NULL de CLR representan una instancia de la <xref:System.Nullable> estructura. Esta funcionalidad es especialmente útil cuando se aplica la conversión boxing y la conversión unboxing de tipos de valor, lo que proporciona compatibilidad mejorada con los tipos de objeto. Los tipos de valor que aceptan valores NULL de CLR no están diseñados para el almacenamiento de valores NULL de base de datos porque un valor null de ANSI SQL no se comporta de la misma manera que una `null` referencia (o `Nothing` en Visual Basic). Para trabajar con valores NULL de ANSI SQL de la base de datos, utilice valores NULL de tipo <xref:System.Data.SqlTypes> en lugar de <xref:System.Nullable>. Para obtener más información sobre cómo trabajar con tipos que aceptan valores NULL de CLR en Visual Basic Vea [tipos de valor que aceptan valores NULL](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)y para C#, vea [tipos de valor que aceptan valores NULL](../../../../csharp/language-reference/builtin-types/nullable-value-types.md).  
   
 ## <a name="nulls-and-three-valued-logic"></a>Valores NULL y la lógica de tres valores  
  Al permitir valores NULL en definiciones de columna, se introduce la lógica de tres valores en la aplicación. Una comparación puede evaluarse en una de estas tres condiciones:  
@@ -25,7 +26,7 @@ Se utiliza un valor NULL en una base de datos relacional cuando el valor de una 
   
 - False  
   
-- Desconocido  
+- Unknown  
   
  Dado que se considera que NULL es desconocido, dos valores NULL comparados entre sí no se consideran iguales. En las expresiones que usan operadores aritméticos, si alguno de los operandos es NULL, el resultado es NULL también.  
   
@@ -35,7 +36,7 @@ Se utiliza un valor NULL en una base de datos relacional cuando el valor de una 
  ![Tabla Truth](./media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansi_nulls-option"></a>Descripción de la opción ANSI_NULLS  
- <xref:System.Data.SqlTypes> proporciona la misma semántica que cuando se establece la opción ANSI_NULLS en SQL Server. Todos los operadores aritméticos (+, -, \*, \|/ , %), los operadores bit a bit (en &), y la mayoría de las funciones devuelven null si alguno de los operandos o argumentos es null, excepto la propiedad `IsNull`.  
+ <xref:System.Data.SqlTypes> proporciona la misma semántica que cuando se establece la opción ANSI_NULLS en SQL Server. Todos los operadores aritméticos (+,-, \* ,/,%), los operadores bit a bit (~, &, \| ) y la mayoría de las funciones devuelven NULL si alguno de los operandos o argumentos es null, excepto la propiedad `IsNull` .  
   
  El estándar ANSI SQL-92 no admite *columnName* = NULL en una cláusula WHERE. En SQL Server, la opción ANSI_NULLS controla la nulabilidad predeterminada en la base de datos y la evaluación de las comparaciones con respecto a los valores NULL. Si ANSI_NULLS está activado (valor predeterminado), se debe usar el operador IS NULL en expresiones al comprobar si hay valores NULL. Por ejemplo, la siguiente comparación genera siempre UNKNOWN cuando ANSI_NULLS está activado:  
   
@@ -141,7 +142,7 @@ String.Equals instance method:
   Two empty strings=True
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Tipos de datos de SQL Server y ADO.NET](sql-server-data-types.md)
-- [Información general sobre ADO.NET](../ado-net-overview.md)
+- [Información general de ADO.NET](../ado-net-overview.md)

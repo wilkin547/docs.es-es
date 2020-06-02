@@ -1,13 +1,14 @@
 ---
 title: Roles de servidor y base de datos en SQL Server
+description: Obtenga información acerca de los roles fijos de servidor y de base de datos, que tienen asignado un conjunto fijo de permisos. SQL Server usa la seguridad basada en roles.
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: f3e31aa67bfbaa541d8d1eb5b8b61dfd28182c72
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9c3725b0404a5b3c754a53fa56f4a22497afee70
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791784"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286247"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Roles de servidor y base de datos en SQL Server
 Todas las versiones de SQL Server usan la seguridad basada en roles, que permite asignar permisos a un rol, o grupo de usuarios, en lugar de asignarlos a usuarios individuales. Los roles fijos de servidor y base de datos cuentan con un conjunto fijo de permisos asignados.  
@@ -25,7 +26,7 @@ Todas las versiones de SQL Server usan la seguridad basada en roles, que permite
   
  Para obtener más información sobre los roles predefinidos en SQL Server, vea los siguientes recursos.  
   
-|Recurso|DESCRIPCIÓN|  
+|Resource|Descripción|  
 |--------------|-----------------|  
 |[Roles de nivel de servidor](/sql/relational-databases/security/authentication-access/server-level-roles)|Describe los roles fijos de servidor y los permisos asociados a ellos en SQL Server.|  
 |[Roles de nivel de base de datos](/sql/relational-databases/security/authentication-access/database-level-roles)|Describe los roles fijos de base de datos y los permisos asociados a ellas.|  
@@ -56,16 +57,16 @@ Todas las versiones de SQL Server usan la seguridad basada en roles, que permite
   
  Para obtener más información sobre los inicios de sesión, los usuarios y los roles de SQL Server, vea los siguientes recursos.  
   
-|Recurso|DESCRIPCIÓN|  
+|Resource|Descripción|  
 |--------------|-----------------|  
-|[Introducción con permisos de Motor de base de datos](/sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions)|Contiene vínculos a temas que describen las entidades de seguridad, los roles, las credenciales, los elementos que pueden protegerse y los permisos.|  
-|[Entidades](/sql/relational-databases/security/authentication-access/principals-database-engine)|Describe las entidades de seguridad y contiene vínculos a temas que describen los roles de servidor y de base de datos.|  
+|[Introducción a los permisos de los motores de bases de datos](/sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions)|Contiene vínculos a temas que describen las entidades de seguridad, los roles, las credenciales, los elementos que pueden protegerse y los permisos.|  
+|[Principals](/sql/relational-databases/security/authentication-access/principals-database-engine)|Describe las entidades de seguridad y contiene vínculos a temas que describen los roles de servidor y de base de datos.|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Proteger aplicaciones de ADO.NET](../securing-ado-net-applications.md)
 - [Escenarios de seguridad de aplicaciones en SQL Server](application-security-scenarios-in-sql-server.md)
 - [Autenticación en SQL Server](authentication-in-sql-server.md)
 - [Propiedad y separación de esquemas de usuario en SQL Server](ownership-and-user-schema-separation-in-sql-server.md)
 - [Autorización y permisos en SQL Server](authorization-and-permissions-in-sql-server.md)
-- [Información general sobre ADO.NET](../ado-net-overview.md)
+- [Información general de ADO.NET](../ado-net-overview.md)

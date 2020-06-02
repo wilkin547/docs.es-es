@@ -8,17 +8,17 @@ helpviewer_keywords:
 - callback methods
 - callbacks
 ms.assetid: 48b55c60-495f-4089-9396-97f9122bba7c
-ms.openlocfilehash: 7dab759ba48104530fc41e46f6f2bba18d6c4456
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: ad7774fd197db80ce84b3b8a5baa4e9ee06b6cef
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741655"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289803"
 ---
 # <a name="events-and-callbacks"></a>Eventos y devoluciones de llamada
 Las devoluciones de llamada son puntos de extensibilidad que permiten a un marco volver a llamar al código de usuario a través de un delegado. Estos delegados se pasan normalmente al marco de trabajo a través de un parámetro de un método.
 
- Los eventos son un caso especial de devoluciones de llamada que admite una sintaxis adecuada y coherente para proporcionar el delegado (un controlador de eventos). Además, los diseñadores y la finalización de instrucciones de Visual Studio proporcionan ayuda para el uso de API basadas en eventos. (Consulte [diseño de eventos](../../../docs/standard/design-guidelines/event.md)).
+ Los eventos son un caso especial de devoluciones de llamada que admite una sintaxis adecuada y coherente para proporcionar el delegado (un controlador de eventos). Además, los diseñadores y la finalización de instrucciones de Visual Studio proporcionan ayuda para el uso de API basadas en eventos. (Consulte [diseño de eventos](event.md)).
 
  ✔️ considere la posibilidad de usar devoluciones de llamada para permitir que los usuarios proporcionen código personalizado para que lo ejecute el marco de trabajo.
 
@@ -26,15 +26,15 @@ Las devoluciones de llamada son puntos de extensibilidad que permiten a un marco
 
  ✔️ prefieren eventos en lugar de devoluciones de llamada sin formato, ya que están más familiarizados con una amplia gama de desarrolladores y se integran con la finalización de instrucciones de Visual Studio.
 
- ❌ evitar el uso de devoluciones de llamada en las API sensibles al rendimiento.
+ ❌Evite el uso de devoluciones de llamada en las API sensibles al rendimiento.
 
- ✔️ usar los nuevos tipos de `Func<...>`, `Action<...>`o `Expression<...>` en lugar de los delegados personalizados, al definir las API con devoluciones de llamada.
+ ✔️ usar los nuevos `Func<...>` tipos, `Action<...>` o `Expression<...>` en lugar de los delegados personalizados, al definir las API con devoluciones de llamada.
 
- `Func<...>` y `Action<...>` representan delegados genéricos. `Expression<...>` representa definiciones de función que se pueden compilar e invocar posteriormente en tiempo de ejecución, pero también se pueden serializar y pasar a procesos remotos.
+ `Func<...>`y `Action<...>` representan delegados genéricos. `Expression<...>`representa definiciones de función que se pueden compilar e invocar posteriormente en tiempo de ejecución, pero también se pueden serializar y pasar a procesos remotos.
 
- ✔️ medir y comprender las implicaciones de rendimiento del uso de `Expression<...>`, en lugar de usar delegados `Func<...>` y `Action<...>`.
+ ✔️ medir y comprender las implicaciones de rendimiento del uso de `Expression<...>` , en lugar de usar `Func<...>` `Action<...>` delegados de y.
 
- `Expression<...>` tipos son en la mayoría de los casos lógicamente equivalentes a los delegados de `Func<...>` y `Action<...>`. La diferencia principal entre ellos es que los delegados están diseñados para usarse en escenarios de procesos locales; las expresiones están destinadas a los casos en los que resulta ventajoso y posible evaluar la expresión en un proceso o equipo remoto.
+ `Expression<...>`en la mayoría de los casos, los tipos son lógicamente equivalentes a los `Func<...>` `Action<...>` delegados y. La diferencia principal entre ellos es que los delegados están diseñados para usarse en escenarios de procesos locales; las expresiones están destinadas a los casos en los que resulta ventajoso y posible evaluar la expresión en un proceso o equipo remoto.
 
  ✔️ comprender que, al llamar a un delegado, está ejecutando código arbitrario y que podría tener repercusiones en la seguridad, la corrección y la compatibilidad.
 
@@ -44,5 +44,5 @@ Las devoluciones de llamada son puntos de extensibilidad que permiten a un marco
 
 ## <a name="see-also"></a>Consulte también
 
-- [Diseño de extensibilidad](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
-- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)
+- [Diseñar extensibilidad](designing-for-extensibility.md)
+- [Directrices de diseño de marco](index.md)

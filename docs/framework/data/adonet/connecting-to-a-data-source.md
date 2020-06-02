@@ -1,13 +1,14 @@
 ---
 title: Conectar con un origen de datos
+deescription: Learn about Connection objects, used to connect to data sources in ADO.NET. The Connection object you choose depends on the type of data source.
 ms.date: 03/30/2017
 ms.assetid: 9abc3f92-1be3-4e1a-b360-762dc689650e
-ms.openlocfilehash: 206a4f741b6bf711b51da794e23f779c2bea6fa0
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: a14fe179cf2fc8714a54e52252c53bd71346cad3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094454"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287082"
 ---
 # <a name="connecting-to-a-data-source-in-adonet"></a>Conectarse a un origen de datos en ADO.NET
 
@@ -25,8 +26,8 @@ En ADO.NET, se usa un objeto de **conexión** para conectarse a un origen de dat
 ## <a name="see-also"></a>Consulte también
 
 - [Cadenas de conexión](connection-strings.md)
-- [Agrupación de conexiones](connection-pooling.md)
+- [Agrupar conexiones](connection-pooling.md)
 - [Comandos y parámetros](commands-and-parameters.md)
 - [Objetos DataAdapter y DataReader](dataadapters-and-datareaders.md)
 - [Transacciones y simultaneidad](transactions-and-concurrency.md)
-- [Información general sobre ADO.NET](ado-net-overview.md)
+- [Información general de ADO.NET](ado-net-overview.md)

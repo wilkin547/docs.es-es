@@ -11,12 +11,12 @@ helpviewer_keywords:
 - authentication [.NET Framework], principals
 - role-based security, principals
 ms.assetid: 578cc32b-5654-4d8b-9d8c-ebcbc5c75390
-ms.openlocfilehash: 1dfb1f6246e86d6f565c9338fb09f34a1608e9b0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8986e778e84fdf211d11fd7a897508acc7412207
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705930"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291206"
 ---
 # <a name="role-based-security"></a>Seguridad basada en roles
 Suelen usarse roles en aplicaciones empresariales o financieras para aplicar la directiva. Por ejemplo, una aplicación puede imponer límites en el tamaño de la transacción que se va a procesar según si el usuario que realiza la solicitud es un miembro de rol especificado. Los empleados podrían tener autorización para procesar las transacciones que son inferiores a un umbral especificado, los supervisores podrían tener un límite mayor y los vicepresidentes podrían tener un límite aún mayor (o ningún límite). La seguridad basada en roles también se puede usar cuando una aplicación requiere varias aprobaciones para completar una acción. Este caso podría ser un sistema de compras en el que cualquier empleado puede generar una solicitud de compra, pero solo un agente de compras puede convertir la solicitud en un pedido de compras que se pueden enviar a un proveedor.  
@@ -27,14 +27,14 @@ Suelen usarse roles en aplicaciones empresariales o financieras para aplicar la 
   
  .NET Framework proporciona compatibilidad de seguridad basada en roles que es suficientemente flexible y ampliable para satisfacer las necesidades de una amplia variedad de aplicaciones. Puede elegir interoperar con infraestructuras de autenticación existentes, como los servicios COM+ 1.0, o crear un sistema de autenticación personalizado. La seguridad basada en roles está especialmente indicada para aplicaciones web de ASP.NET, que se procesan principalmente en el servidor. Sin embargo, la seguridad basada en roles de .NET Framework puede usarse en el cliente o en el servidor.  
   
- Antes de leer esta sección, asegúrese de que comprende el material presentado en [conceptos clave de seguridad](../../../docs/standard/security/key-security-concepts.md).  
+ Antes de leer esta sección, asegúrese de que comprende el material presentado en [conceptos clave de seguridad](key-security-concepts.md).  
   
 ## <a name="related-topics"></a>Temas relacionados  
   
 |Title|Descripción|  
 |-----------|-----------------|  
-|[Objetos Principal e Identity](../../../docs/standard/security/principal-and-identity-objects.md)|Explica cómo configurar y administrar identidades y entidades de seguridad de Windows y genéricas.|  
-|[Conceptos clave de seguridad](../../../docs/standard/security/key-security-concepts.md)|Presenta los conceptos fundamentales que debe conocer antes de usar la seguridad de .NET Framework.|  
+|[Objetos Principal e Identity](principal-and-identity-objects.md)|Explica cómo configurar y administrar identidades y entidades de seguridad de Windows y genéricas.|  
+|[Conceptos clave de seguridad](key-security-concepts.md)|Presenta los conceptos fundamentales que debe conocer antes de usar la seguridad de .NET Framework.|  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Security.Permissions.PrincipalPermission?displayProperty=nameWithType>

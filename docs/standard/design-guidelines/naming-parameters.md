@@ -6,12 +6,12 @@ helpviewer_keywords:
 - parameters, names
 - names [.NET Framework], parameters
 ms.assetid: ca3c956e-725a-441b-b4e3-eab5d472f41c
-ms.openlocfilehash: ebe2e2db4b109057bf576d4e18cfe511c657707e
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0d5c5cd144fbae88439ee981fbdb6e30ff487005
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743831"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290167"
 ---
 # <a name="naming-parameters"></a>Asignar nombres a parámetros
 Aparte de la razón obvia de legibilidad, es importante seguir las directrices para los nombres de parámetro, ya que los parámetros se muestran en la documentación y en el diseñador cuando las herramientas de diseño visual proporcionan la funcionalidad de exploración de clases y de IntelliSense.
@@ -29,7 +29,7 @@ Aparte de la razón obvia de legibilidad, es importante seguir las directrices p
 
  ✔️ CONSIDERE nombres descriptivos para los parámetros de sobrecarga de operadores si esto agrega un valor significativo.
 
- ❌ no usan abreviaturas ni índices numéricos para los nombres de parámetro de sobrecarga del operador.
+ ❌No utilice abreviaturas ni índices numéricos para los nombres de parámetro de sobrecarga del operador.
 
  *Partes © 2005, 2009 Microsoft Corporation. Todos los derechos reservados.*
 
@@ -37,5 +37,5 @@ Aparte de la razón obvia de legibilidad, es importante seguir las directrices p
 
 ## <a name="see-also"></a>Consulte también
 
-- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)
-- [Instrucciones de nomenclatura](../../../docs/standard/design-guidelines/naming-guidelines.md)
+- [Directrices de diseño de marco](index.md)
+- [Instrucciones de nomenclatura](naming-guidelines.md)

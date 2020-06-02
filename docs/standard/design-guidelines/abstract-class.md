@@ -10,16 +10,16 @@ helpviewer_keywords:
 - classes [.NET Framework], design guidelines
 - type design guidelines, classes
 ms.assetid: d3646e6d-5c1f-4922-8fb0-ec5effb30d60
-ms.openlocfilehash: 018dd353024e75e9819f5a97008f2f422ecad291
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: e6a5923f293ed536fb272f6fe6c805067aede0ab
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739061"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84280782"
 ---
 # <a name="abstract-class-design"></a>Diseño de clases abstractas
 
-❌ no definen constructores internos públicos o protegidos en tipos abstractos.
+❌NO defina constructores internos públicos o protegidos en tipos abstractos.
 
  Los constructores solo deben ser públicos si los usuarios deben crear instancias del tipo. Dado que no se pueden crear instancias de un tipo abstracto, un tipo abstracto con un constructor público se ha diseñado incorrectamente y puede inducir a error a los usuarios.
 
@@ -31,7 +31,7 @@ ms.locfileid: "76739061"
 
  ✔️ proporcionan al menos un tipo concreto que hereda de cada clase abstracta que se envía.
 
- Esto ayuda a validar el diseño de la clase abstracta. Por ejemplo, <xref:System.IO.FileStream?displayProperty=nameWithType> es una implementación de la clase abstracta <xref:System.IO.Stream?displayProperty=nameWithType>.
+ Esto ayuda a validar el diseño de la clase abstracta. Por ejemplo, <xref:System.IO.FileStream?displayProperty=nameWithType> es una implementación de la <xref:System.IO.Stream?displayProperty=nameWithType> clase abstracta.
 
  *Partes © 2005, 2009 Microsoft Corporation. Todos los derechos reservados.*
 
@@ -39,5 +39,5 @@ ms.locfileid: "76739061"
 
 ## <a name="see-also"></a>Consulte también
 
-- [Instrucciones de diseño de tipos](../../../docs/standard/design-guidelines/type.md)
-- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)
+- [Instrucciones de diseño de tipos](type.md)
+- [Directrices de diseño de marco](index.md)

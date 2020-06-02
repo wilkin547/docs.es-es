@@ -1,13 +1,14 @@
 ---
 title: Autorización y permisos en SQL Server
+description: Obtenga información acerca de cómo conceder permisos explícitamente para hacer que los objetos de base de datos que cree sean accesibles para los usuarios de SQL Server con ADO.NET.
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
-ms.openlocfilehash: c9b041a078494cd29d6cab5297728d233dafa236
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: eb01e29b36da5e1793b9176301a968a42115d19c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782588"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286538"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>Autorización y permisos en SQL Server
 Al crear objetos de base de datos, se deben conceder permisos de forma explícita para que los usuarios tengan acceso a ellos. Cada objeto susceptible de protegerse tiene permisos que se pueden otorgar a una entidad de seguridad mediante instrucciones de permiso.  
@@ -31,11 +32,11 @@ Al crear objetos de base de datos, se deben conceder permisos de forma explícit
 ## <a name="permission-statements"></a>Instrucciones de permiso  
  En la siguiente tabla se describen las tres instrucciones de permiso de Transact-SQL.  
   
-|Instrucción de permiso|DESCRIPCIÓN|  
+|Instrucción de permiso|Descripción|  
 |--------------------------|-----------------|  
 |GRANT|Concede un permiso.|  
 |REVOKE|Revoca un permiso. Este es el estado predeterminado de un objeto nuevo. Un permiso revocado a un usuario o rol se puede heredar de otros grupos o roles a los que está asignada la entidad de seguridad.|  
-|DENY|DENY revoca un permiso de manera que no pueda ser heredado. DENY tiene prioridad sobre todos los permisos, pero no se aplica a propietarios de objeto o miembros de `sysadmin`. Si deniega permisos a un objeto en el rol `public`, se los deniega igualmente a todos los usuarios y roles excepto a los propietarios del objeto y a los miembros de `sysadmin`.|  
+|DENEGAR|DENY revoca un permiso de manera que no pueda ser heredado. DENY tiene prioridad sobre todos los permisos, pero no se aplica a propietarios de objeto o miembros de `sysadmin`. Si deniega permisos a un objeto en el rol `public`, se los deniega igualmente a todos los usuarios y roles excepto a los propietarios del objeto y a los miembros de `sysadmin`.|  
   
 - La instrucción GRANT puede asignar permisos a un grupo o rol que puede ser heredada por los usuarios de la base de datos. No obstante, la instrucción DENY tiene prioridad sobre el resto de las instrucciones de permiso. Por ello, un usuario al que se le ha denegado un permiso no puede heredarlo de otro rol.  
   
@@ -52,17 +53,17 @@ Al crear objetos de base de datos, se deben conceder permisos de forma explícit
 > El encadenamiento de propiedad no se aplica en el caso de las instrucciones de SQL dinámico. Para llamar a un procedimiento que ejecuta una instrucción SQL, el llamador debe tener permiso de acceso a las tablas subyacentes, lo que deja a su aplicación expuesta a posibles ataques de inyección SQL. SQL Server proporciona nuevos mecanismos, como suplantación y módulos de firma con certificados, que no requieren otorgar permisos en las tablas subyacentes. Estos mecanismos se pueden utilizar también con procedimientos almacenados CLR.  
   
 ## <a name="external-resources"></a>Recursos externos  
- Para obtener más información, vea los siguientes recursos.  
+ Para obtener más información, vea los recursos siguientes.  
   
-|Recurso|DESCRIPCIÓN|  
+|Resource|Descripción|  
 |--------------|-----------------|  
 |[Permisos](/sql/relational-databases/security/permissions-database-engine)|Contiene temas que describen la jerarquía de permisos, las vistas de catálogo y permisos de servidores fijos y roles de bases de datos.|
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Proteger aplicaciones de ADO.NET](../securing-ado-net-applications.md)
 - [Escenarios de seguridad de aplicaciones en SQL Server](application-security-scenarios-in-sql-server.md)
 - [Autenticación en SQL Server](authentication-in-sql-server.md)
 - [Roles de servidor y base de datos en SQL Server](server-and-database-roles-in-sql-server.md)
 - [Propiedad y separación de esquemas de usuario en SQL Server](ownership-and-user-schema-separation-in-sql-server.md)
-- [Información general sobre ADO.NET](../ado-net-overview.md)
+- [Información general de ADO.NET](../ado-net-overview.md)

@@ -1,16 +1,17 @@
 ---
 title: Procedimiento para mostrar el código SQL generado
+description: Obtenga información sobre cómo ver el código SQL generado para las consultas mediante el uso de la propiedad log para ayudar a comprender LINQ to SQL funcionalidad y para depurar.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 626492c0-5ee3-4675-88e8-8c40379510b6
-ms.openlocfilehash: 15fc6a50d232ea12b229b7b2790c0398bc1c370d
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 5e75a8aadf4631f0a6e50641db72ba7b83af41fe
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002969"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286383"
 ---
 # <a name="how-to-display-generated-sql"></a>Procedimiento para mostrar el código SQL generado
 Puede ver el código de SQL generado para las consultas y cambiar su procesamiento por medio de la propiedad <xref:System.Data.Linq.DataContext.Log%2A>. Este enfoque puede ser útil para entender la funcionalidad de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] y para depurar problemas concretos.  
@@ -18,7 +19,7 @@ Puede ver el código de SQL generado para las consultas y cambiar su procesamien
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se utiliza la propiedad <xref:System.Data.Linq.DataContext.Log%2A> para mostrar el código de SQL en la ventana de la consola antes de que se ejecute el código.  Puede utilizar esta propiedad con los comandos de consulta, inserción, actualización y eliminación.  
   
- Las líneas de la ventana de la consola son lo que se ve al ejecutar la C# Visual Basic o el código siguiente.  
+ Las líneas de la ventana de la consola son lo que se ve al ejecutar el código de Visual Basic o C# siguiente.  
   
 ```console  
 SELECT [t0].[CustomerID], [t0].[CompanyName], [t0].[ContactName], [t0].[ContactT  
@@ -42,6 +43,6 @@ SEVES
  [!code-csharp[DLinqDebuggingSupport#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDebuggingSupport/cs/Program.cs#1)]
  [!code-vb[DLinqDebuggingSupport#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDebuggingSupport/vb/Module1.vb#1)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Capacidad de depuración](debugging-support.md)

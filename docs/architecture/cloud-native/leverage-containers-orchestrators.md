@@ -2,12 +2,12 @@
 title: Aprovechamiento de contenedores y orquestadores
 description: Aprovechar los contenedores de Docker y los orquestadores de Kubernetes en Azure
 ms.date: 05/13/2020
-ms.openlocfilehash: 5d0b7f41caecb3422a4416514de2fdd54e94539a
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: b2fedac205d7a5bd8b8f8cf665ae370b9bf26654
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613928"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84282589"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>Aprovechamiento de contenedores y orquestadores
 
@@ -53,30 +53,11 @@ Los contenedores se definen mediante archivos simples basados en texto que se co
 
 Los contenedores son inmutables. Una vez definido un contenedor, puede volver a crearlo y ejecutarlo exactamente de la misma manera. Esta inmutabilidad se presta a un diseño basado en componentes. Si algunas partes de una aplicación evolucionan de forma diferente a otras, ¿por qué volver a implementar toda la aplicación cuando se puede implementar solo los elementos que cambian con más frecuencia? Las distintas características y aspectos transversales de una aplicación se pueden dividir en unidades independientes. En la figura 3-2 se muestra cómo una aplicación monolítica puede aprovechar las ventajas de los contenedores y los microservicios mediante la delegación de ciertas características o funcionalidades. La funcionalidad restante en la propia aplicación también se ha contenedor.
 
-Los contenedores son inmutables. Una vez definido un contenedor, puede volver a crearlo y ejecutarlo exactamente de la misma manera. Esta inmutabilidad se presta a un diseño basado en componentes. Si algunas partes de una aplicación evolucionan de forma diferente a otras, ¿por qué volver a implementar toda la aplicación cuando se puede implementar solo los elementos que cambian con más frecuencia? Las distintas características y aspectos transversales de una aplicación se pueden dividir en unidades independientes. En la figura 3-2 se muestra cómo una aplicación monolítica puede aprovechar las ventajas de los contenedores y los microservicios mediante la delegación de ciertas características o funcionalidades. La funcionalidad restante en la propia aplicación también se ha contenedor.
-
 ![Dividir una aplicación monolítica para usar microservicios en el back-end.](./media/cloud-native-design.png)
 
 **Figura 3-2**. Descomponer una aplicación monolítica para adoptar microservicios.
 
 Cada servicio en la nube nativo se compila e implementa en un contenedor independiente. Cada se puede actualizar según sea necesario. Los servicios individuales se pueden hospedar en nodos con recursos adecuados para cada servicio. El entorno en el que se ejecuta cada servicio es inmutable, compartido entre los entornos de desarrollo, pruebas y producción, y con una versión sencilla. El acoplamiento entre distintas áreas de la aplicación se produce explícitamente como llamadas o mensajes entre servicios, no las dependencias en tiempo de compilación dentro del monolito. También puede elegir la tecnología que mejor se adapte a una funcionalidad determinada sin necesidad de realizar cambios en el resto de la aplicación.
-
-Los servicios en contenedores requieren una administración automatizada. No sería factible administrar manualmente un gran conjunto de contenedores implementados de forma independiente. Por ejemplo, considere las siguientes tareas:
-
-- ¿Cómo se aprovisionarán las instancias de contenedor en un clúster de muchas máquinas?
-- Una vez implementado, ¿cómo se detectarán los contenedores y se comunicarán entre sí?
-- ¿Cómo se pueden escalar o reducir horizontalmente los contenedores a petición?
-- ¿Cómo se supervisa el estado de cada contenedor?
-- ¿Cómo se protege un contenedor frente a errores de hardware y software?
-- ¿Cómo se actualizan los contenedores de una aplicación activa sin tiempo de inactividad?
-
-Los orquestadores de contenedores abordan y automatizan estos y otros problemas.
-
-En el sistema ecológico nativo de la nube, Kubernetes se ha convertido en el orquestador de contenedores de facto. Es una plataforma de código abierto administrada por Cloud Native Computing Foundation (CNCF). Kubernetes automatiza la implementación, el escalado y los aspectos operativos de las cargas de trabajo en contenedores en un clúster de máquinas. Sin embargo, instalar y administrar Kubernetes es muy complejo.
-
-Un enfoque mucho mejor es aprovechar Kubernetes como servicio administrado de un proveedor en la nube. La nube de Azure incluye una plataforma Kubernetes totalmente administrada titulada [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/). AKS abstrae la complejidad y la sobrecarga operativa de la administración de Kubernetes. Utilice Kubernetes como servicio en la nube; Microsoft asume la responsabilidad de administrarla y respaldarla. AKS también se integra estrechamente con otros servicios de Azure y herramientas de desarrollo.
-
-AKS es una tecnología basada en clústeres. Un grupo de máquinas virtuales federadas, o nodos, se implementa en la nube de Azure. Juntos, forman un entorno de alta disponibilidad o un clúster. El clúster aparece como una entidad única y sin problemas para la aplicación nativa en la nube. En el capó, AKS implementa los servicios en contenedores en estos nodos después de una estrategia predefinida que distribuye uniformemente la carga.
 
 Los servicios en contenedores requieren una administración automatizada. No sería factible administrar manualmente un gran conjunto de contenedores implementados de forma independiente. Por ejemplo, considere las siguientes tareas:
 
@@ -240,8 +221,6 @@ Además, en cualquier momento puede Agregar compatibilidad con Docker a una apli
 ![Compatibilidad con Docker de Visual Studio](./media/visual-studio-add-docker-support.png)
 
 **Figura 3-8**. Incorporación de compatibilidad con Docker a Visual Studio
-
-También puede Agregar compatibilidad con orquestación de contenedores, que también se muestra en la figura 3-8. De forma predeterminada, el orquestador usa Kubernetes y Helm. Una vez elegido el orquestador, `azds.yaml` se agrega un archivo a la raíz del proyecto y `charts` se agrega una carpeta que contiene los gráficos de Helm usados para configurar e implementar la aplicación en Kubernetes. En la figura 3-9 se muestran los archivos resultantes de un nuevo proyecto.
 
 También puede Agregar compatibilidad con orquestación de contenedores, que también se muestra en la figura 3-8. De forma predeterminada, el orquestador usa Kubernetes y Helm. Una vez elegido el orquestador, `azds.yaml` se agrega un archivo a la raíz del proyecto y `charts` se agrega una carpeta que contiene los gráficos de Helm usados para configurar e implementar la aplicación en Kubernetes. En la figura 3-9 se muestran los archivos resultantes de un nuevo proyecto.
 

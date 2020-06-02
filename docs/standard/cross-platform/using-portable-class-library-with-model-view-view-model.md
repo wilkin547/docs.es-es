@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Portable Class Library [.NET Framework], and MVVM
 - MVVM, and Portable Class Library
 ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
-ms.openlocfilehash: f5312177b9f437d9b5474d38fca80db6fc45245b
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: ff34b295ba443088115d470d8ade0c986ac1d856
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77123680"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288854"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>Usar la Biblioteca de clases portable con Model-View-View Model
-Puede usar el .NET Framework [biblioteca de clases portable](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) para implementar el patrón Model-View-View Model (MVVM) y compartir ensamblados en varias plataformas.
+Puede usar el .NET Framework [biblioteca de clases portable](cross-platform-development-with-the-portable-class-library.md) para implementar el patrón Model-View-View Model (MVVM) y compartir ensamblados en varias plataformas.
 
 [!INCLUDE[standard](../../../includes/pcl-to-standard.md)]
 
@@ -50,7 +50,7 @@ Puede usar el .NET Framework [biblioteca de clases portable](../../../docs/stand
 
 - Clase <xref:System.Windows.Input.ICommand?displayProperty=nameWithType>
 
-- Todas las clases del espacio de nombres <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType>
+- Todas las clases del <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType> espacio de nombres
 
 ## <a name="implementing-mvvm"></a>Implementar MVVM
  Para implementar MVVM, normalmente crea el modelo y el modelo de vista en un proyecto de biblioteca de clases portable, porque un proyecto de biblioteca de clases portable no puede hacer referencia a un proyecto no portátil. El modelo y el modelo de vista pueden estar en el mismo proyecto o en proyectos independientes. Si usa proyectos independientes, agregue una referencia desde el proyecto de modelo de vista al proyecto de modelo.
@@ -74,7 +74,7 @@ Puede usar el .NET Framework [biblioteca de clases portable](../../../docs/stand
  [!code-csharp[PortableClassLibraryMVVM#3](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/viewmodelbase.cs#3)]
  [!code-vb[PortableClassLibraryMVVM#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/viewmodelbase.vb#3)]
 
- Con frecuencia, se usa una implementación de la interfaz <xref:System.Windows.Input.ICommand> con el patrón MVVM. En el siguiente ejemplo se muestra una implementación de la interfaz <xref:System.Windows.Input.ICommand>.
+ Una implementación de la <xref:System.Windows.Input.ICommand> interfaz se usa con frecuencia con el patrón MVVM. En el siguiente ejemplo se muestra una implementación de la interfaz <xref:System.Windows.Input.ICommand>.
 
  [!code-csharp[PortableClassLibraryMVVM#4](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/relaycommand.cs#4)]
  [!code-vb[PortableClassLibraryMVVM#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/relaycommand.vb#4)]
@@ -91,4 +91,4 @@ Puede usar el .NET Framework [biblioteca de clases portable](../../../docs/stand
   
 ## <a name="see-also"></a>Consulte también
 
-- [Biblioteca de clases portable](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)
+- [Biblioteca de clases portable](cross-platform-development-with-the-portable-class-library.md)

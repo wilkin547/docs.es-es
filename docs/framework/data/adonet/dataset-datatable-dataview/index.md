@@ -1,13 +1,14 @@
 ---
 title: Objetos DataSet, DataTable y DataView
+description: Aprenda varias maneras de trabajar con un conjunto de datos de ADO.NET, una representación residente en memoria de los datos que proporciona un modelo de programación relacional coherente.
 ms.date: 03/30/2017
 ms.assetid: 6d4c4b69-8919-4224-8a65-6cca1c61b48f
-ms.openlocfilehash: 1744f6c6d8ea3c28a8dab30c0d201ae1dacc7ee3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f6562452261cbc1f7ee36fb264b858646a42e4f5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786193"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286900"
 ---
 # <a name="datasets-datatables-and-dataviews"></a>Objetos DataSet, DataTable y DataView
 El <xref:System.Data.DataSet> de ADO.NET es una representación de datos residente en memoria que proporciona un modelo de programación relacional coherente independientemente del origen de datos que contiene. Un <xref:System.Data.DataSet> representa un conjunto completo de datos, incluyendo las tablas que contienen, ordenan y restringen los datos, así como las relaciones entre las tablas.  
@@ -23,7 +24,7 @@ El <xref:System.Data.DataSet> de ADO.NET es una representación de datos residen
  También se puede transportar un <xref:System.Data.DataSet> fuertemente tipado mediante un servicio Web XML. El diseño del <xref:System.Data.DataSet> lo convierte en idóneo para el transporte de datos mediante servicios Web XML. Para obtener información general sobre servicios Web XML, vea [Información general de servicios Web XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w9fdtx28(v=vs.100)). Para obtener un ejemplo sobre cómo usar un objeto <xref:System.Data.DataSet> desde un servicio Web XML, vea [Consuming a DataSet from an XML Web Service](consuming-a-dataset-from-an-xml-web-service.md) (Usar un conjunto de datos desde un servicio Web XML).  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Crear un objeto DataSet](creating-a-dataset.md)  
+ [Creación de un conjunto de DataSet](creating-a-dataset.md)  
  Describe la sintaxis para crear una instancia de <xref:System.Data.DataSet>.  
   
  [Agregar un objeto DataTable a un objeto DataSet](adding-a-datatable-to-a-dataset.md)  
@@ -59,14 +60,14 @@ El <xref:System.Data.DataSet> de ADO.NET es una representación de datos residen
  [Usar XML en un conjunto de datos](using-xml-in-a-dataset.md)  
  Describe cómo interactúa el <xref:System.Data.DataSet> con XML como origen de datos, incluyendo cómo cargar y hacer persistente el contenido de un <xref:System.Data.DataSet> como datos XML.  
   
- [Usar un conjunto de datos desde un servicio Web XML](consuming-a-dataset-from-an-xml-web-service.md)  
+ [Utilizar un conjunto de datos desde un servicio Web XML](consuming-a-dataset-from-an-xml-web-service.md)  
  Describe cómo crear un servicio Web XML que utilice un <xref:System.Data.DataSet> para transportar los datos.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Novedades de ADO.NET](../whats-new.md)  
  Presenta características nuevas en ADO.NET.  
   
- [Información general sobre ADO.NET](../ado-net-overview.md)  
+ [Información general de ADO.NET](../ado-net-overview.md)  
  Proporciona una introducción al diseño y a los componentes de ADO.NET.  
   
  [Rellenar un conjunto de datos desde un objeto DataAdapter](../populating-a-dataset-from-a-dataadapter.md)  
@@ -78,7 +79,7 @@ El <xref:System.Data.DataSet> de ADO.NET es una representación de datos residen
  [Agregar restricciones existentes a un conjunto de datos](../adding-existing-constraints-to-a-dataset.md)  
  Describe cómo se rellena un objeto **DataSet** con información de clave principal de un origen de datos.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [ADO.NET](../index.md)
-- [Información general sobre ADO.NET](../ado-net-overview.md)
+- [Información general de ADO.NET](../ado-net-overview.md)

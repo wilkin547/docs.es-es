@@ -7,12 +7,12 @@ helpviewer_keywords:
 - virtual members
 - members [.NET Framework], virtual
 ms.assetid: 8ff4eb97-0364-43ec-8a02-934b5cd94d19
-ms.openlocfilehash: 8ed519a01162056151d8ae6398c0d06495911afd
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 9eb6cbef969e51dee1a72d402c124d06f08fe5c4
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743534"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288503"
 ---
 # <a name="virtual-members"></a>Miembros virtuales
 Los miembros virtuales se pueden invalidar, lo que cambia el comportamiento de la subclase. Son bastante similares a las devoluciones de llamada en términos de extensibilidad que proporcionan, pero son mejores en cuanto al rendimiento de la ejecución y el consumo de memoria. Además, los miembros virtuales se sienten más naturales en escenarios que requieren la creación de una clase especial de un tipo existente (especialización).
@@ -23,7 +23,7 @@ Los miembros virtuales se pueden invalidar, lo que cambia el comportamiento de l
 
  Los miembros virtuales, como las devoluciones de llamada (y quizás más que las devoluciones de llamada), son caros de diseñar, probar y mantener, ya que cualquier llamada a un miembro virtual se puede invalidar de maneras imprevisibles y puede ejecutar código arbitrario. Además, normalmente se requiere mucho más esfuerzo para definir claramente el contrato de los miembros virtuales, por lo que el costo de diseñar y documentarlos es mayor.
 
- ❌ no convertir miembros en virtuales a menos que tenga una buena razón para hacerlo y tenga en cuenta todos los costos relacionados con el diseño, la prueba y el mantenimiento de miembros virtuales.
+ ❌NO haga que los miembros sean virtuales a menos que tenga una buena razón para hacerlo y conozca todos los costos relacionados con el diseño, la prueba y el mantenimiento de los miembros virtuales.
 
  Los miembros virtuales son menos permisivo en lo que se refiere a los cambios que se pueden realizar en ellos sin interrumpir la compatibilidad. Además, son más lentos que los miembros no virtuales, principalmente porque las llamadas a miembros virtuales no se insertan.
 
@@ -39,5 +39,5 @@ Los miembros virtuales se pueden invalidar, lo que cambia el comportamiento de l
 
 ## <a name="see-also"></a>Consulte también
 
-- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)
-- [Diseño de extensibilidad](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
+- [Directrices de diseño de marco](index.md)
+- [Diseñar extensibilidad](designing-for-extensibility.md)

@@ -1,13 +1,14 @@
 ---
 title: Información general sobre la seguridad de SQL Server
+description: Obtenga información acerca de la arquitectura de seguridad de SQL Server para saber qué características y funcionalidad contrarrestan las amenazas conocidas y para anticiparse a las amenazas futuras.
 ms.date: 03/30/2017
 ms.assetid: ae66dd75-5c16-4cc0-9e12-774dd26d3fb9
-ms.openlocfilehash: adc1ce661d49c468de09552ea36a2cd58d6343f1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c423a408e607c51c048ad08b91122a1fe06e31b2
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780941"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286280"
 ---
 # <a name="overview-of-sql-server-security"></a>Información general sobre la seguridad de SQL Server
 Una estrategia de defensa exhaustiva, con niveles superpuestos de seguridad, es la mejor manera de enfrentarse a las amenazas a la seguridad. SQL Server proporciona una arquitectura de seguridad diseñada para permitir a los administradores de bases de datos y desarrolladores crear aplicaciones de base de datos seguras y contrarrestar las amenazas. En cada versión de SQL Server se han introducido mejoras a las versiones anteriores con nuevas características y funcionalidades. No obstante, la seguridad no es una característica integrada más. Cada aplicación tiene requisitos de seguridad propios. Los desarrolladores tienen que saber cuál es la combinación de características y funcionalidades más apropiada para contrarrestar las amenazas conocidas, así como anticiparse a las que puedan ir apareciendo en el futuro.  
@@ -16,13 +17,13 @@ Una estrategia de defensa exhaustiva, con niveles superpuestos de seguridad, es 
   
 - La autenticación es el proceso de inicio de sesión en SQL Server por el que una entidad de seguridad solicita el acceso mediante el envío de credenciales que el servidor evalúa. La autenticación establece la identidad del usuario o proceso que se autentica.  
   
-- La autorización es el proceso con el que se determinan los recursos susceptibles de protegerse a los que tiene acceso una entidad de seguridad, así como las operaciones que les están permitidas a dichos recursos.  
+- La autorización es el proceso en el que se determinan los recursos protegibles a los que puede obtener acceso una entidad de seguridad y las operaciones permitidas para dichos recursos.  
   
  Los temas de esta sección abordan los conceptos básicos de seguridad de SQL Server y proporcionan vínculos a la documentación completa de la versión de los Libros en pantalla de SQL Server que corresponda.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Autenticación en SQL Server](authentication-in-sql-server.md)  
- Describe los inicios de sesión y autenticación en SQL Server y proporciona vínculos a recursos adicionales.  
+ Describe los inicios de sesión y la autenticación en SQL Server y proporciona vínculos a recursos adicionales.  
   
  [Roles de servidor y base de datos en SQL Server](server-and-database-roles-in-sql-server.md)  
  Describe funciones fijas de bases de datos y servidores, funciones de base de datos personalizadas y cuentas integradas, y proporciona vínculos a recursos adicionales.  
@@ -39,9 +40,9 @@ Una estrategia de defensa exhaustiva, con niveles superpuestos de seguridad, es 
  [Seguridad de integración de CLR en SQL Server](clr-integration-security-in-sql-server.md)  
  Proporciona vínculos a recursos de seguridad de la integración CLR.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Proteger aplicaciones de ADO.NET](../securing-ado-net-applications.md)
 - [Seguridad de SQL Server](sql-server-security.md)
 - [Escenarios de seguridad de aplicaciones en SQL Server](application-security-scenarios-in-sql-server.md)
-- [Información general sobre ADO.NET](../ado-net-overview.md)
+- [Información general de ADO.NET](../ado-net-overview.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - names [.NET Framework], type members
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
-ms.openlocfilehash: 81c837bd045992043208a59f6ee16803c1d6eb3c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 87cf793229cfc7d8d0547af935369a3febee41a3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744182"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290193"
 ---
 # <a name="names-of-type-members"></a>Nombres de miembros de tipos
 Los tipos están conformados por miembros: métodos, propiedades, eventos, constructores y campos. En las siguientes secciones se detallan las instrucciones para asignar un nombre a los miembros de tipos.
@@ -40,7 +40,7 @@ public class String {
 
  ✔️ las propiedades de nombre mediante un nombre, una frase o un adjetivo.
 
- ❌ no tienen propiedades que coincidan con el nombre de los métodos "Get", como en el ejemplo siguiente:
+ ❌NO tenga propiedades que coincidan con el nombre de los métodos "Get" como en el ejemplo siguiente:
 
  `public string TextWriter { get {...} set {...} }` `public string GetTextWriter(int value) { ... }`
 
@@ -48,7 +48,7 @@ public class String {
 
  ✔️ las propiedades de la colección de nombres con una frase plural que describe los elementos de la colección en lugar de usar una frase singular seguida de "list" o "Collection".
 
- ✔️ denominar propiedades booleanas con una frase afirmativa (`CanSeek` en lugar de `CantSeek`). Opcionalmente, también puede prefijar las propiedades booleanas con "es", "puede" o "tiene", pero solo cuando agrega valor.
+ ✔️ denominar propiedades booleanas con una frase afirmativa ( `CanSeek` en lugar de `CantSeek` ). Opcionalmente, también puede prefijar las propiedades booleanas con "es", "puede" o "tiene", pero solo cuando agrega valor.
 
  ✔️ considere la posibilidad de asignar a una propiedad el mismo nombre que su tipo.
 
@@ -72,26 +72,26 @@ public class Control {
 
  Por ejemplo, un evento de cierre que tuviera lugar antes de cerrar una ventana se llamaría `Closing`, mientras que uno que lo hiciera después se llamaría `Closed`.
 
- ❌ no use prefijos "Before" o "after" o posteriores para indicar eventos anteriores y posteriores. Utilice tiempos verbales que indiquen presente y futuro, como se ha explicado.
+ ❌No use prefijos "Before" o "after" o posteriores para indicar eventos anteriores y posteriores. Utilice tiempos verbales que indiquen presente y futuro, como se ha explicado.
 
  ✔️ los controladores de eventos de nombre (delegados usados como tipos de eventos) con el sufijo "EventHandler", como se muestra en el ejemplo siguiente:
 
  `public delegate void ClickedEventHandler(object sender, ClickedEventArgs e);`
 
- ✔️ usar dos parámetros denominados `sender` y `e` en los controladores de eventos.
+ ✔️ utilizan dos parámetros denominados `sender` y `e` en los controladores de eventos.
 
  El parámetro de envío corresponde al objeto que genera el evento. Este suele ser del tipo `object`, incluso aunque sea posible utilizar un tipo que sea más específico.
 
  ✔️ las clases de argumento de evento de nombre con el sufijo "EventArgs".
 
 ## <a name="names-of-fields"></a>Nombres de campos
- Las instrucciones relativas a la nomenclatura de los campos son aplicables a los campos estáticos públicos y protegidos. En las instrucciones no se abordan los campos internos y privados. Asimismo, las [instrucciones de diseño de miembros](../../../docs/standard/design-guidelines/member.md) no permiten los campos de instancias públicas o protegidas.
+ Las instrucciones relativas a la nomenclatura de los campos son aplicables a los campos estáticos públicos y protegidos. En las instrucciones no se abordan los campos internos y privados. Asimismo, las [instrucciones de diseño de miembros](member.md) no permiten los campos de instancias públicas o protegidas.
 
  ✔️ usar PascalCasing en nombres de campo.
 
  ✔️ asignar nombres a los campos con un nombre, una frase o un adjetivo.
 
- ❌ no usan un prefijo para los nombres de campo.
+ ❌No use un prefijo para los nombres de campo.
 
  Por ejemplo, no utilice "g_" ni "s_" para indicar campos estáticos.
 
@@ -101,5 +101,5 @@ public class Control {
 
 ## <a name="see-also"></a>Consulte también
 
-- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)
-- [Instrucciones de nomenclatura](../../../docs/standard/design-guidelines/naming-guidelines.md)
+- [Directrices de diseño de marco](index.md)
+- [Instrucciones de nomenclatura](naming-guidelines.md)

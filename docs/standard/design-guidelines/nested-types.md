@@ -10,12 +10,12 @@ helpviewer_keywords:
 - members [.NET Framework], type
 - class library design guidelines [.NET Framework], nested types
 ms.assetid: 12feb7f0-b793-4d96-b090-42d6473bab8c
-ms.openlocfilehash: dd13116b13ac8e2d7a3af6ef014eb4f393909515
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a3b090b39e1e907826551ed152d4eece4885ce41
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743696"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290141"
 ---
 # <a name="nested-types"></a>Tipos anidados
 Un tipo anidado es un tipo definido dentro del ámbito de otro tipo, que se denomina tipo envolvente. Un tipo anidado tiene acceso a todos los miembros de su tipo envolvente. Por ejemplo, tiene acceso a los campos privados definidos en el tipo envolvente y a los campos protegidos definidos en todos los antecesores del tipo envolvente.
@@ -26,19 +26,19 @@ Un tipo anidado es un tipo definido dentro del ámbito de otro tipo, que se deno
 
  ✔️ usar tipos anidados cuando la relación entre el tipo anidado y su tipo externo sea tal que la semántica de accesibilidad de los miembros sea conveniente.
 
- ❌ no usar tipos anidados públicos como una construcción de agrupación lógica; Use espacios de nombres para este.
+ ❌No utilice tipos anidados públicos como una construcción de agrupación lógica; Use espacios de nombres para este.
 
- ❌ evitar tipos anidados expuestos públicamente. La única excepción a esto se debe a que las variables del tipo anidado solo deben declararse en escenarios poco frecuentes, como subclases u otros escenarios de personalización avanzados.
+ ❌Evite los tipos anidados expuestos públicamente. La única excepción a esto se debe a que las variables del tipo anidado solo deben declararse en escenarios poco frecuentes, como subclases u otros escenarios de personalización avanzados.
 
- ❌ no utilizan tipos anidados si es probable que se haga referencia al tipo fuera del tipo contenedor.
+ ❌No utilice tipos anidados si es probable que se haga referencia al tipo fuera del tipo contenedor.
 
  Por ejemplo, una enumeración que se pasa a un método definido en una clase no debe definirse como un tipo anidado en la clase.
 
- ❌ no usar tipos anidados si es necesario crear instancias del código de cliente.  Si un tipo tiene un constructor público, probablemente no se debe anidar.
+ ❌No utilice tipos anidados si es necesario crear instancias del código de cliente.  Si un tipo tiene un constructor público, probablemente no se debe anidar.
 
  Si se puede crear una instancia de un tipo, parece que el tipo tiene un lugar en el marco por su cuenta (puede crearlo, trabajar con él y destruirlo sin usar el tipo externo) y, por tanto, no debe estar anidado. Los tipos internos no se deben reutilizar ampliamente fuera del tipo externo sin ninguna relación en absoluto con el tipo externo.
 
- ❌ no definen un tipo anidado como miembro de una interfaz. Muchos lenguajes no admiten este tipo de construcción.
+ ❌NO defina un tipo anidado como miembro de una interfaz. Muchos lenguajes no admiten este tipo de construcción.
 
  *Partes © 2005, 2009 Microsoft Corporation. Todos los derechos reservados.*
 
@@ -46,5 +46,5 @@ Un tipo anidado es un tipo definido dentro del ámbito de otro tipo, que se deno
 
 ## <a name="see-also"></a>Consulte también
 
-- [Instrucciones de diseño de tipos](../../../docs/standard/design-guidelines/type.md)
-- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)
+- [Instrucciones de diseño de tipos](type.md)
+- [Directrices de diseño de marco](index.md)

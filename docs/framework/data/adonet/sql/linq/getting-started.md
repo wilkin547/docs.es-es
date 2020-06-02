@@ -1,19 +1,20 @@
 ---
 title: Introducción
+description: Con este código de ejemplo, empiece a usar LINQ to SQL para usar la tecnología LINQ para tener acceso a las bases de datos SQL tal como lo haría con una colección en memoria.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: db8a557a-fef8-4f4f-bb91-8cff7250ee25
-ms.openlocfilehash: 3bff4e9f268e9eac84c244cb58eed8b4384e717d
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: a46c42e917bdab0d32ee594bbcd604ee9e3d26bc
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634700"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286422"
 ---
 # <a name="getting-started"></a>Introducción
-Mediante el uso de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], puede usar la tecnología LINQ para tener acceso a las bases de datos SQL de la misma forma que tendría acceso a una colección en memoria.  
+Mediante el uso de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , puede usar la tecnología LINQ para tener acceso a las bases de datos SQL de la misma forma que tendría acceso a una colección en memoria.  
   
  Por ejemplo, en el código siguiente, se crea el objeto `nw` para representar la base de datos `Northwind`, el destino es la tabla `Customers`, las filas se filtran para `Customers` de `London` y se selecciona para la recuperación una cadena de `CompanyName`.  
   
@@ -27,11 +28,11 @@ Mediante el uso de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-m
   
  Luego, intente realizar algunos tutoriales para obtener experiencia práctica en el uso de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Vea [aprendizaje de los tutoriales](learning-by-walkthroughs.md).  
   
- Por último, aprenda a empezar a trabajar en su propio proyecto [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] leyendo [los pasos típicos para usar LINQ to SQL](typical-steps-for-using-linq-to-sql.md).  
+ Por último, aprenda a empezar a trabajar en su propio [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proyecto mediante la lectura de [los pasos típicos para usar LINQ to SQL](typical-steps-for-using-linq-to-sql.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [LINQ to SQL](index.md)
 - [Introducción a LINQ (C#)](../../../../../csharp/programming-guide/concepts/linq/index.md)
 - [Introducción a LINQ (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)
-- [Modelo de objetos de LINQ to SQL](the-linq-to-sql-object-model.md)
+- [El modelo de objetos de LINQ to SQL](the-linq-to-sql-object-model.md)
