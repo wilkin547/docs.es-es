@@ -115,9 +115,12 @@
         - name: Publicar una aplicación
           href: tutorials/publishing-with-visual-studio-code.md
           displayName: 'tutorials, visual studio, vs'
-        - name: Creación y prueba unitaria de una biblioteca en macOS
-          href: tutorials/using-on-macos.md
-          displayName: 'tutorials, visual studio code, vs code, cli'
+        - name: Creación de una biblioteca
+          href: tutorials/library-with-visual-studio-code.md
+          displayName: 'tutorials, visual studio, vs'
+        - name: Prueba unitaria de una biblioteca
+          href: tutorials/testing-library-with-visual-studio-code.md
+          displayName: 'tutorials, visual studio, vs'
         - name: Instalar y usar un paquete
           href: /nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli
           displayName: 'tutorials, cli'
