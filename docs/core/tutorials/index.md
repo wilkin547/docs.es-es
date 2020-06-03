@@ -4,12 +4,12 @@ description: Siga los tutoriales para aprender a compilar aplicaciones y bibliot
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: 31f63a2bbafc7f1c8dacea0fa8d3a40f36f69e55
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: a685b7d8d6c849cfea061a997780b9cafeb6d938
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241479"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84283733"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Explore estos tutoriales para obtener información sobre las herramientas de .NET Core y el SDK de .NET Core
 
@@ -22,10 +22,8 @@ Los siguientes tutoriales están disponibles para aprender sobre .NET Core.
 - [Publicación de una aplicación](publishing-with-visual-studio.md)
 - [Creación de una biblioteca de clases](library-with-visual-studio.md)
 - [Prueba unitaria de una biblioteca de clases](testing-library-with-visual-studio.md)
-- [Uso de una biblioteca de clases](consuming-library-with-visual-studio.md)
 - [Instalación y uso de un paquete](/nuget/quickstart/install-and-use-a-package-in-visual-studio)
 - [Creación y publicación de un paquete](/nuget/quickstart/create-and-publish-a-package-using-visual-studio)
-
 - [Creación de una aplicación de consola en F#](../../fsharp/get-started/get-started-visual-studio.md)
 
 ## <a name="use-visual-studio-code"></a>Usar Visual Studio Code
@@ -35,10 +33,10 @@ Elija estos tutoriales si quiere usar Visual Studio Code u otro editor de códi
 - [Creación de una aplicación de consola](with-visual-studio-code.md)
 - [Depuración de una aplicación](debugging-with-visual-studio-code.md)
 - [Publicación de una aplicación](publishing-with-visual-studio-code.md)
-- [Creación y prueba unitaria de una biblioteca en macOS](using-on-macos.md)
+- [Creación de una biblioteca de clases](library-with-visual-studio-code.md)
+- [Prueba unitaria de una biblioteca de clases](testing-library-with-visual-studio-code.md)
 - [Instalación y uso de un paquete](/nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli)
 - [Creación y publicación de un paquete](/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli)
-
 - [Creación de una aplicación de consola en F#](../../fsharp/get-started/get-started-vscode.md)
 
 ## <a name="use-visual-studio-for-mac"></a>Uso de Visual Studio para Mac

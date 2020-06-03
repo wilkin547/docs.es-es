@@ -3,12 +3,12 @@ title: Documentos y datos XML
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
-ms.openlocfilehash: e0c3f3e99b06b65caf79d87a7831369f6fb33b08
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a752d634141a56df1caa61eb5d375dd2a402832f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75710796"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287693"
 ---
 # <a name="xml-documents-and-data"></a>Documentos y datos XML
 
@@ -54,33 +54,33 @@ Las clases XML de .NET Framework proporcionan estas ventajas:
 
   Para obtener un mejor rendimiento cuando se requiera un procesamiento XSLT, puede usar la clase <xref:System.Xml.XPath.XPathDocument>, que es un almacén optimizado de solo lectura para consultas XPath diseñadas para funcionar, de forma eficiente, con la clase <xref:System.Xml.Xsl.XslCompiledTransform>.
 
-- **Integración con ADO.NET.** Las clases XML y [ADO.NET](../../../../docs/framework/data/adonet/index.md) están estrechamente integradas para reunir datos relacionales y XML. La clase <xref:System.Data.DataSet> es una caché almacenada en memoria de datos devueltos desde una base de datos. La clase <xref:System.Data.DataSet> puede leer y escribir XML mediante las clases <xref:System.Xml.XmlReader> y <xref:System.Xml.XmlWriter>, con el fin de almacenar su estructura de esquema relacional interna como esquemas XML (XSD) y para deducir la estructura de esquema de un documento XML.
+- **Integración con ADO.NET.** Las clases XML y [ADO.NET](../../../framework/data/adonet/index.md) están estrechamente integradas para reunir datos relacionales y XML. La clase <xref:System.Data.DataSet> es una caché almacenada en memoria de datos devueltos desde una base de datos. La clase <xref:System.Data.DataSet> puede leer y escribir XML mediante las clases <xref:System.Xml.XmlReader> y <xref:System.Xml.XmlWriter>, con el fin de almacenar su estructura de esquema relacional interna como esquemas XML (XSD) y para deducir la estructura de esquema de un documento XML.
 
 ## <a name="in-this-section"></a>En esta sección
 
-En [Opciones de procesamiento XML](../../../../docs/standard/data/xml/xml-processing-options.md) se describen las opciones para procesar datos XML.
+En [Opciones de procesamiento XML](xml-processing-options.md) se describen las opciones para procesar datos XML.
 
-En [Procesamiento de datos XML en memoria](../../../../docs/standard/data/xml/processing-xml-data-in-memory.md) se describen los tres modelos para procesar datos XML en memoria: [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) y [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md), la clase <xref:System.Xml.XmlDocument> (basada en Document Object Model del W3C) y la clase <xref:System.Xml.XPath.XPathDocument> (basada en el modelo de datos XPath).
+En [Procesamiento de datos XML en memoria](processing-xml-data-in-memory.md) se describen los tres modelos para procesar datos XML en memoria: [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) y [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md), la clase <xref:System.Xml.XmlDocument> (basada en Document Object Model del W3C) y la clase <xref:System.Xml.XPath.XPathDocument> (basada en el modelo de datos XPath).
 
-[Transformaciones XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)\
+[Transformaciones XSLT](xslt-transformations.md)\
 Describe cómo utilizar el procesador XSLT.
 
-[Modelo de objetos de esquema XML (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)\
+[Modelo de objetos de esquema XML (SOM)](xml-schema-object-model-som.md)\
 Describe las clases que se usan para crear y tratar esquemas XML (XSD) mediante una clase <xref:System.Xml.Schema.XmlSchema> que carga y modifica un esquema.
 
-[Integración de XML con datos relacionales y ADO.NET](../../../../docs/standard/data/xml/xml-integration-with-relational-data-and-adonet.md)\
+[Integración de XML con datos relacionales y ADO.NET](xml-integration-with-relational-data-and-adonet.md)\
 Describe cómo habilita .NET Framework el acceso sincrónico en tiempo real a las representaciones relacional y jerárquica de los datos mediante los objetos <xref:System.Data.DataSet> y <xref:System.Xml.XmlDataDocument>.
 
-[Administración de espacios de nombres en un documento XML](../../../../docs/standard/data/xml/managing-namespaces-in-an-xml-document.md)\
+[Administración de espacios de nombres en un documento XML](managing-namespaces-in-an-xml-document.md)\
 Describe cómo se usa la clase <xref:System.Xml.XmlNamespaceManager> para almacenar y mantener la información sobre espacios de nombres.
 
-[Compatibilidad de tipos en las clases System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)\
+[Compatibilidad de tipos en las clases System.Xml](type-support-in-the-system-xml-classes.md)\
 Describe cómo se asignan los tipos de datos XML a los tipos CLR, cómo se convierten los tipos de datos XML y otras características de compatibilidad de tipos de las clases <xref:System.Xml>.
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
-[ADO.NET](../../../../docs/framework/data/adonet/index.md)\
+[ADO.NET](../../../framework/data/adonet/index.md)\
 Proporciona información sobre cómo acceder a los datos mediante ADO.NET.
 
-[Seguridad](../../../../docs/standard/security/index.md)\
+[Seguridad](../../security/index.md)\
 Ofrece información general sobre todo el sistema de seguridad de .NET Framework.

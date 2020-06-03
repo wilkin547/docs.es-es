@@ -26,12 +26,12 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: 7f20e5108ad8bff602f5b761e65f093d987f2608
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d7f606126237d4d045f55dde03c125455c8a8634
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78156314"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84275963"
 ---
 # <a name="generics-in-net"></a>Elementos genéricos en .NET
 
@@ -63,7 +63,7 @@ Los genéricos permiten personalizar un método, clase, estructura o interfaz co
   
 - El término general *tipo genérico* incluye tanto tipos construidos como definiciones de tipo genérico.  
   
-- La *covarianza* y *contravarianza* de parámetros de tipo genérico permite usar tipos genéricos construidos, cuyos argumentos de tipo están más derivados (covarianza) o menos derivados (contravarianza) que un tipo construido de destino. La covarianza y la contravarianza se denominan colectivamente *varianza*. Para obtener más información, vea [Covariance and Contravariance](../../../docs/standard/generics/covariance-and-contravariance.md) (Covarianza y contravarianza).  
+- La *covarianza* y *contravarianza* de parámetros de tipo genérico permite usar tipos genéricos construidos, cuyos argumentos de tipo están más derivados (covarianza) o menos derivados (contravarianza) que un tipo construido de destino. La covarianza y la contravarianza se denominan colectivamente *varianza*. Para obtener más información, vea [Covarianza y contravarianza](covariance-and-contravariance.md).  
   
 - Las*restricciones* son límites colocados en parámetros de tipo genérico. Por ejemplo, puede limitar un parámetro de tipo a tipos que implementan la interfaz genérica <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> para asegurarse de que se pueden ordenar las instancias del tipo. También puede restringir los parámetros de tipo a tipos que tienen una clase base concreta, un constructor sin parámetros o que son tipos de referencia o tipos de valor. Los usuarios del tipo genérico no pueden sustituir los argumentos de tipo que no cumplen con las restricciones.  
   
@@ -94,20 +94,20 @@ Los genéricos permiten personalizar un método, clase, estructura o interfaz co
   
 - Los delegados genéricos permiten devoluciones de llamada con seguridad de tipos sin necesidad de crear varias clases de delegado. Por ejemplo, el delegado genérico <xref:System.Predicate%601> le permite crear un método que implementa sus propios criterios de búsqueda para un tipo concreto y utilizar su método con métodos del tipo <xref:System.Array> , como <xref:System.Array.Find%2A>, <xref:System.Array.FindLast%2A>y <xref:System.Array.FindAll%2A>.  
   
-- Los genéricos optimizan el código generado dinámicamente. Cuando se utilizan genéricos con código generado dinámicamente, no es necesario generar el tipo. Esto aumenta el número de escenarios en los que puede utilizar métodos dinámicos ligeros en lugar de generar ensamblados completos. Para obtener más información, vea [Cómo: Definir y ejecutar métodos dinámicos](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md) y <xref:System.Reflection.Emit.DynamicMethod>.  
+- Los genéricos optimizan el código generado dinámicamente. Cuando se utilizan genéricos con código generado dinámicamente, no es necesario generar el tipo. Esto aumenta el número de escenarios en los que puede utilizar métodos dinámicos ligeros en lugar de generar ensamblados completos. Para obtener más información, vea [Cómo: Definir y ejecutar métodos dinámicos](../../framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md) y <xref:System.Reflection.Emit.DynamicMethod>.  
   
  Las siguientes son algunas limitaciones de los genéricos:  
   
 - Los tipos genéricos pueden derivarse de la mayoría de las clases base, como <xref:System.MarshalByRefObject> (y pueden utilizarse restricciones para exigir que los parámetros de tipo genérico se deriven de clases base como <xref:System.MarshalByRefObject>). Sin embargo, .NET Framework no admite los tipos genéricos enlazados a un contexto. Un tipo genérico puede derivarse de <xref:System.ContextBoundObject>, pero al intentar crear una instancia de dicho tipo, se genera una <xref:System.TypeLoadException>.  
   
-- Las enumeraciones no pueden tener parámetros de tipo genérico. Una enumeración solo puede ser genérica a propósito (por ejemplo, porque está anidada en un tipo genérico definido mediante Visual Basic, C# o C++). Para más información, vea "Enumeraciones" en [Common Type System](../../../docs/standard/base-types/common-type-system.md).  
+- Las enumeraciones no pueden tener parámetros de tipo genérico. Una enumeración solo puede ser genérica a propósito (por ejemplo, porque está anidada en un tipo genérico definido mediante Visual Basic, C# o C++). Para más información, vea "Enumeraciones" en [Common Type System](../base-types/common-type-system.md).  
   
 - Los métodos dinámicos ligeros no pueden ser genéricos.  
   
 - En Visual Basic, C# y C++, no se pueden crear instancias de un tipo anidado incluido en un tipo genérico, a menos que los tipos se hayan asignado a los parámetros de tipo de todos los tipos envolventes. Dicho de otro modo: en la reflexión, un tipo anidado definido mediante estos lenguajes incluye los parámetros de tipo de todos sus tipos envolventes. Esto permite que los parámetros de tipo de tipos envolventes se usen en las definiciones de miembro de un tipo anidado. Para obtener más información, vea “Tipos anidados” en <xref:System.Type.MakeGenericType%2A>.  
   
     > [!NOTE]
-    > Un tipo anidado definido mediante la emisión de código en un ensamblado dinámico o mediante el uso de [Ilasm.exe (Ensamblado de IL)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) no necesita incluir los parámetros de tipo de sus tipos envolventes. Sin embargo, si no los incluye, los parámetros de tipo no estarán en el ámbito de la clase anidada.  
+    > Un tipo anidado definido mediante la emisión de código en un ensamblado dinámico o mediante el uso de [Ilasm.exe (Ensamblado de IL)](../../framework/tools/ilasm-exe-il-assembler.md) no necesita incluir los parámetros de tipo de sus tipos envolventes. Sin embargo, si no los incluye, los parámetros de tipo no estarán en el ámbito de la clase anidada.  
   
      Para obtener más información, vea “Tipos anidados” en <xref:System.Type.MakeGenericType%2A>.  
 
@@ -131,15 +131,15 @@ Los genéricos permiten personalizar un método, clase, estructura o interfaz co
 
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Título|Description|  
+|Title|Descripción|  
 |-----------|-----------------|  
-|[Colecciones genéricas en .NET](../../../docs/standard/generics/collections.md)|Describe las clases de colección genérica y otros tipos genéricos en .NET.|  
-|[Delegados genéricos para manipular matrices y listas](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)|Describe los delegados genéricos para conversiones, predicados de búsqueda y acciones realizadas en los elementos de una matriz o colección.|  
-|[Interfaces genéricas](../../../docs/standard/generics/interfaces.md)|Describe las interfaces genéricas que proporcionan funcionalidad común entre las familias de tipos genéricos.|  
-|[Covarianza y contravarianza](../../../docs/standard/generics/covariance-and-contravariance.md)|Describe la covarianza y la contravarianza en los parámetros de tipo genérico.|  
-|[Tipos de colección utilizados normalmente](../../../docs/standard/collections/commonly-used-collection-types.md)|Proporciona información de resumen sobre las características y escenarios de uso de los tipos de colección en .NET, incluidos los tipos genéricos.|  
-|[Cuándo utilizar colecciones genéricas](../../../docs/standard/collections/when-to-use-generic-collections.md)|Describe las reglas generales para determinar cuándo utilizar los tipos de colección genéricos.|  
-|[Definición de un tipo genérico con emisión de reflexión](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Explica cómo generar ensamblados dinámicos que incluyan métodos y tipos genéricos.|  
+|[Colecciones genéricas en .NET](collections.md)|Describe las clases de colección genérica y otros tipos genéricos en .NET.|  
+|[Delegados genéricos para manipular matrices y listas](delegates-for-manipulating-arrays-and-lists.md)|Describe los delegados genéricos para conversiones, predicados de búsqueda y acciones realizadas en los elementos de una matriz o colección.|  
+|[Interfaces genéricas](interfaces.md)|Describe las interfaces genéricas que proporcionan funcionalidad común entre las familias de tipos genéricos.|  
+|[Covarianza y contravarianza](covariance-and-contravariance.md)|Describe la covarianza y la contravarianza en los parámetros de tipo genérico.|  
+|[Tipos de colección utilizados normalmente](../collections/commonly-used-collection-types.md)|Proporciona información de resumen sobre las características y escenarios de uso de los tipos de colección en .NET, incluidos los tipos genéricos.|  
+|[Cuándo utilizar colecciones genéricas](../collections/when-to-use-generic-collections.md)|Describe las reglas generales para determinar cuándo utilizar los tipos de colección genéricos.|  
+|[Cómo: Definir un tipo genérico con emisión de reflexión](../../framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Explica cómo generar ensamblados dinámicos que incluyan métodos y tipos genéricos.|  
 |[Tipos genéricos en Visual Basic](../../visual-basic/programming-guide/language-features/data-types/generic-types.md)|Describe los genéricos a los usuarios de Visual Basic e incluye temas sobre el uso y la definición de tipos genéricos.|  
 |[Introducción a los genéricos](../../csharp/programming-guide/generics/index.md)|Proporciona información general sobre la definición y uso de tipos genéricos para usuarios de C#.|  
 |[Información general sobre genéricos en Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp)|Describe los genéricos a los usuarios de C++ e incluye las diferencias entre genéricos y plantillas.|  
