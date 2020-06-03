@@ -13,12 +13,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 87030bf9770c464709559b2fb8f4c0004009e48d
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 364a1a8c0fbaae93a02495aaf2e8c519ffb46451
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379912"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290946"
 ---
 # <a name="assemblies-in-net"></a>Ensamblados de .NET
 
@@ -102,8 +102,8 @@ En C#, puede usar dos versiones del mismo ensamblado en una misma aplicación. P
 |[Control de versiones de los ensamblados](versioning.md)|Información general sobre la directiva de control de versiones de .NET Framework.|
 |[Colocación de ensamblados](../../framework/app-domains/assembly-placement.md)|Dónde ubicar los ensamblados.|
 |[Ensamblados y ejecución en paralelo](side-by-side-execution.md)|Uso de varias versiones del runtime o de un ensamblado simultáneamente.|
-|[Emitir métodos y ensamblados dinámicos](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Cómo crear ensamblados dinámicos.|
-|[Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|Cómo resuelve .NET Framework las referencias de ensamblado en tiempo de ejecución.|
+|[Emitir métodos y ensamblados dinámicos](../../framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Cómo crear ensamblados dinámicos.|
+|[Cómo el motor en tiempo de ejecución ubica ensamblados](../../framework/deployment/how-the-runtime-locates-assemblies.md)|Cómo resuelve .NET Framework las referencias de ensamblado en tiempo de ejecución.|
 
 ## <a name="reference"></a>Referencia
 

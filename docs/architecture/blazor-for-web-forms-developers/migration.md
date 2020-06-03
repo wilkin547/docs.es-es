@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo enfocar la migración de una aplic
 author: twsouthwick
 ms.author: tasou
 ms.date: 09/19/2019
-ms.openlocfilehash: b614572bd04d9ec694b0feb95173373591d5e117
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: c70e4a4f57ddac97db4d58d9f876f7edc6aa6ce9
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144414"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306986"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-blazor"></a>Migración de formularios Web Forms de ASP.NET a increíbles
 
@@ -38,7 +38,7 @@ Tal y como se describe en el capítulo [modelos de hospedaje](hosting-models.md)
 
 En el momento de escribir este documento, el modelo del lado servidor se parece más al de los formularios Web Forms. La mayor parte de este capítulo se centra en el modelo de hospedaje del lado servidor, ya que está listo para la producción.
 
-## <a name="create-a-new-project"></a>Creación de un nuevo proyecto
+## <a name="create-a-new-project"></a>Crear un proyecto nuevo
 
 Este paso de migración inicial consiste en crear un nuevo proyecto. Este tipo de proyecto se basa en los proyectos de estilo SDK de .NET Core y simplifica gran parte del texto reutilizable que se usó en los formatos de proyecto anteriores. Para obtener más información, consulte el capítulo sobre la [estructura del proyecto](project-structure.md).
 

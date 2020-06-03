@@ -3,13 +3,13 @@ title: Diseño de aplicaciones web modernas con ASP.NET Core y Azure
 description: Es una guía en la que se proporcionan instrucciones de un extremo a otro sobre cómo compilar aplicaciones web monolíticas con ASP.NET Core y Azure.
 author: ardalis
 ms.author: wiwagn
-ms.date: 12/4/2019
-ms.openlocfilehash: 8eebe9a8e530b244f4596adef1b5e6dd23e305bd
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.date: 5/25/2020
+ms.openlocfilehash: 7be03ea8edb763096b0684a62e71826f1cfcd42f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144544"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284460"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>Diseño de aplicaciones web modernas con ASP.NET Core y Azure
 
@@ -86,6 +86,10 @@ Cada vez más organizaciones deciden hospedar sus aplicaciones web en la nube co
 - Capacidad flexible; escalado o reducción vertical en función de las necesidades reales.
 
 La compilación de aplicaciones web con ASP.NET Core, hospedadas en Azure, ofrece muchas ventajas competitivas con respecto a las alternativas tradicionales. Se ha optimizado ASP.NET Core para escenarios de hospedaje en la nube y prácticas de desarrollo de aplicaciones web modernas. En esta guía se ofrece información sobre cómo diseñar aplicaciones con ASP.NET Core para sacar el máximo provecho de estas funcionalidades.
+
+## <a name="version"></a>Versión
+
+Esta guía se ha revisado para abarcar la versión **.NET Core 3.1** junto con muchas actualizaciones adicionales relacionadas con la misma "ola" de tecnologías (es decir, Azure y otras tecnologías de terceros) que coincidan en el tiempo con la versión de .NET Core 3.1. Este es el motivo por el que la versión del libro se ha actualizado también a la versión **3.1**.
 
 ## <a name="purpose"></a>Propósito
 
