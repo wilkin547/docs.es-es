@@ -16,12 +16,12 @@ helpviewer_keywords:
 - security [.NET Framework], assemblies
 - integrity with assemblies
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
-ms.openlocfilehash: 7f897241b121cf1bd52d02ee5f487aeafafc3cb0
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: d0b822f725444248d1037c21ffea9afe1cebb7e2
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378656"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290024"
 ---
 # <a name="assembly-security-considerations"></a>Consideraciones de seguridad sobre ensamblados
 Cuando se compila un ensamblado, se puede especificar el conjunto de permisos que son necesarios para la ejecución del mismo. La concesión de permisos específicos para un ensamblado se basa en la evidencia.  
@@ -39,7 +39,7 @@ Cuando se compila un ensamblado, se puede especificar el conjunto de permisos qu
 - No utilizar una solicitud de permiso para obtener los permisos que pueda necesitar su código, pero estar preparado para controlar las excepciones de seguridad que se pueden producir si no se conceden los permisos.  
   
   > [!NOTE]
-  > La seguridad es una cuestión compleja, con muchas opciones posibles entre las que elegir. Para más información, consulte [Conceptos clave de seguridad](../../standard/security/key-security-concepts.md).  
+  > La seguridad es una cuestión compleja, con muchas opciones posibles entre las que elegir. Para más información, consulte [Conceptos clave de seguridad](../security/key-security-concepts.md).  
   
  En el momento de la carga, se utiliza la evidencia del ensamblado como entrada para la directiva de seguridad. El administrador del equipo y la empresa y la configuración de directivas de usuario establecen la directiva de seguridad, que determina el conjunto de permisos que se concede a todo el código administrado cuando se ejecuta. La directiva de seguridad se puede establecer para la compañía del ensamblado (si tiene una firma generada utilizando la herramienta de firma), para el sitio y la zona Web (en términos de Internet Explorer) de los que se descargó el ensamblado o para el nombre seguro del ensamblado. Por ejemplo, el administrador de un equipo puede establecer una directiva de seguridad que permita que todo el código descargado desde un sitio Web y firmado por una compañía de software dada pueda tener acceso a una base de datos del equipo, pero no le otorga permiso para escribir en el disco del equipo.  
   

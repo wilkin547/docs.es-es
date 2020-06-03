@@ -53,7 +53,7 @@ Si quita el modificador `new`, el programa seguirá compilándose y ejecutándos
 The keyword new is required on 'MyDerivedC.x' because it hides inherited member 'MyBaseC.x'.
 ```
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 Para obtener más información, vea la sección [El modificador new](~/_csharplang/spec/classes.md#the-new-modifier) de la [Especificación del lenguaje C#](~/_csharplang/spec/introduction.md).
 

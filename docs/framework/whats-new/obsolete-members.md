@@ -23,7 +23,7 @@ En este artículo no se muestran los miembros de los tipos obsoletos. Para obten
 ## <a name="mscorlibdll"></a>mscorlib.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Tipo|Member|Mensaje|
+> |Tipo|Miembro|Mensaje|
 > |----------|------------|-------------|
 > |<xref:Microsoft.Win32.Registry?displayProperty=nameWithType>|<xref:Microsoft.Win32.Registry.DynData>|La clave del Registro <xref:Microsoft.Win32.Registry.DynData> solo funciona en Win9x, que ya no es admitido por CLR. En sistemas operativos basados en NT, use la clave del Registro <xref:Microsoft.Win32.Registry.PerformanceData?displayProperty=nameWithType> o el proxy del Registro <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.PerformanceData%2A?displayProperty=nameWithType> en su lugar.|
 > |<xref:System.Activator?displayProperty=nameWithType>|<xref:System.Activator.CreateInstance%28System.AppDomain%2CSystem.String%2CSystem.String%2CSystem.Boolean%2CSystem.Reflection.BindingFlags%2CSystem.Reflection.Binder%2CSystem.Object%5B%5D%2CSystem.Globalization.CultureInfo%2CSystem.Object%5B%5D%2CSystem.Security.Policy.Evidence%29>|Los métodos que usan la evidencia para el espacio aislado están obsoletos y se eliminarán en futuras versiones de .NET Framework. Use una sobrecarga de <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> que no adopte un parámetro <xref:System.Security.Policy.Evidence?displayProperty=nameWithType>.|
@@ -108,12 +108,12 @@ En este artículo no se muestran los miembros de los tipos obsoletos. Para obten
 > |<xref:System.Reflection.AssemblyFlagsAttribute?displayProperty=nameWithType>|<xref:System.Reflection.AssemblyFlagsAttribute.%23ctor%28System.UInt32%29>|Este constructor está en desuso. Utilice <xref:System.Reflection.AssemblyFlagsAttribute.%23ctor%28System.Reflection.AssemblyNameFlags%29> en su lugar.|
 > |<xref:System.Reflection.AssemblyFlagsAttribute?displayProperty=nameWithType>|<xref:System.Reflection.AssemblyFlagsAttribute.Flags%2A>|Esta propiedad está en desuso. Utilice <xref:System.Reflection.AssemblyFlagsAttribute.AssemblyFlags%2A?displayProperty=nameWithType> en su lugar.|
 > |<xref:System.Reflection.Emit.ConstructorBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.ConstructorBuilder.ReturnType%2A>|Esta propiedad está en desuso.|
-> |<xref:System.Reflection.Emit.FieldBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.FieldBuilder.SetMarshal%2A>|Hay una API alternativa disponible: emita el atributo personalizado <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> en su lugar.|
+> |<xref:System.Reflection.Emit.FieldBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.FieldBuilder.SetMarshal%2A>|Hay una API alternativa disponible: Emita el atributo personalizado <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> en su lugar.|
 > |<xref:System.Reflection.Emit.FlowControl?displayProperty=nameWithType>|<xref:System.Reflection.Emit.FlowControl.Phi>|Esta API está en desuso.|
-> |<xref:System.Reflection.Emit.MethodBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.MethodBuilder.SetMarshal%2A>|Hay una API alternativa disponible: emita el atributo personalizado <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> en su lugar.|
+> |<xref:System.Reflection.Emit.MethodBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.MethodBuilder.SetMarshal%2A>|Hay una API alternativa disponible: Emita el atributo personalizado <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> en su lugar.|
 > |<xref:System.Reflection.Emit.OpCodeType?displayProperty=nameWithType>|<xref:System.Reflection.Emit.OpCodeType.Annotation>|Esta API está en desuso.|
 > |<xref:System.Reflection.Emit.OperandType?displayProperty=nameWithType>|<xref:System.Reflection.Emit.OperandType.InlinePhi>|Esta API está en desuso.|
-> |<xref:System.Reflection.Emit.ParameterBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.ParameterBuilder.SetMarshal%2A>|Hay una API alternativa disponible: emita el atributo personalizado <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> en su lugar.|
+> |<xref:System.Reflection.Emit.ParameterBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.ParameterBuilder.SetMarshal%2A>|Hay una API alternativa disponible: Emita el atributo personalizado <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> en su lugar.|
 > |<xref:System.Resources.ResourceManager?displayProperty=nameWithType>|<xref:System.Resources.ResourceManager.ResourceSets>|En su lugar, llame a <xref:System.Resources.ResourceManager.InternalGetResourceSet%28System.Globalization.CultureInfo%2CSystem.Boolean%2CSystem.Boolean%29?displayProperty=nameWithType>.|
 > |<xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.Marshal.GetManagedThunkForUnmanagedMethodPtr%2A>|El método <xref:System.Runtime.InteropServices.Marshal.GetManagedThunkForUnmanagedMethodPtr%2A> está en desuso y se quitará en futuras versiones.|
 > |<xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.Marshal.GetThreadFromFiberCookie%2A>|El método <xref:System.Runtime.InteropServices.Marshal.GetThreadFromFiberCookie%2A> está desusado. Utilice la API de hospedaje para realizar esta operación.|
@@ -189,7 +189,7 @@ En este artículo no se muestran los miembros de los tipos obsoletos. Para obten
 ## <a name="presentationcoredll"></a>PresentationCore.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Tipo|Member|Mensaje|
+> |Tipo|Miembro|Mensaje|
 > |----------|------------|-------------|
 > |<xref:System.Windows.UIElement?displayProperty=nameWithType>|<xref:System.Windows.UIElement.BitmapEffect%2A>|Los efectos de imagen están en desuso y ya no funcionan. En su lugar, considere la posibilidad de utilizar <xref:System.Windows.Media.Effects.Effect?displayProperty=nameWithType> donde sea necesario.|
 > |<xref:System.Windows.UIElement?displayProperty=nameWithType>|<xref:System.Windows.UIElement.BitmapEffectInput%2A>|Los efectos de imagen están en desuso y ya no funcionan. En su lugar, considere la posibilidad de utilizar <xref:System.Windows.Media.Effects.Effect?displayProperty=nameWithType> donde sea necesario.|
@@ -229,7 +229,7 @@ En este artículo no se muestran los miembros de los tipos obsoletos. Para obten
 ## <a name="presentationframeworkdll"></a>PresentationFramework.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Tipo|Member|Mensaje|
+> |Tipo|Miembro|Mensaje|
 > |----------|------------|-------------|
 > |<xref:System.Windows.Data.BindingListCollectionView?displayProperty=nameWithType>|<xref:System.Windows.Data.CollectionView.OnBeginChangeLogging%2A>|Reemplazado por <xref:System.Windows.Data.CollectionView.OnAllowsCrossThreadChangesChanged%2A?displayProperty=nameWithType>.|
 > |<xref:System.Windows.Data.CollectionView?displayProperty=nameWithType>|<xref:System.Windows.Data.CollectionView.ClearChangeLog%2A>|Reemplazado por <xref:System.Windows.Data.CollectionView.ClearPendingChanges%2A?displayProperty=nameWithType>.|
@@ -239,7 +239,7 @@ En este artículo no se muestran los miembros de los tipos obsoletos. Para obten
 ## <a name="systemactivitiesdll"></a>System.Activities.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Tipo|Member|Mensaje|
+> |Tipo|Miembro|Mensaje|
 > |----------|------------|-------------|
 > |<xref:System.Activities.Debugger.XamlDebuggerXmlReader?displayProperty=nameWithType>|<xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.Xaml.XamlReader%2CSystem.Xaml.IXamlLineInfo%2CSystem.IO.TextReader%29>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> No use este constructor. Use <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%29> o <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%2CSystem.Xaml.XamlSchemaContext%29> en su lugar.|
 > |<xref:System.Activities.Debugger.XamlDebuggerXmlReader?displayProperty=nameWithType>|<xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.Xaml.XamlReader%2CSystem.IO.TextReader%29>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> No use este constructor. Use <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%29> o <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%2CSystem.Xaml.XamlSchemaContext%29> en su lugar.|
@@ -247,7 +247,7 @@ En este artículo no se muestran los miembros de los tipos obsoletos. Para obten
 ## <a name="systemactivitiespresentationdll"></a>System.Activities.Presentation.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Tipo|Member|Mensaje|
+> |Tipo|Miembro|Mensaje|
 > |----------|------------|-------------|
 > |<xref:System.Activities.Presentation.DragDropHelper?displayProperty=nameWithType>|<xref:System.Activities.Presentation.DragDropHelper.DoDragMove%28System.Activities.Presentation.WorkflowViewElement%2CSystem.Windows.Point%29>|Este método no admite arrastrar varios elementos.|
 > |<xref:System.Activities.Presentation.DragDropHelper?displayProperty=nameWithType>|<xref:System.Activities.Presentation.DragDropHelper.GetCompositeView%28System.Windows.DragEventArgs%29>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Este método no admite arrastrar varios elementos. Utilice <xref:System.Activities.Presentation.DragDropHelper.GetCompositeView%28System.Activities.Presentation.WorkflowViewElement%29> en su lugar.|
@@ -262,7 +262,7 @@ En este artículo no se muestran los miembros de los tipos obsoletos. Para obten
 ## <a name="systemcoredll"></a>System.Core.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Tipo|Member|Mensaje|
+> |Tipo|Miembro|Mensaje|
 > |----------|------------|-------------|
 > |<xref:System.Diagnostics.Eventing.Reader.StandardEventKeywords?displayProperty=nameWithType>|<xref:System.Diagnostics.Eventing.Reader.StandardEventKeywords.CorrelationHint>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Valor incorrecto; use <xref:System.Diagnostics.Eventing.Reader.StandardEventKeywords.CorrelationHint2> en su lugar.|
 > |<xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>|<xref:System.Linq.ParallelEnumerable.Concat%60%601%28System.Linq.ParallelQuery%7B%60%600%7D%2CSystem.Collections.Generic.IEnumerable%7B%60%600%7D%29>|El segundo origen de datos de un operador binario debe ser de tipo <xref:System.Linq.ParallelQuery%601?displayProperty=nameWithType>, en lugar de <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. Para corregir este problema, use el método de extensión <xref:System.Linq.ParallelEnumerable.AsParallel%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> para convertir el origen de datos adecuado en <xref:System.Linq.ParallelQuery%601?displayProperty=nameWithType>.|
@@ -305,7 +305,7 @@ En este artículo no se muestran los miembros de los tipos obsoletos. Para obten
 ## <a name="systemdatadll"></a>System.Data.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Tipo|Member|Mensaje|
+> |Tipo|Miembro|Mensaje|
 > |----------|------------|-------------|
 > |<xref:System.Data.DataSysDescriptionAttribute?displayProperty=nameWithType>|<xref:System.Data.DataSysDescriptionAttribute.%23ctor%2A>|<xref:System.Data.DataSysDescriptionAttribute> está desusado.|
 > |<xref:System.Data.Common.DataAdapter?displayProperty=nameWithType>|<xref:System.Data.Common.DataAdapter.CloneInternals%2A>|<xref:System.Data.Common.DataAdapter.CloneInternals%2A> está desusado. Utilice el constructor <xref:System.Data.Common.DataAdapter.%23ctor%28System.Data.Common.DataAdapter%29>.|
@@ -327,7 +327,7 @@ En este artículo no se muestran los miembros de los tipos obsoletos. Para obten
 ## <a name="systemdataentitydll"></a>System.Data.Entity.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Tipo|Member|Mensaje|
+> |Tipo|Miembro|Mensaje|
 > |----------|------------|-------------|
 > |<xref:System.Data.Metadata.Edm.AssociationSetEnd?displayProperty=nameWithType>|<xref:System.Data.Metadata.Edm.AssociationSetEnd.Role%2A>|Esta propiedad se ha desechado, utilice la propiedad <xref:System.Data.Metadata.Edm.AssociationSetEnd.Name%2A?displayProperty=nameWithType> en su lugar.|
 > |<xref:System.Data.Metadata.Edm.MetadataWorkspace?displayProperty=nameWithType>|<xref:System.Data.Metadata.Edm.MetadataWorkspace.GetRequiredOriginalValueMembers%2A>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Utilice <xref:System.Data.Metadata.Edm.MetadataWorkspace.GetRelevantMembersForUpdate%2A?displayProperty=nameWithType> en su lugar.|
@@ -337,7 +337,7 @@ En este artículo no se muestran los miembros de los tipos obsoletos. Para obten
 ## <a name="systemdataoracleclientdll"></a>System.Data.OracleClient.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Tipo|Member|Mensaje|
+> |Tipo|Miembro|Mensaje|
 > |----------|------------|-------------|
 > |<xref:System.Data.OracleClient.OracleParameter?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleParameter.Precision%2A>|<xref:System.Data.OracleClient.OracleParameter.Precision%2A> está desusado. Utilice las clases <xref:System.Math?displayProperty=nameWithType> para establecer explícitamente la precisión de un decimal.|
 > |<xref:System.Data.OracleClient.OracleParameter?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleParameter.Scale%2A>|<xref:System.Data.OracleClient.OracleParameter.Scale%2A> está desusado. Utilice las clases <xref:System.Math?displayProperty=nameWithType> para establecer explícitamente la escala de un decimal.|
@@ -346,13 +346,13 @@ En este artículo no se muestran los miembros de los tipos obsoletos. Para obten
 ## <a name="systemdesigndll"></a>System.Design.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Tipo|Member|Mensaje|
+> |Tipo|Miembro|Mensaje|
 > |----------|------------|-------------|
 > |<xref:System.ComponentModel.Design.ComponentDesigner?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.ComponentDesigner.InitializeNonDefault%2A>|Este método está en desuso. Utilice <xref:System.ComponentModel.Design.ComponentDesigner.InitializeExistingComponent%2A?displayProperty=nameWithType> en su lugar.|
 > |<xref:System.ComponentModel.Design.ComponentDesigner?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.ComponentDesigner.OnSetComponentDefaults%2A>|Este método está en desuso. Utilice <xref:System.ComponentModel.Design.ComponentDesigner.InitializeNewComponent%2A?displayProperty=nameWithType> en su lugar.|
 > |<xref:System.ComponentModel.Design.DesignSurface?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.DesignSurface.CreateComponent%2A>|El método <xref:System.ComponentModel.Design.DesignSurface.CreateComponent%2A> se ha reemplazado por <xref:System.ComponentModel.Design.DesignSurface.CreateInstance%28System.Type%29>.|
 > |<xref:System.ComponentModel.Design.Serialization.CodeDomSerializer?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.Serialization.CodeDomSerializer.SerializeToReferenceExpression%2A>|Este método está en desuso. Use <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeToExpression%2A> o <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.GetExpression%2A> en su lugar.|
-> |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.DesignTimeElementView%2A>|El uso de esta propiedad genera un error del compilador.<br /><br /> Error: ya no se puede hacer referencia a esta propiedad y se incluye para admitir aplicaciones compiladas existentes. La arquitectura de la vista del elemento diseño\-tiempo ya no se usa.|
+> |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.DesignTimeElementView%2A>|El uso de esta propiedad genera un error del compilador.<br /><br /> Error: ya no se puede hacer referencia a esta propiedad, y se incluye para admitir las aplicaciones compiladas existentes. La arquitectura de la vista del elemento diseño\-tiempo ya no se usa.|
 > |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.DesignTimeHtmlRequiresLoadComplete%2A>|La alternativa recomendada es usar [`ControlDesigner.SetViewFlags(ViewFlags.DesignTimeHtmlRequiresLoadComplete, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A).|
 > |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.GetPersistInnerHtml%2A>|La alternativa recomendada es <xref:System.Web.UI.Design.ControlDesigner.GetPersistenceContent%2A?displayProperty=nameWithType>.|
 > |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.IsDirty%2A>|La alternativa recomendada es usar [`ControlDesigner.Tag.SetDirty`](xref:System.Web.UI.Design.IControlDesignerTag.SetDirty%2A) y [`ControlDesigner.Tag.IsDirty`](xref:System.Web.UI.Design.IControlDesignerTag.IsDirty%2A).|
@@ -362,7 +362,7 @@ En este artículo no se muestran los miembros de los tipos obsoletos. Para obten
 > |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.RaiseResizeEvent%2A>|No se recomienda el uso de este método porque el cambio de tamaño lo controla el método <xref:System.Web.UI.Design.ControlDesigner.OnComponentChanged%2A?displayProperty=nameWithType>.|
 > |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.ReadOnly%2A>|La alternativa recomendada es heredar de <xref:System.Web.UI.Design.ContainerControlDesigner?displayProperty=nameWithType> en su lugar, y utilizar <xref:System.Web.UI.Design.EditableDesignerRegion?displayProperty=nameWithType>. Las regiones permiten un control mejor del contenido en el diseñador.|
 > |<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.HtmlControlDesigner.Behavior%2A>|La alternativa recomendada es <xref:System.Web.UI.Design.ControlDesigner.Tag%2A?displayProperty=nameWithType>.|
-> |<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.HtmlControlDesigner.DesignTimeElement%2A>|El uso de esta propiedad genera un error del compilador.<br /><br /> Error: ya no se puede hacer referencia a esta propiedad y se incluye para admitir aplicaciones compiladas existentes. Es posible que el elemento tiempo\-diseño no proporcione siempre acceso al elemento del marcado. Existen otros métodos en <xref:System.Web.UI.Design.WebFormsRootDesigner?displayProperty=nameWithType> para procesar el script y los controles del cliente.|
+> |<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.HtmlControlDesigner.DesignTimeElement%2A>|El uso de esta propiedad genera un error del compilador.<br /><br /> Error: ya no se puede hacer referencia a esta propiedad, y se incluye para admitir las aplicaciones compiladas existentes. Es posible que el elemento tiempo\-diseño no proporcione siempre acceso al elemento del marcado. Existen otros métodos en <xref:System.Web.UI.Design.WebFormsRootDesigner?displayProperty=nameWithType> para procesar el script y los controles del cliente.|
 > |<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.HtmlControlDesigner.OnBehaviorAttached%2A>|La alternativa recomendada es <xref:System.Web.UI.Design.ControlDesigner.Tag%2A?displayProperty=nameWithType>.|
 > |<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.HtmlControlDesigner.OnBehaviorDetaching%2A>|La alternativa recomendada es <xref:System.Web.UI.Design.ControlDesigner.Tag%2A?displayProperty=nameWithType>.|
 > |<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.HtmlControlDesigner.OnBindingsCollectionChanged%2A>|La alternativa recomendada es controlar el evento [HtmlControlDesigner.DataBindings.Changed](xref:System.Web.UI.DataBindingCollection.Changed). La colección <xref:System.Web.UI.DataBindingCollection> devuelta por la propiedad <xref:System.Web.UI.Design.HtmlControlDesigner.DataBindings%2A?displayProperty=nameWithType> permite ejercer un mayor control sobre los enlaces de datos asociados al control.|
@@ -399,7 +399,7 @@ En este artículo no se muestran los miembros de los tipos obsoletos. Para obten
 ## <a name="systemdll"></a>System.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Tipo|Member|Mensaje|
+> |Tipo|Miembro|Mensaje|
 > |----------|------------|-------------|
 > |<xref:Microsoft.CSharp.CSharpCodeProvider?displayProperty=nameWithType>|<xref:Microsoft.CSharp.CSharpCodeProvider.CreateCompiler%2A>|Los llamadores no deben usar la interfaz <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=nameWithType>, sino que deben usar directamente los métodos de la clase <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> en su lugar.|
 > |<xref:Microsoft.CSharp.CSharpCodeProvider?displayProperty=nameWithType>|<xref:Microsoft.CSharp.CSharpCodeProvider.CreateGenerator%2A>|Los llamadores no deben usar la interfaz <xref:System.CodeDom.Compiler.ICodeGenerator?displayProperty=nameWithType>, sino que deben usar directamente los métodos de la clase <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> en su lugar.|
@@ -459,9 +459,9 @@ En este artículo no se muestran los miembros de los tipos obsoletos. Para obten
 > |<xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType>|<xref:System.Diagnostics.PerformanceCounter.DefaultFileMappingSize>|Este campo está en desuso y no se utiliza. Utilice machine.config o un archivo de configuración de la aplicación para establecer el tamaño de la asignación del archivo <xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType>.|
 > |<xref:System.Diagnostics.PerformanceCounterCategory?displayProperty=nameWithType>|<xref:System.Diagnostics.PerformanceCounterCategory.Create%28System.String%2CSystem.String%2CSystem.Diagnostics.CounterCreationDataCollection%29>|Este método está en desuso. Utilice <xref:System.Diagnostics.PerformanceCounterCategory.Create%28System.String%2CSystem.String%2CSystem.Diagnostics.PerformanceCounterCategoryType%2CSystem.Diagnostics.CounterCreationDataCollection%29> en su lugar.|
 > |<xref:System.Diagnostics.PerformanceCounterCategory?displayProperty=nameWithType>|<xref:System.Diagnostics.PerformanceCounterCategory.Create%28System.String%2CSystem.String%2CSystem.String%2CSystem.String%29>|Este método está en desuso. Utilice <xref:System.Diagnostics.PerformanceCounterCategory.Create%28System.String%2CSystem.String%2CSystem.Diagnostics.PerformanceCounterCategoryType%2CSystem.String%2CSystem.String%29> en su lugar.|
-> |<xref:System.Diagnostics.PerformanceCounterManager?displayProperty=nameWithType>|<xref:System.Diagnostics.PerformanceCounterManager.System%23Diagnostics%23ICollectData%23CloseData%2A>|Esta clase está desusada. Utilice los contadores de rendimiento a través de la clase <xref:System.Diagnostics.PerformanceCounter> en su lugar.|
-> |<xref:System.Diagnostics.PerformanceCounterManager?displayProperty=nameWithType>|<xref:System.Diagnostics.PerformanceCounterManager.System%23Diagnostics%23ICollectData%23CollectData%2A>|Esta clase está desusada. Utilice los contadores de rendimiento a través de la clase <xref:System.Diagnostics.PerformanceCounter> en su lugar.|
-> |<xref:System.Diagnostics.PerformanceCounterManager?displayProperty=nameWithType>|<xref:System.Diagnostics.PerformanceCounterManager.%23ctor%2A>|Esta clase está desusada. Utilice los contadores de rendimiento a través de la clase <xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType> en su lugar.|
+> |<xref:System.Diagnostics.PerformanceCounterManager?displayProperty=nameWithType>|<xref:System.Diagnostics.PerformanceCounterManager.System%23Diagnostics%23ICollectData%23CloseData%2A>|Esta clase está en desuso. Utilice los contadores de rendimiento a través de la clase <xref:System.Diagnostics.PerformanceCounter> en su lugar.|
+> |<xref:System.Diagnostics.PerformanceCounterManager?displayProperty=nameWithType>|<xref:System.Diagnostics.PerformanceCounterManager.System%23Diagnostics%23ICollectData%23CollectData%2A>|Esta clase está en desuso. Utilice los contadores de rendimiento a través de la clase <xref:System.Diagnostics.PerformanceCounter> en su lugar.|
+> |<xref:System.Diagnostics.PerformanceCounterManager?displayProperty=nameWithType>|<xref:System.Diagnostics.PerformanceCounterManager.%23ctor%2A>|Esta clase está en desuso. Utilice los contadores de rendimiento a través de la clase <xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType> en su lugar.|
 > |<xref:System.Diagnostics.PerformanceCounterPermissionAccess?displayProperty=nameWithType>|<xref:System.Diagnostics.PerformanceCounterPermissionAccess.Browse>|Este miembro está en desuso. Utilice <xref:System.Diagnostics.PerformanceCounterPermissionAccess.Read?displayProperty=nameWithType> en su lugar.|
 > |<xref:System.Diagnostics.PerformanceCounterPermissionAccess?displayProperty=nameWithType>|<xref:System.Diagnostics.PerformanceCounterPermissionAccess.Instrument>|Este miembro está en desuso. Utilice <xref:System.Diagnostics.PerformanceCounterPermissionAccess.Write?displayProperty=nameWithType> en su lugar.|
 > |<xref:System.Diagnostics.Process?displayProperty=nameWithType>|<xref:System.Diagnostics.Process.NonpagedSystemMemorySize%2A>|Esta propiedad está en desuso. Utilice <xref:System.Diagnostics.Process.NonpagedSystemMemorySize64%2A?displayProperty=nameWithType> en su lugar.|
@@ -511,7 +511,7 @@ En este artículo no se muestran los miembros de los tipos obsoletos. Para obten
 ## <a name="systemdrawingdll"></a>System.Drawing.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Tipo|Member|Mensaje|
+> |Tipo|Miembro|Mensaje|
 > |----------|------------|-------------|
 > |<xref:System.Drawing.FontFamily?displayProperty=nameWithType>|<xref:System.Drawing.FontFamily.GetFamilies%2A>|No use el método <xref:System.Drawing.FontFamily.GetFamilies%2A>; en su lugar, use la propiedad <xref:System.Drawing.FontFamily.Families%2A?displayProperty=nameWithType>.|
 > |<xref:System.Drawing.Imaging.EncoderParameter?displayProperty=nameWithType>|<xref:System.Drawing.Imaging.EncoderParameter.%23ctor%28System.Drawing.Imaging.Encoder%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%29>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Este constructor está en desuso. Use <xref:System.Drawing.Imaging.EncoderParameter.%23ctor%28System.Drawing.Imaging.Encoder%2CSystem.Int32%2CSystem.Drawing.Imaging.EncoderParameterValueType%2CSystem.IntPtr%29>.|
@@ -519,7 +519,7 @@ En este artículo no se muestran los miembros de los tipos obsoletos. Para obten
 ## <a name="systemmessagingdll"></a>System.Messaging.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Tipo|Member|Mensaje|
+> |Tipo|Miembro|Mensaje|
 > |----------|------------|-------------|
 > |<xref:System.Messaging.MessageQueue?displayProperty=nameWithType>|<xref:System.Messaging.MessageQueue.GetEnumerator%2A>|Este método devuelve un objeto <xref:System.Messaging.MessageEnumerator?displayProperty=nameWithType> que implementa la familia de métodos <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A?displayProperty=nameWithType> incorrectamente. Utilice <xref:System.Messaging.MessageQueue.GetMessageEnumerator2%2A?displayProperty=nameWithType> en su lugar.|
 > |<xref:System.Messaging.MessageQueue?displayProperty=nameWithType>|<xref:System.Messaging.MessageQueue.GetMessageEnumerator%2A>|Este método devuelve un objeto <xref:System.Messaging.MessageEnumerator?displayProperty=nameWithType> que implementa la familia de métodos <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A?displayProperty=nameWithType> incorrectamente. Utilice <xref:System.Messaging.MessageQueue.GetMessageEnumerator2%2A?displayProperty=nameWithType> en su lugar.|
@@ -527,7 +527,7 @@ En este artículo no se muestran los miembros de los tipos obsoletos. Para obten
 ## <a name="systemservicemodeldll"></a>System.ServiceModel.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Tipo|Member|Mensaje|
+> |Tipo|Miembro|Mensaje|
 > |----------|------------|-------------|
 > |<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>|<xref:System.ServiceModel.BasicHttpBinding.EnableHttpCookieContainer%2A>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Esta propiedad ha quedado obsoleta. Para habilitar el objeto <xref:System.Net.CookieContainer> de HTTP, use la propiedad <xref:System.ServiceModel.HttpBindingBase.AllowCookies%2A?displayProperty=nameWithType> en su lugar.|
 > |<xref:System.ServiceModel.Configuration.BindingsSection?displayProperty=nameWithType>|<xref:System.ServiceModel.Configuration.BindingsSection.NetPeerTcpBinding%2A>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> La característica de canal del mismo nivel está obsoleta y se quitará en el futuro.|
@@ -539,7 +539,7 @@ En este artículo no se muestran los miembros de los tipos obsoletos. Para obten
 ## <a name="systemservicemodeldiscoverydll"></a>System.ServiceModel.Discovery.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Tipo|Member|Mensaje|
+> |Tipo|Miembro|Mensaje|
 > |----------|------------|-------------|
 > |<xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint?displayProperty=nameWithType>|<xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint.TransportSettings%2A>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> La propiedad <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint.TransportSettings%2A> está obsoleta. Considere usar <xref:System.ServiceModel.Channels.UdpTransportBindingElement?displayProperty=nameWithType> para establecer las propiedades de transporte.|
 > |<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint?displayProperty=nameWithType>|<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.TransportSettings%2A>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> La propiedad <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.TransportSettings%2A> está obsoleta. Considere usar <xref:System.ServiceModel.Channels.UdpTransportBindingElement?displayProperty=nameWithType> para establecer las propiedades de transporte.|
@@ -547,14 +547,14 @@ En este artículo no se muestran los miembros de los tipos obsoletos. Para obten
 ## <a name="systemwebdatavisualizationdll"></a>System.Web.DataVisualization.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Tipo|Member|Mensaje|
+> |Tipo|Miembro|Mensaje|
 > |----------|------------|-------------|
 > |<xref:System.Web.UI.DataVisualization.Charting.Chart?displayProperty=nameWithType>|<xref:System.Web.UI.DataVisualization.Charting.Chart.ViewStateData%2A>|<xref:System.Web.UI.DataVisualization.Charting.Chart.ViewStateData%2A> está desusado. Investigue el uso de <xref:System.Web.UI.Control.ViewState%2A?displayProperty=nameWithType> en su lugar.|
 
 ## <a name="systemwebdll"></a>System.Web.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Tipo|Member|Mensaje|
+> |Tipo|Miembro|Mensaje|
 > |----------|------------|-------------|
 > |<xref:System.Web.HttpContext?displayProperty=nameWithType>|<xref:System.Web.HttpContext.GetAppConfig%2A>|La alternativa recomendada es <xref:System.Web.Configuration.WebConfigurationManager.GetWebApplicationSection%2A?displayProperty=nameWithType> de System.Web.dll.|
 > |<xref:System.Web.HttpContext?displayProperty=nameWithType>|<xref:System.Web.HttpContext.GetConfig%2A>|La alternativa recomendada es <xref:System.Web.HttpContext.GetSection%2A?displayProperty=nameWithType> de System.Web.dll.|
@@ -589,14 +589,14 @@ En este artículo no se muestran los miembros de los tipos obsoletos. Para obten
 ## <a name="systemwebdynamicdatadll"></a>System.Web.DynamicData.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Tipo|Member|Mensaje|
+> |Tipo|Miembro|Mensaje|
 > |----------|------------|-------------|
 > |<xref:System.Web.DynamicData.DynamicDataExtensions?displayProperty=nameWithType>|<xref:System.Web.DynamicData.DynamicDataExtensions.EnablePersistedSelection%2A>|Utilice la propiedad `EnablePersistedSelection` en un control de enlace de datos como <xref:System.Web.UI.WebControls.GridView?displayProperty=nameWithType> o <xref:System.Web.UI.WebControls.ListView?displayProperty=nameWithType>.|
 
 ## <a name="systemwebextensionsdll"></a>System.Web.Extensions.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Tipo|Member|Mensaje|
+> |Tipo|Miembro|Mensaje|
 > |----------|------------|-------------|
 > |<xref:System.Web.UI.CompositeScriptReference?displayProperty=nameWithType>|<xref:System.Web.UI.CompositeScriptReference.IsFromSystemWebExtensions%2A>|Use <xref:System.Web.UI.CompositeScriptReference.IsAjaxFrameworkScript%2A?displayProperty=nameWithType>.|
 > |<xref:System.Web.UI.ScriptManager?displayProperty=nameWithType>|<xref:System.Web.UI.ScriptManager.ScriptPath%2A>|Esta propiedad ha quedado obsoleta. Establezca la propiedad [`System.Web.UI.ScriptReference.Path`](xref:System.Web.UI.ScriptReferenceBase.Path%2A) en cada <xref:System.Web.UI.ScriptReference?displayProperty=nameWithType> individual en su lugar.|
@@ -610,7 +610,7 @@ En este artículo no se muestran los miembros de los tipos obsoletos. Para obten
 ## <a name="systemwebservicesdll"></a>System.Web.Services.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Tipo|Member|Mensaje|
+> |Tipo|Miembro|Mensaje|
 > |----------|------------|-------------|
 > |<xref:System.Web.Services.Discovery.DiscoveryClientProtocol?displayProperty=nameWithType>|<xref:System.Web.Services.Discovery.DiscoveryClientProtocol.LoadExternals%2A>|Este método se quitará de futuras versiones. La llamada al método ya no se requiere para la detección de recursos.|
 > |<xref:System.Web.Services.Protocols.SoapHeaderAttribute?displayProperty=nameWithType>|<xref:System.Web.Services.Protocols.SoapHeaderAttribute.Required%2A>|Esta propiedad se quitará de futuras versiones. Ya no se exige la presencia de un encabezado determinado en un mensaje SOAP.|
@@ -618,10 +618,10 @@ En este artículo no se muestran los miembros de los tipos obsoletos. Para obten
 ## <a name="systemwindowsformsdll"></a>System.Windows.Forms.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Tipo|Member|Mensaje|
+> |Tipo|Miembro|Mensaje|
 > |----------|------------|-------------|
-> |<xref:System.Windows.Forms.AccessibleStates?displayProperty=nameWithType>|<xref:System.Windows.Forms.AccessibleStates.Valid>|Este valor de enumeración está en desuso. No hay ninguna sustitución.|
-> |<xref:System.Windows.Forms.ComboBox?displayProperty=nameWithType>|<xref:System.Windows.Forms.ComboBox.AddItemsCore%2A>|Este método está en desuso. No hay ninguna sustitución.|
+> |<xref:System.Windows.Forms.AccessibleStates?displayProperty=nameWithType>|<xref:System.Windows.Forms.AccessibleStates.Valid>|Este valor de enumeración está en desuso. No hay ningún sustituto.|
+> |<xref:System.Windows.Forms.ComboBox?displayProperty=nameWithType>|<xref:System.Windows.Forms.ComboBox.AddItemsCore%2A>|Este método está en desuso. No hay ningún sustituto.|
 > |<xref:System.Windows.Forms.Control?displayProperty=nameWithType>|<xref:System.Windows.Forms.Control.RenderRightToLeft%2A>|Esta propiedad está en desuso. Utilice <xref:System.Windows.Forms.Control.RightToLeft%2A?displayProperty=nameWithType> en su lugar.|
 > |<xref:System.Windows.Forms.Control?displayProperty=nameWithType>|<xref:System.Windows.Forms.Control.Scale%28System.Single%29>|Este método está en desuso. Use el método <xref:System.Windows.Forms.Control.Scale%28System.Drawing.SizeF%29?displayProperty=nameWithType> en su lugar.|
 > |<xref:System.Windows.Forms.Control?displayProperty=nameWithType>|<xref:System.Windows.Forms.Control.Scale%28System.Single%2CSystem.Single%29>|Este método está en desuso. Use el método <xref:System.Windows.Forms.Control.Scale%28System.Drawing.SizeF%29?displayProperty=nameWithType> en su lugar.|
@@ -629,13 +629,13 @@ En este artículo no se muestran los miembros de los tipos obsoletos. Para obten
 > |<xref:System.Windows.Forms.Form?displayProperty=nameWithType>|<xref:System.Windows.Forms.Form.AutoScale%2A>|Esta propiedad está en desuso. Utilice la propiedad <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A?displayProperty=nameWithType> en su lugar.|
 > |<xref:System.Windows.Forms.Form?displayProperty=nameWithType>|<xref:System.Windows.Forms.Form.GetAutoScaleSize%2A>|Este método está en desuso. Utilice la propiedad <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A?displayProperty=nameWithType> en su lugar.|
 > |<xref:System.Windows.Forms.Label?displayProperty=nameWithType>|<xref:System.Windows.Forms.Label.RenderTransparent%2A>|Esta propiedad está en desuso. Utilice <xref:System.Windows.Forms.Control.BackColor%2A> en su lugar.|
-> |<xref:System.Windows.Forms.ListBox?displayProperty=nameWithType>|<xref:System.Windows.Forms.ListBox.AddItemsCore%2A>|Este método está en desuso. No hay ninguna sustitución.|
+> |<xref:System.Windows.Forms.ListBox?displayProperty=nameWithType>|<xref:System.Windows.Forms.ListBox.AddItemsCore%2A>|Este método está en desuso. No hay ningún sustituto.|
 > |<xref:System.Windows.Forms.PrintPreviewDialog?displayProperty=nameWithType>|<xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A>|Esta propiedad está en desuso. Utilice la propiedad <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A?displayProperty=nameWithType> en su lugar.|
 
 ## <a name="systemxamldll"></a>System.Xaml.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Tipo|Member|Mensaje|
+> |Tipo|Miembro|Mensaje|
 > |----------|------------|-------------|
 > |<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute?displayProperty=nameWithType>|<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.ExpressionType%2A>|Este tipo no lo utiliza el analizador de XAML. Vea <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=nameWithType>.|
 > |<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute?displayProperty=nameWithType>|<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.%23ctor%28System.Type%2CSystem.Type%29>|El argumento `expressionType` no lo utiliza el analizador de XAML. Para especificar el tipo de valor devuelto esperado, utilice <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.%23ctor%28System.Type%29>. Para especificar el control personalizado de tipos de expresión, utilice <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=nameWithType>.|
@@ -643,7 +643,7 @@ En este artículo no se muestran los miembros de los tipos obsoletos. Para obten
 ## <a name="systemxmldll"></a>System.Xml.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Tipo|Member|Mensaje|
+> |Tipo|Miembro|Mensaje|
 > |----------|------------|-------------|
 > |<xref:System.Xml.ValidationType?displayProperty=nameWithType>|<xref:System.Xml.ValidationType.Auto>|El tipo de validación se debe especificar como <xref:System.Xml.ValidationType.DTD?displayProperty=nameWithType> o <xref:System.Xml.ValidationType.Schema?displayProperty=nameWithType>.|
 > |<xref:System.Xml.ValidationType?displayProperty=nameWithType>|<xref:System.Xml.ValidationType.XDR>|La validación de XDR a través de <xref:System.Xml.XmlValidatingReader?displayProperty=nameWithType> está obsoleta.|
@@ -669,14 +669,14 @@ Se han quitado de .NET Framework los ensamblados IEHost.dll e IEExec.exe. Todos 
 ## <a name="isymwrapperdll"></a>ISymWrapper.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Tipo|Member|Mensaje|
+> |Tipo|Miembro|Mensaje|
 > |----------|------------|-------------|
 > |<xref:System.Diagnostics.SymbolStore.SymBinder?displayProperty=nameWithType>|<xref:System.Diagnostics.SymbolStore.SymBinder.GetReader%28System.Int32%2CSystem.String%2CSystem.String%29>|La alternativa recomendada es <xref:System.Diagnostics.SymbolStore.SymBinder.GetReader%28System.IntPtr%2CSystem.String%2CSystem.String%29?displayProperty=nameWithType>. <xref:System.Diagnostics.SymbolStore.ISymbolBinder1.GetReader%2A?displayProperty=nameWithType> toma el puntero de interfaz de importador como <xref:System.IntPtr?displayProperty=nameWithType> en lugar de <xref:System.Int32?displayProperty=nameWithType>, funcionando de ese modo en arquitecturas de 32 y 64 bits.|
 
 ## <a name="microsoftbuildconversionv40dll"></a>Microsoft.Build.Conversion.v4.0.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Tipo|Member|Mensaje|
+> |Tipo|Miembro|Mensaje|
 > |----------|------------|-------------|
 > |<xref:Microsoft.Build.Conversion.ProjectFileConverter?displayProperty=nameWithType>|<xref:Microsoft.Build.Conversion.ProjectFileConverter.Convert%28Microsoft.Build.BuildEngine.ProjectLoadSettings%29>|Utilice la sobrecarga de <xref:Microsoft.Build.Conversion.ProjectFileConverter.Convert> sin parámetros en su lugar.|
 > |<xref:Microsoft.Build.Conversion.ProjectFileConverter?displayProperty=nameWithType>|<xref:Microsoft.Build.Conversion.ProjectFileConverter.Convert%28System.String%29>|Utilice la sobrecarga de <xref:Microsoft.Build.Conversion.ProjectFileConverter.Convert> sin parámetros en su lugar.|
@@ -686,7 +686,7 @@ Se han quitado de .NET Framework los ensamblados IEHost.dll e IEExec.exe. Todos 
 ## <a name="microsoftbuildenginedll"></a>Microsoft.Build.Engine.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Tipo|Member|Mensaje|
+> |Tipo|Miembro|Mensaje|
 > |----------|------------|-------------|
 > |<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|<xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A>|Evite configurar <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A>. Si está pasando simplemente la ubicación de .NET Framework como <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A>, no es necesaria ninguna otra acción. De lo contrario, puede definir en su lugar conjuntos de herramientas en el archivo de configuración o de Registro, o agregando elementos al objeto <xref:Microsoft.Build.BuildEngine.ToolsetCollection?displayProperty=nameWithType> del motor, para utilizar un objeto <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A> personalizado.|
 > |<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|<xref:Microsoft.Build.BuildEngine.Engine.%23ctor%28System.String%29>|Si está pasando simplemente la ubicación de .NET Framework como <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A>, solo cambie al constructor <xref:Microsoft.Build.BuildEngine.Engine.%23ctor> sin parámetros. De lo contrario, puede definir conjuntos de herramientas personalizados en el archivo de configuración o de Registro, o agregando elementos al objeto <xref:Microsoft.Build.BuildEngine.ToolsetCollection?displayProperty=nameWithType> del motor. A continuación, utilice el constructor <xref:Microsoft.Build.BuildEngine.Engine.%23ctor> o <xref:Microsoft.Build.BuildEngine.Engine.%23ctor%28Microsoft.Build.BuildEngine.ToolsetDefinitionLocations%29> en su lugar.|
@@ -694,28 +694,28 @@ Se han quitado de .NET Framework los ensamblados IEHost.dll e IEExec.exe. Todos 
 ## <a name="microsoftbuildframeworkdll"></a>Microsoft.Build.Framework.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Tipo|Member|Mensaje|
+> |Tipo|Miembro|Mensaje|
 > |----------|------------|-------------|
 > |<xref:Microsoft.Build.Framework.XamlTypes.ContentType?displayProperty=nameWithType>|<xref:Microsoft.Build.Framework.XamlTypes.ContentType.ItemGroupName%2A>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> El uso de este miembro genera un error del compilador.<br /><br /> Utilice la propiedad <xref:Microsoft.Build.Framework.XamlTypes.ContentType.ItemType%2A?displayProperty=nameWithType> en su lugar.|
 
 ## <a name="microsoftbuildutilitiesv40dll"></a>Microsoft.Build.Utilities.v4.0.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Tipo|Member|Mensaje|
+> |Tipo|Miembro|Mensaje|
 > |----------|------------|-------------|
 > |<xref:Microsoft.Build.Utilities.ToolTask?displayProperty=nameWithType>|<xref:Microsoft.Build.Utilities.ToolTask.EnvironmentOverride%2A>|Utilice la propiedad <xref:Microsoft.Build.Utilities.ToolTask.EnvironmentVariables%2A?displayProperty=nameWithType>.|
 
 ## <a name="microsoftdataentitybuildtasksdll"></a>Microsoft.Data.Entity.Build.Tasks.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Tipo|Member|Mensaje|
+> |Tipo|Miembro|Mensaje|
 > |----------|------------|-------------|
 > |`Microsoft.Data.Entity.Build.Tasks.EntityDeploy`|`EntityDataModelEmbeddedResources`|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Solo se utiliza para la compatibilidad con versiones anteriores a la versión 3.5.|
 
 ## <a name="microsoftvisualbasicdll"></a>Microsoft.VisualBasic.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Tipo|Member|Mensaje|
+> |Tipo|Miembro|Mensaje|
 > |----------|------------|-------------|
 > |<xref:Microsoft.VisualBasic.FileSystem?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.FileSystem.FilePut%28System.Object%2CSystem.Object%2CSystem.Object%29>|Este miembro está en desuso. Utilice <xref:Microsoft.VisualBasic.FileSystem.FilePutObject%2A?displayProperty=nameWithType> para escribir tipos de <xref:System.Object>, o convierta `FileNumber` y `RecordNumber` a <xref:System.Int32> para escribir tipos que no sean de objeto.|
 > |<xref:Microsoft.VisualBasic.CompilerServices.Conversions?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.CompilerServices.Conversions.FallbackUserDefinedConversion%2A>|El uso de este miembro genera un error del compilador.<br /><br /> No use este método.|

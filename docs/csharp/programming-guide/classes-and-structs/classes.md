@@ -40,7 +40,7 @@ Cuando se crea el objeto, se asigna suficiente memoria en el montón administrad
  }
 ```
 
- La palabra clave `class` va precedida del nivel de acceso. Como en este caso se usa [public](../../language-reference/keywords/public.md), cualquier usuario puede crear instancias de esta clase. El nombre de la clase sigue a la palabra clave `class`. El nombre de la clase debe ser un [nombre de identificador](../inside-a-program/identifier-names.md) de C# válido. El resto de la definición es el cuerpo de la clase, donde se definen los datos y el comportamiento. Los campos, las propiedades, los métodos y los eventos de una clase se denominan de forma colectiva *miembros de clase*.  
+ La palabra clave `class` va precedida del nivel de acceso. Como en este caso se usa [public](../../language-reference/keywords/public.md), cualquier usuario puede crear instancias de esta clase. El nombre de la clase sigue a la palabra clave `class`. El nombre de la clase debe ser un [nombre de identificador](../inside-a-program/identifier-names.md) de C# válido. El resto de la definición es el cuerpo de la clase, donde se definen los datos y el comportamiento. Los campos, las propiedades, los métodos y los eventos de una clase se denominan de manera colectiva *miembros de clase*.  
   
 ## <a name="creating-objects"></a>Creación de objetos
 
@@ -83,11 +83,11 @@ La herencia se consigue mediante una *derivación*, en la que se declara una cla
 
 Cuando una clase declara una clase base, hereda todos los miembros de la clase base excepto los constructores. Para obtener más información, vea [Herencia](inheritance.md).
   
-A diferencia de C++, una clase de C# solo puede heredar directamente de una clase base. En cambio, dado que una clase base puede heredar de otra clase, una clase podría heredar indirectamente varias clases base. Además, una clase puede implementar directamente más de una interfaz. Para más información, vea [Interfaces](../interfaces/index.md).  
+A diferencia de C++, una clase de C# solo puede heredar directamente de una clase base. En cambio, dado que una clase base puede heredar de otra clase, una clase podría heredar indirectamente varias clases base. Además, una clase puede implementar directamente más de una interfaz. Para obtener más información, vea [Interfaces](../interfaces/index.md).  
   
 Una clase puede declararse [abstracta](../../language-reference/keywords/abstract.md). Una clase abstracta contiene métodos abstractos que tienen una definición de firma, pero no tienen ninguna implementación. No se pueden crear instancias de las clases abstractas. Solo se pueden usar a través de las clases derivadas que implementan los métodos abstractos. Por el contrario, la clase [sealed](../../language-reference/keywords/sealed.md) no permite que otras clases se deriven de ella. Para más información, vea [Clases y miembros de clase abstractos y sellados](abstract-and-sealed-classes-and-class-members.md).  
   
-Las definiciones de clase se pueden dividir entre distintos archivos de código fuente. Para obtener más información, consulte [Clases y métodos parciales](partial-classes-and-methods.md).  
+Las definiciones de clase se pueden dividir entre distintos archivos de código fuente. Para más información, vea [Clases y métodos parciales](partial-classes-and-methods.md).  
   
 ## <a name="example"></a>Ejemplo
 
@@ -109,4 +109,4 @@ En el ejemplo siguiente se define una clase pública que contiene una [propiedad
 - [Métodos](methods.md)
 - [Constructores](constructors.md)
 - [Finalizadores](destructors.md)
-- [Objetos](objects.md)
+- [Objects](objects.md)

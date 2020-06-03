@@ -23,39 +23,39 @@ En los siguientes sitios web encontrará orientación y respuestas a algunos pro
 
 ### <a name="on-the-web"></a>En la Web
 
-|URL|Description|
+|Resolución|Descripción|
 |----------|----------------|
 |[Diseño del lenguaje Visual Basic .NET](https://github.com/dotnet/vblang)|Repositorio oficial en GitHub para el diseño del lenguaje Visual Basic .NET.|
 |[Blog del equipo de Microsoft Visual Basic](https://devblogs.microsoft.com/vbteam/)|Permite acceder al blog del equipo de Visual Basic.|
 
 ### <a name="code-samples"></a>Ejemplos de código
 
-|URL|Description|
+|Resolución|Descripción|
 |----------|----------------|
 |[Ejemplos de documentación de Visual Basic](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic)|Contiene los ejemplos que se usan en la documentación de Visual Basic y de .NET.|
 
 ### <a name="forums"></a>Foros
 
-|URL|Description|
+|Resolución|Descripción|
 |----------|----------------|
 |[Foros de Visual Basic](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral)|Se describen problemas generales de Visual Basic.|
 
 ### <a name="videos-and-webcasts"></a>Vídeos y webcasts
 
-|URL|Description|
+|Resolución|Descripción|
 |----------|----------------|
 |[Channel9](https://channel9.msdn.com/)|Proporciona una comunidad continua a través de vídeos, Wikis y foros.|
 
-### <a name="support"></a>Compatibilidad
+### <a name="support"></a>Soporte técnico
 
-|URL|Description|
+|Resolución|Descripción|
 |----------|----------------|
 |[Soporte técnico de Microsoft](https://support.microsoft.com)|Proporciona acceso a los artículos de Knowledge Base (KB), a descargas y actualizaciones, a difusiones web sobre soporte técnico y a otros servicios.|
 |[Preguntas sobre Visual Studio](https://developercommunity.visualstudio.com)|Permite informar de errores o proporcionar sugerencias a Microsoft sobre .NET y Visual Studio. También puede notificar un error seleccionando **Ayuda** > **Enviar comentarios** > **Notificar un problema** en Visual Studio.|
 
 ## <a name="third-party-resources"></a>Recursos de terceros
 
-|URL|Description|
+|Resolución|Descripción|
 |----------|----------------|
 |[VBForums](http://www.vbforums.com/)|Proporciona un foro para hablar sobre Visual Basic, .NET y mucho más.|
 |[vbCity](http://vbcity.com/)|Un sitio de la comunidad para que los usuarios obtengan información y formulen preguntas sobre Visual Basic y .NET.|

@@ -23,12 +23,12 @@ ms.locfileid: "81242678"
 Además de las excepciones que se pueden producir en cualquier llamada al método (como <xref:System.OutOfMemoryException> cuando un sistema está sobrecargado o <xref:System.NullReferenceException> debido a errores de programador), los métodos del sistema de archivos de .NET pueden producir las excepciones siguientes:
 
 - <xref:System.IO.IOException?displayProperty=nameWithType>, la clase base de todos los tipos de excepción <xref:System.IO>. Se produce por errores cuyos códigos de retorno del sistema operativo no se asignan directamente a cualquier otro tipo de excepción.
-- <xref:System.IO.FileNotFoundException?displayProperty=nameWithType>Operador
-- <xref:System.IO.DirectoryNotFoundException?displayProperty=nameWithType>Operador
-- <xref:System.IO.DriveNotFoundException??displayProperty=nameWithType>Operador
-- <xref:System.IO.PathTooLongException?displayProperty=nameWithType>Operador
-- <xref:System.OperationCanceledException?displayProperty=nameWithType>Operador
-- <xref:System.UnauthorizedAccessException?displayProperty=nameWithType>Operador
+- <xref:System.IO.FileNotFoundException?displayProperty=nameWithType>.
+- <xref:System.IO.DirectoryNotFoundException?displayProperty=nameWithType>.
+- <xref:System.IO.DriveNotFoundException??displayProperty=nameWithType>.
+- <xref:System.IO.PathTooLongException?displayProperty=nameWithType>.
+- <xref:System.OperationCanceledException?displayProperty=nameWithType>.
+- <xref:System.UnauthorizedAccessException?displayProperty=nameWithType>.
 - <xref:System.ArgumentException?displayProperty=nameWithType>, que se produce para caracteres de ruta no válidos en .NET Framework y en .NET Core 2.0 y versiones anteriores.
 - <xref:System.NotSupportedException?displayProperty=nameWithType>, que se produce para dos puntos no válidos en .NET Framework.
 - <xref:System.Security.SecurityException?displayProperty=nameWithType>, que se produce para las aplicaciones que se ejecutan con confianza limitada y que carecen de los permisos necesarios solo en .NET Framework. (La plena confianza es el valor predeterminado en .NET Framework).
@@ -71,7 +71,7 @@ Tenga en cuenta que, en el código de control de excepciones, siempre debe contr
 
 Si se trata de <xref:System.IO.IOException>, puede obtener información de error adicional de la propiedad [IOException.HResult](xref:System.Exception.HResult). Para convertir el valor HResult en un código de error de Win32, quite los 16 bits superiores del valor de 32 bits. En la tabla siguiente se enumeran los códigos de error que pueden encapsularse en <xref:System.IO.IOException>.
 
-| HResult | Constante | Description |
+| HResult | Constante | Descripción |
 | --- | --- | --- |
 | ERROR_SHARING_VIOLATION | 32 | Falta el nombre de archivo, o el archivo o directorio está en uso. |
 | ERROR_FILE_EXISTS | 80 | El archivo ya existe. |
