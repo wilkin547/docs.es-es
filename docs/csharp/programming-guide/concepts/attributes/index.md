@@ -1,12 +1,12 @@
 ---
 title: Atributos (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: 0379bb76cf18ff836bd14aafb9cb97c30aee8ec7
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 358285a39f72ad3ddf1b265e20b443308375d074
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645482"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241583"
 ---
 # <a name="attributes-c"></a>Atributos (C#)
 
@@ -41,7 +41,7 @@ Algunos atributos se pueden especificar más de una vez para una entidad determi
 [!code-csharp[Using the conditional attribute](~/samples/snippets/csharp/attributes/AttributesOverview.cs#5)]
 
 > [!NOTE]
-> Por convención, todos los nombres de atributos terminan con la palabra "Attribute" para distinguirlos de otros elementos de las bibliotecas de .NET. Sin embargo, no es necesario especificar el sufijo de atributo cuando utiliza atributos en el código. Por ejemplo, `[DllImport]` es equivalente a `[DllImportAttribute]`, pero `DllImportAttribute` es el nombre real del atributo en la biblioteca de clases .NET Framework.
+> Por convención, todos los nombres de atributos terminan con la palabra "Attribute" para distinguirlos de otros elementos de las bibliotecas de .NET. Sin embargo, no es necesario especificar el sufijo de atributo cuando utiliza atributos en el código. Por ejemplo, `[DllImport]` es equivalente a `[DllImportAttribute]`, pero `DllImportAttribute` es el nombre real del atributo en la biblioteca de clases .NET.
 
 ### <a name="attribute-parameters"></a>Parámetros de atributo
 

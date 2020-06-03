@@ -7,17 +7,18 @@ helpviewer_keywords:
 - platform invoke, accessing APIs with C#
 - C# language, interoperability
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
-ms.openlocfilehash: 3a70d2ae077552bab536e96367cab0fda1661310
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e53465066cf27a5f46c66ac73ee242370be23395
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75712057"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84242012"
 ---
 # <a name="interoperability-c-programming-guide"></a>Interoperabilidad (Guía de programación de C#)
+
 La interoperabilidad permite conservar y aprovechar las inversiones existentes en código no administrado. El código que se ejecuta bajo el control de Common Language Runtime (CLR) se denomina *código administrado*, y el código que se ejecuta fuera de CLR se denomina *código no administrado*. COM, COM+, los componentes de C++, los componentes de ActiveX y la API Windows de Microsoft son ejemplos de código no administrado.  
   
- .NET Framework habilita la interoperabilidad con código no administrado a través de los servicios de invocación de plataforma, el espacio de nombres <xref:System.Runtime.InteropServices>, la interoperabilidad de C++ y la interoperabilidad COM.  
+.NET habilita la interoperabilidad con código no administrado a través de los servicios de invocación de plataforma, el espacio de nombres <xref:System.Runtime.InteropServices>, la interoperabilidad de C++ y la interoperabilidad COM.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Información general sobre interoperabilidad](./interoperability-overview.md)  
@@ -46,5 +47,5 @@ Para obtener más información, consulte la sección [Conceptos básicos](~/_csh
 
 - <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>
 - [Guía de programación de C#](../index.md)
-- [Interoperating with Unmanaged Code](../../../framework/interop/index.md) (Interoperar con código no administrado)
+- [Interoperar con código no administrado](../../../framework/interop/index.md)
 - [Tutorial: Programación de Office](./walkthrough-office-programming.md)

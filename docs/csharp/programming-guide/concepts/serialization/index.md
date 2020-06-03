@@ -1,12 +1,12 @@
 ---
 title: Serialización (C#)
 ms.date: 01/02/2020
-ms.openlocfilehash: d914298a370b09307e84c88959542b4823cf37ce
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b2532ccf281fdfaa951d56675066f1e239f9f480
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79167600"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241986"
 ---
 # <a name="serialization-c"></a>Serialización (C#)
 
@@ -65,7 +65,7 @@ Si una clase serializada contiene referencias a objetos de otras clases marcadas
 
 La serialización binaria y XML se puede realizar de dos formas: de manera básica y personalizada.
 
-La serialización básica utiliza .NET Framework para serializar automáticamente el objeto. El único requisito es que la clase tenga el atributo <xref:System.SerializableAttribute> aplicado. <xref:System.NonSerializedAttribute> puede usarse para impedir la serialización de campos específicos.
+La serialización básica utiliza .NET para serializar automáticamente el objeto. El único requisito es que la clase tenga el atributo <xref:System.SerializableAttribute> aplicado. <xref:System.NonSerializedAttribute> puede usarse para impedir la serialización de campos específicos.
 
 Cuando se usa la serialización básica, el control de versiones de objetos puede causar problemas. Use la serialización personalizada si los problemas de control de versiones son importantes. La serialización básica es la manera más fácil de realizar la serialización, pero no proporciona mucho control sobre el proceso.
 
@@ -75,14 +75,14 @@ En la serialización personalizada, puede especificar exactamente qué objetos s
 
 La serialización de diseñador es una forma especial de serialización que conlleva el tipo de persistencia de objeto asociado a las herramientas de desarrollo. La serialización de diseñador es un proceso que consiste en convertir un gráfico de objetos en un archivo de código fuente que puede utilizarse posteriormente para recuperar el gráfico de objetos. Un archivo de código fuente puede contener código, marcado o incluso información de la tabla SQL.
 
-## <a name="BKMK_RelatedTopics"></a> Temas relacionados y ejemplos  
+## <a name="related-topics-and-examples"></a><a name="BKMK_RelatedTopics"></a> Temas relacionados y ejemplos  
 
 En [Información general de System.Text.Json](../../../../standard/serialization/system-text-json-overview.md) se muestra cómo obtener la biblioteca `System.Text.Json`.
 
 En [Procedimiento para serializar y deserializar JSON en .NET](../../../../standard/serialization/system-text-json-how-to.md)
 se muestra cómo leer y escribir datos de objetos a y desde JSON mediante la clase <xref:System.Text.Json.JsonSerializer>.
 
-[Walkthrough: Persisting an Object in Visual Studio (C#)](walkthrough-persisting-an-object-in-visual-studio.md) (Tutorial: Conservar un objeto en Visual Studio [C#])  
+[Tutorial: Conservar un objeto en Visual Studio (C#)](walkthrough-persisting-an-object-in-visual-studio.md)  
 Se explica cómo se puede usar la serialización para conservar los datos de un objeto entre instancias, lo que le permite almacenar valores y recuperarlos la próxima vez que se cree una instancia del objeto.
 
 [Procedimiento para leer datos de objeto de un archivo XML (C#)](how-to-read-object-data-from-an-xml-file.md)  

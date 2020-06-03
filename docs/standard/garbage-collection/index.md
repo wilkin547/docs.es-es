@@ -18,12 +18,12 @@ helpviewer_keywords:
 - runtime, garbage collection
 - garbage collection, about
 ms.assetid: 22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9
-ms.openlocfilehash: c087deb033a373dd8b3980feb7ec6901c7909569
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: ef7e078c6ef2f0b4081c49aa0db09316e79f0702
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102247"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286059"
 ---
 # <a name="garbage-collection"></a>Recolección de elementos no utilizados
 
@@ -33,17 +33,17 @@ El recolector de elementos no utilizados de .NET administra la asignación y lib
   
 |Title|Descripción|  
 |-----------|-----------------|  
-|[Fundamentos de la recolección de elementos no utilizados](../../../docs/standard/garbage-collection/fundamentals.md)|Describe cómo funciona la recolección de elementos no utilizados, cómo se asignan los objetos en el montón administrado y otros conceptos básicos.|  
+|[Fundamentos de la recolección de elementos no utilizados](fundamentals.md)|Describe cómo funciona la recolección de elementos no utilizados, cómo se asignan los objetos en el montón administrado y otros conceptos básicos.|  
 |[Recolección de elementos no utilizados de estación de trabajo y de servidor](workstation-server-gc.md)|Describe las diferencias entre la recolección de elementos no utilizados para aplicaciones cliente y la recolección de elementos no utilizados del servidor para aplicaciones de servidor.|
 |[Recolección de elementos no utilizados en segundo plano](background-gc.md)|Describe la recolección de elementos no utilizados en segundo plano, que es la recolección de objetos de generación 0 y 1 mientras se lleva a cabo la recolección de generación 2.|
 |[El montón de objetos grandes](large-object-heap.md)|Describe el montón de objetos grandes y cómo se lleva a cabo la recolección de elementos no utilizados de los objetos grandes.|
-|[Recolección de elementos no utilizados y rendimiento](../../../docs/standard/garbage-collection/performance.md)|Describe las comprobaciones de rendimiento que se pueden utilizar para diagnosticar los problemas con la recolección de elementos no utilizados y los problemas de rendimiento.|  
-|[Colecciones inducidas](../../../docs/standard/garbage-collection/induced.md)|Describe cómo hacer que se produzca una recolección de elementos no utilizados.|  
-|[Modos de latencia](../../../docs/standard/garbage-collection/latency.md)|Describe los modos que determinan la tendencia a la intrusión de la recolección de elementos no utilizados.|  
-|[Optimización de hospedaje web compartido](../../../docs/standard/garbage-collection/optimization-for-shared-web-hosting.md)|Describe cómo optimizar la recolección de elementos no utilizados en servidores compartidos entre varios sitios web pequeños.|  
-|[Notificaciones de recolección de elementos no utilizados](../../../docs/standard/garbage-collection/notifications.md)|Describe cómo se determina cuándo una recolección de elementos no utilizados completa está próxima y cuándo se ha completado.|  
-|[Supervisión de recursos de dominio de aplicación](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)|Describe cómo supervisar el uso de la CPU y la memoria por un dominio de aplicación.|  
-|[Referencias débiles](../../../docs/standard/garbage-collection/weak-references.md)|Describe las características que permiten al recolector de elementos no utilizados recoger un objeto y, mientras tanto, permitir que la aplicación tenga acceso a ese objeto.|  
+|[Recolección de elementos no utilizados y rendimiento](performance.md)|Describe las comprobaciones de rendimiento que se pueden utilizar para diagnosticar los problemas con la recolección de elementos no utilizados y los problemas de rendimiento.|  
+|[Colecciones inducidas](induced.md)|Describe cómo hacer que se produzca una recolección de elementos no utilizados.|  
+|[Modos de latencia](latency.md)|Describe los modos que determinan la tendencia a la intrusión de la recolección de elementos no utilizados.|  
+|[Optimización de hospedaje web compartido](optimization-for-shared-web-hosting.md)|Describe cómo optimizar la recolección de elementos no utilizados en servidores compartidos entre varios sitios web pequeños.|  
+|[Notificaciones de recolección de elementos no utilizados](notifications.md)|Describe cómo se determina cuándo una recolección de elementos no utilizados completa está próxima y cuándo se ha completado.|  
+|[Supervisión de recursos de dominio de aplicación](app-domain-resource-monitoring.md)|Describe cómo supervisar el uso de la CPU y la memoria por un dominio de aplicación.|  
+|[Referencias débiles](weak-references.md)|Describe las características que permiten al recolector de elementos no utilizados recoger un objeto y, mientras tanto, permitir que la aplicación tenga acceso a ese objeto.|  
   
 ## <a name="reference"></a>Referencia
 
@@ -58,4 +58,4 @@ El recolector de elementos no utilizados de .NET administra la asignación y lib
   
 ## <a name="see-also"></a>Vea también
 
-- [Limpieza de recursos no administrados](../../../docs/standard/garbage-collection/unmanaged.md)
+- [Limpieza de recursos no administrados](unmanaged.md)

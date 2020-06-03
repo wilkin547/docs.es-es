@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: de40369a661c347a2125075e820420af4eb71cac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: df69d895dee51f1bad1fb6164fcb18996ee3eef4
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75337250"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241661"
 ---
 # <a name="c-programming-guide"></a>Guía de programación de C#
 
-Esta sección proporciona información detallada sobre las funcionalidades y características claves del lenguaje C# a las que C# puede acceder a través de .NET Framework.  
+Esta sección proporciona información detallada sobre las funcionalidades y características claves del lenguaje C# a las que C# puede acceder a través de .NET.  
   
  En la mayor parte de esta sección se supone que ya sabe algo sobre C# y que conoce los conceptos de programación generales. Si nunca ha programado ni ha trabajado con C#, puede visitar los tutoriales de [Introducción a C#](../tutorials/intro-to-csharp/index.md) o el [tutorial de .NET en explorador](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1), que no requiere ningún conocimiento previo de programación.  
   

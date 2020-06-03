@@ -5,22 +5,22 @@ helpviewer_keywords:
 - C# language, generics
 - generics [C#]
 ms.assetid: 75ea8509-a4ea-4e7a-a2b3-cf72482e9282
-ms.openlocfilehash: c7252180c9c98a8ca99c8cc6b3faaf8b1b8f0749
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a3ed3aa412c7d9c9d6b705dba80b527057c647fa
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79167497"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241674"
 ---
 # <a name="generics-c-programming-guide"></a>Genéricos (Guía de programación de C#)
 
-Los genéricos introducen el concepto de parámetros de tipo a .NET Framework, lo que le permite diseñar clases y métodos que aplazan la especificación de uno o varios tipos hasta que el código de cliente declare y cree una instancia de la clase o el método. Por ejemplo, al usar un parámetro de tipo genérico `T`, puede escribir una clase única que otro código de cliente puede usar sin incurrir en el costo o riesgo de conversiones en tiempo de ejecución u operaciones de conversión boxing, como se muestra aquí:
+Los genéricos introducen el concepto de parámetros de tipo a .NET, lo que le permite diseñar clases y métodos que aplazan la especificación de uno o varios tipos hasta que el código de cliente declare y cree una instancia de la clase o el método. Por ejemplo, al usar un parámetro de tipo genérico `T`, puede escribir una clase única que otro código de cliente puede usar sin incurrir en el costo o riesgo de conversiones en tiempo de ejecución u operaciones de conversión boxing, como se muestra aquí:
 
 [!code-csharp[csProgGuideGenerics#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#1)]
 
 Las clases y métodos genéricos combinan reusabilidad, seguridad de tipos y eficacia de una manera en que sus homólogos no genéricos no pueden. Los genéricos se usan frecuentemente con colecciones y los métodos que funcionan en ellas. El espacio de nombres <xref:System.Collections.Generic> contiene varias clases de colecciones basadas en genéricos. No se recomiendan las colecciones no genéricas, como <xref:System.Collections.ArrayList>, y se mantienen por compatibilidad. Para más información, vea [Elementos genéricos en .NET](../../../standard/generics/index.md).
 
-Por supuesto, también se pueden crear tipos y métodos genéricos personalizados para proporcionar soluciones y patrones de diseño generalizados propios con seguridad de tipos y eficaces. En el ejemplo de código siguiente se muestra una clase genérica simple de lista vinculada para fines de demostración. (En la mayoría de los casos, se debe usar la clase <xref:System.Collections.Generic.List%601> proporcionada por la biblioteca de clases .NET Framework en lugar de crear una propia). El parámetro de tipo `T` se usa en diversas ubicaciones donde normalmente se usaría un tipo concreto para indicar el tipo del elemento almacenado en la lista. Se usa de estas formas:
+Por supuesto, también se pueden crear tipos y métodos genéricos personalizados para proporcionar soluciones y patrones de diseño generalizados propios con seguridad de tipos y eficaces. En el ejemplo de código siguiente se muestra una clase genérica simple de lista vinculada para fines de demostración. (En la mayoría de los casos, debe usar la clase <xref:System.Collections.Generic.List%601> proporcionada por .NET en lugar de crear la suya propia). El parámetro de tipo `T` se usa en diversas ubicaciones donde normalmente se usaría un tipo concreto para indicar el tipo del elemento almacenado en la lista. Se usa de estas formas:
 
 - Como el tipo de un parámetro de método en el método `AddHead`.
 - Como el tipo de valor devuelto de la propiedad `Data` en la clase anidada `Node`.
@@ -38,7 +38,7 @@ En el ejemplo de código siguiente se muestra cómo el código de cliente usa la
 
 - Use tipos genéricos para maximizar la reutilización del código, la seguridad de tipos y el rendimiento.
 - El uso más común de los genéricos es crear clases de colección.
-- La biblioteca de clases .NET Framework contiene varias clases de colección genéricas nuevas en el espacio de nombres <xref:System.Collections.Generic>. Estas se deberían usar siempre que sea posible en lugar de clases como <xref:System.Collections.ArrayList> en el espacio de nombres <xref:System.Collections>.
+- La biblioteca de clases de .NET contiene varias clases de colección genéricas en el espacio de nombres <xref:System.Collections.Generic>. Estas se deberían usar siempre que sea posible en lugar de clases como <xref:System.Collections.ArrayList> en el espacio de nombres <xref:System.Collections>.
 - Puede crear sus propias interfaces, clases, métodos, eventos y delegados genéricos.
 - Puede limitar las clases genéricas para habilitar el acceso a métodos en tipos de datos determinados.
 - Puede obtener información sobre los tipos que se usan en un tipo de datos genérico en tiempo de ejecución mediante la reflexión.
