@@ -5,17 +5,17 @@ helpviewer_keywords:
 - information functions [Visual Basic]
 - interaction functions [Visual Basic]
 ms.assetid: 6e698461-e944-4c0f-ae48-87429f1fe740
-ms.openlocfilehash: 2dd4a8b4c7b06d53a1f19df35cf42a451c552f7d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 36d67789a8d399a359556bb56c30334cf6faf8c7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349791"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84373660"
 ---
 # <a name="information-and-interaction-summary-visual-basic"></a>Resumen de información e interacción (Visual Basic)
 Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas en tiempo de ejecución están organizados por uso y propósito.  
   
-|Acción|Language, elemento|  
+|Acción|Elemento del lenguaje|  
 |------------|----------------------|  
 |Ejecutar otros programas.|<xref:Microsoft.VisualBasic.Interaction.AppActivate%2A>, <xref:Microsoft.VisualBasic.Interaction.Shell%2A>|  
 |Llamar a un método o a una propiedad.|<xref:Microsoft.VisualBasic.Interaction.CallByName%2A>|  
@@ -25,7 +25,7 @@ Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas e
 |Recuperar información de color.|<xref:Microsoft.VisualBasic.Information.QBColor%2A>, <xref:Microsoft.VisualBasic.Information.RGB%2A>|  
 |Controlar cuadros de diálogo.|<xref:Microsoft.VisualBasic.Interaction.InputBox%2A>, <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Palabras clave](../../../visual-basic/language-reference/keywords/index.md)
-- [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
+- [Palabras clave](index.md)
+- [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](../runtime-library-members.md)

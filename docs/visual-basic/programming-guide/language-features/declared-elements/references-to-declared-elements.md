@@ -6,19 +6,19 @@ helpviewer_keywords:
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-ms.openlocfilehash: a6477a9f0abaf8eb9176f4f6ab2a920af6c8f500
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 23bff2eb098982f67ecb1b709e59096d5259a644
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345302"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405188"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>Referencias a elementos declarados (Visual Basic)
 Cuando el código hace referencia a un elemento declarado, el compilador Visual Basic coincide con el nombre de la referencia a la declaración adecuada de ese nombre. Si se declara más de un elemento con el mismo nombre, puede controlar a qué elementos se va a hacer referencia *calificando* su nombre.  
   
  El compilador intenta buscar una referencia de nombre a una declaración de nombre con el *ámbito más restringido*. Esto significa que comienza con el código que hace la referencia y funciona de forma saliente a través de los niveles sucesivos de elementos contenedores.  
   
- En el ejemplo siguiente se muestran referencias a dos variables con el mismo nombre. En el ejemplo se declaran dos variables, cada una con nombre `totalCount`, en distintos niveles de ámbito en el `container`de módulos. Cuando el procedimiento `showCount` muestra `totalCount` sin calificación, el compilador de Visual Basic resuelve la referencia a la declaración con el ámbito más restringido, es decir, la declaración local dentro de `showCount`. Cuando califica `totalCount` con el módulo contenedor `container`, el compilador resuelve la referencia a la declaración con el ámbito más amplio.  
+ En el ejemplo siguiente se muestran referencias a dos variables con el mismo nombre. En el ejemplo se declaran dos variables, cada una de ellas con `totalCount` un nivel diferente de ámbito en el módulo `container` . Cuando el procedimiento se `showCount` muestra `totalCount` sin calificación, el compilador Visual Basic resuelve la referencia a la declaración con el ámbito más restringido, es decir, la declaración local dentro de `showCount` . Cuando se califica `totalCount` con el módulo contenedor `container` , el compilador resuelve la referencia a la declaración con el ámbito más amplio.  
   
 ```vb  
 ' Assume these two modules are both in the same assembly.  
@@ -70,7 +70,7 @@ End Module
   
      `outerSpace` → `innerSpace` → `holdsTotals` → `totals`  
   
-3. Preparar la cadena de calificación para el elemento de destino. Coloque un punto (`.`) después de cada elemento de la ruta de acceso. La aplicación debe tener acceso a todos los elementos de la cadena de calificación.  
+3. Preparar la cadena de calificación para el elemento de destino. Coloque un punto ( `.` ) después de cada elemento de la ruta de acceso. La aplicación debe tener acceso a todos los elementos de la cadena de calificación.  
   
     ```vb  
     outerSpace.innerSpace.holdsTotals.totals.  
@@ -82,7 +82,7 @@ End Module
     grandTotal = 9000  
     ```  
   
-5. Anteponga el nombre del elemento de destino a la cadena de calificación. El nombre debe seguir inmediatamente al punto (`.`) que sigue al módulo, la clase o la estructura que contiene el elemento.  
+5. Anteponga el nombre del elemento de destino a la cadena de calificación. El nombre debe seguir inmediatamente al punto ( `.` ) que sigue al módulo, la clase o la estructura que contiene el elemento.  
   
     ```vb  
     ' Assume the following module is part of your code.  
@@ -95,7 +95,7 @@ End Module
   
 6. El compilador usa la cadena de calificación para encontrar una declaración clara y no ambigua a la que puede coincidir con la referencia del elemento de destino.  
   
- También podría tener que calificar una referencia de nombre si la aplicación tiene acceso a más de un elemento de programación con el mismo nombre. Por ejemplo, los espacios de nombres <xref:System.Windows.Forms> y <xref:System.Web.UI.WebControls> contienen una clase `Label` (<xref:System.Windows.Forms.Label?displayProperty=nameWithType> y <xref:System.Web.UI.WebControls.Label?displayProperty=nameWithType>). Si su aplicación usa ambos o si define su propia clase `Label`, debe distinguir los distintos objetos `Label`. Incluya el espacio de nombres o el alias de importación en la declaración de variable. En el ejemplo siguiente se usa el alias de importación.  
+ También podría tener que calificar una referencia de nombre si la aplicación tiene acceso a más de un elemento de programación con el mismo nombre. Por ejemplo, los <xref:System.Windows.Forms> <xref:System.Web.UI.WebControls> espacios de nombres y contienen una `Label` clase ( <xref:System.Windows.Forms.Label?displayProperty=nameWithType> y <xref:System.Web.UI.WebControls.Label?displayProperty=nameWithType> ). Si su aplicación usa ambos o si define su propia `Label` clase, debe distinguir los diferentes `Label` objetos. Incluya el espacio de nombres o el alias de importación en la declaración de variable. En el ejemplo siguiente se usa el alias de importación.  
   
 ```vb  
 ' The following statement must precede all your declarations.  
@@ -105,20 +105,20 @@ Dim winLabel As New win.Label()
 ```  
   
 ## <a name="members-of-other-containing-elements"></a>Miembros de otros elementos contenedores  
- Cuando se usa un miembro no compartido de otra clase o estructura, primero se debe calificar el nombre del miembro con una variable o expresión que apunte a una instancia de la clase o estructura. En el ejemplo siguiente, `demoClass` es una instancia de una clase denominada `class1`.  
+ Cuando se usa un miembro no compartido de otra clase o estructura, primero se debe calificar el nombre del miembro con una variable o expresión que apunte a una instancia de la clase o estructura. En el ejemplo siguiente, `demoClass` es una instancia de una clase denominada `class1` .  
   
 ```vb  
 Dim demoClass As class1 = New class1()  
 demoClass.someSub[(argumentlist)]  
 ```  
   
- No se puede usar el propio nombre de clase para calificar a un miembro que no se [comparte](../../../../visual-basic/language-reference/modifiers/shared.md). Primero debe crear una instancia en una variable de objeto (en este caso `demoClass`) y, a continuación, hacer referencia a ella mediante el nombre de la variable.  
+ No se puede usar el propio nombre de clase para calificar a un miembro que no se [comparte](../../../language-reference/modifiers/shared.md). Primero debe crear una instancia en una variable de objeto (en este caso `demoClass` ) y luego hacer referencia a ella mediante el nombre de la variable.  
   
- Si una clase o estructura tiene un miembro de `Shared`, puede calificar ese miembro con el nombre de la clase o la estructura o con una variable o expresión que apunte a una instancia.  
+ Si una clase o estructura tiene un `Shared` miembro, puede calificar ese miembro con el nombre de la clase o la estructura, o con una variable o expresión que apunte a una instancia.  
   
- Un módulo no tiene ninguna instancia independiente, y todos sus miembros se `Shared` de forma predeterminada. Por lo tanto, puede calificar un miembro de módulo con el nombre de módulo.  
+ Un módulo no tiene ninguna instancia independiente y todos sus miembros son `Shared` de forma predeterminada. Por lo tanto, puede calificar un miembro de módulo con el nombre de módulo.  
   
- En el ejemplo siguiente se muestran referencias completas a los procedimientos de miembros de módulo. En el ejemplo se declaran dos procedimientos `Sub`, ambos denominados `perform`, en módulos diferentes de un proyecto. Cada una se puede especificar sin calificación dentro de su propio módulo, pero se debe calificar si se hace referencia a ella desde cualquier otra parte. Dado que la referencia final de `module3` no cumple `perform`, el compilador no puede resolver esa referencia.  
+ En el ejemplo siguiente se muestran referencias completas a los procedimientos de miembros de módulo. En el ejemplo se declaran dos `Sub` procedimientos, ambos denominados `perform` , en módulos diferentes de un proyecto. Cada una se puede especificar sin calificación dentro de su propio módulo, pero se debe calificar si se hace referencia a ella desde cualquier otra parte. Dado que la referencia final de no `module3` cumple los requisitos `perform` , el compilador no puede resolver esa referencia.  
   
 ```vb  
 ' Assume these three modules are all in the same assembly.  
@@ -150,9 +150,9 @@ End Module
 ```  
   
 ## <a name="references-to-projects"></a>Referencias a proyectos  
- Para usar elementos [públicos](../../../../visual-basic/language-reference/modifiers/public.md) definidos en otro proyecto, primero debe establecer una *referencia* al ensamblado o la biblioteca de tipos del proyecto. Para establecer una referencia, haga clic en **Agregar referencia** en el menú **proyecto** o use la opción del compilador [de línea de comandos-Reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) .  
+ Para usar elementos [públicos](../../../language-reference/modifiers/public.md) definidos en otro proyecto, primero debe establecer una *referencia* al ensamblado o la biblioteca de tipos del proyecto. Para establecer una referencia, haga clic en **Agregar referencia** en el menú **proyecto** o use la opción del compilador [de línea de comandos-Reference (Visual Basic)](../../../reference/command-line-compiler/reference.md) .  
   
- Por ejemplo, puede utilizar el modelo de objetos XML del .NET Framework. Si establece una referencia al espacio de nombres <xref:System.Xml>, puede declarar y usar cualquiera de sus clases, como <xref:System.Xml.XmlDocument>. En el ejemplo siguiente se usa <xref:System.Xml.XmlDocument>.  
+ Por ejemplo, puede utilizar el modelo de objetos XML del .NET Framework. Si establece una referencia al espacio de <xref:System.Xml> nombres, puede declarar y usar cualquiera de sus clases, como <xref:System.Xml.XmlDocument> . En el ejemplo siguiente se utiliza <xref:System.Xml.XmlDocument>.  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -161,7 +161,7 @@ Dim xDoc As System.Xml.XmlDocument
 ```  
   
 ## <a name="importing-containing-elements"></a>Importar elementos contenedores  
- Puede usar la [instrucción Imports (espacio de nombres y tipo de .net)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) para *importar* los espacios de nombres que contienen los módulos o las clases que desea usar. Esto le permite hacer referencia a los elementos definidos en un espacio de nombres importado sin calificar totalmente sus nombres. En el ejemplo siguiente se vuelve a escribir el ejemplo anterior para importar el espacio de nombres <xref:System.Xml>.  
+ Puede usar la [instrucción Imports (espacio de nombres y tipo de .net)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md) para *importar* los espacios de nombres que contienen los módulos o las clases que desea usar. Esto le permite hacer referencia a los elementos definidos en un espacio de nombres importado sin calificar totalmente sus nombres. En el ejemplo siguiente se vuelve a escribir el ejemplo anterior para importar el <xref:System.Xml> espacio de nombres.  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -171,7 +171,7 @@ Imports System.Xml
 Dim xDoc As XmlDocument  
 ```  
   
- Además, la instrucción `Imports` puede definir un *alias de importación* para cada espacio de nombres importado. Esto puede hacer que el código fuente sea más corto y más fácil de leer. En el ejemplo siguiente se vuelve a escribir el ejemplo anterior para utilizar `xD` como un alias para el espacio de nombres <xref:System.Xml>.  
+ Además, la `Imports` instrucción puede definir un *alias de importación* para cada espacio de nombres importado. Esto puede hacer que el código fuente sea más corto y más fácil de leer. En el ejemplo siguiente se vuelve a escribir el ejemplo anterior para usarlo `xD` como alias del <xref:System.Xml> espacio de nombres.  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -181,9 +181,9 @@ Imports xD = System.Xml
 Dim xDoc As xD.XmlDocument  
 ```  
   
- La instrucción `Imports` no hace que los elementos de otros proyectos estén disponibles para la aplicación. Es decir, no se ocupa del establecimiento de una referencia. La importación de un espacio de nombres solo quita el requisito de calificar los nombres definidos en ese espacio de nombres.  
+ La `Imports` instrucción no hace que los elementos de otros proyectos estén disponibles para la aplicación. Es decir, no se ocupa del establecimiento de una referencia. La importación de un espacio de nombres solo quita el requisito de calificar los nombres definidos en ese espacio de nombres.  
   
- También puede usar la instrucción `Imports` para importar módulos, clases, estructuras y enumeraciones. Después, puede usar los miembros de estos elementos importados sin calificación. Sin embargo, siempre debe calificar miembros no compartidos de clases y estructuras con una variable o una expresión que se evalúe como una instancia de la clase o estructura.  
+ También puede usar la `Imports` instrucción para importar módulos, clases, estructuras y enumeraciones. Después, puede usar los miembros de estos elementos importados sin calificación. Sin embargo, siempre debe calificar miembros no compartidos de clases y estructuras con una variable o una expresión que se evalúe como una instancia de la clase o estructura.  
   
 ## <a name="naming-guidelines"></a>Instrucciones de nomenclatura  
  Cuando se definen dos o más elementos de programación con el mismo nombre, puede producirse una *ambigüedad de nombres* cuando el compilador intenta resolver una referencia a ese nombre. Si hay más de una definición en el ámbito, o si no hay ninguna definición en el ámbito, la referencia es irresoluble. Para obtener un ejemplo, vea "ejemplo de referencia completa" en esta página de ayuda.  
@@ -191,14 +191,14 @@ Dim xDoc As xD.XmlDocument
  Puede evitar la ambigüedad de nombres proporcionando a todos los elementos nombres únicos. Después, puede hacer referencia a cualquier elemento sin tener que calificar su nombre con un espacio de nombres, un módulo o una clase. También reduce las posibilidades de hacer referencia accidental al elemento equivocado.  
   
 ## <a name="shadowing"></a>Sombreado  
- Cuando dos elementos de programación comparten el mismo nombre, uno de ellos puede ocultar, o *sombrear*, el otro. Un elemento sombreado no está disponible como referencia; en su lugar, cuando el código usa el nombre del elemento con sombra, el compilador Visual Basic lo resuelve en el elemento de sombreado. Para obtener una explicación más detallada de los ejemplos, vea [sombrear en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+ Cuando dos elementos de programación comparten el mismo nombre, uno de ellos puede ocultar, o *sombrear*, el otro. Un elemento sombreado no está disponible como referencia; en su lugar, cuando el código usa el nombre del elemento con sombra, el compilador Visual Basic lo resuelve en el elemento de sombreado. Para obtener una explicación más detallada de los ejemplos, vea [sombrear en Visual Basic](shadowing.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Nombres de elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
-- [Características de los elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
+- [Declared Element Names](declared-element-names.md)
+- [Características de los elementos declarados](declared-element-characteristics.md)
 - [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)
-- [Variables](../../../../visual-basic/programming-guide/language-features/variables/index.md)
-- [Imports (instrucción), espacio de nombres y tipo .NET](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [New (operador)](../../../../visual-basic/language-reference/operators/new-operator.md)
-- [Public](../../../../visual-basic/language-reference/modifiers/public.md)
+- [Variables](../variables/index.md)
+- [Instrucción Imports (Tipo y espacio de nombres de .NET)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [New (operador)](../../../language-reference/operators/new-operator.md)
+- [Público](../../../language-reference/modifiers/public.md)

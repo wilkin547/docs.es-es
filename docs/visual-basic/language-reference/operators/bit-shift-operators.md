@@ -1,25 +1,25 @@
 ---
-title: Operadores de desplazamiento
+title: Operadores de desplazamiento de bits
 ms.date: 07/20/2015
 helpviewer_keywords:
 - shift operators [Visual Basic], bit
 - operators [Visual Basic], shift
 - bit shift operators [Visual Basic]
 ms.assetid: 64889319-a057-471b-85d8-69fcd4af6230
-ms.openlocfilehash: 10f64f8f39c5f96072ebe56a1c60753afeafc022
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 549f3caf2c3ccf8b985891acca689e6af0aad73b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74336120"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84371718"
 ---
 # <a name="bit-shift-operators-visual-basic"></a>Operador de desplazamiento de bits (Visual Basic)
 A continuación se muestran los operadores de desplazamiento de bits definidos en Visual Basic.  
   
- [<\< (operador)](../../../visual-basic/language-reference/operators/left-shift-operator.md)  
+ [<\<Operator](left-shift-operator.md)  
   
- [Operador >>](../../../visual-basic/language-reference/operators/right-shift-operator.md)  
+ [>> (operador)](right-shift-operator.md)  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Operadores enumerados por funcionalidad](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Lista de operadores según funcionalidad](operators-listed-by-functionality.md)

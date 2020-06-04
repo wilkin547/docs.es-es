@@ -4,15 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID35
 ms.assetid: 661fdb90-ee7d-40ce-b30b-5e7267bd957a
-ms.openlocfilehash: 8b81460eccb6be8baa2ea7bc68d0f80c9d16398e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9eb13d943f9f1cffc984847f7339111e06f5aa6b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349574"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84373932"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a>Sub o Function no definida (Visual Basic)
-Se debe definir una `Sub` o `Function` para que se llame a. Las causas posibles de este error son:  
+Se `Sub` `Function` debe definir o para que se llame a. Las causas posibles de este error son:  
   
 - Error al escribir el nombre del procedimiento.  
   
@@ -30,9 +30,9 @@ Se debe definir una `Sub` o `Function` para que se llame a. Las causas posibles 
   
 3. Compruebe el nombre de la rutina.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Tipos de error](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [Tipos de error](../../programming-guide/language-features/error-types.md)
 - [Administrar referencias en un proyecto](/visualstudio/ide/managing-references-in-a-project)
-- [Sub (instrucción)](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Function (instrucción)](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Instrucción Sub](../statements/sub-statement.md)
+- [Instrucción Function](../statements/function-statement.md)
