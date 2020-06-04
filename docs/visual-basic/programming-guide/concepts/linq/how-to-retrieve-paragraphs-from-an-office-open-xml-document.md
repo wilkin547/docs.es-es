@@ -1,13 +1,13 @@
 ---
-title: 'Cómo: Recuperar párrafos de un documento de Office Open XML'
+title: Procedimiento para recuperar párrafos de un documento de Office Open XML
 ms.date: 07/20/2015
 ms.assetid: 66053f21-9217-473c-a6f3-a0897be07756
-ms.openlocfilehash: 8755dc40fe64d4ff37ed66006f757ec1b32334a1
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 49441da3b9a0bc43c3528a14d03aa44d8173be42
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347058"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397835"
 ---
 # <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a>Cómo: recuperar párrafos de un documento de Office Open XML (Visual Basic)
 Este tema presenta un ejemplo que abre un documento XML abierto de Office y recupera una colección de todos los párrafos del documento.  
@@ -19,7 +19,7 @@ Este tema presenta un ejemplo que abre un documento XML abierto de Office y recu
   
  El ejemplo usa un método de extensión denominado `StringConcatenate`, también proporcionado.  
   
- Para ver un tutorial detallado en el que se explica cómo funciona este ejemplo, vea [transformaciones funcionales puras de XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
+ Para ver un tutorial detallado en el que se explica cómo funciona este ejemplo, vea [transformaciones funcionales puras de XML (Visual Basic)](pure-functional-transformations-of-xml.md).  
   
  Este ejemplo utiliza las clases que se encuentran en el ensamblado WindowsBase. Utiliza los tipos del espacio de nombres <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -152,7 +152,7 @@ Module Module1
 End Module  
 ```  
   
- Cuando se ejecuta con el documento XML abierto de ejemplo que se describe en [crear el documento de origen de Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), este ejemplo genera el siguiente resultado:  
+ Cuando se ejecuta con el documento XML abierto de ejemplo que se describe en [crear el documento de origen de Office Open XML (Visual Basic)](creating-the-source-office-open-xml-document.md), este ejemplo genera el siguiente resultado:  
   
 ```console  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -172,6 +172,6 @@ StyleName:Normal ><
 StyleName:Code >Hello World<  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Técnicas de consulta avanzadas (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [Técnicas de consulta avanzadas (LINQ to XML) (Visual Basic)](advanced-query-techniques-linq-to-xml.md)

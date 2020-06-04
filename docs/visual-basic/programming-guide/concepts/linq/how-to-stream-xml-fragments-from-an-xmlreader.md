@@ -1,13 +1,13 @@
 ---
-title: 'Cómo: Hacer streaming de fragmentos XML desde un objeto XmlReader'
+title: Procedimiento para hacer streaming de fragmentos XML desde un objeto XmlReader
 ms.date: 07/20/2015
 ms.assetid: f67ce598-4a12-4dcb-9a07-24deca02a111
-ms.openlocfilehash: 42d3edb390035d20f506388974000aa204312109
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: ff22625767c4e0752ca19d5a315395934b566230
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636801"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397705"
 ---
 # <a name="how-to-stream-xml-fragments-from-an-xmlreader-visual-basic"></a>Cómo: hacer streaming de fragmentos XML desde un objeto XmlReader (Visual Basic)
 Cuando deba procesar archivos XML grandes quizás no sea factible cargar la totalidad del árbol XML en memoria. En este tema se muestra cómo transmitir por secuencias fragmentos usando <xref:System.Xml.XmlReader>.  
@@ -18,12 +18,12 @@ Cuando deba procesar archivos XML grandes quizás no sea factible cargar la tota
   
  Si desea crear un árbol parcial, puede crear una instancia de un <xref:System.Xml.XmlReader>, colocar el lector en el nodo que desea convertir a un árbol <xref:System.Xml.Linq.XElement> y después crear el objeto <xref:System.Xml.Linq.XElement>.  
   
- El tema [Cómo: hacer streaming de fragmentos XML con acceso a la información de encabezado (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) contiene información y un ejemplo sobre cómo transmitir un documento más complejo.  
+ El tema [Cómo: hacer streaming de fragmentos XML con acceso a la información de encabezado (Visual Basic)](how-to-stream-xml-fragments-with-access-to-header-information.md) contiene información y un ejemplo sobre cómo transmitir un documento más complejo.  
   
- El tema [Cómo: realizar una transformación de transmisión por secuencias de documentos XML grandes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md) contiene un ejemplo del uso de LINQ to XML para transformar documentos XML extremadamente grandes manteniendo una superficie de memoria pequeña.  
+ El tema [Cómo: realizar una transformación de transmisión por secuencias de documentos XML grandes (Visual Basic)](how-to-perform-streaming-transform-of-large-xml-documents.md) contiene un ejemplo del uso de LINQ to XML para transformar documentos XML extremadamente grandes manteniendo una superficie de memoria pequeña.  
   
 ## <a name="example"></a>Ejemplo  
- Este ejemplo crea un método de eje personalizado. Puede consultarlo mediante una consulta LINQ. El método de eje personalizado, `StreamRootChildDoc`, es un método que está específicamente diseñado para leer un documento que tiene un elemento `Child` que se repite.  
+ Este ejemplo crea un método de eje personalizado. Puede consultarlo usando una consulta de LINQ. El método de eje personalizado, `StreamRootChildDoc`, es un método que está específicamente diseñado para leer un documento que tiene un elemento `Child` que se repite.  
   
 ```vb  
 Module Module1  
@@ -145,7 +145,7 @@ ccc
   
  En este ejemplo el documento de origen es muy pequeño. No obstante, aunque hubiera millones de elementos `Child`, este ejemplo seguiría teniendo una superficie de memoria pequeña.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Tutorial: implementar IEnumerable (of T) en Visual Basic](../../../../visual-basic/programming-guide/language-features/control-flow/walkthrough-implementing-ienumerable-of-t.md)
-- [Analizar XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [Tutorial: Implementar IEnumerable(Of T) en Visual Basic](../../language-features/control-flow/walkthrough-implementing-ienumerable-of-t.md)
+- [Analizar XML (Visual Basic)](parsing-xml.md)

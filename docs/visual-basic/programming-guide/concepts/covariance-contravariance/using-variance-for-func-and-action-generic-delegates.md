@@ -1,19 +1,19 @@
 ---
-title: Usar la varianza para los delegados genéricos Func y Action
+title: Uso de la varianza para los delegados genéricos Func y Action
 ms.date: 07/20/2015
 ms.assetid: 36c3012f-b39c-493b-b90f-079b5912ac1b
-ms.openlocfilehash: 2678abd03f55224720d00509dc44f2db16551193
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f824d2422d67f1395d21a0863ca8c95d9f108989
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349046"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84375763"
 ---
-# <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>Usar la varianza para los delegados genéricos FUNC y Action (Visual Basic)
+# <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>Usar la varianza para los delegados genéricos Func y Action (Visual Basic)
 
 En estos ejemplos se muestra cómo usar la covarianza y la contravarianza en los delegados genéricos `Func` y `Action` para habilitar la reutilización de métodos y proporcionar más flexibilidad en el código.
 
-Para obtener más información sobre la covarianza y la contravarianza, vea [varianza en delegados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).
+Para obtener más información sobre la covarianza y la contravarianza, vea [varianza en delegados (Visual Basic)](variance-in-delegates.md).
 
 ## <a name="using-delegates-with-covariant-type-parameters"></a>Usar delegados con parámetros de tipo covariante
 
@@ -94,5 +94,5 @@ End Class
 
 ## <a name="see-also"></a>Vea también
 
-- [Covarianza y contravarianza (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
+- [Covarianza y contravarianza (Visual Basic)](index.md)
 - [Genéricos](../../../../standard/generics/index.md)

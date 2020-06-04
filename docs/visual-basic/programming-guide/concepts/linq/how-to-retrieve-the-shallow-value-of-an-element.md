@@ -1,13 +1,13 @@
 ---
-title: 'Cómo: Recuperar el valor superficial de un elemento'
+title: Procedimiento para recuperar el valor superficial de un elemento
 ms.date: 07/20/2015
 ms.assetid: 730a6670-fb8c-41fc-8a1b-eb97a837e432
-ms.openlocfilehash: 7449d6d1230313aef6005284270370bb9d243a3f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 24e6b128481f56941f0a61da9766f02813a46e97
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346909"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397822"
 ---
 # <a name="how-to-retrieve-the-shallow-value-of-an-element-visual-basic"></a>Cómo: recuperar el valor superficial de un elemento (Visual Basic)
 
@@ -78,4 +78,4 @@ Column  Name="Name"         =Customer.Name
 
 ## <a name="see-also"></a>Vea también
 
-- [Ejes de LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [Ejes de LINQ to XML (Visual Basic)](linq-to-xml-axes.md)

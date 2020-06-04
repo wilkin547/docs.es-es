@@ -2,12 +2,12 @@
 title: 'Archivo XML de ejemplo: Pedido de compra común (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 65321b9c-1239-45e4-af40-eb86cedf7abd
-ms.openlocfilehash: a36d5cafaa276bac667b13d0cf3ada00683acb13
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ed209a9a32b909a36e511a06543de75e780ea5b3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786898"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84360714"
 ---
 # <a name="sample-xml-file-typical-purchase-order-linq-to-xml"></a>Archivo XML de ejemplo: Pedido de compra común (LINQ to XML)
 El siguiente archivo XML se usa en numerosos ejemplos de la documentación de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este archivo es un pedido de compra típico.  
@@ -51,6 +51,6 @@ El siguiente archivo XML se usa en numerosos ejemplos de la documentación de [!
 </PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Documentos XML de ejemplo (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+- [Documentos XML de ejemplo (LINQ to XML)](sample-xml-documents-linq-to-xml.md)

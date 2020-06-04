@@ -1,13 +1,13 @@
 ---
-title: 'Cómo: Rellenar colecciones de objetos de varios orígenes (LINQ)'
+title: Procedimiento para rellenar colecciones de objetos de varios orígenes (LINQ)
 ms.date: 06/22/2018
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-ms.openlocfilehash: 74a2a0f71e575136f1758f72f9a8db72549a9489
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9c6d8ff5165bf886d8aad87b64305819e65361ab
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346979"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396524"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>Cómo: rellenar colecciones de objetos de varios orígenes (LINQ) (Visual Basic)
 
@@ -18,7 +18,7 @@ En este ejemplo se muestra cómo combinar datos de orígenes diferentes en una s
 
 ## <a name="to-create-the-data-file"></a>Para crear el archivo de datos
 
-- Copie los archivos Names. csv y scores. csv en la carpeta del proyecto, tal y como se describe en [Cómo: combinar contenido de archivos no similares (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
+- Copie los archivos Names. csv y scores. csv en la carpeta del proyecto, tal y como se describe en [Cómo: combinar contenido de archivos no similares (LINQ) (Visual Basic)](how-to-join-content-from-dissimilar-files-linq.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -100,7 +100,7 @@ End Class
 ' The average score of Michael Tucker is 92
 ```
 
-En la cláusula [Select](../../../../visual-basic/language-reference/queries/select-clause.md) de la cláusula, se usa un inicializador de objeto para crear una instancia de cada nuevo objeto de `Student` con los datos de los dos orígenes.
+En la cláusula [Select clause](../../../language-reference/queries/select-clause.md) , se usa un inicializador de objeto para crear una instancia de cada nuevo `Student` objeto utilizando los datos de los dos orígenes.
 
 Si no tiene que almacenar los resultados de una consulta, los tipos anónimos pueden ser más convenientes que los tipos con nombre. Los tipos con nombre son necesarios si pasa los resultados de la consulta fuera del método en el que se ejecuta la consulta. En el ejemplo siguiente se lleva a cabo la misma tarea que en el ejemplo anterior, con la diferencia de que se usan tipos anónimos en lugar de tipos con nombre:
 
@@ -130,4 +130,4 @@ Next
 
 ## <a name="see-also"></a>Vea también
 
-- [LINQ y cadenas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ y cadenas (Visual Basic)](linq-and-strings.md)

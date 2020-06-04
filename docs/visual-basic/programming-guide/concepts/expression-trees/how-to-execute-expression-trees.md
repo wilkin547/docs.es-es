@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: Ejecutar árboles de expresión'
+title: Procedimiento para ejecutar árboles de expresión
 ms.date: 07/20/2015
 ms.assetid: 9dfb5ab3-f48f-417e-975f-f8f6f1cdc18d
-ms.openlocfilehash: 2a2749eaed5279d04b72eb77b066c83de9722fa9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 7b7b08ea1a7a1310b1d98876be96f1fa28ecba91
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346004"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84375335"
 ---
-# <a name="how-to-execute-expression-trees-visual-basic"></a>Cómo: ejecutar árboles de expresión (Visual Basic)
+# <a name="how-to-execute-expression-trees-visual-basic"></a>How to: Execute Expression Trees (Visual Basic) (Cómo ejecutar árboles de expresión en Visual Basic)
 En este tema se muestra cómo ejecutar un árbol de expresión. La ejecución de un árbol de expresión puede devolver un valor o simplemente realizar una acción, como llamar a un método.  
   
  Solo se pueden ejecutar los árboles de expresiones que representan expresiones lambda. Los árboles de expresiones que representan expresiones lambda son de tipo <xref:System.Linq.Expressions.LambdaExpression> o <xref:System.Linq.Expressions.Expression%601>. Para ejecutar estos árboles de expresiones, llame al método <xref:System.Linq.Expressions.LambdaExpression.Compile%2A> para crear un delegado ejecutable y, después, invoque el delegado.  
@@ -48,5 +48,5 @@ MsgBox(result)
   
 ## <a name="see-also"></a>Vea también
 
-- [Árboles de expresión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
-- [Cómo: modificar árboles de expresiones (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
+- [Árboles de expresión (Visual Basic)](index.md)
+- [How to: Modify Expression Trees (Visual Basic)](how-to-modify-expression-trees.md) (Cómo modificar árboles de expresión en Visual Basic)
