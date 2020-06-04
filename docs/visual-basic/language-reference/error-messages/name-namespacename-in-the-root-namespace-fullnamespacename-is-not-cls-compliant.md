@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC40039
 ms.assetid: c5bd5914-ae71-416a-8bed-f76f644f78be
-ms.openlocfilehash: 821044d3ee359a052fa6a763e9c5a89da5d6f607
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: b03a50365122c17fa311a284bd6995d1af2631c3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775583"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401542"
 ---
-# <a name="name-namespacename-in-the-root-namespace-fullnamespacename-is-not-cls-compliant"></a>Nombre \<namespacename > en el espacio de nombres raíz \<fullnamespacename > no es conforme a CLS
-Un ensamblado se marca como `<CLSCompliant(True)>`, pero un elemento del nombre del espacio de nombres raíz comienza con un carácter de subrayado (`_`).  
+# <a name="name-namespacename-in-the-root-namespace-fullnamespacename-is-not-cls-compliant"></a>El nombre \<namespacename> del espacio de nombres raíz \<fullnamespacename> no es compatible con CLS
+Un ensamblado está marcado como `<CLSCompliant(True)>` , pero un elemento del nombre del espacio de nombres raíz comienza con un carácter de subrayado ( `_` ).  
   
- Un elemento de programación puede contener uno o más guiones bajos, pero para que sea compatible con la [independencia del lenguaje y los componentes independientes del lenguaje](../../../standard/language-independence-and-language-independent-components.md) (CLS), no debe comenzar con un carácter de subrayado. Vea [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+ Un elemento de programación puede contener uno o más guiones bajos, pero para que sea compatible con la [independencia del lenguaje y los componentes independientes del lenguaje](../../../standard/language-independence-and-language-independent-components.md) (CLS), no debe comenzar con un carácter de subrayado. Vea [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).  
   
  Al aplicar <xref:System.CLSCompliantAttribute> a un elemento de programación, establezca el parámetro `isCompliant` del atributo en `True` o `False` para indicar conformidad o disconformidad. No hay ningún valor predeterminado para este parámetro, por lo que debe proporcionar uno.  
   
@@ -31,13 +31,13 @@ Un ensamblado se marca como `<CLSCompliant(True)>`, pero un elemento del nombre 
   
 - Si requiere la conformidad con CLS, cambie el nombre del espacio de nombres raíz para que ninguno de sus elementos comience con un carácter de subrayado.  
   
-- Si requiere que el nombre del espacio de nombres permanezca inalterado, quite el <xref:System.CLSCompliantAttribute> del ensamblado o márquelo como `<CLSCompliant(False)>`.  
+- Si requiere que el nombre del espacio de nombres permanezca inalterado, quite el del <xref:System.CLSCompliantAttribute> ensamblado o márquelo como `<CLSCompliant(False)>` .  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Namespace (instrucción)](../../../visual-basic/language-reference/statements/namespace-statement.md)
-- [Espacios de nombres en Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
-- [-rootnamespace](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)
+- [Namespace (Instrucción)](../statements/namespace-statement.md)
+- [Espacios de nombres en Visual Basic](../../programming-guide/program-structure/namespaces.md)
+- [-rootnamespace](../../reference/command-line-compiler/rootnamespace.md)
 - [Página de aplicación, Diseñador de proyectos (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
-- [Nombres de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
-- [Convenciones de nomenclatura de Visual Basic](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+- [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Convenciones de nomenclatura de Visual Basic](../../programming-guide/program-structure/naming-conventions.md)

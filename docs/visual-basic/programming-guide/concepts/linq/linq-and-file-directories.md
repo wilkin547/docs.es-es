@@ -2,12 +2,12 @@
 title: LINQ y directorios de archivos
 ms.date: 07/20/2015
 ms.assetid: 159fd5c3-3926-4071-ae78-d8e423287eb7
-ms.openlocfilehash: 390d3c7a1c738aea0df8e3dcad0edb70563f8fb6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9738dc2b07b33b2d96f8134e8418c54aae53e6a1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347798"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397524"
 ---
 # <a name="linq-and-file-directories-visual-basic"></a>LINQ y directorios de archivos (Visual Basic)
 Muchas operaciones de sistema de archivos son esencialmente consultas y, por tanto, son adecuadas para el enfoque LINQ.  
@@ -16,22 +16,22 @@ Muchas operaciones de sistema de archivos son esencialmente consultas y, por tan
   
  Esta sección contiene los siguientes temas:  
   
- [Cómo: buscar archivos con un nombre o atributo especificados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)  
+ [Cómo: buscar archivos con un nombre o atributo especificados (Visual Basic)](how-to-query-for-files-with-a-specified-attribute-or-name.md)  
  Muestra cómo buscar archivos examinando una o más propiedades de su objeto <xref:System.IO.FileInfo>.  
   
- [Cómo: agrupar archivos por extensión (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
+ [Cómo: agrupar archivos por extensión (LINQ) (Visual Basic)](how-to-group-files-by-extension-linq.md)  
  Muestra cómo devolver grupos del objeto <xref:System.IO.FileInfo> basándose en su extensión de nombre de archivo.  
   
- [Cómo: buscar el número total de bytes en un conjunto de carpetas (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders.md)  
+ [Cómo: buscar el número total de bytes en un conjunto de carpetas (LINQ) (Visual Basic)](how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders.md)  
  Muestra cómo devolver el número total de bytes en todos los archivos en un árbol de directorio especificado.  
   
- [Cómo: comparar el contenido de dos carpetas (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)s  
+ [Cómo: comparar el contenido de dos carpetas (LINQ) (Visual Basic)](how-to-compare-the-contents-of-two-folders-linq.md)s  
  Muestra cómo devolver todos los archivos que se encuentran en dos carpetas especificadas y también todos los archivos que se encuentran en una carpeta pero no en la otra.  
   
- [Cómo: buscar el archivo o archivos de mayor tamaño en un árbol de directorios (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)  
+ [Cómo buscar el archivo o archivos de mayor tamaño en un árbol de directorios (LINQ) (Visual Basic)](how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)  
  Muestra cómo devolver el archivo mayor o menor, o un número especificado de archivos, en un árbol de directorios.  
   
- [Cómo: consultar Archivos duplicados en un árbol de directorios (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)  
+ [Cómo: consultar Archivos duplicados en un árbol de directorios (LINQ) (Visual Basic)](how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)  
  Muestra cómo agrupar todos los nombres de archivo que aparecen en más de una ubicación en un árbol de directorio especificado. También muestra cómo realizar comparaciones más complejas basadas en un comparador personalizado.  
   
  [Cómo consultar el contenido de los archivos de una carpeta (LINQ) (Visual Basic)](how-to-query-the-contents-of-files-in-a-folder-linq.md)  
@@ -42,4 +42,4 @@ Muchas operaciones de sistema de archivos son esencialmente consultas y, por tan
   
 ## <a name="see-also"></a>Vea también
 
-- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ to Objects (Visual Basic)](linq-to-objects.md)

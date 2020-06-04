@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - BC42326
 ms.assetid: 63214dc6-0112-4245-8ebf-7c9e8f5a5782
-ms.openlocfilehash: 52107589c6bbebbd34ecbb090845f4031612c276
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 07ace3f1b9c5e512227dc1f718ef768b631c8303
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72578937"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397381"
 ---
 # <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a>La expresión lambda no se quitará de este controlador de eventos
 
 La expresión lambda no se quitará de este controlador de eventos. Asigne la expresión lambda a una variable y use la variable para agregar y quitar el evento.
 
-Cuando se usan expresiones lambda con controladores de eventos, es posible que no vea el comportamiento que espera. El compilador genera un nuevo método para cada definición de expresión lambda, incluso si son idénticos. Por lo tanto, el código siguiente muestra `False`.
+Cuando se usan expresiones lambda con controladores de eventos, es posible que no vea el comportamiento que espera. El compilador genera un nuevo método para cada definición de expresión lambda, incluso si son idénticos. Por lo tanto, se muestra el código siguiente `False` .
 
 ```vb
 Module Module1
@@ -34,7 +34,7 @@ Module Module1
 End Module
 ```
 
-Cuando se usan expresiones lambda con controladores de eventos, esto puede provocar resultados inesperados. En el ejemplo siguiente, la instrucción `RemoveHandler` no quita la expresión lambda agregada por `AddHandler`.
+Cuando se usan expresiones lambda con controladores de eventos, esto puede provocar resultados inesperados. En el siguiente ejemplo, la expresión lambda agregada por `AddHandler` no se quita mediante la `RemoveHandler` instrucción.
 
 ```vb
 Module Module1
@@ -61,7 +61,7 @@ De forma predeterminada, este mensaje es una advertencia. Para más información
 
 ## <a name="to-correct-this-error"></a>Para corregir este error
 
-Para evitar la advertencia y quitar la expresión lambda, asigne la expresión lambda a una variable y use la variable en las instrucciones `AddHandler` y `RemoveHandler`, tal y como se muestra en el ejemplo siguiente.
+Para evitar la advertencia y quitar la expresión lambda, asigne la expresión lambda a una variable y use la variable en las `AddHandler` instrucciones y `RemoveHandler` , tal y como se muestra en el ejemplo siguiente.
 
 ```vb
 Module Module1
@@ -85,8 +85,8 @@ Module Module1
 End Module
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Expresiones lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
-- [Conversión de delegado flexible](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
-- [Eventos](../../../visual-basic/programming-guide/language-features/events/index.md)
+- [Expresiones lambda](../../programming-guide/language-features/procedures/lambda-expressions.md)
+- [Conversión de delegado flexible](../../programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [Eventos](../../programming-guide/language-features/events/index.md)

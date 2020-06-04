@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: Agrupar archivos por extensión (LINQ)'
+title: Procedimiento para agrupar archivos por extensión (LINQ)
 ms.date: 07/20/2015
 ms.assetid: 904dc6d7-7162-4655-a7f4-5785d669bc5a
-ms.openlocfilehash: 4d2c51fa62b3ec144bc5ad51b4a9f8305476645e
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 67c48cd735b51009835cbc8df3101ea3cb212a87
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78267033"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396550"
 ---
-# <a name="how-to-group-files-by-extension-linq-visual-basic"></a>Cómo: Agrupar archivos por extensión (LINQ) (Visual Basic)
+# <a name="how-to-group-files-by-extension-linq-visual-basic"></a>Cómo: agrupar archivos por extensión (LINQ) (Visual Basic)
 En este ejemplo se muestra cómo se puede usar LINQ para efectuar operaciones avanzadas de agrupación y ordenación en listas de archivos o de carpetas. También muestra cómo paginar la salida en la ventana de consola mediante los métodos <xref:System.Linq.Enumerable.Skip%2A> y <xref:System.Linq.Enumerable.Take%2A>.  
   
 ## <a name="example"></a>Ejemplo  
@@ -94,9 +94,9 @@ End Module
  La salida de este programa puede ser larga, dependiendo de los detalles del sistema de archivos local y de la configuración de `startFolder`. Para habilitar la visualización de todos los resultados, en este ejemplo se muestra cómo paginar los resultados. Se pueden aplicar las mismas técnicas a las aplicaciones web y Windows. Observe que, como el código pagina los elementos en un grupo, se necesita un bucle `For Each` anidado. También hay alguna lógica adicional para calcular la posición actual en la lista y para permitir que el usuario detenga la paginación y salga del programa. En este caso en concreto, la consulta de paginación se ejecuta en los resultados almacenados en caché de la consulta original. En otros contextos, como en LINQ to SQL, este almacenamiento en caché no es necesario.  
   
 ## <a name="compile-the-code"></a>Compilar el código  
-Cree un proyecto de aplicación `Imports` de consola de Visual Basic, con una instrucción para el espacio de nombres System.Linq.
+Cree un proyecto de aplicación de consola de Visual Basic, con una `Imports` instrucción para el espacio de nombres System. Linq.
   
 ## <a name="see-also"></a>Vea también
 
-- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ y directorios de archivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ to Objects (Visual Basic)](linq-to-objects.md)
+- [LINQ y directorios de archivos (Visual Basic)](linq-and-file-directories.md)

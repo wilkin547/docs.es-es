@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30617
 ms.assetid: 5e9de8e5-d26b-4fb2-9e28-814413fe9cef
-ms.openlocfilehash: fc3c102dbfe7c55e66093421bc11379d48ba000d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d01c30571fc34e142300ac8706c56d5e99175fcf
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592096"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397212"
 ---
 # <a name="module-statements-can-occur-only-at-file-or-namespace-level"></a>Las instrucciones 'Module' sólo pueden ocurrir en el nivel de archivo o de espacio de nombres
-`Module` las instrucciones deben aparecer en la parte superior del archivo de origen inmediatamente después de `Option` y `Imports` instrucciones, los atributos globales y las declaraciones de espacio de nombres, pero antes de todas las demás declaraciones.  
+`Module`las instrucciones deben aparecer en la parte superior del archivo de código fuente inmediatamente después de las `Option` `Imports` instrucciones y, los atributos globales y las declaraciones de espacio de nombres, pero antes de todas las demás declaraciones.  
   
  **Identificador de error:** BC30617  
   
@@ -23,6 +23,6 @@ ms.locfileid: "64592096"
   
 - Mueva la instrucción `Module` a la parte superior de la declaración del espacio de nombres o el archivo de código fuente.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Module (instrucción)](../../../visual-basic/language-reference/statements/module-statement.md)
+- [Module (Instrucción)](../statements/module-statement.md)

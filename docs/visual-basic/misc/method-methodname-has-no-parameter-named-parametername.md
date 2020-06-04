@@ -1,23 +1,23 @@
 ---
-title: Método '<methodname>'no tiene ningún parámetro denominado'<parametername>'
+title: El método ' <methodname> ' no tiene un parámetro denominado ' <parametername> '
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_InvalidNamedArg2
 ms.assetid: b4346b6a-87da-4e65-a2de-ee5239c671f8
-ms.openlocfilehash: aa9d34b0beccd664a4f6a001df3c80936de937e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 831420e92dc8e1ae88719a738b32ad40abd49d8d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938416"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402101"
 ---
-# <a name="method-methodname-has-no-parameter-named-parametername"></a>Método '\<methodname >' no tiene ningún parámetro denominado '\<parametername >'
+# <a name="method-methodname-has-no-parameter-named-parametername"></a>El método ' \<methodname> ' no tiene un parámetro denominado ' \<parametername> '
 Un argumento con nombre proporcionado no coincide con ninguno de los argumentos del método de destino.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
 1. Asegúrese de que el argumento con nombre se proporcionó correctamente.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Paso de argumentos por valor y por referencia](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [Pasar argumentos por valor y por referencia](../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

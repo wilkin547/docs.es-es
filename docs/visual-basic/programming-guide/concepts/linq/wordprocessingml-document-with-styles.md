@@ -1,13 +1,13 @@
 ---
-title: Documento de WordprocessingML con Styles2
+title: Documento WordprocessingML con Styles2
 ms.date: 07/20/2015
 ms.assetid: a9136e4d-c368-4661-8049-7d45c679a236
-ms.openlocfilehash: 977de8e4272ca7cea004127adcf1b15726dcc211
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: caf80014077bf57dc1ffb8eaeac6390cf4258015
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907951"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403555"
 ---
 # <a name="wordprocessingml-document-with-styles"></a>Documento de WordprocessingML con estilos
 Los documentos WordprocessingML más complicados tienen párrafos formateados con estilos.  
@@ -17,7 +17,7 @@ Los documentos WordprocessingML más complicados tienen párrafos formateados co
  Cuando se obtiene acceso a los paquetes, es importante hacerlo mediante la relación entre las partes, en lugar de usar una ruta de acceso arbitraria. Este problema se encuentra fuera del ámbito del tutorial Manipular contenido en un documento de WordprocessingML, aunque los programas de ejemplo incluidos en este tutorial demuestran el método correcto.  
   
 ## <a name="a-document-that-uses-styles"></a>Documento que usa estilos  
- El ejemplo de WordML presentado en el [forma de los documentos WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) tema es muy simple. El documento siguiente es más complicado: tiene párrafos formateados con estilos. La manera más fácil de ver el XML que constituye un documento de Office Open XML consiste en ejecutar el [ejemplo ese Outputs Office Open XML partes de un documento (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md).  
+ El ejemplo de WordML presentado en el tema [forma de documentos WordprocessingML (Visual Basic)](shape-of-wordprocessingml-documents.md) es muy sencillo. El documento siguiente es más complicado: tiene párrafos que están formateados con estilos. La forma más fácil de ver el XML que conforma un documento XML abierto de Office es ejecutar el [ejemplo que genera elementos de documento de Office Open XML (Visual Basic)](example-that-outputs-office-open-xml-document-parts.md).  
   
  En el documento siguiente, el primer párrafo tiene el estilo `Heading1`. Hay varios párrafos que tienen el estilo predeterminado. Asimismo, existen diversos párrafos con el estilo `Code`. Debido a esta complejidad relativa, resulta más interesante analizar este documento con LINQ to XML.  
   
@@ -137,6 +137,6 @@ Los documentos WordprocessingML más complicados tienen párrafos formateados co
 </w:document>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Detalles de Office Open XML WordprocessingML Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+- [Detalles de los documentos WordprocessingML de Office Open XML (Visual Basic)](details-of-office-open-xml-wordprocessingml-documents.md)

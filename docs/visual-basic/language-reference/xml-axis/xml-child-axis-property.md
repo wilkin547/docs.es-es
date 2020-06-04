@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XML child axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 89a59d00-985e-4f5c-b59f-29b47bad11cb
-ms.openlocfilehash: 728c17cd2ed8661e0a5f1f2b8e929059713a1edf
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 90dc22d12be5566fa1ee40f6b0e48eff8088e67b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75545118"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400271"
 ---
 # <a name="xml-child-axis-property-visual-basic"></a>Propiedades de eje secundario XML (Visual Basic)
 Proporciona el acceso a los elementos secundarios de uno de los siguientes: un objeto <xref:System.Xml.Linq.XElement>, un objeto <xref:System.Xml.Linq.XDocument>, una colección de objetos <xref:System.Xml.Linq.XElement> o una colección de objetos <xref:System.Xml.Linq.XDocument>.  
@@ -26,25 +26,25 @@ Proporciona el acceso a los elementos secundarios de uno de los siguientes: un o
 object.<child>  
 ```  
   
-## <a name="parts"></a>Componentes de  
+## <a name="parts"></a>Partes  
   
-|Término|de esquema JSON|  
+|Término|Definición|  
 |---|---|  
-|`object`|Obligatoria. Un objeto <xref:System.Xml.Linq.XElement>, un objeto <xref:System.Xml.Linq.XDocument>, una colección de objetos <xref:System.Xml.Linq.XElement> o una colección de objetos <xref:System.Xml.Linq.XDocument>.|  
-|.<|Obligatoria. Denota el inicio de una propiedad de eje secundario.|  
-|`child`|Obligatoria. Nombre de los nodos secundarios a los que se va a tener acceso, con el formato `[prefix:]name`.<br /><br /> -   `Prefix`: opcional. Prefijo de espacio de nombres XML para el nodo secundario. Debe ser un espacio de nombres XML global definido con una instrucción `Imports`.<br />-   `Name`: necesario. Nombre del nodo secundario local. Vea [nombres de atributos y elementos XML declarados](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
-|>|Obligatoria. Denota el final de una propiedad de eje secundario.|  
+|`object`|Obligatorio. Un objeto <xref:System.Xml.Linq.XElement>, un objeto <xref:System.Xml.Linq.XDocument>, una colección de objetos <xref:System.Xml.Linq.XElement> o una colección de objetos <xref:System.Xml.Linq.XDocument>.|  
+|. <|Necesario. Denota el inicio de una propiedad de eje secundario.|  
+|`child`|Necesario. Nombre de los nodos secundarios a los que se va a tener acceso, del formulario `[prefix:]name` .<br /><br /> -   `Prefix`Opta. Prefijo de espacio de nombres XML para el nodo secundario. Debe ser un espacio de nombres XML global definido con una instrucción `Imports`.<br />-   `Name`Desee. Nombre del nodo secundario local. Vea [nombres de atributos y elementos XML declarados](../../programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
+|>|Necesario. Denota el final de una propiedad de eje secundario.|  
   
 ## <a name="return-value"></a>Valor devuelto  
- Una colección de objetos <xref:System.Xml.Linq.XElement>.  
+ Colección de objetos <xref:System.Xml.Linq.XElement>.  
   
-## <a name="remarks"></a>Notas  
- Puede usar una propiedad de eje secundario XML para tener acceso a los nodos secundarios por nombre desde un objeto <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument>, o desde una colección de objetos <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument>. Utilice la propiedad XML `Value` para tener acceso al valor del primer nodo secundario de la colección devuelta. Para obtener más información, vea [propiedad valor XML](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
+## <a name="remarks"></a>Observaciones  
+ Puede usar una propiedad de eje secundario XML para tener acceso a los nodos secundarios por nombre desde un objeto <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument>, o desde una colección de objetos <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument>. Utilice la propiedad XML `Value` para tener acceso al valor del primer nodo secundario de la colección devuelta. Para obtener más información, vea [propiedad valor XML](xml-value-property.md).  
   
- El compilador Visual Basic convierte las propiedades del eje secundario en llamadas al método <xref:System.Xml.Linq.XContainer.Elements%2A>.  
+ El compilador Visual Basic convierte las propiedades del eje secundario en llamadas al <xref:System.Xml.Linq.XContainer.Elements%2A> método.  
   
 ## <a name="xml-namespaces"></a>Espacios de nombres XML  
- El nombre de una propiedad de eje secundario puede usar únicamente prefijos de espacios de nombres XML declarados globalmente con la instrucción `Imports`. No puede utilizar prefijos de espacio de nombres XML declarados localmente dentro de literales de elemento XML. Para obtener más información, vea [instrucción Imports (espacio de nombres XML)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).  
+ El nombre de una propiedad de eje secundario puede usar únicamente prefijos de espacios de nombres XML declarados globalmente con la instrucción `Imports`. No puede utilizar prefijos de espacio de nombres XML declarados localmente dentro de literales de elemento XML. Para obtener más información, vea [instrucción Imports (espacio de nombres XML)](../statements/imports-statement-xml-namespace.md).  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo obtener acceso a los nodos secundarios llamados `phone` desde el objeto `contact`.  
@@ -73,10 +73,10 @@ object.<child>
   
  `Patrick Hines`  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Xml.Linq.XElement>
-- [Propiedades del eje XML](../../../visual-basic/language-reference/xml-axis/index.md)
-- [Literales XML](../../../visual-basic/language-reference/xml-literals/index.md)
-- [Crear XML en Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
-- [Nombres de atributos y elementos XML declarados](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
+- [Propiedades de eje XML](index.md)
+- [Literales XML](../xml-literals/index.md)
+- [Crear XML en Visual Basic](../../programming-guide/language-features/xml/creating-xml.md)
+- [Nombres de atributos y elementos XML declarados](../../programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
