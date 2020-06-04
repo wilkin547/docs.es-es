@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
-ms.openlocfilehash: 42177f22e632e4a05b1f0b4d934f3e56ab9ff0f2
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: e3a9f4cf2f4105d2c449813bf0c593860df7d1f0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698568"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409535"
 ---
-# <a name="expression-recursively-calls-the-containing-property-propertyname"></a>La expresión llama de forma recursiva a la propiedad contenedora '\<PropertyName > '
-Una instrucción en el procedimiento `Set` de una definición de propiedad almacena un valor en el nombre de la propiedad.  
+# <a name="expression-recursively-calls-the-containing-property-propertyname"></a>La expresión llama de forma recursiva a la propiedad contenedora '\<propertyname>'
+Una instrucción en el `Set` procedimiento de una definición de propiedad almacena un valor en el nombre de la propiedad.  
   
- El enfoque recomendado para contener el valor de una propiedad es definir una variable `Private` en el contenedor de la propiedad y utilizarla en los procedimientos `Get` y `Set`. A continuación, el procedimiento `Set` debe almacenar el valor entrante en esta variable `Private`.  
+ El enfoque recomendado para contener el valor de una propiedad es definir una `Private` variable en el contenedor de la propiedad y utilizarla en los `Get` procedimientos y `Set` . `Set`Después, el procedimiento debe almacenar el valor de entrada en esta `Private` variable.  
   
- El procedimiento `Get` se comporta como un procedimiento `Function`, por lo que puede asignar un valor al nombre de la propiedad y devolver el control al encontrar la instrucción `End Get`. Sin embargo, el enfoque recomendado consiste en incluir la variable `Private` como valor en una [instrucción return](../../../visual-basic/language-reference/statements/return-statement.md).  
+ El `Get` procedimiento se comporta como un `Function` procedimiento, por lo que puede asignar un valor al nombre de la propiedad y devolver el control al encontrar la `End Get` instrucción. Sin embargo, el enfoque recomendado consiste en incluir la `Private` variable como valor en una [instrucción return](../statements/return-statement.md).  
   
- El procedimiento `Set` se comporta como un procedimiento `Sub`, que no devuelve ningún valor. Por lo tanto, el nombre del procedimiento o de la propiedad no tiene ningún significado especial dentro de un procedimiento de `Set`, y no se puede almacenar un valor en él.  
+ El `Set` procedimiento se comporta como un `Sub` procedimiento, que no devuelve un valor. Por lo tanto, el nombre del procedimiento o de la propiedad no tiene ningún significado especial dentro de un `Set` procedimiento, y no se puede almacenar un valor en él.  
   
  En el ejemplo siguiente se muestra el enfoque que puede producir este error, seguido del enfoque recomendado.  
   
@@ -63,8 +63,8 @@ End Class
   
 - Vuelva a escribir la definición de la propiedad para usar el enfoque recomendado, tal como se muestra en el ejemplo anterior.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Procedimientos de propiedades](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
-- [Property (instrucción)](../../../visual-basic/language-reference/statements/property-statement.md)
-- [Set (instrucción)](../../../visual-basic/language-reference/statements/set-statement.md)
+- [Procedimientos de propiedad](../../programming-guide/language-features/procedures/property-procedures.md)
+- [Property Statement](../statements/property-statement.md)
+- [Set (instrucción)](../statements/set-statement.md)

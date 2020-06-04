@@ -5,14 +5,14 @@ helpviewer_keywords:
 - example XML tag
 - <example> XML tag
 ms.assetid: 90eeda1c-3fc4-427c-879c-5046d265a97c
-ms.openlocfilehash: 8f36ac1337dd0d1400180fbd3deae2bb24ad9c58
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 42f40581d252956433165789d6674234a295867c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348478"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400153"
 ---
-# <a name="example-visual-basic"></a>> de ejemplo \<(Visual Basic)
+# <a name="example-visual-basic"></a>\<example> (Visual Basic)
 Especifica un ejemplo para el miembro.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -26,15 +26,15 @@ Especifica un ejemplo para el miembro.
  Una descripción del ejemplo de código.  
   
 ## <a name="remarks"></a>Comentarios  
- La etiqueta `<example>` permite especificar un ejemplo de cómo usar un método u otro miembro de la biblioteca. Esto normalmente implica el uso de la etiqueta [\<code>](../../../visual-basic/language-reference/xmldoc/code.md).  
+ La `<example>` etiqueta le permite especificar un ejemplo de cómo usar un método u otro miembro de la biblioteca. Normalmente, esto implica el uso de la [\<code>](code.md) etiqueta.  
   
- Compile con [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) para procesar los comentarios de documentación de un archivo.  
+ Compile con [-doc](../../reference/command-line-compiler/doc.md) para procesar los comentarios de documentación de un archivo.  
   
 ## <a name="example"></a>Ejemplo  
- En este ejemplo se usa la etiqueta `<example>` para incluir un ejemplo de uso del campo `ID`.  
+ En este ejemplo se usa la `<example>` etiqueta para incluir un ejemplo de uso del `ID` campo.  
   
  [!code-vb[VbVbcnXmlDocComments#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#2)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Etiquetas XML para comentarios](../../../visual-basic/language-reference/xmldoc/index.md)
+- [Etiquetas de comentario XML](index.md)

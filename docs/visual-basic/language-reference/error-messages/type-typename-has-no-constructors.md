@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30251
 ms.assetid: aff3e1df-abe6-4bc0-9abc-a1e70514c561
-ms.openlocfilehash: 506b69f1db12a51217d10ad261b1f1a44bfb2008
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: de0d825c7eec603f3ad1e43b1e4aaa0cc78fd1db
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198159"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408515"
 ---
-# <a name="type-typename-has-no-constructors"></a>El tipo '\<TypeName > ' no tiene constructores
+# <a name="type-typename-has-no-constructors"></a>El tipo '\<typename>' no tiene ningún constructor
 Un tipo no admite una llamada a `Sub New()`. Una causa probable puede ser un archivo binario o un compilador dañado.  
   
  **Identificador de error:** BC30251  
@@ -29,7 +29,7 @@ Un tipo no admite una llamada a `Sub New()`. Una causa probable puede ser un arc
   
 4. Si el error persiste, reúna información sobre las circunstancias y notifíquelo a los Servicios de soporte técnico de Microsoft.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Objetos y clases](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Objetos y clases](../../programming-guide/language-features/objects-and-classes/index.md)
 - [Hable con nosotros](/visualstudio/ide/feedback-options)

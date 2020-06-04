@@ -1,5 +1,5 @@
 ---
-title: Order By (Cláusula)
+title: Cláusula Order By
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QueryOrderBy
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Order By clause [Visual Basic]
 - Order By statement [Visual Basic]
 ms.assetid: fa911282-6b81-44c7-acfa-46b5bb93df75
-ms.openlocfilehash: a7104e3dd82ff2dde2911861ce98a7367faf3b25
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 63f454064e88bc18f252940f3abd8e59b8900e5b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350427"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84359753"
 ---
 # <a name="order-by-clause-visual-basic"></a>Order By (Cláusula, Visual Basic)
 Especifica el criterio de ordenación para el resultado de una consulta.  
@@ -26,33 +26,33 @@ Especifica el criterio de ordenación para el resultado de una consulta.
 Order By orderExp1 [ Ascending | Descending ] [, orderExp2 [...] ]  
 ```  
   
-## <a name="parts"></a>Elementos  
+## <a name="parts"></a>Partes  
  `orderExp1`  
- Obligatorio. Uno o más campos del resultado de la consulta actual que identifican cómo ordenar los valores devueltos. Los nombres de campo deben estar separados por comas (,). Puede identificar cada campo como ordenado en orden ascendente o descendente mediante el uso de las palabras clave `Ascending` o `Descending`. Si no se especifica ninguna palabra clave `Ascending` o `Descending`, el criterio de ordenación predeterminado es ascendente. Los campos de criterio de ordenación tienen prioridad de izquierda a derecha.  
+ Necesario. Uno o más campos del resultado de la consulta actual que identifican cómo ordenar los valores devueltos. Los nombres de campo deben estar separados por comas (,). Puede identificar cada campo como ordenado en orden ascendente o descendente mediante el uso de las `Ascending` `Descending` palabras clave o. Si no `Ascending` `Descending` se especifica ninguna palabra clave o, el criterio de ordenación predeterminado es ascendente. Los campos de criterio de ordenación tienen prioridad de izquierda a derecha.  
   
-## <a name="remarks"></a>Comentarios  
- Puede utilizar la cláusula `Order By` para ordenar los resultados de una consulta. La cláusula `Order By` solo puede ordenar un resultado en función de la variable de rango del ámbito actual. Por ejemplo, la cláusula `Select` introduce un nuevo ámbito en una expresión de consulta con nuevas variables de iteración para ese ámbito. Las variables de rango definidas antes de una cláusula de `Select` en una consulta no están disponibles después de la cláusula `Select`. Por lo tanto, si desea ordenar los resultados por un campo que no está disponible en la cláusula `Select`, debe colocar la cláusula `Order By` antes de la cláusula `Select`. Un ejemplo de Cuándo tendría que hacer esto es cuando desea ordenar la consulta por campos que no se devuelven como parte del resultado.  
+## <a name="remarks"></a>Observaciones  
+ Puede utilizar la `Order By` cláusula para ordenar los resultados de una consulta. La `Order By` cláusula solo puede ordenar un resultado en función de la variable de rango del ámbito actual. Por ejemplo, la `Select` cláusula introduce un nuevo ámbito en una expresión de consulta con nuevas variables de iteración para ese ámbito. Las variables de rango definidas antes de una `Select` cláusula en una consulta no están disponibles después de la `Select` cláusula. Por lo tanto, si desea ordenar los resultados por un campo que no está disponible en la `Select` cláusula, debe colocar la `Order By` cláusula delante de la `Select` cláusula. Un ejemplo de Cuándo tendría que hacer esto es cuando desea ordenar la consulta por campos que no se devuelven como parte del resultado.  
   
- El orden ascendente y descendente de un campo viene determinado por la implementación de la interfaz <xref:System.IComparable> para el tipo de datos del campo. Si el tipo de datos no implementa la interfaz <xref:System.IComparable>, se omite el criterio de ordenación.  
+ El orden ascendente y descendente de un campo viene determinado por la implementación de la <xref:System.IComparable> interfaz para el tipo de datos del campo. Si el tipo de datos no implementa la <xref:System.IComparable> interfaz, se omite el criterio de ordenación.  
   
 ## <a name="example"></a>Ejemplo  
- La siguiente expresión de consulta utiliza una cláusula `From` para declarar una variable de rango `book` para la colección `books`. La cláusula `Order By` ordena el resultado de la consulta por precio en orden ascendente (el valor predeterminado). Los libros con el mismo precio se ordenan por título en orden ascendente. La cláusula `Select` selecciona las propiedades `Title` y `Price` como los valores devueltos por la consulta.  
+ La siguiente expresión de consulta utiliza una `From` cláusula para declarar una variable `book` de rango para la `books` colección. La `Order By` cláusula ordena el resultado de la consulta por precio en orden ascendente (el valor predeterminado). Los libros con el mismo precio se ordenan por título en orden ascendente. La `Select` cláusula selecciona las `Title` `Price` propiedades y como los valores devueltos por la consulta.  
   
  [!code-vb[VbSimpleQuerySamples#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#24)]  
   
 ## <a name="example"></a>Ejemplo  
- La siguiente expresión de consulta utiliza la cláusula `Order By` para ordenar el resultado de la consulta por precio en orden descendente. Los libros con el mismo precio se ordenan por título en orden ascendente.  
+ La siguiente expresión de consulta utiliza la `Order By` cláusula para ordenar el resultado de la consulta por precio en orden descendente. Los libros con el mismo precio se ordenan por título en orden ascendente.  
   
  [!code-vb[VbSimpleQuerySamples#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#25)]  
   
 ## <a name="example"></a>Ejemplo  
- La siguiente expresión de consulta utiliza una cláusula `Select` para seleccionar el título del libro, el precio, la fecha de publicación y el autor. A continuación, rellena los campos `Title`, `Price`, `PublishDate`y `Author` de la variable de rango para el nuevo ámbito. La cláusula `Order By` ordena la nueva variable de rango por nombre de autor, título del libro y, a continuación, precio. Cada columna se ordena en el orden predeterminado (ascendente).  
+ La siguiente expresión de consulta utiliza una `Select` cláusula para seleccionar el título del libro, el precio, la fecha de publicación y el autor. A continuación, rellena los `Title` `Price` campos,, `PublishDate` y `Author` de la variable de rango para el nuevo ámbito. La `Order By` cláusula ordena la nueva variable de rango por nombre de autor, título del libro y, a continuación, precio. Cada columna se ordena en el orden predeterminado (ascendente).  
   
  [!code-vb[VbSimpleQuerySamples#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#26)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [Consultas](../../../visual-basic/language-reference/queries/index.md)
-- [Select (cláusula)](../../../visual-basic/language-reference/queries/select-clause.md)
-- [From (cláusula)](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Introducción a LINQ en Visual Basic](../../programming-guide/language-features/linq/introduction-to-linq.md)
+- [Consultas](index.md)
+- [Select (cláusula)](select-clause.md)
+- [Cláusula FROM](from-clause.md)

@@ -2,12 +2,12 @@
 title: Operaciones de proyección
 ms.date: 07/20/2015
 ms.assetid: b8d38e6d-21cf-4619-8dbb-94476f4badc7
-ms.openlocfilehash: d7efb46ccfe3208ae6c58043a64c236171d0c147
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4795bdaba53949b34fe380ea9c51025ce43c40db
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346631"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396342"
 ---
 # <a name="projection-operations-visual-basic"></a>Operaciones de proyección (Visual Basic)
 
@@ -17,7 +17,7 @@ Los métodos del operador de consulta estándar que realizan proyecciones se ind
 
 ## <a name="methods"></a>Métodos
 
-|Nombre del método|Descripción|Visual Basic sintaxis de expresiones de consulta|Más información|
+|Nombre del método|Description|Visual Basic sintaxis de expresiones de consulta|Más información|
 |-----------------|-----------------|------------------------------------------|----------------------|
 |Seleccionar|Proyecta valores basados en una función de transformación.|`Select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType>|
 |SelectMany|Proyecta secuencias de valores que se basan en una función de transformación y después los convierte en una secuencia.|Use varias cláusulas `From`|<xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SelectMany%2A?displayProperty=nameWithType>|
@@ -52,7 +52,7 @@ MsgBox(sb.ToString())
 
 ### <a name="selectmany"></a>SelectMany
 
-En el ejemplo siguiente se utilizan varias cláusulas `From` para proyectar cada palabra de cada cadena en una lista de cadenas.
+En el ejemplo siguiente se usan varias `From` cláusulas para proyectar cada palabra de cada cadena en una lista de cadenas.
 
 ```vb
 Dim phrases = New List(Of String) From {"an apple a day", "the quick brown fox"}
@@ -178,9 +178,9 @@ End Sub
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Linq>
-- [Información general sobre operadores de consulta estándar (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Select (cláusula)](../../../../visual-basic/language-reference/queries/select-clause.md)
-- [Cómo: Combinar datos con cláusulas Join](../../../../visual-basic/programming-guide/language-features/linq/how-to-combine-data-with-linq-by-using-joins.md)
-- [Cómo: rellenar colecciones de objetos de varios orígenes (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)
-- [Devolver el resultado de una consulta con LINQ como tipo específico](../../../../visual-basic/programming-guide/language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)
-- [Cómo: dividir un archivo en varios archivos mediante el uso de grupos (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [Información general sobre operadores de consulta estándar (Visual Basic)](standard-query-operators-overview.md)
+- [Select (cláusula)](../../../language-reference/queries/select-clause.md)
+- [Cómo: Combinar datos con cláusulas Join](../../language-features/linq/how-to-combine-data-with-linq-by-using-joins.md)
+- [Cómo: rellenar colecciones de objetos de varios orígenes (LINQ) (Visual Basic)](how-to-populate-object-collections-from-multiple-sources-linq.md)
+- [Procedimiento para devolver el resultado de una consulta con LINQ como tipo específico](../../language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)
+- [Cómo: dividir un archivo en varios archivos mediante el uso de grupos (LINQ) (Visual Basic)](how-to-split-a-file-into-many-files-by-using-groups-linq.md)
