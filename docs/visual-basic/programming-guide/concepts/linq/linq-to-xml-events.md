@@ -2,12 +2,12 @@
 title: Eventos de LINQ to XML
 ms.date: 07/20/2015
 ms.assetid: 34923928-b99c-4004-956e-38f6db25e910
-ms.openlocfilehash: 06191fb94f808d9a3ece8de000dec1c5de769dde
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d00f6f1b2a14ac73c1bcd4a1f74b9714ca304da3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351924"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84368821"
 ---
 # <a name="linq-to-xml-events-visual-basic"></a>Eventos de LINQ to XML (Visual Basic)
 Los eventos de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] permiten recibir notificaciones cuando se modifica un árbol XML.  
@@ -19,21 +19,21 @@ Los eventos de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] permiten re
 ## <a name="types-and-events"></a>Tipos y eventos  
  Puede utilizar los siguientes tipos a la hora de trabajar con eventos:  
   
-|Tipo|Descripción|  
+|Tipo|Description|  
 |----------|-----------------|  
 |<xref:System.Xml.Linq.XObjectChange>|Especifica el tipo de evento cuando se genera éste para un <xref:System.Xml.Linq.XObject>.|  
 |<xref:System.Xml.Linq.XObjectChangeEventArgs>|Proporciona datos para los eventos <xref:System.Xml.Linq.XObject.Changing> y <xref:System.Xml.Linq.XObject.Changed>.|  
   
  Los siguientes eventos se generan cuando se modifica un árbol XML:  
   
-|Evento|Descripción|  
+|evento|Description|  
 |-----------|-----------------|  
 |<xref:System.Xml.Linq.XObject.Changing>|Se produce justo antes de que este <xref:System.Xml.Linq.XObject> o cualquiera de sus descendientes se vayan a modificar.|  
 |<xref:System.Xml.Linq.XObject.Changed>|Se produce cuando ha cambiado un <xref:System.Xml.Linq.XObject> o cualquiera de sus descendientes.|  
   
 ## <a name="example"></a>Ejemplo  
   
-### <a name="description"></a>Descripción  
+### <a name="description"></a>Description  
  Los eventos resultan útiles cuando desea mantener cierta información de agregado en un árbol XML. Por ejemplo, quizá desee mantener el total de una factura que es la suma de los conceptos de la factura. Este ejemplo utiliza eventos para mantener el total de todos los elementos secundarios que se encuentran bajo el elemento complejo `Items`.  
   
 ### <a name="code"></a>Código  
@@ -114,6 +114,6 @@ Total:308
 </Root>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Programación de LINQ to XML avanzada (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Programación de LINQ to XML avanzada (Visual Basic)](advanced-linq-to-xml-programming.md)

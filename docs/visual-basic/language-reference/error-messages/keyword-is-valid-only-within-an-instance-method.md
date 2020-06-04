@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30043
 ms.assetid: 7973aa82-a681-440c-9bca-242627d7ba86
-ms.openlocfilehash: 8ec1e704815ee10cb98d8cc20fb5982ee4b92832
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 537689405ea30bdd7c075320eba58a8723a93cdb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662011"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397407"
 ---
-# <a name="keyword-is-valid-only-within-an-instance-method"></a>'\<palabra clave >' es válido solo dentro de un método de instancia
-El `Me`, `MyClass`, y `MyBase` palabras clave que hacen referencia a instancias de clase específica. No se pueden utilizar dentro de un compartido `Function` o `Sub` procedimiento.  
+# <a name="keyword-is-valid-only-within-an-instance-method"></a>'\<keyword>' sólo es válida en un método de instancia
+Las `Me` `MyClass` `MyBase` palabras clave, y hacen referencia a instancias de clase específicas. No se pueden usar dentro de un `Function` procedimiento compartido o `Sub` .  
   
  **Identificador de error:** BC30043  
   
@@ -23,8 +23,8 @@ El `Me`, `MyClass`, y `MyBase` palabras clave que hacen referencia a instancias 
   
 - Quite la palabra clave del procedimiento o quite la `Shared` palabra clave de la declaración de procedimiento.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Asignación de variables de objeto](../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
-- [Me, My, MyBase y MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
-- [Fundamentos de la herencia](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [Asignación de variables de objeto](../../programming-guide/language-features/variables/object-variable-assignment.md)
+- [Me, My, MyBase y MyClass](../../programming-guide/program-structure/me-my-mybase-and-myclass.md)
+- [Fundamentos de la herencia](../../programming-guide/language-features/objects-and-classes/inheritance-basics.md)

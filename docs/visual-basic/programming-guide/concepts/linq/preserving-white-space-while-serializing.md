@@ -1,13 +1,13 @@
 ---
-title: Conserva los espacios en blanco mientras Serializing2
+title: Conservar el espacio en blanco mientras se Serializing2
 ms.date: 07/20/2015
 ms.assetid: 2d7abbd4-37f4-422b-89dd-0a694b5edc17
-ms.openlocfilehash: e02335f564155fa8dc08fc3320ddc4e8c178a132
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e9b73089830bf7e6cb0ea9e469bf667f12c571d8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666104"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396407"
 ---
 # <a name="preserving-white-space-while-serializing"></a>Mantener un espacio en blanco al serializar
 En este tema se describe cómo controlar los espacios en blanco a la hora de serializar un árbol XML.  
@@ -31,6 +31,6 @@ En este tema se describe cómo controlar los espacios en blanco a la hora de ser
   
  Si el método toma <xref:System.Xml.Linq.SaveOptions> como argumento, se puede especificar que el método no dé formato (sangría) al XML serializado. En ese caso, se preservarán todos los espacios en blanco del árbol XML.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Serializar árboles XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)
+- [Serializar árboles XML (Visual Basic)](serializing-xml-trees.md)

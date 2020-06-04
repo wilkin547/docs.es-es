@@ -1,13 +1,13 @@
 ---
-title: 'Cómo: Realizar un recuento de las repeticiones de una palabra en una cadena (LINQ)'
+title: Procedimiento para realizar un recuento de las repeticiones de una palabra en una cadena (LINQ)
 ms.date: 07/20/2015
 ms.assetid: bc367e46-f7cc-45f9-936f-754e661b7bb9
-ms.openlocfilehash: 07742e7e99291e056e4c91a31b2e588e36a6e177
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: c6894359e5785419ccf8f283f976c0a897288a5d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348185"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405331"
 ---
 # <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a>Cómo: contar las repeticiones de una palabra en una cadena (LINQ) (Visual Basic)
 
@@ -60,8 +60,8 @@ End Class
 
 ## <a name="compile-the-code"></a>Compilar el código
 
-Cree un proyecto de aplicación de consola de Visual Basic, con una instrucción de `Imports` para el espacio de nombres System. Linq.
+Cree un proyecto de aplicación de consola de Visual Basic, con una `Imports` instrucción para el espacio de nombres System. Linq.
 
 ## <a name="see-also"></a>Vea también
 
-- [LINQ y cadenas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ y cadenas (Visual Basic)](linq-and-strings.md)

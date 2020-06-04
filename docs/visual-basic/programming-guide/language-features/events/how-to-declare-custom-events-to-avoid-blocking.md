@@ -1,17 +1,17 @@
 ---
-title: 'Cómo: Declarar eventos personalizados para evitar bloqueos'
+title: Procedimiento para declarar eventos personalizados para evitar bloqueos
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declaring events [Visual Basic], custom
 - events [Visual Basic], custom
 - custom events [Visual Basic]
 ms.assetid: 998b6a90-67c5-4d2c-8b11-366d3e355505
-ms.openlocfilehash: 8d73d9c4590afb33e7176f647069cafcb3a9d7d8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a9f9529d468a036d81c4e436429cbdb3207efd6e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345145"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405162"
 ---
 # <a name="how-to-declare-custom-events-to-avoid-blocking-visual-basic"></a>Cómo: Declarar eventos personalizados para evitar bloqueos (Visual Basic)
 Hay varias circunstancias en las que es importante que un controlador de eventos no bloquee los controladores de eventos subsiguientes. Los eventos personalizados permiten que el evento llame a sus controladores de eventos de forma asincrónica.  
@@ -21,9 +21,9 @@ Hay varias circunstancias en las que es importante que un controlador de eventos
  En lugar de usar la implementación predeterminada de eventos que proporciona Visual Basic, puede usar un evento personalizado para ejecutar los controladores de eventos de forma asincrónica.  
   
 ## <a name="example"></a>Ejemplo  
- En este ejemplo, el descriptor de acceso `AddHandler` agrega el delegado de cada controlador del evento `Click` a un <xref:System.Collections.ArrayList> almacenado en el campo `EventHandlerList`.  
+ En este ejemplo, el `AddHandler` descriptor de acceso agrega el delegado de cada controlador del `Click` evento a un <xref:System.Collections.ArrayList> almacenado en el `EventHandlerList` campo.  
   
- Cuando el código genera el evento `Click`, el descriptor de acceso `RaiseEvent` invoca de forma asincrónica todos los delegados de controlador de eventos utilizando el método <xref:System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke%2A>. Ese método invoca cada controlador en un subproceso de trabajo y vuelve inmediatamente, por lo que los controladores no pueden bloquearse entre sí.  
+ Cuando el código genera el `Click` evento, el `RaiseEvent` descriptor de acceso invoca de forma asincrónica todos los delegados de controlador de eventos utilizando el <xref:System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke%2A> método. Ese método invoca cada controlador en un subproceso de trabajo y vuelve inmediatamente, por lo que los controladores no pueden bloquearse entre sí.  
   
  [!code-vb[VbVbalrEvents#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#27)]  
   
@@ -31,5 +31,5 @@ Hay varias circunstancias en las que es importante que un controlador de eventos
 
 - <xref:System.Collections.ArrayList>
 - <xref:System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke%2A>
-- [Eventos](../../../../visual-basic/programming-guide/language-features/events/index.md)
-- [Declarar eventos personalizados para conservar memoria](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)
+- [Eventos](index.md)
+- [Procedimiento para declarar eventos personalizados para conservar memoria](how-to-declare-custom-events-to-conserve-memory.md)

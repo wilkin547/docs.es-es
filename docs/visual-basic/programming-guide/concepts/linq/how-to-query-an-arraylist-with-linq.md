@@ -1,17 +1,17 @@
 ---
-title: 'Cómo: Consultar un objeto ArrayList con LINQ'
+title: Procedimiento para consultar un objeto ArrayList con LINQ
 ms.date: 07/20/2015
 ms.assetid: 176358a9-d765-4b57-9557-7feb4428138d
-ms.openlocfilehash: 94a3c6d4c381f41f9ba87bf3af93261712ad1136
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b7b75e017fb314b5e5998b743dbf922f34fd9b7c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347754"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396472"
 ---
 # <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a>Cómo: consultar una ArrayList con LINQ (Visual Basic)
 
-Cuando use LINQ para consultar colecciones no genéricas <xref:System.Collections.IEnumerable> como <xref:System.Collections.ArrayList>, debe declarar explícitamente el tipo de variable de rango para reflejar el tipo específico de los objetos de la colección. Por ejemplo, si tiene una <xref:System.Collections.ArrayList> de `Student` objetos, la [cláusula FROM](../../../../visual-basic/language-reference/queries/from-clause.md) debe tener un aspecto similar al siguiente:
+Cuando use LINQ para consultar colecciones no genéricas <xref:System.Collections.IEnumerable> como <xref:System.Collections.ArrayList>, debe declarar explícitamente el tipo de variable de rango para reflejar el tipo específico de los objetos de la colección. Por ejemplo, si tiene una <xref:System.Collections.ArrayList> de `Student` objetos, la [cláusula FROM](../../../language-reference/queries/from-clause.md) debe tener un aspecto similar al siguiente:
 
 ```vb
 Dim query = From student As Student In arrList
@@ -20,7 +20,7 @@ Dim query = From student As Student In arrList
 
 Al especificar el tipo de la variable de rango, se convierte cada elemento de la <xref:System.Collections.ArrayList> en un `Student`.
 
-El uso de una variable de rango con tipo explícito en una expresión de consulta es equivalente a llamar al método <xref:System.Linq.Enumerable.Cast%2A>. <xref:System.Linq.Enumerable.Cast%2A> genera una excepción si la conversión especificada no puede realizarse. <xref:System.Linq.Enumerable.Cast%2A> y <xref:System.Linq.Enumerable.OfType%2A> son los dos métodos de operador de consulta estándar que funcionan en tipos <xref:System.Collections.IEnumerable> no genéricos. En Visual Basic, debe llamar explícitamente al método <xref:System.Linq.Enumerable.Cast%2A> en el origen de datos para garantizar un tipo de variable de rango específico. Para obtener más información, vea [relaciones de tipos en operaciones de consulta (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md).
+El uso de una variable de rango con tipo explícito en una expresión de consulta es equivalente a llamar al método <xref:System.Linq.Enumerable.Cast%2A>. <xref:System.Linq.Enumerable.Cast%2A> genera una excepción si la conversión especificada no puede realizarse. <xref:System.Linq.Enumerable.Cast%2A> y <xref:System.Linq.Enumerable.OfType%2A> son los dos métodos de operador de consulta estándar que funcionan en tipos <xref:System.Collections.IEnumerable> no genéricos. En Visual Basic, debe llamar explícitamente al <xref:System.Linq.Enumerable.Cast%2A> método en el origen de datos para garantizar un tipo de variable de rango específico. Para obtener más información, vea [relaciones de tipos en operaciones de consulta (Visual Basic)](type-relationships-in-query-operations.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -78,6 +78,6 @@ End Module
 '   Garcia: 97
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ to Objects (Visual Basic)](linq-to-objects.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Distinct statement [Visual Basic]
 - queries [Visual Basic], Distinct
 ms.assetid: 86f42614-0d8f-4ffc-b888-ce8a37a8d36a
-ms.openlocfilehash: 94471898807ef4552564c3e01465f2b2f6211d0c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5aecffbce036500d294d03a925798d51f1269af6
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74335375"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401399"
 ---
 # <a name="distinct-clause-visual-basic"></a>Distinct (Cláusula, Visual Basic)
 Restringe los valores de la variable de rango actual para eliminar los valores duplicados en las cláusulas de consulta subsiguientes.  
@@ -24,18 +24,18 @@ Restringe los valores de la variable de rango actual para eliminar los valores d
 Distinct  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- Puede usar la cláusula `Distinct` para devolver una lista de elementos únicos. La cláusula `Distinct` hace que la consulta omita los resultados de la consulta duplicada. La cláusula `Distinct` se aplica a los valores duplicados para todos los campos devueltos especificados por la cláusula `Select`. Si no se especifica ninguna cláusula de `Select`, la cláusula de `Distinct` se aplica a la variable de rango de la consulta identificada en la cláusula `From`. Si la variable de rango no es un tipo inmutable, la consulta solo omitirá el resultado de una consulta si todos los miembros del tipo coinciden con el resultado de una consulta existente.  
+## <a name="remarks"></a>Observaciones  
+ Puede utilizar la `Distinct` cláusula para devolver una lista de elementos únicos. La `Distinct` cláusula hace que la consulta omita los resultados de la consulta duplicada. La `Distinct` cláusula se aplica a los valores duplicados para todos los campos devueltos especificados por la `Select` cláusula. Si no `Select` se especifica ninguna cláusula, la `Distinct` cláusula se aplica a la variable de rango de la consulta identificada en la `From` cláusula. Si la variable de rango no es un tipo inmutable, la consulta solo omitirá el resultado de una consulta si todos los miembros del tipo coinciden con el resultado de una consulta existente.  
   
 ## <a name="example"></a>Ejemplo  
- La siguiente expresión de consulta combina una lista de clientes y una lista de pedidos de cliente. La cláusula `Distinct` se incluye para devolver una lista de nombres de clientes únicos y fechas de pedido.  
+ La siguiente expresión de consulta combina una lista de clientes y una lista de pedidos de cliente. La `Distinct` cláusula se incluye para devolver una lista de nombres de cliente únicos y fechas de pedido.  
   
  [!code-vb[VbSimpleQuerySamples#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#20)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [Consultas](../../../visual-basic/language-reference/queries/index.md)
-- [From (cláusula)](../../../visual-basic/language-reference/queries/from-clause.md)
-- [Select (cláusula)](../../../visual-basic/language-reference/queries/select-clause.md)
-- [Where (cláusula)](../../../visual-basic/language-reference/queries/where-clause.md)
+- [Introducción a LINQ en Visual Basic](../../programming-guide/language-features/linq/introduction-to-linq.md)
+- [Consultas](index.md)
+- [Cláusula FROM](from-clause.md)
+- [Select (cláusula)](select-clause.md)
+- [Cláusula WHERE](where-clause.md)

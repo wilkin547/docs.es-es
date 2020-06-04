@@ -1,5 +1,5 @@
 ---
-title: Instrucción no es válida dentro de una expresión lambda de varias líneas (método)
+title: Instrucción no válida dentro de un método o una expresión lambda de varias líneas
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30024
@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30024
 ms.assetid: 758e7a8f-429b-42c1-9a78-778e5b480e04
-ms.openlocfilehash: 9e6c8ddd7851aee6d9fa1928a6854f7337b867b0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f3c43d640259d5e1af545e2610088aab5d70453d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593224"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396251"
 ---
 # <a name="statement-is-not-valid-inside-a-methodmultiline-lambda"></a>La instrucción no es válida dentro de un método o una expresión lambda de varias líneas
-La instrucción no es válida dentro de un `Sub`, `Function`, propiedad `Get`, o la propiedad `Set` procedimiento. Algunas instrucciones se pueden colocar en el nivel de clase o módulo. Otros, como `Option Strict`, debe estar en el nivel de espacio de nombres y preceder a todas las demás declaraciones.  
+La instrucción no es válida dentro de `Sub` un `Function` procedimiento de propiedad,, propiedad `Get` o `Set` . Algunas instrucciones se pueden colocar en el nivel de módulo o de clase. Otros, como `Option Strict` , deben estar en el nivel de espacio de nombres y preceder a todas las demás declaraciones.  
   
  **Identificador de error:** BC30024  
   
@@ -23,9 +23,9 @@ La instrucción no es válida dentro de un `Sub`, `Function`, propiedad `Get`, o
   
 - Quite la instrucción del procedimiento.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Sub (instrucción)](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Function (instrucción)](../../../visual-basic/language-reference/statements/function-statement.md)
-- [Get (instrucción)](../../../visual-basic/language-reference/statements/get-statement.md)
-- [Set (instrucción)](../../../visual-basic/language-reference/statements/set-statement.md)
+- [Instrucción Sub](../statements/sub-statement.md)
+- [Instrucción Function](../statements/function-statement.md)
+- [Get (Instrucción)](../statements/get-statement.md)
+- [Set (instrucción)](../statements/set-statement.md)

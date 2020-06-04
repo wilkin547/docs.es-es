@@ -1,13 +1,13 @@
 ---
-title: 'Cómo: Ordenar o filtrar datos de texto por palabra o campo (LINQ)'
+title: Procedimiento para ordenar o filtrar datos de texto por palabra o campo (LINQ)
 ms.date: 07/20/2015
 ms.assetid: 9df137fe-335b-46e0-aecf-ea8a9eddd4e3
-ms.openlocfilehash: f0eeda77a721d482ec7a2b8562c0a71f34c5a3ae
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 798f30d39b4f805001c8c28b9ad6212061550775
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348043"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397731"
 ---
 # <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a>Cómo ordenar o filtrar datos de texto por palabra o campo (LINQ) (Visual Basic)
 
@@ -15,7 +15,7 @@ En el ejemplo siguiente se muestra cómo ordenar líneas de texto estructurado, 
 
 ### <a name="to-create-a-file-that-contains-data"></a>Para crear un archivo que contenga datos
 
-Copie los datos de scores. csv del tema [Cómo: combinar contenido de archivos no similares (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) y guardarlo en la carpeta de la solución.
+Copie los datos de scores. csv del tema [Cómo: combinar contenido de archivos no similares (LINQ) (Visual Basic)](how-to-join-content-from-dissimilar-files-linq.md) y guardarlo en la carpeta de la solución.
 
 ## <a name="example"></a>Ejemplo
 
@@ -74,8 +74,8 @@ En este ejemplo también se muestra cómo devolver una variable de consulta desd
 
 ## <a name="compile-the-code"></a>Compilar el código
 
-Cree un proyecto de aplicación de consola de Visual Basic, con una instrucción de `Imports` para el espacio de nombres System. Linq.
+Cree un proyecto de aplicación de consola de Visual Basic, con una `Imports` instrucción para el espacio de nombres System. Linq.
 
 ## <a name="see-also"></a>Vea también
 
-- [LINQ y cadenas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ y cadenas (Visual Basic)](linq-and-strings.md)

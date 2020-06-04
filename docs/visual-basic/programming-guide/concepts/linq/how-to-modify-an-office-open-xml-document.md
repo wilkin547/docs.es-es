@@ -1,13 +1,13 @@
 ---
-title: 'Cómo: Modificar un documento de Office Open XML'
+title: Procedimiento para modificar un documento de Office Open XML
 ms.date: 07/20/2015
 ms.assetid: 1cefd7f5-8e39-44c4-869c-f8021538a777
-ms.openlocfilehash: a6d546b064afe7020e5d3287351e946e182f03e6
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 9fb046f43686405a3d84cb68b49cd6dcd34e0839
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337892"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398030"
 ---
 # <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>Cómo: modificar un documento de Office Open XML (Visual Basic)
 En este tema se presenta un ejemplo que abre un documento XML abierto de Office, lo modifica y lo guarda.  
@@ -137,12 +137,12 @@ End Module
   
  Si abre `SampleDoc.docx` tras ejecutar este programa, puede ver que este programa ha convertido el primer párrafo del documento a mayúsculas.  
   
- Cuando se ejecuta con el documento XML abierto de ejemplo que se describe en [crear el documento de origen de Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), este ejemplo genera el siguiente resultado:  
+ Cuando se ejecuta con el documento XML abierto de ejemplo que se describe en [crear el documento de origen de Office Open XML (Visual Basic)](creating-the-source-office-open-xml-document.md), este ejemplo genera el siguiente resultado:  
   
 ```console  
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Técnicas de consulta avanzadas (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [Técnicas de consulta avanzadas (LINQ to XML) (Visual Basic)](advanced-query-techniques-linq-to-xml.md)

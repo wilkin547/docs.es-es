@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30108
 ms.assetid: 7931361d-78e2-40ca-ac69-e3374273b248
-ms.openlocfilehash: b576062ccbb751a23ecb68e4ae070103078b0c6c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f9a4dc9904f7875f0405227014e2238fe91f4c69
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664236"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402790"
 ---
-# <a name="typename-is-a-type-and-cannot-be-used-as-an-expression"></a>'\<typename >' es un tipo y no se puede usar como una expresión.
+# <a name="typename-is-a-type-and-cannot-be-used-as-an-expression"></a>'\<typename>' es un tipo y no se puede usar como expresión
 Aparece un nombre de tipo cuando se necesita una expresión. Las expresiones deben constar de la combinación de variables, constantes, literales, propiedades y llamadas al procedimiento `Function` .  
   
  **Identificador de error:** BC30108  
@@ -23,6 +23,6 @@ Aparece un nombre de tipo cuando se necesita una expresión. Las expresiones deb
   
 - Quite el nombre de tipo y construya la expresión con elementos válidos.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Operadores y expresiones](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [Operadores y expresiones](../../programming-guide/language-features/operators-and-expressions/index.md)
