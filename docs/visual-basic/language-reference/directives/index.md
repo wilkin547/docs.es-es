@@ -6,26 +6,26 @@ helpviewer_keywords:
 - Visual Basic code, directives
 - directives
 ms.assetid: 20d5fe65-490a-4c23-88c2-ee4f490ed762
-ms.openlocfilehash: b5e857198351b30c0d7a38dce1a9e6d1209b5258
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: b5fcf3cb8801bc99dd2096c28cc41ebefeb34592
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838148"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410002"
 ---
 # <a name="directives-visual-basic"></a>Directivas de Visual Basic
 
 Los temas en esta sección documentan las directivas del compilador de código fuente de Visual Basic.  
   
-## <a name="in-this-section"></a>Esta sección  
+## <a name="in-this-section"></a>En esta sección  
 
- [Directiva de #Const](../../../visual-basic/language-reference/directives/const-directive.md) : definir una constante del compilador  
+ [Directiva de #Const](const-directive.md) : definir una constante del compilador  
   
- [Directiva de #ExternalSource](../../../visual-basic/language-reference/directives/externalsource-directive.md) : indicar una asignación entre líneas de código fuente y texto externo al origen  
+ [Directiva de #ExternalSource](externalsource-directive.md) : indicar una asignación entre líneas de código fuente y texto externo al origen  
   
- [#If... Then... #Else directivas](../../../visual-basic/language-reference/directives/if-then-else-directives.md) : compilar bloques de código seleccionados  
+ [#If... Then... #Else directivas](if-then-else-directives.md) : compilar bloques de código seleccionados  
   
- [Directiva de #Region](../../../visual-basic/language-reference/directives/region-directive.md) : contraer y ocultar secciones de código en el editor de Visual Studio  
+ [Directiva de #Region](region-directive.md) : contraer y ocultar secciones de código en el editor de Visual Studio  
   
  **#Disable, #Enable** : deshabilitar y habilitar advertencias específicas para las regiones de código.  
   
@@ -41,5 +41,5 @@ Los temas en esta sección documentan las directivas del compilador de código f
   
 ## <a name="related-sections"></a>Secciones relacionadas  
 
- [Referencia del lenguaje Visual Basic](../../../visual-basic/language-reference/index.md)  
+ [Referencia del lenguaje Visual Basic](../index.md)  
   

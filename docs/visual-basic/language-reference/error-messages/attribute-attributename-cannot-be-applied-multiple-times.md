@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - BC30663
 ms.assetid: 3760e7ff-7238-40a1-8676-77d858a64fc0
-ms.openlocfilehash: f2f4dc428a247275f9919c4a8b6e6944a558eef0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 14145f165adf5ccd20298a70ca5596488b488b0c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968223"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409964"
 ---
-# <a name="attribute-attributename-cannot-be-applied-multiple-times"></a>El atributo '\<attributeName > ' no se puede aplicar varias veces
+# <a name="attribute-attributename-cannot-be-applied-multiple-times"></a>No se puede aplicar el atributo '\<attributename>' más de una vez
 
-El atributo solo se puede aplicar una vez. El atributo `AttributeUsage` determina si un atributo se puede aplicar más de una vez.  
+El atributo solo se puede aplicar una vez. El `AttributeUsage` atributo determina si un atributo se puede aplicar más de una vez.  
   
  **Identificador de error:** BC30663  
   
@@ -30,8 +30,8 @@ El atributo solo se puede aplicar una vez. El atributo `AttributeUsage` determin
 <AttributeUsage(AllowMultiple := True)>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.AttributeUsageAttribute>
-- [Creación de atributos personalizados](../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
-- [AttributeUsage](../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)
+- [Crear atributos personalizados](../../programming-guide/concepts/attributes/creating-custom-attributes.md)
+- [AttributeUsage](../../programming-guide/concepts/attributes/attributeusage.md)

@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC31423
 ms.assetid: 2e754b66-5836-48ff-9697-b9c0d7085f18
-ms.openlocfilehash: d6b85124b4408df532623f7c14a76e936ea28572
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 32d6733580de8798a66c30d486b8439befd2af19
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625540"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409613"
 ---
-# <a name="event-eventname1-cannot-implement-event-eventname2-on-interface-interface-because-their-delegate-types-delegate1-and-delegate2-do-not-match"></a>Evento '\<eventname1 >' no se puede implementar el evento '\<eventname2 >' en la interfaz '\<interfaz >' porque sus tipos de delegado\<delegate1 >' y '\<delegate2 >' no coinciden
-Visual Basic no puede implementar un evento porque el tipo de delegado del evento no coincide con el tipo de delegado del evento en la interfaz. Este error puede producirse cuando define varios eventos en una interfaz e intenta implementarlos juntos con el mismo evento. Un evento puede implementar dos o más eventos solo si todos los eventos implementados se declaran con la sintaxis `As` y si se especifica el mismo tipo delegado.  
+# <a name="event-eventname1-cannot-implement-event-eventname2-on-interface-interface-because-their-delegate-types-delegate1-and-delegate2-do-not-match"></a>El evento '\<eventname1>' no puede implementar el evento '\<eventname2>' en la interfaz '\<interface>' porque sus tipos delegados '\<delegate1>' y '\<delegate2>' no coinciden
+Visual Basic no puede implementar un evento porque el tipo delegado del evento no coincide con el tipo delegado del evento en la interfaz. Este error puede producirse cuando define varios eventos en una interfaz e intenta implementarlos juntos con el mismo evento. Un evento puede implementar dos o más eventos solo si todos los eventos implementados se declaran con la sintaxis `As` y si se especifica el mismo tipo delegado.  
   
  **Identificador de error:** BC31423  
   
@@ -25,10 +25,10 @@ Visual Basic no puede implementar un evento porque el tipo de delegado del event
   
      -O bien-  
   
-- Definir los eventos en la interfaz usando el `As` sintaxis y especifique el mismo tipo de delegado.  
+- Defina los eventos en la interfaz mediante la `As` sintaxis y especifique el mismo tipo de delegado.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Event (instrucción)](../../../visual-basic/language-reference/statements/event-statement.md)
-- [Delegate (instrucción)](../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [Eventos](../../../visual-basic/programming-guide/language-features/events/index.md)
+- [Event (Instrucción)](../statements/event-statement.md)
+- [Delegate (Instrucción)](../statements/delegate-statement.md)
+- [Eventos](../../programming-guide/language-features/events/index.md)

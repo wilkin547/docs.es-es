@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BC30491
 ms.assetid: 8399d7ae-bc0a-49e6-81dc-2e7229708bc9
-ms.openlocfilehash: cd4c684e5d846aa3361145dfcc82cf6050e3786e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 97cf3208e47eb0514296927e86eefc768280f61f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64646835"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409548"
 ---
 # <a name="expression-does-not-produce-a-value"></a>La expresión no genera un valor
-Ha intentado usar una expresión que no genera un valor en un contexto que genera valores, como la llamada a un `Sub` en un contexto donde un `Function` se espera.  
+Ha intentado usar una expresión que no produce un valor en un contexto de generación de valores, como llamar a `Sub` en un contexto donde `Function` se espera.  
   
  **Identificador de error:** BC30491  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-- Cambie la expresión por otra que produzca un valor.  
+- Cambie la expresión a una que produzca un valor.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Tipos de error](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [Tipos de error](../../programming-guide/language-features/error-types.md)

@@ -5,14 +5,14 @@ helpviewer_keywords:
 - typeparam XML tag
 - <typeparam> XML tag
 ms.assetid: 1bb5ba78-f060-478c-905c-77a2e43639af
-ms.openlocfilehash: 00cb62827381146c172e0d15a2c64b167c21f025
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2ad54845645172acb5b91935f5347a828510e3aa
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352191"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411491"
 ---
-# <a name="typeparam-visual-basic"></a>\<typeparam > (Visual Basic)
+# <a name="typeparam-visual-basic"></a>\<typeparam> (Visual Basic)
 Define un nombre de parámetro de tipo y una descripción.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -29,15 +29,15 @@ Define un nombre de parámetro de tipo y una descripción.
  Descripción del parámetro de tipo.  
   
 ## <a name="remarks"></a>Comentarios  
- Use la etiqueta `<typeparam>` del comentario para un tipo genérico o una declaración de miembro genérico para describir uno de los parámetros de tipo.  
+ Use la `<typeparam>` etiqueta del comentario para un tipo genérico o una declaración de miembro genérico para describir uno de los parámetros de tipo.  
   
- Compile con [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) para procesar los comentarios de documentación de un archivo.  
+ Compile with [-doc](../../reference/command-line-compiler/doc.md) para procesar los comentarios de documentación en un archivo.  
   
 ## <a name="example"></a>Ejemplo  
- En este ejemplo se usa la etiqueta `<typeparam>` para describir el parámetro `id`.  
+ En este ejemplo se usa la `<typeparam>` etiqueta para describir el `id` parámetro.  
   
  [!code-vb[VbVbcnXmlDocComments#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#8)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Etiquetas XML para comentarios](../../../visual-basic/language-reference/xmldoc/index.md)
+- [Etiquetas de comentario XML](index.md)

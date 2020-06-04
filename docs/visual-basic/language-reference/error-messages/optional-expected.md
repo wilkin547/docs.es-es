@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC30202
 ms.assetid: 6f75060c-2db4-4a79-b5d1-5780c09a74cd
-ms.openlocfilehash: 71a25784f357a7e596093b314ed5b3d721d6f92c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 411e3248409ab0184666f4efefb4ec4becf7cab1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946593"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409353"
 ---
 # <a name="optional-expected"></a>Se esperaba 'Optional'
-Un argumento opcional en una declaración de procedimiento va seguido de un argumento necesario. Cada argumento que sigue a un argumento opcional también debe ser opcional.  
+Un argumento opcional en una declaración de procedimiento va seguido de un argumento necesario. Cada argumento que siga a un argumento opcional también debe ser opcional.  
   
  **Identificador de error:** BC30202  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1. Si el argumento debe ser necesario, muévalo para que preceda al primer argumento opcional en la lista de argumentos.  
+1. Si el argumento está pensado para ser necesario, muévalo para que preceda al primer argumento opcional de la lista de argumentos.  
   
-2. Si el argumento está pensado para que sea opcional, use la `Optional` palabra clave.  
+2. Si el argumento está pensado para ser opcional, use la `Optional` palabra clave.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Parámetros opcionales](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
+- [Parámetros opcionales](../../programming-guide/language-features/procedures/optional-parameters.md)

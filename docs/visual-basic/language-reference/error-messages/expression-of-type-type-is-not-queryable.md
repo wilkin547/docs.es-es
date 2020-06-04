@@ -7,40 +7,40 @@ f1_keywords:
 helpviewer_keywords:
 - BC36593
 ms.assetid: 6f1f5860-bf97-4885-9ebb-bc87d028095c
-ms.openlocfilehash: 121c0a95a3a6bb695d9c73347c733cba215a0de4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e61b4dac109f714b5cf25226d1029237ca77032d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801626"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409483"
 ---
-# <a name="expression-of-type-type-is-not-queryable"></a>Expresión de tipo \<tipo > no es consultable
-Expresión de tipo \<tipo > no es consultable. Asegúrese de que no falta una importación de espacio de nombres o de referencia de ensamblado para el proveedor LINQ.  
+# <a name="expression-of-type-type-is-not-queryable"></a>No se puede consultar una expresión de tipo \<type>
+La expresión de tipo \<type> no es consultable. Asegúrese de que no falta una referencia de ensamblado o una importación de espacio de nombres para el proveedor LINQ.  
   
- Puede consultables tipos se definen en el <xref:System.Linq>, <xref:System.Data.Linq>, y <xref:System.Xml.Linq> espacios de nombres. Debe importar uno o varios de estos espacios de nombres para realizar consultas LINQ.  
+ Los tipos consultables se definen en <xref:System.Linq> los <xref:System.Data.Linq> espacios de <xref:System.Xml.Linq> nombres, y. Debe importar uno o varios de estos espacios de nombres para realizar consultas LINQ.  
   
- El <xref:System.Linq> espacio de nombres permite a los objetos de consulta como colecciones y matrices mediante LINQ.  
+ El <xref:System.Linq> espacio de nombres permite consultar objetos como colecciones y matrices mediante Linq.  
   
- El <xref:System.Data.Linq> espacio de nombres le permite consultar los conjuntos de datos de ADO.NET y las bases de datos de SQL Server mediante LINQ.  
+ El <xref:System.Data.Linq> espacio de nombres permite consultar conjuntos de datos de ADO.net y bases de datos de SQL Server mediante Linq.  
   
- El <xref:System.Xml.Linq> espacio de nombres le permite consultar XML con LINQ y usar características XML en Visual Basic.  
+ El <xref:System.Xml.Linq> espacio de nombres permite consultar XML mediante LINQ y usar características XML en Visual Basic.  
   
  **Identificador de error:** BC36593  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1. Agregar un `Import` instrucción para el <xref:System.Linq>, <xref:System.Data.Linq>, o <xref:System.Xml.Linq> espacio de nombres al archivo de código. También puede importar los espacios de nombres para el proyecto mediante el **referencias** página del Diseñador de proyectos (**mi proyecto**).  
+1. Agregue una `Import` instrucción para el <xref:System.Linq> <xref:System.Data.Linq> espacio de nombres, o <xref:System.Xml.Linq> al archivo de código. También puede importar espacios de nombres para el proyecto mediante la página **referencias** del diseñador de proyectos (**mi proyecto**).  
   
-2. Asegúrese de que el tipo que se ha identificado como el origen de la consulta es un tipo consultable. Es decir, un tipo que implementa <xref:System.Collections.Generic.IEnumerable%601> o <xref:System.Linq.IQueryable%601>.  
+2. Asegúrese de que el tipo que ha identificado como el origen de la consulta es un tipo consultable. Es decir, un tipo que implementa <xref:System.Collections.Generic.IEnumerable%601> o <xref:System.Linq.IQueryable%601> .  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Linq>
 - <xref:System.Data.Linq>
 - <xref:System.Xml.Linq>
-- [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)
-- [Referencias y la instrucción Imports](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)
-- [Imports (instrucción), espacio de nombres y tipo .NET](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Introducción a LINQ en Visual Basic](../../programming-guide/language-features/linq/introduction-to-linq.md)
+- [LINQ](../../programming-guide/language-features/linq/index.md)
+- [XML](../../programming-guide/language-features/xml/index.md)
+- [Referencias y la instrucción Imports](../../programming-guide/program-structure/references-and-the-imports-statement.md)
+- [Instrucción Imports (Tipo y espacio de nombres de .NET)](../statements/imports-statement-net-namespace-and-type.md)
 - [Página Referencias, Diseñador de proyectos (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)

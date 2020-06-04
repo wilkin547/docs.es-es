@@ -4,20 +4,20 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID16
 ms.assetid: 736847d1-5e03-44c8-95e4-3ed2cef2746b
-ms.openlocfilehash: 8973e0309fa2a54ff2155229f76cf9fdb5116f02
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d1717eb9f23778086507cf6d7ca49c16fffa6eb2
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665135"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409496"
 ---
 # <a name="expression-too-complex"></a>Expresión demasiado compleja
 Una expresión de punto flotante contiene demasiadas subexpresiones anidadas.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-- Divida la expresión en varias expresiones independientes según sea necesario para impedir que se está produciendo el error.  
+- Divida la expresión en tantas expresiones independientes como sea necesario para evitar que se produzca el error.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Operadores y expresiones](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [Operadores y expresiones](../../programming-guide/language-features/operators-and-expressions/index.md)

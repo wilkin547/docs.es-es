@@ -1,13 +1,13 @@
 ---
-title: 'Cómo: Invocar un método delegado'
+title: Procedimiento para invocar un método delegado
 ms.date: 07/20/2015
 ms.assetid: b56866ae-abf9-4a5a-a855-486359455e9c
-ms.openlocfilehash: 520bacfbe6103490e0459cd5af149c1d55a8fce4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f319727c007b93c7b334af0598f1b9f7c034144d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345265"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410726"
 ---
 # <a name="how-to-invoke-a-delegate-method-visual-basic"></a>Cómo: Invocar un método delegado (Visual Basic)
 
@@ -15,7 +15,7 @@ En este ejemplo se muestra cómo asociar un método a un delegado y, a continuac
 
 ### <a name="create-the-delegate-and-matching-procedures"></a>Crear el delegado y los procedimientos coincidentes
 
-1. Cree un delegado denominado `MySubDelegate`.
+1. Cree un delegado denominado `MySubDelegate` .
 
     ```vb
     Delegate Sub MySubDelegate(ByVal x As Integer)
@@ -31,7 +31,7 @@ En este ejemplo se muestra cómo asociar un método a un delegado y, a continuac
     End Class
     ```
 
-3. Defina un método que cree una instancia del delegado e invoque el método asociado al delegado llamando al método integrado `Invoke`.
+3. Defina un método que cree una instancia del delegado e invoque el método asociado al delegado llamando al `Invoke` método integrado.
 
     ```vb
     Protected Sub DelegateTest()
@@ -43,9 +43,9 @@ En este ejemplo se muestra cómo asociar un método a un delegado y, a continuac
     End Sub
     ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Delegate (instrucción)](../../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [Delegados](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [Eventos](../../../../visual-basic/programming-guide/language-features/events/index.md)
+- [Delegate (Instrucción)](../../../language-reference/statements/delegate-statement.md)
+- [Delegados](index.md)
+- [Eventos](../events/index.md)
 - [Aplicaciones multiproceso](../../../../standard/threading/using-threads-and-threading.md)

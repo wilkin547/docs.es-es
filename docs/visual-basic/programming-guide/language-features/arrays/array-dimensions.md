@@ -9,25 +9,25 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-ms.openlocfilehash: 12e983ae62fa9f9ea762d434ffe5b73873a4a2e8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f971f0c3693177adbcb8869d487e3ad41d49ddc2
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351906"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413109"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Dimensiones de matrices en Visual Basic
 
 Una *dimensión* es una dirección en la que puede variar la especificación de los elementos de una matriz. Una matriz que contiene el total de ventas de cada día del mes tiene una dimensión (el día del mes). Una matriz que contiene el total de ventas por departamento para cada día del mes tiene dos dimensiones (el número de departamento y el día del mes). El número de dimensiones que tiene una matriz se denomina su *rango*.
 
 > [!NOTE]
-> Puede utilizar la propiedad <xref:System.Array.Rank%2A> para determinar el número de dimensiones de una matriz.
+> Puede utilizar la <xref:System.Array.Rank%2A> propiedad para determinar el número de dimensiones de una matriz.
 
 ## <a name="working-with-dimensions"></a>Trabajar con dimensiones
 
 Para especificar un elemento de una matriz, debe proporcionar un *Índice* o *subíndice* para cada una de sus dimensiones. Los elementos son contiguos a lo largo de cada dimensión desde el índice 0 hasta el índice más alto de esa dimensión.
 
-En las ilustraciones siguientes se muestra la estructura conceptual de matrices con distintos rangos. Cada elemento de las ilustraciones muestra los valores de índice que tienen acceso a él. Por ejemplo, puede tener acceso al primer elemento de la segunda fila de la matriz bidimensional especificando los índices `(1, 0)`.
+En las ilustraciones siguientes se muestra la estructura conceptual de matrices con distintos rangos. Cada elemento de las ilustraciones muestra los valores de índice que tienen acceso a él. Por ejemplo, puede tener acceso al primer elemento de la segunda fila de la matriz bidimensional especificando los índices `(1, 0)` .
 
 ![Diagrama que muestra una matriz unidimensional.](./media/array-dimensions/one-dimensional-array.gif)
 
@@ -91,9 +91,9 @@ Dim salesAmounts(4, 11, 30) As Double
 Tenga en cuenta que, dado que cada índice varía de 0 a su máximo, cada dimensión de `salesAmounts` se declara como una menor que la longitud necesaria para esa dimensión. Tenga en cuenta también que el tamaño de la matriz aumenta con cada nueva dimensión. Los tres tamaños de los ejemplos anteriores son los elementos 31, 372 y 1.860, respectivamente.
 
 > [!NOTE]
-> Puede crear una matriz sin usar la instrucción `Dim` o la cláusula `New`. Por ejemplo, puede llamar al método <xref:System.Array.CreateInstance%2A> u otro componente puede pasar el código a una matriz creada de esta manera. Este tipo de matriz puede tener un límite inferior distinto de 0. Siempre puede probar el límite inferior de una dimensión mediante el método <xref:System.Array.GetLowerBound%2A> o la función `LBound`.
+> Puede crear una matriz sin usar la `Dim` instrucción o la `New` cláusula. Por ejemplo, puede llamar al <xref:System.Array.CreateInstance%2A> método u otro componente puede pasar el código a una matriz creada de esta manera. Este tipo de matriz puede tener un límite inferior distinto de 0. Siempre puede probar el límite inferior de una dimensión mediante el <xref:System.Array.GetLowerBound%2A> método o la `LBound` función.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Matrices](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
-- [Solución de problemas de matrices](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
+- [Matrices](index.md)
+- [Solución de problemas de matrices](troubleshooting-arrays.md)
