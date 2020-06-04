@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Llamar a un procedimiento de propiedad'
+title: Procedimiento para llamar a un procedimiento de propiedad
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -8,27 +8,27 @@ helpviewer_keywords:
 - properties [Visual Basic], property procedures
 - procedure calls [Visual Basic], property procedures
 ms.assetid: 96bc4d74-d9c3-4b7a-954d-58ac8553cd94
-ms.openlocfilehash: 52e6c62ffb81c480ccc1abf06f04eb780218dbf1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 006961a0f1d4be6b0d52be5bc273dad9733bfe56
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74340553"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84388704"
 ---
 # <a name="how-to-call-a-property-procedure-visual-basic"></a>Cómo: Llamar a un procedimiento de propiedad (Visual Basic)
 Para llamar a un procedimiento de propiedad, se almacena un valor en la propiedad o se recupera su valor. Puede tener acceso a una propiedad de la misma manera que tiene acceso a una variable.  
   
- El procedimiento `Set` de la propiedad almacena un valor y su procedimiento `Get` recupera el valor. Sin embargo, no se llama a estos procedimientos explícitamente por nombre. La propiedad se usa en una instrucción de asignación o una expresión, tal como se almacenaría o recuperaría el valor de una variable. Visual Basic realiza las llamadas a los procedimientos de la propiedad.  
+ El procedimiento de la propiedad `Set` almacena un valor y su `Get` procedimiento recupera el valor. Sin embargo, no se llama a estos procedimientos explícitamente por nombre. La propiedad se usa en una instrucción de asignación o una expresión, tal como se almacenaría o recuperaría el valor de una variable. Visual Basic realiza las llamadas a los procedimientos de la propiedad.  
   
 ### <a name="to-call-a-propertys-get-procedure"></a>Para llamar al procedimiento get de una propiedad  
   
 1. Use el nombre de la propiedad en una expresión de la misma manera que usaría un nombre de variable. Puede usar una propiedad en cualquier lugar en el que pueda usar una variable o una constante.  
   
-     O bien,  
+     O bien  
   
-     Use el nombre de la propiedad que sigue al signo igual (`=`) en una instrucción de asignación.  
+     Use el nombre de la propiedad que sigue al signo igual ( `=` ) en una instrucción de asignación.  
   
-     En el ejemplo siguiente se lee el valor de la propiedad <xref:Microsoft.VisualBasic.DateAndTime.Now%2A>, llamando implícitamente a su procedimiento `Get`.  
+     En el ejemplo siguiente se lee el valor de la <xref:Microsoft.VisualBasic.DateAndTime.Now%2A> propiedad, que llama implícitamente a su `Get` procedimiento.  
   
      [!code-vb[VbVbalrDateProperties#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDateProperties/VB/Module1.vb#4)]  
   
@@ -42,7 +42,7 @@ Para llamar a un procedimiento de propiedad, se almacena un valor en la propieda
   
 1. Use el nombre de la propiedad en el lado izquierdo de una instrucción de asignación.  
   
-     En el ejemplo siguiente se establece el valor de la propiedad <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>, que llama implícitamente al procedimiento `Set`.  
+     En el ejemplo siguiente se establece el valor de la <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A> propiedad, que llama implícitamente al `Set` procedimiento.  
   
      [!code-vb[VbVbcnProcedures#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#11)]  
   
@@ -52,16 +52,16 @@ Para llamar a un procedimiento de propiedad, se almacena un valor en la propieda
   
  El valor generado en el lado derecho de la instrucción de asignación se almacena en la propiedad.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Procedimientos de propiedades](./property-procedures.md)
+- [Procedimientos de propiedad](./property-procedures.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)
-- [Property (instrucción)](../../../../visual-basic/language-reference/statements/property-statement.md)
+- [Property Statement](../../../language-reference/statements/property-statement.md)
 - [Diferencias entre propiedades y variables en Visual Basic](./differences-between-properties-and-variables.md)
-- [Crear una propiedad](./how-to-create-a-property.md)
-- [Declarar una propiedad con niveles de acceso mixtos](./how-to-declare-a-property-with-mixed-access-levels.md)
-- [Cómo: declarar y llamar a una propiedad predeterminada en Visual Basic](./how-to-declare-and-call-a-default-property.md)
-- [Establecer un valor en una propiedad](./how-to-put-a-value-in-a-property.md)
-- [Obtener un valor de una propiedad](./how-to-get-a-value-from-a-property.md)
-- [Get (instrucción)](../../../../visual-basic/language-reference/statements/get-statement.md)
-- [Set (instrucción)](../../../../visual-basic/language-reference/statements/set-statement.md)
+- [Procedimiento para crear una propiedad](./how-to-create-a-property.md)
+- [Procedimiento para declarar una propiedad con niveles de acceso mixtos](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [Cómo: Declarar y llamar a una propiedad predeterminada en Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [Procedimiento para establecer un valor en una propiedad](./how-to-put-a-value-in-a-property.md)
+- [Procedimiento para obtener un valor de una propiedad](./how-to-get-a-value-from-a-property.md)
+- [Get (Instrucción)](../../../language-reference/statements/get-statement.md)
+- [Set (instrucción)](../../../language-reference/statements/set-statement.md)
