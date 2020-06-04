@@ -10,12 +10,12 @@ helpviewer_keywords:
 - region directive (#region)
 - '#Region keyword [Visual Basic]'
 ms.assetid: 90a6a104-3cbf-47d0-bdc4-b585d0921b87
-ms.openlocfilehash: 4cf9b103486378d001b588aa285f590980b51bb8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: cd53a6079c1564a8c73a0a1a6273fc166d18d3e6
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343792"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409950"
 ---
 # <a name="region-directive"></a>#Region (Directiva)
 
@@ -28,14 +28,14 @@ Contrae y oculta secciones de código en archivos de Visual Basic.
 #End Region  
 ```  
   
-## <a name="parts"></a>Elementos  
+## <a name="parts"></a>Partes  
   
 |Término|Definición|  
 |---|---|  
 |`identifier_string`|Obligatorio. Cadena que actúa como título de una región cuando esta se contrae. Las regiones están contraídas de forma predeterminada.|  
 |`#End Region`|Finaliza el bloque `#Region`.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La directiva `#Region` permite especificar un bloque de código que se puede expandir o contraer cuando se usa la característica de esquematización del Editor de código de Visual Studio. Puede colocar, o *anidar*, regiones en otras regiones para agrupar regiones similares.  
   
@@ -45,8 +45,8 @@ Contrae y oculta secciones de código en archivos de Visual Basic.
   
  [!code-vb[VbVbalrConditionalComp#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#4)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [#If...Then...#Else (directivas)](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
-- [Esquematización](/visualstudio/ide/outlining)
-- [Contraer y ocultar secciones de código](../../../visual-basic/programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md)
+- [#If...Then...#Else (directivas)](if-then-else-directives.md)
+- [esquematizar](/visualstudio/ide/outlining)
+- [Procedimiento Contracción y ocultación de secciones de código](../../programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md)

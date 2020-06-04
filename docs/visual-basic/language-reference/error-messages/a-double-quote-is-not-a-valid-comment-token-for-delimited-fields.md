@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_InvalidComment
 ms.assetid: 636d4b81-00ba-4cfd-98f7-4d57036f494d
-ms.openlocfilehash: df7868c510eaacbad1d4421259234f4187f60cd7
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a66d43d249a12ffa552073866f2e0a1e6d453608
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976216"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409949"
 ---
 # <a name="a-double-quote-is-not-a-valid-comment-token-for-delimited-fields-where-escapequote-is-set-to-true"></a>Un carácter de comilla doble no es un símbolo (token) de comentario válido para campos delimitados donde EscapeQuote está establecido en True
 
@@ -19,9 +19,9 @@ Se proporcionó una comilla como delimitador para `TextFieldParser`, pero `Escap
   
 - Establezca `EscapeQuotes` en `False`.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetDelimiters%2A>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.Delimiters%2A>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>
-- [Leer archivos de texto delimitado por comas](../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)
+- [Procedimiento para leer archivos de texto delimitado por comas](../../developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)

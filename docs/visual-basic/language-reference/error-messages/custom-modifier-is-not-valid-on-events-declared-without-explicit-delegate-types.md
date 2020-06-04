@@ -7,41 +7,41 @@ f1_keywords:
 helpviewer_keywords:
 - BC31122
 ms.assetid: 6911f0d1-641a-473b-906d-8ee5681194be
-ms.openlocfilehash: 169cb49cc5abc76b7c52785392d0083b81a99450
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0c5a4188fedf9685afdd1cde4c1de93a0b43b919
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803888"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409793"
 ---
 # <a name="custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a>El modificador 'Custom' no es válido en eventos declarados sin tipos de delegado explícitos
-A diferencia de un evento no personalizado, un `Custom Event` declaración requiere un `As` cláusula después del nombre de evento que se especifica explícitamente el tipo de delegado para el evento.  
+A diferencia de un evento no personalizado, una `Custom Event` declaración requiere una `As` cláusula que siga el nombre del evento que especifica explícitamente el tipo de delegado para el evento.  
   
- Los eventos no personalizados pueden ser definido con un `As` cláusula y explícita el tipo delegado, o con un parámetro de lista inmediatamente después del nombre de evento.  
+ Los eventos no personalizados se pueden definir con una `As` cláusula y un tipo de delegado explícito, o con una lista de parámetros inmediatamente después del nombre del evento.  
   
  **Identificador de error:** BC31122  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1. Defina a un delegado con la misma lista de parámetros como el evento personalizado.  
+1. Defina un delegado con la misma lista de parámetros que el evento personalizado.  
   
-     Por ejemplo, si la `Custom Event` se ha definido por `Custom Event Test(ByVal sender As Object, ByVal i As Integer)`, a continuación, el delegado correspondiente sería la siguiente.  
+     Por ejemplo, si `Custom Event` se definió mediante `Custom Event Test(ByVal sender As Object, ByVal i As Integer)` , el delegado correspondiente sería el siguiente.  
   
      [!code-vb[VbVbalrEventError#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEventError/VB/VbVbalrEventError.vb#18)]  
   
-2. Reemplazar la lista de parámetros del evento personalizado con un `As` cláusula que especifica el tipo de delegado.  
+2. Reemplace la lista de parámetros del evento personalizado por una `As` cláusula que especifique el tipo de delegado.  
   
-     Continuando con el ejemplo, `Custom Event` declaración se volvería como sigue.  
+     Siguiendo con el ejemplo, la `Custom Event` declaración se volvería a escribir de la siguiente manera.  
   
      [!code-vb[VbVbalrEventError#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEventError/VB/VbVbalrEventError.vb#19)]  
   
 ## <a name="example"></a>Ejemplo  
- Este ejemplo se declara un `Custom Event` y especifica los `As` cláusula con un tipo de delegado.  
+ Este ejemplo declara `Custom Event` y especifica la `As` cláusula necesaria con un tipo de delegado.  
   
  [!code-vb[VbVbalrEventError#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEventError/VB/VbVbalrEventError.vb#2)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Event (instrucción)](../../../visual-basic/language-reference/statements/event-statement.md)
-- [Delegate (instrucción)](../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [Eventos](../../../visual-basic/programming-guide/language-features/events/index.md)
+- [Event (Instrucción)](../statements/event-statement.md)
+- [Delegate (Instrucción)](../statements/delegate-statement.md)
+- [Eventos](../../programming-guide/language-features/events/index.md)

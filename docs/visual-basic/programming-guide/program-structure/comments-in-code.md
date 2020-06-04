@@ -14,12 +14,12 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: 189810393db42c54cb8a0f97b22b3d1514d9a7c4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b50e76b8f832c3a214ca54f97bab8b0b6789ac25
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346169"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403322"
 ---
 # <a name="comments-in-code-visual-basic"></a>Comentarios en el código (Visual Basic)
 Cuando lea ejemplos de código, encontrará el símbolo de comentario (`'`). Este símbolo indica al compilador de Visual Basic que omita el texto que le sigue o el *Comentario*. Los comentarios son notas cortas explicativas que se agregan al código para aportar mayor información a las personas que lo lean.  
@@ -41,10 +41,10 @@ Cuando lea ejemplos de código, encontrará el símbolo de comentario (`'`). Est
 |---|---|  
 |Tipo de comentario|Descripción del comentario|  
 |Propósito|Describe qué hace el procedimiento (no cómo lo hace).|  
-|Supuestos|Enumera cada variable externa, control, archivo abierto u otro elemento al cual el procedimiento tenga acceso.|  
+|Suposiciones|Enumera cada variable externa, control, archivo abierto u otro elemento al cual el procedimiento tenga acceso.|  
 |Efectos|Enumera cada variable externa, control o archivo que esté afectado, y el efecto que tienen (únicamente si no es evidente).|  
 |Entradas|Especifica el propósito del argumento.|  
-|Valores devueltos|Explica los valores que devuelve el procedimiento|  
+|Devuelve|Explica los valores que devuelve el procedimiento|  
   
  Recuerde los siguientes puntos:  
   
@@ -54,15 +54,15 @@ Cuando lea ejemplos de código, encontrará el símbolo de comentario (`'`). Est
   
 - Después de la secuencia de continuación de línea no puede escribirse un comentario en la misma línea.  
   
- Para agregar o quitar símbolos de comentario de un bloque de código, seleccione una o varias líneas de código y elija el **Comentario** (![el botón Visual Basic comentario en visual studio.](./media/comments-in-code/visual-basic-comment-button.gif)) y **Quite los comentarios** (![el botón Visual Basic sin comentarios de Visual Studio.](./media/comments-in-code/visual-basic-uncomment-button.gif)) en la barra de herramientas de **edición** .  
+ Para agregar o quitar símbolos de comentario de un bloque de código, seleccione una o varias líneas de código y elija el **Comentario** ( ![ el Visual Basic botón de comentario en Visual Studio ](./media/comments-in-code/visual-basic-comment-button.gif) ) y **Quite los comentarios** ( ![ el botón Visual Basic quitar comentarios de Visual Studio ](./media/comments-in-code/visual-basic-uncomment-button.gif) ) en la barra de herramientas de **edición** .  
   
 > [!NOTE]
-> También puede agregar comentarios al código poniendo la palabra clave `REM` antes del texto. Sin embargo, el símbolo de `'` y el **comentario**/botones sin **Comentario** son más fáciles de usar y requieren menos espacio y memoria.  
+> También puede agregar comentarios al código poniendo la palabra clave `REM` antes del texto. Sin embargo, los `'` botones de símbolo y de **Comentario** / **Uncomment** son más fáciles de usar y requieren menos espacio y memoria.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Instinto básico: documentar el código con comentarios XML](https://docs.microsoft.com/archive/msdn-magazine/2009/may/documenting-your-code-with-xml-comments)
-- [Crear documentación XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
-- [Etiquetas XML para comentarios](../../../visual-basic/language-reference/xmldoc/index.md)
-- [Convenciones de código y estructura de programas](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
-- [REM (instrucción)](../../../visual-basic/language-reference/statements/rem-statement.md)
+- [Procedimiento para crear documentación XML](how-to-create-xml-documentation.md)
+- [Etiquetas de comentario XML](../../language-reference/xmldoc/index.md)
+- [Convenciones de código y estructura de programas](program-structure-and-code-conventions.md)
+- [Instrucción REM](../../language-reference/statements/rem-statement.md)

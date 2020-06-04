@@ -8,12 +8,12 @@ helpviewer_keywords:
 - limits, Visual Basic code
 - Visual Basic code, limitations
 ms.assetid: cf1646b7-5d24-48c6-9616-bda8a4849d91
-ms.openlocfilehash: f7e19977a011565bb4b1536af5cab195f8a01017
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 46294b68bda8a5d2d21c0e4efea6a78e6a265ffe
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347365"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403192"
 ---
 # <a name="visual-basic-limitations"></a>Limitaciones de Visual Basic
 Las versiones anteriores de Visual Basic los límites aplicados en el código, como la longitud de los nombres de variable, el número de variables permitidas en los módulos y el tamaño del módulo. En Visual Basic .NET, estas restricciones se han reducido, lo que le aporta mayor libertad para escribir y organizar el código.  
@@ -22,17 +22,17 @@ Las versiones anteriores de Visual Basic los límites aplicados en el código, c
   
  A continuación se indican algunas limitaciones que pueden surgir en casos extremos:  
   
-- **Longitud del nombre.** Hay un número máximo de caracteres para el nombre de cada elemento de programación declarado. Este máximo se aplica a toda la cadena de calificación si el nombre del elemento está calificado. Vea [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+- **Longitud del nombre.** Hay un número máximo de caracteres para el nombre de cada elemento de programación declarado. Este máximo se aplica a toda la cadena de calificación si el nombre del elemento está calificado. Vea [Declared Element Names](../language-features/declared-elements/declared-element-names.md).  
   
-- **Longitud de línea.** Hay un máximo de 65535 caracteres en una línea física de código fuente. La línea de código fuente lógica puede ser más larga si usa caracteres de continuación de línea. Vea [Cómo: interrumpir y combinar instrucciones en el código](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md).  
+- **Longitud de línea.** Hay un máximo de 65535 caracteres en una línea física de código fuente. La línea de código fuente lógica puede ser más larga si usa caracteres de continuación de línea. Vea [Cómo: interrumpir y combinar instrucciones en el código](how-to-break-and-combine-statements-in-code.md).  
   
-- **Dimensiones de la matriz.** Hay un número máximo de dimensiones que puede declarar para una matriz. Esto limita el número de índices que puede utilizar para especificar un elemento de la matriz. Vea [dimensiones de la matriz en Visual Basic](../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md).  
+- **Dimensiones de la matriz.** Hay un número máximo de dimensiones que puede declarar para una matriz. Esto limita el número de índices que puede utilizar para especificar un elemento de la matriz. Vea [dimensiones de la matriz en Visual Basic](../language-features/arrays/array-dimensions.md).  
   
-- **Longitud de la cadena.** Hay un número máximo de caracteres Unicode que se pueden almacenar en una sola cadena. Vea [tipo de datos de cadena](../../../visual-basic/language-reference/data-types/string-data-type.md).  
+- **Longitud de la cadena.** Hay un número máximo de caracteres Unicode que se pueden almacenar en una sola cadena. Vea [tipo de datos de cadena](../../language-reference/data-types/string-data-type.md).  
   
 - **Longitud de la cadena de entorno.** Hay un máximo de 32768 caracteres para cualquier cadena de entorno utilizada como argumento de la línea de comandos. Se trata de una limitación en todas las plataformas.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Convenciones de código y estructura de programas](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
-- [Convenciones de nomenclatura de Visual Basic](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+- [Convenciones de código y estructura de programas](program-structure-and-code-conventions.md)
+- [Convenciones de nomenclatura de Visual Basic](naming-conventions.md)

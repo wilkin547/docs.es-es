@@ -1,13 +1,13 @@
 ---
-title: 'Cómo: Usar árboles de expresión para crear consultas dinámicas'
+title: Procedimiento para usar árboles de expresión para crear consultas dinámicas
 ms.date: 07/20/2015
 ms.assetid: 16278787-7532-4b65-98b2-7a412406c4ee
-ms.openlocfilehash: 616aa3eba1e07a92983bb5d2048a9dbae936e77c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 1f686c37b5d04263ac5ae0dd6883aa8a519ed19e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346051"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410984"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>Cómo: usar árboles de expresión para generar consultas dinámicas (Visual Basic)
 
@@ -103,13 +103,13 @@ En este código se usa un número fijo de expresiones en el predicado que se pas
 
 ## <a name="compile-the-code"></a>Compilar el código
 
-- Cree un nuevo proyecto de **aplicación de consola**.
+- Cree un nuevo proyecto de **aplicación de consola** .
 
 - Incluya el espacio de nombres System.Linq.Expressions.
 
-- Copie el código del ejemplo y péguelo en el procedimiento `Main` `Sub`.
+- Copie el código del ejemplo y péguelo en el `Main` `Sub` procedimiento.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Árboles de expresión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
-- [Cómo: ejecutar árboles de expresión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+- [Árboles de expresión (Visual Basic)](index.md)
+- [How to: Execute Expression Trees (Visual Basic)](how-to-execute-expression-trees.md) (Cómo ejecutar árboles de expresión en Visual Basic)

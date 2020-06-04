@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operands
 - expressions [Visual Basic]
 ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
-ms.openlocfilehash: fa410a739be2da8802e76a35068448263ddec1fc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: dcf52c6200193f81070f323c8037ad82d747942d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343611"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403438"
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Operadores y expresiones en Visual Basic
 Un *operador* es un elemento de código que realiza una operación en uno o más elementos de código que contienen valores. Los elementos de valor incluyen variables, constantes, literales, propiedades, devoluciones de procedimientos `Function` y `Operator` y expresiones.  
@@ -25,15 +25,15 @@ Un *operador* es un elemento de código que realiza una operación en uno o más
 ## <a name="types-of-operators"></a>Tipos de operadores  
  Visual Basic proporciona los siguientes tipos de operadores:  
   
-- Los [operadores aritméticos](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md) realizan cálculos familiares en valores numéricos, incluido el desplazamiento de los patrones de bits.  
+- Los [operadores aritméticos](arithmetic-operators.md) realizan cálculos familiares en valores numéricos, incluido el desplazamiento de los patrones de bits.  
   
-- Los [operadores de comparación](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md) comparan dos expresiones y devuelven un valor `Boolean` que representa el resultado de la comparación.  
+- Los [operadores de comparación](comparison-operators.md) comparan dos expresiones y devuelven un valor `Boolean` que representa el resultado de la comparación.  
   
-- Los [operadores de concatenación](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md) unen varias cadenas en una sola.  
+- Los [operadores de concatenación](concatenation-operators.md) unen varias cadenas en una sola cadena.  
   
-- Los [operadores lógicos y bit a bit de Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md) combinan valores `Boolean` o numéricos y devuelven un resultado del mismo tipo de datos que los valores.  
+- Los [operadores lógicos y bit a bit de Visual Basic](logical-and-bitwise-operators.md) combinan valores `Boolean` o numéricos y devuelven un resultado del mismo tipo de datos que los valores.  
   
- Los elementos de valor que se combinan con un operador se denominan *operandos* de ese operador. Los operadores combinados con elementos de valor forman expresiones, salvo el operador de asignación, que forma una *instrucción*. Para obtener más información, vea [Instrucciones (Guía de programación de C#)](../../../../visual-basic/programming-guide/language-features/statements.md).  
+ Los elementos de valor que se combinan con un operador se denominan *operandos* de ese operador. Los operadores combinados con elementos de valor forman expresiones, salvo el operador de asignación, que forma una *instrucción*. Para más información, vea [Statements](../statements.md) (Instrucciones).  
   
 ## <a name="evaluation-of-expressions"></a>Evaluación de expresiones  
  El resultado final de una expresión representa un valor, que suele ser de un tipo de datos conocido, como un tipo `Boolean`, `String` o numérico.  
@@ -60,10 +60,10 @@ Un *operador* es un elemento de código que realiza una operación en uno o más
   
  [!code-vb[VbVbalrOperators#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#56)]  
   
- En el ejemplo anterior, Visual Basic realiza las operaciones en la expresión del lado derecho del operador de asignación (`=`) y, a continuación, asigna el valor resultante a la variable `x` a la izquierda. No hay ningún límite práctico al número de operadores que se pueden combinar en una expresión, pero es necesario conocer la [prioridad de operadores en Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md) para asegurarse de que se obtienen los resultados esperados.  
+ En el ejemplo anterior, Visual Basic realiza las operaciones en la expresión del lado derecho del operador de asignación ( `=` ) y, a continuación, asigna el valor resultante a la variable `x` de la izquierda. No hay ningún límite práctico al número de operadores que se pueden combinar en una expresión, pero es necesario conocer la [prioridad de operadores en Visual Basic](../../../language-reference/operators/operator-precedence.md) para asegurarse de que se obtienen los resultados esperados.  
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Operadores](../../../../visual-basic/language-reference/operators/index.md)
-- [Combinación eficaz de operadores](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)
-- [Instrucciones](../../../../visual-basic/language-reference/statements/index.md)
+- [Operadores](../../../language-reference/operators/index.md)
+- [Combinación eficaz de operadores](efficient-combination-of-operators.md)
+- [Instrucciones](../../../language-reference/statements/index.md)
