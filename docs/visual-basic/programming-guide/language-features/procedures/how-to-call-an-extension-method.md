@@ -1,22 +1,22 @@
 ---
-title: 'Cómo: Llamar a un método de extensión'
+title: Procedimiento para llamar a un método de extensión
 ms.date: 07/20/2015
 helpviewer_keywords:
 - calling extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: df07750f-40f4-4c07-a79e-1113a27cfbea
-ms.openlocfilehash: a19705a8f90833d48869df26a18d19b0ad1488e0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 54419c99ae08c9ca2e3cfa86993dc99bc02bbb64
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74340394"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84388665"
 ---
 # <a name="how-to-call-an-extension-method-visual-basic"></a>Cómo: Llamar a un método de extensión (Visual Basic)
 
 Los métodos de extensión permiten agregar métodos a una clase existente. Una vez declarado y incorporado un método de extensión en el ámbito, puede llamarlo como un método de instancia del tipo que extiende. Para obtener más información sobre cómo escribir un método de extensión, vea [Cómo: escribir un método de extensión](./how-to-write-an-extension-method.md).
 
- Las instrucciones siguientes hacen referencia al método de extensión `PrintAndPunctuate`, que mostrará la instancia de cadena que lo invoca, seguido de cualquier valor que se envíe en para el segundo parámetro, `punc`.
+ Las instrucciones siguientes hacen referencia al método de extensión `PrintAndPunctuate` , que mostrará la instancia de la cadena que lo invoca, seguido del valor que se envía para el segundo parámetro, `punc` .
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -35,19 +35,19 @@ El método debe estar en el ámbito cuando se llama a.
 
 ### <a name="to-call-an-extension-method"></a>Para llamar a un método de extensión
 
-1. Declare una variable que tenga el tipo de datos del primer parámetro del método de extensión. Por `PrintAndPunctuate`, necesita una variable de <xref:System.String>:
+1. Declare una variable que tenga el tipo de datos del primer parámetro del método de extensión. Para `PrintAndPunctuate` , necesita una <xref:System.String> variable:
 
     ```vb
     Dim example = "Ready"
     ```
 
-2. Esa variable invocará el método de extensión y su valor se enlazará al primer parámetro, `aString`. La siguiente instrucción de llamada mostrará `Ready?`.
+2. Esa variable invocará el método de extensión y su valor se enlazará al primer parámetro, `aString` . Se mostrará la siguiente instrucción de llamada `Ready?` .
 
     ```vb
     example.PrintAndPunctuate("?")
     ```
 
-     Observe que la llamada a este método de extensión tiene el aspecto de una llamada a cualquiera de los métodos de instancia de <xref:System.String> que requieren un parámetro:
+     Observe que la llamada a este método de extensión tiene el aspecto de una llamada a cualquiera de los <xref:System.String> métodos de instancia que requieren un parámetro:
 
     ```vb
     example.EndsWith("dy")
@@ -61,7 +61,7 @@ El método debe estar en el ámbito cuando se llama a.
     example2.PrintAndPunctuate("!!!")
     ```
 
-     El resultado es: `or not!!!`.
+     El resultado es: `or not!!!` .
 
 ## <a name="example"></a>Ejemplo
  El código siguiente es un ejemplo completo de la creación y el uso de un método de extensión simple.
@@ -95,8 +95,8 @@ End Module
 ' Goodbye?
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Escribir un método de extensión](./how-to-write-an-extension-method.md)
+- [Procedimiento para escribir un método de extensión](./how-to-write-an-extension-method.md)
 - [Métodos de extensión](./extension-methods.md)
-- [Ámbito en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Ámbito en Visual Basic](../declared-elements/scope.md)

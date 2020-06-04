@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Sobrecargar un procedimiento que toma parámetros opcionales'
+title: Procedimiento para sobrecargar un procedimiento que toma parámetros opcionales
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], parameters
@@ -10,31 +10,31 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: 825f9d56-4cde-43fd-993a-b9171717e2eb
-ms.openlocfilehash: 4d31980e4b968cff274091ba4f307dffddab1100
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9ae6818b1e03ccd00ed554e98690e02ffa45de99
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350861"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84387847"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a>Cómo: Sobrecargar un procedimiento que toma parámetros opcionales (Visual Basic)
-Si un procedimiento tiene uno o varios parámetros [opcionales](../../../../visual-basic/language-reference/modifiers/optional.md) , no se puede definir una versión sobrecargada que coincida con cualquiera de sus sobrecargas implícitas. Para obtener más información, vea "sobrecargas implícitas para los parámetros opcionales" en [consideraciones sobre la sobrecarga de procedimientos](./considerations-in-overloading-procedures.md).  
+Si un procedimiento tiene uno o varios parámetros [opcionales](../../../language-reference/modifiers/optional.md) , no se puede definir una versión sobrecargada que coincida con cualquiera de sus sobrecargas implícitas. Para obtener más información, vea "sobrecargas implícitas para los parámetros opcionales" en [consideraciones sobre la sobrecarga de procedimientos](./considerations-in-overloading-procedures.md).  
   
 ## <a name="one-optional-parameter"></a>Un parámetro opcional  
   
 #### <a name="to-overload-a-procedure-that-takes-one-optional-parameter"></a>Para sobrecargar un procedimiento que toma un parámetro opcional  
   
-1. Escriba una instrucción de declaración `Sub` o `Function` que incluya el parámetro opcional en la lista de parámetros. No use la palabra clave `Optional` en esta versión sobrecargada.  
+1. Escriba una `Sub` `Function` instrucción de declaración o que incluya el parámetro opcional en la lista de parámetros. No use la `Optional` palabra clave en esta versión sobrecargada.  
   
-2. Preceda a la palabra clave `Sub` o `Function` con la palabra clave [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) .  
+2. Preceda `Sub` `Function` a la palabra clave o con la palabra clave [Overloads](../../../language-reference/modifiers/overloads.md) .  
   
 3. Escriba el código de procedimiento que debe ejecutarse cuando el código que realiza la llamada proporcione el argumento opcional.  
   
-4. Finalice el procedimiento con la instrucción `End Sub` o `End Function` según corresponda.  
+4. Finalice el procedimiento con la `End Sub` `End Function` instrucción o según corresponda.  
   
 5. Escriba una segunda instrucción de declaración que sea idéntica a la primera declaración, salvo que no incluya el parámetro opcional en la lista de parámetros.  
   
-6. Escriba el código de procedimiento que debe ejecutarse cuando el código de llamada no proporcione el argumento opcional. Finalice el procedimiento con la instrucción `End Sub` o `End Function` según corresponda.  
+6. Escriba el código de procedimiento que debe ejecutarse cuando el código de llamada no proporcione el argumento opcional. Finalice el procedimiento con la `End Sub` `End Function` instrucción o según corresponda.  
   
      En el ejemplo siguiente se muestra un procedimiento definido con un parámetro opcional, un conjunto equivalente de dos procedimientos sobrecargados y, por último, ejemplos de versiones sobrecargadas y no válidas.  
   
@@ -53,15 +53,15 @@ Si un procedimiento tiene uno o varios parámetros [opcionales](../../../../visu
   
 1. Determine qué combinaciones de argumentos opcionales proporcionados son aceptables para la lógica del procedimiento. Podría producirse una combinación inaceptable si un parámetro opcional depende de otro. Por ejemplo, si un parámetro acepta el nombre de una persona y otro acepta la edad de la persona, una combinación de argumentos que proporcione la edad pero que omita el nombre es inaceptable.  
   
-2. Para cada combinación aceptable de argumentos opcionales proporcionados, escriba una instrucción de declaración `Sub` o `Function` que defina la lista de parámetros correspondiente. No utilice la palabra clave `Optional`.  
+2. Para cada combinación aceptable de argumentos opcionales proporcionados, escriba `Sub` una `Function` instrucción de declaración o que defina la lista de parámetros correspondiente. No use la `Optional` palabra clave.  
   
-3. En cada declaración, preceda a la palabra clave `Sub` o `Function` con la palabra clave [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) .  
+3. En cada declaración, preceda `Sub` `Function` a la palabra clave o con la palabra clave [Overloads](../../../language-reference/modifiers/overloads.md) .  
   
 4. Después de cada declaración, escriba el código de procedimiento que debe ejecutarse cuando el código de llamada proporciona una lista de argumentos correspondiente a la lista de parámetros de la declaración.  
   
-5. Finalice cada procedimiento con la instrucción `End Sub` o `End Function` según corresponda.  
+5. Finalice cada procedimiento con la `End Sub` `End Function` instrucción o según corresponda.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Procedimientos](./index.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)
@@ -69,7 +69,7 @@ Si un procedimiento tiene uno o varios parámetros [opcionales](../../../../visu
 - [Matrices de parámetros](./parameter-arrays.md)
 - [Sobrecarga de procedimientos](./procedure-overloading.md)
 - [Solución de problemas de procedimientos](./troubleshooting-procedures.md)
-- [Definir varias versiones de un procedimiento](./how-to-define-multiple-versions-of-a-procedure.md)
-- [Llamar a un procedimiento sobrecargado](./how-to-call-an-overloaded-procedure.md)
-- [Sobrecargar un procedimiento que toma un número indefinido de parámetros](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
-- [Resolución de sobrecargas](./overload-resolution.md)
+- [Procedimiento para definir varias versiones de un procedimiento](./how-to-define-multiple-versions-of-a-procedure.md)
+- [Procedimiento para llamar a un procedimiento sobrecargado](./how-to-call-an-overloaded-procedure.md)
+- [Procedimiento para sobrecargar un procedimiento que toma un número indefinido de parámetros](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [Resolución de sobrecarga](./overload-resolution.md)

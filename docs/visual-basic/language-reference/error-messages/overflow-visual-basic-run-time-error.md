@@ -4,27 +4,27 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrERRID_Overflow
 ms.assetid: c6a23279-3086-412a-bcff-ff8ed2cb8c6f
-ms.openlocfilehash: 63223a815e1c4ff8d4e0afbb6c732fff90aad465
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5606ae8188c12142800adef46819791b732ff73c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946554"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84387275"
 ---
 # <a name="overflow-visual-basic-run-time-error"></a>Desbordamiento (Error en tiempo de ejecución de Visual Basic)
 Se produce un desbordamiento al intentar una asignación que supera los límites del destino de la asignación.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1. Asegúrese de que los resultados de tipo de datos, cálculos y las asignaciones de las conversiones no están demasiado grande para representarlo dentro del intervalo de variables permitido para ese tipo de valor y asignación el valor a una variable de un tipo que pueden contener un mayor intervalo de valores , si es necesario.  
+1. Asegúrese de que los resultados de las asignaciones, los cálculos y las conversiones de tipos de datos no son demasiado grandes para representarse dentro del intervalo de variables permitido para ese tipo de valor y asignar el valor a una variable de un tipo que puede contener un intervalo mayor de valores, si es necesario.  
   
-2. Asegúrese de que las asignaciones de propiedades están dentro del intervalo de la propiedad a la que se realizan.  
+2. Asegúrese de que las asignaciones a propiedades se ajustan al intervalo de la propiedad en la que se realizan.  
   
-3. Asegúrese de que números que se usan en los cálculos que se convierten en enteros no tienen resultados más largos que los enteros.  
+3. Asegúrese de que los números que se usan en los cálculos convertidos en enteros no tienen resultados mayores que los enteros.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Int32.MaxValue?displayProperty=nameWithType>
 - <xref:System.Double.MaxValue?displayProperty=nameWithType>
-- [Tipos de datos](../../../visual-basic/language-reference/data-types/index.md)
-- [Tipos de error](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [Tipos de datos](../data-types/index.md)
+- [Tipos de error](../../programming-guide/language-features/error-types.md)
