@@ -2,17 +2,17 @@
 title: Recuperar los párrafos y sus estilos
 ms.date: 07/20/2015
 ms.assetid: d9ed2238-d38e-4ad4-b88b-db7859df9bde
-ms.openlocfilehash: 862a07c26733a4989ae010854ceaca1fd7e3578e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ad904abf9bd94e83b981859662c22787652e294f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347510"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413418"
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-visual-basic"></a>Recuperar los párrafos y sus estilos (Visual Basic)
 En este ejemplo, se escribe una consulta que recupera los nodos de párrafo de un documento WordprocessingML. También identifica el estilo de cada uno de los párrafos.  
   
- Esta consulta se basa en la consulta del ejemplo anterior, [buscando el estilo de párrafo predeterminado (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md), que recupera el estilo predeterminado de la lista de estilos. Esta información es necesaria para que la consulta pueda identificar el estilo de los párrafos que no tienen un estilo establecido explícitamente. Los estilos de párrafo se establecen mediante el elemento `w:pPr`; si un párrafo no contiene este elemento, se formatea con el estilo predeterminado.  
+ Esta consulta se basa en la consulta del ejemplo anterior, [buscando el estilo de párrafo predeterminado (Visual Basic)](finding-the-default-paragraph-style.md), que recupera el estilo predeterminado de la lista de estilos. Esta información es necesaria para que la consulta pueda identificar el estilo de los párrafos que no tienen un estilo establecido explícitamente. Los estilos de párrafo se establecen mediante el elemento `w:pPr`; si un párrafo no contiene este elemento, se formatea con el estilo predeterminado.  
   
  Este tema explica la importancia de algunas partes de la consulta y luego muestra dicha consulta como parte de un ejemplo completo y funcional.  
   
@@ -23,7 +23,7 @@ En este ejemplo, se escribe una consulta que recupera los nodos de párrafo de u
 xDoc.Root.<w:body>...<w:p>  
 ```  
   
- Esta expresión es similar al origen de la consulta en el ejemplo anterior, al [Buscar el estilo de párrafo predeterminado (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md). La diferencia principal radica en que usa el eje <xref:System.Xml.Linq.XContainer.Descendants%2A> en lugar del eje <xref:System.Xml.Linq.XContainer.Elements%2A>. La consulta usa el eje <xref:System.Xml.Linq.XContainer.Descendants%2A> porque en los documentos que tienen secciones, lo párrafos no serán los secundarios directos del elemento de cuerpo; en su lugar, los párrafos estarán dos niveles por debajo en la jerarquía. Mediante el eje <xref:System.Xml.Linq.XContainer.Descendants%2A>, el código funcionará independientemente de que el documento use secciones o no.  
+ Esta expresión es similar al origen de la consulta en el ejemplo anterior, al [Buscar el estilo de párrafo predeterminado (Visual Basic)](finding-the-default-paragraph-style.md). La diferencia principal radica en que usa el eje <xref:System.Xml.Linq.XContainer.Descendants%2A> en lugar del eje <xref:System.Xml.Linq.XContainer.Elements%2A>. La consulta usa el eje <xref:System.Xml.Linq.XContainer.Descendants%2A> porque en los documentos que tienen secciones, lo párrafos no serán los secundarios directos del elemento de cuerpo; en su lugar, los párrafos estarán dos niveles por debajo en la jerarquía. Mediante el eje <xref:System.Xml.Linq.XContainer.Descendants%2A>, el código funcionará independientemente de que el documento use secciones o no.  
   
 ## <a name="example"></a>Ejemplo  
  La consulta usa una cláusula `Let` para determinar el elemento que contiene el nodo de estilo. Si no hay ningún elemento, `styleNode` se establece en `Nothing`:  
@@ -39,7 +39,7 @@ Let styleNode As XElement = para.<w:pPr>.<w:pStyle>.FirstOrDefault()
 ## <a name="example"></a>Ejemplo  
  Este ejemplo procesa un documento WordprocessingML, recuperando los nodos de párrafo a partir de dicho documento. También identifica el estilo de cada uno de los párrafos. Este ejemplo se basa en los ejemplos anteriormente vistos en este tutorial. En los comentarios del siguiente código se menciona dónde se encuentra la nueva consulta.  
   
- Puede encontrar instrucciones para crear el documento de origen para este ejemplo en [crear el documento de origen de Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Puede encontrar instrucciones para crear el documento de origen para este ejemplo en [crear el documento de origen de Office Open XML (Visual Basic)](creating-the-source-office-open-xml-document.md).  
   
  Este ejemplo utiliza las clases que se encuentran en el ensamblado WindowsBase. Utiliza los tipos del espacio de nombres <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -111,7 +111,7 @@ Module Module1
 End Module  
 ```  
   
- En este ejemplo se genera el siguiente resultado cuando se aplica al documento descrito en [crear el documento de origen de Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ En este ejemplo se genera el siguiente resultado cuando se aplica al documento descrito en [crear el documento de origen de Office Open XML (Visual Basic)](creating-the-source-office-open-xml-document.md).  
   
 ```console  
 StyleName:Heading1  
@@ -132,8 +132,8 @@ StyleName:Code
 ```  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- En el siguiente tema, [recuperar el texto de los párrafos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), creará una consulta para recuperar el texto de los párrafos.  
+ En el siguiente tema, [recuperar el texto de los párrafos (Visual Basic)](retrieving-the-text-of-the-paragraphs.md), creará una consulta para recuperar el texto de los párrafos.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Tutorial: manipular contenido en un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Tutorial: manipular contenido en un documento WordprocessingML (Visual Basic)](tutorial-manipulating-content-in-a-wordprocessingml-document.md)

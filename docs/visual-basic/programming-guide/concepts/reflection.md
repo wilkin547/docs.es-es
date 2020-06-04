@@ -2,14 +2,14 @@
 title: Reflexión
 ms.date: 07/20/2015
 ms.assetid: d991bc0f-d16a-4ac5-9351-70e5c5b9891b
-ms.openlocfilehash: 28f33c88f7aaaf51938a7d27fd2218a97b628acd
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 43c05a0b3bbfc3dfc304b1aed3f689625a40229a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349282"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413185"
 ---
-# <a name="reflection-visual-basic"></a>Reflexión (Visual Basic)
+# <a name="reflection-visual-basic"></a>Reflection (Visual Basic) (Reflexión [Visual Basic])
 La reflexión proporciona objetos (de tipo <xref:System.Type>) que describen los ensamblados, módulos y tipos. Puede usar la reflexión para crear dinámicamente una instancia de un tipo, enlazar el tipo a un objeto existente u obtener el tipo desde un objeto existente e invocar sus métodos, o acceder a sus campos y propiedades. Si usa atributos en el código, la reflexión le permite acceder a ellos. Para obtener más información, consulte [Attributes](../../../standard/attributes/index.md) (Atributos).  
   
  Este es un ejemplo simple de reflexión que usa el método estático `GetType`, heredado por todos los tipos de la clase base `Object`, para obtener el tipo de una variable:  
@@ -21,7 +21,7 @@ Dim type As System.Type = i.GetType()
 System.Console.WriteLine(type)  
 ```  
   
- El resultado es el siguiente:  
+ La salida es la siguiente:  
   
  `System.Int32`  
   
@@ -33,35 +33,35 @@ Dim info As System.Reflection.Assembly = GetType(System.Int32).Assembly
 System.Console.WriteLine(info)  
 ```  
   
- El resultado es el siguiente:  
+ La salida es la siguiente:  
   
  `mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089`  
   
 ## <a name="reflection-overview"></a>Información general de la reflexión  
  La reflexión resulta útil en las siguientes situaciones:  
   
-- Cuando tenga que acceder a atributos en los metadatos del programa. Para obtener más información, consulte [Retrieving Information Stored in Attributes](../../../standard/attributes/retrieving-information-stored-in-attributes.md) (Recuperar la información almacenada en atributos).  
+- Cuando tenga que acceder a atributos en los metadatos del programa. Para obtener más información, consulte [Recuperar información almacenada en atributos](../../../standard/attributes/retrieving-information-stored-in-attributes.md).  
   
 - Para examinar y crear instancias de tipos en un ensamblado.  
   
 - Para generar nuevos tipos en tiempo de ejecución. Usar clases en <xref:System.Reflection.Emit>.  
   
-- Para llevar a cabo métodos de acceso de enlace en tiempo de ejecución en tipos creados en tiempo de ejecución. Consulte el tema [Dynamically Loading and Using Types](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md) (Cargar y usar tipos dinámicamente).  
+- Para llevar a cabo métodos de acceso de enlace en tiempo de ejecución en tipos creados en tiempo de ejecución. Consulte el tema [Cargar y utilizar tipos dinámicamente](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md).  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  Para obtener más información:  
   
 - [Reflexión](../../../framework/reflection-and-codedom/reflection.md)  
   
-- [Viewing Type Information](../../../framework/reflection-and-codedom/viewing-type-information.md) (Ver información tipos)  
+- [Ver información tipos](../../../framework/reflection-and-codedom/viewing-type-information.md)  
   
-- [Reflection and Generic Types](../../../framework/reflection-and-codedom/reflection-and-generic-types.md) (Reflexión y tipos genéricos)  
+- [Reflexión y tipos genéricos](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  
   
 - <xref:System.Reflection.Emit>  
   
-- [Retrieving Information Stored in Attributes](../../../standard/attributes/retrieving-information-stored-in-attributes.md) (Recuperar la información almacenada en atributos)  
+- [Recuperar la información almacenada en atributos](../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Guía de programación en Visual Basic](../../../visual-basic/programming-guide/index.md)
+- [Guía de programación en Visual Basic](../index.md)
 - [Ensamblados de .NET](../../../standard/assembly/index.md)

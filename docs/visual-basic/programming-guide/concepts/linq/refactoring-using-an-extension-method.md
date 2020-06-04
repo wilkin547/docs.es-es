@@ -2,15 +2,15 @@
 title: Refactorizar mediante un método de extensión
 ms.date: 07/20/2015
 ms.assetid: d87ae99a-cfa9-4a31-a5e4-9d6437be6810
-ms.openlocfilehash: c66fb90f9949ee3e47105498b211c857d5d63804
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 5bb3ed44c0c3f7616468f820428fe1a384ab6d45
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348018"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413452"
 ---
 # <a name="refactoring-using-an-extension-method-visual-basic"></a>Refactorizar mediante un método de extensión (Visual Basic)
-Este ejemplo se basa en el ejemplo anterior, [recuperar el texto de los párrafos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), mediante la refactorización de la concatenación de cadenas con una función pura que se implementa como método de extensión.  
+Este ejemplo se basa en el ejemplo anterior, [recuperar el texto de los párrafos (Visual Basic)](retrieving-the-text-of-the-paragraphs.md), mediante la refactorización de la concatenación de cadenas con una función pura que se implementa como método de extensión.  
   
  El ejemplo anterior usaba el operador de consultas estándar <xref:System.Linq.Enumerable.Aggregate%2A> para concatenar varias cadenas en una sola. Sin embargo, resulta más eficaz escribir un método de extensión a tal efecto, ya que la consulta resultante es más pequeña y más simple.  
   
@@ -19,7 +19,7 @@ Este ejemplo se basa en el ejemplo anterior, [recuperar el texto de los párrafo
   
  El ejemplo contiene varias sobrecargas del método `StringConcatenate`.  
   
- Puede encontrar instrucciones para crear el documento de origen para este ejemplo en [crear el documento de origen de Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Puede encontrar instrucciones para crear el documento de origen para este ejemplo en [crear el documento de origen de Office Open XML (Visual Basic)](creating-the-source-office-open-xml-document.md).  
   
  Este ejemplo utiliza las clases que se encuentran en el ensamblado WindowsBase. Utiliza los tipos del espacio de nombres <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -241,9 +241,9 @@ StyleName:Code >Hello World<
 ## <a name="next-steps"></a>Pasos siguientes  
  El siguiente ejemplo muestra cómo refactorizar este código de otra forma, mediante las funciones puras:  
   
-- [Refactorizar mediante una función pura (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
+- [Refactorizar mediante una función pura (Visual Basic)](refactoring-using-a-pure-function.md)  
   
 ## <a name="see-also"></a>Vea también
 
-- [Tutorial: manipular contenido en un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-- [Refactorizar en funciones puras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [Tutorial: manipular contenido en un documento WordprocessingML (Visual Basic)](tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Refactorizar en funciones puras (Visual Basic)](refactoring-into-pure-functions.md)

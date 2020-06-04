@@ -2,18 +2,18 @@
 title: Conservar un objeto en Visual Studio
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: fbd342c929e8519571c0f6bb76d4091efcfe4476
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e4eaf87c99ea1577d7f3ca40e628c00cc2700511
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350393"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413134"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>Tutorial: Conservar un objeto en Visual Studio (Visual Basic)
 Aunque puede establecer las propiedades de un objeto en los valores predeterminados en el tiempo de diseño, cualquier valor que se establezca en tiempo de ejecución se pierde cuando se destruye el objeto. Puede usar la serialización para conservar los datos de un objeto entre instancias, lo que le permite almacenar valores y recuperarlos la próxima vez que se cree una instancia del objeto.  
   
 > [!NOTE]
-> En Visual Basic, para almacenar datos simples, como un nombre o número, puede utilizar el objeto `My.Settings`. Para más información, consulte [My.Settings (Objeto)](../../../../visual-basic/language-reference/objects/my-settings-object.md).  
+> En Visual Basic, para almacenar datos simples, como un nombre o número, puede utilizar el objeto `My.Settings`. Para obtener más información, vea [My.Settings (Objeto)](../../../language-reference/objects/my-settings-object.md).  
   
  En este tutorial, creará un objeto `Loan` sencillo y conservará sus datos en un archivo. Después, recuperará los datos del archivo cuando vuelva a crear el objeto.  
   
@@ -85,7 +85,7 @@ Aunque puede establecer las propiedades de un objeto en los valores predetermina
   
 4. En el menú **Proyecto**, seleccione **Establecer como proyecto de inicio**.  
   
-5. En el menú **Proyecto** , elija **Agregar referencia**.  
+5. En el menú **proyecto** , elija **Agregar referencia**.  
   
 6. En el cuadro de diálogo **Agregar referencia**, pulse la pestaña **Proyectos** y, después, elija el proyecto de LoanClass.  
   
@@ -215,7 +215,7 @@ Aunque puede establecer las propiedades de un objeto en los valores predetermina
   
  En este punto, podrá compilar y ejecutar la aplicación de nuevo. Inicialmente, los valores predeterminados aparecen en los cuadros de texto. Pruebe a cambiar los valores y escriba un nombre en el cuarto cuadro de texto. Cierre la aplicación y, después, ejecútela de nuevo. Tenga en cuenta que los valores nuevos aparecen ahora en los cuadros de texto.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Serialización (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
-- [Guía de programación en Visual Basic](../../../../visual-basic/programming-guide/index.md)
+- [Serialización (Visual Basic)](index.md)
+- [Guía de programación en Visual Basic](../../index.md)

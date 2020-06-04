@@ -1,13 +1,13 @@
 ---
-title: 'Cómo: crear un documento con espacios de nombres (LINQ to XML)'
+title: Procedimiento para crear un documento con espacios de nombres (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: cc5b0d4d-360c-4ada-94fa-2d2916e989be
-ms.openlocfilehash: bbd23840b0356cf14d2c7d6cb71591fe6461a8bd
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a440c9d810798eb5ebd025a336cbb17fface23b4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74332585"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414639"
 ---
 # <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>Cómo: Crear un documento con espacios de nombres (LINQ to XML) (Visual Basic)
 En este tema se muestra cómo crear un documento con espacios de nombres en Visual Basic.  
@@ -18,7 +18,7 @@ En este tema se muestra cómo crear un documento con espacios de nombres en Visu
   
  Mediante la palabra clave `Imports` podrá definir espacios de nombres predeterminados y espacios de nombres con un prefijo.  
   
- Para obtener más información, vea [Introducción a los literales XML en Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md).  
+ Para obtener más información, vea [Introducción a los literales XML en Visual Basic](introduction-to-xml-literals.md).  
   
  Observe que el espacio de nombres XML predeterminado solo puede aplicarse a los elementos, no a los atributos. De forma predeterminada, los atributos nunca se encuentran en un espacio de nombres. No obstante, puede utilizar un prefijo de espacio de nombres para colocar un atributo en un espacio de nombres.  
   

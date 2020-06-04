@@ -1,13 +1,13 @@
 ---
-title: 'Cómo: Crear un árbol a partir de un objeto XmlReader'
+title: Procedimiento para crear un árbol a partir de un objeto XmlReader
 ms.date: 07/20/2015
 ms.assetid: 6de683d8-177d-402b-b0de-d0539f1ce5d8
-ms.openlocfilehash: 7d8d7f5b6389bef520e11fd2b7cc3e1c7e862e73
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 25c15ff08563b12b26041a536dfbca1c9cce260a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353086"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414613"
 ---
 # <a name="how-to-create-a-tree-from-an-xmlreader-visual-basic"></a>Cómo: crear un árbol a partir de un objeto XmlReader (Visual Basic)
 
@@ -15,7 +15,7 @@ En este tema se muestra cómo crear un árbol XML directamente de <xref:System.X
 
 ## <a name="example"></a>Ejemplo
 
-En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: libros (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).
+En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: libros (LINQ to XML)](sample-xml-file-books-linq-to-xml.md).
 
 El siguiente código crea un objeto `T:System.Xml.XmlReader` y lee nodos hasta que encuentra el primer nodo de elemento. A continuación, carga el objeto <xref:System.Xml.Linq.XElement>.
 
@@ -56,4 +56,4 @@ Este ejemplo produce el siguiente resultado:
 
 ## <a name="see-also"></a>Vea también
 
-- [Analizar XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [Analizar XML (Visual Basic)](parsing-xml.md)

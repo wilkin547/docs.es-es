@@ -2,15 +2,15 @@
 title: Recuperar el texto de los párrafos
 ms.date: 07/20/2015
 ms.assetid: 095fa0d9-7b1b-4cbb-9c13-e2c9d8923d31
-ms.openlocfilehash: 0f53eec44e0b11a6c23c7afb4892e4d5d876d6d6
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 24167ade2d0326ef9382536f79f9e45eb22c89c5
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75341602"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413393"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-visual-basic"></a>Recuperar el texto de los párrafos (Visual Basic)
-Este ejemplo se basa en el ejemplo anterior, [recuperando los párrafos y sus estilos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md). El nuevo ejemplo recupera el texto de cada párrafo como una cadena.  
+Este ejemplo se basa en el ejemplo anterior, [recuperando los párrafos y sus estilos (Visual Basic)](retrieving-the-paragraphs-and-their-styles.md). El nuevo ejemplo recupera el texto de cada párrafo como una cadena.  
   
  Para ello, incorpora una consulta nueva que lleva a cabo una iteración a lo largo de la colección de tipos anónimos y proyecta una nueva colección de un tipo anónimo incluyendo a un nuevo miembro, `Text`. Utiliza el operador de consultas estándar <xref:System.Linq.Enumerable.Aggregate%2A> para concatenar varias cadenas en una sola cadena.  
   
@@ -18,12 +18,12 @@ Este ejemplo se basa en el ejemplo anterior, [recuperando los párrafos y sus es
   
  Por supuesto, sería posible escribir una única consulta que contuviese la funcionalidad necesaria para recuperar los párrafos, el estilo de cada uno de ellos y su texto. Sin embargo, a menudo resulta útil dividir una consulta más compleja en múltiples consultas, ya que el código resultante será más modular y fácil de mantener. Y lo que es más, si necesitara reutilizar una parte de esa consulta, resultaría más sencillo refactorizarla si las consultas están escritas de esta forma.  
   
- Estas consultas, que están encadenadas juntas, usan el modelo de procesamiento que se examina en detalle en el tema [Tutorial: ejecución aplazada (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md).  
+ Estas consultas, que están encadenadas juntas, usan el modelo de procesamiento que se examina en detalle en el tema [Tutorial: ejecución aplazada (Visual Basic)](tutorial-deferred-execution.md).  
   
 ## <a name="example"></a>Ejemplo  
  Este ejemplo procesa un documento WordprocessingML, determinando el nodo elemento, el nombre del estilo y el texto de cada párrafo. Este ejemplo se basa en los ejemplos anteriormente vistos en este tutorial. En los comentarios del siguiente código se menciona dónde se encuentra la nueva consulta.  
   
- Para obtener instrucciones sobre cómo crear el documento de origen para este ejemplo, vea [crear el documento de origen de Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Para obtener instrucciones sobre cómo crear el documento de origen para este ejemplo, vea [crear el documento de origen de Office Open XML (Visual Basic)](creating-the-source-office-open-xml-document.md).  
   
  Este ejemplo utiliza las clases que se encuentran en el ensamblado WindowsBase. Utiliza los tipos del espacio de nombres <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -116,7 +116,7 @@ Module Module1
 End Module  
 ```  
   
- En este ejemplo se genera el siguiente resultado cuando se aplica al documento descrito en [crear el documento de origen de Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ En este ejemplo se genera el siguiente resultado cuando se aplica al documento descrito en [crear el documento de origen de Office Open XML (Visual Basic)](creating-the-source-office-open-xml-document.md).  
   
 ```console  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -139,9 +139,9 @@ StyleName:Code >Hello World<
 ## <a name="next-steps"></a>Pasos siguientes  
  El siguiente ejemplo muestra cómo utilizar un método de extensión, en vez de <xref:System.Linq.Enumerable.Aggregate%2A>, para concatenar múltiples cadenas en una única cadena.  
   
-- [Refactorizar mediante un método de extensión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
+- [Refactorizar mediante un método de extensión (Visual Basic)](refactoring-using-an-extension-method.md)  
   
 ## <a name="see-also"></a>Vea también
 
-- [Tutorial: manipular contenido en un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-- [Ejecución aplazada y evaluación diferida en LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [Tutorial: manipular contenido en un documento WordprocessingML (Visual Basic)](tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Ejecución aplazada y evaluación diferida en LINQ to XML (Visual Basic)](deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

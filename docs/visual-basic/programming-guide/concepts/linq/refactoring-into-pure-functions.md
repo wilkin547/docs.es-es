@@ -1,13 +1,13 @@
 ---
-title: Refactorizar en funciones puras
+title: Refactorización en funciones puras
 ms.date: 07/20/2015
 ms.assetid: 99e7d27b-a3ff-4577-bdb2-5a8278d6d7af
-ms.openlocfilehash: 22b371c6136836d6e0f1281f824b69378c0d3e4a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 415b088661eca347330f4776901d68ee514d8dad
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346518"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413484"
 ---
 # <a name="refactoring-into-pure-functions-visual-basic"></a>Refactorizar en funciones puras (Visual Basic)
 
@@ -21,7 +21,7 @@ Tal como se indicó previamente en esta sección, una función pura tiene dos ca
 
  Una forma de realizar una transición a la programación funcional es refactorizar código existente para eliminar efectos secundarios innecesarios y dependencias externas. De esta forma puede crear versiones de función pura del código existente.
 
-En este tema se trata qué es una función pura y qué no es. En el tutorial [: manipular contenido en un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) se muestra cómo manipular un documento WordprocessingML e incluye dos ejemplos de cómo refactorizar usando una función pura.
+En este tema se trata qué es una función pura y qué no es. En el tutorial [: manipular contenido en un documento WordprocessingML (Visual Basic)](tutorial-manipulating-content-in-a-wordprocessingml-document.md) se muestra cómo manipular un documento WordprocessingML e incluye dos ejemplos de cómo refactorizar usando una función pura.
 
 ## <a name="eliminating-side-effects-and-external-dependencies"></a>Eliminar efectos secundarios y dependencias externas
 
@@ -52,7 +52,7 @@ Este código genera el siguiente resultado:
 StringOne-StringTwo
 ```
 
-Tenga en cuenta que es irrelevante si los datos que se están modificando tienen `public` o `private` acceso, o si es un miembro de `shared` o un miembro de instancia. Una función pura no cambia datos fuera de la función.
+Tenga en cuenta que es irrelevante si los datos que se están modificando tienen `public` `private` acceso o son `shared` miembros o un miembro de instancia. Una función pura no cambia datos fuera de la función.
 
 ### <a name="non-pure-function-that-changes-an-argument"></a>Función no pura que cambia un argumento
 
@@ -103,9 +103,9 @@ Un enfoque que puede ser muy útil para escribir funciones que son localmente im
 
 Una característica importante de los operadores de consulta estándar es que se implementan como funciones puras.
 
-Para obtener más información, vea [información general sobre operadores de consulta estándar (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).
+Para obtener más información, vea [información general sobre operadores de consulta estándar (Visual Basic)](standard-query-operators-overview.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Introducción a las transformaciones funcionales puras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-- [Programación funcional frente a programación imperativa (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+- [Introducción a las transformaciones funcionales puras (Visual Basic)](introduction-to-pure-functional-transformations.md)
+- [Programación funcional frente a programación imperativa (Visual Basic)](functional-programming-vs-imperative-programming.md)

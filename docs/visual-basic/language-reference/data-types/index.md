@@ -37,12 +37,12 @@ helpviewer_keywords:
 - storage order, controlling in Visual Basic
 - data types [Visual Basic], memory requirements
 ms.assetid: e975cdb6-64d8-4a4a-ae27-f3b3ed198ae0
-ms.openlocfilehash: 72bd8158880c602fb2cde92a3851c4e8a702c70b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5eb52ef937a677c0b7498d058b5a39a375351ddc
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344000"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84415626"
 ---
 # <a name="data-type-summary-visual-basic"></a>Resumen de tipos de datos (Visual Basic)
 
@@ -50,30 +50,30 @@ En la tabla siguiente se muestran los tipos de datos de Visual Basic, sus tipos 
   
 |Tipo de Visual Basic|Estructura de tipos de Common Language Runtime|Asignación de almacenamiento nominal|Intervalo de valores|  
 |-----------------------|--------------------------------------------|--------------------------------|-----------------|  
-|[Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|<xref:System.Boolean>|Depende de la implementación de la plataforma|`True` o `False`|  
-|[Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md)|<xref:System.Byte>|1 byte|de 0 a 255 (sin signo)|  
-|[Char](../../../visual-basic/language-reference/data-types/char-data-type.md) (carácter único)|<xref:System.Char>|2 bytes|de 0 a 65535 (sin signo)|  
-|[Date](../../../visual-basic/language-reference/data-types/date-data-type.md)|<xref:System.DateTime>|8 bytes|0:00:00 (medianoche) el 1 de enero de 0001 a las 11:59:59 P.M. del 31 de diciembre de 9999|  
-|[Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|<xref:System.Decimal>|16 bytes|0 a +/-79.228.162.514.264.337.593.543.950.335 (+/-7.9...E + 28) <sup>†</sup> sin separador decimal; de 0 a +/-7,9228162514264337593543950335 con 28 posiciones a la derecha del decimal;<br /><br /> el número más pequeño distinto de cero es +/-0,0000000000000000000000000001 (+/-1E-28) <sup>†</sup>|  
-|[Double](../../../visual-basic/language-reference/data-types/double-data-type.md) (punto flotante de precisión doble)|<xref:System.Double>|8 bytes|-1.79769313486231570 e + 308 a-4.94065645841246544 E-324 <sup>†</sup> para los valores negativos;<br /><br /> 4.94065645841246544 e-324 a 1.79769313486231570 E + 308 <sup>†</sup> para valores positivos|  
-|[Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32>|4 bytes|de-2.147.483.648 a 2.147.483.647 (con signo)|  
-|[Long](../../../visual-basic/language-reference/data-types/long-data-type.md) (entero largo)|<xref:System.Int64>|8 bytes|de-9.223.372.036.854.775.808 a 9.223.372.036.854.775.807 (9.2... E + 18 <sup>†</sup>) (con signo)|  
-|[Objeto](../../../visual-basic/language-reference/data-types/object-data-type.md)|<xref:System.Object> (clase)|4 bytes en la plataforma de 32 bits<br /><br /> 8 bytes en la plataforma de 64 bits|Cualquier tipo se puede almacenar en una variable de tipo `Object`|  
-|[SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte>|1 byte|de-128 a 127 (con signo)|  
-|[Short](../../../visual-basic/language-reference/data-types/short-data-type.md) (entero corto)|<xref:System.Int16>|2 bytes|de-32.768 a 32.767 (con signo)|  
-|[Single](../../../visual-basic/language-reference/data-types/single-data-type.md) (punto flotante de precisión sencilla)|<xref:System.Single>|4 bytes|-3.4028235 e + 38 a-401298e E-45 <sup>†</sup> para los valores negativos;<br /><br /> 401298e e-45 a 3.4028235 E + 38 <sup>†</sup> para los valores positivos|  
-|[Cadena](../../../visual-basic/language-reference/data-types/string-data-type.md) (longitud variable)|<xref:System.String> (clase)|Depende de la implementación de la plataforma|de 0 a aproximadamente 2 mil millones caracteres Unicode|  
-|[UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|<xref:System.UInt32>|4 bytes|de 0 a 4.294.967.295 (sin signo)|  
-|[ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|<xref:System.UInt64>|8 bytes|de 0 a 18446744073709551615 (1.8... E + 19 <sup>†</sup>) (sin signo)|  
-|[Definido por el usuario](../../../visual-basic/language-reference/data-types/user-defined-data-type.md) (estructura)|(hereda de <xref:System.ValueType>)|Depende de la implementación de la plataforma|Cada miembro de la estructura tiene un intervalo determinado por su tipo de datos e independiente de los intervalos de los demás miembros.|  
-|[UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|<xref:System.UInt16>|2 bytes|de 0 a 65.535 (sin signo)|  
+|[Boolean](boolean-data-type.md)|<xref:System.Boolean>|Depende de la implementación de la plataforma|`True` o `False`|  
+|[Byte](byte-data-type.md)|<xref:System.Byte>|1 byte|de 0 a 255 (sin signo)|  
+|[Char](char-data-type.md) (carácter único)|<xref:System.Char>|2 bytes|de 0 a 65535 (sin signo)|  
+|[Date](date-data-type.md)|<xref:System.DateTime>|8 bytes|0:00:00 (medianoche) el 1 de enero de 0001 a las 11:59:59 P.M. del 31 de diciembre de 9999|  
+|[Decimal](decimal-data-type.md)|<xref:System.Decimal>|16 bytes|0 a +/-79.228.162.514.264.337.593.543.950.335 (+/-7.9...E + 28) <sup>†</sup> sin separador decimal; de 0 a +/-7,9228162514264337593543950335 con 28 posiciones a la derecha del decimal;<br /><br /> el número más pequeño distinto de cero es +/-0,0000000000000000000000000001 (+/-1E-28) <sup>†</sup>|  
+|[Double](double-data-type.md) (punto flotante de precisión doble)|<xref:System.Double>|8 bytes|-1.79769313486231570 e + 308 a-4.94065645841246544 E-324 <sup>†</sup> para los valores negativos;<br /><br /> 4.94065645841246544 e-324 a 1.79769313486231570 E + 308 <sup>†</sup> para valores positivos|  
+|[Entero](integer-data-type.md)|<xref:System.Int32>|4 bytes|de-2.147.483.648 a 2.147.483.647 (con signo)|  
+|[Long](long-data-type.md) (entero largo)|<xref:System.Int64>|8 bytes|de-9.223.372.036.854.775.808 a 9.223.372.036.854.775.807 (9.2... E + 18 <sup>†</sup>) (con signo)|  
+|[Objeto](object-data-type.md)|<xref:System.Object>las|4 bytes en la plataforma de 32 bits<br /><br /> 8 bytes en la plataforma de 64 bits|Cualquier tipo se puede almacenar en una variable de tipo`Object`|  
+|[SByte](sbyte-data-type.md)|<xref:System.SByte>|1 byte|de-128 a 127 (con signo)|  
+|[Short](short-data-type.md) (entero corto)|<xref:System.Int16>|2 bytes|de-32.768 a 32.767 (con signo)|  
+|[Single](single-data-type.md) (punto flotante de precisión sencilla)|<xref:System.Single>|4 bytes|-3.4028235 e + 38 a-401298e E-45 <sup>†</sup> para los valores negativos;<br /><br /> 401298e e-45 a 3.4028235 E + 38 <sup>†</sup> para los valores positivos|  
+|[Cadena](string-data-type.md) (longitud variable)|<xref:System.String>las|Depende de la implementación de la plataforma|de 0 a aproximadamente 2 mil millones caracteres Unicode|  
+|[UInteger](uinteger-data-type.md)|<xref:System.UInt32>|4 bytes|de 0 a 4.294.967.295 (sin signo)|  
+|[ULong](ulong-data-type.md)|<xref:System.UInt64>|8 bytes|de 0 a 18446744073709551615 (1.8... E + 19 <sup>†</sup>) (sin signo)|  
+|[Definido por el usuario](user-defined-data-type.md) (estructura)|(se hereda de <xref:System.ValueType> )|Depende de la implementación de la plataforma|Cada miembro de la estructura tiene un intervalo determinado por su tipo de datos e independiente de los intervalos de los demás miembros.|  
+|[UShort](ushort-data-type.md)|<xref:System.UInt16>|2 bytes|de 0 a 65.535 (sin signo)|  
   
  <sup>†</sup> En *notación científica*, "E" hace referencia a una potencia de 10. Por tanto, 3.56 E + 2 significa 3,56 x 10<sup>2</sup> o 356 y 3.56 e-2 significa 3,56/10<sup>2</sup> o 0,0356.  
   
 > [!NOTE]
-> Para las cadenas que contienen texto, utilice la función <xref:Microsoft.VisualBasic.Strings.StrConv%2A> para convertir de un formato de texto a otro.  
+> Para las cadenas que contienen texto, use la <xref:Microsoft.VisualBasic.Strings.StrConv%2A> función para convertir de un formato de texto a otro.  
   
- Además de especificar un tipo de datos en una instrucción de declaración, puede forzar el tipo de datos de algunos elementos de programación mediante el uso de un carácter de tipo. Vea [caracteres de tipo](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md).  
+ Además de especificar un tipo de datos en una instrucción de declaración, puede forzar el tipo de datos de algunos elementos de programación mediante el uso de un carácter de tipo. Vea [caracteres de tipo](../../programming-guide/language-features/data-types/type-characters.md).  
   
 ## <a name="memory-consumption"></a>Consumo de memoria  
 
@@ -89,17 +89,17 @@ En la tabla siguiente se muestran los tipos de datos de Visual Basic, sus tipos 
   
 - **Administrativos.** Algunos tipos compuestos tienen requisitos de memoria adicionales. Por ejemplo, una matriz utiliza memoria adicional para la propia matriz y también para cada dimensión. En una plataforma de 32 bits, esta sobrecarga es actualmente de 12 bytes más 8 bytes para cada dimensión. En una plataforma de 64 bits, se duplica este requisito.  
   
-- **Diseño de almacenamiento.** No se puede suponer de forma segura que el orden de almacenamiento en memoria es el mismo que el orden de declaración. No puede incluso hacer suposiciones sobre la alineación de bytes, como un límite de 2 o 4 bytes. Si va a definir una clase o estructura y necesita controlar el diseño de almacenamiento de sus miembros, puede aplicar el atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute> a la clase o estructura.  
+- **Diseño de almacenamiento.** No se puede suponer de forma segura que el orden de almacenamiento en memoria es el mismo que el orden de declaración. No puede incluso hacer suposiciones sobre la alineación de bytes, como un límite de 2 o 4 bytes. Si está definiendo una clase o estructura y necesita controlar el diseño de almacenamiento de sus miembros, puede aplicar el <xref:System.Runtime.InteropServices.StructLayoutAttribute> atributo a la clase o estructura.  
   
 ### <a name="object-overhead"></a>Sobrecarga de objetos  
 
- Un `Object` que hace referencia a cualquier tipo de datos elemental o compuesto usa 4 bytes además de los datos contenidos en el tipo de datos.  
+ Una `Object` referencia a cualquier tipo de datos elemental o compuesto usa 4 bytes además de los datos contenidos en el tipo de datos.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:Microsoft.VisualBasic.Strings.StrConv%2A>
 - <xref:System.Runtime.InteropServices.StructLayoutAttribute>
-- [Funciones de conversión de tipos](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [Resumen de conversión](../../../visual-basic/language-reference/keywords/conversion-summary.md)
-- [Caracteres de tipo](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
-- [Uso eficiente de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [Type Conversion Functions](../functions/type-conversion-functions.md)
+- [Resumen de las conversiones](../keywords/conversion-summary.md)
+- [Caracteres de tipo](../../programming-guide/language-features/data-types/type-characters.md)
+- [Uso eficiente de los tipos de datos](../../programming-guide/language-features/data-types/efficient-use-of-data-types.md)
