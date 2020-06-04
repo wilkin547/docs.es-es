@@ -1,17 +1,17 @@
 ---
-title: 'Cómo: Asignar una matriz a otra'
+title: Procedimiento para asignar una matriz a otra
 ms.date: 07/20/2015
 helpviewer_keywords:
 - covariance, arrays
 - arrays [Visual Basic], assigning
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-ms.openlocfilehash: be5337e36c2cc7ad9f9b32182b8575ac66bb4a50
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c38def1ba9f3720bc760d6f6e4264510c884c930
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351887"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413084"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Cómo: Asignar una matriz a otra (Visual Basic)
 
@@ -35,17 +35,17 @@ Al asignar una matriz a otra, se aplican las siguientes reglas:
 
   Siempre que los rangos de las dos matrices sean iguales, no es necesario que las dimensiones sean iguales. El número de elementos de una dimensión determinada puede cambiar durante la asignación.
 
-- **Tipos de elemento.** Ambas matrices deben tener elementos de *tipo de referencia* o ambas matrices deben tener elementos de *tipo de valor* . Para obtener más información, consulta [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).
+- **Tipos de elemento.** Ambas matrices deben tener elementos de *tipo de referencia* o ambas matrices deben tener elementos de *tipo de valor* . Para obtener más información, vea [tipos de valor y tipos de referencia](../data-types/value-types-and-reference-types.md).
 
-  - Si ambas matrices tienen elementos de tipo de valor, los tipos de datos de los elementos deben ser exactamente iguales. La única excepción a esto es que puede asignar una matriz de `Enum` elementos a una matriz del tipo base de ese `Enum`.
+  - Si ambas matrices tienen elementos de tipo de valor, los tipos de datos de los elementos deben ser exactamente iguales. La única excepción a esto es que puede asignar una matriz de `Enum` elementos a una matriz del tipo base de ese `Enum` .
 
   - Si ambas matrices tienen elementos de tipo de referencia, el tipo de elemento de origen debe derivar del tipo de elemento de destino. En este caso, las dos matrices tienen la misma relación de herencia que sus elementos. Esto se denomina *covarianza de matriz*.
 
-El compilador notifica un error si se infringen las reglas anteriores, por ejemplo, si los tipos de datos no son compatibles o los rangos no son iguales. Puede Agregar control de errores al código para asegurarse de que las matrices son compatibles antes de intentar una asignación. También puede usar la palabra clave del [operador TryCast](../../../../visual-basic/language-reference/operators/trycast-operator.md) si desea evitar que se produzca una excepción.
+El compilador notifica un error si se infringen las reglas anteriores, por ejemplo, si los tipos de datos no son compatibles o los rangos no son iguales. Puede Agregar control de errores al código para asegurarse de que las matrices son compatibles antes de intentar una asignación. También puede usar la palabra clave del [operador TryCast](../../../language-reference/operators/trycast-operator.md) si desea evitar que se produzca una excepción.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Matrices](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
-- [Solución de problemas de matrices](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
-- [Enum (instrucción)](../../../../visual-basic/language-reference/statements/enum-statement.md)
-- [Conversiones de matriz](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
+- [Matrices](index.md)
+- [Solución de problemas de matrices](troubleshooting-arrays.md)
+- [Instrucción Enum](../../../language-reference/statements/enum-statement.md)
+- [Conversiones de matriz](../data-types/array-conversions.md)

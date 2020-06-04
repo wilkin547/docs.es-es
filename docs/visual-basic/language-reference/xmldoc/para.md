@@ -5,14 +5,14 @@ helpviewer_keywords:
 - <para> XML tag
 - para XML tag
 ms.assetid: a3a18b6c-6416-4358-94ec-37b22675fd37
-ms.openlocfilehash: 8f28ecc33eea99150509bb4bade047489b4b826b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0e2051d1b00b881c06082b3af483890d8595899f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352303"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400078"
 ---
-# <a name="para-visual-basic"></a>\<para > (Visual Basic)
+# <a name="para-visual-basic"></a>\<para> (Visual Basic)
 Especifica que el contenido está formateado como un párrafo.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -26,15 +26,15 @@ Especifica que el contenido está formateado como un párrafo.
  El texto del párrafo.  
   
 ## <a name="remarks"></a>Comentarios  
- La etiqueta `<para>` es para su uso dentro de una etiqueta, como [\<> de Resumen](../../../visual-basic/language-reference/xmldoc/summary.md), [\<comentarios >](../../../visual-basic/language-reference/xmldoc/remarks.md)o [\<devuelve >](../../../visual-basic/language-reference/xmldoc/returns.md)y permite agregar la estructura al texto.  
+ La `<para>` etiqueta se usa dentro de una etiqueta, como [\<summary>](summary.md) , [\<remarks>](remarks.md) o [\<returns>](returns.md) , y permite agregar la estructura al texto.  
   
- Compile con [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) para procesar los comentarios de documentación de un archivo.  
+ Compile con [-doc](../../reference/command-line-compiler/doc.md) para procesar los comentarios de documentación de un archivo.  
   
 ## <a name="example"></a>Ejemplo  
- En este ejemplo se usa la etiqueta `<para>` para dividir la sección Comentarios para el método `UpdateRecord` en dos párrafos.  
+ En este ejemplo se usa la `<para>` etiqueta para dividir la sección Comentarios del `UpdateRecord` método en dos párrafos.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Etiquetas XML para comentarios](../../../visual-basic/language-reference/xmldoc/index.md)
+- [Etiquetas de comentario XML](index.md)

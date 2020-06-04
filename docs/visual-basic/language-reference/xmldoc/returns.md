@@ -5,14 +5,14 @@ helpviewer_keywords:
 - returns XML tag
 - <returns> XML tag
 ms.assetid: a03a6469-d907-425d-882f-083187950e7e
-ms.openlocfilehash: 62f70ae7f40fa3cde9492563b7bd14dfa5940a5f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: edbc374332bdcd67b385ac3d061045664e942460
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352241"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400000"
 ---
-# <a name="returns-visual-basic"></a>\<devuelve > (Visual Basic)
+# <a name="returns-visual-basic"></a>\<returns> (Visual Basic)
 Especifica el valor devuelto de la propiedad o función.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -26,15 +26,15 @@ Especifica el valor devuelto de la propiedad o función.
  Descripción del valor devuelto.  
   
 ## <a name="remarks"></a>Comentarios  
- Use la etiqueta `<returns>` del comentario para una declaración de método que describa el valor devuelto.  
+ Use la `<returns>` etiqueta del comentario para una declaración de método para describir el valor devuelto.  
   
- Compile con [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) para procesar los comentarios de documentación de un archivo.  
+ Compile con [-doc](../../reference/command-line-compiler/doc.md) para procesar los comentarios de documentación de un archivo.  
   
 ## <a name="example"></a>Ejemplo  
- En este ejemplo se usa la etiqueta `<returns>` para explicar lo que devuelve la función `DoesRecordExist`.  
+ En este ejemplo se usa la `<returns>` etiqueta para explicar lo que `DoesRecordExist` devuelve la función.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Etiquetas XML para comentarios](../../../visual-basic/language-reference/xmldoc/index.md)
+- [Etiquetas de comentario XML](index.md)
