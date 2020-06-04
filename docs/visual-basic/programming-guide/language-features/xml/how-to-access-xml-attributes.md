@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Obtener acceso a atributos XML'
+title: Procedimiento para obtener acceso a atributos XML
 ms.date: 07/20/2015
 helpviewer_keywords:
 - attribute axis property [Visual Basic]
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - XML axis [Visual Basic], attribute
 - XML [Visual Basic], accessing
 ms.assetid: 66cd704f-990c-4f8d-9b49-2b6aa76ca8fd
-ms.openlocfilehash: 905d6c4bb63323bad790bc833647a5c602d02ada
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2ab6ed27e403273c1b3b2b28593825c0cc6b6db7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74332326"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410275"
 ---
-# <a name="how-to-access-xml-attributes-visual-basic"></a><span data-ttu-id="f8d39-102">Cómo: Obtener acceso a atributos XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f8d39-102">How to: Access XML Attributes (Visual Basic)</span></span>
-<span data-ttu-id="f8d39-103">En este ejemplo se muestra cómo utilizar una propiedad de eje de atributo para tener acceso a los atributos XML de un elemento XML por nombre.</span><span class="sxs-lookup"><span data-stu-id="f8d39-103">This example shows how to use an attribute axis property to access XML attributes in an XML element by name.</span></span> <span data-ttu-id="f8d39-104">En concreto, usa la propiedad del eje de atributo `type` para tener acceso al atributo denominado `type` en el objeto `phone`.</span><span class="sxs-lookup"><span data-stu-id="f8d39-104">In particular, it uses the `type` attribute axis property to access the attribute named `type` in the `phone` object.</span></span>  
+# <a name="how-to-access-xml-attributes-visual-basic"></a><span data-ttu-id="2e8ca-102">Cómo: Obtener acceso a atributos XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2e8ca-102">How to: Access XML Attributes (Visual Basic)</span></span>
+<span data-ttu-id="2e8ca-103">En este ejemplo se muestra cómo utilizar una propiedad de eje de atributo para tener acceso a los atributos XML de un elemento XML por nombre.</span><span class="sxs-lookup"><span data-stu-id="2e8ca-103">This example shows how to use an attribute axis property to access XML attributes in an XML element by name.</span></span> <span data-ttu-id="2e8ca-104">En concreto, usa la `type` propiedad de eje de atributo para tener acceso al atributo denominado `type` en el `phone` objeto.</span><span class="sxs-lookup"><span data-stu-id="2e8ca-104">In particular, it uses the `type` attribute axis property to access the attribute named `type` in the `phone` object.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f8d39-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="f8d39-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="2e8ca-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="2e8ca-105">Example</span></span>  
  [!code-vb[VbXMLSamples#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples5.vb#11)]  
   
-## <a name="see-also"></a><span data-ttu-id="f8d39-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="f8d39-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2e8ca-106">Consulte también</span><span class="sxs-lookup"><span data-stu-id="2e8ca-106">See also</span></span>
 
 - <xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="f8d39-107">Propiedad del eje de atributo XML</span><span class="sxs-lookup"><span data-stu-id="f8d39-107">XML Attribute Axis Property</span></span>](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
-- [<span data-ttu-id="f8d39-108">Obtener acceso a XML en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="f8d39-108">Accessing XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)
-- [<span data-ttu-id="f8d39-109">XML</span><span class="sxs-lookup"><span data-stu-id="f8d39-109">XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [<span data-ttu-id="2e8ca-107">XML Attribute Axis Property</span><span class="sxs-lookup"><span data-stu-id="2e8ca-107">XML Attribute Axis Property</span></span>](../../../language-reference/xml-axis/xml-attribute-axis-property.md)
+- [<span data-ttu-id="2e8ca-108">Obtener acceso a XML en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="2e8ca-108">Accessing XML in Visual Basic</span></span>](accessing-xml.md)
+- [<span data-ttu-id="2e8ca-109">XML</span><span class="sxs-lookup"><span data-stu-id="2e8ca-109">XML</span></span>](index.md)

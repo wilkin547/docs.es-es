@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BC31084
 ms.assetid: 6111c5ca-d30b-490a-812e-dd422e221c7d
-ms.openlocfilehash: f9598a219c9ec0a5dac0b6e7df778bb9efd05f44
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 04c59f5efe190210a2a6b87b7c2a0971b705c1bb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642914"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409587"
 ---
-# <a name="events-cannot-be-declared-with-a-delegate-type-that-has-a-return-type"></a><span data-ttu-id="3f97d-102">Los eventos no se pueden declarar con un tipo delegado que tenga un tipo de valor devuelto</span><span class="sxs-lookup"><span data-stu-id="3f97d-102">Events cannot be declared with a delegate type that has a return type</span></span>
-<span data-ttu-id="3f97d-103">Se especificó un delegado para un procedimiento function.</span><span class="sxs-lookup"><span data-stu-id="3f97d-103">A delegate was specified for a function procedure.</span></span>  
+# <a name="events-cannot-be-declared-with-a-delegate-type-that-has-a-return-type"></a><span data-ttu-id="4d50b-102">Los eventos no se pueden declarar con un tipo delegado que tenga un tipo de valor devuelto</span><span class="sxs-lookup"><span data-stu-id="4d50b-102">Events cannot be declared with a delegate type that has a return type</span></span>
+<span data-ttu-id="4d50b-103">Se especificó un delegado para un procedimiento de función.</span><span class="sxs-lookup"><span data-stu-id="4d50b-103">A delegate was specified for a function procedure.</span></span>  
   
- <span data-ttu-id="3f97d-104">**Identificador de error:** BC31084</span><span class="sxs-lookup"><span data-stu-id="3f97d-104">**Error ID:** BC31084</span></span>  
+ <span data-ttu-id="4d50b-104">**Identificador de error:** BC31084</span><span class="sxs-lookup"><span data-stu-id="4d50b-104">**Error ID:** BC31084</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="3f97d-105">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="3f97d-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="4d50b-105">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="4d50b-105">To correct this error</span></span>  
   
-- <span data-ttu-id="3f97d-106">Especifique un delegado para un `Sub` procedimiento.</span><span class="sxs-lookup"><span data-stu-id="3f97d-106">Specify a delegate for a `Sub` procedure.</span></span>  
+- <span data-ttu-id="4d50b-106">Especifique un delegado para un `Sub` procedimiento.</span><span class="sxs-lookup"><span data-stu-id="4d50b-106">Specify a delegate for a `Sub` procedure.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3f97d-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="3f97d-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4d50b-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="4d50b-107">See also</span></span>
 
-- [<span data-ttu-id="3f97d-108">Eventos</span><span class="sxs-lookup"><span data-stu-id="3f97d-108">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)
+- [<span data-ttu-id="4d50b-108">Eventos</span><span class="sxs-lookup"><span data-stu-id="4d50b-108">Events</span></span>](../../programming-guide/language-features/events/index.md)
