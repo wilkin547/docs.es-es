@@ -4,12 +4,12 @@ description: Aprenda a usar la herencia en bibliotecas y aplicaciones en C#.
 ms.date: 07/05/2018
 ms.technology: csharp-fundamentals
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 78833110db0e4f0382e5c0c6de7c6c8be9a16c8d
-ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
+ms.openlocfilehash: 8e24ad3e93dcd11f39ae979a3acda4c4ada13dc5
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80391154"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007733"
 ---
 # <a name="inheritance-in-c-and-net"></a>Herencia en C# y .NET
 
@@ -58,9 +58,9 @@ Si bien las clases derivadas heredan todos los demás miembros de una clase base
 
 - Los miembros [públicos](../language-reference/keywords/public.md) son visibles en las clases derivadas y forman parte de la interfaz pública de dichas clases. Los miembros públicos heredados se pueden llamar como si se definieran en la clase derivada. En el ejemplo siguiente, la clase `A` define un método denominado `Method1` y la clase `B` hereda de la clase `A`. El ejemplo llama a `Method1` como si fuera un método de instancia en `B`.
 
-[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
+  [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
 
-Las clases derivadas pueden también *invalidar* los miembros heredados al proporcionar una implementación alternativa. Para poder invalidar un miembro, el miembro de la clase base debe marcarse con la palabra clave [virtual](../language-reference/keywords/virtual.md). De forma predeterminada, los miembros de clase base no están marcados con `virtual` y no se pueden invalidar. Al intentar invalidar un miembro no virtual, como en el ejemplo siguiente, se genera el error de compilador CS0506: "\<miembro> no puede invalidar el miembro heredado \<miembro> porque no está marcado como virtual, abstract ni override.
+Las clases derivadas pueden también *invalidar* los miembros heredados al proporcionar una implementación alternativa. Para poder invalidar un miembro, el miembro de la clase base debe marcarse con la palabra clave [virtual](../language-reference/keywords/virtual.md). De forma predeterminada, los miembros de clase base no están marcados con `virtual` y no se pueden invalidar. Al intentar invalidar un miembro no virtual, como en el ejemplo siguiente, se genera el error de compilador CS0506: "\<member> no se puede invalidar el miembro heredado \<member> porque no está marcado como virtual, abstract ni override.
 
 ```csharp
 public class A
@@ -181,7 +181,7 @@ A la hora de diseñar la clase `Publication`, se deben tomar varias decisiones d
 
 - Hasta qué punto extender la jerarquía de clases. ¿Quiere desarrollar una jerarquía de tres o más clases, en lugar de simplemente una clase base y una o más clases derivadas? Por ejemplo, `Publication` podría ser una clase base de `Periodical`, que, a su vez, es una clase base de `Magazine`, `Journal` y `Newspaper`.
 
-  En el ejemplo, se usará la jerarquía pequeña de una clase `Publication` y una sola clase derivada, `Book`. El ejemplo se podría extender fácilmente para crear una serie de clases adicionales que se derivan de `Publication`, como `Magazine` y `Article`.
+  En el ejemplo, se usará la jerarquía pequeña de una clase `Publication` y una sola clase derivada, `Book`. El ejemplo se podría ampliar fácilmente para crear una serie de clases adicionales que se derivan de `Publication`, como `Magazine` y `Article`.
 
 - Si tiene sentido crear instancias de la clase base. Si no, se debe aplicar la palabra clave [abstract](../language-reference/keywords/abstract.md) a la clase. De lo contrario, se puede crear una instancia de la clase `Publication` mediante una llamada a su constructor de clase. Si se intenta crear una instancia de una clase marcada con la palabra clave `abstract` mediante una llamada directa a su constructor de clase, el compilador de C# genera el error CS0144: "No se puede crear una instancia de la interfaz o clase abstracta". Si se intenta crear una instancia de la clase mediante reflexión, el método de reflexión produce una excepción <xref:System.MemberAccessException>.
 
@@ -191,9 +191,9 @@ A la hora de diseñar la clase `Publication`, se deben tomar varias decisiones d
 
 - Si las clases derivadas deben heredar la implementación de la clase base de determinados miembros, si tienen la opción de invalidar la implementación de la clase base, o bien si deben proporcionar una implementación. La palabra clave [abstract](../language-reference/keywords/abstract.md) se usa para forzar que las clases derivadas proporcionen una implementación. La palabra clave [virtual](../language-reference/keywords/virtual.md) se usa para permitir que las clases derivadas invaliden un método de clase base. De forma predeterminada, *no se pueden invalidar* los métodos definidos en la clase base.
 
- La clase `Publication` no tiene ningún método `abstract`, pero la propia clase es `abstract`.
+  La clase `Publication` no tiene ningún método `abstract`, pero la propia clase es `abstract`.
 
-- Si una clase derivada representa la clase final en la jerarquía de herencia y no se puede usar ella misma como clase base para clases derivadas adicionales. De forma predeterminada, cualquier clase puede servir como clase base. Se puede aplicar la palabra clave [sealed](../language-reference/keywords/sealed.md) para indicar que una clase no puede servir como clase base para las clases adicionales. Al intentar derivar de una clase sellada, se genera el error de compilador CS0509: "No puede derivar del tipo sellado \<nombreDeTipo>".
+- Si una clase derivada representa la clase final en la jerarquía de herencia y no se puede usar ella misma como clase base para clases derivadas adicionales. De forma predeterminada, cualquier clase puede servir como clase base. Se puede aplicar la palabra clave [sealed](../language-reference/keywords/sealed.md) para indicar que una clase no puede servir como clase base para las clases adicionales. Al intentar derivar de una clase sealed se genera el error de compilador CS0509: "no puede derivar del tipo sealed \<typeName>".
 
   Para el ejemplo, la clase derivada se marcará como `sealed`.
 

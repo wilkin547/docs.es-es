@@ -3,12 +3,12 @@ title: Introducción a la transformación de sintaxis (API de Roslyn)
 description: Introducción para recorrer y consultar árboles de sintaxis.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 232fe5fcba35f152dbc3f00b2f2c092b5df0dd35
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 5879dfd6ed0a5f6465829eec496d10cfcfd07362
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794798"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202119"
 ---
 # <a name="get-started-with-syntax-transformation"></a>Introducción a la transformación de sintaxis
 
@@ -34,7 +34,7 @@ Inicie Visual Studio y cree un proyecto de **Stand-Alone Code Analysis Tool** (H
 
 Este proyecto usa los métodos de clase <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> para construir un <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType> que representa el espacio de nombres `System.Collections.Generic`.
 
-Agregue la siguiente directiva using en la parte superior del archivo `Program.cs` para importar los patrones Factory Method de la clase <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory> y los métodos de <xref:System.Console> para que los puede usar más adelante sin calificarlos:
+Agregue esta directiva a la parte superior de `Program.cs`.
 
 [!code-csharp[import the SyntaxFactory class](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#StaticUsings "import the Syntax Factory class and the System.Console class")]
 

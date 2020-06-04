@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Mgmtclassgen.exe
 - early-bound managed classes
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
-ms.openlocfilehash: 5e39670fbb40acb999a243ac86683219f3c89e4f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d6de28694a1fdcd22cc2baa8cff66387c601414c
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180378"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201861"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Generador de clases fuertemente tipadas para administración)
 La herramienta Generador de clases fuertemente tipadas para administración permite generar con rapidez una clase administrada en tiempo de compilación para una clase especificada de Instrumental de administración de Windows (WMI). La clase generada simplifica el código que se debe escribir para tener acceso a una instancia de la clase de WMI.  
@@ -83,11 +83,11 @@ WMIClass [options]
   
 - WMI utiliza el término singleton para describir una clase que solo puede tener una instancia. Por tanto, el constructor sin parámetros para una clase singleton inicializará la clase en la única instancia de la misma.  
   
-- Una clase WMI puede tener propiedades que sean objetos. Cuando se genera una clase fuertemente tipada para este tipo de clase WMI, se debe considerar la posibilidad de generar clases fuertemente tipadas para los tipos de las propiedades de objetos incrustados. Esto permitirá tener acceso a los objetos incrustados de un modo fuertemente tipado. Tenga en cuenta que existe la posibilidad de que el código generado no pueda detectar el tipo del objeto incrustado. En este caso, se creará un comentario en el código generado para informar al usuario de este punto. A continuación, se puede modificar el código generado para que el tipo de la propiedad corresponda a la otra clase generada.  
+- Una clase WMI puede tener propiedades que sean objetos. Cuando se genera una clase fuertemente tipada para este tipo de clase WMI, se debe considerar la posibilidad de generar clases fuertemente tipadas para los tipos de las propiedades de objetos insertados. Esto permitirá acceder a los objetos insertados de un modo fuertemente tipado. Tenga en cuenta que existe la posibilidad de que el código generado no pueda detectar el tipo del objeto incrustado. En este caso, se creará un comentario en el código generado para informar al usuario de este punto. A continuación, se puede modificar el código generado para que el tipo de la propiedad corresponda a la otra clase generada.  
   
 - En WMI, el valor de los datos del tipo de datos CIM_DATETIME puede representar una fecha y hora específicas o un intervalo de tiempo. Si el valor de los datos representa una fecha y hora, el tipo de datos de la clase generada es **DateTime**. Si el valor de los datos representa un intervalo de tiempo, el tipo de datos de la clase generada es **TimeSpan**.  
   
- Otra posibilidad consiste en generar una clase fuertemente tipada utilizando la extensión de administración del explorador de servidores en Visual Studio .NET.  
+ Otra posibilidad consiste en generar una clase fuertemente tipada mediante la extensión de administración del explorador de servidores en Visual Studio .NET.  
   
  Para obtener más información sobre WMI, vea el tema sobre **Instrumental de administración de Windows** en la documentación de Platform SDK.  
   

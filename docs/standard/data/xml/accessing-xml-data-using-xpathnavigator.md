@@ -3,12 +3,12 @@ title: Acceso a datos XML con XPathNavigator
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: c57b46e6-5c77-408f-bc4e-67a5dcc9cc05
-ms.openlocfilehash: c8466e78458d344a872aac7cdebc155342b13e0f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8cba6e106623169f5575684162bf3be383563275
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711173"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202315"
 ---
 # <a name="accessing-xml-data-using-xpathnavigator"></a>Acceso a datos XML con XPathNavigator
 La clase <xref:System.Xml.XPath.XPathNavigator> incluye métodos que se utilizan para navegar por los nodos, extraer datos XML y obtener acceso a datos XML fuertemente tipados en un objeto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument>.  
@@ -24,7 +24,7 @@ La clase <xref:System.Xml.XPath.XPathNavigator> incluye métodos que se utilizan
  Se describen los diversos métodos para extraer datos XML desde un objeto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument>.  
   
  [Acceso a datos XML fuertemente tipados utilizando XPathNavigator](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)  
- Se describe el acceso a datos XML fuertemente tipados de un objeto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument> utilizando la clase <xref:System.Xml.XPath.XPathNavigator>.  
+ Se describe el acceso a datos XML fuertemente tipados de un objeto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument> mediante la clase <xref:System.Xml.XPath.XPathNavigator>.  
   
  [Funciones y variables definidas por el usuario](../../../../docs/standard/data/xml/user-defined-functions-and-variables.md)  
  Se describe una clase <xref:System.Xml.Xsl.XsltContext> personalizada junto con las interfaces <xref:System.Xml.Xsl.IXsltContextFunction> e <xref:System.Xml.Xsl.IXsltContextVariable> que admiten las funciones y variables de extensión.  

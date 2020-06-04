@@ -2,13 +2,13 @@
 title: Herramienta de desinstalación
 description: Información general de la herramienta de desinstalación de .NET Core, una herramienta guiada que permite limpiar de forma controlada los SDK y los entornos en tiempo de ejecución de .NET Core.
 author: sfoslund
-ms.date: 01/06/2020
-ms.openlocfilehash: 45cf0841391d02636770e98666e2897d2598fab4
-ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+ms.date: 05/27/2020
+ms.openlocfilehash: 1ad31cd42d8f8f87e3501b422fc4298c643e2067
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82595720"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144518"
 ---
 # <a name="net-core-uninstall-tool"></a>Herramienta de desinstalación de .NET Core
 
@@ -66,7 +66,7 @@ dotnet-core-uninstall list [options]
 
 * **`--hosting-bundle`**
 
-  Enumera todos los entornos en tiempo de ejecución de .NET Core y conjuntos de hospedaje que se pueden desinstalar con esta herramienta.
+  Enumera todos los conjuntos de hospedaje de .NET Core que se pueden desinstalar con esta herramienta.
 
 * **`--runtime`**
 

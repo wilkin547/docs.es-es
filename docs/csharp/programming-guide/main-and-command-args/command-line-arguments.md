@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: d6775263e6f1afb227aa263b01d60f5181da74f3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c203716d9bb8298c934a999a496793c294949ddb
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77093515"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007759"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Argumentos de la línea de comandos (Guía de programación de C#)
 
@@ -25,6 +25,9 @@ Puede enviar argumentos al método `Main` definiéndolo de una de las siguientes
 El parámetro del método `Main` es una matriz <xref:System.String> que representa los argumentos de la línea de comandos. Normalmente, para determinar si hay argumentos, se prueba la propiedad `Length`; por ejemplo:
 
 [!code-csharp[csProgGuideMain#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#4)]
+
+> [!TIP]
+> La matriz `args` no puede ser NULL, así que es seguro acceder a la propiedad `Length` sin comprobar los valores NULL.
 
 También puede convertir los argumentos de cadena en tipos numéricos mediante la clase <xref:System.Convert> o el método `Parse`. Por ejemplo, la siguiente instrucción convierte la `string` en un número `long` mediante el método <xref:System.Int64.Parse%2A>:
 
@@ -44,7 +47,7 @@ También puede usar el método `ToInt64` de la clase `Convert` para hacer lo mis
 long num = Convert.ToInt64(s);
 ```
 
-Para obtener más información, consulte <xref:System.Int64.Parse%2A> y <xref:System.Convert>.
+Para obtener más información, vea <xref:System.Int64.Parse%2A> y <xref:System.Convert>.
 
 ## <a name="example"></a>Ejemplo
 
@@ -71,7 +74,7 @@ Para compilar y ejecutar la aplicación desde un símbolo del sistema, siga esto
 5. El comando genera este resultado: `The factorial of 3 is 6.`
 
 > [!NOTE]
-> Si se ejecuta una aplicación en Visual Studio, se pueden especificar argumentos de la línea de comandos en la [Página Depuración, Diseñador de proyectos](/visualstudio/ide/reference/debug-page-project-designer).
+> Al ejecutar una aplicación en Visual Studio, puede especificar argumentos de la línea de comandos en la [Página Depuración, Diseñador de proyectos](/visualstudio/ide/reference/debug-page-project-designer).
 
 ## <a name="see-also"></a>Vea también
 

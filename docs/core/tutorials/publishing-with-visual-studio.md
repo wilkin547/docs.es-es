@@ -3,18 +3,25 @@ title: Publicación de la aplicación Hola mundo de .NET Core con Visual Studio
 description: La publicación crea el conjunto de archivos que se necesitan para ejecutar la aplicación de .NET Core.
 author: BillWagner
 ms.author: wiwagn
-ms.date: 12/10/2019
+ms.date: 05/20/2020
+dev_langs:
+- csharp
+- vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: bdd6e28713bdece2bd144e6763bd84d719e91449
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e4ef8c12f3e52faa7cf09058a98abae65b0dcfce
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78156639"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84005126"
 ---
-# <a name="publish-your-net-core-hello-world-application-with-visual-studio"></a>Publicación de la aplicación Hola mundo de .NET Core con Visual Studio
+# <a name="tutorial-publish-a-net-core-console-application-with-visual-studio"></a>Tutorial: Publicación de una aplicación de consola de .NET Core con Visual Studio
 
-En [Creación de una aplicación Hola mundo con .NET Core en Visual Studio](with-visual-studio.md), ha compilado una aplicación de consola Hola mundo. En [Depuración de la aplicación Hola mundo con Visual Studio](debugging-with-visual-studio.md), la ha probado con el depurador de Visual Studio. Ahora que está seguro de que funciona como se esperaba, puede publicarla para que otros usuarios puedan ejecutarla. La publicación crea el conjunto de archivos que se necesitan para ejecutar la aplicación. Para implementar los archivos, cópielos en el equipo de destino.
+En este tutorial se muestra cómo publicar una aplicación de consola para que otros usuarios puedan ejecutarla. La publicación crea el conjunto de archivos que se necesitan para ejecutar la aplicación. Para implementar los archivos, cópielos en el equipo de destino.
+
+## <a name="prerequisites"></a>Requisitos previos
+
+- Este tutorial funciona con la aplicación de consola que se crea en [Creación de una aplicación de consola de .NET Core en Visual Studio 2019](with-visual-studio.md).
 
 ## <a name="publish-the-app"></a>Publicar la aplicación
 
@@ -22,31 +29,33 @@ En [Creación de una aplicación Hola mundo con .NET Core en Visual Studio](with
 
    ![Barra de herramientas de Visual Studio con compilación de versión seleccionado](media/publishing-with-visual-studio/visual-studio-toolbar-release.png)
 
-1. Haga clic con el botón derecho en el proyecto **HelloWorld** (no en la solución HelloWorld) y seleccione **Publicar** en el menú. (también puede seleccionar **Publicar Hola mundo** en el menú principal **Compilar**).
+1. Haga clic con el botón derecho en el proyecto **HelloWorld** (no en la solución HelloWorld) y seleccione **Publicar** en el menú.
 
    ![Menú contextual de Publicar de Visual Studio](media/publishing-with-visual-studio/publish-context-menu.png)
 
-1. En la página **Elegir un destino de publicación**, seleccione **Carpeta** y, a continuación, seleccione **Crear perfil**.
+1. En la pestaña **Destino** de la página **Publicar**, seleccione **Carpeta** y luego **Siguiente**.
 
    ![Elegir un destino de publicación en Visual Studio](media/publishing-with-visual-studio/pick-publish-target.png)
 
-1. En la página **Publicar**, seleccione **Publicar**.
+1. En la pestaña **Ubicación** de la página **Publicar**, seleccione **Finalizar**.
+
+   ![Pestaña Ubicación de la página Publicar de Visual Studio](media/publishing-with-visual-studio/publish-page-loc-tab.png)
+
+1. En la pestaña **Publicar** de la ventana **Publicar**, seleccione **Publicar**.
 
    ![Ventana Publicar de Visual Studio](media/publishing-with-visual-studio/publish-page.png)
 
 ## <a name="inspect-the-files"></a>Inspección de los archivos
 
-El proceso de publicación crea una implementación dependiente del marco, que es un tipo de implementación donde la aplicación publicada se ejecuta en cualquier plataforma compatible con .NET Core con .NET Core instalado en el sistema. Los usuarios pueden ejecutar la aplicación publicada haciendo doble clic en el archivo ejecutable o emitiendo el comando `dotnet HelloWorld.dll` desde un símbolo del sistema.
+El proceso de publicación crea una implementación dependiente del marco, que es un tipo de implementación donde la aplicación publicada se ejecuta en cualquier máquina que tenga instalado .NET Core Runtime. Los usuarios pueden ejecutar la aplicación publicada haciendo doble clic en el archivo ejecutable o emitiendo el comando `dotnet HelloWorld.dll` desde un símbolo del sistema.
 
 En los pasos siguientes, examinará los archivos creados por el proceso de publicación.
 
-1. Abra un símbolo del sistema.
+1. En el **Explorador de soluciones**, elija **Mostrar todos los archivos**.
 
-   Una forma de abrir un símbolo del sistema es escribir **Símbolo del sistema** (o **cmd**) en el cuadro de búsqueda de la barra de tareas de Windows. Seleccione la aplicación de escritorio **Símbolo del sistema** o presione **Entrar** si ya está seleccionado en los resultados de búsqueda.
+1. En la carpeta del proyecto, expanda *bin/Release/netcoreapp3.1/publish*.
 
-1. Vaya a la aplicación publicada en el subdirectorio *bin\Release\netcoreapp3.1\publish* del directorio del proyecto de la aplicación.
-
-   ![Ventana de la consola que muestra los archivos publicados](media/publishing-with-visual-studio/published-files-output.png)
+   :::image type="content" source="media/publishing-with-visual-studio/published-files-output.png" alt-text="Explorador de soluciones donde se muestran los archivos publicados":::
 
    Como se muestra en la imagen, el resultado publicado incluye los siguientes archivos:
 
@@ -70,6 +79,35 @@ En los pasos siguientes, examinará los archivos creados por el proceso de publi
 
          Este es el archivo de configuración en tiempo de ejecución de la aplicación. Identifica la versión de .NET Core en la que se ha compilado la aplicación para ejecutarse. También puede agregarle opciones de configuración. Para obtener más información, vea [Opciones de configuración en tiempo de ejecución de .NET Core](../run-time-config/index.md#runtimeconfigjson).
 
+## <a name="run-the-published-app"></a>Ejecutar la aplicación publicada
+
+1. En el **Explorador de soluciones**, haga clic con el botón derecho en la carpeta *Publicar* y seleccione **Copiar ruta de acceso completa**.
+
+1. Abra un símbolo del sistema y vaya a la carpeta *Publicar*. Escriba `cd` y pegue la ruta de acceso completa. Por ejemplo:
+
+   ```
+   cd C:\Projects\HelloWorld\bin\Release\netcoreapp3.1\publish\
+   ```
+
+1. Ejecute la aplicación con el archivo ejecutable:
+
+   1. Escriba `HelloWorld.exe` y presione Entrar.
+
+   1. Escriba un nombre cuando se le pida y presione cualquier tecla para salir.
+
+1. Ejecute la aplicación mediante el comando `dotnet`:
+
+   1. Escriba `dotnet HelloWorld.dll` y presione Entrar.
+
+   1. Escriba un nombre cuando se le pida y presione cualquier tecla para salir.
+
 ## <a name="additional-resources"></a>Recursos adicionales
 
 - [Implementación de aplicaciones .NET Core](../deploying/index.md)
+
+## <a name="next-steps"></a>Pasos siguientes
+
+En este tutorial, ha publicado una aplicación de consola. En el siguiente tutorial, creará una biblioteca de clases.
+
+> [!div class="nextstepaction"]
+> [Creación de una biblioteca de .NET Standard en Visual Studio](library-with-visual-studio.md)

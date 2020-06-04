@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo escribir código para examinar la 
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 5734e1be6b59bfe3eae97f29d1bd91e7e3a3623f
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: ea205d42b02ea7b38c04cb70d322329cf7c1d495
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761868"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004652"
 ---
 # <a name="interpreting-expressions"></a>Interpretación de expresiones
 
@@ -22,7 +22,7 @@ Ese diseño hace que la visita de todos los nodos de un árbol de expresión sea
 Si el tipo de nodo tiene elementos secundarios, visítelos recursivamente. En cada nodo secundario, repita el proceso que ha usado en el nodo raíz: determine el tipo, y si el tipo tiene elementos secundarios, visite cada uno de ellos.
 
 ## <a name="examining-an-expression-with-no-children"></a>Examinar una expresión sin elementos secundarios
-Comencemos visitando cada nodo en un árbol de expresión muy sencillo.
+Empecemos visitando cada nodo en un árbol de expresión sencillo.
 Aquí se muestra el código que crea una expresión constante y, después, examina sus propiedades:
 
 ```csharp
@@ -53,7 +53,7 @@ Expression<Func<int>> sum = () => 1 + 2;
 
 > No estoy usando `var` para declarar este árbol de expresión, y no es posible porque el lado derecho de la asignación tiene un tipo implícito.
 
-El nodo raíz es `LambdaExpression`. Para obtener el código interesante en el lado derecho del operador `=>`, necesita buscar uno de los elementos secundarios de `LambdaExpression`. Haremos esto con todas las expresiones de esta sección. El nodo primario nos ayuda a encontrar el tipo de valor devuelto de `LambdaExpression`.
+El nodo raíz es `LambdaExpression`. Para obtener el código que nos interesa en el lado derecho del operador `=>`, hay que buscar uno de los elementos secundarios de `LambdaExpression`. Haremos esto con todas las expresiones de esta sección. El nodo primario nos ayuda a encontrar el tipo de valor devuelto de `LambdaExpression`.
 
 Para examinar cada nodo de esta expresión, necesitaremos visitar recursivamente varios nodos. Aquí se muestra una primera implementación sencilla:
 
@@ -215,7 +215,7 @@ public class ConstantVisitor : Visitor
 }
 ```
 
-Este algoritmo es la base de un algoritmo que puede visitar cualquier `LambdaExpression` arbitrario. Existen muchas vulnerabilidades, concretamente que el código que he creado solo busca una muestra muy pequeña de los posibles conjuntos de nodos de árbol de expresión que puede encontrar. En cambio, todavía puede aprender bastante de lo que genera. (El caso predeterminado en el método `Visitor.CreateFromExpression` imprime un mensaje a la consola de error cuando se detecta un nuevo tipo de nodo. De esta manera, sabe que se va a agregar un nuevo tipo de expresión).
+Este algoritmo es la base de un algoritmo que puede visitar cualquier `LambdaExpression` arbitrario. Hay muchas vulnerabilidades, concretamente que el código que he creado solo busca una muestra muy pequeña de los posibles conjuntos de nodos de árbol de expresión que puede encontrar. En cambio, todavía puede aprender bastante de lo que genera. (El caso predeterminado en el método `Visitor.CreateFromExpression` imprime un mensaje a la consola de error cuando se detecta un nuevo tipo de nodo. De esta manera, sabe que se va a agregar un nuevo tipo de expresión).
 
 Cuando ejecuta este visitante en la expresión de adición que se muestra arriba, obtiene el siguiente resultado:
 
@@ -355,7 +355,7 @@ Expression<Func<int, int>> factorial = (n) =>
 ```
 
 Este código representa una posible implementación para la función *factorial* matemática. La manera en que he escrito este código resalta dos limitaciones en la creación de árboles de expresión asignando expresiones lambda a las expresiones. En primer lugar, las expresiones lambda de instrucción no están permitidas. Eso significa que no puedo usar bucles, bloques, instrucciones IF/ELSE ni otras estructuras de control comunes en C#. Estoy limitado al uso de expresiones. En segundo lugar, no puedo llamar recursivamente a la misma expresión.
-Podría si ya fuera un delegado, pero no puedo llamarla en su forma de árbol de expresión. En la sección de [Crear árboles de expresión](expression-trees-building.md), obtendrá las técnicas para superar estas limitaciones.
+Podría si ya fuera un delegado, pero no puedo llamarla en su forma de árbol de expresión. En la sección sobre la [creación de árboles de expresión](expression-trees-building.md), obtendrá las técnicas para superar estas limitaciones.
 
 En esta expresión, encontrará nodos de todos estos tipos:
 

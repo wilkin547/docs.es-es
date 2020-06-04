@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: 9fc8adaa49d02f8b69c2db6e94a28b9fab36b3b0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 32ba8f5e60b3ed2efd813a8ae32e5f4009eb790d
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635800"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202405"
 ---
 # <a name="c-features-that-support-linq"></a>Características de C# compatibles con LINQ
 
@@ -86,7 +86,7 @@ Para obtener más información, vea [Tipos anónimos](../../classes-and-structs/
 
 Un método de extensión es un método estático que se puede asociar con un tipo, por lo que puede llamarse como si fuera un método de instancia en el tipo. Esta característica permite, en efecto, "agregar" nuevos métodos a los tipos existentes sin tener que modificarlos realmente. Los operadores de consulta estándar son un conjunto de métodos de extensión que proporcionan funciones de consultas LINQ para cualquier tipo que implemente <xref:System.Collections.Generic.IEnumerable%601>.
 
-Para más información, vea [Métodos de extensión](../../classes-and-structs/extension-methods.md).
+Para obtener más información, vea [Métodos de extensión](../../classes-and-structs/extension-methods.md).
 
 ## <a name="lambda-expressions"></a>Expresiones lambda
 

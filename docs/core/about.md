@@ -2,12 +2,12 @@
 title: Información general sobre .NET Core
 description: Obtenga información sobre las características y la composición de .NET Core y compárela con otras implementaciones de .NET.
 ms.date: 03/26/2020
-ms.openlocfilehash: c9a63ddba14cf176be529e9520027c0610cfc087
-ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
+ms.openlocfilehash: e57451968ed8c4d5457acea084d3c6c9f998b8da
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80391174"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144531"
 ---
 # <a name="net-core-overview"></a>Información general sobre .NET Core
 
@@ -16,7 +16,7 @@ ms.locfileid: "80391174"
 - **Multiplataforma:** se ejecuta en los [sistemas operativos](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md) Windows, macOS y Linux.
 - **Código abierto:** el marco .NET Core es de [código abierto](https://github.com/dotnet/core), con licencias de MIT y Apache 2. .NET Core es un proyecto de [.NET Foundation](https://dotnetfoundation.org/).
 - **Moderno:** implementa paradigmas modernos como programación asincrónica, patrones que no son de copia que usan estructuras y gobernanza de recursos para contenedores.
-- **Rendimiento:**  proporciona [alto rendimiento](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-core-3-0/) con características como [intrínsecos de hardware](https://devblogs.microsoft.com/dotnet/hardware-intrinsics-in-net-core/), [compilación en niveles](https://github.com/dotnet/coreclr/blob/master/Documentation/design-docs/tiered-compilation.md) e [Intervalo\<T>](../standard/memory-and-spans/index.md).
+- **Rendimiento:**  Proporciona [alto rendimiento](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-core-3-0/) con características como [intrínsecos de hardware](https://devblogs.microsoft.com/dotnet/hardware-intrinsics-in-net-core/), [compilación en niveles](https://github.com/dotnet/coreclr/blob/master/Documentation/design-docs/tiered-compilation.md) e [Intervalo\<T>](../standard/memory-and-spans/index.md).
 - **Coherente entre entornos:** el código se ejecuta con el mismo comportamiento en varios sistemas operativos y varias arquitecturas, como x64, x86 y ARM.
 - **Herramientas de línea de comandos:**  incluye herramientas de línea de comandos sencillas que se pueden usar para el desarrollo local y la integración continua.
 - **Implementación flexible:** se puede incluir .NET Core en la aplicación o de forma paralela (instalaciones a nivel de usuario o de sistema). Se puede usar con [contenedores de Docker](docker/introduction.md).
@@ -28,7 +28,7 @@ Los lenguajes [C#](../csharp/index.yml), [Visual Basic](../visual-basic/index.ym
 - [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
 - [Visual Studio Code](https://code.visualstudio.com/download)
 
-La integración del editor la proporcionan, en parte, los colaboradores de los proyectos [OmniSharp](https://www.omnisharp.net/) e [Ionide](http://ionide.io).
+La integración del editor la proporcionan, en parte, los colaboradores de los proyectos [OmniSharp](https://www.omnisharp.net/) e [Ionide](https://ionide.io).
 
 ## <a name="apis"></a>API
 
@@ -69,6 +69,6 @@ Se incluyen muchas API que satisfacen necesidades comunes, como las siguientes:
 
 Las distribuciones binarias de .NET Core se compilan y prueban en servidores mantenidos por Microsoft en Azure y siguen las prácticas de seguridad e ingeniería de Microsoft.
 
-[Red Hat admite .NET Core](http://redhatloves.net/) en Red Hat Enterprise Linux (RHEL). Red Hat compila .NET Core desde el código fuente y permite que esté disponible en [Red Hat Software Collections](https://developers.redhat.com/products/softwarecollections/overview/). Red Hat y Microsoft colaboran para asegurarse de que .NET Core funciona bien en RHEL.
+[Red Hat admite .NET Core](https://developers.redhat.com/topics/dotnet/) en Red Hat Enterprise Linux (RHEL). Red Hat compila .NET Core desde el código fuente y permite que esté disponible en [Red Hat Software Collections](https://developers.redhat.com/products/softwarecollections/overview/). Red Hat y Microsoft colaboran para asegurarse de que .NET Core funciona bien en RHEL.
 
 [Tizen admite .NET Core](https://developer.tizen.org/development/training/.net-application) en plataformas Tizen.

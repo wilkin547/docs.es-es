@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo transferir el conocimiento de un m
 ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: be21a94f571a1676d2a4bce2196dec34bf008121
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: ae6094d5acd4d26482f3690e174d82bbf1807266
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607576"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144440"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>Tutorial: Generación de un modelo de clasificación de imágenes de ML.NET desde un modelo entrenado previamente de TensorFlow
 
@@ -66,9 +66,9 @@ La clasificación de imágenes es una tarea de Machine Learning común que nos 
 >[!Note]
 > Las imágenes anteriores pertenecen a Wikimedia Commons y tienen los siguientes atributos:
 >
-> * "220px-Pepperoni_pizza.jpg" de dominio público, https://commons.wikimedia.org/w/index.php?curid=79505,
-> * "119px-Nalle_-_a_small_brown_teddy_bear.jpg" de [Jonik](https://commons.wikimedia.org/wiki/User:Jonik), autofotografía, CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=48166.
-> * "193px-Broodrooster.jpg" de [M.Minderhoud](https://nl.wikipedia.org/wiki/Gebruiker:Michiel1972), trabajo propio, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=27403
+> * "220px-Pepperoni_pizza.jpg" de dominio público, <https://commons.wikimedia.org/w/index.php?curid=79505>,
+> * "119px-Nalle_-_a_small_brown_teddy_bear.jpg" de [Jonik](https://commons.wikimedia.org/wiki/User:Jonik), autofotografía, CC BY-SA 2.0, <https://commons.wikimedia.org/w/index.php?curid=48166>.
+> * "193px-Broodrooster.jpg" de [M.Minderhoud](https://nl.wikipedia.org/wiki/Gebruiker:Michiel1972), trabajo propio, CC BY-SA 3.0, <https://commons.wikimedia.org/w/index.php?curid=27403>
 
 `Inception model` está entrenado para clasificar imágenes en miles de categorías, pero, en este tutorial, el usuario deberá clasificar las imágenes en un conjunto de categorías más pequeño y solo en esas categorías. Escriba la parte `transfer` de `transfer learning`. Puede transferir la capacidad que `Inception model` tiene para reconocer y clasificar imágenes a las nuevas categorías limitadas del clasificador personalizado de imágenes.
 
@@ -110,7 +110,9 @@ toaster2.png    appliance
 <!-- markdownlint-enable MD010 -->
 
 Las imágenes de entrenamiento y prueba se encuentran en las carpetas de recursos que descargará en un archivo ZIP. Estas imágenes pertenecen a Wikimedia Commons.
-> *[Wikimedia Commons](https://commons.wikimedia.org/w/index.php?title=Main_Page&oldid=313158208), el repositorio multimedia gratuito*. Recuperado a las 10:48 del 17 de octubre de 2018 desde: https://commons.wikimedia.org/wiki/Pizza https://commons.wikimedia.org/wiki/Toaster https://commons.wikimedia.org/wiki/Teddy_bear
+> *[Wikimedia Commons](https://commons.wikimedia.org/w/index.php?title=Main_Page&oldid=313158208), el repositorio multimedia gratuito*. Recuperado a las 10:48 del 17 de octubre de 2018 desde: <https://commons.wikimedia.org/wiki/Pizza>
+> <https://commons.wikimedia.org/wiki/Toaster>
+> <https://commons.wikimedia.org/wiki/Teddy_bear>
 
 ## <a name="setup"></a>Programa de instalación
 

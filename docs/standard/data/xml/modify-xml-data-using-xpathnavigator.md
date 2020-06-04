@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 03a7c5a1-b296-4af4-b209-043c958dc0a5
-ms.openlocfilehash: 1770eb08055fd244bd0f220fed6d1641c35174fd
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: ea42cbfe7427e026f5e3339af5f5a2ceec17dad3
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794356"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202201"
 ---
 # <a name="modify-xml-data-using-xpathnavigator"></a>Modificación de datos XML con XPathNavigator
 La clase <xref:System.Xml.XPath.XPathNavigator> incluye un conjunto de métodos que se utilizan para modificar nodos y valores en un documento XML. Para utilizar estos métodos, el objeto <xref:System.Xml.XPath.XPathNavigator> debe ser editable, es decir, su propiedad <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> debe ser `true`.  
@@ -104,7 +104,7 @@ navigator.SetTypedValue(DateTime.Now);
  [!code-xml[XPathXMLExamples#3](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xsd#3)]  
   
 #### <a name="the-effects-of-editing-strongly-typed-xml-data"></a>Efectos de la edición de datos XML fuertemente tipados  
- La clase <xref:System.Xml.XPath.XPathNavigator> utiliza el esquema XML del W3C como base para describir XML fuertemente tipado. Se pueden anotar los elementos y atributos con la información de tipos basándose en la validación realizada en un documento de esquema XML del W3C. Los elementos que pueden contener otros elementos o atributos se denominan tipos complejos, mientras que los que solo pueden incluir contenido textual, se denominan tipos simples.  
+ La clase <xref:System.Xml.XPath.XPathNavigator> usa el esquema XML del W3C como base para describir XML fuertemente tipado. Se pueden anotar los elementos y atributos con la información de tipos basándose en la validación realizada en un documento de esquema XML del W3C. Los elementos que pueden contener otros elementos o atributos se denominan tipos complejos, mientras que los que solo pueden incluir contenido textual, se denominan tipos simples.  
   
 > [!NOTE]
 > Los atributos solo pueden tener tipos simples.  
