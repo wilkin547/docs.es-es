@@ -1,13 +1,13 @@
 ---
-title: 'Cómo: Detectar errores de análisis'
+title: Procedimiento para detectar errores de análisis
 ms.date: 07/20/2015
 ms.assetid: 22e9068e-ea58-447b-816e-cd1852c11787
-ms.openlocfilehash: 14c4f76c5f10616f9346084cda276e2862b2b41d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c0b46d7df270dd6f081a0c736b6978088cfbd9c0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353346"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84375153"
 ---
 # <a name="how-to-catch-parsing-errors-visual-basic"></a>Cómo: detectar errores de análisis (Visual Basic)
 En este tema se describe cómo detectar XML no válido o mal formado.  
@@ -41,6 +41,6 @@ The 'Contacts' start tag on line 1 does not match the end tag of 'Contcts'. Line
   
  Para obtener información acerca de las excepciones que puede esperar que devuelva los métodos <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> y <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>, vea la documentación de <xref:System.Xml.XmlReader>.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Analizar XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [Analizar XML (Visual Basic)](parsing-xml.md)
