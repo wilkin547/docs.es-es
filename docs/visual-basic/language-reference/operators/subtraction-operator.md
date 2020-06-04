@@ -17,64 +17,64 @@ helpviewer_keywords:
 - operators [Visual Basic], negation
 - minus operator [Visual Basic]
 ms.assetid: bff2c368-662d-4c92-ac87-1d9bdfd3426a
-ms.openlocfilehash: 9687c366c5b23693c05ab5c6b34f50c04131dfda
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6539beb5cf8078281357445e2391fac189208087
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348222"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406359"
 ---
-# <a name="--operator-visual-basic"></a><span data-ttu-id="8857e-102">- (Operador, Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8857e-102">- Operator (Visual Basic)</span></span>
-<span data-ttu-id="8857e-103">Devuelve la diferencia entre dos expresiones numéricas o el valor negativo de una expresión numérica.</span><span class="sxs-lookup"><span data-stu-id="8857e-103">Returns the difference between two numeric expressions or the negative value of a numeric expression.</span></span>  
+# <a name="--operator-visual-basic"></a><span data-ttu-id="c0727-102">- (Operador, Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c0727-102">- Operator (Visual Basic)</span></span>
+<span data-ttu-id="c0727-103">Devuelve la diferencia entre dos expresiones numéricas o el valor negativo de una expresión numérica.</span><span class="sxs-lookup"><span data-stu-id="c0727-103">Returns the difference between two numeric expressions or the negative value of a numeric expression.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8857e-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="8857e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c0727-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="c0727-104">Syntax</span></span>  
   
 ```vb  
 expression1 – expression2
 ```
   
-<span data-ttu-id="8857e-105">o</span><span class="sxs-lookup"><span data-stu-id="8857e-105">or</span></span>
+<span data-ttu-id="c0727-105">o</span><span class="sxs-lookup"><span data-stu-id="c0727-105">or</span></span>
 
 ```vb  
 –expression1  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="8857e-106">Elementos</span><span class="sxs-lookup"><span data-stu-id="8857e-106">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="c0727-106">Partes</span><span class="sxs-lookup"><span data-stu-id="c0727-106">Parts</span></span>  
  `expression1`  
- <span data-ttu-id="8857e-107">Obligatorio.</span><span class="sxs-lookup"><span data-stu-id="8857e-107">Required.</span></span> <span data-ttu-id="8857e-108">Cualquier expresión numérica.</span><span class="sxs-lookup"><span data-stu-id="8857e-108">Any numeric expression.</span></span>  
+ <span data-ttu-id="c0727-107">Necesario.</span><span class="sxs-lookup"><span data-stu-id="c0727-107">Required.</span></span> <span data-ttu-id="c0727-108">Cualquier expresión numérica.</span><span class="sxs-lookup"><span data-stu-id="c0727-108">Any numeric expression.</span></span>  
   
  `expression2`  
- <span data-ttu-id="8857e-109">Obligatorio a menos que el operador de `–` calcule un valor negativo.</span><span class="sxs-lookup"><span data-stu-id="8857e-109">Required unless the `–` operator is calculating a negative value.</span></span> <span data-ttu-id="8857e-110">Cualquier expresión numérica.</span><span class="sxs-lookup"><span data-stu-id="8857e-110">Any numeric expression.</span></span>  
+ <span data-ttu-id="c0727-109">Obligatorio a menos que el `–` operador calcule un valor negativo.</span><span class="sxs-lookup"><span data-stu-id="c0727-109">Required unless the `–` operator is calculating a negative value.</span></span> <span data-ttu-id="c0727-110">Cualquier expresión numérica.</span><span class="sxs-lookup"><span data-stu-id="c0727-110">Any numeric expression.</span></span>  
   
-## <a name="result"></a><span data-ttu-id="8857e-111">Resultado</span><span class="sxs-lookup"><span data-stu-id="8857e-111">Result</span></span>  
- <span data-ttu-id="8857e-112">El resultado es la diferencia entre `expression1` y `expression2`, o el valor negado de `expression1`.</span><span class="sxs-lookup"><span data-stu-id="8857e-112">The result is the difference between `expression1` and `expression2`, or the negated value of `expression1`.</span></span>  
+## <a name="result"></a><span data-ttu-id="c0727-111">Resultado</span><span class="sxs-lookup"><span data-stu-id="c0727-111">Result</span></span>  
+ <span data-ttu-id="c0727-112">El resultado es la diferencia entre `expression1` y `expression2` , o el valor negado de `expression1` .</span><span class="sxs-lookup"><span data-stu-id="c0727-112">The result is the difference between `expression1` and `expression2`, or the negated value of `expression1`.</span></span>  
   
- <span data-ttu-id="8857e-113">El tipo de datos del resultado es un tipo numérico adecuado para los tipos de datos de `expression1` y `expression2`.</span><span class="sxs-lookup"><span data-stu-id="8857e-113">The result data type is a numeric type appropriate for the data types of `expression1` and `expression2`.</span></span> <span data-ttu-id="8857e-114">Vea las tablas "aritmética de enteros" en [tipos de datos de resultados de operadores](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).</span><span class="sxs-lookup"><span data-stu-id="8857e-114">See the "Integer Arithmetic" tables in [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).</span></span>  
+ <span data-ttu-id="c0727-113">El tipo de datos del resultado es un tipo numérico adecuado para los tipos de datos de `expression1` y `expression2` .</span><span class="sxs-lookup"><span data-stu-id="c0727-113">The result data type is a numeric type appropriate for the data types of `expression1` and `expression2`.</span></span> <span data-ttu-id="c0727-114">Vea las tablas "aritmética de enteros" en [tipos de datos de resultados de operadores](data-types-of-operator-results.md).</span><span class="sxs-lookup"><span data-stu-id="c0727-114">See the "Integer Arithmetic" tables in [Data Types of Operator Results](data-types-of-operator-results.md).</span></span>  
   
-## <a name="supported-types"></a><span data-ttu-id="8857e-115">Tipos admitidos</span><span class="sxs-lookup"><span data-stu-id="8857e-115">Supported Types</span></span>  
- <span data-ttu-id="8857e-116">todos los tipos numéricos.</span><span class="sxs-lookup"><span data-stu-id="8857e-116">All numeric types.</span></span> <span data-ttu-id="8857e-117">Esto incluye los tipos de punto flotante y sin signo y `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="8857e-117">This includes the unsigned and floating-point types and `Decimal`.</span></span>  
+## <a name="supported-types"></a><span data-ttu-id="c0727-115">Tipos admitidos</span><span class="sxs-lookup"><span data-stu-id="c0727-115">Supported Types</span></span>  
+ <span data-ttu-id="c0727-116">todos los tipos numéricos.</span><span class="sxs-lookup"><span data-stu-id="c0727-116">All numeric types.</span></span> <span data-ttu-id="c0727-117">Esto incluye los tipos de punto flotante y sin signo y `Decimal` .</span><span class="sxs-lookup"><span data-stu-id="c0727-117">This includes the unsigned and floating-point types and `Decimal`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="8857e-118">Comentarios</span><span class="sxs-lookup"><span data-stu-id="8857e-118">Remarks</span></span>  
- <span data-ttu-id="8857e-119">En el primer uso que se muestra en la sintaxis mostrada anteriormente, el operador `–` es el operador de resta aritmética *binaria* para la diferencia entre dos expresiones numéricas.</span><span class="sxs-lookup"><span data-stu-id="8857e-119">In the first usage shown in the syntax shown previously, the `–` operator is the *binary* arithmetic subtraction operator for the difference between two numeric expressions.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c0727-118">Observaciones</span><span class="sxs-lookup"><span data-stu-id="c0727-118">Remarks</span></span>  
+ <span data-ttu-id="c0727-119">En el primer uso que se muestra en la sintaxis mostrada anteriormente, el operador `–` es el operador de resta aritmética *binaria* para la diferencia entre dos expresiones numéricas.</span><span class="sxs-lookup"><span data-stu-id="c0727-119">In the first usage shown in the syntax shown previously, the `–` operator is the *binary* arithmetic subtraction operator for the difference between two numeric expressions.</span></span>  
   
- <span data-ttu-id="8857e-120">En el segundo uso que se muestra en la sintaxis mostrada anteriormente, el operador `–` es el operador *unario* de negación para el valor negativo de una expresión.</span><span class="sxs-lookup"><span data-stu-id="8857e-120">In the second usage shown in the syntax shown previously, the `–` operator is the *unary* negation operator for the negative value of an expression.</span></span> <span data-ttu-id="8857e-121">En este sentido, la negación consiste en invertir el signo de `expression1` para que el resultado sea positivo si `expression1` es negativo.</span><span class="sxs-lookup"><span data-stu-id="8857e-121">In this sense, the negation consists of reversing the sign of `expression1` so that the result is positive if `expression1` is negative.</span></span>  
+ <span data-ttu-id="c0727-120">En el segundo uso que se muestra en la sintaxis mostrada anteriormente, el `–` operador es el operador *unario* de negación para el valor negativo de una expresión.</span><span class="sxs-lookup"><span data-stu-id="c0727-120">In the second usage shown in the syntax shown previously, the `–` operator is the *unary* negation operator for the negative value of an expression.</span></span> <span data-ttu-id="c0727-121">En este sentido, la negación consiste en invertir el signo de `expression1` para que el resultado sea positivo si `expression1` es negativo.</span><span class="sxs-lookup"><span data-stu-id="c0727-121">In this sense, the negation consists of reversing the sign of `expression1` so that the result is positive if `expression1` is negative.</span></span>  
   
- <span data-ttu-id="8857e-122">Si alguna de las expresiones se evalúa como [Nothing](../../../visual-basic/language-reference/nothing.md), el operador `–` la trata como cero.</span><span class="sxs-lookup"><span data-stu-id="8857e-122">If either expression evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), the `–` operator treats it as zero.</span></span>  
+ <span data-ttu-id="c0727-122">Si alguna de las expresiones se evalúa como [Nothing](../nothing.md), el `–` operador la trata como cero.</span><span class="sxs-lookup"><span data-stu-id="c0727-122">If either expression evaluates to [Nothing](../nothing.md), the `–` operator treats it as zero.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="8857e-123">El operador de `–` se puede *sobrecargar*, lo que significa que una clase o estructura puede volver a definir su comportamiento cuando un operando tiene el tipo de esa clase o estructura.</span><span class="sxs-lookup"><span data-stu-id="8857e-123">The `–` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure.</span></span> <span data-ttu-id="8857e-124">Si el código usa este operador en una clase o estructura de este tipo, asegúrese de que entiende su comportamiento redefinido.</span><span class="sxs-lookup"><span data-stu-id="8857e-124">If your code uses this operator on such a class or structure, make sure that you understand its redefined behavior.</span></span> <span data-ttu-id="8857e-125">Para obtener más información, consulta [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="8857e-125">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
+> <span data-ttu-id="c0727-123">El `–` operador se puede *sobrecargar*, lo que significa que una clase o estructura puede volver a definir su comportamiento cuando un operando tiene el tipo de esa clase o estructura.</span><span class="sxs-lookup"><span data-stu-id="c0727-123">The `–` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure.</span></span> <span data-ttu-id="c0727-124">Si el código usa este operador en una clase o estructura de este tipo, asegúrese de que entiende su comportamiento redefinido.</span><span class="sxs-lookup"><span data-stu-id="c0727-124">If your code uses this operator on such a class or structure, make sure that you understand its redefined behavior.</span></span> <span data-ttu-id="c0727-125">Para obtener más información, consulta [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="c0727-125">For more information, see [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8857e-126">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="8857e-126">Example</span></span>  
- <span data-ttu-id="8857e-127">En el ejemplo siguiente se usa el operador `–` para calcular y devolver la diferencia entre dos números y, a continuación, para negar un número.</span><span class="sxs-lookup"><span data-stu-id="8857e-127">The following example uses the `–` operator to calculate and return the difference between two numbers, and then to negate a number.</span></span>  
+## <a name="example"></a><span data-ttu-id="c0727-126">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="c0727-126">Example</span></span>  
+ <span data-ttu-id="c0727-127">En el ejemplo siguiente se usa el `–` operador para calcular y devolver la diferencia entre dos números y, a continuación, para negar un número.</span><span class="sxs-lookup"><span data-stu-id="c0727-127">The following example uses the `–` operator to calculate and return the difference between two numbers, and then to negate a number.</span></span>  
   
  [!code-vb[VbVbalrOperators#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#10)]  
   
- <span data-ttu-id="8857e-128">Después de la ejecución de estas instrucciones, `binaryResult` contiene 124,45 y `unaryResult` contiene – 334,90.</span><span class="sxs-lookup"><span data-stu-id="8857e-128">Following the execution of these statements, `binaryResult` contains 124.45 and `unaryResult` contains –334.90.</span></span>  
+ <span data-ttu-id="c0727-128">Después de la ejecución de estas instrucciones, `binaryResult` contiene 124,45 y `unaryResult` contiene – 334,90.</span><span class="sxs-lookup"><span data-stu-id="c0727-128">Following the execution of these statements, `binaryResult` contains 124.45 and `unaryResult` contains –334.90.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8857e-129">Vea también</span><span class="sxs-lookup"><span data-stu-id="8857e-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c0727-129">Consulte también</span><span class="sxs-lookup"><span data-stu-id="c0727-129">See also</span></span>
 
-- [<span data-ttu-id="8857e-130">-= (Operador) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8857e-130">-= Operator (Visual Basic)</span></span>](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
-- [<span data-ttu-id="8857e-131">Operadores aritméticos</span><span class="sxs-lookup"><span data-stu-id="8857e-131">Arithmetic Operators</span></span>](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
-- [<span data-ttu-id="8857e-132">Prioridad de operador en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8857e-132">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [<span data-ttu-id="8857e-133">Operadores enumerados por funcionalidad</span><span class="sxs-lookup"><span data-stu-id="8857e-133">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [<span data-ttu-id="8857e-134">Operadores aritméticos en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8857e-134">Arithmetic Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [<span data-ttu-id="c0727-130">-= (Operador) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c0727-130">-= Operator (Visual Basic)</span></span>](subtraction-assignment-operator.md)
+- [<span data-ttu-id="c0727-131">Operadores aritméticos</span><span class="sxs-lookup"><span data-stu-id="c0727-131">Arithmetic Operators</span></span>](arithmetic-operators.md)
+- [<span data-ttu-id="c0727-132">Prioridad de operador en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c0727-132">Operator Precedence in Visual Basic</span></span>](operator-precedence.md)
+- [<span data-ttu-id="c0727-133">Lista de operadores según funcionalidad</span><span class="sxs-lookup"><span data-stu-id="c0727-133">Operators Listed by Functionality</span></span>](operators-listed-by-functionality.md)
+- [<span data-ttu-id="c0727-134">Operadores aritméticos en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c0727-134">Arithmetic Operators in Visual Basic</span></span>](../../programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

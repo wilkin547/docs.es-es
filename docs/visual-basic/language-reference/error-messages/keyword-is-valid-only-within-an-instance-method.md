@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC30043
 ms.assetid: 7973aa82-a681-440c-9bca-242627d7ba86
-ms.openlocfilehash: 8ec1e704815ee10cb98d8cc20fb5982ee4b92832
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 537689405ea30bdd7c075320eba58a8723a93cdb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662011"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397407"
 ---
-# <a name="keyword-is-valid-only-within-an-instance-method"></a><span data-ttu-id="9fca5-102">'\<palabra clave >' es válido solo dentro de un método de instancia</span><span class="sxs-lookup"><span data-stu-id="9fca5-102">'\<keyword>' is valid only within an instance method</span></span>
-<span data-ttu-id="9fca5-103">El `Me`, `MyClass`, y `MyBase` palabras clave que hacen referencia a instancias de clase específica.</span><span class="sxs-lookup"><span data-stu-id="9fca5-103">The `Me`, `MyClass`, and `MyBase` keywords refer to specific class instances.</span></span> <span data-ttu-id="9fca5-104">No se pueden utilizar dentro de un compartido `Function` o `Sub` procedimiento.</span><span class="sxs-lookup"><span data-stu-id="9fca5-104">You cannot use them inside a shared `Function` or `Sub` procedure.</span></span>  
+# <a name="keyword-is-valid-only-within-an-instance-method"></a><span data-ttu-id="6c3dc-102">'\<keyword>' sólo es válida en un método de instancia</span><span class="sxs-lookup"><span data-stu-id="6c3dc-102">'\<keyword>' is valid only within an instance method</span></span>
+<span data-ttu-id="6c3dc-103">Las `Me` `MyClass` `MyBase` palabras clave, y hacen referencia a instancias de clase específicas.</span><span class="sxs-lookup"><span data-stu-id="6c3dc-103">The `Me`, `MyClass`, and `MyBase` keywords refer to specific class instances.</span></span> <span data-ttu-id="6c3dc-104">No se pueden usar dentro de un `Function` procedimiento compartido o `Sub` .</span><span class="sxs-lookup"><span data-stu-id="6c3dc-104">You cannot use them inside a shared `Function` or `Sub` procedure.</span></span>  
   
- <span data-ttu-id="9fca5-105">**Identificador de error:** BC30043</span><span class="sxs-lookup"><span data-stu-id="9fca5-105">**Error ID:** BC30043</span></span>  
+ <span data-ttu-id="6c3dc-105">**Identificador de error:** BC30043</span><span class="sxs-lookup"><span data-stu-id="6c3dc-105">**Error ID:** BC30043</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="9fca5-106">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="9fca5-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="6c3dc-106">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="6c3dc-106">To correct this error</span></span>  
   
-- <span data-ttu-id="9fca5-107">Quite la palabra clave del procedimiento o quite la `Shared` palabra clave de la declaración de procedimiento.</span><span class="sxs-lookup"><span data-stu-id="9fca5-107">Remove the keyword from the procedure, or remove the `Shared` keyword from the procedure declaration.</span></span>  
+- <span data-ttu-id="6c3dc-107">Quite la palabra clave del procedimiento o quite la `Shared` palabra clave de la declaración de procedimiento.</span><span class="sxs-lookup"><span data-stu-id="6c3dc-107">Remove the keyword from the procedure, or remove the `Shared` keyword from the procedure declaration.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9fca5-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="9fca5-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6c3dc-108">Consulte también</span><span class="sxs-lookup"><span data-stu-id="6c3dc-108">See also</span></span>
 
-- [<span data-ttu-id="9fca5-109">Asignación de variables de objeto</span><span class="sxs-lookup"><span data-stu-id="9fca5-109">Object Variable Assignment</span></span>](../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
-- [<span data-ttu-id="9fca5-110">Me, My, MyBase y MyClass</span><span class="sxs-lookup"><span data-stu-id="9fca5-110">Me, My, MyBase, and MyClass</span></span>](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
-- [<span data-ttu-id="9fca5-111">Fundamentos de la herencia</span><span class="sxs-lookup"><span data-stu-id="9fca5-111">Inheritance Basics</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [<span data-ttu-id="6c3dc-109">Asignación de variables de objeto</span><span class="sxs-lookup"><span data-stu-id="6c3dc-109">Object Variable Assignment</span></span>](../../programming-guide/language-features/variables/object-variable-assignment.md)
+- [<span data-ttu-id="6c3dc-110">Me, My, MyBase y MyClass</span><span class="sxs-lookup"><span data-stu-id="6c3dc-110">Me, My, MyBase, and MyClass</span></span>](../../programming-guide/program-structure/me-my-mybase-and-myclass.md)
+- [<span data-ttu-id="6c3dc-111">Fundamentos de la herencia</span><span class="sxs-lookup"><span data-stu-id="6c3dc-111">Inheritance Basics</span></span>](../../programming-guide/language-features/objects-and-classes/inheritance-basics.md)
