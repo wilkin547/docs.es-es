@@ -1,25 +1,25 @@
 ---
-title: Argumento '<argumentname>' debe ser mayor o igual a cero.
+title: El valor del argumento '<argumentname>' debe ser mayor o igual que cero
 ms.date: 07/20/2015
 f1_keywords:
 - vbrFinancial_ArgGEZero1
 ms.assetid: 7b901c2a-3447-4afc-91f8-8fa5f6f961d7
-ms.openlocfilehash: 25872e8cd2ca18d12a6d2f07a9a97c0d2bcb4f7e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 63d25c807b60d0edb81985574bce12c42d539c2c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024604"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406280"
 ---
-# <a name="argument-argumentname-must-be-greater-than-or-equal-to-zero"></a>Argumento '\<argumentname >' debe ser mayor o igual a cero.
+# <a name="argument-argumentname-must-be-greater-than-or-equal-to-zero"></a>El valor del argumento '\<argumentname>' debe ser mayor o igual que cero
 Un argumento no es válido porque es menor que cero.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1. Compruebe que los argumentos estén bien escritos. Un nombre de variable mal escrito puede crear implícitamente una variable numérica que se inicializa a cero.  
+1. Compruebe que los argumentos estén bien escritos. Un nombre de variable mal escrito puede crear implícitamente una variable numérica que se inicialice en cero.  
   
-2. Compruebe las operaciones anteriores en las variables de la expresión, especialmente las que se pasaron al procedimiento como argumentos de otros procedimientos.  
+2. Compruebe las operaciones anteriores sobre variables de la expresión, especialmente las que se pasan al procedimiento como argumentos de otros procedimientos.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Paso de argumentos por valor y por referencia](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [Pasar argumentos por valor y por referencia](../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

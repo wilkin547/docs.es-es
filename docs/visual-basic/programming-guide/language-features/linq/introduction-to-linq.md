@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: 740d8010908d658deb40591d4a9c3182c46ffc84
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 273c688d7e9d3fb86d4baece75193ce6d112b62f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201722"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404919"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Introducción a LINQ en Visual Basic
 Language-Integrated Query (LINQ) agrega capacidades de consulta a Visual Basic y proporciona funcionalidades sencillas y eficaces cuando se trabaja con todos los tipos de datos. En lugar de enviar una consulta a una base de datos que se va a procesar o trabajar con una sintaxis de consulta diferente para cada tipo de datos que se está buscando, LINQ presenta las consultas como parte del lenguaje Visual Basic. Utiliza una sintaxis unificada independientemente del tipo de datos.  
@@ -41,8 +41,8 @@ Language-Integrated Query (LINQ) agrega capacidades de consulta a Visual Basic y
 |Proveedor|Descripción|  
 |---|---|  
 |LINQ to Objects|El proveedor LINQ to Objects le permite consultar las matrices y colecciones en memoria. Si un objeto es compatible con las interfaces <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601>, el proveedor LINQ to Objects le permite consultarlo.<br /><br /> Puede habilitar el proveedor de LINQ to Objects importando el <xref:System.Linq> espacio de nombres, que se importa de forma predeterminada para todos los proyectos de Visual Basic.<br /><br /> Para obtener más información sobre el proveedor de LINQ to Objects, vea [LINQ to Objects](../../concepts/linq/linq-to-objects.md).|  
-|LINQ to SQL|El proveedor LINQ to SQL le permite consultar y modificar datos en una base de datos de SQL Server. Esto hace que sea fácil asignar el modelo de objetos de una aplicación a las tablas y los objetos de una base de datos.<br /><br /> Visual Basic facilita el trabajo con LINQ to SQL incluyendo el Object Relational Designer (Object Relational Designer). Este diseñador se usa para crear un modelo de objetos en una aplicación que se asigna a los objetos de una base de datos. Object Relational Designer también proporciona funcionalidad para asignar procedimientos almacenados y funciones al <xref:System.Data.Linq.DataContext> objeto, que administra la comunicación con la base de datos y almacena el estado de las comprobaciones de simultaneidad optimista.<br /><br /> Para obtener más información sobre el proveedor de LINQ to SQL, vea [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md). Para obtener más información sobre el Object Relational Designer, vea [herramientas de LINQ to SQL en Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).|  
-|LINQ to XML|El proveedor LINQ to XML le permite consultar y modificar XML. Puede modificar XML en memoria o puede cargar XML desde un archivo y guardarlo en él.<br /><br /> Además, el proveedor de LINQ to XML habilita literales XML y propiedades de eje XML que le permiten escribir XML directamente en el código de Visual Basic. Para obtener más información, vea [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md).|  
+|LINQ a SQL|El proveedor LINQ to SQL le permite consultar y modificar datos en una base de datos de SQL Server. Esto hace que sea fácil asignar el modelo de objetos de una aplicación a las tablas y los objetos de una base de datos.<br /><br /> Visual Basic facilita el trabajo con LINQ to SQL incluyendo el Object Relational Designer (Object Relational Designer). Este diseñador se usa para crear un modelo de objetos en una aplicación que se asigna a los objetos de una base de datos. Object Relational Designer también proporciona funcionalidad para asignar procedimientos almacenados y funciones al <xref:System.Data.Linq.DataContext> objeto, que administra la comunicación con la base de datos y almacena el estado de las comprobaciones de simultaneidad optimista.<br /><br /> Para obtener más información sobre el proveedor de LINQ to SQL, vea [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md). Para obtener más información sobre el Object Relational Designer, vea [herramientas de LINQ to SQL en Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).|  
+|LINQ to XML|El proveedor LINQ to XML le permite consultar y modificar XML. Puede modificar XML en memoria o puede cargar XML desde un archivo y guardarlo en él.<br /><br /> Además, el proveedor de LINQ to XML habilita literales XML y propiedades de eje XML que le permiten escribir XML directamente en el código de Visual Basic. Para obtener más información, vea [XML](../xml/index.md).|  
 |LINQ to DataSet|El proveedor de LINQ to DataSet permite consultar y actualizar datos en un conjunto de datos de ADO.NET. Puede agregar la eficacia de LINQ a las aplicaciones que utilicen conjuntos de datos con el fin de simplificar y ampliar las funcionalidades de consulta, agregado y actualización de los datos del conjunto de datos.<br /><br /> Para más información, vea [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md).|  
   
 ## <a name="structure-of-a-linq-query"></a>Estructura de una consulta LINQ  
@@ -68,7 +68,7 @@ Language-Integrated Query (LINQ) agrega capacidades de consulta a Visual Basic y
   
  [!code-vb[VbVbalrIntroToLINQ#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#6)]  
   
- Hay varios operadores de consulta LINQ adicionales que puede utilizar para crear expresiones de consulta eficaces. En la siguiente sección de este tema se describen las diversas cláusulas de consulta que puede incluir en una expresión de consulta. Para obtener más información sobre las cláusulas de consulta de Visual Basic, vea [consultas](../../../../visual-basic/language-reference/queries/index.md).  
+ Hay varios operadores de consulta LINQ adicionales que puede utilizar para crear expresiones de consulta eficaces. En la siguiente sección de este tema se describen las diversas cláusulas de consulta que puede incluir en una expresión de consulta. Para obtener más información sobre las cláusulas de consulta de Visual Basic, vea [consultas](../../../language-reference/queries/index.md).  
   
 ## <a name="visual-basic-linq-query-operators"></a>Visual Basic operadores de consulta LINQ  
 
@@ -76,13 +76,13 @@ Las clases en el espacio de nombres <xref:System.Linq> y los otros espacios de n
 
 ### <a name="from-clause"></a>Cláusula From
 
-Se requiere una [ `From` cláusula](../../../../visual-basic/language-reference/queries/from-clause.md) o una `Aggregate` cláusula para iniciar una consulta. Una cláusula `From` especifica una colección de origen y una variable de iteración de una consulta. Por ejemplo:
+Se requiere una [ `From` cláusula](../../../language-reference/queries/from-clause.md) o una `Aggregate` cláusula para iniciar una consulta. Una cláusula `From` especifica una colección de origen y una variable de iteración de una consulta. Por ejemplo:
 
  [!code-vb[VbVbalrIntroToLINQ#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#7)]
 
 ### <a name="select-clause"></a>Select (cláusula)
 
-Opcional. Una [ `Select` cláusula](../../../../visual-basic/language-reference/queries/select-clause.md) declara un conjunto de variables de iteración para una consulta. Por ejemplo:
+Opcional. Una [ `Select` cláusula](../../../language-reference/queries/select-clause.md) declara un conjunto de variables de iteración para una consulta. Por ejemplo:
 
  [!code-vb[VbVbalrIntroToLINQ#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#8)]
 
@@ -90,37 +90,37 @@ Si no se especifica una cláusula `Select`, las variables de iteración de la co
 
 ### <a name="where-clause"></a>Cláusula WHERE
 
-Opcional. Una [ `Where` cláusula](../../../../visual-basic/language-reference/queries/where-clause.md) especifica una condición de filtrado para una consulta. Por ejemplo:
+Opcional. Una [ `Where` cláusula](../../../language-reference/queries/where-clause.md) especifica una condición de filtrado para una consulta. Por ejemplo:
 
  [!code-vb[VbVbalrIntroToLINQ#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#9)]
 
 ### <a name="order-by-clause"></a>Order By (cláusula)
 
-Opcional. Una [ `Order By` cláusula](../../../../visual-basic/language-reference/queries/order-by-clause.md) especifica el criterio de ordenación de las columnas de una consulta. Por ejemplo:
+Opcional. Una [ `Order By` cláusula](../../../language-reference/queries/order-by-clause.md) especifica el criterio de ordenación de las columnas de una consulta. Por ejemplo:
 
  [!code-vb[VbVbalrIntroToLINQ#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#10)]
 
 ### <a name="join-clause"></a>Join (cláusula)
 
-Opcional. Una [ `Join` cláusula](../../../../visual-basic/language-reference/queries/join-clause.md) combina dos colecciones en una sola colección. Por ejemplo:
+Opcional. Una [ `Join` cláusula](../../../language-reference/queries/join-clause.md) combina dos colecciones en una sola colección. Por ejemplo:
 
  [!code-vb[VbVbalrIntroToLINQ#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#11)]
 
 ### <a name="group-by-clause"></a>Group By (cláusula)
 
-Opcional. Una [ `Group By` cláusula](../../../../visual-basic/language-reference/queries/group-by-clause.md) agrupa los elementos del resultado de una consulta. Se puede usar para aplicar funciones de agregado a cada grupo. Por ejemplo:
+Opcional. Una [ `Group By` cláusula](../../../language-reference/queries/group-by-clause.md) agrupa los elementos del resultado de una consulta. Se puede usar para aplicar funciones de agregado a cada grupo. Por ejemplo:
 
  [!code-vb[VbVbalrIntroToLINQ#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#12)]
 
 ### <a name="group-join-clause"></a>Group Join (cláusula)
 
-Opcional. Una [ `Group Join` cláusula](../../../../visual-basic/language-reference/queries/group-join-clause.md) combina dos colecciones en una sola colección jerárquica. Por ejemplo:
+Opcional. Una [ `Group Join` cláusula](../../../language-reference/queries/group-join-clause.md) combina dos colecciones en una sola colección jerárquica. Por ejemplo:
 
  [!code-vb[VbVbalrIntroToLINQ#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#13)]
 
 ### <a name="aggregate-clause"></a>Aggregate (cláusula)
 
-Se requiere una [ `Aggregate` cláusula](../../../../visual-basic/language-reference/queries/aggregate-clause.md) o una `From` cláusula para iniciar una consulta. Una cláusula `Aggregate` aplica una o más funciones agregadas a una colección. Por ejemplo, puede utilizar la `Aggregate` cláusula para calcular una suma de todos los elementos devueltos por una consulta, como hace el siguiente ejemplo.
+Se requiere una [ `Aggregate` cláusula](../../../language-reference/queries/aggregate-clause.md) o una `From` cláusula para iniciar una consulta. Una cláusula `Aggregate` aplica una o más funciones agregadas a una colección. Por ejemplo, puede utilizar la `Aggregate` cláusula para calcular una suma de todos los elementos devueltos por una consulta, como hace el siguiente ejemplo.
 
  [!code-vb[VbVbalrIntroToLINQ#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#14)]
 
@@ -130,7 +130,7 @@ También puede utilizar la cláusula `Aggregate` para modificar una consulta. Po
 
 ### <a name="let-clause"></a>Let (cláusula)
 
-Opcional. Una [ `Let` cláusula](../../../../visual-basic/language-reference/queries/let-clause.md) calcula un valor y lo asigna a una nueva variable en la consulta. Por ejemplo:
+Opcional. Una [ `Let` cláusula](../../../language-reference/queries/let-clause.md) calcula un valor y lo asigna a una nueva variable en la consulta. Por ejemplo:
 
  [!code-vb[VbVbalrIntroToLINQ#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#16)]
 
@@ -142,25 +142,25 @@ Opcional. Una `Distinct` cláusula restringe los valores de la variable de itera
 
 ### <a name="skip-clause"></a>Skip (cláusula)
 
-Opcional. Una [ `Skip` cláusula](../../../../visual-basic/language-reference/queries/skip-clause.md) omite un número especificado de elementos de una colección y, a continuación, devuelve los elementos restantes. Por ejemplo:
+Opcional. Una [ `Skip` cláusula](../../../language-reference/queries/skip-clause.md) omite un número especificado de elementos de una colección y, a continuación, devuelve los elementos restantes. Por ejemplo:
 
  [!code-vb[VbVbalrIntroToLINQ#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#18)]
 
 ### <a name="skip-while-clause"></a>Skip While (cláusula)
 
-Opcional. Una [ `Skip While` cláusula](../../../../visual-basic/language-reference/queries/skip-while-clause.md) omite los elementos de una colección siempre que una condición especificada sea `true` y, a continuación, devuelve los elementos restantes. Por ejemplo:
+Opcional. Una [ `Skip While` cláusula](../../../language-reference/queries/skip-while-clause.md) omite los elementos de una colección siempre que una condición especificada sea `true` y, a continuación, devuelve los elementos restantes. Por ejemplo:
 
  [!code-vb[VbVbalrIntroToLINQ#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#19)]
 
 ### <a name="take-clause"></a>Take (cláusula)
 
-Opcional. Una [ `Take` cláusula](../../../../visual-basic/language-reference/queries/take-clause.md) devuelve un número especificado de elementos contiguos desde el principio de una colección. Por ejemplo:
+Opcional. Una [ `Take` cláusula](../../../language-reference/queries/take-clause.md) devuelve un número especificado de elementos contiguos desde el principio de una colección. Por ejemplo:
 
  [!code-vb[VbVbalrIntroToLINQ#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#20)]
 
 ### <a name="take-while-clause"></a>Take While (cláusula)
 
-Opcional. Una [ `Take While` cláusula](../../../../visual-basic/language-reference/queries/take-while-clause.md) incluye los elementos de una colección siempre que una condición especificada sea `true` y omita los elementos restantes. Por ejemplo:
+Opcional. Una [ `Take While` cláusula](../../../language-reference/queries/take-while-clause.md) incluye los elementos de una colección siempre que una condición especificada sea `true` y omita los elementos restantes. Por ejemplo:
 
  [!code-vb[VbVbalrIntroToLINQ#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#21)]
   
@@ -215,7 +215,7 @@ Puede usar características de consulta LINQ adicionales llamando a los miembros
   
 |Tema|Descripción|  
 |---|---|  
-|[XML](../../language-features/xml/index.md)|Describe las características XML de Visual Basic que se pueden consultar y que permiten incluir XML como objetos de datos de primera clase en el código Visual Basic.|  
+|[XML](../xml/index.md)|Describe las características XML de Visual Basic que se pueden consultar y que permiten incluir XML como objetos de datos de primera clase en el código Visual Basic.|  
 |[Consultas](../../../language-reference/queries/index.md)|Proporciona información de referencia sobre las cláusulas de consulta que están disponibles en Visual Basic.|  
 |[LINQ (Language Integrated Query)](../../concepts/linq/index.md)|Incluye información general, instrucciones de programación y ejemplos de LINQ.|  
 |[LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)|Incluye información general, guía de programación y ejemplos de LINQ to SQL.|  
@@ -245,10 +245,10 @@ Puede usar características de consulta LINQ adicionales llamando a los miembros
 ## <a name="featured-book-chapters"></a>Capítulos destacados del libro  
  [Capítulo 17: LINQ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652502(v=orm.10)) en [programación Visual Basic 2008](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652504(v=orm.10))  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [LINQ (Language Integrated Query)](../../concepts/linq/index.md)
-- [Información general sobre LINQ to XML en Visual Basic](../../language-features/xml/overview-of-linq-to-xml.md)
+- [Información general sobre LINQ to XML en Visual Basic](../xml/overview-of-linq-to-xml.md)
 - [Información general de LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset-overview.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
 - [Herramientas LINQ to SQL en Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)

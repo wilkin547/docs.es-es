@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC32061
 ms.assetid: b17821b7-fa14-4397-a211-6e2a14079f09
-ms.openlocfilehash: ff51bb27847a92b07ce6275a8ddee4789e865f08
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e2ba411a5f0db21539a9cf99c7645b8c9309caab
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642801"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409561"
 ---
-# <a name="expression-cannot-be-used-as-a-type-constraint"></a>'\<expresión >' no puede utilizarse como una restricción de tipo
+# <a name="expression-cannot-be-used-as-a-type-constraint"></a>'\<expression>' no se puede utilizar como restricción de tipo
 Una lista de restricciones incluye una expresión que no representa una restricción válida en un parámetro de tipo.  
   
  Una lista de restricciones impone requisitos al argumento de tipo pasado al parámetro de tipo. Puede especificar los requisitos siguientes en cualquier combinación:  
@@ -31,7 +31,7 @@ Una lista de restricciones incluye una expresión que no representa una restricc
   
 - El argumento de tipo debe ser un tipo de referencia (incluya la restricción `Class` ).  
   
- No es posible especificar `Structure` y `Class` para el mismo parámetro de tipo ni se pueden especificar estas restricciones más de una vez.  
+ No es posible especificar `Structure` y `Class` para el mismo parámetro de tipo y no se pueden especificar estas restricciones más de una vez.  
   
  **Identificador de error:** BC32061  
   
@@ -41,10 +41,10 @@ Una lista de restricciones incluye una expresión que no representa una restricc
   
 - Si la expresión no cumple los requisitos de la lista de requisitos anterior, quítela de la lista de restricciones.  
   
-- Si la expresión hace referencia a una interfaz o una clase, compruebe que el compilador tenga acceso a dicha interfaz o clase. Puede que deba calificar su nombre y quizás tenga que agregar una referencia al proyecto. Para obtener más información, vea "Referencias a proyectos" en [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+- Si la expresión hace referencia a una interfaz o una clase, compruebe que el compilador tenga acceso a dicha interfaz o clase. Puede que deba calificar su nombre y quizás tenga que agregar una referencia al proyecto. Para obtener más información, vea "referencias a proyectos" en [referencias a elementos declarados](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [Value Types and Reference Types](../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Referencias a elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Tipos genéricos en Visual Basic](../../programming-guide/language-features/data-types/generic-types.md)
+- [Tipos de valor y tipos de referencia](../../programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [References to Declared Elements](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)

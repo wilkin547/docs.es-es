@@ -6,16 +6,16 @@ helpviewer_keywords:
 - ?. operator [Visual Basic]
 - ?[] operator [C#]
 - ?[] operator [Visual Basic]
-ms.openlocfilehash: 003f579a7128bbe2462b7fbe7057de03e61bfbe6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: bffbba859968e0a050397cd9e685c142f801798a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348285"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401477"
 ---
 # <a name="-and--null-conditional-operators-visual-basic"></a>?. etc? () operadores condicionales null (Visual Basic)
 
-Comprueba el valor del operando izquierdo para null (`Nothing`) antes de realizar una operación de acceso a miembros (`?.`) o de índice (`?()`). Devuelve `Nothing` si el operando izquierdo se evalúa como `Nothing`. Tenga en cuenta que, en las expresiones que normalmente devuelven tipos de valor, el operador condicional null devuelve un <xref:System.Nullable%601>.
+Comprueba el valor del operando izquierdo para null ( `Nothing` ) antes de realizar una operación de acceso a miembros ( `?.` ) o índice ( `?()` ); devuelve `Nothing` si el operando izquierdo se evalúa como `Nothing` . Tenga en cuenta que en las expresiones que normalmente devuelven tipos de valor, el operador condicional null devuelve <xref:System.Nullable%601> .
 
 Estos operadores le ayudan a escribir menos código para controlar las comprobaciones de valores NULL, especialmente cuando desciende en estructuras de datos. Por ejemplo:
 
@@ -57,13 +57,13 @@ Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
 If customer?.IsAllowedFreeShipping Then ApplyFreeShippingToOrders(customer)
 ```
 
-Los operadores de condición NULL se cortocircuitan.  Si una operación de una cadena de operaciones de índice y acceso a miembros condicionales devuelve `Nothing`, se detiene el resto de la ejecución de la cadena.  En el ejemplo siguiente, `C(E)` no se evalúa si `A`, `B`o `C` se evalúan como `Nothing`.
+Los operadores de condición NULL se cortocircuitan.  Si una operación de una cadena de operaciones de índice y de acceso a miembros condicionales se devuelve `Nothing` , se detiene el resto de la ejecución de la cadena.  En el ejemplo siguiente, `C(E)` no se evalúa si `A` , `B` o `C` se evalúa como `Nothing` .
 
 ```vb
 A?.B?.C?(E)
 ```
 
-Otro uso para el acceso de miembro condicional NULL es invocar delegados de una manera segura para subprocesos con mucho menos código.  En el ejemplo siguiente se definen dos tipos, un `NewsBroadcaster` y un `NewsReceiver`. El delegado de `NewsBroadcaster.SendNews` envía los elementos de noticias al receptor.
+Otro uso para el acceso de miembro condicional NULL es invocar delegados de una manera segura para subprocesos con mucho menos código.  En el ejemplo siguiente se definen dos tipos, `NewsBroadcaster` y `NewsReceiver` . El delegado envía los elementos de noticias al receptor `NewsBroadcaster.SendNews` .
 
 ```vb
 Public Module NewsBroadcaster
@@ -91,7 +91,7 @@ Public Class NewsReceiver
 End Class
 ```
 
-Si no hay ningún elemento en la lista de invocación de `SendNews`, el delegado de `SendNews` produce una <xref:System.NullReferenceException>. Antes de los operadores condicionales null, el código como el siguiente garantiza que la lista de invocación de delegado no se `Nothing`:
+Si no hay ningún elemento en la `SendNews` lista de invocación, el `SendNews` delegado produce una excepción <xref:System.NullReferenceException> . Antes de los operadores condicionales null, el código como el siguiente garantiza que la lista de invocación de delegado no era `Nothing` :
 
 ```vb
 SendNews = SendNews.Combine({SendNews, client})
@@ -109,8 +109,8 @@ SendNews?.Invoke("Just in...")
 
 La nueva forma de hacerlo es segura para los subprocesos porque el compilador genera código para evaluar `SendNews` solo una vez, manteniendo el resultado en una variable temporal. Debe llamar explícitamente al método `Invoke` porque no hay ninguna sintaxis de invocación del delegado null condicional `SendNews?(String)`.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Operadores (Visual Basic)](index.md)
-- [Guía de programación en Visual Basic](../../../visual-basic/programming-guide/index.md)
-- [Referencia del lenguaje Visual Basic](../../../visual-basic/language-reference/index.md)
+- [Guía de programación en Visual Basic](../../programming-guide/index.md)
+- [Referencia del lenguaje Visual Basic](../index.md)

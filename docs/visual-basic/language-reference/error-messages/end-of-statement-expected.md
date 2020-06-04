@@ -7,27 +7,27 @@ f1_keywords:
 helpviewer_keywords:
 - BC30205
 ms.assetid: 53c7f825-a737-4b76-a1fa-f67745b8bd40
-ms.openlocfilehash: 1ce5c793a09df34ac17e70e3253e98108bf76fb8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 169f01b02df377ba6cc21ffad53c36f5d4537140
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803336"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409652"
 ---
 # <a name="end-of-statement-expected"></a>Se esperaba el fin de instrucción
-La instrucción es sintácticamente completa, pero un elemento de programación adicional sigue al elemento que se complete la instrucción. Falta un terminador de línea al final de cada instrucción.
+La instrucción se completa sintácticamente, pero un elemento de programación adicional sigue el elemento que completa la instrucción. Se requiere un terminador de línea al final de cada instrucción.
   
- Un terminador de línea divide los caracteres de un archivo de código fuente de Visual Basic en líneas. Ejemplos de terminadores de línea son el Unicode carro devuelto carácter (& HD), el Unicode avance de línea carácter (& alta disponibilidad), y seguido del carácter de avance de línea Unicode del carácter de retorno de carro Unicode. Para obtener más información acerca de los terminadores de línea, consulte el [especificación del lenguaje Visual Basic](~/_vblang/spec/lexical-grammar.md#line-terminators).
+ Un terminador de línea divide los caracteres de un archivo de origen de Visual Basic en líneas. Los ejemplos de terminadores de línea son el carácter de retorno de carro Unicode (&HD), el carácter de avance de línea Unicode (&HA) y el carácter de retorno de carro Unicode seguido del carácter de avance de línea Unicode. Para obtener más información sobre los terminadores de línea, vea la [especificación del lenguaje Visual Basic](~/_vblang/spec/lexical-grammar.md#line-terminators).
   
  **Identificador de error:** BC30205
   
 ## <a name="to-correct-this-error"></a>Para corregir este error
   
-1. Comprueba si dos instrucciones diferentes se colocaron en la misma línea.
+1. Compruebe si dos instrucciones diferentes se han colocado involuntariamente en la misma línea.
   
-2. Insertar un terminador de línea después del elemento que se complete la instrucción.
+2. Inserte un terminador de línea después del elemento que completa la instrucción.
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Cómo: Interrumpir y combinar instrucciones en código](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
-- [Instrucciones](../../../visual-basic/programming-guide/language-features/statements.md)
+- [Procedimiento Interrupción y combinación de instrucciones en código](../../programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
+- [Instrucciones](../../programming-guide/language-features/statements.md)

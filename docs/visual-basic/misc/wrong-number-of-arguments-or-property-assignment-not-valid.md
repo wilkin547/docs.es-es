@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID450
 ms.assetid: 61700dd4-ebd0-4088-b439-2cd1ef9fc8f4
-ms.openlocfilehash: 3da7d55bdf58bb11d65bdb064a39ac4c7e9f1a8f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 70fcb92f4f49ea606bee7f2e2a3d192f37f2b481
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022472"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406955"
 ---
 # <a name="wrong-number-of-arguments-or-property-assignment-not-valid"></a>El número de argumentos es erróneo o la asignación de propiedad no es válida
 Se intentó realizar una asignación no válida.  
@@ -22,4 +22,4 @@ Se intentó realizar una asignación no válida.
   
 ## <a name="see-also"></a>Vea también
 
-- [Operadores de asignación](../../visual-basic/language-reference/operators/assignment-operators.md)
+- [Operadores de asignación](../language-reference/operators/assignment-operators.md)

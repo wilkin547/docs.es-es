@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - BC32008
 ms.assetid: dc6abba0-a9ad-450f-8899-87265bc84abc
-ms.openlocfilehash: 45dc0403468fa40888a6c5e6bdfe6ca782e98325
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7056bbf2b4de26feba3bfbe0e02b3239311271c9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664191"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84382177"
 ---
-# <a name="typename-is-a-delegate-type"></a>'\<typename >' es un tipo delegado
-'\<typename >' es un tipo delegado. Construcción de delegado permite una única expresión AddressOf como una lista de argumentos. A menudo se puede usar una expresión de AddressOf en lugar de una construcción de delegado.  
+# <a name="typename-is-a-delegate-type"></a>'\<typename>' es un tipo delegado
+' \<typename> ' es un tipo de delegado. La construcción de delegado solo permite una expresión AddressOf como una lista de argumentos. A menudo se puede usar una expresión AddressOf en lugar de una construcción de delegado.  
   
- Un `New` cláusula crea una instancia de una clase de delegado proporciona una lista de argumentos no válido al constructor de delegado.  
+ Una `New` cláusula que crea una instancia de una clase delegada proporciona una lista de argumentos no válidos al constructor delegado.  
   
- Puede proporcionar una sola `AddressOf` expresión al crear una nueva instancia de delegado.  
+ Solo se puede proporcionar una `AddressOf` expresión cuando se crea una nueva instancia de delegado.  
   
- Este error puede producirse si no pasa ningún argumento al constructor de delegado, si se pasa más de un argumento, o si se pasa un único argumento que no es válido `AddressOf` expresión.  
+ Este error puede producirse si no se pasan argumentos al constructor delegado, si se pasa más de un argumento, o si se pasa un solo argumento que no es una `AddressOf` expresión válida.  
   
  **Identificador de error:** BC32008  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-- Usar una sola `AddressOf` expresión en la lista de argumentos para la clase de delegado en el `New` cláusula.  
+- Use una sola `AddressOf` expresión en la lista de argumentos para la clase Delegate en la `New` cláusula.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [New (operador)](../../../visual-basic/language-reference/operators/new-operator.md)
-- [AddressOf (operador)](../../../visual-basic/language-reference/operators/addressof-operator.md)
-- [Delegados](../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [Cómo: Invocar un método delegado](../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)
+- [New (operador)](../operators/new-operator.md)
+- [AddressOf (operador)](../operators/addressof-operator.md)
+- [Delegados](../../programming-guide/language-features/delegates/index.md)
+- [Procedimiento para invocar un método delegado](../../programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)

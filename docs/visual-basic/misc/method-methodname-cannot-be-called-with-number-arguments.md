@@ -1,17 +1,17 @@
 ---
-title: Método '<methodname>' no se puede llamar con <number> argumentos
+title: No se puede llamar al método '<methodname>' con <number> argumento(s)
 ms.date: 07/20/2015
 f1_keywords:
 - vbrNoMethodTakingXArguments2
 ms.assetid: 23260199-b6a4-469f-b75f-4a3d8d25e2cc
-ms.openlocfilehash: e168d59da6c0c293d2429f90b858baf3547c22b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1f8dedf6797f16e61eb44875f28f4ed9ea787540
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922322"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402114"
 ---
-# <a name="method-methodname-cannot-be-called-with-number-arguments"></a>Método '\<methodname >' no se puede llamar con \<número > argumentos
+# <a name="method-methodname-cannot-be-called-with-number-arguments"></a>No se puede llamar al método '\<methodname>' con \<number> argumento(s)
 Una llamada de método contiene un número de argumentos incorrecto.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
@@ -22,6 +22,6 @@ Una llamada de método contiene un número de argumentos incorrecto.
   
 3. Ajuste el número de argumentos si los dos números no coinciden.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Paso de argumentos por valor y por referencia](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [Pasar argumentos por valor y por referencia](../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

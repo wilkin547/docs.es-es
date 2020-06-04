@@ -1,5 +1,5 @@
 ---
-title: Take (Cláusula)
+title: Cláusula Take
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QueryTake
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - queries [Visual Basic], Take
 - Take clause [Visual Basic]
 ms.assetid: 77bf87b2-1476-4456-957f-fee922fbad8c
-ms.openlocfilehash: 3082954ef84560ccb70f7a47cd3532f622829392
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 25dd06905525a96bc1504f033eb4f19af6d454a2
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349643"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84359637"
 ---
 # <a name="take-clause-visual-basic"></a>Take (Cláusula, Visual Basic)
 Devuelve un número especificado de elementos contiguos desde el principio de una colección.  
@@ -24,30 +24,30 @@ Devuelve un número especificado de elementos contiguos desde el principio de un
 Take count  
 ```  
   
-## <a name="parts"></a>Elementos  
+## <a name="parts"></a>Partes  
  `count`  
- Obligatorio. Un valor o una expresión que se evalúa como el número de elementos de la secuencia que se va a devolver.  
+ Necesario. Un valor o una expresión que se evalúa como el número de elementos de la secuencia que se va a devolver.  
   
-## <a name="remarks"></a>Comentarios  
- La cláusula `Take` hace que una consulta incluya un número especificado de elementos contiguos desde el principio de una lista de resultados. El número de elementos que se van a incluir se especifica mediante el parámetro `count`.  
+## <a name="remarks"></a>Observaciones  
+ La `Take` cláusula hace que una consulta incluya un número especificado de elementos contiguos desde el principio de una lista de resultados. El parámetro especifica el número de elementos que se van a incluir `count` .  
   
- Puede usar la cláusula `Take` con la cláusula `Skip` para devolver un intervalo de datos de cualquier segmento de una consulta. Para ello, pase el índice del primer elemento del intervalo a la cláusula `Skip` y el tamaño del intervalo a la cláusula `Take`. En este caso, la cláusula `Take` debe especificarse después de la cláusula `Skip`.  
+ Puede usar la `Take` cláusula con la `Skip` cláusula para devolver un intervalo de datos de cualquier segmento de una consulta. Para ello, pase el índice del primer elemento del intervalo a la `Skip` cláusula y el tamaño del intervalo a la `Take` cláusula. En este caso, la `Take` cláusula debe especificarse después de la `Skip` cláusula.  
   
- Al utilizar la cláusula `Take` en una consulta, puede que también tenga que asegurarse de que los resultados se devuelven en un orden que permita a la cláusula `Take` incluir los resultados deseados. Para obtener más información sobre cómo ordenar los resultados de una consulta, vea [cláusula order by](../../../visual-basic/language-reference/queries/order-by-clause.md).  
+ Al utilizar la `Take` cláusula en una consulta, puede que también tenga que asegurarse de que los resultados se devuelven en un orden que permita `Take` a la cláusula incluir los resultados deseados. Para obtener más información sobre cómo ordenar los resultados de una consulta, vea [cláusula order by](order-by-clause.md).  
   
- Puede usar la cláusula `TakeWhile` para especificar que solo se devuelvan determinados elementos, en función de una condición proporcionada.  
+ Puede usar la `TakeWhile` cláusula para especificar que solo se devuelvan determinados elementos, en función de una condición proporcionada.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo de código siguiente se usa la cláusula `Take` junto con la cláusula `Skip` para devolver datos de una consulta en páginas. La función GetCustomers usa la cláusula `Skip` para omitir los clientes de la lista hasta el valor del índice de inicio proporcionado, y usa la cláusula `Take` para devolver una página de clientes a partir de ese valor de índice.  
+ En el ejemplo de código siguiente `Take` se usa la cláusula junto con la `Skip` cláusula para devolver datos de una consulta en páginas. La función GetCustomers usa la `Skip` cláusula para omitir los clientes de la lista hasta el valor del índice de inicio proporcionado y usa la `Take` cláusula para devolver una página de clientes a partir de ese valor de índice.  
   
  [!code-vb[VbSimpleQuerySamples#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#1)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [Consultas](../../../visual-basic/language-reference/queries/index.md)
-- [Select (cláusula)](../../../visual-basic/language-reference/queries/select-clause.md)
-- [From (cláusula)](../../../visual-basic/language-reference/queries/from-clause.md)
-- [Order By (cláusula)](../../../visual-basic/language-reference/queries/order-by-clause.md)
-- [Take While (cláusula)](../../../visual-basic/language-reference/queries/take-while-clause.md)
-- [Skip (cláusula)](../../../visual-basic/language-reference/queries/skip-clause.md)
+- [Introducción a LINQ en Visual Basic](../../programming-guide/language-features/linq/introduction-to-linq.md)
+- [Consultas](index.md)
+- [Select (cláusula)](select-clause.md)
+- [Cláusula FROM](from-clause.md)
+- [Cláusula Order By](order-by-clause.md)
+- [Cláusula Take While](take-while-clause.md)
+- [Cláusula Skip](skip-clause.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - exception handling, unstructured
 - throw statement [Visual Basic]
 ms.assetid: a6e07406-5c8a-4498-87a2-8339f3651d62
-ms.openlocfilehash: 147345990b625e034e651e69b322bc098d0bd8de
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 95572b1739490e90f53da6b6ec283bfb532c46d3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352789"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404140"
 ---
 # <a name="throw-statement-visual-basic"></a>Throw (Instrucción, Visual Basic)
 
@@ -34,23 +34,23 @@ Throw [ expression ]
 ## <a name="part"></a>Parte
 
 `expression`\
-Proporciona información sobre la excepción que se va a producir. Opcional cuando reside en una instrucción `Catch`, si es necesario.
+Proporciona información sobre la excepción que se va a producir. Opcional cuando reside en una `Catch` instrucción; de lo contrario, es obligatorio.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La instrucción `Throw` produce una excepción que se puede controlar con el código estructurado de control de excepciones (`Try`...`Catch`...`Finally`) o el código de control de excepciones no estructurado (`On Error GoTo`). Puede utilizar la instrucción `Throw` para interceptar los errores dentro del código porque Visual Basic sube por la pila de llamadas hasta que encuentra el código de control de excepciones adecuado.
+La `Throw` instrucción produce una excepción que se puede controlar con código estructurado de control de excepciones ( `Try` ... `Catch` ...`Finally`) código de control de excepciones no estructurado ( `On Error GoTo` ). Puede usar la `Throw` instrucción para interceptar errores dentro del código porque Visual Basic sube la pila de llamadas hasta que encuentra el código de control de excepciones adecuado.
 
-Una instrucción `Throw` sin expresión solo se puede usar en una instrucción `Catch`, en cuyo caso la instrucción vuelve a producir la excepción que controla actualmente la instrucción `Catch`.
+Una `Throw` instrucción sin expresión solo se puede usar en una `Catch` instrucción, en cuyo caso la instrucción vuelve a iniciar la excepción que está controlando actualmente la `Catch` instrucción.
 
-La instrucción `Throw` restablece la pila de llamadas de la excepción `expression`. Si no se proporciona `expression`, la pila de llamadas permanece sin cambios. Puede tener acceso a la pila de llamadas de la excepción a través de la propiedad <xref:System.Exception.StackTrace%2A>.
+La `Throw` instrucción restablece la pila de llamadas de la `expression` excepción. Si `expression` no se proporciona, la pila de llamadas permanece sin cambios. Puede tener acceso a la pila de llamadas de la excepción a través de la <xref:System.Exception.StackTrace%2A> propiedad.
 
 ## <a name="example"></a>Ejemplo
 
-En el código siguiente se usa la instrucción `Throw` para producir una excepción:
+En el código siguiente se usa la `Throw` instrucción para producir una excepción:
 
 [!code-vb[VbVbalrStatements#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#84)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Try...Catch...Finally (instrucción)](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
-- [On Error (instrucción)](../../../visual-basic/language-reference/statements/on-error-statement.md)
+- [Instrucción Try...Catch...Finally](try-catch-finally-statement.md)
+- [Instrucción On Error](on-error-statement.md)

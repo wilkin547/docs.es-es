@@ -2,12 +2,12 @@
 title: Operaciones de concatenación
 ms.date: 07/20/2015
 ms.assetid: 4021e019-a8f7-477b-879e-07dd7f44feb9
-ms.openlocfilehash: db9bebb967faf3791fd28c4fd4dac9591fd2c9f8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 32e7cc8234fa4aa3289eaae33f487b45a08b84db
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345676"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410895"
 ---
 # <a name="concatenation-operations-visual-basic"></a>Operaciones de concatenación (Visual Basic)
 La concatenación hace referencia a la operación de anexar una secuencia a otra.  
@@ -20,12 +20,12 @@ La concatenación hace referencia a la operación de anexar una secuencia a otra
   
 ## <a name="methods"></a>Métodos  
   
-|Nombre del método|Descripción|Visual Basic sintaxis de expresiones de consulta|Más información|  
+|Nombre del método|Description|Visual Basic sintaxis de expresiones de consulta|Más información|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |Concat|Concatena dos secuencias para formar una secuencia.|No disponible.|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Linq>
-- [Información general sobre operadores de consulta estándar (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Cómo: combinar y comparar colecciones de cadenas (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
+- [Información general sobre operadores de consulta estándar (Visual Basic)](standard-query-operators-overview.md)
+- [Cómo: combinar y comparar colecciones de cadenas (LINQ) (Visual Basic)](how-to-combine-and-compare-string-collections-linq.md)

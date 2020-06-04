@@ -17,37 +17,37 @@ helpviewer_keywords:
 - members [Visual Basic], Implements keyword
 - reimplementation
 ms.assetid: 5252cdf9-964d-4fc6-af0f-0449b7126b5a
-ms.openlocfilehash: f114aee75356e59eafd9d3ba6af9c64402cb374f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 46ab1a1148e8d73d91293aedfc407e5efdc7cfb4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345870"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404568"
 ---
 # <a name="implements-clause-visual-basic"></a>Implements (Cláusula, Visual Basic)
 Indica que un miembro de clase o estructura proporciona la implementación para un miembro definido en una interfaz.  
   
-## <a name="remarks"></a>Comentarios  
-La palabra clave `Implements` no es igual que la [instrucción Implements](../../../visual-basic/language-reference/statements/implements-statement.md). Use la instrucción `Implements` para especificar que una clase o estructura implementa una o más interfaces y, a continuación, para cada miembro, use la palabra clave `Implements` para especificar qué interfaz y qué miembro implementa.
+## <a name="remarks"></a>Observaciones  
+La `Implements` palabra clave no es lo mismo que la [instrucción Implements](implements-statement.md). La instrucción se usa `Implements` para especificar que una clase o estructura implementa una o más interfaces y, a continuación, para cada miembro, se usa la `Implements` palabra clave para especificar qué interfaz y qué miembro implementa.
 
-Si una clase o estructura implementa una interfaz, debe incluir la instrucción `Implements` inmediatamente después de la instrucción de [clase](../../../visual-basic/language-reference/statements/class-statement.md) o [instrucción de estructura](../../../visual-basic/language-reference/statements/structure-statement.md), y debe implementar todos los miembros definidos por la interfaz.
+Si una clase o estructura implementa una interfaz, debe incluir la `Implements` instrucción inmediatamente después de la instrucción de [clase](class-statement.md) o [instrucción de estructura](structure-statement.md), y debe implementar todos los miembros definidos por la interfaz.
 
 ## <a name="reimplementation"></a>Reimplementación  
 En una clase derivada, puede volver a implementar un miembro de interfaz que la clase base ya ha implementado. Esto no es lo mismo que reemplazar el miembro de clase base en los siguientes aspectos:
 
-- No es necesario [reemplazar](../../../visual-basic/language-reference/modifiers/overridable.md) el miembro de la clase base para que se pueda volver a implementar.
+- No es necesario [reemplazar](../modifiers/overridable.md) el miembro de la clase base para que se pueda volver a implementar.
 - Puede volver a implementar el miembro con un nombre diferente.
 
-La palabra clave `Implements` se puede utilizar en los contextos siguientes:
+La `Implements` palabra clave se puede usar en los contextos siguientes:
 
-- [Event (instrucción)](../../../visual-basic/language-reference/statements/event-statement.md)
-- [Function (instrucción)](../../../visual-basic/language-reference/statements/function-statement.md)
-- [Property (instrucción)](../../../visual-basic/language-reference/statements/property-statement.md)
-- [Sub (instrucción)](../../../visual-basic/language-reference/statements/sub-statement.md)  
+- [Event (Instrucción)](event-statement.md)
+- [Instrucción Function](function-statement.md)
+- [Property Statement](property-statement.md)
+- [Instrucción Sub](sub-statement.md)  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Implements (instrucción)](../../../visual-basic/language-reference/statements/implements-statement.md)
-- [Interface (instrucción)](../../../visual-basic/language-reference/statements/interface-statement.md)
-- [Class (instrucción)](../../../visual-basic/language-reference/statements/class-statement.md)
-- [Structure (instrucción)](../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Implements (Instrucción)](implements-statement.md)
+- [Instrucción Interface](interface-statement.md)
+- [Instrucción Class](class-statement.md)
+- [Structure (Instrucción)](structure-statement.md)
