@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC36635
 ms.assetid: 74609979-9c03-4864-bbce-f588aa2e0917
-ms.openlocfilehash: e9bf248da980705f070be878208c55b0cc6dae01
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 08f7cd9dd95a10cad0df6539ba43122495347bae
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589724"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397368"
 ---
 # <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-select-case-statement"></a>Las expresiones lambda no son válidas en la primera expresión de una instrucción 'Select Case'
-No se puede usar una expresión lambda para la expresión de prueba en un `Select Case` instrucción. Definiciones de la expresión lambda que devuelven las funciones y la expresión de prueba de un `Select Case` instrucción debe ser un tipo de datos básico.  
+No se puede usar una expresión lambda para la expresión de prueba en una `Select Case` instrucción. Las definiciones de expresión lambda devuelven funciones y la expresión de prueba de una `Select Case` instrucción debe ser un tipo de datos elemental.  
   
  El código siguiente provoca este error:  
   
@@ -31,7 +31,7 @@ No se puede usar una expresión lambda para la expresión de prueba en un `Selec
   
 - Examine el código para determinar si podría funcionar una construcción condicional diferente como, por ejemplo, una instrucción `If...Then...Else` .  
   
-- Puede haber pensado llamar a la función, tal como se muestra en el código siguiente:  
+- Es posible que haya previsto llamar a la función, como se muestra en el código siguiente:  
   
 ```vb  
 Dim num? As Integer  
@@ -40,8 +40,8 @@ Select Case ((Function(arg? As Integer) arg Is Nothing)(num))
 End Select  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Expresiones lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
-- [If...Then...Else (instrucción)](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
-- [Select...Case (instrucción)](../../../visual-basic/language-reference/statements/select-case-statement.md)
+- [Expresiones lambda](../../programming-guide/language-features/procedures/lambda-expressions.md)
+- [Instrucción If...Then...Else](../statements/if-then-else-statement.md)
+- [Instrucción Select...Case](../statements/select-case-statement.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID7
 ms.assetid: 96cc12e1-d40a-425f-b365-1ac39e5ddcb0
-ms.openlocfilehash: cbd9ae0945b89df8c5eb04fa6c1fe2bed22aef2d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b0546609aa0573b7d43a2a630328e76c48791886
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944759"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84375892"
 ---
 # <a name="out-of-memory-visual-basic-run-time-error"></a>Memoria insuficiente (error en tiempo de ejecución de Visual Basic)
 Se necesita más memoria que la disponible.  
@@ -26,6 +26,6 @@ Se necesita más memoria que la disponible.
   
 5. Reduzca el número de variables públicas.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Tipos de error](../../visual-basic/programming-guide/language-features/error-types.md)
+- [Tipos de error](../programming-guide/language-features/error-types.md)

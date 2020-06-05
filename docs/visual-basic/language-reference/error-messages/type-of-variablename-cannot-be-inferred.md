@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30982
 ms.assetid: 741e85d9-a747-42ad-a1e1-a3f1928aaff5
-ms.openlocfilehash: c3086f79fb71693810bc8f14e8c0f493aa1e6515
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 74b690ce3dee87e481c629a254e629be4b40f8cd
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512706"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84387015"
 ---
-# <a name="type-of-variablename-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>No se puede\<inferir el tipo de ' variablename > ' porque los límites del bucle y la variable Step no se amplían al mismo tipo
+# <a name="type-of-variablename-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>No se puede inferir el tipo de '\<variablename>' porque los límites del bucle y la variable step no se convierten en el mismo tipo
 
 Ha escrito un `For...Next` bucle en el que el compilador no puede inferir un tipo de datos para la variable de control de bucle, ya que se cumplen las condiciones siguientes:
 
@@ -39,23 +39,23 @@ Dim n = 20
 ' Next
 ```
 
-**IDENTIFICADOR de error:** BC30982
+**Identificador de error:** BC30982
 
 ## <a name="to-correct-this-error"></a>Para corregir este error
 
-- Cambie los tipos de los límites del bucle y la variable Step según sea necesario para que al menos uno de ellos sea un tipo al que se amplíen los demás. En el ejemplo anterior, cambie el tipo de `stepVar` a `Integer`.
+- Cambie los tipos de los límites del bucle y la variable Step según sea necesario para que al menos uno de ellos sea un tipo al que se amplíen los demás. En el ejemplo anterior, cambie el tipo de `stepVar` a `Integer` .
 
   ```vb
   Dim stepVar = 1
   ```
 
-  -o bien-
+  O bien
 
   ```vb
   Dim stepVar As Integer = 1
   ```
 
-- Use funciones de conversión explícitas para convertir los límites del bucle y la variable de paso en los tipos adecuados. En el ejemplo anterior, aplique la `Val` función a `stepVar`.
+- Use funciones de conversión explícitas para convertir los límites del bucle y la variable de paso en los tipos adecuados. En el ejemplo anterior, aplique la `Val` función a `stepVar` .
 
   ```vb
   For i = 1 To 10 Step Val(stepVar)
@@ -63,12 +63,12 @@ Dim n = 20
   Next
   ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:Microsoft.VisualBasic.Conversion.Val%2A>
-- [For...Next (instrucción)](../../../visual-basic/language-reference/statements/for-next-statement.md)
-- [Conversiones implícitas y explícitas](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
-- [Inferencia de tipo de variable local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [Option Infer (instrucción)](../../../visual-basic/language-reference/statements/option-infer-statement.md)
-- [Funciones de conversión de tipos](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [Conversiones de ampliación y de restricción](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [Instrucción For...Next](../statements/for-next-statement.md)
+- [Conversiones implícitas y explícitas](../../programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [Inferencia de tipo de variable local](../../programming-guide/language-features/variables/local-type-inference.md)
+- [Option Infer (instrucción)](../statements/option-infer-statement.md)
+- [Type Conversion Functions](../functions/type-conversion-functions.md)
+- [Widening and Narrowing Conversions](../../programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
