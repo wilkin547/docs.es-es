@@ -1,13 +1,13 @@
 ---
-title: 'Cómo: Buscar la unión de dos rutas de acceso a ubicaciones (XPath-LINQ to XML)'
+title: Procedimiento para buscar la unión de dos rutas de acceso a ubicaciones (XPath-LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: c82c09b4-cb0a-47ec-8cc3-a124144c2788
-ms.openlocfilehash: db9ba3f66bfa8643738203ec05a106bab4193fda
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 36528d1748d5675231f14de92dcd78734a696711
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352987"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406877"
 ---
 # <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-visual-basic"></a>Cómo: buscar una Unión de dos rutas de acceso de ubicación (XPath-LINQ to XML) (Visual Basic)
 XPath permite buscar la unión de los resultados de dos rutas de ubicación XPath.  
@@ -21,7 +21,7 @@ XPath permite buscar la unión de los resultados de dos rutas de ubicación XPat
 ## <a name="example"></a>Ejemplo  
  Este ejemplo busca todos los elementos `Category` y todos los elementos `Price` y los concatena en una única recopilación. Tenga en cuenta que la consulta [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] llama a <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A> para ordenar los resultados. Los resultados de la evaluación de la expresión XPath también están en el orden del documento.  
   
- En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: Datos numéricos (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: Datos numéricos (LINQ to XML)](sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```vb  
 Dim data As XDocument = XDocument.Load("Data.xml")  
@@ -67,4 +67,4 @@ Results are identical
   
 ## <a name="see-also"></a>Vea también
 
-- [LINQ to XML para los usuarios de XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML para los usuarios de XPath (Visual Basic)](linq-to-xml-for-xpath-users.md)
