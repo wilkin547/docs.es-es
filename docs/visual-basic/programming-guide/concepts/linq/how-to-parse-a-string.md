@@ -1,19 +1,19 @@
 ---
-title: 'Cómo: Analizar una cadena'
+title: Procedimiento para analizar una cadena
 ms.date: 07/20/2015
 ms.assetid: 896e1b4b-f9bd-4975-8bc1-55b6badce1ac
-ms.openlocfilehash: 31bae00eb3ebf0d8e64fc657693e8c0767c4f5d4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0a9076fc516bb8e6bc74732ca252fabfeda43d53
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344498"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398017"
 ---
 # <a name="how-to-parse-a-string-visual-basic"></a>Cómo: analizar una cadena (Visual Basic)
-En este tema se muestra cómo crear un árbol XML C#en.  
+En este tema se muestra cómo crear un árbol XML en C#.  
   
 ## <a name="example"></a>Ejemplo  
- Puede analizar una cadena en Visual Basic mediante el método `XElement.Parse`. Sin embargo, resulta más eficaz usar literales XML, tal como se muestra en el código siguiente, ya que dichos literales no sufren las mismas pérdidas de rendimiento que se producen al analizar XML de una cadena.  
+ Puede analizar una cadena en Visual Basic mediante el `XElement.Parse` método. Sin embargo, resulta más eficaz usar literales XML, tal como se muestra en el código siguiente, ya que dichos literales no sufren las mismas pérdidas de rendimiento que se producen al analizar XML de una cadena.  
   
  Mediante el uso de literales XML, solo puede copiar y pegar el archivo XML en el programa de Visual Basic.  
   
@@ -49,6 +49,6 @@ Dim contacts as XElement = _
     </Contacts>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Analizar XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [Analizar XML (Visual Basic)](parsing-xml.md)

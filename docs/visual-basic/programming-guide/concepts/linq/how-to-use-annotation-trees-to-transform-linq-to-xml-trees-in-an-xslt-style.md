@@ -1,13 +1,13 @@
 ---
-title: 'Cómo: Usar anotaciones para transformar árboles LINQ to XML en un estilo XSLT'
+title: Procedimiento para usar anotaciones para transformar árboles LINQ to XML en un estilo XSLT
 ms.date: 07/20/2015
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
-ms.openlocfilehash: d9cb32462535f099107343bd9069b4da3508c5b0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 099457eaab8c80605138d7e67d7bc2823e316234
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348353"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364453"
 ---
 # <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>Cómo: utilizar anotaciones para transformar LINQ to XML árboles en un estilo XSLT (Visual Basic)
 
@@ -43,7 +43,7 @@ En detalle, el enfoque consiste en:
 
 ## <a name="transforming-a-tree"></a>Transformar un árbol
 
-En este primer ejemplo se cambia el nombre de todos los nodos `Paragraph` a `para`:
+En este primer ejemplo se cambia el nombre de todos los `Paragraph` nodos a `para` :
 
 ```vb
 Imports <xmlns:xf="http://www.microsoft.com/LinqToXmlTransform/2007">
@@ -376,4 +376,4 @@ After Transform
 
 ## <a name="see-also"></a>Vea también
 
-- [Programación de LINQ to XML avanzada (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Programación de LINQ to XML avanzada (Visual Basic)](advanced-linq-to-xml-programming.md)
