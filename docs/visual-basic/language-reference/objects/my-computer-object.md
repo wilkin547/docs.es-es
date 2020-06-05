@@ -4,17 +4,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer object
 ms.assetid: cc814d79-6f7f-4e54-8b9d-5ecfdd77a0b8
-ms.openlocfilehash: c1d6113872f2196f2db4ac1849222cd69f95ffd7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 25fd9d2fc52b27f34164b7ed95ed1ebce9919a33
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74332115"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84372666"
 ---
 # <a name="mycomputer-object"></a>My.Computer (Objeto)
 Proporciona propiedades para manipular componentes del equipo, como el audio, el reloj, el teclado, el sistema de archivos, etc.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Para obtener información acerca de los métodos y las propiedades del objeto `My.Computer` , vea <xref:Microsoft.VisualBasic.Devices.Computer>. La clase base <xref:Microsoft.VisualBasic.Devices.ServerComputer> proporciona los miembros que están disponibles en todos los proyectos.  
   
 ## <a name="requirements"></a>Requisitos  
@@ -24,16 +24,16 @@ Proporciona propiedades para manipular componentes del equipo, como el audio, el
   
  **Ensamblado:** Biblioteca en tiempo de ejecución de Visual Basic (en Microsoft. VisualBasic. dll)  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [My.Computer.Audio (objeto)](../../../visual-basic/language-reference/objects/my-computer-audio-object.md)
-- [My.Computer.Clipboard (objeto)](../../../visual-basic/language-reference/objects/my-computer-clipboard-object.md)
-- [My.Computer.Clock (objeto)](../../../visual-basic/language-reference/objects/my-computer-clock-object.md)
-- [My.Computer.FileSystem (objeto)](../../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)
-- [My.Computer.FileSystem.SpecialDirectories (objeto)](../../../visual-basic/language-reference/objects/my-computer-filesystem-specialdirectories-object.md)
-- [My.Computer.Info (objeto)](../../../visual-basic/language-reference/objects/my-computer-info-object.md)
-- [My.Computer.Keyboard (objeto)](../../../visual-basic/language-reference/objects/my-computer-keyboard-object.md)
-- [My.Computer.Mouse (objeto)](../../../visual-basic/language-reference/objects/my-computer-mouse-object.md)
-- [My.Computer.Network (objeto)](../../../visual-basic/language-reference/objects/my-computer-network-object.md)
-- [My.Computer.Ports (objeto)](../../../visual-basic/language-reference/objects/my-computer-ports-object.md)
-- [My.Computer.Registry (objeto)](../../../visual-basic/language-reference/objects/my-computer-registry-object.md)
+- [My.Computer.Audio (Objeto)](my-computer-audio-object.md)
+- [My.Computer.Clipboard (Objeto)](my-computer-clipboard-object.md)
+- [My.Computer.Clock (Objeto)](my-computer-clock-object.md)
+- [My.Computer.FileSystem (Objeto)](my-computer-filesystem-object.md)
+- [My.Computer.FileSystem.SpecialDirectories (Objeto)](my-computer-filesystem-specialdirectories-object.md)
+- [My.Computer.Info (Objeto)](my-computer-info-object.md)
+- [My.Computer.Keyboard (Objeto)](my-computer-keyboard-object.md)
+- [My.Computer.Mouse (Objeto)](my-computer-mouse-object.md)
+- [My.Computer.Network (Objeto)](my-computer-network-object.md)
+- [My.Computer.Ports (Objeto)](my-computer-ports-object.md)
+- [My.Computer.Registry (Objeto)](my-computer-registry-object.md)

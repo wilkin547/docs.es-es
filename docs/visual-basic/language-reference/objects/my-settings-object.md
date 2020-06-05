@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
-ms.openlocfilehash: 9560a51332ea596d4cf2228f1e07c158a0457ece
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c905ff85c8e9729dd4d6068f0d34f729962bbb57
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350357"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84372406"
 ---
 # <a name="mysettings-object"></a>My.Settings (Objeto)
 Proporciona propiedades y métodos para tener acceso a la configuración de la aplicación.  
   
-## <a name="remarks"></a>Comentarios  
- El objeto `My.Settings` proporciona acceso a la configuración de la aplicación y permite almacenar y recuperar dinámicamente la configuración de propiedades y otra información de la aplicación. Para obtener más información, vea [Administrar la configuración de la aplicación (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
+## <a name="remarks"></a>Observaciones  
+ El `My.Settings` objeto proporciona acceso a la configuración de la aplicación y permite almacenar y recuperar dinámicamente la configuración de propiedades y otra información de la aplicación. Para obtener más información, vea [Administrar la configuración de la aplicación (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
   
 ## <a name="properties"></a>Propiedades  
  Las propiedades del objeto `My.Settings` proporcionan acceso a la configuración de la aplicación. Para agregar o quitar la configuración, use el **Diseñador de configuración**.  
@@ -40,17 +40,17 @@ Proporciona propiedades y métodos para tener acceso a la configuración de la a
 |`Reload`|Vuelve a cargar la configuración de usuario de los últimos valores guardados.|  
 |`Save`|Guarda la configuración del usuario actual.|  
   
- El objeto `My.Settings` también proporciona propiedades y métodos avanzados, heredados de la clase <xref:System.Configuration.ApplicationSettingsBase>.  
+ El `My.Settings` objeto también proporciona propiedades y métodos avanzados, heredados de la <xref:System.Configuration.ApplicationSettingsBase> clase.  
   
 ## <a name="tasks"></a>Tareas  
  En la tabla siguiente se muestran ejemplos de tareas que implican el `My.Settings` objeto.  
   
-|Para|Consulte|  
+|En|Vea|  
 |---|---|  
-|Leer una configuración de la aplicación|[Cómo: Leer la configuración de la aplicación en Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
-|Cambiar la configuración de un usuario|[Cómo: Cambiar la configuración del usuario en Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
-|Conservar la configuración de usuario|[Cómo: Conservar la configuración del usuario en Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
-|Crear una cuadrícula de propiedades para la configuración del usuario|[Cómo: Crear cuadrículas de propiedades para la configuración del usuario en Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
+|Leer una configuración de la aplicación|[Cómo: Leer la configuración de la aplicación en Visual Basic](../../developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
+|Cambiar la configuración de un usuario|[Cómo: Cambiar la configuración del usuario en Visual Basic](../../developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
+|Conservar la configuración de usuario|[Cómo: Conservar la configuración del usuario en Visual Basic](../../developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
+|Crear una cuadrícula de propiedades para la configuración del usuario|[Cómo: Crear cuadrículas de propiedades para la configuración del usuario en Visual Basic](../../developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
   
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se muestra el valor de la configuración `Nickname`.  
@@ -59,11 +59,11 @@ Proporciona propiedades y métodos para tener acceso a la configuración de la a
   
  Para que este ejemplo funcione, la aplicación debe tener una configuración `Nickname` de tipo `String`.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Configuration.ApplicationSettingsBase>
-- [Cómo: Leer la configuración de la aplicación en Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)
-- [Cómo: Cambiar la configuración del usuario en Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)
-- [Cómo: Conservar la configuración del usuario en Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)
-- [Cómo: Crear cuadrículas de propiedades para la configuración del usuario en Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)
+- [Cómo: Leer la configuración de la aplicación en Visual Basic](../../developing-apps/programming/app-settings/how-to-read-application-settings.md)
+- [Cómo: Cambiar la configuración del usuario en Visual Basic](../../developing-apps/programming/app-settings/how-to-change-user-settings.md)
+- [Cómo: Conservar la configuración del usuario en Visual Basic](../../developing-apps/programming/app-settings/how-to-persist-user-settings.md)
+- [Cómo: Crear cuadrículas de propiedades para la configuración del usuario en Visual Basic](../../developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)
 - [Administrar la configuración de la aplicación (.NET)](/visualstudio/ide/managing-application-settings-dotnet)

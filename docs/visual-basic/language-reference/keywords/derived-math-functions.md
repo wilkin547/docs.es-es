@@ -21,15 +21,15 @@ helpviewer_keywords:
 - degrees
 - arccosine function
 ms.assetid: 63e449d8-9444-44fb-8db1-6d9cf346e2aa
-ms.openlocfilehash: 73cf56dd72f2baac0474d6f5c4e88228a1fe38cf
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 611f3d8faf2148b8a983467d9ace4fd6c18b30e6
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349850"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84373902"
 ---
 # <a name="derived-math-functions-visual-basic"></a>Funciones matemáticas derivadas (Visual Basic)
-En la tabla siguiente se muestran las funciones matemáticas no intrínsecas que se pueden derivar de las funciones matemáticas intrínsecas del objeto <xref:System.Math?displayProperty=nameWithType>. Puede tener acceso a las funciones matemáticas intrínsecas agregando `Imports System.Math` al archivo o proyecto.  
+En la tabla siguiente se muestran las funciones matemáticas no intrínsecas que se pueden derivar de las funciones matemáticas intrínsecas del <xref:System.Math?displayProperty=nameWithType> objeto. Puede tener acceso a las funciones matemáticas intrínsecas agregando `Imports System.Math` al archivo o proyecto.  
   
 |Función|Equivalentes derivados|  
 |--------------|-------------------------|  
@@ -49,11 +49,11 @@ En la tabla siguiente se muestran las funciones matemáticas no intrínsecas que
 |Cotangente hiperbólica (coth (x))|(Exp (x) + exp (-x))/(exp (x) – exp (-x))|  
 |Seno hiperbólico inverso (Asinh (x))|Log (x + sqrt (x * x + 1))|  
 |Coseno hiperbólico inverso (Acosh (x))|Log (x + sqrt (x * x – 1))|  
-|Tangente hiperbólica inversa (Atanh (x))|Log((1 + x) / (1 – x)) / 2|  
+|Tangente hiperbólica inversa (Atanh (x))|Log ((1 + x)/(1 – x))/2|  
 |Secante hiperbólica inversa (AsecH (x))|Log ((sqrt (-x * x + 1) + 1)/x)|  
 |Cosecante hiperbólica inversa (Acsch (x))|Log ((signo (x) * sqrt (x \* x + 1) + 1)/x)|  
-|Cotangente hiperbólica inversa (Acoth (x))|Log((x + 1) / (x – 1)) / 2|  
+|Cotangente hiperbólica inversa (Acoth (x))|Log ((x + 1)/(x – 1))/2|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Funciones matemáticas](../../../visual-basic/language-reference/functions/math-functions.md)
+- [Funciones matemáticas](../functions/math-functions.md)
