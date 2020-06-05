@@ -9,12 +9,12 @@ helpviewer_keywords:
 - structures [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: a221e74a-ffcf-4bdc-a0f6-a088a9bf26cc
-ms.openlocfilehash: 3353935a74bb77fa4a630e706aa425063c7a610a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d252d9216a9b825ad0663a5779d7ce7f81fa9011
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346332"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84393577"
 ---
 # <a name="structures-and-classes-visual-basic"></a>Estructuras y clases (Visual Basic)
 Visual Basic unifica la sintaxis de las estructuras y las clases, con el resultado de que ambas entidades admiten la mayoría de las mismas características. Sin embargo, también hay diferencias importantes entre estructuras y clases.  
@@ -30,7 +30,7 @@ Visual Basic unifica la sintaxis de las estructuras y las clases, con el resulta
   
 - Ambos tienen miembros, que pueden incluir constructores, métodos, propiedades, campos, constantes, enumeraciones, eventos y controladores de eventos. Sin embargo, no confunda estos miembros con los *elementos* declarados de una estructura.  
   
-- Los miembros de ambos pueden tener niveles de acceso individualizados. Por ejemplo, un miembro se puede declarar `Public` y otro `Private`.  
+- Los miembros de ambos pueden tener niveles de acceso individualizados. Por ejemplo, se puede declarar un miembro `Public` y otro `Private` .  
   
 - Ambos pueden implementar interfaces.  
   
@@ -47,21 +47,21 @@ Visual Basic unifica la sintaxis de las estructuras y las clases, con el resulta
   
 - Las estructuras usan la asignación de la pila; las clases usan la asignación del montón.  
   
-- De forma predeterminada, todos los elementos de estructura se `Public`. las variables y constantes de clase son `Private` de forma predeterminada, mientras que otros miembros de clase se `Public` de forma predeterminada. Este comportamiento para los miembros de clase proporciona compatibilidad con el sistema Visual Basic de los valores predeterminados 6,0.  
+- De forma predeterminada, todos los elementos de estructura son `Public` variables y constantes de clase `Private` , mientras que otros miembros de clase son `Public` de forma predeterminada. Este comportamiento para los miembros de clase proporciona compatibilidad con el sistema Visual Basic de los valores predeterminados 6,0.  
   
 - Una estructura debe tener al menos una variable no compartida o un elemento de evento no compartido no personalizado; una clase puede estar completamente vacía.  
   
-- Los elementos de estructura no se pueden declarar como `Protected`; los miembros de clase pueden.  
+- Los elementos de estructura no se pueden declarar como `Protected` ; los miembros de clase pueden.  
   
-- Un procedimiento de estructura solo puede controlar eventos si es un procedimiento [compartido](../../../../visual-basic/language-reference/modifiers/shared.md) de`Sub` y solo por medio de la [instrucción AddHandler](../../../../visual-basic/language-reference/statements/addhandler-statement.md); cualquier procedimiento de clase puede controlar eventos mediante la palabra clave [Handles](../../../../visual-basic/language-reference/statements/handles-clause.md) o la instrucción `AddHandler`. Para obtener más información, consulta [Eventos](../../../../visual-basic/programming-guide/language-features/events/index.md).  
+- Un procedimiento de estructura solo puede controlar eventos si se trata de un procedimiento [compartido](../../../language-reference/modifiers/shared.md) `Sub` y solo por medio de la [instrucción AddHandler](../../../language-reference/statements/addhandler-statement.md); cualquier procedimiento de clase puede controlar eventos mediante la palabra clave [Handles](../../../language-reference/statements/handles-clause.md) o la `AddHandler` instrucción. Para más información, vea [Eventos](../events/index.md).  
   
 - Las declaraciones de variables de estructura no pueden especificar inicializadores ni tamaños iniciales para matrices; las declaraciones de variables de clase pueden.  
   
-- Las estructuras heredan implícitamente de la clase <xref:System.ValueType?displayProperty=nameWithType> y no pueden heredar de ningún otro tipo; las clases pueden heredar de cualquier clase o de clases distintas de <xref:System.ValueType?displayProperty=nameWithType>.  
+- Las estructuras heredan implícitamente de la <xref:System.ValueType?displayProperty=nameWithType> clase y no pueden heredar de ningún otro tipo; las clases pueden heredar de cualquier clase o clases que no sean <xref:System.ValueType?displayProperty=nameWithType> .  
   
 - Las estructuras no se pueden heredar; las clases son.  
   
-- Las estructuras nunca finalizan, por lo que el Common Language Runtime (CLR) nunca llama al método <xref:System.Object.Finalize%2A> en ninguna estructura; el recolector de elementos no utilizados (GC), que llama a <xref:System.Object.Finalize%2A> en una clase, finalizan las clases cuando detecta que no quedan referencias activas.  
+- Las estructuras nunca finalizan, por lo que el Common Language Runtime (CLR) nunca llama al <xref:System.Object.Finalize%2A> método en ninguna estructura; las clases las termina el recolector de elementos no utilizados (GC), que llama a <xref:System.Object.Finalize%2A> en una clase cuando detecta que no quedan referencias activas.  
   
 - Una estructura no requiere un constructor; una clase.  
   
@@ -72,26 +72,26 @@ Visual Basic unifica la sintaxis de las estructuras y las clases, con el resulta
 ## <a name="instances-and-variables"></a>Instancias y variables  
  Dado que las estructuras son tipos de valor, cada variable de estructura se enlaza de forma permanente a una instancia de la estructura individual. Pero las clases son tipos de referencia y una variable de objeto puede hacer referencia a varias instancias de clase en momentos diferentes. Esta distinción afecta al uso de estructuras y clases de las siguientes maneras:  
   
-- **Inicial.** Una variable de estructura incluye implícitamente una inicialización de los elementos mediante el constructor sin parámetros de la estructura. Por lo tanto, `Dim s As struct1` es equivalente a `Dim s As struct1 = New struct1()`.  
+- **Inicial.** Una variable de estructura incluye implícitamente una inicialización de los elementos mediante el constructor sin parámetros de la estructura. Por lo tanto, `Dim s As struct1` es equivalente a `Dim s As struct1 = New struct1()` .  
   
 - **Asignación de variables.** Cuando se asigna una variable de estructura a otra, o se pasa una instancia de la estructura a un argumento de procedimiento, los valores actuales de todos los elementos variables se copian en la nueva estructura. Al asignar una variable de objeto a otra, o pasar una variable de objeto a un procedimiento, solo se copia el puntero de referencia.  
   
-- **No asignar nada.** Puede asignar el valor [Nothing](../../../../visual-basic/language-reference/nothing.md) a una variable de estructura, pero la instancia continúa asociada a la variable. Todavía puede llamar a sus métodos y obtener acceso a sus elementos de datos, aunque la asignación reinicializa los elementos de variable.  
+- **No asignar nada.** Puede asignar el valor [Nothing](../../../language-reference/nothing.md) a una variable de estructura, pero la instancia continúa asociada a la variable. Todavía puede llamar a sus métodos y obtener acceso a sus elementos de datos, aunque la asignación reinicializa los elementos de variable.  
   
-     Por el contrario, si se establece una variable de objeto en `Nothing`, se desasocia de cualquier instancia de clase y no se puede tener acceso a los miembros a través de la variable hasta que se le asigne otra instancia.  
+     Por el contrario, si se establece una variable de objeto en `Nothing` , se desasocia de cualquier instancia de clase y no se puede tener acceso a los miembros a través de la variable hasta que se le asigne otra instancia.  
   
 - **Varias instancias.** Una variable de objeto puede tener asignadas instancias de clase diferentes en momentos diferentes, y varias variables de objeto pueden hacer referencia a la misma instancia de clase al mismo tiempo. Los cambios que realice en los valores de los miembros de clase afectan a esos miembros cuando se obtiene acceso a ellos a través de otra variable que apunta a la misma instancia.  
   
-     Los elementos de la estructura, sin embargo, están aislados dentro de su propia instancia. Los cambios en sus valores no se reflejan en otras variables de estructura, incluso en otras instancias de la misma declaración de `Structure`.  
+     Los elementos de la estructura, sin embargo, están aislados dentro de su propia instancia. Los cambios en sus valores no se reflejan en otras variables de estructura, incluso en otras instancias de la misma `Structure` declaración.  
   
-- **Determinar.** Las pruebas de igualdad de dos estructuras deben realizarse con una prueba elemento a elemento. Se pueden comparar dos variables de objeto mediante el método <xref:System.Object.Equals%2A>. <xref:System.Object.Equals%2A> indica si las dos variables apuntan a la misma instancia.  
+- **Determinar.** Las pruebas de igualdad de dos estructuras deben realizarse con una prueba elemento a elemento. Se pueden comparar dos variables de objeto mediante el <xref:System.Object.Equals%2A> método. <xref:System.Object.Equals%2A>indica si las dos variables apuntan a la misma instancia.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Tipos de datos compuestos](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
-- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Estructuras](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [Solución de problemas de tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [Estructuras y otros elementos de programación](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)
-- [Objetos y clases](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Tipos de datos](index.md)
+- [Tipos de datos compuestos](composite-data-types.md)
+- [Tipos de valor y tipos de referencia](value-types-and-reference-types.md)
+- [Estructuras](structures.md)
+- [Solución de problemas de los tipos de datos](troubleshooting-data-types.md)
+- [Estructuras y otros elementos de programación](structures-and-other-programming-elements.md)
+- [Objetos y clases](../objects-and-classes/index.md)

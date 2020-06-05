@@ -5,17 +5,17 @@ helpviewer_keywords:
 - financial functions
 - payment
 ms.assetid: 474f973e-7103-42b7-aa4d-367c935e07e1
-ms.openlocfilehash: b0a930d4d39ea55feaa9f6cdb799717b7e98019b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3b96dbfb3c5c218e1d63ef56735c9887ba28b489
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349811"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84373724"
 ---
 # <a name="financial-summary-visual-basic"></a>Resumen financiero (Visual Basic)
 Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas en tiempo de ejecución están organizados por uso y propósito.  
   
-|Acción|Language, elemento|  
+|Acción|Elemento del lenguaje|  
 |------------|----------------------|  
 |Calcular la amortización.|<xref:Microsoft.VisualBasic.Financial.DDB%2A>, <xref:Microsoft.VisualBasic.Financial.SLN%2A>, <xref:Microsoft.VisualBasic.Financial.SYD%2A>|  
 |Calcular el valor futuro.|<xref:Microsoft.VisualBasic.Financial.FV%2A>|  
@@ -25,7 +25,7 @@ Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas e
 |Calcular los pagos.|<xref:Microsoft.VisualBasic.Financial.IPmt%2A>, <xref:Microsoft.VisualBasic.Financial.Pmt%2A>, <xref:Microsoft.VisualBasic.Financial.PPmt%2A>|  
 |Calcular el valor actual.|<xref:Microsoft.VisualBasic.Financial.NPV%2A>, <xref:Microsoft.VisualBasic.Financial.PV%2A>|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Palabras clave](../../../visual-basic/language-reference/keywords/index.md)
-- [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
+- [Palabras clave](index.md)
+- [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](../runtime-library-members.md)

@@ -6,31 +6,31 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic]
 - math operators [Visual Basic]
 ms.assetid: 330178e0-a375-4742-b662-b3080c89fa54
-ms.openlocfilehash: 747d5d8882b55f323f82202eac0eba449992be3d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c5d7ec0c01e956acfcb3b41689c7a7338c6e25b4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350218"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84371887"
 ---
 # <a name="arithmetic-operators-visual-basic"></a>Operadores aritméticos (Visual Basic)
 A continuación se muestran los operadores aritméticos definidos en Visual Basic.  
   
- [Operador ^](../../../visual-basic/language-reference/operators/exponentiation-operator.md)  
+ [^ (Operador)](exponentiation-operator.md)  
   
- [Operador *](../../../visual-basic/language-reference/operators/multiplication-operator.md)  
+ [* (Operador)](multiplication-operator.md)  
   
- [Operador /](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)  
+ [Operador/](floating-point-division-operator.md)  
   
- [Operador \](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
+ [\ (Operador)](integer-division-operator.md)  
   
- [Mod (operador)](../../../visual-basic/language-reference/operators/mod-operator.md)  
+ [Mod (Operador)](mod-operator.md)  
   
- [Operador +](../../../visual-basic/language-reference/operators/addition-operator.md) (unario y binario)  
+ [Operador +](addition-operator.md) (unario y binario)  
   
- [Operador-](../../../visual-basic/language-reference/operators/subtraction-operator.md) (unario y binario)  
+ [Operador-](subtraction-operator.md) (unario y binario)  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Prioridad de operador en Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [Operadores aritméticos en Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Prioridad de operador en Visual Basic](operator-precedence.md)
+- [Operadores aritméticos en Visual Basic](../../programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

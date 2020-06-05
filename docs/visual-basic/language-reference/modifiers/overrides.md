@@ -13,12 +13,12 @@ helpviewer_keywords:
 - overriding, Overrides keyword
 - properties [Visual Basic], overriding
 ms.assetid: 9f5e6144-ce10-465e-842b-1a8f8760af90
-ms.openlocfilehash: 04f1cb27d6a8366c2dd13f8fdc1d975d382f1cfd
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 657f838b2959a5b6a7cef5ff18295a4ada709e9a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351381"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84392033"
 ---
 # <a name="overrides-visual-basic"></a>Overrides (Visual Basic)
 
@@ -42,30 +42,30 @@ Especifica que una propiedad o procedimiento invalida una propiedad o procedimie
 
 - **Coincidencia adicional.** Además de coincidir con la firma de la versión de la clase base, esta declaración también debe coincidir con los elementos siguientes:
 
-  - Modificador de nivel de acceso (por ejemplo, [Public](../../../visual-basic/language-reference/modifiers/public.md))
+  - Modificador de nivel de acceso (por ejemplo, [Public](public.md))
 
-  - Mecanismo de paso de cada parámetro ([ByVal](../../../visual-basic/language-reference/modifiers/byval.md) o [ByRef](../../../visual-basic/language-reference/modifiers/byref.md))
+  - Mecanismo de paso de cada parámetro ([ByVal](byval.md) o [ByRef](byref.md))
 
   - Listas de restricciones de los distintos parámetros de tipo de los procedimientos genéricos.
 
-- **Sombrear e invalidar.** Aunque tanto el sombreado como el reemplazo redefinen elementos heredados, existen diferencias significativas entre ambos conceptos. Para obtener más información, vea [sombrear en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).
+- **Sombreado y reemplazos.** Aunque tanto el sombreado como el reemplazo redefinen elementos heredados, existen diferencias significativas entre ambos conceptos. Para obtener más información, vea [sombrear en Visual Basic](../../programming-guide/language-features/declared-elements/shadowing.md).
 
 Si usa `Overrides`, el compilador agrega de forma implícita `Overloads` para que las API de la biblioteca trabajen más fácilmente con C#.
 
 El modificador `Overrides` se puede utilizar en los contextos siguientes:
 
-- [Function (instrucción)](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Instrucción Function](../statements/function-statement.md)
 
-- [Property (instrucción)](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Property Statement](../statements/property-statement.md)
 
-- [Sub (instrucción)](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Instrucción Sub](../statements/sub-statement.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)
-- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
-- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
-- [Palabras clave](../../../visual-basic/language-reference/keywords/index.md)
-- [Sombrear en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
-- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [Lista de tipos](../../../visual-basic/language-reference/statements/type-list.md)
+- [MustOverride](mustoverride.md)
+- [NotOverridable](notoverridable.md)
+- [Overridable](overridable.md)
+- [Palabras clave](../keywords/index.md)
+- [Sombrear en Visual Basic](../../programming-guide/language-features/declared-elements/shadowing.md)
+- [Tipos genéricos en Visual Basic](../../programming-guide/language-features/data-types/generic-types.md)
+- [Type List](../statements/type-list.md)

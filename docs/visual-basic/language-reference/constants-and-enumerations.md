@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constants [Visual Basic]
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-ms.openlocfilehash: 5109bf42c9caa7528c5405bb1a5cff0cfb62a5ac
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 60cd1ddac9bca685ddc5778e7d289710245a183e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705761"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374491"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>Constantes y enumeraciones (Visual Basic)
 
@@ -26,9 +26,9 @@ Visual Basic proporciona varias constantes y enumeraciones predefinidas para los
 |**Constante**|**Descripción**|  
 |---|---|  
 |`CONFIG`|Cadena que corresponde a la configuración actual del cuadro de **configuración de soluciones activo** en el **Configuration Manager**.|  
-|`DEBUG`|`Boolean` valor que se puede establecer en el cuadro de diálogo **propiedades del proyecto** . De forma predeterminada, la configuración de depuración de un proyecto define `DEBUG`. Cuando se define `DEBUG`, <xref:System.Diagnostics.Debug> métodos de clase generan la salida en la ventana de **salida** . Cuando no se define, <xref:System.Diagnostics.Debug> métodos de clase no se compilan y no se generan resultados de depuración.|  
-|`TARGET`|Una cadena que representa el tipo de salida del proyecto o la configuración de la opción de **destino** de línea de comandos. Los valores posibles de `TARGET` son:<br /><br /> -"winexe" para una aplicación Windows.<br />-"exe" para una aplicación de consola.<br />-"Library" para una biblioteca de clases.<br />-"Module" para un módulo.<br />-La opción **-target** se puede establecer en el entorno de desarrollo integrado de Visual Studio. Para obtener más información, vea [-target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
-|`TRACE`|`Boolean` valor que se puede establecer en el cuadro de diálogo **propiedades del proyecto** . De forma predeterminada, todas las configuraciones de un proyecto definen `TRACE`. Cuando se define `TRACE`, <xref:System.Diagnostics.Trace> métodos de clase generan la salida en la ventana de **salida** . Cuando no se define, <xref:System.Diagnostics.Trace> métodos de clase no se compilan y no se genera ninguna salida `Trace`.|  
+|`DEBUG`|`Boolean`Valor que se puede establecer en el cuadro de diálogo **propiedades del proyecto** . De forma predeterminada, la configuración de depuración de un proyecto define `DEBUG` . Cuando `DEBUG` se define, <xref:System.Diagnostics.Debug> los métodos de clase generan la salida en la ventana de **salida** . Cuando no se define, <xref:System.Diagnostics.Debug> los métodos de clase no se compilan y no se generan resultados de depuración.|  
+|`TARGET`|Una cadena que representa el tipo de salida del proyecto o la configuración de la opción de **destino** de línea de comandos. Los valores posibles de `TARGET` son:<br /><br /> -"winexe" para una aplicación Windows.<br />-"exe" para una aplicación de consola.<br />-"Library" para una biblioteca de clases.<br />-"Module" para un módulo.<br />-La opción **-target** se puede establecer en el entorno de desarrollo integrado de Visual Studio. Para obtener más información, vea [-target (Visual Basic)](../reference/command-line-compiler/target.md).|  
+|`TRACE`|`Boolean`Valor que se puede establecer en el cuadro de diálogo **propiedades del proyecto** . De forma predeterminada, todas las configuraciones de un proyecto definen `TRACE` . Cuando `TRACE` se define, <xref:System.Diagnostics.Trace> los métodos de clase generan la salida en la ventana de **salida** . Cuando no se define, <xref:System.Diagnostics.Trace> los métodos de clase no se compilan y no `Trace` se genera ninguna salida.|  
 |`VBC_VER`|Un número que representa la versión de Visual Basic, en *major*. formato *secundario* .|  
   
 ### <a name="print-and-display-constants"></a>Constantes de impresión y visualización  
@@ -73,16 +73,16 @@ Visual Basic proporciona varias constantes y enumeraciones predefinidas para los
 |<xref:Microsoft.VisualBasic.OpenAccess>|Indica cómo abrir un archivo al llamar a funciones de acceso a archivos.|  
 |<xref:Microsoft.VisualBasic.OpenMode>|Indica cómo abrir un archivo al llamar a funciones de acceso a archivos.|  
 |<xref:Microsoft.VisualBasic.OpenShare>|Indica cómo abrir un archivo al llamar a funciones de acceso a archivos.|  
-|<xref:Microsoft.VisualBasic.FileIO.RecycleOption>|Especifica si un archivo debe eliminarse de manera permanente o colocarse en la papelera de reciclaje.|  
+|<xref:Microsoft.VisualBasic.FileIO.RecycleOption>|Especifica si un archivo debe eliminarse de manera permanente o colocarse en la Papelera de reciclaje.|  
 |<xref:Microsoft.VisualBasic.FileIO.SearchOption>|Especifica si se buscan todos o sólo los directorios de nivel superior.|  
-|<xref:Microsoft.VisualBasic.TriState>|Indica un valor `Boolean` o si se debe usar el valor predeterminado al llamar a funciones de formato numérico.|  
+|<xref:Microsoft.VisualBasic.TriState>|Indica un `Boolean` valor o si se debe usar el valor predeterminado cuando se llama a funciones de formato numérico.|  
 |<xref:Microsoft.VisualBasic.FileIO.UICancelOption>|Especifica qué se debe hacer si el usuario hace clic en **Cancelar** durante una operación.|  
 |<xref:Microsoft.VisualBasic.FileIO.UIOption>|Especifica si se muestra o no un cuadro de diálogo de progreso al copiar, eliminar o mover archivos o directorios.|  
 |<xref:Microsoft.VisualBasic.VariantType>|Indica el tipo de un objeto de variante, devuelto por la función <xref:Microsoft.VisualBasic.Information.VarType%2A>.|  
 |<xref:Microsoft.VisualBasic.VbStrConv>|Indica qué tipo de conversión se realiza cuando se llama a la función <xref:Microsoft.VisualBasic.Strings.StrConv%2A>.|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Referencia del lenguaje Visual Basic](../../visual-basic/language-reference/index.md)
-- [Información general sobre las constantes](../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
-- [Información general sobre las enumeraciones](../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
+- [Referencia del lenguaje Visual Basic](index.md)
+- [Información general sobre las constantes](../programming-guide/language-features/constants-enums/constants-overview.md)
+- [Información general sobre las enumeraciones](../programming-guide/language-features/constants-enums/enumerations-overview.md)
