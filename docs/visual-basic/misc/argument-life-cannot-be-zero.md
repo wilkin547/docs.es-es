@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrFinancial_LifeNEZero
 ms.assetid: c402da97-a2b2-4219-a83a-0cebbfdffef2
-ms.openlocfilehash: e1a739d08b89c07c33302eb3bfcdc4b1e8c6e80e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a737afb8901382d75c3858f84be1b2359338b057
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659142"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84368171"
 ---
 # <a name="argument-life-cannot-be-zero"></a>El argumento 'Life' no puede ser cero
 Un argumento para `Life`, que debe ser un `Double` que especifique la longitud de la vida útil del activo, no es válido.  
@@ -18,8 +18,8 @@ Un argumento para `Life`, que debe ser un `Double` que especifique la longitud d
   
 - Compruebe la ortografía de los argumentos de la expresión. Un nombre de variable mal escrito puede crear implícitamente una variable numérica que se inicialice en cero.  
   
-- Compruebe las operaciones anteriores en las variables de la expresión, especialmente las que se pasaron al procedimiento como argumentos de otros procedimientos.  
+- Compruebe las operaciones anteriores sobre variables de la expresión, especialmente las que se pasan al procedimiento como argumentos de otros procedimientos.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Paso de argumentos por valor y por referencia](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [Pasar argumentos por valor y por referencia](../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
