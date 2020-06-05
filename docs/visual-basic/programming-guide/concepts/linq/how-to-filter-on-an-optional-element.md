@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: Filtrar por un elemento opcional'
+title: Procedimiento para filtrar por un elemento opcional
 ms.date: 07/20/2015
 ms.assetid: a74b76ad-6889-4185-a189-d6ef2c63841e
-ms.openlocfilehash: 6db377ae30582ef010d5af467e88c52b008483ed
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 9f03eee479e7c47e528a145d370472de6dfddd39
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78267059"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84394368"
 ---
-# <a name="how-to-filter-on-an-optional-element-visual-basic"></a>Cómo: Filtrar en un elemento opcional (Visual Basic)
+# <a name="how-to-filter-on-an-optional-element-visual-basic"></a>Cómo: filtrar por un elemento opcional (Visual Basic)
 En ocasiones, deseará filtrar por un elemento dado a pesar de que no está seguro de si existe o no en el documento XML. La consulta debería ejecutarse de forma que si el elemento en particular no tiene ningún elemento secundario, no se produzca una excepción de referencia nula al filtrar por él. En el ejemplo siguiente, el elemento `Child5` no tiene ningún elemento secundario `Type`, pero aún así, la consulta se ejecuta correctamente.  
   
 ## <a name="example"></a>Ejemplo  
@@ -57,7 +57,7 @@ Child Four Text
 ```  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente ejemplo muestra la misma consulta sobre un XML que se encuentra en un espacio de nombres. Para obtener más información, vea Información general sobre espacios de nombres [(LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
+ El siguiente ejemplo muestra la misma consulta sobre un XML que se encuentra en un espacio de nombres. Para obtener más información, vea [información general sobre los espacios de nombres (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -111,9 +111,9 @@ Child Four Text
 - <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>
-- [Consultas básicas (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
-- [XML Child Axis Property](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)
-- [XML Attribute Axis Property](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
-- [Propiedad de valor XML](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)
-- [Información general sobre operadores de consulta estándar (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Operaciones de proyección (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+- [Consultas básicas (LINQ to XML) (Visual Basic)](basic-queries-linq-to-xml.md)
+- [XML Child Axis Property](../../../language-reference/xml-axis/xml-child-axis-property.md)
+- [XML Attribute Axis Property](../../../language-reference/xml-axis/xml-attribute-axis-property.md)
+- [Propiedad de valor XML](../../../language-reference/xml-axis/xml-value-property.md)
+- [Información general sobre operadores de consulta estándar (Visual Basic)](standard-query-operators-overview.md)
+- [Operaciones de proyección (Visual Basic)](projection-operations.md)
