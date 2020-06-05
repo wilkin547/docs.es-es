@@ -7,27 +7,27 @@ f1_keywords:
 helpviewer_keywords:
 - BC42105
 ms.assetid: b6929bf4-a365-4a70-8dc9-6b0fc09e1468
-ms.openlocfilehash: 5564f95048f6b44a48229c7e5be9331839803439
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: edb2195f4e83c2315aa929936aff8af88ca8556c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662104"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374140"
 ---
-# <a name="function-procedurename-doesnt-return-a-value-on-all-code-paths"></a>Función '\<NombreDeProcedimiento >' no devuelve un valor en todas las rutas de código
-Función '\<NombreDeProcedimiento >' no devuelve un valor en todas las rutas de código. ¿Falta alguna instrucción 'Return'?  
+# <a name="function-procedurename-doesnt-return-a-value-on-all-code-paths"></a>La función '\<procedurename>' no devuelve un valor en todas las rutas de acceso a código
+La función ' \<procedurename> ' no devuelve un valor en todas las rutas de acceso de código. ¿Falta una instrucción ' Return '?  
   
- Un `Function` procedimiento tiene al menos una ruta de acceso posibles a través de su código que no devuelve un valor.  
+ Un `Function` procedimiento tiene al menos una ruta de acceso posible a través de su código que no devuelve un valor.  
   
- Puede devolver un valor desde un `Function` procedimiento en cualquiera de las maneras siguientes:  
+ Puede devolver un valor de un `Function` procedimiento de cualquiera de las maneras siguientes:  
   
-- Incluya el valor en un [instrucción Return](../../../visual-basic/language-reference/statements/return-statement.md).  
+- Incluya el valor en una [instrucción return](../statements/return-statement.md).  
   
-- Asigne el valor para el `Function` procedimiento asigne un nombre y, a continuación, realizar un `Exit Function` instrucción.  
+- Asigne el valor al `Function` nombre del procedimiento y, a continuación, realice una `Exit Function` instrucción.  
   
-- Asigne el valor para el `Function` procedimiento asigne un nombre y, a continuación, realizar el `End Function` instrucción.  
+- Asigne el valor al `Function` nombre del procedimiento y, a continuación, realice la `End Function` instrucción.  
   
- Si el control se transfiere a `Exit Function` o `End Function` y no ha asignado ningún valor para el nombre del procedimiento, el procedimiento devuelve el valor predeterminado del tipo de datos devuelto. Para obtener más información, vea "Comportamiento" en [instrucción Function](../../../visual-basic/language-reference/statements/function-statement.md).  
+ Si el control pasa a `Exit Function` o `End Function` y no ha asignado ningún valor al nombre del procedimiento, el procedimiento devuelve el valor predeterminado del tipo de datos devuelto. Para obtener más información, vea el tema sobre el comportamiento en la [instrucción function](../statements/function-statement.md).  
   
  De forma predeterminada, este mensaje es una advertencia. Para obtener más información sobre cómo ocultar las advertencias o cómo tratarlas como errores, vea [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
@@ -35,12 +35,12 @@ Función '\<NombreDeProcedimiento >' no devuelve un valor en todas las rutas de 
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-- Compruebe la lógica del flujo de control y asegúrese de que asignar un valor antes de cada instrucción que genera un valor devuelto.  
+- Compruebe la lógica del flujo de control y asegúrese de asignar un valor antes de cada instrucción que produce una devolución.  
   
-     Es más fácil garantizar que todos los valores devueltos desde el procedimiento devuelve un valor si siempre usa el `Return` instrucción. Si lo hace, la última instrucción antes de `End Function` debe ser un `Return` instrucción.  
+     Es más fácil garantizar que todas las devoluciones del procedimiento devuelvan un valor si siempre se usa la `Return` instrucción. Si lo hace, la última instrucción antes de `End Function` debe ser una `Return` instrucción.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Procedimientos de función](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)
-- [Function (instrucción)](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Procedimientos de función](../../programming-guide/language-features/procedures/function-procedures.md)
+- [Instrucción Function](../statements/function-statement.md)
 - [Página Compilación, Diseñador de proyectos (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
