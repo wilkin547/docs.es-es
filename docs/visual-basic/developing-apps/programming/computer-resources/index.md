@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Computer object [Visual Basic], tasks
 - computer resources [Visual Basic], accessing
 ms.assetid: 75b81c88-f7c0-46e0-95c8-0c006d2120f9
-ms.openlocfilehash: 27310a50289b9b2c315f52ad471da1f32ef0721a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9595abaa1daa2b4a4436577d58856183dcb4d9ac
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74345538"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401789"
 ---
 # <a name="accessing-computer-resources-visual-basic"></a>Acceso a los recursos del equipo (Visual Basic)
 
@@ -30,26 +30,26 @@ El objeto `My.Computer` es uno de los tres objetos centrales de `My` que proporc
 
 ## <a name="in-this-section"></a>En esta sección
 
-[Reproducir sonidos](../../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md)  
+[Reproducir sonidos](playing-sounds.md)  
 Muestra las tareas asociadas a `My.Computer.Audio`, como reproducir un sonido en segundo plano.
 
-[Almacenar y leer datos en el Portapapeles](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
+[Almacenar y leer datos en el Portapapeles](storing-data-to-and-reading-from-the-clipboard.md)  
 Muestra las tareas asociadas a `My.Computer.Clipboard`, como leer datos del Portapapeles o escribir datos en él.
 
-[Obtener información acerca del equipo](../../../../visual-basic/developing-apps/programming/computer-resources/getting-information-about-the-computer.md)  
+[Obtener información acerca del equipo](getting-information-about-the-computer.md)  
 Muestra las tareas asociadas a `My.Computer.Info`, como determinar el nombre completo o las direcciones IP de un equipo.
 
-[Acceso al teclado](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md)  
+[Acceso al teclado](accessing-the-keyboard.md)  
 Muestra las tareas asociadas a `My.Computer.Keyboard`, como determinar si BLOQ MAYÚS está activado.
 
-[Acceso al mouse](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md)  
+[Acceso al mouse](accessing-the-mouse.md)  
 Muestra las tareas asociadas a `My.Computer.Mouse`, como determinar si un mouse está presente.
 
-[Realizar operaciones de red](../../../../visual-basic/developing-apps/programming/computer-resources/performing-network-operations.md)  
+[Realizar operaciones de red](performing-network-operations.md)  
 Muestra las tareas asociadas a `My.Computer.Network`, como cargar o descargar archivos.
 
-[Acceso a los puertos del equipo](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md)  
+[Acceso a los puertos del equipo](accessing-the-computer-s-ports.md)  
 Muestra las tareas asociadas a `My.Computer.Ports`, como mostrar los puertos serie disponibles o enviar cadenas a los puertos serie.
 
-[Leer y escribir en el Registro](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)  
+[Leer y escribir en el Registro](reading-from-and-writing-to-the-registry.md)  
 Muestra las tareas asociadas a `My.Computer.Registry`, como leer datos de las claves del Registro o escribir datos en ellas.
