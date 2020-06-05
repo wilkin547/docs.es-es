@@ -6,34 +6,34 @@ helpviewer_keywords:
 - delegates [Visual Basic], relaxed conversion
 - conversions [Visual Basic], relaxed delegate
 ms.assetid: 64f371d0-5416-4f65-b23b-adcbf556e81c
-ms.openlocfilehash: ffb242842553382ba26121333c38fc65eaa168a9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a581ffae77c496908d2e4e38df53491a54ae2ab8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345216"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410675"
 ---
 # <a name="relaxed-delegate-conversion-visual-basic"></a>Conversión de delegado no estricta (Visual Basic)
 La conversión de delegado relajado le permite asignar las funciones Subs y a los delegados o controladores incluso cuando sus firmas no son idénticas. Por consiguiente, el enlace a los delegados es coherente con el enlace ya permitido para las invocaciones de método.  
   
 ## <a name="parameters-and-return-type"></a>Parámetros y tipo de valor devuelto  
- En lugar de la coincidencia exacta de la firma, la conversión relajada requiere que se cumplan las siguientes condiciones cuando `Option Strict` está establecido en `On`:  
+ En lugar de la coincidencia exacta de la firma, la conversión relajada requiere que se cumplan las siguientes condiciones cuando `Option Strict` se establece en `On` :  
   
-- Debe existir una conversión de ampliación del tipo de datos de cada parámetro de delegado en el tipo de datos del parámetro correspondiente de la función o `Sub`asignada. En el ejemplo siguiente, el `Del1` de delegado tiene un parámetro, un `Integer`. Los `m` de parámetros de las expresiones lambda asignadas deben tener un tipo de datos para el que haya una conversión de ampliación de `Integer`, como `Long` o `Double`.  
+- Debe existir una conversión de ampliación desde el tipo de datos de cada parámetro de delegado al tipo de datos del parámetro correspondiente de la función asignada o `Sub` . En el ejemplo siguiente, el delegado `Del1` tiene un parámetro, `Integer` . `m`Los parámetros de las expresiones lambda asignadas deben tener un tipo de datos para el que haya una conversión de ampliación `Integer` , como `Long` o `Double` .  
   
      [!code-vb[VbVbalrRelaxedDelegates#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#1)]  
   
      [!code-vb[VbVbalrRelaxedDelegates#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#2)]  
   
-     Solo se permiten las conversiones de restricción cuando `Option Strict` está establecido en `Off`.  
+     Solo se permiten las conversiones de restricción cuando `Option Strict` se establece en `Off` .  
   
      [!code-vb[VbVbalrRelaxedDelegates#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module2.vb#8)]  
   
-- Una conversión de ampliación debe existir en la dirección opuesta desde el tipo de valor devuelto de la función asignada o `Sub` al tipo de valor devuelto del delegado. En los ejemplos siguientes, el cuerpo de cada expresión lambda asignada se debe evaluar como un tipo de datos que se amplía a `Integer` porque el tipo de valor devuelto de `del1` es `Integer`.  
+- Debe existir una conversión de ampliación en la dirección opuesta a la del tipo de valor devuelto de la función asignada o `Sub` al tipo de valor devuelto del delegado. En los ejemplos siguientes, el cuerpo de cada expresión lambda asignada se debe evaluar como un tipo de datos que `Integer` se amplía a porque el tipo de valor devuelto de `del1` es `Integer` .  
   
      [!code-vb[VbVbalrRelaxedDelegates#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#3)]  
   
- Si `Option Strict` se establece en `Off`, se quita la restricción de ampliación en ambas direcciones.  
+ Si `Option Strict` se establece en `Off` , se quita la restricción de ampliación en ambas direcciones.  
   
  [!code-vb[VbVbalrRelaxedDelegates#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module2.vb#4)]  
   
@@ -48,7 +48,7 @@ La conversión de delegado relajado le permite asignar las funciones Subs y a lo
   
  [!code-vb[VbVbalrRelaxedDelegates#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#15)]  
   
- La capacidad de omitir parámetros resulta útil en una situación como la definición de un controlador de eventos, donde se implican varios parámetros complejos. No se usan los argumentos para algunos controladores de eventos. En su lugar, el controlador accede directamente al estado del control en el que se registra el evento y omite los argumentos. Los delegados relajados permiten omitir los argumentos en estas declaraciones cuando no se produce ninguna ambigüedad. En el ejemplo siguiente, el método completo `OnClick` se puede volver a escribir como `RelaxedOnClick`.  
+ La capacidad de omitir parámetros resulta útil en una situación como la definición de un controlador de eventos, donde se implican varios parámetros complejos. No se usan los argumentos para algunos controladores de eventos. En su lugar, el controlador accede directamente al estado del control en el que se registra el evento y omite los argumentos. Los delegados relajados permiten omitir los argumentos en estas declaraciones cuando no se produce ninguna ambigüedad. En el ejemplo siguiente, el método completamente especificado `OnClick` se puede volver a escribir como `RelaxedOnClick` .  
   
 ```vb  
 Sub OnClick(ByVal sender As Object, ByVal e As EventArgs) Handles b.Click  
@@ -61,9 +61,9 @@ End Sub
 ```  
   
 ## <a name="addressof-examples"></a>Ejemplos de AddressOf  
- Las expresiones lambda se usan en los ejemplos anteriores para que las relaciones de tipos resulten fáciles de ver. Sin embargo, se permiten las mismas relajaciones para las asignaciones de delegado que usan `AddressOf`, `Handles`o `AddHandler`.  
+ Las expresiones lambda se usan en los ejemplos anteriores para que las relaciones de tipos resulten fáciles de ver. Sin embargo, se permiten las mismas relajaciones para las asignaciones de delegado que usan `AddressOf` , `Handles` o `AddHandler` .  
   
- En el ejemplo siguiente, se pueden asignar todas las funciones `f1`, `f2`, `f3`y `f4` a `Del1`.  
+ En el ejemplo siguiente, las funciones `f1` , `f2` , `f3` y `f4` se pueden asignar a `Del1` .  
   
  [!code-vb[VbVbalrRelaxedDelegates#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#1)]  
   
@@ -71,22 +71,22 @@ End Sub
   
  [!code-vb[VbVbalrRelaxedDelegates#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#9)]  
   
- El ejemplo siguiente solo es válido cuando `Option Strict` está establecido en `Off`.  
+ El ejemplo siguiente solo es válido cuando `Option Strict` se establece en `Off` .  
   
  [!code-vb[VbVbalrRelaxedDelegates#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module2.vb#14)]  
   
 ## <a name="dropping-function-returns"></a>Quitar la función devuelve  
- La conversión de delegado relajado le permite asignar una función a un delegado de `Sub`, con lo que se omite de forma eficaz el valor devuelto de la función. Sin embargo, no se puede asignar un `Sub` a un delegado de función. En el ejemplo siguiente, la dirección de la función `doubler` se asigna a `Sub` `Del3`delegado.  
+ La conversión de delegado relajado le permite asignar una función a un `Sub` delegado, omitiendo de forma eficaz el valor devuelto de la función. Sin embargo, no se puede asignar `Sub` a un delegado de función. En el ejemplo siguiente, la dirección de la función `doubler` se asigna al `Sub` delegado `Del3` .  
   
  [!code-vb[VbVbalrRelaxedDelegates#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#10)]  
   
  [!code-vb[VbVbalrRelaxedDelegates#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#11)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Expresiones lambda](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
-- [Conversiones de ampliación y de restricción](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
-- [Delegados](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [Paso de procedimientos a otro procedimiento en Visual Basic](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
-- [Inferencia de tipo de variable local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [Option Strict (instrucción)](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Expresiones lambda](../procedures/lambda-expressions.md)
+- [Widening and Narrowing Conversions](../data-types/widening-and-narrowing-conversions.md)
+- [Delegados](index.md)
+- [Cómo: Pasar procedimientos a otro procedimiento en Visual Basic](how-to-pass-procedures-to-another-procedure.md)
+- [Inferencia de tipo de variable local](../variables/local-type-inference.md)
+- [Option Strict (instrucción)](../../../language-reference/statements/option-strict-statement.md)
