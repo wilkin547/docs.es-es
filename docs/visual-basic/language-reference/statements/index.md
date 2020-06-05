@@ -4,33 +4,33 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - statements [Visual Basic]
 ms.assetid: 1cbd7703-8d3b-48fd-831e-14c9cc85675a
-ms.openlocfilehash: 78a1bac0eea8aa3f9596077b311ccc1b4e58da79
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 8c7d5de52632a8482d19dda60f56eadeb750406c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838278"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404516"
 ---
 # <a name="statements-visual-basic"></a>Instrucciones (Visual Basic)
 En los temas de esta sección, se incluyen tablas de la declaración y las instrucciones ejecutables de Visual Basic, y de listas importantes que se aplican a muchas instrucciones.  
   
-## <a name="in-this-section"></a>Esta sección  
- [Instrucciones de la A a la E](../../../visual-basic/language-reference/statements/a-e-statements.md)  
+## <a name="in-this-section"></a>En esta sección  
+ [Instrucciones A-E](a-e-statements.md)  
   
- [Instrucciones de la F a la P](../../../visual-basic/language-reference/statements/f-p-statements.md)  
+ [Instrucciones F-P](f-p-statements.md)  
   
- [Instrucciones de la Q a la Z](../../../visual-basic/language-reference/statements/q-z-statements.md)  
+ [Instrucciones Q-Z](q-z-statements.md)  
   
- [Cláusulas](../../../visual-basic/language-reference/statements/clauses.md)  
+ [Cláusulas](clauses.md)  
   
- [Contextos de declaración y niveles de acceso predeterminados](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)  
+ [Contextos de declaración y niveles de acceso predeterminados](declaration-contexts-and-default-access-levels.md)  
   
- [Lista de atributos](../../../visual-basic/language-reference/statements/attribute-list.md)  
+ [Lista de atributos](attribute-list.md)  
   
- [Lista de parámetros](../../../visual-basic/language-reference/statements/parameter-list.md)  
+ [Lista de parámetros](parameter-list.md)  
   
- [Lista de tipos](../../../visual-basic/language-reference/statements/type-list.md)  
+ [Type List](type-list.md)  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Referencia del lenguaje Visual Basic](../../../visual-basic/language-reference/index.md)  
+ [Referencia del lenguaje Visual Basic](../index.md)  
   

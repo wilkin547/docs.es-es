@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID11
 ms.assetid: 5b9bc5d6-792e-48bc-a974-012e07ad95f3
-ms.openlocfilehash: 194dcebe40b7f14ba4bf4ebce6f2b1294d3e6791
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 31efe395e17dfc7382abf2478139e1a2d36cc31d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970344"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84394653"
 ---
 # <a name="division-by-zero-visual-basic-run-time-error"></a>División por cero (error en tiempo de ejecución de Visual Basic)
 Una expresión que se está usando como divisor tiene un valor de cero.  
@@ -18,8 +18,8 @@ Una expresión que se está usando como divisor tiene un valor de cero.
   
 1. Compruebe la ortografía de las variables de la expresión. Un nombre de variable mal escrito puede crear implícitamente una variable numérica que se inicialice en cero.  
   
-2. Compruebe las operaciones anteriores en las variables de la expresión, especialmente las que se pasaron al procedimiento como argumentos de otros procedimientos.  
+2. Compruebe las operaciones anteriores sobre variables de la expresión, especialmente las que se pasan al procedimiento como argumentos de otros procedimientos.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Paso de argumentos por valor y por referencia](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [Pasar argumentos por valor y por referencia](../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

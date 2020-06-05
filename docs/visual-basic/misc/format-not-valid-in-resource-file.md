@@ -4,15 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID325
 ms.assetid: e986ab45-e3ce-430e-8704-5882e5da1104
-ms.openlocfilehash: 5285365c9ae780a8f78f11eab6705d52138fc049
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 42cccaf6c8539a2d5e8e081bfe0c0c5cec0e02e9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62055178"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84358325"
 ---
 # <a name="format-not-valid-in-resource-file"></a>El formato del archivo de recursos no es válido.
-Un archivo de recursos en el proyecto no sigue el formato estándar para un archivo de recursos de Windows o hay una discrepancia entre el archivo de recursos y el proyecto de Visual Basic.  
+Un archivo de recursos del proyecto no sigue el formato estándar para un archivo de recursos de Windows o hay una discrepancia entre el archivo de recursos y el proyecto de Visual Basic.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
@@ -20,6 +20,6 @@ Un archivo de recursos en el proyecto no sigue el formato estándar para un arch
   
 2. Elimine el archivo de recursos no válido del proyecto.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Tipos de error](../../visual-basic/programming-guide/language-features/error-types.md)
+- [Tipos de error](../programming-guide/language-features/error-types.md)

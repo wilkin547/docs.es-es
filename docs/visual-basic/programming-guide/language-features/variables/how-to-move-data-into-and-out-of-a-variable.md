@@ -1,16 +1,16 @@
 ---
-title: 'Cómo: Introducir y extraer los datos de una variable'
+title: Procedimiento para introducir y extraer los datos de una variable
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], retrieving values
 - variables [Visual Basic], storing data
 ms.assetid: 93744f46-bf78-4fa0-9640-1de01bc38d9a
-ms.openlocfilehash: bc5a7377a5e2e4c7ebe7291fd5f0093c4d6e996d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: fe19a6160623aa9ea867becdf7a15b51319abf45
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346901"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410443"
 ---
 # <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a>Cómo: Introducir y extraer los datos de una variable (Visual Basic)
 
@@ -22,7 +22,7 @@ Para almacenar un valor en una variable, coloque el nombre de la variable en el 
 
 - Use el nombre de la variable en el lado izquierdo de una instrucción de asignación.
 
-    En el ejemplo siguiente se establece el valor de la variable `alpha`.
+    En el ejemplo siguiente se establece el valor de la variable `alpha` .
 
     ```vb
     alpha = (beta * 6.27) / (gamma + 2.1)
@@ -40,7 +40,7 @@ Para recuperar el valor de una variable, incluya el nombre de la variable en una
 
   O bien
 
-- Use el nombre de variable que sigue al signo igual (`=`) en una instrucción de asignación.
+- Use el nombre de la variable que sigue el signo igual ( `=` ) en una instrucción de asignación.
 
   En el ejemplo siguiente se lee el valor de la variable `startValue` y, a continuación, se usa el valor de la variable `counter` en una expresión.
 
@@ -51,8 +51,8 @@ Para recuperar el valor de una variable, incluya el nombre de la variable en una
 
   El valor de la variable participa en la expresión de la misma forma que una constante y, a continuación, se almacena en la variable o la propiedad en el lado izquierdo de la instrucción de asignación.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Variables](../../../../visual-basic/programming-guide/language-features/variables/index.md)
-- [Declaración de variables](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [Variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [Variables](index.md)
+- [Declaración de variable](variable-declaration.md)
+- [Variables de objeto](object-variables.md)
