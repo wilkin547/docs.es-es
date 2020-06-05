@@ -1,5 +1,5 @@
 ---
-title: Continue (Instrucción)
+title: Instrucción Continue
 ms.date: 07/20/2015
 f1_keywords:
 - vb.continue
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Continue statement [Visual Basic]
 - loops, transferring to next iteration
 ms.assetid: 3ad00103-358b-4af3-a3a8-1b9ea0e995d3
-ms.openlocfilehash: 20140cafb68c7e5518bf3d5fa80e56ca1c1de2c6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: fd604b281a590073a5e76398788d7648cadd145c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74354107"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84382099"
 ---
 # <a name="continue-statement-visual-basic"></a>Continue (Instrucción, Visual Basic)
 Transfiere el control inmediatamente a la siguiente iteración de un bucle.  
@@ -23,25 +23,25 @@ Transfiere el control inmediatamente a la siguiente iteración de un bucle.
 Continue { Do | For | While }  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- Puede transferir desde dentro de un bucle `Do`, `For`o `While` a la siguiente iteración del bucle. El control pasa inmediatamente a la prueba de la condición de bucle, que es equivalente a transferir a la instrucción `For` o `While`, o a la instrucción `Do` o `Loop` que contiene la cláusula `Until` o `While`.  
+## <a name="remarks"></a>Observaciones  
+ Puede transferir desde dentro de un `Do` `For` bucle, o `While` hasta la siguiente iteración del bucle. El control pasa inmediatamente a la prueba de la condición de bucle, que es equivalente a transferir a la `For` `While` instrucción o, o a la `Do` `Loop` instrucción o que contiene la `Until` `While` cláusula o.  
   
- Puede usar `Continue` en cualquier ubicación del bucle que permita las transferencias. Las reglas que permiten la transferencia de control son las mismas que con la [instrucción Goto](../../../visual-basic/language-reference/statements/goto-statement.md).  
+ Puede usar `Continue` en cualquier ubicación del bucle que permita las transferencias. Las reglas que permiten la transferencia de control son las mismas que con la [instrucción Goto](goto-statement.md).  
   
- Por ejemplo, si un bucle está contenido completamente dentro de un bloque `Try`, un bloque `Catch` o un bloque `Finally`, puede usar `Continue` para transferir fuera del bucle. Por otra parte, si la estructura `Try`...`End Try` se encuentra dentro del bucle, no se puede usar `Continue` para transferir el control fuera del bloque de `Finally` y se puede usar para transferir fuera de un bloque `Try` o `Catch` solo si se transfiere completamente de la estructura `Try`...`End Try`.  
+ Por ejemplo, si un bucle está totalmente contenido dentro de un bloque, `Try` un `Catch` bloque o un `Finally` bloque, puede usar `Continue` para transferir fuera del bucle. Por otro lado, si la `Try` estructura... `End Try` está contenida dentro del bucle, no se puede usar `Continue` para transferir el control fuera del `Finally` bloque, y se puede utilizar para transferir fuera de un `Try` bloque o `Catch` solo si se transfiere completamente de la `Try` estructura... `End Try` .  
   
- Si tiene bucles anidados del mismo tipo, por ejemplo un bucle `Do` dentro de otro bucle `Do`, una instrucción `Continue Do` omite la siguiente iteración del bucle de `Do` más interno que lo contiene. No se puede usar `Continue` para pasar a la siguiente iteración de un bucle contenedor del mismo tipo.  
+ Si tiene bucles anidados del mismo tipo, por ejemplo un `Do` bucle dentro de otro `Do` bucle, una `Continue Do` instrucción salta a la siguiente iteración del bucle más interno `Do` que lo contiene. No se puede usar `Continue` para pasar a la siguiente iteración de un bucle contenedor del mismo tipo.  
   
- Si tiene bucles anidados de distintos tipos, por ejemplo, un bucle `Do` dentro de un bucle `For`, puede ir directamente a la siguiente iteración de cualquier bucle mediante `Continue Do` o `Continue For`.  
+ Si tiene bucles anidados de distintos tipos, por ejemplo un `Do` bucle dentro de un `For` bucle, puede ir directamente a la siguiente iteración de cualquier bucle mediante `Continue Do` o `Continue For` .  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo de código siguiente se usa la instrucción `Continue While` para ir a la columna siguiente de una matriz si un divisor es cero. El `Continue While` está dentro de un bucle de `For`. Se transfiere a la instrucción `While col < lastcol`, que es la siguiente iteración del bucle `While` más interno que contiene el bucle `For`.  
+ En el ejemplo de código siguiente `Continue While` se usa la instrucción para saltar a la columna siguiente de una matriz si un divisor es cero. `Continue While`Está dentro de un `For` bucle. Se transfiere a la `While col < lastcol` instrucción, que es la siguiente iteración del bucle más interno `While` que contiene el `For` bucle.  
   
  [!code-vb[VbVbalrStatements#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#14)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Do...Loop (instrucción)](../../../visual-basic/language-reference/statements/do-loop-statement.md)
-- [For...Next (instrucción)](../../../visual-basic/language-reference/statements/for-next-statement.md)
-- [While...End While (instrucción)](../../../visual-basic/language-reference/statements/while-end-while-statement.md)
-- [Try...Catch...Finally (instrucción)](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [Instrucción Do...Loop](do-loop-statement.md)
+- [Instrucción For...Next](for-next-statement.md)
+- [Instrucción While...End While](while-end-while-statement.md)
+- [Instrucción Try...Catch...Finally](try-catch-finally-statement.md)
