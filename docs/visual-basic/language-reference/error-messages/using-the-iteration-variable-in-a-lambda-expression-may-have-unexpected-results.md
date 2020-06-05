@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC42324
 ms.assetid: b5c2c4bd-3b2a-4a73-aaeb-55728eb03b68
-ms.openlocfilehash: 3335da503b6fb9c33e44266997cc945214a3a365
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: aa3e1d6281af22b301a4697b265ed3fbf23e3de4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64913074"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84373919"
 ---
 # <a name="using-the-iteration-variable-in-a-lambda-expression-may-have-unexpected-results"></a>El uso de una variable de iteración en una expresión lambda puede producir resultados inesperados.
-Uso de la variable de iteración en una expresión lambda puede producir resultados inesperados. En su lugar, cree una variable local dentro del bucle y asígnele el valor de la variable de iteración.  
+El uso de la variable de iteración en una expresión lambda puede tener resultados inesperados. En su lugar, cree una variable local dentro del bucle y asígnele el valor de la variable de iteración.  
   
- Esta advertencia aparece cuando se usa una variable de iteración de bucle en una expresión lambda que se declara dentro del bucle. Por ejemplo, en el ejemplo siguiente hace que aparezca una advertencia.  
+ Esta advertencia aparece cuando se usa una variable de iteración de bucle en una expresión lambda que se declara dentro del bucle. Por ejemplo, el ejemplo siguiente hace que aparezca la advertencia.  
   
 ```vb  
 For i As Integer = 1 To 10  
@@ -26,7 +26,7 @@ For i As Integer = 1 To 10
 Next  
 ```  
   
- El ejemplo siguiente muestra los resultados inesperados que pueden producirse.  
+ En el ejemplo siguiente se muestran los resultados inesperados que se pueden producir.  
   
 ```vb  
 Module Module1  
@@ -45,7 +45,7 @@ Module Module1
 End Module  
 ```  
   
- El `For` bucle crea una matriz de las expresiones lambda, cada una de las cuales devuelve el valor de la variable de iteración del bucle `i`. Cuando se evalúan las expresiones lambda en el `For Each` bucle, es probable que vea 0, 1, 2, 3 y 4 muestra, los valores sucesivos de `i` en el `For` bucle. En su lugar, verá que el valor final de `i` muestra cinco veces:  
+ El `For` bucle crea una matriz de expresiones lambda, cada una de las cuales devuelve el valor de la variable de iteración del bucle `i` . Cuando se evalúan las expresiones lambda en el `For Each` bucle, podría esperar ver 0, 1, 2, 3 y 4, los valores sucesivos de `i` en el `For` bucle. En su lugar, verá el valor final de `i` mostrada cinco veces:  
   
  `5`  
   
@@ -83,6 +83,6 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Expresiones lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [Expresiones lambda](../../programming-guide/language-features/procedures/lambda-expressions.md)
