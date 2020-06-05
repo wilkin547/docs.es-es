@@ -2,23 +2,23 @@
 title: Archivo demasiado grande para su lectura en una matriz de bytes
 ms.date: 07/20/2015
 ms.assetid: 686630a6-a439-46c7-8d7b-34613ae4c5d8
-ms.openlocfilehash: a842205e9184355e4ea750ea2eb32e4bcf05a14d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b81fc9332d5f1347404fcdd73bce72b6b09778b9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665102"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84363129"
 ---
-# <a name="file-is-too-large-to-read-into-a-byte-array"></a><span data-ttu-id="472bb-102">Archivo demasiado grande para su lectura en una matriz de bytes</span><span class="sxs-lookup"><span data-stu-id="472bb-102">File is too large to read into a byte array</span></span>
-<span data-ttu-id="472bb-103">El tamaño del archivo que está intentando leer en una matriz de bytes supera los 4 GB.</span><span class="sxs-lookup"><span data-stu-id="472bb-103">The size of the file you are attempting to read into a byte array exceeds 4 GB.</span></span> <span data-ttu-id="472bb-104">El `My.Computer.FileSystem.ReadAllBytes` método no puede leer un archivo que supera este tamaño.</span><span class="sxs-lookup"><span data-stu-id="472bb-104">The `My.Computer.FileSystem.ReadAllBytes` method cannot read a file that exceeds this size.</span></span>  
+# <a name="file-is-too-large-to-read-into-a-byte-array"></a><span data-ttu-id="f036d-102">Archivo demasiado grande para su lectura en una matriz de bytes</span><span class="sxs-lookup"><span data-stu-id="f036d-102">File is too large to read into a byte array</span></span>
+<span data-ttu-id="f036d-103">El tamaño del archivo que está intentando leer en una matriz de bytes supera los 4 GB.</span><span class="sxs-lookup"><span data-stu-id="f036d-103">The size of the file you are attempting to read into a byte array exceeds 4 GB.</span></span> <span data-ttu-id="f036d-104">El `My.Computer.FileSystem.ReadAllBytes` método no puede leer un archivo que supere este tamaño.</span><span class="sxs-lookup"><span data-stu-id="f036d-104">The `My.Computer.FileSystem.ReadAllBytes` method cannot read a file that exceeds this size.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="472bb-105">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="472bb-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="f036d-105">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="f036d-105">To correct this error</span></span>  
   
-- <span data-ttu-id="472bb-106">Use un <xref:System.IO.StreamReader> para leer el archivo.</span><span class="sxs-lookup"><span data-stu-id="472bb-106">Use a <xref:System.IO.StreamReader> to read the file.</span></span> <span data-ttu-id="472bb-107">Para obtener más información, consulte [conceptos básicos de .NET Framework de E/S de archivos y el sistema de archivos (Visual Basic)](../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md).</span><span class="sxs-lookup"><span data-stu-id="472bb-107">For more information, see [Basics of .NET Framework File I/O and the File System (Visual Basic)](../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md).</span></span>  
+- <span data-ttu-id="f036d-106">Utilice un <xref:System.IO.StreamReader> para leer el archivo.</span><span class="sxs-lookup"><span data-stu-id="f036d-106">Use a <xref:System.IO.StreamReader> to read the file.</span></span> <span data-ttu-id="f036d-107">Para obtener más información, vea [conceptos básicos de .NET Framework e/s de archivos y el sistema de archivos (Visual Basic)](../../developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md).</span><span class="sxs-lookup"><span data-stu-id="f036d-107">For more information, see [Basics of .NET Framework File I/O and the File System (Visual Basic)](../../developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="472bb-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="472bb-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f036d-108">Consulte también</span><span class="sxs-lookup"><span data-stu-id="f036d-108">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllBytes%2A>
 - <xref:System.IO.StreamReader>
-- [<span data-ttu-id="472bb-109">Acceso a archivos con Visual Basic</span><span class="sxs-lookup"><span data-stu-id="472bb-109">File Access with Visual Basic</span></span>](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)
-- [<span data-ttu-id="472bb-110">Cómo: Leer texto de archivos con StreamReader</span><span class="sxs-lookup"><span data-stu-id="472bb-110">How to: Read Text from Files with a StreamReader</span></span>](../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-text-from-files-with-a-streamreader.md)
+- [<span data-ttu-id="f036d-109">Acceso a archivos con Visual Basic</span><span class="sxs-lookup"><span data-stu-id="f036d-109">File Access with Visual Basic</span></span>](../../developing-apps/programming/drives-directories-files/file-access.md)
+- [<span data-ttu-id="f036d-110">Procedimiento para leer texto de archivos con StreamReader</span><span class="sxs-lookup"><span data-stu-id="f036d-110">How to: Read Text from Files with a StreamReader</span></span>](../../developing-apps/programming/drives-directories-files/how-to-read-text-from-files-with-a-streamreader.md)
