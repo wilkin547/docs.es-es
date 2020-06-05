@@ -1,13 +1,13 @@
 ---
-title: 'Cómo: Cargar un documento XML desde un archivo'
+title: Procedimiento para cargar un documento XML desde un archivo
 ms.date: 07/20/2015
 ms.assetid: e2d337ad-8ac8-4671-b694-30e5ca1413b7
-ms.openlocfilehash: 72a5adb8c7165f8113584f27bea64efde4ec58fb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: faea93b8eea2b713a8beb7fe199be7d644a07706
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74336106"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398004"
 ---
 # <a name="how-to-load-xml-from-a-file-visual-basic"></a>Cómo: cargar XML desde un archivo (Visual Basic)
 
@@ -17,7 +17,7 @@ En este tema se muestra cómo cargar XML de una dirección URI usando el método
 
 El siguiente ejemplo muestra cómo cargar un documento XML desde un archivo. El siguiente ejemplo carga books.xml y produce el árbol XML en la consola.
 
-En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: libros (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).
+En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: libros (LINQ to XML)](sample-xml-file-books-linq-to-xml.md).
 
 ```vb
 Dim booksFromFile As XElement = XElement.Load("books.xml")
@@ -50,6 +50,6 @@ Este código genera el siguiente resultado:
 </Catalog>
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Analizar XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [Analizar XML (Visual Basic)](parsing-xml.md)

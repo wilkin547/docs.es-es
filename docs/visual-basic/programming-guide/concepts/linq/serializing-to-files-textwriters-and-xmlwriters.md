@@ -1,13 +1,13 @@
 ---
-title: Serializar en archivos, escritores de texto y XmlWriters3
+title: Serializar en archivos, escritores y XmlWriters3
 ms.date: 07/20/2015
 ms.assetid: 7a0c24df-79ef-41a0-87f5-e6cf79382da9
-ms.openlocfilehash: 63577d955da89fde0a2320b4cf84414ccbb69c84
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d8b929ef02b8fd9c6a9f29ea997a754699a6e1c4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786794"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403568"
 ---
 # <a name="serializing-to-files-textwriters-and-xmlwriters"></a>Serializar en archivos, escritores de texto y escritores XML
 
@@ -33,4 +33,4 @@ Por obtener ejemplos, vea el tema de referencia correspondiente.
 
 ## <a name="see-also"></a>Vea también
 
-- [Serializar árboles XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)
+- [Serializar árboles XML (Visual Basic)](serializing-xml-trees.md)

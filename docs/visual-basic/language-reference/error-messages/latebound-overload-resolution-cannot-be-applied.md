@@ -8,20 +8,20 @@ helpviewer_keywords:
 - overload resolution [Visual Basic], with late-bound argument
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
-ms.openlocfilehash: 1fe3c4a29b542302b3615459142a3c565aa8244f
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 4500a177c7a4729fe5131af1b007fd38e77afe07
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68513023"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397342"
 ---
-# <a name="latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a>La resolución de sobrecarga enlazada tardíamente\<no se puede aplicar a ' nombreprocedimiento > ' porque la instancia de acceso es un tipo de interfaz
+# <a name="latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a>La resolución de sobrecarga enlazada tardíamente no se puede aplicar a '\<procedurename>' porque la instancia de acceso es un tipo de interfaz
 
-El compilador está intentando resolver una referencia a una propiedad o procedimiento sobrecargado, pero se produce un error en la referencia porque `Object` un argumento es de tipo y el objeto de referencia tiene el tipo de datos de una interfaz. El `Object` argumento obliga al compilador a resolver la referencia como enlazada en tiempo de ejecución.
+El compilador está intentando resolver una referencia a una propiedad o procedimiento sobrecargado, pero se produce un error en la referencia porque un argumento es de tipo `Object` y el objeto de referencia tiene el tipo de datos de una interfaz. El `Object` argumento obliga al compilador a resolver la referencia como enlazada en tiempo de ejecución.
 
 En estas circunstancias, el compilador resuelve la sobrecarga a través de la clase de implementación en lugar de a través de la interfaz subyacente. Si la clase cambia el nombre de una de las versiones sobrecargadas, el compilador no considera que la versión es una sobrecarga porque su nombre es diferente. Esto, a su vez, hace que el compilador omita la versión a la que se ha cambiado el nombre cuando podría haber sido la opción correcta para resolver la referencia.
 
-**IDENTIFICADOR de error:** BC30933
+**Identificador de error:** BC30933
 
 ## <a name="to-correct-this-error"></a>Para corregir este error
 
@@ -31,7 +31,7 @@ En estas circunstancias, el compilador resuelve la sobrecarga a través de la cl
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra una llamada a un `Sub` procedimiento sobrecargado que produce este error en tiempo de compilación.
+En el ejemplo siguiente se muestra una llamada a un procedimiento sobrecargado `Sub` que produce este error en tiempo de compilación.
 
 ```vb
 Module m1
@@ -55,7 +55,7 @@ Module m1
 End Module
 ```
 
-En el ejemplo anterior, si el compilador permitía `s1` la llamada a como escrita, la resolución se realizaría `c1` a través de la clase `i1`en lugar de la interfaz. Esto significa que el compilador no tendría `s2` en cuenta porque su nombre es `c1`diferente en, aunque es la opción `i1`correcta tal y como se define en.
+En el ejemplo anterior, si el compilador permitía la llamada a `s1` como escrita, la resolución se realizaría a través de la clase `c1` en lugar de la interfaz `i1` . Esto significa que el compilador no tendría en cuenta `s2` porque su nombre es diferente en `c1` , aunque es la opción correcta tal y como se define en `i1` .
 
 Puede corregir el error cambiando la llamada a cualquiera de las siguientes líneas de código:
 
@@ -64,10 +64,10 @@ refer.s1(CType(o1, Integer))
 refer.s1(CType(o1, Double))
 ```
 
-Cada una de las líneas de código anteriores convierte explícitamente `Object` la `o1` variable a uno de los tipos de parámetros definidos para las sobrecargas.
+Cada una de las líneas de código anteriores convierte explícitamente la `Object` variable `o1` a uno de los tipos de parámetros definidos para las sobrecargas.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Sobrecarga de procedimientos](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
-- [Resolución de sobrecargas](../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md)
-- [Función CType](../../../visual-basic/language-reference/functions/ctype-function.md)
+- [Sobrecarga de procedimientos](../../programming-guide/language-features/procedures/procedure-overloading.md)
+- [Resolución de sobrecarga](../../programming-guide/language-features/procedures/overload-resolution.md)
+- [CType Function](../functions/ctype-function.md)

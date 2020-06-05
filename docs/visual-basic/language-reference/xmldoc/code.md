@@ -5,14 +5,14 @@ helpviewer_keywords:
 - code XML tag
 - <code> XML tag
 ms.assetid: 925e5342-be05-45f2-bf66-7398bbd6710e
-ms.openlocfilehash: 1cbac2162bd39cdc8af9a55dfd6e2f90bc40b08a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: aa65fed863718f1f00b510f82051a13e764e1b23
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74354320"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400154"
 ---
-# <a name="code-visual-basic"></a>> de código de \<(Visual Basic)
+# <a name="code-visual-basic"></a>\<code> (Visual Basic)
 Indica que el texto es varias líneas de código.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -25,16 +25,16 @@ Indica que el texto es varias líneas de código.
  `content`  
  Texto que se va a marcar como código.  
   
-## <a name="remarks"></a>Comentarios  
- Use la etiqueta `<code>` para indicar varias líneas como código. Use [\<c>](../../../visual-basic/language-reference/xmldoc/c.md) para indicar que el texto dentro de una descripción debe marcarse como código.  
+## <a name="remarks"></a>Observaciones  
+ Use la `<code>` etiqueta para indicar varias líneas como código. Use [\<c>](c.md) para indicar que el texto dentro de una descripción debe marcarse como código.  
   
- Compile con [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) para procesar los comentarios de documentación de un archivo.  
+ Compile with [-doc](../../reference/command-line-compiler/doc.md) para procesar los comentarios de documentación en un archivo.  
   
 ## <a name="example"></a>Ejemplo  
- En este ejemplo se usa la etiqueta \<> de código para incluir código de ejemplo para usar el campo `ID`.  
+ En este ejemplo se usa la \<code> etiqueta para incluir código de ejemplo para usar el `ID` campo.  
   
  [!code-vb[VbVbcnXmlDocComments#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#2)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Etiquetas XML para comentarios](../../../visual-basic/language-reference/xmldoc/index.md)
+- [Etiquetas de comentario XML](index.md)
