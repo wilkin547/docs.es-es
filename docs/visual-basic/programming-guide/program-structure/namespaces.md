@@ -16,32 +16,32 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-ms.openlocfilehash: ec892167f30a7ded739dc188ab4096cb3a5d154c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 087c6f02e1fca9cf2664ca76581c08a9b1a5e447
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401296"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398362"
 ---
 # <a name="namespaces-in-visual-basic"></a>Espacios de nombres en Visual Basic
 Los espacios de nombres organizan los objetos definidos en un ensamblado. Los ensamblados pueden contener varios espacios de nombres, que a su vez pueden contener otros espacios de nombres. Los espacios de nombres evitan las ambigüedades y simplifican las referencias cuando se usan grupos de objetos grandes, como las bibliotecas de clases.  
   
- Por ejemplo, .NET Framework <xref:System.Windows.Forms.ListBox> define <xref:System.Windows.Forms?displayProperty=nameWithType> la clase en el espacio de nombres. En el siguiente fragmento de código se muestra cómo declarar una variable con el nombre completo de esta clase:  
+ Por ejemplo, el .NET Framework define la <xref:System.Windows.Forms.ListBox> clase en el <xref:System.Windows.Forms?displayProperty=nameWithType> espacio de nombres. En el siguiente fragmento de código se muestra cómo declarar una variable con el nombre completo de esta clase:  
   
  [!code-vb[VbVbalrApplication#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#6)]  
   
 ## <a name="avoiding-name-collisions"></a>Evitar conflictos de nombres  
- Los espacios de nombres de .NET Framework solucionan un problema a veces denominado contaminación por espacios de *nombres,* en el que el desarrollador de una biblioteca de clases se ve obstaculizado por el uso de nombres similares en otra biblioteca. Estos conflictos con componentes existentes a veces se denominan *conflictos de nombres*.  
+ .NET Framework espacios de nombres resuelven un problema que a veces se denomina *contaminación de espacio de nombres*, en el que el desarrollador de una biblioteca de clases se ve obstaculizado por el uso de nombres similares en otra biblioteca. Estos conflictos con componentes existentes a veces se denominan *conflictos de nombres*.  
   
- Por ejemplo, si crea una clase denominada `ListBox`, puede usarla en su proyecto sin ninguna calificación, Sin embargo, si desea usar <xref:System.Windows.Forms.ListBox> la clase .NET Framework en el mismo proyecto, debe usar una referencia completa para que la referencia sea única. Si la referencia no es única, Visual Basic produce un error que indica que el nombre es ambiguo. En el ejemplo de código siguiente se muestra cómo declarar estos objetos:  
+ Por ejemplo, si crea una clase denominada `ListBox`, puede usarla en su proyecto sin ninguna calificación, Sin embargo, si desea utilizar la clase .NET Framework <xref:System.Windows.Forms.ListBox> en el mismo proyecto, debe usar una referencia completa para que la referencia sea única. Si la referencia no es única, Visual Basic genera un error que indica que el nombre es ambiguo. En el ejemplo de código siguiente se muestra cómo declarar estos objetos:  
   
  [!code-vb[VbVbalrApplication#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#7)]  
   
- En la ilustración siguiente se muestran `ListBox`dos jerarquías de espacio de nombres, ambas con un objeto denominado:  
+ En la ilustración siguiente se muestran dos jerarquías de espacios de nombres que contienen un objeto denominado `ListBox` :  
   
- ![Captura de pantalla que muestra dos jerarquías de espacio de nombres.](./media/namespaces/visual-basic-namespace-hierarchy.gif)  
+ ![Captura de pantalla que muestra dos jerarquías de espacios de nombres.](./media/namespaces/visual-basic-namespace-hierarchy.gif)  
   
- De forma predeterminada, cada archivo ejecutable que cree con Visual Basic contiene un espacio de nombres con el mismo nombre que el proyecto. Por ejemplo, si define un objeto en un proyecto denominado `ListBoxProject`, el archivo ejecutable ListBoxProject.exe contiene un espacio de nombres llamado `ListBoxProject`.  
+ De forma predeterminada, cada archivo ejecutable que se crea con Visual Basic contiene un espacio de nombres con el mismo nombre que el proyecto. Por ejemplo, si define un objeto en un proyecto denominado `ListBoxProject`, el archivo ejecutable ListBoxProject.exe contiene un espacio de nombres llamado `ListBoxProject`.  
   
  Se puede usar el mismo espacio de nombres en varios ensamblados. Visual Basic los trata como un único conjunto de nombres. Por ejemplo, puede definir clases para un espacio de nombres ( `SomeNameSpace` ) en un ensamblado ( `Assemb1`) y definir clases adicionales para el mismo espacio de nombres desde un ensamblado denominado `Assemb2`.  
   
@@ -60,7 +60,7 @@ Los espacios de nombres organizan los objetos definidos en un ensamblado. Los en
   
  [!code-vb[VbVbalrApplication#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#11)]  
   
- Si intenta usar `Class1` sin calificarlo completamente, Visual Basic produce `Class1` un error que indica que el nombre es ambiguo.  
+ Si intenta usar `Class1` sin calificarla por completo, Visual Basic genera un error que indica que el nombre `Class1` es ambiguo.  
   
 ## <a name="namespace-level-statements"></a>Instrucciones de nivel de espacio de nombres  
  Dentro de un espacio de nombres, puede definir elementos tales como módulos, interfaces, clases, delegados, enumeraciones, estructuras y otros espacios de nombres. Los elementos tales como propiedades, procedimientos, variables y eventos no se pueden definir en el nivel de espacio de nombres. Estos elementos deben declararse dentro de contenedores tales como módulos, estructuras o clases.  
@@ -99,7 +99,7 @@ End Namespace
  Puede usar `Global` para obtener acceso a otros espacios de nombres de nivel de raíz, como <xref:Microsoft.VisualBasic?displayProperty=nameWithType>, y a cualquier espacio de nombres asociado a su proyecto.  
   
 ## <a name="global-keyword-in-namespace-statements"></a>Palabra clave Global en las instrucciones de espacio de nombres  
- También puede usar la palabra clave `Global` en una [Namespace Statement](../../../visual-basic/language-reference/statements/namespace-statement.md). con lo que podrá definir un espacio de nombres fuera del espacio de nombres raíz del proyecto.  
+ También puede usar la palabra clave `Global` en una [Namespace Statement](../../language-reference/statements/namespace-statement.md). con lo que podrá definir un espacio de nombres fuera del espacio de nombres raíz del proyecto.  
   
  Todos los espacios de nombres del proyecto se basan en el espacio de nombres raíz de este.  Visual Studio asigna el nombre del proyecto como el espacio de nombres raíz predeterminado para todo el código del proyecto. Por ejemplo, si el proyecto se llama `ConsoleApplication1`, los respectivos elementos de programación pertenecerán al espacio de nombres `ConsoleApplication1`. Si declara `Namespace Magnetosphere`, las referencias a `Magnetosphere` en el proyecto tendrán acceso a `ConsoleApplication1.Magnetosphere`.  
   
@@ -119,11 +119,11 @@ End Namespace
   
  [!code-vb[VbVbalrApplication#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/module1.vb#21)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.ListBox>
 - <xref:System.Windows.Forms?displayProperty=nameWithType>
 - [Ensamblados de .NET](../../../standard/assembly/index.md)
-- [Instrucción Imports y referencias](references-and-the-imports-statement.md)
-- [Imports (instrucción), espacio de nombres y tipo .NET](../../language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Referencias y la instrucción Imports](references-and-the-imports-statement.md)
+- [Instrucción Imports (Tipo y espacio de nombres de .NET)](../../language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [Escribir código en soluciones de Office](/visualstudio/vsto/writing-code-in-office-solutions)

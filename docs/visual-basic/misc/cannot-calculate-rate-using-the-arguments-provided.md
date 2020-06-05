@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrFinancial_CannotCalculateRate
 ms.assetid: 17d5c8eb-4716-4b72-977f-a640c02e630d
-ms.openlocfilehash: 86f32251bdbd782e348bbfeb7f0429905b230153
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b9ad34342464dc2fe0157513bb4998d519f3462c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904246"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400879"
 ---
 # <a name="cannot-calculate-rate-using-the-arguments-provided"></a>No se puede calcular la tasa con los argumentos proporcionados
 El cálculo de la tasa no contiene los argumentos necesarios.  
@@ -18,8 +18,8 @@ El cálculo de la tasa no contiene los argumentos necesarios.
   
 1. Compruebe la ortografía de los argumentos de la expresión. Un nombre de variable mal escrito puede crear implícitamente una variable numérica que se inicialice en cero.  
   
-2. Compruebe las operaciones anteriores en las variables de la expresión, especialmente las que se pasaron al procedimiento como argumentos de otros procedimientos.  
+2. Compruebe las operaciones anteriores sobre variables de la expresión, especialmente las que se pasan al procedimiento como argumentos de otros procedimientos.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Resumen financiero](../../visual-basic/language-reference/keywords/financial-summary.md)
+- [Resumen financiero](../language-reference/keywords/financial-summary.md)

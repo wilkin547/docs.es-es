@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Calcular valores numéricos'
+title: Procedimiento para calcular valores numéricos
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operator precedence
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-ms.openlocfilehash: d213f6b5a4abf8c52d8872ae36e89796183ff27c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 94b02693f308dcfcfa6983f2750a26d9d419f7be
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348966"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403464"
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>Cómo: Calcular valores numéricos (Visual Basic)
 Puede calcular valores numéricos mediante el uso de expresiones numéricas. Una *expresión numérica* es una expresión que contiene literales, constantes y variables que representan valores numéricos y operadores que actúan sobre esos valores.  
@@ -45,9 +45,9 @@ Puede calcular valores numéricos mediante el uso de expresiones numéricas. Una
   
      [!code-vb[VbVbalrOperators#82](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#82)]  
   
-     En el ejemplo anterior, el valor de la expresión en el lado derecho del operador igual (`=`) se asigna a la variable `j` en el lado izquierdo del operador, por lo que `j` se evalúa como 276.  
+     En el ejemplo anterior, el valor de la expresión en el lado derecho del operador igual ( `=` ) se asigna a la variable `j` en el lado izquierdo del operador, por lo que se `j` evalúa como 276.  
   
-     Para obtener más información, vea [Instrucciones (Guía de programación de C#)](../../../../visual-basic/language-reference/statements/index.md).  
+     Para más información, vea [Statements](../../../language-reference/statements/index.md) (Instrucciones).  
   
 ## <a name="multiple-operators"></a>Varios operadores  
  Si la expresión numérica contiene más de un operador, el orden en el que se evalúan viene determinado por las reglas de prioridad de los operadores. Para invalidar las reglas de prioridad de los operadores, incluya expresiones entre paréntesis, como en el ejemplo anterior. primero se evalúan las expresiones delimitadas.  
@@ -58,15 +58,15 @@ Puede calcular valores numéricos mediante el uso de expresiones numéricas. Una
   
      [!code-vb[VbVbalrOperators#83](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#83)]  
   
-     En el ejemplo anterior, el cálculo de `j` realiza primero el operador de suma (`+`) porque los paréntesis alrededor de `(67 + i)` invalidan la prioridad normal y el valor asignado a `j` es 276 (4 veces 69). El cálculo de `k` realiza los operadores en su prioridad normal (`*` antes `+`) y el valor asignado a `k` es 270 (268 más 2).  
+     En el ejemplo anterior, el cálculo de `j` realiza el operador de suma ( `+` ) en primer lugar, ya que los paréntesis en torno `(67 + i)` a la invalidación de la prioridad normal y el valor asignado a `j` es 276 (4 veces 69). El cálculo de `k` realiza los operadores con su prioridad normal ( `*` antes `+` ) y el valor asignado a `k` es 270 (268 más 2).  
   
-     Para obtener más información, vea [precedencia de operadores en Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
+     Para obtener más información, vea [precedencia de operadores en Visual Basic](../../../language-reference/operators/operator-precedence.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Operadores y expresiones](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
-- [Comparaciones de valores](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
-- [Instrucciones](../../../../visual-basic/language-reference/statements/index.md)
-- [Prioridad de operador en Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [Operadores aritméticos](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)
-- [Combinación eficaz de operadores](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)
+- [Operadores y expresiones](index.md)
+- [Comparaciones de valores](value-comparisons.md)
+- [Instrucciones](../../../language-reference/statements/index.md)
+- [Prioridad de operador en Visual Basic](../../../language-reference/operators/operator-precedence.md)
+- [Operadores aritméticos](../../../language-reference/operators/arithmetic-operators.md)
+- [Combinación eficaz de operadores](efficient-combination-of-operators.md)

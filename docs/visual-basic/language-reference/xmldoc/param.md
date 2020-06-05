@@ -5,14 +5,14 @@ helpviewer_keywords:
 - param XML tag
 - <param> XML tag
 ms.assetid: 4e32e86f-f6f3-4301-b7fc-2f321fb54368
-ms.openlocfilehash: 4405fdf2defbb27aa2146d20083fd406d1f07236
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d325d5f9fbfd132630cf280653be214a267a7a80
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352295"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400065"
 ---
-# <a name="param-visual-basic"></a>\<> de parámetros (Visual Basic)
+# <a name="param-visual-basic"></a>\<param> (Visual Basic)
 Define un nombre de parámetro y una descripción.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -29,21 +29,21 @@ Define un nombre de parámetro y una descripción.
  Descripción del parámetro.  
   
 ## <a name="remarks"></a>Comentarios  
- La etiqueta `<param>` debe usarse en el comentario de una declaración de método para describir uno de los parámetros del método.  
+ La `<param>` etiqueta debe usarse en el comentario de una declaración de método para describir uno de los parámetros del método.  
   
- El texto de la etiqueta `<param>` aparecerá en las siguientes ubicaciones:  
+ El texto de la `<param>` etiqueta aparecerá en las siguientes ubicaciones:  
   
-- Información de parámetros de IntelliSense. Para obtener más información, vea [Using IntelliSense](/visualstudio/ide/using-intellisense).  
+- Información de parámetros de IntelliSense. Para obtener más información, vea [Usar IntelliSense](/visualstudio/ide/using-intellisense).  
   
-- Examinador de objetos. Para obtener más información, vea [Ver la estructura del código](/visualstudio/ide/viewing-the-structure-of-code).  
+- Examinador de objetos. Para obtener más información, vea [ver la estructura del código](/visualstudio/ide/viewing-the-structure-of-code).  
   
- Compile con [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) para procesar los comentarios de documentación de un archivo.  
+ Compile with [-doc](../../reference/command-line-compiler/doc.md) para procesar los comentarios de documentación en un archivo.  
   
 ## <a name="example"></a>Ejemplo  
- En este ejemplo se usa la etiqueta `<param>` para describir el parámetro `id`.  
+ En este ejemplo se usa la `<param>` etiqueta para describir el `id` parámetro.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Etiquetas XML para comentarios](../../../visual-basic/language-reference/xmldoc/index.md)
+- [Etiquetas de comentario XML](index.md)

@@ -2,14 +2,14 @@
 title: Información del llamador
 ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
-ms.openlocfilehash: 7c87b540a68f4d0219918fed66de6c1b635104a9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 93fb1e327d65ac19f293a2f77b7d5712fc5e8d2f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349472"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400673"
 ---
-# <a name="caller-information-visual-basic"></a>Información del autor de la llamada (Visual Basic)
+# <a name="caller-information-visual-basic"></a>Información del llamador (Visual Basic)
 Mediante los atributos de información del llamador, se puede obtener información sobre el llamador de un método. Puede obtener la ruta de acceso al código fuente, el número de línea en el código fuente y el nombre de miembro del llamador. Esta información resulta útil para el seguimiento y la depuración, así como para crear herramientas de diagnóstico.  
   
  Para obtener esta información, se usan los atributos que se aplican a los parámetros opcionales, que tienen valores predeterminados. En la tabla siguiente se enumeran los atributos de información del llamador que se definen en el espacio de nombres <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>:  
@@ -46,7 +46,7 @@ End Sub
 '   source line number: 15  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Se debe especificar un valor predeterminado explícito para cada parámetro opcional. No se pueden aplicar atributos de información del llamador para los parámetros que no se especifican como opcionales.  
   
  Los atributos de información del llamador no crean un parámetro opcional, sino que influyen en el valor predeterminado que se pasa cuando se omite el argumento.  
@@ -55,7 +55,7 @@ End Sub
   
  Puede proporcionar explícitamente los argumentos opcionales para controlar la información del llamador u ocultarla.  
   
-### <a name="MEMBERNAMES"></a> Nombres de miembro  
+### <a name="member-names"></a><a name="MEMBERNAMES"></a>Nombres de miembro  
  Se puede utilizar el atributo `CallerMemberName` para evitar especificar el nombre de miembro como un argumento `String` para el método llamado. Mediante esta técnica, se evita el problema de que la **refactorización de cambio de nombre** no cambie los valores `String`. Esta ventaja es especialmente útil para las siguientes tareas:  
   
 - Usar el seguimiento y las rutinas de diagnóstico.  
@@ -76,7 +76,7 @@ End Sub
   
 ## <a name="see-also"></a>Vea también
 
-- [Atributos (Visual Basic)](../../../visual-basic/language-reference/attributes.md)
-- [Common Attributes (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md) (Atributos comunes [Visual Basic])
-- [Parámetros opcionales](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
-- [Programming Concepts (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md) (Conceptos de programación (Visual Basic))
+- [Atributos (Visual Basic)](../../language-reference/attributes.md)
+- [Common Attributes (Visual Basic)](attributes/common-attributes.md) (Atributos comunes [Visual Basic])
+- [Parámetros opcionales](../language-features/procedures/optional-parameters.md)
+- [Conceptos de programación (Visual Basic)](index.md)

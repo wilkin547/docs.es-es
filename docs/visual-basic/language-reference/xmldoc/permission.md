@@ -5,14 +5,14 @@ helpviewer_keywords:
 - <permission> XML tag
 - permission XML tag
 ms.assetid: 0edf0500-5cd7-49c0-9255-64c48f972b77
-ms.openlocfilehash: 71b00b669804e644d1171480192b9d55455bdf53
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b3acec04060367a0b9e54b19c0106644d028357b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352263"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400039"
 ---
-# <a name="permission-visual-basic"></a>\<> de permisos (Visual Basic)
+# <a name="permission-visual-basic"></a>\<permission> (Visual Basic)
 Especifica un permiso necesario para el miembro.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -23,21 +23,21 @@ Especifica un permiso necesario para el miembro.
   
 ## <a name="parameters"></a>Parámetros  
  `member`  
- Referencia a un miembro o campo al cual se puede llamar desde el entorno de compilación actual. El compilador comprueba si el elemento de código dado existe y traduce `member` al nombre de elemento canónico en la salida XML. Escriba `member` entre comillas ("").  
+ Referencia a un miembro o campo al cual se puede llamar desde el entorno de compilación actual. El compilador comprueba si el elemento de código dado existe y traduce `member` al nombre de elemento canónico en la salida XML. Encerrar entre comillas `member` ("").  
   
  `description`  
  Descripción del acceso al miembro.  
   
-## <a name="remarks"></a>Comentarios  
- Use la etiqueta `<permission>` para documentar el acceso de un miembro. Utilice la clase <xref:System.Security.PermissionSet> para especificar el acceso a un miembro.  
+## <a name="remarks"></a>Observaciones  
+ Use la `<permission>` etiqueta para documentar el acceso de un miembro. Utilice la <xref:System.Security.PermissionSet> clase para especificar el acceso a un miembro.  
   
- Compile con [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) para procesar los comentarios de documentación de un archivo.  
+ Compile with [-doc](../../reference/command-line-compiler/doc.md) para procesar los comentarios de documentación en un archivo.  
   
 ## <a name="example"></a>Ejemplo  
- En este ejemplo se usa la etiqueta `<permission>` para describir que el método `ReadFile` requiere la <xref:System.Security.Permissions.FileIOPermission>.  
+ En este ejemplo se usa la `<permission>` etiqueta para describir que el <xref:System.Security.Permissions.FileIOPermission> método requiere `ReadFile` .  
   
  [!code-vb[VbVbcnXmlDocComments#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#7)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Etiquetas XML para comentarios](../../../visual-basic/language-reference/xmldoc/index.md)
+- [Etiquetas de comentario XML](index.md)

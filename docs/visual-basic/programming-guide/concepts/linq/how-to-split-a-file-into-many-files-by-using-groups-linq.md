@@ -1,13 +1,13 @@
 ---
-title: 'Cómo: Dividir un archivo en varios mediante el uso de grupos (LINQ)'
+title: Procedimiento para dividir un archivo en varios mediante el uso de grupos (LINQ)
 ms.date: 07/20/2015
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
-ms.openlocfilehash: 07d53c9afca88cd3156c7fc8fcfab5ac7ca24f25
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f6b11ab4b4fe11dbf1cb4cf07654b5ef3f6785ad
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348029"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397718"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>Cómo: dividir un archivo en varios archivos mediante el uso de grupos (LINQ) (Visual Basic)
 
@@ -118,9 +118,9 @@ El programa escribe un archivo independiente para cada grupo en la misma carpeta
 
 ## <a name="compile-the-code"></a>Compilar el código
 
-Cree un proyecto de aplicación de consola de Visual Basic, con una instrucción de `Imports` para el espacio de nombres System. Linq.
+Cree un proyecto de aplicación de consola de Visual Basic, con una `Imports` instrucción para el espacio de nombres System. Linq.
 
 ## <a name="see-also"></a>Vea también
 
-- [LINQ y cadenas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ y directorios de archivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ y cadenas (Visual Basic)](linq-and-strings.md)
+- [LINQ y directorios de archivos (Visual Basic)](linq-and-file-directories.md)

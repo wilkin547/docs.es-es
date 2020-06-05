@@ -2,14 +2,14 @@
 title: Acceso a atributos mediante reflexión
 ms.date: 07/20/2015
 ms.assetid: c56e41da-5433-464f-a7bf-2a722e78bc9f
-ms.openlocfilehash: 94352f07cf1f7e4a35f023503f138596ae5ac227
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c0da5c4ae00eb2bc80b10f63f4bfd39763445e55
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353554"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400763"
 ---
-# <a name="accessing-attributes-by-using-reflection-visual-basic"></a>Obtener acceso a atributos mediante reflexión (Visual Basic)
+# <a name="accessing-attributes-by-using-reflection-visual-basic"></a>Accessing Attributes by Using Reflection (Visual Basic) (Acceso a atributos mediante reflexión [Visual Basic])
 
 El hecho de que pueda definir atributos personalizados y colocarlos en el código fuente no serviría de mucho si no existiera ninguna forma de recuperar la información y actuar en consecuencia. Mediante la reflexión, puede recuperar la información que se ha definido con atributos personalizados. El método clave es `GetCustomAttributes`, que devuelve una matriz de objetos que son los equivalentes en tiempo de ejecución de los atributos de código fuente. Este método tiene varias versiones sobrecargadas. Para obtener más información, consulta <xref:System.Attribute>.
 
@@ -105,8 +105,8 @@ End Class
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [Guía de programación en Visual Basic](../../../../visual-basic/programming-guide/index.md)
+- [Guía de programación en Visual Basic](../../index.md)
 - [Retrieving Information Stored in Attributes](../../../../standard/attributes/retrieving-information-stored-in-attributes.md) (Recuperar la información almacenada en atributos)
-- [Reflexión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
-- [Atributos (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
-- [Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md) (Creación de atributos personalizados [Visual Basic])
+- [Reflection (Visual Basic)](../reflection.md) (Reflexión [Visual Basic])
+- [Atributos (Visual Basic)](../../../language-reference/attributes.md)
+- [Creating Custom Attributes (Visual Basic)](creating-custom-attributes.md) (Creación de atributos personalizados [Visual Basic])

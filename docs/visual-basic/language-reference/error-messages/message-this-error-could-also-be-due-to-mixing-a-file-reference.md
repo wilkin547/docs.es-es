@@ -1,5 +1,5 @@
 ---
-title: <message> Este error también podría ser debido a la combinación de una referencia de archivo con una referencia de proyecto al ensamblado '<assemblyname>'
+title: <message> Este error también puede ser debido a la combinación de una referencia de archivo con una referencia de proyecto al ensamblado "<assemblyname>"
 ms.date: 07/20/2015
 f1_keywords:
 - bc30971
@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - BC30971
 ms.assetid: 75d2e8b5-2fdc-4623-8b32-cba805dab7db
-ms.openlocfilehash: 951f90a9209ff31896f4426ceb75f05b012897a6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 263e30f992ef58b0053acb2fd749d0d9186ef6b8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921022"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397264"
 ---
-# <a name="message-this-error-could-also-be-due-to-mixing-a-file-reference-with-a-project-reference-to-assembly-assemblyname"></a>\<mensaje > Este error también podría ser debido a la combinación de una referencia de archivo con una referencia de proyecto al ensamblado '\<assemblyname >'
-\<mensaje > Este error también podría ser debido a la combinación de una referencia de archivo con una referencia de proyecto al ensamblado '\<assemblyname >. En este caso, intente reemplazar la referencia de archivo a '\<nombredearchivodeensamblado >' en el proyecto '\<projectname1 >' con una referencia de proyecto a '\<projectname2 >'.  
+# <a name="message-this-error-could-also-be-due-to-mixing-a-file-reference-with-a-project-reference-to-assembly-assemblyname"></a>\<message> Este error también puede ser debido a la combinación de una referencia de archivo con una referencia de proyecto al ensamblado "\<assemblyname>"
+\<message>Este error también podría deberse a la combinación de una referencia de archivo con una referencia de proyecto al ensamblado ' \<assemblyname> . En este caso, intente reemplazar la referencia de archivo a ' \<assemblyfilename> ' en el proyecto ' \<projectname1> ' con una referencia de proyecto a ' \<projectname2> '.  
   
- Código del proyecto accede a un miembro de otro proyecto, pero la configuración de la solución no admite el compilador de Visual Basic resolver la referencia.  
+ El código del proyecto accede a un miembro de otro proyecto, pero la configuración de la solución no permite que el compilador de Visual Basic resuelva la referencia.  
   
- Para obtener acceso a un tipo definido en otro ensamblado, el compilador de Visual Basic debe tener una referencia a ese ensamblado. Debe ser una referencia única y no ambigua, que no produzca referencias circulares entre proyectos.  
+ Para tener acceso a un tipo definido en otro ensamblado, el compilador Visual Basic debe tener una referencia a ese ensamblado. Debe ser una referencia única y no ambigua, que no produzca referencias circulares entre proyectos.  
   
  **Identificador de error:** BC30971  
   
@@ -29,10 +29,10 @@ ms.locfileid: "61921022"
   
 2. En las propiedades del proyecto, agregue una referencia al proyecto que contiene el ensamblado que define el tipo que está usando.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Administrar referencias en un proyecto](/visualstudio/ide/managing-references-in-a-project)
-- [Referencias a elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [References to Declared Elements](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 
 - [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)
 - [Solucionar problemas de referencias rotas](/visualstudio/ide/troubleshooting-broken-references)

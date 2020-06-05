@@ -5,14 +5,14 @@ helpviewer_keywords:
 - <remarks> XML tag
 - remarks XML tag
 ms.assetid: c6241773-a7ed-41c9-9a8b-9722a0c606a9
-ms.openlocfilehash: b327e548bcdce1522a888855bd88e3150695147b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c57ddb870192bd94301f99eb71ad29526e8efc28
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352257"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400026"
 ---
-# <a name="remarks-visual-basic"></a>\<Comentarios > (Visual Basic)
+# <a name="remarks-visual-basic"></a>\<remarks> (Visual Basic)
 Especifica una sección de comentarios para el miembro.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -26,17 +26,17 @@ Especifica una sección de comentarios para el miembro.
  Descripción del miembro.  
   
 ## <a name="remarks"></a>Comentarios  
- Use la etiqueta `<remarks>` para agregar información sobre un tipo, complementando la información especificada con [\<> de Resumen](../../../visual-basic/language-reference/xmldoc/summary.md).  
+ Use la `<remarks>` etiqueta para agregar información sobre un tipo, complementando la información especificada con [\<summary>](summary.md) .  
   
  Esta información aparece en el Examinador de objetos. Para obtener información sobre el Examinador de objetos, vea [ver la estructura del código](/visualstudio/ide/viewing-the-structure-of-code).  
   
- Compile con [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) para procesar los comentarios de documentación de un archivo.  
+ Compile with [-doc](../../reference/command-line-compiler/doc.md) para procesar los comentarios de documentación en un archivo.  
   
 ## <a name="example"></a>Ejemplo  
- En este ejemplo se usa la etiqueta `<remarks>` para explicar lo que hace el método `UpdateRecord`.  
+ En este ejemplo se usa la `<remarks>` etiqueta para explicar lo que `UpdateRecord` hace el método.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Etiquetas XML para comentarios](../../../visual-basic/language-reference/xmldoc/index.md)
+- [Etiquetas de comentario XML](index.md)

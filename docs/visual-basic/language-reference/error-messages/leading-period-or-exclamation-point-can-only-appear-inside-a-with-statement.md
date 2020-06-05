@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30157
 ms.assetid: 70daaee1-14f9-45b7-9f30-53794310b95e
-ms.openlocfilehash: 15390fb506fe9bca10f6917f5b26451a5569bece
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 149acc2baac0f45fa971a11f254d694526d140d7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921126"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397329"
 ---
 # <a name="leading--or--can-only-appear-inside-a-with-statement"></a>'.' o '!' inicial sólo puede aparecer dentro de una instrucción 'With'
-Un punto (.) o signo de exclamación (!) que no está dentro un `With` bloque aparece sin una expresión de la izquierda. Acceso a miembros (`.`) y acceso a miembros de diccionario (`!`) requieren una expresión que especifica el elemento que contiene el miembro. Esto debe aparecer inmediatamente a la izquierda del descriptor de acceso o como destino de una `With` bloque que contiene el acceso a miembros.  
+Un punto (.) o un signo de exclamación (!) que no está dentro de un `With` bloque se produce sin una expresión a la izquierda. El acceso a miembros ( `.` ) y el acceso a miembros de diccionario ( `!` ) requieren una expresión que especifique el elemento que contiene el miembro. Debe aparecer inmediatamente a la izquierda del descriptor de acceso o como destino de un `With` bloque que contiene el acceso a miembros.  
   
  **Identificador de error:** BC30157  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1. Asegúrese de que el `With` bloque tiene el formato correcto.  
+1. Asegúrese de que el `With` bloque tenga el formato correcto.  
   
-2. Si no hay ningún `With` bloquear, agregue una expresión a la izquierda del descriptor de acceso que se evalúa como un elemento definido que contiene el miembro.  
+2. Si no hay ningún `With` bloque, agregue una expresión a la izquierda del descriptor de acceso que se evalúe como un elemento definido que contiene el miembro.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Caracteres especiales en el código](../../../visual-basic/programming-guide/program-structure/special-characters-in-code.md)
-- [With...End With (instrucción)](../../../visual-basic/language-reference/statements/with-end-with-statement.md)
+- [Caracteres especiales en el código](../../programming-guide/program-structure/special-characters-in-code.md)
+- [Instrucción With...End With](../statements/with-end-with-statement.md)

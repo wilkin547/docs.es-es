@@ -1,13 +1,13 @@
 ---
-title: 'Cómo: Buscar archivos con un nombre o atributo especificados'
+title: Procedimiento para buscar archivos con un nombre o atributo especificados
 ms.date: 07/20/2015
 ms.assetid: b26026a3-3f43-448f-a582-259997af6be0
-ms.openlocfilehash: 970fb862b843016425e3a0f0c2bcf00e6fcba3a6
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 4a6a5630f4ac0eb0cb08aed0dc8a390225194675
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75342136"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396420"
 ---
 # <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>Cómo: buscar archivos con un nombre o atributo especificados (Visual Basic)
 En este ejemplo se muestra cómo encontrar todos los archivos con una determinada extensión de nombre de archivo (por ejemplo, ".txt") en un árbol de directorios especificado. También se muestra cómo devolver el archivo más reciente o más antiguo del árbol por fecha de creación.  
@@ -61,9 +61,9 @@ End Module
 ```  
   
 ## <a name="compile-the-code"></a>Compilar el código  
-Cree un proyecto de aplicación de consola de Visual Basic, con una instrucción de `Imports` para el espacio de nombres System. Linq.
+Cree un proyecto de aplicación de consola de Visual Basic, con una `Imports` instrucción para el espacio de nombres System. Linq.
   
 ## <a name="see-also"></a>Vea también
 
-- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ y directorios de archivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ to Objects (Visual Basic)](linq-to-objects.md)
+- [LINQ y directorios de archivos (Visual Basic)](linq-and-file-directories.md)

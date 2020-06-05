@@ -1,13 +1,13 @@
 ---
-title: 'Cómo: Buscar frases que contengan un conjunto especificado de palabras (LINQ)'
+title: Procedimiento para buscar frases que contengan un conjunto especificado de palabras (LINQ)
 ms.date: 07/20/2015
 ms.assetid: a5ae8ced-61fe-4c10-bb8a-95630e50f603
-ms.openlocfilehash: 6595932fae9737a0ac482c952b29bfde429de76f
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: ce88bf001346f90eb9b08ca1ff14afc7dcb04fa0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344163"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397965"
 ---
 # <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-visual-basic"></a>Cómo: Buscar frases que contengan un conjunto especificado de palabras (LINQ) (Visual Basic)
 
@@ -65,8 +65,8 @@ En la llamada a <xref:System.String.Split%2A>, los signos de puntuación se usan
 
 ## <a name="compile-the-code"></a>Compilar el código
 
-Cree un proyecto de aplicación de consola de Visual Basic, con una instrucción de `Imports` para el espacio de nombres System. Linq.
+Cree un proyecto de aplicación de consola de Visual Basic, con una `Imports` instrucción para el espacio de nombres System. Linq.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [LINQ y cadenas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ y cadenas (Visual Basic)](linq-and-strings.md)

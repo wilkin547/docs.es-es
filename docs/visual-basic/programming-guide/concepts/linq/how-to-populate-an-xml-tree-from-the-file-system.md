@@ -1,13 +1,13 @@
 ---
-title: 'Cómo: Rellenar un árbol XML desde el sistema de archivos'
+title: Procedimiento para rellenar un árbol XML desde el sistema de archivos
 ms.date: 07/20/2015
 ms.assetid: 34eec79e-7945-4ba8-9f74-d05bb8ec67f6
-ms.openlocfilehash: 5a4c7eaea91db54afcd91d85745dfec27cbabb8c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a3898b63f24bb87ab5e0de47685c36d61f09250b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344475"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396537"
 ---
 # <a name="how-to-populate-an-xml-tree-from-the-file-system-visual-basic"></a>Cómo: rellenar un árbol XML desde el sistema de archivos (Visual Basic)
 Una aplicación habitual y útil de los árboles XML es un almacén de datos de nombres y valores jerárquicos. Puede rellenar un árbol XML con datos jerárquicos y, a continuación, consultarlo, transformarlo y, si es necesario, serializarlo. En este escenario de uso, gran parte de la semántica específica XML (por ejemplo, el comportamiento de los espacios en blanco y los espacios de nombres) no es importante. En su lugar, usará el árbol XML como una base de datos jerárquica, pequeña y en memoria, de usuario único.  
@@ -114,6 +114,6 @@ End Module
 Total File Size:59089  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Técnicas de consulta avanzadas (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [Técnicas de consulta avanzadas (LINQ to XML) (Visual Basic)](advanced-query-techniques-linq-to-xml.md)

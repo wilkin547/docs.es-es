@@ -2,14 +2,14 @@
 title: Atributos comunes
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: 2889411779a275baa8c91862d4cac2f820d660d0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 57ef8f103d64a51d896f46d2889d78ec99ff3223
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353525"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400724"
 ---
-# <a name="common-attributes-visual-basic"></a>Atributos comunes (Visual Basic)
+# <a name="common-attributes-visual-basic"></a>Common Attributes (Visual Basic) (Atributos comunes [Visual Basic])
 
 En este tema se describen los atributos que se usan con más frecuencia en Visual Basic programas.
 
@@ -23,7 +23,7 @@ En este tema se describen los atributos que se usan con más frecuencia en Visua
 
 - [Atributos de Visual Basic](#VB)
 
-## <a name="Global"></a> Atributos globales
+## <a name="global-attributes"></a><a name="Global"></a>Atributos globales
 
 La mayoría de los atributos se aplican a elementos específicos del lenguaje, como las clases o los métodos, aunque algunos atributos son globales (se aplican a todo un ensamblado o módulo). Por ejemplo, el atributo <xref:System.Reflection.AssemblyVersionAttribute> se puede usar para insertar información de versión en un ensamblado, como en este ejemplo:
 
@@ -31,9 +31,9 @@ La mayoría de los atributos se aplican a elementos específicos del lenguaje, c
 <Assembly: AssemblyVersion("1.0.0.0")>
 ```
 
-Los atributos globales aparecen en el código fuente después de cualquier instrucción de `Imports` de nivel superior y antes de cualquier declaración de espacio de nombres, módulo o tipo. Los atributos globales pueden aparecer en varios archivos de código fuente, pero estos archivos se deben compilar en un solo paso de compilación. En el caso de los proyectos de Visual Basic, los atributos globales normalmente se colocan en el archivo AssemblyInfo. VB (el archivo se crea automáticamente cuando se crea un proyecto en Visual Studio).
+Los atributos globales aparecen en el código fuente después de cualquier instrucción de nivel superior `Imports` y antes de cualquier declaración de espacio de nombres, módulo o tipo. Los atributos globales pueden aparecer en varios archivos de código fuente, pero estos archivos se deben compilar en un solo paso de compilación. En el caso de los proyectos de Visual Basic, los atributos globales normalmente se colocan en el archivo AssemblyInfo. VB (el archivo se crea automáticamente cuando se crea un proyecto en Visual Studio).
 
-Los atributos de ensamblado son valores que proporcionan información sobre un ensamblado. Se dividen en las categorías siguientes:
+Los atributos de ensamblado son valores que proporcionan información sobre un ensamblado. Se dividen en las siguientes categorías:
 
 - Atributos de identidad del ensamblado
 
@@ -79,7 +79,7 @@ Puede usar los atributos de manifiesto del ensamblado para proporcionar informac
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|Define un atributo personalizado que especifica una configuración de ensamblado (por ejemplo, comercial o depuración) para un manifiesto del ensamblado.|
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|Define un alias descriptivo predeterminado para un manifiesto del ensamblado.|
 
-## <a name="Obsolete"></a> Atributo Obsolete
+## <a name="obsolete-attribute"></a><a name="Obsolete"></a>Atributo obsoleto
 
 El atributo `Obsolete` marca una entidad del programa como una entidad cuyo uso ya no se recomienda. Cada uso de una entidad marcada como obsoleta generará posteriormente una advertencia o un error, en función de la configuración del atributo. Por ejemplo:
 
@@ -122,7 +122,7 @@ El atributo `Obsolete` se puede usar sin argumentos, aunque se recomienda inclui
 
 El atributo `Obsolete` es un atributo de uso único y se puede aplicar a cualquier entidad que admita atributos. `Obsolete` es un alias de <xref:System.ObsoleteAttribute>.
 
-## <a name="Conditional"></a> Atributo Conditional
+## <a name="conditional-attribute"></a><a name="Conditional"></a>Atributo Conditional
 
 El atributo `Conditional` hace que la ejecución de un método dependa de un identificador de preprocesamiento. El atributo `Conditional` es un alias de <xref:System.Diagnostics.ConditionalAttribute> y se puede aplicar a un método o a una clase de atributo.
 
@@ -218,7 +218,7 @@ Class SampleClass
 End Class
 ```
 
-## <a name="CallerInfo"></a> Atributos de información del llamador
+## <a name="caller-info-attributes"></a><a name="CallerInfo"></a>Atributos de información del llamador
 
 Mediante los atributos de información del llamador, se puede obtener información sobre el llamador de un método. Puede obtener la ruta de acceso al código fuente, el número de línea del código fuente y el nombre del miembro del llamador.
 
@@ -228,11 +228,11 @@ Para obtener la información del llamador del miembro, use los atributos que se 
 |---|---|---|
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Ruta de acceso completa del archivo de código fuente que contiene el llamador. Esta es la ruta de acceso en tiempo de compilación.|`String`|
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Número de línea del archivo de código fuente desde el que se llama al método.|`Integer`|
-|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Nombre de método o de propiedad del llamador. Para obtener más información, vea [información del llamador (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).|`String`|
+|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Nombre de método o de propiedad del llamador. Para obtener más información, vea [información del llamador (Visual Basic)](../caller-information.md).|`String`|
 
-Para obtener más información sobre los atributos de información del llamador, vea [información del llamador (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).
+Para obtener más información sobre los atributos de información del llamador, vea [información del llamador (Visual Basic)](../caller-information.md).
 
-## <a name="VB"></a>Atributos de Visual Basic
+## <a name="visual-basic-attributes"></a><a name="VB"></a>Atributos de Visual Basic
 
 En la tabla siguiente se enumeran los atributos que son específicos de Visual Basic.
 
@@ -245,7 +245,7 @@ En la tabla siguiente se enumeran los atributos que son específicos de Visual B
 
 ### <a name="comclassattribute"></a>COMClassAttribute
 
-Utilice `COMClassAttribute` para simplificar el proceso de creación de componentes COM a partir de Visual Basic. Los objetos COM son considerablemente diferentes de .NET Framework ensamblados y sin `COMClassAttribute`, debe seguir una serie de pasos para generar un objeto COM a partir de Visual Basic. En el caso de las clases marcadas con `COMClassAttribute`, el compilador realiza muchos de estos pasos automáticamente.
+`COMClassAttribute`Se usa para simplificar el proceso de creación de componentes com a partir de Visual Basic. Los objetos COM son considerablemente diferentes de los ensamblados de .NET Framework y sin `COMClassAttribute` , debe seguir una serie de pasos para generar un objeto com a partir de Visual Basic. En el caso de las clases marcadas con `COMClassAttribute` , el compilador realiza muchos de estos pasos automáticamente.
 
 ### <a name="hidemodulenameattribute"></a>HideModuleNameAttribute
 
@@ -253,7 +253,7 @@ Use `HideModuleNameAttribute` para permitir el acceso a los miembros de módulo 
 
 ### <a name="vbfixedstringattribute"></a>VBFixedStringAttribute
 
-Utilice `VBFixedStringAttribute` para forzar que Visual Basic cree una cadena de longitud fija. Las cadenas son de longitud variable de forma predeterminada, y este atributo es útil cuando se almacenan cadenas en archivos. El código siguiente muestra este proceso:
+Use `VBFixedStringAttribute` para forzar Visual Basic para crear una cadena de longitud fija. Las cadenas son de longitud variable de forma predeterminada, y este atributo es útil cuando se almacenan cadenas en archivos. El código siguiente muestra este proceso:
 
 ```vb
 Structure Worker
@@ -267,13 +267,13 @@ End Structure
 
 ### <a name="vbfixedarrayattribute"></a>VBFixedArrayAttribute
 
-Utilice `VBFixedArrayAttribute` para declarar matrices de tamaño fijo. Al igual que las cadenas de Visual Basic, las matrices son de longitud variable de forma predeterminada. Este atributo es útil al serializar o escribir datos en archivos.
+Use `VBFixedArrayAttribute` para declarar matrices de tamaño fijo. Al igual que las cadenas de Visual Basic, las matrices son de longitud variable de forma predeterminada. Este atributo es útil al serializar o escribir datos en archivos.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [Guía de programación en Visual Basic](../../../../visual-basic/programming-guide/index.md)
+- [Guía de programación en Visual Basic](../../index.md)
 - [Atributos](../../../../standard/attributes/index.md)
-- [Reflexión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
-- [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Acceso a atributos mediante reflexión [Visual Basic])
+- [Reflection (Visual Basic)](../reflection.md) (Reflexión [Visual Basic])
+- [Accessing Attributes by Using Reflection (Visual Basic)](accessing-attributes-by-using-reflection.md) (Acceso a atributos mediante reflexión [Visual Basic])

@@ -1,16 +1,16 @@
 ---
-title: 'Cómo: Buscar elementos de un espacio de nombres (XPath-LINQ to XML)'
+title: Procedimiento para buscar elementos de un espacio de nombres (XPath-LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: c7cb3b77-3424-4b54-9efa-4dc715948e41
-ms.openlocfilehash: 822af6367fab707f52e2dcb7a130d899be1fba26
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3663516e6b6289fe3b1d0599ff3ed4b7dad6a80a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344661"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405201"
 ---
 # <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a>Cómo: buscar elementos en un espacio de nombres (XPath-LINQ to XML) (Visual Basic)
-Las expresiones XPath pueden buscar nodos en un espacio de nombres específico. Las expresiones XPath usan prefijos de espacio de nombres para especificar espacios de nombre. Para analizar una expresión XPath que contiene prefijos de espacio de nombre, debe pasar un objeto a los métodos XPath que implementan <xref:System.Xml.IXmlNamespaceResolver>. Este ejemplo usa <xref:System.Xml.XmlNamespaceManager>.  
+Las expresiones XPath pueden buscar nodos en un espacio de nombres específico. Las expresiones XPath usan prefijos de espacio de nombres para especificar espacios de nombre. Para analizar una expresión XPath que contiene prefijos de espacio de nombre, debe pasar un objeto a los métodos XPath que implementan <xref:System.Xml.IXmlNamespaceResolver>. En este ejemplo se usa <xref:System.Xml.XmlNamespaceManager>.  
   
  La expresión XPath es:  
   
@@ -82,4 +82,4 @@ Results are identical
   
 ## <a name="see-also"></a>Vea también
 
-- [LINQ to XML para los usuarios de XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML para los usuarios de XPath (Visual Basic)](linq-to-xml-for-xpath-users.md)

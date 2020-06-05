@@ -12,12 +12,12 @@ helpviewer_keywords:
 - TypeOf operator [Visual Basic]
 - compatible data types [Visual Basic]
 ms.assetid: 33f65296-659a-4b9a-9a29-c2a91cff68b2
-ms.openlocfilehash: 22af5b8f8488ca44e388596530decd52e33525dc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0cce36073b53442bce63f966f3bd94bd5d70d2a8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350893"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406332"
 ---
 # <a name="typeof-operator-visual-basic"></a>TypeOf (Operador, Visual Basic)
 Comprueba si el tipo en tiempo de ejecución del resultado de una expresión es compatible con el tipo especificado.
@@ -32,22 +32,22 @@ result = TypeOf objectexpression Is typename
 result = TypeOf objectexpression IsNot typename  
 ```  
   
-## <a name="parts"></a>Elementos  
+## <a name="parts"></a>Partes  
  `result`  
  Devuelto. Valor `Boolean`.  
   
  `objectexpression`  
- Obligatorio. Cualquier expresión que se evalúa como un tipo de referencia.  
+ Necesario. Cualquier expresión que se evalúa como un tipo de referencia.  
   
  `typename`  
- Obligatorio. Cualquier nombre de tipo de datos.  
+ Necesario. Cualquier nombre de tipo de datos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  El operador `TypeOf` determina si el tipo en tiempo de ejecución de `objectexpression` es compatible con `typename`. La compatibilidad depende de la categoría del tipo de `typename`. En la tabla siguiente se muestra cómo se determina la compatibilidad.  
   
 |Categoría de tipo de `typename`|Criterio de compatibilidad|  
 |---------------------------------|-----------------------------|  
-|Clase|`objectexpression` es de tipo `typename` o hereda de `typename`|  
+|Class|`objectexpression` es de tipo `typename` o hereda de `typename`|  
 |Estructura|`objectexpression` es de tipo `typename`|  
 |Interfaz|`objectexpression` implementa `typename` o hereda de una clase que implementa `typename`|  
   
@@ -62,11 +62,11 @@ result = TypeOf objectexpression IsNot typename
   
  La variable `refInteger` tiene un tipo en tiempo de ejecución de `Integer`. Es compatible con `Integer` pero no con `Double`. La variable `refForm` tiene un tipo en tiempo de ejecución de <xref:System.Windows.Forms.Form>. Es compatible con <xref:System.Windows.Forms.Form> porque es su tipo, con <xref:System.Windows.Forms.Control> porque <xref:System.Windows.Forms.Form> hereda de <xref:System.Windows.Forms.Control>, y con <xref:System.ComponentModel.IComponent> porque <xref:System.Windows.Forms.Form> hereda de <xref:System.ComponentModel.Component>, que implementa <xref:System.ComponentModel.IComponent>. Sin embargo, `refForm` no es compatible con <xref:System.Windows.Forms.Label>.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Is (operador)](../../../visual-basic/language-reference/operators/is-operator.md)
-- [IsNot (operador)](../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [Operadores de comparación en Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [Prioridad de operador en Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [Operadores enumerados por funcionalidad](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Operadores y expresiones](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [Operador is](is-operator.md)
+- [Operador IsNot](isnot-operator.md)
+- [Comparison Operators in Visual Basic](../../programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Prioridad de operador en Visual Basic](operator-precedence.md)
+- [Lista de operadores según funcionalidad](operators-listed-by-functionality.md)
+- [Operadores y expresiones](../../programming-guide/language-features/operators-and-expressions/index.md)
