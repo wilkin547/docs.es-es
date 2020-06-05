@@ -9,15 +9,15 @@ helpviewer_keywords:
 - arguments [Visual Basic], passing by value or by reference
 - argument passing [Visual Basic], by value or by reference
 ms.assetid: fd8a9de6-7178-44d5-a9bf-458d4ad907c2
-ms.openlocfilehash: 28e59753a35ab67b15fbc549df5bb8a3489aba5a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3dd4be6ea6de9dfe8eb165e5d4ba9a990fc40585
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352605"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84363959"
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>Pasar argumentos por valor y por referencia (Visual Basic)
-En Visual Basic, puede pasar un argumento a un procedimiento *por valor* o *por referencia*. Esto se conoce como *mecanismo de paso*y determina si el procedimiento puede modificar el elemento de programación subyacente al argumento en el código de llamada. La declaración de procedimiento determina el mecanismo de paso de cada parámetro especificando la palabra clave [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) o [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) .  
+En Visual Basic, puede pasar un argumento a un procedimiento *por valor* o *por referencia*. Esto se conoce como *mecanismo de paso*y determina si el procedimiento puede modificar el elemento de programación subyacente al argumento en el código de llamada. La declaración de procedimiento determina el mecanismo de paso de cada parámetro especificando la palabra clave [ByVal](../../../language-reference/modifiers/byval.md) o [ByRef](../../../language-reference/modifiers/byref.md) .  
   
 ## <a name="distinctions"></a>Diferencias  
  Al pasar un argumento a un procedimiento, tenga en cuenta varias distinciones diferentes que interactúan entre sí:  
@@ -35,46 +35,46 @@ En Visual Basic, puede pasar un argumento a un procedimiento *por valor* o *por 
 ## <a name="choice-of-passing-mechanism"></a>Elección del mecanismo de paso  
  Debe elegir cuidadosamente el mecanismo de paso para cada argumento.  
   
-- **Protección**. Al elegir entre los dos mecanismos de paso, el criterio más importante es la exposición de las variables de llamada que se van a cambiar. La ventaja de pasar un argumento `ByRef` es que el procedimiento puede devolver un valor al código de llamada a través de ese argumento. La ventaja de pasar un argumento `ByVal` es que protege una variable de que el procedimiento cambie.  
+- **Protección**. Al elegir entre los dos mecanismos de paso, el criterio más importante es la exposición de las variables de llamada que se van a cambiar. La ventaja de pasar un argumento `ByRef` es que el procedimiento puede devolver un valor al código de llamada a través de ese argumento. La ventaja de pasar un argumento `ByVal` es que impide que el procedimiento cambie una variable.  
   
-- **Rendimiento**. Aunque el mecanismo de paso puede afectar al rendimiento del código, la diferencia suele ser insignificante. Una excepción es un tipo de valor que se pasa `ByVal`. En este caso, Visual Basic copia todo el contenido de los datos del argumento. Por lo tanto, para un tipo de valor grande, como una estructura, puede ser más eficaz pasarlo `ByRef`.  
+- **Rendimiento**. Aunque el mecanismo de paso puede afectar al rendimiento del código, la diferencia suele ser insignificante. Una excepción es un tipo de valor que se pasa `ByVal` . En este caso, Visual Basic copia todo el contenido de los datos del argumento. Por lo tanto, para un tipo de valor grande, como una estructura, puede ser más eficaz pasarlo `ByRef` .  
   
      En el caso de los tipos de referencia, solo se copia el puntero a los datos (cuatro bytes en las plataformas de 32 bits, ocho bytes en las plataformas de 64 bits). Por lo tanto, puede pasar argumentos de tipo `String` o `Object` por valor sin dañar el rendimiento.  
   
 ## <a name="determination-of-the-passing-mechanism"></a>Determinación del mecanismo de paso  
- La declaración de procedimiento especifica el mecanismo de paso de cada parámetro. El código de llamada no puede invalidar un mecanismo de `ByVal`.  
+ La declaración de procedimiento especifica el mecanismo de paso de cada parámetro. El código de llamada no puede invalidar un `ByVal` mecanismo.  
   
- Si un parámetro se declara con `ByRef`, el código de llamada puede forzar al mecanismo a `ByVal` mediante la inclusión del nombre del argumento entre paréntesis en la llamada. Para obtener más información, vea [Cómo: forzar un argumento para que se pase por valor](./how-to-force-an-argument-to-be-passed-by-value.md).  
+ Si un parámetro se declara con `ByRef` , el código de llamada puede forzar el mecanismo para que incluya `ByVal` el nombre del argumento entre paréntesis en la llamada. Para obtener más información, vea [Cómo: forzar un argumento para que se pase por valor](./how-to-force-an-argument-to-be-passed-by-value.md).  
   
  De forma predeterminada, en Visual Basic es pasar argumentos por valor.  
   
 ## <a name="when-to-pass-an-argument-by-value"></a>Cuándo pasar un argumento por valor  
   
-- Si el elemento de código de llamada subyacente al argumento es un elemento no modificable, declare el parámetro correspondiente [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). Ningún código puede cambiar el valor de un elemento no modificable.  
+- Si el elemento de código de llamada subyacente al argumento es un elemento no modificable, declare el parámetro correspondiente [ByVal](../../../language-reference/modifiers/byval.md). Ningún código puede cambiar el valor de un elemento no modificable.  
   
-- Si el elemento subyacente es modificable, pero no desea que el procedimiento pueda cambiar su valor, declare el parámetro `ByVal`. Solo el código de llamada puede cambiar el valor de un elemento modificable que se pasa por valor.  
+- Si el elemento subyacente es modificable, pero no desea que el procedimiento pueda cambiar su valor, declare el parámetro `ByVal` . Solo el código de llamada puede cambiar el valor de un elemento modificable que se pasa por valor.  
   
 ## <a name="when-to-pass-an-argument-by-reference"></a>Cuándo pasar un argumento por referencia  
   
-- Si el procedimiento tiene una necesidad genuina de cambiar el elemento subyacente en el código de llamada, declare el parámetro correspondiente [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md).  
+- Si el procedimiento tiene una necesidad genuina de cambiar el elemento subyacente en el código de llamada, declare el parámetro correspondiente [ByRef](../../../language-reference/modifiers/byref.md).  
   
-- Si la ejecución correcta del código depende del procedimiento que cambia el elemento subyacente en el código de llamada, declare el parámetro `ByRef`. Si se pasa por valor, o si el código de llamada invalida el mecanismo de paso de `ByRef` mediante la inclusión del argumento entre paréntesis, la llamada al procedimiento podría producir resultados inesperados.  
+- Si la ejecución correcta del código depende del procedimiento que cambia el elemento subyacente en el código de llamada, declare el parámetro `ByRef` . Si se pasa por valor, o si el código de llamada invalida el `ByRef` mecanismo de paso mediante la inclusión del argumento entre paréntesis, la llamada al procedimiento podría producir resultados inesperados.  
   
 ## <a name="example"></a>Ejemplo  
   
 ### <a name="description"></a>Descripción  
- En el ejemplo siguiente se muestra Cuándo pasar argumentos por valor y cuándo pasarlos por referencia. El procedimiento `Calculate` tiene un `ByVal` y un parámetro `ByRef`. Dado un tipo de interés, `rate`y una suma de dinero, `debt`, la tarea del procedimiento es calcular un nuevo valor para `debt` que es el resultado de aplicar el tipo de interés al valor original de `debt`. Dado que `debt` es un parámetro `ByRef`, el nuevo total se refleja en el valor del argumento en el código de llamada que corresponde a `debt`. `rate` de parámetro es un parámetro de `ByVal` porque `Calculate` no debe cambiar su valor.  
+ En el ejemplo siguiente se muestra Cuándo pasar argumentos por valor y cuándo pasarlos por referencia. `Calculate`El procedimiento tiene un `ByVal` parámetro y `ByRef` . Dado un tipo de interés, `rate` y una suma de dinero, `debt` , la tarea del procedimiento es calcular un nuevo valor para `debt` que es el resultado de aplicar el tipo de interés al valor original de `debt` . Dado `debt` que es un `ByRef` parámetro, el nuevo total se refleja en el valor del argumento en el código de llamada correspondiente a `debt` . `rate`El parámetro es un `ByVal` parámetro porque `Calculate` no debe cambiar su valor.  
   
 ### <a name="code"></a>Código  
  [!code-vb[VbVbcnProcedures#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class2.vb#74)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Procedimientos](./index.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)
-- [Pasar argumentos a un procedimiento](./how-to-pass-arguments-to-a-procedure.md)
-- [Cambiar el valor de un argumento de procedimiento](./how-to-change-the-value-of-a-procedure-argument.md)
-- [Proteger un argumento de procedimiento para que no se realicen cambios de valor](./how-to-protect-a-procedure-argument-against-value-changes.md)
-- [Forzar un argumento para que pase como un valor](./how-to-force-an-argument-to-be-passed-by-value.md)
-- [Paso de argumentos por posición o por nombre](./passing-arguments-by-position-and-by-name.md)
-- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Procedimiento para pasar argumentos a un procedimiento](./how-to-pass-arguments-to-a-procedure.md)
+- [Procedimiento para cambiar el valor de un argumento de procedimiento](./how-to-change-the-value-of-a-procedure-argument.md)
+- [Procedimiento para proteger un argumento de procedimiento para que no se realicen cambios de valor](./how-to-protect-a-procedure-argument-against-value-changes.md)
+- [Procedimiento para forzar un argumento para que pase como un valor](./how-to-force-an-argument-to-be-passed-by-value.md)
+- [Pasar argumentos por posición o por nombre](./passing-arguments-by-position-and-by-name.md)
+- [Tipos de valor y tipos de referencia](../data-types/value-types-and-reference-types.md)

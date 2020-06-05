@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_ArrayNotInitialized
 ms.assetid: de70697d-e2aa-4661-bfbb-f7ba34539516
-ms.openlocfilehash: 2aae38ca9d0ba8aaab942f5b15a0807ab469a7c5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3427873df4a154442a3f867f7b3c4b916a347f74
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008090"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84365116"
 ---
 # <a name="cannot-determine-array-type-because-it-is-nothing"></a>No se puede determinar el tipo de matriz porque tiene el valor Nothing.
 No se puede determinar el tipo de la matriz porque se ha establecido en el valor `Nothing`.  
@@ -18,7 +18,7 @@ No se puede determinar el tipo de la matriz porque se ha establecido en el valor
   
 1. Proporcione un valor distinto de `Nothing` para la matriz.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Matrices](../../visual-basic/programming-guide/language-features/arrays/index.md)
-- [Nothing](../../visual-basic/language-reference/nothing.md)
+- [Matrices](../programming-guide/language-features/arrays/index.md)
+- [Relación](../language-reference/nothing.md)

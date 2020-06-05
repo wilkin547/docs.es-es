@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Definir una clase que pueda proporcionar la misma funcionalidad en tipos de datos diferentes'
+title: Procedimiento Definición de clases capaces de proporcionar la misma funcionalidad en tipos de datos diferentes
 ms.date: 07/20/2015
 helpviewer_keywords:
 - data type arguments [Visual Basic], using
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-ms.openlocfilehash: d80623d9e55358d37aa45f11f1525c80a09b91a6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3b1f47250453c32735d633b98da0bd0ddb1ed5b9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350040"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84393862"
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Cómo: Definir una clase que pueda proporcionar la misma funcionalidad en tipos de datos diferentes (Visual Basic)
 Puede definir una clase desde la que se puedan crear objetos que proporcionen una funcionalidad idéntica en tipos de datos diferentes. Para ello, especifique uno o más *parámetros de tipo* en la definición. Posteriormente, la clase puede servir de plantilla para los objetos que usan distintos tipos de datos. Una clase definida de esta manera se denomina *clase genérica*.  
@@ -44,7 +44,7 @@ Puede definir una clase desde la que se puedan crear objetos que proporcionen un
   
 1. Defina la clase de la manera normal.  
   
-2. Agregue `(Of` *typeparameter*`)` inmediatamente después del nombre de clase para especificar un parámetro de tipo.  
+2. Agregue `(Of` *typeparameter* `)` inmediatamente después del nombre de clase para especificar un parámetro de tipo.  
   
 3. Si tiene más de un parámetro de tipo, realice una lista separada por comas entre paréntesis. No repita la palabra clave `Of` .  
   
@@ -56,13 +56,13 @@ Puede definir una clase desde la que se puedan crear objetos que proporcionen un
   
     - Exponer un constructor sin parámetros.  
   
-     Si no especifica ninguna restricción, las únicas operaciones y miembros que el código podrá usar son las que admite el [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md). Para obtener más información, consulta [Type List](../../../../visual-basic/language-reference/statements/type-list.md).  
+     Si no especifica ninguna restricción, las únicas operaciones y miembros que el código podrá usar son las que admite el [Object Data Type](../../../language-reference/data-types/object-data-type.md). Para obtener más información, consulta [Type List](../../../language-reference/statements/type-list.md).  
   
-5. Identifique cada miembro de clase que deba declararse con un tipo suministrado y declárelo `As` `typeparameter`. Esto se aplica al almacenamiento interno, los parámetros de procedimiento y los valores devueltos.  
+5. Identifique cada miembro de clase que se va a declarar con un tipo suministrado y declárelo `As` `typeparameter` . Esto se aplica al almacenamiento interno, los parámetros de procedimiento y los valores devueltos.  
   
 6. Asegúrese de que el código solo usa operaciones y métodos admitidos por cualquier tipo de datos que pueda proporcionar a `itemType`.  
   
-     En el ejemplo siguiente se define una clase que administra una lista muy simple. Contiene la lista de la matriz interna `items`y el código que la usa puede declarar el tipo de datos de los elementos de la lista. Un constructor con parámetros permite que el código de uso establezca el límite superior de `items`y el constructor sin parámetros lo establece en 9 (para un total de 10 elementos).  
+     En el ejemplo siguiente se define una clase que administra una lista muy simple. Contiene la lista de la matriz interna `items`y el código que la usa puede declarar el tipo de datos de los elementos de la lista. Un constructor con parámetros permite que el código de uso establezca el límite superior de `items` , y el constructor sin parámetros lo establece en 9 (para un total de 10 elementos).  
   
      [!code-vb[VbVbalrDataTypes#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#7)]  
   
@@ -74,12 +74,12 @@ Puede definir una clase desde la que se puedan crear objetos que proporcionen un
   
      [!code-vb[VbVbalrDataTypes#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#8)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Tipos de datos](index.md)
+- [Tipos genéricos en Visual Basic](generic-types.md)
 - [Independencia del lenguaje y componentes independientes del lenguaje](../../../../standard/language-independence-and-language-independent-components.md)
-- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
-- [Lista de tipos](../../../../visual-basic/language-reference/statements/type-list.md)
-- [Utilizar una clase genérica](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
-- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [De](../../../language-reference/statements/of-clause.md)
+- [Type List](../../../language-reference/statements/type-list.md)
+- [Procedimiento Uso de clases genéricas](how-to-use-a-generic-class.md)
+- [Object Data Type](../../../language-reference/data-types/object-data-type.md)

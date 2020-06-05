@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
-ms.openlocfilehash: e56529919945558df178e18a83a895a79bfe4919
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 98aeb5699fdd5e5e538a205acd37436019c3fc03
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512721"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84363051"
 ---
-# <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>El tipo de la variable\<' variablename > ' no se inferirá porque está enlazado a un campo en un ámbito de inclusión
+# <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>El tipo de la variable '\<variablename>' no se inferirá porque está enlazado a un campo en un ámbito de inclusión
 
-El tipo de la variable\<' variablename > ' no se inferirá porque está enlazado a un campo en un ámbito de inclusión. Cambie el nombre de '\<variablename > ' o use el nombre completo (por ejemplo, ' me. variablename ' o ' MyBase. variablename ').
+El tipo de la variable ' \<variablename> ' no se inferirá porque está enlazado a un campo en un ámbito de inclusión. Cambie el nombre de ' \<variablename> ' o use el nombre completo (por ejemplo, ' me. variablename ' o ' MyBase. variablename ').
 
 Una variable de control de bucle en su código tiene el mismo nombre que un campo de la clase u otro ámbito de inclusión. Dado que la variable de control se utiliza sin una cláusula `As`, se enlaza al campo en el ámbito de inclusión y el compilador no crea una nueva variable para ella ni infiere su tipo.
 
@@ -41,7 +41,7 @@ End Class
 
 De forma predeterminada, este mensaje es una advertencia. Para obtener información sobre cómo ocultar las advertencias o cómo tratarlas como errores, vea [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).
 
-**IDENTIFICADOR de error:** BC42110
+**Identificador de error:** BC42110
 
 ### <a name="to-address-this-warning"></a>Para resolver esta advertencia
 
@@ -82,11 +82,11 @@ Class Customer
 End Class
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Option Infer (instrucción)](../../../visual-basic/language-reference/statements/option-infer-statement.md)
-- [For Each...Next (instrucción)](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
-- [For...Next (instrucción)](../../../visual-basic/language-reference/statements/for-next-statement.md)
-- [Procedimientos: Hacer referencia a la instancia actual de un objeto](../../../visual-basic/programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)
-- [Inferencia de tipo de variable local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [Me, My, MyBase y MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+- [Option Infer (instrucción)](../statements/option-infer-statement.md)
+- [Instrucción For Each...Next](../statements/for-each-next-statement.md)
+- [Instrucción For...Next](../statements/for-next-statement.md)
+- [Procedimiento para hacer referencia a la instancia actual de un objeto](../../programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)
+- [Inferencia de tipo de variable local](../../programming-guide/language-features/variables/local-type-inference.md)
+- [Me, My, MyBase y MyClass](../../programming-guide/program-structure/me-my-mybase-and-myclass.md)
