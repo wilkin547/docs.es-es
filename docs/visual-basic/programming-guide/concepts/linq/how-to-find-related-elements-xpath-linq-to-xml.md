@@ -1,13 +1,13 @@
 ---
-title: 'Cómo: Buscar elementos relacionados (XPath-LINQ to XML)'
+title: Procedimiento para buscar elementos relacionados (XPath-LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 6b0ef058-d704-48a5-98cd-33f00d088af9
-ms.openlocfilehash: e250572e7bd73e769e4ab06b7b7ff9e3b3d38c47
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5819ef216f767367aa16b20f818b2bbc537d54b7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344643"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364661"
 ---
 # <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a>Cómo: buscar elementos relacionados (XPath-LINQ to XML) (Visual Basic)
 Este tema muestra cómo obtener un elemento seleccionando en un atributo al que hace referencia el valor de otro elemento.  
@@ -21,7 +21,7 @@ Este tema muestra cómo obtener un elemento seleccionando en un atributo al que 
   
  Tenga en cuenta que la indización en una lista de .NET se basa en "cero". Sin embargo, la indización en una colección de nodos de un predicado XPath se basa en "uno". Este ejemplo refleja esta diferencia.  
   
- En este ejemplo se usa el siguiente documento XML: [Archivo XML de ejemplo: Clientes y pedidos (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ En este ejemplo se usa el siguiente documento XML: [Archivo XML de ejemplo: Clientes y pedidos (LINQ to XML)](sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Dim co As XDocument = XDocument.Load("CustomersOrders.xml")  
@@ -75,4 +75,4 @@ Results are identical
   
 ## <a name="see-also"></a>Vea también
 
-- [LINQ to XML para los usuarios de XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML para los usuarios de XPath (Visual Basic)](linq-to-xml-for-xpath-users.md)

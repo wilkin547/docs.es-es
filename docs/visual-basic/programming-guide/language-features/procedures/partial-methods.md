@@ -11,12 +11,12 @@ helpviewer_keywords:
 - methods [Visual Basic], partial methods
 - inserting custom logic into code
 ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
-ms.openlocfilehash: 7abf0565a985f1fb44fcf2bb91b9220d57a10f20
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 61a1398ba7de8dab005fa1e9efa13dc2ba18cc3c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352634"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364128"
 ---
 # <a name="partial-methods-visual-basic"></a>Métodos parciales (Visual Basic)
 Los métodos parciales permiten a los desarrolladores insertar lógica personalizada en el código. Normalmente, el código forma parte de una clase generada por el diseñador. Los métodos parciales se definen en una clase parcial que se crea mediante un generador de código y se suelen usar para proporcionar una notificación de que se ha cambiado algo. Permiten al desarrollador especificar el comportamiento personalizado en respuesta al cambio.  
@@ -33,11 +33,11 @@ End Sub
   
  La definición debe cumplir las siguientes condiciones:  
   
-- El método debe ser un `Sub`, no un `Function`.  
+- El método debe ser un `Sub` , no un `Function` .  
   
 - El cuerpo del método debe dejarse vacío.  
   
-- El modificador de acceso debe ser `Private`.  
+- El modificador de acceso debe ser `Private` .  
   
 ## <a name="implementation"></a>Implementación  
  La implementación consiste principalmente en rellenar el cuerpo del método parcial. La implementación está normalmente en una clase parcial independiente de la definición y está escrita por un desarrollador que desea extender el código generado.  
@@ -48,21 +48,21 @@ Private Sub QuantityChanged()
 End Sub  
 ```  
   
- En el ejemplo anterior se duplica exactamente la firma en la declaración, pero son posibles las variaciones. En concreto, se pueden agregar otros modificadores, como `Overloads` o `Overrides`. Solo se permite un modificador `Overrides`. Para obtener más información sobre los modificadores de método, vea [Sub Statement](../../../../visual-basic/language-reference/statements/sub-statement.md).  
+ En el ejemplo anterior se duplica exactamente la firma en la declaración, pero son posibles las variaciones. En concreto, se pueden agregar otros modificadores, como `Overloads` o `Overrides` . Solo `Overrides` se permite un modificador. Para obtener más información sobre los modificadores de método, vea [Sub Statement](../../../language-reference/statements/sub-statement.md).  
   
 ## <a name="use"></a>Uso  
- Se llama a un método parcial como se llamaría a cualquier otro procedimiento de `Sub`. Si se ha implementado el método, se evalúan los argumentos y se ejecuta el cuerpo del método. Sin embargo, recuerde que la implementación de un método parcial es opcional. Si no se implementa el método, no se evalúa ninguna llamada a él y no se evalúan las expresiones que se pasan como argumentos al método.  
+ Se llama a un método parcial como se llamaría a cualquier otro `Sub` procedimiento. Si se ha implementado el método, se evalúan los argumentos y se ejecuta el cuerpo del método. Sin embargo, recuerde que la implementación de un método parcial es opcional. Si no se implementa el método, no se evalúa ninguna llamada a él y no se evalúan las expresiones que se pasan como argumentos al método.  
   
 ## <a name="example"></a>Ejemplo  
- En un archivo denominado product. Designer. VB, defina una clase `Product` que tenga una propiedad `Quantity`.  
+ En un archivo denominado product. Designer. VB, defina una `Product` clase que tenga una `Quantity` propiedad.  
   
  [!code-vb[VbVbalrPartialMeths#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrPartialMeths/VB/Class1.vb#4)]  
   
- En un archivo denominado product. VB, proporcione una implementación para `QuantityChanged`.  
+ En un archivo denominado product. VB, proporcione una implementación para `QuantityChanged` .  
   
  [!code-vb[VbVbalrPartialMeths#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrPartialMeths/VB/Class1.vb#5)]  
   
- Por último, en el método Main de un proyecto, declare una instancia de `Product` y proporcione un valor inicial para su propiedad `Quantity`.  
+ Por último, en el método Main de un proyecto, declare una `Product` instancia de y proporcione un valor inicial para su `Quantity` propiedad.  
   
  [!code-vb[VbVbalrPartialMeths#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrPartialMeths/VB/Class1.vb#6)]  
   
@@ -70,11 +70,11 @@ End Sub
   
  `Quantity was changed to 100`  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Sub (instrucción)](../../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Subprocedimientos](./sub-procedures.md)
+- [Instrucción Sub](../../../language-reference/statements/sub-statement.md)
+- [Procedimientos Sub](./sub-procedures.md)
 - [Parámetros opcionales](./optional-parameters.md)
-- [Partial](../../../../visual-basic/language-reference/modifiers/partial.md)
+- [Partial](../../../language-reference/modifiers/partial.md)
 - [Generación de código en LINQ to SQL](../../../../framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
-- [Adición de lógica de negocios utilizando métodos parciales](../../../../framework/data/adonet/sql/linq/adding-business-logic-by-using-partial-methods.md)
+- [Agregar lógica de negocios utilizando métodos parciales](../../../../framework/data/adonet/sql/linq/adding-business-logic-by-using-partial-methods.md)

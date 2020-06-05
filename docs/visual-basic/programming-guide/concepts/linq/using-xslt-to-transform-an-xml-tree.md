@@ -2,12 +2,12 @@
 title: Usar XSLT para transformar un árbol XML
 ms.date: 07/20/2015
 ms.assetid: 3390ca68-c270-4e1d-b64b-6a063a77017c
-ms.openlocfilehash: f8d7de508fb954148b8b16ddf24966289f191bbb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5332eb0a4fa8a2bd855421d674fe9f0de2ccb5f3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350531"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364440"
 ---
 # <a name="using-xslt-to-transform-an-xml-tree-visual-basic"></a>Usar XSLT para transformar un árbol XML (Visual Basic)
 
@@ -65,4 +65,4 @@ Este ejemplo produce el siguiente resultado:
 
 - <xref:System.Xml.Linq.XContainer.CreateWriter%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XNode.CreateReader%2A?displayProperty=nameWithType>
-- [Programación de LINQ to XML avanzada (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Programación de LINQ to XML avanzada (Visual Basic)](advanced-linq-to-xml-programming.md)

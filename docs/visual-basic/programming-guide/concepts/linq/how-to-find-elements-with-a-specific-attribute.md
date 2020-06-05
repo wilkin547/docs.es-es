@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: Buscar elementos con un atributo específico (XPath-LINQ to XML)'
+title: Procedimiento para buscar elementos con un atributo específico (XPath-LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 4bb38d2c-bc7c-4196-8909-aaf41fb86b28
-ms.openlocfilehash: 36f725a7684dc009dbfb956a1584fd6ca5e487b0
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 4b625fcccc834f860072ad92587bbfd7ed5ec4ad
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78267046"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364778"
 ---
-# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a>Cómo: Buscar elementos con un atributo específico (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a>Cómo: buscar elementos con un atributo específico (XPath-LINQ to XML) (Visual Basic)
 En ocasiones, deseará buscar todos los elementos que tengan un atributo en particular. Pero no le preocupa cuáles es el contenido del atributo. En vez de ello, desea realizar la selección en función de si existe o no el atributo.  
   
  La expresión XPath es:  
@@ -51,7 +51,7 @@ For Each el As XElement In list1
 Next  
 ```  
   
- En este ejemplo se produce la siguiente salida:  
+ Este ejemplo produce el siguiente resultado:  
   
 ```console
 Results are identical  
@@ -59,6 +59,6 @@ Results are identical
 <Child4 Select="true">4</Child4>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [LINQ to XMLLINQ to XML para usuarios de XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML para los usuarios de XPath (Visual Basic)](linq-to-xml-for-xpath-users.md)

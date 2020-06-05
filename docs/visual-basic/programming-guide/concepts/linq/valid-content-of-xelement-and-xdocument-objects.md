@@ -1,13 +1,13 @@
 ---
-title: Contenido válido de XElement y XDocument directiva2
+title: Contenido válido de XElement y XDocument Objects2
 ms.date: 07/20/2015
 ms.assetid: 400bb692-478a-40b6-ac1b-4ccbb4cbbd02
-ms.openlocfilehash: 5e9b5ec54b3005d18a1a0da10d78d3c8ad5300ea
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d222f19f6f588968a3ef1515dca522a4a80e1ffb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614362"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364349"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>Contenido válido de objetos XElement y XDocument
 En este tema se describen los argumentos válidos que se pueden pasar a los constructores y los métodos que se usan para agregar contenido a elementos y documentos.  
@@ -45,7 +45,7 @@ En este tema se describen los argumentos válidos que se pueden pasar a los cons
   
 - <xref:System.Xml.Linq.XAttribute>  
   
-- Cualquier tipo que implemente <xref:System.Collections.Generic.IEnumerable%601>.  
+- Cualquier tipo que implemente <xref:System.Collections.Generic.IEnumerable%601>  
   
  Si un objeto implementa <xref:System.Collections.Generic.IEnumerable%601>, se enumera la colección del objeto y se agregan todos los elementos de la colección. Si la colección contiene objetos <xref:System.Xml.Linq.XNode> o <xref:System.Xml.Linq.XAttribute>, cada elemento de la colección se agrega por separado. Si la colección contiene texto (u objetos convertidos a texto), el texto de la colección se concatena y se agrega como un nodo de texto.  
   
@@ -88,6 +88,6 @@ En este tema se describen los argumentos válidos que se pueden pasar a los cons
 |<xref:System.Xml.Linq.XContainer.ReplaceNodes%2A>|Reemplaza los nodos secundarios por contenido nuevo.|  
 |<xref:System.Xml.Linq.XNode.ReplaceWith%2A>|Reemplaza un nodo por contenido nuevo.|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Crear árboles XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [Crear árboles XML (Visual Basic)](creating-xml-trees.md)
