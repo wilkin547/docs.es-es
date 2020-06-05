@@ -1,5 +1,6 @@
 ---
 title: Convertir horas entre zonas horarias
+description: Aprenda a convertir las horas entre de una zona horaria a otra en .NET. Aprenda también a convertir valores DateTimeOffset que tienen un reconocimiento limitado de la zona horaria.
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - converting times
 - local time conversions
 ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
-ms.openlocfilehash: e17b32131e6abc1dba8126799281206f02d46d35
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7d1984866c5eacdfe21834389b8f0be4caf78fb7
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84278186"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446846"
 ---
 # <a name="converting-times-between-time-zones"></a>Convertir horas entre zonas horarias
 
@@ -118,7 +119,7 @@ La <xref:System.TimeZoneInfo> clase también incluye una sobrecarga del <xref:Sy
 [!code-csharp[System.DateTimeOffset.Conceptual.OffsetConversions#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/cs/timeconversions2.cs#2)]
 [!code-vb[System.DateTimeOffset.Conceptual.OffsetConversions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/vb/TimeConversions2.vb#2)]
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
 - <xref:System.TimeZoneInfo>
 - [Fechas, horas y zonas horarias](index.md)

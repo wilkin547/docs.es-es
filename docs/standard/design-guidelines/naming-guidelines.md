@@ -1,5 +1,6 @@
 ---
 title: Instrucciones de nomenclatura
+description: En esta información general, obtenga información sobre las convenciones de nomenclatura que se usan en el desarrollo de .NET Framework. Vaya a artículos que cubran las mayúsculas y minúsculas, nombres generales y otras directrices.
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - names [.NET Framework]
 - format naming guidelines [.NET Framework]
 ms.assetid: fc076d66-9b5f-42d3-aa65-61d970c794a3
-ms.openlocfilehash: 1b137be60f4c8c1c7cf1fa1f807841d4bc209089
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: fbcf5ef5eb02a5e45b5c981b4247ffe1c9c2631b
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290180"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447152"
 ---
 # <a name="naming-guidelines"></a>Instrucciones de nomenclatura
 Seguir un conjunto coherente de convenciones de nomenclatura en el desarrollo de un marco de trabajo puede ser una contribución importante a la facilidad de uso del marco de trabajo. Permite que muchos desarrolladores usen el marco en proyectos ampliamente separados. Además de la coherencia del formulario, los nombres de los elementos del marco deben entenderse fácilmente y deben transmitir la función de cada elemento.  
@@ -38,6 +39,6 @@ Seguir un conjunto coherente de convenciones de nomenclatura en el desarrollo de
   
  *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
 - [Directrices de diseño de marco](index.md)
