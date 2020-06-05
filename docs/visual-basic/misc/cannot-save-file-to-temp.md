@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID735
 ms.assetid: 1055fc15-9641-43b2-a40c-a0a9fbbb34b2
-ms.openlocfilehash: b78c2c23e155317642f3fc0aae95f72fb05bb63f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3d643d0a333e60954e3baeceda996138f6870621
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770001"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84365155"
 ---
 # <a name="cannot-save-file-to-temp"></a>No se puede guardar el archivo en TEMP.
 Un componente no puede encontrar un directorio denominado TEMP, o la unidad o partición que contiene el directorio TEMP carece de espacio suficiente para guardar la información.  
@@ -20,6 +20,6 @@ Un componente no puede encontrar un directorio denominado TEMP, o la unidad o pa
   
 2. Libere espacio en la unidad borrando los archivos innecesarios, o cree un directorio TEMP en otra partición y establezca la variable de entorno TEMP en su ruta de acceso.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Tipos de error](../../visual-basic/programming-guide/language-features/error-types.md)
+- [Tipos de error](../programming-guide/language-features/error-types.md)

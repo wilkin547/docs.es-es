@@ -1,17 +1,17 @@
 ---
-title: Fundamentos de cadenas
+title: Fundamentos de las cadenas
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], Like operator
 - strings [Visual Basic], Visual Basic
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
-ms.openlocfilehash: 7141966e3c8a8cbce42111c56a85a00709e8fe1a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 935926b8b83afa47c20ea68aecd6bc8c40bd0234
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344290"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84363702"
 ---
 # <a name="string-basics-in-visual-basic"></a>Fundamentos de cadenas en Visual Basic
 El tipo de datos de `String` representa una serie de caracteres (y cada uno de ellos representa a su vez una instancia del tipo de datos `Char`). En este tema se presentan los conceptos básicos de las cadenas de Visual Basic.  
@@ -65,15 +65,15 @@ World]]></xml>.Value
   
  [!code-vb[VbVbalrStrings#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#69)]  
   
- Aquí se crea una variable de cadena con un valor y, a continuación, se cambia su valor.  
+ Aquí se crea una variable de cadena con un valor y, a continuación, se cambia su valor.   
   
  Más concretamente, en la primera línea, se crea una instancia de tipo `String` y se le asigna el valor `This string is immutable`. En la segunda línea del ejemplo se crea una nueva instancia y se le asigna el valor `Or is it?`, y la variable de cadena descarta su referencia a la primera instancia y almacena una referencia a la nueva instancia.  
   
  A diferencia de otros tipos de datos intrínsecos, `String` es un tipo de referencia. Cuando una variable de tipo de referencia se pasa como argumento a una función o subrutina, se pasa una referencia a la dirección de memoria donde se almacenan los datos en lugar del valor real de la cadena. Así, en el ejemplo anterior, el nombre de la variable sigue siendo el mismo, pero apunta a una nueva instancia diferente de la clase `String`, que contiene el nuevo valor.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Introducción a las cadenas en Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
-- [String (tipo de datos)](../../../../visual-basic/language-reference/data-types/string-data-type.md)
-- [Char (tipo de datos)](../../../../visual-basic/language-reference/data-types/char-data-type.md)
+- [Introducción a las cadenas en Visual Basic](introduction-to-strings.md)
+- [String (Tipo de datos)](../../../language-reference/data-types/string-data-type.md)
+- [Tipo de datos Char](../../../language-reference/data-types/char-data-type.md)
 - [Operaciones básicas de cadenas](../../../../standard/base-types/basic-string-operations.md)
