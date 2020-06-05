@@ -1,15 +1,15 @@
 ---
-title: LINQ to XML y DOM
+title: LINQ to XML frente a DOM
 ms.date: 07/20/2015
 ms.assetid: 18c36130-d598-40b7-9007-828232252978
-ms.openlocfilehash: b25993fba4d878beb881dfdc46effe5a8ab3485b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5813ca410e3e2b1ec284681451d0c0cec6f5e393
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74331703"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84389350"
 ---
-# <a name="linq-to-xml-vs-dom-visual-basic"></a>LINQ to XML frente a DOM (Visual Basic)
+# <a name="linq-to-xml-vs-dom-visual-basic"></a>LINQ to XML frente a DOM (Visual Basic) (LINQ to XML frente a DOM)
 En esta sección se describen algunas diferencias fundamentales entre [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] y la API de programación XML predominante actual, Document Object Model (DOM) W3C.  
   
 ## <a name="new-ways-to-construct-xml-trees"></a>Nuevas formas de crear árboles XML  
@@ -74,10 +74,10 @@ Dim contacts = _
   
  Tenga en cuenta que si se aplica la sangría al código para crear el árbol XML, se mostrará la estructura XML subyacente.  
   
- Para obtener más información, vea [crear árboles XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md).  
+ Para obtener más información, vea [crear árboles XML (Visual Basic)](creating-xml-trees.md).  
   
 ## <a name="working-directly-with-xml-elements"></a>Trabajar directamente con elementos XML  
- La programación con XML suele centrarse en elementos XML y quizás en los atributos. En [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], se puede trabajar directamente con atributos y elementos XML. Por ejemplo, puede seguir estos pasos:  
+ La programación con XML suele centrarse en elementos XML y quizás en los atributos. En [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], se puede trabajar directamente con atributos y elementos XML. Por ejemplo, puede realizar lo siguiente:  
   
 - Crear elementos XML sin usar un objeto de documento. Esto simplifica la programación cuando se tiene que trabajar con fragmentos de árboles XML.  
   
@@ -104,7 +104,7 @@ doc.AppendChild(name)
  Otro problema de DOM consiste en que no permite cambiar el nombre de un nodo. Por el contrario, hay que crear un nuevo nodo y copiar en él todos los nodos secundarios, por lo que se pierde la identidad del nodo original. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] evita este problema al permitir que se establezca la propiedad <xref:System.Xml.Linq.XName> en un nodo.  
   
 ## <a name="static-method-support-for-loading-xml"></a>Compatibilidad con el método estático para cargar XML  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] permite cargar XML mediante métodos estáticos en lugar de métodos de instancia. Esto simplifica la carga y el análisis. Para obtener más información, vea [Cómo: cargar XML desde un archivo (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md).  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] permite cargar XML mediante métodos estáticos en lugar de métodos de instancia. Esto simplifica la carga y el análisis. Para obtener más información, vea [Cómo: cargar XML desde un archivo (Visual Basic)](how-to-load-xml-from-a-file.md).  
   
 ## <a name="removal-of-support-for-dtd-constructs"></a>Eliminación de la compatibilidad con construcciones DTD  
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] simplifica aún más la programación XML quitando la compatibilidad con entidades y referencias a entidades. La administración de entidades es compleja y su uso es muy poco común. La eliminación de la compatibilidad aumenta el rendimiento y simplifica la interfaz de programación. Cuando se rellena un árbol de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], se expanden todas las entidades DTD.  
@@ -113,7 +113,7 @@ doc.AppendChild(name)
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] no proporciona un equivalente para la clase `XmlDocumentFragment`. En cambio, es bastante común que el concepto `XmlDocumentFragment` se pueda controlar mediante el resultado de una consulta que se escribe como <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XNode> o <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement>.  
   
 ## <a name="support-for-xpathnavigator"></a>Compatibilidad con XPathNavigator  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] proporciona compatibilidad con <xref:System.Xml.XPath.XPathNavigator> mediante los métodos de extensión del espacio de nombres <xref:System.Xml.XPath?displayProperty=nameWithType>. Para obtener más información, consulta <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] proporciona compatibilidad con <xref:System.Xml.XPath.XPathNavigator> mediante los métodos de extensión del espacio de nombres <xref:System.Xml.XPath?displayProperty=nameWithType>. Para obtener más información, vea <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.  
   
 ## <a name="support-for-white-space-and-indentation"></a>Compatibilidad con espacios en blanco y sangría  
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] trata los espacios en blanco de forma más sencilla que DOM.  
@@ -125,11 +125,11 @@ doc.AppendChild(name)
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] almacena un espacio en blanco como un nodo <xref:System.Xml.Linq.XText>, en lugar de tener un tipo de nodo <xref:System.Xml.XmlNodeType.Whitespace> especializado, al igual que DOM.  
   
 ## <a name="support-for-annotations"></a>Compatibilidad con anotaciones  
- Los elementos de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] admiten un conjunto extensible de anotaciones. Esto puede resultar útil para realizar un seguimiento de información diversa de un elemento, como la información de esquema, información acerca de si un elemento está enlazado a una interfaz de usuario o cualquier otro tipo de información específica de una aplicación. Para obtener más información, vea [Anotaciones en LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-annotations.md).  
+ Los elementos de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] admiten un conjunto extensible de anotaciones. Esto puede resultar útil para realizar un seguimiento de información diversa de un elemento, como la información de esquema, información acerca de si un elemento está enlazado a una interfaz de usuario o cualquier otro tipo de información específica de una aplicación. Para obtener más información, vea [Anotaciones en LINQ to XML](linq-to-xml-annotations.md).  
   
 ## <a name="support-for-schema-information"></a>Compatibilidad con la información de esquema  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] proporciona compatibilidad con la validación XSD mediante métodos de extensión en el espacio de nombres <xref:System.Xml.Schema?displayProperty=nameWithType>. Puede validar que un árbol XML sea compatible con un XSD. Puede rellenar el árbol XML con el conjunto de información posterior a la validación del esquema (PSVI). Para obtener más información, vea [Cómo validar con XSD](../../../../visual-basic/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md) y <xref:System.Xml.Schema.Extensions>.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] proporciona compatibilidad con la validación XSD mediante métodos de extensión en el espacio de nombres <xref:System.Xml.Schema?displayProperty=nameWithType>. Puede validar que un árbol XML sea compatible con un XSD. Puede rellenar el árbol XML con el conjunto de información posterior a la validación del esquema (PSVI). Para obtener más información, vea [Cómo: validar con XSD](how-to-validate-using-xsd-linq-to-xml.md) y <xref:System.Xml.Schema.Extensions> .  
   
 ## <a name="see-also"></a>Vea también
 
-- [Introducción (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)
+- [Introducción (LINQ to XML)](getting-started-linq-to-xml.md)

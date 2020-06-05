@@ -16,45 +16,45 @@ helpviewer_keywords:
 - methods [Visual Basic], sealed
 - properties [Visual Basic], overriding
 ms.assetid: 66ec6984-f5f5-4857-b362-6a3907aaf9e0
-ms.openlocfilehash: c55d57bb3008b2825fe5382844908ea32f0d500c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 463dd2454aafebf11554fb7bacdb73724c3130d8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351442"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84392163"
 ---
 # <a name="notoverridable-visual-basic"></a>NotOverridable (Visual Basic)
 Especifica que una propiedad o un procedimiento no se pueden invalidar en una clase derivada.  
   
-## <a name="remarks"></a>Comentarios  
- El modificador `NotOverridable` impide que una propiedad o un método se invalide en una clase derivada.  El modificador [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) permite que una propiedad o un método de una clase se invalide en una clase derivada. Para más información, vea [Fundamentos de la herencia](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
+## <a name="remarks"></a>Observaciones  
+ El `NotOverridable` modificador evita que una propiedad o un método se invalide en una clase derivada.  El modificador [Overridable](overridable.md) permite que una propiedad o un método de una clase se invalide en una clase derivada. Para más información, vea [Fundamentos de la herencia](../../programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
   
- Si no se especifica el modificador `Overridable` o `NotOverridable`, el valor predeterminado depende de si la propiedad o el método reemplaza a una propiedad o método de clase base. Si la propiedad o el método reemplaza una propiedad o un método de clase base, la configuración predeterminada es `Overridable`; de lo contrario, se `NotOverridable`.  
+ Si `Overridable` `NotOverridable` no se especifica el modificador o, el valor predeterminado depende de si la propiedad o el método reemplaza a una propiedad o método de clase base. Si la propiedad o el método reemplaza una propiedad o un método de clase base, el valor predeterminado es `Overridable` ; de lo contrario, es `NotOverridable` .  
   
  Un elemento que no se puede invalidar se denomina a veces elemento *sellado* .  
   
- Solo se puede usar `NotOverridable` en una instrucción de declaración de propiedad o procedimiento. Solo puede especificar `NotOverridable` en una propiedad o un procedimiento que invalide otra propiedad o procedimiento, es decir, solo en combinación con `Overrides`.  
+ Solo se puede usar `NotOverridable` en una instrucción de declaración de propiedad o procedimiento. Solo se puede especificar `NotOverridable` en una propiedad o un procedimiento que invalide otra propiedad o procedimiento, es decir, solo en combinación con `Overrides` .  
   
 ## <a name="combined-modifiers"></a>Modificadores combinados  
- No se puede especificar `Overridable` ni `NotOverridable` para un método `Private`.  
+ No se puede especificar `Overridable` o `NotOverridable` para un `Private` método.  
   
- No se puede especificar `NotOverridable` junto con `MustOverride`, `Overridable`o `Shared` en la misma declaración.  
+ No se puede especificar `NotOverridable` junto con `MustOverride` , `Overridable` o `Shared` en la misma declaración.  
   
 ## <a name="usage"></a>Uso  
  El modificador `NotOverridable` se puede utilizar en los contextos siguientes:  
   
- [Function (instrucción)](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Instrucción Function](../statements/function-statement.md)  
   
- [Property (instrucción)](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Property Statement](../statements/property-statement.md)  
   
- [Sub (instrucción)](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Instrucción Sub](../statements/sub-statement.md)  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Modificadores](../../../visual-basic/language-reference/modifiers/index.md)
-- [Fundamentos de la herencia](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
-- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)
-- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
-- [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)
-- [Palabras clave](../../../visual-basic/language-reference/keywords/index.md)
-- [Sombrear en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Modificadores](index.md)
+- [Fundamentos de la herencia](../../programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [MustOverride](mustoverride.md)
+- [Overridable](overridable.md)
+- [Invalidaciones](overrides.md)
+- [Palabras clave](../keywords/index.md)
+- [Sombrear en Visual Basic](../../programming-guide/language-features/declared-elements/shadowing.md)

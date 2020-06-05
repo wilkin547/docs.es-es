@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30154
 ms.assetid: 259afdfa-3608-4760-adcb-88ec0da5020d
-ms.openlocfilehash: a824b66eaad964049ced5cae5eb2cc370d00ba7f
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 4ffe18e11c388a8c69ef0592bde1b78f5b219680
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696890"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84386859"
 ---
-# <a name="type1typename-must-implement-membername-for-interface-interfacename"></a>\<Type1 > '\<TypeName > ' debe implementar '\<membername > ' para la interfaz '\<InterfaceName > '
-'\<TypeName > ' debe implementar '\<membername > ' para la interfaz '\<InterfaceName > '. La implementación de la propiedad debe tener especificadores ' ReadOnly '/' WriteOnly ' coincidentes.  
+# <a name="type1typename-must-implement-membername-for-interface-interfacename"></a>\<type1>"\<typename>" debe implementar "\<membername>" para la interfaz "\<interfacename>"
+' \<typename> ' debe implementar ' \<membername> ' para la interfaz ' \<interfacename> '. La implementación de la propiedad debe tener especificadores ' ReadOnly '/' WriteOnly ' coincidentes.  
   
  Una clase o estructura notifica a que implemente una interfaz pero no implementa un procedimiento, una propiedad o un evento definidos por la interfaz. Se deben implementar todos los miembros de la interfaz.  
   
@@ -23,9 +23,9 @@ ms.locfileid: "71696890"
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1. Declare un miembro con el mismo nombre y la misma signatura que el definido en la interfaz. Asegúrese de incluir al menos la instrucción `End Function`, `End Sub`o `End Property`.  
+1. Declare un miembro con el mismo nombre y la misma signatura que el definido en la interfaz. Asegúrese de incluir al menos la `End Function` instrucción, `End Sub` o `End Property` .  
   
-2. Agregue una cláusula `Implements` al final de la instrucción `Function`, `Sub`, `Property`o `Event`. Por ejemplo:  
+2. Agregue una `Implements` cláusula al final de la `Function` instrucción, `Sub` , `Property` o `Event` . Por ejemplo:  
   
     ```vb  
     Public Event ItHappened() Implements IBaseInterface.ItHappened  
@@ -33,9 +33,9 @@ ms.locfileid: "71696890"
   
 3. Al implementar una propiedad, asegúrese de que `ReadOnly` o `WriteOnly` se utiliza de la misma manera que en la definición de la interfaz.  
   
-4. Al implementar una propiedad, declare `Get` y `Set` procedimientos, según corresponda.  
+4. Al implementar una propiedad, declare `Get` `Set` los procedimientos y, según corresponda.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Implements (instrucción)](../../../visual-basic/language-reference/statements/implements-statement.md)
-- [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+- [Implements (Instrucción)](../statements/implements-statement.md)
+- [Interfaces](../../programming-guide/language-features/interfaces/index.md)

@@ -5,14 +5,14 @@ helpviewer_keywords:
 - <exception> XML tag
 - exception XML tag
 ms.assetid: c0517549-171e-4dae-ab88-a9c1700b6eee
-ms.openlocfilehash: e1e7f2d0fb06599f83ba224ed52a10429d9b11fe
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3a2452ec60a2182adfee365777d9824001ff006a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346960"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400129"
 ---
-# <a name="exception-visual-basic"></a>\<> de excepciones (Visual Basic)
+# <a name="exception-visual-basic"></a>\<exception> (Visual Basic)
 Especifica qué excepciones se pueden iniciar.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -28,16 +28,16 @@ Especifica qué excepciones se pueden iniciar.
  `description`  
  Una descripción.  
   
-## <a name="remarks"></a>Comentarios  
- Use la etiqueta `<exception>` para especificar qué excepciones se pueden iniciar. Esta etiqueta se aplica a una definición de método.  
+## <a name="remarks"></a>Observaciones  
+ Use la `<exception>` etiqueta para especificar qué excepciones se pueden iniciar. Esta etiqueta se aplica a una definición de método.  
   
- Compile con [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) para procesar los comentarios de documentación de un archivo.  
+ Compile with [-doc](../../reference/command-line-compiler/doc.md) para procesar los comentarios de documentación en un archivo.  
   
 ## <a name="example"></a>Ejemplo  
- En este ejemplo se usa la etiqueta `<exception>` para describir una excepción que la función `IntDivide` puede iniciar.  
+ En este ejemplo se usa la `<exception>` etiqueta para describir una excepción que la `IntDivide` función puede iniciar.  
   
  [!code-vb[VbVbcnXmlDocComments#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#3)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Etiquetas XML para comentarios](../../../visual-basic/language-reference/xmldoc/index.md)
+- [Etiquetas de comentario XML](index.md)
