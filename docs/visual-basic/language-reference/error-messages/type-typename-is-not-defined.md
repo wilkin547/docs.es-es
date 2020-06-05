@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30002
 ms.assetid: b0faf204-57fd-44de-8c05-9db027eea663
-ms.openlocfilehash: 1f66b86a61fb0344a449bf0aa46b7655813c7c30
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 89e2d1d18b456c96f62d6b9ee1dd8dc9d41bf665
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664252"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84386937"
 ---
-# <a name="type-typename-is-not-defined"></a>Tipo de '\<typename >' no está definido
-La instrucción hace referencia a un tipo que no se ha definido. Puede definir un tipo en una instrucción de declaración como `Enum`, `Structure`, `Class`, o `Interface`.  
+# <a name="type-typename-is-not-defined"></a>No está definido el tipo '\<typename>'
+La instrucción ha hecho referencia a un tipo que no se ha definido. Puede definir un tipo en una instrucción de declaración como `Enum` , `Structure` , `Class` o `Interface` .  
   
  **Identificador de error:** BC30002  
   
@@ -23,19 +23,19 @@ La instrucción hace referencia a un tipo que no se ha definido. Puede definir u
   
 - Asegúrese de que la definición de tipo y su referencia usan la misma ortografía.  
   
-- Asegúrese de que la definición de tipo es accesible para la referencia. Por ejemplo, si el tipo está en otro módulo y se ha declarado `Private`, mueva la definición de tipo al que hace referencia a módulo o declárelo `Public`.  
+- Asegúrese de que la definición de tipo es accesible para la referencia. Por ejemplo, si el tipo está en otro módulo y se ha declarado `Private` , mueva la definición de tipo al módulo que hace la referencia o declárela `Public` .  
   
-- Asegúrese de que el espacio de nombres del tipo no se ha redefinido en el proyecto. Si es así, utilice el `Global` palabra clave para el nombre de tipo completo. Por ejemplo, si un proyecto define un espacio de nombres denominado `System`, <xref:System.Object?displayProperty=nameWithType> tipo no se puede acceder a menos que se completa con el `Global` palabra clave: `Global.System.Object`.  
+- Asegúrese de que el espacio de nombres del tipo no se ha redefinido en el proyecto. Si es así, use la `Global` palabra clave para completar el nombre del tipo. Por ejemplo, si un proyecto define un espacio de nombres denominado `System` , <xref:System.Object?displayProperty=nameWithType> no se puede tener acceso al tipo a menos que esté completo con la `Global` palabra clave: `Global.System.Object` .  
   
-- Si el tipo está definido, pero no se registra la biblioteca de objetos o la biblioteca de tipos en el que se define en Visual Basic, haga clic **Agregar referencia** en el **proyecto** menú y, a continuación, seleccione el objeto adecuado biblioteca o biblioteca de tipos.  
+- Si se define el tipo, pero la biblioteca de objetos o la biblioteca de tipos en la que se define no está registrada en Visual Basic, haga clic en **Agregar referencia** en el menú **proyecto** y, a continuación, seleccione la biblioteca de objetos o la biblioteca de tipos adecuada.  
   
-- Asegúrese de que el tipo está en un ensamblado que es parte del perfil de .NET Framework de destino. Para obtener más información, consulte [Solucionar problemas de versión de .NET Framework de destino](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors).  
+- Asegúrese de que el tipo está en un ensamblado que forma parte del perfil de .NET Framework de destino. Para obtener más información, consulte [solución de problemas de errores de .NET Framework de destino](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Espacios de nombres en Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
-- [Enum (instrucción)](../../../visual-basic/language-reference/statements/enum-statement.md)
-- [Structure (instrucción)](../../../visual-basic/language-reference/statements/structure-statement.md)
-- [Class (instrucción)](../../../visual-basic/language-reference/statements/class-statement.md)
-- [Interface (instrucción)](../../../visual-basic/language-reference/statements/interface-statement.md)
+- [Espacios de nombres en Visual Basic](../../programming-guide/program-structure/namespaces.md)
+- [Instrucción Enum](../statements/enum-statement.md)
+- [Structure (Instrucción)](../statements/structure-statement.md)
+- [Instrucción Class](../statements/class-statement.md)
+- [Instrucción Interface](../statements/interface-statement.md)
 - [Administrar referencias en un proyecto](/visualstudio/ide/managing-references-in-a-project)

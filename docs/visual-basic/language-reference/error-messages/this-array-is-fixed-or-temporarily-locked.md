@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID10
 ms.assetid: de6713a6-51d7-4edb-8515-d5fb544e2091
-ms.openlocfilehash: 8d5e4add2d92a575126fb934ac3874a2e37685f5
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4a86460104b6c4d9d6791e60f6f377cec0030425
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350785"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84363038"
 ---
 # <a name="this-array-is-fixed-or-temporarily-locked-visual-basic"></a>Esta matriz es fija o está bloqueada temporalmente (Visual Basic)
 Este error tiene las siguientes causas posibles:  
@@ -18,7 +18,7 @@ Este error tiene las siguientes causas posibles:
   
 - Redimensionar una matriz dinámica de nivel de módulo, en la que se ha pasado un elemento como argumento a un procedimiento. Si se pasa un elemento, la matriz está bloqueada para evitar la desasignación de memoria para el parámetro de referencia dentro del procedimiento.  
   
-- Se intentó asignar un valor a una variable `Variant` que contiene una matriz, pero el `Variant` está bloqueado actualmente.  
+- Se está intentando asignar un valor a una `Variant` variable que contiene una matriz, pero `Variant` está bloqueado actualmente.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
@@ -26,8 +26,8 @@ Este error tiene las siguientes causas posibles:
   
 2. Determine si realmente necesita pasar el elemento, ya que es visible en todos los procedimientos del módulo.  
   
-3. Determine qué está bloqueando el `Variant` y Remedy.  
+3. Determine qué está bloqueando `Variant` y soluciónelo.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Matrices](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [Matrices](../../programming-guide/language-features/arrays/index.md)
