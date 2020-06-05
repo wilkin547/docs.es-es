@@ -7,12 +7,12 @@ helpviewer_keywords:
 - interfaces
 - interfaces [Visual Basic]
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
-ms.openlocfilehash: 619aa6695db756e56a836fd76693cc8a3976f8e2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 90f8e5d4eb7bb6b367ee5ffd4a4323097c6bde9c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345051"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405047"
 ---
 # <a name="interfaces-visual-basic"></a>Interfaces (Visual Basic)
 Las *interfaces* definen las propiedades, los métodos y los eventos que pueden implementar las clases. Las interfaces permiten definir características como grupos pequeños de propiedades, métodos y eventos estrechamente relacionados; esto reduce los problemas de compatibilidad porque se pueden desarrollar implementaciones mejoradas para las interfaces sin comprometer el código existente. En cualquier momento se pueden agregar nuevas características mediante el desarrollo de implementaciones e interfaces adicionales.  
@@ -33,20 +33,20 @@ Las *interfaces* definen las propiedades, los métodos y los eventos que pueden 
  En un espacio de nombres, las instrucciones de interfaz son `Friend` de forma predeterminada, pero también se pueden declarar explícitamente como `Public` o `Friend`. Las interfaces definidas dentro de clases, módulos, interfaces y estructuras son `Public` de forma predeterminada, pero también se pueden declarar explícitamente como `Public`, `Friend`, `Protected` o `Private`.  
   
 > [!NOTE]
-> La palabra clave `Shadows` puede aplicarse a todos los miembros de interfaz. La palabra clave `Overloads` puede aplicarse a las instrucciones `Sub`, `Function` y `Property` que se declaran en una definición de interfaz. Además, las instrucciones `Property` pueden tener los modificadores `Default`, `ReadOnly` o `WriteOnly`. No se permite ningún otro modificador (`Public`, `Private`, `Friend`, `Protected`, `Shared`, `Overrides`, `MustOverride` o `Overridable`). Para obtener más información, vea [Declaration Contexts and Default Access Levels](../../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md) (Contextos de declaración y niveles de acceso predeterminados).  
+> La palabra clave `Shadows` puede aplicarse a todos los miembros de interfaz. La palabra clave `Overloads` puede aplicarse a las instrucciones `Sub`, `Function` y `Property` que se declaran en una definición de interfaz. Además, las instrucciones `Property` pueden tener los modificadores `Default`, `ReadOnly` o `WriteOnly`. No se permite ningún otro modificador (`Public`, `Private`, `Friend`, `Protected`, `Shared`, `Overrides`, `MustOverride` o `Overridable`). Para obtener más información, vea [Declaration Contexts and Default Access Levels](../../../language-reference/statements/declaration-contexts-and-default-access-levels.md) (Contextos de declaración y niveles de acceso predeterminados).  
   
  Por ejemplo, el código siguiente define una interfaz con una función, una propiedad y un evento.  
   
  [!code-vb[VbVbalrOOP#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#17)]  
   
 ## <a name="implementing-interfaces"></a>Implementar interfaces  
- La Visual Basic palabra reservada `Implements` se usa de dos maneras. La instrucción `Implements` significa que una clase o estructura implementa una interfaz. La palabra clave `Implements` significa que un miembro de clase o de estructura implementa un miembro de interfaz específico.  
+ La palabra reservada Visual Basic `Implements` se usa de dos maneras. La instrucción `Implements` significa que una clase o estructura implementa una interfaz. La palabra clave `Implements` significa que un miembro de clase o de estructura implementa un miembro de interfaz específico.  
   
 ### <a name="implements-statement"></a>Implements (Instrucción)  
  Si una clase o estructura implementa una o más interfaces, debe incluir la instrucción `Implements` inmediatamente después de la instrucción `Class` o `Structure`. La instrucción `Implements` requiere una lista separada por comas de las interfaces que implementará una clase. La clase o estructura debe implementar todos los miembros de interfaz mediante la palabra clave `Implements`.  
   
 ### <a name="implements-keyword"></a>Implements (palabra clave)  
- La palabra clave `Implements` requiere una lista separada por comas de los miembros de interfaz que se implementarán. Por lo general solo se especifica un miembro de interfaz, pero pueden especificarse varios. La especificación de un miembro de interfaz consta del nombre de la interfaz —que debe especificarse en una instrucción implements dentro de la clase—, un punto y el nombre de la función miembro, propiedad o evento que se va a implementar. El nombre de un miembro que implementa un miembro de interfaz puede usar cualquier identificador legal y no se limita a la Convención de `InterfaceName_MethodName` utilizada en versiones anteriores de Visual Basic.  
+ La palabra clave `Implements` requiere una lista separada por comas de los miembros de interfaz que se implementarán. Por lo general solo se especifica un miembro de interfaz, pero pueden especificarse varios. La especificación de un miembro de interfaz consta del nombre de la interfaz —que debe especificarse en una instrucción implements dentro de la clase—, un punto y el nombre de la función miembro, propiedad o evento que se va a implementar. El nombre de un miembro que implementa un miembro de interfaz puede usar cualquier identificador legal y no se limita a la `InterfaceName_MethodName` Convención utilizada en versiones anteriores de Visual Basic.  
   
  Por ejemplo, el código siguiente muestra cómo declarar una subrutina denominada `Sub1` que implementa un método de una interfaz:  
   
@@ -81,7 +81,7 @@ Las *interfaces* definen las propiedades, los métodos y los eventos que pueden 
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Título|Descripción|  
+|Title|Descripción|  
 |-----------|-----------------|  
-|[Tutorial: Crear e implementar interfaces](../../../../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)|Proporciona un procedimiento detallado que le guiará por el proceso de definición e implementación de su propia interfaz.|  
+|[Tutorial: Creación e implementación de interfaces](walkthrough-creating-and-implementing-interfaces.md)|Proporciona un procedimiento detallado que le guiará por el proceso de definición e implementación de su propia interfaz.|  
 |[Varianza en interfaces genéricas](../../concepts/covariance-contravariance/variance-in-generic-interfaces.md)|Describe la covarianza y contravarianza en las interfaces genéricas y proporciona una lista de interfaces genéricas variantes en .NET Framework.|

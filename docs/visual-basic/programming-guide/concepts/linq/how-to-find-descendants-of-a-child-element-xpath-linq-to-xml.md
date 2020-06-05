@@ -1,13 +1,13 @@
 ---
-title: 'Cómo: Buscar descendientes de un elemento secundario (XPath-LINQ to XML)'
+title: Procedimiento para buscar descendientes de un elemento secundario (XPath-LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: a958af40-f754-4409-85f9-7746978d4cb3
-ms.openlocfilehash: beb949be521bfde70fbcdbcf18cebf49d7cc5a58
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: aa6a66f4a53fc74b5946a395f7b61218e680f530
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344670"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405227"
 ---
 # <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-visual-basic"></a>Cómo: buscar descendientes de un elemento secundario (XPath-LINQ to XML) (Visual Basic)
 En este tema se muestra cómo obtener los elementos descendientes de un elemento secundario con un nombre particular.  
@@ -71,4 +71,4 @@ This is the start of a sentence.  This is a second sentence.
   
 ## <a name="see-also"></a>Vea también
 
-- [LINQ to XML para los usuarios de XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML para los usuarios de XPath (Visual Basic)](linq-to-xml-for-xpath-users.md)
