@@ -17,18 +17,18 @@ helpviewer_keywords:
 - type parameters
 - data type arguments
 ms.assetid: 0db8f65c-65af-4089-ab7f-6fcfecb60444
-ms.openlocfilehash: d88c43efe858d6b81b7d8d2470b234ff5d40632a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 8497f46453d586fb94e1f7c82c81c6b923dd6f60
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353837"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404426"
 ---
-# <a name="of-clause-visual-basic"></a><span data-ttu-id="d52ce-102">Of (Cláusula, Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d52ce-102">Of Clause (Visual Basic)</span></span>
-<span data-ttu-id="d52ce-103">Presenta una cláusula `Of`, que identifica un *parámetro de tipo* en una clase *genérica* , una estructura, una interfaz, un delegado o un procedimiento.</span><span class="sxs-lookup"><span data-stu-id="d52ce-103">Introduces an `Of` clause, which identifies a *type parameter* on a *generic* class, structure, interface, delegate, or procedure.</span></span> <span data-ttu-id="d52ce-104">Para obtener información sobre los tipos genéricos, vea [tipos genéricos en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).</span><span class="sxs-lookup"><span data-stu-id="d52ce-104">For information on generic types, see [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).</span></span>  
+# <a name="of-clause-visual-basic"></a><span data-ttu-id="0a0fe-102">Of (Cláusula, Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0a0fe-102">Of Clause (Visual Basic)</span></span>
+<span data-ttu-id="0a0fe-103">Introduce una `Of` cláusula, que identifica un *parámetro de tipo* en una clase *genérica* , una estructura, una interfaz, un delegado o un procedimiento.</span><span class="sxs-lookup"><span data-stu-id="0a0fe-103">Introduces an `Of` clause, which identifies a *type parameter* on a *generic* class, structure, interface, delegate, or procedure.</span></span> <span data-ttu-id="0a0fe-104">Para obtener información sobre los tipos genéricos, vea [tipos genéricos en Visual Basic](../../programming-guide/language-features/data-types/generic-types.md).</span><span class="sxs-lookup"><span data-stu-id="0a0fe-104">For information on generic types, see [Generic Types in Visual Basic](../../programming-guide/language-features/data-types/generic-types.md).</span></span>  
   
-## <a name="using-the-of-keyword"></a><span data-ttu-id="d52ce-105">Usar la palabra clave of</span><span class="sxs-lookup"><span data-stu-id="d52ce-105">Using the Of Keyword</span></span>  
- <span data-ttu-id="d52ce-106">En el ejemplo de código siguiente se usa la palabra clave `Of` para definir el contorno de una clase que toma dos parámetros de tipo.</span><span class="sxs-lookup"><span data-stu-id="d52ce-106">The following code example uses the `Of` keyword to define the outline of a class that takes two type parameters.</span></span> <span data-ttu-id="d52ce-107">*Restringe* el parámetro `keyType` por la interfaz <xref:System.IComparable>, lo que significa que el código utilizado debe proporcionar un argumento de tipo que implementa <xref:System.IComparable>.</span><span class="sxs-lookup"><span data-stu-id="d52ce-107">It *constrains* the `keyType` parameter by the <xref:System.IComparable> interface, which means the consuming code must supply a type argument that implements <xref:System.IComparable>.</span></span> <span data-ttu-id="d52ce-108">Esto es necesario para que el procedimiento `add` pueda llamar al método <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d52ce-108">This is necessary so that the `add` procedure can call the <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="d52ce-109">Para más información sobre las restricciones, vea [Type List](../../../visual-basic/language-reference/statements/type-list.md).</span><span class="sxs-lookup"><span data-stu-id="d52ce-109">For more information on constraints, see [Type List](../../../visual-basic/language-reference/statements/type-list.md).</span></span>  
+## <a name="using-the-of-keyword"></a><span data-ttu-id="0a0fe-105">Usar la palabra clave of</span><span class="sxs-lookup"><span data-stu-id="0a0fe-105">Using the Of Keyword</span></span>  
+ <span data-ttu-id="0a0fe-106">En el ejemplo de código siguiente `Of` se usa la palabra clave para definir el contorno de una clase que toma dos parámetros de tipo.</span><span class="sxs-lookup"><span data-stu-id="0a0fe-106">The following code example uses the `Of` keyword to define the outline of a class that takes two type parameters.</span></span> <span data-ttu-id="0a0fe-107">*Restringe* el `keyType` parámetro mediante la <xref:System.IComparable> interfaz, lo que significa que el código utilizado debe proporcionar un argumento de tipo que implemente <xref:System.IComparable> .</span><span class="sxs-lookup"><span data-stu-id="0a0fe-107">It *constrains* the `keyType` parameter by the <xref:System.IComparable> interface, which means the consuming code must supply a type argument that implements <xref:System.IComparable>.</span></span> <span data-ttu-id="0a0fe-108">Esto es necesario para que el `add` procedimiento pueda llamar al <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> método.</span><span class="sxs-lookup"><span data-stu-id="0a0fe-108">This is necessary so that the `add` procedure can call the <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="0a0fe-109">Para más información sobre las restricciones, vea [Type List](type-list.md).</span><span class="sxs-lookup"><span data-stu-id="0a0fe-109">For more information on constraints, see [Type List](type-list.md).</span></span>  
   
 ```vb  
 Public Class Dictionary(Of entryType, keyType As IComparable)  
@@ -42,32 +42,32 @@ Public Class Dictionary(Of entryType, keyType As IComparable)
 End Class  
 ```  
   
- <span data-ttu-id="d52ce-110">Si completa la definición de clase anterior, puede construir una variedad de clases `dictionary` a partir de ella.</span><span class="sxs-lookup"><span data-stu-id="d52ce-110">If you complete the preceding class definition, you can construct a variety of `dictionary` classes from it.</span></span> <span data-ttu-id="d52ce-111">Los tipos que se proporcionan a `entryType` y `keyType` determinan qué tipo de entrada contiene la clase y qué tipo de clave asocia a cada entrada.</span><span class="sxs-lookup"><span data-stu-id="d52ce-111">The types you supply to `entryType` and `keyType` determine what type of entry the class holds and what type of key it associates with each entry.</span></span> <span data-ttu-id="d52ce-112">Debido a la restricción, debe proporcionar a `keyType` un tipo que implementa <xref:System.IComparable>.</span><span class="sxs-lookup"><span data-stu-id="d52ce-112">Because of the constraint, you must supply to `keyType` a type that implements <xref:System.IComparable>.</span></span>  
+ <span data-ttu-id="0a0fe-110">Si completa la definición de clase anterior, puede crear una variedad de `dictionary` clases a partir de ella.</span><span class="sxs-lookup"><span data-stu-id="0a0fe-110">If you complete the preceding class definition, you can construct a variety of `dictionary` classes from it.</span></span> <span data-ttu-id="0a0fe-111">Los tipos que se suministran a `entryType` y `keyType` determinan qué tipo de entrada contiene la clase y qué tipo de clave asocia a cada entrada.</span><span class="sxs-lookup"><span data-stu-id="0a0fe-111">The types you supply to `entryType` and `keyType` determine what type of entry the class holds and what type of key it associates with each entry.</span></span> <span data-ttu-id="0a0fe-112">Debido a la restricción, debe proporcionar a `keyType` un tipo que implementa <xref:System.IComparable> .</span><span class="sxs-lookup"><span data-stu-id="0a0fe-112">Because of the constraint, you must supply to `keyType` a type that implements <xref:System.IComparable>.</span></span>  
   
- <span data-ttu-id="d52ce-113">En el ejemplo de código siguiente se crea un objeto que contiene `String` entradas y asocia una clave `Integer` a cada una de ellas.</span><span class="sxs-lookup"><span data-stu-id="d52ce-113">The following code example creates an object that holds `String` entries and associates an `Integer` key with each one.</span></span> <span data-ttu-id="d52ce-114">`Integer` implementa <xref:System.IComparable> y, por tanto, satisface la restricción en `keyType`.</span><span class="sxs-lookup"><span data-stu-id="d52ce-114">`Integer` implements <xref:System.IComparable> and therefore satisfies the constraint on `keyType`.</span></span>  
+ <span data-ttu-id="0a0fe-113">En el ejemplo de código siguiente se crea un objeto que contiene `String` entradas y asocia una `Integer` clave a cada una de ellas.</span><span class="sxs-lookup"><span data-stu-id="0a0fe-113">The following code example creates an object that holds `String` entries and associates an `Integer` key with each one.</span></span> <span data-ttu-id="0a0fe-114">`Integer`implementa <xref:System.IComparable> y, por tanto, satisface la restricción en `keyType` .</span><span class="sxs-lookup"><span data-stu-id="0a0fe-114">`Integer` implements <xref:System.IComparable> and therefore satisfies the constraint on `keyType`.</span></span>  
   
 ```vb  
 Dim d As New dictionary(Of String, Integer)  
 ```  
   
- <span data-ttu-id="d52ce-115">La palabra clave `Of` se puede usar en los siguientes contextos:</span><span class="sxs-lookup"><span data-stu-id="d52ce-115">The `Of` keyword can be used in these contexts:</span></span>  
+ <span data-ttu-id="0a0fe-115">La palabra clave `Of` se puede usar en los siguientes contextos:</span><span class="sxs-lookup"><span data-stu-id="0a0fe-115">The `Of` keyword can be used in these contexts:</span></span>  
   
- [<span data-ttu-id="d52ce-116">Class (instrucción)</span><span class="sxs-lookup"><span data-stu-id="d52ce-116">Class Statement</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [<span data-ttu-id="0a0fe-116">Instrucción Class</span><span class="sxs-lookup"><span data-stu-id="0a0fe-116">Class Statement</span></span>](class-statement.md)  
   
- [<span data-ttu-id="d52ce-117">Delegate (instrucción)</span><span class="sxs-lookup"><span data-stu-id="d52ce-117">Delegate Statement</span></span>](../../../visual-basic/language-reference/statements/delegate-statement.md)  
+ [<span data-ttu-id="0a0fe-117">Delegate (Instrucción)</span><span class="sxs-lookup"><span data-stu-id="0a0fe-117">Delegate Statement</span></span>](delegate-statement.md)  
   
- [<span data-ttu-id="d52ce-118">Function (instrucción)</span><span class="sxs-lookup"><span data-stu-id="d52ce-118">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [<span data-ttu-id="0a0fe-118">Instrucción Function</span><span class="sxs-lookup"><span data-stu-id="0a0fe-118">Function Statement</span></span>](function-statement.md)  
   
- [<span data-ttu-id="d52ce-119">Interface (instrucción)</span><span class="sxs-lookup"><span data-stu-id="d52ce-119">Interface Statement</span></span>](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [<span data-ttu-id="0a0fe-119">Instrucción Interface</span><span class="sxs-lookup"><span data-stu-id="0a0fe-119">Interface Statement</span></span>](interface-statement.md)  
   
- [<span data-ttu-id="d52ce-120">Structure (instrucción)</span><span class="sxs-lookup"><span data-stu-id="d52ce-120">Structure Statement</span></span>](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [<span data-ttu-id="0a0fe-120">Structure (Instrucción)</span><span class="sxs-lookup"><span data-stu-id="0a0fe-120">Structure Statement</span></span>](structure-statement.md)  
   
- [<span data-ttu-id="d52ce-121">Sub (instrucción)</span><span class="sxs-lookup"><span data-stu-id="d52ce-121">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [<span data-ttu-id="0a0fe-121">Instrucción Sub</span><span class="sxs-lookup"><span data-stu-id="0a0fe-121">Sub Statement</span></span>](sub-statement.md)  
   
-## <a name="see-also"></a><span data-ttu-id="d52ce-122">Vea también</span><span class="sxs-lookup"><span data-stu-id="d52ce-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0a0fe-122">Consulte también</span><span class="sxs-lookup"><span data-stu-id="0a0fe-122">See also</span></span>
 
 - <xref:System.IComparable>
-- [<span data-ttu-id="d52ce-123">Lista de tipos</span><span class="sxs-lookup"><span data-stu-id="d52ce-123">Type List</span></span>](../../../visual-basic/language-reference/statements/type-list.md)
-- [<span data-ttu-id="d52ce-124">Generic Types in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d52ce-124">Generic Types in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [<span data-ttu-id="d52ce-125">In</span><span class="sxs-lookup"><span data-stu-id="d52ce-125">In</span></span>](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
-- [<span data-ttu-id="d52ce-126">Out</span><span class="sxs-lookup"><span data-stu-id="d52ce-126">Out</span></span>](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+- [<span data-ttu-id="0a0fe-123">Type List</span><span class="sxs-lookup"><span data-stu-id="0a0fe-123">Type List</span></span>](type-list.md)
+- [<span data-ttu-id="0a0fe-124">Tipos genéricos en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="0a0fe-124">Generic Types in Visual Basic</span></span>](../../programming-guide/language-features/data-types/generic-types.md)
+- [<span data-ttu-id="0a0fe-125">De</span><span class="sxs-lookup"><span data-stu-id="0a0fe-125">In</span></span>](../modifiers/in-generic-modifier.md)
+- [<span data-ttu-id="0a0fe-126">Enuncia</span><span class="sxs-lookup"><span data-stu-id="0a0fe-126">Out</span></span>](../modifiers/out-generic-modifier.md)

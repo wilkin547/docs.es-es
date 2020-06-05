@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - BC30298
 ms.assetid: 2d77b7f4-0640-4f89-9c65-f101fd2847c0
-ms.openlocfilehash: 8459ee7fec6d761161a721c88ccdc88e513fc95f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6abb6dde624e129b52fefecf8c51e6cde2567ae1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936700"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409808"
 ---
-# <a name="constructor-name-cannot-call-itself"></a><span data-ttu-id="3f090-102">Constructor '\<nombre >' no se puede llamar a sí mismo</span><span class="sxs-lookup"><span data-stu-id="3f090-102">Constructor '\<name>' cannot call itself</span></span>
-<span data-ttu-id="3f090-103">Un `Sub New` procedimiento en una clase o estructura se llama a sí mismo.</span><span class="sxs-lookup"><span data-stu-id="3f090-103">A `Sub New` procedure in a class or structure calls itself.</span></span>  
+# <a name="constructor-name-cannot-call-itself"></a><span data-ttu-id="4dcfd-102">El constructor '\<name>' no se puede llamar a sí mismo</span><span class="sxs-lookup"><span data-stu-id="4dcfd-102">Constructor '\<name>' cannot call itself</span></span>
+<span data-ttu-id="4dcfd-103">Un `Sub New` procedimiento en una clase o estructura se llama a sí mismo.</span><span class="sxs-lookup"><span data-stu-id="4dcfd-103">A `Sub New` procedure in a class or structure calls itself.</span></span>  
   
- <span data-ttu-id="3f090-104">Es el propósito de un constructor inicializar una instancia de una clase o estructura cuando sea primera creado.</span><span class="sxs-lookup"><span data-stu-id="3f090-104">The purpose of a constructor is to initialize an instance of a class or structure when it is first created.</span></span> <span data-ttu-id="3f090-105">Una clase o estructura puede tener varios constructores, siempre que tengan listas de parámetros diferentes.</span><span class="sxs-lookup"><span data-stu-id="3f090-105">A class or structure can have several constructors, provided they all have different parameter lists.</span></span> <span data-ttu-id="3f090-106">Se permite un constructor para llamar a otro constructor para llevar a cabo su funcionalidad además de su propio.</span><span class="sxs-lookup"><span data-stu-id="3f090-106">A constructor is permitted to call another constructor to perform its functionality in addition to its own.</span></span> <span data-ttu-id="3f090-107">Pero no tiene sentido que un constructor llame a sí mismo y de hecho el resultado sería una recursividad infinita si lo permite.</span><span class="sxs-lookup"><span data-stu-id="3f090-107">But it is meaningless for a constructor to call itself, and in fact it would result in infinite recursion if permitted.</span></span>  
+ <span data-ttu-id="4dcfd-104">El propósito de un constructor es inicializar una instancia de una clase o estructura cuando se crea por primera vez.</span><span class="sxs-lookup"><span data-stu-id="4dcfd-104">The purpose of a constructor is to initialize an instance of a class or structure when it is first created.</span></span> <span data-ttu-id="4dcfd-105">Una clase o estructura puede tener varios constructores, siempre que todos tengan listas de parámetros diferentes.</span><span class="sxs-lookup"><span data-stu-id="4dcfd-105">A class or structure can have several constructors, provided they all have different parameter lists.</span></span> <span data-ttu-id="4dcfd-106">Se permite a un constructor llamar a otro constructor para realizar su funcionalidad además de la suya propia.</span><span class="sxs-lookup"><span data-stu-id="4dcfd-106">A constructor is permitted to call another constructor to perform its functionality in addition to its own.</span></span> <span data-ttu-id="4dcfd-107">Pero no tiene sentido que un constructor se llame a sí mismo y, de hecho, daría como resultado una recursividad infinita si se permitiera.</span><span class="sxs-lookup"><span data-stu-id="4dcfd-107">But it is meaningless for a constructor to call itself, and in fact it would result in infinite recursion if permitted.</span></span>  
   
- <span data-ttu-id="3f090-108">**Identificador de error:** BC30298</span><span class="sxs-lookup"><span data-stu-id="3f090-108">**Error ID:** BC30298</span></span>  
+ <span data-ttu-id="4dcfd-108">**Identificador de error:** BC30298</span><span class="sxs-lookup"><span data-stu-id="4dcfd-108">**Error ID:** BC30298</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="3f090-109">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="3f090-109">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="4dcfd-109">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="4dcfd-109">To correct this error</span></span>  
   
-1. <span data-ttu-id="3f090-110">Compruebe la lista de parámetros del constructor que se llama.</span><span class="sxs-lookup"><span data-stu-id="3f090-110">Check the parameter list of the constructor being called.</span></span> <span data-ttu-id="3f090-111">Debe ser diferente de la que realiza la llamada de constructor.</span><span class="sxs-lookup"><span data-stu-id="3f090-111">It should be different from that of the constructor making the call.</span></span>  
+1. <span data-ttu-id="4dcfd-110">Compruebe la lista de parámetros del constructor al que se está llamando.</span><span class="sxs-lookup"><span data-stu-id="4dcfd-110">Check the parameter list of the constructor being called.</span></span> <span data-ttu-id="4dcfd-111">Debe ser diferente del constructor que realiza la llamada.</span><span class="sxs-lookup"><span data-stu-id="4dcfd-111">It should be different from that of the constructor making the call.</span></span>  
   
-2. <span data-ttu-id="3f090-112">Si no piensa llamar a un constructor diferente, quite el `Sub New` llamar por completo.</span><span class="sxs-lookup"><span data-stu-id="3f090-112">If you do not intend to call a different constructor, remove the `Sub New` call entirely.</span></span>  
+2. <span data-ttu-id="4dcfd-112">Si no desea llamar a un constructor diferente, quite la llamada por `Sub New` completo.</span><span class="sxs-lookup"><span data-stu-id="4dcfd-112">If you do not intend to call a different constructor, remove the `Sub New` call entirely.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3f090-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="3f090-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4dcfd-113">Consulte también</span><span class="sxs-lookup"><span data-stu-id="4dcfd-113">See also</span></span>
 
-- [<span data-ttu-id="3f090-114">Duración del objeto: ¿Cómo se crean y destruyen objetos</span><span class="sxs-lookup"><span data-stu-id="3f090-114">Object Lifetime: How Objects Are Created and Destroyed</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+- [<span data-ttu-id="4dcfd-114">Duración de los objetos: cómo se crean y destruyen</span><span class="sxs-lookup"><span data-stu-id="4dcfd-114">Object Lifetime: How Objects Are Created and Destroyed</span></span>](../../programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
