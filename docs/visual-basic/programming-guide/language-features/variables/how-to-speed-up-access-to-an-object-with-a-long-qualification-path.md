@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Acelerar el acceso a un objeto con una ruta de acceso de calificación larga'
+title: Procedimiento para acelerar el acceso a un objeto con una ruta de acceso de calificación larga
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], accessing
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - With block
 - object variables [Visual Basic], accessing
 ms.assetid: 3eb7657f-c9fe-4e05-8bc3-4bb14d5ae585
-ms.openlocfilehash: 83670ae6af0904156b08398024658cf504b7663f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: fe93e7bac2a21f1060d1f93765eb35e1ad0c7eb0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346819"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410417"
 ---
 # <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a>Cómo: Acelerar el acceso a un objeto con una ruta de acceso de calificación larga (Visual Basic)
 
 Si tiene acceso a menudo a un objeto que requiere una ruta de acceso de calificación de varios métodos y propiedades, puede acelerar el código sin repetir la ruta de acceso de la calificación.
 
-Hay dos maneras de evitar repetir la ruta de acceso de la calificación. Puede asignar el objeto a una variable o puede usarlo en un bloque `With`...`End With`.
+Hay dos maneras de evitar repetir la ruta de acceso de la calificación. Puede asignar el objeto a una variable o puede usarlo en un `With` bloque... `End With` .
 
 ### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a>Para acelerar el acceso a un objeto muy calificado mediante su asignación a una variable
 
@@ -39,13 +39,13 @@ Hay dos maneras de evitar repetir la ruta de acceso de la calificación. Puede a
 
 ### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a>Para acelerar el acceso a un objeto muy calificado mediante un con... Terminar con bloque
 
-1. Coloque la ruta de acceso de calificación en una instrucción `With`.
+1. Coloque la ruta de acceso de la calificación en una `With` instrucción.
 
     ```vb
     With someForm.ActiveForm.ActiveControl
     ```
 
-2. Obtenga acceso a los miembros del objeto dentro del bloque `With`, antes de la instrucción `End With`.
+2. Obtenga acceso a los miembros del objeto dentro del `With` bloque, antes de la `End With` instrucción.
 
     ```vb
         .Text = "Test"
@@ -54,7 +54,7 @@ Hay dos maneras de evitar repetir la ruta de acceso de la calificación. Puede a
     End With
     ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
-- [With...End With (instrucción)](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)
+- [Variables de objeto](object-variables.md)
+- [Instrucción With...End With](../../../language-reference/statements/with-end-with-statement.md)

@@ -1,13 +1,13 @@
 ---
-title: 'Cómo: Filtrar por un atributo (XPath-LINQ to XML)'
+title: Procedimiento para filtrar por un atributo (XPath-LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: ffefb9d6-45ec-4677-a396-dd9c2b36298f
-ms.openlocfilehash: f8a804fa7937d8d27b38bba7a294f1c760101de8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5bc0a621f0d3bb8e22701440383cdac54c7be51b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353055"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84394510"
 ---
 # <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a>Cómo: filtrar por un atributo (XPath-LINQ to XML) (Visual Basic)
 Este tema muestra cómo obtener los elementos descendientes con un nombre especificado y con un atributo con un valor especificado.  
@@ -19,7 +19,7 @@ Este tema muestra cómo obtener los elementos descendientes con un nombre especi
 ## <a name="example"></a>Ejemplo  
  Este ejemplo encuentra todos los elementos descendientes con el nombre `Address` y con un atributo `Type` con el valor "Shipping".  
   
- En este ejemplo se usa el siguiente documento XML: [Archivo XML de ejemplo: Varios pedidos de compra (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: varios pedidos de compra (LINQ to XML)](sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
 Dim po As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -77,4 +77,4 @@ Results are identical
   
 ## <a name="see-also"></a>Vea también
 
-- [LINQ to XML para los usuarios de XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML para los usuarios de XPath (Visual Basic)](linq-to-xml-for-xpath-users.md)

@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: 3dcd7756b10fab8f66f4d5c10acedd8f600eb2e7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b14c7a3f1f667e7c13ec0ae46185ed3ece92beb8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350118"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84394057"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Tipos genéricos en Visual Basic (Visual Basic)
 Un *tipo genérico* es un elemento de programación único que se adapta para ejecutar la misma funcionalidad para distintos tipos de datos. Cuando se define una clase o un procedimiento genérico, no es necesario definir una versión independiente para cada tipo de datos para el que quiera ejecutar esa funcionalidad.  
@@ -58,7 +58,7 @@ Un *tipo genérico* es un elemento de programación único que se adapta para ej
   
  Ahora puede usar `stringQ` para trabajar exclusivamente con valores `String` . Dado que `stringQ` es específico de `String` en lugar de generalizarse para los valores `Object` , no dispone de enlace en tiempo de ejecución ni conversión de tipos. Esto ahorra tiempo de ejecución y reduce los errores de tiempo de ejecución.  
   
- Para obtener más información sobre el uso de un tipo genérico, vea [How to: Use a Generic Class](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md).  
+ Para obtener más información sobre el uso de un tipo genérico, vea [How to: Use a Generic Class](how-to-use-a-generic-class.md).  
   
 ## <a name="example-of-a-generic-class"></a>Ejemplo de una clase genérica  
  En el ejemplo siguiente se muestra un esquema de definición de una clase genérica.  
@@ -73,19 +73,19 @@ Un *tipo genérico* es un elemento de programación único que se adapta para ej
   
  [!code-vb[VbVbalrDataTypes#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#4)]  
   
- Para obtener un ejemplo más completo, vea [Cómo: definir una clase que pueda proporcionar la misma funcionalidad en tipos de datos diferentes](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
+ Para obtener un ejemplo más completo, vea [Cómo: definir una clase que pueda proporcionar la misma funcionalidad en tipos de datos diferentes](how-to-define-a-class-that-can-provide-identical-functionality.md).  
   
 ## <a name="eligible-programming-elements"></a>Elementos de programación válidos  
  Puede definir y usar clases genéricas, estructuras, interfaces, procedimientos y delegados. Tenga en cuenta que el .NET Framework define varias clases, estructuras e interfaces genéricas que representan los elementos genéricos que se usan habitualmente. El espacio de nombres <xref:System.Collections.Generic?displayProperty=nameWithType> proporciona diccionarios, listas, colas y pilas. Antes de definir su propio elemento genérico, vea si ya está disponible en <xref:System.Collections.Generic?displayProperty=nameWithType>.  
   
- Los procedimientos no son tipos, pero puede definir y usar procedimientos genéricos. Vea [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).  
+ Los procedimientos no son tipos, pero puede definir y usar procedimientos genéricos. Vea [Generic Procedures in Visual Basic](generic-procedures.md).  
   
 ## <a name="advantages-of-generic-types"></a>Ventajas de los tipos genéricos  
  Un tipo genérico sirve como base para declarar varios elementos de programación diferentes, cada uno de los cuales actúa en un tipo de datos específico. Las alternativas a un tipo genérico son:  
   
 1. Un tipo único que actúe en el tipo de datos `Object` .  
   
-2. Un conjunto de versiones del tipo *específicas del tipo* , cada una de las cuales esté codificada por separado y actúe en un tipo de datos concreto, como `String`, `Integer`o un tipo definido por el usuario, como `customer`.  
+2. Un conjunto de versiones *específicas* del tipo del tipo, cada versión codificada individualmente y funcionando en un tipo de datos concreto como `String` , `Integer` o un tipo definido por el usuario como `customer` .  
   
  Un tipo genérico tiene las ventajas siguientes sobre estas alternativas:  
   
@@ -122,11 +122,11 @@ Un *tipo genérico* es un elemento de programación único que se adapta para ej
   
 - El argumento de tipo debe exponer un constructor sin parámetros accesible para el código que crea objetos a partir de él.  
   
-- El argumento de tipo debe ser un *tipo de referencia*o un *tipo de valor*.  
+- El argumento de tipo debe ser un *tipo de referencia*o debe ser un *tipo de valor*  
   
- Si necesita imponer más que un requisito, use una *lista de restricciones* separadas por comas entre llaves (`{ }`). Para requerir un constructor accesible, incluya la palabra clave [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) en la lista. Para requerir un tipo de referencia, incluya la palabra clave `Class` ; para requerir un tipo de valor, incluya la palabra clave `Structure` .  
+ Si necesita imponer más que un requisito, use una *lista de restricciones* separadas por comas entre llaves (`{ }`). Para requerir un constructor accesible, incluya la palabra clave [New Operator](../../../language-reference/operators/new-operator.md) en la lista. Para requerir un tipo de referencia, incluya la palabra clave `Class` ; para requerir un tipo de valor, incluya la palabra clave `Structure` .  
   
- Para más información sobre las restricciones, vea [Type List](../../../../visual-basic/language-reference/statements/type-list.md).  
+ Para más información sobre las restricciones, vea [Type List](../../../language-reference/statements/type-list.md).  
   
 ### <a name="example-of-multiple-constraints"></a>Ejemplo de varias restricciones  
  En el ejemplo siguiente se muestra un esquema de definición de una clase genérica con una lista de restricciones en el parámetro de tipo. En el código que crea una instancia de esta clase, el argumento de tipo debe implementar ambas interfaces <xref:System.IComparable> y <xref:System.IDisposable> , ser un tipo de referencia y exponer un constructor sin parámetros accesible.  
@@ -146,16 +146,16 @@ Un *tipo genérico* es un elemento de programación único que se adapta para ej
   
 - *Tipo construido*. Clase, estructura, interfaz, procedimiento o delegado que se declara a partir de un tipo genérico proporcionando argumentos de tipo para sus parámetros de tipo.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Caracteres de tipo](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
-- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Conversiones de tipos en Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
-- [Solución de problemas de tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [Tipos de datos](../../../../visual-basic/language-reference/data-types/index.md)
-- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
-- [As](../../../../visual-basic/language-reference/statements/as-clause.md)
-- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Tipos de datos](index.md)
+- [Caracteres de tipo](type-characters.md)
+- [Tipos de valor y tipos de referencia](value-types-and-reference-types.md)
+- [Conversiones de tipos en Visual Basic](type-conversions.md)
+- [Solución de problemas de los tipos de datos](troubleshooting-data-types.md)
+- [Tipos de datos](../../../language-reference/data-types/index.md)
+- [De](../../../language-reference/statements/of-clause.md)
+- [Aplicar](../../../language-reference/statements/as-clause.md)
+- [Object Data Type](../../../language-reference/data-types/object-data-type.md)
 - [Covarianza y contravarianza](../../concepts/covariance-contravariance/index.md)
-- [Iteradores](../../../../visual-basic/programming-guide/concepts/iterators.md)
+- [Iteradores](../../concepts/iterators.md)

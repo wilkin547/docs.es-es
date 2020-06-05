@@ -1,21 +1,21 @@
 ---
-title: 'Cómo: convertir un objeto en otro tipo'
+title: Procedimiento Conversión de un objeto a otro tipo
 ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic], converting
 ms.assetid: 60cb5fc7-7ba4-4ab5-9c24-480fa12ddcdc
-ms.openlocfilehash: 6d16e0eafc3fa9233037abe0c92dcb1945ca8da9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: cdb78bc66867ce27076d7b7e42de6a2880cb3a8c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75341588"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84393966"
 ---
 # <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>Cómo: Convertir un objeto en otro tipo en Visual Basic
-Para convertir una variable de `Object` en otro tipo de datos, use una palabra clave de conversión como [CType function](../../../../visual-basic/language-reference/functions/ctype-function.md).  
+Para convertir una `Object` variable en otro tipo de datos, use una palabra clave de conversión como la [función ctype](../../../language-reference/functions/ctype-function.md).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se convierte una variable de `Object` en un `Integer` y un `String`.  
+ En el ejemplo siguiente se convierte una `Object` variable en `Integer` y `String` .  
   
 ```vb  
 Public Sub objectConversion(ByVal anObject As Object)  
@@ -26,21 +26,21 @@ Public Sub objectConversion(ByVal anObject As Object)
 End Sub  
 ```  
   
- Si sabe que el contenido de una variable `Object` es de un tipo de datos determinado, es mejor convertir la variable a ese tipo de datos. Si continúa usando la variable `Object`, incurrirá en la *conversión boxing* y la conversión *unboxing* (para un tipo de valor) o en el *enlace en tiempo de ejecución* (para un tipo de referencia). Estas operaciones tienen un tiempo de ejecución adicional y hacen que el rendimiento sea más lento.  
+ Si sabe que el contenido de una `Object` variable es de un tipo de datos determinado, es mejor convertir la variable a ese tipo de datos. Si continúa usando la `Object` variable, incurrirá en la *conversión boxing* y la conversión *unboxing* (para un tipo de valor) o en el *enlace en tiempo de ejecución* (para un tipo de referencia). Estas operaciones tienen un tiempo de ejecución adicional y hacen que el rendimiento sea más lento.  
   
 ## <a name="compile-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
 - Una referencia al espacio de nombres <xref:System?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Object>
-- [Conversiones de tipos en Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
-- [Conversiones de ampliación y de restricción](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
-- [Conversiones implícitas y explícitas](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
-- [Conversiones entre cadenas y otros tipos](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
-- [Conversiones de matriz](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
-- [Estructuras](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [Tipos de datos](../../../../visual-basic/language-reference/data-types/index.md)
-- [Funciones de conversión de tipos](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Conversiones de tipos en Visual Basic](type-conversions.md)
+- [Widening and Narrowing Conversions](widening-and-narrowing-conversions.md)
+- [Conversiones implícitas y explícitas](implicit-and-explicit-conversions.md)
+- [Conversiones entre cadenas y otros tipos](conversions-between-strings-and-other-types.md)
+- [Conversiones de matriz](array-conversions.md)
+- [Estructuras](structures.md)
+- [Tipos de datos](../../../language-reference/data-types/index.md)
+- [Type Conversion Functions](../../../language-reference/functions/type-conversion-functions.md)
