@@ -1,21 +1,21 @@
 ---
-title: 'Cómo: Dividir un archivo en varios mediante el uso de grupos (LINQ)'
+title: Procedimiento para dividir un archivo en varios mediante el uso de grupos (LINQ)
 ms.date: 07/20/2015
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
-ms.openlocfilehash: 07d53c9afca88cd3156c7fc8fcfab5ac7ca24f25
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f6b11ab4b4fe11dbf1cb4cf07654b5ef3f6785ad
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348029"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397718"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a><span data-ttu-id="85de5-102">Cómo: dividir un archivo en varios archivos mediante el uso de grupos (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="85de5-102">How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)</span></span>
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a><span data-ttu-id="10661-102">Cómo: dividir un archivo en varios archivos mediante el uso de grupos (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="10661-102">How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)</span></span>
 
-<span data-ttu-id="85de5-103">En este ejemplo se muestra una manera de combinar el contenido de dos archivos y luego crear un conjunto de archivos nuevos que organicen los datos de una forma nueva.</span><span class="sxs-lookup"><span data-stu-id="85de5-103">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>
+<span data-ttu-id="10661-103">En este ejemplo se muestra una manera de combinar el contenido de dos archivos y luego crear un conjunto de archivos nuevos que organicen los datos de una forma nueva.</span><span class="sxs-lookup"><span data-stu-id="10661-103">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>
 
-### <a name="to-create-the-data-files"></a><span data-ttu-id="85de5-104">Para crear los archivos de datos</span><span class="sxs-lookup"><span data-stu-id="85de5-104">To create the data files</span></span>
+### <a name="to-create-the-data-files"></a><span data-ttu-id="10661-104">Para crear los archivos de datos</span><span class="sxs-lookup"><span data-stu-id="10661-104">To create the data files</span></span>
 
-1. <span data-ttu-id="85de5-105">Copie estos nombres en un archivo de texto denominado names1.txt y guárdelo en la carpeta del proyecto:</span><span class="sxs-lookup"><span data-stu-id="85de5-105">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>
+1. <span data-ttu-id="10661-105">Copie estos nombres en un archivo de texto denominado names1.txt y guárdelo en la carpeta del proyecto:</span><span class="sxs-lookup"><span data-stu-id="10661-105">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>
 
     ```text
     Bankov, Peter
@@ -30,7 +30,7 @@ ms.locfileid: "75348029"
     Garcia, Debra
     ```
 
-2. <span data-ttu-id="85de5-106">Copie estos nombres en un archivo de texto denominado names2.txt y guárdelo en la carpeta del proyecto: tenga en cuenta que los dos archivos tienen algunos nombres en común.</span><span class="sxs-lookup"><span data-stu-id="85de5-106">Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.</span></span>
+2. <span data-ttu-id="10661-106">Copie estos nombres en un archivo de texto denominado names2.txt y guárdelo en la carpeta del proyecto: tenga en cuenta que los dos archivos tienen algunos nombres en común.</span><span class="sxs-lookup"><span data-stu-id="10661-106">Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.</span></span>
 
     ```text
     Liu, Jinghao
@@ -45,7 +45,7 @@ ms.locfileid: "75348029"
     El Yassir, Mehdi
     ```
 
-## <a name="example"></a><span data-ttu-id="85de5-107">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="85de5-107">Example</span></span>
+## <a name="example"></a><span data-ttu-id="10661-107">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="10661-107">Example</span></span>
 
 ```vb
 Class SplitWithGroups
@@ -114,13 +114,13 @@ End Class
 '    Toyoshima, Tim
 ```
 
-<span data-ttu-id="85de5-108">El programa escribe un archivo independiente para cada grupo en la misma carpeta que los archivos de datos.</span><span class="sxs-lookup"><span data-stu-id="85de5-108">The program writes a separate file for each group in the same folder as the data files.</span></span>
+<span data-ttu-id="10661-108">El programa escribe un archivo independiente para cada grupo en la misma carpeta que los archivos de datos.</span><span class="sxs-lookup"><span data-stu-id="10661-108">The program writes a separate file for each group in the same folder as the data files.</span></span>
 
-## <a name="compile-the-code"></a><span data-ttu-id="85de5-109">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="85de5-109">Compile the code</span></span>
+## <a name="compile-the-code"></a><span data-ttu-id="10661-109">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="10661-109">Compile the code</span></span>
 
-<span data-ttu-id="85de5-110">Cree un proyecto de aplicación de consola de Visual Basic, con una instrucción de `Imports` para el espacio de nombres System. Linq.</span><span class="sxs-lookup"><span data-stu-id="85de5-110">Create a Visual Basic console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+<span data-ttu-id="10661-110">Cree un proyecto de aplicación de consola de Visual Basic, con una `Imports` instrucción para el espacio de nombres System. Linq.</span><span class="sxs-lookup"><span data-stu-id="10661-110">Create a Visual Basic console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="85de5-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="85de5-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="10661-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="10661-111">See also</span></span>
 
-- [<span data-ttu-id="85de5-112">LINQ y cadenas (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="85de5-112">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="85de5-113">LINQ y directorios de archivos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="85de5-113">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="10661-112">LINQ y cadenas (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="10661-112">LINQ and Strings (Visual Basic)</span></span>](linq-and-strings.md)
+- [<span data-ttu-id="10661-113">LINQ y directorios de archivos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="10661-113">LINQ and File Directories (Visual Basic)</span></span>](linq-and-file-directories.md)
