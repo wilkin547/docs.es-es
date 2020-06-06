@@ -1,23 +1,23 @@
 ---
-title: <behavior>de <serviceBehaviors> flujo de trabajo
+title: <behavior>de <serviceBehaviors> de flujo de trabajo
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a4b718a-1b40-4957-935a-f6122819ab3c
 ms.openlocfilehash: 071cff8e9f6ec3fa0546a07d19160869d8b43f60
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79152325"
 ---
-# <a name="behavior-of-servicebehaviors-of-workflow"></a>\<comportamiento> \<de serviceBehaviors> del flujo de trabajo
-El elemento **behavior** contiene una colección de valores para el comportamiento de un servicio. Cada comportamiento se indexa por su **nombre**. Los servicios pueden vincular a cada comportamiento a través de este nombre mediante el atributo **behaviorConfiguration** del [ \<elemento>](../wcf/endpoint-element.md) del punto de conexión. De esta forma, los extremos pueden compartir configuraciones de comportamientos comunes sin volver a definir la configuración.  
+# <a name="behavior-of-servicebehaviors-of-workflow"></a>\<behavior>de \<serviceBehaviors> de flujo de trabajo
+El elemento **Behavior** contiene una colección de valores para el comportamiento de un servicio. Cada comportamiento se indexa por su **nombre**. Los servicios se pueden vincular a cada comportamiento a través de este nombre mediante el atributo **behaviorConfiguration** del [\<endpoint>](../wcf/endpoint-element.md) elemento. De esta forma, los extremos pueden compartir configuraciones de comportamientos comunes sin volver a definir la configuración.  
   
-[**\<configuración>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<Sistema.>De ServiceModel**](system-servicemodel-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<comportamientos>**](behaviors-of-workflow.md)\
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.ServiceModel>**](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors-of-workflow.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceBehaviors>**](servicebehaviors-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<comportamiento>**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<behavior>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -65,8 +65,8 @@ El elemento **behavior** contiene una colección de valores para el comportamien
 |Elemento|Descripción|  
 |-------------|-----------------|  
 |[\<bufferReceive>](bufferreceive.md)|Un comportamiento del servicio que permite a un servicio usar procesamiento de recepción almacenado en búfer, lo que permite que un servicio de flujo de trabajo procese mensajes desordenados.|  
-|[\<>de enrutamiento](../wcf/routing-of-servicebehavior.md)|Un comportamiento del servicio que permite a un servicio usar el seguimiento de ETW utilizando un objeto <xref:System.Activities.Tracking.EtwTrackingParticipant>.|  
-|[\<>sendMessageChannelCache](sendmessagechannelcache.md)|Un comportamiento del servicio que permite personalizar los niveles de uso compartido de la memoria caché, la configuración de la memoria caché del generador de canales y la de la memoria caché del canal para los flujos de trabajo que envían mensajes a los extremos de servicio utilizando las actividades de mensajería de Enviar.|  
+|[\<routing>](../wcf/routing-of-servicebehavior.md)|Un comportamiento del servicio que permite a un servicio usar el seguimiento de ETW utilizando un objeto <xref:System.Activities.Tracking.EtwTrackingParticipant>.|  
+|[\<sendMessageChannelCache>](sendmessagechannelcache.md)|Un comportamiento del servicio que permite personalizar los niveles de uso compartido de la memoria caché, la configuración de la memoria caché del generador de canales y la de la memoria caché del canal para los flujos de trabajo que envían mensajes a los extremos de servicio utilizando las actividades de mensajería de Enviar.|  
 |[\<sqlWorkflowInstanceStore>](sqlworkflowinstancestore.md)|Un comportamiento del servicio que permite configurar la característica <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, que admite la conservación de la información de estado de las instancias del servicio de flujo de trabajo en una base de datos SQL Server 2005 o SQL Server 2008.|  
 |[\<workflowIdle>](workflowidle.md)|Un comportamiento del servicio que controla cuando las instancias de flujo de trabajo inactivas se descargan y conservan.|  
 |[\<workflowInstanceManagement>](workflowinstancemanagement.md)|Un comportamiento del servicio que permite especificar valores que controlan cómo se ejecutan las instancias de flujo de trabajo, incluida la conservación, el comportamiento de la excepción no controlada y el comportamiento inactivo.|  

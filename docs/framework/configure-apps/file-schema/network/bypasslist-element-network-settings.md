@@ -9,19 +9,19 @@ helpviewer_keywords:
 - <bypasslist> element
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
 ms.openlocfilehash: 97e69a4978aa4700d13a994619a65312cf70aeaa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154951"
 ---
-# <a name="bypasslist-element-network-settings"></a>\<bypasslist> Element (Configuración de red)
-Proporciona un conjunto de expresiones regulares que describen direcciones que no utilizan un proxy.  
+# <a name="bypasslist-element-network-settings"></a>Elemento \<bypasslist> (configuración de red)
+Proporciona un conjunto de expresiones regulares que describen las direcciones que no utilizan un proxy.  
 
-[**\<configuración>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<defaultProxy>**](defaultproxy-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>de lista de derivación**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<bypasslist>**
 
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,30 +38,30 @@ Proporciona un conjunto de expresiones regulares que describen direcciones que n
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|**Elemento**|**Descripción**|  
+|**Element**|**Descripción**|  
 |-----------------|---------------------|  
-|[agregar](add-element-for-bypasslist-network-settings.md)|Agrega una dirección IP o un nombre DNS a la lista de omisión de proxy.|  
-|[Claro](clear-element-for-bypasslist-network-settings.md)|Borra la lista de derivación.|  
-|[quitar](remove-element-for-bypasslist-network-settings.md)|Quita una dirección IP o un nombre DNS de la lista de omisión de proxy.|  
+|[add](add-element-for-bypasslist-network-settings.md)|Agrega una dirección IP o un nombre DNS a la lista de omisión de proxy.|  
+|[clear](clear-element-for-bypasslist-network-settings.md)|Borra la lista de omisiones.|  
+|[remove](remove-element-for-bypasslist-network-settings.md)|Quita una dirección IP o un nombre DNS de la lista de omisión de proxy.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|**Elemento**|**Descripción**|  
+|**Element**|**Descripción**|  
 |-----------------|---------------------|  
 |[defaultProxy](defaultproxy-element-network-settings.md)|Configura el servidor proxy de Protocolo de transferencia de hipertexto (HTTP).|  
   
-## <a name="remarks"></a>Observaciones  
- La lista de omisión contiene <xref:System.Net.WebRequest> expresiones regulares que describen los URI a los que las instancias tienen acceso directamente en lugar de a través del servidor proxy.  
+## <a name="remarks"></a>Comentarios  
+ La lista de omisión contiene expresiones regulares que describen <xref:System.Net.WebRequest> los URI a los que las instancias tienen acceso directamente en lugar de a través del servidor proxy.  
   
- Debe tener cuidado al especificar una expresión regular para este elemento. La expresión regular "[a-z]+\\.contoso\\.com" coincide con cualquier host del dominio contoso.com, pero también coincide con cualquier host del dominio contoso.com.cpandl.com. Para que solo coincida con un host del dominio contoso.com, use un\\delimitador\\("$"): "[a-z]+ .contoso .com$".  
+ Debe tener precaución al especificar una expresión regular para este elemento. La expresión regular "[a-z] + \\ . contoso \\ . com" coincide con cualquier host del dominio contoso.com, pero también coincide con cualquier host del dominio contoso.com.CPANDL.com. Para que solo coincida con un host del dominio contoso.com, use un delimitador ("$"): "[a-z] + \\ . contoso \\ . com $".  
   
- Para obtener más información acerca de las expresiones regulares, consulte . [Expresiones regulares de .NET Framework](../../../../standard/base-types/regular-expressions.md).  
+ Para obtener más información acerca de las expresiones regulares, vea. [.NET Framework expresiones regulares](../../../../standard/base-types/regular-expressions.md).  
   
 ## <a name="configuration-files"></a>Archivos de configuración  
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se agregan dos direcciones a la lista de omisión. El primero omite el proxy para todos los servidores del dominio contoso.com; el segundo omite el proxy para todos los servidores cuyas direcciones IP comienzan con 192.168.  
+ En el ejemplo siguiente se agregan dos direcciones a la lista de omisiones. El primero omite el proxy para todos los servidores del dominio contoso.com; la segunda omite el proxy para todos los servidores cuyas direcciones IP comienzan con 192,168.  
   
 ```xml  
 <configuration>  
@@ -79,4 +79,4 @@ Proporciona un conjunto de expresiones regulares que describen direcciones que n
 ## <a name="see-also"></a>Consulte también
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [Esquema de configuración de red](index.md)
+- [Esquema de la configuración de red](index.md)

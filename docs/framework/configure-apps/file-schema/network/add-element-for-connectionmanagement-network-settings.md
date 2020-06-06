@@ -11,19 +11,19 @@ helpviewer_keywords:
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
 ms.openlocfilehash: 093b68d31e03094bedefa96a2f2d53eb3d84edf0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79155016"
 ---
-# <a name="add-element-for-connectionmanagement-network-settings"></a>\<Agregar> elemento para connectionManagement (Configuración de red)
+# <a name="add-element-for-connectionmanagement-network-settings"></a>Elemento \<add> para connectionManagement (configuración de red)
 Agrega una dirección IP o nombre DNS a la lista de administración de conexión.  
 
-[**\<configuración>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<connectionManagement>**](connectionmanagement-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<añadir>**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**
 
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,7 +39,7 @@ Agrega una dirección IP o nombre DNS a la lista de administración de conexión
   
 ### <a name="attributes"></a>Atributos  
   
-|**Atributo**|**Descripción**|  
+|**Attribute**|**Descripción**|  
 |-------------------|---------------------|  
 |`address`|Cadena que describe una dirección IP o nombre DNS.|  
 |`maxconnection`|Número máximo de conexiones permitido en un servidor. Si no se proporciona, el valor predeterminado es 2.|  
@@ -49,11 +49,11 @@ Agrega una dirección IP o nombre DNS a la lista de administración de conexión
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|**Elemento**|**Descripción**|  
+|**Element**|**Descripción**|  
 |-----------------|---------------------|  
 |[connectionManagement](connectionmanagement-element-network-settings.md)|Especifica el número máximo de conexiones a un host de red.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El valor de la `address` atributo debe ser un asterisco para indicar todas las conexiones, o bien una cadena del formulario `<schema>://<idn_hostname>[:<port>]`.  
   
  Si el URI pasado a cualquier API de HTTP contiene Unicode, el nombre se convertirá internamente mediante <xref:System.Uri.DnsSafeHost%2A>, que puede devolver una cadena de punicode (comportamiento dependiente de la configuración actual de IDN).  
@@ -62,7 +62,7 @@ Agrega una dirección IP o nombre DNS a la lista de administración de conexión
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se configura una `www.contoso.com` aplicación para utilizar cuatro conexiones al servidor y dos conexiones a todos los demás servidores.  
+ En el ejemplo siguiente se configura una aplicación para que use cuatro conexiones al servidor `www.contoso.com` y dos conexiones a todos los demás servidores.  
   
 ```xml  
 <configuration>  
@@ -79,4 +79,4 @@ Agrega una dirección IP o nombre DNS a la lista de administración de conexión
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
-- [Esquema de configuración de red](index.md)
+- [Esquema de la configuración de red](index.md)

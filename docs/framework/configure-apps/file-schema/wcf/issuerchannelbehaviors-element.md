@@ -12,24 +12,24 @@ no-loc:
 - <issuerChannelBehaviors>
 - <dataContractSerializer>
 ms.openlocfilehash: cbbfb9d3b5af47a360aa82cf837cd6749f61b641
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70893161"
 ---
-# <a name="issuerchannelbehaviors-element"></a>\<issuerChannelBehaviors >, elemento
+# <a name="issuerchannelbehaviors-element"></a>\<issuerChannelBehaviors> (Elemento)
 
-Contiene una colección de comportamientos de extremo de cliente de Windows Communication Foundation (WCF) (definidos en la configuración) que se usarán al comunicarse con los servicios de token de servicio especificados. Los comportamientos definidos no pueden incluir [ \<elementos > clientCredentials](clientcredentials.md) .
+Contiene una colección de comportamientos de extremo de cliente de Windows Communication Foundation (WCF) (definidos en la configuración) que se usarán al comunicarse con los servicios de token de servicio especificados. Los comportamientos definidos no pueden incluir [\<clientCredentials>](clientcredentials.md) elementos.
 
 [\<configuration>](../configuration-element.md)\
-&nbsp;&nbsp;[\<> System. serviceModel](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<comportamientos >](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<> endpointBehaviors](endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<comportamiento >](behavior-of-endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<clientCredentials >](clientcredentials.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<> issuedToken](issuedtoken.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<> issuerChannelBehaviors
+&nbsp;&nbsp;[\<system.serviceModel>](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<behaviors>](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<endpointBehaviors>](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<behavior>](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<clientCredentials>](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<issuedToken>](issuedtoken.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<issuerChannelBehaviors>
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -50,21 +50,21 @@ Ninguno.
 
 ### <a name="child-elements"></a>Elementos secundarios
 
-|Elemento|DESCRIPCIÓN|
+|Elemento|Descripción|
 |-------------|-----------------|
 |[\<add>](add-of-issuerchannelbehaviors.md)|Agrega un comportamiento a la colección.|
 
 ### <a name="parent-elements"></a>Elementos primarios
 
-|Elemento|DESCRIPCIÓN|
+|Elemento|Descripción|
 |-------------|-----------------|
 |[\<issuedToken>](issuedtoken.md)|Especifica un token personalizado usado para autenticar un cliente en un servicio.|
 
 ## <a name="remarks"></a>Comentarios
 
-Use este elemento cuando se deba utilizar un comportamiento (excepto los comportamientos que incluyen elementos `<clientCredentials>`) para comunicar con un servicio. Por ejemplo, si se [ \<](datacontractserializer-element.md) debe incluir un elemento de comportamiento dataContractSerializer >.
+Use este elemento cuando se deba utilizar un comportamiento (excepto los comportamientos que incluyen elementos `<clientCredentials>`) para comunicar con un servicio. Por ejemplo, si [\<dataContractSerializer>](datacontractserializer-element.md) se debe incluir un elemento de comportamiento.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientElement.IssuerChannelBehaviors%2A>
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientBehaviorsElement>
@@ -75,6 +75,6 @@ Use este elemento cuando se deba utilizar un comportamiento (excepto los comport
 - [Federación y tokens emitidos](../../../wcf/feature-details/federation-and-issued-tokens.md)
 - [Protección de servicios y clientes](../../../wcf/feature-details/securing-services-and-clients.md)
 - [Protección de clientes](../../../wcf/securing-clients.md)
-- [Cómo: Creación de un cliente federado](../../../wcf/feature-details/how-to-create-a-federated-client.md)
-- [Cómo: Configuración de un emisor local](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)
+- [Procedimiento para crear un cliente federado](../../../wcf/feature-details/how-to-create-a-federated-client.md)
+- [Procedimiento para configurar un emisor local](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)
 - [Federación y tokens emitidos](../../../wcf/feature-details/federation-and-issued-tokens.md)

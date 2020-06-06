@@ -3,22 +3,22 @@ title: <windows>del <clientCredentials> elemento
 ms.date: 03/30/2017
 ms.assetid: 793e41c2-31ea-4159-abbc-2123bf097233
 ms.openlocfilehash: 61ca99213f0b83a5af5df0184a8c1de405366288
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70399129"
 ---
-# <a name="windows-of-clientcredentials-element"></a>\<Windows > de \<elemento > clientCredentials
+# <a name="windows-of-clientcredentials-element"></a>\<windows>del \<clientCredentials> elemento
 Especifica los valores para una credencial de Windows que se va a utilizar para representar al cliente.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamientos >** ](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> endpointBehaviors**](endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamiento >** ](behavior-of-endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clientCredentials >** ](clientcredentials.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de Windows**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<endpointBehaviors>**](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<clientCredentials>**](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<windows>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -32,9 +32,9 @@ Especifica los valores para una credencial de Windows que se va a utilizar para 
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|DESCRIPCIÓN|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
-|`allowedImpersonationLevel`|Establece la preferencia de suplantación que el cliente comunica al servidor. El modo de suplantación que el cliente elige no se exige en el servidor. Los valores válidos son los siguientes:<br /><br /> Identificado El servidor puede obtener la identidad y los privilegios del cliente, pero no puede suplantar al cliente.<br />Suplantación El servidor puede suplantar el contexto de seguridad del cliente en el sistema local.<br />Delegado El servidor puede suplantar el contexto de seguridad del cliente en sistemas remotos.<br />Anonymous El servidor no puede suplantar o identificar al cliente.<br />Ninguna No se ha asignado un nivel de suplantación.<br /><br /> El valor predeterminado es Identification. Este atributo es del tipo <xref:System.Security.Principal.TokenImpersonationLevel>.|  
+|`allowedImpersonationLevel`|Establece la preferencia de suplantación que el cliente comunica al servidor. El modo de suplantación que el cliente elige no se exige en el servidor. Los valores válidos incluyen los siguientes:<br /><br /> -Identification: el servidor puede obtener la identidad y los privilegios del cliente, pero no puede suplantar al cliente.<br />-Impersonation: el servidor puede suplantar el contexto de seguridad del cliente en el sistema local.<br />-Delegation: el servidor puede suplantar el contexto de seguridad del cliente en sistemas remotos.<br />-Anonymous: el servidor no puede suplantar o identificar al cliente.<br />-None: no se ha asignado un nivel de suplantación.<br /><br /> El valor predeterminado es Identification. Este atributo es del tipo <xref:System.Security.Principal.TokenImpersonationLevel>.|  
 |`allowNtlm`|Establecer esta propiedad en `true` permite a la autenticación degradar a NTLM si Kerberos no está disponible.<br /><br /> Establecer esta propiedad en `false` hace que Windows Communication Foundation (WCF) realice un mejor esfuerzo para producir una excepción si se utiliza NTLM. Tenga en cuenta que, aunque se establezca esta propiedad en `false`, es posible que se envíen igualmente las credenciales NTLM a través de la conexión.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -42,11 +42,11 @@ Especifica los valores para una credencial de Windows que se va a utilizar para 
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |[\<clientCredentials>](clientcredentials.md)|Especifica las credenciales utilizadas para autenticar el cliente al servicio.|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.ServiceModel.Configuration.WindowsClientElement>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
@@ -56,5 +56,5 @@ Especifica los valores para una credencial de Windows que se va a utilizar para 
 - <xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>
 - <xref:System.ServiceModel.Security.WindowsClientCredential>
 - [Protección de clientes](../../../wcf/securing-clients.md)
-- [Trabajo con certificados](../../../wcf/feature-details/working-with-certificates.md)
+- [Trabajar con certificados](../../../wcf/feature-details/working-with-certificates.md)
 - [Protección de servicios y clientes](../../../wcf/feature-details/securing-services-and-clients.md)

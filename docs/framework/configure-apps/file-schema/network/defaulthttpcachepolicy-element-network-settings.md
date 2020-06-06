@@ -9,19 +9,19 @@ helpviewer_keywords:
 - <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
 ms.openlocfilehash: c5029a7d1e53c28d0abb232efdc3e0bd2c9658d4
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74088416"
 ---
-# <a name="defaulthttpcachepolicy-element-network-settings"></a>\<elemento > defaultHttpCachePolicy (configuración de red)
+# <a name="defaulthttpcachepolicy-element-network-settings"></a>Elemento \<defaultHttpCachePolicy> (configuración de red)
 Describe si el almacenamiento en caché de HTTP está activo y describe la Directiva de almacenamiento en caché predeterminada.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<requestCaching >** ](requestcaching-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<defaultHttpCachePolicy >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<requestCaching>**](requestcaching-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<defaultHttpCachePolicy>**
 
 ## <a name="syntax"></a>Sintaxis  
   
@@ -47,7 +47,7 @@ Describe si el almacenamiento en caché de HTTP está activo y describe la Direc
 |`policyLevel`|Especifica si la Directiva de almacenamiento en caché es automática o si se omite la memoria caché. El valor predeterminado es `BypassCache`.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
- Ninguno  
+ None  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
@@ -56,9 +56,9 @@ Describe si el almacenamiento en caché de HTTP está activo y describe la Direc
 |[requestCaching](requestcaching-element-network-settings.md)|Controla el mecanismo de almacenamiento en caché para las solicitudes de red.|  
   
 ## <a name="remarks"></a>Comentarios  
- El valor del atributo `policyLevel` es `BypassCache` o `Default`.  
+ El valor del `policyLevel` atributo es `BypassCache` o `Default` .  
   
- Los valores de los elementos `maximumAge`, `maximumStale`y `minimumFresh` son un intervalo de tiempo explícito con un formato de *d*. *HH*:*mm*:*SS* (días, horas, minutos y segundos), o las constantes `minValue` o `maxValue`, según corresponda.  
+ Los valores de `maximumAge` los `maximumStale` elementos, y `minimumFresh` son un intervalo de tiempo explícito con un formato de *d*.* HH*:*mm*:*SS* (días, horas, minutos y segundos), o las constantes `minValue` o `maxValue` , según corresponda.  
   
 ## <a name="configuration-files"></a>Archivos de configuración  
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
@@ -80,7 +80,7 @@ Describe si el almacenamiento en caché de HTTP está activo y describe la Direc
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Net.Cache>
 - <xref:System.Net.WebRequest>

@@ -9,19 +9,19 @@ helpviewer_keywords:
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
 ms.openlocfilehash: a28eaf68fe1e6ab3f26592eee5ae2d0f2e7a3256
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79155172"
 ---
-# <a name="oidmap-element"></a>\<oidMap> Element
-Contiene asignaciones de identificador de objeto (OID) ASN.1 a clases.  
+# <a name="oidmap-element"></a>\<oidMap> (Elemento)
+Contiene las asignaciones de identificador de objetos (OID) ASN. 1 a las clases.  
 
-[**\<configuración>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<mscorlib>**](mscorlib-element-for-cryptography-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<criptografíaConfiguración>**](cryptographysettings-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>oidMap**
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<cryptographySettings>**](cryptographysettings-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<oidMap>**
 
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,7 +40,7 @@ Contiene asignaciones de identificador de objeto (OID) ASN.1 a clases.
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<oidEntry>](oidentry-element.md)|Asigna un OID ASN.1 a un nombre descriptivo.|  
+|[\<oidEntry>](oidentry-element.md)|Asigna un OID ASN. 1 a un nombre descriptivo.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
@@ -48,10 +48,10 @@ Contiene asignaciones de identificador de objeto (OID) ASN.1 a clases.
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`cryptographySettings`|Contiene la configuración de criptografía.|  
-|`mscorlib`|Contiene `cryptographySettings` el elemento.|  
+|`mscorlib`|Contiene el `cryptographySettings` elemento.|  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente ** \<** se muestra cómo utilizar el elemento>oidMap para contener una asignación de un OID para el algoritmo hash RIPEMD-160 a una implementación de ese algoritmo hash.  
+ En el ejemplo siguiente se muestra cómo usar el **\<oidMap>** elemento para que contenga una asignación de un OID para el algoritmo hash RIPEMD-160 a una implementación de ese algoritmo hash.  
   
 ```xml  
 <configuration>  
@@ -73,10 +73,10 @@ Contiene asignaciones de identificador de objeto (OID) ASN.1 a clases.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Esquema del archivo de configuración](../index.md)
-- [Esquema de configuración de criptografía](index.md)
-- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
+- [Esquema de los archivos de configuración](../index.md)
+- [Esquema de la configuración de criptografía](index.md)
+- [Servicios criptográficos](../../../../standard/security/cryptographic-services.md)
 - [Configurar clases de criptografía](../../configure-cryptography-classes.md)
 - [Asignar identificadores de objeto a algoritmos de criptografía](../../map-object-identifiers-to-cryptography-algorithms.md)

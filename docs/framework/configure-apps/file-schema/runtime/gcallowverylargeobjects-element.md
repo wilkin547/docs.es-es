@@ -6,17 +6,17 @@ helpviewer_keywords:
 - <gcAllowVeryLargeObjects> element
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
 ms.openlocfilehash: 8b2f39a0867228474afdee788474fda11f14ca82
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154132"
 ---
-# <a name="gcallowverylargeobjects-element"></a>\<gcAllowVeryLargeObjects> Element
+# <a name="gcallowverylargeobjects-element"></a>\<gcAllowVeryLargeObjects> (Elemento)
 En plataformas de 64 bits, habilita matrices con un tamaño total superior a 2 gigabytes (GB).  
   
-[**\<configuración>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<>en tiempo de ejecución**](runtime-element.md)\
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<gcAllowVeryLargeObjects>**  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -52,7 +52,7 @@ En plataformas de 64 bits, habilita matrices con un tamaño total superior a 2 g
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`runtime`|Contiene información sobre las opciones de inicialización del motor en tiempo de ejecución.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El uso de este elemento en el archivo de configuración de la aplicación permite utilizar matrices con un tamaño superior a 2 GB, pero no cambia otros límites de tamaño de objetos o matrices:  
   
 - El número máximo de elementos de una matriz es <xref:System.UInt32.MaxValue?displayProperty=nameWithType>.  
@@ -77,9 +77,9 @@ En plataformas de 64 bits, habilita matrices con un tamaño total superior a 2 g
   
 ## <a name="supported-in"></a>Compatible con
 
-.NET Framework 4.5 y versiones posteriores
+.NET Framework 4,5 y versiones posteriores
 
 ## <a name="see-also"></a>Consulte también
 
 - [Esquema de la configuración de Common Language Runtime](index.md)
-- [Esquema del archivo de configuración](../index.md)
+- [Esquema de los archivos de configuración](../index.md)

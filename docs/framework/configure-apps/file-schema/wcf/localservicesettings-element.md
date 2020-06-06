@@ -1,24 +1,24 @@
 ---
-title: Elemento <localServiceSettings>
+title: <localServiceSettings> (elemento)
 ms.date: 03/30/2017
 ms.assetid: 0658549c-3f65-46dd-8c5c-9895441ed734
 ms.openlocfilehash: 4883fd563ecf989d67c369085df4fc43d0c5f078
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70400301"
 ---
-# <a name="localservicesettings-element"></a>\<localServiceSettings >, elemento
+# <a name="localservicesettings-element"></a>Elemento \<localServiceSettings>
 Especifica la configuración de seguridad de un servicio local para este enlace.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de enlaces**](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de enlace**\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de seguridad**](security-of-custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> localServiceSettings**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<customBinding>**](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<localServiceSettings>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -46,10 +46,10 @@ Especifica la configuración de seguridad de un servicio local para este enlace.
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|DESCRIPCIÓN|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
-|`detectReplays`|Un valor booleano que especifica si se detectan ataques de reproducción en el canal y si se abordan automáticamente. El valor predeterminado es `false`.|  
-|`inactivityTimeout`|Un <xref:System.TimeSpan> positivo que especifica la duración de inactividad que el canal espera antes de expirar. El valor predeterminado es "01:00:00".|  
+|`detectReplays`|Un valor booleano que especifica si se detectan ataques de reproducción en el canal y si se abordan automáticamente. De manera predeterminada, es `false`.|  
+|`inactivityTimeout`|Un positivo <xref:System.TimeSpan> que especifica la duración de inactividad que el canal espera antes de que se agote el tiempo de espera. El valor predeterminado es "01:00:00".|  
 |`issuedCookieLifeTime`|<xref:System.TimeSpan> que especifica la duración emitida a todas las nuevas cookies de seguridad. Las cookies que superan su duración se reciclan y se negocian de nuevo. El valor predeterminado es "10:00:00".|  
 |`maxCachedCookies`|Un entero positivo que especifica el número máximo de cookies que pueden estar almacenadas en memoria caché. El valor predeterminado es 1000.|  
 |`maxClockSkew`|Un <xref:System.TimeSpan> que especifica la diferencia máxima de tiempo entre los relojes del sistema de las dos partes en comunicación. El valor predeterminado es "00:05:00".<br /><br /> Cuando este valor se establece en el valor predeterminado, el receptor acepta los mensajes con marcas de tiempo de envío de hasta cinco minutos antes o después de que se haya recibido el mensaje. Se rechazan los mensajes que no pasan las pruebas de hora de envío. Esta configuración se usa junto con la atributo `replayWindow`.|  
@@ -68,7 +68,7 @@ Especifica la configuración de seguridad de un servicio local para este enlace.
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |[\<security>](security-of-custombinding.md)|Especifica las opciones de seguridad de un enlace personalizado.|  
 |[\<secureConversationBootstrap>](secureconversationbootstrap.md)|Especifica los valores predeterminados usados para iniciar un servicio de conversación seguro.|  
@@ -88,7 +88,7 @@ Especifica la configuración de seguridad de un servicio local para este enlace.
   
  En una sesión de conversación segura, tenga en cuenta que tanto el atributo `inactivityTimeout` como el atributo `receiveTimeout` del enlace afectan al tiempo de espera de la sesión. El más corto de los dos determina cuándo se agota el tiempo de espera.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>
 - <xref:System.ServiceModel.Configuration.SecurityElementBase.LocalServiceSettings%2A>
@@ -99,5 +99,5 @@ Especifica la configuración de seguridad de un servicio local para este enlace.
 - [Extensión de enlaces](../../../wcf/extending/extending-bindings.md)
 - [Enlaces personalizados](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)
-- [Cómo: Crear un enlace personalizado mediante SecurityBindingElement](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Procedimiento para crear un enlace personalizado mediante SecurityBindingElement](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [Seguridad de enlace personalizado](../../../wcf/samples/custom-binding-security.md)
