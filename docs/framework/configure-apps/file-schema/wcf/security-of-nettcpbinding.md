@@ -3,21 +3,21 @@ title: <security> de <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 286cd191-4fd5-4c4e-a223-9c71cf7fdead
 ms.openlocfilehash: aa01e906ddd2f15007c72bfc2a45122cfb15ba2c
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73736371"
 ---
-# <a name="security-of-nettcpbinding"></a>\<> de seguridad de \<netTcpBinding >
+# <a name="security-of-nettcpbinding"></a>\<security> de \<netTcpBinding>
 Define la configuración de seguridad de un enlace.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;\<[**enlaces**](bindings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**netTcpBinding**](nettcpbinding.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**enlace** >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**seguridad** >  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<netTcpBinding>**](nettcpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<security>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,29 +37,29 @@ Define la configuración de seguridad de un enlace.
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|modo|Opcional. Especifica el tipo de seguridad que se aplica. Se muestran los valores válidos a continuación. El valor predeterminado es `Transport`.<br /><br /> Este atributo es del tipo <xref:System.ServiceModel.SecurityMode>.|  
+|mode|Opcional. Especifica el tipo de seguridad que se aplica. Se muestran los valores válidos a continuación. El valor predeterminado es `Transport`.<br /><br /> Este atributo es del tipo <xref:System.ServiceModel.SecurityMode>.|  
   
 ## <a name="mode-attribute"></a>Atributo de modo  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|Ninguno|La seguridad está deshabilitada.|  
-|Transporte|La seguridad de transporte se proporciona utilizando TLS sobre TCP o SPNego. El servicio puede necesitar ser configurado con certificados SSL. Es posible controlar el nivel de protección con este modo.|  
-|Mensaje|La seguridad se proporciona mediante la seguridad del mensaje SOAP. De forma predeterminada, el cuerpo SOAP se cifra y firma. Este modo proporciona una variedad de características, como si las credenciales del servicio están disponibles para el cliente fuera de la banda, el conjunto de algoritmos que se utiliza y qué nivel de protección se aplica al cuerpo del mensaje. Se realiza la autenticación del cliente una vez por sesión y los resultados de autenticación están almacenados en memoria caché durante la duración de la sesión.|  
+|None|La seguridad está deshabilitada.|  
+|Transporte|La seguridad de transporte se proporciona utilizando TLS sobre TCP o SPNego. El servicio puede necesitar ser configurado con certificados SSL. Con este modo es posible controlar el nivel de protección.|  
+|Message|La seguridad se proporciona mediante la seguridad del mensaje SOAP. De forma predeterminada, el cuerpo SOAP se cifra y firma. Este modo proporciona una variedad de características, como si las credenciales del servicio están disponibles para el cliente fuera de la banda, el conjunto de algoritmos que se utiliza y qué nivel de protección se aplica al cuerpo del mensaje. Se realiza la autenticación del cliente una vez por sesión y los resultados de autenticación están almacenados en memoria caché durante la duración de la sesión.|  
 |TransportWithMessageCredential|La seguridad de transporte va unida a la seguridad del mensaje. TLS proporciona la seguridad de transporte sobre TCP o SPNego y asegura la integridad, confidencialidad y autenticación de servidor. La seguridad del mensaje SOAP proporciona la autenticación del cliente. De manera predeterminada, se realiza la autenticación del cliente una vez por sesión y los resultados de autenticación están almacenados en la memoria caché durante la duración de la sesión.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[> de transporte de \<](transport-of-nettcpbinding.md)|Define la configuración de seguridad para el transporte. Este elemento es del tipo <xref:System.ServiceModel.Configuration.TcpTransportSecurityElement>.|  
-|[\<> de mensaje](message-element-of-nettcpbinding.md)|Define la configuración de seguridad del mensaje. Este elemento es del tipo <xref:System.ServiceModel.Configuration.MessageSecurityOverTcpElement>.|  
+|[\<transport>](transport-of-nettcpbinding.md)|Define la configuración de seguridad para el transporte. Este elemento es del tipo <xref:System.ServiceModel.Configuration.TcpTransportSecurityElement>.|  
+|[\<message>](message-element-of-nettcpbinding.md)|Define la configuración de seguridad del mensaje. Este elemento es del tipo <xref:System.ServiceModel.Configuration.MessageSecurityOverTcpElement>.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|enlace|Elemento de enlace del [\<netTcpBinding](nettcpbinding.md).|  
+|binding|Elemento de enlace de [\<netTcpBinding>](nettcpbinding.md) .|  
   
 ## <a name="remarks"></a>Comentarios  
  Cada uno de los enlaces estándar proporciona los parámetros para controlar los requisitos de seguridad de la transferencia. Estos parámetros incluyen normalmente el modo de seguridad que especificó si se usó la seguridad del nivel de mensaje o del nivel de transporte y la elección del tipo de credencial del cliente. Basada en la elección de opciones que estos parámetros presentan, se construirá una pila de canal con la seguridad adecuada.  
@@ -68,7 +68,7 @@ Define la configuración de seguridad de un enlace.
   
  Este elemento de configuración proporciona especificaciones de seguridad para `netTcpBinding`. Se trata de un enlace seguro, confiable y optimizado adecuado para la comunicación entre equipos. De forma predeterminada, genera una pila de comunicación en tiempo de ejecución que admite TCP para la entrega del mensaje y Seguridad de Windows para la seguridad y autenticación del mensaje, WS-ReliableMessaging para la confiabilidad, y la codificación binaria del mensaje.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.ServiceModel.NetTcpSecurity>
 - <xref:System.ServiceModel.NetTcpBinding.Security%2A>
@@ -78,4 +78,4 @@ Define la configuración de seguridad de un enlace.
 - [Enlaces](../../../wcf/bindings.md)
 - [Configuración de enlaces proporcionados por el sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Utilización de enlaces para configurar servicios y clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<> de enlace](bindings.md)
+- [\<binding>](bindings.md)

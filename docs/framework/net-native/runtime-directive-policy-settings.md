@@ -3,10 +3,10 @@ title: Configuración de directiva de la directiva en tiempo de ejecución
 ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
 ms.openlocfilehash: 7a8933decaec45e8000f3f3d1717847f333deddd
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "76738497"
 ---
 # <a name="runtime-directive-policy-settings"></a>Configuración de directiva de la directiva en tiempo de ejecución
@@ -16,7 +16,7 @@ ms.locfileid: "76738497"
 
 La configuración de directiva de la directiva en tiempo de ejecución de .NET Native determina la disponibilidad de los metadatos de los tipos y miembros de tipo en tiempo de ejecución. Sin los metadatos necesarios, las operaciones que se basan en la reflexión, la serialización y la deserialización o el cálculo de referencias de tipos de .NET Framework a COM o Windows en tiempo de ejecución pueden producir errores y generar una excepción. Las excepciones más comunes son [MissingMetadataException](missingmetadataexception-class-net-native.md) y, en el caso de la interoperabilidad, [MissingInteropDataException](missinginteropdataexception-class-net-native.md).
 
-La configuración de la directiva en tiempo de ejecución se controla mediante un archivo de directivas en tiempo de ejecución (.rd.xml). Cada directiva en tiempo de ejecución define la directiva de un elemento del programa determinado, como un ensamblado (elemento [\<Assembly>](assembly-element-net-native.md)), un tipo (elemento [\<Type>](type-element-net-native.md)) o un método (elemento [\<Method>](method-element-net-native.md)). La directiva incluye uno o más atributos que definen los tipos de directivas de reflexión, los tipos de directivas de serialización y los tipos de directiva de interoperabilidad descritos en la siguiente sección. El valor del atributo define la configuración de directiva.
+La configuración de la directiva en tiempo de ejecución se controla mediante un archivo de directivas en tiempo de ejecución (.rd.xml). Cada directiva en tiempo de ejecución define la Directiva para un elemento de programa determinado, como un ensamblado ( [\<Assembly>](assembly-element-net-native.md) elemento), un tipo (el [\<Type>](type-element-net-native.md) elemento) o un método (el [\<Method>](method-element-net-native.md) elemento). La directiva incluye uno o más atributos que definen los tipos de directivas de reflexión, los tipos de directivas de serialización y los tipos de directiva de interoperabilidad descritos en la siguiente sección. El valor del atributo define la configuración de directiva.
 
 ## <a name="policy-types"></a>Tipos de directiva
 
@@ -111,7 +111,7 @@ Los archivos de directivas en tiempo de ejecución reconocen tres categorías de
   |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|✔️|✔️|✔️|
   |[\<TypeParameter>](typeparameter-element-net-native.md)|✔️|✔️|✔️|
 
-## <a name="policy-settings"></a>Configuración de directiva
+## <a name="policy-settings"></a>Configuración de la directiva
 
 Cada tipo de directiva se puede establecer en uno de los valores incluidos en la siguiente tabla. Tenga en cuenta que los elementos que representan miembros de tipo admiten un conjunto diferente de opciones de directiva que otros elementos.
 
@@ -130,5 +130,5 @@ Cada tipo de directiva se puede establecer en uno de los valores incluidos en la
 
 ## <a name="see-also"></a>Consulte también
 
-- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
-- [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](runtime-directive-elements.md)
+- [Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elementos de directivas en tiempo de ejecución](runtime-directive-elements.md)

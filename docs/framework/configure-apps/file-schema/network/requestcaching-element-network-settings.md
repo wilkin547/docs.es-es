@@ -9,18 +9,18 @@ helpviewer_keywords:
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
 ms.openlocfilehash: afee69eb894518b1c88483e34a1d64d452019244
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74802126"
 ---
 # <a name="requestcaching-element-network-settings"></a>Elemento \<requestCaching> (configuración de red)
 Controla el mecanismo de almacenamiento en caché para las solicitudes de red.  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp; **\<requestCaching >**  
+[**\<configuration>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<requestCaching>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,20 +36,20 @@ Controla el mecanismo de almacenamiento en caché para las solicitudes de red.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
- En las secciones siguientes se describen atributos, elementos secundarios y elementos primarios.  
+ En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|`isPrivateCache`|Especifica si la memoria caché proporciona aislamiento entre la información de los distintos usuarios. El valor predeterminado es `true`. Este valor se debe `false` para las aplicaciones de nivel intermedio.|  
+|`isPrivateCache`|Especifica si la memoria caché proporciona aislamiento entre la información de los distintos usuarios. El valor predeterminado es `true`. Este valor debe ser `false` para las aplicaciones de nivel intermedio.|  
 |`disableAllCaching`|Especifica que el almacenamiento en caché está deshabilitado para todas las respuestas web y no se puede invalidar mediante programación.|  
 |`defaultPolicyLevel`|Uno de los valores de la enumeración <xref:System.Net.Cache.RequestCacheLevel>. El valor predeterminado es `BypassCache`.|  
 |`unspecifiedMaximumAge`|Especifica el tiempo predeterminado después del cual el contenido se marca como expirado.|  
   
 ## <a name="policylevel-attribute"></a>Atributo policyLevel  
   
-|{2&gt;Value&lt;2}|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |`Default`|Devuelve el recurso almacenado en caché si el recurso es nuevo, la longitud del contenido es precisa y los atributos expiración, modificación y longitud del contenido están presentes.|  
 |`BypassCache`|Devuelve el recurso del servidor.|  
@@ -60,14 +60,14 @@ Controla el mecanismo de almacenamiento en caché para las solicitudes de red.
 |`NoCacheNoStore`|Si existe un recurso almacenado en caché, se elimina. El recurso se descarga del servidor y se devuelve al autor de la llamada.|  
 |`Revalidate`|Satisface una solicitud mediante la copia en caché del recurso si la marca de tiempo es igual que la marca de tiempo del recurso en el servidor. de lo contrario, el recurso se descarga del servidor, se presenta al autor de la llamada y se almacena en la memoria caché.|  
   
-### <a name="child-elements"></a>Elemento secundario  
+### <a name="child-elements"></a>Elementos secundarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
 |[defaultHttpCachePolicy](defaulthttpcachepolicy-element-network-settings.md)|Elemento opcional.<br /><br /> Describe si el almacenamiento en caché de HTTP está activo y describe la Directiva de almacenamiento en caché predeterminada.|  
-|[\<elemento > defaultFtpCachePolicy (configuración de red)](defaultftpcachepolicy-element-network-settings.md)|Elemento opcional.<br /><br /> Describe si el almacenamiento en caché de FTP está activo y describe la Directiva de almacenamiento en caché predeterminada.|  
+|[\<defaultFtpCachePolicy>(Elemento, configuración de red)](defaultftpcachepolicy-element-network-settings.md)|Elemento opcional.<br /><br /> Describe si el almacenamiento en caché de FTP está activo y describe la Directiva de almacenamiento en caché predeterminada.|  
   
-### <a name="parent-elements"></a>Elemento principal  
+### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
@@ -86,7 +86,7 @@ Controla el mecanismo de almacenamiento en caché para las solicitudes de red.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Net.Cache?displayProperty=nameWithType>
 - [Esquema de la configuración de red](index.md)

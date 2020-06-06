@@ -9,16 +9,16 @@ helpviewer_keywords:
 - configuration files [ASP.NET]
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
 ms.openlocfilehash: b37b05bdf90630251cbfcf86751243a3a8b77663
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79152846"
 ---
-# <a name="systemweb-element-web-settings"></a>\<system.web> Element (Configuración web)
-Contiene información sobre cómo la capa de hospedaje de ASP.NET administra el comportamiento de todo el proceso.  
+# <a name="systemweb-element-web-settings"></a>Elemento \<system.web> (configuración web)
+Contiene información sobre cómo el nivel de hospedaje de ASP.NET administra el comportamiento de todo el proceso.  
   
-[**\<configuración>**](../configuration-element.md)  
+[**\<configuration>**](../configuration-element.md)  
 &nbsp;&nbsp;**\<system.web>**  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -40,21 +40,21 @@ Ninguno.
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<applicationPool>](applicationpool-element-web-settings.md)|Especifica la configuración de los grupos de aplicaciones IIS en un archivo aspnet.config.|  
+|[\<applicationPool>](applicationpool-element-web-settings.md)|Especifica los valores de configuración para los grupos de aplicaciones de IIS en un archivo Aspnet. config.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<configuración>](../configuration-element.md)|Especifica el elemento raíz en cada archivo de configuración que usan las aplicaciones de Common Language Runtime y .NET Framework.|  
+|[\<configuration>](../configuration-element.md)|Especifica el elemento raíz de cada archivo de configuración usado por las aplicaciones Common Language Runtime y .NET Framework.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
 
-El `system.web` elemento y `applicationPool` su elemento secundario se agregaron a .NET Framework a partir de .NET Framework 3.5 SP1. Al ejecutar IIS 7.0 o versiones posteriores en modo integrado, esta combinación de elementos le permite configurar cómo ASP.NET administra los subprocesos y cómo pone en cola las solicitudes cuando se hospeda ASP.NET en un grupo de aplicaciones IIS. Si ejecuta IIS 7.0 o versiones posteriores en modo clásico o ISAPI, se omite esta configuración.  
+El `system.web` elemento y su `applicationPool` elemento secundario se agregaron a la .NET Framework a partir de .NET Framework 3,5 SP1. Al ejecutar IIS 7,0 o versiones posteriores en el modo integrado, esta combinación de elementos le permite configurar el modo en que ASP.NET administra los subprocesos y cómo pone en cola las solicitudes cuando ASP.NET se hospeda en un grupo de aplicaciones de IIS. Si ejecuta IIS 7,0 o versiones posteriores en el modo clásico o ISAPI, se omiten estos valores de configuración.  
   
 ## <a name="example"></a>Ejemplo  
 
-En el ejemplo siguiente se muestra cómo configurar ASP.NET comportamiento de todo el proceso en el archivo aspnet.config cuando ASP.NET se hospeda en un grupo de aplicaciones IIS. En el ejemplo se supone que IIS se ejecuta en modo integrado y que la aplicación usa .NET Framework 3.5 SP1 o una versión posterior. Este comportamiento no se produce en versiones de .NET Framework anteriores a .NET Framework 3.5 SP1. Los valores del ejemplo son los valores predeterminados.  
+En el ejemplo siguiente se muestra cómo configurar el comportamiento de todo el proceso de ASP.NET en el archivo Aspnet. config cuando ASP.NET se hospeda en un grupo de aplicaciones de IIS. En el ejemplo se da por supuesto que IIS se ejecuta en modo integrado y que la aplicación está usando .NET Framework 3,5 SP1 o una versión posterior. Este comportamiento no se produce en las versiones de .NET Framework anteriores al .NET Framework 3,5 SP1. Los valores del ejemplo son los valores predeterminados.  
   
 ```xml  
 <configuration>  
@@ -78,4 +78,4 @@ En el ejemplo siguiente se muestra cómo configurar ASP.NET comportamiento de to
   
 ## <a name="see-also"></a>Consulte también
 
-- [\<ApplicationPool> Element (Configuración web)](applicationpool-element-web-settings.md)
+- [\<applicationPool>(Elemento, configuración Web)](applicationpool-element-web-settings.md)

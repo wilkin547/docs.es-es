@@ -3,19 +3,19 @@ title: <useLegacyJit> (Elemento)
 ms.date: 04/26/2017
 ms.assetid: c2cf97f0-9262-4f1f-a754-5568b51110ad
 ms.openlocfilehash: a126b8c0050a8d1fd96a3d090f9b018a9faa07a7
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73968851"
 ---
-# <a name="uselegacyjit-element"></a>Elemento \<useLegacyJit>
+# <a name="uselegacyjit-element"></a>\<useLegacyJit> (Elemento)
 
 Determina si Common Language Runtime usa el compilador JIT de 64 bits heredado para la compilación Just-In-Time.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<en tiempo de ejecución >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<elemento uselegacyjit >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<useLegacyJit>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -23,7 +23,7 @@ Determina si Common Language Runtime usa el compilador JIT de 64 bits heredado p
 <useLegacyJit enabled=0|1 />
 ```
 
-El nombre de elemento `useLegacyJit` distingue entre mayúsculas y minúsculas.
+El nombre del elemento `useLegacyJit` distingue mayúsculas de minúsculas.
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos
 
@@ -37,14 +37,14 @@ En las siguientes secciones se describen los atributos, los elementos secundario
   
 ### <a name="enabled-attribute"></a>atributo Enabled  
   
-| Valor | Descripción                                                                                                         |  
+| Value | Descripción                                                                                                         |  
 | ----- | ------------------------------------------------------------------------------------------------------------------- |  
 | 0     | En el Common Language Runtime se usa el nuevo compilador JIT de 64 bits incluido en el .NET Framework 4,6 y versiones posteriores. |  
 | 1     | En el Common Language Runtime se usa el compilador JIT de 64 bits anterior.                                                     |  
   
 ### <a name="child-elements"></a>Elementos secundarios
 
-Ninguno
+None
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
@@ -55,16 +55,16 @@ Ninguno
   
 ## <a name="remarks"></a>Comentarios  
 
-A partir de la .NET Framework 4,6, el Common Language Runtime utiliza de forma predeterminada un nuevo compilador de 64 bits para la compilación Just-in-Time (JIT). En algunos casos, esto puede dar lugar a una diferencia en el comportamiento del código de la aplicación que compiló JIT por la versión anterior del compilador JIT de 64 bits. Al establecer el atributo `enabled` del elemento `<useLegacyJit>` en `1`, puede deshabilitar el nuevo compilador JIT de 64 bits y compilar la aplicación con el compilador JIT de 64 bits heredado.  
+A partir de la .NET Framework 4,6, el Common Language Runtime utiliza de forma predeterminada un nuevo compilador de 64 bits para la compilación Just-in-Time (JIT). En algunos casos, esto puede dar lugar a una diferencia en el comportamiento del código de la aplicación que compiló JIT por la versión anterior del compilador JIT de 64 bits. Al establecer el `enabled` atributo del `<useLegacyJit>` elemento en `1` , puede deshabilitar el nuevo compilador JIT de 64 bits y compilar la aplicación con el compilador JIT de 64 bits heredado.  
   
 > [!NOTE]
-> El elemento `<useLegacyJit>` afecta solo a la compilación JIT de 64 bits. La compilación con el compilador JIT de 32 bits no se ve afectada.  
+> El `<useLegacyJit>` elemento afecta solo a la compilación JIT de 64 bits. La compilación con el compilador JIT de 32 bits no se ve afectada.  
   
 En lugar de utilizar un valor de archivo de configuración, puede habilitar el compilador JIT de 64 bits heredado de otras dos maneras:  
   
 - Establecer una variable de entorno
 
-  Establezca la variable de entorno `COMPLUS_useLegacyJit` en `0` (use el nuevo compilador JIT de 64 bits) o `1` (use el anterior compilador JIT de 64 bits):
+  Establezca la `COMPLUS_useLegacyJit` variable de entorno en `0` (use el nuevo compilador jit de 64 bits) o `1` (use el anterior compilador JIT de 64 bits):
   
   ```env  
   COMPLUS_useLegacyJit=0|1  
@@ -74,9 +74,9 @@ En lugar de utilizar un valor de archivo de configuración, puede habilitar el c
   
 - Agregar una clave del registro
 
-  Puede habilitar el compilador JIT de 64 bits heredado agregando un valor `REG_DWORD` a la clave `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` o `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` del registro. El valor se denomina `useLegacyJit`. Si el valor es 0, se utiliza el nuevo compilador. Si el valor es 1, el compilador JIT de 64 bits heredado está habilitado. El nombre del valor de registro no distingue mayúsculas de minúsculas.
+  Puede habilitar el compilador JIT de 64 bits heredado agregando un `REG_DWORD` valor a `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` la `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` clave o del registro. El valor se denomina `useLegacyJit` . Si el valor es 0, se utiliza el nuevo compilador. Si el valor es 1, el compilador JIT de 64 bits heredado está habilitado. El nombre del valor de registro no distingue mayúsculas de minúsculas.
   
-  Agregar el valor a la clave `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` afecta a todas las aplicaciones que se ejecutan en la máquina. Agregar el valor a la clave `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` afecta a todas las aplicaciones ejecutadas por el usuario actual. Si un equipo se configura con varias cuentas de usuario, solo se verán afectadas las aplicaciones ejecutadas por el usuario actual, a menos que el valor se agregue también a las claves del registro para otros usuarios. Al agregar el elemento `<useLegacyJit>` a un archivo de configuración, se invalida la configuración del registro, si está presente.  
+  Agregar el valor a la `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` clave afecta a todas las aplicaciones que se ejecutan en la máquina. Agregar el valor a la `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` clave afecta a todas las aplicaciones ejecutadas por el usuario actual. Si un equipo se configura con varias cuentas de usuario, solo se verán afectadas las aplicaciones ejecutadas por el usuario actual, a menos que el valor se agregue también a las claves del registro para otros usuarios. Al agregar el `<useLegacyJit>` elemento a un archivo de configuración, se invalida la configuración del registro, si está presente.  
   
 ## <a name="example"></a>Ejemplo  
 
@@ -91,8 +91,8 @@ El siguiente archivo de configuración deshabilita la compilación con el nuevo 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Elemento > en tiempo de ejecución de \<](runtime-element.md)
-- [Elemento \<configuration>](../configuration-element.md)
+- [\<runtime>Element](runtime-element.md)
+- [\<configuration>Element](../configuration-element.md)
 - [Mitigación: Nuevo compilador JIT de 64 bits](../../../migration-guide/mitigation-new-64-bit-jit-compiler.md)

@@ -3,10 +3,10 @@ title: Referencia del archivo de configuración de directivas en tiempo de ejecu
 ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
 ms.openlocfilehash: e74d34693446cca645003a9f93bc1777849e3182
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "76738410"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)
@@ -445,7 +445,7 @@ Aplicar la directiva `Serialize` a un campo implica los siguientes cambios de di
 
 #### <a name="the-effect-of-xmlserializer-datacontractserializer-and-datacontractjsonserializer-policies"></a>Efecto de las directivas XmlSerializer, DataContractSerializer y DataContractJsonSerializer
 
-A diferencia de la Directiva de `Serialize`, que está destinada a los serializadores basados en reflexión, las directivas <xref:System.Xml.Serialization.XmlSerializer>, <xref:System.Runtime.Serialization.DataContractSerializer>y <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> se utilizan para habilitar un conjunto de serializadores conocidos para la cadena de herramientas de .NET Native. Estos serializadores no se implementan mediante reflexión, pero el conjunto de tipos que se pueden serializar en tiempo de ejecución se determina de manera similar a los tipos que admiten reflexión.
+A diferencia de la `Serialize` Directiva, que está destinada a los serializadores basados en reflexión, las <xref:System.Xml.Serialization.XmlSerializer> <xref:System.Runtime.Serialization.DataContractSerializer> directivas, y <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> se usan para habilitar un conjunto de serializadores conocidos por la cadena de herramientas de .net Native. Estos serializadores no se implementan mediante reflexión, pero el conjunto de tipos que se pueden serializar en tiempo de ejecución se determina de manera similar a los tipos que admiten reflexión.
 
 Aplicar una de estas directivas a un tipo permite la serialización del tipo con el serializador correspondiente. Además, los tipos que el motor de serialización puede determinar de forma estática que necesitan serialización también se podrán serializar.
 
@@ -455,5 +455,5 @@ Para más información, vea la sección "Diferencias en los serializadores" en [
 
 ## <a name="see-also"></a>Consulte también
 
-- [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](runtime-directive-elements.md)
+- [Elementos de directivas en tiempo de ejecución](runtime-directive-elements.md)
 - [Reflexión y .NET Native](reflection-and-net-native.md)
