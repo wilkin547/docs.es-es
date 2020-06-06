@@ -3,20 +3,20 @@ title: <behavior> de <endpointBehaviors>
 ms.date: 03/30/2017
 ms.assetid: b90ca3bc-3c22-4174-b903-e3a39898bd27
 ms.openlocfilehash: 489678a5adeae3965acae90a847c4b087478354d
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74140814"
 ---
-# <a name="behavior-of-endpointbehaviors"></a>\<comportamiento > de \<endpointBehaviors >
+# <a name="behavior-of-endpointbehaviors"></a>\<behavior> de \<endpointBehaviors>
 El elemento `behavior` contiene una colección de valores para el comportamiento de un punto de conexión. Su `name` indiza cada comportamiento. Los puntos de conexión se pueden vincular a cada comportamiento a través de este nombre. A partir de .NET Framework 4, no es necesario que los enlaces y los comportamientos tengan un nombre. Para obtener más información sobre la configuración predeterminada y los enlaces y comportamientos sin nombre, vea [configuración simplificada](../../../wcf/simplified-configuration.md) y [configuración simplificada para servicios WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**comportamientos**](behaviors.md)\<\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors**](endpointbehaviors.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**comportamiento** >  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<endpointBehaviors>**](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<behavior>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,21 +43,21 @@ El elemento `behavior` contiene una colección de valores para el comportamiento
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<clientCredentials >](clientcredentials.md)|Especifica las credenciales usadas para autenticar el cliente en un servicio.|  
-|[\<callbackDebug >](callbackdebug.md)|Especifica la depuración del servicio para un objeto de devolución de llamada de Windows Communication Foundation (WCF).|  
-|[\<callbackTimeouts >](callbacktimeouts.md)|Especifica el tiempo de espera para la devolución de la llamada del cliente.|  
-|[\<clientVia >](clientvia.md)|Especifica la ruta que un mensaje debe tomar.|  
-|[\<dataContractSerializer >](datacontractserializer.md)|Contiene los datos de configuración para DataContractSerializer.|  
-|[\<dispatcherSynchronization >](dispatchersynchronization.md)|Especifica un comportamiento del extremo que permite que un servicio envíe respuestas de forma asincrónica.|  
-|[\<enableWebScript >](enablewebscript.md)|Habilita el comportamiento del extremo que permite utilizar el servicio de las páginas web de AJAX de ASP.NET. El comportamiento solo se debe usar junto con el \<webHttpBinding > enlace estándar o el elemento de enlace \<webMessageEncoding >.|  
-|[\<endpointDiscovery >](endpointdiscovery.md)|Especifica las distintas configuraciones de detección para un punto de conexión, como su detectabilidad, ámbitos y cualquier extensión personalizada a sus metadatos.|  
-|[\<soapProcessing >](soapprocessing.md)|Define el comportamiento del punto de conexión de cliente usado para serializar entre distintos tipos de enlaces y versiones de mensajes.|  
-|[\<synchronousReceive >](synchronousreceive-element.md)|Especifica el comportamiento de tiempo de ejecución para recibir los mensajes en una aplicación de servicio o de cliente. No tiene ningún atributo o elementos secundarios.|  
-|[\<transactedBatching >](transactedbatching.md)|Especifica si el procesamiento por lotes de la transacción se admite para las operaciones de recepción.|  
-|[\<webhttp >](webhttp.md)|Especifica WebHttpBehavior en un punto de conexión a través de la configuración. Este comportamiento, cuando se usa junto con el \<webHttpBinding > enlace estándar, habilita el modelo de programación web para un servicio WCF.|  
+|[\<clientCredentials>](clientcredentials.md)|Especifica las credenciales usadas para autenticar el cliente en un servicio.|  
+|[\<callbackDebug>](callbackdebug.md)|Especifica la depuración del servicio para un objeto de devolución de llamada de Windows Communication Foundation (WCF).|  
+|[\<callbackTimeouts>](callbacktimeouts.md)|Especifica el tiempo de espera para la devolución de la llamada del cliente.|  
+|[\<clientVia>](clientvia.md)|Especifica la ruta que un mensaje debe tomar.|  
+|[\<dataContractSerializer>](datacontractserializer.md)|Contiene los datos de configuración para DataContractSerializer.|  
+|[\<dispatcherSynchronization>](dispatchersynchronization.md)|Especifica un comportamiento del extremo que permite que un servicio envíe respuestas de forma asincrónica.|  
+|[\<enableWebScript>](enablewebscript.md)|Habilita el comportamiento del extremo que permite utilizar el servicio de las páginas web de AJAX de ASP.NET. El comportamiento solo se debe usar junto con el \<webHttpBinding> enlace estándar o el \<webMessageEncoding> elemento de enlace.|  
+|[\<endpointDiscovery>](endpointdiscovery.md)|Especifica las distintas configuraciones de detección para un punto de conexión, como su detectabilidad, ámbitos y cualquier extensión personalizada a sus metadatos.|  
+|[\<soapProcessing>](soapprocessing.md)|Define el comportamiento del punto de conexión de cliente usado para serializar entre distintos tipos de enlaces y versiones de mensajes.|  
+|[\<synchronousReceive>](synchronousreceive-element.md)|Especifica el comportamiento de tiempo de ejecución para recibir los mensajes en una aplicación de servicio o de cliente. No tiene ningún atributo o elementos secundarios.|  
+|[\<transactedBatching>](transactedbatching.md)|Especifica si el procesamiento por lotes de la transacción se admite para las operaciones de recepción.|  
+|[\<webHttp>](webhttp.md)|Especifica WebHttpBehavior en un punto de conexión a través de la configuración. Este comportamiento, cuando se usa junto con el \<webHttpBinding> enlace estándar, habilita el modelo de programación web para un servicio WCF.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<endpointBehaviors >](endpointbehaviors.md)|Una colección de elementos de comportamiento del extremo.|
+|[\<endpointBehaviors>](endpointbehaviors.md)|Una colección de elementos de comportamiento del extremo.|

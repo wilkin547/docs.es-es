@@ -6,18 +6,18 @@ helpviewer_keywords:
 - <UseSmallInternalThreadStacks> element
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 ms.openlocfilehash: 2fd776ce8605e6dcf288dcb3852ded16638a1873
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73114919"
 ---
-# <a name="usesmallinternalthreadstacks-element"></a>\<elemento > UseSmallInternalThreadStacks
+# <a name="usesmallinternalthreadstacks-element"></a>\<UseSmallInternalThreadStacks> (Elemento)
 Solicita que el Common Language Runtime (CLR) reduzca el uso de memoria especificando tamaños de pila explícitos al crear determinados subprocesos que utiliza internamente, en lugar de usar el tamaño de pila predeterminado para esos subprocesos.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<en tiempo de ejecución >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<UseSmallInternalThreadStacks >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<UseSmallInternalThreadStacks>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,10 +36,10 @@ Solicita que el Common Language Runtime (CLR) reduzca el uso de memoria especifi
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |true|Solicitar tamaños de pila explícitos.|  
-|False|Use el tamaño de pila predeterminado. Este es el valor predeterminado para el .NET Framework 4.|  
+|false|Use el tamaño de pila predeterminado. Este es el valor predeterminado para el .NET Framework 4.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -70,7 +70,7 @@ Solicita que el Common Language Runtime (CLR) reduzca el uso de memoria especifi
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Esquema de la configuración de Common Language Runtime](index.md)
 - [Esquema de los archivos de configuración](../index.md)

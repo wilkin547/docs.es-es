@@ -3,23 +3,23 @@ title: <transport> de <wsHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 21e38acf-450a-4bda-82b6-de305e1f7cd8
 ms.openlocfilehash: 1afeed62fcbf3b083d69a7cedb7eb80b81f5c17b
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73732740"
 ---
-# <a name="transport-of-wshttpbinding"></a>\<> de transporte de \<wsHttpBinding >
+# <a name="transport-of-wshttpbinding"></a>\<transport> de \<wsHttpBinding>
 
 Define la configuración de autenticación del transporte HTTP.
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;\<[**enlaces**](bindings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<wsHttpBinding**](wshttpbinding.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**enlace** >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**seguridad**](security-of-wshttpbinding.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**transporte** >  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<wsHttpBinding>**](wshttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-wshttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<transport>**  
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -41,7 +41,7 @@ Define la configuración de autenticación del transporte HTTP.
 </wsHttpBinding>
 ```
 
-## <a name="type"></a>Type
+## <a name="type"></a>Tipo
 
 <xref:System.ServiceModel.HttpTransportSecurity>
 
@@ -60,7 +60,7 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 
 ## <a name="clientcredentialtype-attribute"></a>Atributo clientCredentialType
 
-|Valor|Descripción|
+|Value|Descripción|
 |-----------|-----------------|
 |`None`|La seguridad está deshabilitada.|
 |`Basic`|Usa la autenticación básica.|
@@ -71,7 +71,7 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 
 ## <a name="proxycredentialtype-attribute"></a>Atributo proxyCredentialType
 
-|Valor|Descripción|
+|Value|Descripción|
 |-----------|-----------------|
 |`None`|La seguridad está deshabilitada.|
 |`Basic`|Usa la autenticación básica.|
@@ -88,9 +88,9 @@ Ninguno.
 
 |Elemento|Descripción|
 |-------------|-----------------|
-|[\<La >](security-of-wshttpbinding.md)|Representa las capacidades de seguridad de la [\<wsHttpBinding >](wshttpbinding.md).|
+|[\<security>](security-of-wshttpbinding.md)|Representa las capacidades de seguridad de [\<wsHttpBinding>](wshttpbinding.md) .|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.ServiceModel.HttpTransportSecurity>
 - <xref:System.ServiceModel.WSHttpSecurity.Transport%2A>
@@ -100,4 +100,4 @@ Ninguno.
 - [Enlaces](../../../wcf/bindings.md)
 - [Configuración de enlaces proporcionados por el sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Utilización de enlaces para configurar servicios y clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<> de enlace](bindings.md)
+- [\<binding>](bindings.md)

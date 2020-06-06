@@ -6,18 +6,18 @@ helpviewer_keywords:
 - <etwEnable> element
 ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
 ms.openlocfilehash: 14cea171a4a25e148ea32f75a8ef09b83a4ec8ad
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73117392"
 ---
-# <a name="etwenable-element"></a>\<elemento > etwEnable
+# <a name="etwenable-element"></a>\<etwEnable> (Elemento)
 Especifica si se debe habilitar Seguimiento de eventos para Windows (ETW) para los eventos de Common Language Runtime.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<en tiempo de ejecución >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<etwEnabled >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<etwEnabled>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,10 +36,10 @@ Especifica si se debe habilitar Seguimiento de eventos para Windows (ETW) para l
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |true|Habilitar ETW. Este es el valor predeterminado para las versiones de Windows a partir de los sistemas operativos Windows Vista y Windows Server 2008.|  
-|False|Deshabilitar ETW. Este es el valor predeterminado para versiones anteriores de Windows.|  
+|false|Deshabilitar ETW. Este es el valor predeterminado para versiones anteriores de Windows.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -68,7 +68,7 @@ Especifica si se debe habilitar Seguimiento de eventos para Windows (ETW) para l
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Esquema de la configuración de Common Language Runtime](index.md)
 - [Esquema de los archivos de configuración](../index.md)

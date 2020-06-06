@@ -3,13 +3,13 @@ title: <ImpliesType>Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 ms.openlocfilehash: 57f4208233cd5e8544b4f1c254e3b0e0eaacd508
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79181017"
 ---
-# <a name="impliestype-element-net-native"></a>\<ImpliesType> Element (.NET Native)
+# <a name="impliestype-element-net-native"></a>\<ImpliesType>Elemento (.NET Native)
 Aplica una directiva a un tipo, si dicha directiva se ha aplicado al tipo contenedor o al método.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -66,11 +66,11 @@ Aplica una directiva a un tipo, si dicha directiva se ha aplicado al tipo conten
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<Tipo>](type-element-net-native.md)|Aplica la directiva de reflexión a un tipo y a todos sus miembros.|  
-|[\<TipoInstantiation>](typeinstantiation-element-net-native.md)|Aplica la directiva de reflexión a un tipo genérico construido y a todos sus miembros.|  
-|[\<Método>](method-element-net-native.md)|Aplica la directiva de reflexión a un método.|  
+|[\<Type>](type-element-net-native.md)|Aplica la directiva de reflexión a un tipo y a todos sus miembros.|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Aplica la directiva de reflexión a un tipo genérico construido y a todos sus miembros.|  
+|[\<Method>](method-element-net-native.md)|Aplica la directiva de reflexión a un método.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El elemento `<ImpliesType>` sirve principalmente para que lo utilicen las bibliotecas. Está pensado para el siguiente escenario:  
   
 - Si una rutina debe reflejarse en un determinado tipo, necesariamente debe reflejarse en un segundo tipo.  
@@ -89,7 +89,7 @@ Aplica una directiva a un tipo, si dicha directiva se ha aplicado al tipo conten
   
  Esta directiva no tiene ningún efecto a menos que una instancia de `Explicit` tenga definida una configuración de directiva `Dynamic`. Por ejemplo, si es el caso de `Explicit<Int32>`, se crea una instancia de `Implicit<Int32>` con sus miembros públicos enraizados, y sus metadatos se vuelven accesibles para programación dinámica.  
   
- El siguiente es un ejemplo del mundo real en el que se aplica al menos un serializador. Las directivas capturan el requisito de `IList<`que reflexionar sobre algo escrito como *algo* `>` también implica reflexionar sobre el tipo `List<` *de algo* `>` correspondiente sin requerir ninguna anotación por aplicación.  
+ El siguiente es un ejemplo del mundo real en el que se aplica al menos un serializador. Las directivas capturan el requisito de que el reflejo en algo escrito como `IList<` *algo* `>` también implica reflejar en el tipo de `List<` *elemento* correspondiente `>` sin necesidad de ninguna anotación por aplicación.  
   
 ```xml  
 <Type Name="System.Collections.Generic.IList{T}">  
@@ -110,6 +110,6 @@ Aplica una directiva a un tipo, si dicha directiva se ha aplicado al tipo conten
   
 ## <a name="see-also"></a>Consulte también
 
-- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementos de directivas en tiempo de ejecución](runtime-directive-elements.md)
 - [Configuración de directiva de la directiva en tiempo de ejecución](runtime-directive-policy-settings.md)

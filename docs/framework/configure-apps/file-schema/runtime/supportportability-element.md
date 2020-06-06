@@ -6,19 +6,19 @@ helpviewer_keywords:
 - <supportPortability> element
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 ms.openlocfilehash: 63c309a8a93c1d31ed8f73a495cf5154c3590d56
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73115654"
 ---
-# <a name="supportportability-element"></a>\<elemento > supportPortability
+# <a name="supportportability-element"></a>\<supportPortability> (Elemento)
 Especifica que una aplicación puede hacer referencia al mismo ensamblado en dos implementaciones diferentes de .NET Framework, deshabilitando el comportamiento predeterminado que trata los ensamblados como equivalentes para los propósitos de portabilidad de aplicación.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<en tiempo de ejecución >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<supportPortability >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<assemblyBinding>**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<supportPortability>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,10 +39,10 @@ En las siguientes secciones se describen los atributos, los elementos secundario
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |true|Habilita el soporte para la portabilidad entre las implementaciones del ensamblado de .NET Framework especificado. Este es el valor predeterminado.|  
-|False|Deshabilita el soporte para la portabilidad entre las implementaciones del ensamblado de .NET Framework especificado. Esto permite a la aplicación tener referencias a varias implementaciones del ensamblado especificado.|  
+|false|Deshabilita el soporte para la portabilidad entre las implementaciones del ensamblado de .NET Framework especificado. Esto permite a la aplicación tener referencias a varias implementaciones del ensamblado especificado.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
 
@@ -80,7 +80,7 @@ El siguiente ejemplo permite a una aplicación tener referencias a la implementa
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [-appconfig (Opciones del compilador de C#)](../../../../csharp/language-reference/compiler-options/appconfig-compiler-option.md)
 - [Información general sobre la unificación de ensamblados de .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))

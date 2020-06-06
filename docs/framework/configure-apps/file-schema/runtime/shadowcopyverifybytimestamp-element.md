@@ -6,18 +6,18 @@ helpviewer_keywords:
 - shadowCopyTimeStampVerification element
 ms.assetid: 2f1648e5-997b-435e-a4f9-d236c574c66c
 ms.openlocfilehash: 160f14c856735e1ceac8635506aea52454faea43
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73115726"
 ---
-# <a name="shadowcopyverifybytimestamp-element"></a>Elemento \<shadowCopyVerifyByTimestamp>
+# <a name="shadowcopyverifybytimestamp-element"></a>\<shadowCopyVerifyByTimestamp> (Elemento)
 Especifica si la copia sombra usa el comportamiento de inicio predeterminado introducido en el .NET Framework 4, o revierte al comportamiento de inicio de versiones anteriores de la .NET Framework.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<en tiempo de ejecución >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<shadowCopyVerifyByTimestamp >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<shadowCopyVerifyByTimestamp>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,10 +36,10 @@ Especifica si la copia sombra usa el comportamiento de inicio predeterminado int
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |true|En el inicio, copia solo los ensamblados que se han actualizado desde que se copiaron por última vez en el directorio de instantáneas. Este es el valor predeterminado para el .NET Framework 4.|  
-|False|Revierte al comportamiento de inicio de las versiones anteriores del .NET Framework, que era copiar todos los archivos en el inicio.|  
+|false|Revierte al comportamiento de inicio de las versiones anteriores del .NET Framework, que era copiar todos los archivos en el inicio.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -65,7 +65,7 @@ Especifica si la copia sombra usa el comportamiento de inicio predeterminado int
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Esquema de la configuración de Common Language Runtime](index.md)
 - [Esquema de los archivos de configuración](../index.md)

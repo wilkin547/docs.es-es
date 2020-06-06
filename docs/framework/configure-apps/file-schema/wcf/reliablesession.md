@@ -3,21 +3,21 @@ title: <reliableSession>
 ms.date: 03/30/2017
 ms.assetid: 129b4a59-37f0-4030-b664-03795d257d29
 ms.openlocfilehash: 95f6646041dc2dd7bae7691a0a9f748c844f50b6
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73738752"
 ---
-# <a name="reliablesession"></a>\<reliableSession >
+# \<reliableSession>
 Define el valor para los mensajes de confianza de WS. Cuando este elemento se agrega a un enlace personalizado, el canal resultante puede admitir las convicciones de la entrega exactamente una vez.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;\<[**enlaces**](bindings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**customBinding**](custombinding.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**enlace** >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<reliableSession >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<customBinding>**](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<reliableSession>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -49,13 +49,13 @@ Define el valor para los mensajes de confianza de WS. Cuando este elemento se ag
 |reliableMessagingVersion|Un valor válido de <xref:System.ServiceModel.ReliableMessagingVersion> que especifica la versión WS-ReliableMessaging que se va a utilizar.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
- Ninguno  
+ None  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<> de enlace](bindings.md)|Define todas las funcionalidades de enlace del enlace personalizado.|  
+|[\<binding>](bindings.md)|Define todas las funcionalidades de enlace del enlace personalizado.|  
   
 ## <a name="remarks"></a>Comentarios  
  Las sesiones fiables proporcionan las características para la mensajería y las sesiones de confianza. La mensajería de confianza reintenta la comunicación en caso de error y permite especificar garantías de entrega, como la llegada en orden de los mensajes. Las sesiones mantienen el estado de los clientes entre llamadas. Este elemento también proporciona, de manera opcional, la entrega ordenada de mensajes. Esta sesión implementada puede cruzar SOAP y los intermediarios de transporte.  
@@ -120,7 +120,7 @@ Define el valor para los mensajes de confianza de WS. Cuando este elemento se ag
 </configuration>
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.ServiceModel.Configuration.ReliableSessionElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
@@ -129,4 +129,4 @@ Define el valor para los mensajes de confianza de WS. Cuando este elemento se ag
 - [Enlaces](../../../wcf/bindings.md)
 - [Extensión de enlaces](../../../wcf/extending/extending-bindings.md)
 - [Enlaces personalizados](../../../wcf/extending/custom-bindings.md)
-- [\<customBinding >](custombinding.md)
+- [\<customBinding>](custombinding.md)

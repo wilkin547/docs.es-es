@@ -9,19 +9,19 @@ helpviewer_keywords:
 - <servicePointManager> element
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
 ms.openlocfilehash: b7333016fea2d46285d3c98181c0ca4904c376f8
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74089126"
 ---
-# <a name="servicepointmanager-element-network-settings"></a>\<servicePointManager (elemento >) (configuración de red)
+# <a name="servicepointmanager-element-network-settings"></a>Elemento \<servicePointManager> (configuración de red)
 Configura las conexiones a los recursos de red.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;[ **&nbsp;&nbsp;\<\** ](settings-element-network-settings.md)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<servicePointManager >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<settings>**](settings-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<servicePointManager>**
 
 ## <a name="syntax"></a>Sintaxis  
   
@@ -48,8 +48,8 @@ Configura las conexiones a los recursos de red.
 |`checkCertificateRevocationList`|Especifica si el sistema debe comprobar si el certificado se ha revocado antes de utilizar el certificado. El valor predeterminado es `false`.|  
 |`dnsRefreshTimeout`|Especifica cuánto tiempo se almacenan en caché las resoluciones del servicio de nombres de dominio (DNS) junto con la opción Round Robin de DNS, en milisegundos. El valor predeterminado es 120.000 milisegundos (dos minutos).|  
 |`enableDnsRoundRobin`|Especifica si las resoluciones DNS de los nombres de host con varias direcciones IP (Protocolo de Internet) devuelven todas las direcciones, o solo la primera. El valor predeterminado es `false`.|  
-|`encryptionPolicy`|Especifica la Directiva de cifrado que se aplica a una sesión de SSL/TLS en una instancia de <xref:System.Net.ServicePointManager>. Los valores posibles son equivalentes a los valores de la enumeración <xref:System.Net.Security.EncryptionPolicy>. El uso de <xref:System.Security.Authentication.CipherAlgorithmType.Null> es necesario cuando la Directiva de cifrado se establece en `NoEncryption`. El valor predeterminado es `RequireEncryption`.|  
-|`expect100Continue`|Especifica si los métodos POST deben esperar recibir una respuesta `100-continue` del servidor. El valor predeterminado es `true`.|  
+|`encryptionPolicy`|Especifica la Directiva de cifrado que se aplica a una sesión de SSL/TLS en una <xref:System.Net.ServicePointManager> instancia de. Los valores posibles son equivalentes a los valores de la <xref:System.Net.Security.EncryptionPolicy> enumeración. El uso de <xref:System.Security.Authentication.CipherAlgorithmType.Null> es necesario cuando la Directiva de cifrado se establece en `NoEncryption` . El valor predeterminado es `RequireEncryption`.|  
+|`expect100Continue`|Especifica si los métodos POST deben esperar recibir una `100-continue` respuesta del servidor. El valor predeterminado es `true`.|  
 |`useNagleAlgorithm`|Especifica si las conexiones controladas por el administrador de puntos de servicio usan el algoritmo de Nagle. El valor predeterminado es `true`.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -66,7 +66,7 @@ Configura las conexiones a los recursos de red.
 ## <a name="configuration-files"></a>Archivos de configuración  
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Net.ServicePointManager>
 - <xref:System.Net.Security.EncryptionPolicy>

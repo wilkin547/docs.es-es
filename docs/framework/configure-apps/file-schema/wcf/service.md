@@ -3,19 +3,19 @@ title: <service>
 ms.date: 03/30/2017
 ms.assetid: 13123dd6-c4a9-4a04-a984-df184b851788
 ms.openlocfilehash: c12f57d68de870123d92c8a101e2999c24bb988f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70855023"
 ---
-# <a name="service"></a>\<service>
+# \<service>
 El elemento `service` contiene los valores para un servicio de Windows Communication Foundation (WCF). También contiene puntos de conexión que exponen el servicio.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de servicios**](services.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de servicio**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<services>**](services.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<service>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -30,21 +30,21 @@ El elemento `service` contiene los valores para un servicio de Windows Communica
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|DESCRIPCIÓN|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |behaviorConfiguration|Una cadena que contiene el nombre de comportamiento que se va a usar para instanciar el servicio. El nombre de comportamiento debe estar en el ámbito en el punto definido del servicio. El valor predeterminado es una cadena vacía.|  
-|Nombre|Atributo String necesario que especifica el tipo del servicio del que se van a crear instancias. Este valor debe equivaler a un tipo válido. El formato debería ser `Namespace.Class.`.|  
+|name|Atributo String necesario que especifica el tipo del servicio del que se van a crear instancias. Este valor debe equivaler a un tipo válido. El formato debería ser `Namespace.Class.`.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |[\<endpoint>](endpoint-element.md)|Una colección de elementos `endpoint` que exponen este servicio.|  
-|[\<> host](host.md)|Especifica el host de esta instancia del servicio. Este elemento es del tipo <xref:System.ServiceModel.Configuration.HostElement>.|  
+|[\<host>](host.md)|Especifica el host de esta instancia del servicio. Este elemento es del tipo <xref:System.ServiceModel.Configuration.HostElement>.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |[\<services>](services.md)|Elemento raíz de todos los elementos de configuración de WCF.|  
   
@@ -69,7 +69,7 @@ El elemento `service` contiene los valores para un servicio de Windows Communica
 </service>
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.ServiceModel.Configuration.ServiceElement>
 - [Configuración de servicios](../../../wcf/configuring-services.md)

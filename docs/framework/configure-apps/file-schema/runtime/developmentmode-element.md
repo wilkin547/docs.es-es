@@ -10,18 +10,18 @@ helpviewer_keywords:
 - <developmentMode> element
 ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
 ms.openlocfilehash: 4a062da31740edb8f0c7a4f4db8b09800c687587
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73117634"
 ---
-# <a name="developmentmode-element"></a>\<elemento > developmentMode
+# <a name="developmentmode-element"></a>\<developmentMode> (Elemento)
 Especifica si el runtime busca ensamblados en los directorios especificados por la variable de entorno DEVPATH.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<en tiempo de ejecución >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<developmentMode >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<developmentMode>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,10 +40,10 @@ Especifica si el runtime busca ensamblados en los directorios especificados por 
   
 ## <a name="developerinstallation-attribute"></a>Atributo developerInstallation  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**true**|Busca los ensamblados en los directorios especificados por la variable de entorno DEVPATH.|  
-|**false**|No busca ensamblados en los directorios especificados por la variable de entorno DEVPATH. Este es el valor predeterminado|  
+|**false**|No busca ensamblados en los directorios especificados por la variable de entorno DEVPATH. Este es el valor predeterminado.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -69,8 +69,8 @@ Especifica si el runtime busca ensamblados en los directorios especificados por 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Esquema de la configuración de Common Language Runtime](index.md)
 - [Esquema de los archivos de configuración](../index.md)
-- [Cómo: Buscar ensamblados mediante DEVPATH](../../how-to-locate-assemblies-by-using-devpath.md)
+- [Procedimiento para buscar ensamblados mediante DEVPATH](../../how-to-locate-assemblies-by-using-devpath.md)

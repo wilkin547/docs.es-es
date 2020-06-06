@@ -3,20 +3,20 @@ title: <serviceActivations>
 ms.date: 03/30/2017
 ms.assetid: 97e665b6-1c51-410b-928a-9bb42c954ddb
 ms.openlocfilehash: 64ae0bfd90ae941fc78515c7936c998201c87485
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70855137"
 ---
-# <a name="serviceactivations"></a>\<serviceActivations>
+# \<serviceActivations>
 
 Un elemento de configuración que le permite agregar valores que definen la configuración de activación de servicio virtual que se asignan a los tipos de servicio Windows Communication Foundation (WCF). Esto hace posible activar servicios hospedados en WAS/IIS sin un archivo .svc.
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> serviceHostingEnvironment**](servicehostingenvironment.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> serviceActivations**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceHostingEnvironment>**](servicehostingenvironment.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<serviceActivations>**  
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -39,13 +39,13 @@ Ninguno.
 
 ### <a name="child-elements"></a>Elementos secundarios
 
-|Elemento|DESCRIPCIÓN|
+|Elemento|Descripción|
 |-------------|-----------------|
 |[\<add>](add-of-serviceactivations.md)|Agrega un elemento de configuración que especifica la activación de una aplicación de servicio.|
 
 ### <a name="parent-elements"></a>Elementos primarios
 
-|Elemento|DESCRIPCIÓN|
+|Elemento|Descripción|
 |-------------|-----------------|
 |[\<serviceHostingEnvironment>](servicehostingenvironment.md)|Define el tipo del que el entorno host del servicio crea instancias para un transporte determinado.|
 
@@ -71,7 +71,7 @@ Observe que `<serviceHostingEnvironment>` es una configuración de nivel de apli
 
 La activación basada en la configuración admite la activación a través de protocolos http y distintos de http. Requiere extensiones en relativeAddress, es decir,. SVC,. xoml o. xamlx. Puede asignar sus propias extensiones al buildProviders conocido, que le permitirá activar el servicio a través de cualquier extensión. Si existe conflicto, la sección `<serviceActivations>` invalida los registros de .svc.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.ServiceModel.Configuration.ServiceActivationElementCollection>
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>

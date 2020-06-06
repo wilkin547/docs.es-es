@@ -11,18 +11,18 @@ helpviewer_keywords:
 - disableCachingBindingFailures element
 ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
 ms.openlocfilehash: 23633cb282b8e59b4df4bcc2cd38717d805a207e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73117496"
 ---
-# <a name="disablecachingbindingfailures-element"></a>\<elemento > disableCachingBindingFailures
+# <a name="disablecachingbindingfailures-element"></a>\<disableCachingBindingFailures> (Elemento)
 Especifica si se va a deshabilitar el almacenamiento en caché de errores de enlace que se producen porque el sondeo no ha encontrado el ensamblado.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<en tiempo de ejecución >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<disableCachingBindingFailures >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<disableCachingBindingFailures>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,7 +41,7 @@ Especifica si se va a deshabilitar el almacenamiento en caché de errores de enl
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |0|No deshabilite el almacenamiento en caché de errores de enlace que se producen porque el sondeo no ha encontrado el ensamblado. Este es el comportamiento de enlace predeterminado a partir de la versión .NET Framework 2,0.|  
 |1|Deshabilite el almacenamiento en caché de errores de enlace que se producen porque el sondeo no ha encontrado el ensamblado. Esta configuración revierte al comportamiento de enlace de la .NET Framework versión 1,1.|  
@@ -57,9 +57,9 @@ Especifica si se va a deshabilitar el almacenamiento en caché de errores de enl
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  
   
 ## <a name="remarks"></a>Comentarios  
- A partir de la versión 2,0 de .NET Framework, el comportamiento predeterminado para cargar ensamblados es almacenar en caché todos los errores de enlace y carga. Es decir, si se produce un error al intentar cargar un ensamblado, las solicitudes posteriores para cargar el mismo ensamblado producen un error inmediatamente, sin ningún intento de buscar el ensamblado. Este elemento deshabilita el comportamiento predeterminado para los errores de enlace que se producen porque no se pudo encontrar el ensamblado en la ruta de acceso de sondeo. Estos errores producen <xref:System.IO.FileNotFoundException>.  
+ A partir de la versión 2,0 de .NET Framework, el comportamiento predeterminado para cargar ensamblados es almacenar en caché todos los errores de enlace y carga. Es decir, si se produce un error al intentar cargar un ensamblado, las solicitudes posteriores para cargar el mismo ensamblado producen un error inmediatamente, sin ningún intento de buscar el ensamblado. Este elemento deshabilita el comportamiento predeterminado para los errores de enlace que se producen porque no se pudo encontrar el ensamblado en la ruta de acceso de sondeo. Se producen estos errores <xref:System.IO.FileNotFoundException> .  
   
- Algunos errores de enlace y carga no se ven afectados por este elemento y siempre se almacenan en caché. Estos errores se producen porque se encontró el ensamblado, pero no se pudo cargar. Inician <xref:System.BadImageFormatException> o <xref:System.IO.FileLoadException>. La lista siguiente incluye algunos ejemplos de estos errores.  
+ Algunos errores de enlace y carga no se ven afectados por este elemento y siempre se almacenan en caché. Estos errores se producen porque se encontró el ensamblado, pero no se pudo cargar. Inician <xref:System.BadImageFormatException> o <xref:System.IO.FileLoadException> . La lista siguiente incluye algunos ejemplos de estos errores.  
   
 - Si intenta cargar un archivo no es un ensamblado válido, se producirá un error en los intentos posteriores de cargar el ensamblado aunque el archivo incorrecto se reemplace con el ensamblado correcto.  
   
@@ -78,7 +78,7 @@ Especifica si se va a deshabilitar el almacenamiento en caché de errores de enl
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Esquema de la configuración de Common Language Runtime](index.md)
 - [Esquema de los archivos de configuración](../index.md)

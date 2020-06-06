@@ -5,19 +5,19 @@ helpviewer_keywords:
 - gcHeapCount element
 - <gcHeapCount> element
 ms.openlocfilehash: 09d6523fb10692dd3617a3827d5bccf112bc632b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73978424"
 ---
-# <a name="gcheapaffinitizemask-element"></a>\<elemento > GCHeapAffinitizeMask
+# <a name="gcheapaffinitizemask-element"></a>Elemento \<GCHeapAffinitizeMask>
 
 Define la afinidad entre los montones de GC y los procesadores individuales.
 
-\<Configuración > \
-&nbsp;&nbsp;\<Runtime > \
-&nbsp;&nbsp;&nbsp;&nbsp;\<GCHeapAffinitizeMask >
+\<configuration>\
+&nbsp;&nbsp;\<runtime>\
+&nbsp;&nbsp;&nbsp;&nbsp;\<GCHeapAffinitizeMask>
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -38,7 +38,7 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 
 #### <a name="enabled-attribute"></a>atributo Enabled
 
-|Valor|Descripción|
+|Value|Descripción|
 |-----------|-----------------|
 |`nnnn`|Un valor decimal que constituye una máscara de máscara que define la afinidad entre los montones de GC del servidor y los procesadores individuales. |
 
@@ -59,7 +59,7 @@ De forma predeterminada, los subprocesos de GC de servidor son afinidad cons con
 
 **GCHeapAffinitizeMask** se usa normalmente junto con otras dos marcas:
 
-- [GCNoAffinitize](gcnoaffinitize-element.md), que controla si los subprocesos o montones de GC del servidor se afinidad con con CPU. El atributo `enabled` del elemento [GCNoAffinitize](gcnoaffinitize-element.md) debe ser `false` (su valor predeterminado) para que se use el valor **GCHeapAffinitizeMask** .
+- [GCNoAffinitize](gcnoaffinitize-element.md), que controla si los subprocesos o montones de GC del servidor se afinidad con con CPU. El `enabled` atributo del elemento [GCNoAffinitize](gcnoaffinitize-element.md) debe ser `false` (su valor predeterminado) para que se use el valor **GCHeapAffinitizeMask** .
 
 - [GCHeapCount](gcheapcount-element.md), que limita el número de montones utilizados por el proceso para el GC del servidor. De forma predeterminada, hay un montón para cada procesador.
 
@@ -85,7 +85,7 @@ En el ejemplo siguiente se indica que una aplicación usa un GC de servidor con 
 </configuration>
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>
 - [Elemento GCNoAffinitize](gcnoaffinitize-element.md)

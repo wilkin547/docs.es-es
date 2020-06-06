@@ -11,18 +11,18 @@ helpviewer_keywords:
 - trace listener, <trace> element
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
 ms.openlocfilehash: 7d8a989219d84e8604e767456c84c0092bc73b22
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153171"
 ---
-# <a name="trace-element"></a>\<rastrear> Elemento
+# <a name="trace-element"></a>\<trace> (Elemento)
 Contiene agentes de escucha que recopilan, almacenan y enrutan los mensajes de seguimiento.  
   
-[**\<configuración>**](../configuration-element.md)  
+[**\<configuration>**](../configuration-element.md)  
 &nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;**\<rastreo>**  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<trace>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,17 +40,17 @@ Contiene agentes de escucha que recopilan, almacenan y enrutan los mensajes de s
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |`autoflush`|Atributo opcional.<br /><br /> Especifica si los agentes de escucha de seguimiento vacían automáticamente el búfer de salida después de cada operación de escritura.|  
-|`indentsize`|Atributo opcional.<br /><br /> Especifica el número de espacios que se deben aplicar sangría.|  
-|`useGlobalLock`|Atributo opcional.<br /><br /> Indica si se debe utilizar el bloqueo global.|  
+|`indentsize`|Atributo opcional.<br /><br /> Especifica el número de espacios a los que se va a aplicar sangría.|  
+|`useGlobalLock`|Atributo opcional.<br /><br /> Indica si se debe usar el bloqueo global.|  
   
-## <a name="autoflush-attribute"></a>Atributo autoflush  
+## <a name="autoflush-attribute"></a>AutoFlush (atributo)  
   
 |Value|Descripción|  
 |-----------|-----------------|  
 |`false`|No vacía automáticamente el búfer de salida. Este es el valor predeterminado.|  
 |`true`|Vacía automáticamente el búfer de salida.|  
   
-## <a name="usegloballock-attribute"></a>atributo useGlobalLock  
+## <a name="usegloballock-attribute"></a>Atributo useGlobalLock  
   
 |Value|Descripción|  
 |-----------|-----------------|  
@@ -61,7 +61,7 @@ Contiene agentes de escucha que recopilan, almacenan y enrutan los mensajes de s
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<oyentes>](listeners-element-for-trace.md)|Especifica un agente de escucha que recopila, almacena y enruta mensajes.|  
+|[\<listeners>](listeners-element-for-trace.md)|Especifica un agente de escucha que recopila, almacena y enruta los mensajes.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
@@ -71,7 +71,7 @@ Contiene agentes de escucha que recopilan, almacenan y enrutan los mensajes de s
 |`system.diagnostics`|Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.|  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente `<trace>` se muestra cómo `MyListener` utilizar `Listeners` el elemento para agregar el agente de escucha a la colección. `MyListener`crea un archivo `MyListener.log` con nombre y escribe la salida en el archivo. El `useGlobalLock` atributo se `false`establece en , lo que hace que el bloqueo global no se use si el agente de escucha de seguimiento es seguro para subprocesos. El `autoflush` atributo se `true`establece en , lo que hace que el <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> agente de escucha de seguimiento escriba en el archivo independientemente de si se llama al método. El `indentsize` atributo se establece en 0 (cero), lo que <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> hace que el agente de escucha sande los espacios cero cuando se llama al método.  
+ En el ejemplo siguiente se muestra cómo usar el `<trace>` elemento para agregar el agente de escucha `MyListener` a la `Listeners` colección. `MyListener`crea un archivo denominado `MyListener.log` y escribe el resultado en el archivo. El `useGlobalLock` atributo se establece en `false` , lo que hace que no se use el bloqueo global si el agente de escucha de seguimiento es seguro para subprocesos. El `autoflush` atributo se establece en `true` , que hace que el agente de escucha de seguimiento escriba en el archivo independientemente de si <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> se llama al método. El `indentsize` atributo se establece en 0 (cero), lo que hace que el agente de escucha Aplique sangría a cero espacios cuando <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> se llama al método.  
   
 ```xml  
 <configuration>  
@@ -91,4 +91,4 @@ Contiene agentes de escucha que recopilan, almacenan y enrutan los mensajes de s
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
-- [Esquema de configuración de seguimiento y depuración](index.md)
+- [Esquema de la configuración de seguimiento y depuración](index.md)

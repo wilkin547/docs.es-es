@@ -3,21 +3,21 @@ title: <webSocketSettings>
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
 ms.openlocfilehash: fa87a1b0961425d6a9bc84769bef6e87cbc2ce96
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73732556"
 ---
-# <a name="websocketsettings"></a>\<webSocketSettings >
+# \<webSocketSettings>
 Un elemento de configuración usado para especificar valores de WebSockets.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;\<[**enlaces**](bindings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netHttpBinding**](nethttpbinding.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**enlace** >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<webSocketSettings >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<netHttpBinding>**](nethttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<webSocketSettings>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -54,23 +54,23 @@ Un elemento de configuración usado para especificar valores de WebSockets.
   
 ## <a name="transportusage-attribute"></a>Atributo transportUsage  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |WhenDuplex|Use el protocolo WebSocket cuando el contrato sea dúplex.|  
 |Siempre|Use siempre el protocolo WebSocket independientemente del contrato.|  
-|Never|Nunca use el protocolo WebSocket.|  
+|Nunca|Nunca use el protocolo WebSocket.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
- Ninguno  
+ None  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|\<netHttpBinding >|Especifica el NetHttpBinding|  
+|\<netHttpBinding>|Especifica el NetHttpBinding|  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo usar el elemento \<webSocketSettings >.  
+ El ejemplo siguiente muestra cómo usar el elemento \<webSocketSettings>.  
   
 ```xml  
 <netHttpBinding>
@@ -87,7 +87,7 @@ Un elemento de configuración usado para especificar valores de WebSockets.
 </netHttpBinding>
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.ServiceModel.Channels.Binding>
 - <xref:System.ServiceModel.Channels.BindingElement>
@@ -96,4 +96,4 @@ Un elemento de configuración usado para especificar valores de WebSockets.
 - [Enlaces](../../../wcf/bindings.md)
 - [Configuración de enlaces proporcionados por el sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Utilización de enlaces para configurar servicios y clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<> de enlace](bindings.md)
+- [\<binding>](bindings.md)

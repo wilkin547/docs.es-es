@@ -5,19 +5,19 @@ helpviewer_keywords:
 - gcHeapCount element
 - <gcHeapCount> element
 ms.openlocfilehash: 3d6cac4185af182758cb82e6bfd9d96ed24869b4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74283068"
 ---
-# <a name="gcheapcount-element"></a>\<elemento > GCHeapCount
+# <a name="gcheapcount-element"></a>Elemento \<GCHeapCount>
 
 Especifica el número de montones o subprocesos que se usarán para la recolección de elementos no utilizados de servidor.
 
-\<Configuración > \
-&nbsp;&nbsp;\<Runtime > \
-&nbsp;&nbsp;&nbsp;&nbsp;\<GCHeapCount >
+\<configuration>\
+&nbsp;&nbsp;\<runtime>\
+&nbsp;&nbsp;&nbsp;&nbsp;\<GCHeapCount>
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -28,7 +28,7 @@ Especifica el número de montones o subprocesos que se usarán para la recolecci
 
 ## <a name="attributes-and-elements"></a>Atributos y elementos
 
-En las secciones siguientes se describen atributos, elementos secundarios y elementos primarios.
+En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.
 
 ### <a name="attributes"></a>Atributos
 
@@ -38,7 +38,7 @@ En las secciones siguientes se describen atributos, elementos secundarios y elem
 
 #### <a name="enabled-attribute"></a>atributo Enabled
 
-|Valor|Descripción|
+|Value|Descripción|
 |-----------|-----------------|
 |`nn`|El número de montones que se usarán para el GC del servidor.|
 
@@ -93,7 +93,7 @@ En el ejemplo siguiente no se establecer afinidad entre los subprocesos de GC de
 </configuration>
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>
 - [Elemento GCNoAffinitize](gcnoaffinitize-element.md)

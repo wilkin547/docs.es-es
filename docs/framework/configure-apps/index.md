@@ -25,10 +25,10 @@ helpviewer_keywords:
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
 ms.openlocfilehash: b2da9600e6947a1efcb13fc8b1127665cea63071
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70972202"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Configurar aplicaciones con archivos de configuración
@@ -40,7 +40,7 @@ ms.locfileid: "70972202"
  En este tema se describe la sintaxis de los archivos de configuración y se proporciona información sobre los tres tipos de archivos de configuración: de equipo, de aplicación y de seguridad.  
   
 ## <a name="configuration-file-format"></a>Formato de archivos de configuración  
- Los archivos de configuración contienen elementos, que son estructuras de datos lógicas que establecen la información de configuración. En un archivo de configuración se usan etiquetas para marcar el comienzo y el final de un elemento. Por ejemplo, el elemento `<runtime>` consta de `<runtime>`*elementos secundarios*`</runtime>`. Un elemento vacío se escribiría como `<runtime/>` o `<runtime></runtime>`.  
+ Los archivos de configuración contienen elementos, que son estructuras de datos lógicas que establecen la información de configuración. En un archivo de configuración se usan etiquetas para marcar el comienzo y el final de un elemento. Por ejemplo, el `<runtime>` elemento consta de `<runtime>` *elementos secundarios* `</runtime>` . Un elemento vacío se escribiría como `<runtime/>` o `<runtime></runtime>`.  
   
  Como ocurre con todos los archivos XML, la sintaxis de los archivos de configuración distingue mayúsculas de minúsculas.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "70972202"
 ## <a name="machine-configuration-files"></a>Archivos de configuración del equipo  
  El archivo de configuración del equipo, Machine.config, contiene valores que afectan a todo un equipo. Este archivo se encuentra en el directorio %*ruta de instalación en tiempo de ejecución*%\Config. Machine.config contiene valores de configuración para el enlace de ensamblados en todo el equipo, [canales de comunicación remota](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkfd3wha(v=vs.100)) integrados y ASP.NET.  
   
- El sistema de configuración busca primero el [elemento **\<appSettings>** ](./file-schema/appsettings/index.md) en el archivo de configuración del equipo y en otras secciones de configuración que pueda definir un desarrollador. Después, busca en el archivo de configuración de la aplicación. Para que el archivo de configuración del equipo sea siempre manejable, es mejor ubicar estos valores en el archivo de configuración de la aplicación. Sin embargo, si se ubican los valores en el archivo de configuración del equipo, el sistema puede ser más fácil de mantener. Por ejemplo, si se tiene un componente de terceros que utilizan las aplicaciones de cliente y servidor, es más fácil poner los valores de ese componente en un lugar. En este caso, el archivo de configuración del equipo es el lugar adecuado para los valores, para no tener los mismos valores en dos archivos.  
+ El sistema de configuración busca primero en el archivo de configuración del equipo el [ **\<appSettings>** elemento](./file-schema/appsettings/index.md) y otras secciones de configuración que pueda definir un desarrollador. Después, busca en el archivo de configuración de la aplicación. Para que el archivo de configuración del equipo sea siempre manejable, es mejor ubicar estos valores en el archivo de configuración de la aplicación. Sin embargo, si se ubican los valores en el archivo de configuración del equipo, el sistema puede ser más fácil de mantener. Por ejemplo, si se tiene un componente de terceros que utilizan las aplicaciones de cliente y servidor, es más fácil poner los valores de ese componente en un lugar. En este caso, el archivo de configuración del equipo es el lugar adecuado para los valores, para no tener los mismos valores en dos archivos.  
   
 > [!NOTE]
 > Si se implementa una aplicación mediante XCOPY, no se copiarán los valores en el archivo de configuración del equipo.  
@@ -82,7 +82,7 @@ ms.locfileid: "70972202"
   
      Si una aplicación hospedada en Internet Explorer tiene un archivo de configuración, la ubicación de este archivo se especifica en una etiqueta `<link>` con la sintaxis siguiente:  
   
-     \<link rel="*NombreArchivoConfiguración*" href="*ubicación*">  
+     \<link rel="*ConfigurationFileName*" href="*location*">  
   
      En esta etiqueta, `location` es una dirección URL para el archivo de configuración. Esto establece la base de la aplicación. El archivo de configuración debe estar ubicado en el mismo sitio web que la aplicación.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "70972202"
 - Archivo de configuración de directiva de usuario: %USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Cómo: Buscar ensamblados mediante DEVPATH](how-to-locate-assemblies-by-using-devpath.md)  
+ [Procedimiento para buscar ensamblados mediante DEVPATH](how-to-locate-assemblies-by-using-devpath.md)  
  Describe cómo indicar al runtime que utilice la variable de entorno DEVPATH al buscar ensamblados.  
   
  [Redirigir versiones de ensamblado](redirect-assembly-versions.md)  
@@ -113,7 +113,7 @@ ms.locfileid: "70972202"
  [Configurar clases de criptografía](configure-cryptography-classes.md)  
  Describe la forma de asignar un nombre de algoritmo a una clase criptográfica y un identificador de objetos a un algoritmo criptográfico.  
   
- [Cómo: Crear una directiva de edición](how-to-create-a-publisher-policy.md)  
+ [Procedimiento para crear una directiva de publicador](how-to-create-a-publisher-policy.md)  
  Describe cuándo y cómo debe agregar un archivo de directivas de editor para especificar la redirección del ensamblado y la configuración del código base.  
   
  [Esquema de los archivos de configuración](./file-schema/index.md)  

@@ -1,5 +1,5 @@
 ---
-title: elemento <add> para NameValueSectionHandler y DictionarySectionHandler
+title: <add>elemento para NameValueSectionHandler y DictionarySectionHandler
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/add
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <add> Element
 ms.assetid: 0d4ddb53-eb2b-49c0-9c33-a8dec5c39b46
 ms.openlocfilehash: 57722f3518fad12cb8e6e35d68f40bb8465bdd86
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "77215437"
 ---
-# <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<agregar > elemento para NameValueSectionHandler y DictionarySectionHandler
+# <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<add>elemento para NameValueSectionHandler y DictionarySectionHandler
 
-Agrega la configuración de la aplicación personalizada. Cada **\<agregar >** etiqueta contiene un par clave-valor.
+Agrega la configuración de la aplicación personalizada. Cada **\<add>** etiqueta contiene un par clave-valor.
 
-[ **\<configuration>** ](configuration-element.md)\
-&nbsp;&nbsp;[ **\<sectionName >** ](custom-element-2.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<agregar >**
+[**\<configuration>**](configuration-element.md)\
+&nbsp;&nbsp;[**\<sectionName>**](custom-element-2.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -39,7 +39,7 @@ Agrega la configuración de la aplicación personalizada. Cada **\<agregar >** e
 
 | Elemento | Descripción |
 | ------- | ------------|
-| [ **\<sectionName >** Element](custom-element-2.md) | Define la configuración de las secciones de configuración personalizadas que utilizan las clases <xref:System.Configuration.NameValueSectionHandler> y <xref:System.Configuration.DictionarySectionHandler>. |
+| [**\<sectionName>** Element](custom-element-2.md) | Define la configuración de las secciones de configuración personalizadas que utilizan las <xref:System.Configuration.NameValueSectionHandler> <xref:System.Configuration.DictionarySectionHandler> clases y. |
 
 ## <a name="child-elements"></a>Elementos secundarios
 
@@ -47,7 +47,7 @@ None
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo definir una sección de configuración personalizada y usar el elemento **\<agregar >** para colocar la configuración en la sección:
+En el ejemplo siguiente se muestra cómo definir una sección de configuración personalizada y usar el **\<add>** elemento para colocar la configuración en la sección:
 
 ```xml
 <configuration>

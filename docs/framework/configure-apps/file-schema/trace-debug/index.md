@@ -12,10 +12,10 @@ helpviewer_keywords:
 - elements [.NET Framework], trace and debug settings
 ms.assetid: 277ca5f6-e1c4-41b6-a47f-3a67ce5b94ac
 ms.openlocfilehash: 037d08b33e9aa6a64d236b36ebcf821b604b03df
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "69927117"
 ---
 # <a name="trace-and-debug-settings-schema"></a>Esquema de la configuración de seguimiento y depuración
@@ -23,7 +23,7 @@ La configuración de seguimiento y depuración especifica los agentes de escucha
   
  En la tabla siguiente se describe la función de cada elemento de configuración de seguimiento y depuración.  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |[\<add>](add-element-for-listeners-for-source.md)|Agrega un agente de escucha a la colección `Listeners` para un origen de seguimiento.|  
 |[\<add>](add-element-for-listeners-for-trace.md)|Agrega un agente de escucha a la colección `Listeners`.|  

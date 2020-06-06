@@ -5,10 +5,10 @@ helpviewer_keywords:
 - GCLOHThreshold element
 - <GCLOHThreshold> element
 ms.openlocfilehash: d72dc9d27984f60dfb6296217263ce8b176093c6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74451327"
 ---
 # <a name="gclohthreshold-element"></a>Elemento GCLOHThreshold
@@ -16,8 +16,8 @@ ms.locfileid: "74451327"
 Especifica el tamaño del umbral, en bytes, que hace que el recolector de elementos no utilizados coloque objetos en el montón de objetos grandes (montón).
 
 [\<configuration>](../configuration-element.md)\
-&nbsp;&nbsp;[\<en tiempo de ejecución >](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;\<GCLOHThreshold >
+&nbsp;&nbsp;[\<runtime>](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;\<GCLOHThreshold>
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -34,7 +34,7 @@ Especifica el tamaño del umbral, en bytes, que hace que el recolector de elemen
 
 ### <a name="enabled-attribute"></a>atributo Enabled
 
-|Valor|Descripción|
+|Value|Descripción|
 |-----------|-----------------|
 |`nnnn`|Tamaño del umbral, en bytes, que hace que los objetos vayan al montón de objetos grandes.|
 
@@ -53,9 +53,9 @@ Ninguno.
 
 Esta configuración se presentó en .NET Framework 4,8.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Esquema de configuración de tiempo de ejecución](index.md)
-- [Esquema de los archivos de configuración](../index.md)
+- [Esquema del archivo de configuración](../index.md)
 - [Fundamentos de la recolección de elementos no utilizados](../../../../standard/garbage-collection/fundamentals.md)
 - [Opciones de configuración de tiempo de ejecución de .net Core para GC](../../../../core/run-time-config/garbage-collector.md)

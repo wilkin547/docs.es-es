@@ -3,13 +3,13 @@ title: <filters>
 ms.date: 03/30/2017
 ms.assetid: 37a87222-ec78-4728-8105-9ca1bd961f0c
 ms.openlocfilehash: e4ce0452cc46a8f29334fa67f51f14b83290b1c8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "69918885"
 ---
-# <a name="filters"></a>\<filters>
+# \<filters>
 
 El elemento `filters` contiene una colección de filtros XPath para controlar qué tipo de mensaje está registrado.
 
@@ -35,7 +35,7 @@ A continuación, se muestra un ejemplo sobre cómo configurar un filtro que sól
 </messageLogging>
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.ServiceModel.Configuration.DiagnosticSection>
 - <xref:System.ServiceModel.Diagnostics>

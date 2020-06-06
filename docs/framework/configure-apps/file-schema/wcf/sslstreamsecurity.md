@@ -3,21 +3,21 @@ title: <sslStreamSecurity>
 ms.date: 03/30/2017
 ms.assetid: 430a378b-a742-4858-8a12-9f9b235fd627
 ms.openlocfilehash: c5c7ec2b18143ff4d71540a60e24b8225ca4db16
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73738594"
 ---
-# <a name="sslstreamsecurity"></a>\<sección sslstreamsecurity >
+# \<sslStreamSecurity>
 Representa un elemento de enlace personalizado que admite seguridad del canal mediante una secuencia de SSL.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;\<[**enlaces**](bindings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**customBinding**](custombinding.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**enlace** >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<sección sslstreamsecurity >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<customBinding>**](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<sslStreamSecurity>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,7 +34,7 @@ Representa un elemento de enlace personalizado que admite seguridad del canal me
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |requireClientCertificate|Un valor booleano que especifica si se requiere un certificado de cliente para este enlace. De manera predeterminada, es `false`.|  
-|sslProtocols|Un valor de marca de enumeración de SslProtocols que especifica qué SslProtocols son compatibles. El valor predeterminado es&#124;Ssl3&#124;TLS&#124;Tls11 Tls12.|  
+|sslProtocols|Un valor de marca de enumeración de SslProtocols que especifica qué SslProtocols son compatibles. El valor predeterminado es Ssl3&#124;TLS&#124;Tls11&#124;Tls12.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -43,9 +43,9 @@ Representa un elemento de enlace personalizado que admite seguridad del canal me
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<> de enlace](bindings.md)|Define todas las funcionalidades de enlace del enlace personalizado.|  
+|[\<binding>](bindings.md)|Define todas las funcionalidades de enlace del enlace personalizado.|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
@@ -53,4 +53,4 @@ Representa un elemento de enlace personalizado que admite seguridad del canal me
 - [Enlaces](../../../wcf/bindings.md)
 - [Extensión de enlaces](../../../wcf/extending/extending-bindings.md)
 - [Enlaces personalizados](../../../wcf/extending/custom-bindings.md)
-- [\<customBinding >](custombinding.md)
+- [\<customBinding>](custombinding.md)

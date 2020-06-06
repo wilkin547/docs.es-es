@@ -3,21 +3,21 @@ title: <privacyNoticeAt>
 ms.date: 03/30/2017
 ms.assetid: 4cc96942-4eb9-4241-b2fd-45aa239915e8
 ms.openlocfilehash: 2ff70d3a8636970434582e417e4549ab6b433fc1
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73738765"
 ---
-# <a name="privacynoticeat"></a>\<privacyNoticeAt >
+# \<privacyNoticeAt>
 Representa un elemento de configuración que especifica un aviso de privacidad usado en el enlace `wsFederationHttp`.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;\<[**enlaces**](bindings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**customBinding**](custombinding.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**enlace** >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<privacyNotice >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<customBinding>**](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<privacyNotice>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -26,7 +26,7 @@ Representa un elemento de configuración que especifica un aviso de privacidad u
                version="Integer" />
 ```  
   
-## <a name="type"></a>Type  
+## <a name="type"></a>Tipo  
  `Type`  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -46,9 +46,9 @@ Representa un elemento de configuración que especifica un aviso de privacidad u
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<> de enlace](bindings.md)|Define todas las funcionalidades de enlace del enlace personalizado.|  
+|[\<binding>](bindings.md)|Define todas las funcionalidades de enlace del enlace personalizado.|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.ServiceModel.Configuration.PrivacyNoticeElement>
 - <xref:System.ServiceModel.Channels.PrivacyNoticeBindingElement>
@@ -56,4 +56,4 @@ Representa un elemento de configuración que especifica un aviso de privacidad u
 - [Enlaces](../../../wcf/bindings.md)
 - [Extensión de enlaces](../../../wcf/extending/extending-bindings.md)
 - [Enlaces personalizados](../../../wcf/extending/custom-bindings.md)
-- [\<customBinding >](custombinding.md)
+- [\<customBinding>](custombinding.md)

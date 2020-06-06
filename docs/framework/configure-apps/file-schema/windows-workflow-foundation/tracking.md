@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: fd9b50ed-98a1-4518-836d-e4e02c670822
 ms.openlocfilehash: 968cfa8e5402458afd6f13545ed999a472adf2e0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79151915"
 ---
-# <a name="tracking"></a>\<> de seguimiento
+# \<tracking>
 Representa una sección de configuración para definir los valores de seguimiento de un servicio de flujo de trabajo.  
   
- Para obtener más información sobre el seguimiento del flujo de trabajo y su configuración, vea [Seguimiento y seguimiento](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) del flujo de trabajo y Configuración del seguimiento de un flujo de [trabajo](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).  
+ Para obtener más información sobre el seguimiento del flujo de trabajo y su configuración, consulte [seguimiento y](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) seguimiento del flujo de trabajo y [configuración del seguimiento para un flujo de trabajo](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).  
   
-[**\<configuración>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<Sistema.>De ServiceModel**](system-servicemodel-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;**\<seguimiento>**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.ServiceModel>**](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<tracking>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -87,7 +87,7 @@ Representa una sección de configuración para definir los valores de seguimient
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<participantes>](participants.md)|Una colección de elementos de configuración que definen participantes que se suscriben a los registros de seguimiento. Los participantes de seguimiento contienen la lógica para procesar la carga de los registros de seguimiento (por ejemplo, podrían escribir en un archivo).|  
+|[\<participants>](participants.md)|Una colección de elementos de configuración que definen participantes que se suscriben a los registros de seguimiento. Los participantes de seguimiento contienen la lógica para procesar la carga de los registros de seguimiento (por ejemplo, podrían escribir en un archivo).|  
 |[\<trackingProfile>](trackingprofile.md)|Un perfil de seguimiento para filtrar registros de seguimiento emitidos desde una instancia de flujo de trabajo.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -96,10 +96,10 @@ Representa una sección de configuración para definir los valores de seguimient
 |-------------|-----------------|  
 |system.ServiceModel|El elemento raíz de todos los elementos de configuración de flujo de trabajo.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El seguimiento ofrece la posibilidad de examinar la ejecución de un flujo de trabajo. La infraestructura de seguimiento del flujo de trabajo instrumenta un flujo de trabajo para emitir registros que reflejan los eventos clave durante la ejecución. Por ejemplo, cuando una instancia de flujo de trabajo se inicia o completa, se emiten los registros de seguimiento. El seguimiento también puede extraer datos comerciales relevantes asociados a las variables de flujo de trabajo. Por ejemplo, si el flujo de trabajo representa un sistema de procesamiento de pedidos, el Id. del pedido se puede extraer junto con el registro de seguimiento. En general, la habilitación del seguimiento de WF facilita el diagnóstico o los análisis comerciales durante la ejecución de un flujo de trabajo.  
   
 ## <a name="see-also"></a>Consulte también
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection?displayProperty=nameWithType>
-- [Seguimiento y traza de flujos de trabajo](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Seguimiento y traza del flujo de trabajo](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)

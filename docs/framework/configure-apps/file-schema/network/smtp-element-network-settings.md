@@ -9,19 +9,19 @@ helpviewer_keywords:
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
 ms.openlocfilehash: 625c3cb82a8659c742b540724e5cf31be65a705e
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74089100"
 ---
-# <a name="smtp-element-network-settings"></a>\<elemento > de SMTP (configuración de red)
+# <a name="smtp-element-network-settings"></a>Elemento \<smtp> (configuración de red)
 Configura el formato de entrega, el método de entrega y la dirección de remitente para enviar correos electrónicos.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<mailSettings >** ](mailsettings-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**SMTP** >
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<mailSettings>**](mailsettings-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<smtp>**
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -57,7 +57,7 @@ Configura el formato de entrega, el método de entrega y la dirección de remite
   
 |**Element**|**Descripción**|  
 |-----------------|---------------------|  
-|[Elemento \<mailSettings> (configuración de red)](mailsettings-element-network-settings.md)|Configura opciones de envío de correo.|  
+|[\<mailSettings>(Elemento, configuración de red)](mailsettings-element-network-settings.md)|Configura opciones de envío de correo.|  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se especifican los parámetros SMTP adecuados para enviar correo electrónico con las credenciales de red predeterminadas.  
@@ -78,7 +78,7 @@ Configura el formato de entrega, el método de entrega y la dirección de remite
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>
 - <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>

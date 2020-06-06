@@ -1,15 +1,15 @@
 ---
-title: Elemento <Property> (.NET Native)
+title: <Property>Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
 ms.openlocfilehash: b9bc89804a872dddf1a56c2a3dadc9c3df4f5fd1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128209"
 ---
-# <a name="property-element-net-native"></a>\<elemento > de propiedad (.NET Native)
+# <a name="property-element-net-native"></a>\<Property>Elemento (.NET Native)
 Aplica la directiva de reflexión en tiempo de ejecución a una propiedad.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,13 +35,13 @@ Aplica la directiva de reflexión en tiempo de ejecución a una propiedad.
   
 ## <a name="name-attribute"></a>Name (atributo)  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|*method_name*|Nombre de la propiedad. El tipo de la propiedad se define mediante el elemento primario [\<Type>](type-element-net-native.md) o [\<TypeInstantiation>](typeinstantiation-element-net-native.md).|  
+|*method_name*|Nombre de la propiedad. El tipo de la propiedad se define mediante el [\<Type>](type-element-net-native.md) elemento primario o [\<TypeInstantiation>](typeinstantiation-element-net-native.md) .|  
   
 ## <a name="all-other-attributes"></a>Resto de atributos  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |*policy_setting*|Configuración que se aplica a este tipo de directiva para la propiedad. Los valores posibles son `Auto`, `Excluded`, `Included` y `Required`. Para obtener más información, vea [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución).|  
   
@@ -73,15 +73,15 @@ Aplica la directiva de reflexión en tiempo de ejecución a una propiedad.
   
  El archivo se aplica el valor `All` a la directiva `Activate` de la clase `Book`, lo que permite el acceso a los constructores de clase mediante reflexión. La directiva `Browse` para la `Book` clase se hereda de su espacio de nombres primario. Esto se establece en `Required Public`, que hace que los metadatos estén disponibles en tiempo de ejecución.  
   
- A continuación se muestra el código fuente del ejemplo. La variable `outputBlock` representa un control <xref:Windows.UI.Xaml.Controls.TextBlock>.  
+ A continuación se muestra el código fuente del ejemplo. La `outputBlock` variable representa un <xref:Windows.UI.Xaml.Controls.TextBlock> control.  
   
  [!code-csharp[ProjectN_Reflection#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/property1.cs#6)]  
   
  Sin embargo, compilar y ejecutar este ejemplo genera una excepción [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md). Aunque hemos puesto a disposición los metadatos correspondientes a `Book`, no hemos podido llevar a cabo las implementaciones de los captadores de propiedades disponibles dinámicamente. Podemos corregir este error mediante una de estas dos maneras:  
   
-- Definiendo la directiva `Dynamic` para el tipo `Book` en su elemento [\<Type>](type-element-net-native.md).  
+- definiendo la `Dynamic` Directiva para el `Book` tipo en su [\<Type>](type-element-net-native.md) elemento.  
   
-- Agregando un elemento [\<Property>](property-element-net-native.md) anidado por cada propiedad cuyo captador se quiere invocar, como sucede en el siguiente archivo default.rd.xml.  
+- Agregando un elemento anidado [\<Property>](property-element-net-native.md) para cada propiedad cuyo captador queremos invocar, como hace el siguiente archivo default. Rd. Xml.  
   
     ```xml  
     <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -97,8 +97,8 @@ Aplica la directiva de reflexión en tiempo de ejecución a una propiedad.
     </Directives>  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Runtime Directives (rd.xml) Configuration File Reference](runtime-directives-rd-xml-configuration-file-reference.md) (Referencia del archivo de configuración de directivas en tiempo de ejecución [rd.xml])
-- [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](runtime-directive-elements.md)
-- [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución)
+- [Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elementos de directivas en tiempo de ejecución](runtime-directive-elements.md)
+- [Configuración de directiva de la directiva en tiempo de ejecución](runtime-directive-policy-settings.md)

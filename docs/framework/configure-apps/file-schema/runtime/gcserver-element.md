@@ -9,19 +9,19 @@ helpviewer_keywords:
 - <gcServer> element
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
 ms.openlocfilehash: 8eab5e36bab90510aff4f1a3e15328197ac59ed7
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73968947"
 ---
-# <a name="gcserver-element"></a>\<elemento > gcServer
+# <a name="gcserver-element"></a>Elemento \<gcServer>
 
 Especifica si Common Language Runtime ejecuta la recopilación de elementos no utilizados de servidor.
 
 [\<configuration>](../configuration-element.md)\
-&nbsp;&nbsp;[\<en tiempo de ejecución >](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;\<gcServer >
+&nbsp;&nbsp;[\<runtime>](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;\<gcServer>
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -42,7 +42,7 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 
 #### <a name="enabled-attribute"></a>atributo Enabled
 
-|Valor|Descripción|
+|Value|Descripción|
 |-----------|-----------------|
 |`false`|No ejecuta la recolección de elementos no utilizados de servidor. Este es el valor predeterminado.|
 |`true`|Ejecuta la recolección de elementos no utilizados de servidor.|
@@ -67,7 +67,7 @@ Para equipos con un solo procesador, la recolección de elementos no utilizados 
 Este elemento se puede usar solo en el archivo de configuración de la aplicación; se omite si se encuentra en el archivo de configuración del equipo.
 
 > [!NOTE]
-> En .NET Framework 4 y versiones anteriores, la recolección de elementos no utilizados simultánea no está disponible si la recolección de elementos no utilizados de servidor está habilitada. A partir de la .NET Framework 4,5, la recolección de elementos no utilizados de servidor es simultánea. Para usar la recolección de elementos no utilizados de servidor no simultánea, establezca el elemento **gcServer** en `true` y el [elemento gcConcurrent](gcconcurrent-element.md) en `false`.
+> En .NET Framework 4 y versiones anteriores, la recolección de elementos no utilizados simultánea no está disponible si la recolección de elementos no utilizados de servidor está habilitada. A partir de la .NET Framework 4,5, la recolección de elementos no utilizados de servidor es simultánea. Para usar la recolección de elementos no utilizados de servidor no simultánea, establezca el elemento **gcServer** en `true` y el [elemento gcConcurrent](gcconcurrent-element.md) en `false` .
 
 A partir de .NET Framework 4.6.2, también puede usar los siguientes elementos para configurar el GC del servidor:
 
@@ -89,7 +89,7 @@ En el ejemplo siguiente se habilita la recolección de elementos no utilizados d
 </configuration>
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>
 - [Esquema de la configuración de Common Language Runtime](index.md)

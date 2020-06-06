@@ -9,18 +9,18 @@ helpviewer_keywords:
 - assert element
 ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
 ms.openlocfilehash: f3c1a1670139a8262dea449bfff99c7c1c19f088
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74088948"
 ---
-# <a name="assert-element"></a>\<elemento > Assert
+# <a name="assert-element"></a>\<assert> (Elemento)
 Especifica si se muestra un cuadro de mensaje cuando se llama al método <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>; también indica el nombre del archivo para el que se van a escribir los mensajes.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. diagnostics >** ](system-diagnostics-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<Assert >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<assert>**
 
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,7 +40,7 @@ Especifica si se muestra un cuadro de mensaje cuando se llama al método <xref:S
   
 ## <a name="assertuienabled-attribute"></a>Atributo assertuienabled  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |`true`|Muestra el cuadro de mensaje. Este es el valor predeterminado.|  
 |`false`|No muestra el cuadro de mensaje.|  
@@ -56,10 +56,10 @@ Especifica si se muestra un cuadro de mensaje cuando se llama al método <xref:S
 |`system.diagnostics`|Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.|  
   
 ## <a name="remarks"></a>Comentarios  
- Ambos atributos del elemento **\<Assert >** son opcionales. Puede deshabilitar los cuadros de mensaje sin especificar un archivo en el que escribir los mensajes, o puede especificar un archivo en el que escribir los mensajes mientras se deshabilitan los cuadros de mensaje.  
+ Ambos atributos del **\<assert>** elemento son opcionales. Puede deshabilitar los cuadros de mensaje sin especificar un archivo en el que escribir los mensajes, o puede especificar un archivo en el que escribir los mensajes mientras se deshabilitan los cuadros de mensaje.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo deshabilitar la visualización de cuadros de mensaje cuando se llama a **Debug. Assert** y se escriben los mensajes en `c:\log.txt`.  
+ En el ejemplo siguiente se muestra cómo deshabilitar la visualización de cuadros de mensaje cuando se llama a **Debug. Assert** y se escriben los mensajes en `c:\log.txt` .  
   
 ```xml  
 <configuration>  
@@ -69,7 +69,7 @@ Especifica si se muestra un cuadro de mensaje cuando se llama al método <xref:S
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Diagnostics.Debug>
 - [Esquema de la configuración de seguimiento y depuración](index.md)

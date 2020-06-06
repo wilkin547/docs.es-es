@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <bypassTrustedAppStrongNames> element
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
 ms.openlocfilehash: 96361a6742d1d2f76cb237344189d3277d7c8069
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73739086"
 ---
-# <a name="bypasstrustedappstrongnames-element"></a>Elemento \<bypassTrustedAppStrongNames>
+# <a name="bypasstrustedappstrongnames-element"></a>\<bypassTrustedAppStrongNames> (Elemento)
 
-Especifica si se omitirá la validación de nombres seguros en ensamblados de plena confianza que se cargan en un <xref:System.AppDomain>de plena confianza.
+Especifica si se omitirá la validación de nombres seguros en ensamblados de plena confianza que se cargan en una plena confianza <xref:System.AppDomain> .
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<en tiempo de ejecución >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<bypassTrustedAppStrongNames >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<bypassTrustedAppStrongNames>**
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -41,10 +41,10 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 
 ## <a name="enabled-attribute"></a>Atributo enabled
 
-|Valor|Descripción|
+|Value|Descripción|
 |-----------|-----------------|
-|`true`|Las firmas de nombre seguro de los ensamblados de plena confianza no se validan cuando los ensamblados se cargan en un <xref:System.AppDomain>de plena confianza. Este es el valor predeterminado.|
-|`false`|Las firmas de nombre seguro de los ensamblados de plena confianza se validan cuando los ensamblados se cargan en un <xref:System.AppDomain>de plena confianza. La firma de nombre seguro se comprueba únicamente para comprobar la exactitud de la firma; no se compara con otro nombre seguro para buscar coincidencias.|
+|`true`|Las firmas de nombre seguro de los ensamblados de plena confianza no se validan cuando los ensamblados se cargan en una plena confianza <xref:System.AppDomain> . Este es el valor predeterminado.|
+|`false`|Las firmas de nombre seguro de los ensamblados de plena confianza se validan cuando los ensamblados se cargan en una plena confianza <xref:System.AppDomain> . La firma de nombre seguro se comprueba únicamente para comprobar la exactitud de la firma; no se compara con otro nombre seguro para buscar coincidencias.|
 
 ### <a name="child-elements"></a>Elementos secundarios
 
@@ -86,8 +86,8 @@ En el ejemplo siguiente se muestra cómo especificar el comportamiento que valid
 </configuration>
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Esquema de la configuración de Common Language Runtime](index.md)
 - [Esquema de los archivos de configuración](../index.md)
-- [Cómo: deshabilitar la característica de omisión de nombres seguros](../../../../standard/assembly/disable-strong-name-bypass-feature.md)
+- [Cómo: Deshabilitar la característica de omisión de nombres seguros](../../../../standard/assembly/disable-strong-name-bypass-feature.md)

@@ -10,18 +10,18 @@ helpviewer_keywords:
 - container tags, <runtime> element
 ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
 ms.openlocfilehash: 3825ae7c3e35193cb835981600fe1ef83097cd2d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74430458"
 ---
-# <a name="runtime-element"></a>Elemento > en tiempo de ejecución de \<
+# <a name="runtime-element"></a>\<runtime> (Elemento)
 
 Proporciona información usada por el Common Language Runtime para configurar aplicaciones.
 
 [\<configuration>](../configuration-element.md)\
-&nbsp;&nbsp;tiempo de ejecución de \<>
+&nbsp;&nbsp;\<runtime>
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -38,7 +38,7 @@ En las secciones siguientes se describen los elementos secundarios y los element
 
 Ninguno.
 
-### <a name="child-elements"></a>Elemento secundario
+### <a name="child-elements"></a>Elementos secundarios
 
 |Elemento|Descripción|
 |-------------|-----------------|
@@ -61,31 +61,31 @@ Ninguno.
 |[\<gcAllowVeryLargeObjects>](gcallowverylargeobjects-element.md)|En plataformas de 64 bits, habilita matrices con un tamaño total superior a 2 gigabytes (GB).|
 |[\<gcConcurrent>](gcconcurrent-element.md)|Especifica si el Common Language Runtime ejecuta la recolección de elementos no utilizados simultáneamente.|
 |[\<GCCpuGroup>](gccpugroup-element.md)|Especifica si la recolección de elementos no utilizados admite varios grupos de CPU.|
-|[\<GCHeapAffinitizeMask >](gcheapaffinitizemask-element.md)|Define la afinidad entre los montones de recolección de elementos no utilizados y los procesadores individuales.|
-|[\<GCHeapCount >](gcheapcount-element.md)|Especifica el número de montones o subprocesos que se usarán para la recolección de elementos no utilizados de servidor.|
-|[\<GCLOHThreshold >](gclohthreshold-element.md)|Especifica el tamaño del umbral que hace que el recolector de elementos no utilizados coloque objetos en el montón de objetos grandes.|
-|[\<GCNoAffinitize >](gcnoaffinitize-element.md)|Especifica si establecer afinidad entre o no los subprocesos de recolección de elementos no utilizados de servidor con CPU.|
+|[\<GCHeapAffinitizeMask>](gcheapaffinitizemask-element.md)|Define la afinidad entre los montones de recolección de elementos no utilizados y los procesadores individuales.|
+|[\<GCHeapCount>](gcheapcount-element.md)|Especifica el número de montones o subprocesos que se usarán para la recolección de elementos no utilizados de servidor.|
+|[\<GCLOHThreshold>](gclohthreshold-element.md)|Especifica el tamaño del umbral que hace que el recolector de elementos no utilizados coloque objetos en el montón de objetos grandes.|
+|[\<GCNoAffinitize>](gcnoaffinitize-element.md)|Especifica si establecer afinidad entre o no los subprocesos de recolección de elementos no utilizados de servidor con CPU.|
 |[\<gcServer>](gcserver-element.md)|Especifica si Common Language Runtime ejecuta la recopilación de elementos no utilizados de servidor.|
 |[\<generatePublisherEvidence>](generatepublisherevidence-element.md)|Especifica si el runtime usa la directiva de edición de seguridad de acceso al código (CAS).|
 |[\<legacyCorruptedStateExceptionsPolicy>](legacycorruptedstateexceptionspolicy-element.md)|Especifica si el runtime permite código administrado para detectar infracciones de acceso y otras excepciones de estado dañado.|
 |[\<legacyImpersonationPolicy>](legacyimpersonationpolicy-element.md)|Especifica que la identidad de Windows no fluye por puntos asincrónicos, independientemente de la configuración del flujo del contexto de ejecución del subproceso actual.|
 |[\<loadfromRemoteSources>](loadfromremotesources-element.md)|Especifica si los ensamblados de orígenes remotos se cargan como ensamblados de plena confianza.|
-|[\<NetFx40_LegacySecurityPolicy >](netfx40-legacysecuritypolicy-element.md)|Especifica si el runtime usa la directiva de seguridad de acceso al código (CAS) heredada.|
-|[\<NetFx40_PInvokeStackResilience >](netfx40-pinvokestackresilience-element.md)|Especifica si el runtime corrige automáticamente las declaraciones de invocación de plataforma incorrectas en tiempo de ejecución, a costa de transiciones más lentas entre código administrado y código no administrado.|
-|[\<NetFx45_CultureAwareComparerGetHashCode_LongStrings >](netfx45-cultureawarecomparergethashcode-longstrings-element.md)|Especifica si el runtime usa una cantidad de memoria fija para calcular los códigos hash para el método <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>.|
-|[\<PreferComInsteadOfRemoting >](prefercominsteadofmanagedremoting-element.md)|Especifica que el runtime usará interoperabilidad COM en lugar de comunicación remota entre límites de dominio de aplicación.|
+|[\<NetFx40_LegacySecurityPolicy>](netfx40-legacysecuritypolicy-element.md)|Especifica si el runtime usa la directiva de seguridad de acceso al código (CAS) heredada.|
+|[\<NetFx40_PInvokeStackResilience>](netfx40-pinvokestackresilience-element.md)|Especifica si el runtime corrige automáticamente las declaraciones de invocación de plataforma incorrectas en tiempo de ejecución, a costa de transiciones más lentas entre código administrado y código no administrado.|
+|[\<NetFx45_CultureAwareComparerGetHashCode_LongStrings>](netfx45-cultureawarecomparergethashcode-longstrings-element.md)|Especifica si el runtime usa una cantidad de memoria fija para calcular los códigos hash para el método <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> .|
+|[\<PreferComInsteadOfRemoting>](prefercominsteadofmanagedremoting-element.md)|Especifica que el runtime usará interoperabilidad COM en lugar de comunicación remota entre límites de dominio de aplicación.|
 |[\<relativeBindForResources>](relativebindforresources-element.md)|Optimiza el sondeo de ensamblados satélite.|
 |[\<shadowCopyVerifyByTimeStamp>](shadowcopyverifybytimestamp-element.md)|Especifica si la copia sombra usa el comportamiento de inicio predeterminado introducido en el .NET Framework 4, o revierte al comportamiento de inicio de versiones anteriores de la .NET Framework.|
 |[\<supportPortability>](supportportability-element.md)|Especifica que una aplicación puede hacer referencia al mismo ensamblado en dos implementaciones diferentes de .NET Framework, deshabilitando el comportamiento predeterminado que trata los ensamblados como equivalentes para los propósitos de portabilidad de aplicación.|
 |[\<system.runtime.caching>](system-runtime-caching-element-cache-settings.md)|Proporciona información de configuración de la caché de objetos en memoria predeterminada.|
-|[\<Thread_UseAllCpuGroups >](thread-useallcpugroups-element.md)|Especifica si el runtime distribuye subprocesos administrados en todos los grupos de CPU.|
+|[\<Thread_UseAllCpuGroups>](thread-useallcpugroups-element.md)|Especifica si el runtime distribuye subprocesos administrados en todos los grupos de CPU.|
 |[\<ThrowUnobservedTaskExceptions>](throwunobservedtaskexceptions-element.md)|Especifica si las excepciones de tareas no controladas deben finalizar un proceso en ejecución.|
-|[\<TimeSpan_LegacyFormatMode >](timespan-legacyformatmode-element.md)|Especifica si el runtime usa formato heredado para los valores <xref:System.TimeSpan>.|
+|[\<TimeSpan_LegacyFormatMode>](timespan-legacyformatmode-element.md)|Especifica si el runtime usa formato heredado para los valores <xref:System.TimeSpan>.|
 |[\<useLegacyJit>](uselegacyjit-element.md)|Determina si Common Language Runtime usa el compilador JIT de 64 bits heredado para la compilación Just-In-Time.|
 |[\<UseRandomizedStringHashAlgorithm>](userandomizedstringhashalgorithm-element.md)|Especifica si el runtime calcula los códigos hash de las cadenas por cada dominio de aplicación.|
 |[\<UseSmallInternalThreadStacks>](usesmallinternalthreadstacks-element.md)|Solicita que el runtime use tamaños de pila explícitos al crear determinados subprocesos que utiliza internamente, en lugar del tamaño de pila predeterminado.|
 
-### <a name="parent-elements"></a>Elemento principal
+### <a name="parent-elements"></a>Elementos primarios
 
 |Elemento|Descripción|
 |-------------|-----------------|
@@ -93,11 +93,11 @@ Ninguno.
 
 ## <a name="remarks"></a>Comentarios
 
-El Common Language Runtime usa los elementos secundarios de la sección [> en tiempo de ejecución de\<](runtime-element.md) de un archivo de configuración para configurar el modo en que se ejecuta una aplicación. Por ejemplo, el elemento [\<gcServer >](gcserver-element.md) determina si el recolector de elementos no utilizados utiliza la recolección de elementos no utilizados de estación de trabajo o la recolección de elementos no utilizados de servidor, el elemento de [> de\<UseRandomizedStringHashAlgorithm](userandomizedstringhashalgorithm-element.md) determina si el Common Language Runtime calcula los códigos hash para la cadena en cada aplicación o un dominio por aplicación, y el elemento `AppContextSwitchOverrides` permite que los usuarios de la biblioteca opten por la
+Los elementos secundarios de la [\<runtime>](runtime-element.md) sección de un archivo de configuración se usan en el Common Language Runtime para configurar el modo en que se ejecuta una aplicación. Por ejemplo, el [\<gcServer>](gcserver-element.md) elemento determina si el recolector de elementos no utilizados utiliza la recolección de elementos no utilizados de estación de trabajo o la recolección de elementos no utilizados de servidor, el [\<UseRandomizedStringHashAlgorithm>](userandomizedstringhashalgorithm-element.md) elemento determina si el Common Language Runtime calcula los códigos hash de la cadena en una aplicación o un dominio por aplicación, y el `AppContextSwitchOverrides` elemento permite que los usuarios de la biblioteca opten por la funcionalidad modificada proporcionada por una biblioteca.
 
-Los elementos de la sección [> en tiempo de ejecución de\<](runtime-element.md) se leen automáticamente en el Common Language Runtime al iniciarse la aplicación. También puede definir el archivo de configuración para un dominio de aplicación no predeterminado proporcionando su nombre a la propiedad <xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType>; la configuración se lee automáticamente cuando se carga el dominio de aplicación. En raras ocasiones, es necesario leer directamente la configuración de la sección [> de\<Runtime](runtime-element.md) del archivo de configuración de la aplicación.
+[\<runtime>](runtime-element.md)El Common Language Runtime lee automáticamente los elementos de la sección al iniciar la aplicación. También puede definir el archivo de configuración para un dominio de aplicación no predeterminado proporcionando su nombre a la <xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType> propiedad; su configuración se lee automáticamente cuando se carga el dominio de aplicación. En raras ocasiones, si es necesario, debe leer directamente la configuración de la sección del [\<runtime>](runtime-element.md) archivo de configuración de la aplicación.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Esquema de la configuración de Common Language Runtime](index.md)
 - [Esquema de los archivos de configuración](../index.md)

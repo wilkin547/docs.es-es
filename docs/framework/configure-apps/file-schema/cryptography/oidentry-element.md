@@ -9,20 +9,20 @@ helpviewer_keywords:
 - oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
 ms.openlocfilehash: 4564cf59e3b6cfbdcd9dca06cd0f966d524834de
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74088548"
 ---
-# <a name="oidentry-element"></a>\<elemento > oidEntry
+# <a name="oidentry-element"></a>\<oidEntry> (Elemento)
 Asigna un identificador de objeto (OID) ASN.1 a un nombre descriptivo.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptographySettings >** ](cryptographysettings-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<oidMap**](oidmap-element.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<oidEntry >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<mscorlib>**](mscorlib-element-for-cryptography-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<cryptographySettings>**](cryptographysettings-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<oidMap>**](oidmap-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<oidEntry>**
 
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,7 +38,7 @@ Asigna un identificador de objeto (OID) ASN.1 a un nombre descriptivo.
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |**OID**|Atributo necesario.<br /><br /> Especifica el OID ASN. 1 correspondiente al algoritmo implementado por la clase.|  
-|**name**|Atributo necesario.<br /><br /> Especifica el valor para el atributo de **nombre** en la etiqueta [\<elemento nameEntry >](nameentry-element.md) .|  
+|**name**|Atributo necesario.<br /><br /> Especifica el valor para el atributo de **nombre** en la [\<nameEntry>](nameentry-element.md) etiqueta.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -49,14 +49,14 @@ Asigna un identificador de objeto (OID) ASN.1 a un nombre descriptivo.
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`cryptographySettings`|Contiene la configuración de criptografía.|  
-|`mscorlib`|Contiene el elemento `cryptographySettings`.|  
+|`mscorlib`|Contiene el `cryptographySettings` elemento.|  
 |`oidMap`|Contiene las asignaciones de identificador de objetos (OID) ASN. 1 a las clases.|  
   
 ## <a name="remarks"></a>Comentarios  
  Los identificadores de objeto ASN. 1 identifican los algoritmos en algunos formatos criptográficos. Asigne identificadores de objeto a nombres descriptivos para los algoritmos que desee identificar.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo usar el elemento **\<oidEntry >** para asignar un identificador de objeto para el algoritmo hash RIPEMD-160 a una implementación de ese algoritmo hash.  
+ En el ejemplo siguiente se muestra cómo usar el **\<oidEntry>** elemento para asignar un identificador de objeto para el algoritmo hash RIPEMD-160 a una implementación de ese algoritmo hash.  
   
 ```xml  
 <configuration>  

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
 ms.openlocfilehash: 178d5070dd7018bbc0fce474cdd0b31ba3d17f77
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "69913031"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Procedimiento para habilitar y deshabilitar redireccionamiento de enlaces automático
@@ -28,14 +28,14 @@ Si tiene Visual Studio 2017 versión 15,7 o posterior, puede deshabilitar fácil
 
 2. En la página de la **aplicación** , desactive la opción **generar automáticamente redirecciones de enlace** .
 
-3. Presione **Ctrl**+**S** para guardar el cambio.
+3. Presione **Ctrl** + **S** para guardar el cambio.
 
 ### <a name="disable-manually-in-the-project-file"></a>Deshabilitar manualmente en el archivo de proyecto
 
 1. Abra el archivo de proyecto para editarlo con uno de los métodos siguientes:
 
    - En Visual Studio, seleccione el proyecto en **Explorador de soluciones**y, a continuación, elija **Abrir carpeta en el explorador de archivos** en el menú contextual. En el explorador de archivos, busque el archivo de proyecto (. csproj o. vbproj) y ábralo en el Bloc de notas.
-   - En Visual Studio, en **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y elija **descargar el proyecto**. Vuelva a hacer clic con el botón derecho en el proyecto descargado y, a continuación, elija **Editar [nombreDeProyecto. csproj]** .
+   - En Visual Studio, en **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y elija **descargar el proyecto**. Vuelva a hacer clic con el botón derecho en el proyecto descargado y, a continuación, elija **Editar [nombreDeProyecto. csproj]**.
 
 2. En el archivo de proyecto, busque la siguiente entrada de propiedad:
 
@@ -56,9 +56,9 @@ Puede habilitar las redirecciones de enlace automáticas en las aplicaciones exi
 1. Abra el archivo de proyecto para editarlo con uno de los métodos siguientes:
 
    - En Visual Studio, seleccione el proyecto en **Explorador de soluciones**y, a continuación, elija **Abrir carpeta en el explorador de archivos** en el menú contextual. En el explorador de archivos, busque el archivo de proyecto (. csproj o. vbproj) y ábralo en el Bloc de notas.
-   - En Visual Studio, en **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y elija **descargar el proyecto**. Vuelva a hacer clic con el botón derecho en el proyecto descargado y, a continuación, elija **Editar [nombreDeProyecto. csproj]** .
+   - En Visual Studio, en **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y elija **descargar el proyecto**. Vuelva a hacer clic con el botón derecho en el proyecto descargado y, a continuación, elija **Editar [nombreDeProyecto. csproj]**.
 
-2. Agregue el siguiente elemento al primer grupo de propiedades de configuración (bajo \<la etiqueta de > propertyGroup):
+2. Agregue el siguiente elemento al primer grupo de propiedades de configuración (bajo la \<PropertyGroup> etiqueta):
 
    ```xml
    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -97,9 +97,9 @@ Para agregar redirecciones de enlace a un archivo **Web. config** :
 
    Aparece un cuadro de diálogo que le permite agregar automáticamente las redirecciones de enlace necesarias al archivo **Web. config** de origen.
 
-   ![Cuadro de diálogo permiso de redireccionamiento de enlace](./media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
+   ![Cuadro de diálogo de permiso de redireccionamiento de enlace](./media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [\<Elemento de > bindingRedirect](./file-schema/runtime/bindingredirect-element.md)
+- [\<bindingRedirect>Element](./file-schema/runtime/bindingredirect-element.md)
 - [Redirigir versiones de ensamblado](redirect-assembly-versions.md)

@@ -1,5 +1,5 @@
 ---
-title: elemento <remove> para NameValueSectionHandler y DictionarySectionHandler
+title: <remove>elemento para NameValueSectionHandler y DictionarySectionHandler
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/remove
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <remove> Element
 ms.assetid: 8d8af7f5-26c9-4db9-bbe4-b2a4e6949568
 ms.openlocfilehash: d1e4f3478f6afd6a20c01c6b57a137020ee88f5f
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "77214756"
 ---
-# <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<quitar > elemento de NameValueSectionHandler y DictionarySectionHandler
+# <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<remove>elemento para NameValueSectionHandler y DictionarySectionHandler
 
 Quita un valor definido previamente.
 
-[ **\<configuration>** ](configuration-element.md)\
-&nbsp;&nbsp;[ **\<sectionName >** ](custom-element-2.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<quitar >**
+[**\<configuration>**](configuration-element.md)\
+&nbsp;&nbsp;[**\<sectionName>**](custom-element-2.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -38,7 +38,7 @@ Quita un valor definido previamente.
 
 | Elemento | Descripción |
 | ------- | ------------|
-| [ **\<sectionName >** Element](custom-element-2.md) | Define la configuración de las secciones de configuración personalizadas que utilizan las clases <xref:System.Configuration.NameValueSectionHandler> y <xref:System.Configuration.DictionarySectionHandler>. |
+| [**\<sectionName>** Element](custom-element-2.md) | Define la configuración de las secciones de configuración personalizadas que utilizan las <xref:System.Configuration.NameValueSectionHandler> <xref:System.Configuration.DictionarySectionHandler> clases y. |
 
 ## <a name="child-elements"></a>Elementos secundarios
 
@@ -46,13 +46,13 @@ None
 
 ## <a name="remarks"></a>Observaciones
 
-Puede usar el elemento **\<remove >** para quitar la configuración de la aplicación que se definió en un nivel superior en la jerarquía del archivo de configuración.
+Puede usar el **\<remove>** elemento para quitar la configuración de la aplicación que se definió en un nivel superior en la jerarquía del archivo de configuración.
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo usar el elemento **\<quitar >** de un archivo de configuración de la aplicación para quitar la configuración definida previamente en el archivo de configuración del equipo.
+En el ejemplo siguiente se muestra cómo utilizar el **\<remove>** elemento en un archivo de configuración de la aplicación para quitar la configuración definida previamente en el archivo de configuración del equipo.
 
-El siguiente código de archivo de configuración de máquina declara la sección **\<mi sección >** y le agrega dos valores, `key1` y `key2`:
+El siguiente código de archivo de configuración de máquina declara la sección **\<mySection>** y agrega dos valores de configuración `key1` `key2` :
 
 ```xml
 <!-- Machine.config file -->
@@ -67,7 +67,7 @@ El siguiente código de archivo de configuración de máquina declara la secció
 </configuration>
 ```
 
-El siguiente código de archivo de configuración de la aplicación quita el valor `key2` de **\<sección >** :
+El siguiente código de archivo de configuración de la aplicación quita la `key2` configuración de **\<mySection>** :
 
 ```xml
 <!--Application configuration file -->

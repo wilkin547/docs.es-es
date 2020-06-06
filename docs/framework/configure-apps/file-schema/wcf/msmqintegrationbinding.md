@@ -5,21 +5,21 @@ helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
 ms.openlocfilehash: ba28a81dd2ea0684ed863821afd3a8f31c0fb064
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74140771"
 ---
-# <a name="msmqintegrationbinding"></a>\<msmqIntegrationBinding >
+# \<msmqIntegrationBinding>
 Define un enlace que proporciona la compatibilidad de uso de colas enrutando los mensajes a través de MSMQ.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;\<[**enlaces**](bindings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**customBinding**](custombinding.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**enlace** >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<msmqIntegrationBinding >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<customBinding>**](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<msmqIntegrationBinding>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -67,7 +67,7 @@ Define un enlace que proporciona la compatibilidad de uso de colas enrutando los
 |receiveErrorHandling|Un valor <xref:System.ServiceModel.ReceiveErrorHandling> que especifica cómo se administran mensajes dudosos y que no se pueden enviar.|  
 |receiveRetryCount|Un entero que especifica el número máximo de intentos inmediatos que el administrador de cola debería intentar si se produce un error en la transmisión de un mensaje de la cola de aplicación a la aplicación.<br /><br /> Si se alcanza el número máximo de intentos de entrega y la aplicación no tiene acceso al mensaje, a continuación, el mensaje se envía a una cola de reintento para intentar la entrega más tarde. La duración antes de que el mensaje se transfiera de vuelta a la cola emisora es controlada por `retryCycleDelay`. Si los ciclos de reintento alcanzan el valor `maxRetryCycles`, entonces el mensaje se envía a la cola de mensajes dudosos o se envía al remitente una confirmación de que no se pudo realizar la acción.|  
 |receiveTimeout|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de recepción para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:10:00.|  
-|receiveContextEnabled|Valor de tipo booleano que especifica si está habilitado el contexto de recepción para procesar los mensajes en colas. Cuando se establece en `true`, un servicio puede "inspeccionar" un mensaje en la cola para empezar a procesarlo y, si algo sale mal y se produce una excepción, permanece en la cola. Los servicios también pueden "bloquear" los mensajes para volver a intentar el procesamiento en un momento posterior. ReceiveContext proporciona un mecanismo para "completar" el mensaje una vez procesado de modo que se pueda quitar de la cola. Los mensajes ya no se leen ni se reescriben en las colas a través de la red, y los mensajes individuales no se devuelven entre las distintas instancias de servicio durante el procesamiento.|  
+|receiveContextEnabled|Valor de tipo booleano que especifica si está habilitado el contexto de recepción para procesar los mensajes en colas. Cuando se establece en `true` , un servicio puede "inspeccionar" un mensaje en la cola para empezar a procesarlo y, si algo sale mal y se produce una excepción, permanece en la cola. Los servicios también pueden "bloquear" los mensajes para volver a intentar el procesamiento en un momento posterior. ReceiveContext proporciona un mecanismo para "completar" el mensaje una vez procesado de modo que se pueda quitar de la cola. Los mensajes ya no se leen ni se reescriben en las colas a través de la red, y los mensajes individuales no se devuelven entre las distintas instancias de servicio durante el procesamiento.|  
 |retryCycleDelay|Un valor TimeSpan que especifica el tiempo de retardo entre los ciclos de reintento al intentar entregar un mensaje que no se pudo entregar inmediatamente. El valor define sólo el tiempo de espera mínimo porque el tiempo de espera real puede ser más largo. El valor predeterminado es 00:30:00. Para obtener más información, vea <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A>.|  
 |sendTimeout|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de envío para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|  
 |serializationFormat|Define el formato usado para la serialización del cuerpo del mensaje. Este atributo es del tipo <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat>.|  
@@ -77,28 +77,28 @@ Define un enlace que proporciona la compatibilidad de uso de colas enrutando los
   
 ## <a name="serializationformat-attribute"></a>Atributo {serializationFormat}  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |Xml|Formato XML|  
 |Binary|Formato binario|  
 |ActiveX|Formato ActiveX|  
 |ByteArray|Serializa el objeto a una matriz de bytes.|  
-|Secuencia|El cuerpo con formato como una secuencia|  
+|STREAM|El cuerpo con formato como una secuencia|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[> de seguridad de \<](security-of-msmqintegrationbinding.md)|Define la configuración de seguridad del enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement>.|  
+|[\<security>](security-of-msmqintegrationbinding.md)|Define la configuración de seguridad del enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<enlaces >](bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|  
+|[\<bindings>](bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|  
   
 ## <a name="remarks"></a>Comentarios  
- Este elemento de enlace se puede usar para permitir que las aplicaciones de Windows Communication Foundation (WCF) envíen y reciban mensajes desde aplicaciones MSMQ existentes que utilicen COM, API nativas de MSMQ o los tipos definidos en el espacio de nombres <xref:System.Messaging?displayProperty=nameWithType> que puede usar. Este elemento de configuración para especificar las maneras de direccionar la cola, las garantías de transferencia, si los mensajes deben estar almacenados de forma duradera y cómo se deben proteger y autenticar los mensajes. Para obtener más información, consulte [Cómo: intercambiar mensajes con puntos de conexión de WCF y aplicaciones de Message Queue Server](../../../wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md).  
+ Este elemento de enlace se puede usar para permitir que las aplicaciones de Windows Communication Foundation (WCF) envíen y reciban mensajes desde aplicaciones MSMQ existentes que utilicen COM, API nativas de MSMQ o los tipos definidos en el <xref:System.Messaging?displayProperty=nameWithType> espacio de nombres. puede utilizar este elemento de configuración para especificar las maneras de direccionar la cola, las garantías de transferencia, si los mensajes deben estar almacenados de forma duradera y cómo deben proteger Para obtener más información, consulte [Cómo: intercambiar mensajes con puntos de conexión de WCF y aplicaciones de Message Queue Server](../../../wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md).  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -132,12 +132,12 @@ Define un enlace que proporciona la compatibilidad de uso de colas enrutando los
 </configuration>
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.ServiceModel.Configuration.MsmqIntegrationBindingElement>
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>
-- [\<> de enlace](bindings.md)
+- [\<binding>](bindings.md)
 - [Enlaces](../../../wcf/bindings.md)
 - [Configuración de enlaces proporcionados por el sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Utilización de enlaces para configurar servicios y clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)

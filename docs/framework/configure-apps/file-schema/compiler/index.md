@@ -12,10 +12,10 @@ helpviewer_keywords:
 - compiler configuration settings
 ms.assetid: c020b139-8699-4f0d-9ac9-70d0c5b2a8c8
 ms.openlocfilehash: 5b1f9684ad26d4a03769af287fc8b0c0c7c4cc1a
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74088683"
 ---
 # <a name="compiler-and-language-provider-settings-schema"></a>Esquema de configuración de compilador y proveedor de lenguaje
@@ -23,15 +23,15 @@ La configuración de compilador y proveedor de lenguaje especifica los elementos
   
 .NET Framework define la configuración inicial del compilador en el archivo de configuración del equipo (Machine.config). Los desarrolladores y los proveedores de compiladores pueden agregar valores de configuración para una nueva implementación de <xref:System.CodeDom.Compiler.CodeDomProvider>. Use el método <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> para enumerar mediante programación los valores de configuración del compilador y del proveedor de lenguaje en un equipo.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. codedom**](system-codedom-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;\<[**compiladores**](compilers-element.md) >
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[ **compilador** >](compiler-element.md)
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.codedom>**](system-codedom-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<compilers>**](compilers-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<compiler>**](compiler-element.md)
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
 |[\<system.codedom>](system-codedom-element.md)|Especifica los valores de configuración del compilador para los proveedores de lenguaje disponibles.|  
-|[\<compilers>](compilers-element.md)|Contenedor para los elementos de configuración del compilador; contiene cero o más elementos [\<compiler>](compiler-element.md).|  
+|[\<compilers>](compilers-element.md)|Contenedor para los elementos de configuración del compilador; contiene cero o más [\<compiler>](compiler-element.md) elementos.|  
 |[\<compiler>](compiler-element.md)|Especifica los atributos de configuración del compilador para un proveedor de lenguaje.|  
   
 ## <a name="example"></a>Ejemplo  
@@ -58,4 +58,4 @@ La configuración de compilador y proveedor de lenguaje especifica los elementos
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
 - [Esquema de los archivos de configuración](../index.md)
-- [Elemento \<compiler>](compiler-element.md)
+- [\<compiler>Element](compiler-element.md)

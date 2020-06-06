@@ -3,13 +3,13 @@ title: <Subtypes>Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: fb854070-248b-46cf-9dab-c322e2b4d624
 ms.openlocfilehash: bb719449f3769c5dbbde6d05efdb865c18bb4ab2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79180938"
 ---
-# <a name="subtypes-element-net-native"></a>\<Subtipos> (.NET Native)
+# <a name="subtypes-element-net-native"></a>\<Subtypes>Elemento (.NET Native)
 Aplica la directiva en tiempo de ejecución a todas las clases heredadas del tipo contenedor.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -58,9 +58,9 @@ Aplica la directiva en tiempo de ejecución a todas las clases heredadas del tip
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<Tipo>](type-element-net-native.md)|Aplica la directiva de reflexión a un tipo y a todos sus miembros.|  
+|[\<Type>](type-element-net-native.md)|Aplica la directiva de reflexión a un tipo y a todos sus miembros.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El elemento `<Subtypes>` aplica la directiva a todos los subtipos de su tipo contenedor. Se usa cuando se quieren aplicar directivas distintas a los tipos derivados y sus clases base.  
   
  Todos los atributos de reflexión, serialización e interoperabilidad son opcionales, aunque al menos uno debe estar presente.  
@@ -89,7 +89,7 @@ Aplica la directiva en tiempo de ejecución a todas las clases heredadas del tip
   
 ## <a name="see-also"></a>Consulte también
 
-- [\<Elemento de> de tipo](type-element-net-native.md)
-- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
+- [\<Type>Element](type-element-net-native.md)
+- [Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementos de directivas en tiempo de ejecución](runtime-directive-elements.md)
 - [Configuración de directiva de la directiva en tiempo de ejecución](runtime-directive-policy-settings.md)

@@ -3,19 +3,19 @@ title: <messageLogging>
 ms.date: 03/30/2017
 ms.assetid: 1d06a7e6-9633-4a12-8c5d-123adbbc19c5
 ms.openlocfilehash: 9291c38af28c18d20e23e34e8316b4a9fe523123
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70855120"
 ---
-# <a name="messagelogging"></a>\<messageLogging>
+# \<messageLogging>
 Este elemento define los valores para las funciones del registro de mensajes de Windows Communication Foundation (WCF).  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<diagnóstico >** ](diagnostics.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> messageLogging**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<diagnostics>**](diagnostics.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<messageLogging>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,24 +41,24 @@ Este elemento define los valores para las funciones del registro de mensajes de 
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|DESCRIPCIÓN|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |`logEntireMessage`|Un valor booleano que especifica si el mensaje completo (encabezado del mensaje y cuerpo) se registra. El valor predeterminado es `false`, que significa que sólo se registra el encabezado del mensaje. Esta configuración afecta a todos los niveles de registro de mensajes (servicio, transporte y mal formado).|  
-|`logMalformedMessages`|Un valor booleano que especifica si los mensajes mal formados se registran. Los mensajes incorrectos no cuentan hacia `maxMessagesToLog`. El valor predeterminado es `false`.|  
-|`logMessagesAtServiceLevel`|Un valor booleano que especifica si los mensajes se siguen en el nivel de servicio (antes del cifrado y las transformaciones relacionadas con transporte). El valor predeterminado es `false`.|  
-|`logMessagesAtTransportLevel`|Un valor booleano que especifica si los mensajes se siguen en el nivel de transporte. Se aplica cualquier filtro especificado en el archivo de configuración y sólo se siguen los mensajes que coinciden con los filtros. El valor predeterminado es `false`.|  
+|`logMalformedMessages`|Un valor booleano que especifica si los mensajes mal formados se registran. Los mensajes incorrectos no cuentan hacia `maxMessagesToLog`. De manera predeterminada, es `false`.|  
+|`logMessagesAtServiceLevel`|Un valor booleano que especifica si los mensajes se siguen en el nivel de servicio (antes del cifrado y las transformaciones relacionadas con transporte). De manera predeterminada, es `false`.|  
+|`logMessagesAtTransportLevel`|Un valor booleano que especifica si los mensajes se siguen en el nivel de transporte. Se aplica cualquier filtro especificado en el archivo de configuración y sólo se siguen los mensajes que coinciden con los filtros. De manera predeterminada, es `false`.|  
 |`maxMessagesToLog`|Un entero positivo que especifica el número máximo de mensajes para registrar. El valor predeterminado es 1000.|  
 |`maxSizeOfMessageToLog`|Un entero positivo que especifica el tamaño máximo, en bytes, de un mensaje para registrar. Los mensajes que superen el límite no se registrarán. Este valor afecta a todos los niveles de seguimiento. El valor predeterminado es 262144(0x4000).|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |filters|El elemento `filters` contiene una colección de filtros de XPath. Cuando se habilita el registro de mensajes de transporte (`logMessagesAtTransportLevel` es `true`), sólo los mensajes que coinciden con los filtros se registrarán.<br /><br /> Los filtros sólo se aplican en el nivel de transporte. El nivel de servicio y el registro de mensajes incorrectos no se ven afectados por los filtros.<br /><br /> El único atributo para este elemento, `filter`, es XpathFilter.<br /><br /> `<filters>     <add xmlns:soap="http://www.w3.org/2003/05/soap-envelope">/soap:Envelope</add> </filters>`|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |diagnóstico|Define la configuración de WCF para la inspección y el control en tiempo de ejecución para el administrador.|  
   
@@ -122,7 +122,7 @@ Este elemento define los valores para las funciones del registro de mensajes de 
 </messageLogging>
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.ServiceModel.Configuration.DiagnosticSection>
 - <xref:System.ServiceModel.Diagnostics>

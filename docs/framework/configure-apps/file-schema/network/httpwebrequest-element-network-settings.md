@@ -9,19 +9,19 @@ helpviewer_keywords:
 - httpWebRequest element
 ms.assetid: 52acd9d2-5bdc-4dc4-9c2a-f0a476ccbb31
 ms.openlocfilehash: d33dadc14510feb00e05ca557b507b0cf8fa0dd0
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74087458"
 ---
-# <a name="httpwebrequest-element-network-settings"></a>\<elemento > httpWebRequest (configuración de red)
+# <a name="httpwebrequest-element-network-settings"></a>Elemento \<httpWebRequest> (configuración de red)
 Personaliza los parámetros de la solicitud Web.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;[ **&nbsp;&nbsp;\<\** ](settings-element-network-settings.md)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<httpWebRequest >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<settings>**](settings-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<httpWebRequest>**
 
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,7 +43,7 @@ Personaliza los parámetros de la solicitud Web.
 |-------------------|---------------------|  
 |`maximumResponseHeadersLength`|Especifica la longitud máxima de un encabezado de respuesta, en kilobytes. El valor predeterminado es 64. Un valor de-1 indica que no se impondrá ningún límite de tamaño en los encabezados de respuesta.|  
 |`maximumErrorResponseLength`|Especifica la longitud máxima de una respuesta de error, en kilobytes. El valor predeterminado es 64. Un valor de-1 indica que no se impondrá ningún límite de tamaño en la respuesta de error.|  
-|`maximumUnauthorizedUploadLength`|Especifica la longitud máxima de una carga en respuesta a un código de error no autorizado, en bytes. El valor predeterminado es -1. Un valor de-1 indica que no se impondrá ningún límite de tamaño en la carga.|  
+|`maximumUnauthorizedUploadLength`|Especifica la longitud máxima de una carga en respuesta a un código de error no autorizado, en bytes. El valor predeterminado es -1. Un valor -1 indica que no se impondrá límite de tamaño a la carga.|  
 |`useUnsafeHeaderParsing`|Especifica si está habilitado el análisis de encabezados no seguros. El valor predeterminado es `false`.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -53,10 +53,10 @@ Personaliza los parámetros de la solicitud Web.
   
 |**Element**|**Descripción**|  
 |-----------------|---------------------|  
-|[Configuración](settings-element-network-settings.md)|Configura opciones de red básicas para el espacio de nombres <xref:System.Net>.|  
+|[settings](settings-element-network-settings.md)|Configura opciones de red básicas para el espacio de nombres <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Comentarios  
- De forma predeterminada, el .NET Framework aplica estrictamente la RFC 2616 para el análisis de URI. Algunas respuestas del servidor pueden incluir caracteres de control en campos prohibidos, lo que hará que el método <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> inicie una <xref:System.Net.WebException>. Si **useUnsafeHeaderParsing** se establece en **true**, no se producirá <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> en este caso; sin embargo, la aplicación será vulnerable a varias formas de ataques de análisis de URI. La mejor solución es cambiar el servidor para que la respuesta no incluya caracteres de control.  
+ De forma predeterminada, el .NET Framework aplica estrictamente la RFC 2616 para el análisis de URI. Algunas respuestas del servidor pueden incluir caracteres de control en campos prohibidos, lo que hará que el <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> método produzca una excepción <xref:System.Net.WebException> . Si **useUnsafeHeaderParsing** se establece en **true**, <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> no se producirá en este caso; sin embargo, la aplicación será vulnerable a varias formas de ataques de análisis de URI. La mejor solución es cambiar el servidor para que la respuesta no incluya caracteres de control.  
   
 ## <a name="configuration-files"></a>Archivos de configuración  
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
@@ -76,7 +76,7 @@ Personaliza los parámetros de la solicitud Web.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>
 - [Esquema de la configuración de red](index.md)

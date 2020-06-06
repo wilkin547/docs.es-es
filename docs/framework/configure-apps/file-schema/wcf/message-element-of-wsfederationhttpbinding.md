@@ -1,24 +1,24 @@
 ---
-title: <message> elemento de <wsFederationHttpBinding>
+title: <message>elemento de<wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
 ms.openlocfilehash: 8e0903dd1313e68e2de65730e129079199ebe2f2
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73738987"
 ---
-# <a name="message-element-of-wsfederationhttpbinding"></a>\<mensaje > elemento de \<wsFederationHttpBinding >
-Define la configuración para la seguridad de nivel de mensaje para el [\<wsFederationHttpBinding >](wsfederationhttpbinding.md).  
+# <a name="message-element-of-wsfederationhttpbinding"></a>\<message>elemento de\<wsFederationHttpBinding>
+Define la configuración para la seguridad de nivel de mensaje para [\<wsFederationHttpBinding>](wsfederationhttpbinding.md) .  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;\<[**enlaces**](bindings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<wsFederationHttpBinding**](wsfederationhttpbinding.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**enlace** >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**seguridad**](security-of-wsfederationhttpbinding.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**mensaje** >  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<wsFederationHttpBinding>**](wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<message>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -87,14 +87,14 @@ Define la configuración para la seguridad de nivel de mensaje para el [\<wsFede
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|algorithmSuite|Establece el cifrado de mensajes y los algoritmos de encapsulado de claves. Vea la tabla de "atributo algorithmSuite" para ver los valores válidos de este atributo. El valor predeterminado es `Basic256`.<br /><br /> Este atributo es del tipo <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. Estos algoritmos se asignan a los indicados en la especificación Lenguaje de directiva de seguridad (WS-SecurityPolicy).|  
-|issuedKeyType|Especifica el tipo de clave que se va a emitir. Los valores válidos son los siguientes:<br /><br /> -SymmetricKey<br />-PublicKey<br /><br /> De manera predeterminada, es `SymmetricKey`. Este atributo es del tipo <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
+|algorithmSuite|Establece el cifrado de mensajes y los algoritmos de encapsulado de claves. Vea la tabla de "atributo algorithmSuite" para ver los valores válidos de este atributo. El valor predeterminado es `Basic256`.<br /><br /> Este atributo es del tipo <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. Estos algoritmos se asignan a los que se indican en la especificación Security Policy Language (WS-SecurityPolicy).|  
+|issuedKeyType|Especifica el tipo de clave que se va a emitir. Los valores válidos incluyen los siguientes:<br /><br /> -SymmetricKey<br />-PublicKey<br /><br /> De manera predeterminada, es `SymmetricKey`. Este atributo es del tipo <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
 |issuedTokenType|Una cadena que contiene un URI que especifica el tipo de token que se va a emitir. De manera predeterminada, es `null`.|  
 |negotiateServiceCredential|Un valor booleano que especifica si la credencial del servicio se debería intercambiar como parte de negociación o estar disponible fuera de la banda. El valor predeterminado es `true`, que significa que se negocia la credencial del servicio.|  
   
 ## <a name="algorithmsuite-attribute"></a>atributo algorithmSuite  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |Basic128|Utilice el cifrado Basic128, Sha1 para la síntesis del mensaje y Rsa-oaep-mgf1p para el encapsulado de claves.|  
 |Basic192|Utilice el cifrado Basic192, Sha1 para la síntesis del mensaje y Rsa-oaep-mgf1p para el encapsulado de claves.|  
@@ -117,18 +117,18 @@ Define la configuración para la seguridad de nivel de mensaje para el [\<wsFede
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<claimTypeRequirements >](claimtyperequirements-element.md)|Especifica una colección de tipos de demanda para este enlace. Cada elemento es del tipo <xref:System.ServiceModel.Configuration.ClaimTypeElement>.|  
+|[\<claimTypeRequirements>](claimtyperequirements-element.md)|Especifica una colección de tipos de demanda para este enlace. Cada elemento es del tipo <xref:System.ServiceModel.Configuration.ClaimTypeElement>.|  
 |issuer|Especifica un punto de conexión que emite un token de seguridad. Este elemento es del tipo <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>.|  
 |issuerMetadata|Especifica la dirección del extremo del emisor.|  
-|[\<tokenRequestParameters >](tokenrequestparameters.md)|Una colección de parámetros de solicitud de token. Cada parámetro es un elemento XML.|  
+|[\<tokenRequestParameters>](tokenrequestparameters.md)|Una colección de parámetros de solicitud de token. Cada parámetro es un elemento XML.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<La >](security-of-wsfederationhttpbinding.md)|Define la configuración de seguridad de un enlace.|  
+|[\<security>](security-of-wsfederationhttpbinding.md)|Define la configuración de seguridad de un enlace.|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>
 - <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement.Message%2A>
@@ -138,4 +138,4 @@ Define la configuración para la seguridad de nivel de mensaje para el [\<wsFede
 - [Enlaces](../../../wcf/bindings.md)
 - [Configuración de enlaces proporcionados por el sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Utilización de enlaces para configurar servicios y clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<> de enlace](bindings.md)
+- [\<binding>](bindings.md)

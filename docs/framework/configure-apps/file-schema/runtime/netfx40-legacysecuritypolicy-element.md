@@ -6,19 +6,19 @@ helpviewer_keywords:
 - NetFx40_LegacySecurityPolicy element
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
 ms.openlocfilehash: d5192eb56bb8b640544bdc52a0bb9d8a5277efef
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73116249"
 ---
-# <a name="netfx40_legacysecuritypolicy-element"></a>\<elemento > NetFx40_LegacySecurityPolicy
+# <a name="netfx40_legacysecuritypolicy-element"></a>\<NetFx40_LegacySecurityPolicy> (Elemento)
 
 Especifica si el runtime usa la directiva de seguridad de acceso al código (CAS) heredada.
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<en tiempo de ejecución >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<NetFx40_LegacySecurityPolicy >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<NetFx40_LegacySecurityPolicy>**  
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -39,7 +39,7 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 
 ## <a name="enabled-attribute"></a>Atributo enabled
 
-|Valor|Descripción|
+|Value|Descripción|
 |-----------|-----------------|
 |`false`|El runtime no utiliza la Directiva CAS heredada. Este es el valor predeterminado.|
 |`true`|El Runtime usa una directiva CAS heredada.|
@@ -61,13 +61,13 @@ En la versión 3,5 de .NET Framework y versiones anteriores, la Directiva CAS es
 
 La Directiva CAS es específica de la versión. Las directivas de CA personalizadas que existen en versiones anteriores del .NET Framework deben reespecificarse en el .NET Framework 4.
 
-Aplicar el elemento `<NetFx40_LegacySecurityPolicy>` a un ensamblado de .NET Framework 4 no afecta al [código transparente en seguridad](../../../misc/security-transparent-code.md); todavía se aplican las reglas de transparencia.
+Aplicar el `<NetFx40_LegacySecurityPolicy>` elemento a un ensamblado de .NET Framework 4 no afecta al [código transparente en seguridad](../../../misc/security-transparent-code.md); las reglas de transparencia se siguen aplicando.
 
 > [!IMPORTANT]
-> Aplicar el elemento `<NetFx40_LegacySecurityPolicy>` puede producir penalizaciones de rendimiento significativas para los ensamblados de imagen nativa creados por el [generador de imágenes nativas (Ngen. exe)](../../../tools/ngen-exe-native-image-generator.md) que no están instalados en la [caché global de ensamblados](../../../app-domains/gac.md). La degradación del rendimiento se debe a la incapacidad del tiempo de ejecución para cargar los ensamblados como imágenes nativas cuando se aplica el atributo, lo que da lugar a que se carguen como ensamblados Just-in-Time.
+> Aplicar el `<NetFx40_LegacySecurityPolicy>` elemento puede dar lugar a penalizaciones de rendimiento significativas para los ensamblados de imagen nativa creados por el [generador de imágenes nativas (Ngen. exe)](../../../tools/ngen-exe-native-image-generator.md) que no están instalados en la [caché global de ensamblados](../../../app-domains/gac.md). La degradación del rendimiento se debe a la incapacidad del tiempo de ejecución para cargar los ensamblados como imágenes nativas cuando se aplica el atributo, lo que da lugar a que se carguen como ensamblados Just-in-Time.
 
 > [!NOTE]
-> Si especifica una versión de .NET Framework de destino anterior a la .NET Framework 4 en la configuración del proyecto para el proyecto de Visual Studio, se habilitará la Directiva de CAS, incluidas las directivas CA personalizadas que haya especificado para esa versión. Sin embargo, no podrá usar los nuevos tipos y miembros de .NET Framework 4. También puede especificar una versión anterior del .NET Framework mediante el [elemento\<supportedRuntime >](../startup/supportedruntime-element.md) en el esquema de configuración de inicio del archivo de [configuración](../../index.md)de la aplicación.
+> Si especifica una versión de .NET Framework de destino anterior a la .NET Framework 4 en la configuración del proyecto para el proyecto de Visual Studio, se habilitará la Directiva de CAS, incluidas las directivas CA personalizadas que haya especificado para esa versión. Sin embargo, no podrá usar los nuevos tipos y miembros de .NET Framework 4. También puede especificar una versión anterior del .NET Framework mediante el [ \<supportedRuntime> elemento](../startup/supportedruntime-element.md) del esquema de configuración de inicio en el archivo de [configuración](../../index.md)de la aplicación.
 
 > [!NOTE]
 > La sintaxis del archivo de configuración distingue mayúsculas de minúsculas. Debe utilizar la sintaxis que se proporciona en las secciones sintaxis y ejemplo.
@@ -88,7 +88,7 @@ En el ejemplo siguiente se muestra cómo habilitar la Directiva CAS heredada par
 </configuration>
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Esquema de la configuración de Common Language Runtime](index.md)
 - [Esquema de los archivos de configuración](../index.md)

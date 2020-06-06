@@ -1,19 +1,19 @@
 ---
-title: Elemento <Application> (.NET Native)
+title: <Application>Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
 ms.openlocfilehash: e26826b3d8674b536ab0897182da58bc02cfd00b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128520"
 ---
-# <a name="application-element-net-native"></a>Elemento Application > de \<(.NET Native)
+# <a name="application-element-net-native"></a>\<Application>Elemento (.NET Native)
 Sirve de contenedor de los tipos y miembros de tipo de la aplicación cuyos metadatos están disponibles para la reflexión en tiempo de ejecución y aplica la directiva de reflexión en tiempo de ejecución a todos los elementos de programa en una aplicación.  
   
- Elemento \<Directives>  
-Elemento \<Application> (rd.xml)  
+ \<Directives> (Elemento)  
+\<Application>Elemento (Rd. xml)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -50,7 +50,7 @@ Elemento \<Application> (rd.xml)
   
 ## <a name="all-attributes"></a>Todos los atributos  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |*policy_setting*|Configuración de esta directiva que se aplica a los tipos en la aplicación. Los valores posibles son `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` y `Required All`. Para obtener más información, vea [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución).|  
   
@@ -61,7 +61,7 @@ Elemento \<Application> (rd.xml)
 |[\<Assembly>](assembly-element-net-native.md)|Aplica la directiva a todos los tipos en un ensamblado determinado.|  
 |[\<Namespace>](namespace-element-net-native.md)|Aplica la directiva a todos los tipos en un espacio de nombres determinado.|  
 |[\<Type>](type-element-net-native.md)|Aplica la directiva a un tipo determinado, como una clase o una estructura.|  
-|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Aplica la directiva a un tipo genérico construido. Por ejemplo, se podría usar un elemento [\<TypeInstantiation>](typeinstantiation-element-net-native.md) para definir la directiva para un tipo `List<String>`.|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Aplica la directiva a un tipo genérico construido. Por ejemplo, un [\<TypeInstantiation>](typeinstantiation-element-net-native.md) elemento podría usarse para definir la Directiva para un `List<String>` tipo.|  
 |[\<Method>](method-element-net-native.md)|Aplica la directiva a un método en un tipo determinado.|  
 |[\<MethodInstantiation>](methodinstantiation-element-net-native.md)|Aplica la directiva a un método genérico construido.|  
 |[\<Property>](property-element-net-native.md)|Aplica la directiva a una propiedad en un tipo determinado.|  
@@ -75,17 +75,17 @@ Elemento \<Application> (rd.xml)
 |[\<Directives>](directives-element-net-native.md)|Elemento raíz de un archivo de directivas en tiempo de ejecución.|  
   
 ## <a name="remarks"></a>Comentarios  
- El elemento [\<Directives>](directives-element-net-native.md) puede contener cero o un elemento `<Application>`. No se admiten varios elementos `<Application>` en un único archivo de directivas de reflexión.  
+ El [\<Directives>](directives-element-net-native.md) elemento puede contener cero o un `<Application>` elemento. No se admiten varios elementos `<Application>` en un único archivo de directivas de reflexión.  
   
  El elemento `<Application>` se puede usar de dos maneras:  
   
-- Como un contenedor para definir los elementos de programa cuyos metadatos son necesarios en tiempo de ejecución. En este caso, el elemento `<Application>` no necesita tener atributos. En tiempo de compilación, las herramientas del compilador realizan búsquedas en todas las bibliotecas (incluidas las bibliotecas principales de .NET Framework) para encontrar los elementos de programa identificados por los elementos secundarios del elemento `<Application>`. Por el contrario, las herramientas del compilador realizan búsquedas únicamente en la biblioteca designada por el elemento [\<Library>](library-element-net-native.md) para encontrar los elementos de programa identificados por los elementos secundarios del elemento [\<Library>](library-element-net-native.md).  
+- Como un contenedor para definir los elementos de programa cuyos metadatos son necesarios en tiempo de ejecución. En este caso, el elemento `<Application>` no necesita tener atributos. En tiempo de compilación, las herramientas del compilador realizan búsquedas en todas las bibliotecas (incluidas las bibliotecas principales de .NET Framework) para encontrar los elementos de programa identificados por los elementos secundarios del elemento `<Application>`. En cambio, las herramientas de compilador buscan solo la biblioteca designada por el [\<Library>](library-element-net-native.md) elemento para los elementos de programa identificados por los elementos secundarios de [\<Library>](library-element-net-native.md) .  
   
-- Como un elemento que establece la directiva de la aplicación para la reflexión, serialización e interoperabilidad. Los atributos del elemento `<Application>` definen las directivas de la aplicación, que pueden ser invalidadas por los elementos secundarios definidos por el elemento `<Application>` o [\<Library>](library-element-net-native.md).  
+- Como un elemento que establece la directiva de la aplicación para la reflexión, serialización e interoperabilidad. Los atributos del `<Application>` elemento definen la Directiva de toda la aplicación, que pueden ser reemplazados por los elementos secundarios definidos por `<Application>` el [\<Library>](library-element-net-native.md) elemento o.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Elemento > de biblioteca \<](library-element-net-native.md)
-- [\<directivas > elemento](directives-element-net-native.md)
-- [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](runtime-directive-elements.md)
-- [Runtime Directives (rd.xml) Configuration File Reference](runtime-directives-rd-xml-configuration-file-reference.md) (Referencia del archivo de configuración de directivas en tiempo de ejecución [rd.xml])
+- [\<Library>Element](library-element-net-native.md)
+- [\<Directives>Element](directives-element-net-native.md)
+- [Elementos de directivas en tiempo de ejecución](runtime-directive-elements.md)
+- [Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)

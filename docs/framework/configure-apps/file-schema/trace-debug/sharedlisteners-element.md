@@ -12,16 +12,16 @@ helpviewer_keywords:
 - sharedListeners element
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
 ms.openlocfilehash: 69f15cc9583b397017ac30a0c567914495867c18
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153326"
 ---
-# <a name="sharedlisteners-element"></a>\<sharedListeners> Element
+# <a name="sharedlisteners-element"></a>\<sharedListeners> (Elemento)
 Contiene los agentes de escucha a los que puede hacer referencia cualquier origen o elemento de seguimiento.  Estos agentes de escucha no reciben ningún seguimiento de forma predeterminada y no es posible recuperar estos agentes de escucha en tiempo de ejecución. Los agentes de escucha identificados como agentes de escucha compartidos se pueden agregar a orígenes o seguimientos por nombre.  
   
-[**\<configuración>**](../configuration-element.md)  
+[**\<configuration>**](../configuration-element.md)  
 &nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;**\<sharedListeners>**  
   
@@ -43,7 +43,7 @@ Contiene los agentes de escucha a los que puede hacer referencia cualquier orige
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<añadir>](add-element-for-listeners-for-trace.md)|Agrega un agente de escucha a la colección `sharedListeners`.|  
+|[\<add>](add-element-for-listeners-for-trace.md)|Agrega un agente de escucha a la colección `sharedListeners`.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
@@ -52,13 +52,13 @@ Contiene los agentes de escucha a los que puede hacer referencia cualquier orige
 |`Configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`system.diagnostics`|Especifica el elemento raíz de la sección de configuración de ASP.NET.|  
   
-## <a name="remarks"></a>Observaciones  
- Agregar un agente de escucha a la colección de agentes de escucha compartidos no lo convierte en un agente de escucha activo. Todavía debe agregarse a un origen de seguimiento `Listeners` o un seguimiento agregándolo a la colección para ese elemento de seguimiento. Las clases de agente de <xref:System.Diagnostics.TraceListener> escucha de .NET Framework se derivan de la clase.  
+## <a name="remarks"></a>Comentarios  
+ Agregar un agente de escucha a la colección de agentes de escucha compartidos no lo convierte en un agente de escucha activo. Todavía se debe agregar a un origen de seguimiento o a un seguimiento agregándolo a la `Listeners` colección para ese elemento Trace. Las clases de agente de escucha del .NET Framework derivan de la <xref:System.Diagnostics.TraceListener> clase.  
   
- Este elemento se puede utilizar en el archivo de configuración del equipo (Machine.config) y el archivo de configuración de la aplicación.  
+ Este elemento se puede usar en el archivo de configuración del equipo (Machine. config) y en el archivo de configuración de la aplicación.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente `<sharedListeners>` se muestra cómo `console` utilizar `Listeners` el elemento <xref:System.Diagnostics.TraceSource> <xref:System.Diagnostics.Trace> para agregar el agente de escucha a la colección para las clases y. El agente de escucha de seguimiento de consola <xref:System.Diagnostics.TraceSource> <xref:System.Diagnostics.Trace>escribe información de seguimiento en la consola a través de llamadas a o .  
+ En el ejemplo siguiente se muestra cómo usar el `<sharedListeners>` elemento para agregar el agente `console` de escucha a la `Listeners` colección para <xref:System.Diagnostics.TraceSource> las <xref:System.Diagnostics.Trace> clases y. El agente de escucha de seguimiento de la consola escribe información de seguimiento en la consola a través de llamadas a <xref:System.Diagnostics.TraceSource> o <xref:System.Diagnostics.Trace> .  
   
 ```xml  
 <configuration>  
@@ -91,5 +91,5 @@ Contiene los agentes de escucha a los que puede hacer referencia cualquier orige
 ## <a name="see-also"></a>Consulte también
 
 - <xref:System.Diagnostics.TraceListener>
-- [Esquema de configuración de seguimiento y depuración](index.md)
+- [Esquema de la configuración de seguimiento y depuración](index.md)
 - [Agentes de escucha de seguimiento](../../../debug-trace-profile/trace-listeners.md)

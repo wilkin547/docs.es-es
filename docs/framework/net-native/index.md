@@ -9,10 +9,10 @@ helpviewer_keywords:
 - C# and native compilation
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
 ms.openlocfilehash: 1f176e81905fe68c6d740a13240fe814659a7a59
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128372"
 ---
 # <a name="compiling-apps-with-net-native"></a>Compilar aplicaciones con .NET Native
@@ -46,9 +46,9 @@ Pero .NET Native implica más que una compilación en código nativo. Transforma
 
 - El tiempo de ejecución de .NET Native está optimizado para la precompilación estática y, en la mayoría de los casos, ofrece un rendimiento superior. Al mismo tiempo, conserva las características de reflexión principales que los desarrolladores encuentran tan productivas.
 
-- .NET Native usa el mismo back-end que C++ el compilador, que está optimizado para escenarios de precompilación estáticos.
+- .NET Native usa el mismo back-end que el compilador de C++, que está optimizado para escenarios de precompilación estáticos.
 
-.NET Native es capaz de aportar las ventajas de rendimiento C++ de a los desarrolladores de código administrado, ya que utiliza las mismas C++ herramientas o similares que se muestran en esta tabla.
+.NET Native es capaz de aportar las ventajas de rendimiento de C++ a los desarrolladores de código administrado, ya que utiliza las mismas herramientas o similares que C++ de forma subyacente, tal como se muestra en esta tabla.
 
 ||.NET Native|C++|
 |-|----------------------------------------------------------------|-----------|
@@ -69,11 +69,11 @@ Para obtener más información sobre el desarrollo de aplicaciones con la compil
 
 - [Reflexión y .NET Native](reflection-and-net-native.md)
 
-  - [APIs That Rely on Reflection](apis-that-rely-on-reflection.md) (API basadas en Reflection)
+  - [API basada en la reflexión](apis-that-rely-on-reflection.md)
 
   - [Referencia de la API de reflexión](net-native-reflection-api-reference.md)
 
-  - [Runtime Directives (rd.xml) Configuration File Reference](runtime-directives-rd-xml-configuration-file-reference.md) (Referencia del archivo de configuración de directivas en tiempo de ejecución [rd.xml])
+  - [Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 
 - [Serialización y metadatos](serialization-and-metadata.md)
 

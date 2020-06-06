@@ -3,19 +3,19 @@ title: Elemento <add> para schemeSettings (configuración de URI)
 ms.date: 03/30/2017
 ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
 ms.openlocfilehash: ed40098e8d4c2d1298771e67a618b8d04f59c912
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74087717"
 ---
-# <a name="add-element-for-schemesettings-uri-settings"></a>\<agregar > elemento para schemeSettings (configuración de URI)
+# <a name="add-element-for-schemesettings-uri-settings"></a>Elemento \<add> para schemeSettings (configuración de URI)
 Agrega una configuración de esquema para un nombre de esquema.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<uri >** ](uri-element-uri-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<schemeSettings >** ](schemesettings-element-uri-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**agregar >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<uri>**](uri-element-uri-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<schemeSettings>**](schemesettings-element-uri-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**
 
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,21 +37,21 @@ Agrega una configuración de esquema para un nombre de esquema.
   
 ## <a name="attribute-name-attribute"></a>{Nombre de atributo} Atribui  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |genericUriParserOptions|Opciones del analizador para este esquema. El único valor admitido es genericUriParserOptions = "DontUnescapePathDotsAndSlashes".|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
- Ninguno  
+ None  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[Elemento \<schemeSettings> (configuración de URI)](schemesettings-element-uri-settings.md)|Especifica cómo se analizará un <xref:System.Uri> para esquemas concretos.|  
+|[\<schemeSettings>Elemento (configuración de URI)](schemesettings-element-uri-settings.md)|Especifica cómo se analizará un <xref:System.Uri> para esquemas concretos.|  
   
 ## <a name="remarks"></a>Comentarios  
- De forma predeterminada, la clase <xref:System.Uri?displayProperty=nameWithType> no aplica el escape a los delimitadores de ruta de acceso codificados por porcentaje antes de ejecutar la compresión de la ruta de acceso. Esto se implementó como un mecanismo de seguridad contra ataques como los siguientes:  
+ De forma predeterminada, la <xref:System.Uri?displayProperty=nameWithType> clase no escapa los delimitadores de ruta de acceso codificados por porcentaje antes de ejecutar la compresión de la ruta de acceso. Esto se implementó como un mecanismo de seguridad contra ataques como los siguientes:  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -59,7 +59,7 @@ Agrega una configuración de esquema para un nombre de esquema.
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- Por esta razón, <xref:System.Uri?displayProperty=nameWithType> clase primero quita los caracteres de escape de los delimitadores de ruta de acceso y, a continuación, aplica la compresión de la ruta de acceso. El resultado de pasar la dirección URL malintencionada anterior a <xref:System.Uri?displayProperty=nameWithType> constructor de clase da como resultado el URI siguiente:  
+ Por esta razón, la <xref:System.Uri?displayProperty=nameWithType> clase primero anula el escape de los delimitadores de ruta de acceso y, a continuación, aplica la compresión de la ruta de acceso. El resultado de pasar la dirección URL malintencionada anterior al <xref:System.Uri?displayProperty=nameWithType> constructor de clase da como resultado el siguiente URI:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -69,7 +69,7 @@ Agrega una configuración de esquema para un nombre de esquema.
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra una configuración utilizada por la clase <xref:System.Uri> para admitir los delimitadores de ruta de acceso no codificados por porcentaje para el esquema http.  
+ En el ejemplo siguiente se muestra una configuración utilizada por la <xref:System.Uri> clase para admitir delimitadores de ruta de acceso no codificados por porcentaje para el esquema http.  
   
 ```xml  
 <configuration>  
@@ -81,7 +81,7 @@ Agrega una configuración de esquema para un nombre de esquema.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
 - <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>

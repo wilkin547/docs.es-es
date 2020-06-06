@@ -1,22 +1,22 @@
 ---
-title: Elemento <endpoint>
+title: <endpoint> (elemento)
 ms.date: 03/30/2017
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
 ms.openlocfilehash: fb9d3bf9b5f1a742abcc70d78af026c179ec4c4d
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70855381"
 ---
-# <a name="endpoint-element"></a>\<elemento Endpoint >
+# <a name="endpoint-element"></a>Elemento \<endpoint>
 Especifica enlace, contrato y propiedades de dirección para un extremo de servicio, que se utiliza para exponer los servicios.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de servicios**](services.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de servicio**](service.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de extremo**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<services>**](services.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<service>**](service.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<endpoint>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,32 +41,32 @@ Especifica enlace, contrato y propiedades de dirección para un extremo de servi
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|DESCRIPCIÓN|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
-|dirección|Una cadena que contiene la dirección del extremo. La dirección se puede especificar como una dirección absoluta o relativa. Si se proporciona una dirección relativa, se espera que el host proporcione una dirección base adecuada para el esquema de transporte usado en el enlace. Si no se configura una dirección, se supone que la dirección base es la dirección para ese punto de conexión.<br /><br /> El valor predeterminado es una cadena vacía.|  
+|address|Una cadena que contiene la dirección del extremo. La dirección se puede especificar como una dirección absoluta o relativa. Si se proporciona una dirección relativa, se espera que el host proporcione una dirección base adecuada para el esquema de transporte usado en el enlace. Si no se configura una dirección, se supone que la dirección base es la dirección para ese punto de conexión.<br /><br /> El valor predeterminado es una cadena vacía.|  
 |behaviorConfiguration|Una cadena que contiene el nombre del comportamiento que se va a utilizar en el extremo.|  
-|enlace|Atributo de cadena necesario que especifica el tipo de enlace que se va a utilizar. El tipo debe tener una sección de configuración registrada para que se haga referencia al mismo. El tipo es el registrado por el nombre de sección, en lugar de por el nombre de tipo del enlace.|  
+|binding|Atributo de cadena necesario que especifica el tipo de enlace que se va a utilizar. El tipo debe tener una sección de configuración registrada para que se haga referencia al mismo. El tipo es el registrado por el nombre de sección, en lugar de por el nombre de tipo del enlace.|  
 |bindingConfiguration|Una cadena que especifica el nombre obligatorio del enlace que se utilizará cuando se creen las instancias del extremo. El nombre de enlace debe estar en el ámbito en el punto definido del extremo. El valor predeterminado es una cadena vacía.<br /><br /> Este atributo se utiliza junto con `binding` para hacer referencia a una configuración de enlace concreta en el archivo de configuración. Establezca este atributo si está intentando utilizar un enlace personalizado. De lo contrario, puede producirse una excepción.|  
 |bindingName|Una cadena que especifica el nombre completo único del enlace para la exportación de la definición a través de WSDL. El valor predeterminado es una cadena vacía.|  
 |bindingNamespace|Una cadena que especifica el nombre completo del espacio de nombres del enlace para la exportación de la definición a través de WSDL. El valor predeterminado es una cadena vacía.|  
 |contrato|Una cadena que indica qué contrato está exponiendo este punto de conexión. El ensamblado debe implementar el tipo de contrato. Si una implementación de servicio implementa un tipo de contrato único, entonces se puede omitir esta propiedad. El valor predeterminado es una cadena vacía.|  
 |endpointConfiguration|Cadena que especifica el nombre del punto de conexión estándar establecido por el atributo `kind`, que hace referencia a la información de configuración adicional de este punto de conexión estándar. El mismo nombre se debe definir en la sección `<standardEndpoints>`.|  
 |isSystemEndpoint|Valor booleano que especifica si un punto de conexión es un punto de conexión de la infraestructura.|  
-|kind|Cadena que especifica el tipo de extremo estándar aplicado. El tipo se debe registrar en la sección `<extensions>` o en machine.config. Si no se especifica nada, se crea un extremo de servicio común.|  
+|kind|Cadena que especifica el tipo de extremo estándar aplicado. El tipo se debe registrar en la `<extensions>` sección o en Machine. config. Si no se especifica nada, se crea un punto de conexión de servicio común.|  
 |listenUriMode|Especifica cómo el transporte trata el `ListenUri` proporcionado para el servicio en el que se realizan escuchas. Los valores válidos son<br /><br /> -Explicit<br />-Único<br /><br /> El valor predeterminado es Explicito.|  
 |listenUri|Una cadena que especifica el URI en el que el extremo de servicio realiza escuchas. El valor predeterminado es una cadena vacía.|  
-|Nombre|Atributo opcional. Cadena que especifica el nombre del punto de conexión del servicio. El valor predeterminado es la concatenación del nombre de enlace y el nombre de la descripción de contrato. Los servicios pueden tener varios puntos de conexión, por lo que el atributo `name` del punto de conexión es distinto del nombre del servicio.|  
+|name|Atributo opcional. Cadena que especifica el nombre del punto de conexión del servicio. El valor predeterminado es la concatenación del nombre de enlace y el nombre de la descripción de contrato. Los servicios pueden tener varios puntos de conexión, por lo que el atributo `name` del punto de conexión es distinto del nombre del servicio.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |[\<headers>](headers.md)|Una colección de encabezados de dirección.|  
 |[\<identity>](identity.md)|Una identidad que habilita la autenticación de un punto de conexión por otros puntos de conexión que intercambian mensajes con él.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |[\<service>](service.md)|Una sección de configuración que define una lista de puntos de conexión a los que un cliente puede conectarse.|  
   
@@ -86,10 +86,10 @@ Especifica enlace, contrato y propiedades de dirección para un extremo de servi
 </endpoint>
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.ServiceModel.Configuration.ServiceEndpointElement>
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.Description.ServiceEndpoint>
-- [Extremos Direcciones, enlaces y contratos](../../../wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
-- [Cómo: Crear un punto de conexión de servicio en la configuración](../../../wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+- [Puntos de conexión: direcciones, enlaces y contratos](../../../wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [Procedimiento para crear un punto de conexión de servicio en la configuración](../../../wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)

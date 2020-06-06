@@ -3,19 +3,19 @@ title: <endToEndTracing>
 ms.date: 03/30/2017
 ms.assetid: 5034f5de-bb60-4157-9ad4-58aaade094e0
 ms.openlocfilehash: 1a274f15800c6a132994a2437943c83982de9de0
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70855294"
 ---
-# <a name="endtoendtracing"></a>\<endToEndTracing>
+# \<endToEndTracing>
 Elemento de configuración que le permite habilitar y deshabilitar aspectos diferentes de traza de un extremo a otro durante el funcionamiento de una aplicación de servicio.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<diagnóstico >** ](diagnostics.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> endToEndTracing**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<diagnostics>**](diagnostics.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<endToEndTracing>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,7 +34,7 @@ Elemento de configuración que le permite habilitar y deshabilitar aspectos dife
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|DESCRIPCIÓN|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |`activityTracing`|Valor booleano que especifica si está habilitada la traza de actividad.|  
 |`messageFlowTracing`|Valor booleano que especifica si está habilitada la traza del flujo de mensajes.|  
@@ -45,14 +45,14 @@ Elemento de configuración que le permite habilitar y deshabilitar aspectos dife
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |[\<diagnostics>](diagnostics.md)|Define la configuración de WCF para la inspección y el control en tiempo de ejecución para el administrador.|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.ServiceModel.Configuration.DiagnosticSection>
 - <xref:System.ServiceModel.Diagnostics>
 - <xref:System.ServiceModel.Configuration.DiagnosticSection.EndToEndTracing%2A>
 - <xref:System.ServiceModel.Configuration.EndToEndTracingElement>
-- [Traza de un extremo a otro](../../../wcf/diagnostics/tracing/end-to-end-tracing.md)
+- [Seguimiento de traza de un extremo a otro](../../../wcf/diagnostics/tracing/end-to-end-tracing.md)

@@ -3,22 +3,22 @@ title: <transport> de <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: f150fb19-7de1-44af-81f4-86cad881cd05
 ms.openlocfilehash: e8016eb9058f132722587368f1f8c7c03220af4a
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73732790"
 ---
-# <a name="transport-of-webhttpbinding"></a>\<> de transporte de \<webHttpBinding >
+# <a name="transport-of-webhttpbinding"></a>\<transport> de \<webHttpBinding>
 Define los valores de seguridad a nivel de transporte para un punto de conexión de servicio configurado para recibir solicitudes HTTP.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;\<[**enlaces**](bindings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**webHttpBinding**](webhttpbinding.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**enlace** >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**seguridad**](security-of-webhttpbinding.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**transporte** >  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<webHttpBinding>**](webhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-webhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<transport>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,7 +40,7 @@ Define los valores de seguridad a nivel de transporte para un punto de conexión
 </webHttpBinding>
 ```  
   
-## <a name="type"></a>Type  
+## <a name="type"></a>Tipo  
  <xref:System.ServiceModel.HttpTransportSecurity>  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -57,7 +57,7 @@ Define los valores de seguridad a nivel de transporte para un punto de conexión
   
 ## <a name="clientcredentialtype-attribute"></a>Atributo clientCredentialType  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |`None`|La seguridad está deshabilitada.|  
 |`Basic`|Usa la autenticación básica.|  
@@ -68,7 +68,7 @@ Define los valores de seguridad a nivel de transporte para un punto de conexión
   
 ## <a name="proxycredentialtype-attribute"></a>Atributo proxyCredentialType  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |`None`|La seguridad está deshabilitada.|  
 |`Basic`|Usa la autenticación básica.|  
@@ -83,9 +83,9 @@ Define los valores de seguridad a nivel de transporte para un punto de conexión
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<La >](security-of-webhttpbinding.md)|Representa las funciones de seguridad del elemento [\<wsHttpBinding >](wshttpbinding.md) .|  
+|[\<security>](security-of-webhttpbinding.md)|Representa las funciones de seguridad del [\<wsHttpBinding>](wshttpbinding.md) elemento.|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.ServiceModel.HttpTransportSecurity>
 - <xref:System.ServiceModel.Configuration.WebHttpSecurityElement.Transport%2A>
@@ -95,5 +95,5 @@ Define los valores de seguridad a nivel de transporte para un punto de conexión
 - [Enlaces](../../../wcf/bindings.md)
 - [Configuración de enlaces proporcionados por el sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Utilización de enlaces para configurar servicios y clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<> de enlace](bindings.md)
+- [\<binding>](bindings.md)
 - [Modelo de programación de web HTTP de WCF](../../../wcf/feature-details/wcf-web-http-programming-model.md)

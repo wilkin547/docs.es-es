@@ -3,13 +3,13 @@ title: <Assembly>Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: cfe629eb-1106-4113-86e1-052f402d8d8b
 ms.openlocfilehash: f3cf65b185b1db3289a0dbb785c2b91431951cc2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79181082"
 ---
-# <a name="assembly-element-net-native"></a>\<Elemento de> de ensamblado (.NET Native)
+# <a name="assembly-element-net-native"></a>\<Assembly>Elemento (.NET Native)
 Aplica la directiva de reflexión en tiempo de ejecución a todos los tipos en un ensamblado especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -63,21 +63,21 @@ Aplica la directiva de reflexión en tiempo de ejecución a todos los tipos en u
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<Espacio de nombres>](namespace-element-net-native.md)|Aplica la directiva de reflexión a todos los tipos en un espacio de nombres secundario.|  
-|[\<Tipo>](type-element-net-native.md)|Aplica la directiva de reflexión a un tipo.|  
-|[\<TipoInstantiation>](typeinstantiation-element-net-native.md)|Aplica la directiva de reflexión a un tipo genérico construido.|  
+|[\<Namespace>](namespace-element-net-native.md)|Aplica la directiva de reflexión a todos los tipos en un espacio de nombres secundario.|  
+|[\<Type>](type-element-net-native.md)|Aplica la directiva de reflexión a un tipo.|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Aplica la directiva de reflexión a un tipo genérico construido.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<>de la aplicación](application-element-net-native.md)|Sirve de contenedor de los tipos y miembros de tipo de la aplicación cuyos metadatos están disponibles para la reflexión en tiempo de ejecución. El [ \<](application-element-net-native.md) elemento Application>puede tener `<Assembly>` cero, uno o varios elementos.|  
-|[\<Biblioteca>](library-element-net-native.md)|Define el ensamblado que contiene los tipos y miembros de tipo cuyos metadatos están disponibles para la reflexión en tiempo de ejecución. El [ \<](library-element-net-native.md) elemento Library>puede `<Assembly>` tener cero o un elemento.|  
+|[\<Application>](application-element-net-native.md)|Sirve de contenedor de los tipos y miembros de tipo de la aplicación cuyos metadatos están disponibles para la reflexión en tiempo de ejecución. El [\<Application>](application-element-net-native.md) elemento puede tener cero, uno o más `<Assembly>` elementos.|  
+|[\<Library>](library-element-net-native.md)|Define el ensamblado que contiene los tipos y miembros de tipo cuyos metadatos están disponibles para la reflexión en tiempo de ejecución. El [\<Library>](library-element-net-native.md) elemento puede tener cero o un `<Assembly>` elemento.|  
   
-## <a name="remarks"></a>Observaciones  
- El elemento `<Assembly>` define la directiva en tiempo de ejecución para todos los tipos en un ensamblado. Se diferencia del elemento [ \<Library>,](library-element-net-native.md) que especifica una biblioteca, pero depende de sus elementos secundarios para definir la directiva de reflexión en tiempo de ejecución. El elemento `<Assembly>` se aplica a todos los tipos en un ensamblado, a menos que un elemento secundario los haya invalidado.  
+## <a name="remarks"></a>Comentarios  
+ El elemento `<Assembly>` define la directiva en tiempo de ejecución para todos los tipos en un ensamblado. Difiere del [\<Library>](library-element-net-native.md) elemento, que especifica una biblioteca, pero que depende de sus elementos secundarios para definir la Directiva de reflexión en tiempo de ejecución. El elemento `<Assembly>` se aplica a todos los tipos en un ensamblado, a menos que un elemento secundario los haya invalidado.  
   
- En el siguiente ejemplo se muestra cómo aplicar la directiva en tiempo de ejecución a todos los tipos de los ensamblados del paquete de la aplicación al asignar un valor "*Application\*" al atributo `Name`. El `<Assembly>` elemento debe ser un elemento secundario del [ \<](application-element-net-native.md) elemento Application>.  
+ En el siguiente ejemplo se muestra cómo aplicar la directiva en tiempo de ejecución a todos los tipos de los ensamblados del paquete de la aplicación al asignar un valor "*Application\*" al atributo `Name`. El `<Assembly>` elemento debe ser un elemento secundario del [\<Application>](application-element-net-native.md) elemento.  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -92,5 +92,5 @@ Aplica la directiva de reflexión en tiempo de ejecución a todos los tipos en u
 ## <a name="see-also"></a>Consulte también
 
 - [Configuración de directiva de la directiva en tiempo de ejecución](runtime-directive-policy-settings.md)
-- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementos de directivas en tiempo de ejecución](runtime-directive-elements.md)

@@ -9,18 +9,18 @@ helpviewer_keywords:
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
 ms.openlocfilehash: d510c445c585a36005ed415b14188efc4be03984
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74089115"
 ---
-# <a name="settings-element-network-settings"></a>Elemento > de configuración de \<(configuración de red)
+# <a name="settings-element-network-settings"></a>Elemento \<settings> (configuración de red)
 Configura opciones de red básicas para el espacio de nombres <xref:System.Net?displayProperty=nameWithType>.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<** >
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<settings>**
 
 ## <a name="syntax"></a>Sintaxis  
   
@@ -46,13 +46,13 @@ Configura opciones de red básicas para el espacio de nombres <xref:System.Net?d
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[httpListener](httplistener-element-network-settings.md)|Personaliza los parámetros utilizados por la clase <xref:System.Net.HttpListener>.|  
+|[httpListener](httplistener-element-network-settings.md)|Personaliza los parámetros utilizados por la <xref:System.Net.HttpListener> clase.|  
 |[httpWebRequest](httpwebrequest-element-network-settings.md)|Personaliza los parámetros de la solicitud Web.|  
 |[Protocolo](ipv6-element-network-settings.md)|Habilita la compatibilidad con el protocolo de Internet versión 6 (IPv6).|  
-|[\<elemento > performanceCounter (configuración de red)](performancecounter-element-network-settings.md)|Habilita los contadores de rendimiento de red.|  
+|[\<performanceCounter>(Elemento, configuración de red)](performancecounter-element-network-settings.md)|Habilita los contadores de rendimiento de red.|  
 |[servicePointManager](servicepointmanager-element-network-settings.md)|Configura las conexiones a los recursos de red.|  
 |[tomacorriente](socket-element-network-settings.md)|Especifica si las operaciones de socket utilizan puertos de finalización.|  
-|[\<elemento > webProxyScript (configuración de red)](webproxyscript-element-network-settings.md)|Configura las características del script que se usan para detectar los proxies Web.|  
+|[\<webProxyScript>(Elemento, configuración de red)](webproxyscript-element-network-settings.md)|Configura las características del script que se usan para detectar los proxies Web.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
@@ -65,7 +65,7 @@ Configura opciones de red básicas para el espacio de nombres <xref:System.Net?d
 ## <a name="configuration-files"></a>Archivos de configuración  
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Net?displayProperty=nameWithType>
 - [Esquema de la configuración de red](index.md)

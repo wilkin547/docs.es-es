@@ -3,10 +3,10 @@ title: .NET Native y compilación
 ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 ms.openlocfilehash: cf5c9f05b2f2cb4ca15e4add5b53bc9bdca757a3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128243"
 ---
 # <a name="net-native-and-compilation"></a>.NET Native y compilación
@@ -58,9 +58,9 @@ En el proceso de convertir una aplicación de IL a código nativo, la cadena de 
 
 La aplicación resultante generada por la cadena de herramientas de .NET Native se escribe en un directorio denominado ilc.out en el directorio Debug o Release del directorio del proyecto. Consta de los siguientes archivos:
 
-- *\<nombreDeAplicación>* .exe, que es un ejecutable de código auxiliar que simplemente transfiere el control a una exportación `Main` especial en *\<nombreDeAplicación>* .dll.
+- *\<appName>*. exe, un archivo ejecutable de código auxiliar que simplemente transfiere el control a una `Main` exportación especial en *\<appName>* . dll.
 
-- *\<nombreDeAplicación>* .dll, que es una biblioteca de vínculos dinámicos de Windows que contiene todo el código de la aplicación, así como el código de la biblioteca de clases de .NET Framework y de cualquier biblioteca de terceros en la que tenga una dependencia.  También contiene el código de soporte, como el código necesario para interactuar con Windows y para serializar objetos en la aplicación.
+- *\<appName>*. dll, una biblioteca de vínculos dinámicos de Windows que contiene todo el código de la aplicación, así como el código de la biblioteca de clases de .NET Framework y cualquier biblioteca de terceros en la que tenga una dependencia.  También contiene el código de soporte, como el código necesario para interactuar con Windows y para serializar objetos en la aplicación.
 
 - mrt100_app.dll, que es un runtime refactorizado que proporciona servicios de runtime como la recolección de elementos no utilizados.
 
@@ -102,9 +102,9 @@ El [generador de imágenes nativas](../tools/ngen-exe-native-image-generator.md)
 
 - Las imágenes NGEN suelen ser frágiles. Por ejemplo, si se producen una revisión o un cambio en una dependencia, es necesario aplicar de nuevo NGEN en los ensamblados que la usan. Esto es particularmente cierto con los ensamblados del sistema de la biblioteca de clases de .NET Framework. En cambio, .NET Native permite que las aplicaciones se sirvan de forma independiente.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Metadatos y componentes autodescriptivos](../../standard/metadata-and-self-describing-components.md)
-- [Dentro de .NET Native (vídeo de Channel 9)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
+- [Buceando en .NET Native (vídeo de Channel 9)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
 - [Reflexión y .NET Native](reflection-and-net-native.md)
 - [Solución de problemas generales de .NET Native](net-native-general-troubleshooting.md)

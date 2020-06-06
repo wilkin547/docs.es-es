@@ -3,10 +3,10 @@ title: Introducción a .NET Native
 ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 ms.openlocfilehash: 1c0c25ddf379c31a9c7b4437d36e7e0cbf1bb2f3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128410"
 ---
 # <a name="getting-started-with-net-native"></a>Introducción a .NET Native
@@ -34,7 +34,7 @@ Tanto si va a desarrollar una nueva aplicación o migrar una ya existente, el pr
 
 2. Tenga en cuenta que existen algunos problemas de compatibilidad conocidos entre la compilación de proyectos de aplicaciones de UWP con la cadena de herramientas de .NET Native y sin ella. Consulte la [guía de migración](migrating-your-windows-store-app-to-net-native.md) para más información.
 
-Ahora puede escribir C# o Visual Basic código en el área expuesta .net Native que se ejecuta en el sistema local (o en el simulador).
+Ahora puede escribir código de C# o Visual Basic en el área expuesta .NET Native que se ejecuta en el sistema local (o en el simulador).
 
 > [!IMPORTANT]
 > A medida que vaya desarrollando la aplicación, anote cualquier uso de serialización o reflexión en el código.
@@ -58,7 +58,7 @@ Existen dos categorías de serializadores y ambas pueden requerir entradas extra
 
 - Serializadores no basados en la reflexión. Los serializadores de la biblioteca de clases .NET Framework, como las clases <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>y <xref:System.Xml.Serialization.XmlSerializer> , no usan reflexión. Sin embargo, requieren que el código se genere en función del objeto que se va a serializar o deserializar.  Para más información, consulte la sección "Serializadores de Microsoft" en [Serialization and Metadata](serialization-and-metadata.md).
 
-- Serializadores de terceros. Las bibliotecas de serialización de terceros, la más común de las cuales es el serializador JSON Newtonsoft, suelen basarse en la reflexión y requieren entradas en el archivo \*. Rd. XML para admitir la serialización y deserialización de objetos. Para más información, vea la sección "Serializadores de terceros" en [Serialization and Metadata](serialization-and-metadata.md).
+- Serializadores de terceros. Las bibliotecas de serialización de terceros, la más común de las cuales es el serializador JSON Newtonsoft, suelen basarse en la reflexión y requieren entradas en el \* archivo. Rd. XML para admitir la serialización y deserialización de objetos. Para más información, vea la sección "Serializadores de terceros" en [Serialization and Metadata](serialization-and-metadata.md).
 
 **Métodos basados en la reflexión**
 
@@ -79,7 +79,7 @@ Para obtener más información, consulta [APIs That Rely on Reflection](apis-tha
 
 ## <a name="step-3-deploy-and-test-the-release-builds-of-your-app"></a>Paso 3: implementar y probar las compilaciones de lanzamiento de la aplicación
 
-Después de actualizar el archivo de directivas en tiempo de ejecución, puede recompilar e implementar compilaciones de depuración de la aplicación. Los archivos binarios de .NET Native se colocan en el subdirectorio ILC. out del directorio especificado en el cuadro de texto **ruta de acceso** de los resultados de compilación del cuadro de diálogo **propiedades** del proyecto, pestaña **compilar** . los archivos binarios que no están en esta carpeta no se han compilado con .NET Native. Pruebe la aplicación exhaustivamente y pruebe todos los escenarios, incluidos los escenarios de error, en cada una de las plataformas de destino.
+Después de actualizar el archivo de directivas en tiempo de ejecución, puede recompilar e implementar compilaciones de depuración de la aplicación. .NET Native archivos binarios se colocan en el subdirectorio ILC. out del directorio especificado en el cuadro de texto **ruta de acceso** de los resultados de compilación del cuadro de diálogo **propiedades** del proyecto, la pestaña **compilar** . los archivos binarios que no están en esta carpeta no se han compilado con .net Native. Pruebe la aplicación exhaustivamente y pruebe todos los escenarios, incluidos los escenarios de error, en cada una de las plataformas de destino.
 
 Si la aplicación no funciona correctamente (en especial, en los casos donde se generen excepciones [MissingMetadataException](missingmetadataexception-class-net-native.md) o [MissingInteropDataException](missinginteropdataexception-class-net-native.md) en tiempo de ejecución), siga las instrucciones de la siguiente sección, [Paso 4: Resolver manualmente los metadatos que faltan](#Step4). Habilitar las primeras excepciones puede ayudarle a encontrar estos errores.
 
@@ -89,7 +89,7 @@ Cuando haya probado y depurado las compilaciones de depuración de la aplicació
 
 ## <a name="step-4-manually-resolve-missing-metadata"></a>Paso 4: Resolver manualmente los metadatos que faltan
 
-El error más común que encontrará con .NET Native que no encuentre en el escritorio es una excepción de tiempo de ejecución [MissingMetadataException](missingmetadataexception-class-net-native.md), [MissingInteropDataException](missinginteropdataexception-class-net-native.md)o [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) . En algunos casos, la ausencia de metadatos se puede manifestar en un comportamiento impredecible o, incluso, en errores de la aplicación. En esta sección se describe cómo puede depurar y resolver estas excepciones agregando directivas al archivo de directivas en tiempo de ejecución. Para obtener información sobre el formato de las directivas de tiempo de ejecución, vea [Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md). Tras agregar las directivas en tiempo de ejecución, debe [implementar y volver a probar la aplicación](#Step3) y resolver cualquier excepción [MissingMetadataException](missingmetadataexception-class-net-native.md), [MissingInteropDataException](missinginteropdataexception-class-net-native.md) y [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) hasta que no se generen más excepciones.
+El error más común que encontrará con .NET Native que no encuentre en el escritorio es una excepción de tiempo de ejecución [MissingMetadataException](missingmetadataexception-class-net-native.md), [MissingInteropDataException](missinginteropdataexception-class-net-native.md)o [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) . En algunos casos, la ausencia de metadatos se puede manifestar en un comportamiento impredecible o, incluso, en errores de la aplicación. En esta sección se describe cómo puede depurar y resolver estas excepciones agregando directivas al archivo de directivas en tiempo de ejecución. Para obtener información sobre el formato de las directivas de tiempo de ejecución, vea [Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md). Tras agregar las directivas en tiempo de ejecución, debe [implementar y volver a probar la aplicación](#Step3) y resolver cualquier excepción [MissingMetadataException](missingmetadataexception-class-net-native.md), [MissingInteropDataException](missinginteropdataexception-class-net-native.md)o  [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) hasta que no se generen más excepciones.
 
 > [!TIP]
 > Especifique las directivas en tiempo de ejecución en un nivel elevado para que la aplicación sea resistente a los cambios de código.  Recomendamos agregar directivas en tiempo de ejecución en los niveles de espacio de nombres y de tipo, en lugar de hacerlo en el nivel de miembro. Tenga en cuenta que puede haber una compensación entre la resistencia y los archivos con tiempos de compilación más prolongados.
@@ -121,12 +121,12 @@ Si desea ver algunos ejemplos específicos de control de excepciones y otros pro
 
 - [Excepciones de tiempo de ejecución en las aplicaciones nativas de .NET](runtime-exceptions-in-net-native-apps.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Runtime Directives (rd.xml) Configuration File Reference](runtime-directives-rd-xml-configuration-file-reference.md) (Referencia del archivo de configuración de directivas en tiempo de ejecución [rd.xml])
+- [Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Instalación y configuración de .NET Native](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
-- [.NET Native and Compilation](net-native-and-compilation.md) (.NET Native y compilación)
+- [.NET Native y compilación](net-native-and-compilation.md)
 - [Reflexión y .NET Native](reflection-and-net-native.md)
-- [APIs That Rely on Reflection](apis-that-rely-on-reflection.md) (API basadas en Reflection)
+- [API basada en la reflexión](apis-that-rely-on-reflection.md)
 - [Serialización y metadatos](serialization-and-metadata.md)
 - [Migrar la aplicación de la Tienda Windows a .NET Native](migrating-your-windows-store-app-to-net-native.md)

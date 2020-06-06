@@ -3,22 +3,22 @@ title: <transport> de <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 4c5ba293-3d7e-47a6-b84e-e9022857b7e5
 ms.openlocfilehash: c563339e4f854cc4e60f92dd5b8c0b39112dc000
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73736123"
 ---
-# <a name="transport-of-basichttpbinding"></a>\<> de transporte de \<basicHttpBinding >
+# <a name="transport-of-basichttpbinding"></a>\<transport> de \<basicHttpBinding>
 Define las propiedades que controlan los parámetros de autenticación para el transporte HTTP.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;\<[**enlaces**](bindings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**basicHttpBinding**](basichttpbinding.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**enlace** >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**seguridad**](security-of-basichttpbinding.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**transporte** >  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<basicHttpBinding>**](basichttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-basichttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<transport>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -55,33 +55,33 @@ Define las propiedades que controlan los parámetros de autenticación para el t
   
 ## <a name="clientcredentialtype-attribute"></a>Atributo clientCredentialType  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|Ninguno|Los mensajes no se protegen durante la transferencia.|  
+|None|Los mensajes no se protegen durante la transferencia.|  
 |Básico|Especifica la autenticación básica.|  
-|Implícita|Especifica la autenticación implícita.|  
+|Digest|Especifica la autenticación implícita.|  
 |Ntlm|Especifica la autenticación NTLM cuando sea posible y si la autenticación de Windows falla.|  
 |Windows|Especifica la autenticación de Windows integrada.|  
   
 ## <a name="proxycredentialtype-attribute"></a>Atributo proxyCredentialType  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|Ninguno|: Los mensajes no están protegidos durante la transferencia.|  
+|None|: Los mensajes no están protegidos durante la transferencia.|  
 |Básico|Especifica la autenticación básica como se define en la autenticación RFC 2617 de HTTP: Autenticación básica e implícita.|  
-|Implícita|Especifica la autenticación implícita como se define en la autenticación RFC 2617 de HTTP: Autenticación básica e implícita|  
+|Digest|Especifica la autenticación implícita como se define en la autenticación RFC 2617 de HTTP: Autenticación básica e implícita|  
 |Ntlm|Especifica la autenticación NTLM cuando sea posible y si la autenticación de Windows falla.|  
 |Windows|Especifica la autenticación de Windows integrada.|  
 |Certificado|Realiza la autenticación del cliente mediante un certificado. Esta opción solo funciona si el atributo `Mode` del elemento `security` primario se establece como Transport, y no funciona si está establecido como TransportCredentialOnly.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
- Ninguno  
+ None  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<La >](security-of-basichttpbinding.md)|Define las capacidades de seguridad para el [\<basicHttpBinding](basichttpbinding.md).|  
+|[\<security>](security-of-basichttpbinding.md)|Define las funciones de seguridad para [\<basicHttpBinding>](basichttpbinding.md) .|  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente muestra el uso de seguridad de transporte de SSL con el enlace básico. De forma predeterminada, el enlace básico soporta la comunicación HTTP.  
@@ -118,7 +118,7 @@ Define las propiedades que controlan los parámetros de autenticación para el t
 </system.serviceModel>
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.BasicHttpSecurity.Transport%2A>
@@ -128,4 +128,4 @@ Define las propiedades que controlan los parámetros de autenticación para el t
 - [Enlaces](../../../wcf/bindings.md)
 - [Configuración de enlaces proporcionados por el sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Utilización de enlaces para configurar servicios y clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<> de enlace](bindings.md)
+- [\<binding>](bindings.md)

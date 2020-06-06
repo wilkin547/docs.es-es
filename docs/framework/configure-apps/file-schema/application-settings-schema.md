@@ -8,51 +8,51 @@ helpviewer_keywords:
 - configuration schema [.NET Framework], application settings
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
 ms.openlocfilehash: 90d471888950347c041b4824b659ce33fda512d7
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "81242834"
 ---
 # <a name="application-settings-schema"></a>Esquema de configuración de la aplicación
 
-La configuración de la aplicación permite que una aplicación de Windows Forms o ASP.NET almacene y recupere la configuración de ámbito de aplicación y de ámbito de usuario. En este contexto, una *configuración* es cualquier elemento de información que puede ser específico de la aplicación o específico del usuario actual, desde una cadena de conexión de base de datos hasta el tamaño de ventana predeterminado preferido del usuario.
+La configuración de la aplicación permite que una aplicación Windows Forms o ASP.NET almacene y recupere la configuración del ámbito de la aplicación y del ámbito del usuario. En este contexto, un *valor* es cualquier parte de la información que pueda ser específica de la aplicación o específica del usuario actual, desde una cadena de conexión de base de datos hasta el tamaño de ventana predeterminado preferido del usuario.
 
-De forma predeterminada, la configuración de <xref:System.Configuration.LocalFileSettingsProvider> la aplicación en una aplicación de windows Forms usa la clase, que usa el sistema de configuración de .NET para almacenar la configuración en un archivo de configuración XML. Para obtener más información acerca de los archivos utilizados por la configuración de la aplicación, consulte Arquitectura de [configuración](../../winforms/advanced/application-settings-architecture.md)de la aplicación .
+De forma predeterminada, la configuración de la aplicación en una aplicación Windows Forms usa la <xref:System.Configuration.LocalFileSettingsProvider> clase, que utiliza el sistema de configuración de .net para almacenar la configuración en un archivo de configuración XML. Para obtener más información acerca de los archivos que usa la configuración de la aplicación, consulte [arquitectura de configuración](../../winforms/advanced/application-settings-architecture.md)de la aplicación.
 
-La configuración de la aplicación define los siguientes elementos como parte de los archivos de configuración que utiliza.
+La configuración de la aplicación define los elementos siguientes como parte de los archivos de configuración que usa.
 
 | Elemento                    | Descripción                                                                           |
 | -------------------------- | ------------------------------------------------------------------------------------- |
-| **\<applicationSettings>** | Contiene ** \<** todas las>etiquetas específicas de la aplicación.                         |
-| **\<userSettings>**        | Contiene ** \<** todas las etiquetas de>de configuración específicas del usuario actual.                        |
-| **\<ajuste de>**             | Define un valor de configuración. Hijo de ** \<applicationSettings>** o ** \<userSettings>**. |
-| **\<>de valor**               | Define el valor de una configuración. Hijo ** \< **de la configuración>.                                   |
+| **\<applicationSettings>** | Contiene todas las **\<setting>** etiquetas específicas de la aplicación.                         |
+| **\<userSettings>**        | Contiene todas las **\<setting>** etiquetas específicas del usuario actual.                        |
+| **\<setting>**             | Define un valor de configuración. Elemento secundario de **\<applicationSettings>** o **\<userSettings>** . |
+| **\<value>**               | Define el valor de una configuración. Elemento secundario de **\<setting>** .                                   |
 
-## <a name="applicationsettings-element"></a>\<applicationSettings> elemento
+## <a name="applicationsettings-element"></a>Elemento \<applicationSettings>
 
-Este elemento ** \<** contiene todas las etiquetas de configuración>que son específicas de una instancia de la aplicación en un equipo cliente. No define atributos.
+Este elemento contiene todas las **\<setting>** etiquetas que son específicas de una instancia de la aplicación en un equipo cliente. No define atributos.
 
-## <a name="usersettings-element"></a>\<userSettings> elemento
+## <a name="usersettings-element"></a>Elemento \<userSettings>
 
-Este elemento ** \<** contiene todas las etiquetas de>de configuración que son específicas del usuario que está utilizando actualmente la aplicación. No define atributos.
+Este elemento contiene todas las **\<setting>** etiquetas que son específicas del usuario que está utilizando actualmente la aplicación. No define atributos.
 
-## <a name="setting-element"></a>\<ajuste> elemento
+## <a name="setting-element"></a>Elemento \<setting>
 
-Este elemento define un valor. Tiene los siguientes atributos.
+Este elemento define un valor de configuración. Tiene los siguientes atributos.
 
 | Atributo        | Descripción |
 | ---------------- | ----------- |
-| **name**         | Necesario. El identificador único de la configuración. La configuración creada a través `ProjectName.Properties.Settings`de Visual Studio se guarda con el nombre . |
-| **serializeAs** | Necesario. El formato que se va a utilizar para serializar el valor en texto. Los valores válidos son:<br><br>- `string`. El valor se serializa como <xref:System.ComponentModel.TypeConverter>una cadena mediante un archivo .<br>- `xml`. El valor se serializa mediante la serialización XML.<br>- `binary`. El valor se serializa como binario codificado por texto mediante la serialización binaria.<br />- `custom`. El proveedor de configuración tiene un conocimiento inherente de esta configuración y la serializa y deserializa. |
+| **name**         | Necesario. IDENTIFICADOR único de la configuración. La configuración creada a través de Visual Studio se guarda con el nombre `ProjectName.Properties.Settings` . |
+| **serializeAs** | Necesario. Formato que se va a usar para serializar el valor en el texto. Los valores válidos son:<br><br>- `string`. El valor se serializa como una cadena mediante <xref:System.ComponentModel.TypeConverter> .<br>- `xml`. El valor se serializa mediante la serialización XML.<br>- `binary`. El valor se serializa como binario codificado por texto mediante la serialización binaria.<br />- `custom`. El proveedor de configuración tiene un conocimiento inherente de esta configuración y serializa y deserializa. |
 
-## <a name="value-element"></a>\<valor> elemento
+## <a name="value-element"></a>Elemento \<value>
 
-Este elemento contiene el valor de un valor.
+Este elemento contiene el valor de un parámetro.
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra un archivo de configuración de aplicación que define dos valores de ámbito de aplicación y dos valores de ámbito de usuario:
+En el ejemplo siguiente se muestra un archivo de configuración de la aplicación que define dos valores de ámbito de aplicación y dos valores de ámbito de usuario:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>

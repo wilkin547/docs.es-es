@@ -1,15 +1,15 @@
 ---
-title: Elemento <TypeParameter> (.NET Native)
+title: <TypeParameter>Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: d37bb1b7-1ddc-4c6d-8ecf-583f804a2479
 ms.openlocfilehash: c69b535f3a01c287d30189138130066fc10a77e2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128922"
 ---
-# <a name="typeparameter-element-net-native"></a>\<elemento > TypeParameter (.NET Native)
+# <a name="typeparameter-element-net-native"></a>\<TypeParameter>Elemento (.NET Native)
 Aplica la directiva al tipo representado por un argumento de tipo pasado a un método.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -49,13 +49,13 @@ Aplica la directiva al tipo representado por un argumento de tipo pasado a un m�
   
 ## <a name="name-attribute"></a>Name (atributo)  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |*parameter_name*|Nombre del parámetro de tipo <xref:System.Type>. Por ejemplo, en la firma de método `Type.GetInterfaceMap(Type interfaceType)`, el valor del atributo `Name` es "interfaceType".|  
   
 ## <a name="all-other-attributes"></a>Resto de atributos  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |*policy_setting*|Configuración que se va a aplicar a este tipo de directiva. Los valores posibles son `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` y `Required All`. Para obtener más información, vea [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución).|  
   
@@ -69,7 +69,7 @@ Aplica la directiva al tipo representado por un argumento de tipo pasado a un m�
 |[\<Method>](method-element-net-native.md)|Aplica la directiva de reflexión en tiempo de ejecución a un constructor o método.|  
   
 ## <a name="remarks"></a>Comentarios  
- El elemento `<TypeParameter>` es similar al elemento [\<Parameter>](parameter-element-net-native.md), salvo que únicamente se puede aplicar a los parámetros de tipo <xref:System.Type>. Aplica la directiva a cualquier tipo que se represente en tiempo de ejecución mediante el argumento de tipo especificado por el atributo `Name`.  
+ El `<TypeParameter>` elemento es similar al [\<Parameter>](parameter-element-net-native.md) elemento, salvo que solo se puede aplicar a parámetros de tipo <xref:System.Type> . Aplica la directiva a cualquier tipo que se represente en tiempo de ejecución mediante el argumento de tipo especificado por el atributo `Name`.  
   
  Por ejemplo, el serializador JSON NewtonSoft incluye un método `JsonConvert.DeserializeObject(String value, Type type)` estático. Las siguientes directivas de reflexión:  
   
@@ -92,9 +92,9 @@ Object obj = JsonConvert.DeserializeObject(data, t);
   
  las directivas de reflexión hacen que haya metadatos disponibles para el tipo `StockQuote` para el serializador JSON NewtonSoft en tiempo de ejecución.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Elemento \<Method>](method-element-net-native.md)
-- [Runtime Directives (rd.xml) Configuration File Reference](runtime-directives-rd-xml-configuration-file-reference.md) (Referencia del archivo de configuración de directivas en tiempo de ejecución [rd.xml])
-- [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución)
-- [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](runtime-directive-elements.md)
+- [\<Method>Element](method-element-net-native.md)
+- [Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Configuración de directiva de la directiva en tiempo de ejecución](runtime-directive-policy-settings.md)
+- [Elementos de directivas en tiempo de ejecución](runtime-directive-elements.md)

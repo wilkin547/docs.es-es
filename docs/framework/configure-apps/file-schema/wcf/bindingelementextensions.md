@@ -3,13 +3,13 @@ title: <bindingElementExtensions>
 ms.date: 03/30/2017
 ms.assetid: bb597fc0-c947-451c-afda-bf23d42f4f4d
 ms.openlocfilehash: c323a65ace332d2ecd1e03330dddbe7ca17ff5bd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "69926366"
 ---
-# <a name="bindingelementextensions"></a>\<bindingElementExtensions>
+# \<bindingElementExtensions>
 En esta sección se habilita el uso de un elemento de enlace personalizado de un equipo o archivo de configuración de la aplicación. Puede agregar un elemento de enlace personalizado a esta colección utilizando la palabra clave `add` y estableciendo el atributo de `type` del elemento en una extensión de elemento de enlace, así como el atributo de `name` al elemento de enlace personalizado.  
   
  Las extensiones de enlace le permiten al usuario crear elementos de enlace definidos por el usuario para el uso como parte de enlaces personalizados. Desde el punto de vista de la programación, una extensión de enlace es un tipo que implementa la clase abstracta <xref:System.ServiceModel.Channels.BindingElement>. En el archivo de configuración, la sección `bindingElementExtensions` se utiliza para definir un elemento de extensión.  
@@ -43,7 +43,7 @@ En esta sección se habilita el uso de un elemento de enlace personalizado de un
 </customBinding>
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>
 - [Extensión de enlaces](../../../wcf/extending/extending-bindings.md)

@@ -3,19 +3,19 @@ title: Elemento <remove> para schemeSettings (configuración de URI)
 ms.date: 03/30/2017
 ms.assetid: 4095ba51-de20-4f87-b562-018abe422c91
 ms.openlocfilehash: faf254174527ea74638442a139841eb2365d1e5d
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74089147"
 ---
-# <a name="remove-element-for-schemesettings-uri-settings"></a>\<quitar > elemento para schemeSettings (configuración de URI)
+# <a name="remove-element-for-schemesettings-uri-settings"></a>Elemento \<remove> para schemeSettings (configuración de URI)
 Quita un valor de esquema para un nombre de esquema.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<uri >** ](uri-element-uri-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<schemeSettings >** ](schemesettings-element-uri-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**quitar >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<uri>**](uri-element-uri-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<schemeSettings>**](schemesettings-element-uri-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
 
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,10 +41,10 @@ Quita un valor de esquema para un nombre de esquema.
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[Elemento \<schemeSettings> (configuración de URI)](schemesettings-element-uri-settings.md)|Especifica cómo se analizará un <xref:System.Uri> para esquemas concretos.|  
+|[\<schemeSettings>Elemento (configuración de URI)](schemesettings-element-uri-settings.md)|Especifica cómo se analizará un <xref:System.Uri> para esquemas concretos.|  
   
 ## <a name="remarks"></a>Comentarios  
- De forma predeterminada, la clase <xref:System.Uri?displayProperty=nameWithType> no aplica el escape a los delimitadores de ruta de acceso codificados por porcentaje antes de ejecutar la compresión de la ruta de acceso. Esto se implementó como un mecanismo de seguridad contra ataques como los siguientes:  
+ De forma predeterminada, la <xref:System.Uri?displayProperty=nameWithType> clase no escapa los delimitadores de ruta de acceso codificados por porcentaje antes de ejecutar la compresión de la ruta de acceso. Esto se implementó como un mecanismo de seguridad contra ataques como los siguientes:  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -52,7 +52,7 @@ Quita un valor de esquema para un nombre de esquema.
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- Por esta razón, <xref:System.Uri?displayProperty=nameWithType> clase primero quita los caracteres de escape de los delimitadores de ruta de acceso y, a continuación, aplica la compresión de la ruta de acceso. El resultado de pasar la dirección URL malintencionada anterior a <xref:System.Uri?displayProperty=nameWithType> constructor de clase da como resultado el URI siguiente:  
+ Por esta razón, la <xref:System.Uri?displayProperty=nameWithType> clase primero anula el escape de los delimitadores de ruta de acceso y, a continuación, aplica la compresión de la ruta de acceso. El resultado de pasar la dirección URL malintencionada anterior al <xref:System.Uri?displayProperty=nameWithType> constructor de clase da como resultado el siguiente URI:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -62,7 +62,7 @@ Quita un valor de esquema para un nombre de esquema.
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra una configuración utilizada por la clase <xref:System.Uri> que quita cualquier configuración de esquema para el esquema http.  
+ En el ejemplo siguiente se muestra una configuración utilizada por la <xref:System.Uri> clase que quita cualquier configuración de esquema para el esquema http.  
   
 ```xml  
 <configuration>  
@@ -74,7 +74,7 @@ Quita un valor de esquema para un nombre de esquema.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
 - <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>

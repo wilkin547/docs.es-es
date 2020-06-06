@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <sectionGroup> Element
 ms.assetid: 6c27f9e2-809c-4bc9-aca9-72f90360e7a3
 ms.openlocfilehash: eb221027470fe6e485f8fcc4b939b71e4f219712
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "77215259"
 ---
-# <a name="sectiongroup-element-for-configsections"></a>\<elemento sectionGroup > para \<configSections >
+# <a name="sectiongroup-element-for-configsections"></a>Elemento \<sectionGroup> para \<configSections>
 
 Define un espacio de nombres para las secciones de configuración.
 
-[ **\<configuration>** ](configuration-element.md)\
-&nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<sectionGroup >**
+[**\<configuration>**](configuration-element.md)\
+&nbsp;&nbsp;[**\<configSections>**](configsections-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<sectionGroup>**
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -40,17 +40,17 @@ Define un espacio de nombres para las secciones de configuración.
 
 |     | Descripción |
 | --- | ----------- |
-| [ **\<configSections >** Element](configsections-element-for-configuration.md) | Contiene la sección de configuración y las declaraciones de espacio de nombres. |
+| [**\<configSections>** Element](configsections-element-for-configuration.md) | Contiene la sección de configuración y las declaraciones de espacio de nombres. |
 
 ## <a name="child-elements"></a>Elementos secundarios
 
 |     | Descripción |
 | --- | ----------- |
-| [ **\<sección >** ](section-element.md) | Contiene una declaración de sección de configuración. |
+| [**\<section>**](section-element.md) | Contiene una declaración de sección de configuración. |
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
-Al declarar un grupo de secciones, se crea una etiqueta de contenedor para las secciones de configuración y se garantiza que no hay conflictos de nomenclatura con las secciones de configuración definidas por otro usuario. Puede anidar **\<elementos > sectionGroup** entre sí.
+Al declarar un grupo de secciones, se crea una etiqueta de contenedor para las secciones de configuración y se garantiza que no hay conflictos de nomenclatura con las secciones de configuración definidas por otro usuario. Puede anidar **\<sectionGroup>** elementos entre sí.
 
 ## <a name="example"></a>Ejemplo
 

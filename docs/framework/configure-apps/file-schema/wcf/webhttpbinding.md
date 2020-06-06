@@ -3,19 +3,19 @@ title: <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 84179d77-825d-44b9-895a-ab08e7aa044d
 ms.openlocfilehash: 0bb6d1f40fe38cb13ed8ab07957de5db22d48fcc
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74140495"
 ---
-# <a name="webhttpbinding"></a>\<webHttpBinding >
+# \<webHttpBinding>
 Define un elemento de enlace que se utiliza para configurar los extremos de los servicios Web de Windows Communication Foundation (WCF) que responden a las solicitudes HTTP en lugar de a los mensajes SOAP.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;\<[**enlaces**](bindings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<webHttpBinding >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<webHttpBinding>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -71,27 +71,27 @@ Define un elemento de enlace que se utiliza para configurar los extremos de los 
 |sendTimeout|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de envío para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|  
 |transferMode.|Un valor <xref:System.ServiceModel.TransferMode> que indica si el servicio configurado con el enlace utiliza modos de transmisión o de almacenamiento en búfer (o ambos) de transferencia de mensaje. De manera predeterminada, es `Buffered`.|  
 |useDefaultWebProxy|Valor de tipo booleano que especifica si se utiliza el proxy HTTP del sistema configurado automáticamente. De manera predeterminada, es `true`.|  
-|writeEncoding|Especifica la codificación de caracteres que se usa para el texto del mensaje. Los valores válidos son los siguientes:<br /><br /> UnicodeFffeTextEncoding: codificación de BigEndian de Unicode.<br /><br /> Utf16TextEncoding: codificación de 16 bits.<br /><br /> Utf8TextEncoding: codificación de 8 bits.<br /><br /> El valor predeterminado es Utf8TextEncoding.|  
+|writeEncoding|Especifica la codificación de caracteres que se usa para el texto del mensaje. Los valores válidos incluyen los siguientes:<br /><br /> UnicodeFffeTextEncoding: codificación de BigEndian de Unicode.<br /><br /> Utf16TextEncoding: codificación de 16 bits.<br /><br /> Utf8TextEncoding: codificación de 8 bits.<br /><br /> El valor predeterminado es Utf8TextEncoding.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Define restricciones en la complejidad de los mensajes POX que pueden ser procesados por los extremos configurados con este enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
-|[> de seguridad de \<](security-of-webhttpbinding.md)|Define la configuración de seguridad del enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.WebHttpSecurityElement>.|  
+|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Define restricciones en la complejidad de los mensajes POX que pueden ser procesados por los extremos configurados con este enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<security>](security-of-webhttpbinding.md)|Define la configuración de seguridad del enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.WebHttpSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<enlaces >](bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|  
+|[\<bindings>](bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|  
   
 ## <a name="remarks"></a>Comentarios  
- El modelo de programación web de WCF permite a los desarrolladores exponer los servicios Web WCF a través de solicitudes HTTP que utilizan la mensajería de estilo "XML sin formato" (POX) en lugar de la mensajería basada en SOAP. Para que los clientes se comuniquen con un servicio mediante solicitudes HTTP, debe configurarse un punto de conexión del servicio con el [\<webHttpBinding >](webhttpbinding.md) que tenga \<WebHttpBehavior > conectado.  
+ El modelo de programación web de WCF permite a los desarrolladores exponer los servicios Web WCF a través de solicitudes HTTP que utilizan la mensajería de estilo "XML sin formato" (POX) en lugar de la mensajería basada en SOAP. Para que los clientes se comuniquen con un servicio mediante solicitudes HTTP, un extremo del servicio se debe configurar con el [\<webHttpBinding>](webhttpbinding.md) que tiene el \<WebHttpBehavior> adjunto.  
   
  Compatibilidad en WCF para la distribución y ASP. La integración de AJAX se basa en el modelo de programación web. Para obtener más información sobre el modelo, consulte el [modelo de programación web http de WCF](../../../wcf/feature-details/wcf-web-http-programming-model.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Configuration.WebHttpBindingElement>
@@ -99,4 +99,4 @@ Define un elemento de enlace que se utiliza para configurar los extremos de los 
 - [Enlaces](../../../wcf/bindings.md)
 - [Configuración de enlaces proporcionados por el sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Utilización de enlaces para configurar servicios y clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<> de enlace](bindings.md)
+- [\<binding>](bindings.md)

@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <add> Element
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
 ms.openlocfilehash: 5c7de79ec626966e71d461dd3865b294a8979db2
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "77214803"
 ---
-# <a name="add-element-for-appsettings"></a>\<agregar > elemento para \<appSettings >
+# <a name="add-element-for-appsettings"></a>Elemento \<add> para \<appSettings>
 
 Agrega una configuración de aplicación personalizada.
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<agregar >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<appSettings>**](appsettings-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -41,7 +41,7 @@ Agrega una configuración de aplicación personalizada.
 
 |     | Descripción |
 | --- | ----------- |
-| [ **\<appSettings>** ](appsettings-element-for-configuration.md) | Contiene valores de configuración de aplicación personalizados, como rutas de acceso de archivo, direcciones URL del servicio Web XML o cualquier otra información de configuración personalizada para una aplicación. |
+| [**\<appSettings>**](appsettings-element-for-configuration.md) | Contiene valores de configuración de aplicación personalizados, como rutas de acceso de archivo, direcciones URL del servicio Web XML o cualquier otra información de configuración personalizada para una aplicación. |
 
 ## <a name="child-elements"></a>Elementos secundarios
 
@@ -57,7 +57,7 @@ En el ejemplo siguiente se muestra cómo agregar un valor de configuración pers
 </appSettings>
 ```
 
-En el ejemplo siguiente se usa el elemento `<add>` para definir dos valores de compatibilidad en una aplicación ASP.NET:
+En el ejemplo siguiente se usa el `<add>` elemento para definir dos valores de compatibilidad en una aplicación ASP.net:
 
 ```xml
 <appSettings>

@@ -3,15 +3,15 @@ title: <bindings>
 ms.date: 01/22/2018
 ms.assetid: b62cd369-5409-4030-8490-9759a462dd3a
 ms.openlocfilehash: fe8f620668e35183890b8bba1f254a74c962f8d3
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74139663"
 ---
-# <a name="bindings"></a>\<enlaces >
+# \<bindings>
 
-Puede usar el elemento `bindings` para configurar una colección de enlaces estándar y personalizados para Windows Communication Foundation (WCF). Cada entrada es un elemento `binding` que se puede identificar por su `name` único. Los servicios usan los enlaces vinculándose a ellos mediante `name`. A partir de .NET Framework 4, no es necesario que los enlaces y los comportamientos tengan un nombre. Para obtener más información sobre la configuración predeterminada y los enlaces y comportamientos sin nombre, vea [configuración simplificada](../../../wcf/simplified-configuration.md) y [configuración simplificada para servicios WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).
+Puede usar el `bindings` elemento para configurar una colección de enlaces estándar y personalizados para Windows Communication Foundation (WCF). Cada entrada es un elemento `binding` que se puede identificar por su `name` único. Los servicios usan los enlaces vinculándose a ellos mediante `name`. A partir de .NET Framework 4, no es necesario que los enlaces y los comportamientos tengan un nombre. Para obtener más información sobre la configuración predeterminada y los enlaces y comportamientos sin nombre, vea [configuración simplificada](../../../wcf/simplified-configuration.md) y [configuración simplificada para servicios WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).
 
 ## <a name="system-provided-bindings"></a>Enlaces proporcionados por el sistema
 
@@ -41,11 +41,11 @@ El orden de aparición de los elementos en la pila es importante, porque es el o
 
  Los enlaces personalizados se identifican mediante su atributo `name`. Para obtener más información sobre los enlaces personalizados, vea [enlaces personalizados](../../../wcf/extending/custom-bindings.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.ServiceModel.Configuration.BindingsSection?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>
 - [Enlaces](../../../wcf/bindings.md)
 - [Enlaces personalizados](../../../wcf/extending/custom-bindings.md)
-- [\<customBinding >](custombinding.md)
+- [\<customBinding>](custombinding.md)

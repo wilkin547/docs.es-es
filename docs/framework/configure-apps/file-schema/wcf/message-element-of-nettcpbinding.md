@@ -1,24 +1,24 @@
 ---
-title: <message> elemento de <netTcpBinding>
+title: <message>elemento de<netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 1d71edd9-c085-4c2e-b6d3-980c313366f9
 ms.openlocfilehash: 76c4a0a30b637bc168855b091029a959b858401e
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73739012"
 ---
-# <a name="message-element-of-nettcpbinding"></a>\<mensaje > elemento de \<netTcpBinding >
-Define el tipo de requisitos de seguridad del nivel de mensaje para un extremo configurado con el [\<netTcpBinding](nettcpbinding.md).  
+# <a name="message-element-of-nettcpbinding"></a>\<message>elemento de\<netTcpBinding>
+Define el tipo de requisitos de seguridad del nivel de mensaje para un extremo configurado con [\<netTcpBinding>](nettcpbinding.md) .  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;\<[**enlaces**](bindings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**netTcpBinding**](nettcpbinding.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**enlace** >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**seguridad**](security-of-nettcpbinding.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**mensaje** >  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<netTcpBinding>**](nettcpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-nettcpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<message>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,12 +34,12 @@ Define el tipo de requisitos de seguridad del nivel de mensaje para un extremo c
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|`algorithmSuite`|Establece el cifrado de mensajes y los algoritmos de encapsulado de claves. La clase <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> determina los algoritmos y los tamaños de clave. Estos algoritmos se asignan a los indicados en la especificación Lenguaje de directiva de seguridad (WS-SecurityPolicy).<br /><br /> En la siguiente tabla se muestran los valores posibles. El valor predeterminado es `Basic256`.<br /><br /> Si el enlace de servicio especifica un valor `algorithmSuite` que no es igual al valor predeterminado, y genera el archivo de configuración mediante Svcutil.exe, éste no se genera correctamente y debe editar manualmente el archivo de configuración para establecer este atributo con el valor deseado.|  
+|`algorithmSuite`|Establece el cifrado de mensajes y los algoritmos de encapsulado de claves. La clase <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> determina los algoritmos y los tamaños de clave. Estos algoritmos se asignan a los que se indican en la especificación Security Policy Language (WS-SecurityPolicy).<br /><br /> En la siguiente tabla se muestran los valores posibles. El valor predeterminado es `Basic256`.<br /><br /> Si el enlace de servicio especifica un valor `algorithmSuite` que no es igual al valor predeterminado, y genera el archivo de configuración mediante Svcutil.exe, éste no se genera correctamente y debe editar manualmente el archivo de configuración para establecer este atributo con el valor deseado.|  
 |`clientCredentialType`|Especifica el tipo de credenciales que se van a usar al realizar la autenticación del cliente mediante seguridad basada en mensaje. En la siguiente tabla se muestran los valores posibles. El valor predeterminado es `UserName`. Este atributo es del tipo <xref:System.ServiceModel.MessageCredentialType>.|  
   
 ## <a name="algorithmsuite-attribute"></a>atributo algorithmSuite  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |Basic128|Utilice el cifrado Aes128, Sha1 para la síntesis del mensaje y Rsa-oaep-mgf1p para el encapsulado de claves.|  
 |Basic192|Utilice el cifrado Aes192, Sha1 para la síntesis del mensaje y Rsa-oaep-mgf1p para el encapsulado de claves.|  
@@ -60,27 +60,27 @@ Define el tipo de requisitos de seguridad del nivel de mensaje para un extremo c
   
 ## <a name="clientcredentialtype-attribute"></a>Atributo clientCredentialType  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|Ninguno|Esto permite al servicio interactuar con clientes anónimos. En el servicio, esto indica que el servicio no requiere ninguna credencial del cliente. En el cliente, esto indica que el cliente no proporciona ninguna credencial del cliente.|  
+|None|Esto permite al servicio interactuar con clientes anónimos. En el servicio, esto indica que el servicio no requiere ninguna credencial del cliente. En el cliente, esto indica que el cliente no proporciona ninguna credencial del cliente.|  
 |Windows|Permite a los intercambios de SOAP estar bajo el contexto autenticado de una credencial de Windows.|  
-|UserName|Permite que el servicio requiera que el cliente se autentique con una credencial UserName. WCF no admite el envío de un resumen de contraseña ni la derivación de claves mediante contraseña y el uso de tales claves para la seguridad de los mensajes. Como tal, WCF exige que el transporte sea seguro al utilizar las credenciales de nombre de usuario. Este modo de credencial produce o bien un intercambio interoperable o bien una negociación no interoperable basada en el atributo `negotiateServiceCredential`.|  
+|UserName|Permite que el servicio requiera que el cliente se autentique con una credencial UserName. WCF no admite el envío de una síntesis de contraseña o la derivación de claves mediante contraseña y el uso de dichas claves para la seguridad de los mensajes. Como tal, WCF exige que el transporte sea seguro al utilizar las credenciales de nombre de usuario. Este modo de credencial produce o bien un intercambio interoperable o bien una negociación no interoperable basada en el atributo `negotiateServiceCredential`.|  
 |Certificado|Permite al servicio exigir la autenticación del cliente mediante un certificado. Si se utiliza el modo de seguridad del mensaje y el atributo `negotiateServiceCredential` está establecido en `false`, se debe proporcionar al cliente el certificado de servicio.|  
 |IssuedToken|Especifica un token personalizado, normalmente emitido por un servicio de token de seguridad (STS).|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
- Ninguno  
+ None  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<La >](security-of-nettcpbinding.md)|Define las funciones de seguridad para <xref:System.ServiceModel.Configuration.NetTcpBindingElement>.|  
+|[\<security>](security-of-nettcpbinding.md)|Define las funciones de seguridad para <xref:System.ServiceModel.Configuration.NetTcpBindingElement>.|  
   
 ## <a name="remarks"></a>Comentarios  
  Seguridad de nivel del mensaje para la integridad y confidencialidad del mensaje SOAP, así como para la autenticación mutua de los sistemas de comunicación del mismo nivel. Si este modo de seguridad está seleccionado en un enlace, la pila del canal se configura con elementos de enlace de seguridad de mensaje. Los mensajes SOAP se protegen conforme a los estándares de WS-Security*.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.ServiceModel.MessageSecurityOverTcp>
 - <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Message%2A>
@@ -90,4 +90,4 @@ Define el tipo de requisitos de seguridad del nivel de mensaje para un extremo c
 - [Enlaces](../../../wcf/bindings.md)
 - [Configuración de enlaces proporcionados por el sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Utilización de enlaces para configurar servicios y clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<> de enlace](bindings.md)
+- [\<binding>](bindings.md)
