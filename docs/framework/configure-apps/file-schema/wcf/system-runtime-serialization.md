@@ -3,19 +3,19 @@ title: <system.runtime.serialization>
 ms.date: 03/30/2017
 ms.assetid: a8cebf4c-06d2-4667-8f5b-c3e1fc90df6f
 ms.openlocfilehash: c93a1f482882cc8cd9d229d82597efa64ba209bc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79152975"
 ---
-# <a name="systemruntimeserialization"></a><span data-ttu-id="fa94e-102">\<system.runtime.serialization></span><span class="sxs-lookup"><span data-stu-id="fa94e-102">\<system.runtime.serialization></span></span>
-<span data-ttu-id="fa94e-103">Representa el elemento raíz para la sección de espacio de nombres <xref:System.Runtime.Serialization> y contiene elementos para establecer opciones de <xref:System.Runtime.Serialization.DataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="fa94e-103">Represents the root element for the <xref:System.Runtime.Serialization> namespace section and contains elements for setting options of the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
+# \<system.runtime.serialization>
+<span data-ttu-id="329bc-102">Representa el elemento raíz para la sección de espacio de nombres <xref:System.Runtime.Serialization> y contiene elementos para establecer opciones de <xref:System.Runtime.Serialization.DataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="329bc-102">Represents the root element for the <xref:System.Runtime.Serialization> namespace section and contains elements for setting options of the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
 
-<span data-ttu-id="fa94e-104">[**\<configuración>**](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="fa94e-104">[**\<configuration>**](../configuration-element.md)</span></span>\
-<span data-ttu-id="fa94e-105">&nbsp;&nbsp;**\<system.runtime.serialization>**</span><span class="sxs-lookup"><span data-stu-id="fa94e-105">&nbsp;&nbsp;**\<system.runtime.serialization>**</span></span>  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;**\<system.runtime.serialization>**  
   
-## <a name="syntax"></a><span data-ttu-id="fa94e-106">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="fa94e-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="329bc-103">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="329bc-103">Syntax</span></span>  
   
 ```xml  
 <configuration>
@@ -34,26 +34,26 @@ ms.locfileid: "79152975"
 </configuration>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="fa94e-107">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="fa94e-107">Attributes and Elements</span></span>  
- <span data-ttu-id="fa94e-108">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios</span><span class="sxs-lookup"><span data-stu-id="fa94e-108">The following sections describe attributes, child elements, and parent elements</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="329bc-104">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="329bc-104">Attributes and Elements</span></span>  
+ <span data-ttu-id="329bc-105">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios</span><span class="sxs-lookup"><span data-stu-id="329bc-105">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="fa94e-109">Atributos</span><span class="sxs-lookup"><span data-stu-id="fa94e-109">Attributes</span></span>  
- <span data-ttu-id="fa94e-110">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="fa94e-110">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="329bc-106">Atributos</span><span class="sxs-lookup"><span data-stu-id="329bc-106">Attributes</span></span>  
+ <span data-ttu-id="329bc-107">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="329bc-107">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="fa94e-111">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="fa94e-111">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="329bc-108">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="329bc-108">Child Elements</span></span>  
   
-|<span data-ttu-id="fa94e-112">Elemento</span><span class="sxs-lookup"><span data-stu-id="fa94e-112">Element</span></span>|<span data-ttu-id="fa94e-113">Descripción</span><span class="sxs-lookup"><span data-stu-id="fa94e-113">Description</span></span>|  
+|<span data-ttu-id="329bc-109">Elemento</span><span class="sxs-lookup"><span data-stu-id="329bc-109">Element</span></span>|<span data-ttu-id="329bc-110">Descripción</span><span class="sxs-lookup"><span data-stu-id="329bc-110">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="fa94e-114">\<dataContractSerializer></span><span class="sxs-lookup"><span data-stu-id="fa94e-114">\<dataContractSerializer></span></span>](datacontractserializer-of-system-runtime-serialization.md)|<span data-ttu-id="fa94e-115">Permite agregar tipos conocidos que se van a usar al deserializar.</span><span class="sxs-lookup"><span data-stu-id="fa94e-115">Enables addition of known types to be used when deserialization.</span></span>|  
+|[\<dataContractSerializer>](datacontractserializer-of-system-runtime-serialization.md)|<span data-ttu-id="329bc-111">Permite agregar tipos conocidos que se van a usar al deserializar.</span><span class="sxs-lookup"><span data-stu-id="329bc-111">Enables addition of known types to be used when deserialization.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="fa94e-116">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="fa94e-116">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="329bc-112">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="329bc-112">Parent Elements</span></span>  
   
-|<span data-ttu-id="fa94e-117">Elemento</span><span class="sxs-lookup"><span data-stu-id="fa94e-117">Element</span></span>|<span data-ttu-id="fa94e-118">Descripción</span><span class="sxs-lookup"><span data-stu-id="fa94e-118">Description</span></span>|  
+|<span data-ttu-id="329bc-113">Elemento</span><span class="sxs-lookup"><span data-stu-id="329bc-113">Element</span></span>|<span data-ttu-id="329bc-114">Descripción</span><span class="sxs-lookup"><span data-stu-id="329bc-114">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="fa94e-119">\<configuración> Elemento</span><span class="sxs-lookup"><span data-stu-id="fa94e-119">\<configuration> Element</span></span>](../configuration-element.md)|<span data-ttu-id="fa94e-120">El elemento de nivel superior para la configuración.</span><span class="sxs-lookup"><span data-stu-id="fa94e-120">The top level element for configuration.</span></span>|  
+|[<span data-ttu-id="329bc-115">\<configuration>Element</span><span class="sxs-lookup"><span data-stu-id="329bc-115">\<configuration> Element</span></span>](../configuration-element.md)|<span data-ttu-id="329bc-116">El elemento de nivel superior para la configuración.</span><span class="sxs-lookup"><span data-stu-id="329bc-116">The top level element for configuration.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="fa94e-121">Consulte también</span><span class="sxs-lookup"><span data-stu-id="fa94e-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="329bc-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="329bc-117">See also</span></span>
 
 - <xref:System.Runtime.Serialization>
-- [<span data-ttu-id="fa94e-122">Using Data Contracts</span><span class="sxs-lookup"><span data-stu-id="fa94e-122">Using Data Contracts</span></span>](../../../wcf/feature-details/using-data-contracts.md)
-- [<span data-ttu-id="fa94e-123">Tipos conocidos de contratos de datos</span><span class="sxs-lookup"><span data-stu-id="fa94e-123">Data Contract Known Types</span></span>](../../../wcf/feature-details/data-contract-known-types.md)
+- [<span data-ttu-id="329bc-118">Utilización de contratos de datos</span><span class="sxs-lookup"><span data-stu-id="329bc-118">Using Data Contracts</span></span>](../../../wcf/feature-details/using-data-contracts.md)
+- [<span data-ttu-id="329bc-119">Tipos conocidos de contratos de datos</span><span class="sxs-lookup"><span data-stu-id="329bc-119">Data Contract Known Types</span></span>](../../../wcf/feature-details/data-contract-known-types.md)
