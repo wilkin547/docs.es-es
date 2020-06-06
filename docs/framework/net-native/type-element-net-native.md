@@ -1,15 +1,15 @@
 ---
-title: Elemento <Type> (.NET Native)
+title: <Type>Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
 ms.openlocfilehash: 4e88b49b82513079ddcf6f0bafe02d44235a406a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73091854"
 ---
-# <a name="type-element-net-native"></a>\<tipo > elemento (.NET Native)
+# <a name="type-element-net-native"></a>\<Type>Elemento (.NET Native)
 
 Aplica la directiva de tiempo de ejecución a un tipo determinado, como una clase o estructura.
 
@@ -37,7 +37,7 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 
 |Atributo|Tipo de atributo|Descripción|
 |---------------|--------------------|-----------------|
-|`Name`|General|Atributo necesario. Especifica el nombre del tipo.|
+|`Name`|General|Atributo necesario. Especifica el nombre de tipo.|
 |`Activate`|Reflexión|Atributo opcional. Controla el acceso en tiempo de ejecución a los constructores para permitir la activación de instancias.|
 |`Browse`|Reflexión|Atributo opcional. Controla la consulta para obtener información sobre los elementos de programa, pero no permite el acceso en tiempo de ejecución.|
 |`Dynamic`|Reflexión|Atributo opcional. Controla el acceso en tiempo de ejecución a todos los miembros de tipo (incluidos constructores, métodos, campos, propiedades y eventos) para permitir la programación dinámica.|
@@ -51,13 +51,13 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 
 ## <a name="name-attribute"></a>Name (atributo)
 
-|Valor|Descripción|
+|Value|Descripción|
 |-----------|-----------------|
-|*type_name*|Nombre del tipo. Si este elemento `<Type>` es el elemento secundario de un elemento [\<Namespace>](namespace-element-net-native.md) o de otro elemento `<Type>`, *type_name* puede incluir el nombre del tipo sin su espacio de nombres. De lo contrario, *type_name* debe incluir el nombre de tipo completo.|
+|*type_name*|Nombre de tipo. Si este `<Type>` elemento es el elemento secundario de un [\<Namespace>](namespace-element-net-native.md) elemento u otro `<Type>` elemento, *type_name* puede incluir el nombre del tipo sin su espacio de nombres. De lo contrario, *type_name* debe incluir el nombre de tipo completo.|
 
 ## <a name="all-other-attributes"></a>Resto de atributos
 
-|Valor|Descripción|
+|Value|Descripción|
 |-----------|-----------------|
 |*policy_setting*|Configuración que se va a aplicar a este tipo de directiva. Los valores posibles son `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` y `Required All`. Para obtener más información, vea [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución).|
 
@@ -92,19 +92,19 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 
 La reflexión, la serialización y los atributos de interoperabilidad son opcionales. Si ninguno de ellos está presente, el elemento `<Type>` actúa como un contenedor cuyos tipos secundarios definen directivas para los miembros individuales.
 
-Si un elemento `<Type>` es el elemento secundario de un elemento [\<Assembly>](assembly-element-net-native.md), [\<Namespace>](namespace-element-net-native.md), `<Type>` o [\<TypeInstantiation>](typeinstantiation-element-net-native.md), invalida la configuración de directiva definida por el elemento primario.
+Si un `<Type>` elemento es el elemento secundario de [\<Assembly>](assembly-element-net-native.md) un [\<Namespace>](namespace-element-net-native.md) elemento,, `<Type>` o [\<TypeInstantiation>](typeinstantiation-element-net-native.md) , invalida la configuración de directiva definida por el elemento primario.
 
-Un elemento `<Type>` de un tipo genérico aplica su directiva a todas las instancias que no tienen su propia directiva. La directiva de los tipos genéricos construidos se define mediante el elemento [\<TypeInstantiation>](typeinstantiation-element-net-native.md).
+Un elemento `<Type>` de un tipo genérico aplica su directiva a todas las instancias que no tienen su propia directiva. La Directiva de tipos genéricos construidos se define mediante el [\<TypeInstantiation>](typeinstantiation-element-net-native.md) elemento.
 
 Si el tipo es un tipo genérico, su nombre se decora con un símbolo de acento grave (\`) seguido por el número de parámetros genéricos. Por ejemplo, el atributo `Name` de un elemento `<Type>` de la clase <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> aparece como ``Name="System.Collections.Generic.List`1"``.
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se utiliza la reflexión para mostrar información sobre los campos, las propiedades y los métodos de la clase <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>. La variable `b` del ejemplo es un control <xref:Windows.UI.Xaml.Controls.TextBlock>. Dado que el ejemplo simplemente recupera información de tipos, la disponibilidad de los metadatos se controla mediante la configuración de directiva `Browse`.
+En el ejemplo siguiente se utiliza la reflexión para mostrar información sobre los campos, las propiedades y los métodos de la clase <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>. La variable del `b` ejemplo es un <xref:Windows.UI.Xaml.Controls.TextBlock> control. Dado que el ejemplo simplemente recupera información de tipos, la disponibilidad de los metadatos se controla mediante la configuración de directiva `Browse`.
 
  [!code-csharp[ProjectN_Reflection#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/browsegenerictype1.cs#3)]
 
- Dado que la cadena de herramientas de .NET Native no incluye de forma automática los metadatos para la clase <xref:System.Collections.Generic.List%601>, en el ejemplo no se muestra la información de miembro solicitada en tiempo de ejecución. Para proporcionar los metadatos necesarios, agregue el elemento `<Type>` siguiente al archivo de directivas en tiempo de ejecución. Tenga en cuenta que, dado que se ha proporcionado un elemento primario [<Namespace\>](namespace-element-net-native.md), no es necesario proporcionar un nombre de tipo completo en el elemento `<Type>`.
+ Dado que <xref:System.Collections.Generic.List%601> la cadena de herramientas de .net Native no incluye de forma automática los metadatos de la clase, en el ejemplo no se muestra la información de miembro solicitada en tiempo de ejecución. Para proporcionar los metadatos necesarios, agregue el elemento `<Type>` siguiente al archivo de directivas en tiempo de ejecución. Tenga en cuenta que, dado que se ha proporcionado un elemento primario [<Namespace\>](namespace-element-net-native.md), no es necesario proporcionar un nombre de tipo completo en el elemento `<Type>`.
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -118,11 +118,11 @@ En el ejemplo siguiente se utiliza la reflexión para mostrar información sobre
 ```
 
 ## <a name="example"></a>Ejemplo
- En el ejemplo siguiente se utiliza la reflexión para recuperar un objeto <xref:System.Reflection.PropertyInfo> que representa a la propiedad <xref:System.String.Chars%2A?displayProperty=nameWithType>. A continuación, se utiliza el método <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> para recuperar el valor del séptimo carácter de una cadena y para mostrar todos los caracteres de la cadena. La variable `b` del ejemplo es un control <xref:Windows.UI.Xaml.Controls.TextBlock>.
+ En el ejemplo siguiente se utiliza la reflexión para recuperar un objeto <xref:System.Reflection.PropertyInfo> que representa a la propiedad <xref:System.String.Chars%2A?displayProperty=nameWithType>. A continuación, se utiliza el método <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> para recuperar el valor del séptimo carácter de una cadena y para mostrar todos los caracteres de la cadena. La variable del `b` ejemplo es un <xref:Windows.UI.Xaml.Controls.TextBlock> control.
 
  [!code-csharp[ProjectN_Reflection#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/propertyinfo1.cs#1)]
 
- Dado que los metadatos del objeto <xref:System.String> no están disponibles, la llamada al método <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> produce una excepción <xref:System.NullReferenceException> en tiempo de ejecución cuando se compila con la cadena de herramientas de .NET Native. Para eliminar la excepción y proporcionar los metadatos necesarios, agregue el siguiente elemento `<Type>` al archivo de directivas en tiempo de ejecución:
+ Dado que los metadatos del <xref:System.String> objeto no están disponibles, la llamada al <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> método produce una <xref:System.NullReferenceException> excepción en tiempo de ejecución cuando se compila con la cadena de herramientas de .net Native. Para eliminar la excepción y proporcionar los metadatos necesarios, agregue el siguiente elemento `<Type>` al archivo de directivas en tiempo de ejecución:
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -133,8 +133,8 @@ En el ejemplo siguiente se utiliza la reflexión para mostrar información sobre
 </Directives>
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Runtime Directives (rd.xml) Configuration File Reference](runtime-directives-rd-xml-configuration-file-reference.md) (Referencia del archivo de configuración de directivas en tiempo de ejecución [rd.xml])
-- [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](runtime-directive-elements.md)
-- [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución)
+- [Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elementos de directivas en tiempo de ejecución](runtime-directive-elements.md)
+- [Configuración de directiva de la directiva en tiempo de ejecución](runtime-directive-policy-settings.md)

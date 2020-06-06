@@ -3,18 +3,18 @@ title: <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 5076644b-1f33-4f26-9488-87de9fcda04c
 ms.openlocfilehash: be4224ef1a8b17653df8123aaf89e105a496355a
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70400018"
 ---
-# <a name="protocolmapping"></a>\<> protocolMapping
-Representa una sección de configuración para definir un conjunto de asignaciones de protocolos predeterminados entre los esquemas de protocolo de transporte (por ejemplo, http, net. TCP, net. Pipe, etc.) y los enlaces de WCF. Al crear puntos de conexión predeterminados en tiempo de ejecución, Windows Communication Foundation (WCF) examina las asignaciones configuradas y decide qué enlace usar para una dirección base determinada.  
+# \<protocolMapping>
+Representa una sección de configuración para definir un conjunto de asignaciones de protocolos predeterminados entre esquemas de protocolos de transporte (ej., http, net.tcp, net.pipe, etc.) y enlaces WCF. Al crear puntos de conexión predeterminados en tiempo de ejecución, Windows Communication Foundation (WCF) examina las asignaciones configuradas y decide qué enlace usar para una dirección base determinada.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<> protocolMapping**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<protocolMapping>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,13 +34,13 @@ Representa una sección de configuración para definir un conjunto de asignacion
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<filters>](filters-of-routing.md)|Contiene una asignación de protocolo predeterminada entre un esquema de protocolo de transporte (por ejemplo, http, net. TCP, net. Pipe, etc.) y un enlace de WCF.|  
+|[\<filters>](filters-of-routing.md)|Contiene una asignación de protocolo predeterminado entre un esquema de protocolos de transporte (ej., http, net.tcp, net.pipe, etc.) y un enlace WCF.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |[\<system.serviceModel>](system-servicemodel.md)|Elemento raíz de todos los elementos de configuración de WCF.|  
   
@@ -60,7 +60,7 @@ Representa una sección de configuración para definir un conjunto de asignacion
 </protocolMapping>
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.ServiceModel.Configuration.ProtocolMappingSection?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Configuration.ProtocolMappingElement?displayProperty=nameWithType>

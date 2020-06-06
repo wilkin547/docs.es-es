@@ -3,10 +3,10 @@ title: Sección de configuración de Windows Forms
 ms.date: 04/07/2017
 ms.assetid: 6eb142d5-fc98-40e2-9d90-84733f2a27ba
 ms.openlocfilehash: 4de61ae3cb5eb8a3fc226881e2b7f842030dfddf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79151837"
 ---
 # <a name="windows-forms-configuration-section"></a>Sección de configuración de Windows Forms
@@ -42,15 +42,15 @@ Elemento  |Descripción |
 
 Elemento  |Descripción |
 ---------|---------|
-[\<configuración>](../configuration-element.md) | Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y Windows Forms. |
+[\<configuration>](../configuration-element.md) | Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y Windows Forms. |
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 A partir de .NET Framework 4.7, el elemento `<System.Windows.Forms.ApplicationConfigurationSection>` permite configurar las aplicaciones de Windows Forms para aprovechar las características agregadas en versiones recientes de .NET Framework.
 
-El `<System.Windows.Forms.ApplicationConfigurationSection>` elemento puede incluir [`<add>`](windows-forms-add-configuration-element.md) uno o varios elementos secundarios, cada uno de los cuales define una configuración específica.
+El `<System.Windows.Forms.ApplicationConfigurationSection>` elemento puede incluir uno o varios [`<add>`](windows-forms-add-configuration-element.md) elementos secundarios, cada uno de los cuales define un valor de configuración específico.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Esquema del archivo de configuración](../index.md)
-- [Compatibilidad con PPP altos en formularios Windows Forms](../../../winforms/high-dpi-support-in-windows-forms.md)
+- [Esquema de los archivos de configuración](../index.md)
+- [Compatibilidad con PPP alta en Windows Forms](../../../winforms/high-dpi-support-in-windows-forms.md)

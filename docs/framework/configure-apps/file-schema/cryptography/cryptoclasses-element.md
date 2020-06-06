@@ -9,19 +9,19 @@ helpviewer_keywords:
 - cryptoClasses element
 ms.assetid: 290d5f96-946d-4f02-babb-1d31ec0b8295
 ms.openlocfilehash: c93fadf51297d59ab499e25de283700364903049
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79155251"
 ---
-# <a name="cryptoclasses-element"></a>\<cryptoClasses> Element
-Contiene una lista de clases de criptografía que [ \<](nameentry-element.md) tienen una asignación a un nombre descriptivo en el elemento nameEntry>.  
+# <a name="cryptoclasses-element"></a>\<cryptoClasses> (Elemento)
+Contiene una lista de las clases de criptografía que tienen una asignación a un nombre descriptivo en el [\<nameEntry>](nameentry-element.md) elemento.  
   
-[**\<configuración>**](../configuration-element.md)  
+[**\<configuration>**](../configuration-element.md)  
 &nbsp;&nbsp;[**\<mscorlib>**](mscorlib-element-for-cryptography-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<criptografíaConfiguración>**](cryptographysettings-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>cryptoNameMapping**](cryptonamemapping-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<cryptographySettings>**](cryptographysettings-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<cryptoNameMapping>**](cryptonamemapping-element.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<cryptoClasses>**  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -41,7 +41,7 @@ Contiene una lista de clases de criptografía que [ \<](nameentry-element.md) ti
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<cryptoClass>](cryptoclass-element.md)|Contiene una clase de criptografía que tiene ** \<** una asignación a un nombre descriptivo en el elemento nameEntry>.|  
+|[\<cryptoClass>](cryptoclass-element.md)|Contiene una clase de criptografía que tiene una asignación a un nombre descriptivo en el **\<nameEntry>** elemento.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
@@ -50,10 +50,10 @@ Contiene una lista de clases de criptografía que [ \<](nameentry-element.md) ti
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`cryptographySettings`|Contiene la configuración de criptografía.|  
 |`cryptoNameMapping`|Contiene asignaciones de clases a nombres descriptivos.|  
-|`mscorlib`|Contiene `cryptographySettings` el elemento.|  
+|`mscorlib`|Contiene el `cryptographySettings` elemento.|  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente ** \<** se muestra cómo utilizar el elemento cryptoClass>para hacer referencia a una clase de criptografía y configurar el tiempo de ejecución. A continuación, puede pasar la <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> cadena "RSA" al método y utilizar el <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> método para devolver un `MyCryptoRSAClass` objeto.  
+ En el ejemplo siguiente se muestra cómo usar el **\<cryptoClass>** elemento para hacer referencia a una clase de criptografía y configurar el tiempo de ejecución. Después, puede pasar la cadena "RSA" al <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> método y usar el <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> método para devolver un `MyCryptoRSAClass` objeto.  
   
 ```xml  
 <configuration>  
@@ -76,11 +76,11 @@ Contiene una lista de clases de criptografía que [ \<](nameentry-element.md) ti
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Security.Cryptography>
-- [Esquema del archivo de configuración](../index.md)
-- [Esquema de configuración de criptografía](index.md)
-- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
-- [System.Security.Cryptography.CryptoConfig.CreateFromName](xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A)
+- [Esquema de los archivos de configuración](../index.md)
+- [Esquema de la configuración de criptografía](index.md)
+- [Servicios criptográficos](../../../../standard/security/cryptographic-services.md)
+- [System. Security. Cryptography. CryptoConfig. CreateFromName](xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A)
 - [Configurar clases de criptografía](../../configure-cryptography-classes.md)

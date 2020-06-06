@@ -6,18 +6,18 @@ f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#client
 ms.assetid: bf0f7031-76c8-4e7e-a6c6-9ad9119134be
 ms.openlocfilehash: 7aa3755be97a839cb576d53852b75cfe50e39276
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "72773948"
 ---
-# <a name="client"></a>> de \<cliente
+# \<client>
 El elemento `client` define una lista de extremos a los que un cliente puede conectarse.
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<cliente** >
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<client>**
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -36,14 +36,14 @@ El elemento `client` define una lista de extremos a los que un cliente puede con
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.
 
 ### <a name="attributes"></a>Atributos
- Ninguno
+ None
 
 ### <a name="child-elements"></a>Elementos secundarios
 
 |Elemento|Descripción|
 |-------------|-----------------|
-|[\<punto de conexión >](endpoint-of-client.md)|Contiene una colección de elementos de extremo que especifican los puntos de conexión a los que este cliente puede conectarse.|
-|[metadatos de\<](metadata.md)|Contiene los valores para procesar los metadatos.|
+|[\<endpoint>](endpoint-of-client.md)|Contiene una colección de elementos de extremo que especifican los puntos de conexión a los que este cliente puede conectarse.|
+|[\<metadata>](metadata.md)|Contiene los valores para procesar los metadatos.|
 
 ### <a name="parent-elements"></a>Elementos primarios
 
@@ -73,9 +73,9 @@ El elemento `client` define una lista de extremos a los que un cliente puede con
 </client>
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.ServiceModel.Configuration.ClientSection>
 - <xref:System.ServiceModel.Configuration.MetadataElement>
-- [Configuración del cliente de WCF](../../../wcf/feature-details/client-configuration.md)
+- [Configuración de cliente de WCF](../../../wcf/feature-details/client-configuration.md)
 - [Clientes](../../../wcf/feature-details/clients.md)

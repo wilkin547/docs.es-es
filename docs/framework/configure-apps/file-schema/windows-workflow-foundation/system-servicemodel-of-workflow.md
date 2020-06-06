@@ -1,20 +1,20 @@
 ---
-title: <system.serviceModel> del flujo de trabajo
+title: <> System. serviceModel del flujo de trabajo
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
 ms.openlocfilehash: 9aa2bf0fdfd6fe4528a3fda4d05b3ba8f23637d3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79151954"
 ---
-# <a name="systemservicemodel-of-workflow"></a>\<system.serviceModel> de flujo de trabajo
+# <a name="systemservicemodel-of-workflow"></a>\<system.serviceModel>del flujo de trabajo
 Esta sección de configuración contiene todos los elementos de configuración del flujo de trabajo.  
 
-[**\<configuración>**](../configuration-element.md)\
-&nbsp;&nbsp;**\<Sistema.>De ServiceModel**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;**\<system.ServiceModel>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -104,11 +104,11 @@ Esta sección de configuración contiene todos los elementos de configuración d
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<comportamientos>](behaviors-of-workflow.md)|En esta sección se define la colección **serviceBehaviors.**  Cada elemento de la colección define elementos de comportamiento utilizados por los servicios. Cada elemento de comportamiento se identifica por su atributo **de nombre** único.|  
-|[\<seguimiento>](tracking.md)|Representa una sección de configuración para definir los valores de seguimiento de un servicio de flujo de trabajo.<br /><br /> Para obtener más información sobre el seguimiento del flujo de trabajo y su configuración, vea [Seguimiento y seguimiento](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) del flujo de trabajo y Configuración del seguimiento de un flujo de [trabajo](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).|  
+|[\<behaviors>](behaviors-of-workflow.md)|En esta sección se define la colección **serviceBehaviors** .  Cada elemento de la colección define elementos de comportamiento utilizados por los servicios. Cada elemento de comportamiento se identifica mediante su atributo de **nombre** único.|  
+|[\<tracking>](tracking.md)|Representa una sección de configuración para definir los valores de seguimiento de un servicio de flujo de trabajo.<br /><br /> Para obtener más información sobre el seguimiento del flujo de trabajo y su configuración, consulte [seguimiento y](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) seguimiento del flujo de trabajo y [configuración del seguimiento para un flujo de trabajo](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<configuración>](../configuration-element.md)|El elemento raíz para todos los elementos de configuración en un archivo de configuración .NET.|
+|[\<configuration>](../configuration-element.md)|El elemento raíz para todos los elementos de configuración en un archivo de configuración .NET.|

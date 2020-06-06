@@ -11,21 +11,21 @@ helpviewer_keywords:
 - remove element, bypasslist
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
 ms.openlocfilehash: 97b49a8a520d6a4f72945366874991d2deb18710
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "71697891"
 ---
-# <a name="remove-element-for-bypasslist-network-settings"></a>\<quitar > elemento para BypassList (configuración de red)
+# <a name="remove-element-for-bypasslist-network-settings"></a>Elemento \<remove> para bypasslist (configuración de red)
 
 Quita una dirección IP o un nombre DNS de la lista de omisión de proxy.
 
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<BypassList >** ](bypasslist-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**quitar >**  
+[**\<configuration>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<defaultProxy>**](defaultproxy-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<bypasslist>**](bypasslist-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**  
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -37,7 +37,7 @@ Quita una dirección IP o un nombre DNS de la lista de omisión de proxy.
 
 ## <a name="attributes-and-elements"></a>Atributos y elementos
 
-En las secciones siguientes se describen atributos, elementos secundarios y elementos primarios.
+En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.
 
 ### <a name="attributes"></a>Atributos
 
@@ -45,11 +45,11 @@ En las secciones siguientes se describen atributos, elementos secundarios y elem
 |-------------------|---------------------|
 |`address`|Expresión regular que describe una dirección IP o un nombre DNS.|
 
-### <a name="child-elements"></a>Elemento secundario
+### <a name="child-elements"></a>Elementos secundarios
 
 Ninguno.
 
-### <a name="parent-elements"></a>Elemento principal
+### <a name="parent-elements"></a>Elementos primarios
 
 |**Element**|**Descripción**|
 |-----------------|---------------------|
@@ -57,9 +57,9 @@ Ninguno.
 
 ## <a name="remarks"></a>Comentarios
 
-El elemento `remove` quita las expresiones regulares que describen las direcciones IP o los nombres de servidor DNS de la lista de direcciones que omiten un servidor proxy. Las direcciones se definieron anteriormente en el archivo de configuración o en un nivel superior en la jerarquía de configuración.
+El `remove` elemento quita las expresiones regulares que describen las direcciones IP o los nombres de servidor DNS de la lista de direcciones que omiten un servidor proxy. Las direcciones se definieron anteriormente en el archivo de configuración o en un nivel superior en la jerarquía de configuración.
 
-El valor del atributo `address` debe ser una expresión regular que describe un conjunto de direcciones IP o nombres de host.
+El valor del `address` atributo debe ser una expresión regular que describa un conjunto de direcciones IP o nombres de host.
 
 Para obtener más información acerca de las expresiones regulares, vea. [.NET Framework expresiones regulares](../../../../standard/base-types/regular-expressions.md).
 
@@ -84,7 +84,7 @@ En el ejemplo siguiente se quita cualquier definición anterior del dominio adve
 </configuration>
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Esquema de la configuración de red](index.md)

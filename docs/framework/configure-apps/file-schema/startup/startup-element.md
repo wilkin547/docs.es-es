@@ -10,18 +10,18 @@ helpviewer_keywords:
 - startup element
 ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
 ms.openlocfilehash: e936c069275bfa9f7ac81ef1c6fc6228828182a8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153741"
 ---
-# <a name="startup-element"></a>\<startup> elemento
+# <a name="startup-element"></a>Elemento \<startup>
 
-Especifica la información de inicio de Common Language Runtime.
+Especifica Common Language Runtime información de inicio.
 
-[**\<configuración>**](../configuration-element.md)  
-&nbsp;&nbsp;**\<>de inicio**  
+[**\<configuration>**](../configuration-element.md)  
+&nbsp;&nbsp;**\<startup>**  
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -38,20 +38,20 @@ Especifica la información de inicio de Common Language Runtime.
 
 |Atributo|Descripción|
 |---------------|-----------------|
-|`useLegacyV2RuntimeActivationPolicy`|Atributo opcional.<br /><br /> Especifica si se debe habilitar la directiva de activación en tiempo de ejecución de .NET Framework 2.0 o usar la directiva de activación de .NET Framework 4.|
+|`useLegacyV2RuntimeActivationPolicy`|Atributo opcional.<br /><br /> Especifica si se debe habilitar la Directiva de activación en tiempo de ejecución de .NET Framework 2,0 o usar la Directiva de activación de .NET Framework 4.|
 
-## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a>atributo useLegacyV2RuntimeActivationPolicy
+## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a>useLegacyV2RuntimeActivationPolicy (atributo)
 
 |Value|Descripción|
 |-----------|-----------------|
-|`true`|Habilite la directiva de activación en tiempo de ejecución de .NET Framework 2.0 para el tiempo de ejecución elegido, que consiste en enlazar técnicas de activación en tiempo de ejecución heredadas (como la [función CorBindToRuntimeEx](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)) al tiempo de ejecución elegido del archivo de configuración en lugar de limitarlas en la versión 2.0 de CLR. Por lo tanto, si se elige CLR versión 4 o posterior del archivo de configuración, los ensamblados de modo mixto creados con versiones anteriores de .NET Framework se cargan con la versión CLR elegida. Establecer este valor impide que la versión 1.1 o la versión 2.0 de CLR se carguen en el mismo proceso, deshabilitando eficazmente la característica en paralelo en proceso.|
-|`false`|Use la directiva de activación predeterminada para .NET Framework 4 y versiones posteriores, que consiste en permitir que las técnicas de activación en tiempo de ejecución heredadas carguen LA versión 1.1 o 2.0 de CLR en el proceso. Establecer este valor impide que los ensamblados en modo mixto se carguen en .NET Framework 4 o posterior a menos que se hayan compilado con .NET Framework 4 o posterior. Este es el valor predeterminado.|
+|`true`|Habilite la Directiva de activación en tiempo de ejecución de .NET Framework 2,0 para el tiempo de ejecución elegido, que consiste en enlazar las técnicas de activación en tiempo de ejecución heredadas (como la [función CorBindToRuntimeEx](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)) al tiempo de ejecución elegido desde el archivo de configuración en lugar de limitarlos a la versión 2,0 de CLR. Por lo tanto, si se elige CLR versión 4 o posterior del archivo de configuración, los ensamblados de modo mixto creados con versiones anteriores del .NET Framework se cargan con la versión de CLR elegida. Si se establece este valor, se evita que la versión 1,1 o la versión 2,0 de CLR se carguen en el mismo proceso, deshabilitando eficazmente la característica en paralelo en proceso.|
+|`false`|Use la Directiva de activación predeterminada para el .NET Framework 4 y versiones posteriores, que consiste en permitir técnicas de activación en tiempo de ejecución heredadas para cargar la versión 1,1 o 2,0 de CLR en el proceso. Al establecer este valor, se evita que los ensamblados de modo mixto se carguen en el .NET Framework 4 o posterior, a menos que se hayan compilado con .NET Framework 4 o posterior. Este es el valor predeterminado.|
 
 ### <a name="child-elements"></a>Elementos secundarios
 
 |Elemento|Descripción|
 |-------------|-----------------|
-|[\<requiredRuntime>](requiredruntime-element.md)|Especifica que la aplicación solo admite la versión 1.0 de Common Language Runtime. Las aplicaciones creadas con la versión ** \<** en tiempo de ejecución 1.1 o posterior deben usar el elemento supportedRuntime>.|
+|[\<requiredRuntime>](requiredruntime-element.md)|Especifica que la aplicación solo admite la versión 1.0 de Common Language Runtime. Las aplicaciones compiladas con la versión 1,1 o posterior del tiempo de ejecución deben usar el **\<supportedRuntime>** elemento.|
 |[\<supportedRuntime>](supportedruntime-element.md)|Especifica qué versiones de Common Language Runtime admite la aplicación.|
 
 ### <a name="parent-elements"></a>Elementos primarios
@@ -60,18 +60,18 @@ Especifica la información de inicio de Common Language Runtime.
 |-------------|-----------------|
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
- El ** \<elemento supportedRuntime>** debe ser utilizado por todas las aplicaciones creadas con la versión 1.1 o posterior del tiempo de ejecución. Las aplicaciones creadas para admitir solo la ** \<** versión 1.0 del tiempo de ejecución deben usar el elemento requiredRuntime>.
+ **\<supportedRuntime>** Todas las aplicaciones compiladas con la versión 1,1 o posterior del tiempo de ejecución deben usar el elemento. Las aplicaciones compiladas para admitir solo la versión 1,0 del Runtime deben usar el **\<requiredRuntime>** elemento.
 
- El código de inicio de una aplicación ** \<** hospedada en Microsoft Internet Explorer omite el elemento>de inicio y sus elementos secundarios.
+ El código de inicio de una aplicación hospedada en Microsoft Internet Explorer omite el **\<startup>** elemento y sus elementos secundarios.
 
 ## <a name="the-uselegacyv2runtimeactivationpolicy-attribute"></a>El atributo useLegacyV2RuntimeActivationPolicy
 
- Este atributo es útil si la aplicación usa rutas de activación heredadas, como la [función CorBindToRuntimeEx](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md), y desea que esas rutas de acceso activen la versión 4 de CLR en lugar de una versión anterior, o si la aplicación se compila con .NET Framework 4 pero tiene una dependencia de un ensamblado en modo mixto creado con una versión anterior de .NET Framework. En esos escenarios, establezca `true`el atributo en .
+ Este atributo es útil si la aplicación usa rutas de activación heredadas, como la [función CorBindToRuntimeEx](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md), y desea que esas rutas de acceso activen la versión 4 de CLR en lugar de una versión anterior, o si la aplicación se compila con el .NET Framework 4 pero tiene una dependencia en un ensamblado de modo mixto creado con una versión anterior del .NET Framework. En esos escenarios, establezca el atributo en `true` .
 
 > [!NOTE]
-> Establecer el `true` atributo para impedir que la versión 1.1 o la versión 2.0 de CLR se carguen en el mismo proceso, deshabilitando eficazmente la característica en paralelo en proceso (consulte Ejecución en paralelo para la [interoperabilidad COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))).
+> Al establecer el atributo en, se evita que la `true` versión de clr 1,1 o la versión 2,0 de CLR se cargue en el mismo proceso, deshabilitando eficazmente la característica en paralelo en proceso (vea la [ejecución en paralelo para la interoperabilidad com](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))).
 
 ## <a name="example"></a>Ejemplo
 
@@ -95,8 +95,8 @@ Especifica la información de inicio de Common Language Runtime.
 
 ## <a name="see-also"></a>Consulte también
 
-- [Esquema de configuración de inicio](index.md)
-- [Esquema del archivo de configuración](../index.md)
-- [Cómo: Configurar una aplicación para admitir .NET Framework 4 o versiones posteriores](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [Esquema de la configuración de inicio](index.md)
+- [Esquema de los archivos de configuración](../index.md)
+- [Cómo: Configurar una aplicación para que admita .NET Framework 4 o versiones posteriores](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
 - [Ejecución simultánea para interoperabilidad COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))
-- [Ejecución en paralelo en proceso](../../../deployment/in-process-side-by-side-execution.md)
+- [Ejecución en paralelo y en proceso](../../../deployment/in-process-side-by-side-execution.md)

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - connectionManagement element
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
 ms.openlocfilehash: 9f1e382bbbaad2cb95e2c33bbbdfb4c505378c9e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154899"
 ---
-# <a name="connectionmanagement-element-network-settings"></a>\<Elemento connectionManagement> (configuración de red)
+# <a name="connectionmanagement-element-network-settings"></a>Elemento \<connectionManagement> (configuración de red)
 Especifica el número máximo de conexiones a un host de red.  
 
-[**\<configuración>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<connectionManagement>**
 
@@ -37,26 +37,26 @@ Especifica el número máximo de conexiones a un host de red.
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|**Elemento**|**Descripción**|  
+|**Element**|**Descripción**|  
 |-----------------|---------------------|  
-|[agregar](add-element-for-connectionmanagement-network-settings.md)|Agrega una dirección IP o nombre DNS a la lista de administración de conexión.|  
-|[Claro](clear-element-for-connectionmanagement-network-settings.md)|Borra la lista de administración de conexiones.|  
-|[quitar](remove-element-for-connectionmanagement-network-settings.md)|Quita una dirección IP o un nombre DNS de la lista de administración de conexiones.|  
+|[add](add-element-for-connectionmanagement-network-settings.md)|Agrega una dirección IP o nombre DNS a la lista de administración de conexión.|  
+|[clear](clear-element-for-connectionmanagement-network-settings.md)|Borra la lista de administración de conexiones.|  
+|[remove](remove-element-for-connectionmanagement-network-settings.md)|Quita una dirección IP o un nombre DNS de la lista de administración de conexiones.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|**Elemento**|**Descripción**|  
+|**Element**|**Descripción**|  
 |-----------------|---------------------|  
 |[system.net](system-net-element-network-settings.md)|Contiene valores que especifican cómo se conecta .NET Framework a la red.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El `connectionManagement` elemento define el número máximo de conexiones a un servidor o grupo de servidores.  
   
 ## <a name="configuration-files"></a>Archivos de configuración  
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se configura una `www.contoso.com` aplicación para utilizar cuatro conexiones al servidor y dos conexiones a todos los demás servidores.  
+ En el ejemplo siguiente se configura una aplicación para que use cuatro conexiones al servidor `www.contoso.com` y dos conexiones a todos los demás servidores.  
   
 ```xml  
 <configuration>  
@@ -73,4 +73,4 @@ Especifica el número máximo de conexiones a un host de red.
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
-- [Esquema de configuración de red](index.md)
+- [Esquema de la configuración de red](index.md)

@@ -7,23 +7,23 @@ helpviewer_keywords:
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
 ms.openlocfilehash: ead69d1e850050214c15295134c06ff6f66e9760
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/20/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "81646030"
 ---
 # <a name="specifying-an-assemblys-location"></a>Especificar la ubicación de un ensamblado
-Hay dos maneras de especificar la ubicación de un ensamblaje:  
+Hay dos maneras de especificar la ubicación de un ensamblado:  
   
-- Mediante [ \<el elemento>codeBase.](./file-schema/runtime/codebase-element.md)  
+- Usar el [\<codeBase>](./file-schema/runtime/codebase-element.md) elemento.  
   
-- Usando [ \<](./file-schema/runtime/probing-element.md) el elemento>de sondeo.  
+- Usar el [\<probing>](./file-schema/runtime/probing-element.md) elemento.  
   
- También puede usar la herramienta de configuración de [.NET Framework (Mscorcfg.msc)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/2bc0cxhc(v=vs.100)) para especificar ubicaciones de ensamblado o ubicaciones para que Common Language Runtime sondee los ensamblados.  
+ También puede usar la [herramienta de configuración de .NET Framework (Mscorcfg. msc)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/2bc0cxhc(v=vs.100)) para especificar ubicaciones de ensamblados o especificar ubicaciones para la Common Language Runtime para sondear ensamblados.  
   
-## <a name="using-the-codebase-element"></a>Uso \<del elemento de> codeBase  
- Puede usar ** \<** el elemento>codeBase solo en la configuración del equipo o en los archivos de directiva de publicador que también redirigen la versión del ensamblado. Cuando el tiempo de ejecución determina qué versión de ensamblado se va a usar, aplica la configuración base de código del archivo que determina la versión. Si no se indica ninguna base de código, el tiempo de ejecución sondea el ensamblado de la manera normal. Para obtener más información, vea [Cómo el tiempo de ejecución localiza ensamblados](../deployment/how-the-runtime-locates-assemblies.md).  
+## <a name="using-the-codebase-element"></a>Usar el \<codeBase> elemento  
+ Puede usar el **\<codeBase>** elemento solo en los archivos de configuración del equipo o de directiva de edición que también redirigen la versión del ensamblado. Cuando el tiempo de ejecución determina la versión de ensamblado que se va a usar, aplica la configuración de base de código del archivo que determina la versión. Si no se indica ninguna base de código, el tiempo de ejecución sondea el ensamblado de la manera normal. Para obtener más información, vea [cómo el motor en tiempo de ejecución ubica ensamblados](../deployment/how-the-runtime-locates-assemblies.md).  
   
  En el ejemplo siguiente se muestra cómo especificar la ubicación de un ensamblado.  
   
@@ -43,15 +43,15 @@ Hay dos maneras de especificar la ubicación de un ensamblaje:
 </configuration>  
 ```  
   
- El atributo **version** es necesario para todos los ensamblados con nombre seguro, pero debe omitirse para los ensamblados que no tienen nombre seguro. El ** \<** elemento>codeBase requiere el atributo **href.** No puede especificar intervalos ** \<** de versiones en el elemento>codeBase.  
+ El atributo **version** es necesario para todos los ensamblados con nombre seguro, pero debe omitirse para los ensamblados que no tengan un nombre seguro. El **\<codeBase>** elemento requiere el atributo **href** . No se pueden especificar intervalos de versiones en el **\<codeBase>** elemento.  
   
 > [!NOTE]
-> Si proporciona una sugerencia de base de código para un ensamblado que no tiene nombre seguro, la sugerencia debe apuntar a la base de la aplicación o a un subdirectorio del directorio base de la aplicación.  
+> Si va a proporcionar una sugerencia base de código para un ensamblado que no tiene un nombre seguro, la sugerencia debe apuntar a la base de la aplicación o a un subdirectorio del directorio base de la aplicación.  
   
-## <a name="using-the-probing-element"></a>Uso \<del elemento> de sondeo  
- El tiempo de ejecución localiza ensamblados que no tienen una base de código mediante sondeo. Para obtener más información acerca de la sondeo, vea Cómo el tiempo de [ejecución localiza ensamblados](../deployment/how-the-runtime-locates-assemblies.md).  
+## <a name="using-the-probing-element"></a>Usar el \<probing> elemento  
+ El motor en tiempo de ejecución ubica los ensamblados que no tienen una base de código mediante sondeo. Para obtener más información sobre el sondeo, vea [cómo el motor en tiempo de ejecución ubica ensamblados](../deployment/how-the-runtime-locates-assemblies.md).  
   
- Puede utilizar [ \<](./file-schema/runtime/probing-element.md) el elemento>de sondeo en el archivo de configuración de la aplicación para especificar los subdirectorios que el tiempo de ejecución debe buscar al localizar un ensamblado. En el ejemplo siguiente se muestra cómo especificar directorios que el tiempo de ejecución debe buscar.  
+ Puede usar el [\<probing>](./file-schema/runtime/probing-element.md) elemento en el archivo de configuración de la aplicación para especificar subdirectorios en los que el tiempo de ejecución debe buscar al localizar un ensamblado. En el ejemplo siguiente se muestra cómo especificar los directorios en los que debe buscar el tiempo de ejecución.  
   
 ```xml  
 <configuration>  
@@ -63,11 +63,11 @@ Hay dos maneras de especificar la ubicación de un ensamblaje:
 </configuration>  
 ```  
   
- El atributo **privatePath** contiene los directorios que el tiempo de ejecución debe buscar para los ensamblados. Si la aplicación se encuentra en C:-Archivos de programa-MyApp, el tiempo de ejecución buscará ensamblados que no especifiquen una base de código en C:-Archivos de programa-MiApp-Bin, C:-Archivos de programa-MyApp-Bin2-Subbin, y C:-Archivos de programa-MyApp-Bin3. Los directorios especificados en **privatePath** deben ser subdirectorios del directorio base de la aplicación.  
+ El atributo **privatePath** contiene los directorios en los que el tiempo de ejecución debe buscar los ensamblados. Si la aplicación se encuentra en C:\Archivos de Programa\myapp, el tiempo de ejecución buscará los ensamblados que no especifiquen una base de código en C:\Archivos de Files\MyApp\Bin, C:\Archivos de Files\MyApp\Bin2\Subbin y C:\Program Files\MyApp\Bin3. Los directorios especificados en **privatePath** deben ser subdirectorios del directorio base de la aplicación.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Ensamblados de .NET](../../standard/assembly/index.md)
 - [Programar con ensamblados](../../standard/assembly/index.md)
-- [Cómo el motor en tiempo de ejecución localiza ensamblados](../deployment/how-the-runtime-locates-assemblies.md)
+- [Cómo el motor en tiempo de ejecución ubica ensamblados](../deployment/how-the-runtime-locates-assemblies.md)
 - [Configurar aplicaciones con archivos de configuración](index.md)

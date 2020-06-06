@@ -9,18 +9,18 @@ helpviewer_keywords:
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
 ms.openlocfilehash: 0945629c1395917bc1cf825f2ba84d20afa99957
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "71698210"
 ---
-# <a name="defaultproxy-element-network-settings"></a>\<elemento > defaultProxy (configuración de red)
+# <a name="defaultproxy-element-network-settings"></a>Elemento \<defaultProxy> (configuración de red)
 Configura el servidor proxy de Protocolo de transferencia de hipertexto (HTTP).  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp; **\<defaultProxy >**  
+[**\<configuration>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<defaultProxy>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,7 +35,7 @@ Configura el servidor proxy de Protocolo de transferencia de hipertexto (HTTP).
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
- En las secciones siguientes se describen atributos, elementos secundarios y elementos primarios.  
+ En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
   
@@ -44,15 +44,15 @@ Configura el servidor proxy de Protocolo de transferencia de hipertexto (HTTP).
 |`enabled`|Especifica si se usa un proxy web. El valor predeterminado es `true`.|  
 |`useDefaultCredentials`|Especifica si se usan las credenciales predeterminadas de este host para tener acceso al proxy web. El valor predeterminado es `false`.|  
   
-### <a name="child-elements"></a>Elemento secundario  
+### <a name="child-elements"></a>Elementos secundarios  
   
 |**Element**|**Descripción**|  
 |-----------------|---------------------|  
 |[bypasslist](bypasslist-element-network-settings.md)|Proporciona un conjunto de expresiones regulares que describen direcciones que no usan el proxy.|  
-|[module](module-element-network-settings.md)|Agrega un nuevo módulo proxy a la aplicación.|  
+|[destina](module-element-network-settings.md)|Agrega un nuevo módulo proxy a la aplicación.|  
 |[proxi](proxy-element-network-settings.md)|Define un servidor proxy.|  
   
-### <a name="parent-elements"></a>Elemento principal  
+### <a name="parent-elements"></a>Elementos primarios  
   
 |**Element**|**Descripción**|  
 |-----------------|---------------------|  
@@ -61,7 +61,7 @@ Configura el servidor proxy de Protocolo de transferencia de hipertexto (HTTP).
 ## <a name="remarks"></a>Comentarios  
  Si el elemento defaultProxy está vacío, se usará la configuración de proxy de Internet Explorer. Este comportamiento es diferente de la versión 1.1 de .NET Framework.  
   
- Se produce una excepción si el elemento [Module](module-element-network-settings.md) especifica un tipo no público, el tipo no se deriva de la clase <xref:System.Net.IWebProxy>, se produjo una excepción del constructor sin parámetros de este objeto o se produjo una excepción al recuperar el proxy predeterminado especificado por el sistema. La propiedad <xref:System.Exception.InnerException%2A> en la excepción debería tener más información acerca de la causa principal del error.  
+ Se produce una excepción si el elemento [Module](module-element-network-settings.md) especifica un tipo no público, el tipo no se deriva de la <xref:System.Net.IWebProxy> clase, se produjo una excepción del constructor sin parámetros de este objeto o se produjo una excepción al recuperar el proxy predeterminado especificado por el sistema. La propiedad <xref:System.Exception.InnerException%2A> en la excepción debería tener más información acerca de la causa principal del error.  
   
 ## <a name="configuration-files"></a>Archivos de configuración  
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
@@ -86,7 +86,7 @@ Configura el servidor proxy de Protocolo de transferencia de hipertexto (HTTP).
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Esquema de la configuración de red](index.md)

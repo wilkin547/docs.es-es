@@ -9,16 +9,16 @@ helpviewer_keywords:
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
 ms.openlocfilehash: 88098f2afaad9728e38c4f9935b45f45826a0ca9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154561"
 ---
 # <a name="systemnet-element-network-settings"></a>Elemento \<system.Net> (configuración de red)
 Contiene valores que especifican cómo se conecta .NET Framework a la red.  
   
-[**\<configuración>**](../configuration-element.md)  
+[**\<configuration>**](../configuration-element.md)  
 &nbsp;&nbsp;**\<system.net>**  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,27 +36,27 @@ Contiene valores que especifican cómo se conecta .NET Framework a la red.
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|**Elemento**|**Descripción**|  
+|**Element**|**Descripción**|  
 |-----------------|---------------------|  
-|[authenticationModules](authenticationmodules-element-network-settings.md)|Especifica los módulos utilizados para autenticar las solicitudes de Internet.|  
+|[authenticationModules](authenticationmodules-element-network-settings.md)|Especifica los módulos que se usan para autenticar las solicitudes de Internet.|  
 |[connectionManagement](connectionmanagement-element-network-settings.md)|Especifica el número máximo de conexiones a un host de Internet.|  
 |[defaultProxy](defaultproxy-element-network-settings.md)|Configura el servidor proxy de Protocolo de transferencia de hipertexto (HTTP).|  
-|[mailSettings](mailsettings-element-network-settings.md)|Configura las opciones de envío de correo del Protocolo simple de transporte de correo (SMTP).|  
+|[mailSettings](mailsettings-element-network-settings.md)|Configura las opciones de envío de correo del Protocolo simple de transferencia de correo (SMTP).|  
 |[requestCaching](requestcaching-element-network-settings.md)|Controla el mecanismo de almacenamiento en caché para las solicitudes de red.|  
-|[origen de datos](settings-element-network-settings.md)|Configura las opciones de red <xref:System.Net> básicas para las clases de los espacios de nombres secundarios y relacionados.|  
-|[webRequestModules](webrequestmodules-element-network-settings.md)|Especifica los módulos que se utilizarán para solicitar información a los hosts de Internet.|  
+|[settings](settings-element-network-settings.md)|Configura las opciones de red básicas para las clases de <xref:System.Net> y los espacios de nombres secundarios relacionados.|  
+|[webRequestModules](webrequestmodules-element-network-settings.md)|Especifica los módulos que se van a usar para solicitar información de los hosts de Internet.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|**Elemento**|**Descripción**|  
+|**Element**|**Descripción**|  
 |-----------------|---------------------|  
-|[configuración](../configuration-element.md)|Contiene la configuración de todos los espacios de nombres.|  
+|[configuration](../configuration-element.md)|Contiene la configuración de todos los espacios de nombres.|  
   
-## <a name="remarks"></a>Observaciones  
- El [ \<elemento system.net>](system-net-element-network-settings.md) contiene <xref:System.Net> la configuración de las clases de los espacios de nombres secundarios relacionados. La configuración configura los módulos de autenticación, la administración de conexiones, la configuración de correo, el servidor proxy y los módulos de solicitud de Internet para recibir información de hosts de Internet.  
+## <a name="remarks"></a>Comentarios  
+ El [\<system.net>](system-net-element-network-settings.md) elemento contiene la configuración para las clases en <xref:System.Net> y los espacios de nombres secundarios relacionados. La configuración configura los módulos de autenticación, la administración de conexiones, la configuración de correo, el servidor proxy y los módulos de solicitud de Internet para recibir información de los hosts de Internet.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se <xref:System.Net> muestra una configuración típica utilizada por las clases.  
+ En el ejemplo siguiente se muestra una configuración típica utilizada por <xref:System.Net> las clases.  
   
 ```xml  
 <configuration>  
@@ -94,4 +94,4 @@ Contiene valores que especifican cómo se conecta .NET Framework a la red.
   
 ## <a name="see-also"></a>Consulte también
 
-- [Esquema de configuración de red](index.md)
+- [Esquema de la configuración de red](index.md)

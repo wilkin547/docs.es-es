@@ -3,13 +3,13 @@ title: <Namespace>Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
 ms.openlocfilehash: 06d88a7b0f95c7c1dbe98818b847c92e08a57a19
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79180965"
 ---
-# <a name="namespace-element-net-native"></a>\<Elemento de espacio de nombres> (.NET Native)
+# <a name="namespace-element-net-native"></a>\<Namespace>Elemento (.NET Native)
 Aplica la de reflexión en tiempo de ejecución a todos los tipos en un espacio de nombres especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -51,7 +51,7 @@ Aplica la de reflexión en tiempo de ejecución a todos los tipos en un espacio 
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|*namespace_name*|El espacio de nombres. Si \<el elemento Namespace> es un elemento secundario de un *namespace_name* [ \< ](application-element-net-native.md)elemento Application>, [ \<Library>](library-element-net-native.md)o [ \<Assembly>,](assembly-element-net-native.md) namespace_name debe ser un nombre de espacio de nombres completo. Si \<Namespace> es un elemento secundario de otro elemento \<Namespace>, *namespace_name* debe ser un nombre de espacio de nombres relativo.|  
+|*namespace_name*|El espacio de nombres. Si el \<Namespace> elemento es un elemento secundario de [\<Application>](application-element-net-native.md) un [\<Library>](library-element-net-native.md) elemento, o [\<Assembly>](assembly-element-net-native.md) , *namespace_name* debe ser un nombre de espacio de nombres completo. Si el \<Namespace> elemento es un elemento secundario de otro \<Namespace> elemento, *namespace_name* debe ser un nombre de espacio de nombres relativo.|  
   
 ## <a name="all-other-attributes"></a>Resto de atributos  
   
@@ -64,25 +64,25 @@ Aplica la de reflexión en tiempo de ejecución a todos los tipos en un espacio 
 |Elemento|Descripción|  
 |-------------|-----------------|  
 |`<Namespace>`|Aplica la directiva de reflexión en tiempo de ejecución a todos los tipos en un espacio de nombres primario.|  
-|[\<Tipo>](type-element-net-native.md)|Aplica la directiva de reflexión a un tipo.|  
-|[\<TipoInstantiation>](typeinstantiation-element-net-native.md)|Aplica la directiva de reflexión a un tipo genérico construido.|  
+|[\<Type>](type-element-net-native.md)|Aplica la directiva de reflexión a un tipo.|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Aplica la directiva de reflexión a un tipo genérico construido.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<>de la aplicación](application-element-net-native.md)|Sirve de contenedor de los tipos y miembros de tipo de la aplicación cuyos metadatos están disponibles para la reflexión en tiempo de ejecución. El [ \<](application-element-net-native.md) elemento Application>puede tener cero, uno o más [ \<elementos Assembly>.](assembly-element-net-native.md)|  
-|[\<>de montaje](assembly-element-net-native.md)|Aplica la directiva de reflexión en tiempo de ejecución a todos los tipos en un ensamblado especificado.|  
-|[\<Biblioteca>](library-element-net-native.md)|Define el ensamblado que contiene los tipos y miembros de tipo cuyos metadatos están disponibles para la reflexión en tiempo de ejecución. El [ \<](library-element-net-native.md) elemento Library>puede tener cero o un [ \<](assembly-element-net-native.md) elemento Assembly>.|  
+|[\<Application>](application-element-net-native.md)|Sirve de contenedor de los tipos y miembros de tipo de la aplicación cuyos metadatos están disponibles para la reflexión en tiempo de ejecución. El [\<Application>](application-element-net-native.md) elemento puede tener cero, uno o más [\<Assembly>](assembly-element-net-native.md) elementos.|  
+|[\<Assembly>](assembly-element-net-native.md)|Aplica la directiva de reflexión en tiempo de ejecución a todos los tipos en un ensamblado especificado.|  
+|[\<Library>](library-element-net-native.md)|Define el ensamblado que contiene los tipos y miembros de tipo cuyos metadatos están disponibles para la reflexión en tiempo de ejecución. El [\<Library>](library-element-net-native.md) elemento puede tener cero o un [\<Assembly>](assembly-element-net-native.md) elemento.|  
 |`<Namespace>`|Aplica la directiva de reflexión a todos los tipos en un espacio de nombres primario.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Los atributos `Activate`, `Browse`, `Dynamic` y `Serialize` son opcionales. Si ninguno está presente, el elemento `<Namespace>` solo actúa como contenedor para los elementos secundarios. Si están presentes, el elemento `<Namespace>` aplica la directiva de reflexión en tiempo de ejecución a todos los tipos del espacio de nombres especificado.  
   
- Cuando es un elemento secundario del `<Namespace>` [ \<elemento Assembly>,](assembly-element-net-native.md) el elemento reemplaza la directiva de reflexión en tiempo de ejecución definida por el [ \<elemento Assembly>.](assembly-element-net-native.md)  
+ Cuando es un elemento secundario del [\<Assembly>](assembly-element-net-native.md) elemento, el `<Namespace>` elemento invalida la Directiva de reflexión en tiempo de ejecución definida por el [\<Assembly>](assembly-element-net-native.md) elemento.  
   
 ## <a name="see-also"></a>Consulte también
 
 - [Configuración de directiva de la directiva en tiempo de ejecución](runtime-directive-policy-settings.md)
-- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementos de directivas en tiempo de ejecución](runtime-directive-elements.md)

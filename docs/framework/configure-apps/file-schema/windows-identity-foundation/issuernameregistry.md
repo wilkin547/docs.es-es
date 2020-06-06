@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 ms.assetid: 58b39d12-c953-40c4-88af-d7eb3343ca28
 author: BrucePerlerMS
 ms.openlocfilehash: 209e702da80f2569f2b6c068f50f1af4489157f6
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70251966"
 ---
-# <a name="issuernameregistry"></a>\<issuerNameRegistry>
+# \<issuerNameRegistry>
 Configura el registro de nombres de emisores que usan los controladores de la colección de controladores de tokens.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. identityModel >** ](system-identitymodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> identityConfiguration**](identityconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> securityTokenHandlers**](securitytokenhandlers.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> securityTokenHandlerConfiguration**](securitytokenhandlerconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> issuerNameRegistry**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<securityTokenHandlers>**](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<securityTokenHandlerConfiguration>**](securitytokenhandlerconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<issuerNameRegistry>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,31 +41,31 @@ Configura el registro de nombres de emisores que usan los controladores de la co
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|DESCRIPCIÓN|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
-|type|Tipo que se deriva de la <xref:System.IdentityModel.Tokens.IssuerNameRegistry> clase. Para obtener más información sobre cómo especificar un personalizado `type`, vea [referencias de tipo personalizado].|  
+|type|Tipo que se deriva de la <xref:System.IdentityModel.Tokens.IssuerNameRegistry> clase. Para obtener más información sobre cómo especificar un personalizado `type` , vea [referencias de tipo personalizado].|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<trustedIssuers>](trustedissuers.md)|Cuando el `type` atributo especifica el registro del nombre del emisor basado en la configuración <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> (la clase) [ \<](trustedissuers.md) , se debe especificar el elemento > de trustedIssuers. El `<add>` `<clear>` [ \<elemento > trustedIssuers](trustedissuers.md) puede tomar los elementos, `<remove>` o como elementos secundarios.|  
+|[\<trustedIssuers>](trustedissuers.md)|Cuando el `type` atributo especifica el registro del nombre del emisor basado en la configuración (la <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> clase), [\<trustedIssuers>](trustedissuers.md) se debe especificar el elemento. El [\<trustedIssuers>](trustedissuers.md) elemento puede tomar `<add>` los `<clear>` elementos, o `<remove>` como elementos secundarios.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|Proporciona la configuración para una colección de controladores de tokens de seguridad.|  
   
 ## <a name="remarks"></a>Comentarios  
- Todos los tokens de emisor se validan mediante un registro de nombres de emisor. Se trata de un objeto que se deriva de <xref:System.IdentityModel.Tokens.IssuerNameRegistry> la clase. El registro de nombres de emisores se usa para asociar un nombre de tecla de cifrado al material criptográfico necesario para comprobar las firmas de los tokens generados por el emisor correspondiente. El registro del nombre del emisor mantiene una lista de emisores de confianza para la aplicación de usuario de confianza (RP). El tipo de registro del nombre del emisor se especifica mediante el `type` atributo. El `<issuerNameRegistry>` elemento puede tener uno o más elementos secundarios que proporcionan la configuración para el tipo especificado. Proporcione la lógica que procesa estos elementos secundarios invalidando el <xref:System.IdentityModel.Tokens.IssuerNameRegistry.LoadCustomConfiguration%2A> método.  
+ Todos los tokens de emisor se validan mediante un registro de nombres de emisor. Se trata de un objeto que se deriva de la <xref:System.IdentityModel.Tokens.IssuerNameRegistry> clase. El registro de nombres de emisores se usa para asociar un nombre de tecla de cifrado al material criptográfico necesario para comprobar las firmas de los tokens generados por el emisor correspondiente. El registro del nombre del emisor mantiene una lista de emisores de confianza para la aplicación de usuario de confianza (RP). El tipo de registro del nombre del emisor se especifica mediante el `type` atributo. El `<issuerNameRegistry>` elemento puede tener uno o más elementos secundarios que proporcionan la configuración para el tipo especificado. Proporcione la lógica que procesa estos elementos secundarios invalidando el <xref:System.IdentityModel.Tokens.IssuerNameRegistry.LoadCustomConfiguration%2A> método.  
   
- WIF proporciona un tipo de registro de nombre de emisor único fuera del cuadro, <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> la clase. Esta clase usa un conjunto de certificados de emisor de confianza que se especifican en la configuración. Requiere un elemento de configuración secundario, `<trustedIssuers>`, en el que se configura la colección de certificados de emisor de confianza. Los certificados de confianza se especifican mediante la forma codificada ASN. 1 de la huella digital del certificado y se agregan o quitan `<clear>`de la `<remove>` colección `<add>`mediante los elementos, o.  
+ WIF proporciona un tipo de registro de nombre de emisor único fuera del cuadro, la <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> clase. Esta clase usa un conjunto de certificados de emisor de confianza que se especifican en la configuración. Requiere un elemento de configuración secundario, `<trustedIssuers>` , en el que se configura la colección de certificados de emisor de confianza. Los certificados de confianza se especifican mediante la forma codificada ASN. 1 de la huella digital del certificado y se agregan o quitan de la colección mediante `<add>` `<clear>` `<remove>` los elementos, o.  
   
- El elemento se representa mediante la <xref:System.IdentityModel.Configuration.IssuerNameRegistryElement> clase. `<issuerNameRegistry>`  
+ El `<issuerNameRegistry>` elemento se representa mediante la <xref:System.IdentityModel.Configuration.IssuerNameRegistryElement> clase.  
   
 > [!NOTE]
-> Especificar el `<issuerNameRegistry>` elemento como elemento secundario [ \<](identityconfiguration.md) del elemento de > identityConfiguration está en desuso, pero todavía se admite por compatibilidad con versiones anteriores. La `<securityTokenHandlerConfiguration>` configuración del elemento invalida la `<identityConfiguration>` del elemento.  
+> Especificar el `<issuerNameRegistry>` elemento como elemento secundario del [\<identityConfiguration>](identityconfiguration.md) elemento está en desuso, pero todavía se admite por compatibilidad con versiones anteriores. La configuración del `<securityTokenHandlerConfiguration>` elemento invalida la del `<identityConfiguration>` elemento.  
   
 ## <a name="example"></a>Ejemplo  
  El siguiente XML muestra cómo especificar el registro de nombres de emisor basado en la configuración.  
@@ -78,7 +78,7 @@ Configura el registro de nombres de emisores que usan los controladores de la co
 </issuerNameRegistry>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.IdentityModel.Tokens.IssuerNameRegistry>
 - <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>

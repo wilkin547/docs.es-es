@@ -8,17 +8,17 @@ helpviewer_keywords:
 - <configSections> Element
 ms.assetid: 9f963c1b-dc3f-4220-a8b6-2dd7a5a8e039
 ms.openlocfilehash: 55116f1fe6fdffffea8f26d8a4de783c7305ada3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79155354"
 ---
-# <a name="configsections-element-for-configuration"></a>\<configSections> \<elemento para la configuración>
+# <a name="configsections-element-for-configuration"></a>Elemento \<configSections> para \<configuration>
 
-Contiene declaraciones de sección de configuración y espacio de nombres.
+Contiene la sección de configuración y las declaraciones de espacio de nombres.
 
-configuración &nbsp; &nbsp;>[** \<**](configuration-element.md) ** \<configSections>**
+[**\<configuration>**](configuration-element.md) &nbsp;&nbsp;**\<configSections>**
 
 ## <a name="attributes"></a>Atributos
 
@@ -28,20 +28,20 @@ None
 
 |     | Descripción |
 | --- | ----------- |
-| [**\<configuración>**](configuration-element.md) | Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework. |
+| [**\<configuration>**](configuration-element.md) | Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework. |
 
 ## <a name="child-elements"></a>Elementos secundarios
 
 |     | Descripción |
 | --- | ----------- |
-| [**\<sección>**](section-element.md) | Contiene una declaración de sección de configuración. |
+| [**\<section>**](section-element.md) | Contiene una declaración de sección de configuración. |
 | [**\<sectionGroup>**](sectiongroup-element-for-configsections.md) | Define un espacio de nombres para las secciones de configuración. |
-| [**\<eliminar>**](remove-element-for-configsections.md) | Quita una sección o un grupo de secciones predefinidos. |
-| [**\<>claro**](clear-element-for-configsections.md) | Borra todas las secciones y grupos de secciones definidos anteriormente. |
+| [**\<remove>**](remove-element-for-configsections.md) | Quita una sección o grupo de sección predefinido. |
+| [**\<clear>**](clear-element-for-configsections.md) | Borra todas las secciones y grupos de sección definidos previamente. |
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
-Si este elemento está en un archivo de configuración, debe ser el primer elemento secundario del elemento ** \<de configuración>.**
+Si este elemento se encuentra en un archivo de configuración, debe ser el primer elemento secundario del **\<configuration>** elemento.
 
 ## <a name="example"></a>Ejemplo
 
@@ -61,8 +61,8 @@ En el ejemplo siguiente se muestra cómo definir una sección de configuración 
 
 ## <a name="configuration-file"></a>Archivo de configuración
 
-Este elemento se puede utilizar en el archivo de configuración de la aplicación, el archivo de configuración del equipo (*Machine.config*) y los archivos *Web.config* que no están en el nivel de directorio de la aplicación.
+Este elemento puede usarse en el archivo de configuración de la aplicación, el archivo de configuración del equipo (*Machine. config*) y los archivos *Web. config* que no están en el nivel de directorio de la aplicación.
 
 ## <a name="see-also"></a>Consulte también
 
-- [Esquema de archivo de configuración para .NET Framework](index.md)
+- [Esquema del archivo de configuración para el .NET Framework](index.md)

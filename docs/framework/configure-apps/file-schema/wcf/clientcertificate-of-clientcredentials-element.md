@@ -3,22 +3,22 @@ title: <clientCertificate>del <clientCredentials> elemento
 ms.date: 03/30/2017
 ms.assetid: 3b3fa000-3434-4142-a178-11903bdd2c5d
 ms.openlocfilehash: fb95ef3168378227e41e55c6fd5e5b772cb7ad0f
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70400511"
 ---
-# <a name="clientcertificate-of-clientcredentials-element"></a>\<clientCertificate > del \<elemento > clientCredentials
+# <a name="clientcertificate-of-clientcredentials-element"></a>\<clientCertificate>del \<clientCredentials> elemento
 Define un certificado X.509 que se usa para autenticar un cliente en un servicio.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamientos >** ](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> endpointBehaviors**](endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamiento >** ](behavior-of-endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clientCredentials >** ](clientcredentials.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> clientCertificate**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<endpointBehaviors>**](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<clientCredentials>**](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<clientCertificate>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,26 +34,26 @@ Define un certificado X.509 que se usa para autenticar un cliente en un servicio
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|DESCRIPCIÓN|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |`findValue`|Una cadena que contiene el valor que se va a buscar en el almacén de certificados X.509. El tipo contenido en el atributo debe satisfacer los requisitos del valor del atributo `X509FindType`. El valor predeterminado es una cadena vacía.|  
-|`storeLocation`|Especifica la ubicación del certificado X.509 que usa el cliente para autenticarse al servicio. Los valores válidos son los siguientes:<br /><br /> -LocalMachine: el almacén de certificados asignado al equipo local.<br />-CurrentUser: el almacén de certificados asignado al usuario actual.<br /><br /> El valor predeterminado es LocalMachine. Este atributo es del tipo <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.|  
-|`storeName`|Especifica el nombre del almacén del certificado X.509 que se va a buscar. Los valores válidos son los siguientes:<br /><br /> Libreta Almacén de certificados para otros usuarios.<br />AuthRoot Almacén de certificados para entidades de certificación (CA) de terceros.<br />CertificateAuthority Almacén de certificados para las entidades de certificación (CA) intermedias.<br />No permitidos Almacén de certificados para los certificados revocados.<br />Telefónica Almacén de certificados para Certificados personales.<br />Raíces Almacén de certificados para entidades de certificación (CA) raíz de confianza.<br />TrustedPeople Almacén de certificados para las personas y los recursos de confianza directa.<br />TrustedPublisher Almacén de certificados para publicadores de confianza directa.<br /><br /> El valor predeterminado es My. Este atributo es del tipo <xref:System.Security.Cryptography.X509Certificates.StoreName>.|  
-|X509FindType|Define el tipo de búsqueda de X.509 que se va a ejecutar. El tipo contenido en el atributo `findValue` debe satisfacer los requisitos de este atributo. Los valores válidos son los siguientes:<br /><br /> -   FindByThumbPrint<br />-FindBySubjectName<br />-FindBySubjectDistinguishedName<br />-   FindByIssuerName<br />-   FindByIssuerDistinguishedName<br />-   FindBySerialNumber<br />-   FindByTimeValid<br />-   FindByTimeNotYetValid<br />-   FindByTemplateName<br />-   FindByApplicationPolicy<br />-   FindByCertificatePolicy<br />- FindByExtension<br />-   FindByKeyUsage<br />-   FindBySubjectKeyIdentifier<br /><br /> El valor predeterminado es FindBySubjectDistinguishedName. Este atributo es del tipo <xref:System.Security.Cryptography.X509Certificates.X509FindType>.|  
+|`storeLocation`|Especifica la ubicación del certificado X.509 que usa el cliente para autenticarse al servicio. Los valores válidos incluyen los siguientes:<br /><br /> -LocalMachine: el almacén de certificados asignado al equipo local.<br />-CurrentUser: el almacén de certificados asignado al usuario actual.<br /><br /> El valor predeterminado es LocalMachine. Este atributo es del tipo <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.|  
+|`storeName`|Especifica el nombre del almacén del certificado X.509 que se va a buscar. Los valores válidos incluyen los siguientes:<br /><br /> -AddressBook: almacén de certificados para otros usuarios.<br />-AuthRoot: almacén de certificados para entidades de certificación (CA) de terceros.<br />-CertificateAuthority: almacén de certificados para las entidades de certificación (CA) intermedias.<br />-No permitido: almacén de certificados para los certificados revocados.<br />-Mi: almacén de certificados para Certificados personales.<br />-Root: almacén de certificados para entidades de certificación (CA) raíz de confianza.<br />-TrustedPeople: almacén de certificados para las personas y los recursos de confianza directa.<br />-TrustedPublisher: almacén de certificados para publicadores de confianza directa.<br /><br /> El valor predeterminado es My. Este atributo es del tipo <xref:System.Security.Cryptography.X509Certificates.StoreName>.|  
+|X509FindType|Define el tipo de búsqueda de X.509 que se va a ejecutar. El tipo contenido en el atributo `findValue` debe satisfacer los requisitos de este atributo. Los valores válidos incluyen los siguientes:<br /><br /> -FindByThumbPrint<br />-FindBySubjectName<br />-FindBySubjectDistinguishedName<br />- FindByIssuerName<br />- FindByIssuerDistinguishedName<br />-FindBySerialNumber<br />- FindByTimeValid<br />- FindByTimeNotYetValid<br />- FindByTemplateName<br />- FindByApplicationPolicy<br />- FindByCertificatePolicy<br />- FindByExtension<br />- FindByKeyUsage<br />- FindBySubjectKeyIdentifier<br /><br /> El valor predeterminado es FindBySubjectDistinguishedName. Este atributo es del tipo <xref:System.Security.Cryptography.X509Certificates.X509FindType>.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |[\<clientCredentials>](clientcredentials.md)|Especifica las credenciales usadas para autenticar el cliente en un servicio.|  
   
 ## <a name="remarks"></a>Comentarios  
- Este elemento de configuración especifica que el certificado utilizado para autenticar el cliente con este elemento. Para obtener más información, vea [Cómo: Especifique los valores](../../../wcf/how-to-specify-client-credential-values.md)de credencial de cliente.  
+ Este elemento de configuración especifica que el certificado utilizado para autenticar el cliente con este elemento. Para obtener más información, vea [Cómo: especificar valores de credencial de cliente](../../../wcf/how-to-specify-client-credential-values.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ClientCertificate%2A>
@@ -62,7 +62,7 @@ Define un certificado X.509 que se usa para autenticar un cliente en un servicio
 - <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>
 - [Comportamientos de seguridad](../../../wcf/feature-details/security-behaviors-in-wcf.md)
-- [Cómo: Especificar valores de credencial de cliente](../../../wcf/how-to-specify-client-credential-values.md)
+- [Procedimiento para especificar valores de credenciales de cliente](../../../wcf/how-to-specify-client-credential-values.md)
 - [Protección de clientes](../../../wcf/securing-clients.md)
-- [Trabajo con certificados](../../../wcf/feature-details/working-with-certificates.md)
+- [Trabajar con certificados](../../../wcf/feature-details/working-with-certificates.md)
 - [Protección de servicios y clientes](../../../wcf/feature-details/securing-services-and-clients.md)
