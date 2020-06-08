@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1a5758ea-2354-43c0-92a3-32c9909d64e1
 topic_type:
 - apiref
-ms.openlocfilehash: 30f2e675532848c2dbb1f055a0f1489cf3b2baa1
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 47f25dbb1f88dbf580b096246016cd46f2d0d89c
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76865798"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499836"
 ---
 # <a name="icorprofilercallback2garbagecollectionfinished-method"></a>ICorProfilerCallback2::GarbageCollectionFinished (Método)
 Notifica al generador de perfiles que se ha completado la recolección de elementos no utilizados y que se han emitido todas las devoluciones de llamada de recolección de elementos no utilizados.  
@@ -31,19 +31,19 @@ Notifica al generador de perfiles que se ha completado la recolección de elemen
 HRESULT GarbageCollectionFinished();  
 ```  
   
-## <a name="remarks"></a>Notas  
- Es seguro que el generador de perfiles Inspeccione los objetos en sus ubicaciones finales cuando se llama al método `GarbageCollectionFinished`.  
+## <a name="remarks"></a>Comentarios  
+ Es seguro que el generador de perfiles Inspeccione los objetos en sus ubicaciones finales cuando `GarbageCollectionFinished` se llama al método.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
-- [ICorProfilerCallback (interfaz)](icorprofilercallback-interface.md)
-- [ICorProfilerCallback2 (interfaz)](icorprofilercallback2-interface.md)
+- [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)
+- [ICorProfilerCallback2 (Interfaz)](icorprofilercallback2-interface.md)

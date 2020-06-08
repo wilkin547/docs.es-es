@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 47b2a3b6-907d-43dc-858d-1ae7dca1316a
 topic_type:
 - apiref
-ms.openlocfilehash: 1868d13a9dbb73dbdf64e49c395bdbff02ce89d4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e4401ea8a70e7ace8d8efc5e0a6d29f6db51b3df
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177453"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503820"
 ---
 # <a name="imetadataemit2definegenericparam-method"></a>IMetaDataEmit2::DefineGenericParam (Método)
 Crea una definición para un parámetro de tipo genérico y obtiene un token para ese parámetro de tipo genérico.  
@@ -41,36 +41,36 @@ HRESULT DefineGenericParam (
   
 ## <a name="parameters"></a>Parámetros  
  `tk`  
- [en] Un `mdTypeDef` `mdMethodDef` token que representa el método o constructor para el que se va a definir un parámetro genérico.  
+ de Un `mdTypeDef` `mdMethodDef` token o que representa el método o constructor para el que se va a definir un parámetro genérico.  
   
  `ulParamSeq`  
- [en] El índice del parámetro genérico.  
+ de Índice del parámetro genérico.  
   
  `dwParamFlags`  
- [en] Valor de la enumeración [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) que describe el tipo del parámetro genérico.  
+ de Un valor de la enumeración [CorGenericParamAttr (](corgenericparamattr-enumeration.md) que describe el tipo para el parámetro genérico.  
   
  `szname`  
- [en] El nombre del parámetro.  
+ de Nombre del parámetro.  
   
  `reserved`  
- [en] Este parámetro está reservado para la extensibilidad futura.  
+ de Este parámetro está reservado para extensibilidad futura.  
   
  `rtkConstraints`  
- [en] Matriz de tipos terminada en cero. Los miembros `mdTypeDef`de `mdTypeRef`la `mdTypeSpec` matriz deben ser un token de metadatos , , o .  
+ de Matriz terminada en cero de restricciones de tipo. Los miembros de la matriz deben ser un `mdTypeDef` `mdTypeRef` `mdTypeSpec` token de metadatos, o.  
   
  `pgp`  
- [fuera] Un token que representa el parámetro genérico.  
+ enuncia Token que representa el parámetro genérico.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
-- [IMetaDataEmit2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [IMetaDataEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 (Interfaz)](imetadataemit2-interface.md)
+- [IMetaDataEmit (Interfaz)](imetadataemit-interface.md)

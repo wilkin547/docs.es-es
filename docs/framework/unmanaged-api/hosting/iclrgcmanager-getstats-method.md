@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ce259d1d-cd81-4490-a7a1-0d0ea0804872
 topic_type:
 - apiref
-ms.openlocfilehash: 1e881b4a55a99bac3f9ca0e8db1556807b888f13
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 8622920a81f4b469361ffa879f7a4eeda697cab9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616975"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504230"
 ---
 # <a name="iclrgcmanagergetstats-method"></a>ICLRGCManager::GetStats (Método)
 Obtiene un conjunto de estadísticas actuales sobre el sistema de recolección de elementos no utilizados del Common Language Runtime.  
@@ -48,10 +48,10 @@ HRESULT GetStats (
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Después de que un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  CLR calcula y devuelve solo las estadísticas especificadas por el `Flags` campo de `pStats` .  
   
- Establezca el `Flags` campo en uno o varios valores de la enumeración [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) para especificar qué estadísticas de la estructura de [COR_GC_STATS](cor-gc-stats-structure.md) se van a establecer.  
+ Establezca el `Flags` campo en uno o varios valores de la enumeración [COR_GC_STAT_TYPES](cor-gc-stat-types-enumeration.md) para especificar qué estadísticas de la estructura de [COR_GC_STATS](cor-gc-stats-structure.md) se van a establecer.  
   
  A continuación se muestra un ejemplo de uso:  
   
@@ -70,7 +70,7 @@ pCLRGCManager->GetStats(&GCStats);
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también:
 
 - [Administración de memoria automática](../../../standard/automatic-memory-management.md)
 - [COR_GC_STATS (Estructura)](cor-gc-stats-structure.md)

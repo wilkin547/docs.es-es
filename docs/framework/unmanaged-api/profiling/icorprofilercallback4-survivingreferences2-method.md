@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 02b51888-5d89-4e50-a915-45b7e329aad9
 topic_type:
 - apiref
-ms.openlocfilehash: bec50183e6a8690cb02f3dc06d32b7449e055cea
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 208ce1d7ef8a1eab4f18a6d488f0cc480b5713d8
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76865173"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499342"
 ---
 # <a name="icorprofilercallback4survivingreferences2-method"></a>ICorProfilerCallback4::SurvivingReferences2 (Método)
 Informa del diseño de objetos del montón como resultado de una recolección de elementos no utilizados sin compactación. Se llama a este método si el generador de perfiles ha implementado la interfaz [ICorProfilerCallback4](icorprofilercallback4-interface.md) . Esta devolución de llamada reemplaza el método [ICorProfilerCallback2:: SurvivingReferences (](icorprofilercallback2-survivingreferences-method.md) , ya que puede informar de intervalos de objetos mayores cuyas longitudes superen lo que se puede expresar en un ulong.  
@@ -36,7 +36,7 @@ HRESULT SurvivingReferences2(
                 cObjectIDRangeLength[] );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parámetros  
  `cSurvivingObjectIDRanges`  
  [in] Número de bloques de objetos contiguos que sobrevivieron como resultado de la recolección de elementos no utilizados sin compactación. Es decir, el valor de `cSurvivingObjectIDRanges` es el tamaño de las matrices `objectIDRangeStart` y `cObjectIDRangeLength`, que almacenan un `ObjectID` y una longitud, respectivamente, para cada bloque de objetos.  
   
@@ -50,34 +50,34 @@ HRESULT SurvivingReferences2(
   
  Se especifica un tamaño para cada bloque al que se hace referencia en la matriz `objectIDRangeStart`.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Los elementos de las matrices `objectIDRangeStart` y `cObjectIDRangeLength` deben interpretarse del siguiente modo para determinar si un objeto ha sobrevivido a la recolección de elementos no utilizados. Supongamos que un valor `ObjectID` (`ObjectID`) se encuentra dentro del intervalo siguiente:  
   
  `ObjectIDRangeStart[i]` <= `ObjectID` < `ObjectIDRangeStart[i]` + `cObjectIDRangeLength[i]`  
   
  Para cualquier valor `i` que esté en el intervalo siguiente, el objeto sobrevivió a la recolección de elementos no utilizados:  
   
- 0 <= `i` < `cSurvivingObjectIDRanges`  
+ 0 <=`i` < `cSurvivingObjectIDRanges`  
   
  Una recolección de elementos no utilizados sin compactación recupera la memoria ocupada por objetos "inactivos", pero no compacta ese espacio liberado. Como consecuencia, la memoria se devuelve al montón pero no se mueve ningún objeto "activo".  
   
- Common Language Runtime (CLR) llama a `SurvivingReferences2` para las recolecciones de elementos no utilizados sin compactación. Para compactar las recolecciones de elementos no utilizados, se llama a [movedreferences2 (](icorprofilercallback4-movedreferences2-method.md) en su lugar. Se puede compactar una única recolección de elementos no utilizados para una generación y no compactar para otra. En el caso de una recolección de elementos no utilizados en una generación determinada, el generador de perfiles recibirá una devolución de llamada de `SurvivingReferences2` o una devolución de llamada [movedreferences2 (](icorprofilercallback4-movedreferences2-method.md) , pero no ambos.  
+ Common Language Runtime (CLR) llama a `SurvivingReferences2` para las recolecciones de elementos no utilizados sin compactación. Para compactar las recolecciones de elementos no utilizados, se llama a [movedreferences2 (](icorprofilercallback4-movedreferences2-method.md) en su lugar. Se puede compactar una única recolección de elementos no utilizados para una generación y no compactar para otra. En el caso de una recolección de elementos no utilizados en una generación determinada, el generador de perfiles recibirá una devolución de llamada `SurvivingReferences2` o una devolución de llamada [movedreferences2 (](icorprofilercallback4-movedreferences2-method.md) , pero no ambos.  
   
  Se podrían recibir varias devoluciones de llamada `SurvivingReferences2` durante una recolección de elementos no utilizados determinada, a causa de un almacenamiento de búfer interno limitado, de varias devoluciones de llamada durante la recolección de elementos no utilizados del servidor o por otras razones. En el caso de varias devoluciones de llamada durante una recolección de elementos no utilizados, la información es acumulativa. Todas las referencias que se notifican en cualquier devolución de llamada `SurvivingReferences2` sobreviven a la recolección de elementos no utilizados.  
   
- Si el generador de perfiles implementa las interfaces [ICorProfilerCallback](icorprofilercallback-interface.md) y [ICorProfilerCallback4](icorprofilercallback4-interface.md) , se llama al método `SurvivingReferences2` antes que al método [ICorProfilerCallback2:: survivingreferences (](icorprofilercallback2-survivingreferences-method.md) , pero solo si `SurvivingReferences2` devuelve correctamente. Los generadores de perfiles pueden devolver un valor HRESULT que indique un error del método `SurvivingReferences2` para evitar llamar al segundo método.  
+ Si el generador de perfiles implementa las interfaces [ICorProfilerCallback](icorprofilercallback-interface.md) y [ICorProfilerCallback4](icorprofilercallback4-interface.md) , `SurvivingReferences2` se llama al método antes que al método [ICorProfilerCallback2:: SurvivingReferences (](icorprofilercallback2-survivingreferences-method.md) , pero solo si se `SurvivingReferences2` devuelve correctamente. Los generadores de perfiles pueden devolver un valor HRESULT que indique un error del método `SurvivingReferences2` para evitar llamar al segundo método.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
-- [ICorProfilerCallback (interfaz)](icorprofilercallback-interface.md)
-- [ICorProfilerCallback2 (interfaz)](icorprofilercallback2-interface.md)
-- [ICorProfilerCallback4 (interfaz)](icorprofilercallback4-interface.md)
+- [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)
+- [ICorProfilerCallback2 (Interfaz)](icorprofilercallback2-interface.md)
+- [ICorProfilerCallback4 (Interfaz)](icorprofilercallback4-interface.md)
