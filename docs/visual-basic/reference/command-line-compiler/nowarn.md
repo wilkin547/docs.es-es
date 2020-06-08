@@ -6,55 +6,55 @@ helpviewer_keywords:
 - /nowarn compiler option [Visual Basic]
 - -nowarn compiler option [Visual Basic]
 ms.assetid: 7ebf2106-0652-4fdc-bf60-70fc86465d83
-ms.openlocfilehash: 880fdf4931dadea547d64d0506bd3e978956468e
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 37851f99eb88543e939ce48995ded41958e57cc3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005398"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397493"
 ---
-# <a name="-nowarn"></a><span data-ttu-id="ae9d2-102">-nowarn</span><span class="sxs-lookup"><span data-stu-id="ae9d2-102">-nowarn</span></span>
-<span data-ttu-id="ae9d2-103">Suprime la capacidad del compilador para generar advertencias.</span><span class="sxs-lookup"><span data-stu-id="ae9d2-103">Suppresses the compiler's ability to generate warnings.</span></span>  
+# <a name="-nowarn"></a><span data-ttu-id="13ae8-102">-nowarn</span><span class="sxs-lookup"><span data-stu-id="13ae8-102">-nowarn</span></span>
+<span data-ttu-id="13ae8-103">Suprime la capacidad del compilador para generar advertencias.</span><span class="sxs-lookup"><span data-stu-id="13ae8-103">Suppresses the compiler's ability to generate warnings.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ae9d2-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ae9d2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="13ae8-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="13ae8-104">Syntax</span></span>  
   
 ```console  
 -nowarn[:numberList]  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="ae9d2-105">Argumentos</span><span class="sxs-lookup"><span data-stu-id="ae9d2-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="13ae8-105">Argumentos</span><span class="sxs-lookup"><span data-stu-id="13ae8-105">Arguments</span></span>  
   
-|<span data-ttu-id="ae9d2-106">Término</span><span class="sxs-lookup"><span data-stu-id="ae9d2-106">Term</span></span>|<span data-ttu-id="ae9d2-107">Definición</span><span class="sxs-lookup"><span data-stu-id="ae9d2-107">Definition</span></span>|  
+|<span data-ttu-id="13ae8-106">Término</span><span class="sxs-lookup"><span data-stu-id="13ae8-106">Term</span></span>|<span data-ttu-id="13ae8-107">Definición</span><span class="sxs-lookup"><span data-stu-id="13ae8-107">Definition</span></span>|  
 |---|---|  
-|`numberList`|<span data-ttu-id="ae9d2-108">Opcional.</span><span class="sxs-lookup"><span data-stu-id="ae9d2-108">Optional.</span></span> <span data-ttu-id="ae9d2-109">Lista delimitada por comas de los números de id. de advertencia que el compilador debe suprimir.</span><span class="sxs-lookup"><span data-stu-id="ae9d2-109">Comma-delimited list of the warning ID numbers that the compiler should suppress.</span></span> <span data-ttu-id="ae9d2-110">Si no se especifican los id. de advertencia, se suprimen todas las advertencias.</span><span class="sxs-lookup"><span data-stu-id="ae9d2-110">If the warning IDs are not specified, all warnings are suppressed.</span></span>|  
+|`numberList`|<span data-ttu-id="13ae8-108">Opcional.</span><span class="sxs-lookup"><span data-stu-id="13ae8-108">Optional.</span></span> <span data-ttu-id="13ae8-109">Lista delimitada por comas de los números de id. de advertencia que el compilador debe suprimir.</span><span class="sxs-lookup"><span data-stu-id="13ae8-109">Comma-delimited list of the warning ID numbers that the compiler should suppress.</span></span> <span data-ttu-id="13ae8-110">Si no se especifican los id. de advertencia, se suprimen todas las advertencias.</span><span class="sxs-lookup"><span data-stu-id="13ae8-110">If the warning IDs are not specified, all warnings are suppressed.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ae9d2-111">Comentarios</span><span class="sxs-lookup"><span data-stu-id="ae9d2-111">Remarks</span></span>  
- <span data-ttu-id="ae9d2-112">La opción `-nowarn` hace que el compilador no genere advertencias.</span><span class="sxs-lookup"><span data-stu-id="ae9d2-112">The `-nowarn` option causes the compiler to not generate warnings.</span></span> <span data-ttu-id="ae9d2-113">Para suprimir una advertencia individual, proporcione el id. de advertencia a la opción `-nowarn` que aparece después de los dos puntos.</span><span class="sxs-lookup"><span data-stu-id="ae9d2-113">To suppress an individual warning, supply the warning ID to the `-nowarn` option following the colon.</span></span> <span data-ttu-id="ae9d2-114">Separe varios números de advertencia mediante comas.</span><span class="sxs-lookup"><span data-stu-id="ae9d2-114">Separate multiple warning numbers with commas.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="13ae8-111">Comentarios</span><span class="sxs-lookup"><span data-stu-id="13ae8-111">Remarks</span></span>  
+ <span data-ttu-id="13ae8-112">La opción `-nowarn` hace que el compilador no genere advertencias.</span><span class="sxs-lookup"><span data-stu-id="13ae8-112">The `-nowarn` option causes the compiler to not generate warnings.</span></span> <span data-ttu-id="13ae8-113">Para suprimir una advertencia individual, proporcione el id. de advertencia a la opción `-nowarn` que aparece después de los dos puntos.</span><span class="sxs-lookup"><span data-stu-id="13ae8-113">To suppress an individual warning, supply the warning ID to the `-nowarn` option following the colon.</span></span> <span data-ttu-id="13ae8-114">Separe varios números de advertencia mediante comas.</span><span class="sxs-lookup"><span data-stu-id="13ae8-114">Separate multiple warning numbers with commas.</span></span>  
   
- <span data-ttu-id="ae9d2-115">Solo tendrá que especificar la parte numérica del identificador de advertencia.</span><span class="sxs-lookup"><span data-stu-id="ae9d2-115">You need to specify only the numeric part of the warning identifier.</span></span> <span data-ttu-id="ae9d2-116">Por ejemplo, si quiere suprimir BC42024, la advertencia para las variables locales no utilizadas, especifique `-nowarn:42024`.</span><span class="sxs-lookup"><span data-stu-id="ae9d2-116">For example, if you want to suppress BC42024, the warning for unused local variables, specify `-nowarn:42024`.</span></span>  
+ <span data-ttu-id="13ae8-115">Solo tendrá que especificar la parte numérica del identificador de advertencia.</span><span class="sxs-lookup"><span data-stu-id="13ae8-115">You need to specify only the numeric part of the warning identifier.</span></span> <span data-ttu-id="13ae8-116">Por ejemplo, si quiere suprimir BC42024, la advertencia para las variables locales no utilizadas, especifique `-nowarn:42024`.</span><span class="sxs-lookup"><span data-stu-id="13ae8-116">For example, if you want to suppress BC42024, the warning for unused local variables, specify `-nowarn:42024`.</span></span>  
   
- <span data-ttu-id="ae9d2-117">Para obtener más información sobre los números de id. de advertencia, vea [Configuración de advertencias en Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="ae9d2-117">For more information on the warning ID numbers, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
+ <span data-ttu-id="13ae8-117">Para obtener más información sobre los números de id. de advertencia, vea [Configuración de advertencias en Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="13ae8-117">For more information on the warning ID numbers, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
   
-|<span data-ttu-id="ae9d2-118">Para establecer -nowarn en el entorno de desarrollo integrado de Visual Studio</span><span class="sxs-lookup"><span data-stu-id="ae9d2-118">To set -nowarn in the Visual Studio integrated development environment</span></span>|  
+|<span data-ttu-id="13ae8-118">Para establecer -nowarn en el entorno de desarrollo integrado de Visual Studio</span><span class="sxs-lookup"><span data-stu-id="13ae8-118">To set -nowarn in the Visual Studio integrated development environment</span></span>|  
 |---|  
-|<span data-ttu-id="ae9d2-119">1.  Seleccione un proyecto en el **Explorador de soluciones**.</span><span class="sxs-lookup"><span data-stu-id="ae9d2-119">1.  Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="ae9d2-120">En el menú **Proyecto**, haga clic en **Propiedades**.</span><span class="sxs-lookup"><span data-stu-id="ae9d2-120">On the **Project** menu, click **Properties**.</span></span> <br /><span data-ttu-id="ae9d2-121">2.  Haga clic en la pestaña **Compilar**.</span><span class="sxs-lookup"><span data-stu-id="ae9d2-121">2.  Click the **Compile** tab.</span></span><br /><span data-ttu-id="ae9d2-122">3.  Active la casilla **Deshabilitar todas las advertencias** para deshabilitar todas las advertencias.</span><span class="sxs-lookup"><span data-stu-id="ae9d2-122">3.  Select the **Disable all warnings** check box to disable all warnings.</span></span><br />     <span data-ttu-id="ae9d2-123">o bien</span><span class="sxs-lookup"><span data-stu-id="ae9d2-123">- or -</span></span><br />     <span data-ttu-id="ae9d2-124">Para deshabilitar una advertencia concreta, haga clic en **Ninguno** en la lista desplegable situada junto a la advertencia.</span><span class="sxs-lookup"><span data-stu-id="ae9d2-124">To disable a particular warning, click **None** from the drop-down list adjacent to the warning.</span></span>|  
+|<span data-ttu-id="13ae8-119">1.  Seleccione un proyecto en el **Explorador de soluciones**.</span><span class="sxs-lookup"><span data-stu-id="13ae8-119">1.  Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="13ae8-120">En el menú **Proyecto**, haga clic en **Propiedades**.</span><span class="sxs-lookup"><span data-stu-id="13ae8-120">On the **Project** menu, click **Properties**.</span></span> <br /><span data-ttu-id="13ae8-121">2.  Haga clic en la pestaña **Compilar**.</span><span class="sxs-lookup"><span data-stu-id="13ae8-121">2.  Click the **Compile** tab.</span></span><br /><span data-ttu-id="13ae8-122">3.  Active la casilla **Deshabilitar todas las advertencias** para deshabilitar todas las advertencias.</span><span class="sxs-lookup"><span data-stu-id="13ae8-122">3.  Select the **Disable all warnings** check box to disable all warnings.</span></span><br />     <span data-ttu-id="13ae8-123">o bien</span><span class="sxs-lookup"><span data-stu-id="13ae8-123">- or -</span></span><br />     <span data-ttu-id="13ae8-124">Para deshabilitar una advertencia concreta, haga clic en **Ninguno** en la lista desplegable situada junto a la advertencia.</span><span class="sxs-lookup"><span data-stu-id="13ae8-124">To disable a particular warning, click **None** from the drop-down list adjacent to the warning.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="ae9d2-125">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="ae9d2-125">Example</span></span>  
- <span data-ttu-id="ae9d2-126">El código siguiente compila `T2.vb` y no muestra ninguna advertencia.</span><span class="sxs-lookup"><span data-stu-id="ae9d2-126">The following code compiles `T2.vb` and does not display any warnings.</span></span>  
+## <a name="example"></a><span data-ttu-id="13ae8-125">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="13ae8-125">Example</span></span>  
+ <span data-ttu-id="13ae8-126">El código siguiente compila `T2.vb` y no muestra ninguna advertencia.</span><span class="sxs-lookup"><span data-stu-id="13ae8-126">The following code compiles `T2.vb` and does not display any warnings.</span></span>  
   
 ```console
 vbc -nowarn t2.vb  
 ```  
   
-## <a name="example"></a><span data-ttu-id="ae9d2-127">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="ae9d2-127">Example</span></span>  
- <span data-ttu-id="ae9d2-128">El código compila `T2.vb` siguiente y no muestra las advertencias para las variables locales no utilizadas (42024).</span><span class="sxs-lookup"><span data-stu-id="ae9d2-128">The following code compiles `T2.vb` and does not display the warnings for unused local variables (42024).</span></span>  
+## <a name="example"></a><span data-ttu-id="13ae8-127">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="13ae8-127">Example</span></span>  
+ <span data-ttu-id="13ae8-128">El código compila `T2.vb` siguiente y no muestra las advertencias para las variables locales no utilizadas (42024).</span><span class="sxs-lookup"><span data-stu-id="13ae8-128">The following code compiles `T2.vb` and does not display the warnings for unused local variables (42024).</span></span>  
   
 ```console
 vbc -nowarn:42024 t2.vb  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ae9d2-129">Vea también</span><span class="sxs-lookup"><span data-stu-id="ae9d2-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="13ae8-129">Vea también</span><span class="sxs-lookup"><span data-stu-id="13ae8-129">See also</span></span>
 
-- [<span data-ttu-id="ae9d2-130">Compilador de línea de comandos de Visual Basic</span><span class="sxs-lookup"><span data-stu-id="ae9d2-130">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
-- [<span data-ttu-id="ae9d2-131">Líneas de comandos de compilación de ejemplo</span><span class="sxs-lookup"><span data-stu-id="ae9d2-131">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [<span data-ttu-id="ae9d2-132">Configuring Warnings in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="ae9d2-132">Configuring Warnings in Visual Basic</span></span>](/visualstudio/ide/configuring-warnings-in-visual-basic)
+- [<span data-ttu-id="13ae8-130">Compilador de línea de comandos de Visual Basic</span><span class="sxs-lookup"><span data-stu-id="13ae8-130">Visual Basic Command-Line Compiler</span></span>](index.md)
+- [<span data-ttu-id="13ae8-131">Líneas de comandos de compilación de ejemplo</span><span class="sxs-lookup"><span data-stu-id="13ae8-131">Sample Compilation Command Lines</span></span>](sample-compilation-command-lines.md)
+- [<span data-ttu-id="13ae8-132">Configuring Warnings in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="13ae8-132">Configuring Warnings in Visual Basic</span></span>](/visualstudio/ide/configuring-warnings-in-visual-basic)
