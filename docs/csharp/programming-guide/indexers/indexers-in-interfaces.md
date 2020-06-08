@@ -5,12 +5,12 @@ helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-ms.openlocfilehash: 667a4213626ee37bfc5bf8c4fe78c2cf7186a73e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9ce6e4f0e0533c2880c6241f44409435248a336a
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77627843"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287485"
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>Indizadores en interfaces (Guía de programación de C#)
 
@@ -49,9 +49,9 @@ En cambio, el nombre completo solo es necesario para evitar la ambigüedad cuand
 string IEmployee.this[int index]
 {
 }
-``
+```
 
-implements the indexer on the `IEmployee` interface, while the following declaration:
+implementa el indexador en la interfaz `IEmployee`, mientras que la siguiente declaración:
 
 ```csharp
 string ICitizen.this[int index]

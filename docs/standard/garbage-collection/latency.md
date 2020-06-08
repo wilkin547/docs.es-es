@@ -6,12 +6,12 @@ helpviewer_keywords:
 - garbage collection, intrusiveness
 - garbage collection, latency modes
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
-ms.openlocfilehash: a8eaf0c80aa32978eead80c51a905cbcd66a537b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ee45fe5e8016c7507bc3a873e615fd8379810a8e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74283593"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286020"
 ---
 # <a name="latency-modes"></a>Modos de latencia
 
@@ -58,12 +58,12 @@ Cuando use el modo [GCLatencyMode.LowLatency](xref:System.Runtime.GCLatencyMode.
 
 - Tenga en cuenta los subprocesos que podrían estar realizando asignaciones. Como el valor de la propiedad <xref:System.Runtime.GCSettings.LatencyMode%2A> se aplica a todo el proceso, se pueden generar excepciones <xref:System.OutOfMemoryException> en cualquier subproceso que esté realizando asignaciones.
 
-- Ajuste el código de latencia baja en regiones de ejecución restringidas. Para obtener más información, vea [Regiones de ejecución restringidas](../../../docs/framework/performance/constrained-execution-regions.md).
+- Ajuste el código de latencia baja en regiones de ejecución restringidas. Para obtener más información, vea [Regiones de ejecución restringidas](../../framework/performance/constrained-execution-regions.md).
 
 - Para forzar las recolecciones de generación 2 durante un período de latencia baja, llame al método <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType>.
 
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.GC?displayProperty=nameWithType>
-- [Colecciones inducidas](../../../docs/standard/garbage-collection/induced.md)
-- [Recolección de elementos no utilizados](../../../docs/standard/garbage-collection/index.md)
+- [Colecciones inducidas](induced.md)
+- [Recolección de elementos no utilizados](index.md)

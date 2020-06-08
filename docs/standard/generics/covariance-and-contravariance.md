@@ -11,12 +11,12 @@ helpviewer_keywords:
 - covariance and contravariance in generics
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
-ms.openlocfilehash: 909b03588d2a41f667bfa117a5cecb420b125088
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b11b5fc93d9b7289e62d6abc9d3ca19027a107c5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75708402"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287563"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Covarianza y contravarianza en genéricos
 Covarianza y contravarianza son términos que hacen referencia a la capacidad de usar un tipo más derivado (más específico) o menos derivado (menos específico) que el indicado originalmente. Los parámetros de tipo genérico admiten la covarianza y contravarianza para proporcionar mayor flexibilidad a la hora de asignar y usar tipos genéricos. Cuando se hace referencia a un sistema de tipos, la covarianza, contravarianza e invarianza tienen las siguientes definiciones. En el ejemplo se presupone una clase base denominada `Base` y una clase derivada denominada `Derived`.  
@@ -126,18 +126,18 @@ Covarianza y contravarianza son términos que hacen referencia a la capacidad de
  A partir de .NET Framework 4, Visual Basic y C# tienen palabras clave que permiten marcar como covariante o contravariante los parámetros de tipo genérico de las interfaces y los delegados.  
   
 > [!NOTE]
-> A partir de .NET Framework versión 2.0, Common Language Runtime admite anotaciones de varianza en parámetros de tipo genérico. Antes de .NET Framework 4, la única manera de definir una clase genérica que tuviera estas anotaciones era usar el lenguaje intermedio de Microsoft (MSIL), ya fuera mediante la compilación de la clase con [Ilasm.exe (Ensamblador de IL)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) o con la emisión en un ensamblado dinámico.  
+> A partir de .NET Framework versión 2.0, Common Language Runtime admite anotaciones de varianza en parámetros de tipo genérico. Antes de .NET Framework 4, la única manera de definir una clase genérica que tuviera estas anotaciones era usar el lenguaje intermedio de Microsoft (MSIL), ya fuera mediante la compilación de la clase con [Ilasm.exe (Ensamblador de IL)](../../framework/tools/ilasm-exe-il-assembler.md) o con la emisión en un ensamblado dinámico.  
   
- Un parámetro de tipo covariante se marca con la palabra clave `out` (palabra clave`Out` en Visual Basic, `+` para el [Ensamblador de MSIL](../../../docs/framework/tools/ilasm-exe-il-assembler.md)). Puede usar un parámetro de tipo covariante como el valor devuelto de un método que pertenece a una interfaz o como el tipo de valor devuelto de un delegado. No puede usar un parámetro de tipo covariante como una restricción de tipo genérico para los métodos de interfaz.  
+ Un parámetro de tipo covariante se marca con la palabra clave `out` (palabra clave`Out` en Visual Basic, `+` para el [Ensamblador de MSIL](../../framework/tools/ilasm-exe-il-assembler.md)). Puede usar un parámetro de tipo covariante como el valor devuelto de un método que pertenece a una interfaz o como el tipo de valor devuelto de un delegado. No puede usar un parámetro de tipo covariante como una restricción de tipo genérico para los métodos de interfaz.  
   
 > [!NOTE]
 > Si un método de una interfaz tiene un parámetro que es un tipo de delegado genérico, se puede usar un parámetro de tipo covariante del tipo de interfaz para especificar un parámetro de tipo contravariante del tipo de delegado.  
   
- Un parámetro de tipo contravariante se marca con la palabra clave `in` (palabra clave`In` en Visual Basic, `-` para el [Ensamblador de MSIL](../../../docs/framework/tools/ilasm-exe-il-assembler.md)). Puede usar un parámetro de tipo contravariante como el tipo de un parámetro de un método que pertenece a una interfaz o como el tipo de un parámetro de un delegado. Puede usar un parámetro de tipo contravariante como una restricción de tipo genérico para un método de interfaz.  
+ Un parámetro de tipo contravariante se marca con la palabra clave `in` (palabra clave`In` en Visual Basic, `-` para el [Ensamblador de MSIL](../../framework/tools/ilasm-exe-il-assembler.md)). Puede usar un parámetro de tipo contravariante como el tipo de un parámetro de un método que pertenece a una interfaz o como el tipo de un parámetro de un delegado. Puede usar un parámetro de tipo contravariante como una restricción de tipo genérico para un método de interfaz.  
   
  Solo los tipos de interfaz y los tipos de delegado pueden tener parámetros de tipo variante. Un tipo de interfaz o un tipo de delegado puede tener parámetros de tipo covariante y contravariante.  
   
- Visual Basic y C# no le permiten infringir las reglas de uso de parámetros de tipo covariante y contravariante ni agregar anotaciones de covarianza y contravarianza a los parámetros de tipo de tipos distintos de interfaces y delegados. El [Ensamblador de MSIL](../../../docs/framework/tools/ilasm-exe-il-assembler.md) no realiza esas comprobaciones, pero se produce <xref:System.TypeLoadException> si intenta cargar un tipo que infringe las reglas.  
+ Visual Basic y C# no le permiten infringir las reglas de uso de parámetros de tipo covariante y contravariante ni agregar anotaciones de covarianza y contravarianza a los parámetros de tipo de tipos distintos de interfaces y delegados. El [Ensamblador de MSIL](../../framework/tools/ilasm-exe-il-assembler.md) no realiza esas comprobaciones, pero se produce <xref:System.TypeLoadException> si intenta cargar un tipo que infringe las reglas.  
   
  Para obtener información y código de ejemplo, vea [Varianza en interfaces genéricas (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) y [Varianza en interfaces genéricas (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).  
 

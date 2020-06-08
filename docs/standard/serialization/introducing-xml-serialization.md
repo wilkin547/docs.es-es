@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: 7534ad702039b37a85a24223576320aea8052e9e
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: d9b71b7530debde7708ee107c990541e2b97cd44
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421272"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84277965"
 ---
 # <a name="xml-serialization"></a>serialización XML
 
@@ -33,7 +33,7 @@ La serialización es el proceso de convertir un objeto a un formulario que pueda
 
  Los datos de los objetos se describen mediante construcciones de lenguaje de programación, como clases, campos, propiedades, tipos primitivos, matrices e incluso XML insertado en forma de objetos **XmlElement** o **XmlAttribute**. Existe la opción de crear clases propias, anotadas con atributos, o de utilizar la herramienta de definición de esquema XML para generar las clases de acuerdo con un documento de esquema XML existente.
 
- Si se dispone de un esquema XML, es posible ejecutar la herramienta de definición de esquema XML con el fin de generar un conjunto de clases fuertemente tipadas para el esquema y que se anoten con atributos. Cuando se serializa una instancia de este tipo de clase, el XML generado se adhiere al Esquema XML. Contando con este tipo de clase, se puede programar con un modelo de objetos manipulados con facilidad estando asegurado que el XML generado cumple el esquema XML. Esta es una alternativa al uso de otras clases en .NET Framework, como las clases **XmlReader** y **XmlWriter**, para analizar y escribir una secuencia XML. Para obtener más información, vea [XML Documents and Data](../../../docs/standard/data/xml/index.md) (Documentos y datos XML). Estas clases le permiten analizar cualquier secuencia XML. En contraste, use **XmlSerializer** cuando se espera que la secuencia XML cumpla con un esquema XML conocido.
+ Si se dispone de un esquema XML, es posible ejecutar la herramienta de definición de esquema XML con el fin de generar un conjunto de clases fuertemente tipadas para el esquema y que se anoten con atributos. Cuando se serializa una instancia de este tipo de clase, el XML generado se adhiere al Esquema XML. Contando con este tipo de clase, se puede programar con un modelo de objetos manipulados con facilidad estando asegurado que el XML generado cumple el esquema XML. Esta es una alternativa al uso de otras clases en .NET Framework, como las clases **XmlReader** y **XmlWriter**, para analizar y escribir una secuencia XML. Para obtener más información, vea [XML Documents and Data](../data/xml/index.md) (Documentos y datos XML). Estas clases le permiten analizar cualquier secuencia XML. En contraste, use **XmlSerializer** cuando se espera que la secuencia XML cumpla con un esquema XML conocido.
 
  Los atributos controlan la secuencia XML generada por la clase **XmlSerializer**, lo que le permite establecer el espacio de nombres XML, el nombre de elemento, el nombre de atributo, etc., de la secuencia XML. Para obtener más información sobre estos atributos y la forma en que controlan la serialización XML, vea [Controlling XML Serialization Using Attributes](controlling-xml-serialization-using-attributes.md) (Controlar la serialización XML mediante atributos). Para consultar una tabla de los atributos que se usan para controlar el XML generado, vea [Attributes That Control XML Serialization](attributes-that-control-xml-serialization.md) (Atributos que controlan la serialización XML).
 

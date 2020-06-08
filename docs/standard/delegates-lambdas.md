@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: a9ca935814d1a7f77ded5f371ccd496c3859c523
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: 43e896bfe267299d3b0cb12a8f71e42fe2c87a88
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635925"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84280795"
 ---
 # <a name="delegates-and-lambdas"></a>Delegados y expresiones lambda
 
@@ -153,10 +153,10 @@ public MainWindow()
 }
 ```
 
-En este contexto, el operador `+=` se usa para suscribirse a un [evento](../../docs/csharp/language-reference/keywords/event.md). Para obtener más información, vea [Procedimiento para suscribir y cancelar la suscripción a eventos](../../docs/csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
+En este contexto, el operador `+=` se usa para suscribirse a un [evento](../csharp/language-reference/keywords/event.md). Para obtener más información, vea [Procedimiento para suscribir y cancelar la suscripción a eventos](../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
 
 ## <a name="further-reading-and-resources"></a>Más información y recursos
 
-* [Delegados](../../docs/csharp/programming-guide/delegates/index.md)
-* [Funciones anónimas](../../docs/csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
-* [Expresiones lambda](../../docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+* [Delegados](../csharp/programming-guide/delegates/index.md)
+* [Funciones anónimas](../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
+* [Expresiones lambda](../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)

@@ -2,12 +2,12 @@
 title: Procedimiento para leer datos de objeto de un archivo XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: 18428cbe2f2d3b9434a77ee4d063ceabbba6bcb8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e2365d1260d3f6e239f294b2af3399c2fb659575
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167823"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241882"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-c"></a>Procedimiento para leer datos de objeto de un archivo XML (C#)
 En este ejemplo se leen los datos de objetos que se han escrito anteriormente en un archivo XML con la clase <xref:System.Xml.Serialization.XmlSerializer>.  
@@ -58,7 +58,7 @@ Reemplace el nombre de archivo "c:\temp\SerializationOverview.xml" por el nombre
   
 - El archivo no existe (<xref:System.IO.IOException>).  
   
-## <a name="net-framework-security"></a>Seguridad de .NET Framework  
+## <a name="net-security"></a>Seguridad de .NET  
  Compruebe siempre las entradas y nunca deserialice datos de un origen que no sea de confianza. El objeto que se ha vuelto a crear se ejecuta en un equipo local con los permisos del código que lo ha deserializado. Compruebe todas las entradas antes de utilizar los datos en la aplicación.  
   
 ## <a name="see-also"></a>Vea también

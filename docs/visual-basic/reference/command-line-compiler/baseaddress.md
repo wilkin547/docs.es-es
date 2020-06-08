@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /baseaddress compiler option [Visual Basic]
 - baseaddress compiler option [Visual Basic]
 ms.assetid: c982bcf2-46e5-47a2-bc8f-a5cc32b7dc47
-ms.openlocfilehash: 6ee842dbe65cbd9d147e77ec523a2b031d303738
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: d241584195da7d6f74b45b191c4f63204c200d45
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002391"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84357185"
 ---
 # <a name="-baseaddress"></a>-baseaddress
 Especifica una dirección base predeterminada al crear un archivo DLL.  
@@ -46,7 +46,7 @@ Especifica una dirección base predeterminada al crear un archivo DLL.
   
 ## <a name="see-also"></a>Vea también
 
-- [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
-- [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Compilador de línea de comandos de Visual Basic](index.md)
+- [-target (Visual Basic)](target.md)
+- [Líneas de comandos de compilación de ejemplo](sample-compilation-command-lines.md)
 - [Sn.exe (herramienta de nombre seguro)](../../../framework/tools/sn-exe-strong-name-tool.md)

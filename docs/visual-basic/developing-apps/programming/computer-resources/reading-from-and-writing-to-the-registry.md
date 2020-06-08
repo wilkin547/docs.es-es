@@ -6,12 +6,12 @@ helpviewer_keywords:
 - registry [Visual Basic], writing to
 - registry [Visual Basic], reading
 ms.assetid: a13da106-185b-41d7-b23c-416da65e21e4
-ms.openlocfilehash: 89db9ef9db4235c069d6239d32e4f8679fbabf0b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb400ef89edaa4eb743aee3a7f2cc5b9dfec4534
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74349763"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84360064"
 ---
 # <a name="reading-from-and-writing-to-the-registry-visual-basic"></a>Leer y escribir en el Registro (Visual Basic)
 
@@ -21,19 +21,19 @@ En este tema se describen las tareas y los temas conceptuales asociados al Regis
   
 ## <a name="in-this-section"></a>En esta sección  
 
- [Crear una clave del Registro y establecer su valor](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)  
+ [Crear una clave del Registro y establecer su valor](how-to-create-a-registry-key-and-set-its-value.md)  
  Describe cómo usar los métodos `CreateSubKey` y `SetValue` del objeto `My.Computer.Registry` para crear una clave del Registro y establecer su valor.  
   
- [Leer un valor a partir de una clave del Registro](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-read-a-value-from-a-registry-key.md)  
+ [Leer un valor a partir de una clave del Registro](how-to-read-a-value-from-a-registry-key.md)  
  Describe cómo usar el método `GetValue` del objeto `My.Computer.Registry` para leer un valor de una clave del Registro.  
   
- [Eliminar una clave del Registro](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-delete-a-registry-key.md)  
+ [Eliminar una clave del Registro](how-to-delete-a-registry-key.md)  
  Describe cómo usar el método `DeleteSubKey` de la propiedad `My.Computer.Registry.CurrentUser` para eliminar una clave del Registro.  
   
- [Leer y escribir en el Registro mediante Microsoft.Win32 Namespace](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md)  
+ [Leer y escribir en el Registro mediante Microsoft.Win32 Namespace](reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md)  
  Explica cómo usar las clases `Registry` y `RegistryKey` de .NET Framework para acceder al Registro.  
   
- [Seguridad y Registro](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)  
+ [Seguridad y Registro](security-and-the-registry.md)  
  Describe problemas de seguridad que afectan al Registro.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  

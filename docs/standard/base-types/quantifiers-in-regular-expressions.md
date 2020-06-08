@@ -14,12 +14,12 @@ helpviewer_keywords:
 - quantifiers
 - lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-ms.openlocfilehash: f1627248cbed0f03c6fb76ce660f9b2bf7764781
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dbfe4422b89b6223988ec9c6034d4b91b6ec8b5d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160019"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276153"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>cuantificadores en expresiones regulares
 Los cuantificadores especifican cuántas instancias de un carácter, grupo o clase de caracteres deben estar presentes en la entrada para que se encuentre una coincidencia.  En la tabla siguiente se indican los cuantificadores compatibles con .NET.  
@@ -36,13 +36,13 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
  Las cantidades `n` y `m` son constantes de tipo entero. Normalmente, los cuantificadores son expansivos, ya que hacen que el motor de expresiones regulares busque el mayor número posible de repeticiones de patrones concretos. Si se anexa el carácter `?` a un cuantificador se convierte en diferido, ya que hace que el motor de expresiones regulares busque el menor número posible de repeticiones. Para obtener una descripción completa de la diferencia entre los cuantificadores expansivos y diferidos, consulte la sección [Cuantificadores expansivos y diferidos](#Greedy) más adelante en este tema.  
   
 > [!IMPORTANT]
-> El anidamiento de cuantificadores (por ejemplo, como hace el patrón de expresión regular `(a*)*`) puede aumentar el número de comparaciones que debe realizar el motor de expresiones regulares, como una función exponencial del número de caracteres de la cadena de entrada. Para obtener más información sobre este comportamiento y sus soluciones alternativas, consulte [Retroceso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md).  
+> El anidamiento de cuantificadores (por ejemplo, como hace el patrón de expresión regular `(a*)*`) puede aumentar el número de comparaciones que debe realizar el motor de expresiones regulares, como una función exponencial del número de caracteres de la cadena de entrada. Para obtener más información sobre este comportamiento y sus soluciones alternativas, consulte [Retroceso](backtracking-in-regular-expressions.md).  
   
 ## <a name="regular-expression-quantifiers"></a>Cuantificadores de expresiones regulares  
  En las secciones siguientes se enumeran los cuantificadores admitidos en expresiones regulares de .NET.  
   
 > [!NOTE]
-> Si los caracteres *, +, ?, { y } se encuentran en un patrón de expresión regular, el motor de expresiones regulares los interpreta como cuantificadores o como parte de construcciones de cuantificador, a menos que se incluyan en una [clase de caracteres](../../../docs/standard/base-types/character-classes-in-regular-expressions.md). Para interpretarlos como caracteres literales fuera de una clase de caracteres, debe anteponerles una barra diagonal inversa para indicar su secuencia de escape. Por ejemplo, la cadena `\*` en un patrón de expresión regular se interpreta como un carácter de asterisco literal ("\*").  
+> Si los caracteres *, +, ?, { y } se encuentran en un patrón de expresión regular, el motor de expresiones regulares los interpreta como cuantificadores o como parte de construcciones de cuantificador, a menos que se incluyan en una [clase de caracteres](character-classes-in-regular-expressions.md). Para interpretarlos como caracteres literales fuera de una clase de caracteres, debe anteponerles una barra diagonal inversa para indicar su secuencia de escape. Por ejemplo, la cadena `\*` en un patrón de expresión regular se interpreta como un carácter de asterisco literal ("\*").  
   
 ### <a name="match-zero-or-more-times-"></a>Coincidir cero o más veces: *  
  El cuantificador `*` coincide con el elemento anterior cero o más veces. Equivale al cuantificador `{0,}`. `*` es un cuantificador expansivo cuyo equivalente diferido es `*?`.  
@@ -271,5 +271,5 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
   
 ## <a name="see-also"></a>Vea también
 
-- [Lenguaje de expresiones regulares: referencia rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
-- [Retroceso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)
+- [Lenguaje de expresiones regulares: referencia rápida](regular-expression-language-quick-reference.md)
+- [Retroceso](backtracking-in-regular-expressions.md)

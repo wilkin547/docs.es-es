@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LOH
 - garbage collection, large object heap
 - GC [.NET ], large object heap
-ms.openlocfilehash: dae8a3690d63d77a47a5cd2e76f210ca8210f058
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 87105acbd43eb8eda0daa00c65ca0635f5e1cc74
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420583"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286033"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Montón de objetos grandes en sistemas Windows
 
@@ -203,7 +203,7 @@ Como se puede ver, se trata de una prueba muy sencilla que simplemente asigna ob
 
 ### <a name="a-debugger"></a>Un depurador
 
-Si todo lo que tiene es un volcado de memoria y necesita examinar los objetos que realmente hay en el montón de objetos grandes, puede usar la [extensión de depurador SoS](../../../docs/framework/tools/sos-dll-sos-debugging-extension.md) proporcionada por .NET.
+Si todo lo que tiene es un volcado de memoria y necesita examinar los objetos que realmente hay en el montón de objetos grandes, puede usar la [extensión de depurador SoS](../../framework/tools/sos-dll-sos-debugging-extension.md) proporcionada por .NET.
 
 > [!NOTE]
 > Los comandos de depuración que se mencionan en esta sección son válidos con los [depuradores de Windows](https://www.microsoft.com/whdc/devtools/debugging/default.mspx).

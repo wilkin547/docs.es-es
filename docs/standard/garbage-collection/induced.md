@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, forced
 ms.assetid: 019008fe-4708-4e65-bebf-04fd9941e149
-ms.openlocfilehash: 604b49ef577a46204b523ebf5a8575a30b81635e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 36dff45587c6c28ba17fd7389dc3863893ff8f61
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73120920"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286046"
 ---
 # <a name="induced-collections"></a>Colecciones inducidas
 En la mayoría de los casos, el recolector de elementos no utilizados puede determinar cuál es el mejor momento para realizar una recolección y se debe permitir su ejecución de forma independiente. Hay ocasiones excepcionales en que una recolección forzada puede mejorar el rendimiento de la aplicación. En estos casos, se puede inducir la recolección de elementos no utilizados utilizando el método <xref:System.GC.Collect%2A?displayProperty=nameWithType> para forzar una recolección de elementos no utilizados.  
@@ -36,5 +36,5 @@ En la mayoría de los casos, el recolector de elementos no utilizados puede dete
   
 ## <a name="see-also"></a>Vea también
 
-- [Modos de latencia](../../../docs/standard/garbage-collection/latency.md)
-- [Recolección de elementos no utilizados](../../../docs/standard/garbage-collection/index.md)
+- [Modos de latencia](latency.md)
+- [Recolección de elementos no utilizados](index.md)

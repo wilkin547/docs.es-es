@@ -17,15 +17,15 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-ms.openlocfilehash: 9c525229eb1ba5ca00ad1042864f92621bb366d2
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: d9fb976c73891646df60b5329beb09493acbae8a
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243237"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277809"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Retroceso en expresiones regulares
-El retroceso se produce cuando un patrón de expresión regular contiene [cuantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) o [construcciones de alternancia](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md) opcionales y el motor de expresiones regulares vuelve a un estado guardado anterior para continuar la búsqueda de una coincidencia. El retroceso es fundamental para la eficacia de las expresiones regulares; permite que las expresiones sean eficaces y flexibles, y que coincidan con modelos muy complejos. Al mismo tiempo, esta eficacia tiene un costo. El retroceso suele ser el factor único más importante que afecta al rendimiento del motor de expresiones regulares. Afortunadamente, el desarrollador tiene control sobre el comportamiento del motor de expresiones regulares y cómo usa el retroceso. En este tema se explica cómo funciona el retroceso y cómo se puede controlar.  
+El retroceso se produce cuando un patrón de expresión regular contiene [cuantificadores](quantifiers-in-regular-expressions.md) o [construcciones de alternancia](alternation-constructs-in-regular-expressions.md) opcionales y el motor de expresiones regulares vuelve a un estado guardado anterior para continuar la búsqueda de una coincidencia. El retroceso es fundamental para la eficacia de las expresiones regulares; permite que las expresiones sean eficaces y flexibles, y que coincidan con modelos muy complejos. Al mismo tiempo, esta eficacia tiene un costo. El retroceso suele ser el factor único más importante que afecta al rendimiento del motor de expresiones regulares. Afortunadamente, el desarrollador tiene control sobre el comportamiento del motor de expresiones regulares y cómo usa el retroceso. En este tema se explica cómo funciona el retroceso y cómo se puede controlar.  
   
 > [!NOTE]
 > En general, un motor NFA (autómata finito no determinista), como el motor de expresiones regulares de .NET, se encarga de crear expresiones regulares eficaces y rápidas para el desarrollador.  
@@ -103,7 +103,7 @@ El retroceso se produce cuando un patrón de expresión regular contiene [cuanti
  La comparación de la cadena de entrada con la expresión regular continúa de esta manera hasta que el motor de expresiones regulares ha intentado todas las posibles combinaciones de coincidencias y, a continuación, concluye que no hay ninguna coincidencia. Debido a los cuantificadores anidados, esta comparación es O(2<sup>n</sup>) o una operación exponencial, donde *n* es el número de caracteres de la cadena de entrada. Esto significa que, en el peor de los casos, una cadena de entrada de 30 caracteres necesita aproximadamente 1.073.741.824 comparaciones y una cadena de entrada de 40 caracteres necesita aproximadamente 1.099.511.627.776 comparaciones. Si usa cadenas de estas longitudes o incluso mayores, los métodos de expresión regular pueden tardar mucho tiempo en completarse cuando procesan datos de entrada que no coinciden con el patrón de expresión regular.
 
 ## <a name="controlling-backtracking"></a>Controlar el retroceso  
- El retroceso permite crear expresiones regulares eficaces y flexibles. Sin embargo, como se ha mostrado en la sección anterior, estas ventajas pueden conllevar un bajo rendimiento inaceptable. Para evitar el retroceso excesivo, se debe definir un intervalo de tiempo de espera cuando se instancie un objeto <xref:System.Text.RegularExpressions.Regex> o se llame a un método estático de coincidencia de expresión regular. Esta técnica se analiza en la sección siguiente. Además, .NET admite tres elementos del lenguaje de expresiones regulares que limitan o suprimen la vuelta atrás (backtracking) y que admiten expresiones regulares complejas con poca o ninguna reducción del rendimiento: [grupos atómicos](#atomic-groups), [aserciones de búsqueda retrasada (lookbehind)](#lookbehind-assertions) y [aserciones de búsqueda anticipada (lookahead)](#lookahead-assertions). Para obtener más información sobre cada elemento del lenguaje, vea [Construcciones de agrupamiento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+ El retroceso permite crear expresiones regulares eficaces y flexibles. Sin embargo, como se ha mostrado en la sección anterior, estas ventajas pueden conllevar un bajo rendimiento inaceptable. Para evitar el retroceso excesivo, se debe definir un intervalo de tiempo de espera cuando se instancie un objeto <xref:System.Text.RegularExpressions.Regex> o se llame a un método estático de coincidencia de expresión regular. Esta técnica se analiza en la sección siguiente. Además, .NET admite tres elementos del lenguaje de expresiones regulares que limitan o suprimen la vuelta atrás (backtracking) y que admiten expresiones regulares complejas con poca o ninguna reducción del rendimiento: [grupos atómicos](#atomic-groups), [aserciones de búsqueda retrasada (lookbehind)](#lookbehind-assertions) y [aserciones de búsqueda anticipada (lookahead)](#lookahead-assertions). Para obtener más información sobre cada elemento del lenguaje, vea [Construcciones de agrupamiento](grouping-constructs-in-regular-expressions.md).  
 
 ### <a name="defining-a-time-out-interval"></a>Definición de un intervalo de tiempo de espera  
  A partir de .NET Framework 4.5, se puede establecer un valor de tiempo de espera que representa el intervalo más largo en el que el motor de expresión regular buscará una coincidencia única antes de abandonar el intento y generar una excepción <xref:System.Text.RegularExpressions.RegexMatchTimeoutException>. El intervalo de tiempo de espera se especifica al proporcionar un valor <xref:System.TimeSpan> al constructor <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29> para las expresiones regulares de instancias. Además, cada método estático de coincidencia de patrones tiene una sobrecarga con un parámetro <xref:System.TimeSpan> que permite especificar un valor de tiempo de espera. De forma predeterminada, el intervalo de tiempo de espera se establece en <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> y el motor de expresiones regulares no agota dicho tiempo.  
@@ -190,8 +190,8 @@ El retroceso se produce cuando un patrón de expresión regular contiene [cuanti
   
 ## <a name="see-also"></a>Vea también
 
-- [Expresiones regulares de .NET](../../../docs/standard/base-types/regular-expressions.md)
-- [Lenguaje de expresiones regulares: referencia rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
-- [Cuantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)
-- [Construcciones de alternancia](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)
-- [Construcciones de agrupamiento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)
+- [Expresiones regulares de .NET](regular-expressions.md)
+- [Lenguaje de expresiones regulares: referencia rápida](regular-expression-language-quick-reference.md)
+- [Cuantificadores](quantifiers-in-regular-expressions.md)
+- [Construcciones de alternancia](alternation-constructs-in-regular-expressions.md)
+- [Construcciones de agrupamiento](grouping-constructs-in-regular-expressions.md)

@@ -8,22 +8,22 @@ helpviewer_keywords:
 - concurrency [.NET]
 - asynchronous programming [.NET]
 ms.assetid: e573faa8-0212-44b1-a850-ce85dc54f47f
-ms.openlocfilehash: 08a1b45759b1b78368f867161a13cf2af4db1a60
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f65d7ec317a12c933eda41c5fd957d21c332b42
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73123196"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84285877"
 ---
 # <a name="parallel-processing-concurrency-and-async-programming-in-net"></a>Procesamiento paralelo, simultaneidad y programación asincrónica en .NET
 .NET proporciona varias maneras de escribir código asincrónico para que la aplicación responda mejor al usuario y escribir código paralelo que usa varios subprocesos de ejecución para optimizar el rendimiento del equipo del usuario.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Programación asincrónica](../../docs/standard/async.md)  
+ [Programación asincrónica](async.md)  
  Describe los mecanismos para la programación asincrónica que proporciona .NET.  
   
- [Programación en paralelo](../../docs/standard/parallel-programming/index.md)  
+ [Programación en paralelo](parallel-programming/index.md)  
  Describe un modelo de programación basado en tareas que simplifica el desarrollo en paralelo, de modo que le permite escribir código paralelo eficaz, específico y escalable de forma natural sin tener que trabajar directamente con subprocesos ni el grupo de subprocesos.  
 
- [Subprocesamiento](../../docs/standard/threading/index.md)  
+ [Subprocesamiento](threading/index.md)  
  Describe los mecanismos de simultaneidad y sincronización básicos que proporciona .NET.  

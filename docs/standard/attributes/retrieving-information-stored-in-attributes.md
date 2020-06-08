@@ -11,18 +11,18 @@ helpviewer_keywords:
 - multiple attribute instances
 - attributes [.NET Framework], retrieving
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
-ms.openlocfilehash: 4f0f3555ae1ab7e662d5f88ac65739a7c791a964
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fc8dcb38471d80d01d1f87993783af3d24868506
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78158082"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276140"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Recuperar información almacenada en atributos
 La recuperación de un atributo personalizado es un proceso sencillo. En primer lugar, declare una instancia del atributo que desea recuperar. A continuación, utilice el método <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> para inicializar el atributo nuevo en el valor del atributo que desea recuperar. Una vez inicializado el nuevo atributo, basta con usar sus propiedades para obtener los valores.  
   
 > [!IMPORTANT]
-> En este tema se describe cómo recuperar los atributos personalizados del código que se carga en el contexto de ejecución. Para recuperar los atributos del código que se carga en el contexto de solo reflexión, debe utilizar la clase <xref:System.Reflection.CustomAttributeData>, como se muestra en [How to: Load Assemblies into the Reflection-Only Context](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md) (Carga de ensamblados en el contexto de solo reflexión).  
+> En este tema se describe cómo recuperar los atributos personalizados del código que se carga en el contexto de ejecución. Para recuperar los atributos del código que se carga en el contexto de solo reflexión, debe utilizar la clase <xref:System.Reflection.CustomAttributeData>, como se muestra en [How to: Load Assemblies into the Reflection-Only Context](../../framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md) (Carga de ensamblados en el contexto de solo reflexión).  
   
  En esta sección se describen los siguientes métodos para recuperar atributos:  
   
@@ -87,4 +87,4 @@ The attribute was not found.
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>
 - <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>
-- [Atributos](../../../docs/standard/attributes/index.md)
+- [Atributos](index.md)

@@ -2,12 +2,12 @@
 title: Introducción a Azure y .NET
 description: Obtenga información sobre los conceptos básicos que necesita saber acerca de Azure y .NET.
 ms.date: 03/15/2020
-ms.openlocfilehash: 64defed4433647c2a0dcce91493d9ec77d21b541
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: d57d1d50852c9d7fff099554bd64c48c15129bb4
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607886"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446397"
 ---
 # <a name="introduction-to-azure-and-net"></a>Introducción a Azure y .NET
 
@@ -77,5 +77,5 @@ Una vez que se implementa la aplicación en Azure, es posible encontrar casos en
 
 * [Creación de una aplicación web ASP.NET Core en Azure](https://docs.microsoft.com/azure/app-service/app-service-web-get-started-dotnet)
 * [Obtenga información sobre la autenticación en el SDK de Azure para .NET](./sdk/authentication.md)
-* [Diagnóstico de errores en las aplicaciones en la nube](https://blogs.msdn.microsoft.com/webdev/2018/02/07/diagnosing-errors-on-your-cloud-apps)
+* [Diagnóstico de errores en las aplicaciones en la nube](https://devblogs.microsoft.com/aspnet/diagnosing-errors-on-your-cloud-apps/)
 * Descargue el libro electrónico gratuito [Guía de inicio rápido de Azure para desarrolladores de .NET](https://www.microsoft.com/net/download/thank-you/azure-quick-start-ebook).

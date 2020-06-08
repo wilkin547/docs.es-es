@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, partitioners
 ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
-ms.openlocfilehash: 8caea6d8a97b8c0daf7c59718479ea2e12a52d78
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 50553aab30d5a1bc5880ae0fe39c34508e57d0e5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73141570"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276730"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>Particionadores personalizados para PLINQ y TPL
 
@@ -23,7 +23,7 @@ Para paralelizar una operación en un origen de datos, uno de los pasos esencial
 
 Hay muchas maneras de particionar un origen de datos. En los enfoques más eficaces, varios subprocesos cooperan para procesar la secuencia de origen original, en lugar de separar físicamente el origen en varias secuencias secundarias. Para matrices y otros orígenes indexados como colecciones <xref:System.Collections.IList> donde la longitud se conoce de antemano, la *creación de particiones por rangos* es el tipo más sencillo de creación de particiones. Cada subproceso recibe índices exclusivos de apertura y cierre, para poder procesar su rango del origen sin sobrescribir subprocesos ni ser sobrescrito por algún subproceso. La única sobrecarga implicada en la creación de particiones por rangos es el trabajo inicial de crear los rangos; después de eso, no se requiere ninguna sincronización adicional. Por lo tanto, puede proporcionar un buen rendimiento siempre y cuando la carga de trabajo se divida de manera uniforme. Una desventaja de la creación de particiones por rangos es que, si un subproceso finaliza de forma anticipada, no puede ayudar a los otros subprocesos a finalizar su trabajo.
 
-Para listas vinculadas u otras colecciones cuya longitud no se conoce, puede usar la *creación de particiones por fragmentos*. En la creación de particiones por fragmentos, cada subproceso o tarea de una consulta o bucle paralelos consumen algunos elementos de origen de un fragmento, los procesan y vuelven a activarse para recuperar elementos adicionales. El particionador garantiza que todos los elementos se distribuyan y que no se dupliquen. Un fragmento puede tener cualquier tamaño. Por ejemplo, el particionador que se muestra en [Cómo: Implementar las particiones dinámicas](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md) crea fragmentos que contienen un solo elemento. Siempre que los fragmentos no sean demasiado grandes, este tipo de creación de particiones tiene un equilibrio de carga inherente, porque la asignación de elementos a los subprocesos no es predeterminada. Sin embargo, el particionador no incurre en sobrecarga de sincronización cada vez que el subproceso necesita obtener otro fragmento. La cantidad de sincronización en que se incurre en estos casos es inversamente proporcional al tamaño de los fragmentos.
+Para listas vinculadas u otras colecciones cuya longitud no se conoce, puede usar la *creación de particiones por fragmentos*. En la creación de particiones por fragmentos, cada subproceso o tarea de una consulta o bucle paralelos consumen algunos elementos de origen de un fragmento, los procesan y vuelven a activarse para recuperar elementos adicionales. El particionador garantiza que todos los elementos se distribuyan y que no se dupliquen. Un fragmento puede tener cualquier tamaño. Por ejemplo, el particionador que se muestra en [Cómo: Implementar las particiones dinámicas](how-to-implement-dynamic-partitions.md) crea fragmentos que contienen un solo elemento. Siempre que los fragmentos no sean demasiado grandes, este tipo de creación de particiones tiene un equilibrio de carga inherente, porque la asignación de elementos a los subprocesos no es predeterminada. Sin embargo, el particionador no incurre en sobrecarga de sincronización cada vez que el subproceso necesita obtener otro fragmento. La cantidad de sincronización en que se incurre en estos casos es inversamente proporcional al tamaño de los fragmentos.
 
 En general, la creación de particiones por rangos solo es más rápida cuando el tiempo de ejecución del delegado es de bajo a moderado y el origen tiene un gran número de elementos y el trabajo total de cada partición es más o menos equivalente. Por tanto, la creación de particiones por fragmentos suele ser más rápida en la mayoría de los casos. En los orígenes con un número reducido de elementos o con tiempos de ejecución más largos para el delegado, el rendimiento de la creación de particiones por fragmentos y rangos es prácticamente el mismo.
 
@@ -99,7 +99,7 @@ En la tabla siguiente se proporcionan detalles adicionales sobre cómo los tres 
 
 Si pretende que el particionador se use en un método <xref:System.Threading.Tasks.Parallel.ForEach%2A>, debe tener la capacidad de devolver un número dinámico de particiones. Esto significa que el particionador puede proporcionar un enumerador para una nueva partición a petición en cualquier momento durante la ejecución del bucle. Básicamente, siempre que el bucle agrega una nueva tarea en paralelo, solicita una nueva partición de esa tarea. Si necesita que los datos se puedan ordenar, realice la derivación de <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType>, para que a cada elemento de cada partición se le asigne un índice único.
 
-Para obtener más información y un ejemplo, vea [Cómo: Implementar las particiones dinámicas](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md).
+Para obtener más información y un ejemplo, vea [Cómo: Implementar las particiones dinámicas](how-to-implement-dynamic-partitions.md).
 
 ### <a name="contract-for-partitioners"></a>Contrato para particionadores
 
@@ -127,6 +127,6 @@ Al implementar un particionador personalizado, siga estas instrucciones para ayu
 
 ## <a name="see-also"></a>Vea también
 
-- [Programación en paralelo](../../../docs/standard/parallel-programming/index.md)
-- [Implementar las particiones dinámicas](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)
-- [Implementar un particionador para particionamiento estático](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)
+- [Programación en paralelo](index.md)
+- [Implementar las particiones dinámicas](how-to-implement-dynamic-partitions.md)
+- [Implementar un particionador para particionamiento estático](how-to-implement-a-partitioner-for-static-partitioning.md)

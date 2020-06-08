@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, child tasks
 ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
-ms.openlocfilehash: 8f15ee4f136e3e2df1a4e1c7683467f2a4bc9bc0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c8a5d2c1ccb8bb2d272c2582cd416cdfd75506d8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73123185"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84285695"
 ---
 # <a name="attached-and-detached-child-tasks"></a>Tareas secundarias asociadas y desasociadas
 Una *tarea secundaria* o *tarea anidada* es una instancia de <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> que se crea en el delegado de usuario de otra tarea, conocida como *tarea primaria*. Una tarea secundaria puede estar desasociada o asociada. Una *tarea secundaria desasociada* es una tarea que se ejecuta independientemente de su elemento principal. Una *tarea secundaria asociada* es una tarea anidada que se crea con la opción <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> y cuyo elemento primario no le prohíbe asociarse de forma explícita o predeterminada. Una tarea puede crear cualquier número de tareas secundarias asociadas y desasociadas, con la única limitación de los recursos del sistema.  
@@ -53,13 +53,13 @@ Una *tarea secundaria* o *tarea anidada* es una instancia de <xref:System.Thread
  [!code-vb[TPL_ChildTasks#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_childtasks/vb/child1a.vb#3)]  
   
 ## <a name="exceptions-in-child-tasks"></a>Excepciones en tareas secundarias  
- Si una tarea secundaria desasociadas inicia una excepción, esa excepción debe observarse o controlarse directamente en la tarea primaria como si se tratara de una tarea no anidada. Si una tarea secundaria asociada inicia una excepción, la excepción se propaga automáticamente a la tarea primaria y de nuevo al subproceso, que espera o intenta obtener acceso a la propiedad <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> de la tarea. Por tanto, si se usan tareas secundarias asociadas, se pueden controlar todas las excepciones en un solo punto en la llamada a <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> del subproceso que realiza la llamada. Para más información, consulte [Control de excepciones](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md).  
+ Si una tarea secundaria desasociadas inicia una excepción, esa excepción debe observarse o controlarse directamente en la tarea primaria como si se tratara de una tarea no anidada. Si una tarea secundaria asociada inicia una excepción, la excepción se propaga automáticamente a la tarea primaria y de nuevo al subproceso, que espera o intenta obtener acceso a la propiedad <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> de la tarea. Por tanto, si se usan tareas secundarias asociadas, se pueden controlar todas las excepciones en un solo punto en la llamada a <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> del subproceso que realiza la llamada. Para más información, consulte [Control de excepciones](exception-handling-task-parallel-library.md).  
   
 ## <a name="cancellation-and-child-tasks"></a>Cancelación y tareas secundarias  
- La cancelación de tareas es cooperativa. Es decir, para que se pueda cancelar, cada tarea secundaria asociada o desasociada debe supervisar el estado del token de cancelación. Si desea cancelar un elemento primario y todos sus elementos secundarios utilizando una solicitud de cancelación, debe pasar el mismo token como argumento a todas las tareas y proporcionar en cada tarea la lógica de respuesta a la solicitud en cada tarea. Para más información, consulte [Task Cancellation](../../../docs/standard/parallel-programming/task-cancellation.md) (Cancelación de tareas) y [How to: Cancel a Task and Its Children](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md) (Cancelar una tarea y sus elementos secundarios).  
+ La cancelación de tareas es cooperativa. Es decir, para que se pueda cancelar, cada tarea secundaria asociada o desasociada debe supervisar el estado del token de cancelación. Si desea cancelar un elemento primario y todos sus elementos secundarios utilizando una solicitud de cancelación, debe pasar el mismo token como argumento a todas las tareas y proporcionar en cada tarea la lógica de respuesta a la solicitud en cada tarea. Para más información, consulte [Task Cancellation](task-cancellation.md) (Cancelación de tareas) y [How to: Cancel a Task and Its Children](how-to-cancel-a-task-and-its-children.md) (Cancelar una tarea y sus elementos secundarios).  
   
 ### <a name="when-the-parent-cancels"></a>Cuando la tarea primaria se cancela  
- Si una tarea primaria se cancela antes de que se inicie su tarea secundaria, la tarea secundaria nunca se inicia. Si una tarea primaria se cancela después de que se ha iniciado su tarea secundaria, la tarea secundaria se ejecutará hasta completarse a menos que tenga su propia lógica de cancelación. Para más información, vea [Task Cancellation](../../../docs/standard/parallel-programming/task-cancellation.md).  
+ Si una tarea primaria se cancela antes de que se inicie su tarea secundaria, la tarea secundaria nunca se inicia. Si una tarea primaria se cancela después de que se ha iniciado su tarea secundaria, la tarea secundaria se ejecutará hasta completarse a menos que tenga su propia lógica de cancelación. Para más información, vea [Task Cancellation](task-cancellation.md).  
   
 ### <a name="when-a-detached-child-task-cancels"></a>Cuando una tarea secundaria desasociada se cancela  
  Si una tarea secundaria desasociada se cancela usando el mismo token que se pasó a la tarea primaria, y la tarea primaria no espera a la tarea secundaria, no se propagará ninguna excepción puesto que la excepción se trata cono una cancelación de cooperación benigna. Este comportamiento es igual que el de cualquier tarea de nivel superior.  
@@ -67,16 +67,16 @@ Una *tarea secundaria* o *tarea anidada* es una instancia de <xref:System.Thread
 ### <a name="when-an-attached-child-task-cancels"></a>Cuando se cancela una tarea secundaria asociada  
  Cuando una tarea secundaria asociada se cancela usando el mismo token que se pasó a su tarea primaria, se propaga una excepción <xref:System.Threading.Tasks.TaskCanceledException> al subproceso de unión dentro de <xref:System.AggregateException>. Se debe esperar a la tarea primaria para poder controlar todas las excepciones benignas además de todas las excepciones de error que se propagan de manera ascendente a través de un gráfico de tareas secundarias asociadas.  
   
- Para más información, consulte [Control de excepciones](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md).  
+ Para más información, consulte [Control de excepciones](exception-handling-task-parallel-library.md).  
   
 ## <a name="preventing-a-child-task-from-attaching-to-its-parent"></a>Impedir que una tarea secundaria se adjunte a su tarea primara  
  Una excepción no controlada producida por una tarea secundaria se propaga a la tarea primaria. Puede usar este comportamiento para observar todas las excepciones de tareas secundarias desde una tarea raíz en lugar de recorrer un árbol de tareas. Sin embargo, la propagación de excepciones puede dar problemas cuando una tarea primaria no cuenta con datos adjuntos de otro código. Por ejemplo, piense en una aplicación que llama a un componente de la biblioteca de terceros de un objeto <xref:System.Threading.Tasks.Task>. Si el componente de la biblioteca de terceros también crea un objeto <xref:System.Threading.Tasks.Task> y especifica <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> para asociarlo a la tarea primaria, las excepciones no controladas que aparecen en la tarea secundaria se propagan a la tarea primaria. Esto podría dar lugar a un comportamiento inesperado en la aplicación principal.  
   
  Para evitar que una tarea secundaria se adjunte a su tarea primaria, especifique la opción <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> cuando cree el objeto primario <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601>. Cuando una tarea intenta asociarse a su elemento primario y el elemento primario especifica la opción <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType>, la tarea secundaria no podrá asociarse a un elemento primario y se ejecutará como si no se hubiera especificado la opción <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType>.  
   
- Puede que también desee evitar que una tarea secundaria se adjunte a su tarea primaria cuando la tarea secundaria no finaliza a tiempo. Dado que una tarea primaria no finaliza hasta que finalizan todas las tareas secundarias, una tarea secundaria que se ejecute durante mucho tiempo puede provocar que el rendimiento general de la aplicación sea mediocre. Para obtener un ejemplo que muestra cómo mejorar el rendimiento de la aplicación impidiendo que una tarea se asocie a su tarea primaria, consulte [Cómo: Evitar que una tarea secundaria se asocie a su elemento primario](../../../docs/standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md).  
+ Puede que también desee evitar que una tarea secundaria se adjunte a su tarea primaria cuando la tarea secundaria no finaliza a tiempo. Dado que una tarea primaria no finaliza hasta que finalizan todas las tareas secundarias, una tarea secundaria que se ejecute durante mucho tiempo puede provocar que el rendimiento general de la aplicación sea mediocre. Para obtener un ejemplo que muestra cómo mejorar el rendimiento de la aplicación impidiendo que una tarea se asocie a su tarea primaria, consulte [Cómo: Evitar que una tarea secundaria se asocie a su elemento primario](how-to-prevent-a-child-task-from-attaching-to-its-parent.md).  
   
 ## <a name="see-also"></a>Vea también
 
-- [Programación en paralelo](../../../docs/standard/parallel-programming/index.md)
-- [Data Parallelism](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md) (Paralelismo de datos)
+- [Programación en paralelo](index.md)
+- [Data Parallelism](data-parallelism-task-parallel-library.md) (Paralelismo de datos)

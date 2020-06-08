@@ -15,12 +15,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, character escapes
 - constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-ms.openlocfilehash: 82e60b3cb5eb777d48219209550367642f78d8c3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1c260c349f035de67257adbca06fb447ff993329
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711433"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277679"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Escapes de carácter en expresiones regulares
 La barra diagonal inversa (\\) en una expresión regular indica una de las siguientes situaciones:  
@@ -37,16 +37,16 @@ La barra diagonal inversa (\\) en una expresión regular indica una de las sigui
   
 |Carácter o secuencia|Descripción|  
 |---------------------------|-----------------|  
-|Todos los caracteres excepto los siguientes:<br /><br /> . $ ^ { [ ( &#124; ) * + ? \ |Los caracteres que no aparecen en la columna **Carácter o secuencia** no tienen ningún significado especial en las expresiones regulares, sino que equivalen a sí mismos.<br /><br /> Los caracteres incluidos en la columna **Carácter o secuencia** son elementos del lenguaje especial de expresiones regulares. Para que coincidan en una expresión regular, deben escribirse entre secuencias de escape o incluirse en un [grupo de caracteres positivos](../../../docs/standard/base-types/character-classes-in-regular-expressions.md). Por ejemplo, las expresiones regulares `\$\d+` o `[$]\d+` coinciden con "$1200".|  
+|Todos los caracteres excepto los siguientes:<br /><br /> . $ ^ { [ ( &#124; ) * + ? \ |Los caracteres que no aparecen en la columna **Carácter o secuencia** no tienen ningún significado especial en las expresiones regulares, sino que equivalen a sí mismos.<br /><br /> Los caracteres incluidos en la columna **Carácter o secuencia** son elementos del lenguaje especial de expresiones regulares. Para que coincidan en una expresión regular, deben escribirse entre secuencias de escape o incluirse en un [grupo de caracteres positivos](character-classes-in-regular-expressions.md). Por ejemplo, las expresiones regulares `\$\d+` o `[$]\d+` coinciden con "$1200".|  
 |`\a`|Coincide con un carácter de campana (alarma), `\u0007`.|  
-|`\b`|En una clase de caracteres `[`*grupo_caracteres*`]`, coincide con un retroceso, `\u0008`.  (Consulte [Clases de caracteres](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)). Fuera de una clase de caracteres, `\b` es un delimitador que coincide con un límite de palabras. (Consulte [Delimitadores](../../../docs/standard/base-types/anchors-in-regular-expressions.md)).|  
+|`\b`|En una clase de caracteres `[`*grupo_caracteres*`]`, coincide con un retroceso, `\u0008`.  (Consulte [Clases de caracteres](character-classes-in-regular-expressions.md)). Fuera de una clase de caracteres, `\b` es un delimitador que coincide con un límite de palabras. (Consulte [Delimitadores](anchors-in-regular-expressions.md)).|  
 |`\t`|Coincide con un carácter de tabulación, `\u0009`.|  
 |`\r`|Coincide con un retorno de carro, `\u000D`. Observe que `\r` no es equivalente al carácter de nueva línea, `\n`.|  
 |`\v`|Coincide con una tabulación vertical, `\u000B`.|  
 |`\f`|Coincide con un avance de página, `\u000C`.|  
 |`\n`|Coincide con una nueva línea, `\u000A`.|  
 |`\e`|Coincide con un escape, `\u001B`.|  
-|`\` *nnn*|Coincide con un carácter ASCII, donde *nnn* está compuesto de dos o tres dígitos que representan el código de carácter octal. Por ejemplo, `\040` representa un carácter de espacio. Esta construcción se interpreta como una referencia inversa si tiene un solo dígito (por ejemplo, `\2`) o si se corresponde con el número de un grupo de captura. (Consulte [Construcciones de referencia inversa](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)).|  
+|`\` *nnn*|Coincide con un carácter ASCII, donde *nnn* está compuesto de dos o tres dígitos que representan el código de carácter octal. Por ejemplo, `\040` representa un carácter de espacio. Esta construcción se interpreta como una referencia inversa si tiene un solo dígito (por ejemplo, `\2`) o si se corresponde con el número de un grupo de captura. (Consulte [Construcciones de referencia inversa](backreference-constructs-in-regular-expressions.md)).|  
 |`\x` *nn*|Coincide con un carácter ASCII, donde *nn* es un código de carácter hexadecimal de dos dígitos.|  
 |`\c` *X*|Coincide con un carácter de control ASCII, donde X es la letra del carácter de control. Por ejemplo, `\cC` es CTRL-C.|  
 |`\u` *nnnn*|Coincide con una unidad de código UTF-16 cuyo valor hexadecimal es *nnnn*. **Nota:**  .NET no admite el escape de caracteres de Perl 5 usado para especificar Unicode. El escape de caracteres de Perl 5 tiene el formato `\x{` *####* `…}`, donde *####* `…` es una serie de dígitos hexadecimales. En su lugar, use `\u`*nnnn*.|  
@@ -70,4 +70,4 @@ La barra diagonal inversa (\\) en una expresión regular indica una de las sigui
   
 ## <a name="see-also"></a>Vea también
 
-- [Lenguaje de expresiones regulares: referencia rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [Lenguaje de expresiones regulares: referencia rápida](regular-expression-language-quick-reference.md)

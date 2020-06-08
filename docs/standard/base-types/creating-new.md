@@ -13,12 +13,12 @@ helpviewer_keywords:
 - strings [.NET Framework], creating
 - Insert method
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
-ms.openlocfilehash: ef65c50111d6ba91ab70d0b9c8cb90c606f9366c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a5dfe6429ac135202874f0524a252a7af900bd8d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73103826"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279017"
 ---
 # <a name="creating-new-strings-in-net"></a>Creación de cadenas en .NET
 .NET Framework permite crear cadenas mediante asignaciones simples y además sobrecarga un constructor de clases para admitir la creación de cadenas con una serie de parámetros distintos. .NET Framework también proporciona varios métodos en la clase <xref:System.String?displayProperty=nameWithType> que crean nuevos objetos de cadena al combinar varias cadenas, matrices de cadenas u objetos.  
@@ -41,7 +41,7 @@ ms.locfileid: "73103826"
 |<xref:System.String.CopyTo%2A?displayProperty=nameWithType>|Copia los caracteres especificados de una cadena en la posición especificada de una matriz de caracteres.|  
   
 ### <a name="format"></a>Formato  
- Puede usar el método **String.Format** para crear cadenas con formato y concatenar cadenas que representan a varios objetos. Este método convierte automáticamente cualquier objeto pasado en una cadena. Por ejemplo, si la aplicación debe mostrar un valor **Int32** y un valor **DateTime** al usuario, puede construir fácilmente una cadena para representar estos valores con el método **Format**. Para más información sobre las convenciones de formato usadas con este método, consulte la sección sobre [formatos compuestos](../../../docs/standard/base-types/composite-formatting.md).  
+ Puede usar el método **String.Format** para crear cadenas con formato y concatenar cadenas que representan a varios objetos. Este método convierte automáticamente cualquier objeto pasado en una cadena. Por ejemplo, si la aplicación debe mostrar un valor **Int32** y un valor **DateTime** al usuario, puede construir fácilmente una cadena para representar estos valores con el método **Format**. Para más información sobre las convenciones de formato usadas con este método, consulte la sección sobre [formatos compuestos](composite-formatting.md).  
   
  En el ejemplo siguiente se usa el método **Format** para crear una cadena que emplea una variable de entero.  
   
@@ -80,5 +80,5 @@ ms.locfileid: "73103826"
   
 ## <a name="see-also"></a>Vea también
 
-- [Operaciones básicas de cadenas](../../../docs/standard/base-types/basic-string-operations.md)
-- [Formatos compuestos](../../../docs/standard/base-types/composite-formatting.md)
+- [Operaciones básicas de cadenas](basic-string-operations.md)
+- [Formatos compuestos](composite-formatting.md)

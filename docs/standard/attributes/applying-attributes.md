@@ -10,12 +10,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework], attributes
 - attributes [.NET Framework], applying
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
-ms.openlocfilehash: 14cd6fef80ff9ae3a9d78531785edab0da7cc6b9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5557da1531eb55c13d1c7540a50b044d1a7b8a1d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73130912"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276340"
 ---
 # <a name="applying-attributes"></a>Aplicar atributos
 Para aplicar un atributo a un elemento del código se puede utilizar el proceso siguiente:  
@@ -48,12 +48,12 @@ Para aplicar un atributo a un elemento del código se puede utilizar el proceso 
  [!code-csharp[Conceptual.Attributes.Usage#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source1.cs#2)]
  [!code-vb[Conceptual.Attributes.Usage#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source1.vb#2)]  
   
- Cuando se aplica este atributo, la cadena `"My Assembly"` se coloca en el manifiesto del ensamblado, en la parte de metadatos del archivo. Se puede ver el atributo utilizando el [Desensamblador de MSIL (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) o creando un programa personalizado que recupere el atributo.  
+ Cuando se aplica este atributo, la cadena `"My Assembly"` se coloca en el manifiesto del ensamblado, en la parte de metadatos del archivo. Se puede ver el atributo utilizando el [Desensamblador de MSIL (Ildasm.exe)](../../framework/tools/ildasm-exe-il-disassembler.md) o creando un programa personalizado que recupere el atributo.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Atributos](../../../docs/standard/attributes/index.md)
-- [Retrieving Information Stored in Attributes](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md) (Recuperar la información almacenada en atributos)
+- [Atributos](index.md)
+- [Retrieving Information Stored in Attributes](retrieving-information-stored-in-attributes.md) (Recuperar la información almacenada en atributos)
 - [Conceptos](/cpp/windows/attributed-programming-concepts)
 - [Atributos (C#)](../../csharp/programming-guide/concepts/attributes/index.md)
 - [Información general sobre los atributos (Visual Basic)](../../visual-basic/programming-guide/concepts/attributes/index.md)

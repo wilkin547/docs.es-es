@@ -6,12 +6,12 @@ f1_keywords:
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: 5a56b8058735d3ca786520a82424c79d1975bfc4
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 406c710cd884363c32b98336717732a09b3d1fc1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463014"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401880"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (restricción de tipo genérico) (Referencia de C#)
 
@@ -19,20 +19,20 @@ La cláusula `where` en una definición genérica especifica restricciones en lo
 
 Por ejemplo, se puede declarar una clase genérica, `MyGenericClass`, de modo que el parámetro de tipo `T` implemente la interfaz <xref:System.IComparable%601>:
 
-[!code-csharp[using an interface constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#1)]
+[!code-csharp[using an interface constraint](snippets/GenericWhereConstraints.cs#1)]
 
 > [!NOTE]
 > Para obtener más información sobre la cláusula where en una expresión de consulta, vea [where (Cláusula)](where-clause.md).
 
 La cláusula `where` también puede incluir una restricción de clase base. La restricción de clase base indica que un tipo que se va a usar como argumento de tipo para ese tipo genérico tiene la clase especificada como clase base, o bien es la clase base. Si se usa la restricción de clase base, debe aparecer antes que cualquier otra restricción de ese parámetro de tipo. Algunos tipos no están permitidos como restricción de clase base: <xref:System.Object>, <xref:System.Array> y <xref:System.ValueType>. Antes de C# 7.3, tampoco se permitían <xref:System.Enum>, <xref:System.Delegate> ni <xref:System.MulticastDelegate> como restricciones de clase base. En el ejemplo siguiente se muestran los tipos que ahora se pueden especificar como clase base:
 
-[!code-csharp[using an interface constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#2)]
+[!code-csharp[using an interface constraint](snippets/GenericWhereConstraints.cs#2)]
 
 En un contexto que admite un valor NULL en C# 8.0 y versiones posteriores, se aplica la nulabilidad del tipo de clase base. Si la clase base no acepta valores NULL (por ejemplo, `Base`), el argumento de tipo no debe aceptar valores NULL. Si la clase base admite un valor NULL (por ejemplo, `Base?`), el argumento de tipo puede ser un tipo de referencia que acepte o no valores NULL. El compilador emite una advertencia si el argumento de tipo es un tipo de referencia que admite un valor NULL cuando la clase base no acepta valores NULL.
 
 La cláusula `where` puede especificar que el tipo es `class` o `struct`. La restricción `struct` elimina la necesidad de especificar una restricción de clase base de `System.ValueType`. El tipo `System.ValueType` no se puede usar como restricción de clase base. En el ejemplo siguiente se muestran las restricciones `class` y `struct`:
 
-[!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#3)]
+[!code-csharp[using the class and struct constraints](snippets/GenericWhereConstraints.cs#3)]
 
 En un contexto que admite un valor NULL en C# 8.0 y versiones posteriores, la restricción `class` requiere que un tipo sea un tipo de referencia que no acepte valores NULL. Para permitir tipos de referencia que admitan un valor NULL, use la restricción `class?`, que permite tipos de referencia que aceptan y que no aceptan valores NULL.
 
@@ -41,29 +41,29 @@ La cláusula `where` puede incluir la restricción `notnull`. La restricción `n
 > [!IMPORTANT]
 > Las declaraciones genéricas que incluyen la restricción `notnull` se pueden usar en un contexto donde se desconoce que se aceptan valores NULL, pero el compilador no aplica la restricción.
 
-[!code-csharp[using the nonnull constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#NotNull)]
+[!code-csharp[using the nonnull constraint](snippets/GenericWhereConstraints.cs#NotNull)]
 
 La cláusula `where` también podría incluir una restricción `unmanaged`. La restricción `unmanaged` limita el parámetro de tipo a los tipos conocidos como [tipos no administrados](../builtin-types/unmanaged-types.md). La restricción `unmanaged` hace que sea más fácil escribir código de interoperabilidad de bajo nivel en C#. Esta restricción habilita las rutinas reutilizables en todos los tipos no administrados. La restricción `unmanaged` no se puede combinar con las restricciones `class` o `struct`. La restricción `unmanaged` exige que el tipo sea `struct`:
 
-[!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#4)]
+[!code-csharp[using the unmanaged constraint](snippets/GenericWhereConstraints.cs#4)]
 
 La cláusula `where` también podría incluir una restricción de constructor, `new()`. Esta restricción hace posible crear una instancia de un parámetro de tipo con el operador `new`. La [restricción new()](new-constraint.md) permite que el compilador sepa que cualquier argumento de tipo especificado debe tener accesible un constructor sin parámetros. Por ejemplo:
 
-[!code-csharp[using the new constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#5)]
+[!code-csharp[using the new constraint](snippets/GenericWhereConstraints.cs#5)]
 
 La restricción `new()` aparece en último lugar en la cláusula `where`. La restricción `new()` no se puede combinar con las restricciones `struct` o `unmanaged`. Todos los tipos que cumplan esas restricciones deben tener un constructor sin parámetros accesible, lo que hace que la restricción `new()` sea redundante.
 
 Con varios parámetros de tipo, use una cláusula `where` para cada parámetro de tipo, por ejemplo:
 
-[!code-csharp[using multiple where constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#6)]
+[!code-csharp[using multiple where constraints](snippets/GenericWhereConstraints.cs#6)]
 
 También puede asociar restricciones a parámetros de tipo de métodos genéricos, como se muestra en el ejemplo siguiente:
 
-[!code-csharp[where constraints with generic methods](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#7)]
+[!code-csharp[where constraints with generic methods](snippets/GenericWhereConstraints.cs#7)]
 
 Observe que la sintaxis para describir las restricciones de parámetro de tipo en delegados es igual que la de métodos:
 
-[!code-csharp[where constraints with generic methods](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#8)]
+[!code-csharp[where constraints with generic methods](snippets/GenericWhereConstraints.cs#8)]
 
 Para obtener información sobre los delegados genéricos, vea [Delegados genéricos](../../programming-guide/generics/generic-delegates.md).
 

@@ -5,18 +5,18 @@ ms.date: 04/21/2020
 helpviewer_keywords:
 - garbage collection, background
 - background garbage collection
-ms.openlocfilehash: dcb1d348e679e07646273b8fbc4ea29b44ee4974
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 8134c0af55d74e57dcfce8c7174265b8c9902feb
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82103500"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84307077"
 ---
 # <a name="background-garbage-collection"></a>Recolección de elementos no utilizados en segundo plano
 
 En la recolección de elementos no utilizados (GC) en segundo plano, las generaciones efímeras (0 y 1) se recolectan según sea necesario mientras la recolección de la generación 2 está en curso. La recolección de elementos no utilizados en segundo plano se realiza en uno o más subprocesos dedicados, en función de si se trata de GC en segundo plano o de servidor, y solo se aplica a las recolecciones de la generación 2.
 
-La recolección de elementos no utilizados en segundo plano está habilitada de forma predeterminada. Se puede habilitar o deshabilitar con la opción de configuración [gcConcurrent](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) o la opción [System.GC.Concurrent](../../core/run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent) en aplicaciones de .NET Core.
+La recolección de elementos no utilizados en segundo plano está habilitada de forma predeterminada. Se puede habilitar o deshabilitar con la opción de configuración [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) o la opción [System.GC.Concurrent](../../core/run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent) en aplicaciones de .NET Core.
 
 > [!NOTE]
 > La recolección de elementos no utilizados en segundo plano reemplaza la [recolección simultánea de elementos no utilizados](#concurrent-garbage-collection) en .NET Framework 4 y versiones posteriores. En .NET Framework 4, solo se admite para la recolección de elementos no utilizados de *estación de trabajo*. A partir de .NET Framework 4.5, la recolección de elementos no utilizados en segundo plano está disponible para *estaciones de trabajo* y *servidores*.
@@ -39,11 +39,11 @@ La recolección de elementos no utilizados de servidor en segundo plano funciona
 
 En la siguiente ilustración se muestra la recolección de elementos no utilizados de *estación de trabajo* en segundo plano realizada en un subproceso dedicado independiente:
 
-![Recolección de elementos no utilizados de estación de trabajo en segundo plano](./media/fundamentals/background-workstation-garbage-collection.png)
+![Recolección de elementos no utilizados de estación de trabajo en segundo plano](media/fundamentals/background-workstation-garbage-collection.png)
 
 En la siguiente ilustración se muestra la recolección de elementos no utilizados de *servidor* en segundo plano realizada en un subproceso dedicado independiente:
 
-![Recolección de elementos no utilizados de servidor en segundo plano](./media/fundamentals/background-server-garbage-collection.png)
+![Recolección de elementos no utilizados de servidor en segundo plano](media/fundamentals/background-server-garbage-collection.png)
 
 ## <a name="concurrent-garbage-collection"></a>Recolección de elementos no utilizados simultánea
 
@@ -55,7 +55,7 @@ En la siguiente ilustración se muestra la recolección de elementos no utilizad
 >
 > La recolección de elementos no utilizados en segundo plano reemplaza a la de elementos no utilizados simultánea en versiones posteriores.
 
-En la recolección de elementos no utilizados de estación de trabajo o de servidor, se puede [habilitar la recolección simultánea de elementos no utilizados](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md), que permite ejecutar subprocesos de manera simultánea con un subproceso dedicado que realiza la recolección de elementos no utilizados durante la mayor parte del tiempo que dura la recolección. Esta opción solo afecta a las recolecciones de elementos no utilizados de la generación 2; las generaciones 0 y 1 no son nunca simultáneas porque finalizan rápidamente.
+En la recolección de elementos no utilizados de estación de trabajo o de servidor, se puede [habilitar la recolección simultánea de elementos no utilizados](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md), que permite ejecutar subprocesos de manera simultánea con un subproceso dedicado que realiza la recolección de elementos no utilizados durante la mayor parte del tiempo que dura la recolección. Esta opción solo afecta a las recolecciones de elementos no utilizados de la generación 2; las generaciones 0 y 1 no son nunca simultáneas porque finalizan rápidamente.
 
 La recolección de elementos no utilizados simultánea permite mayor capacidad de respuesta de las aplicaciones interactivas, pues minimiza las pausas en una recolección. Los subprocesos administrados pueden continuar ejecutándose la mayoría del tiempo mientras se ejecuta el subproceso de recolección de elementos no utilizados simultánea. Esto da lugar a pausas más cortas mientras se está produciendo una recolección de elementos no utilizados.
 
@@ -63,7 +63,7 @@ La recolección de elementos no utilizados simultánea se realiza en un subproce
 
 En la siguiente se muestra la recolección de elementos no utilizados simultánea realizada en un subproceso dedicado independiente.
 
-![Subprocesos de recolección simultánea de elementos no utilizados](./media/gc-concurrent.png)
+![Subprocesos de recolección simultánea de elementos no utilizados](media/gc-concurrent.png)
 
 ## <a name="see-also"></a>Vea también
 
