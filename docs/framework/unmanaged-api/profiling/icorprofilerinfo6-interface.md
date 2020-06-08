@@ -8,12 +8,12 @@ api_location:
 api_type:
 - COM
 ms.assetid: 6f2bb148-1e2b-4e45-a5a5-0ceddc40064b
-ms.openlocfilehash: 80ac17a96e5c1c8c32cfc336da6c2be30eaf80fd
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: fba57a88cd3af582b4edf0e5bdbf6ac48020c9f7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868374"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84495520"
 ---
 # <a name="icorprofilerinfo6-interface"></a>Interfaz ICorProfilerInfo6
 [Se admite en el .NET Framework 4,6 y versiones posteriores]  
@@ -24,15 +24,15 @@ ms.locfileid: "76868374"
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod (método)](icorprofilerinfo6-enumngenmodulemethodsinliningthismethod-method.md)|Devuelve un enumerador para todos los métodos que pertenecen a un módulo NGen determinado y que están insertados en el cuerpo de un método determinado.|  
+|[Método ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod](icorprofilerinfo6-enumngenmodulemethodsinliningthismethod-method.md)|Devuelve un enumerador para todos los métodos que pertenecen a un módulo NGen determinado y que están insertados en el cuerpo de un método determinado.|  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
 - [Interfaces para generación de perfiles](profiling-interfaces.md)

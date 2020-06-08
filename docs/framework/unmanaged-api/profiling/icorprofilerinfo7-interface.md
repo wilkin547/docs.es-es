@@ -2,12 +2,12 @@
 title: Interfaz ICorProfilerInfo7
 ms.date: 03/30/2017
 ms.assetid: cf37c462-73c5-412a-a7f8-bb26ca746313
-ms.openlocfilehash: f80f310c10bae33583cb7cd2048ede4f5efbe14c
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 0e9f76717aeff27e863245faac241927e7495076
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76861754"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84495494"
 ---
 # <a name="icorprofilerinfo7-interface"></a>Interfaz ICorProfilerInfo7
 [Compatible con .NET Framework 4.6.1 y versiones posteriores]  
@@ -18,17 +18,17 @@ ms.locfileid: "76861754"
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[ApplyMetaData (método)](icorprofilerinfo7-applymetadata-method.md)|Aplica los metadatos recién definidos por los métodos `IMetadataEmit::Define*` a un módulo especificado.|  
-|[GetInMemorySymbolsLength (método)](icorprofilerinfo7-getinmemorysymbolslength-method.md)|Devuelve la longitud de una secuencia de símbolos en memoria.|  
+|[Método ApplyMetaData](icorprofilerinfo7-applymetadata-method.md)|Aplica los metadatos recién definidos por los `IMetadataEmit::Define*` métodos a un módulo especificado.|  
+|[Método GetInMemorySymbolsLength](icorprofilerinfo7-getinmemorysymbolslength-method.md)|Devuelve la longitud de una secuencia de símbolos en memoria.|  
 |[ReadInMemorySymbols](icorprofilerinfo7-readinmemorysymbols.md)|Lee bytes de una secuencia de símbolos en memoria.|  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
 - [Interfaces para generación de perfiles](profiling-interfaces.md)

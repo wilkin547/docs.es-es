@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7b0e9b10-8cef-4ba6-8432-40bf63e65ab1
 topic_type:
 - apiref
-ms.openlocfilehash: 8c3f98a124dbbcae3b0500932a2357ed1757951f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2bd05b49c3d51ac13865997910c99cc0cd5ca2d9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177245"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491269"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a>IMetaDataImport::GetFieldProps (Método)
 Obtiene los metadatos asociados al campo al que hace referencia el token de FieldDef especificado.  
@@ -45,48 +45,48 @@ HRESULT GetFieldProps (
   
 ## <a name="parameters"></a>Parámetros  
  `mb`  
- [en] Un token FieldDef que representa el campo para el que se van a obtener los metadatos asociados.  
+ de Un token de FieldDef que representa el campo para el que se van a obtener los metadatos asociados.  
   
  `pClass`  
- [fuera] Puntero a un token TypeDef que representa el tipo de la clase a la que pertenece el campo.  
+ enuncia Un puntero a un token de TypeDef que representa el tipo de la clase a la que pertenece el campo.  
   
  `szField`  
- [fuera] El nombre del campo.  
+ enuncia Nombre del campo.  
   
  `cchField`  
- [en] El tamaño en caracteres anchos del búfer para *szField*.  
+ de Tamaño en caracteres anchos del búfer para *szField*.  
   
  `pchField`  
- [fuera] El tamaño real del búfer devuelto.  
+ enuncia Tamaño real del búfer devuelto.  
   
  `pdwAttr`  
- [fuera] Indicadores asociados a los metadatos del campo.  
+ enuncia Marcas asociadas a los metadatos del campo.  
   
  `ppvSigBlob`  
- [en] Puntero al valor de metadatos binarios que describe el campo.  
+ de Puntero al valor de metadatos binarios que describe el campo.  
   
  `pcbSigBlob`  
- [fuera] El tamaño en `ppvSigBlob`bytes de .  
+ enuncia Tamaño en bytes de `ppvSigBlob` .  
   
  `pdwCPlusTypeFlag`  
- [fuera] Marca que especifica el tipo de valor del campo.  
+ enuncia Marca que especifica el tipo de valor del campo.  
   
  `ppValue`  
- [fuera] Un valor constante para el campo.  
+ enuncia Valor constante para el campo.  
   
  `pcchValue`  
- [fuera] El tamaño en `ppValue`caracteres de , o cero si no existe ninguna cadena.  
+ enuncia Tamaño en caracteres de `ppValue` , o cero si no existe ninguna cadena.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Biblioteca:** Incluido como recurso en MsCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
-- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport (Interfaz)](imetadataimport-interface.md)
+- [IMetaDataImport2 (Interfaz)](imetadataimport2-interface.md)

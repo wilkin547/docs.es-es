@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8cc3b0c3-d97d-4f71-9e7d-ef2a92b4959a
 topic_type:
 - apiref
-ms.openlocfilehash: 218b65b5899692774c434ae136a3976ecb97ea2f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 91ae326a89e463d26b39c1659d872130042557bf
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177304"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492027"
 ---
 # <a name="imetadataimportenummethods-method"></a>IMetaDataImport::EnumMethods (Método)
 Enumera los tokens de MethodDef que representan métodos del tipo especificado.  
@@ -39,37 +39,37 @@ HRESULT EnumMethods (
   
 ## <a name="parameters"></a>Parámetros  
  `phEnum`  
- [adentro, fuera] Un puntero al enumerador. Debe ser NULL para la primera llamada de este método.  
+ [in, out] Puntero al enumerador. Debe ser NULL para la primera llamada de este método.  
   
  `cl`  
- [en] Un token TypeDef que representa el tipo con los métodos que se van a enumerar.  
+ de Un token de TypeDef que representa el tipo con los métodos que se van a enumerar.  
   
  `rMethods`  
- [fuera] Matriz para almacenar los tokens MethodDef.  
+ enuncia Matriz en la que se van a almacenar los tokens de MethodDef.  
   
  `cMax`  
- [en] El tamaño máximo de `rMethods` la matriz MethodDef.  
+ de Tamaño máximo de la matriz MethodDef `rMethods` .  
   
  `pcTokens`  
- [fuera] El número de tokens MethodDef devueltos en `rMethods`.  
+ enuncia Número de tokens de MethodDef devueltos en `rMethods` .  
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|Descripción|  
+|HRESULT|Description|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethods`regresó con éxito.|  
-|`S_FALSE`|No hay tokens MethodDef que enumerar. En ese `pcTokens` caso, es cero.|  
+|`S_OK`|`EnumMethods`se devolvió correctamente.|  
+|`S_FALSE`|No hay tokens de MethodDef que enumerar. En ese caso, `pcTokens` es cero.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Biblioteca:** Incluido como recurso en MsCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
-- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport (Interfaz)](imetadataimport-interface.md)
+- [IMetaDataImport2 (Interfaz)](imetadataimport2-interface.md)

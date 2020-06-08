@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d0d65060-6f90-42a2-95cf-6ffb04352996
 topic_type:
 - apiref
-ms.openlocfilehash: 9dbbdcc9d0fb9f0a8d2a64edfa4a0ad92570933c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 652ebf1be6a58e08da27aaed5b2e84a8f2aee98a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450007"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503775"
 ---
 # <a name="imetadataimportenumsignatures-method"></a>IMetaDataImport::EnumSignatures (Método)
 Enumera los tokens de firma que representan las firmas independientes en el ámbito actual.  
@@ -47,28 +47,28 @@ HRESULT EnumSignatures (
  [in] Tamaño máximo de la matriz `rSignatures`.  
   
  `pcSignatures`  
- enuncia El número de tokens de firma devueltos en `rSignatures`.  
+ enuncia El número de tokens de firma devueltos en `rSignatures` .  
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|Descripción|  
+|HRESULT|Description|  
 |-------------|-----------------|  
-|`S_OK`|`EnumSignatures` devolvió correctamente.|  
+|`S_OK`|`EnumSignatures`se devolvió correctamente.|  
 |`S_FALSE`|No hay tokens que enumerar. En ese caso, `pcSignatures` es cero.|  
   
 ## <a name="remarks"></a>Comentarios  
- El método [IMetaDataEmit:: GetTokenFromSig (](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromsig-method.md) crea los tokens de firma.  
+ El método [IMetaDataEmit:: GetTokenFromSig (](imetadataemit-gettokenfromsig-method.md) crea los tokens de firma.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
  **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
-- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport (Interfaz)](imetadataimport-interface.md)
+- [IMetaDataImport2 (Interfaz)](imetadataimport2-interface.md)

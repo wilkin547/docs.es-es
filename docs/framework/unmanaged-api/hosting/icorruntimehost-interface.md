@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4369533d-7834-4497-bc37-bfea0ad737b1
 topic_type:
 - apiref
-ms.openlocfilehash: ac4787379436faa568727329e7b012f83d0a53d5
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 4b8018bb84dea08987d91f351b1ab0d9f3b48c56
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83760737"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503905"
 ---
 # <a name="icorruntimehost-interface"></a>ICorRuntimeHost (Interfaz)
 Proporciona métodos que permiten al host iniciar y detener explícitamente el Common Language Runtime (CLR), para crear y configurar dominios de aplicación, para tener acceso al dominio predeterminado y para enumerar todos los dominios que se ejecutan en el proceso.  
@@ -34,7 +34,7 @@ Proporciona métodos que permiten al host iniciar y detener explícitamente el C
 |[Método CreateDomain](icorruntimehost-createdomain-method.md)|Crea un dominio de aplicación. El autor de la llamada recibe un puntero de interfaz de tipo <xref:System._AppDomain> a una instancia de tipo <xref:System.AppDomain?displayProperty=nameWithType> .|  
 |[Método CreateDomainEx](icorruntimehost-createdomainex-method.md)|Crea un dominio de aplicación. Este método permite al llamador pasar una instancia de IAppDomainSetup para configurar características adicionales de la instancia de devuelta <xref:System._AppDomain> .|  
 |[Método CreateDomainSetup](icorruntimehost-createdomainsetup-method.md)|Obtiene un puntero de interfaz de tipo `IAppDomainSetup` a una <xref:System.AppDomainSetup> instancia de. `IAppDomainSetup`proporciona métodos para configurar aspectos de un dominio de aplicación antes de que se cree.|  
-|[Método CreateEvidence](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createevidence-method.md)|Obtiene un puntero de interfaz de tipo <xref:System.Security.Principal.IIdentity> , que permite al host crear evidencia de seguridad para pasar a [CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md) o [createdomainex (](icorruntimehost-createdomainex-method.md).|  
+|[Método CreateEvidence](icorruntimehost-createevidence-method.md)|Obtiene un puntero de interfaz de tipo <xref:System.Security.Principal.IIdentity> , que permite al host crear evidencia de seguridad para pasar a [CreateDomain](icorruntimehost-createdomain-method.md) o [createdomainex (](icorruntimehost-createdomainex-method.md).|  
 |[Método CreateLogicalThreadState](icorruntimehost-createlogicalthreadstate-method.md)|No debe usarse.|  
 |[Método CurrentDomain](icorruntimehost-currentdomain-method.md)|Obtiene un puntero de interfaz de tipo <xref:System._AppDomain> que representa el dominio cargado en el subproceso actual.|  
 |[Método DeleteLogicalThreadState](icorruntimehost-deletelogicalthreadstate-method.md)|No debe usarse.|  

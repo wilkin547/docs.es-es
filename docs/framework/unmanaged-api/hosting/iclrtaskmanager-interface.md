@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2bd55e0c-001b-41fd-b29d-f01670fe8216
 topic_type:
 - apiref
-ms.openlocfilehash: 9e26071181e8e0712c753fa03d5e16eb85e5ee68
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: f918d4e7b95922734d70ed832581e6c494c70b05
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762843"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501643"
 ---
 # <a name="iclrtaskmanager-interface"></a>ICLRTaskManager (Interfaz)
 Proporciona métodos que permiten al host solicitar explícitamente que el Common Language Runtime (CLR) cree una nueva tarea, obtenga la tarea que se está ejecutando actualmente y establezca el idioma geográfico y la referencia cultural de la tarea.  
@@ -28,14 +28,14 @@ Proporciona métodos que permiten al host solicitar explícitamente que el Commo
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[CreateTask (Método)](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-createtask-method.md)|Solicita explícitamente que CLR cree una nueva instancia de [ICLRTask](iclrtask-interface.md) .|  
+|[CreateTask (Método)](iclrtaskmanager-createtask-method.md)|Solicita explícitamente que CLR cree una nueva instancia de [ICLRTask](iclrtask-interface.md) .|  
 |[Método GetCurrentTask](iclrtaskmanager-getcurrenttask-method.md)|Obtiene la `ICLRTask` instancia de que representa la tarea que se está ejecutando actualmente.|  
 |[Método GetCurrentTaskType](iclrtaskmanager-getcurrenttasktype-method.md)|Obtiene el tipo de la tarea que se está ejecutando actualmente.|  
 |[Método SetLocale](iclrtaskmanager-setlocale-method.md)|Notifica a CLR que el host ha modificado el identificador de configuración regional en la tarea que se está ejecutando actualmente.|  
 |[Método SetUILocale](iclrtaskmanager-setuilocale-method.md)|Notifica a la Common Language Runtime que el host ha modificado el identificador de configuración regional de la interfaz de usuario en la tarea que se está ejecutando actualmente.|  
   
 ## <a name="remarks"></a>Comentarios  
- Cada tarea que se ejecuta en un entorno hospedado tiene representaciones tanto en el lado host (una instancia de [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)) como en el lado de CLR (una instancia de [ICLRTask](iclrtask-interface.md)). Tanto el host como el CLR pueden iniciar la creación de una tarea, pero la representación en el host debe estar asociada a una representación del lado del CLR correspondiente para garantizar una comunicación correcta entre el host y el CLR con respecto a la tarea. Los dos objetos deben crearse y crearse instancias antes de que el código administrado pueda ejecutarse en un subproceso del sistema operativo.  
+ Cada tarea que se ejecuta en un entorno hospedado tiene representaciones tanto en el lado host (una instancia de [IHostTask](ihosttask-interface.md)) como en el lado de CLR (una instancia de [ICLRTask](iclrtask-interface.md)). Tanto el host como el CLR pueden iniciar la creación de una tarea, pero la representación en el host debe estar asociada a una representación del lado del CLR correspondiente para garantizar una comunicación correcta entre el host y el CLR con respecto a la tarea. Los dos objetos deben crearse y crearse instancias antes de que el código administrado pueda ejecutarse en un subproceso del sistema operativo.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
