@@ -8,19 +8,19 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to use execution mode
 ms.assetid: e52ff26c-c5d3-4fab-9fec-c937fb387963
-ms.openlocfilehash: f035dbcd5091d81a3cce3b9e9e683d836fe84bb7
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: 39ccde003b60ac9cbcff7ab824103a9cf37cc453
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635810"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288100"
 ---
 # <a name="how-to-specify-the-execution-mode-in-plinq"></a>Procedimiento para especificar el modo de ejecución en PLINQ
 
 En este ejemplo se muestra cómo forzar a PLINQ a omitir su heurística predeterminada y paralelizar una consulta, independientemente de la forma de la consulta.  
   
 > [!NOTE]
-> La finalidad de este ejemplo es mostrar el uso y puede que su ejecución no sea tan rápida como la de la consulta LINQ to Objects secuencial equivalente. Para más información sobre la velocidad, vea [Introducción a la velocidad en PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
+> La finalidad de este ejemplo es mostrar el uso y puede que su ejecución no sea tan rápida como la de la consulta LINQ to Objects secuencial equivalente. Para más información sobre la velocidad, vea [Introducción a la velocidad en PLINQ](understanding-speedup-in-plinq.md).  
   
 ## <a name="example"></a>Ejemplo  
  [!code-csharp[PLINQ#22](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#22)]
@@ -29,9 +29,9 @@ En este ejemplo se muestra cómo forzar a PLINQ a omitir su heurística predeter
  PLINQ está diseñado para aprovechar las oportunidades para la paralelización. Sin embargo, no todas las consultas se beneficiarán de la ejecución en paralelo. Por ejemplo, cuando una consulta contiene un delegado de usuario único que realiza poco trabajo, la consulta normalmente se ejecutará con mayor rapidez de forma secuencial. La ejecución secuencial es más rápida porque la sobrecarga necesaria para habilitar la ejecución en paralelo es más cara que la velocidad que se obtiene. Por lo tanto, PLINQ no paraleliza automáticamente todas las consultas. Primero examina la forma de la consulta y los diversos operadores que la componen. En función de este análisis, PLINQ en el modo de ejecución predeterminado puede decidir ejecutar algunas o todas las consultas de forma secuencial. Sin embargo, en algunos casos, puede saber más sobre su consulta de lo que PLINQ es capaz de determinar a partir de su análisis. Por ejemplo, puede saber que un delegado es caro y que la consulta se beneficiará definitivamente de la paralelización. En tales casos, puede usar el método <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> y especificar el valor <xref:System.Linq.ParallelExecutionMode.ForceParallelism> para indicar a PLINQ que ejecute siempre la consulta de forma paralela.  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- Corte y pegue este código en el [ejemplo de datos de PLINQ](../../../docs/standard/parallel-programming/plinq-data-sample.md) y llame al método desde `Main`.  
+ Corte y pegue este código en el [ejemplo de datos de PLINQ](plinq-data-sample.md) y llame al método desde `Main`.  
   
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Linq.ParallelEnumerable.AsSequential%2A>
-- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
+- [Parallel LINQ (PLINQ)](introduction-to-plinq.md)

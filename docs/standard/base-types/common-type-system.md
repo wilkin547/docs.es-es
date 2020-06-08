@@ -16,12 +16,12 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.openlocfilehash: f079613f790121c000a312132e7135121ca721a6
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: a1aa244d470402823fc22e12cb5e32bbbdcd87fe
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635907"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289348"
 ---
 # <a name="common-type-system"></a>Sistema de tipos comunes
 
@@ -267,7 +267,7 @@ Common Type System define cómo se declaran, usan y administran los tipos en Com
 
 ### <a name="events"></a>Events
 
- Un evento define un incidente al que se puede responder, así como los métodos para suscribirse a un evento, anular la suscripción y generar el evento. Los eventos se usan con frecuencia para informar a otros tipos de cambios de estado. Para más información, vea [Eventos](../../../docs/standard/events/index.md).  
+ Un evento define un incidente al que se puede responder, así como los métodos para suscribirse a un evento, anular la suscripción y generar el evento. Los eventos se usan con frecuencia para informar a otros tipos de cambios de estado. Para más información, vea [Eventos](../events/index.md).  
 
 ### <a name="nested-types"></a>Tipos anidados
 
@@ -307,5 +307,5 @@ Common Type System define cómo se declaran, usan y administran los tipos en Com
 ## <a name="see-also"></a>Vea también
 
 - [Explorador de API de .NET](/dotnet/api)
-- [Common Language Runtime](../../../docs/standard/clr.md)
-- [Conversión de tipos en .NET](../../../docs/standard/base-types/type-conversion.md)
+- [Common Language Runtime](../clr.md)
+- [Conversión de tipos en .NET](type-conversion.md)

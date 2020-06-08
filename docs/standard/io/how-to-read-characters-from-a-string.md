@@ -13,12 +13,12 @@ helpviewer_keywords:
 - reading data, strings
 - streams, reading characters from string
 ms.assetid: 27ea5e52-6db8-42d8-980a-50bcfc7fd270
-ms.openlocfilehash: ed267ad62e46f6216c94906df1bcefb0684ab51b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6d32e9c5f89dba7590958bae6cc0489f104cd19a
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78155768"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291778"
 ---
 # <a name="how-to-read-characters-from-a-string"></a>Procedimiento Leer caracteres de una cadena
 En los ejemplos de código siguientes se muestra cómo leer caracteres desde una cadena de forma sincrónica o asincrónica.  
@@ -39,11 +39,11 @@ En los ejemplos de código siguientes se muestra cómo leer caracteres desde una
 
 - <xref:System.IO.StringReader>  
 - <xref:System.IO.StringReader.Read%2A?displayProperty=nameWithType>  
-- [E/S de archivos asincrónica](../../../docs/standard/io/asynchronous-file-i-o.md)  
+- [E/S de archivos asincrónica](asynchronous-file-i-o.md)  
 - [Cómo: Crear una lista de directorios](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5cf8zcfh(v=vs.100))  
-- [Cómo: Leer y escribir en un archivo de datos recién creado](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
-- [Cómo: Abrir y anexar a un archivo de registro](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
-- [Cómo: Leer texto de un archivo](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
-- [Cómo: Escribir texto en un archivo](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
-- [Cómo: Escribir caracteres en una cadena](../../../docs/standard/io/how-to-write-characters-to-a-string.md)  
-- [E/S de archivos y secuencias](../../../docs/standard/io/index.md)
+- [Cómo: Leer y escribir en un archivo de datos recién creado](how-to-read-and-write-to-a-newly-created-data-file.md)  
+- [Cómo: Abrir y anexar a un archivo de registro](how-to-open-and-append-to-a-log-file.md)  
+- [Cómo: Leer texto de un archivo](how-to-read-text-from-a-file.md)  
+- [Cómo: Escribir texto en un archivo](how-to-write-text-to-a-file.md)  
+- [Cómo: Escribir caracteres en una cadena](how-to-write-characters-to-a-string.md)  
+- [E/S de archivos y secuencias](index.md)

@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: caa92596-9e15-4d91-acbe-56911ef47a84
-ms.openlocfilehash: b9a8bd52b7dfe7a9bf43061d8f44747b3a847c68
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 08900f9e5b735065f97ef705dccd899eebe3bfe0
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379123"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84289621"
 ---
 # <a name="how-to-control-serialization-of-derived-classes"></a>Procedimiento para controlar la serialización de clases derivadas
 El uso del atributo **XmlElementAttribute** para cambiar el nombre de un elemento XML no es la única manera de personalizar la serialización de objeto. También puede personalizar la secuencia XML derivando de una clase existente e indicando a la instancia <xref:System.Xml.Serialization.XmlSerializer> cómo serializar la nueva clase.  
@@ -239,6 +239,6 @@ public class Run
 - <xref:System.Xml.Serialization.XmlElementAttribute>
 - <xref:System.Xml.Serialization.XmlAttributes>
 - <xref:System.Xml.Serialization.XmlAttributeOverrides>
-- [Serialización SOAP y XML](../../../docs/standard/serialization/xml-and-soap-serialization.md)
-- [Cómo: Serialización de un objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [Cómo: para especificar un nombre de elemento alternativo para una secuencia XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [Serialización SOAP y XML](xml-and-soap-serialization.md)
+- [Cómo: Serialización de un objeto](how-to-serialize-an-object.md)
+- [Cómo: para especificar un nombre de elemento alternativo para una secuencia XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)

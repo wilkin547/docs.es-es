@@ -3,12 +3,12 @@ title: Compatibilidad de tipos en las clases System.Xml
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 63570538-06e3-4401-ad4d-ac50be90c7bf
-ms.openlocfilehash: cec47d40a0353639bc17b880265f7c15f2f53ac4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8ceda15cb8463db3e81260529ebb1e3a67a0c1af
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710107"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84283304"
 ---
 # <a name="type-support-in-the-systemxml-classes"></a>Compatibilidad de tipos en las clases System.Xml
 En la versión 2.0 de .NET Framework, se han mejorado las clases XML principales para incluir características de compatibilidad de tipos. Las clases <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter> y <xref:System.Xml.XPath.XPathNavigator> tienen características de compatibilidad de tipos, incluyendo la capacidad de realizar conversiones entre tipos de esquemas XML y tipos de Common Language Runtime (CLR).  
@@ -27,14 +27,14 @@ En la versión 2.0 de .NET Framework, se han mejorado las clases XML principales
 > En la versión 1.0 de .NET Framework, se necesitaba la clase <xref:System.Xml.XmlConvert> para realizar la conversión entre esquemas XML y tipos CLR.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Asignación de tipos de datos XML a tipos CLR](../../../../docs/standard/data/xml/mapping-xml-data-types-to-clr-types.md)  
+ [Asignación de tipos de datos XML a tipos CLR](mapping-xml-data-types-to-clr-types.md)  
  Describe las asignaciones predeterminadas de tipos de datos XML en tipos CLR.  
   
- [Notas de implementación de la compatibilidad con tipos XML](../../../../docs/standard/data/xml/xml-type-support-implementation-notes.md)  
+ [Notas de implementación de la compatibilidad con tipos XML](xml-type-support-implementation-notes.md)  
  Explica algunos de los detalles de la implementación de la compatibilidad de tipos.  
   
- [Conversión de tipos de datos XML](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)  
+ [Conversión de tipos de datos XML](conversion-of-xml-data-types.md)  
  Describe cómo utilizar la clase <xref:System.Xml.XmlConvert> para realizar la conversión entre esquemas XML y tipos CLR.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Acceso a datos XML fuertemente tipados utilizando XPathNavigator](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)
+ [Acceso a datos XML fuertemente tipados utilizando XPathNavigator](accessing-strongly-typed-xml-data-using-xpathnavigator.md)

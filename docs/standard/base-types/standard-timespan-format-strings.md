@@ -17,18 +17,18 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: ec06edc16829c6d4caf8c760922aac1471e365c2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2ed9ca7337e40b5520ddbfc92925c5bedb45f701
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75346627"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289283"
 ---
 # <a name="standard-timespan-format-strings"></a>Cadenas de formato TimeSpan estándar
 
-Una cadena de formato estándar <xref:System.TimeSpan> usa un único especificador de formato para definir la representación de texto de un valor <xref:System.TimeSpan> resultante de una operación de formato. Cualquier cadena de formato que contenga más de un carácter, incluido el espacio en blanco, se interpreta como una cadena de formato <xref:System.TimeSpan> personalizado. Para más información, consulte [Cadenas de formato TimeSpan personalizadas](../../../docs/standard/base-types/custom-timespan-format-strings.md).  
+Una cadena de formato estándar <xref:System.TimeSpan> usa un único especificador de formato para definir la representación de texto de un valor <xref:System.TimeSpan> resultante de una operación de formato. Cualquier cadena de formato que contenga más de un carácter, incluido el espacio en blanco, se interpreta como una cadena de formato <xref:System.TimeSpan> personalizado. Para más información, consulte [Cadenas de formato TimeSpan personalizadas](custom-timespan-format-strings.md).  
   
- Las representaciones de cadena de los valores <xref:System.TimeSpan> se generan mediante llamadas a las sobrecargas del método <xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType>, y también mediante métodos que admiten formatos compuestos, como <xref:System.String.Format%2A?displayProperty=nameWithType>. Para obtener más información, consulte [Aplicar formato a tipos](../../../docs/standard/base-types/formatting-types.md) y [Formatos compuestos](../../../docs/standard/base-types/composite-formatting.md). En el siguiente ejemplo se muestra el uso de cadenas de formato estándar en operaciones de formato.  
+ Las representaciones de cadena de los valores <xref:System.TimeSpan> se generan mediante llamadas a las sobrecargas del método <xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType>, y también mediante métodos que admiten formatos compuestos, como <xref:System.String.Format%2A?displayProperty=nameWithType>. Para obtener más información, consulte [Aplicar formato a tipos](formatting-types.md) y [Formatos compuestos](composite-formatting.md). En el siguiente ejemplo se muestra el uso de cadenas de formato estándar en operaciones de formato.  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/formatexample1.cs#2)]
  [!code-vb[Conceptual.TimeSpan.Standard#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/formatexample1.vb#2)]  
@@ -122,6 +122,6 @@ En la tabla siguiente se muestran los especificadores de formato de intervalo de
   
 ## <a name="see-also"></a>Vea también
 
-- [Aplicación de formato a tipos](../../../docs/standard/base-types/formatting-types.md)
-- [Cadenas de formato TimeSpan personalizado](../../../docs/standard/base-types/custom-timespan-format-strings.md)
-- [Analizar cadenas](../../../docs/standard/base-types/parsing-strings.md)
+- [Aplicación de formato a tipos](formatting-types.md)
+- [Cadenas de formato TimeSpan personalizado](custom-timespan-format-strings.md)
+- [Analizar cadenas](parsing-strings.md)

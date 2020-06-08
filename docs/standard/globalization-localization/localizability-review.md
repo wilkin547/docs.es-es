@@ -16,12 +16,12 @@ helpviewer_keywords:
 - global applications, localizability
 - localizing resources
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
-ms.openlocfilehash: b286bdd2c5d7b03a0a2b5f94478e252da6cd0ae2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ef23cff2416792f13fda04dbe9beb34cbacfd7ea
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73120862"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288282"
 ---
 # <a name="localizability-review"></a>Revisión de localizabilidad
 
@@ -38,7 +38,7 @@ La revisión de localización consta de las tres comprobaciones siguientes:
 <a name="global"></a>
 ## <a name="implement-globalization-recommendations"></a>Implementación de recomendaciones de globalización
 
-Si ha diseñado y desarrollado la aplicación con la localización en mente y, además, si ha seguido las recomendaciones indicadas en el artículo [Globalización](../../../docs/standard/globalization-localization/globalization.md), la revisión de localización, en gran medida, será un paso para el control de calidad. Sin embargo, durante esta fase, debe revisar e implementar las recomendaciones de [globalización](../../../docs/standard/globalization-localization/globalization.md) y corregir los errores del código fuente que impiden la localización.
+Si ha diseñado y desarrollado la aplicación con la localización en mente y, además, si ha seguido las recomendaciones indicadas en el artículo [Globalización](globalization.md), la revisión de localización, en gran medida, será un paso para el control de calidad. Sin embargo, durante esta fase, debe revisar e implementar las recomendaciones de [globalización](globalization.md) y corregir los errores del código fuente que impiden la localización.
 
 <a name="culture"></a>
 ## <a name="handle-culture-sensitive-features"></a>Control de características que tienen en cuenta la referencia cultural
@@ -75,11 +75,11 @@ Para localizar la aplicación, debe probarla mediante el uso de datos internacio
 
 - Las comparaciones de cadenas o las comparaciones de igualdad que devuelven resultados inesperados.
 
-Si ha seguido las recomendaciones de globalización al desarrollar la aplicación, ha controlado correctamente las características que tienen en cuenta la referencia cultural y ha identificado y solucionado los problemas de localización planteados durante las pruebas, puede continuar con el paso siguiente, [Localización](../../../docs/standard/globalization-localization/localization.md).
+Si ha seguido las recomendaciones de globalización al desarrollar la aplicación, ha controlado correctamente las características que tienen en cuenta la referencia cultural y ha identificado y solucionado los problemas de localización planteados durante las pruebas, puede continuar con el paso siguiente, [Localización](localization.md).
 
 ## <a name="see-also"></a>Vea también
 
-- [Globalización y localización](../../../docs/standard/globalization-localization/index.md)
-- [Localización](../../../docs/standard/globalization-localization/localization.md)
-- [Globalización](../../../docs/standard/globalization-localization/globalization.md)
-- [Recursos de aplicaciones de escritorio](../../../docs/framework/resources/index.md)
+- [Globalización y localización](index.md)
+- [Localización](localization.md)
+- [Globalización](globalization.md)
+- [Recursos de aplicaciones de escritorio](../../framework/resources/index.md)

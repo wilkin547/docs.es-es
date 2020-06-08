@@ -3,12 +3,12 @@ title: Crear nuevas referencias de entidad
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: a42f81b3-0403-4e34-b346-7d2129804e54
-ms.openlocfilehash: 8c81aae89bbe5979dffdc47a369349bd2b3f2df7
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7c94d121d00c169f0d74bc9b12c8710fb6055250
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710991"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84283356"
 ---
 # <a name="creating-new-entity-references"></a>Crear nuevas referencias de entidad
 El método **CreateEntityReference** crea un nuevo nodo **XmlEntityReference**. El Modelo de objetos de documento (DOM) busca si el nombre de entidad al que se hace referencia ya se ha declarado. Si es así, los nodos secundarios del nodo **XmlEntityReference** se copian desde el nodo de declaración de entidad. Si no hay declaración de entidad equivalente, se adjunta un nodo de texto vacío como el único nodo secundario del nodo de referencia de entidad. Puesto que los nodos secundarios de **XmlEntityReference** se copian de otros nodos, son de solo lectura y no pueden modificarse.  
@@ -22,4 +22,4 @@ El método **CreateEntityReference** crea un nuevo nodo **XmlEntityReference**. 
   
 ## <a name="see-also"></a>Vea también
 
-- [Document Object Model (DOM) para XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [Document Object Model (DOM) para XML](xml-document-object-model-dom.md)

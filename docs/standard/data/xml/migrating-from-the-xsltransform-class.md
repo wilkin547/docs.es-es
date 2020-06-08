@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
-ms.openlocfilehash: 8383d8cb3e5819c46a0716c59323e492bb9add8e
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: d18cf72f0629d347fb5f55ad7332e6046614c01b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937989"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84282394"
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>Migración desde la clase XslTransform
 
@@ -35,7 +35,7 @@ De forma predeterminada, la clase <xref:System.Xml.Xsl.XslCompiledTransform> des
 [!code-csharp[XML_Migration#16](../../../../samples/snippets/csharp/VS_Snippets_Data/XML_Migration/CS/migration.cs#16)]
 [!code-vb[XML_Migration#16](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XML_Migration/VB/migration.vb#16)]
 
-Para obtener más información, vea [Consideraciones de seguridad de XSLT](../../../../docs/standard/data/xml/xslt-security-considerations.md).
+Para obtener más información, vea [Consideraciones de seguridad de XSLT](xslt-security-considerations.md).
 
 ## <a name="new-features"></a>Características nuevas
 
@@ -97,7 +97,7 @@ using (XmlWriter writer = doc.CreateNavigator().AppendChild()) {
 
 ### <a name="discretionary-behavior"></a>Comportamiento discrecional
 
-La recomendación de la versión 1.0 de las transformaciones XLT (XSLT) del W3C incluye áreas en las que el proveedor de las implementaciones puede decidir cómo controlar una situación. Estas áreas se consideran comportamientos discrecionales. Existen numerosas áreas en las que <xref:System.Xml.Xsl.XslCompiledTransform> se comporta de manera distinta a la clase <xref:System.Xml.Xsl.XslTransform>. Para más información, vea [Errores XSLT recuperables](../../../../docs/standard/data/xml/recoverable-xslt-errors.md).
+La recomendación de la versión 1.0 de las transformaciones XLT (XSLT) del W3C incluye áreas en las que el proveedor de las implementaciones puede decidir cómo controlar una situación. Estas áreas se consideran comportamientos discrecionales. Existen numerosas áreas en las que <xref:System.Xml.Xsl.XslCompiledTransform> se comporta de manera distinta a la clase <xref:System.Xml.Xsl.XslTransform>. Para más información, vea [Errores XSLT recuperables](recoverable-xslt-errors.md).
 
 ### <a name="extension-objects-and-script-functions"></a>Objetos de extensión y funciones de scripts
 
@@ -109,7 +109,7 @@ La recomendación de la versión 1.0 de las transformaciones XLT (XSLT) del W3C 
 
 En <xref:System.Xml.Xsl.XslCompiledTransform> se produce un enlace (búsqueda de nombre de método) con las funciones del script en el tiempo de compilación y es posible que las hojas de estilos que habían funcionado con XslTransform generen una excepción si se cargan con <xref:System.Xml.Xsl.XslCompiledTransform>.
 
-<xref:System.Xml.Xsl.XslCompiledTransform> admiten la posibilidad de contener elementos secundarios `msxsl:using` y `msxsl:assembly` dentro del elemento `msxsl:script`. Los elementos `msxsl:using` y `msxsl:assembly` permiten declarar espacios de nombres y ensamblados adicionales que se utilizarán en el bloque del script. Vea [Bloques de scripts con msxsl:script](../../../../docs/standard/data/xml/script-blocks-using-msxsl-script.md) para obtener más información.
+<xref:System.Xml.Xsl.XslCompiledTransform> admiten la posibilidad de contener elementos secundarios `msxsl:using` y `msxsl:assembly` dentro del elemento `msxsl:script`. Los elementos `msxsl:using` y `msxsl:assembly` permiten declarar espacios de nombres y ensamblados adicionales que se utilizarán en el bloque del script. Vea [Bloques de scripts con msxsl:script](script-blocks-using-msxsl-script.md) para obtener más información.
 
 <xref:System.Xml.Xsl.XslCompiledTransform> no permite el uso de objetos de extensión que tengan múltiples sobrecargas con el mismo número de argumentos.
 
@@ -127,5 +127,5 @@ Se ha agregado a la clase <xref:System.Xml.Xsl.XslCompiledTransform> compatibili
 
 ## <a name="see-also"></a>Vea también
 
-- [Transformaciones XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
-- [Uso de la clase XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)
+- [Transformaciones XSLT](xslt-transformations.md)
+- [Uso de la clase XslCompiledTransform](using-the-xslcompiledtransform-class.md)

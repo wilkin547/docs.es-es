@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, with other asynchronous models
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
-ms.openlocfilehash: e71c609b500bc6771c405cfb6f4ac14923cc3939
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 7db031c655980dd800de77cbbd6a07a0ba94b33b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507551"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284889"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>TPL y la programación asincrónica tradicional de .NET Framework
 .NET Framework proporciona los siguientes dos modelos estándar para realizar las operaciones asincrónicas enlazadas a E/S y enlazadas a cálculos:  
@@ -102,7 +102,7 @@ ms.locfileid: "82507551"
  [!code-csharp[FromAsync#10](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/snippet10.cs#10)]
  [!code-vb[FromAsync#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/snippet10.vb#10)]  
   
- Para obtener un ejemplo más completo, en donde se incluye control de excepciones adicional y se muestra cómo llamar al método desde código de cliente, vea [Procedimiento: Encapsulado de patrones de EAP en una tarea](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md).  
+ Para obtener un ejemplo más completo, en donde se incluye control de excepciones adicional y se muestra cómo llamar al método desde código de cliente, vea [Procedimiento: Encapsulado de patrones de EAP en una tarea](how-to-wrap-eap-patterns-in-a-task.md).  
   
  Recuerde que TaskCompletionSource iniciará cualquier tarea creada por <xref:System.Threading.Tasks.TaskCompletionSource%601> y, por consiguiente, el código de usuario no debería llamar al método Start en esa tarea.  
   
@@ -119,4 +119,4 @@ ms.locfileid: "82507551"
   
 ## <a name="see-also"></a>Vea también
 
-- [Biblioteca TPL](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+- [Biblioteca TPL](task-parallel-library-tpl.md)

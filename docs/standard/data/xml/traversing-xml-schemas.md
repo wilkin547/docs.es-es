@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
-ms.openlocfilehash: dbe02242f9bb8654e3f12d87b6ff6c2aea1f76b1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 0951e83c3035de751801d194696eb64993260ef8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710120"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289842"
 ---
 # <a name="traversing-xml-schemas"></a>Cómo atravesar esquemas XML
 
@@ -39,7 +39,7 @@ Las siguientes propiedades de la clase <xref:System.Xml.Schema.XmlSchema> propor
 >
 > La propiedad <xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A> proporciona acceso a todos atributos que no pertenecen al espacio de nombres del esquema. El procesador de esquemas no procesa estos atributos.
 
-En el código de ejemplo que se incluye a continuación se muestra cómo se atraviesa el esquema del cliente que se creó en el tema [Compilar esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md). El código de ejemplo muestra cómo se atraviesa el esquema utilizando las colecciones que se han descrito anteriormente y escribe todos los elementos y atributos del esquema en la consola.
+En el código de ejemplo que se incluye a continuación se muestra cómo se atraviesa el esquema del cliente que se creó en el tema [Compilar esquemas XML](building-xml-schemas.md). El código de ejemplo muestra cómo se atraviesa el esquema utilizando las colecciones que se han descrito anteriormente y escribe todos los elementos y atributos del esquema en la consola.
 
 El ejemplo atraviesa el esquema del cliente en los siguientes pasos.
 
@@ -65,14 +65,14 @@ El ejemplo atraviesa el esquema del cliente en los siguientes pasos.
 
 La propiedad <xref:System.Xml.Schema.XmlSchemaElement.ElementSchemaType%2A?displayProperty=nameWithType> puede ser <xref:System.Xml.Schema.XmlSchemaSimpleType> o <xref:System.Xml.Schema.XmlSchemaComplexType> si se trata de un tipo complejo o un tipo simple definido por el usuario. También puede ser <xref:System.Xml.Schema.XmlSchemaDatatype> si es uno de los tipos de datos integrados que se definen en la recomendación de esquemas XML del W3C. En el esquema del cliente, el <xref:System.Xml.Schema.XmlSchemaElement.ElementSchemaType%2A> del elemento `Customer` es <xref:System.Xml.Schema.XmlSchemaComplexType>, y los elementos `FirstName` y `LastName` son <xref:System.Xml.Schema.XmlSchemaSimpleType>.
 
-El código de ejemplo del tema [Compilar esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md) utilizaba la colección <xref:System.Xml.Schema.XmlSchemaComplexType.Attributes%2A?displayProperty=nameWithType> para agregar el atributo `CustomerId` al elemento `Customer`. Se trata de una propiedad anterior a la compilación del esquema. La propiedad del conjunto de información posterior a la compilación del esquema correspondiente es la colección <xref:System.Xml.Schema.XmlSchemaComplexType.AttributeUses%2A?displayProperty=nameWithType>, que contiene todos los atributos del tipo complejo, incluyendo los que se heredan a través de la derivación de tipos.
+El código de ejemplo del tema [Compilar esquemas XML](building-xml-schemas.md) utilizaba la colección <xref:System.Xml.Schema.XmlSchemaComplexType.Attributes%2A?displayProperty=nameWithType> para agregar el atributo `CustomerId` al elemento `Customer`. Se trata de una propiedad anterior a la compilación del esquema. La propiedad del conjunto de información posterior a la compilación del esquema correspondiente es la colección <xref:System.Xml.Schema.XmlSchemaComplexType.AttributeUses%2A?displayProperty=nameWithType>, que contiene todos los atributos del tipo complejo, incluyendo los que se heredan a través de la derivación de tipos.
 
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre el Modelo de objetos de esquema XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
-- [Lectura y escritura de esquemas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
-- [Compilación de esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)
-- [Edición de esquemas XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)
-- [Inclusión o importación de esquemas XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
-- [XmlSchemaSet para compilación de esquemas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
-- [Conjunto de información posterior a la compilación de esquemas](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+- [Información general sobre el Modelo de objetos de esquema XML](xml-schema-object-model-overview.md)
+- [Lectura y escritura de esquemas XML](reading-and-writing-xml-schemas.md)
+- [Compilación de esquemas XML](building-xml-schemas.md)
+- [Edición de esquemas XML](editing-xml-schemas.md)
+- [Inclusión o importación de esquemas XML](including-or-importing-xml-schemas.md)
+- [XmlSchemaSet para compilación de esquemas](xmlschemaset-for-schema-compilation.md)
+- [Conjunto de información posterior a la compilación de esquemas](post-schema-compilation-infoset.md)

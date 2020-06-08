@@ -16,12 +16,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: cce01a7c87f6f20b5e6c46881b8c863bb5a72a88
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f4aac5afbb13cafa7bb0e9c1eb6bbd92ac41bf8c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160074"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289426"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Información general sobre el modelo asincrónico basado en eventos
 Las aplicaciones que desempeñan muchas tareas simultáneamente, aunque siguen respondiendo a la interacción del usuario, a menudo exigen un diseño que utiliza varios subprocesos. El espacio de nombres <xref:System.Threading> proporciona todas las herramientas necesarias para crear aplicaciones multiproceso de gran rendimiento, pero, para usar estas herramientas de forma eficaz, es necesario atesorar una gran experiencia en ingeniería de software multiproceso. Para aplicaciones multiproceso relativamente simples, el componente <xref:System.ComponentModel.BackgroundWorker> ofrece una solución sencilla. Para aplicaciones asincrónicas más sofisticadas, considere la opción de implementar una clase que se adhiera al modelo asincrónico basado en eventos.  
@@ -34,7 +34,7 @@ Las aplicaciones que desempeñan muchas tareas simultáneamente, aunque siguen r
   
 - Esperar a que los recursos estén disponibles sin detener la aplicación, es decir, sin que se quede "bloqueada".  
   
-- Comunicarse con operaciones asincrónicas pendientes mediante el modelo conocido de eventos y delegados. Para obtener más información sobre el uso de controladores de eventos y delegados, vea [Eventos](../../../docs/standard/events/index.md).  
+- Comunicarse con operaciones asincrónicas pendientes mediante el modelo conocido de eventos y delegados. Para obtener más información sobre el uso de controladores de eventos y delegados, vea [Eventos](../events/index.md).  
   
  Una clase que admita el modelo asincrónico basado en eventos tendrá uno o varios métodos denominados _NombreDeMétodo_**Async**. Estos métodos pueden reflejar versiones sincrónicas, que desempeñan la misma operación en el subproceso actual. La clase también puede tener un evento _NombreDeMétodo_**Completed** y un método _NombreDeMétodo_**AsyncCancel** (o simplemente **CancelAsync**).  
   
@@ -45,7 +45,7 @@ Las aplicaciones que desempeñan muchas tareas simultáneamente, aunque siguen r
  El modelo asincrónico basado en eventos requiere que se pueda cancelar una operación asincrónica y que el control <xref:System.Windows.Forms.PictureBox> admita este requisito con su método <xref:System.Windows.Forms.PictureBox.CancelAsync%2A>. La llamada a <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> envía una solicitud para detener la carga pendiente y, cuando se cancela la operación, se genera el evento <xref:System.Windows.Forms.PictureBox.LoadCompleted>.  
   
 > [!CAUTION]
-> Es posible que la descarga finalice justo en el momento de realizar la solicitud <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> y, por tanto, puede que <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> no refleje la solicitud de cancelación. Esto se denomina *condición de carrera* y es un problema habitual en la programación multiproceso. Para obtener más información sobre problemas en la programación multiproceso, vea [Procedimientos recomendados para el subprocesamiento administrado](../../../docs/standard/threading/managed-threading-best-practices.md).  
+> Es posible que la descarga finalice justo en el momento de realizar la solicitud <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> y, por tanto, puede que <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> no refleje la solicitud de cancelación. Esto se denomina *condición de carrera* y es un problema habitual en la programación multiproceso. Para obtener más información sobre problemas en la programación multiproceso, vea [Procedimientos recomendados para el subprocesamiento administrado](../threading/managed-threading-best-practices.md).  
   
 ## <a name="characteristics-of-the-event-based-asynchronous-pattern"></a>Características del modelo asincrónico basado en eventos  
  El modelo asincrónico basado en eventos puede tener varias formas, en función de la complejidad de las operaciones admitidas por una clase en particular. Las clases más simples pueden tener un único método _NombreDeMétodo_**Async** y su correspondiente evento _NombreDeMétodo_**Completed**. Las clases más complejas pueden tener varios métodos _NombreDeMétodo_**Async**, cada uno con su correspondiente evento _NombreDeMétodo_**Completed**, así como versiones sincrónicas de estos métodos. Opcionalmente, las clases pueden admitir cancelación, informes de progreso y resultados incrementales para los métodos asincrónicos.  
@@ -136,9 +136,9 @@ public class AsyncExample
 - <xref:System.ComponentModel.ProgressChangedEventArgs>
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.AsyncCompletedEventArgs>
-- [Uso de componentes que admitan el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)
-- [Ejecutar una operación en segundo plano](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [Cómo: Implementar un formulario que utiliza una operación en segundo plano](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
-- [Modelo asincrónico basado en eventos (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
-- [Procedimientos recomendados para implementar el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
-- [Decisión de cuándo implementar el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)
+- [Uso de componentes que admitan el modelo asincrónico basado en eventos](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)
+- [Ejecutar una operación en segundo plano](../../framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Cómo: Implementar un formulario que utiliza una operación en segundo plano](../../framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Modelo asincrónico basado en eventos (EAP)](event-based-asynchronous-pattern-eap.md)
+- [Procedimientos recomendados para implementar el modelo asincrónico basado en eventos](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
+- [Decisión de cuándo implementar el modelo asincrónico basado en eventos](deciding-when-to-implement-the-event-based-asynchronous-pattern.md)

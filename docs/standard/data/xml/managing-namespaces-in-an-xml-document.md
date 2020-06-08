@@ -3,12 +3,12 @@ title: Administrar espacios de nombres en un documento XML
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
-ms.openlocfilehash: 1b3e57c0a8a37574a92d23cf1d623301cc54b984
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: b60e773183bd008c99022946a2ec53932234fe23
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82796157"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289153"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>Administrar espacios de nombres en un documento XML
 Los espacios de nombres XML asocian nombres de elementos y de atributos de un documento XML con identificadores URI personalizados y predefinidos. Para crear estas asociaciones, puede definir los prefijos de los URI del espacio de nombres y usar dichos prefijos para calificar los nombres de los elementos y de los atributos en los datos XML. Los espacios de nombres evitan conflictos de nombres de elementos y atributos y permiten que los elementos y atributos con el mismo nombre se traten y se validen de forma diferente.  
@@ -83,4 +83,4 @@ Los espacios de nombres XML asocian nombres de elementos y de atributos de un do
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Xml.XmlNamespaceManager>
-- [Documentos y datos XML](../../../../docs/standard/data/xml/index.md)
+- [Documentos y datos XML](index.md)

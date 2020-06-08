@@ -11,12 +11,12 @@ helpviewer_keywords:
 - streams, writing characters to strings
 - I/O [.NET Framework], writing characters to strings
 ms.assetid: 1222cbeb-0760-44bf-9888-914a2a37174b
-ms.openlocfilehash: ecbfa2de2c21ff79df269f74eeddfa0738e7e25c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 04fc21c452258a88292a886d952353ac55573121
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160290"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288256"
 ---
 # <a name="how-to-write-characters-to-a-string"></a>Procedimiento Escribir caracteres en una cadena
 Los siguientes ejemplos de código escriben caracteres de forma sincrónica y asincrónica desde una matriz de caracteres en una cadena.  
@@ -38,11 +38,11 @@ Los siguientes ejemplos de código escriben caracteres de forma sincrónica y as
 - <xref:System.IO.StringWriter>  
 - <xref:System.IO.StringWriter.Write%2A?displayProperty=nameWithType>  
 - <xref:System.Text.StringBuilder>  
-- [E/S de archivos y secuencias](../../../docs/standard/io/index.md)  
-- [E/S de archivos asincrónica](../../../docs/standard/io/asynchronous-file-i-o.md)  
-- [Cómo: Enumerar directorios y archivos](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
-- [Cómo: Leer y escribir en un archivo de datos recién creado](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
-- [Cómo: Abrir y anexar a un archivo de registro](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
-- [Cómo: Leer texto de un archivo](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
-- [Cómo: Escribir texto en un archivo](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
-- [Cómo: Leer caracteres de una cadena](../../../docs/standard/io/how-to-read-characters-from-a-string.md)
+- [E/S de archivos y secuencias](index.md)  
+- [E/S de archivos asincrónica](asynchronous-file-i-o.md)  
+- [Cómo: Enumerar directorios y archivos](how-to-enumerate-directories-and-files.md)  
+- [Cómo: Leer y escribir en un archivo de datos recién creado](how-to-read-and-write-to-a-newly-created-data-file.md)  
+- [Cómo: Abrir y anexar a un archivo de registro](how-to-open-and-append-to-a-log-file.md)  
+- [Cómo: Leer texto de un archivo](how-to-read-text-from-a-file.md)  
+- [Cómo: Escribir texto en un archivo](how-to-write-text-to-a-file.md)  
+- [Cómo: Leer caracteres de una cadena](how-to-read-characters-from-a-string.md)

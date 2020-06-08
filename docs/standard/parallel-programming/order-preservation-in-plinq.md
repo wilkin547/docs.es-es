@@ -8,17 +8,17 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, order preservation
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
-ms.openlocfilehash: 0e9b4510757fc0f98b2edfbe1c656cdb5f6bce72
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 45752f3ffa64079079505934afd76e812daad7bd
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588635"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290660"
 ---
 # <a name="order-preservation-in-plinq"></a>Conservar el orden en PLINQ
 En PLINQ, el objetivo es maximizar el rendimiento manteniendo la exactitud. Una consulta se debería ejecutar lo más rápido que fuese posible pero con resultados correctos. La exactitud exige que se conserve el orden de la secuencia de origen en algunos casos; sin embargo, la ordenación puede suponer la utilización de muchos recursos de computación. Por consiguiente, de forma predeterminada, PLINQ no conserva el orden de la secuencia de origen. En este sentido, PLINQ se parece a [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)], pero es diferente de LINQ to Objects, que conserva el orden.  
   
- Para reemplazar el comportamiento predeterminado, puede activar la capacidad de conservar el orden utilizando el operador <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> en la secuencia de origen. Después, puede desactivarla en la consulta, utilizando el método <xref:System.Linq.ParallelEnumerable.AsUnordered%2A>. Con ambos métodos, se procesa la consulta basándose en la heurística que determina si la consulta se debe ejecutar de forma paralela o secuencial. Para más información, consulte [Introducción a la velocidad en PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
+ Para reemplazar el comportamiento predeterminado, puede activar la capacidad de conservar el orden utilizando el operador <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> en la secuencia de origen. Después, puede desactivarla en la consulta, utilizando el método <xref:System.Linq.ParallelEnumerable.AsUnordered%2A>. Con ambos métodos, se procesa la consulta basándose en la heurística que determina si la consulta se debe ejecutar de forma paralela o secuencial. Para más información, consulte [Introducción a la velocidad en PLINQ](understanding-speedup-in-plinq.md).  
   
  En el siguiente ejemplo se muestra una consulta paralela no ordenada que filtra todos los elementos que coinciden con una condición, sin intentar ordenar los resultados de forma alguna.  
   
@@ -122,5 +122,5 @@ En PLINQ, el objetivo es maximizar el rendimiento manteniendo la exactitud. Una 
   
 ## <a name="see-also"></a>Vea también
 
-- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
-- [Programación en paralelo](../../../docs/standard/parallel-programming/index.md)
+- [Parallel LINQ (PLINQ)](introduction-to-plinq.md)
+- [Programación en paralelo](index.md)

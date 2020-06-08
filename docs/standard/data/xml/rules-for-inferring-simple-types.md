@@ -3,12 +3,12 @@ title: Reglas para deducir tipos simples
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
-ms.openlocfilehash: 17429e77f7764873e607a8feaa62da1cc6e014a4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 571019d13433312a5d31f581c3527aae901bbba7
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710237"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289075"
 ---
 # <a name="rules-for-inferring-simple-types"></a>Reglas para deducir tipos simples
 Describe cómo la clase <xref:System.Xml.Schema.XmlSchemaInference> deduce el tipo de datos para atributos y elementos.  
@@ -76,6 +76,6 @@ Los siguientes son atributos que definen el esquema que son omitidos durante la 
   
 ## <a name="see-also"></a>Vea también
 
-- [Modelo de objetos de esquema XML (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
-- [Deducción de esquemas a partir de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)
-- [Reglas para deducir los tipos de nodo de esquema y estructura](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)
+- [Modelo de objetos de esquema XML (SOM)](xml-schema-object-model-som.md)
+- [Deducción de esquemas a partir de documentos XML](inferring-schemas-from-xml-documents.md)
+- [Reglas para deducir los tipos de nodo de esquema y estructura](rules-for-inferring-schema-node-types-and-structure.md)

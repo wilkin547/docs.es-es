@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, improving efficiency
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
-ms.openlocfilehash: 4b2b6a6124bf8cc0fb3b379607135283678e3268
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e572c5a14958ccc069ae7649af8c8ed4eb967dc1
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73091359"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284590"
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>Tutorial: Usar BatchBlock y BatchedJoinBlock para mejorar la eficacia
 
@@ -24,7 +24,7 @@ La biblioteca de flujos de datos TPL proporciona las clases <xref:System.Threadi
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-1. Lea la sección sobre bloques de combinación en el documento [Flujo de datos](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) antes de iniciar este tutorial.
+1. Lea la sección sobre bloques de combinación en el documento [Flujo de datos](dataflow-task-parallel-library.md) antes de iniciar este tutorial.
 
 2. Asegúrese de que tiene una copia de la base de datos Northwind, Northwind.sdf, disponible en el equipo. Este archivo se encuentra normalmente en la carpeta %Archivos de programa%\Microsoft SQL Server Compact Edition\v3.5\Ejemplos\\.
 
@@ -131,4 +131,4 @@ El ejemplo siguiente muestra el código completo: El método `Main` compara el t
 
 ## <a name="see-also"></a>Vea también
 
-- [Flujo de datos](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+- [Flujo de datos](dataflow-task-parallel-library.md)

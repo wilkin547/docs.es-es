@@ -35,12 +35,12 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-ms.openlocfilehash: 8956be3cf8f96a8dd255f378d4927404c172c908
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ad7957fd555c1de8fe47c092d3eb399a803fb1fb
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160006"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290907"
 ---
 # <a name="the-regular-expression-object-model"></a>El modelo de objetos de expresión regular
 <a name="introduction"></a> En este tema se describe el modelo de objetos usado para trabajar con expresiones regulares de .NET. Contiene las siguientes secciones:  
@@ -284,7 +284,7 @@ ms.locfileid: "78160006"
   
  Las propiedades de la clase <xref:System.Text.RegularExpressions.Group> proporcionan información sobre el grupo capturado: la propiedad `Group.Value` contiene la subcadena capturada, la propiedad `Group.Index` indica la posición inicial del grupo capturado en el texto de entrada, la propiedad `Group.Length` contiene la longitud del texto capturado y la propiedad `Group.Success` indica si una subcadena coincidió con el patrón definido por el grupo de captura.  
   
- Al aplicar cuantificadores a un grupo (para obtener más información, consulte [Cuantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)), se modifica la relación de una captura por grupo de captura de dos maneras:  
+ Al aplicar cuantificadores a un grupo (para obtener más información, consulte [Cuantificadores](quantifiers-in-regular-expressions.md)), se modifica la relación de una captura por grupo de captura de dos maneras:  
   
 - Si el cuantificador `*` o `*?` (qué especifica cero o más coincidencias) se aplica a un grupo, es posible que un grupo de captura no tenga una coincidencia en la cadena de entrada. Cuando no haya texto capturado, las propiedades del objeto <xref:System.Text.RegularExpressions.Group> se establecen como se muestran en la siguiente tabla.  
   
@@ -352,5 +352,5 @@ ms.locfileid: "78160006"
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Text.RegularExpressions>
-- [Expresiones regulares de .NET](../../../docs/standard/base-types/regular-expressions.md)
-- [Lenguaje de expresiones regulares: referencia rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [Expresiones regulares de .NET](regular-expressions.md)
+- [Lenguaje de expresiones regulares: referencia rápida](regular-expression-language-quick-reference.md)

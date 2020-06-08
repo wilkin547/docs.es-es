@@ -3,12 +3,12 @@ title: Consideraciones de seguridad de XSLT
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: fea695be-617c-4977-9567-140e820436fc
-ms.openlocfilehash: e6e490c0f637aace57dacc88ef49cc9be87532cd
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 81db764016607ebe6facfc530dbb2bac8e6b8cfe
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709691"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84282518"
 ---
 # <a name="xslt-security-considerations"></a>Consideraciones de seguridad de XSLT
 El lenguaje XSLT posee un amplio conjunto de características que aportan gran potencia y flexibilidad. Incluye muchas características que, aunque son útiles, también se podrían aprovechar desde orígenes externos. Para poder utilizar XSLT con seguridad, debe conocer los tipos de problemas de seguridad que surgen al utilizar XSLT y las estrategias básicas que puede emplear para mitigar estos riesgos.  
@@ -56,6 +56,6 @@ El lenguaje XSLT posee un amplio conjunto de características que aportan gran p
   
 ## <a name="see-also"></a>Vea también
 
-- [Transformaciones XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
-- [Resolución de recursos externos durante el procesamiento XSLT](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md)
-- [Seguridad de acceso del código](../../../../docs/framework/misc/code-access-security.md)
+- [Transformaciones XSLT](xslt-transformations.md)
+- [Resolución de recursos externos durante el procesamiento XSLT](resolving-external-resources-during-xslt-processing.md)
+- [Seguridad de acceso del código](../../../framework/misc/code-access-security.md)

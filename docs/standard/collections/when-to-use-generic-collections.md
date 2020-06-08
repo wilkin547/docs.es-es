@@ -6,12 +6,12 @@ helpviewer_keywords:
 - collections [.NET Framework], generic
 - generic collections [.NET Framework]
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
-ms.openlocfilehash: feccd8c53e5171889666ed407258b9d36ad8a140
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: c59a125a8df95e3c4fe6e1839956d800bd6ee910
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728195"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290388"
 ---
 # <a name="when-to-use-generic-collections"></a>Cuándo utilizar colecciones genéricas
 
@@ -60,7 +60,7 @@ Se puede crear el objeto `Builder` llamando al método `CreateBuilder()` no gen�
 
 ## <a name="linq-to-objects"></a>LINQ to Objects
 
-La característica LINQ to Objects permite usar consultas LINQ para obtener acceso a los objetos en memoria mientras el tipo de objeto implemente la interfaz <xref:System.Collections.IEnumerable?displayProperty=nameWithType> o <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> . Las consultas LINQ proporcionan un patrón común para acceder a los datos; suelen ser más concisas y legibles que los bucles `foreach` estándar y proporcionan capacidades de filtrado, ordenación y agrupación. Las consultas LINQ también pueden mejorar el rendimiento. Para más información, vea [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) y [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md).
+La característica LINQ to Objects permite usar consultas LINQ para obtener acceso a los objetos en memoria mientras el tipo de objeto implemente la interfaz <xref:System.Collections.IEnumerable?displayProperty=nameWithType> o <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> . Las consultas LINQ proporcionan un patrón común para acceder a los datos; suelen ser más concisas y legibles que los bucles `foreach` estándar y proporcionan capacidades de filtrado, ordenación y agrupación. Las consultas LINQ también pueden mejorar el rendimiento. Para más información, vea [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) y [Parallel LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md).
 
 ## <a name="additional-functionality"></a>Funcionalidad adicional
 Algunos de los tipos genéricos tienen funcionalidades que no se encuentran en los tipos de colección no genéricos. Por ejemplo, la clase <xref:System.Collections.Generic.List%601> , que se corresponde con la clase <xref:System.Collections.ArrayList> no genérica, tiene una serie de métodos que aceptan delegados genéricos, como el delegado <xref:System.Predicate%601> que permite especificar los métodos de búsqueda en la lista, el delegado <xref:System.Action%601> que representa los métodos que actúan en cada elemento de la lista y el delegado <xref:System.Converter%602> que permite definir conversiones entre tipos.
@@ -69,6 +69,6 @@ La clase <xref:System.Collections.Generic.List%601> permite especificar sus prop
 
 ## <a name="see-also"></a>Vea también
 
-- [Colecciones y estructuras de datos](../../../docs/standard/collections/index.md)
-- [Tipos de colección utilizados normalmente](../../../docs/standard/collections/commonly-used-collection-types.md)
-- [Genéricos](../../../docs/standard/generics/index.md)
+- [Colecciones y estructuras de datos](index.md)
+- [Tipos de colección utilizados normalmente](commonly-used-collection-types.md)
+- [Genéricos](../generics/index.md)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: 0fb7ec8d9de8fae7a0443984511e538d38d93c7a
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 28c1397c71debeed181acb2c1acb01b0f8cee7c9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441011"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289371"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Procedimientos recomendados para el uso de cadenas en .NET
 
@@ -309,7 +309,7 @@ En el ejemplo siguiente se crea una instancia de un objeto <xref:System.Collecti
 Cuando muestre a los usuarios datos que no sean de cadena, como números, y fechas y horas, asígneles formato mediante la configuración de la referencia cultural del usuario. De forma predeterminada, los siguientes elementos usan la referencia cultural del subproceso actual al dar formato a las operaciones:
 
 - Cadenas interpoladas compatibles con los compiladores [C#](../../csharp/language-reference/tokens/interpolated.md) y [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md).
-- Operaciones de concatenación de cadenas que usan los operadores de concatenación [C#](../../csharp/language-reference/operators/addition-operator.md#string-concatenation) o [Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md ), o que llaman al método <xref:System.String.Concat%2A?displayProperty=nameWithType> directamente.
+- Operaciones de concatenación de cadenas que usan los operadores de concatenación [C#](../../csharp/language-reference/operators/addition-operator.md#string-concatenation) o [Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md), o que llaman al método <xref:System.String.Concat%2A?displayProperty=nameWithType> directamente.
 - El método <xref:System.String.Format%2A?displayProperty=nameWithType> .
 - Métodos `ToString` de los tipos numéricos y tipos de fecha y hora.
 

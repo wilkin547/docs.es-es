@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - thread-safe collections, blocking collections in pipeline
 ms.assetid: a39c7ec3-3ad7-4f4d-8fe4-b3e9dbabe2ed
-ms.openlocfilehash: 397c438bacd1cfed1613efef61e9d7266d55ea47
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2309676435a6603aaa9bbbd95953c0179b908622
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711264"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287836"
 ---
 # <a name="how-to-use-arrays-of-blocking-collections-in-a-pipeline"></a>Cómo: Usar matrices de colecciones de bloqueo en una canalización
 En el ejemplo siguiente se muestra cómo usar matrices de objetos de <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> con métodos estáticos como <xref:System.Collections.Concurrent.BlockingCollection%601.TryAddToAny%2A> y <xref:System.Collections.Concurrent.BlockingCollection%601.TryTakeFromAny%2A> para implementar una transferencia de datos rápida y flexible entre los componentes.  
@@ -27,4 +27,4 @@ En el ejemplo siguiente se muestra cómo usar matrices de objetos de <xref:Syste
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
-- [Colecciones seguras para subprocesos](../../../../docs/standard/collections/thread-safe/index.md)
+- [Colecciones seguras para subprocesos](index.md)

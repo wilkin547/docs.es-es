@@ -11,17 +11,17 @@ helpviewer_keywords:
 - raising events
 - events [.NET Framework], samples
 ms.assetid: 42afade7-3a02-4f2e-868b-95845f302f8f
-ms.openlocfilehash: 256b5ae9ac2145e339136985872dfa5423aca730
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4d0b24b8a6f1b914745d819b90b973752e32447c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73131592"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279963"
 ---
 # <a name="how-to-raise-and-consume-events"></a>Cómo: Provocar y utilizar eventos
 En los ejemplos de este tema se muestra cómo trabajar con eventos. Se incluyen ejemplos del delegado <xref:System.EventHandler>, el delegado <xref:System.EventHandler%601> y un delegado personalizado, para ilustrar eventos con y sin datos.  
   
- En los ejemplos se usan los conceptos descritos en el artículo [Eventos](../../../docs/standard/events/index.md).  
+ En los ejemplos se usan los conceptos descritos en el artículo [Eventos](index.md).  
   
 ## <a name="example"></a>Ejemplo  
  En el primer ejemplo se muestra cómo generar y consumir un evento que no tiene datos. Contiene una clase denominada `Counter` que tiene un evento denominado `ThresholdReached`. Este evento se genera cuando un valor de contador iguala o supera el valor de umbral. El delegado <xref:System.EventHandler> está asociado al evento, porque no se proporcionan datos de evento.  
@@ -44,4 +44,4 @@ En los ejemplos de este tema se muestra cómo trabajar con eventos. Se incluyen 
   
 ## <a name="see-also"></a>Vea también
 
-- [Eventos](../../../docs/standard/events/index.md)
+- [Eventos](index.md)

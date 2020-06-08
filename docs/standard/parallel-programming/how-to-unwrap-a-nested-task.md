@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to unwrap nested tasks
 ms.assetid: a0769dd2-0f6d-48ca-8418-a9d39de7f450
-ms.openlocfilehash: c72654a2bc21035fe706d76018bb163d8ba01ee8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9a69fa42da41ee4a071a6571042fd96fb5a009d2
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73106902"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288035"
 ---
 # <a name="how-to-unwrap-a-nested-task"></a>Cómo: Desencapsular una tarea anidada
 Puede devolver una tarea de un método y, a continuación, esperar o continuar a partir de dicha tarea, tal como se muestra en el ejemplo siguiente:  
@@ -44,4 +44,4 @@ Puede devolver una tarea de un método y, a continuación, esperar o continuar a
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Threading.Tasks.TaskExtensions?displayProperty=nameWithType>
-- [Programación asincrónica basada en tareas](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)
+- [Programación asincrónica basada en tareas](task-based-asynchronous-programming.md)

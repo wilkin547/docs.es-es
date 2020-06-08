@@ -6,12 +6,12 @@ helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-ms.openlocfilehash: 72cf742aae26f9441229b355dc6e70da7a5fc9cd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1d9c72a64d172dcadf1bff1b1edf3050ca5f7d05
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75900583"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287628"
 ---
 # <a name="garbage-collection-and-performance"></a>Recolección de elementos no utilizados y rendimiento
 
@@ -23,7 +23,7 @@ En las próximas siguientes se describen las herramientas disponibles para inves
 
 ### <a name="memory-performance-counters"></a>Contadores de rendimiento de memoria
 
-Puede usar contadores de rendimiento para recopilar datos de rendimiento. Para obtener instrucciones, vea [Generar perfiles en tiempo de ejecución](../../../docs/framework/debug-trace-profile/runtime-profiling.md). La categoría CLR Memory de contadores de rendimiento de .NET, tal y como se describe en [Contadores de rendimiento en .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md), ofrece información sobre el recolector de elementos no utilizados.
+Puede usar contadores de rendimiento para recopilar datos de rendimiento. Para obtener instrucciones, vea [Generar perfiles en tiempo de ejecución](../../framework/debug-trace-profile/runtime-profiling.md). La categoría CLR Memory de contadores de rendimiento de .NET, tal y como se describe en [Contadores de rendimiento en .NET Framework](../../framework/debug-trace-profile/performance-counters.md), ofrece información sobre el recolector de elementos no utilizados.
 
 ### <a name="debugging-with-sos"></a>Depurar con SOS
 
@@ -33,7 +33,7 @@ Para instalar WinDbg, instale las Herramientas de depuración para Windows desde
 
 ### <a name="garbage-collection-etw-events"></a>Eventos ETW de recolección de elementos no utilizados
 
-El seguimiento de eventos para Windows (ETW) es un sistema de traza que complementa la compatibilidad con generación de perfiles y depuración proporcionada por .NET Framework. A partir de .NET Framework 4, los [eventos ETW de recolección de elementos no utilizados](../../../docs/framework/performance/garbage-collection-etw-events.md) capturan información útil para analizar el montón administrado desde un punto de vista estadístico. Por ejemplo, el evento `GCStart_V1`, que se genera cuando está a punto de producirse una recolección de elementos no utilizados, proporciona la siguiente información:
+El seguimiento de eventos para Windows (ETW) es un sistema de traza que complementa la compatibilidad con generación de perfiles y depuración proporcionada por .NET Framework. A partir de .NET Framework 4, los [eventos ETW de recolección de elementos no utilizados](../../framework/performance/garbage-collection-etw-events.md) capturan información útil para analizar el montón administrado desde un punto de vista estadístico. Por ejemplo, el evento `GCStart_V1`, que se genera cuando está a punto de producirse una recolección de elementos no utilizados, proporciona la siguiente información:
 
 - La generación de objetos que se recolecta.
 
@@ -45,13 +45,13 @@ El registro de eventos ETW es eficaz y no enmascara ningún problema de rendimie
 
 ### <a name="the-profiling-api"></a>La API de generación de perfiles
 
-Las interfaces de generación de perfiles de Common Language Runtime (CLR) proporcionan información detallada sobre los objetos que se vieron afectados durante la recolección de elementos no utilizados. Un generador de perfiles puede recibir una notificación cuando se inicia y finaliza una recolección de elementos no utilizados. Puede proporcionar informes sobre los objetos del montón administrado, incluida una identificación de los objetos de cada generación. Para más información, consulte [Información general sobre la generación de perfiles](../../../docs/framework/unmanaged-api/profiling/profiling-overview.md).
+Las interfaces de generación de perfiles de Common Language Runtime (CLR) proporcionan información detallada sobre los objetos que se vieron afectados durante la recolección de elementos no utilizados. Un generador de perfiles puede recibir una notificación cuando se inicia y finaliza una recolección de elementos no utilizados. Puede proporcionar informes sobre los objetos del montón administrado, incluida una identificación de los objetos de cada generación. Para más información, consulte [Información general sobre la generación de perfiles](../../framework/unmanaged-api/profiling/profiling-overview.md).
 
 Los generadores de perfiles pueden proporcionar información completa. Sin embargo, los generadores de perfiles complejos pueden modificar el comportamiento de una aplicación.
 
 ### <a name="application-domain-resource-monitoring"></a>Supervisión de recursos de dominio de aplicación
 
-A partir de .NET Framework 4, la supervisión de recursos de dominio de aplicación (ARM) permite a los anfitriones supervisar el uso de la CPU y la memoria por parte del dominio de aplicación. Para más información, consulte [Supervisión de recursos de dominio de aplicación](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md).
+A partir de .NET Framework 4, la supervisión de recursos de dominio de aplicación (ARM) permite a los anfitriones supervisar el uso de la CPU y la memoria por parte del dominio de aplicación. Para más información, consulte [Supervisión de recursos de dominio de aplicación](app-domain-resource-monitoring.md).
 
 ## <a name="troubleshooting-performance-issues"></a>Solucionar problemas de rendimiento
 
@@ -143,7 +143,7 @@ Si la fragmentación de la memoria virtual está impidiendo que el recolector de
 
 - Creación de objetos grandes transitorios, lo que hace que el montón de objetos grandes asigne y libere segmentos del montón con frecuencia.
 
-  Al hospedar el CLR, una aplicación puede solicitar que el recolector de elementos no utilizados conserve sus segmentos. Esto reduce la frecuencia de las asignaciones de segmentos. Para ello se emplea la marca STARTUP_HOARD_GC_VM en la [enumeración STARTUP_FLAGS](../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md).
+  Al hospedar el CLR, una aplicación puede solicitar que el recolector de elementos no utilizados conserve sus segmentos. Esto reduce la frecuencia de las asignaciones de segmentos. Para ello se emplea la marca STARTUP_HOARD_GC_VM en la [enumeración STARTUP_FLAGS](../../framework/unmanaged-api/hosting/startup-flags-enumeration.md).
 
 |Comprobaciones de rendimiento|
 |------------------------|
@@ -161,9 +161,9 @@ En la recolección de elementos no utilizados simultánea, se permite la ejecuci
 
 Las recolecciones de elementos no utilizados efímeras (las generaciones 0 y 1) solo duran algunos milisegundos, por lo que no suele ser viable reducir las pausas. Sin embargo, puede reducir las pausas en las recolecciones de la generación 2 cambiando el modelo de las solicitudes de asignación de una aplicación.
 
-Otro método más preciso consiste en usar [eventos ETW de recolección de elementos no utilizados](../../../docs/framework/performance/garbage-collection-etw-events.md). Puede averiguar los controles de tiempo para las recolecciones si suma las diferencias de marca de tiempo para una secuencia de eventos. La secuencia de recolección completa incluye la suspensión del motor de ejecución, la recolección de elementos no utilizados propiamente dicha y la reanudación del motor de ejecución.
+Otro método más preciso consiste en usar [eventos ETW de recolección de elementos no utilizados](../../framework/performance/garbage-collection-etw-events.md). Puede averiguar los controles de tiempo para las recolecciones si suma las diferencias de marca de tiempo para una secuencia de eventos. La secuencia de recolección completa incluye la suspensión del motor de ejecución, la recolección de elementos no utilizados propiamente dicha y la reanudación del motor de ejecución.
 
-Puede usar [notificaciones de recolección de elementos no utilizados](../../../docs/standard/garbage-collection/notifications.md) para determinar si se va a realizar una recolección de generación 2 en un servidor y si redirigir las solicitudes a otro servidor podría solucionar los problemas de las pausas.
+Puede usar [notificaciones de recolección de elementos no utilizados](notifications.md) para determinar si se va a realizar una recolección de generación 2 en un servidor y si redirigir las solicitudes a otro servidor podría solucionar los problemas de las pausas.
 
 |Comprobaciones de rendimiento|
 |------------------------|
@@ -181,7 +181,7 @@ Es probable que la generación 0 tenga un número mayor de objetos en un sistema
 
 El uso de CPU será elevado durante una recolección de elementos no utilizados. Si se dedica una cantidad significativa de tiempo de proceso a una recolección de elementos no utilizados, el número de recolecciones es demasiado frecuente o la recolección está durando demasiado. Una proporción de asignación de objetos mayor en el montón administrado hace que la recolección de elementos no utilizados se realice con más frecuencia. Al disminuir la proporción de asignación se reduce la frecuencia de las recolecciones de elementos no utilizados.
 
-Puede supervisar las proporciones de asignación mediante el contador de rendimiento `Allocated Bytes/second`. Para más información, consulte [Contadores de rendimiento en .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md).
+Puede supervisar las proporciones de asignación mediante el contador de rendimiento `Allocated Bytes/second`. Para más información, consulte [Contadores de rendimiento en .NET Framework](../../framework/debug-trace-profile/performance-counters.md).
 
 La duración de una recolección suele depender del número de objetos que sobrevivan después de la asignación. El recolector de elementos no utilizados debe pasar por una gran cantidad de memoria si hay que recolectar muchos objetos. El trabajo para compactar los supervivientes lleva mucho tiempo. Para determinar cuántos objetos se controlaron durante una recolección, establezca un punto de interrupción en el depurador al final de una recolección de elementos no utilizados para una generación especificada.
 
@@ -654,7 +654,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
   La segunda recolección de elementos no utilizados de generación 2 se inició durante el tercer intervalo y terminó en el quinto intervalo. Suponiendo el caso peor, la última recolección de elementos no utilizados fue de una generación 0 que terminó al principio del segundo intervalo y la recolección de elementos no utilizados de generación 2 terminó al final del quinto intervalo. Por tanto, el tiempo transcurrido entre el final de la recolección de elementos no utilizados de generación 0 y el final de la recolección de elementos no utilizados de generación 2 es de 4 segundos. Puesto que el contador `% Time in GC` muestra un 20%, el tiempo máximo que la recolección de elementos no utilizados de generación 2 podría haber tardado es (4 segundos * 20% = 800 ms).
 
-- También puede determinar la duración de una recolección de elementos no utilizados mediante [eventos ETW de recolección de elementos no utilizados](../../../docs/framework/performance/garbage-collection-etw-events.md) y analizar la información para averiguar la duración de la recolección de elementos no utilizados.
+- También puede determinar la duración de una recolección de elementos no utilizados mediante [eventos ETW de recolección de elementos no utilizados](../../framework/performance/garbage-collection-etw-events.md) y analizar la información para averiguar la duración de la recolección de elementos no utilizados.
 
   Por ejemplo, los datos siguiente muestran una secuencia de eventos que se produjo durante una recolección de elementos no utilizados no simultánea.
 
@@ -796,4 +796,4 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
 ## <a name="see-also"></a>Vea también
 
-- [Recolección de elementos no utilizados](../../../docs/standard/garbage-collection/index.md)
+- [Recolección de elementos no utilizados](index.md)

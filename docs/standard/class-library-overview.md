@@ -37,12 +37,12 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-ms.openlocfilehash: 596c0fd8fec8f59d977f1db445f9000df23ad5ce
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b076298a5a5f90a3c2dd39e4c5c9684e02a291c4
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398770"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289257"
 ---
 # <a name="net-class-library-overview"></a>Información general de la biblioteca de clases de .NET
 
@@ -76,7 +76,7 @@ Las implementaciones de .NET incluyen clases, interfaces, delegados y tipos de v
   
  El uso de modelos de nomenclatura para agrupar tipos relacionados en espacios de nombres es una forma muy útil de compilar y documentar bibliotecas de clases. Sin embargo, este esquema de nomenclatura no influye en la visibilidad, el acceso a miembros, la herencia, la seguridad o el enlace. Se puede hacer la partición de un espacio de nombres en varios ensamblados y un ensamblado individual puede contener tipos de varios espacios de nombres. El ensamblado proporciona la estructura formal para el control de versiones, la implementación, la seguridad, la carga y la visibilidad en Common Language Runtime.  
   
- Para obtener más información sobre espacios de nombres y nombres de tipos, vea [Common Type System](../../docs/standard/base-types/common-type-system.md).  
+ Para obtener más información sobre espacios de nombres y nombres de tipos, vea [Common Type System](base-types/common-type-system.md).  
   
 ## <a name="system-namespace"></a>System (espacio de nombres)
 
@@ -110,6 +110,6 @@ Las implementaciones de .NET incluyen clases, interfaces, delegados y tipos de v
   
 ## <a name="see-also"></a>Vea también
 
-- [Sistema de tipos comunes](../../docs/standard/base-types/common-type-system.md)
+- [Sistema de tipos comunes](base-types/common-type-system.md)
 - [Explorador de API de .NET](../../api/index.md)
-- [Información general](../../docs/framework/get-started/overview.md)
+- [Información general](../framework/get-started/overview.md)
