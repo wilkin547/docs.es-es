@@ -15,42 +15,42 @@ helpviewer_keywords:
 ms.assetid: de830a8b-6ee1-4900-ace3-4237108f6b12
 topic_type:
 - apiref
-ms.openlocfilehash: c8645bf828d0ad99bd25c1909cbee3314a11abf9
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 54f7dae511c8bf25dc96451e6477acf26655430a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76865875"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503203"
 ---
-# <a name="icorprofilercallbackruntimethreadsuspended-method"></a><span data-ttu-id="ff576-102">ICorProfilerCallback::RuntimeThreadSuspended (Método)</span><span class="sxs-lookup"><span data-stu-id="ff576-102">ICorProfilerCallback::RuntimeThreadSuspended Method</span></span>
-<span data-ttu-id="ff576-103">Notifica al generador de perfiles que el subproceso especificado se ha suspendido o está a punto de ser suspendido.</span><span class="sxs-lookup"><span data-stu-id="ff576-103">Notifies the profiler that the specified thread has been suspended or is about to be suspended.</span></span>  
+# <a name="icorprofilercallbackruntimethreadsuspended-method"></a><span data-ttu-id="3c30f-102">ICorProfilerCallback::RuntimeThreadSuspended (Método)</span><span class="sxs-lookup"><span data-stu-id="3c30f-102">ICorProfilerCallback::RuntimeThreadSuspended Method</span></span>
+<span data-ttu-id="3c30f-103">Notifica al generador de perfiles que el subproceso especificado se ha suspendido o está a punto de ser suspendido.</span><span class="sxs-lookup"><span data-stu-id="3c30f-103">Notifies the profiler that the specified thread has been suspended or is about to be suspended.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ff576-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ff576-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3c30f-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="3c30f-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT RuntimeThreadSuspended(  
     [in] ThreadID threadId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ff576-105">Parameters</span><span class="sxs-lookup"><span data-stu-id="ff576-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3c30f-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="3c30f-105">Parameters</span></span>  
  `threadId`  
- <span data-ttu-id="ff576-106">de IDENTIFICADOR del subproceso que se ha suspendido.</span><span class="sxs-lookup"><span data-stu-id="ff576-106">[in] The ID of the thread that has been suspended.</span></span>  
+ <span data-ttu-id="3c30f-106">de IDENTIFICADOR del subproceso que se ha suspendido.</span><span class="sxs-lookup"><span data-stu-id="3c30f-106">[in] The ID of the thread that has been suspended.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ff576-107">Notas</span><span class="sxs-lookup"><span data-stu-id="ff576-107">Remarks</span></span>  
- <span data-ttu-id="ff576-108">La notificación de `RuntimeThreadSuspended` puede producirse en cualquier momento entre el [ICorProfilerCallback:: runtimesuspendstarted (](icorprofilercallback-runtimesuspendstarted-method.md) y las devoluciones de llamada [ICorProfilerCallback:: RuntimeResumeStarted (](icorprofilercallback-runtimeresumestarted-method.md) asociadas.</span><span class="sxs-lookup"><span data-stu-id="ff576-108">The `RuntimeThreadSuspended` notification can occur any time between the [ICorProfilerCallback::RuntimeSuspendStarted](icorprofilercallback-runtimesuspendstarted-method.md) and the associated [ICorProfilerCallback::RuntimeResumeStarted](icorprofilercallback-runtimeresumestarted-method.md) callbacks.</span></span> <span data-ttu-id="ff576-109">Las notificaciones que se producen entre [ICorProfilerCallback:: RuntimeSuspendFinished (](icorprofilercallback-runtimesuspendfinished-method.md) y `RuntimeResumeStarted` son para los subprocesos que se ejecutaron en código no administrado y se suspendieron en la entrada al tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="ff576-109">Notifications that occur between [ICorProfilerCallback::RuntimeSuspendFinished](icorprofilercallback-runtimesuspendfinished-method.md) and `RuntimeResumeStarted` are for threads that had been running in unmanaged code and were suspended upon entry to the runtime.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3c30f-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="3c30f-107">Remarks</span></span>  
+ <span data-ttu-id="3c30f-108">La `RuntimeThreadSuspended` notificación puede producirse en cualquier momento entre el [ICorProfilerCallback:: runtimesuspendstarted (](icorprofilercallback-runtimesuspendstarted-method.md) y las devoluciones de llamada [ICorProfilerCallback:: RuntimeResumeStarted (](icorprofilercallback-runtimeresumestarted-method.md) asociadas.</span><span class="sxs-lookup"><span data-stu-id="3c30f-108">The `RuntimeThreadSuspended` notification can occur any time between the [ICorProfilerCallback::RuntimeSuspendStarted](icorprofilercallback-runtimesuspendstarted-method.md) and the associated [ICorProfilerCallback::RuntimeResumeStarted](icorprofilercallback-runtimeresumestarted-method.md) callbacks.</span></span> <span data-ttu-id="3c30f-109">Las notificaciones que se producen entre [ICorProfilerCallback:: RuntimeSuspendFinished (](icorprofilercallback-runtimesuspendfinished-method.md) y `RuntimeResumeStarted` son para los subprocesos que se ejecutaron en código no administrado y se suspendieron en la entrada al tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="3c30f-109">Notifications that occur between [ICorProfilerCallback::RuntimeSuspendFinished](icorprofilercallback-runtimesuspendfinished-method.md) and `RuntimeResumeStarted` are for threads that had been running in unmanaged code and were suspended upon entry to the runtime.</span></span>  
   
- <span data-ttu-id="ff576-110">Normalmente, esta devolución de llamada se produce justo después de suspender un subproceso.</span><span class="sxs-lookup"><span data-stu-id="ff576-110">Generally, this callback occurs just after a thread is suspended.</span></span> <span data-ttu-id="ff576-111">Sin embargo, si el subproceso que se está ejecutando actualmente (el subproceso que llamó a esta devolución de llamada) es el que se está suspendiendo, esta devolución de llamada se producirá justo antes de que se suspenda el subproceso.</span><span class="sxs-lookup"><span data-stu-id="ff576-111">However, if the currently executing thread (the thread that called this callback) is the one that is being suspended, this callback will occur just before the thread is suspended.</span></span>  
+ <span data-ttu-id="3c30f-110">Normalmente, esta devolución de llamada se produce justo después de suspender un subproceso.</span><span class="sxs-lookup"><span data-stu-id="3c30f-110">Generally, this callback occurs just after a thread is suspended.</span></span> <span data-ttu-id="3c30f-111">Sin embargo, si el subproceso que se está ejecutando actualmente (el subproceso que llamó a esta devolución de llamada) es el que se está suspendiendo, esta devolución de llamada se producirá justo antes de que se suspenda el subproceso.</span><span class="sxs-lookup"><span data-stu-id="3c30f-111">However, if the currently executing thread (the thread that called this callback) is the one that is being suspended, this callback will occur just before the thread is suspended.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ff576-112">Requisitos de</span><span class="sxs-lookup"><span data-stu-id="ff576-112">Requirements</span></span>  
- <span data-ttu-id="ff576-113">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ff576-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3c30f-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="3c30f-112">Requirements</span></span>  
+ <span data-ttu-id="3c30f-113">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3c30f-113">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ff576-114">**Encabezado:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ff576-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="3c30f-114">**Encabezado:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="3c30f-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="ff576-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ff576-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3c30f-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3c30f-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ff576-116">**.NET Framework versiones:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ff576-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="3c30f-116">**.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3c30f-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ff576-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="ff576-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3c30f-117">Consulte también:</span><span class="sxs-lookup"><span data-stu-id="3c30f-117">See also</span></span>
 
-- [<span data-ttu-id="ff576-118">ICorProfilerCallback (interfaz)</span><span class="sxs-lookup"><span data-stu-id="ff576-118">ICorProfilerCallback Interface</span></span>](icorprofilercallback-interface.md)
-- [<span data-ttu-id="ff576-119">RuntimeThreadResumed (método)</span><span class="sxs-lookup"><span data-stu-id="ff576-119">RuntimeThreadResumed Method</span></span>](icorprofilercallback-runtimethreadresumed-method.md)
+- [<span data-ttu-id="3c30f-118">ICorProfilerCallback (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="3c30f-118">ICorProfilerCallback Interface</span></span>](icorprofilercallback-interface.md)
+- [<span data-ttu-id="3c30f-119">Método RuntimeThreadResumed</span><span class="sxs-lookup"><span data-stu-id="3c30f-119">RuntimeThreadResumed Method</span></span>](icorprofilercallback-runtimethreadresumed-method.md)
