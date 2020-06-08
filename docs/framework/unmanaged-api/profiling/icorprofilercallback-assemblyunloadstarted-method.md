@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e47b7e5-0335-4dd3-8c42-d3c07d62b102
 topic_type:
 - apiref
-ms.openlocfilehash: 0a677e33950f178b916a5e9e9cbb7bd918c1349b
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 80054a8292c69b957664cb3573b0a8694c7f9fd2
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866616"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500408"
 ---
 # <a name="icorprofilercallbackassemblyunloadstarted-method"></a>ICorProfilerCallback::AssemblyUnloadStarted (Método)
 Notifica al generador de perfiles que se está descargando un ensamblado.  
@@ -32,25 +32,25 @@ HRESULT AssemblyUnloadStarted(
     [in] AssemblyID assemblyId);  
 ```  
   
-## <a name="parameters"></a>Parameters
+## <a name="parameters"></a>Parámetros
 
 - `assemblyId`
 
   \[en] identifica el ensamblado que se está descargando.
 
-## <a name="remarks"></a>Notas  
- El valor de `assemblyId` no es válido para una solicitud de información después de que se devuelva el método `AssemblyUnloadStarted`; esta es la última oportunidad del generador de perfiles para obtener información sobre este ensamblado.  
+## <a name="remarks"></a>Comentarios  
+ El valor de `assemblyId` no es válido para una solicitud de información después de que se `AssemblyUnloadStarted` devuelva el método; esta es la última oportunidad del generador de perfiles para obtener información sobre este ensamblado.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
-- [ICorProfilerCallback (interfaz)](icorprofilercallback-interface.md)
-- [AssemblyUnloadFinished (método)](icorprofilercallback-assemblyunloadfinished-method.md)
+- [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)
+- [Método AssemblyUnloadFinished](icorprofilercallback-assemblyunloadfinished-method.md)

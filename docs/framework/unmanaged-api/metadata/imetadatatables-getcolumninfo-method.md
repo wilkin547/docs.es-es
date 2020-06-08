@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 68c160ea-ae7d-4750-985d-a038b2c8e7d9
 topic_type:
 - apiref
-ms.openlocfilehash: cc8aac32149fed952737d928e16a8f6efc448c79
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a044924810016eea60682b8765aeee448b552f0d
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177120"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501201"
 ---
 # <a name="imetadatatablesgetcolumninfo-method"></a>IMetaDataTables::GetColumnInfo (Método)
-Obtiene datos sobre la columna especificada en la tabla especificada.  
+Obtiene datos sobre la columna especificada de la tabla especificada.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,31 +42,31 @@ HRESULT GetColumnInfo (
 =======
 
  `ixTbl`  
- [en] El índice de la tabla deseada.  
+ de Índice de la tabla deseada.  
   
  `ixCol`  
- [en] El índice de la columna deseada.  
+ de Índice de la columna deseada.  
   
  `poCol`  
- [fuera] Un puntero al desplazamiento de la columna de la fila.  
+ enuncia Puntero al desplazamiento de la columna de la fila.  
   
  `pcbCol`  
- [fuera] Un puntero al tamaño, en bytes, de la columna.  
+ enuncia Puntero al tamaño, en bytes, de la columna.  
   
  `pType`  
- [fuera] Un puntero al tipo de los valores de la columna.  
+ enuncia Puntero al tipo de los valores de la columna.  
   
  `ppName`  
- [fuera] Puntero a un puntero al nombre de la columna.  
+ enuncia Un puntero a un puntero al nombre de la columna.  
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
-El tipo de columna devuelto se encuentra dentro de un intervalo de valores:
+El tipo de columna devuelto está dentro de un intervalo de valores:
 
-| pType                    | Descripción   | Función auxiliar                   |
+| pType                    | Description   | Función auxiliar                   |
 |--------------------------|---------------|-----------------------------------|
-| `0`..`iRidMax`<br>(0..63)   | Librar           | **IsRidType**<br>**IsridOrToken** |
-| `iCodedToken`..`iCodedTokenMax`<br>(64..95) | Token codificado | **IsCodedTokenType** <br>**IsridOrToken** |
+| `0`..`iRidMax`<br>(0.. 63)   | Libra           | **IsRidType**<br>**IsRidOrToken** |
+| `iCodedToken`..`iCodedTokenMax`<br>(64.. 95) | Token codificado | **IsCodedTokenType** <br>**IsRidOrToken** |
 | `iSHORT`(96)            | Int16         | **IsFixedType**                   |
 | `iUSHORT`(97)           | UInt16        | **IsFixedType**                   |
 | `iLONG`(98)             | Int32         | **IsFixedType**                   |
@@ -76,25 +76,25 @@ El tipo de columna devuelto se encuentra dentro de un intervalo de valores:
 | `iGUID`(102)            | Guid          | **IsHeapType**                    |
 | `iBLOB`(103)            | Blob          | **IsHeapType**                    |
 
-Los valores que se almacenan en `IsHeapType == true`el *montón* (es decir, ) se pueden leer mediante:
+Los valores que se almacenan en el *montón* (es decir, `IsHeapType == true` ) se pueden leer mediante:
 
-- `iSTRING`: **IMetadataTables.GetString**
-- `iGUID`: **IMetadataTables.GetGUID**
-- `iBLOB`: **IMetadataTables.GetBlob**
+- `iSTRING`: **IMetadataTables. GetString**
+- `iGUID`: **IMetadataTables. GetGUID**
+- `iBLOB`: **IMetadataTables. GetBlob**
 
 > [!IMPORTANT]
-> Para utilizar las constantes definidas en la `#define _DEFINE_META_DATA_META_CONSTANTS` tabla anterior, incluya la directiva proporcionada por el archivo de encabezado *cor.h.*
+> Para usar las constantes definidas en la tabla anterior, incluya la directiva `#define _DEFINE_META_DATA_META_CONSTANTS` proporcionada por el archivo de encabezado *Cor. h* .
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
-- [IMetaDataTables (Interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [IMetaDataTables2 (Interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [IMetaDataTables (Interfaz)](imetadatatables-interface.md)
+- [IMetaDataTables2 (Interfaz)](imetadatatables2-interface.md)

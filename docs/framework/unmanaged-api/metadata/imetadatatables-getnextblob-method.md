@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 017c8ab4-4c09-4754-9935-5b0b49cabecb
 topic_type:
 - apiref
-ms.openlocfilehash: 145fdde302e7e942ea77049b3faeabf60894dd94
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 086448248364403b718408ad8bd32e48447742d0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448413"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490388"
 ---
 # <a name="imetadatatablesgetnextblob-method"></a>IMetaDataTables::GetNextBlob (Método)
 Obtiene el índice del siguiente objeto binario grande (BLOB) de la tabla.  
@@ -42,15 +42,15 @@ HRESULT GetNextBlob (
  enuncia Puntero al índice del siguiente BLOB.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
  **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
-- [IMetaDataTables (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [IMetaDataTables2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [IMetaDataTables (Interfaz)](imetadatatables-interface.md)
+- [IMetaDataTables2 (Interfaz)](imetadatatables2-interface.md)

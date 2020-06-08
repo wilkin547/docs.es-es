@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 53fca564-84b1-44d4-9e21-17a492d2aae7
 topic_type:
 - apiref
-ms.openlocfilehash: 734ae1d14d02d47c7d3126f1b4cf55dcb4ad151b
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: d00e67d29921edc6b7487ceeb12aaa9e9f9bd0ac
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866629"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500421"
 ---
 # <a name="icorprofilercallbackassemblyunloadfinished-method"></a>ICorProfilerCallback::AssemblyUnloadFinished (Método)
 Notifica al generador de perfiles que se ha descargado un ensamblado.  
@@ -33,7 +33,7 @@ HRESULT AssemblyUnloadFinished(
     [in] HRESULT    hrStatus);  
 ```  
   
-## <a name="parameters"></a>Parameters
+## <a name="parameters"></a>Parámetros
 
 - `assemblyId`
 
@@ -43,20 +43,20 @@ HRESULT AssemblyUnloadFinished(
 
   \[in] un valor HRESULT que indica si el ensamblado se ha descargado correctamente.
 
-## <a name="remarks"></a>Notas  
- El valor de `assemblyId` no es válido para una solicitud de información después de que se devuelva el método [ICorProfilerCallback:: assemblyunloadstarted (](icorprofilercallback-assemblyunloadstarted-method.md) .  
+## <a name="remarks"></a>Comentarios  
+ El valor de `assemblyId` no es válido para una solicitud de información después de que el método [ICorProfilerCallback:: assemblyunloadstarted (](icorprofilercallback-assemblyunloadstarted-method.md) devuelva.  
   
- Algunas partes de la descarga del ensamblado pueden continuar después de la devolución de llamada de `AssemblyUnloadFinished`. Un valor HRESULT de error en `hrStatus` indica un error. Sin embargo, un valor HRESULT correcto en `hrStatus` solo indica que la primera parte de la descarga del ensamblado se ha realizado correctamente.  
+ Algunas partes de la descarga del ensamblado podrían continuar después de la `AssemblyUnloadFinished` devolución de llamada. Un valor HRESULT de error en `hrStatus` indica un error. Sin embargo, un valor HRESULT correcto en `hrStatus` indica solo que la primera parte de la descarga del ensamblado se ha realizado correctamente.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
-- [ICorProfilerCallback (interfaz)](icorprofilercallback-interface.md)
+- [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)

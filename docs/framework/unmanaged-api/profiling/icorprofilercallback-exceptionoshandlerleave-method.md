@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4d164676-0ee9-4f67-a8ea-cb474db09053
 topic_type:
 - apiref
-ms.openlocfilehash: dcb2af2507306b22da14c13a42e4019261c8fa8c
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 5ba45cf526a6ebca6975a75d06308d089770ad5b
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866447"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500278"
 ---
 # <a name="icorprofilercallbackexceptionoshandlerleave-method"></a>ICorProfilerCallback::ExceptionOSHandlerLeave (Método)
-Sin implementar. Un generador de perfiles que necesita información de excepción no administrada debe obtener esta información a través de otros medios.  
+No implementado. Un generador de perfiles que necesita información de excepción no administrada debe obtener esta información a través de otros medios.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -32,15 +32,15 @@ HRESULT ExceptionOSHandlerLeave(
     [in] UINT_PTR __unused);  
 ```  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
-- [ICorProfilerCallback (interfaz)](icorprofilercallback-interface.md)
+- [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)

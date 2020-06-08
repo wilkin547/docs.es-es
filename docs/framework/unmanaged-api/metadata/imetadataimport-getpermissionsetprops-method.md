@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9855f0e4-12c0-4d3d-ab5d-d6bc52d25eae
 topic_type:
 - apiref
-ms.openlocfilehash: 5faf1a6ae89045b2ef17fab789ee6e5bf23eecf2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 54c75156c32e5b40aa933ef6530b2cc33edf7de4
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175348"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490996"
 ---
 # <a name="imetadataimportgetpermissionsetprops-method"></a>IMetaDataImport::GetPermissionSetProps (Método)
-Obtiene los metadatos asociados con el <xref:System.Security.PermissionSet?displayProperty=nameWithType> representado por el token de permiso especificado.  
+Obtiene los metadatos asociados al <xref:System.Security.PermissionSet?displayProperty=nameWithType> representado por el token de permiso especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,28 +38,28 @@ HRESULT GetPermissionSetProps (
   
 ## <a name="parameters"></a>Parámetros  
  `pm`  
- [en] El token de metadatos Permission que representa el conjunto de permisos para el que se obtienen las propiedades de metadatos.  
+ de Token de metadatos de permiso que representa el conjunto de permisos para el que se van a obtener las propiedades de metadatos.  
   
  `pdwAction`  
- [fuera] Un puntero al conjunto de permisos.  
+ enuncia Puntero al conjunto de permisos.  
   
  `ppvPermission`  
- [fuera] Puntero a la firma de metadatos binarios del conjunto de permisos.  
+ enuncia Puntero a la firma de metadatos binarios del conjunto de permisos.  
   
  `pcbPermission`  
- [fuera] El tamaño en `ppvPermission`bytes de .  
+ enuncia Tamaño en bytes de `ppvPermission` .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Biblioteca:** Incluido como recurso en MsCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
 - <xref:System.Security.PermissionSet>
-- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport (Interfaz)](imetadataimport-interface.md)
+- [IMetaDataImport2 (Interfaz)](imetadataimport2-interface.md)

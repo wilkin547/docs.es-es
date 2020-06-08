@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b1e26bff-d3ea-436e-9867-29720df999f4
 topic_type:
 - apiref
-ms.openlocfilehash: 41955bd2f64d53e3620dede6b6da4cef2aab45f4
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 1981fdf25440a296801bdbd06c41ebcb4b87e870
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842301"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501405"
 ---
 # <a name="ihosttaskmanagerreverseenterruntime-method"></a>IHostTaskManager::ReverseEnterRuntime (Método)
 Notifica al host que se está realizando una llamada en el Common Language Runtime (CLR) desde el código no administrado.  
@@ -43,11 +43,11 @@ HRESULT ReverseEnterRuntime ();
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
 |E_OUTOFMEMORY|No hay suficiente memoria disponible para completar la asignación de recursos solicitada.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Si la llamada a CLR se realiza a partir de una secuencia que se originó en código administrado, cada llamada a `ReverseEnterRuntime` corresponde a una llamada a [ReverseLeaveRuntime](ihosttaskmanager-reverseleaveruntime-method.md).  
   
 > [!NOTE]
-> Las llamadas se pueden originar a partir de código no administrado sin anidarse. En este caso, no hay ninguna llamada a [EnterRuntime (](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md), [LeaveRuntime (](ihosttaskmanager-leaveruntime-method.md)o `ReverseLeaveRuntime` , y el número de llamadas a no es `ReverseEnterRuntime` igual al número de llamadas a `ReverseLeaveRuntime` .  
+> Las llamadas se pueden originar a partir de código no administrado sin anidarse. En este caso, no hay ninguna llamada a [EnterRuntime (](ihosttaskmanager-enterruntime-method.md), [LeaveRuntime (](ihosttaskmanager-leaveruntime-method.md)o `ReverseLeaveRuntime` , y el número de llamadas a no es `ReverseEnterRuntime` igual al número de llamadas a `ReverseLeaveRuntime` .  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
@@ -58,7 +58,7 @@ HRESULT ReverseEnterRuntime ();
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
 - [ICLRTask (Interfaz)](iclrtask-interface.md)
 - [ICLRTaskManager (Interfaz)](iclrtaskmanager-interface.md)

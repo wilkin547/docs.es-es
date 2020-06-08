@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b9fb1c03-417f-41d4-aed4-02cb4ade8def
 topic_type:
 - apiref
-ms.openlocfilehash: bff45e6f6f57b95d07ac5073cb70020818cce000
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 0ea584bfff4340e5e9635d6c31e177e88765b582
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76867170"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500876"
 ---
 # <a name="cor_prf_gc_root_kind-enumeration"></a>COR_PRF_GC_ROOT_KIND (Enumeración)
 Indica el tipo de raíz de recolección de elementos no utilizados expuesta por la devolución de llamada [ICorProfilerCallback2:: RootReferences2 (](icorprofilercallback2-rootreferences2-method.md) .  
@@ -44,15 +44,15 @@ typedef enum {
 |`COR_PRF_GC_ROOT_HANDLE`|La raíz es un identificador de recolección de elementos no utilizados.|  
 |`COR_PRF_GC_ROOT_OTHER`|No se ha especificado el tipo de raíz.|  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
 - [Enumeraciones para generación de perfiles](profiling-enumerations.md)

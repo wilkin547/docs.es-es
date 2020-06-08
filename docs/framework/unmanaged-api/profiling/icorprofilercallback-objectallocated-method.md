@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eb412622-77cc-4abd-a2cd-c910fe8edd54
 topic_type:
 - apiref
-ms.openlocfilehash: 38d9e83e9fa0e9cd0586fb10a6fd79c29bead4a6
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 9a402b7dfc3ece9d38994ed897162fe0d81ff0b9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866109"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503307"
 ---
 # <a name="icorprofilercallbackobjectallocated-method"></a>ICorProfilerCallback::ObjectAllocated (Método)
 Notifica al generador de perfiles que se ha asignado memoria en el montón para un objeto.  
@@ -33,27 +33,27 @@ HRESULT ObjectAllocated(
     [in] ClassID classId);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parámetros  
  `objectId`  
  de IDENTIFICADOR del objeto para el que se asignó la memoria.  
   
  `classId`  
  de IDENTIFICADOR de la clase de la que el objeto es una instancia de.  
   
-## <a name="remarks"></a>Notas  
- No se llama al método `ObjectedAllocated` para las asignaciones de la pila o la memoria no administrada. El parámetro `classId` puede hacer referencia a una clase de código administrado que todavía no se ha cargado. El generador de perfiles recibirá una devolución de llamada de carga de clase para esa clase inmediatamente después de la devolución de llamada `ObjectAllocated`.  
+## <a name="remarks"></a>Comentarios  
+ `ObjectedAllocated`No se llama al método para las asignaciones de la pila o la memoria no administrada. El `classId` parámetro puede hacer referencia a una clase de código administrado que todavía no se ha cargado. El generador de perfiles recibirá una devolución de llamada de carga de clase para esa clase inmediatamente después de la `ObjectAllocated` devolución de llamada.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
-- [ICorProfilerCallback (interfaz)](icorprofilercallback-interface.md)
-- [ClassLoadStarted (método)](icorprofilercallback-classloadstarted-method.md)
-- [ClassLoadFinished (método)](icorprofilercallback-classloadfinished-method.md)
+- [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)
+- [Método ClassLoadStarted](icorprofilercallback-classloadstarted-method.md)
+- [Método ClassLoadFinished](icorprofilercallback-classloadfinished-method.md)

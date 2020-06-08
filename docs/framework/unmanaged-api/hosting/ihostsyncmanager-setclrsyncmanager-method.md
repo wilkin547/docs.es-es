@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2b8bbe76-a45d-4989-bacb-11df42f8798c
 topic_type:
 - apiref
-ms.openlocfilehash: bbeae2561d2d340c1a7dfed38e740dcc6838e4da
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 7f1832b22a1b80855f48eba6d39bff64da6fa5f9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803093"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501448"
 ---
 # <a name="ihostsyncmanagersetclrsyncmanager-method"></a>IHostSyncManager::SetCLRSyncManager (Método)
-Establece la instancia de [ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md) que se va a asociar a la instancia actual de [IHostSyncManager](ihostsyncmanager-interface.md) .  
+Establece la instancia de [ICLRSyncManager](iclrsyncmanager-interface.md) que se va a asociar a la instancia actual de [IHostSyncManager](ihostsyncmanager-interface.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -48,7 +48,7 @@ HRESULT SetCLRSyncManager (
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Para facilitar la comunicación entre el host y el CLR, las interfaces de hospedaje generalmente están en parejas. Un miembro del par se implementa mediante el host y CLR implementa el otro miembro. Como implementación del lado host, la `IHostSyncManager` interfaz corresponde a la `ICLRSyncManager` interfaz implementada por CLR. CLR llama `SetCLRSyncManager` a para proporcionar una `ICLRSyncManager` instancia del host que se va a asociar a la `IHostSyncManager` instancia actual.  
   
 ## <a name="requirements"></a>Requisitos  
@@ -60,7 +60,7 @@ HRESULT SetCLRSyncManager (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
 - [ICLRSyncManager (Interfaz)](iclrsyncmanager-interface.md)
 - [IHostSyncManager (Interfaz)](ihostsyncmanager-interface.md)

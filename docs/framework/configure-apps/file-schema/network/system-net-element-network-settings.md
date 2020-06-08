@@ -1,5 +1,6 @@
 ---
 title: Elemento <system.Net> (configuración de red)
+description: El elemento de configuración de red <system.Net> contiene opciones que especifican cómo se conecta el .NET Framework a las opciones de red del .NET Framework.
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#system.Net
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - system.Net element
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-ms.openlocfilehash: 88098f2afaad9728e38c4f9935b45f45826a0ca9
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9f18c7a3586948c03391d609f437e216a91bc27f
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154561"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504490"
 ---
 # <a name="systemnet-element-network-settings"></a>Elemento \<system.Net> (configuración de red)
 Contiene valores que especifican cómo se conecta .NET Framework a la red.  
@@ -92,6 +93,6 @@ Contiene valores que especifican cómo se conecta .NET Framework a la red.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
 - [Esquema de la configuración de red](index.md)

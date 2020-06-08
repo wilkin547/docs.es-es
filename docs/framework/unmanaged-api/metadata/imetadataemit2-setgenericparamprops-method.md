@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cd93a48d-1fed-4706-bec6-a05dc3b64fbd
 topic_type:
 - apiref
-ms.openlocfilehash: fd7f149e806727d849cdceb3ffbc5dc7392fcf1d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8feba8e67f3a90dd48fd957065a9c166c204b87c
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177406"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492748"
 ---
 # <a name="imetadataemit2setgenericparamprops-method"></a>IMetaDataEmit2::SetGenericParamProps (Método)
 Establece los valores de propiedad para la definición de parámetro genérico a la que hace referencia el token especificado.  
@@ -39,30 +39,30 @@ HRESULT SetGenericParamProps (
   
 ## <a name="parameters"></a>Parámetros  
  `gp`  
- [en] El token para la definición de parámetro genérico para la que se establecen valores.  
+ de Token de la definición de parámetro genérico para el que se van a establecer valores.  
   
  `dwParamFlags`  
- [en] Valor de la enumeración [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) que describe el tipo del parámetro genérico.  
+ de Un valor de la enumeración [CorGenericParamAttr (](corgenericparamattr-enumeration.md) que describe el tipo para el parámetro genérico.  
   
  `szName`  
- [in] Opcional. El nombre del parámetro para el que se establecen valores.  
+ [in] Opcional. Nombre del parámetro para el que se van a establecer valores.  
   
  `reserved`  
  [in] Reservado para extensibilidad futura.  
   
  `rtkConstraints`  
- [in] Opcional. Matriz de tipos terminada en cero. Los miembros `mdTypeDef`de `mdTypeRef`la `mdTypeSpec` matriz deben ser un token de metadatos , , o .  
+ [in] Opcional. Matriz terminada en cero de restricciones de tipo. Los miembros de la matriz deben ser un `mdTypeDef` `mdTypeRef` `mdTypeSpec` token de metadatos, o.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
-- [IMetaDataEmit2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [IMetaDataEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 (Interfaz)](imetadataemit2-interface.md)
+- [IMetaDataEmit (Interfaz)](imetadataemit-interface.md)

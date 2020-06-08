@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2fac66fd-6b3b-4dbd-8baf-86038bd85526
 topic_type:
 - apiref
-ms.openlocfilehash: 04260429dd69f5ba1d6a94b6628979341d12b9e8
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 0b6efcbe4458977e8e938afabd7ae59171bc065a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762089"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501656"
 ---
 # <a name="iclrstrongname-interface"></a>ICLRStrongName (Interfaz)
 Proporciona funciones estáticas globales básicas para firmar ensamblados con nombres seguros. Todos los `ICLRStrongName` métodos devuelven valores HRESULT de com estándar.  
@@ -35,7 +35,7 @@ Proporciona funciones estáticas globales básicas para firmar ensamblados con n
 |[Método GetHashFromFileW](iclrstrongname-gethashfromfilew-method.md)|Genera un hash a partir del contenido del archivo especificado por una cadena Unicode.|  
 |[Método GetHashFromHandle](iclrstrongname-gethashfromhandle-method.md)|Genera un hash a partir del contenido del archivo con el identificador de archivos especificado mediante un algoritmo hash concreto.|  
 |[Método StrongNameCompareAssemblies](iclrstrongname-strongnamecompareassemblies-method.md)|Determina si dos ensamblados presentan diferencias solo mediante sus firmas de nombres seguros.|  
-|[Método StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)|Libera la memoria que se asignó con una llamada anterior a un método de nombre seguro como [StrongNameGetPublicKey (](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md), [StrongNameTokenFromPublicKey (](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)o [StrongNameSignatureGeneration (](iclrstrongname-strongnamesignaturegeneration-method.md).|  
+|[Método StrongNameFreeBuffer](iclrstrongname-strongnamefreebuffer-method.md)|Libera la memoria que se asignó con una llamada anterior a un método de nombre seguro como [StrongNameGetPublicKey (](iclrstrongname-strongnamegetpublickey-method.md), [StrongNameTokenFromPublicKey (](iclrstrongname-strongnametokenfrompublickey-method.md)o [StrongNameSignatureGeneration (](iclrstrongname-strongnamesignaturegeneration-method.md).|  
 |[Método StrongNameGetBlob](iclrstrongname-strongnamegetblob-method.md)|Llena el búfer especificado con la representación binaria del archivo ejecutable en la dirección especificada.|  
 |[Método StrongNameGetBlobFromImage](iclrstrongname-strongnamegetblobfromimage-method.md)|Obtiene una representación binaria de la imagen de ensamblado en la dirección de memoria especificada.|  
 |[Método StrongNameGetPublicKey](iclrstrongname-strongnamegetpublickey-method.md)|Obtiene la clave pública de un par de claves pública y privada.|  

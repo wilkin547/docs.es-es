@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 59ec1832-9cc1-4b5c-983d-03407e51de56
 topic_type:
 - apiref
-ms.openlocfilehash: 52da5ec7ccd6ce48871e13a94f5957fa00d2a613
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 37167b7a9aefa6cd9d5e4df043e8bbc1b0514261
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703539"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504126"
 ---
 # <a name="iclrmetahostpolicygetrequestedruntime-method"></a>ICLRMetaHostPolicy::GetRequestedRuntime (Método)
 
-Proporciona una interfaz a una versión preferida de Common Language Runtime (CLR) basándose en una directiva de hospedaje, un ensamblado administrado, una cadena de versión y una secuencia de configuración. En realidad, este método no carga ni activa CLR, sino que simplemente devuelve la interfaz [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) que representa el resultado de la Directiva. Este método sustituye a los métodos [GetRequestedRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md), [GetRequestedRuntimeVersion (](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md), [CorBindToRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md), [CorBindToRuntimeByCfg](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)y [getcorrequiredversion (](getcorrequiredversion-function.md) .
+Proporciona una interfaz a una versión preferida de Common Language Runtime (CLR) basándose en una directiva de hospedaje, un ensamblado administrado, una cadena de versión y una secuencia de configuración. En realidad, este método no carga ni activa CLR, sino que simplemente devuelve la interfaz [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) que representa el resultado de la Directiva. Este método sustituye a los métodos [GetRequestedRuntimeInfo](getrequestedruntimeinfo-function.md), [GetRequestedRuntimeVersion (](getrequestedruntimeversion-function.md), [CorBindToRuntimeHost](corbindtoruntimehost-function.md), [CorBindToRuntimeByCfg](corbindtoruntimebycfg-function.md)y [getcorrequiredversion (](getcorrequiredversion-function.md) .
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -53,11 +53,11 @@ HRESULT GetRequestedRuntime(
 |`pcchVersion`|[in, out] Obligatorio. Especifica el tamaño esperado de `pwzVersion` como entrada, para evitar saturaciones de búfer. Si `pwzVersion` es nulo, `pcchVersion` contiene el tamaño esperado de `pwzVersion` cuando `GetRequestedRuntime` devuelve, para permitir la asignación previa; en caso contrario, `pcchVersion` contiene el número de caracteres escritos en `pwzVersion`.|
 |`pwzImageVersion`|[out] Opcional. Cuando `GetRequestedRuntime` devuelve, contiene la versión de CLR correspondiente a la interfaz [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) que se devuelve.|
 |`pcchImageVersion`|[in, out] Opcional. Especifica el tamaño de `pwzImageVersion` como entrada, para evitar saturaciones de búfer. Si `pwzImageVersion` es nulo, `pcchImageVersion` contiene el tamaño necesario de `pwzImageVersion` cuando `GetRequestedRuntime` devuelve, para permitir la asignación previa.|
-|`pdwConfigFlags`|[out] Opcional. Si `GetRequestedRuntime` utiliza un archivo de configuración durante el proceso de enlace, cuando devuelve, `pdwConfigFlags` contiene un valor [METAHOST_CONFIG_FLAGS](metahost-config-flags-enumeration.md) que indica si el elemento [ \<>de inicio](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) tiene establecido el `useLegacyV2RuntimeActivationPolicy` atributo y el valor del atributo. Aplique la máscara de [METAHOST_CONFIG_FLAGS_LEGACY_V2_ACTIVATION_POLICY_MASK](metahost-config-flags-enumeration.md) a `pdwConfigFlags` para obtener los valores relevantes para `useLegacyV2RuntimeActivationPolicy` .|
+|`pdwConfigFlags`|[out] Opcional. Si `GetRequestedRuntime` utiliza un archivo de configuración durante el proceso de enlace, cuando devuelve, `pdwConfigFlags` contiene un valor [METAHOST_CONFIG_FLAGS](metahost-config-flags-enumeration.md) que indica si el [\<startup>](../../configure-apps/file-schema/startup/startup-element.md) elemento tiene el `useLegacyV2RuntimeActivationPolicy` atributo establecido y el valor del atributo. Aplique la máscara de [METAHOST_CONFIG_FLAGS_LEGACY_V2_ACTIVATION_POLICY_MASK](metahost-config-flags-enumeration.md) a `pdwConfigFlags` para obtener los valores relevantes para `useLegacyV2RuntimeActivationPolicy` .|
 |`riid`|de Especifica el identificador de interfaz IID_ICLRRuntimeInfo para la interfaz [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) solicitada.|
 |`ppRuntime`|enuncia Cuando `GetRequestedRuntime` devuelve, contiene un puntero a la interfaz [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) correspondiente.|
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 Cuando este método se ejecuta correctamente, tiene el efecto secundario de combinar marcas adicionales con las marcas de inicio predeterminadas actuales de la interfaz en tiempo de ejecución devuelta, solo si existen uno o varios de los siguientes elementos en la secuencia de configuración dentro de la sección `<configuration><runtime>`:
 
@@ -91,7 +91,7 @@ Este método devuelve los siguientes HRESULT específicos y los errores HRESULT 
 
 **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también:
 
 - [ICLRMetaHostPolicy (Interfaz)](iclrmetahostpolicy-interface.md)
 - [Interfaces de hospedaje de CLR agregadas en .NET Framework 4 y 4.5](clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)

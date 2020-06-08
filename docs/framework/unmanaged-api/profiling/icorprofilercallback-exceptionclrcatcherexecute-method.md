@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: aaac8f98-5cf4-42c7-b04b-556cce367e36
 topic_type:
 - apiref
-ms.openlocfilehash: f14dff33217656c35379a214f007ccb3642ef4b1
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: b79c8dd9f27805e00535dde53c6ee9f5ee457b42
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866460"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500268"
 ---
 # <a name="icorprofilercallbackexceptionclrcatcherexecute-method"></a>ICorProfilerCallback::ExceptionCLRCatcherExecute (Método)
-Se llama cuando se ejecuta un bloque `catch` para una excepción dentro del propio Common Language Runtime (CLR). Este método está obsoleto en la .NET Framework versión 2,0.  
+Se llama cuando `catch` se ejecuta un bloque para una excepción dentro del propio Common Language Runtime (CLR). Este método está obsoleto en la .NET Framework versión 2,0.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -31,8 +31,8 @@ Se llama cuando se ejecuta un bloque `catch` para una excepción dentro del prop
 HRESULT ExceptionCLRCatcherExecute();  
 ```  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
   
@@ -40,7 +40,7 @@ HRESULT ExceptionCLRCatcherExecute();
   
  **.NET Framework versiones:** 1,1, 1,0  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
-- [ICorProfilerCallback (interfaz)](icorprofilercallback-interface.md)
-- [ExceptionCLRCatcherFound (método)](icorprofilercallback-exceptionclrcatcherfound-method.md)
+- [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)
+- [Método ExceptionCLRCatcherFound](icorprofilercallback-exceptionclrcatcherfound-method.md)

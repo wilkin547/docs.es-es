@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e0667ef7-1d31-4c89-a2d3-d426f023f8d2
 topic_type:
 - apiref
-ms.openlocfilehash: 4a258ce9121a287929ca5bc39c480f1ca2596e78
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3c7c3525f2f8753241c9a206e4cf5e552bf06efe
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437463"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503632"
 ---
 # <a name="imetadataimportgetmethodprops-method"></a>IMetaDataImport::GetMethodProps (Método)
 Obtiene los metadatos asociados al método al que hace referencia el token de MethodDef especificado.  
@@ -53,10 +53,10 @@ HRESULT GetMethodProps (
  enuncia Puntero a un búfer que tiene el nombre del método.  
   
  `cchMethod`  
- de Tamaño solicitado de `szMethod`.  
+ de Tamaño solicitado de `szMethod` .  
   
  `pchMethod`  
- enuncia Puntero al tamaño en caracteres anchos de `szMethod`, o en el caso del truncamiento, el número real de caracteres anchos en el nombre del método.  
+ enuncia Puntero al tamaño en caracteres anchos de `szMethod` , o en el caso del truncamiento, el número real de caracteres anchos en el nombre del método.  
   
  `pdwAttr`  
  enuncia Puntero a cualquier marca asociada al método.  
@@ -65,7 +65,7 @@ HRESULT GetMethodProps (
  enuncia Puntero a la firma de metadatos binarios del método.  
   
  `pcbSigBlob`  
- enuncia Puntero al tamaño en bytes de `ppvSigBlob`.  
+ enuncia Puntero al tamaño en bytes de `ppvSigBlob` .  
   
  `pulCodeRVA`  
  enuncia Puntero a la dirección virtual relativa del método.  
@@ -74,15 +74,15 @@ HRESULT GetMethodProps (
  enuncia Un puntero a cualquier marcador de implementación para el método.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
  **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
-- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport (Interfaz)](imetadataimport-interface.md)
+- [IMetaDataImport2 (Interfaz)](imetadataimport2-interface.md)

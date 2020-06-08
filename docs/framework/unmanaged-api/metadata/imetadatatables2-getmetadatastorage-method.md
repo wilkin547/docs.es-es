@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 667a6d1e-753d-4ea2-8fd8-a8337d1bb9cd
 topic_type:
 - apiref
-ms.openlocfilehash: 302e9db3bc683eaa2b65e0b0479de721e07d56db
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 55fcde6c47705e515eb2d20f25ac870e257b92c0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442655"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501136"
 ---
 # <a name="imetadatatables2getmetadatastorage-method"></a>IMetaDataTables2::GetMetaDataStorage (Método)
 Obtiene el tamaño y el contenido de los metadatos almacenados en la sección especificada.  
@@ -42,15 +42,15 @@ HRESULT GetMetaDataStorage (
  enuncia Tamaño de la secuencia de metadatos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
  **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
-- [IMetaDataTables2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
-- [IMetaDataTables (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [IMetaDataTables2 (Interfaz)](imetadatatables2-interface.md)
+- [IMetaDataTables (Interfaz)](imetadatatables-interface.md)
