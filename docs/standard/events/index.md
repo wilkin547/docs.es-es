@@ -1,5 +1,6 @@
 ---
 title: Controlar y provocar eventos
+description: Obtenga más información sobre cómo controlar y provocar eventos de .NET, que se basan en el modelo de delegado. Este modelo permite a los suscriptores registrarse o recibir notificaciones de los proveedores.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-ms.openlocfilehash: b8ed028bc1edabf14d7b2dd67d94b28d574d2eb4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8cf0ff323e9bf7305e3d9cbb6dabd8f685059e97
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159629"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447113"
 ---
 # <a name="handling-and-raising-events"></a>Controlar y provocar eventos
 
@@ -84,14 +85,14 @@ En el ejemplo siguiente se muestra un método de control de eventos denominado `
 ## <a name="raising-multiple-events"></a>Generar múltiples eventos  
  Si la clase genera varios eventos, el compilador genera un campo por cada instancia de delegado de eventos. Si el número de eventos es alto, es posible que el costo de almacenamiento de un campo por delegado no sea aceptable. Para estos casos, .NET dispone de propiedades de evento que se pueden usar con otra estructura de datos (de elección propia) para almacenar los delegados de eventos.  
   
- Las propiedades de evento están compuestas de declaraciones de evento acompañadas de descriptores de acceso de evento. Los descriptores de acceso de eventos son métodos que se definen para agregar o quitar instancias de delegados de eventos de la estructura de datos de almacenamiento. Hay que tener en cuenta que las propiedades de evento son más lentas que los campos de evento, ya que se debe recuperar cada delegado de evento antes de poder invocarlo. La memoria y la velocidad se ven afectadas. Si la clase define muchos eventos que no se provocan con frecuencia, es posible que desee implementar propiedades de evento. Para más información, consulte [Cómo: Controlar varios eventos mediante propiedades de eventos](how-to-handle-multiple-events-using-event-properties.md).  
+ Las propiedades de evento están compuestas de declaraciones de evento acompañadas de descriptores de acceso de evento. Los descriptores de acceso de eventos son métodos que se definen para agregar o quitar instancias de delegados de eventos de la estructura de datos de almacenamiento. Hay que tener en cuenta que las propiedades de evento son más lentas que los campos de evento, ya que se debe recuperar cada delegado de evento antes de poder invocarlo. La memoria y la velocidad se ven afectadas. Si la clase define muchos eventos que no se provocan con frecuencia, es posible que desee implementar propiedades de evento. Para obtener más información, vea [Cómo: Controlar varios eventos mediante las propiedades de evento](how-to-handle-multiple-events-using-event-properties.md).  
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Título|Description|  
+|Title|Descripción|  
 |-----------|-----------------|  
 |[Cómo: Provocar y utilizar eventos](how-to-raise-and-consume-events.md)|Contiene ejemplos de cómo generar y consumir eventos.|  
-|[Cómo: Controlar varios eventos mediante propiedades de eventos](how-to-handle-multiple-events-using-event-properties.md)|Muestra cómo utilizar propiedades de evento para controlar varios eventos.|  
+|[Cómo: Controlar varios eventos mediante las propiedades de evento](how-to-handle-multiple-events-using-event-properties.md)|Muestra cómo utilizar propiedades de evento para controlar varios eventos.|  
 |[Modelo de diseño de observador](observer-design-pattern.md)|Describe el patrón de diseño que permite que un suscriptor se registre con un proveedor y reciba notificaciones de dicho proveedor.|  
 |[Cómo: Consumir eventos en una aplicación de formularios Web Forms](how-to-consume-events-in-a-web-forms-application.md)|Muestra cómo controlar un evento generado por un control de formularios Web Forms.|  
   

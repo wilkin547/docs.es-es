@@ -1,13 +1,13 @@
 ---
 title: Programación asincrónica en C#
 description: Información general sobre la compatibilidad con el lenguaje C# para la programación asincrónica mediante async, await, Task y Task<T>
-ms.date: 05/26/2020
-ms.openlocfilehash: 703392ca6ba4e6fb08dd8a88817babc167394788
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.date: 06/04/2020
+ms.openlocfilehash: fbbd08f8c0e650c366ca1d283825e629fcb952d7
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007967"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446459"
 ---
 # <a name="asynchronous-programming-with-async-and-await"></a>Programación asincrónica con async y await
 
@@ -32,6 +32,10 @@ Piense ahora en estas mismas instrucciones escritas como instrucciones de C#:
 
 :::code language="csharp" source="snippets/index/AsyncBreakfast-starter/Program.cs" highlight="8-27":::
 
+:::image type="content" source="media/synchronous-breakfast.png" alt-text="Desayuno sincrónico":::
+
+El desayuno preparado de forma sincrónica tardó unos 30 minutos porque el total es la suma de cada tarea individual.
+
 > [!NOTE]
 > Las clases `Coffee`, `Egg`, `Bacon`, `Toast` y `Juice` están vacías. Simplemente son clases de marcador creadas para la demostración; no contienen propiedades y no sirven para ningún otro propósito.
 
@@ -50,6 +54,9 @@ El código anterior muestra una práctica incorrecta, que consiste en construir 
 Empecemos por actualizar este código para que el subproceso no se bloquee mientras se ejecutan las tareas. La palabra clave `await` proporciona un modo sin bloqueo para iniciar una tarea y, después, proseguir la ejecución cuando dicha tarea se complete. Una versión asincrónica sencilla del código para preparar el desayuno tendría un aspecto parecido al del fragmento siguiente:
 
 :::code language="csharp" source="snippets/index/AsyncBreakfast-V2/Program.cs" id="SnippetMain":::
+
+> [!IMPORTANT]
+> El tiempo total transcurrido es aproximadamente el mismo que el de la versión inicial sincrónica. El código todavía tiene que aprovechar algunas de las características clave de programación asincrónica.
 
 > [!TIP]
 > Los cuerpos del método de `FryEggsAsync`, `FryBaconAsync` y `ToastBreadAsync` se han actualizado para devolver `Task<Egg>`, `Task<Bacon>` y `Task<Toast>`, respectivamente. Se cambia el nombre de los métodos de su versión original para incluir el sufijo "Async". Sus implementaciones se muestran como parte de la [versión final](#final-version) más adelante en este artículo.
@@ -116,6 +123,10 @@ Console.WriteLine("bacon is ready");
 Console.WriteLine("Breakfast is ready!");
 ```
 
+:::image type="content" source="media/asynchronous-breakfast.png" alt-text="Desayuno asincrónico":::
+
+El desayuno preparado de forma asincrónica tardó unos 20 minutos porque algunas tareas pudieron efectuarse simultáneamente.
+
 El código anterior funciona mejor. Iniciará todas las tareas asincrónicas a la vez y esperará por una tarea solo cuando necesite los resultados. El código anterior se parece al código de una aplicación web que realiza solicitudes a diferentes microservicios y, después, combina los resultados en una sola página. Podrá realizar todas las solicitudes de inmediato y, luego, llevará a cabo una instrucción `await` para esperar por todas esas tareas y componer la página web.
 
 ## <a name="composition-with-tasks"></a>Composición con tareas
@@ -172,6 +183,10 @@ while (breakfastTasks.Count > 0)
 
 Después de todos estos cambios, la versión final del código tiene un aspecto similar al siguiente: <a id="final-version"></a>.
 :::code language="csharp" source="snippets/index/AsyncBreakfast-final/Program.cs" highlight="9-40":::
+
+:::image type="content" source="media/whenany-async-breakfast.png" alt-text="Cualquier desayuno asincrónico":::
+
+La versión final del desayuno preparado de forma asincrónica tardó aproximadamente 15 minutes porque algunas tareas pudieron efectuarse simultáneamente y el código pudo supervisar varias tareas a la vez, tomando medidas solo en caso necesario.
 
 Este código final es asincrónico. Refleja con más precisión la manera en que una persona prepara un desayuno. Compare el código anterior con el primer ejemplo de código del artículo. Las acciones principales siguen siendo claras cuando se lee el código. De hecho, puede leerlo como si se tratara de las instrucciones para preparar el desayuno que se indican al principio del artículo. Las características del lenguaje para `async` y `await` proporcionan la traducción que cualquier persona haría para seguir las instrucciones escritas, a saber: las tareas deben iniciarse a medida que sea posible y debe evitarse el bloqueo por esperar a que se completen las tareas.
 
