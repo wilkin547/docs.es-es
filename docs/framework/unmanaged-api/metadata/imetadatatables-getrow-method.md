@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: a7408d51-0bce-45a2-b58f-da4660bbc039
 topic_type:
 - apiref
-ms.openlocfilehash: 71f6c496816fec1a7537f5ccdfdc1b47d17da871
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 13d514157382c75a2eb9799837f9355d0e469c99
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177117"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84489917"
 ---
-# <a name="imetadatatablesgetrow-method"></a><span data-ttu-id="b6887-102">IMetaDataTables::GetRow (Método)</span><span class="sxs-lookup"><span data-stu-id="b6887-102">IMetaDataTables::GetRow Method</span></span>
-<span data-ttu-id="b6887-103">Obtiene la fila en el índice de fila especificado, en la tabla en el índice de tabla especificado.</span><span class="sxs-lookup"><span data-stu-id="b6887-103">Gets the row at the specified row index, in the table at the specified table index.</span></span>  
+# <a name="imetadatatablesgetrow-method"></a><span data-ttu-id="ae083-102">IMetaDataTables::GetRow (Método)</span><span class="sxs-lookup"><span data-stu-id="ae083-102">IMetaDataTables::GetRow Method</span></span>
+<span data-ttu-id="ae083-103">Obtiene la fila en el índice de fila especificado de la tabla en el índice de tabla especificado.</span><span class="sxs-lookup"><span data-stu-id="ae083-103">Gets the row at the specified row index, in the table at the specified table index.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b6887-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="b6887-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ae083-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ae083-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetRow (
@@ -35,30 +35,30 @@ HRESULT GetRow (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b6887-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="b6887-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ae083-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="ae083-105">Parameters</span></span>  
  `ixTbl`  
- <span data-ttu-id="b6887-106">[en] El índice de la tabla desde la que se recuperará la fila.</span><span class="sxs-lookup"><span data-stu-id="b6887-106">[in] The index of the table from which the row will be retrieved.</span></span>  
+ <span data-ttu-id="ae083-106">de Índice de la tabla de la que se recuperará la fila.</span><span class="sxs-lookup"><span data-stu-id="ae083-106">[in] The index of the table from which the row will be retrieved.</span></span>  
   
  `rid`  
- <span data-ttu-id="b6887-107">[en] El índice de la fila que se ha de obtener.</span><span class="sxs-lookup"><span data-stu-id="b6887-107">[in] The index of the row to get.</span></span>  
+ <span data-ttu-id="ae083-107">de Índice de la fila que se va a obtener.</span><span class="sxs-lookup"><span data-stu-id="ae083-107">[in] The index of the row to get.</span></span>  
   
  `ppRow`  
- <span data-ttu-id="b6887-108">[fuera] Un puntero a un puntero a la fila.</span><span class="sxs-lookup"><span data-stu-id="b6887-108">[out] A pointer to a pointer to the row.</span></span>  
+ <span data-ttu-id="ae083-108">enuncia Un puntero a un puntero a la fila.</span><span class="sxs-lookup"><span data-stu-id="ae083-108">[out] A pointer to a pointer to the row.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b6887-109">Observaciones</span><span class="sxs-lookup"><span data-stu-id="b6887-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ae083-109">Comentarios</span><span class="sxs-lookup"><span data-stu-id="ae083-109">Remarks</span></span>  
 
-  <span data-ttu-id="b6887-110">No se recomienda el uso de este método, porque no devuelve resultados coherentes.</span><span class="sxs-lookup"><span data-stu-id="b6887-110">We do not recommend the use of this method, because it does not return consistent results.</span></span> <span data-ttu-id="b6887-111">Para obtener información acerca de la tabla GUID, consulte la documentación de Common Language Infrastructure (CLI), especialmente "Partition II: Metadata Definition and Semantics".</span><span class="sxs-lookup"><span data-stu-id="b6887-111">For information about the GUID table, see the Common Language Infrastructure (CLI) documentation, especially "Partition II: Metadata Definition and Semantics".</span></span> <span data-ttu-id="b6887-112">La documentación está disponible en línea; Véanse los estándares de infraestructura de [ECMA C y Lenguaje Común](../../../standard/components.md#applicable-standards) y la norma [ECMA-335 - Common Language Infrastructure (CLI).](http://www.ecma-international.org/publications/standards/Ecma-335.htm)</span><span class="sxs-lookup"><span data-stu-id="b6887-112">The documentation is available online; see [ECMA C# and Common Language Infrastructure Standards](../../../standard/components.md#applicable-standards) and [Standard ECMA-335 - Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).</span></span>  
+  <span data-ttu-id="ae083-110">No se recomienda el uso de este método, ya que no devuelve resultados coherentes.</span><span class="sxs-lookup"><span data-stu-id="ae083-110">We do not recommend the use of this method, because it does not return consistent results.</span></span> <span data-ttu-id="ae083-111">Para obtener información acerca de la tabla de GUID, consulte la documentación de Common Language Infrastructure (CLI), especialmente "partición II: definición y semántica de los metadatos".</span><span class="sxs-lookup"><span data-stu-id="ae083-111">For information about the GUID table, see the Common Language Infrastructure (CLI) documentation, especially "Partition II: Metadata Definition and Semantics".</span></span> <span data-ttu-id="ae083-112">La documentación está disponible en línea; vea [ECMA C# and Common Language Infrastructure Standards](../../../standard/components.md#applicable-standards) y [standard ECMA-335-Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).</span><span class="sxs-lookup"><span data-stu-id="ae083-112">The documentation is available online; see [ECMA C# and Common Language Infrastructure Standards](../../../standard/components.md#applicable-standards) and [Standard ECMA-335 - Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b6887-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b6887-113">Requirements</span></span>  
- <span data-ttu-id="b6887-114">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b6887-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ae083-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ae083-113">Requirements</span></span>  
+ <span data-ttu-id="ae083-114">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ae083-114">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b6887-115">**Encabezado:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b6887-115">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="ae083-115">**Encabezado:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="ae083-115">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="b6887-116">**Biblioteca:** Se utiliza como recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="b6887-116">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="ae083-116">**Biblioteca:** Se utiliza como recurso en MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="ae083-116">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="b6887-117">**Versiones de .NET Framework**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b6887-117">**.NET Framework Versions**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="ae083-117">**.NET Framework versiones**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ae083-117">**.NET Framework Versions**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b6887-118">Consulte también</span><span class="sxs-lookup"><span data-stu-id="b6887-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ae083-118">Consulte también:</span><span class="sxs-lookup"><span data-stu-id="ae083-118">See also</span></span>
 
-- [<span data-ttu-id="b6887-119">IMetaDataTables (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="b6887-119">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="b6887-120">IMetaDataTables2 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="b6887-120">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [<span data-ttu-id="ae083-119">IMetaDataTables (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="ae083-119">IMetaDataTables Interface</span></span>](imetadatatables-interface.md)
+- [<span data-ttu-id="ae083-120">IMetaDataTables2 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="ae083-120">IMetaDataTables2 Interface</span></span>](imetadatatables2-interface.md)
