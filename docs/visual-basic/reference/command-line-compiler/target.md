@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -target compiler options [Visual Basic]
 - /target compiler options [Visual Basic]
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
-ms.openlocfilehash: d186670489ada51fced67ff9adeb73b14909b664
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 0ab28d55b2426a4efda112ab84da5e790909d565
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716686"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403075"
 ---
 # <a name="-target-visual-basic"></a>-target (Visual Basic)
 
@@ -31,7 +31,7 @@ En la siguiente tabla se resumen los efectos de la opción `-target`.
 |----------------|------------------|
 |`-target:exe`|Hace que el compilador cree una aplicación de consola ejecutable.<br /><br /> Es la opción predeterminada si no se especifica ninguna opción `-target`. El archivo ejecutable se crea con una extensión .exe.<br /><br /> A menos que se especifique de otro modo con la opción `-out`, el nombre del archivo de salida toma el nombre del archivo de entrada que el procedimiento `Sub Main` contiene.<br /><br /> Solo se necesita un procedimiento `Sub Main` en los archivos de código fuente que se compilan en un archivo .exe. Use la opción de compilador `-main` para especificar qué clase contiene el procedimiento `Sub Main`.|
 |`-target:library`|Hace que el compilador cree una biblioteca de vínculos dinámicos (DLL).<br /><br /> El archivo de biblioteca de vínculos dinámicos se crea con una extensión .dll.<br /><br /> A menos que se especifique lo contrario con la opción `-out`, el archivo de salida toma el nombre del primer archivo de entrada.<br /><br /> Al compilar un archivo DLL, no se necesita un procedimiento `Sub Main`.|
-|`-target:module`|Hace que el compilador genere un módulo que se puede agregar a un ensamblado.<br /><br /> El archivo de salida se crea con una extensión .netmodule.<br /><br /> .NET Common Language Runtime no puede cargar un archivo que no tiene un ensamblado. En cambio, este archivo se puede incorporar en el manifiesto de un ensamblado usando `-reference`.<br /><br /> Cuando el código de un módulo hace referencia a tipos en otro módulo, ambos módulos deben incorporarse en un manifiesto de ensamblado usando `-reference`.<br /><br /> La opción [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) importa los metadatos de un módulo.|
+|`-target:module`|Hace que el compilador genere un módulo que se puede agregar a un ensamblado.<br /><br /> El archivo de salida se crea con una extensión .netmodule.<br /><br /> .NET Common Language Runtime no puede cargar un archivo que no tiene un ensamblado. En cambio, este archivo se puede incorporar en el manifiesto de un ensamblado usando `-reference`.<br /><br /> Cuando el código de un módulo hace referencia a tipos en otro módulo, ambos módulos deben incorporarse en un manifiesto de ensamblado usando `-reference`.<br /><br /> La opción [-addmodule](addmodule.md) importa los metadatos de un módulo.|
 |`-target:winexe`|Hace que el compilador cree una aplicación basada en Windows ejecutable.<br /><br /> El archivo ejecutable se crea con una extensión .exe. Una aplicación basada en Windows es aquella que ofrece una interfaz de usuario de la biblioteca de clases de .NET Framework o con las API Windows.<br /><br /> A menos que se especifique de otro modo con la opción `-out`, el nombre del archivo de salida toma el nombre del archivo de entrada que el procedimiento `Sub Main` contiene.<br /><br /> Solo se necesita un procedimiento `Sub Main` en los archivos de código fuente que se compilan en un archivo .exe. En los casos en los que el código tiene más de una clase con un procedimiento `Sub Main`, use la opción de compilador `-main` para especificar qué clase contiene el procedimiento `Sub Main`|
 |`-target:appcontainerexe`|Hace que el compilador cree una aplicación basada en Windows ejecutable que se debe ejecutar en un contenedor de la aplicación. Esta opción está concebida para usarse con aplicaciones de la Tienda Windows 8.x.<br /><br /> La opción **appcontainerexe** establece un bit en el campo Characteristics del archivo [portable ejecutable](/windows/desktop/Debug/pe-format). Este bit indica que la aplicación se debe ejecutar en un contenedor de la aplicación. Cuando ese bit se establece, se produce un error si el método `CreateProcess` intenta iniciar la aplicación fuera de un contenedor de la aplicación. Además de esta opción de bit, **-target:appcontainerexe** equivale a **-target:winexe**.<br /><br /> El archivo ejecutable se crea con una extensión .exe.<br /><br /> A menos que se especifique de otro modo con la opción `-out`, el nombre del archivo de salida toma el nombre del archivo de entrada que el procedimiento `Sub Main` contiene.<br /><br /> Solo se necesita un procedimiento `Sub Main` en los archivos de código fuente que se compilan en un archivo .exe. Si el código contiene más de una clase con un procedimiento `Sub Main`, use la opción de compilador `-main` para especificar qué clase contiene el procedimiento `Sub Main`|
 |`-target:winmdobj`|Hace que el compilador cree un archivo intermedio que se puede convertir en archivo binario de Windows Runtime (.winmd). El archivo .winmd lo pueden usar programas de JavaScript y C++, además de los programas de lenguajes administrados.<br /><br /> El archivo intermedio se crea con una extensión .winmdobj.<br /><br /> A menos que se especifique de otro modo con la opción `-out`, el nombre del archivo de salida toma el nombre del primer archivo de entrada. No se necesita un procedimiento `Sub Main`.<br /><br /> El archivo .winmdobj está concebido para usarse como entrada de la herramienta de exportación <xref:Microsoft.Build.Tasks.WinMDExp> para generar un archivo de metadatos de Windows (WinMD). El archivo WinMD tiene una extensión .winmd, y contiene tanto el código de la biblioteca original como las definiciones de WinMD que JavaScript, C++ y Windows Runtime usan.|
@@ -60,11 +60,11 @@ vbc -target:library in.vb
 
 ## <a name="see-also"></a>Vea también
 
-- [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-main](../../../visual-basic/reference/command-line-compiler/main.md)
-- [-out (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)
-- [-reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
-- [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)
-- [-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)
+- [Compilador de línea de comandos de Visual Basic](index.md)
+- [-main](main.md)
+- [-out (Visual Basic)](out.md)
+- [-reference (Visual Basic)](reference.md)
+- [-addmodule](addmodule.md)
+- [-moduleassemblyname](moduleassemblyname.md)
 - [Ensamblados de .NET](../../../standard/assembly/index.md)
-- [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Líneas de comandos de compilación de ejemplo](sample-compilation-command-lines.md)

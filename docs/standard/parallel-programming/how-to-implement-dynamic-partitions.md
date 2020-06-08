@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to create a dynamic partitioner
 ms.assetid: c875ad12-a161-43e6-ad1c-3d6927c536a7
-ms.openlocfilehash: 3970566b4e3f51ce538c328d4e69b20ec22ec09b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 197e71cf4f00c98891e58e5f72974c0ec407e6ce
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73091416"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288451"
 ---
 # <a name="how-to-implement-dynamic-partitions"></a>Cómo: Implementar las particiones dinámicas
 
@@ -30,5 +30,5 @@ Este es un ejemplo de creación de particiones por fragmentos, donde cada fragme
   
 ## <a name="see-also"></a>Vea también
 
-* [Particionadores personalizados para PLINQ y TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)
-* [Implementar un particionador para particionamiento estático](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)
+* [Particionadores personalizados para PLINQ y TPL](custom-partitioners-for-plinq-and-tpl.md)
+* [Implementar un particionador para particionamiento estático](how-to-implement-a-partitioner-for-static-partitioning.md)

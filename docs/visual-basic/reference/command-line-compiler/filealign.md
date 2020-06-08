@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /filealign compiler option [Visual Basic]
 - filealign compiler option [Visual Basic]
 ms.assetid: cc61ec3d-ad38-4b28-9659-099d73cad099
-ms.openlocfilehash: fef2652f591e713140c651a9cb0df1ea9e6236c8
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 3877757185030b0dba914a79d8c760fb8033ae5f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005589"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408652"
 ---
 # <a name="-filealign"></a>-filealign
 Especifica dónde se alinean las secciones del archivo de salida.  
@@ -41,4 +41,4 @@ Especifica dónde se alinean las secciones del archivo de salida.
   
 ## <a name="see-also"></a>Vea también
 
-- [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Compilador de línea de comandos de Visual Basic](index.md)

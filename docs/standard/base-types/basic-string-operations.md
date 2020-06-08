@@ -8,12 +8,12 @@ helpviewer_keywords:
 - custom strings
 ms.assetid: 8133d357-90b5-4b62-9927-43323d99b6b6
 ms.custom: seadec18
-ms.openlocfilehash: 2ce1b148a2b1605b5b1283bdc3398409661f3f83
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 8c19f6bcbdf5e4829c91aee1e2fd631537ed2e0a
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523986"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277757"
 ---
 # <a name="basic-string-operations-in-net"></a>Operaciones básicas de cadenas en .NET
 
@@ -23,8 +23,8 @@ Varios métodos de las clases <xref:System.String?displayProperty=nameWithType> 
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
-[Conversión de tipos en .NET](../../../docs/standard/base-types/type-conversion.md)\
+[Conversión de tipos en .NET](type-conversion.md)\
 Se describe cómo convertir un tipo en otro.  
 
-[Aplicar formato a tipos](../../../docs/standard/base-types/formatting-types.md)\
+[Aplicar formato a tipos](formatting-types.md)\
 Se describe cómo dar formato a cadenas mediante los especificadores de formato.

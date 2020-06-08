@@ -11,12 +11,12 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-ms.openlocfilehash: 8e0cf961f4d6b481c354bdc854806f971458ce21
-ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
+ms.openlocfilehash: c626e79e7bbcd71c90775df8ee8c4d6570c29125
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82624948"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290583"
 ---
 # <a name="how-to-use-character-encoding-classes-in-net"></a>Procedimiento para usar clases de codificación de caracteres en .NET
 
@@ -33,11 +33,11 @@ La codificación y la descodificación también pueden incluir validación. Por 
 
 Todas las clases de codificación de caracteres de .NET heredan de la clase <xref:System.Text.Encoding?displayProperty=nameWithType>, que es una clase abstracta que define la funcionalidad común a todas las codificaciones de caracteres. Para acceder a los objetos individuales de codificación implementados en .NET, haga lo siguiente:
 
-- Use las propiedades estáticas de la clase <xref:System.Text.Encoding>, que devuelven objetos que representan las codificaciones de caracteres estándar disponibles en .NET (ASCII, UTF-7, UTF-8, UTF-16 y UTF-32). Por ejemplo, la propiedad <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> devuelve un objeto <xref:System.Text.UnicodeEncoding> : Cada objeto usa la reserva de reemplazo para controlar las cadenas que no puede codificar y los bytes que no puede descodificar. Para más información, consulte [Reserva de reemplazo](../../../docs/standard/base-types/character-encoding.md#Replacement).
+- Use las propiedades estáticas de la clase <xref:System.Text.Encoding>, que devuelven objetos que representan las codificaciones de caracteres estándar disponibles en .NET (ASCII, UTF-7, UTF-8, UTF-16 y UTF-32). Por ejemplo, la propiedad <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> devuelve un objeto <xref:System.Text.UnicodeEncoding> : Cada objeto usa la reserva de reemplazo para controlar las cadenas que no puede codificar y los bytes que no puede descodificar. Para más información, consulte [Reserva de reemplazo](character-encoding.md#Replacement).
 
-- Llame al constructor de clase de la codificación. Se pueden crear instancias de los objetos para las codificaciones ASCII, UTF-7, UTF-8, UTF-16 y UTF-32 de esta manera. De forma predeterminada, cada objeto usa la reserva de reemplazo para controlar las cadenas que no puede codificar y los bytes que no puede descodificar, pero puede especificar que se debe producir una excepción en su lugar. Para más información, consulte [Reserva de reemplazo](../../../docs/standard/base-types/character-encoding.md#Replacement) y [Reserva de excepción](../../../docs/standard/base-types/character-encoding.md#Exception).
+- Llame al constructor de clase de la codificación. Se pueden crear instancias de los objetos para las codificaciones ASCII, UTF-7, UTF-8, UTF-16 y UTF-32 de esta manera. De forma predeterminada, cada objeto usa la reserva de reemplazo para controlar las cadenas que no puede codificar y los bytes que no puede descodificar, pero puede especificar que se debe producir una excepción en su lugar. Para más información, consulte [Reserva de reemplazo](character-encoding.md#Replacement) y [Reserva de excepción](character-encoding.md#Exception).
 
-- Llame al constructor <xref:System.Text.Encoding.%23ctor%28System.Int32%29> y pásele un entero que represente la codificación. Los objetos de codificación estándar usan la reserva de reemplazo, y los objetos de codificación para la página de códigos y el juego de caracteres de doble byte (DBCS) usan el retroceso de ajuste perfecto para controlar las cadenas que no pueden codificar y los bytes que no pueden descodificar. Para más información, consulte [Reserva con ajuste perfecto](../../../docs/standard/base-types/character-encoding.md#BestFit).
+- Llame al constructor <xref:System.Text.Encoding.%23ctor%28System.Int32%29> y pásele un entero que represente la codificación. Los objetos de codificación estándar usan la reserva de reemplazo, y los objetos de codificación para la página de códigos y el juego de caracteres de doble byte (DBCS) usan el retroceso de ajuste perfecto para controlar las cadenas que no pueden codificar y los bytes que no pueden descodificar. Para más información, consulte [Reserva con ajuste perfecto](character-encoding.md#BestFit).
 
 - Llame al método <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType>, que devuelve cualquier estándar, página de códigos o codificación DBCS disponible en .NET. Las sobrecargas permiten especificar un objeto de reserva para el codificador y para el descodificador.
 
@@ -145,7 +145,7 @@ En el ejemplo siguiente se usa la página de códigos 1252 (la página de códig
 La asignación con ajuste perfecto es el comportamiento predeterminado para un objeto <xref:System.Text.Encoding> que codifica los datos Unicode en datos de página de códigos, y hay aplicaciones heredadas que se basan en este comportamiento. Sin embargo, la mayoría de las aplicaciones nuevas deben evitarlo por razones de seguridad. Por ejemplo, las aplicaciones no deben asignar nombres de dominio mediante una codificación con ajuste perfecto.
 
 > [!NOTE]
-> También puede implementar una asignación personalizada de reserva con ajuste perfecto para una codificación. Para más información, vea la sección [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom) .
+> También puede implementar una asignación personalizada de reserva con ajuste perfecto para una codificación. Para más información, vea la sección [Implementing a Custom Fallback Strategy](character-encoding.md#Custom) .
 
 Si la reserva con ajuste perfecto es el valor predeterminado para un objeto de codificación, puede elegir otra estrategia de reserva cuando se recupera un objeto <xref:System.Text.Encoding> llamando a la sobrecarga de <xref:System.Text.Encoding.GetEncoding%28System.Int32%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=nameWithType> o <xref:System.Text.Encoding.GetEncoding%28System.String%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=nameWithType> . La próxima sección incluye un ejemplo que reemplaza con un asterisco (*) cada carácter que no se puede asignar a la página de códigos 1252.
 
@@ -167,7 +167,7 @@ Cuando un carácter no tiene una coincidencia exacta en el esquema de destino, p
 [!code-vb[Conceptual.Encoding#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/bestfit1a.vb#3)]
 
 > [!NOTE]
-> También puede implementar una clase de reemplazo para una codificación. Para más información, vea la sección [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom) .
+> También puede implementar una clase de reemplazo para una codificación. Para más información, vea la sección [Implementing a Custom Fallback Strategy](character-encoding.md#Custom) .
 
 Además de QUESTION MARK (U+003F), el REPLACEMENT CHARACTER de Unicode (U+FFFD) se suele usar como cadena de reemplazo, especialmente al descodificar secuencias de bytes que no se puede traducir correctamente a caracteres Unicode. Sin embargo, se puede elegir cualquier cadena de reemplazo y esta puede contener varios caracteres.
 
@@ -181,7 +181,7 @@ En lugar de proporcionar una reserva con ajuste perfecto o una cadena de reempla
 [!code-vb[Conceptual.Encoding#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/exceptionascii.vb#4)]
 
 > [!NOTE]
-> También puede implementar un controlador de excepciones personalizado para una operación de codificación. Para más información, vea la sección [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom) .
+> También puede implementar un controlador de excepciones personalizado para una operación de codificación. Para más información, vea la sección [Implementing a Custom Fallback Strategy](character-encoding.md#Custom) .
 
 Los objetos <xref:System.Text.EncoderFallbackException> y <xref:System.Text.DecoderFallbackException> proporcionan la siguiente información acerca de la condición que provocó la excepción:
 
@@ -268,4 +268,4 @@ En el código siguiente se crean instancias del objeto `CustomMapper` y se pasa 
 - <xref:System.Text.DecoderFallback>
 - <xref:System.Text.Encoding>
 - <xref:System.Text.EncoderFallback>
-- [Globalización y localización](../../../docs/standard/globalization-localization/index.md)
+- [Globalización y localización](../globalization-localization/index.md)

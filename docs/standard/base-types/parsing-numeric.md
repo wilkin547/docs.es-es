@@ -11,15 +11,15 @@ helpviewer_keywords:
 - enumerations [.NET Framework], parsing strings
 - base types, parsing strings
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
-ms.openlocfilehash: ac44282a06b2b3710d3a9e5390c7a514c1632c3a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 000419e63e86607cd76728ae6e15ac6cd67b87f4
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73127597"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277653"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>Analizar cadenas numéricas en .NET
-Todos los tipos numéricos tienen dos métodos de análisis estáticos, `Parse` y `TryParse`, que puede usar para convertir la representación de cadena de un número en un tipo numérico. Estos métodos permiten analizar cadenas generadas mediante el uso de las cadenas de formato que se documentan en [Cadenas con formato numérico estándar](../../../docs/standard/base-types/standard-numeric-format-strings.md) y [Cadenas con formato numérico personalizado](../../../docs/standard/base-types/custom-numeric-format-strings.md). De forma predeterminada, los métodos `Parse` y `TryParse` pueden convertir correctamente las cadenas que contienen dígitos decimales enteros solo en valores enteros. Pueden convertir correctamente las cadenas que contienen dígitos decimales enteros y fraccionarios, separadores de grupos y un separador decimal en valores de punto flotante. El método `Parse` produce una excepción si se produce un error en la operación, mientras que el método `TryParse` devuelve `false`.  
+Todos los tipos numéricos tienen dos métodos de análisis estáticos, `Parse` y `TryParse`, que puede usar para convertir la representación de cadena de un número en un tipo numérico. Estos métodos permiten analizar cadenas generadas mediante el uso de las cadenas de formato que se documentan en [Cadenas con formato numérico estándar](standard-numeric-format-strings.md) y [Cadenas con formato numérico personalizado](custom-numeric-format-strings.md). De forma predeterminada, los métodos `Parse` y `TryParse` pueden convertir correctamente las cadenas que contienen dígitos decimales enteros solo en valores enteros. Pueden convertir correctamente las cadenas que contienen dígitos decimales enteros y fraccionarios, separadores de grupos y un separador decimal en valores de punto flotante. El método `Parse` produce una excepción si se produce un error en la operación, mientras que el método `TryParse` devuelve `false`.  
   
 ## <a name="parsing-and-format-providers"></a>Análisis y proveedores de formato  
  Normalmente, las representaciones de cadena de valores numéricos se diferencian en la referencia cultural. Todos los elementos de las cadenas numéricas, como los símbolos de moneda, los separadores de grupo (o millares) y los separadores decimales, varían según la referencia cultural. Los métodos de análisis usan implícita o explícitamente un proveedor de formato que reconoce estas variaciones específicas de la referencia cultural. Si no se especifica ningún proveedor de formato en una llamada al método `Parse` o `TryParse`, se usa el proveedor de formato asociado a la referencia cultural del subproceso actual (el objeto <xref:System.Globalization.NumberFormatInfo> devuelto por la propiedad <xref:System.Globalization.NumberFormatInfo.CurrentInfo%2A?displayProperty=nameWithType>).  
@@ -84,5 +84,5 @@ Todos los tipos numéricos tienen dos métodos de análisis estáticos, `Parse` 
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Globalization.NumberStyles>
-- [Analizar cadenas](../../../docs/standard/base-types/parsing-strings.md)
-- [Aplicación de formato a tipos](../../../docs/standard/base-types/formatting-types.md)
+- [Analizar cadenas](parsing-strings.md)
+- [Aplicación de formato a tipos](formatting-types.md)

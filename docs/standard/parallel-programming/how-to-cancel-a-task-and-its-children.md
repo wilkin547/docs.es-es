@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to cancel
 ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
-ms.openlocfilehash: 4e0e783a4dfe3bf3a55795d7baef461369d7405a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ca6b5f10840d935aa45cb660da86685d1c90554b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73134201"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290037"
 ---
 # <a name="how-to-cancel-a-task-and-its-children"></a>Cómo: Cancelar una tarea y sus elementos secundarios
 En estos ejemplos se muestra cómo realizar las tareas siguientes:  
@@ -34,7 +34,7 @@ En estos ejemplos se muestra cómo realizar las tareas siguientes:
  [!code-csharp[TPL_Cancellation#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_cancellation/cs/cancel1.cs#04)]
  [!code-vb[TPL_Cancellation#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_cancellation/vb/cancel1.vb#04)]  
   
- La clase <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> está totalmente integrada con el modelo de cancelación basado en los tipos <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType> y <xref:System.Threading.CancellationToken?displayProperty=nameWithType>. Para más información, consulte el tema sobre la [cancelación en subprocesos administrados](../../../docs/standard/threading/cancellation-in-managed-threads.md) y la [cancelación de tareas](../../../docs/standard/parallel-programming/task-cancellation.md).  
+ La clase <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> está totalmente integrada con el modelo de cancelación basado en los tipos <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType> y <xref:System.Threading.CancellationToken?displayProperty=nameWithType>. Para más información, consulte el tema sobre la [cancelación en subprocesos administrados](../threading/cancellation-in-managed-threads.md) y la [cancelación de tareas](task-cancellation.md).  
   
 ## <a name="see-also"></a>Vea también
 
@@ -42,6 +42,6 @@ En estos ejemplos se muestra cómo realizar las tareas siguientes:
 - <xref:System.Threading.CancellationToken?displayProperty=nameWithType>
 - <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>
 - <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>
-- [Programación asincrónica basada en tareas](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)
-- [Attached and Detached Child Tasks](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md) (Tareas secundarias asociadas y desasociadas)
-- [Expresiones lambda en PLINQ y TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)
+- [Programación asincrónica basada en tareas](task-based-asynchronous-programming.md)
+- [Attached and Detached Child Tasks](attached-and-detached-child-tasks.md) (Tareas secundarias asociadas y desasociadas)
+- [Expresiones lambda en PLINQ y TPL](lambda-expressions-in-plinq-and-tpl.md)

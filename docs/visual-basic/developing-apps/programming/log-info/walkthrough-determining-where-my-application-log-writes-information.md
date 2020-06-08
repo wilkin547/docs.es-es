@@ -9,18 +9,18 @@ helpviewer_keywords:
 - application event logs, output location
 - applications [Visual Basic], output location
 ms.assetid: 5b70143a-7741-45f2-ae1d-03324a3a4189
-ms.openlocfilehash: f3fd0ed0388276f1400bf77d0abfb488634a45a5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 00b543dbe96ca99446f6797a13b66ee62c422b93
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74353605"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398284"
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>Tutorial: Determinar el lugar en el que My.Application.Log escribe la información (Visual Basic)
 
 El objeto `My.Application.Log` puede escribir información en varios agentes de escucha de registro. Los agentes de escucha de registro se configuran por archivo de configuración del equipo y puede reemplazarlos una archivo de configuración de la aplicación. En este tema se describe la configuración predeterminada y cómo determinar la configuración de la aplicación.
 
-Para obtener más información sobre las ubicaciones de salida predeterminadas, vea [Trabajar con registros de aplicaciones](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).
+Para obtener más información sobre las ubicaciones de salida predeterminadas, vea [Trabajar con registros de aplicaciones](working-with-application-logs.md).
 
 ### <a name="to-determine-the-listeners-for-myapplicationlog"></a>Para determinar los agentes de escucha de My.Application.Log
 
@@ -72,9 +72,9 @@ Para obtener más información sobre las ubicaciones de salida predeterminadas, 
 - <xref:System.Diagnostics.XmlWriterTraceListener>
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics>
-- [Trabajar con registros de aplicaciones](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [Registrar excepciones](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
-- [Escribir mensajes de registro](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
-- [Tutorial: Cambiar el lugar donde My.Application.Log escribe información](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [Trabajar con registros de aplicaciones](working-with-application-logs.md)
+- [Registrar excepciones](how-to-log-exceptions.md)
+- [Escribir mensajes de registro](how-to-write-log-messages.md)
+- [Tutorial: Cambiar el lugar donde My.Application.Log escribe información](walkthrough-changing-where-my-application-log-writes-information.md)
 - [Eventos ETW en .NET Framework](../../../../framework/performance/etw-events.md)
-- [Solución de problemas: Agentes de escucha de registro](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)
+- [Solución de problemas: Agentes de escucha de registro](troubleshooting-log-listeners.md)

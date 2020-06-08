@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, introduction to
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
-ms.openlocfilehash: e9ef72c2691a4dbb9c68202b29e0f5c77dcdaa74
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: e50b2bf15d9a627f70ff01616bf2c72c70d7ff33
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588182"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290686"
 ---
 # <a name="introduction-to-plinq"></a>Introducción a PLINQ
 
@@ -26,10 +26,10 @@ Parallel LINQ (PLINQ) es una implementación en paralelo del patrón [Language-I
 
 En muchos sentidos, una consulta PLINQ se parece a una consulta LINQ to Objects no en paralelo. Las consultas PLINQ, al igual que las consultas LINQ secuenciales, funcionan en cualquier origen de datos <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601> en memoria y tienen ejecución aplazada, lo que significa que no se empiezan a ejecutar hasta que se enumera la consulta. La principal diferencia es que PLINQ intenta usar completamente todos los procesadores del sistema. Para ello, crea particiones del origen de datos en segmentos y, luego, ejecuta la consulta en cada segmento en subprocesos de trabajo independientes en paralelo en varios procesadores. En muchos casos, la ejecución en paralelo significa que la consulta se ejecuta considerablemente más rápido.
 
-A través de la ejecución en paralelo, PLINQ puede alcanzar importantes mejoras de rendimiento con respecto al código heredado en ciertos tipos de consultas, a menudo solo con agregar la operación de consulta <xref:System.Linq.ParallelEnumerable.AsParallel%2A> al origen de datos. Sin embargo, el paralelismo puede presentar sus propias complejidades y no todas las operaciones de consulta se ejecutan más rápido en PLINQ. De hecho, la paralelización en realidad ralentiza ciertas consultas. Por lo tanto, debe entender cómo ciertos problemas, como la ordenación, afectan a las consultas en paralelo. Para más información, consulte [Introducción a la velocidad en PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).
+A través de la ejecución en paralelo, PLINQ puede alcanzar importantes mejoras de rendimiento con respecto al código heredado en ciertos tipos de consultas, a menudo solo con agregar la operación de consulta <xref:System.Linq.ParallelEnumerable.AsParallel%2A> al origen de datos. Sin embargo, el paralelismo puede presentar sus propias complejidades y no todas las operaciones de consulta se ejecutan más rápido en PLINQ. De hecho, la paralelización en realidad ralentiza ciertas consultas. Por lo tanto, debe entender cómo ciertos problemas, como la ordenación, afectan a las consultas en paralelo. Para más información, consulte [Introducción a la velocidad en PLINQ](understanding-speedup-in-plinq.md).
 
 > [!NOTE]
-> En esta documentación, se utilizan expresiones lambda para definir delegados en PLINQ. Si no está familiarizado con las expresiones lambda de C# o Visual Basic, consulte [Expresiones lambda en PLINQ y TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).
+> En esta documentación, se utilizan expresiones lambda para definir delegados en PLINQ. Si no está familiarizado con las expresiones lambda de C# o Visual Basic, consulte [Expresiones lambda en PLINQ y TPL](lambda-expressions-in-plinq-and-tpl.md).
 
 En el resto del artículo se ofrece información general de las principales clases PLINQ y se analiza cómo crear consultas PLINQ. Cada sección incluye vínculos a información más detallada y ejemplos de código.
 
@@ -65,7 +65,7 @@ El método de extensión <xref:System.Linq.ParallelEnumerable.AsParallel%2A> enl
 
 ## <a name="execution-modes"></a>Modos de ejecución
 
-De manera predeterminada, PLINQ es conservador. En tiempo de ejecución, la infraestructura de PLINQ analiza la estructura general de la consulta. Si existe la probabilidad de que la consulta genere aumentos de velocidad a través de la paralelización, PLINQ particiona la secuencia de origen en tareas que se pueden ejecutar en simultáneo. Si ejecutar una consulta en paralelo no es seguro, PLINQ simplemente la ejecuta en secuencia. Si PLINQ puede elegir entre un algoritmo en paralelo posiblemente costoso y un algoritmo secuencial económico, de manera predeterminada elegirá el algoritmo secuencial. Puede usar el método <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> y la enumeración <xref:System.Linq.ParallelExecutionMode?displayProperty=nameWithType> para indicar a PLINQ que seleccione el algoritmo paralelo. Esto resulta útil cuando, a través de pruebas y mediciones, sabe que una consulta determinada se ejecuta más rápido en paralelo. Para obtener más información, vea [Cómo: Especificar el modo de ejecución en PLINQ](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md).
+De manera predeterminada, PLINQ es conservador. En tiempo de ejecución, la infraestructura de PLINQ analiza la estructura general de la consulta. Si existe la probabilidad de que la consulta genere aumentos de velocidad a través de la paralelización, PLINQ particiona la secuencia de origen en tareas que se pueden ejecutar en simultáneo. Si ejecutar una consulta en paralelo no es seguro, PLINQ simplemente la ejecuta en secuencia. Si PLINQ puede elegir entre un algoritmo en paralelo posiblemente costoso y un algoritmo secuencial económico, de manera predeterminada elegirá el algoritmo secuencial. Puede usar el método <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> y la enumeración <xref:System.Linq.ParallelExecutionMode?displayProperty=nameWithType> para indicar a PLINQ que seleccione el algoritmo paralelo. Esto resulta útil cuando, a través de pruebas y mediciones, sabe que una consulta determinada se ejecuta más rápido en paralelo. Para obtener más información, vea [Cómo: Especificar el modo de ejecución en PLINQ](how-to-specify-the-execution-mode-in-plinq.md).
 
 ## <a name="degree-of-parallelism"></a>Grado de paralelismo
 
@@ -85,15 +85,15 @@ En el ejemplo de código siguiente se muestra cómo participar en conservar el o
 [!code-csharp[PLINQ#3](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinq2_cs.cs#3)]
 [!code-vb[PLINQ#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#3)]
 
-Para más información, consulte cómo [conservar el orden en PLINQ](../../../docs/standard/parallel-programming/order-preservation-in-plinq.md).
+Para más información, consulte cómo [conservar el orden en PLINQ](order-preservation-in-plinq.md).
 
 ## <a name="parallel-vs-sequential-queries"></a>Comparación entre consultas en paralelo y consultas secuenciales
 
-Algunas operaciones requieren que los datos de origen se entreguen en secuencia. Los operadores de consulta <xref:System.Linq.ParallelEnumerable> vuelven automáticamente al modo secuencial cuando es necesario. Para los operadores de consulta definidos por el usuario y los delegados de usuario que requieren la ejecución secuencial, PLINQ proporciona el método <xref:System.Linq.ParallelEnumerable.AsSequential%2A>. Cuando se usa <xref:System.Linq.ParallelEnumerable.AsSequential%2A>, todos los operadores subsiguientes de la consulta se ejecutan secuencialmente hasta que se vuelve a llamar a <xref:System.Linq.ParallelEnumerable.AsParallel%2A>. Para obtener más información, vea [Cómo: Combinar consultas LINQ paralelas y secuenciales](../../../docs/standard/parallel-programming/how-to-combine-parallel-and-sequential-linq-queries.md).
+Algunas operaciones requieren que los datos de origen se entreguen en secuencia. Los operadores de consulta <xref:System.Linq.ParallelEnumerable> vuelven automáticamente al modo secuencial cuando es necesario. Para los operadores de consulta definidos por el usuario y los delegados de usuario que requieren la ejecución secuencial, PLINQ proporciona el método <xref:System.Linq.ParallelEnumerable.AsSequential%2A>. Cuando se usa <xref:System.Linq.ParallelEnumerable.AsSequential%2A>, todos los operadores subsiguientes de la consulta se ejecutan secuencialmente hasta que se vuelve a llamar a <xref:System.Linq.ParallelEnumerable.AsParallel%2A>. Para obtener más información, vea [Cómo: Combinar consultas LINQ paralelas y secuenciales](how-to-combine-parallel-and-sequential-linq-queries.md).
 
 ## <a name="options-for-merging-query-results"></a>Opciones para combinar resultados de consulta
 
-Cuando una consulta PLINQ se ejecuta en paralelo, sus resultados a partir de cada subproceso de trabajo se deben volver a combinar en el subproceso principal para que los use un bucle `foreach` (`For Each` en Visual Basic) o para su inserción en una lista o matriz. En algunos casos, podría ser recomendable especificar un tipo determinado de operación Merge, por ejemplo, para comenzar a generar resultados más rápidamente. Para este propósito, PLINQ admite el método <xref:System.Linq.ParallelEnumerable.WithMergeOptions%2A> y la enumeración <xref:System.Linq.ParallelMergeOptions>. Para más información, consulte las [opciones de combinación en PLINQ](../../../docs/standard/parallel-programming/merge-options-in-plinq.md).
+Cuando una consulta PLINQ se ejecuta en paralelo, sus resultados a partir de cada subproceso de trabajo se deben volver a combinar en el subproceso principal para que los use un bucle `foreach` (`For Each` en Visual Basic) o para su inserción en una lista o matriz. En algunos casos, podría ser recomendable especificar un tipo determinado de operación Merge, por ejemplo, para comenzar a generar resultados más rápidamente. Para este propósito, PLINQ admite el método <xref:System.Linq.ParallelEnumerable.WithMergeOptions%2A> y la enumeración <xref:System.Linq.ParallelMergeOptions>. Para más información, consulte las [opciones de combinación en PLINQ](merge-options-in-plinq.md).
 
 ## <a name="the-forall-operator"></a>El operador ForAll
 
@@ -104,15 +104,15 @@ En las consultas LINK secuenciales, la ejecución se aplaza hasta que la consult
 
 En la ilustración siguiente se muestra la diferencia entre `foreach` y <xref:System.Linq.ParallelEnumerable.ForAll%2A> con respecto a la ejecución de la consulta.
 
-![Comparación entre ForAll ForEach](../../../docs/standard/parallel-programming/media/vs-isvnt-allvseach.png "VS_ISVNT_ALLvsEACH")
+![Comparación entre ForAll ForEach](media/vs-isvnt-allvseach.png "VS_ISVNT_ALLvsEACH")
 
 ## <a name="cancellation"></a>Cancelación
 
-PLINQ se integra con los tipos de cancelación en .NET Framework 4. (Para más información, consulte el tema sobre la [cancelación en subprocesos administrados](../../../docs/standard/threading/cancellation-in-managed-threads.md)). Por lo tanto, a diferencia de las consultas LINQ to Objects secuenciales, las consultas PLINQ se pueden cancelar. Para crear una consulta PLINQ cancelable, use el operador <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> en la consulta y proporcione una instancia <xref:System.Threading.CancellationToken> como argumento. Cuando la propiedad <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> del token se establece en true, PLINQ lo tendrá en cuenta, detendrá el procesamiento de todos los subprocesos e iniciará <xref:System.OperationCanceledException>.
+PLINQ se integra con los tipos de cancelación en .NET Framework 4. (Para más información, consulte el tema sobre la [cancelación en subprocesos administrados](../threading/cancellation-in-managed-threads.md)). Por lo tanto, a diferencia de las consultas LINQ to Objects secuenciales, las consultas PLINQ se pueden cancelar. Para crear una consulta PLINQ cancelable, use el operador <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> en la consulta y proporcione una instancia <xref:System.Threading.CancellationToken> como argumento. Cuando la propiedad <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> del token se establece en true, PLINQ lo tendrá en cuenta, detendrá el procesamiento de todos los subprocesos e iniciará <xref:System.OperationCanceledException>.
 
 Es posible que una consulta PLINQ siga procesando algunos elementos una vez establecido el token de cancelación.
 
-Para una mayor capacidad de respuesta, también puede responder a las solicitudes de cancelación en delegados de usuario de ejecución prolongada. Para obtener más información, vea [Cómo: Cancelar una consulta PLINQ](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md).
+Para una mayor capacidad de respuesta, también puede responder a las solicitudes de cancelación en delegados de usuario de ejecución prolongada. Para obtener más información, vea [Cómo: Cancelar una consulta PLINQ](how-to-cancel-a-plinq-query.md).
 
 ## <a name="exceptions"></a>Excepciones
 
@@ -120,7 +120,7 @@ Cuando se ejecuta una consulta PLINQ, distintos subprocesos pueden generar varia
 
 Cuando las excepciones pueden propagarse de nuevo al subproceso de unión, es posible que una consulta continúe procesando algunos elementos después de que se haya producido la excepción.
 
-Para obtener más información, vea [Cómo: Controlar excepciones en una consulta PLINQ](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md).
+Para obtener más información, vea [Cómo: Controlar excepciones en una consulta PLINQ](how-to-handle-exceptions-in-a-plinq-query.md).
 
 ## <a name="custom-partitioners"></a>Particionadores personalizados
 
@@ -129,13 +129,13 @@ En algunos casos, puede mejorar el rendimiento de las consultas si escribe un pa
 [!code-csharp[PLINQ#2](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinq2_cs.cs#2)]
 [!code-vb[PLINQ#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq3.vb#2)]
 
-PLINQ admite una cantidad fija de particiones (a pesar de que los datos se pueden reasignar de forma dinámica a esas particiones durante el tiempo de ejecución para el equilibrio de carga). <xref:System.Threading.Tasks.Parallel.For%2A> y <xref:System.Threading.Tasks.Parallel.ForEach%2A> admiten solo la partición dinámica, lo que significa que el número de particiones cambia en tiempo de ejecución. Para más información, consulte [Custom Partitioners for PLINQ and TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md) (Particionadores personalizados para PLINQ y TPL).
+PLINQ admite una cantidad fija de particiones (a pesar de que los datos se pueden reasignar de forma dinámica a esas particiones durante el tiempo de ejecución para el equilibrio de carga). <xref:System.Threading.Tasks.Parallel.For%2A> y <xref:System.Threading.Tasks.Parallel.ForEach%2A> admiten solo la partición dinámica, lo que significa que el número de particiones cambia en tiempo de ejecución. Para más información, consulte [Custom Partitioners for PLINQ and TPL](custom-partitioners-for-plinq-and-tpl.md) (Particionadores personalizados para PLINQ y TPL).
 
 ## <a name="measuring-plinq-performance"></a>Medición del rendimiento de PLINQ
 
-En muchos casos, una consulta se puede ejecutar en paralelo, pero la sobrecarga que implica configurar la consulta en paralelo supera el beneficio obtenido en el rendimiento. Si una consulta no realiza mucho cálculo o si el origen de datos es pequeño, una consulta PLINQ podría ser más lenta que una consulta LINQ to Objects secuencial. Puede usar el analizador de rendimiento en paralelo en Visual Studio Team Server para comparar el rendimiento de diversas consultas, ubicar cuellos de botella en el procesamiento y determinar si la consulta se ejecuta en paralelo o secuencialmente. Para más información, vea [Visualizador de simultaneidad](/visualstudio/profiling/concurrency-visualizer) y [Cómo: Medir el rendimiento de consultas PLINQ](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md).
+En muchos casos, una consulta se puede ejecutar en paralelo, pero la sobrecarga que implica configurar la consulta en paralelo supera el beneficio obtenido en el rendimiento. Si una consulta no realiza mucho cálculo o si el origen de datos es pequeño, una consulta PLINQ podría ser más lenta que una consulta LINQ to Objects secuencial. Puede usar el analizador de rendimiento en paralelo en Visual Studio Team Server para comparar el rendimiento de diversas consultas, ubicar cuellos de botella en el procesamiento y determinar si la consulta se ejecuta en paralelo o secuencialmente. Para más información, vea [Visualizador de simultaneidad](/visualstudio/profiling/concurrency-visualizer) y [Cómo: Medir el rendimiento de consultas PLINQ](how-to-measure-plinq-query-performance.md).
 
 ## <a name="see-also"></a>Vea también
 
-- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
-- [Introducción a la velocidad en PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)
+- [Parallel LINQ (PLINQ)](introduction-to-plinq.md)
+- [Introducción a la velocidad en PLINQ](understanding-speedup-in-plinq.md)

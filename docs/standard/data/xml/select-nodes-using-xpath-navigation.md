@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8e4450dc-56b3-472b-b467-32f5694f83ad
-ms.openlocfilehash: 58f1487486c2802a2c64b51afcecb01c76dd291a
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 85f3ae9ec9f3b4d0949a893dd1e59fbbda139066
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78155612"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291466"
 ---
 # <a name="select-nodes-using-xpath-navigation"></a>Selección de nodos con la navegación XPath
 El Modelo de objetos del documento (DOM) XML contiene métodos que le permiten utilizar la navegación del lenguaje de ruta XML (XPath) para consultar información en el DOM. Puede utilizar XPath para buscar un solo nodo específico o para buscar todos los nodos que cumplen algunos criterios.  
@@ -162,4 +162,4 @@ this doc.DocumentElement.FirstChild.SelectNodes(. . .);
   
 ## <a name="see-also"></a>Vea también
 
-- [Document Object Model (DOM) para XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [Document Object Model (DOM) para XML](xml-document-object-model-dom.md)

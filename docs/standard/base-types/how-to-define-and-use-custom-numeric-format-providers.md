@@ -15,19 +15,19 @@ helpviewer_keywords:
 - format providers [.NET Framework]
 - custom format strings
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
-ms.openlocfilehash: 5345c90d966ea9ce0a0bbf6c884b8d8abc8b5fa7
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: d12899fff7d9e6cb63728ba0b160b70fa2a41a1a
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523934"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290518"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Procedimiento para definir y usar proveedores de formato numérico personalizado
 .NET Framework ofrece un amplio control sobre la representación de cadena de valores numéricos. Admite las siguientes características para personalizar el formato de los valores numéricos:  
   
-- Cadenas con formato numérico estándar, que proporcionan un conjunto predefinido de formatos para convertir números en su representación de cadena. Se pueden usar con cualquier método de formato numérico, como <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, que tiene un parámetro `format`. Para obtener detalles, vea [Cadenas con formato numérico estándar](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
+- Cadenas con formato numérico estándar, que proporcionan un conjunto predefinido de formatos para convertir números en su representación de cadena. Se pueden usar con cualquier método de formato numérico, como <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, que tiene un parámetro `format`. Para obtener detalles, vea [Cadenas con formato numérico estándar](standard-numeric-format-strings.md).  
   
-- Cadenas con formato numérico personalizado, que proporcionan un conjunto de símbolos que pueden combinarse para definir especificadores de formato numérico personalizado. Se pueden usar también con cualquier método de formato numérico, como <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, que tiene un parámetro `format`. Para obtener detalles, consulte [Cadenas con formato numérico personalizado](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
+- Cadenas con formato numérico personalizado, que proporcionan un conjunto de símbolos que pueden combinarse para definir especificadores de formato numérico personalizado. Se pueden usar también con cualquier método de formato numérico, como <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, que tiene un parámetro `format`. Para obtener detalles, consulte [Cadenas con formato numérico personalizado](custom-numeric-format-strings.md).  
   
 - Objetos personalizados <xref:System.Globalization.CultureInfo> o <xref:System.Globalization.NumberFormatInfo>, que definen los símbolos y los modelos de formato que se usan para mostrar las representaciones de cadena de valores numéricos. Se pueden usar con cualquier método de formato numérico, como <xref:System.Int32.ToString%2A>, que tiene un parámetro `provider`. Normalmente, el parámetro `provider` se usa para especificar el formato específico de la referencia cultural.  
   

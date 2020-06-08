@@ -17,22 +17,22 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: 9865fa169e0776765f9a97ec0a7b4555bf253886
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 484050b45b5da72386e9ac29805d7faf0ca9cbd6
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67663704"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289387"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>Implementar el modelo asincrónico basado en eventos
 
-Si está escribiendo una clase con algunas operaciones que pueden dar lugar a retrasos evidentes, considere la posibilidad de darle funcionalidad asincrónica implementando [Información general sobre el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).
+Si está escribiendo una clase con algunas operaciones que pueden dar lugar a retrasos evidentes, considere la posibilidad de darle funcionalidad asincrónica implementando [Información general sobre el modelo asincrónico basado en eventos](event-based-asynchronous-pattern-overview.md).
 
 El modelo asincrónico basado en eventos proporciona una forma estandarizada de empaquetar una clase que tenga características asincrónicas. Si se implementa con clases auxiliares como <xref:System.ComponentModel.AsyncOperationManager>, la clase funciona correctamente en cualquier modelo de aplicación, incluidas aplicaciones de ASP.NET, de consola y de Windows Forms.
 
-Para obtener un ejemplo que implemente el modelo asincrónico basado en eventos, consulte [How to: Implement a Component That Supports the Event-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md) (Cómo: Implementar un componente que admita el modelo asincrónico basado en eventos).
+Para obtener un ejemplo que implemente el modelo asincrónico basado en eventos, consulte [How to: Implement a Component That Supports the Event-based Asynchronous Pattern](component-that-supports-the-event-based-asynchronous-pattern.md) (Cómo: Implementar un componente que admita el modelo asincrónico basado en eventos).
 
-Para las operaciones asincrónicas sencillas, puede encontrar el componente <xref:System.ComponentModel.BackgroundWorker> adecuado. Para más información sobre <xref:System.ComponentModel.BackgroundWorker>, vea [Cómo: Ejecutar una operación en segundo plano](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md).
+Para las operaciones asincrónicas sencillas, puede encontrar el componente <xref:System.ComponentModel.BackgroundWorker> adecuado. Para más información sobre <xref:System.ComponentModel.BackgroundWorker>, vea [Cómo: Ejecutar una operación en segundo plano](../../framework/winforms/controls/how-to-run-an-operation-in-the-background.md).
 
 En la siguiente lista se describen las características del modelo asincrónico basado en eventos tratadas en este tema.
 
@@ -60,7 +60,7 @@ Considere la posibilidad de implementar el modelo asincrónico basado en eventos
 
 Cualquier operación es candidata para una implementación asincrónica, pero deben tenerse en cuenta aquellas que espera que incurran en latencias de larga duración. Son especialmente adecuadas las operaciones en las cuales los clientes llaman a un método y reciben una notificación de su conclusión, sin necesidad de ninguna otra intervención. También son adecuadas aquellas que se ejecutan continuamente, notificando a los clientes de forma periódica del progreso, los resultados incrementales o los cambios de estado.
 
-Para más información sobre cómo decidir cuándo admitir el modelo asincrónico basado en eventos, consulte [Decisión de cuándo implementar el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md).
+Para más información sobre cómo decidir cuándo admitir el modelo asincrónico basado en eventos, consulte [Decisión de cuándo implementar el modelo asincrónico basado en eventos](deciding-when-to-implement-the-event-based-asynchronous-pattern.md).
 
 ## <a name="naming-asynchronous-methods"></a>Métodos asincrónicos de nomenclatura
 
@@ -150,13 +150,13 @@ No defina varios métodos de la tabla anterior en la misma clase. No tendrá sen
 
 Normalmente, estos métodos volverán de inmediato y la operación puede cancelarse, o bien puede no hacerlo en realidad. En el controlador de eventos para el evento _MethodName_**Completed**, el objeto _MethodName_**CompletedEventArgs** contiene un campo `Cancelled` que los clientes pueden usar para determinar si se ha producido la cancelación.
 
-Cumpla la semántica de cancelación descrita en [Procedimientos recomendados para implementar el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md).
+Cumpla la semántica de cancelación descrita en [Procedimientos recomendados para implementar el modelo asincrónico basado en eventos](best-practices-for-implementing-the-event-based-asynchronous-pattern.md).
 
 ## <a name="optionally-support-the-isbusy-property"></a>Opcionalmente, admiten la propiedad IsBusy
 
 Si la clase no admite varias invocaciones simultáneas, considere la posibilidad de exponer una propiedad `IsBusy`. Esto permite a los desarrolladores determinar si un método _MethodName_**Async** se ejecuta sin detectar una excepción desde el método _MethodName_**Async**.
 
-Cumpla la semántica de `IsBusy` descrita en [Procedimientos recomendados para implementar el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md).
+Cumpla la semántica de `IsBusy` descrita en [Procedimientos recomendados para implementar el modelo asincrónico basado en eventos](best-practices-for-implementing-the-event-based-asynchronous-pattern.md).
 
 ## <a name="optionally-provide-support-for-progress-reporting"></a>Opcionalmente, proporcionan compatibilidad para el informe de progreso
 
@@ -178,7 +178,7 @@ Tenga en cuenta que solo hay un evento `ProgressChanged` o _MethodName_**Progres
 
 Puede haber situaciones en las que varias operaciones admitan el progreso y cada una devuelva un indicador para el progreso diferente. En este caso, un solo evento `ProgressChanged` no es adecuado, pudiendo considerar la posibilidad de admitir varios eventos `ProgressChanged`. En este caso, use un patrón de nombres de _MethodName_**ProgressChanged** para cada método _MethodName_**Async**.
 
-Cumpla la semántica de notificación sobre el progreso descrita en [Procedimientos recomendados para implementar el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md).
+Cumpla la semántica de notificación sobre el progreso descrita en [Procedimientos recomendados para implementar el modelo asincrónico basado en eventos](best-practices-for-implementing-the-event-based-asynchronous-pattern.md).
 
 ## <a name="optionally-provide-support-for-returning-incremental-results"></a>Opcionalmente, proporcionan compatibilidad para devolver resultados incrementales
 
@@ -208,7 +208,7 @@ Si la clase admite varios métodos asincrónicos, devolviendo cada uno un tipo d
 
 - Defina un evento _MethodName_**ProgressChanged** independiente con el elemento <xref:System.EventArgs> adecuado para cada método asincrónico con el fin de controlar los datos del resultado incremental de ese método.
 
-Invoque ese controlador de eventos en el subproceso adecuado como se describe en [Procedimientos recomendados para implementar el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md).
+Invoque ese controlador de eventos en el subproceso adecuado como se describe en [Procedimientos recomendados para implementar el modelo asincrónico basado en eventos](best-practices-for-implementing-the-event-based-asynchronous-pattern.md).
 
 ## <a name="handling-out-and-ref-parameters-in-methods"></a>Control de los parámetros Out y Ref en los métodos
 
@@ -261,9 +261,9 @@ public class MethodNameCompletedEventArgs : System.ComponentModel.AsyncCompleted
 
 - <xref:System.ComponentModel.ProgressChangedEventArgs>
 - <xref:System.ComponentModel.AsyncCompletedEventArgs>
-- [Implementar un componente que admita el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)
-- [Ejecutar una operación en segundo plano](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [Cómo: Implementar un formulario que utiliza una operación en segundo plano](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
-- [Decisión de cuándo implementar el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)
-- [Procedimientos recomendados para implementar el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
-- [Modelo asincrónico basado en eventos (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
+- [Implementar un componente que admita el modelo asincrónico basado en eventos](component-that-supports-the-event-based-asynchronous-pattern.md)
+- [Ejecutar una operación en segundo plano](../../framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Cómo: Implementar un formulario que utiliza una operación en segundo plano](../../framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Decisión de cuándo implementar el modelo asincrónico basado en eventos](deciding-when-to-implement-the-event-based-asynchronous-pattern.md)
+- [Procedimientos recomendados para implementar el modelo asincrónico basado en eventos](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
+- [Modelo asincrónico basado en eventos (EAP)](event-based-asynchronous-pattern-eap.md)

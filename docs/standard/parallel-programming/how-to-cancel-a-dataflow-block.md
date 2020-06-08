@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dataflow blocks, canceling in TPL
 - TPL dataflow library,canceling dataflow blocks
 ms.assetid: fbddda0d-da3b-4ec8-a1d6-67ab8573fcd7
-ms.openlocfilehash: aa175d95f27fcbf28c3f3da3eaa7b8f7988681e1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 530c231deeaba007975849ab6dc41f4da6a859ea
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73140095"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84285552"
 ---
 # <a name="how-to-cancel-a-dataflow-block"></a>Cómo: Cancelar un bloque de flujos de datos
 En este ejemplo se explica cómo habilitar la cancelación en la aplicación. Este ejemplo usa Windows Forms para mostrar dónde están activos los elementos de trabajo en una canalización de flujo de datos y también los efectos de la canalización.  
@@ -63,7 +63,7 @@ En este ejemplo se explica cómo habilitar la cancelación en la aplicación. Es
   
  Dado que los bloques de flujo de datos `incrementProgress` y `decrementProgress` actúan sobre la interfaz de usuario, es importante que esta acción se produzca en el subproceso de interfaz de usuario. Para lograrlo, durante la construcción, cada uno de estos objetos proporciona un objeto <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions> que tiene la propiedad <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A> establecida como <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>. El método <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> crea un objeto <xref:System.Threading.Tasks.TaskScheduler> que funciona en el contexto de sincronización actual. Dado que al constructor `Form1` se le llama desde el subproceso de interfaz de usuario, las acciones de los bloques de flujo de datos `incrementProgress` y `decrementProgress` se ejecutan también en el subproceso de interfaz de usuario.  
   
- Este ejemplo establece la propiedad <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> cuando construye los miembros de la canalización. Dado que la propiedad <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> cancela de forma permanente la ejecución del bloque de flujo de datos, se debe volver a crear la canalización completa después de que el usuario cancela la operación, en caso de que después desee agregar más elementos de trabajo a la canalización. Para consultar un ejemplo en el que se muestre una forma alternativa de cancelar un bloque de flujo de datos, a fin de que se pueda realizar otro trabajo después de cancelar una operación, vea [Tutorial: uso de flujo de datos en una Aplicación de Windows Forms](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
+ Este ejemplo establece la propiedad <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> cuando construye los miembros de la canalización. Dado que la propiedad <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> cancela de forma permanente la ejecución del bloque de flujo de datos, se debe volver a crear la canalización completa después de que el usuario cancela la operación, en caso de que después desee agregar más elementos de trabajo a la canalización. Para consultar un ejemplo en el que se muestre una forma alternativa de cancelar un bloque de flujo de datos, a fin de que se pueda realizar otro trabajo después de cancelar una operación, vea [Tutorial: uso de flujo de datos en una Aplicación de Windows Forms](walkthrough-using-dataflow-in-a-windows-forms-application.md).  
   
 ## <a name="connecting-the-dataflow-pipeline-to-the-user-interface"></a>Conexión de la canalización de flujo de datos a la interfaz de usuario  
  En esta sección se describe cómo conectar la canalización de flujo de datos a la interfaz de usuario. Tanto la creación de la canalización como la adición de elementos de trabajo a la canalización se controlan mediante el controlador de eventos para el botón **Agregar elementos de trabajo**. La cancelación se inicia con el botón **Cancelar**. Cuando el usuario hace clic en cualquiera de estos botones, se inicia la acción correspondiente de forma asincrónica.  
@@ -92,8 +92,8 @@ En este ejemplo se explica cómo habilitar la cancelación en la aplicación. Es
   
  En la ilustración siguiente se muestra la aplicación en ejecución.  
   
- ![Aplicación de Windows Forms](../../../docs/standard/parallel-programming/media/tpldataflow-cancellation.png "TPLDataflow_Cancellation")  
+ ![Aplicación de Windows Forms](media/tpldataflow-cancellation.png "TPLDataflow_Cancellation")  
 
 ## <a name="see-also"></a>Vea también
 
-- [Flujo de datos](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+- [Flujo de datos](dataflow-task-parallel-library.md)

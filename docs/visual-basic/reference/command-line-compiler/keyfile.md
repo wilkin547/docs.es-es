@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keyfile compiler option [Visual Basic]
 - -keyfile compiler option [Visual Basic]
 ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
-ms.openlocfilehash: cffc3c5f0ff3dd48ca2c74bde346a967b209dc5f
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 3f476f6b6db1a788002a938eb5ae4bbbed7a5dae
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78266747"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408580"
 ---
 # <a name="-keyfile"></a>-keyfile
 Especifica un archivo que contiene una clave o un par de claves que asigna un nombre seguro al ensamblado.  
@@ -29,13 +29,13 @@ Especifica un archivo que contiene una clave o un par de claves que asigna un no
 ## <a name="remarks"></a>Comentarios  
  El compilador inserta la clave pública en el manifiesto del ensamblado y firma después el ensamblado final con la clave privada. Para generar un archivo de claves, escriba `sn -k file` en la línea de comandos. Para obtener más información, consulte [Sn.exe (herramienta de nombre seguro)](../../../framework/tools/sn-exe-strong-name-tool.md).  
   
- Si se compila con `-target:module`, el nombre del archivo de claves se mantiene en el módulo y se incorpora al ensamblado que se crea al compilar un ensamblado con [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md).  
+ Si se compila con `-target:module`, el nombre del archivo de claves se mantiene en el módulo y se incorpora al ensamblado que se crea al compilar un ensamblado con [-addmodule](addmodule.md).  
   
- También puede pasar la información de cifrado al compilador con [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md). Use [-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md) para firmar el ensamblado de forma parcial.  
+ También puede pasar la información de cifrado al compilador con [-keycontainer](keycontainer.md). Use [-delaysign](delaysign.md) para firmar el ensamblado de forma parcial.  
   
  También se puede especificar esta opción como atributo personalizado (<xref:System.Reflection.AssemblyKeyFileAttribute>) en el código fuente de cualquier módulo de Lenguaje Intermedio de Microsoft.  
   
- Si en una misma compilación se especifica tanto `-keyfile` como [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md) (ya sea mediante una opción de línea de comandos o mediante un atributo personalizado), el compilador probará primero el contenedor de claves. Si lo consigue, el ensamblado se firma con la información del contenedor de claves. Si el compilador no encuentra el contenedor de claves, probará el archivo especificado con `-keyfile`. Si lo consigue, el ensamblado se firma con la información del archivo de claves, y la información de la clave se instalará en el contenedor de claves (similar a `sn -i`) de modo que, en la próxima compilación, el contenedor de claves será válido.  
+ Si en una misma compilación se especifica tanto `-keyfile` como [-keycontainer](keycontainer.md) (ya sea mediante una opción de línea de comandos o mediante un atributo personalizado), el compilador probará primero el contenedor de claves. Si lo consigue, el ensamblado se firma con la información del contenedor de claves. Si el compilador no encuentra el contenedor de claves, probará el archivo especificado con `-keyfile`. Si lo consigue, el ensamblado se firma con la información del archivo de claves, y la información de la clave se instalará en el contenedor de claves (similar a `sn -i`) de modo que, en la próxima compilación, el contenedor de claves será válido.  
   
  Tenga en cuenta que un archivo de clave puede contener solo la clave pública.  
   
@@ -55,6 +55,6 @@ vbc -keyfile:myfile.sn input.vb
 ## <a name="see-also"></a>Vea también
 
 - [Ensamblados de .NET](../../../standard/assembly/index.md)
-- [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
-- [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Compilador de línea de comandos de Visual Basic](index.md)
+- [-reference (Visual Basic)](reference.md)
+- [Líneas de comandos de compilación de ejemplo](sample-compilation-command-lines.md)

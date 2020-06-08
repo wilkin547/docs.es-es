@@ -22,12 +22,12 @@ helpviewer_keywords:
 - DateTimeOffset.ToString method
 - full weekday names
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
-ms.openlocfilehash: 8eed7c0176a2c1f4beb472dff981d52e522c7e36
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 128ff4887601431f75981f13b51a11469e65d65c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523828"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290479"
 ---
 # <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>Procedimiento para extraer el día de la semana de una fecha concreta
 .NET Framework permite determinar fácilmente el número de día de la semana correspondiente a una fecha concreta, así como mostrar el nombre localizado del día de la semana para una fecha en particular. Las propiedades <xref:System.DateTime.DayOfWeek%2A> o <xref:System.DateTimeOffset.DayOfWeek%2A> proporcionan un valor enumerado que indica el día de la semana correspondiente a una fecha concreta. Por el contrario, la recuperación del nombre del día de la semana es una operación de formato que puede realizarse con una llamada a un método de formato como, por ejemplo, un método `ToString` de un valor de fecha y hora o un método <xref:System.String.Format%2A?displayProperty=nameWithType>. En este tema se muestra cómo realizar estas operaciones de formato.  
@@ -100,5 +100,5 @@ ms.locfileid: "80523828"
 
 ## <a name="see-also"></a>Vea también
 
-- [Cadenas con formato de fecha y hora estándar](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
-- [Cadenas con formato de fecha y hora personalizado](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [Cadenas con formato de fecha y hora estándar](standard-date-and-time-format-strings.md)
+- [Cadenas con formato de fecha y hora personalizado](custom-date-and-time-format-strings.md)

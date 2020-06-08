@@ -6,12 +6,12 @@ helpviewer_keywords:
 - text files [Visual Basic], writing event information to a text file
 - events [Visual Basic], writing event information to a text file
 ms.assetid: 9ca7cc03-bf99-4933-9e5e-61ee28e9a6b4
-ms.openlocfilehash: c3c81e331eb3d8ee450ba0cac38e57976846ee63
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6e83f8450ca7be8a2dcd5ff43eab3dd2ec0d2f1b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74352069"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410067"
 ---
 # <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>Cómo: Escribir información de eventos en un archivo de texto (Visual Basic)
 
@@ -33,7 +33,7 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci�
 
 2. Ubique la sección `<listeners>` en el archivo de configuración de la aplicación.
 
-     Encontrará la sección \<listeners> en la sección \<source> con el atributo de nombre "DefaultSource", que está anidada bajo la sección \<system.diagnostics>, anidada bajo la sección de nivel superior \<configuration>.
+     Encontrará la sección \<listeners> en la sección \<source> con el atributo de nombre "DefaultSource", que está anidada bajo la sección \<system.diagnostics> , anidada bajo la sección de nivel superior \<configuration> .
 
 3. Agregue este elemento a dicha sección `<listeners>` :
 
@@ -62,7 +62,7 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci�
 
 ### <a name="to-write-event-information-to-the-file-log"></a>Para escribir información de eventos en el registro de archivo
 
-Use el método `My.Application.Log.WriteEntry` o `My.Application.Log.WriteException` para escribir información en el registro de archivo. Para obtener más información, vea [Cómo: Escribir mensajes de registro](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) y [Cómo: Registrar excepciones](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).
+Use el método `My.Application.Log.WriteEntry` o `My.Application.Log.WriteException` para escribir información en el registro de archivo. Para obtener más información, vea [Cómo: Escribir mensajes de registro](how-to-write-log-messages.md) y [Cómo: Registrar excepciones](how-to-log-exceptions.md).
 
 Después de configurar el agente de escucha de registro de archivo para un ensamblado, este recibe todos los mensajes que `My.Application.Log` escribe desde ese ensamblado.
 
@@ -71,5 +71,5 @@ Después de configurar el agente de escucha de registro de archivo para un ensam
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
-- [Trabajar con registros de aplicaciones](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [Registrar excepciones](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [Trabajar con registros de aplicaciones](working-with-application-logs.md)
+- [Registrar excepciones](how-to-log-exceptions.md)

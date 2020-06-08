@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -nostdlib compiler option [Visual Basic]
 - /nostdlib compiler option [Visual Basic]
 ms.assetid: 140381b8-dc96-4ad5-ae11-792c9ed0be4d
-ms.openlocfilehash: db6b047f521d8ef44d2bd1b70b654a4233ebb1a7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0934799853323110e73087ba6d8975c30f84d8f7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347911"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84387717"
 ---
 # <a name="-nostdlib-visual-basic"></a>-nostdlib (Visual Basic)
 Hace que el compilador no haga referencia automáticamente a las bibliotecas estándar.  
@@ -40,7 +40,7 @@ vbc -nostdlib -define:_MYTYPE=\"Empty\" T2.vb
   
 ## <a name="see-also"></a>Vea también
 
-- [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
-- [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Personalización de los objetos que están disponibles en My](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)
+- [-noconfig](noconfig.md)
+- [Compilador de línea de comandos de Visual Basic](index.md)
+- [Líneas de comandos de compilación de ejemplo](sample-compilation-command-lines.md)
+- [Personalización de los objetos que están disponibles en My](../../developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)

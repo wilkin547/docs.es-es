@@ -12,12 +12,12 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-ms.openlocfilehash: bf352d6494a823d4f7b24eb2876d9bffa5877b2b
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 8c742c855234bfd9653bb57036c41e7ccce66295
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242782"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289296"
 ---
 # <a name="regular-expression-options"></a>Opciones de expresiones regulares
 
@@ -49,14 +49,14 @@ Las opciones de las expresiones regulares se pueden especificar de tres modos:
   [!code-csharp[Conceptual.Regex.Language.Options#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#6)]
   [!code-vb[Conceptual.Regex.Language.Options#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#6)]
 
-- Con la aplicación de las opciones insertadas en un patrón de expresión regular con la sintaxis `(?imnsx-imnsx)`. La opción se aplica al patrón a partir del punto en que la opción se define hasta el final del patrón o hasta el punto en que otra opción insertada deja a la opción sin definir. Tenga en cuenta que la propiedad <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> de una instancia <xref:System.Text.RegularExpressions.Regex> no refleja estas opciones insertadas. Para más información, consulte el tema [Construcciones misceláneas](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md).
+- Con la aplicación de las opciones insertadas en un patrón de expresión regular con la sintaxis `(?imnsx-imnsx)`. La opción se aplica al patrón a partir del punto en que la opción se define hasta el final del patrón o hasta el punto en que otra opción insertada deja a la opción sin definir. Tenga en cuenta que la propiedad <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> de una instancia <xref:System.Text.RegularExpressions.Regex> no refleja estas opciones insertadas. Para más información, consulte el tema [Construcciones misceláneas](miscellaneous-constructs-in-regular-expressions.md).
 
   Esto se muestra en el ejemplo siguiente. Usa opciones insertadas para habilitar la coincidencia sin distinción entre mayúsculas y minúsculas, así como para ignorar el espacio en blanco del patrón a la hora de identificar palabras que empiecen por la letra “d”.
 
   [!code-csharp[Conceptual.Regex.Language.Options#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#7)]
   [!code-vb[Conceptual.Regex.Language.Options#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#7)]
 
-- Con la aplicación de opciones insertadas en una construcción de agrupamiento determinada en un patrón de expresión regular con la sintaxis `(?imnsx-imnsx:`*subexpresión*`)`. El conjunto de opciones se activa si no va precedido por un signo y se desactiva si va precedido por un signo menos. (`?` es una parte fija de la sintaxis del constructor de lenguaje que se necesita si las opciones están habilitadas o deshabilitadas). La opción solo se aplica a ese grupo. Para más información, consulte [Construcciones de agrupamiento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
+- Con la aplicación de opciones insertadas en una construcción de agrupamiento determinada en un patrón de expresión regular con la sintaxis `(?imnsx-imnsx:`*subexpresión*`)`. El conjunto de opciones se activa si no va precedido por un signo y se desactiva si va precedido por un signo menos. (`?` es una parte fija de la sintaxis del constructor de lenguaje que se necesita si las opciones están habilitadas o deshabilitadas). La opción solo se aplica a ese grupo. Para más información, consulte [Construcciones de agrupamiento](grouping-constructs-in-regular-expressions.md).
 
   Esto se muestra en el ejemplo siguiente. Usa opciones insertadas en una construcción de agrupamiento para habilitar la coincidencia sin distinción entre mayúsculas y minúsculas, así como para ignorar el espacio en blanco del patrón a la hora de identificar palabras que empiecen por la letra “d”.
 
@@ -298,7 +298,7 @@ La opción <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?display
 [!code-csharp[Conceptual.Regex.Language.Options#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/righttoleft1.cs#17)]
 [!code-vb[Conceptual.Regex.Language.Options#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/righttoleft1.vb#17)]
 
-Observe también que la aserción de búsqueda anticipada (el elemento de lenguaje `(?=`*subexpresión*`)`) y la aserción de búsqueda tardía (el elemento de lenguaje `(?<=`*subexpresión*`)`) no cambian de dirección. Las aserciones de búsqueda anticipada miran hacia la derecha, mientras que las de búsqueda tardía lo hacen hacia la izquierda. Por ejemplo, la expresión regular `(?<=\d{1,2}\s)\w+,?\s\d{4}` usa la aserción de búsqueda tardía para probar una fecha que precede al nombre de un mes. Después, la expresión regular busca coincidencias con el mes y el año. Para información sobre aserciones de búsqueda anticipada y tardía, consulte [Construcciones de agrupamiento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
+Observe también que la aserción de búsqueda anticipada (el elemento de lenguaje `(?=`*subexpresión*`)`) y la aserción de búsqueda tardía (el elemento de lenguaje `(?<=`*subexpresión*`)`) no cambian de dirección. Las aserciones de búsqueda anticipada miran hacia la derecha, mientras que las de búsqueda tardía lo hacen hacia la izquierda. Por ejemplo, la expresión regular `(?<=\d{1,2}\s)\w+,?\s\d{4}` usa la aserción de búsqueda tardía para probar una fecha que precede al nombre de un mes. Después, la expresión regular busca coincidencias con el mes y el año. Para información sobre aserciones de búsqueda anticipada y tardía, consulte [Construcciones de agrupamiento](grouping-constructs-in-regular-expressions.md).
 
 [!code-csharp[Conceptual.Regex.Language.Options#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/righttoleft2.cs#18)]
 [!code-vb[Conceptual.Regex.Language.Options#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/righttoleft2.vb#18)]
@@ -324,7 +324,7 @@ La opción <xref:System.Text.RegularExpressions.RegexOptions.ECMAScript?displayP
 
 El comportamiento de las expresiones regulares canónicas y ECMAScript se diferencia en tres aspectos: sintaxis de la clase de caracteres, grupos de captura con autorreferencia e interpretación de referencia inversa frente a octal.
 
-- Sintaxis de la clase de caracteres. Debido a que las expresiones regulares canónicas admiten Unicode y ECMAScript no, las clases de caracteres de ECMAScript tienen una sintaxis más limitada y algunos elementos de lenguaje de clases de caracteres tienen un significado diferente. Por ejemplo, ECMAScript no admite elementos de lenguaje como la categoría Unicode ni elementos como `\p` y `\P`. De igual modo, el elemento `\w`, que coincide con un carácter literal, es equivalente a la clase de caracteres `[a-zA-Z_0-9]` al usar ECMAScript y a `[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]` al usar comportamiento canónico. Para más información, consulte [Clases de caracteres](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).
+- Sintaxis de la clase de caracteres. Debido a que las expresiones regulares canónicas admiten Unicode y ECMAScript no, las clases de caracteres de ECMAScript tienen una sintaxis más limitada y algunos elementos de lenguaje de clases de caracteres tienen un significado diferente. Por ejemplo, ECMAScript no admite elementos de lenguaje como la categoría Unicode ni elementos como `\p` y `\P`. De igual modo, el elemento `\w`, que coincide con un carácter literal, es equivalente a la clase de caracteres `[a-zA-Z_0-9]` al usar ECMAScript y a `[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]` al usar comportamiento canónico. Para más información, consulte [Clases de caracteres](character-classes-in-regular-expressions.md).
 
   En el ejemplo siguiente se muestra la diferencia entre la búsqueda de coincidencias canónica y la de ECMAScript. Se define una expresión regular, `\b(\w+\s*)+`, que busca coincidencias con palabras seguidas de caracteres de espacio en blanco. La entrada consta de dos cadenas: una que usa el conjunto de caracteres latinos y otra que usa el conjunto de caracteres del cirílico. Tal como muestra el resultado, la llamada al método <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> que usa la búsqueda de coincidencias de ECMAScript no encuentra coincidencias con las palabras del cirílico, mientras que la llamada al método que usa la búsqueda de coincidencias canónica sí encuentra coincidencias con estas palabras.
 
@@ -363,7 +363,7 @@ Sin embargo, este comportamiento no es el deseado en algunos tipos de comparacio
 [!code-vb[Conceptual.Regex.Language.Options#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/culture1.vb#14)]
 
 > [!NOTE]
-> Para obtener más información sobre la comparación de cadenas con distinción entre mayúsculas y minúsculas, y con la referencia cultural de todos los idiomas, consulte [Procedimientos recomendados para el uso de cadenas](../../../docs/standard/base-types/best-practices-strings.md).
+> Para obtener más información sobre la comparación de cadenas con distinción entre mayúsculas y minúsculas, y con la referencia cultural de todos los idiomas, consulte [Procedimientos recomendados para el uso de cadenas](best-practices-strings.md).
 
 En vez de usar comparaciones sin distinción entre mayúsculas y minúsculas de la referencia cultural actual, se puede especificar la opción <xref:System.Text.RegularExpressions.RegexOptions.CultureInvariant?displayProperty=nameWithType> para ignorar las diferencias culturales de idioma y usar las convenciones de la referencia cultural de todos los idiomas.
 
@@ -377,4 +377,4 @@ El ejemplo siguiente es idéntico al anterior, excepto que se llama al método <
 
 ## <a name="see-also"></a>Vea también
 
-- [Lenguaje de expresiones regulares: referencia rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [Lenguaje de expresiones regulares: referencia rápida](regular-expression-language-quick-reference.md)

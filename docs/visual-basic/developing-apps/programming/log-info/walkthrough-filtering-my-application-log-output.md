@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: f18556bbe1ca2d77925482319246d403892d31ef
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aa63e7d23641ad71b135f15236e29399a535784f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74353589"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398258"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Tutorial: Filtrar el resultado de My.Application.Log (Visual Basic)
 
@@ -43,7 +43,7 @@ Cada mensaje que `My.Application.Log` escribe tiene un nivel de gravedad asociad
 
 6. Cierre la aplicación.
 
-     Para obtener información sobre cómo ver la ventana de salida de la depuración de la aplicación, vea [Resultados (Ventana)](/visualstudio/ide/reference/output-window). Para obtener información sobre la ubicación del archivo de registro de la aplicación, vea [Tutorial: Determinar el lugar en el que My.Application.Log escribe la información (Visual Basic)](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).
+     Para obtener información sobre cómo ver la ventana de salida de la depuración de la aplicación, vea [Resultados (Ventana)](/visualstudio/ide/reference/output-window). Para obtener información sobre la ubicación del archivo de registro de la aplicación, vea [Tutorial: Determinar el lugar en el que My.Application.Log escribe la información (Visual Basic)](walkthrough-determining-where-my-application-log-writes-information.md).
 
     > [!NOTE]
     > De manera predeterminada, la aplicación vacía el resultado del archivo de registro cuando la aplicación se cierra.
@@ -249,13 +249,13 @@ En este ejemplo se muestra cómo configurar el filtrado para un nuevo agente de 
 
 10. Cierre la aplicación.
 
-Para obtener más información sobre cómo cambiar la configuración del registro después de la implementación, vea [Trabajar con registros de aplicaciones en Visual Basic](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).
+Para obtener más información sobre cómo cambiar la configuración del registro después de la implementación, vea [Trabajar con registros de aplicaciones en Visual Basic](working-with-application-logs.md).
 
 ## <a name="see-also"></a>Vea también
 
-- [Tutorial: Determinar el lugar en el que My.Application.Log escribe la información](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
-- [Tutorial: Cambiar el lugar donde My.Application.Log escribe información](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
-- [Tutorial: Crear agentes de escucha de registro personalizados](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)
-- [Escribir mensajes de registro](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
+- [Tutorial: Determinar el lugar en el que My.Application.Log escribe la información](walkthrough-determining-where-my-application-log-writes-information.md)
+- [Tutorial: Cambiar el lugar donde My.Application.Log escribe información](walkthrough-changing-where-my-application-log-writes-information.md)
+- [Tutorial: Crear agentes de escucha de registro personalizados](walkthrough-creating-custom-log-listeners.md)
+- [Escribir mensajes de registro](how-to-write-log-messages.md)
 - [Modificadores de seguimiento](../../../../framework/debug-trace-profile/trace-switches.md)
-- [Registrar información de la aplicación](../../../../visual-basic/developing-apps/programming/log-info/index.md)
+- [Registrar información de la aplicación](index.md)

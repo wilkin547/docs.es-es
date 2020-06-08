@@ -11,16 +11,16 @@ helpviewer_keywords:
 - generic collections [.NET]
 - generic types [.NET]
 ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
-ms.openlocfilehash: dce0e38b0198396ec0dbc3ced7f2f59c2b112b56
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5767bac0bb1e3ae9e586e9a10d8452d421519447
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75708415"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287576"
 ---
 # <a name="generic-collections-in-net"></a>Colecciones genéricas en .NET
 
- La biblioteca de clases de .NET ofrece varias clases de colección genéricas en los espacios de nombres <xref:System.Collections.Generic> y <xref:System.Collections.ObjectModel>. Para obtener información más detallada sobre estas clases, vea [Tipos de colección utilizados normalmente](../../../docs/standard/collections/commonly-used-collection-types.md).  
+ La biblioteca de clases de .NET ofrece varias clases de colección genéricas en los espacios de nombres <xref:System.Collections.Generic> y <xref:System.Collections.ObjectModel>. Para obtener información más detallada sobre estas clases, vea [Tipos de colección utilizados normalmente](../collections/commonly-used-collection-types.md).  
   
 ## <a name="systemcollectionsgeneric"></a>System.Collections.Generic
 
@@ -55,6 +55,6 @@ ms.locfileid: "75708415"
 
 - <xref:System.Collections.Generic?displayProperty=nameWithType>
 - <xref:System.Collections.ObjectModel?displayProperty=nameWithType>
-- [Genéricos](../../../docs/standard/generics/index.md)
-- [Delegados genéricos para manipular matrices y listas](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)
-- [Interfaces genéricas](../../../docs/standard/generics/interfaces.md)
+- [Genéricos](index.md)
+- [Delegados genéricos para manipular matrices y listas](delegates-for-manipulating-arrays-and-lists.md)
+- [Interfaces genéricas](interfaces.md)

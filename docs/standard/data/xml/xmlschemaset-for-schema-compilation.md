@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
-ms.openlocfilehash: 55347de81c65b7390584415dd29044f4ca4ba02a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 44850755c41b212e88e0b90dd3b016f96a0af96d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709821"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290232"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>XmlSchemaSet para compilación de esquemas
 Describe la clase <xref:System.Xml.Schema.XmlSchemaSet>, una caché en la que se pueden almacenar y validar esquemas del lenguaje de definición de esquemas XML (XSD).  
@@ -247,7 +247,7 @@ foreach (XmlSchema schema in schemaSet.Schemas())
 ## <a name="validating-xml-documents"></a>Validación de documentos XML  
  Los documentos XML se pueden validar con esquemas en <xref:System.Xml.Schema.XmlSchemaSet>. Para validar un documento XML, agregue un esquema a la propiedad <xref:System.Xml.Schema.XmlSchemaSet><xref:System.Xml.XmlReaderSettings.Schemas%2A> de un objeto <xref:System.Xml.XmlReaderSettings> o agregue <xref:System.Xml.Schema.XmlSchemaSet> a la propiedad <xref:System.Xml.XmlReaderSettings.Schemas%2A> de un objeto <xref:System.Xml.XmlReaderSettings>. A continuación, el método <xref:System.Xml.XmlReaderSettings> de la clase <xref:System.Xml.XmlReader.Create%2A> utiliza el objeto <xref:System.Xml.XmlReader> para crear un objeto <xref:System.Xml.XmlReader> y validar el documento XML.  
   
- Para más información sobre la validación de documentos XML con una clase <xref:System.Xml.Schema.XmlSchemaSet>, vea [Validación de esquema XML (XSD) con XmlSchemaSet](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md).  
+ Para más información sobre la validación de documentos XML con una clase <xref:System.Xml.Schema.XmlSchemaSet>, vea [Validación de esquema XML (XSD) con XmlSchemaSet](xml-schema-xsd-validation-with-xmlschemaset.md).  
   
 ## <a name="see-also"></a>Vea también
 
@@ -258,5 +258,5 @@ foreach (XmlSchema schema in schemaSet.Schemas())
 - <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A>
 - <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A>
 - <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A>
-- [XmlSchemaSet como una memoria caché de esquema](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
-- [Validación de esquema XML (XSD) con XmlSchemaSet](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md)
+- [XmlSchemaSet como una memoria caché de esquema](xmlschemaset-for-schema-compilation.md)
+- [Validación de esquema XML (XSD) con XmlSchemaSet](xml-schema-xsd-validation-with-xmlschemaset.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: f205d2ad-bbe5-4d55-8a40-acda21aa82dd
-ms.openlocfilehash: ee3951e967436a1b8aec09b8e42dc6d1b547bc02
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7e263e2c9035db54dbb58c6c78c0647d5442504e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74348854"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401711"
 ---
 # <a name="how-to-copy-files-with-a-specific-pattern-to-a-directory-in-visual-basic"></a>Cómo: Copiar archivos con un modelo específico en un directorio en Visual Basic
 
@@ -64,6 +64,6 @@ El método <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> d
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>
 - <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>
-- [Buscar subdirectorios con un modelo concreto](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
-- [Solución de problemas: Leer y escribir en archivos de texto](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
-- [Obtener la colección de archivos de un directorio](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+- [Buscar subdirectorios con un modelo concreto](how-to-find-subdirectories-with-a-specific-pattern.md)
+- [Solución de problemas: Leer y escribir en archivos de texto](troubleshooting-reading-from-and-writing-to-text-files.md)
+- [Obtener la colección de archivos de un directorio](how-to-get-the-collection-of-files-in-a-directory.md)

@@ -9,19 +9,19 @@ helpviewer_keywords:
 - task parallelism in .NET
 - parallel programming, task parallelism
 ms.assetid: 6b3ecd79-dec9-4ce1-abf4-62e5392a59c6
-ms.openlocfilehash: f61bbf10bbeef736f66710f50e621c3619355a1d
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: 2b353fb8cb5e04ee4cab6b49f55539ecb40fab4f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635799"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290803"
 ---
 # <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>Procedimiento para usar Parallel.Invoke para ejecutar operaciones en paralelo
 
 En este ejemplo se muestra cómo paralelizar operaciones usando <xref:System.Threading.Tasks.Parallel.Invoke%2A> en Task Parallel Library. Se realizan tres operaciones en un origen de datos compartido. Las operaciones se pueden ejecutar en paralelo de manera sencilla, ya que ninguna de ellas modifica el origen.
 
 > [!NOTE]
-> En esta documentación, se utilizan expresiones lambda para definir delegados en la TPL. Si no está familiarizado con las expresiones lambda de C# o Visual Basic, vea [Expresiones lambda en PLINQ y TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).
+> En esta documentación, se utilizan expresiones lambda para definir delegados en la TPL. Si no está familiarizado con las expresiones lambda de C# o Visual Basic, vea [Expresiones lambda en PLINQ y TPL](lambda-expressions-in-plinq-and-tpl.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -38,6 +38,6 @@ Copie y pegue el ejemplo completo en un proyecto de Microsoft Visual Studio y pr
 
 ## <a name="see-also"></a>Vea también
 
-- [Programación en paralelo](../../../docs/standard/parallel-programming/index.md)
-- [Cómo: Cancelar una tarea y sus elementos secundarios](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)
-- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
+- [Programación en paralelo](index.md)
+- [Cómo: Cancelar una tarea y sus elementos secundarios](how-to-cancel-a-task-and-its-children.md)
+- [Parallel LINQ (PLINQ)](introduction-to-plinq.md)

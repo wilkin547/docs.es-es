@@ -20,12 +20,12 @@ helpviewer_keywords:
 - waiting for asynchronous calls
 - status information [.NET Framework], asynchronous operations
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
-ms.openlocfilehash: 06df584f0120fbd4978e18647854a3ee844a2095
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6a3dd83fe9d3fc48f66a0bb6bef333e4ff399108
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73105124"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289907"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>Llamar a métodos sincrónicos de forma asincrónica
 
@@ -39,7 +39,7 @@ El método `BeginInvoke` inicia la llamada asincrónica. Tiene los mismos parám
 El método `EndInvoke` recupera los resultados de la llamada asincrónica. Se puede llamar en cualquier momento después de ejecutar `BeginInvoke`. Si la llamada asincrónica no ha completado, `EndInvoke` bloquea el subproceso que realiza la llamada hasta que se completa. Entre los parámetros de `EndInvoke` se incluyen los parámetros `out` y `ref` (`<Out>` `ByRef` y `ByRef` en Visual Basic) del método que se quiere ejecutar de forma asincrónica, además de la interfaz <xref:System.IAsyncResult> devuelta por `BeginInvoke`.
 
 > [!NOTE]
-> La característica IntelliSense en Visual Studio muestra los parámetros de `BeginInvoke` y `EndInvoke`. Si no utiliza Visual Studio u otra herramienta similar, o si está utilizando C# con Visual Studio, consulte [Modelo de programación asincrónica (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md), donde encontrará una descripción de los parámetros definidos para estos métodos.
+> La característica IntelliSense en Visual Studio muestra los parámetros de `BeginInvoke` y `EndInvoke`. Si no utiliza Visual Studio u otra herramienta similar, o si está utilizando C# con Visual Studio, consulte [Modelo de programación asincrónica (APM)](asynchronous-programming-model-apm.md), donde encontrará una descripción de los parámetros definidos para estos métodos.
 
 En los ejemplos de código de este tema se muestran cuatro de las formas más comunes de utilizar los métodos `BeginInvoke` y `EndInvoke` para realizar llamadas asincrónicas. Después de llamar a `BeginInvoke` , puede hacer lo siguiente:
 
@@ -112,4 +112,4 @@ En los ejemplos de código de este tema se muestran cuatro de las formas más co
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Delegate>
-- [Modelo asincrónico basado en eventos (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
+- [Modelo asincrónico basado en eventos (EAP)](event-based-asynchronous-pattern-eap.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - local thread storage
 - TLS
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
-ms.openlocfilehash: b5a7c4b78f8599f64aa11f1c98c033866e582933
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: adeeb6c95769d8e1ac120d4fb26d8aaedf7a1d4d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73127523"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291089"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>Almacenamiento local de subprocesos: Campos estáticos relacionados con subprocesos y ranuras de datos
 Puede usar el almacenamiento local para el subproceso (TLS) administrado para almacenar los datos que sean exclusivos de un subproceso y un dominio de aplicación. .NET Framework proporciona dos maneras de utilizar el TLS administrado: ranuras para datos y campos estáticos relacionados con subprocesos.  
@@ -24,7 +24,7 @@ Puede usar el almacenamiento local para el subproceso (TLS) administrado para al
   
  En C++ no administrado, use `TlsAlloc` para asignar ranuras de forma dinámica y `__declspec(thread)` para declarar que una variable debería asignarse en el almacenamiento relacionado con los subprocesos. Los campos estáticos y las ranuras para datos relacionados con los subprocesos proporcionan la versión administrada de este comportamiento.  
   
- En .NET Framework 4, puede usar la clase <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> para crear objetos locales de subprocesos que se inicializan de forma diferida la primera vez que se usa el objeto. Para obtener más información, vea [Inicialización diferida](../../../docs/framework/performance/lazy-initialization.md).  
+ En .NET Framework 4, puede usar la clase <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> para crear objetos locales de subprocesos que se inicializan de forma diferida la primera vez que se usa el objeto. Para obtener más información, vea [Inicialización diferida](../../framework/performance/lazy-initialization.md).  
   
 ## <a name="uniqueness-of-data-in-managed-tls"></a>Unicidad de los datos en la TLS administrada  
  Si usa los campos estáticos o las ranuras para datos relacionados con subprocesos, los datos de la TLS administrada son exclusivos de la combinación de subproceso y dominio de aplicación.  
@@ -61,4 +61,4 @@ Puede usar el almacenamiento local para el subproceso (TLS) administrado para al
 - <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType>
 - <xref:System.ThreadStaticAttribute>
 - <xref:System.Runtime.Remoting.Messaging.CallContext>
-- [Subprocesamiento](../../../docs/standard/threading/index.md)
+- [Subprocesamiento](index.md)

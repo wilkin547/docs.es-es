@@ -13,12 +13,12 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-ms.openlocfilehash: c08f4309d7673d7e7fb1c6bd84307e4323411d9e
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: adc617362cf3ba07ff63f1095968e2bd88df88d9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242691"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291921"
 ---
 # <a name="globalization"></a>Globalización
 
@@ -57,7 +57,7 @@ Incluso si está desarrollando una aplicación destinada a una sola referencia c
 
 Usar archivos de recursos tiene algunas ventajas si está creando una aplicación localizada. Al implementar recursos en ensamblados satélite, Common Language Runtime selecciona automáticamente un recurso adecuado según la referencia cultural de la interfaz de usuario actual del usuario tal y como se define en la propiedad <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>. Siempre que proporcione un recurso específico de la referencia cultural adecuado y cree correctamente una instancia de un objeto <xref:System.Resources.ResourceManager> o use una clase de recurso fuertemente tipada, runtime controla los detalles de recuperación de los recursos adecuados.
 
-Para más información sobre la creación de archivos de recursos, vea [Crear archivos de recursos](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md). Para obtener información sobre la creación e implementación de ensamblados satélite, vea [Crear ensamblados satélite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md) y [Empaquetar e implementar recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).
+Para más información sobre la creación de archivos de recursos, vea [Crear archivos de recursos](../../framework/resources/creating-resource-files-for-desktop-apps.md). Para obtener información sobre la creación e implementación de ensamblados satélite, vea [Crear ensamblados satélite](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md) y [Empaquetar e implementar recursos](../../framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).
 
 ### <a name="search-and-compare-strings"></a>Búsqueda y comparación de cadenas
 
@@ -143,7 +143,7 @@ Normalmente, cuando las fechas y horas se muestran en la interfaz de usuario, de
 
 - <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType>, que incluye una cadena de formato
 
-- La característica [formatos compuestos](../../../docs/standard/base-types/composite-formatting.md), cuando se usa con fechas
+- La característica [formatos compuestos](../base-types/composite-formatting.md), cuando se usa con fechas
 
 En el ejemplo siguiente, se muestran datos de amanecer y puesta de sol duplicados para el 11 de octubre de 2012. Primero, establece la referencia cultural actual a croata (Croacia) y, después, a inglés (Gran Bretaña). En cada caso, las fechas y horas se muestran en el formato adecuado para esa referencia cultural.
 
@@ -174,7 +174,7 @@ En el ejemplo siguiente se muestra el último enfoque. Usa las convenciones de f
 
 Un valor de fecha y hora puede tener varias interpretaciones, desde una hora general ("Las tiendas abren el 2 de enero de 2013 a las 9:00") hasta un momento específico en el tiempo ("Fecha de nacimiento: 2 de enero de 2013 a las 6:32:00"). Cuando un valor de tiempo representa un momento específico en el tiempo y lo restaura desde un valor serializado, debe asegurarse de que representa el mismo momento en el tiempo, independientemente de la ubicación geográfica o la zona horaria del usuario.
 
-El siguiente ejemplo ilustra este problema. Guarda un solo valor de fecha y hora local como una cadena en tres [formatos estándar](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) ("G" para hora larga de fecha general, "s" para la fecha y hora que se puede ordenar y "o" para la fecha y hora de ida y vuelta), así como en formato binario.
+El siguiente ejemplo ilustra este problema. Guarda un solo valor de fecha y hora local como una cadena en tres [formatos estándar](../base-types/standard-date-and-time-format-strings.md) ("G" para hora larga de fecha general, "s" para la fecha y hora que se puede ordenar y "o" para la fecha y hora de ida y vuelta), así como en formato binario.
 
 [!code-csharp[Conceptual.Globalization#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates4.cs#10)]
 [!code-vb[Conceptual.Globalization#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates4.vb#10)]
@@ -224,7 +224,7 @@ Cuando los datos se serializan en un sistema en la zona horaria estándar del Pa
 3/31/2013 3:00:00 AM Local
 ```
 
-Para más información, vea [Convertir horas entre zonas horarias](../../../docs/standard/datetime/converting-between-time-zones.md).
+Para más información, vea [Convertir horas entre zonas horarias](../datetime/converting-between-time-zones.md).
 
 ### <a name="perform-date-and-time-arithmetic"></a>Realización de operaciones aritméticas con fechas y horas
 
@@ -248,7 +248,7 @@ El ejemplo siguiente es similar al anterior, salvo que sigue estos tres pasos pa
 [!code-csharp[Conceptual.Globalization#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates6.cs#9)]
 [!code-vb[Conceptual.Globalization#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates6.vb#9)]
 
-Para más información, vea [Efectuar operaciones aritméticas con fechas y horas](../../../docs/standard/datetime/performing-arithmetic-operations.md).
+Para más información, vea [Efectuar operaciones aritméticas con fechas y horas](../datetime/performing-arithmetic-operations.md).
 
 ### <a name="use-culture-sensitive-names-for-date-elements"></a>Uso de nombres que tienen en cuenta las referencias culturales para elementos de fecha
 
@@ -259,7 +259,7 @@ Puede que su aplicación tenga que mostrar el nombre del mes o el día de la sem
 
 En cambio, este código devuelve siempre los nombres de los días de la semana en inglés. El código que extrae el nombre del mes es, a menudo, aún más inflexible. Con frecuencia, asume un calendario de doce meses con nombres de meses en un idioma específico.
 
-Mediante el uso de [cadenas de formato de fecha y hora personalizadas](../../../docs/standard/base-types/custom-date-and-time-format-strings.md) o las propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo>, es fácil extraer cadenas que muestran los nombres de días de la semana o meses en la referencia cultural del usuario, como se muestra en el ejemplo siguiente. Cambia la referencia cultural actual al francés (Francia) y muestra el nombre del día de la semana y el nombre del mes del 1 de julio de 2013.
+Mediante el uso de [cadenas de formato de fecha y hora personalizadas](../base-types/custom-date-and-time-format-strings.md) o las propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo>, es fácil extraer cadenas que muestran los nombres de días de la semana o meses en la referencia cultural del usuario, como se muestra en el ejemplo siguiente. Cambia la referencia cultural actual al francés (Francia) y muestra el nombre del día de la semana y el nombre del mes del 1 de julio de 2013.
 
 [!code-csharp[Conceptual.Globalization#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/monthname2.cs#20)]
 [!code-vb[Conceptual.Globalization#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/monthname2.vb#20)]
@@ -279,7 +279,7 @@ Normalmente, cuando los números se muestran en la interfaz de usuario, debe usa
 
 - El método `ToString(String)` de cualquier tipo numérico, que incluye una cadena de formato como un argumento
 
-- La característica [formatos compuestos](../../../docs/standard/base-types/composite-formatting.md), cuando se usa con valores numéricos
+- La característica [formatos compuestos](../base-types/composite-formatting.md), cuando se usa con valores numéricos
 
 En el ejemplo siguiente se muestra el promedio de temperatura por mes en París, Francia. Primero, establece la referencia cultural actual al francés (Francia) antes de mostrar los datos y, después, la establece en inglés (Estados Unidos). En cada caso, los nombres de meses y las temperaturas se muestran en el formato adecuado para esa referencia cultural. Tenga en cuenta que las dos referencias culturales usan separadores decimales diferentes en el valor de temperatura. Tenga en cuenta también que en el ejemplo se usa la cadena de formato de fecha y hora "MMMM" personalizada para mostrar el nombre completo del mes y que asigna la cantidad de espacio adecuada para el nombre del mes en la cadena de resultado al determinar la longitud del nombre del mes más largo en la matriz <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A?displayProperty=nameWithType>.
 
@@ -340,5 +340,5 @@ En general, no realice ninguna suposición sobre los valores de propiedades <xre
 
 ## <a name="see-also"></a>Vea también
 
-- [Globalización y localización](../../../docs/standard/globalization-localization/index.md)
-- [Procedimientos recomendados para el uso de cadenas](../../../docs/standard/base-types/best-practices-strings.md)
+- [Globalización y localización](index.md)
+- [Procedimientos recomendados para el uso de cadenas](../base-types/best-practices-strings.md)

@@ -14,17 +14,17 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - COM interop, applying attributes
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
-ms.openlocfilehash: 831f8d79030264ef013a75cd91cb771c9d168576
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: f9ccf59e52c1ef27649cd70a57f7b24bb5a8e9bf
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420544"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291336"
 ---
 # <a name="applying-interop-attributes"></a>Aplicar atributos de interoperabilidad
 El espacio de nombres <xref:System.Runtime.InteropServices> proporciona tres categorías de atributos específicos de interoperabilidad: los que se aplican por parte del usuario en tiempo de diseño, los que se aplican mediante herramientas de interoperabilidad COM y durante el proceso de conversión, y los que se aplican por parte del usuario o interoperabilidad COM.  
   
- Si no está familiarizado con la tarea de aplicar atributos al código administrado, vea [Extender metadatos mediante atributos](../../../docs/standard/attributes/index.md). Al igual que otros atributos personalizados, puede aplicar atributos específicos de interoperabilidad a tipos, métodos, propiedades, parámetros, campos y otros miembros.  
+ Si no está familiarizado con la tarea de aplicar atributos al código administrado, vea [Extender metadatos mediante atributos](../attributes/index.md). Al igual que otros atributos personalizados, puede aplicar atributos específicos de interoperabilidad a tipos, métodos, propiedades, parámetros, campos y otros miembros.  
   
 ## <a name="design-time-attributes"></a>Atributos en tiempo de diseño  
  Puede ajustar el resultado del proceso de conversión realizado por las API y las herramientas de interoperabilidad COM mediante atributos en tiempo de diseño. En la tabla siguiente se describen los atributos que se pueden aplicar al código fuente administrado. En ocasiones, es posible que las herramientas de interoperabilidad COM también apliquen los atributos descritos en esta tabla.  
@@ -70,7 +70,7 @@ El espacio de nombres <xref:System.Runtime.InteropServices> proporciona tres cat
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.InteropServices>
-- [Exponer componentes de .NET Framework en COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
-- [Atributos](../../../docs/standard/attributes/index.md)
-- [Habilitar tipos de .NET para la interoperación](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)
-- [Empaquetar un ensamblado de .NET Framework para COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
+- [Exponer componentes de .NET Framework en COM](../../framework/interop/exposing-dotnet-components-to-com.md)
+- [Atributos](../attributes/index.md)
+- [Habilitar tipos de .NET para la interoperación](qualify-net-types-for-interoperation.md)
+- [Empaquetar un ensamblado de .NET Framework para COM](../../framework/interop/packaging-an-assembly-for-com.md)

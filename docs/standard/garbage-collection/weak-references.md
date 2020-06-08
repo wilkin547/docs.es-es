@@ -8,12 +8,12 @@ helpviewer_keywords:
 - weak references, long
 - garbage collection, weak references
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
-ms.openlocfilehash: 120777ca3c26b1634bd2143863547cfa4ea5deac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4b7e7a62b92b2c685ff39baa75f4bc33602b5da2
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73141332"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287589"
 ---
 # <a name="weak-references"></a>Referencias parciales
 El recolector de elementos no utilizados no puede recopilar un objeto que está siendo usado por una aplicación mientras el código de aplicación pueda llegar a ese objeto. En este caso, se dice que la aplicación tiene una referencia segura al objeto.  
@@ -52,4 +52,4 @@ El recolector de elementos no utilizados no puede recopilar un objeto que está 
   
 ## <a name="see-also"></a>Vea también
 
-- [Recolección de elementos no utilizados](../../../docs/standard/garbage-collection/index.md)
+- [Recolección de elementos no utilizados](index.md)

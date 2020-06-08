@@ -8,12 +8,12 @@ helpviewer_keywords:
 - optionstrict compiler option [Visual Basic]
 - /optionstrict compiler option [Visual Basic]
 ms.assetid: c7b10086-0fa4-49db-b3c8-4ae0db5957da
-ms.openlocfilehash: 469e22aef9d746fc55e04ba884d17d60d8baa85a
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 3dd12971a082869c32b6292ed45e2014b8b0e2c0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583072"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400544"
 ---
 # <a name="-optionstrict"></a>-optionstrict
 
@@ -50,7 +50,7 @@ Para generar advertencias para las conversiones de restricción de tipos implíc
 
 ### <a name="to-set--optionstrict-programmatically"></a>Para establecer -optionstrict mediante programación
 
-Vea [Option Strict (instrucción)](../../../visual-basic/language-reference/statements/option-strict-statement.md).
+Vea [Option Strict (instrucción)](../../language-reference/statements/option-strict-statement.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -62,12 +62,12 @@ vbc -optionstrict+ test.vb
 
 ## <a name="see-also"></a>Vea también
 
-- [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
-- [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
-- [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
-- [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md)
-- [-warnaserror (Visual Basic)](../../../visual-basic/reference/command-line-compiler/warnaserror.md)
-- [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Option Strict (instrucción)](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Compilador de línea de comandos de Visual Basic](index.md)
+- [-optioncompare](optioncompare.md)
+- [-optionexplicit](optionexplicit.md)
+- [-optioninfer](optioninfer.md)
+- [-nowarn](nowarn.md)
+- [-warnaserror (Visual Basic)](warnaserror.md)
+- [Líneas de comandos de compilación de ejemplo](sample-compilation-command-lines.md)
+- [Option Strict (instrucción)](../../language-reference/statements/option-strict-statement.md)
 - [Valores predeterminados de Visual Basic, Proyectos, Opciones (Cuadro de diálogo)](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

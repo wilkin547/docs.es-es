@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - parallel programming, debugging and profiling tools
 ms.assetid: 38f7302a-ddf6-4179-ba19-f49e00395b9f
-ms.openlocfilehash: 795fb9b37b95a2e7bc1fb8f8f9547522efa46d82
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0765b01e9c07d1250c99cd38aa55ba815511f274
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73140052"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291726"
 ---
 # <a name="parallel-diagnostic-tools"></a>Herramientas de diagnóstico paralelo
 Visual Studio proporciona amplia compatibilidad para depurar aplicaciones de varios subprocesos y generar perfiles de estas.  
@@ -29,4 +29,4 @@ Visual Studio proporciona amplia compatibilidad para depurar aplicaciones de var
   
 ## <a name="see-also"></a>Vea también
 
-- [Programación en paralelo](../../../docs/standard/parallel-programming/index.md)
+- [Programación en paralelo](index.md)

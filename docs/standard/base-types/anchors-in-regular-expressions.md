@@ -16,12 +16,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, anchors
 - .NET Framework regular expressions, atomic zero-width assertions
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
-ms.openlocfilehash: c4853a6854f5da1a3217c976a03ddbde3b528560
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e86bae8a687e89acba9a0b713630b43809f081d1
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159668"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290634"
 ---
 # <a name="anchors-in-regular-expressions"></a>Delimitadores en expresiones regulares
 Los delimitadores, o aserciones atómicas de ancho cero, especifican la posición de la cadena en que se debe producir una coincidencia. Cuando se usa un delimitador en una expresión de búsqueda, el motor de expresiones regulares no avanza por la cadena o ni consume caracteres, sino que solo busca una coincidencia en la posición especificada. Por ejemplo, `^` especifica que la coincidencia debe empezar al principio de una cadena o línea. Por consiguiente, la expresión regular `^http:` coincide con "http": solo cuando se encuentra al principio de una línea. En la tabla siguiente, se enumeran los delimitadores que admiten las expresiones regulares de .NET.  
@@ -38,7 +38,7 @@ Los delimitadores, o aserciones atómicas de ancho cero, especifican la posició
 |`\B`|La coincidencia no se debe producir en un límite de palabras. Para obtener más información, vea [Fuera de un límite de palabras](#non-word-boundary-b).|  
 
 ## <a name="start-of-string-or-line-"></a>Principio de cadena o línea: ^  
- De forma predeterminada, el delimitador `^` especifica que el patrón siguiente debe comenzar en la posición del primer carácter de la cadena. Si usa `^` con la opción <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> (vea [Opciones de expresiones regulares](../../../docs/standard/base-types/regular-expression-options.md)), la coincidencia se debe producir al principio de cada línea.  
+ De forma predeterminada, el delimitador `^` especifica que el patrón siguiente debe comenzar en la posición del primer carácter de la cadena. Si usa `^` con la opción <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> (vea [Opciones de expresiones regulares](regular-expression-options.md)), la coincidencia se debe producir al principio de cada línea.  
   
  En el ejemplo siguiente se usa el delimitador `^` en una expresión regular que extrae información sobre los años durante los que existieron algunos equipos de béisbol profesionales. En el ejemplo se llama a dos sobrecargas del método <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> :  
   
@@ -119,7 +119,7 @@ Los delimitadores, o aserciones atómicas de ancho cero, especifican la posició
 |`,?`|Coincide con cero o un carácter de coma literal.|
 
 ## <a name="word-boundary-b"></a>Límite de palabras: \b  
- El delimitador `\b` especifica que la coincidencia se debe producir en un límite entre un carácter que se usa para formar palabras (el elemento del lenguaje `\w` ) y un carácter que no se usa para formar palabras (el elemento del lenguaje `\W` ). Los caracteres que se usan para formar palabras son los caracteres alfanuméricos y de subrayado; un carácter que no se usa para formar palabras es cualquier carácter que no es alfanumérico ni de subrayado. (Para más información, vea [Clases de carácter](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)). La coincidencia también se puede producir en un límite de palabras al principio o al final de la cadena.  
+ El delimitador `\b` especifica que la coincidencia se debe producir en un límite entre un carácter que se usa para formar palabras (el elemento del lenguaje `\w` ) y un carácter que no se usa para formar palabras (el elemento del lenguaje `\W` ). Los caracteres que se usan para formar palabras son los caracteres alfanuméricos y de subrayado; un carácter que no se usa para formar palabras es cualquier carácter que no es alfanumérico ni de subrayado. (Para más información, vea [Clases de carácter](character-classes-in-regular-expressions.md)). La coincidencia también se puede producir en un límite de palabras al principio o al final de la cadena.  
   
  El delimitador `\b` se usa con frecuencia para asegurarse de que una subexpresión coincide con una palabra completa en lugar de solo con el principio o el final de una palabra. La expresión regular `\bare\w*\b` del ejemplo siguiente muestra este uso. Coincide con cualquier palabra que comience por la subcadena "are". El resultado del ejemplo también muestra que `\b` coincide tanto con el principio como con el final de la cadena de entrada.  
   
@@ -153,5 +153,5 @@ Los delimitadores, o aserciones atómicas de ancho cero, especifican la posició
   
 ## <a name="see-also"></a>Vea también
 
-- [Lenguaje de expresiones regulares: referencia rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
-- [Opciones de expresiones regulares](../../../docs/standard/base-types/regular-expression-options.md)
+- [Lenguaje de expresiones regulares: referencia rápida](regular-expression-language-quick-reference.md)
+- [Opciones de expresiones regulares](regular-expression-options.md)

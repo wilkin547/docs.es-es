@@ -9,12 +9,12 @@ helpviewer_keywords:
 - SortedList collection type
 - collections [.NET Framework], SortedList collection type
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
-ms.openlocfilehash: c948c70a06931f5f93a6f4235585cf7ac94e8533
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 2d9d3744859eea1a09923980b3b4c57eca6bba97
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728362"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287944"
 ---
 # <a name="sorted-collection-types"></a>Tipos de colecciones ordenadas
 
@@ -52,4 +52,4 @@ A partir de .NET Framework 4, la clase <xref:System.Collections.Generic.Sorted
 - <xref:System.Collections.IDictionary?displayProperty=nameWithType>
 - <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>
 - <xref:System.Collections.Concurrent.ConcurrentDictionary%602>
-- [Tipos de colección utilizados normalmente](../../../docs/standard/collections/commonly-used-collection-types.md)
+- [Tipos de colección utilizados normalmente](commonly-used-collection-types.md)

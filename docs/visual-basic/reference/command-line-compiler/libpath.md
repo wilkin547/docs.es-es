@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /libpath compiler option [Visual Basic]
 - -libpath compiler option [Visual Basic]
 ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
-ms.openlocfilehash: 9a5822a097828f818da020735c3822e86eb3236b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: dff7e0c3eb696b9b18f4c4e59240a26c1cb9782c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716634"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408554"
 ---
 # <a name="-libpath"></a>-libpath
 Especifica la ubicación de los ensamblados a los que se hace referencia.  
@@ -29,7 +29,7 @@ Especifica la ubicación de los ensamblados a los que se hace referencia.
 |`dirList`|Obligatorio. Lista delimitada por punto y coma de directorios para que el compilador busque un ensamblado al que se hace referencia si no lo encuentra en el directorio de trabajo actual (el directorio desde el que se invoca al compilador) o en el directorio del sistema de Common Language Runtime. Si el nombre del directorio contiene un espacio, escríbalo entre comillas (" ").|  
   
 ## <a name="remarks"></a>Comentarios  
- La opción `-libpath` especifica la ubicación de los ensamblados a los que se hace referencia con la opción [-reference](../../../visual-basic/reference/command-line-compiler/reference.md).  
+ La opción `-libpath` especifica la ubicación de los ensamblados a los que se hace referencia con la opción [-reference](reference.md).  
   
  El compilador busca referencias a ensamblados que no presentan la ruta completa en el siguiente orden:  
   
@@ -59,5 +59,5 @@ vbc -libpath:c:\;"c:\New Assemblies" -reference:t2.dll t2.vb
 ## <a name="see-also"></a>Vea también
 
 - [Ensamblados de .NET](../../../standard/assembly/index.md)
-- [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Compilador de línea de comandos de Visual Basic](index.md)
+- [Líneas de comandos de compilación de ejemplo](sample-compilation-command-lines.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-ms.openlocfilehash: a70bd3070d8b1dcd06e55d330a01d29071293f6c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7f064738472a65ce89f17efc4d7ea00ac98280d0
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159395"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291102"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Sincronizar datos para multithreading
 
@@ -22,11 +22,11 @@ Cuando varios subprocesos pueden realizar llamadas a las propiedades y los méto
   
 - Regiones de código sincronizado. Puede usar la clase <xref:System.Threading.Monitor> o la compatibilidad de compilador para esta clase para sincronizar solo el bloque de código que lo necesite y mejorar así el rendimiento.  
   
-- Sincronización manual. Puede usar los objetos de sincronización que proporciona la biblioteca de clases de .NET. Consulte [Información general sobre los primitivos de sincronización](../../../docs/standard/threading/overview-of-synchronization-primitives.md), que incluye una explicación de la clase <xref:System.Threading.Monitor>.  
+- Sincronización manual. Puede usar los objetos de sincronización que proporciona la biblioteca de clases de .NET. Consulte [Información general sobre los primitivos de sincronización](overview-of-synchronization-primitives.md), que incluye una explicación de la clase <xref:System.Threading.Monitor>.  
   
 - Contextos sincronizados. En el caso de las aplicaciones de .NET Framework y Xamarin, puede usar <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> para habilitar la sincronización automática y simple de objetos <xref:System.ContextBoundObject>.  
   
-- Clases de colección del espacio de nombres <xref:System.Collections.Concurrent?displayProperty=nameWithType>. Estas clases proporcionan operaciones de incorporación y eliminación sincronizadas incorporadas. Para obtener más información, consulte [Colecciones seguras para subprocesos](../../../docs/standard/collections/thread-safe/index.md).  
+- Clases de colección del espacio de nombres <xref:System.Collections.Concurrent?displayProperty=nameWithType>. Estas clases proporcionan operaciones de incorporación y eliminación sincronizadas incorporadas. Para obtener más información, consulte [Colecciones seguras para subprocesos](../collections/thread-safe/index.md).  
   
  Common Language Runtime proporciona un modelo de subprocesos en el que las clases se dividen en varias categorías que se pueden sincronizar de distintas maneras (según sea necesario). En la siguiente tabla se muestra la compatibilidad de sincronización que se proporciona para los campos y los métodos de determinadas categorías de sincronización.  
   
@@ -41,7 +41,7 @@ Cuando varios subprocesos pueden realizar llamadas a las propiedades y los méto
  Este es el valor predeterminado para los objetos. Todos los subprocesos pueden acceder a cualquier método o campo en cualquier momento. Solo puede acceder a estos objetos un subproceso a la vez.  
   
 ## <a name="manual-synchronization"></a>Sincronización manual  
- La biblioteca de clases de .NET proporciona una serie de clases para sincronizar subprocesos. Consulte [Overview of Synchronization Primitives](../../../docs/standard/threading/overview-of-synchronization-primitives.md) (Introducción a los primitivos de sincronización).  
+ La biblioteca de clases de .NET proporciona una serie de clases para sincronizar subprocesos. Consulte [Overview of Synchronization Primitives](overview-of-synchronization-primitives.md) (Introducción a los primitivos de sincronización).  
   
 ## <a name="synchronized-code-regions"></a>Regiones de código sincronizado  
  Puede usar la clase <xref:System.Threading.Monitor> o una palabra clave del compilador para sincronizar bloques de código, métodos de instancia y métodos estáticos. No se admiten los campos estáticos sincronizados.  
@@ -70,7 +70,7 @@ Solo en aplicaciones de .NET Framework y Xamarin, puede usar <xref:System.Runtim
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>
-- [Subprocesos y subprocesamiento](../../../docs/standard/threading/threads-and-threading.md)
-- [Información general sobre los primitivos de sincronización](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
+- [Subprocesos y subprocesamiento](threads-and-threading.md)
+- [Información general sobre los primitivos de sincronización](overview-of-synchronization-primitives.md)
 - [SyncLock (instrucción)](../../visual-basic/language-reference/statements/synclock-statement.md)
 - [lock (instrucción)](../../csharp/language-reference/keywords/lock-statement.md)

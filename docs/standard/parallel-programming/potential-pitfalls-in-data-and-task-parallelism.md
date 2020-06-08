@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel programming, pitfalls
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
-ms.openlocfilehash: ff6ac9e8c41ee203ae72e1b28c088f462ddf6a54
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 00b4c89440223d229a06b0192032c9abcf931d58
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73140020"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291700"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Problemas potenciales en el paralelismo de datos y tareas
 En muchos casos, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> pueden proporcionar importantes mejoras de rendimiento con respecto a los bucles secuenciales normales. Sin embargo, el trabajo de paralelizar el bucle aporta una complejidad que puede conducir a problemas que, en código secuencial, no son tan comunes o no se producen en ningún caso. En este tema se indican algunas prácticas que se deben evitar al escribir bucles paralelos.  
@@ -22,7 +22,7 @@ En muchos casos, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=na
  En ciertos casos, un bucle paralelo podría ejecutarse más lentamente que su equivalente secuencial. La regla básica es que es poco probable que los bucles en paralelo que tienen pocas iteraciones y delegados de usuario rápidos aumenten la velocidad en gran medida. Sin embargo, dado que hay muchos factores que afectan al rendimiento, recomendamos medir siempre los resultados reales.  
   
 ## <a name="avoid-writing-to-shared-memory-locations"></a>Evitar la escritura en ubicaciones de memoria compartida  
- En código secuencial, no es raro leer o escribir en variables estáticas o campos de clase. Sin embargo, cada vez que varios subprocesos tienen acceso simultáneamente a estas variables, hay grandes posibilidades de que se produzcan condiciones de carrera. Aunque se pueden usar bloqueos para sincronizar el acceso a la variable, el costo de la sincronización puede afectar negativamente al rendimiento. Por tanto, se recomienda evitar, o al menos limitar, el acceso al estado compartido en un bucle en paralelo en la medida de lo posible. La mejor manera de hacerlo es utilizar las sobrecargas de <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> que usan una variable <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> para almacenar el estado local de subproceso durante la ejecución del bucle. Para obtener más información, vea [Cómo: Escribir un bucle Parallel.For con variables locales de subproceso](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) y [Cómo: Escribir un bucle Parallel.ForEach con variables locales de partición](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
+ En código secuencial, no es raro leer o escribir en variables estáticas o campos de clase. Sin embargo, cada vez que varios subprocesos tienen acceso simultáneamente a estas variables, hay grandes posibilidades de que se produzcan condiciones de carrera. Aunque se pueden usar bloqueos para sincronizar el acceso a la variable, el costo de la sincronización puede afectar negativamente al rendimiento. Por tanto, se recomienda evitar, o al menos limitar, el acceso al estado compartido en un bucle en paralelo en la medida de lo posible. La mejor manera de hacerlo es utilizar las sobrecargas de <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> que usan una variable <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> para almacenar el estado local de subproceso durante la ejecución del bucle. Para obtener más información, vea [Cómo: Escribir un bucle Parallel.For con variables locales de subproceso](how-to-write-a-parallel-for-loop-with-thread-local-variables.md) y [Cómo: Escribir un bucle Parallel.ForEach con variables locales de partición](how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
   
 ## <a name="avoid-over-parallelization"></a>Evitar la paralelización excesiva  
  Si usa bucles en paralelo, incurrirá en costos de sobrecarga al crear particiones de la colección de origen y sincronizar los subprocesos de trabajo. El número de procesadores del equipo reduce también las ventajas de la paralelización. Si se ejecutan varios subprocesos enlazados a cálculos en un único procesador, no se gana en velocidad. Por tanto, debe tener cuidado para no paralelizar en exceso un bucle.  
@@ -80,6 +80,6 @@ En muchos casos, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=na
   
 ## <a name="see-also"></a>Vea también
 
-- [Programación en paralelo](../../../docs/standard/parallel-programming/index.md)
-- [Posibles problemas con PLINQ](../../../docs/standard/parallel-programming/potential-pitfalls-with-plinq.md)
+- [Programación en paralelo](index.md)
+- [Posibles problemas con PLINQ](potential-pitfalls-with-plinq.md)
 - [Patterns for Parallel Programming: Understanding and Applying Parallel Patterns with the .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222) (Patrones para la programación paralela: comprender y aplicar patrones paralelos con .NET Framework 4)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.openlocfilehash: ff04b4950f48f2ba06f60b65cc3a46f1295711f3
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: ecfe0cca59b50da9231709dbd9a2de9b56391d4f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243159"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291063"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Procedimientos recomendados con expresiones regulares en .NET
 
@@ -37,10 +37,10 @@ Para buscar coincidencias con datos de entrada sin restricciones, una expresión
 
 - Texto que casi coincide con el patrón de expresión regular.
 
-El último tipo de texto es especialmente problemático para una expresión regular que se ha escrito para tratar datos de entrada restringidos. Si esa expresión regular también usa mucho [retroceso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md), el motor de expresiones regulares puede dedicar una cantidad de tiempo excesiva (en algunos casos, muchas horas o días) procesando texto aparentemente inofensivo.
+El último tipo de texto es especialmente problemático para una expresión regular que se ha escrito para tratar datos de entrada restringidos. Si esa expresión regular también usa mucho [retroceso](backtracking-in-regular-expressions.md), el motor de expresiones regulares puede dedicar una cantidad de tiempo excesiva (en algunos casos, muchas horas o días) procesando texto aparentemente inofensivo.
 
 > [!WARNING]
-> En el ejemplo siguiente se utiliza una expresión regular que es propensa a un retroceso excesivo y que es probable que rechace direcciones de correo electrónico válidas. No debería utilizarse en una rutina de validación de correo electrónico. Si desea que una expresión regular valide las direcciones de correo electrónico, vea [Procedimiento: Comprobación de que las cadenas están en un formato de correo electrónico válido](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).
+> En el ejemplo siguiente se utiliza una expresión regular que es propensa a un retroceso excesivo y que es probable que rechace direcciones de correo electrónico válidas. No debería utilizarse en una rutina de validación de correo electrónico. Si desea que una expresión regular valide las direcciones de correo electrónico, vea [Procedimiento: Comprobación de que las cadenas están en un formato de correo electrónico válido](how-to-verify-that-strings-are-in-valid-email-format.md).
 
 Por ejemplo, considere una expresión regular de uso muy frecuente pero sumamente problemática para validar el alias de una dirección de correo electrónico. Se escribe la expresión regular `^[0-9A-Z]([-.\w]*[0-9A-Z])*$` para procesar qué se considera una dirección de correo electrónico válida, que consta de un carácter alfanumérico seguido de cero o más caracteres que pueden ser alfanuméricos, puntos o guiones. La expresión regular debe finalizar con un carácter alfanumérico. Sin embargo, como se muestra en el ejemplo siguiente, aunque esta expresión regular trata la entrada válida fácilmente, su rendimiento es muy ineficaz cuando está procesando datos de entrada casi válidos.
 
@@ -161,7 +161,7 @@ Cuando el ejemplo se compila en un ejecutable y se ejecuta, crea un ensamblado d
 Normalmente, el motor de expresiones regulares usa la progresión lineal para desplazarse a través de una cadena de entrada y compararla con un patrón de expresión regular. Sin embargo, cuando en un patrón de expresión regular se usan cuantificadores indeterminados como `*`, `+` y`?`, el motor de expresiones regulares puede abandonar una parte de las coincidencias parciales correctas y volver a un estado guardado previamente para buscar una coincidencia correcta de todo el patron. Este proceso se denomina retroceso.
 
 > [!NOTE]
-> Para obtener más información acerca del retroceso, consulte [Detalles del comportamiento de expresiones regulares](../../../docs/standard/base-types/details-of-regular-expression-behavior.md) y [Retroceso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md). Para obtener una explicación detallada del retroceso, vea [Optimizing Regular Expression Performance, Part II: (Optimización del rendimiento de expresiones regulares, Parte II: Control del retroceso](https://docs.microsoft.com/archive/blogs/bclteam/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha)) en el blog del equipo de BCL.
+> Para obtener más información acerca del retroceso, consulte [Detalles del comportamiento de expresiones regulares](details-of-regular-expression-behavior.md) y [Retroceso](backtracking-in-regular-expressions.md). Para obtener una explicación detallada del retroceso, vea [Optimizing Regular Expression Performance, Part II: (Optimización del rendimiento de expresiones regulares, Parte II: Control del retroceso](https://docs.microsoft.com/archive/blogs/bclteam/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha)) en el blog del equipo de BCL.
 
 La compatibilidad con el retroceso aporta a las expresiones regulares eficacia y flexibilidad. También deja la responsabilidad de controlar el funcionamiento del motor de expresiones regulares en manos de los desarrolladores de expresiones regulares. Puesto que los desarrolladores no suelen ser conscientes de esta responsabilidad, su uso incorrecto del retroceso o su dependencia de un retroceso excesivo suele desempeñar el rol más significativo en la degradación del rendimiento de las expresiones regulares. En un escenario de caso peor, el tiempo de ejecución puede duplicarse por cada carácter adicional de la cadena de entrada. De hecho, usando excesivamente el retroceso, es fácil crear el equivalente en programación de un bucle infinito si la entrada coincide casi con el patrón de expresiones regulares; el motor de expresiones regulares puede tardar horas o incluso días en procesar una cadena de entrada relativamente corta.
 
@@ -204,7 +204,7 @@ En el ejemplo siguiente se muestra el uso de esta expresión regular para encont
 [!code-csharp[Conceptual.RegularExpressions.BestPractices#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack4.cs#11)]
 [!code-vb[Conceptual.RegularExpressions.BestPractices#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack4.vb#11)]
 
-El lenguaje de expresiones regulares de .NET incluye los elementos del lenguaje siguientes, que puede usar para eliminar cuantificadores anidados. Para obtener más información, consulte [Construcciones de agrupamiento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
+El lenguaje de expresiones regulares de .NET incluye los elementos del lenguaje siguientes, que puede usar para eliminar cuantificadores anidados. Para obtener más información, consulte [Construcciones de agrupamiento](grouping-constructs-in-regular-expressions.md).
 
 |Elemento del lenguaje|Descripción|
 |----------------------|-----------------|
@@ -265,7 +265,7 @@ Puede deshabilitar las capturas de una de las maneras siguientes:
 
 - Use la opción <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>. Deshabilita todas las capturas sin nombre o implícitas en el patrón de expresión regular. Cuando se usa esta opción, solo se pueden capturar las subcadenas que coinciden con grupos con nombre definidos con el elemento de lenguaje `(?<name>subexpression)`. La marca <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> se puede pasar al parámetro `options` de un constructor de clase <xref:System.Text.RegularExpressions.Regex> o al parámetro `options` de un método coincidente estático <xref:System.Text.RegularExpressions.Regex>.
 
-- Use la opción `n` del elemento de lenguaje `(?imnsx)`. Esta opción deshabilita todas las capturas sin nombre o implícitas desde el punto del patrón de expresión regular en el que aparece el elemento. Las capturas se deshabilitan hasta el final del modelo o hasta que la opción `(-n)` habilita las capturas sin nombre o implícitas. Para obtener más información, consulte [Construcciones misceláneas](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md).
+- Use la opción `n` del elemento de lenguaje `(?imnsx)`. Esta opción deshabilita todas las capturas sin nombre o implícitas desde el punto del patrón de expresión regular en el que aparece el elemento. Las capturas se deshabilitan hasta el final del modelo o hasta que la opción `(-n)` habilita las capturas sin nombre o implícitas. Para obtener más información, consulte [Construcciones misceláneas](miscellaneous-constructs-in-regular-expressions.md).
 
 - Use la opción `n` del elemento de lenguaje `(?imnsx:subexpression)`. Esta opción deshabilita todas las capturas sin nombre o implícitas en `subexpression`. Las capturas por grupos de captura anidados sin nombre o implícitos también se deshabilitan.
 
@@ -273,6 +273,6 @@ Puede deshabilitar las capturas de una de las maneras siguientes:
 
 |Title|Descripción|
 |-----------|-----------------|
-|[Detalles del comportamiento de expresiones regulares](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|Examina la implementación del motor de expresiones regulares de .NET. El tema se centra en la flexibilidad de las expresiones regulares y explica la responsabilidad del desarrollador para garantizar un funcionamiento eficaz y sólido del motor de expresiones regulares.|
-|[Retroceso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|Explica qué es el retroceso y cómo afecta al rendimiento de las expresiones regulares, y examine los elementos del lenguaje que proporcionan alternativas al retroceso.|
-|[Lenguaje de expresiones regulares: referencia rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|Describe los elementos del lenguaje de expresiones regulares de .NET y proporciona vínculos a documentación detallada sobre cada elemento del lenguaje.|
+|[Detalles del comportamiento de expresiones regulares](details-of-regular-expression-behavior.md)|Examina la implementación del motor de expresiones regulares de .NET. El tema se centra en la flexibilidad de las expresiones regulares y explica la responsabilidad del desarrollador para garantizar un funcionamiento eficaz y sólido del motor de expresiones regulares.|
+|[Retroceso](backtracking-in-regular-expressions.md)|Explica qué es el retroceso y cómo afecta al rendimiento de las expresiones regulares, y examine los elementos del lenguaje que proporcionan alternativas al retroceso.|
+|[Lenguaje de expresiones regulares: referencia rápida](regular-expression-language-quick-reference.md)|Describe los elementos del lenguaje de expresiones regulares de .NET y proporciona vínculos a documentación detallada sobre cada elemento del lenguaje.|

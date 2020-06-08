@@ -13,19 +13,19 @@ helpviewer_keywords:
 - stopping asynchronous operations
 - blocking application execution
 ms.assetid: 3e32daf2-8161-4e8f-addd-9fd9ff101b03
-ms.openlocfilehash: 16b5a297c13cd9096548ed489e4994b72a48da67
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6184e52c3f6e39e452331af27b83520e498062aa
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73121427"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289933"
 ---
 # <a name="blocking-application-execution-using-an-asyncwaithandle"></a>Bloquear la ejecución de una aplicación mediante AsyncWaitHandle
 Las aplicaciones que no pueden seguir realizando otro trabajo mientras esperan los resultados de una operación asincrónica se deben bloquear hasta que se complete la operación. Use una de las opciones siguientes para bloquear el subproceso principal de la aplicación mientras se espera a que se complete una operación asincrónica:  
   
 - Use la propiedad <xref:System.IAsyncResult.AsyncWaitHandle%2A> de la interfaz <xref:System.IAsyncResult> devuelta por el método **Begin**_OperationName_ de la operación asincrónica. Este método se muestra en este tema.  
   
-- Llamar al método **End**_OperationName_ para operaciones asincrónicas. Para ver un ejemplo que ilustre este método, consulte [Bloquear la ejecución de una aplicación al finalizar una operación asincrónica](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md).  
+- Llamar al método **End**_OperationName_ para operaciones asincrónicas. Para ver un ejemplo que ilustre este método, consulte [Bloquear la ejecución de una aplicación al finalizar una operación asincrónica](blocking-application-execution-by-ending-an-async-operation.md).  
   
  Las aplicaciones que usan uno o varios objetos <xref:System.Threading.WaitHandle> para el bloqueo hasta que se completa una operación asincrónica normalmente llamarán al método **Begin**_OperationName_, realizarán cualquier trabajo que se pueda realizar sin los resultados de la operación y luego se bloquearán hasta que se completen las operaciones asincrónicas. Una aplicación puede bloquearse en una sola operación si llama a uno de los métodos <xref:System.Threading.WaitHandle.WaitOne%2A> con el uso de <xref:System.IAsyncResult.AsyncWaitHandle%2A>. Para realizar el bloqueo mientras se espera a que finalicen una serie de operaciones asincrónicas, almacene los objetos <xref:System.IAsyncResult.AsyncWaitHandle%2A> asociados en una matriz y llame a uno de los métodos <xref:System.Threading.WaitHandle.WaitAll%2A>. Para realizar el bloqueo mientras se espera a que finalice cualquier serie de operaciones asincrónicas, almacene los objetos <xref:System.IAsyncResult.AsyncWaitHandle%2A> asociados en una matriz y llame a uno de los métodos <xref:System.Threading.WaitHandle.WaitAny%2A>.  
   
@@ -37,5 +37,5 @@ Las aplicaciones que no pueden seguir realizando otro trabajo mientras esperan l
   
 ## <a name="see-also"></a>Vea también
 
-- [Modelo asincrónico basado en eventos (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
-- [Event-based Asynchronous Pattern Overview](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) (Información general sobre el modelo asincrónico basado en eventos)
+- [Modelo asincrónico basado en eventos (EAP)](event-based-asynchronous-pattern-eap.md)
+- [Event-based Asynchronous Pattern Overview](event-based-asynchronous-pattern-overview.md) (Información general sobre el modelo asincrónico basado en eventos)

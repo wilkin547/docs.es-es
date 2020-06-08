@@ -6,12 +6,12 @@ helpviewer_keywords:
 - addmodule compiler option [Visual Basic]
 - -addmodule compiler option [Visual Basic]
 ms.assetid: fb4b89d4-4926-4f20-868d-427fa28497b2
-ms.openlocfilehash: dd98b45d75ff421dc81666ed47695132a49bfa3a
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 9e8146497d63d949f138d6cd08c9ea8c7b03c651
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524479"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414316"
 ---
 # <a name="-addmodule"></a>-addmodule
 Hace que el compilador facilite al proyecto que se está compilando toda la información de tipos presente en los archivos especificados.  
@@ -31,9 +31,9 @@ Hace que el compilador facilite al proyecto que se está compilando toda la info
   
  Todos los módulos agregados con `-addmodule` deben encontrarse en el mismo directorio que el archivo de salida en tiempo de ejecución. Es decir, se puede especificar un módulo de cualquier directorio en el tiempo de compilación, pero el módulo debe encontrarse en el directorio de la aplicación en tiempo de ejecución. Si no es así, obtendrá un error <xref:System.TypeLoadException>.  
   
- Si especifica (implícita o explícitamente) cualquier opción [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md) que no sea `-target:module` con `-addmodule`, los archivos que pase a `-addmodule` se convertirán en parte del ensamblado del proyecto. Se requiere un ensamblado para ejecutar un archivo de salida que tenga uno o más archivos agregados con `-addmodule`.  
+ Si especifica (implícita o explícitamente) cualquier opción [-target (Visual Basic)](target.md) que no sea `-target:module` con `-addmodule`, los archivos que pase a `-addmodule` se convertirán en parte del ensamblado del proyecto. Se requiere un ensamblado para ejecutar un archivo de salida que tenga uno o más archivos agregados con `-addmodule`.  
   
- Use [-reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md) para importar metadatos de un archivo que contenga un ensamblado.  
+ Use [-reference (Visual Basic)](reference.md) para importar metadatos de un archivo que contenga un ensamblado.  
   
 > [!NOTE]
 > La opción `-addmodule` no está disponible en el entorno de desarrollo de Visual Studio; solo está disponible cuando se compila desde la línea de comandos.  
@@ -51,7 +51,7 @@ Hace que el compilador facilite al proyecto que se está compilando toda la info
   
 ## <a name="see-also"></a>Vea también
 
-- [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
-- [-reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
-- [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Compilador de línea de comandos de Visual Basic](index.md)
+- [-target (Visual Basic)](target.md)
+- [-reference (Visual Basic)](reference.md)
+- [Líneas de comandos de compilación de ejemplo](sample-compilation-command-lines.md)

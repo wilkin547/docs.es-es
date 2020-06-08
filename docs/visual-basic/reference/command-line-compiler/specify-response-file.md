@@ -4,12 +4,12 @@ ms.date: 03/13/2018
 helpviewer_keywords:
 - '@ (Specify Response File) compiler option [Visual Basic]'
 ms.assetid: a6847eaa-e5f9-4303-9421-45b55484b9ca
-ms.openlocfilehash: c578495bbba0efee79f02da284c7feffb8c12fab
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 91cf1b5a55d16ab47a83fbd259dd1d83d8e9c31a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348549"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403101"
 ---
 # <a name="-specify-response-file-visual-basic"></a>@ (Especificar archivo de respuesta, Visual Basic)
 
@@ -40,7 +40,7 @@ En un archivo de respuesta, puede haber varias opciones del compilador y archivo
 
 Las opciones especificadas en la línea de comandos se pueden combinar con las opciones especificadas en uno o varios archivos de respuesta. El compilador procesa las opciones de comando a medida que las va encontrando. Por tanto, los argumentos de línea de comandos pueden reemplazar las opciones enumeradas anteriormente en archivos de respuesta. Por el contrario, las opciones en un archivo de respuesta reemplazan las opciones enumeradas anteriormente en la línea de comandos o en otros archivos de respuesta.
 
-Visual Basic proporciona el archivo Vbc.rsp, que se encuentra en el mismo directorio que el archivo Vbc.exe. El archivo Vbc.rsp se incluye de forma predeterminada, a menos que se use la opción `-noconfig`. Para más información, vea [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md).
+Visual Basic proporciona el archivo Vbc.rsp, que se encuentra en el mismo directorio que el archivo Vbc.exe. El archivo Vbc.rsp se incluye de forma predeterminada, a menos que se use la opción `-noconfig`. Para más información, vea [-noconfig](noconfig.md).
 
 > [!NOTE]
 > La opción `@` no está disponible en el entorno de desarrollo de Visual Studio; solo está disponible cuando se compila desde la línea de comandos.
@@ -67,6 +67,6 @@ vbc @file1.rsp
 
 ## <a name="see-also"></a>Vea también
 
-- [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
-- [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Compilador de línea de comandos de Visual Basic](index.md)
+- [-noconfig](noconfig.md)
+- [Líneas de comandos de compilación de ejemplo](sample-compilation-command-lines.md)

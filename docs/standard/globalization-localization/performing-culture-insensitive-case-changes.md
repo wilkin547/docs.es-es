@@ -15,19 +15,19 @@ helpviewer_keywords:
 - String.ToUpper method
 - culture parameter
 ms.assetid: 822d551c-c69a-4191-82f4-183d82c9179c
-ms.openlocfilehash: 7b2dee03619e24c5a2845699a06e88abab0c594b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6baef7b0a5bbdacd33d84df01b1aa943897a9e3d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160136"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276821"
 ---
 # <a name="performing-culture-insensitive-case-changes"></a>Realizar cambios de mayúsculas y minúsculas que no tienen en cuenta las referencias culturales
 Los métodos <xref:System.String.ToUpper%2A?displayProperty=nameWithType>, <xref:System.String.ToLower%2A?displayProperty=nameWithType>, <xref:System.Char.ToUpper%2A?displayProperty=nameWithType> y <xref:System.Char.ToLower%2A?displayProperty=nameWithType> disponen de sobrecargas que no aceptan ningún parámetro. De forma predeterminada, estas sobrecargas sin parámetros realizan cambios de mayúsculas y minúsculas en función del valor de <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>. Esto produce resultados que tienen en cuenta las mayúsculas y minúsculas y que pueden cambiar en función de la referencia cultural. Para aclarar si desea cambios de mayúsculas y minúsculas que tengan en cuenta las referencias culturales o que no las tengan en cuenta, debe usar las sobrecargas de esos métodos que necesitan la especificación explícita de un parámetro `culture`. En el caso de cambios en el uso de mayúsculas y minúsculas dependientes de la referencia cultural, especifique `CultureInfo.CurrentCulture` para el parámetro `culture`. Si se trata de cambios en el uso de mayúsculas y minúsculas independientes de la referencia cultural, especifique `CultureInfo.InvariantCulture` para el parámetro `culture`.  
   
  A menudo, las cadenas se convierten a un uso estándar de mayúsculas y minúsculas, para permitir una búsqueda más fácil posteriormente. Cuando se usan las cadenas de este modo, se debe especificar `CultureInfo.InvariantCulture` para el parámetro `culture`, ya que el valor de <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> podría cambiar desde el momento en que se hacen los cambios de mayúsculas y minúsculas hasta el momento en que se realiza la búsqueda.  
   
- Si una decisión de seguridad se basa en una operación de cambio de mayúsculas y minúsculas, la operación debe ser independiente de la referencia cultural para asegurarse de que el resultado no se vea afectado por el valor de `CultureInfo.CurrentCulture`. Consulte la sección "Comparaciones de cadenas que usan la referencia cultural actual" del artículo [Prácticas recomendadas para utilizar las cadenas en .NET](../../../docs/standard/base-types/best-practices-strings.md) para obtener un ejemplo que muestra cómo las operaciones de cadenas que tienen en cuenta la referencia cultural pueden generar resultados incoherentes.  
+ Si una decisión de seguridad se basa en una operación de cambio de mayúsculas y minúsculas, la operación debe ser independiente de la referencia cultural para asegurarse de que el resultado no se vea afectado por el valor de `CultureInfo.CurrentCulture`. Consulte la sección "Comparaciones de cadenas que usan la referencia cultural actual" del artículo [Prácticas recomendadas para utilizar las cadenas en .NET](../base-types/best-practices-strings.md) para obtener un ejemplo que muestra cómo las operaciones de cadenas que tienen en cuenta la referencia cultural pueden generar resultados incoherentes.  
   
 ## <a name="using-the-stringtoupper-and-stringtolower-methods"></a>Utilizar los métodos String.ToUpper y String.ToLower  
  Para lograr claridad en el código, se recomienda usar siempre sobrecargas de los métodos `String.ToUpper` y `String.ToLower` que permiten especificar explícitamente un parámetro `culture`. Por ejemplo, en el siguiente código se realiza la búsqueda de un identificador. La operación `key.ToLower` tiene en cuenta las referencias culturales de manera predeterminada, pero este comportamiento no está claro leyendo el código.  
@@ -71,4 +71,4 @@ static object LookupKey(string key)
 - <xref:System.String.ToLower%2A?displayProperty=nameWithType>
 - <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>
 - <xref:System.Char.ToLower%2A?displayProperty=nameWithType>
-- [Realizar operaciones de cadenas que no distinguen entre referencias culturales](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+- [Realizar operaciones de cadenas que no distinguen entre referencias culturales](performing-culture-insensitive-string-operations.md)

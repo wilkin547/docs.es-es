@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: f3d97d53-614d-4a04-a174-87965b7405f6
-ms.openlocfilehash: 2d991a7835d22af2c780b020d6884f626908665e
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 5b0f9bea33346083ce0015fbf3cdfeb0e0ea1181
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82796176"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287667"
 ---
 # <a name="inferring-schemas-from-xml-documents"></a>Deducción de esquemas a partir de documentos XML
 Este tema describe cómo utilizar la clase <xref:System.Xml.Schema.XmlSchemaInference> para deducir un lenguaje de definición de esquema XML (XSD) a partir de la estructura de un documento XML.  
@@ -83,7 +83,7 @@ Este tema describe cómo utilizar la clase <xref:System.Xml.Schema.XmlSchemaInfe
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Xml.Schema.XmlSchemaInference>
-- [Modelo de objetos de esquema XML (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
-- [Deducción de esquema XML](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)
-- [Reglas para deducir los tipos de nodo de esquema y estructura](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)
-- [Reglas para deducir tipos simples](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)
+- [Modelo de objetos de esquema XML (SOM)](xml-schema-object-model-som.md)
+- [Deducción de esquema XML](inferring-an-xml-schema.md)
+- [Reglas para deducir los tipos de nodo de esquema y estructura](rules-for-inferring-schema-node-types-and-structure.md)
+- [Reglas para deducir tipos simples](rules-for-inferring-simple-types.md)

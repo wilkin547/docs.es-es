@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 8a5ea56c-0140-4b51-8997-875ae6a8e0cb
-ms.openlocfilehash: c921331b00fe137d4ad52d62951e8c161768dfae
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: adc1a10bb9acb14ee88589c13e28c49773e42100
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711147"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291596"
 ---
 # <a name="building-xml-schemas"></a>Compilar esquemas XML
 Las clases del espacio de nombres <xref:System.Xml.Schema?displayProperty=nameWithType> se asignan a las estructuras definidas en la recomendación de esquemas XML del W3C (World Wide Web Consortium) y se pueden utilizar para compilar esquemas XML en memoria.  
@@ -88,10 +88,10 @@ Las clases del espacio de nombres <xref:System.Xml.Schema?displayProperty=nameWi
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre el Modelo de objetos de esquema XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
-- [Lectura y escritura de esquemas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
-- [Recorrido de esquemas XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
-- [Edición de esquemas XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)
-- [Inclusión o importación de esquemas XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
-- [XmlSchemaSet para compilación de esquemas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
-- [Conjunto de información posterior a la compilación de esquemas](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+- [Información general sobre el Modelo de objetos de esquema XML](xml-schema-object-model-overview.md)
+- [Lectura y escritura de esquemas XML](reading-and-writing-xml-schemas.md)
+- [Recorrido de esquemas XML](traversing-xml-schemas.md)
+- [Edición de esquemas XML](editing-xml-schemas.md)
+- [Inclusión o importación de esquemas XML](including-or-importing-xml-schemas.md)
+- [XmlSchemaSet para compilación de esquemas](xmlschemaset-for-schema-compilation.md)
+- [Conjunto de información posterior a la compilación de esquemas](post-schema-compilation-infoset.md)

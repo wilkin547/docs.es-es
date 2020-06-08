@@ -12,12 +12,12 @@ helpviewer_keywords:
 - time [.NET Framework], round-trip values
 - formatting strings [.NET Framework], round-trip values
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
-ms.openlocfilehash: 3aa615dc7d7d1d49dce4897f8508b5210b364fc0
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: 60483a6e29c65fc0c5803e8084053d53d9fc3c37
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635138"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290453"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>Procedimiento para valores de fecha y hora de ida y vuelta
 
@@ -99,5 +99,5 @@ Para estos ejemplos se necesita lo siguiente:
 
 ## <a name="see-also"></a>Vea también
 
-- [Elección entre DateTime, DateTimeOffset, TimeSpan y TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md)
-- [Cadenas con formato de fecha y hora estándar](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Elección entre DateTime, DateTimeOffset, TimeSpan y TimeZoneInfo](../datetime/choosing-between-datetime.md)
+- [Cadenas con formato de fecha y hora estándar](standard-date-and-time-format-strings.md)

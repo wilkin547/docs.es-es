@@ -3,12 +3,12 @@ title: Modificación de nodos, contenido y valores en un documento XML
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
-ms.openlocfilehash: 4a53ba4fe16a3653b1be380da49e6b75cb347a28
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: f544b7d8472285095af9a71b1c24f94f61f93bc6
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710679"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288828"
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a>Modificación de nodos, contenido y valores en un documento XML
 Existen muchas formas de modificar los nodos y el contenido de un documento. Puede realizar lo siguiente:  
@@ -46,4 +46,4 @@ Existen muchas formas de modificar los nodos y el contenido de un documento. Pue
   
 ## <a name="see-also"></a>Vea también
 
-- [Document Object Model (DOM) para XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [Document Object Model (DOM) para XML](xml-document-object-model-dom.md)

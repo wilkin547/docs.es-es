@@ -8,18 +8,18 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to create aggregate function
 ms.assetid: 5a70dd49-ab2a-4798-b551-196ee7042b1a
-ms.openlocfilehash: 8168c89a6edecd5f7e33a710c9a89c92a6f82005
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 644d6b6f929e040a0fe688c18c774de6f434c4b3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588229"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290777"
 ---
 # <a name="how-to-write-a-custom-plinq-aggregate-function"></a>Cómo: Escribir una función de agregado personalizada de PLINQ
 En este ejemplo se muestra cómo utilizar el método <xref:System.Linq.ParallelEnumerable.Aggregate%2A> para aplicar una función de agregación personalizada a una secuencia de origen.  
   
 > [!WARNING]
-> La finalidad de este ejemplo es mostrar el uso, y puede que su ejecución no sea tan rápida como la de la consulta LINQ to Objects secuencial equivalente. Para más información sobre la velocidad, vea [Introducción a la velocidad en PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
+> La finalidad de este ejemplo es mostrar el uso, y puede que su ejecución no sea tan rápida como la de la consulta LINQ to Objects secuencial equivalente. Para más información sobre la velocidad, vea [Introducción a la velocidad en PLINQ](understanding-speedup-in-plinq.md).  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se calcula la desviación estándar de una secuencia de enteros.  
@@ -34,4 +34,4 @@ En este ejemplo se muestra cómo utilizar el método <xref:System.Linq.ParallelE
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Linq.ParallelEnumerable>
-- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
+- [Parallel LINQ (PLINQ)](introduction-to-plinq.md)

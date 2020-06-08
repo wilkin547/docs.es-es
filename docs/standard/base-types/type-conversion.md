@@ -24,12 +24,12 @@ helpviewer_keywords:
 - Implicit operator
 - data types [.NET Framework], converting
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
-ms.openlocfilehash: 0e88303f2bac2dae90a97f9d2de92af1d2a0f80d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 33b8c49033c901917e674879048558799f484194
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73976490"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291661"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>Conversión de tipos en .NET Framework
 Cada valor tiene un tipo asociado, que define atributos como la cantidad de espacio asignado al valor, el intervalo de valores posibles que puede tener y los miembros que ofrece. Muchos valores se pueden expresar como más de un tipo. Por ejemplo, el valor 4 se puede expresar como un entero o como un valor de punto flotante. La conversión de tipo crea un valor en un nuevo tipo que es equivalente al valor de un tipo antiguo, pero no conserva necesariamente la identidad (o valor exacto) del objeto original.  
@@ -157,7 +157,7 @@ Cada valor tiene un tipo asociado, que define atributos como la cantidad de espa
  [!code-csharp[Conceptual.Conversion#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/convert1.cs#9)]
  [!code-vb[Conceptual.Conversion#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/convert1.vb#9)]  
   
- Para obtener una tabla en la que se muestra una lista de conversiones de restricción y ampliación admitidas por la clase <xref:System.Convert>, vea [Tablas de conversiones de tipos](../../../docs/standard/base-types/conversion-tables.md).  
+ Para obtener una tabla en la que se muestra una lista de conversiones de restricción y ampliación admitidas por la clase <xref:System.Convert>, vea [Tablas de conversiones de tipos](conversion-tables.md).  
 
 ### <a name="custom-conversions-with-the-changetype-method"></a>Conversiones personalizadas con el método ChangeType  
  Además de admitir las conversiones en cada uno de los tipos base, la clase <xref:System.Convert> se puede usar para convertir un tipo personalizado en uno o varios tipos predefinidos. El método <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType>, que a su vez contiene una llamada al método <xref:System.IConvertible.ToType%2A?displayProperty=nameWithType> del parámetro `value`, realiza esta conversión. Esto significa que el objeto representado por el parámetro `value` debe proporcionar una implementación de la interfaz <xref:System.IConvertible>.  
@@ -194,4 +194,4 @@ Cada valor tiene un tipo asociado, que define atributos como la cantidad de espa
 
 - <xref:System.Convert?displayProperty=nameWithType>
 - <xref:System.IConvertible>
-- [Tablas de conversión de tipos](../../../docs/standard/base-types/conversion-tables.md)
+- [Tablas de conversión de tipos](conversion-tables.md)

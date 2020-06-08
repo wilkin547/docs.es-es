@@ -7,12 +7,12 @@ helpviewer_keywords:
 - application development [.NET Framework], console
 - console applications
 ms.assetid: c21fb997-9f0e-40a5-8741-f73bba376bd8
-ms.openlocfilehash: 1ec65795a7f3d706b2878dd8a8397ae42b61ce7e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3c2031e2d038f32f6392a2eb734e4f8851d7b936
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73132862"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291635"
 ---
 # <a name="building-console-applications-in-the-net-framework"></a>Compilar aplicaciones de consola en .NET Framework
 Las aplicaciones de .NET Framework pueden usar la clase <xref:System.Console?displayProperty=nameWithType> para leer y escribir caracteres en la consola. Los datos de la consola se leen desde el flujo de entrada estándar, los datos de la consola se escriben en el flujo de salida estándar y los datos de error de la consola se escriben en el flujo de salida de error estándar. Estos flujos se asocian automáticamente a la consola cuando se inicia la aplicación y se presentan como las propiedades <xref:System.Console.In%2A>, <xref:System.Console.Out%2A> y <xref:System.Console.Error%2A>, respectivamente.  
@@ -28,9 +28,9 @@ Las aplicaciones de .NET Framework pueden usar la clase <xref:System.Console?dis
   
  Las aplicaciones de consola carecen de un bombeo de mensajes que se inicie de forma predeterminada. Por tanto, las llamadas de la consola a los temporizadores de Microsoft Win32 pueden producir errores.  
   
- La clase **System.Console** tiene métodos que pueden leer caracteres individuales o líneas enteras de la consola. Otros métodos convierten datos y cadenas de formato y, después, escriben las cadenas con formato en la consola. Para obtener más información sobre cómo dar formato a las cadenas, vea [Formatting Types](../../docs/standard/base-types/formatting-types.md) (Aplicar formato a tipos).  
+ La clase **System.Console** tiene métodos que pueden leer caracteres individuales o líneas enteras de la consola. Otros métodos convierten datos y cadenas de formato y, después, escriben las cadenas con formato en la consola. Para obtener más información sobre cómo dar formato a las cadenas, vea [Formatting Types](base-types/formatting-types.md) (Aplicar formato a tipos).  
   
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Console?displayProperty=nameWithType>
-- [Aplicación de formato a tipos](../../docs/standard/base-types/formatting-types.md)
+- [Aplicación de formato a tipos](base-types/formatting-types.md)

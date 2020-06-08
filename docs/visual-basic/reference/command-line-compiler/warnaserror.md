@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /warnaserror compiler option [Visual Basic]
 - -warnaserror compiler option [Visual Basic]
 ms.assetid: 49819f1d-a1bd-4201-affe-5afe6d9712e1
-ms.openlocfilehash: f9ca5575e2a042d68fc490494f2e86991d58b80c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 94a8b43a891df9837925869e17fac4536a995264
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351705"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414277"
 ---
 # <a name="-warnaserror-visual-basic"></a>-warnaserror (Visual Basic)
 Causa que el compilador trate como un error la primera ocurrencia de una advertencia.  
@@ -37,7 +37,7 @@ Causa que el compilador trate como un error la primera ocurrencia de una adverte
  Si desea que solo algunas advertencias específicas se traten como errores, puede especificar una lista separada por comas de números de advertencias que se deben tratar como errores.  
   
 > [!NOTE]
-> La opción `-warnaserror` no controla cómo se muestran las advertencias. Use la opción [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md) para deshabilitar las advertencias.  
+> La opción `-warnaserror` no controla cómo se muestran las advertencias. Use la opción [-nowarn](nowarn.md) para deshabilitar las advertencias.  
   
 |Para establecer -warnaserror a fin de tratar todas las advertencias como errores en el IDE de Visual Studio|  
 |---|  
@@ -63,6 +63,6 @@ vbc -warnaserror:42024 t2.vb
   
 ## <a name="see-also"></a>Vea también
 
-- [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Compilador de línea de comandos de Visual Basic](index.md)
+- [Líneas de comandos de compilación de ejemplo](sample-compilation-command-lines.md)
 - [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)

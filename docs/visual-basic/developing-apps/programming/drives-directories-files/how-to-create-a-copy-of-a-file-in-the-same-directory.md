@@ -9,12 +9,12 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: b2fdda86-e666-42c2-9706-9527e9fa68ff
-ms.openlocfilehash: 33a4f5424ac50de7b5dc988034ca15127dc1ed02
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 741f0c80ba268369ebdd598460e9d5fa13d09571
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74348818"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401685"
 ---
 # <a name="how-to-create-a-copy-of-a-file-in-the-same-directory-in-visual-basic"></a>Cómo: Crear una copia de un archivo en el mismo directorio en Visual Basic
 
@@ -69,7 +69,7 @@ Use el método `My.Computer.FileSystem.CopyFile` para copiar archivos. Con los p
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>
 - <xref:Microsoft.VisualBasic.FileIO.UICancelOption>
-- [Copiar archivos con un modelo específico en un directorio](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)
-- [Crear una copia de un archivo en un directorio diferente](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)
-- [Copiar un directorio en otro directorio](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)
-- [Cambiar el nombre de un archivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)
+- [Copiar archivos con un modelo específico en un directorio](how-to-copy-files-with-a-specific-pattern-to-a-directory.md)
+- [Crear una copia de un archivo en un directorio diferente](how-to-create-a-copy-of-a-file-in-a-different-directory.md)
+- [Copiar un directorio en otro directorio](how-to-copy-a-directory-to-another-directory.md)
+- [Cambiar el nombre de un archivo](how-to-rename-a-file.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - IObservable(Of T) interface
 - observer design pattern [.NET Framework]
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
-ms.openlocfilehash: 817337cec604a431f9f7d4eacb04378ee0d3c227
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5794cd1ec9b63a6e151b35c28e09e29f86dcfac6
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73131571"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291271"
 ---
 # <a name="observer-design-pattern"></a>Modelo de diseño de observador
 
@@ -93,6 +93,6 @@ El ejemplo siguiente contiene el punto de entrada de la aplicación que crea una
 
 |Título|Description|
 |-----------|-----------------|
-|[Procedimientos recomendados para modelos de diseño de observador](../../../docs/standard/events/observer-design-pattern-best-practices.md)|Describe los procedimientos recomendados que deben adoptarse en el desarrollo de aplicaciones que implementan el modelo de diseño de observador.|
-|[Implementar un proveedor](../../../docs/standard/events/how-to-implement-a-provider.md)|Proporciona una implementación detallada de un proveedor para una aplicación de supervisión de temperatura.|
-|[Implementar un observador](../../../docs/standard/events/how-to-implement-an-observer.md)|Proporciona una implementación detallada de un observador para una aplicación de supervisión de temperatura.|
+|[Procedimientos recomendados para modelos de diseño de observador](observer-design-pattern-best-practices.md)|Describe los procedimientos recomendados que deben adoptarse en el desarrollo de aplicaciones que implementan el modelo de diseño de observador.|
+|[Implementar un proveedor](how-to-implement-a-provider.md)|Proporciona una implementación detallada de un proveedor para una aplicación de supervisión de temperatura.|
+|[Implementar un observador](how-to-implement-an-observer.md)|Proporciona una implementación detallada de un observador para una aplicación de supervisión de temperatura.|

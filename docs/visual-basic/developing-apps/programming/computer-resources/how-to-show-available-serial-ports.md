@@ -7,12 +7,12 @@ helpviewer_keywords:
 - My.Computer.Ports object
 - ports, serial port availability
 ms.assetid: eaf2ee5a-8103-4e10-a205-ed1d4db120ba
-ms.openlocfilehash: c7e5f797c1d098a3b2d01745b949ed50375ea7e8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e7a9166f1879ed0850ca893bed307a0318298bbb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74345571"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401828"
 ---
 # <a name="how-to-show-available-serial-ports-in-visual-basic"></a>Cómo: Mostrar los puertos serie disponibles en Visual Basic
 
@@ -36,7 +36,7 @@ En este tema se explica cómo usar `My.Computer.Ports` para mostrar los puertos 
   
 - Una referencia de proyecto a System.Windows.Forms.dll.  
   
-- Acceso a los miembros del espacio de nombres <xref:System.Windows.Forms>. Agregue una instrucción `Imports` si no hay nombres de miembros completos en el código. Para obtener más información, consulte [Instrucción Imports (Tipo y espacio de nombres de .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+- Acceso a los miembros del espacio de nombres <xref:System.Windows.Forms>. Agregue una instrucción `Imports` si no hay nombres de miembros completos en el código. Para obtener más información, consulte [Instrucción Imports (Tipo y espacio de nombres de .NET)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 - Que su formulario tenga un control <xref:System.Windows.Forms.ListBox> denominado `ListBox1`.  
   
@@ -50,6 +50,6 @@ En este tema se explica cómo usar `My.Computer.Ports` para mostrar los puertos 
 ## <a name="see-also"></a>Vea también
 
 - <xref:Microsoft.VisualBasic.Devices.Ports>
-- [Marcar a través de módems conectados a puertos serie](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)
-- [Enviar cadenas a puertos serie](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)
-- [Recibir cadenas de puertos serie](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)
+- [Marcar a través de módems conectados a puertos serie](how-to-dial-modems-attached-to-serial-ports.md)
+- [Enviar cadenas a puertos serie](how-to-send-strings-to-serial-ports.md)
+- [Recibir cadenas de puertos serie](how-to-receive-strings-from-serial-ports.md)
