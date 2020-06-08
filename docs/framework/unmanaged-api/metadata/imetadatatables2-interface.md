@@ -14,33 +14,33 @@ helpviewer_keywords:
 ms.assetid: c788bb7c-0212-4b6d-b840-22e8c8829028
 topic_type:
 - apiref
-ms.openlocfilehash: ff79f0268226739ec9cf6abeeda791bf45644a40
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e81055163e5cbd64ecfbb412704e43e7663ccd45
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432345"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501084"
 ---
-# <a name="imetadatatables2-interface"></a><span data-ttu-id="9308d-102">IMetaDataTables2 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="9308d-102">IMetaDataTables2 Interface</span></span>
-<span data-ttu-id="9308d-103">Extiende [IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md) para incluir métodos para trabajar con flujos de metadatos.</span><span class="sxs-lookup"><span data-stu-id="9308d-103">Extends [IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md) to include methods for working with metadata streams.</span></span>  
+# <a name="imetadatatables2-interface"></a><span data-ttu-id="153f6-102">IMetaDataTables2 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="153f6-102">IMetaDataTables2 Interface</span></span>
+<span data-ttu-id="153f6-103">Extiende [IMetaDataTables](imetadatatables-interface.md) para incluir métodos para trabajar con flujos de metadatos.</span><span class="sxs-lookup"><span data-stu-id="153f6-103">Extends [IMetaDataTables](imetadatatables-interface.md) to include methods for working with metadata streams.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="9308d-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="9308d-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="153f6-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="153f6-104">Methods</span></span>  
   
-|<span data-ttu-id="9308d-105">Método</span><span class="sxs-lookup"><span data-stu-id="9308d-105">Method</span></span>|<span data-ttu-id="9308d-106">Descripción</span><span class="sxs-lookup"><span data-stu-id="9308d-106">Description</span></span>|  
+|<span data-ttu-id="153f6-105">Método</span><span class="sxs-lookup"><span data-stu-id="153f6-105">Method</span></span>|<span data-ttu-id="153f6-106">Descripción</span><span class="sxs-lookup"><span data-stu-id="153f6-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="9308d-107">GetMetaDataStorage (método)</span><span class="sxs-lookup"><span data-stu-id="9308d-107">GetMetaDataStorage Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastorage-method.md)|<span data-ttu-id="9308d-108">Obtiene el tamaño y el contenido de los metadatos almacenados en la sección especificada.</span><span class="sxs-lookup"><span data-stu-id="9308d-108">Gets the size and contents of the metadata stored in the specified section.</span></span>|  
-|[<span data-ttu-id="9308d-109">GetMetaDataStreamInfo (método)</span><span class="sxs-lookup"><span data-stu-id="9308d-109">GetMetaDataStreamInfo Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastreaminfo-method.md)|<span data-ttu-id="9308d-110">Obtiene el nombre, el tamaño y el contenido de la secuencia de metadatos en el índice especificado.</span><span class="sxs-lookup"><span data-stu-id="9308d-110">Gets the name, size, and contents of the metadata stream at the specified index.</span></span>|  
+|[<span data-ttu-id="153f6-107">Método GetMetaDataStorage</span><span class="sxs-lookup"><span data-stu-id="153f6-107">GetMetaDataStorage Method</span></span>](imetadatatables2-getmetadatastorage-method.md)|<span data-ttu-id="153f6-108">Obtiene el tamaño y el contenido de los metadatos almacenados en la sección especificada.</span><span class="sxs-lookup"><span data-stu-id="153f6-108">Gets the size and contents of the metadata stored in the specified section.</span></span>|  
+|[<span data-ttu-id="153f6-109">Método GetMetaDataStreamInfo</span><span class="sxs-lookup"><span data-stu-id="153f6-109">GetMetaDataStreamInfo Method</span></span>](imetadatatables2-getmetadatastreaminfo-method.md)|<span data-ttu-id="153f6-110">Obtiene el nombre, el tamaño y el contenido de la secuencia de metadatos en el índice especificado.</span><span class="sxs-lookup"><span data-stu-id="153f6-110">Gets the name, size, and contents of the metadata stream at the specified index.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="9308d-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9308d-111">Requirements</span></span>  
- <span data-ttu-id="9308d-112">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9308d-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="153f6-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="153f6-111">Requirements</span></span>  
+ <span data-ttu-id="153f6-112">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="153f6-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9308d-113">**Encabezado:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="9308d-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="153f6-113">**Encabezado:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="153f6-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="9308d-114">**Biblioteca:** Se utiliza como recurso en MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="9308d-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="153f6-114">**Biblioteca:** Se utiliza como recurso en MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="153f6-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="9308d-115">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9308d-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="153f6-115">**.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="153f6-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9308d-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="9308d-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="153f6-116">Consulte también:</span><span class="sxs-lookup"><span data-stu-id="153f6-116">See also</span></span>
 
-- [<span data-ttu-id="9308d-117">IMetaDataTables (interfaz)</span><span class="sxs-lookup"><span data-stu-id="9308d-117">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="9308d-118">Interfaces de metadatos</span><span class="sxs-lookup"><span data-stu-id="9308d-118">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [<span data-ttu-id="153f6-117">IMetaDataTables (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="153f6-117">IMetaDataTables Interface</span></span>](imetadatatables-interface.md)
+- [<span data-ttu-id="153f6-118">Interfaces de metadatos</span><span class="sxs-lookup"><span data-stu-id="153f6-118">Metadata Interfaces</span></span>](metadata-interfaces.md)
