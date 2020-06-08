@@ -3,12 +3,12 @@ title: Reglas para deducir los tipos de nodo de esquema y estructura
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
-ms.openlocfilehash: 6d66384dea7018bcc3b2dd8fde96f4fa2653f8e8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 381c5fbd3823514de98b38840b8259a417e48fb8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710250"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289088"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>Reglas para deducir los tipos de nodo de esquema y estructura
 Este tema describe cómo el proceso de deducción del esquema traduce los tipos de nodo de un documento XML a una estructura de lenguaje de definición de esquema XML (XSD).  
@@ -35,12 +35,12 @@ Este tema describe cómo el proceso de deducción del esquema traduce los tipos 
 > [!NOTE]
 > Todas las declaraciones `complexType` se deducen como tipos anónimos. El único elemento global deducido es el elemento raíz; todos los demás elementos son locales.  
   
- Para más información sobre el proceso de deducción de esquema, vea [Deducción de esquemas a partir de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Para más información sobre el proceso de deducción de esquema, vea [Deducción de esquemas a partir de documentos XML](inferring-schemas-from-xml-documents.md).  
   
 ### <a name="simple-typed-element"></a>Elemento con establecimiento de tipos simple  
  La siguiente tabla muestra la entrada XML en el método <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> y el esquema XML generado. El elemento en negrita muestra el esquema deducido para el elemento de tipo simple.  
   
- Para más información sobre el proceso de deducción de esquema, vea [Deducción de esquemas a partir de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Para más información sobre el proceso de deducción de esquema, vea [Deducción de esquemas a partir de documentos XML](inferring-schemas-from-xml-documents.md).  
   
 |XML|Schema|  
 |---------|------------|  
@@ -49,7 +49,7 @@ Este tema describe cómo el proceso de deducción del esquema traduce los tipos 
 ### <a name="empty-element"></a>Elemento vacío  
  La siguiente tabla muestra la entrada XML en el método <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> y el esquema XML generado. El elemento en negrita muestra el esquema deducido para el elemento vacío.  
   
- Para más información sobre el proceso de deducción de esquema, vea [Deducción de esquemas a partir de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Para más información sobre el proceso de deducción de esquema, vea [Deducción de esquemas a partir de documentos XML](inferring-schemas-from-xml-documents.md).  
   
 |XML|Schema|  
 |---------|------------|  
@@ -58,7 +58,7 @@ Este tema describe cómo el proceso de deducción del esquema traduce los tipos 
 ### <a name="empty-element-with-attributes"></a>Elemento vacío con atributos  
  La siguiente tabla muestra la entrada XML en el método <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> y el esquema XML generado. Los elementos en negrita muestra el esquema deducido para el elemento vacío con atributos.  
   
- Para más información sobre el proceso de deducción de esquema, vea [Deducción de esquemas a partir de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Para más información sobre el proceso de deducción de esquema, vea [Deducción de esquemas a partir de documentos XML](inferring-schemas-from-xml-documents.md).  
   
 |XML|Schema|  
 |---------|------------|  
@@ -67,7 +67,7 @@ Este tema describe cómo el proceso de deducción del esquema traduce los tipos 
 ### <a name="element-with-attributes-and-simple-content"></a>Elemento con atributos y contenido simple  
  La siguiente tabla muestra la entrada XML en el método <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> y el esquema XML generado. Los elementos en negrita muestran el esquema para un elemento con atributos y contenido simple.  
   
- Para más información sobre el proceso de deducción de esquema, vea [Deducción de esquemas a partir de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Para más información sobre el proceso de deducción de esquema, vea [Deducción de esquemas a partir de documentos XML](inferring-schemas-from-xml-documents.md).  
   
 |XML|Schema|  
 |---------|------------|  
@@ -79,7 +79,7 @@ Este tema describe cómo el proceso de deducción del esquema traduce los tipos 
 > [!NOTE]
 > Incluso si un elemento solo tiene un elemento secundario, se trata todavía como secuencia.  
   
- Para más información sobre el proceso de deducción de esquema, vea [Deducción de esquemas a partir de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Para más información sobre el proceso de deducción de esquema, vea [Deducción de esquemas a partir de documentos XML](inferring-schemas-from-xml-documents.md).  
   
 |XML|Schema|  
 |---------|------------|  
@@ -91,7 +91,7 @@ Este tema describe cómo el proceso de deducción del esquema traduce los tipos 
 > [!NOTE]
 > Incluso si un elemento solo tiene un elemento secundario, se trata todavía como secuencia.  
   
- Para más información sobre el proceso de deducción de esquema, vea [Deducción de esquemas a partir de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Para más información sobre el proceso de deducción de esquema, vea [Deducción de esquemas a partir de documentos XML](inferring-schemas-from-xml-documents.md).  
   
 |XML|Schema|  
 |---------|------------|  
@@ -103,7 +103,7 @@ Este tema describe cómo el proceso de deducción del esquema traduce los tipos 
 > [!NOTE]
 > El atributo `maxOccurs` del elemento `xs:choice` se establece en `"unbounded"` en el esquema deducido.  
   
- Para más información sobre el proceso de deducción de esquema, vea [Deducción de esquemas a partir de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Para más información sobre el proceso de deducción de esquema, vea [Deducción de esquemas a partir de documentos XML](inferring-schemas-from-xml-documents.md).  
   
 |XML|Schema|  
 |---------|------------|  
@@ -115,7 +115,7 @@ Este tema describe cómo el proceso de deducción del esquema traduce los tipos 
 > [!NOTE]
 > El atributo `maxOccurs` del elemento `xs:choice` se establece en `"unbounded"` en el esquema deducido.  
   
- Para más información sobre el proceso de deducción de esquema, vea [Deducción de esquemas a partir de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Para más información sobre el proceso de deducción de esquema, vea [Deducción de esquemas a partir de documentos XML](inferring-schemas-from-xml-documents.md).  
   
 |XML|Schema|  
 |---------|------------|  
@@ -142,12 +142,12 @@ Este tema describe cómo el proceso de deducción del esquema traduce los tipos 
 |Tipo de documento|ignorado.|  
 |Espacios de nombres|ignorado.|  
   
- Para más información sobre el proceso de deducción de esquema, vea [Deducción de esquemas a partir de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ Para más información sobre el proceso de deducción de esquema, vea [Deducción de esquemas a partir de documentos XML](inferring-schemas-from-xml-documents.md).  
   
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Xml.Schema.XmlSchemaInference>
-- [Modelo de objetos de esquema XML (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
-- [Deducción de esquema XML](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)
-- [Deducción de esquemas a partir de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)
-- [Reglas para deducir tipos simples](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)
+- [Modelo de objetos de esquema XML (SOM)](xml-schema-object-model-som.md)
+- [Deducción de esquema XML](inferring-an-xml-schema.md)
+- [Deducción de esquemas a partir de documentos XML](inferring-schemas-from-xml-documents.md)
+- [Reglas para deducir tipos simples](rules-for-inferring-simple-types.md)
