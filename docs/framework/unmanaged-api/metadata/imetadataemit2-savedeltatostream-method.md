@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ecd786e8-f9a4-4190-a6ef-af18e8c6d654
 topic_type:
 - apiref
-ms.openlocfilehash: 7e8376f3a029b0e3ec51a1e7587dd14b3e7530ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a8f46871dde4c664a502c261fc882f3badf0f362
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177423"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492767"
 ---
 # <a name="imetadataemit2savedeltatostream-method"></a>IMetaDataEmit2::SaveDeltaToStream (Método)
 Guarda los cambios de la sesión de edición y continuación actual en la secuencia especificada.  
@@ -36,21 +36,21 @@ HRESULT SaveDeltaToStream (
   
 ## <a name="parameters"></a>Parámetros  
  `pIStream`  
- [en] Un puntero de interfaz a la secuencia grabable en la que se pueden guardar los cambios.  
+ de Puntero de interfaz a la secuencia de escritura en la que se van a guardar los cambios.  
   
  `dwSaveFlags`  
  [in] Reservado. Este valor debe ser cero.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
-- [IMetaDataEmit2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [IMetaDataEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 (Interfaz)](imetadataemit2-interface.md)
+- [IMetaDataEmit (Interfaz)](imetadataemit-interface.md)

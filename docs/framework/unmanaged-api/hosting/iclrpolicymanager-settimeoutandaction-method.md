@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 60454f91-d855-4ddf-bb6d-60a02f5eabab
 topic_type:
 - apiref
-ms.openlocfilehash: efd30ef04c148d5e098110efcb37e50f143884e4
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 02e836601be72d54f561e077cd3c466470bafb25
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703426"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504100"
 ---
 # <a name="iclrpolicymanagersettimeoutandaction-method"></a>ICLRPolicyManager::SetTimeoutAndAction (Método)
 Establece un valor de tiempo de espera para la operación especificada y especifica la acción de la Directiva que debe realizar el Common Language Runtime (CLR) cuando se produce la operación.  
@@ -65,8 +65,8 @@ HRESULT SetTimeoutAndAction (
 |E_FAIL|Se produjo un error grave desconocido. Después de que un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
 |E_INVALIDARG|No se puede establecer un tiempo de espera para el especificado `operation` o se proporcionó un valor no válido para `action` .|  
   
-## <a name="remarks"></a>Observaciones  
- `SetTimeoutAndAction`encapsula las capacidades de los métodos [ICLRPolicyManager:: setTimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-settimeout-method.md) y [ICLRPolicyManager:: SetActionOnTimeout (](iclrpolicymanager-setactionontimeout-method.md) , y se puede llamar en lugar de llamadas secuenciales a estos dos métodos.  
+## <a name="remarks"></a>Comentarios  
+ `SetTimeoutAndAction`encapsula las capacidades de los métodos [ICLRPolicyManager:: setTimeout](iclrpolicymanager-settimeout-method.md) y [ICLRPolicyManager:: SetActionOnTimeout (](iclrpolicymanager-setactionontimeout-method.md) , y se puede llamar en lugar de llamadas secuenciales a estos dos métodos.  
   
 > [!IMPORTANT]
 > No todos los valores de acción de Directiva se pueden especificar como el comportamiento de tiempo de espera para las operaciones CLR. Vea las secciones comentarios de los temas de estos dos métodos para ver los valores válidos.  
@@ -80,7 +80,7 @@ HRESULT SetTimeoutAndAction (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también:
 
 - [EClrOperation (Enumeración)](eclroperation-enumeration.md)
 - [EPolicyAction (Enumeración)](epolicyaction-enumeration.md)

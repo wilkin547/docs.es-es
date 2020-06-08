@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8cdac941-8b94-4497-b874-4e571785f3fe
 topic_type:
 - apiref
-ms.openlocfilehash: 0b1ecd1266528f8a08ef114de2f111dd0f71ca8b
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: a2a3d58e0631fceab96c32f9d86fef25973fed84
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866936"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500668"
 ---
 # <a name="functionleave2-function"></a>FunctionLeave2 (Función)
 Notifica al generador de perfiles que una función está a punto de volver al autor de la llamada y proporciona información sobre el marco de pila y el valor devuelto de la función.  
@@ -35,19 +35,19 @@ void __stdcall FunctionLeave2 (
 );  
 ```  
   
-## <a name="parameters"></a>Parameters
+## <a name="parameters"></a>Parámetros
 
 - `funcId`
 
-  \[en] el identificador de la función que devuelve.
+  \[in] el identificador de la función que devuelve.
 
 - `clientData`
 
-  \[in] identificador de la función reasignada, que el generador de perfiles especificó previamente a través de la función [FunctionIDMapper](functionidmapper-function.md) .
+  \[in] el identificador de la función reasignada, que el generador de perfiles especificó previamente a través de la función [FunctionIDMapper](functionidmapper-function.md) .
 
 - `func`
 
-  \[en] un valor `COR_PRF_FRAME_INFO` que apunta a la información sobre el marco de pila.
+  \[en] un `COR_PRF_FRAME_INFO` valor que señala a la información sobre el marco de pila.
 
   El generador de perfiles debe tratarlo como un identificador opaco que se puede devolver al motor de ejecución en el método [ICorProfilerInfo2:: getfunctioninfo2 (](icorprofilerinfo2-getfunctioninfo2-method.md) .  
   
@@ -55,12 +55,12 @@ void __stdcall FunctionLeave2 (
 
   \[in] un puntero a una estructura de [COR_PRF_FUNCTION_ARGUMENT_RANGE](cor-prf-function-argument-range-structure.md) que especifica la ubicación de memoria del valor devuelto de la función.
 
-  Para tener acceso a la información de los valores devueltos, se debe establecer la marca `COR_PRF_ENABLE_FUNCTION_RETVAL`. El generador de perfiles puede utilizar el método [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) para establecer las marcas de evento.
+  Para tener acceso a la información de los valores devueltos, `COR_PRF_ENABLE_FUNCTION_RETVAL` se debe establecer la marca. El generador de perfiles puede utilizar el método [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) para establecer las marcas de evento.
 
-## <a name="remarks"></a>Notas  
- Los valores de los parámetros `func` y `retvalRange` no son válidos después de que se devuelva la función `FunctionLeave2` porque los valores pueden cambiar o ser destruidos.  
+## <a name="remarks"></a>Comentarios  
+ Los valores de los `func` `retvalRange` parámetros y no son válidos después de que la `FunctionLeave2` función devuelva, ya que los valores pueden cambiar o destruirse.  
   
- La función `FunctionLeave2` es una devolución de llamada; debe implementarla. La implementación debe usar el atributo de clase de almacenamiento `__declspec`(`naked`).  
+ La `FunctionLeave2` función es una devolución de llamada; debe implementarla. La implementación debe usar el `__declspec` `naked` atributo de clase de almacenamiento ().  
   
  El motor de ejecución no guarda ningún registro antes de llamar a esta función.  
   
@@ -68,22 +68,22 @@ void __stdcall FunctionLeave2 (
   
 - Al salir, debe restaurar la pila desactivando todos los parámetros insertados por el autor de la llamada.  
   
- La implementación de `FunctionLeave2` no debe bloquearse porque retrasará la recolección de elementos no utilizados. La implementación no debe intentar una recolección de elementos no utilizados porque es posible que la pila no esté en un estado reconocible para la recolección de elementos no utilizados. Si se intenta realizar una recolección de elementos no utilizados, el tiempo de ejecución se bloqueará hasta que `FunctionLeave2` devuelva.  
+ La implementación de `FunctionLeave2` no debe bloquearse porque retrasará la recolección de elementos no utilizados. La implementación no debe intentar una recolección de elementos no utilizados porque es posible que la pila no esté en un estado reconocible para la recolección de elementos no utilizados. Si se intenta realizar una recolección de elementos no utilizados, el tiempo de ejecución se bloqueará hasta que se `FunctionLeave2` devuelva.  
   
- Además, la función `FunctionLeave2` no debe llamar a código administrado ni producir una asignación de memoria administrada.  
+ Además, la `FunctionLeave2` función no debe llamar a código administrado ni producir una asignación de memoria administrada.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Corprof. idl  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
 - [FunctionEnter2 (Función)](functionenter2-function.md)
 - [FunctionTailcall2 (Función)](functiontailcall2-function.md)
-- [SetEnterLeaveFunctionHooks2 (método)](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [Método SetEnterLeaveFunctionHooks2](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
 - [Funciones estáticas globales para generación de perfiles](profiling-global-static-functions.md)

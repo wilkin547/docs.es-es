@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fb8c14f7-d461-43d1-8b47-adb6723b9b93
 topic_type:
 - apiref
-ms.openlocfilehash: 33b3044c7b5237e586fdb993a16b6144c271782c
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 517e0ae7fb5d5151f94f82d9146ebbf40bad2ef9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007720"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503866"
 ---
 # <a name="mdainfo-structure"></a>MDAInfo (Estructura)
 Proporciona detalles sobre el `Event_MDAFired` evento, que desencadena la creación de un asistente para la depuración administrada (MDA).  
@@ -45,7 +45,7 @@ typedef struct _MDAInfo {
   
  El tiempo de ejecución sigue los pasos siguientes cuando se activa un evento que desencadena la creación de un MDA:  
   
-- Si el host no ha registrado una instancia de [IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) llamando a [ICLROnEventManager:: RegisterActionOnEvent](iclroneventmanager-registeractiononevent-method.md) para recibir una notificación de un `Event_MDAFired` evento, el tiempo de ejecución continúa con su comportamiento predeterminado no hospedado.  
+- Si el host no ha registrado una instancia de [IActionOnCLREvent](iactiononclrevent-interface.md) llamando a [ICLROnEventManager:: RegisterActionOnEvent](iclroneventmanager-registeractiononevent-method.md) para recibir una notificación de un `Event_MDAFired` evento, el tiempo de ejecución continúa con su comportamiento predeterminado no hospedado.  
   
 - Si el host ha registrado un controlador para este evento, el tiempo de ejecución comprueba si hay un depurador asociado al proceso. Si es así, el Runtime se interrumpe en el depurador. Cuando el depurador continúa, llama al host. Si no hay ningún depurador asociado, el Runtime llama a `IActionOnCLREvent::OnEvent` y pasa un puntero a una `MDAInfo` instancia de como `data` parámetro.  
   
@@ -60,7 +60,7 @@ typedef struct _MDAInfo {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
 - [Estructuras de hospedaje](hosting-structures.md)
 - [Diagnóstico de errores con asistentes de depuraciones administradas](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

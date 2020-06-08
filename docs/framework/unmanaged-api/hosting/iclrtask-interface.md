@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3a44df3-578a-4451-b55e-70c8e7695f5e
 topic_type:
 - apiref
-ms.openlocfilehash: 419baaf64397830ef86cfd9e5c3437e3f5b57795
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: b1327e13006ca4b3f9074c1348b1817c9a1b3728
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83763012"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503957"
 ---
 # <a name="iclrtask-interface"></a>ICLRTask (Interfaz)
 Proporciona métodos que permiten al host realizar solicitudes del Common Language Runtime (CLR) o proporcionar una notificación al CLR sobre la tarea asociada.  
@@ -41,7 +41,7 @@ Proporciona métodos que permiten al host realizar solicitudes del Common Langua
 |[Método YieldTask](iclrtask-yieldtask-method.md)|Solicita que el CLR haga que el tiempo de procesador esté disponible para otras tareas. CLR no ofrece ninguna garantía de que la tarea se ponga en un estado en el que pueda dar lugar a un tiempo de procesamiento.|  
   
 ## <a name="remarks"></a>Comentarios  
- `ICLRTask`Es la representación de una tarea para el CLR. En cualquier momento durante la ejecución del código, una tarea puede describirse como en ejecución o en espera para ejecutarse. El host llama al `ICLRTask::SwitchIn` método para notificar a CLR que la tarea que la `ICLRTask` instancia actual representa está ahora en un estado operativo. Después de una llamada a `ICLRTask::SwitchIn` , el host puede programar la tarea en cualquier subproceso del sistema operativo, excepto en los casos en que el tiempo de ejecución requiere la afinidad de subprocesos, tal y como se especifica en las llamadas a los métodos [IHostTaskManager:: BeginThreadAffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-beginthreadaffinity-method.md) y [IHostTaskManager:: EndThreadAffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-endthreadaffinity-method.md) . En algún momento posterior, el sistema operativo podría decidir quitar la tarea del subproceso y colocarla en un estado de no ejecución. Por ejemplo, esto puede ocurrir cuando la tarea se bloquea en primitivas de sincronización o espera a que se completen las operaciones de e/s. El host llama a [SwitchOut](iclrtask-switchout-method.md) para notificar a CLR que la tarea representada por la instancia actual ya `ICLRTask` no se encuentra en un estado operativo.  
+ `ICLRTask`Es la representación de una tarea para el CLR. En cualquier momento durante la ejecución del código, una tarea puede describirse como en ejecución o en espera para ejecutarse. El host llama al `ICLRTask::SwitchIn` método para notificar a CLR que la tarea que la `ICLRTask` instancia actual representa está ahora en un estado operativo. Después de una llamada a `ICLRTask::SwitchIn` , el host puede programar la tarea en cualquier subproceso del sistema operativo, excepto en los casos en que el tiempo de ejecución requiere la afinidad de subprocesos, tal y como se especifica en las llamadas a los métodos [IHostTaskManager:: BeginThreadAffinity](ihosttaskmanager-beginthreadaffinity-method.md) y [IHostTaskManager:: EndThreadAffinity](ihosttaskmanager-endthreadaffinity-method.md) . En algún momento posterior, el sistema operativo podría decidir quitar la tarea del subproceso y colocarla en un estado de no ejecución. Por ejemplo, esto puede ocurrir cuando la tarea se bloquea en primitivas de sincronización o espera a que se completen las operaciones de e/s. El host llama a [SwitchOut](iclrtask-switchout-method.md) para notificar a CLR que la tarea representada por la instancia actual ya `ICLRTask` no se encuentra en un estado operativo.  
   
  Normalmente, una tarea finaliza al final de la ejecución del código. En ese momento, el host llama `ICLRTask::ExitTask` a para destruir el objeto asociado `ICLRTask` . Sin embargo, las tareas también se pueden reciclar mediante una llamada a `ICLRTask::Reset` , lo que permite `ICLRTask` volver a usar la instancia. Este enfoque evita la sobrecarga que supone la creación y destrucción repetidas de instancias.  
   

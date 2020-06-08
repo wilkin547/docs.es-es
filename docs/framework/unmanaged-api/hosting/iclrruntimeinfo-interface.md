@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 287e5ede-b3a7-4ef8-a756-4fca3f285a82
 topic_type:
 - apiref
-ms.openlocfilehash: cafb85ed5f6a1245dd520ab3a5e94f95c8d37608
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 71e2c7f6790f29872c051bb5cea50755068057e9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762557"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504048"
 ---
 # <a name="iclrruntimeinfo-interface"></a>ICLRRuntimeInfo (Interfaz)
-Proporciona métodos que devuelven información sobre un Common Language Runtime específico (CLR), incluidos la versión, el directorio y el estado de carga. Esta interfaz también proporciona funcionalidad específica en tiempo de ejecución sin inicializar el tiempo de ejecución. Incluye el método [LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) relativo en tiempo de ejecución, el método [GetProcAddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md) específico del módulo en tiempo de ejecución y las interfaces proporcionadas por el tiempo de ejecución mediante el método [GetInterface](iclrruntimeinfo-getinterface-method.md) .  
+Proporciona métodos que devuelven información sobre un Common Language Runtime específico (CLR), incluidos la versión, el directorio y el estado de carga. Esta interfaz también proporciona funcionalidad específica en tiempo de ejecución sin inicializar el tiempo de ejecución. Incluye el método [LoadLibrary](iclrruntimeinfo-loadlibrary-method.md) relativo en tiempo de ejecución, el método [GetProcAddress](iclrruntimeinfo-getprocaddress-method.md) específico del módulo en tiempo de ejecución y las interfaces proporcionadas por el tiempo de ejecución mediante el método [GetInterface](iclrruntimeinfo-getinterface-method.md) .  
   
 ## <a name="methods"></a>Métodos  
   
@@ -30,15 +30,15 @@ Proporciona métodos que devuelven información sobre un Common Language Runtime
 |------------|-----------------|  
 |[Método BindAsLegacyV2Runtime](iclrruntimeinfo-bindaslegacyv2runtime-method.md)|Enlaza este Runtime para todas las decisiones de directiva de activación heredadas de la versión 2 de CLR.|  
 |[Método GetDefaultStartupFlags](iclrruntimeinfo-getdefaultstartupflags-method.md)|Obtiene las marcas de inicio y el archivo de configuración de host de CLR.|  
-|[Método GetInterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md)|Carga el CLR en el proceso actual y devuelve punteros de interfaz en tiempo de ejecución, como [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md), [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md) e [IMetaDataDispenser](../metadata/imetadatadispenser-interface.md). Este método sustituye todas las `CorBindTo*` funciones.|  
-|[Método GetProcAddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md)|Obtiene la dirección de una función especificada que se exportó desde el CLR asociado a esta interfaz. Este método reemplaza el método [GetRealProcAddress (](getrealprocaddress-function.md) .|  
-|[Método GetRuntimeDirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md)|Obtiene el directorio de instalación de CLR asociado a esta interfaz. Este método reemplaza el método [GetCORSystemDirectory (](getcorsystemdirectory-function.md) .|  
-|[GetVersionString (Método)](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getversionstring-method.md)|Obtiene la información de versión de Common Language Runtime (CLR) asociada a una interfaz [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) especificada. Este método sustituye a los métodos [GetRequestedRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md) y [GetRequestedRuntimeVersion (](getrequestedruntimeversion-function.md) .|  
+|[Método GetInterface](iclrruntimeinfo-getinterface-method.md)|Carga el CLR en el proceso actual y devuelve punteros de interfaz en tiempo de ejecución, como [ICLRRuntimeHost](iclrruntimehost-interface.md), [ICLRStrongName](iclrstrongname-interface.md) e [IMetaDataDispenser](../metadata/imetadatadispenser-interface.md). Este método sustituye todas las `CorBindTo*` funciones.|  
+|[Método GetProcAddress](iclrruntimeinfo-getprocaddress-method.md)|Obtiene la dirección de una función especificada que se exportó desde el CLR asociado a esta interfaz. Este método reemplaza el método [GetRealProcAddress (](getrealprocaddress-function.md) .|  
+|[Método GetRuntimeDirectory](iclrruntimeinfo-getruntimedirectory-method.md)|Obtiene el directorio de instalación de CLR asociado a esta interfaz. Este método reemplaza el método [GetCORSystemDirectory (](getcorsystemdirectory-function.md) .|  
+|[GetVersionString (Método)](iclrruntimeinfo-getversionstring-method.md)|Obtiene la información de versión de Common Language Runtime (CLR) asociada a una interfaz [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) especificada. Este método sustituye a los métodos [GetRequestedRuntimeInfo](getrequestedruntimeinfo-function.md) y [GetRequestedRuntimeVersion (](getrequestedruntimeversion-function.md) .|  
 |[Método IsLoadable](iclrruntimeinfo-isloadable-method.md)|Indica si el tiempo de ejecución asociado a esta interfaz se puede cargar en el proceso actual, teniendo en cuenta otros tiempos de ejecución que podrían haberse cargado en el proceso.|  
-|[Método IsLoaded](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-isloaded-method.md)|Indica si el CLR asociado a la interfaz [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) se carga en un proceso.|  
-|[Método IsStarted](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-isstarted-method.md)|Indica si se ha iniciado el CLR asociado a la interfaz [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) .|  
-|[Método LoadErrorString](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loaderrorstring-method.md)|Convierte un valor HRESULT en un mensaje de error adecuado para la referencia cultural especificada. Este método sustituye a los métodos [loadstringrc (](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md) y [loadstringrcex (](loadstringrcex-function.md) .|  
-|[Método LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md)|Carga una biblioteca desde el directorio de .NET Framework del CLR representado por una interfaz [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) . Este método reemplaza el método [LoadLibraryShim (](loadlibraryshim-function.md) .|  
+|[Método IsLoaded](iclrruntimeinfo-isloaded-method.md)|Indica si el CLR asociado a la interfaz [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) se carga en un proceso.|  
+|[Método IsStarted](iclrruntimeinfo-isstarted-method.md)|Indica si se ha iniciado el CLR asociado a la interfaz [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) .|  
+|[Método LoadErrorString](iclrruntimeinfo-loaderrorstring-method.md)|Convierte un valor HRESULT en un mensaje de error adecuado para la referencia cultural especificada. Este método sustituye a los métodos [loadstringrc (](loadstringrc-function.md) y [loadstringrcex (](loadstringrcex-function.md) .|  
+|[Método LoadLibrary](iclrruntimeinfo-loadlibrary-method.md)|Carga una biblioteca desde el directorio de .NET Framework del CLR representado por una interfaz [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) . Este método reemplaza el método [LoadLibraryShim (](loadlibraryshim-function.md) .|  
 |[Método SetDefaultStartupFlags](iclrruntimeinfo-setdefaultstartupflags-method.md)|Establece las marcas de inicio y el archivo de configuración de host de CLR.|  
   
 ## <a name="requirements"></a>Requisitos  
