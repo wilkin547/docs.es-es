@@ -126,7 +126,7 @@ Las devoluciones de llamada de la serialización son un mecanismo que proporcion
 |---------------|------------------------------------------|-----------------|
 |<xref:System.Runtime.Serialization.OnDeserializingAttribute>|Antes de la deserialización.\*|Inicialice los valores predeterminados para los campos opcionales.|
 |<xref:System.Runtime.Serialization.OnDeserializedAttribute>|Después de la deserialización.|Corrija valores de campo opcionales basados en el contenido de otros campos.|
-|<xref:System.Runtime.Serialization.OnSerializingAttribute>|Antes de la serialización. *|Prepare para la serialización. Por ejemplo, cree las estructuras de datos opcionales.|
+|<xref:System.Runtime.Serialization.OnSerializingAttribute>|Antes de la serialización.|Prepare para la serialización. Por ejemplo, cree las estructuras de datos opcionales.|
 |<xref:System.Runtime.Serialization.OnSerializedAttribute>|Después de la serialización.|Registre los eventos de serialización.|
 
  \* Esta devolución de llamada se invoca antes del constructor de deserialización, si hay alguno.
