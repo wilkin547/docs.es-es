@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dc0ff3e6-7e7d-4f6c-948d-52b28f5cb78c
 topic_type:
 - apiref
-ms.openlocfilehash: 5fc71bf240b89afadbf8f2ba10906322921bdda2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cac5aaa7ed13b6a48b36ad550da8b73d0deb2ee7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175335"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491048"
 ---
 # <a name="imetadataimportgetpropertyprops-method"></a>IMetaDataImport::GetPropertyProps (Método)
 Obtiene los metadatos de la propiedad representada por el token especificado.  
@@ -50,63 +50,63 @@ HRESULT GetPropertyProps (
   
 ## <a name="parameters"></a>Parámetros  
  `prop`  
- [en] Un token que representa la propiedad para la que se va a devolver metadatos.  
+ de Token que representa la propiedad para la que se van a devolver los metadatos.  
   
  `pClass`  
- [fuera] Puntero al token TypeDef que representa el tipo que implementa la propiedad.  
+ enuncia Puntero al token de TypeDef que representa el tipo que implementa la propiedad.  
   
  `szProperty`  
- [fuera] Un búfer para contener el nombre de propiedad.  
+ enuncia Búfer que contiene el nombre de la propiedad.  
   
  `cchProperty`  
- [en] El tamaño en `szProperty`caracteres anchos de .  
+ de Tamaño en caracteres anchos de `szProperty` .  
   
  `pchProperty`  
- [fuera] El número de caracteres anchos devueltos en `szProperty`.  
+ enuncia Número de caracteres anchos devueltos en `szProperty` .  
   
  `pdwPropFlags`  
- [fuera] Puntero a cualquier marca de atributo aplicada a la propiedad. Este valor es una máscara de bits de la [CorPropertyAttr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md) enumeración.  
+ enuncia Un puntero a cualquier marcador de atributo aplicado a la propiedad. Este valor es una máscara de máscara de la enumeración [CorPropertyAttr (](corpropertyattr-enumeration.md) .  
   
  `ppvSig`  
- [fuera] Un puntero a la firma de metadatos de la propiedad.  
+ enuncia Puntero a la firma de metadatos de la propiedad.  
   
  `pbSig`  
- [fuera] El número de `ppvSig`bytes devueltos en .  
+ enuncia Número de bytes devueltos en `ppvSig` .  
   
  `pdwCPlusTypeFlag`  
- [fuera] Marca que especifica el tipo de la constante que es el valor predeterminado de la propiedad. Este valor procede de la enumeración CorElementType.  
+ enuncia Marca que especifica el tipo de la constante que es el valor predeterminado de la propiedad. Este valor procede de la enumeración CorElementType.  
   
  `ppDefaultValue`  
- [fuera] Puntero a los bytes que almacenan el valor predeterminado de esta propiedad.  
+ enuncia Puntero a los bytes que almacenan el valor predeterminado de esta propiedad.  
   
  `pcchDefaultValue`  
- [fuera] El tamaño en `ppDefaultValue`caracteres `pdwCPlusTypeFlag` anchos de , if es ELEMENT_TYPE_STRING; de lo contrario, este valor no es relevante. En ese caso, `ppDefaultValue` la longitud de se deduce del `pdwCPlusTypeFlag`tipo especificado por .  
+ enuncia Tamaño en caracteres anchos de `ppDefaultValue` , si `pdwCPlusTypeFlag` es ELEMENT_TYPE_STRING; de lo contrario, este valor no es relevante. En ese caso, la longitud de `ppDefaultValue` se deduce del tipo especificado por `pdwCPlusTypeFlag` .  
   
  `pmdSetter`  
- [fuera] Puntero al token MethodDef que representa el método de descriptor de acceso set para la propiedad.  
+ enuncia Puntero al token de MethodDef que representa el método de descriptor de acceso set para la propiedad.  
   
  `pmdGetter`  
- [fuera] Puntero al token MethodDef que representa el método de descriptor de acceso get para la propiedad.  
+ enuncia Puntero al token de MethodDef que representa el método de descriptor de acceso get para la propiedad.  
   
  `rmdOtherMethod`  
- [fuera] Matriz de tokens MethodDef que representan otros métodos asociados a la propiedad.  
+ enuncia Matriz de tokens de MethodDef que representan otros métodos asociados a la propiedad.  
   
  `cMax`  
- [in] Tamaño máximo de la matriz `rmdOtherMethod`. Si no proporciona una matriz lo suficientemente grande como para contener todos los métodos, se omiten sin previo aviso.  
+ [in] Tamaño máximo de la matriz `rmdOtherMethod`. Si no proporciona una matriz lo suficientemente grande como para contener todos los métodos, se omiten sin ninguna advertencia.  
   
  `pcOtherMethod`  
- [fuera] El número de tokens MethodDef devueltos en `rmdOtherMethod`.  
+ enuncia Número de tokens de MethodDef devueltos en `rmdOtherMethod` .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Biblioteca:** Incluido como recurso en MsCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
-- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport (Interfaz)](imetadataimport-interface.md)
+- [IMetaDataImport2 (Interfaz)](imetadataimport2-interface.md)

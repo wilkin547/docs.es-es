@@ -2,15 +2,15 @@
 title: ISymUnmanagedAsyncMethodPropertiesWriter (Interfaz)
 ms.date: 03/30/2017
 ms.assetid: caa71820-8058-4b6a-93a2-25ee757d92d3
-ms.openlocfilehash: 360d1150b0accd6a070fa36531e570d222787cee
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 04876483fd42e3f6e55222416fd0747891734a52
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441765"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501864"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriter-interface"></a>ISymUnmanagedAsyncMethodPropertiesWriter (Interfaz)
-Permite definir información de método asincrónico opcional para cada símbolo de método. Siempre se usa con un método abierto; es decir, entre las llamadas al [método openmethod (](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md) y al [método CloseMethod (](isymunmanagedwriter-closemethod-method.md).  
+Permite definir información de método asincrónico opcional para cada símbolo de método. Siempre se usa con un método abierto; es decir, entre las llamadas al [método openmethod (](isymunmanagedwriter-openmethod-method.md) y al [método CloseMethod (](isymunmanagedwriter-closemethod-method.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -30,6 +30,6 @@ Permite definir información de método asincrónico opcional para cada símbolo
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también:
 
 - [Interfaces de almacén de símbolos de diagnósticos](diagnostics-symbol-store-interfaces.md)

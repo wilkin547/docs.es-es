@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6bafd75a-e2d0-4aea-aed1-074374d5dff6
 topic_type:
 - apiref
-ms.openlocfilehash: 165a57d8029fe03b9de3754fcf7c4db757292cec
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 687f33c364f9730a554a41ade1ca2b78e33ffdc5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443605"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84489733"
 ---
 # <a name="imetadatavalidatevalidatorinit-method"></a>IMetaDataValidate::ValidatorInit (Método)
 Establece una marca que especifica el tipo del módulo en el ámbito de metadatos actual y registra el método de devolución de llamada especificado para los errores de validación.  
@@ -36,20 +36,20 @@ HRESULT ValidatorInit (
   
 ## <a name="parameters"></a>Parámetros  
  `dwModule`  
- de Un valor de la enumeración [corvalidatormoduletype (](../../../../docs/framework/unmanaged-api/metadata/corvalidatormoduletype-enumeration.md) que especifica el tipo del módulo en el ámbito de metadatos actual.  
+ de Un valor de la enumeración [corvalidatormoduletype (](corvalidatormoduletype-enumeration.md) que especifica el tipo del módulo en el ámbito de metadatos actual.  
   
  `pUnk`  
  de Puntero a una instancia de [IUnknown](/cpp/atl/iunknown) que actúa como devolución de llamada de función para los errores de validación.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
  **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
-- [IMetaDataValidate (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md)
+- [IMetaDataValidate (Interfaz)](imetadatavalidate-interface.md)

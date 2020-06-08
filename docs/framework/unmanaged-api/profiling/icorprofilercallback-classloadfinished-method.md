@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3dd80fbe-d62d-4d4d-acf8-5b7d0efe607e
 topic_type:
 - apiref
-ms.openlocfilehash: e0ff90f99c1127b5a4626f47514ba7099b5d48af
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 4be2a50664b001e865b5ecdd9aabe8ba727b8c26
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866603"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500395"
 ---
 # <a name="icorprofilercallbackclassloadfinished-method"></a>ICorProfilerCallback::ClassLoadFinished (Método)
 Notifica al generador de perfiles que se ha terminado de cargar una clase.  
@@ -33,31 +33,31 @@ HRESULT ClassLoadFinished(
     [in] HRESULT hrStatus);  
 ```  
   
-## <a name="parameters"></a>Parameters
+## <a name="parameters"></a>Parámetros
 
 - `classId`
 
-  \[en] identifica la clase que se cargó.
+  \[in] identifica la clase que se cargó.
 
 - `hrStatus`
 
   \[in] un valor HRESULT que indica si la clase se cargó correctamente.
 
-## <a name="remarks"></a>Notas  
- El valor de `classId` no es válido para una solicitud de información hasta que se llama al método `ClassLoadFinished`.  
+## <a name="remarks"></a>Comentarios  
+ El valor de `classId` no es válido para una solicitud de información hasta que `ClassLoadFinished` se llama al método.  
   
- Algunas partes de la carga de la clase podrían continuar después de la devolución de llamada de `ClassLoadFinished`. Un valor HRESULT de error en `hrStatus` indica un error. Sin embargo, un valor HRESULT correcto en `hrStatus` solo indica que la primera parte de la carga de la clase se ha realizado correctamente.  
+ Algunas partes de la carga de la clase podrían continuar después de la `ClassLoadFinished` devolución de llamada. Un valor HRESULT de error en `hrStatus` indica un error. Sin embargo, un valor HRESULT correcto en `hrStatus` indica solo que la primera parte de la carga de la clase se ha realizado correctamente.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
-- [ICorProfilerCallback (interfaz)](icorprofilercallback-interface.md)
-- [ClassLoadStarted (método)](icorprofilercallback-classloadstarted-method.md)
+- [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)
+- [Método ClassLoadStarted](icorprofilercallback-classloadstarted-method.md)

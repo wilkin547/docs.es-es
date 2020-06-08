@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9929817e-acc9-40b7-960c-598664e04b60
 topic_type:
 - apiref
-ms.openlocfilehash: b9a51a85bd17e527d4c04b69ca65100a7069607f
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: b270a6691d4e4ee4a5d0b42f424694eb7993e4e7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703712"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504152"
 ---
 # <a name="iclrmetahostquerylegacyv2runtimebinding-method"></a>ICLRMetaHost::QueryLegacyV2RuntimeBinding (Método)
-Devuelve una interfaz que representa un tiempo de ejecución en el que se ha enlazado la Directiva de activación heredada, por ejemplo, mediante el uso del `useLegacyV2RuntimeActivationPolicy` atributo en la entrada del archivo de configuración del [ \< elemento> de inicio](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) , mediante el uso directo de las API de activación heredadas o llamando al método [ICLRRuntimeInfo:: BindAsLegacyV2Runtime (](iclrruntimeinfo-bindaslegacyv2runtime-method.md) .  
+Devuelve una interfaz que representa un tiempo de ejecución en el que se ha enlazado la Directiva de activación heredada, por ejemplo, mediante el uso del `useLegacyV2RuntimeActivationPolicy` atributo en la entrada del archivo de configuración del [ \<startup> elemento](../../configure-apps/file-schema/startup/startup-element.md) , mediante el uso directo de las API de activación heredadas o llamando al método [ICLRRuntimeInfo:: BindAsLegacyV2Runtime (](iclrruntimeinfo-bindaslegacyv2runtime-method.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -60,7 +60,7 @@ HRESULT QueryLegacyV2RuntimeBinding (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también:
 
 - [ICLRMetaHost (Interfaz)](iclrmetahost-interface.md)
 - [Hospedar aplicaciones de WPF](index.md)

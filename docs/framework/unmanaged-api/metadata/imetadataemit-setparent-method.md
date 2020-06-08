@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 02a02ff7-ae0e-4692-a20e-372405f23052
 topic_type:
 - apiref
-ms.openlocfilehash: da82950ea1a0da81c77d173be9ab45dcb3001bfe
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: d821413e67b36392d936499cd22f2e065f1556ec
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007837"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503853"
 ---
 # <a name="imetadataemitsetparent-method"></a>IMetaDataEmit::SetParent (Método)
-Establece que el miembro especificado, tal como se define en una llamada anterior a [IMetaDataEmit::D efinememberref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md), es un miembro del tipo especificado, tal como se define en una llamada anterior a [IMetaDataEmit::D efinetypedef](imetadataemit-definetypedef-method.md).  
+Establece que el miembro especificado, tal como se define en una llamada anterior a [IMetaDataEmit::D efinememberref](imetadataemit-definememberref-method.md), es un miembro del tipo especificado, tal como se define en una llamada anterior a [IMetaDataEmit::D efinetypedef](imetadataemit-definetypedef-method.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -50,7 +50,7 @@ HRESULT SetParent (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
 - [IMetaDataEmit (Interfaz)](imetadataemit-interface.md)
 - [IMetaDataEmit2 (Interfaz)](imetadataemit2-interface.md)

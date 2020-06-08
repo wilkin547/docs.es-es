@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 91d688f3-a80e-419d-9755-ff94bc04188a
 topic_type:
 - apiref
-ms.openlocfilehash: 028207486f43e35086ed2e515eb3ae6bca304491
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 7176c0f88daad64f793131aca8c6d9fa592a878c
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866083"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503281"
 ---
 # <a name="icorprofilercallbackobjectsallocatedbyclass-method"></a>ICorProfilerCallback::ObjectsAllocatedByClass (Método)
 Notifica al generador de perfiles el número de instancias de cada clase especificada que se han creado desde la última recolección de elementos no utilizados.  
@@ -34,32 +34,32 @@ HRESULT ObjectsAllocatedByClass(
     [in, size_is(cClassCount)] ULONG   cObjects[] );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parámetros  
  `cClassCount`  
- de Tamaño de las matrices de `classIds` y `cObjects`.  
+ de Tamaño de las `classIds` matrices y `cObjects` .  
   
  `classIds`  
  de Matriz de identificadores de clase, donde cada identificador especifica una clase con una o más instancias.  
   
  `cObjects`  
- de Matriz de enteros, donde cada entero especifica el número de instancias de la clase correspondiente en la matriz de `classIds`.  
+ de Matriz de enteros, donde cada entero especifica el número de instancias de la clase correspondiente en la `classIds` matriz.  
   
-## <a name="remarks"></a>Notas  
- Las matrices `classIds` y `cObjects` son matrices paralelas. Por ejemplo, `classIds[i]` y `cObjects[i]` hacen referencia a la misma clase. Si no se ha creado ninguna instancia de una clase desde la recolección de elementos no utilizados anterior, se omite la clase. La devolución de llamada de `ObjectsAllocatedByClass` no notificará los objetos asignados en el montón de objetos grandes.  
+## <a name="remarks"></a>Comentarios  
+ Las `classIds` `cObjects` matrices y son matrices paralelas. Por ejemplo, `classIds[i]` y `cObjects[i]` hacen referencia a la misma clase. Si no se ha creado ninguna instancia de una clase desde la recolección de elementos no utilizados anterior, se omite la clase. La `ObjectsAllocatedByClass` devolución de llamada no notificará los objetos asignados en el montón de objetos grandes.  
   
  Los números devueltos por `ObjectsAllocatedByClass` son solo estimaciones. Para los recuentos exactos, utilice [ICorProfilerCallback:: ObjectAllocated](icorprofilercallback-objectallocated-method.md).  
   
- La matriz de `classIds` puede contener una o varias entradas nulas si la matriz de `cObjects` correspondiente tiene tipos que se están descargando.  
+ La `classIds` matriz puede contener una o varias entradas nulas si la `cObjects` matriz correspondiente tiene tipos que se están descargando.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
-- [ICorProfilerCallback (interfaz)](icorprofilercallback-interface.md)
+- [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)

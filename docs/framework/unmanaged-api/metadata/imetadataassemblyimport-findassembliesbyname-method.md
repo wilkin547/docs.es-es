@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4db97cf9-e4c1-4233-8efa-cbdc0e14a8e4
 topic_type:
 - apiref
-ms.openlocfilehash: 05902436c09d082f90af01f48c7e918650317ce7
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: d2693a94f02214df6d7265b26e3d70d91adcf8a7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009423"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503840"
 ---
 # <a name="imetadataassemblyimportfindassembliesbyname-method"></a>IMetaDataAssemblyImport::FindAssembliesByName (Método)
 Obtiene una matriz de ensamblados con el `szAssemblyName` parámetro especificado, utilizando las reglas estándar empleadas por el Common Language Runtime (CLR) para resolver las referencias.  
@@ -59,7 +59,7 @@ HRESULT FindAssembliesByName (
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|Descripción|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |`S_OK`|`FindAssembliesByName`se devolvió correctamente.|  
 |`S_FALSE`|No hay ningún ensamblado.|  
@@ -67,7 +67,7 @@ HRESULT FindAssembliesByName (
 ## <a name="remarks"></a>Comentarios  
  Dado un nombre de ensamblado, el `FindAssembliesByName` método busca el ensamblado siguiendo las reglas estándar para resolver las referencias de ensamblado. (Para obtener más información, vea [cómo el motor en tiempo de ejecución ubica ensamblados](../../deployment/how-the-runtime-locates-assemblies.md)). `FindAssembliesByName`permite al llamador configurar varios aspectos del contexto de la resolución de ensamblado, como la base de la aplicación y la ruta de acceso de búsqueda privada.  
   
- El `FindAssembliesByName` método requiere que se inicialice el CLR en el proceso para invocar la lógica de resolución de ensamblados. Por lo tanto, debe llamar a [coinicializar](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) (pasando COINITEE_DEFAULT) antes de llamar a `FindAssembliesByName` y después seguir con una llamada a [couninitializecor (](../hosting/couninitializecor-function.md).  
+ El `FindAssembliesByName` método requiere que se inicialice el CLR en el proceso para invocar la lógica de resolución de ensamblados. Por lo tanto, debe llamar a [coinicializar](../hosting/coinitializeee-function.md) (pasando COINITEE_DEFAULT) antes de llamar a `FindAssembliesByName` y después seguir con una llamada a [couninitializecor (](../hosting/couninitializecor-function.md).  
   
  `FindAssembliesByName`Devuelve un puntero [IMetaDataImport](imetadataimport-interface.md) al archivo que contiene el manifiesto del ensamblado para el nombre de ensamblado que se pasa. Si el nombre de ensamblado especificado no se especifica completamente (por ejemplo, si no incluye una versión), es posible que se devuelvan varios ensamblados.  
   

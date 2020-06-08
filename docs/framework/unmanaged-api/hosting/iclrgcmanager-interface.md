@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: fb511c9b-3fe4-41b0-822a-6ba4a079d1f5
 topic_type:
 - apiref
-ms.openlocfilehash: 76a50be6da790ed7bd193c489d36e2823cdbe587
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: f878e2f1f86bc42c0ff5abada8d7df4feb9ed228
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616969"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504204"
 ---
 # <a name="iclrgcmanager-interface"></a>ICLRGCManager (Interfaz)
 Proporciona métodos que permiten a un host interactuar con el sistema de recolección de elementos no utilizados del Common Language Runtime.  
   
 > [!NOTE]
-> A partir del .NET Framework 4,5, puede usar el método [iclrgcmanager2 (:: setgcstartuplimitsex (](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md) para establecer el tamaño de un segmento de recolección de elementos no utilizados y el tamaño máximo de la generación 0 del sistema de recolección de elementos no utilizados en valores mayores que el `DWORD` límite impuesto por el método [setgcstartuplimits (](iclrgcmanager-setgcstartuplimits-method.md) .  
+> A partir del .NET Framework 4,5, puede usar el método [iclrgcmanager2 (:: setgcstartuplimitsex (](iclrgcmanager2-setgcstartuplimitsex-method.md) para establecer el tamaño de un segmento de recolección de elementos no utilizados y el tamaño máximo de la generación 0 del sistema de recolección de elementos no utilizados en valores mayores que el `DWORD` límite impuesto por el método [setgcstartuplimits (](iclrgcmanager-setgcstartuplimits-method.md) .  
   
 ## <a name="methods"></a>Métodos  
   
@@ -35,7 +35,7 @@ Proporciona métodos que permiten a un host interactuar con el sistema de recole
 |[GetStats (Método)](iclrgcmanager-getstats-method.md)|Obtiene un conjunto de estadísticas actuales sobre el sistema de recolección de elementos no utilizados.|  
 |[Método SetGCStartupLimits](iclrgcmanager-setgcstartuplimits-method.md)|Establece el tamaño de un segmento de recolección de elementos no utilizados y el tamaño máximo de la generación 0 del sistema de recolección de elementos no utilizados.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El Common Language Runtime (CLR) implementa su mecanismo de recolección de elementos no utilizados con el <xref:System.GC> tipo administrado. Para obtener más información sobre el sistema de recolección de elementos no utilizados, consulte recolección de [elementos no utilizados](../../../standard/garbage-collection/index.md).  
   
 ## <a name="requirements"></a>Requisitos  
@@ -47,7 +47,7 @@ Proporciona métodos que permiten a un host interactuar con el sistema de recole
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también:
 
 - [Administración de memoria automática](../../../standard/automatic-memory-management.md)
 - [COR_GC_STATS (Estructura)](cor-gc-stats-structure.md)

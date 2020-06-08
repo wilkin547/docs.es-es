@@ -6,21 +6,21 @@ helpviewer_keywords:
 - unmanaged global static functions [.NET Framework], metadata
 - metadata global static functions [.NET Framework]
 ms.assetid: d3bbc8a7-b1c7-494f-b1cc-d71cf2ecb1bc
-ms.openlocfilehash: a76d57bb45e53e461a43f3a9fb3be707782faccc
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 861f283d350310ab159b2d6f15339292e0d42b94
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447823"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84489599"
 ---
 # <a name="metadata-global-static-functions"></a>Funciones estáticas globales para metadatos
-A partir de la .NET Framework 4, la documentación de las funciones `_Cor*`, `CoInitialize*`, `CoUninitialize*`y `CoEEShutDownCOM`, que pertenecen al hospedaje, se encuentra en [funciones de hospedaje de CLR en desuso](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md). No hay funciones estáticas globales que pertenezcan a metadatos.  
+A partir de la .NET Framework 4, la documentación de `_Cor*` las `CoInitialize*` funciones,, `CoUninitialize*` y `CoEEShutDownCOM` , que pertenecen al hospedaje, se encuentra en [las funciones de hospedaje de CLR en desuso](../hosting/deprecated-clr-hosting-functions.md). No hay funciones estáticas globales que pertenezcan a metadatos.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Interfaces de metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
+ [Interfaces de metadatos](metadata-interfaces.md)  
   
- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  
+ [Enumeraciones para metadatos](metadata-enumerations.md)  
   
- [Estructuras de metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)  
+ [Estructuras de metadatos](metadata-structures.md)  
   
- [Uniones de metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-unions.md)
+ [Uniones de metadatos](metadata-unions.md)

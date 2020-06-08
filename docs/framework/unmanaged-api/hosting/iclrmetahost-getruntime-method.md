@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a10749f1-ab91-47cf-982f-d8ccd2e81bd2
 topic_type:
 - apiref
-ms.openlocfilehash: a0d6496e014b767b2bdaf68cdc62017813e1e57f
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: d482e25c7bf0f028e2478c8e7b7863bc54d7aeb9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703634"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504201"
 ---
 # <a name="iclrmetahostgetruntime-method"></a>ICLRMetaHost::GetRuntime (Método)
-Obtiene la interfaz [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) que corresponde a una versión determinada del Common Language Runtime (CLR). Este método reemplaza a la función [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) utilizada con la marca [STARTUP_LOADER_SAFEMODE](startup-flags-enumeration.md) .  
+Obtiene la interfaz [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) que corresponde a una versión determinada del Common Language Runtime (CLR). Este método reemplaza a la función [CorBindToRuntimeEx](corbindtoruntimeex-function.md) utilizada con la marca [STARTUP_LOADER_SAFEMODE](startup-flags-enumeration.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -58,8 +58,8 @@ HRESULT GetRuntime (
 |S_OK|El método se completó correctamente.|  
 |E_POINTER|`pwzVersion` o `ppRuntime` es null.|  
   
-## <a name="remarks"></a>Observaciones  
- Este método interactúa de forma coherente con las interfaces heredadas como la interfaz [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) y las funciones heredadas como las funciones desusadas `CorBindTo*` (vea [funciones de hospedaje de CLR en desuso](deprecated-clr-hosting-functions.md) en la API de hospedaje de .NET Framework 2,0). Es decir, los tiempos de ejecución que se cargan con la API heredada están visibles para la nueva API y los tiempos de ejecución que se cargan con la nueva API son visibles para la API heredada.  
+## <a name="remarks"></a>Comentarios  
+ Este método interactúa de forma coherente con las interfaces heredadas como la interfaz [ICorRuntimeHost](icorruntimehost-interface.md) y las funciones heredadas como las funciones desusadas `CorBindTo*` (vea [funciones de hospedaje de CLR en desuso](deprecated-clr-hosting-functions.md) en la API de hospedaje de .NET Framework 2,0). Es decir, los tiempos de ejecución que se cargan con la API heredada están visibles para la nueva API y los tiempos de ejecución que se cargan con la nueva API son visibles para la API heredada.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
@@ -70,7 +70,7 @@ HRESULT GetRuntime (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también:
 
 - [ICLRMetaHost (Interfaz)](iclrmetahost-interface.md)
 - [Coclases e interfaces de hospedaje de CLR en desuso](deprecated-clr-hosting-interfaces-and-coclasses.md)

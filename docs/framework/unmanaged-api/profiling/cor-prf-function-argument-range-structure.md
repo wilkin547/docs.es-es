@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9f469eac-ac66-419b-8668-fe705bc1a51f
 topic_type:
 - apiref
-ms.openlocfilehash: dae5ed7c25f85051d1a28681fb88b056617c4de0
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 8b3785955ec138bbf898e84aa4deb5ed2a6e6b53
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76867256"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500954"
 ---
 # <a name="cor_prf_function_argument_range-structure"></a>COR_PRF_FUNCTION_ARGUMENT_RANGE (Estructura)
 Representa un bloque de argumentos de función almacenados en la memoria de forma contigua, ordenados de izquierda a derecha.  
@@ -35,20 +35,20 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_RANGE {
   
 ## <a name="members"></a>Miembros  
   
-|Miembros|Descripción|  
+|Miembros|Description|  
 |-------------|-----------------|  
 |`startAddress`|Dirección inicial del bloque.|  
 |`length`|Longitud del bloque contiguo.|  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Corprof. idl  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
 - [Estructuras para generación de perfiles](profiling-structures.md)

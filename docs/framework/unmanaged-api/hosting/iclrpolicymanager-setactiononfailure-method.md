@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4664033f-db97-4388-b988-2ec470796e58
 topic_type:
 - apiref
-ms.openlocfilehash: fb2ecc80f272a3fc9b63b20c5956e7a28f117784
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 727cd82226b9a59c4879ffea5e87f93dd5fe38c9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703464"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504113"
 ---
 # <a name="iclrpolicymanagersetactiononfailure-method"></a>ICLRPolicyManager::SetActionOnFailure (Método)
 Especifica la acción de la Directiva que debe realizar el Common Language Runtime (CLR) cuando se produce el error especificado.  
@@ -53,8 +53,8 @@ HRESULT SetActionOnFailure (
 |E_FAIL|Se produjo un error grave desconocido. Después de que un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
 |E_INVALIDARG|No se puede establecer una acción de directiva para la operación especificada o se especificó una acción de Directiva no válida para la operación.|  
   
-## <a name="remarks"></a>Observaciones  
- De forma predeterminada, CLR produce una excepción cuando no puede asignar un recurso como memoria. `SetActionOnFailure`permite que el host Invalide este comportamiento especificando la acción de la Directiva que se realizará en caso de error. En la tabla siguiente se muestran las combinaciones de los valores [eclrfailure (](eclrfailure-enumeration.md) y [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) que se admiten. (El prefijo FAIL_ se omite de los valores de [eclrfailure (](eclrfailure-enumeration.md) ).  
+## <a name="remarks"></a>Comentarios  
+ De forma predeterminada, CLR produce una excepción cuando no puede asignar un recurso como memoria. `SetActionOnFailure`permite que el host Invalide este comportamiento especificando la acción de la Directiva que se realizará en caso de error. En la tabla siguiente se muestran las combinaciones de los valores [eclrfailure (](eclrfailure-enumeration.md) y [EPolicyAction](epolicyaction-enumeration.md) que se admiten. (El prefijo FAIL_ se omite de los valores de [eclrfailure (](eclrfailure-enumeration.md) ).  
   
 ||NonCriticalResource|CriticalResource|FatalRuntime|OrphanedLock|StackOverflow|AccessViolation|CodeContract|  
 |-|-------------------------|----------------------|------------------|------------------|-------------------|---------------------|------------------|  
@@ -78,7 +78,7 @@ HRESULT SetActionOnFailure (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también:
 
 - [EClrFailure (Enumeración)](eclrfailure-enumeration.md)
 - [EPolicyAction (Enumeración)](epolicyaction-enumeration.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8aea2e2c-23a3-4cda-9a06-e19f97383830
 topic_type:
 - apiref
-ms.openlocfilehash: 22c0a317777a12294ba7a90f7af1ceeca3ad0a47
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 0a283c837e23ab1aafd3545df1dfe8a267de0557
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009267"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501292"
 ---
 # <a name="imetadataemitgetsavesize-method"></a>IMetaDataEmit::GetSaveSize (Método)
 Obtiene el tamaño binario estimado del ensamblado y sus metadatos en el ámbito actual.  
@@ -50,7 +50,7 @@ HRESULT GetSaveSize (
 ## <a name="remarks"></a>Comentarios  
  `GetSaveSize`calcula el espacio necesario, en bytes, para guardar el ensamblado y todos sus metadatos en el ámbito actual. (Una llamada al método [IMetaDataEmit:: SaveToStream (](imetadataemit-savetostream-method.md) emitiría este número de bytes).  
   
- Si el autor de la llamada implementa la interfaz [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) (a través de [IMetaDataEmit:: SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) o [IMetaDataEmit:: Merge](imetadataemit-merge-method.md)), `GetSaveSize` realizará dos pases sobre los metadatos para optimizarlos y comprimirlos. De lo contrario, no se realiza ninguna optimización.  
+ Si el autor de la llamada implementa la interfaz [IMapToken](imaptoken-interface.md) (a través de [IMetaDataEmit:: SetHandler](imetadataemit-sethandler-method.md) o [IMetaDataEmit:: Merge](imetadataemit-merge-method.md)), `GetSaveSize` realizará dos pases sobre los metadatos para optimizarlos y comprimirlos. De lo contrario, no se realiza ninguna optimización.  
   
  Si se realiza la optimización, el primer paso simplemente ordena las estructuras de metadatos para optimizar el rendimiento de las búsquedas en tiempo de importación. Este paso suele tener como resultado la mudanza de registros, con el efecto secundario de que se invalidan los tokens retenidos por la herramienta para futuras referencias. Sin embargo, los metadatos no informan al llamador de estos cambios de token hasta después del segundo paso. En el segundo paso, se realizan varias optimizaciones que están diseñadas para reducir el tamaño total de los metadatos, como la optimización de los tokens (enlace temprano) `mdTypeRef` y los `mdMemberRef` tokens cuando se hace referencia a un tipo o miembro declarado en el ámbito de metadatos actual. En este paso, se produce otra ronda de asignación de tokens. Después de este paso, el motor de metadatos notifica al llamador, a través `IMapToken` de su interfaz, los valores de token modificados.  
   
@@ -63,7 +63,7 @@ HRESULT GetSaveSize (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
 - [IMetaDataEmit (Interfaz)](imetadataemit-interface.md)
 - [IMetaDataEmit2 (Interfaz)](imetadataemit2-interface.md)

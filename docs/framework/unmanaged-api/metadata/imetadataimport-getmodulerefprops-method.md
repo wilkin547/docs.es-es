@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b558e766-4c11-4628-ae47-b4e0a1800168
 topic_type:
 - apiref
-ms.openlocfilehash: f46033b9e643ef6b4a0063c4995b8c024b8c1f7e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1784c9f3085ce188f9e540887dd02064f8448f3
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175361"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503588"
 ---
 # <a name="imetadataimportgetmodulerefprops-method"></a>IMetaDataImport::GetModuleRefProps (Método)
 Obtiene el nombre del módulo al que hace referencia el token de metadatos especificado.  
@@ -38,27 +38,27 @@ HRESULT GetModuleRefProps (
   
 ## <a name="parameters"></a>Parámetros  
  `mur`  
- [en] El token de metadatos ModuleRef que hace referencia al módulo para el que se obtiene información de metadatos.  
+ de Token de metadatos de ModuleRef que hace referencia al módulo para el que se va a obtener información de metadatos.  
   
  `szName`  
- [fuera] Un búfer para contener el nombre del módulo.  
+ enuncia Búfer que contiene el nombre del módulo.  
   
  `cchName`  
- [en] El tamaño `szName` solicitado de caracteres anchos.  
+ de Tamaño solicitado de `szName` caracteres anchos.  
   
  `pchName`  
- [fuera] El tamaño `szName` devuelto de los caracteres anchos.  
+ enuncia Tamaño devuelto de `szName` en caracteres anchos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Biblioteca:** Incluido como recurso en MsCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
-- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport (Interfaz)](imetadataimport-interface.md)
+- [IMetaDataImport2 (Interfaz)](imetadataimport2-interface.md)

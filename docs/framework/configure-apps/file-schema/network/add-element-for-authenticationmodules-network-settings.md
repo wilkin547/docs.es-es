@@ -1,5 +1,6 @@
 ---
 title: Elemento <add> para authenticationModules (configuración de red)
+description: El <add> elemento de configuración de red para connectionManagement agrega una dirección IP o un nombre DNS a la lista de administración de conexiones en el .NET Framework.
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#add
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - <authenticationModules>, add element
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-ms.openlocfilehash: 4181a045079bdb455a63ebda722dd6b0daf33c4d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1a6d0f79f076a69cec33ac14f0e0f33f7c3c6577
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79155120"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504646"
 ---
 # <a name="add-element-for-authenticationmodules-network-settings"></a>Elemento \<add> para authenticationModules (configuración de red)
 Agrega un módulo de autenticación a la aplicación.  
@@ -81,7 +82,7 @@ Agrega un módulo de autenticación a la aplicación.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee518bda-3296-482e-a7b7-e9d51dd1a181
 topic_type:
 - apiref
-ms.openlocfilehash: 34b7cebfa063a3ad077b74a753fd37ba67ff53a5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 43e9671afa92d36966e51bbdc630db4a9d9083b7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175322"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503513"
 ---
 # <a name="imetadataimportgettypespecfromtoken-method"></a>IMetaDataImport::GetTypeSpecFromToken (Método)
 Obtiene la firma de metadatos binaria de la especificación de tipo representada por el token especificado.  
@@ -37,27 +37,27 @@ HRESULT GetTypeSpecFromToken (
   
 ## <a name="parameters"></a>Parámetros  
  `typespec`  
- [en] El token TypeSpec asociado a la firma de metadatos solicitada.  
+ de El token TypeSpec asociado a la firma de metadatos solicitada.  
   
  `ppvSig`  
- [fuera] Un puntero a la firma de metadatos binarios.  
+ enuncia Puntero a la firma de metadatos binarios.  
   
  `pcbSig`  
- [fuera] El tamaño, en bytes, de la firma de metadatos.  
+ enuncia Tamaño, en bytes, de la firma de metadatos.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Un HRESULT que indica éxito o error. Los errores se pueden probar con la macro FAILED.  
+ HRESULT que indica si se ha realizado correctamente o no. Los errores se pueden probar con la macro FAILed.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Biblioteca:** Incluido como recurso en MsCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
-- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport (Interfaz)](imetadataimport-interface.md)
+- [IMetaDataImport2 (Interfaz)](imetadataimport2-interface.md)

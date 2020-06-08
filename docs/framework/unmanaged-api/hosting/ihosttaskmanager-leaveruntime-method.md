@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 43689cc4-e48e-46e5-a22d-bafd768b8759
 topic_type:
 - apiref
-ms.openlocfilehash: 2939f13933c4681e7e2220e5290e019e10c2844e
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: deaebbce3b9b8a26bf9668b826a6818dba94dcc3
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83841924"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501387"
 ---
 # <a name="ihosttaskmanagerleaveruntime-method"></a>IHostTaskManager::LeaveRuntime (Método)
 Notifica al host que la tarea que se está ejecutando actualmente está a punto de abandonar el Common Language Runtime (CLR) y especificar código no administrado.  
@@ -52,8 +52,8 @@ HRESULT LeaveRuntime (
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
 |E_OUTOFMEMORY|No hay suficiente memoria disponible para completar la asignación solicitada.|  
   
-## <a name="remarks"></a>Notas  
- Las secuencias de llamadas a y desde código no administrado se pueden anidar. Por ejemplo, en la lista siguiente se describe una situación hipotética en la que la secuencia de llamadas a `LeaveRuntime` , [IHostTaskManager:: ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md), [IHostTaskManager:: ReverseLeaveRuntime](ihosttaskmanager-reverseleaveruntime-method.md), y `IHostTaskManager::EnterRuntime` permite al host identificar las capas anidadas.  
+## <a name="remarks"></a>Comentarios  
+ Las secuencias de llamadas a y desde código no administrado se pueden anidar. Por ejemplo, en la lista siguiente se describe una situación hipotética en la que la secuencia de llamadas a `LeaveRuntime` , [IHostTaskManager:: ReverseEnterRuntime](ihosttaskmanager-reverseenterruntime-method.md), [IHostTaskManager:: ReverseLeaveRuntime](ihosttaskmanager-reverseleaveruntime-method.md), y `IHostTaskManager::EnterRuntime` permite al host identificar las capas anidadas.  
   
 |Acción|Llamada al método correspondiente|  
 |------------|-------------------------------|  
@@ -73,7 +73,7 @@ HRESULT LeaveRuntime (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
 - [ICLRTask (Interfaz)](iclrtask-interface.md)
 - [ICLRTaskManager (Interfaz)](iclrtaskmanager-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6330a9ee-8cd5-4299-86f1-b4de2c701a0d
 topic_type:
 - apiref
-ms.openlocfilehash: c32407c3fc0bc5a045b80ec48937699826d981af
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 68e29e932e477f286db00b0c989a3346bd13c9bc
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177157"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501227"
 ---
 # <a name="imetadatatablesgetblobheapsize-method"></a>IMetaDataTables::GetBlobHeapSize (Método)
 Obtiene el tamaño, en bytes, del montón de objetos binarios grandes (BLOB).  
@@ -35,18 +35,18 @@ HRESULT GetBlobHeapSize (
   
 ## <a name="parameters"></a>Parámetros  
  `pcbBlobs`  
- [fuera] Un puntero al tamaño, en bytes, del montón BLOB.  
+ enuncia Puntero al tamaño, en bytes, del montón de BLOBs.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
-- [IMetaDataTables (Interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [IMetaDataTables2 (Interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [IMetaDataTables (Interfaz)](imetadatatables-interface.md)
+- [IMetaDataTables2 (Interfaz)](imetadatatables2-interface.md)

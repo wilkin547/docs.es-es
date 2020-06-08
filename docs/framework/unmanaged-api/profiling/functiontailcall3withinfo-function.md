@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 46380fcc-0198-43ae-a1f5-2d4939425886
 topic_type:
 - apiref
-ms.openlocfilehash: 0aa43954c3e10d04524bf976d0dd3b29d2bc724c
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: f076044b44859cc39d90be528ee6648f5eaa626c
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866835"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500590"
 ---
 # <a name="functiontailcall3withinfo-function"></a>FunctionTailcall3WithInfo (Función)
 Notifica al generador de perfiles que la función que se está ejecutando actualmente está a punto de realizar una llamada de cola a otra función y proporciona un identificador que se puede pasar al [método ICorProfilerInfo3:: GetFunctionTailcall3Info (](icorprofilerinfo3-getfunctiontailcall3info-method.md) para recuperar el marco de pila.  
@@ -32,7 +32,7 @@ void __stdcall FunctionTailcall3WithInfo(
                [in] COR_PRF_ELT_INFO eltInfo);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parámetros  
 
 - `functionIDOrClientID`
 
@@ -40,12 +40,12 @@ void __stdcall FunctionTailcall3WithInfo(
 
 - `eltInfo`
 
-  \[en] un identificador opaco que representa información sobre un marco de pila determinado. Este identificador es válido solo durante la devolución de llamada a la que se pasa.
+  \[in] un identificador opaco que representa información sobre un marco de pila determinado. Este identificador es válido solo durante la devolución de llamada a la que se pasa.
 
-## <a name="remarks"></a>Notas  
- El método de devolución de llamada `FunctionTailcall3WithInfo` notifica al generador de perfiles cuando se llama a las funciones y permite al generador de perfiles usar el [método ICorProfilerInfo3:: GetFunctionTailcall3Info (](icorprofilerinfo3-getfunctiontailcall3info-method.md) para inspeccionar el marco de pila. Para obtener acceso a la información del marco de pila, se debe establecer la marca `COR_PRF_ENABLE_FRAME_INFO`. El generador de perfiles puede utilizar el [método ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) para establecer las marcas de evento y, a continuación, usar el [método ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3WithInfo (](icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) para registrar la implementación de esta función.  
+## <a name="remarks"></a>Comentarios  
+ El `FunctionTailcall3WithInfo` método de devolución de llamada notifica al generador de perfiles cuando se llama a las funciones y permite que el generador de perfiles use el [método ICorProfilerInfo3:: GetFunctionTailcall3Info (](icorprofilerinfo3-getfunctiontailcall3info-method.md) para inspeccionar el marco de pila. Para obtener acceso a la información del marco de pila, se debe `COR_PRF_ENABLE_FRAME_INFO` establecer la marca. El generador de perfiles puede utilizar el [método ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) para establecer las marcas de evento y, a continuación, usar el [método ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3WithInfo (](icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) para registrar la implementación de esta función.  
   
- La función `FunctionTailcall3WithInfo` es una devolución de llamada; debe implementarla. La implementación de debe utilizar el atributo de clase de almacenamiento `__declspec(naked)`.  
+ La `FunctionTailcall3WithInfo` función es una devolución de llamada; debe implementarla. La implementación debe usar el `__declspec(naked)` atributo de clase de almacenamiento.  
   
  El motor de ejecución no guarda ningún registro antes de llamar a esta función.  
   
@@ -53,28 +53,28 @@ void __stdcall FunctionTailcall3WithInfo(
   
 - Al salir, debe restaurar la pila desactivando todos los parámetros insertados por el autor de la llamada.  
   
- La implementación de `FunctionTailcall3WithInfo` no debe bloquearse porque retrasará la recolección de elementos no utilizados. La implementación no debe intentar una recolección de elementos no utilizados, porque es posible que la pila no esté en un estado reconocible para la recolección de elementos no utilizados. Si se intenta realizar una recolección de elementos no utilizados, el tiempo de ejecución se bloqueará hasta que `FunctionTailcall3WithInfo` devuelva.  
+ La implementación de `FunctionTailcall3WithInfo` no debe bloquearse porque retrasará la recolección de elementos no utilizados. La implementación no debe intentar una recolección de elementos no utilizados, porque es posible que la pila no esté en un estado reconocible para la recolección de elementos no utilizados. Si se intenta realizar una recolección de elementos no utilizados, el tiempo de ejecución se bloqueará hasta que se `FunctionTailcall3WithInfo` devuelva.  
   
  Además, la función FunctionTailcall3WithInfo no debe llamar a código administrado ni producir una asignación de memoria administrada de ninguna manera.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Corprof. idl  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
 - [FunctionEnter3](functionenter3-function.md)
 - [FunctionLeave3](functionleave3-function.md)
 - [FunctionTailcall3](functiontailcall3-function.md)
 - [FunctionEnter3WithInfo](functiontailcall3-function.md)
 - [FunctionLeave3WithInfo](functionleave3withinfo-function.md)
-- [SetEnterLeaveFunctionHooks3](icorprofilerinfo3-setenterleavefunctionhooks3-method.md)
-- [SetEnterLeaveFunctionHooks3WithInfo](icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md)
-- [SetFunctionIDMapper](icorprofilerinfo-setfunctionidmapper-method.md)
-- [SetFunctionIDMapper2](icorprofilerinfo3-setfunctionidmapper2-method.md)
+- [Setenterleavefunctionhooks3 (](icorprofilerinfo3-setenterleavefunctionhooks3-method.md)
+- [Setenterleavefunctionhooks3withinfo (](icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md)
+- [Setfunctionidmapper (](icorprofilerinfo-setfunctionidmapper-method.md)
+- [Setfunctionidmapper2 (](icorprofilerinfo3-setfunctionidmapper2-method.md)
 - [Funciones estáticas globales para generación de perfiles](profiling-global-static-functions.md)

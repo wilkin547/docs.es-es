@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72822b95-a7fb-485e-9d55-1cb016d9a458
 topic_type:
 - apiref
-ms.openlocfilehash: ec33e55f840fe735091364ebc35cb7b7c165c10a
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 409a21238f172e5ecdaa8d5bfa237a9f3fe46345
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76867196"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500915"
 ---
 # <a name="cor_prf_gc_reason-enumeration"></a>COR_PRF_GC_REASON (Enumeración)
 Indica el motivo por el que se está produciendo la recolección de elementos no utilizados.  
@@ -37,18 +37,18 @@ typedef enum {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`COR_PRF_GC_INDUCED`|Un método <xref:System.GC.Collect%2A> indujo la recolección de elementos no utilizados.|  
+|`COR_PRF_GC_INDUCED`|Un método indujo la recolección de elementos no utilizados <xref:System.GC.Collect%2A> .|  
 |`COR_PRF_GC_OTHER`|Razón no especificada.|  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
 - [Enumeraciones para generación de perfiles](profiling-enumerations.md)

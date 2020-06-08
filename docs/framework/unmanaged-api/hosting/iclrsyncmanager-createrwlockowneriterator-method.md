@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b5535b87-9439-424e-b9b3-7d6fafb9819e
 topic_type:
 - apiref
-ms.openlocfilehash: 9eace3e7330d3f8c0c9762e0b1b456ad1bf8a3ac
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: f8fde4905c41dffde90c6361b5a8cdffa15deb4a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83763194"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503970"
 ---
 # <a name="iclrsyncmanagercreaterwlockowneriterator-method"></a>ICLRSyncManager::CreateRWLockOwnerIterator (Método)
 Solicita que el Common Language Runtime (CLR) cree un iterador para que lo use el host con el fin de determinar el conjunto de tareas que esperan en un bloqueo de lectura y escritura.  
@@ -39,7 +39,7 @@ HRESULT CreateRWLockOwnerIterator (
  de Cookie asociada con el bloqueo de lector-escritor deseado.  
   
  `pIterator`  
- enuncia Un puntero a un iterador que se puede pasar a los métodos [GetRWLockOwnerNext (](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-getrwlockownernext-method.md) y [DeleteRWLockOwnerIterator (](iclrsyncmanager-deleterwlockowneriterator-method.md) .  
+ enuncia Un puntero a un iterador que se puede pasar a los métodos [GetRWLockOwnerNext (](iclrsyncmanager-getrwlockownernext-method.md) y [DeleteRWLockOwnerIterator (](iclrsyncmanager-deleterwlockowneriterator-method.md) .  
   
 ## <a name="return-value"></a>Valor devuelto  
   

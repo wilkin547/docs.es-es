@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a945d439-3b34-4aa4-b575-8413dd7806ce
 topic_type:
 - apiref
-ms.openlocfilehash: 4e7e76a4a3ab291ee97ad0912e3d6224cdf96fba
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 09b4a06892cdc450eed9dead503a990b6f19804e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804486"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501513"
 ---
 # <a name="ihostmemorymanager-interface"></a>IHostMemoryManager (Interfaz)
 Proporciona métodos que permiten que el Common Language Runtime (CLR) realice solicitudes de memoria virtual a través del host, en lugar de usar las funciones estándar de memoria virtual de Win32.  
@@ -29,7 +29,7 @@ Proporciona métodos que permiten que el Common Language Runtime (CLR) realice s
 |Método|Descripción|  
 |------------|-----------------|  
 |[Método AcquiredVirtualAddressSpace](ihostmemorymanager-acquiredvirtualaddressspace-method.md)|Notifica al host que el Common Language Runtime (CLR) ha adquirido la memoria especificada del sistema operativo.|  
-|[Método CreateMAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md)|Obtiene un puntero de interfaz a una instancia de [IHostMAlloc](ihostmalloc-interface.md) que se utiliza para solicitar las asignaciones de memoria de un montón creado por el host.|  
+|[Método CreateMAlloc](ihostmemorymanager-createmalloc-method.md)|Obtiene un puntero de interfaz a una instancia de [IHostMAlloc](ihostmalloc-interface.md) que se utiliza para solicitar las asignaciones de memoria de un montón creado por el host.|  
 |[Método GetMemoryLoad](ihostmemorymanager-getmemoryload-method.md)|Obtiene la cantidad de memoria física que se está usando actualmente, tal y como la ha proporcionado el host.|  
 |[Método NeedsVirtualAddressSpace](ihostmemorymanager-needsvirtualaddressspace-method.md)|Notifica al host que el CLR va a intentar usar la memoria especificada.|  
 |[Método RegisterMemoryNotificationCallback](ihostmemorymanager-registermemorynotificationcallback-method.md)|Registra un puntero a una función de devolución de llamada que invoca el host para notificar a CLR la carga de memoria actual en el equipo.|  
@@ -39,7 +39,7 @@ Proporciona métodos que permiten que el Common Language Runtime (CLR) realice s
 |[Método VirtualProtect](ihostmemorymanager-virtualprotect-method.md)|Actúa como contenedor lógico de la función de Win32 correspondiente, que cambia la protección en una región de páginas confirmadas en el espacio de direcciones virtuales del proceso de llamada.|  
 |[Método VirtualQuery](ihostmemorymanager-virtualquery-method.md)|Actúa como contenedor lógico de la función de Win32 correspondiente, que recupera información sobre un intervalo de páginas en el espacio de direcciones virtuales del proceso de llamada.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  `IHostMemoryManager`también proporciona métodos para que CLR obtenga un puntero a través del cual se van a realizar solicitudes de memoria en el montón y para obtener el nivel de presión de memoria en el proceso, tal y como lo indica el host.  
   
 ## <a name="requirements"></a>Requisitos  
@@ -51,7 +51,7 @@ Proporciona métodos que permiten que el Common Language Runtime (CLR) realice s
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
 - [IHostMalloc (Interfaz)](ihostmalloc-interface.md)
 - [Interfaces de hospedaje](hosting-interfaces.md)

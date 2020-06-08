@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e835062c-c7d6-4945-8a44-2de7ebf3928e
 topic_type:
 - apiref
-ms.openlocfilehash: 717a3d12528a34eafbd918c29d8e13bb87097d82
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 653c8d1d3edd38e646b4e90c0e48dbe15bed102a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615787"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504269"
 ---
 # <a name="iclrdebugmanager-interface"></a>ICLRDebugManager (Interfaz)
 Proporciona métodos que permiten a un host asociar un conjunto de tareas con un identificador y un nombre descriptivo.  
@@ -32,11 +32,11 @@ Proporciona métodos que permiten a un host asociar un conjunto de tareas con un
 |[Método EndConnection](iclrdebugmanager-endconnection-method.md)|Quita la asociación entre una lista de tareas y un identificador y un nombre descriptivo.|  
 |[Método GetDacl](iclrdebugmanager-getdacl-method.md)|Este método no se implementa.|  
 |[Método IsDebuggerAttached](iclrdebugmanager-isdebuggerattached-method.md)|Obtiene un valor que indica si hay un depurador asociado al proceso.|  
-|[Método SetConnectionTasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)|Asocia una lista de instancias de [ICLRTask](iclrtask-interface.md) con un identificador y un nombre descriptivo.|  
+|[Método SetConnectionTasks](iclrdebugmanager-setconnectiontasks-method.md)|Asocia una lista de instancias de [ICLRTask](iclrtask-interface.md) con un identificador y un nombre descriptivo.|  
 |[Método SetDacl](iclrdebugmanager-setdacl-method.md)|Este método no se implementa.|  
 |[Método SetSymbolReadingPolicy](iclrdebugmanager-setsymbolreadingpolicy-method.md)|Establece la Directiva para leer archivos de base de datos de programa (PDB). La Directiva determina si la información sobre los números de línea y los archivos se incluye en las pilas de llamadas.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  En los escenarios de depuración, es posible que un host desee agrupar las tareas según su propia lógica de programación. Por ejemplo, una agrupación permitiría a un desarrollador ver solo las tareas requeridas por las API del desarrollador, en lugar de ver todas las tareas que se ejecutan en el proceso. `ICLRDebugManager`permite que el host implemente este tipo de agrupación.  
   
 > [!IMPORTANT]
@@ -53,6 +53,6 @@ Proporciona métodos que permiten a un host asociar un conjunto de tareas con un
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también:
 
 - [Interfaces de hospedaje](hosting-interfaces.md)

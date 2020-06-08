@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8f35414d-f40b-4b99-8768-9adb675c622a
 topic_type:
 - apiref
-ms.openlocfilehash: e02d7dd4b287d027b633ae9bf2e98e036062bdd0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 36c0ffef2d984604be4ae19899e8f3f912cee123
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175413"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491477"
 ---
 # <a name="imetadataimportgetclasslayout-method"></a>IMetaDataImport::GetClassLayout (Método)
 Obtiene la información de diseño de la clase a la que hace referencia el token TypeDef especificado.  
@@ -40,33 +40,33 @@ HRESULT GetClassLayout  (
   
 ## <a name="parameters"></a>Parámetros  
  `td`  
- [en] El token TypeDef para la clase con el diseño que se va a devolver.  
+ de El token de TypeDef para la clase con el diseño que se va a devolver.  
   
  `pdwPackSize`  
- [fuera] Uno de los valores 1, 2, 4, 8 o 16, que representa el tamaño del paquete de la clase.  
+ enuncia Uno de los valores 1, 2, 4, 8 o 16 que representa el tamaño de paquete de la clase.  
   
  `rFieldOffset`  
- [fuera] Matriz de [valores COR_FIELD_OFFSET.](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md)  
+ enuncia Matriz de valores de [COR_FIELD_OFFSET](cor-field-offset-structure.md) .  
   
  `cMax`  
  [in] Tamaño máximo de la matriz `rFieldOffset`.  
   
  `pcFieldOffset`  
- [fuera] El número de `rFieldOffset`elementos devueltos en .  
+ enuncia Número de elementos devueltos en `rFieldOffset` .  
   
  `pulClassSize`  
- [fuera] El tamaño en bytes de `td`la clase representada por .  
+ enuncia Tamaño en bytes de la clase representada por `td` .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Biblioteca:** Incluido como recurso en MsCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
-- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport (Interfaz)](imetadataimport-interface.md)
+- [IMetaDataImport2 (Interfaz)](imetadataimport2-interface.md)

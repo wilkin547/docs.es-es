@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9c37185f-d1e0-4a6e-8b99-707f7df61d88
 topic_type:
 - apiref
-ms.openlocfilehash: 3cdc185408576f5679daacef4dde438d66e490ff
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 2e6e3a6432d6568532a5f5b9676b5f130eb83d0b
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76862755"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502899"
 ---
 # <a name="icorprofilerinfo2getgenerationbounds-method"></a>ICorProfilerInfo2::GetGenerationBounds (Método)
 Obtiene las regiones de memoria, que son segmentos del montón, que componen las distintas generaciones de recolección de elementos no utilizados.  
@@ -34,7 +34,7 @@ HRESULT GetGenerationBounds(
     [out, size_is(cObjectRanges), length_is(*pcObjectRanges)] COR_PRF_GC_GENERATION_RANGE ranges[]);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parámetros  
  `cObjectRanges`  
  [in] Número de elementos asignado por el llamador para la matriz `ranges`.  
   
@@ -44,7 +44,7 @@ HRESULT GetGenerationBounds(
  `ranges`  
  enuncia Matriz de estructuras de [COR_PRF_GC_GENERATION_RANGE](cor-prf-gc-generation-range-structure.md) , cada una de las cuales describe un intervalo (es decir, un bloque) de memoria dentro de la generación que está en proceso de recolección de elementos no utilizados.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Se puede llamar al método `GetGenerationBounds` desde cualquier devolución de llamada del generador de perfiles, siempre que la recolección de elementos no utilizados no esté en curso.
 
  La mayoría de los cambios de generación tienen lugar durante las recolecciones de elementos no utilizados. Las generaciones pueden crecer de una recolección a otra, pero por lo general no se mueven. Por este motivo, los lugares más interesantes para llamar a `GetGenerationBounds` están en `ICorProfilerCallback2::GarbageCollectionStarted` y `ICorProfilerCallback2::GarbageCollectionFinished`.  
@@ -53,18 +53,18 @@ HRESULT GetGenerationBounds(
   
  Esta función usa búferes asignados por el llamador.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
-- [ICorProfilerInfo (interfaz)](icorprofilerinfo-interface.md)
-- [ICorProfilerInfo2 (interfaz)](icorprofilerinfo2-interface.md)
+- [ICorProfilerInfo (Interfaz)](icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 (Interfaz)](icorprofilerinfo2-interface.md)
 - [Interfaces para generación de perfiles](profiling-interfaces.md)
 - [Generación de perfiles](index.md)

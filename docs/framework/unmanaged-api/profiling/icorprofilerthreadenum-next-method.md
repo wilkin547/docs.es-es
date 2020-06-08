@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3535279-3c63-41a2-ab0e-a129dc5a01e8
 topic_type:
 - apiref
-ms.openlocfilehash: 4e08e74a2b7e5b853f089b95328c0a55de5a87cd
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 37d1acfa70a1a2b2c18fb34fb5d6024f3b61e2ab
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76860928"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84494350"
 ---
 # <a name="icorprofilerthreadenumnext-method"></a>ICorProfilerThreadEnum::Next (Método)
 Obtiene el número especificado de subprocesos contiguos de una colección secuencial de subprocesos, comenzando en la posición actual del enumerador en la secuencia.  
@@ -35,7 +35,7 @@ HRESULT Next (    [in]  ULONG      celt,
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parámetros  
  `celt`  
  [in] Número de subprocesos para recuperar.  
   
@@ -53,16 +53,16 @@ HRESULT Next (    [in]  ULONG      celt,
 |S_OK|Se devolvieron `celt` elementos.|  
 |S_FALSE|Se devolvieron menos de `celt` elementos, lo que indica que la enumeración está completa.|  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
-- [ICorProfilerThreadEnum (interfaz)](icorprofilerthreadenum-interface.md)
+- [ICorProfilerThreadEnum (Interfaz)](icorprofilerthreadenum-interface.md)
 - [Interfaces para generación de perfiles](profiling-interfaces.md)

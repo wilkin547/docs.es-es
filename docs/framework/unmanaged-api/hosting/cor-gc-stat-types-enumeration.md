@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fc51d6db-f7f8-408b-b93d-c166fc712c99
 topic_type:
 - apiref
-ms.openlocfilehash: cca393ae34144787ab7800baec7c58209394f30e
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: d7e78dfc4beba67cc376b221d0cd49f7200f5d23
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616723"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501708"
 ---
 # <a name="cor_gc_stat_types-enumeration"></a>COR_GC_STAT_TYPES (enumeración)
 Especifica las estadísticas que se van a registrar para una recolección de elementos no utilizados.  
@@ -33,8 +33,8 @@ typedef enum {
 } COR_GC_STAT_TYPES;  
 ```  
   
-## <a name="remarks"></a>Observaciones  
- Esta enumeración especifica qué estadísticas de la estructura de [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) se van a establecer mediante el método [ICLRGCManager:: getstats (](iclrgcmanager-getstats-method.md) .  
+## <a name="remarks"></a>Comentarios  
+ Esta enumeración especifica qué estadísticas de la estructura de [COR_GC_STATS](cor-gc-stats-structure.md) se van a establecer mediante el método [ICLRGCManager:: getstats (](iclrgcmanager-getstats-method.md) .  
   
 ## <a name="members"></a>Miembros  
   
@@ -50,7 +50,7 @@ typedef enum {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también:
 
 - [COR_GC_STATS (Estructura)](cor-gc-stats-structure.md)
 - [Enumeraciones para hosts](hosting-enumerations.md)

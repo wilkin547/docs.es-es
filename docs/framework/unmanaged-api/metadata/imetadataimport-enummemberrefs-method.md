@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e97c97a6-6e4f-41f5-9af1-9b3cf3bdbd6b
 topic_type:
 - apiref
-ms.openlocfilehash: b8a65b0748fec0e474d8b3b5dc03473fbd716108
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 68cdefe7ab362b26bbf060fa46766068eb0d7094
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177330"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503762"
 ---
 # <a name="imetadataimportenummemberrefs-method"></a>IMetaDataImport::EnumMemberRefs (Método)
 Enumera los tokens de MemberRef que representan a miembros del tipo especificado.  
@@ -39,37 +39,37 @@ HRESULT EnumMemberRefs (
   
 ## <a name="parameters"></a>Parámetros  
  `phEnum`  
- [adentro, fuera] Un puntero al enumerador.  
+ [in, out] Puntero al enumerador.  
   
  `tkParent`  
- [en] Un typeDef, TypeRef, MethodDef, o ModuleRef token para el tipo cuyos miembros se van a enumerar.  
+ de Un token TypeDef, TypeRef, MethodDef o ModuleRef para el tipo cuyos miembros se van a enumerar.  
   
  `rMemberRefs`  
- [fuera] Matriz utilizada para almacenar tokens MemberRef.  
+ enuncia Matriz utilizada para almacenar los tokens de MemberRef.  
   
  `cMax`  
  [in] Tamaño máximo de la matriz `rMemberRefs`.  
   
  `pcTokens`  
- [fuera] El número real de tokens `rMemberRefs`MemberRef devueltos en .  
+ enuncia Número real de tokens de MemberRef devueltos en `rMemberRefs` .  
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|Descripción|  
+|HRESULT|Description|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMemberRefs`regresó con éxito.|  
-|`S_FALSE`|No hay tokens MemberRef para enumerar. En ese `pcTokens` caso, es a cero.|  
+|`S_OK`|`EnumMemberRefs`se devolvió correctamente.|  
+|`S_FALSE`|No hay tokens de MemberRef que enumerar. En ese caso, `pcTokens` es a cero.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Biblioteca:** Incluido como recurso en MsCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
-- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport (Interfaz)](imetadataimport-interface.md)
+- [IMetaDataImport2 (Interfaz)](imetadataimport2-interface.md)

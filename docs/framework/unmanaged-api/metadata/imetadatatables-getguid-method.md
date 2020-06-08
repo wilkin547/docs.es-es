@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a3546316-e24d-417f-9909-e45d42c9d471
 topic_type:
 - apiref
-ms.openlocfilehash: 57df124f15f78daad053d9634e1baa969a65cc35
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6f273cb03ad00957afb2bd78fe538a940fae236a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175283"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501240"
 ---
 # <a name="imetadatatablesgetguid-method"></a>IMetaDataTables::GetGuid (Método)
 Obtiene un GUID de la fila en el índice especificado.  
@@ -36,25 +36,25 @@ HRESULT GetGuid (
   
 ## <a name="parameters"></a>Parámetros  
  `ixGuid`  
- [en] El índice de la fila desde la que se obtiene el GUID.  
+ de Índice de la fila de la que se va a obtener el GUID.  
   
  `ppGuid`  
- [fuera] Un puntero a un puntero al GUID.  
+ enuncia Un puntero a un puntero al GUID.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
 
-  No se recomienda el uso de este método, porque no devuelve resultados coherentes. Para obtener información acerca de la tabla GUID, consulte la documentación de Common Language Infrastructure (CLI), especialmente "Partition II: Metadata Definition and Semantics". La documentación está disponible en línea; Véanse los estándares de infraestructura de [ECMA C y Lenguaje Común](../../../standard/components.md#applicable-standards) y la norma [ECMA-335 - Common Language Infrastructure (CLI).](http://www.ecma-international.org/publications/standards/Ecma-335.htm)  
+  No se recomienda el uso de este método, ya que no devuelve resultados coherentes. Para obtener información acerca de la tabla de GUID, consulte la documentación de Common Language Infrastructure (CLI), especialmente "partición II: definición y semántica de los metadatos". La documentación está disponible en línea; vea [ECMA C# and Common Language Infrastructure Standards](../../../standard/components.md#applicable-standards) y [standard ECMA-335-Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
-- [IMetaDataTables (Interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [IMetaDataTables2 (Interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [IMetaDataTables (Interfaz)](imetadatatables-interface.md)
+- [IMetaDataTables2 (Interfaz)](imetadatatables2-interface.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 00061a25-ba05-47a7-b984-fd916b06b149
 topic_type:
 - apiref
-ms.openlocfilehash: c9ac624e17223def206e86fd92ee4fd2de7f6082
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6346b1e34e508e5c173bfd0119ac7451d7eef40e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436749"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490801"
 ---
 # <a name="imetadataimportgettypedefprops-method"></a>IMetaDataImport::GetTypeDefProps (Método)
-Devuelve información de metadatos para la <xref:System.Type> representada por el token de TypeDef especificado.  
+Devuelve información de metadatos para el <xref:System.Type> representado por el token de TypeDef especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -46,27 +46,27 @@ HRESULT GetTypeDefProps (
  enuncia Búfer que contiene el nombre del tipo.  
   
  `cchTypeDef`  
- de Tamaño en caracteres anchos de `szTypeDef`.  
+ de Tamaño en caracteres anchos de `szTypeDef` .  
   
  `pchTypeDef`  
- enuncia Número de caracteres anchos devueltos en `szTypeDef`.  
+ enuncia Número de caracteres anchos devueltos en `szTypeDef` .  
   
  `pdwTypeDefFlags`  
- enuncia Puntero a cualquier marca que modifique la definición de tipo. Este valor es una máscara de máscara de la enumeración [cortypeattr (](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) .  
+ enuncia Puntero a cualquier marca que modifique la definición de tipo. Este valor es una máscara de máscara de la enumeración [cortypeattr (](cortypeattr-enumeration.md) .  
   
  `ptkExtends`  
  enuncia Un símbolo (token) de metadatos TypeDef o TypeRef que representa el tipo base del tipo solicitado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
  **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
-- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport (Interfaz)](imetadataimport-interface.md)
+- [IMetaDataImport2 (Interfaz)](imetadataimport2-interface.md)

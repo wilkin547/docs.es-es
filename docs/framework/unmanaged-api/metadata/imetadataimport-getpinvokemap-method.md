@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8685c1e-b80c-4198-8eb3-748d6f48a99e
 topic_type:
 - apiref
-ms.openlocfilehash: c458fef77b49f522ca21dd5487731f4d43588cea
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8409e56b5ec4dbe47035a0555b6b7ce175b517ee
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437099"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490983"
 ---
 # <a name="imetadataimportgetpinvokemap-method"></a>IMetaDataImport::GetPinvokeMap (Método)
 Obtiene un token ModuleRef para representar el ensamblado de destino de una llamada PInvoke.  
@@ -43,30 +43,30 @@ HRESULT GetPinvokeMap (
  de Un token de FieldDef o MethodDef para el que obtener los metadatos de asignación de PInvoke.  
   
  `pdwMappingFlags`  
- enuncia Puntero a las marcas que se usan para la asignación. Este valor es una máscara de máscara de la enumeración [CorPinvokeMap (](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md) .  
+ enuncia Puntero a las marcas que se usan para la asignación. Este valor es una máscara de máscara de la enumeración [CorPinvokeMap (](corpinvokemap-enumeration.md) .  
   
  `szImportName`  
  enuncia Nombre de la DLL de destino no administrada.  
   
  `cchImportName`  
- de Tamaño en caracteres anchos de `szImportName`.  
+ de Tamaño en caracteres anchos de `szImportName` .  
   
  `pchImportName`  
- enuncia Número de caracteres anchos devueltos en `szImportName`.  
+ enuncia Número de caracteres anchos devueltos en `szImportName` .  
   
  `pmrImportDLL`  
  enuncia Un puntero a un token ModuleRef que representa la biblioteca de objetos de destino no administrada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
  **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
-- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport (Interfaz)](imetadataimport-interface.md)
+- [IMetaDataImport2 (Interfaz)](imetadataimport2-interface.md)

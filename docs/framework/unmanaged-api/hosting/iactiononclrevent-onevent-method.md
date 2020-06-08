@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0970f10c-4304-4c12-91c0-83e51455afb4
 topic_type:
 - apiref
-ms.openlocfilehash: a216a2925382016adeb100554bdceefdf3ee902b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: bbf5e299285071ba6d43fd2c40fc724d19bc7b2a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616065"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504360"
 ---
 # <a name="iactiononclreventonevent-method"></a>IActionOnCLREvent::OnEvent (Método)
 Realiza devoluciones de llamada en eventos que se han registrado mediante una llamada al método [ICLROnEventManager:: RegisterActionOnEvent](iclroneventmanager-registeractiononevent-method.md) .  
@@ -52,10 +52,10 @@ HRESULT OnEvent (
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Si un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a cualquier método de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El `data` parámetro es un puntero a un objeto de tipo no especificado. Si el `event` parámetro es `Event_DomainUnload` , `data` es el identificador numérico del <xref:System.AppDomain> que se ha descargado. El host puede tomar las medidas adecuadas con este identificador como clave.  
   
- Si `event` es `Event_MDAFired` , `data` es un puntero a una instancia de [MDAInfo (](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md) que contiene la salida del mensaje de un asistente para la depuración administrada (MDA). Los MDA son una característica de CLR que ayuda a los desarrolladores a depurar mediante la generación de mensajes XML sobre eventos que, de otro modo, son difíciles de interceptar. Estos mensajes pueden ser especialmente útiles para depurar las transiciones entre el código administrado y no administrado. Para obtener más información, vea [diagnosticar errores con asistentes para la depuración administrada](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
+ Si `event` es `Event_MDAFired` , `data` es un puntero a una instancia de [MDAInfo (](mdainfo-structure.md) que contiene la salida del mensaje de un asistente para la depuración administrada (MDA). Los MDA son una característica de CLR que ayuda a los desarrolladores a depurar mediante la generación de mensajes XML sobre eventos que, de otro modo, son difíciles de interceptar. Estos mensajes pueden ser especialmente útiles para depurar las transiciones entre el código administrado y no administrado. Para obtener más información, vea [diagnosticar errores con asistentes para la depuración administrada](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
@@ -66,7 +66,7 @@ HRESULT OnEvent (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también:
 
 - [Diagnóstico de errores con asistentes de depuraciones administradas](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [EClrEvent (Enumeración)](eclrevent-enumeration.md)

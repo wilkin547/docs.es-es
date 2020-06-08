@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2b1f1418-4be8-4cdb-b418-b3abccc527a7
 topic_type:
 - apiref
-ms.openlocfilehash: 1c9f15881d3515f24a63f29e9337a7a356937f2d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: cd164008098c053e7d6506a6eef7d3bc8e4274b6
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449943"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503710"
 ---
 # <a name="imetadataimportenumuserstrings-method"></a>IMetaDataImport::EnumUserStrings (Método)
 Enumera los tokens de String que representan las cadenas codificadas de forma rígida en el ámbito de metadatos actual.  
@@ -47,28 +47,28 @@ HRESULT EnumUserStrings (
  [in] Tamaño máximo de la matriz `rStrings`.  
   
  `pcStrings`  
- enuncia El número de tokens de cadena devueltos en `rStrings`.  
+ enuncia El número de tokens de cadena devueltos en `rStrings` .  
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|Descripción|  
+|HRESULT|Description|  
 |-------------|-----------------|  
-|`S_OK`|`EnumUserStrings` devolvió correctamente.|  
+|`S_OK`|`EnumUserStrings`se devolvió correctamente.|  
 |`S_FALSE`|No hay tokens que enumerar. En ese caso, `pcStrings` es cero.|  
   
 ## <a name="remarks"></a>Comentarios  
- Los tokens de cadena se crean mediante el método [IMetaDataEmit::D efineuserstring](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md) . Este método está diseñado para que lo use un explorador de metadatos en lugar de un compilador.  
+ Los tokens de cadena se crean mediante el método [IMetaDataEmit::D efineuserstring](imetadataemit-defineuserstring-method.md) . Este método está diseñado para que lo use un explorador de metadatos en lugar de un compilador.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
  **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
-- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport (Interfaz)](imetadataimport-interface.md)
+- [IMetaDataImport2 (Interfaz)](imetadataimport2-interface.md)

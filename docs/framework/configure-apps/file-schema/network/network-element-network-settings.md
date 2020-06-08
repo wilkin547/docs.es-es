@@ -1,5 +1,6 @@
 ---
 title: Elemento <network> (configuración de red)
+description: El <network> elemento configuración de red configura las opciones de red para una opción de servidor SMTP externo en el .NET Framework.
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#network
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <network> element
 - network element
 ms.assetid: 2c2c6ad4-ed11-48ab-b28e-2bc0ba9b42c7
-ms.openlocfilehash: f7cfcc3b9d5a717c23175cd15aa48ae97c828e57
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 36857e63871b4672df349934594f0887a042609e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154821"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504555"
 ---
 # <a name="network-element-network-settings"></a>Elemento \<network> (configuración de red)
 Configura las opciones de red para un servidor de Protocolo simple de transferencia de correo (SMTP) externo.  
@@ -44,7 +45,7 @@ Configura las opciones de red para un servidor de Protocolo simple de transferen
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|Description|  
 |---------------|-----------------|  
 |`clientDomain`|Especifica el nombre de dominio de cliente que se va a usar en la solicitud de protocolo SMTP inicial para conectarse al servidor de correo SMTP. El valor predeterminado es el nombre localhost del equipo local que envía la solicitud.|  
 |`defaultCredentials`|Especifica si se deben usar las credenciales de usuario predeterminadas para obtener acceso al servidor de correo SMTP para las transacciones SMTP. El valor predeterminado es `false`.|  
@@ -109,7 +110,7 @@ Configura las opciones de red para un servidor de Protocolo simple de transferen
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
 - <xref:System.Net.Configuration.SmtpNetworkElement?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>
