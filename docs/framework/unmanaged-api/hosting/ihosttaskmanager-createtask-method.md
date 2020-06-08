@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a6f8ad36-61e1-42b0-9db2-add575646d18
 topic_type:
 - apiref
-ms.openlocfilehash: 7079a915c0402df62afa5648317619af82c943b0
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 4037ffe63d8ebfca67cbd0b3293d36be7481b1bd
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83841989"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501422"
 ---
 # <a name="ihosttaskmanagercreatetask-method"></a>IHostTaskManager::CreateTask (Método)
 Solicita que el host cree una nueva tarea.  
@@ -47,7 +47,7 @@ HRESULT CreateTask (
  de Un puntero a los datos de usuario que se van a pasar a la función, o null si la función no toma ningún parámetro.  
   
  `ppTask`  
- enuncia Un puntero a la dirección de una instancia de [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) creada por el host, o null si no se puede crear la tarea. La tarea permanece en estado suspendido hasta que se inicia explícitamente mediante una llamada a [IHostTask:: Start](ihosttask-start-method.md).  
+ enuncia Un puntero a la dirección de una instancia de [IHostTask](ihosttask-interface.md) creada por el host, o null si no se puede crear la tarea. La tarea permanece en estado suspendido hasta que se inicia explícitamente mediante una llamada a [IHostTask:: Start](ihosttask-start-method.md).  
   
 ## <a name="return-value"></a>Valor devuelto  
   
@@ -61,7 +61,7 @@ HRESULT CreateTask (
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
 |E_OUTOFMEMORY|No había suficiente memoria disponible para crear la tarea solicitada.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  CLR llama `CreateTask` a para solicitar que el host cree una nueva tarea. El host devuelve un puntero de interfaz a una `IHostTask` instancia de. La tarea devuelta debe permanecer suspendida hasta que se inicie explícitamente mediante una llamada a `IHostTask::Start` .  
   
 ## <a name="requirements"></a>Requisitos  
@@ -73,7 +73,7 @@ HRESULT CreateTask (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
 - [ICLRTask (Interfaz)](iclrtask-interface.md)
 - [ICLRTaskManager (Interfaz)](iclrtaskmanager-interface.md)

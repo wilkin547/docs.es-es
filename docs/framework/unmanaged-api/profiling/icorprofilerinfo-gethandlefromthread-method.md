@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 36cdc9f5-7579-4cd2-aa36-fc05c741584c
 topic_type:
 - apiref
-ms.openlocfilehash: 038f922eaaeb7d660cfbdcc0facb89677bdd154e
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 419195d9450bf07e5ad8c7cedcac76e175137c96
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76863548"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84498250"
 ---
 # <a name="icorprofilerinfogethandlefromthread-method"></a>ICorProfilerInfo::GetHandleFromThread (Método)
 Asigna el identificador de un subproceso a un identificador de subproceso de Win32.  
@@ -33,25 +33,25 @@ HRESULT GetHandleFromThread(
     [out] HANDLE  *phThread);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parámetros  
  `threadId`  
  de IDENTIFICADOR del subproceso que se va a asignar.  
   
  `phThread`  
  enuncia Puntero a un identificador de subproceso de Win32.  
   
-## <a name="remarks"></a>Notas  
- El generador de perfiles debe llamar a la función `DuplicateHandle` de Win32 en el identificador antes de usarlo.  
+## <a name="remarks"></a>Comentarios  
+ El generador de perfiles debe llamar a la `DuplicateHandle` función de Win32 en el identificador antes de usarlo.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
-- [ICorProfilerInfo (interfaz)](icorprofilerinfo-interface.md)
+- [ICorProfilerInfo (Interfaz)](icorprofilerinfo-interface.md)

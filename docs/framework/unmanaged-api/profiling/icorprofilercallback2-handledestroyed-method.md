@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ab4f4bbd-40c7-4667-bfde-60cd73803110
 topic_type:
 - apiref
-ms.openlocfilehash: b2618da708a1c4351b56a15af9156a68392a0d59
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: d7a4f7d08e6d8698dbb58c4c2d111a47d0ccc8db
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76865758"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499784"
 ---
 # <a name="icorprofilercallback2handledestroyed-method"></a>ICorProfilerCallback2::HandleDestroyed (Método)
 Notifica al generador de perfiles de código que se ha destruido un identificador de recolección de elementos no utilizados.  
@@ -32,20 +32,20 @@ HRESULT HandleDestroyed(
     [in] GCHandleID handleId);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parámetros  
  `handleId`  
  de IDENTIFICADOR del identificador para la recolección de elementos no utilizados.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
-- [ICorProfilerCallback (interfaz)](icorprofilercallback-interface.md)
-- [ICorProfilerCallback2 (interfaz)](icorprofilercallback2-interface.md)
+- [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)
+- [ICorProfilerCallback2 (Interfaz)](icorprofilercallback2-interface.md)

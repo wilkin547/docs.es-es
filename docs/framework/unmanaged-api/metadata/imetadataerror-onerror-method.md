@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c1e744b8-a6fb-4d9c-a971-8babc875d8f0
 topic_type:
 - apiref
-ms.openlocfilehash: 489fa217744e41ccb5d27d088790131c15e1ee52
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d2252f58af1a319d953fb320a99fad1cfec3dca0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177398"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492725"
 ---
 # <a name="imetadataerroronerror-method"></a>IMetaDataError::OnError (Método)
 Proporciona una notificación de los errores que se producen durante la combinación de metadatos.  
@@ -36,20 +36,20 @@ HRESULT OnError (
   
 ## <a name="parameters"></a>Parámetros  
  `hrError`  
- [en] El valor de error HRESULT devuelto al método de llamada.  
+ de El valor de error HRESULT devuelto al método de llamada.  
   
  `token`  
- [en] El token de metadatos del objeto de código que se estaba combinando cuando se produjo el error.  
+ de Token de metadatos del objeto de código que se estaba combinando cuando se produjo el error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
-- [IMetaDataError (Interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md)
+- [IMetaDataError (Interfaz)](imetadataerror-interface.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 15cfc300-8231-4ecb-9a04-19851c3eb484
 topic_type:
 - apiref
-ms.openlocfilehash: f7a943627e2087e6b8c78ced9fc32824843d44fc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0a21924008bcbfa0894218f57aee559a564f8003
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175140"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499979"
 ---
 # <a name="icorprofilercallbackremotingclientreceivingreply-method"></a>ICorProfilerCallback::RemotingClientReceivingReply (Método)
-Notifica al generador de perfiles que la parte del lado del servidor de una llamada remota se ha completado y que el cliente ahora está recibiendo y a punto de procesar la respuesta.  
+Notifica al generador de perfiles que se ha completado la parte del servidor de una llamada de comunicación remota y que el cliente está recibiendo y procesando la respuesta.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,28 +35,28 @@ HRESULT RemotingClientReceivingReply(
   
 ## <a name="parameters"></a>Parámetros  
  `pCookie`  
- [en] Valor que se corresponderá con el valor proporcionado en [ICorProfilerCallback::RemotingServerSendingReply](icorprofilercallback-remotingserversendingreply-method.md) en estas condiciones:  
+ de Un valor que se corresponderá con el valor proporcionado en [ICorProfilerCallback:: RemotingServerSendingReply (](icorprofilercallback-remotingserversendingreply-method.md) en estas condiciones:  
   
-- Las cookies GUID remotas están activas.  
+- Las cookies del GUID de comunicación remota están activas.  
   
-- El canal tiene éxito en la transmisión del mensaje.  
+- El canal realiza correctamente la transmisión del mensaje.  
   
-- Las cookies GUID están activas en el proceso del lado del servidor.  
+- Las cookies de GUID están activas en el proceso del servidor.  
   
  Esto permite un fácil emparejamiento de llamadas remotas.  
   
  `fIsAsync`  
- [en] Un valor `true` que es si la llamada es asincrónica; de `false`lo contrario, .  
+ de Valor que es `true` si la llamada es asincrónica; de lo contrario, `false` .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)

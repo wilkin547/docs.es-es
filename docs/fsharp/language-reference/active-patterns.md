@@ -1,23 +1,23 @@
 ---
 title: Patrones activos
-description: Aprenda a utilizar patrones activos para definir particiones con nombre que subdividen los datos de entrada en el lenguaje de programación de F .
+description: 'Obtenga información sobre cómo usar patrones activos para definir particiones con nombre que subdividen los datos de entrada en el lenguaje de programación F #.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 898ef201369683bfd49d53e863e86f919f5837fe
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7b6da38baa35f30ae6de8a930be60a4e4fc0fc0d
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187059"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493898"
 ---
 # <a name="active-patterns"></a>Patrones activos
 
-*Los patrones activos* le permiten definir particiones con nombre que subdividen los datos de entrada, de modo que pueda usar estos nombres en una expresión de coincidencia de patrones tal como lo haría para una unión discriminada. Se pueden usar patrones activos para descomponer los datos de manera personalizada para cada partición.
+Los *modelos activos* permiten definir particiones con nombre que subdividen los datos de entrada, de modo que puede usar estos nombres en una expresión de coincidencia de patrones de la misma forma que lo haría para una Unión discriminada. Se pueden usar patrones activos para descomponer los datos de manera personalizada para cada partición.
 
 ## <a name="syntax"></a>Sintaxis
 
 ```fsharp
 // Active pattern of one choice.
-let (|identifier|) [arguments] valueToMatch= expression
+let (|identifier|) [arguments] valueToMatch = expression
 
 // Active Pattern with multiple choices.
 // Uses a FSharp.Core.Choice<_,...,_> based on the number of case names. In F#, the limitation n <= 7 applies.
@@ -28,15 +28,15 @@ let (|identifer1|identifier2|...|) valueToMatch = expression
 let (|identifier|_|) [arguments ] valueToMatch = expression
 ```
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
-En la sintaxis anterior, los identificadores son nombres para las particiones de los datos de entrada representados por argumentos o, en otras *palabras,* nombres para subconjuntos del conjunto de todos los valores de los argumentos. Puede haber hasta siete particiones en una definición de patrón activo. La *expresión* describe el formulario en el que se descomponen los datos. Puede utilizar una definición de patrón activa para definir las reglas para determinar a cuál de las particiones con nombre pertenecen los valores dados como argumentos. Los símbolos (a) se conocen como clips de *plátano* y la función creada por este tipo de enlace let se denomina *reconocedor activo.*
+En la sintaxis anterior, los identificadores son nombres para las particiones de los datos de entrada que se representan mediante *argumentos*o, en otras palabras, nombres para subconjuntos del conjunto de todos los valores de los argumentos. Puede haber hasta siete particiones en una definición de modelo activo. La *expresión* describe el formulario en el que se descomponen los datos. Puede usar una definición de modelo activa para definir las reglas para determinar a qué particiones con nombre se encuentran los valores especificados como argumentos. Los símbolos (| y |) se conocen como *clips de banana* y la función creada por este tipo de enlace Let se denomina *reconocedor activo*.
 
-Por ejemplo, considere el siguiente patrón activo con un argumento.
+Como ejemplo, considere el siguiente patrón activo con un argumento.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5001.fs)]
 
-Puede utilizar el patrón activo en una expresión de coincidencia de patrones, como en el ejemplo siguiente.
+Puede usar el modelo activo en una expresión de coincidencia de patrones, como en el ejemplo siguiente.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5002.fs)]
 
@@ -48,7 +48,7 @@ La salida de este programa es la siguiente:
 32 is even
 ```
 
-Otro uso de patrones activos es descomponer los tipos de datos de varias maneras, como cuando los mismos datos subyacentes tienen varias representaciones posibles. Por ejemplo, `Color` un objeto podría descomponerse en una representación RGB o una representación HSB.
+Otro uso de los patrones activos es descomponer los tipos de datos de varias maneras, por ejemplo, cuando los mismos datos subyacentes tienen varias representaciones posibles. Por ejemplo, un `Color` objeto se puede descomponer en una representación RGB o en una representación HSB.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5003.fs)]
 
@@ -72,13 +72,13 @@ BlanchedAlmond
  Hue: 36.000000 Saturation: 1.000000 Brightness: 0.901961
 ```
 
-En combinación, estas dos formas de usar patrones activos le permiten particionar y descomponer datos en solo el formulario adecuado y realizar los cálculos adecuados en los datos adecuados en la forma más conveniente para el cálculo.
+En combinación, estas dos maneras de utilizar los modelos activos permiten particionar y descomponer los datos en el formulario adecuado y realizar los cálculos adecuados en los datos adecuados en el formulario más conveniente para el cálculo.
 
-Las expresiones de coincidencia de patrones resultantes permiten que los datos se escriban de una manera conveniente que sea muy legible, lo que simplifica en gran medida el código de bifurcación y análisis de datos potencialmente complejo.
+Las expresiones de coincidencia de patrones resultantes permiten escribir datos de una manera cómoda que sea muy legible, lo que simplifica considerablemente la bifurcación y el código de análisis de datos potencialmente complejos.
 
-## <a name="partial-active-patterns"></a>Patrones activos parciales
+## <a name="partial-active-patterns"></a>Modelos activos parciales
 
-A veces, solo necesita particionar una parte del espacio de entrada. En ese caso, se escribe un conjunto de patrones parciales cada uno de los cuales coincide con algunas entradas, pero no coinciden con otras entradas. Los patrones activos que no siempre producen un valor se denominan *patrones activos parciales;* tienen un valor devuelto que es un tipo de opción. Para definir un patrón activo parcial,\_utilice un carácter comodín ( ) al final de la lista de patrones dentro de los clips de plátano. El código siguiente ilustra el uso de un patrón activo parcial.
+A veces, solo necesita crear particiones de parte del espacio de entrada. En ese caso, se escribe un conjunto de patrones parciales cada uno de los cuales coinciden con algunas entradas pero no coinciden con otras entradas. Los modelos activos que no siempre generan un valor se denominan *modelos activos parciales*. tienen un valor devuelto que es un tipo de opción. Para definir un modelo activo parcial, se usa un carácter comodín ( \_ ) al final de la lista de patrones dentro de los clips de banana. En el código siguiente se muestra el uso de un modelo activo parcial.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5004.fs)]
 
@@ -92,7 +92,7 @@ La salida del ejemplo anterior es la siguiente:
 Something else : Not matched.
 ```
 
-Cuando se utilizan patrones activos parciales, a veces las opciones individuales pueden ser desarticuladas o mutuamente excluyentes, pero no es necesario que lo sean. En el ejemplo siguiente, el patrón Square y el patrón Cube no están desarticulados, porque algunos números son cuadrados y cubos, como 64. El siguiente programa utiliza el patrón AND para combinar los patrones Square y Cube. Imprime todos los enteros de hasta 1000 que son cuadrados y cubos, así como los que son solo cubos.
+Cuando se usan modelos activos parciales, algunas veces las opciones individuales pueden ser disjuntas o excluidas mutuamente, pero no es necesario. En el ejemplo siguiente, el cuadrado de patrón y el cubo de patrón no están separados, porque algunos números son cuadrados y cubos, como 64. En el siguiente programa se usa el patrón y para combinar los patrones de cuadrados y de cubo. Imprime todos los enteros hasta 1000 que son cuadrados y cubos, así como aquellos que son solo cubos.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5005.fs)]
 
@@ -111,9 +111,9 @@ La salida es como sigue:
 1000 is a cube
 ```
 
-## <a name="parameterized-active-patterns"></a>Patrones activos parametrizados
+## <a name="parameterized-active-patterns"></a>Modelos activos con parámetros
 
-Los patrones activos siempre toman al menos un argumento para el elemento que se va a coincidir, pero también pueden tomar argumentos adicionales, en cuyo caso se aplica el *patrón activo con parámetros* de nombre. Los argumentos adicionales permiten especializar un patrón general. Por ejemplo, los patrones activos que usan expresiones regulares para analizar cadenas a menudo incluyen la `Integer` expresión regular como un parámetro adicional, como en el código siguiente, que también usa el patrón activo parcial definido en el ejemplo de código anterior. En este ejemplo, se proporcionan cadenas que utilizan expresiones regulares para varios formatos de fecha para personalizar el patrón activo general de ParseRegex. El patrón activo entero se utiliza para convertir las cadenas coincidentes en enteros que se pueden pasar al constructor DateTime.
+Los modelos activos siempre toman al menos un argumento para el elemento que se está coincidentendo, pero también pueden tomar argumentos adicionales, en cuyo caso se aplica el nombre del *modelo activo parametrizado* . Los argumentos adicionales permiten que un patrón general esté especializado. Por ejemplo, los patrones activos que usan expresiones regulares para analizar cadenas suelen incluir la expresión regular como parámetro adicional, como en el código siguiente, que también usa el modelo activo parcial `Integer` definido en el ejemplo de código anterior. En este ejemplo, se proporcionan cadenas que usan expresiones regulares para varios formatos de fecha para personalizar el modelo activo ParseRegex general. El modelo activo entero se usa para convertir las cadenas coincidentes en enteros que se pueden pasar al constructor DateTime.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5006.fs)]
 
@@ -123,7 +123,7 @@ La salida del código anterior es la siguiente:
 12/22/2008 12:00:00 AM 1/1/2009 12:00:00 AM 1/15/2008 12:00:00 AM 12/28/1995 12:00:00 AM
 ```
 
-Los patrones activos no están restringidos solo a las expresiones de coincidencia de patrones, también puede usarlos en enlaces let.
+Los modelos activos no se limitan solo a las expresiones de coincidencia de patrones, sino que también se pueden usar en los enlaces Let.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5007.fs)]
 
@@ -134,7 +134,7 @@ Hello, random citizen!
 Hello, George!
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
-- [Referencia del lenguaje f](index.md)
+- [Referencia del lenguaje F#](index.md)
 - [Expresiones de coincidencia](match-expressions.md)

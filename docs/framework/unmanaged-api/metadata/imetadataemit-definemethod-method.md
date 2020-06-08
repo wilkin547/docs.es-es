@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3e2102c5-48b7-4c0e-b805-7e2b5e156e3d
 topic_type:
 - apiref
-ms.openlocfilehash: 514f227e3c0c385f61090079d2f5214dac9b3924
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: fbf6ce8c8c9628b08872058a794fb0e005764ab1
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004535"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501305"
 ---
 # <a name="imetadataemitdefinemethod-method"></a>IMetaDataEmit::DefineMethod (Método)
 Crea una definición para un método o una función global con la firma especificada y devuelve un token a esa definición de método.  
@@ -81,7 +81,7 @@ HRESULT DefineMethod (
  No debe definir métodos duplicados. Es decir, no debe llamar a `DefineMethod` con un conjunto duplicado de valores en `td` los `wzName` parámetros, y `pvSig` . (Estos tres parámetros juntos definen de forma única el método). Sin embargo, puede usar un triple duplicado, siempre y cuando, para una de las definiciones de método, establezca el `mdPrivateScope` bit en el `dwMethodFlags` parámetro. (El `mdPrivateScope` bit significa que el compilador no emitirá una referencia a esta definición de método).  
   
 ## <a name="method-implementation-information"></a>Información de implementación de método  
- A menudo, no se conoce la información sobre la implementación del método en el momento en que se declara el método. Por lo tanto, no es necesario pasar valores en los `ulCodeRVA` `dwImplFlags` parámetros y al llamar a `DefineMethod` . Los valores se pueden proporcionar más adelante a través de [IMetaDataEmit:: setmethodimplflags (](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmethodimplflags-method.md) o [IMetaDataEmit:: SetRVA (](imetadataemit-setrva-method.md), según corresponda.  
+ A menudo, no se conoce la información sobre la implementación del método en el momento en que se declara el método. Por lo tanto, no es necesario pasar valores en los `ulCodeRVA` `dwImplFlags` parámetros y al llamar a `DefineMethod` . Los valores se pueden proporcionar más adelante a través de [IMetaDataEmit:: setmethodimplflags (](imetadataemit-setmethodimplflags-method.md) o [IMetaDataEmit:: SetRVA (](imetadataemit-setrva-method.md), según corresponda.  
   
  En algunas situaciones, como los escenarios de invocación de plataforma (PInvoke) o de interoperabilidad COM, el cuerpo del método no se proporcionará y `ulCodeRVA` debe establecerse en cero. En estas situaciones, el método no debe etiquetarse como abstracto, porque el tiempo de ejecución buscará la implementación.  
   
@@ -110,7 +110,7 @@ HRESULT DefineMethod (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
 - [IMetaDataEmit (Interfaz)](imetadataemit-interface.md)
 - [IMetaDataEmit2 (Interfaz)](imetadataemit2-interface.md)

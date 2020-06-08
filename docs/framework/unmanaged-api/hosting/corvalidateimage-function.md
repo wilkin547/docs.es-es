@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0117e080-05f9-4772-885d-e1847230947c
 topic_type:
 - apiref
-ms.openlocfilehash: 8841fab0517353849ef99594bcbd03dda772c766
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 426b39aa3d1ada5ae44565a742b70681a7bcf6d3
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616507"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493479"
 ---
 # <a name="_corvalidateimage-function"></a>_CorValidateImage (Función)
 Valida las imágenes del módulo administrado y notifica al cargador del sistema operativo una vez que se han cargado.  
@@ -43,12 +43,12 @@ STDAPI _CorValidateImage (
 ## <a name="return-value"></a>Valor devuelto  
  Esta función devuelve los valores estándar `E_INVALIDARG` , `E_OUTOFMEMORY` , `E_UNEXPECTED` y `E_FAIL` , así como los valores siguientes.  
   
-|Valor devuelto|Descripción|  
+|Valor devuelto|Description|  
 |------------------|-----------------|  
 |`STATUS_INVALID_IMAGE_FORMAT`|La imagen no es válida. Este valor tiene HRESULT 0xC000007BL.|  
 |`STATUS_SUCCESS`|La imagen es válida. Este valor tiene HRESULT 0x00000000L.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  En Windows XP y versiones posteriores, el cargador del sistema operativo comprueba los módulos administrados examinando el bit del directorio de descriptores COM en el encabezado Common Object File Format (COFF). Un bit establecido indica un módulo administrado. Si el cargador detecta un módulo administrado, carga MsCorEE. dll y llama a `_CorValidateImage` , que realiza las acciones siguientes:  
   
 - Confirma que la imagen es un módulo administrado válido.  
@@ -59,7 +59,7 @@ STDAPI _CorValidateImage (
   
 - Vuelve al cargador cuando se cargan las imágenes del módulo administrado.  
   
- En el caso de las imágenes ejecutables, el cargador del sistema operativo llama a la función [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) , independientemente del punto de entrada especificado en el archivo ejecutable. En el caso de las imágenes de ensamblado de DLL, el cargador llama a la función [_CorDllMain](cordllmain-function.md) .  
+ En el caso de las imágenes ejecutables, el cargador del sistema operativo llama a la función [_CorExeMain](corexemain-function.md) , independientemente del punto de entrada especificado en el archivo ejecutable. En el caso de las imágenes de ensamblado de DLL, el cargador llama a la función [_CorDllMain](cordllmain-function.md) .  
   
  `_CorExeMain`o `_CorDllMain` realiza las siguientes acciones:  
   
@@ -80,6 +80,6 @@ STDAPI _CorValidateImage (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también:
 
 - [Funciones estáticas globales para metadatos](../metadata/metadata-global-static-functions.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3c24e552-fc69-4971-b65a-a3e4b5f7f1e8
 topic_type:
 - apiref
-ms.openlocfilehash: a5d9342b8bfe650106ccf9daf2a91dfbcd575446
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8e067dc4943e6847177c13a683703e3a649a49e4
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175545"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503827"
 ---
 # <a name="imetadataemit2definemethodspec-method"></a>IMetaDataEmit2::DefineMethodSpec (Método)
-Crea una instancia genérica de un método y obtiene un token a la definición.  
+Crea una instancia genérica de un método y obtiene un token para la definición.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,27 +38,27 @@ HRESULT DefineMethodSpec (
   
 ## <a name="parameters"></a>Parámetros  
  `tkParent`  
- [en] Un token para el método para crear la instancia genérica. El token debe `mdMethodDef` ser `mdMemberRef`de tipo o .  
+ de Token para el método del que se va a crear la instancia genérica. El token debe ser de tipo `mdMethodDef` o `mdMemberRef` .  
   
  `pvSigBlob`  
- [en] Un puntero a la firma COM+ binaria del método.  
+ de Puntero a la firma COM+ binaria del método.  
   
  `cbSibBlob`  
- [en] El tamaño, en `pvSigBlob`bytes, de .  
+ de Tamaño, en bytes, de `pvSigBlob` .  
   
  `pmi`  
- [fuera] Un token para la definición de firma de metadatos del método.  
+ enuncia Token para la definición de la firma de metadatos del método.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE.dll  
+ **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
-- [IMetaDataEmit2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [IMetaDataEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 (Interfaz)](imetadataemit2-interface.md)
+- [IMetaDataEmit (Interfaz)](imetadataemit-interface.md)
