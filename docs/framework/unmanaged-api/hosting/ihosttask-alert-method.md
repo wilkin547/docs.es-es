@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5245d4b5-b6c3-48df-9cb9-8caf059f43fb
 topic_type:
 - apiref
-ms.openlocfilehash: 7271fe8e28da0bb5fd878aae5d36ab703e64ebf0
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: c95b787101d4d0302ce4d2a5cd3bdc7e11f9cd63
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803019"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501435"
 ---
 # <a name="ihosttaskalert-method"></a>IHostTask::Alert (Método)
 Solicita que el host reactive la tarea representada por la instancia actual de [IHostTask](ihosttask-interface.md) , por lo que se puede anular la tarea.  
@@ -42,11 +42,11 @@ HRESULT Alert ();
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  CLR llama al `Alert` método cuando <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> se llama desde el código de usuario, o cuando se <xref:System.AppDomain> cierra el asociado a la actual <xref:System.Threading.Thread> . El host debe volver inmediatamente, porque la llamada se realiza de forma asincrónica. Si el host no puede avisar inmediatamente de la tarea, se debe reactivar la próxima vez que entre en un estado en el que se pueda avisar.  
   
 > [!NOTE]
-> `Alert`afecta solo a las tareas a las que el tiempo de ejecución ha pasado un valor [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) de WAIT_ALERTABLE a métodos como [join](ihosttask-join-method.md).  
+> `Alert`afecta solo a las tareas a las que el tiempo de ejecución ha pasado un valor [WAIT_OPTION](wait-option-enumeration.md) de WAIT_ALERTABLE a métodos como [join](ihosttask-join-method.md).  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
@@ -57,7 +57,7 @@ HRESULT Alert ();
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
 - [ICLRTask (Interfaz)](iclrtask-interface.md)
 - [ICLRTaskManager (Interfaz)](iclrtaskmanager-interface.md)

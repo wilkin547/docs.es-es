@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 535a6839-c443-405b-a6f4-e2af90725d5b
 topic_type:
 - apiref
-ms.openlocfilehash: 29aecd530d18b931420467e9127bcbf96d3a4a5f
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 48ac09e1862ae58e79707235e891f72920de1251
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866779"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500564"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>ICLRProfiling::AttachProfiler (Método)
 Asocia el generador de perfiles especificado al proceso especificado.  
@@ -37,23 +37,23 @@ HRESULT AttachProfiler(
   [in] UINT cbClientData);                          // optional  
 ```  
   
-## <a name="parameters"></a>Parameters
+## <a name="parameters"></a>Parámetros
 
 - `dwProfileeProcessID`
 
-  \[en] el identificador de proceso del proceso al que se debe adjuntar el generador de perfiles. En un equipo de 64 bits, el valor de bits del proceso cuyo perfil se ha generado debe coincidir con el valor de bits del proceso desencadenador que llama a `AttachProfiler`. Si la cuenta de usuario con la que llama a `AttachProfiler` tiene privilegios administrativos, el proceso de destino puede ser cualquier proceso del sistema. De lo contrario, el proceso de destino debe pertenecer a la misma cuenta de usuario.
+  \[en] identificador de proceso del proceso al que se debe adjuntar el generador de perfiles. En un equipo de 64 bits, el valor de bits del proceso cuyo perfil se ha generado debe coincidir con el valor de bits del proceso desencadenador que llama a `AttachProfiler`. Si la cuenta de usuario con la que llama a `AttachProfiler` tiene privilegios administrativos, el proceso de destino puede ser cualquier proceso del sistema. De lo contrario, el proceso de destino debe pertenecer a la misma cuenta de usuario.
 
 - `dwMillisecondsMax`
 
-  \[en] la duración del tiempo, en milisegundos, para que se complete la `AttachProfiler`. El proceso de desencadenador debe pasar un tiempo de espera que se sabe que es suficiente para que el generador de perfiles determinado complete su inicialización.
+  \[en] la duración de tiempo, en milisegundos, para `AttachProfiler` que se complete. El proceso de desencadenador debe pasar un tiempo de espera que se sabe que es suficiente para que el generador de perfiles determinado complete su inicialización.
   
 - `pClsidProfiler`
 
-  \[en] un puntero al CLSID del generador de perfiles que se va a cargar. El proceso desencadenador puede reutilizar esta memoria después de que `AttachProfiler` vuelva.
+  \[in] un puntero al CLSID del generador de perfiles que se va a cargar. El proceso desencadenador puede reutilizar esta memoria después de que `AttachProfiler` vuelva.
 
 - `wszProfilerPath`
 
-  \[en] la ruta de acceso completa al archivo DLL del generador de perfiles que se va a cargar. Esta cadena debe contener un máximo de 260 caracteres, incluido el terminador NULL. Si `wszProfilerPath` es NULL o una cadena vacía, Common Language Runtime (CLR) intentará encontrar la ubicación del archivo DLL del generador de perfiles; para ello, buscará en el Registro el CLSID al que `pClsidProfiler` apunta.
+  \[en] ruta de acceso completa al archivo DLL del generador de perfiles que se va a cargar. Esta cadena debe contener un máximo de 260 caracteres, incluido el terminador NULL. Si `wszProfilerPath` es NULL o una cadena vacía, Common Language Runtime (CLR) intentará encontrar la ubicación del archivo DLL del generador de perfiles; para ello, buscará en el Registro el CLSID al que `pClsidProfiler` apunta.
 
 - `pvClientData`
 
@@ -61,7 +61,7 @@ HRESULT AttachProfiler(
 
 - `cbClientData`
 
-  \[in] tamaño, en bytes, de los datos a los que apunta `pvClientData`.
+  \[in] tamaño, en bytes, de los datos a los que `pvClientData` señala.
 
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los HRESULT siguientes.  
@@ -81,23 +81,23 @@ HRESULT AttachProfiler(
 |E_FAIL|Se ha producido algún otro error no especificado.|  
 |Otros códigos de error|Si el método [ICorProfilerCallback3:: InitializeForAttach](icorprofilercallback3-initializeforattach-method.md) del generador de perfiles devuelve un valor HRESULT que indica un error, `AttachProfiler` devuelve el mismo HRESULT. En este caso, E_NOTIMPL se convierte en CORPROF_E_PROFILER_NOT_ATTACHABLE.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="memory-management"></a>Administración de memoria  
  En consonancia con las convenciones de COM, el llamador de `AttachProfiler` (por ejemplo, el código desencadenador creado por el desarrollador del generador de perfiles) es responsable de la asignación y desasignación de la memoria para los datos a los que el parámetro `pvClientData` apunta. Cuando el CLR ejecuta la llamada a `AttachProfiler`, realiza una copia de la memoria a la que `pvClientData` apunta y la transmite al proceso de destino. Cuando el CLR dentro del proceso de destino recibe su propia copia del bloque `pvClientData`, pasa el bloque al generador de perfiles con el método `InitializeForAttach` y, después, desasigna su copia del bloque `pvClientData` del proceso de destino.  
   
-## <a name="requirements"></a>Requisitos de  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
-- [ICorProfilerCallback (interfaz)](icorprofilercallback-interface.md)
-- [ICorProfilerInfo3 (interfaz)](icorprofilerinfo3-interface.md)
+- [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)
+- [ICorProfilerInfo3 (Interfaz)](icorprofilerinfo3-interface.md)
 - [Interfaces para generación de perfiles](profiling-interfaces.md)
 - [Generación de perfiles](index.md)

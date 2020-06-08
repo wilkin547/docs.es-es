@@ -1,5 +1,6 @@
 ---
 title: Elemento <httpWebRequest> (configuración de red)
+description: El <httpWebRequest> elemento de configuración de red Personaliza los parámetros de la solicitud Web en el .NET Framework.
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/httpWebRequest
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <httpWebRequest> element
 - httpWebRequest element
 ms.assetid: 52acd9d2-5bdc-4dc4-9c2a-f0a476ccbb31
-ms.openlocfilehash: d33dadc14510feb00e05ca557b507b0cf8fa0dd0
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 59ab425dcef8ac5283035910a9d78a89a16be8b1
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74087458"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504594"
 ---
 # <a name="httpwebrequest-element-network-settings"></a>Elemento \<httpWebRequest> (configuración de red)
 Personaliza los parámetros de la solicitud Web.  
@@ -76,7 +77,7 @@ Personaliza los parámetros de la solicitud Web.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
 - <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>
 - [Esquema de la configuración de red](index.md)

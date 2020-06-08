@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e0f865d-88b5-44bd-be35-492622e5e08e
 topic_type:
 - apiref
-ms.openlocfilehash: e766cec8fd84713e12c43cd1095650ed5b757bcb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b8fabea78f85448e39fc6d31f0a7969458343877
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175478"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492026"
 ---
 # <a name="imetadataimportenummethodimpls-method"></a>IMetaDataImport::EnumMethodImpls (Método)
 Enumera los tokens MethodBody y MethodDeclaration que representan métodos del tipo especificado.  
@@ -40,40 +40,40 @@ HRESULT EnumMethodImpls (
   
 ## <a name="parameters"></a>Parámetros  
  `phEnum`  
- [adentro, fuera] Un puntero al enumerador. Debe ser NULL para la primera llamada de este método.  
+ [in, out] Puntero al enumerador. Debe ser NULL para la primera llamada de este método.  
   
  `td`  
- [en] Un token TypeDef para el tipo cuyas implementaciones de método se van a enumerar.  
+ de Un token de TypeDef para el tipo cuyas implementaciones de método se van a enumerar.  
   
  `rMethodBody`  
- [fuera] Matriz para almacenar los tokens MethodBody.  
+ enuncia Matriz en la que se van a almacenar los tokens de MethodBody.  
   
  `rMethodDecl`  
- [fuera] Matriz para almacenar los tokens MethodDeclaration.  
+ enuncia Matriz en la que se van a almacenar los tokens MethodDeclaration.  
   
  `cMax`  
- [en] El tamaño máximo `rMethodBody` `rMethodDecl` de las matrices y.  
+ de Tamaño máximo de las `rMethodBody` matrices y `rMethodDecl` .  
   
  `pcTokens`  
- [en] El número real de `rMethodBody` `rMethodDecl`métodos devueltos en y .  
+ de Número real de métodos devueltos en `rMethodBody` y `rMethodDecl` .  
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|Descripción|  
+|HRESULT|Description|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodImpls`regresó con éxito.|  
-|`S_FALSE`|No hay tokens de método para enumerar. En ese `pcTokens` caso, es cero.|  
+|`S_OK`|`EnumMethodImpls`se devolvió correctamente.|  
+|`S_FALSE`|No hay tokens de método para enumerar. En ese caso, `pcTokens` es cero.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Biblioteca:** Incluido como recurso en MsCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
-- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport (Interfaz)](imetadataimport-interface.md)
+- [IMetaDataImport2 (Interfaz)](imetadataimport2-interface.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c3be2cbd-2d93-438b-9888-9a0251b63c03
 topic_type:
 - apiref
-ms.openlocfilehash: b2c334c7a757c2f4044d08787bdae93ffc2804e4
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 237fe23493460df77a79ba3aed9f0a809cd8aa23
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803895"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501474"
 ---
 # <a name="ihostsecuritymanager-interface"></a>IHostSecurityManager (Interfaz)
 Proporciona métodos que permiten el acceso y el control sobre el contexto de seguridad del subproceso que se está ejecutando actualmente.  
@@ -28,14 +28,14 @@ Proporciona métodos que permiten el acceso y el control sobre el contexto de se
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método GetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md)|Obtiene el [IHostSecurityContext](ihostsecuritycontext-interface.md) solicitado del host.|  
+|[Método GetSecurityContext](ihostsecuritymanager-getsecuritycontext-method.md)|Obtiene el [IHostSecurityContext](ihostsecuritycontext-interface.md) solicitado del host.|  
 |[Método ImpersonateLoggedOnUser](ihostsecuritymanager-impersonateloggedonuser-method.md)|Solicita que el código se ejecute con las credenciales de la identidad del usuario actual.|  
 |[Método OpenThreadToken](ihostsecuritymanager-openthreadtoken-method.md)|Abre el token de acceso discrecional asociado al subproceso actual.|  
 |[Método RevertToSelf](ihostsecuritymanager-reverttoself-method.md)|Finaliza la suplantación de la identidad del usuario actual y devuelve el token del subproceso original.|  
 |[Método SetSecurityContext](ihostsecuritymanager-setsecuritycontext-method.md)|Establece el contexto de seguridad para el subproceso que se está ejecutando actualmente.|  
 |[Método SetThreadToken](ihostsecuritymanager-setthreadtoken-method.md)|Establece un identificador para el subproceso que se está ejecutando actualmente.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Un host puede controlar todo el acceso del código a los tokens de subproceso mediante el Common Language Runtime (CLR) y el código de usuario. También puede asegurarse de que se pasa información de contexto de seguridad completa a través de operaciones asincrónicas o puntos de código con acceso restringido al código. `IHostSecurityContext`encapsula esta información de contexto de seguridad, que es opaca para CLR.  
   
  CLR controla internamente el contexto del subproceso administrado. Consulta el específico del proceso `IHostSecurityManager` en las situaciones siguientes:  
@@ -57,7 +57,7 @@ Proporciona métodos que permiten el acceso y el control sobre el contexto de se
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
 - [IHostSecurityContext (Interfaz)](ihostsecuritycontext-interface.md)
 - [Interfaces de hospedaje](hosting-interfaces.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b420433c-5ebe-4986-bba1-97902e6db819
 topic_type:
 - apiref
-ms.openlocfilehash: b6e26d1538cab30db66e887aee89b8fbae501bdb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 850f05520e4146b5016bb574f02aa800dfcaaf32
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177012"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84494584"
 ---
 # <a name="icorprofilerobjectenumnext-method"></a>ICorProfilerObjectEnum::Next (Método)
-Obtiene el número especificado de objetos contiguos de una colección secuencial de objetos, comenzando en la posición actual del enumerador en la secuencia.  
+Obtiene el número especificado de objetos contiguos de una colección secuencial de objetos, empezando en la posición actual del enumerador en la secuencia.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,20 +41,20 @@ HRESULT Next (
  [in] Número de objetos que se van a recuperar.  
   
  `objects`  
- [fuera] Matriz de `ObjectID` valores, cada uno de los cuales representa un objeto recuperado.  
+ enuncia Matriz de `ObjectID` valores, cada uno de los cuales representa un objeto recuperado.  
   
  `pceltFetched`  
  [out] Puntero al número de elementos realmente devueltos en la matriz `objects`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
 - [ICorProfilerObjectEnum (Interfaz)](icorprofilerobjectenum-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f1c7ccd-7fb2-41d8-aa00-24b823376527
 topic_type:
 - apiref
-ms.openlocfilehash: 0cb0dee7db7faa4c1324d705218934489ec6a4b6
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 28aea8534eed3bcd1f645844e28849be89e130d0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005861"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501331"
 ---
 # <a name="imetadatadispenserexsetoption-method"></a>IMetaDataDispenserEx::SetOption (Método)
 Establece la opción especificada en un valor determinado para el ámbito de metadatos actual. La opción controla cómo se controlan las llamadas al ámbito de metadatos actual.  
@@ -46,11 +46,11 @@ HRESULT SetOption (
   
 |GUID|Descripción|`pValue`Parámetro|  
 |----------|-----------------|------------------------|  
-|MetaDataCheckDuplicatesFor|Controla qué elementos están comprobados en busca de duplicados. Cada vez que se llama a un método [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) que crea un nuevo elemento, puede pedir al método que compruebe si el elemento ya existe en el ámbito actual. Por ejemplo, puede comprobar la existencia de `mdMethodDef` elementos; en este caso, al llamar a [IMetaDataEmit::D efinemethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md), comprobará que el método no existe aún en el ámbito actual. Esta comprobación utiliza la clave que identifica de forma única un método dado: tipo primario, nombre y firma.|Debe ser una variante de tipo UI4 y debe contener una combinación de los valores de la enumeración [CorCheckDuplicatesFor (](corcheckduplicatesfor-enumeration.md) .|  
+|MetaDataCheckDuplicatesFor|Controla qué elementos están comprobados en busca de duplicados. Cada vez que se llama a un método [IMetaDataEmit](imetadataemit-interface.md) que crea un nuevo elemento, puede pedir al método que compruebe si el elemento ya existe en el ámbito actual. Por ejemplo, puede comprobar la existencia de `mdMethodDef` elementos; en este caso, al llamar a [IMetaDataEmit::D efinemethod](imetadataemit-definemethod-method.md), comprobará que el método no existe aún en el ámbito actual. Esta comprobación utiliza la clave que identifica de forma única un método dado: tipo primario, nombre y firma.|Debe ser una variante de tipo UI4 y debe contener una combinación de los valores de la enumeración [CorCheckDuplicatesFor (](corcheckduplicatesfor-enumeration.md) .|  
 |MetaDataRefToDefCheck|Controla los elementos a los que se hace referencia que se convierten en definiciones. De forma predeterminada, el motor de metadatos optimizará el código convirtiendo un elemento al que se hace referencia en su definición si el elemento al que se hace referencia se define realmente en el ámbito actual.|Debe ser una variante de tipo UI4 y debe contener una combinación de los valores de la enumeración [correftodefcheck (](correftodefcheck-enumeration.md) .|  
-|MetaDataNotificationForTokenMovement|Controla qué reasignaciones de token se producen durante una combinación de metadatos genera devoluciones de llamada. Use el método [IMetaDataEmit:: SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) para establecer la interfaz [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) .|Debe ser una variante de tipo UI4 y debe contener una combinación de los valores de la enumeración [cornotificationfortokenmovement (](cornotificationfortokenmovement-enumeration.md) .|  
+|MetaDataNotificationForTokenMovement|Controla qué reasignaciones de token se producen durante una combinación de metadatos genera devoluciones de llamada. Use el método [IMetaDataEmit:: SetHandler](imetadataemit-sethandler-method.md) para establecer la interfaz [IMapToken](imaptoken-interface.md) .|Debe ser una variante de tipo UI4 y debe contener una combinación de los valores de la enumeración [cornotificationfortokenmovement (](cornotificationfortokenmovement-enumeration.md) .|  
 |MetaDataSetENC|Controla el comportamiento de editar y continuar (ENC). Solo se puede establecer un modo de comportamiento a la vez.|Debe ser una variante de tipo UI4 y debe contener un valor de la enumeración [corsetenc (](corsetenc-enumeration.md) . El valor no es una máscara de máscara.|  
-|MetaDataErrorIfEmitOutOfOrder|Controla los errores de emisión desordenados que generan devoluciones de llamada. La emisión de metadatos fuera de orden no es grave; sin embargo, si se emiten metadatos en un orden que se favorece mediante el motor de metadatos, los metadatos son más compactos y, por lo tanto, se pueden buscar de forma más eficaz. Use el `IMetaDataEmit::SetHandler` método para establecer la interfaz [imetadataerror (](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md) .|Debe ser una variante de tipo UI4 y debe contener una combinación de los valores de la enumeración [corerrorifemitoutoforder (](corerrorifemitoutoforder-enumeration.md) .|  
+|MetaDataErrorIfEmitOutOfOrder|Controla los errores de emisión desordenados que generan devoluciones de llamada. La emisión de metadatos fuera de orden no es grave; sin embargo, si se emiten metadatos en un orden que se favorece mediante el motor de metadatos, los metadatos son más compactos y, por lo tanto, se pueden buscar de forma más eficaz. Use el `IMetaDataEmit::SetHandler` método para establecer la interfaz [imetadataerror (](imetadataerror-interface.md) .|Debe ser una variante de tipo UI4 y debe contener una combinación de los valores de la enumeración [corerrorifemitoutoforder (](corerrorifemitoutoforder-enumeration.md) .|  
 |MetaDataImportOption|Controla qué tipos de elementos que se eliminaron durante un ENC se recuperan mediante un enumerador.|Debe ser una variante de tipo UI4 y debe contener una combinación de los valores de la enumeración de [enumeración corimportoptions (](corimportoptions-enumeration.md) .|  
 |MetaDataThreadSafetyOptions|Controla si el motor de metadatos obtiene bloqueos de lectura/escritura, lo que garantiza la seguridad para subprocesos. De forma predeterminada, el motor supone que el acceso es de subproceso único por parte del llamador, por lo que no se obtiene ningún bloqueo. Los clientes son responsables de mantener la sincronización de subprocesos adecuada cuando se usa la API de metadatos.|Debe ser una variante de tipo UI4 y debe contener un valor de la enumeración [corthreadsafetyoptions (](corthreadsafetyoptions-enumeration.md) . El valor no es una máscara de máscara.|  
 |MetaDataGenerateTCEAdapters|Controla si el importador de la biblioteca de tipos debe generar los adaptadores de eventos estrechamente acoplados (TCE) para los contenedores de puntos de conexión COM.|Debe ser una variante de tipo BOOL. Si `pValue` se establece en `true` , el importador de la biblioteca de tipos genera los adaptadores de TCE.|  
@@ -69,7 +69,7 @@ HRESULT SetOption (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
 - [IMetaDataDispenserEx (Interfaz)](imetadatadispenserex-interface.md)
 - [IMetaDataDispenser (Interfaz)](imetadatadispenser-interface.md)

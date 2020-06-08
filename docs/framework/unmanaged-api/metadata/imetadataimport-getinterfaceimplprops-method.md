@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: be3f5985-b1e4-4036-8602-c16e8508d4af
 topic_type:
 - apiref
-ms.openlocfilehash: 4b8ddf7fec12d175f030c0ea0ed982c6fb334aee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1c9d9647084aa729817eeeb17ee3f5cd320c0d29
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175387"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491254"
 ---
 # <a name="imetadataimportgetinterfaceimplprops-method"></a>IMetaDataImport::GetInterfaceImplProps (Método)
-Obtiene un puntero a los <xref:System.Type> tokens de metadatos para el que implementa el método especificado y para la interfaz que declara ese método.
+Obtiene un puntero a los tokens de metadatos para el <xref:System.Type> que implementa el método especificado y para la interfaz que declara ese método.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,19 +37,19 @@ HRESULT GetInterfaceImplProps (
   
 ## <a name="parameters"></a>Parámetros  
  `iiImpl`  
- [en] El token de metadatos que representa el método para el que se devuelven los tokens de clase e interfaz.  
+ de Token de metadatos que representa el método para el que se van a devolver los tokens de la clase y la interfaz.  
   
  `pClass`  
- [fuera] El token de metadatos que representa la clase que implementa el método.  
+ enuncia Token de metadatos que representa la clase que implementa el método.  
   
  `ptkIface`  
- [fuera] El token de metadatos que representa la interfaz que define el método implementado.  
+ enuncia Token de metadatos que representa la interfaz que define el método implementado.  
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
- Se obtiene el `iImpl` valor de mediante una llamada a la [EnumInterfaceImpls](imetadataimport-enuminterfaceimpls-method.md) método.
+ Para obtener el valor de `iImpl` , se llama al método [enuminterfaceimpls (](imetadataimport-enuminterfaceimpls-method.md) .
 
- Por ejemplo, supongamos que `mdTypeDef` una clase tiene un valor de token de 0x02000007 y que implementa tres interfaces cuyos tipos tienen tokens:
+ Por ejemplo, supongamos que una clase tiene un `mdTypeDef` valor de token de 0x02000007 y que implementa tres interfaces cuyos tipos tienen tokens:
 
 - 0x02000003 (TypeDef)
 - 0x0100000A (TypeRef)
@@ -68,20 +68,20 @@ Conceptualmente, esta información se almacena en una tabla de implementación d
 Recuerde que el token es un valor de 4 bytes:
 
 - Los 3 bytes inferiores contienen el número de fila o RID.
-- El byte superior contiene el tipo de `mdtInterfaceImpl`token – 0x09 para .
+- El byte superior contiene el tipo de token – 0x09 para `mdtInterfaceImpl` .
 
-`GetInterfaceImplProps`devuelve la información contenida en la fila `iImpl` cuyo token se proporciona en el argumento.
+`GetInterfaceImplProps`Devuelve la información contenida en la fila cuyo token se proporciona en el `iImpl` argumento.
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado:** Cor. h  
   
- **Biblioteca:** Incluido como recurso en MsCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
-- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport (Interfaz)](imetadataimport-interface.md)
+- [IMetaDataImport2 (Interfaz)](imetadataimport2-interface.md)
