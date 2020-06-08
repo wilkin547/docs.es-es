@@ -10,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, miscellaneous constructs
 - regular expressions, miscellaneous constructs
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
-ms.openlocfilehash: a43ce44e11a9231dee2961ee02bac745d9ca71cb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8ca888074aa757a1bfba786a7bec5928b75b1da2
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73141606"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290414"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Construcciones misceláneas en expresiones regulares
 Las expresiones regulares en .NET incluyen tres construcciones de lenguaje misceláneas. Una permite habilitar o deshabilitar opciones de coincidencia determinadas en medio de un patrón de expresión regular. Las otras dos permiten incluir comentarios en una expresión regular.  
@@ -25,7 +25,7 @@ Las expresiones regulares en .NET incluyen tres construcciones de lenguaje misce
   
 `(?imnsx-imnsx)`  
   
- Indique las opciones que quiere habilitar después del signo de interrogación y las opciones que quiere deshabilitar después del signo menos. En la siguiente tabla se describe cada una de las opciones. Para obtener más información sobre cada opción, consulte [Opciones de expresiones regulares](../../../docs/standard/base-types/regular-expression-options.md).  
+ Indique las opciones que quiere habilitar después del signo de interrogación y las opciones que quiere deshabilitar después del signo menos. En la siguiente tabla se describe cada una de las opciones. Para obtener más información sobre cada opción, consulte [Opciones de expresiones regulares](regular-expression-options.md).  
   
 |Opción|Descripción|  
 |------------|-----------------|  
@@ -38,7 +38,7 @@ Las expresiones regulares en .NET incluyen tres construcciones de lenguaje misce
  Cualquier cambio en las opciones de expresión regular definido mediante la construcción `(?imnsx-imnsx)` permanece en vigor hasta el final del grupo envolvente.  
   
 > [!NOTE]
-> La construcción de agrupamiento `(?imnsx-imnsx:`*subexpresión*`)` proporciona una funcionalidad idéntica para una subexpresión. Para obtener más información, consulte [Construcciones de agrupamiento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+> La construcción de agrupamiento `(?imnsx-imnsx:`*subexpresión*`)` proporciona una funcionalidad idéntica para una subexpresión. Para obtener más información, consulte [Construcciones de agrupamiento](grouping-constructs-in-regular-expressions.md).  
   
  En el ejemplo siguiente se usan las opciones `i`, `n` y `x` para habilitar las capturas explícitas y la opción que no hace distinción entre mayúsculas y minúsculas, y para omitir el espacio en blanco del patrón de expresión regular en medio de una expresión regular.  
   
@@ -99,4 +99,4 @@ Las expresiones regulares en .NET incluyen tres construcciones de lenguaje misce
   
 ## <a name="see-also"></a>Vea también
 
-- [Lenguaje de expresiones regulares: referencia rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [Lenguaje de expresiones regulares: referencia rápida](regular-expression-language-quick-reference.md)

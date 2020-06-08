@@ -9,12 +9,12 @@ helpviewer_keywords:
 - attributes [.NET Framework], XML serialization
 - serialization, attributes
 ms.assetid: 93ee258c-9c0f-4a08-897c-c10db7a00f91
-ms.openlocfilehash: 9e99856c3ac70b122c0def23e36bbc3059c5891c
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: d9a4631189d348c02ab36054257a54c9c4673018
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378458"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84289673"
 ---
 # <a name="attributes-that-control-encoded-soap-serialization"></a>Atributos que controlan la serialización SOAP codificada
 
@@ -22,7 +22,7 @@ El documento de World Wide Web Consortium (W3C) denominado [Simple Object Access
 
 La tabla siguiente muestra los atributos, donde se pueden aplicar, y lo que hacen. Para más información sobre el uso de estos atributos para controlar la serialización de XML, consulte [Cómo: Serializar un objeto como secuencia XML con codificación SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md) y [Cómo: Invalidar la serialización XML SOAP codificada](how-to-override-encoded-soap-xml-serialization.md).
 
-Para obtener más información sobre atributos, vea [Atributos](../../../docs/standard/attributes/index.md).
+Para obtener más información sobre atributos, vea [Atributos](../attributes/index.md).
 
 |Atributo|Se aplica a|Especifica|
 |---------------|----------------|---------------|
@@ -38,7 +38,7 @@ Para obtener más información sobre atributos, vea [Atributos](../../../docs/st
 - [Serialización SOAP y XML](xml-and-soap-serialization.md)
 - [Cómo: Serializar un objeto como secuencia XML con codificación SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
 - [Cómo: Invalidar la serialización XML SOAP codificada](how-to-override-encoded-soap-xml-serialization.md)
-- [Atributos](../../../docs/standard/attributes/index.md)
+- [Atributos](../attributes/index.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [Cómo: Serialización de un objeto](how-to-serialize-an-object.md)
 - [Cómo: Deserialización de un objeto](how-to-deserialize-an-object.md)

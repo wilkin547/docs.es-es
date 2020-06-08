@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel for loops, how to use local state
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
-ms.openlocfilehash: 14f4f1402f564d38bb508e893521a3951c1509f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb6ac1a64c3a71646946d1af894d1124b12e4769
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139714"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290764"
 ---
 # <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Cómo: Escribir un bucle Parallel.For con variables locales de subproceso
 En este ejemplo se muestra la forma de usar variables locales para el subproceso para almacenar y recuperar el estado en cada una de las tareas independientes creadas por un bucle <xref:System.Threading.Tasks.Parallel.For%2A>. Mediante el uso de datos locales de subproceso, se puede evitar la sobrecarga que supone la sincronización de un gran número de accesos a un estado compartido. En vez de escribir en un recurso compartido en cada iteración, se calcula y se almacena el valor hasta que finalizan todas las iteraciones de la tarea. A continuación, se escribe una vez el resultado final en el recurso compartido o se pasa a otro método.  
@@ -40,11 +40,11 @@ Function() new MyClass()
   
  El quinto parámetro define el método que se llama una vez, después de que se hayan completado todas las iteraciones de un subproceso en particular. El tipo del argumento de entrada se corresponde de nuevo con el argumento de tipo del método <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29> y el tipo devuelto por la expresión lambda del cuerpo. En este ejemplo, el valor se agrega a una variable en el ámbito de clase de un modo seguro para subprocesos mediante una llamada al método <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType>. Gracias a la variable local de subproceso, se ha evitado el tener que escribir en esta variable de clase en cada iteración del bucle.  
   
- Para obtener más información sobre cómo usar las expresiones lambda, vea [Expresiones lambda en PLINQ y TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
+ Para obtener más información sobre cómo usar las expresiones lambda, vea [Expresiones lambda en PLINQ y TPL](lambda-expressions-in-plinq-and-tpl.md).  
   
 ## <a name="see-also"></a>Vea también
 
-- [Data Parallelism](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md) (Paralelismo de datos)
-- [Programación en paralelo](../../../docs/standard/parallel-programming/index.md)
-- [Biblioteca TPL](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
-- [Expresiones lambda en PLINQ y TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)
+- [Data Parallelism](data-parallelism-task-parallel-library.md) (Paralelismo de datos)
+- [Programación en paralelo](index.md)
+- [Biblioteca TPL](task-parallel-library-tpl.md)
+- [Expresiones lambda en PLINQ y TPL](lambda-expressions-in-plinq-and-tpl.md)

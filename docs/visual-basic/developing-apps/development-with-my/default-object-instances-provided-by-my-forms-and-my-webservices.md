@@ -7,16 +7,16 @@ helpviewer_keywords:
 - rapid application development (RAD), My.Forms
 - rapid application development (RAD), My.WebServices
 ms.assetid: de930027-9108-4f0c-b97c-5e7db4d6ef79
-ms.openlocfilehash: d06df4bd023892429b2aaefdd624398a6546d06d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 847724450ee2bc8bc591371f71171e8ba4ed9337
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74330206"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411745"
 ---
 # <a name="default-object-instances-provided-by-myforms-and-mywebservices-visual-basic"></a>Instancias de objeto predeterminadas proporcionadas por My.Forms y My.WebServices (Visual Basic)
 
-Los objetos [My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md) y [My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md) proporcionan acceso a formularios, orígenes de datos y servicios web XML utilizados por la aplicación. Para ello, proporcionan colecciones de *instancias predeterminadas* de cada uno de estos objetos.  
+Los objetos [My.Forms](../../language-reference/objects/my-forms-object.md) y [My.WebServices](../../language-reference/objects/my-webservices-object.md) proporcionan acceso a formularios, orígenes de datos y servicios web XML utilizados por la aplicación. Para ello, proporcionan colecciones de *instancias predeterminadas* de cada uno de estos objetos.  
   
 ## <a name="default-instances"></a>Instancias predeterminadas  
 
@@ -30,6 +30,6 @@ Los objetos [My.Forms](../../../visual-basic/language-reference/objects/my-forms
   
 ## <a name="see-also"></a>Vea también
 
-- [My.Forms (objeto)](../../../visual-basic/language-reference/objects/my-forms-object.md)
-- [My.WebServices (objeto)](../../../visual-basic/language-reference/objects/my-webservices-object.md)
-- [Cómo My depende del tipo de proyecto](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)
+- [My.Forms (objeto)](../../language-reference/objects/my-forms-object.md)
+- [My.WebServices (objeto)](../../language-reference/objects/my-webservices-object.md)
+- [Cómo My depende del tipo de proyecto](how-my-depends-on-project-type.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-ms.openlocfilehash: 07bd63c90bc8d78c9831e2007695a232a85111b1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 85107bf2234eda1705126e524acd5b35952094bc
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159343"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292103"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Clases de caracteres en expresiones regulares
 
@@ -58,7 +58,7 @@ Una clase de caracteres define un conjunto de caracteres, cualquiera de los cual
 
 `[*character_group*]`
 
- donde *grupo_caracteres* es una lista de cada uno de los caracteres que pueden aparecer en la cadena de entrada para que se produzca una coincidencia. *grupo_caracteres* puede estar formado por cualquier combinación de uno o varios caracteres literales, [caracteres de escape](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md) o clases de caracteres.  
+ donde *grupo_caracteres* es una lista de cada uno de los caracteres que pueden aparecer en la cadena de entrada para que se produzca una coincidencia. *grupo_caracteres* puede estar formado por cualquier combinación de uno o varios caracteres literales, [caracteres de escape](character-escapes-in-regular-expressions.md) o clases de caracteres.  
   
  La sintaxis para especificar un intervalo de caracteres es la siguiente:  
   
@@ -114,7 +114,7 @@ La sintaxis para especificar la lista de caracteres individuales es la siguiente
 
 `[*^character_group*]`
 
- donde *grupo_caracteres* es una lista de cada uno de los caracteres que no pueden aparecer en la cadena de entrada para que se produzca una coincidencia. *grupo_caracteres* puede estar formado por cualquier combinación de uno o varios caracteres literales, [caracteres de escape](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md) o clases de caracteres.  
+ donde *grupo_caracteres* es una lista de cada uno de los caracteres que no pueden aparecer en la cadena de entrada para que se produzca una coincidencia. *grupo_caracteres* puede estar formado por cualquier combinación de uno o varios caracteres literales, [caracteres de escape](character-escapes-in-regular-expressions.md) o clases de caracteres.  
   
  La sintaxis para especificar un intervalo de caracteres es la siguiente:  
 
@@ -158,7 +158,7 @@ donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacte
 ## <a name="any-character-"></a>Cualquier carácter: .  
  El carácter de punto (.) coincide con cualquier carácter excepto con `\n` (carácter de nueva línea, \u000A), con los dos requisitos siguientes:  
   
-- Si la opción <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> modifica un patrón de expresión regular o si la opción `.` modifica la parte del patrón que contiene la clase de caracteres `s`, `.` coincide con cualquier carácter. Para obtener más información, consulte [Opciones de expresiones regulares](../../../docs/standard/base-types/regular-expression-options.md).  
+- Si la opción <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> modifica un patrón de expresión regular o si la opción `.` modifica la parte del patrón que contiene la clase de caracteres `s`, `.` coincide con cualquier carácter. Para obtener más información, consulte [Opciones de expresiones regulares](regular-expression-options.md).  
   
      El ejemplo siguiente muestra el comportamiento predeterminado de la clase de caracteres `.` y con la opción <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType>. La expresión regular `^.+` comienza en el principio de la cadena y coincide con todos los caracteres. De forma predeterminada, la coincidencia termina al final de la primera línea; el patrón de la expresión regular coincide con el carácter de retorno de carro, `\r` o \u000D, pero no coincide con `\n`. Dado que la opción <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> interpreta la cadena de entrada completa como una sola línea, coincide con cada carácter de la cadena de entrada, incluido `\n`.  
   
@@ -174,7 +174,7 @@ donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacte
      [!code-vb[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any1.vb#4)]  
   
 > [!NOTE]
-> Dado que coincide con cualquier carácter, el elemento del lenguaje `.` se utiliza a menudo con un cuantificador no expansivo si un patrón de expresión regular intenta coincidir varias veces con cualquier carácter. Para obtener más información, consulte [Cuantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+> Dado que coincide con cualquier carácter, el elemento del lenguaje `.` se utiliza a menudo con un cuantificador no expansivo si un patrón de expresión regular intenta coincidir varias veces con cualquier carácter. Para obtener más información, consulte [Cuantificadores](quantifiers-in-regular-expressions.md).  
   
 <a name="CategoryOrBlock"></a>
 ## <a name="unicode-category-or-unicode-block-p"></a>Categoría Unicode o bloque Unicode: \p{}  
@@ -237,10 +237,10 @@ donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacte
 |Nd|Número, dígito decimal|  
 |Pc|Puntuación, Conector Esta categoría incluye diez caracteres, el más usado de los cuales es el carácter LOWLINE (_), u+005F.|  
   
- Si se especifica un comportamiento conforme a ECMAScript, `\w` es equivalente a `[a-zA-Z_0-9]`. Para obtener información sobre las expresiones regulares ECMAScript, consulte la sección "Comportamiento de la búsqueda de coincidencias de ECMAScript" en [Opciones de expresiones regulares](../../../docs/standard/base-types/regular-expression-options.md).  
+ Si se especifica un comportamiento conforme a ECMAScript, `\w` es equivalente a `[a-zA-Z_0-9]`. Para obtener información sobre las expresiones regulares ECMAScript, consulte la sección "Comportamiento de la búsqueda de coincidencias de ECMAScript" en [Opciones de expresiones regulares](regular-expression-options.md).  
   
 > [!NOTE]
-> Dado que coincide con cualquier carácter de palabra, el elemento del lenguaje `\w` se suele usar con un cuantificador diferido si un patrón de expresión regular intenta coincidir varias veces con cualquier carácter de palabra, seguido de un carácter de palabra específico. Para obtener más información, consulte [Cuantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+> Dado que coincide con cualquier carácter de palabra, el elemento del lenguaje `\w` se suele usar con un cuantificador diferido si un patrón de expresión regular intenta coincidir varias veces con cualquier carácter de palabra, seguido de un carácter de palabra específico. Para obtener más información, consulte [Cuantificadores](quantifiers-in-regular-expressions.md).  
   
  En el ejemplo siguiente se usa el elemento del lenguaje `\w` para buscar coincidencias de caracteres duplicados en una palabra. El ejemplo define un patrón de expresión regular, `(\w)\1`, que se puede interpretar de la siguiente manera.  
   
@@ -271,10 +271,10 @@ donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacte
 |Nd|Número, dígito decimal|  
 |Pc|Puntuación, Conector Esta categoría incluye diez caracteres, el más usado de los cuales es el carácter LOWLINE (_), u+005F.|  
   
- Si se especifica un comportamiento conforme a ECMAScript, `\W` es equivalente a `[^a-zA-Z_0-9]`. Para obtener información sobre las expresiones regulares ECMAScript, consulte la sección "Comportamiento de la búsqueda de coincidencias de ECMAScript" en [Opciones de expresiones regulares](../../../docs/standard/base-types/regular-expression-options.md).  
+ Si se especifica un comportamiento conforme a ECMAScript, `\W` es equivalente a `[^a-zA-Z_0-9]`. Para obtener información sobre las expresiones regulares ECMAScript, consulte la sección "Comportamiento de la búsqueda de coincidencias de ECMAScript" en [Opciones de expresiones regulares](regular-expression-options.md).  
   
 > [!NOTE]
-> Dado que coincide con cualquier carácter que no sea de palabra, el elemento del lenguaje `\W` se suele usar con un cuantificador diferido si un patrón de expresión regular intenta coincidir varias veces con cualquier carácter que no sea de palabra, seguido de un carácter que no sea de palabra específico. Para obtener más información, consulte [Cuantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+> Dado que coincide con cualquier carácter que no sea de palabra, el elemento del lenguaje `\W` se suele usar con un cuantificador diferido si un patrón de expresión regular intenta coincidir varias veces con cualquier carácter que no sea de palabra, seguido de un carácter que no sea de palabra específico. Para obtener más información, consulte [Cuantificadores](quantifiers-in-regular-expressions.md).  
   
  En el ejemplo siguiente se ilustra la clase de caracteres `\W`.  Define un patrón de expresión regular, `\b(\w+)(\W){1,2}`, que coincide con una palabra seguida de uno o dos caracteres que no son de palabra, como un espacio en blanco o un signo de puntuación. La expresión regular se interpreta como se muestra en la tabla siguiente.  
   
@@ -303,7 +303,7 @@ donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacte
 |`\x85`|Los puntos suspensivos o el carácter de LÍNEA SIGUIENTE (…), \u0085.|  
 |`\p{Z}`|Coincide con cualquier carácter separador.|  
   
- Si se especifica un comportamiento conforme a ECMAScript, `\s` es equivalente a `[ \f\n\r\t\v]`. Para obtener información sobre las expresiones regulares ECMAScript, consulte la sección "Comportamiento de la búsqueda de coincidencias de ECMAScript" en [Opciones de expresiones regulares](../../../docs/standard/base-types/regular-expression-options.md).  
+ Si se especifica un comportamiento conforme a ECMAScript, `\s` es equivalente a `[ \f\n\r\t\v]`. Para obtener información sobre las expresiones regulares ECMAScript, consulte la sección "Comportamiento de la búsqueda de coincidencias de ECMAScript" en [Opciones de expresiones regulares](regular-expression-options.md).  
   
  En el ejemplo siguiente se ilustra la clase de caracteres `\s`. Define un patrón de expresión regular, `\b\w+(e)?s(\s|$)`, que coincide con una palabra que termina por "s" o "es" seguida de un carácter de espacio en blanco o el final de la cadena de entrada. La expresión regular se interpreta como se muestra en la tabla siguiente.  
   
@@ -322,7 +322,7 @@ donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacte
 ## <a name="non-whitespace-character-s"></a>Carácter que no sea un espacio en blanco: \S  
  `\S` coincide con cualquier carácter que no sea un espacio en blanco. Equivale al patrón de expresión regular `[^\f\n\r\t\v\x85\p{Z}]` o es lo contrario del patrón de expresión regular equivalente a `\s`, que coincide con los caracteres de espacio en blanco. Para más información, consulte [Carácter de espacio en blanco: \s](#WhitespaceCharacter).  
   
- Si se especifica un comportamiento conforme a ECMAScript, `\S` es equivalente a `[^ \f\n\r\t\v]`. Para obtener información sobre las expresiones regulares ECMAScript, consulte la sección "Comportamiento de la búsqueda de coincidencias de ECMAScript" en [Opciones de expresiones regulares](../../../docs/standard/base-types/regular-expression-options.md).  
+ Si se especifica un comportamiento conforme a ECMAScript, `\S` es equivalente a `[^ \f\n\r\t\v]`. Para obtener información sobre las expresiones regulares ECMAScript, consulte la sección "Comportamiento de la búsqueda de coincidencias de ECMAScript" en [Opciones de expresiones regulares](regular-expression-options.md).  
   
  En el ejemplo siguiente se ilustra el elemento del lenguaje `\S`. El patrón de expresión regular `\b(\S+)\s?` coincide con cadenas delimitadas por caracteres de espacio en blanco. El segundo elemento del objeto <xref:System.Text.RegularExpressions.GroupCollection> de la coincidencia contiene la cadena coincidente. La expresión regular puede interpretarse como se muestra en la tabla siguiente.  
   
@@ -339,7 +339,7 @@ donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacte
 ## <a name="decimal-digit-character-d"></a>Carácter de dígito decimal: \d  
  `\d` coincide con cualquier dígito decimal. Equivale al patrón de expresión regular `\p{Nd}`, que incluye los dígitos decimales estándar 0-9 así como los dígitos decimales de varios juegos de caracteres.  
   
- Si se especifica un comportamiento conforme a ECMAScript, `\d` es equivalente a `[0-9]`. Para obtener información sobre las expresiones regulares ECMAScript, consulte la sección "Comportamiento de la búsqueda de coincidencias de ECMAScript" en [Opciones de expresiones regulares](../../../docs/standard/base-types/regular-expression-options.md).  
+ Si se especifica un comportamiento conforme a ECMAScript, `\d` es equivalente a `[0-9]`. Para obtener información sobre las expresiones regulares ECMAScript, consulte la sección "Comportamiento de la búsqueda de coincidencias de ECMAScript" en [Opciones de expresiones regulares](regular-expression-options.md).  
   
  En el ejemplo siguiente se ilustra el elemento del lenguaje `\d`. Comprueba si una cadena de entrada representa un número de teléfono válido de los Estados Unidos y Canadá. El patrón de expresión regular `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$` se define como se muestra en la tabla siguiente.  
   
@@ -361,7 +361,7 @@ donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacte
 ## <a name="non-digit-character-d"></a>Carácter que no sea un dígito: \D  
  `\D` coincide con cualquier carácter que no sea un dígito. Equivale al patrón de expresión regular `\P{Nd}`.  
   
- Si se especifica un comportamiento conforme a ECMAScript, `\D` es equivalente a `[^0-9]`. Para obtener información sobre las expresiones regulares ECMAScript, consulte la sección "Comportamiento de la búsqueda de coincidencias de ECMAScript" en [Opciones de expresiones regulares](../../../docs/standard/base-types/regular-expression-options.md).  
+ Si se especifica un comportamiento conforme a ECMAScript, `\D` es equivalente a `[^0-9]`. Para obtener información sobre las expresiones regulares ECMAScript, consulte la sección "Comportamiento de la búsqueda de coincidencias de ECMAScript" en [Opciones de expresiones regulares](regular-expression-options.md).  
   
  En el ejemplo siguiente se muestra el elemento del lenguaje \D. Comprueba si una cadena, como un número de pieza, consta de la combinación adecuada de caracteres decimales y no decimales. El patrón de expresión regular `^\D\d{1,5}\D*$` se define como se muestra en la tabla siguiente.  
   
@@ -570,5 +570,5 @@ donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacte
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Char.GetUnicodeCategory%2A>
-- [Lenguaje de expresiones regulares: referencia rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
-- [Opciones de expresiones regulares](../../../docs/standard/base-types/regular-expression-options.md)
+- [Lenguaje de expresiones regulares: referencia rápida](regular-expression-language-quick-reference.md)
+- [Opciones de expresiones regulares](regular-expression-options.md)

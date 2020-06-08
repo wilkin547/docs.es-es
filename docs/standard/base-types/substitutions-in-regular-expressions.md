@@ -13,12 +13,12 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-ms.openlocfilehash: 3562bd113ae4c9a3f721d8858a5d3625ef548d3a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6e5773c220dccd4d139b4f85e19b55048a64e7ef
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160084"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288009"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Sustituciones en expresiones regulares
 Las sustituciones son elementos del lenguaje que se reconocen solo dentro de patrones de reemplazo. Usan un patrón de expresión regular para definir todo o parte del texto que reemplazará el texto coincidente en la cadena de entrada. El patrón de reemplazo puede estar compuesto de una o más sustituciones junto con caracteres literales. Los patrones de reemplazo se proporcionan a las sobrecargas del método <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> que tiene un parámetro `replacement` y al método <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> . Los métodos reemplazan el patrón que coincide con el patrón que define el parámetro `replacement` .  
@@ -42,10 +42,10 @@ Las sustituciones son elementos del lenguaje que se reconocen solo dentro de pat
  El único carácter que puede aparecer en un patrón de expresión regular o en una sustitución es el carácter `$` , aunque tiene un significado diferente en cada contexto. En un patrón de expresión regular, `$` es un delimitador que coincide con el final de la cadena. En un patrón de reemplazo, `$` indica el principio de una sustitución.  
   
 > [!NOTE]
-> Para obtener una funcionalidad similar a la de un patrón de reemplazo dentro de una expresión regular, use una referencia inversa. Para obtener más información acerca de las referencias inversas, vea [Construcciones de referencia inversa](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).  
+> Para obtener una funcionalidad similar a la de un patrón de reemplazo dentro de una expresión regular, use una referencia inversa. Para obtener más información acerca de las referencias inversas, vea [Construcciones de referencia inversa](backreference-constructs-in-regular-expressions.md).  
 
 ## <a name="substituting-a-numbered-group"></a>Sustituir un grupo numerado  
- El elemento de lenguaje `$`*number* incluye la última subcadena coincidente por el grupo de captura *number* en la cadena de reemplazo, donde *number* es el índice del grupo de captura. Por ejemplo, el patrón de reemplazo `$1` indica que el primer grupo capturado reemplazará la subcadena coincidente. Para más información sobre los grupos de captura numerados, vea [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+ El elemento de lenguaje `$`*number* incluye la última subcadena coincidente por el grupo de captura *number* en la cadena de reemplazo, donde *number* es el índice del grupo de captura. Por ejemplo, el patrón de reemplazo `$1` indica que el primer grupo capturado reemplazará la subcadena coincidente. Para más información sobre los grupos de captura numerados, vea [Grouping Constructs](grouping-constructs-in-regular-expressions.md).  
   
  Todos los dígitos después del símbolo `$` se interpretan como que pertenecen al grupo *number* . Si esto no es lo que pretende, puede sustituir un grupo con nombre en su lugar. Por ejemplo, puede utilizar la cadena de reemplazo `${1}1` en lugar de `$11` para definir la cadena de reemplazo como el valor del primer grupo capturado junto con el número "1". Para obtener más información, vea [Sustituir un grupo con nombre](#substituting-a-named-group).  
   
@@ -70,7 +70,7 @@ Las sustituciones son elementos del lenguaje que se reconocen solo dentro de pat
 |`(\s?\d+[.,]?\d*)`|Busca un espacio en blanco seguido de uno o más dígitos decimales, seguido de cero o un punto o una coma, seguido de cero o más dígitos decimales. Este es el primer grupo de captura. Dado que el patrón de reemplazo es `$1`, la llamada al método <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> reemplaza la subcadena coincidente completa por este grupo capturado.|  
 
 ## <a name="substituting-a-named-group"></a>Sustituir un grupo con nombre  
- El elemento de lenguaje `${`*name*`}` sustituye a la última subcadena coincidente por el grupo de captura *name* , donde *name* es el nombre del grupo de captura definido por el elemento de lenguaje `(?<`*name*`>)` . Para más información sobre los grupos de captura con nombre, vea [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+ El elemento de lenguaje `${`*name*`}` sustituye a la última subcadena coincidente por el grupo de captura *name* , donde *name* es el nombre del grupo de captura definido por el elemento de lenguaje `(?<`*name*`>)` . Para más información sobre los grupos de captura con nombre, vea [Grouping Constructs](grouping-constructs-in-regular-expressions.md).  
   
  Si *name* no especifica ningún grupo de captura con nombre válido en el patrón de expresión regular pero consta de dígitos, `${`*name*`}` se interpreta como un grupo numerado.  
   
@@ -199,4 +199,4 @@ Las sustituciones son elementos del lenguaje que se reconocen solo dentro de pat
   
 ## <a name="see-also"></a>Vea también
 
-- [Lenguaje de expresiones regulares: referencia rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [Lenguaje de expresiones regulares: referencia rápida](regular-expression-language-quick-reference.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - threading [.NET Framework], scheduling
 - scheduling threads
 ms.assetid: 67e4a0eb-3095-4ea7-b20f-908faa476277
-ms.openlocfilehash: abcdf56b90513b937adefc38583e0312fec69785
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fea809168bf2f4f888466f87259497660afd13be
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73106230"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291154"
 ---
 # <a name="scheduling-threads"></a>Programación de subprocesos
 
@@ -21,5 +21,5 @@ Cada subproceso tiene una prioridad de subproceso asignada a él. A los subproce
   
 ## <a name="see-also"></a>Vea también
 
-- [Usar subprocesos y subprocesamiento](../../../docs/standard/threading/using-threads-and-threading.md)
-- [Subprocesamiento administrado y no administrado en Windows](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)
+- [Usar subprocesos y subprocesamiento](using-threads-and-threading.md)
+- [Subprocesamiento administrado y no administrado en Windows](managed-and-unmanaged-threading-in-windows.md)

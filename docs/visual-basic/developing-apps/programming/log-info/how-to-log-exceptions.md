@@ -5,12 +5,12 @@ helpviewer_keywords:
 - exceptions, logging
 - exceptions, tracking
 ms.assetid: a26c60e2-ae39-444a-aebb-33eccadc0eeb
-ms.openlocfilehash: fe6949d727fae0c230ce7421b32fdaf2a498edbc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 59ed7b836126a38f32b7c6f479570a566d236e6c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74352087"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410119"
 ---
 # <a name="how-to-log-exceptions-in-visual-basic"></a>C처mo: Registrar excepciones en Visual Basic
 
@@ -71,7 +71,7 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci�
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
-- [Trabajar con registros de aplicaciones](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [Escribir mensajes de registro](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
-- [Tutorial: Determinar el lugar en el que My.Application.Log escribe la informaci처n](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
-- [Tutorial: Cambiar el lugar donde My.Application.Log escribe informaci처n](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [Trabajar con registros de aplicaciones](working-with-application-logs.md)
+- [Escribir mensajes de registro](how-to-write-log-messages.md)
+- [Tutorial: Determinar el lugar en el que My.Application.Log escribe la informaci처n](walkthrough-determining-where-my-application-log-writes-information.md)
+- [Tutorial: Cambiar el lugar donde My.Application.Log escribe informaci처n](walkthrough-changing-where-my-application-log-writes-information.md)

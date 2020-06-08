@@ -18,12 +18,12 @@ helpviewer_keywords:
 - Equals method
 - StartsWith method
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
-ms.openlocfilehash: e63b2a8ac44d6171f9c48990882780ea420f8c76
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7997f3098265b76f8fe2ef4fc7ab0e17f6e81d69
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73101669"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289335"
 ---
 # <a name="comparing-strings-in-net"></a>Comparación de cadenas en .NET
 .NET proporciona varios métodos para comparar los valores de cadenas. En la tabla siguiente se enumeran y describen los métodos de comparación de valores.  
@@ -59,7 +59,7 @@ ms.locfileid: "73101669"
   
  Con este ejemplo se muestra `-1` en la consola.  
   
- En el ejemplo anterior se tienen en cuenta las referencias culturales de forma predeterminada. Para realizar una comparación de cadenas que no tenga en cuenta las referencias culturales, utilice una sobrecarga del método <xref:System.String.Compare%2A?displayProperty=nameWithType> ya que permite especificar la referencia cultural que se debe utilizar mediante un parámetro de *referencia cultural* . Para obtener un ejemplo que muestra cómo utilizar el método <xref:System.String.Compare%2A?displayProperty=nameWithType> para realizar una comparación de este tipo, consulte [Realizar comparaciones de cadenas que no tienen en cuenta las referencias culturales](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md).  
+ En el ejemplo anterior se tienen en cuenta las referencias culturales de forma predeterminada. Para realizar una comparación de cadenas que no tenga en cuenta las referencias culturales, utilice una sobrecarga del método <xref:System.String.Compare%2A?displayProperty=nameWithType> ya que permite especificar la referencia cultural que se debe utilizar mediante un parámetro de *referencia cultural* . Para obtener un ejemplo que muestra cómo utilizar el método <xref:System.String.Compare%2A?displayProperty=nameWithType> para realizar una comparación de este tipo, consulte [Realizar comparaciones de cadenas que no tienen en cuenta las referencias culturales](../globalization-localization/performing-culture-insensitive-string-comparisons.md).  
   
 ## <a name="compareordinal"></a>CompareOrdinal  
  El método <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> compara dos objetos de cadena sin tener en cuenta la referencia cultural local. Los valores devueltos de este método son idénticos a los que devolvía el método **Compare** en la tabla anterior.  
@@ -89,7 +89,7 @@ ms.locfileid: "73101669"
   
  Con este ejemplo se muestra `-1` en la consola.  
   
- Todas las sobrecargas del método <xref:System.String.CompareTo%2A?displayProperty=nameWithType> realizan comparaciones que tienen en cuenta las referencias culturales y las mayúsculas y minúsculas de manera predeterminada. No se proporcionan sobrecargas de este método que permitan realizar una comparación que no tenga en cuenta las referencias culturales Para lograr claridad en el código, se recomienda utilizar el método **String.Compare** en su lugar, especificando <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> para las operaciones que tienen en cuenta la referencia cultural o <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> para las operaciones que no la tienen en cuenta. Para obtener ejemplos que muestran cómo utilizar el método **String.Compare** para realizar comparaciones de este tipo, vea [Realizar comparaciones de cadenas que no tienen en cuenta las referencias culturales](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md).  
+ Todas las sobrecargas del método <xref:System.String.CompareTo%2A?displayProperty=nameWithType> realizan comparaciones que tienen en cuenta las referencias culturales y las mayúsculas y minúsculas de manera predeterminada. No se proporcionan sobrecargas de este método que permitan realizar una comparación que no tenga en cuenta las referencias culturales Para lograr claridad en el código, se recomienda utilizar el método **String.Compare** en su lugar, especificando <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> para las operaciones que tienen en cuenta la referencia cultural o <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> para las operaciones que no la tienen en cuenta. Para obtener ejemplos que muestran cómo utilizar el método **String.Compare** para realizar comparaciones de este tipo, vea [Realizar comparaciones de cadenas que no tienen en cuenta las referencias culturales](../globalization-localization/performing-culture-insensitive-string-comparisons.md).  
   
 ## <a name="equals"></a>Es igual a  
  El método **String.Equals** puede determinar con facilidad si dos cadenas son iguales. Este método distingue entre mayúsculas y minúsculas y devuelve un valor booleano **True** o **False** . Se puede usar desde una clase existente, como se muestra en el siguiente ejemplo. En el ejemplo siguiente se usa el método **Equals** para determinar si un objeto de cadena contiene la frase "Hello World".  
@@ -150,7 +150,7 @@ ms.locfileid: "73101669"
   
 ## <a name="see-also"></a>Vea también
 
-- [Operaciones básicas de cadenas](../../../docs/standard/base-types/basic-string-operations.md)
-- [Realizar operaciones de cadenas que no distinguen entre referencias culturales](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+- [Operaciones básicas de cadenas](basic-string-operations.md)
+- [Realizar operaciones de cadenas que no distinguen entre referencias culturales](../globalization-localization/performing-culture-insensitive-string-operations.md)
 - [Ordenación de tablas de peso (para .NET en Windows)](https://www.microsoft.com/download/details.aspx?id=10921)
 - [Tabla de elementos de intercalación predeterminada Unicode (para .NET Core en macOS y Linux)](https://www.unicode.org/Public/UCA/latest/allkeys.txt)

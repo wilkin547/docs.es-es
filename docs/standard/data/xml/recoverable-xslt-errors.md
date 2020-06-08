@@ -3,12 +3,12 @@ title: Errores XSLT recuperables
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
-ms.openlocfilehash: e3ff86cc80887d14fdffe50f256409cb70ff2d88
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ada0b352cd867417ed3ecf86291df023ca7c579e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710380"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289101"
 ---
 # <a name="recoverable-xslt-errors"></a>Errores XSLT recuperables
 La recomendación de la versión 1.0 de las transformaciones XLT (XSLT) del W3C incluye áreas en las que el proveedor de las implementaciones puede decidir cómo controlar una situación. Estas áreas se consideran comportamientos discrecionales. Por ejemplo, en la sección 7.3 Creación de instrucciones de procesamiento, la recomendación 1.0 de XSLT dice que el hecho de que al crear instancias del contenido de `xsl:processing-instruction` se creen nodos que no sean de texto, es un error. Para algunos problemas, la recomendación 1.0 de XSLT indica qué decisión tomar si el procesador decide recuperarse del error. En el caso del problema en particular de la sección 7.3, W3C indica que la implementación puede recuperarse del error pasando por alto los nodos y su contenido.  
@@ -50,8 +50,8 @@ La recomendación de la versión 1.0 de las transformaciones XLT (XSLT) del W3C 
 |El atributo `value` de un `xsl:number` es NAN, infinito o menor que 0,5.|errata 24|Recuperar|  
 |El segundo conjunto de nodos de argumentos de la función de documento está vacío y la referencia de identificador URI es relativa.|errata 14|Recuperar|  
   
- <sup>*</sup> Este comportamiento es diferente al de la clase <xref:System.Xml.Xsl.XslTransform>. Para más información, vea [Implementación de comportamientos discrecionales en la clase XslTransform](../../../../docs/standard/data/xml/implementation-of-discretionary-behaviors-in-the-xsltransform-class.md).  
+ <sup>*</sup> Este comportamiento es diferente al de la clase <xref:System.Xml.Xsl.XslTransform>. Para más información, vea [Implementación de comportamientos discrecionales en la clase XslTransform](implementation-of-discretionary-behaviors-in-the-xsltransform-class.md).  
   
 ## <a name="see-also"></a>Vea también
 
-- [Transformaciones XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
+- [Transformaciones XSLT](xslt-transformations.md)

@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - thread-safe collections, concurrent dictionary
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
-ms.openlocfilehash: 6e5204c5a71232ef9d1a050891e7fe6d92c375f2
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 6c093e907e43f9f2b978624a986dfe5d8a49869f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82796124"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287905"
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Procedimiento para agregar y quitar elementos de ConcurrentDictionary
 
@@ -51,4 +51,4 @@ Por tanto, no está garantizado que los datos devueltos por <xref:System.Collect
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
-- [Colecciones seguras para subprocesos](../../../../docs/standard/collections/thread-safe/index.md)
+- [Colecciones seguras para subprocesos](index.md)

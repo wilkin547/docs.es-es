@@ -7,16 +7,16 @@ helpviewer_keywords:
 - XML serialization, configuration
 - <system.xml.serialization> element
 ms.assetid: 3ce45919-388a-418c-8968-6df0372c73ec
-ms.openlocfilehash: 1e66220004d561f937d03c506e6f30db4ccc635b
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: f69e80592e9321de64421b977a63b83d8be2ad9e
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380117"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84289491"
 ---
-# <a name="systemxmlserialization-element"></a>Elemento \<system.xml.serialization>
+# <a name="systemxmlserialization-element"></a>\<system.xml.serialization> (Elemento)
 
-El elemento de nivel superior para controlar la serialización XML. Para más información sobre los archivos de configuración, vea [Configuration File Schema](../../../docs/framework/configure-apps/file-schema/index.md) (Esquema de archivos de configuración).
+El elemento de nivel superior para controlar la serialización XML. Para más información sobre los archivos de configuración, vea [Configuration File Schema](../../framework/configure-apps/file-schema/index.md) (Esquema de archivos de configuración).
 
 \<configuration>\
 \<system.xml.serialization>
@@ -40,14 +40,14 @@ Ninguno.
 
 |Elemento|Descripción|
 |-------------|-----------------|
-|[Elemento \<dateTimeSerialization>](../../../docs/standard/serialization/datetimeserialization-element.md)|Determina el modo de serialización XML de los objetos <xref:System.DateTime>.|
-|[Elemento \<schemaImporterExtensions>](../../../docs/standard/serialization/schemaimporterextensions-element.md)|Contiene tipos que son utilizados por <xref:System.Xml.Serialization.XmlSchemaImporter> para asignar de los tipos XSD a los tipos de .NET Framework.|
+|[Elemento \<dateTimeSerialization>](datetimeserialization-element.md)|Determina el modo de serialización XML de los objetos <xref:System.DateTime>.|
+|[Elemento \<schemaImporterExtensions>](schemaimporterextensions-element.md)|Contiene tipos que son utilizados por <xref:System.Xml.Serialization.XmlSchemaImporter> para asignar de los tipos XSD a los tipos de .NET Framework.|
 
 ### <a name="parent-elements"></a>Elementos primarios
 
 |Elemento|Descripción|
 |-------------|-----------------|
-|[Elemento \<configuration>](../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Elemento raíz necesario en cada archivo de configuración utilizado por Common Language Runtime y las aplicaciones de .NET Framework.|
+|[Elemento \<configuration>](../../framework/configure-apps/file-schema/configuration-element.md)|Elemento raíz necesario en cada archivo de configuración utilizado por Common Language Runtime y las aplicaciones de .NET Framework.|
 
 ## <a name="example"></a>Ejemplo
 
@@ -71,7 +71,7 @@ El ejemplo de código siguiente muestra cómo especificar el modo de la serializ
 
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
 - <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>
-- [Esquema de los archivos de configuración](../../../docs/framework/configure-apps/file-schema/index.md)
-- [Elemento \<dateTimeSerialization>](../../../docs/standard/serialization/datetimeserialization-element.md)
-- [Elemento \<schemaImporterExtensions>](../../../docs/standard/serialization/schemaimporterextensions-element.md)
-- Elemento [\<add> de \<schemaImporterExtensions>](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
+- [Esquema de los archivos de configuración](../../framework/configure-apps/file-schema/index.md)
+- [Elemento \<dateTimeSerialization>](datetimeserialization-element.md)
+- [Elemento \<schemaImporterExtensions>](schemaimporterextensions-element.md)
+- [\<add> Elemento para \<schemaImporterExtensions>](add-element-for-schemaimporterextensions.md)

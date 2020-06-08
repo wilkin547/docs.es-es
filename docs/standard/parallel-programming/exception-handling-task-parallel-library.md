@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, exceptions
 ms.assetid: beb51e50-9061-4d3d-908c-56a4f7c2e8c1
-ms.openlocfilehash: aa6d4b706eb11921ffd419402bcf4cf059a29b11
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: 674abcfe4477e14295f131e766a48422779391de
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021509"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290050"
 ---
 # <a name="exception-handling-task-parallel-library"></a>Control de excepciones (biblioteca TPL)
 
@@ -63,7 +63,7 @@ Aunque se use una tarea de continuación para observar una excepción en una tar
 
 ## <a name="exceptions-that-indicate-cooperative-cancellation"></a>Excepciones que indican la cancelación cooperativa
 
-Cuando el código de usuario de una tarea responde a una solicitud de cancelación, el procedimiento correcto es producir una excepción <xref:System.OperationCanceledException> que se pasa en el token de cancelación con el que se comunicó la solicitud. Antes de intentar propagar la excepción, la instancia de la tarea compara el token de la excepción con el que recibió durante su creación. Si son iguales, la tarea propaga una excepción <xref:System.Threading.Tasks.TaskCanceledException> encapsulada en un elemento <xref:System.AggregateException>y puede verse cuando se examinan las excepciones internas. Sin embargo, si el subproceso que hace la llamada no está esperando la tarea, no se propagará esa excepción concreta. Para más información, vea [Cancelación de tareas](../../../docs/standard/parallel-programming/task-cancellation.md).
+Cuando el código de usuario de una tarea responde a una solicitud de cancelación, el procedimiento correcto es producir una excepción <xref:System.OperationCanceledException> que se pasa en el token de cancelación con el que se comunicó la solicitud. Antes de intentar propagar la excepción, la instancia de la tarea compara el token de la excepción con el que recibió durante su creación. Si son iguales, la tarea propaga una excepción <xref:System.Threading.Tasks.TaskCanceledException> encapsulada en un elemento <xref:System.AggregateException>y puede verse cuando se examinan las excepciones internas. Sin embargo, si el subproceso que hace la llamada no está esperando la tarea, no se propagará esa excepción concreta. Para más información, vea [Cancelación de tareas](task-cancellation.md).
 
 [!code-csharp[TPL_Exceptions#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/exceptions.cs#4)]
 [!code-vb[TPL_Exceptions#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/tpl_exceptions.vb#4)]
@@ -104,4 +104,4 @@ En algunos escenarios (por ejemplo, cuando se hospedan complementos que no son d
 
 ## <a name="see-also"></a>Vea también
 
-- [Biblioteca TPL](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+- [Biblioteca TPL](task-parallel-library-tpl.md)

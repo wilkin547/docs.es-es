@@ -10,12 +10,12 @@ helpviewer_keywords:
 - hash function
 - collections [.NET Framework], Hashtable collection type
 ms.assetid: bfc20837-3d02-4fc7-8a8f-c5215b6b7913
-ms.openlocfilehash: a6f234b6205fd30507b9342d9839db6adcddfc2e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b228f5db16ba01969b77d601becfb94ac0506d1e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711381"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287970"
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Tipos de las colecciones Hashtable y Dictionary
 La clase <xref:System.Collections.Hashtable?displayProperty=nameWithType> y las clases genéricas <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> y <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> implementan la interfaz <xref:System.Collections.IDictionary?displayProperty=nameWithType>. La clase genérica <xref:System.Collections.Generic.Dictionary%602> también implementa la interfaz genérica <xref:System.Collections.Generic.IDictionary%602>. Por lo tanto, cada elemento de esta colección es un par de clave y valor.  
@@ -42,4 +42,4 @@ La clase <xref:System.Collections.Hashtable?displayProperty=nameWithType> y las 
 - <xref:System.Collections.Generic.Dictionary%602>
 - <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>
 - <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>
-- [Tipos de colección utilizados normalmente](../../../docs/standard/collections/commonly-used-collection-types.md)
+- [Tipos de colección utilizados normalmente](commonly-used-collection-types.md)

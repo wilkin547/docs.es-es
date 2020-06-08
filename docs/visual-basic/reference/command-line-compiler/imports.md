@@ -6,12 +6,12 @@ helpviewer_keywords:
 - imports compiler option [Visual Basic]
 - -imports compiler option [Visual Basic]
 ms.assetid: 9a93fb53-c080-497b-bf9b-441022dbbc39
-ms.openlocfilehash: 2a1dd19189ff65413255b9bc137e1a7f0227bbe1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: cc9fc222843bdfe8e49d2d291dc36ff3e0c63fc2
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716646"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408600"
 ---
 # <a name="-imports-visual-basic"></a>-imports (Visual Basic)
 Importa espacios de nombres desde un ensamblado especificado.  
@@ -31,7 +31,7 @@ Importa espacios de nombres desde un ensamblado especificado.
 ## <a name="remarks"></a>Comentarios  
  La opción `-imports` importa cualquier espacio de nombres definido en el conjunto actual de archivos de código fuente o desde cualquier ensamblado al que se hace referencia.  
   
- Los miembros de un espacio de nombres especificado con `-imports` están disponibles para todos los archivos de código fuente de la compilación. Utilice la [Instrucción Imports (Tipo y espacio de nombres de .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) para usar un espacio de nombres en un solo archivo de código fuente.  
+ Los miembros de un espacio de nombres especificado con `-imports` están disponibles para todos los archivos de código fuente de la compilación. Utilice la [Instrucción Imports (Tipo y espacio de nombres de .NET)](../../language-reference/statements/imports-statement-net-namespace-and-type.md) para usar un espacio de nombres en un solo archivo de código fuente.  
   
 |Para establecer -imports en el entorno de desarrollo integrado de Visual Studio|  
 |---|  
@@ -50,6 +50,6 @@ End Module
 
 ## <a name="see-also"></a>Vea también
 
-- [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Referencias y la instrucción Imports](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)
-- [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Compilador de línea de comandos de Visual Basic](index.md)
+- [Referencias y la instrucción Imports](../../programming-guide/program-structure/references-and-the-imports-statement.md)
+- [Líneas de comandos de compilación de ejemplo](sample-compilation-command-lines.md)

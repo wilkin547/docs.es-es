@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
-ms.openlocfilehash: a295fee225d7eb5793b725db93e47fc73addf4ef
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: b309c390ede3afc38122188337fa0dc3336e3ad5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794590"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292064"
 ---
 # <a name="editing-xml-schemas"></a>Edición de esquemas XML
 
@@ -22,7 +22,7 @@ El primer paso para editar un esquema cargado en el SOM consiste en atravesar el
 
 ## <a name="editing-an-xml-schema"></a>Edición de un esquema XML
 
-En esta sección se incluyen dos ejemplos de código que editan el esquema del cliente que se creó en el tema [Compilar esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md). En el primer ejemplo de código se agrega un nuevo elemento `PhoneNumber` al elemento `Customer` y, en el segundo, se agrega un nuevo atributo `Title` al elemento `FirstName`. En el primer ejemplo también se utiliza la colección <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> posterior a la compilación de esquemas como medio para atravesar el esquema del cliente, mientras que en el segundo ejemplo se utiliza la colección <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> previa a la compilación de esquemas.
+En esta sección se incluyen dos ejemplos de código que editan el esquema del cliente que se creó en el tema [Compilar esquemas XML](building-xml-schemas.md). En el primer ejemplo de código se agrega un nuevo elemento `PhoneNumber` al elemento `Customer` y, en el segundo, se agrega un nuevo atributo `Title` al elemento `FirstName`. En el primer ejemplo también se utiliza la colección <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> posterior a la compilación de esquemas como medio para atravesar el esquema del cliente, mientras que en el segundo ejemplo se utiliza la colección <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> previa a la compilación de esquemas.
 
 ### <a name="phonenumber-element-example"></a>Ejemplo del elemento PhoneNumber
 
@@ -48,7 +48,7 @@ En el primer ejemplo de código se agrega un nuevo elemento `PhoneNumber` al ele
 [!code-csharp[XmlSchemaEditExample1#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaEditExample1/CS/XmlSchemaEditExample1.cs#1)]
 [!code-vb[XmlSchemaEditExample1#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaEditExample1/VB/XmlSchemaEditExample1.vb#1)]
 
-A continuación se ofrece el esquema del cliente modificado que se creó en el tema [Compilar esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md).
+A continuación se ofrece el esquema del cliente modificado que se creó en el tema [Compilar esquemas XML](building-xml-schemas.md).
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -112,7 +112,7 @@ El ejemplo de código edita el esquema del cliente en los siguientes pasos.
 [!code-csharp[XmlSchemaEditExample2#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaEditExample2/CS/XmlSchemaEditExample2.cs#1)]
 [!code-vb[XmlSchemaEditExample2#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaEditExample2/VB/XmlSchemaEditExample2.vb#1)]
 
-A continuación se ofrece el esquema del cliente modificado que se creó en el tema [Compilar esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md).
+A continuación se ofrece el esquema del cliente modificado que se creó en el tema [Compilar esquemas XML](building-xml-schemas.md).
 
 ```xml
 <?xml version="1.0" encoding=" utf-8"?>
@@ -137,10 +137,10 @@ A continuación se ofrece el esquema del cliente modificado que se creó en el t
 
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre el Modelo de objetos de esquema XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
-- [Lectura y escritura de esquemas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
-- [Compilación de esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)
-- [Recorrido de esquemas XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
-- [Inclusión o importación de esquemas XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
-- [XmlSchemaSet para compilación de esquemas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
-- [Conjunto de información posterior a la compilación de esquemas](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+- [Información general sobre el Modelo de objetos de esquema XML](xml-schema-object-model-overview.md)
+- [Lectura y escritura de esquemas XML](reading-and-writing-xml-schemas.md)
+- [Compilación de esquemas XML](building-xml-schemas.md)
+- [Recorrido de esquemas XML](traversing-xml-schemas.md)
+- [Inclusión o importación de esquemas XML](including-or-importing-xml-schemas.md)
+- [XmlSchemaSet para compilación de esquemas](xmlschemaset-for-schema-compilation.md)
+- [Conjunto de información posterior a la compilación de esquemas](post-schema-compilation-infoset.md)

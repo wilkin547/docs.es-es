@@ -12,12 +12,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, backreference constructs
 - regular expressions, backreference constructs
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
-ms.openlocfilehash: 905578d763ebe5d5b8eb96a9056fbe11fbfab137
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 87c3dbde2eb2b5a19b91f34bb2b088af5c0d1827
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711537"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290609"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Construcciones de referencia inversa en expresiones regulares
 
@@ -26,7 +26,7 @@ Las referencias inversas proporcionan una forma cómoda de identificar un carác
 > [!NOTE]
 > Se usa una sintaxis independiente para hacer referencia a los grupos de captura con numeración y con nombre de las cadenas de reemplazo. Para obtener más información, consulte [Substituciones](substitutions-in-regular-expressions.md).
 
-.NET define elementos del lenguaje independientes para hacer referencia a los grupos de captura con numeración y con nombre. Para más información sobre los grupos de captura con nombre, vea [Construcciones de agrupamiento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
+.NET define elementos del lenguaje independientes para hacer referencia a los grupos de captura con numeración y con nombre. Para más información sobre los grupos de captura con nombre, vea [Construcciones de agrupamiento](grouping-constructs-in-regular-expressions.md).
 
 ## <a name="numbered-backreferences"></a>Referencias inversas con numeración
 
@@ -138,4 +138,4 @@ Una cadena de entrada puede coincidir con esta expresión regular aunque no est�
 
 ## <a name="see-also"></a>Vea también
 
-- [Lenguaje de expresiones regulares: referencia rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [Lenguaje de expresiones regulares: referencia rápida](regular-expression-language-quick-reference.md)

@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
-ms.openlocfilehash: a63452df16e452a90eff3977ac8726cc0a5ac439
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e65308f097e81d844cb04b1ebd5cbcdd8a3aadad
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710198"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291999"
 ---
 # <a name="script-blocks-using-msxslscript"></a>Bloques de scripts con msxsl:script
 La clase <xref:System.Xml.Xsl.XslCompiledTransform> admite scripts incrustados mediante el elemento `msxsl:script`. Cuando se carga la hoja de estilos, cualquier función definida se compila en el lenguaje intermedio de Microsoft (MSIL) por medio del Code Document Object Model (CodeDOM) y se ejecutan en tiempo de ejecución. El ensamblado que se genera a partir del bloque de scripts incrustado es distinto al ensamblado que se genera para la hoja de estilos.  
@@ -148,5 +148,5 @@ La clase <xref:System.Xml.Xsl.XslCompiledTransform> admite scripts incrustados m
   
 ## <a name="see-also"></a>Vea también
 
-- [Transformaciones XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
-- [Generación y compilación dinámicas de código fuente](../../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)
+- [Transformaciones XSLT](xslt-transformations.md)
+- [Generación y compilación dinámicas de código fuente](../../../framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)

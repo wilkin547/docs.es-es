@@ -8,12 +8,12 @@ helpviewer_keywords:
 - compiling source code [Visual Basic], from command line
 - Visual Basic compiler, sample command lines
 ms.assetid: 5bfbb487-5f47-4267-969a-39dfb917beeb
-ms.openlocfilehash: 27a20a5a3525353ffbced729b8ac9c98b3e48fc1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 496627d3b77b0382ae7d15c8225a6fbd41f1db73
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350853"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403127"
 ---
 # <a name="sample-compilation-command-lines-visual-basic"></a>Líneas de comandos de compilación de ejemplo (Visual Basic)
 
@@ -38,5 +38,5 @@ En la siguiente tabla se muestran algunas líneas de comandos de ejemplo que pue
 
 ## <a name="see-also"></a>Vea también
 
-- [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Compilación condicional](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+- [Compilador de línea de comandos de Visual Basic](index.md)
+- [Compilación condicional](../../programming-guide/program-structure/conditional-compilation.md)

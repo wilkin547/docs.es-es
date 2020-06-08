@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /main compiler option [Visual Basic]
 - -main compiler option [Visual Basic]
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
-ms.openlocfilehash: 91f2a27ed9b6fb296dbb9e50fc488fd012311890
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 5530da4c784346df4a1088998b8d2027feee08e3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005509"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403166"
 ---
 # <a name="-main"></a>-main
 Especifica la clase o el módulo que contiene el procedimiento `Sub Main`.  
@@ -29,7 +29,7 @@ Especifica la clase o el módulo que contiene el procedimiento `Sub Main`.
 ## <a name="remarks"></a>Comentarios  
  Use esta opción al crear un archivo ejecutable o un programa ejecutable de Windows. Si la opción **-main** se omite, el compilador busca un elemento `Sub Main` compartido válido en todas las clases y módulos públicos.  
   
- Vea [Procedimiento Main en Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md) para obtener una explicación de los distintos formatos del procedimiento `Main`.  
+ Vea [Procedimiento Main en Visual Basic](../../programming-guide/program-structure/main-procedure.md) para obtener una explicación de los distintos formatos del procedimiento `Main`.  
   
  Cuando `location` es una clase que hereda de <xref:System.Windows.Forms.Form>, el compilador proporciona un procedimiento `Main` predeterminado que inicia la aplicación si la clase no tiene un procedimiento `Main`. Esto permite compilar código en la línea de comandos que se creó en el entorno de desarrollo.  
   
@@ -54,7 +54,7 @@ vbc t2.vb t3.vb -main:Test2
   
 ## <a name="see-also"></a>Vea también
 
-- [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
-- [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Procedimiento Main en Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
+- [Compilador de línea de comandos de Visual Basic](index.md)
+- [-target (Visual Basic)](target.md)
+- [Líneas de comandos de compilación de ejemplo](sample-compilation-command-lines.md)
+- [Procedimiento Main en Visual Basic](../../programming-guide/program-structure/main-procedure.md)

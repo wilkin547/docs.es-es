@@ -8,12 +8,12 @@ helpviewer_keywords:
 - threading [.NET Framework],exceptions in managed threads
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-ms.openlocfilehash: 6c14c60b30f8f70aa5e888ed45d6f867154e18d8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 56900ddab5e1e6ee5375c8979dc19694d4ad9c54
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159655"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279703"
 ---
 # <a name="exceptions-in-managed-threads"></a>Excepciones en subprocesos administrados
 A partir de .NET Framework versión 2.0, Common Language Runtime permite que la mayoría de las excepciones no controladas en subprocesos continúen naturalmente. En la mayoría de los casos, esto implica que la excepción no controlada provoque la finalización de la aplicación.  
@@ -64,7 +64,7 @@ A partir de .NET Framework versión 2.0, Common Language Runtime permite que la 
   
 - Si es preciso detener un subproceso para que la finalización del proceso pueda continuar, convierta el subproceso en un subproceso en segundo plano para que finalice automáticamente al salir del proceso.  
   
- En todos los casos, la estrategia debe seguir las instrucciones de diseño de excepciones. Vea [Instrucciones de diseño de excepciones](../../../docs/standard/design-guidelines/exceptions.md).  
+ En todos los casos, la estrategia debe seguir las instrucciones de diseño de excepciones. Vea [Instrucciones de diseño de excepciones](../design-guidelines/exceptions.md).  
   
 ### <a name="application-compatibility-flag"></a>Marca de compatibilidad de aplicaciones  
  Como medida temporal de compatibilidad, los administradores pueden colocar una marca de compatibilidad en la sección `<runtime>` del archivo de configuración de la aplicación. De ese modo, Common Language Runtime revierte al comportamiento de las versiones 1.0 y 1.1.  
@@ -74,8 +74,8 @@ A partir de .NET Framework versión 2.0, Common Language Runtime permite que la 
 ```  
   
 ## <a name="host-override"></a>Invalidación de host  
- En la versión 2.0 de .NET Framework, un host no administrado puede usar la interfaz [ICLRPolicyManager](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) de la API de hospedaje para invalidar la directiva de excepciones no controladas predeterminada de Common Language Runtime. Se usa la función [ICLRPolicyManager::SetUnhandledExceptionPolicy](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md) para establecer la directiva de excepciones no controladas.  
+ En la versión 2.0 de .NET Framework, un host no administrado puede usar la interfaz [ICLRPolicyManager](../../framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) de la API de hospedaje para invalidar la directiva de excepciones no controladas predeterminada de Common Language Runtime. Se usa la función [ICLRPolicyManager::SetUnhandledExceptionPolicy](../../framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md) para establecer la directiva de excepciones no controladas.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Principios básicos del subprocesamiento administrado](../../../docs/standard/threading/managed-threading-basics.md)
+- [Principios básicos del subprocesamiento administrado](managed-threading-basics.md)

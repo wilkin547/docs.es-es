@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
-ms.openlocfilehash: b4675765849299050eb6cddeaaa497bc6cdc620a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e74b52e471699fc663504fa42d6c7e502859adda
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711108"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291531"
 ---
 # <a name="compiled-xpath-expressions"></a>Expresiones XPath compiladas
 Un objeto <xref:System.Xml.XPath.XPathExpression> representa una consulta XPath compilada devuelta desde el método <xref:System.Xml.XPath.XPathExpression.Compile%2A> estático de la clase <xref:System.Xml.XPath.XPathExpression> o desde el método <xref:System.Xml.XPath.XPathNavigator.Compile%2A> de la clase <xref:System.Xml.XPath.XPathNavigator>.  
@@ -115,16 +115,16 @@ Console.WriteLine(nodes.Current.Value);
   
  Además, el uso de métodos de navegación por conjuntos de nodos que proporciona la clase <xref:System.Xml.XPath.XPathNavigator>, puede producir una mejora del rendimiento con respecto a los métodos de selección que proporciona la clase <xref:System.Xml.XPath.XPathNavigator> en los casos en los que los criterios de selección sean sencillos. Por ejemplo, si tiene que seleccionar el primer nodo secundario del nodo actual, es más rápido utilizar el método <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A> que la expresión XPath `child::*[1]` y el método <xref:System.Xml.XPath.XPathNavigator.Select%2A>.  
   
- Para obtener más información sobre los métodos de navegación por conjuntos de nodos de la clase <xref:System.Xml.XPath.XPathNavigator>, vea [Navegación por un conjunto de nodos con XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md).  
+ Para obtener más información sobre los métodos de navegación por conjuntos de nodos de la clase <xref:System.Xml.XPath.XPathNavigator>, vea [Navegación por un conjunto de nodos con XPathNavigator](node-set-navigation-using-xpathnavigator.md).  
   
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>
 - <xref:System.Xml.XPath.XPathNavigator>
-- [Procesamiento de datos XML con el modelo de datos XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
-- [Seleccionar datos XML con XPathNavigator](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)
-- [Evaluación de expresiones XPath con XPathNavigator](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)
-- [Coincidencia de nodos con XPathNavigator](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)
-- [Tipos de nodos reconocidos con consultas XPath](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)
-- [Espacios de nombres y consultas XPath](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)
+- [Procesamiento de datos XML con el modelo de datos XPath](process-xml-data-using-the-xpath-data-model.md)
+- [Seleccionar datos XML con XPathNavigator](select-xml-data-using-xpathnavigator.md)
+- [Evaluación de expresiones XPath con XPathNavigator](evaluate-xpath-expressions-using-xpathnavigator.md)
+- [Coincidencia de nodos con XPathNavigator](matching-nodes-using-xpathnavigator.md)
+- [Tipos de nodos reconocidos con consultas XPath](node-types-recognized-with-xpath-queries.md)
+- [Espacios de nombres y consultas XPath](xpath-queries-and-namespaces.md)

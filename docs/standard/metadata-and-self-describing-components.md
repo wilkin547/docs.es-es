@@ -15,12 +15,12 @@ helpviewer_keywords:
 - PE files, metadata
 - components [.NET Framework], metadata
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
-ms.openlocfilehash: a4f4c0e1af379d31c5b478472780d5c7de813bf6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5327bd70b05bac8970fa9802fb15e94ba5f686c8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73121933"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290063"
 ---
 # <a name="metadata-and-self-describing-components"></a>Metadatos y componentes autodescriptivos
 
@@ -64,11 +64,11 @@ Los metadatos son la clave para un modelo de programación más sencillo y elimi
 
 - Atributos.
 
-  .NET Framework le permite declarar determinados tipos de metadatos, denominados atributos, en el archivo compilado. Los atributos se encuentran en todo .NET Framework y se usan para controlar más minuciosamente el comportamiento del programa en tiempo de ejecución. Además, se pueden emitir metadatos personalizados propios en los archivos .NET Framework mediante atributos personalizados definidos por el usuario. Para obtener más información, consulte [Attributes](../../docs/standard/attributes/index.md) (Atributos).
+  .NET Framework le permite declarar determinados tipos de metadatos, denominados atributos, en el archivo compilado. Los atributos se encuentran en todo .NET Framework y se usan para controlar más minuciosamente el comportamiento del programa en tiempo de ejecución. Además, se pueden emitir metadatos personalizados propios en los archivos .NET Framework mediante atributos personalizados definidos por el usuario. Para obtener más información, consulte [Attributes](attributes/index.md) (Atributos).
 
 ## <a name="metadata-and-the-pe-file-structure"></a>Metadatos y la estructura del archivo PE
 
-Los metadatos se almacenan en una sección de un archivo ejecutable portable (PE) de .NET Framework, mientras que el lenguaje intermedio de Microsoft (MSIL) se guarda en otra sección del mismo archivo. La parte de los metadatos del archivo contiene una serie de estructuras de datos de tablas y montones. La parte del MSIL contiene símbolos (token) de MSIL y de metadatos que hacen referencia a la parte de metadatos del archivo PE. Puede encontrarse con tokens de metadatos al usar herramientas como el [Desensamblador de MSIL (Ildasm.exe)](../../docs/framework/tools/ildasm-exe-il-disassembler.md) para ver el MSIL del código, por ejemplo.
+Los metadatos se almacenan en una sección de un archivo ejecutable portable (PE) de .NET Framework, mientras que el lenguaje intermedio de Microsoft (MSIL) se guarda en otra sección del mismo archivo. La parte de los metadatos del archivo contiene una serie de estructuras de datos de tablas y montones. La parte del MSIL contiene símbolos (token) de MSIL y de metadatos que hacen referencia a la parte de metadatos del archivo PE. Puede encontrarse con tokens de metadatos al usar herramientas como el [Desensamblador de MSIL (Ildasm.exe)](../framework/tools/ildasm-exe-il-disassembler.md) para ver el MSIL del código, por ejemplo.
 
 ### <a name="metadata-tables-and-heaps"></a>Tablas y montones de metadatos
 
@@ -134,7 +134,7 @@ public class MyApp
 
 Cuando se ejecuta el código, el motor en tiempo de ejecución carga el módulo en la memoria y consulta los metadatos de esta clase. Una vez cargado, el motor en tiempo de ejecución realiza una análisis exhaustivo de la secuencia de lenguaje intermedio de Microsoft (MSIL) del método para convertirla en rápidas instrucciones máquina nativas. El motor en tiempo de ejecución usa un compilador Just-In-Time (JIT) para convertir las instrucciones MSIL en código máquina nativo, método a método, según sea necesario.
 
-En el siguiente ejemplo de código se muestra parte del MSIL producido a partir de la función `Main` del código anterior. El MSIL y los metadatos se pueden ver desde cualquier aplicación de .NET Framework usando el [Desensamblador de MSIL (Ildasm.exe)](../../docs/framework/tools/ildasm-exe-il-disassembler.md).
+En el siguiente ejemplo de código se muestra parte del MSIL producido a partir de la función `Main` del código anterior. El MSIL y los metadatos se pueden ver desde cualquier aplicación de .NET Framework usando el [Desensamblador de MSIL (Ildasm.exe)](../framework/tools/ildasm-exe-il-disassembler.md).
 
 ```console
 .entrypoint
@@ -173,4 +173,4 @@ Usando metadatos, el motor en tiempo de ejecución tiene acceso a toda la inform
 
 |Title|Descripción|
 |-----------|-----------------|
-|[Atributos](../../docs/standard/attributes/index.md)|Describe cómo aplicar atributos, escribir atributos personalizados y recuperar información almacenada en atributos.|
+|[Atributos](attributes/index.md)|Describe cómo aplicar atributos, escribir atributos personalizados y recuperar información almacenada en atributos.|

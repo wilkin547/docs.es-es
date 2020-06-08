@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3a59d31c-0ec5-4de6-a2a9-558531c8116e
-ms.openlocfilehash: 58407d5f0c6e602af15f5b19b9a19cc6379b9af7
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d38aea1a54c93b00ec14c6aac7ed11ceba288f7b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710289"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291505"
 ---
 # <a name="resolving-external-resources-during-xslt-processing"></a>Resolución de recursos externos durante el procesamiento XSLT
 Hay varios momentos a lo largo de una transformación XSLT en los cuales puede que necesite resolver recursos externos.  
@@ -46,4 +46,4 @@ Hay varios momentos a lo largo de una transformación XSLT en los cuales puede q
 
 - <xref:System.Xml.Xsl.XslCompiledTransform>
 - <xref:System.Xml.Xsl.XsltSettings>
-- [Transformaciones XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
+- [Transformaciones XSLT](xslt-transformations.md)
