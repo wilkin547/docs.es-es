@@ -2,34 +2,34 @@
 title: Cliente
 ms.date: 03/30/2017
 ms.assetid: fabb0c70-b79b-4e58-a5d3-9705de85ee5b
-ms.openlocfilehash: e3a4852ba467f9c334157555ed9c2ffc2ff33f0e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f2d93458c2bec16b737d8bfcbd423494941dc3e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61943967"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84585290"
 ---
 # <a name="client"></a>Cliente
 Esta sección contiene ejemplos que muestran las aplicaciones cliente de Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Interoperabilidad de cliente](../../../../docs/framework/wcf/samples/client-interoperability.md)  
+ [Interoperabilidad de cliente](client-interoperability.md)  
  Muestra la interoperabilidad entre WCF y otras tecnologías.  
   
- [Encabezados de dirección](../../../../docs/framework/wcf/samples/address-headers.md)  
+ [Encabezados de dirección](address-headers.md)  
  Muestra cómo los clientes pueden pasar parámetros de referencia a un servicio mediante WCF.  
   
- [Generador de canales](../../../../docs/framework/wcf/samples/channel-factory.md)  
+ [Generador de canales](channel-factory.md)  
  Muestra cómo una aplicación cliente puede crear un canal con la clase <xref:System.ServiceModel.ChannelFactory> en lugar de un cliente generado.  
   
- [Excepciones esperadas](../../../../docs/framework/wcf/samples/expected-exceptions.md)  
+ [Excepciones esperadas](expected-exceptions.md)  
  Muestra cómo detectar las excepciones esperadas al utilizar un cliente especificado.  
   
- [Recuperación de metadatos](../../../../docs/framework/wcf/samples/retrieve-metadata.md)  
+ [Recuperación de metadatos](retrieve-metadata.md)  
  Muestra cómo implementar un cliente que dinámicamente recupere los metadatos de un servicio para elegir un punto de conexión con el que comunicar.  
   
- [Utilizar cierre y anulación para liberar los recursos del cliente WCF](../../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)  
+ [Uso de Close y Abort para liberar los recursos del cliente WCF](use-close-abort-release-wcf-client-resources.md)  
  Muestra cómo no debería utilizar la instrucción de C# "using" para limpiar automáticamente los recursos al emplear un cliente especificado.  
   
- [Cliente con tipo](../../../../docs/framework/wcf/samples/typed-client.md)  
- Muestra cómo obtener información de un cliente especificado generado por el [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).
+ [Cliente con tipo](typed-client.md)  
+ Muestra cómo obtener información de un cliente con tipo generado por la [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).

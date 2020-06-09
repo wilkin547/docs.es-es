@@ -2,19 +2,19 @@
 title: Extensibilidad de metadatos
 ms.date: 03/30/2017
 ms.assetid: f92fcc76-0806-4c84-9d63-7aae0d3899de
-ms.openlocfilehash: d139e169aa9bd45f5a7ef848acc12aaa35043432
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e8e7f511b38cf3326b9abbca57df769317a26a4
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755992"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84584628"
 ---
 # <a name="metadata-extensibility"></a>Extensibilidad de metadatos
 Esta sección contiene ejemplos que muestran los metadatos personalizados.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Punto de conexión personalizado de metadatos seguros](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)  
- Muestra cómo implementar un servicio con un punto de conexión de metadatos seguro que utiliza uno de los enlaces de intercambio que no es de metadatos y cómo configurar [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) o clientes para obtener los metadatos este extremo de metadatos.  
+ [Extremo personalizado de metadatos seguros](custom-secure-metadata-endpoint.md)  
+ Muestra cómo implementar un servicio con un extremo de metadatos seguro que utiliza uno de los enlaces de intercambio que no son de metadatos y cómo configurar la [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) o clientes para capturar los metadatos de este extremo de metadatos.  
   
- [Publicación de WSDL personalizada](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)  
+ [Publicación de WSDL personalizada](custom-wsdl-publication.md)  
  Muestra cómo implementar un <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> en un atributo <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> personalizado para exportar las propiedades de atributo como anotaciones WSDL, entre otras funcionalidades.

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WCF [WCF], request-reply services
 - request-reply contracts [WCF]
 ms.assetid: 2fa710f1-47f4-4598-b063-3ab3bd22ebba
-ms.openlocfilehash: f58da6f1cdaad1b976659ee2e9febe12cc07726f
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: df42f3fa8f5a15572987b0d4859856c7f838e632
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991143"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84586239"
 ---
 # <a name="request-reply-services"></a>Servicios de solicitud-respuesta
 Los servicios de solicitud-respuesta son el tipo predeterminado de contrato de operación en Windows Communication Foundation (WCF). Los clientes realizan las llamadas a operaciones de servicio y esperan una respuesta del servicio. Puede realizar llamadas a una operación de servicio de manera sincrónica, donde el cliente se bloquea hasta que recibe una respuesta del servicio o la llamada supera el tiempo de espera, o de forma asincrónica, donde el cliente realiza una llamada a la operación del servicio, continúa funcionando y recibe la respuesta del servicio en otro subproceso.  
@@ -32,5 +32,5 @@ public interface IRequestReplyCalculator
   
 ## <a name="see-also"></a>Vea también
 
-- [Servicios unidireccionales](../../../../docs/framework/wcf/feature-details/one-way-services.md)
-- [Servicios dúplex](../../../../docs/framework/wcf/feature-details/duplex-services.md)
+- [Servicios unidireccionales](one-way-services.md)
+- [Servicios dúplex](duplex-services.md)

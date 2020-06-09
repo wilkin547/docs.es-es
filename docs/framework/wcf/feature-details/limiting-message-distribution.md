@@ -2,12 +2,12 @@
 title: Limitación de la distribución de mensajes
 ms.date: 03/30/2017
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
-ms.openlocfilehash: 36d9d43760e68f6bcf0099ac17dec5a8278d0e49
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 188d7bd365caad7d4cd438744c78ae8e7cd95e7e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76211905"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84586317"
 ---
 # <a name="limiting-message-distribution"></a>Limitación de la distribución de mensajes
 
@@ -57,13 +57,13 @@ Las respuestas a estas preguntas pueden ayudarle a determinar si debe utilizar e
 
   - *Subconjunto complejo de la malla*: MessagePropagationFilter.
 
-- **Con qué frecuencia**
+- **Frecuencia**
 
   - *Muy frecuente*: conexión directa, PeerHopCount, MessagePropagationFilter.
 
   - *Ocasional*: filtro local.
 
-- **Uso de ancho de banda**
+- **Uso del ancho de banda**
 
   - *Alta*: conexión directa, menos recomendable para usar MessagePropagationFilter o filtro local.
 
@@ -71,4 +71,4 @@ Las respuestas a estas preguntas pueden ayudarle a determinar si debe utilizar e
 
 ## <a name="see-also"></a>Vea también
 
-- [Creación de una aplicación de canal del mismo nivel](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+- [Creación de una aplicación de canal del mismo nivel](building-a-peer-channel-application.md)
