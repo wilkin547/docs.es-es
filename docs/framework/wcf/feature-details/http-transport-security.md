@@ -2,12 +2,12 @@
 title: Seguridad de transporte HTTP
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-ms.openlocfilehash: 4bd3fbfd39538eee4344ef0a8ca4fe61b372ab70
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 28d0ac164022f585f25b44b16c68994b592ef041
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76212129"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84592728"
 ---
 # <a name="http-transport-security"></a>Seguridad de transporte HTTP
 Al utilizar HTTP como transporte, una implementación de Capa de sockets seguros (SSL) proporciona la seguridad. SSL se utiliza mucho en Internet para autenticar un servicio a un cliente y proporcionar la confidencialidad (cifrado) al canal. En este tema se explica cómo funciona SSL y cómo se implementa en Windows Communication Foundation (WCF).  
@@ -35,7 +35,7 @@ Al utilizar HTTP como transporte, una implementación de Capa de sockets seguros
   
 - Si va a crear una aplicación WCF autohospedada, puede enlazar un certificado SSL a la dirección mediante la herramienta HttpCfg. exe.  
   
-### <a name="using-iis-for-transport-security"></a>Utilizar IIS para seguridad de transporte  
+### <a name="using-iis-for-transport-security"></a>Utilizar IIS para seguridad de transporte   
   
 #### <a name="iis-70"></a>IIS 7.0  
  Para configurar IIS 7,0 como un host seguro (mediante SSL), consulte [configuración de capa de sockets seguros en IIS 7,0](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771438(v=ws.10)).  
@@ -51,9 +51,9 @@ Para configurar los certificados para su uso con IIS 7,0, vea [configurar certif
 
  Si va a crear una aplicación WCF autohospedada, use la herramienta [HttpCfg. exe](/windows/win32/http/httpcfg-exe) .
   
- Para obtener más información acerca del uso de la herramienta HttpCfg. exe para configurar un puerto con un certificado X. 509, consulte [Cómo: configurar un puerto con un certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+ Para obtener más información acerca del uso de la herramienta HttpCfg. exe para configurar un puerto con un certificado X. 509, consulte [Cómo: configurar un puerto con un certificado SSL](how-to-configure-a-port-with-an-ssl-certificate.md).  
   
 ## <a name="see-also"></a>Vea también
 
-- [Seguridad de transporte](../../../../docs/framework/wcf/feature-details/transport-security.md)
-- [Seguridad de los mensajes](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
+- [Seguridad de transporte](transport-security.md)
+- [Seguridad de los mensajes](message-security-in-wcf.md)

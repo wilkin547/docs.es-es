@@ -2,12 +2,12 @@
 title: Conceptos de seguridad empleados en WCF
 ms.date: 03/30/2017
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
-ms.openlocfilehash: faf7b44c0ff1b207a7b017163ad2b032f26199b8
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: f852ba4e1100103289bc5fd879b19ebd40443b8d
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743884"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595185"
 ---
 # <a name="security-concepts-used-in-wcf"></a>Conceptos de seguridad empleados en WCF
 La seguridad de Windows Communication Foundation (WCF) se basa en los conceptos que ya están en uso y se implementan en diversas infraestructuras de seguridad.  
@@ -31,7 +31,7 @@ La infraestructura de clave pública (PKI) es un sistema de certificados digital
  Los certificados X.509 son formularios de credenciales primarias usados en aplicaciones de seguridad. Para obtener más información sobre los certificados X. 509, vea [certificados de clave pública x. 509](/windows/win32/seccertenroll/about-x-509-public-key-certificates). Los certificados X.509 se almacenan en un almacén de certificados. Un equipo que ejecuta Windows tiene varios tipos de almacenes de certificados, cada uno con un propósito diferente. Para obtener más información sobre los diferentes almacenes, vea [almacenes de certificados](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc757138(v=ws.10)).  
   
 ## <a name="web-services-security-specifications"></a>Especificaciones de Seguridad de Servicios Web  
- Los enlaces definidos por el sistema admiten muchas especificaciones de seguridad de los servicios Web que se usan habitualmente. Para obtener una lista completa de los enlaces proporcionados por el sistema y las especificaciones de los servicios web que admiten, vea: [protocolos de servicios Web compatibles con los enlaces de interoperabilidad proporcionados por el sistema](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md) .  
+ Los enlaces definidos por el sistema admiten muchas especificaciones de seguridad de los servicios Web que se usan habitualmente. Para obtener una lista completa de los enlaces proporcionados por el sistema y las especificaciones de los servicios web que admiten, vea: [protocolos de servicios Web compatibles con los enlaces de interoperabilidad proporcionados por el sistema](web-services-protocols-supported-by-system-provided-interoperability-bindings.md) .  
   
 ## <a name="access-control-mechanisms"></a>Mecanismos de control de acceso  
  WCF proporciona muchas formas de controlar el acceso a un servicio o a una operación. Entre ellos cabe destacar los siguientes:  
@@ -46,9 +46,9 @@ La infraestructura de clave pública (PKI) es un sistema de certificados digital
   
 5. Modelo de identidad  
   
- Para obtener más información sobre estos temas, vea [mecanismos de Access Control](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
+ Para obtener más información sobre estos temas, vea [mecanismos de Access Control](access-control-mechanisms.md)  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Modelo de seguridad para Windows Server App fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Información general sobre seguridad](security-overview.md)
+- [Modelo de seguridad para Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Habilitar la detección de repetición de mensajes'
+title: Procedimiento para habilitar la detección de repetición de mensajes
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,27 +10,27 @@ helpviewer_keywords:
 - WCF, custom bindings
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
-ms.openlocfilehash: 05bcddabf625e478616cce39f08b0ff8af282716
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf45b39f59e2fe38fec88d1fac23ab824c009546
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184954"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597090"
 ---
-# <a name="how-to-enable-message-replay-detection"></a>Cómo: Habilitar la detección de repetición de mensajes
+# <a name="how-to-enable-message-replay-detection"></a>Procedimiento para habilitar la detección de repetición de mensajes
 Un ataque de reproducción se produce cuando un atacante copia una secuencia de mensajes entre dos partes y reproduce la secuencia a una o más partes. A menos que se mitigue, los equipos sujetos al ataque procesarán el flujo como mensajes legítimos, generando un intervalo de consecuencias erróneas, como las órdenes redundantes de un elemento.  
   
- Para obtener más información acerca de la detección de reproducción de mensajes, vea Detección de [reproducción](https://docs.microsoft.com/previous-versions/msp-n-p/ff649371(v=pandp.10))de mensajes .  
+ Para obtener más información acerca de la detección de reproducción de mensajes, vea [detección de reproducción de mensajes](https://docs.microsoft.com/previous-versions/msp-n-p/ff649371(v=pandp.10)).  
   
- El siguiente procedimiento muestra varias propiedades que puede usar para controlar la detección de reproducción mediante Windows Communication Foundation (WCF).  
+ En el procedimiento siguiente se muestran varias propiedades que puede usar para controlar la detección de reproducción mediante Windows Communication Foundation (WCF).  
   
 ### <a name="to-control-replay-detection-on-the-client-using-code"></a>Para controlar la detección de reproducción en el cliente utilizando código  
   
-1. Cree <xref:System.ServiceModel.Channels.SecurityBindingElement> para utilizar en <xref:System.ServiceModel.Channels.CustomBinding>. Para obtener más información, vea [Cómo: crear un enlace personalizado mediante SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). En el siguiente ejemplo se utiliza <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> creado con <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> de la clase <xref:System.ServiceModel.Channels.SecurityBindingElement>.  
+1. Cree <xref:System.ServiceModel.Channels.SecurityBindingElement> para utilizar en <xref:System.ServiceModel.Channels.CustomBinding>. Para obtener más información, vea [Cómo: crear un enlace personalizado mediante SecurityBindingElement](how-to-create-a-custom-binding-using-the-securitybindingelement.md). En el siguiente ejemplo se utiliza <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> creado con <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> de la clase <xref:System.ServiceModel.Channels.SecurityBindingElement>.  
   
 2. Utilizar la propiedad <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> para devolver una referencia a la clase <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> y establecer cualquiera de las propiedades siguientes, según corresponda:  
   
-    1. `DetectReplay`. Valor booleano. Esto rige si el cliente debería detectar las reproducciones del servidor. El valor predeterminado es `true`.  
+    1. `DetectReplay`. Valor booleano. Esto rige si el cliente debería detectar las reproducciones del servidor. De manera predeterminada, es `true`.  
   
     2. `MaxClockSkew`. Valor <xref:System.TimeSpan>. Rige qué sesgo temporal puede tolerar el mecanismo de reproducción entre el cliente y el servidor. El mecanismo de seguridad examina la marca de tiempo enviada y determina si se fue enviada demasiado lejos en el pasado. El valor predeterminado es 5 minutos.  
   
@@ -46,11 +46,11 @@ Un ataque de reproducción se produce cuando un atacante copia una secuencia de 
   
 ### <a name="to-control-replay-detection-in-configuration-for-the-client-or-service"></a>Para controlar la detección de reproducción en configuración para el cliente o servicio  
   
-1. Cree un [ \<>customBinding ](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+1. Cree un [\<customBinding>](../../configure-apps/file-schema/wcf/custombinding.md) .  
   
 2. Cree un elemento `<security>`.  
   
-3. Cree un [ \<>localClientSettings o](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md) [ \<localServiceSettings>](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md).  
+3. Cree un [\<localClientSettings>](../../configure-apps/file-schema/wcf/localclientsettings-element.md) o [\<localServiceSettings>](../../configure-apps/file-schema/wcf/localservicesettings-element.md) .  
   
 4. Establezca los siguientes valores de atributo según sea apropiado: `detectReplays`, `maxClockSkew`, `replayWindow`, y `replayCacheSize`. El ejemplo siguiente establece los atributos de `<localServiceSettings>`:  
   
@@ -102,10 +102,10 @@ Un ataque de reproducción se produce cuando un atacante copia una secuencia de 
   
 - <xref:System.ServiceModel.Channels>  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
-- [Conversaciones y sesiones seguras](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)
-- [\<localClientSettings>](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)
-- [Cómo: Crear un enlace personalizado mediante SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Conversaciones y sesiones seguras](secure-conversations-and-secure-sessions.md)
+- [\<localClientSettings>](../../configure-apps/file-schema/wcf/localclientsettings-element.md)
+- [Procedimiento para crear un enlace personalizado mediante SecurityBindingElement](how-to-create-a-custom-binding-using-the-securitybindingelement.md)

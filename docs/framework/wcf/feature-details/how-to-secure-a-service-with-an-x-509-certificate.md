@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-ms.openlocfilehash: 69db887bf8e7b51c4450c04bd1a08d3d952e84f7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 10d6db63368ee55040f85f922b9483982e8ff264
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643569"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596973"
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Procedimiento para proteger un servicio con un certificado X.509
-Protección de un servicio con un certificado X.509 es una técnica básica que utilizan la mayoría de los enlaces de Windows Communication Foundation (WCF). En este tema se describen los pasos necesarios para configurar un servicio autoalojado con un certificado X.509.  
+La protección de un servicio con un certificado X. 509 es una técnica básica que utilizan la mayoría de los enlaces de Windows Communication Foundation (WCF). En este tema se describen los pasos necesarios para configurar un servicio autoalojado con un certificado X.509.  
   
- Un requisito previo es un certificado válido que se puede utilizar para autenticar el servidor. Una entidad emisora de certificados de confianza debe emitir el certificado. Si el certificado no es válido, cualquier cliente que intente usar el servicio no confiará en el servicio y, por tanto, no se realizará ninguna conexión. Para obtener más información sobre el uso de certificados, consulte [trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+ Un requisito previo es un certificado válido que se puede utilizar para autenticar el servidor. Una entidad emisora de certificados de confianza debe emitir el certificado. Si el certificado no es válido, cualquier cliente que intente usar el servicio no confiará en el servicio y, por tanto, no se realizará ninguna conexión. Para obtener más información sobre el uso de certificados, consulte [trabajar con certificados](working-with-certificates.md).  
   
 ### <a name="to-configure-a-service-with-a-certificate-using-code"></a>Configuración de un servicio con un certificado mediante código  
   
-1. Cree el contrato de servicio y el servicio implementado. Para obtener más información, consulte [diseño e implementación de servicios](../../../../docs/framework/wcf/designing-and-implementing-services.md).  
+1. Cree el contrato de servicio y el servicio implementado. Para obtener más información, vea [diseñar e implementar servicios](../designing-and-implementing-services.md).  
   
 2. Cree una instancia de la clase <xref:System.ServiceModel.WSHttpBinding> y establezca su modo de seguridad en <xref:System.ServiceModel.SecurityMode.Message>, tal y como se muestra en el código siguiente.  
   
@@ -31,7 +31,7 @@ Protección de un servicio con un certificado X.509 es una técnica básica que 
      [!code-csharp[C_SecureWithCertificate#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#2)]
      [!code-vb[C_SecureWithCertificate#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#2)]  
   
-4. Cree una instancia de la clase <xref:System.Uri> para la dirección base del servicio. Dado que el `WSHttpBinding` utiliza el transporte HTTP, el identificador uniforme de recursos (URI) debe comenzar con ese esquema o Windows Communication Foundation (WCF) se iniciará una excepción cuando se abre el servicio.  
+4. Cree una instancia de la clase <xref:System.Uri> para la dirección base del servicio. Dado `WSHttpBinding` que utiliza el transporte http, el identificador uniforme de recursos (URI) debe comenzar con ese esquema o Windows Communication Foundation (WCF) producirá una excepción cuando se abra el servicio.  
   
      [!code-csharp[C_SecureWithCertificate#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#3)]
      [!code-vb[C_SecureWithCertificate#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#3)]  
@@ -84,4 +84,4 @@ Protección de un servicio con un certificado X.509 es una técnica básica que 
   
 ## <a name="see-also"></a>Vea también
 
-- [Trabajo con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Trabajar con certificados](working-with-certificates.md)

@@ -2,12 +2,12 @@
 title: Divulgación de información
 ms.date: 03/30/2017
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
-ms.openlocfilehash: 0bcf1aa04d7ba7477a6c3f1559a77bbda1f974af
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: a58ac4dd3715052031c7fb5c1da480c0d01396ea
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76211954"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596869"
 ---
 # <a name="information-disclosure"></a>Divulgación de información
 
@@ -19,7 +19,7 @@ Si utiliza la seguridad del nivel de mensaje sobre una capa de transporte HTTP, 
 
 ## <a name="policy-information"></a>Información de directiva
 
-Es importante proteger la directiva, sobre todo en escenarios de federación donde confidenciales requisitos de tokens emitidos o información sobre el emisor del token se exponen en la directiva. En estos casos, la recomendación es proteger el punto de conexión de la directiva del servicio federado para evitar que los atacantes obtengan información sobre el servicio, como el tipo de demandas que colocar en el token emitido o redirigir a los clientes a emisores de tokens malintencionados. Por ejemplo, un atacante podría detectar pares de nombre de usuario/contraseña reconfigurando la cadena de confianza federada para finalizar en un emisor que ejecutó un ataque de tipo “man-in-the-middle”. También se recomienda que los clientes federados que obtienen sus enlaces a través de la recuperación de directivas comprueben que confían en los emisores en la cadena de confianza federada obtenida. Para obtener más información sobre los escenarios de Federación, vea [Federación](../../../../docs/framework/wcf/feature-details/federation.md).
+Es importante proteger la directiva, sobre todo en escenarios de federación donde confidenciales requisitos de tokens emitidos o información sobre el emisor del token se exponen en la directiva. En estos casos, la recomendación es proteger el punto de conexión de la directiva del servicio federado para evitar que los atacantes obtengan información sobre el servicio, como el tipo de demandas que colocar en el token emitido o redirigir a los clientes a emisores de tokens malintencionados. Por ejemplo, un atacante podría detectar pares de nombre de usuario/contraseña reconfigurando la cadena de confianza federada para finalizar en un emisor que ejecutó un ataque de tipo “man-in-the-middle”. También se recomienda que los clientes federados que obtienen sus enlaces a través de la recuperación de directivas comprueben que confían en los emisores en la cadena de confianza federada obtenida. Para obtener más información sobre los escenarios de Federación, vea [Federación](federation.md).
 
 ## <a name="memory-dumps-can-reveal-claim-information"></a>Los volcados de memoria pueden revelar información de la demanda
 
@@ -55,7 +55,7 @@ De manera predeterminada, en el entorno de dominio de Windows, la autenticación
 
 Al crear un cliente, especificar las credenciales del cliente sin un nombre de dominio o especificar una identidad de servidor no válida, hace que NTLM sea utilizado en lugar del protocolo Kerberos (si la propiedad `AllowNtlm` está establecida en `true`). Dado que NTLM no hace la autenticación de servidor, se puede divulgar información de manera potencial.
 
-Por ejemplo, es posible especificar credenciales de cliente de Windows sin un nombre de dominio, tal y como se C# muestra en el siguiente código Visual.
+Por ejemplo, es posible especificar credenciales de cliente de Windows sin un nombre de dominio, tal y como se muestra en el siguiente código de Visual C#.
 
 ```csharp
 MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCredential("username", "password");
@@ -63,13 +63,13 @@ MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCr
 
 El código no especifica un nombre de dominio y, por consiguiente, se utilizará NTLM.
 
-Si se especifica el dominio, pero se especifica un nombre principal de servicio no válido mediante la característica de identidad de punto de conexión, se usará NTLM. Para obtener más información sobre cómo se especifica la identidad del punto de conexión, consulte [identidad del servicio y autenticación](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).
+Si se especifica el dominio, pero se especifica un nombre principal de servicio no válido mediante la característica de identidad de punto de conexión, se usará NTLM. Para obtener más información sobre cómo se especifica la identidad del punto de conexión, consulte [identidad del servicio y autenticación](service-identity-and-authentication.md).
 
 ## <a name="see-also"></a>Vea también
 
-- [Consideraciones de seguridad](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Elevación de privilegios](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
-- [Denegación de servicio](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
-- [Manipulación](../../../../docs/framework/wcf/feature-details/tampering.md)
-- [Escenarios no admitidos](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
-- [Ataques por repetición](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+- [Consideraciones sobre la seguridad](security-considerations-in-wcf.md)
+- [Elevación de privilegios](elevation-of-privilege.md)
+- [Denegación de servicio](denial-of-service.md)
+- [Alteración de datos](tampering.md)
+- [Escenarios no admitidos](unsupported-scenarios.md)
+- [Ataques por repetición](replay-attacks.md)

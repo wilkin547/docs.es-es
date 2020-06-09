@@ -2,12 +2,12 @@
 title: Seguridad del canal del mismo nivel
 ms.date: 03/30/2017
 ms.assetid: 2c59b164-3729-44f0-a967-f247c42de662
-ms.openlocfilehash: bc17c35bf088472cfbf36b2c6d7c868c8cc85f20
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8015f41254d17f908f3665db65af3d82eaa2b6a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769400"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84576088"
 ---
 # <a name="peer-channel-security"></a>Seguridad del canal del mismo nivel
 El canal del mismo nivel admite varios tipos de aplicaciones distribuidas que dependen de la mensajería entre varias entidades. Algunos ejemplos incluyen la distribución del contenido a escala de Internet, donde una fuente de confianza distribuye contenido (como multimedia o actualizaciones de software), un grupo de amigos intercambian música y fotos, o un equipo de compañeros de trabajo editan conjuntamente un documento. Cada uno de estos escenarios requiere un modelo de seguridad único. El modelo de seguridad del canal del mismo nivel está diseñado para resolver estos escenarios y proporciona un modelo de seguridad robusto para las necesidades respectivas de los diferentes modelos de identidad, autenticación y autorización.  
@@ -35,6 +35,6 @@ El canal del mismo nivel admite varios tipos de aplicaciones distribuidas que de
   
 ## <a name="see-also"></a>Vea también
 
-- [Protección de las aplicaciones de canal del mismo nivel](../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
-- [Conceptos del canal del mismo nivel](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)
-- [Creación de una aplicación de canal del mismo nivel](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+- [Protección de las aplicaciones de canal del mismo nivel](securing-peer-channel-applications.md)
+- [Conceptos del canal del mismo nivel](peer-channel-concepts.md)
+- [Creación de una aplicación de canal del mismo nivel](building-a-peer-channel-application.md)

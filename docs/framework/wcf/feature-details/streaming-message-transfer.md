@@ -2,12 +2,12 @@
 title: Transferencia de mensajes por secuencias
 ms.date: 03/30/2017
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
-ms.openlocfilehash: 6f16ab16235c9fcbe0a151d5c404df96080192c6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 462144856750a1b8726b574fdc82746da2d72ff7
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64585925"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594795"
 ---
 # <a name="streaming-message-transfer"></a>Transferencia de mensajes por secuencias
 Los transportes de Windows Communication Foundation (WCF) admiten dos modos de transferencia de mensajes:  
@@ -27,7 +27,7 @@ Los transportes de Windows Communication Foundation (WCF) admiten dos modos de t
   
  La decisión de utilizar transferencias almacenadas en búfer o transmitidas es una decisión local del punto de conexión. En los transportes HTTP, el modo de transferencia no se propaga a través de una conexión o a los servidores y otros intermediarios. Establecer el modo de transferencia no se refleja en la descripción de la interfaz de servicio. Después de generar una clase de cliente para un servicio, debe modificar el archivo de configuración de los servicios pensados para ser utilizados con transferencias por secuencias para establecer el modo. En los transportes con canalizaciones con nombre y TCP, el modo de transferencia se propaga como una aserción de directiva.  
   
- Para obtener ejemplos de código, vea [Cómo: Habilitar el Streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md).  
+ Para obtener ejemplos de código, consulte [Cómo: habilitar el streaming](how-to-enable-streaming.md).  
   
 ## <a name="enabling-asynchronous-streaming"></a>Habilitar la transmisión de datos asincrónica  
  Para habilitar el streaming asincrónico, agregue el comportamiento de punto de conexión <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> al host de servicio y establezca la propiedad <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> en `true`.  
@@ -39,13 +39,13 @@ Los transportes de Windows Communication Foundation (WCF) admiten dos modos de t
   
  Las operaciones que se producen en un transporte por secuencias pueden tener un contrato con, como mucho, un parámetro de entrada o de salida. Ese parámetro corresponde al cuerpo completo del mensaje y ha de ser un <xref:System.ServiceModel.Channels.Message>, un tipo derivado de <xref:System.IO.Stream>, o una implementación <xref:System.Xml.Serialization.IXmlSerializable>. Tener un valor devuelto para una operación equivale a tener un parámetro de salida.  
   
- Algunas características WCF, como mensajería confiable, transacciones y la seguridad de nivel de mensaje SOAP, se basan en búfer los mensajes para las transmisiones. El uso de estas características puede reducir o eliminar las ventajas de rendimiento ganadas mediante la transmisión por secuencias. Para proteger un transporte por secuencias, utilice la seguridad de nivel de transporte únicamente o utilice la seguridad de nivel de transporte más la seguridad de mensaje de solo autenticación.  
+ Algunas características de WCF, como la mensajería de confianza, las transacciones y la seguridad de nivel de mensaje SOAP, se basan en el almacenamiento en búfer de mensajes para las transmisiones. El uso de estas características puede reducir o eliminar las ventajas de rendimiento ganadas mediante la transmisión por secuencias. Para proteger un transporte por secuencias, utilice la seguridad de nivel de transporte únicamente o utilice la seguridad de nivel de transporte más la seguridad de mensaje de solo autenticación.  
   
- Los encabezados SOAP siempre están almacenados en búfer, incluso cuando el modo de transferencia es por secuencias. Los encabezados de un mensaje no deben superar el tamaño de la cuota de transporte `MaxBufferSize`. Para obtener más información sobre esta configuración, consulte [las cuotas de transporte](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
+ Los encabezados SOAP siempre están almacenados en búfer, incluso cuando el modo de transferencia es por secuencias. Los encabezados de un mensaje no deben superar el tamaño de la cuota de transporte `MaxBufferSize`. Para obtener más información acerca de esta configuración, consulte [cuotas de transporte](transport-quotas.md).  
   
 ## <a name="differences-between-buffered-and-streamed-transfers"></a>Diferencias entre las transferencias almacenadas en búfer y las transferencias por secuencias  
  Si se cambia el modo de transferencia de almacenado en búfer a por secuencias, también se cambia la forma del canal nativo de transportes de canalización con nombre y TCP. Para transferencias almacenadas en búfer, la forma del canal nativo es <xref:System.ServiceModel.Channels.IDuplexSessionChannel>. Para las transferencias por secuencias, los canales nativos son <xref:System.ServiceModel.Channels.IRequestChannel> y <xref:System.ServiceModel.Channels.IReplyChannel>. Al cambiar el modo de transferencia en una aplicación existente que utiliza estos transportes directamente (es decir, no a través de un contrato de servicios), requiere el cambio de la forma del canal esperada para los generadores de canales y agentes de escucha.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Habilitar el Streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+- [Procedimiento para habilitar el streaming](how-to-enable-streaming.md)
