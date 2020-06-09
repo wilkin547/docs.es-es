@@ -2,21 +2,21 @@
 title: System.ServiceModel.Channels.HttpChannelRequestAborted
 ms.date: 03/30/2017
 ms.assetid: d47a2e78-f0ce-4125-893a-5f438016216c
-ms.openlocfilehash: b298b5416700ced4160ebc5795959b4ea288a48b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 48a97139e8518096917887c04bb7e4eaed196d8d
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666682"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594067"
 ---
-# <a name="systemservicemodelchannelshttpchannelrequestaborted"></a><span data-ttu-id="96fd3-102">System.ServiceModel.Channels.HttpChannelRequestAborted</span><span class="sxs-lookup"><span data-stu-id="96fd3-102">System.ServiceModel.Channels.HttpChannelRequestAborted</span></span>
-<span data-ttu-id="96fd3-103">No se pudo enviar un mensaje de solicitud sobre HTTP.</span><span class="sxs-lookup"><span data-stu-id="96fd3-103">Failed to send a request message over HTTP.</span></span>  
+# <a name="systemservicemodelchannelshttpchannelrequestaborted"></a><span data-ttu-id="887c2-102">System.ServiceModel.Channels.HttpChannelRequestAborted</span><span class="sxs-lookup"><span data-stu-id="887c2-102">System.ServiceModel.Channels.HttpChannelRequestAborted</span></span>
+<span data-ttu-id="887c2-103">No se pudo enviar un mensaje de solicitud sobre HTTP.</span><span class="sxs-lookup"><span data-stu-id="887c2-103">Failed to send a request message over HTTP.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="96fd3-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="96fd3-104">Description</span></span>  
- <span data-ttu-id="96fd3-105">Este seguimiento de nivel de advertencia indica que se anuló una solicitud de canal HTTP.</span><span class="sxs-lookup"><span data-stu-id="96fd3-105">This warning level trace indicates that an HTTP channel request was aborted.</span></span> <span data-ttu-id="96fd3-106">La información adicional de este seguimiento revelará la razón o el mensaje pasado al método Abort.</span><span class="sxs-lookup"><span data-stu-id="96fd3-106">Additional information in this trace will reveal the reason or the message passed to the Abort method.</span></span>  
+## <a name="description"></a><span data-ttu-id="887c2-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="887c2-104">Description</span></span>  
+ <span data-ttu-id="887c2-105">Este seguimiento de nivel de advertencia indica que se anuló una solicitud de canal HTTP.</span><span class="sxs-lookup"><span data-stu-id="887c2-105">This warning level trace indicates that an HTTP channel request was aborted.</span></span> <span data-ttu-id="887c2-106">La información adicional de este seguimiento revelará la razón o el mensaje pasado al método Abort.</span><span class="sxs-lookup"><span data-stu-id="887c2-106">Additional information in this trace will reveal the reason or the message passed to the Abort method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="96fd3-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="96fd3-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="887c2-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="887c2-107">See also</span></span>
 
-- [<span data-ttu-id="96fd3-108">Traza</span><span class="sxs-lookup"><span data-stu-id="96fd3-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="96fd3-109">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="96fd3-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="96fd3-110">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="96fd3-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="887c2-108">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="887c2-108">Tracing</span></span>](index.md)
+- [<span data-ttu-id="887c2-109">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="887c2-109">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="887c2-110">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="887c2-110">Administration and Diagnostics</span></span>](../index.md)
