@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6e0cacc1-9b11-4665-adb7-577a62626fd6
-ms.openlocfilehash: 82095f397195fbf333bab8d043da18114e2a5dba
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0317e7b42f589b31f5c77b89d26cb46815f13054
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968468"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599053"
 ---
 # <a name="how-to-create-a-basic-atom-feed"></a>Procedimiento para crear una fuente Atom básica
 Windows Communication Foundation (WCF) le permite crear un servicio que exponga una fuente de distribución. En este tema se discute cómo crear un servicio de distribución que exponga una fuente de distribución Atom.  
@@ -23,7 +23,7 @@ Windows Communication Foundation (WCF) le permite crear un servicio que exponga 
      [!code-vb[htAtomBasic#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatombasic/vb/program.vb#0)]  
   
     > [!NOTE]
-    > Todas las operaciones de servicio que apliquen el <xref:System.ServiceModel.Web.WebGetAttribute> se asignan a solicitudes HTTP GET. Para asignar su operación a un método HTTP diferente, utilice en su lugar <xref:System.ServiceModel.Web.WebInvokeAttribute>. Para obtener más información, consulte [Cómo Cree un servicio](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)básico http Web de WCF.  
+    > Todas las operaciones de servicio que apliquen el <xref:System.ServiceModel.Web.WebGetAttribute> se asignan a solicitudes HTTP GET. Para asignar su operación a un método HTTP diferente, utilice en su lugar <xref:System.ServiceModel.Web.WebInvokeAttribute>. Para obtener más información, consulte [Cómo: crear un servicio http Web de WCF básico](how-to-create-a-basic-wcf-web-http-service.md).  
   
 2. Implemente el contrato de servicios.  
   
@@ -66,7 +66,7 @@ Windows Communication Foundation (WCF) le permite crear un servicio que exponga 
   
 1. Abra Internet Explorer, escriba la siguiente dirección URL y presione ENTRAR:`http://localhost:8000/BlogService/GetBlog`  
   
-     La dirección URL contiene la dirección base del servicio (`http://localhost:8000/BlogService`), la dirección relativa del punto de conexión y la operación de servicio que se va a llamar.  
+     La dirección URL contiene la dirección base del servicio ( `http://localhost:8000/BlogService` ), la dirección relativa del punto de conexión y la operación de servicio que se va a llamar.  
   
 ### <a name="to-call-getblog-from-code"></a>Llamar a GetBlog() mediante código  
   

@@ -9,23 +9,23 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-ms.openlocfilehash: 2ab0a41e87a9b14d1beac9fb0c39586f0ea16a4a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b7d78def4d656dea59af5400c7ed7deeef28cd0c
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040194"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597454"
 ---
 # <a name="data-contract-known-types"></a>Tipos conocidos de contratos de datos
-La clase <xref:System.Runtime.Serialization.KnownTypeAttribute> le permite especificar, de antemano, los tipos que deberían tenerse en cuenta durante la deserialización. Para ver un ejemplo ilustrativo, consulte el ejemplo [Known Types](../../../../docs/framework/wcf/samples/known-types.md) .  
+La clase <xref:System.Runtime.Serialization.KnownTypeAttribute> le permite especificar, de antemano, los tipos que deberían tenerse en cuenta durante la deserialización. Para ver un ejemplo ilustrativo, consulte el ejemplo [Known Types](../samples/known-types.md) .  
   
  Normalmente, al pasar parámetros y valores devueltos entre un cliente y un servicio, ambos extremos comparten todos los contratos de datos de los datos que se van a transmitir. Sin embargo, éste no es el caso en las siguientes circunstancias:  
   
-- El contrato de datos enviados se deriva del contrato de datos esperados. Para obtener más información, vea la sección acerca de la herencia en la [equivalencia del contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md). En ese caso, los datos transmitidos no tienen el mismo contrato de datos que espera el extremo receptor.  
+- El contrato de datos enviados se deriva del contrato de datos esperados. Para obtener más información, vea la sección acerca de la herencia en la [equivalencia del contrato de datos](data-contract-equivalence.md). En ese caso, los datos transmitidos no tienen el mismo contrato de datos que espera el extremo receptor.  
   
 - El tipo declarado de la información que se va a transmitir es una interfaz, en lugar de una clase, estructura o enumeración. En consecuencia, no se puede saber por adelantado qué tipo que implementa la interfaz se envía realmente y, por consiguiente, el extremo receptor no puede determinar de antemano el contrato de datos para los datos transmitidos.  
   
-- El tipo declarado de la información que se va a transmitir es <xref:System.Object>. Puesto que cada tipo hereda de <xref:System.Object>, y no se puede conocer de antemano qué tipo se envía realmente, el extremo receptor no puede determinar de antemano el contrato de datos para los datos transmitidos. Este es un caso especial del primer elemento: Cada contrato de datos se deriva del valor predeterminado, un contrato de datos en blanco que <xref:System.Object>se genera para.  
+- El tipo declarado de la información que se va a transmitir es <xref:System.Object>. Puesto que cada tipo hereda de <xref:System.Object>, y no se puede conocer de antemano qué tipo se envía realmente, el extremo receptor no puede determinar de antemano el contrato de datos para los datos transmitidos. Éste es un caso especial del primer elemento: cada contrato de datos se deriva del valor predeterminado, un contrato de datos en blanco que se genera para <xref:System.Object>.  
   
 - Algunos tipos, entre los que se incluyen tipos .NET Framework, tienen miembros que se encuentran en una de las tres categorías anteriores. Por ejemplo, <xref:System.Collections.Hashtable> utiliza <xref:System.Object> para almacenar los objetos reales en la tabla hash. Al serializar estos tipos, el lado receptor no puede determinar de antemano el contrato de datos de estos miembros.  
   
@@ -100,7 +100,7 @@ La clase <xref:System.Runtime.Serialization.KnownTypeAttribute> le permite espec
 ## <a name="known-types-using-open-generic-methods"></a>Tipos conocidos utilizando métodos genéricos abiertos  
  Puede que sea necesario agregar un tipo genérico como un tipo conocido. Sin embargo, un tipo genérico abierto no se puede pasar como un parámetro al atributo `KnownTypeAttribute` .  
   
- Este problema se puede resolver mediante el uso de un mecanismo alternativo: Escriba un método que devuelva una lista de tipos que se van a agregar a la colección de tipos conocidos. El nombre del método se especifica a continuación como un argumento de cadena al atributo `KnownTypeAttribute` debido a algunas restricciones.  
+ Este problema se puede resolver utilizando un mecanismo alternativo: Escriba un método que devuelva una lista de tipos que se han de agregar a la colección de tipos conocidos. El nombre del método se especifica a continuación como un argumento de cadena al atributo `KnownTypeAttribute` debido a algunas restricciones.  
   
  El método debe existir en el tipo al que se aplica el atributo `KnownTypeAttribute` , debe ser estático, no debe aceptar parámetros y debe devolver un objeto que se pueda asignar a <xref:System.Collections.IEnumerable> de <xref:System.Type>.  
   
@@ -174,6 +174,6 @@ La clase <xref:System.Runtime.Serialization.KnownTypeAttribute> le permite espec
 - <xref:System.Object>
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.DataContractSerializer.KnownTypes%2A>
-- [Tipos conocidos](../../../../docs/framework/wcf/samples/known-types.md)
-- [Equivalencia de contratos de datos](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
-- [Diseño de contratos de servicio](../../../../docs/framework/wcf/designing-service-contracts.md)
+- [Tipos conocidos](../samples/known-types.md)
+- [Equivalencia del contrato de datos](data-contract-equivalence.md)
+- [Diseño de contratos de servicios](../designing-service-contracts.md)

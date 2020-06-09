@@ -6,42 +6,42 @@ helpviewer_keywords:
 - WCF, transports
 - Windows Communication Foundation, transports
 ms.assetid: 005c894b-af70-48aa-a1c1-c99338083c27
-ms.openlocfilehash: 6bb8e8b90c26533661684bd403b9ec439f1bb37e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 077d63d8038b245a68083611897c1e6c68971071
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61933736"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598676"
 ---
 # <a name="transports-in-windows-communication-foundation"></a>Transportes en Windows Communication Foundation
 El nivel de transporte está en el nivel más bajo de la pila del canal. Los transportes principales utilizados en Windows Communication Foundation (WCF) son HTTP, HTTPS, TCP y canalizaciones con nombre. Los temas de esta sección tratan sobre la elección entre estos transportes, la configuración del transporte y el establecimiento de propiedades de optimización.  
   
- WCF incluye transportes adicionales. Para obtener información sobre el transporte de Message Queuing (también conocido como MSMQ), consulte [colas y sesiones confiables](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md). Para obtener información sobre el transporte de punto a punto, vea [Peer-to-Peer Networking](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
+ WCF incluye transportes adicionales. Para obtener información sobre el transporte de Message Queuing (también conocido como MSMQ), vea [colas y sesiones confiables](queues-and-reliable-sessions.md). Para obtener información sobre el transporte punto a punto, vea [redes punto a punto](peer-to-peer-networking.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Elección del transporte](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
+ [Elección del transporte](choosing-a-transport.md)  
  Describe los tres transportes principales y las consideraciones para seleccionar uno.  
   
- [Elección de un codificador de mensajes](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
+ [Elección de un codificador de mensajes](choosing-a-message-encoder.md)  
  Describe los factores que considerar al elegir un elemento de enlace de codificación de mensajes.  
   
- [Transferencia de mensajes por streaming](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md)  
+ [Transferencia de mensajes por secuencias](streaming-message-transfer.md)  
  Describe cómo configurar el nivel de transporte para la transmisión por secuencias.  
   
- [Configuración de HTTP y HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)  
+ [Configuración de HTTP y HTTPS](configuring-http-and-https.md)  
  Describe cómo configurar los elementos de enlace de transporte HTTP y HTTPS.  
   
- [Cómo: Reemplazar la reserva de direcciones URL de WCF con una reserva restringida](../../../../docs/framework/wcf/feature-details/how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation.md)  
- Describe cómo usar las reservas WCFURL restringido.  
+ [Procedimiento para reemplazar la reserva de direcciones URL de WCF por una reserva restringida](how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation.md)  
+ Describe cómo usar las reservas restringidas de WCFURL.  
   
- [Cuotas de transporte](../../../../docs/framework/wcf/feature-details/transport-quotas.md)  
+ [Cuotas de transporte](transport-quotas.md)  
  Describe las consideraciones para establecer las cuotas disponibles en el nivel de transporte.  
   
- [Trabajo con NAT y firewalls](../../../../docs/framework/wcf/feature-details/working-with-nats-and-firewalls.md)  
+ [Trabajar con NAT y firewalls](working-with-nats-and-firewalls.md)  
  Describe cómo configurar el nivel de transporte cuando los mensajes se envían o reciben detrás de un firewall o cuando la traducción de direcciones de red (NAT) está presente.  
   
- [Uso compartido de puertos Net.TCP](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)  
- Describe cómo usar el componente de uso compartido de puertos Net.TCP de WCF.  
+ [Uso compartido de puertos Net.TCP](net-tcp-port-sharing.md)  
+ Describe cómo usar el componente de uso compartido de puertos net. TCP de WCF.  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
@@ -53,6 +53,6 @@ El nivel de transporte está en el nivel más bajo de la pila del canal. Los tra
  <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Enlaces](../../../../docs/framework/wcf/feature-details/bindings.md)  
+ [Enlaces](bindings.md)  
   
- [Extensión de enlaces](../../../../docs/framework/wcf/extending/extending-bindings.md)
+ [Extensión de enlaces](../extending/extending-bindings.md)

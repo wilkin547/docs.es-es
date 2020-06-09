@@ -2,12 +2,12 @@
 title: Búsqueda de detección y FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: da4c3c4a1d765e4f91b03f4f8fc1a73c3fea1535
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 1d6a0e3fcca45c3fe57aab84b0f2b6b86fabb404
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964843"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599183"
 ---
 # <a name="discovery-find-and-findcriteria"></a>Búsqueda de detección y FindCriteria
 
@@ -31,7 +31,7 @@ Los criterios de búsqueda incluyen:
 
   - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType> realiza una comparación básica de cadenas con distinción entre mayúsculas y minúsculas.
 
-  - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> coincidencias por segmentos separados por "/". Una búsqueda de `http://contoso/building1` coincide con un servicio con el ámbito `http://contoso/building/floor1`. Tenga en cuenta que no coincide con `http://contoso/building100` porque los dos últimos segmentos no coinciden.
+  - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType>coincide por segmentos separados por "/". Una búsqueda de `http://contoso/building1` coincide con un servicio con ámbito `http://contoso/building/floor1` . Tenga en cuenta que no coincide `http://contoso/building100` porque los dos últimos segmentos no coinciden.
 
   - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType> coincide con ámbitos por segmentos mediante una dirección LDAP URL.
 
@@ -70,7 +70,7 @@ Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endp
 
 ## <a name="see-also"></a>Vea también
 
-- [Información general de Detección de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [Uso del canal del cliente de detección](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)
-- [Detección con ámbitos](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)
-- [Básico](../../../../docs/framework/wcf/samples/basic-sample.md)
+- [Información general de Detección de WCF](wcf-discovery-overview.md)
+- [Usar el canal del cliente de detección](using-the-discovery-client-channel.md)
+- [Detección con ámbitos](../samples/discovery-with-scopes-sample.md)
+- [Basic](../samples/basic-sample.md)

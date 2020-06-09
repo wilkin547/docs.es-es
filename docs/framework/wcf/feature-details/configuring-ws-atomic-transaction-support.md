@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: 6399d64746db158ba0569eaf0137127603973513
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: d396ccdaca81eab74de5e20d7ba7a9a00acbf7a6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76919345"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597480"
 ---
 # <a name="configure-ws-atomic-transaction-support"></a>Configuración de la compatibilidad con transacciones WS-Atomic
 
@@ -23,11 +23,11 @@ Puede tener acceso a la funcionalidad de esta herramienta utilizando un compleme
 
 Se puede tener acceso a la ventana de línea de comandos en la ubicación de instalación de Windows SDK "%WINDIR%\Microsoft.NET\Framework\v3.0\Windows Communication Foundation".
 
-Para obtener más información acerca de la herramienta de línea de comandos, consulte [utilidad de configuración de WS-AtomicTransaction (wsatConfig. exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md).
+Para obtener más información acerca de la herramienta de línea de comandos, consulte [utilidad de configuración de WS-AtomicTransaction (wsatConfig. exe)](../ws-atomictransaction-configuration-utility-wsatconfig-exe.md).
 
 Si ejecuta Windows XP o Windows Server 2003, puede tener acceso al complemento MMC; para ello, vaya a panel de **control/herramientas administrativas/servicios de componentes**, haga clic con el botón derecho en **mi PC**y seleccione **propiedades**. Ésta es la misma ubicación donde puede configurar Microsoft DTC (Coordinador de transacciones distribuidas). Las opciones disponibles para la configuración se agrupan en la pestaña **WS-at** . Si está ejecutando Windows Vista o Windows Server 2008, puede encontrar el complemento MMC haciendo clic en el botón **Inicio** y escribiendo `dcomcnfg.exe` en el cuadro de **búsqueda** . Cuando se abra MMC, desplácese hasta el nodo **My Computer\Distributed Transaction COORDINATOR\LOCAL DTC** , haga clic con el botón derecho y seleccione **propiedades**. Las opciones disponibles para la configuración se agrupan en la pestaña **WS-at** .
 
-Para obtener más información sobre el complemento, vea el [complemento MMC de configuración de WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md).
+Para obtener más información sobre el complemento, vea el [complemento MMC de configuración de WS-AtomicTransaction](../ws-atomictransaction-configuration-mmc-snap-in.md).
 
 Para habilitar la interfaz de usuario de la herramienta, debe registrar primero el archivo WsatUI.dll, ubicado en la ruta de acceso siguiente
 
@@ -81,7 +81,7 @@ Después de completar estos pasos, se establece la confianza entre los dos equip
 
 Desde que el servicio de protocolo WS-AT actúa como un cliente y un servidor, debe realizar escuchas para las conexiones entrantes e iniciar las conexiones de salida. Por consiguiente, necesita configurar MSDTC para que sepa qué certificado utilizar al comunicarse con partes externas y qué certificados autorizar al aceptar la comunicación de entrada.
 
-Puede configurarlo mediante el complemento WS-AT de MMC. Para obtener más información acerca de esta herramienta, consulte el tema [complemento de MMC de configuración de WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md) . Los pasos siguientes describen cómo establecer la confianza entre dos equipos que ejecutan MSDTC.
+Puede configurarlo mediante el complemento WS-AT de MMC. Para obtener más información acerca de esta herramienta, consulte el tema [complemento de MMC de configuración de WS-AtomicTransaction](../ws-atomictransaction-configuration-mmc-snap-in.md) . Los pasos siguientes describen cómo establecer la confianza entre dos equipos que ejecutan MSDTC.
 
 1. Configure los valores de la máquina A. En "certificado de punto de conexión", seleccione certa. Para "certificados autorizados", seleccione certB.
 
@@ -94,7 +94,7 @@ Puede configurarlo mediante el complemento WS-AT de MMC. Para obtener más infor
 >
 > Si el nombre del equipo cambia, por ejemplo, si un equipo del grupo de trabajo se une a un dominio, debe reeditar los certificados o configurar manualmente los sufijos DNS.
 
-## <a name="security"></a>de seguridad
+## <a name="security"></a>Seguridad
 
 Puesto que algunos de los valores relacionados con MSDTC y WS-AT están almacenados en el registro en HKLM\Software\Microsoft\MSDTC y en HKLM\Software\Microsoft\WSAT, respectivamente, asegúrese de que estas claves del Registro están protegidas para que solamente puedan escribir los administradores. En la herramienta editor del registro, haga clic con el botón secundario en la clave que desea proteger y seleccione **permiso** para establecer el control de acceso adecuado. Es importante para la seguridad e integridad del sistema que las claves importantes sean de solo lectura para los usuarios con pocos privilegios.
 
@@ -102,7 +102,7 @@ Al implementar MSDTC, el administrador debe asegurarse de que los intercambios d
 
 ## <a name="tracing"></a>Traza
 
-El servicio de protocolo WS-AT admite seguimientos integrados y específicos de las transacciones que se pueden habilitar y administrar mediante el uso de la herramienta de [complemento MMC de configuración de WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md) . Los seguimientos pueden incluir datos que indican la hora en que se realiza una inscripción para una transacción específica, la hora en que una transacción llega a su estado terminal, el resultado que ha recibido cada inscripción de transacción. Todos los seguimientos se pueden ver mediante la herramienta [Service Trace Viewer Tool (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) .
+El servicio de protocolo WS-AT admite seguimientos integrados y específicos de las transacciones que se pueden habilitar y administrar mediante el uso de la herramienta de [complemento MMC de configuración de WS-AtomicTransaction](../ws-atomictransaction-configuration-mmc-snap-in.md) . Los seguimientos pueden incluir datos que indican la hora en que se realiza una inscripción para una transacción específica, la hora en que una transacción llega a su estado terminal, el resultado que ha recibido cada inscripción de transacción. Todos los seguimientos se pueden ver mediante la herramienta [Service Trace Viewer Tool (SvcTraceViewer. exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) .
 
 El protocolo de servicio WS-AT también admite traza ServiceModel integrada a través de la sesión de traza de ETW. Esto proporciona seguimientos más detallados, específicos de la comunicación, además de los seguimientos de transacción existentes.  Para habilitar estos seguimientos adicionales, siga estos pasos:
 
@@ -110,7 +110,7 @@ El protocolo de servicio WS-AT también admite traza ServiceModel integrada a tr
 
 2. En el **Editor del registro**, vaya a la siguiente carpeta del panel izquierdo, Hkey_Local_Machine \software\microsoft\wsat\3.0\
 
-3. Haga clic con el botón derecho en el valor `ServiceModelDiagnosticTracing` en el panel derecho y seleccione **modificar**.
+3. Haga clic con el botón derecho en el `ServiceModelDiagnosticTracing` valor en el panel derecho y seleccione **modificar**.
 
 4. En el cuadro entrada de **datos del valor** , escriba uno de los siguientes valores válidos para especificar el nivel de seguimiento que desea habilitar.
 
@@ -118,7 +118,7 @@ El protocolo de servicio WS-AT también admite traza ServiceModel integrada a tr
 
 - 1: crítico
 
-- 3: error. Éste es el valor predeterminado.
+- 3: error. Este es el valor predeterminado
 
 - 7: advertencia
 
@@ -128,5 +128,5 @@ El protocolo de servicio WS-AT también admite traza ServiceModel integrada a tr
 
 ## <a name="see-also"></a>Vea también
 
-- [Utilidad de configuración de WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
-- [Complemento MMC de configuración de WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)
+- [Utilidad de configuración de WS-AtomicTransaction (wsatConfig.exe)](../ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+- [Complemento MMC de configuración de WS-AtomicTransaction](../ws-atomictransaction-configuration-mmc-snap-in.md)

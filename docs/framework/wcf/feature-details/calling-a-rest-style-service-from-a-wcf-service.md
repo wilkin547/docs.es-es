@@ -2,12 +2,12 @@
 title: Llamar a un servicio de estilo REST desde un servicio WCF
 ms.date: 03/30/2017
 ms.assetid: 77df81d8-7f53-4daf-8d2d-bf7996e94d5a
-ms.openlocfilehash: c2a3467fb5fe28194dcb8ee7715353f4cb6a1bff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eaa5d08faa335740124fcf698b22d2d324cd2c54
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62048223"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84576491"
 ---
 # <a name="calling-a-rest-style-service-from-a-wcf-service"></a>Llamar a un servicio de estilo REST desde un servicio WCF
 
@@ -86,7 +86,7 @@ public class NormalService : INormalInterface
 
 ## <a name="create-the-client-proxy-for-the-rest-style-service"></a>Crear un cliente proxy para el servicio de estilo REST.
 
-Uso de <xref:System.ServiceModel.ClientBase%601> para implementar el proxy de cliente. Para cada método llamado, se crea un nuevo <xref:System.ServiceModel.OperationContextScope> y se usa para llamar a la operación.
+Usar <xref:System.ServiceModel.ClientBase%601> para implementar el proxy de cliente. Para cada método llamado, se crea un nuevo <xref:System.ServiceModel.OperationContextScope> y se usa para llamar a la operación.
 
 ```csharp
 public class MyRestClient : ClientBase<IRestInterface>, IRestInterface
@@ -243,5 +243,5 @@ public class CallingRESTSample
 
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Crear un servicio Web HTTP de WCF básico](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)
-- [Modelo de objetos de programación web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+- [Procedimiento para crear un servicio básico web HTTP de WCF](how-to-create-a-basic-wcf-web-http-service.md)
+- [Modelo de objetos de programación web HTTP de WCF](wcf-web-http-programming-object-model.md)

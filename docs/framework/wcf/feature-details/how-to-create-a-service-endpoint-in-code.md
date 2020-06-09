@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3fbb22fa-2930-48b8-b437-def1de87c6a0
-ms.openlocfilehash: 9b7b983122b9e30fd7c6b0d0c517a9483b8881c5
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 25ea843df7871d730926fe7b9aac9f21d58e263e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301464"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598936"
 ---
 # <a name="how-to-create-a-service-endpoint-in-code"></a>Procedimiento para crear un punto de conexión de servicio mediante código
 En este ejemplo, se define un contrato de `ICalculator` para un servicio de la calculadora, el servicio se implementa en la clase `CalculatorService` y a continuación, su extremo se define mediante código, donde se especifica que el servicio debe utilizar la clase <xref:System.ServiceModel.BasicHttpBinding>.  
@@ -39,13 +39,13 @@ En este ejemplo, se define un contrato de `ICalculator` para un servicio de la c
      [!code-csharp[c_HowTo_CodeServiceBinding#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#6)]
      [!code-vb[c_HowTo_CodeServiceBinding#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#6)]  
   
-     Para especificar el enlace en código sino utilizar los extremos predeterminados proporcionados por el tiempo de ejecución, pase la dirección base al constructor al crear el <xref:System.ServiceModel.ServiceHost>y no llame a <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A?displayProperty=nameWithType>.  
+     Para especificar el enlace en el código, pero para usar los puntos de conexión predeterminados proporcionados por el tiempo de ejecución, pase la dirección base en el constructor al crear el <xref:System.ServiceModel.ServiceHost> , y no llame a <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A?displayProperty=nameWithType> .  
   
      [!code-csharp[c_HowTo_CodeServiceBinding#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#7)]
      [!code-vb[c_HowTo_CodeServiceBinding#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#7)]  
   
-     Para obtener más información sobre los puntos de conexión predeterminados, consulte [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md) y [Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+     Para obtener más información sobre los puntos de conexión predeterminados, vea [configuración simplificada](../simplified-configuration.md) y [configuración simplificada para servicios WCF](../samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Especificar un enlace de servicio en el código](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)
+- [Procedimiento para especificar un enlace de servicio en el código](../how-to-specify-a-service-binding-in-code.md)

@@ -2,12 +2,12 @@
 title: Bloqueo de seguridad PII
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: ad4f4a024b04a028b815faedded58713e001cab0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64c07825f0756b029781e173eb2098711cdbe60a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79144271"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600482"
 ---
 # <a name="pii-security-lockdown"></a>Bloqueo de seguridad PII
 En este ejemplo se muestra cómo controlar varias características relacionadas con la seguridad de un servicio de Windows Communication Foundation (WCF) mediante:  
@@ -23,31 +23,31 @@ En este ejemplo se muestra cómo controlar varias características relacionadas 
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Si este directorio no existe, vaya a Ejemplos de [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (WCF). Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
   
 ## <a name="discussion"></a>Discusión  
- Cada una de estas características puede utilizarse por separado o conjuntamente para controlar los aspectos de la seguridad de un servicio. Esta no es una guía definitiva para proteger un servicio WCF.  
+ Cada una de estas características puede utilizarse por separado o conjuntamente para controlar los aspectos de la seguridad de un servicio. No se trata de una guía definitiva para proteger un servicio WCF.  
   
  Los archivos de configuración de .NET Framework pueden contener información confidencial como cadenas de conexión para conectar a las bases de datos. En escenarios compartidos hospedados en web puede ser deseable cifrar esta información en el archivo de configuración para un servicio, para que los datos que contiene el archivo de configuración sean resistentes a la vista casual. La versión de .NET Framework 2.0 y posteriores tienen la capacidad de cifrar partes del archivo de configuración utilizando la interfaz del programa de aplicaciones Windows Data Protection (DPAPI) o el proveedor Criptográfico de RSA. El aspnet_regiis.exe, que utiliza DPAPI o RSA, puede cifrar partes selectas de un archivo de configuración.  
   
- En escenarios hospedados en web es posible tener los servicios en subdirectorios de otros servicios. El valor predeterminado semántico para determinar los valores de configuración permite a los archivos de configuración de los directorios anidados reemplazar los valores de configuración del directorio primario. En algunas situaciones puede no ser deseable por varias razones. La configuración del servicio WCF admite el bloqueo de valores de configuración para que la configuración anidada genere excepciones cuando se ejecuta un servicio anidado mediante valores de configuración invalidados.  
+ En escenarios hospedados en web es posible tener los servicios en subdirectorios de otros servicios. El valor predeterminado semántico para determinar los valores de configuración permite a los archivos de configuración de los directorios anidados reemplazar los valores de configuración del directorio primario. En algunas situaciones puede no ser deseable por varias razones. La configuración del servicio WCF admite el bloqueo de valores de configuración para que la configuración anidada genere excepciones cuando se ejecuta un servicio anidado con valores de configuración invalidados.  
   
- Este ejemplo muestra cómo controlar el registro de información de identificación personal conocida (PII) en los registros de seguimiento y mensajes, como el nombre de usuario y contraseña. De forma predeterminada, el registro de PII conocida está deshabilitado, sin embargo en ciertas situaciones el registro de PII puede ser importante para depurar una aplicación. Este ejemplo se basa en la [introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md). Además, este ejemplo utiliza traza y registro de mensajes. Para obtener más información, vea el [seguimiento y registro](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) de mensajes ejemplo.  
+ Este ejemplo muestra cómo controlar el registro de información de identificación personal conocida (PII) en los registros de seguimiento y mensajes, como el nombre de usuario y contraseña. De forma predeterminada, el registro de PII conocida está deshabilitado, sin embargo en ciertas situaciones el registro de PII puede ser importante para depurar una aplicación. Este ejemplo se basa en el [Introducción](getting-started-sample.md). Además, este ejemplo utiliza traza y registro de mensajes. Para obtener más información, vea el ejemplo de [seguimiento y registro de mensajes](tracing-and-message-logging.md) .  
   
 ## <a name="encrypting-configuration-file-elements"></a>Cifrar los elementos de configuración  
- Para los propósitos de seguridad en un entorno de hospedaje en web compartido, puede ser deseable cifrar ciertos elementos de configuración, como cadenas de conexión a bases de datos que pueden contener información confidencial. Un elemento de configuración se puede cifrar mediante la herramienta aspnet_regiis.exe que se encuentra en la carpeta .NET Framework, por ejemplo, %WINDIR%.  
+ Para los propósitos de seguridad en un entorno de hospedaje en web compartido, puede ser deseable cifrar ciertos elementos de configuración, como cadenas de conexión a bases de datos que pueden contener información confidencial. Un elemento de configuración se puede cifrar mediante la herramienta aspnet_regiis. exe que se encuentra en la carpeta de .NET Framework, por ejemplo,%WINDIR%\Microsoft.NET\Framework\v4.0.20728.  
   
 #### <a name="to-encrypt-the-values-in-the-appsettings-section-in-webconfig-for-the-sample"></a>Para cifrar los valores de la sección appSettings de Web.config para el ejemplo  
   
-1. Abra un símbolo del sistema mediante Start->Run.... Escriba `cmd` y haga clic en **Aceptar**.  
+1. Abra un símbolo del sistema mediante el comando de inicio >ejecutar.... Escriba `cmd` y haga clic en **Aceptar**.  
   
 2. Navegue al directorio .NET Framework actual ejecutando el comando siguiente: `cd %WINDIR%\Microsoft.NET\Framework\v4.0.20728`.  
   
 3. Cifre la configuración del appSettings en la carpeta Web.config ejecutando el comando siguiente: `aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`.  
   
- Puede encontrar más información sobre el cifrado de secciones de archivos de configuración leyendo un modo de acceso en DPAPI en ASP.NET configuración (Creación de[aplicaciones de ASP.NET segura: autenticación, autorización y comunicación segura)](https://docs.microsoft.com/previous-versions/msp-n-p/ff649248(v=pandp.10))y un modo de comunicación en RSA en ASP.NET configuración ([Cómo: cifrar secciones de configuración en ASP.NET 2.0 mediante RSA](https://docs.microsoft.com/previous-versions/msp-n-p/ff650304(v=pandp.10))).  
+ Para obtener más información acerca de cómo cifrar secciones de archivos de configuración, consulte la sección sobre cómo usar DPAPI en la configuración de ASP.NET ([creación de aplicaciones ASP.net seguras: autenticación, autorización y comunicación segura](https://docs.microsoft.com/previous-versions/msp-n-p/ff649248(v=pandp.10))) y un procedimiento en RSA en la configuración de ASP.net ([Cómo: cifrar secciones de configuración en ASP.net 2,0 con RSA](https://docs.microsoft.com/previous-versions/msp-n-p/ff650304(v=pandp.10))).  
   
 ## <a name="locking-configuration-file-elements"></a>Bloquear los elementos de archivo de configuración  
  En escenarios hospedados en web, es posible tener los servicios en subdirectorios de servicios. En estas situaciones, los valores de configuración para el servicio en el subdirectorio se calculan examinando los valores en Machine.config y combinando consecutivamente con cualquier archivo Web.config en directorios primarios bajando el árbol de directorios y combinando finalmente el archivo Web.config en el directorio que contiene el servicio. El comportamiento predeterminado para la mayoría de los elementos de configuración es permitir los archivos de configuración de los subdirectorios reemplazar los valores establecidos en los directorios primarios. En ciertas situaciones puede ser deseable para evitar que los archivos de configuración en subdirectorios invaliden los valores establecidos en la configuración del directorio primario.  
@@ -76,7 +76,7 @@ En este ejemplo se muestra cómo controlar varias características relacionadas 
 ## <a name="pii-logging-configuration"></a>Configuración de registro de PII  
  Dos modificadores controlan el registro de PII: un valor de nivel de equipo situado en Machine.config gracias al cual un administrador de equipo puede permitir o denegar el registro de PII y un valor de aplicación que permite a un administrador de aplicación alternar el registro de PII para cada origen en un archivo Web.config o App.config.  
   
- La configuración de todo el `enableLoggingKnownPii` equipo `true` `false`se controla estableciendo en o , en el `machineSettings` elemento de Machine.config. Por ejemplo, lo siguiente permite a las aplicaciones activar el registro de PII.  
+ La configuración de todo el equipo se controla estableciendo `enableLoggingKnownPii` en `true` o `false` , en el `machineSettings` elemento del archivo Machine. config. Por ejemplo, lo siguiente permite a las aplicaciones activar el registro de PII.  
   
 ```xml  
 <configuration>  
@@ -120,28 +120,28 @@ En este ejemplo se muestra cómo controlar varias características relacionadas 
 > System.Diagnostics omite todos los atributos en todos los orígenes exceptuando el primero enumerado en el archivo de configuración. Agregar el atributo `logKnownPii` al segundo origen en el archivo de configuración no tiene ningún efecto.  
   
 > [!IMPORTANT]
-> Para ejecutar este ejemplo implica la modificación manual de Machine.config. Se debe tener cuidado al modificar Machine.config, ya que los valores o la sintaxis incorrectos pueden impedir que se ejecuten todas las aplicaciones de .NET Framework.  
+> Para ejecutar este ejemplo, se incluye la modificación manual de Machine. config. Se debe tener cuidado al modificar Machine. config como valores incorrectos o la sintaxis puede impedir que se ejecuten todas .NET Framework aplicaciones.  
   
  También es posible cifrar elementos de archivo de configuración mediante DPAPI y RSA. Para obtener más información, vea los siguientes vínculos:  
   
-- [Creación de aplicaciones de ASP.NET segura: autenticación, autorización y comunicación segura](https://docs.microsoft.com/previous-versions/msp-n-p/ff649248(v=pandp.10))  
+- [Creación de aplicaciones de ASP.NET seguras: autenticación, autorización y comunicación segura](https://docs.microsoft.com/previous-versions/msp-n-p/ff649248(v=pandp.10))  
   
 - [Cómo cifrar secciones de configuración en ASP.NET 2.0 utilizando RSA](https://docs.microsoft.com/previous-versions/msp-n-p/ff650304(v=pandp.10))  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar y ejecutar el ejemplo  
   
-1. Asegúrese de que ha realizado el procedimiento de instalación única [para los ejemplos](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)de Windows Communication Foundation .  
+1. Asegúrese de que ha realizado el [procedimiento de instalación única para los ejemplos de Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2. Edite Machine.config para establecer el atributo `enableLoggingKnownPii` en `true`, agregando los nodos primarios si es necesario.  
   
-3. Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](building-the-samples.md).  
   
-4. Para ejecutar el ejemplo en una configuración de un equipo o entre equipos, siga las instrucciones de Ejecución de [los ejemplos](../../../../docs/framework/wcf/samples/running-the-samples.md)de Windows Communication Foundation .  
+4. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](running-the-samples.md).  
   
 #### <a name="to-clean-up-the-sample"></a>Para limpiar el ejemplo  
   
 1. Edite Machine.config para establecer el atributo `enableLoggingKnownPii` en `false`.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Ejemplos de supervisión de AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

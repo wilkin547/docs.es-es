@@ -5,22 +5,22 @@ helpviewer_keywords:
 - queues [WCF], best practices
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
-ms.openlocfilehash: b2f64faab6df678182fb39174c8a558b298a8748
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: af9ed7d64a60042297e071262be7610c4d791a51
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584986"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601353"
 ---
 # <a name="best-practices-for-queued-communication"></a>Procedimientos recomendados para la comunicación en cola
-Este tema proporciona las prácticas recomendadas para la comunicación en cola en Windows Communication Foundation (WCF). Las secciones siguientes discuten los procedimientos recomendados desde una perspectiva del escenario.  
+En este tema se proporcionan los procedimientos recomendados para la comunicación en cola en Windows Communication Foundation (WCF). Las secciones siguientes discuten los procedimientos recomendados desde una perspectiva del escenario.  
   
 ## <a name="fast-best-effort-queued-messaging"></a>Mensajería en cola rápida y eficiente  
  Para los escenarios que requieren la separación que proporciona la mensajería en cola y una mensajería rápida y de alto rendimiento con garantías de optimización, utilice una cola no transaccional y establezca la propiedad <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> en `false`.  
   
  Además, puede decidir no incurrir en el costo de escrituras en disco estableciendo la propiedad <xref:System.ServiceModel.MsmqBindingBase.Durable%2A> en `false`.  
   
- La seguridad afecta al rendimiento. Para obtener más información, consulte [consideraciones de rendimiento](../../../../docs/framework/wcf/feature-details/performance-considerations.md).  
+ La seguridad afecta al rendimiento. Para obtener más información, consulte [consideraciones de rendimiento](performance-considerations.md).  
   
 ## <a name="reliable-end-to-end-queued-messaging"></a>Mensajería en cola fiable de un extremo a otro  
  Las secciones siguientes describen los procedimientos recomendados para escenarios que requieren una mensajería fiable de un extremo a otro.  
@@ -36,61 +36,61 @@ Este tema proporciona las prácticas recomendadas para la comunicación en cola 
   
  No se recomienda desactivar las colas de mensajes no enviados para la comunicación fiable de un extremo a otro.  
   
- Para obtener más información, consulte [utilizando colas para controlar errores de transferencia de mensajes](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md).  
+ Para obtener más información, consulte [uso de colas de mensajes no enviados para administrar los errores de transferencia de mensajes](using-dead-letter-queues-to-handle-message-transfer-failures.md).  
   
 ### <a name="use-of-poison-message-handling"></a>Uso de control de mensajes dudosos  
  El control de mensajes dudosos proporciona la capacidad de recuperarse del error de procesamiento de mensajes.  
   
  Al utilizar la característica de control de mensajes dudosos, asegúrese de que la propiedad <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> está establecida en el valor adecuado. Establecerla en <xref:System.ServiceModel.ReceiveErrorHandling.Drop> implica que los datos se pierdan. Por otro lado, establecerla en <xref:System.ServiceModel.ReceiveErrorHandling.Fault> produce un error en el host de servicios cuando detecta un mensaje dudoso. Utilizar MSMQ 3.0, <xref:System.ServiceModel.ReceiveErrorHandling.Fault> es la mejor opción para evitar la pérdida de datos y quitar el mensaje dudoso. Con MSMQ 4.0, <xref:System.ServiceModel.ReceiveErrorHandling.Move> es el enfoque recomendado. <xref:System.ServiceModel.ReceiveErrorHandling.Move> mueve un mensaje dudoso fuera de la cola para que el servicio pueda continuar procesando los nuevos mensajes. El servicio del mensaje dudoso puede procesar a continuación el mensaje dudoso por separado.  
   
- Para obtener más información, consulte [control de mensajes dudosos](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
+ Para obtener más información, vea [control de mensajes dudosos](poison-message-handling.md).  
   
 ## <a name="achieving-high-throughput"></a>Obtener un alto rendimiento  
  Para lograr un alto rendimiento en un solo punto de conexión, utilice lo siguiente:  
   
-- Procesamiento por lotes con transacciones El procesamiento por lotes con transacciones garantiza que muchos mensajes se puedan leer en una transacción única. Esto optimiza las confirmaciones de transacciones, aumentando el rendimiento total. El costo del procesamiento por lotes es que si se produce un error en un mensaje único dentro de un lote, se deshace el lote completo y se deben procesar los mensajes de uno en uno hasta que sea seguro de nuevo el procesamiento por lotes. En la mayoría de los casos, los mensajes dudosos son raros, así que el procesamiento por lotes es la forma preferida de aumentar el rendimiento del sistema, particularmente cuando se tienen otros administradores de recursos que participan en la transacción. Para obtener más información, consulte [mensajes por lotes en una transacción](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md).  
+- Procesamiento por lotes con transacciones El procesamiento por lotes con transacciones garantiza que muchos mensajes se puedan leer en una transacción única. Esto optimiza las confirmaciones de transacciones, aumentando el rendimiento total. El costo del procesamiento por lotes es que si se produce un error en un mensaje único dentro de un lote, se deshace el lote completo y se deben procesar los mensajes de uno en uno hasta que sea seguro de nuevo el procesamiento por lotes. En la mayoría de los casos, los mensajes dudosos son raros, así que el procesamiento por lotes es la forma preferida de aumentar el rendimiento del sistema, particularmente cuando se tienen otros administradores de recursos que participan en la transacción. Para obtener más información, consulte [procesamiento por lotes de mensajes en una transacción](batching-messages-in-a-transaction.md).  
   
-- Simultaneidad. La simultaneidad aumenta el rendimiento, pero también afecta a la contención a los recursos compartidos. Para obtener más información, consulte [simultaneidad](../../../../docs/framework/wcf/samples/concurrency.md).  
+- Simultaneidad. La simultaneidad aumenta el rendimiento, pero también afecta a la contención a los recursos compartidos. Para obtener más información, vea [Concurrency](../samples/concurrency.md).  
   
-- Limitación de peticiones. Para un rendimiento óptimo, limite el número de mensajes en el conductor del distribuidor. Para obtener un ejemplo de cómo hacerlo, consulte [limitación](../../../../docs/framework/wcf/samples/throttling.md).  
+- Limitación de peticiones. Para un rendimiento óptimo, limite el número de mensajes en el conductor del distribuidor. Para obtener un ejemplo de cómo hacerlo, consulte [limitación](../samples/throttling.md).  
   
  Al utilizar el procesamiento por lotes, sea consciente que la simultaneidad y la limitación de peticiones se traducen en los lotes simultáneos.  
   
- Para lograr mayor rendimiento y disponibilidad, use una granja de servidores de servicios WCF que se leen de la cola. Esto requiere que todos estos servicios expongan el mismo contrato en el mismo extremo. El enfoque del conjunto funciona mejor para las aplicaciones que tienen tasas altas de producción de mensajes porque permite a varios servicios que lean desde la misma cola.  
+ Para lograr un mayor rendimiento y disponibilidad, use una granja de servicios WCF que lean desde la cola. Esto requiere que todos estos servicios expongan el mismo contrato en el mismo extremo. El enfoque del conjunto funciona mejor para las aplicaciones que tienen tasas altas de producción de mensajes porque permite a varios servicios que lean desde la misma cola.  
   
  Al utilizar los conjuntos, sea consciente de que MSMQ 3.0 no admite las lecturas con transacciones remotas. MSMQ 4.0 admite las lecturas con transacciones remotas.  
   
- Para obtener más información, consulte [mensajes por lotes en una transacción](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md) y [diferencias en las características de puesta en cola en Windows Vista, Windows Server 2003 y Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
+ Para obtener más información, consulte [procesamiento por lotes de mensajes en una transacción](batching-messages-in-a-transaction.md) y [diferencias en las características de cola en Windows Vista, Windows Server 2003 y Windows XP](diff-in-queue-in-vista-server-2003-windows-xp.md).  
   
 ## <a name="queuing-with-unit-of-work-semantics"></a>Puesta en cola con la unidad de semántica de trabajo  
  En algunos escenarios un grupo de mensajes en una cola se puede relacionar y, por consiguiente, la clasificación de estos mensajes es significativa. En tales escenarios, procese juntos un grupo de mensajes relacionados como una unidad única: o se procesan todos los mensajes correctamente o no se procesa ninguno. Para implementar tal comportamiento, utilice sesiones con colas.  
   
- Para obtener más información, consulte [agrupar mensajes en cola en una sesión](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md).  
+ Para obtener más información, consulte [agrupar los mensajes en cola en una sesión](grouping-queued-messages-in-a-session.md).  
   
 ## <a name="correlating-request-reply-messages"></a>Correlación de mensajes de solicitud-respuesta  
  Aunque las colas son típicamente unidireccionales, en algunos escenarios puede querer correlacionar una respuesta recibida con una solicitud enviada anteriormente. Si requiere dicha correlación, se recomienda que aplique su propio encabezado de mensaje SOAP que contiene información de correlación con el mensaje. Normalmente, el remitente adjunta este encabezado al mensaje y el receptor, tras procesar el mensaje y responder con un nuevo mensaje en una cola de respuesta, adjunta el encabezado del mensaje del remitente que contiene la información de la correlación al mensaje de solicitud para que el remitente pueda identificar el mensaje de respuesta.  
   
 ## <a name="integrating-with-non-wcf-applications"></a>Integración en aplicaciones que no son WCF  
- Use `MsmqIntegrationBinding` al integrar clientes o los servicios WCF con clientes o servicios no WCF. La aplicación no WCF puede ser una aplicación MSMQ escrita mediante System.Messaging, COM +, Visual Basic o C++.  
+ Use `MsmqIntegrationBinding` al integrar clientes o servicios WCF con servicios o clientes que no sean WCF. La aplicación que no es WCF puede ser una aplicación MSMQ escrita con System. Messaging, COM+, Visual Basic o C++.  
   
  Al utilizar `MsmqIntegrationBinding`, sea consciente de lo siguiente:  
   
-- El cuerpo de un mensaje WCF no es el mismo que el cuerpo de un mensaje MSMQ. Cuando se envía un mensaje WCF mediante un enlace en cola, el cuerpo del mensaje WCF se coloca dentro de un mensaje MSMQ. La infraestructura de MSMQ es ajena a esta información adicional; solo ve el mensaje de MSMQ.  
+- Un cuerpo de mensaje de WCF no es el mismo que el cuerpo de un mensaje de MSMQ. Al enviar un mensaje de WCF mediante un enlace en cola, el cuerpo del mensaje de WCF se coloca dentro de un mensaje de MSMQ. La infraestructura de MSMQ es ajena a esta información adicional; solo ve el mensaje de MSMQ.  
   
 - `MsmqIntegrationBinding` admite los tipos de serialización populares. Se basa en el tipo de serialización, el tipo de cuerpo del mensaje genérico, <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, toma diferentes tipos de parámetros. Por ejemplo, <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> requiere `MsmqMessage\<byte[]>`<xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> y `MsmqMessage<Stream>` requiere .  
   
-- Con la serialización XML, puede especificar el tipo conocido utilizando el `KnownTypes` atributo el [ \<comportamiento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) elemento que, a continuación, se utiliza para determinar cómo deserializar el mensaje XML.  
+- Con la serialización XML, puede especificar el tipo conocido utilizando el `KnownTypes` atributo en el [\<behavior>](../../configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) elemento que se utiliza a continuación para determinar cómo deserializar el mensaje XML.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Colas en WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
-- [Cómo: Intercambiar los mensajes en cola con puntos de conexión WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
-- [Cómo: Intercambiar mensajes con puntos de conexión WCF y Message Queue Server de las aplicaciones](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
-- [Agrupación de los mensajes en cola de una sesión](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)
-- [Mensajes por lotes en una transacción](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)
-- [Utilización de las colas de mensajes no enviados para administrar los errores en la transferencia de mensajes](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)
-- [Control de mensajes dudosos](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
-- [Diferencias en las características de cola en Windows Vista, Windows Server 2003 y Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)
-- [Protección de mensajes utilizando la seguridad de transporte](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
-- [Protección de mensajes mediante la seguridad de mensajes](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)
-- [Solución de problemas de la mensajería en cola](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)
+- [Las colas en WCF](queuing-in-wcf.md)
+- [Procedimiento para intercambiar mensajes en cola con puntos de conexión de WCF](how-to-exchange-queued-messages-with-wcf-endpoints.md)
+- [Procedimiento para intercambiar mensajes con puntos de conexión de WCF y aplicaciones de Message Queue Server](how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [Agrupación de los mensajes en cola de una sesión](grouping-queued-messages-in-a-session.md)
+- [Mensajes por lotes en una transacción](batching-messages-in-a-transaction.md)
+- [Utilización de las colas de mensajes no enviados para administrar los errores en la transferencia de mensajes](using-dead-letter-queues-to-handle-message-transfer-failures.md)
+- [Control de mensajes dudosos](poison-message-handling.md)
+- [Diferencias en las características de cola en Windows Vista, Windows Server 2003 y Windows XP](diff-in-queue-in-vista-server-2003-windows-xp.md)
+- [Protección de mensajes utilizando la seguridad de transporte](securing-messages-using-transport-security.md)
+- [Protección de mensajes mediante la seguridad de mensajes](securing-messages-using-message-security.md)
+- [Solución de problemas de la mensajería en cola](troubleshooting-queued-messaging.md)
