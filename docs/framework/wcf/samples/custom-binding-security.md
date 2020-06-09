@@ -2,12 +2,12 @@
 title: Seguridad de enlace personalizado
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: b0b293c58e13f7add6f2cb49ea3c108a86292691
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: eb575594cec9ea714578bc104344acc14b00e9df
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990010"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84592468"
 ---
 # <a name="custom-binding-security"></a>Seguridad de enlace personalizado
 
@@ -24,7 +24,7 @@ La configuración del servicio define un enlace personalizado que admite lo sigu
 
 - Seguridad de mensaje de Windows.
 
-La configuración de enlace personalizado permite el transporte seguro, habilitando simultáneamente la seguridad de nivel de mensaje. El orden de los elementos de enlace es importante en la definición de un enlace personalizado, ya que cada uno representa una capa en la pila del canal (vea [enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md)). El enlace personalizado se define en los archivos de configuración de cliente y servicio, como se muestra en la configuración del ejemplo siguiente.
+La configuración de enlace personalizado permite el transporte seguro, habilitando simultáneamente la seguridad de nivel de mensaje. El orden de los elementos de enlace es importante en la definición de un enlace personalizado, ya que cada uno representa una capa en la pila del canal (vea [enlaces personalizados](../extending/custom-bindings.md)). El enlace personalizado se define en los archivos de configuración de cliente y servicio, como se muestra en la configuración del ejemplo siguiente.
 
 ```xml
 <bindings>
@@ -58,7 +58,7 @@ El enlace personalizado utiliza un certificado de servicio para autenticar el se
 </behaviors>
 ```
 
-Además, el enlace personalizado utiliza seguridad de mensajes con tipo de credencial de Windows; éste es el tipo de credencial predeterminado. Esto lo lleva a cabo el elemento de enlace `security`. Cliente y servicio se autentican utilizando la seguridad de nivel de mensaje si el mecanismo de autenticación Kerberos está disponible. Esto sucede si el ejemplo se ejecuta en el entorno de Active Directory. Si el mecanismo de autenticación Kerberos no está disponible, se utiliza la autenticación NTLM. NTLM autentica el cliente para el servicio pero no autentica el servicio para el cliente. El elemento de enlace `security` se configura para utilizar `SecureConversation` `authenticationType`, lo que tiene como resultado la creación de una sesión de seguridad en el cliente y el servicio. Esto se exige para que funcione el contrato del dúplex del servicio.
+Además, el enlace personalizado utiliza seguridad de mensajes con tipo de credencial de Windows; éste es el tipo de credencial predeterminado. Esto lo lleva a cabo el elemento de enlace `security`. Cliente y servicio se autentican utilizando la seguridad de nivel de mensaje si el mecanismo de autenticación Kerberos está disponible. Esto sucede si el ejemplo se ejecuta en el entorno de Active Directory. Si el mecanismo de autenticación Kerberos no está disponible, se utiliza la autenticación NTLM. NTLM autentica el cliente para el servicio pero no autentica el servicio para el cliente. El `security` elemento de enlace se configura para utilizar `SecureConversation` `authenticationType` , lo que da lugar a la creación de una sesión de seguridad tanto en el cliente como en el servicio. Esto se exige para que funcione el contrato del dúplex del servicio.
 
 Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente. Presione ENTRAR en la ventana de cliente para cerrar el cliente.
 
@@ -106,11 +106,11 @@ A continuación se proporciona una descripción breve de las diferentes seccione
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo
 
-1. Asegúrese de que ha realizado el [procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Asegúrese de que ha realizado el [procedimiento de instalación única para los ejemplos de Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](building-the-samples.md).
 
-3. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+3. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](running-the-samples.md).
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Para ejecutar el ejemplo en el mismo equipo
 
@@ -135,12 +135,12 @@ A continuación se proporciona una descripción breve de las diferentes seccione
 
     3. Copie los archivos Setup.bat y Cleanup.bat en el equipo del servicio.
 
-    4. Ejecute el siguiente comando en un Símbolo del sistema para desarrolladores para Visual Studio abierto con privilegios de administrador `Setup.bat service`:. Así se crea el certificado del servicio con un nombre de sujeto que coincide con el nombre del equipo en el que se ejecutó el archivo por lotes.
+    4. Ejecute el siguiente comando en un Símbolo del sistema para desarrolladores para Visual Studio abierto con privilegios de administrador: `Setup.bat service` . Así se crea el certificado del servicio con un nombre de sujeto que coincide con el nombre del equipo en el que se ejecutó el archivo por lotes.
 
         > [!NOTE]
         > El archivo por lotes Setup.bat está diseñado para ejecutarse desde el símbolo del sistema de Visual Studio 2010. Requiere que la variable de entorno path señale al directorio donde está instalado el SDK. Esta variable de entorno se establece automáticamente dentro de un símbolo del sistema de Visual Studio 2010.
 
-    5. Cambie el [ \<> serviceCertificate](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) en el archivo Service. exe. config para que refleje el nombre de sujeto del certificado generado en el paso anterior.
+    5. Cambie en [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) el archivo Service. exe. config para que refleje el nombre de sujeto del certificado generado en el paso anterior.
 
     6. Ejecute Service.exe desde un símbolo del sistema.
 
@@ -150,7 +150,7 @@ A continuación se proporciona una descripción breve de las diferentes seccione
 
     2. Ejecute Cleanup.bat para quitar cualquier certificado antiguo de ejemplos anteriores.
 
-    3. Exporte el certificado del servicio abriendo un símbolo del sistema para desarrolladores para Visual Studio con privilegios de administrador y ejecutando el siguiente comando en el equipo del servicio `%SERVER_NAME%` (sustituya por el nombre completo del equipo donde el servicio se está ejecutando):
+    3. Exporte el certificado del servicio abriendo un Símbolo del sistema para desarrolladores para Visual Studio con privilegios de administrador y ejecutando el siguiente comando en el equipo del servicio (sustituya `%SERVER_NAME%` por el nombre completo del equipo donde se está ejecutando el servicio):
 
         ```console
         certmgr -put -r LocalMachine -s My -c -n %SERVER_NAME% %SERVER_NAME%.cer
@@ -158,7 +158,7 @@ A continuación se proporciona una descripción breve de las diferentes seccione
 
     4. Copie % SERVER_NAME%.cer en el equipo cliente (sustituya % SERVER_NAME% con el nombre completo del equipo donde se está ejecutando el servicio).
 
-    5. Importe el certificado del servicio abriendo un Símbolo del sistema para desarrolladores para Visual Studio con privilegios de administrador y ejecutando el siguiente comando en el equipo cliente (sustituya% SERVER_NAME% por el nombre completo del equipo donde el servicio se está ejecutando):
+    5. Importe el certificado del servicio abriendo un Símbolo del sistema para desarrolladores para Visual Studio con privilegios de administrador y ejecutando el siguiente comando en el equipo cliente (sustituya% SERVER_NAME% por el nombre completo del equipo en el que se está ejecutando el servicio):
 
         ```console
         certmgr.exe -add -c %SERVER_NAME%.cer -s -r CurrentUser TrustedPeople
@@ -179,7 +179,7 @@ A continuación se proporciona una descripción breve de las diferentes seccione
         </client>
         ```
 
-    7. Si el servicio se está ejecutando con una cuenta que no es NetworkService o LocalSystem en un entorno de dominio, puede que sea necesario modificar la identidad del extremo de servicio en el archivo App.config del cliente para establecer el UPN o SPN adecuado en función de la cuenta que se utilice para ejecutar el servicio. Para obtener más información acerca de la identidad del punto de conexión, consulte el tema [identidad de servicio y autenticación](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md) .
+    7. Si el servicio se está ejecutando con una cuenta que no es NetworkService o LocalSystem en un entorno de dominio, puede que sea necesario modificar la identidad del extremo de servicio en el archivo App.config del cliente para establecer el UPN o SPN adecuado en función de la cuenta que se utilice para ejecutar el servicio. Para obtener más información acerca de la identidad del punto de conexión, consulte el tema [identidad de servicio y autenticación](../feature-details/service-identity-and-authentication.md) .
 
     8. Ejecute Client.exe desde un símbolo del sistema.
 

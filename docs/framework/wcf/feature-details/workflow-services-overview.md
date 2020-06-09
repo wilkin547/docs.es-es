@@ -2,12 +2,12 @@
 title: Información general de Workflow Services
 ms.date: 03/30/2017
 ms.assetid: e536dda3-e286-441e-99a7-49ddc004b646
-ms.openlocfilehash: cb013dd419d09af61eaff290709164427b1b655f
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f752eca621f9d30f38d85d7e71228fdfe1343c32
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347861"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594873"
 ---
 # <a name="workflow-services-overview"></a>Información general de Workflow Services
 
@@ -21,7 +21,7 @@ Cuando las aplicaciones están cada vez más distribuidas, los servicios individ
 
 Al implementar un servicio WCF, se define una serie de contratos que describen el servicio y los datos que envía y recibe. Los datos se representan como contratos de datos y contratos de mensajes. WCF y los servicios de flujo de trabajo usan definiciones de contratos de datos y de mensajes como parte de las descripciones del servicio. El servicio expone metadatos (con formato de WSDL) para describir las operaciones del servicio. En WCF, los contratos de servicios y los contratos de operaciones definen el servicio y las operaciones admitidos. Sin embargo, en un servicio de flujo de trabajo, estos contratos forman parte del propio proceso de negocio. Se exponen en metadatos mediante un proceso llamado inferencia del contrato. Cuando un servicio de flujo de trabajo se hospeda mediante <xref:System.ServiceModel.Activities.WorkflowServiceHost>, se examina la definición de flujo de trabajo y se genera un contrato en función del conjunto de actividades de mensajería presentes en el flujo de trabajo. En especial, se emplean las siguientes actividades y propiedades para generar el contrato:
 
-Actividad <xref:System.ServiceModel.Activities.Receive>
+<xref:System.ServiceModel.Activities.Receive> Actividad
 
 - <xref:System.ServiceModel.Activities.Receive.ServiceContractName%2A>
 
@@ -29,11 +29,11 @@ Actividad <xref:System.ServiceModel.Activities.Receive>
 
 - <xref:System.ServiceModel.Activities.Receive.Action%2A>
 
-Actividad <xref:System.ServiceModel.Activities.SendReply>
+<xref:System.ServiceModel.Activities.SendReply> Actividad
 
 - <xref:System.ServiceModel.Activities.SendReply.Action%2A>
 
-Actividad <xref:System.ServiceModel.Activities.TransactedReceiveScope>
+<xref:System.ServiceModel.Activities.TransactedReceiveScope> Actividad
 
 El resultado final de la inferencia del contrato es una descripción del servicio que utiliza las mismas estructuras de datos que los servicios WCF y los contratos de operación. A continuación, esta información se utiliza para exponer WSDL para el servicio de flujo de trabajo.
 
@@ -46,7 +46,7 @@ WCF define dos enlaces basados en MSMQ: <xref:System.ServiceModel.NetMsmqBinding
 
 ## <a name="hosting-a-workflow-service"></a>Hospedaje de un servicio de flujo de trabajo
 
-Al igual que los servicios WCF, los servicios de flujo de trabajo deben estar hospedados. Los servicios WCF usan la clase <xref:System.ServiceModel.ServiceHost> para hospedar servicios y servicios de flujo de trabajo usan <xref:System.ServiceModel.Activities.WorkflowServiceHost> para hospedar servicios. Al igual que los servicios WCF, los servicios de flujo de trabajo se pueden hospedar de varias maneras, por ejemplo:
+Al igual que los servicios WCF, los servicios de flujo de trabajo deben estar hospedados. Los servicios WCF usan la <xref:System.ServiceModel.ServiceHost> clase para hospedar servicios y servicios de flujo de trabajo usan <xref:System.ServiceModel.Activities.WorkflowServiceHost> para hospedar servicios. Al igual que los servicios WCF, los servicios de flujo de trabajo se pueden hospedar de varias maneras, por ejemplo:
 
 - En una aplicación de .NET Framework administrados.
 
@@ -56,9 +56,9 @@ Al igual que los servicios WCF, los servicios de flujo de trabajo deben estar ho
 
 - En un servicio Windows administrado.
 
-Los servicios de flujo de trabajo hospedados en una aplicación .NET Framework administrada o en un servicio de Windows administrado crean una instancia de la clase <xref:System.ServiceModel.Activities.WorkflowServiceHost> y la pasan a una instancia de la <xref:System.ServiceModel.Activities.WorkflowService> que contiene la definición de flujo de trabajo dentro de la propiedad <xref:System.ServiceModel.Activities.WorkflowService.Body%2A>. Una definición de flujo de trabajo que contiene actividades de mensajería se expone como un servicio de flujo de trabajo.
+Los servicios de flujo de trabajo hospedados en una aplicación .NET Framework administrada o en un servicio de Windows administrado crean una instancia de la <xref:System.ServiceModel.Activities.WorkflowServiceHost> clase y la pasan a una instancia de <xref:System.ServiceModel.Activities.WorkflowService> que contiene la definición de flujo de trabajo dentro de la <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> propiedad. Una definición de flujo de trabajo que contiene actividades de mensajería se expone como un servicio de flujo de trabajo.
 
-Para hospedar un servicio de flujo de trabajo en IIS o WAS, coloque el archivo .xamlx que contiene la definición del servicio de flujo de trabajo en un directorio virtual. Se crea automáticamente un punto de conexión predeterminado (mediante <xref:System.ServiceModel.BasicHttpBinding>) para obtener más información, vea [configuración simplificada](../../../../docs/framework/wcf/simplified-configuration.md). También puede colocar un archivo Web.config en el directorio virtual para especificar sus propios puntos de conexión. Si la definición de flujo de trabajo es en un ensamblado, puede colocar un archivo .svc en el directorio virtual y el ensamblado de flujo de trabajo en el directorio App_Code. El archivo .svc debe especificar el generador de host de servicio y la clase que implementa el servicio de flujo de trabajo. En el siguiente ejemplo, se indica cómo especificar el generador de host de servicio y especificar la clase que implementa el servicio de flujo de trabajo.
+Para hospedar un servicio de flujo de trabajo en IIS o WAS, coloque el archivo .xamlx que contiene la definición del servicio de flujo de trabajo en un directorio virtual. Se crea automáticamente un punto de conexión predeterminado (mediante <xref:System.ServiceModel.BasicHttpBinding> ) para obtener más información, vea [configuración simplificada](../simplified-configuration.md). También puede colocar un archivo Web.config en el directorio virtual para especificar sus propios puntos de conexión. Si la definición de flujo de trabajo es en un ensamblado, puede colocar un archivo .svc en el directorio virtual y el ensamblado de flujo de trabajo en el directorio App_Code. El archivo .svc debe especificar el generador de host de servicio y la clase que implementa el servicio de flujo de trabajo. En el siguiente ejemplo, se indica cómo especificar el generador de host de servicio y especificar la clase que implementa el servicio de flujo de trabajo.
 
 ```
 <%@ServiceHost Factory=" System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory

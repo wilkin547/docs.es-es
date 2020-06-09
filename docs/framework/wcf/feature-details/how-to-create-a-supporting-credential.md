@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: Crear una credencial de apoyo'
+title: Procedimiento para crear una credencial de apoyo
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: 3f33bf5a78c575237ee4bc609a482a81fd30fc53
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: b8e7ddcd6118c77e14e090a0b1fa8d65aeb8e3df
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964556"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597155"
 ---
-# <a name="how-to-create-a-supporting-credential"></a>Cómo: Crear una credencial de apoyo
+# <a name="how-to-create-a-supporting-credential"></a>Procedimiento para crear una credencial de apoyo
 Es posible tener un esquema de seguridad personalizado que requiera más de una credencial. Por ejemplo, un servicio puede solicitar del cliente un nombre de usuario y contraseña, pero también una credencial que demuestre que el cliente tiene más de 18 años. La segunda credencial es una *credencial de apoyo*. En este tema se explica cómo implementar estas credenciales en un cliente de Windows Communication Foundation (WCF).  
   
 > [!NOTE]
@@ -27,7 +27,7 @@ Es posible tener un esquema de seguridad personalizado que requiera más de una 
 ## <a name="endorsing-signing-and-encrypting"></a>Endosar, firmar y cifrar  
  Una credencial de apoyo da como resultado un *token auxiliar* que se transmite dentro del mensaje. La especificación de WS-SecurityPolicy define cuatro maneras de adjuntar un token de aprobación al mensaje, tal y como se describe en la tabla siguiente.  
   
-|Finalidad|Descripción|  
+|Propósito|Descripción|  
 |-------------|-----------------|  
 |Firmado|El token de aprobación está incluido en el encabezado de seguridad y es firmado por la firma del mensaje.|  
 |Endosar|Un *token* de aprobación firma la firma del mensaje.|  
@@ -35,7 +35,7 @@ Es posible tener un esquema de seguridad personalizado que requiera más de una 
 |Firmar y cifrar|Los tokens de aprobación firmados y cifrados son tokens de aprobación firmados que también se cifran cuando aparecen en `wsse:SecurityHeader`.|  
   
 ## <a name="programming-supporting-credentials"></a>Programar credenciales de aprobación  
- Para crear un servicio que use tokens auxiliares, debe crear un [\<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md). (Para obtener más información, consulte [Cómo: crear un enlace personalizado mediante SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)).  
+ Para crear un servicio que use tokens auxiliares, debe crear un [\<customBinding>](../../configure-apps/file-schema/wcf/custombinding.md) . (Para obtener más información, consulte [Cómo: crear un enlace personalizado mediante SecurityBindingElement](how-to-create-a-custom-binding-using-the-securitybindingelement.md)).  
   
  El primer paso cuando se crea un enlace personalizado es crear un elemento de enlace de seguridad, que puede ser uno de tres tipos:  
   
@@ -82,4 +82,4 @@ Es posible tener un esquema de seguridad personalizado que requiera más de una 
   
 ## <a name="see-also"></a>Vea también
 
-- [Creación de un enlace personalizado mediante SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Procedimiento para crear un enlace personalizado mediante SecurityBindingElement](how-to-create-a-custom-binding-using-the-securitybindingelement.md)

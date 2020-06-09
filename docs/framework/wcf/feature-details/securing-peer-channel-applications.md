@@ -2,27 +2,27 @@
 title: Protección de las aplicaciones de canal del mismo nivel
 ms.date: 03/30/2017
 ms.assetid: d4a0311d-3f78-4525-9c4b-5c93c4492f28
-ms.openlocfilehash: 4b52e0476ce6ac54a2e4a3a8cfceb112d662186b
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: a77449710e9093bc8ea2d5446e6359c26a3d1c1e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959888"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589882"
 ---
 # <a name="securing-peer-channel-applications"></a>Protección de las aplicaciones de canal del mismo nivel
-Como otros enlaces bajo el WinFX, `NetPeerTcpBinding` tiene seguridad habilitada de forma predeterminada y ofrece seguridad basada en mensajes y transporte (o ambos). En este tema se tratan estos dos tipos de seguridad. La etiqueta de modo de seguridad especifica el tipo de seguridad en la especificación de enlace (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`).  
+Al igual que otros enlaces en WinFX, `NetPeerTcpBinding` tiene la seguridad habilitada de forma predeterminada y ofrece seguridad basada en mensajes y en transporte (o ambos). En este tema se tratan estos dos tipos de seguridad. La etiqueta de modo de seguridad especifica el tipo de seguridad en la especificación de enlace (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`).  
   
 ## <a name="transport-based-security"></a>Seguridad basada en el transporte.  
  El canal del mismo nivel admite dos tipos de credenciales de autenticación para proteger el transporte, y ambos requieren que se establezca la propiedad `ClientCredentialSettings.Peer` en el `ChannelFactory` asociado:  
   
-- Contraseña. Los clientes utilizan una contraseña secreta para autenticar las conexiones. Cuando se utiliza este tipo de credencial, `ClientCredentialSettings.Peer.MeshPassword` debe llevar una contraseña válida y, opcionalmente, una instancia `X509Certificate2`.  
+- Password. Los clientes utilizan una contraseña secreta para autenticar las conexiones. Cuando se utiliza este tipo de credencial, `ClientCredentialSettings.Peer.MeshPassword` debe llevar una contraseña válida y, opcionalmente, una instancia `X509Certificate2`.  
   
 - Certificado. Se usa autenticación de aplicación concreta. Cuando se usa este tipo de credencial, debe usar una implementación concreta de <xref:System.IdentityModel.Selectors.X509CertificateValidator> en `ClientCredentialSettings.Peer.PeerAuthentication`.  
   
 ## <a name="message-based-security"></a>Seguridad basada en mensaje  
  Mediante la seguridad de mensaje, una aplicación puede firmar mensajes salientes para que todas las partes receptoras puedan comprobar que el mensaje ha sido enviado por una parte confiable y que no se ha manipulado. Actualmente, el canal del mismo nivel solo admite la firma de mensajes mediante credenciales X.509.  
   
-## <a name="best-practices"></a>Procedimientos recomendados  
+## <a name="best-practices"></a>Prácticas recomendadas  
   
 - En esta sección se analizan los procedimientos recomendados para proteger las aplicaciones de canal del mismo nivel.  
   
@@ -39,9 +39,9 @@ Como otros enlaces bajo el WinFX, `NetPeerTcpBinding` tiene seguridad habilitada
  Use la autenticación de mensajes para comprobar que un mensaje fue originado por una fuente de confianza y que nadie ha manipulado el mensaje durante la transmisión. Sin la autenticación de mensaje, es fácil que un cliente malintencionado suplante o manipule mensajes en la malla.  
   
 ## <a name="peer-channel-code-examples"></a>Ejemplos de código del canal del mismo nivel  
- [Escenarios de canal del mismo nivel](../../../../docs/framework/wcf/feature-details/peer-channel-scenarios.md)  
+ [Escenarios de canal del mismo nivel](peer-channel-scenarios.md)  
   
 ## <a name="see-also"></a>Vea también
 
-- [Seguridad del canal del mismo nivel](../../../../docs/framework/wcf/feature-details/peer-channel-security.md)
-- [Creación de una aplicación de canal del mismo nivel](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+- [Seguridad del canal del mismo nivel](peer-channel-security.md)
+- [Creación de una aplicación de canal del mismo nivel](building-a-peer-channel-application.md)
