@@ -1,15 +1,15 @@
 ---
-title: Formato HTTP Web WCF
+title: Formato HTTP Web de WCF
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-ms.openlocfilehash: b6c9728fe40e26977366b73337e72b1514a12a19
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 011ff4f2e667268fac1aa2d82c0a2c4ffefc8dde
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184192"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84585563"
 ---
-# <a name="wcf-web-http-formatting"></a>Formato HTTP Web WCF
+# <a name="wcf-web-http-formatting"></a>Formato HTTP Web de WCF
 El modelo de programación web HTTP de WCF permite determinar dinámicamente el mejor formato para que una operación de servicio devuelva su respuesta. Dos métodos para determinar un formato adecuado se admiten: automático y explícito.  
   
 ## <a name="automatic-formatting"></a>Formato automático  
@@ -23,7 +23,7 @@ El modelo de programación web HTTP de WCF permite determinar dinámicamente el 
   
 4. La configuración de formato predeterminado en WebHttpBehavior.  
   
- Si el mensaje de solicitud contiene un encabezado Accept, la infraestructura de Windows Communication Foundation (WCF) busca un tipo que admita. Si el encabezado `Accept` especifica prioridades para sus tipos de medios, éstas se respetan. Si no se encuentra ningún formato adecuado en el encabezado `Accept`, se utiliza el tipo de contenido del mensaje de solicitud. Si no se especifica ningún tipo de contenido adecuado, se utiliza la configuración de formato predeterminado para la operación. El formato predeterminado se establece con el parámetro `ResponseFormat` de los atributos <xref:System.ServiceModel.Web.WebGetAttribute> y <xref:System.ServiceModel.Web.WebInvokeAttribute>. Si no se especifica un formato predeterminado en la operación, se utiliza el valor de propiedad <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A>. El formato automático se basa en la propiedad <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>. Cuando esta propiedad está establecida en `true`, la infraestructura de WCF determina el mejor formato que se debe usar. La selección de formato automática está deshabilitada de forma predeterminada para la compatibilidad con versiones anteriores. La selección de formato automática puede habilitarse mediante programación o a través de la configuración. En el siguiente ejemplo, se muestra cómo habilitar la selección de formato automática en código.  
+ Si el mensaje de solicitud contiene un encabezado Accept, la infraestructura Windows Communication Foundation (WCF) busca un tipo que admita. Si el encabezado `Accept` especifica prioridades para sus tipos de medios, éstas se respetan. Si no se encuentra ningún formato adecuado en el encabezado `Accept`, se utiliza el tipo de contenido del mensaje de solicitud. Si no se especifica ningún tipo de contenido adecuado, se utiliza la configuración de formato predeterminado para la operación. El formato predeterminado se establece con el parámetro `ResponseFormat` de los atributos <xref:System.ServiceModel.Web.WebGetAttribute> y <xref:System.ServiceModel.Web.WebInvokeAttribute>. Si no se especifica un formato predeterminado en la operación, se utiliza el valor de propiedad <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A>. El formato automático se basa en la propiedad <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>. Cuando esta propiedad está establecida en `true`, la infraestructura de WCF determina el mejor formato que se debe usar. La selección de formato automática está deshabilitada de forma predeterminada para la compatibilidad con versiones anteriores. La selección de formato automática puede habilitarse mediante programación o a través de la configuración. En el siguiente ejemplo, se muestra cómo habilitar la selección de formato automática en código.  
   
 ```csharp
 // This code assumes the service name is MyService and the service contract is IMyContract
@@ -163,11 +163,11 @@ public class Service : IService
 }  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.UriTemplate>
 - <xref:System.UriTemplateMatch>
-- [Modelo de programación de web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
-- [UriTemplate y UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)
-- [Información general del modelo de programación web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
-- [Modelo de objetos de programación web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+- [Modelo de programación de web HTTP de WCF](wcf-web-http-programming-model.md)
+- [UriTemplate y UriTemplateTable](uritemplate-and-uritemplatetable.md)
+- [Información general del modelo de programación web HTTP de WCF](wcf-web-http-programming-model-overview.md)
+- [Modelo de objetos de programación web HTTP de WCF](wcf-web-http-programming-object-model.md)

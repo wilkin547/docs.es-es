@@ -2,16 +2,16 @@
 title: Canal de fragmentación
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: 7b436e2ce708a122a7eae3b07ad01515fb2dce96
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 7a5e5292bcb37e83de21458716e34887a0557d91
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463976"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84585550"
 ---
 # <a name="chunking-channel"></a>Canal de fragmentación
 
-Al enviar mensajes grandes mediante Windows Communication Foundation (WCF), a menudo es deseable limitar la cantidad de memoria utilizada para almacenar en búfer esos mensajes. Una posible solución es transmitir en secuencias el cuerpo del mensaje (suponiendo que la mayor parte de los datos se encuentra en el cuerpo). Sin embargo, algunos protocolos requieren almacenado en búfer del mensaje completo. La mensajería de confianza y la seguridad son dos ejemplos de lo anterior. Otra posible solución es dividir el mensaje grande en mensajes menores llamados fragmentos, enviar uno por uno esos fragmentos y reconstituir el mensaje entero en el lado receptor. La propia aplicación podría hacer esta fragmentación y desfragmentación, o podría utilizar un canal personalizado para hacerlo. El canal de fragmentación muestra cómo un protocolo personalizado o un canal en capas se pueden utilizar para la fragmentación y desfragmentación de mensajes arbitrariamente grandes.
+Al enviar mensajes de gran tamaño mediante Windows Communication Foundation (WCF), a menudo es conveniente limitar la cantidad de memoria usada para almacenar en búfer esos mensajes. Una posible solución es transmitir en secuencias el cuerpo del mensaje (suponiendo que la mayor parte de los datos se encuentra en el cuerpo). Sin embargo, algunos protocolos requieren almacenado en búfer del mensaje completo. La mensajería de confianza y la seguridad son dos ejemplos de lo anterior. Otra posible solución es dividir el mensaje grande en mensajes menores llamados fragmentos, enviar uno por uno esos fragmentos y reconstituir el mensaje entero en el lado receptor. La propia aplicación podría hacer esta fragmentación y desfragmentación, o podría utilizar un canal personalizado para hacerlo. El canal de fragmentación muestra cómo un protocolo personalizado o un canal en capas se pueden utilizar para la fragmentación y desfragmentación de mensajes arbitrariamente grandes.
 
 Siempre se debería emplear la fragmentación solo una vez construido el mensaje completo que se va a enviar. Un canal de fragmentación siempre se debería disponer en niveles debajo de un canal de seguridad y un canal de sesión confiable.
 
@@ -23,7 +23,7 @@ Siempre se debería emplear la fragmentación solo una vez construido el mensaje
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Si este directorio no existe, vaya a Ejemplos de [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (WCF). Este ejemplo se encuentra en el siguiente directorio.
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ChunkingChannel`
 
@@ -209,7 +209,7 @@ El canal de fragmentación es un `IDuplexSessionChannel` que, a un nivel alto, s
 
 En el siguiente nivel inferior, `ChunkingChannel` confia en varios componentes para implementar el protocolo de fragmentación. En el lado emisor, el canal usa un <xref:System.Xml.XmlDictionaryWriter> personalizado denominado `ChunkingWriter` que realiza la fragmentación real. `ChunkingWriter` usa el canal interno directamente para enviar fragmentos. Utilizar un `XmlDictionaryWriter` personalizado nos permite mandar fragmentos mientras se escribe el cuerpo grande del mensaje original. Esto significa que no almacenamos en búfer el mensaje original completo.
 
-![Diagrama que muestra la arquitectura de envío de canal de fragmentación.](./media/chunking-channel/chunking-channel-send.gif)
+![Diagrama que muestra la arquitectura de envío del canal de fragmentación.](./media/chunking-channel/chunking-channel-send.gif)
 
 En el lado receptor, `ChunkingChannel` extrae mensajes del canal interno y los ofrece a un <xref:System.Xml.XmlDictionaryReader> personalizado denominado `ChunkingReader`, que reconstituye el mensaje original a partir de los fragmentos de entrada. `ChunkingChannel` ajusta este `ChunkingReader` en una implementación de `Message``ChunkingMessage` personalizada y devuelve este mensaje al nivel anterior. Esta combinación de `ChunkingReader` y `ChunkingMessage` nos permite al anular la fragmentación del cuerpo del mensaje original mientras la lee el nivel anterior en lugar de tener que almacenar en búfer todo el cuerpo del mensaje original. `ChunkingReader` tiene una cola donde almacena en búfer fragmentos de entrada hasta un número máximo configurable de fragmentos almacenados en búfer. Cuando se alcanza este límite máximo, el lector espera que la capa superior recoja los mensajes de la cola (es decir, simplemente leyendo el cuerpo del mensaje original) o hasta que se alcance el tiempo de espera máximo de recepción.
 
@@ -256,7 +256,7 @@ Detalles que se han de tener en cuenta:
 
 - El tiempo de espera pasado a Send se utiliza como tiempo de espera para la operación de envío al completo, la cual incluye el envío de todos los fragmentos.
 
-- El diseño <xref:System.Xml.XmlDictionaryWriter> personalizado fue elegido para evitar almacenar en búfer el cuerpo del mensaje original completo. Si deseáramos obtener un <xref:System.Xml.XmlDictionaryReader> en el cuerpo utilizando `message.GetReaderAtBodyContents` el cuerpo completo se almacenaría en búfer. En su lugar, <xref:System.Xml.XmlDictionaryWriter> tenemos `message.WriteBodyContents`una costumbre que se pasa a . Mientras el mensaje llama a WriteBase64 en el sistema de escritura, el sistema de escritura empaqueta los fragmentos en los mensajes y los envía utilizando el canal interno. WriteBase64 se bloquea hasta que se envía el fragmento.
+- El diseño <xref:System.Xml.XmlDictionaryWriter> personalizado fue elegido para evitar almacenar en búfer el cuerpo del mensaje original completo. Si deseáramos obtener un <xref:System.Xml.XmlDictionaryReader> en el cuerpo utilizando `message.GetReaderAtBodyContents` el cuerpo completo se almacenaría en búfer. En su lugar, tenemos un personalizado <xref:System.Xml.XmlDictionaryWriter> que se pasa a `message.WriteBodyContents` . Mientras el mensaje llama a WriteBase64 en el sistema de escritura, el sistema de escritura empaqueta los fragmentos en los mensajes y los envía utilizando el canal interno. WriteBase64 se bloquea hasta que se envía el fragmento.
 
 ## <a name="implementing-the-receive-operation"></a>Implementar la operación Receive
 
@@ -282,7 +282,7 @@ Detalles que se han de tener en cuenta:
 
 ### <a name="onclose"></a>OnClose
 
-`OnClose` establece primero `stopReceive` a `true` para señalar el `ReceiveChunkLoop` pendiente para detenerse. A continuación, espera `receiveStopped` <xref:System.Threading.ManualResetEvent>el , `ReceiveChunkLoop` que se establece cuando se detiene. Suponiendo las pausas `ReceiveChunkLoop` dentro del tiempo de espera especificado, `OnClose` llama `innerChannel.Close` con el tiempo de espera restante.
+`OnClose` establece primero `stopReceive` a `true` para señalar el `ReceiveChunkLoop` pendiente para detenerse. Después espera a `receiveStopped` <xref:System.Threading.ManualResetEvent> , que se establece cuando se `ReceiveChunkLoop` detiene. Suponiendo las pausas `ReceiveChunkLoop` dentro del tiempo de espera especificado, `OnClose` llama `innerChannel.Close` con el tiempo de espera restante.
 
 ### <a name="onabort"></a>OnAbort
 
@@ -306,9 +306,9 @@ Detalles que se han de tener en cuenta:
 
 ## <a name="implementing-binding-element-and-binding"></a>Implementar elemento de enlace y enlace
 
-`ChunkingBindingElement` es el responsable de crear el `ChunkingChannelFactory` y `ChunkingChannelListener`. Comprueba `ChunkingBindingElement` si T `CanBuildChannelFactory` \<en T `CanBuildChannelListener` \<> y `IDuplexSessionChannel` T> es de tipo (el único canal admitido por el canal de fragmentación) y que los demás elementos de enlace del enlace admiten este tipo de canal.
+`ChunkingBindingElement` es el responsable de crear el `ChunkingChannelFactory` y `ChunkingChannelListener`. `ChunkingBindingElement`Comprueba si T en `CanBuildChannelFactory` \<T> y `CanBuildChannelListener` \<T> es de tipo `IDuplexSessionChannel` (el único canal que admite el canal de fragmentación) y que los otros elementos de enlace del enlace admiten este tipo de canal.
 
-`BuildChannelFactory`\<T> comprueba primero que se puede compilar el tipo de canal solicitado y, a continuación, obtiene una lista de acciones de mensaje que se van a fragmentar. Para más información, consulte la sección siguiente. Crea a continuación un nuevo `ChunkingChannelFactory` que le pasa el generador de canales interno (tal y como se devolvió desde `context.BuildInnerChannelFactory<IDuplexSessionChannel>`), la lista de acciones de mensaje, y el número máximo de fragmentos para almacenar en búfer. El número máximo de fragmentos procede de una propiedad llamada `MaxBufferedChunks` expuesta por el `ChunkingBindingElement`.
+`BuildChannelFactory`\<T>en primer lugar, comprueba que el tipo de canal solicitado se puede compilar y, a continuación, obtiene una lista de acciones de mensaje que se van a fragmentar. Para más información, consulte la sección siguiente. Crea a continuación un nuevo `ChunkingChannelFactory` que le pasa el generador de canales interno (tal y como se devolvió desde `context.BuildInnerChannelFactory<IDuplexSessionChannel>`), la lista de acciones de mensaje, y el número máximo de fragmentos para almacenar en búfer. El número máximo de fragmentos procede de una propiedad llamada `MaxBufferedChunks` expuesta por el `ChunkingBindingElement`.
 
 `BuildChannelListener<T>` tiene una implementación similar para crear `ChunkingChannelListener` y pasarle el agente de escucha de canal interno.
 
@@ -320,23 +320,23 @@ Hay un enlace de ejemplo incluido en este ejemplo denominado `TcpChunkingBinding
 
 El canal de fragmentación solo fragmenta los mensajes identificados a través del atributo `ChunkingBehavior`. La clase `ChunkingBehavior` implementa `IOperationBehavior` y se implementa llamando al método `AddBindingParameter`. En este método,el `ChunkingBehavior` examina el valor de su propiedad (`AppliesTo`, `InMessage` o ambos) `OutMessage` para determinar qué mensajes deberían fragmentarse. Obtiene a continuación la acción de cada uno de esos mensajes (de la colección Messages en `OperationDescription`) y lo agrega a una colección de cadenas contenida dentro de una instancia de `ChunkingBindingParameter`. Agrega a continuación `ChunkingBindingParameter` al `BindingParameterCollection`proporcionado.
 
-Esta `BindingParameterCollection` se pasa dentro del `BindingContext` a cada elemento de enlace en el enlace cuando ese elemento de enlace compila el generador de canales o la escucha del canal. La `ChunkingBindingElement`implementación `BuildChannelFactory<T>` de `BuildChannelListener<T>` y `ChunkingBindingParameter` sacar `BindingContext’`esto `BindingParameterCollection`de la s . La colección de acciones contenida dentro de `ChunkingBindingParameter` se pasa a continuación al `ChunkingChannelFactory` o `ChunkingChannelListener`, que a su vez lo pasa al `ChunkingDuplexSessionChannel`.
+Esta `BindingParameterCollection` se pasa dentro del `BindingContext` a cada elemento de enlace en el enlace cuando ese elemento de enlace compila el generador de canales o la escucha del canal. La `ChunkingBindingElement` implementación de `BuildChannelFactory<T>` y `BuildChannelListener<T>` extrae este `ChunkingBindingParameter` de los `BindingContext’` s `BindingParameterCollection` . La colección de acciones contenida dentro de `ChunkingBindingParameter` se pasa a continuación al `ChunkingChannelFactory` o `ChunkingChannelListener`, que a su vez lo pasa al `ChunkingDuplexSessionChannel`.
 
 ## <a name="running-the-sample"></a>Ejecutar el ejemplo
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo
 
-1. Instale ASP.NET 4.0 con el siguiente comando.
+1. Instale ASP.NET 4,0 con el siguiente comando.
 
     ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 
-2. Asegúrese de que ha realizado el procedimiento de instalación única [para los ejemplos](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)de Windows Communication Foundation .
+2. Asegúrese de que ha realizado el [procedimiento de instalación única para los ejemplos de Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
 
-3. Para compilar la solución, siga las instrucciones de Creación de [ejemplos](../../../../docs/framework/wcf/samples/building-the-samples.md)de Windows Communication Foundation .
+3. Para compilar la solución, siga las instrucciones de [creación de los ejemplos de Windows Communication Foundation](building-the-samples.md).
 
-4. Para ejecutar el ejemplo en una configuración de uno o entre equipos, siga las instrucciones de Ejecución de [los ejemplos](../../../../docs/framework/wcf/samples/running-the-samples.md)de Windows Communication Foundation .
+4. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](running-the-samples.md).
 
 5. Ejecute primero Service.exe, a continuación, ejecute Client.exe e inspeccione ambas ventanas de la consola para ver el resultado.
 

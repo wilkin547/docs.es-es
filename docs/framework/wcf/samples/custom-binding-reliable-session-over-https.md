@@ -2,12 +2,12 @@
 title: Sesión confiable de enlace personalizado mediante HTTPS
 ms.date: 03/30/2017
 ms.assetid: 16aaa80d-3ffe-47c4-8b16-ec65c4d25f8d
-ms.openlocfilehash: c31f8a5b4e3771f6c6e8de41e6b098474c34cf77
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: ab2dd4725879ba969afdae8a6423a920a9786125
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144869"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84585303"
 ---
 # <a name="custom-binding-reliable-session-over-https"></a>Sesión confiable de enlace personalizado mediante HTTPS
 Este ejemplo muestra el uso de seguridad de transporte de SSL con sesiones confiables. Las sesiones confiables implementan el protocolo WS-Reliable Messaging. Puede tener una sesión confiable segura creando WS-Security sobre sesiones confiables. Pero a veces, puede decidir utilizar en su lugar la seguridad del transporte HTTP con SSL.  
@@ -24,7 +24,7 @@ Este ejemplo muestra el uso de seguridad de transporte de SSL con sesiones confi
 ## <a name="sample-details"></a>Detalles del ejemplo  
  SSL garantiza que los paquetes se protegen. Es importante tener en cuenta que esto es diferente de proteger la sesión confiable mediante WS-Secure Conversation.  
   
- Para utilizar la sesión confiable sobre HTTPS, debe crear un enlace personalizado. Este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora. Un enlace personalizado se crea mediante el elemento de enlace de la sesión confiable y el [\<httpsTransport>](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md) . La configuración siguiente es del enlace personalizado.  
+ Para utilizar la sesión confiable sobre HTTPS, debe crear un enlace personalizado. Este ejemplo se basa en el [Introducción](getting-started-sample.md) que implementa un servicio de calculadora. Un enlace personalizado se crea mediante el elemento de enlace de la sesión confiable y el [\<httpsTransport>](../../configure-apps/file-schema/wcf/httpstransport.md) . La configuración siguiente es del enlace personalizado.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -70,7 +70,7 @@ Este ejemplo muestra el uso de seguridad de transporte de SSL con sesiones confi
 </configuration>  
 ```  
   
- El código del programa en el ejemplo es idéntico al del servicio [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) . Debe crear un certificado y asignarlo utilizando el Asistente para certificados de servidor web antes de compilar y ejecutar el ejemplo. La definición de extremo y del enlace en los valores de archivo de configuración habilita el uso de enlace personalizado tal y como se muestra en la siguiente configuración de ejemplo para el cliente.  
+ El código del programa en el ejemplo es idéntico al del servicio [Introducción](getting-started-sample.md) . Debe crear un certificado y asignarlo utilizando el Asistente para certificados de servidor web antes de compilar y ejecutar el ejemplo. La definición de extremo y del enlace en los valores de archivo de configuración habilita el uso de enlace personalizado tal y como se muestra en la siguiente configuración de ejemplo para el cliente.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -128,10 +128,10 @@ Press <ENTER> to terminate client.
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. Asegúrese de que ha realizado el [procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. Asegúrese de que ha realizado el [procedimiento de instalación única para los ejemplos de Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3. Asegúrese de que ha realizado las [instrucciones de instalación del certificado de servidor de Internet Information Services (IIS)](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).  
+3. Asegúrese de que ha realizado las [instrucciones de instalación del certificado de servidor de Internet Information Services (IIS)](iis-server-certificate-installation-instructions.md).  
   
-4. Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+4. Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](building-the-samples.md).  
   
-5. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+5. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](running-the-samples.md).  
