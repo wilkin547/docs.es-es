@@ -9,23 +9,23 @@ helpviewer_keywords:
 - DataContractAttribute class
 - data contracts [WCF], creating for a class or structure
 ms.assetid: bc464889-3070-4a2f-91d2-e788a0f686a7
-ms.openlocfilehash: 15c59f3ee7cbefafef7a304cfd1477685fff68f2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0fd7bbea4d6e8d315566aa798ed89a0fd2657f58
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968459"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599040"
 ---
 # <a name="how-to-create-a-basic-data-contract-for-a-class-or-structure"></a>Procedimiento para crear un contrato de datos básico para una clase o estructura
-En este tema se muestran los pasos básicos para crear un contrato de datos usando una clase o estructura. Para obtener más información sobre los contratos de datos y cómo se usan, consulte [uso de contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+En este tema se muestran los pasos básicos para crear un contrato de datos usando una clase o estructura. Para obtener más información sobre los contratos de datos y cómo se usan, consulte [uso de contratos de datos](using-data-contracts.md).  
   
- Para ver un tutorial que le guía por los pasos necesarios para crear un servicio y un cliente de Windows Communication Foundation básico (WCF), consulte el [tutorial de introducción](../../../../docs/framework/wcf/getting-started-tutorial.md). Para obtener una aplicación de ejemplo funcional formada por un servicio y un cliente básicos, vea [contrato de datos básico](../../../../docs/framework/wcf/samples/basic-data-contract.md).  
+ Para ver un tutorial que le guía por los pasos necesarios para crear un servicio y un cliente de Windows Communication Foundation básico (WCF), consulte el [tutorial de introducción](../getting-started-tutorial.md). Para obtener una aplicación de ejemplo funcional formada por un servicio y un cliente básicos, vea [contrato de datos básico](../samples/basic-data-contract.md).  
   
 ### <a name="to-create-a-basic-data-contract-for-a-class-or-structure"></a>Crear un contrato de datos básicos para una clase o estructura  
   
-1. Declare que el tipo tiene un contrato de datos aplicando el atributo <xref:System.Runtime.Serialization.DataContractAttribute> a la clase. Observe que todos los tipos públicos, incluidos aquéllos sin atributos, son serializables. <xref:System.Runtime.Serialization.DataContractSerializer> deduce un contrato de datos si el atributo <xref:System.Runtime.Serialization.DataContractAttribute> está ausente. Para obtener más información, vea [tipos serializables](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
+1. Declare que el tipo tiene un contrato de datos aplicando el atributo <xref:System.Runtime.Serialization.DataContractAttribute> a la clase. Observe que todos los tipos públicos, incluidos aquéllos sin atributos, son serializables. <xref:System.Runtime.Serialization.DataContractSerializer> deduce un contrato de datos si el atributo <xref:System.Runtime.Serialization.DataContractAttribute> está ausente. Para obtener más información, vea [tipos serializables](serializable-types.md).  
   
-2. Defina los miembros (propiedades, campos o eventos) que se serializan aplicando el atributo <xref:System.Runtime.Serialization.DataMemberAttribute> a cada miembro. Estos miembros se denominan miembros de datos. De forma predeterminada, todos los tipos públicos son serializables. Para obtener más información, vea [tipos serializables](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
+2. Defina los miembros (propiedades, campos o eventos) que se serializan aplicando el atributo <xref:System.Runtime.Serialization.DataMemberAttribute> a cada miembro. Estos miembros se denominan miembros de datos. De forma predeterminada, todos los tipos públicos son serializables. Para obtener más información, vea [tipos serializables](serializable-types.md).  
   
     > [!NOTE]
     > Puede aplicar el atributo <xref:System.Runtime.Serialization.DataMemberAttribute> a los campos privados y, de este modo, se expondrán los datos a otros. Asegúrese de que el miembro no contiene información confidencial.  
@@ -40,6 +40,6 @@ En este tema se muestran los pasos básicos para crear un contrato de datos usan
 
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
-- [Utilización de contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Tutorial de introducción](../../../../docs/framework/wcf/getting-started-tutorial.md)
-- [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md)
+- [Utilización de contratos de datos](using-data-contracts.md)
+- [Tutorial de Introducción](../getting-started-tutorial.md)
+- [Introducción](../samples/getting-started-sample.md)

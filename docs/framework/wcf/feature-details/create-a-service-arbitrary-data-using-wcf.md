@@ -2,19 +2,19 @@
 title: Procedimiento para crear un servicio que acepte datos arbitrarios mediante el modelo de programación REST de WCF
 ms.date: 03/30/2017
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-ms.openlocfilehash: a1c30491f6c5b0a91f93a6f26417f9dc2b996a48
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d908651f7815c102b45ea106f5bec4c07d869950
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614802"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601340"
 ---
 # <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Procedimiento para crear un servicio que acepte datos arbitrarios mediante el modelo de programación REST de WCF
-A veces los programadores deben tener un control absoluto de la forma en que se devuelven los datos desde una operación de un servicio. Esto sucede cuando una operación de servicio debe devolver datos en un formato no admiten byWCF. En este tema describe el uso del modelo de programación WCF REST para crear un servicio que recibe datos arbitrarios.  
+A veces los programadores deben tener un control absoluto de la forma en que se devuelven los datos desde una operación de un servicio. Este es el caso cuando una operación de servicio debe devolver datos en un formato no admitido byWCF. En este tema se describe el uso del modelo de programación REST de WCF para crear un servicio que recibe datos arbitrarios.  
   
 ### <a name="to-implement-the-service-contract"></a>Para implementar el contrato de servicios  
   
-1. Definir el contrato de servicios. La operación que recibe los datos arbitrarios debe tener un parámetro de tipo <xref:System.IO.Stream>. Además, este parámetro debe ser el único parámetro pasado en el cuerpo de la solicitud. La operación descrita en este ejemplo también toma un parámetro de nombre de archivo. Este parámetro se pasa dentro de la dirección URL de la solicitud. Puede indicar que se pase un parámetro en la dirección URL si especifica una <xref:System.UriTemplate> en <xref:System.ServiceModel.Web.WebInvokeAttribute>. En este caso, el URI que se usa para llamar a este método termina en "UploadFile/Some-Filename". La parte "{filename}" de la plantilla de URI especifica que el parámetro de nombre de archivo para la operación se pasa en el URI usado para llamar a la operación.  
+1. Definir el contrato de servicios. La operación que recibe los datos arbitrarios debe tener un parámetro de tipo <xref:System.IO.Stream>. Además, este parámetro debe ser el único parámetro pasado en el cuerpo de la solicitud. La operación descrita en este ejemplo también toma un parámetro de nombre de archivo. Este parámetro se pasa dentro de la dirección URL de la solicitud. Puede indicar que se pase un parámetro en la dirección URL si especifica una <xref:System.UriTemplate> en <xref:System.ServiceModel.Web.WebInvokeAttribute>. En este caso, el URI usado para llamar a este método finaliza en "UploadFile/some-filename". La parte "{filename}" de la plantilla URI especifica que el parámetro FILENAME de la operación se pasa dentro del URI utilizado para llamar a la operación.  
   
     ```csharp  
      [ServiceContract]  
@@ -195,6 +195,6 @@ namespace ReceiveRawData
   
 ## <a name="see-also"></a>Vea también
 
-- [UriTemplate y UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)
-- [Modelo de programación de web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
-- [Información general del modelo de programación web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+- [UriTemplate y UriTemplateTable](uritemplate-and-uritemplatetable.md)
+- [Modelo de programación de web HTTP de WCF](wcf-web-http-programming-model.md)
+- [Información general del modelo de programación web HTTP de WCF](wcf-web-http-programming-model-overview.md)

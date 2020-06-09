@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
-ms.openlocfilehash: 0028a0522447588ee0fb183b5b2f93d334a7b2b2
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 7da3cd34d0840eea48c9ef0bb89fb6580b87623b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972075"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601249"
 ---
 # <a name="how-to-configure-a-local-issuer"></a>Procedimiento para configurar un emisor local
 
@@ -21,10 +21,10 @@ En este tema se describe cómo configurar un cliente para utilizar un emisor loc
 
 A menudo, cuando un cliente se comunica con un servicio federado, el servicio especifica la dirección del servicio de token de seguridad que se espera que emita el token y que el cliente utilizará para autenticarse con el servicio federado. En determinadas situaciones, el cliente se puede configurar para utilizar un *emisor local*.
 
-Windows Communication Foundation (WCF) usa un emisor local en los casos en los que la dirección del emisor de un enlace `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` federado `null`es o. En casos como éste, debe configurar <xref:System.ServiceModel.Description.ClientCredentials> con la dirección del emisor local y el enlace que se va a utilizar para comunicarse con ese emisor.
+Windows Communication Foundation (WCF) usa un emisor local en los casos en los que la dirección del emisor de un enlace federado es `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` o `null` . En casos como éste, debe configurar <xref:System.ServiceModel.Description.ClientCredentials> con la dirección del emisor local y el enlace que se va a utilizar para comunicarse con ese emisor.
 
 > [!NOTE]
-> Si la <xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A> propiedad de la `ClientCredentials` clase se establece en `true`, no se especifica una dirección del emisor local y la dirección del emisor especificada por el [ \<> wsFederationHttpBinding](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) u otro enlace federado es `http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self` ,`http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous`o es`null`, se utiliza el emisor de Windows CardSpace.
+> Si la <xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A> propiedad de la `ClientCredentials` clase se establece en `true` , no se especifica una dirección del emisor local y la dirección del emisor especificada por [\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md) u otro enlace federado es `http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self` , `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` o es `null` , se utiliza el emisor de Windows CardSpace.
 
 ## <a name="to-configure-the-local-issuer-in-code"></a>Para configurar el emisor local en código
 
@@ -62,15 +62,15 @@ Windows Communication Foundation (WCF) usa un emisor local en los casos en los q
 
 ## <a name="to-configure-the-local-issuer-in-configuration"></a>Para configurar el emisor local en la configuración
 
-1. Cree un [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md) elemento de > de localIssuer como [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) un elemento secundario del elemento issuedToken > que sea en sí mismo un elemento secundario del [ \<elemento > clientCredentials](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) en un comportamiento del extremo.
+1. Cree un [\<localIssuer>](../../configure-apps/file-schema/wcf/localissuer.md) elemento como elemento secundario del [\<issuedToken>](../../configure-apps/file-schema/wcf/issuedtoken.md) elemento que es en sí mismo un elemento secundario del [\<clientCredentials>](../../configure-apps/file-schema/wcf/clientcredentials.md) elemento en un comportamiento del extremo.
 
 2. Establezca el atributo `address` en la dirección del emisor local que aceptará las solicitudes del token.
 
 3. Establezca los atributos `binding` y `bindingConfiguration` en valores que hacen referencia al enlace adecuado que se debe usar cuando se comunica con el extremo del emisor local.
 
-4. Opcional. Establezca el [ \<elemento Identity >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) como un elemento secundario del elemento`localIssuer`> < y especifique la información de identidad del emisor local.
+4. Opcional. Establezca el [\<identity>](../../configure-apps/file-schema/wcf/identity.md) elemento como un elemento secundario del `localIssuer` elemento <> y especifique la información de identidad del emisor local.
 
-5. Opcional. Establezca el [ \<elemento headers >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) como un elemento secundario del elemento`localIssuer`> < y especifique encabezados adicionales que sean necesarios para solucionar correctamente el emisor local.
+5. Opcional. Establezca el [\<headers>](../../configure-apps/file-schema/wcf/headers.md) elemento como un elemento secundario del `localIssuer` elemento <> y especifique encabezados adicionales que sean necesarios para solucionar correctamente el emisor local.
 
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework
 
@@ -78,6 +78,6 @@ Tenga en cuenta que si se especifica una dirección y un enlace del emisor para 
 
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Configurar credenciales en un Servicio de federación](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [Procedimientos: Creación de un cliente federado](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [Cómo: Creación de un WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+- [Procedimiento para configurar las credenciales en un servicio de federación](how-to-configure-credentials-on-a-federation-service.md)
+- [Procedimiento para crear un cliente federado](how-to-create-a-federated-client.md)
+- [Procedimiento para crear un WSFederationHttpBinding](how-to-create-a-wsfederationhttpbinding.md)

@@ -1,5 +1,6 @@
 ---
 title: Procedimiento para firmar documentos XML con firmas digitales
+description: Obtenga información sobre cómo firmar documentos XML con firmas digitales. Use las clases en el espacio de nombres System. Security. Cryptography. XML en .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - XML signing
 - signing XML
 ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
-ms.openlocfilehash: 81fa5e4c503f26dc13758090f845fd8387287084
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 97bd23182ed54b899b76dbf43e179fe0c94b011d
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84277185"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598572"
 ---
 # <a name="how-to-sign-xml-documents-with-digital-signatures"></a>Procedimiento para firmar documentos XML con firmas digitales
 Puede usar las clases del espacio de nombres <xref:System.Security.Cryptography.Xml> para firmar un documento XML o parte de un documento XML con una firma digital.  Las firmas XML digitales (XMLDSIG) permiten comprobar que los datos no se modificaron después de firmarlos.  Para obtener más información sobre el estándar XMLDSIG, consulte la recomendación de la [firma XML](https://www.w3.org/TR/xmldsig-core/)del World Wide Web Consortium (W3C) y el procesamiento.  
@@ -116,7 +117,7 @@ Puede usar las clases del espacio de nombres <xref:System.Security.Cryptography.
   
  No inserte nunca una clave privada directamente en el código fuente.  Las claves incrustadas se pueden leer fácilmente desde un ensamblado mediante [Ildasm. exe (desensamblador de IL)](../../framework/tools/ildasm-exe-il-disassembler.md) o abriendo el ensamblado en un editor de texto como el Bloc de notas.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Security.Cryptography.Xml>
 - [Procedimiento para comprobar las firmas digitales de documentos XML](how-to-verify-the-digital-signatures-of-xml-documents.md)

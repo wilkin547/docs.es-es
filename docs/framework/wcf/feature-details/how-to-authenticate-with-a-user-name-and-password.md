@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-ms.openlocfilehash: 33205f9e12fcee53f2f29b63b836ea0cbc792025
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: e8dc9177afc590a6467855decfa8450b37c6fc77
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834736"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601288"
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>Procedimiento para autenticar con un nombre de usuario y contraseña
 
-En este tema se muestra cómo habilitar un servicio de Windows Communication Foundation (WCF) para autenticar un cliente con un nombre de usuario y una contraseña de dominio de Windows. Se supone que tiene un servicio WCF autohospedado que funciona. Para obtener un ejemplo de cómo crear un servicio WCF básico autohospedado, vea [Introducción tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md). En este tema se supone que el servicio se configura en código. Si desea ver un ejemplo de configuración de un servicio similar mediante un archivo de configuración, vea [nombre de usuario de seguridad de mensaje](../samples/message-security-user-name.md).
+En este tema se muestra cómo habilitar un servicio de Windows Communication Foundation (WCF) para autenticar un cliente con un nombre de usuario y una contraseña de dominio de Windows. Se supone que tiene un servicio WCF autohospedado que funciona. Para obtener un ejemplo de cómo crear un servicio WCF básico autohospedado, vea [Introducción tutorial](../getting-started-tutorial.md). En este tema se supone que el servicio se configura en código. Si desea ver un ejemplo de configuración de un servicio similar mediante un archivo de configuración, vea [nombre de usuario de seguridad de mensaje](../samples/message-security-user-name.md).
 
 Para configurar un servicio para autenticar a sus clientes mediante nombre de usuario y contraseñas de dominio Windows, use <xref:System.ServiceModel.WSHttpBinding> y establezca su propiedad `Security.Mode` en `Message`. Además debe especificar un certificado X509 que se usará para cifrar el nombre de usuario y la contraseña que se envían del cliente al servicio.
 
@@ -40,7 +40,7 @@ En el cliente, debe pedir al usuario el nombre de usuario y la contraseña y esp
     // ...
     ```
 
-    Puede usar su propio certificado; simplemente modifique el código para hacer referencia al certificado. Para obtener más información acerca de la creación y el uso de certificados, consulte [trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). Asegúrese de que el certificado está en el almacén de certificados Personas de confianza del equipo local. Para ello, ejecute MMC. exe y seleccione el elemento de menú **archivo**, **Agregar o quitar complemento..** .. En el cuadro de diálogo **Agregar o quitar complementos** , seleccione el **complemento certificados** y haga clic en **Agregar**. En el cuadro de diálogo complemento certificados, seleccione **cuenta de equipo**. De forma predeterminada el certificado generado por el ejemplo de Nombre de usuario de seguridad de mensaje se encuentra en la carpeta Personal/Certificados.  Se mostrará como "localhost" en la columna emitido para de la ventana de MMC. Arrastre y coloque el certificado en la carpeta **personas de confianza** . Esto permitirá a WCF tratar el certificado como certificado de confianza al realizar la autenticación.
+    Puede usar su propio certificado; simplemente modifique el código para hacer referencia al certificado. Para obtener más información acerca de la creación y el uso de certificados, consulte [trabajar con certificados](working-with-certificates.md). Asegúrese de que el certificado está en el almacén de certificados Personas de confianza del equipo local. Para ello, ejecute MMC. exe y seleccione el elemento de menú **archivo**, **Agregar o quitar complemento..** .. En el cuadro de diálogo **Agregar o quitar complementos** , seleccione el **complemento certificados** y haga clic en **Agregar**. En el cuadro de diálogo complemento certificados, seleccione **cuenta de equipo**. De forma predeterminada el certificado generado por el ejemplo de Nombre de usuario de seguridad de mensaje se encuentra en la carpeta Personal/Certificados.  Se mostrará como "localhost" en la columna emitido para de la ventana de MMC. Arrastre y coloque el certificado en la carpeta **personas de confianza** . Esto permitirá a WCF tratar el certificado como certificado de confianza al realizar la autenticación.
 
 ## <a name="to-call-the-service-passing-username-and-password"></a>Para llamar al servicio pasando el nombre de usuario y la contraseña
 
@@ -91,6 +91,6 @@ En el cliente, debe pedir al usuario el nombre de usuario y la contraseña y esp
 - <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>
 - <xref:System.ServiceModel.WSHttpSecurity.Mode%2A>
 - <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A>
-- [Seguridad del transporte con la autenticación básica](transport-security-with-basic-authentication.md)
+- [Seguridad de transporte con autenticación básica](transport-security-with-basic-authentication.md)
 - [Seguridad distribuida de aplicaciones](distributed-application-security.md)
 - [\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md)

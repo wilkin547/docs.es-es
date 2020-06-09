@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], one-way service contracts
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
-ms.openlocfilehash: d567674baa92ad096b10a1199fa3f04f05939df5
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 0d69af40e4b9a0133e44b64b45466f9aac84ffe2
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991172"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598754"
 ---
 # <a name="one-way-services"></a>Servicios unidireccionales
 El comportamiento predeterminado de una operación de servicio es el patrón de solicitud-respuesta. En un patrón de este tipo, el cliente espera el mensaje de respuesta, aun cuando la operación de servicio se representa en código como un método `void`. Con una operación unidireccional, sólo se transmite un mensaje. El receptor no envía un mensaje de respuesta, ni el remitente lo espera.  
@@ -20,7 +20,7 @@ El comportamiento predeterminado de una operación de servicio es el patrón de 
   
 - Cuando el cliente debe llamar a las operaciones y no está afectado por el resultado de la operación en el nivel de la operación.  
   
-- Cuando se usa la clase <xref:System.ServiceModel.NetMsmqBinding> o <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. (Para obtener más información acerca de este escenario, vea [colas en WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)).  
+- Cuando se usa la clase <xref:System.ServiceModel.NetMsmqBinding> o <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. (Para obtener más información acerca de este escenario, vea [colas en WCF](queues-in-wcf.md)).  
   
  Cuando una operación es unidireccional, no hay ningún mensaje de respuesta para devolver la información de error al cliente. Puede detectar las condiciones de error mediante las características del enlace subyacente, como sesiones de confianza, o diseñando un contrato de servicio dúplex que utiliza dos operaciones unidireccionales; es decir, un contrato unidireccional del cliente al servicio para llamar a la operación de servicio y otro contrato unidireccional entre el servicio y el cliente para que el servicio pueda devolver los errores al cliente utilizando una devolución de llamada que el cliente implementa.  
   
@@ -41,7 +41,7 @@ public interface IOneWayCalculator
 }  
 ```  
   
- Para obtener un ejemplo completo, vea el ejemplo [unidireccional](../../../../docs/framework/wcf/samples/one-way.md) .  
+ Para obtener un ejemplo completo, vea el ejemplo [unidireccional](../samples/one-way.md) .  
   
 ## <a name="clients-blocking-with-one-way-operations"></a>Clientes que se bloquean con operaciones unidireccionales  
  Es importante tener en cuentan que, mientras que algunas aplicaciones unidireccionales devuelven en cuanto los datos salientes se escriben en la conexión de red, en varios escenarios, la implementación de un enlace o de un servicio puede hacer que un cliente WCF se bloquee mediante operaciones unidireccionales. En las aplicaciones cliente de WCF, el objeto de cliente de WCF no vuelve hasta que los datos salientes se hayan escrito en la conexión de red. Esto se cumple para todos los patrones de intercambio de mensajes, incluidas las operaciones unidireccionales, lo que significa que cualquier problema que se produzca al escribir los datos en el transporte impide que se devuelva el cliente. Dependiendo del problema, el resultado podría ser una excepción o un retraso en el envío de mensajes al servicio.  
@@ -56,4 +56,4 @@ public interface IOneWayCalculator
   
 ## <a name="see-also"></a>Vea también
 
-- [Unidireccional](../../../../docs/framework/wcf/samples/one-way.md)
+- [Unidireccional](../samples/one-way.md)

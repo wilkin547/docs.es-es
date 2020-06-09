@@ -2,15 +2,15 @@
 title: Integración de System.Web.Routing
 ms.date: 03/30/2017
 ms.assetid: 31fe2a4f-5c47-4e5d-8ee1-84c524609d41
-ms.openlocfilehash: a80b5c3b336b4fd18b347a25ceaf509baf6461b4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 059f14c94bb7502a2e4f4616ca2c5e6ac5273afa
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184395"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600742"
 ---
 # <a name="systemwebrouting-integration"></a>Integración de System.Web.Routing
-Al hospedar un servicio de Windows Communication Foundation (WCF) en Internet Information Service (IIS) se coloca un archivo .svc en el directorio virtual. Este archivo .svc especifica el generador de host de servicio que se debe usar, así como la clase que implementa el servicio. Al realizar solicitudes al servicio, especifique el archivo .svc `http://contoso.com/EmployeeServce.svc`en el URI, por ejemplo: . Para programadores que escriben servicios de REST, este tipo de URI no es óptimo. Los URI para los servicios de REST especifican un recurso determinado y normalmente no tienen ninguna extensión. La <xref:System.Web.Routing> característica de integración le permite hospedar un servicio REST de WCF que responde a los URI sin una extensión. Para obtener más información sobre el [enrutamiento,](https://docs.microsoft.com/previous-versions/aspnet/cc668201(v=vs.100))consulte enrutamiento ASP.NET .  
+Al hospedar un servicio de Windows Communication Foundation (WCF) en Internet Information Services (IIS), se coloca un archivo. SVC en el directorio virtual. Este archivo .svc especifica el generador de host de servicio que se debe usar, así como la clase que implementa el servicio. Al hacer solicitudes al servicio, se especifica el archivo. SVC en el URI, por ejemplo: `http://contoso.com/EmployeeServce.svc` . Para programadores que escriben servicios de REST, este tipo de URI no es óptimo. Los URI para los servicios de REST especifican un recurso determinado y normalmente no tienen ninguna extensión. La <xref:System.Web.Routing> característica de integración de permite hospedar un servicio REST de WCF que responde a los URI sin una extensión. Para obtener más información acerca del enrutamiento, consulte [enrutamiento ASP.net](https://docs.microsoft.com/previous-versions/aspnet/cc668201(v=vs.100)).  
   
 ## <a name="using-systemwebrouting-integration"></a>Usar la integración de System.Web.Routing  
  Para usar la característica de integración de <xref:System.Web.Routing>, utilice la clase <xref:System.ServiceModel.Activation.ServiceRoute> para crear una o más rutas y agregarlas a <xref:System.Web.Routing.RouteTable> en un archivo Global.asax. Estas rutas especifican los URI relativos a los que responde el servicio. El ejemplo siguiente muestra cómo hacerlo.  
@@ -49,7 +49,7 @@ Al hospedar un servicio de Windows Communication Foundation (WCF) en Internet In
     </system.webServer>  
 ```  
   
- Esto carga un módulo y el controlador requerido para el enrutamiento. Para más información, vea [Enrutamiento](../../../../docs/framework/wcf/feature-details/routing.md). También debe establecer el atributo `aspNetCompatibilityEnabled` como `true` en el elemento `<serviceHostingEnvironment>`, tal y como se muestra en el siguiente ejemplo.  
+ Esto carga un módulo y el controlador requerido para el enrutamiento. Para más información, vea [Enrutamiento](routing.md). También debe establecer el atributo `aspNetCompatibilityEnabled` como `true` en el elemento `<serviceHostingEnvironment>`, tal y como se muestra en el siguiente ejemplo.  
   
 ```xml  
 <system.serviceModel>  
@@ -69,7 +69,7 @@ Al hospedar un servicio de Windows Communication Foundation (WCF) en Internet In
     }  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Modelo de programación de web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [Modelo de programación de web HTTP de WCF](wcf-web-http-programming-model.md)
 - [Enrutamiento de ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/cc668201(v=vs.100))

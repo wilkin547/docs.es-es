@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6400bc71-a858-4ac2-8d5a-caa72d3b5482
-ms.openlocfilehash: cd8d76137ac195e452a7d66fb6ddbeda405a922f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 28f2858d68de99839d7fec66b0fe4528d7e42325
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185095"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84579532"
 ---
 # <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>Cómo: Configurar un servicio de Windows Communication Foundation para utilizar puertos compartidos
-La forma más fácil de usar el uso compartido de puertos net.tcp:// <xref:System.ServiceModel.NetTcpBinding>en la aplicación de Windows Communication Foundation (WCF) es exponer un servicio mediante el archivo .  
+La manera más sencilla de utilizar el uso compartido de puertos net. TCP://en la aplicación Windows Communication Foundation (WCF) es exponer un servicio mediante <xref:System.ServiceModel.NetTcpBinding> .  
   
  Este enlace proporciona una propiedad <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> que controla si la compartición de puertos de net.tcp:// está habilitada para el servicio que se está configurando con este enlace.  
   
@@ -21,7 +21,7 @@ La forma más fácil de usar el uso compartido de puertos net.tcp:// <xref:Syste
   
 ### <a name="to-enable-nettcp-port-sharing-on-a-nettcpbinding-in-code"></a>Para habilitar la compartición de puertos de net.tcp:// en un NetTcpBinding mediante código  
   
-1. Cree un servicio para `IMyService` implementar un `MyService`contrato llamado y llámelo , .  
+1. Cree un servicio para implementar un contrato llamado `IMyService` y llámelo `MyService` .  
   
      [!code-csharp[c_ConfigurePortSharing#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_configureportsharing/cs/source.cs#1)]
      [!code-vb[c_ConfigurePortSharing#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_configureportsharing/vb/source.vb#1)]  
@@ -60,7 +60,7 @@ La forma más fácil de usar el uso compartido de puertos net.tcp:// <xref:Syste
 </system.serviceModel>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Uso compartido de puertos Net.TCP](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)
-- [Cómo habilitar el servicio de uso compartido de puertos Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)
+- [Uso compartido de puertos Net.TCP](net-tcp-port-sharing.md)
+- [Procedimiento para habilitar el servicio de uso compartido de puertos Net.TCP](how-to-enable-the-net-tcp-port-sharing-service.md)

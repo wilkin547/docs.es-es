@@ -2,18 +2,18 @@
 title: 'Anticipación de la adopción de Windows Communication Foundation: cómo facilitar la futura integración'
 ms.date: 03/30/2017
 ms.assetid: 3028bba8-6355-4ee0-9ecd-c56e614cb474
-ms.openlocfilehash: c6e749c32947a4159d6bfd56c4d30a06f6ef0b7f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6392194b3124c999031123225dcc28c8de6171e9
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650562"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84576530"
 ---
 # <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Anticipación de la adopción de Windows Communication Foundation: cómo facilitar la futura integración
-Si utiliza ASP.NET hoy en día y prevé usar WCF en el futuro, este tema proporcionan instrucciones para asegurarse de que los nuevos servicios Web ASP.NET funcionarán bien junto con las aplicaciones WCF.  
+Si usa ASP.NET hoy y prevé usar WCF en el futuro, en este tema se proporcionan instrucciones para asegurarse de que los nuevos servicios Web de ASP.NET funcionarán bien junto con las aplicaciones WCF.  
   
 ## <a name="general-recommendations"></a>Recomendaciones generales  
- Adopte ASP.NET 2.0 para cualquier nuevo servicio. Al hacer esto, se proporcionará acceso a las mejoras y ampliaciones de la nueva versión. Sin embargo, también permitirá la posibilidad de utilizar los componentes de ASP.NET 2.0 junto con los componentes WCF en la misma aplicación.  
+ Adopte ASP.NET 2.0 para cualquier nuevo servicio. Al hacer esto, se proporcionará acceso a las mejoras y ampliaciones de la nueva versión. Sin embargo, también permitirá la posibilidad de usar componentes de ASP.NET 2,0 junto con componentes de WCF en la misma aplicación.  
   
 ## <a name="protocols"></a>Protocolos  
  Use la nueva facilidad de ASP.NET 2.0 para validar la conformidad con WS-I Basic Profile 1.1:  
@@ -26,23 +26,23 @@ Si utiliza ASP.NET hoy en día y prevé usar WCF en el futuro, este tema proporc
 public interface IEcho  
 ```  
   
- Servicios Web ASP.NET que cumplen con WS-I Basic Profile 1.1 serán interoperable con clientes de WCF mediante el uso de enlace, WCF predefinido <xref:System.ServiceModel.BasicHttpBinding>.  
+ Los servicios Web de ASP.NET que cumplen con WS-I Basic Profile 1,1 serán interoperables con los clientes de WCF mediante el enlace predefinido de WCF <xref:System.ServiceModel.BasicHttpBinding> .  
   
 ## <a name="service-development"></a>Desarrollo del servicio  
- Evite usar el atributo <xref:System.Web.Services.Protocols.SoapDocumentServiceAttribute> para que los mensajes se enruten a métodos en función del nombre completo del elemento de cuerpo del mensaje SOAP en lugar del encabezado HTTP SOAPAction. WCF usa el encabezado HTTP SOAPAction para enrutar los mensajes.  
+ Evite usar el atributo <xref:System.Web.Services.Protocols.SoapDocumentServiceAttribute> para que los mensajes se enruten a métodos en función del nombre completo del elemento de cuerpo del mensaje SOAP en lugar del encabezado HTTP SOAPAction. WCF usa el encabezado HTTP SOAPAction para enrutar mensajes.  
   
 ## <a name="data-representation"></a>Representación de datos  
- El XML en el que <xref:System.Xml.Serialization.XmlSerializer> serializa de forma predeterminada un tipo es semánticamente idéntico al XML en el que <xref:System.Runtime.Serialization.DataContractSerializer> serializa un tipo, dando por hecho que el espacio de nombres para el XML se define explícitamente. Al definir un tipo de datos para su uso con los servicios Web ASP.NET en previsión de adoptar WCF en el futuro, realice lo siguiente:  
+ El XML en el que <xref:System.Xml.Serialization.XmlSerializer> serializa de forma predeterminada un tipo es semánticamente idéntico al XML en el que <xref:System.Runtime.Serialization.DataContractSerializer> serializa un tipo, dando por hecho que el espacio de nombres para el XML se define explícitamente. Al definir un tipo de datos para su uso con los servicios Web de ASP.NET en previsión de adoptar WCF en el futuro, haga lo siguiente:  
   
 1. Defina el tipo mediante las clases de .NET Framework en lugar de mediante el Esquema XML.  
   
 2. Agregue solo <xref:System.SerializableAttribute> y <xref:System.Xml.Serialization.XmlRootAttribute> a la clase, utilizando el último para definir explícitamente el espacio de nombres del tipo. No agregue atributos adicionales del espacio de nombres <xref:System.Xml.Serialization> para controlar cómo se traducirá la clase de .NET Framework a XML.  
   
- Mediante el uso de este enfoque, debería ser capaz de convertir más adelante las clases .NET en contratos de datos agregando  <xref:System.Runtime.Serialization.DataContractAttribute> y <xref:System.Runtime.Serialization.DataMemberAttribute> sin modificar significativamente el XML en el que las clases se serializan para la transmisión. Los tipos utilizados en los mensajes de servicios Web ASP.NET podrán ser procesados como contratos de datos por aplicaciones de WCF, proporcionando, entre otras ventajas, un mejor rendimiento en las aplicaciones WCF.  
+ Mediante el uso de este enfoque, debería ser capaz de convertir más adelante las clases .NET en contratos de datos agregando  <xref:System.Runtime.Serialization.DataContractAttribute> y <xref:System.Runtime.Serialization.DataMemberAttribute> sin modificar significativamente el XML en el que las clases se serializan para la transmisión. Los tipos que se usan en los mensajes de los servicios Web de ASP.NET se podrán procesar como contratos de datos por parte de las aplicaciones WCF, produciendo, entre otras ventajas, un mejor rendimiento en las aplicaciones WCF.  
   
 ## <a name="security"></a>Seguridad  
- Evite usar las opciones de autenticación proporcionadas por Internet Information Services (IIS). Los clientes de WCF no las admiten. Si es necesario proteger un servicio, utilice las opciones proporcionadas por WCF, ya que estas opciones son mejores y se basan en protocolos estándares.  
+ Evite usar las opciones de autenticación proporcionadas por Internet Information Services (IIS). Los clientes de WCF no las admiten. Si es necesario proteger un servicio, utilice las opciones proporcionadas por WCF, ya que estas opciones son más enriquecidas y se basan en protocolos estándar.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Anticipación de la adopción de Windows Communication Foundation: Cómo facilitar la futura migración](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
+- [Anticipación de la adopción de Windows Communication Foundation: cómo facilitar la futura migración](anticipating-adopting-wcf-migration.md)

@@ -2,12 +2,12 @@
 title: System.ServiceModel.TxCompletionStatusCompletedForAutocomplete
 ms.date: 03/30/2017
 ms.assetid: 79ec2a3f-8407-4c4c-a1bc-2b0e6e21c543
-ms.openlocfilehash: d84daadfed21e20a5dc2e0fc2947c1c5f02df209
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eebbd62d35448b71cdcce71c5ffedc50da2e65f7
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991762"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84576569"
 ---
 # <a name="systemservicemodeltxcompletionstatuscompletedforautocomplete"></a>System.ServiceModel.TxCompletionStatusCompletedForAutocomplete
 La transacción especificada para la operación especificada se completó debido a que el miembro `OperationBehaviorAttribute.TransactionAutoComplete` se estableció en `true`.  
@@ -17,6 +17,6 @@ La transacción especificada para la operación especificada se completó debido
   
 ## <a name="see-also"></a>Vea también
 
-- [Traza](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Uso del seguimiento para solucionar problemas de su aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Seguimiento](index.md)
+- [Uso del seguimiento para solucionar problemas de su aplicación](using-tracing-to-troubleshoot-your-application.md)
+- [Administración y diagnóstico](../index.md)

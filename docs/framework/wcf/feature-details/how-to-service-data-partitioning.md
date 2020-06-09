@@ -2,12 +2,12 @@
 title: Cómo Particionar datos de servicio
 ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-ms.openlocfilehash: 49aefd88d73732a139a79f8c53d5beca44d4d4ba
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3b2f86ee6a4dea25fb5c972d4cecb1b9ed411b29
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947873"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601197"
 ---
 # <a name="how-to-service-data-partitioning"></a>Cómo Particionar datos de servicio
 Este tema describe los pasos básicos necesarios para realizar particiones de los mensajes en múltiples instancias de un mismo servicio de destino. La partición de datos de servicio se suele utilizar cuando hay que ajustar un servicio para proporcionar una mayor calidad del servicio, o cuando hay que administrar solicitudes de diversos clientes de una manera determinada. Por ejemplo, es posible que los mensajes de clientes de gran valor o "oro" deban procesarse con una prioridad más alta que los mensajes de un cliente estándar.  
@@ -175,4 +175,4 @@ Este tema describe los pasos básicos necesarios para realizar particiones de lo
   
 ## <a name="see-also"></a>Vea también
 
-- [Servicios de enrutamiento](../../../../docs/framework/wcf/samples/routing-services.md)
+- [Servicios de enrutamiento](../samples/routing-services.md)
