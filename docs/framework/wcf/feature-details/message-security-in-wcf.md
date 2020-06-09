@@ -2,16 +2,16 @@
 title: Seguridad de los mensajes en WCF
 ms.date: 03/30/2017
 ms.assetid: a80efb59-591a-4a37-bb3c-8fffa6ca0b7d
-ms.openlocfilehash: 32f6659f6ac744ab7af07c23e7e26ea1124d020c
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 6875339df327371a79bc9b9072aca2df0bc7d3f6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76212067"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602666"
 ---
 # <a name="message-security-in-wcf"></a>Seguridad de los mensajes en WCF
 
-Windows Communication Foundation (WCF) tiene dos modos principales para proporcionar seguridad (`Transport` y `Message`) y un tercer modo (`TransportWithMessageCredential`) que combina los dos. Este tema trata la seguridad del mensaje y las razones para utilizarla.
+Windows Communication Foundation (WCF) tiene dos modos principales para proporcionar seguridad ( `Transport` y `Message` ) y un tercer modo ( `TransportWithMessageCredential` ) que combina los dos. Este tema trata la seguridad del mensaje y las razones para utilizarla.
 
 ## <a name="what-is-message-security"></a>¿Qué es Seguridad de mensaje?
 
@@ -29,11 +29,11 @@ En seguridad de nivel de mensaje, toda la información de seguridad se encapsula
 
 - Compatibilidad con varios transportes. Puede enviar mensajes seguros sobre muchos transportes diferentes, como canalizaciones con nombre y TCP, sin tener que confiar en el protocolo para la seguridad. Con seguridad de nivel de transporte, toda la información de seguridad es delimitada a una conexión de transporte determinada única y no está disponible desde el propio contenido del mensaje. La seguridad de mensaje protege el mensaje sin tener en cuenta el transporte que usted utiliza para transmitir el mensaje y el contexto de seguridad se incrusta directamente dentro del mensaje.
 
-- Compatibilidad con un amplio conjunto de credenciales y notificaciones. La seguridad del mensaje está basada en la especificación WS-Security, que proporciona un marco extensible capaz de transmitir cualquier tipo de notificación dentro del mensaje SOAP. A diferencia de la seguridad de transporte, el conjunto de mecanismos de autenticación, o notificaciones, que puede usar no está limitado por las funciones de transporte. La seguridad de mensajes de WCF incluye varios tipos de autenticación y transmisión de notificaciones, y se puede extender para admitir tipos adicionales según sea necesario. Por esas razones, por ejemplo, no es posible un escenario de credenciales federado sin seguridad de mensaje. Para obtener más información sobre los escenarios de Federación que WCF admite, consulte [Federación y tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).
+- Compatibilidad con un amplio conjunto de credenciales y notificaciones. La seguridad del mensaje está basada en la especificación WS-Security, que proporciona un marco extensible capaz de transmitir cualquier tipo de notificación dentro del mensaje SOAP. A diferencia de la seguridad de transporte, el conjunto de mecanismos de autenticación, o notificaciones, que puede usar no está limitado por las funciones de transporte. La seguridad de mensajes de WCF incluye varios tipos de autenticación y transmisión de notificaciones, y se puede extender para admitir tipos adicionales según sea necesario. Por esas razones, por ejemplo, no es posible un escenario de credenciales federado sin seguridad de mensaje. Para obtener más información sobre los escenarios de Federación que WCF admite, consulte [Federación y tokens emitidos](federation-and-issued-tokens.md).
 
-## <a name="how-message-and-transport-security-compare"></a>Comparación de seguridad de transporte y seguridad de mensajes
+## <a name="how-message-and-transport-security-compare"></a>Comparación de seguridad de transporte y seguridad de mensajes 
 
-### <a name="pros-and-cons-of-transport-level-security"></a>Ventajas y desventajas de Seguridad de nivel de transporte
+### <a name="pros-and-cons-of-transport-level-security"></a>Ventajas y desventajas de Seguridad de nivel de transporte 
 
 La seguridad de transporte tiene las ventajas siguientes:
 
@@ -65,7 +65,7 @@ La seguridad de mensaje tiene las siguientes desventajas:
 
 ## <a name="see-also"></a>Vea también
 
-- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Seguridad de transporte](../../../../docs/framework/wcf/feature-details/transport-security.md)
-- [Uso de la seguridad de transporte y las credenciales de mensajes](../../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)
-- [Patrones y prácticas de Microsoft, capítulo 3: implementar el transporte y la seguridad de la capa de mensajes](https://docs.microsoft.com/previous-versions/msp-n-p/ff647370(v=pandp.10))
+- [Protección de servicios y clientes](securing-services-and-clients.md)
+- [Seguridad de transporte](transport-security.md)
+- [Procedimiento para usar seguridad de transporte y credenciales de mensajes](how-to-use-transport-security-and-message-credentials.md)
+- [Microsoft Patterns and Practices, Chapter 3: Implementing Transport and Message Layer Security](https://docs.microsoft.com/previous-versions/msp-n-p/ff647370(v=pandp.10))

@@ -2,18 +2,18 @@
 title: Diagnóstico de aplicaciones transaccionales
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
-ms.openlocfilehash: 9a4f064d903092b04f8885fb00b56e18c9cfeb74
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fb3a83083e876cf697621ba70dcf7dd67636f83a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751119"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599222"
 ---
 # <a name="diagnosing-transactional-applications"></a>Diagnóstico de aplicaciones transaccionales
-Este tema describe cómo usar la característica de diagnóstico y administración de Windows Communication Foundation (WCF) para solucionar problemas de una aplicación transaccional.  
+En este tema se describe cómo usar la característica de diagnóstico y administración de Windows Communication Foundation (WCF) para solucionar problemas de una aplicación transaccional.  
   
 ## <a name="performance-counters"></a>Contadores de rendimiento  
- WCF ofrece un conjunto estándar de contadores de rendimiento para medir el rendimiento de su aplicación transaccional. Para más información, vea [Contadores de rendimiento](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md).  
+ WCF proporciona un conjunto estándar de contadores de rendimiento para medir el rendimiento de la aplicación transaccional. Para más información, consulte [Performance Counters](../diagnostics/performance-counters/index.md).  
   
  Los contadores de rendimiento tienen tres niveles de alcance diferentes: servicio, punto de conexión y operación, tal y como se describe en las tablas siguientes.  
   
@@ -44,43 +44,43 @@ Este tema describe cómo usar la característica de diagnóstico y administraci�
 |Flujo de transacciones|Número de transacciones de flujo a las operaciones en este punto de conexión. Este contador se incrementa siempre que se encuentra una transacción en el mensaje enviado al punto de conexión.|  
 |Flujo de transacciones por segundo|El número de transacciones que fluyeron a operaciones en este punto de conexión en cada segundo. Este contador se incrementa siempre que se encuentra una transacción en el mensaje enviado al punto de conexión.|  
   
-## <a name="windows-management-instrumentation"></a>Windows Management Instrumentation  
- WCF expone datos de inspección de un servicio en tiempo de ejecución a través de un proveedor de Instrumental de administración de Windows (WMI) de WCF. Para obtener más información sobre el acceso a datos WMI, consulte [utilizando Instrumental de administración de Windows para el diagnóstico](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+## <a name="windows-management-instrumentation"></a>Instrumental de administración de Windows  
+ WCF expone datos de inspección de un servicio en tiempo de ejecución a través de un proveedor de WCF Instrumental de administración de Windows (WMI). Para obtener más información sobre el acceso a los datos de WMI, vea [uso de instrumental de administración de Windows para diagnósticos](../diagnostics/wmi/index.md).  
   
  Varias propiedades WMI de solo lectura indican los valores de transacción aplicados para un servicio. Las tablas siguientes hacen una lista de todos estos valores.  
   
  En un servicio, `ServiceBehaviorAttribute` tiene las propiedades siguientes.  
   
-|Name|Tipo|Descripción|  
+|Nombre|Tipo|Descripción|  
 |----------|----------|-----------------|  
-|ReleaseServiceInstanceOnTransactionComplete|Booleano|Especifica si el objeto de servicio se recicla cuando la transacción actual completa.|  
-|TransactionAutoCompleteOnSessionClose|Booleano|Especifica si las transacciones pendientes se completan cuando la sesión actual se cierra.|  
+|ReleaseServiceInstanceOnTransactionComplete|Boolean|Especifica si el objeto de servicio se recicla cuando la transacción actual completa.|  
+|TransactionAutoCompleteOnSessionClose|Boolean|Especifica si las transacciones pendientes se completan cuando la sesión actual se cierra.|  
 |TransactionIsolationLevel|Una cadena que contiene un valor válido de la enumeración <xref:System.Transactions.IsolationLevel>.|Especifica el nivel de aislamiento de transacción que este servicio admite.|  
 |TransactionTimeout|<xref:System.DateTime>|Especifica el período dentro del que una transacción se debe completar.|  
   
  El `ServiceTimeoutsBehavior` tiene la siguiente propiedad.  
   
-|Name|Tipo|Descripción|  
+|Nombre|Tipo|Descripción|  
 |----------|----------|-----------------|  
 |TransactionTimeout|<xref:System.DateTime>|Especifica el período dentro del que una transacción se debe completar.|  
   
  En un enlace, el `TransactionFlowBindingElement` tiene las propiedades siguientes.  
   
-|Name|Tipo|Descripción|  
+|Nombre|Tipo|Descripción|  
 |----------|----------|-----------------|  
 |TransactionProtocol|Una cadena que contiene un valor válido del tipo <xref:System.ServiceModel.TransactionProtocol>.|Especifica el protocolo de transacción a utilizar para que una transacción fluya.|  
-|TransactionFlow|Booleano|Especifica si el flujo de transacciones entrantes está habilitado.|  
+|TransactionFlow|Boolean|Especifica si el flujo de transacciones entrantes está habilitado.|  
   
  En una operación, el `OperationBehaviorAttribute` tiene las propiedades siguientes:  
   
-|Name|Tipo|Descripción|  
+|Nombre|Tipo|Descripción|  
 |----------|----------|-----------------|  
-|TransactionAutoComplete|Booleano|Especifica si confirmar automáticamente la transacción actual si no se produce ninguna excepción no controlada.|  
-|TransactionScopeRequired|Booleano|Especifica si la operación requiere una transacción.|  
+|TransactionAutoComplete|Boolean|Especifica si confirmar automáticamente la transacción actual si no se produce ninguna excepción no controlada.|  
+|TransactionScopeRequired|Boolean|Especifica si la operación requiere una transacción.|  
   
  En una operación, el `TransactionFlowAttribute` tiene las propiedades siguientes:  
   
-|Name|Tipo|Descripción|  
+|Nombre|Tipo|Descripción|  
 |----------|----------|-----------------|  
 |TransactionFlowOption|Una cadena que contiene un valor válido de la enumeración <xref:System.ServiceModel.TransactionFlowOption>.|Especifica hasta qué punto se requiere el flujo de la transacción.|  
   
@@ -89,11 +89,11 @@ Este tema describe cómo usar la característica de diagnóstico y administraci�
   
 - Seguimiento de WCF estándar  
   
-     Este tipo de seguimiento es el mismo que el seguimiento de cualquier aplicación WCF. Para obtener más información, consulta [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
+     Este tipo de seguimiento es el mismo que el de cualquier aplicación WCF. Para obtener más información, consulta [Configuring Tracing](../diagnostics/tracing/configuring-tracing.md).  
   
 - Trazado de WS-AtomicTransaction  
   
-     Seguimiento WS-AtomicTransaction puede habilitarse mediante la [WS-AtomicTransaction Configuration Utility (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md). Tal seguimiento proporciona una visión sobre el estado de las transacciones y participantes de un sistema. Para también permitir el seguimiento de Service Model, puede establecer la clave del Registro`HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` en un valor válido de la enumeración <xref:System.Diagnostics.SourceLevels>. Puede habilitar el registro de mensajes en la misma manera que otras aplicaciones WCF.  
+     El seguimiento de WS-AtomicTransaction se puede habilitar mediante la [utilidad de configuración de WS-AtomicTransaction (wsatConfig. exe)](../ws-atomictransaction-configuration-utility-wsatconfig-exe.md). Tal seguimiento proporciona una visión sobre el estado de las transacciones y participantes de un sistema. Para también permitir el seguimiento de Service Model, puede establecer la clave del Registro`HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` en un valor válido de la enumeración <xref:System.Diagnostics.SourceLevels>. Puede habilitar el registro de mensajes de la misma manera que otras aplicaciones WCF.  
   
 - Seguimiento de `System.Transactions`  
   
@@ -118,10 +118,10 @@ Este tema describe cómo usar la característica de diagnóstico y administraci�
     </configuration>  
     ```  
   
-     Esto también habilita el seguimiento de WCF, como WCF también utiliza el <xref:System.Transactions> infraestructura.  
+     Esto también habilita el seguimiento de WCF, ya que WCF también emplea la <xref:System.Transactions> infraestructura.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Administración y diagnóstico](../../../../docs/framework/wcf/diagnostics/index.md)
-- [Configuración de la traza](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
-- [Utilidad de configuración de WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+- [Administración y diagnóstico](../diagnostics/index.md)
+- [Configurar seguimiento](../diagnostics/tracing/configuring-tracing.md)
+- [Utilidad de configuración de WS-AtomicTransaction (wsatConfig.exe)](../ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

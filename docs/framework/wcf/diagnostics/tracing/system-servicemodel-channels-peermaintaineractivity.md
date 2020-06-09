@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.PeerMaintainerActivity
 ms.date: 03/30/2017
 ms.assetid: ef28d086-d7fb-4e81-82e9-45a54647783b
-ms.openlocfilehash: ea4c8110a8f820e0c6204fbd22b3d5b747709fba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ce97eaa2ad5c9dbd5f4d6f81186960c489eb4b85
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61950467"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596082"
 ---
 # <a name="systemservicemodelchannelspeermaintaineractivity"></a>System.ServiceModel.Channels.PeerMaintainerActivity
 El módulo PeerMaintainer realiza una operación específica (los detalles se incluyen en el cuerpo del mensaje de seguimiento).  
@@ -19,6 +19,6 @@ El módulo PeerMaintainer realiza una operación específica (los detalles se in
   
 ## <a name="see-also"></a>Vea también
 
-- [Traza](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Uso del seguimiento para solucionar problemas de su aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Seguimiento](index.md)
+- [Uso del seguimiento para solucionar problemas de su aplicación](using-tracing-to-troubleshoot-your-application.md)
+- [Administración y diagnóstico](../index.md)

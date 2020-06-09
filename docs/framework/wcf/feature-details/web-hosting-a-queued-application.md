@@ -2,19 +2,19 @@
 title: Alojamiento web de una aplicación en cola
 ms.date: 03/30/2017
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-ms.openlocfilehash: 36c35fe0590ad9fc728641313d4175a432d7ccaa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 17c3d2167d3f98017c5f366ab0d700d9fb889f82
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951575"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600145"
 ---
 # <a name="web-hosting-a-queued-application"></a>Alojamiento web de una aplicación en cola
-El servicio de activación de procesos de Windows (WAS) administra la activación y la duración de los procesos de trabajo que contienen aplicaciones que hospedan servicios Windows Communication Foundation (WCF). El modelo de proceso de WAS generaliza el modelo de proceso de IIS 6,0 para el servidor HTTP mediante la eliminación de la dependencia en HTTP. Esto permite a los servicios WCF usar protocolos HTTP y que no sean HTTP, como net. MSMQ y MSMQ. FormatName, en un entorno de hospedaje que admita la activación basada en mensaje y ofrece la posibilidad de hospedar un gran número de aplicaciones en un equipo determinado.  
+El Servicio de activación de procesos de Windows (WAS) administra la activación y la duración de los procesos de trabajo que contienen aplicaciones que hospedan los servicios de Windows Communication Foundation (WCF). El modelo de proceso de WAS generaliza el proceso IIS 6.0 para el servidor HTTP mediante la eliminación de la dependencia en HTTP. Esto permite a los servicios WCF usar protocolos HTTP y que no sean HTTP, como net. MSMQ y MSMQ. FormatName, en un entorno de hospedaje que admita la activación basada en mensaje y ofrece la posibilidad de hospedar un gran número de aplicaciones en un equipo determinado.  
   
  WAS incluye un servicio de activación de Message Queuing (MSMQ) que activa una aplicación en cola cuando hay uno o más mensajes en una de las colas que la aplicación usa. El servicio de activación MSMQ es un servicio NT que se inicia automáticamente de forma predeterminada.  
   
- Para obtener más información acerca de WAS y sus ventajas, consulte [hospedaje en el servicio de activación de procesos de Windows](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md). Para obtener más información acerca de MSMQ, consulte [información general sobre colas](../../../../docs/framework/wcf/feature-details/queues-overview.md).
+ Para obtener más información acerca de WAS y sus ventajas, consulte [hospedaje en el servicio de activación de procesos de Windows](hosting-in-windows-process-activation-service.md). Para obtener más información acerca de MSMQ, consulte [información general sobre colas](queues-overview.md).
   
 ## <a name="queue-addressing-in-was"></a>Direccionamiento de la cola en WAS  
  Las aplicaciones de WAS tienen direcciones de Identificador uniforme de recursos (URI). Las direcciones de la aplicación tienen dos partes: un prefijo base de URI y un específico de la aplicación, dirección relativa (ruta de acceso). Estas dos partes proporcionan la dirección externa de una aplicación cuando se combinan. El prefijo de URI base se construye a partir del enlace de sitio y se utiliza para todas las aplicaciones del sitio, por ejemplo, "net. MSMQ: psico", "MSMQ. FormatName: psico" o "net. TCP: combinación". A continuación, las direcciones de la aplicación se construyen tomando fragmentos de la ruta de acceso específica de la aplicación (como "/applicationOne") y agregándolos al prefijo de URI base para llegar al URI completo de la aplicación, por ejemplo, "net. MSMQ://localhost/applicationOne".  
@@ -43,5 +43,5 @@ El servicio de activación de procesos de Windows (WAS) administra la activació
   
 ## <a name="see-also"></a>Vea también
 
-- [Control de mensajes dudosos](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
-- [Puntos de conexión de servicio y direccionamiento de la cola](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)
+- [Control de mensajes dudosos](poison-message-handling.md)
+- [Extremos de servicio y direccionamiento de la cola](service-endpoints-and-queue-addressing.md)
