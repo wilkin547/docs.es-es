@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fe374932-67f5-487d-9325-f868812b92e4
-ms.openlocfilehash: f31f24cfc18f2c56539fe2b4623d54fe77a27797
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e4ce1fa7b494c2317a1bddc57ee6b150c84b9a96
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950596"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593151"
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Procedimiento para exponer una fuente como Atom y RSS
-Windows Communication Foundation (WCF) le permite crear un servicio que exponga una fuente de distribución. En este tema se explica cómo crear un servicio de distribución que exponga una fuente de distribución mediante Atom 1.0 y RSS 2.0. Este servicio expone un punto de conexión que puede devolver cualquiera de los dos formatos de distribución. Para simplificar, el servicio usado en este ejemplo tiene host propio. En un entorno de producción un servicio de este tipo estaría hospedado en IIS o WAS. Para obtener más información acerca de las distintas opciones de hospedaje de WCF, vea [hospedaje](../../../../docs/framework/wcf/feature-details/hosting.md).  
+Windows Communication Foundation (WCF) le permite crear un servicio que exponga una fuente de distribución. En este tema se explica cómo crear un servicio de distribución que exponga una fuente de distribución mediante Atom 1.0 y RSS 2.0. Este servicio expone un punto de conexión que puede devolver cualquiera de los dos formatos de distribución. Para simplificar, el servicio usado en este ejemplo tiene host propio. En un entorno de producción un servicio de este tipo estaría hospedado en IIS o WAS. Para obtener más información acerca de las distintas opciones de hospedaje de WCF, vea [hospedaje](hosting.md).  
   
 ### <a name="to-create-a-basic-syndication-service"></a>Creación de un servicio de distribución básico  
   
-1. Defina un contrato de servicios utilizando una interfaz marcada con el atributo <xref:System.ServiceModel.Web.WebGetAttribute>. Cada operación que se expone como una fuente de distribución devuelve un objeto <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Observe los parámetros de <xref:System.ServiceModel.Web.WebGetAttribute>. `UriTemplate` especifica la dirección URL usada para invocar esta operación de servicio. La cadena de este parámetro contiene literales y una variable entre llaves ({*Format*}). Esta variable corresponde al parámetro `format` de la operación del servicio. Para obtener más información, consulta <xref:System.UriTemplate>. `BodyStyle` afecta a cómo se escriben los mensajes que esta operación de servicio envía y recibe. <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare> especifica que los datos enviados a y desde esta operación de servicio no están ajustados por los elementos XML definidos por la infraestructura. Para obtener más información, consulta <xref:System.ServiceModel.Web.WebMessageBodyStyle>.  
+1. Defina un contrato de servicios utilizando una interfaz marcada con el atributo <xref:System.ServiceModel.Web.WebGetAttribute>. Cada operación que se expone como una fuente de distribución devuelve un objeto <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Observe los parámetros de <xref:System.ServiceModel.Web.WebGetAttribute>. `UriTemplate` especifica la dirección URL usada para invocar esta operación de servicio. La cadena de este parámetro contiene literales y una variable entre llaves ({*Format*}). Esta variable corresponde al parámetro `format` de la operación del servicio. Para obtener más información, vea <xref:System.UriTemplate>. `BodyStyle` afecta a cómo se escriben los mensajes que esta operación de servicio envía y recibe. <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare> especifica que los datos enviados a y desde esta operación de servicio no están ajustados por los elementos XML definidos por la infraestructura. Para obtener más información, vea <xref:System.ServiceModel.Web.WebMessageBodyStyle>.  
   
      [!code-csharp[htAtomRss#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#0)]
      [!code-vb[htAtomRss#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/program.vb#0)]  
@@ -64,9 +64,9 @@ Windows Communication Foundation (WCF) le permite crear un servicio que exponga 
   
 ### <a name="to-call-getblog-with-an-http-get"></a>Llamar a GetBlog mediante HTTP GET  
   
-1. Abra Internet Explorer, escriba la siguiente dirección URL y presione ENTRAR: `http://localhost:8000/BlogService/GetBlog`.
+1. Abra Internet Explorer, escriba la siguiente dirección URL y presione ENTRAR: `http://localhost:8000/BlogService/GetBlog` .
   
-     La dirección URL contiene la dirección base del servicio (`http://localhost:8000/BlogService`), la dirección relativa del punto de conexión y la operación de servicio que se va a llamar.  
+     La dirección URL contiene la dirección base del servicio ( `http://localhost:8000/BlogService` ), la dirección relativa del punto de conexión y la operación de servicio que se va a llamar.  
   
 ### <a name="to-call-getblog-from-code"></a>Llamar a GetBlog() mediante código  
   

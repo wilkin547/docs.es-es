@@ -2,21 +2,21 @@
 title: CustomChannelsTester
 ms.date: 03/30/2017
 ms.assetid: ee1fa307-98b1-4647-8860-2e9217ba6082
-ms.openlocfilehash: c23bd3eddd49972b7083347fed88d4e70707ae58
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9123167e0f97592592765f7b4a4aa768064fc173
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183811"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596609"
 ---
 # <a name="customchannelstester"></a>CustomChannelsTester
 El `CustomChannelsTester` es una herramienta que se utiliza para probar las implementaciones del canal personalizadas contra un conjunto de contratos de servicios predefinidos. Puede seleccionar el conjunto de contratos de servicios y pasarlo a la herramienta utilizando un archivo XML. La herramienta genera a continuación el servicio y el cliente que ejerce sus implementaciones del canal personalizadas durante el intercambio de mensajes.  
   
 ### <a name="to-build-the-tool"></a>Para compilar la herramienta  
   
-1. Para compilar la solución, siga las instrucciones de Creación de [ejemplos](../../../../docs/framework/wcf/samples/building-the-samples.md)de Windows Communication Foundation .  
+1. Para compilar la solución, siga las instrucciones de [creación de los ejemplos de Windows Communication Foundation](building-the-samples.md).  
   
-2. Al compilar la solución, se generan tres archivos: CustomChannelsTester.exe, TestSpec.xml y SampleRun.cmd. El archivo SampleRun.cmd tiene una línea de comandos de ejemplo que muestra cómo utilizar esta herramienta para probar el [ejemplo Transport: UDP.](../../../../docs/framework/wcf/samples/transport-udp.md)  
+2. Al compilar la solución, se generan tres archivos: CustomChannelsTester.exe, TestSpec.xml y SampleRun.cmd. El archivo SampleRun. cmd tiene una línea de comandos de ejemplo que muestra cómo usar esta herramienta para probar el ejemplo [Transport: UDP](transport-udp.md) .  
   
 ### <a name="to-run-the-tool"></a>Para ejecutar la herramienta  
   
@@ -28,7 +28,7 @@ El `CustomChannelsTester` es una herramienta que se utiliza para probar las impl
   
      Se requiere utilizar la opción `/binding`.  
   
-     `/dll`es necesario si "enlace" no es un enlace proporcionado por el sistema proporcionado por Windows Communication Foundation (WCF).  
+     `/dll`es necesario si "Binding" no es un enlace proporcionado por el sistema proporcionado por Windows Communication Foundation (WCF).  
   
      `/testspec` es opcional.  
   

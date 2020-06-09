@@ -2,52 +2,52 @@
 title: Interoperabilidad e integración
 ms.date: 03/30/2017
 ms.assetid: 0d925119-01a1-45c2-9ea0-23061323ad33
-ms.openlocfilehash: 8b4113d7545ab4e478b49c07681298d9ee942309
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 97244ce44a67d653b820d7e14bcb50555e5cbb60
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875972"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84592663"
 ---
 # <a name="interoperability-and-integration"></a>Interoperabilidad e integración
-Esta sección trata la interoperabilidad e integración con Windows Communication Foundation (WCF).  
+En esta sección se trata la interoperabilidad y la integración con Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Guía de interoperabilidad de los protocolos de servicios web](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)  
- WCF se crea para interoperar con servicios Web que admiten un conjunto de especificaciones conocidas como las especificaciones de servicios Web. En este tema se enumeran las especificaciones compatibles y los enlaces que las admiten.  
+ [Guía de interoperabilidad de los protocolos de servicios web](web-services-protocols-interoperability-guide.md)  
+ WCF está diseñado para interoperar con servicios web que admiten un conjunto de especificaciones conocidas como especificaciones de servicios Web. En este tema se enumeran las especificaciones compatibles y los enlaces que las admiten.  
   
- [Integración en aplicaciones COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
- Describe cómo se pueden exponer aplicaciones COM + como servicios WCF.  
+ [Integración con aplicaciones COM+](integrating-with-com-plus-applications.md)  
+ Describe cómo se pueden exponer las aplicaciones COM+ como servicios WCF.  
   
- [Integración en aplicaciones COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)  
- Describe los diversos métodos para las aplicaciones COM para llamar a los servicios WCF.  
+ [Integración en aplicaciones COM](integrating-with-com-applications.md)  
+ Describe los distintos métodos para que las aplicaciones COM llamen a servicios WCF.  
   
- [Migración de aplicaciones de .NET Remoting a WCF](../../../../docs/framework/wcf/feature-details/migrating-net-remoting-applications-to-wcf.md)  
- Describe cómo se puede usar WCF con comunicación remota de .NET Framework.  
+ [Migración de aplicaciones de .NET Remoting a WCF](migrating-net-remoting-applications-to-wcf.md)  
+ Describe cómo se puede usar WCF con .NET Framework comunicación remota.  
   
- [Interoperabilidad con Web Services Enhancements 3.0](../../../../docs/framework/wcf/feature-details/interoperability-with-web-services-enhancements-3-0.md)  
- Describe cómo se puede usar WCF con servicios Web implementados con Web Services Enhancements (WSE) 3.0.  
+ [Interoperabilidad con Web Services Enhancements 3.0](interoperability-with-web-services-enhancements-3-0.md)  
+ Describe cómo se puede usar WCF con servicios web implementados con mejoras de servicios web (WSE) 3,0.  
   
- [Migración de los servicios web WSE 3.0 a WCF](../../../../docs/framework/wcf/feature-details/migrating-wse-3-0-web-services-to-wcf.md)  
- Describe cómo migrar un servicio Web WSE 3.0 a un servicio WCF.  
+ [Migración de los servicios web WSE 3.0 a WCF](migrating-wse-3-0-web-services-to-wcf.md)  
+ Describe cómo migrar un servicio Web WSE 3,0 a un servicio WCF.  
   
- [Interoperabilidad con servicios web ASP.NET](../../../../docs/framework/wcf/feature-details/interop-with-aspnet-web-services.md)  
- Describe cómo WCF puede interoperar con servicios Web ASP.NET.  
+ [Interoperabilidad con servicios web ASP.NET](interop-with-aspnet-web-services.md)  
+ Describe cómo WCF puede interoperar con los servicios Web de ASP.NET.  
   
- [Migración de los servicios web ASP.NET a WCF](../../../../docs/framework/wcf/feature-details/migrating-aspnet-web-services-to-wcf.md)  
+ [Migración de los servicios web ASP.NET a WCF](migrating-aspnet-web-services-to-wcf.md)  
  Describe cómo migrar un servicio Web ASP.NET a un servicio WCF.  
   
- [Migración de los servicios web ASP.NET a WCF](../../../../docs/framework/wcf/feature-details/migrating-aspnet-web-services-to-wcf.md)  
+ [Migración de los servicios web ASP.NET a WCF](migrating-aspnet-web-services-to-wcf.md)  
  Describe cómo migrar un servicio Web ASP.NET a un servicio WCF.  
   
- [Migración de los servicios web ASP.NET a WCF](../../../../docs/framework/wcf/feature-details/migrating-aspnet-web-services-to-wcf.md)  
+ [Migración de los servicios web ASP.NET a WCF](migrating-aspnet-web-services-to-wcf.md)  
  Describe cómo migrar un servicio Web ASP.NET a un servicio WCF.  
   
- [Interoperabilidad con aplicaciones POX](../../../../docs/framework/wcf/feature-details/interoperability-with-pox-applications.md)  
- Describe cómo WCF proporciona servicios y clientes que utilizan mensajes de "Plain Old XML" (POX).  
+ [Interoperabilidad con aplicaciones POX](interoperability-with-pox-applications.md)  
+ Describe cómo WCF proporciona servicios y clientes que usan mensajes "XML sin formato" (POX).  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.ServiceModel>  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Extensión de WCF](../../../../docs/framework/wcf/extending/index.md)
+ [Extensión de WCF](../extending/index.md)

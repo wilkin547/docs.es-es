@@ -2,27 +2,27 @@
 title: Ejemplos de enlace de WCF
 ms.date: 03/30/2017
 ms.assetid: 324fa627-d012-465a-b266-95594a09dac2
-ms.openlocfilehash: 260e8a957b76c0e00ac0adae8d2a032d0d0d598b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8e510c2ebfca4609821221a9bee4ef8b1ca13e52
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944084"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596674"
 ---
-# <a name="binding"></a>Enlaces
+# <a name="binding"></a>Enlace
 
 Esta sección contiene ejemplos que muestran cómo utilizar el atributo de enlace de un elemento de extremo.  
   
 ## <a name="in-this-section"></a>En esta sección
   
- [Enlace básico](../../../../docs/framework/wcf/samples/basic-binding.md)  
+ [Enlace básico](basic-binding.md)  
  Muestra el enlace básico en WCF.  
   
- [Enlace personalizado](../../../../docs/framework/wcf/samples/custom-binding.md)  
- Muestra el enlace personalizado de WCF.  
+ [Enlace personalizado](custom-binding.md)  
+ Muestra el enlace personalizado en WCF.  
   
- [Enlace de red](../../../../docs/framework/wcf/samples/net-binding.md)  
+ [Enlace de red](net-binding.md)  
  Muestra el enlace de red en WCF.  
   
- [Enlace de WS](../../../../docs/framework/wcf/samples/ws-binding.md)  
- Muestra el enlace de servicio de Windows en WCF.
+ [Enlace de WS](ws-binding.md)  
+ Muestra el enlace del servicio de Windows en WCF.

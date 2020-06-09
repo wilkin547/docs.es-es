@@ -2,12 +2,12 @@
 title: Utilizar JSONP
 ms.date: 03/30/2017
 ms.assetid: f386718c-b4ba-4931-a610-40c27a46672a
-ms.openlocfilehash: 622fbdbf2674aea552cfd57f528d7cc5168cfda8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 82290319b5d8b58708f0b2ebf40522ee76127b84
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932839"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594964"
 ---
 # <a name="using-jsonp"></a>Utilizar JSONP
 
@@ -17,7 +17,7 @@ El relleno de JSON (JSONP) es un mecanismo que habilita el soporte de script ent
 callback({"a" = \\"b\\"});
 ```
 
-En el ejemplo anterior, la carga de JSON, `{"a" = \\"b\\"}`, se ajusta a una llamada de función, `callback`. La función de devolución de llamada ya debe estar definido en la página web actual. El tipo de contenido de una respuesta JSONP es `application/javascript`.
+En el ejemplo anterior, la carga de JSON, `{"a" = \\"b\\"}`, se ajusta a una llamada de función, `callback`. La función de devolución de llamada ya debe estar definido en la página web actual. El tipo de contenido de una respuesta JSONP es `application/javascript` .
 
 JSONP no está habilitado automáticamente. Para habilitarlo, establezca el atributo `javascriptCallbackEnabled` como `true` en uno de los puntos de conexión estándar HTTP (<xref:System.ServiceModel.Description.WebHttpEndpoint> o <xref:System.ServiceModel.Description.WebScriptEndpoint>), como se muestra en el siguiente ejemplo.
 
@@ -74,7 +74,7 @@ Las respuestas JSONP con códigos de estado HTTP distintos de 200 incluyen un se
 anotherFunction ({"root":"Something"}, 201);
 ```
 
-## <a name="validations"></a>Validaciones
+## <a name="validations"></a>Validations (Validaciones)
 
 Se realizan las siguientes validaciones cuando JSONP está habilitado:
 
@@ -84,6 +84,6 @@ Se realizan las siguientes validaciones cuando JSONP está habilitado:
 
 - Si el nombre de devolución de llamada es `null` o una cadena vacía, la respuesta no obtiene el formato JSONP.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Información general del modelo de programación web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+- [Información general del modelo de programación web HTTP de WCF](wcf-web-http-programming-model-overview.md)

@@ -1,5 +1,6 @@
 ---
 title: Instrucciones de diseño de miembros
+description: Obtenga información sobre las directrices de diseño de miembros en .NET. Los miembros incluyen métodos, propiedades, eventos, constructores y campos.
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], members
 - member design guidelines [.NET Framework]
 ms.assetid: 0ce93180-1d7b-4f8c-9306-f828b2d66b8f
-ms.openlocfilehash: c323e7edd752a1f003bd3f5d81689aca0eaefd20
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a1f0c1d74e8bffa7cfef975c7dafb9fd01479470
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288997"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594496"
 ---
 # <a name="member-design-guidelines"></a>Instrucciones de diseño de miembros
 Los métodos, propiedades, eventos, constructores y campos se conocen colectivamente como miembros. Los miembros son en última instancia los medios por los que se expone la funcionalidad del marco de trabajo a los usuarios finales de un marco de trabajo.  
@@ -35,6 +36,6 @@ Los métodos, propiedades, eventos, constructores y campos se conocen colectivam
   
  *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Directrices de diseño de marco](index.md)

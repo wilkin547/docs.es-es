@@ -5,34 +5,34 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
-ms.openlocfilehash: fccdd021e392e6c37615a9091ce13f0e94167246
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 058163c96bba036c3183695bf986b4d0424271ac
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76212004"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595224"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>Seguridad de mensajes con clientes anónimos
 
-En el siguiente escenario se muestra un cliente y un servicio protegidos por la seguridad de mensajes de Windows Communication Foundation (WCF). Un objetivo del diseño es usar la seguridad del mensaje en lugar de la seguridad de transporte, para que en el futuro pueda admitir un modelo basado en notificaciones más completo. Para obtener más información sobre el uso de notificaciones enriquecidas para la autorización, consulte [Administración de notificaciones y autorización con el modelo de identidad](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).
+En el siguiente escenario se muestra un cliente y un servicio protegidos por la seguridad de mensajes de Windows Communication Foundation (WCF). Un objetivo del diseño es usar la seguridad del mensaje en lugar de la seguridad de transporte, para que en el futuro pueda admitir un modelo basado en notificaciones más completo. Para obtener más información sobre el uso de notificaciones enriquecidas para la autorización, consulte [Administración de notificaciones y autorización con el modelo de identidad](managing-claims-and-authorization-with-the-identity-model.md).
 
-Para obtener una aplicación de ejemplo, vea [seguridad de mensajes anónima](../../../../docs/framework/wcf/samples/message-security-anonymous.md).
+Para obtener una aplicación de ejemplo, vea [seguridad de mensajes anónima](../samples/message-security-anonymous.md).
 
-![Seguridad de mensajes con un cliente anónimo](../../../../docs/framework/wcf/feature-details/media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")
+![Seguridad de mensajes con un cliente anónimo](media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")
 
 |Característica|Descripción|
 |--------------------|-----------------|
-|Modo de seguridad|Mensaje|
+|Modo de seguridad|Message|
 |Interoperabilidad|Solo WCF|
 |Autenticación (servidor)|La negociación inicial requiere la autenticación del servidor, pero no la autenticación del cliente|
-|Autenticación (cliente)|Ninguno|
+|Autenticación (cliente)|None|
 |Integridad|Sí, mediante el contexto de seguridad compartido|
 |Confidencialidad|Sí, mediante el contexto de seguridad compartido|
-|Transport|HTTP|
+|Transporte|HTTP|
 
-## <a name="service"></a>Servicio
+## <a name="service"></a>web de Office
 
-El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Siga uno de los procedimientos que se describen a continuación:
+El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Lleve a cabo una de las siguientes acciones:
 
 - Cree un servicio independiente mediante el código sin configuración.
 
@@ -45,7 +45,7 @@ El código siguiente muestra cómo crear un extremo de servicio que utiliza la s
 [!code-csharp[C_SecurityScenarios#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#8)]
 [!code-vb[C_SecurityScenarios#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#8)]
 
-### <a name="configuration"></a>Configuración de
+### <a name="configuration"></a>Configuración
 
 En lugar del código, se puede utilizar la siguiente configuración. El elemento de comportamiento del servicio se utiliza para especificar un certificado utilizado para autenticar el servicio al cliente. El elemento de servicio debe especificar el comportamiento mediante el atributo `behaviorConfiguration`. El elemento de enlace especifica que el tipo de credencial de cliente es `None`, de modo que permite a los clientes anónimos utilizar el servicio.
 
@@ -88,9 +88,9 @@ En lugar del código, se puede utilizar la siguiente configuración. El elemento
 </configuration>
 ```
 
-## <a name="client"></a>Client
+## <a name="client"></a>Cliente
 
-El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Siga uno de los procedimientos que se describen a continuación:
+El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Lleve a cabo una de las siguientes acciones:
 
 - Cree un cliente independiente mediante el código (y el código de cliente).
 
@@ -106,7 +106,7 @@ En el ejemplo de código siguiente se crea una instancia de cliente. El enlace u
 [!code-csharp[C_SecurityScenarios#15](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#15)]
 [!code-vb[C_SecurityScenarios#15](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#15)]
 
-### <a name="configuration"></a>Configuración de
+### <a name="configuration"></a>Configuración
 
 El siguiente código configura el cliente.
 
@@ -140,8 +140,8 @@ El siguiente código configura el cliente.
 
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Seguridad distribuida de aplicaciones](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)
-- [Seguridad de mensaje anónima](../../../../docs/framework/wcf/samples/message-security-anonymous.md)
-- [Identidad del servicio y autenticación](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Modelo de seguridad para Windows Server App fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Información general sobre seguridad](security-overview.md)
+- [Seguridad distribuida de aplicaciones](distributed-application-security.md)
+- [Seguridad de mensaje anónima](../samples/message-security-anonymous.md)
+- [Identidad del servicio y autenticación](service-identity-and-authentication.md)
+- [Modelo de seguridad para Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

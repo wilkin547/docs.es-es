@@ -1,23 +1,23 @@
 ---
-title: Cómo crear un servicio que requiere sesiones
+title: Procedimiento para crear un servicio que requiere sesiones
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8a7613ef-0df9-47c3-b8dc-47f42cb1fd8b
-ms.openlocfilehash: 495de5a926cfc0c5aab88337f5f33b991c49e71a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 29c2a87daaf763a50aa657c9badc002ff2fa27e1
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184988"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593339"
 ---
-# <a name="how-to-create-a-service-that-requires-sessions"></a>Cómo crear un servicio que requiere sesiones
-Las sesiones crean un estado compartido entre dos o más extremos que habilita características útiles como las devoluciones de llamada, la seguridad de saltos múltiples y asociaciones entre clientes e instancias de servicio. Para obtener más información acerca de las sesiones en aplicaciones de Windows Communication Foundation (WCF), vea Uso de [sesiones](../../../../docs/framework/wcf/using-sessions.md).  
+# <a name="how-to-create-a-service-that-requires-sessions"></a>Procedimiento para crear un servicio que requiere sesiones
+Las sesiones crean un estado compartido entre dos o más extremos que habilita características útiles como las devoluciones de llamada, la seguridad de saltos múltiples y asociaciones entre clientes e instancias de servicio. Para obtener más información acerca de las sesiones en aplicaciones de Windows Communication Foundation (WCF), consulte [uso de sesiones](../using-sessions.md).  
   
 ### <a name="to-specify-that-a-contract-require-its-binding-to-support-sessions"></a>Especificar que un contrato requiere su enlace para admitir sesiones  
   
-1. Crear un contrato de servicio que contenga al menos una operación. Para obtener un ejemplo de cómo crear un contrato de servicio, vea [Cómo: definir un contrato](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)de servicio .  
+1. Crear un contrato de servicio que contenga al menos una operación. Para obtener un ejemplo de cómo crear un contrato de servicios, consulte [Cómo: definir un contrato de servicio](../how-to-define-a-wcf-service-contract.md).  
   
 2. Modifique el <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType> que declara el contrato estableciendo la propiedad <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> en:  
   
@@ -38,7 +38,7 @@ Las sesiones crean un estado compartido entre dos o más extremos que habilita c
  [!code-vb[SCA.Session#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/sca.session/vb/services.vb#1)]
  [!code-xml[SCA.Session#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/sca.session/cs/hostapplication.exe.config#2)]
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType>
 - <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType>

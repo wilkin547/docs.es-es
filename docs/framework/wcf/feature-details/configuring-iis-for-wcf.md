@@ -2,12 +2,12 @@
 title: Configuración de Internet Information Services 7.0 para Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 1050d395-092e-44d3-b4ba-66be3b039ffb
-ms.openlocfilehash: 41eedcf78d8ca6f10fcd0380e43420dcc1b328f1
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 6343049e2a21b06965a8c7851d891303a49c82b5
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964519"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597571"
 ---
 # <a name="configuring-internet-information-services-70-for-windows-communication-foundation"></a>Configuración de Internet Information Services 7.0 para Windows Communication Foundation
 
@@ -18,11 +18,11 @@ Internet Information Services (IIS) 7.0 tiene un diseño modular que le permite 
 
  En el panel de control, haga clic en **programas** y, a continuación, haga clic en **activar o desactivar las características de Windows** , que aparece en **programas y características**, el componente was se muestra en la lista como se muestra en la siguiente ilustración.
 
- ![Cuadro de diálogo activar o desactivar características](../../../../docs/framework/wcf/feature-details/media/wcfc-turnfeaturesonoroffs.gif "wcfc_TurnFeaturesOnOrOffs")
+ ![Diálogo de activación o desactivación de las características](media/wcfc-turnfeaturesonoroffs.gif "wcfc_TurnFeaturesOnOrOffs")
 
  Esta característica tiene los siguientes componentes secundarios:
 
-- Entorno de .NET
+- Entorno .NET
 
 - API de configuración
 
@@ -35,26 +35,26 @@ Internet Information Services (IIS) 7.0 tiene un diseño modular que le permite 
 ## <a name="iis-70-default-installation"></a>IIS 7.0: instalación predeterminada
  Al comprobar la característica de **Internet Information Services** , algunos de los subnodos se comprueban automáticamente como se muestra en la siguiente ilustración.
 
- ![Configuración predeterminada de las características de IIS 7,0](../../../../docs/framework/wcf/feature-details/media/wcfc-turningfeaturesonoroff2.gif "wcfc_TurningFeaturesOnOrOff2")
+ ![Valores predeterminados de las características de IIS 7.0](media/wcfc-turningfeaturesonoroff2.gif "wcfc_TurningFeaturesOnOrOff2")
 
  Esta es la instalación predeterminada de IIS 7,0. Con esta instalación, puede usar IIS 7,0 para atender contenido estático (como páginas HTML y otro contenido). Sin embargo, no se pueden ejecutar aplicaciones ASP.NET o CGI ni servicios WCF de host.
 
 ## <a name="iis-70-installation-with-aspnet-support"></a>IIS 7.0: instalación con compatibilidad para ASP.NET
  Debe instalar ASP.NET para que ASP.NET funcione en IIS 7,0. Después de comprobar **ASP.net**, la pantalla debe ser similar a la siguiente ilustración.
 
- ![Configuración necesaria de Asp.NET](../../../../docs/framework/wcf/feature-details/media/wcfc-trunfeaturesonoroff3s.gif "wcfc_TrunFeaturesOnOrOFf3s")
+ ![Configuración requerida Asp.NET](media/wcfc-trunfeaturesonoroff3s.gif "wcfc_TrunFeaturesOnOrOFf3s")
 
  Este es el entorno mínimo para que las aplicaciones WCF y ASP.NET funcionen en IIS 7,0.
 
 ## <a name="iis-70-installation-with-iis-60-compatibility-components"></a>IIS 7.0: instalación con componentes de compatibilidad de IIS 6.0
  Al instalar IIS 7,0 en un sistema con Visual Studio 2005 o algún otro script o herramienta de automatización (como Adsutil. vbs) que configure aplicaciones virtuales que usen la API de metabase de IIS 6,0, asegúrese de comprobar las **herramientas de scripting**de IIS 6,0. Esto comprueba automáticamente los otros subnodos de compatibilidad con la **Administración**de IIS 6,0. En la ilustración siguiente se muestra la pantalla una vez hecho esto:
 
- ![Configuración de compatibilidad con la administración de IIS 6,0](../../../../docs/framework/wcf/feature-details/media/scfc-turnfeaturesonoroff5s.gif "scfc_TurnFeaturesOnOrOff5s")
+ ![Configuración de la compatibilidad con la administración de IIS 6.0](media/scfc-turnfeaturesonoroff5s.gif "scfc_TurnFeaturesOnOrOff5s")
 
  Con esta instalación, tiene todo lo necesario para usar las características de IIS 7,0, ASP.NET y WCF y ejemplos disponibles en la Web.
 
-## <a name="request-limits"></a>Límites de las solicitudes
- En Windows Vista con IIS 7, se ha cambiado el valor predeterminado de la configuración de `maxUri` y `maxQueryStringSize`. De manera predeterminada, la solicitud de filtrado en IIS 7.0 admite una longitud de dirección URL de 4096 caracteres y una longitud de cadena de consulta de 2048 caracteres. Para cambiar estos valores predeterminados, agregue el siguiente XML al archivo App.config:
+## <a name="request-limits"></a>Límites de la solicitud
+ En Windows Vista con IIS 7, se ha cambiado el valor predeterminado de la `maxUri` configuración de y `maxQueryStringSize` . De manera predeterminada, la solicitud de filtrado en IIS 7.0 admite una longitud de dirección URL de 4096 caracteres y una longitud de cadena de consulta de 2048 caracteres. Para cambiar estos valores predeterminados, agregue el siguiente XML al archivo App.config:
 
 ```xml
  <system.webServer>
@@ -68,7 +68,7 @@ Internet Information Services (IIS) 7.0 tiene un diseño modular que le permite 
 
 ## <a name="see-also"></a>Vea también
 
-- [Arquitectura de activación de WAS](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)
-- [Configuración de WAS para su uso con WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
-- [Instalación y configuración de los componentes de activación de WFC](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
+- [Arquitectura de activación de WAS](was-activation-architecture.md)
+- [Configuración de WAS para su uso con WCF](configuring-the-wpa--service-for-use-with-wcf.md)
+- [Procedimiento para instalar y configurar los componentes de activación de WFC](how-to-install-and-configure-wcf-activation-components.md)
 - [Características de hospedaje de Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

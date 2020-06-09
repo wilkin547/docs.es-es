@@ -6,17 +6,17 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: 10a8d243b3f053879f183864e955d9260c07865b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b5272d8b4dbac60e14fe87accbb08a2073ed65ab
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183610"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594639"
 ---
 # <a name="impersonating-the-client"></a>Suplantar el cliente
 El ejemplo de Suplantación muestra cómo suplantar la aplicación de llamador en el servicio para que el servicio pueda tener acceso a los recursos del sistema en nombre del llamador.  
   
- Este ejemplo se basa en el [ejemplo de autohospedaje.](../../../../docs/framework/wcf/samples/self-host.md) Los archivos de configuración de servicio y cliente son los mismos que los del ejemplo [de autohospedaje.](../../../../docs/framework/wcf/samples/self-host.md)  
+ Este ejemplo se basa en el ejemplo de [host propio](self-host.md) . Los archivos de configuración de servicio y de cliente son los mismos que los del ejemplo de [host propio](self-host.md) .  
   
 > [!NOTE]
 > El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
@@ -102,18 +102,18 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  Al ejecutar el ejemplo, las solicitudes y las respuestas de operación se muestran tanto en la ventanas de la consola del cliente como del servicio. Presione Entrar en cada ventana de la consola para cerrar el servicio y el cliente.  
   
 > [!NOTE]
-> El servicio debe ejecutarse en una cuenta administrativa o la cuenta `http://localhost:8000/ServiceModelSamples` en la que se ejecuta debe tener derechos para registrar el URI con la capa HTTP. Estos derechos se pueden conceder configurando una reserva de espacio de [nombres](/windows/win32/http/namespace-reservations-registrations-and-routing) mediante la [herramienta Httpcfg.exe](/windows/win32/http/httpcfg-exe).  
+> El servicio debe ejecutarse en una cuenta administrativa o la cuenta con la que se ejecuta debe tener derechos para registrar el `http://localhost:8000/ServiceModelSamples` URI con el nivel http. Estos derechos se pueden conceder mediante la configuración de una [reserva de espacio de nombres](/windows/win32/http/namespace-reservations-registrations-and-routing) mediante la [herramienta Httpcfg. exe](/windows/win32/http/httpcfg-exe).  
   
 > [!NOTE]
-> En equipos que ejecutan Windows Server 2003, la suplantación solo se admite si la aplicación Host.exe tiene el privilegio Suplantación. (De forma predeterminada, solo los administradores tienen este permiso.) Para agregar este privilegio a una cuenta en la que se ejecuta el servicio, vaya a **Herramientas administrativas**, abra Directiva de **seguridad local**, abra **Directivas locales**, haga clic en **Asignación**de derechos de usuario y seleccione Suplantar a **un cliente después de la autenticación** y haga doble clic en **Propiedades** para agregar un usuario o grupo.  
+> En los equipos que ejecutan Windows Server 2003, la suplantación solo se admite si la aplicación host. exe tiene el privilegio de suplantación. (De forma predeterminada, solo los administradores tienen este permiso). Para agregar este privilegio a una cuenta en la que se está ejecutando el servicio, vaya a **herramientas administrativas**, Abra **Directiva de seguridad local**, Abra **Directivas locales**, haga clic en **asignación de derechos de usuario**y seleccione **Suplantar a un cliente tras la autenticación** y haga doble clic en **propiedades** para agregar un usuario o grupo.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1. Asegúrese de que ha realizado el procedimiento de instalación única [para los ejemplos](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)de Windows Communication Foundation .  
+1. Asegúrese de que ha realizado el [procedimiento de instalación única para los ejemplos de Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](building-the-samples.md).  
   
-3. Para ejecutar el ejemplo en una configuración de uno o entre equipos, siga las instrucciones de Ejecución de [los ejemplos](../../../../docs/framework/wcf/samples/running-the-samples.md)de Windows Communication Foundation .  
+3. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](running-the-samples.md).  
   
 4. Para mostrar que el servicio suplanta al llamador, ejecute el cliente bajo una cuenta diferente de aquella bajo la cual el servicio se está ejecutando. Para realizar esta operación, en el símbolo del sistema, escriba:  
   

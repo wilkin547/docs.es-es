@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b6c4dfd0-f270-43ec-961a-e16eb6af2f2c
-ms.openlocfilehash: 6bf2eb3d295f9cbf6a7e13a612d5846ceaa75ab4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 58e86e5566775048e081bfb4ac217a7747b98a35
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778305"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84579415"
 ---
 # <a name="how-to-export-metadata-from-service-endpoints"></a>Procedimiento para exportar metadatos desde puntos de conexión de servicio
 En este tema se explica cómo exportar los metadatos desde los extremos de servicio.  
@@ -57,6 +57,6 @@ En este tema se explica cómo exportar los metadatos desde los extremos de servi
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general de la arquitectura de metadatos](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
-- [Utilización de los metadatos](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [Puntos de conexión: Las direcciones, enlaces y contratos](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [Información general de la arquitectura de metadatos](metadata-architecture-overview.md)
+- [Utilización de los metadatos](using-metadata.md)
+- [Puntos de conexión: direcciones, enlaces y contratos](endpoints-addresses-bindings-and-contracts.md)

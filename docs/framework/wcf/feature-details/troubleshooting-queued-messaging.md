@@ -2,12 +2,12 @@
 title: Solución de problemas de la mensajería en cola
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: 7990d4b9847ee2f35b9fe6269bb211763c4c80b6
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: f695af3d2ad498e1f5975e1a396f1e7b05bf63bc
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77095013"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595133"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Solución de problemas de la mensajería en cola
 
@@ -19,15 +19,15 @@ Esta sección contiene preguntas comunes y ayuda para el uso de colas en Windows
 
 **R:** Sí. Esta revisión ya no se admite. WCF ahora funciona en MSMQ sin un requisito de revisión.
 
-**P:** Hay dos enlaces para MSMQ: <xref:System.ServiceModel.NetMsmqBinding> y <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. ¿Qué debería utilizar y cuándo?
+**P:** Hay dos enlaces para MSMQ: <xref:System.ServiceModel.NetMsmqBinding> y <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> . ¿Qué debería utilizar y cuándo?
 
-**R:** Utilice el <xref:System.ServiceModel.NetMsmqBinding> cuando desee usar MSMQ como transporte para la comunicación en cola entre dos aplicaciones WCF. Utilice el <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> cuando desee usar aplicaciones MSMQ existentes para comunicarse con nuevas aplicaciones WCF.
+**R:** Use el <xref:System.ServiceModel.NetMsmqBinding> cuando desee usar MSMQ como transporte para la comunicación en cola entre dos aplicaciones WCF. Use el <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> cuando desee usar aplicaciones MSMQ existentes para comunicarse con nuevas aplicaciones WCF.
 
-**P:** ¿Tengo que actualizar MSMQ para usar los enlaces de <xref:System.ServiceModel.NetMsmqBinding> y `MsmqIntegration`?
+**P:** ¿Tengo que actualizar MSMQ para usar los <xref:System.ServiceModel.NetMsmqBinding> enlaces y `MsmqIntegration` ?
 
 **R:** No. Ambos enlaces funcionan con MSMQ 3,0 en Windows XP y Windows Server 2003. Ciertas características de los enlaces están disponibles al actualizar a MSMQ 4,0 en Windows Vista.
 
-**P:** ¿Qué características de los enlaces de <xref:System.ServiceModel.NetMsmqBinding> y <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> están disponibles en MSMQ 4,0 pero no en MSMQ 3,0?
+**P:** ¿Qué características de <xref:System.ServiceModel.NetMsmqBinding> los <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> enlaces y están disponibles en MSMQ 4,0 pero no en MSMQ 3,0?
 
 **R:** Las siguientes características están disponibles en MSMQ 4,0, pero no en MSMQ 3,0:
 
@@ -37,7 +37,7 @@ Esta sección contiene preguntas comunes y ayuda para el uso de colas en Windows
 
 - Sólo MSMQ 4.0 admite la lectura de transacción remota.
 
-Para obtener más información, vea [diferencias en las características de cola en Windows Vista, Windows Server 2003 y Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).
+Para obtener más información, vea [diferencias en las características de cola en Windows Vista, Windows Server 2003 y Windows XP](diff-in-queue-in-vista-server-2003-windows-xp.md).
 
 **P:** ¿Puedo usar MSMQ 3,0 en un lado de una comunicación en cola y MSMQ 4,0 en el otro lado?
 
@@ -51,11 +51,11 @@ Para obtener más información, vea [diferencias en las características de cola
 
 Esta sección contiene las respuestas a la mayoría de problemas más comunes. Algunos problemas que son limitaciones conocidas también se describen en las notas de la versión.
 
-**P:** Estoy intentando usar una cola privada y obtengo la siguiente excepción: `System.InvalidOperationException`: la dirección URL no es válida. La dirección URL para la cola no puede contener el carácter '$'. Utilice la sintaxis en net.msmq://machine/private/queueName para direccionar una cola privada.
+**P:** Estoy intentando usar una cola privada y obtengo la siguiente excepción: `System.InvalidOperationException` : la dirección URL no es válida. La dirección URL para la cola no puede contener el carácter '$'. Utilice la sintaxis en net.msmq://machine/private/queueName para direccionar una cola privada.
 
-**R:** Compruebe el identificador uniforme de recursos (URI) de la cola en la configuración y el código. No utilice el carácter "$" en el URI. Por ejemplo, para direccionar una cola privada denominada OrdersQueue, especifique el URI como `net.msmq://localhost/private/ordersQueue`.
+**R:** Compruebe el identificador uniforme de recursos (URI) de la cola en la configuración y el código. No utilice el carácter "$" en el URI. Por ejemplo, para direccionar una cola privada denominada OrdersQueue, especifique el URI como `net.msmq://localhost/private/ordersQueue` .
 
-**P:** La llamada a `ServiceHost.Open()` en la aplicación en cola produce la siguiente excepción: `System.ArgumentException`: una dirección base no puede contener una cadena de consulta de URI. ¿Por qué?
+**P:** La llamada a `ServiceHost.Open()` en la aplicación en cola produce la excepción siguiente: `System.ArgumentException` : una dirección base no puede contener una cadena de consulta de URI. ¿Por qué?
 
 **R:** Compruebe el URI de la cola en el archivo de configuración y en el código. Mientras que las colas de MSMQ admiten el uso del carácter "?", los URI lo interpretan como el principio de una consulta de cadena. Para evitar este problema, use nombres de cola que no contengan el carácter "?".
 
@@ -65,13 +65,13 @@ Esta sección contiene las respuestas a la mayoría de problemas más comunes. A
 
 - Compruebe que los requisitos de cola transaccional sean compatibles con las convicciones especificadas. Tenga en cuenta los principios siguientes:
 
-  - Puede enviar mensajes duraderos (datagramas y sesiones) con garantías "exactamente una vez" (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `true`) solo a una cola transaccional.
+  - Puede enviar mensajes duraderos (datagramas y sesiones) con garantías "exactamente una vez" ( <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A>  =  `true` ) solo a una cola transaccional.
 
   - Solo puede enviar las sesiones con "exactamente una" convicción.
 
   - Se requiere una transacción para recibir mensajes en una sesión de una cola transaccional.
 
-  - Puede enviar o recibir mensajes volátiles o duraderos (solo datagramas) sin garantías (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `false`) solo en una cola no transaccional.
+  - Puede enviar o recibir mensajes volátiles o duraderos (solo datagramas) sin garantías ( <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A>  =  `false` ) solo en una cola no transaccional.
 
 - Compruebe la cola de mensajes no enviados. Si encuentra los mensajes allí, determine por qué no se entregaron.
 
@@ -83,13 +83,13 @@ Esta sección contiene las respuestas a la mayoría de problemas más comunes. A
 
 **P:** ¿Siempre es necesario definir una cola de mensajes no enviados personalizada o hay una cola de mensajes no enviados predeterminada?
 
-**R:** Si las garantías son "exactamente una vez" (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `true`) y, si no especifica una cola de mensajes no enviados personalizada, el valor predeterminado es una cola de mensajes no enviados transaccional para todo el sistema.
+**R:** Si las garantías son "exactamente una vez" ( <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A>  =  `true` ) y no especifica una cola de mensajes no enviados personalizada, el valor predeterminado es una cola de mensajes no enviados transaccional para todo el sistema.
 
-Si los seguros son ninguno (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `false`), el valor predeterminado es ninguna funcionalidad de cola de mensajes no enviados.
+Si las garantías son none ( <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A>  =  `false` ), el valor predeterminado es sin funcionalidad de cola de mensajes no enviados.
 
 **P:** El servicio se inicia en SvcHost. Open con un mensaje que indica que el Endpointlistener no puede cumplir los requisitos de EndpointListener. ¿Por qué?
 
-A. Compruebe su contrato de servicios. Es posible que haya olvidado poner "IsOneWay =`true`" en todas las operaciones de servicio. Las colas solo admiten las operaciones de servicio unidireccionales.
+A. Compruebe su contrato de servicios. Es posible que haya olvidado poner "IsOneWay = `true` " en todas las operaciones de servicio. Las colas solo admiten las operaciones de servicio unidireccionales.
 
 **P:** Hay mensajes en la cola, pero no se invoca ninguna operación de servicio. ¿Cuál es el problema?
 
@@ -107,13 +107,13 @@ A. Compruebe su contrato de servicios. Es posible que haya olvidado poner "IsOne
     sc sidtype NetMsmqActivator unrestricted
     ```
 
-En el caso de problemas de host web no relacionados con la seguridad, consulte: [hospedaje Web de una aplicación en cola](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md).
+En el caso de problemas de host web no relacionados con la seguridad, consulte: [hospedaje Web de una aplicación en cola](web-hosting-a-queued-application.md).
 
 **P:** ¿Cuál es la manera más sencilla de acceder a las sesiones?
 
-**R:** Establezca AutoComplete =`true` en la operación que se corresponda con el último mensaje de la sesión y establezca AutoComplete =`false` en todas las operaciones de servicio restantes.
+**R:** Establezca AutoComplete = `true` en la operación que se corresponda con el último mensaje de la sesión y establezca AutoComplete = `false` en todas las operaciones de servicio restantes.
 
-**P:** ¿Por qué mi servicio inicia una `ProtocolException` al leer de una cola que contiene mensajes de sesión en cola y mensajes de datagrama en cola?
+**P:** ¿Por qué el servicio inicia una excepción `ProtocolException` cuando se lee de una cola que contiene mensajes de sesión en cola y mensajes de datagrama en cola?
 
 **R:** Existe una diferencia fundamental en el modo en que se componen los mensajes de sesión en cola y los mensajes de datagrama en cola. Debido a esto, un servicio que está esperando leer un mensaje de la sesión en cola no puede recibir un mensaje del datagrama en cola y un servicio que espera leer un mensaje del datagrama en cola no puede recibir un mensaje de la sesión. Intentar leer ambos tipos de mensajes de la misma cola provoca la excepción siguiente:
 
@@ -144,7 +144,7 @@ La cola de mensajes no enviados del sistema, así como cualquier cola de mensaje
 
 **R:** De forma predeterminada, los mensajes se firman con un certificado interno de MSMQ que requiere el servicio de directorio de Active Directory. En modo del grupo de trabajo, puesto que Active Directory no está disponible, la firma de los mensajes falla. Por lo tanto, se indica el mensaje que se encuentra en la cola de mensajes no enviados y la causa del error, como "firma incorrecta".
 
-La solución alternativa es desactivar la seguridad. Esto se hace estableciendo <xref:System.ServiceModel.NetMsmqSecurity.Mode%2A> = <xref:System.ServiceModel.NetMsmqSecurityMode.None> para que funcione en modo de grupo de trabajo.
+La solución alternativa es desactivar la seguridad. Esto se hace estableciendo <xref:System.ServiceModel.NetMsmqSecurity.Mode%2A>  =  <xref:System.ServiceModel.NetMsmqSecurityMode.None> para que funcione en modo de grupo de trabajo.
 
 Otra solución alternativa es recibir <xref:System.ServiceModel.MsmqTransportSecurity> de la propiedad <xref:System.ServiceModel.NetMsmqSecurity.Transport%2A> y establecerlo en <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate>y establecer el certificado de cliente.
 
@@ -158,7 +158,7 @@ Todavía otra solución alternativa es instalar MSMQ con integración de Active 
 
 **R:** No se puede usar un almacén de certificados del equipo local con el modo de certificado. Tiene que copiar el certificado del almacén de certificados del equipo al almacén del usuario actual utilizando el complemento del certificado. Para obtener el complemento del certificado:
 
-1. Haga clic en **Inicio**, seleccione **ejecutar**, escriba `mmc`y haga clic en **Aceptar**.
+1. Haga clic en **Inicio**, seleccione **Ejecutar**, escriba `mmc` y haga clic en **Aceptar**.
 
 2. En **Microsoft Management Console**, abra el menú **archivo** y seleccione **Agregar o quitar complemento**.
 
@@ -170,7 +170,7 @@ Todavía otra solución alternativa es instalar MSMQ con integración de Active 
 
 6. Después, agregue un segundo complemento certificados con los pasos anteriores, pero esta vez seleccione cuenta de **equipo** y haga clic en **siguiente**.
 
-7. Seleccione **Equipo local** y, después, haga clic en **Finalizar**. Ahora puede arrastrar y colocar certificados del almacén de certificados del equipo al almacén del usuario actual.
+7. Seleccione **Equipo Local** y haga clic en **Finalizar**. Ahora puede arrastrar y colocar certificados del almacén de certificados del equipo al almacén del usuario actual.
 
 **P:** Cuando el servicio Lee de una cola de otro equipo en el modo de grupo de trabajo, obtengo una excepción de "acceso denegado".
 
@@ -192,7 +192,7 @@ Todavía otra solución alternativa es instalar MSMQ con integración de Active 
 
 - Compruebe el modo de autenticación para comunicarse con el administrador de transacciones. Si está en modo de grupo de trabajo, debe seleccionar "no se requiere autenticación". Si está en modo de dominio, debe estar seleccionada la opción "se requiere autenticación mutua".
 
-  ![Habilitar transacciones XA](../../../../docs/framework/wcf/feature-details/media/4f3695e0-fb0b-4c5b-afac-75f8860d2bb0.jpg "4f3695e0-fb0b-4c5b-afac-75f8860d2bb0")
+  ![Habilitar las transacciones XA](media/4f3695e0-fb0b-4c5b-afac-75f8860d2bb0.jpg "4f3695e0-fb0b-4c5b-afac-75f8860d2bb0")
 
 - Asegúrese de que MSDTC está en la lista de excepciones en la configuración del **firewall de conexión a Internet** .
 
@@ -208,4 +208,4 @@ Todavía otra solución alternativa es instalar MSMQ con integración de Active 
 
 ## <a name="using-custom-msmq-bindings-with-receivecontext-enabled"></a>Utilizar los enlaces personalizados de MSMQ con ReceiveContext habilitado
 
-Cuando se usa un enlace MSMQ personalizado con <xref:System.ServiceModel.Channels.ReceiveContext> habilitado, el procesamiento de un mensaje entrante usa un subproceso del grupo de subprocesos porque MSMQ nativo no admite la finalización de e/s para las recepciones de <xref:System.ServiceModel.Channels.ReceiveContext> asincrónicas. Esto se debe a que el procesamiento de este tipo de mensaje usa transacciones internas para <xref:System.ServiceModel.Channels.ReceiveContext> y MSMQ no admite el procesamiento asincrónico. Para solucionar este problema, puede Agregar un <xref:System.ServiceModel.Description.SynchronousReceiveBehavior> al punto de conexión para forzar el procesamiento sincrónico o establecer <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.MaxPendingReceives%2A> en 1.
+Cuando se usa un enlace MSMQ personalizado con <xref:System.ServiceModel.Channels.ReceiveContext> habilitado, el procesamiento de un mensaje entrante usa un subproceso de grupo de subprocesos porque MSMQ nativo no admite la finalización de e/s para las <xref:System.ServiceModel.Channels.ReceiveContext> recepciones asincrónicas. Esto se debe a que el procesamiento de este tipo de mensaje usa transacciones internas para <xref:System.ServiceModel.Channels.ReceiveContext> y MSMQ no admite el procesamiento asincrónico. Para solucionar este problema, puede Agregar un <xref:System.ServiceModel.Description.SynchronousReceiveBehavior> al punto de conexión para forzar el procesamiento sincrónico o establecer <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.MaxPendingReceives%2A> en 1.

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-ms.openlocfilehash: 09b21c9483b4f2716409b560dbbb478fe5a6badd
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 7da7ba1b680bae2b29eeff8fe669e097ea8eda32
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972223"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595380"
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Procedimiento para intercambiar mensajes en cola con puntos de conexión de WCF
 Las colas garantizan que se pueda producir mensajería de confianza entre un cliente y un servicio de Windows Communication Foundation (WCF), incluso si el servicio no está disponible en el momento de la comunicación. Los procedimientos siguientes muestran cómo garantizar la comunicación duradera entre un cliente y un servicio mediante el enlace en cola estándar al implementar el servicio WCF.  
   
- En esta sección se explica cómo <xref:System.ServiceModel.NetMsmqBinding> usar para la comunicación en cola entre un cliente WCF y un servicio WCF.  
+ En esta sección se explica cómo usar <xref:System.ServiceModel.NetMsmqBinding> para la comunicación en cola entre un cliente WCF y un servicio WCF.  
   
 ### <a name="to-use-queuing-in-a-wcf-service"></a>Para utilizar la puesta en cola en un servicio WCF  
   
@@ -78,10 +78,10 @@ Las colas garantizan que se pueda producir mensajería de confianza entre un cli
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.NetMsmqBinding>
-- [Enlace MSMQ por transacciones](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)
-- [Colas en WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
-- [Procedimientos: Intercambio de mensajes con extremos de WCF y aplicaciones de Message Queue Server](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
-- [Windows Communication Foundation a Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)
-- [Instalación de Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)
-- [Message Queuing a Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)
-- [Seguridad de mensajes mediante Message Queuing](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
+- [Enlace MSMQ por transacciones](../samples/transacted-msmq-binding.md)
+- [Las colas en WCF](queuing-in-wcf.md)
+- [Procedimiento para intercambiar mensajes con puntos de conexión de WCF y aplicaciones de Message Queue Server](how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [Windows Communication Foundation a Message Queuing](../samples/wcf-to-message-queuing.md)
+- [Instalar Message Queuing (MSMQ)](../samples/installing-message-queuing-msmq.md)
+- [Message Queuing a Windows Communication Foundation](../samples/message-queuing-to-wcf.md)
+- [Seguridad de mensajes mediante Message Queuing](../samples/message-security-over-message-queuing.md)

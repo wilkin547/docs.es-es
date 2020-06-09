@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-ms.openlocfilehash: 3dd21268d4ea7dc59c74889ac94dc86678e91865
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9447487012cae370d35880e5b780465f9434051b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184638"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602627"
 ---
 # <a name="message-security-with-a-user-name-client"></a>Seguridad de los mensajes con un cliente de nombres de usuario
-En la ilustración siguiente se muestra un servicio de Windows Communication Foundation (WCF) y un cliente protegido mediante la seguridad de nivel de mensaje. La autenticación del servicio se realiza mediante un certificado X.509. El cliente se autentica utilizando un nombre de usuario y contraseña.  
+En la ilustración siguiente se muestra un servicio y un cliente de Windows Communication Foundation (WCF) protegidos mediante la seguridad de nivel de mensaje. La autenticación del servicio se realiza mediante un certificado X.509. El cliente se autentica utilizando un nombre de usuario y contraseña.  
   
- Para obtener una aplicación de ejemplo, vea [Nombre de usuario](../../../../docs/framework/wcf/samples/message-security-user-name.md)de seguridad de mensajes .  
+ Para obtener una aplicación de ejemplo, vea [nombre de usuario de seguridad de mensaje](../samples/message-security-user-name.md).  
   
- ![Seguridad de mensajes mediante la autenticación de nombre de usuario](../../../../docs/framework/wcf/feature-details/media/1fb10a61-7e1d-42f5-b1af-195bfee5b3c6.gif "1fb10a61-7e1d-42f5-b1af-195bfee5b3c6")  
+ ![Seguridad de mensajes mediante la autenticación de nombre de usuario](media/1fb10a61-7e1d-42f5-b1af-195bfee5b3c6.gif "1fb10a61-7e1d-42f5-b1af-195bfee5b3c6")  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
 |Modo de seguridad|Message|  
-|Interoperabilidad|Windows Communication Foundation (WCF) solo|  
+|Interoperabilidad|Solo Windows Communication Foundation (WCF)|  
 |Autenticación (servidor)|La negociación inicial requiere autenticación de servidor|  
 |Autenticación (cliente)|Nombre de usuario/contraseña|  
 |Integridad|Sí, mediante el contexto de seguridad compartido|  
@@ -30,8 +30,8 @@ En la ilustración siguiente se muestra un servicio de Windows Communication Fou
 |Transporte|HTTP|  
 |Enlace|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## <a name="service"></a>Servicio  
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
+## <a name="service"></a>web de Office  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Lleve a cabo una de las siguientes acciones:  
   
 - Cree un servicio independiente mediante el código sin configuración.  
   
@@ -86,7 +86,7 @@ En la ilustración siguiente se muestra un servicio de Windows Communication Fou
 </configuration>  
 ```  
   
-## <a name="client"></a>Remoto  
+## <a name="client"></a>Cliente  
   
 ### <a name="code"></a>Código  
  El siguiente código crea el cliente. El enlace es para la seguridad del modo de mensaje y el tipo de credencial de cliente está establecido en `UserName`. El nombre de usuario y la contraseña solo se pueden especificar mediante código (no es configurable). El código para devolver el nombre de usuario y la contraseña no se muestra aquí porque se debe hacer en el nivel de la aplicación. Por ejemplo, use un cuadro de diálogo de Windows Forms para solicitar los datos al usuario.  
@@ -125,10 +125,10 @@ En la ilustración siguiente se muestra un servicio de Windows Communication Fou
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Nombre de usuario de seguridad de mensaje](../../../../docs/framework/wcf/samples/message-security-user-name.md)
-- [Identidad del servicio y autenticación](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [\<>de identidad](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+- [Información general sobre seguridad](security-overview.md)
+- [Nombre de usuario de seguridad de mensaje](../samples/message-security-user-name.md)
+- [Identidad del servicio y autenticación](service-identity-and-authentication.md)
+- [\<identity>](../../configure-apps/file-schema/wcf/identity.md)
 - [Modelo de seguridad para Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
