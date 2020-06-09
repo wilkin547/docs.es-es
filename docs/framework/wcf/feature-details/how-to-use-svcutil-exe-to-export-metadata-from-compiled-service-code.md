@@ -2,43 +2,43 @@
 title: Procedimiento para usar Svcutil.exe para exportar metadatos desde el código de servicio compilado
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-ms.openlocfilehash: 2d1b70931fe70dfd605e182d4b23a151bc8130a3
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 9acefdec63a6f518ead6cdbcb19ebc8c75609dd6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991178"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595367"
 ---
-# <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a><span data-ttu-id="47a88-102">Procedimiento para usar Svcutil.exe para exportar metadatos desde el código de servicio compilado</span><span class="sxs-lookup"><span data-stu-id="47a88-102">How to: Use Svcutil.exe to Export Metadata from Compiled Service Code</span></span>
-<span data-ttu-id="47a88-103">Svcutil.exe puede exportar metadatos para los servicios, contratos y tipos de datos en ensamblados compilados del siguiente modo:</span><span class="sxs-lookup"><span data-stu-id="47a88-103">Svcutil.exe can export metadata for services, contracts, and data types in compiled assemblies, as follows:</span></span>  
+# <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a><span data-ttu-id="3da2e-102">Procedimiento para usar Svcutil.exe para exportar metadatos desde el código de servicio compilado</span><span class="sxs-lookup"><span data-stu-id="3da2e-102">How to: Use Svcutil.exe to Export Metadata from Compiled Service Code</span></span>
+<span data-ttu-id="3da2e-103">Svcutil.exe puede exportar metadatos para los servicios, contratos y tipos de datos en ensamblados compilados del siguiente modo:</span><span class="sxs-lookup"><span data-stu-id="3da2e-103">Svcutil.exe can export metadata for services, contracts, and data types in compiled assemblies, as follows:</span></span>  
   
-- <span data-ttu-id="47a88-104">Para exportar los metadatos para todos los contratos de servicios compilados para un conjunto de ensamblados utilizando Svcutil.exe, especifique los ensamblados como parámetros de entrada.</span><span class="sxs-lookup"><span data-stu-id="47a88-104">To export metadata for all compiled service contracts for a set of assemblies using Svcutil.exe, specify the assemblies as input parameters.</span></span> <span data-ttu-id="47a88-105">Éste es el comportamiento predeterminado.</span><span class="sxs-lookup"><span data-stu-id="47a88-105">This is the default behavior.</span></span>  
+- <span data-ttu-id="3da2e-104">Para exportar los metadatos para todos los contratos de servicios compilados para un conjunto de ensamblados utilizando Svcutil.exe, especifique los ensamblados como parámetros de entrada.</span><span class="sxs-lookup"><span data-stu-id="3da2e-104">To export metadata for all compiled service contracts for a set of assemblies using Svcutil.exe, specify the assemblies as input parameters.</span></span> <span data-ttu-id="3da2e-105">Éste es el comportamiento predeterminado.</span><span class="sxs-lookup"><span data-stu-id="3da2e-105">This is the default behavior.</span></span>  
   
-- <span data-ttu-id="47a88-106">Para exportar los metadatos para un servicio compilado utilizando Svcutil.exe, especifique el ensamblado de servicio o ensamblados como parámetros de entrada.</span><span class="sxs-lookup"><span data-stu-id="47a88-106">To export metadata for a compiled service using Svcutil.exe, specify the service assembly or assemblies as input parameters.</span></span> <span data-ttu-id="47a88-107">Debe utilizar la opción `/serviceName` para indicar el nombre de configuración del servicio que quiere exportar.</span><span class="sxs-lookup"><span data-stu-id="47a88-107">You must use the `/serviceName` option to indicate the configuration name of the service you want to export.</span></span> <span data-ttu-id="47a88-108">Svcutil.exe carga automáticamente el archivo de configuración para el ensamblado ejecutable especificado.</span><span class="sxs-lookup"><span data-stu-id="47a88-108">Svcutil.exe automatically loads the configuration file for the specified executable assembly.</span></span>  
+- <span data-ttu-id="3da2e-106">Para exportar los metadatos para un servicio compilado utilizando Svcutil.exe, especifique el ensamblado de servicio o ensamblados como parámetros de entrada.</span><span class="sxs-lookup"><span data-stu-id="3da2e-106">To export metadata for a compiled service using Svcutil.exe, specify the service assembly or assemblies as input parameters.</span></span> <span data-ttu-id="3da2e-107">Debe utilizar la opción `/serviceName` para indicar el nombre de configuración del servicio que quiere exportar.</span><span class="sxs-lookup"><span data-stu-id="3da2e-107">You must use the `/serviceName` option to indicate the configuration name of the service you want to export.</span></span> <span data-ttu-id="3da2e-108">Svcutil.exe carga automáticamente el archivo de configuración para el ensamblado ejecutable especificado.</span><span class="sxs-lookup"><span data-stu-id="3da2e-108">Svcutil.exe automatically loads the configuration file for the specified executable assembly.</span></span>  
   
-- <span data-ttu-id="47a88-109">Para exportar todos los tipos de contrato de datos dentro de un conjunto de ensamblados, utilice la opción `/dataContractOnly`.</span><span class="sxs-lookup"><span data-stu-id="47a88-109">To export all data contract types within a set of assemblies, use the `/dataContractOnly` option.</span></span>  
+- <span data-ttu-id="3da2e-109">Para exportar todos los tipos de contrato de datos dentro de un conjunto de ensamblados, utilice la opción `/dataContractOnly`.</span><span class="sxs-lookup"><span data-stu-id="3da2e-109">To export all data contract types within a set of assemblies, use the `/dataContractOnly` option.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="47a88-110">Utilice la opción `/reference` para especificar las rutas de acceso del archivo a cualquier ensamblado dependiente.</span><span class="sxs-lookup"><span data-stu-id="47a88-110">Use the `/reference` option to specify the file paths to any dependent assemblies.</span></span>  
+> <span data-ttu-id="3da2e-110">Utilice la opción `/reference` para especificar las rutas de acceso del archivo a cualquier ensamblado dependiente.</span><span class="sxs-lookup"><span data-stu-id="3da2e-110">Use the `/reference` option to specify the file paths to any dependent assemblies.</span></span>  
   
-### <a name="to-export-metadata-for-compiled-service-contracts"></a><span data-ttu-id="47a88-111">Para exportar los metadatos para los contratos de servicios compilados</span><span class="sxs-lookup"><span data-stu-id="47a88-111">To export metadata for compiled service contracts</span></span>  
+### <a name="to-export-metadata-for-compiled-service-contracts"></a><span data-ttu-id="3da2e-111">Para exportar los metadatos para los contratos de servicios compilados</span><span class="sxs-lookup"><span data-stu-id="3da2e-111">To export metadata for compiled service contracts</span></span>  
   
-1. <span data-ttu-id="47a88-112">Compile sus implementaciones del contrato de servicios en una o más bibliotecas de clases.</span><span class="sxs-lookup"><span data-stu-id="47a88-112">Compile your service contract implementations into one or more class libraries.1</span></span>  
+1. <span data-ttu-id="3da2e-112">Compile sus implementaciones del contrato de servicios en una o más bibliotecas de clases.</span><span class="sxs-lookup"><span data-stu-id="3da2e-112">Compile your service contract implementations into one or more class libraries.1</span></span>  
   
-2. <span data-ttu-id="47a88-113">Ejecute Svcutil.exe en los ensamblados compilados.</span><span class="sxs-lookup"><span data-stu-id="47a88-113">Run Svcutil.exe on the compiled assemblies.</span></span>  
+2. <span data-ttu-id="3da2e-113">Ejecute Svcutil.exe en los ensamblados compilados.</span><span class="sxs-lookup"><span data-stu-id="3da2e-113">Run Svcutil.exe on the compiled assemblies.</span></span>  
   
     > [!NOTE]
-    > <span data-ttu-id="47a88-114">Quizás necesite utilizar el modificador `/reference` para especificar la ruta de acceso del archivo a cualquier ensamblado dependiente.</span><span class="sxs-lookup"><span data-stu-id="47a88-114">You might need to use the `/reference` switch to specify the file path to any dependent assemblies.</span></span>  
+    > <span data-ttu-id="3da2e-114">Quizás necesite utilizar el modificador `/reference` para especificar la ruta de acceso del archivo a cualquier ensamblado dependiente.</span><span class="sxs-lookup"><span data-stu-id="3da2e-114">You might need to use the `/reference` switch to specify the file path to any dependent assemblies.</span></span>  
   
     ```console
     svcutil.exe Contracts.dll  
     ```  
   
-### <a name="to-export-metadata-for-a-compiled-service"></a><span data-ttu-id="47a88-115">Para exportar los metadatos para un servicio compilado</span><span class="sxs-lookup"><span data-stu-id="47a88-115">To export metadata for a compiled service</span></span>  
+### <a name="to-export-metadata-for-a-compiled-service"></a><span data-ttu-id="3da2e-115">Para exportar los metadatos para un servicio compilado</span><span class="sxs-lookup"><span data-stu-id="3da2e-115">To export metadata for a compiled service</span></span>  
   
-1. <span data-ttu-id="47a88-116">Compile su implementación del servicio en un ensamblado ejecutable.</span><span class="sxs-lookup"><span data-stu-id="47a88-116">Compile your service implementation into an executable assembly.</span></span>  
+1. <span data-ttu-id="3da2e-116">Compile su implementación del servicio en un ensamblado ejecutable.</span><span class="sxs-lookup"><span data-stu-id="3da2e-116">Compile your service implementation into an executable assembly.</span></span>  
   
-2. <span data-ttu-id="47a88-117">Cree un archivo de configuración para su ejecutable de servicio y agregue una configuración de servicio.</span><span class="sxs-lookup"><span data-stu-id="47a88-117">Create a configuration file for your service executable and add a service configuration.</span></span>  
+2. <span data-ttu-id="3da2e-117">Cree un archivo de configuración para su ejecutable de servicio y agregue una configuración de servicio.</span><span class="sxs-lookup"><span data-stu-id="3da2e-117">Create a configuration file for your service executable and add a service configuration.</span></span>  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -53,50 +53,50 @@ ms.locfileid: "70991178"
     </configuration>  
     ```  
   
-3. <span data-ttu-id="47a88-118">Ejecute Svcutil.exe en el ejecutable de servicio compilado utilizando el modificador `/serviceName` para especificar el nombre de configuración del servicio.</span><span class="sxs-lookup"><span data-stu-id="47a88-118">Run Svcutil.exe on the compiled service executable using the `/serviceName` switch to specify the configuration name of the service.</span></span>  
+3. <span data-ttu-id="3da2e-118">Ejecute Svcutil.exe en el ejecutable de servicio compilado utilizando el modificador `/serviceName` para especificar el nombre de configuración del servicio.</span><span class="sxs-lookup"><span data-stu-id="3da2e-118">Run Svcutil.exe on the compiled service executable using the `/serviceName` switch to specify the configuration name of the service.</span></span>  
   
     > [!NOTE]
-    > <span data-ttu-id="47a88-119">Quizás necesite utilizar el modificador `/reference` para especificar la ruta de acceso del archivo a cualquier ensamblado dependiente.</span><span class="sxs-lookup"><span data-stu-id="47a88-119">You might need to use the `/reference` switch to specify the file path to any dependent assemblies.</span></span>  
+    > <span data-ttu-id="3da2e-119">Quizás necesite utilizar el modificador `/reference` para especificar la ruta de acceso del archivo a cualquier ensamblado dependiente.</span><span class="sxs-lookup"><span data-stu-id="3da2e-119">You might need to use the `/reference` switch to specify the file path to any dependent assemblies.</span></span>  
   
     ```console  
     svcutil.exe /serviceName:MyService Service.exe /reference:path/Contracts.dll  
     ```  
   
-### <a name="to-export-metadata-for-compiled-data-contracts"></a><span data-ttu-id="47a88-120">Para exportar los metadatos para los contratos de datos compilados</span><span class="sxs-lookup"><span data-stu-id="47a88-120">To export metadata for compiled data contracts</span></span>  
+### <a name="to-export-metadata-for-compiled-data-contracts"></a><span data-ttu-id="3da2e-120">Para exportar los metadatos para los contratos de datos compilados</span><span class="sxs-lookup"><span data-stu-id="3da2e-120">To export metadata for compiled data contracts</span></span>  
   
-1. <span data-ttu-id="47a88-121">Compile sus implementaciones del contrato de datos en una o más bibliotecas de clases.</span><span class="sxs-lookup"><span data-stu-id="47a88-121">Compile your data contract implementations into one or more class libraries.</span></span>  
+1. <span data-ttu-id="3da2e-121">Compile sus implementaciones del contrato de datos en una o más bibliotecas de clases.</span><span class="sxs-lookup"><span data-stu-id="3da2e-121">Compile your data contract implementations into one or more class libraries.</span></span>  
   
-2. <span data-ttu-id="47a88-122">Ejecute Svcutil.exe en los ensamblados compilados utilizando el modificador `/dataContract` para especificar que solo se deberían generar los metadatos para los contratos de datos.</span><span class="sxs-lookup"><span data-stu-id="47a88-122">Run Svcutil.exe on the compiled assemblies using the `/dataContract` switch to specify that only metadata for data contracts should be generated.</span></span>  
+2. <span data-ttu-id="3da2e-122">Ejecute Svcutil.exe en los ensamblados compilados utilizando el modificador `/dataContract` para especificar que solo se deberían generar los metadatos para los contratos de datos.</span><span class="sxs-lookup"><span data-stu-id="3da2e-122">Run Svcutil.exe on the compiled assemblies using the `/dataContract` switch to specify that only metadata for data contracts should be generated.</span></span>  
   
     > [!NOTE]
-    > <span data-ttu-id="47a88-123">Quizás necesite utilizar el modificador `/reference` para especificar la ruta de acceso del archivo a cualquier ensamblado dependiente.</span><span class="sxs-lookup"><span data-stu-id="47a88-123">You might need to use the `/reference` switch to specify the file path to any dependent assemblies.</span></span>  
+    > <span data-ttu-id="3da2e-123">Quizás necesite utilizar el modificador `/reference` para especificar la ruta de acceso del archivo a cualquier ensamblado dependiente.</span><span class="sxs-lookup"><span data-stu-id="3da2e-123">You might need to use the `/reference` switch to specify the file path to any dependent assemblies.</span></span>  
   
     ```console  
     svcutil.exe /dataContractOnly Contracts.dll  
     ```  
   
-## <a name="example"></a><span data-ttu-id="47a88-124">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="47a88-124">Example</span></span>  
- <span data-ttu-id="47a88-125">El ejemplo siguiente muestra cómo generar los metadatos para una implementación de servicio simple y configuración.</span><span class="sxs-lookup"><span data-stu-id="47a88-125">The following example demonstrates how to generate metadata for a simple service implementation and configuration.</span></span>  
+## <a name="example"></a><span data-ttu-id="3da2e-124">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="3da2e-124">Example</span></span>  
+ <span data-ttu-id="3da2e-125">El ejemplo siguiente muestra cómo generar los metadatos para una implementación de servicio simple y configuración.</span><span class="sxs-lookup"><span data-stu-id="3da2e-125">The following example demonstrates how to generate metadata for a simple service implementation and configuration.</span></span>  
   
- <span data-ttu-id="47a88-126">Para exportar los metadatos para el contrato de servicios.</span><span class="sxs-lookup"><span data-stu-id="47a88-126">To export metadata for the service contract.</span></span>  
+ <span data-ttu-id="3da2e-126">Para exportar los metadatos para el contrato de servicios.</span><span class="sxs-lookup"><span data-stu-id="3da2e-126">To export metadata for the service contract.</span></span>  
   
 ```console  
 svcutil.exe Contracts.dll  
 ```  
   
- <span data-ttu-id="47a88-127">Para exportar los metadatos para los contratos de datos.</span><span class="sxs-lookup"><span data-stu-id="47a88-127">To export metadata for the data contracts.</span></span>  
+ <span data-ttu-id="3da2e-127">Para exportar los metadatos para los contratos de datos.</span><span class="sxs-lookup"><span data-stu-id="3da2e-127">To export metadata for the data contracts.</span></span>  
   
 ```console  
 svcutil.exe /dataContractOnly Contracts.dll  
 ```  
   
- <span data-ttu-id="47a88-128">Para exportar los metadatos para la implementación del servicio.</span><span class="sxs-lookup"><span data-stu-id="47a88-128">To export metadata for the service implementation.</span></span>  
+ <span data-ttu-id="3da2e-128">Para exportar los metadatos para la implementación del servicio.</span><span class="sxs-lookup"><span data-stu-id="3da2e-128">To export metadata for the service implementation.</span></span>  
   
 ```console  
 svcutil.exe /serviceName:MyService Service.exe /reference:<path>/Contracts.dll  
 ```  
   
- <span data-ttu-id="47a88-129">`<path>` es la ruta de acceso a Contracts.dll.</span><span class="sxs-lookup"><span data-stu-id="47a88-129">The `<path>` is the path to Contracts.dll.</span></span>  
+ <span data-ttu-id="3da2e-129">`<path>` es la ruta de acceso a Contracts.dll.</span><span class="sxs-lookup"><span data-stu-id="3da2e-129">The `<path>` is the path to Contracts.dll.</span></span>  
   
 ```csharp
 // The following service contract and data contracts are compiled into
@@ -166,7 +166,7 @@ public class MyService : IPersonFinder
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="47a88-130">Vea también</span><span class="sxs-lookup"><span data-stu-id="47a88-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3da2e-130">Vea también</span><span class="sxs-lookup"><span data-stu-id="3da2e-130">See also</span></span>
 
-- [<span data-ttu-id="47a88-131">Herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)</span><span class="sxs-lookup"><span data-stu-id="47a88-131">ServiceModel Metadata Utility Tool (Svcutil.exe)</span></span>](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [<span data-ttu-id="47a88-132">Exportación e importación de metadatos</span><span class="sxs-lookup"><span data-stu-id="47a88-132">Exporting and Importing Metadata</span></span>](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)
+- [<span data-ttu-id="3da2e-131">Herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)</span><span class="sxs-lookup"><span data-stu-id="3da2e-131">ServiceModel Metadata Utility Tool (Svcutil.exe)</span></span>](../servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [<span data-ttu-id="3da2e-132">Exportación e importación de metadatos</span><span class="sxs-lookup"><span data-stu-id="3da2e-132">Exporting and Importing Metadata</span></span>](exporting-and-importing-metadata.md)
