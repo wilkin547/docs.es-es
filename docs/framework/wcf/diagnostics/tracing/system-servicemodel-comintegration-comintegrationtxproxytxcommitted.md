@@ -2,21 +2,21 @@
 title: System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxCommitted
 ms.date: 03/30/2017
 ms.assetid: f9f5d2aa-04db-4d4d-b802-3bf5d4626e59
-ms.openlocfilehash: 3835cf472912bfebe07326d2b28350ed1ace44a8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a583ae2b7e45978090f9d899e9fcd0af4e548f1a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969707"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601782"
 ---
-# <a name="systemservicemodelcomintegrationcomintegrationtxproxytxcommitted"></a><span data-ttu-id="280e1-102">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxCommitted</span><span class="sxs-lookup"><span data-stu-id="280e1-102">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxCommitted</span></span>
-<span data-ttu-id="280e1-103">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxCommitted</span><span class="sxs-lookup"><span data-stu-id="280e1-103">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxCommitted</span></span>  
+# <a name="systemservicemodelcomintegrationcomintegrationtxproxytxcommitted"></a><span data-ttu-id="7317a-102">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxCommitted</span><span class="sxs-lookup"><span data-stu-id="7317a-102">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxCommitted</span></span>
+<span data-ttu-id="7317a-103">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxCommitted</span><span class="sxs-lookup"><span data-stu-id="7317a-103">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxCommitted</span></span>  
   
-## <a name="description"></a><span data-ttu-id="280e1-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="280e1-104">Description</span></span>  
- <span data-ttu-id="280e1-105">ComPlus: Confirmada la transacción.</span><span class="sxs-lookup"><span data-stu-id="280e1-105">ComPlus: Transaction committed.</span></span>  
+## <a name="description"></a><span data-ttu-id="7317a-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="7317a-104">Description</span></span>  
+ <span data-ttu-id="7317a-105">ComPlus: transacción confirmada.</span><span class="sxs-lookup"><span data-stu-id="7317a-105">ComPlus: Transaction committed.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="280e1-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="280e1-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7317a-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="7317a-106">See also</span></span>
 
-- [<span data-ttu-id="280e1-107">Traza</span><span class="sxs-lookup"><span data-stu-id="280e1-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="280e1-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="280e1-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="280e1-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="280e1-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="7317a-107">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="7317a-107">Tracing</span></span>](index.md)
+- [<span data-ttu-id="7317a-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="7317a-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="7317a-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="7317a-109">Administration and Diagnostics</span></span>](../index.md)
