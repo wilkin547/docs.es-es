@@ -3,12 +3,12 @@ title: Portabilidad de .NET Framework a .NET Core
 description: Comprenda el proceso de portabilidad y descubra herramientas que le pueden resultar útiles al realizar la portabilidad de un proyecto de .NET Framework a .NET Core.
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: c6797a5b3a97ddd01f86498d896e859baf8997be
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: 74fe4519e41a07bc78a4dc346f8d1b52b5c7d092
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158295"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502774"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>Introducción a la portabilidad de .NET Framework a .NET Core
 
@@ -39,6 +39,9 @@ Para identificar el orden en el que se deben migrar los proyectos, puede usar la
 
 - [Los diagramas de dependencia de Visual Studio](/visualstudio/modeling/create-layer-diagrams-from-your-code) pueden crear un gráfico dirigido del código en una solución.
 - Ejecute `msbuild _SolutionPath_ /t:GenerateRestoreGraphFile /p:RestoreGraphOutputPath=graph.dg.json` para generar un documento JSON que incluya la lista de referencias del proyecto.
+- Ejecute el [Analizador de portabilidad de .NET](../../standard/analyzers/portability-analyzer.md) con el modificador `-r DGML` para recuperar un diagrama de dependencias de los ensamblados. Para más información, consulte [esta página](../../standard/analyzers/portability-analyzer.md#solution-wide-view).
+
+Una vez que tenga la información de dependencias, puede usarla para empezar en los nodos de hoja y subir hasta el árbol de dependencias aplicando los pasos de la sección siguiente.
 
 ## <a name="per-project-steps"></a>Pasos por proyecto
 

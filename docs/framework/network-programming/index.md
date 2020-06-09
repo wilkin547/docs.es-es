@@ -1,5 +1,6 @@
 ---
 title: Programación para redes en .NET Framework
+description: Use estos recursos para integrar la implementación en capas, extensible y administrada de los servicios de Internet que proporciona .NET Framework en sus aplicaciones.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Networking
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Internet, .NET Framework Internet services
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
-ms.openlocfilehash: 1e7f0123ab07fd4e83eea957b72bf79eeeecef2b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 117fce887a04def7f9b3f7654a8e9e675ea462d2
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74204694"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502410"
 ---
 # <a name="network-programming-in-the-net-framework"></a>Programación para redes en .NET Framework
 Microsoft .NET Framework proporciona una implementación por capas, extensible y administrada de servicios de Internet que se puede integrar rápida y fácilmente en las aplicaciones. Las aplicaciones de red se pueden basar en protocolos conectables para poder usar automáticamente los nuevos protocolos de Internet, o pueden utilizar una implementación administrada de la interfaz de Windows Socket para operar con la red en el nivel de socket.  
@@ -25,7 +26,7 @@ Microsoft .NET Framework proporciona una implementación por capas, extensible y
  [Solicitud de datos](requesting-data.md)  
  Explica cómo utilizar protocolos conectables para cargar y descargar datos de recursos de Internet.  
   
- [Programar protocolos acoplables](programming-pluggable-protocols.md)  
+ [Programming Pluggable Protocols (Programar protocolos acoplables)](programming-pluggable-protocols.md)  
  Explica cómo derivar clases específicas del protocolo para implementar protocolos conectables.  
   
  [Usar protocolos de aplicaciones](using-application-protocols.md)  
@@ -37,7 +38,7 @@ Microsoft .NET Framework proporciona una implementación por capas, extensible y
  [Configuración de aplicaciones de Internet](configuring-internet-applications.md)  
  Explica cómo utilizar archivos de configuración de .NET Framework para configurar aplicaciones de Internet.  
   
- [Traza de la red en .NET Framework](network-tracing.md)  
+ [Network Tracing in the .NET Framework (Seguimiento de red en .NET Framework)](network-tracing.md)  
  Explica cómo utilizar el seguimiento de la red para obtener información sobre las invocaciones de método y el tráfico de red generado por una aplicación administrada.  
   
  [Administración de la memoria caché para aplicaciones de red](cache-management-for-network-applications.md)  
@@ -82,7 +83,7 @@ Microsoft .NET Framework proporciona una implementación por capas, extensible y
  [Aislamiento de red para aplicaciones de la Tienda Windows](network-isolation-for-windows-store-apps.md)  
  Describe el impacto del aislamiento de red al usar las clases de los espacios de nombres <xref:System.Net>, <xref:System.Net.Http>y <xref:System.Net.Http.Headers> en aplicaciones de la Tienda Windows 8.x.  
   
- [Ejemplos de programación de red](network-programming-samples.md)  
+ [Network Programming Samples (Ejemplos de programación de red)](network-programming-samples.md)  
  Vínculos a ejemplos de programación de red descargables que utilizan las clases de los espacios de nombres <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.PeerToPeer>, <xref:System.Net.Security>y <xref:System.Net.Sockets> .  
   
 ## <a name="reference"></a>Referencia  
@@ -138,5 +139,5 @@ Microsoft .NET Framework proporciona una implementación por capas, extensible y
 
 - [Procedimientos recomendados sobre la seguridad de la capa de transporte (TLS) con .NET Framework](tls.md)
 - [Temas de procedimientos de programación de redes](network-programming-how-to-topics.md)
-- [Ejemplos de programación de red](network-programming-samples.md)
+- [Network Programming Samples (Ejemplos de programación de red)](network-programming-samples.md)
 - [Ejemplo de HttpClient](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)
