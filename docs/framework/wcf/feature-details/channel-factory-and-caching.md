@@ -2,12 +2,12 @@
 title: Generador de canales y almacenamiento en memoria caché
 ms.date: 03/30/2017
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
-ms.openlocfilehash: 98b77071204e2c2f98609e6c5bb1ca84a896dd58
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 5b8348a98b484ca08e3dbeba141dc49825c8c071
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040199"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84587370"
 ---
 # <a name="channel-factory-and-caching"></a>Generador de canales y almacenamiento en memoria caché
 
@@ -26,16 +26,16 @@ Para ayudar a reducir esta sobrecarga, WCF puede almacenar en caché los generad
 > [!TIP]
 > Tiene el control directo sobre la creación del generador de canales cuando usa la clase <xref:System.ServiceModel.ChannelFactory%601> directamente.
 
-Los proxies de cliente de WCF generados con la herramienta de utilidad de metadatos de <xref:System.ServiceModel.ClientBase%601> [ServiceModel (SvcUtil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) se derivan de. <xref:System.ServiceModel.ClientBase%601> define una propiedad <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> estática que define el comportamiento de almacenamiento en memoria caché del generador de canales. Los valores de la memoria caché se crean para un tipo específico. Por ejemplo, si `ClientBase<ITest>.CacheSettings` se establece en uno de los valores que se definen a continuación, solo afectará `ITest`a esos proxy o ClientBase de tipo. La configuración de almacenamiento en memoria caché para un <xref:System.ServiceModel.ClientBase%601> determinado es inmutable en cuanto se crea la primera instancia de proxy/ClientBase.
+Los proxies de cliente de WCF generados con la [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) se derivan de <xref:System.ServiceModel.ClientBase%601> . <xref:System.ServiceModel.ClientBase%601> define una propiedad <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> estática que define el comportamiento de almacenamiento en memoria caché del generador de canales. Los valores de la memoria caché se crean para un tipo específico. Por ejemplo, si `ClientBase<ITest>.CacheSettings` se establece en uno de los valores que se definen a continuación, solo afectará a esos proxy o ClientBase de tipo `ITest` . La configuración de almacenamiento en memoria caché para un <xref:System.ServiceModel.ClientBase%601> determinado es inmutable en cuanto se crea la primera instancia de proxy/ClientBase.
 
 ## <a name="specifying-caching-behavior"></a>Especificar el comportamiento de almacenamiento en memoria caché
 
 El comportamiento de almacenamiento en memoria caché se especifica estableciendo la propiedad <xref:System.ServiceModel.ClientBase%601.CacheSetting> en uno de los siguientes valores.
 
-|Valor de configuración de caché|DESCRIPCIÓN|
+|Valor de configuración de caché|Descripción|
 |-------------------------|-----------------|
-|<xref:System.ServiceModel.CacheSetting.AlwaysOn>|Todas las instancias de <xref:System.ServiceModel.ClientBase%601> dentro del dominio de aplicación pueden participar en el almacenamiento en memoria caché. El desarrollador ha determinado que no hay implicaciones adversas de seguridad para almacenar en memoria caché. El almacenamiento en caché no se desactivará aunque se tenga acceso a las <xref:System.ServiceModel.ClientBase%601> propiedades "sensibles a la seguridad" en. Las propiedades "sensibles a la seguridad" <xref:System.ServiceModel.ClientBase%601> de <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>son <xref:System.ServiceModel.ClientBase%601.Endpoint%2A> , <xref:System.ServiceModel.ClientBase%601.ChannelFactory%2A>y.|
-|<xref:System.ServiceModel.CacheSetting.Default>|Solo las instancias de <xref:System.ServiceModel.ClientBase%601> creadas desde extremos definidos en archivos de configuración participan en el almacenamiento en memoria caché dentro del dominio de aplicación. Cualquier instancia de <xref:System.ServiceModel.ClientBase%601> creada mediante programación dentro de ese dominio de aplicación no participará en el almacenamiento en memoria caché. Además, el almacenamiento en caché se deshabilitará <xref:System.ServiceModel.ClientBase%601> para una instancia de una vez que se tenga acceso a cualquiera de sus propiedades "con seguridad".|
+|<xref:System.ServiceModel.CacheSetting.AlwaysOn>|Todas las instancias de <xref:System.ServiceModel.ClientBase%601> dentro del dominio de aplicación pueden participar en el almacenamiento en memoria caché. El desarrollador ha determinado que no hay implicaciones adversas de seguridad para almacenar en memoria caché. El almacenamiento en caché no se desactivará aunque se tenga acceso a las propiedades "sensibles a la seguridad" en <xref:System.ServiceModel.ClientBase%601> . Las propiedades "sensibles a la seguridad" de <xref:System.ServiceModel.ClientBase%601> son <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> , <xref:System.ServiceModel.ClientBase%601.Endpoint%2A> y <xref:System.ServiceModel.ClientBase%601.ChannelFactory%2A> .|
+|<xref:System.ServiceModel.CacheSetting.Default>|Solo las instancias de <xref:System.ServiceModel.ClientBase%601> creadas desde extremos definidos en archivos de configuración participan en el almacenamiento en memoria caché dentro del dominio de aplicación. Cualquier instancia de <xref:System.ServiceModel.ClientBase%601> creada mediante programación dentro de ese dominio de aplicación no participará en el almacenamiento en memoria caché. Además, el almacenamiento en caché se deshabilitará para una instancia de <xref:System.ServiceModel.ClientBase%601> una vez que se tenga acceso a cualquiera de sus propiedades "con seguridad".|
 |<xref:System.ServiceModel.CacheSetting.AlwaysOff>|El almacenamiento en caché está desactivado para todas las instancias de <xref:System.ServiceModel.ClientBase%601> de un tipo determinado dentro del dominio de aplicación en cuestión.|
 
 Los fragmentos de código siguientes muestran cómo usar la propiedad <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A>.
@@ -116,7 +116,7 @@ En el ejemplo anterior, todas las instancias de `TestClient` usarían diferentes
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.ClientBase%601>
-- [Creación de clientes](../../../../docs/framework/wcf/building-clients.md)
-- [Clientes](../../../../docs/framework/wcf/feature-details/clients.md)
-- [Acceso a los servicios mediante un cliente WCF](../../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
-- [Procedimientos: Usar ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+- [Creación de clientes](../building-clients.md)
+- [Clientes](clients.md)
+- [Acceso a los servicios mediante un cliente WCF](../accessing-services-using-a-wcf-client.md)
+- [Procedimiento para usar ChannelFactory](how-to-use-the-channelfactory.md)

@@ -7,25 +7,25 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-ms.openlocfilehash: 1e82fbb266d3789a8d34109c66d9ee1d8a93c70c
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 2b3c96e91c0d6f01fa30b3b617449e7d4a148933
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463815"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596778"
 ---
 # <a name="programming-wcf-security"></a>Programación de la seguridad de WCF
-En este tema se describen las tareas de programación fundamentales que se usan para crear una aplicación segura de Windows Communication Foundation (WCF). En este tema solo se trata la autenticación, la confidencialidad y la integridad, conocidas colectivamente como seguridad de *transferencia.* Este tema no cubre la autorización (el control del acceso a los recursos o servicios); para obtener información sobre la autorización, véase [Autorización](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
+En este tema se describen las tareas de programación fundamentales que se usan para crear una aplicación Secure Windows Communication Foundation (WCF). En este tema solo se trata la autenticación, la confidencialidad y la integridad, que se conocen colectivamente como *seguridad de transferencia*. En este tema no se trata la autorización (el control de acceso a los recursos o servicios). para obtener información sobre la autorización, vea [autorización](authorization-in-wcf.md).  
   
 > [!NOTE]
-> Para obtener una valiosa introducción a los conceptos de seguridad, especialmente en lo que respecta a WCF, vea el conjunto de tutoriales de patrones y prácticas en MSDN en escenarios, patrones y orientación de implementación para mejoras de servicios [web (WSE) 3.0](https://docs.microsoft.com/previous-versions/msp-n-p/ff648183(v=pandp.10)).  
+> Para obtener una introducción valiosa a los conceptos de seguridad, especialmente en relación con WCF, vea el conjunto de tutoriales de patrones y prácticas de MSDN en [escenarios, patrones e instrucciones de implementación para Web Services Enhancements (WSE) 3,0](https://docs.microsoft.com/previous-versions/msp-n-p/ff648183(v=pandp.10)).  
   
- La programación de la seguridad WCF se basa en tres pasos que establecen lo siguiente: el modo de seguridad, un tipo de credencial de cliente y los valores de credenciales. Puede realizar estos pasos mediante código o configuración.  
+ La programación de la seguridad de WCF se basa en tres pasos que establecen lo siguiente: el modo de seguridad, un tipo de credencial de cliente y los valores de credenciales. Puede realizar estos pasos mediante código o configuración.  
   
 ## <a name="setting-the-security-mode"></a>Establecimiento del modo de seguridad  
  A continuación se explican los pasos generales para programar con el modo de seguridad en WCF:  
   
-1. Seleccione uno de los enlaces predefinidos adecuado a sus requisitos de aplicación. Para obtener una lista de las opciones de enlace, vea [enlaces proporcionados por](../../../../docs/framework/wcf/system-provided-bindings.md)el sistema . De forma predeterminada, prácticamente todos los enlaces tienen la seguridad habilitada. La única excepción es la <xref:System.ServiceModel.BasicHttpBinding> clase (mediante configuration, [basicHttpBinding \<>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)).  
+1. Seleccione uno de los enlaces predefinidos adecuado a sus requisitos de aplicación. Para obtener una lista de las opciones de enlace, vea [enlaces proporcionados](../system-provided-bindings.md)por el sistema. De forma predeterminada, prácticamente todos los enlaces tienen la seguridad habilitada. La única excepción es la <xref:System.ServiceModel.BasicHttpBinding> clase (mediante la configuración, [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) ).  
   
      El enlace que seleccione determina el transporte. Por ejemplo, <xref:System.ServiceModel.WSHttpBinding> utiliza HTTP como el transporte; <xref:System.ServiceModel.NetTcpBinding> utiliza TCP.  
   
@@ -35,26 +35,26 @@ En este tema se describen las tareas de programación fundamentales que se usan 
   
     1. `Transport`  
   
-         La seguridad de transporte depende del mecanismo que use el enlace que ha seleccionado. Por ejemplo, si utiliza `WSHttpBinding`, el mecanismo de seguridad es Secure Sockets Layer (SSL) (también es el mecanismo para el protocolo HTTPS). Generalmente hablando, la principal ventaja de la seguridad de transporte es que proporciona un buen rendimiento independientemente del transporte que esté utilizando. No obstante, tiene dos limitaciones: la primera es que el mecanismo de transporte dicta el tipo de credencial utilizado para autenticar a un usuario. Ésta es una desventaja solo si un servicio necesita interoperar con otros servicios que exigen tipos diferentes de credenciales. La segunda es que, puesto que la seguridad no se aplica en el nivel de mensaje, la seguridad se implementa salto por salto en lugar de de extremo a extremo. Esta última limitación es un problema solo si la ruta de mensajes entre el cliente y el servicio incluye intermediarios. Para obtener más información sobre el transporte que se va a utilizar, consulte [Elegir un transporte](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Para obtener más información sobre el uso de la seguridad de transporte, vea [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)de transporte .  
+         La seguridad de transporte depende del mecanismo que use el enlace que ha seleccionado. Por ejemplo, si utiliza `WSHttpBinding`, el mecanismo de seguridad es Secure Sockets Layer (SSL) (también es el mecanismo para el protocolo HTTPS). Generalmente hablando, la principal ventaja de la seguridad de transporte es que proporciona un buen rendimiento independientemente del transporte que esté utilizando. No obstante, tiene dos limitaciones: la primera es que el mecanismo de transporte dicta el tipo de credencial utilizado para autenticar a un usuario. Ésta es una desventaja solo si un servicio necesita interoperar con otros servicios que exigen tipos diferentes de credenciales. La segunda es que, puesto que la seguridad no se aplica en el nivel de mensaje, la seguridad se implementa salto por salto en lugar de de extremo a extremo. Esta última limitación es un problema solo si la ruta de mensajes entre el cliente y el servicio incluye intermediarios. Para obtener más información acerca del transporte que se va a usar, consulte [elección de un transporte](choosing-a-transport.md). Para obtener más información sobre el uso de la seguridad de transporte, vea [información general](transport-security-overview.md)sobre la seguridad de transporte.  
   
     2. `Message`  
   
          El modo de seguridad significa que cada mensaje incluye los encabezados y datos necesarios para mantener el mensaje protegido. Dado que la composición de los encabezados varía, puede incluir cualquier número de credenciales. Este es un factor a tener en cuenta si está interoperando con otros servicios que exigen un tipo de credencial concreto que un mecanismo de transporte no puede proporcionar o si el mensaje se debe utilizar con más de un servicio, donde cada servicio exige un tipo de credencial diferente.  
   
-         Para obtener más información, consulte [Seguridad](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)de mensajes .  
+         Para obtener más información, vea [seguridad de mensajes](message-security-in-wcf.md).  
   
     3. `TransportWithMessageCredential`  
   
          Esta opción utiliza el nivel de transporte para proteger la transferencia del mensaje, mientras que cada mensaje incluye las credenciales enriquecidas que otros servicios necesitan. Esto combina la ventaja de rendimiento de la seguridad de transporte con la ventaja de las credenciales enriquecidas de la seguridad de mensaje. Esto está disponible con los siguientes enlaces: <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WSFederationHttpBinding>, <xref:System.ServiceModel.NetPeerTcpBinding> y <xref:System.ServiceModel.WSHttpBinding>.  
   
-3. Si decide utilizar la seguridad de transporte para HTTP (en otras palabras, HTTPS), debe configurar también el host con un certificado SSL y habilitar SSL en un puerto. Para obtener más información, consulte Seguridad de [transporte HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+3. Si decide utilizar la seguridad de transporte para HTTP (en otras palabras, HTTPS), debe configurar también el host con un certificado SSL y habilitar SSL en un puerto. Para obtener más información, vea [seguridad de transporte http](http-transport-security.md).  
   
 4. Si está utilizando el <xref:System.ServiceModel.WSHttpBinding> y no necesita establecer una sesión segura, establezca la propiedad <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> en `false`.  
   
      Una sesión segura se produce cuando un cliente y servicio crean un canal mediante una clave simétrica (tanto el cliente como el servidor usan la misma clave durante la duración de una conversación, hasta que se cierre el diálogo).  
   
 ## <a name="setting-the-client-credential-type"></a>Establecimiento del tipo de credencial de cliente  
- Seleccione según corresponda un tipo de credencial de cliente. Para obtener más información, consulte [Selección de un tipo](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)de credencial . Los siguientes tipos de credencial de cliente están disponibles:  
+ Seleccione según corresponda un tipo de credencial de cliente. Para obtener más información, consulte [seleccionar un tipo de credencial](selecting-a-credential-type.md). Los siguientes tipos de credencial de cliente están disponibles:  
   
 - `Windows`  
   
@@ -102,7 +102,7 @@ En este tema se describen las tareas de programación fundamentales que se usan 
  [!code-csharp[c_TcpClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_tcpclient/cs/source.cs#1)]
  [!code-vb[c_TcpClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_tcpclient/vb/source.vb#1)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Programación básica de WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)
-- [Escenarios de seguridad comunes](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
+- [Programación básica de WCF](../basic-wcf-programming.md)
+- [Escenarios de seguridad comunes](common-security-scenarios.md)

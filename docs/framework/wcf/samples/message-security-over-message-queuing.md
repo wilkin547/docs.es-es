@@ -2,35 +2,35 @@
 title: Seguridad de mensajes mediante Message Queuing
 ms.date: 03/30/2017
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
-ms.openlocfilehash: 2048b27f15787c70abda65ae582849276469c763
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7d483ff8252469e95dfbddedf31d1506848e1b45
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79144440"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84584927"
 ---
 # <a name="message-security-over-message-queuing"></a>Seguridad de mensajes mediante Message Queuing
 Este ejemplo muestra cómo implementar una aplicación que utiliza WS-Security con autenticación de certificado X.509v3 para el cliente y que requiere la autenticación del servidor mediante el certificado X.509v3 del servidor sobre MSMQ. En ocasiones es más apropiado utilizar la seguridad del mensaje para garantizar que los mensajes en el almacén de MSMQ permanezcan cifrados y la aplicación pueda realizar su propia autenticación del mensaje.
 
- Este ejemplo se basa en el [Transacted MSMQ Binding](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) ejemplo. Los mensajes se cifran y firman.
+ Este ejemplo se basa en el ejemplo de [enlace de MSMQ de transacciones](transacted-msmq-binding.md) . Los mensajes se cifran y firman.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo
 
-1. Asegúrese de que ha realizado el procedimiento de instalación única [para los ejemplos](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)de Windows Communication Foundation .
+1. Asegúrese de que ha realizado el [procedimiento de instalación única para los ejemplos de Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
 
 2. Si se ejecuta el servicio primero, comprobará que la cola esté presente. Si la cola no está presente, el servicio creará una. Puede ejecutar primero el servicio para crear la cola, o puede crear una a través del administrador de cola de MSMQ. Siga estos pasos para crear una cola en Windows 2008.
 
-    1. Abra el Administrador del servidor en Visual Studio 2012.
+    1. Abra Administrador del servidor en Visual Studio 2012.
 
-    2. Expanda la pestaña **Características.**
+    2. Expanda la pestaña **características** .
 
-    3. Haga clic con el botón derecho en Colas de mensajes **privadas**y seleccione **Nuevo**, **Cola privada**.
+    3. Haga clic con el botón secundario en **colas de mensajes privadas**y seleccione **nuevo**, **cola privada**.
 
-    4. Marque la casilla **Transaccional.**
+    4. Active la casilla **transaccional** .
 
     5. Escriba `ServiceModelSamplesTransacted` como nombre de la nueva cola.
 
-3. Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
+3. Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](building-the-samples.md).
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Para ejecutar el ejemplo en el mismo equipo
 
@@ -45,7 +45,7 @@ Este ejemplo muestra cómo implementar una aplicación que utiliza WS-Security c
   
 4. Inicie Client.exe desde \client\bin. La actividad del cliente se muestra en la aplicación de consola del cliente.  
   
-5. Si el cliente y el servicio no pueden comunicarse, vea [Sugerencias de solución de problemas para ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+5. Si el cliente y el servicio no pueden comunicarse, vea [sugerencias para la solución de problemas de ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-run-the-sample-across-computers"></a>Para ejecutar el ejemplo en varios equipos  
   
@@ -55,9 +55,9 @@ Este ejemplo muestra cómo implementar una aplicación que utiliza WS-Security c
   
 3. Copie los archivos de programa del cliente en el directorio del cliente en el equipo cliente. Copie también los archivos Setup.bat, Cleanup.bat e ImportServiceCert.bat en el cliente.  
   
-4. En el servidor, ejecute `setup.bat service`. Si `setup.bat` se `service` ejecuta con el argumento, se crea un certificado de servicio con el nombre de dominio completo del equipo y se exporta el certificado de servicio a un archivo denominado Service.cer.  
+4. En el servidor, ejecute `setup.bat service`. `setup.bat`Al ejecutar con el `service` argumento se crea un certificado de servicio con el nombre de dominio completo del equipo y se exporta el certificado del servicio a un archivo denominado Service. cer.  
   
-5. Edite service.exe.config del servicio para reflejar el `findValue` nuevo nombre de certificado (en el atributo de [ \<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), que es el mismo que el nombre de dominio completo del equipo.  
+5. Edite Service. exe. config del servicio para reflejar el nuevo nombre del certificado (en el `findValue` atributo de [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) ), que es el mismo que el nombre de dominio completo del equipo.  
   
 6. Copie el archivo Service.cer del directorio de servicio al directorio del cliente en el equipo cliente.  
   
@@ -73,14 +73,14 @@ Este ejemplo muestra cómo implementar una aplicación que utiliza WS-Security c
   
 12. En el equipo del servicio, inicie Service.exe desde el símbolo del sistema.  
   
-13. En el equipo cliente, inicie Client.exe desde el símbolo del sistema. Si el cliente y el servicio no pueden comunicarse, vea [Sugerencias de solución de problemas para ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+13. En el equipo cliente, inicie Client.exe desde el símbolo del sistema. Si el cliente y el servicio no pueden comunicarse, vea [sugerencias para la solución de problemas de ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-clean-up-after-the-sample"></a>Para realizar una limpieza después de ejecutar el ejemplo  
   
 - Ejecute Cleanup.bat en la carpeta de ejemplos cuando haya terminado de ejecutar el ejemplo.  
   
     > [!NOTE]
-    > Este script no quita los certificados del servicio en un cliente cuando el ejemplo se ejecuta en varios equipos. Si ha ejecutado ejemplos de Windows Communication Foundation (WCF) que usan certificados entre equipos, asegúrese de borrar los certificados de servicio que se han instalado en el almacén CurrentUser - TrustedPeople. Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
+    > Este script no quita los certificados del servicio en un cliente cuando el ejemplo se ejecuta en varios equipos. Si ha ejecutado ejemplos de Windows Communication Foundation (WCF) que usan certificados en los equipos, asegúrese de borrar los certificados de servicio que se han instalado en el almacén CurrentUser-TrustedPeople. Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
 
 ## <a name="requirements"></a>Requisitos
  Este ejemplo exige que MSMQ se instale y se ejecute.
@@ -88,12 +88,12 @@ Este ejemplo muestra cómo implementar una aplicación que utiliza WS-Security c
 ## <a name="demonstrates"></a>Muestra
  El cliente cifra el mensaje mediante la clave pública del servicio y firma el mensaje con su propio certificado. El servicio que lee el mensaje de la cola autentica el certificado de cliente con el certificado en su almacén de personas de confianza. Después descifra el mensaje y lo envía a la operación de servicio.
 
- Dado que el mensaje de Windows Communication Foundation (WCF) se lleva como una carga en el cuerpo del mensaje MSMQ, el cuerpo permanece cifrado en el almacén de MSMQ. Esto protege el mensaje de la divulgación no deseada del mensaje. Tenga en cuenta que el propio MSMQ no sabe si el mensaje que transporta está cifrado.
+ Dado que el mensaje de Windows Communication Foundation (WCF) se lleva como una carga en el cuerpo del mensaje de MSMQ, el cuerpo permanece cifrado en el almacén de MSMQ. Esto protege el mensaje de la divulgación no deseada del mensaje. Tenga en cuenta que el propio MSMQ no sabe si el mensaje que transporta está cifrado.
 
  El ejemplo muestra cómo se puede utilizar la autenticación mutua en el nivel de mensaje con MSMQ. Los certificados se intercambian fuera de banda. Siempre es el caso de la aplicación con cola porque el servicio y el cliente no tienen que estar al mismo tiempo conectados y ejecutándose.
 
 ## <a name="description"></a>Descripción
- El código de cliente y servicio de ejemplo son los mismos que el ejemplo [de enlace MSMQ con](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) transacciones con una diferencia. En el contrato de operación se anota el nivel de protección, que sugiere que el mensaje se debe firmar y cifrar.
+ El cliente de ejemplo y el código de servicio son los mismos que el ejemplo de [enlace de MSMQ de transacción](transacted-msmq-binding.md) con una diferencia. En el contrato de operación se anota el nivel de protección, que sugiere que el mensaje se debe firmar y cifrar.
 
 ```csharp
 // Define a service contract.
@@ -167,7 +167,7 @@ public interface IOrderProcessor
 
  Observe que el modo de seguridad se ha definido en "Message" y que ClientCredentialType se ha establecido en "Certificate".
 
- La configuración de servicio incluye un comportamiento de servicio que especifica las credenciales del servicio que se utilizan cuando el cliente autentica el servicio. El nombre del sujeto del `findValue` certificado de servidor se especifica en el atributo del [ \<>serviceCredentials ](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).
+ La configuración de servicio incluye un comportamiento de servicio que especifica las credenciales del servicio que se utilizan cuando el cliente autentica el servicio. El nombre de sujeto del certificado de servidor se especifica en el `findValue` atributo en [\<serviceCredentials>](../../configure-apps/file-schema/wcf/servicecredentials.md) .
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -300,7 +300,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
 
 - Instalar el certificado del cliente en el almacén de certificados de confianza del servidor.
 
-     La línea siguiente del archivo por lotes copia el certificado de cliente en el almacén TrustedPeople del servidor para que el servidor pueda tomar decisiones basadas en la confianza o la ausencia de la misma. Para que un certificado instalado en el almacén TrustedPeople sea de confianza para un servicio `PeerOrChainTrust` `PeerTrust` de Windows Communication Foundation (WCF), el modo de validación de certificados de cliente debe establecerse en o valorar. Vea el ejemplo de configuración de servicio anterior para obtener información sobre cómo puede hacerse usando un archivo de configuración.
+     La línea siguiente del archivo por lotes copia el certificado de cliente en el almacén TrustedPeople del servidor para que el servidor pueda tomar decisiones basadas en la confianza o la ausencia de la misma. Para que un servicio de Windows Communication Foundation (WCF) confíe en un certificado instalado en el almacén TrustedPeople, el modo de validación del certificado de cliente debe establecerse en `PeerOrChainTrust` o en `PeerTrust` valor. Vea el ejemplo de configuración de servicio anterior para obtener información sobre cómo puede hacerse usando un archivo de configuración.
 
     ```bat
     echo ************
@@ -323,7 +323,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
-     La variable %SERVER_NAME% especifica el nombre del servidor. El certificado se almacena en el almacén LocalMachine. Si el archivo por lotes de instalación se `setup.bat service`ejecuta con un argumento de servicio (por ejemplo, ) el %SERVER_NAME% contiene el nombre de dominio completo del equipo. De lo contrario, el valor predeterminado es localhost
+     La variable %SERVER_NAME% especifica el nombre del servidor. El certificado se almacena en el almacén LocalMachine. Si el archivo por lotes de instalación se ejecuta con un argumento de servicio (como `setup.bat service` ), el% SERVER_NAME% contiene el nombre de dominio completo del equipo. De lo contrario, el valor predeterminado es localhost.
 
 - Instalar el certificado del servidor en el almacén de certificados de confianza del cliente.
 
@@ -334,13 +334,13 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
     ```
 
     > [!NOTE]
-    > Si está utilizando una edición en inglés de Microsoft Windows que no sea de EE. UU. debe editar el archivo Setup.bat y reemplazar el nombre de cuenta "NT AUTHORITY-NETWORK SERVICE" por su equivalente regional.
+    > Si usa una edición de Microsoft Windows que no es de Estados Unidos, debe modificar el archivo Setup. bat y reemplazar el nombre de cuenta "NT AUTHORITY\NETWORK SERVICE" por su equivalente regional.
 
 > [!IMPORTANT]
 > Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Si este directorio no existe, vaya a Ejemplos de [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (WCF). Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\MessageSecurity`  

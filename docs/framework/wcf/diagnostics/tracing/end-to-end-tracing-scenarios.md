@@ -2,12 +2,12 @@
 title: Escenarios de seguimiento de traza de un extremo a otro
 ms.date: 03/30/2017
 ms.assetid: f83b7d53-6061-4362-a9a3-ee1daf6542be
-ms.openlocfilehash: 18fbd1e9733d55d60d7aa21f2fe8ac259b3da51b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d881a8396e21d31b2303d1bb270bed52823c8d49
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650374"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589258"
 ---
 # <a name="end-to-end-tracing-scenarios"></a>Escenarios de seguimiento de traza de un extremo a otro
 Esta sección contiene temas que describen los diferentes escenarios de utilización del seguimiento de traza.  
@@ -24,21 +24,21 @@ Esta sección contiene temas que describen los diferentes escenarios de utilizac
   
 ## <a name="in-this-section"></a>En esta sección  
   
-- [Lista de actividades](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)  
+- [Lista de actividades](activity-list.md)  
   
-- [Propagación de ID de actividad](../../../../../docs/framework/wcf/diagnostics/tracing/activity-id-propagation.md)  
+- [Propagación de ID de actividad](activity-id-propagation.md)  
   
-- [Escenarios sincrónicos en los que se utiliza HTTP, TCP o canalizaciones con nombre](../../../../../docs/framework/wcf/diagnostics/tracing/synchronous-scenarios-using-http-tcp-or-named-pipe.md)  
+- [Escenarios sincrónicos en los que se utiliza HTTP, TCP o canalizaciones con nombre](synchronous-scenarios-using-http-tcp-or-named-pipe.md)  
   
-- [Escenarios asincrónicos en los que se usa HTTP, TCP o canalizaciones con nombre](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md)  
+- [Escenarios asincrónicos en los que se usa HTTP, TCP o canalizaciones con nombre](asynchronous-scenarios-using-http-tcp-or-named-pipe.md)  
   
-- [Seguimiento de actividades en la seguridad de mensajes](../../../../../docs/framework/wcf/diagnostics/tracing/activity-tracing-in-message-security.md)  
+- [Seguimiento de actividades en la seguridad de mensajes](activity-tracing-in-message-security.md)  
   
-- [MSMQ](../../../../../docs/framework/wcf/diagnostics/tracing/msmq.md)  
+- [MSMQ](msmq.md)  
   
-- [COM+](../../../../../docs/framework/wcf/diagnostics/tracing/com.md)  
+- [+](com.md)  
   
 ## <a name="see-also"></a>Vea también
 
-- [Uso del seguimiento para solucionar problemas de su aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Traza de un extremo a otro](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)
+- [Uso del seguimiento para solucionar problemas de su aplicación](using-tracing-to-troubleshoot-your-application.md)
+- [Seguimiento de traza de un extremo a otro](end-to-end-tracing.md)

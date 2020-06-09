@@ -2,18 +2,18 @@
 title: Emisión de trazas del código de usuario
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-ms.openlocfilehash: 93da2eb74705a0581923d0317315e628f374be3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8b2031165a83e24ba15a2fcf847a170f47e696a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61998138"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589297"
 ---
 # <a name="emitting-user-code-traces"></a>Emisión de trazas del código de usuario
 
-Además de habilitar el seguimiento en configuración para recopilar datos de instrumentación generados por Windows Communication Foundation (WCF), también pueden emitir trazas mediante programación en código de usuario. De esta manera, puede crear proactivamente datos de instrumentación que examinará más tarde con el fin de realizar un diagnóstico. En este tema se describe cómo hacerlo.
+Además de habilitar el seguimiento en la configuración para recopilar datos de instrumentación generados por Windows Communication Foundation (WCF), también puede emitir seguimientos mediante programación en el código de usuario. De esta manera, puede crear proactivamente datos de instrumentación que examinará más tarde con el fin de realizar un diagnóstico. En este tema se describe cómo hacerlo.
 
-Además, el [extender seguimiento](../../../../../docs/framework/wcf/samples/extending-tracing.md) ejemplo incluye todo el código mostrado en las secciones siguientes.
+Además, el ejemplo de [extensión de seguimiento](../../samples/extending-tracing.md) incluye todo el código que se muestra en las secciones siguientes.
 
 ## <a name="creating-a-trace-source"></a>Creación de un origen de seguimiento de traza
 
@@ -72,9 +72,9 @@ Trace.CorrelationManager.ActivityId = oldID;
 Si establece el atributo `propagateActivity` en `true` para el origen de seguimiento de traza `System.ServiceModel` en los archivos de configuración del servicio y del cliente, el servicio que procesa la solicitud Add se produce en la misma actividad que la definida en el cliente. Si el servicio define sus propias actividades y transferencias, las trazas del servicio no aparecen en la actividad propagada por el cliente. En su lugar, aparecen en una actividad que las trazas de la transferencia ponen en correlación con la actividad cuyo id. propaga el cliente.
 
 > [!NOTE]
-> Si el `propagateActivity` atributo está establecido en `true` en el cliente y el servicio, se establece la actividad de ambiente en el ámbito de la operación del servicio WCF.
+> Si el `propagateActivity` atributo se establece en `true` tanto en el cliente como en el servicio, WCF establece la actividad de ambiente en el ámbito de la operación del servicio.
 
-Puede usar el código siguiente para comprobar si se estableció una actividad en el ámbito de WCF.
+Puede usar el código siguiente para comprobar si WCF estableció una actividad en el ámbito.
 
 ```csharp
 // Check if an activity was set in scope by WCF, if it was
@@ -109,13 +109,13 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
 
 ## <a name="viewing-user-traces-in-the-service-trace-viewer-tool"></a>Ver las trazas de usuario en la herramienta del visor de seguimiento de traza del servicio
 
-Esta sección contiene las capturas de pantalla de seguimientos generados mediante la ejecución de la [extender seguimiento](../../../../../docs/framework/wcf/samples/extending-tracing.md) de ejemplo, cuando se ve mediante la [herramienta Service Trace Viewer (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).
+Esta sección contiene capturas de pantallas de los seguimientos generados mediante la ejecución del ejemplo de [extensión de seguimiento](../../samples/extending-tracing.md) , cuando se ve mediante la [herramienta de visor de seguimiento de servicio (SvcTraceViewer. exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md).
 
-En el diagrama siguiente, se selecciona la actividad "Add request" que creó anteriormente en el panel izquierdo. Se enumera junto con otras tres actividades de operaciones matemáticas (dividir, restar, multiplicar) que constituyen el programa cliente de la aplicación. El código de usuario ha definido una nueva actividad para que cada operación aísle las apariciones de errores potenciales en diferentes solicitudes.
+En el diagrama siguiente, la actividad "agregar solicitud" creada anteriormente está seleccionada en el panel izquierdo. Se enumera junto con otras tres actividades de operaciones matemáticas (dividir, restar, multiplicar) que constituyen el programa cliente de la aplicación. El código de usuario ha definido una nueva actividad para que cada operación aísle las apariciones de errores potenciales en diferentes solicitudes.
 
-Para demostrar el uso de las transferencias en el [extender seguimiento](../../../../../docs/framework/wcf/samples/extending-tracing.md) ejemplo, también se crea una actividad de cálculo que encapsula las cuatro solicitudes de operación. Para cada solicitud, se produce una transferencia hacia atrás y hacia delante desde la actividad de cálculo a la actividad de solicitud (la traza está seleccionada en el panel superior derecho de la imagen).
+Para mostrar el uso de las transferencias en el ejemplo de [extensión de seguimiento](../../samples/extending-tracing.md) , también se crea una actividad de calculadora que encapsula las cuatro solicitudes de operación. Para cada solicitud, se produce una transferencia hacia atrás y hacia delante desde la actividad de cálculo a la actividad de solicitud (la traza está seleccionada en el panel superior derecho de la imagen).
 
-Cuando se selecciona una actividad en el panel izquierdo, las trazas incluidas por esta actividad se muestran en el panel superior derecho. Si `propagateActivity` es `true` en cada punto de conexión en la ruta de acceso de solicitud, los seguimientos de la actividad de solicitud proceden de todos los procesos que participan en la solicitud. En este ejemplo, puede ver trazas del cliente y del servicio en la cuarta columna del panel.
+Cuando se selecciona una actividad en el panel izquierdo, las trazas incluidas por esta actividad se muestran en el panel superior derecho. Si `propagateActivity` está `true` en cada punto de conexión de la ruta de acceso de la solicitud, los seguimientos de la actividad de solicitud proceden de todos los procesos que participan en la solicitud. En este ejemplo, puede ver trazas del cliente y del servicio en la cuarta columna del panel.
 
 Esta actividad muestra el siguiente orden de procesamiento:
 
@@ -131,24 +131,24 @@ Todas estas trazas se emiten en el nivel de información. Al hacer clic en una t
 
 En el diagrama siguiente, también se observan las trazas de transferencia desde y hacia la actividad de cálculo, así como dos pares de trazas de inicio y detención por actividad de solicitud, una para el cliente y otra para el servicio (una por cada origen de seguimiento de traza).
 
-![Visor de seguimiento: Emisión de usuario&#45;código seguimientos](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd") lista de actividades por hora de creación (panel izquierdo) y sus actividades anidadas (panel superior derecho)
+![Visor de seguimiento: emitir seguimientos de código&#45;de usuario](media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd") Lista de actividades por hora de creación (panel izquierdo) y sus actividades anidadas (panel superior derecho)
 
-Si el código del servicio inicia una excepción que da lugar a que el cliente también se inicie (por ejemplo, cuando el cliente no obtuvo la respuesta a su solicitud), los mensajes de error del servicio y del cliente se producen en la misma actividad para una correlación directa. En la siguiente imagen, el servicio inicia una excepción que indica "el servicio rechaza procesar esta solicitud en código de usuario". El cliente también produce una excepción que indica "el servidor no pudo procesar la solicitud debido a un error interno."
+Si el código del servicio inicia una excepción que da lugar a que el cliente también se inicie (por ejemplo, cuando el cliente no obtuvo la respuesta a su solicitud), los mensajes de error del servicio y del cliente se producen en la misma actividad para una correlación directa. En la siguiente imagen, el servicio inicia una excepción que indica "el servicio rechaza procesar esta solicitud en el código de usuario". El cliente también inicia una excepción que indica "el servidor no pudo procesar la solicitud debido a un error interno".
 
-Las siguientes imágenes se muestra que los errores en los puntos de conexión para una solicitud determinada aparecen en la misma actividad si se propagó el identificador de actividad de solicitud:
+Las siguientes imágenes muestran que los errores en los puntos de conexión de una solicitud determinada aparecen en la misma actividad si se propagó el ID. de actividad de solicitud:
 
-![Captura de pantalla que muestra los errores en los puntos de conexión para una solicitud determinada.](./media/emitting-user-code-traces/trace-viewer-endpoint-errors.gif)
+![Captura de pantalla que muestra los errores en los puntos de conexión de una solicitud determinada.](./media/emitting-user-code-traces/trace-viewer-endpoint-errors.gif)
 
 Al hacer doble clic en la actividad de multiplicación, en el panel izquierdo, se muestra el siguiente gráfico con las trazas de la actividad de multiplicación de cada proceso implicado. Podemos ver que primero tuvo lugar una advertencia en el servicio (excepción iniciada), que estuvo seguida de advertencias y errores en el cliente al no poder procesarse la solicitud. Por lo tanto, podemos deducir la relación del error causal entre los extremos, y derivar la causa raíz del error.
 
-La siguiente imagen muestra un gráfico de correlación de errores:
+En la imagen siguiente se muestra una vista de gráfico de correlación de errores:
 
-![Captura de pantalla que muestra la vista Gráfico de correlación de errores.](./media/emitting-user-code-traces/trace-viewer-error-correlation.gif)
+![Captura de pantalla que muestra la vista de gráfico de la correlación de errores.](./media/emitting-user-code-traces/trace-viewer-error-correlation.gif)
 
-Para obtener las trazas anteriores, se establece `ActivityTracing` para los orígenes del seguimiento de traza del usuario, y `propagateActivity=true` para el origen de seguimiento de traza `System.ServiceModel`. No se estableció `ActivityTracing` para el origen del seguimiento de traza `System.ServiceModel` para permitir habilitar el código de usuario a la propagación de actividad del código de usuario. (Cuando el seguimiento de actividad ServiceModel está activado, el identificador de actividad definido en el cliente no se propaga hasta el código de usuario del servicio; Las transferencias, sin embargo, poner en correlación las actividades de código de usuario de cliente y servicio a las actividades WCF intermedias.)
+Para obtener las trazas anteriores, se establece `ActivityTracing` para los orígenes del seguimiento de traza del usuario, y `propagateActivity=true` para el origen de seguimiento de traza `System.ServiceModel`. No se estableció `ActivityTracing` para el origen del seguimiento de traza `System.ServiceModel` para permitir habilitar el código de usuario a la propagación de actividad del código de usuario. (Cuando el seguimiento de la actividad de ServiceModel está activado, el ID. de actividad definido en el cliente no se propaga hasta el código de usuario del servicio; Sin embargo, las transferencias correlacionan las actividades de código de usuario de cliente y servicio con las actividades de WCF intermedias).
 
 La definición de actividades y la propagación de la id. de actividad permite poner directamente en correlación los errores con los extremos. De esta manera, podemos buscar más rápidamente la causa raíz de un error.
 
 ## <a name="see-also"></a>Vea también
 
-- [Extensión del seguimiento](../../../../../docs/framework/wcf/samples/extending-tracing.md)
+- [Extensión del seguimiento](../../samples/extending-tracing.md)

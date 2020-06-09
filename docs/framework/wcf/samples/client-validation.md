@@ -2,23 +2,23 @@
 title: Validación de cliente
 ms.date: 03/30/2017
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
-ms.openlocfilehash: 641d5e84c09575574ff6b06888d156c4b4aa0a38
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: dce11ec2e3ef552c0c53e1faf89a12bc13b66ae0
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040111"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84585329"
 ---
 # <a name="client-validation"></a>Validación de cliente
 Los servicios publican frecuentemente los metadatos para habilitar la generación automática y la configuración de tipos de proxy de cliente. Cuando no se confía en el servicio, las aplicaciones cliente deberían comprobar y validar que los metadatos cumplen con la directiva de la aplicación cliente con respecto a la seguridad, transacciones, el tipo de contrato de servicios etc. El siguiente ejemplo muestra cómo escribir un comportamiento de punto de conexión de cliente que valide el punto de conexión de servicio para asegurarse de que el punto de conexión de servicio puede utilizarse con seguridad.  
   
  El servicio expone cuatro puntos de conexión de servicio. El primer punto de conexión utiliza WSDualHttpBinding, el segundo punto de conexión utiliza la autenticación NTLM, el tercer punto de conexión habilita el flujo de la transacción y el cuarto punto de conexión utiliza la autenticación basada en certificados.  
   
- El cliente utiliza la clase <xref:System.ServiceModel.Description.MetadataResolver> para recuperar los metadatos para el servicio. El cliente exige una directiva que prohíba los enlaces dúplex, la autenticación NTLM y el flujo de la transacción mediante un comportamiento que se encargue de validar. Para cada <xref:System.ServiceModel.Description.ServiceEndpoint> instancia importada de los metadatos del servicio, la aplicación cliente agrega una instancia `InternetClientValidatorBehavior` del comportamiento del extremo <xref:System.ServiceModel.Description.ServiceEndpoint> a antes de intentar utilizar un cliente Windows Communication Foundation (WCF) para conectarse a. el punto de conexión. El método `Validate` de comportamiento se ejecuta antes de llamar cualquier operación en el servicio y exige la directiva del cliente iniciando `InvalidOperationExceptions`.  
+ El cliente utiliza la clase <xref:System.ServiceModel.Description.MetadataResolver> para recuperar los metadatos para el servicio. El cliente exige una directiva que prohíba los enlaces dúplex, la autenticación NTLM y el flujo de la transacción mediante un comportamiento que se encargue de validar. Para cada <xref:System.ServiceModel.Description.ServiceEndpoint> instancia importada de los metadatos del servicio, la aplicación cliente agrega una instancia del `InternetClientValidatorBehavior` comportamiento del extremo a <xref:System.ServiceModel.Description.ServiceEndpoint> antes de intentar utilizar un cliente de Windows Communication Foundation (WCF) para conectarse al punto de conexión. El método `Validate` de comportamiento se ejecuta antes de llamar cualquier operación en el servicio y exige la directiva del cliente iniciando `InvalidOperationExceptions`.  
   
 ### <a name="to-build-the-sample"></a>Para compilar el ejemplo  
   
-1. Para compilar la solución, siga las instrucciones de [creación de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1. Para compilar la solución, siga las instrucciones de [creación de los ejemplos de Windows Communication Foundation](building-the-samples.md).  
   
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Para ejecutar el ejemplo en el mismo equipo  
   
@@ -34,15 +34,15 @@ Los servicios publican frecuentemente los metadatos para habilitar la generació
   
 ### <a name="to-run-the-sample-across-computers"></a>Para ejecutar el ejemplo en varios equipos  
   
-1. En el servidor, en una Símbolo del sistema para desarrolladores para que Visual Studio se ejecute con privilegios de `setup.bat service`administrador, escriba. Al `setup.bat` ejecutar con `service` el argumento se crea un certificado de servicio con el nombre de dominio completo del equipo y se exporta el certificado del servicio a un archivo denominado Service. cer.  
+1. En el servidor, en una Símbolo del sistema para desarrolladores para que Visual Studio se ejecute con privilegios de administrador, escriba `setup.bat service` . `setup.bat`Al ejecutar con el `service` argumento se crea un certificado de servicio con el nombre de dominio completo del equipo y se exporta el certificado del servicio a un archivo denominado Service. cer.  
   
-2. En el servidor, edite App.config para reflejar el nuevo nombre del certificado. Es decir, cambie el `findValue` atributo [ \<del elemento > serviceCertificate](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) por el nombre de dominio completo del equipo.  
+2. En el servidor, edite App.config para reflejar el nuevo nombre del certificado. Es decir, cambie el `findValue` atributo del [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) elemento al nombre de dominio completo del equipo.  
   
 3. Copie el archivo Service.cer del directorio de servicio al directorio del cliente en el equipo cliente.  
   
-4. En el cliente, abra una Símbolo del sistema para desarrolladores para Visual Studio con privilegios de administrador y escriba `setup.bat client`. Al `setup.bat` ejecutar con `client` el argumento se crea un certificado de cliente denominado Client.com y se exporta el certificado de cliente a un archivo denominado Client. cer.  
+4. En el cliente, abra una Símbolo del sistema para desarrolladores para Visual Studio con privilegios de administrador y escriba `setup.bat client` . Al ejecutar `setup.bat` con el `client` argumento se crea un certificado de cliente denominado Client.com y se exporta el certificado de cliente a un archivo denominado Client. cer.  
   
-5. En el archivo de client.cs cambie el valor de dirección del punto de conexión MEX y `findValue` para establecer el certificado de servidor predeterminado para que coincida con la nueva dirección de su servicio. Para hacerlo, reemplace el host local con el nombre de dominio completo del servidor. Recompile.  
+5. En el archivo de client.cs cambie el valor de dirección del punto de conexión MEX y `findValue` para establecer el certificado de servidor predeterminado para que coincida con la nueva dirección de su servicio. Para hacerlo, reemplace el host local con el nombre de dominio completo del servidor. Rebuild  
   
 6. Copie el archivo Client.cer del directorio del cliente en el directorio del servicio en el servidor.  
   
@@ -65,4 +65,4 @@ Los servicios publican frecuentemente los metadatos para habilitar la generació
   
 ## <a name="see-also"></a>Vea también
 
-- [Utilización de los metadatos](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+- [Utilización de los metadatos](../feature-details/using-metadata.md)

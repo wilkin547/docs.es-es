@@ -2,20 +2,20 @@
 title: Ataques por repetición
 ms.date: 03/30/2017
 ms.assetid: 7a17e040-93cd-4432-81b9-9f62fec78c8f
-ms.openlocfilehash: 6874e87ba2a50bb496c5d7bf091fd670510ab840
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 47a4726859605415b4e3e1b4d523f2f8059a3989
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626860"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84586304"
 ---
 # <a name="replay-attacks"></a>Ataques por repetición
-Un *ataque de reproducción* se produce cuando un atacante copia una secuencia de mensajes entre dos partes y reproduce la secuencia a una o varias de las partes. A menos que se mitigue, el equipo objeto del ataque procesa la secuencia como mensajes legítimos, produciendo una gama de malas consecuencias, como pedidos redundantes de un elemento.  
+Un *ataque de reproducción* se produce cuando un atacante copia una secuencia de mensajes entre dos partes y reproduce la secuencia a una o más entidades. A menos que se mitigue, el equipo objeto del ataque procesa la secuencia como mensajes legítimos, produciendo una gama de malas consecuencias, como pedidos redundantes de un elemento.  
   
 ## <a name="bindings-may-be-subject-to-reflection-attacks"></a>Los enlaces pueden estar sujetos a ataques de reflexión  
- *Los ataques de reflexión* son las reproducciones de mensajes a un remitente como si procedieran del receptor como la respuesta. El estándar *detección de reproducción* en Windows Communication Foundation (WCF) mecanismo no controlar este comportamiento.  
+ Los *ataques de reflexión* se reproducen de vuelta a un remitente como si provinieran del receptor como respuesta. La *detección de reproducción* estándar en el mecanismo de Windows Communication Foundation (WCF) no controla automáticamente esto.  
   
- Los ataques de reflexión se mitigan de forma predeterminada porque el modelo de servicio WCF agrega un identificador de mensaje firmado a los mensajes de solicitud y espera un firmado `relates-to` encabezado en los mensajes de respuesta. Por consiguiente, el mensaje de solicitud no se puede volver a reproducir como una respuesta. En los escenarios de mensaje confiables (RM) seguros, los ataques de reflexión se mitigan porque:  
+ Los ataques de reflexión se mitigan de forma predeterminada porque el modelo de servicio de WCF agrega un identificador de mensaje firmado a los mensajes de solicitud y espera un `relates-to` encabezado firmado en los mensajes de respuesta. Por consiguiente, el mensaje de solicitud no se puede volver a reproducir como una respuesta. En los escenarios de mensaje confiables (RM) seguros, los ataques de reflexión se mitigan porque:  
   
 - Los esquemas de la secuencia de creación y los del mensaje de respuesta de la secuencia de creación son diferentes.  
   
@@ -27,20 +27,20 @@ Un *ataque de reproducción* se produce cuando un atacante copia una secuencia d
   
  La mitigación para los enlaces personalizados consiste no establecer el contexto de seguridad o requerir encabezados WS-Addressing.  
   
-## <a name="web-farm-attacker-replays-request-to-multiple-nodes"></a>Granja de servidores Web: Solicitud de reproducciones del atacante en varios nodos  
+## <a name="web-farm-attacker-replays-request-to-multiple-nodes"></a>Batería de servidores web: El atacante vuelve a reproducir la solicitud en varios nodos  
  Un cliente utiliza un servicio que se implementa en una batería de servidores web. Un atacante vuelve a reproducir una solicitud que se envió de un nodo de la batería a otro nodo de la batería. Además, si se reinicia un servicio, se vacía la caché de repetición, lo que capacita a un atacante para volver a realizar la solicitud. (La caché contiene valores de firmas de mensajes utilizados y vistos con anterioridad y evita las repeticiones de modo que esas firmas solo se puedan utilizar una vez. Las memorias caché de repetición no se comparten en una batería de servidores web).  
   
  Las mitigaciones incluyen:  
   
-- Utilice la seguridad de modo de mensaje con tokens de contexto de seguridad con estado (con o sin conversación segura habilitada). Para obtener más información, vea [Cómo: Crear un contexto de seguridad para una sesión segura Token](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+- Utilice la seguridad de modo de mensaje con tokens de contexto de seguridad con estado (con o sin conversación segura habilitada). Para obtener más información, consulte [Cómo: crear un token de contexto de seguridad para una sesión segura](how-to-create-a-security-context-token-for-a-secure-session.md).  
   
 - Configure el servicio para utilizar la seguridad de nivel de transporte.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Consideraciones de seguridad](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Divulgación de información](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
-- [Elevación de privilegios](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
-- [Denegación de servicio](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
-- [Manipulación](../../../../docs/framework/wcf/feature-details/tampering.md)
-- [Escenarios no admitidos](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+- [Consideraciones sobre la seguridad](security-considerations-in-wcf.md)
+- [Divulgación de información](information-disclosure.md)
+- [Elevación de privilegios](elevation-of-privilege.md)
+- [Denegación de servicio](denial-of-service.md)
+- [Alteración de datos](tampering.md)
+- [Escenarios no admitidos](unsupported-scenarios.md)

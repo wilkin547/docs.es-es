@@ -2,19 +2,19 @@
 title: Compilación de los ejemplos de Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 2899e7a5-9cb2-4e8d-b8d2-f31391549198
-ms.openlocfilehash: 021f17778bc019828d00fbd8e93cbc319de3047a
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 53599b3b1827651b48df9921bb59a679a36ee39c
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990152"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84592624"
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Compilación de los ejemplos de Windows Communication Foundation
 
 Los ejemplos de Windows Communication Foundation (WCF) se pueden compilar con el IDE de Visual Studio o mediante el comando **msbuild** desde la línea de comandos. Ambos procedimientos se describen en este tema.
 
 > [!NOTE]
-> Antes de compilar o ejecutar cualquiera de los ejemplos de WCF, asegúrese de que ha realizado el [procedimiento de instalación único para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+> Antes de compilar o ejecutar cualquiera de los ejemplos de WCF, asegúrese de que ha realizado el [procedimiento de instalación único para los ejemplos de Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
 
 ## <a name="to-build-the-sample-using-a-command-prompt"></a>Para compilar el ejemplo desde un símbolo del sistema
 
@@ -27,7 +27,7 @@ Los ejemplos de Windows Communication Foundation (WCF) se pueden compilar con el
 
 ## <a name="to-build-the-sample-using-visual-studio"></a>Para compilar el ejemplo con Visual Studio
 
-1. En el menú **archivo** de Visual Studio, seleccione **abrir** > **proyecto o solución**. Navegue hasta el subdirectorio específico del lenguaje en el directorio en el que instaló el ejemplo y haga doble clic en el icono del archivo. sln para abrir la solución en Visual Studio.
+1. En el menú **archivo** de Visual Studio, seleccione **abrir**  >  **proyecto o solución**. Navegue hasta el subdirectorio específico del lenguaje en el directorio en el que instaló el ejemplo y haga doble clic en el icono del archivo. sln para abrir la solución en Visual Studio.
 
 1. En el menú **compilar** , seleccione **recompilar solución**.
 
@@ -40,13 +40,13 @@ Los ejemplos de Windows Communication Foundation (WCF) se pueden compilar con el
  Los scripts y archivos por lotes de Setup. exe y Cleanup. exe se deben ejecutar desde Símbolo del sistema para desarrolladores para Visual Studio. Hay varios archivos de limpieza e instalación que realizan tareas que requieren privilegios administrativos y deberían iniciarse con privilegios de administrador.
 
 ## <a name="important-security-information-about-metadata-endpoints"></a>Información de seguridad importante sobre los puntos de conexión de metadatos
- Para evitar la revelación involuntaria de metadatos de servicio potencialmente confidenciales, la configuración predeterminada de los servicios Windows Communication Foundation (WCF) deshabilita la publicación de metadatos. Este comportamiento es seguro de forma predeterminada, pero también quiere decir que no puede usar una herramienta de importación de metadatos (como Svcutil.exe) Para compilar el código de cliente necesario para llamar al servicio a menos que el comportamiento de publicación de metadatos del servicio se habilite de manera explícita en la configuración. Para que los experimentos con los ejemplos sean más sencillos, casi todos los ejemplos exponen un punto de conexión de publicación de metadatos no seguro. Tales extremos pueden estar disponibles para los consumidores anónimos no autenticados y se debe tener cuidado antes de implementar tales extremos para garantizar que la revelación pública de un metadato del servicio sea la adecuada. Para obtener más información sobre la publicación de metadatos del servicio, vea el ejemplo de [comportamiento de publicación de metadatos](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) . Vea el ejemplo de [extremo de metadatos seguro personalizado](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) para obtener un ejemplo de protección de un extremo de metadatos.
+ Para evitar la revelación involuntaria de metadatos de servicio potencialmente confidenciales, la configuración predeterminada de los servicios Windows Communication Foundation (WCF) deshabilita la publicación de metadatos. Este comportamiento es seguro de forma predeterminada, pero también quiere decir que no puede usar una herramienta de importación de metadatos (como Svcutil.exe) Para compilar el código de cliente necesario para llamar al servicio a menos que el comportamiento de publicación de metadatos del servicio se habilite de manera explícita en la configuración. Para que los experimentos con los ejemplos sean más sencillos, casi todos los ejemplos exponen un punto de conexión de publicación de metadatos no seguro. Tales extremos pueden estar disponibles para los consumidores anónimos no autenticados y se debe tener cuidado antes de implementar tales extremos para garantizar que la revelación pública de un metadato del servicio sea la adecuada. Para obtener más información sobre la publicación de metadatos del servicio, vea el ejemplo de [comportamiento de publicación de metadatos](metadata-publishing-behavior.md) . Vea el ejemplo de [extremo de metadatos seguro personalizado](custom-secure-metadata-endpoint.md) para obtener un ejemplo de protección de un extremo de metadatos.
 
 ## <a name="exception-handling"></a>Control de excepciones
- En general, estos ejemplos no incluyen el control de excepciones para mantener el código centrado en el asunto del ejemplo. Para obtener más información sobre el control de excepciones, vea el ejemplo de [excepciones esperado](../../../../docs/framework/wcf/samples/expected-exceptions.md) .
+ En general, estos ejemplos no incluyen el control de excepciones para mantener el código centrado en el asunto del ejemplo. Para obtener más información sobre el control de excepciones, vea el ejemplo de [excepciones esperado](expected-exceptions.md) .
 
 ## <a name="regenerating-clients-and-configuration-with-svcutil"></a>Regenerar clientes y configuración con Svcutil
- Puede usar la [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para regenerar el código de cliente y la configuración de la mayoría de los ejemplos. Algunos ejemplos requieren una configuración editada manualmente. Por ejemplo, si utiliza Svcutil.exe para regenerar la configuración para obtener un ejemplo que utiliza las credenciales del certificado de cliente, debe especificar manualmente las credenciales previamente configuradas. Algunos ejemplos utilizan las opciones Svcutil.exe concretas para afectar al código generado, estas opciones se especifican en los temas de ejemplo concretos.
+ Puede usar la [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) para regenerar el código de cliente y la configuración de la mayoría de los ejemplos. Algunos ejemplos requieren una configuración editada manualmente. Por ejemplo, si utiliza Svcutil.exe para regenerar la configuración para obtener un ejemplo que utiliza las credenciales del certificado de cliente, debe especificar manualmente las credenciales previamente configuradas. Algunos ejemplos utilizan las opciones Svcutil.exe concretas para afectar al código generado, estas opciones se especifican en los temas de ejemplo concretos.
 
 ### <a name="to-regenerate-the-client-and-configuration-files"></a>Para regenerar los archivos de configuración y cliente
 
@@ -83,5 +83,5 @@ Los ejemplos de Windows Communication Foundation (WCF) se pueden compilar con el
 
 ## <a name="see-also"></a>Vea también
 
-- [Ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md)
-- [Herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [Ejecución de los ejemplos de Windows Communication Foundation](running-the-samples.md)
+- [Herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)

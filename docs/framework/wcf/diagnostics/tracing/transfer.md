@@ -1,19 +1,19 @@
 ---
-title: Transferir
+title: Transferencia
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: e0ebfff97cd33e7a588a1ab92399a97a0fbec039
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 52b0cf35a2f8bab17252d3711f3143738c2bc39c
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185704"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84587773"
 ---
-# <a name="transfer"></a>Transferir
-En este tema se describe la transferencia en el modelo de seguimiento de actividad de Windows Communication Foundation (WCF).  
+# <a name="transfer"></a>Transferencia
+En este tema se describe la transferencia en el modelo de seguimiento de actividades de Windows Communication Foundation (WCF).  
   
 ## <a name="transfer-definition"></a>Definición de transferencia  
- Las transferencias entre actividades representan relaciones causales entre eventos en las actividades relacionadas dentro de los puntos de conexión. Dos actividades se relacionan con transferencias cuando el control fluye entre estas actividades, como por ejemplo, una llamada al método que cruza límites de actividad. En WCF, cuando los bytes son entrantes en el servicio, el escuchar en la actividad se transfiere a la actividad de bytes de recepción donde se crea el objeto de mensaje. Para obtener una lista de escenarios de seguimiento de extremo a extremo y su respectivo diseño de actividad y seguimiento, vea [Escenarios](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)de seguimiento de extremo a extremo .  
+ Las transferencias entre actividades representan relaciones causales entre eventos en las actividades relacionadas dentro de los puntos de conexión. Dos actividades se relacionan con transferencias cuando el control fluye entre estas actividades, como por ejemplo, una llamada al método que cruza límites de actividad. En WCF, cuando los bytes son entrantes en el servicio, la actividad escuchar en se transfiere a la actividad recibir bytes donde se crea el objeto de mensaje. Para obtener una lista de escenarios de seguimiento de un extremo a otro, así como su actividad y diseño de seguimiento completos, consulte [escenarios de seguimiento de un extremo a otro](end-to-end-tracing-scenarios.md).  
   
  Para emitir seguimientos de transferencia, use el valor `ActivityTracing` en el origen de seguimiento, tal y como se muestra en el código de configuración siguiente.  
   
@@ -26,7 +26,7 @@ En este tema se describe la transferencia en el modelo de seguimiento de activid
   
  Se emite un seguimiento de transferencia de la actividad M a la actividad N cuando hay flujo de control entre M y N. Por ejemplo, N realiza algún trabajo para M debido a una llamada al método que cruza los límites de las actividades. N puede que ya exista o que se haya creado. M genera N cuando esta última es una nueva actividad que realiza algún trabajo para M.  
   
- Una transferencia de M a N puede que no sea seguida por una transferencia de vuelta de N a M, ya que M puede generar algún trabajo en N y no sabe cuándo N termina ese trabajo. De hecho, M puede finalizar antes de que N complete su tarea. Esto sucede en la actividad "Open ServiceHost" (M) que genera las actividades de escucha (N) y, a continuación, finaliza. Una transferencia de vuelta de N a M significa que N completó el trabajo relacionado con M.  
+ Una transferencia de M a N puede que no sea seguida por una transferencia de vuelta de N a M, ya que M puede generar algún trabajo en N y no sabe cuándo N termina ese trabajo. De hecho, M puede finalizar antes de que N complete su tarea. Esto sucede en la actividad "abrir ServiceHost" (M) que genera las actividades del agente de escucha (N) y, a continuación, finaliza. Una transferencia de vuelta de N a M significa que N completó el trabajo relacionado con M.  
   
  N puede seguir realizando otro procesamiento no relacionado con M, como por ejemplo una actividad de autenticador existente (N) que sigue recibiendo solicitudes de inicio de sesión (M) de diferentes actividades de inicio de sesión.  
   
@@ -102,9 +102,9 @@ Trace.CorrelationManager.ActivityId = oldGuid;
 ts.TraceEvent(TraceEventType.Resume, 667, "Resume: Activity " + i-1);  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Configuración de la traza](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
-- [Uso del visor de seguimiento de servicios para ver seguimientos asociados y para la solución de problemas](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
-- [Escenarios de seguimiento de traza de un extremo a otro](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
-- [Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Configurar seguimiento](configuring-tracing.md)
+- [Uso del visor de seguimiento de servicios para ver seguimientos asociados y para la solución de problemas](using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Escenarios de seguimiento de traza de un extremo a otro](end-to-end-tracing-scenarios.md)
+- [Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md)

@@ -2,24 +2,24 @@
 title: Protección de mensajes mediante la seguridad de mensajes
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-ms.openlocfilehash: a6b062d0d6a74ce2a2ff9afa7e8a0a18853dbd22
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 70c645101033c31da01d79f624ab03ce328dd3a6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746448"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589986"
 ---
 # <a name="securing-messages-using-message-security"></a>Protección de mensajes mediante la seguridad de mensajes
-En esta sección se describe la seguridad de los mensajes de WCF cuando se usa <xref:System.ServiceModel.NetMsmqBinding>.  
+En esta sección se describe la seguridad de mensajes de WCF cuando se usa <xref:System.ServiceModel.NetMsmqBinding> .  
   
 > [!NOTE]
-> Antes de leer este tema, se recomienda leer los conceptos de [seguridad](../../../../docs/framework/wcf/feature-details/security-concepts.md).  
+> Antes de leer este tema, se recomienda leer los conceptos de [seguridad](security-concepts.md).  
   
  En la ilustración siguiente se proporciona un modelo conceptual de comunicación en cola mediante WCF. Esta ilustración y la terminología se utilizan para explicar  
   
  los conceptos de seguridad de transporte.  
   
- ![Diagrama de aplicaciones en cola](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Distributed-Queue-Figure")  
+ ![Diagrama de aplicaciones puestas en cola](media/distributed-queue-figure.jpg "Distributed-Queue-Figure")  
   
  Al enviar mensajes en cola mediante WCF, el mensaje de WCF se adjunta como cuerpo del mensaje de Message Queuing (MSMQ). Aunque la seguridad de transporte protege el mensaje de MSMQ completo, la seguridad de mensajes (o SOAP) solo protege el cuerpo del mensaje de MSMQ.  
   
@@ -63,9 +63,9 @@ En esta sección se describe la seguridad de los mensajes de WCF cuando se usa <
 ## <a name="using-transport-and-message-security"></a>Utilizar la seguridad de transporte y de mensajes  
  Al utilizar la seguridad de transporte y la seguridad de mensajes, el certificado utilizado para proteger el mensaje tanto en el nivel de transporte como en el nivel de mensaje SOAP debe ser el mismo.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Protección de mensajes utilizando la seguridad de transporte](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
-- [Seguridad de mensajes mediante Message Queuing](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
-- [Conceptos de seguridad](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [Protección de servicios y clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Protección de mensajes utilizando la seguridad de transporte](securing-messages-using-transport-security.md)
+- [Seguridad de mensajes mediante Message Queuing](../samples/message-security-over-message-queuing.md)
+- [Conceptos de seguridad](security-concepts.md)
+- [Protección de servicios y clientes](securing-services-and-clients.md)

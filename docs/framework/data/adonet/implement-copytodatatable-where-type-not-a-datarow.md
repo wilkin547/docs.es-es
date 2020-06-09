@@ -5,31 +5,35 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b27b52cf-6172-485f-a75c-70ff9c5a2bd4
-ms.openlocfilehash: 6c14e87c5caede4fea52867d9f184f3f64a5ed3b
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: a1427747d03f01e52f1ee7ad1fc11d47d310edbe
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249648"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84590610"
 ---
-# <a name="how-to-implement-copytodatatablet-where-the-generic-type-t-is-not-a-datarow"></a>Cómo: Implementar CopyToDataTable\<T> donde el tipo genérico T no es un DataRow
+# <a name="how-to-implement-copytodatatablet-where-the-generic-type-t-is-not-a-datarow"></a>Procedimiento para implementar CopyToDataTable\<T> cuando el tipo genérico T no es un objeto DataRow
 El objeto <xref:System.Data.DataTable> se suele utilizar para el enlace de datos. El método <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> toma los resultados de una consulta y copia los datos en un objeto <xref:System.Data.DataTable> que puede utilizarse después para el enlace de datos. Sin embargo, los métodos <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> solo funcionan en un origen <xref:System.Collections.Generic.IEnumerable%601> en el que el parámetro genérico `T` es de tipo <xref:System.Data.DataRow>. Aunque esto es útil, no permite la creación de tablas a partir de una secuencia de tipos escalares, a partir de consultas que proyectan tipos anónimos, o a partir de consultas que realizan combinaciones de tablas.  
   
  En este tema se describe cómo se implementan dos métodos de extensión `CopyToDataTable<T>` personalizados que aceptan un parámetro genérico `T` de un tipo distinto de <xref:System.Data.DataRow>. La lógica para crear un objeto <xref:System.Data.DataTable> desde un origen <xref:System.Collections.Generic.IEnumerable%601> está contenida en la clase `ObjectShredder<T>`, que se incluye después en dos métodos de extensión `CopyToDataTable<T>` sobrecargados. El método `Shred` de la clase `ObjectShredder<T>` devuelve el objeto <xref:System.Data.DataTable> relleno y acepta tres parámetros de entrada: un origen <xref:System.Collections.Generic.IEnumerable%601>, un objeto <xref:System.Data.DataTable> y una enumeración <xref:System.Data.LoadOption>. El esquema inicial del objeto <xref:System.Data.DataTable> devuelto está basado en el esquema del tipo `T`. Si se proporciona una tabla existente como entrada, el esquema debe ser coherente con el esquema del tipo `T`. Cada propiedad y campo públicos del tipo `T` se convierten a un objeto <xref:System.Data.DataColumn> en la tabla devuelta. Si la secuencia de origen contiene un tipo derivado de `T`, el esquema de la tabla devuelta se expande para las propiedades o campos públicos adicionales.  
   
  Para obtener ejemplos de uso de los métodos `CopyToDataTable<T>` personalizados, vea [Crear un objeto DataTable a partir de una consulta](creating-a-datatable-from-a-query-linq-to-dataset.md).  
   
-### <a name="to-implement-the-custom-copytodatatablet-methods-in-your-application"></a>Para implementar los métodos CopyToDataTable\<T> personalizados en la aplicación  
+### <a name="to-implement-the-custom-copytodatatablet-methods-in-your-application"></a>Para implementar los métodos CopyToDataTable personalizados \<T> en la aplicación  
   
 1. Implemente la clase `ObjectShredder<T>` para crear un objeto <xref:System.Data.DataTable> desde un origen <xref:System.Collections.Generic.IEnumerable%601>:  
   
      [!code-csharp[DP Custom CopyToDataTable Examples#ObjectShredderClass](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#objectshredderclass)]
      [!code-vb[DP Custom CopyToDataTable Examples#ObjectShredderClass](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#objectshredderclass)]  
 
-    En el ejemplo anterior se supone `DataColumn` que las propiedades de la no son tipos de valor que aceptan valores NULL. Para controlar las propiedades con tipos de valor que aceptan valores NULL, utilice el código siguiente:
+    En el ejemplo anterior se supone que las propiedades y los campos de `DataColumn` no son tipos de valor que aceptan valores NULL. Para controlar las propiedades y los campos con tipos de valor que aceptan valores NULL, utilice el código siguiente:
 
     ```csharp
+    // Nullable-aware code for properties.
     DataColumn dc = table.Columns.Contains(p.Name) ? table.Columns[p.Name] : table.Columns.Add(p.Name, Nullable.GetUnderlyingType(p.PropertyType) ?? p.PropertyType);
+
+    // Nullable-aware code for fields.
+    DataColumn dc = table.Columns.Contains(f.Name) ? table.Columns[f.Name] : table.Columns.Add(f.Name, Nullable.GetUnderlyingType(f.FieldType) ?? f.FieldType);
     ```
 
 2. Implemente los métodos de extensión `CopyToDataTable<T>` personalizados en una clase:  
