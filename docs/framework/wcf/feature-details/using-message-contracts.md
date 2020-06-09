@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: 18d0ea97f1de40044d40fa85c9792c809fb73346
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1b102b97c62df0bb8b031ded0f9165a11f8a8911
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959879"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600275"
 ---
 # <a name="using-message-contracts"></a>Usar contratos de mensaje
-Normalmente, al compilar aplicaciones de Windows Communication Foundation (WCF), los desarrolladores prestan mucha atención a las estructuras de datos y a los problemas de serialización y no tienen que preocuparse de la estructura de los mensajes en los que se transportan los datos. Para estas aplicaciones, la creación de contratos de datos para los parámetros o valores devueltos es fácil. (Para obtener más información, consulte [especificar transferencia de datos en contratos de servicio](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)).  
+Normalmente, al compilar aplicaciones de Windows Communication Foundation (WCF), los desarrolladores prestan mucha atención a las estructuras de datos y a los problemas de serialización y no tienen que preocuparse de la estructura de los mensajes en los que se transportan los datos. Para estas aplicaciones, la creación de contratos de datos para los parámetros o valores devueltos es fácil. (Para obtener más información, consulte [especificar transferencia de datos en contratos de servicio](specifying-data-transfer-in-service-contracts.md)).  
   
  Sin embargo, a veces el control completo sobre la estructura de un mensaje SOAP es tan importante como el control sobre su contenido. Esto es especialmente cierto cuando la interoperabilidad es importante o para controlar específicamente problemas de seguridad del mensaje o parte del mensaje. En estos casos, puede crear un *contrato de mensaje* que le permita especificar la estructura del mensaje SOAP preciso.  
   
@@ -31,7 +31,7 @@ Normalmente, al compilar aplicaciones de Windows Communication Foundation (WCF),
 public BankingTransactionResponse PostBankingTransaction(BankingTransaction bt);  
 ```  
   
- Normalmente, un contrato de datos es suficiente para definir el esquema de los mensajes. Por ejemplo, en el ejemplo anterior, es suficiente para la mayoría de las aplicaciones si `BankingTransaction` y `BankingTransactionResponse` tienen contratos de datos para definir el contenido de los mensajes SOAP subyacentes. Para obtener más información sobre los contratos de datos, consulte [uso de contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ Normalmente, un contrato de datos es suficiente para definir el esquema de los mensajes. Por ejemplo, en el ejemplo anterior, es suficiente para la mayoría de las aplicaciones si `BankingTransaction` y `BankingTransactionResponse` tienen contratos de datos para definir el contenido de los mensajes SOAP subyacentes. Para obtener más información sobre los contratos de datos, consulte [uso de contratos de datos](using-data-contracts.md).  
   
  Sin embargo, de vez en cuando es necesario controlar de manera precisa cómo la estructura del mensaje SOAP se transmite a través de la conexión. El escenario más común para esto es insertar encabezados SOAP personalizados. Otro escenario común es definir propiedades de seguridad para los encabezados y cuerpo del mensaje, es decir, decidir si estos elementos están firmados y cifrados digitalmente. Finalmente, algunas pilas de terceros de SOAP necesitan que los mensajes estén en un formato concreto. Las operaciones del estilo de mensajería proporcionan este control.  
   
@@ -154,7 +154,7 @@ public class BankingTransaction
 > Tener más de una parte de cuerpo de mensaje en mensajes que no se ajustan no es conforme a WS-I Basic Profile 1.1 y no se recomienda al diseñar nuevos contratos de mensaje. Sin embargo, puede ser necesario para tener más de una parte del cuerpo de mensaje sin ajustar en ciertos escenarios de interoperabilidad concretos. Si va a transmitir más de una parte de datos en un cuerpo del mensaje, se recomienda que use el modo predeterminado (ajustado). Tener más de un encabezado de mensaje en mensajes sin ajustar es completamente aceptable.  
   
 ## <a name="using-custom-types-inside-message-contracts"></a>Uso de tipos personalizados dentro de contratos de mensaje  
- Cada encabezado de mensaje individual y parte del cuerpo del mensaje se serializa (se convierte en XML) utilizando el motor de serialización elegido para el contrato de servicio donde se use el mensaje. El motor de serialización predeterminado, `XmlFormatter`, puede manejar cualquier tipo que tenga un contrato de datos, explícitamente (teniendo <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>) o implícitamente (siendo un tipo primitivo, teniendo <xref:System.SerializableAttribute?displayProperty=nameWithType>, etc.). Para obtener más información, consulte [uso de contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ Cada encabezado de mensaje individual y parte del cuerpo del mensaje se serializa (se convierte en XML) utilizando el motor de serialización elegido para el contrato de servicio donde se use el mensaje. El motor de serialización predeterminado, `XmlFormatter`, puede manejar cualquier tipo que tenga un contrato de datos, explícitamente (teniendo <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>) o implícitamente (siendo un tipo primitivo, teniendo <xref:System.SerializableAttribute?displayProperty=nameWithType>, etc.). Para obtener más información, consulte [uso de contratos de datos](using-data-contracts.md).  
   
  En el ejemplo anterior, `Operation` y los tipos `BankingTransactionData` deben tener un contrato de datos y `transactionDate` es serializable porque <xref:System.DateTime> es un primitivo (y, por ende, tiene un contrato de datos implícito).  
   
@@ -213,7 +213,7 @@ public class BankingDepositLog
 ## <a name="signing-and-encrypting-parts-of-the-message"></a>Firmado y cifrado de partes del mensaje  
  Un contrato de mensaje puede indicar si los encabezados y/o cuerpo del mensaje deberían estar firmados y cifrados digitalmente.  
   
- Esto se hace estableciendo la propiedad <xref:System.ServiceModel.MessageContractMemberAttribute.ProtectionLevel%2A?displayProperty=nameWithType> en los atributos de las clases <xref:System.ServiceModel.MessageHeaderAttribute> y <xref:System.ServiceModel.MessageBodyMemberAttribute>. La propiedad es una enumeración del tipo <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType> y se puede establecer como <xref:System.Net.Security.ProtectionLevel.None> (sin cifrado ni firma), <xref:System.Net.Security.ProtectionLevel.Sign> (solo firma digital) o <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> (cifrado y firma digital). El valor predeterminado es <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>.  
+ Esto se hace estableciendo la propiedad <xref:System.ServiceModel.MessageContractMemberAttribute.ProtectionLevel%2A?displayProperty=nameWithType> en los atributos de las clases <xref:System.ServiceModel.MessageHeaderAttribute> y <xref:System.ServiceModel.MessageBodyMemberAttribute>. La propiedad es una enumeración del tipo <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType> y se puede establecer como <xref:System.Net.Security.ProtectionLevel.None> (sin cifrado ni firma), <xref:System.Net.Security.ProtectionLevel.Sign> (solo firma digital) o <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> (cifrado y firma digital). De manera predeterminada, es <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>.  
   
  Para que estas características de seguridad funcionen, debe configurar correctamente el enlace y los comportamientos. Si utiliza estas características de seguridad sin la configuración apropiada (por ejemplo, intentando firmar un mensaje sin proporcionar sus credenciales), una excepción se producirá en el momento de la validación.  
   
@@ -303,7 +303,7 @@ bt.documentApprover.MustUnderstand = false; // override the static default of 't
  Cuando se recibe un mensaje y después se devuelve, los valores de atributo de SOAP solo son de ida y vuelta para encabezados de tipo <xref:System.ServiceModel.MessageHeader%601>.  
   
 ## <a name="order-of-soap-body-parts"></a>Orden de partes de cuerpo de SOAP  
- En algunas circunstancias, puede que tenga que controlar el orden de partes del cuerpo. De forma predeterminada, el orden de los elementos del cuerpo es alfabético, pero puede controlarse mediante la propiedad <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType>. Esta propiedad tiene la misma semántica que la propiedad <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType>, salvo el comportamiento en escenarios de herencia (en contratos de mensaje, los miembros de cuerpo de tipo base no están ordenados antes de los miembros de cuerpo de tipo derivado). Para obtener más información, vea orden de los [miembros de datos](../../../../docs/framework/wcf/feature-details/data-member-order.md).  
+ En algunas circunstancias, puede que tenga que controlar el orden de partes del cuerpo. De forma predeterminada, el orden de los elementos del cuerpo es alfabético, pero puede controlarse mediante la propiedad <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType>. Esta propiedad tiene la misma semántica que la propiedad <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType>, salvo el comportamiento en escenarios de herencia (en contratos de mensaje, los miembros de cuerpo de tipo base no están ordenados antes de los miembros de cuerpo de tipo derivado). Para obtener más información, vea orden de los [miembros de datos](data-member-order.md).  
   
  En el siguiente ejemplo, `amount` vendría normalmente primero porque es primero alfabéticamente. Sin embargo, la propiedad <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A> lo coloca en la tercera posición.  
   
@@ -359,7 +359,7 @@ public class PatientRecord : PersonRecord
  La clase `PatientRecord` describe un mensaje con un encabezado denominado `ID`. El encabezado corresponde a `personID` y no al miembro `patientID`, porque se elige el miembro más base. Por lo tanto, el campo `patientID` es inútil en este caso. El cuerpo del mensaje contiene el elemento `diagnosis` seguido del elemento `patientName`, porque ése es el orden alfabético. Observe que el ejemplo muestra un patrón que se desaconseja fuertemente: la base y los contratos de mensaje derivados tienen partes del cuerpo del mensaje.  
   
 ## <a name="wsdl-considerations"></a>Consideraciones sobre WSDL  
- Al generar un lenguaje de descripción de servicios Web (WSDL) a partir de un servicio que usa contratos de mensaje, es importante recordar que no todas las características de contratos de mensaje se reflejan en el WSDL resultante. Considere las cuestiones siguientes:  
+ Al generar un lenguaje de descripción de servicios Web (WSDL) a partir de un servicio que usa contratos de mensaje, es importante recordar que no todas las características de contratos de mensaje se reflejan en el WSDL resultante. Considere los siguientes puntos:  
   
 - WSDL no puede expresar el concepto de una matriz de encabezados. Al crear los mensajes con una matriz de encabezados utilizando <xref:System.ServiceModel.MessageHeaderArrayAttribute>, el WSDL resultante refleja solo un encabezado en lugar de la matriz.  
   
@@ -409,7 +409,7 @@ public class PatientRecord : PersonRecord
   
  Después de serializar el mensaje mediante codificación SOAP, `changedFrom` y `changedTo` no contienen sus propias copias de `p`; en su lugar, señalan la copia que está dentro del elemento `changedBy`.  
   
-## <a name="performance-considerations"></a>Consideraciones sobre el rendimiento  
+## <a name="performance-considerations"></a>Consideraciones de rendimiento  
  Cada encabezado del mensaje y la parte del cuerpo del mensaje se serializa independientemente de las otras. Por tanto, los mismos espacios de nombres se pueden declarar de nuevo para cada encabezado y parte del cuerpo. Para mejorar el rendimiento, sobre todo en lo que se refiere al tamaño del mensaje en la conexión, consolide varios encabezados y partes de cuerpo en un único encabezado o parte del cuerpo. Por ejemplo, en lugar del siguiente código:  
   
 ```csharp  
@@ -449,5 +449,5 @@ public class OperationDetails
   
 ## <a name="see-also"></a>Vea también
 
-- [Utilización de contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Diseño e implementación de servicios](../../../../docs/framework/wcf/designing-and-implementing-services.md)
+- [Utilización de contratos de datos](using-data-contracts.md)
+- [Diseño e implementación de servicios](../designing-and-implementing-services.md)

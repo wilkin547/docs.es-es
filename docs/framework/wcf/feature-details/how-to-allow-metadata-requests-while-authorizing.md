@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - allowing metadata requests while authorizing [WCF]
 ms.assetid: 90cec34f-b619-452b-a056-8b1c0de49d05
-ms.openlocfilehash: bea4f7e90df29678697fe6708bdc6a73145522db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6d172f9b659804179d23fb382376f83f4898edc5
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047807"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601314"
 ---
 # <a name="how-to-allow-metadata-requests-while-authorizing"></a>Cómo permitir las solicitudes de metadatos durante la autorización
 Durante la autorización personalizada, puede ser necesario permitir una solicitud para que se procesen los metadatos. El tema siguientes describe los pasos para validar este tipo de solicitud.  
   
- Para obtener más información acerca de la autorización de Windows Communication Foundation (WCF), consulte [autorización](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
+ Para obtener más información acerca de la autorización de Windows Communication Foundation (WCF), consulte [autorización](authorization-in-wcf.md).  
   
 ### <a name="to-allow-metadata-requests-during-authorization"></a>Para permitir las solicitudes de los metadatos durante la autorización  
   
@@ -27,7 +27,7 @@ Durante la autorización personalizada, puede ser necesario permitir una solicit
   
 3. En la invalidación, compruebe el nombre del contrato, espacio de nombres y la acción tal como se muestra en el ejemplo siguiente. Si las condiciones son válidas, devuelva `true.`  
   
-4. Utilice el punto de extensibilidad para emplear la clase. Para obtener más información, vea [Cómo: Crear un administrador de autorización personalizado para un servicio](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md).  
+4. Utilice el punto de extensibilidad para emplear la clase. Para obtener más información, consulte [Cómo: crear un administrador de autorización personalizado para un servicio](../extending/how-to-create-a-custom-authorization-manager-for-a-service.md).  
   
 ## <a name="example"></a>Ejemplo  
  En el siguiente ejemplo de código se muestra una invalidación del método <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>.  
@@ -38,5 +38,5 @@ Durante la autorización personalizada, puede ser necesario permitir una solicit
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
-- [Autorización](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
-- [Administración de notificaciones y autorización con el modelo de identidad](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [Autorización](authorization-in-wcf.md)
+- [Administración de notificaciones y autorización con el modelo de identidad](managing-claims-and-authorization-with-the-identity-model.md)

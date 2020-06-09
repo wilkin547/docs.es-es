@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], differences in operating systems
 ms.assetid: aa809d93-d0a3-4ae6-a726-d015cca37c04
-ms.openlocfilehash: 0d7b952382b50daae0291ed6afb22bb612447670
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: abd81b5e7bf611fc6b4f446a82628b83130f2d54
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920149"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599209"
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Diferencias en las características de cola en Windows Vista, Windows Server 2003 y Windows XP
 En este tema se resumen las diferencias en la característica de colas de Windows Communication Foundation (WCF) entre Windows Vista, Windows Server 2003 y Windows XP.  
@@ -26,9 +26,9 @@ En este tema se resumen las diferencias en la característica de colas de Window
   
  Entre las principales diferencias entre Message Queue Server (MSMQ) en Windows Vista, Windows Server 2003 y Windows XP que son relevantes para la administración de mensajes dudosos se incluyen las siguientes:  
   
-- MSMQ en Windows Vista admite subcolas, mientras que Windows Server 2003 y Windows XP no admiten subcolas. Las subcolas se utilizan en el control de mensajes dudosos. Las colas de reintento y la cola dudosa son subcolas en la cola de la aplicación que se crea dependiendo de los valores de control del mensaje dudoso. `MaxRetryCycles` dicta cuántas subcolas de reintento se crean. Por lo tanto, cuando se ejecuta en Windows Server 2003 o Windows XP, `MaxRetryCycles` se omiten y `ReceiveErrorHandling.Move` no se permite.  
+- MSMQ en Windows Vista admite subcolas, mientras que Windows Server 2003 y Windows XP no admiten subcolas. Las subcolas se utilizan en el control de mensajes dudosos. Las colas de reintento y la cola dudosa son subcolas en la cola de la aplicación que se crea dependiendo de los valores de control del mensaje dudoso. `MaxRetryCycles` dicta cuántas subcolas de reintento se crean. Por lo tanto, cuando se ejecuta en Windows Server 2003 o Windows XP, `MaxRetryCycles` se omiten y `ReceiveErrorHandling.Move` no se permiten.  
   
-- MSMQ en Windows Vista admite la confirmación negativa, mientras que Windows Server 2003 y Windows XP no lo hacen. Una confirmación de que no se pudo realizar la acción del administrador de la cola receptora hace que el administrador de la cola emisora coloque el mensaje rechazado en la cola de mensajes no enviados. Como tal, no se permite `ReceiveErrorHandling.Reject` con Windows Server 2003 y Windows XP.  
+- MSMQ en Windows Vista admite la confirmación negativa, mientras que Windows Server 2003 y Windows XP no lo hacen. Una confirmación de que no se pudo realizar la acción del administrador de la cola receptora hace que el administrador de la cola emisora coloque el mensaje rechazado en la cola de mensajes no enviados. Como tal, `ReceiveErrorHandling.Reject` no se permite con Windows Server 2003 y Windows XP.  
   
 - MSMQ en Windows Vista admite una propiedad de mensaje que mantiene el recuento del número de veces que se intenta la entrega del mensaje. Esta propiedad de recuento de anulación no está disponible en Windows Server 2003 y Windows XP. WCF mantiene el recuento de anulación en memoria, por lo que es posible que esta propiedad no contenga un valor preciso cuando el mismo mensaje es leído por más de un servicio WCF en una granja de servidores Web.  
   
@@ -37,5 +37,5 @@ En este tema se resumen las diferencias en la característica de colas de Window
   
 ## <a name="see-also"></a>Vea también
 
-- [Utilización de las colas de mensajes no enviados para administrar los errores en la transferencia de mensajes](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)
-- [Control de mensajes dudosos](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
+- [Utilización de las colas de mensajes no enviados para administrar los errores en la transferencia de mensajes](using-dead-letter-queues-to-handle-message-transfer-failures.md)
+- [Control de mensajes dudosos](poison-message-handling.md)

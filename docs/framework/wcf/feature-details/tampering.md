@@ -1,16 +1,16 @@
 ---
-title: Manipulación
+title: Alteración
 ms.date: 03/30/2017
 ms.assetid: 3bad93be-60bb-4f89-96ab-a1c3dc7c0fad
-ms.openlocfilehash: 7a4265c30a6713f9557de2b3d1e99c87b7dd3e58
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e618ab369a46d403aa8db26c4b472e2be3634785
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703392"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600716"
 ---
-# <a name="tampering"></a>Manipulación
-*Manipulación* es el acto de modificar un mensaje o la entrega de un mensaje y utilizar el mensaje modificado para un propósito distinto para lo que se pretendía.  
+# <a name="tampering"></a>Alteración
+La *manipulación* es la acción de alterar un mensaje o la entrega de un mensaje, y el uso del mensaje modificado para un fin distinto de su propósito.  
   
 ## <a name="do-not-disable-ws-addressing"></a>No deshabilite WS-Addressing  
  La especificación WS-Addressing proporciona encabezados de dirección en cada mensaje, lo que permite a un destinatario del mensaje comprobar el remitente del mensaje. Puede deshabilitar esta característica estableciendo la propiedad <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> en <xref:System.ServiceModel.Channels.AddressingVersion.None%2A>.  
@@ -21,9 +21,9 @@ ms.locfileid: "61703392"
   
 ## <a name="see-also"></a>Vea también
 
-- [Consideraciones de seguridad](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Divulgación de información](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
-- [Elevación de privilegios](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
-- [Denegación de servicio](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
-- [Escenarios no admitidos](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
-- [Ataques por repetición](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+- [Consideraciones sobre la seguridad](security-considerations-in-wcf.md)
+- [Divulgación de información](information-disclosure.md)
+- [Elevación de privilegios](elevation-of-privilege.md)
+- [Denegación de servicio](denial-of-service.md)
+- [Escenarios no admitidos](unsupported-scenarios.md)
+- [Ataques por repetición](replay-attacks.md)

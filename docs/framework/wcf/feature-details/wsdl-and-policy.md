@@ -2,12 +2,12 @@
 title: WSDL y directivas
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-ms.openlocfilehash: b032f91999695d848f20fac5009047dcc2e20451
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 201920a8ebf639c74acfb20b2e990c8bbc0c5b55
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144687"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600106"
 ---
 # <a name="wsdl-and-policy"></a>WSDL y directivas
 En este tema se tratan los detalles de implementación de Windows Communication Foundation (WCF) WSDL 1,1, WS-Policy y WS-PolicyAttachment, así como las aserciones de WS-Policy adicionales y las extensiones WSDL 1,1 introducidas por WCF.  
@@ -42,7 +42,7 @@ En este tema se tratan los detalles de implementación de Windows Communication 
 ### <a name="soap-1x-http-binding-transport-uris"></a>SOAP 1.x HTTPTransporte de enlace URIs  
  WCF usa los siguientes URI para indicar los transportes que se van a usar para los elementos de extensión de enlace de WSDL 1,1, SOAP 1,1 y SOAP 1,2.  
   
-|Transporte|URI|  
+|Transporte|Identificador URI|  
 |---------------|---------|  
 |HTTP|`http://schemas.xmlsoap.org/soap/http`|  
 |TCP|`http://schemas.microsoft.com/soap/tcp`|  
@@ -52,7 +52,7 @@ En este tema se tratan los detalles de implementación de Windows Communication 
 ## <a name="policy-assertions-implemented-by-wcf"></a>Aserciones de directivas implementadas por WCF  
  Además de las aserciones de directiva introducidas en las especificaciones de servicios web (WS-*) y mencionadas en otras secciones de este documento, WCF implementa las siguientes aserciones de directiva.  
   
-|Aserción de directiva|Asunto de directiva|Description|  
+|Aserción de directiva|Asunto de directiva|Descripción|  
 |----------------------|--------------------|-----------------|  
 |http:HttpBasicAuthentication|Punto de conexión|El punto de conexión utiliza autenticación básica de Http.|  
 |http:HttpDigestAuthentication|Punto de conexión|El punto de conexión utiliza autenticación implícita de Http.|  
@@ -74,6 +74,6 @@ En este tema se tratan los detalles de implementación de Windows Communication 
   
 ## <a name="see-also"></a>Vea también
 
-- [Publicación de WSDL personalizada](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
-- [Procedimiento para exportar el WSDL personalizado](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
-- [Procedimiento para importar el WSDL personalizado](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+- [Publicación de WSDL personalizada](../samples/custom-wsdl-publication.md)
+- [Procedimiento para exportar el WSDL personalizado](../extending/how-to-export-custom-wsdl.md)
+- [Procedimiento para importar el WSDL personalizado](../extending/how-to-import-custom-wsdl.md)

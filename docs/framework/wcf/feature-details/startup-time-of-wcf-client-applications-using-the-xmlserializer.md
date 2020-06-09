@@ -1,21 +1,21 @@
 ---
-title: 'Cómo: Mejorar el tiempo de inicio de las aplicaciones cliente WCF mediante XmlSerializer'
+title: Procedimiento para mejorar el tiempo de inicio de las aplicaciones cliente WCF mediante XmlSerializer
 ms.date: 03/30/2017
 ms.assetid: 21093451-0bc3-4b1a-9a9d-05f7f71fa7d0
-ms.openlocfilehash: ca15d710a30586135f0d030e155b09b63a22ee45
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 91712963908ecc56ff17fbac028389207544b82f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976064"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600262"
 ---
-# <a name="how-to-improve-the-startup-time-of-wcf-client-applications-using-the-xmlserializer"></a>Cómo: Mejorar el tiempo de inicio de las aplicaciones cliente WCF mediante XmlSerializer
+# <a name="how-to-improve-the-startup-time-of-wcf-client-applications-using-the-xmlserializer"></a>Procedimiento para mejorar el tiempo de inicio de las aplicaciones cliente WCF mediante XmlSerializer
 Los servicios y las aplicaciones cliente que utilizan tipos de datos que son serializables utilizando <xref:System.Xml.Serialization.XmlSerializer> generan y compilan el código de la serialización para esos tipos de datos en el tiempo de ejecución, lo que se puede traducir en un rendimiento de inicio lento.  
   
 > [!NOTE]
 > El código de serialización generado previamente solo puede usarse en aplicaciones cliente y no en servicios.  
   
- La [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) puede mejorar el rendimiento de inicio de estas aplicaciones mediante la generación del código de serialización necesario a partir de los ensamblados compilados para la aplicación. Svcutil.exe genera el código de serialización para todos los tipos de datos utilizados en contratos de servicios en el ensamblado de aplicación de compilación que se puede serializar utilizando <xref:System.Xml.Serialization.XmlSerializer>. Los contratos de operación y servicio que utiliza el <xref:System.Xml.Serialization.XmlSerializer> se marcan con <xref:System.ServiceModel.XmlSerializerFormatAttribute>.  
+ La [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) puede mejorar el rendimiento de inicio de estas aplicaciones mediante la generación del código de serialización necesario a partir de los ensamblados compilados para la aplicación. Svcutil.exe genera el código de serialización para todos los tipos de datos utilizados en contratos de servicios en el ensamblado de aplicación de compilación que se puede serializar utilizando <xref:System.Xml.Serialization.XmlSerializer>. Los contratos de operación y servicio que utiliza el <xref:System.Xml.Serialization.XmlSerializer> se marcan con <xref:System.ServiceModel.XmlSerializerFormatAttribute>.  
   
 ### <a name="to-generate-xmlserializer-serialization-code"></a>Para generar el código de serialización de XmlSerializer  
   
@@ -47,11 +47,11 @@ Los servicios y las aplicaciones cliente que utilizan tipos de datos que son ser
   
 1. Cree los proyectos de servicio y cliente de WCF en Visual Studio. A continuación, agregue una referencia de servicio al proyecto de cliente.  
   
-2. Agregue un <xref:System.ServiceModel.XmlSerializerFormatAttribute> al contrato de servicio en el archivo *Reference.CS* en el proyecto de la aplicación cliente en **serviceReference** -> **Reference. svcmap**. Tenga en cuenta que tiene que Mostrar todos los archivos de **Explorador de soluciones** para ver estos archivos.  
+2. Agregue un <xref:System.ServiceModel.XmlSerializerFormatAttribute> al contrato de servicio en el archivo *Reference.CS* en el proyecto de la aplicación cliente en **serviceReference**  ->  **Reference. svcmap**. Tenga en cuenta que tiene que Mostrar todos los archivos de **Explorador de soluciones** para ver estos archivos.  
   
 3. Compile la aplicación cliente.  
   
-4. Use la [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para crear un archivo serializador *. CS* generado previamente con el comando:  
+4. Use la [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) para crear un archivo serializador *. CS* generado previamente con el comando:  
   
     ```console  
     svcutil.exe /t:xmlSerializer  <assemblyPath>*  
@@ -59,7 +59,7 @@ Los servicios y las aplicaciones cliente que utilizan tipos de datos que son ser
   
      El argumento assemblyPath especifica la ruta de acceso al ensamblado de cliente de WCF.  
   
-     Por ejemplo:  
+     Como:  
   
     ```console  
     svcutil.exe /t:xmlSerializer wcfclient.exe  
@@ -88,4 +88,4 @@ svcutil /t:xmlserializer myContractLibrary.exe
   
 ## <a name="see-also"></a>Vea también
 
-- [Herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [Herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)

@@ -2,12 +2,12 @@
 title: Cómo Control de versiones del servicio
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: f1178a0bedfe8665d7b3ec463e99183809538c28
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: beb7de63d300ad7986bfc59093006b074b9456ba
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81464111"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84586941"
 ---
 # <a name="how-to-service-versioning"></a>Cómo Control de versiones del servicio
 Este tema describe los pasos básicos necesarios para crear una configuración de enrutamiento que enrute mensajes a las diferentes versiones del mismo servicio. En este ejemplo, los mensajes se enrutan a dos versiones diferentes de un servicio de la calculadora, `roundingCalc` (v1) y `regularCalc` (v2). Ambas implementaciones admiten las mismas operaciones; sin embargo, el servicio más antiguo, `roundingCalc`, redondea todos los cálculos al valor entero más cercano antes de devolverlos. Una aplicación cliente debe poder indicar cuándo se debe usar el servicio `regularCalc` más reciente.  
@@ -17,13 +17,13 @@ Este tema describe los pasos básicos necesarios para crear una configuración d
   
  Las operaciones expuestas por ambos servicios son:  
   
-- Sumar  
+- Agregar  
   
 - Restar  
   
 - Multiplicar  
   
-- Divide  
+- Dividir  
   
  Como ambas implementaciones del servicio administran las mismas operaciones y son prácticamente idénticas exceptuando los datos que devuelven, los datos base incluidos en mensajes enviados de las aplicaciones cliente no son lo suficientemente exclusivos como para permitirle determinar cómo enrutar la solicitud. Por ejemplo, no se pueden utilizar los filtros de acción porque las acciones predeterminadas para ambos servicios son las mismas.  
   
@@ -69,7 +69,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
         </client>  
     ```  
   
-2. Defina los filtros usados para enrutar mensajes a los extremos del destino.  En este ejemplo, el filtro XPath se utiliza para detectar el valor del encabezado personalizado "CalcVer" para determinar a qué versión se debe enrutar el mensaje. Un filtro XPath también se utiliza para detectar mensajes que no contienen el encabezado "CalcVer". En el siguiente ejemplo, se definen los filtros necesarios y la tabla de espacio de nombres.  
+2. Defina los filtros usados para enrutar mensajes a los extremos del destino.  En este ejemplo, se usa el filtro XPath para detectar el valor del encabezado personalizado "CalcVer" para determinar a qué versión se debe enrutar el mensaje. Un filtro XPath también se utiliza para detectar mensajes que no contienen el encabezado "CalcVer". En el siguiente ejemplo, se definen los filtros necesarios y la tabla de espacio de nombres.  
   
     ```xml  
     <!-- use the namespace table element to define a prefix for our custom namespace-->  
@@ -94,7 +94,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     ```  
   
     > [!NOTE]
-    > El prefijo de espacio de nombres s12 se define `http://www.w3.org/2003/05/soap-envelope`de forma predeterminada en la tabla de espacio de nombres y representa el espacio de nombres.
+    > El prefijo de espacio de nombres S12 se define de forma predeterminada en la tabla de espacio de nombres y representa el espacio de nombres `http://www.w3.org/2003/05/soap-envelope` .
   
 3. Defina la tabla de filtro, que asocia cada filtro a un punto de conexión del cliente. Si el mensaje contiene el encabezado "CalcVer" con un valor de 1, se enviará al servicio regularCalc. Si el encabezado contiene un valor de 2, se enviará al servicio de roundingCalc. Si no hay ningún encabezado, el mensaje se enrutará a regularCalc.  
   
@@ -117,7 +117,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </filterTables>  
     ```  
   
-4. Para evaluar los mensajes entrantes con respecto a los filtros incluidos en la tabla de filtros, debe asociar esta a los puntos de conexión de servicio mediante el comportamiento de enrutamiento. En el ejemplo siguiente `filterTable1` se muestra cómo asociarse con los puntos de conexión de servicio:  
+4. Para evaluar los mensajes entrantes con respecto a los filtros incluidos en la tabla de filtros, debe asociar esta a los puntos de conexión de servicio mediante el comportamiento de enrutamiento. En el ejemplo siguiente se muestra cómo asociar `filterTable1` con los puntos de conexión de servicio:  
   
     ```xml  
     <behaviors>  
@@ -324,6 +324,6 @@ namespace Microsoft.Samples.AdvancedFilters
 }  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Servicios de enrutamiento](../../../../docs/framework/wcf/samples/routing-services.md)
+- [Servicios de enrutamiento](../samples/routing-services.md)

@@ -2,23 +2,23 @@
 title: System.ServiceModel.ServiceOperationMissingReplyContext
 ms.date: 03/30/2017
 ms.assetid: 1373c661-e63a-4e11-a635-689451450274
-ms.openlocfilehash: 99b6c4cdb0546411eb894b518b01cc6ee6e72065
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d2a6d413de3e858d46548e0a51fc1ff555bbdcac
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61759978"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597740"
 ---
 # <a name="systemservicemodelserviceoperationmissingreplycontext"></a>System.ServiceModel.ServiceOperationMissingReplyContext
 System.ServiceModel.ServiceOperationMissingReplyContext  
   
 ## <a name="description"></a>Descripción  
- ReplyContext tiene un valor null para una operación bidireccional. Los datos de seguimiento muestran el mensaje siguiente: "Operación de respuesta no tiene ningún IRequestContext que utilizar para la respuesta".  
+ ReplyContext tiene un valor null para una operación bidireccional. Los datos de seguimiento muestran un mensaje en el que se informa de que la operación de respuesta no tiene ningún IRequestContext que utilizar para la respuesta.  
   
  Este seguimiento es útil para depurar durante desarrollo.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Traza](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Uso del seguimiento para solucionar problemas de su aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Seguimiento](index.md)
+- [Uso del seguimiento para solucionar problemas de su aplicación](using-tracing-to-troubleshoot-your-application.md)
+- [Administración y diagnóstico](../index.md)

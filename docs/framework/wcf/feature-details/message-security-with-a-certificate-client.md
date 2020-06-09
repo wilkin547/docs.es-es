@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-ms.openlocfilehash: 3660877194931c2be5b9b1c9aa54e2595701697f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2b2717bc68da9f07cd38e10a5d75b2a7df9add45
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184657"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602640"
 ---
 # <a name="message-security-with-a-certificate-client"></a>Seguridad de mensajes con un cliente de certificado
-En el escenario siguiente se muestra un cliente de Windows Communication Foundation (WCF) y un servicio protegido mediante el modo de seguridad de mensajes. Tanto el cliente como el servicio se autentican con certificados. Para obtener más información, consulte [Seguridad de aplicaciones distribuidas](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).
+El siguiente escenario muestra un cliente y un servicio de Windows Communication Foundation (WCF) protegidos mediante el modo de seguridad de mensajes. Tanto el cliente como el servicio se autentican con certificados. Para obtener más información, vea [seguridad de aplicaciones distribuidas](distributed-application-security.md).
 
  ![Captura de pantalla que muestra un cliente con certificado.](./media/message-security-with-a-certificate-client/client-with-certificate.gif)  
   
- Para obtener una aplicación de ejemplo, vea Certificado de [seguridad de](../../../../docs/framework/wcf/samples/message-security-certificate.md)mensajes .  
+ Para obtener una aplicación de ejemplo, vea [certificado de seguridad de mensajes](../samples/message-security-certificate.md).  
 
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -30,8 +30,8 @@ En el escenario siguiente se muestra un cliente de Windows Communication Foundat
 |Transporte|HTTP|  
 |Enlace|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## <a name="service"></a>Servicio  
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
+## <a name="service"></a>web de Office  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Lleve a cabo una de las siguientes acciones:  
   
 - Cree un servicio independiente mediante el código sin configuración.  
   
@@ -84,8 +84,8 @@ En el escenario siguiente se muestra un cliente de Windows Communication Foundat
 </configuration>  
 ```  
   
-## <a name="client"></a>Remoto  
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
+## <a name="client"></a>Cliente  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Lleve a cabo una de las siguientes acciones:  
   
 - Cree un cliente independiente mediante el código (y el código de cliente).  
   
@@ -101,7 +101,7 @@ En el escenario siguiente se muestra un cliente de Windows Communication Foundat
  [!code-vb[C_SecurityScenarios#17](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#17)]  
   
 ### <a name="configuration"></a>Configuración  
- La configuración siguiente especifica el certificado de cliente mediante un comportamiento del punto de conexión. Para más información, consulte [Trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). El código también `identity` utiliza un elemento de> <para especificar un sistema de nombres de dominio (DNS) de la identidad de servidor esperada. Para obtener más información acerca de la identidad, vea [Identidad de servicio y autenticación](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ La configuración siguiente especifica el certificado de cliente mediante un comportamiento del punto de conexión. Para más información, consulte [Trabajar con certificados](working-with-certificates.md). El código también usa un `identity` elemento <> para especificar un sistema de nombres de dominio (DNS) de la identidad de servidor esperada. Para obtener más información acerca de la identidad, consulte [identidad de servicio y autenticación](service-identity-and-authentication.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -143,9 +143,9 @@ En el escenario siguiente se muestra un cliente de Windows Communication Foundat
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Identidad del servicio y autenticación](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Información general sobre seguridad](security-overview.md)
+- [Identidad del servicio y autenticación](service-identity-and-authentication.md)
+- [Trabajar con certificados](working-with-certificates.md)
 - [Modelo de seguridad para Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

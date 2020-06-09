@@ -1,50 +1,50 @@
 ---
-title: Basic2
+title: Básico2
 ms.date: 03/30/2017
 ms.assetid: 04e4d3bd-ab89-4b50-8f42-2a4430751a9c
-ms.openlocfilehash: 72540a1a36a8807a1644c10448210ddc8bf15b75
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c6c1dcfaebd74e7cc401b555e834bca2ac8da856
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944123"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84575685"
 ---
-# <a name="basic"></a>Básico
-Esta sección incluyen las secciones de ejemplos que muestran la funcionalidad básica de Windows Communication Foundation (WCF).  
+# <a name="basic"></a>Básica
+En esta sección se incluyen secciones de ejemplos que muestran la funcionalidad básica de Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md)  
- Muestra cómo implementar un servicio típico y un cliente típicos con WCF.  
+ [Introducción](getting-started-sample.md)  
+ Muestra cómo implementar un servicio típico y un cliente típico mediante WCF.  
   
- [AJAX](../../../../docs/framework/wcf/samples/ajax.md)  
+ [AJAX](ajax.md)  
  Muestra cómo utilizar JavaScript Asincrónico y XML.  
   
- [Enlaces](../../../../docs/framework/wcf/samples/binding.md)  
+ [Enlace](binding.md)  
  Muestra cómo utilizar el atributo de enlace de un elemento de punto de conexión.  
   
- [Cliente](../../../../docs/framework/wcf/samples/client.md)  
- Muestra las aplicaciones cliente WCF.  
+ [Cliente](client.md)  
+ Muestra las aplicaciones cliente de WCF.  
   
- [Contrato](../../../../docs/framework/wcf/samples/contract.md)  
+ [Contrato](contract.md)  
  Muestra los contratos de datos.  
   
- [Detección](../../../../docs/framework/wcf/samples/discovery-samples.md)  
+ [Detección](discovery-samples.md)  
  Muestra la detección de WCF.  
   
- [Administración](../../../../docs/framework/wcf/samples/management.md)  
+ [Administración](management.md)  
  Muestra la administración de WCF.  
   
- [Servicios de enrutamiento](../../../../docs/framework/wcf/samples/routing-services.md)  
+ [Servicios de enrutamiento](routing-services.md)  
  Muestra los servicios de enrutamiento de WCF.  
   
- [Seguridad](../../../../docs/framework/wcf/samples/security-in-wcf.md)  
- Muestra la seguridad WCF.  
+ [Seguridad](security-in-wcf.md)  
+ Muestra la seguridad de WCF.  
   
- [Servicios](../../../../docs/framework/wcf/samples/services.md)  
- Muestra los servicios de WCF.  
+ [Servicios](services.md)  
+ Muestra los servicios WCF.  
   
- [Redifusión](../../../../docs/framework/wcf/samples/syndication.md)  
- Distribución DemonstratesWCF.  
+ [Distribución](syndication.md)  
+ DemonstratesWCF sindicación.  
   
- [Web](../../../../docs/framework/wcf/samples/web.md)  
- Muestra cómo hospedar Web en WCF.
+ [Web](web.md)  
+ Muestra el hospedaje web en WCF.

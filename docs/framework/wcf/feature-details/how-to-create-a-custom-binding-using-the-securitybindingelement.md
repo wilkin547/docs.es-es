@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-ms.openlocfilehash: da67d923b36d673c87c90ba79b72ad4e1fc64a0c
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 15fdd50b05bd2217cb9819373cd1c015da52b15b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988756"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599014"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Procedimiento para crear un enlace personalizado mediante SecurityBindingElement
-Windows Communication Foundation (WCF) incluye varios enlaces proporcionados por el sistema que se pueden configurar pero que no proporcionan flexibilidad completa al configurar todas las opciones de seguridad que admite WCF. Este tema muestra cómo crear un enlace personalizado directamente a partir de elementos de enlace individuales y resalta algunos de los ajustes de seguridad que pueden especificarse al crear este tipo de enlaces. Para obtener más información sobre la creación de enlaces personalizados, vea [extender enlaces](../../../../docs/framework/wcf/extending/extending-bindings.md).  
+Windows Communication Foundation (WCF) incluye varios enlaces proporcionados por el sistema que se pueden configurar pero que no proporcionan flexibilidad completa al configurar todas las opciones de seguridad que admite WCF. Este tema muestra cómo crear un enlace personalizado directamente a partir de elementos de enlace individuales y resalta algunos de los ajustes de seguridad que pueden especificarse al crear este tipo de enlaces. Para obtener más información sobre la creación de enlaces personalizados, vea [extender enlaces](../extending/extending-bindings.md).  
   
 > [!WARNING]
 > <xref:System.ServiceModel.Channels.SecurityBindingElement> no admite la forma de canal de <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, que es el uso predeterminado de la forma de canal por el transporte TCP cuando <xref:System.ServiceModel.TransferMode> se establece en <xref:System.ServiceModel.TransferMode.Buffered>. Debe establecer <xref:System.ServiceModel.TransferMode> en <xref:System.ServiceModel.TransferMode.Streamed> para usar <xref:System.ServiceModel.Channels.SecurityBindingElement> en este escenario.  
@@ -25,7 +25,7 @@ Windows Communication Foundation (WCF) incluye varios enlaces proporcionados por
   
  Por el contrario, para crear un enlace personalizado, se crean y configuran los elementos de enlace y se crea un objeto <xref:System.ServiceModel.Channels.CustomBinding> a partir de los elementos de enlace.  
   
- Para ello, se agregan los elementos de enlace individuales a una colección representada por una instancia de la clase <xref:System.ServiceModel.Channels.BindingElementCollection> y, a continuación, se establece la propiedad `Elements` de `CustomBinding` en ese objeto. Debe agregar los elementos de enlace en el orden siguiente: Flujo de transacción, sesión confiable, seguridad, dúplex compuesto, unidireccional, seguridad de secuencia, codificación de mensajes y transporte. Tenga en cuenta que no todos los elementos de enlace enumerados se necesitan en cada enlace.  
+ Para ello, se agregan los elementos de enlace individuales a una colección representada por una instancia de la clase <xref:System.ServiceModel.Channels.BindingElementCollection> y, a continuación, se establece la propiedad `Elements` de `CustomBinding` en ese objeto. Debe agregar los elementos de enlace en el orden siguiente: flujo de transacciones, sesión confiable, seguridad, dúplex compuesto, unidireccional, seguridad de secuencia, codificación de mensajes y transporte. Tenga en cuenta que no todos los elementos de enlace enumerados se necesitan en cada enlace.  
   
 ## <a name="securitybindingelement"></a>SecurityBindingElement  
  Tres elementos de enlace guardan relación con la seguridad, y todos se derivan de la clase <xref:System.ServiceModel.Channels.SecurityBindingElement>. Los tres elementos son <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> y <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>. <xref:System.ServiceModel.Channels.TransportSecurityBindingElement> se utiliza para proporcionar seguridad de modo mixto. Se utilizan los otros dos elementos cuando la capa del mensaje proporciona seguridad.  
@@ -75,9 +75,9 @@ Windows Communication Foundation (WCF) incluye varios enlaces proporcionados por
 |||SSL o StreamSecurityBindingElement de Windows|SSL o StreamSecurityBindingElement de Windows|SSL o StreamSecurityBindingElement de Windows|  
 |||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
   
- Observe que hay muchos valores de configuración que se pueden definir en SecurityBindingElements. Para obtener más información, vea [modos de autenticación de SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
+ Observe que hay muchos valores de configuración que se pueden definir en SecurityBindingElements. Para obtener más información, vea [modos de autenticación de SecurityBindingElement](securitybindingelement-authentication-modes.md).  
   
- Para obtener más información, vea [proteger conversaciones y sesiones seguras](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md).  
+ Para obtener más información, vea [proteger conversaciones y sesiones seguras](secure-conversations-and-secure-sessions.md).  
   
 ## <a name="procedures"></a>Procedimientos  
   
@@ -99,7 +99,7 @@ Windows Communication Foundation (WCF) incluye varios enlaces proporcionados por
   
 ## <a name="example"></a>Ejemplo  
   
-### <a name="description"></a>DESCRIPCIÓN  
+### <a name="description"></a>Descripción  
  El ejemplo siguiente proporciona una función completa para crear un enlace personalizado que utilice <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
   
 ### <a name="code"></a>Código  
@@ -112,5 +112,5 @@ Windows Communication Foundation (WCF) incluye varios enlaces proporcionados por
 - <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>
 - <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Extensión de enlaces](../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Enlaces proporcionados por el sistema](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [Extensión de enlaces](../extending/extending-bindings.md)
+- [Enlaces proporcionados por el sistema](../system-provided-bindings.md)

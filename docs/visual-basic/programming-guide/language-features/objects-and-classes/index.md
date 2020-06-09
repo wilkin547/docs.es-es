@@ -5,12 +5,12 @@ helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: 10e257a1cbc8778565a9838aeef423522f9d2970
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9e3cf262ef617a1ae5ee92bcc3d6fd5c691602f9
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290621"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600417"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Objetos y clases de Visual Basic
 
@@ -110,7 +110,7 @@ Utilice campos cuando:
 
 - La propiedad es un tipo de datos `String`, y no hay ninguna restricción del tamaño o el valor de la cadena.
 
-- Para más información, vea [Procedimientos de propiedad](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md).
+- Para más información, vea [Procedimientos de propiedad](../procedures/property-procedures.md).
 
 > [!TIP]
 > Mantenga siempre los campos no constantes privados. Si desea que sea público, use una propiedad en su lugar.
@@ -252,7 +252,7 @@ Asegúrese de que el compilador puede tener acceso a la clase de la que pretende
 
 Otra forma de relacionar ese objeto es mediante una *relación de contención*. Los objetos contenedores lógicamente encapsulan otros objetos. Por ejemplo, el objeto <xref:System.OperatingSystem> contiene lógicamente un objeto <xref:System.Version>, el cual devuelve a través de su propiedad <xref:System.OperatingSystem.Version%2A>. Tenga en cuenta que el objeto contenedor no contiene ningún otro objeto físicamente.
 
-#### <a name="collections"></a>Recopilaciones
+#### <a name="collections"></a>Colecciones
 
 Un tipo concreto de contención de objeto se representa mediante *colecciones*. Las colecciones son grupos de objetos similares que se pueden enumerar. Visual Basic admite una sintaxis específica en la [... Instrucción siguiente](../../../language-reference/statements/for-each-next-statement.md) que permite recorrer en iteración los elementos de una colección. Además, las colecciones suelen permitir usar un <xref:Microsoft.VisualBasic.Collection.Item%2A> para recuperar elementos en función de su índice o asociándolos con una cadena única. Las colecciones pueden ser más fáciles de utilizar que las matrices puesto que permiten agregar o quitar elementos sin utilizar índices. Debido a su facilidad de uso, las colecciones se utilizan a menudo para almacenar formularios y controles.
 

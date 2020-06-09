@@ -2,12 +2,12 @@
 title: Microsoft.Transactions.TransactionBridge.RegistrationCoordinatorFaulted
 ms.date: 03/30/2017
 ms.assetid: 8193027e-9db2-4af9-a072-27300cd24330
-ms.openlocfilehash: f634816b2459d2e0b6137e2e87fef907824af017
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad9d82162313e46626e5e2fa6f4ef99bf0139162
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61997729"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599664"
 ---
 # <a name="microsofttransactionstransactionbridgeregistrationcoordinatorfaulted"></a>Microsoft.Transactions.TransactionBridge.RegistrationCoordinatorFaulted
 El servicio de protocolo WS-AT recibió un error de su coordinador en respuesta a un mensaje del registro.  
@@ -20,6 +20,6 @@ El servicio de protocolo WS-AT recibió un error de su coordinador en respuesta 
   
 ## <a name="see-also"></a>Vea también
 
-- [Traza](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Uso del seguimiento para solucionar problemas de su aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Seguimiento](index.md)
+- [Uso del seguimiento para solucionar problemas de su aplicación](using-tracing-to-troubleshoot-your-application.md)
+- [Administración y diagnóstico](../index.md)

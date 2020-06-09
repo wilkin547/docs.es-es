@@ -2,15 +2,15 @@
 title: Comportamiento de auditoría de servicio
 ms.date: 03/30/2017
 ms.assetid: 59bf0cda-e496-4418-a3a1-2f0f6e85f8ce
-ms.openlocfilehash: 6d5f254f4f94adfaeaf5632ddd696891af177e93
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bfe13146a7f7cdec648a82a34c34077ec5466809
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964543"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599937"
 ---
 # <a name="service-auditing-behavior"></a>Comportamiento de auditoría de servicio
-Este ejemplo muestra cómo utilizar <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> para habilitar la auditoría de eventos de seguridad durante las operaciones de servicio. Este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md). El servicio y el cliente se han configurado mediante el [ \<> wsHttpBinding](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). El `mode` `Message` atributo `Windows` `clientCredentialType` [ del>deseguridadsehaestablecidoenysehaestablecidoen.\<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) En este ejemplo, el cliente es una aplicación de consola (.exe) y los Servicios de Internet Information Server (IIS) hospedan el servicio.  
+Este ejemplo muestra cómo utilizar <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> para habilitar la auditoría de eventos de seguridad durante las operaciones de servicio. Este ejemplo se basa en el [Introducción](getting-started-sample.md). El servicio y el cliente se han configurado con [\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md) . El `mode` atributo de [\<security>](../../configure-apps/file-schema/wcf/security-of-custombinding.md) se ha establecido en `Message` y se ha `clientCredentialType` establecido en `Windows` . En este ejemplo, el cliente es una aplicación de consola (.exe) y los Servicios de Internet Information Server (IIS) hospedan el servicio.  
   
 > [!NOTE]
 > El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
@@ -34,7 +34,7 @@ Este ejemplo muestra cómo utilizar <xref:System.ServiceModel.Description.Servic
   
  Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente. Presione ENTRAR en la ventana de la consola para cerrar el cliente.  
   
- Los registros de auditoría resultantes se pueden ver al ejecutar el Visor de eventos. De forma predeterminada, en Windows XP los eventos de auditoría se pueden ver en el registro de aplicaciones, mientras que en Windows Server 2003 y Windows Vista, los eventos de auditoría se pueden ver en el registro de seguridad. En Windows Server 2008 y Windows 7, los eventos de auditoría se pueden ver en los registros de aplicaciones y servicios. La ubicación de los eventos de auditoría se puede especificar estableciendo `auditLogLocation` el atributo en "Application" o "Security". Para obtener más información, consulte [Cómo Auditar eventos](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)de seguridad. Si los eventos se escriben en el registro de seguridad, se debe establecer LocalSecurityPolicy-> habilitar el acceso a objetos para "Success" y "Failure".  
+ Los registros de auditoría resultantes se pueden ver al ejecutar el Visor de eventos. De forma predeterminada, en Windows XP los eventos de auditoría se pueden ver en el registro de aplicaciones, mientras que en Windows Server 2003 y Windows Vista, los eventos de auditoría se pueden ver en el registro de seguridad. En Windows Server 2008 y Windows 7, los eventos de auditoría se pueden ver en los registros de aplicaciones y servicios. La ubicación de los eventos de auditoría se puede especificar estableciendo el `auditLogLocation` atributo en "Application" o "Security". Para obtener más información, consulte [Cómo: auditar eventos de seguridad](../feature-details/how-to-audit-wcf-security-events.md). Si los eventos se escriben en el registro de seguridad, se debe establecer LocalSecurityPolicy-> habilitar el acceso a objetos para "Success" y "Failure".  
   
  Al examinar el registro de eventos, el origen de los eventos de auditoría es "ServiceModel Audit 3.0.0.0". Los registros de auditoría de autenticación de mensajes tienen una categoría de "MessageAuthentication", mientras que los registros de auditoría de autorización de servicio tienen una categoría de "ServiceAuthorization".  
   
@@ -44,13 +44,13 @@ Este ejemplo muestra cómo utilizar <xref:System.ServiceModel.Description.Servic
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1. Asegúrese de que ha realizado el [procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Asegúrese de que ha realizado el [procedimiento de instalación única para los ejemplos de Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](building-the-samples.md).  
   
-3. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](running-the-samples.md).  
   
 ## <a name="see-also"></a>Vea también
 
-- [Auditoría](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
-- [Cómo: Auditar eventos de seguridad](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
+- [Auditoría](../feature-details/auditing-security-events.md)
+- [Procedimiento para auditar eventos de seguridad](../feature-details/how-to-audit-wcf-security-events.md)

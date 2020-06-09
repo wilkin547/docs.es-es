@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: 01470bd7f317acca068b3c1be1c751e3050ee7e8
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: fd78f2cd8266f94c577801623a84b56919c82973
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320210"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600859"
 ---
 # <a name="what-is-windows-communication-foundation"></a>¿Qué es Windows Communication Foundation?
 Windows Communication Foundation (WCF) es un marco para la creación de aplicaciones orientadas a servicios. Con WCF, puede enviar datos como mensajes asincrónicos de un punto de conexión de servicio a otro. Un extremo de servicio puede formar parte de un servicio disponible continuamente hospedado por IIS, o puede ser un servicio hospedado en una aplicación. Un extremo puede ser un cliente de un servicio que solicita datos de un extremo de servicio. Los mensajes pueden ser tan simples como un carácter o una palabra que se envía como XML, o tan complejos como una secuencia de datos binarios. A continuación se indican unos cuantos escenarios de ejemplo:
@@ -48,15 +48,15 @@ WCF incluye el siguiente conjunto de características. Para obtener más informa
 
 - **Metadatos de servicios**
 
-     WCF admite la publicación de metadatos del servicio mediante formatos especificados en estándares del sector como WSDL, esquema XML y WS-Policy. Estos metadatos se pueden usar para generar y configurar automáticamente clientes para tener acceso a los servicios WCF. Los metadatos se pueden publicar sobre HTTP y HTTPS, o utilizando el estándar Intercambio de metadatos de servicios web. Para obtener más información, vea [metadatos](./feature-details/metadata.md).
+     WCF admite la publicación de metadatos del servicio mediante formatos especificados en estándares del sector como WSDL, esquema XML y WS-Policy. Estos metadatos se pueden usar para generar y configurar automáticamente clientes para tener acceso a los servicios WCF. Los metadatos se pueden publicar sobre HTTP y HTTPS, o utilizando el estándar Intercambio de metadatos de servicios web. Para obtener más información, vea [Metadatos](./feature-details/metadata.md).
 
 - **Contratos de datos**
 
-     Dado que WCF se compila con el .NET Framework, también incluye métodos descriptivos de código para proporcionar los contratos que desea aplicar. Uno de los tipos de contrato universales es el contrato de datos. Básicamente, mientras se escribe el código del servicio usando Visual C# o Visual Basic, la forma más sencilla de controlar los datos consiste en crear clases que representan una entidad de datos con propiedades que pertenecen a la misma. WCF incluye un sistema completo para trabajar con los datos de esta manera fácil. Cuando se han creado las clases que representan los datos, el servicio genera automáticamente los metadatos que permiten a los clientes ajustarse a los tipos de datos que se han diseñado. Para obtener más información, consulte [uso de contratos de datos](../../../docs/framework/wcf/feature-details/using-data-contracts.md).
+     Dado que WCF se compila con el .NET Framework, también incluye métodos descriptivos de código para proporcionar los contratos que desea aplicar. Uno de los tipos de contrato universales es el contrato de datos. Básicamente, mientras se escribe el código del servicio usando Visual C# o Visual Basic, la forma más sencilla de controlar los datos consiste en crear clases que representan una entidad de datos con propiedades que pertenecen a la misma. WCF incluye un sistema completo para trabajar con los datos de esta manera fácil. Cuando se han creado las clases que representan los datos, el servicio genera automáticamente los metadatos que permiten a los clientes ajustarse a los tipos de datos que se han diseñado. Para obtener más información, consulte [uso de contratos de datos](feature-details/using-data-contracts.md).
 
 - **Seguridad**
 
-     Es posible cifrar los mensajes para proteger la privacidad, así como obligar a los usuarios a que se autentiquen antes de permitirles recibir mensajes. La seguridad puede implementarse utilizando estándares conocidos como SSL o WS-SecureConversation. Para más información, consulte [Seguridad](./feature-details/security.md).
+     Es posible cifrar los mensajes para proteger la privacidad, así como obligar a los usuarios a que se autentiquen antes de permitirles recibir mensajes. La seguridad puede implementarse utilizando estándares conocidos como SSL o WS-SecureConversation. Para obtener más información, consulte [Seguridad](./feature-details/security.md).
 
 - **Varios transportes y codificaciones**
 
@@ -70,9 +70,9 @@ WCF incluye el siguiente conjunto de características. Para obtener más informa
 
      Un mensaje duradero es aquel que nunca se pierde debido a una interrupción de la comunicación. Los mensajes que forman parte de un patrón de mensajes duraderos siempre se guardan en una base de datos. Si se produce una interrupción, la base de datos le permite reanudar el intercambio de mensajes cuando se restablezca la conexión. También puede crear un mensaje duradero mediante el Windows Workflow Foundation (WF). Para obtener más información, vea [Workflow Services](./feature-details/workflow-services.md).
 
-- **Transacciones**
+- **Transactions**
 
-     WCF también admite transacciones que usan uno de los tres modelos de transacción: WS-AtomicTransactions, las API del espacio de nombres <xref:System.Transactions> y Coordinador de transacciones distribuidas de Microsoft. Para obtener más información acerca de la compatibilidad con transacciones en WCF, vea [transacciones](./feature-details/transactions-in-wcf.md).
+     WCF también admite transacciones que usan uno de los tres modelos de transacción: WS-AtomicTransactions, las API del <xref:System.Transactions> espacio de nombres y Microsoft Coordinador de transacciones distribuidas. Para obtener más información acerca de la compatibilidad con transacciones en WCF, vea [transacciones](./feature-details/transactions-in-wcf.md).
 
 - **Compatibilidad con AJAX y REST**
 
@@ -100,7 +100,7 @@ Las características de hospedaje del servidor de aplicaciones AppFabric de Wind
 - [Conceptos básicos de Windows Communication Foundation](fundamental-concepts.md)
 - [Arquitectura de Windows Communication Foundation](architecture.md)
 - [Instrucciones y procedimientos recomendados](guidelines-and-best-practices.md)
-- [Tutorial de introducción](getting-started-tutorial.md)
+- [Tutorial de Introducción](getting-started-tutorial.md)
 - [Guía de la documentación](guide-to-the-documentation.md)
 - [Programación básica de WCF](basic-wcf-programming.md)
 - [Ejemplos de Windows Communication Foundation](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751514%28v=vs.90%29)

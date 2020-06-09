@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0365eb37-98cc-4b13-80fb-f1e78847a748
-ms.openlocfilehash: 1a2723a445c71dd883492907587f8cbe7b89666a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 67fbbb035a3a6683cefbf24e299f32579b674bbd
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613216"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597259"
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>Asignación del modelo de objetos de distribución de WCF a Atom y RSS
-Al desarrollar un servicio de distribución de Windows Communication Foundation (WCF), crea fuentes y elementos mediante las clases siguientes:  
+Al desarrollar un servicio de distribución de Windows Communication Foundation (WCF), se crean fuentes y elementos con las siguientes clases:  
   
 - <xref:System.ServiceModel.Syndication.SyndicationFeed>  
   
@@ -31,9 +31,9 @@ Al desarrollar un servicio de distribución de Windows Communication Foundation 
   
 - <xref:System.ServiceModel.Syndication.XmlSyndicationContent>  
   
- <xref:System.ServiceModel.Syndication.SyndicationFeed> se puede serializar en cualquier formato para redifusión web para el que está definido un formateador. WCF se distribuye con dos formateadores: <xref:System.ServiceModel.Syndication.Atom10FeedFormatter> y <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>.  
+ <xref:System.ServiceModel.Syndication.SyndicationFeed> se puede serializar en cualquier formato para redifusión web para el que está definido un formateador. WCF se distribuye con dos formateadores: <xref:System.ServiceModel.Syndication.Atom10FeedFormatter> y <xref:System.ServiceModel.Syndication.Rss20FeedFormatter> .  
   
- El modelo de objetos alrededor de <xref:System.ServiceModel.Syndication.SyndicationFeed> y <xref:System.ServiceModel.Syndication.SyndicationItem> está alineado más estrechamente con la especificación Atom 1.0 que con la especificación RSS 2.0. Esto se debe a que Atom 1.0 es una especificación más sustancial que define elementos que son ambiguos o que se han omitido de la especificación RSS 2.0. Por este motivo, muchos elementos en el modelo de objetos de sindicación de WCF tienen ninguna representación directa en la especificación RSS 2.0. Al serializar <xref:System.ServiceModel.Syndication.SyndicationFeed> y <xref:System.ServiceModel.Syndication.SyndicationItem> objetos en RSS 2.0, WCF permite serializar elementos de datos específicos del Atom como elementos de extensión de espacio de nombres que se ajustan a la especificación Atom. Esto se puede controlar mediante un parámetro pasado al constructor <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>.  
+ El modelo de objetos alrededor de <xref:System.ServiceModel.Syndication.SyndicationFeed> y <xref:System.ServiceModel.Syndication.SyndicationItem> está alineado más estrechamente con la especificación Atom 1.0 que con la especificación RSS 2.0. Esto se debe a que Atom 1.0 es una especificación más sustancial que define elementos que son ambiguos o que se han omitido de la especificación RSS 2.0. Por este motivo, muchos elementos del modelo de objetos de distribución de WCF no tienen ninguna representación directa en la especificación RSS 2,0. Al serializar <xref:System.ServiceModel.Syndication.SyndicationFeed> <xref:System.ServiceModel.Syndication.SyndicationItem> objetos y en RSS 2,0, WCF permite serializar elementos de datos específicos de Atom como elementos de extensión calificados con el espacio de nombres que cumplen con la especificación Atom. Esto se puede controlar mediante un parámetro pasado al constructor <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>.  
   
  Los ejemplos de código de este tema usan uno de los dos métodos definidos aquí para realizar la serialización real.  
   
@@ -399,8 +399,8 @@ Al desarrollar un servicio de distribución de Windows Communication Foundation 
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general de redifusión en WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
-- [Arquitectura de redifusión](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)
-- [Cómo: Creación de una fuente RSS básica](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)
-- [Cómo: Creación de una fuente básica de Atom](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)
-- [Cómo: Exponer una fuente como Atom y RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)
+- [Información general de distribución de WCF](wcf-syndication-overview.md)
+- [Arquitectura de distribución](architecture-of-syndication.md)
+- [Procedimiento para crear una fuente RSS básica](how-to-create-a-basic-rss-feed.md)
+- [Procedimiento para crear una fuente Atom básica](how-to-create-a-basic-atom-feed.md)
+- [Procedimiento para exponer una fuente como Atom y RSS](how-to-expose-a-feed-as-both-atom-and-rss.md)

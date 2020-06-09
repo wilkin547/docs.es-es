@@ -5,17 +5,17 @@ helpviewer_keywords:
 - service certificate validation [WCF]
 - certificates [WCF], service certificate validation
 ms.assetid: 9dffcab2-70a9-40f0-99fd-d3a0b296028f
-ms.openlocfilehash: 0bced548cdc9423d1907de09e8b52ebe078d7c19
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 151075f2894b895ab90418748df9face3aa70252
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857706"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599196"
 ---
 # <a name="differences-between-service-certificate-validation-done-by-internet-explorer-and-wcf"></a>Diferencias entre la validación de certificados de servicio realizada por Internet Explorer y WCF
-Debido a la diferencia entre el modo Internet Explorer y Windows Communication Foundation (WCF) validan los certificados de servicio cuando se usa HTTPS, es posible que Internet Explorer no pueda obtener acceso a la página de ayuda o lenguaje de descripción de servicios Web (WSDL) de un servicio aunque un cliente WCF correctamente es capaz de enviar mensajes a los puntos de conexión de servicio. Esto es porque Internet Explorer comprueba si el certificado de servicio tiene la `ServerAuthentication` objeto (OID) de los identificadores en las marcas de uso mejoradas, mientras que WCF no aplica este tipo de restricción. Si no puede tener acceso a la página de Ayuda del servicio o el WSDL para el servicio de Internet Explorer, use el [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para tener acceso a los metadatos del servicio.  
+Debido a la diferencia entre la forma en que Internet Explorer y Windows Communication Foundation (WCF) validan los certificados de servicio cuando se usa HTTPS, es posible que Internet Explorer no pueda tener acceso a la página de ayuda o el lenguaje de descripción de servicios web (WSDL) de un servicio aunque un cliente de WCF pueda enviar mensajes correctamente a los extremos de servicio. Esto se debe a que Internet Explorer comprueba si el certificado del servicio tiene los `ServerAuthentication` identificadores de objeto (OID) en las marcas de uso mejoradas, mientras que WCF no exige este tipo de restricción. Si Internet Explorer no puede obtener acceso a la página de ayuda del servicio o al WSDL para el servicio, use la [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) para tener acceso a los metadatos del servicio.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Diferencias en la validación de certificados entre HTTPS, SSL a través de TCP, y seguridad SOAP](../../../../docs/framework/wcf/feature-details/cert-val-diff-https-ssl-over-tcp-and-soap.md)
-- [Cómo: Recuperar metadatos e implementar un servicio conforme](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)
+- [Diferencias en la validación de certificados entre HTTPS, SSL a través de TCP, y seguridad SOAP](cert-val-diff-https-ssl-over-tcp-and-soap.md)
+- [Procedimiento para recuperar metadatos e implementar un servicio conforme](how-to-retrieve-metadata-and-implement-a-compliant-service.md)

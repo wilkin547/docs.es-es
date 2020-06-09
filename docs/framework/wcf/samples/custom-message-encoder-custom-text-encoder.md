@@ -1,28 +1,28 @@
 ---
-title: 'Codificador de mensaje personalizado: codificador de texto personalizado'
+title: 'Codificador de mensajes personalizado: codificador de texto personalizado'
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
-ms.openlocfilehash: 88aeeb4f1d09795b768441d2a572d959f27e0226
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b60fa2a84520ad208d435a0c9284c19b5de8e989
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79145116"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600612"
 ---
-# <a name="custom-message-encoder-custom-text-encoder"></a>Codificador de mensaje personalizado: codificador de texto personalizado
+# <a name="custom-message-encoder-custom-text-encoder"></a>Codificador de mensajes personalizado: codificador de texto personalizado
 
-En este ejemplo se muestra cómo implementar un codificador de mensajes de texto personalizado mediante Windows Communication Foundation (WCF).
+Este ejemplo muestra cómo implementar un codificador de mensajes de texto personalizado mediante Windows Communication Foundation (WCF).
 
 > [!WARNING]
 > Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Si este directorio no existe, vaya a Ejemplos de [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (WCF). Este ejemplo se encuentra en el siguiente directorio.
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Text`
 
-El <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> de WCF solo admite las codificaciones Unicode UTF-8, UTF-16 y big-endian. El codificador de mensajes de texto personalizado de este ejemplo admite todas las codificaciones de caracteres compatibles con la plataforma que pueden ser necesarias para la interoperabilidad. El ejemplo consta de un programa de consola de cliente (.exe), una biblioteca de servicios (.dll) hospedada por Internet Information Services (IIS) y una biblioteca de codificadores de mensajes de texto (.dll). El servicio implementa un contrato que define un modelo de comunicación de solicitud y respuesta. La interfaz `ICalculator`, que expone las operaciones matemáticas (sumar, restar, multiplicar y dividir), define el contrato. El cliente realiza solicitudes sincrónicas a una operación matemática determinada y el servicio responde con el resultado. Tanto el cliente como el servicio utilizan `CustomTextMessageEncoder` en lugar del <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> predeterminado.
+<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>De WCF solo admite las codificaciones UTF-8, UTF-16 y Big-Endian Unicode. El codificador de mensajes de texto personalizado en este ejemplo es compatible con todas las codificaciones de caracteres compatibles con la plataforma que pueden ser necesarias para la interoperabilidad. El ejemplo está compuesto de un programa de consola de cliente (. exe), una biblioteca de servicios (. dll) hospedada por Internet Information Services (IIS) y una biblioteca de codificador de mensajes de texto (. dll). El servicio implementa un contrato que define un modelo de comunicación de solicitud y respuesta. La interfaz `ICalculator`, que expone las operaciones matemáticas (sumar, restar, multiplicar y dividir), define el contrato. El cliente realiza solicitudes sincrónicas a una operación matemática determinada y el servicio responde con el resultado. Tanto el cliente como el servicio utilizan `CustomTextMessageEncoder` en lugar del <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> predeterminado.
 
 La implementación del codificador personalizado está compuesta de un generador de codificadores de mensajes, un codificador de mensajes, un elemento de enlace de la codificación de mensajes y un controlador de configuración. Muestra lo siguiente:
 
@@ -36,21 +36,21 @@ La implementación del codificador personalizado está compuesta de un generador
 
 ## <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo
 
-1. Instale ASP.NET 4.0 con el siguiente comando.
+1. Instale ASP.NET 4,0 con el siguiente comando.
 
     ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 
-2. Asegúrese de que ha realizado el procedimiento de instalación única [para los ejemplos](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)de Windows Communication Foundation .
+2. Asegúrese de que ha realizado el [procedimiento de instalación única para los ejemplos de Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
 
-3. Para compilar la solución, siga las instrucciones de Creación de [ejemplos](../../../../docs/framework/wcf/samples/building-the-samples.md)de Windows Communication Foundation .
+3. Para compilar la solución, siga las instrucciones de [creación de los ejemplos de Windows Communication Foundation](building-the-samples.md).
 
-4. Para ejecutar el ejemplo en una configuración de uno o entre equipos, siga las instrucciones de Ejecución de [los ejemplos](../../../../docs/framework/wcf/samples/running-the-samples.md)de Windows Communication Foundation .
+4. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](running-the-samples.md).
 
 ## <a name="message-encoder-factory-and-the-message-encoder"></a>Generador de codificadores de mensajes y el codificador de mensajes
 
-Cuando se abre <xref:System.ServiceModel.ServiceHost> o el canal de cliente, el componente de tiempo de diseño `CustomTextMessageBindingElement` crea `CustomTextMessageEncoderFactory`. El generador crea `CustomTextMessageEncoder`. El codificador de mensajes funciona tanto en el modo de transmisión por secuencias como en el modo de almacenamiento en búfer. Utiliza respectivamente <xref:System.Xml.XmlReader> y <xref:System.Xml.XmlWriter> para leer y escribir mensajes respectivamente. A diferencia de los lectores y escritores XML optimizados de WCF que solo admiten UNICODE UTF-8, UTF-16 y big-endian, estos lectores y escritores admiten toda la codificación compatible con la plataforma.
+Cuando se abre <xref:System.ServiceModel.ServiceHost> o el canal de cliente, el componente de tiempo de diseño `CustomTextMessageBindingElement` crea `CustomTextMessageEncoderFactory`. El generador crea `CustomTextMessageEncoder`. El codificador de mensajes funciona tanto en el modo de transmisión por secuencias como en el modo de almacenamiento en búfer. Utiliza respectivamente <xref:System.Xml.XmlReader> y <xref:System.Xml.XmlWriter> para leer y escribir mensajes respectivamente. En contraposición a los lectores y escritores XML optimizados de WCF que solo admiten UTF-8, UTF-16 y Big-Endian Unicode, estos lectores y escritores admiten toda la codificación compatible con la plataforma.
 
 El ejemplo de código siguiente muestra CustomTextMessageEncoder.
 
@@ -193,11 +193,11 @@ public class CustomTextMessageEncoderFactory : MessageEncoderFactory
 
 ## <a name="message-encoding-binding-element"></a>Elemento de enlace de codificación de mensajes
 
-Los elementos de enlace permiten la configuración de la pila en tiempo de ejecución wcf. Para usar el codificador de mensajes personalizado en una aplicación WCF, se requiere un elemento de enlace que crea el generador de codificadores de mensajes con la configuración adecuada en el nivel adecuado en la pila en tiempo de ejecución.
+Los elementos de enlace permiten la configuración de la pila en tiempo de ejecución de WCF. Para usar el codificador de mensajes personalizado en una aplicación WCF, se requiere un elemento de enlace que cree el generador del codificador del mensaje con la configuración adecuada en el nivel adecuado en la pila en tiempo de ejecución.
 
-`CustomTextMessageBindingElement` deriva de la clase base <xref:System.ServiceModel.Channels.BindingElement> y hereda de la clase <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>. Esto permite que otros componentes WCF reconozcan este elemento de enlace como un elemento de enlace de codificación de mensajes. La implementación de <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> devuelve una instancia del generador de codificadores de mensajes coincidente con los valores adecuados.
+`CustomTextMessageBindingElement` deriva de la clase base <xref:System.ServiceModel.Channels.BindingElement> y hereda de la clase <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>. Esto permite que otros componentes de WCF reconozcan este elemento de enlace como un elemento de enlace de codificación de mensajes. La implementación de <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> devuelve una instancia del generador de codificadores de mensajes coincidente con los valores adecuados.
 
-`CustomTextMessageBindingElement` expone los valores para `MessageVersion`, `ContentType` y `Encoding` a través de las propiedades. El codificador admite tanto las versiones Soap11Addressing como Soap12Addressing1. El valor predeterminado es Soap11Addressing1. El valor predeterminado de `ContentType` se establece como "text/xml". La propiedad `Encoding` le permite establecer el valor de la codificación de caracteres deseada. El cliente y servicio de ejemplo usa la codificación de caracteres ISO-8859-1 (Latin1), que no es compatible con WCF. <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>
+`CustomTextMessageBindingElement` expone los valores para `MessageVersion`, `ContentType` y `Encoding` a través de las propiedades. El codificador admite tanto las versiones Soap11Addressing como Soap12Addressing1. El valor predeterminado es Soap11Addressing1. El valor predeterminado de `ContentType` se establece como "text/xml". La propiedad `Encoding` le permite establecer el valor de la codificación de caracteres deseada. El cliente y el servicio de ejemplo utilizan la codificación de caracteres ISO-8859-1 (latin1), que no es compatible con <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> de WCF.
 
 El código siguiente muestra cómo crear mediante programación el enlace usando el codificador de mensajes de texto personalizado.
 
@@ -214,7 +214,7 @@ CustomBinding binding = new CustomBinding(bindingElements);
 
 Cualquier tipo que deriva de <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> es responsable de actualizar la versión del enlace SOAP en el documento WSDL generado para el servicio. Esto se hace implementando el método `ExportEndpoint` en la interfaz <xref:System.ServiceModel.Description.IWsdlExportExtension> y modificando a continuación el WSDL generado. En este ejemplo, `CustomTextMessageBindingElement` utiliza la lógica de exportación de WSDL desde `TextMessageEncodingBindingElement`.
 
-Para este ejemplo, la configuración del cliente se hace manualmente. No puede utilizar Svcutil.exe para generar la configuración del cliente porque `CustomTextMessageBindingElement` no exporta una aserción de directiva para describir su comportamiento. Generalmente debería implementar la interfaz <xref:System.ServiceModel.Description.IPolicyExportExtension> en un elemento de enlace personalizado para exportar una aserción de directiva personalizada que describa el comportamiento o la función implementada por el elemento de enlace. Para obtener un ejemplo de cómo exportar una aserción de directiva para un elemento de enlace personalizado, vea el [transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) ejemplo.
+Para este ejemplo, la configuración del cliente se hace manualmente. No puede utilizar Svcutil.exe para generar la configuración del cliente porque `CustomTextMessageBindingElement` no exporta una aserción de directiva para describir su comportamiento. Generalmente debería implementar la interfaz <xref:System.ServiceModel.Description.IPolicyExportExtension> en un elemento de enlace personalizado para exportar una aserción de directiva personalizada que describa el comportamiento o la función implementada por el elemento de enlace. Para obtener un ejemplo de cómo exportar una aserción de directiva para un elemento de enlace personalizado, vea el ejemplo [Transport: UDP](transport-udp.md) .
 
 ## <a name="message-encoding-binding-configuration-handler"></a>Controlador de configuración de enlace de codificación de mensajes
 La sección anterior muestra cómo utilizar mediante programación el codificador de mensajes de texto personalizado. `CustomTextMessageEncodingBindingSection` implementa un controlador de configuración que le permite especificar el uso de un codificador de mensajes de texto personalizado dentro de un archivo de configuración. La clase `CustomTextMessageEncodingBindingSection` se deriva de la clase <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> . La propiedad `BindingElementType` informa al sistema de configuración del tipo de elemento de enlace que se va a crear para esta sección.
