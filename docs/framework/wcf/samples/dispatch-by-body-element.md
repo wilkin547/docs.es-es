@@ -2,12 +2,12 @@
 title: Distribución mediante el elemento del cuerpo
 ms.date: 03/30/2017
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-ms.openlocfilehash: 754151f856dfe09b8fd12912ab06d1d8720be016
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 19913cdaa47d766f62a313e216a653ac69633a99
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183719"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594704"
 ---
 # <a name="dispatch-by-body-element"></a>Distribución mediante el elemento del cuerpo
 Este ejemplo muestra cómo implementar un algoritmo alternativo para asignar mensajes entrantes a las operaciones.  
@@ -70,9 +70,9 @@ private Message CreateMessageCopy(Message message,
 ```  
   
 ## <a name="adding-an-operation-selector-to-a-service"></a>Agregar un selector de operación a un servicio  
- Los selectores de operaciones de envío de servicio son extensiones para el distribuidor de Windows Communication Foundation (WCF). Para seleccionar los métodos en el canal de devolución de llamada de contratos dúplex, hay también selectores de operación de cliente que trabajan de manera muy similar a los selectores de operación de expedición aquí, pero que no se cubren explícitamente en este ejemplo.  
+ Los selectores de la operación de envío de servicio son extensiones del distribuidor de Windows Communication Foundation (WCF). Para seleccionar los métodos en el canal de devolución de llamada de contratos dúplex, hay también selectores de operación de cliente que trabajan de manera muy similar a los selectores de operación de expedición aquí, pero que no se cubren explícitamente en este ejemplo.  
   
- Como la mayoría de las extensiones ejemplares de los servicios, los selectores de la operación de expedición se agregan al distribuidor utilizando los comportamientos. Un *comportamiento* es un objeto de configuración, que agrega una o varias extensiones al tiempo de ejecución de envío (o al tiempo de ejecución del cliente) o cambia su configuración.  
+ Como la mayoría de las extensiones ejemplares de los servicios, los selectores de la operación de expedición se agregan al distribuidor utilizando los comportamientos. Un *comportamiento* es un objeto de configuración que agrega una o más extensiones al tiempo de ejecución de envío (o al tiempo de ejecución del cliente) o cambia su configuración.  
   
  Dado que los selectores de la operación tienen el ámbito del contrato, el comportamiento adecuado para implementar aquí es <xref:System.ServiceModel.Description.IContractBehavior>. Dado que la interfaz se implementa como se muestra en una clase derivada <xref:System.Attribute> en el código siguiente, el comportamiento se puede agregar mediante declaración a cualquier contrato de servicios. Cuando se abre un<xref:System.ServiceModel.ServiceHost> y el tiempo de ejecución de la expedición está generado, todos los comportamientos buscados, bien como atributos en los contratos, operaciones o implementaciones del servicio, o bien como elemento en la configuración del servicio se agregan automáticamente y como consecuencia solicitan contribuir con las extensiones o modificar la configuración predeterminada.  
   
@@ -120,9 +120,9 @@ public void ApplyDispatchBehavior(ContractDescription contractDescription, Servi
 ## <a name="implementing-the-service"></a>Implementar el servicio  
  El comportamiento implementado directamente en este ejemplo afecta a cómo se interpretan los mensajes de la conexión y los envían, lo cual es una función del contrato de servicios. Por consiguiente, el comportamiento se debería declarar en el nivel del contrato de servicios en cualquier implementación del servicio que decida utilizarlo.  
   
- El servicio de `DispatchByBodyElementBehaviorAttribute` proyecto de `IDispatchedByBody` ejemplo aplica el comportamiento del `OperationForBodyA()` `OperationForBodyB()` contrato `DispatchBodyElementAttribute` al contrato de servicio y etiqueta cada una de las dos operaciones y con un comportamiento de operación. Cuando se abre un host del servicio para un servicio que implementa este contrato, este metadato lo escoge previamente el generador del distribuidor, tal y como se ha descrito previamente.  
+ El servicio de proyecto de ejemplo aplica el `DispatchByBodyElementBehaviorAttribute` comportamiento del contrato al `IDispatchedByBody` contrato de servicio y etiqueta cada una de las dos operaciones `OperationForBodyA()` y `OperationForBodyB()` con un comportamiento de la `DispatchBodyElementAttribute` operación. Cuando se abre un host del servicio para un servicio que implementa este contrato, este metadato lo escoge previamente el generador del distribuidor, tal y como se ha descrito previamente.  
   
- Dado que el selector de la operación se envía solamente basado en el elemento de cuerpo del mensaje y omite la "Acción", para indicar el tiempo de ejecución se exige no comprobar el encabezado "Acción" en las respuestas devueltas asignando el carácter comodín "*" a la propiedad `ReplyAction` de <xref:System.ServiceModel.OperationContractAttribute>. Además, es necesario tener una operación predeterminada que tenga la\*propiedad "Action" establecida en el comodín " ". La operación predeterminada recibe todos los mensajes que no se pueden enviar y no tienen `DispatchBodyElementAttribute`:  
+ Dado que el selector de la operación se envía solamente basado en el elemento de cuerpo del mensaje y omite la "Acción", para indicar el tiempo de ejecución se exige no comprobar el encabezado "Acción" en las respuestas devueltas asignando el carácter comodín "*" a la propiedad `ReplyAction` de <xref:System.ServiceModel.OperationContractAttribute>. Además, es necesario tener una operación predeterminada que tenga la propiedad "Action" establecida en el carácter comodín " \* ". La operación predeterminada recibe todos los mensajes que no se pueden enviar y no tienen `DispatchBodyElementAttribute`:  
   
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"),  
@@ -164,17 +164,17 @@ public interface IDispatchedByBody
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1. Asegúrese de que ha realizado el procedimiento de instalación única [para los ejemplos](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)de Windows Communication Foundation .  
+1. Asegúrese de que ha realizado el [procedimiento de instalación única para los ejemplos de Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Para compilar la solución, siga las instrucciones de Creación de [ejemplos](../../../../docs/framework/wcf/samples/building-the-samples.md)de Windows Communication Foundation .  
+2. Para compilar la solución, siga las instrucciones de [creación de los ejemplos de Windows Communication Foundation](building-the-samples.md).  
   
-3. Para ejecutar el ejemplo en una configuración de uno o entre equipos, siga las instrucciones de Ejecución de [los ejemplos](../../../../docs/framework/wcf/samples/running-the-samples.md)de Windows Communication Foundation .  
+3. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](running-the-samples.md).  
   
 > [!IMPORTANT]
 > Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Si este directorio no existe, vaya a Ejemplos de [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (WCF). Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\AdvancedDispatchByBody`  

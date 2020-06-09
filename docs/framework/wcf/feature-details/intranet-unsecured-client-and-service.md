@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-ms.openlocfilehash: 2fa13a12a377cc16a95318367605d8b5d92769a7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 591f7db0f6b4e928a991961d3bc7c404f41028bf
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184693"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84579285"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>Cliente y servicio de intranet no protegidos
-En la siguiente ilustración se muestra un servicio simple de Windows Communication Foundation (WCF) desarrollado para proporcionar información sobre una red privada segura a una aplicación WCF. La seguridad no es necesaria porque los datos son de baja importancia, se espera que la red sea intrínsecamente segura o la seguridad se proporciona mediante una capa por debajo de la infraestructura WCF.  
+En la ilustración siguiente se muestra un servicio de Windows Communication Foundation simple (WCF) desarrollado para proporcionar información sobre una red privada segura a una aplicación WCF. No es necesaria la seguridad porque los datos son de poca importancia, se espera que la red sea intrínsecamente segura, o bien la seguridad la proporciona una capa por debajo de la infraestructura de WCF.  
   
- ![Escenario de cliente y servicio no seguro de intranet.](./media/intranet-unsecured-client-and-service/unsecured-web-client-service.gif)  
+ ![Escenario de servicio y cliente no seguro de la intranet.](./media/intranet-unsecured-client-and-service/unsecured-web-client-service.gif)  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -27,8 +27,8 @@ En la siguiente ilustración se muestra un servicio simple de Windows Communicat
 |Integridad|None|  
 |Confidencialidad|None|  
   
-## <a name="service"></a>Servicio  
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
+## <a name="service"></a>web de Office  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Lleve a cabo una de las siguientes acciones:  
   
 - Cree un servicio independiente mediante el código sin configuración.  
   
@@ -70,8 +70,8 @@ En la siguiente ilustración se muestra un servicio simple de Windows Communicat
 </configuration>  
 ```  
   
-## <a name="client"></a>Remoto  
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
+## <a name="client"></a>Cliente  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Lleve a cabo una de las siguientes acciones:  
   
 - Cree un cliente independiente mediante el código (y el código de cliente).  
   
@@ -81,7 +81,7 @@ En la siguiente ilustración se muestra un servicio simple de Windows Communicat
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Código  
- El código siguiente muestra un cliente WCF básico que tiene acceso a un extremo no seguro mediante el protocolo TCP.  
+ En el código siguiente se muestra un cliente de WCF básico que tiene acceso a un punto de conexión no seguro mediante el protocolo TCP.  
   
  [!code-csharp[C_UnsecuredClient#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#2)]
  [!code-vb[C_UnsecuredClient#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#2)]  
@@ -112,8 +112,8 @@ En la siguiente ilustración se muestra un servicio simple de Windows Communicat
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.NetTcpBinding>
-- [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Información general sobre seguridad](security-overview.md)
 - [Modelo de seguridad para Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

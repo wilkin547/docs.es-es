@@ -2,31 +2,31 @@
 title: Ejemplos de hospedaje de WCF
 ms.date: 03/30/2017
 ms.assetid: 8a6ec5d4-d191-49cc-bb0f-a07639dc60d4
-ms.openlocfilehash: 8ea382af4ed7b5d36c199a0a916756cbb935e753
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 10586d723a757ae8c7abe68968dfd8682adb0727
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876967"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84575176"
 ---
-# <a name="hosting"></a>Hospedaje
-Esta sección contiene ejemplos que muestran servicios de hospedaje de Windows Communication Foundation (WCF).  
+# <a name="hosting"></a>Hosting
+Esta sección contiene ejemplos que muestran los servicios de Windows Communication Foundation de hospedaje (WCF).  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Activación de procesos de Windows](../../../../docs/framework/wcf/samples/windows-process-activation.md)  
+ [Activación de procesos de Windows](windows-process-activation.md)  
  Muestra la activación de servicios a través de los protocolos de red.  
   
- [Ejemplo de integración de SystemWebRouting](../../../../docs/framework/wcf/samples/systemwebrouting-integration-sample.md)  
+ [Ejemplo de integración de SystemWebRouting](systemwebrouting-integration-sample.md)  
  Muestra la integración de nivel de hospedaje con las clases en el espacio de nombres <xref:System.Web.Routing>.  
   
- [Compatibilidad de ASP.NET](../../../../docs/framework/wcf/samples/aspnet-compatibility.md)  
+ [Compatibilidad de ASP.NET](aspnet-compatibility.md)  
  Muestra cómo habilitar el modo de compatibilidad de ASP.NET en WCF.  
   
- [Hospedaje de IIS mediante código en línea](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)  
+ [Hospedaje de IIS utilizando código en línea](iis-hosting-using-inline-code.md)  
  Muestra cómo implementar un servicio hospedado por Internet Information Services (IIS), donde el código de servicio está contenido en línea en un archivo .svc y se compila a petición.  
   
- [Host de servicio de Windows](../../../../docs/framework/wcf/samples/windows-service-host.md)  
- Se muestra un servicio WCF hospedado en un servicio de Windows administrado.  
+ [Host de servicio de Windows](windows-service-host.md)  
+ Muestra un servicio WCF hospedado en un servicio de Windows administrado.  
   
- [Probar internamente](../../../../docs/framework/wcf/samples/self-host.md)  
+ [Probar internamente](self-host.md)  
  Muestra cómo implementar un servicio autohospedado en una aplicación de consola.
