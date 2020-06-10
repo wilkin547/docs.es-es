@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: 55120430a9aaafe7d8bbf2b26f07806e4f1aa44a
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 1c1778ace6abc332517786f910d0442eeed577c9
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964420"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599274"
 ---
 # <a name="denial-of-service"></a>Denegación de servicio
 La denegación de servicio se produce cuando un sistema está sobrecargado de tal manera que no se pueden procesar los mensajes, o se procesan muy lentamente.  
@@ -17,7 +17,7 @@ La denegación de servicio se produce cuando un sistema está sobrecargado de ta
 ## <a name="excess-memory-consumption"></a>Consumo de memoria de exceso  
  Al leer un documento XML con numerosos nombres locales, espacios de nombres o prefijos únicos, puede producirse un problema. Si está utilizando una clase que se deriva de <xref:System.Xml.XmlReader>, y llama a la propiedad <xref:System.Xml.XmlReader.LocalName%2A>, <xref:System.Xml.XmlReader.Prefix%2A> o <xref:System.Xml.XmlReader.NamespaceURI%2A> para cada elemento, la cadena devuelta se agrega a <xref:System.Xml.NameTable>. La colección contenida por <xref:System.Xml.NameTable> nunca disminuye de tamaño, creando una "pérdida de memoria" virtual de los identificadores de cadena.  
   
- Algunos procedimientos para mitigarlas son:  
+ Las mitigaciones incluyen:  
   
 - Derive de la clase <xref:System.Xml.NameTable> y exija una cuota de tamaño máximo. (No puede evitar el uso de <xref:System.Xml.NameTable> o intercambiar <xref:System.Xml.NameTable> cuando es completo.)  
   
@@ -44,10 +44,10 @@ La denegación de servicio se produce cuando un sistema está sobrecargado de ta
 ## <a name="auditing-event-log-can-be-filled"></a>Se puede rellenar el registro de eventos de auditoría  
  Si un usuario malintencionado sabe que la auditoría está habilitada, el atacante puede enviar mensajes no válidos y así hacer que se escriban entradas de auditoría. Si el registro de auditoría se rellena de esta manera, el sistema de auditoría falla.  
   
- Para mitigar esto, establezca la propiedad <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> en `true` y use las propiedades del Visor de eventos para controlar el comportamiento de la auditoría. Para obtener más información sobre el uso de la Visor de eventos para ver y administrar registros de eventos, vea [visor de eventos](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc766042(v=ws.11)). Para obtener más información, consulte [Auditoría](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ Para mitigar esto, establezca la propiedad <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> en `true` y use las propiedades del Visor de eventos para controlar el comportamiento de la auditoría. Para obtener más información sobre el uso de la Visor de eventos para ver y administrar registros de eventos, vea [visor de eventos](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc766042(v=ws.11)). Para obtener más información, consulte [Auditoría](auditing-security-events.md).  
   
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-to-become-unresponsive"></a>Las implementaciones no válidas de IAuthorizationPolicy pueden hacer que el servicio deje de responder  
- Llamar al método <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> en una implementación defectuosa de la interfaz <xref:System.IdentityModel.Policy.IAuthorizationPolicy> puede hacer que el servicio deje de responder.  
+ La llamada al <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> método en una implementación defectuosa de la <xref:System.IdentityModel.Policy.IAuthorizationPolicy> interfaz puede hacer que el servicio deje de responder.  
   
  Mitigación: utilice solamente código de confianza. Es decir, solo utilice código que haya escrito y probado, o que provenga de un proveedor confiable. No permita la conexión de extensiones que no son de confianza de <xref:System.IdentityModel.Policy.IAuthorizationPolicy> a su código sin la debida consideración. Esto se aplica a todas las extensiones usadas en una implementación del servicio. WCF no realiza ninguna distinción entre el código de aplicación y el código externo que está conectado mediante puntos de extensibilidad.  
   
@@ -59,7 +59,7 @@ La denegación de servicio se produce cuando un sistema está sobrecargado de ta
   
  El impacto es que los servicios de WCF pueden no abrirse en los dominios con inscripción automática. Esto se produce porque el criterio de búsqueda de credenciales X.509 de servicio predeterminado podría ser ambiguo, ya que existen varios certificados con nombre completo del Domain Name System (DNS). Un certificado ha sido originado por la inscripción automática; el otro puede ser un certificado emitido por sí mismo.  
   
- Para mitigar esto, haga referencia al certificado exacto que se va a usar con un criterio de búsqueda más preciso en el [\<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md). Por ejemplo, utilice la opción <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> y especifique el certificado por su huella digital única (hash).  
+ Para mitigar esto, haga referencia al certificado exacto que se va a usar con un criterio de búsqueda más preciso en el [\<serviceCredentials>](../../configure-apps/file-schema/wcf/servicecredentials.md) . Por ejemplo, utilice la opción <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> y especifique el certificado por su huella digital única (hash).  
   
  Para obtener más información acerca de la característica de inscripción automática, consulte [inscripción automática de certificados en Windows Server 2003](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc778954(v%3dws.10)).  
   
@@ -75,16 +75,16 @@ La denegación de servicio se produce cuando un sistema está sobrecargado de ta
  Cuando un servicio autentica correctamente un cliente y una sesión segura se establece con el servicio, el servicio sigue en contacto con la sesión hasta que el cliente la cancela o la sesión expira. Cada sesión establecida afecta al límite para el número máximo de sesiones simultáneas activas con un servicio. Cuando se alcanza este límite, se rechazan los clientes que intentan crear una nueva sesión con ese servicio hasta que una o más sesiones activas expiren o sean canceladas por un cliente. Un cliente puede tener varias sesiones con un servicio y cada una de esas sesiones afecta al límite.  
   
 > [!NOTE]
-> Cuando se usan sesiones con estado, el párrafo anterior no se aplica. Para obtener más información acerca de las sesiones con estado, consulte [Cómo: crear un token de contexto de seguridad para una sesión segura](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+> Cuando se usan sesiones con estado, el párrafo anterior no se aplica. Para obtener más información acerca de las sesiones con estado, consulte [Cómo: crear un token de contexto de seguridad para una sesión segura](how-to-create-a-security-context-token-for-a-secure-session.md).  
   
  Para mitigar esto, establezca el límite para el número máximo de sesiones activas y la duración máxima para una sesión estableciendo la propiedad <xref:System.ServiceModel.Channels.SecurityBindingElement> de la clase <xref:System.ServiceModel.Channels.SecurityBindingElement>.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Consideraciones de seguridad](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Divulgación de información](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
-- [Elevación de privilegios](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
-- [Denegación de servicio](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
-- [Ataques por repetición](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
-- [Manipulación](../../../../docs/framework/wcf/feature-details/tampering.md)
-- [Escenarios no admitidos](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+- [Consideraciones sobre la seguridad](security-considerations-in-wcf.md)
+- [Divulgación de información](information-disclosure.md)
+- [Elevación de privilegios](elevation-of-privilege.md)
+- [Denegación de servicio](denial-of-service.md)
+- [Ataques por repetición](replay-attacks.md)
+- [Alteración de datos](tampering.md)
+- [Escenarios no admitidos](unsupported-scenarios.md)

@@ -1,24 +1,24 @@
 ---
-title: Hospedaje de un servicio WCF en un servicio administrado de Windows
+title: Procedimiento para hospedar un servicio WCF en un servicio administrado de Windows
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-ms.openlocfilehash: 698a5134683341fedf2a37f7d6383770e14c232c
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: dbd51abbc30b1010f7c4f206aad9a773eca0a714
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964803"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593183"
 ---
-# <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Hospedaje de un servicio WCF en un servicio administrado de Windows
+# <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Procedimiento para hospedar un servicio WCF en un servicio administrado de Windows
 
 En este tema se describen los pasos básicos necesarios para crear un servicio de Windows Communication Foundation (WCF) que esté hospedado en un servicio de Windows. El escenario se habilita mediante la opción de hospedaje del servicio administrado de Windows, que es un servicio WCF de ejecución prolongada hospedado fuera de Internet Information Services (IIS) en un entorno seguro que no está activado por mensaje. En su lugar, el sistema operativo controla la duración del servicio. Esta opción de hospedaje está disponible en todas las versiones de Windows.
 
 Los servicios de Windows se pueden administrar con Microsoft.ManagementConsole.SnapIn en Microsoft Management Console (MMC) y pueden configurarse automáticamente para iniciar cuando el sistema arranca. Esta opción de hospedaje consiste en registrar el dominio de aplicación (AppDomain) que hospeda un servicio WCF como servicio administrado de Windows para que la duración del proceso del servicio se controle mediante el administrador de control de servicios (SCM) para servicios de Windows.
 
-El código del servicio incluye una implementación del contrato de servicios, una clase de Windows Service y una clase del instalador. La clase de implementación de servicio, `CalculatorService`, es un servicio WCF. `CalculatorWindowsService` es un servicio de Windows. Para poder calificarse como servicio de Windows, la clase hereda de `ServiceBase` e implementa los métodos `OnStart` y `OnStop`. En `OnStart`, se crea <xref:System.ServiceModel.ServiceHost> para el tipo `CalculatorService` y se abre. En `OnStop`, el servicio se detiene y se elimina. El host también es responsable de proporcionar una dirección base al host de servicio, que se ha configurado en los valores de la aplicación. La clase del instalador, que hereda de <xref:System.Configuration.Install.Installer>, permite instalar el programa como un servicio de Windows mediante la herramienta Installutil.exe.
+El código del servicio incluye una implementación del contrato de servicios, una clase de Windows Service y una clase del instalador. La clase de implementación de servicio, `CalculatorService` , es un servicio WCF. `CalculatorWindowsService` es un servicio de Windows. Para poder calificarse como servicio de Windows, la clase hereda de `ServiceBase` e implementa los métodos `OnStart` y `OnStop`. En `OnStart`, se crea <xref:System.ServiceModel.ServiceHost> para el tipo `CalculatorService` y se abre. En `OnStop`, el servicio se detiene y se elimina. El host también es responsable de proporcionar una dirección base al host de servicio, que se ha configurado en los valores de la aplicación. La clase del instalador, que hereda de <xref:System.Configuration.Install.Installer>, permite instalar el programa como un servicio de Windows mediante la herramienta Installutil.exe.
 
 ## <a name="construct-the-service-and-provide-the-hosting-code"></a>Construya el servicio y proporcione el código del hospedaje
 
@@ -26,7 +26,7 @@ El código del servicio incluye una implementación del contrato de servicios, u
 
 2. Cambie el nombre del archivo Program.cs a Service.cs.
 
-3. Cambie el espacio de nombres a `Microsoft.ServiceModel.Samples`.
+3. Cambie el espacio de nombres a `Microsoft.ServiceModel.Samples` .
 
 4. Agregue referencias a los siguientes ensamblados:
 
@@ -112,7 +112,7 @@ El código del servicio incluye una implementación del contrato de servicios, u
 
      Haga clic con el botón derecho en el archivo app. config en el **Explorador de soluciones** y seleccione **propiedades**. En **Copiar en el directorio de salida** , seleccione **copiar si es posterior**.
 
-     Este ejemplo especifica puntos de conexión explícitamente en el archivo de configuración. Si no agrega ningún punto de conexión al servicio, el tiempo de ejecución agregará los puntos de conexión predeterminados. En este ejemplo, dado que el servicio tiene un <xref:System.ServiceModel.Description.ServiceMetadataBehavior> establecido en `true`, el servicio también tiene habilitada la publicación de metadatos. Para obtener más información sobre los puntos de conexión, enlaces y comportamientos predeterminados, vea [Configuración simplificada](../../../../docs/framework/wcf/simplified-configuration.md) y [Configuración simplificada de los servicios de WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).
+     Este ejemplo especifica puntos de conexión explícitamente en el archivo de configuración. Si no agrega ningún punto de conexión al servicio, el tiempo de ejecución agregará los puntos de conexión predeterminados. En este ejemplo, dado que el servicio tiene un <xref:System.ServiceModel.Description.ServiceMetadataBehavior> establecido en `true`, el servicio también tiene habilitada la publicación de metadatos. Para obtener más información sobre los puntos de conexión, enlaces y comportamientos predeterminados, vea [Configuración simplificada](../simplified-configuration.md) y [Configuración simplificada de los servicios de WCF](../samples/simplified-configuration-for-wcf-services.md).
 
 ## <a name="install-and-run-the-service"></a>Instale y ejecute el servicio.
 
@@ -135,7 +135,7 @@ Como la opción de "autohospedaje", el entorno de hospedaje de servicio de Windo
 
 ## <a name="see-also"></a>Vea también
 
-- [Configuración simplificada](../../../../docs/framework/wcf/simplified-configuration.md)
-- [Hospedaje en una aplicación administrada](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)
-- [Servicios de hospedaje](../../../../docs/framework/wcf/hosting-services.md)
+- [Configuración simplificada](../simplified-configuration.md)
+- [Hospedaje en una aplicación administrada](hosting-in-a-managed-application.md)
+- [Servicios de hospedaje](../hosting-services.md)
 - [Características de hospedaje de Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
