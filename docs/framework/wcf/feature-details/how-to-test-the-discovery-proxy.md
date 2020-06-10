@@ -2,21 +2,21 @@
 title: Procedimiento para probar el proxy de detección
 ms.date: 03/30/2017
 ms.assetid: d96e3fa2-3c42-4e5d-8244-2694081bdc32
-ms.openlocfilehash: 856b86241299585b80d58c6d37582463736a5935
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 78921d0a26f1116c87c2931b1472a161d6fed145
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972918"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84592819"
 ---
 # <a name="how-to-test-the-discovery-proxy"></a>Procedimiento para probar el proxy de detección
-Este es el cuarto de cuatro temas que indica cómo implementar un proxy de detección. En el tema anterior, [Cómo: Implementar una aplicación cliente que utiliza el Proxy de detección para buscar un servicio](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md), implementa una aplicación de cliente WCF que usa el proxy de detección para buscar un servicio y, a continuación, llama al servicio. Este tema describe cómo comprobar el proxy de detección, el servicio y el trabajo de la aplicación cliente según se espera.  
+Este es el cuarto de cuatro temas que indica cómo implementar un proxy de detección. En el tema anterior, [Cómo: implementar una aplicación cliente que utiliza el proxy de detección para buscar un servicio](client-app-discovery-proxy-to-find-a-service.md), ha implementado una aplicación cliente de WCF que usa el proxy de detección para buscar un servicio y, a continuación, llama al servicio. Este tema describe cómo comprobar el proxy de detección, el servicio y el trabajo de la aplicación cliente según se espera.  
   
 ### <a name="run-the-discovery-proxy"></a>Ejecución del proxy de detección  
   
 1. Abra un símbolo del sistema como administrador.  
   
-2. Es posible que vea un cuadro de diálogo que dice: Firewall de Windows bloqueó algunas características de este programa. Si ve este mensaje, haga clic en el **desbloquear** botón.  
+2. Puede que aparezca un cuadro diálogo que dice: Firewall de Windows bloqueó algunas características de este programa. Si ve este mensaje, haga clic en el botón **desbloquear** .  
   
 3. Dentro del símbolo del sistema, ejecute el proxy de detección, DiscoveryProxy.exe.  
   
@@ -28,7 +28,7 @@ Este es el cuarto de cuatro temas que indica cómo implementar un proxy de detec
   
 2. Desde el símbolo del sistema, ejecute el servicio reconocible Service.exe.  
   
-3. DiscoveryProxy.exe debería mostrar el siguiente texto: `******* Adding the following service: ** [Service Contract Name] ** [Service Endpoint Addr] 3.******* Done *******` .  
+3. El archivo DiscoveryProxy. exe debe mostrar el siguiente texto: `******* Adding the following service: ** [Service Contract Name] ** [Service Endpoint Addr] 3.******* Done *******` .  
   
 ### <a name="run-the-client-application"></a>Ejecución de la aplicación cliente  
   
@@ -36,11 +36,11 @@ Este es el cuarto de cuatro temas que indica cómo implementar un proxy de detec
   
 2. Dentro del símbolo del sistema, ejecute la aplicación client.exe.  
   
-3. Después de unos segundos, la aplicación cliente muestra el texto siguiente: Conectando con [servicio-punto de conexión].  
+3. Después de unos segundos, la aplicación cliente muestra el siguiente texto: Conectando con [servicio-extremo].  
   
-4. Service.exe, a continuación, se debe mostrar el texto siguiente: Solicitud de saludo recibida, responderé.  
+4. A continuación, service.exe debería mostrar el siguiente texto: Solicitud de saludo recibida, responderé.  
   
-5. Client.exe, a continuación, se debe mostrar el texto siguiente: ¡Cliente de Hello!  
+5. A continuación, client.exe debería mostrar el siguiente texto: Hola, cliente.  
   
 ### <a name="shut-down-the-applications"></a>Cierre de las aplicaciones  
   
@@ -52,7 +52,7 @@ Este es el cuarto de cuatro temas que indica cómo implementar un proxy de detec
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general de Detección de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [Cómo: Implementar a un Proxy de detección](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
-- [Cómo: Implementar un servicio reconocible que se registra con el Proxy de detección](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
-- [Cómo: Implementar una aplicación cliente que utiliza al Proxy de detección para buscar un servicio](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+- [Información general de Detección de WCF](wcf-discovery-overview.md)
+- [Procedimiento para implementar un proxy de detección](how-to-implement-a-discovery-proxy.md)
+- [Procedimiento para implementar un servicio reconocible que se registra con el proxy de detección](discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [Procedimiento para implementar una aplicación cliente que usa el proxy de detección para buscar un servicio](client-app-discovery-proxy-to-find-a-service.md)

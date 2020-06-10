@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: 67bacade0435f1c63bc79b3282f6bded55b67304
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: f9e761bafd84726b51a2010a932c68c67c37f899
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991585"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595289"
 ---
 # <a name="how-to-use-the-com-service-model-configuration-tool"></a>Procedimiento para usar la herramienta configuración de modelos de servicio COM+
 Cuando ha seleccionado un modo de hospedaje adecuado, utilice la herramienta de línea de comandos de configuración de modelos de servicio COM+ (ComSvcConfig.exe) para configurar las interfaces de aplicaciones que se expondrán como servicios web.  
@@ -19,7 +19,7 @@ Cuando ha seleccionado un modo de hospedaje adecuado, utilice la herramienta de 
   
  Al usar ComSvcConfig.exe en un equipo con Windows 7 para configurar un servicio web con la finalidad de usar la última versión de modelo de servicio (actualmente, la versión 4.5), lleve a cabo los siguientes pasos:  
   
-1. Establezca la clave `[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR` del registro en un valor DWORD de 0x00000001  
+1. Establezca la clave del registro `[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR` en un valor DWORD de 0x00000001  
   
 2. Ejecute comsvcconfig.exe  
   
@@ -41,7 +41,7 @@ Cuando ha seleccionado un modo de hospedaje adecuado, utilice la herramienta de 
   
      El comando agrega la interfaz `IFinances` del componente (de la aplicación OnlineStore COM+) `ItemOrders.IFinancial` al conjunto de interfaces que se expondrán como servicios web. El servicio utiliza el modo de hospedaje de COM+ y por consiguiente requiere la activación explícita de la aplicación.  
   
-     Aunque el carácter comodín (\*) se puede usar para el componente y la interfaz, evite usarlo porque es posible que desee exponer solo la funcionalidad seleccionada como servicio Web. Si se ejecuta con una versión futura de este componente, al utilizar el carácter comodín se pueden exponer involuntariamente interfaces que pueden no haber estado presentes cuando se determinó la sintaxis de configuración.  
+     Aunque el carácter comodín ( \* ) se puede usar para el componente y la interfaz, evite usarlo porque es posible que desee exponer solo la funcionalidad seleccionada como servicio Web. Si se ejecuta con una versión futura de este componente, al utilizar el carácter comodín se pueden exponer involuntariamente interfaces que pueden no haber estado presentes cuando se determinó la sintaxis de configuración.  
   
      La opción /verbose indica a la herramienta que muestre las advertencias además de cualquier error.  
   
@@ -111,4 +111,4 @@ Cuando ha seleccionado un modo de hospedaje adecuado, utilice la herramienta de 
   
 ## <a name="see-also"></a>Vea también
 
-- [Integración en la información general de las aplicaciones COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)
+- [Información general de la integración con aplicaciones COM+](integrating-with-com-plus-applications-overview.md)

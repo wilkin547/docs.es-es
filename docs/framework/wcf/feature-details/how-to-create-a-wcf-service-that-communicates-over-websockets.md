@@ -1,15 +1,15 @@
 ---
-title: Cómo crear un servicio WCF que se comunique a través de WebSockets
+title: Procedimiento para crear un servicio WCF que se comunique a través de WebSockets
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: d420ac8fcb98ddec195093be8ae25be37443da4e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5aade8e3fb2049521ed06f5f1a148be2e4636e36
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184978"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597116"
 ---
-# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Cómo crear un servicio WCF que se comunique a través de WebSockets
+# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Procedimiento para crear un servicio WCF que se comunique a través de WebSockets
 Los servicios y los clientes de WCF pueden usar el enlace <xref:System.ServiceModel.NetHttpBinding> para comunicarse sobre WebSockets.  WebSockets se usará cuando <xref:System.ServiceModel.NetHttpBinding> determine que el contrato de servicio define un contrato de devolución de llamada. En este tema se describe cómo implementar un servicio de WCF y un cliente que use <xref:System.ServiceModel.NetHttpBinding> para comunicarse sobre WebSockets.  
   
 ### <a name="define-the-service"></a>Definir el servicio  
@@ -318,7 +318,7 @@ namespace Client
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Operaciones sincrónicas y asincrónicas](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)
-- [Uso de NetHttpBinding](../../../../docs/framework/wcf/feature-details/using-the-nethttpbinding.md)
+- [Operaciones sincrónicas y asincrónicas](../synchronous-and-asynchronous-operations.md)
+- [Usar NetHttpBinding](using-the-nethttpbinding.md)

@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: Crear una aplicación criptográfica'
+description: Recorra la creación de una aplicación criptográfica. Obtenga información acerca de cómo cifrar y descifrar contenido en una aplicación Windows Forms.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - cryptography [NET Framework], cryptographic application example
 - cryptography [NET Framework], application example
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
-ms.openlocfilehash: 246028566c59e5c8a77b26a21729d3f143d38d07
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 72116227fbec2435d428ad2bbdb4cc74e5c3663f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289712"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602185"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>Tutorial: Crear una aplicación criptográfica
 En este tutorial se muestra cómo cifrar y descifrar contenido. Los ejemplos de código están diseñados para una aplicación de Windows Forms. Esta aplicación no muestra escenarios del mundo real, como el uso de tarjetas inteligentes. En su lugar, muestra los aspectos básicos del cifrado y el descifrado.  
@@ -43,7 +44,7 @@ En este tutorial se muestra cómo cifrar y descifrar contenido. Los ejemplos de 
 |Importar una clave pública|Carga la clave desde un archivo XML en el contenedor de claves.|  
 |Probar la aplicación|Enumera los procedimientos para probar esta aplicación.|  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
  Necesitará los componentes siguientes para completar este tutorial:  
   
 - Referencias a los espacios de nombres <xref:System.IO> y <xref:System.Security.Cryptography>.  
@@ -208,6 +209,6 @@ En este tutorial se muestra cómo cifrar y descifrar contenido. Los ejemplos de 
   
 2. Haga clic en el botón `Decrypt File` y seleccione el archivo que acaba de cifrar. Esta acción se llevará a cabo correctamente porque dispone del par de claves completo para efectuar el descifrado.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Servicios criptográficos](cryptographic-services.md)

@@ -2,18 +2,18 @@
 title: Flujo de las transacciones en los servicios de flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-ms.openlocfilehash: fe03047dd931d25ec94bbc5e00c479d1b42397bc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17c05139b5977c47e20e888e436a311ba145018a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185276"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597467"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>Flujo de las transacciones en los servicios de flujo de trabajo
 Los servicios y clientes de flujo de trabajo pueden participar en las transacciones.  Para que una operación de servicio se convierta en parte de una transacción de ambiente, coloque una actividad de <xref:System.ServiceModel.Activities.Receive> dentro de una actividad de <xref:System.ServiceModel.Activities.TransactedReceiveScope>. En cualquier llamada realizada por un objeto <xref:System.ServiceModel.Activities.Send> o una actividad de <xref:System.ServiceModel.Activities.SendReply> dentro de <xref:System.ServiceModel.Activities.TransactedReceiveScope> también se realizará dentro de la transacción de ambiente. Una aplicación cliente del flujo de trabajo puede crear una transacción de ambiente utilizando la actividad de <xref:System.Activities.Statements.TransactionScope> y operaciones de servicio de llamada que usen la transacción de ambiente. Este tema sirve de guía para crear un servicio de flujo de trabajo y un cliente de flujo de trabajo que participan en transacciones.  
   
 > [!WARNING]
-> Si se carga una instancia de servicio de <xref:System.Activities.Statements.Persist> flujo de trabajo dentro de una transacción y el flujo de trabajo contiene una actividad, la instancia de flujo de trabajo se bloqueará hasta que se agota el tiempo de espera de la transacción.  
+> Si una instancia de servicio de flujo de trabajo se carga dentro de una transacción y el flujo de trabajo contiene una <xref:System.Activities.Statements.Persist> actividad, la instancia de flujo de trabajo se bloqueará hasta que se agote el tiempo de espera de la transacción.  
   
 > [!IMPORTANT]
 > Siempre que use un objeto <xref:System.ServiceModel.Activities.TransactedReceiveScope> se recomienda que coloque todas las recepciones en el flujo de trabajo dentro de actividades <xref:System.ServiceModel.Activities.TransactedReceiveScope>.  
@@ -72,11 +72,11 @@ Los servicios y clientes de flujo de trabajo pueden participar en las transaccio
     }  
     ```  
   
-     Esta es una actividad nativa que muestra información acerca de la transacción de ambiente y se utiliza en ambos flujos de trabajo, de cliente y de servicio, que se usan en este tema. Compile la solución para que esta actividad esté disponible en la sección **Común** del Cuadro de **herramientas.**  
+     Esta es una actividad nativa que muestra información acerca de la transacción de ambiente y se utiliza en ambos flujos de trabajo, de cliente y de servicio, que se usan en este tema. Compile la solución para que esta actividad esté disponible en la sección **común** del **cuadro de herramientas**.  
   
 ### <a name="implement-the-workflow-service"></a>Implementar el servicio de flujo de trabajo  
   
-1. Agregue un nuevo servicio `WorkflowService` de `Common` flujo de trabajo WCF, llamado al proyecto. Para ello, haga `Common` clic con el botón derecho en el proyecto, seleccione **Agregar**, **Nuevo elemento ...**, Seleccione Flujo de **trabajo** en **Plantillas instaladas** y seleccione Servicio de flujo de trabajo **WCF**.  
+1. Agregue un nuevo servicio de flujo de trabajo WCF, llamado `WorkflowService` al `Common` proyecto. Para ello, haga clic con el botón derecho en el `Common` proyecto, seleccione **Agregar**, **nuevo elemento...**, seleccione **flujo de trabajo** en **plantillas instaladas** y seleccione **servicio de flujo de trabajo WCF**.  
   
      ![Agregar un servicio de flujo de trabajo](./media/flowing-transactions-into-and-out-of-workflow-services/add-workflow-service.jpg)  
   
@@ -84,20 +84,20 @@ Los servicios y clientes de flujo de trabajo pueden participar en las transaccio
   
 3. Arrastre y coloque una actividad de <xref:System.Activities.Statements.WriteLine> en la actividad de `Sequential Service`. Establezca la propiedad de texto en `"Workflow Service starting ..."` como se muestra en el siguiente ejemplo.  
   
-     ! [Adición de una actividad WriteLine a la actividad Sequential Service(./media/flowing-transactions-in-and-out-of-workflow-services/add-writeline-sequential-service.jpg)  
+     ! [Agregar una actividad WriteLine a la actividad de servicio secuencial (./Media/Flowing-Transactions-into-and-out-of-Workflow-Services/Add-WriteLine-Sequential-Service.jpg)  
   
-4. Arrastre y coloque una actividad <xref:System.ServiceModel.Activities.TransactedReceiveScope> después de la actividad de <xref:System.Activities.Statements.WriteLine>. La <xref:System.ServiceModel.Activities.TransactedReceiveScope> actividad se puede encontrar en la sección **Mensajería** del Cuadro de **herramientas**. La <xref:System.ServiceModel.Activities.TransactedReceiveScope> actividad se compone de dos secciones **Solicitud** y **Cuerpo**. La **Request** sección Solicitud <xref:System.ServiceModel.Activities.Receive> contiene la actividad. La sección **Cuerpo** contiene las actividades que se ejecutarán dentro de una transacción después de recibir un mensaje.  
+4. Arrastre y coloque una actividad <xref:System.ServiceModel.Activities.TransactedReceiveScope> después de la actividad de <xref:System.Activities.Statements.WriteLine>. La <xref:System.ServiceModel.Activities.TransactedReceiveScope> actividad se puede encontrar en la sección **Mensajería** del **cuadro de herramientas**. La <xref:System.ServiceModel.Activities.TransactedReceiveScope> actividad se compone de dos secciones **solicitud** y **cuerpo**. La sección de **solicitud** contiene la <xref:System.ServiceModel.Activities.Receive> actividad. La sección de **cuerpo** contiene las actividades que se ejecutarán dentro de una transacción una vez recibido un mensaje.  
   
      ![Agregar una actividad TransactedReceiveScope](./media/flowing-transactions-into-and-out-of-workflow-services/transactedreceivescope-activity.jpg)  
   
-5. Seleccione <xref:System.ServiceModel.Activities.TransactedReceiveScope> la actividad y haga clic en el botón **Variables.** Agregue las variables siguientes.  
+5. Seleccione la <xref:System.ServiceModel.Activities.TransactedReceiveScope> actividad y haga clic en el botón **variables** . Agregue las variables siguientes.  
   
      ![Agregar variables a TransactedReceiveScope](./media/flowing-transactions-into-and-out-of-workflow-services/add-transactedreceivescope-variables.jpg)  
   
     > [!NOTE]
     > Puede eliminar la variable de datos que está allí de forma predeterminada. También puede utilizar la variable de controlador existente.  
   
-6. Arrastre y <xref:System.ServiceModel.Activities.Receive> suelte una actividad dentro <xref:System.ServiceModel.Activities.TransactedReceiveScope> de la sección **Solicitud** de la actividad. Establezca las siguientes propiedades:  
+6. Arrastre y coloque una <xref:System.ServiceModel.Activities.Receive> actividad dentro de la sección **solicitud** de la <xref:System.ServiceModel.Activities.TransactedReceiveScope> actividad. Establezca las siguientes propiedades:  
   
     |Propiedad|Value|  
     |--------------|-----------|  
@@ -109,22 +109,22 @@ Los servicios y clientes de flujo de trabajo pueden participar en las transaccio
   
      ![Agregar una actividad Receive](./media/flowing-transactions-into-and-out-of-workflow-services/add-receive-activity.jpg)  
   
-7. Haga clic en el <xref:System.ServiceModel.Activities.Receive> vínculo **Definir...** en la actividad y realice los siguientes ajustes:  
+7. Haga clic en el vínculo **definir...** en la <xref:System.ServiceModel.Activities.Receive> actividad y realice la siguiente configuración:  
   
-     ![Establecer la configuración del mensaje para la actividad De recepción](./media/flowing-transactions-into-and-out-of-workflow-services/receive-message-settings.jpg)  
+     ![Establecer la configuración del mensaje para la actividad Receive](./media/flowing-transactions-into-and-out-of-workflow-services/receive-message-settings.jpg)  
   
 8. Arrastre y coloque una actividad de <xref:System.Activities.Statements.Sequence> en la sección Cuerpo de <xref:System.ServiceModel.Activities.TransactedReceiveScope>. Dentro de la actividad de <xref:System.Activities.Statements.Sequence>, arrastre las dos actividades de <xref:System.Activities.Statements.WriteLine> y establezca las propiedades <xref:System.Activities.Statements.WriteLine.Text%2A> como se muestra en la siguiente tabla.  
   
     |Actividad|Value|  
     |--------------|-----------|  
-    |Primera propiedad WriteLine|"Servicio: Recibir Completado"|  
+    |Primera propiedad WriteLine|"Servicio: recepción completada"|  
     |Segunda propiedad WriteLine|"Servicio: recibido = " + requestMessage|  
   
      El flujo de trabajo ahora debería ser similar a este:  
   
      ![Secuencia después de agregar actividades WriteLine](./media/flowing-transactions-into-and-out-of-workflow-services/after-adding-writelines.jpg)  
   
-9. Arrastre y `PrintTransactionInfo` suelte la <xref:System.Activities.Statements.WriteLine> actividad después de <xref:System.ServiceModel.Activities.TransactedReceiveScope> la segunda actividad en el **Cuerpo** de la actividad.  
+9. Arrastre y coloque la `PrintTransactionInfo` actividad después de la segunda <xref:System.Activities.Statements.WriteLine> actividad en el **cuerpo** de la <xref:System.ServiceModel.Activities.TransactedReceiveScope> actividad.  
   
      ![Secuencia después de agregar PrintTransactionInfo](./media/flowing-transactions-into-and-out-of-workflow-services/after-adding-printtransactioninfo.jpg )  
   
@@ -141,11 +141,11 @@ Los servicios y clientes de flujo de trabajo pueden participar en las transaccio
   
      ![Después de agregar Assign y WriteLine](./media/flowing-transactions-into-and-out-of-workflow-services/after-adding-sbr-writeline.jpg)  
   
-12. Haga clic <xref:System.ServiceModel.Activities.Receive> con el botón derecho en <xref:System.Activities.Statements.WriteLine> la actividad y seleccione **Crear SendReply** y péguela después de la última actividad. Haga clic en el `SendReplyToReceive` vínculo **Definir...** en la actividad y realice los siguientes ajustes.  
+12. Haga clic con el botón derecho en la <xref:System.ServiceModel.Activities.Receive> actividad, seleccione **crear SendReply** y péguelo después de la última <xref:System.Activities.Statements.WriteLine> actividad. Haga clic en el vínculo **definir...** en la `SendReplyToReceive` actividad y realice la siguiente configuración.  
   
      ![Configuración de mensajes de respuesta](./media/flowing-transactions-into-and-out-of-workflow-services/reply-message-settings.jpg)  
   
-13. Arrastre y <xref:System.Activities.Statements.WriteLine> suelte una `SendReplyToReceive` actividad después <xref:System.Activities.Statements.WriteLine.Text%2A> de la actividad y establezca su propiedad en "Servicio: Respuesta enviada."  
+13. Arrastre y coloque una <xref:System.Activities.Statements.WriteLine> actividad después de la `SendReplyToReceive` actividad y establezca su <xref:System.Activities.Statements.WriteLine.Text%2A> propiedad en "servicio: respuesta enviada".  
   
 14. Arrastre y coloque una actividad de <xref:System.Activities.Statements.WriteLine> en la parte inferior del flujo de trabajo y establezca su propiedad <xref:System.Activities.Statements.WriteLine.Text%2A> en "Servicio: el flujo de trabajo finaliza, presione Entrar para salir".  
   
@@ -155,7 +155,7 @@ Los servicios y clientes de flujo de trabajo pueden participar en las transaccio
   
 ### <a name="implement-the-workflow-client"></a>Implementar el cliente de flujo de trabajo  
   
-1. Agregue una nueva aplicación Flujo de trabajo WCF, denominada `WorkflowClient`, al proyecto `Common`. Para ello, haga `Common` clic con el botón derecho en el proyecto, seleccione **Agregar**, **Nuevo elemento ...**, Seleccione Flujo de **trabajo** en **Plantillas instaladas** y seleccione **Actividad**.  
+1. Agregue una nueva aplicación Flujo de trabajo WCF, denominada `WorkflowClient`, al proyecto `Common`. Para ello, haga clic con el botón derecho en el `Common` proyecto, seleccione **Agregar**, **nuevo elemento.**.., seleccione **flujo de trabajo** en **plantillas instaladas** y seleccione **actividad**.  
   
      ![Agregar un proyecto de actividad](./media/flowing-transactions-into-and-out-of-workflow-services/add-activity-project.jpg)  
   
@@ -173,9 +173,9 @@ Los servicios y clientes de flujo de trabajo pueden participar en las transaccio
   
 6. Arrastre y coloque una actividad de `PrintTransactionInfo` dentro de <xref:System.Activities.Statements.Sequence>.  
   
-7. Arrastre y <xref:System.Activities.Statements.WriteLine> suelte una `PrintTransactionInfo` actividad después de la actividad y establezca su <xref:System.Activities.Statements.WriteLine.Text%2A> propiedad en "Cliente: Iniciar envío". El flujo de trabajo ahora debería ser similar a este:  
+7. Arrastre y coloque una <xref:System.Activities.Statements.WriteLine> actividad después de la `PrintTransactionInfo` actividad y establezca su <xref:System.Activities.Statements.WriteLine.Text%2A> propiedad en "cliente: iniciando envío". El flujo de trabajo ahora debería ser similar a este:  
   
-     ![Adición de cliente: Iniciar las actividades de envío](./media/flowing-transactions-into-and-out-of-workflow-services/client-add-cbs-writeline.jpg)  
+     ![Agregando cliente: iniciando actividades de envío](./media/flowing-transactions-into-and-out-of-workflow-services/client-add-cbs-writeline.jpg)  
   
 8. Arrastre y coloque una actividad de <xref:System.ServiceModel.Activities.Send> después de la actividad de <xref:System.Activities.Statements.Assign> y establezca las siguientes propiedades:  
   
@@ -189,11 +189,11 @@ Los servicios y clientes de flujo de trabajo pueden participar en las transaccio
   
      ![Establecer las propiedades de la actividad Send](./media/flowing-transactions-into-and-out-of-workflow-services/client-send-activity-settings.jpg)  
   
-9. Haga clic en el vínculo **Definir...** y realice los siguientes ajustes:  
+9. Haga clic en el vínculo **definir...** y realice la siguiente configuración:  
   
      ![Configuración de mensajes de la actividad Send](./media/flowing-transactions-into-and-out-of-workflow-services/send-message-settings.jpg)  
   
-10. Haga clic <xref:System.ServiceModel.Activities.Send> con el botón derecho en la actividad y seleccione **Crear Respuesta.** La actividad de <xref:System.ServiceModel.Activities.ReceiveReply> se colocará automáticamente después de la actividad de <xref:System.ServiceModel.Activities.Send>.  
+10. Haga clic con el botón derecho en la <xref:System.ServiceModel.Activities.Send> actividad y seleccione **crear ReceiveReply**. La actividad de <xref:System.ServiceModel.Activities.ReceiveReply> se colocará automáticamente después de la actividad de <xref:System.ServiceModel.Activities.Send>.  
   
 11. Haga clic en el vínculo Definir... en la actividad ReceiveReplyForSend y realice la siguiente configuración:  
   
@@ -207,7 +207,7 @@ Los servicios y clientes de flujo de trabajo pueden participar en las transaccio
   
 15. Arrastre y coloque una actividad de <xref:System.Activities.Statements.WriteLine> al final del flujo de trabajo y establezca su propiedad <xref:System.Activities.Statements.WriteLine.Text%2A> en "El flujo de cliente finaliza". El flujo de trabajo del cliente completado debería parecerse al del siguiente diagrama.  
   
-     ![El flujo de trabajo de cliente completado](./media/flowing-transactions-into-and-out-of-workflow-services/client-complete-workflow.jpg)  
+     ![El flujo de trabajo del cliente completado](./media/flowing-transactions-into-and-out-of-workflow-services/client-complete-workflow.jpg)  
   
 16. Compile la solución.  
   
@@ -311,7 +311,7 @@ Los servicios y clientes de flujo de trabajo pueden participar en las transaccio
     }  
     ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Servicios de flujo de trabajo](../../../../docs/framework/wcf/feature-details/workflow-services.md)
-- [Información general sobre las transacciones de Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/transactions-overview.md)
+- [Servicios de flujo de trabajo](workflow-services.md)
+- [Información general sobre las transacciones de Windows Communication Foundation](transactions-overview.md)

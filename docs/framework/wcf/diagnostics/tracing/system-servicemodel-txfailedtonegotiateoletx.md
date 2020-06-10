@@ -2,12 +2,12 @@
 title: System.ServiceModel.TxFailedToNegotiateOleTx
 ms.date: 03/30/2017
 ms.assetid: 3f0f0b4b-a1ad-4704-8329-455daf54892d
-ms.openlocfilehash: 2de1aa51d58d9d86f953e027fd3f7f172e3887d3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c9ea77cdd76d4593c2ee5b09a4b917677b8925f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917064"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601418"
 ---
 # <a name="systemservicemodeltxfailedtonegotiateoletx"></a>System.ServiceModel.TxFailedToNegotiateOleTx
 No se pudo completar la negociación protocolar OleTransactions para el contexto de coordinación especificado.  
@@ -20,6 +20,6 @@ No se pudo completar la negociación protocolar OleTransactions para el contexto
   
 ## <a name="see-also"></a>Vea también
 
-- [Traza](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Uso del seguimiento para solucionar problemas de su aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Seguimiento](index.md)
+- [Uso del seguimiento para solucionar problemas de su aplicación](using-tracing-to-troubleshoot-your-application.md)
+- [Administración y diagnóstico](../index.md)

@@ -2,12 +2,12 @@
 title: Controlar errores de web HTTP de WCF
 ms.date: 03/30/2017
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
-ms.openlocfilehash: 34912bccaefb645541f47d083c5c307b20ff77c5
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b1d41bebafa2795d390b120ad84475417389479b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975957"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598650"
 ---
 # <a name="wcf-web-http-error-handling"></a>Controlar errores de web HTTP de WCF
 El control de errores HTTP Web de Windows Communication Foundation (WCF) permite devolver errores de los servicios Web HTTP de WCF que especifican un código de Estado HTTP y devuelven detalles de error con el mismo formato que la operación (por ejemplo, XML o JSON).  
@@ -48,14 +48,14 @@ public string Operation2()
   
 - El valor de propiedad <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> mediante el acceso a <xref:System.ServiceModel.Web.OutgoingWebResponseContext>.  
   
- Para obtener más información sobre cómo afectan estos valores al formato de la operación, consulte [formato de web http de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md).  
+ Para obtener más información sobre cómo afectan estos valores al formato de la operación, consulte [formato de web http de WCF](wcf-web-http-formatting.md).  
   
  <xref:System.ServiceModel.Web.WebFaultException> es una clase <xref:System.ServiceModel.FaultException> y, por lo tanto, se puede usar como modelo de programación de excepción de errores para los servicios que exponen extremos de SOAP y extremos web HTTP.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Modelo de programación de web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
-- [Formato de web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)
-- [Definición y especificación de errores](../../../../docs/framework/wcf/defining-and-specifying-faults.md)
-- [Administración de excepciones y errores](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)
-- [Envío y recepción de errores](../../../../docs/framework/wcf/sending-and-receiving-faults.md)
+- [Modelo de programación de web HTTP de WCF](wcf-web-http-programming-model.md)
+- [Formato de web HTTP de WCF](wcf-web-http-formatting.md)
+- [Definición y especificación de errores](../defining-and-specifying-faults.md)
+- [Administración de excepciones y errores](../extending/handling-exceptions-and-faults.md)
+- [Envío y recepción de errores](../sending-and-receiving-faults.md)
