@@ -1,5 +1,6 @@
 ---
 title: Usar tipos de excepciones estándar
+description: Lea acerca de los tipos de excepción estándar en .NET. Obtenga información sobre SystemException, ApplicationException, ArgumentException, COMException, etc.
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - exceptions, catching
 - exceptions, throwing
 ms.assetid: ab22ce03-78f9-4dca-8824-c7ed3bdccc27
-ms.openlocfilehash: b8e05f22a66fabeab28cc83a074471df29aae218
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f95529eabd87d9ec7c379b9f790e039e1192ac53
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291362"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84663062"
 ---
 # <a name="using-standard-exception-types"></a>Usar tipos de excepciones estándar
 En esta sección se describen las excepciones estándar proporcionadas por el marco de trabajo y los detalles de su uso. La lista no es exhaustiva. Consulte la documentación de referencia de .NET Framework para ver el uso de otros tipos de excepción de marco de trabajo.
