@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF], referencing X.509 certificates
 ms.assetid: a6de1c63-e450-4640-ad08-ad7302dbfbfc
-ms.openlocfilehash: 2214517784d311cbd0fe487fd6db2cbf48189955
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c13dd5ebb18df62ce64fc74da53f3f5a2e8cadb7
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662775"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599092"
 ---
 # <a name="how-to-consistently-reference-x509-certificates"></a>Procedimiento para hacer referencia a los certificados X.509 de forma coherente
-Hay varias maneras de identificar un certificado: por el hash del certificado, por el emisor y número de serie y por el identificador clave del sujeto (SKI). El SKI proporciona una identificación única para la clave pública del sujeto del certificado y se suele utilizar al trabajar con firmas digitales XML. El valor SKI normalmente forma parte del certificado X.509 como una *extensión de certificado X.509*. Windows Communication Foundation (WCF) tiene un valor predeterminado *estilo de referencia* que usa el emisor y número de serie si la extensión SKI falta en el certificado. Si el certificado contiene la extensión SKI, el estilo de referencia predeterminado utiliza el SKI para señalar al certificado. Si la mitad del desarrollo de una aplicación, cambia del uso de certificados que no usan la extensión SKI a certificados que utilizan la extensión SKI, también cambia el estilo de referencia que se usan en los mensajes generados por WCF.  
+Hay varias maneras de identificar un certificado: por el hash del certificado, por el emisor y número de serie y por el identificador clave del sujeto (SKI). El SKI proporciona una identificación única para la clave pública del sujeto del certificado y se suele utilizar al trabajar con firmas digitales XML. El valor de SKI suele ser parte del certificado X. 509 como una *extensión de certificado x. 509*. Windows Communication Foundation (WCF) tiene un *estilo de referencia* predeterminado que usa el emisor y el número de serie si la extensión de Ski falta en el certificado. Si el certificado contiene la extensión SKI, el estilo de referencia predeterminado utiliza el SKI para señalar al certificado. Si se usa el desarrollo de una aplicación de forma intermedia, se pasa del uso de certificados que no usan la extensión de SKI a certificados que usan la extensión de SKI, el estilo de referencia que se usa en los mensajes generados por WCF también cambia.  
   
  Si un estilo de referencia coherente se requiere independientemente de la presencia de extensión SKI, es posible configurar el estilo de referencia deseado como se muestra en el código siguiente.  
   
@@ -38,4 +38,4 @@ Hay varias maneras de identificar un certificado: por el hash del certificado, p
   
 ## <a name="see-also"></a>Vea también
 
-- [Trabajo con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Trabajar con certificados](working-with-certificates.md)

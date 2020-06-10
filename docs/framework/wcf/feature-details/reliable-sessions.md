@@ -9,32 +9,32 @@ helpviewer_keywords:
 - instances [WCF]
 - sessions [WCF]
 ms.assetid: 143951b3-3aa0-4540-b4b7-d33e77e874a1
-ms.openlocfilehash: 9a2cd06c4c5a73d9fb5c4c7f09632e10c3eb0d87
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 910ad952192243c6aa8a79417ad711d8c2a4ba2e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991164"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84590545"
 ---
 # <a name="reliable-sessions"></a>Sesiones de confianza
 
-En esta sección se describe qué un Windows Communication Foundation (WCF) sesión confiable es lo se usa, cómo y cuándo usar uno, qué configuraciones de enlace admiten e indicaciones sobre procedimientos recomendados. La siguiente tabla resume los detalles sobre los puntos esenciales y temas relacionados de esta sección.
+En esta sección se describe qué es una sesión confiable de Windows Communication Foundation (WCF), para qué se usa, cómo y Cuándo usar una, qué configuraciones de enlace lo admiten y punteros en procedimientos recomendados. La siguiente tabla resume los detalles sobre los puntos esenciales y temas relacionados de esta sección.
 
-La sesión confiable WCF proporciona características que garantiza que los mensajes enviados entre puntos de conexión se transfieren a través de intermediarios de transporte o SOAP y se entregan una sola vez y, opcionalmente, en el mismo orden en que se enviaron.
+WCF de sesión confiable proporciona características que garantizan que los mensajes enviados entre los puntos de conexión se transfieren a través de intermediarios de transporte o SOAP y se entregan una sola vez y, opcionalmente, en el mismo orden en el que se enviaron.
 
-Para utilizar una sesión confiable con una aplicación de WCF, use uno de los enlaces proporcionados por el sistema en WCF que admiten una sesión confiable de manera predeterminada o como una opción o crear su propio enlace personalizado que admita la sesión.
+Para utilizar una sesión confiable con una aplicación WCF, use uno de los enlaces proporcionados por el sistema en WCF que admitan una sesión confiable de forma predeterminada o como opción, o bien cree su propio enlace personalizado que admita la sesión.
 
 ## <a name="in-this-section"></a>En esta sección
 
-[Información general de las sesiones confiables](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md) describe las sesiones confiables, cuándo utilizarlas, los distintos enlaces que admiten sesiones confiables, y cómo funcionan.
+[Información general de sesiones confiables](reliable-sessions-overview.md) Describe las sesiones confiables, Cuándo utilizarlas, los distintos enlaces que admiten sesiones confiables y cómo funcionan.
 
-[Cómo: Exchange mensajes dentro de una sesión confiable](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-within-a-reliable-session.md) se describe cómo crear una sesión confiable a través de HTTP mediante un enlace personalizado especificado en la configuración.
+[Cómo: intercambiar mensajes dentro de una sesión confiable](how-to-exchange-messages-within-a-reliable-session.md) Describe cómo crear una sesión confiable sobre HTTP mediante un enlace personalizado especificado en la configuración.
 
-[Cómo: Proteger los mensajes dentro de sesiones confiables](../../../../docs/framework/wcf/feature-details/how-to-secure-messages-within-reliable-sessions.md) se describe cómo proteger una sesión confiable.
+[Cómo: proteger mensajes dentro de sesiones confiables](how-to-secure-messages-within-reliable-sessions.md) Describe cómo proteger una sesión confiable.
 
-[Cómo: Creación de un enlace de la sesión confiable de personalizado con HTTPS](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md) se describe cómo crear una sesión confiable a través de HTTPS.
+[Cómo: crear un enlace de sesión confiable personalizado con https](how-to-create-a-custom-reliable-session-binding-with-https.md) Describe cómo crear una sesión confiable sobre HTTPS.
 
-[Procedimientos recomendados para las sesiones confiables](../../../../docs/framework/wcf/feature-details/best-practices-for-reliable-sessions.md) se describen algunos de los procedimientos recomendados relacionados con el uso de una sesión confiable.
+[Prácticas recomendadas para sesiones confiables](best-practices-for-reliable-sessions.md) Describe algunas de las prácticas recomendadas asociadas con el uso de una sesión confiable.
 
 ## <a name="reference"></a>Referencia
 
@@ -42,5 +42,5 @@ Para utilizar una sesión confiable con una aplicación de WCF, use uno de los e
 
 ## <a name="see-also"></a>Vea también
 
-- [Colas y sesiones de confianza](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)
-- [Sesiones, creación de instancias y simultaneidad](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)
+- [Colas y sesiones de confianza](queues-and-reliable-sessions.md)
+- [Sesiones, creación de instancias y simultaneidad](sessions-instancing-and-concurrency.md)

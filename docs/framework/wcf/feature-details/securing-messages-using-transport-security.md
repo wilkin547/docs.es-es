@@ -2,24 +2,24 @@
 title: Protección de mensajes utilizando la seguridad de transporte
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
-ms.openlocfilehash: b0507590914e2e8cda7e5e599914a9e3d7b0acd0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7d160f6f0d1d29e34ca3365501b86d1a736de67b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911708"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589947"
 ---
 # <a name="securing-messages-using-transport-security"></a>Protección de mensajes utilizando la seguridad de transporte
 En esta sección se discute la seguridad de transporte de Message Queuing (MSMQ) que puede utilizar para proteger los mensajes enviados a una cola.  
   
 > [!NOTE]
-> Antes de leer este tema, se recomienda leer los conceptos de [seguridad](../../../../docs/framework/wcf/feature-details/security-concepts.md).  
+> Antes de leer este tema, se recomienda leer los conceptos de [seguridad](security-concepts.md).  
   
  En la ilustración siguiente se proporciona un modelo conceptual de comunicación en cola mediante Windows Communication Foundation (WCF). La ilustración y la terminología se utilizan para explicar los conceptos de la seguridad de transporte.  
   
- ![Diagrama de aplicaciones en cola](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Distributed-Queue-figure")  
+ ![Diagrama de aplicaciones puestas en cola](media/distributed-queue-figure.jpg "Distributed-Queue-Figure")  
   
- Al enviar mensajes en cola mediante WCF con <xref:System.ServiceModel.NetMsmqBinding>, el mensaje de WCF se adjunta como cuerpo del mensaje de MSMQ. La seguridad de transporte protege el mensaje de MSMQ completo (encabezados del mensaje de MSMQ o propiedades y el cuerpo del mensaje). Dado que es el cuerpo del mensaje de MSMQ, el uso de la seguridad de transporte también protege el mensaje de WCF.  
+ Al enviar mensajes en cola mediante WCF con <xref:System.ServiceModel.NetMsmqBinding> , el mensaje de WCF se adjunta como cuerpo del mensaje de MSMQ. La seguridad de transporte protege el mensaje de MSMQ completo (encabezados del mensaje de MSMQ o propiedades y el cuerpo del mensaje). Dado que es el cuerpo del mensaje de MSMQ, el uso de la seguridad de transporte también protege el mensaje de WCF.  
   
  El concepto clave detrás de la seguridad de transporte es que el cliente tiene que cumplir los requisitos de seguridad para obtener el mensaje en la cola de destino. Esto es diferente de la seguridad del mensaje, donde el mensaje se protege para la aplicación que recibe el mensaje.  
   
@@ -45,7 +45,7 @@ En esta sección se discute la seguridad de transporte de Message Queuing (MSMQ)
  Teniendo en cuenta estas cuestiones básicas, las secciones siguientes detallan propiedades de seguridad de transporte incluidas con <xref:System.ServiceModel.NetMsmqBinding> y <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>.  
   
 #### <a name="msmq-authentication-mode"></a>Modo de autenticación MSMQ  
- <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> dicta si utilizar la seguridad de dominio de Windows o una seguridad externa basada en certificado para proteger el mensaje. En ambos modos de autenticación, el canal de transporte en cola de `CertificateValidationMode` WCF usa el especificado en la configuración del servicio. El modo de validación de certificado especifica el mecanismo utilizado para comprobar la validez del certificado.  
+ <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> dicta si utilizar la seguridad de dominio de Windows o una seguridad externa basada en certificado para proteger el mensaje. En ambos modos de autenticación, el canal de transporte en cola de WCF usa el `CertificateValidationMode` especificado en la configuración del servicio. El modo de validación de certificado especifica el mecanismo utilizado para comprobar la validez del certificado.  
   
  Cuando la seguridad de transporte está activada, la configuración predeterminada es <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>.  
   
@@ -60,9 +60,9 @@ En esta sección se discute la seguridad de transporte de Message Queuing (MSMQ)
 #### <a name="certificate-authentication-mode"></a>Modo de autenticación de certificados  
  La opción de utilizar el modo de autenticación del certificado no requiere la integración de Active Directory. De hecho, en algunos casos, como cuando MSMQ se instala en modo de grupo de trabajo (sin la integración de Active Directory) o al utilizar el protocolo de transferencia SOAP Reliable Messaging Protocol (SRMP) para enviar los mensajes a la cola, solo <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> funciona.  
   
- Al enviar un mensaje de WCF <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate>con, el canal de WCF no adjunta un SID de Windows al mensaje de MSMQ. Como a tal, el ACL de la cola de destino debe a `Anonymous` acceso de usuario para realizar envíos a la cola. El administrador de la cola receptora comprueba si el mensaje de MSMQ se firmó con el certificado pero no realiza ninguna autenticación.  
+ Al enviar un mensaje de WCF con <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> , el canal de WCF no adjunta un SID de Windows al mensaje de MSMQ. Como a tal, el ACL de la cola de destino debe a `Anonymous` acceso de usuario para realizar envíos a la cola. El administrador de la cola receptora comprueba si el mensaje de MSMQ se firmó con el certificado pero no realiza ninguna autenticación.  
   
- El certificado con su información de identidad y notificaciones se rellena <xref:System.ServiceModel.ServiceSecurityContext> en el canal de transporte en cola de WCF. El servicio puede utilizar esta información para realizar su propia autenticación del remitente.  
+ El certificado con su información de identidad y notificaciones se rellena en el <xref:System.ServiceModel.ServiceSecurityContext> canal de transporte en cola de WCF. El servicio puede utilizar esta información para realizar su propia autenticación del remitente.  
   
 ### <a name="msmq-protection-level"></a>Nivel de protección de MSMQ  
  El nivel de protección dicta cómo proteger el mensaje de MSMQ para garantizar que no se manipule. Se especifica en la propiedad <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>. El valor predeterminado es <xref:System.Net.Security.ProtectionLevel.Sign>.  
@@ -94,12 +94,12 @@ En esta sección se discute la seguridad de transporte de Message Queuing (MSMQ)
 ### <a name="msmq-hash-algorithm"></a>Algoritmo hash de MSMQ  
  El algoritmo hash especifica el algoritmo utilizado para crear una firma digital del mensaje de MSMQ. El administrador de la cola receptora utiliza este mismo algoritmo para autenticar el mensaje de MSMQ. Esta propiedad solo se usa si <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> se establece en <xref:System.Net.Security.ProtectionLevel.Sign> o <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>.  
   
- Los algoritmos admitidos son `MD5`, `SHA1`, `SHA256` y `SHA512`. El valor predeterminado es `SHA1`.
+ Los algoritmos admitidos son `MD5`, `SHA1`, `SHA256` y `SHA512`. De manera predeterminada, es `SHA1`.
 
  Debido a problemas de colisión con MD5/SHA1, Microsoft recomienda SHA256 o superior.
   
 ## <a name="see-also"></a>Vea también
 
 - [Información general de colas](queues-overview.md)
-- [Conceptos de seguridad](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [Protección de servicios y clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Conceptos de seguridad](security-concepts.md)
+- [Protección de servicios y clientes](securing-services-and-clients.md)

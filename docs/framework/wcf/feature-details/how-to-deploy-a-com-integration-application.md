@@ -2,19 +2,19 @@
 title: Procedimiento para implementar una aplicación de integración de COM+
 ms.date: 03/30/2017
 ms.assetid: 2e5a0510-db3c-4988-a09c-696285836650
-ms.openlocfilehash: fcf525943e6e453253c6f4d3bcfa8a1a08df6909
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b4ae7f730296d54debc1cf2971b61e5700503430
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778331"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595432"
 ---
 # <a name="how-to-deploy-a-com-integration-application"></a>Procedimiento para implementar una aplicación de integración de COM+
 Cuando ha escrito una aplicación de integración de COM+, puede que desee implementarla en otro equipo. En este tema se describe cómo mover una aplicación de integración de COM+ de un equipo a otro.  
   
 ### <a name="moving-a-com-hosted-integration-app"></a>Mover una aplicación de integración alojada por COM+  
   
-1. Asegúrese de que está instalado WCF en ambos equipos.  
+1. Asegúrese de que WCF esté instalado en ambos equipos.  
   
 2. Exportar la aplicación desde el equipo A.  
   
@@ -28,7 +28,7 @@ Cuando ha escrito una aplicación de integración de COM+, puede que desee imple
   
 ### <a name="moving-a-web-hosted-integration-application"></a>Mover una aplicación de integración alojada en Web  
   
-1. Asegúrese de que está instalado WCF en ambos equipos.  
+1. Asegúrese de que WCF esté instalado en ambos equipos.  
   
 2. Exportar la aplicación desde el equipo A.  
   
@@ -40,6 +40,6 @@ Cuando ha escrito una aplicación de integración de COM+, puede que desee imple
   
 ## <a name="see-also"></a>Vea también
 
-- [Integración en la información general de las aplicaciones COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)
-- [Cómo: Configurar el servicio COM +](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
-- [Cómo: Use la herramienta de configuración del modelo de servicio COM +](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)
+- [Información general de la integración con aplicaciones COM+](integrating-with-com-plus-applications-overview.md)
+- [Procedimiento para configurar los parámetros de los servicios COM+](how-to-configure-com-service-settings.md)
+- [Procedimiento para usar la herramienta configuración de modelos de servicio COM+](how-to-use-the-com-service-model-configuration-tool.md)
