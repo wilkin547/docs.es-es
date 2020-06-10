@@ -1,5 +1,6 @@
 ---
 title: Globalización y localización de aplicaciones .NET
+description: Obtenga información sobre cómo desarrollar una aplicación apta para su uso en todo el mundo. Conozca conceptos como la globalización, la revisión de la localizabilidad y la localización en .NET.
 ms.date: 06/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - application development [.NET], globalization
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
-ms.openlocfilehash: 10d07a02a7ff744a87b920fd97df24b076c22cc3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a3894b7bf9b8aa013b346c169d21c6db270fe987
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288295"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600794"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>Globalización y localización de aplicaciones .NET
 

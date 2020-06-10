@@ -1,13 +1,13 @@
 ---
 title: Funciones
-description: Obtenga información sobre las F# funciones de F# y cómo admite las construcciones de programación funcional comunes.
+description: Obtenga información sobre las funciones de F# y cómo F# admite las construcciones más comunes de la programación funcional.
 ms.date: 05/16/2016
-ms.openlocfilehash: c6b8307f51ffcdc77fe4352b2305fca1f247ccbb
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: MT
+ms.openlocfilehash: e49183e0634dee1750757abadbfe9e9c824f51a8
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423949"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596479"
 ---
 # <a name="functions"></a>Funciones
 
@@ -36,7 +36,7 @@ let f x = x + 1
 
 En el ejemplo anterior, el nombre de función es `f`, el argumento es `x`, que tiene el tipo `int`, el cuerpo de la función es `x + 1` y el valor devuelto es de tipo `int`.
 
-Las funciones se pueden marcar como `inline`. Para más información sobre `inline`, vea [Inline Functions](../functions/inline-functions.md) (Funciones insertadas).
+Las funciones se pueden marcar como `inline`. Para más información sobre `inline`, vea [Inline Functions](inline-functions.md) (Funciones insertadas).
 
 ## <a name="scope"></a>Ámbito
 
@@ -112,7 +112,7 @@ Después, se proporcionaría el argumento adicional según sea necesario para la
 
 ## <a name="recursive-functions"></a>Funciones recursivas
 
-Las *funciones recursivas* son funciones que se llaman a sí mismas. Requieren que se especifique la palabra clave **rec** después de la palabra clave **let**. La función recursiva se invoca desde el interior del cuerpo de la función de la misma forma que se invocaría cualquier llamada de función. La siguiente función recursiva calcula el número de<sup>Fibonacci</sup> n. La secuencia de números de Fibonacci se conoce desde la antigüedad y es una secuencia en la que cada número sucesivo es la suma de los dos números anteriores en la secuencia.
+Las *funciones recursivas* son funciones que se llaman a sí mismas. Requieren que se especifique la palabra clave **rec** después de la palabra clave **let**. La función recursiva se invoca desde el interior del cuerpo de la función de la misma forma que se invocaría cualquier llamada de función. La siguiente función recursiva calcula el número *n* de Fibonacci. La secuencia de números de Fibonacci se conoce desde la antigüedad y es una secuencia en la que cada número sucesivo es la suma de los dos números anteriores en la secuencia.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
 
@@ -142,7 +142,7 @@ Una *expresión lambda* es una función sin nombre. En los ejemplos anteriores, 
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
 
-Las expresiones lambda se definen mediante la palabra clave `fun`. Una expresión lambda es similar a una definición de función, salvo que en lugar del token `=` se usa el token `->` para separar la lista de argumentos del cuerpo de la función. Al igual que en una definición de función normal, se pueden deducir o especificar explícitamente los tipos de argumento, y el tipo de valor devuelto de la expresión lambda se deduce del tipo de la última expresión en el cuerpo. Para más información, vea [Lambda Expressions: The `fun` Keyword](../functions/lambda-expressions-the-fun-keyword.md) (Expresiones lambda: la palabra clave `fun`).
+Las expresiones lambda se definen mediante la palabra clave `fun`. Una expresión lambda es similar a una definición de función, salvo que en lugar del token `=` se usa el token `->` para separar la lista de argumentos del cuerpo de la función. Al igual que en una definición de función normal, se pueden deducir o especificar explícitamente los tipos de argumento, y el tipo de valor devuelto de la expresión lambda se deduce del tipo de la última expresión en el cuerpo. Para obtener más información, vea [Expresiones lambda: Palabra clave `fun`](lambda-expressions-the-fun-keyword.md).
 
 ## <a name="function-composition-and-pipelining"></a>Composición de funciones y canalización
 

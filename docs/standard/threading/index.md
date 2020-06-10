@@ -1,17 +1,18 @@
 ---
 title: Subprocesamiento administrado
+description: Consulte vínculos a artículos relativos a los subprocesos administrados en .NET, con los aspectos básicos, los procedimientos recomendados, las características y los objetos de los subprocesos, otras páginas de referencia y mucho más.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: 7b46a7d9-c6f1-46d1-a947-ae97471bba87
-ms.openlocfilehash: e4c19b664e8fc040fdc4a284b30f6104d676088d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 570db45138c85c4252967404da4404d434660d69
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84279159"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599755"
 ---
 # <a name="managed-threading"></a>Subprocesamiento administrado
 Tanto si va a desarrollar aplicaciones para equipos con uno o varios procesadores, desea que la aplicación proporcione la interacción con mayor capacidad de respuesta con el usuario, incluso si la aplicación actualmente hace otro trabajo. Usar varios subprocesos de ejecución es una de las formas más eficaces de mantener que la aplicación siga respondiendo al usuario y, al mismo tiempo, usar el procesador entre eventos de usuario o durante los mismos. Si bien esta sección presenta los conceptos básicos del subprocesamiento, se centra en los conceptos del subprocesamiento administrado y su uso.  
