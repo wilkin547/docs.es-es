@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 helpviewer_keywords:
 - encoding, understanding
-ms.openlocfilehash: 086430a720e6dc7f39d459a4b99d5bbdb1cfcac3
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 1b6ec6a7275408d4a8061c0de92cdf6e82dd533a
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141305"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288048"
 ---
 # <a name="character-encoding-in-net"></a>Codificación de caracteres de .NET
 
@@ -23,15 +23,15 @@ En este artículo se proporciona una introducción a los sistemas de codificaci�
 
 El término *carácter* se usa aquí en el sentido general de *lo que un lector percibe como un solo elemento de presentación*. Algunos ejemplos comunes son la letra "a", el símbolo "@" y el emoji "🐂". A veces, lo que parece un carácter consta en realidad de varios elementos de visualización independientes, como se explica en la sección sobre los [clústeres de grafemas](#grapheme-clusters).
 
-## <a name="the-string-and-char-types"></a>Tipos de cadena y carácter
+## <a name="the-string-and-char-types"></a>Tipos string y char
 
-Una instancia de la clase [string](xref:System.String) representa texto. Una instancia de `string` es de forma lógica una secuencia de valores de 16 bits, cada uno de los cuales es una instancia del struct [char](xref:System.Char). La propiedad [string.Length](xref:System.String.Length) devuelve el número de instancias de `char` en la instancia `string`.
+Una instancia de la clase [string](xref:System.String) representa texto. Un elemento `string` es de forma lógica una secuencia de valores de 16 bits, cada uno de los cuales es una instancia de la estructura [char](xref:System.Char). La propiedad [string.Length](xref:System.String.Length) devuelve el número de instancias `char` de la instancia `string`.
 
 La función de ejemplo siguiente imprime los valores en notación hexadecimal de todas las instancias de `char` en una instancia de `string`:
 
 :::code language="csharp" source="snippets/character-encoding-introduction/csharp/PrintStringChars.cs" id="SnippetPrintChars":::
 
-Pase la cadena "Hello" a esta función y obtendrá la siguiente salida:
+Pase el elemento string "Hello" a esta función y obtendrá el siguiente resultado:
 
 ```csharp
 PrintChars("Hello");
@@ -186,7 +186,7 @@ En el diagrama siguiente se muestran los puntos de código de valor escalar.
 
 :::image type="content" source="media/character-encoding-introduction/scalar-values.svg" alt-text="Valores escalares":::
 
-### <a name="the-opno-locrune-type-as-a-scalar-value"></a>El tipo Rune como un valor escalar.
+### <a name="the-rune-type-as-a-scalar-value"></a>El tipo Rune como un valor escalar.
 
 A partir de .NET Core 3.0, el tipo <xref:System.Text.Rune?displayProperty=fullName> representa un valor escalar Unicode. **`Rune` no está disponible en .NET Core 2. x o .NET Framework 4.x.**
 
@@ -202,7 +202,7 @@ En el siguiente ejemplo se produce una excepción porque el punto de código est
 
 :::code language="csharp" source="snippets/character-encoding-introduction/csharp/InstantiateRunes.cs" id="SnippetInvalidHigh":::
 
-### <a name="opno-locrune-usage-example-changing-letter-case"></a>Ejemplo de uso de Rune: cambio de las mayúsculas y minúsculas.
+### <a name="rune-usage-example-changing-letter-case"></a>Ejemplo de uso de Rune: cambio de las mayúsculas y minúsculas.
 
 Una API que toma una instancia de `char` y da por supuesto que trabaja con un punto de código que es un valor escalar no funciona correctamente si `char` procede de un par suplente. Por ejemplo, considere el siguiente método que llama a <xref:System.Char.ToUpperInvariant%2A?displayProperty=nameWithType> en cada char en una instancia de string:
 
@@ -217,7 +217,7 @@ A continuación se muestran dos opciones para convertir correctamente una instan
 
   :::code language="csharp" source="snippets/character-encoding-introduction/csharp/ConvertToUpper.cs" id="SnippetGoodExample":::
 
-### <a name="other-opno-locrune-apis"></a>Otras API de Rune
+### <a name="other-rune-apis"></a>Otras API de Rune
 
 El tipo `Rune` expone las analogías de muchas de las API de `char`. Por ejemplo, los métodos siguientes reflejan las API estáticas en el tipo `char`:
 
@@ -264,7 +264,7 @@ En algunos de los ejemplos anteriores, como el de la combinación del modificado
 
 Para enumerar los clústeres de grafemas de una instancia de `string`, use la clase <xref:System.Globalization.StringInfo> como se muestra en el ejemplo siguiente. Si está familiarizado con Swift, el tipo `StringInfo` de .NET es conceptualmente similar al tipo `character` de [Swift](https://developer.apple.com/documentation/swift/character).
 
-### <a name="example-count-opno-locchar-opno-locrune-and-text-element-instances"></a>Ejemplo: recuento de instancias de elementos char, Rune y de texto
+### <a name="example-count-char-rune-and-text-element-instances"></a>Ejemplo: recuento de instancias de elementos char, Rune y de texto
 
 En las API de .NET, un clúster de grafemas se conoce como *elemento de texto*. El método siguiente muestra las diferencias entre las instancias de elementos `char`, `Rune` y de texto en una instancia de `string`:
 
@@ -274,7 +274,7 @@ En las API de .NET, un clúster de grafemas se conoce como *elemento de texto*. 
 
 Si ejecuta este código en .NET Framework o .NET Core 3.1 o una versión anterior, el recuento de elementos de texto para el emoji muestra `4`. Esto se debe a un error en la clase `StringInfo` que se ha corregido en .NET 5.
 
-### <a name="example-splitting-opno-locstring-instances"></a>Ejemplo: división de las instancias de string
+### <a name="example-splitting-string-instances"></a>Ejemplo: división de las instancias de string
 
 Al dividir las instancias de `string`, evite dividir los pares suplentes y los clústeres de grafemas. Considere el siguiente ejemplo de código incorrecto, que intenta insertar saltos de línea cada 10 caracteres en una instancia de string:
 
@@ -389,4 +389,4 @@ Para información sobre cómo usar las clases `Encoding` integradas, consulte [U
 - <xref:System.String>
 - <xref:System.Char>
 - <xref:System.Text.Rune>
-- [Globalización y localización](../../../docs/standard/globalization-localization/index.md)
+- [Globalización y localización](../globalization-localization/index.md)

@@ -1,5 +1,6 @@
 ---
 title: Lenguaje de expresiones regulares - Referencia rápida
+description: En esta referencia rápida, podrá aprender a usar patrones de expresión regular para que coincidan con el texto de entrada. Un patrón consta de uno o más literales de carácter, operadores o construcciones.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - cheat sheet
 - .NET Framework regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
-ms.openlocfilehash: 0b553f44ebc512ffd1194254fe8ebc90bcb2f763
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: a2fc2c56eeb29f5e89dc0b9f94636408ff10700f
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523904"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446371"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Lenguaje de expresiones regulares - Referencia rápida
 
