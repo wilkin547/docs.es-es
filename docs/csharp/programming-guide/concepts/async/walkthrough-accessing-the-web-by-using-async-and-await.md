@@ -2,12 +2,12 @@
 title: 'Tutorial: Acceso a web usando Async y Await (C#)'
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: 42b09dab26fd514e184163eaf41aff117d3a463f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: edc45f252b75c742afe4f073ca7dd92d9784d2c4
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74281790"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84240637"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>Tutorial: Acceso a web usando Async y Await (C#)
 
@@ -40,7 +40,7 @@ Si no quiere compilar usted mismo las aplicaciones, puede descargar [Ejemplo de 
 
 1. En el Editor de código de Visual Studio, elija la pestaña **MainWindow.xaml** .
 
-2. Si la ventana **Cuadro de herramientas** no está visible, abra el menú **Vista** y elija **Cuadro de herramientas**.
+2. Si la ventana **Cuadro de herramientas** no se está mostrando, abra el menú **Vista** y elija **Cuadro de herramientas**.
 
 3. Agregue un control **Botón** y un control **TextBox** a la ventana **MainWindow**.
 
@@ -395,9 +395,9 @@ Tenga en cuenta que los recuentos tardan unos segundos en mostrarse. Durante ese
 
     - Lo más importante es que el subproceso de interfaz de usuario no se bloquea durante las descargas. Puede mover o cambiar el tamaño de la ventana mientras se descargan, se cuentan y se muestran los recursos web. Si uno de los sitios web es lento o no responde, puede cancelar la operación eligiendo el botón **Cerrar** (la X en el campo de color rojo en la esquina superior derecha).
 
-## <a name="replace-method-geturlcontentsasync-with-a-net-framework-method"></a>Reemplazar el método GetURLContentsAsync con un método de .NET Framework
+## <a name="replace-method-geturlcontentsasync-with-a-net-method"></a>Reemplazar el método GetURLContentsAsync con un método de .NET
 
-1. .NET Framework 4.5 pone a su disposición muchos métodos asincrónicos. Uno de ellos, el método <xref:System.Net.Http.HttpClient><xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>, hace justo lo que necesita para este tutorial. Se puede usar en lugar del método `GetURLContentsAsync` que creó en un procedimiento anterior.
+1. .NET Framework 4.5 y las versiones posteriores proporcionan muchos métodos asincrónicos que puede usar. Uno de ellos, el método <xref:System.Net.Http.HttpClient><xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>, hace justo lo que necesita para este tutorial. Se puede usar en lugar del método `GetURLContentsAsync` que creó en un procedimiento anterior.
 
      El primer paso es crear un objeto `HttpClient` en el método `SumPageSizesAsync`. Agregue la siguiente declaración al principio del método.
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 2c9eb2a8e6c2db8dc06ebe48ca6eb37d5cf638e7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6546a379d6d851aafbced0931221dc19ca022a72
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75700736"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241739"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Información general sobre interoperabilidad (Guía de programación de C#)
 En el tema se describen métodos para habilitar la interoperabilidad entre el código administrado y el código no administrado de C#.  
@@ -27,7 +27,7 @@ Para más información, consulte [Consumir funciones DLL no administradas](../..
 > [Common Language Runtime](../../../standard/clr.md) (CLR) administra el acceso a los recursos del sistema. Si se llama al código no administrado que está fuera de CLR, se omite este mecanismo de seguridad y, por lo tanto, existe un riesgo de seguridad. Por ejemplo, el código no administrado podría llamar directamente a recursos en código no administrado, omitiendo los mecanismos de seguridad de CLR. Para obtener más información, vea [Seguridad en .NET](../../../standard/security/index.md).  
   
 ## <a name="c-interop"></a>Interoperabilidad de C++  
- Puede usar la interoperabilidad de C++, también conocida como It Just Works (IJW), para encapsular una clase de C++ nativa de modo que el código creado en C# o en otro lenguaje de .NET Framework pueda consumirla. Para ello, escriba código de C++ para encapsular un componente DLL o COM nativo. A diferencia de otros lenguajes de .NET Framework, Visual C++ cuenta con compatibilidad de interoperabilidad que permite que haya código administrado y no administrado en la misma aplicación, e incluso en el mismo archivo. Después, compile el código de C++ mediante el modificador del compilador **/clr** para generar un ensamblado administrado. Finalmente, agregue una referencia al ensamblado en el proyecto de C# y use los objetos encapsulados igual que usaría otras clases administradas.  
+ Puede usar la interoperabilidad de C++, también conocida como It Just Works (IJW), para encapsular una clase de C++ nativa de modo que el código creado en C# o en otro lenguaje de .NET pueda consumirla. Para ello, escriba código de C++ para encapsular un componente DLL o COM nativo. A diferencia de otros lenguajes de .NET, Visual C++ cuenta con compatibilidad de interoperabilidad que permite que haya código administrado y no administrado en la misma aplicación, e incluso en el mismo archivo. Después, compile el código de C++ mediante el modificador del compilador **/clr** para generar un ensamblado administrado. Finalmente, agregue una referencia al ensamblado en el proyecto de C# y use los objetos encapsulados igual que usaría otras clases administradas.  
   
 ## <a name="exposing-com-components-to-c"></a>Exponer componentes COM en C\#
  Puede usar un componente COM de un proyecto de C#. Los pasos generales son los siguientes:  
@@ -36,7 +36,7 @@ Para más información, consulte [Consumir funciones DLL no administradas](../..
   
 2. Agregue al proyecto una referencia a la biblioteca de tipos o al componente COM.  
   
-     Al agregar la referencia, Visual Studio usa [Tlbimp.exe (importador de la biblioteca de tipos)](../../../framework/tools/tlbimp-exe-type-library-importer.md), que toma una biblioteca de tipos como entrada para generar un ensamblado de interoperabilidad de .NET Framework. El ensamblado, también denominado "contenedor RCW", contiene las clases e interfaces administradas que encapsulan las interfaces y clases COM que se encuentran en la biblioteca de tipos. Visual Studio agrega al proyecto una referencia al ensamblado generado.  
+     Al agregar la referencia, Visual Studio usa [Tlbimp.exe (importador de la biblioteca de tipos)](../../../framework/tools/tlbimp-exe-type-library-importer.md), que toma una biblioteca de tipos como entrada para generar un ensamblado de interoperabilidad de .NET. El ensamblado, también denominado "contenedor RCW", contiene las clases e interfaces administradas que encapsulan las interfaces y clases COM que se encuentran en la biblioteca de tipos. Visual Studio agrega al proyecto una referencia al ensamblado generado.  
   
 3. Cree una instancia de una clase definida en el RCW. Este, a su vez, crea una instancia del objeto COM.  
   

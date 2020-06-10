@@ -3,12 +3,12 @@ title: Tipos de referencia que aceptan valores NULL
 description: En este artículo se proporciona información general sobre los tipos de referencia que aceptan valores NULL, una novedad de C# 8.0. Conocerá cómo esta característica proporciona protección contra excepciones de referencia NULL, tanto para proyectos nuevos como para los existentes.
 ms.technology: csharp-null-safety
 ms.date: 04/21/2020
-ms.openlocfilehash: 589118ffaa9ad39f000e3e5adf2896d114f68dd3
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 6d068760805a21e41712a4f70735bef41ce2052f
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82101986"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446677"
 ---
 # <a name="nullable-reference-types"></a>Tipos de referencia que aceptan valores NULL
 
@@ -130,3 +130,4 @@ Agregue atributos a las API que proporcionen al compilador más información sob
 - [Borrador de especificación de tipos de referencia que aceptan valores NULL](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md)
 - [Tutorial de introducción a las referencias que no aceptan valores NULL](tutorials/nullable-reference-types.md)
 - [Migración de un código base existente a referencias que aceptan valores NULL](tutorials/upgrade-to-nullable-references.md)
+- [-nullable (opción del compilador de C#)](language-reference/compiler-options/nullable-compiler-option.md)

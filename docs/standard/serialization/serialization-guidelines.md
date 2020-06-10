@@ -9,12 +9,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: af0b857e98ffbe0ff9f12108174b79f873c2b38f
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: eb11f0b8ddd34df7c6970c275d4b83cb95f59a53
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378391"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84287498"
 ---
 # <a name="serialization-guidelines"></a>Directrices de serialización
 Este documento enumera las instrucciones que se deben tener en cuenta al diseñar una API para su serialización.  
@@ -79,7 +79,7 @@ Este documento enumera las instrucciones que se deben tener en cuenta al diseña
      [!code-csharp[SerializationGuidelines#4](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#4)]
      [!code-vb[SerializationGuidelines#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#4)]  
   
-     Cuando no se conoce la lista de tipos conocidos estáticamente (cuando se compila la clase **Person**), **KnownTypeAttribute** también puede señalar a un método que devuelve una lista de tipos conocidos en tiempo de ejecución.  
+     Cuando no se conoce la lista de tipos conocidos estáticamente (cuando se compila la clase **Person**), **KnownTypeAttribute** también puede apuntar a un método que devuelve una lista de tipos conocidos en tiempo de ejecución.  
   
 5. Tenga en cuenta la compatibilidad con versiones anteriores y posteriores al crear o cambiar tipos serializables.  
   
@@ -92,7 +92,7 @@ Este documento enumera las instrucciones que se deben tener en cuenta al diseña
      [!code-csharp[SerializationGuidelines#5](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#5)]
      [!code-vb[SerializationGuidelines#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#5)]  
   
-     Para obtener más información, vea [Forward-Compatible Data Contracts](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) (Contratos de datos compatibles con el reenvío).  
+     Para obtener más información, vea [Forward-Compatible Data Contracts](../../framework/wcf/feature-details/forward-compatible-data-contracts.md) (Contratos de datos compatibles con el reenvío).  
   
 #### <a name="supporting-xml-serialization"></a>Admitir la serialización XML  
  La serialización de contrato de datos es la tecnología de serialización principal (predeterminada) en .NET Framework, pero hay escenarios de serialización que la serialización de contrato de datos no admite. Por ejemplo, no proporciona control total sobre la forma del XML generado o utilizado por el serializador. Si se requiere un control tan detallado, debe usarse la *serialización XML* y los tipos se deben diseñar para admitir esta tecnología de serialización.  
@@ -140,10 +140,10 @@ Este documento enumera las instrucciones que se deben tener en cuenta al diseña
   
 ## <a name="see-also"></a>Vea también
 
-- [Utilización de contratos de datos](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Serializador de contratos de datos](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)
-- [Tipos admitidos por el serializador de contratos de datos](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [Utilización de contratos de datos](../../framework/wcf/feature-details/using-data-contracts.md)
+- [Serializador de contratos de datos](../../framework/wcf/feature-details/data-contract-serializer.md)
+- [Tipos admitidos por el serializador de contratos de datos](../../framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
 - [Serialización binaria](binary-serialization.md)
 - [.NET Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
 - [Serialización SOAP y XML](xml-and-soap-serialization.md)
-- [Seguridad y serialización](../../../docs/framework/misc/security-and-serialization.md)
+- [Seguridad y serialización](../../framework/misc/security-and-serialization.md)

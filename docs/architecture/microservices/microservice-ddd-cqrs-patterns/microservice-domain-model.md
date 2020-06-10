@@ -2,12 +2,12 @@
 title: Diseño de un modelo de dominio de microservicio
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre los conceptos clave para diseñar un modelo de dominio orientado a un DDD
 ms.date: 01/30/2020
-ms.openlocfilehash: 234d6e518eac8de5b2f130b91adb32b6a24a7265
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: fe78e719570d5758b71531beab883e5c24a88dca
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144596"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306920"
 ---
 # <a name="design-a-microservice-domain-model"></a>Diseño de un modelo de dominio de microservicio
 
@@ -35,7 +35,7 @@ En la figura 7-8 se muestra una entidad de dominio que implementa no solo los at
 
 **Figura 7-8.** Ejemplo de un diseño de entidad de dominio en el que se implementan datos y comportamiento
 
-Una entidad del modelo de dominio implementa comportamientos a través de métodos, es decir, no es un modelo "anémico". Evidentemente, en ocasiones puede tener entidades que no implementen ninguna lógica como parte de la clase de entidad. Esto puede ocurrir en entidades secundarias dentro de un agregado si la entidad secundaria no tiene ninguna lógica especial porque la mayor parte de la lógica se define en la raíz agregada. Si tiene un microservicio complejo con gran cantidad de lógica implementada en las clases de servicio en lugar de en las entidades de dominio, podría encontrarse en el modelo de dominio anémico que se explica en la sección siguiente.
+Una entidad del modelo de dominio implementa comportamientos a través de métodos, es decir, no es un modelo "anémico". Evidentemente, en ocasiones puede tener entidades que no implementen ninguna lógica como parte de la clase de entidad. Esto puede ocurrir en entidades secundarias dentro de un agregado si la entidad secundaria no tiene ninguna lógica especial porque la mayor parte de la lógica se define en la raíz agregada. Si tiene un microservicio complejo con lógica implementada en las clases de servicio en lugar de en las entidades de dominio, podría encontrarse con el modelo de dominio anémico que se explica en la sección siguiente.
 
 ### <a name="rich-domain-model-versus-anemic-domain-model"></a>Diferencias entre el modelo de dominio y el modelo de dominio anémico
 
@@ -45,7 +45,7 @@ El síntoma básico de un modelo de dominio anémico es que a primera vista pare
 
 Por supuesto, cuando se usa un modelo de dominio anémico, esos modelos de datos se usan desde un conjunto de objetos de servicio (denominado tradicionalmente *capa de negocio*) que captura toda la lógica de negocios o de dominio. La capa de negocio se encuentra en la parte superior del modelo de datos y usa el modelo de datos al igual que los datos.
 
-El modelo de dominio anémico es simplemente un diseño de estilo de procedimientos. Los objetos de entidad anémicos no son objetos reales, ya que carecen de comportamiento (métodos). Solo contienen propiedades de datos y, por tanto, no se trata de un diseño orientado a objetos. Al colocar todo el comportamiento en objetos de servicio (la capa de negocio), básicamente se crea [código espagueti](https://en.wikipedia.org/wiki/Spaghetti_code) o [scripts de transacción](https://martinfowler.com/eaaCatalog/transactionScript.html), y, por tanto, se pierden las ventajas que proporciona un modelo de dominio.
+El modelo de dominio anémico es simplemente un diseño de estilo de procedimientos. Los objetos de entidad anémicos no son objetos reales, ya que carecen de comportamiento (métodos). Solo contienen propiedades de datos y, por tanto, no se trata de un diseño orientado a objetos. Al colocar todo el comportamiento en objetos de servicio (la capa de negocio), básicamente se acaba creando [código espagueti](https://en.wikipedia.org/wiki/Spaghetti_code) o [scripts de transacción](https://martinfowler.com/eaaCatalog/transactionScript.html), y, por tanto, se pierden las ventajas que proporciona un modelo de dominio.
 
 Pero si el microservicio o contexto delimitado es muy sencillo (un servicio CRUD), es posible que sea suficiente con el modelo de dominio anémico en forma de objetos de entidad con solo propiedades de datos y que no merezca la pena implementar modelos DDD más complejos. En ese caso, será simplemente un modelo de persistencia, porque se ha creado deliberadamente una entidad solo con datos para fines CRUD.
 
@@ -72,11 +72,11 @@ Una entidad requiere una identidad, pero en un sistema hay muchos objetos que no
 
 Es posible que algo que sea una entidad en un microservicio no lo sea en otro, porque en el segundo caso, es posible que el contexto delimitado tenga un significado diferente. Por ejemplo, una dirección en una aplicación de comercio electrónico podría no tener ninguna identidad, ya que es posible que solo represente un grupo de atributos del perfil de cliente para una persona o empresa. En este caso, la dirección se debería clasificar como un objeto de valor. Pero en una aplicación para una empresa de energía eléctrica, la dirección del cliente podría ser importante para el dominio de negocio. Por tanto, la dirección debe tener una identidad para poder vincular el sistema de facturación directamente con la dirección. En ese caso, una dirección debería clasificarse como una entidad de dominio.
 
-Una persona con un nombre y apellido normalmente es una entidad debido a que una persona tiene identidad, incluso si el nombre y apellido coinciden con otro conjunto de valores, por ejemplo si también hacen referencia a otra persona.
+Una persona con un nombre y unos apellidos normalmente es una entidad debido a que una persona tiene identidad, aunque el nombre y los apellidos coincidan con otro conjunto de valores, como sucede si también hacen referencia a otra persona.
 
 Los objetos de valor son difíciles de administrar en bases de datos relacionales y ORM como Entity Framework (EF), mientras que en las bases de datos orientadas a documentos son más fáciles de implementar y usar.
 
-EF Core 2.0 y las versiones posteriores incluyen la característica [Entidades poseídas](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting), que facilita la administración de los objetos de valor, como veremos en detalle más adelante.
+EF Core 2.0 y las versiones posteriores incluyen la característica [Entidades en propiedad](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting), que facilita la administración de los objetos de valor, como veremos en detalle más adelante.
 
 #### <a name="additional-resources"></a>Recursos adicionales
 
@@ -121,7 +121,7 @@ public class Order : Entity, IAggregateRoot
 {
     private DateTime _orderDate;
     public Address Address { get; private set; }
-    private int? _buyerId; //FK pointing to a different aggregate root
+    private int? _buyerId; // FK pointing to a different aggregate root
     public OrderStatus OrderStatus { get; private set; }
     private readonly List<OrderItem> _orderItems;
     public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;

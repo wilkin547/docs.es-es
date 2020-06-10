@@ -1,14 +1,14 @@
 ---
 title: ¿Qué es el Generador de modelos y cómo funciona?
 description: Cómo usar el Generador de modelos de ML.NET para entrenar un modelo de Machine Learning de forma automática
-ms.date: 03/25/2020
+ms.date: 06/01/2020
 ms.custom: overview, mlnet-tooling
-ms.openlocfilehash: 4afdbfd1682a30647b09d05d51a5c73c214fe2bd
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 2ed4a0c3c94ae9f46bb1cf6ddb1e9774baf82367
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616936"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289504"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>¿Qué es el Generador de modelos y cómo funciona?
 
@@ -119,7 +119,7 @@ Si aún no tiene datos propios, pruebe uno de estos conjuntos de datos:
 
 ## <a name="train"></a>Entrenamiento
 
-Una vez que se seleccionan el escenario, los datos y la etiqueta, el Generador de modelos entrena el modelo.
+Una vez que se seleccionan el escenario, el entorno, los datos y la etiqueta, el Generador de modelos entrena el modelo.
 
 ### <a name="what-is-training"></a>¿Qué es el entrenamiento?
 
@@ -149,6 +149,8 @@ Estos números son solo una guía. La duración exacta del entrenamiento depende
 - El tipo de columnas
 - La tarea de ML
 - El rendimiento de la CPU, el disco y la memoria de la máquina usada para el entrenamiento
+
+Por lo general, se aconseja que use más de 100 filas, ya que es posible que los conjuntos de datos con una cantidad menor no generen ningún resultado y tarden mucho más tiempo en entrenarse.
 
 ## <a name="evaluate"></a>Evaluate
 
@@ -193,7 +195,7 @@ Si la puntuación de rendimiento del modelo no es tan buena como se quiere que s
 
 - Entrenar durante más tiempo. Con más tiempo, el motor de aprendizaje automático automatizado experimenta con más algoritmos y configuraciones.
 
-- Agregar más datos. A veces la cantidad de datos no es suficiente para entrenar un modelo de Machine Learning de alta calidad.
+- Agregar más datos. A veces la cantidad de datos no es suficiente para entrenar un modelo de Machine Learning de alta calidad. Esto es especialmente cierto en el caso de conjuntos de datos que tienen un número de ejemplos menor.
 
 - Equilibrar los datos. En las tareas de clasificación, asegúrese de que el conjunto de entrenamiento esté equilibrado entre las categorías. Por ejemplo, si tiene cuatro clases de 100 ejemplos de entrenamiento y las dos primeras (etiqueta1 y etiqueta2) se usan para 90 registros, pero las otras dos (etiqueta3 y etiqueta4) solo se usan en los 10 registros restantes, la falta de datos equilibrados puede hacer que el modelo se esfuerce por predecir correctamente etiqueta3 o etiqueta4.
 

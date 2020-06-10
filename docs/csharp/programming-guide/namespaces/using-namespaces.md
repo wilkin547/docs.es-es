@@ -7,16 +7,16 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: b4326be8c9e299a96477096ec21864ec69037abe
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 71d97f7c1c0c3ece0cdce3de4318d8a9d65baed3
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738243"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241934"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Uso de espacios de nombres (Guía de programación de C#)
 
-Los espacios de nombres se usan mucho en programas de C# de dos maneras. En primer lugar, las clases de .NET Framework usan espacios de nombres para organizar sus clases. En segundo lugar, declarar sus propios espacios de nombres puede ayudar a controlar el ámbito de nombres de clase y método en proyectos de programación grandes.  
+Los espacios de nombres se usan mucho en programas de C# de dos maneras. En primer lugar, las clases de .NET usan espacios de nombres para organizar sus clases. En segundo lugar, declarar sus propios espacios de nombres puede ayudar a controlar el ámbito de nombres de clase y método en proyectos de programación grandes.  
   
 ## <a name="accessing-namespaces"></a>Acceso a los espacios de nombres
 

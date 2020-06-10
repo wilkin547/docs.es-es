@@ -1,18 +1,18 @@
 ---
 title: Opciones del compilador de C#, por orden alfabético
-ms.date: 05/15/2018
+ms.date: 06/04/2020
 helpviewer_keywords:
 - compiler options [C#], listed alphabetically
 - C# language, compiler options listed alphabetically
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: d6d471cd27f35de6325a130e6c909d13cb1dcc85
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9765d13191f862a2e92bb00aa66a92c3a64ac303
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73972740"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446944"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Opciones del compilador de C#, por orden alfabético
 
@@ -37,9 +37,9 @@ Las siguientes opciones del compilador están ordenadas alfabéticamente. Para o
 |[-deterministic](deterministic-compiler-option.md)|Hace que el compilador genere un ensamblado cuyo contenido binario es idéntico en todas las compilaciones si las entradas son idénticas.|
 |[-doc](doc-compiler-option.md)|Especifica un archivo de documentación XML que se generará.|
 |-embed|Insertar todos los archivos de origen en el archivo PDB|
-|-embed:\<lista de archivos>|Insertar archivos específicos en el archivo PDB|
+|-embed:\<file list>|Insertar archivos específicos en el archivo PDB|
 |-errorendlocation|Línea y columna de salida de la ubicación final de cada error.|
-|-errorlog:\<archivo>|Especifique un archivo para registrar todos los diagnósticos del compilador y el analizador.|
+|-errorlog:\<file>|Especifique un archivo para registrar todos los diagnósticos del compilador y el analizador.|
 |[-errorreport](errorreport-compiler-option.md)|Especifica cómo tratar los errores internos del compilador: prompt, send o none. El valor predeterminado es none.|
 |[-filealign](filealign-compiler-option.md)|Especifica la alineación usada para las secciones de archivos de salida.|
 |[/fullpaths](fullpaths-compiler-option.md)|Hace que el compilador genere rutas de acceso completas.|
@@ -60,6 +60,7 @@ Las siguientes opciones del compilador están ordenadas alfabéticamente. Para o
 |[-nostdlib](nostdlib-compiler-option.md)|Indica al compilador que no haga referencia a la biblioteca estándar (mscorlib.dll).|
 |[-nowarn](nowarn-compiler-option.md)|Deshabilita mensajes de advertencia específicos.|
 |[-nowin32manifest](nowin32manifest-compiler-option.md)|Indica al compilador que no incruste un manifiesto de la aplicación en el archivo ejecutable.|
+|[-nullable](nullable-compiler-option.md)|Especifica la opción de contexto que admite un valor NULL.|
 |[-optimize](optimize-compiler-option.md)|Habilita o deshabilita las optimizaciones.|
 |[-out](out-compiler-option.md)|Especifica el nombre de archivo de salida (nombre predeterminado: nombre base de archivo con la clase principal o del primer archivo).|
 |-parallel[+&#124;-]|Especifica si hay que usar la compilación simultánea (+).|

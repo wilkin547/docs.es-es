@@ -1,5 +1,6 @@
 ---
 title: Formatos de ruta de acceso de archivo en los sistemas Windows
+description: En este artículo, conocerá los formatos de ruta de acceso de archivo en sistemas Windows, como las rutas de acceso de DOS tradicionales, las rutas de acceso de dispositivos DOS y las rutas de acceso de convención de nomenclatura universal (UNC).
 ms.date: 06/06/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: b3510be5d417b555d2db163636eac5ce0c0779e4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2d3ede97b372dd8922a10a377f69155a12f88bda
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77628051"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447139"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formatos de ruta de acceso de archivo en los sistemas Windows
 
@@ -30,7 +31,7 @@ Una ruta de acceso DOS estándar puede constar de tres componentes:
 
 Si los tres componentes están presentes, la ruta de acceso es absoluta. Si no se especifica la letra de volumen o unidad y el nombre de directorio comienza por el [carácter separador de directorio](<xref:System.IO.Path.DirectorySeparatorChar>), la ruta de acceso es relativa con respecto a la raíz de la unidad actual. En caso contrario, la ruta de acceso es relativa al directorio actual. En la tabla siguiente se muestran algunas rutas de acceso de directorio y archivo posibles.
 
-|Path  |Description  |
+|Ruta de acceso  |Descripción  |
 | -- | -- |
 | `C:\Documents\Newsletters\Summer2018.pdf` | Ruta de acceso de archivo absoluta desde la raíz de la unidad C:. |
 | `\Program Files\Custom Utilities\StringFinder.exe` | Ruta de acceso absoluta desde la raíz de la unidad actual. |
@@ -62,7 +63,7 @@ Las rutas de acceso de convención de nomenclatura universal (UNC), que se usan 
 
 A continuación se muestran algunos ejemplos de rutas de acceso UNC:
 
-|Path  |Description  |
+|Ruta de acceso  |Descripción  |
 | -- | -- |
 | `\\system07\C$\` | Directorio raíz de la unidad C: en `system07`. |
 | `\\Server2\Share\Test\Foo.txt` | El archivo Foo.txt en el directorio Test del volumen \\\\Server2\\Share.|
@@ -104,7 +105,7 @@ La ruta de acceso de dispositivo DOS consta de los componentes siguientes:
 
 Por definición, las rutas de acceso de dispositivo DOS son completas. No se permiten los segmentos de directorio relativos (`.` y `..`). Los directorios actuales nunca entran en uso.
 
-## <a name="example-ways-to-refer-to-the-same-file"></a>Ejemplo: formas de hacer referencia al mismo archivo
+## <a name="example-ways-to-refer-to-the-same-file"></a>Ejemplo: Formas de hacer referencia al mismo archivo
 
 En el ejemplo siguiente se muestran algunas formas de hacer referencia a un archivo cuando se usan las API del espacio de nombres <xref:System.IO>. En el ejemplo se crea una instancia de un objeto <xref:System.IO.FileInfo> y se usan sus propiedades <xref:System.IO.FileInfo.Name> y <xref:System.IO.FileInfo.Length> para mostrar el nombre y la longitud del archivo.
 

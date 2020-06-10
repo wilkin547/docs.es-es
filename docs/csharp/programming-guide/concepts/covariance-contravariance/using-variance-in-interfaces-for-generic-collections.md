@@ -2,19 +2,19 @@
 title: Usar la varianza en interfaces para las colecciones genéricas (C#)
 ms.date: 07/20/2015
 ms.assetid: a44f0708-10fa-4c76-82cd-daa6e6b31e8e
-ms.openlocfilehash: b891ccde93e18baf5d5e814911666e9c6268e009
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5f5531e17a530ed840108df2cf9bf829b2beb656
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169745"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241362"
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-c"></a>Usar la varianza en interfaces para las colecciones genéricas (C#)
 Una interfaz covariante permite que sus métodos devuelvan tipos más derivados que los especificados en la interfaz. Una interfaz contravariante permite que sus métodos acepten parámetros de tipos menos derivados que los especificados en la interfaz.  
   
  Varias interfaces existentes en .NET Framework 4 pasaron a ser covariantes y contravariantes. Por ejemplo, <xref:System.Collections.Generic.IEnumerable%601> y <xref:System.IComparable%601>. Esto permite volver a usar métodos que funcionan con colecciones genéricas de tipos base para colecciones de tipos derivados.  
   
- Para obtener una lista de interfaces variantes de .NET Framework, vea [Varianza en interfaces genéricas (C#)](./variance-in-generic-interfaces.md).  
+ Para ver una lista de interfaces variantes de .NET, vea [Varianza en interfaces genéricas (C#)](./variance-in-generic-interfaces.md).  
   
 ## <a name="converting-generic-collections"></a>Convertir colecciones genéricas  
  En el ejemplo siguiente se muestran las ventajas de la compatibilidad con la covarianza en la interfaz <xref:System.Collections.Generic.IEnumerable%601>. El método `PrintFullName` acepta una colección del tipo `IEnumerable<Person>` como parámetro. Pero se puede volver a usar para una colección del tipo `IEnumerable<Employee>` porque `Employee` hereda `Person`.  

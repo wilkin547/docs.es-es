@@ -3,12 +3,12 @@ title: Glosario de .NET
 description: Descubra el significado de algunos de los términos usados en la documentación de .NET.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: e7608ee7e68300d691df51aed923db0e8b518165
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 11ab0de4757a23c940ae04418a5a82ea79f71761
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102481"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287459"
 ---
 # <a name="net-glossary"></a>Glosario de .NET
 

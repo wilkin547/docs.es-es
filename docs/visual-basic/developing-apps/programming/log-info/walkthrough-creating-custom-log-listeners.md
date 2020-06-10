@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: 7b611e93119dc66a9404cf271ea201676d7b5318
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5a140607a4fe7e1e13de54e8d56cab53e52aaa2a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74353625"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398271"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>Tutorial: Crear agentes de escucha de registro personalizados (Visual Basic)
 
@@ -43,9 +43,9 @@ En el procedimiento siguiente se proporcionan algunos pasos sencillos para crear
 
 2. Haga clic en la pestaña **Firma**.
 
-3. Active la casilla **Firmar el ensamblado**.
+3. Active la casilla **Firmar el ensamblado** .
 
-4. Seleccione **\<Nuevo>** en la lista desplegable **Elija un archivo de clave de nombre seguro**.
+4. Seleccione **\<New>** en la lista desplegable **Elija un archivo de clave de nombre seguro**.
 
      Se abre el cuadro de diálogo **Crear clave de nombre seguro**.
 
@@ -63,7 +63,7 @@ Ahora que el ensamblado tiene un nombre seguro, debe determinar el nombre seguro
 
 El formato de un tipo con nombre seguro es el siguiente.
 
-\<nombre de tipo>, \<nombre de ensamblado>, \<número de versión>, \<referencia cultural>, \<nombre seguro>
+\<type name>, \<assembly name>, \<version number>, \<culture>, \<strong name>
 
 #### <a name="to-determine-the-strong-name-of-the-listener"></a>Para determinar el nombre seguro del agente de escucha
 
@@ -110,7 +110,7 @@ Con el nombre seguro, puede agregar el agente de escucha a la colección de agen
 ## <a name="see-also"></a>Vea también
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
-- [Trabajar con registros de aplicaciones](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [Registrar excepciones](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
-- [Escribir mensajes de registro](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
-- [Tutorial: Cambiar el lugar donde My.Application.Log escribe información](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [Trabajar con registros de aplicaciones](working-with-application-logs.md)
+- [Cómo: Registrar excepciones](how-to-log-exceptions.md)
+- [Cómo: Escribir mensajes de registro](how-to-write-log-messages.md)
+- [Tutorial: Cambiar el lugar en el que My.Application.Log escribe la información](walkthrough-changing-where-my-application-log-writes-information.md)

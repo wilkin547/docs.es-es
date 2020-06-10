@@ -1,17 +1,17 @@
 ---
 title: Opciones del compilador de C#, por categoría
-ms.date: 05/15/2018
+ms.date: 06/04/2020
 helpviewer_keywords:
 - Visual C# compiler, options listed by category
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: 5cd5607c25dabd8f56ebb58366116666e8e649ea
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ffa5372678362e47eb59d8b041da55c79bf8475d
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73972712"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447048"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>Opciones del compilador de C#, por categoría
 
@@ -55,7 +55,8 @@ Las opciones del compilador siguientes están ordenadas por categoría. Para acc
 |-analyzer|Ejecuta los analizadores de este ensamblado (forma abreviada: /a).|
 |-additionalfile|Asigna nombre a otros archivos que no afectan directamente a la generación de código, pero que los analizadores pueden usar para generar errores o advertencias.|
 |-embed|Insertar todos los archivos de origen en el archivo PDB|
-|-embed:\<lista de archivos>|Insertar archivos específicos en el archivo PDB|
+|-embed:\<file list>|Insertar archivos específicos en el archivo PDB|
+
 ## <a name="debuggingerror-checking"></a>Comprobación de errores y depuración
 
 |Opción|Propósito|
@@ -66,6 +67,7 @@ Las opciones del compilador siguientes están ordenadas por categoría. Para acc
 |[-errorreport](errorreport-compiler-option.md)|Establece el comportamiento de los informes de errores.|
 |[/fullpaths](fullpaths-compiler-option.md)|Especifica la ruta de acceso absoluta al archivo en los resultados del compilador.|
 |[-nowarn](nowarn-compiler-option.md)|Suprime la generación de advertencias especificadas en el compilador.|
+|[-nullable](nullable-compiler-option.md)|Especifica la opción de contexto que admite un valor NULL.|
 |[/warn](warn-compiler-option.md)|Establece el nivel de advertencia.|
 |[-warnaserror](warnaserror-compiler-option.md)|Promueve las advertencias a errores.|
 |-ruleset:\<file>|Especifica un archivo de conjunto de reglas que deshabilita diagnósticos específicos.|
@@ -96,7 +98,7 @@ Las opciones del compilador siguientes están ordenadas por categoría. Para acc
 |[-codepage](codepage-compiler-option.md)|Especifica la página de códigos que se va a usar para todos los archivos de código fuente de la compilación.|
 |[-help](help-compiler-option.md)|Enumera las opciones del compilador para stdout.|
 |[-highentropyva](highentropyva-compiler-option.md)|Especifica que el archivo ejecutable es compatible con la selección aleatoria del diseño del espacio de direcciones (ASLR).|
-|[-langversion](langversion-compiler-option.md)|Especifica la versión de lenguaje: valor predeterminado, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 o el más reciente |
+|[-langversion](langversion-compiler-option.md)|Especifique la versión de lenguaje: predeterminada, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 o más reciente |
 |[-main](main-compiler-option.md)|Especifica la ubicación del método **Main**.|
 |[-noconfig](noconfig-compiler-option.md)|Indica al compilador que no debe compilar con csc.rsp.|
 |[-nologo](nologo-compiler-option.md)|Suprime la información de titular del compilador.|
@@ -105,7 +107,7 @@ Las opciones del compilador siguientes están ordenadas por categoría. Para acc
 |[/unsafe](unsafe-compiler-option.md)|Habilita la compilación del código que usa la palabra clave [unsafe](../keywords/unsafe.md).|
 |[-utf8output](utf8output-compiler-option.md)|Muestra los resultados del compilador en codificación UTF-8.|
 |-parallel[+&#124;-]|Especifica si hay que usar la compilación simultánea (+).|
-|-checksumalgorithm:\<alg>|Especifique el algoritmo para calcular la suma de comprobación del archivo de origen almacenada en el archivo PDB.  Los valores admitidos son: SHA1 (predeterminado) o SHA256.<br>Debido a problemas de colisión con SHA1, Microsoft recomienda SHA256.|
+|-checksumalgorithm:\<alg>|Especifique el algoritmo para calcular la suma de comprobación del archivo de origen almacenada en el archivo PDB.  Los valores admitidos son: SHA1 (el predeterminado) o SHA256.<br>Debido a problemas de colisión con SHA1, Microsoft recomienda SHA256.|
 
 ## <a name="obsolete-options"></a>Opciones obsoletas
 

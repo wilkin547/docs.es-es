@@ -7,12 +7,12 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: cdcc0a375aa1eca29c024d1e0c9008f337d0c772
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5efe3b7dc600645488816d6f931df57fc236efc9
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167562"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241648"
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Procedimiento Crear archivos o carpetas (Guía de programación de C#)
 Puede crear una carpeta en el equipo mediante programación, crear una subcarpeta, crear un archivo en la subcarpeta y escribir datos en el archivo.  
@@ -62,7 +62,7 @@ Puede crear una carpeta en el equipo mediante programación, crear una subcarpet
   
 - El nombre de la carpeta es solo un carácter de dos puntos, ":" (clase <xref:System.IO.PathTooLongException>).  
   
-## <a name="net-framework-security"></a>Seguridad de .NET Framework  
+## <a name="net-security"></a>Seguridad de .NET  
  En los casos de confiabilidad parcial, es posible que se devuelva una instancia de la clase <xref:System.Security.SecurityException>.  
   
  Si no tiene permiso para crear la carpeta, el ejemplo devuelve una instancia de la clase <xref:System.UnauthorizedAccessException>.  

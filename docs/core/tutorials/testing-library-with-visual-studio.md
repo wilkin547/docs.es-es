@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 79b680022484bb9222b66c3df76bdd5a06de8117
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 48ada77b8422030fd93aa29df1df50a3ae5104fe
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005016"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84283512"
 ---
 # <a name="tutorial-test-a-net-standard-library-with-net-core-in-visual-studio"></a>Tutorial: Prueba de una biblioteca .NET Standard con .NET Core en Visual Studio
 
@@ -109,8 +109,8 @@ Para crear los métodos de prueba:
 
 1. En la ventana de código *UnitTest1.cs* o *UnitTest1.vb*, reemplace el código por el siguiente:
 
-   [!code-csharp[Test#1](~/samples/snippets/csharp/getting_started/with_visual_studio_2017/testlib1.cs)]
-   [!code-vb[Test#1](~/samples/snippets/core/tutorials/vb-library-with-visual-studio/testlib.vb)]
+   :::code language="csharp" source="./snippets/library-with-visual-studio/csharp/StringLibraryTest/UnitTest1.cs":::
+   :::code language="vb" source="./snippets/library-with-visual-studio/vb/StringLibraryTest/UnitTest1.vb":::
 
    La prueba de caracteres en mayúsculas en el método `TestStartsWithUpper` incluye la letra mayúscula griega alfa (U + 0391) y la letra mayúscula cirílica EM (U + 041C). La prueba de caracteres en minúsculas en el método `TestDoesNotStartWithUpper` incluye la letra griega minúscula alfa (U + 03B1) y la letra cirílica minúscula Ghe (U + 0433).
 
@@ -135,7 +135,7 @@ Para crear los métodos de prueba:
 
 ## <a name="handle-test-failures"></a>Administración de errores de prueba
 
-Su serie de pruebas no tuvo errores, pero vamos a cambiarla un poco para que uno de los métodos de prueba produzca un error:
+Si está realizando el desarrollo controlado por pruebas (TDD), escribirá las pruebas y estas generarán un error cuando las ejecute por primera vez. Después, agregará un código a la aplicación para que la prueba se realice correctamente. En este caso, ha creado la prueba después de escribir el código de la aplicación que valida, por lo que no ha podido comprobar si la prueba genera un error. Para asegurarse de que una prueba genera un error cuando quiere que lo haga, agregue un valor no válido a la entrada de prueba.
 
 1. Modifique la matriz `words` en el método `TestDoesNotStartWithUpper` para incluir la cadena "Error". No necesita guardar el archivo porque Visual Studio guarda automáticamente archivos abiertos cuando se crea una solución para ejecutar pruebas.
 

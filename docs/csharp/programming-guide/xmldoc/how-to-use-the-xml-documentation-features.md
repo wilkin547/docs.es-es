@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: e279b13d9216120e25f454faa14dc71ad24c74ef
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b7c5a8a895271f067505496c0d13f98b66a393d9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79157005"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287368"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>Procedimiento para usar las características de la documentación XML
 
@@ -108,28 +108,28 @@ En el ejemplo se genera un archivo *.xml* con el contenido siguiente.
 
 ## <a name="compiling-the-code"></a>Compilación del código
 
-Para compilar el ejemplo, escriba la siguiente línea de comandos:
+Para compilar el ejemplo, escriba el siguiente comando:
 
 `csc XMLsample.cs /doc:XMLsample.xml`
 
-Este comando crea el archivo XML *XMLsample.xml*, que se puede ver en el explorador o mediante el comando TYPE.
+Este comando crea el archivo XML *XMLsample.xml*, que se puede ver en el explorador o mediante el comando `TYPE`.
 
 ## <a name="robust-programming"></a>Programación sólida
 
-La documentación XML empieza con ///. Cuando se crea un proyecto, el asistente agrega automáticamente unas líneas de inicio ///. El procesamiento de estos comentarios tiene algunas restricciones:
+La documentación XML empieza con `///`. Cuando se crea un proyecto, el asistente agrega automáticamente unas líneas de inicio `///`. El procesamiento de estos comentarios tiene algunas restricciones:
 
 - La documentación debe ser XML con formato correcto. Si el XML no tiene el formato correcto, se generará una advertencia y el archivo de documentación incluirá un comentario en el que se indica que se detectó un error.
 
 - Los desarrolladores pueden crear su propio conjunto de etiquetas, Hay un [conjunto recomendado de etiquetas](recommended-tags-for-documentation-comments.md). Algunas de las etiquetas recomendadas tienen significados especiales:
 
-  - La etiqueta \<param> se usa para describir parámetros. Si se usa, el compilador comprueba que el parámetro existe y que todos los parámetros se describen en la documentación. Si se produce un error en la comprobación, el compilador emite una advertencia.
+  - La etiqueta `<param>` se usa para describir parámetros. Si se usa, el compilador comprueba que el parámetro existe y que todos los parámetros se describen en la documentación. Si se produce un error en la comprobación, el compilador emite una advertencia.
 
-  - El atributo `cref` se puede asociar a cualquier etiqueta para proporcionar una referencia a un elemento de código. El compilador comprueba si existe este elemento de código. Si se produce un error en la comprobación, el compilador emite una advertencia. El compilador respeta todas las instrucciones `using` cuando busca un tipo descrito en el atributo `cref`.
+  - El atributo `cref` se puede asociar a cualquier etiqueta para hacer referencia a un elemento de código. El compilador comprueba si existe este elemento de código. Si se produce un error en la comprobación, el compilador emite una advertencia. El compilador respeta todas las instrucciones `using` cuando busca un tipo descrito en el atributo `cref`.
 
-  - IntelliSense usa la etiqueta \<summary> en Visual Studio para mostrar información adicional sobre un tipo o miembro.
+  - IntelliSense usa la etiqueta `<summary>` en Visual Studio para mostrar información adicional sobre un tipo o miembro.
 
     > [!NOTE]
-    > El archivo XML no proporciona información completa sobre los tipos y los miembros (por ejemplo, no contiene información de tipos). Para obtener información completa sobre un tipo o miembro, debe usarse el archivo de documentación con reflexión en el tipo o miembro reales.
+    > El archivo XML no proporciona información completa sobre los tipos y los miembros (por ejemplo, no contiene información de tipos). Para obtener información completa sobre un tipo o miembro, use el archivo de documentación con reflexión en el tipo o miembro reales.
 
 ## <a name="see-also"></a>Vea también
 

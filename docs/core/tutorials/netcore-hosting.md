@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo hospedar el entorno de tiempo de e
 author: mjrousos
 ms.topic: how-to
 ms.date: 12/21/2018
-ms.openlocfilehash: 342a0cec78303f70db3a5b31294be1d465459f55
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 2324b61bcffb686a455fcfd154284a2b78aa746b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83394852"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84283499"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Escritura de un host personalizado de .NET Core para controlar el entorno de tiempo de ejecución de .NET desde el código nativo
 
@@ -115,7 +115,7 @@ Antes de iniciar el entorno de ejecución, es necesario preparar algunas propied
 Algunas propiedades comunes incluyen:
 
 * `TRUSTED_PLATFORM_ASSEMBLIES` Esta es una lista de rutas de acceso de ensamblado (delimitadas por ";" en Windows y ":" en Linux) que el entorno de ejecución puede resolver de forma predeterminada. Algunos hosts tienen manifiestos codificados de forma rígida que enumeran los ensamblados que pueden cargar. Otros colocan cualquier biblioteca en determinadas ubicaciones (junto a *coreclr.dll*, por ejemplo) en esta lista.
-* `APP_PATHS` Esta es una lista de rutas de acceso para explorar un ensamblado si este no puede encontrarse en la lista de ensamblados de plataforma de confianza (TPA). Dado que el host tiene más control sobre los ensamblados que se cargan mediante la lista TPA, es recomendable que los hosts determinen qué ensamblados esperan cargar y los muestren de forma explícita. Pero si es necesario sondear en tiempo de ejecución, esta propiedad puede habilitar ese escenario.
+* `APP_PATHS` Esta es una lista de rutas de acceso para explorar un ensamblado si este no puede encontrarse en la lista de ensamblados de plataforma de confianza (TPA). Dado que el host tiene más control sobre los ensamblados que se cargan mediante la lista TPA, es recomendable que los hosts determinen qué ensamblados esperan cargar y los muestren de forma explícita. Pero si es necesario sondear en tiempo de ejecución, esta propiedad se lo permite.
 * `APP_NI_PATHS` Esta lista es similar a APP_PATHS, excepto que son las rutas de acceso las que se sondean en busca de imágenes nativas.
 * `NATIVE_DLL_SEARCH_DIRECTORIES` Esta propiedad es una lista de rutas de acceso que el cargador debe sondear cuando busca bibliotecas nativas llamadas mediante p/invoke.
 * `PLATFORM_RESOURCE_ROOTS` Esta lista incluye rutas de acceso que se van a explorar para ensamblados satélite de recursos (en subdirectorios específicos de la referencia cultural).
@@ -213,7 +213,7 @@ Después de decidir qué marcas de AppDomain se van a usar, deben definirse sus 
 Las propiedades comunes de AppDomain incluyen:
 
 * `TRUSTED_PLATFORM_ASSEMBLIES` Esta es una lista de rutas de acceso de ensamblado (delimitada por `;` en Windows y `:` en Linux o macOS) cuya carga debe priorizar AppDomain y a las que debe otorgar plena confianza (incluso en dominios de confianza parcial). Esta lista está diseñada para contener ensamblados de "Framework" y otros módulos de confianza, similares a los GAC en escenarios de .NET Framework. Algunos hosts colocarán una biblioteca junto a *coreclr.dll* en esta lista, otros tienen manifiestos codificados de forma rígida que enumeran ensamblados de confianza para sus fines.
-* `APP_PATHS` Esta es una lista de rutas de acceso para explorar un ensamblado si este no puede encontrarse en la lista de ensamblados de plataforma de confianza (TPA). Dado que el host tiene más control sobre los ensamblados que se cargan mediante la lista TPA, es recomendable que los hosts determinen qué ensamblados esperan cargar y los muestren de forma explícita. Pero si es necesario sondear en tiempo de ejecución, esta propiedad puede habilitar ese escenario.
+* `APP_PATHS` Esta es una lista de rutas de acceso para explorar un ensamblado si este no puede encontrarse en la lista de ensamblados de plataforma de confianza (TPA). Dado que el host tiene más control sobre los ensamblados que se cargan mediante la lista TPA, es recomendable que los hosts determinen qué ensamblados esperan cargar y los muestren de forma explícita. Pero si es necesario sondear en tiempo de ejecución, esta propiedad se lo permite.
 * `APP_NI_PATHS` Esta lista es muy similar a APP_PATHS excepto que está diseñada para ser rutas de acceso que se explorarán para imágenes nativas.
 * `NATIVE_DLL_SEARCH_DIRECTORIES` Esta propiedad es una lista de rutas de acceso que el cargador debe explorar cuando busca archivos DLL nativos que se han llamado mediante p/invoke.
 * `PLATFORM_RESOURCE_ROOTS` Esta lista incluye rutas de acceso que se van a explorar para ensamblados satélite de recursos (en subdirectorios específicos de la referencia cultural).

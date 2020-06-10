@@ -2,12 +2,12 @@
 title: Implementación del nivel de aplicación de microservicios mediante la API web
 description: Comprenda los procesos de inserción de dependencias y los patrones de mediador y sus detalles de implementación en la capa de aplicación de la API web.
 ms.date: 01/30/2020
-ms.openlocfilehash: 3efa4939bb8762534af398d4e92361e81e668b85
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: c6e82b610a528b688cb4334bdec01700abbd2a62
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144609"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306934"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementación del nivel de aplicación de microservicios mediante la API web
 
@@ -25,7 +25,7 @@ Vista del Explorador de soluciones del microservicio Ordering.API que muestra la
 
 En ASP.NET Core se incluye un simple [contenedor de IoC integrado](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection) (representado por la interfaz IServiceProvider) que admite la inserción de constructores de forma predeterminada, y ASP.NET hace que determinados servicios estén disponibles a través de DI. En ASP.NET Core se usa el término *servicio* para cualquiera de los tipos que se registran para la inserción mediante DI. Los servicios del contenedor integrado se configuran en el método ConfigureServices de la clase Startup de la aplicación. Las dependencias se implementan en los servicios que un tipo necesita y que se registran en el contenedor IoC.
 
-Normalmente, le interesará insertar dependencias que implementen objetos de infraestructura. Una dependencia muy habitual para insertar es un repositorio. Pero también podría insertar cualquier otra dependencia de infraestructura que pueda tener. Para las implementaciones más sencillas, también podría insertar directamente el objeto de patrón de unidades de trabajo (el objeto DbContext de EF), porque DBContext también es la implementación de los objetos de persistencia de infraestructura.
+Normalmente, le interesará insertar dependencias que implementen objetos de infraestructura. Una dependencia habitual para insertar es un repositorio. Pero también podría insertar cualquier otra dependencia de infraestructura que pueda tener. Para las implementaciones más sencillas, también podría insertar directamente el objeto de patrón de unidades de trabajo (el objeto DbContext de EF), porque DBContext también es la implementación de los objetos de persistencia de infraestructura.
 
 En el ejemplo siguiente, puede ver cómo .NET Core inserta los objetos de repositorio necesarios a través del constructor. La clase es un controlador de comandos, que se explica en la sección siguiente.
 
@@ -477,7 +477,7 @@ En la revisión de esta guía, Jimmy Bogard explica otra buena razón para usar 
 
 > Creo que aquí valdría la pena mencionar las pruebas: proporcionan una ventana coherente al comportamiento del sistema. Solicitud de entrada, respuesta de salida. Hemos comprobado que es un aspecto muy valioso a la hora de generar pruebas que se comporten de forma coherente.
 
-En primer lugar, veremos un controlador WebAPI de ejemplo donde se usaría realmente el objeto de mediador. Si no se usara el objeto de mediador, sería necesario insertar todas las dependencias para ese controlador, elementos como un objeto de registrador y otros. Por tanto, el constructor sería bastante complicado. Por otra parte, si se usa el objeto de mediador, el constructor del controlador puede ser mucho más sencillo, con solo algunas dependencias en lugar de muchas si hubiera una por cada operación transversal, como en el ejemplo siguiente:
+En primer lugar, veremos un controlador WebAPI de ejemplo donde se usaría realmente el objeto de mediador. Si no se usara el objeto de mediador, sería necesario insertar todas las dependencias para ese controlador, elementos como un objeto de registrador y otros. Por tanto, el constructor sería complicado. Por otra parte, si se usa el objeto de mediador, el constructor del controlador puede ser mucho más sencillo, con solo algunas dependencias en lugar de muchas si hubiera una por cada operación transversal, como en el ejemplo siguiente:
 
 ```csharp
 public class MyMicroserviceController : Controller
@@ -526,9 +526,9 @@ var requestCreateOrder = new IdentifiedCommand<CreateOrderCommand,bool>(createOr
 result = await _mediator.Send(requestCreateOrder);
 ```
 
-Pero este caso también es un poco más avanzado porque también se implementan comandos idempotentes. El proceso CreateOrderCommand debe ser idempotente, por lo que si el mismo mensaje procede duplicado a través de la red, por cualquier motivo, como un reintento, el mismo pedido se procesará una sola vez.
+Sin embargo, este caso también es ligeramente más avanzado porque también se implementan comandos idempotentes. El proceso CreateOrderCommand debe ser idempotente, por lo que si el mismo mensaje procede duplicado a través de la red, por cualquier motivo, como un reintento, el mismo pedido se procesará una sola vez.
 
-Esto se implementa mediante la encapsulación del comando de negocio (en este caso CreateOrderCommand) y su inserción en un IdentifiedCommand genérico del que se realiza el seguimiento con un identificador de todos los mensajes que lleguen a través de la red que tienen que ser idempotentes.
+Esto se implementa mediante la encapsulación del comando de negocio (en este caso, CreateOrderCommand) y su inserción en un IdentifiedCommand genérico, cuyo seguimiento se realiza a través de un identificador de todos los mensajes que lleguen a través de la red que tienen que ser idempotentes.
 
 En el código siguiente, puede ver que el IdentifiedCommand no es más que un DTO con un identificador junto con el objeto de comando de negocio insertado.
 
@@ -592,7 +592,7 @@ public class IdentifiedCommandHandler<T, R> :
 
 Dado que IdentifiedCommand actúa como sobre de un comando de negocios, cuando el comando de negocios se debe procesar porque no es un identificador repetido, toma ese comando de negocios interno y lo vuelve a enviar al mediador, como se muestra en la última parte del código anterior al ejecutar `_mediator.Send(message.Command)` desde [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs).
 
-Al hacerlo, se vincula y ejecuta el controlador de comandos de negocios, en este caso, [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs) que ejecuta transacciones en la base de datos Ordering, como se muestra en el código siguiente.
+Al hacerlo, se vincula y ejecuta el controlador de comandos de negocios, en este caso, [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs), que ejecuta transacciones con la base de datos Ordering, como se muestra en el código siguiente.
 
 ```csharp
 // CreateOrderCommandHandler.cs

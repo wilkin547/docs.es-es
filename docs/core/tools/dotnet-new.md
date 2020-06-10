@@ -2,12 +2,12 @@
 title: Comando dotnet new
 description: El comando dotnet new crea proyectos de .NET Core basados en la plantilla especificada.
 ms.date: 04/10/2020
-ms.openlocfilehash: 1544f519f2a5f6a1a6e042c1db720eff45f5d98c
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 39301ad95761848b60b45cb5c18ede937f70c32c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442246"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84283980"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -75,6 +75,7 @@ El comando llama al [motor de plantillas](https://github.com/dotnet/templating) 
 | MVC ViewImports                              | [viewimports](#namespace)       | [C#]         | Web/ASP.NET                           | 2.0        |
 | MVC ViewStart                                | `viewstart`                     | [C#]         | Web/ASP.NET                           | 2.0        |
 | Aplicación de servidor Blazor                            | [blazorserver](#blazorserver)   | [C#]         | Web/Blazor                            | 3.0        |
+| Aplicación WebAssembly de Blazor                       | `blazorwasm`                    | [C#]         | Web/Blazor/WebAssembly                            | 3.1.300    |
 | Vacío de ASP.NET Core                           | [web](#web)                     | [C#], F#     | Web/Vacío                             | 1.0        |
 | Aplicación web de ASP.NET Core (Model-View-Controller) | [mvc](#web-options)             | [C#], F#     | Web/MVC                               | 1.0        |
 | Aplicación web de ASP.NET Core                         | [webapp, razor](#web-options)   | [C#]         | Web/MVC/Razor Pages                   | 2.2, 2.0   |

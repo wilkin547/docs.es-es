@@ -1,5 +1,6 @@
 ---
-title: 'Cómo: Rellenar un número con ceros iniciales'
+title: Procedimiento para rellenar un número con ceros a la izquierda
+description: Aprenda a rellenar un número con ceros iniciales. Agregue ceros a la izquierda a números enteros o valores numéricos hasta una longitud total concreta o un número específico de ceros a la izquierda.
 ms.date: 02/25/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,16 +12,16 @@ helpviewer_keywords:
 - number formatting [.NET Framework]
 - numbers [.NET Framework], format strings
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
-ms.openlocfilehash: bc3c4b75c484274c214141d8fbfcf8ac592b0b99
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6ef0ddb37f1bc73254aa639d7c018ec6a01abd9b
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73131974"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447191"
 ---
-# <a name="how-to-pad-a-number-with-leading-zeros"></a>Cómo: Rellenar un número con ceros iniciales
+# <a name="how-to-pad-a-number-with-leading-zeros"></a>Procedimiento para rellenar un número con ceros a la izquierda
 
-Si quiere agregar ceros a la izquierda de un entero, puede hacerlo mediante la [cadena de formato numérico estándar](../../../docs/standard/base-types/standard-numeric-format-strings.md) "D" con un especificador de precisión. Para agregar ceros a la izquierda tanto de enteros como de números de punto flotante, use una [cadena de formato numérico personalizada](../../../docs/standard/base-types/custom-numeric-format-strings.md). En este artículo se explica cómo usar ambos métodos para rellenar un número con ceros a la izquierda.
+Si quiere agregar ceros a la izquierda de un entero, puede hacerlo mediante la [cadena de formato numérico estándar](standard-numeric-format-strings.md) "D" con un especificador de precisión. Para agregar ceros a la izquierda tanto de enteros como de números de punto flotante, use una [cadena de formato numérico personalizada](custom-numeric-format-strings.md). En este artículo se explica cómo usar ambos métodos para rellenar un número con ceros a la izquierda.
 
 ## <a name="to-pad-an-integer-with-leading-zeros-to-a-specific-length"></a>Para rellenar un entero con ceros a la izquierda hasta una longitud concreta
 
@@ -32,7 +33,7 @@ Si quiere agregar ceros a la izquierda de un entero, puede hacerlo mediante la [
 
     - Para mostrar el entero como valor hexadecimal, llame a su método `ToString(String)` y pase la cadena "X*n*" como valor del parámetro format, donde *n* representa la longitud mínima de la cadena.
 
-También puede usar la cadena de formato en una cadena interpolada en ambos, [C#](../../csharp/language-reference/tokens/interpolated.md) y [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md), o puede llamar a un método, como <xref:System.String.Format%2A?displayProperty=nameWithType> o <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, que usa [formato compuesto](../../../docs/standard/base-types/composite-formatting.md).
+También puede usar la cadena de formato en una cadena interpolada en ambos, [C#](../../csharp/language-reference/tokens/interpolated.md) y [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md), o puede llamar a un método, como <xref:System.String.Format%2A?displayProperty=nameWithType> o <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, que usa [formato compuesto](composite-formatting.md).
 
 En el ejemplo siguiente se aplica formato a varios valores enteros con ceros a la izquierda de modo que la longitud mínima total del número con formato sea de ocho caracteres.
 
@@ -102,6 +103,6 @@ En el ejemplo siguiente se rellenan dos valores <xref:System.Double> con cinco c
 
 ## <a name="see-also"></a>Vea también
 
-- [Cadenas con formato numérico personalizado](../../../docs/standard/base-types/custom-numeric-format-strings.md)
-- [Cadenas con formato numérico estándar](../../../docs/standard/base-types/standard-numeric-format-strings.md)
-- [Formatos compuestos](../../../docs/standard/base-types/composite-formatting.md)
+- [Cadenas con formato numérico personalizado](custom-numeric-format-strings.md)
+- [Cadenas con formato numérico estándar](standard-numeric-format-strings.md)
+- [Formatos compuestos](composite-formatting.md)

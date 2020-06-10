@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: f09d9891f79eda44c428d5509e341a54ad3a3eee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 46d6881955252b21de6a92e25d65d1f76c8ec06c
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79157109"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241921"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Comparaciones de igualdad (guía de programación de C#)
 
@@ -50,11 +50,11 @@ En cambio, no hay ningún requisito que exija que la equivalencia se base en tod
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Título|Description|  
+|Title|Descripción|  
 |-----------|-----------------|  
 |[Procedimiento Probar la igualdad de referencia (Identidad)](./how-to-test-for-reference-equality-identity.md)|Describe cómo determinar si dos variables presentan igualdad de referencia.|  
 |[Procedimiento Definir la igualdad de valores para un tipo](./how-to-define-value-equality-for-a-type.md)|Describe cómo proporcionar una definición personalizada de igualdad de valores para un tipo.|  
-|[Guía de programación de C#](../index.md)|Proporciona vínculos a información detallada sobre importantes características del lenguaje C# y características que están disponibles para C# a través de .NET Framework.|  
+|[Guía de programación de C#](../index.md)|Proporciona vínculos a información detallada sobre importantes características del lenguaje C# y características que están disponibles para C# a través de .NET.|  
 |[Tipos](../types/index.md)|Proporciona información sobre el sistema de tipos de C# y vínculos a información adicional.|  
   
 ## <a name="see-also"></a>Vea también

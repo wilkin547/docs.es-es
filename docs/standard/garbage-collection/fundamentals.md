@@ -11,12 +11,12 @@ helpviewer_keywords:
 - garbage collection, workstation
 - garbage collection, managed heap
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
-ms.openlocfilehash: 1fdf7fcd61fb4bf9e8e0cbfe28842208f6eadd00
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: d59f368f21964c07d371df604f0728fa6ca8ac00
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102442"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84307038"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Fundamentos de la recolección de elementos no utilizados
 
@@ -122,7 +122,7 @@ La recolección de elementos no utilizados se produce principalmente con la recl
 
 - **Generación 0**. Es la generación más joven y contiene los objetos de corta duración. Un ejemplo de objeto de corta duración es una variable temporal. La recolección de elementos no utilizados se produce con mayor frecuencia en esta generación.
 
-  Los objetos recién asignados constituyen una nueva generación de objetos y son colecciones de la generación 0, implícitamente. Sin embargo, si son objetos grandes, van al montón de objetos grandes en una colección de la generación 2.
+  Los objetos recién asignados constituyen una nueva generación de objetos y son colecciones de la generación 0, implícitamente. Sin embargo, si son objetos de gran tamaño, pasan al montón de objetos grandes (LOH), al que en ocasiones se denomina *generación 3*. La generación 3 es una generación física que se recopila de forma lógica como elemento de la generación 2.
 
   La mayoría de los objetos se reclaman para la recolección de elementos no utilizados en la generación 0 y no sobreviven a la generación siguiente.
   
@@ -137,6 +137,8 @@ La recolección de elementos no utilizados se produce principalmente con la recl
 - **Generación 2** Esta generación contiene los objetos de larga duración. Un ejemplo de objeto de larga duración es un objeto de una aplicación de servidor que contiene datos estáticos que están activos mientras dura el proceso.
 
   Los objetos de la generación 2 que sobreviven a una recolección se mantienen en esta generación hasta que en una recolección posterior se determina que no se pueden alcanzar.
+  
+  Los objetos del montón de objetos grandes (a veces denominado *generación 3*) también se recopilan en la generación 2.
 
 Las recolecciones de elementos no utilizados se producen en generaciones concretas según lo permitan las condiciones. La recolección de una generación significa recolectar los objetos de esa generación y de todas las generaciones anteriores. Una recolección de elementos no utilizados de la generación 2 se denomina también recolección de elementos no utilizados completa, porque reclama los objetos de todas las generaciones (es decir, todos los objetos del montón administrado).
 
@@ -160,10 +162,10 @@ El tamaño del segmento efímero varía según si un sistema es de 32 bits o de
 
 |GC de servidor/estación de trabajo|32 bits|64 bits|
 |-|-------------|-------------|
-|GC de estación de trabajo|16 MB|256 MB|
-|GC de servidor|64 MB|4 GB|
-|GC de servidor con > 4 CPU lógicas|32 MB|2 GB|
-|GC de servidor con > 8 CPU lógicas|16 MB|1 GB|
+|Estación de trabajo de catálogo global|16 MB|256 MB|
+|Servidor de catálogo global|64 MB|4 GB|
+|Servidor de catálogo global con > 4 CPU lógicas|32 MB|2 GB|
+|Servidor de catálogo global con > 8 CPU lógicas|16 MB|1 GB|
 
 El segmento efímero puede incluir objetos de la generación 2. Los objetos de la generación 2 pueden utilizar varios segmentos (tantos como necesite el proceso y la memoria permita).
 
@@ -198,7 +200,7 @@ Antes de que iniciarse una recolección de elementos no utilizados, todos los su
 
 En la ilustración siguiente se muestra un subproceso que desencadena una recolección de elementos no utilizados, lo que provoca la suspensión de los demás subprocesos.
 
-![Cuando un subproceso activa una recolección de elementos no utilizados](./media/gc-triggered.png)
+![Cuando un subproceso activa una recolección de elementos no utilizados](media/gc-triggered.png)
 
 ## <a name="unmanaged-resources"></a>Recursos no administrados
 

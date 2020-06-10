@@ -3,12 +3,12 @@ title: Novedades de C# 7.0 | Guía de C#
 description: Obtenga información general de las nuevas características de la versión 7.0 del lenguaje C#.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 1291de95b88b3de16fb94fb376fb4153dd4a5862
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: e78d680e19709bf3dd854531d5d9f6b7d6464f49
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102676"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84392254"
 ---
 # <a name="whats-new-in-c-70"></a>Novedades de C# 7.0
 

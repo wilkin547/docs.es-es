@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: 910fa4af1b4e45ce627b589a06910dc168490047
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6d78ec83fec72b30f5cee398af1816d0cac35886
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712148"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241869"
 ---
 # <a name="hello-world----your-first-program"></a>Hola mundo, su primer programa
 
@@ -114,7 +114,7 @@ Para obtener más información sobre cómo usar los argumentos de la línea de c
 
 ## <a name="input-and-output"></a>Entrada y salida
 
-Los programas de C# suelen usar los servicios de entrada y salida proporcionados por la biblioteca en tiempo de ejecución de .NET Framework. La instrucción `System.Console.WriteLine("Hello World!");` utiliza el método <xref:System.Console.WriteLine%2A>. Este es uno de los métodos de salida de la clase <xref:System.Console> en la biblioteca de tiempo de ejecución. Muestra el parámetro de cadena en la secuencia de salida estándar, seguida de una nueva línea. Hay otros métodos <xref:System.Console> disponibles para las distintas operaciones de entrada y salida. Si incluye la directiva `using System;` al inicio del programa, puede usar directamente las clases y los métodos <xref:System> sin calificarlos totalmente. Por ejemplo, puede llamar a `Console.WriteLine` en vez de llamar a `System.Console.WriteLine`:
+Los programas de C# suelen usar los servicios de entrada y salida proporcionados por la biblioteca en tiempo de ejecución de .NET. La instrucción `System.Console.WriteLine("Hello World!");` utiliza el método <xref:System.Console.WriteLine%2A>. Este es uno de los métodos de salida de la clase <xref:System.Console> en la biblioteca de tiempo de ejecución. Muestra el parámetro de cadena en la secuencia de salida estándar, seguida de una nueva línea. Hay otros métodos <xref:System.Console> disponibles para las distintas operaciones de entrada y salida. Si incluye la directiva `using System;` al inicio del programa, puede usar directamente las clases y los métodos <xref:System> sin calificarlos totalmente. Por ejemplo, puede llamar a `Console.WriteLine` en vez de llamar a `System.Console.WriteLine`:
 
 [!code-csharp[csProgGuide#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/using.cs#1)]
 

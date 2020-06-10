@@ -1,32 +1,32 @@
 ---
-title: 'Procedimiento Publicar eventos que cumplan las directrices de .NET Framework: Guía de programación de C#'
+title: Publicación de eventos que cumplan las directrices de .NET Framework (guía de programación de C#)
 ms.date: 05/26/2020
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: 137e52b80703491a4528a3eddc7fa12f9dce6f52
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: df2f643f867b93b74d04d8fbd673df545c28938e
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144804"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84240751"
 ---
-# <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>Procedimiento Publicar eventos que cumplan las directrices de .NET Framework (Guía de programación de C#)
+# <a name="how-to-publish-events-that-conform-to-net-guidelines-c-programming-guide"></a>Procedimiento Publicar eventos que cumplan las directrices de .NET (guía de programación de C#)
 
-En el siguiente procedimiento se muestra cómo agregar eventos que cumplan el patrón de .NET Framework estándar para las clases y los structs. Todos los eventos de la biblioteca de clases de .NET Framework se basan en el delegado <xref:System.EventHandler>, que se define de la siguiente manera:
+En el siguiente procedimiento se muestra cómo agregar eventos que cumplan el patrón de .NET estándar a las clases y structs. Todos los eventos de la biblioteca de clases de .NET Framework se basan en el delegado <xref:System.EventHandler>, que se define de la siguiente manera:
 
 ```csharp
 public delegate void EventHandler(object sender, EventArgs e);
 ```
 
 > [!NOTE]
-> .NET Framework 2.0 incluye una versión genérica de este delegado, <xref:System.EventHandler%601>. En los siguientes ejemplos se muestra cómo usar las dos versiones.
+> .NET Framework 2.0 incluye una versión genérica de este delegado, <xref:System.EventHandler%601>. En los siguientes ejemplos se muestra cómo usar las dos versiones.
 
-Aunque los eventos de las clases que defina se pueden basar en cualquier tipo de delegado válido, incluidos los delegados que devuelven un valor, por lo general se recomienda basar los eventos en el patrón de .NET Framework mediante <xref:System.EventHandler>, como se muestra en el ejemplo siguiente.
+Aunque los eventos de las clases que defina se pueden basar en cualquier tipo de delegado válido, incluidos los delegados que devuelven un valor, por lo general se recomienda que base los eventos en el patrón de .NET mediante <xref:System.EventHandler>, como se muestra en el ejemplo siguiente.
 
 El nombre `EventHandler` puede dar lugar a un poco de confusión, ya que realmente no controla el evento. <xref:System.EventHandler> y <xref:System.EventHandler%601> genérico son tipos de delegado. Un método o una expresión lambda cuya firma coincide con la definición de delegado es el *controlador de eventos* y se invocará cuando se genere el evento.
 
-### <a name="to-publish-events-based-on-the-eventhandler-pattern"></a>Para publicar eventos basados en el patrón EventHandler
+## <a name="publish-events-based-on-the-eventhandler-pattern"></a>Publicación de eventos basados en el patrón EventHandler
 
 1. (Omita este paso y vaya al paso 3a si no tiene que enviar datos personalizados con el evento). Declare la clase de los datos personalizados en un ámbito que sea visible para las clases de publicador y suscriptor. Luego, agregue los miembros necesarios para almacenar los datos de eventos personalizados. En este ejemplo se devuelve una cadena simple.
 

@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <summary> C# XML tag
 - summary C# XML tag
 ms.assetid: b4c43d92-2067-4eac-a59a-d32f5248c08b
-ms.openlocfilehash: 1ae3c17bef69a52b4d5852e09284929dc328bf8a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e1a8c9d61e61eae7ba6bf7f0c1b9d2a8dc8a4171
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789673"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287212"
 ---
-# <a name="summary-c-programming-guide"></a>\<summary> (Guía de programación de C#)
+# <a name="summary-c-programming-guide"></a>\<summary> (guía de programación de C#)
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -31,9 +31,9 @@ ms.locfileid: "76789673"
 
 ## <a name="remarks"></a>Comentarios
 
-La etiqueta \<summary> debe usarse para describir un tipo o un miembro de tipo. Use [\<remarks>](./remarks.md) para agregar información adicional a una descripción de tipo. Use el [atributo cref](./cref-attribute.md) para permitir que herramientas de documentación como [DocFX](https://dotnet.github.io/docfx/) y [Sandcastle](https://github.com/EWSoftware/SHFB) creen hipervínculos internos a las páginas de documentación de los elementos de código.
+La etiqueta `<summary>` debe usarse para describir un tipo o un miembro de tipo. Use [\<remarks>](./remarks.md) para agregar información adicional a una descripción de tipo. Use el [atributo cref](./cref-attribute.md) para permitir que herramientas de documentación como [DocFX](https://dotnet.github.io/docfx/) y [Sandcastle](https://github.com/EWSoftware/SHFB) creen hipervínculos internos a las páginas de documentación de los elementos de código.
 
-El texto de la etiqueta \<summary> es la única fuente de información sobre el tipo en IntelliSense y también se muestra en la ventana Examinador de objetos.
+El texto de la etiqueta `<summary>` es la única fuente de información sobre el tipo en IntelliSense y también se muestra en la ventana Examinador de objetos.
 
 Compile con [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación de un archivo. Para crear la documentación final basada en el archivo generado por el compilador, puede crear una herramienta personalizada o usar una herramienta como [DocFX](https://dotnet.github.io/docfx/) o [Sandcastle](https://github.com/EWSoftware/SHFB).
 

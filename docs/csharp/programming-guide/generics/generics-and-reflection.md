@@ -5,21 +5,21 @@ helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-ms.openlocfilehash: 4893bf5ebe73988bb6535cc2a85591ff0dde6ebd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 672a0bebdc60eff00acf9b1bdbecc25052f7bc16
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712174"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241687"
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>Genéricos y reflexión (Guía de programación de C#)
-Dado que Common Language Runtime (CLR) tiene acceso a la información de tipos genéricos en tiempo de ejecución, se puede usar la reflexión para obtener información sobre los tipos genéricos de la misma manera que para los tipos no genéricos. Para obtener más información, vea [Generics in the Run Time](./generics-in-the-run-time.md) (Genéricos en el tiempo de ejecución).  
+Dado que Common Language Runtime (CLR) tiene acceso a la información de tipos genéricos en tiempo de ejecución, se puede usar la reflexión para obtener información sobre los tipos genéricos de la misma manera que para los tipos no genéricos. Para obtener más información, vea [Genéricos en el motor en tiempo de ejecución](./generics-in-the-run-time.md).  
   
- En .NET Framework 2.0 se agregan nuevos miembros a la clase <xref:System.Type> para habilitar la información de tiempo de ejecución para tipos genéricos. Vea la documentación sobre estas clases para obtener más información sobre cómo usar estos métodos y propiedades. El espacio de nombres <xref:System.Reflection.Emit> también contiene los miembros nuevos que admiten genéricos. Vea [Cómo: Definir un tipo genérico con emisión de reflexión](../../../framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md).  
+ En .NET Framework 2.0 se agregan nuevos miembros a la clase <xref:System.Type> para habilitar la información de tiempo de ejecución para tipos genéricos. Vea la documentación sobre estas clases para obtener más información sobre cómo usar estos métodos y propiedades. El espacio de nombres <xref:System.Reflection.Emit> también contiene los miembros nuevos que admiten genéricos. Vea [Cómo: Definir un tipo genérico con emisión de reflexión](../../../framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md).  
   
  Para obtener una lista de las condiciones invariables para los términos usados en la reflexión genérica, vea los comentarios de la propiedad <xref:System.Type.IsGenericType%2A>.  
   
-|Nombre de miembro System.Type|Description|  
+|Nombre de miembro System.Type|Descripción|  
 |-----------------------------|-----------------|  
 |<xref:System.Type.IsGenericType%2A>|Devuelve true si un tipo es genérico.|  
 |<xref:System.Type.GetGenericArguments%2A>|Devuelve una matriz de objetos `Type` que representan los argumentos de tipo proporcionados para un tipo construido, o los parámetros de tipo de una definición de tipo genérico.|  
@@ -35,7 +35,7 @@ Dado que Common Language Runtime (CLR) tiene acceso a la información de tipos g
   
  Además, los miembros de la clase <xref:System.Reflection.MethodInfo> habilitan la información en tiempo de ejecución para métodos genéricos. Para obtener una lista de las condiciones invariables para los términos usados para reflejarse en métodos genéricos, vea los comentarios de la propiedad <xref:System.Reflection.MethodBase.IsGenericMethod%2A>.  
   
-|Nombre de miembro System.Reflection.MemberInfo|Description|  
+|Nombre de miembro System.Reflection.MemberInfo|Descripción|  
 |----------------------------------------------|-----------------|  
 |<xref:System.Reflection.MethodBase.IsGenericMethod%2A>|Devuelve true si un método es genérico.|  
 |<xref:System.Reflection.MethodInfo.GetGenericArguments%2A>|Devuelve una matriz de objetos Type que representan los argumentos de tipo de un método genérico construido o los parámetros de tipo de una definición de método genérico.|  
@@ -48,5 +48,5 @@ Dado que Common Language Runtime (CLR) tiene acceso a la información de tipos g
 
 - [Guía de programación de C#](../index.md)
 - [Genéricos](./index.md)
-- [Reflection and Generic Types](../../../framework/reflection-and-codedom/reflection-and-generic-types.md) (Reflexión y tipos genéricos)
+- [Reflexión y tipos genéricos](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)
 - [Genéricos](../../../standard/generics/index.md)

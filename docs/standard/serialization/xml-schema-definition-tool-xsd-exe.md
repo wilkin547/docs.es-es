@@ -3,12 +3,12 @@ title: XML Schema Definition Tool (Xsd.exe)
 description: El Generador de serializador XML crea un ensamblado de serialización XML para los tipos de un ensamblado especificado, lo que mejora el rendimiento de inicio de XmlSerializer.
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: 9b2be0b0b267973bd25ffd021dec18a7b9bcadec
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 0275ecfebd427feb104013024654d4a0bc98748a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380052"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84288984"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 
@@ -63,7 +63,7 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 |------------|-----------------|
 |**/e\[lement\]:** _element_|Especifica el elemento del esquema para el que se genera código. De forma predeterminada se escriben todos los elementos. Este argumento se puede especificar varias veces.|
 |**/enableDataBinding**|Implementa la interfaz <xref:System.ComponentModel.INotifyPropertyChanged> en todos los tipos generados para habilitar el enlace de datos. La forma abreviada es `/edb`.|
-|**/enableLinqDataSet**|(Forma abreviada: `/eld`). Especifica que el Conjunto de datos generado se puede consultar utilizando LINQ a Conjunto de datos. Esta opción se utiliza cuando también se especifica la opción /dataset. Para más información, vea [LINQ to DataSet Overview (Información general sobre LINQ to DataSet)](../../../docs/framework/data/adonet/linq-to-dataset-overview.md) y [Querying Typed DataSets (Consultar objetos DataSet con tipo)](../../../docs/framework/data/adonet/querying-typed-datasets.md). Para obtener información general sobre cómo usar LINQ, vea [Language Integrated Query (LINQ) (C#)](../../csharp/programming-guide/concepts/linq/index.md) o [Language Integrated Query (LINQ) (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/index.md).|
+|**/enableLinqDataSet**|(Forma abreviada: `/eld`). Especifica que el Conjunto de datos generado se puede consultar utilizando LINQ a Conjunto de datos. Esta opción se utiliza cuando también se especifica la opción /dataset. Para más información, vea [LINQ to DataSet Overview (Información general sobre LINQ to DataSet)](../../framework/data/adonet/linq-to-dataset-overview.md) y [Querying Typed DataSets (Consultar objetos DataSet con tipo)](../../framework/data/adonet/querying-typed-datasets.md). Para obtener información general sobre cómo usar LINQ, vea [Language Integrated Query (LINQ) (C#)](../../csharp/programming-guide/concepts/linq/index.md) o [Language Integrated Query (LINQ) (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/index.md).|
 |**/f\[ields\]**|Genera campos en lugar de propiedades. De manera predeterminada, se generan propiedades.|
 |**/l\[anguage\]:** _language_|Especifica el lenguaje de programación que se utiliza. Se puede elegir entre `CS` (C#, que es el valor predeterminado), `VB` (Visual Basic), `JS` (JScript) o `VJS` (Visual J#). También se puede especificar un nombre completo para una clase que implemente <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>.|
 |**/n\[amespace\]:** _namespace_|Especifica el espacio de nombres del motor en tiempo de ejecución para los tipos generados. El espacio de nombres predeterminado es `Schemas`.|
@@ -233,9 +233,9 @@ xsd myAssembly.dll
 
 - <xref:System.Data.DataSet>
 - <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>
-- [Herramientas](../../../docs/framework/tools/index.md)
-- [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-- [Información general de LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)
-- [Consultar objetos DataSet con tipo](../../../docs/framework/data/adonet/querying-typed-datasets.md)
+- [Herramientas](../../framework/tools/index.md)
+- [Símbolos del sistema](../../framework/tools/developer-command-prompt-for-vs.md)
+- [Información general de LINQ to DataSet](../../framework/data/adonet/linq-to-dataset-overview.md)
+- [Consultar objetos DataSet con tipo](../../framework/data/adonet/querying-typed-datasets.md)
 - [LINQ (Language-Integrated Query) (C#)](../../csharp/programming-guide/concepts/linq/index.md)
 - [LINQ (Language-Integrated Query) (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/index.md)

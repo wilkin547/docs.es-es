@@ -1,15 +1,15 @@
 ---
 title: using (Instrucción, Referencia de C#)
-ms.date: 04/07/2020
+ms.date: 05/29/2020
 helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
-ms.openlocfilehash: 3c479faeeb66865b8c368edba881429a7cb956ec
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: b889d2fcbdf854dbe8948744810f9b74e9f0dac2
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199682"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84307051"
 ---
 # <a name="using-statement-c-reference"></a>using (Instrucción, Referencia de C#)
 
@@ -29,7 +29,7 @@ A partir de C# 8.0, puede usar la siguiente sintaxis alternativa para la instru
 
 <xref:System.IO.File> y <xref:System.Drawing.Font> son ejemplos de tipos administrados que acceden a recursos no administrados (en este caso, identificadores de archivo y contextos de dispositivo). Hay muchos otros tipos de recursos no administrados y tipos de la biblioteca de clases que los encapsulan. Todos estos tipos deben implementar la interfaz <xref:System.IDisposable> o la interfaz <xref:System.IAsyncDisposable>.
 
-Cuando la duración de un objeto `IDisposable` se limita a un único método, debe declarar y crear instancias del mismo en la instrucción `using`. La instrucción `using` llama al método <xref:System.IDisposable.Dispose%2A> del objeto de forma correcta y (cuando se usa tal y como se muestra anteriormente) también hace que el propio objeto salga del ámbito en cuanto se llame a <xref:System.IDisposable.Dispose%2A>. Dentro del bloque `using`, el objeto es de solo lectura y no se puede modificar ni reasignar. Si el objeto implementa `IAsyncDisposable` en lugar de `IDisposable`, la instrucción `using` llama al objeto <xref:System.IAsyncDisposable.DisposeAsync%2A> y `awaits` al objeto <xref:System.Threading.Tasks.Task> devuelto.
+Cuando la duración de un objeto `IDisposable` se limita a un único método, debe declarar y crear instancias del mismo en la instrucción `using`. La instrucción `using` llama al método <xref:System.IDisposable.Dispose%2A> del objeto de forma correcta y (cuando se usa tal y como se muestra anteriormente) también hace que el propio objeto salga del ámbito en cuanto se llame a <xref:System.IDisposable.Dispose%2A>. Dentro del bloque `using`, el objeto es de solo lectura y no se puede modificar ni reasignar. Si el objeto implementa `IAsyncDisposable` en lugar de `IDisposable`, la instrucción `using` llama al objeto <xref:System.IAsyncDisposable.DisposeAsync%2A> y `awaits` al objeto <xref:System.Threading.Tasks.ValueTask> devuelto. Para obtener más información sobre <xref:System.IAsyncDisposable>, vea [Implementación de un método DisposeAsync](../../../standard/garbage-collection/implementing-disposeasync.md).
 
 La instrucción `using` asegura que se llama al método <xref:System.IDisposable.Dispose%2A> (o <xref:System.IAsyncDisposable.DisposeAsync%2A>) aunque se produzca una excepción en el bloque `using`. Puede obtener el mismo resultado si coloca el objeto dentro de un bloque `try` y llama a <xref:System.IDisposable.Dispose%2A> (o <xref:System.IAsyncDisposable.DisposeAsync%2A>) en un bloque `finally`; de hecho, es así como el compilador traduce la instrucción `using`. El ejemplo de código anterior se extiende al siguiente código en tiempo de compilación (tenga en cuenta las llaves adicionales para crear el ámbito limitado del objeto):
 

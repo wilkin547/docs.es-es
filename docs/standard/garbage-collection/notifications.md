@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - garbage collection, notifications
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
-ms.openlocfilehash: d5646c4969c95350ab4cd63b16f6f99ffba3a4ec
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 389e851782edb82578c216951be440070b92723c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73131532"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286007"
 ---
 # <a name="garbage-collection-notifications"></a>Notificaciones de recolección de elementos no utilizados
 Hay situaciones en que una colección de elementos no utilizados completa (es decir, una colección de generación 2) de Common Language Runtime puede afectar negativamente al rendimiento. Esto puede ser un problema especialmente con servidores que procesan grandes volúmenes de solicitudes; en este caso, una recolección grande de elementos no utilizados puede causar un tiempo de espera en la solicitud. Para evitar una recolección grande durante un período crítico, puede recibir una notificación de la proximidad de una recolección grande de elementos no utilizados y adoptar las medidas pertinentes para redirigir la carga de trabajo a otra instancia del servidor. También puede incluir una recolección por su cuenta, siempre que la instancia de servidor actual no necesite procesar solicitudes.  
@@ -22,7 +22,7 @@ Hay situaciones en que una colección de elementos no utilizados completa (es de
  El método <xref:System.GC.RegisterForFullGCNotification%2A> registra una notificación que se genera si el tiempo de ejecución detecta que una recolección de elementos no utilizados completa está próxima. Esta notificación consta de dos partes: cuando se está aproximando la recolección de elementos no utilizados completa y cuando finaliza la recolección de elementos no utilizados completa.  
   
 > [!WARNING]
-> Solo las recolecciones de elementos no utilizados bloqueadas generarán notificaciones. Cuando el elemento de configuración [\<gcConcurrent>](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) está habilitado, las recolecciones de elementos no utilizados en segundo plano no generarán notificaciones.  
+> Solo las recolecciones de elementos no utilizados bloqueadas generarán notificaciones. Cuando el elemento de configuración [\<gcConcurrent>](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) está habilitado, las recolecciones de elementos no utilizados en segundo plano no generarán notificaciones.  
   
  Para determinar cuándo se ha generado una notificación, use los métodos <xref:System.GC.WaitForFullGCApproach%2A> y <xref:System.GC.WaitForFullGCComplete%2A>. Por lo general, utilice estos métodos en un bucle `while` para obtener continuamente una enumeración <xref:System.GCNotificationStatus> que muestra el estado de la notificación. Si el valor es <xref:System.GCNotificationStatus.Succeeded>, puede hacer lo siguiente:  
   
@@ -122,4 +122,4 @@ Hay situaciones en que una colección de elementos no utilizados completa (es de
   
 ## <a name="see-also"></a>Vea también
 
-- [Recolección de elementos no utilizados](../../../docs/standard/garbage-collection/index.md)
+- [Recolección de elementos no utilizados](index.md)

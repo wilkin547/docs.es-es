@@ -6,17 +6,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 88373fe2-4a6b-44f9-8a62-8a3e348e3a46
-ms.openlocfilehash: 73a432db9a3fcb6587184e27e6dfe9ba49010e92
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: eec5d6588d907e2d12b588ab3bfe743d6d1eaff9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709613"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84281614"
 ---
 # <a name="xsltransform-class-implements-the-xslt-processor"></a>La clase XslTransform implementa el procesador XSLT
 
 > [!NOTE]
-> La clase <xref:System.Xml.Xsl.XslTransform> está obsoleta en .NET Framework 2.0. Puede llevar a cabo Extensible Stylesheet Language for Transformations (XSLT) mediante la clase <xref:System.Xml.Xsl.XslCompiledTransform>. Consulte [Uso de la clase XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) y [Migración desde la clase XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) para obtener más información.
+> La clase <xref:System.Xml.Xsl.XslTransform> está obsoleta en .NET Framework 2.0. Puede llevar a cabo Extensible Stylesheet Language for Transformations (XSLT) mediante la clase <xref:System.Xml.Xsl.XslCompiledTransform>. Consulte [Uso de la clase XslCompiledTransform](using-the-xslcompiledtransform-class.md) y [Migración desde la clase XslTransform](migrating-from-the-xsltransform-class.md) para obtener más información.
 
 La clase <xref:System.Xml.Xsl.XslTransform> es un procesador XSLT que implementa la recomendación de las transformaciones XSL (XSLT) versión 1.0. El método <xref:System.Xml.Xsl.XslTransform.Load%2A> localiza y lee hojas de estilos y el método <xref:System.Xml.Xsl.XslTransform.Transform%2A> transforma el documento de origen determinado. Cualquier almacén que implemente la interfaz <xref:System.Xml.XPath.IXPathNavigable> puede utilizarse como documento de origen para la transformación <xref:System.Xml.Xsl.XslTransform>. .NET Framework implementa actualmente la interfaz <xref:System.Xml.XPath.IXPathNavigable> en <xref:System.Xml.XmlDocument>, <xref:System.Xml.XmlDataDocument> y <xref:System.Xml.XPath.XPathDocument>, de manera que todos estos pueden usarse como documento de origen de entrada para una transformación.
 
@@ -76,9 +76,9 @@ Si la hoja de estilos se ha cargado utilizando un método <xref:System.Xml.Xsl.X
 
 Si no se proporciona ningún identificador URI, la hoja de estilos se convierte en un parámetro de plena confianza. No cargue hojas de estilos desde orígenes que no sean de confianza ni agregue objetos de extensión que no sean de confianza en <xref:System.Xml.Xsl.XsltArgumentList>.
 
-Para obtener más información sobre niveles de seguridad y evidencia y sobre cómo afectan a los scripts, vea [Hojas de estilos XSLT Scripting mediante \<msxsl: script>](../../../../docs/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script.md). Para obtener información sobre los niveles de seguridad y evidencia y cómo afectan a los objetos de extensión, vea [XsltArgumentList para parámetros Stylesheet y objetos de extensión](../../../../docs/standard/data/xml/xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md).
+Para obtener más información sobre niveles de seguridad y evidencia y sobre cómo afectan a los scripts, vea [Escritura de scripts de hojas de estilos XSLT mediante \<msxsl:script>](xslt-stylesheet-scripting-using-msxsl-script.md). Para obtener información sobre los niveles de seguridad y evidencia y cómo afectan a los objetos de extensión, vea [XsltArgumentList para parámetros Stylesheet y objetos de extensión](xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md).
 
-Para obtener más información sobre niveles de seguridad y evidencia y sobre cómo afectan a la función `document()`, vea [Resolver hojas de estilos XSLT y documentos externos](../../../../docs/standard/data/xml/resolving-external-xslt-style-sheets-and-documents.md).
+Para obtener más información sobre niveles de seguridad y evidencia y sobre cómo afectan a la función `document()`, vea [Resolver hojas de estilos XSLT y documentos externos](resolving-external-xslt-style-sheets-and-documents.md).
 
 Una hoja de estilos se puede suministrar con varios parámetros de entrada. Asimismo puede llamar también a funciones en objetos de extensión. Tanto los parámetros como los objetos de extensión se suministran a la hoja de estilos mediante la clase <xref:System.Xml.Xsl.XsltArgumentList>. Para obtener más información acerca de <xref:System.Xml.Xsl.XsltArgumentList>, vea <xref:System.Xml.Xsl.XsltArgumentList>.
 
@@ -238,9 +238,9 @@ La propiedad <xref:System.Xml.Xsl.XslTransform.XmlResolver%2A?displayProperty=na
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Xml.Xsl.XslTransform>
-- [Transformaciones XSLT con la clase XslTransform](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)
-- [XPathNavigator en transformaciones](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)
-- [XPathNodeIterator en transformaciones](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)
-- [Entrada XPathDocument en XslTransform](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)
-- [Entrada de XmlDataDocument en XslTransform](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)
-- [Entrada de XmlDocument en XslTransform](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)
+- [Transformaciones XSLT con la clase XslTransform](xslt-transformations-with-the-xsltransform-class.md)
+- [XPathNavigator en transformaciones](xpathnavigator-in-transformations.md)
+- [XPathNodeIterator en transformaciones](xpathnodeiterator-in-transformations.md)
+- [Entrada XPathDocument en XslTransform](xpathdocument-input-to-xsltransform.md)
+- [Entrada de XmlDataDocument en XslTransform](xmldatadocument-input-to-xsltransform.md)
+- [Entrada de XmlDocument en XslTransform](xmldocument-input-to-xsltransform.md)

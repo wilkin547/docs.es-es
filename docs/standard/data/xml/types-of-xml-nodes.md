@@ -3,12 +3,12 @@ title: Tipos de nodos XML
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 71d03b78-6898-4ce7-b0fc-1282573f31f7
-ms.openlocfilehash: 83b8c09323e73a9b3ba7dea8d272d7d41d03add1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5e11d61e16659ac1a8ca1b0b2c0d493ffdad5621
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710094"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84282069"
 ---
 # <a name="types-of-xml-nodes"></a>Tipos de nodos XML
 Cuando se lee un documento XML en la memoria como un árbol de nodos, el tipo de nodo se decide al crear los nodos. El modelo de objetos de documento (DOM) dispone de varias clases de tipos de nodos, determinados por el World Wide Web Consortium (W3C) y enumerados en la sección 1.1.1 El modelo de estructura DOM. En la tabla siguiente se muestran los tipos de nodo, el objeto asignado a dicho tipo de nodo y una breve descripción de cada uno.  
@@ -37,13 +37,13 @@ Cuando se lee un documento XML en la memoria como un árbol de nodos, el tipo de
 |<xref:System.Xml.XmlDeclaration>|Representa el nodo de declaración `<?xml version="1.0"…>`.|  
 |<xref:System.Xml.XmlSignificantWhitespace>|Representa un espacio en blanco significativo, que es un espacio en blanco en contenido mixto.|  
 |<xref:System.Xml.XmlWhitespace>|Representa un espacio en blanco en el contenido de un elemento.|  
-|EndElement|Se devuelve cuando **XmlReader** llega al final de un elemento.<br /><br /> XML de ejemplo: **\</item>**<br /><br /> Para obtener más información, vea <xref:System.Xml.XmlNodeType>.|  
+|EndElement|Se devuelve cuando **XmlReader** llega al final de un elemento.<br /><br /> Ejemplo de XML: **\</item>**<br /><br /> Para obtener más información, vea <xref:System.Xml.XmlNodeType>.|  
 |EndEntity|Se devuelve cuando **XmlReader** llega al final del reemplazo de la entidad como resultado de una llamada a <xref:System.Xml.XmlReader.ResolveEntity%2A>. Para obtener más información, vea <xref:System.Xml.XmlNodeType>.|  
   
  Para ver un ejemplo de código en el que se lee XML y se utiliza un constructor case en los tipos de nodo para imprimir información acerca del nodo y su contenido, vea <xref:System.Xml.XmlSignificantWhitespace.NodeType%2A>.  
   
- Para obtener más información acerca de la jerarquía de objetos de los tipos de nodo y su nombre de objeto equivalente, vea [Jerarquía de Document Object Model (DOM) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom-hierarchy.md). Para obtener más información acerca de los objetos creados en el árbol de nodos, vea [Asignar la jerarquía de objetos a datos XML](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md).  
+ Para obtener más información acerca de la jerarquía de objetos de los tipos de nodo y su nombre de objeto equivalente, vea [Jerarquía de Document Object Model (DOM) XML](xml-document-object-model-dom-hierarchy.md). Para obtener más información acerca de los objetos creados en el árbol de nodos, vea [Asignar la jerarquía de objetos a datos XML](mapping-the-object-hierarchy-to-xml-data.md).  
   
 ## <a name="see-also"></a>Vea también
 
-- [Document Object Model (DOM) para XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [Document Object Model (DOM) para XML](xml-document-object-model-dom.md)

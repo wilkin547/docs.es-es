@@ -1,16 +1,21 @@
 ---
-title: ''
-ms.date: ''
+title: 'Procedimiento para escribir convertidores personalizados para la serialización de JSON: .NET'
+ms.date: 01/10/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
-helpviewer_keywords: []
-ms.openlocfilehash: 69c11df8217ac6dbdddd98c550f084075b901ea6
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+helpviewer_keywords:
+- JSON serialization
+- serializing objects
+- serialization
+- objects, serializing
+- converters
+ms.openlocfilehash: abda23ea538c2c0da6ada4f359ce745602dca45d
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703607"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84279768"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>Procedimiento para escribir convertidores personalizados para la serialización de JSON (cálculo de referencias) en .NET
 
@@ -44,7 +49,7 @@ Entre los ejemplos de tipos que puede controlar el patrón básico se incluyen l
 * `DateTime`
 * `Int32`
 
-El patrón básico crea una clase que puede controlar un tipo. El patrón de fábrica crea una clase que determina en tiempo de ejecución qué tipo específico es necesario y crea dinámicamente el convertidor adecuado.
+El patrón básico crea una clase que puede controlar un tipo. El patrón de fábrica crea una clase que determina, en tiempo de ejecución, qué tipo específico es necesario y crea dinámicamente el convertidor adecuado.
 
 ## <a name="sample-basic-converter"></a>Convertidor básico de ejemplo
 
@@ -252,7 +257,7 @@ La [carpeta de pruebas unitarias](https://github.com/dotnet/runtime/blob/81bf79f
 
 Las características integradas proporcionan una gama limitada de [serialización polimórfica](system-text-json-how-to.md#serialize-properties-of-derived-classes), pero no admiten ningún tipo de deserialización. La deserialización requiere un convertidor personalizado.
 
-Suponga, por ejemplo, que tiene una clase base abstracta `Person`, con clases derivadas `Employee` y `Customer`. La deserialización polimórfica significa que, al realizar el diseño, puede especificar `Person` como destino de la deserialización, y los objetos `Customer` y `Employee` en el JSON se deserializan correctamente en tiempo de ejecución. Durante la deserialización, debe buscar pistas que identifiquen el tipo requerido en JSON. Los tipos de pistas disponibles varían según cada escenario. Por ejemplo, una propiedad de discriminador puede estar disponible o puede tener que confiar en la presencia o ausencia de una propiedad determinada. La versión actual de `System.Text.Json` no proporciona atributos para especificar cómo controlar los escenarios de deserialización polimórficos, por lo que se requieren convertidores personalizados.
+Suponga, por ejemplo, que tiene una clase base abstracta `Person`, con clases derivadas `Employee` y `Customer`. La deserialización polimórfica significa que puede especificar `Person` como destino de la deserialización en tiempo de diseño, y los objetos `Customer` y `Employee` en el JSON se deserializan correctamente en tiempo de ejecución. Durante la deserialización, debe buscar pistas que identifiquen el tipo requerido en JSON. Los tipos de pistas disponibles varían según cada escenario. Por ejemplo, una propiedad de discriminador puede estar disponible o puede tener que confiar en la presencia o ausencia de una propiedad determinada. La versión actual de `System.Text.Json` no proporciona atributos para especificar cómo controlar los escenarios de deserialización polimórficos, por lo que se requieren convertidores personalizados.
 
 En el código siguiente se muestra una clase base, dos clases derivadas y un convertidor personalizado para ellas. El convertidor usa una propiedad de discriminador para realizar la deserialización polimórfica. El discriminador de tipo no se encuentra en las definiciones de clase, pero se crea durante la serialización y se lee durante la deserialización.
 
@@ -312,7 +317,7 @@ La [carpeta de pruebas unitarias](https://github.com/dotnet/runtime/blob/81bf79f
 * [Convertidor Int32 que convierte valores nulos en 0 al realizar la deserialización](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.NullValueType.cs)
 * [Convertidor Int32 que permite valores de cadena y número al realizar la deserialización](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Int32.cs)
 * [Convertidor Enum](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Enum.cs)
-* [Convertidor List\<T > que acepta datos externos](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.List.cs)
+* [Convertidor List\<T> que acepta datos externos](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.List.cs)
 * [Convertidor Long[] que funciona con una lista de números delimitados por comas](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Array.cs)
 
 Si necesita crear un convertidor que modifique el comportamiento de un convertidor integrado existente, puede obtener el [código fuente del convertidor existente](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters) para que sirva como punto de partida para la personalización.

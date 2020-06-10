@@ -8,12 +8,12 @@ helpviewer_keywords:
 - globalization [.NET Framework], best practices
 - international applications [.NET Framework], best practices
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
-ms.openlocfilehash: a2cd1039f95a763002922fc2fa24eff77838de80
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f0e5ccf999b6aa96b6317b88e25f3cd9d9fbc899
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73141309"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279885"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>Prácticas recomendadas para desarrollar aplicaciones de uso internacional
 
@@ -49,7 +49,7 @@ En esta sección se describen las procedimientos recomendados que hay que seguir
 
 9. Pruebe la funcionalidad de la aplicación en versiones internacionales del sistema operativo usando datos internacionales.
 
-10. Si una decisión en materia de seguridad se basa en el resultado de una comparación de cadenas o un cambio en el uso de mayúsculas y minúsculas, use una operación de cadenas que no tenga en cuenta la referencia cultural. De este modo, se garantiza que el resultado no se ve afectado por el valor de `CultureInfo.CurrentCulture`. Vea la sección [Comparaciones de cadenas que usan la referencia cultural actual](../../../docs/standard/base-types/best-practices-strings.md#string-comparisons-that-use-the-current-culture) de [Prácticas recomendadas para utilizar las cadenas](../../../docs/standard/base-types/best-practices-strings.md) para obtener un ejemplo de cómo las comparaciones de cadenas que tienen en cuenta la referencia cultural pueden generar resultados incoherentes.
+10. Si una decisión en materia de seguridad se basa en el resultado de una comparación de cadenas o un cambio en el uso de mayúsculas y minúsculas, use una operación de cadenas que no tenga en cuenta la referencia cultural. De este modo, se garantiza que el resultado no se ve afectado por el valor de `CultureInfo.CurrentCulture`. Vea la sección [Comparaciones de cadenas que usan la referencia cultural actual](../base-types/best-practices-strings.md#string-comparisons-that-use-the-current-culture) de [Prácticas recomendadas para utilizar las cadenas](../base-types/best-practices-strings.md) para obtener un ejemplo de cómo las comparaciones de cadenas que tienen en cuenta la referencia cultural pueden generar resultados incoherentes.
 
 ## <a name="localization-best-practices"></a>Prácticas recomendadas de localización
 
@@ -69,11 +69,11 @@ En esta sección se describen las procedimientos recomendados que hay que seguir
 
 8. Utilice la clase <xref:System.Resources.ResourceManager?displayProperty=nameWithType> para recuperar recursos en función de la referencia cultural.
 
-9. Use [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) para crear cuadros de diálogo de Windows Forms, de manera que se puedan localizar mediante el [Editor de recursos de Windows Forms (Winres.exe)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md). No programe los cuadros de diálogo de Windows Forms manualmente.
+9. Use [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) para crear cuadros de diálogo de Windows Forms, de manera que se puedan localizar mediante el [Editor de recursos de Windows Forms (Winres.exe)](../../framework/tools/winres-exe-windows-forms-resource-editor.md). No programe los cuadros de diálogo de Windows Forms manualmente.
 
 10. Organice una localización profesional (traducción).
 
-11. Para obtener una descripción completa de cómo crear y adaptar los recursos, vea [Recursos en aplicaciones](../../../docs/framework/resources/index.md).
+11. Para obtener una descripción completa de cómo crear y adaptar los recursos, vea [Recursos en aplicaciones](../../framework/resources/index.md).
 
 ## <a name="globalization-best-practices-for-aspnet-applications"></a>Prácticas recomendadas de globalización para aplicaciones de ASP.NET
 
@@ -91,7 +91,7 @@ En esta sección se describen las procedimientos recomendados que hay que seguir
 
 4. Especifique los valores de los atributos requestEncoding, responseEncoding, fileEncoding, culture y uiCulture en las tres ubicaciones siguientes de una aplicación ASP.NET:
 
-    - En la sección de globalización de un archivo Web.config. Este archivo es externo a la aplicación de ASP.NET. Para obtener más información, vea [Elemento \<globalization>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hy4kkhe0(v=vs.100)).
+    - En la sección de globalización de un archivo Web.config. Este archivo es externo a la aplicación de ASP.NET. Para obtener más información, consulte [Elemento \<globalization>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hy4kkhe0(v=vs.100)).
 
     - En una directiva de página. Tenga en cuenta que, cuando una aplicación está en una página, el archivo ya se ha leído. Por lo tanto, es demasiado tarde para especificar fileEncoding y requestEncoding. Sólo uiCulture, Culture y responseEncoding se pueden especificar en una directiva de página.
 
@@ -101,5 +101,5 @@ En esta sección se describen las procedimientos recomendados que hay que seguir
 
 ## <a name="see-also"></a>Vea también
 
-- [Globalización y localización](../../../docs/standard/globalization-localization/index.md)
-- [Recursos de aplicaciones de escritorio](../../../docs/framework/resources/index.md)
+- [Globalización y localización](index.md)
+- [Recursos de aplicaciones de escritorio](../../framework/resources/index.md)

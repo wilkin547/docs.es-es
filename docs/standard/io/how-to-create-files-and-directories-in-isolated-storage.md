@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Crear archivos y directorios en almacenamiento aislado'
+title: Procedimiento para crear archivos y directorios en almacenamiento aislado
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - stores, creating files and directories
 - storing data using isolated storage, creating files and directories
 ms.assetid: 2ca4d2a4-809b-4f00-bc08-bf4a64d3a5c3
-ms.openlocfilehash: 83e8c800dc74d9689f1bfdb506a6b454e87b36ca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d5e086e77ab6309fa0757ef32b620e0fdbc1f627
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75707875"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413046"
 ---
-# <a name="how-to-create-files-and-directories-in-isolated-storage"></a>Cómo: Crear archivos y directorios en almacenamiento aislado
+# <a name="how-to-create-files-and-directories-in-isolated-storage"></a>Procedimiento para crear archivos y directorios en almacenamiento aislado
 Después de haber obtenido un almacén aislado, puede crear directorios y archivos para almacenar los datos. Dentro de un almacén, los nombres de archivos y directorios se especifican con respecto a la raíz del sistema de archivos virtual.  
   
  Para crear un directorio, use el método de instancia <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateDirectory%2A?displayProperty=nameWithType>. Si especifica un subdirectorio de un directorio que no existe, se crean dos directorios. Si especifica un directorio que ya existe, el método realiza la devolución sin crear un directorio y no se genera ninguna excepción. Sin embargo, si especifica un nombre de directorio que contiene caracteres no válidos, se produce la excepción <xref:System.IO.IsolatedStorage.IsolatedStorageException>.  
@@ -29,6 +29,8 @@ Después de haber obtenido un almacén aislado, puede crear directorios y archiv
  Para crear un archivo, use el método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateFile%2A?displayProperty=nameWithType>.  
   
  En el sistema operativo Windows, los nombres de archivos y directorios del almacenamiento aislado distinguen mayúsculas y minúsculas. Es decir, si crea un archivo denominado `ThisFile.txt` y luego crea otro archivo llamado `THISFILE.TXT`, solo se crea un archivo. El nombre de archivo mantiene las mayúsculas y minúsculas originales para la presentación.  
+
+ La creación de un archivo de almacenamiento aislado producirá una excepción del tipo <xref:System.IO.IsolatedStorage.IsolatedStorageException> si la ruta de acceso contiene un directorio que no existe.
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo de código siguiente se muestra cómo crear archivos y directorios en un almacén aislado.  
@@ -40,4 +42,4 @@ Después de haber obtenido un almacén aislado, puede crear directorios y archiv
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>
-- [Almacenamiento aislado](../../../docs/standard/io/isolated-storage.md)
+- [Almacenamiento aislado](isolated-storage.md)

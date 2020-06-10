@@ -5,18 +5,18 @@ helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: be3931a23e7a88affcf4d0abf617ec00bd35297a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 24a6225527becb0b896017616e2661ab8247c74c
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712265"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241609"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Procedimiento Recorrer en iteración un árbol de directorio (Guía de programación de C#)
 La frase "recorrer en iteración un árbol de directorios" significa obtener acceso a cada uno de los archivos de todos los subdirectorios anidados bajo una carpeta raíz especificada hasta un nivel de profundidad cualquiera. No es necesario abrir cada archivo. Simplemente puede recuperar el nombre del archivo o subdirectorio como un `string`, o puede recuperar información adicional en el formato de un objeto <xref:System.IO.FileInfo?displayProperty=nameWithType> o <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>.  
   
 > [!NOTE]
-> En Windows, los términos "directorio" y "carpeta" se usan indistintamente. La mayor parte de la documentación y del texto de la interfaz de usuario usa el término "carpeta", pero la biblioteca de clases de .NET Framework usa el término "directorio".  
+> En Windows, los términos "directorio" y "carpeta" se usan indistintamente. La mayor parte de la documentación y del texto de la interfaz de usuario usa el término "carpeta", pero las bibliotecas de clases de .NET usan el término "directorio".  
   
  En el caso más simple, en el que sabe con seguridad que tiene permisos de acceso para todos los directorios incluidos en una raíz especificada, puede usar la marca `System.IO.SearchOption.AllDirectories`. Esta marca devuelve todos los subdirectorios anidados que coinciden con el patrón especificado. En el ejemplo siguiente se muestra cómo usar esta marca.  
   

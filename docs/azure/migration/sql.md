@@ -2,24 +2,22 @@
 title: Migración de una base de datos de SQL Server a Azure
 description: Aprenda a migrar una base de datos de SQL Server de un entorno local a Azure.
 ms.topic: how-to
-ms.date: 11/15/2017
-ms.openlocfilehash: dac35970f2d77e232c2ee1a5e3a1f6e7bfec2317
-ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
+ms.date: 05/27/2020
+ms.openlocfilehash: ed5d6ef9395dca14d8e0ecba82d3fc18cb3d629a
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "81433329"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241453"
 ---
 # <a name="migrate-a-sql-server-database-to-azure"></a>Migración de una base de datos de SQL Server a Azure
 
-En este artículo, se proporciona un breve esquema de las dos opciones para migrar una base de datos de SQL Server a Azure.
-
-Azure tiene dos opciones principales para migrar una base de datos de SQL Server de producción:
+En este artículo, se proporciona un breve esquema de las dos opciones para migrar una base de datos de SQL Server a Azure. Azure tiene tres opciones principales para migrar una base de datos de SQL Server de producción. Este artículo se centra en las dos opciones siguientes:
 
 1. [SQL Server en Máquinas virtuales de Azure](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview): una instancia de SQL Server instalada y hospedada en una máquina Virtual Windows que se ejecuta en Azure, también conocida como Infraestructura como servicio (IaaS).
 2. [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview): un servicio de base de datos de Azure SQL completamente administrado, también conocido como Plataforma como servicio (PaaS).
 
-Ambos tiene ventajas y desventajas que debe evaluar antes de migrar.
+Ambos tiene ventajas y desventajas que debe evaluar antes de migrar. La tercera opción es [Instancias administradas de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
 
 ## <a name="get-started"></a>Primeros pasos
 
@@ -58,15 +56,15 @@ Al evaluar dónde quiere migrar la base de datos, decida qué es lo más adecuad
 
 En la tabla siguiente se describen las diferencias entre cada servicio según los distintos escenarios.
 
-| Escenario | SQL Server en máquinas virtuales de Azure | Azure SQL Database |
+| Escenario | SQL Server en máquinas virtuales de Azure | Azure SQL Database |
 |----------|-------------------------|--------------------|
 | Migración | Requiere cambios mínimos en la base de datos. | Puede requerir cambios en la base de datos si usa características no disponibles en Azure SQL, según determine el [Asistente para la migración de datos](https://www.microsoft.com/download/details.aspx?id=53595), o si tiene otras dependencias tales como archivos ejecutables instalados localmente.|
 | Administración de la disponibilidad, la recuperación y las actualizaciones | La disponibilidad y la recuperación se configuran manualmente. Las actualizaciones se pueden automatizar con [VM Scale Sets](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade). | Se administra automáticamente. |
 | Configuración del sistema operativo subyacente | Configuración manual. | Se administra automáticamente. |
-| Administración del tamaño de base de datos | Admite hasta 64 TB de almacenamiento por cada instancia de SQL Server. | Admite 4 TB de almacenamiento antes de necesitar una partición horizontal. |
+| Administración del tamaño de base de datos | Admite hasta 256 TB de almacenamiento por cada instancia de SQL Server. | Admite 8 TB de almacenamiento antes de necesitar una partición horizontal. |
 | Administración de los costos | Debe administrar los costos de las licencias de SQL Server, los costos de las licencias de Windows Server y los costos de las máquinas virtuales (en función del número de núcleos, la memoria RAM y el almacenamiento). | Debe administrar los costos del servicio (en función del número de [eDTU o DTU](https://docs.microsoft.com/azure/sql-database/sql-database-what-is-a-dtu), el almacenamiento y el número de bases de datos si usa un grupo elástico). También debe administrar el costo de los SLA. |
 
-Para más información acerca de las diferencias entre los dos, lea Selección de una opción de SQL Server en la nube: [Azure SQL Database (PaaS) o SQL Server on Azure VMs (IaaS)](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas).
+Para obtener más información sobre las diferencias entre ambas, consulte [Elegir la opción de implementación adecuada en Azure SQL](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas).
 
 ## <a name="faq"></a>Preguntas más frecuentes
 

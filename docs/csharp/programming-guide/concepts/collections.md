@@ -2,12 +2,12 @@
 title: Colecciones (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: 30aa3e34f362f34fc601f90ee61613acd6e4bc68
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: ecab30d50be58f810246e58e637b331d492e4a47
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201130"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241401"
 ---
 # <a name="collections-c"></a>Colecciones (C#)
 
@@ -182,7 +182,7 @@ public class Galaxy
 
 ## <a name="kinds-of-collections"></a>Tipos de colecciones
 
-.NET Framework proporciona muchas colecciones comunes. Cada tipo de colección está diseñado para un fin específico.
+.NET proporciona muchas colecciones comunes. Cada tipo de colección está diseñado para un fin específico.
 
 En esta sección se describen algunas de las clases de colecciones comunes:
 
@@ -214,7 +214,7 @@ Para obtener más información, vea [Tipos de colección utilizados normalmente]
 
 ### <a name="systemcollectionsconcurrent-classes"></a>Clases System.Collections.Concurrent
 
-En .NET Framework 4 o posterior, las colecciones del espacio de nombres <xref:System.Collections.Concurrent> proporcionan operaciones eficaces y seguras para subprocesos con el fin de obtener acceso a los elementos de la colección desde varios subprocesos.
+En .NET Framework 4 y versiones posteriores, las colecciones del espacio de nombres <xref:System.Collections.Concurrent> proporcionan operaciones eficaces y seguras para subprocesos con el fin de acceder a los elementos de la colección desde varios subprocesos.
 
 Las clases del espacio de nombres <xref:System.Collections.Concurrent> deben usarse en lugar de los tipos correspondientes de los espacios de nombres <xref:System.Collections.Generic?displayProperty=nameWithType> y <xref:System.Collections?displayProperty=nameWithType> cada vez que varios subprocesos tengan acceso de manera simultánea a la colección. Para obtener más información, vea [Colecciones seguras para subprocesos](../../../standard/collections/thread-safe/index.md) y <xref:System.Collections.Concurrent>.
 
@@ -482,7 +482,7 @@ public class Car : IComparable<Car>
 
 Puede definir una colección implementando la interfaz <xref:System.Collections.Generic.IEnumerable%601> o <xref:System.Collections.IEnumerable>.
 
-Aunque puede definir una colección personalizada, es mejor usar las colecciones incluidas en .NET Framework. Estas colecciones se describen en la sección [Tipos de colecciones](#BKMK_KindsOfCollections) de este tema.
+Aunque puede definir una colección personalizada, es mejor usar las colecciones incluidas en .NET. Estas colecciones se describen en la sección [Tipos de colecciones](#BKMK_KindsOfCollections) de este artículo.
 
 En el siguiente ejemplo se define una clase de colección personalizada denominada `AllColors`. Esta clase implementa la interfaz <xref:System.Collections.IEnumerable> que requiere implementar el método <xref:System.Collections.IEnumerable.GetEnumerator%2A>.
 

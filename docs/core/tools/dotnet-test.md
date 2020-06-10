@@ -2,12 +2,12 @@
 title: Comando dotnet test
 description: El comando “dotnet test” se usa para ejecutar pruebas unitarias en un proyecto determinado.
 ms.date: 04/29/2020
-ms.openlocfilehash: b427954fe0026e6ac96d3bbce2b70b5c44e884e0
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 1190ecb75e83c9930c60726e7cd83203b11928cb
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005380"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84283941"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -134,7 +134,7 @@ Donde `Microsoft.NET.Test.Sdk` es el host de prueba y `xunit` es el marco de pru
 
 - **`-s|--settings <SETTINGS_FILE>`**
 
-  El archivo `.runsettings` que se usará para ejecutar las pruebas. Tenga en cuenta que el elemento `TargetPlatform` (x86|x64) no tiene ningún efecto en `dotnet test`. Para ejecutar pruebas destinadas a x86, instale la versión x86 de .NET Core. El valor de bits de *dotnet.exe* que se encuentra en la ruta de acceso es lo que se usará para ejecutar las pruebas. Para obtener más información, vea los siguientes recursos:
+  El archivo `.runsettings` que se usará para ejecutar las pruebas. El elemento `TargetPlatform` (x86|x64) no tiene ningún efecto en `dotnet test`. Para ejecutar pruebas destinadas a x86, instale la versión x86 de .NET Core. El valor de bits de *dotnet.exe* que se encuentra en la ruta de acceso es lo que se usará para ejecutar las pruebas. Para obtener más información, vea los siguientes recursos:
 
   - [Configuración de pruebas unitarias con un archivo `.runsettings`.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
   - [Configuración de una serie de pruebas](https://github.com/Microsoft/vstest-docs/blob/master/docs/configure.md)

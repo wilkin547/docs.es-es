@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: dcc73aba738d6296a44c48aad8b66cd6fc7f4a7b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9a81ee5ccdc2697ca435d40be27568b651977f96
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77448444"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241596"
 ---
 # <a name="using-delegates-c-programming-guide"></a>Utilizar delegados (Guía de programación de C#)
 
@@ -23,7 +23,7 @@ Normalmente, un objeto delegado se construye al proporcionar el nombre del méto
 
 [!code-csharp[csProgGuideDelegates#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#23)]
 
-Los tipos de delegado se derivan de la clase <xref:System.Delegate> en .NET Framework. Los tipos de delegados son [sealed](../../language-reference/keywords/sealed.md) (no se pueden derivar) y no se pueden derivar clases personalizadas de <xref:System.Delegate>. Dado que el delegado con instancias es un objeto, puede pasarse como parámetro o asignarse a una propiedad. De este modo, un método puede aceptar un delegado como parámetro y llamar al delegado en algún momento posterior. Esto se conoce como devolución de llamada asincrónica y es un método común para notificar a un llamador que un proceso largo ha finalizado. Cuando se utiliza un delegado de esta manera, el código que usa al delegado no necesita ningún conocimiento de la implementación del método empleado. La funcionalidad es similar a la encapsulación que proporcionan las interfaces.
+Los tipos de delegado se derivan de la clase <xref:System.Delegate> en .NET. Los tipos de delegados son [sealed](../../language-reference/keywords/sealed.md) (no se pueden derivar) y no se pueden derivar clases personalizadas de <xref:System.Delegate>. Dado que el delegado con instancias es un objeto, puede pasarse como parámetro o asignarse a una propiedad. De este modo, un método puede aceptar un delegado como parámetro y llamar al delegado en algún momento posterior. Esto se conoce como devolución de llamada asincrónica y es un método común para notificar a un llamador que un proceso largo ha finalizado. Cuando se utiliza un delegado de esta manera, el código que usa al delegado no necesita ningún conocimiento de la implementación del método empleado. La funcionalidad es similar a la encapsulación que proporcionan las interfaces.
 
 Otro uso común de devoluciones de llamada es definir un método de comparación personalizado y pasar ese delegado a un método de ordenación. Permite que el código del llamador se convierta en parte del algoritmo de ordenación. En el siguiente método de ejemplo se usa el tipo `Del` como parámetro:
 

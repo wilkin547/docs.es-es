@@ -1,5 +1,6 @@
 ---
-title: 'Cómo: Mostrar milisegundos en los valores de fecha y hora'
+title: Procedimiento para mostrar milisegundos en los valores de fecha y hora
+description: En este artículo, aprenderá a incluir el componente de milisegundos de un valor de fecha y hora en cadenas de fecha y hora con formato en .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - dates [.NET Framework], milliseconds
 - milliseconds [.NET Framework]
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
-ms.openlocfilehash: 36d99753503d9ba4b1bde4143c86ba184674e53e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a6dbe6a3bf4f8c08493ec925bea4316d071f4182
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74960395"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447074"
 ---
-# <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Cómo: Mostrar milisegundos en los valores de fecha y hora
+# <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Procedimiento para mostrar milisegundos en los valores de fecha y hora
 Los métodos de formato de fecha y hora predeterminados, como <xref:System.DateTime.ToString?displayProperty=nameWithType>, incluyen las horas, minutos y segundos de un valor de tiempo, pero excluyen el componente correspondiente a los milisegundos. En este tema se muestra cómo se incluye un componente de milisegundos de un valor de fecha y hora en cadenas de fecha y hora con formato.  
   
 ### <a name="to-display-the-millisecond-component-of-a-datetime-value"></a>Para mostrar el componente de milisegundos de un valor DateTime  
@@ -52,4 +53,4 @@ Los métodos de formato de fecha y hora predeterminados, como <xref:System.DateT
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Globalization.DateTimeFormatInfo>
-- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [Cadenas con formato de fecha y hora personalizado](custom-date-and-time-format-strings.md)

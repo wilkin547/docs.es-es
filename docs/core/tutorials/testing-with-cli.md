@@ -3,16 +3,16 @@ title: Organización y prueba de proyectos con la CLI de .NET Core
 description: En este tutorial se explica cómo organizar y probar proyectos .NET Core desde la línea de comandos.
 author: cartermp
 ms.date: 09/10/2018
-ms.openlocfilehash: 0d61e0fc004cfcb6d78c49475c7b7f0f523aad2c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 58c78c0f11ab1b275e4e4d05bf1da32562333c91
+ms.sourcegitcommit: 0a798a7e9680e2d0a5a81a3eaa203870ea782883
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78239916"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84325950"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-cli"></a>Organización y prueba de proyectos con la CLI de .NET Core
 
-Este tutorial sigue al tutorial [Introducción a .NET Core en Windows, Linux y macOS con la línea de comandos](cli-create-console-app.md) dirigiéndole más allá de la creación de una aplicación de consola sencilla para desarrollar aplicaciones más avanzadas y bien organizadas. Después de mostrarle cómo usar carpetas para organizar su código, este tutorial le muestra cómo ampliar una aplicación de consola con el marco de pruebas de [xUnit](https://xunit.github.io/).
+En este tutorial es una continuación de lo establecido en [Tutorial: Creación de una aplicación de consola con .NET Core en Visual Studio Code](with-visual-studio-code.md), por lo que le llevará más allá de la creación de una aplicación de consola simple para desarrollar aplicaciones avanzadas y bien organizadas. Después de mostrarle cómo usar carpetas para organizar su código, este tutorial le muestra cómo ampliar una aplicación de consola con el marco de pruebas de [xUnit](https://xunit.github.io/).
 
 ## <a name="using-folders-to-organize-code"></a>Uso de carpetas para organizar el código
 
@@ -96,7 +96,7 @@ Woof!
 Meow!
 ```
 
-Ejercicio opcional: puede agregar un nuevo tipo de mascota, como `Bird`, ampliando este proyecto. Haga que el método `TalkToOwner` de las aves proporcione `Tweet!` al propietario. Ejecute la aplicación de nuevo. El resultado incluirá `Tweet!`.
+Ejercicio opcional: puede agregar un nuevo tipo de mascota, como `Bird`, si amplía este proyecto. Haga que el método `TalkToOwner` de las aves proporcione `Tweet!` al propietario. Ejecute la aplicación de nuevo. El resultado incluirá `Tweet!`.
 
 ### <a name="testing-the-sample"></a>Probar el ejemplo
 

@@ -2,12 +2,12 @@
 title: Programación orientada a objetos (C#)
 ms.date: 05/13/2020
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 541d1a2581a3241f35fc8478040c007b6581e3b2
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 98dd5147ab54375ec851ccd9b981a68098a53270
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396688"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241895"
 ---
 # <a name="object-oriented-programming-c"></a>Programación orientada a objetos (C#)
 
@@ -146,9 +146,9 @@ Para obtener más información, vea [Constructores](../classes-and-structs/const
 
 #### <a name="finalizers"></a>Finalizadores
 
-Los finalizadores se usan para destruir instancias de clases. En .NET Framework, el recolector de elementos no utilizados administra automáticamente la asignación y la liberación de memoria para los objetos administrados en la aplicación. En cambio, es posible que aún se necesiten finalizadores para limpiar cualquiera de los recursos no administrados creados por la aplicación. Solo puede haber un finalizador para una clase.
+Los finalizadores se usan para destruir instancias de clases. En .NET, el recolector de elementos no utilizados administra automáticamente la asignación y la liberación de memoria para los objetos administrados en la aplicación. En cambio, es posible que aún se necesiten finalizadores para limpiar cualquiera de los recursos no administrados creados por la aplicación. Solo puede haber un finalizador para una clase.
 
-Para obtener más información sobre los finalizadores y la recolección de elementos no utilizados en .NET Framework, vea [Recolección de elementos no utilizados](../../../standard/garbage-collection/index.md).
+Para obtener más información sobre los finalizadores y la recolección de elementos no utilizados en .NET, vea [Recolección de elementos no utilizados](../../../standard/garbage-collection/index.md).
 
 #### <a name="events"></a>Events
 
@@ -342,7 +342,7 @@ Para obtener más información, vea el artículo de la guía de programación so
 
 ## <a name="generics"></a>Genéricos
 
-Las clases, las estructuras, las interfaces y los métodos de .NET Framework pueden incluir *parámetros de tipo* que definen los tipos de objetos que estos pueden almacenar o usar. El ejemplo más común de elementos genéricos es una colección, donde se puede especificar el tipo de objetos que se va a almacenar en una colección.
+Las clases, las estructuras, las interfaces y los métodos de .NET pueden incluir *parámetros de tipo* que definen los tipos de objetos que estos pueden almacenar o usar. El ejemplo más común de elementos genéricos es una colección, donde se puede especificar el tipo de objetos que se va a almacenar en una colección.
 
 Para definir una clase genérica:
 

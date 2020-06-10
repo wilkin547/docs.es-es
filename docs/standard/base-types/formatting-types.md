@@ -1,5 +1,6 @@
 ---
 title: Aplicar formato a tipos en .NET
+description: Aprenda a dar formato a los tipos en .NET. Comprenda cómo usar o invalidar el método ToString. Conozca el formato de referencia cultural, el compuesto y el personalizado.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - custom formatting [.NET Framework]
 - strings [.NET Framework], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
-ms.openlocfilehash: 124c32a09a32dd90b8b96b39aa80352094030b23
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 5d280b53d15bc674f325a726d69915d763aec34f
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523945"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447087"
 ---
 # <a name="format-types-in-net"></a>Tipos de formato en .NET
 
@@ -45,7 +46,7 @@ Aplicar formato es el proceso de convertir una instancia de una clase, una estru
 - Puede que una aplicación muestre el mismo valor de diferentes maneras. Por ejemplo, es posible que una aplicación represente un miembro de enumeración mostrando una representación de cadena de su nombre o mostrando su valor subyacente. Para obtener un ejemplo en el que se da formato a un miembro de la enumeración <xref:System.DayOfWeek> de maneras diferentes, consulte la sección [Cadenas de formato estándar](#standard-format-strings) .
 
 > [!NOTE]
-> La aplicación de formato convierte el valor de un tipo en una representación de cadena. El análisis es lo contrario que la aplicación de formato. Una operación de análisis crea una instancia de un tipo de datos a partir de su representación de cadena. Para información sobre cómo convertir cadenas en otros tipos de datos, vea [Analizar cadenas en .NET](../../../docs/standard/base-types/parsing-strings.md).
+> La aplicación de formato convierte el valor de un tipo en una representación de cadena. El análisis es lo contrario que la aplicación de formato. Una operación de análisis crea una instancia de un tipo de datos a partir de su representación de cadena. Para información sobre cómo convertir cadenas en otros tipos de datos, vea [Analizar cadenas en .NET](parsing-strings.md).
 
 .NET proporciona compatibilidad de formato enriquecida que permite a los desarrolladores hacer frente a estos requisitos.
 
@@ -137,7 +138,7 @@ Las cadenas de formato estándar para los tipos de enumeración controlan direct
 [!code-csharp[Conceptual.Formatting.Overview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/standard1.cs#4)]
 [!code-vb[Conceptual.Formatting.Overview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/standard1.vb#4)]
 
-Para información sobre las cadenas de formato de enumeración, vea [Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md).
+Para información sobre las cadenas de formato de enumeración, vea [Enumeration Format Strings](enumeration-format-strings.md).
 
 Las cadenas de formato estándar para tipos numéricos normalmente definen una cadena de resultado cuya apariencia exacta está controlada por uno o más valores de propiedad. Por ejemplo, el especificador de formato "C" da formato a un número como un valor de divisa. Al llamar al método `ToString` con el especificador de formato "C" como único parámetro, se usan los siguientes valores de propiedad del objeto <xref:System.Globalization.NumberFormatInfo> de la referencia cultural actual para definir la representación de cadena del valor numérico:
 
@@ -166,14 +167,14 @@ Además, las cadenas de formato numérico pueden incluir un especificador de pre
 [!code-csharp[Conceptual.Formatting.Overview#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/precisionspecifier1.cs#6)]
 [!code-vb[Conceptual.Formatting.Overview#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/precisionspecifier1.vb#6)]
 
-Para más información sobre las cadenas de formato numérico estándar, vea [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md).
+Para más información sobre las cadenas de formato numérico estándar, vea [Standard Numeric Format Strings](standard-numeric-format-strings.md).
 
 Las cadenas de formato estándar para valores de fecha y hora son alias de las cadenas de formato personalizado almacenadas por una propiedad <xref:System.Globalization.DateTimeFormatInfo> determinada. Por ejemplo, al llamar al método `ToString` de un valor de fecha y hora con el especificador de formato "D" se muestran la fecha y la hora usando la cadena de formato personalizado que está almacenada en la propiedad <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> de la referencia cultural actual. (Para obtener más información sobre las cadenas de formato personalizado, vea la [próxima sección](#custom-format-strings)). En el ejemplo siguiente se ilustra esta relación.
 
 [!code-csharp[Conceptual.Formatting.Overview#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/alias1.cs#5)]
 [!code-vb[Conceptual.Formatting.Overview#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/alias1.vb#5)]
 
-Para más información sobre las cadenas de formato de fecha y hora estándar, vea [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md).
+Para más información sobre las cadenas de formato de fecha y hora estándar, vea [Standard Date and Time Format Strings](standard-date-and-time-format-strings.md).
 
 También se pueden emplear las cadenas de formato estándar para definir la representación de cadena de un objeto definido por la aplicación que genera el método `ToString(String)` del objeto. Puede definir los especificadores de formato estándar concretos que su objeto admite y determinar si distinguen entre mayúsculas y minúsculas o no. Su implementación del método `ToString(String)` debe aceptar lo siguiente:
 
@@ -188,7 +189,7 @@ Por ejemplo, una clase `Temperature` puede almacenar internamente la temperatura
 
 ### <a name="custom-format-strings"></a>Cadenas de formato personalizado
 
-Además de las cadenas de formato estándar, .NET define cadenas de formato personalizado tanto para los valores numéricos como para los valores de fecha y hora. Una cadena de formato personalizado se compone de uno o varios especificadores de formato personalizado que definen la representación de cadena de un valor. Por ejemplo, la cadena de formato personalizado de fecha y hora “yyyy/mm/dd hh:mm:ss.ffff t zzz” convierte una fecha en su representación de cadena con el formato "2008/11/15 07:45:00.0000 P -08:00" para la referencia cultural en-US. Del mismo modo, la cadena de formato personalizado “0000” convierte el valor entero 12 en “0012”. Para una lista completa de las cadenas de formato personalizado, vea [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md) y [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md).
+Además de las cadenas de formato estándar, .NET define cadenas de formato personalizado tanto para los valores numéricos como para los valores de fecha y hora. Una cadena de formato personalizado se compone de uno o varios especificadores de formato personalizado que definen la representación de cadena de un valor. Por ejemplo, la cadena de formato personalizado de fecha y hora “yyyy/mm/dd hh:mm:ss.ffff t zzz” convierte una fecha en su representación de cadena con el formato "2008/11/15 07:45:00.0000 P -08:00" para la referencia cultural en-US. Del mismo modo, la cadena de formato personalizado “0000” convierte el valor entero 12 en “0012”. Para una lista completa de las cadenas de formato personalizado, vea [Custom Date and Time Format Strings](custom-date-and-time-format-strings.md) y [Custom Numeric Format Strings](custom-numeric-format-strings.md).
 
 Si una cadena de formato consta de un único especificador de formato personalizado, el especificador de formato debe ir precedido del símbolo de porcentaje (%) para evitar la confusión con un especificador de formato estándar. En el ejemplo siguiente, se usa el especificador de formato personalizado "M" para mostrar un número de un dígito o de dos dígitos del mes de una fecha determinada.
 
@@ -213,13 +214,13 @@ Todos los tipos numéricos (es decir, los tipos <xref:System.Byte>, <xref:System
 
 |Title|Definición|
 |-----------|----------------|
-|[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)|Describe cadenas de formato estándar que crean representaciones de cadena usadas con frecuencia de valores numéricos.|
-|[Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|Describe cadenas de formato personalizado que crean formatos específicos de la aplicación para valores numéricos.|
-|[Cadenas con formato de fecha y hora estándar](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|Describe cadenas de formato estándar que crean representaciones de cadena usadas con frecuencia de valores <xref:System.DateTime> y <xref:System.DateTimeOffset>.|
-|[Cadenas con formato de fecha y hora personalizado](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|Describe cadenas de formato personalizado que crean formatos específicos de la aplicación para valores <xref:System.DateTime> y <xref:System.DateTimeOffset>.|
-|[Cadenas de formato TimeSpan estándar](../../../docs/standard/base-types/standard-timespan-format-strings.md)|Describe cadenas de formato estándar que crean representaciones de cadena usadas con frecuencia de intervalos de tiempo.|
-|[Cadenas de formato TimeSpan personalizado](../../../docs/standard/base-types/custom-timespan-format-strings.md)|Describe cadenas de formato personalizado que crean formatos específicos de la aplicación para intervalos de tiempo.|
-|[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|Describe cadenas de formato estándar que se usan para crear representaciones de cadena de valores de enumeración.|
+|[Standard Numeric Format Strings](standard-numeric-format-strings.md)|Describe cadenas de formato estándar que crean representaciones de cadena usadas con frecuencia de valores numéricos.|
+|[Custom Numeric Format Strings](custom-numeric-format-strings.md)|Describe cadenas de formato personalizado que crean formatos específicos de la aplicación para valores numéricos.|
+|[Cadenas con formato de fecha y hora estándar](standard-date-and-time-format-strings.md)|Describe cadenas de formato estándar que crean representaciones de cadena usadas con frecuencia de valores <xref:System.DateTime> y <xref:System.DateTimeOffset>.|
+|[Cadenas con formato de fecha y hora personalizado](custom-date-and-time-format-strings.md)|Describe cadenas de formato personalizado que crean formatos específicos de la aplicación para valores <xref:System.DateTime> y <xref:System.DateTimeOffset>.|
+|[Cadenas de formato TimeSpan estándar](standard-timespan-format-strings.md)|Describe cadenas de formato estándar que crean representaciones de cadena usadas con frecuencia de intervalos de tiempo.|
+|[Cadenas de formato TimeSpan personalizado](custom-timespan-format-strings.md)|Describe cadenas de formato personalizado que crean formatos específicos de la aplicación para intervalos de tiempo.|
+|[Enumeration Format Strings](enumeration-format-strings.md)|Describe cadenas de formato estándar que se usan para crear representaciones de cadena de valores de enumeración.|
 |<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|Describe cadenas de formato estándar para los valores de <xref:System.Guid> .|
 
 ## <a name="culture-sensitive-formatting-with-format-providers"></a>Formato según la referencia cultural con proveedores de formato
@@ -329,7 +330,7 @@ Además de reemplazar un elemento de formato con la representación de cadena de
 
      Tenga en cuenta que, si están presentes tanto el componente de cadena de alineación como el componente de cadena de formato, el primero precede al último (por ejemplo, `{0,-20:g}`).
 
-Para más información sobre los formatos compuestos, vea [Formatos compuestos](../../../docs/standard/base-types/composite-formatting.md).
+Para más información sobre los formatos compuestos, vea [Formatos compuestos](composite-formatting.md).
 
 ## <a name="custom-formatting-with-icustomformatter"></a>Formato personalizado con ICustomFormatter
 
@@ -351,15 +352,15 @@ En el ejemplo siguiente se usa la clase `ByteByByteFormatter` para dar formato a
 
 |Title|Definición|
 |-----------|----------------|
-|[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)|Describe cadenas de formato estándar que crean representaciones de cadena usadas con frecuencia de valores numéricos.|
-|[Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|Describe cadenas de formato personalizado que crean formatos específicos de la aplicación para valores numéricos.|
-|[Cadenas con formato de fecha y hora estándar](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|Describe cadenas de formato estándar que crean representaciones de cadena usadas con frecuencia de valores <xref:System.DateTime> .|
-|[Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|Describe cadenas de formato personalizado que crean formatos específicos de la aplicación para valores <xref:System.DateTime> .|
-|[Cadenas de formato TimeSpan estándar](../../../docs/standard/base-types/standard-timespan-format-strings.md)|Describe cadenas de formato estándar que crean representaciones de cadena usadas con frecuencia de intervalos de tiempo.|
-|[Cadenas de formato TimeSpan personalizado](../../../docs/standard/base-types/custom-timespan-format-strings.md)|Describe cadenas de formato personalizado que crean formatos específicos de la aplicación para intervalos de tiempo.|
-|[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|Describe cadenas de formato estándar que se usan para crear representaciones de cadena de valores de enumeración.|
-|[Formatos compuestos](../../../docs/standard/base-types/composite-formatting.md)|Describe cómo incrustar uno o más valores con formato en una cadena. Posteriormente se puede mostrar la cadena en la consola o escrita en una secuencia.|
-|[Analizar cadenas](../../../docs/standard/base-types/parsing-strings.md)|Describe cómo inicializar objetos en los valores descritos por representaciones de cadena de dichos objetos. El análisis es la operación inversa de la aplicación de formato.|
+|[Standard Numeric Format Strings](standard-numeric-format-strings.md)|Describe cadenas de formato estándar que crean representaciones de cadena usadas con frecuencia de valores numéricos.|
+|[Custom Numeric Format Strings](custom-numeric-format-strings.md)|Describe cadenas de formato personalizado que crean formatos específicos de la aplicación para valores numéricos.|
+|[Cadenas con formato de fecha y hora estándar](standard-date-and-time-format-strings.md)|Describe cadenas de formato estándar que crean representaciones de cadena usadas con frecuencia de valores <xref:System.DateTime> .|
+|[Custom Date and Time Format Strings](custom-date-and-time-format-strings.md)|Describe cadenas de formato personalizado que crean formatos específicos de la aplicación para valores <xref:System.DateTime> .|
+|[Cadenas de formato TimeSpan estándar](standard-timespan-format-strings.md)|Describe cadenas de formato estándar que crean representaciones de cadena usadas con frecuencia de intervalos de tiempo.|
+|[Cadenas de formato TimeSpan personalizado](custom-timespan-format-strings.md)|Describe cadenas de formato personalizado que crean formatos específicos de la aplicación para intervalos de tiempo.|
+|[Enumeration Format Strings](enumeration-format-strings.md)|Describe cadenas de formato estándar que se usan para crear representaciones de cadena de valores de enumeración.|
+|[Formatos compuestos](composite-formatting.md)|Describe cómo incrustar uno o más valores con formato en una cadena. Posteriormente se puede mostrar la cadena en la consola o escrita en una secuencia.|
+|[Analizar cadenas](parsing-strings.md)|Describe cómo inicializar objetos en los valores descritos por representaciones de cadena de dichos objetos. El análisis es la operación inversa de la aplicación de formato.|
 
 ## <a name="reference"></a>Referencia
 

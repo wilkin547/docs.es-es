@@ -2,15 +2,15 @@
 title: Recursos de entrenamiento de Azure sobre el generador de modelos
 description: Una guía de recursos para Azure Machine Learning
 ms.topic: reference
-ms.date: 02/27/2020
+ms.date: 06/01/2020
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: a19e13955d0eaea344109eb817f3a3959c3dd883
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d9eb5560ef33f8f80dbe53e17087c606a8697378
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79185819"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289478"
 ---
 # <a name="model-builder-azure-training-resources"></a>Recursos de entrenamiento de Azure sobre el generador de modelos
 
@@ -49,6 +49,10 @@ Para crear un área de trabajo de Azure Machine Learning, es necesario lo siguie
     | Standard_NC24   | 24 | 224 | 1440 | 4 | 48 | 64 | 4 |
 
     Consulte la [documentación de máquinas virtuales Linux de la serie NC](https://docs.microsoft.com/azure/virtual-machines/nc-series?toc=/azure/virtual-machines/linux/toc.json&bc=/azure/virtual-machines/linux/breadcrumb/toc.json) para obtener más detalles sobre los tipos de proceso optimizados para GPU.
+- Prioridad de proceso
+
+  - Prioridad baja: adecuada para tareas con un tiempo de ejecución menor. Puede verse afectada por interrupciones y falta de disponibilidad. Normalmente cuesta menos, ya que aprovecha el excedente de capacidad de Azure.
+  - Dedicada: adecuada para tareas de cualquier duración, pero especialmente trabajos de larga ejecución. No se ve afectada por interrupciones ni falta de disponibilidad. Normalmente cuesta más, ya que reserva un conjunto dedicado de recursos de proceso en Azure para sus tareas.
 
 ## <a name="training"></a>Aprendizaje
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: fc816123134995b753beda0a6f281133d6ddd691
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 5db2797870b6c2e1998f17f1d8e4df8aa3f95c9e
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506823"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241414"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Métodos de extensión (Guía de programación de C#)
 
@@ -97,7 +97,7 @@ static class DomainEntityExtensions
 
 ### <a name="extending-predefined-types"></a>Ampliación de tipos predefinidos
 
-En lugar de crear nuevos objetos cuando es necesario crear una funcionalidad reutilizable, a menudo podemos ampliar un tipo existente como un tipo CLR o de .NET Framework. Como ejemplo, si no usamos métodos de extensión, podemos crear una clase `Engine` o `Query` para ejecutar una consulta en un servidor SQL Server al que se puede llamar desde varias ubicaciones en nuestro código. Sin embargo, en su lugar, podemos ampliar la clase <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType> mediante métodos de extensión para realizar esa consulta desde cualquier lugar en el que tengamos una conexión a un servidor SQL Server. Otros ejemplos podrían ser la adición de una funcionalidad común a la clase <xref:System.String?displayProperty=nameWithType>, la ampliación de las funcionalidades de procesamiento de datos de los objetos <xref:System.IO.File?displayProperty=nameWithType> y <xref:System.IO.Stream?displayProperty=nameWithType>, y los objetos <xref:System.Exception?displayProperty=nameWithType> para una funcionalidad de control de errores específica. Solo su imaginación y sentido común limitan estos tipos de casos de uso.
+En lugar de crear objetos cuando es necesario crear una funcionalidad reutilizable, a menudo podemos ampliar un tipo existente como un tipo CLR o de .NET. Como ejemplo, si no usamos métodos de extensión, podemos crear una clase `Engine` o `Query` para ejecutar una consulta en un servidor SQL Server al que se puede llamar desde varias ubicaciones en nuestro código. Sin embargo, en su lugar, podemos ampliar la clase <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType> mediante métodos de extensión para realizar esa consulta desde cualquier lugar en el que tengamos una conexión a un servidor SQL Server. Otros ejemplos podrían ser la adición de una funcionalidad común a la clase <xref:System.String?displayProperty=nameWithType>, la ampliación de las funcionalidades de procesamiento de datos de los objetos <xref:System.IO.File?displayProperty=nameWithType> y <xref:System.IO.Stream?displayProperty=nameWithType>, y los objetos <xref:System.Exception?displayProperty=nameWithType> para una funcionalidad de control de errores específica. Solo su imaginación y sentido común limitan estos tipos de casos de uso.
 
 La ampliación de tipos predefinidos puede ser difícil con los tipos `struct`, ya que se pasan en función del valor a los métodos. Eso significa que los cambios en la estructura se realizan en una copia de la misma. Esos cambios dejarán de verse una vez que se salga del método de extensión. A partir de C# 7.2, puede agregar el modificador `ref` al primer argumento de un método de extensión. La adición del modificador `ref` significa que el primer argumento se pasa por referencia. Esto le permite escribir métodos de extensión que cambian el estado de la estructura que se amplía.
 
@@ -114,7 +114,7 @@ Si se implementan métodos de extensión para un tipo determinado, recuerde los 
 - Nunca se llamará a un método de extensión si tiene la misma signatura que un método definido en el tipo.
 - Los métodos de extensión se incluyen en el ámbito en el nivel de espacio de nombres. Por ejemplo, si se tienen varias clases estáticas que contienen métodos de extensión en un único espacio de nombres denominado `Extensions`, la directiva `using Extensions;` los incluirá a todos en el ámbito.
 
-Para una biblioteca de clases ya implementada, no deben usarse métodos de extensión para evitar incrementar el número de versión de un ensamblado. Si desea agregar una funcionalidad significativa a una biblioteca de la que es propietario del código fuente, deben seguirse las instrucciones de .NET Framework estándar para el control de versiones de ensamblado. Para obtener más información, vea [Versiones de los ensamblados](../../../standard/assembly/versioning.md).
+Para una biblioteca de clases ya implementada, no deben usarse métodos de extensión para evitar incrementar el número de versión de un ensamblado. Si quiere agregar una funcionalidad significativa a una biblioteca de cuyo código fuente es propietario, siga las instrucciones de .NET estándar para el control de versiones de ensamblado. Para obtener más información, vea [Versiones de los ensamblados](../../../standard/assembly/versioning.md).
 
 ## <a name="see-also"></a>Vea también
 

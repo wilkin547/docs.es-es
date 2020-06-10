@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: fd89c54b-0290-4c50-95a3-ff17d4487a21
-ms.openlocfilehash: a2e2a6705fb3d8d4424d46d96bbf49b41e1414af
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6d2cc2b01b04b30bd3b1a4371352ded20ea8664b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74330260"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411758"
 ---
 # <a name="package-and-deploy-custom-my-extensions-visual-basic"></a>Empaquetar e implementar extensiones personalizadas de My (Visual Basic)
 
@@ -29,7 +29,7 @@ En este tema se describe cómo empaquetar una extensión personalizada de `My` c
 
 ## <a name="create-a-my-namespace-extension"></a>Creación de una extensión de espacio de nombres My
 
-El primer paso para crear un paquete de implementación para una extensión personalizada de `My` es crear la extensión como un solo archivo de código. Para obtener información sobre cómo crear extensiones personalizadas de `My`, vea [Extender el espacio de nombres My en Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md).
+El primer paso para crear un paquete de implementación para una extensión personalizada de `My` es crear la extensión como un solo archivo de código. Para obtener información sobre cómo crear extensiones personalizadas de `My`, vea [Extender el espacio de nombres My en Visual Basic](extending-the-my-namespace.md).
 
 ## <a name="export-a-my-namespace-extension-as-an-item-template"></a>Exportación de una extensión de espacio de nombres My como una plantilla de elementos
 
@@ -99,11 +99,11 @@ El ejemplo siguiente muestra el contenido completo de un archivo .vstemplate al 
 
 ## <a name="install-the-template"></a>Instalación de la plantilla
 
-Para instalar la plantilla, puede copiar la carpeta comprimida (archivo *.zip*) en la carpeta de plantillas de elemento de Visual Basic. De manera predeterminada las plantillas de elemento de usuario están en *%USERPROFILE%\Documentos\Visual Studio \<versión\>\Templates\ItemTemplates\Visual Basic*. Como alternativa, puede encontrar la plantilla como un archivo del Instalador de Visual Studio ( *.vsi*).
+Para instalar la plantilla, puede copiar la carpeta comprimida (archivo *.zip*) en la carpeta de plantillas de elemento de Visual Basic. De manera predeterminada, las plantillas de elemento de usuario se encuentran en *%USERPROFILE%\Documentos\Visual Studio \<Version\>\Templates\ItemTemplates\Visual Basic*. Como alternativa, puede encontrar la plantilla como un archivo del Instalador de Visual Studio ( *.vsi*).
 
 ## <a name="see-also"></a>Vea también
 
-- [Extender el espacio de nombres My en Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)
-- [Extensión del modelo de la aplicación de Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)
-- [Personalización de los objetos que están disponibles en My](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)
+- [Extender el espacio de nombres My en Visual Basic](extending-the-my-namespace.md)
+- [Extensión del modelo de la aplicación de Visual Basic](extending-the-visual-basic-application-model.md)
+- [Personalización de los objetos que están disponibles en My](customizing-which-objects-are-available-in-my.md)
 - [Página Mis extensiones del Diseñador de proyectos](/visualstudio/ide/reference/my-extensions-page-project-designer-visual-basic)

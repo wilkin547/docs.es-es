@@ -4,22 +4,24 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, My namespace access
 ms.assetid: e7152414-0ea5-4c8e-bf02-c8d5bbe45ff4
-ms.openlocfilehash: 063b46a32ced859c6c86e40c4a6b9870c3decd24
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 268543980ba891b0b30f393ee8982f2863ba9a71
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75700424"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241947"
 ---
 # <a name="how-to-use-the-my-namespace-c-programming-guide"></a>Procedimiento Utilizar el espacio de nombres My (Guía de programación de C#)
-El espacio de nombres <xref:Microsoft.VisualBasic.MyServices> (`My` en Visual Basic) proporciona acceso fácil e intuitivo a una serie de clases de .NET Framework, lo que le permite escribir código que interactúe con el equipo, la aplicación, la configuración, los recursos, etc. Aunque se diseñó originalmente para usarse con Visual Basic, el espacio de nombres `MyServices` puede usarse en aplicaciones de C#.  
+
+El espacio de nombres <xref:Microsoft.VisualBasic.MyServices> (`My` en Visual Basic) proporciona acceso fácil e intuitivo a una serie de clases de .NET, lo que le permite escribir código que interactúe con el equipo, la aplicación, la configuración, los recursos, etc. Aunque se diseñó originalmente para usarse con Visual Basic, el espacio de nombres `MyServices` puede usarse en aplicaciones de C#.  
   
  Para obtener más información sobre el uso del espacio de nombres `MyServices` de Visual Basic, consulte [Desarrollo con My](../../../visual-basic/developing-apps/development-with-my/index.md).  
   
-## <a name="adding-a-reference"></a>Agregar una referencia  
+## <a name="add-a-reference"></a>Agregar una referencia
+
  Para poder usar las clases `MyServices` en la solución, debe agregar una referencia a la biblioteca de Visual Basic.  
   
-#### <a name="to-add-a-reference-to-the-visual-basic-library"></a>Para agregar una referencia a la biblioteca de Visual Basic  
+### <a name="add-a-reference-to-the-visual-basic-library"></a>Cómo agregar una referencia a la biblioteca de Visual Basic  
   
 1. En el **Explorador de soluciones**, haga clic con el botón derecho en el nodo **Referencias** y seleccione **Agregar referencia**.  
   

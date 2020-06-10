@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <paramref> C# XML tag
 - paramref C# XML tag
 ms.assetid: 756c24c1-f591-40e8-a838-559761539b0b
-ms.openlocfilehash: 12df257271369dc7f0a5c066b712a8d8e6c38761
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4f3b521d24c8b4677a05b0b145cb36c31b2793f2
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76793399"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287316"
 ---
-# <a name="paramref-c-programming-guide"></a>\<paramref> (Guía de programación de C#)
+# <a name="paramref-c-programming-guide"></a>\<paramref> (guía de programación de C#)
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -31,7 +31,7 @@ ms.locfileid: "76793399"
 
 ## <a name="remarks"></a>Comentarios
 
-La etiqueta \<paramref> ofrece una manera de indicar que una palabra en los comentarios del código (por ejemplo, en un bloque \<summary> o \<comments>) hace referencia a un parámetro. El archivo XML se puede procesar para dar formato a esta palabra de alguna manera distinta, por ejemplo, con una fuente en negrita o cursiva.
+La etiqueta `<paramref>` ofrece una manera de indicar que una palabra en los comentarios del código (por ejemplo, en un bloque `<summary>` o `<remarks>`) hace referencia a un parámetro. El archivo XML se puede procesar para dar formato a esta palabra de alguna manera distinta, por ejemplo, con una fuente en negrita o cursiva.
 
 Compile con [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación de un archivo.
 

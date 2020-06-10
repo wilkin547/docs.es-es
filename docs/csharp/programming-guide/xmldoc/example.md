@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <example> C# XML tag
 - example C# XML tag
 ms.assetid: 32d6e73b-2554-4abb-83ee-a1e321334fd2
-ms.openlocfilehash: 615eccbc427b6a5bbbed061acd0c8b0b9be7f46c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e8d26f82562cc5140662f5b32ea9fedf5481d8f8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789813"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287403"
 ---
-# <a name="example-c-programming-guide"></a>\<example> (Guía de programación de C#)
+# <a name="example-c-programming-guide"></a>\<example> (guía de programación de C#)
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -31,7 +31,7 @@ ms.locfileid: "76789813"
 
 ## <a name="remarks"></a>Comentarios
 
-La etiqueta \<example> le permite especificar un ejemplo de cómo usar un método u otro miembro de biblioteca. Esto normalmente implica el uso de la etiqueta [\<code>](./code.md).
+La etiqueta `<example>` le permite especificar un ejemplo de cómo usar un método u otro miembro de biblioteca. Esto normalmente implica el uso de la etiqueta [\<code>](./code.md).
 
 Compile con [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación de un archivo.
 

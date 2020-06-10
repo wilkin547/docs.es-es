@@ -2,23 +2,23 @@
 title: Implementar un modelo de dominio de microservicio con .NET Core
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre la implementación de un modelo de dominio orientado a un DDD.
 ms.date: 10/08/2018
-ms.openlocfilehash: 8aff06a2e37dc87e5ba4f556e9b808598ff3653a
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 0b42ecc2440faf5870b2d99e31d03cda00b21ce0
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144583"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306919"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>Implementación de un modelo de dominio de microservicio con .NET Core
 
-En la sección anterior se han explicado los principios y patrones de diseño fundamentales para diseñar un modelo de dominio. Ahora es el momento de analizar las posibles formas de implementar el modelo de dominio mediante .NET Core (código C\# sin formato) y EF Core. Tenga en cuenta que el modelo de dominio se compone simplemente del código. Tiene solo los requisitos del modelo de EF Core, pero no las dependencias reales en EF. En el modelo de dominio no debe haber dependencias fuertes ni referencias a EF Core ni ningún otro ORM.
+En la sección anterior se han explicado los principios y patrones de diseño fundamentales para diseñar un modelo de dominio. Ahora es el momento de analizar las posibles formas de implementar el modelo de dominio mediante .NET Core (código C\# sin formato) y EF Core. El modelo de dominio solo estará formado por el código. Tiene solo los requisitos del modelo de EF Core, pero no las dependencias reales en EF. En el modelo de dominio no debe haber dependencias fuertes ni referencias a EF Core ni ningún otro ORM.
 
 ## <a name="domain-model-structure-in-a-custom-net-standard-library"></a>Estructura del modelo de dominio en una biblioteca personalizada de .NET Standard
 
 La organización de carpetas usada para la aplicación de referencia eShopOnContainers muestra el modelo DDD para la aplicación. Es posible que descubra que otra organización de carpetas comunica con mayor claridad las opciones de diseño elegidas para la aplicación. Como puede ver en la figura 7-10, en el modelo de dominio Ordering hay dos agregados, el agregado Order y el agregado Buyer. Cada agregado es un grupo de entidades de dominio y objetos de valor, aunque también podría tener un agregado compuesto por una sola entidad de dominio (la raíz de agregado o entidad raíz).
 
 :::image type="complex" source="./media/net-core-microservice-domain-model/ordering-microservice-container.png" alt-text="Captura de pantalla del proyecto Ordering.Domain en el Explorador de soluciones.":::
-La vista Explorador de soluciones para el proyecto Ordering.Domain, en la que se muestra la carpeta AggregatesModel que contiene las carpetas BuyerAggregate y OrderAggregate, cada una con sus clases de entidad, archivos de objeto de valor y así sucesivamente.
+Vista Explorador de soluciones para el proyecto Ordering.Domain, en la que se muestra la carpeta AggregatesModel que contiene las carpetas BuyerAggregate y OrderAggregate, cada una con sus clases de entidad, archivos de objeto de valor y otros elementos.
 :::image-end:::
 
 **Figura 7-10**. Estructura del modelo de dominio del microservicio Ordering de eShopOnContainers
@@ -95,7 +95,7 @@ public class Order : Entity, IAggregateRoot
 }
 ```
 
-Es importante tener en cuenta que se trata de una entidad de dominio implementada como clase POCO. No tiene ninguna dependencia directa con Entity Framework Core ni ningún otro marco de trabajo de infraestructura. Esta implementación es como debería ser en DDD, simplemente código C\# que implementa un modelo de dominio.
+Es importante tener en cuenta que se trata de una entidad de dominio implementada como clase POCO. No tiene ninguna dependencia directa con Entity Framework Core ni ningún otro marco de trabajo de infraestructura. Esta es la implementación que se debería usar en DDD: tan solo código de C# que implementa un modelo de dominio.
 
 Además, la clase se decora con una interfaz denominada IAggregateRoot. Esa interfaz es una interfaz vacía, que a veces se denomina *interfaz de marcador*, que se usa simplemente para indicar que esta clase de entidad también es una raíz de agregado.
 
@@ -154,7 +154,7 @@ Además, la nueva operación OrderItem(params) también es controlada y realizad
 
 Cuando use Entity Framework Core 1.1 o posterior, una entidad DDD se puede expresar mejor porque permite [asignar a campos](https://docs.microsoft.com/ef/core/modeling/backing-field) además de a propiedades. Esto resulta útil al proteger colecciones de entidades secundarias u objetos de valor. Con esta mejora, puede usar campos privados simples en lugar de propiedades y puede implementar cualquier actualización de la colección de campos en los métodos públicos y proporcionar acceso de solo lectura mediante el método AsReadOnly.
 
-En DDD se prefiere actualizar la entidad únicamente mediante métodos de la entidad (o el constructor) para controlar cualquier invariable y la coherencia de los datos, para que las propiedades solo se definan con un descriptor de acceso get. Las propiedades se basan en campos privados. A los miembros privados solo se puede acceder desde la clase. Pero hay una excepción: EF Core también debe establecer estos campos (de forma que pueda devolver el objeto con los valores adecuados).
+En DDD, interesa actualizar la entidad únicamente mediante métodos de la entidad (o el constructor) para controlar cualquier invariable y la coherencia de los datos, de modo que las propiedades solo se definan con un descriptor de acceso get. Las propiedades se basan en campos privados. A los miembros privados solo se puede acceder desde la clase. Pero hay una excepción: EF Core también debe establecer estos campos (de forma que pueda devolver el objeto con los valores adecuados).
 
 ### <a name="map-properties-with-only-get-accessors-to-the-fields-in-the-database-table"></a>Asignación de propiedades con solo los descriptores de acceso get a los campos de la tabla de base de datos
 

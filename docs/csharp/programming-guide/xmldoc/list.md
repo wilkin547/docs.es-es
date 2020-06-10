@@ -12,14 +12,14 @@ helpviewer_keywords:
 - <item> C# XML tag
 - <list> C# XML tag
 ms.assetid: c9620b1b-c2e6-43f1-ab88-8ab47308ffec
-ms.openlocfilehash: cb289b26e9bc12d561892c421fb40da18d8c3513
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 78eec992671dab1aa59717a007a8e3a2662f6e87
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789754"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287342"
 ---
-# <a name="list-c-programming-guide"></a>\<list> (Guía de programación de C#)
+# <a name="list-c-programming-guide"></a>\<list> (guía de programación de C#)
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -48,11 +48,11 @@ ms.locfileid: "76789754"
   
 ## <a name="remarks"></a>Comentarios
 
-El bloque \<listheader> se usa para definir la fila de encabezado de una tabla o de una lista de definiciones. Cuando se define una tabla, solo es necesario suministrar una entrada para un término en el encabezado.
+El bloque `<listheader>` se usa para definir la fila de encabezado de una tabla o de una lista de definiciones. Cuando se define una tabla, solo es necesario suministrar una entrada para un término en el encabezado.
 
-Cada elemento de la lista se especifica con un bloque \<item>. Cuando se crea una lista de definiciones, se deberán especificar tanto `term` como `description`. En cambio, para una tabla, lista con viñetas o lista numerada, solo es necesario suministrar una entrada para `description`.
+Cada elemento de la lista se especifica con un bloque `<item>`. Cuando se crea una lista de definiciones, se deberán especificar tanto `term` como `description`. En cambio, para una tabla, lista con viñetas o lista numerada, solo es necesario suministrar una entrada para `description`.
 
-Una lista o una tabla pueden tener tantos bloques \<item> como sean necesarios.
+Una lista o una tabla pueden tener tantos bloques `<item>` como sean necesarios.
 
 Compile con [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación de un archivo.
 

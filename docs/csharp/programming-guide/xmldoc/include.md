@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: 22d87559766c04e53141e843ee8768c8aab89a85
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf41019c775fed25afe4bdb9453a8e52f44856b5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156979"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287355"
 ---
-# <a name="include-c-programming-guide"></a>\<include> (Guía de programación de C#)
+# <a name="include-c-programming-guide"></a>\<include> (guía de programación de C#)
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -43,13 +43,13 @@ El identificador de la etiqueta que precede a los comentarios. Ponga el identifi
 
 ## <a name="remarks"></a>Comentarios
 
-La etiqueta \<include> le permite hacer referencia a comentarios colocados en otro archivo que describen los tipos y miembros en el código fuente. Esto es una alternativa a colocar los comentarios de documentación directamente en el archivo de código fuente. Al colocar la documentación en un archivo independiente, puede aplicar el control de código fuente a la documentación de forma independiente desde el código fuente. Una persona puede tener el archivo de código fuente extraído del repositorio y otra persona puede tener el archivo de documentación extraído del repositorio.
+La etiqueta `<include>` le permite hacer referencia a comentarios colocados en otro archivo que describen los tipos y miembros en el código fuente. Esto es una alternativa a colocar los comentarios de documentación directamente en el archivo de código fuente. Al colocar la documentación en un archivo independiente, puede aplicar el control de código fuente a la documentación de forma independiente desde el código fuente. Una persona puede tener el archivo de código fuente extraído del repositorio y otra persona puede tener el archivo de documentación extraído del repositorio.
 
-La etiqueta \<include> usa la sintaxis de XPath de XML. Consulte la documentación de XPath para ver formas de personalizar el uso de \<include>.
+La etiqueta `<include>` usa la sintaxis de XPath de XML. Consulte la documentación de XPath para ver formas de personalizar el uso de `<include>`.
 
 ## <a name="example"></a>Ejemplo
 
-Este es un ejemplo de múltiples archivos. El siguiente es el primer archivo, que usa \<include>.
+Este es un ejemplo de múltiples archivos. El siguiente es el primer archivo, que usa `<include>`.
 
 [!code-csharp[csProgGuideDocComments#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#5)]
 
@@ -75,7 +75,7 @@ The summary for this other type.
 
 ## <a name="program-output"></a>Salida del programa
 
-Se genera el siguiente resultado al compilar las clases Test y Test2 con la siguiente línea de comandos: `-doc:DocFileName.xml.` En Visual Studio, especifique la opción de comentarios de documentación XML en el panel de compilación del Diseñador de proyectos. Cuando el compilador de C# detecta la etiqueta \<include>, busca los comentarios de documentación en xml_include_tag.doc en lugar del archivo de código fuente actual. Después, el compilador genera DocFileName.xml y este es el archivo que usan las herramientas de documentación como [DocFX](https://dotnet.github.io/docfx/) y [Sandcastle](https://github.com/EWSoftware/SHFB) para generar la documentación final.  
+El siguiente resultado se genera al compilar las clases Test y Test2 con la siguiente línea de comandos: `-doc:DocFileName.xml.` En Visual Studio, especifica la opción de comentarios de documentación XML en el panel Compilar del Diseñador de proyectos. Cuando el compilador de C# ve la etiqueta `<include>`, busca los comentarios de documentación en *xml_include_tag.doc* en lugar del archivo de código fuente actual. Después, el compilador genera *DocFileName.xml*, y este es el archivo que usan las herramientas de documentación como [DocFX](https://dotnet.github.io/docfx/) y[ Sandcastle](https://github.com/EWSoftware/SHFB) para generar la documentación final.  
   
 ```xml
 <?xml version="1.0"?>

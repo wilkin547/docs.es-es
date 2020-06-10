@@ -2,12 +2,12 @@
 title: Controlar la reentrada en aplicaciones asincrónicas (C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: d46a87ed2200dc92b8e3d23be80306a31a01e501
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: e03e0f6ecd8e74dd8518f84ec03c76c1ef5b9ee6
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738302"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241817"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>Controlar la reentrada en aplicaciones asincrónicas (C#)
 
@@ -31,7 +31,7 @@ Cuando se incluye código asincrónico en una aplicación, hay que tener en cuen
 > Para ejecutar el ejemplo, debe tener instalado en el equipo Visual Studio 2012 o posterior y .NET Framework 4.5 o posterior.
 
 > [!NOTE]
-> La versión 1.2 de Seguridad de la capa de transporte (TLS) es ahora la versión mínima que se usará en el desarrollo de la aplicación. Si la aplicación tiene como destino una versión de .NET Framework anterior a la 4.7, consulte el artículo siguiente para obtener [Prácticas recomendadas de Seguridad de la capa de transporte (TLS) con .NET Framework](../../../../framework/network-programming/tls.md).
+> La versión 1.2 de Seguridad de la capa de transporte (TLS) es ahora la versión mínima que se usará en el desarrollo de la aplicación. Si la aplicación tiene como destino una versión de .NET Framework anterior a la 4.7, consulte el artículo siguiente para obtener [Prácticas recomendadas de Seguridad de la capa de transporte (TLS) con .NET Framework](../../../../framework/network-programming/tls.md).
 
 ## <a name="recognizing-reentrancy"></a><a name="BKMK_RecognizingReentrancy"></a> Reconocer la reentrada
 
@@ -584,13 +584,13 @@ La sección siguiente proporciona el código para compilar el ejemplo como una a
 
 4. En la lista de tipos de proyecto, seleccione **Aplicación WPF**.
 
-5. Asigne un nombre al proyecto `WebsiteDownloadWPF`, elija la versión 4.6 de .NET Framework o una posterior y, después, haga clic en el botón **Aceptar**.
+5. Asigne un nombre al proyecto `WebsiteDownloadWPF`, elija la versión 4.6 de .NET Framework o una posterior y, después, haga clic en el botón **Aceptar**.
 
      El proyecto nuevo aparece en el **Explorador de soluciones**.
 
 6. En el Editor de código de Visual Studio, elija la pestaña **MainWindow.xaml** .
 
-     Si la pestaña no está visible, abra el menú contextual de MainWindow.xaml en el **Explorador de soluciones** y elija **Ver código**.
+     Si la pestaña no está visible, abra el menú contextual de MainWindow.xaml en el **Explorador de soluciones**y elija **Ver código**.
 
 7. En la vista **XAML** de MainWindow.xaml, reemplace el código por el código siguiente.
 

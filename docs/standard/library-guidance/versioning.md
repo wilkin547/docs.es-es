@@ -2,16 +2,16 @@
 title: Control de versiones y bibliotecas de .NET
 description: Procedimientos recomendados para el control de versiones de las bibliotecas de .NET.
 ms.date: 12/10/2018
-ms.openlocfilehash: a274410714791e2790da0e3deb2a595390ee9389
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ab15d56e40abedd842b681496b9e5ee737c8b1cd
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398500"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290128"
 ---
 # <a name="versioning"></a>Control de versiones
 
-Una biblioteca de software rara vez se completa en la versión 1.0. Las buenas bibliotecas evolucionan con el tiempo, agregando características, corrigiendo errores y mejorando el rendimiento. Es importante que pueda lanzar nuevas versiones de una biblioteca de .NET, proporcionando valor adicional con cada versión, sin interrumpir a los usuarios existentes.
+Una biblioteca de software rara vez se completa en la versión 1.0. Las buenas bibliotecas evolucionan con el tiempo, al agregar características, corregir errores y mejorar el rendimiento. Es importante que pueda lanzar nuevas versiones de una biblioteca de .NET, proporcionando valor adicional con cada versión, sin interrumpir a los usuarios existentes.
 
 ## <a name="breaking-changes"></a>Cambios importantes
 
@@ -33,7 +33,7 @@ El identificador del paquete NuGet combinado con la versión de dicho paquete se
 
 Dado que la versión del paquete NuGet es la versión más visible para los desarrolladores, es una buena idea actualizarla mediante [Versionamiento Semántico (SemVer)](https://semver.org/). SemVer indica la importancia de los cambios entre versiones y ayuda a los desarrolladores a tomar una decisión informada a la hora de elegir qué versión se debe usar. Por ejemplo, pasar de `1.0` a `2.0` indica que hay cambios potencialmente importantes.
 
-✔️ ES RECOMENDABLE usar [SemVer 2.0.0](https://semver.org/) para crear versiones de los paquetes NuGet.
+✔️ ES RECOMENDABLE usar [SemVer 2.0.0](https://semver.org/) para crear versiones del paquete NuGet.
 
 ✔️ NO use la versión del paquete NuGet en la documentación pública, ya que es el número de versión que normalmente ven los usuarios.
 
@@ -49,9 +49,9 @@ La versión del ensamblado es lo que CLR usa en tiempo de ejecución para selecc
 <AssemblyVersion>1.0.0.0</AssemblyVersion>
 ```
 
-CLR de Windows .NET Framework exige una coincidencia exacta para cargar un ensamblado con nombre seguro. Por ejemplo, `Libary1, Version=1.0.0.0` se compiló con una referencia a `Newtonsoft.Json, Version=11.0.0.0`. .NET Framework solo cargará esa versión exacta `11.0.0.0`. Para cargar una versión diferente en tiempo de ejecución, se debe agregar una redirección de enlace al archivo de configuración de la aplicación .NET.
+CLR de .NET Framework exige una coincidencia exacta para cargar un ensamblado con nombre seguro. Por ejemplo, `Libary1, Version=1.0.0.0` se compiló con una referencia a `Newtonsoft.Json, Version=11.0.0.0`. .NET Framework solo cargará esa versión exacta: la `11.0.0.0`. Para cargar otra versión en tiempo de ejecución, se debe agregar una redirección de enlace al archivo de configuración de la aplicación de .NET.
 
-La asignación de nombres seguros junto con la versión de ensamblado permite la [carga de la versión de ensamblado estricta](../assembly/versioning.md). Aunque la asignación de nombres seguros a una biblioteca una serie de ventajas, suele dar lugar a excepciones en tiempo de ejecución que un ensamblado no se puede encontrar y [requiere que las redirecciones de enlace](../../framework/configure-apps/redirect-assembly-versions.md) en `app.config`/`web.config` se corrijan. La carga de ensamblados de .NET Core se ha moderada y CLR de .NET Core cargará automáticamente los ensamblados en tiempo de ejecución con una versión posterior.
+La asignación de nombres seguros junto con la versión de ensamblado permite la [carga de la versión de ensamblado estricta](../assembly/versioning.md). Aunque la asignación de nombres seguros a una biblioteca tiene una serie de ventajas, suele dar lugar a excepciones en tiempo de ejecución que indican que no se puede encontrar un ensamblado y [requiere que se corrijan las redirecciones de enlace](../../framework/configure-apps/redirect-assembly-versions.md) de `app.config` o `web.config`. En .NET Core, la carga de ensamblados no es tan estricta. El entorno de ejecución de .NET Core carga automáticamente ensamblados con una versión posterior en tiempo de ejecución.
 
 ✔️ ES RECOMENDABLE que solo incluya una versión principal en AssemblyVersion.
 

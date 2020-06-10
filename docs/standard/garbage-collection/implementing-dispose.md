@@ -1,6 +1,7 @@
 ---
 title: Implementación de un método Dispose
-ms.date: 05/13/2020
+description: En este artículo, aprenderá a implementar el método Dispose, que libera los recursos no administrados que usa su código en .NET.
+ms.date: 05/27/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: a002e0d27dfe28795b28e6813c4f5d5b3e13cdaf
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: c8b4b9a79577776bc049ef77e222d63374178708
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396907"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447178"
 ---
 # <a name="implement-a-dispose-method"></a>Implementación de un método Dispose
 
@@ -156,5 +157,4 @@ En el ejemplo siguiente se muestra el patrón de Dispose para una clase derivada
 - <xref:Microsoft.Win32.SafeHandles>
 - <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>
 - <xref:System.Object.Finalize%2A?displayProperty=nameWithType>
-- [Cómo: Definir y usar clases y structs (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)
-- [Patrón de Dispose](implementing-dispose.md)
+- [Definición y uso de clases y estructuras (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)

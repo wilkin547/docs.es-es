@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: c8ad738baa3ff76cf9ae8367f2fd2a1fb44a79d6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a266cfd5996aca7b7a6b297b0775526cf38b8f64
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170304"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241427"
 ---
 # <a name="finalizers-c-programming-guide"></a>Finalizadores (Guía de programación de C#)
 Los finalizadores (también denominados **destructores**) se usan para realizar cualquier limpieza final necesaria cuando el recolector de elementos no utilizados recopila una instancia de clase.  
@@ -64,7 +64,7 @@ protected override void Finalize()
  Es posible forzar la recolección de elementos no utilizados llamando a <xref:System.GC.Collect%2A>, pero en general debe evitarse su uso por razones de rendimiento.  
   
 ## <a name="using-finalizers-to-release-resources"></a>Uso de finalizadores para liberar recursos  
- En general, C# no requiere tanta administración de memoria como se necesita al desarrollar con un lenguaje que no está diseñado para un runtime con recolección de elementos no utilizados. Esto es debido a que el recolector de elementos no utilizados de .NET Framework administra implícitamente la asignación y liberación de memoria para los objetos. En cambio, cuando la aplicación encapsule recursos no administrados como ventanas, archivos y conexiones de red, debería usar finalizadores para liberar dichos recursos. Cuando el objeto cumple los requisitos para su finalización, el recolector de elementos no utilizados ejecuta el método `Finalize` del objeto.  
+ En general, C# no requiere tanta administración de memoria como se necesita al desarrollar con un lenguaje que no está diseñado para un runtime con recolección de elementos no utilizados. Esto es debido a que el recolector de elementos no utilizados de .NET administra implícitamente la asignación y liberación de memoria para los objetos. En cambio, cuando la aplicación encapsule recursos no administrados, como ventanas, archivos y conexiones de red, debería usar finalizadores para liberar dichos recursos. Cuando el objeto cumple los requisitos para su finalización, el recolector de elementos no utilizados ejecuta el método `Finalize` del objeto.
   
 ## <a name="explicit-release-of-resources"></a>Liberación explícita de recursos  
  Si la aplicación usa un recurso externo costoso, también es recomendable liberar explícitamente el recurso antes de que el recolector de elementos no utilizados libere el objeto. Para ello debe implementar un método `Dispose` desde la interfaz <xref:System.IDisposable> que realiza la limpieza del objeto necesaria. Esto puede mejorar considerablemente el rendimiento de la aplicación. Aunque controle explícitamente los recursos, el finalizador garantiza la liberación de recursos si la llamada al método `Dispose` genera un error.  
@@ -73,7 +73,7 @@ protected override void Finalize()
   
 - [Limpieza de recursos no administrados](../../../standard/garbage-collection/unmanaged.md)  
   
-- [Implementar un método Dispose](../../../standard/garbage-collection/implementing-dispose.md)  
+- [Implementación de un método Dispose](../../../standard/garbage-collection/implementing-dispose.md)  
   
 - [using (instrucción)](../../language-reference/keywords/using-statement.md)  
   
@@ -82,7 +82,7 @@ protected override void Finalize()
   
  [!code-csharp[csProgGuideObjects#85](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#85)]  
   
-## <a name="c-language-specification"></a>especificación del lenguaje C#  
+## <a name="c-language-specification"></a>Especificación del lenguaje C#  
 
 Para más información, vea la sección sobre [destructores](~/_csharplang/spec/classes.md#destructors) de la [Especificación del lenguaje C#](/dotnet/csharp/language-reference/language-specification/introduction).
   

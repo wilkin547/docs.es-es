@@ -12,12 +12,12 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, compilation
 - regular expressions, engines
 ms.assetid: 182ec76d-5a01-4d73-996c-0b0d14fcea18
-ms.openlocfilehash: b89f7f88233ecdab25ba2a74647aafeb4d8b74af
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 54f14a4f31bef00dd222686cc523935b2d9dd5fa
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344188"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279043"
 ---
 # <a name="compilation-and-reuse-in-regular-expressions"></a>Compilar y volver a utilizar en expresiones regulares
 Puede optimizar el rendimiento de aplicaciones que usan en gran medida las expresiones regulares al comprender cómo compila expresiones el motor de expresiones regulares y cómo se almacenan en caché las expresiones regulares. En este tema, se describen la compilación y el almacenamiento en caché.  
@@ -27,7 +27,7 @@ Puede optimizar el rendimiento de aplicaciones que usan en gran medida las expre
   
  Si un objeto <xref:System.Text.RegularExpressions.Regex> se construye con la opción <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType>, compila la expresión regular en código MSIL explícito en lugar de instrucciones internas de expresiones regulares de alto nivel. De este modo, el compilador Just-In-Time (JIT) de .NET puede convertir la expresión en código de equipo nativo para un mayor rendimiento.  El costo de construir el objeto <xref:System.Text.RegularExpressions.Regex> puede ser mayor, pero el de realizar coincidencias con él puede ser mucho más pequeño.
 
- Una alternativa consiste en utilizar expresiones regulares precompiladas. Puede compilar todas las expresiones en un archivo DLL reutilizable con el método <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A>. Esto evita la necesidad de compilar en tiempo de ejecución mientras todavía se beneficia de la velocidad de las expresiones regulares compiladas.  
+ Una alternativa consiste en utilizar expresiones regulares precompiladas. Puede compilar todas las expresiones en un archivo DLL reutilizable con el método <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A>. Esto evita la necesidad de compilar en tiempo de ejecución mientras sigue beneficiándose de la velocidad de las expresiones regulares compiladas.  
   
 ## <a name="the-regular-expressions-cache"></a>La caché de expresiones regulares  
  Para mejorar el rendimiento, el motor de expresiones regulares mantiene una caché de la aplicación de expresiones regulares compiladas. La caché almacena los patrones de expresiones regulares que se usan solo en las llamadas al método estático. (Los patrones de expresiones regulares proporcionados a métodos de instancia no se almacenan en caché). Esto evita la necesidad de volver a analizar una expresión en código de bytes de alto nivel cada vez que se usa.  
@@ -44,4 +44,4 @@ Puede optimizar el rendimiento de aplicaciones que usan en gran medida las expre
   
 ## <a name="see-also"></a>Vea también
 
-- [Expresiones regulares de .NET](../../../docs/standard/base-types/regular-expressions.md)
+- [Expresiones regulares de .NET](regular-expressions.md)

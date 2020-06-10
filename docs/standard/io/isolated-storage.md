@@ -18,12 +18,12 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: ed784bafda2aed829f2e97d7e7e8b2716c48c7ba
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f98af970c8827623298fb43cd0653bdaafb20dd3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75706587"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84278887"
 ---
 # <a name="isolated-storage"></a>Almacenamiento aislado
 <a name="top"></a> Para las aplicaciones de escritorio, el almacenamiento aislado es un mecanismo de almacenamiento de datos que proporciona aislamiento y seguridad mediante la definición de modos estándar de asociar código a los datos guardados. La estandarización ofrece además otras ventajas. Los administradores pueden usar herramientas diseñadas para manipular el almacenamiento aislado para configurar el espacio de almacenamiento de archivos, establecer directivas de seguridad y eliminar los datos no utilizados. Con el almacenamiento aislado, el código ya no requiere rutas de acceso únicas para especificar ubicaciones seguras en el sistema de archivos y los datos están protegidos de otras aplicaciones que solo tienen acceso a un almacenamiento aislado. La información en código que indica la ubicación del área de almacenamiento de la aplicación no es necesaria.
@@ -116,7 +116,7 @@ En ocasiones resulta útil comprobar un cambio en el almacenamiento aislado usan
 |Windows 2000, Windows XP, Windows Server 2003 (actualización desde Windows NT 4.0)|Almacenes con movilidad =<br /><br /> \<SYSTEMROOT>\Profiles\\<usuario\>\Application Data<br /><br /> Almacenes sin movilidad =<br /><br /> \<SYSTEMROOT>\Profiles\\<usuario\>\Local Settings\Application Data|
 |Windows 2000 - instalación nueva (y actualizaciones desde Windows 98 y Windows NT 3.51)|Almacenes con movilidad =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<usuario\>\Application Data<br /><br /> Almacenes sin movilidad =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<usuario\>\Local Settings\Application Data|
 |Windows XP, Windows Server 2003 - instalación nueva (y actualizaciones desde Windows 2000 y Windows 98)|Almacenes con movilidad =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<usuario\>\Application Data<br /><br /> Almacenes sin movilidad =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<usuario\>\Local Settings\Application Data|
-|Windows 8, Windows 7, Windows Server 2008, Windows Vista|Almacenes con movilidad =<br /><br /> \<SYSTEMDRIVE>\Users\\<usuario\>\AppData\Roaming<br /><br /> Almacenes sin movilidad =<br /><br /> \<SYSTEMDRIVE>\Users\\<usuario\>\AppData\Local|
+|Windows 8, Windows 7, Windows Server 2008, Windows Vista|Almacenes con movilidad =<br /><br /> \<SYSTEMDRIVE>\Users\\< usuario\>\AppData\Roaming<br /><br /> Almacenes sin movilidad =<br /><br /> \<SYSTEMDRIVE>\Users\\<usuario\>\AppData\Local|
 
 <a name="isolated_storage_tasks"></a>
 
@@ -132,7 +132,7 @@ En ocasiones resulta útil comprobar un cambio en el almacenamiento aislado usan
 
 Las clases de almacenamiento aislado permiten crear, enumerar y eliminar almacenamiento aislado. Los métodos para realizar estas tareas están disponibles mediante el objeto <xref:System.IO.IsolatedStorage.IsolatedStorageFile> . Algunas operaciones requieren disponer del permiso <xref:System.Security.Permissions.IsolatedStorageFilePermission> que representa el derecho a administrar el almacenamiento aislado. También podría ser necesario disponer de derechos de sistema operativo para tener acceso a un archivo o directorio.
 
-Para ver una serie de ejemplos que muestran tareas de almacenamiento aislado habituales, consulte los temas que aparecen en enumerados en [Temas relacionados](#related_topics).
+Para ver una serie de ejemplos que muestran tareas de almacenamiento aislado habituales, vea los temas que aparecen en enumerados en [Temas relacionados](#related_topics).
 
 <a name="scenarios_for_isolated_storage"></a>
 
@@ -162,18 +162,18 @@ Muchas aplicaciones usan bases de datos para almacenar y aislar los datos y, en 
 
 ## <a name="related-topics"></a>Temas relacionados
 
-|Título|Description|
+|Title|Descripción|
 |-----------|-----------------|
-|[Tipos de aislamiento](../../../docs/standard/io/types-of-isolation.md)|Describe los distintos tipos de aislamiento.|
-|[Cómo: Obtener los almacenes de almacenamiento aislado](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|Proporciona un ejemplo de uso de la clase <xref:System.IO.IsolatedStorage.IsolatedStorageFile> para obtener un almacén aislado por usuario y ensamblado.|
-|[Cómo: Enumerar los almacenes de almacenamiento aislado](../../../docs/standard/io/how-to-enumerate-stores-for-isolated-storage.md)|Muestra cómo utilizar el método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> para calcular el tamaño de todo el almacenamiento aislado para el usuario.|
-|[Cómo: Eliminar almacenes de almacenamiento aislado](../../../docs/standard/io/how-to-delete-stores-in-isolated-storage.md)|Muestra cómo usar el método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%2A?displayProperty=nameWithType> , de dos maneras diferentes, para eliminar almacenes aislados.|
-|[Prever condiciones de espacio insuficiente con almacenamiento aislado](../../../docs/standard/io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md)|Muestra cómo medir el espacio que queda en un almacén aislado.|
-|[Cómo: Crear archivos y directorios en almacenamiento aislado](../../../docs/standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|Proporciona ejemplos de creación de archivos y directorios en un almacén aislado.|
-|[Cómo: Buscar archivos y directorios existentes en almacenamiento aislado](../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|Muestra cómo leer la estructura y los archivos del directorio de almacenamiento aislado.|
-|[Cómo: Leer y escribir en archivos en almacenamiento aislado](../../../docs/standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|Proporciona un ejemplo de cómo escribir una cadena en un archivo de almacenamiento aislado y, a continuación, leerla.|
-|[Cómo: Eliminar archivos y directorios en almacenamiento aislado](../../../docs/standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|Muestra cómo eliminar archivos y directorios de almacenamiento aislado.|
-|[E/S de archivos y secuencias](../../../docs/standard/io/index.md)|Explica cómo puede realizar el acceso sincrónico y asincrónico a archivos y flujos de datos.|
+|[Tipos de aislamiento](types-of-isolation.md)|Describe los distintos tipos de aislamiento.|
+|[Cómo: Obtener los almacenes de almacenamiento aislado](how-to-obtain-stores-for-isolated-storage.md)|Proporciona un ejemplo de uso de la clase <xref:System.IO.IsolatedStorage.IsolatedStorageFile> para obtener un almacén aislado por usuario y ensamblado.|
+|[Cómo: Enumerar los almacenes de almacenamiento aislado](how-to-enumerate-stores-for-isolated-storage.md)|Muestra cómo utilizar el método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> para calcular el tamaño de todo el almacenamiento aislado para el usuario.|
+|[Cómo: Eliminar almacenes de almacenamiento aislado](how-to-delete-stores-in-isolated-storage.md)|Muestra cómo usar el método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%2A?displayProperty=nameWithType> , de dos maneras diferentes, para eliminar almacenes aislados.|
+|[Cómo: Prever condiciones de espacio insuficiente con almacenamiento aislado](how-to-anticipate-out-of-space-conditions-with-isolated-storage.md)|Muestra cómo medir el espacio que queda en un almacén aislado.|
+|[Cómo: Crear archivos y directorios en almacenamiento aislado](how-to-create-files-and-directories-in-isolated-storage.md)|Proporciona ejemplos de creación de archivos y directorios en un almacén aislado.|
+|[Cómo: Buscar archivos y directorios existentes en almacenamiento aislado](how-to-find-existing-files-and-directories-in-isolated-storage.md)|Muestra cómo leer la estructura y los archivos del directorio de almacenamiento aislado.|
+|[Cómo: Leer y escribir en archivos en almacenamiento aislado](how-to-read-and-write-to-files-in-isolated-storage.md)|Proporciona un ejemplo de cómo escribir una cadena en un archivo de almacenamiento aislado y, a continuación, leerla.|
+|[Cómo: Eliminar archivos y directorios en almacenamiento aislado](how-to-delete-files-and-directories-in-isolated-storage.md)|Muestra cómo eliminar archivos y directorios de almacenamiento aislado.|
+|[E/S de archivos y secuencias](index.md)|Explica cómo puede realizar el acceso sincrónico y asincrónico a archivos y flujos de datos.|
 
 <a name="reference"></a>
 

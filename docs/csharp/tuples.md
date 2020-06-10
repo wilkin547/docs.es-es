@@ -4,12 +4,12 @@ description: Más información sobre tipos de tupla con nombre y sin nombre en C
 ms.date: 05/15/2018
 ms.technology: csharp-fundamentals
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 9ce9e1d4395d1a75f36004384ec215c615cd9802
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 497f95811677c300e1fadad65eb495dced7f2da3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156914"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374621"
 ---
 # <a name="c-tuple-types"></a>Tipos de tupla de C#
 
@@ -252,7 +252,7 @@ public class Point
 
 Cualquier tipo de tupla puede deconstruirse, tal y como se muestra anteriormente. También resulta fácil habilitar la deconstrucción en cualquier tipo definido por el usuario (clases, structs o incluso interfaces).
 
-El autor del tipo puede definir uno o varios métodos `Deconstruct` que asignen valores a cualquier número de variables `out` que representen los elementos de datos que componen el tipo. Por ejemplo, el tipo `Person` siguiente define un método `Deconstruct` que deconstruye un objeto person en los elementos que representan el nombre y apellido:
+El autor del tipo puede definir uno o varios métodos `Deconstruct` que asignen valores a cualquier número de [ variables `out`](language-reference/keywords/out-parameter-modifier.md) que representen los elementos de datos que componen el tipo. Por ejemplo, el tipo `Person` siguiente define un método `Deconstruct` que deconstruye un objeto person en los elementos que representan el nombre y apellido:
 
 [!code-csharp[TypeWithDeconstructMethod](../../samples/snippets/csharp/tuples/person.cs#12_TypeWithDeconstructMethod "Type with a deconstruct method")]
 
@@ -286,7 +286,7 @@ El método `Deconstruct` podría convertir el objeto `Person``p` en una tupla qu
 
 ## <a name="tuples-as-out-parameters"></a>Tuplas como parámetros de salida
 
-Las tuplas se pueden usar como parámetros de salida *en sí*. No se deben confundir con ninguna ambigüedad mencionada anteriormente en la sección [Deconstrucción](#deconstruction). En una llamada al método, solo necesita describir la forma de la tupla:
+Las tuplas se pueden usar como [ parámetros `out`](language-reference/keywords/out-parameter-modifier.md) *en sí*. No se deben confundir con ninguna ambigüedad mencionada anteriormente en la sección [Deconstrucción](#deconstruction). En una llamada al método, solo necesita describir la forma de la tupla:
 
 [!code-csharp[TuplesAsOutParameters](~/samples/snippets/csharp/tuples/program.cs#01_TupleAsOutVariable "Tuples as out parameters")]
 

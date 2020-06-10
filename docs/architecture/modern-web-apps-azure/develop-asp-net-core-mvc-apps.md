@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Des
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 955d4ec4a0bd0ddf2d022d4154fc6528b2abf3d0
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: be674f3292238b1983064408184777d379cf52a7
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144557"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84307012"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Desarrollo de aplicaciones ASP.NET Core MVC
 
@@ -26,7 +26,7 @@ Al crear una aplicación ASP.NET Core, debe tener un plan en cuenta para el tipo
 
 ### <a name="why-razor-pages"></a>¿Por qué Razor Pages?
 
-Razor Pages es el método predeterminado para nuevas aplicaciones web en Visual Studio. Razor Pages ofrece una manera más fácil de crear características de aplicaciones basadas en páginas, como los formularios que no son de aplicaciones de página única. Al usar controladores y vistas, era habitual que las aplicaciones tuvieran controladores muy grandes que funcionaban con varias dependencias y varios modelos de vista distintos, así como que devolvieran muchas vistas diferentes. Esto generaba una mayor complejidad y, a menudo, controladores que no seguían el principio de responsabilidad única o los principios de apertura y cierre de forma eficaz. Razor Pages soluciona este problema, ya que encapsula la lógica del lado servidor para una determinada "página" lógica en una aplicación web con el marcado de Razor. Una página de Razor que no tenga ninguna lógica del lado servidor simplemente puede constar de un archivo Razor (por ejemplo, "Index.cshtml"). Sin embargo, la mayoría de Razor Pages no triviales tendrá una clase de modelo de página asociado, que, por convención, tendrá el mismo nombre que el archivo Razor con una extensión ".cs" (por ejemplo, "Index.cshtml.cs").
+Razor Pages es el método predeterminado para nuevas aplicaciones web en Visual Studio. Razor Pages ofrece una manera más fácil de crear características de aplicaciones basadas en páginas, como los formularios que no son de aplicaciones de página única. Al usar controladores y vistas, era habitual que las aplicaciones tuvieran controladores muy grandes que funcionaban con varias dependencias y varios modelos de vista distintos, así como que devolvieran muchas vistas diferentes. Esto generaba una mayor complejidad y, a menudo, daba lugar a controladores que no seguían el principio de responsabilidad única o los principios de apertura y cierre de forma eficaz. Razor Pages soluciona este problema, ya que encapsula la lógica del lado servidor para una determinada "página" lógica en una aplicación web con el marcado de Razor. Una página de Razor que no tenga ninguna lógica del lado servidor simplemente puede constar de un archivo Razor (por ejemplo, "Index.cshtml"). Sin embargo, la mayoría de Razor Pages no triviales tendrá una clase de modelo de página asociado, que, por convención, tendrá el mismo nombre que el archivo Razor con una extensión ".cs" (por ejemplo, "Index.cshtml.cs").
 
 Un modelo de página de Razor Pages combina las responsabilidades de un controlador de MVC y un modelo de vista. En lugar de controlar las solicitudes con los métodos de acción de controlador, se ejecutan los controladores de modelo de página, como "OnGet()", con lo que se representa la página asociada de forma predeterminada. Razor Pages simplifica el proceso de compilar páginas individuales en la aplicación ASP.NET Core sin dejar de proporciona todas las características arquitectónicas de ASP.NET Core MVC. Es una buena opción predeterminada para la nueva funcionalidad basada en páginas.
 
@@ -88,7 +88,7 @@ En el ejemplo anterior, la página en cuestión coincidiría con una ruta con un
 "/Products/123"
 ```
 
-Una vez que una determinada solicitud se ha asociado a una ruta, pero antes de llamar al método de acción, ASP.NET Core MVC realizará el [enlace del modelo](/aspnet/core/mvc/models/model-binding) y la [validación del modelo](/aspnet/core/mvc/models/validation) en la solicitud. El enlace del modelo es responsable de convertir los datos HTTP entrantes en los tipos de .NET especificados como parámetros del método de acción que se va a llamar. Por ejemplo, si el método de acción espera un parámetro de identificador de tipo int, el enlace de modelos intentará proporcionar este parámetro de un valor que se proporciona como parte de la solicitud. Para ello, el enlace de modelos busca valores en un formulario enviado, valores en la propia misma ruta y valores de cadena de consulta. Suponiendo que se encuentra un valor de identificador, se convertirá en un entero antes de pasarlo al método de acción.
+Una vez que una determinada solicitud se ha asociado a una ruta, pero antes de llamar al método de acción, ASP.NET Core MVC realizará el [enlace del modelo](/aspnet/core/mvc/models/model-binding) y la [validación del modelo](/aspnet/core/mvc/models/validation) en la solicitud. El enlace del modelo es responsable de convertir los datos HTTP entrantes en los tipos de .NET especificados como parámetros del método de acción que se va a llamar. Por ejemplo, si el método de acción espera un parámetro `int id`, el enlace de modelos intentará proporcionar este parámetro a partir de un valor que se suministre como parte de la solicitud. Para ello, el enlace de modelos busca valores en un formulario enviado, valores en la propia misma ruta y valores de cadena de consulta. Suponiendo que se encuentra un valor de identificador, se convertirá en un entero antes de pasarlo al método de acción.
 
 Después de enlazar el modelo, pero antes de llamar al método de acción, se produce la validación del modelo. La validación del modelo usa atributos opcionales en el tipo de modelo y puede ayudar a garantizar que el objeto de modelo proporcionado cumple determinados requisitos de datos. Se pueden especificar determinados valores como obligatorios, o limitarlos a una longitud o un intervalo numérico determinados, etc. Si se especifican atributos de validación, pero el modelo no cumple sus requisitos, la propiedad ModelState.IsValid será false y el conjunto de reglas de validación con errores estará disponible para enviarlo al cliente que realiza la solicitud.
 
@@ -158,7 +158,7 @@ La clase de inicio es un modelo de cómo estructurar otros elementos de la aplic
 
 ## <a name="structuring-the-application"></a>Estructuración de la aplicación
 
-Las aplicaciones monolíticas suelen tener un único punto de entrada. En el caso de una aplicación web ASP.NET Core, el punto de entrada será el proyecto web ASP.NET Core. Pero eso no significa que la solución deba constar simplemente de un solo proyecto. Resulta útil dividir la aplicación en diferentes capas para seguir la separación de intereses. Una vez dividida en capas, resulta útil ir más allá de las carpetas para separar los proyectos, lo que puede ayudar a conseguir una mejor encapsulación. El mejor método para lograr estos objetivos con una aplicación ASP.NET Core consiste en una variación de la arquitectura limpia que se describe en el capítulo 5. Al seguir este enfoque, la solución de la aplicación estará compuesta por bibliotecas independientes para la interfaz de usuario, la infraestructura y ApplicationCore.
+Las aplicaciones monolíticas suelen tener un único punto de entrada. En el caso de una aplicación web ASP.NET Core, el punto de entrada será el proyecto web ASP.NET Core. Pero eso no significa que la solución deba constar simplemente de un solo proyecto. Resulta útil dividir la aplicación en diferentes capas para seguir la separación de intereses. Una vez dividida en capas, resulta útil ir más allá de las carpetas para separar los proyectos, lo que puede ayudar a conseguir una mejor encapsulación. El mejor método para lograr estos objetivos con una aplicación ASP.NET Core consiste en una variación de la arquitectura limpia que se describe en el capítulo 5. A raíz de este enfoque, la solución de la aplicación estará compuesta por bibliotecas independientes para la interfaz de usuario, la infraestructura y ApplicationCore.
 
 Además de estos proyectos, también se incluyen proyectos de prueba independientes (las pruebas se describen en el capítulo 9).
 
@@ -537,7 +537,7 @@ DDD es ideal para aplicaciones de gran tamaño con complejidad de negocio signif
 
 DDD implica invertir en modelado, arquitectura y comunicación, lo que puede que no esté garantizado para aplicaciones más pequeñas o aplicaciones que esencialmente son de tipo CRUD (crear/leer/actualizar/eliminar). Si se elige el enfoque de DDD para la aplicación, pero se descubre que el dominio tiene un modelo anémico sin comportamiento, es posible que haya que reconsiderar el enfoque. O la aplicación no necesita DDD o es posible que necesite asistencia para refactorizarla con el fin de encapsular la lógica de negocios en el modelo de dominio, en lugar de la interfaz de usuario o la base de datos.
 
-Un enfoque híbrido consistiría en usar DDD solo para las áreas más complejas o transaccionales de la aplicación, pero no para partes CRUD más sencillas o de solo lectura. Por ejemplo, no es necesario tener las restricciones de un agregado si se están consultando datos para mostrar un informe o para visualizar datos para un panel. Es absolutamente aceptable tener un modelo de lectura más sencillo e independiente para estos requisitos.
+Un enfoque híbrido consistiría en usar DDD solo para las áreas más complejas o transaccionales de la aplicación, pero no para partes CRUD más sencillas o de solo lectura. Por ejemplo, no se necesitan las restricciones de un agregado si se están consultando datos para mostrar un informe o visualizar datos para un panel. Es absolutamente aceptable tener un modelo de lectura más sencillo e independiente para estos requisitos.
 
 > ### <a name="references--domain-driven-design"></a>Referencias: diseño controlado por dominios
 >

@@ -2,12 +2,12 @@
 title: Depuración de una aplicación de consola de .NET Core con Visual Studio Code
 description: Aprenda a depurar una aplicación de consola de .NET Core con Visual Studio Code.
 ms.date: 05/26/2020
-ms.openlocfilehash: eaeb97f54442006d2f0e29483a68dc3de89b5778
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 82b2798397d702aa2a50c04bf6e4d569b97e3666
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202494"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241518"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-code"></a>Tutorial: Depuración de una aplicación de consola de .NET Core con Visual Studio Code
 
@@ -29,7 +29,13 @@ En la configuración de depuración, el programa se compila sin optimizar y con 
 
 Un punto de interrupción interrumpe temporalmente la ejecución de la aplicación *antes* de que se ejecute la línea con el punto de interrupción.
 
-1. En *Program.cs*, establezca un *punto de interrupción* en la línea que muestre el nombre, la fecha y la hora; para ello, haga clic en el margen izquierdo de la ventana de código. El margen izquierdo está a la izquierda de los números de línea. Otra manera de establecer un punto de interrupción es colocar el cursor en la línea de código y luego presionar <kbd>F9</kbd>.
+1. Abra Visual Studio Code.
+
+1. Abra la carpeta de proyecto *HelloWorld* que creó en [Creación de una aplicación de consola de .NET Core en Visual Studio Code](with-visual-studio-code.md).
+
+1. Abra el archivo *Program.cs*.
+
+1. Establezca un *punto de interrupción* en la línea que muestre el nombre, la fecha y la hora; para ello, haga clic en el margen izquierdo de la ventana de código. El margen izquierdo está a la izquierda de los números de línea. Otra manera de establecer un punto de interrupción es colocar el cursor en la línea de código y luego presionar <kbd>F9</kbd>.
 
    En esta imagen vemos que Visual Studio Code marca la línea donde se establece el punto de interrupción con un punto rojo en el margen izquierdo.
 
@@ -167,7 +173,7 @@ Visual Studio Code también permite recorrer línea a línea un programa y sup
 
 1. Seleccione **Depurar paso a paso por instrucciones** o presione <kbd>F11</kbd>.
 
-   Visual Studio Code ejecuta `Console.WriteLine` para el mensaje de nombre y resalta la siguiente línea de ejecución. La línea siguiente es `Console.ReadLine` para `name`. La ventana **Variables** no cambia y la pestaña **Terminal** muestra el mensaje "What is your name?".
+   Visual Studio Code ejecuta `Console.WriteLine` para el mensaje de nombre y resalta la siguiente línea de ejecución. La línea siguiente es `Console.ReadLine` para `name`. La ventana **Variables** no cambia y la pestaña **Terminal** muestra el mensaje "What is your name?" .
 
 1. Seleccione **Depurar paso a paso por instrucciones** o presione <kbd>F11</kbd>.
 
@@ -215,10 +221,7 @@ dotnet run --configuration Release
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-En este tutorial, ha usado las herramientas de depuración de Visual Studio Code. Para descubrir cómo publicar una versión de la aplicación que se pueda implementar, vea [Publicar la aplicación](cli-create-console-app.md#publish-your-app).
-
-<!--In the next tutorial, you publish a deployable version of the app.
+En este tutorial, ha usado las herramientas de depuración de Visual Studio Code. En el siguiente tutorial, publicará una versión de la aplicación que se puede implementar.
 
 > [!div class="nextstepaction"]
-> [Publish a .NET Core console application with Visual Studio Code](publishing-with-visual-studio-code.md)
--->
+> [Publicación de una aplicación de consola de .NET Core con Visual Studio Code](publishing-with-visual-studio-code.md)

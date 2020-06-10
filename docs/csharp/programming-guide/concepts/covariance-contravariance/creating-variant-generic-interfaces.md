@@ -2,19 +2,19 @@
 title: Crear interfaces genéricas variantes (C#)
 ms.date: 07/20/2015
 ms.assetid: 30330ec4-9df2-4838-a535-6c406d0ed4df
-ms.openlocfilehash: 4ba72f28cd2ddd800f169387cc2c742159d4cb1b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 27760fd73c8c40fc108106b87b2102ab5e07263c
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69595308"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241388"
 ---
 # <a name="creating-variant-generic-interfaces-c"></a>Crear interfaces genéricas variantes (C#)
 
 Puede declarar parámetros de tipo genérico en las interfaces como covariantes o contravariantes. La *covarianza* permite que los métodos de interfaz tengan tipos de valor devuelto más derivados que los que se definen en los parámetros de tipo genérico. La *contravarianza* permite que los métodos de interfaz tengan tipos de argumento menos derivados que los que se especifican en los parámetros genéricos. Las interfaces genéricas que tienen parámetros de tipo genérico covariantes o contravariantes se llaman *variantes*.
 
 > [!NOTE]
-> En .NET Framework 4 se introdujo la compatibilidad con la varianza para varias interfaces genéricas existentes. Para ver la lista de interfaces variantes de .NET Framework, vea [Varianza en interfaces genéricas (C#)](./variance-in-generic-interfaces.md).
+> En .NET Framework 4 se ha presentado la compatibilidad con la varianza para varias interfaces genéricas existentes. Para ver la lista de interfaces variantes de .NET, vea [Varianza en interfaces genéricas (C#)](./variance-in-generic-interfaces.md).
 
 ## <a name="declaring-variant-generic-interfaces"></a>Declarar interfaces genéricas variantes
 

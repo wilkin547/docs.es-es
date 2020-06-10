@@ -1,5 +1,6 @@
 ---
 title: Escribir un programa en paralelo sencillo con Parallel.ForEach
+description: En este artículo, aprenderá a habilitar el paralelismo de datos en .NET. Escriba un bucle Parallel.ForEach para cualquier origen de datos IEnumerable o IEnumerable<T>.
 ms.date: 02/14/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,19 +10,19 @@ helpviewer_keywords:
 - foreach, parallel version
 - parallel programming, foreach
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
-ms.openlocfilehash: 0300f8900cd18159ba3a2170cfba96f302f282a0
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 59c8710a8e3fc878b2ceded8595f7f3319d4c953
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588141"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447204"
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a>Procedimiento Escribir un bucle Parallel.ForEach sencillo
 
 Este ejemplo muestra cómo utilizar un bucle <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> para habilitar el paralelismo de datos sobre cualquier origen de datos <xref:System.Collections.IEnumerable?displayProperty=nameWithType> o <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>.
 
 > [!NOTE]
-> En esta documentación, se utilizan expresiones lambda para definir delegados en PLINQ. Si no está familiarizado con las expresiones lambda de C# o Visual Basic, vea [Expresiones lambda en PLINQ y TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).
+> En esta documentación, se utilizan expresiones lambda para definir delegados en PLINQ. Si no está familiarizado con las expresiones lambda de C# o Visual Basic, vea [Expresiones lambda en PLINQ y TPL](lambda-expressions-in-plinq-and-tpl.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -32,14 +33,14 @@ En este ejemplo se supone que tiene varios archivos .jpg en la carpeta *C:\Usuar
 
 Un bucle <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> funciona como un bucle <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. El bucle divide la colección de origen y programa el trabajo en varios subprocesos en función del entorno del sistema. Mientras más procesadores haya en el sistema, más rápido se ejecutará el método paralelo. Para algunas colecciones de origen, un bucle secuencial puede ser más rápido, dependiendo del tamaño del origen y del tipo de trabajo que realiza el bucle. Para más información sobre el rendimiento, vea [Problemas potenciales en el paralelismo de datos y tareas](potential-pitfalls-in-data-and-task-parallelism.md).
 
-Para obtener más información sobre los bucles paralelos, vea [Procedimiento para escribir un bucle Parallel.For sencillo](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-for-loop.md).
+Para obtener más información sobre los bucles paralelos, vea [Procedimiento para escribir un bucle Parallel.For sencillo](how-to-write-a-simple-parallel-for-loop.md).
 
 Para usar <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> con una colección no genérica, puede usar el método de extensión <xref:System.Linq.Enumerable.Cast%2A?displayProperty=nameWithType> para convertir la colección en una colección genérica, como se muestra en el ejemplo siguiente:
 
 [!code-csharp[TPL_Parallel#07](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/nongeneric.cs#07)]
 [!code-vb[TPL_Parallel#07](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/nongeneric.vb#07)]
 
-También puede utilizar Parallel LINQ (PLINQ) para paralelizar el procesamiento de orígenes de datos <xref:System.Collections.Generic.IEnumerable%601>. PLINQ permite usar la sintaxis de consulta declarativa para expresar el comportamiento del bucle. Para más información, consulte [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md).
+También puede utilizar Parallel LINQ (PLINQ) para paralelizar el procesamiento de orígenes de datos <xref:System.Collections.Generic.IEnumerable%601>. PLINQ permite usar la sintaxis de consulta declarativa para expresar el comportamiento del bucle. Para más información, consulte [Parallel LINQ (PLINQ)](introduction-to-plinq.md).
 
 ## <a name="compile-and-run-the-code"></a>Compilación y ejecución del código
 
@@ -63,6 +64,6 @@ Para ejecutar la aplicación de consola desde Visual Studio, presione **F5**.
 
 ## <a name="see-also"></a>Vea también
 
-- [Paralelismo de datos (biblioteca TPL)](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
-- [Programación en paralelo en .NET](../../../docs/standard/parallel-programming/index.md)
-- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
+- [Paralelismo de datos (biblioteca TPL)](data-parallelism-task-parallel-library.md)
+- [Programación en paralelo en .NET](index.md)
+- [Parallel LINQ (PLINQ)](introduction-to-plinq.md)

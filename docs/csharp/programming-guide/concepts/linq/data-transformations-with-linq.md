@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: 393e3bd24c4bc8b89064e01e1048b24254f5f83b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d20f5d826620ad8654ddf1e9471ecc894b2c0391
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635956"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408528"
 ---
 # <a name="data-transformations-with-linq-c"></a>Transformaciones de datos con LINQ (C#)
 Language-Integrated Query (LINQ) no solo es para recuperar datos. También es una herramienta eficaz para transformarlos. Mediante el uso de un consulta LINQ, se puede usar una secuencia de origen como entrada y modificarla de muchas maneras para crear una nueva secuencia de salida. Por medio de ordenaciones y agrupaciones se puede modificar la propia secuencia sin modificar los elementos. Pero quizás la característica más eficaz de las consultas LINQ es la capacidad para crear nuevos tipos. Esto se realiza en la cláusula [select](../../../language-reference/keywords/select-clause.md). Por ejemplo, puede realizar las tareas siguientes:  
@@ -90,7 +90,11 @@ Language-Integrated Query (LINQ) no solo es para recuperar datos. También es un
  Para obtener más información, vea [Creating XML Trees (C#)](./creating-xml-trees-linq-to-xml-2.md) (Creación de árboles XML [C#]).  
   
 ## <a name="performing-operations-on-source-elements"></a>Realizar operaciones en los elementos de origen  
- Es posible que una secuencia de salida no contenga ningún elemento o propiedades de elemento de la secuencia de origen. En su lugar, es posible que la salida sea una secuencia de valores que se calcula usando los elementos de origen como argumentos de entrada. La siguiente consulta simple, cuando se ejecuta, genera una secuencia de cadenas cuyos valores representan un cálculo basado en la secuencia de origen de elementos de tipo `double`.  
+ Es posible que una secuencia de salida no contenga ningún elemento o propiedades de elemento de la secuencia de origen. En su lugar, es posible que la salida sea una secuencia de valores que se calcula usando los elementos de origen como argumentos de entrada.
+
+ La consulta siguiente tomará una secuencia de números que representan radios de círculos, calculará el área de cada radio y devolverá una secuencia de salida que contenga cadenas con el formato del área calculada.
+
+ Se dará formato a cada cadena de la secuencia de salida mediante la [interpolación de cadenas](../../../language-reference/tokens/interpolated.md). Una cadena interpolada presentará un elemento `$` delante de las comillas de apertura de la cadena, y las operaciones se pueden realizar entre llaves colocadas dentro de la cadena interpolada. Tras realizar las operaciones, se concatenarán los resultados.
   
 > [!NOTE]
 > No se admite llamar a métodos en expresiones de consulta si la consulta se va a convertir a otro dominio. Por ejemplo, no se puede llamar a un método normal de C# en [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] porque SQL Server no tiene contexto para él. En cambio, se pueden asignar procedimientos almacenados a los métodos y llamar a los primeros. Para obtener más información, vea [Procedimientos almacenados](../../../../framework/data/adonet/sql/linq/stored-procedures.md).  

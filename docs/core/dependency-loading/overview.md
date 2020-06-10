@@ -5,12 +5,12 @@ ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
 ms.topic: overview
-ms.openlocfilehash: f6b5fc1f92171b61dcab162b782ca7212c602d76
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 34deb802183f20cc92449c21eb7e149cc002850f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73416660"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284227"
 ---
 # <a name="dependency-loading-in-net-core"></a>Carga de dependencias en .NET Core
 
@@ -18,7 +18,7 @@ Todas las aplicaciones .NET Core tienen dependencias. Incluso la aplicación sen
 
 La descripción de la lógica de carga de ensamblados predeterminados de .NET Core puede ayudar a comprender y depurar incidencias de implementación habituales.
 
-En algunas aplicaciones, las dependencias se determinan dinámicamente en runtime. En estas situaciones, es fundamental entender cómo se cargan los ensamblados administrados y las dependencias no administradas.
+En algunas aplicaciones, las dependencias se determinan dinámicamente en tiempo de ejecución. En estas situaciones, es fundamental entender cómo se cargan los ensamblados administrados y las dependencias no administradas.
 
 ## <a name="understanding-assemblyloadcontext"></a>Descripción de AssemblyLoadContext
 

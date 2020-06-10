@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: 78d9a6490c0479d9c21e01d0bcba41294d674a5c
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 3e6f3a921238a5897c7aa4b6034be979724b7167
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644382"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84283447"
 ---
 # <a name="whats-new-in-net-core-21"></a>Novedades de .NET Core 2.1
 
@@ -91,7 +91,7 @@ En el SDK de .NET Core 2.1, todas las operaciones de herramientas utilizan el co
 
 Todas las aplicaciones de .NET Core a partir de .NET Core 2.0 se ponen al día automáticamente a la *versión secundaria* más reciente instalada en un sistema.
 
-A partir de .NET Core 2.0, si la versión de .NET Core que se creó una aplicación no está presente en tiempo de ejecución, la aplicación se ejecuta automáticamente en la *versión secundaria* instalada más reciente de .NET Core. En otras palabras, si una aplicación se compila con .NET Core 2.0, y .NET Core 2.0 no está presente en el sistema host pero sí lo está .NET Core 2.1, la aplicación se ejecuta con .NET Core 2.1.
+A partir de .NET Core 2.0, si la versión de .NET Core que se creó una aplicación no está presente en tiempo de ejecución, la aplicación se ejecuta automáticamente en la *versión secundaria* instalada más reciente de .NET Core. En otras palabras, si una aplicación se compila con .NET Core 2.0, y .NET Core 2.0 no está presente en el sistema host pero sí lo está .NET Core 2.1, la aplicación se ejecuta con .NET Core 2.1.
 
 > [!IMPORTANT]
 > Este comportamiento de puesta al día no se aplica para versiones preliminares. De forma predeterminada, tampoco se aplica a las versiones principales, pero se puede cambiar con las opciones siguientes.

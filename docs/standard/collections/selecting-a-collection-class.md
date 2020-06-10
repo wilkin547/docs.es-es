@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - grouping data in collections, selecting collection class
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
-ms.openlocfilehash: d79f1ca0d264a5a17306bb66f285b6fbe6b4e7ca
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 62f4f768753637043ab91219cfb63c741a194b96
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728480"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287931"
 ---
 # <a name="selecting-a-collection-class"></a>Seleccionar una clase de colección
 
@@ -34,9 +34,9 @@ Pregúntese lo siguiente:
 
 - ¿Necesita acceder a los elementos en cierto orden, como FIFO, LIFO o aleatorio?
 
-  - La clase <xref:System.Collections.Queue>, así como las clases genéricas <xref:System.Collections.Generic.Queue%601>, <xref:System.Collections.Concurrent.ConcurrentQueue%601> y <xref:System.Collections.Immutable.ImmutableQueue%601>, ofrecen acceso FIFO. Para obtener más información, consulte [Cuándo usar una colección segura para subprocesos](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md).
+  - La clase <xref:System.Collections.Queue>, así como las clases genéricas <xref:System.Collections.Generic.Queue%601>, <xref:System.Collections.Concurrent.ConcurrentQueue%601> y <xref:System.Collections.Immutable.ImmutableQueue%601>, ofrecen acceso FIFO. Para obtener más información, consulte [Cuándo usar una colección segura para subprocesos](thread-safe/when-to-use-a-thread-safe-collection.md).
 
-  - La clase <xref:System.Collections.Stack>, así como las clases genéricas <xref:System.Collections.Generic.Stack%601>, <xref:System.Collections.Concurrent.ConcurrentStack%601> y <xref:System.Collections.Immutable.ImmutableStack%601>, ofrecen acceso LIFO. Para obtener más información, consulte [Cuándo usar una colección segura para subprocesos](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md).
+  - La clase <xref:System.Collections.Stack>, así como las clases genéricas <xref:System.Collections.Generic.Stack%601>, <xref:System.Collections.Concurrent.ConcurrentStack%601> y <xref:System.Collections.Immutable.ImmutableStack%601>, ofrecen acceso LIFO. Para obtener más información, consulte [Cuándo usar una colección segura para subprocesos](thread-safe/when-to-use-a-thread-safe-collection.md).
 
   - La clase genérica <xref:System.Collections.Generic.LinkedList%601> permite el acceso secuencial desde el encabezado hasta el final o desde el final hasta el encabezado.
 
@@ -68,23 +68,23 @@ Pregúntese lo siguiente:
 
 - ¿Necesita realizar búsquedas y recuperaciones rápidas de información?
 
-  - <xref:System.Collections.Specialized.ListDictionary> es más rápida que <xref:System.Collections.Hashtable> para colecciones pequeñas (de 10 elementos o menos). La clase genérica <xref:System.Collections.Generic.Dictionary%602> proporciona búsquedas más rápidas que la clase genérica <xref:System.Collections.Generic.SortedDictionary%602>. La implementación multiproceso es <xref:System.Collections.Concurrent.ConcurrentDictionary%602>. <xref:System.Collections.Concurrent.ConcurrentBag%601> proporciona una inserción multiproceso rápida para datos no ordenados. Para más información sobre ambos tipos multiproceso, consulte [Cuándo usar una colección segura para subprocesos](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md).
+  - <xref:System.Collections.Specialized.ListDictionary> es más rápida que <xref:System.Collections.Hashtable> para colecciones pequeñas (de 10 elementos o menos). La clase genérica <xref:System.Collections.Generic.Dictionary%602> proporciona búsquedas más rápidas que la clase genérica <xref:System.Collections.Generic.SortedDictionary%602>. La implementación multiproceso es <xref:System.Collections.Concurrent.ConcurrentDictionary%602>. <xref:System.Collections.Concurrent.ConcurrentBag%601> proporciona una inserción multiproceso rápida para datos no ordenados. Para más información sobre ambos tipos multiproceso, consulte [Cuándo usar una colección segura para subprocesos](thread-safe/when-to-use-a-thread-safe-collection.md).
 
 - ¿Necesita colecciones que acepten solo cadenas?
 
   - <xref:System.Collections.Specialized.StringCollection> (basada en <xref:System.Collections.IList>) y <xref:System.Collections.Specialized.StringDictionary> (basada en <xref:System.Collections.IDictionary>) están en el espacio de nombres <xref:System.Collections.Specialized>.
 
-  - Además, puede usar cualquiera de las clases de colección genéricas del espacio de nombres <xref:System.Collections.Generic> como colecciones de cadenas fuertemente tipadas especificando la clase <xref:System.String> para sus argumentos de tipo genéricos. Por ejemplo, puede declarar una variable para que sea de tipo [List\<String>](xref:System.Collections.Generic.List%601) or [Dictionary<String,String>](xref:System.Collections.Generic.Dictionary%602).
+  - Además, puede usar cualquiera de las clases de colección genéricas del espacio de nombres <xref:System.Collections.Generic> como colecciones de cadenas fuertemente tipadas especificando la clase <xref:System.String> para sus argumentos de tipo genéricos. Por ejemplo, puede declarar una variable para que sea de tipo [List\<String>](xref:System.Collections.Generic.List%601) o [Dictionary<String,String>](xref:System.Collections.Generic.Dictionary%602).
 
 ## <a name="linq-to-objects-and-plinq"></a>LINQ to Objects y PLINQ
 
 LINQ to Objects permite usar consultas LINQ para acceder a los objetos en memoria siempre que el tipo de objeto implemente las interfaces <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601>. Las consultas LINQ proporcionan un modelo común para acceder a los datos; suelen ser más concisas y legibles que los bucles `foreach` estándar y proporcionan funciones de filtrado, ordenación y agrupación. Para obtener más información, vea [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md) y [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md).
 
-PLINQ proporciona una implementación paralela de LINQ to Objects que puede ofrecer una ejecución de consultas más rápida en muchos escenarios gracias a un uso más eficaz de los equipos de varios núcleos. Para más información, consulte [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md).
+PLINQ proporciona una implementación paralela de LINQ to Objects que puede ofrecer una ejecución de consultas más rápida en muchos escenarios gracias a un uso más eficaz de los equipos de varios núcleos. Para más información, consulte [Parallel LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md).
 
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Collections>
 - <xref:System.Collections.Specialized>
 - <xref:System.Collections.Generic>
-- [Colecciones seguras para subprocesos](../../../docs/standard/collections/thread-safe/index.md)
+- [Colecciones seguras para subprocesos](thread-safe/index.md)

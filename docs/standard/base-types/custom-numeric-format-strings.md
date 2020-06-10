@@ -1,5 +1,6 @@
 ---
 title: Cadenas con formato numérico personalizado
+description: Aprenda a crear una cadena de formato numérico personalizado para dar formato a datos numéricos en .NET. Una cadena de formato numérico personalizado tiene uno o varios especificadores numéricos personalizados.
 ms.date: 06/25/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,37 +17,37 @@ helpviewer_keywords:
 - formatting numbers [.NET Framework]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-ms.openlocfilehash: 1e2456da9fd1b9bd26d0317c0d04c6d1b61cf16d
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: bd96766c7483a3de1a3c70d1efbe1aa91ea45fbc
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83440921"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447243"
 ---
 # <a name="custom-numeric-format-strings"></a>Cadenas con formato numérico personalizado
 
-Puede crear una cadena de formato numérico personalizado, formada por uno o varios especificadores numéricos personalizados, para definir cómo debe darse formato a los datos numéricos. Una cadena de formato numérico personalizado es cualquier cadena que no sea una [cadena de formato numérico estándar](../../../docs/standard/base-types/standard-numeric-format-strings.md).
+Puede crear una cadena de formato numérico personalizado, formada por uno o varios especificadores numéricos personalizados, para definir cómo debe darse formato a los datos numéricos. Una cadena de formato numérico personalizado es cualquier cadena que no sea una [cadena de formato numérico estándar](standard-numeric-format-strings.md).
 
-Algunas sobrecargas del método `ToString` de todos los tipos numéricos admiten las cadenas de formato numérico personalizado. Por ejemplo, se puede proporcionar una cadena de formato numérico a los métodos <xref:System.Int32.ToString%28System.String%29> y <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> del tipo <xref:System.Int32> . La [característica de formato compuesto](../../../docs/standard/base-types/composite-formatting.md) de .NET, que utilizan algunos métodos `Write` y `WriteLine` de las clases <xref:System.Console> y <xref:System.IO.StreamWriter>, el método <xref:System.String.Format%2A?displayProperty=nameWithType> y el método <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>, admite también cadenas de formato numérico personalizado. La característica [interpolación de cadenas](../../csharp/language-reference/tokens/interpolated.md) admite también cadenas de formato numérico personalizado.
+Algunas sobrecargas del método `ToString` de todos los tipos numéricos admiten las cadenas de formato numérico personalizado. Por ejemplo, se puede proporcionar una cadena de formato numérico a los métodos <xref:System.Int32.ToString%28System.String%29> y <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> del tipo <xref:System.Int32> . La [característica de formato compuesto](composite-formatting.md) de .NET, que utilizan algunos métodos `Write` y `WriteLine` de las clases <xref:System.Console> y <xref:System.IO.StreamWriter>, el método <xref:System.String.Format%2A?displayProperty=nameWithType> y el método <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>, admite también cadenas de formato numérico personalizado. La característica [interpolación de cadenas](../../csharp/language-reference/tokens/interpolated.md) admite también cadenas de formato numérico personalizado.
 
 > [!TIP]
 > Puede descargar la **Utilidad de formato**, que es una aplicación de .NET Core Windows Forms que permite aplicar cadenas de formato a valores numéricos o de fecha y hora, y que muestra la cadena de resultado. El código fuente está disponible para [C#](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs) y [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb).
 
-<a name="table"></a> En la tabla siguiente se describen los especificadores de formato numérico personalizado y se muestran las salidas de ejemplo generadas por cada especificador de formato. Consulte la sección [Notas](#NotesCustomFormatting) para obtener más información sobre cómo usar las cadenas con formato numérico personalizado y la sección [Ejemplo](#example) para ver una ilustración completa de su uso.
+<a name="table"></a> En la tabla siguiente se describen los especificadores de formato numérico personalizado y se muestran las salidas de ejemplo generadas por cada especificador de formato. Vea la sección [Notas](#NotesCustomFormatting) para obtener información adicional sobre cómo usar las cadenas de formato numérico personalizado y la sección [Ejemplo](#example) para ver una ilustración completa de su uso.
 
-|Especificador de formato|Name|Description|Ejemplos|
+|Especificador de formato|NOMBRE|Descripción|Ejemplos|
 |----------------------|----------|-----------------|--------------|
-|"0"|Marcador de posición cero|Reemplaza el cero con el dígito correspondiente si hay alguno presente; de lo contrario, el cero aparece en la cadena de resultado.<br /><br /> Más información: [El especificador personalizado "0"](#Specifier0).|1234.5678 ("00000") -> 01235<br /><br /> 0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|
-|"#"|Marcador de posición de dígito.|Reemplaza el símbolo "#" por el dígito correspondiente si hay alguno presente; de lo contrario, no aparece ningún dígito en la cadena de resultado.<br /><br /> Tenga en cuenta que no se mostrará ningún dígito en la cadena de resultado si el dígito que se encuentra en la cadena de entrada es un 0 no significativo. Por ejemplo, 0003 ("####") -> 3.<br /><br /> Más información: [El especificador personalizado "#"](#SpecifierD).|1234.5678 ("#####") -> 1235<br /><br /> 0.45678 ("#.##", en-US) -> .46<br /><br /> 0.45678 ("#.##", fr-FR) -> ,46|
-|"."|Separador decimal|Determina la ubicación del separador decimal en la cadena de resultado.<br /><br /> Más información: [El "." Especificador personalizado](#SpecifierPt).|0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|
-|","|Separador de grupos y escala numérica|Actúa como separador de grupos y como especificador de escala numérica. Como separador de grupos, inserta un carácter separador de grupos adaptado entre cada grupo. Como especificador de escala numérica, divide un número por 1000 por cada coma especificada.<br /><br /> Más información: [El especificador personalizado ","](#SpecifierTh).|Especificador de separador de grupos:<br /><br /> 2147483647 ("##,#", en-US) -> 2,147,483,647<br /><br /> 2147483647 ("##,#", es-ES) -> 2.147.483.647<br /><br /> Especificador de escala:<br /><br /> 2147483647 ("#,#,,", en-US) -> 2,147<br /><br /> 2147483647 ("#,#,,", es-ES) -> 2.147|
-|"%"|Marcador de posición de porcentaje.|Multiplica un número por 100 e inserta un símbolo de porcentaje adaptado en la cadena de resultado.<br /><br /> Más información: [El especificador personalizado "%"](#SpecifierPct).|0.3697 ("%#0.00", en-US) -> %36.97<br /><br /> 0.3697 ("%#0.00", el-GR) -> %36,97<br /><br /> 0.3697 ("##.0 %", en-US) -> 37.0 %<br /><br /> 0.3697 ("##.0 %", el-GR) -> 37,0 %|
-|"‰"|Marcador de posición de "por mil"|Multiplica un número por 1000 e inserta un símbolo de "por mil" adaptado en la cadena de resultado.<br /><br /> Más información: [El especificador personalizado "‰"](#SpecifierPerMille).|0.03697 ("#0.00‰", en-US) -> 36.97‰<br /><br /> 0.03697 ("#0.00‰", ru-RU) -> 36,97‰|
-|"E0"<br /><br /> "E+0"<br /><br /> "E-0"<br /><br /> "E0"<br /><br /> "E+0"<br /><br /> "E-0"|Notación exponencial|Si va seguido al menos de un 0 (cero), da formato al resultado usando notación exponencial. El modelo de mayúsculas de "E" o "e" indica el modelo de mayúsculas del símbolo de exponente en la cadena de resultado. El número de ceros que siguen al carácter "E" o "e" determina el número mínimo de dígitos en el exponente. Un signo más (+) indica que un carácter de signo precede siempre al exponente. Un signo menos (-) indica que un carácter de signo solo precede a los exponentes negativos.<br /><br /> Más información: [Los especificadores personalizados "E" y "e"](#SpecifierExponent).|987654 ("#0.0e0") -> 98.8e4<br /><br /> 1503.92311 ("0.0##e+00") -> 1.504e+03<br /><br /> 1.8901385E-16 ("0.0e+00") -> 1.9e-16|
-|"\\"|Carácter de escape|Hace que el carácter siguiente se interprete como un literal en lugar de como un especificador de formato personalizado.<br /><br /> Más información: [El carácter de escape "\\"](#SpecifierEscape).|987654 ("\\###00\\#") -> #987654#|
-|'*cadena*'<br /><br /> "*cadena*"|Delimitador de cadena literal|Indica que los caracteres que encierra se deben copiar en la cadena de resultado sin modificar.<br/><br/>Más información: [Literales de caracteres](#character-literals).|68 ("# ' grados'") -> 68 grados<br /><br /> 68 ("# ' grados'") -> 68 grados|
-|;|Separador de secciones|Define secciones con cadenas de formato diferentes para los números positivos, negativos y cero.<br /><br /> Más información: [El separador de sección ";"](#SectionSeparator).|12.345 ("#0.0#;(#0.0#);-\0-") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#);-\0-") -> -0-<br /><br /> -12.345 ("#0.0#;(#0.0#);-\0-") -> (12.35)<br /><br /> 12.345 ("#0.0#;(#0.0#)") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#)") -> 0.0<br /><br /> -12.345 ("#0.0#;(#0.0#)") -> (12.35)|
-|Otro|Todos los demás caracteres|El carácter se copia en la cadena de resultado sin modificar.<br/><br/>Más información: [Literales de caracteres](#character-literals).|68 ("# °") -> 68 °|
+|"0"|Marcador de posición cero|Reemplaza el cero con el dígito correspondiente si hay alguno presente; de lo contrario, el cero aparece en la cadena de resultado.<br /><br /> Más información: [Especificador personalizado "0"](#Specifier0).|1234.5678 ("00000") -> 01235<br /><br /> 0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|
+|"#"|Marcador de posición de dígito.|Reemplaza el símbolo "#" por el dígito correspondiente si hay alguno presente; de lo contrario, no aparece ningún dígito en la cadena de resultado.<br /><br /> Tenga en cuenta que no se mostrará ningún dígito en la cadena de resultado si el dígito que se encuentra en la cadena de entrada es un 0 no significativo. Por ejemplo, 0003 ("####") -> 3.<br /><br /> Más información: [Especificador personalizado "#"](#SpecifierD).|1234.5678 ("#####") -> 1235<br /><br /> 0.45678 ("#.##", en-US) -> .46<br /><br /> 0.45678 ("#.##", fr-FR) -> ,46|
+|"."|Separador decimal|Determina la ubicación del separador decimal en la cadena de resultado.<br /><br /> Más información: [El especificador personalizado "."](#SpecifierPt).|0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|
+|","|Separador de grupos y escala numérica|Actúa como separador de grupos y como especificador de escala numérica. Como separador de grupos, inserta un carácter separador de grupos adaptado entre cada grupo. Como especificador de escala numérica, divide un número por 1000 por cada coma especificada.<br /><br /> Más información: [Especificador personalizado ","](#SpecifierTh).|Especificador de separador de grupos:<br /><br /> 2147483647 ("##,#", en-US) -> 2,147,483,647<br /><br /> 2147483647 ("##,#", es-ES) -> 2.147.483.647<br /><br /> Especificador de escala:<br /><br /> 2147483647 ("#,#,,", en-US) -> 2,147<br /><br /> 2147483647 ("#,#,,", es-ES) -> 2.147|
+|"%"|Marcador de posición de porcentaje.|Multiplica un número por 100 e inserta un símbolo de porcentaje adaptado en la cadena de resultado.<br /><br /> Más información: [Especificador personalizado "%"](#SpecifierPct).|0.3697 ("%#0.00", en-US) -> %36.97<br /><br /> 0.3697 ("%#0.00", el-GR) -> %36,97<br /><br /> 0.3697 ("##.0 %", en-US) -> 37.0 %<br /><br /> 0.3697 ("##.0 %", el-GR) -> 37,0 %|
+|"‰"|Marcador de posición de "por mil"|Multiplica un número por 1000 e inserta un símbolo de "por mil" adaptado en la cadena de resultado.<br /><br /> Más información: [Especificador personalizado "‰"](#SpecifierPerMille).|0.03697 ("#0.00‰", en-US) -> 36.97‰<br /><br /> 0.03697 ("#0.00‰", ru-RU) -> 36,97‰|
+|"E0"<br /><br /> "E+0"<br /><br /> "E-0"<br /><br /> "E0"<br /><br /> "E+0"<br /><br /> "E-0"|Notación exponencial|Si va seguido al menos de un 0 (cero), da formato al resultado usando notación exponencial. El modelo de mayúsculas de "E" o "e" indica el modelo de mayúsculas del símbolo de exponente en la cadena de resultado. El número de ceros que siguen al carácter "E" o "e" determina el número mínimo de dígitos en el exponente. Un signo más (+) indica que un carácter de signo precede siempre al exponente. Un signo menos (-) indica que un carácter de signo solo precede a los exponentes negativos.<br /><br /> Más información: [Especificadores personalizados "E" y "e"](#SpecifierExponent).|987654 ("#0.0e0") -> 98.8e4<br /><br /> 1503.92311 ("0.0##e+00") -> 1.504e+03<br /><br /> 1.8901385E-16 ("0.0e+00") -> 1.9e-16|
+|"\\"|Carácter de escape|Hace que el carácter siguiente se interprete como un literal en lugar de como un especificador de formato personalizado.<br /><br /> Más información: [Carácter de escape "\\"](#SpecifierEscape).|987654 ("\\###00\\#") -> #987654#|
+|'*cadena*'<br /><br /> "*string*"|Delimitador de cadena literal|Indica que los caracteres que encierra se deben copiar en la cadena de resultado sin modificar.<br/><br/>Más información: [Literales de carácter](#character-literals).|68 ("# ' grados'") -> 68 grados<br /><br /> 68 ("# ' grados'") -> 68 grados|
+|;|Separador de secciones|Define secciones con cadenas de formato diferentes para los números positivos, negativos y cero.<br /><br /> Más información: [Separador de sección ";"](#SectionSeparator).|12.345 ("#0.0#;(#0.0#);-\0-") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#);-\0-") -> -0-<br /><br /> -12.345 ("#0.0#;(#0.0#);-\0-") -> (12.35)<br /><br /> 12.345 ("#0.0#;(#0.0#)") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#)") -> 0.0<br /><br /> -12.345 ("#0.0#;(#0.0#)") -> (12.35)|
+|Otros|Todos los demás caracteres|El carácter se copia en la cadena de resultado sin modificar.<br/><br/>Más información: [Literales de carácter](#character-literals).|68 ("# °") -> 68 °|
 
 En las secciones siguientes se proporciona información detallada sobre cada uno de los especificadores de formato numérico personalizado.
 
@@ -84,7 +85,7 @@ En el ejemplo siguiente se muestran varios valores a los que se les ha aplicado 
 [!code-csharp[Formatting.Numeric.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#2)]
 [!code-vb[Formatting.Numeric.Custom#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#2)]
 
-Para devolver una cadena de resultado en la que los dígitos que faltan o los ceros iniciales se reemplazan por espacios, use la [característica de formato compuesto](../../../docs/standard/base-types/composite-formatting.md) y especifique un ancho de campo, como se muestra en el ejemplo siguiente.
+Para devolver una cadena de resultado en la que los dígitos que faltan o los ceros iniciales se reemplazan por espacios, use la [característica de formato compuesto](composite-formatting.md) y especifique un ancho de campo, como se muestra en el ejemplo siguiente.
 
 [!code-cpp[Formatting.Numeric.Custom#12](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/SpaceOrDigit1.cpp#12)]
 [!code-csharp[Formatting.Numeric.Custom#12](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/SpaceOrDigit1.cs#12)]
@@ -114,11 +115,11 @@ En el ejemplo siguiente se utiliza el especificador de formato "." para definir 
 
 El carácter "," actúa como separador de grupos y como especificador de escala numérica.
 
-- Separador de grupos: si se especifican una o varias comas dos marcadores de posición de dígitos (0 ó #) que dan formato a los dígitos enteros de un número, se insertará un carácter separador de grupos entre cada grupo de números en la parte entera de la salida.
+- Separador de grupos: si se especifican una o varias comas dos marcadores de posición de dígitos (0 o #) que dan formato a los dígitos enteros de un número, se insertará un carácter separador de grupos entre cada grupo de números en la parte entera de la salida.
 
   Las propiedades <xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator%2A> y <xref:System.Globalization.NumberFormatInfo.NumberGroupSizes%2A> del objeto <xref:System.Globalization.NumberFormatInfo> actual determinan el carácter utilizado como separador de grupos de números y el tamaño de cada grupo de números. Por ejemplo, si se utiliza la cadena "#,#" y la referencia cultural de todos los idiomas para dar formato al número 1000, el resultado será "1,000".
 
-- Especificador de escala numérica: si se especifican una o varias comas inmediatamente a la izquierda del punto decimal explícito o implícito, el número al que se va a dar formato se divide por 1000 por cada coma. Por ejemplo, si se utiliza la cadena "0,," para dar formato al número 100 millones, el resultado será "100".
+- Especificador de escala numérica: si se especifican una o varias comas inmediatamente a la izquierda del signo decimal explícito o implícito, el número al que se va a dar formato se divide por 1000 por cada coma. Por ejemplo, si se utiliza la cadena "0,," para dar formato al número 100 millones, el resultado será "100".
 
 Puede usar especificadores de separador de grupos y de escala numérica en la misma cadena de formato. Por ejemplo, si se utiliza la cadena "#,0,," y la referencia cultural de todos los idiomas para dar formato al número mil millones, el resultado será "1,000".
 
@@ -205,7 +206,7 @@ En el ejemplo siguiente se usa el carácter de escape para evitar que la operaci
 
 El punto y coma (;) es un especificador de formato condicional que aplica distinto formato a un número dependiendo de si su valor es positivo, negativo o cero. Para generar este comportamiento, una cadena de formato personalizado puede contener hasta tres secciones separadas por signos de punto y coma. Estas secciones se describen en la siguiente tabla.
 
-|Número de secciones|Description|
+|Número de secciones|Descripción|
 |------------------------|-----------------|
 |Una sección|La cadena de formato se aplica a todos los valores.|
 |Dos secciones|La primera sección se aplica a valores positivos y ceros, y la segunda, sólo a valores negativos.<br /><br /> Si el número al que se va a dar formato es negativo, pero se convierte en cero después de redondearlo según el formato de la segunda sección, se da formato al cero resultante según la primera sección.|
@@ -288,8 +289,8 @@ En el siguiente ejemplo se muestran dos cadenas de formato numérico personaliza
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>
-- [Aplicación de formato a tipos](../../../docs/standard/base-types/formatting-types.md)
-- [Cadenas con formato numérico estándar](../../../docs/standard/base-types/standard-numeric-format-strings.md)
-- [Rellenar un número con ceros a la izquierda](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)
+- [Aplicación de formato a tipos](formatting-types.md)
+- [Cadenas con formato numérico estándar](standard-numeric-format-strings.md)
+- [Cómo: Rellenar un número con ceros a la izquierda](how-to-pad-a-number-with-leading-zeros.md)
 - [Ejemplo: Utilidad de formato WinForms de .NET Core (C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs)
 - [Ejemplo: Utilidad de formato WinForms de .NET Core (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb)

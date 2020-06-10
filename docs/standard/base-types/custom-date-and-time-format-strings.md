@@ -1,5 +1,6 @@
 ---
 title: Cadenas con formato de fecha y hora personalizado
+description: Aprenda a usar cadenas de formato de fecha y hora personalizado para convertir valores DateTime o DateTimeOffset en representaciones de texto, o bien para analizar cadenas para fechas y horas.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,16 +15,16 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: ae2711aac8bd864e623efe18e698c8de75a3ac32
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 89601d0628e4f5f00ec02d5cdd6fb79216b1469d
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83440998"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447256"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Cadenas con formato de fecha y hora personalizado
 
-Una cadena con formato de fecha y hora define la representación de texto de un valor <xref:System.DateTime> o <xref:System.DateTimeOffset> que es el resultado de una operación de formato. También puede definir la representación de un valor de fecha y hora que se necesite en una operación de análisis para convertir correctamente la cadena en una fecha y hora. Una cadena de formato personalizado consta de uno o varios especificadores de formato de fecha y hora personalizado. Una cadena que no sea una [cadena con formato de fecha y hora estándar](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) se interpreta como una cadena con formato de fecha y hora personalizado.
+Una cadena con formato de fecha y hora define la representación de texto de un valor <xref:System.DateTime> o <xref:System.DateTimeOffset> que es el resultado de una operación de formato. También puede definir la representación de un valor de fecha y hora que se necesite en una operación de análisis para convertir correctamente la cadena en una fecha y hora. Una cadena de formato personalizado consta de uno o varios especificadores de formato de fecha y hora personalizado. Una cadena que no sea una [cadena con formato de fecha y hora estándar](standard-date-and-time-format-strings.md) se interpreta como una cadena con formato de fecha y hora personalizado.
 
 > [!TIP]
 > Puede descargar la **Utilidad de formato**, que es una aplicación de .NET Core Windows Forms que permite aplicar cadenas de formato a valores numéricos o de fecha y hora, y que muestra la cadena de resultado. El código fuente está disponible para [C#](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs) y [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb).
@@ -44,56 +45,56 @@ En las operaciones de análisis, las cadenas de formato de fecha y hora personal
 
 En la tabla siguiente se describen los especificadores de formato de fecha y hora personalizados, y se muestra la cadena de resultado producida por cada especificador de formato. De forma predeterminada, las cadenas de resultado reflejan las convenciones de formato de la referencia cultural en-us. Si un especificador de formato determinado genera una cadena de resultado localizada, el ejemplo también indica la referencia cultural a la que se aplica dicha cadena. Para más información sobre cómo usar cadenas de formato de fecha y hora personalizado, vea la sección [Notas](#notes).
 
-| Especificador de formato | Description | Ejemplos |
+| Especificador de formato | Descripción | Ejemplos |
 | ---------------------- | ----------------- | -------------- |
-|"d"|El día del mes, de 1 a 31.<br /><br /> Más información: [El especificador de formato personalizado "d"](#dSpecifier).|2009-06-01T13:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -> 15|
-|"dd"|El día del mes, de 01 a 31.<br /><br /> Más información: [El especificador de formato personalizado "dd"](#ddSpecifier).|2009-06-01T13:45:30 -> 01<br /><br /> 2009-06-15T13:45:30 -> 15|
-|"ddd"|El nombre abreviado del día de la semana.<br /><br /> Más información: [El especificador de formato personalizado "ddd"](#dddSpecifier).|2009-06-15T13:45:30 -> Mon (en-US)<br /><br /> 2009-06-15T13:45:30 -> Пн (ru-RU)<br /><br /> 2009-06-15T13:45:30 -> lun. (fr-FR)|
-|"dddd"|El nombre completo del día de la semana.<br /><br /> Más información: [El especificador de formato personalizado "dddd"](#ddddSpecifier).|2009-06-15T13:45:30 -> Monday (en-US)<br /><br /> 2009-06-15T13:45:30 -> понедельник (ru-RU)<br /><br /> 2009-06-15T13:45:30 -> lundi (fr-FR)|
-|"f"|Las décimas de segundo de un valor de fecha y hora.<br /><br /> Más información: [El especificador de formato personalizado "f"](#fSpecifier).|2009-06-15T13:45:30.6170000 -> 6<br /><br /> 2009-06-15T13:45:30.05 -> 0|
-|"ff"|Las centésimas de segundo de un valor de fecha y hora.<br /><br /> Más información: [El especificador de formato personalizado "ff"](#ffSpecifier).|2009-06-15T13:45:30.6170000 -> 61<br /><br /> 2009-06-15T13:45:30.0050000 -> 00|
-|"fff"|Los milisegundos de un valor de fecha y hora.<br /><br /> Más información: [El especificador de formato personalizado "fff"](#fffSpecifier).|6/15/2009 13:45:30.617 -> 617<br /><br /> 6/15/2009 13:45:30.0005 -> 000|
-|"ffff"|Las diezmilésimas de segundo de un valor de fecha y hora.<br /><br /> Más información: [El especificador de formato personalizado "ffff"](#ffffSpecifier).|2009-06-15T13:45:30.6175000 -> 6175<br /><br /> 2009-06-15T13:45:30.0000500  -> 0000|
-|"fffff"|Las cienmilésimas de segundo de un valor de fecha y hora.<br /><br /> Más información: [El especificador de formato personalizado "fffff"](#fffffSpecifier).|2009-06-15T13:45:30.6175400 -> 61754<br /><br /> 6/15/2009 13:45:30.000005 -> 00000|
-|"ffffff"|Las millonésimas de segundo de un valor de fecha y hora.<br /><br /> Más información: [El especificador de formato personalizado "ffffff"](#ffffffSpecifier).|2009-06-15T13:45:30.6175420 -> 617542<br /><br /> 2009-06-15T13:45:30.0000005 -> 000000|
-|"fffffff"|Las diezmillonésimas de segundo de un valor de fecha y hora.<br /><br /> Más información: [El especificador de formato personalizado "fffffff"](#fffffffSpecifier).|2009-06-15T13:45:30.6175425 -> 6175425<br /><br /> 2009-06-15T13:45:30.0001150 -> 0001150|
-|"F"|Si es distinto de cero, las décimas de segundo de un valor de fecha y hora.<br /><br /> Más información: [El especificador de formato personalizado "F"](#F_Specifier).|2009-06-15T13:45:30.6170000 -> 6<br /><br /> 2009-06-15T13:45:30.0500000 -> (ninguna salida)|
-|"FF"|Si es distinto de cero, las centésimas de segundo de un valor de fecha y hora.<br /><br /> Más información: [El especificador de formato personalizado "FF"](#FF_Specifier).|2009-06-15T13:45:30.6170000 -> 61<br /><br /> 2009-06-15T13:45:30.0050000 -> (ninguna salida)|
-|"FFF"|Si es distinto de cero, los milisegundos de un valor de fecha y hora.<br /><br /> Más información: [El especificador de formato personalizado "FFF"](#FFF_Specifier).|2009-06-15T13:45:30.6170000 -> 617<br /><br /> 2009-06-15T13:45:30.0005000 -> (ninguna salida)|
-|"FFFF"|Si es distinto de cero, las diezmilésimas de segundo de un valor de fecha y hora.<br /><br /> Más información: [El especificador de formato personalizado "FFFF"](#FFFF_Specifier).|2009-06-15T13:45:30.5275000 -> 5275<br /><br /> 2009-06-15T13:45:30.0000500 -> (ninguna salida)|
-|"FFFFF"|Si es distinto de cero, las cienmilésimas de segundo de un valor de fecha y hora.<br /><br /> Más información: [El especificador de formato personalizado "FFFFF"](#FFFFF_Specifier).|2009-06-15T13:45:30.6175400 -> 61754<br /><br /> 2009-06-15T13:45:30.0000050 -> (ninguna salida)|
-|"FFFFFF"|Si es distinto de cero, las millonésimas de segundo de un valor de fecha y hora.<br /><br /> Más información: [El especificador de formato personalizado "FFFFFF"](#FFFFFF_Specifier).|2009-06-15T13:45:30.6175420 -> 617542<br /><br /> 2009-06-15T13:45:30.0000050 -> (ninguna salida)|
-|"FFFFFFF"|Si es distinto de cero, las diezmillonésimas de segundo de un valor de fecha y hora.<br /><br /> Más información: [El especificador de formato personalizado "FFFFFFF"](#FFFFFFF_Specifier).|2009-06-15T13:45:30.6175425 -> 6175425<br /><br /> 2009-06-15T13:45:30.0001150 -> 000115|
-|"g", "gg"|El período o la era.<br /><br /> Más información: [El especificador de formato personalizado "g" o "gg"](#gSpecifier).|2009-06-15T13:45:30.6170000 -> A.D.|
-|"h"|La hora, usando un reloj de 12 horas de 1 a 12.<br /><br /> Más información: [El especificador de formato personalizado "h"](#hSpecifier).|2009-06-15T01:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -> 1|
-|"hh"|La hora, usando un reloj de 12 horas de 01 a 12.<br /><br /> Más información: [El especificador de formato personalizado "hh"](#hhSpecifier).|2009-06-15T01:45:30 -> 01<br /><br /> 2009-06-15T13:45:30 -> 01|
-|"H"|La hora, usando un reloj de 24 horas de 0 a 23.<br /><br /> Más información: [El especificador de formato personalizado "H"](#H_Specifier).|2009-06-15T01:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -> 13|
-|"HH"|La hora, usando un reloj de 24 horas de 00 a 23.<br /><br /> Más información: [El especificador de formato personalizado "HH"](#HH_Specifier).|2009-06-15T01:45:30 -> 01<br /><br /> 2009-06-15T13:45:30 -> 13|
-|"K"|Información de la zona horaria.<br /><br /> Más información: [El especificador de formato personalizado "K"](#KSpecifier).|Con valores <xref:System.DateTime>:<br /><br /> 2009-06-15T13:45:30, Kind Unspecified -><br /><br /> 2009-06-15T13:45:30, Kind Utc -> Z<br /><br /> 2009-06-15T13:45:30, Kind Local -> -07:00 (depende de la configuración del equipo local)<br /><br /> Con valores <xref:System.DateTimeOffset>:<br /><br /> 2009-06-15T01:45:30-07:00 --> -07:00<br /><br /> 2009-06-15T08:45:30+00:00 --> +00:00|
-|"m"|Minutos, de 0 a 59.<br /><br /> Más información: [El especificador de formato personalizado "m"](#mSpecifier).|2009-06-15T01:09:30 -> 9<br /><br /> 2009-06-15T13:29:30 -> 29|
-|"mm"|El minuto, de 00 a 59.<br /><br /> Más información: [El especificador de formato personalizado "mm"](#mmSpecifier).|2009-06-15T01:09:30 -> 09<br /><br /> 2009-06-15T01:45:30 -> 45|
-|"M"|El mes, de 1 a 12.<br /><br /> Más información: [El especificador de formato personalizado "M"](#M_Specifier).|2009-06-15T13:45:30 -> 6|
-|"MM"|El mes, de 01 a 12.<br /><br /> Más información: [El especificador de formato personalizado "MM"](#MM_Specifier).|2009-06-15T13:45:30 -> 06|
-|"MMM"|El nombre abreviado del mes.<br /><br /> Más información: [El especificador de formato personalizado "MMM"](#MMM_Specifier).|2009-06-15T13:45:30 -> Jun (en-US)<br /><br /> 2009-06-15T13:45:30 -> juin (fr-FR)<br /><br /> 2009-06-15T13:45:30 -> Jun (zu-ZA)|
-|"MMMM"|El nombre completo del mes.<br /><br /> Más información: [El especificador de formato personalizado "MMMM"](#MMMM_Specifier).|2009-06-15T13:45:30 -> June (en-US)<br /><br /> 2009-06-15T13:45:30 -> juni (da-DK)<br /><br /> 2009-06-15T13:45:30 -> uJuni (zu-ZA)|
-|"s"|El segundo, de 0 a 59.<br /><br /> Más información: [El especificador de formato personalizado "s"](#sSpecifier).|2009-06-15T13:45:09 -> 9|
-|"ss"|El segundo, de 00 a 59.<br /><br /> Más información: [El especificador de formato personalizado "ss"](#ssSpecifier).|2009-06-15T13:45:09 -> 09|
-|"t"|El primer carácter del designador AM/PM.<br /><br /> Más información: [El especificador de formato personalizado "t"](#tSpecifier).|2009-06-15T13:45:30 -> P (en-US)<br /><br /> 2009-06-15T13:45:30 -> 午 (ja-JP)<br /><br /> 2009-06-15T13:45:30 ->  (fr-FR)|
-|"tt"|El designador AM/PM.<br /><br /> Más información: [El especificador de formato personalizado "tt"](#ttSpecifier).|2009-06-15T13:45:30 -> PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 午後 (ja-JP)<br /><br /> 2009-06-15T13:45:30 ->  (fr-FR)|
-|"y"|El año, de 0 a 99.<br /><br /> Más información: [El especificador de formato personalizado "y"](#ySpecifier).|0001-01-01T00:00:00 -> 1<br /><br /> 0900-01-01T00:00:00 -> 0<br /><br /> 1900-01-01T00:00:00 -> 0<br /><br /> 2009-06-15T13:45:30 -> 9<br /><br /> 2019-06-15T13:45:30 -> 19|
-|"yy"|El año, de 00 a 99.<br /><br /> Más información: [El especificador de formato personalizado "yy"](#yySpecifier).|0001-01-01T00:00:00 -> 01<br /><br /> 0900-01-01T00:00:00 -> 00<br /><br /> 1900-01-01T00:00:00 -> 00<br /><br /> 2019-06-15T13:45:30 -> 19|
-|"yyy"|El año, con un mínimo de tres dígitos.<br /><br /> Más información: [El especificador de formato personalizado "yyy"](#yyySpecifier).|0001-01-01T00:00:00 -> 001<br /><br /> 0900-01-01T00:00:00 -> 900<br /><br /> 1900-01-01T00:00:00 -> 1900<br /><br /> 2009-06-15T13:45:30 -> 2009|
-|"yyyy"|El año como un número de cuatro dígitos.<br /><br /> Más información: [El especificador de formato personalizado "yyyy"](#yyyySpecifier).|0001-01-01T00:00:00 -> 0001<br /><br /> 0900-01-01T00:00:00 -> 0900<br /><br /> 1900-01-01T00:00:00 -> 1900<br /><br /> 2009-06-15T13:45:30 -> 2009|
-|"yyyyy"|El año como un número de cinco dígitos.<br /><br /> Más información: [El especificador de formato personalizado "yyyyy"](#yyyyySpecifier).|0001-01-01T00:00:00 -> 00001<br /><br /> 2009-06-15T13:45:30 -> 02009|
-|"z"|Desfase de horas con respecto a la hora UTC, sin ceros iniciales.<br /><br /> Más información: [El especificador de formato personalizado "z"](#zSpecifier).|2009-06-15T13:45:30-07:00 -> -7|
-|"zz"|Desfase de horas con respecto a la hora UTC, con un cero inicial para un valor de un solo dígito.<br /><br /> Más información: [El especificador de formato personalizado "zz"](#zzSpecifier).|2009-06-15T13:45:30-07:00 -> -07|
-|"zzz"|Desfase de horas y minutos con respecto a la hora UTC.<br /><br /> Más información: [El especificador de formato personalizado "zzz"](#zzzSpecifier).|2009-06-15T13:45:30-07:00 -> -07:00|
-|":"|El separador de hora.<br /><br /> Más información: [El especificador de formato personalizado ":"](#timeSeparator).|2009-06-15T13:45:30 -> : (en-US)<br /><br /> 2009-06-15T13:45:30 -> . (it-IT)<br /><br /> 2009-06-15T13:45:30 -> : (ja-JP)|
-|"/"|El separador de fecha.<br /><br /> Más información: [El especificador de formato personalizado "/"](#dateSeparator).|2009-06-15T13:45:30 -> / (en-US)<br /><br /> 2009-06-15T13:45:30 -> - (ar-DZ)<br /><br /> 2009-06-15T13:45:30 -> . (tr-TR)|
-|"*cadena*"<br /><br /> '*cadena*'|Delimitador de cadena literal.<br /><br /> Más información: [Literales de caracteres](#Literals).|2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr: 1:45 P|
+|"d"|El día del mes, de 1 a 31.<br /><br /> Más información: [Especificador de formato personalizado "d"](#dSpecifier).|2009-06-01T13:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -> 15|
+|"dd"|El día del mes, de 01 a 31.<br /><br /> Más información: [Especificador de formato personalizado "dd"](#ddSpecifier).|2009-06-01T13:45:30 -> 01<br /><br /> 2009-06-15T13:45:30 -> 15|
+|"ddd"|El nombre abreviado del día de la semana.<br /><br /> Más información: [Especificador de formato personalizado "ddd"](#dddSpecifier).|2009-06-15T13:45:30 -> Mon (en-US)<br /><br /> 2009-06-15T13:45:30 -> Пн (ru-RU)<br /><br /> 2009-06-15T13:45:30 -> lun. (fr-FR)|
+|"dddd"|El nombre completo del día de la semana.<br /><br /> Más información: [Especificador de formato personalizado "dddd"](#ddddSpecifier).|2009-06-15T13:45:30 -> Monday (en-US)<br /><br /> 2009-06-15T13:45:30 -> понедельник (ru-RU)<br /><br /> 2009-06-15T13:45:30 -> lundi (fr-FR)|
+|"f"|Las décimas de segundo de un valor de fecha y hora.<br /><br /> Más información: [Especificador de formato personalizado "f"](#fSpecifier).|2009-06-15T13:45:30.6170000 -> 6<br /><br /> 2009-06-15T13:45:30.05 -> 0|
+|"ff"|Las centésimas de segundo de un valor de fecha y hora.<br /><br /> Más información: [Especificador de formato personalizado "ff"](#ffSpecifier).|2009-06-15T13:45:30.6170000 -> 61<br /><br /> 2009-06-15T13:45:30.0050000 -> 00|
+|"fff"|Los milisegundos de un valor de fecha y hora.<br /><br /> Más información: [Especificador de formato personalizado "fff"](#fffSpecifier).|6/15/2009 13:45:30.617 -> 617<br /><br /> 6/15/2009 13:45:30.0005 -> 000|
+|"ffff"|Las diezmilésimas de segundo de un valor de fecha y hora.<br /><br /> Más información: [Especificador de formato personalizado "ffff"](#ffffSpecifier).|2009-06-15T13:45:30.6175000 -> 6175<br /><br /> 2009-06-15T13:45:30.0000500  -> 0000|
+|"fffff"|Las cienmilésimas de segundo de un valor de fecha y hora.<br /><br /> Más información: [Especificador de formato personalizado "fffff"](#fffffSpecifier).|2009-06-15T13:45:30.6175400 -> 61754<br /><br /> 6/15/2009 13:45:30.000005 -> 00000|
+|"ffffff"|Las millonésimas de segundo de un valor de fecha y hora.<br /><br /> Más información: [Especificador de formato personalizado "ffffff"](#ffffffSpecifier).|2009-06-15T13:45:30.6175420 -> 617542<br /><br /> 2009-06-15T13:45:30.0000005 -> 000000|
+|"fffffff"|Las diezmillonésimas de segundo de un valor de fecha y hora.<br /><br /> Más información: [Especificador de formato personalizado "fffffff"](#fffffffSpecifier).|2009-06-15T13:45:30.6175425 -> 6175425<br /><br /> 2009-06-15T13:45:30.0001150 -> 0001150|
+|"F"|Si es distinto de cero, las décimas de segundo de un valor de fecha y hora.<br /><br /> Más información: [Especificador de formato personalizado "F"](#F_Specifier).|2009-06-15T13:45:30.6170000 -> 6<br /><br /> 2009-06-15T13:45:30.0500000 -> (ninguna salida)|
+|"FF"|Si es distinto de cero, las centésimas de segundo de un valor de fecha y hora.<br /><br /> Más información: [Especificador de formato personalizado "FF"](#FF_Specifier).|2009-06-15T13:45:30.6170000 -> 61<br /><br /> 2009-06-15T13:45:30.0050000 -> (ninguna salida)|
+|"FFF"|Si es distinto de cero, los milisegundos de un valor de fecha y hora.<br /><br /> Más información: [Especificador de formato personalizado "FFF"](#FFF_Specifier).|2009-06-15T13:45:30.6170000 -> 617<br /><br /> 2009-06-15T13:45:30.0005000 -> (ninguna salida)|
+|"FFFF"|Si es distinto de cero, las diezmilésimas de segundo de un valor de fecha y hora.<br /><br /> Más información: [Especificador de formato personalizado "FFFF"](#FFFF_Specifier).|2009-06-15T13:45:30.5275000 -> 5275<br /><br /> 2009-06-15T13:45:30.0000500 -> (ninguna salida)|
+|"FFFFF"|Si es distinto de cero, las cienmilésimas de segundo de un valor de fecha y hora.<br /><br /> Más información: [Especificador de formato personalizado "FFFFF"](#FFFFF_Specifier).|2009-06-15T13:45:30.6175400 -> 61754<br /><br /> 2009-06-15T13:45:30.0000050 -> (ninguna salida)|
+|"FFFFFF"|Si es distinto de cero, las millonésimas de segundo de un valor de fecha y hora.<br /><br /> Más información: [Especificador de formato personalizado "FFFFFF"](#FFFFFF_Specifier).|2009-06-15T13:45:30.6175420 -> 617542<br /><br /> 2009-06-15T13:45:30.0000050 -> (ninguna salida)|
+|"FFFFFFF"|Si es distinto de cero, las diezmillonésimas de segundo de un valor de fecha y hora.<br /><br /> Más información: [Especificador de formato personalizado "FFFFFFF"](#FFFFFFF_Specifier).|2009-06-15T13:45:30.6175425 -> 6175425<br /><br /> 2009-06-15T13:45:30.0001150 -> 000115|
+|"g", "gg"|El período o la era.<br /><br /> Más información: [Especificador de formato personalizado "g" o "gg"](#gSpecifier).|2009-06-15T13:45:30.6170000 -> A.D.|
+|"h"|La hora, usando un reloj de 12 horas de 1 a 12.<br /><br /> Más información: [Especificador de formato personalizado "h"](#hSpecifier).|2009-06-15T01:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -> 1|
+|"hh"|La hora, usando un reloj de 12 horas de 01 a 12.<br /><br /> Más información: [Especificador de formato personalizado "hh"](#hhSpecifier).|2009-06-15T01:45:30 -> 01<br /><br /> 2009-06-15T13:45:30 -> 01|
+|"H"|La hora, usando un reloj de 24 horas de 0 a 23.<br /><br /> Más información: [Especificador de formato personalizado "H"](#H_Specifier).|2009-06-15T01:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -> 13|
+|"HH"|La hora, usando un reloj de 24 horas de 00 a 23.<br /><br /> Más información: [Especificador de formato personalizado "HH"](#HH_Specifier).|2009-06-15T01:45:30 -> 01<br /><br /> 2009-06-15T13:45:30 -> 13|
+|"K"|Información de la zona horaria.<br /><br /> Más información: [Especificador de formato personalizado "K"](#KSpecifier).|Con valores <xref:System.DateTime>:<br /><br /> 2009-06-15T13:45:30, Kind Unspecified -><br /><br /> 2009-06-15T13:45:30, Kind Utc -> Z<br /><br /> 2009-06-15T13:45:30, Kind Local -> -07:00 (depende de la configuración del equipo local)<br /><br /> Con valores <xref:System.DateTimeOffset>:<br /><br /> 2009-06-15T01:45:30-07:00 --> -07:00<br /><br /> 2009-06-15T08:45:30+00:00 --> +00:00|
+|"m"|Minutos, de 0 a 59.<br /><br /> Más información: [Especificador de formato personalizado "m"](#mSpecifier).|2009-06-15T01:09:30 -> 9<br /><br /> 2009-06-15T13:29:30 -> 29|
+|"mm"|El minuto, de 00 a 59.<br /><br /> Más información: [Especificador de formato personalizado "mm"](#mmSpecifier).|2009-06-15T01:09:30 -> 09<br /><br /> 2009-06-15T01:45:30 -> 45|
+|"M"|El mes, de 1 a 12.<br /><br /> Más información: [Especificador de formato personalizado "M"](#M_Specifier).|2009-06-15T13:45:30 -> 6|
+|"MM"|El mes, de 01 a 12.<br /><br /> Más información: [Especificador de formato personalizado "MM"](#MM_Specifier).|2009-06-15T13:45:30 -> 06|
+|"MMM"|El nombre abreviado del mes.<br /><br /> Más información: [Especificador de formato personalizado "MMM"](#MMM_Specifier).|2009-06-15T13:45:30 -> Jun (en-US)<br /><br /> 2009-06-15T13:45:30 -> juin (fr-FR)<br /><br /> 2009-06-15T13:45:30 -> Jun (zu-ZA)|
+|"MMMM"|El nombre completo del mes.<br /><br /> Más información: [Especificador de formato personalizado "MMMM"](#MMMM_Specifier).|2009-06-15T13:45:30 -> June (en-US)<br /><br /> 2009-06-15T13:45:30 -> juni (da-DK)<br /><br /> 2009-06-15T13:45:30 -> uJuni (zu-ZA)|
+|"s"|El segundo, de 0 a 59.<br /><br /> Más información: [Especificador de formato personalizado "s"](#sSpecifier).|2009-06-15T13:45:09 -> 9|
+|"ss"|El segundo, de 00 a 59.<br /><br /> Más información: [Especificador de formato personalizado "ss"](#ssSpecifier).|2009-06-15T13:45:09 -> 09|
+|"t"|El primer carácter del designador AM/PM.<br /><br /> Más información: [Especificador de formato personalizado "t"](#tSpecifier).|2009-06-15T13:45:30 -> P (en-US)<br /><br /> 2009-06-15T13:45:30 -> 午 (ja-JP)<br /><br /> 2009-06-15T13:45:30 ->  (fr-FR)|
+|"tt"|El designador AM/PM.<br /><br /> Más información: [Especificador de formato personalizado "tt"](#ttSpecifier).|2009-06-15T13:45:30 -> PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 午後 (ja-JP)<br /><br /> 2009-06-15T13:45:30 ->  (fr-FR)|
+|"y"|El año, de 0 a 99.<br /><br /> Más información: [Especificador de formato personalizado "y"](#ySpecifier).|0001-01-01T00:00:00 -> 1<br /><br /> 0900-01-01T00:00:00 -> 0<br /><br /> 1900-01-01T00:00:00 -> 0<br /><br /> 2009-06-15T13:45:30 -> 9<br /><br /> 2019-06-15T13:45:30 -> 19|
+|"yy"|El año, de 00 a 99.<br /><br /> Más información: [Especificador de formato personalizado "yy"](#yySpecifier).|0001-01-01T00:00:00 -> 01<br /><br /> 0900-01-01T00:00:00 -> 00<br /><br /> 1900-01-01T00:00:00 -> 00<br /><br /> 2019-06-15T13:45:30 -> 19|
+|"yyy"|El año, con un mínimo de tres dígitos.<br /><br /> Más información: [Especificador de formato personalizado "yyy"](#yyySpecifier).|0001-01-01T00:00:00 -> 001<br /><br /> 0900-01-01T00:00:00 -> 900<br /><br /> 1900-01-01T00:00:00 -> 1900<br /><br /> 2009-06-15T13:45:30 -> 2009|
+|"yyyy"|El año como un número de cuatro dígitos.<br /><br /> Más información: [Especificador de formato personalizado "yyyy"](#yyyySpecifier).|0001-01-01T00:00:00 -> 0001<br /><br /> 0900-01-01T00:00:00 -> 0900<br /><br /> 1900-01-01T00:00:00 -> 1900<br /><br /> 2009-06-15T13:45:30 -> 2009|
+|"yyyyy"|El año como un número de cinco dígitos.<br /><br /> Más información: [Especificador de formato personalizado "yyyyy"](#yyyyySpecifier).|0001-01-01T00:00:00 -> 00001<br /><br /> 2009-06-15T13:45:30 -> 02009|
+|"z"|Desfase de horas con respecto a la hora UTC, sin ceros iniciales.<br /><br /> Más información: [Especificador de formato personalizado "z"](#zSpecifier).|2009-06-15T13:45:30-07:00 -> -7|
+|"zz"|Desfase de horas con respecto a la hora UTC, con un cero inicial para un valor de un solo dígito.<br /><br /> Más información: [Especificador de formato personalizado "zz"](#zzSpecifier).|2009-06-15T13:45:30-07:00 -> -07|
+|"zzz"|Desfase de horas y minutos con respecto a la hora UTC.<br /><br /> Más información: [Especificador de formato personalizado "zzz"](#zzzSpecifier).|2009-06-15T13:45:30-07:00 -> -07:00|
+|":"|El separador de hora.<br /><br /> Más información: [Especificador de formato personalizado ":"](#timeSeparator).|2009-06-15T13:45:30 -> : (en-US)<br /><br /> 2009-06-15T13:45:30 -> . (it-IT)<br /><br /> 2009-06-15T13:45:30 -> : (ja-JP)|
+|"/"|El separador de fecha.<br /><br /> Más información: [Especificador de formato personalizado "/"](#dateSeparator).|2009-06-15T13:45:30 -> / (en-US)<br /><br /> 2009-06-15T13:45:30 -> - (ar-DZ)<br /><br /> 2009-06-15T13:45:30 -> . (tr-TR)|
+|"*cadena*"<br /><br /> '*cadena*'|Delimitador de cadena literal.<br /><br /> Más información: [Literales de carácter](#Literals).|2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr: 1:45 P|
 |%|Define el siguiente carácter como un especificador de formato personalizado.<br /><br /> Más información:[Usar especificadores de formato personalizado únicos](#UsingSingleSpecifiers).|2009-06-15T13:45:30 (%h) -> 1|
 |&#92;|El carácter de escape.<br /><br /> Más información: [Literales de caracteres](#Literals) y [Usar el carácter de escape](#escape).|2009-06-15T13:45:30 (h \h) -> 1 h|
-|Cualquier otro carácter|El carácter se copia en la cadena de resultado sin modificar.<br /><br /> Más información: [Literales de caracteres](#Literals).|2009-06-15T01:45:30 (arr hh:mm t) -> arr 01:45 A|
+|Cualquier otro carácter|El carácter se copia en la cadena de resultado sin modificar.<br /><br /> Más información: [Literales de carácter](#Literals).|2009-06-15T01:45:30 (arr hh:mm t) -> arr 01:45 A|
 
 En las secciones siguientes se proporciona información adicional sobre cada especificador de formato de fecha y hora personalizado. A menos que se indique lo contrario, cada especificador genera una representación de cadena idéntica independientemente de que se use con un valor <xref:System.DateTime> o <xref:System.DateTimeOffset>.
 
@@ -696,7 +697,7 @@ La cadena de resultado generada por muchos de los especificadores de formato de 
 
 - <xref:System.DateTime?displayProperty=nameWithType>
 - <xref:System.IFormatProvider?displayProperty=nameWithType>
-- [Aplicación de formato a tipos](../../../docs/standard/base-types/formatting-types.md)
-- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Aplicación de formato a tipos](formatting-types.md)
+- [Cadenas con formato de fecha y hora estándar](standard-date-and-time-format-strings.md)
 - [Ejemplo: Utilidad de formato WinForms de .NET Core (C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs)
 - [Ejemplo: Utilidad de formato WinForms de .NET Core (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb)

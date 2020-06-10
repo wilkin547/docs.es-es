@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 3ab468f6c68429a3a5cb8706152288afae520df3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a9bac04a7839796229a2e1c61771ca32573f8fcd
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79187143"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374517"
 ---
 # <a name="whats-new-for-visual-basic"></a>Novedades de Visual Basic
 
@@ -210,7 +210,7 @@ Para obtener más información, vea [Valores devueltos de referencia](../program
 
 Puede obtener el nombre de cadena no calificado de un tipo o miembro para usarlo en un mensaje de error sin codificar de forma rígida una cadena.  Esto permite que el código siga siendo correcto al refactorizarlo.  Esta característica también es útil para enlazar los vínculos MVC del controlador de vista de modelos y desencadenar eventos de propiedad cambiada.
 
-[Interpolación de cadenas](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)
+[Interpolación de cadenas](../programming-guide/language-features/strings/interpolated-strings.md)
 
 Puede usar expresiones de interpolación de cadenas para construir cadenas.  Una expresión de cadena interpolada es similar a una cadena de plantilla que contiene expresiones.  Una cadena interpolada es más fácil de entender con respecto a los argumentos que el [formato compuesto](../../standard/base-types/composite-formatting.md).
 
@@ -218,7 +218,7 @@ Puede usar expresiones de interpolación de cadenas para construir cadenas.  Una
 
 Puede probar si hay valores null de forma sintáctica ligera antes de realizar una operación de acceso a miembros (`?.`) o índice (`?[]`).  Estos operadores ayudan a escribir menos código para controlar las comprobaciones de null, especialmente para descender en estructuras de datos.  Si la referencia de objeto u operando izquierdo es null, la operación devuelve null.
 
-[Literales de cadena multilínea](../../visual-basic/programming-guide/language-features/strings/string-basics.md)
+[Literales de cadena multilínea](../programming-guide/language-features/strings/string-basics.md)
 
 Los literales de cadena pueden contener secuencias de nueva línea.  Ya no necesita la antigua solución alternativa que consistía en usar `<xml><![CDATA[...text with newlines...]]></xml>.Value`
 
@@ -238,11 +238,11 @@ Puede tener literales de fecha en el formato aaaa-mm-dd, `#2015-03-17 16:10 PM#`
 
 Puede implementar propiedades de interfaz de solo lectura mediante una propiedad de lectura y escritura. La interfaz garantiza una funcionalidad mínima y no impide que una clase de implementación pueda establecer la propiedad.
 
-[TypeOf \<expr> IsNot \<type>](../../visual-basic/language-reference/operators/typeof-operator.md)
+[TypeOf \<expr> IsNot \<type>](../language-reference/operators/typeof-operator.md)
 
 Para mejorar la legibilidad del código, ahora puede usar `TypeOf` con `IsNot`.
 
-[#Disable Warning \<ID> y #Enable Warning \<ID>](../../visual-basic/language-reference/directives/index.md)
+[#Disable Warning \<ID> y #Enable Warning \<ID>](../language-reference/directives/index.md)
 
 Puede deshabilitar y habilitar advertencias específicas para las regiones dentro de un archivo de origen.
 
@@ -250,15 +250,15 @@ Puede deshabilitar y habilitar advertencias específicas para las regiones dentr
 
 Al escribir comentarios de documento, obtiene compatibilidad inteligente de editor y compilación para validar nombres de parámetro, controlar adecuadamente `crefs` (genéricos, operadores, etc.), colorear y refactorizar.
 
-[Definiciones de módulo parcial e interfaz](../../visual-basic/language-reference/modifiers/partial.md)
+[Definiciones de módulo parcial e interfaz](../language-reference/modifiers/partial.md)
 
 Además de clases y structs, puede declarar módulos parciales e interfaces.
 
-[Directivas #Region dentro de cuerpos de método](../../visual-basic/language-reference/directives/region-directive.md)
+[Directivas #Region dentro de cuerpos de método](../language-reference/directives/region-directive.md)
 
 Puede colocar delimitadores #Region... #End Region en cualquier parte de un archivo, dentro de funciones e incluso abarcando los cuerpos de función.
 
-[Las definiciones de invalidaciones son implícitamente sobrecargas](../../visual-basic/language-reference/modifiers/overrides.md)
+[Las definiciones de invalidaciones son implícitamente sobrecargas](../language-reference/modifiers/overrides.md)
 
 Si agrega el modificador `Overrides` a una definición, el compilador agrega implícitamente `Overloads`, de modo que pueda escribir menos código en los casos comunes.
 

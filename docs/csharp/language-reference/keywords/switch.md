@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 49b3836f17e91ae8de10d68e97fd662aae80d1ff
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: a4e6f8e43c2ec8c867af9f78bd83b435b78c73d5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249323"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446768"
 ---
 # <a name="switch-c-reference"></a>switch (referencia de C#)
 
@@ -61,7 +61,7 @@ Una instrucción `switch` puede incluir cualquier número de secciones switch y 
 
 [!code-csharp[switch#2](~/samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
 
-Solo se ejecuta una sección switch en una instrucción switch. C# no permite que la ejecución continúe de una sección switch a la siguiente. Por eso, el código siguiente genera un error del compilador, CS0163: "El control no puede pasar explícitamente de una etiqueta de caso (\<etiqueta de caso>) a otra".
+Solo se ejecuta una sección switch en una instrucción switch. C# no permite que la ejecución continúe de una sección switch a la siguiente. Por eso, el código siguiente genera un error del compilador, CS0163: "El control no puede pasar explícitamente de una etiqueta case a otra (\<case label>)".
 
 ```csharp
 switch (caseSwitch)
@@ -108,7 +108,7 @@ La etiqueta case `default` especifica la sección switch que se va a ejecutar si
 
 La etiqueta case `default` puede aparecer en cualquier orden en la instrucción `switch`. Independientemente de su orden en el código fuente, siempre se evalúa en último lugar, después de que se hayan evaluado las demás etiquetas `case`.
 
-## <a name="pattern-matching-with-the-switch-statement"></a><a name="pattern" /> Coincidencia de patrones con la instrucción `switch`
+## <a name="pattern-matching-with-the-switch-statement"></a><a name="pattern"></a> Coincidencia de patrones con la instrucción `switch`
 
 Cada instrucción `case` define un patrón que, si coincide con la expresión de coincidencia, provoca la ejecución de su sección switch contenedora. Todas las versiones de C# admiten el patrón de constante. Los demás patrones se admiten a partir de C# 7.0.
 

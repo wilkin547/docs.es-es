@@ -2,12 +2,12 @@
 title: Información general de LINQ to XML (C#)
 ms.date: 10/30/2018
 ms.assetid: 716b94d3-0091-4de1-8e05-41bc069fa9dd
-ms.openlocfilehash: 334788a50832b8fe42ecc9a3272dd71f2f2af4ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dd41d8607ef3f2e6e6be9a1f3964ef0ae937e2ac
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168420"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241843"
 ---
 # <a name="linq-to-xml-overview-c"></a>Información general de LINQ to XML (C#)
 
@@ -25,7 +25,7 @@ Los desarrolladores profesionales pueden usar [!INCLUDE[sqltecxlinq](~/includes/
 
 ## <a name="what-is-linq-to-xml"></a>¿Qué es LINQ to XML?
 
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] es una interfaz de programación XML en memoria y habilitada para LINQ que permite trabajar con XML desde los lenguajes de programación de .NET Framework.
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] es una interfaz de programación XML en memoria y habilitada para LINQ que permite trabajar con XML desde los lenguajes de programación de .NET.
 
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] se parece a Document Object Model (DOM) en lo que respecta a la inserción del documento XML en la memoria. Puede consultar y modificar el documento; una vez modificado, puede guardarlo en un archivo o serializarlo y enviarlo a través de Internet. Pero [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] es diferente de DOM: proporciona un nuevo modelo de objetos más ligero, con el que se trabaja más fácilmente y que aprovecha las características de lenguaje de C#.
 

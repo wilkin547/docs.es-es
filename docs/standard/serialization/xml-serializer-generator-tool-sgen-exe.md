@@ -3,12 +3,12 @@ title: Herramienta Generador de serializador XML (Sgen.exe)
 description: El Generador de serializador XML crea un ensamblado de serialización XML para los tipos de un ensamblado, que mejora el rendimiento de inicio de XmlSerializer.
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-ms.openlocfilehash: 65e368cfd9294497608b061f15a4fe4755ed745c
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: b6d9406ca6a69f7bdff3129b55c89dd5d1589d3f
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380041"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84288945"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>Herramienta Generador de serializador XML (Sgen.exe)
 
@@ -64,5 +64,5 @@ sgen Data.dll
   
 ## <a name="see-also"></a>Vea también
 
-- [Herramientas](../../../docs/framework/tools/index.md)
-- [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Herramientas](../../framework/tools/index.md)
+- [Símbolos del sistema](../../framework/tools/developer-command-prompt-for-vs.md)

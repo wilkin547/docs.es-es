@@ -4,15 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - files [C#], getting information about
 ms.assetid: 22fc2da6-5494-405b-995e-c0b99142a93e
-ms.openlocfilehash: 6024b1be4ce826900c6f9b367323fb19ac55d2c7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 32aced17634a1406e2fce0af9c2a92f7a5eb9b40
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705215"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241622"
 ---
 # <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>Procedimiento Obtener información sobre archivos, carpetas y unidades (Guía de programación de C#)
-En .NET Framework, puede tener acceso a información del sistema de archivos mediante las clases siguientes:  
+En .NET, puede acceder a información del sistema de archivos mediante las clases siguientes:  
   
 - <xref:System.IO.FileInfo?displayProperty=nameWithType>  
   

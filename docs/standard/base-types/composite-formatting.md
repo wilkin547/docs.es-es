@@ -1,5 +1,6 @@
 ---
 title: Formatos compuestos
+description: Conozca el formato compuesto de .NET, que toma como entrada una lista de objetos y una cadena de formato compuesto, que contiene texto fijo con marcadores de posición indexados.
 ms.date: 10/26/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-ms.openlocfilehash: b1ec8cfc0f8c6e660d716c51bf3c3387b73a278f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 36197b382c449a2570e1d5530f307c4e66b0d983
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398482"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447269"
 ---
 # <a name="composite-formatting"></a>Formatos compuestos
 
@@ -70,7 +71,7 @@ La característica de formato compuesto se admite mediante métodos como los sig
  [!code-csharp[Formatting.Composite#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#10)]
  [!code-vb[Formatting.Composite#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#10)]  
   
- Cada elemento de formato puede hacer referencia a cualquier objeto de la lista. Por ejemplo, si existen tres objetos, se puede dar formato al segundo, primero y tercer objeto mediante la especificación de una cadena de formato compuesto como esta: "{1} {0} {2}". Un objeto al que no hace referencia ningún elemento de formato se omite. Se produce una excepción <xref:System.FormatException> en tiempo de ejecución si un especificador de parámetro designa un elemento fuera de los límites de la lista de objetos.  
+ Cada elemento de formato puede hacer referencia a cualquier objeto de la lista. Por ejemplo, si existen tres objetos, se puede dar formato al segundo, primero y tercer objeto mediante la especificación de una cadena de formato compuesto como esta: "{1} {0} {2}". Un objeto al que no hace referencia ningún elemento de formato se omite. Se produce una excepción de tipo <xref:System.FormatException> en tiempo de ejecución si un especificador de parámetro designa un elemento fuera de los límites de la lista de objetos.  
   
 ### <a name="alignment-component"></a>Alignment (Componente)  
  El componente opcional *alignment* es un entero con signo que indica el ancho de campo con formato preferido. Si el valor de *alignment* es menor que la longitud de la cadena con formato, se omite *alignment* y se usa la longitud de la cadena con formato como el ancho de campo. Los datos con formato del campo están alineados a la derecha si *alignment* es positivo y a la izquierda si *alignment* es negativo. Si hace falta relleno, se utiliza un espacio en blanco. Si se especifica *alignment*, es necesaria la coma.  
@@ -81,17 +82,17 @@ La característica de formato compuesto se admite mediante métodos como los sig
  [!code-vb[Formatting.Composite#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/alignment1.vb#8)]  
   
 ### <a name="format-string-component"></a>Format String (Componente)  
- El componente *formatString* opcional es una cadena de formato adecuada para el tipo de objeto al que se da formato. Especifique una cadena de formato numérico estándar o personalizado si el objeto correspondiente es un valor numérico, una cadena de formato de fecha y hora estándar o personalizado si el objeto correspondiente es un objeto <xref:System.DateTime>, o una [cadena de formato de enumeración](../../../docs/standard/base-types/enumeration-format-strings.md) si el objeto correspondiente es un valor de enumeración. Si no se especifica *formatString*, se usa el especificador de formato general ("G") para un tipo numérico, de fecha y hora o de enumeración. Si se especifica *formatString*, son necesarios los dos puntos.  
+ El componente *formatString* opcional es una cadena de formato adecuada para el tipo de objeto al que se da formato. Especifique una cadena de formato numérico estándar o personalizado si el objeto correspondiente es un valor numérico, una cadena de formato de fecha y hora estándar o personalizado si el objeto correspondiente es un objeto <xref:System.DateTime>, o una [cadena de formato de enumeración](enumeration-format-strings.md) si el objeto correspondiente es un valor de enumeración. Si no se especifica *formatString*, se usa el especificador de formato general ("G") para un tipo numérico, de fecha y hora o de enumeración. Si se especifica *formatString*, son necesarios los dos puntos.  
   
  En la tabla siguiente se enumeran los tipos o las categorías de tipo de la biblioteca de clases de .NET Framework que admiten un conjunto predefinido de cadenas de formato, y se proporcionan vínculos a temas que muestran las cadenas de formato admitidas. Observe que la asignación de formato a cadenas es un mecanismo extensible que permite definir cadenas de formato nuevas para todos los tipos existentes, así como definir un conjunto de cadenas de formato admitidas por un tipo definido por la aplicación. Para obtener más información, consulte los temas sobre las interfaces <xref:System.IFormattable> y <xref:System.ICustomFormatter>.  
   
 |Tipo o categoría de tipo|Vea|  
 |---------------------------|---------|  
-|Tipos de fecha y hora (<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[Cadenas con formato de fecha y hora estándar](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [Cadenas con formato de fecha y hora personalizado](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
-|Tipos de enumeración (todos los tipos derivados de <xref:System.Enum?displayProperty=nameWithType>)|[Cadenas de formato de enumeración](../../../docs/standard/base-types/enumeration-format-strings.md)|  
-|Tipos numéricos (<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[Cadenas con formato numérico estándar](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Cadenas con formato numérico personalizado](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
+|Tipos de fecha y hora (<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[Cadenas con formato de fecha y hora estándar](standard-date-and-time-format-strings.md)<br /><br /> [Cadenas con formato de fecha y hora personalizado](custom-date-and-time-format-strings.md)|  
+|Tipos de enumeración (todos los tipos derivados de <xref:System.Enum?displayProperty=nameWithType>)|[Cadenas de formato de enumeración](enumeration-format-strings.md)|  
+|Tipos numéricos (<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[Cadenas con formato numérico estándar](standard-numeric-format-strings.md)<br /><br /> [Cadenas con formato numérico personalizado](custom-numeric-format-strings.md)|  
 |<xref:System.Guid>|<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|  
-|<xref:System.TimeSpan>|[Cadenas de formato TimeSpan estándar](../../../docs/standard/base-types/standard-timespan-format-strings.md)<br /><br /> [Cadenas de formato TimeSpan personalizado](../../../docs/standard/base-types/custom-timespan-format-strings.md)|  
+|<xref:System.TimeSpan>|[Cadenas de formato TimeSpan estándar](standard-timespan-format-strings.md)<br /><br /> [Cadenas de formato TimeSpan personalizado](custom-timespan-format-strings.md)|  
   
 ### <a name="escaping-braces"></a>Llaves de escape  
  Las llaves de apertura y de cierre se interpretan como el inicio y el final de un elemento de formato. Por lo tanto, debe utilizar una secuencia de escape para que se muestre una llave de apertura o de cierre literal. Especifique dos llaves de apertura ("{{") en el texto fijo para que se muestre una llave de apertura ("{"), o dos llaves de cierre ("}}") para que se muestre una llave de cierre ("}"). Las llaves de un elemento de formato se interpretan secuencialmente, en el orden en que se encuentran. No se admite la interpretación de llaves anidadas.  
@@ -163,11 +164,11 @@ La característica de formato compuesto se admite mediante métodos como los sig
 - <xref:System.String.Format%2A?displayProperty=nameWithType>
 - [Interpolación de cadenas en C#](../../csharp/language-reference/tokens/interpolated.md)
 - [Cadenas interpoladas (referencia de Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)
-- [Aplicación de formato a tipos](../../../docs/standard/base-types/formatting-types.md)
-- [Cadenas con formato numérico estándar](../../../docs/standard/base-types/standard-numeric-format-strings.md)
-- [Cadenas con formato numérico personalizado](../../../docs/standard/base-types/custom-numeric-format-strings.md)
-- [Cadenas con formato de fecha y hora estándar](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
-- [Cadenas con formato de fecha y hora personalizado](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
-- [Cadenas de formato TimeSpan estándar](../../../docs/standard/base-types/standard-timespan-format-strings.md)
-- [Cadenas de formato TimeSpan personalizado](../../../docs/standard/base-types/custom-timespan-format-strings.md)
-- [Cadenas de formato de enumeración](../../../docs/standard/base-types/enumeration-format-strings.md)
+- [Aplicación de formato a tipos](formatting-types.md)
+- [Cadenas con formato numérico estándar](standard-numeric-format-strings.md)
+- [Cadenas con formato numérico personalizado](custom-numeric-format-strings.md)
+- [Cadenas con formato de fecha y hora estándar](standard-date-and-time-format-strings.md)
+- [Cadenas con formato de fecha y hora personalizado](custom-date-and-time-format-strings.md)
+- [Cadenas de formato TimeSpan estándar](standard-timespan-format-strings.md)
+- [Cadenas de formato TimeSpan personalizado](custom-timespan-format-strings.md)
+- [Cadenas de formato de enumeración](enumeration-format-strings.md)

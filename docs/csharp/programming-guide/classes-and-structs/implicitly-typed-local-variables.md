@@ -5,16 +5,16 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: d39e4c4dd180ba35b7555d61211a34d696b04f50
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 842f73b7af9671157495df961f5db22702ae897e
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398434"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84240712"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Variables locales con asignación implícita de tipos (Guía de programación de C#)
 
-Las variables locales pueden declararse sin proporcionar un tipo explícito. La palabra clave `var` indica al compilador que infiera el tipo de la variable a partir de la expresión de la derecha de la instrucción de inicialización. El tipo inferido puede ser un tipo integrado, un tipo anónimo, un tipo definido por el usuario o un tipo definido en la biblioteca de clases .NET Framework. Para obtener más información sobre cómo inicializar las matrices con `var`, vea [Matrices con tipo implícito](../arrays/implicitly-typed-arrays.md).
+Las variables locales pueden declararse sin proporcionar un tipo explícito. La palabra clave `var` indica al compilador que infiera el tipo de la variable a partir de la expresión de la derecha de la instrucción de inicialización. El tipo inferido puede ser un tipo integrado, un tipo anónimo, un tipo definido por el usuario o un tipo definido en la biblioteca de clases .NET. Para obtener más información sobre cómo inicializar las matrices con `var`, vea [Matrices con tipo implícito](../arrays/implicitly-typed-arrays.md).
 
 Los ejemplos siguientes muestran distintas formas en que se pueden declarar variables locales con `var`:
 
@@ -74,7 +74,7 @@ El establecimiento de tipos implícitos con la palabra clave `var` solo puede ap
 private var bookTitles;
 ```
 
-`bookTitles` es un campo de clase dado el tipo `var`. Como el campo no tiene ninguna expresión que evaluar, es imposible que el compilador pueda inferir el tipo `bookTitles` que se supone que es. Además, agregar una expresión al campo (como se haría con una variable local) también es insuficiente:
+`bookTitles` es un campo de clase dado el tipo `var`. Como el campo no tiene ninguna expresión que evaluar, es imposible que el compilador pueda inferir el tipo `bookTitles` que se supone que es. Además, agregar una expresión al campo (como se haría con una variable local) también es suficiente:
 
 ```csharp
 private var bookTitles = new List<string>();

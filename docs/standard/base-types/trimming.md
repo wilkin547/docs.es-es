@@ -1,5 +1,6 @@
 ---
 title: Recorte y eliminación de caracteres de cadenas en .NET
+description: Descubra cómo recortar los espacios en blanco del principio o del final de una cadena, o cómo quitar cualquier número de espacios o caracteres de una posición especificada de la cadena en .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - TrimStart method
 - removing characters
 ms.assetid: ab248dab-70d4-4413-81c6-542d153fd195
-ms.openlocfilehash: bdbe267bb178e90c0008422e6543a23178c2c4d8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 630fe6b51d151d1f1384f2e3cde62750c303d883
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159993"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446898"
 ---
 # <a name="trimming-and-removing-characters-from-strings-in-net"></a>Recorte y eliminación de caracteres de cadenas en .NET
 Si va a analizar una frase en las palabras que la forman, el resultado pueden ser palabras con espacios en blanco delante y detrás. En este caso, puede usar uno de los métodos de recorte de la clase **System.String** para quitar espacios u otros caracteres de una posición especificada de la cadena. En la tabla siguiente se describen los métodos de recorte disponibles.  
@@ -96,4 +97,4 @@ Si va a analizar una frase en las palabras que la forman, el resultado pueden se
   
 ## <a name="see-also"></a>Vea también
 
-- [Operaciones básicas de cadenas](../../../docs/standard/base-types/basic-string-operations.md)
+- [Operaciones básicas de cadenas](basic-string-operations.md)

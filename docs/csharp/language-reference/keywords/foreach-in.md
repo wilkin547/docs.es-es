@@ -1,6 +1,6 @@
 ---
 title: Instrucción foreach de C#
-ms.date: 05/17/2019
+ms.date: 06/03/2020
 f1_keywords:
 - foreach
 - foreach_CSharpKeyword
@@ -9,19 +9,31 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: 188d909fd33b14755d9b121953b1fa434ecf536d
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 1645a246c9feee2a92c0d4e4bbeda47f0afde7d9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738816"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401893"
 ---
 # <a name="foreach-in-c-reference"></a>foreach, in (Referencia de C#)
 
-La instrucción `foreach` ejecuta una instrucción o un bloque de instrucciones para cada elemento en una instancia del tipo que implementa la interfaz <xref:System.Collections.IEnumerable?displayProperty=nameWithType> o <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. La instrucción `foreach` no se limita a esos tipos y puede aplicarse a una instancia de cualquier tipo que satisfaga las siguientes condiciones:
+La instrucción `foreach` ejecuta una instrucción o un bloque de instrucciones para cada elemento en una instancia del tipo que implementa la interfaz <xref:System.Collections.IEnumerable?displayProperty=nameWithType> o <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. La instrucción `foreach` no se limita a esos tipos y puede aplicarse a una instancia de cualquier tipo que cumpla las siguientes condiciones:
 
 - tiene el método público sin parámetros `GetEnumerator` cuyo tipo de valor devuelto es clase, estructura o tipo de interfaz,
 - el tipo de valor devuelto del método `GetEnumerator` tiene la propiedad pública `Current` y el método público sin parámetros `MoveNext` cuyo tipo de valor devuelto es <xref:System.Boolean>.
+
+En la mayoría de casos, `foreach` itera una expresión `IEnumerable<T>` en la que cada elemento es de tipo `T`. Pero los elementos pueden ser de cualquier tipo que tenga una conversión implícita o explícita del tipo de la propiedad `Current`. Si la propiedad `Current` devuelve `SomeType`, el tipo de los elementos puede ser uno de los siguientes:
+
+- Cualquiera de las clases base de `SomeType`.
+- Cualquiera de las interfaces implementadas por `SomeType`.
+
+Además, si `SomeType` es una `class` o una `interface` y no tiene el estado `sealed`, el tipo de elemento puede ser uno de los siguientes:
+
+- Cualquier tipo derivado de `SomeType`.
+- Cualquier interfaz arbitraria. Se permite cualquier interfaz porque se puede usar una clase derivada de `SomeType` o que implemente este elemento para implementar cualquier interfaz.
+
+Puede declarar la variable de iteración con cualquier tipo que coincida con las reglas anteriores. Si la conversión de `SomeType` al tipo de la variable de iteración requiere una conversión explícita, dicha operación puede producir una excepción <xref:System.InvalidCastException> al producirse un error de conversión.
 
 A partir de C# 7.3, si la propiedad `Current` del enumerador devuelve un [valor devuelto de referencia](ref.md#reference-return-values) (`ref T` donde `T` es el tipo del elemento de colección), se puede declarar la variable de iteración con el modificador `ref` o `ref readonly`.
 
@@ -37,19 +49,19 @@ Si la instrucción `foreach` se aplica a `null`, se produce <xref:System.NullRef
 
 El siguiente ejemplo muestra el uso de la instrucción `foreach` con una instancia del tipo <xref:System.Collections.Generic.List%601> que implementa la interfaz <xref:System.Collections.Generic.IEnumerable%601>:
 
-[!code-csharp-interactive[list example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#1)]
+:::code language="csharp" source="snippets/IterationKeywordsExamples.cs" id="1" interactive="try-dotnet-method" :::
 
 El siguiente ejemplo utiliza la instrucción `foreach` con una instancia del tipo <xref:System.Span%601?displayProperty=nameWithType>, que no implementa ninguna interfaz:
 
-[!code-csharp[span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#2)]
+:::code language="csharp" source="snippets/IterationKeywordsExamples.cs" id="2" :::
 
 En el ejemplo siguiente se usa una variable de iteración `ref` para establecer el valor de cada elemento de una matriz stackalloc. La versión `ref readonly` recorre en iteración la colección para imprimir todos los valores. En la declaración de `readonly`, se usa una declaración de variable local implícita. Las declaraciones de variables implícitas se pueden usar con las declaraciones `ref` o `ref readonly`, al igual que las declaraciones de variables con tipo explícito.
 
-[!code-csharp[ref span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#RefSpan)]
+:::code language="csharp" source="snippets/IterationKeywordsExamples.cs" id="RefSpan" :::
 
 En el siguiente ejemplo se usa `await foreach` para iterar por una colección que genera cada elemento de forma asincrónica:
 
-[!code-csharp[ref span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#AwaitForeach)]
+:::code language="csharp" source="snippets/IterationKeywordsExamples.cs" id="AwaitForeach"  :::
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 

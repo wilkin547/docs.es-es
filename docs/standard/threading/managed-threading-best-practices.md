@@ -10,18 +10,18 @@ helpviewer_keywords:
 - threading [.NET Framework], best practices
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
-ms.openlocfilehash: a76cc40f308ac2f636a650cd4a17da0e94e23a34
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 30d746d739654ecad2b485b9d69cfe300caca2ff
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160266"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291193"
 ---
 # <a name="managed-threading-best-practices"></a>Procedimientos recomendados para el subprocesamiento administrado
 El multithreading requiere que la programación sea cuidadosa. La complejidad de muchas tareas se puede reducir poniendo las solicitudes de ejecución en cola por subprocesos del grupo de subprocesos. En este tema se tratan situaciones más complicadas, como coordinar el trabajo de múltiples subprocesos, o controlar los subprocesos que se bloquean.  
   
 > [!NOTE]
-> A partir de NET Framework 4, la biblioteca TPL y PLINQ proporcionan API que reducen parte de la complejidad y los riesgos que entraña la programación multiproceso. Para más información, consulte [Programación en paralelo en .NET](../../../docs/standard/parallel-programming/index.md).  
+> A partir de NET Framework 4, la biblioteca TPL y PLINQ proporcionan API que reducen parte de la complejidad y los riesgos que entraña la programación multiproceso. Para más información, consulte [Programación en paralelo en .NET](../parallel-programming/index.md).  
   
 ## <a name="deadlocks-and-race-conditions"></a>Interbloqueos y condiciones de carrera  
  El multithreading resuelve problemas de rendimiento y de capacidad de respuesta, pero al hacerlo también crea nuevos problemas, como interbloqueos y condiciones de carrera.  
@@ -64,7 +64,7 @@ else {
   
  En una aplicación multiproceso, un subproceso que realiza los tres pasos puede adelantar al subproceso que ha cargado e incrementado el valor; cuando el primer subproceso reanuda la ejecución y almacena su valor, sobrescribe `objCt` sin tener en cuenta el hecho de que el valor ha cambiado mientras tanto.  
   
- Para evitar fácilmente esta condición de carrera determinada, utilice los métodos de la clase <xref:System.Threading.Interlocked>, como <xref:System.Threading.Interlocked.Increment%2A?displayProperty=nameWithType>. Para más información sobre otras técnicas de sincronización de datos entre varios subprocesos, consulte [Sincronización de datos para multithreading](../../../docs/standard/threading/synchronizing-data-for-multithreading.md).  
+ Para evitar fácilmente esta condición de carrera determinada, utilice los métodos de la clase <xref:System.Threading.Interlocked>, como <xref:System.Threading.Interlocked.Increment%2A?displayProperty=nameWithType>. Para más información sobre otras técnicas de sincronización de datos entre varios subprocesos, consulte [Sincronización de datos para multithreading](synchronizing-data-for-multithreading.md).  
   
  También se pueden producir condiciones de carrera al sincronizar las actividades de varios subprocesos. Siempre que escriba una línea de código, debe tener en cuenta qué puede ocurrir si otro subproceso adelanta a un subproceso antes de ejecutar la línea (o antes de cualquiera de las instrucciones máquina que forman la línea).  
   
@@ -90,7 +90,7 @@ Use la propiedad <xref:System.Environment.ProcessorCount?displayProperty=nameWit
   
 - No controle la ejecución de subprocesos de trabajo desde el programa principal (con eventos, por ejemplo). En su lugar, diseñe un programa de forma que los subprocesos de trabajo sean los que tengan que esperar hasta que haya trabajo disponible, lo ejecuten y notifiquen su finalización a otras partes del programa. Si los subprocesos de trabajo no se bloquean, puede ser conveniente usar subprocesos del grupo de subprocesos. <xref:System.Threading.Monitor.PulseAll%2A?displayProperty=nameWithType> resulta útil en aquellas situaciones en las que los subprocesos de trabajo se bloquean.  
   
-- No utilice los tipos como objetos de bloqueo. Es decir, evite código como `lock(typeof(X))` en C# o `SyncLock(GetType(X))` en Visual Basic o el uso de <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> con objetos <xref:System.Type>. Para un tipo determinado, hay sólo una instancia de <xref:System.Type?displayProperty=nameWithType> por el dominio de aplicación. Si el tipo que quiere bloquear es público, codifique uno que su tipo no pueda bloquear, para evitar interbloqueos. Para otros problemas, consulte [Procedimientos recomendados para la confiabilidad](../../../docs/framework/performance/reliability-best-practices.md).  
+- No utilice los tipos como objetos de bloqueo. Es decir, evite código como `lock(typeof(X))` en C# o `SyncLock(GetType(X))` en Visual Basic o el uso de <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> con objetos <xref:System.Type>. Para un tipo determinado, hay sólo una instancia de <xref:System.Type?displayProperty=nameWithType> por el dominio de aplicación. Si el tipo que quiere bloquear es público, codifique uno que su tipo no pueda bloquear, para evitar interbloqueos. Para otros problemas, consulte [Procedimientos recomendados para la confiabilidad](../../framework/performance/reliability-best-practices.md).  
   
 - Tenga cuidado al efectuar bloqueos en instancias, por ejemplo `lock(this)` en C# o `SyncLock(Me)` en Visual Basic. Si otra parte del código de la aplicación, ajeno al tipo, bloquea el objeto, podrían producirse interbloqueos.  
   
@@ -174,5 +174,5 @@ Use la propiedad <xref:System.Environment.ProcessorCount?displayProperty=nameWit
   
 ## <a name="see-also"></a>Vea también
 
-- [Subprocesamiento](../../../docs/standard/threading/index.md)
-- [Subprocesos y subprocesamiento](../../../docs/standard/threading/threads-and-threading.md)
+- [Subprocesamiento](index.md)
+- [Subprocesos y subprocesamiento](threads-and-threading.md)
