@@ -95,13 +95,13 @@ items:
             displayName: 'tutorials, visual studio code, vs code'
           - name: Publicar una aplicación
             href: tutorials/publishing-with-visual-studio-code.md
-            displayName: 'tutorials, visual studio, vs'
+            displayName: 'tutorials, visual studio code, vs code'
           - name: Creación de una biblioteca
             href: tutorials/library-with-visual-studio-code.md
-            displayName: 'tutorials, visual studio, vs'
+            displayName: 'tutorials, visual studio code, vs code'
           - name: Prueba unitaria de una biblioteca
             href: tutorials/testing-library-with-visual-studio-code.md
-            displayName: 'tutorials, visual studio, vs'
+            displayName: 'tutorials, visual studio code, vs code'
           - name: Instalar y usar un paquete
             href: /nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli
             displayName: 'tutorials, cli'
@@ -111,13 +111,25 @@ items:
       - name: Uso de Visual Studio para Mac
         items:
           - name: Crear una aplicación de consola
-            href: tutorials/using-on-mac-vs.md
-            displayName: tutorials
-          - name: Creación y prueba unitaria de una biblioteca
-            href: tutorials/using-on-mac-vs-full-solution.md
-            displayName: tutorials
+            href: tutorials/with-visual-studio-mac.md
+            displayName: 'tutorials, visual studio for mac, vs for mac, cli'
+          - name: Depuración de una aplicación
+            href: tutorials/debugging-with-visual-studio-mac.md
+            displayName: 'tutorials, visual studio for mac, vs for mac'
+          - name: Publicar una aplicación
+            href: tutorials/publishing-with-visual-studio-mac.md
+            displayName: 'tutorials, visual studio for mac, vs for mac'
+          - name: Creación de una biblioteca
+            href: tutorials/library-with-visual-studio-mac.md
+            displayName: 'tutorials, visual studio for mac, vs for mac'
+          - name: Prueba unitaria de una biblioteca
+            href: tutorials/testing-library-with-visual-studio-mac.md
+            displayName: 'tutorials, visual studio for mac, vs for mac'
           - name: Instalar y usar un paquete
             href: /nuget/quickstart/install-and-use-a-package-in-visual-studio-mac
+            displayName: 'tutorials, visual studio for mac, vs for mac'
+          - name: Crear y publicar un paquete
+            href: /nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli
             displayName: tutorials
       - name: Temas avanzados
         items:
