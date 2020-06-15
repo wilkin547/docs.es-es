@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: a277215d438b5f6b0bbbef72e5e0121b6ce41990
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: a1142d1aa04003ae1942902672cfc7a05edc99c0
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121482"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662672"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Tipos numéricos de punto flotante (referencia de C#)
 
@@ -96,7 +96,7 @@ También puede usar la notación científica; es decir, especificar una parte ex
 
 ```csharp-interactive
 double d = 0.42e2;
-Console.WriteLine(d);  // output 42;
+Console.WriteLine(d);  // output 42
 
 float f = 134.45E-2f;
 Console.WriteLine(f);  // output: 1.3445
@@ -109,7 +109,7 @@ Console.WriteLine(m);  // output: 1500000
 
 Solo hay una conversión implícita entre los tipos numéricos de punto flotante: de `float` a `double`. Sin embargo, puede convertir un tipo de punto flotante a cualquier otro tipo de punto flotante con la [conversión explícita](../operators/type-testing-and-cast.md#cast-expression). Para obtener más información, consulte [Conversiones numéricas integradas](numeric-conversions.md).
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 Para más información, vea las secciones siguientes de la [Especificación del lenguaje C#](~/_csharplang/spec/introduction.md):
 

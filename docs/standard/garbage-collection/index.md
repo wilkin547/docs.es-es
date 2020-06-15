@@ -1,5 +1,6 @@
 ---
 title: Recolección de elementos no utilizados de .NET
+description: Aprenda sobre la recolección de elementos no utilizados en .NET. El recolector de elementos no utilizados de .NET administra la asignación y liberación de la memoria de la aplicación.
 ms.date: 04/21/2020
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - runtime, garbage collection
 - garbage collection, about
 ms.assetid: 22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9
-ms.openlocfilehash: ef7e078c6ef2f0b4081c49aa0db09316e79f0702
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: dde0012ff7233eb7ee13efab1931f129b0eae276
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286059"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662490"
 ---
 # <a name="garbage-collection"></a>Recolección de elementos no utilizados
 

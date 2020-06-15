@@ -1,5 +1,6 @@
 ---
 title: Controlar y generar excepciones en .NET
+description: Aprenda a cómo controlar e iniciar excepciones en .NET. Las excepciones son el modo en que las operaciones .NET indican un error en las aplicaciones.
 ms.date: 06/19/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - exceptions [.NET]
 - common language runtime, exceptions
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
-ms.openlocfilehash: 8e78b2a8d7a815637e143eeb88bcfb51ded33771
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 89d88e3128917125d1a09466ed4e230604d6978c
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75741357"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662776"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>Controlar y generar excepciones en .NET
 
@@ -46,7 +47,7 @@ Las excepciones ofrecen ventajas sobre otros métodos de notificación de errore
 
 En la tabla siguiente se muestra algunas excepciones comunes con ejemplos de las causas que las originan.
 
-| Tipo de excepción | Description | Ejemplo |
+| Tipo de excepción | Descripción | Ejemplo |
 | -------------- | ----------- | ------- |
 | <xref:System.Exception> | Clase base de todas las excepciones. | Ninguno (utilice una clase derivada de esta excepción). |
 | <xref:System.IndexOutOfRangeException> | El tiempo de ejecución la genera solo cuando una matriz no está correctamente indexada. | La indexación de una matriz fuera de su intervalo válido: <br /> `arr[arr.Length+1]` |
@@ -59,12 +60,12 @@ En la tabla siguiente se muestra algunas excepciones comunes con ejemplos de las
 ## <a name="see-also"></a>Vea también
 
 - [Clase Exception y propiedades](exception-class-and-properties.md)
-- [Utilizar el bloque Try/Catch para detectar excepciones](how-to-use-the-try-catch-block-to-catch-exceptions.md)
-- [Cómo: Utilizar excepciones específicas en un bloque Catch](how-to-use-specific-exceptions-in-a-catch-block.md)
+- [Cómo: Utilizar el bloque Try/Catch para detectar excepciones](how-to-use-the-try-catch-block-to-catch-exceptions.md)
+- [Cómo: Usar excepciones específicas en un bloque Catch](how-to-use-specific-exceptions-in-a-catch-block.md)
 - [Cómo: Iniciar excepciones explícitamente](how-to-explicitly-throw-exceptions.md)
-- [Cómo crear excepciones definidas por el usuario](how-to-create-user-defined-exceptions.md)
+- [Cómo: Crear excepciones definidas por el usuario](how-to-create-user-defined-exceptions.md)
 - [Utilizar controladores de excepciones filtradas por el usuario](using-user-filtered-exception-handlers.md)
-- [Utilizar bloques Finally](how-to-use-finally-blocks.md)
+- [Cómo: Usar bloques Finally](how-to-use-finally-blocks.md)
 - [Controlar excepciones de interoperabilidad COM](handling-com-interop-exceptions.md)
 - [Procedimientos recomendados para excepciones](best-practices-for-exceptions.md)
 - [¿Qué necesitan saber todos los desarrolladores acerca de las excepciones producidas en el runtime?](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/exceptions.md)
