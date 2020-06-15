@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 9f5690e6840098f94360dba89f09fb23b258b782
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: f10ce837057cc61b84130f237a13af708849dfc5
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739045"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662971"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>Procedimiento para convertir de forma segura mediante la coincidencia de patrones y los operadores is y as
 
@@ -19,13 +19,13 @@ Dado que los objetos son polimórficos, es posible que una variable de un tipo d
 
 En el ejemplo siguiente se muestra cómo usar la instrucción `is` de coincidencia de patrones.
 
-[!code-csharp[Pattern matching is statement](../../../samples/snippets/csharp/how-to/safelycast/patternmatching/Program.cs#PatternMatchingIs)]
+:::code language="csharp" source="../../../samples/snippets/csharp/how-to/safelycast/patternmatching/Program.cs" id="PatternMatchingIs":::
 
 El ejemplo anterior muestra una serie de características de sintaxis de coincidencia de patrones. La instrucción `if (a is Mammal m)` combina la prueba con una asignación de inicialización. La asignación solo se produce cuando la prueba se realiza correctamente. La variable `m` solo está en ámbito en la instrucción `if` insertada donde se ha asignado. No se puede acceder a `m` más adelante en el mismo método. En el ejemplo anterior también se muestra cómo usar el operador [`as`](../language-reference/operators/type-testing-and-cast.md#as-operator) para convertir un objeto en un tipo especificado.
 
 También puede usar la misma sintaxis para probar si un [tipo de valor que admite valores NULL](../language-reference/builtin-types/nullable-value-types.md) tiene un valor, como se muestra en el ejemplo siguiente:
 
-[!code-csharp[Pattern matching with nullable types](../../../samples/snippets/csharp/how-to/safelycast/nullablepatternmatching/Program.cs#PatternMatchingNullable)]
+:::code language="csharp" source="../../../samples/snippets/csharp/how-to/safelycast/nullablepatternmatching/Program.cs" id="PatternMatchingNullable":::
 
 El ejemplo anterior muestra otras características de coincidencia de patrones para usar con conversiones. Puede probar una variable para el patrón null si busca específicamente el valor `null`. Cuando el valor de runtime de la variable es `null`, una instrucción `is` que busca un tipo siempre devuelve `false`. La instrucción `is` de coincidencia de patrones no permite un tipo de valor que acepta valores NULL, como `int?` o `Nullable<int>`, pero puede probar con cualquier otro tipo de valor. Los patrones `is` del ejemplo anterior no se limitan a los tipos de valor que admiten un valor NULL. También puede usar esos patrones para probar si una variable de un tipo de referencia tiene un valor o es `null`.
 
@@ -33,8 +33,6 @@ En el ejemplo anterior también se muestra cómo usar el patrón de tipo en una 
 
 Si quiere probar si una variable es de un tipo determinado, pero no asignarla a una nueva variable, puede usar los operadores `is` y `as` para los tipos de referencia y los tipos que aceptan valores NULL. El código siguiente muestra cómo usar las instrucciones `is` y `as` que formaban parte del lenguaje C# antes de la incorporación de la coincidencia de patrones para probar si una variable es de un tipo determinado:
 
-[!code-csharp[testing variable types with the is and as statements](../../../samples/snippets/csharp/how-to/safelycast/asandis/Program.cs#IsAndAs)]
+:::code language="csharp" source="../../../samples/snippets/csharp/how-to/safelycast/asandis/Program.cs" id="IsAndAs":::
 
 Como puede ver al comparar este código con el código de coincidencia de patrones, la sintaxis de coincidencia de patrones proporciona características más sólidas mediante la combinación de la prueba y la asignación en una sola instrucción. Use la sintaxis de coincidencia de patrones siempre que sea posible.
-
-Eche un vistazo al código de nuestro [repositorio de GitHub](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/safelycast) y pruebe estos ejemplos. O bien, puede descargar los ejemplos [como un archivo ZIP](../../../samples/snippets/csharp/how-to/safelycast.zip).

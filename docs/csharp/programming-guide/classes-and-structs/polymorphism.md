@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 58980bd0d70d8a778cdb208f56d31ee8465871a4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 65f5c882ec4d7f8cbcc7ec7bf535091febfba64d
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170174"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662659"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polimorfismo (Guía de programación de C#)
 
@@ -50,7 +50,7 @@ Una clase derivada puede invalidar un miembro de la clase base si este se declar
 
 Los campos no pueden ser virtuales; solo pueden serlo los métodos, propiedades, eventos e indizadores. Cuando una clase derivada invalida un miembro virtual, se llama a ese miembro aunque se acceda a una instancia de esa clase como una instancia de la clase base. El siguiente fragmento de código muestra un ejemplo:
 
-[!code-csharp[Virtual overview example](~/samples/snippets/csharp/objectoriented/Inheritance.cs#VirtualMethods)]
+[!code-csharp[Virtual overview example](~/samples/snippets/csharp/objectoriented/Inheritance.cs#SnippetTestVirtualMethods)]
 
 Los métodos y propiedades virtuales permiten a las clases derivadas extender una clase base sin necesidad de usar la implementación de clase base de un método. Para obtener más información, consulte [Control de versiones con las palabras clave Override y New](./versioning-with-the-override-and-new-keywords.md). Una interfaz proporciona otra manera de definir un método o conjunto de métodos cuya implementación se deja a las clases derivadas. Para más información, vea [Interfaces](../interfaces/index.md).
 

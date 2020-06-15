@@ -2,12 +2,12 @@
 title: Comando dotnet test
 description: El comando “dotnet test” se usa para ejecutar pruebas unitarias en un proyecto determinado.
 ms.date: 04/29/2020
-ms.openlocfilehash: 1190ecb75e83c9930c60726e7cd83203b11928cb
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: cbe9e7cce1722efb808c68ee49bb9012be6dcff7
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84283941"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594457"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -192,8 +192,8 @@ Donde `Microsoft.NET.Test.Sdk` es el host de prueba y `xunit` es el marco de pru
   ```dotnetcli
   dotnet test --logger "console;verbosity=detailed"
   ```
-  
-  - Ejecute las pruebas del proyecto en el directorio actual e informe de las pruebas que estaban en curso cuando se bloqueó el host de prueba:
+
+- Ejecute las pruebas del proyecto en el directorio actual e informe de las pruebas que estaban en curso cuando se bloqueó el host de prueba:
 
   ```dotnetcli
   dotnet test --blame
