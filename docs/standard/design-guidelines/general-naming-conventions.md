@@ -1,5 +1,6 @@
 ---
 title: Convenciones generales de nomenclatura
+description: Utilice convenciones de nomenclatura generales relacionadas con la elección de palabras, instrucciones sobre el uso de abreviaturas y acrónimos, así como instrucciones para evitar nombres específicos del idioma.
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 - names [.NET Framework], acronyms
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
-ms.openlocfilehash: c90987fd28d5157cfb7f7eea4680b5ab4be1a200
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b7f06a57c57800afcfa7febf9452094b4ad5ddc1
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290959"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769085"
 ---
 # <a name="general-naming-conventions"></a>Convenciones generales de nomenclatura
 
