@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 51625fd0-7399-49c7-b22b-5dfb05451fe6
 topic_type:
 - apiref
-ms.openlocfilehash: c9999961ec20a31cf82d5ad60104bcdd04c340d1
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 3d4e44eefaf99a40b9c4f1c45e7dd81192f8b607
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210181"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904278"
 ---
 # <a name="icordebugheapsegmentenumnext-method"></a>ICorDebugHeapSegmentEnum::Next (Método)
-Obtiene el número especificado de instancias de [COR_HEAPOBJECT](cor-heapobject-structure.md) que contienen información sobre las regiones de memoria del montón administrado.  
+Obtiene el número especificado de instancias de [COR_SEGMENT](cor-segment-structure.md) que contienen información sobre las regiones de memoria del montón administrado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,10 +39,10 @@ HRESULT Next(
  de Número de segmentos que se van a recuperar.  
   
  segmentos  
- enuncia Matriz de punteros, cada uno de los cuales apunta a un [COR_HEAPOBJECT](cor-heapobject-structure.md) objeto que proporciona información sobre una región de memoria en el montón administrado.  
+ enuncia Matriz de punteros, cada uno de los cuales apunta a un [COR_SEGMENT](cor-segment-structure.md) objeto que proporciona información sobre una región de memoria en el montón administrado.  
   
  pceltFetched  
- enuncia Puntero al número de objetos [COR_HEAPOBJECT](cor-heapobject-structure.md) realmente devueltos en `segments` . Este valor puede ser `null` si `celt` es 1.  
+ enuncia Puntero al número de objetos [COR_SEGMENT](cor-segment-structure.md) realmente devueltos en `segments` . Este valor puede ser `null` si `celt` es 1.  
   
 ## <a name="remarks"></a>Observaciones  
   

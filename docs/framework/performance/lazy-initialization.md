@@ -1,5 +1,6 @@
 ---
 title: Inicialización diferida
+description: Explore la inicialización diferida en .NET, una mejora del rendimiento que significa que la creación de un objeto se aplaza hasta que el objeto se use por primera vez.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,15 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - lazy initialization in .NET, introduction
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
-ms.openlocfilehash: 4f2b585dded6e20bb604f623217c6d1f1505c097
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 355fa326fc19e9a50a74e21ace0a6353f5c740c5
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180563"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904239"
 ---
 # <a name="lazy-initialization"></a>Inicialización diferida
-La *inicialización diferida* de un objeto implica que su creación se aplaza hasta que se usa por primera vez. (Para este tema, los términos *inicialización diferida* y creación de *instancias diferida* son sinónimos.) La inicialización diferida se utiliza principalmente para mejorar el rendimiento, evitar el cálculo despilfarradores y reducir los requisitos de memoria del programa. Estos son los escenarios más comunes:  
+La *inicialización diferida* de un objeto implica que su creación se aplaza hasta que se usa por primera vez. (En este tema, los términos *inicialización diferida* y *creación de instancias diferidas* son sinónimos). La inicialización diferida se utiliza principalmente para mejorar el rendimiento, evitar el cálculo excesivo y reducir los requisitos de memoria del programa. Estos son los escenarios más comunes:  
   
 - Cuando hay un objeto costoso de crear y es posible que el programa no lo use. Por ejemplo, supongamos que tiene en memoria un objeto `Customer` con una propiedad `Orders` que contiene una matriz grande de objetos `Order` que, para inicializarse, requieren una conexión de base de datos. Si el usuario nunca solicita que se muestre Orders y nunca usa los datos en un cálculo, no hay ninguna razón para usar la memoria del sistema o ciclos de cálculos para crearlo. Mediante el uso de `Lazy<Orders>` para declarar el objeto `Orders` para la inicialización diferida, puede evitar desperdiciar recursos del sistema si no se usa el objeto.  
   
@@ -49,7 +50,7 @@ La *inicialización diferida* de un objeto implica que su creación se aplaza ha
  [!code-csharp[Lazy#3](../../../samples/snippets/csharp/VS_Snippets_Misc/lazy/cs/cs_lazycodefile.cs#3)]
  [!code-vb[Lazy#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#3)]  
   
- Un objeto <xref:System.Lazy%601> siempre devuelve el mismo objeto o valor con el que se ha inicializado. Por lo tanto, la propiedad <xref:System.Lazy%601.Value%2A> es de solo lectura. Si <xref:System.Lazy%601.Value%2A> almacena un tipo de referencia, no se le puede asignar un nuevo objeto. (Sin embargo, puede cambiar el valor de sus propiedades y campos públicos configurables.) Si <xref:System.Lazy%601.Value%2A> almacena un tipo de valor, no puede modificar su valor. Aun así, puede crear una variable si invoca de nuevo el constructor de la variable con argumentos nuevos.  
+ Un objeto <xref:System.Lazy%601> siempre devuelve el mismo objeto o valor con el que se ha inicializado. Por lo tanto, la propiedad <xref:System.Lazy%601.Value%2A> es de solo lectura. Si <xref:System.Lazy%601.Value%2A> almacena un tipo de referencia, no se le puede asignar un nuevo objeto. (Sin embargo, puede cambiar el valor de sus propiedades y campos públicos configurables). Si <xref:System.Lazy%601.Value%2A> almacena un tipo de valor, no se puede modificar su valor. Aun así, puede crear una variable si invoca de nuevo el constructor de la variable con argumentos nuevos.  
   
  [!code-csharp[Lazy#4](../../../samples/snippets/csharp/VS_Snippets_Misc/lazy/cs/cs_lazycodefile.cs#4)]
  [!code-vb[Lazy#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#4)]  
@@ -73,7 +74,7 @@ La *inicialización diferida* de un objeto implica que su creación se aplaza ha
   
  Algunos constructores <xref:System.Lazy%601> tienen un parámetro <xref:System.Threading.LazyThreadSafetyMode> denominado `mode`. Estos constructores proporcionan un modo adicional de seguridad para subprocesos. En la tabla siguiente se muestra la manera en que la seguridad para subprocesos de un objeto <xref:System.Lazy%601> se ve afectada por los parámetros del constructor que especifican la seguridad para subprocesos. Cada constructor tiene como máximo un parámetro de este tipo.  
   
-|Seguridad para subprocesos del objeto|`LazyThreadSafetyMode``mode` parámetro|Parámetro booleano `isThreadSafe`|Sin parámetros de seguridad para subprocesos|  
+|Seguridad para subprocesos del objeto|`LazyThreadSafetyMode``mode`parámetro de|Parámetro booleano `isThreadSafe`|Sin parámetros de seguridad para subprocesos|  
 |---------------------------------|---------------------------------------------|--------------------------------------|---------------------------------|  
 |Totalmente seguro para subprocesos; solo intenta inicializar el valor un subproceso de cada vez.|<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>|`true`|Sí.|  
 |No es seguro para subprocesos.|<xref:System.Threading.LazyThreadSafetyMode.None>|`false`|No aplicable.|  
@@ -85,9 +86,9 @@ La *inicialización diferida* de un objeto implica que su creación se aplaza ha
   
 <a name="ExceptionsInLazyObjects"></a>
 ## <a name="exceptions-in-lazy-objects"></a>Excepciones en objetos diferidos  
- Como ya se ha indicado, un objeto <xref:System.Lazy%601> siempre devuelve el mismo objeto o valor con el que se ha inicializado y, por tanto, la propiedad <xref:System.Lazy%601.Value%2A> es de solo lectura. Si habilita el almacenamiento en caché de excepciones, esta inmutabilidad también se aplica al comportamiento de las excepciones. Si un objeto inicializado diferido tiene habilitado el almacenamiento en caché <xref:System.Lazy%601.Value%2A> de excepciones y produce una excepción de su <xref:System.Lazy%601.Value%2A> método de inicialización cuando se tiene acceso a la propiedad por primera vez, se produce la misma excepción en cada intento posterior de tener acceso a la propiedad. En otras palabras, el constructor del tipo encapsulado nunca se vuelve a invocar, ni siquiera en escenarios multiproceso. Por lo tanto, el objeto <xref:System.Lazy%601> no puede producir una excepción en un acceso y devolver un valor en un acceso posterior.  
+ Como ya se ha indicado, un objeto <xref:System.Lazy%601> siempre devuelve el mismo objeto o valor con el que se ha inicializado y, por tanto, la propiedad <xref:System.Lazy%601.Value%2A> es de solo lectura. Si habilita el almacenamiento en caché de excepciones, esta inmutabilidad también se aplica al comportamiento de las excepciones. Si un objeto con inicialización diferida tiene habilitado el almacenamiento en caché de excepciones y produce una excepción desde su método de inicialización cuando <xref:System.Lazy%601.Value%2A> se obtiene acceso por primera vez a la propiedad, se produce la misma excepción en cada intento posterior de acceder a la <xref:System.Lazy%601.Value%2A> propiedad. En otras palabras, el constructor del tipo encapsulado nunca se vuelve a invocar, ni siquiera en escenarios multiproceso. Por lo tanto, el objeto <xref:System.Lazy%601> no puede producir una excepción en un acceso y devolver un valor en un acceso posterior.  
   
- El almacenamiento en caché de excepciones se habilita cuando se usa cualquier constructor <xref:System.Lazy%601?displayProperty=nameWithType> que toma un método de inicialización (un parámetro `valueFactory`); por ejemplo, se habilita cuando se usa el constructor `Lazy(T)(Func(T))`. Si el constructor también toma un valor <xref:System.Threading.LazyThreadSafetyMode> (un parámetro `mode`), especifique <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> o <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>. Al especificar un método de inicialización, se permite el almacenamiento en caché de excepciones para estos dos modos. El método de inicialización puede ser muy simple. Por ejemplo, podría llamar al `T`constructor `new Lazy<Contents>(() => new Contents(), mode)` sin parámetros para: en C- o `New Lazy(Of Contents)(Function() New Contents())` en Visual Basic. Si usa un constructor <xref:System.Lazy%601?displayProperty=nameWithType> que no especifica un método de inicialización, las excepciones que inicie el constructor sin parámetros para `T` no se almacenarán en caché. Para obtener más información, vea la enumeración <xref:System.Threading.LazyThreadSafetyMode>.  
+ El almacenamiento en caché de excepciones se habilita cuando se usa cualquier constructor <xref:System.Lazy%601?displayProperty=nameWithType> que toma un método de inicialización (un parámetro `valueFactory`); por ejemplo, se habilita cuando se usa el constructor `Lazy(T)(Func(T))`. Si el constructor también toma un valor <xref:System.Threading.LazyThreadSafetyMode> (un parámetro `mode`), especifique <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> o <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>. Al especificar un método de inicialización, se permite el almacenamiento en caché de excepciones para estos dos modos. El método de inicialización puede ser muy simple. Por ejemplo, podría llamar al constructor sin parámetros para `T` : `new Lazy<Contents>(() => new Contents(), mode)` en C# o `New Lazy(Of Contents)(Function() New Contents())` en Visual Basic. Si usa un constructor <xref:System.Lazy%601?displayProperty=nameWithType> que no especifica un método de inicialización, las excepciones que inicie el constructor sin parámetros para `T` no se almacenarán en caché. Para obtener más información, vea la enumeración <xref:System.Threading.LazyThreadSafetyMode>.  
   
 > [!NOTE]
 > Si crea un objeto <xref:System.Lazy%601> con el parámetro de constructor `isThreadSafe` establecido en `false` o el parámetro de constructor `mode` establecido en <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>, debe tener acceso al objeto <xref:System.Lazy%601> desde un subproceso o proporcionar su propia sincronización. Esto se aplica a todos los aspectos del objeto, incluido el almacenamiento en caché de excepciones.  
@@ -98,11 +99,11 @@ La *inicialización diferida* de un objeto implica que su creación se aplaza ha
   
 |Constructor|Modo de seguridad para subprocesos|Usa método de inicialización|Las excepciones se almacenan en caché|  
 |-----------------|------------------------|--------------------------------|---------------------------|  
-|Lazy(T)()|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|Sin |Sin |  
+|Lazy(T)()|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|No|No|  
 |Lazy(T)(Func(T))|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|Sí|Sí|  
-|Lazy(T)(Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) o `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|Sin |Sin |  
+|Lazy(T)(Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) o `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|No|No|  
 |Lazy(T)(Func(T), Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) o `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|Sí|Sí|  
-|Lazy(T)(LazyThreadSafetyMode)|Especificado por el usuario|Sin |Sin |  
+|Lazy(T)(LazyThreadSafetyMode)|Especificado por el usuario|No|No|  
 |Lazy(T)(Func(T), LazyThreadSafetyMode)|Especificado por el usuario|Sí|No si el usuario especifica <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly>; en caso contrario, sí.|  
   
 ## <a name="implementing-a-lazy-initialized-property"></a>Implementar una propiedad con inicialización diferida  
@@ -152,7 +153,7 @@ La *inicialización diferida* de un objeto implica que su creación se aplaza ha
   
 ## <a name="see-also"></a>Consulte también
 
-- [Conceptos básicos de subprocesos administrados](../../standard/threading/managed-threading-basics.md)
-- [Roscas y roscado](../../standard/threading/threads-and-threading.md)
-- [Biblioteca de procesamiento paralelo basado en tareas (TPL)](../../standard/parallel-programming/task-parallel-library-tpl.md)
-- [Cómo: Realizar la inicialización diferida de objetos](how-to-perform-lazy-initialization-of-objects.md)
+- [Principios básicos del subprocesamiento administrado](../../standard/threading/managed-threading-basics.md)
+- [Subprocesos y subprocesamiento](../../standard/threading/threads-and-threading.md)
+- [Biblioteca TPL](../../standard/parallel-programming/task-parallel-library-tpl.md)
+- [Procedimiento para realizar la inicialización diferida de objetos](how-to-perform-lazy-initialization-of-objects.md)

@@ -1,16 +1,17 @@
 ---
 title: Eventos ETW de interoperabilidad
+description: Revise los eventos ETW de interoperabilidad (seguimiento de eventos para Windows), que capturan información sobre la generación de código auxiliar del lenguaje intermedio de Microsoft (MSIL) & almacenamiento en caché en .NET.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - interop events [.NET Framework]
 - ETW, interop events (CLR)
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
-ms.openlocfilehash: 80fd1f7487dbe3925b875e728eaeddac86927ad4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9dac9bc70cd070eb3e94969ce47ce24325a6f89d
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716017"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904252"
 ---
 # <a name="interop-etw-events"></a>Eventos ETW de interoperabilidad
 Los eventos de interoperabilidad capturan información sobre el almacenamiento en caché y la generación de código auxiliar del lenguaje intermedio (MSIL) de Microsoft.  
@@ -19,13 +20,13 @@ Los eventos de interoperabilidad capturan información sobre el almacenamiento e
 
 En la tabla siguiente se muestra la palabra clave y el nivel. (Para obtener más información, vea [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)).  
   
-|Palabra clave para generar el evento|Level|  
+|Palabra clave para generar el evento|Nivel|  
 |-----------------------------------|-----------|  
 |`InteropKeyword` (0 x 2000)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Event|Id. de evento|Se genera cuando|  
+|Evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`ILStubGenerated`|88|Se generó código auxiliar MSIL.|  
   
@@ -49,13 +50,13 @@ En la tabla siguiente se muestra la palabra clave y el nivel. (Para obtener más
 
 En la tabla siguiente se muestra la palabra clave y el nivel.  
   
-|Palabra clave para generar el evento|Level|  
+|Palabra clave para generar el evento|Nivel|  
 |-----------------------------------|-----------|  
 |`InteropKeyword` (0 x 2000)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Event|Id. de evento|Se genera cuando|  
+|Evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`ILStubCacheHit`|89|Se tuvo acceso a la memoria caché MSIL.|  
   
@@ -71,6 +72,6 @@ En la tabla siguiente se muestra la palabra clave y el nivel.
 |ManagedInteropMethodSignature|win:UnicodeString|Firma del método de interoperabilidad administrado.|  
 |ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [CLR ETW Events (Eventos ETW de CLR)](clr-etw-events.md)

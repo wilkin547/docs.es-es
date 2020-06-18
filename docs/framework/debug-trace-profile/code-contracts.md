@@ -1,5 +1,6 @@
 ---
 title: Contratos de código
+description: Explore los contratos de código, que proporcionan una manera de especificar condiciones previas, condiciones posteriores y objetos invariables en el código de .NET.
 ms.date: 09/05/2018
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - Code contracts
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
-ms.openlocfilehash: b60f992cf9d934ed622c89a49c491a80377fb6fe
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 60f794373af75bd3f745c224e0a8c7a84192e4c4
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216715"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904148"
 ---
 # <a name="code-contracts"></a>Contratos de código
 
@@ -67,7 +68,7 @@ if (x == null) throw new ...
 Contract.EndContractBlock(); // All previous "if" checks are preconditions
 ```
 
-Tenga en cuenta que la condición en la prueba anterior es una condición previa negada (La condición previa real sería `x != null`). Una condición previa negada está muy restringida: debe escribirse como se muestra en el ejemplo anterior. es decir, no debe contener cláusulas `else` y el cuerpo de la cláusula `then` debe ser una sola instrucción `throw`. La prueba `if` está sujeta a reglas de pureza y de visibilidad (vea las [instrucciones de uso](#usage_guidelines)), pero la expresión `throw` solo está sujeta a reglas de pureza. Sin embargo, el tipo de la excepción generada debe ser tan visible como el método en el que se produce el contrato.
+Tenga en cuenta que la condición en la prueba anterior es una condición previa negada (La condición previa real sería `x != null` ). Una condición previa negada está muy restringida: debe escribirse como se muestra en el ejemplo anterior. es decir, no debe contener `else` cláusulas y el cuerpo de la `then` cláusula debe ser una sola `throw` instrucción. La prueba `if` está sujeta a reglas de pureza y de visibilidad (vea las [instrucciones de uso](#usage_guidelines)), pero la expresión `throw` solo está sujeta a reglas de pureza. Sin embargo, el tipo de la excepción generada debe ser tan visible como el método en el que se produce el contrato.
 
 ## <a name="postconditions"></a>Condiciones posteriores
 
@@ -101,7 +102,7 @@ Los métodos siguientes pueden usarse únicamente dentro de condiciones posterio
 
 - La referencia a valores devueltos del método en condiciones posteriores se realiza mediante la expresión `Contract.Result<T>()`, donde `T` se sustituye por el tipo de valor devuelto del método. Cuando el compilador no puede inferir el tipo, debe proporcionarse explícitamente. Por ejemplo, el compilador de C# no puede inferir tipos para los métodos que no toman ningún argumento, por lo que requiere la siguiente condición posterior: `Contract.Ensures(0 <Contract.Result<int>())`. Los métodos con un tipo de valor devuelto de `void` no puede hacer referencia a `Contract.Result<T>()` en sus condiciones posteriores.
 
-- Un valor preindicado en una condición posterior hace referencia al valor de una expresión en el inicio de un método o propiedad. Se usa la expresión `Contract.OldValue<T>(e)`, donde `T` es el tipo de `e`. Puede omitir el argumento de tipo genérico siempre que el compilador pueda deducir su tipo. (Por ejemplo, el C# compilador siempre infiere el tipo porque toma un argumento). Existen varias restricciones sobre lo que se puede producir en `e` y los contextos en los que puede aparecer una expresión antigua. Una expresión antigua no puede contener otra expresión antigua. Lo más importante es que una expresión antigua debe hacer referencia a un valor que existía en el estado de condición previa del método. En otras palabras, debe ser una expresión que pueda evaluarse siempre que la condición previa del método sea `true`. A continuación se muestran varias instancias de esa regla.
+- Un valor preindicado en una condición posterior hace referencia al valor de una expresión en el inicio de un método o propiedad. Se usa la expresión `Contract.OldValue<T>(e)`, donde `T` es el tipo de `e`. Puede omitir el argumento de tipo genérico siempre que el compilador pueda deducir su tipo. (Por ejemplo, el compilador de C# siempre infiere el tipo porque toma un argumento). Existen varias restricciones sobre lo que puede ocurrir en `e` y los contextos en los que puede aparecer una expresión antigua. Una expresión antigua no puede contener otra expresión antigua. Lo más importante es que una expresión antigua debe hacer referencia a un valor que existía en el estado de condición previa del método. En otras palabras, debe ser una expresión que pueda evaluarse siempre que la condición previa del método sea `true`. A continuación se muestran varias instancias de esa regla.
 
   - El valor debe existir en el estado de condición previa del método. Para hacer referencia a un campo en un objeto, las condiciones previas deben garantizar que el objeto siempre es distinto de NULL.
 
@@ -145,7 +146,7 @@ Los métodos siguientes pueden usarse únicamente dentro de condiciones posterio
       Al igual que con el método <xref:System.Diagnostics.Contracts.Contract.OldValue%2A>, puede omitir el parámetro de tipo genérico siempre que el compilador pueda deducir su tipo. El sistema de reescritura del contrato reemplaza la llamada de método por el valor del parámetro `out`. El método <xref:System.Diagnostics.Contracts.Contract.ValueAtReturn%2A> solo aparece en las condiciones posteriores. El argumento para el método debe ser un parámetro `out` o un campo de un parámetro `out` de estructura. Este último también es útil cuando se hace referencia a los campos de la condición posterior de un constructor de estructura.
 
       > [!NOTE]
-      > Actualmente, las herramientas de análisis de contrato de código no comprueban si los parámetros `out` se inicializan correctamente y desechan su mención en la condición posterior. Por lo tanto, en el ejemplo anterior, si la línea después del contrato hubiera usado el valor de `x` en lugar de asignarle un entero, un compilador no emitiría el error correcto. Sin embargo, en una compilación donde no se define el símbolo de preprocesador CONTRACTS_FULL (como una versión de lanzamiento), el compilador emitirá un error.
+      > Actualmente, las herramientas de análisis de contrato de código no comprueban si los parámetros `out` se inicializan correctamente y desechan su mención en la condición posterior. Por lo tanto, en el ejemplo anterior, si la línea después del contrato hubiera usado el valor de `x` en lugar de asignarle un entero, un compilador no emitiría el error correcto. Pero en una compilación donde el símbolo de preprocesador CONTRACTS_FULL (por ejemplo, una compilación de versión) no está definido, el compilador emite un error.
 
 ## <a name="invariants"></a>Invariables
 
@@ -163,11 +164,11 @@ protected void ObjectInvariant ()
 }
 ```
 
-Las invariantes se definen condicionalmente mediante el símbolo de preprocesador CONTRACTS_FULL. Durante la comprobación en tiempo de ejecución, las invariantes se comprueban al final de cada método público. Si una invariante menciona un método público en la misma clase, se deshabilita la comprobación de invariante que normalmente se produciría normalmente al final de ese método público. En su lugar, la comprobación se produce solo al final de la llamada de método más externo a esa clase. Esto también ocurre si la clase se vuelve a escribir debido a una llamada a un método en otra clase. No se comprueban las invariables para un finalizador de objeto y una implementación <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>.
+Las invariantes se definen condicionalmente mediante el símbolo de preprocesador CONTRACTS_FULL. Durante la comprobación en tiempo de ejecución, las invariantes se comprueban al final de cada método público. Si una invariante menciona un método público en la misma clase, se deshabilita la comprobación de invariante que normalmente se produciría normalmente al final de ese método público. En su lugar, la comprobación se produce solo al final de la llamada de método más externo a esa clase. Esto también ocurre si la clase se vuelve a escribir debido a una llamada a un método en otra clase. No se comprueban las invariables para un finalizador de objeto y una <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> implementación de.
 
 <a name="usage_guidelines"></a>
 
-## <a name="usage-guidelines"></a>Directrices de uso
+## <a name="usage-guidelines"></a>Instrucciones de uso
 
 ### <a name="contract-ordering"></a>Clasificación de contratos
 
