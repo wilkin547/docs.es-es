@@ -1,30 +1,31 @@
 ---
 title: Implementación del proveedor de UI Automation en el servidor
+description: Aprenda a implementar un proveedor de automatización de la interfaz de usuario del lado servidor para un control personalizado en .NET. La implementación de los elementos de WPF y los que no son de WPF es diferente.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - server-side UI Automation provider implementation
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: 8a52d84f7152b9cb431ad0aa97c88b143463be2d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: ea1b5e668e29d854233d4dde4c0e6152d591da97
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789622"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903901"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Implementación del proveedor de UI Automation en el servidor
 
 > [!NOTE]
 > Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).
 
-En esta sección se describe cómo implementar un proveedor de UI Automation del lado servidor para un control personalizado.
+En esta sección se describe cómo implementar un proveedor de automatización de la interfaz de usuario del lado servidor para un control personalizado.
 
-La implementación de elementos Windows Presentation Foundation (WPF) y elementos que no son de WPF (como los diseñados para Windows Forms) es fundamentalmente diferente. Los elementos de WPF proporcionan compatibilidad con [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] a través de una clase derivada de <xref:System.Windows.Automation.Peers.AutomationPeer>. Los elementos que no son de WPF proporcionan compatibilidad a través de implementaciones de interfaces de proveedor.
+La implementación de elementos Windows Presentation Foundation (WPF) y elementos que no son de WPF (como los diseñados para Windows Forms) es fundamentalmente diferente. Los elementos de WPF proporcionan compatibilidad con [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] a través de una clase derivada de <xref:System.Windows.Automation.Peers.AutomationPeer> . Los elementos que no son de WPF proporcionan compatibilidad a través de implementaciones de interfaces de proveedor.
 
 <a name="Security_Considerations"></a>
 
-## <a name="security-considerations"></a>Consideraciones de seguridad
+## <a name="security-considerations"></a>Consideraciones sobre la seguridad
 
 Los proveedores deben escribirse para funcionar en un entorno de confianza parcial. Dado que UIAutomationClient.dll no está configurado para ejecutarse con confianza parcial, el código del proveedor no debe hacer referencia a ese ensamblado. En caso contrario, el código podría ejecutarse en un entorno de plena confianza, pero se producirá un error en un entorno de confianza parcial.
 
@@ -40,7 +41,7 @@ Para obtener más información sobre este tema, consulte [Automatización de la 
 
 ## <a name="provider-implementation-by-non-wpf-elements"></a>Implementación del proveedor con elementos que no son de WPF
 
-Los controles personalizados que no forman parte del marco de WPF, pero que se escriben en código administrado (lo que suele ser Windows Forms controles), proporcionan compatibilidad con [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] mediante la implementación de interfaces. Cada elemento debe implementar al menos una de las interfaces enumeradas en la primera tabla de la sección siguiente. Además, si el elemento es compatible con uno o varios patrones de control, debe implementar la interfaz adecuada para cada uno de ellos.
+Los controles personalizados que no forman parte del marco de WPF, pero que se escriben en código administrado (a menudo son controles Windows Forms), proporcionan compatibilidad con [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] mediante la implementación de interfaces. Cada elemento debe implementar al menos una de las interfaces enumeradas en la primera tabla de la sección siguiente. Además, si el elemento es compatible con uno o varios patrones de control, debe implementar la interfaz adecuada para cada uno de ellos.
 
 El proveedor de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] debe hacer referencia a los ensamblados siguientes:
 
@@ -117,7 +118,7 @@ Por lo general, en lo que respecta a los controles basados en HWND, los proveedo
 > [!NOTE]
 > El objeto <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> de un elemento simple o una raíz de fragmento hospedada en una ventana se obtiene de la ventana. No obstante, los elementos del fragmento situados debajo de la raíz (por ejemplo, los elementos de lista de un cuadro de lista) deben proporcionar sus propios identificadores. Para obtener más información, vea <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>.
 >
-> Se debe devolver el <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty> para los proveedores hospedados en un control de Windows Forms. En este caso, es posible que el proveedor de ventana predeterminado no consiga recuperar el valor correcto.
+> <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>Debe devolverse para los proveedores hospedados en un control de Windows Forms. En este caso, es posible que el proveedor de ventana predeterminado no consiga recuperar el valor correcto.
 >
 > Por lo general, el elemento <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> lo proporciona el proveedor de host. Por ejemplo, si se deriva un control personalizado de <xref:System.Windows.Forms.Control>, el nombre derivará de la propiedad `Text` del control.
 
@@ -189,11 +190,11 @@ Un buen ejemplo de esto lo constituye un control rebar. Un rebar contiene bandas
 
 Para ello, el proveedor de raíz de fragmento del rebar expone un conjunto de elementos secundarios que representan a las bandas. Cada banda tiene un proveedor único que puede exponer propiedades y patrones. En su implementación de <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>, el proveedor de banda devuelve el proveedor de ventana predeterminado para el HWND de control. Para obtenerlo, llama a <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>y pasa el identificador de ventana del control. Por último, el proveedor de raíz de fragmento del rebar implementa la interfaz de <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride> y, en su implementación de <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride.GetOverrideProviderForHwnd%2A> , devuelve el proveedor de banda adecuado para el control que contiene el HWND especificado.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Información general sobre proveedores de la Automatización de la interfaz de usuario](ui-automation-providers-overview.md)
-- [Exposición de un proveedor de Automatización de la interfaz de usuario en el servidor](expose-a-server-side-ui-automation-provider.md)
-- [Devolución de propiedades de un proveedor de Automatización de la interfaz de usuario](return-properties-from-a-ui-automation-provider.md)
-- [Provocación de eventos desde un proveedor de Automatización de la interfaz de usuario](raise-events-from-a-ui-automation-provider.md)
-- [Habilitar la navegación en un proveedor de fragmentos de Automatización de la interfaz de usuario](enable-navigation-in-a-ui-automation-fragment-provider.md)
-- [Patrones de control compatibles en un proveedor de Automatización de la interfaz de usuario](support-control-patterns-in-a-ui-automation-provider.md)
+- [Información general sobre proveedores de UI Automation](ui-automation-providers-overview.md)
+- [Exponer un proveedor de UI Automation en el servidor](expose-a-server-side-ui-automation-provider.md)
+- [Devolución de propiedades por parte de un proveedor de UI Automation](return-properties-from-a-ui-automation-provider.md)
+- [Provocar eventos desde un proveedor de UI Automation](raise-events-from-a-ui-automation-provider.md)
+- [Habilitar la navegación en un proveedor de fragmentos de UI Automation](enable-navigation-in-a-ui-automation-fragment-provider.md)
+- [Patrones de control compatibles en un proveedor de UI Automation](support-control-patterns-in-a-ui-automation-provider.md)

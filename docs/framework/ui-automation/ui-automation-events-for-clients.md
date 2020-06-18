@@ -1,16 +1,17 @@
 ---
 title: Eventos de UI Automation para clientes
+description: Obtenga información sobre cómo los clientes de automatización de la interfaz de usuario usan los eventos de automatización de la interfaz de usuario de Microsoft en .NET. La automatización de la interfaz de usuario permite a los clientes suscribirse a eventos de interés.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: d7105e9211c35e7d6125c3017e8b4b829a25b128
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 84568cf228a30535ec603cdad5bddbfd5697be0a
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179901"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903745"
 ---
 # <a name="ui-automation-events-for-clients"></a>Eventos de UI Automation para clientes
 > [!NOTE]
@@ -23,9 +24,9 @@ ms.locfileid: "79179901"
  La eficacia también mejora gracias a la capacidad para realizar escuchas de eventos que solo se encuentran dentro de un ámbito definido. Por ejemplo, un cliente puede estar a la escucha de eventos de cambio de foco en todos los elementos [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] del árbol o solo en un elemento y sus descendientes.  
   
 > [!NOTE]
-> No dé por hecho que todos los eventos posibles los genera un proveedor de [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]. Por ejemplo, no todos los cambios de propiedad hacen que los proveedores de proxy estándar generen eventos para controles de Windows Forms y Win32.  
+> No dé por hecho que todos los eventos posibles los genera un proveedor de [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]. Por ejemplo, no todos los cambios de propiedad hacen que los proveedores de proxy estándar generen eventos para los controles de Windows Forms y Win32.  
   
- Para obtener una [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] vista más amplia de los eventos, vea Información general sobre eventos de automatización de la [interfaz](ui-automation-events-overview.md)de usuario .  
+ Para obtener una vista más amplia de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] los eventos, vea [UI Automation Events Overview](ui-automation-events-overview.md).  
   
 <a name="Subscribing_to_Events"></a>
 ## <a name="subscribing-to-events"></a>Suscripción a eventos  
@@ -55,11 +56,11 @@ ms.locfileid: "79179901"
 |<xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>|Anula el registro de un controlador de eventos que se registró mediante <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>.|  
 |<xref:System.Windows.Automation.Automation.RemoveAllEventHandlers%2A>|Anula el registro de todos los controladores de eventos registrados.|  
   
- Para obtener código de ejemplo, vea [Suscribirse a eventos](subscribe-to-ui-automation-events.md)de automatización de la interfaz de usuario .  
+ Para ver un ejemplo de código, vea [suscribirse a eventos de UI Automation](subscribe-to-ui-automation-events.md).  
   
 ## <a name="see-also"></a>Consulte también
 
-- [Suscripción a eventos de Automatización de la interfaz de usuario](subscribe-to-ui-automation-events.md)
-- [Información general sobre eventos de la Automatización de la interfaz de usuario](ui-automation-events-overview.md)
-- [Información general sobre las propiedades de la Automatización de la interfaz de usuario](ui-automation-properties-overview.md)
+- [Suscribirse a eventos de UI Automation](subscribe-to-ui-automation-events.md)
+- [Información general sobre eventos de UI Automation](ui-automation-events-overview.md)
+- [Información general acerca de las propiedades de UI Automation](ui-automation-properties-overview.md)
 - [Ejemplo de TrackFocus](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FocusTracker)

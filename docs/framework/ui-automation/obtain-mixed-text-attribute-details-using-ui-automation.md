@@ -1,16 +1,17 @@
 ---
 title: Obtener detalles de atributos de texto diversos mediante UI Automation
+description: Obtenga detalles de atributos de texto mixtos mediante las clases de automatización de la interfaz de usuario administrada en el espacio de nombres System. Windows. Automation de la API de .NET.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d0e4c005-abd1-42bb-92a4-5faf87097311
-ms.openlocfilehash: 9f2cba1f602cedf3a13bd909b4dc2f1a7b4ab972
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 111d110be9365c4a58f2bd2b033c1ff4e3a6a95d
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443124"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903862"
 ---
 # <a name="obtain-mixed-text-attribute-details-using-ui-automation"></a>Obtener detalles de atributos de texto diversos mediante UI Automation
 > [!NOTE]
@@ -26,11 +27,11 @@ ms.locfileid: "74443124"
   
  El patrón de control <xref:System.Windows.Automation.TextPattern> , junto con la clase <xref:System.Windows.Automation.Text.TextPatternRange> , admite atributos de texto básicos, propiedades y métodos. Para la funcionalidad específica del control que no es compatible con <xref:System.Windows.Automation.TextPattern> ni <xref:System.Windows.Automation.Text.TextPatternRange>, la clase <xref:System.Windows.Automation.AutomationElement> ofrece métodos para que un cliente de Automatización de la interfaz de usuario acceda al modelo de objeto nativo correspondiente.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Información general sobre TextPattern en Automatización de la interfaz de usuario](ui-automation-textpattern-overview.md)
-- [Adición de contenido a un cuadro de texto mediante Automatización de la interfaz de usuario](add-content-to-a-text-box-using-ui-automation.md)
-- [Búsqueda y resaltado de texto mediante Automatización de la interfaz de usuario](find-and-highlight-text-using-ui-automation.md)
-- [Información general sobre los patrones de control de la Automatización de la interfaz de usuario](ui-automation-control-patterns-overview.md)
-- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
-- [Obtención de atributos de texto mediante Automatización de la interfaz de usuario](obtain-text-attributes-using-ui-automation.md)
+- [Información general sobre el modelo de texto de UI Automation](ui-automation-textpattern-overview.md)
+- [Agregar contenido a un cuadro de texto utilizando la UI Automation](add-content-to-a-text-box-using-ui-automation.md)
+- [Buscar y resaltar texto mediante UI Automation](find-and-highlight-text-using-ui-automation.md)
+- [Información general acerca de los patrones de control de UI Automation](ui-automation-control-patterns-overview.md)
+- [Patrones de controles de UI Automation para clientes](ui-automation-control-patterns-for-clients.md)
+- [Obtener atributos de texto mediante UI Automation](obtain-text-attributes-using-ui-automation.md)

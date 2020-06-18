@@ -1,16 +1,17 @@
 ---
 title: Escalado automático
+description: Obtenga información sobre cómo el escalado automático permite que un formulario y sus controles, diseñados en un equipo, se muestren correctamente en otro equipo.
 ms.date: 06/15/2017
 helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-ms.openlocfilehash: 96dbbb5ed20027e25f1bde89748710766ec06506
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 93d6b9097c85d7fa7ca88b405ee3d3654e51304b
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76732379"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903693"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Escalado automático en Windows Forms
 
@@ -40,13 +41,13 @@ Las versiones 1,0 y 1,1 del .NET Framework admiten el escalado automático de un
 
 Aunque este mecanismo era suficiente para la mayoría de los propósitos, sufría las limitaciones siguientes:
 
-- Dado que la propiedad <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> representa el tamaño de fuente de línea base como valores enteros, se producen errores de redondeo que se vuelven evidentes cuando un formulario se recorre en varias resoluciones.
+- Dado que la <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> propiedad representa el tamaño de fuente de línea base como valores enteros, se producen errores de redondeo que se vuelven evidentes cuando un formulario se recorre en varias resoluciones.
 
 - El escalado automático se implementó solo en la clase <xref:System.Windows.Forms.Form>, no en la clase <xref:System.Windows.Forms.ContainerControl>. Como resultado, los controles de usuario solo se escalaban correctamente si el control de usuario estaba diseñado con la misma resolución que el formulario y se colocaba en el formulario en tiempo de diseño.
 
 - Los formularios y sus controles secundarios solo podían diseñarse de manera simultánea por varios desarrolladores si las resoluciones de sus máquinas eran iguales. Igualmente, hacía que la herencia de un formulario dependiese de la resolución asociada con el formulario principal.
 
-- No es compatible con los administradores de diseño más recientes que se introdujeron con la versión .NET Framework 2,0, como <xref:System.Windows.Forms.FlowLayoutPanel> y <xref:System.Windows.Forms.TableLayoutPanel>.
+- No es compatible con los administradores de diseño más recientes que se introdujeron con la versión .NET Framework 2,0, como <xref:System.Windows.Forms.FlowLayoutPanel> y <xref:System.Windows.Forms.TableLayoutPanel> .
 
 - No admitía el escalado basado directamente en la resolución de pantalla necesaria para la compatibilidad con el .NET Compact Framework.
 
