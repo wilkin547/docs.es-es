@@ -1,5 +1,6 @@
 ---
-title: ServicePoint.m_ConnectionGroupList Field
+title: Campo ServicePoint. m_ConnectionGroupList
+description: Comprenda el campo ServicePoint. m_ConnectionGroupList, una tabla hash de grupos de conexión que contienen una conexión para el URI de ServicePoint en .NET.
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,16 +11,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: df8afb59-f0f6-4ddc-b3c1-839b9fc601d8
-ms.openlocfilehash: 2b1b46085ed035b67fd01447727b406fe3895980
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0ebfeb782147f21abfde536b8053fa15b1e1a602
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155900"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989717"
 ---
-# <a name="servicepointm_connectiongrouplist-field"></a>Campo ConnectionGroupList de ServicePoint.m\_
+# <a name="servicepointm_connectiongrouplist-field"></a>Campo ConnectionGroupList de ServicePoint. m \_
 
-`ServicePoint.m_ConnectionGroupList`es <xref:System.Collections.Hashtable> un de grupos de conexión, <xref:System.Net.ServicePoint>cada uno de los dos mantiene una conexión para el URI 's.
+`ServicePoint.m_ConnectionGroupList`es un <xref:System.Collections.Hashtable> de grupos de conexión, cada uno de los cuales mantiene una conexión para el <xref:System.Net.ServicePoint> URI de.
 
 ## <a name="syntax"></a>Sintaxis
   
@@ -30,12 +31,12 @@ private Hashtable m_ConnectionGroupList
 > [!WARNING]
 > El `ServicePoint.m_ConnectionGroupList` campo es privado y no está diseñado para usarse directamente en el código.
 >
-> Microsoft no admite el uso de este campo en una aplicación de producción bajo ninguna circunstancia.
+> Microsoft no admite el uso de este campo en una aplicación de producción en cualquier circunstancia.
 
 ## <a name="requirements"></a>Requisitos
 
-**Espacio de nombres:**<xref:System.Net>
+**Espacio de nombres:** <xref:System.Net>
 
-**Montaje:** Sistema (en System.dll)
+**Ensamblado:** Sistema (en System.dll)
 
-**Versiones de .NET Framework:** Disponible desde 2.0.
+**.NET Framework versiones:** Disponible desde 2,0.

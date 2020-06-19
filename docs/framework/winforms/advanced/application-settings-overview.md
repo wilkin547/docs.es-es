@@ -8,22 +8,23 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: 369495322328350bc06827b87598160469d864bb
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: 72a15736fd21d1d626f88e728d70b7dd7ee6768f
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84307064"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990179"
 ---
 # <a name="application-settings-overview"></a>Introducción a la configuración de la aplicación
-En este tema se describe cómo crear y almacenar los datos de configuración en nombre de la aplicación y sus usuarios.
+
+En este artículo se describe cómo crear y almacenar los datos de configuración en nombre de la aplicación y los usuarios.
 
  La característica Configuración de la aplicación de Windows Forms facilita la creación, el almacenamiento y el mantenimiento de las preferencias personalizadas de usuarios y aplicaciones en el equipo cliente. Con Configuración de la aplicación de Windows Forms, no solo puede almacenar datos de las aplicaciones, como cadenas de conexión a bases de datos, sino también datos específicos de los usuarios, como las preferencias de la aplicación de un usuario. Con Visual Studio o código administrado personalizado, puede crear una nueva configuración, leerla y escribirla en el disco, enlazarla a propiedades de los formularios y validar los datos de configuración antes de cargarlos y guardarlos.
 
  La configuración de la aplicación permite a los desarrolladores guardar el estado en su aplicación con muy poco código personalizado, y sustituye a las propiedades dinámicas de las versiones anteriores del .NET Framework. Configuración de la aplicación ofrece muchas mejoras en comparación con las propiedades dinámicas, que son de solo lectura, se enlazan en tiempo de ejecución y requieren más programación personalizada. Las clases de propiedades dinámicas se han conservado en .NET Framework 2,0, pero solo son clases de Shell que ajustan finos las clases de configuración de la aplicación.
 
 ## <a name="what-are-application-settings"></a>¿Qué es Configuración de la aplicación?
- Las aplicaciones de Windows Forms, a menudo, requieren datos que son esenciales para ejecutar la aplicación, pero que no quiere incluir directamente en el código de la aplicación. Si la aplicación utiliza un servicio Web o un servidor de bases de datos, puede que le convenga almacenar esta información en un archivo independiente, para poder cambiarla en el futuro sin tener que volver a compilarla. De manera similar, puede que las aplicaciones necesiten almacenar datos específicos del usuario actual. La mayoría de las aplicaciones, por ejemplo, tienen preferencias del usuario con las que se personalizan la apariencia y el comportamiento de la aplicación.
+ A menudo, las aplicaciones Windows Forms requieren datos que son críticos para ejecutar la aplicación, pero que no desea incluir directamente en el código de la aplicación. Si la aplicación utiliza un servicio web o un servidor de base de datos, puede que desee almacenar esta información en un archivo independiente, de modo que pueda cambiarla en el futuro sin tener que volver a compilarla. De manera similar, puede que las aplicaciones necesiten almacenar datos específicos del usuario actual. La mayoría de las aplicaciones, por ejemplo, tienen preferencias del usuario con las que se personalizan la apariencia y el comportamiento de la aplicación.
 
  La característica Configuración de la aplicación cubre estas dos necesidades proporcionando una manera sencilla de almacenar tanto la configuración del ámbito del usuario como la del ámbito de la aplicación en el equipo cliente. Con Visual Studio o un editor de código, puede definir una configuración para una propiedad determinada especificando su nombre, el tipo de datos y el ámbito (aplicación o usuario). Incluso puede colocar configuraciones relacionadas en grupos con nombres para simplificar su uso y su legibilidad. Una vez definida, esta configuración se conserva y se lee en la memoria automáticamente en tiempo de ejecución. Una arquitectura acoplable permite cambiar el mecanismo de persistencia, pero de forma predeterminada, se utiliza el sistema de archivos local.
 
@@ -41,13 +42,13 @@ En este tema se describe cómo crear y almacenar los datos de configuración en 
  Configuración de la aplicación no tiene ninguna funcionalidad integrada para cifrar la información de forma automática. Nunca debe almacenar información relacionada con la seguridad, como contraseñas de bases de datos, en texto no cifrado. Si quiere almacenar ese tipo de información confidencial, como desarrollador de la aplicación, es usted el responsable de asegurarse de que esté protegida. Si quiere almacenar cadenas de conexión, le recomendamos que utilice la seguridad integrada de Windows y que no recurra a especificar las contraseñas de forma rígida en la dirección URL. Para obtener más información, consulta [Code Access Security and ADO.NET](../../data/adonet/code-access-security.md).
 
 ## <a name="getting-started-with-application-settings"></a>Introducción a Configuración de la aplicación
- Si utiliza Visual Studio, puede definir la configuración en el Diseñador de Windows Forms con la propiedad **(ApplicationSettings)** en la ventana **Propiedades** . Al definir la configuración de esta forma, Visual Studio crea automáticamente una clase contenedora administrada personalizada que asocia cada ajuste a una propiedad de clase. Visual Studio también se ocupa de enlazar el ajuste a una propiedad de un formulario o control para que la configuración del control se restaure automáticamente cuando se muestre su formulario y se guarde automáticamente al cerrar el formulario.
+ Si utiliza Visual Studio, puede definir la configuración en el Diseñador de Windows Forms con la propiedad **(ApplicationSettings)** en la ventana **Propiedades** . Al definir la configuración de esta manera, Visual Studio crea automáticamente una clase contenedora administrada personalizada que asocia cada configuración a una propiedad de clase. Visual Studio también se ocupa de enlazar el ajuste a una propiedad de un formulario o control para que la configuración del control se restaure automáticamente cuando se muestre su formulario y se guarde automáticamente al cerrar el formulario.
 
  Si quiere controlar la configuración con más precisión, puede definir su propia clase contenedora de configuración de la aplicación personalizada. Para hacerlo, derive una clase de <xref:System.Configuration.ApplicationSettingsBase>, agregue una propiedad que corresponda a cada ajuste y aplique atributos especiales a estas propiedades. Para obtener más información acerca de cómo crear clases contenedoras, consulte [Application Settings Architecture](application-settings-architecture.md).
 
  También puede utilizar la clase <xref:System.Windows.Forms.Binding> para enlazar la configuración con programación a las propiedades de formularios y controles.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
