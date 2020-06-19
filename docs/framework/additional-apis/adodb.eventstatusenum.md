@@ -1,5 +1,6 @@
 ---
-title: Elemento EventStatus enumeración (adodb)
+title: Enumeración EventStatus (ADODB)
+description: Obtenga información sobre la enumeración EventStatus en .NET. Esta enumeración está en el espacio de nombres ADODB y en el ensamblado ADODB (en la biblioteca adodb.dll).
 ms.date: 03/28/2019
 topic_type:
 - apiref
@@ -9,33 +10,33 @@ api_location:
 - adodb.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 1eddac7f9b813ea76e8347deb6f4bd7548abe504
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7effa55efb104c9203e7051ef998b03ff3315e93
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706200"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989843"
 ---
-# <a name="eventstatus-enumeration"></a><span data-ttu-id="54229-102">Elemento EventStatus (enumeración)</span><span class="sxs-lookup"><span data-stu-id="54229-102">EventStatus Enumeration</span></span>
+# <a name="eventstatus-enumeration"></a><span data-ttu-id="c47cc-104">Enumeración EventStatus</span><span class="sxs-lookup"><span data-stu-id="c47cc-104">EventStatus Enumeration</span></span>
 
 ```csharp
 [GuidAttribute("00000530-0000-0010-8000-00AA006D2EA4")]
 public enum EventStatusEnum
 ```
 
-## <a name="members"></a><span data-ttu-id="54229-103">Miembros</span><span class="sxs-lookup"><span data-stu-id="54229-103">Members</span></span>
+## <a name="members"></a><span data-ttu-id="c47cc-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="c47cc-105">Members</span></span>
 
-| <span data-ttu-id="54229-104">Nombre de miembro</span><span class="sxs-lookup"><span data-stu-id="54229-104">Member name</span></span>  | <span data-ttu-id="54229-105">Descripción</span><span class="sxs-lookup"><span data-stu-id="54229-105">Description</span></span>  |
+| <span data-ttu-id="c47cc-106">Nombre del miembro</span><span class="sxs-lookup"><span data-stu-id="c47cc-106">Member name</span></span>  | <span data-ttu-id="c47cc-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="c47cc-107">Description</span></span>  |
 |---|---|
-|<span data-ttu-id="54229-106">adStatusOK</span><span class="sxs-lookup"><span data-stu-id="54229-106">adStatusOK</span></span>  |   |
-|<span data-ttu-id="54229-107">adStatusErrorsOccurred</span><span class="sxs-lookup"><span data-stu-id="54229-107">adStatusErrorsOccurred</span></span>  |   |
-|<span data-ttu-id="54229-108">adStatusCantDeny</span><span class="sxs-lookup"><span data-stu-id="54229-108">adStatusCantDeny</span></span>  |   |
-|<span data-ttu-id="54229-109">adRsnUndoUpdate</span><span class="sxs-lookup"><span data-stu-id="54229-109">adRsnUndoUpdate</span></span>  |   |
-|<span data-ttu-id="54229-110">adStatusCancel</span><span class="sxs-lookup"><span data-stu-id="54229-110">adStatusCancel</span></span>  |   |
-|<span data-ttu-id="54229-111">adStatusUnwantedEvent</span><span class="sxs-lookup"><span data-stu-id="54229-111">adStatusUnwantedEvent</span></span>  |   |
+|<span data-ttu-id="c47cc-108">adStatusOK</span><span class="sxs-lookup"><span data-stu-id="c47cc-108">adStatusOK</span></span>  |   |
+|<span data-ttu-id="c47cc-109">adStatusErrorsOccurred</span><span class="sxs-lookup"><span data-stu-id="c47cc-109">adStatusErrorsOccurred</span></span>  |   |
+|<span data-ttu-id="c47cc-110">adStatusCantDeny</span><span class="sxs-lookup"><span data-stu-id="c47cc-110">adStatusCantDeny</span></span>  |   |
+|<span data-ttu-id="c47cc-111">adRsnUndoUpdate</span><span class="sxs-lookup"><span data-stu-id="c47cc-111">adRsnUndoUpdate</span></span>  |   |
+|<span data-ttu-id="c47cc-112">adStatusCancel</span><span class="sxs-lookup"><span data-stu-id="c47cc-112">adStatusCancel</span></span>  |   |
+|<span data-ttu-id="c47cc-113">adStatusUnwantedEvent</span><span class="sxs-lookup"><span data-stu-id="c47cc-113">adStatusUnwantedEvent</span></span>  |   |
 
-## <a name="requirements"></a><span data-ttu-id="54229-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="54229-112">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="c47cc-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c47cc-114">Requirements</span></span>
 
-<span data-ttu-id="54229-113">**Espacio de nombres:** `adodb`</span><span class="sxs-lookup"><span data-stu-id="54229-113">**Namespace:** `adodb`</span></span>
+<span data-ttu-id="c47cc-115">**Espacio de nombres:** `adodb`</span><span class="sxs-lookup"><span data-stu-id="c47cc-115">**Namespace:** `adodb`</span></span>
 
-<span data-ttu-id="54229-114">**Ensamblado:** adodb (de adodb.dll)</span><span class="sxs-lookup"><span data-stu-id="54229-114">**Assembly:** adodb (in adodb.dll)</span></span>
+<span data-ttu-id="c47cc-116">**Ensamblado:** ADODB (en adodb.dll)</span><span class="sxs-lookup"><span data-stu-id="c47cc-116">**Assembly:** adodb (in adodb.dll)</span></span>
