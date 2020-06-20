@@ -1,5 +1,6 @@
 ---
-title: Evento XpsDocumentWriter._WritingCompleted (System.Windows.Xps)
+title: XpsDocumentWriter. _WritingCompleted evento (System. Windows. XPS)
+description: Comprenda el evento XpsDocumentWriter. _WritingCompleted, que se produce cuando finaliza una operación de escritura para un documento de XML Paper Specification (XPS) en .NET.
 ms.date: 10/17/2017
 api_location:
 - system.printing.dll
@@ -11,27 +12,27 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: 0c233965638217ad5b25b9792fe07fb4d73dbe18
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3926630cafa2fea4e499e86d7c8b8eb707b8fd95
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155627"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105194"
 ---
-# <a name="xpsdocumentwriter_writingcompleted-event"></a><span data-ttu-id="752c5-102">XpsDocumentWriter. \_Evento WritingCompleted</span><span class="sxs-lookup"><span data-stu-id="752c5-102">XpsDocumentWriter.\_WritingCompleted Event</span></span>
+# <a name="xpsdocumentwriter_writingcompleted-event"></a><span data-ttu-id="7e15a-103">XpsDocumentWriter. \_ Evento WritingCompleted</span><span class="sxs-lookup"><span data-stu-id="7e15a-103">XpsDocumentWriter.\_WritingCompleted Event</span></span>
 
-<span data-ttu-id="752c5-103">Se produce cuando finaliza una operación de escritura.</span><span class="sxs-lookup"><span data-stu-id="752c5-103">Occurs when a write operation finishes.</span></span>
+<span data-ttu-id="7e15a-104">Se produce cuando finaliza una operación de escritura.</span><span class="sxs-lookup"><span data-stu-id="7e15a-104">Occurs when a write operation finishes.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="752c5-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="752c5-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="7e15a-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="7e15a-105">Syntax</span></span>
 
 ``` csharp
 internal event WritingCompletedEventHandler _WritingCompleted
 ```
 
-## <a name="requirements"></a><span data-ttu-id="752c5-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="752c5-105">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="7e15a-106">Requisitos</span><span class="sxs-lookup"><span data-stu-id="7e15a-106">Requirements</span></span>
 
-<span data-ttu-id="752c5-106">**Espacio de nombres:**<xref:System.Windows.Xps></span><span class="sxs-lookup"><span data-stu-id="752c5-106">**Namespace:** <xref:System.Windows.Xps></span></span>
+<span data-ttu-id="7e15a-107">**Espacio de nombres:** <xref:System.Windows.Xps></span><span class="sxs-lookup"><span data-stu-id="7e15a-107">**Namespace:** <xref:System.Windows.Xps></span></span>
 
-<span data-ttu-id="752c5-107">**Montaje:** System.Printing (en system.printing.dll)</span><span class="sxs-lookup"><span data-stu-id="752c5-107">**Assembly:** System.Printing (in system.printing.dll)</span></span>
+<span data-ttu-id="7e15a-108">**Ensamblado:** System. Printing (en system.printing.dll)</span><span class="sxs-lookup"><span data-stu-id="7e15a-108">**Assembly:** System.Printing (in system.printing.dll)</span></span>
 
-<span data-ttu-id="752c5-108">**Versiones de .NET Framework:** Disponible desde 3.0</span><span class="sxs-lookup"><span data-stu-id="752c5-108">**.NET Framework versions:** Available since 3.0</span></span>
+<span data-ttu-id="7e15a-109">**.NET Framework versiones:** Disponible desde 3,0</span><span class="sxs-lookup"><span data-stu-id="7e15a-109">**.NET Framework versions:** Available since 3.0</span></span>

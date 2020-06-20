@@ -1,5 +1,6 @@
 ---
-title: Propiedad IPictureDisp.Handle (a dicha)
+title: Propiedad IPictureDisp. Handle (STDOLE)
+description: Lea acerca de la propiedad IPictureDisp. Handle en .NET. Esta propiedad se encuentra en el espacio de nombres STDOLE y en el ensamblado STDOLE (en la biblioteca stdole.dll).
 ms.date: 02/22/2019
 topic_type:
 - apiref
@@ -10,25 +11,25 @@ api_location:
 - stdole.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 27a081b0faee348d8ff2064aa473fef315ee5d1c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c75cb2b28801924987d42fe442fee492245fe809
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634407"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105319"
 ---
-# <a name="ipicturedisphandle-property"></a><span data-ttu-id="d0351-102">Propiedad IPictureDisp.Handle</span><span class="sxs-lookup"><span data-stu-id="d0351-102">IPictureDisp.Handle Property</span></span>
+# <a name="ipicturedisphandle-property"></a><span data-ttu-id="dbca1-104">Propiedad IPictureDisp.Handle</span><span class="sxs-lookup"><span data-stu-id="dbca1-104">IPictureDisp.Handle Property</span></span>
 
 ```csharp
 int Handle { get; }
 ```
 
-## <a name="property-value"></a><span data-ttu-id="d0351-103">Valor de propiedad</span><span class="sxs-lookup"><span data-stu-id="d0351-103">Property value</span></span>
+## <a name="property-value"></a><span data-ttu-id="dbca1-105">Valor de propiedad</span><span class="sxs-lookup"><span data-stu-id="dbca1-105">Property value</span></span>
 
 <xref:System.Int32>\
 
-## <a name="requirements"></a><span data-ttu-id="d0351-104">Requisitos</span><span class="sxs-lookup"><span data-stu-id="d0351-104">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="dbca1-106">Requisitos</span><span class="sxs-lookup"><span data-stu-id="dbca1-106">Requirements</span></span>
 
-<span data-ttu-id="d0351-105">**Espacio de nombres:** `stdole`</span><span class="sxs-lookup"><span data-stu-id="d0351-105">**Namespace:** `stdole`</span></span>
+<span data-ttu-id="dbca1-107">**Espacio de nombres:** `stdole`</span><span class="sxs-lookup"><span data-stu-id="dbca1-107">**Namespace:** `stdole`</span></span>
 
-<span data-ttu-id="d0351-106">**Ensamblado:** a dicha (en stdole.dll)</span><span class="sxs-lookup"><span data-stu-id="d0351-106">**Assembly:** stdole (in stdole.dll)</span></span>
+<span data-ttu-id="dbca1-108">**Ensamblado:** STDOLE (en stdole.dll)</span><span class="sxs-lookup"><span data-stu-id="dbca1-108">**Assembly:** stdole (in stdole.dll)</span></span>
