@@ -1,5 +1,6 @@
 ---
-title: Interfaz StdPicture (a dicha)
+title: StdPicture (interfaz) (STDOLE)
+description: Consulte la información de referencia sobre la interfaz StdPicture en .NET. Esta interfaz está en el espacio de nombres STDOLE y el ensamblado STDOLE (en la biblioteca stdole.dll).
 ms.date: 03/28/2019
 topic_type:
 - apiref
@@ -9,12 +10,12 @@ api_location:
 - stdole.dll
 api_type:
 - Assembly
-ms.openlocfilehash: c3b1fa2274c58061c446e42b3331e69fdf991b42
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 86aeaeddd1e4e68030089acbd485cc535dfd891b
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705966"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105286"
 ---
 # <a name="stdpicture-interface"></a>Interfaz StdPicture
 
@@ -27,4 +28,4 @@ public interface StdPicture : Picture
 
 **Espacio de nombres:** `stdole`
 
-**Ensamblado:** a dicha (en stdole.dll)
+**Ensamblado:** STDOLE (en stdole.dll)

@@ -1,5 +1,6 @@
 ---
 title: Procedimiento para crear una directiva de publicador
+description: Obtenga información sobre cómo los proveedores de ensamblados pueden crear un archivo de directiva de edición con un ensamblado actualizado en .NET, para estipular que las aplicaciones deben usar la versión más reciente.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - publisher policy assembly
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 7c36f6126f0d779a43a22fc11e647ba2d3b03a30
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 23e9d8144ec5742e0371d566b7af59dc9dd30c9b
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "81646055"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105410"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Procedimiento para crear una directiva de publicador
 
@@ -49,7 +50,7 @@ Para obtener información sobre cómo especificar una base de código, vea [espe
 
 ## <a name="creating-the-publisher-policy-assembly"></a>Crear el ensamblado de directiva de edición
 
-Use [Assembly Linker (al. exe)](../tools/al-exe-assembly-linker.md) para crear el ensamblado de directiva de edición.
+Use el [enlazador de ensamblados (Al.exe)](../tools/al-exe-assembly-linker.md) para crear el ensamblado de directiva de edición.
 
 #### <a name="to-create-a-publisher-policy-assembly"></a>Para crear un ensamblado de directiva de edición
 
@@ -65,7 +66,7 @@ En este comando:
 
 - El `publisherPolicyAssemblyFile` argumento es el nombre del ensamblado de directiva de edición que es el resultado de este comando. El nombre del archivo de ensamblado debe seguir el formato:
 
-  ' Policy. majorNumber. minorNumber. mainAssemblyName. dll '
+  'policy.majorNumber.minorNumber.mainAssemblyName.dll '
 
 - El `keyPairFile` argumento es el nombre del archivo que contiene el par de claves. Debe firmar el ensamblado y el ensamblado de directiva de edición con el mismo par de claves.
 
@@ -88,7 +89,7 @@ Otra consecuencia es que el enlazador de la versión 2,0 no se puede usar para c
 
 ## <a name="adding-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>Agregar el ensamblado de directiva de edición a la caché global de ensamblados
 
-Use la [herramienta caché global de ensamblados (Gacutil. exe)](../tools/gacutil-exe-gac-tool.md) para agregar el ensamblado de directiva de edición a la caché global de ensamblados.
+Use la [herramienta caché global de ensamblados (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) para agregar el ensamblado de directiva de edición a la caché global de ensamblados.
 
 ### <a name="to-add-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>Para agregar el ensamblado de directiva de edición a la caché global de ensamblados
 

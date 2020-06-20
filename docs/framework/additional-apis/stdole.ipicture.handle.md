@@ -1,5 +1,6 @@
 ---
-title: Propiedad IPicture.Handle (a dicha)
+title: IPicture. Handle (propiedad) (STDOLE)
+description: Obtenga información de referencia sobre la propiedad IPicture. Handle en .NET. Esta propiedad obtiene el identificador de la imagen administrada dentro de este objeto de imagen.
 ms.date: 02/22/2019
 topic_type:
 - apiref
@@ -10,16 +11,16 @@ api_location:
 - stdole.dll
 api_type:
 - Assembly
-ms.openlocfilehash: e65be9cbccbe4e52b81b2eba7a473720eb966e83
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 85c8f2c3fcdbecd69bc9b3dc9c13f4ccea41038b
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634436"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105335"
 ---
 # <a name="ipicturehandle-property"></a>Propiedad IPicture.Handle
 
-Obtiene el identificador de la imagen que se administran dentro de este objeto de imagen en una ubicación especificada.
+Obtiene el identificador de la imagen administrada dentro de este objeto de imagen en una ubicación especificada.
 
 ```csharp
 int Handle { get; }
@@ -33,4 +34,4 @@ int Handle { get; }
 
 **Espacio de nombres:** `stdole`
 
-**Ensamblado:** a dicha (en stdole.dll)
+**Ensamblado:** STDOLE (en stdole.dll)

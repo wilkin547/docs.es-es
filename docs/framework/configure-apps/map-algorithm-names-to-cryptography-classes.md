@@ -1,5 +1,6 @@
 ---
 title: Asignar nombres de algoritmo a clases de criptografía
+description: Asignar nombres de algoritmo a clases de criptografía en .NET. Un desarrollador tiene cuatro opciones para crear un objeto de criptografía.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - mapping algorithm names
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - cryptographic algorithms
 - names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
-ms.openlocfilehash: 513000169504473aa6dd46feaca214f58502ffd0
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5a1d7acdd34182dd82f4dce66d136c4ef4de6e95
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "69912867"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105353"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>Asignar nombres de algoritmo a clases de criptografía
 Hay cuatro maneras en las que un programador puede crear un objeto de criptografía mediante el Windows SDK:  
@@ -32,7 +33,7 @@ Hay cuatro maneras en las que un programador puede crear un objeto de criptograf
  Si no importa qué algoritmo hash se usa, el desarrollador puede llamar al <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> método, que devuelve un objeto que implementa una transformación hash.  
   
 ## <a name="mapping-algorithm-names-in-configuration-files"></a>Asignar nombres de algoritmo en archivos de configuración  
- De forma predeterminada, el tiempo de ejecución devuelve un <xref:System.Security.Cryptography.SHA1CryptoServiceProvider> objeto para los cuatro escenarios. Sin embargo, un administrador del equipo puede cambiar el tipo de objeto que devuelven los métodos de los dos últimos escenarios. Para ello, debe asignar un nombre de algoritmo descriptivo a la clase que desea utilizar en el archivo de configuración del equipo (Machine. config).  
+ De forma predeterminada, el tiempo de ejecución devuelve un <xref:System.Security.Cryptography.SHA1CryptoServiceProvider> objeto para los cuatro escenarios. Sin embargo, un administrador del equipo puede cambiar el tipo de objeto que devuelven los métodos de los dos últimos escenarios. Para ello, debe asignar un nombre de algoritmo descriptivo a la clase que desea utilizar en el archivo de configuración del equipo (Machine.config).  
   
  En el ejemplo siguiente se muestra cómo configurar el tiempo de ejecución para que **System. Security. Cryptography. SHA1. Create**, **System. Security. CryptoConfig. CREATEFROMNAME ("SHA1")** y **System. Security. Cryptography. HashAlgorithm. Create** devuelvan un `MySHA1HashClass` objeto.  
   
@@ -67,7 +68,7 @@ Hay cuatro maneras en las que un programador puede crear un objeto de criptograf
   
  Para obtener una lista de los nombres predeterminados y las clases a las que se asignan, vea <xref:System.Security.Cryptography.CryptoConfig> .  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
 - [Servicios criptográficos](../../standard/security/cryptographic-services.md)
 - [Configurar clases de criptografía](configure-cryptography-classes.md)

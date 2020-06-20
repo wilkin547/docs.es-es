@@ -1,5 +1,6 @@
 ---
-title: Método XpsDocumentWriter.raise__WritingProgressChanged (System.Windows.Xps)
+title: XpsDocumentWriter. raise__WritingProgressChanged (método) (System. Windows. XPS)
+description: Comprenda el método XpsDocumentWriter. raise__WritingProgressChanged, que genera el evento WritingProgressChanged para un documento XPS en .NET.
 ms.date: 12/12/2007
 api_location:
 - system.printing.dll
@@ -9,14 +10,14 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: cceabb2b4b1fad68fdda44fea8172cb21319b4bc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1e012c0900a83e1adbf0ceaddeb91792598b4377
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155640"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105210"
 ---
-# <a name="xpsdocumentwriterraise__writingprogresschanged-method"></a>XpsDocumentWriter.raise\_\_WritingProgressChanged Método
+# <a name="xpsdocumentwriterraise__writingprogresschanged-method"></a>XpsDocumentWriter. raise ( \_ \_ método) WritingProgressChanged
 
 Inicia el evento <xref:System.Windows.Xps.XpsDocumentWriter.WritingProgressChanged>.
 
@@ -37,8 +38,8 @@ public void raise__WritingProgressChanged (object value0,
   
 ## <a name="requirements"></a>Requisitos
 
-**Espacio de nombres:**<xref:System.Windows.Xps>
+**Espacio de nombres:** <xref:System.Windows.Xps>
 
-**Montaje:** System.Printing (en system.printing.dll)
+**Ensamblado:** System. Printing (en system.printing.dll)
 
-**Versiones de .NET Framework:** 3.0
+**Versiones de .NET Framework:** 3,0

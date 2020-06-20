@@ -1,5 +1,6 @@
 ---
-title: Evento XpsDocumentWriter._WritingCompleted (System.Windows.Xps)
+title: XpsDocumentWriter. _WritingCompleted evento (System. Windows. XPS)
+description: Comprenda el evento XpsDocumentWriter. _WritingCompleted, que se produce cuando finaliza una operación de escritura para un documento de XML Paper Specification (XPS) en .NET.
 ms.date: 10/17/2017
 api_location:
 - system.printing.dll
@@ -11,14 +12,14 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: 0c233965638217ad5b25b9792fe07fb4d73dbe18
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3926630cafa2fea4e499e86d7c8b8eb707b8fd95
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155627"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105194"
 ---
-# <a name="xpsdocumentwriter_writingcompleted-event"></a>XpsDocumentWriter. \_Evento WritingCompleted
+# <a name="xpsdocumentwriter_writingcompleted-event"></a>XpsDocumentWriter. \_ Evento WritingCompleted
 
 Se produce cuando finaliza una operación de escritura.
 
@@ -30,8 +31,8 @@ internal event WritingCompletedEventHandler _WritingCompleted
 
 ## <a name="requirements"></a>Requisitos
 
-**Espacio de nombres:**<xref:System.Windows.Xps>
+**Espacio de nombres:** <xref:System.Windows.Xps>
 
-**Montaje:** System.Printing (en system.printing.dll)
+**Ensamblado:** System. Printing (en system.printing.dll)
 
-**Versiones de .NET Framework:** Disponible desde 3.0
+**.NET Framework versiones:** Disponible desde 3,0

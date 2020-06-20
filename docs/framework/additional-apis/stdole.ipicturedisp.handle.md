@@ -1,5 +1,6 @@
 ---
-title: Propiedad IPictureDisp.Handle (a dicha)
+title: Propiedad IPictureDisp. Handle (STDOLE)
+description: Lea acerca de la propiedad IPictureDisp. Handle en .NET. Esta propiedad se encuentra en el espacio de nombres STDOLE y en el ensamblado STDOLE (en la biblioteca stdole.dll).
 ms.date: 02/22/2019
 topic_type:
 - apiref
@@ -10,12 +11,12 @@ api_location:
 - stdole.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 27a081b0faee348d8ff2064aa473fef315ee5d1c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c75cb2b28801924987d42fe442fee492245fe809
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634407"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105319"
 ---
 # <a name="ipicturedisphandle-property"></a>Propiedad IPictureDisp.Handle
 
@@ -31,4 +32,4 @@ int Handle { get; }
 
 **Espacio de nombres:** `stdole`
 
-**Ensamblado:** a dicha (en stdole.dll)
+**Ensamblado:** STDOLE (en stdole.dll)
