@@ -6,12 +6,12 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: bf8823c6674b1ff3f0028a50df8ce8d0f803cfc1
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 3366f718cd83a28f475fae9b4e65ce37fe7d8c7b
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389490"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803200"
 ---
 # <a name="built-in-types-c-reference"></a>Tipos integrados (referencia de C#)
 
@@ -39,6 +39,7 @@ En la siguiente tabla se muestran los tipos de [referencia](../keywords/referenc
 |--------------|-------------------------|
 |[`object`](reference-types.md#the-object-type)|<xref:System.Object?displayProperty=nameWithType>|
 |[`string`](reference-types.md#the-string-type)|<xref:System.String?displayProperty=nameWithType>|
+|[`dynamic`](reference-types.md#the-dynamic-type)|<xref:System.Object?displayProperty=nameWithType>|
 
 En las tablas anteriores, cada palabra clave de tipo de C# de la columna ubicada a la izquierda es un alias del tipo de .NET correspondiente. Son intercambiables. Por ejemplo, en las declaraciones siguientes se declaran variables del mismo tipo:
 
@@ -53,4 +54,3 @@ La palabra clave [`void`](void.md) representa la ausencia de un tipo. Se usa com
 
 - [Referencia de C#](../index.md)
 - [Valores predeterminados de los tipos de C#](default-values.md)
-- [Palabra clave `dynamic`](reference-types.md#the-dynamic-type)

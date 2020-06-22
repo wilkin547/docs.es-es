@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: ffa5372678362e47eb59d8b041da55c79bf8475d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1e78b920eb6a1eae870a425b91711ac9d87b6530
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447048"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84811678"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>Opciones del compilador de C#, por categoría
 
@@ -107,7 +107,7 @@ Las opciones del compilador siguientes están ordenadas por categoría. Para acc
 |[/unsafe](unsafe-compiler-option.md)|Habilita la compilación del código que usa la palabra clave [unsafe](../keywords/unsafe.md).|
 |[-utf8output](utf8output-compiler-option.md)|Muestra los resultados del compilador en codificación UTF-8.|
 |-parallel[+&#124;-]|Especifica si hay que usar la compilación simultánea (+).|
-|-checksumalgorithm:\<alg>|Especifique el algoritmo para calcular la suma de comprobación del archivo de origen almacenada en el archivo PDB.  Los valores admitidos son: SHA1 (el predeterminado) o SHA256.<br>Debido a problemas de colisión con SHA1, Microsoft recomienda SHA256.|
+|-checksumalgorithm:\<alg>|Especifique el algoritmo para calcular la suma de comprobación del archivo de origen almacenada en el archivo PDB.  Los valores admitidos son: SHA256 (valor predeterminado) o SHA1.<br>Debido a problemas de colisión con SHA1, Microsoft recomienda SHA256.|
 
 ## <a name="obsolete-options"></a>Opciones obsoletas
 

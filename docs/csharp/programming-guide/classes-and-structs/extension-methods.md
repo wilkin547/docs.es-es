@@ -6,12 +6,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 5db2797870b6c2e1998f17f1d8e4df8aa3f95c9e
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 0f9c0f053e531a44640084a35dc5d8e844ee0b46
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241414"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803188"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Métodos de extensión (Guía de programación de C#)
 
@@ -80,7 +80,7 @@ En el pasado, era habitual crear "Clases de colección" que implementaban la int
 
 Al usar Onion Architecture (Arquitectura cebolla) u otro diseño de la aplicación por niveles, es habitual tener un conjunto de entidades de dominio u objetos de transferencia de datos que se pueden usar para la comunicación entre los límites de la aplicación. Por regla general, estos objetos no contienen ninguna funcionalidad o contienen únicamente una funcionalidad mínima que se aplica a todas las capas de la aplicación. Los métodos de extensión se pueden usar para agregar una funcionalidad específica de cada capa de la aplicación sin cargar el objeto con métodos no necesarios o deseados en otras capas.
 
-```aspx-csharp
+```csharp
 public class DomainEntity
 {
     public int Id { get; set; }
