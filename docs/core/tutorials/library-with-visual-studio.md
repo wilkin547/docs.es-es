@@ -1,26 +1,23 @@
 ---
-title: Creación de una biblioteca de clases de .NET Standard en Visual Studio
+title: Creación de una biblioteca de clases .NET Standard con Visual Studio
 description: Obtenga información sobre cómo crear una biblioteca de clases de .NET Standard mediante Visual Studio.
-ms.date: 05/21/2020
+ms.date: 06/08/2020
 dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 7d64ca32bdbe20f949ae575bc4c3f9bbb594fffd
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ef9c62b0378e1064d8cfd90a8c59aed74ea312b2
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84283629"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84701570"
 ---
-# <a name="tutorial-create-a-net-standard-library-in-visual-studio"></a>Tutorial: Creación de una biblioteca de .NET Standard en Visual Studio
-
-Una *biblioteca de clases* define los tipos y los métodos que se llaman desde una aplicación. Una biblioteca de clases que tiene como destino .NET Standard 2.0, lo que permite que cualquier implementación .NET que admita esa versión de .NET Standard pueda llamar a su biblioteca. Cuando termine la biblioteca de clases, puede decidir si quiere distribuirla como un componente de terceros o si la quiere incluir como un componente empaquetado con una o varias aplicaciones.
-
-> [!NOTE]
-> Para ver una lista de las versiones de .NET Standard y las plataformas que admiten, vea [.NET Standard](../../standard/net-standard.md).
+# <a name="tutorial-create-a-net-standard-library-using-visual-studio"></a>Tutorial: Creación de una biblioteca .NET Standard con Visual Studio
 
 En este tutorial, creará una sencilla biblioteca de utilidades que contiene un único método de control de cadenas. Lo implementará como un [método de extensión](../../csharp/programming-guide/classes-and-structs/extension-methods.md) de modo que se pueda llamar como si fuera un miembro de la clase <xref:System.String>.
+
+Una *biblioteca de clases* define los tipos y los métodos que se llaman desde una aplicación. Una biblioteca de clases que tiene como destino .NET Standard 2.0, lo que permite que cualquier implementación .NET que admita esa versión de .NET Standard pueda llamar a su biblioteca. Cuando termine la biblioteca de clases, puede distribuirla como un componente de terceros o como un componente empaquetado con una o varias aplicaciones.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -28,13 +25,13 @@ En este tutorial, creará una sencilla biblioteca de utilidades que contiene un 
 
   Para más información, consulte la sección [Instalación con Visual Studio](../install/sdk.md?pivots=os-windows#install-with-visual-studio) del artículo [Instalación del SDK de .NET Core](../install/sdk.md?pivots=os-windows).
 
-## <a name="create-a-visual-studio-solution"></a>Creación de una solución de Visual Studio
+## <a name="create-a-solution"></a>Crear una solución
 
 Empiece por crear una solución en blanco para colocar el proyecto de biblioteca de clases en ella. Una solución de Visual Studio sirve como contenedor de uno o varios proyectos. Agregará otros proyectos relacionados a la misma solución.
 
 Para crear la solución en blanco:
 
-1. Abra Visual Studio.
+1. Inicie Visual Studio.
 
 2. En la ventana de inicio, elija **Crear un proyecto nuevo**.
 
@@ -75,7 +72,7 @@ Para crear la solución en blanco:
 
 ## <a name="add-a-console-app-to-the-solution"></a>Incorporación de una aplicación de consola a la solución
 
-Use la biblioteca de clases en una aplicación de consola que pida al usuario que escriba una cadena e indique si la cadena comienza con un carácter en mayúsculas.
+Agregue una aplicación de consola que use la biblioteca de clases. La aplicación solicitará al usuario que escriba una cadena y notificará si la cadena comienza con un carácter en mayúsculas.
 
 1. Agregue una nueva aplicación de consola de .NET Core denominada "Showcase" a la solución.
 
@@ -87,18 +84,6 @@ Use la biblioteca de clases en una aplicación de consola que pida al usuario qu
 
    1. En la página **Configure el nuevo proyecto**, escriba **ShowCase** en el cuadro **Nombre del proyecto**. Luego, elija **Crear**.
 
-1. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto **Presentación** y seleccione **Establecer como proyecto de inicio** en el menú contextual.
-
-   ![Menú contextual del proyecto de Visual Studio para establecer el proyecto de inicio](media/library-with-visual-studio/set-startup-project-context-menu.png)
-
-1. En un principio, el nuevo proyecto de aplicación de consola no tiene acceso a la biblioteca de clases. Para que pueda llamar a los métodos de la biblioteca de clases, cree una referencia de proyecto al proyecto de biblioteca de clases. En el **Explorador de soluciones**, haga clic con el botón derecho en el nodo **Dependencias** del proyecto `ShowCase` y seleccione **Agregar referencia de proyecto**.
-
-   ![Menú contextual Agregar referencia de Visual Studio](media/library-with-visual-studio/add-reference-context-menu.png)
-
-1. En el cuadro de diálogo **Administrador de referencias**, seleccione el proyecto **StringLibrary** y después **Aceptar**.
-
-   ![Cuadro de diálogo Administrador de referencias con StringLibrary seleccionado](media/library-with-visual-studio/manage-project-references.png)
-
 1. En la ventana de código del archivo *Program.cs* o *Program.vb*, reemplace todo el código con el siguiente código.
 
    :::code language="csharp" source="./snippets/library-with-visual-studio/csharp/ShowCase/Program.cs":::
@@ -106,19 +91,42 @@ Use la biblioteca de clases en una aplicación de consola que pida al usuario qu
 
    El código usa la variable `row` para mantener un recuento del número de filas de datos escritas en la ventana de consola. Siempre que sea mayor o igual a 25, el código borra la ventana de consola y muestra un mensaje al usuario.
 
-   El programa le pide al usuario que escriba una cadena. Indica si la cadena comienza con un carácter en mayúsculas. Si el usuario presiona la tecla Entrar sin especificar una cadena, la aplicación finaliza y la ventana de la consola se cierra.
+   El programa le pide al usuario que escriba una cadena. Indica si la cadena comienza con un carácter en mayúsculas. Si el usuario presiona la tecla <kbd>Entrar</kbd> sin especificar una cadena, la aplicación finaliza y la ventana de la consola se cierra.
 
-1. Si es necesario, cambie la barra de herramientas para compilar la versión de **depuración** del proyecto `ShowCase`. Compile y ejecute el programa haciendo clic en la flecha verde en el botón **Presentación**.
+## <a name="add-a-project-reference"></a>Agregar una referencia de proyecto
+
+En un principio, el nuevo proyecto de aplicación de consola no tiene acceso a la biblioteca de clases. Para que pueda llamar a los métodos de la biblioteca de clases, cree una referencia de proyecto al proyecto de biblioteca de clases.
+
+1. En el **Explorador de soluciones**, haga clic con el botón derecho en el nodo **Dependencias** del proyecto `ShowCase` y seleccione **Agregar referencia de proyecto**.
+
+   ![Menú contextual Agregar referencia de Visual Studio](media/library-with-visual-studio/add-reference-context-menu.png)
+
+1. En el cuadro de diálogo **Administrador de referencias**, seleccione el proyecto **StringLibrary** y después **Aceptar**.
+
+   ![Cuadro de diálogo Administrador de referencias con StringLibrary seleccionado](media/library-with-visual-studio/manage-project-references.png)
+
+## <a name="run-the-app"></a>Ejecutar la aplicación
+
+1. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto **Presentación** y seleccione **Establecer como proyecto de inicio** en el menú contextual.
+
+   ![Menú contextual del proyecto de Visual Studio para establecer el proyecto de inicio](media/library-with-visual-studio/set-startup-project-context-menu.png)
+
+1. Presione <kbd>Mayús</kbd>+<kbd>F5</kbd> para compilar y ejecutar el programa sin depuración.
 
    ![Barra de herramientas del proyecto de Visual Studio en la que se muestra el botón Depurar](media/library-with-visual-studio/visual-studio-project-toolbar.png)
 
-1. Para probar el programa, escriba cadenas y presione **Entrar** y, después, presione **Entrar** para salir.
+1. Para probar el programa, escriba cadenas y presione <kbd>Entrar</kbd> y, después, presione <kbd>Entrar</kbd> para salir.
 
    :::image type="content" source="media/library-with-visual-studio/run-showcase.png" alt-text="Ventana de la consola con ShowCase en ejecución":::
+
+## <a name="additional-resources"></a>Recursos adicionales
+
+* [Desarrollo de bibliotecas con la CLI de .NET Core](libraries.md)
+* [Versiones de .NET Standard y las plataformas que admiten](../../standard/net-standard.md).
 
 ## <a name="next-steps"></a>Pasos siguientes
 
 En este tutorial, ha creado una solución, ha agregado un proyecto de biblioteca y ha agregado un proyecto de aplicación de consola que usa la biblioteca. En el siguiente tutorial, agregará un proyecto de prueba unitaria a la solución.
 
 > [!div class="nextstepaction"]
-> [Prueba de una biblioteca .NET Standard con .NET Core en Visual Studio](testing-library-with-visual-studio.md)
+> [Prueba de una biblioteca .NET Standard con .NET Core mediante Visual Studio](testing-library-with-visual-studio.md)

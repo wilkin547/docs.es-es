@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: f3e6d95eb4a01d48fac5b5e2c951b9c346206004
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: f5fd61452d6f83bd035b5c6930bd09673c0ded23
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121489"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662958"
 ---
 # <a name="how-to-search-strings"></a>Cómo buscar cadenas
 
@@ -25,32 +25,32 @@ El tipo [string](../language-reference/builtin-types/reference-types.md#the-stri
 
 Los métodos <xref:System.String.Contains%2A?displayProperty=nameWithType>, <xref:System.String.StartsWith%2A?displayProperty=nameWithType> y <xref:System.String.EndsWith%2A?displayProperty=nameWithType> buscan texto concreto en una cadena. En el ejemplo siguiente, se muestra cada uno de estos métodos y una variación que usa una búsqueda que no distingue mayúsculas de minúsculas:
 
-[!code-csharp-interactive[search strings using methods](../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs#1)]
+:::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs" id="Snippet1":::
 
 En el ejemplo anterior, se muestra un aspecto importante del uso de estos métodos. De manera predeterminada, las búsquedas **distinguen mayúsculas de minúsculas**. Use el valor de enumeración <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType> para especificar que se trata de una búsqueda que no distingue mayúsculas de minúsculas.
 
 ## <a name="where-does-the-sought-text-occur-in-a-string"></a>¿Dónde se encuentra el texto buscado en una cadena?
 
 Los métodos <xref:System.String.IndexOf%2A> y <xref:System.String.LastIndexOf%2A> también buscan texto en cadenas. Estos métodos devuelven la ubicación del texto que se busca. Si no se encuentra el texto, devuelven `-1`. En el ejemplo siguiente, se muestra una búsqueda de la primera y última aparición de la palabra "methods" y muestra el texto que hay en medio.
-  
-[!code-csharp-interactive[search strings for indices](../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs#2)]
+
+:::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs" id="Snippet2":::
 
 ## <a name="finding-specific-text-using-regular-expressions"></a>Buscar texto concreto mediante expresiones regulares
 
 La clase <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> se puede usar para buscar cadenas. Estas búsquedas pueden abarcar una complejidad que va desde patrones de texto simples hasta otros complejos.
 
-En el ejemplo de código siguiente, se busca la palabra "the" o "their" en una oración, sin distinción entre mayúsculas y minúsculas. El método estático <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> realiza la búsqueda. Se proporciona la cadena de búsqueda y un patrón de búsqueda. En este caso, un tercer argumento especifica que la búsqueda no distingue mayúsculas de minúsculas. Para obtener más información, vea <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.  
+En el ejemplo de código siguiente, se busca la palabra "the" o "their" en una oración, sin distinción entre mayúsculas y minúsculas. El método estático <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> realiza la búsqueda. Se proporciona la cadena de búsqueda y un patrón de búsqueda. En este caso, un tercer argumento especifica que la búsqueda no distingue mayúsculas de minúsculas. Para obtener más información, vea <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.
 
 El patrón de búsqueda describe el texto que se busca. En la tabla siguiente, se describe cada elemento del patrón de búsqueda. (En la tabla siguiente, se usa el valor único `\` que se deben escribir como `\\` en una cadena de C#).
 
-| pattern  | Significado     |
-| -------- |-------------|
-| sección      | busca coincidencias con el texto "the" |
-| (eir)?   | busca coincidencias con 0 o 1 apariciones de "eir" |
-| \s       | busca coincidencias con un carácter de espacio en blanco    |
-  
-[!code-csharp-interactive[Search using regular expressions](../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs#3)]
-  
+| Modelo  | Significado                          |
+|----------|----------------------------------|
+| `the`    | busca coincidencias con el texto "the"             |
+| `(eir)?` | busca coincidencias con 0 o 1 apariciones de "eir" |
+| `\s`     | busca coincidencias con un carácter de espacio en blanco    |
+
+:::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs" id="Snippet3":::
+
 > [!TIP]
 > Los métodos `string` suelen ser mejores opciones cuando se busca una cadena exacta. Las expresiones regulares son más adecuadas cuando se busca algún patrón en una cadena de origen.
 
@@ -58,21 +58,19 @@ El patrón de búsqueda describe el texto que se busca. En la tabla siguiente, s
 
 El código siguiente usa expresiones regulares para validar el formato de cada cadena de una matriz. La validación requiere que cada cadena tenga la forma de un número de teléfono en el que tres grupos de dígitos se separan por guiones. Los dos primeros grupos contienen tres dígitos y el tercero, cuatro. El patrón de búsqueda usa la expresión regular `^\\d{3}-\\d{3}-\\d{4}$`. Para obtener más información, consulte [Lenguaje de expresiones regulares: Referencia rápida](../../standard/base-types/regular-expression-language-quick-reference.md).
 
-| pattern  | Significado                             |
-| -------- |-------------------------------------|
-| ^        | busca coincidencias con el principio de la cadena |
-| \d{3}    | busca coincidencias con exactamente 3 caracteres de dígitos  |
-| -        | busca coincidencias con el carácter “-”           |
-| \d{3}    | busca coincidencias con exactamente 3 caracteres de dígitos  |
-| -        | busca coincidencias con el carácter “-”           |
-| \d{4}    | busca coincidencias con exactamente 4 caracteres de dígitos  |
-| $        | busca coincidencias con el final de la cadena       |
+| Modelo | Significado                             |
+|---------|-------------------------------------|
+| `^`     | busca coincidencias con el principio de la cadena |
+| `\d{3}` | busca coincidencias con exactamente 3 caracteres de dígitos  |
+| `-`     | busca coincidencias con el carácter “-”           |
+| `\d{3}` | busca coincidencias con exactamente 3 caracteres de dígitos  |
+| `-`     | busca coincidencias con el carácter “-”           |
+| `\d{4}` | busca coincidencias con exactamente 4 caracteres de dígitos  |
+| `$`     | busca coincidencias con el final de la cadena       |
 
-[!code-csharp-interactive[csProgGuideStrings#4](../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs#4)]
+:::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs" id="Snippet4":::
 
 Este patrón de búsqueda sencillo coincide con muchas cadenas válidas. Las expresiones regulares son mejores para buscar o validar con respecto a un patrón, en lugar de una cadena de texto sencilla.
-
-Eche un vistazo al código de nuestro [repositorio de GitHub](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings) y pruebe estos ejemplos. O bien, puede descargar los ejemplos [como un archivo ZIP](../../../samples/snippets/csharp/how-to/strings.zip).
 
 ## <a name="see-also"></a>Vea también
 

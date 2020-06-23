@@ -1,15 +1,15 @@
 ---
-title: Publicación de una aplicación Hola mundo de .NET Core con Visual Studio Code
+title: Publicación de una aplicación de consola de .NET Core con Visual Studio Code
 description: La publicación crea el conjunto de archivos que se necesitan para ejecutar una aplicación de .NET Core.
-ms.date: 05/28/2020
-ms.openlocfilehash: b49b12bf41e3ea7be8dbc459eb7d9b1fbef25790
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.date: 06/08/2020
+ms.openlocfilehash: 442d08c9b016407327ba30db0aae78b5cf6b6fe3
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84246659"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84701455"
 ---
-# <a name="tutorial-publish-a-net-core-console-application-with-visual-studio-code"></a>Tutorial: Publicación de una aplicación de consola de .NET Core con Visual Studio Code
+# <a name="tutorial-publish-a-net-core-console-application-using-visual-studio-code"></a>Tutorial: Publicación de una aplicación de consola de .NET Core con Visual Studio Code
 
 En este tutorial se muestra cómo publicar una aplicación de consola para que otros usuarios puedan ejecutarla. La publicación crea el conjunto de archivos que se necesitan para ejecutar una aplicación. Para implementar los archivos, cópielos en el equipo de destino.
 
@@ -21,9 +21,9 @@ La CLI de .NET Core se usa para publicar la aplicación, por lo que puede seguir
 
 ## <a name="publish-the-app"></a>Publicar la aplicación
 
-1. Abra Visual Studio Code.
+1. Inicie Visual Studio Code.
 
-1. Abra la carpeta de proyecto *HelloWorld* que creó en [Creación de una aplicación de consola de .NET Core en Visual Studio Code](with-visual-studio-code.md).
+1. Abra la carpeta de proyecto *HelloWorld* que creó en [Creación de una aplicación de consola de .NET Core en Visual Studio Code](with-visual-studio-code.md).
 
 1. Elija **Ver** > **Terminal** en el menú principal.
 
@@ -85,7 +85,7 @@ En los pasos siguientes, examinará los archivos creados por el proceso de publi
 
 ## <a name="run-the-published-app"></a>Ejecutar la aplicación publicada
 
-1. En **Explorador**, haga clic con el botón derecho en la carpeta *Publicación* (o bien presione <kbd>Ctrl</kbd> y haga clic en macOS) y seleccione **Abrir en terminal**.
+1. En el **Explorador**, haga clic con el botón derecho en la carpeta *publish* (o presione <kbd>Ctrl</kbd> y haga clic en macOS) y seleccione **Abrir en terminal**.
 
    :::image type="content" source="media/publishing-with-visual-studio-code/open-in-terminal.png" alt-text="Menú contextual en el que se muestra la sección Abrir en terminal":::
 
@@ -109,10 +109,7 @@ En los pasos siguientes, examinará los archivos creados por el proceso de publi
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-En este tutorial, ha publicado una aplicación de consola. Para obtener información sobre cómo crear bibliotecas, vea [Desarrollo de bibliotecas con la CLI de .NET Core](libraries.md).
-
-<!--In the next tutorial, you create a class library.
+En este tutorial, ha publicado una aplicación de consola. En el siguiente tutorial, creará una biblioteca de clases.
 
 > [!div class="nextstepaction"]
-> [Create a .NET Standard library in Visual Studio](library-with-visual-studio.md)
--->
+> [Creación de una biblioteca .NET Standard en Visual Studio para Mac](library-with-visual-studio-mac.md)

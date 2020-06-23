@@ -1,21 +1,19 @@
 ---
-title: Publicación de la aplicación Hola mundo de .NET Core con Visual Studio
-description: La publicación crea el conjunto de archivos que se necesitan para ejecutar la aplicación de .NET Core.
-author: BillWagner
-ms.author: wiwagn
-ms.date: 05/20/2020
+title: Publicación de una aplicación de consola de .NET Core con Visual Studio
+description: La publicación crea el conjunto de archivos que se necesitan para ejecutar una aplicación de .NET Core.
+ms.date: 06/08/2020
 dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 745fb2af332afa278c78ec9baeea7230fe725c02
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 44646a307d230db395b55b9dec5acfd168605940
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241504"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84701289"
 ---
-# <a name="tutorial-publish-a-net-core-console-application-with-visual-studio"></a>Tutorial: Publicación de una aplicación de consola de .NET Core con Visual Studio
+# <a name="tutorial-publish-a-net-core-console-application-using-visual-studio"></a>Tutorial: Publicación de una aplicación de consola de .NET Core con Visual Studio
 
 En este tutorial se muestra cómo publicar una aplicación de consola para que otros usuarios puedan ejecutarla. La publicación crea el conjunto de archivos que se necesitan para ejecutar la aplicación. Para implementar los archivos, cópielos en el equipo de destino.
 
@@ -25,7 +23,11 @@ En este tutorial se muestra cómo publicar una aplicación de consola para que o
 
 ## <a name="publish-the-app"></a>Publicar la aplicación
 
-1. Asegúrese de que Visual Studio esté compilando la versión de lanzamiento de la aplicación. Si es necesario, cambie la configuración de compilación en la barra de herramientas de **Depurar** a **Versión**.
+1. Inicie Visual Studio.
+
+1. Abra el proyecto *HelloWorld* que creó en [Creación de una aplicación de consola de .NET Core en Visual Studio](with-visual-studio.md).
+
+1. Asegúrese de que Visual Studio usa la configuración de compilación de versión. Si es necesario, cambie la configuración de compilación en la barra de herramientas de **Depurar** a **Versión**.
 
    ![Barra de herramientas de Visual Studio con compilación de versión seleccionado](media/publishing-with-visual-studio/visual-studio-toolbar-release.png)
 
@@ -47,7 +49,7 @@ En este tutorial se muestra cómo publicar una aplicación de consola para que o
 
 ## <a name="inspect-the-files"></a>Inspección de los archivos
 
-El proceso de publicación crea una implementación dependiente del marco, que es un tipo de implementación donde la aplicación publicada se ejecuta en cualquier máquina que tenga instalado .NET Core Runtime. Los usuarios pueden ejecutar la aplicación publicada haciendo doble clic en el archivo ejecutable o emitiendo el comando `dotnet HelloWorld.dll` desde un símbolo del sistema.
+De forma predeterminada, el proceso de publicación crea una implementación dependiente del marco, que es un tipo de implementación donde la aplicación publicada se ejecuta en una máquina que tenga instalado .NET Core Runtime. Los usuarios pueden ejecutar la aplicación publicada haciendo doble clic en el archivo ejecutable o emitiendo el comando `dotnet HelloWorld.dll` desde un símbolo del sistema.
 
 En los pasos siguientes, examinará los archivos creados por el proceso de publicación.
 
@@ -83,7 +85,7 @@ En los pasos siguientes, examinará los archivos creados por el proceso de publi
 
 1. En el **Explorador de soluciones**, haga clic con el botón derecho en la carpeta *Publicar* y seleccione **Copiar ruta de acceso completa**.
 
-1. Abra un símbolo del sistema y vaya a la carpeta *Publicar*. Escriba `cd` y pegue la ruta de acceso completa. Por ejemplo:
+1. Abra un símbolo del sistema y vaya a la carpeta *Publicar*. Para ello, escriba `cd` y pegue la ruta de acceso completa. Por ejemplo:
 
    ```
    cd C:\Projects\HelloWorld\bin\Release\netcoreapp3.1\publish\

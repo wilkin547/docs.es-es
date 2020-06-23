@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: a4e6f8e43c2ec8c867af9f78bd83b435b78c73d5
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9335399be2d4909a02fecbf2959c6f5608664732
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446768"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493674"
 ---
 # <a name="switch-c-reference"></a>switch (referencia de C#)
 
@@ -86,7 +86,7 @@ La ejecución de la lista de instrucciones en la sección switch con una etiquet
 
 Cada etiqueta case especifica un patrón que se compara con la expresión de coincidencia (la variable `caseSwitch` en los ejemplos anteriores). Si coinciden, el control se transfiere a la sección switch que contiene la **primera** etiqueta case coincidente. Si ningún patrón de etiqueta case coincide con la expresión de coincidencia, el control se transfiere a la sección con la etiqueta case `default`, si la hubiera. Si no hay ninguna etiqueta case `default`, no se ejecuta ninguna instrucción de ninguna sección switch y el control se transfiere fuera de la instrucción `switch`.
 
-Para más información sobre la instrucción `switch` y la coincidencia de patrones, vea la sección [Coincidencia de patrones con la instrucción `switch`](#pattern).
+Para más información sobre la instrucción `switch` y la coincidencia de patrones, vea la sección [Coincidencia de patrones con la instrucción `switch`](#pattern-matching with-the-switch-statement).
 
 Dado que C# 6 solo admite el patrón constante y no permite la repetición de valores constantes, las etiquetas case definen valores mutuamente exclusivos y solo un patrón puede coincidir con la expresión de coincidencia. Por este motivo, el orden en que aparezcan las instrucciones `case` no tiene importancia.
 
@@ -100,7 +100,7 @@ Puede corregir este problema y eliminar la advertencia del compilador de alguna 
 
 - Si cambia el orden de las secciones switch.
 
-- Si usa una [cláusula when](#when) en la etiqueta `case`.
+- Si usa una [cláusula when](#the-case-statement-and-the-when-clause) en la etiqueta `case`.
 
 ## <a name="the-default-case"></a>Etiqueta case `default`
 
@@ -108,7 +108,7 @@ La etiqueta case `default` especifica la sección switch que se va a ejecutar si
 
 La etiqueta case `default` puede aparecer en cualquier orden en la instrucción `switch`. Independientemente de su orden en el código fuente, siempre se evalúa en último lugar, después de que se hayan evaluado las demás etiquetas `case`.
 
-## <a name="pattern-matching-with-the-switch-statement"></a><a name="pattern"></a> Coincidencia de patrones con la instrucción `switch`
+## <a name="pattern-matching-with-the-switch-statement"></a>Coincidencia de patrones con la instrucción `switch`
 
 Cada instrucción `case` define un patrón que, si coincide con la expresión de coincidencia, provoca la ejecución de su sección switch contenedora. Todas las versiones de C# admiten el patrón de constante. Los demás patrones se admiten a partir de C# 7.0.
 
@@ -185,7 +185,7 @@ Sin coincidencia de patrones, este código podría escribirse del modo siguiente
 
 [!code-csharp[type-pattern2#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
 
-## <a name="the-case-statement-and-the-when-clause"></a><a name="when" /> La instrucción `case` y la cláusula `when`
+## <a name="the-case-statement-and-the-when-clause"></a>Instrucción `case` y cláusula `when`
 
 A partir de C# 7.0, dado que las instrucciones case no necesitan ser mutuamente excluyentes, puede agregar una cláusula `when` para especificar una condición adicional que deba cumplirse para que la instrucción case se evalúe como true. La cláusula `when` puede ser cualquier expresión que devuelva un valor booleano.
 

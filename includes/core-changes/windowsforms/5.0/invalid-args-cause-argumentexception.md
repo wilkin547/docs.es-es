@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f1fc70075ef09a4f036c69788342c07ee51d72ce
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: aab7d8538c875e35c832acc2a6c64beb84d4fb47
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83702498"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84702456"
 ---
 ### <a name="winforms-methods-now-throw-argumentexception"></a>Los métodos de WinForms inician ahora la excepción ArgumentException
 
@@ -19,12 +19,13 @@ El inicio de una <xref:System.ArgumentException> se ajusta al comportamiento del
 En la tabla siguiente se enumeran los métodos y parámetros afectados:
 
 | Método | Nombre de parámetro | Condición | Versión agregada |
-|-|-|-|
+|-|-|-|-|
 | <xref:System.Windows.Forms.TabControl.GetToolTipText(System.Object)?displayProperty=fullName> | `item` | El argumento no es del tipo <xref:System.Windows.Forms.TabPage>. | 5.0 (versión preliminar 1) |
+| <xref:System.Windows.Forms.DataFormats.GetFormat(System.String)?displayProperty=fullName> | `format` | El argumento es `null`, <xref:System.String.Empty?displayProperty=nameWithType> o un espacio en blanco. | 5.0 (versión preliminar 5) |
 
 #### <a name="version-introduced"></a>Versión introducida
 
-.NET 5.0 (versión preliminar 1)
+.NET 5.0
 
 #### <a name="recommended-action"></a>Acción recomendada
 
@@ -38,11 +39,13 @@ Windows Forms
 #### <a name="affected-apis"></a>API afectadas
 
 - <xref:System.Windows.Forms.TabControl.GetToolTipText(System.Object)?displayProperty=fullName>
+- <xref:System.Windows.Forms.DataFormats.GetFormat(System.String)?displayProperty=fullName>
 
 <!-- 
 
 #### Affected APIs
 
 - `M:System.Windows.Forms.TabControl.GetToolTipText(System.Object)`
+- `M:System.Windows.Forms.DataFormats.GetFormat(System.String)`
 
 -->

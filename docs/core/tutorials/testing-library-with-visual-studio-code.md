@@ -1,15 +1,15 @@
 ---
-title: Prueba de una biblioteca de clases .NET Standard con .NET Core en Visual Studio Code
+title: Prueba de una biblioteca de clases .NET Standard con .NET Core mediante Visual Studio Code
 description: Cree un proyecto de prueba unitaria para una biblioteca de clases de .NET Core. Compruebe que la biblioteca de clases de .NET Core funciona correctamente con pruebas unitarias.
-ms.date: 05/29/2020
-ms.openlocfilehash: be227453bd441028cc6ce348c00fad944140238f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.date: 06/08/2020
+ms.openlocfilehash: a61fd952eea2dec0d5a9f351d3f3d01c738e8fad
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292166"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84701038"
 ---
-# <a name="tutorial-test-a-net-standard-library-with-net-core-in-visual-studio-code"></a>Tutorial: Prueba de una biblioteca .NET Standard con .NET Core en Visual Studio Code
+# <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio-code"></a>Tutorial: Prueba de una biblioteca de clases .NET Standard con .NET Core mediante Visual Studio Code
 
 En este tutorial se muestra cómo automatizar las pruebas unitarias mediante la adición de un proyecto de prueba a una solución.
 
@@ -19,7 +19,9 @@ En este tutorial se muestra cómo automatizar las pruebas unitarias mediante la 
 
 ## <a name="create-a-unit-test-project"></a>Crear un proyecto de prueba unitaria
 
-1. Abra Visual Studio Code.
+Las pruebas unitarias proporcionan pruebas de software automatizadas durante el desarrollo y la publicación. El marco de trabajo de pruebas que se usa en este tutorial es MSTest. [MSTest](https://github.com/Microsoft/testfx-docs) es uno de los tres marcos de pruebas que puede elegir. Los otros son [xUnit](https://xunit.net/) y [nUnit](https://nunit.org/).
+
+1. Inicie Visual Studio Code.
 
 1. Abra la solución `ClassLibraryProjects` que creó en [Creación de una biblioteca de .NET Standard en Visual Studio](library-with-visual-studio.md).
 
@@ -55,16 +57,17 @@ En este tutorial se muestra cómo automatizar las pruebas unitarias mediante la 
 
    Cada método etiquetado con [[TestMethod]](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) en una clase de prueba etiquetada con [[TestClass]](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute) se ejecuta automáticamente cuando se ejecuta la prueba unitaria.
 
-   > [!NOTE]
-   > MSTest es uno de los tres marcos de pruebas entre los que puede elegir. Los otros son xUnit y nUnit.
-
 1. Agregue el proyecto de prueba a la solución:
 
    ```dotnetcli
    dotnet sln add StringLibraryTest/StringLibraryTest.csproj
    ```
 
-1. Cree una referencia de proyecto al proyecto de biblioteca de clases; para ello, ejecute el comando siguiente:
+## <a name="add-a-project-reference"></a>Agregar una referencia de proyecto
+
+Para que el proyecto de prueba funcione con la clase `StringLibrary`, agregue una referencia del proyecto `StringLibraryTest` al proyecto `StringLibrary`.
+
+1. Ejecute el siguiente comando:
 
    ```dotnetcli
    dotnet add StringLibraryTest/StringLibraryTest.csproj reference StringLibrary/StringLibrary.csproj
@@ -89,7 +92,7 @@ Al probar el método `StringLibrary.StartsWithUpper`, quiere proporcionar un nú
 
 Dado que el método de biblioteca controla cadenas, también se recomienda asegurarse de que controla correctamente una [cadena vacía (`String.Empty`)](xref:System.String.Empty) y una cadena `null`. Una cadena vacía es aquella que no tiene ningún carácter y cuyo valor de <xref:System.String.Length> es 0. Una cadena `null` es aquella que no se ha inicializado. Se puede llamar a `StartsWithUpper` directamente como un método estático y pasar un argumento <xref:System.String> único. También puede llamar a `StartsWithUpper` como método de extensión en una variable de `string` asignada a `null`.
 
-Definirá tres métodos, cada uno de los cuales llama a su método <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> repetidamente para cada elemento de una matriz de cadenas. Dado que el método de prueba produce un error tan pronto como encuentra el primer error, llamará a una sobrecarga de método que le permita pasar una cadena que indique el valor de cadena usado en la llamada al método.
+Definirá tres métodos, cada uno de los cuales llama a un método <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> para cada elemento de una matriz de cadenas. Llamará a una sobrecarga de método que le permite especificar que se muestre un mensaje de error en caso de error en la prueba. El mensaje identifica la cadena que causó el error.
 
 Para crear los métodos de prueba:
 
@@ -122,7 +125,7 @@ Para crear los métodos de prueba:
 
 ## <a name="handle-test-failures"></a>Administración de errores de prueba
 
-Si está realizando el desarrollo controlado por pruebas (TDD), escribirá las pruebas, y estas generarán un error cuando las ejecute por primera vez. Después, agregará un código a la aplicación para que la prueba se realice correctamente. En este caso, ha creado la prueba después de escribir el código de la aplicación que valida, por lo que no ha podido comprobar si la prueba genera un error. Para asegurarse de que una prueba genera un error cuando espera que lo haga, agregue un valor no válido a la entrada de prueba.
+Si está realizando el desarrollo controlado por pruebas (TDD), escribirá las pruebas, y estas generarán un error cuando las ejecute por primera vez. Después, agregará un código a la aplicación para que la prueba se realice correctamente. En este tutorial, ha creado la prueba después de escribir el código de la aplicación que valida, por lo que no ha podido comprobar si la prueba genera un error. Para asegurarse de que una prueba genera un error cuando espera que lo haga, agregue un valor no válido a la entrada de prueba.
 
 1. Modifique la matriz `words` en el método `TestDoesNotStartWithUpper` para incluir la cadena "Error".
 
@@ -137,7 +140,7 @@ Si está realizando el desarrollo controlado por pruebas (TDD), escribirá las p
    dotnet test StringLibraryTest/StringLibraryTest.csproj
    ```
 
-   en la salida del terminal se indica que se produce un error en una prueba y se proporciona un mensaje de error para la prueba con errores.
+   en la salida del terminal se indica que una de las pruebas no se supera y se proporciona un mensaje de error al respecto: "Error de Assert.IsFalse. Se esperaba para "Error": false; real: True". Debido al error, no se probaron todas las cadenas de la matriz después de "Error".
 
    ```
    Starting test execution, please wait...
@@ -157,11 +160,11 @@ Si está realizando el desarrollo controlado por pruebas (TDD), escribirá las p
    Total time: 1.7825 Seconds
    ```
 
-1. Deshaga la modificación que hizo en el paso 1 y quite la cadena "Error". Vuelva a ejecutar la prueba y se superarán las pruebas.
+1. Quite la cadena "Error" que agregó en el paso 1. Vuelva a ejecutar la prueba y se superarán las pruebas.
 
 ## <a name="test-the-release-version-of-the-library"></a>Prueba de la versión de la biblioteca
 
-Ahora que se han superado todas las pruebas al ejecutar la versión de depuración de la biblioteca, ejecute las pruebas una vez más en la versión de lanzamiento de la biblioteca. Varios factores, como las optimizaciones del compilador, a veces pueden producir un comportamiento diferente entre las compilaciones de depuración y versión.
+Ahora que se han superado todas las pruebas al ejecutar la versión de depuración de la biblioteca, ejecute las pruebas una vez más con la versión de lanzamiento de la biblioteca. Varios factores, como las optimizaciones del compilador, a veces pueden producir un comportamiento diferente entre las compilaciones de depuración y versión.
 
 1. Ejecute las pruebas con la configuración de compilación Versión:
 
@@ -173,7 +176,7 @@ Ahora que se han superado todas las pruebas al ejecutar la versión de depuraci�
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-- [Pruebas unitarias en .NET Core y .NET Standard](../testing/index.md)
+* [Pruebas unitarias en .NET Core y .NET Standard](../testing/index.md)
 
 ## <a name="next-steps"></a>Pasos siguientes
 

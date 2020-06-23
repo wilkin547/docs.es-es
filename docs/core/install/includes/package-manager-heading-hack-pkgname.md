@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4340ed7444681b4601dea50c93926b0ee0c07eec
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 7723892a33bf7dd8e475b2f696db5d9ab287e182
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134110"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602757"
 ---
 
 Los paquetes agregados a las fuentes del administrador de paquetes se denominan con un formato susceptible de intrusiones: `{product}-{type}-{version}`.
@@ -28,7 +28,7 @@ Versión del SDK o del entorno de ejecución que se va a instalar. En este artí
   - 3.0
   - 2.1
 
-  Es posible que el SDK o el entorno de ejecución que intenta descargar no esté disponible para su distribución de Linux. Para obtener una lista de las distribuciones admitidas, consulte [Dependencias y requisitos de .NET Core](../dependencies.md?pivots=os-linux).
+  Es posible que el SDK o el entorno de ejecución que intenta descargar no esté disponible para su distribución de Linux. Para obtener una lista de las distribuciones admitidas, consulte [Dependencias y requisitos de .NET Core](../linux.md).
 
 ### <a name="examples"></a>Ejemplos
 
@@ -38,4 +38,4 @@ Versión del SDK o del entorno de ejecución que se va a instalar. En este artí
 
 ### <a name="package-missing"></a>Falta el paquete
 
-Si la combinación de paquete y versión no funciona, no está disponible. Por ejemplo, no hay un SDK de ASP.NET Core; los componentes del SDK se incluyen en el SDK de .NET Core. El valor `aspnetcore-sdk-2.2` es no es correcto y debe ser `dotnet-sdk-2.2`. Para obtener una lista de las distribuciones de Linux compatibles con .NET Core, consulte [Dependencias y requisitos de .NET Core](../dependencies.md?pivots=os-linux).
+Si la combinación de paquete y versión no funciona, no está disponible. Por ejemplo, no hay un SDK de ASP.NET Core; los componentes del SDK se incluyen en el SDK de .NET Core. El valor `aspnetcore-sdk-2.2` es no es correcto y debe ser `dotnet-sdk-2.2`. Para obtener una lista de las distribuciones de Linux compatibles con .NET Core, consulte [Dependencias y requisitos de .NET Core](../linux.md).

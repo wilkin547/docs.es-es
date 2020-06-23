@@ -3,15 +3,15 @@ title: 'Instalación del entorno de ejecución de .NET Core en Windows, Linux y 
 description: Obtenga información sobre cómo instalar .NET Core en Windows, Linux y macOS. Descubra las dependencias necesarias para ejecutar aplicaciones de .NET Core.
 author: thraka
 ms.author: adegeo
-ms.date: 12/04/2019
+ms.date: 05/04/2020
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: ca55b8fab4aa9ca9f7e308cce57181e2c7e89f4b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c079e1856cdd370a278efc6fdfb4953059b6f2ba
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79397966"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596298"
 ---
 # <a name="install-the-net-core-runtime"></a>Instalación del entorno de ejecución de .NET Core
 
@@ -53,36 +53,9 @@ export PATH=$PATH:$HOME/dotnet
 
 ::: zone pivot="os-linux"
 
-## <a name="install-with-a-package-manager"></a>Instalación con un administrador de paquetes
+## <a name="install-on-linux"></a>Instalar en Linux
 
-Se puede instalar el entorno de ejecución de .NET Core con muchos de los administradores de paquetes comunes de Linux. Para obtener más información, vea [Administrador de paquetes de Linux: instalación de .NET Core](linux-package-managers.md).
-
-Su instalación con un administrador de paquetes solo se admite en la arquitectura x64. Si va a instalar el runtime de .NET Core con otra arquitectura, como ARM, siga las instrucciones de la sección [Descarga e instalación de forma manual](#download-and-manually-install). Para obtener más información sobre qué arquitecturas se admiten, consulte [Dependencias y requisitos de .NET Core](dependencies.md).
-
-## <a name="download-and-manually-install"></a>Descarga e instalación de forma manual
-
-Para extraer el runtime y hacer que los comandos de la CLI de .NET Core estén disponibles en el terminal, en primer lugar [descargue](#all-net-core-downloads) una versión binaria de .NET Core. Después, abra un terminal y ejecute los comandos siguientes.
-
-```bash
-mkdir -p $HOME/dotnet && tar zxf aspnetcore-runtime-3.1.0-linux-x64.tar.gz -C $HOME/dotnet
-export DOTNET_ROOT=$HOME/dotnet
-export PATH=$PATH:$HOME/dotnet
-```
-
-> [!TIP]
-> Los comandos `export` anteriores solo hacen que los comandos de la CLI de .NET Core estén disponibles para la sesión de terminal en la que se ha ejecutado.
->
-> Puede editar el perfil del shell para agregar los comandos de forma permanente. Hay una serie de shells distintos disponibles para Linux, y cada uno de ellos tiene un perfil diferente. Por ejemplo:
->
-> - **Shell de Bash**: *~/.bash_profile*, *~/.bashrc*
-> - **Shell de Korn**: *~/.kshrc* or *.profile*
-> - **Shell de Z**: *~/.zshrc* or *.zprofile*
->
-> Edite el archivo de origen adecuado para el shell y agregue `:$HOME/dotnet` al final de la instrucción `PATH` existente. Si no se incluye ninguna instrucción `PATH`, agregue una nueva línea con `export PATH=$PATH:$HOME/dotnet`.
->
-> Además, agregue `export DOTNET_ROOT=$HOME/dotnet` al final del archivo.
-
-Este enfoque le permite instalar diferentes versiones en ubicaciones independientes y elegir explícitamente cuál usará cada aplicación.
+Este artículo se retirará pronto. En este momento se reemplaza por [Instalación de .NET Core en Linux](linux.md).
 
 ::: zone-end
 
@@ -105,7 +78,7 @@ dotnet-install.ps1 -Channel 3.1 -Runtime aspnetcore
 
 Para extraer el runtime y hacer que los comandos de la CLI de .NET Core estén disponibles en el terminal, en primer lugar [descargue](#all-net-core-downloads) una versión binaria de .NET Core. A continuación, cree un directorio para la instalación, por ejemplo `%USERPROFILE%\dotnet`. Por último, extraiga el archivo zip descargado en ese directorio.
 
-De forma predeterminada, los comandos y las aplicaciones de la CLI de .NET Core no usarán la versión de .NET Core instalada de esta manera. Debe optar explícitamente por usarla. Para ello, cambie las variables de entorno con las que se inicia una aplicación:
+De forma predeterminada, los comandos y las aplicaciones de la CLI de .NET Core no usarán la versión de .NET Core instalada de esta manera y debe elegir explícitamente usarla. Para ello, cambie las variables de entorno con las que se inicia una aplicación:
 
 ```console
 set DOTNET_ROOT=%USERPROFILE%\dotnet

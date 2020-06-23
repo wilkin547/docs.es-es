@@ -3,12 +3,12 @@ title: Procedimiento para modificar el contenido de cadenas - Guía de C#
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 8e9bbe76c689d3c3f9f238ca9dd95cc7fcf98b18
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: a32665b67cfa73aa7d4753a1427c6955827e1b86
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389515"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84663010"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Procedimiento para modificar el contenido de cadenas en C\#
 
@@ -22,13 +22,13 @@ En este artículo se muestran varias técnicas. Puede reemplazar el texto existe
 
 Con el código siguiente se crea una cadena mediante el reemplazo de texto con un sustituto.
 
-[!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#1)]
+:::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs" id="Snippet1":::
 
 En el código anterior se muestra esta propiedad *inmutable* de las cadenas. En el ejemplo anterior puede ver que la cadena original, `source`, no se ha modificado. Con el método <xref:System.String.Replace%2A?displayProperty=nameWithType> se crea una `string` que contiene las modificaciones.
 
 Con el método <xref:System.String.Replace%2A> se pueden reemplazar cadenas o caracteres únicos. En ambos casos, se reemplazan todas las instancias del texto buscado.  En el siguiente ejemplo se reemplazan todos los caracteres " " por "\_":
 
-[!code-csharp-interactive[replace characters](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#2)]
+:::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs" id="Snippet2":::
 
 La cadena de origen se mantiene y se devuelve una cadena nueva con los reemplazos.
 
@@ -36,13 +36,13 @@ La cadena de origen se mantiene y se devuelve una cadena nueva con los reemplazo
 
 Puede usar los métodos <xref:System.String.Trim%2A?displayProperty=nameWithType>, <xref:System.String.TrimStart%2A?displayProperty=nameWithType>, y <xref:System.String.TrimEnd%2A?displayProperty=nameWithType> para quitar los espacios en blanco al inicio y al final.  En el código siguiente se muestra un ejemplo de cada caso. La cadena de origen no cambia; con estos métodos se devuelve una cadena nueva con el contenido modificado.
 
-[!code-csharp-interactive[trim white space](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#3)]
+:::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs" id="Snippet3":::
 
 ## <a name="remove-text"></a>Eliminación de texto
 
 Puede quitar texto de una cadena con el método <xref:System.String.Remove%2A?displayProperty=nameWithType>. Este método quita un número de caracteres que comienzan con un índice específico. En el siguiente ejemplo se muestra cómo usar <xref:System.String.IndexOf%2A?displayProperty=nameWithType> seguido por <xref:System.String.Remove%2A> para quitar texto de una cadena:
 
-[!code-csharp-interactive[remove text](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#4)]
+:::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs" id="Snippet4":::
 
 ## <a name="replace-matching-patterns"></a>Reemplazo de patrones de coincidencia
 
@@ -50,7 +50,7 @@ Puede usar [expresiones regulares](../../standard/base-types/regular-expressions
 
 Las expresiones regulares son más útiles al buscar y reemplazar texto que sigue un patrón, en vez de texto que ya conoce. Para obtener más información, vea [Procedimiento para buscar cadenas](search-strings.md). Con el patrón de búsqueda "the\s" se busca la palabra "the" seguida de un carácter de espacio en blanco. Con esa parte del patrón se asegura de que no se busca "there" en la cadena de origen. Para obtener más información sobre los elementos de lenguaje de expresiones regulares, vea [Lenguaje de expresiones regulares - Referencia rápida](../../standard/base-types/regular-expression-language-quick-reference.md).
 
-[!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#5)]
+:::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs" id="Snippet5":::
 
 Con el método <xref:System.Text.StringBuilder.ToString%2A?displayProperty=nameWithType> se devuelve una cadena inmutable con el contenido del objeto <xref:System.Text.StringBuilder>.
 
@@ -60,17 +60,15 @@ Puede producir un matriz de caracteres a partir de una cadena, modificar el cont
 
 En el siguiente ejemplo se muestra cómo reemplazar un conjunto de caracteres en una cadena. En primer lugar, se usa el método <xref:System.String.ToCharArray?displayProperty=nameWithType> para crear una matriz de caracteres. Se usa el método <xref:System.String.IndexOf%2A> para encontrar el índice de inicio de la palabra "fox". Los siguientes tres caracteres se reemplazan por otra palabra. Por último, se construye una cadena nueva a partir de la matriz de carácter actualizada.
 
-[!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#6)]
+:::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs" id="Snippet6":::
 
 ## <a name="programmatically-build-up-string-content"></a>Creación mediante programación del contenido de la cadena
 
 Dado que las cadenas son inmutables, en los ejemplos anteriores se crean cadenas temporales o matrices de caracteres. En escenarios de alto rendimiento, puede ser conveniente evitar estas asignaciones de montón. .NET Core proporciona un método <xref:System.String.Create%2A?displayProperty=nameWithType> que permite rellenar mediante programación el contenido de los caracteres de una cadena a través de una devolución de llamada, a la vez que evita las asignaciones de cadenas temporales intermedias.
 
-[!code-csharp[using string.Create to programmatically build the string content for a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
+:::code language="csharp" source="../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs" id="Snippet7":::
 
 Puede modificar una cadena en un bloque fijo con código no seguro, pero es **totalmente** desaconsejable modificar el contenido de la cadena una vez que se ha creado. Si lo hace, puede haber problemas imprevisibles. Por ejemplo, si alguien se conecta a una cadena que tiene el mismo contenido que el suyo, obtendrá una copia y no esperará que usted modifique la cadena.
-
-Eche un vistazo al código de nuestro [repositorio de GitHub](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings) y pruebe estos ejemplos. O bien, puede descargar los ejemplos [como un archivo ZIP](../../../samples/snippets/csharp/how-to/strings.zip).
 
 ## <a name="see-also"></a>Vea también
 

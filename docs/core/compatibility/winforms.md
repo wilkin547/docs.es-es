@@ -2,12 +2,12 @@
 title: Cambios importantes en Windows Forms
 description: Enumera los cambios importantes en Windows Forms para .NET Core.
 ms.date: 01/08/2020
-ms.openlocfilehash: 75d369c7fb999da81a50fe46716e125c3840eb7a
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: bd87e438ecf9930bfcd5377f9a3799d5f3693f49
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158442"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84702473"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Cambios importantes en Windows Forms
 
@@ -20,6 +20,7 @@ En esta página se documentan los siguientes cambios importantes:
 | [Controles de la barra de estado quitados](#removed-status-bar-controls) | 5.0 |
 | [Los métodos de WinForms inician ahora la excepción ArgumentException](#winforms-methods-now-throw-argumentexception) | 5.0 |
 | [Los métodos de WinForms inician ahora la excepción ArgumentNullException](#winforms-methods-now-throw-argumentnullexception) | 5.0 |
+| [Ahora, las propiedades de WinForms producen ArgumentOutOfRangeException](#winforms-properties-now-throw-argumentoutofrangeexception) | 5.0 |
 | [Controles eliminados](#removed-controls) | 3.1 |
 | [El evento CellFormatting no se produce si se muestra información en pantalla](#cellformatting-event-not-raised-if-tooltip-is-shown) | 3.1 |
 | [Se ha cambiado Control.DefaultFont a Segoe UI 9 pt](#default-control-font-changed-to-segoe-ui-9-pt) | 3.0 |
@@ -47,6 +48,10 @@ En esta página se documentan los siguientes cambios importantes:
 ***
 
 [!INCLUDE [null-args-cause-argumentnullexception](../../../includes/core-changes/windowsforms/5.0/null-args-cause-argumentnullexception.md)]
+
+***
+
+[!INCLUDE [invalid-args-cause-argumentoutofrangeexception](../../../includes/core-changes/windowsforms/5.0/invalid-args-cause-argumentoutofrangeexception.md)]
 
 ***
 

@@ -3,12 +3,12 @@ title: Herramienta de desinstalación
 description: Información general de la herramienta de desinstalación de .NET Core, una herramienta guiada que permite limpiar de forma controlada los SDK y los entornos en tiempo de ejecución de .NET Core.
 author: sfoslund
 ms.date: 05/27/2020
-ms.openlocfilehash: 4e70fd3438b582bd5a0d6a52d7e58ed5e07f8811
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: dcfa12a3ec5fe0e8a29c5897ee4c71bfc7352eda
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446911"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84590804"
 ---
 # <a name="net-core-uninstall-tool"></a>Herramienta de desinstalación de .NET Core
 
@@ -27,7 +27,7 @@ Debido a estas limitaciones, es posible que la herramienta no pueda desinstalar 
 
 ## <a name="install-the-tool"></a>Instalación de la herramienta
 
-[Aquí](https://aka.ms/dotnet-core-uninstall-tool) puede descargar la herramienta de desinstalación de .NET Core. En el repositorio de GitHub [dotnet/cli-lab](https://github.com/dotnet/cli-lab) encontrará el código fuente.
+Puede descargar la herramienta de desinstalación de .NET Core desde [la página de versiones de la herramienta](https://aka.ms/dotnet-core-uninstall-tool) y encontrar el código fuente en el repositorio [dotnet/cli-lab](https://github.com/dotnet/cli-lab) de GitHub.
 
 > [!NOTE]
 > La herramienta requiere elevación para desinstalar los SDK y los entornos en tiempo de ejecución de .NET Core. Por lo tanto, debe instalarse en un directorio protegido contra escritura, como *C:\Archivos de programa* en Windows o */usr/local/bin* en macOS. Consulte también [Acceso con privilegios elevados para comandos de dotnet](../tools/elevated-access.md). Para obtener más información, vea las [instrucciones de instalación detalladas](https://aka.ms/dotnet-core-uninstall-tool).

@@ -7,61 +7,23 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: f04ff902743c91147a6f056bca3292ee47952bbd
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 813558299b40e0b90e8047f22b788c8f1419eb5e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420557"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504659"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Independencia del lenguaje y componentes independientes del lenguaje
 
-.NET es independiente del lenguaje. Esto significa que, como desarrollador, puede desarrollar en uno de los muchos lenguajes que tienen como destino las implementaciones de .NET, como C#, F# y Visual Basic. Puede tener acceso a los tipos y miembros de bibliotecas de clases desarrollados para implementaciones de .NET sin tener que conocer el lenguaje en el que se escribieron originalmente y sin tener que seguir las convenciones del lenguaje original. Si es un desarrollador de componentes, puede tener acceso al componente desde cualquier aplicación .NET independientemente de su lenguaje.
+.NET es independiente del lenguaje. Esto significa que, como desarrollador, puede desarrollar en uno de los muchos lenguajes que tienen como destino las implementaciones de .NET, como C#, F# y Visual Basic. Puede tener acceso a los tipos y miembros de bibliotecas de clases desarrollados para implementaciones de .NET sin tener que conocer el lenguaje en el que se escribieron originalmente y sin tener que seguir las convenciones del lenguaje original. Si es un desarrollador de componentes, puede tener acceso al componente desde cualquier aplicación .NET con independencia de su lenguaje.
 
 > [!NOTE]
-> La primera parte de este artículo describe la creación de componentes independientes del lenguaje; es decir, los componentes que pueden usarse en aplicaciones escritas en cualquier lenguaje. También puede crear una aplicación o componente únicos de código fuente escrito en varios lenguajes; consulte [Interoperabilidad entre lenguajes](#cross-language-interoperability) en la segunda parte de este artículo.
+> En la primera parte de este artículo se describe la creación de componentes independientes del lenguaje; es decir, componentes que pueden usarse en aplicaciones escritas en cualquier lenguaje. También puede crear una aplicación o componente únicos de código fuente escrito en varios lenguajes; consulte [Interoperabilidad entre lenguajes](#cross-language-interoperability) en la segunda parte de este artículo.
 
 Para que los objetos puedan tener una interacción total con otros objetos escritos en cualquier lenguaje, estos objetos solo deben exponer a los llamadores las características que son comunes a todos los lenguajes. Este conjunto común de características se define mediante Common Language Specification (CLS), que es un conjunto de reglas que se aplican a los ensamblados generados. Common Language Specification se define en el apartado I, cláusulas 7 a 11 del [estándar ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).
 
-Si el componente se ajusta a Common Language Specification, existe la garantía de que será conforme a CLS y que será accesible desde el código de un ensamblado escrito en cualquier lenguaje de programación que admita CLS. Para determinar si el componente se ajusta o no a Common Language Specification en tiempo de compilación, puede aplicar el atributo [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) en el código fuente. Para obtener más información, consulte [CLSCompliantAttribute (Atributo)](#the-clscompliantattribute-attribute).
-
-En este artículo:
-
-* [Reglas de conformidad con CLS](#cls-compliance-rules)
-
-  * [Signaturas de tipos y miembros de tipo](#types-and-type-member-signatures)
-
-  * [Convenciones de nomenclatura](#naming-conventions)
-
-  * [Conversión de tipos](#type-conversion)
-
-  * [Matrices](#arrays)
-
-  * [Interfaces](#interfaces)
-
-  * [Enumeraciones](#enumerations)
-
-  * [Miembros de tipos en general](#type-members-in-general)
-
-  * [Accesibilidad de miembros](#member-accessibility)
-
-  * [Miembros y tipos genéricos](#generic-types-and-members)
-
-  * [Constructores](#constructors)
-
-  * [Propiedades](#properties)
-
-  * [Eventos](#events)
-
-  * [Sobrecargas](#overloads)
-
-  * [Excepciones](#exceptions)
-
-  * [Atributos](#attributes)
-
-* [CLSCompliantAttribute (Atributo)](#the-clscompliantattribute-attribute)
-
-* [Interoperabilidad entre lenguajes](#cross-language-interoperability)
+Si el componente se ajusta a Common Language Specification, existe la garantía de que será conforme a CLS y que será accesible desde el código de un ensamblado escrito en cualquier lenguaje de programación que admita CLS. Para determinar si el componente se ajusta o no a Common Language Specification en tiempo de compilación, puede aplicar el atributo [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) en el código fuente. Para más información, consulte [CLSCompliantAttribute (Atributo)](#the-clscompliantattribute-attribute).
 
 ## <a name="cls-compliance-rules"></a>Reglas de conformidad con CLS
 
@@ -184,9 +146,9 @@ Interfaces | [Interfaces](#interfaces) | Las interfaces conformes a CLS no puede
 Miembros | [Miembros de tipos en general](#type-members-in-general) | Los campos y métodos static globales no son conformes a CLS. | 36
 Miembros | -- | El valor de un estático literal se especifica mediante el uso de metadatos de inicialización de campos. Un literal conforme a CLS debe tener un valor especificado en los metadatos de inicialización de campos que sea exactamente del mismo tipo que el literal (o el tipo subyacente, si el literal es `enum`). | 13
 Miembros | [Miembros de tipos en general](#type-members-in-general) | La restricción vararg no forma parte de CLS y la única convención de llamada admitida por CLS es la convención de llamada administrada estándar. | 15
-Convenciones de nomenclatura | [Convenciones de nomenclatura](#naming-conventions) | Los ensamblados seguirán las directrices del anexo 7 del informe técnico 15 del estándar Unicode 3.0, que rige el conjunto de caracteres permitidos que pueden usarse como iniciales e incluirse en los identificadores. Estas directrices están disponibles en línea en [Formularios de normalización Unicode](https://www.unicode.org/unicode/reports/tr15/tr15-18.html). Los identificadores deben aparecer en el formato canónico definido por el Formulario C de normalización Unicode. En aras de la conformidad con CLS, dos identificadores se considerarán iguales si sus asignaciones de minúsculas (tal y como se especificó en las asignaciones unívocas de minúsculas de Unicode en las que no se tiene en cuenta la configuración regional) son iguales. Es decir, para que dos identificadores se consideren diferentes según CLS, tendrán que diferenciarse en algo más que en el uso de mayúsculas y minúsculas. Pero para invalidar una definición heredada, CLI requiere que se use la codificación exacta de la declaración original. | 4
+Convenciones de nomenclatura | [Convenciones de nomenclatura](#naming-conventions) | Los ensamblados seguirán las directrices del anexo 7 del informe técnico 15 del estándar Unicode 3.0, que rige el conjunto de caracteres permitidos que pueden usarse como iniciales e incluirse en los identificadores. Estas directrices están disponibles en línea en [Formularios de normalización Unicode](https://unicode.org/reports/tr15/). Los identificadores deben aparecer en el formato canónico definido por el Formulario C de normalización Unicode. En aras de la conformidad con CLS, dos identificadores se considerarán iguales si sus asignaciones de minúsculas (tal y como se especificó en las asignaciones unívocas de minúsculas de Unicode en las que no se tiene en cuenta la configuración regional) son iguales. Es decir, para que dos identificadores se consideren diferentes según CLS, tendrán que diferenciarse en algo más que en el uso de mayúsculas y minúsculas. Pero para invalidar una definición heredada, CLI requiere que se use la codificación exacta de la declaración original. | 4
 Sobrecarga | [Convenciones de nomenclatura](#naming-conventions) | Todos los nombres especificados en un ámbito conforme a CLS deben ser distintos independientemente del tipo, salvo en los casos en los que los nombres sean idénticos y se resuelvan mediante sobrecarga. Es decir, mientras CTS permite que un tipo único use el mismo nombre para un método y un campo, CLS no. | 5
-Sobrecarga | [Convenciones de nomenclatura](#naming-conventions) | Los campos y los tipos anidados deben distinguirse únicamente por la comparación de identificadores, aunque CTS permita que se distingan signaturas diferentes. Los métodos, las propiedades y los eventos que tengan el mismo nombre (por comparación de identificadores) deben distinguirse por algo más que el tipo de valor devuelto, excepto según lo especificado en la regla 39 de CLS | 6
+Sobrecarga | [Convenciones de nomenclatura](#naming-conventions) | Los campos y los tipos anidados deben distinguirse únicamente por la comparación de identificadores, aunque CTS permita que se distingan signaturas diferentes. Los métodos, las propiedades y los eventos que tengan el mismo nombre (por comparación de identificadores) deben distinguirse por algo más que el tipo de valor devuelto, excepto según lo especificado en la regla 39 de CLS. | 6
 Sobrecarga | [Sobrecargas](#overloads) | Solo las propiedades y los métodos se pueden sobrecargar. | 37
 Sobrecarga | [Sobrecargas](#overloads) |Las propiedades y los métodos se pueden sobrecargar únicamente en función del número y los tipos de sus parámetros, excepto los operadores de conversión denominados `op_Implicit` y `op_Explicit`, que también se pueden sobrecargar en función del tipo de valor devuelto. | 38
 Sobrecarga | -- | Si dos o más de los métodos conformes a CLS declarados en un tipo tienen el mismo nombre y, en un conjunto específico de instancias de tipos, tienen los mismos tipos de valor devuelto y parámetros, todos estos métodos serán semánticamente equivalentes en esas instancias de tipos. | 48
@@ -201,6 +163,24 @@ Tipos | [Signaturas de tipos y miembros de tipo](#types-and-type-member-signatur
 Tipos | [Signaturas de tipos y miembros de tipo](#types-and-type-member-signatures) | Los tipos de puntero no administrados no son conformes a CLS. | 17
 Tipos | [Signaturas de tipos y miembros de tipo](#types-and-type-member-signatures) | Las interfaces, los tipos de valor y las clases conformes a CLS no deben requerir la implementación de miembros no conformes a CLS | 20
 Tipos | [Signaturas de tipos y miembros de tipo](#types-and-type-member-signatures) | [System.Object](xref:System.Object) es conforme a CLS. Cualquier otra clase conforme a CLS se heredará de una clase conforme a CLS. | 23
+
+Índice de las subsecciones:
+
+* [Signaturas de tipos y miembros de tipo](#types-and-type-member-signatures)
+* [Convenciones de nomenclatura](#naming-conventions)
+* [Conversión de tipos](#type-conversion)
+* [Matrices](#arrays)
+* [Interfaces](#interfaces)
+* [Enumeraciones](#enumerations)
+* [Miembros de tipos en general](#type-members-in-general)
+* [Accesibilidad de miembros](#member-accessibility)
+* [Miembros y tipos genéricos](#generic-types-and-members)
+* [Constructores](#constructors)
+* [Propiedades](#properties)
+* [Eventos](#events)
+* [Sobrecargas](#overloads)
+* [Excepciones](#exceptions)
+* [Atributos](#attributes)
 
 ### <a name="types-and-type-member-signatures"></a>Signaturas de tipos y miembros de tipo
 
@@ -607,7 +587,7 @@ public class person
 //    Naming1.cs(6,14): (Location of symbol related to previous warning)
 ```
 
-Los identificadores de los lenguajes de programación, como los nombres de los espacios de nombres, tipos y miembros, deben ajustarse al [Estándar Unicode 3.0, Informe técnico 15, Anexo 7](https://www.unicode.org/reports/tr15/tr15-18.html). Esto significa que:
+Los identificadores del lenguaje de programación, como los nombres de espacios de nombres, tipos y miembros, deben ajustarse al [Estándar Unicode](https://unicode.org/reports/tr15/). Esto significa que:
 
 * El primer carácter de un identificador puede ser cualquier letra en mayúscula, letra en minúscula, letra de inicial en mayúscula, letra modificadora, otra letra o número de letra. Para obtener información acerca de las categorías de caracteres Unicode, consulte la enumeración [System.Globalization.UnicodeCategory](xref:System.Globalization.UnicodeCategory).
 
@@ -802,7 +782,7 @@ Common Language Specification define dos operadores de conversión:
 
 Sin embargo, no todos los lenguajes admiten la sobrecarga de operadores o la definición de operadores personalizados. Si decide implementar estos operadores de conversión, debe proporcionar un mecanismo alternativo para realizar la conversión. Se recomienda proporcionar los métodos `From`Xxx y `To`Xxx.
 
-En el ejemplo siguiente se definen conversiones implícitas y explícitas conformes a CLS. En este ejemplo, se crea una clase `UDouble` que representa un número de punto flotante con signo de precisión doble. En las conversiones implícitas, pasa de `UDouble` a `Double` y, en las conversiones explícitas, de `UDouble` a `Single`, de `Double` a `UDouble` y de `Single` a `UDouble`. También define un método `ToDouble` como alternativa al operador de conversión implícita y los métodos `ToSingle`, `FromDouble` y `FromSingle` como alternativas a los operadores de conversión explícitos.
+En el ejemplo siguiente se definen conversiones implícitas y explícitas conformes a CLS. Se crea una clase `UDouble` que representa un número de punto flotante con signo de precisión doble. En las conversiones implícitas, pasa de `UDouble` a `Double` y, en las conversiones explícitas, de `UDouble` a `Single`, de `Double` a `UDouble` y de `Single` a `UDouble`. También define un método `ToDouble` como alternativa al operador de conversión implícita y los métodos `ToSingle`, `FromDouble` y `FromSingle` como alternativas a los operadores de conversión explícitos.
 
 ```csharp
 using System;
@@ -949,7 +929,7 @@ End Structure
 
 Las matrices conformes a CLS cumplen las reglas siguientes:
 
-* Todas las dimensiones de una matriz deben tener un límite inferior igual a cero. En el ejemplo siguiente se crea una matriz no conforme a CLS cuyo límite inferior es uno. Observe que, a pesar de la presencia del atributo [CLSCompliantAttribute](xref:System.CLSCompliantAttribute), el compilador no detecta que la matriz devuelta por el método `Numbers.GetTenPrimes` no es conforme a CLS.
+* Todas las dimensiones de una matriz deben tener un límite inferior igual a cero. En el ejemplo siguiente se crea una matriz no conforme a CLS cuyo límite inferior es uno. Pese a la presencia del atributo [CLSCompliantAttribute](xref:System.CLSCompliantAttribute), el compilador no detecta que la matriz devuelta por el método `Numbers.GetTenPrimes` no es conforme a CLS.
 
   ```csharp
   [assembly: CLSCompliant(true)]
@@ -1849,7 +1829,7 @@ End Class
 
 Common Language Specification impone un modelo conservador adaptado a cada instancia en los tipos anidados y los miembros protegidos. Los tipos genéricos abiertos no pueden exponer campos ni miembros con signaturas que contengan una instancia específica de un tipo genérico anidado y protegido. Los tipos no genéricos que amplíen una instancia específica de una interfaz o clase base genérica no pueden exponer campos ni miembros con signaturas que contengan otra instancia de un tipo genérico anidado y protegido.
 
-En el ejemplo siguiente se define un tipo genérico, `C1<T>`, y una clase protegida, `C1<T>.N`. `C1<T>` tiene dos métodos: `M1` y `M2`. Pero `M1` no es conforme a CLS porque intenta devolver un objeto `C1<int>.N` a partir de `C1<T>`. Una segunda clase, `C2`, se deriva de `C1<long>`. Esta clase tiene dos métodos, `M3` y `M4`. `M3` o es conforme a CLS porque intenta devolver un objeto `C1<int>.N` a partir de una subclase de `C1<long>`. Observe que los compiladores del lenguaje pueden ser aun más restrictivos. En este ejemplo, Visual Basic muestra un error cuando intenta compilar `M4`.
+En el ejemplo siguiente se define un tipo genérico, `C1<T>`, y una clase protegida, `C1<T>.N`. `C1<T>` tiene dos métodos: `M1` y `M2`. Pero `M1` no es conforme a CLS porque intenta devolver un objeto `C1<int>.N` a partir de `C1<T>`. Una segunda clase, `C2`, se deriva de `C1<long>`. Esta clase tiene dos métodos, `M3` y `M4`. `M3` o es conforme a CLS porque intenta devolver un objeto `C1<int>.N` a partir de una subclase de `C1<long>`. Los compiladores del lenguaje pueden ser aún más restrictivos. En este ejemplo, Visual Basic muestra un error cuando intenta compilar `M4`.
 
 ```csharp
 using System;
@@ -2501,7 +2481,7 @@ End Module
 
 En los ensamblados de .NET Framework, los atributos personalizados proporcionan un mecanismo extensible para almacenar atributos personalizados y recuperar metadatos sobre objetos de programación, tales como ensamblados, tipos, miembros y parámetros de método. Los atributos personalizados deben derivar de [System.Attribute](xref:System.Attribute) o de un tipo derivado de `System.Attribute`.
 
-En el ejemplo siguiente se infringe esta regla. Define una clase `NumericAttribute` que no se deriva de `System.Attribute`. Tenga en cuenta que un error del compilador solo se produce cuando se aplica el atributo no conforme a CLS, y no cuando se define la clase.
+En el ejemplo siguiente se infringe esta regla. Define una clase `NumericAttribute` que no se deriva de `System.Attribute`. Un error del compilador solo se produce cuando se aplica el atributo no conforme a CLS, y no cuando se define la clase.
 
 ```csharp
 using System;
@@ -2586,7 +2566,7 @@ El constructor o las propiedades de un atributo conforme a CLS pueden exponer so
 
 * Cualquier tipo de enumeración cuyo tipo subyacente sea `Byte`, `Int16`, `Int32` o `Int64`.
 
-En el ejemplo siguiente se define una clase `DescriptionAttribute` que se deriva de [Attribute](xref:System.Attribute). El constructor de clase tiene un parámetro de tipo `Descriptor`, de modo que la clase no es conforme a CLS. Tenga en cuenta que el compilador de C# emite una advertencia pero se compila correctamente.
+En el ejemplo siguiente se define una clase `DescriptionAttribute` que se deriva de [Attribute](xref:System.Attribute). El constructor de clase tiene un parámetro de tipo `Descriptor`, de modo que la clase no es conforme a CLS. El compilador de C# emite una advertencia, pero realiza la compilación correctamente.
 
 ```csharp
 using System;
@@ -2895,7 +2875,7 @@ A continuación, use la herramienta de vinculación (Link.exe) para compilar los
 link numberutil.netmodule stringutil.netmodule /out:UtilityLib.dll /dll
 ```
 
-El ejemplo siguiente llama a los métodos `NumericLib.NearZero` y `StringLib.ToTitleCase`. Observe que el código de Visual Basic y el código de C# pueden tener acceso a los métodos en ambas clases.
+El ejemplo siguiente llama a los métodos `NumericLib.NearZero` y `StringLib.ToTitleCase`. El código de Visual Basic y el código de C# pueden tener acceso a los métodos de ambas clases.
 
 ```csharp
 using System;

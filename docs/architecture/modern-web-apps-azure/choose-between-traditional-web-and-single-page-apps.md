@@ -4,16 +4,16 @@ description: Obtenga información sobre cómo elegir entre aplicaciones web trad
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: d4ed76455001c1a0b8e2e2f1bb90ce8715dd0052
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0aef42b78114a11c70456cb3122d3dcb5143f983
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77450113"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662711"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Elección entre aplicaciones web tradicionales y aplicaciones de página única (SPA)
 
-> "La ley de Atwood: cualquier aplicación que se pueda escribir en JavaScript, se acabará escribiendo en JavaScript".  
+> "Ley de Atwood: cualquier aplicación que se pueda escribir en JavaScript, se acabará escribiendo en JavaScript".  
 > _\- Jeff Atwood_
 
 En la actualidad hay dos enfoques generales para crear aplicaciones web: aplicaciones web tradicionales que ejecutan la mayor parte de la lógica de aplicación en el servidor y las aplicaciones de página única (SPA) que ejecutan la mayor parte de la lógica de la interfaz de usuario en un explorador web, y se comunican con el servidor web principalmente mediante las API web. También es posible un enfoque híbrido; el más sencillo es hospedar una o más subaplicaciones enriquecidas de tipo SPA dentro de una aplicación web tradicional más grande.
@@ -40,7 +40,9 @@ Las mejoras en la experiencia del usuario que posibilita el enfoque de SPA deben
 
 ## <a name="blazor"></a>Blazor
 
-ASP.NET Core 3.0 presenta un nuevo modelo para crear interfaces de usuario detalladas, interactivas y que admiten composición, denominadas Blazor. El lado servidor Blazor permite a los desarrolladores crear interfaces de usuario con Razor en el servidor y, además, entregar el código al navegador y ejecutarlo en el lado cliente mediante [WebAssembly](https://webassembly.org/). El lado servidor de Blazor está disponible ahora con ASP.NET Core 3.0 o versiones posteriores. El lado cliente de Blazor debería estar disponible en 2020.
+ASP.NET Core 3.0 presenta un nuevo modelo para crear interfaces de usuario detalladas, interactivas y que admiten composición, denominadas Blazor. El lado servidor de Blazor permite a los desarrolladores crear una interfaz de usuario con C# y Razor en el servidor, así como la conexión interactiva de la interfaz de usuario al explorador en tiempo real mediante una conexión de SignalR persistente.
+
+Blazor WebAssembly presenta otra opción para las aplicaciones Blazor, que les permite ejecutarse en el explorador mediante WebAssembly. Dado que se trata de la ejecución real de .NET en WebAssembly, puede volver a usar el código y las bibliotecas de las partes del lado servidor de la aplicación.
 
 Blazor es una tercera opción nueva que se debe tener en cuenta a la hora de evaluar si se debe compilar una aplicación web puramente representada por el servidor o una SPA. Puede compilar comportamientos de cliente enriquecidos similares a los de SPA mediante Blazor, sin necesidad de un desarrollo significativo en JavaScript. Las aplicaciones de Blazor pueden llamar a las API para solicitar datos o realizar operaciones del lado servidor.
 
@@ -116,7 +118,7 @@ En siguiente la tabla de decisiones se resumen algunos de los factores básicos 
 | Familiaridad del equipo necesaria con JavaScript o TypeScript | **Mínima**             | **Obligatoria**                | **Mínima**     |
 | Compatibilidad con exploradores sin scripting                   | **Compatible**           | **No compatible**           | **Compatible**   |
 | Comportamiento mínimo del lado cliente de la aplicación             | **Adecuado**         | **Excesivo**                | **Viable**      |
-| Requisitos de la interfaz de usuario enriquecidos y complejos            | **Limitados**             | **Adecuado**             | **Adecuado** |
+| Requisitos de la interfaz de usuario enriquecidos y complejos            | **Limitados**             | **Adecuados**             | **Adecuados** |
 
 >[!div class="step-by-step"]
 >[Anterior](modern-web-applications-characteristics.md)
