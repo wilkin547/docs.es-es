@@ -1,29 +1,30 @@
 ---
 title: Configuración de HTTP y HTTPS
+description: Obtenga información sobre cómo configurar HTTP/HTTPS para permitir que los servicios y clientes WCF se comuniquen. Configure un registro de direcciones URL y una excepción de Firewall mediante Netsh.exe.
 ms.date: 04/08/2019
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: f7fd2bad6ced09b638cc1bb5d539fab1b9ce7d25
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: fbff78ff8e2c5c4fa73a56a3fdc15163596aa985
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75336698"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245146"
 ---
 # <a name="configuring-http-and-https"></a>Configuración de HTTP y HTTPS
 
 Los servicios y clientes de WCF se pueden comunicar a través de HTTP y HTTPS, que se configuran mediante el uso de Internet Information Services (IIS) o de una herramienta de la línea de comandos. Cuando un servicio WCF se hospeda bajo IIS y necesita la configuración de HTTP o HTTPS se puede configurar en IIS (con la herramienta inetmgr.exe). Si el servicio WCF se autohospeda, la configuración de HTTP o HTTPS se configura usando una herramienta de la línea de comandos.
 
-Como mínimo, desea configurar un registro de direcciones URL y agregar una excepción de Firewall para la dirección URL que utilizará el servicio. Puede configurar estas opciones con la herramienta netsh. exe.
+Como mínimo, desea configurar un registro de direcciones URL y agregar una excepción de Firewall para la dirección URL que utilizará el servicio. Puede configurar estas opciones con la herramienta Netsh.exe.
 
 ## <a name="configuring-namespace-reservations"></a>Configurar reservas de espacio de nombres
 
-La reserva de espacio de nombres asigna los derechos de una parte del espacio de nombres HTTP URL a un grupo de usuarios determinado. Una reserva concede a esos usuarios el derecho para crear servicios que escuchen en esa porción del espacio de nombre. Las reservas son prefijos de dirección URL, lo que significa que la reserva cubre todos los subtrazados de la ruta de acceso de reserva. Las reservas de espacio de nombres permiten dos maneras de utilizar los caracteres comodín. La documentación de la API del servidor HTTP describe el [orden de resolución entre notificaciones de espacios de nombres que impliquen caracteres comodín](/windows/desktop/Http/routing-incoming-requests).
+La reserva de espacio de nombres asigna los derechos de una parte del espacio de nombres HTTP URL a un grupo de usuarios determinado. Una reserva da derecho a esos usuarios para crear servicios que escuchen en esa parte del espacio de nombres. Las reservas son prefijos de dirección URL, lo que significa que la reserva cubre todos los subtrazados de la ruta de acceso de reserva. Las reservas de espacio de nombres permiten dos maneras de utilizar los caracteres comodín. La documentación de la API del servidor HTTP describe el [orden de resolución entre notificaciones de espacios de nombres que impliquen caracteres comodín](/windows/desktop/Http/routing-incoming-requests).
 
 Una aplicación en ejecución puede crear una solicitud similar para agregar los registros de espacio de nombres. Los registros y reservas compiten por partes del espacio de nombres. Una reserva puede tener prioridad sobre un registro según el orden de resolución dado en el [orden de resolución entre notificaciones de espacios de nombres que impliquen caracteres comodín](/windows/desktop/Http/routing-incoming-requests). En este caso, la reserva bloquea a la aplicación en ejecución la posibilidad de recibir solicitudes.
 
-En el ejemplo siguiente se usa la herramienta netsh. exe:
+En el ejemplo siguiente se usa la herramienta Netsh.exe:
 
 ```console
 netsh http add urlacl url=http://+:80/MyUri user=DOMAIN\user
@@ -57,9 +58,9 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
 
 Cuando se use la clase <xref:System.ServiceModel.WSDualHttpBinding>, la conexión de cliente utiliza valores predeterminados compatibles con reservas de espacio de nombres y el Firewall de Windows. Si elige personalizar la dirección base de cliente de una conexión dual, también debe configurar esta configuración de HTTP en el cliente para que coincida con la nueva dirección.
 
-La API del servidor HTTP tiene algunas opciones de configuración avanzadas que no están disponibles a través de HttpCfg. Estos valores se mantienen en el Registro y se aplican a todas las aplicaciones que se ejecutan en los sistemas que utilizan los API de servidor HTTP. Para obtener información acerca de esta configuración, consulte [configuración del registro de http. sys para IIS](https://support.microsoft.com/help/820129/http-sys-registry-settings-for-windows). La mayoría de los usuarios no necesitan cambiar esta configuración.
+La API del servidor HTTP tiene algunas opciones de configuración avanzadas que no están disponibles a través de HttpCfg. Estos valores se mantienen en el Registro y se aplican a todas las aplicaciones que se ejecutan en los sistemas que utilizan los API de servidor HTTP. Para obtener información sobre esta configuración, vea [Http.sys configuración del registro para IIS](https://support.microsoft.com/help/820129/http-sys-registry-settings-for-windows). La mayoría de los usuarios no necesitan cambiar esta configuración.
 
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.WSDualHttpBinding>
-- [Configuración de un puerto con un certificado SSL](how-to-configure-a-port-with-an-ssl-certificate.md)
+- [Procedimiento para configurar un puerto con un certificado SSL](how-to-configure-a-port-with-an-ssl-certificate.md)

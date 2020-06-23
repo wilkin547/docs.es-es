@@ -1,15 +1,16 @@
 ---
 title: Utilización de enlaces para configurar servicios y clientes
+description: Los enlaces contienen información de configuración utilizada por los clientes o servicios WFC. Obtenga información sobre cómo definir enlaces y cómo especificar un enlace para un punto de conexión de servicio.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-ms.openlocfilehash: dd83072d3a1c76279fcc00ea5b0a4a41e278e10a
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 60db37d4381191314e9d5588dd61015a7078e84d
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321510"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245939"
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>Utilización de enlaces para configurar servicios y clientes
 Los enlaces son los objetos que especifican los datos de comunicación exigidos para conectar a un punto de conexión. Más específicamente, los enlaces contienen información de configuración utilizada para crear el cliente o servicio en tiempo de ejecución mediante la definición de las características de transportes, formatos de la conexión (codificación de mensajes) y protocolos que se utilizarán en el punto de conexión respectivo o canal de cliente. Para crear un servicio de Windows Communication Foundation (WCF) en funcionamiento, cada punto de conexión del servicio requiere un enlace. Este tema explica qué enlaces son, cómo se definen, y cómo se especifica un enlace determinado para un punto de conexión.  
@@ -23,24 +24,24 @@ Los enlaces son los objetos que especifican los datos de comunicación exigidos 
  Transporte  
  Determina el protocolo de transporte subyacente que se utilizará (por ejemplo, TCP o HTTP).  
   
- Codificación  
+ Encoding  
  Determina la codificación del mensaje, por ejemplo, texto/XML, binario o Mecanismo de optimización de transmisión del mensaje (MTOM), que determinan cómo se representan los mensajes como secuencias de bytes en la conexión.  
   
 ## <a name="system-provided-bindings"></a>Enlaces proporcionados por el sistema  
  WCF incluye un conjunto de enlaces proporcionados por el sistema que están diseñados para cubrir la mayoría de los requisitos y escenarios de la aplicación. Las clases siguientes representan algunos ejemplos de enlaces proporcionados por el sistema:  
   
-- <xref:System.ServiceModel.BasicHttpBinding>: un enlace de protocolo HTTP adecuado para conectarse a los servicios web que se ajustan a la especificación de WS-I Basic Profile 1,1 (por ejemplo, los servicios Web de ASP.NET [ASMX]).  
+- <xref:System.ServiceModel.BasicHttpBinding>: Un enlace de protocolo HTTP conveniente para conectar a los Servicios Web que cumple a la especificación del WS-I Basic Profile 1.1 (por ejemplo, servicios web ASP.NET [ASMX] - servicios basados).  
   
-- <xref:System.ServiceModel.WSHttpBinding>: un enlace de protocolo HTTP adecuado para conectarse a puntos de conexión que cumplen con los protocolos de especificaciones de servicios Web.  
+- <xref:System.ServiceModel.WSHttpBinding>: Un enlace de protocolo HTTP conveniente para conectar a los extremos que cumplen con los protocolos de especificaciones de servicios Web.  
   
-- <xref:System.ServiceModel.NetNamedPipeBinding>: utiliza la codificación binaria de .NET y las tecnologías de tramas junto con el transporte de canalización con nombre de Windows para conectarse a otros puntos de conexión de WCF en el mismo equipo.  
+- <xref:System.ServiceModel.NetNamedPipeBinding>: Utiliza la codificación binaria de .NET y las tecnologías de tramas junto con el transporte de canalización con nombre de Windows para conectarse a otros puntos de conexión de WCF en el mismo equipo.  
   
-- <xref:System.ServiceModel.NetMsmqBinding>: utiliza la codificación binaria de .NET y las tecnologías de tramas junto con Message Queue Server (también conocido como MSMQ) para crear conexiones de mensajes en cola con otros extremos de WCF.  
+- <xref:System.ServiceModel.NetMsmqBinding>: Utiliza la codificación binaria de .NET y las tecnologías de tramas junto con Message Queue Server (también conocido como MSMQ) para crear conexiones de mensajes en cola con otros extremos de WCF.  
   
  Para obtener una lista completa de los enlaces proporcionados por el sistema, con descripciones, vea [enlaces proporcionados por el sistema](system-provided-bindings.md).  
   
 ## <a name="custom-bindings"></a>Enlaces personalizados  
- Si la colección de enlaces proporcionada por el sistema no tiene la combinación correcta de características que necesita una aplicación de servicio, puede crear un enlace <xref:System.ServiceModel.Channels.CustomBinding>. Para obtener más información sobre los elementos de un enlace de <xref:System.ServiceModel.Channels.CustomBinding>, vea\<enlaces de [>](../configure-apps/file-schema/wcf/custombinding.md) y [enlaces personalizados](./extending/custom-bindings.md).  
+ Si la colección de enlaces proporcionada por el sistema no tiene la combinación correcta de características que necesita una aplicación de servicio, puede crear un enlace <xref:System.ServiceModel.Channels.CustomBinding>. Para obtener más información sobre los elementos de un <xref:System.ServiceModel.Channels.CustomBinding> enlace, vea [\<customBinding>](../configure-apps/file-schema/wcf/custombinding.md) y [enlaces personalizados](./extending/custom-bindings.md).  
   
 ## <a name="using-bindings"></a>Utilizar los enlaces  
  El uso de enlaces conlleva dos pasos básicos:  
@@ -58,8 +59,8 @@ Los enlaces son los objetos que especifican los datos de comunicación exigidos 
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre la creación de puntos finales](endpoint-creation-overview.md)
-- [Cómo especificar un enlace de servicio en la configuración](how-to-specify-a-service-binding-in-configuration.md)
-- [Cómo especificar un enlace de servicio en el código](how-to-specify-a-service-binding-in-code.md)
-- [Cómo especificar un enlace de cliente en la configuración](how-to-specify-a-client-binding-in-configuration.md)
-- [Cómo especificar un enlace de cliente en el código](how-to-specify-a-client-binding-in-code.md)
+- [Información general acerca de la creación de puntos finales](endpoint-creation-overview.md)
+- [Procedimiento para especificar un enlace de servicio en la configuración](how-to-specify-a-service-binding-in-configuration.md)
+- [Procedimiento para especificar un enlace de servicio en el código](how-to-specify-a-service-binding-in-code.md)
+- [Procedimiento para especificar un enlace de cliente en la configuración](how-to-specify-a-client-binding-in-configuration.md)
+- [Procedimiento para especificar un enlace de cliente en el código](how-to-specify-a-client-binding-in-code.md)

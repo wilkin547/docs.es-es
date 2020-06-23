@@ -1,13 +1,14 @@
 ---
 title: Sesiones, creación de instancias y simultaneidad
+description: Obtenga información sobre las sesiones, la creación de instancias y la simultaneidad, cómo utilizarlas y las interacciones entre ellas en WFC.
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-ms.openlocfilehash: 070e9ed25e2c0cce1309fb27e3f6a02bb01f3d2c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 41eef5a962c702eebd6b9a34607b542ec6bbd97b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600327"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246550"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Sesiones, creación de instancias y simultaneidad
 Una *sesión* es una correlación de todos los mensajes enviados entre dos extremos. *Creación de instancias* hace referencia al control de la vida de los objetos de servicio definidos por el usuario y sus objetos <xref:System.ServiceModel.InstanceContext> relacionados. La*simultaneidad* es el término dado al control del número de subprocesos que se ejecutan al mismo tiempo en un <xref:System.ServiceModel.InstanceContext> .  
@@ -37,7 +38,7 @@ Una *sesión* es una correlación de todos los mensajes enviados entre dos extre
   
  Las aplicaciones de cliente y servicio interactúan con sesiones de maneras diferentes. Las aplicaciones cliente inician sesiones y, a continuación, reciben y procesan los mensajes enviados dentro de la sesión. Las aplicaciones de servicio pueden utilizar sesiones como un punto de la extensibilidad para agregar comportamiento adicional. Esto se realiza trabajando directamente con <xref:System.ServiceModel.InstanceContext> o implementando un proveedor de contexto de instancia personalizado.  
   
-## <a name="instancing"></a>Creación de instancias  
+## <a name="instancing"></a>Instancing  
  El comportamiento de la creación de instancias (establecido mediante el uso de la propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> ) controla cómo <xref:System.ServiceModel.InstanceContext> se crea en respuesta a los mensajes entrantes. De forma predeterminada, <xref:System.ServiceModel.InstanceContext> está asociado a un objeto de servicio definido por el usuario, estableciendo así (en el caso predeterminado) la propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> , también se controla la creación de instancias de objetos de servicio definidos por el usuario. La enumeración <xref:System.ServiceModel.InstanceContextMode> define los modos de creación de instancias.  
   
  Los siguientes modos de creación de instancias están disponibles:  
@@ -113,5 +114,5 @@ public class CalculatorService : ICalculatorConcurrency
 - [Procedimiento para crear un servicio que requiere sesiones](how-to-create-a-service-that-requires-sessions.md)
 - [Procedimiento para controlar la creación de instancias de servicio](how-to-control-service-instancing.md)
 - [Concurrency](../samples/concurrency.md)
-- [Creación de instancias](../samples/instancing.md)
+- [Instancing](../samples/instancing.md)
 - [Sesión](../samples/session.md)

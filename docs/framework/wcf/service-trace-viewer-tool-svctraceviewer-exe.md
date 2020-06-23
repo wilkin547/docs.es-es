@@ -1,13 +1,14 @@
 ---
 title: Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)
+description: Use el visor de seguimiento de servicio para combinar, ver y filtrar los mensajes de seguimiento en el registro para que pueda diagnosticar, reparar y comprobar los problemas del servicio WCF.
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: 543b0e714343cdb8078861ceb31e4f8035e20afd
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 0ad6094965291a965346522688a8334abbd4e6b3
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321209"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244574"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)
 
@@ -17,7 +18,7 @@ La herramienta del visor de seguimiento del servicio Windows Communication Found
 
 El seguimiento de diagnóstico le proporciona información que muestra lo que está pasando a lo largo de la operación de su aplicación. Como su propio nombre indica, también puede seguir las operaciones desde el origen hasta el destino y en los puntos intermedios.
 
-Puede configurar el seguimiento mediante el archivo de configuración de la aplicación, ya sea el archivo Web. config para las aplicaciones hospedadas en web o *appname*. config para las aplicaciones autohospedadas. A continuación se muestra un ejemplo:
+Puede configurar el seguimiento mediante el archivo de configuración de la aplicación, ya sea Web.config para las aplicaciones hospedadas en web o *appname*. config para las aplicaciones autohospedadas. Este es un ejemplo:
 
 ```xml
 <system.diagnostics>
@@ -36,7 +37,7 @@ Puede configurar el seguimiento mediante el archivo de configuración de la apli
 </system.diagnostics>
 ```
 
-En este ejemplo, se especifican el nombre y el tipo del agente de escucha de traza. El agente de escucha se denomina `sdt` y se agrega como tipo el agente de escucha de traza estándar de .NET Framework (System.Diagnostics.XmlWriterTraceListener). El atributo `initializeData` se usa para establecer el nombre del archivo de registro para que el agente de escucha sea `SdrConfigExample.e2e`. Para el archivo de registro, puede sustituir una ruta de acceso completa para un nombre de archivo simple.
+En este ejemplo, se especifican el nombre y el tipo del agente de escucha de traza. El agente de escucha se denomina `sdt` y se agrega como tipo el agente de escucha de traza estándar de .NET Framework (System.Diagnostics.XmlWriterTraceListener). El `initializeData` atributo se usa para establecer el nombre del archivo de registro para que el agente de escucha sea `SdrConfigExample.e2e` . Para el archivo de registro, puede sustituir una ruta de acceso completa para un nombre de archivo simple.
 
 El ejemplo crea un archivo en el directorio raíz denominado SdrConfigExample.e2e. Cuando use el visor de seguimiento para abrir el archivo tal y como se describe en la sección "abrir y ver archivos de seguimiento de WCF", puede ver todos los mensajes que se han enviado.
 
@@ -44,16 +45,16 @@ La configuración de `switchValue` controla el nivel de traza. En la siguiente t
 
 |Nivel de seguimiento|Descripción|
 |-----------------|-----------------|
-|Crítico|-Registra las entradas de error y de registro de eventos, y realiza un seguimiento de la información de correlación. A continuación se muestran algunos ejemplos de cuándo se puede utilizar el nivel Crítico:<br />-El AppDomain dejó de funcionar debido a una excepción no controlada.<br />-La aplicación no se inicia.<br />-El mensaje que causó el error se originó en el proceso MyApp. exe.|
+|Crítica|-Registra las entradas de error y de registro de eventos, y realiza un seguimiento de la información de correlación. A continuación se muestran algunos ejemplos de cuándo se puede utilizar el nivel Crítico:<br />-El AppDomain dejó de funcionar debido a una excepción no controlada.<br />-La aplicación no se inicia.<br />: El mensaje que causó el error se originó en el proceso MyApp.exe.|
 |Error|-Registra todas las excepciones. Puede utilizar el nivel Error en las situaciones siguientes:<br />-El código se bloqueó debido a una excepción de conversión no válida.<br />-Una excepción "no se pudo crear el punto de conexión" está provocando un error en la aplicación al iniciarse.|
 |Advertencia|-Existe una condición que puede producir posteriormente un error o un error crítico. Puede utilizar este nivel en las situaciones siguientes:<br />-La aplicación está recibiendo más solicitudes de las que permite la configuración de limitación.<br />-La cola receptora está en el 98 por ciento de su capacidad configurada.|
 |Información|-Se generan mensajes útiles para supervisar y diagnosticar el estado del sistema, medir el rendimiento o la generación de perfiles. Puede utilizar esa información para el diseño de la capacidad y la gestión del rendimiento. Puede utilizar este nivel en las situaciones siguientes:<br />-Se produjo un error después de que el mensaje alcanzase el AppDomain y estaba deserializado.<br />-Se produjo un error mientras se creaba el enlace HTTP.|
-|Detallado|-Seguimiento de nivel de depuración para el código de usuario y el servicio. Establezca este nivel cuando:<br />: No está seguro de qué método del código se llamó cuando se produjo el error.<br />: Tiene configurado un extremo incorrecto y el servicio no se pudo iniciar porque la entrada en el almacén de reserva está bloqueada.|
+|Verbose|-Seguimiento de nivel de depuración para el código de usuario y el servicio. Establezca este nivel cuando:<br />: No está seguro de qué método del código se llamó cuando se produjo el error.<br />: Tiene configurado un extremo incorrecto y el servicio no se pudo iniciar porque la entrada en el almacén de reserva está bloqueada.|
 |ActivityTracing|Transmitir eventos entre actividades de procesamiento y componentes.<br /><br /> Este nivel permite a los administradores y programadores poner en correlación las aplicaciones en el mismo dominio de aplicación.<br /><br /> -Seguimientos de los límites de actividad: iniciar/detener.<br />: Realiza un seguimiento de las transferencias.|
 
  Puede utilizar `add` para especificar el nombre y tipo de agente de escucha de seguimiento que desea utilizar. En la configuración del ejemplo, el agente de escucha se denomina `sdt` y se agrega como tipo el agente de escucha de traza de .NET Framework estándar (`System.Diagnostics.XmlWriterTraceListener`). Utilice `initializeData` para establecer el nombre del archivo de registro para ese agente de escucha. Además, puede sustituir un nombre de archivo simple por una ruta de acceso completa.
 
-A partir de .NET Framework 4,8, los controles ComboBox en algunos temas de contraste alto se muestran en el color correcto. Puede deshabilitar este cambio quitando la siguiente configuración del archivo *svcTraceViewer. exe. config* :
+A partir de .NET Framework 4,8, los controles ComboBox en algunos temas de contraste alto se muestran en el color correcto. Puede deshabilitar este cambio quitando la siguiente configuración del archivo de *svcTraceViewer.exe.config* :
 
 ```xml
 <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false" />
@@ -75,7 +76,7 @@ El visor de seguimiento de servicio admite tres tipos de archivo:
 
 ##### <a name="to-open-a-trace-file"></a>Para abrir un archivo de seguimiento
 
-1. Inicie el visor de seguimiento de servicio mediante una ventana de comandos para navegar a la ubicación de instalación de WCF (C:\Archivos de Programa\microsoft SDKs\Windows\v6.0\Bin) y, a continuación, escriba `SvcTraceViewer.exe`.
+1. Inicie el visor de seguimiento de servicio mediante una ventana de comandos para navegar a la ubicación de instalación de WCF (C:\Archivos de Programa\microsoft SDKs\Windows\v6.0\Bin) y, a continuación, escriba `SvcTraceViewer.exe` .
 
 > [!NOTE]
 > La herramienta del visor de seguimiento de servicio puede asociar dos tipos de archivo: .svclog y .stvproj. Puede utilizar dos parámetros en línea de comandos para registrar y eliminar del registro las extensiones de archivo.
@@ -125,7 +126,7 @@ El visor de seguimiento de servicio proporciona estas vistas diferentes. Se mues
 
 - Vista de actividad
 
-- Vista de proyecto
+- Project View
 
 - Vista de mensaje
 
@@ -150,7 +151,7 @@ Puede hacer clic en el título de la columna para ordenar la lista de actividade
 
 Hay diferentes tipos de actividades, y cada tipo corresponde a un icono en el lado izquierdo de cada actividad. Puede consultar la sección Introducción a los iconos de seguimiento para conocer su significado.
 
-##### <a name="project-view"></a>Vista de proyecto
+##### <a name="project-view"></a>Project View
 
 Esta vista le permite administrar los archivos de seguimiento en el proyecto actual. Para obtener información más detallada, consulte la sección Administrar proyecto.
 
@@ -231,7 +232,7 @@ El panel superior derecho en el visor de seguimiento de servicio es el panel de 
 
 Puede copiar el XML sin formato del seguimiento en el portapapeles haciendo clic con el botón secundario en un seguimiento y seleccionando **copiar seguimiento en portapapeles**.
 
-##### <a name="detail-pane"></a>Panel detalle
+##### <a name="detail-pane"></a>Panel de detalles
 
 El panel inferior izquierdo en el visor de seguimiento de servicio es el Panel de detalles. Tiene tres pestañas para ver los detalles de seguimiento.
 
@@ -291,9 +292,9 @@ Puede hacer clic en un seguimiento existente y crear un filtro basado en la estr
 
 2. Haga clic en el botón **crear filtro personalizado** situado en la parte superior del panel de seguimiento.
 
-3. En el cuadro de diálogo que aparece, escriba un nombre para su filtro. En este ejemplo, escriba `Thread ID`. También puede proporcionar una descripción de su filtro.
+3. En el cuadro de diálogo que aparece, escriba un nombre para su filtro. En este ejemplo, escriba `Thread ID` . También puede proporcionar una descripción de su filtro.
 
-4. La vista de árbol a la izquierda muestra la estructura del registro de seguimiento que seleccionó en el paso 1. Vaya al elemento para el que desea crear una condición. En este ejemplo, busque el ThreadID que se va a ubicar en el nodo XPath: /E2ETraceEvent/System/Execution/@ThreadID. Haga doble clic en el atributo ThreadID en la vista de árbol. Esto crea una expresión para el atributo a la derecha del diálogo.
+4. La vista de árbol a la izquierda muestra la estructura del registro de seguimiento que seleccionó en el paso 1. Vaya al elemento para el que desea crear una condición. En este ejemplo, busque el ThreadID que se va a ubicar en el /E2ETraceEvent/System/Execution/@ThreadID nodo XPath:. Haga doble clic en el atributo ThreadID en la vista de árbol. Esto crea una expresión para el atributo a la derecha del diálogo.
 
 5. Cambie el campo de parámetro de la condición ThreadID de None a ' {0} '. Este paso permite configurar el valor de ThreadID cuando se aplica el filtro. (Vea la sección Cómo aplicar un filtro) Puede definir hasta cuatro parámetros. Las condiciones se combinan mediante el operador O.
 
@@ -312,7 +313,7 @@ El menú Filtros personalizados le permite escribir manualmente los filtros de X
 
 3. Como mínimo especifique un nombre de filtro y una expresión XPath.
 
-4. Haga clic en **Aceptar**.
+4. Haga clic en **OK**.
 
 ###### <a name="applying-a-custom-filter"></a>Aplicar un filtro personalizado
 
@@ -322,7 +323,7 @@ Una vez creado un filtro personalizado, puede acceder a él a través de la barr
 
 2. Haga clic en **filtrar ahora**y observe el resultado de la operación.
 
-Si el filtro usa varios parámetros, escríbalos con ";" como separador en el campo **Buscar** . Por ejemplo, la cadena siguiente define tres parámetros: ‘1;findValue;text’. El visor aplica ' 1 ' al parámetro {0} del filtro. ' findValue ' y ' text ' se aplican a {1} y {2} respectivamente.
+Si el filtro usa varios parámetros, escríbalos con ";" como separador en el campo **Buscar** . Por ejemplo, la cadena siguiente define tres parámetros: ‘1;findValue;text’. El visor aplica ' 1 ' al {0} parámetro del filtro. ' findValue ' y ' text ' se aplican a {1} y, {2} respectivamente.
 
 ###### <a name="sharing-custom-filters"></a>Compartir filtros personalizados
 
@@ -342,7 +343,7 @@ Para exportar un filtro personalizado:
 
 2. En el cuadro de diálogo que aparece, seleccione el filtro que desea exportar.
 
-3. Haga clic en el botón **exportar** .
+3. Haga clic en el botón **Exportar**.
 
 4. Especifique el nombre y la ubicación del archivo de definición de filtro personalizado (. stvcf) y haga clic en el botón **Guardar** .
 
@@ -449,47 +450,47 @@ A continuación se muestra una lista de los iconos que utiliza la herramienta Vi
 
 ### <a name="activity-tracing-traces"></a>Seguimiento de la actividad
 
-|Iconos|Descripción|
+|Icono|Descripción|
 |----------|-----------------|
-|![Seguimiento de advertencia](./media/7457c4ed-8383-4ac7-bada-bcb27409da58.gif "7457c4ed-8383-4ac7-Bada-bcb27409da58")|Traza de advertencia: traza que se emite en el nivel de advertencia|
-|![Seguimiento de error](./media/7d908807-4967-4f6d-9226-d52125db69ca.gif "7d908807-4967-4f6d-9226-d52125db69ca")|Seguimiento de error: un seguimiento que se emite en el nivel de error.|
+|![Seguimiento de advertencia](./media/7457c4ed-8383-4ac7-bada-bcb27409da58.gif "7457c4ed-8383-4ac7-bada-bcb27409da58")|Traza de advertencia: traza que se emite en el nivel de advertencia|
+|![Seguimiento de errores](./media/7d908807-4967-4f6d-9226-d52125db69ca.gif "7d908807-4967-4f6d-9226-d52125db69ca")|Seguimiento de error: un seguimiento que se emite en el nivel de error.|
 |![Seguimiento de inicio de actividad:](./media/8a728f91-5f80-4a95-afe8-0b6acd6e0317.gif "8a728f91-5f80-4a95-afe8-0b6acd6e0317")|Seguimiento de inicio de actividad: un seguimiento que marca el principio de una actividad. Contiene el nombre de la actividad. Como diseñador o programador de aplicaciones, debería definir un seguimiento de inicio de actividad por id. de actividad, por proceso o subproceso.<br /><br /> Si el id. de actividad se propaga por los orígenes de traza para la correlación de seguimiento, puede ver varios inicios para el mismo id. de actividad (uno por origen de traza). Se emite la traza de inicio si ActivityTracing está habilitado para el origen de traza.|
-|![Seguimiento de detención de actividad](./media/a0493e95-653e-4af8-84a4-4d09a400bc31.gif "a0493e95-653e-4af8-84A4-4d09a400bc31")|Detener traza de actividad: una traza que marca el fin de una actividad. . Contiene el nombre de la actividad. Como diseñador o programador de aplicaciones, debe definir una traza de detención por identificador de actividad por origen de traza. Ningún seguimiento de un origen de traza determinado aparece después del fin de actividad emitido por ese origen de traza, excepto si la granularidad de tiempo del seguimiento no es lo bastante pequeña. Cuando eso pasa, se pueden intercalar dos seguimientos con la misma hora, incluyendo uno de fin, al mostrarlos. Si el id. de actividad se propaga por los orígenes de traza para la correlación de seguimiento, puede ver varios finales para el mismo id. de actividad (uno por origen de traza). Se emite la traza de detención si ActivityTracing está habilitado para el origen de traza.|
-|![Seguimiento de suspensión de actividad](./media/6f7f4191-df2b-4592-8998-8379769e2d32.gif "6f7f4191-df2b-4592-8998-8379769e2d32")|Seguimiento de suspensión de actividad: un seguimiento que marca la hora que se pausa una actividad. No se emite ningún rastro en una actividad suspendida hasta que se reanuda la actividad. Una actividad suspendida denota que no se está efectuando ningún procesamiento en esa actividad en el área del origen de traza. Los seguimientos de suspensión/reanudación son útiles para perfilar. Se emite el seguimiento de suspensión si ActivityTracing está habilitado para el origen de traza.|
+|![Seguimiento de detención de actividad](./media/a0493e95-653e-4af8-84a4-4d09a400bc31.gif "a0493e95-653e-4af8-84a4-4d09a400bc31")|Detener traza de actividad: una traza que marca el fin de una actividad. . Contiene el nombre de la actividad. Como diseñador o programador de aplicaciones, debe definir una traza de detención por identificador de actividad por origen de traza. Ningún seguimiento de un origen de traza determinado aparece después del fin de actividad emitido por ese origen de traza, excepto si la granularidad de tiempo del seguimiento no es lo bastante pequeña. Cuando eso pasa, se pueden intercalar dos seguimientos con la misma hora, incluyendo uno de fin, al mostrarlos. Si el id. de actividad se propaga por los orígenes de traza para la correlación de seguimiento, puede ver varios finales para el mismo id. de actividad (uno por origen de traza). Se emite la traza de detención si ActivityTracing está habilitado para el origen de traza.|
+|![Traza de suspensión de actividad](./media/6f7f4191-df2b-4592-8998-8379769e2d32.gif "6f7f4191-df2b-4592-8998-8379769e2d32")|Seguimiento de suspensión de actividad: un seguimiento que marca la hora que se pausa una actividad. No se emite ningún rastro en una actividad suspendida hasta que se reanuda la actividad. Una actividad suspendida denota que no se está efectuando ningún procesamiento en esa actividad en el área del origen de traza. Los seguimientos de suspensión/reanudación son útiles para perfilar. Se emite el seguimiento de suspensión si ActivityTracing está habilitado para el origen de traza.|
 |![Seguimiento de reanudación de actividad](./media/1060d9d2-c9c8-4e0a-9988-cdc2f7030f17.gif "1060d9d2-c9c8-4e0a-9988-cdc2f7030f17")|Seguimiento de reanudación de actividad: un seguimiento que marca la hora a la que se reanuda una actividad una vez suspendida. Se pueden volver a emitir seguimientos en esa actividad. Los seguimientos de suspensión/reanudación son útiles para perfilar. Se emite el seguimiento de reanudación si ActivityTracing está habilitado para el origen de traza.|
-|![Transferir](./media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-F362-4ae5-bb8d-9f6f3ca036a5")|Transferencia: un seguimiento que se emite cuando el flujo de control lógico se transfiere de una actividad a otra. La actividad en la que se origina la transferencia puede continuar realizando el trabajo en paralelo a la actividad a la que va la transferencia. Se emite la traza de transferencia si ActivityTracing está habilitado para el origen de traza.|
+|![Transferencia](./media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|Transferencia: un seguimiento que se emite cuando el flujo de control lógico se transfiere de una actividad a otra. La actividad en la que se origina la transferencia puede continuar realizando el trabajo en paralelo a la actividad a la que va la transferencia. Se emite la traza de transferencia si ActivityTracing está habilitado para el origen de traza.|
 |![Transferir desde](./media/1df215cb-b344-4f36-a20d-195999bda741.gif "1df215cb-b344-4f36-a20d-195999bda741")|Transferir de: un seguimiento que define una transferencia desde otra actividad a la actividad actual.|
 |![Transferir a](./media/74255b6e-7c47-46ef-8e53-870c76b04c3f.gif "74255b6e-7c47-46ef-8e53-870c76b04c3f")|Transferir a: un seguimiento que define una transferencia de flujo de control lógico desde la actividad actual a otra actividad.|
 
 ### <a name="wcf-traces"></a>Seguimiento WCF
 
-|Iconos|Descripción|
+|Icono|Descripción|
 |----------|-----------------|
-|![Seguimiento de registro de mensajes](./media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-A0DB-98948b9af197")|Seguimiento del registro de mensajes: un seguimiento que se emite cuando la característica de registro de mensajes registra un mensaje WCF, cuando está habilitado el origen de seguimiento `System.ServiceModel.MessageLogging`. Al hacer clic en este seguimiento, se muestra el mensaje. Hay cuatro puntos de registro configurables para un mensaje: ServiceLevelSendRequest, TransportSend, TransportReceive y ServiceLevelReceiveRequest, que también pueden ser especificados por el atributo `messageSource` en el seguimiento del registro de mensajes.|
-|![Mensaje recibido de seguimiento](./media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c")|Seguimiento de mensajes recibidos: un seguimiento que se emite cuando se recibe un mensaje WCF, si el origen de seguimiento `System.ServiceModel` está habilitado en el nivel de información o detallado. Este seguimiento es esencial para ver la flecha de correlación de mensajes en la vista del **gráfico** de actividades.|
-|![Mensaje enviado](./media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4c12-9405-677e995ac387") de seguimiento|Seguimiento de mensaje enviado: un seguimiento que se emite cuando se envía un mensaje WCF si el origen de seguimiento `System.ServiceModel` está habilitado en el nivel de información o detallado. Este seguimiento es esencial para ver la flecha de correlación de mensajes en la vista del **gráfico** de actividades.|
+|![Seguimiento de registro de mensajes](./media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Seguimiento del registro de mensajes: un seguimiento que se emite cuando la característica de registro de mensajes registra un mensaje WCF, cuando el `System.ServiceModel.MessageLogging` origen de seguimiento está habilitado. Al hacer clic en este seguimiento, se muestra el mensaje. Hay cuatro puntos de registro configurables para un mensaje: ServiceLevelSendRequest, TransportSend, TransportReceive y ServiceLevelReceiveRequest, que también pueden ser especificados por el atributo `messageSource` en el seguimiento del registro de mensajes.|
+|![Seguimiento de mensaje recibido](./media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c")|Seguimiento de mensajes recibidos: un seguimiento que se emite cuando se recibe un mensaje WCF, si el `System.ServiceModel` origen de seguimiento está habilitado en el nivel de información o detallado. Este seguimiento es esencial para ver la flecha de correlación de mensajes en la vista del **gráfico** de actividades.|
+|![Seguimiento de mensaje enviado](./media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4c12-9405-677e995ac387")|Seguimiento de mensaje enviado: un seguimiento que se emite cuando se envía un mensaje WCF si el `System.ServiceModel` origen de seguimiento está habilitado en el nivel de información o detallado. Este seguimiento es esencial para ver la flecha de correlación de mensajes en la vista del **gráfico** de actividades.|
 
 ### <a name="activities"></a>Actividades
 
-|Iconos|Descripción|
+|Icono|Descripción|
 |----------|-----------------|
 |![Actividad](./media/wcfc-defaultactivityc.gif "wcfc_defaultActivityc")|Actividad: indica que la actividad actual es una actividad genérica.|
 |![Actividad raíz](./media/5dc8e0eb-1c32-4076-8c66-594935beaee9.gif "5dc8e0eb-1c32-4076-8c66-594935beaee9")|Actividad raíz: indica la actividad raíz de un proceso.|
 
 ### <a name="wcf-activities"></a>Actividades WCF
 
-|Iconos|Descripción|
+|Icono|Descripción|
 |----------|-----------------|
-|![Actividad de entorno](./media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|Actividad del entorno: una actividad que crea, abre o cierra un host o un cliente de WCF. Los errores que se han producido durante estas fases aparecerán en esta actividad.|
-|![Actividad de escucha](./media/d7b135f6-ec7d-45d7-9913-037ab30e4c26.gif "d7b135f6-ec7d-45d7-9913-037ab30e4c26")|Actividad de escucha: una actividad que registra los seguimientos relacionados con un agente de escucha. Dentro de esta actividad, podemos ver información del agente de escucha y solicitudes de conexión.|
-|![Actividad de recepción de bytes](./media/2f628580-b80f-45a7-925b-616c96426c0e.gif "2f628580-b80f-45a7-925B-616c96426c0e")|Actividad de recepción de bytes: agrupa todos los seguimientos relacionados con la recepción de bytes de entrada en una conexión entre dos puntos de conexión. Esta actividad es esencial para ponerse en correlación con actividades de transporte que propagan su id. de actividad como http.sys. En esta actividad aparecerán errores de conexión tales como interrupciones.|
-|![Actividad procesar mensaje](./media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Actividad procesar mensaje: una actividad que agrupa seguimientos relacionados con la creación de un mensaje WCF. En esta actividad aparecerán errores debidos a una envoltura no válida o a un mensaje incorrecto. Dentro de esta actividad, podemos inspeccionar los encabezados del mensaje para ver si un id. de actividad se propagó a partir del autor de la llamada. Si esto es verdad, cuando transferimos a la actividad de procesamiento de acción (el icono siguiente), también podemos asignar a esa actividad el id. de actividad propagado para la correlación entre el autor de la llamada y los seguimientos del destinatario.|
-|![Seguimiento de registro de mensajes](./media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-A0DB-98948b9af197")|Actividad procesar acción: una actividad que agrupa todos los seguimientos relacionados con una solicitud WCF a través de dos extremos. Si `propagateActivity` está establecido en `true` en los dos extremos de la configuración, se combinan todos los seguimientos de ambos extremos en una actividad para la correlación directa. Tal actividad contendrá los errores debidos al procesamiento de seguridad o transporte, extendiéndose al límite del código de usuario y de vuelta (si existe una respuesta).|
-|![Actividad procesar mensaje](./media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Actividad de ejecución de código de usuario: una actividad que agrupa seguimientos de código de usuario para procesar una solicitud.|
+|![Actividad del entorno](./media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|Actividad del entorno: una actividad que crea, abre o cierra un host o un cliente de WCF. Los errores que se han producido durante estas fases aparecerán en esta actividad.|
+|![Escuchar actividad](./media/d7b135f6-ec7d-45d7-9913-037ab30e4c26.gif "d7b135f6-ec7d-45d7-9913-037ab30e4c26")|Actividad de escucha: una actividad que registra los seguimientos relacionados con un agente de escucha. Dentro de esta actividad, podemos ver información del agente de escucha y solicitudes de conexión.|
+|![Recibir actividad de bytes](./media/2f628580-b80f-45a7-925b-616c96426c0e.gif "2f628580-b80f-45a7-925b-616c96426c0e")|Actividad de recepción de bytes: agrupa todos los seguimientos relacionados con la recepción de bytes de entrada en una conexión entre dos puntos de conexión. Esta actividad es esencial para ponerse en correlación con actividades de transporte que propagan su id. de actividad como http.sys. En esta actividad aparecerán errores de conexión tales como interrupciones.|
+|![Actividad de mensaje de proceso](./media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Actividad procesar mensaje: una actividad que agrupa seguimientos relacionados con la creación de un mensaje WCF. En esta actividad aparecerán errores debidos a una envoltura no válida o a un mensaje incorrecto. Dentro de esta actividad, podemos inspeccionar los encabezados del mensaje para ver si un id. de actividad se propagó a partir del autor de la llamada. Si esto es verdad, cuando transferimos a la actividad de procesamiento de acción (el icono siguiente), también podemos asignar a esa actividad el id. de actividad propagado para la correlación entre el autor de la llamada y los seguimientos del destinatario.|
+|![Seguimiento de registro de mensajes](./media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Actividad procesar acción: una actividad que agrupa todos los seguimientos relacionados con una solicitud WCF a través de dos extremos. Si `propagateActivity` está establecido en `true` en los dos extremos de la configuración, se combinan todos los seguimientos de ambos extremos en una actividad para la correlación directa. Tal actividad contendrá los errores debidos al procesamiento de seguridad o transporte, extendiéndose al límite del código de usuario y de vuelta (si existe una respuesta).|
+|![Actividad de mensaje de proceso](./media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Actividad de ejecución de código de usuario: una actividad que agrupa seguimientos de código de usuario para procesar una solicitud.|
 
 ## <a name="troubleshooting"></a>Solución de problemas
 
-Si no tiene permiso para escribir en el registro, obtendrá el siguiente mensaje de error "el visor de seguimiento de servicio de Microsoft no se registró en el sistema" cuando use el comando "`svctraceviewer /register`" para registrar la herramienta. Si ocurre esto, debe iniciar una sesión con una cuenta que tenga acceso de escritura al registro.
+Si no tiene permiso para escribir en el registro, obtendrá el siguiente mensaje de error "el visor de seguimiento de servicio de Microsoft no se registró en el sistema" cuando use el `svctraceviewer /register` comando "" para registrar la herramienta. Si ocurre esto, debe iniciar una sesión con una cuenta que tenga acceso de escritura al registro.
 
 Además, las herramienta del visor de seguimiento de servicio escribe algunos valores (por ejemplo, filtros personalizados y opciones de filtro) en el archivo SvcTraceViewer.exe.settings de su carpeta de ensamblado. Si no tiene permiso de lectura para el archivo, puede iniciar la herramienta pero no puede cargar los valores.
 
@@ -497,8 +498,8 @@ Si obtiene el mensaje de error "Se ha producido un error desconocido al procesar
 
 Si se abre un registro de seguimiento creado utilizando un sistema operativo árabe, puede observar que el filtro horario no funciona. Por ejemplo, el año 2005 corresponde al año 1427 en el calendario árabe. Sin embargo, el intervalo temporal admitido por el filtro de la herramienta del visor de seguimiento de servicio no admite una fecha anterior a 1752. Esto puede hacer que no pueda seleccionar una fecha correcta en el filtro. Para resolver este problema, puede crear un filtro personalizado (**vista/filtros personalizados**) utilizando una expresión XPath para incluir un intervalo de tiempo específico.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Uso del visor de seguimiento de servicios para ver seguimientos asociados y para la solución de problemas](./diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
-- [Configuración de la traza](./diagnostics/tracing/configuring-tracing.md)
-- [Traza de un extremo a otro](./diagnostics/tracing/end-to-end-tracing.md)
+- [Configurar seguimiento](./diagnostics/tracing/configuring-tracing.md)
+- [Seguimiento de traza de un extremo a otro](./diagnostics/tracing/end-to-end-tracing.md)

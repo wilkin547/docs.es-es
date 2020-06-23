@@ -1,5 +1,6 @@
 ---
 title: Usar contratos de mensaje
+description: Obtenga información sobre cómo usar los atributos de contrato de mensaje para crear un contrato de mensaje que especifique la estructura de un mensaje SOAP en WFC.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: 1b102b97c62df0bb8b031ded0f9165a11f8a8911
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0a75298b50df74ddf15904af43a0eb62c5ba8496
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600275"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244717"
 ---
 # <a name="using-message-contracts"></a>Usar contratos de mensaje
 Normalmente, al compilar aplicaciones de Windows Communication Foundation (WCF), los desarrolladores prestan mucha atención a las estructuras de datos y a los problemas de serialización y no tienen que preocuparse de la estructura de los mensajes en los que se transportan los datos. Para estas aplicaciones, la creación de contratos de datos para los parámetros o valores devueltos es fácil. (Para obtener más información, consulte [especificar transferencia de datos en contratos de servicio](specifying-data-transfer-in-service-contracts.md)).  

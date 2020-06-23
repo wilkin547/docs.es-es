@@ -1,15 +1,16 @@
 ---
 title: Publicación de metadatos
+description: Obtenga información sobre cómo los servicios WCF publican metadatos mediante la publicación de uno o más extremos de metadatos, lo que hace que los metadatos estén disponibles mediante protocolos estándar.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF], publishing
 ms.assetid: 3a56831a-cabc-45c0-bd02-12e2e9bd7313
-ms.openlocfilehash: 456eecde88fec182d3234c20a4f01971fd045bb8
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2aa6d877db4e5b09b4c594e6e87b63fb6c04703b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596765"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244964"
 ---
 # <a name="publishing-metadata"></a>Publicación de metadatos
 Los servicios Windows Communication Foundation (WCF) publican metadatos mediante la publicación de uno o más extremos de metadatos. La publicación de metadatos de servicio pone los metadatos a disposición mediante protocolos estandarizados, como WS-MetadataExchange (MEX) y solicitudes HTTP/GET. Los extremos de metadatos son similares a otros extremos de servicio en cuanto que tienen una dirección, un enlace y un contrato, y se pueden agregar a un host del servicio a través de configuración o código imperativo.  
@@ -22,7 +23,7 @@ Los servicios Windows Communication Foundation (WCF) publican metadatos mediante
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> agrega una instancia <xref:System.ServiceModel.Description.ServiceMetadataExtension> como una extensión a su host de servicio. <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> proporciona la implementación para los protocolos de publicación de metadatos. También puede utilizar <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> para obtener los metadatos del servicio en tiempo de ejecución mediante la obtención de acceso a la propiedad <xref:System.ServiceModel.Description.ServiceMetadataExtension.Metadata%2A?displayProperty=nameWithType>.  
   
 ### <a name="mex-metadata-endpoints"></a>Extremos de metadatos MEX  
- Para agregar los extremos de metadatos que usan el protocolo MEX, agregue extremos de servicio a su host de servicio que usen el contrato de servicio de `IMetadataExchange`. WCF incluye una <xref:System.ServiceModel.Description.IMetadataExchange> interfaz con este nombre de contrato de servicio que puede usar como parte del modelo de programación de WCF. Los extremos de WS-MetadataExchange o los extremos MEX, pueden utilizar uno de los cuatro enlaces predeterminados que los métodos de generador estáticos exponen en la <xref:System.ServiceModel.Description.MetadataExchangeBindings> clase para que coincidan con los enlaces predeterminados utilizados por herramientas de WCF como SvcUtil. exe. También puede configurar puntos de conexión de metadatos MEX mediante su propio enlace personalizado.  
+ Para agregar los extremos de metadatos que usan el protocolo MEX, agregue extremos de servicio a su host de servicio que usen el contrato de servicio de `IMetadataExchange`. WCF incluye una <xref:System.ServiceModel.Description.IMetadataExchange> interfaz con este nombre de contrato de servicio que puede usar como parte del modelo de programación de WCF. Los extremos de WS-MetadataExchange o los extremos MEX, pueden utilizar uno de los cuatro enlaces predeterminados que los métodos de generador estáticos exponen en la <xref:System.ServiceModel.Description.MetadataExchangeBindings> clase para que coincidan con los enlaces predeterminados utilizados por herramientas de WCF como Svcutil.exe. También puede configurar puntos de conexión de metadatos MEX mediante su propio enlace personalizado.  
   
 ### <a name="http-get-metadata-endpoints"></a>puntos de conexión de metadatos HTTP GET  
  Para agregar un punto de conexión de metadatos a su servicio que responda a solicitudes HTTP/GET, establezca la propiedad <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> en el <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> en `true`. También puede configurar un extremo de metadatos que utilice HTTPS estableciendo la propiedad <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> del <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> en `true`.  

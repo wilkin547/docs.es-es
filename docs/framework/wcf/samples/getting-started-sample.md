@@ -1,5 +1,6 @@
 ---
 title: Ejemplo de introducción
+description: Obtenga información sobre cómo implementar un servicio típico y un cliente típico mediante WCF. Este ejemplo es la base para obtener todos los otros ejemplos tecnológicos básicos.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: fc4a7e9acb15f77140732638b2982dd4a9dae9ce
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b23be1b33f227154b916429c063ec4106229bb3c
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575191"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246238"
 ---
 # <a name="getting-started-sample"></a>Ejemplo de introducción
 
@@ -32,7 +33,7 @@ En el ejemplo Introducción se muestra cómo implementar un servicio típico y u
 
 El servicio describe las operaciones que realiza en un contrato de servicios que expone públicamente como metadatos. El servicio también contiene el código para implementar las operaciones.
 
-El cliente contiene una definición del contrato de servicios y una clase de proxy para tener acceso al servicio. El código proxy se genera a partir de los metadatos del servicio mediante la [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).
+El cliente contiene una definición del contrato de servicios y una clase de proxy para tener acceso al servicio. El código proxy se genera a partir de los metadatos del servicio mediante la [herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).
 
 En Windows Vista, el servicio se hospeda en el servicio de activación de Windows (WAS). En Windows XP y Windows Server 2003, se hospeda en Internet Information Services (IIS) y ASP.NET. Hospedar un servicio en IIS o WAS permite activar el servicio automáticamente cuando se tiene acceso por primera vez.
 
@@ -174,7 +175,7 @@ El marco no expone ningún metadato de forma predeterminada. Como tal, el servic
 </system.serviceModel>
 ```
 
-El cliente se comunica utilizando un tipo de contrato determinado mediante una clase de cliente generada por la [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md). Este cliente generado se encuentra en el archivo generatedClient.cs o generatedClient.vb. Esta utilidad recupera los metadatos para un servicio determinado y genera un cliente para el uso por la aplicación del cliente para comunicarse, utilizando un tipo de contrato determinado. El servicio hospedado debe estar disponible para generar el código de cliente, porque el servicio se utiliza para recuperar los metadatos actualizados.
+El cliente se comunica utilizando un tipo de contrato determinado mediante una clase de cliente generada por la [herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md). Este cliente generado se encuentra en el archivo generatedClient.cs o generatedClient.vb. Esta utilidad recupera los metadatos para un servicio determinado y genera un cliente para el uso por la aplicación del cliente para comunicarse, utilizando un tipo de contrato determinado. El servicio hospedado debe estar disponible para generar el código de cliente, porque el servicio se utiliza para recuperar los metadatos actualizados.
 
  Ejecute el comando siguiente desde un símbolo del sistema SDK en el directorio cliente para generar el proxy especificado:
 

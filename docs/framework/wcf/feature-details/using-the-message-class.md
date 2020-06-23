@@ -1,16 +1,17 @@
 ---
 title: Uso de la clase de mensajes
+description: Obtenga información sobre la clase de mensaje, que es fundamental para WCF. Solo necesita programar con la clase Message directamente en algunos escenarios avanzados.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
-ms.openlocfilehash: 142578ef76a70fed27dc0137378b59e228cd25c9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f806e257cfd3ccc5118a5783e2eda48eef4ba0bf
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585654"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246498"
 ---
 # <a name="using-the-message-class"></a>Uso de la clase de mensajes
 La <xref:System.ServiceModel.Channels.Message> clase es fundamental para Windows Communication Foundation (WCF). Toda la comunicación entre clientes y servicios, en última instancia, produce como resultado instancias <xref:System.ServiceModel.Channels.Message> que se envían y reciben.  
@@ -94,7 +95,7 @@ La <xref:System.ServiceModel.Channels.Message> clase es fundamental para Windows
  [!code-csharp[C_UsingTheMessageClass#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_usingthemessageclass/cs/source.cs#5)]
  [!code-vb[C_UsingTheMessageClass#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_usingthemessageclass/vb/source.vb#5)]  
   
- Dos métodos del asistente adicionales escriben ciertas etiquetas de elemento de inicio de SOAP. Estos métodos no tienen acceso al cuerpo del mensaje, de modo que no cambian el estado del mensaje. Se incluyen los siguientes:  
+ Dos métodos del asistente adicionales escriben ciertas etiquetas de elemento de inicio de SOAP. Estos métodos no tienen acceso al cuerpo del mensaje, de modo que no cambian el estado del mensaje. Entre ellas se incluyen las siguientes:  
   
 - <xref:System.ServiceModel.Channels.Message.WriteStartBody%2A> escribe el elemento de cuerpo de inicio, por ejemplo, `<soap:Body>`.  
   

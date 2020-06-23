@@ -1,5 +1,6 @@
 ---
 title: Delegación y suplantación con WCF
+description: Obtenga información sobre los métodos de suplantación y delegación que WCF usa para restringir el acceso de cliente a los recursos de un dominio de servicio.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: e491925fdbe8d44df8e0c64b563eb92569453e35
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7f8d3695a36a43ca6bf796b141c07f6d2d088354
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599261"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245081"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delegación y suplantación con WCF
 La*suplantación* es una técnica habitual que utilizan los servicios para restringir el acceso de los clientes a los recursos de un dominio de servicio. Los recursos de dominio de servicio pueden ser recursos de equipo, como archivos locales (suplantación), o un recurso en otro equipo, como un recurso compartido de archivos (delegación). Para obtener una aplicación de ejemplo, consulte [Impersonating the Client](../samples/impersonating-the-client.md). Para obtener un ejemplo sobre el uso de la suplantación, consulte [How to: Impersonate a Client on a Service](../how-to-impersonate-a-client-on-a-service.md).  
@@ -92,7 +93,7 @@ La*suplantación* es una técnica habitual que utilizan los servicios para restr
   
 |`ImpersonationOption`|`ImpersonateCallerForAllServiceOperations`|Comportamiento|  
 |---------------------------|------------------------------------------------|--------------|  
-|Obligatorio|N/D|WCF suplanta al autor de la llamada|  
+|Requerido|N/D|WCF suplanta al autor de la llamada|  
 |Permitida|false|WCF no suplanta al autor de la llamada|  
 |Permitida|true|WCF suplanta al autor de la llamada|  
 |No permitidos|false|WCF no suplanta al autor de la llamada|  
@@ -118,8 +119,8 @@ La*suplantación* es una técnica habitual que utilizan los servicios para restr
 |Identificación|N/D|N/D|Identificación|  
 |Suplantación|Sí|N/D|Suplantación|  
 |Suplantación|No|N/D|Identificación|  
-|Delegación|Sí|Sí|Delegación|  
-|Delegación|Sí|No|Suplantación|  
+|Delegación|Yes|Yes|Delegación|  
+|Delegación|Yes|No|Suplantación|  
 |Delegación|No|N/D|Identificación|  
   
 ## <a name="impersonation-level-obtained-from-user-name-credentials-and-cached-token-impersonation"></a>Nivel de suplantación obtenido a partir de las credenciales de nombre de usuario y suplantación de token almacenado en caché  
@@ -127,16 +128,16 @@ La*suplantación* es una técnica habitual que utilizan los servicios para restr
   
 |`AllowedImpersonationLevel`|El servicio tiene `SeImpersonatePrivilege`|El servicio y el cliente tienen capacidad de delegación|`ImpersonationLevel`|  
 |---------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|N/D|Sí|Sí|Delegación|  
-|N/D|Sí|No|Suplantación|  
+|N/D|Yes|Yes|Delegación|  
+|N/D|Yes|No|Suplantación|  
 |N/D|No|N/D|Identificación|  
   
 ## <a name="impersonation-level-obtained-from-s4u-based-impersonation"></a>Nivel de suplantación obtenido de la suplantación basada en S4U  
   
 |El servicio tiene `SeTcbPrivilege`|El servicio tiene `SeImpersonatePrivilege`|El servicio y el cliente tienen capacidad de delegación|`ImpersonationLevel`|  
 |----------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|Sí|Sí|N/D|Suplantación|  
-|Sí|No|N/D|Identificación|  
+|Yes|Sí|N/D|Suplantación|  
+|Yes|No|N/D|Identificación|  
 |No|N/D|N/D|Identificación|  
   
 ## <a name="mapping-a-client-certificate-to-a-windows-account"></a>Asignación de un certificado de cliente a una cuenta de Windows  
@@ -181,7 +182,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 |-------------------------|---------------------------------------------------|---------------------------------------------------|  
 |<xref:System.Security.Principal.TokenImpersonationLevel.Identification>|No|Sin|  
 |<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>|Sí|No|  
-|<xref:System.Security.Principal.TokenImpersonationLevel.Delegation>|Sí|Sí|  
+|<xref:System.Security.Principal.TokenImpersonationLevel.Delegation>|Sí|Yes|  
   
  En el siguiente ejemplo de código se muestra cómo utilizar la delegación.  
   

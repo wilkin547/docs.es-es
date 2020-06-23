@@ -1,16 +1,17 @@
 ---
 title: Seguridad de transporte con un cliente anónimo
+description: Revise este escenario de WCF, que usa la seguridad de transporte para autenticar un servidor mediante el uso de un certificado en el que el cliente confía. El cliente no está autenticado.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
-ms.openlocfilehash: c3e44c87dfa70ac3a7acc5a83ac596efc22b6155
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 08cfb8c1a5581f17a251224430018764bed80b0f
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344760"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245016"
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>Seguridad de transporte con un cliente anónimo
 
@@ -26,13 +27,13 @@ Para obtener más información sobre el uso de un certificado con un servicio, c
 |--------------------|-----------------|
 |Modo de seguridad|Transporte|
 |Interoperabilidad|Con servicios y clientes Web existentes|
-|Autenticación (servidor)<br /><br /> Autenticación (cliente)|Sí<br /><br /> Nivel de aplicación (sin compatibilidad con WCF)|
-|Integridad|Sí|
-|Confidencialidad|Sí|
+|Autenticación (servidor)<br /><br /> Autenticación (cliente)|Yes<br /><br /> Nivel de aplicación (sin compatibilidad con WCF)|
+|Integridad|Yes|
+|Confidencialidad|Yes|
 |Transporte|HTTPS|
 |Enlace|<xref:System.ServiceModel.WSHttpBinding>|
 
-## <a name="service"></a>Service
+## <a name="service"></a>Servicio
 
 El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:
 
@@ -126,4 +127,4 @@ Se puede usar la configuración siguiente en lugar del código para configurar e
 - [Información general sobre seguridad](security-overview.md)
 - [Seguridad de transporte WS](../samples/ws-transport-security.md)
 - [Información general de la seguridad del transporte](transport-security-overview.md)
-- [Modelo de seguridad para Windows Server App fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Modelo de seguridad para Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

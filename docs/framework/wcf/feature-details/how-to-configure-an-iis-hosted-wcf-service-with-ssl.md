@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para configurar un servicio WCF hospedado en IIS con SSL
+description: Obtenga información acerca de cómo configurar un servicio WCF hospedado en IIS para utilizar la seguridad de transporte HTTP, que requiere un certificado que esté registrado en IIS.
 ms.date: 03/30/2017
 ms.assetid: df2fe31f-a4bb-4024-92ca-b74ba055e038
-ms.openlocfilehash: fb3e87021c3dce1172250f33fd302916920af74d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 8dc4692863d93e407a122c0ba93ae38323b8b213
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597233"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245263"
 ---
 # <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a>Procedimiento para configurar un servicio WCF hospedado en IIS con SSL
 En este tema se describe cómo configurar un servicio de WCF hospedado en IIS para usar la seguridad de transporte HTTP. La seguridad de transporte HTTP necesita registrar un certificado SSL con IIS. Si no tiene un certificado SSL puede usar IIS para generar un certificado de prueba. Después debe agregar un enlace SSL al sitio web y configurar las propiedades de autenticación del sitio web. Finalmente se debe configurar el servicio de WCF para usar HTTPS.  
@@ -144,7 +145,7 @@ En este tema se describe cómo configurar un servicio de WCF hospedado en IIS pa
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Hospedaje en Internet Information Services](hosting-in-internet-information-services.md)
 - [Instrucciones de hospedaje Internet Information Services](../samples/internet-information-service-hosting-instructions.md)

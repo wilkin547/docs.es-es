@@ -1,5 +1,6 @@
 ---
 title: Tipos de colección en contratos de datos
+description: Obtenga información sobre cómo el modelo de contrato de datos trata las colecciones en el .NET Framework y cómo WCF admite la serialización de datos para los tipos de colección.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-ms.openlocfilehash: a10b7c5295407cfbb36446581a4b75670e37bc6a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 83acf1f74bf3cb117f3f94743eda32d3f2cc4b82
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579754"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245185"
 ---
 # <a name="collection-types-in-data-contracts"></a>Tipos de colección en contratos de datos
 
@@ -281,8 +282,8 @@ Para las colecciones de lista, solo se admiten los casos de la tabla siguiente.
 
 |Tipo de referencia|Interfaz implementada por el tipo de referencia|Ejemplo|Tipo tratado como:|
 |---------------------|----------------------------------------------|-------------|----------------------|
-|No genérico o genérico cerrado (cualquier número de parámetros)|No genérico|`MyType : IList`<br /><br /> o bien<br /><br /> `MyType<T> : IList`<br /><br /> donde T= `int`|Genérico cerrado de `Object` (por ejemplo, `IList<object>`)|
-|No genérico o genérico cerrado (cualquier número de parámetros que no necesariamente coincide con el tipo de colección)|Genérico cerrado|`MyType : IList<string>`<br /><br /> o bien<br /><br /> `MyType<T> : IList<string>` donde T=`int`|Genérico cerrado (por ejemplo, `IList<string>`)|
+|No genérico o genérico cerrado (cualquier número de parámetros)|No genérico|`MyType : IList`<br /><br /> o<br /><br /> `MyType<T> : IList`<br /><br /> donde T= `int`|Genérico cerrado de `Object` (por ejemplo, `IList<object>`)|
+|No genérico o genérico cerrado (cualquier número de parámetros que no necesariamente coincide con el tipo de colección)|Genérico cerrado|`MyType : IList<string>`<br /><br /> o<br /><br /> `MyType<T> : IList<string>` donde T=`int`|Genérico cerrado (por ejemplo, `IList<string>`)|
 |Genérico cerrado con cualquier número de parámetros|Abrir genérico utilizando cualquiera de los parámetros del tipo|`MyType<T,U,V> : IList<U>`<br /><br /> donde T=`int`, U=`string`, V=`bool`|Genérico cerrado (por ejemplo, `IList<string>`)|
 |Genérico abierto con un parámetro|Abrir genérico utilizando el parámetro del tipo|`MyType<T> : IList<T>`, T está abierto|Genérico abierto (por ejemplo, `IList<T>`)|
 
@@ -296,9 +297,9 @@ Para las colecciones de diccionario, solo se admiten los casos de la tabla sigui
 
 |Tipo de referencia|Interfaz implementada por el tipo de referencia|Ejemplo|Tipo tratado como|
 |---------------------|----------------------------------------------|-------------|---------------------|
-|No genérico o genérico cerrado (cualquier número de parámetros)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> o bien<br /><br /> `MyType<T> : IDictionary` donde T=`int`|Genérico cerrado `IDictionary<object,object>`|
+|No genérico o genérico cerrado (cualquier número de parámetros)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> o<br /><br /> `MyType<T> : IDictionary` donde T=`int`|Genérico cerrado `IDictionary<object,object>`|
 |Genérico cerrado (cualquier número de parámetros)|<xref:System.Collections.Generic.IDictionary%602>, cerrado|`MyType<T> : IDictionary<string, bool>` donde T=`int`|Genérico cerrado (por ejemplo, `IDIctionary<string,bool>`)|
-|Genérico cerrado (cualquier número de parámetros)|<xref:System.Collections.Generic.IDictionary%602>genérico, o clave o valor está cerrado, el otro está abierto y utiliza uno de los parámetros de tipo|`MyType<T,U,V> : IDictionary<string,V>` donde T=`int`, U=`float`, V=`bool`<br /><br /> o bien<br /><br /> `MyType<Z> : IDictionary<Z,bool>` donde Z=`string`|Genérico cerrado (por ejemplo, `IDictionary<string,bool>`)|
+|Genérico cerrado (cualquier número de parámetros)|<xref:System.Collections.Generic.IDictionary%602>genérico, o clave o valor está cerrado, el otro está abierto y utiliza uno de los parámetros de tipo|`MyType<T,U,V> : IDictionary<string,V>` donde T=`int`, U=`float`, V=`bool`<br /><br /> o<br /><br /> `MyType<Z> : IDictionary<Z,bool>` donde Z=`string`|Genérico cerrado (por ejemplo, `IDictionary<string,bool>`)|
 |Genérico cerrado (cualquier número de parámetros)|<xref:System.Collections.Generic.IDictionary%602>genérico, tanto clave como valor están abiertos y cada uno utiliza uno de los parámetros del tipo|`MyType<T,U,V> : IDictionary<V,U>` donde T=`int`, U=`bool`, V=`string`|Genérico cerrado (por ejemplo, `IDictionary<string,bool>`)|
 |Genérico abierto (dos parámetros)|<xref:System.Collections.Generic.IDictionary%602>genérico, abrir, utiliza los dos parámetros genéricos del tipo en el orden que aparecen|`MyType<K,V> : IDictionary<K,V>`, tanto K como V están abiertos|Genérico abierto (por ejemplo, `IDictionary<K,V>`)|
 

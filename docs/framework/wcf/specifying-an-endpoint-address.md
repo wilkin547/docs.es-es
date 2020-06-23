@@ -1,5 +1,6 @@
 ---
 title: Especificación de una dirección de punto de conexión
+description: Obtenga información acerca de una dirección de punto de conexión, una parte de un ServiceEndpoint en WCF. Toda la comunicación con un servicio WCF se produce a través de sus extremos.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-ms.openlocfilehash: 5ec6432d2f9cc7bf8619f59bad470c6b2cb190e0
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: e1bd9e5a27d1bc86d2d3e04ee82221a27a4e1fa8
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441024"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245990"
 ---
 # <a name="specifying-an-endpoint-address"></a>Especificación de una dirección de punto de conexión
 
@@ -42,13 +43,13 @@ Al hospedarse con IIS, no administra por sí mismo las instancias <xref:System.S
 
 ## <a name="defining-endpoint-addresses-in-configuration"></a>Definición de direcciones de puntos de conexión mediante configuración
 
-Para definir un punto de conexión en un archivo de configuración, use el [ \< punto de conexión>](../configure-apps/file-schema/wcf/endpoint-element.md) elemento.
+Para definir un punto de conexión en un archivo de configuración, use el [\<endpoint>](../configure-apps/file-schema/wcf/endpoint-element.md) elemento.
 
 [!code-xml[S_UEHelloWorld#5](./snippets/specifying-an-endpoint-address/serviceapp2.config#5)]
 
-Cuando <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> se llama al método (es decir, cuando la aplicación de hospedaje intenta iniciar el servicio), el sistema busca un elemento de [ \<>de servicio](../configure-apps/file-schema/wcf/service.md) con un atributo de nombre que especifica "UE. Samples. HelloService ". Si se encuentra el elemento de [ \<>de servicio](../configure-apps/file-schema/wcf/service.md) , el sistema carga la clase especificada y crea extremos con las definiciones de extremo proporcionadas en el archivo de configuración. Este mecanismo le permite cargar e iniciar un servicio con dos líneas de código, mientras mantiene la información de enlace y dirección fuera de su código. La ventaja de este enfoque es que estas modificaciones se pueden realizar sin tener que recompilar o implementar la aplicación.
+Cuando <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> se llama al método (es decir, cuando la aplicación de hospedaje intenta iniciar el servicio), el sistema busca un [\<service>](../configure-apps/file-schema/wcf/service.md) elemento con un atributo de nombre que especifica "UE. Samples. HelloService ". Si [\<service>](../configure-apps/file-schema/wcf/service.md) se encuentra el elemento, el sistema carga la clase especificada y crea extremos con las definiciones de extremo proporcionadas en el archivo de configuración. Este mecanismo le permite cargar e iniciar un servicio con dos líneas de código, mientras mantiene la información de enlace y dirección fuera de su código. La ventaja de este enfoque es que estas modificaciones se pueden realizar sin tener que recompilar o implementar la aplicación.
 
-Los encabezados opcionales se declaran en un [ \<>de encabezados ](../configure-apps/file-schema/wcf/headers-element.md). El siguiente es un ejemplo de los elementos utilizados para especificar los extremos de un servicio en un archivo de configuración que distingue entre dos encabezados: clientes "Gold" de `http://tempuri1.org/` y clientes estándar de `http://tempuri2.org/` . El cliente que llama a este servicio debe tener los [ \< encabezados correspondientes>](../configure-apps/file-schema/wcf/headers-element.md) en su archivo de configuración.
+Los encabezados opcionales se declaran en [\<headers>](../configure-apps/file-schema/wcf/headers-element.md) . El siguiente es un ejemplo de los elementos utilizados para especificar los extremos de un servicio en un archivo de configuración que distingue entre dos encabezados: clientes "Gold" de `http://tempuri1.org/` y clientes estándar de `http://tempuri2.org/` . El cliente que llama a este servicio debe tener el adecuado [\<headers>](../configure-apps/file-schema/wcf/headers-element.md) en su archivo de configuración.
 
 [!code-xml[S_UEHelloWorld#1](./snippets/specifying-an-endpoint-address/serviceapp.config#1)]
 
@@ -86,7 +87,7 @@ Si no se especifica ningún extremo en el código ni en la configuración, el ti
 
 Si se proporcionan puntos de conexión de forma explícita, es posible agregar puntos de conexión predeterminados llamando a <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> en el objeto <xref:System.ServiceModel.ServiceHost> antes de llamar a <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. Para obtener más información sobre los puntos de conexión, enlaces y comportamientos predeterminados, vea [Configuración simplificada](simplified-configuration.md) y [Configuración simplificada de los servicios de WCF](./samples/simplified-configuration-for-wcf-services.md).
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.EndpointAddress>
 - [Identidad del servicio y autenticación](./feature-details/service-identity-and-authentication.md)

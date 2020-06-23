@@ -1,5 +1,6 @@
 ---
 title: Utilización de la clase XmlSerializer
+description: Obtenga información sobre XmlSerializer, que WCF usa para serializar los datos de la aplicación en XML que se transmite entre clientes y servicios.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-ms.openlocfilehash: 2ef2d0eefb571f64040fabd16fd65fdfde7a626d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f7473de3f34ba543b4fabfe93167ea267f16dda5
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600210"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246392"
 ---
 # <a name="using-the-xmlserializer-class"></a>Utilización de la clase XmlSerializer
 
@@ -40,7 +41,7 @@ Muchos tipos de .NET Framework se encuentran en las dos últimas categorías y, 
 
 WCF también admite la <xref:System.Xml.Serialization.XmlSerializer> clase. La <xref:System.Xml.Serialization.XmlSerializer> clase no es única para WCF. Es el mismo motor de serialización que usan los servicios Web de ASP.NET. La clase <xref:System.Xml.Serialization.XmlSerializer> admite un conjunto mucho más estrecho de tipos que la clase <xref:System.Runtime.Serialization.DataContractSerializer>, pero permite mucho más control sobre el XML resultante y admite mucho más de la norma del lenguaje de definición de esquemas XML (XSD). Tampoco necesita ningún atributo declarativo en los tipos serializables. Para obtener más información, vea el tema sobre serialización XML en la documentación de .NET Framework. La clase <xref:System.Xml.Serialization.XmlSerializer> no admite tipos de contrato de datos.
 
-Al usar SvcUtil. exe o la característica **Agregar referencia de servicio** de Visual Studio para generar el código de cliente para un servicio de terceros, o para obtener acceso a un esquema de terceros, se selecciona automáticamente un serializador adecuado. Si el esquema no es compatible con <xref:System.Runtime.Serialization.DataContractSerializer>, se selecciona el <xref:System.Xml.Serialization.XmlSerializer>.
+Al usar Svcutil.exe o la característica **Agregar referencia de servicio** de Visual Studio para generar el código de cliente para un servicio de terceros, o para obtener acceso a un esquema de terceros, se selecciona automáticamente un serializador adecuado. Si el esquema no es compatible con <xref:System.Runtime.Serialization.DataContractSerializer>, se selecciona el <xref:System.Xml.Serialization.XmlSerializer>.
 
 ## <a name="manually-switching-to-the-xmlserializer"></a>Intercambio manual a XmlSerializer
 
@@ -173,7 +174,7 @@ Al importar un esquema generado a partir de los tipos `IXmlSerializable`, existe
 
 - El esquema generado puede ser un esquema de contrato de datos válido, tal como se describe en [referencia de esquema de contrato de datos](data-contract-schema-reference.md). En este caso, el esquema puede importarse como de costumbre y se generarán los tipos de contrato de datos normales.
 
-- El esquema generado no puede ser un esquema de contrato de datos válido. Por ejemplo, su método de proveedor de esquema puede generar un esquema que incluye atributos XML que no se admiten en el modelo de contrato de datos. En este caso, puede importar el esquema como tipos `IXmlSerializable`. Este modo de importación no está activado de forma predeterminada, pero se puede habilitar fácilmente; por ejemplo, con el `/importXmlTypes` modificador de la línea de comandos para la [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md). Esto se describe en detalle en el [esquema de importación para generar clases](importing-schema-to-generate-classes.md). Tenga en cuenta que debe trabajar directamente con XML para sus instancias de tipo. También puede considerar la utilización de una tecnología de serialización diferente que admita una gama más amplia de esquemas. Vea el tema acerca de la utilización del `XmlSerializer`.
+- El esquema generado no puede ser un esquema de contrato de datos válido. Por ejemplo, su método de proveedor de esquema puede generar un esquema que incluye atributos XML que no se admiten en el modelo de contrato de datos. En este caso, puede importar el esquema como tipos `IXmlSerializable`. Este modo de importación no está activado de forma predeterminada, pero se puede habilitar fácilmente; por ejemplo, con el `/importXmlTypes` modificador de línea de comandos para la [herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md). Esto se describe en detalle en el [esquema de importación para generar clases](importing-schema-to-generate-classes.md). Tenga en cuenta que debe trabajar directamente con XML para sus instancias de tipo. También puede considerar la utilización de una tecnología de serialización diferente que admita una gama más amplia de esquemas. Vea el tema acerca de la utilización del `XmlSerializer`.
 
 - Puede desear volver a usar sus tipos `IXmlSerializable` existentes en el proxy en lugar de generar nuevos. En este caso, la característica de tipos a la cual s se hace referencia descrita en el tema Esquema de Importación para generar Tipos se puede utilizar para indicar el tipo que se reutilizará. Esto se corresponde con el uso del modificador `/reference` en svcutil.exe, que especifica el ensamblado que contiene los tipos que se van a volver a usar.
 
@@ -218,7 +219,7 @@ Como alternativa a la configuración anterior, puede usar la configuración sigu
 > [!NOTE]
 > El `<xmlSerializer useLegacySerializerGeneration="true"/>` modificador solo funciona en un equipo que ejecute .NET Framework 4,5 o una versión posterior. El `appSettings` enfoque anterior funciona en todas las versiones .NET Framework.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.ServiceModel.DataContractFormatAttribute>
 - <xref:System.Runtime.Serialization.DataContractSerializer>
