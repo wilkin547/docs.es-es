@@ -1,19 +1,20 @@
 ---
 title: Configuración de los comportamientos del cliente
+description: 'Obtenga información sobre las dos formas en que WCF configura los comportamientos: en el archivo de configuración de la aplicación o mediante programación desde la aplicación que realiza la llamada.'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: df5b32fa-e73b-4e8e-b66f-357c748e0173
-ms.openlocfilehash: ca466af71f62ef72e021753b132afdc847f75d76
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 4b83862221cf249455478c3ade159a3101062f3e
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320693"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245445"
 ---
 # <a name="configuring-client-behaviors"></a>Configuración de los comportamientos del cliente
-Windows Communication Foundation (WCF) configura los comportamientos de dos maneras: mediante la referencia a las configuraciones de comportamiento, que se definen en la sección `<behavior>` de un archivo de configuración de la aplicación cliente, o mediante programación en la aplicación que realiza la llamada. En este tema se describen ambos métodos.  
+Windows Communication Foundation (WCF) configura los comportamientos de dos maneras: mediante la referencia a las configuraciones de comportamiento, que se definen en la `<behavior>` sección de un archivo de configuración de la aplicación cliente, o mediante programación en la aplicación que realiza la llamada. En este tema se describen ambos métodos.  
   
  Al usar un archivo de configuración, la configuración del comportamiento es una colección con nombre de valores de configuración. El nombre de cada configuración de comportamiento debe ser único. Esta cadena se usa en el atributo `behaviorConfiguration` de una configuración de punto de conexión para vincular el punto de conexión al comportamiento.  
   
@@ -43,7 +44,7 @@ Windows Communication Foundation (WCF) configura los comportamientos de dos mane
 ```  
   
 ## <a name="using-behaviors-programmatically"></a>Uso de comportamientos mediante programación  
- También puede configurar o insertar comportamientos mediante programación localizando la propiedad `Behaviors` adecuada en el objeto de cliente Windows Communication Foundation (WCF) o en el objeto de generador de canales de cliente antes de abrir el cliente.  
+ También puede configurar o insertar comportamientos mediante programación localizando la `Behaviors` propiedad adecuada en el objeto de cliente Windows Communication Foundation (WCF) o en el objeto de generador de canales de cliente antes de abrir el cliente.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo de código siguiente se muestra cómo insertar un comportamiento mediante programación teniendo acceso a la propiedad <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> en el <xref:System.ServiceModel.Description.ServiceEndpoint> devuelto por la propiedad <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> antes de la creación del objeto del canal.  

@@ -1,18 +1,19 @@
 ---
-title: 'Cómo: Implementar una operación de servicios asincrónica'
+title: Procedimiento para implementar una operación de servicios asincrónica
+description: Obtenga información sobre la estructura de una operación de servicio asincrónica en WFC. Una operación de servicio se puede implementar de forma asincrónica o sincrónica.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 4e5d2ea5-d8f8-4712-bd18-ea3c5461702c
-ms.openlocfilehash: fd7a1399dd575ad1a4b6c95e0e0510670eb13b51
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 5f890bd5124e2353cecee37d163b7f2c65b87fde
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802297"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244627"
 ---
-# <a name="how-to-implement-an-asynchronous-service-operation"></a>Cómo: Implementar una operación de servicios asincrónica
+# <a name="how-to-implement-an-asynchronous-service-operation"></a>Procedimiento para implementar una operación de servicios asincrónica
 En las aplicaciones Windows Communication Foundation (WCF), una operación de servicio se puede implementar de forma asincrónica o sincrónica sin indicar al cliente cómo llamarla. Por ejemplo, se puede llamar a las operaciones de servicio asincrónicas de forma sincrónica y se puede llamar a las operaciones de servicio sincrónicamente. Para obtener un ejemplo en el que se muestra cómo llamar a una operación de forma asincrónica en una aplicación cliente, vea [Cómo: llamar a operaciones de servicio de forma asincrónica](./feature-details/how-to-call-wcf-service-operations-asynchronously.md). Para obtener más información sobre las operaciones sincrónicas y asincrónicas, vea [diseñar contratos de servicio](designing-service-contracts.md) y [operaciones sincrónicas y asincrónicas](synchronous-and-asynchronous-operations.md). En este tema se describe la estructura básica de una operación de servicio asincrónica, el código no está completo. Para obtener un ejemplo completo de los lados del servicio y del cliente, consulte [asincrónica](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms751505(v=vs.100)).  
   
 ### <a name="implement-a-service-operation-asynchronously"></a>Implementación de una operación de servicio de manera asincrónica  
@@ -38,7 +39,7 @@ En las aplicaciones Windows Communication Foundation (WCF), una operación de se
   
     2. Una operación `BeginSampleMethod` asincrónica.  
   
-    3. `BeginServiceAsyncMethod`asincrónico /par de operaciones `EndServiceAsyncMethod`.  
+    3. Un par de `BeginServiceAsyncMethod` / `EndServiceAsyncMethod` operación asincrónica.  
   
 2. Una implementación de servicio mediante un objeto <xref:System.IAsyncResult?displayProperty=nameWithType>.  
   
@@ -47,5 +48,5 @@ En las aplicaciones Windows Communication Foundation (WCF), una operación de se
   
 ## <a name="see-also"></a>Vea también
 
-- [Diseño de contratos de servicio](designing-service-contracts.md)
+- [Diseño de contratos de servicios](designing-service-contracts.md)
 - [Operaciones sincrónicas y asincrónicas](synchronous-and-asynchronous-operations.md)

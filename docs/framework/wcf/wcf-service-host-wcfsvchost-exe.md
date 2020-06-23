@@ -1,17 +1,18 @@
 ---
 title: Host de servicio WCF (WcfSvcHost.exe)
+description: Use el host de servicio WCF para hospedar y probar un servicio que ha implementado. Puede probar el servicio mediante el cliente de prueba WCF o su propio cliente.
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: b8fb32111a80178f5eb92411eb4990decb645bb6
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: efc9512766d2a9cc814083ab632226d98917bf4e
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837745"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245731"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>Host de servicio WCF (WcfSvcHost.exe)
 
-El host de servicio de Windows Communication Foundation (WCF) (WcfSvcHost. exe) permite iniciar el depurador de Visual Studio (F5) para hospedar y probar automáticamente un servicio implementado. Después, puede probar el servicio mediante el cliente de prueba de WCF (WcfTestClient. exe) o su propio cliente, para buscar y corregir los posibles errores.
+El host de servicio de Windows Communication Foundation (WCF) (WcfSvcHost.exe) permite iniciar el depurador de Visual Studio (F5) para hospedar y probar automáticamente un servicio implementado. Después, puede probar el servicio mediante el cliente de prueba WCF (WcfTestClient.exe), o su propio cliente, para buscar y corregir los posibles errores.
 
 ## <a name="wcf-service-host"></a>Host de servicio de WCF
 
@@ -51,7 +52,7 @@ Para asegurarse de que se usa el cliente de prueba WCF, haga clic con el botón 
 
 #### <a name="using-a-custom-client"></a>Utilizar un cliente personalizado
 
-Para usar un cliente personalizado, haga clic con el botón derecho en el proyecto en el **Explorador de soluciones** en Visual Studio, seleccione **propiedades**y, a continuación, seleccione la pestaña **depurar** . Haga clic en **iniciar proyecto** y modifique el parámetro `/client` en el cuadro de diálogo argumentos de la **línea de comandos** para que apunte al cliente personalizado, como se indica en el ejemplo siguiente.
+Para usar un cliente personalizado, haga clic con el botón derecho en el proyecto en el **Explorador de soluciones** en Visual Studio, seleccione **propiedades**y, a continuación, seleccione la pestaña **depurar** . Haga clic en **iniciar proyecto** y edite el `/client` parámetro en el cuadro de diálogo argumentos de la **línea de comandos** para que apunte al cliente personalizado, tal y como se indica en el ejemplo siguiente.
 
 `/client:"path/CustomClient.exe"`
 
@@ -111,16 +112,16 @@ Puede cerrar el host de servicio WCF de las cuatro maneras siguientes:
 
 ## <a name="using-service-host-without-administrator-privilege"></a>Uso del host de servicio sin privilegios de administrador
 
-Para permitir que los usuarios sin privilegios de administrador desarrollen servicios WCF, se crea una ACL (lista de Access Control) para el espacio de nombres "http://+:8731/Design_Time_Addresses" durante la instalación de Visual Studio. La ACL se establece en la interfaz de usuario (UI), en la que se incluyen todos los usuarios interactivos que iniciaron sesión en el equipo. Los administradores pueden agregar o quitar usuarios de esta ACL o abrir puertos adicionales. Esta ACL permite a los usuarios utilizar el host automático del servicio WCF (wcfSvcHost. exe) sin concederles privilegios de administrador.
+Para permitir que los usuarios sin privilegios de administrador desarrollen servicios WCF, se crea una ACL (lista de Access Control) para el espacio de nombres " http://+:8731/Design_Time_Addresses " durante la instalación de Visual Studio. La ACL se establece en la interfaz de usuario (UI), en la que se incluyen todos los usuarios interactivos que iniciaron sesión en el equipo. Los administradores pueden agregar o quitar usuarios de esta ACL o abrir puertos adicionales. Esta ACL permite a los usuarios utilizar el host automático del servicio WCF (wcfSvcHost.exe) sin concederles privilegios de administrador.
 
-Puede modificar el acceso mediante la herramienta netsh. exe en Windows Vista con la cuenta de administrador con privilegios elevados. El siguiente ejemplo muestra la utilización de netsh.exe.
+Puede modificar el acceso mediante la herramienta de netsh.exe de Windows Vista con la cuenta de administrador con privilegios elevados. El siguiente ejemplo muestra la utilización de netsh.exe.
 
 ```console
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
 ```
 
-Para obtener más información acerca de Netsh. exe, vea el tema sobre[Cómo utilizar la herramienta netsh. exe y los modificadores de la línea de comandos](https://docs.microsoft.com/previous-versions/tn-archive/bb490939(v=technet.10)).
+Para obtener más información sobre netsh.exe, vea[el tema sobre cómo usar la herramienta de Netsh.exe y los modificadores de línea de comandos](https://docs.microsoft.com/previous-versions/tn-archive/bb490939(v=technet.10)).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Cliente de prueba de WCF (WcfTestClient.exe)](wcf-test-client-wcftestclient-exe.md)

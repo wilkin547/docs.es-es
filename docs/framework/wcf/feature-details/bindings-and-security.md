@@ -1,5 +1,6 @@
 ---
 title: Enlaces y seguridad
+description: Averigüe cómo seleccionar el enlace adecuado para sus necesidades de seguridad. Los enlaces proporcionados por el sistema que se incluyen con WCF proporcionan una forma rápida de programar aplicaciones WCF.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], security
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: 0c41f357d63158979e448c2cc36f1e80b74b18d4
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e012ec9ad340c74f5bc776cfc6d8b88326210fec
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587513"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245340"
 ---
 # <a name="bindings-and-security"></a>Enlaces y seguridad
 
@@ -202,14 +203,14 @@ La tabla siguiente hace una lista de los enlaces que admiten los diversos ajuste
 
 |Enlace|Compatibilidad del modo de transporte|Compatibilidad del modo de mensaje|Compatibilidad con TransportWithMessageCredential|
 |-------------|----------------------------|--------------------------|--------------------------------------------|
-|`BasicHttpBinding`|Sí|Sí|Sí|
-|`WSHttpBinding`|Sí|Sí|Sí|
+|`BasicHttpBinding`|Yes|Yes|Yes|
+|`WSHttpBinding`|Yes|Yes|Sí|
 |`WSDualHttpBinding`|No|Sí|No|
-|`NetTcpBinding`|Sí|Sí|Sí|
+|`NetTcpBinding`|Sí|Yes|Yes|
 |`NetNamedPipeBinding`|Sí|No|No|
 |`NetMsmqBinding`|Sí|Sí|No|
 |`MsmqIntegrationBinding`|Sí|No|No|
-|`wsFederationHttpBinding`|No|Sí|Sí|
+|`wsFederationHttpBinding`|No|Sí|Yes|
 
 ## <a name="transport-credentials-in-bindings"></a>Credenciales de transporte en los enlaces
 

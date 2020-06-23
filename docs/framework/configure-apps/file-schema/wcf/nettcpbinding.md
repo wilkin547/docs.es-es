@@ -1,15 +1,16 @@
 ---
 title: <netTcpBinding>
+description: Representa un enlace seguro, confiable y optimizado diseñado únicamente para la comunicación entre equipos de WCF mediante TCP. La mensajería de confianza está desactivada de forma predeterminada.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - netTcpBinding Element
 ms.assetid: 5c5104a7-8754-4335-8233-46a45322503e
-ms.openlocfilehash: c43c141093c8287adb6d5a841a43ac893deefccd
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 95c2c691bf328050f3d189c790d111d2fdeb1bb0
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74139346"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244002"
 ---
 # \<netTcpBinding>
 
@@ -147,7 +148,7 @@ El enlace se especifica en los archivos de configuración para el cliente y serv
 </bindings>
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.NetTcpBinding>
 - <xref:System.ServiceModel.Configuration.NetTcpBindingElement>

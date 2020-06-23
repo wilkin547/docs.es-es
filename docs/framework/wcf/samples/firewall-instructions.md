@@ -1,13 +1,14 @@
 ---
 title: Instrucciones de firewall
+description: Obtenga información acerca de cómo habilitar puertos o programas en el firewall para ejemplos de WCF. Use uno de estos procedimientos, en función de sus requisitos y del entorno de seguridad.
 ms.date: 03/30/2017
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
-ms.openlocfilehash: 343fa695039f6767f6ab33daa4e3cc51e8db5e47
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: de55d067960b8f2096c129f6feaf037219e06a96
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899643"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246147"
 ---
 # <a name="firewall-instructions"></a>Instrucciones de Firewall
 
@@ -26,16 +27,16 @@ Si no está seguro de qué procedimiento utilizar, elija la primera opción. Si 
 
 ## <a name="enable-samples-programs-in-advance"></a>Habilitar programas de ejemplo de antemano
 
-1. Cree el ejemplo.
+1. Compile el ejemplo.
 
-2. Elija **inicio** > **ejecutar**y escriba `firewall.cpl`. Se abrirá el applet **Panel de control del firewall de Windows** .
+2. Elija **iniciar**  >  **ejecución**y escriba `firewall.cpl` . Se abrirá el applet **Panel de control del firewall de Windows** .
 
     > [!NOTE]
     > Debe tener permiso para cambiar los valores del Firewall para ejecutar los ejemplos que requieren la capacidad de comunicarse a través de Firewall de Windows. Si algunas configuraciones de firewall no están disponibles y su equipo está conectado a un dominio, el administrador del sistema podría estar controlando estos valores a través de Directiva de grupo.
 
 3. Complete uno de los siguientes pasos específicos del funcionamiento para permitir un programa a través de Firewall de Windows:
 
-    - En Windows 7 o Windows Server 2008 R2, haga clic en **permitir un programa o una característica a través de Firewall de Windows**. Haga clic en **Cambiar configuración** > **permitir otro programa**.
+    - En Windows 7 o Windows Server 2008 R2, haga clic en **permitir un programa o una característica a través de Firewall de Windows**. Haga clic en **Cambiar configuración**  >  **permitir otro programa**.
 
     - En Windows Vista o Windows Server 2008, haga clic en **permitir un programa a través de Firewall de Windows**.
 
@@ -49,7 +50,7 @@ Si no está seguro de qué procedimiento utilizar, elija la primera opción. Si 
 
 ## <a name="enable-a-port-range-in-advance"></a>Habilitación de un intervalo de puertos de antemano
 
-1. Elija **inicio** > **ejecutar**y escriba `firewall.cpl`. Se abrirá el applet **Panel de control del firewall de Windows** .
+1. Elija **iniciar**  >  **ejecución**y escriba `firewall.cpl` . Se abrirá el applet **Panel de control del firewall de Windows** .
 
 2. En Windows 7 o Windows Server 2008 R2, siga estos pasos.
 
@@ -69,7 +70,7 @@ Si no está seguro de qué procedimiento utilizar, elija la primera opción. Si 
 
     8. Seleccione **dominio** y **privado**y haga clic en **siguiente**.
 
-    9. Asigne a esta regla el nombre `WCF-WF 4.0 Samples`y haga clic en **Finalizar**.
+    9. Asigne un nombre `WCF-WF 4.0 Samples` a esta regla y haga clic en **Finalizar**.
 
     10. Haga clic en **reglas de salida** y repita los pasos de c a h.
 

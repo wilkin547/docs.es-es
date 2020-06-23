@@ -1,15 +1,16 @@
 ---
 title: <basicHttpBinding>
+description: Define un enlace que un servicio WCF puede usar para configurar y exponer puntos de conexión para comunicarse con los servicios que se ajustan al perfil básico de WS-I 1,1.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - basicHttpBinding Element
 ms.assetid: 85cf1a4f-26c2-48c7-bda6-6c960d5d3fb3
-ms.openlocfilehash: ab8dca7f7065d7c174e38ad3a88ea15e39351bed
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5b2ce1973966468107d7aa4de545a976c67b13ed
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84202042"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244028"
 ---
 # \<basicHttpBinding>
 Representa un enlace que un servicio Windows Communication Foundation (WCF) puede usar para configurar y exponer puntos de conexión que puedan comunicarse con servicios web basados en ASMX y clientes y otros servicios que cumplan con WS-I Basic Profile 1.1.  
@@ -171,7 +172,7 @@ Representa un enlace que un servicio Windows Communication Foundation (WCF) pued
   
  Para obtener más información sobre la configuración predeterminada y los enlaces y comportamientos sin nombre, vea [configuración simplificada](../../../wcf/simplified-configuration.md) y [configuración simplificada para servicios WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Channels.Binding>
 - <xref:System.ServiceModel.Channels.BindingElement>

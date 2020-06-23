@@ -1,16 +1,17 @@
 ---
-title: Hospedaje de un servicio WCF en una aplicación administrada
+title: Procedimiento para hospedar un servicio WCF en una aplicación administrada
+description: Obtenga información acerca de cómo hospedar un servicio WCF dentro de una aplicación administrada mediante la creación de un servicio autohospedado y su prueba.
 ms.date: 09/17/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5eb29db0-b6dc-4e77-8c68-0a62f79d743b
-ms.openlocfilehash: e3adcad6ba70aa64b797325cd45a043301d7e680
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 7d1d61b683f60a6c643d2a2f03d367a6ae6c6c15
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320976"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246173"
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-app"></a>Cómo: hospedar un servicio WCF en una aplicación administrada
 
@@ -28,9 +29,9 @@ El siguiente procedimiento muestra cómo implementar un servicio autohospedado e
 
 1. Cree una nueva aplicación de consola:
 
-   1. Abra Visual Studio y seleccione **nuevo** > **proyecto** en el menú **archivo** .
+   1. Abra Visual Studio y seleccione **nuevo**  >  **proyecto** en el menú **archivo** .
 
-   2. En la lista **plantillas instaladas** , **Seleccione C# visual** o **Visual Basic**y, a continuación, seleccione **escritorio de Windows**.
+   2. En la lista **plantillas instaladas** , seleccione **Visual C#** o **Visual Basic**y, a continuación, seleccione **escritorio de Windows**.
 
    3. Seleccione la plantilla **aplicación de consola** . Escriba `SelfHost` en el cuadro **nombre** y, a continuación, elija **Aceptar**.
 
@@ -65,16 +66,16 @@ El siguiente procedimiento muestra cómo implementar un servicio autohospedado e
     > [!NOTE]
     > En este ejemplo se usan puntos de conexión predeterminados, y este servicio no requiere ningún archivo de configuración. Si no se configura ningún extremo, el tiempo de ejecución crea uno para cada dirección base de cada contrato de servicio implementado por el servicio. Para obtener más información sobre los puntos de conexión predeterminados, vea [configuración simplificada](simplified-configuration.md) y [configuración simplificada para servicios WCF](./samples/simplified-configuration-for-wcf-services.md).
 
-7. Presione **Ctrl**+**Shift**+**B** para compilar la solución.
+7. Presione **Ctrl** + **MAYÚS** + **B** para compilar la solución.
 
 ## <a name="test-the-service"></a>Probar el servicio
 
-1. Presione **Ctrl**+**F5** para ejecutar el servicio.
+1. Presione **Ctrl** + **F5** para ejecutar el servicio.
 
 2. Abra el **cliente de prueba WCF**.
 
     > [!TIP]
-    > Para abrir el **cliente de prueba WCF**, abra símbolo del sistema para desarrolladores para Visual Studio y ejecute **WcfTestClient. exe**.
+    > Para abrir el **cliente de prueba WCF**, abra símbolo del sistema para desarrolladores para Visual Studio y ejecute **WcfTestClient.exe**.
 
 3. Seleccione **Agregar servicio** en el menú **archivo** .
 
@@ -99,7 +100,7 @@ El siguiente ejemplo crea un objeto <xref:System.ServiceModel.ServiceHost> para 
 - <xref:System.Uri>
 - <xref:System.Configuration.ConfigurationManager.AppSettings%2A>
 - <xref:System.Configuration.ConfigurationManager>
-- [Cómo: hospedar un servicio WCF en IIS](./feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [Procedimiento para hospedar un servicio WCF en IIS](./feature-details/how-to-host-a-wcf-service-in-iis.md)
 - [Probar internamente](./samples/self-host.md)
 - [Servicios de hospedaje](hosting-services.md)
 - [Cómo definir un contrato de servicios](how-to-define-a-wcf-service-contract.md)

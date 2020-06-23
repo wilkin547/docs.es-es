@@ -1,13 +1,14 @@
 ---
 title: WCF y ASP.NET Web API
+description: Obtenga información acerca de si WCF o el ASP.NET Web API son más adecuados para sus necesidades mediante la comparación de las características principales de cada tecnología.
 ms.date: 03/30/2017
 ms.assetid: 08ceded3-fd9a-4467-9715-c4cbd9c7228e
-ms.openlocfilehash: e058b2ea5e9188c365c679ae46c4d7c9de45e4b9
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: de8d1905866c860da96983c2f3d52599e3342403
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452570"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245974"
 ---
 # <a name="wcf-and-aspnet-web-api"></a>WCF y ASP.NET Web API
 WCF es el modelo de programación unificado de Microsoft para compilar aplicaciones orientadas a servicios. Permite a los desarrolladores compilar soluciones de transacción seguras y confiables que se integran en diferentes plataformas y que interactúan con las inversiones existentes. [ASP.net web API](https://www.asp.net/web-api) es un marco que facilita la creación de servicios http que llegan a una amplia gama de clientes, incluidos exploradores y dispositivos móviles. ASP.NET Web API es una plataforma ideal para compilar aplicaciones de RESTful en .NET Framework. En este tema se incluyen indicaciones para ayudarle a decidir qué tecnología se adapta mejor a sus necesidades.  
@@ -26,7 +27,7 @@ WCF es el modelo de programación unificado de Microsoft para compilar aplicacio
   
  Use WCF para crear servicios Web confiables y seguros a los que se pueda tener acceso a través de diversos transportes. Use ASP.NET Web API para crear servicios basados en HTTP que sean accesibles desde una gran variedad de clientes. Use ASP.NET Web API si crea y diseña nuevos servicios de tipo REST. Aunque WCF proporciona cierta compatibilidad para escribir servicios de tipo REST, la compatibilidad para REST en ASP.NET Web API es más completa y todas las futuras mejoras de las características de REST se llevarán a cabo en ASP.NET Web API. Si ya tiene un servicio WCF y quiere exponer extremos de REST adicionales, use WCF y <xref:System.ServiceModel.WebHttpBinding>.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [¿Qué es Windows Communication Foundation?](whats-wcf.md)
 - [Conceptos básicos de Windows Communication Foundation](fundamental-concepts.md)

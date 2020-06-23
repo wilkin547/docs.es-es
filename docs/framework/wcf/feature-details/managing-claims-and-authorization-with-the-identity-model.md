@@ -1,5 +1,6 @@
 ---
 title: Administración de notificaciones y autorización con el modelo de identidad
+description: Obtenga información sobre los principales conceptos de programación del modelo de identidad de WCF, un modelo basado en notificaciones para realizar la autorización.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authorization [WCF]
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: f9138102435aab07e5c1771ce5dba85bacbcac99
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0d5687f8ac5021c008254f0f5cc453eda5e538c7
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586356"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245133"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Administración de notificaciones y autorización con el modelo de identidad
 La autorización es el proceso de determinar qué entidades tienen permiso para cambiar, ver o tener acceso a un recurso informático. Por ejemplo, en una empresa, solo se puede permitir a los administradores el acceso a los archivos de sus empleados. Windows Communication Foundation (WCF) admite dos mecanismos para realizar el procesamiento de la autorización. El primer mecanismo le permite controlar la autorización utilizando construcciones de Common Language Runtime (CLR). El segundo es un modelo basado en notificaciones conocido como *modelo de identidad*. WCF usa el modelo de identidad para crear notificaciones de mensajes entrantes; Las clases del modelo de identidad se pueden extender para admitir nuevos tipos de notificaciones para esquemas de autorización personalizados. En este tema se presenta información general de los conceptos de programación principales de la característica Modelo de identidad, así como una lista de las clases más importantes que la característica utiliza.  
@@ -69,13 +70,13 @@ La autorización es el proceso de determinar qué entidades tienen permiso para 
  Derecha  
  Capacidad sobre un recurso. Los derechos definidos por la API del modelo de identidad son propiedades de la clase <xref:System.IdentityModel.Claims.Rights>. Los ejemplos de derechos proporcionados por el sistema son <xref:System.IdentityModel.Claims.Rights.Identity%2A> y <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>.  
   
- Value  
+ Valor  
  Algo sobre lo que se reclama un derecho.  
   
 ## <a name="claims"></a>Notificaciones  
  El modelo de identidad es un sistema basado en notificaciones. Las notificaciones describen las funciones asociadas con alguna identidad en el sistema, a menudo un usuario de ese sistema. El conjunto de notificaciones asociado a una entidad determinada puede pensarse como clave. Las notificaciones determinadas definen la forma de esa clave, similar a una llave física utilizada para abrir una cerradura de una puerta. Las notificaciones se utilizan para obtener acceso a los recursos. El acceso a un recurso protegido determinado se determina comparando las notificaciones necesarias para tener acceso a ese recurso con las notificaciones asociadas con la entidad que intenta tener acceso.  
   
- Una notificación es la expresión de un derecho con respecto a un valor en concreto. Un derecho podría ser algo como "Lectura", "Escritura" o "Ejecutar". Un valor podría ser una base de datos, un archivo, un buzón o una propiedad. Las notificaciones también tienen un tipo de notificación. La combinación del tipo de notificación y el derecho proporciona el mecanismo para especificar las funciones con respecto al valor. Por ejemplo, una demanda de tipo "archivo", con derecho de "lectura" sobre el valor "biografía. doc", indica que la entidad con la que se asocia dicha demanda tiene acceso de lectura al archivo biografía. doc. Una demanda de tipo "Name", con el derecho "PossessProperty" sobre el valor "Martin", indica que la entidad con la que está asociada dicha demanda posee una propiedad Name con el valor "Martin".  
+ Una notificación es la expresión de un derecho con respecto a un valor en concreto. Un derecho podría ser algo como "Lectura", "Escritura" o "Ejecutar". Un valor podría ser una base de datos, un archivo, un buzón o una propiedad. Las notificaciones también tienen un tipo de notificación. La combinación del tipo de notificación y el derecho proporciona el mecanismo para especificar las funciones con respecto al valor. Por ejemplo, una demanda de tipo "archivo", con derecho de "lectura" sobre el valor "Biography.doc", indica que la entidad a la que está asociada dicha demanda tiene acceso de lectura al archivo Biography.doc. Una demanda de tipo "Name", con el derecho "PossessProperty" sobre el valor "Martin", indica que la entidad con la que está asociada dicha demanda posee una propiedad Name con el valor "Martin".  
   
  Aunque se definen varios tipos de notificación y derechos como parte del modelo de identidad, el sistema es ampliable, lo que permite a los distintos sistemas, que se crean en la parte superior de la infraestructura del modelo de identidad, definir tipos de notificación y derechos adicionales según sea necesario.  
   
@@ -130,7 +131,7 @@ La autorización es el proceso de determinar qué entidades tienen permiso para 
 ## <a name="identity-model-programming"></a>Programación del modelo de identidad  
  La tabla siguiente describe el modelo de objetos utilizado para programar las extensiones del modelo de identidad. Estas clases existen todas en los espacios de nombre <xref:System.IdentityModel.Policy> o <xref:System.IdentityModel.Claims>.  
   
-|Class|Descripción|  
+|Clase|Descripción|  
 |-----------|-----------------|  
 |Componente de autorización|Una clase del modelo de identidad que implementa la interfaz <xref:System.IdentityModel.Policy.IAuthorizationComponent>.|  
 |<xref:System.IdentityModel.Policy.IAuthorizationComponent>|Una interfaz que proporciona una única propiedad de cadena de solo lectura: ID. El valor de esta propiedad es único para cada instancia del sistema que implementa esta interfaz.|  
@@ -144,7 +145,7 @@ La autorización es el proceso de determinar qué entidades tienen permiso para 
   
  Las clases siguientes también se utilizan para la programación del modelo de identidad pero no se encuentran en los espacios de nombres <xref:System.IdentityModel.Policy> ni <xref:System.IdentityModel.Claims>.  
   
-|Class|Descripción|  
+|Clase|Descripción|  
 |-----------|-----------------|  
 |<xref:System.ServiceModel.ServiceAuthorizationManager>|Una clase que proporciona un método, <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>, para realizar las comprobaciones de autorización basadas en notificaciones para cada operación en un servicio. Debe derivar de la clase e invalidar el método.|  
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>|Una clase sellada que proporciona varias propiedades relacionadas con el comportamiento de un servicio ya que pertenece a la autorización.|  

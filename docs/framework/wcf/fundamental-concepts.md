@@ -1,5 +1,6 @@
 ---
 title: Conceptos básicos de Windows Communication Foundation
+description: Obtenga información sobre los aspectos básicos de la arquitectura de Windows Communication Foundation (WCF) con esta explicación de alto nivel.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF [WCF], concepts
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 360479a2ba17c4542d61a737856d23992296e276
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 93e75942487a1a81a8b0e8ecd8d9d666610152dc
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802315"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244685"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Conceptos básicos de Windows Communication Foundation
 
@@ -32,7 +33,7 @@ Los mensajes se envían entre puntos de conexión. Los _extremos_ son los lugare
 
 Un _punto de conexión_ describe de una manera basada en el estándar en la que se deben enviar los mensajes, cómo deben enviarse y el aspecto de los mensajes. Un servicio puede exponer esta información como metadatos que los clientes pueden procesar para generar los clientes de WCF y las _pilas_de comunicación adecuados.
 
-### <a name="communication-protocols"></a>Protocolos de comunicación
+### <a name="communication-protocols"></a>Protocolos de comunicaciones
 
 Un elemento obligatorio de la pila de comunicación es el _Protocolo de transporte_. Los mensajes se pueden enviar a través de intranets e Internet utilizando transportes comunes, como HTTP y TCP. Otros transportes incluidos admiten la comunicación con aplicaciones Message Queuing (MSMQ) y nodos en una malla de redes del mismo nivel. Se pueden agregar más mecanismos de transporte mediante los puntos de extensión integrados de WCF.
 
@@ -60,8 +61,8 @@ Otros conceptos y términos que se usan en la documentación de WCF son los sigu
 **Servicio**  
  Construcción que expone uno o más extremos, y en la que cada extremo expone una o más operaciones de servicio.
 
-**Extremo**  
- Construcción en la que se envían o reciben mensajes (o ambos). Comprende una ubicación (una dirección) que define dónde se pueden enviar los mensajes, una especificación del mecanismo de comunicación (un enlace) que describe cómo se deben enviar los mensajes y una definición de un conjunto de mensajes que se pueden enviar o recibir (o ambos) en ese Location (un contrato de servicio) que describe qué mensaje se puede enviar.
+**Punto de conexión**  
+ Construcción en la que se envían o reciben mensajes (o ambos). Comprende una ubicación (una dirección) que define dónde se pueden enviar los mensajes, una especificación del mecanismo de comunicación (un enlace) que describe cómo se deben enviar los mensajes y una definición de un conjunto de mensajes que se pueden enviar o recibir (o ambos) en esa ubicación (un contrato de servicio) que describe qué mensaje se puede enviar.
 
 Un servicio de WCF se expone al mundo como una colección de extremos.
 
@@ -80,17 +81,17 @@ La dirección del extremo le permite crear direcciones únicas de extremos para 
 HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
 ```
 
-**Enlaces**  
+**Enlace**  
  Define cómo se comunica un punto de conexión con el mundo. Consta de un conjunto de componentes llamados elementos de enlace que se "apilan" uno sobre el otro para crear la infraestructura de comunicaciones. Como mínimo, un enlace define el transporte (como HTTP o TCP) y la codificación utilizada (por ejemplo, de texto o binaria). Un enlace puede contener elementos de enlace que especifican detalles, por ejemplo los mecanismos de seguridad utilizados para proteger los mensajes o el patrón de mensaje utilizado por un extremo. Para obtener más información, vea [configuración de servicios](configuring-services.md).
 
 **Elemento de enlace**  
  Representa una parte determinada del enlace, por ejemplo un transporte, una codificación, una implementación de un protocolo del nivel de infraestructura (como WS-ReliableMessaging), o cualquier otro componente de la pila de comunicaciones.
 
-**Comportamientos**  
+**Determinados**  
  Componente que controla varios aspectos del tiempo de ejecución de un servicio, un punto de conexión, una operación determinada o un cliente. Los comportamientos están agrupados en función del ámbito: los comportamientos comunes afectan globalmente a todos los puntos de conexión, los comportamientos de servicios sólo afectan a los aspectos relacionados con servicios, los comportamientos de puntos de conexión sólo afectan a las propiedades relacionadas con los puntos de conexión y los comportamientos de operaciones afectan a las operaciones determinadas. Por ejemplo, un comportamiento del servicio está limitando que especifica cómo un servicio reacciona cuando un exceso de mensajes amenaza agobiar sus funciones del control. Un comportamiento de extremos, por otro lado, solo controla los aspectos relacionados con los extremos, como, por ejemplo, cómo y dónde encontrar una credencial de seguridad.
 
 **Enlaces proporcionados por el sistema**  
- WCF incluye varios enlaces proporcionados por el sistema. Éstas son colecciones de elementos de enlace optimizados para escenarios concretos. Por ejemplo, la <xref:System.ServiceModel.WSHttpBinding> está diseñada para la interoperabilidad con servicios que implementan diversas especificaciones de WS-\*. Estos enlaces predefinidos ahorran tiempo al presentar sólo las opciones que se pueden aplicar correctamente al escenario en cuestión. Si un enlace predefinido no cumple sus requisitos, puede crear su propio enlace personalizado.
+ WCF incluye varios enlaces proporcionados por el sistema. Éstas son colecciones de elementos de enlace optimizados para escenarios concretos. Por ejemplo, <xref:System.ServiceModel.WSHttpBinding> está diseñado para la interoperabilidad con servicios que implementan varias \* Especificaciones de WS. Estos enlaces predefinidos ahorran tiempo al presentar sólo las opciones que se pueden aplicar correctamente al escenario en cuestión. Si un enlace predefinido no cumple sus requisitos, puede crear su propio enlace personalizado.
 
 **Configuración frente a codificación**  
  El control de una aplicación puede realizarse mediante codificación, configuración o a mediante una combinación de ambas. La configuración tiene la ventaja de que permite a alguien que no sea el programador (por ejemplo, un administrador de redes) establecer parámetros de servicio y de cliente después de que el código se haya escrito y sin necesidad de recompilar. La configuración no sólo permite establecer valores como las direcciones de los extremos, sino que también proporciona un control adicional al permitir la agregación de extremos, enlaces y comportamientos. La codificación permite al desarrollador retener un control estricto sobre todos los componentes del servicio o cliente, y cualquier ajuste realizado a través de la configuración se puede inspeccionar y, si fuese necesario, podría invalidarse mediante el código.
@@ -101,7 +102,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
 **Contrato de servicio**  
  Une varias operaciones relacionadas en una unidad funcional única. El contrato puede definir ajustes del nivel de servicio, como el espacio de nombres del servicio, un contrato de devolución de llamadas correspondiente y otros ajustes de este tipo. En la mayoría de los casos, el contrato se define mediante la creación de una interfaz en el lenguaje de programación que elija y la aplicación del atributo <xref:System.ServiceModel.ServiceContractAttribute> a la interfaz. El código de servicio real se obtiene al implementar la interfaz.
 
-**Contrato de operación**  
+**Contrato de la operación**  
  Un contrato de operación define los parámetros y el tipo de valor devuelto de una operación. Al crear una interfaz que define el contrato de servicio, se significa un contrato de operación mediante la aplicación del atributo <xref:System.ServiceModel.OperationContractAttribute> a cada definición de método que forma parte del contrato. Las operaciones se pueden modelar para que acepten un único mensaje y devuelvan también un único mensaje, o para que acepten un conjunto de tipos y devuelvan un tipo. En el último caso, el sistema determinará el formato de los mensajes que han de intercambiarse para esa operación.
 
 **Contrato de mensaje**  
@@ -122,7 +123,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
 **Proceso de hospedaje**  
  Aplicación diseñada para hospedar servicios. Entre ellos se incluyen Internet Information Services (IIS), Windows Activation Services (WAS) y Windows Services. En estos escenarios hospedados, el host controla la duración del servicio. Por ejemplo, mediante IIS puede configurar un directorio virtual que contenga el ensamblado del servicio y el archivo de configuración. Cuando se recibe un mensaje, IIS inicia el servicio y controla su duración.
 
-**Creación de instancias**  
+**Instancing**  
  Un servicio tiene un modelo de creación de instancias. Hay tres modelos de creación de instancias: "único" en el que un objeto CLR único repara todos los clientes; "por llamada", en el que un nuevo objeto CLR se crea para administrar cada llamada de cliente; y "por sesión", en el que se crea un conjunto de objetos CLR, uno para cada sesión individual. Para elegir un modelo de creación de instancias se han de tener en cuenta los requisitos de aplicación y el patrón de uso esperado del servicio.
 
 **Aplicación cliente**  
@@ -131,20 +132,20 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
 **Canal**  
  Implementación concreta de un elemento de enlace. El enlace representa la configuración, y el canal es la implementación asociada a esa configuración. Por consiguiente, hay un canal asociado a cada elemento de enlace. Los canales se apilan uno sobre otro para crear la implementación concreta del enlace: la pila de canales.
 
-**Cliente WCF**  
- Una construcción de aplicación cliente que expone las operaciones de servicio como métodos (en el .NET Framework lenguaje de programación de su elección, como Visual Basic o visual C#). Cualquier aplicación puede hospedar a un cliente de WCF, incluso una aplicación que hospede un servicio. Por tanto, es posible crear un servicio que incluya clientes de WCF de otros servicios.
+**cliente de WCF**  
+ Una construcción de aplicación cliente que expone las operaciones de servicio como métodos (en el lenguaje de programación .NET Framework que elija, como Visual Basic o Visual C#). Cualquier aplicación puede hospedar a un cliente de WCF, incluso una aplicación que hospede un servicio. Por tanto, es posible crear un servicio que incluya clientes de WCF de otros servicios.
 
-Un cliente WCF se puede generar automáticamente mediante la [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) y apuntarlo a un servicio en ejecución que publica los metadatos.
+Un cliente de WCF se puede generar automáticamente mediante la [herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) y apuntarlo a un servicio en ejecución que publica los metadatos.
 
-**Metadatos**  
- En un servicio, describen las características de este que tiene que comprender una entidad externa para comunicarse con él. La [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) puede consumir los metadatos para generar un cliente de WCF y la configuración adjunta que puede utilizar una aplicación cliente para interactuar con el servicio.
+**Metadata**  
+ En un servicio, describen las características de este que tiene que comprender una entidad externa para comunicarse con él. La [herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) puede consumir los metadatos para generar un cliente de WCF y la configuración adjunta que puede usar una aplicación cliente para interactuar con el servicio.
 
 Los metadatos expuestos por el servicio incluyen documentos de esquema XML, que definen el contrato de datos del servicio, y documentos WSDL, que describen los métodos del servicio.
 
 Cuando se habilita, WCFG genera automáticamente los metadatos del servicio mediante la inspección del servicio y sus puntos de conexión. Para publicar los metadatos desde un servicio, debe permitir explícitamente al comportamiento de los metadatos.
 
 **Seguridad**  
- En WCF, incluye confidencialidad (cifrado de mensajes para evitar la interceptación), integridad (los medios para la detección de alteración del mensaje), autenticación (los medios para la validación de servidores y clientes) y autorización (el control de acceso a recursos). Estas funciones se proporcionan mediante el aprovechamiento de mecanismos de seguridad existentes, como TLS sobre HTTP (también conocido como HTTPS), o mediante la implementación de una o varias de las distintas especificaciones de seguridad de WS-\*.
+ En WCF, incluye confidencialidad (cifrado de mensajes para evitar la interceptación), integridad (los medios para la detección de alteración del mensaje), autenticación (los medios para la validación de servidores y clientes) y autorización (el control de acceso a los recursos). Estas funciones se proporcionan mediante el uso de mecanismos de seguridad existentes, como TLS sobre HTTP (también conocido como HTTPS), o la implementación de una o varias especificaciones de WS- \* Security.
 
 **Modo de seguridad de transporte**  
  Especifica que los mecanismos del nivel de transporte (como HTTPS) proporcionan confidencialidad, integridad y autenticación. El uso de un transporte como HTTPS en este modo tiene la ventaja de ofrecer un mejor rendimiento. También se entiende bien debido a su predominio en Internet. La desventaja es que este tipo de seguridad se aplica por separado en cada salto en la ruta de comunicación, provocando que la comunicación sea susceptible a un ataque tipo “man in the middle”.
@@ -155,7 +156,7 @@ Cuando se habilita, WCFG genera automáticamente los metadatos del servicio medi
 **Transporte con el modo de seguridad de credenciales de mensaje**  
  Especifica el uso del nivel de transporte para proporcionar la confidencialidad, autenticación e integridad de los mensajes, mientras que cada uno de los mensajes puede contener varias credenciales (notificaciones) requeridas por parte de los receptores del mensaje.
 
-**WS-\***  
+**WS\***  
  Modo abreviado para el creciente conjunto de especificaciones de servicios Web (WS) que se implementan en WCF, tales como WS-Security, WS-ReliableMessaging, etc.
 
 ## <a name="see-also"></a>Vea también

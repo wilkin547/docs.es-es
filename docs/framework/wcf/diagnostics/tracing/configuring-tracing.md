@@ -1,15 +1,16 @@
 ---
 title: Configurar seguimiento
+description: Obtenga información acerca de cómo habilitar el seguimiento, configurar orígenes de seguimiento, establecer la propagación y el seguimiento de la actividad, y establecer agentes de escucha de seguimiento para obtener acceso a los seguimientos en WCF.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: 2fbe5b48a9405c9236923ffec268683bdf570831
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 55d701ee6769099698d2fd869a1502d94237b5a8
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579012"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245354"
 ---
 # <a name="configuring-tracing"></a>Configurar seguimiento
 En este tema se describe cómo se puede habilitar el seguimiento, configurar los orígenes de seguimiento para emitir trazas y establecer niveles de seguimiento, establecer el seguimiento y la propagación de actividades para admitir la correlación de seguimiento de un extremo a otro, y establecer escuchas de seguimiento para tener acceso a las trazas.  
@@ -32,7 +33,7 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
   
  Si usa puntos de extensibilidad de WCF como invocadores de operación personalizados, debe emitir sus propios seguimientos. Esto se debe a que, si implementa un punto de extensibilidad, WCF ya no puede emitir los seguimientos estándar en la ruta de acceso predeterminada. Si no implementa la compatibilidad con el seguimiento manual mediante la emisión de seguimientos, puede que no vea los seguimientos que espera.  
   
- Puede configurar el seguimiento editando el archivo de configuración de la aplicación (Web. config para las aplicaciones hospedadas en web o AppName. exe. config para las aplicaciones autohospedadas). A continuación se muestra un ejemplo de dicha modificación: Para obtener más información sobre esta configuración, vea la sección "configuración de agentes de escucha de seguimiento para consumir seguimientos".  
+ Puede configurar el seguimiento editando el archivo de configuración de la aplicación, ya sea Web.config para aplicaciones hospedadas en web o Appname.exe.config para aplicaciones autohospedadas. A continuación se muestra un ejemplo de dicha modificación: Para obtener más información sobre esta configuración, vea la sección "configuración de agentes de escucha de seguimiento para consumir seguimientos".  
   
 ```xml  
 <configuration>  
@@ -53,7 +54,7 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
 ```  
   
 > [!NOTE]
-> Para editar el archivo de configuración de un proyecto de servicio de WCF en Visual Studio, haga clic con el botón secundario en el archivo de configuración de la aplicación (Web. config para las aplicaciones hospedadas en web o AppName. exe. config para la aplicación autohospedada en **Explorador de soluciones**. A continuación, elija el elemento de menú contextual **Editar configuración de WCF** . Esto inicia la [herramienta editor de configuración (SvcConfigEditor. exe)](../../configuration-editor-tool-svcconfigeditor-exe.md), que permite modificar la configuración de los servicios WCF mediante una interfaz gráfica de usuario.  
+> Para editar el archivo de configuración de un proyecto de servicio de WCF en Visual Studio, haga clic con el botón derecho en el archivo de configuración de la aplicación, ya sea Web.config para aplicaciones hospedadas en web o Appname.exe.config para la aplicación autohospedada en **Explorador de soluciones**. A continuación, elija el elemento de menú contextual **Editar configuración de WCF** . Esto inicia la [herramienta editor de configuración (SvcConfigEditor.exe)](../../configuration-editor-tool-svcconfigeditor-exe.md), que le permite modificar la configuración de los servicios WCF mediante una interfaz gráfica de usuario.  
   
 ## <a name="configuring-trace-sources-to-emit-traces"></a>Configurar los orígenes de seguimiento para emitir trazas  
  WCF define un origen de seguimiento para cada ensamblado. Las escuchas definidas para ese origen tienen acceso a las trazas generadas dentro de un ensamblado. Se definen los orígenes de seguimiento siguientes:  
@@ -152,7 +153,7 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
   
 |Nivel de seguimiento|Naturaleza de los eventos seguidos|Contenido de los eventos seguidos|Eventos de los que se realiza un seguimiento|Destino del usuario|  
 |-----------------|----------------------------------|-----------------------------------|--------------------|-----------------|  
-|Off|N/D|N/D|No se emiten seguimientos.|N/D|  
+|Desactivado|N/D|N/D|No se emiten seguimientos.|N/D|  
 |Crítica|Eventos "negativos": eventos que indican un procesamiento inesperado o una condición de error.||Se registran las excepciones no controladas, incluidas las siguientes:<br /><br /> -OutOfMemoryException<br />-ThreadAbortException (el CLR invoca cualquier ThreadAbortExceptionHandler)<br />-StackOverflowException (no se puede detectar)<br />-ConfigurationErrorsException<br />-SEHException<br />-Errores de inicio de la aplicación<br />-Eventos FailFast<br />-El sistema deja de responder<br />-Mensajes dudosos: seguimientos de mensajes que provocan un error en la aplicación.|Administradores<br /><br /> Desarrolladores de aplicaciones|  
 |Error|Eventos "negativos": eventos que indican un procesamiento inesperado o una condición de error.|Se ha producido un procesamiento inesperado. La aplicación no pudo realizar una tarea como se esperaba. Sin embargo, la aplicación todavía está en funcionamiento y ejecutándose.|Se registran todas las excepciones.|Administradores<br /><br /> Desarrolladores de aplicaciones|  
 |Advertencia|Eventos "negativos": eventos que indican un procesamiento inesperado o una condición de error.|Se ha producido o puede producirse un posible problema, pero la aplicación todavía funciona correctamente. Sin embargo, puede no continuar funcionando correctamente.|-La aplicación recibe más solicitudes de las que permite la configuración de limitación.<br />-La cola receptora está cerca de su capacidad máxima configurada.<br />-Se ha superado el tiempo de espera.<br />-Se rechazan las credenciales.|Administradores<br /><br /> Desarrolladores de aplicaciones|  

@@ -1,15 +1,16 @@
 ---
 title: Ciclo de vida de programación básica
+description: Obtenga información sobre las tareas para compilar una aplicación WCF. WCF permite que las aplicaciones se comuniquen en el mismo equipo, a través de redes o en distintas plataformas de aplicaciones.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - service creation [WCF]
 ms.assetid: 7cf21bfe-23bd-46aa-8033-609f851dbf76
-ms.openlocfilehash: fe578ba3c655c9c9ea8398b9b2e4d4f974153c8e
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: c672827fff780fd263f5355520bb6ccf02bb902e
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320825"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245536"
 ---
 # <a name="basic-programming-lifecycle"></a>Ciclo de vida de programación básica
 Windows Communication Foundation (WCF) permite a las aplicaciones comunicar si están en el mismo equipo, a través de Internet o en distintas plataformas de aplicación. En este tema se describen las tareas necesarias para compilar una aplicación WCF. Para obtener una aplicación de ejemplo en funcionamiento, vea el [tutorial de introducción](getting-started-tutorial.md).  

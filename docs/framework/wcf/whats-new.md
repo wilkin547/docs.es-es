@@ -1,16 +1,17 @@
 ---
 title: Novedades de Windows Communication Foundation 4.5
+description: En este artículo se describen las características nuevas de Windows Communication Foundation (WCF) versión 4,5 y vínculos a recursos adicionales.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: b22266efe2e775acd04c400cf9da50bffab28183
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: b6ce7fe19a8d7cc00823502e322ee53a1bd0a931
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449509"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245627"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Novedades de Windows Communication Foundation 4.5
 
@@ -32,7 +33,7 @@ Para obtener más información, consulte [características de simplificación de
 
 ### <a name="contract-first-development"></a>Desarrollo de contrato primero
 
-WCF admite ahora el desarrollo de contrato primero. SvcUtil. exe tiene un modificador/serviceContract que permite generar contratos de datos y de servicio a partir de un documento WSDL.
+WCF admite ahora el desarrollo de contrato primero. El svcutil.exe tiene un modificador/serviceContract que permite generar contratos de datos y de servicio a partir de un documento WSDL.
 
 ### <a name="add-service-reference-from-a-portable-subset-project"></a>Agregar referencia de servicio desde un proyecto de subconjuntos portátiles
 
@@ -40,7 +41,7 @@ Los proyectos de subconjuntos portátiles permiten a los programadores de ensamb
 
 ### <a name="aspnet-compatibility-mode-default-changed"></a>Valor predeterminado del modo de compatibilidad de ASP.NET cambiado
 
-WCF proporciona el modo de compatibilidad de ASP.NET para conceder a los desarrolladores acceso total a las características en la canalización HTTP de ASP.NET al escribir servicios WCF. Para usar este modo, debe establecer el atributo `aspNetCompatibilityEnabled` en true en la sección [\<serviceHostingEnvironment >](../configure-apps/file-schema/wcf/servicehostingenvironment.md) de Web. config. Además, cualquier servicio de este appDomain debe tener la propiedad `RequirementsMode` en su <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> establecida en <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> o <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>. De forma predeterminada <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> ahora se establece en <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>. Para obtener más información, vea [servicios WCF y ASP.net](./feature-details/wcf-services-and-aspnet.md).
+WCF proporciona el modo de compatibilidad de ASP.NET para conceder a los desarrolladores acceso total a las características en la canalización HTTP de ASP.NET al escribir servicios WCF. Para usar este modo, debe establecer el `aspNetCompatibilityEnabled` atributo en true en la [\<serviceHostingEnvironment>](../configure-apps/file-schema/wcf/servicehostingenvironment.md) sección de web.config. Además, cualquier servicio de este appDomain debe tener la `RequirementsMode` propiedad <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> establecida en <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> o <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required> . De forma predeterminada, <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> ahora está establecido en <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> . Para obtener más información, vea [servicios WCF y ASP.net](./feature-details/wcf-services-and-aspnet.md).
 
 ### <a name="new-transport-default-values"></a>Nuevos valores de transporte predeterminados
 
@@ -78,11 +79,11 @@ WebSockets es una tecnología que proporciona comunicación bidireccional verdad
 
 En la tabla siguiente se describen los valores que han cambiado y dónde encontrar información adicional.
 
-|Propiedad|Por|Nuevo valor predeterminado|Para obtener más información, vea|
+|Propiedad.|Activado|Nuevo valor predeterminado|Para obtener más información, vea|
 |--------------|--------|-----------------|------------------------------|
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 segundos|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|12 * número de procesadores|<xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|
-|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * número de procesadores para transporte<br /><br /> 4 \* número de procesadores para SMSvcHost. exe|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A> [configurar el servicio de uso compartido de puertos net. TCP](./feature-details/configuring-the-net-tcp-port-sharing-service.md)|
+|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * número de procesadores para transporte<br /><br /> 4 \* número de procesadores para SMSvcHost.exe|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A> [Configuración del servicio de uso compartido de puertos Net.TCP](./feature-details/configuring-the-net-tcp-port-sharing-service.md)|
 |maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * número de procesadores|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|
 |receiveTimeout|SMSvcHost.exe|30 segundos|[Configuración del servicio de uso compartido de puertos Net.TCP](./feature-details/configuring-the-net-tcp-port-sharing-service.md)|
 
@@ -92,7 +93,7 @@ Para ayudar a los desarrolladores de servicios WCF nuevos y existentes a configu
 
 ## <a name="configuring-wcf-services-in-code"></a>Configurar servicios WCF en el código
 
-Windows Communication Foundation (WCF) permite a los desarrolladores configurar servicios mediante el código o los archivos de configuración. Los archivos de configuración son útiles cuando un servicio se debe configurar después de implementarse. Cuando se usan archivos de configuración, un profesional de TI solo debe actualizar el archivo de configuración; no es necesario que realice ninguna recompilación. Los archivos de configuración, sin embargo, pueden ser complejos y difíciles de mantener. No se admite la depuración de archivos de configuración y se hace referencia a los elementos de configuración por nombre, con lo que la creación de archivos de configuración resulta propensa a errores y difícil. WCF también permite configurar servicios en el código. En versiones anteriores de WCF (4,0 y anteriores), la configuración de servicios en código era muy sencilla en escenarios autohospedados, la clase <xref:System.ServiceModel.ServiceHost> permitía configurar los extremos y los comportamientos antes de llamar a ServiceHost. Open. En escenarios hospedados en web, sin embargo, no tiene acceso a la clase <xref:System.ServiceModel.ServiceHost>. Para configurar un servicio hospedado en web era necesario crear un `System.ServiceModel.ServiceHostFactory` que creó el <xref:System.ServiceModel.Activation.ServiceHostFactory> y realizar cualquier configuración necesaria. A partir de .NET 4,5, WCF proporciona una manera más fácil de configurar servicios hospedados en Web y autohospedados en el código. Para obtener más información, vea [configuración de servicios WCF en el código](configuring-wcf-services-in-code.md).
+Windows Communication Foundation (WCF) permite a los desarrolladores configurar servicios mediante el código o los archivos de configuración. Los archivos de configuración son útiles cuando un servicio se debe configurar después de implementarse. Cuando se usan archivos de configuración, un profesional de TI solo debe actualizar el archivo de configuración; no es necesario que realice ninguna recompilación. Los archivos de configuración, sin embargo, pueden ser complejos y difíciles de mantener. No se admite la depuración de archivos de configuración y se hace referencia a los elementos de configuración por nombre, con lo que la creación de archivos de configuración resulta propensa a errores y difícil. WCF también permite configurar servicios en el código. En versiones anteriores de WCF (4,0 y anteriores), la configuración de servicios en código era muy fácil en escenarios autohospedados, la <xref:System.ServiceModel.ServiceHost> clase permitía configurar los extremos y comportamientos antes de llamar a ServiceHost. Open. En escenarios hospedados en web, sin embargo, no tiene acceso a la clase <xref:System.ServiceModel.ServiceHost>. Para configurar un servicio hospedado en web era necesario crear un `System.ServiceModel.ServiceHostFactory` que creó el <xref:System.ServiceModel.Activation.ServiceHostFactory> y realizar cualquier configuración necesaria. A partir de .NET 4,5, WCF proporciona una manera más fácil de configurar servicios hospedados en Web y autohospedados en el código. Para obtener más información, vea [configuración de servicios WCF en el código](configuring-wcf-services-in-code.md).
 
 ## <a name="channelfactory-caching"></a>Almacenamiento en caché de ChannelFactory
 

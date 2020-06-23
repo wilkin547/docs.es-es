@@ -1,16 +1,17 @@
 ---
 title: Herramientas de Windows Communication Foundation
+description: Obtenga información sobre las herramientas de WCF diseñadas para facilitar la creación, implementación y administración de aplicaciones WCF. Ejecute estas herramientas desde un símbolo del sistema.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF, tools
 - Windows Communication Foundation, tools
 ms.assetid: 399a47b4-bfea-434b-8e83-f76b5063d79d
-ms.openlocfilehash: edd54c93207456156ef2520a00ad567cd087d89c
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: acc142e8e3108a827b63cf013b818d30b5dcaa52
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321373"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245977"
 ---
 # <a name="windows-communication-foundation-tools"></a>Herramientas de Windows Communication Foundation
 Las herramientas de Microsoft Windows Communication Foundation (WCF) están diseñadas para facilitar la creación, implementación y administración de aplicaciones WCF. Esta sección contiene información detallada acerca de las herramientas. Observe que no se admiten las herramientas.  

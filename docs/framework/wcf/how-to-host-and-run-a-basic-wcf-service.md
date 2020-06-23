@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: hospedar y ejecutar un servicio de Windows Communication Foundation básico'
+description: Obtenga información sobre cómo hospedar un servicio WCF en una aplicación de consola como parte de una serie de artículos que le ayudarán a empezar a crear una aplicación WCF.
 ms.date: 03/19/2019
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: 872844487578843492e05dd2abb87b50e0bec91c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5318991087e71430523681d601d3b38c4513027b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291401"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246135"
 ---
 # <a name="tutorial-host-and-run-a-basic-windows-communication-foundation-service"></a>Tutorial: hospedar y ejecutar un servicio de Windows Communication Foundation básico
 
@@ -37,7 +38,7 @@ En este tutorial, aprenderá a:
 
 1. Cree un proyecto de aplicación de consola en Visual Studio:
 
-    1. En el menú **archivo** , seleccione **abrir**  >  **proyecto o solución** y busque la solución **gettingstarted** que creó anteriormente (*gettingstarted. sln*). Selecciona **Open** (Abrir).
+    1. En el menú **archivo** , seleccione **abrir**  >  **proyecto o solución** y busque la solución **gettingstarted** que creó anteriormente (*gettingstarted. sln*). seleccione **Open**(Abrir).
 
     2. En el menú **Ver** , seleccione **Explorador de soluciones**.
 
@@ -194,7 +195,7 @@ Realice los siguientes cambios en el código:
 
 1. Compile la solución y, a continuación, ejecute la aplicación de consola **GettingStartedHost** desde Visual Studio.
 
-    El servicio se debe ejecutar con privilegios de administrador. Como abrió Visual Studio con privilegios de administrador, al ejecutar **GettingStartedHost** en Visual Studio, la aplicación se ejecuta también con privilegios de administrador. Como alternativa, puede abrir un nuevo símbolo del sistema como administrador (seleccione **más**  >  **Ejecutar como administrador** en el menú contextual) y ejecute **GettingStartedHost. exe** en él.
+    El servicio se debe ejecutar con privilegios de administrador. Como abrió Visual Studio con privilegios de administrador, al ejecutar **GettingStartedHost** en Visual Studio, la aplicación se ejecuta también con privilegios de administrador. Como alternativa, puede abrir un nuevo símbolo del sistema como administrador (seleccione **más**  >  **Ejecutar como administrador** en el menú contextual) y ejecute **GettingStartedHost.exe** dentro de él.
 
 2. Abra un explorador Web y vaya a la página del servicio en `http://localhost:8000/GettingStarted/CalculatorService` .
 
