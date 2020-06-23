@@ -1,13 +1,14 @@
 ---
 title: Principios de la transacción
+description: Revise los aspectos básicos de las transacciones en .NET. Todas las transacciones deben poseer las propiedades básicas de ACID (atómicas, coherentes, aisladas y duraderas).
 ms.date: 03/30/2017
 ms.assetid: 353f4ee2-e6bf-4b1c-b1c8-385fc8a486c0
-ms.openlocfilehash: ed5865121a32f05f9b58c0ca0fca475fe7b98723
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 49292172b07985d379bfa5d520798d7d97af5749
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346214"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141944"
 ---
 # <a name="transaction-fundamentals"></a>Principios de la transacción
 Las transacciones enlazan varias tareas. Por ejemplo, imagine que una aplicación realiza dos tareas. Primero, crea una nueva tabla en una base de datos. Luego, llama un objeto especializado para recoger, dar formato e insertar los datos en la nueva tabla. Estas dos tareas están relacionadas e incluso son interdependientes, de tal manera que se desea evitar crear una nueva tabla a menos que pueda llenarse de datos. La ejecución de ambas tareas dentro del ámbito de una única transacción refuerzan la conexión entre ellas. En caso de error en la segunda tarea, la primera vuelve al punto anterior a la creación de la nueva tabla.  
@@ -20,10 +21,10 @@ Las transacciones enlazan varias tareas. Por ejemplo, imagine que una aplicació
   
  Al desarrollar una aplicación transaccional utilizando las clases proporcionadas por <xref:System.Transactions>, no necesita preocuparse por qué tipo de transacciones necesita o el administrador de transacciones implicado. La infraestructura <xref:System.Transactions> administra automáticamente éstos para usted.  
   
- Cuando crea una transacción, puede especificar el nivel de aislamiento que se aplica a la transacción. El nivel de aislamiento, definido por la enumeración <xref:System.Transactions.IsolationLevel>, determina el nivel de acceso que otras transacciones tendrán a los datos afectados por la transacción.  
+ Cuando crea una transacción, puede especificar el nivel de aislamiento que se aplica a la transacción. El nivel de aislamiento, definido por la <xref:System.Transactions.IsolationLevel> enumeración, determina el nivel de acceso que otras transacciones tendrán a los datos afectados por la transacción.  
   
- Puede crear transacciones mediante ADO.NET, <xref:System.EnterpriseServices>o el modelo de programación transaccional proporcionado por el espacio de nombres <xref:System.Transactions>. El tema [características proporcionadas por System.](features-provided-by-system-transactions.md) Transactions describe las características que puede usar para escribir una aplicación transaccional mediante el espacio de nombres <xref:System.Transactions>.  
+ Puede crear transacciones mediante ADO.NET, <xref:System.EnterpriseServices> o el modelo de programación transaccional proporcionado por el <xref:System.Transactions> espacio de nombres. El tema [características proporcionadas por System. Transactions](features-provided-by-system-transactions.md) describe las características que puede usar para escribir una aplicación transaccional mediante el <xref:System.Transactions> espacio de nombres.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
 - [Características proporcionadas por System.Transactions](features-provided-by-system-transactions.md)

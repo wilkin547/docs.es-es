@@ -1,13 +1,14 @@
 ---
 title: Seguimiento del diagnóstico
+description: Obtenga información sobre los seguimientos de diagnóstico en .NET. Los rastros son la publicación de mensajes concretos que se generan durante la ejecución de la aplicación.
 ms.date: 03/30/2017
 ms.assetid: 28e77a63-d20d-4b6a-9caf-ddad86550427
-ms.openlocfilehash: 76712710bf42f498ba859c7b1cd18a261387078c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5de8fdf7b95cf01b119118dac75d373c32949dcd
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174425"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141816"
 ---
 # <a name="diagnostic-traces"></a>Seguimiento del diagnóstico
 Los rastros son la publicación de mensajes concretos que se generan durante la ejecución de la aplicación. Cuando se utiliza traza debe existir un mecanismo para recopilar y registrar los mensajes que se envían. Los agentes de escucha son los objetos encargados de recibir los mensajes de seguimiento. Un agente de escucha se encarga de recopilar, almacenar y enrutar los mensajes de seguimiento. Los agentes de escucha dirigen los resultados del seguimiento a un destino apropiado, como un registro, una ventana o un archivo de texto.  
@@ -37,15 +38,15 @@ Los rastros son la publicación de mensajes concretos que se generan durante la 
   
  A cada tipo de mensaje de seguimiento le está asignado un nivel para indicar su grado de importancia. Si el dominio de aplicación del nivel de seguimiento es igual o menor que el nivel de un tipo de evento, a continuación, se genera ese mensaje. `switchValue` controla el nivel de seguimiento en el archivo de configuración. Los niveles que están asociados a mensajes de seguimiento de diagnóstico se definen en la tabla siguiente.  
   
-|Nivel de seguimiento|Descripción|  
+|Nivel de seguimiento|Description|  
 |-----------------|-----------------|  
-|Crítico|Los errores serios, como lo siguiente, han producido:<br /><br /> - Un error que puede causar una pérdida inmediata en la funcionalidad del usuario.<br />- Un evento que requiere que un administrador tome medidas para evitar la pérdida de funcionalidad.<br />- El código cuelga.<br />- Este nivel de seguimiento también puede proporcionar un contexto suficiente para interpretar otros seguimientos críticos. Esto puede ayudar a identificar la secuencia de operaciones que conducen a un error serio.|  
+|Crítica|Los errores serios, como lo siguiente, han producido:<br /><br /> : Un error que puede producir una pérdida inmediata en la funcionalidad del usuario.<br />: Evento que requiere que un administrador tome medidas para evitar la pérdida de funcionalidad.<br />-El código deja de responder.<br />: Este nivel de seguimiento también puede proporcionar un contexto suficiente para interpretar otros seguimientos críticos. Esto puede ayudar a identificar la secuencia de operaciones que conducen a un error serio.|  
 |Error|Se ha producido un error (por ejemplo, configuración no válida o comportamiento de la red) que puede producir una pérdida de funcionalidad del usuario.|  
 |Advertencia|Existe una condición que puede producir como consecuencia un error o error crítico (por ejemplo, error de asignación o aproximación a un límite). El procesamiento normal de errores del código de usuario (por ejemplo, transacciones anuladas, tiempos de espera, error en la autenticación) también puede generar un mensaje de advertencia.|  
-|Information|Se han generado mensajes útiles para supervisar y diagnosticar el estado del sistema, medir el rendimiento o perfilar. Éstos pueden incluir transacción e inscripción de los eventos perpetuos, como una transacción que se está creando o confirmando, el cruce de un límite significativo o la asignación de recursos significativos. Un programador puede utilizar a continuación tal información para el diseño de la capacidad y gestión de rendimiento.|  
+|Información|Se han generado mensajes útiles para supervisar y diagnosticar el estado del sistema, medir el rendimiento o perfilar. Éstos pueden incluir transacción e inscripción de los eventos perpetuos, como una transacción que se está creando o confirmando, el cruce de un límite significativo o la asignación de recursos significativos. Un programador puede utilizar a continuación tal información para el diseño de la capacidad y gestión de rendimiento.|  
   
 ## <a name="trace-codes"></a>Códigos de seguimiento  
- La tabla siguiente hace una lista de los códigos de seguimiento que se generan mediante la infraestructura <xref:System.Transactions>. En la tabla se incluyen el <xref:System.Diagnostics.EventTypeFilter.EventType%2A> identificador de código de seguimiento, el nivel de enumeración para el seguimiento y los datos adicionales contenidos en **TraceRecord** para el seguimiento. Además, el nivel de seguimiento correspondiente del seguimiento también se almacena en **TraceRecord**.  
+ La tabla siguiente hace una lista de los códigos de seguimiento que se generan mediante la infraestructura <xref:System.Transactions>. En la tabla se incluye el identificador del código de seguimiento, el <xref:System.Diagnostics.EventTypeFilter.EventType%2A> nivel de enumeración del seguimiento y los datos adicionales contenidos en el **TraceRecord** del seguimiento. Además, el nivel de seguimiento correspondiente del seguimiento también se almacena en **TraceRecord**.  
   
 |TraceCode|EventType|Datos adicionales en TraceRecord|  
 |---------------|---------------|-------------------------------|  
@@ -56,7 +57,7 @@ Los rastros son la publicación de mensajes concretos que se generan durante la 
 |TransactionRollbackCalled|Advertencia|TransactionTraceId|  
 |TransactionAborted|Advertencia|TransactionTraceId|  
 |TransactionInDoubt|Advertencia|TransactionTraceId|  
-|TransactionScopeCreated|Información|TransactionScopeResult, que puede ser lo siguientes:<br /><br /> - Nueva transacción.<br />- Transacción aprobada.<br />- Transacción dependiente pasada.<br />- Uso de la transacción actual.<br />- Sin transacción.<br /><br /> Nueva TransactionTraceId actual|  
+|TransactionScopeCreated|Información|TransactionScopeResult, que puede ser lo siguientes:<br /><br /> -Nueva transacción.<br />-Transacción superada.<br />-Transacción dependiente pasada.<br />-Utilizando la transacción actual.<br />-No hay ninguna transacción.<br /><br /> Nueva TransactionTraceId actual|  
 |TransactionScopeDisposed|Información|TransactionTraceId de la transacción actual "esperada" del ámbito.|  
 |TransactionScopeIncomplete|Advertencia|TransactionTraceId de la transacción actual "esperada" del ámbito.|  
 |TransactionScopeNestedIncorrectly|Advertencia|TransactionTraceId de la transacción actual "esperada" del ámbito.|  
@@ -69,7 +70,7 @@ Los rastros son la publicación de mensajes concretos que se generan durante la 
 |TransactionSerialized|Información|TransactionTraceId.|  
 |TransactionException|Error|Mensaje de la excepción|  
 |InvalidOperationException|Error|Mensaje de la excepción|  
-|InternalError|Crítico|Mensaje de la excepción|  
+|InternalError|Crítica|Mensaje de la excepción|  
 |TransferEvent||Cuando se deserializa una transacción, o se promueve una transacción <xref:System.Transactions> a uno distribuido, se escriben los ActivityID actuales de ExecutionContext y el Id. de la transacción distribuida.<br /><br /> Cuando la DTC llama de nuevo en el código administrado, el Id. de la transacción distribuida se establece como ActivityID en ExecutionContext para la duración de la devolución de llamada.|  
 |ConfiguredDefaultTimeoutAdjusted|Advertencia|Ningún dato adicional|  
 |TransactionTimeout|Advertencia|La TransactionTraceId de la transacción habiendo agotado el tiempo de espera.|  

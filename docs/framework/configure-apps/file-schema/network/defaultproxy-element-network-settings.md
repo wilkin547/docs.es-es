@@ -9,12 +9,12 @@ helpviewer_keywords:
 - defaultProxy element
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
-ms.openlocfilehash: 915fdc96dbd4d417f9c9e6aa3ff96de3026491ef
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 85004d49ce7605b050709a3019592ec696a7bada
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504607"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141636"
 ---
 # <a name="defaultproxy-element-network-settings"></a>Elemento \<defaultProxy> (configuración de red)
 Configura el servidor proxy de Protocolo de transferencia de hipertexto (HTTP).  
@@ -27,8 +27,8 @@ Configura el servidor proxy de Protocolo de transferencia de hipertexto (HTTP).
   
 ```xml  
 <defaultProxy  
-  enabled="true|false"  
-  useDefaultCredentials="true|false">  
+  enabled="True|False"  
+  useDefaultCredentials="True|False">  
     <bypasslist>...</bypasslist>  
     <proxy>...</proxy>  
     <module>...</module>  
@@ -42,8 +42,8 @@ Configura el servidor proxy de Protocolo de transferencia de hipertexto (HTTP).
   
 |**Element**|**Descripción**|  
 |-----------------|---------------------|  
-|`enabled`|Especifica si se usa un proxy web. El valor predeterminado es `true`.|  
-|`useDefaultCredentials`|Especifica si se usan las credenciales predeterminadas de este host para tener acceso al proxy web. El valor predeterminado es `false`.|  
+|`enabled`|Especifica si se usa un proxy web. El valor predeterminado es `True`.|  
+|`useDefaultCredentials`|Especifica si se usan las credenciales predeterminadas de este host para tener acceso al proxy web. El valor predeterminado es `False`.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
@@ -75,9 +75,9 @@ Configura el servidor proxy de Protocolo de transferencia de hipertexto (HTTP).
   <system.net>  
     <defaultProxy>  
       <proxy  
-        usesystemdefault="true"  
+        usesystemdefault="True"  
         proxyaddress="http://192.168.1.10:3128"  
-        bypassonlocal="true"  
+        bypassonlocal="True"  
       />  
       <bypasslist>  
         <add address="[a-z]+\.contoso\.com$" />  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <proxy> element
 - proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
-ms.openlocfilehash: 0d462fcc92fc1be5ddbc2e76237d8436219c7295
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8ae30b8c29dcf3aaa183ff295c7ee8592322797f
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504542"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141786"
 ---
 # <a name="proxy-element-network-settings"></a>Elemento \<proxy> (configuración de red)
 Define un servidor proxy.  
@@ -28,11 +28,11 @@ Define un servidor proxy.
   
 ```xml  
 <proxy
-  autoDetect="true|false|unspecified"
-  bypassonlocal="true|false|unspecified"
+  autoDetect="True|False|Unspecified"
+  bypassonlocal="True|False|Unspecified"
   proxyaddress="uriString"
   scriptLocation="uriString"
-  usesystemdefault="true|false|unspecified"
+  usesystemdefault="True|False|Unspecified"
 />
 ```  
   
@@ -43,11 +43,11 @@ Define un servidor proxy.
   
 |**Attribute**|**Descripción**|  
 |-------------------|---------------------|  
-|`autoDetect`|Especifica si el servidor proxy se detecta automáticamente. El valor predeterminado es `unspecified`.|  
-|`bypassonlocal`|Especifica si el servidor proxy se omite para los recursos locales. Los recursos locales incluyen el servidor local ( `http://localhost` , `http://loopback` o `http://127.0.0.1` ) y un URI sin punto ( `http://webserver` ). El valor predeterminado es `unspecified`.|  
+|`autoDetect`|Especifica si el servidor proxy se detecta automáticamente. El valor predeterminado es `Unspecified`.|  
+|`bypassonlocal`|Especifica si el servidor proxy se omite para los recursos locales. Los recursos locales incluyen el servidor local ( `http://localhost` , `http://loopback` o `http://127.0.0.1` ) y un URI sin punto ( `http://webserver` ). El valor predeterminado es `Unspecified`.|  
 |`proxyaddress`|Especifica el URI del proxy que se va a usar.|  
 |`scriptLocation`|Especifica la ubicación del script de configuración. No utilice el `bypassonlocal` atributo con este atributo. |  
-|`usesystemdefault`|Especifica si se va a usar la configuración de proxy de Internet Explorer. Si se establece en `true` , los atributos subsiguientes invalidarán la configuración de proxy de Internet Explorer. El valor predeterminado es `unspecified`.|  
+|`usesystemdefault`|Especifica si se va a usar la configuración de proxy de Internet Explorer. Si se establece en `True` , los atributos subsiguientes invalidarán la configuración de proxy de Internet Explorer. El valor predeterminado es `Unspecified`.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -82,9 +82,9 @@ Define un servidor proxy.
   <system.net>  
     <defaultProxy>  
       <proxy  
-        usesystemdefault="true"  
+        usesystemdefault="True"  
         proxyaddress="http://192.168.1.10:3128"  
-        bypassonlocal="true"  
+        bypassonlocal="True"  
       />  
     </defaultProxy>  
   </system.net>  

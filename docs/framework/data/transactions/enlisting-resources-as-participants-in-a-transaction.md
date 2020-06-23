@@ -1,16 +1,17 @@
 ---
 title: Dar de alta los recursos como participantes en una transacción
+description: Dar de alta los recursos como participantes en una transacción de .NET. Un administrador de recursos administra cada recurso de una transacción, coordinada por un administrador de transacciones.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 786a12c2-d530-49f4-9c59-5c973e15a11d
-ms.openlocfilehash: 83d83df0f747198e93dd64308b904cad5c7439ec
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: c3c777593750b3a4f05ae97ed6e26e19f58e4d72
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205983"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141880"
 ---
 # <a name="enlisting-resources-as-participants-in-a-transaction"></a>Dar de alta los recursos como participantes en una transacción
 
@@ -40,7 +41,7 @@ El tercer parámetro es una enumeración <xref:System.Transactions.EnlistmentOpt
 
 Los participantes que administran recursos volátiles como una caché, deberían darse de alta utilizando los métodos <xref:System.Transactions.Transaction.EnlistVolatile%2A>. Tales objetos no podrían obtener el resultado de una transacción o recuperar el estado de cualquier transacción participan después de un error del sistema.
 
-Como dicho previamente, un administrador de recursos realizaría una inscripción volátil si administra un recurso en memoria volátil. Una de las ventajas de utilizar <xref:System.Transactions.Transaction.EnlistVolatile%2A> es que no fuerza ninguna subida innecesaria de la transacción. Para obtener más información sobre el escalado de transacciones, vea el tema sobre escalado de [Administración de transacciones](transaction-management-escalation.md) . Dar de alta la volatilidad implica tanto una diferencia en el modo en que el administrador de transacciones controla la inscripción, así como lo que el administrador de transacciones espera que el administrador de recursos. Esto es porque un administrador de recursos volátil no realiza la recuperación. Los métodos <xref:System.Transactions.Transaction.EnlistVolatile%2A> no toman un parámetro <xref:System.Guid>, porque un administrador de recursos volátil no realiza la recuperación y no llama al método <xref:System.Transactions.TransactionManager.Reenlist%2A> que necesita <xref:System.Guid>.
+Como dicho previamente, un administrador de recursos realizaría una inscripción volátil si administra un recurso en memoria volátil. Una de las ventajas de utilizar <xref:System.Transactions.Transaction.EnlistVolatile%2A> es que no fuerza ninguna subida innecesaria de la transacción. Para obtener más información sobre el escalado de transacciones, vea el tema sobre [escalado de administración de transacciones](transaction-management-escalation.md) . Dar de alta la volatilidad implica tanto una diferencia en el modo en que el administrador de transacciones controla la inscripción, así como lo que el administrador de transacciones espera que el administrador de recursos. Esto es porque un administrador de recursos volátil no realiza la recuperación. Los métodos <xref:System.Transactions.Transaction.EnlistVolatile%2A> no toman un parámetro <xref:System.Guid>, porque un administrador de recursos volátil no realiza la recuperación y no llama al método <xref:System.Transactions.TransactionManager.Reenlist%2A> que necesita <xref:System.Guid>.
 
 Como con inscripciones duraderas, el método de sobrecarga que se utiliza para dar de alta indica al administrador de transacciones si su administrador de recursos admite la optimización de la fase de confirmación única. Puesto que un administrador de recursos volátil no puede realizar la recuperación, ninguna información de la recuperación se escribe para una inscripción volátil durante la fase de preparación. Por consiguiente, llamar al método <xref:System.Transactions.PreparingEnlistment.RecoveryInformation%2A> produce <xref:System.InvalidOperationException>.
 
@@ -53,7 +54,7 @@ El ejemplo siguiente muestra cómo dar de alta este tipo de objeto como un parti
 
 La clase <xref:System.Transactions.Transaction> también proporciona el método <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A> para dar de alta una Inscripción de fase única promocional (PSPE). Esto permite a un administrador de recursos duradero (RM) hospedar y "poseer" una transacción que puede realizar una escalada para que sea administrada por MSDTC si es necesario. Para obtener más información, consulte [optimización mediante la confirmación de fase única y la notificación de fase única promocionable](optimization-spc-and-promotable-spn.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
 - [Optimización mediante el uso de la confirmación de fase única y de la inscripción de fase única promovible](optimization-spc-and-promotable-spn.md)
-- [Confirmación de una transacción en fase única y múltiple](committing-a-transaction-in-single-phase-and-multi-phase.md)
+- [Confirmar una transacción en fase única y múltiple](committing-a-transaction-in-single-phase-and-multi-phase.md)

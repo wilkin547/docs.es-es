@@ -1,16 +1,17 @@
 ---
 title: Implementar una transacción explícita mediante una transacción confirmable
+description: Implemente una transacción explícita mediante la clase CommittableTransaction en .NET. Esta clase proporciona una forma explícita de que las aplicaciones usen una transacción.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
-ms.openlocfilehash: f8db79db6c4a66dfe13ec936313c4cf2c3b93be5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 40001422e665a7dda3fb938c8d57860909525404
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174412"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141996"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>Implementar una transacción explícita mediante una transacción confirmable
 La clase <xref:System.Transactions.CommittableTransaction> proporciona a las aplicaciones una manera explícita de utilizar una transacción, a diferencia de utilizar implícitamente la clase <xref:System.Transactions.TransactionScope>. Es útil para las aplicaciones que desean utilizar la misma transacción por varias llamadas de función o llamadas de subproceso múltiples. A diferencia de la clase <xref:System.Transactions.TransactionScope>, el sistema de escritura de la aplicación ha de llamar específicamente a los métodos <xref:System.Transactions.CommittableTransaction.Commit%2A> y <xref:System.Transactions.Transaction.Rollback%2A> para confirmar o anular la transacción.  
@@ -43,7 +44,7 @@ La clase <xref:System.Transactions.CommittableTransaction> proporciona a las apl
   
  Puede llamar <xref:System.Transactions.CommittableTransaction.BeginCommit%2A> para enviar el retraso de la confirmación a un subproceso del grupo de subprocesos. También puede llamar <xref:System.Transactions.CommittableTransaction.EndCommit%2A> para determinar si se ha confirmado la transacción realmente. Si la transacción no se confirma por cualquier razón, <xref:System.Transactions.CommittableTransaction.EndCommit%2A> se producirá una excepción de transacción. Si no se confirma la transacción todavía cuando se llama <xref:System.Transactions.CommittableTransaction.EndCommit%2A>, se bloquea el llamador hasta que la transacción se confirme o anule.  
   
- La manera más fácil de hacer una confirmación asincrónica es proporcionando un método de devolución de llamada, para ser llamado cuando la confirmación esté terminada. Sin embargo, debe llamar al método <xref:System.Transactions.CommittableTransaction.EndCommit%2A> en el objeto <xref:System.Transactions.CommittableTransaction> original utilizado para invocar la llamada. Para obtener ese objeto, puede convertir el parámetro *IAsyncResult* <xref:System.Transactions.CommittableTransaction> del método <xref:System.IAsyncResult> de devolución de llamada, ya que la clase implementa la clase.  
+ La manera más fácil de hacer una confirmación asincrónica es proporcionando un método de devolución de llamada, para ser llamado cuando la confirmación esté terminada. Sin embargo, debe llamar al método <xref:System.Transactions.CommittableTransaction.EndCommit%2A> en el objeto <xref:System.Transactions.CommittableTransaction> original utilizado para invocar la llamada. Para obtener ese objeto, puede convertir en un nivel inferior el parámetro *IAsyncResult* del método de devolución de llamada, ya que la <xref:System.Transactions.CommittableTransaction> clase implementa la <xref:System.IAsyncResult> clase.  
   
  El ejemplo siguiente muestra cómo se puede hacer una confirmación asincrónica.  
   
@@ -85,7 +86,7 @@ void OnCommitted(IAsyncResult asyncResult)
 }  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
-- [Implementación de una transacción implícita mediante el ámbito de transacción](implementing-an-implicit-transaction-using-transaction-scope.md)
-- [Procesamiento de transacciones](index.md)
+- [Implementar una transacción implícita mediante el ámbito de la transacción](implementing-an-implicit-transaction-using-transaction-scope.md)
+- [Procesar transacciones](index.md)

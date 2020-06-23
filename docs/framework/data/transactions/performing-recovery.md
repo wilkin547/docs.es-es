@@ -1,13 +1,14 @@
 ---
 title: Realizar la recuperación
+description: Realice la recuperación en .NET. El administrador de recursos ayuda a resolver las inlistas de transacciones duraderas volviendo a inscribir al participante de la transacción después de un error en el recurso.
 ms.date: 03/30/2017
 ms.assetid: 6dd17bf6-ba42-460a-a44b-8046f52b10d0
-ms.openlocfilehash: fe0e096c31b2ef62a1bc50d40c87f2e12c87343f
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: bb00d2f574cc2651b733f3308cf2ffc6b430cc31
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205883"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141970"
 ---
 # <a name="performing-recovery"></a>Realizar la recuperación
 El administrador de recursos facilita la resolución de inscripciones duraderas en una transacción volviendo a inscribir al participante de la transacción después de un error de recurso.  
@@ -15,7 +16,7 @@ El administrador de recursos facilita la resolución de inscripciones duraderas 
 ## <a name="the-recovery-process"></a>El Proceso de la recuperación  
  Para dar de alta de forma duradera a un recurso (se describe por una implementación de la interfaz <xref:System.Transactions.IEnlistmentNotification>) que puede ser después elegible para la recuperación, debería llamar al método <xref:System.Transactions.Transaction.EnlistDurable%2A>. Además, debe proporcionar un identificador del administrador de recursos (un <xref:System.Transactions.Transaction.EnlistDurable%2A>) que se utiliza para etiquetar de forma consistente al participante de la transacción en caso de un error de recurso al método <xref:System.Guid>. Por esta razón, el <xref:System.Guid> que se proporciona a la llamada de inscripción inicial debe ser idéntico al parámetro *resourceManagerIdentifier* en la <xref:System.Transactions.TransactionManager.Reenlist%2A> llamada durante la recuperación. De lo contrario, se produce <xref:System.Transactions.TransactionException>. Para obtener más información sobre las inlistas duraderas, vea [dar de alta recursos como participantes en una transacción](enlisting-resources-as-participants-in-a-transaction.md) .  
   
- En la fase de preparación (fase 1) del  protocolo 2PC, cuando su implementación de un administrador de recursos duradero recibe la notificación <xref:System.Transactions.IEnlistmentNotification.Prepare%2A>, debería registrar su registro de preparación durante esta fase. El registro debería contener toda la información que es necesaria para completar la transacción en confirmación. Se puede obtener acceso al registro de preparación más adelante durante la recuperación mediante <xref:System.Transactions.PreparingEnlistment.RecoveryInformation%2A> la recuperación de la propiedad de la devolución de llamada *preparingEnlistment* . El registro del registro no necesita ser realizado dentro del método <xref:System.Transactions.IEnlistmentNotification.Prepare%2A> cuando RM puede hacer esto en un subproceso de trabajo.  
+ En la fase de preparación (fase 1) del  protocolo 2PC, cuando su implementación de un administrador de recursos duradero recibe la notificación <xref:System.Transactions.IEnlistmentNotification.Prepare%2A>, debería registrar su registro de preparación durante esta fase. El registro debería contener toda la información que es necesaria para completar la transacción en confirmación. Se puede obtener acceso al registro de preparación más adelante durante la recuperación mediante la recuperación <xref:System.Transactions.PreparingEnlistment.RecoveryInformation%2A> de la propiedad de la devolución de llamada *preparingEnlistment* . El registro del registro no necesita ser realizado dentro del método <xref:System.Transactions.IEnlistmentNotification.Prepare%2A> cuando RM puede hacer esto en un subproceso de trabajo.  
   
  El proceso de recuperación consiste de los dos siguientes pasos:  
   
@@ -31,4 +32,4 @@ El administrador de recursos facilita la resolución de inscripciones duraderas 
 ### <a name="step-2---completing-the-recovery"></a>El paso 2 - Completando la recuperación  
  Cuando todas las inscripciones hayan finalizado el administrador de recursos llamará al método <xref:System.Transactions.TransactionManager.RecoveryComplete%2A>. Este método completa la recuperación e informa el administrador de transacciones de que el administrador de recursos no tiene ninguna transacción dudosa más. Haciendo esto, el administrador de recursos garantiza que no invocará de nuevo el método <xref:System.Transactions.TransactionManager.Reenlist%2A>.  
   
- No se exige a un administrador de recursos que resuelva todas las transacciones dudosas antes de dar de alta nuevas transacciones. El primer paso se puede realizar en cualquier momento después de que el administrador de recursos establezca una relación con el administrador de <xref:System.Transactions.TransactionManager.RecoveryComplete%2A> transacciones, pero después de que se haya invocado (paso 2); el paso 1 no se puede volver a realizar. El paso 2 se puede repetir varias veces sin afectar al resultado de transacciones.
+ No se exige a un administrador de recursos que resuelva todas las transacciones dudosas antes de dar de alta nuevas transacciones. El primer paso se puede realizar en cualquier momento después de que el administrador de recursos establezca una relación con el administrador de transacciones, pero después de que se haya <xref:System.Transactions.TransactionManager.RecoveryComplete%2A> invocado (paso 2); el paso 1 no se puede volver a realizar. El paso 2 se puede repetir varias veces sin afectar al resultado de transacciones.

@@ -1,13 +1,14 @@
 ---
 title: Niveles de confianza de seguridad para acceder a los recursos
+description: Comprender los niveles de confianza de seguridad en el acceso a recursos en .NET. Hay 3 niveles principales de confianza para System. Transactions.
 ms.date: 03/30/2017
 ms.assetid: fb5be924-317d-4d69-b33a-3d18ecfb9d6e
-ms.openlocfilehash: 7070d82c430b762059153c544e26478dc2d7ae39
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 64f298460bde99181ab8dc8be13ae95aaa846299
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205870"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141957"
 ---
 # <a name="security-trust-levels-in-accessing-resources"></a>Niveles de confianza de seguridad para acceder a los recursos
 En este tema se discute cómo el acceso está restringido en los tipos de recursos que <xref:System.Transactions> expone.  
@@ -26,7 +27,7 @@ En este tema se discute cómo el acceso está restringido en los tipos de recurs
 ## <a name="trust-levels"></a>Niveles de confianza  
   
 ### <a name="aptca-partial-trust"></a>APTCA (confianza parcial)  
- El <xref:System.Transactions> código de confianza parcial puede llamar al ensamblado porque se ha marcado con el atributo **AllowPartiallyTrustedCallers** (APTCA). Este atributo quita esencialmente el implícito <xref:System.Security.Permissions.SecurityAction.LinkDemand> para el conjunto de permisos **FullTrust** que, de otro modo, se coloca automáticamente en cada método de acceso público de cada tipo. Sin embargo, algunos tipos y miembros siguen necesitando permisos más firmes.  
+ El <xref:System.Transactions> código de confianza parcial puede llamar al ensamblado porque se ha marcado con el atributo **ALLOWPARTIALLYTRUSTEDCALLERS** (APTCA). Este atributo quita esencialmente el implícito <xref:System.Security.Permissions.SecurityAction.LinkDemand> para el conjunto de permisos **FullTrust** que, de otro modo, se coloca automáticamente en cada método de acceso público de cada tipo. Sin embargo, algunos tipos y miembros siguen necesitando permisos más firmes.  
   
  El atributo APTCA permite a las aplicaciones utilizar las transacciones en confianza parcial dentro de un dominio de aplicación único. Esto habilita las transacciones no escalonadas y las inscripciones volátiles que se pueden utilizar para el control de errores. Un ejemplo de esto es una tabla hash llevada a cabo y una aplicación que lo utiliza. Los datos se pueden agregar a y quitar de la tabla hash bajo una transacción única. Si se deshace la transacción después, se pueden deshacer todos los cambios realizados a la tabla hash bajo esa transacción.  
   

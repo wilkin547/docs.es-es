@@ -1,16 +1,17 @@
 ---
 title: Implementar un administrador de recursos
+description: Implemente un administrador de recursos en .NET. Un administrador de recursos administra los recursos utilizados en las transacciones. Un administrador de transacciones coordina las acciones del administrador de recursos.
 ms.date: 03/30/2017
 ms.assetid: d5c153f6-4419-49e3-a5f1-a50ae4c81bf3
-ms.openlocfilehash: f64a729f49d546dd16c25a2be1f9bd64a2ca8f63
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: bf40c6eaee35a5a548c6de4a286e46c4d4a66aca
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205953"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141854"
 ---
 # <a name="implementing-a-resource-manager"></a>Implementar un administrador de recursos
-Un administrador de recursos administra cada recurso utilizado, cuyas acciones coordina un administrador de transacciones. Los administradores de recursos trabajan en cooperación con el administrador de transacciones para proporcionar una garantía de atomicidad y aislamiento a la aplicación. Microsoft SQL Server, colas de mensajes durables, las tablas hash en memoria, son ejemplos de administradores de recursos.  
+Un administrador de recursos administra cada recurso utilizado, cuyas acciones coordina un administrador de transacciones.  Los administradores de recursos trabajan en cooperación con el administrador de transacciones para proporcionar una garantía de atomicidad y aislamiento a la aplicación. Microsoft SQL Server, colas de mensajes durables, las tablas hash en memoria, son ejemplos de administradores de recursos.  
   
  Un administrador de recursos administra los datos duraderos o volátiles. La duración (o a la inversa la volatilidad) de un administrador de recursos hace referencia a si el administrador de recursos admite la recuperación del error. Si un administrador de recursos admite la recuperación del error, conserva los datos del almacenamiento duradero durante la fase1 (preparación) de tal manera que si el administrador de recursos baja, puede reenganchar la transacción en la recuperación y realizar las acciones apropiadas basadas en las notificaciones recibidas del administrador de recursos. En general, los administradores de recursos volátiles administran recursos volátiles como una estructura de datos en memoria (por ejemplo, una tabla hash llevada a cabo en memoria) y los administradores de recursos duraderos administran recursos que tienen una memoria auxiliar más persistente (por ejemplo, una base de datos cuyo dispositivo de copia de seguridad es el disco).  
   
@@ -35,15 +36,15 @@ Un administrador de recursos administra cada recurso utilizado, cuyas acciones c
 ## <a name="in-this-section"></a>En esta sección  
  Los pasos generalmente seguidos por un administrador de recursos se describen en los temas siguientes.  
   
- [Inscribir recursos como participantes en una transacción](enlisting-resources-as-participants-in-a-transaction.md)  
+ [Dar de alta los recursos como participantes en una transacción](enlisting-resources-as-participants-in-a-transaction.md)  
   
  Describe cómo un recurso duradero o volátil puede darse de alta en una transacción.  
   
- [Confirmación de una transacción en fase única y múltiple](committing-a-transaction-in-single-phase-and-multi-phase.md)  
+ [Confirmar una transacción en fase única y múltiple](committing-a-transaction-in-single-phase-and-multi-phase.md)  
   
  Describe cómo un administrador de recursos responde para confirmar la notificación y preparar la confirmación.  
   
- [Realización de la recuperación](performing-recovery.md)  
+ [Realizar la recuperación](performing-recovery.md)  
   
  Describe cómo un administrador de recursos duradero se recupera del error.  
   

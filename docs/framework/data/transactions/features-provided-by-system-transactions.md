@@ -1,13 +1,14 @@
 ---
 title: Características proporcionadas por System.Transactions
+description: Revise las características proporcionadas por el espacio de nombres System. Transactions en .NET para escribir su propia aplicación de transacción y administrador de recursos.
 ms.date: 03/30/2017
 ms.assetid: e458cef9-63b5-4401-b448-1536dcd9d9e5
-ms.openlocfilehash: c3ef924edf34ae19be9eace85aaee5340025de7d
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 0278e9248305572c6156c6500f1fe51a8b3f3338
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205962"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141867"
 ---
 # <a name="features-provided-by-systemtransactions"></a>Características proporcionadas por System.Transactions
 En esta sección se describe cómo se pueden utilizar las características proporcionadas por el espacio de nombres <xref:System.Transactions> para escribir su propia aplicación transaccional y administrador de recursos. Específicamente, esta sección trata de cómo crear y participar en una transacción (local o distribuida) con uno o varios participantes.  
@@ -19,7 +20,7 @@ En esta sección se describe cómo se pueden utilizar las características propo
   
  Cuando un administrador de recursos duraderos adicional se da de alta a sí mismo en una transacción, el administrador de transacciones también dirige de forma transparente las transacciones locales a transacciones distribuidas, coordinando con un administrador de transacciones basado en disco como DTC. La infraestructura <xref:System.Transactions> proporciona un rendimiento mejorado principalmente de dos formas:  
   
-- Subida dinámica, que asegura que la infraestructura <xref:System.Transactions> solo activa el MSDTC cuando una transacción abarca varios recursos distribuidos. Para obtener más información sobre la elevación dinámica. Vea el tema sobre escalado de [Administración de transacciones](transaction-management-escalation.md) .  
+- Subida dinámica, que asegura que la infraestructura <xref:System.Transactions> solo activa el MSDTC cuando una transacción abarca varios recursos distribuidos. Para obtener más información sobre la elevación dinámica. Vea el tema sobre [escalado de administración de transacciones](transaction-management-escalation.md) .  
   
 - Inscripciones de ascenso, que permiten que un recurso, como una base de datos, asuma la propiedad de la transacción si es la única entidad que participa en la transacción. Posteriormente, si resulta necesario, la infraestructura <xref:System.Transactions> aún puede dirigir la administración de la transacción a la MSDTC. Esto reduce aún más la oportunidad de utilizar MSDTC. Las inlistas que se pueden promover se describen en profundidad en el tema[optimización mediante la confirmación de fase única y la notificación de fase única promocionable](optimization-spc-and-promotable-spn.md).  
   
@@ -28,9 +29,9 @@ En esta sección se describe cómo se pueden utilizar las características propo
 ## <a name="in-this-section"></a>En esta sección  
   
 ### <a name="writing-a-transactional-application"></a>Crear una aplicación transaccional  
- El espacio de nombres <xref:System.Transactions> proporciona dos modelos para crear aplicaciones transaccionales. [Implementar una transacción implícita mediante el ámbito](implementing-an-implicit-transaction-using-transaction-scope.md) de la transacción <xref:System.Transactions> describe cómo el espacio de nombres permite <xref:System.Transactions.TransactionScope> crear transacciones implícitas mediante la clase.  
+ El espacio de nombres <xref:System.Transactions> proporciona dos modelos para crear aplicaciones transaccionales. [Implementar una transacción implícita mediante el ámbito](implementing-an-implicit-transaction-using-transaction-scope.md) de la transacción describe cómo el <xref:System.Transactions> espacio de nombres permite crear transacciones implícitas mediante la <xref:System.Transactions.TransactionScope> clase.  
   
- La [implementación de una transacción explícita mediante CommittableTransaction](implementing-an-explicit-transaction-using-committabletransaction.md) describe <xref:System.Transactions> cómo el espacio de nombres admite la <xref:System.Transactions.CommittableTransaction> creación de transacciones explícitas mediante la clase.  
+ La [implementación de una transacción explícita mediante CommittableTransaction](implementing-an-explicit-transaction-using-committabletransaction.md) describe cómo el <xref:System.Transactions> espacio de nombres admite la creación de transacciones explícitas mediante la <xref:System.Transactions.CommittableTransaction> clase.  
   
  Para más información sobre cómo escribir una aplicación transaccional, consulte [escribir una aplicación transaccional](writing-a-transactional-application.md).  
   
