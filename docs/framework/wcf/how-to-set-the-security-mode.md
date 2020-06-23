@@ -1,5 +1,6 @@
 ---
 title: Procedimiento para establecer el modo de seguridad
+description: 'Obtenga información sobre cómo establecer los tres modos de seguridad de WCF comunes en la mayoría de los enlaces predefinidos: Transport, Message y TransportWithMessageCredential.'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
-ms.openlocfilehash: 9b9e25cbafb6387b4584a21fd642d80bc41cd8dc
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 2f834e1930b7676592f6cbc29a577424d75ebc01
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320894"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244548"
 ---
 # <a name="how-to-set-the-security-mode"></a>Procedimiento para establecer el modo de seguridad
 
@@ -48,7 +49,7 @@ Para obtener más información, vea seguridad de WCF, vea [información general 
      [!code-csharp[c_SettingSecurityMode#4](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#4)]
      [!code-vb[c_SettingSecurityMode#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#4)]
 
-## <a name="setting-the-clientcredentialtype-property"></a>Establecimiento de la propiedad la propiedad ClientCredentialType
+## <a name="setting-the-clientcredentialtype-property"></a>Establecimiento de la propiedad la propiedad ClientCredentialType 
 
 El establecimiento del modo en uno de los tres valores determina cómo establece la propiedad `ClientCredentialType`. Por ejemplo, el uso de la clase <xref:System.ServiceModel.WSHttpBinding>, estableciendo el modo en `Transport` implica que debe establecer la propiedad <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> de la clase <xref:System.ServiceModel.HttpTransportSecurity> en un valor adecuado.
 
@@ -76,15 +77,15 @@ El establecimiento del modo en uno de los tres valores determina cómo establece
 
 ### <a name="to-set-the-mode-and-clientcredentialtype-property-in-configuration"></a>Para establecer el Modo y la propiedad ClientCredentialType en configuración
 
-1. Agregue un elemento de enlace adecuado al elemento [\<bindings >](../configure-apps/file-schema/wcf/bindings.md) del archivo de configuración. En el ejemplo siguiente se agrega un elemento de [> de \<wsHttpBinding](../configure-apps/file-schema/wcf/wshttpbinding.md) .
+1. Agregue un elemento de enlace adecuado al [\<bindings>](../configure-apps/file-schema/wcf/bindings.md) elemento del archivo de configuración. En el siguiente ejemplo se agrega un [\<wsHttpBinding>](../configure-apps/file-schema/wcf/wshttpbinding.md) elemento.
 
-2. Agregue un elemento `<binding>` y establezca su atributo `name` en un valor adecuado.
+2. Agregue un `<binding>` elemento y establezca su `name` atributo en un valor adecuado.
 
-3. Agregue un elemento `<security>` y establezca el atributo `mode` en `Message`, `Transport` o `TransportWithMessageCredential`.
+3. Agregue un `<security>` elemento y establezca el `mode` atributo en `Message` , `Transport` o `TransportWithMessageCredential` .
 
-4. Si se establece el modo en `Transport`, agregue un elemento clientCredential y establezca el atributo`<transport>` en un valor apropiado.
+4. Si se establece el modo en `Transport`, agregue un elemento `<transport>` en un valor apropiado.
 
-     El siguiente ejemplo establece el modo en “`Transport"`, y, a continuación, establece el atributo `clientCredentialType` del Windows" en “`<transport>`.
+     El siguiente ejemplo establece el modo en “`Transport"`, y, a continuación, establece el atributo `clientCredentialType` del `<transport>`.
 
     ```xml
     <wsHttpBinding>
@@ -114,16 +115,16 @@ El establecimiento del modo en uno de los tres valores determina cómo establece
 
 Al establecer el modo de seguridad en `TransportWithMessageCredential`, el transporte determina el mecanismo real que proporciona la seguridad de nivel de transporte. Por ejemplo, el protocolo HTTP utiliza Secure Sockets Layer (SSL) sobre HTTP (HTTPS). Por consiguiente, se omite el establecimiento de la propiedad `ClientCredentialType` de cualquier objeto de seguridad de transporte (como <xref:System.ServiceModel.HttpTransportSecurity>).  En otras palabras, solo puede establecer el `ClientCredentialType` del objeto de seguridad del mensaje (para el enlace `WSHttpBinding`, el objeto <xref:System.ServiceModel.NonDualMessageSecurityOverHttp>).
 
-Para obtener más información, vea [Cómo: Utilice la seguridad de transporte y las credenciales de mensaje ](./feature-details/how-to-use-transport-security-and-message-credentials.md).
+Para obtener más información, consulte [Cómo: usar la seguridad de transporte y las credenciales de mensaje](./feature-details/how-to-use-transport-security-and-message-credentials.md).
 
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Configurar un puerto con un certificado SSL ](./feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
-- [Cómo: Usar la seguridad de transporte y las credenciales de mensaje ](./feature-details/how-to-use-transport-security-and-message-credentials.md)
+- [Procedimiento para configurar un puerto con un certificado SSL](./feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [Procedimiento para usar seguridad de transporte y credenciales de mensajes](./feature-details/how-to-use-transport-security-and-message-credentials.md)
 - [Seguridad de transporte](./feature-details/transport-security.md)
 - [Seguridad de los mensajes](./feature-details/message-security-in-wcf.md)
 - [Información general sobre seguridad](./feature-details/security-overview.md)
 - [Enlaces proporcionados por el sistema](system-provided-bindings.md)
-- [\<security >](../configure-apps/file-schema/wcf/security-of-wshttpbinding.md)
-- [\<security >](../configure-apps/file-schema/wcf/security-of-basichttpbinding.md)
-- [\<security >](../configure-apps/file-schema/wcf/security-of-nettcpbinding.md)
+- [\<security>](../configure-apps/file-schema/wcf/security-of-wshttpbinding.md)
+- [\<security>](../configure-apps/file-schema/wcf/security-of-basichttpbinding.md)
+- [\<security>](../configure-apps/file-schema/wcf/security-of-nettcpbinding.md)

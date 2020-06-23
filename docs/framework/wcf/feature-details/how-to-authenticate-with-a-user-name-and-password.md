@@ -1,15 +1,16 @@
 ---
 title: Procedimiento para autenticar con un nombre de usuario y contraseña
+description: Obtenga información sobre cómo habilitar un servicio WCF para autenticar un cliente mediante el uso de un nombre de usuario y una contraseña de dominio de Windows, con código de ejemplo.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-ms.openlocfilehash: e8dc9177afc590a6467855decfa8450b37c6fc77
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1f938f8041b2577b3705266948f29b42f23a6fd7
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601288"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247252"
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>Procedimiento para autenticar con un nombre de usuario y contraseña
 
@@ -32,7 +33,7 @@ En el cliente, debe pedir al usuario el nombre de usuario y la contraseña y esp
     // ...
     ```
 
-2. Especifique el certificado de servidor usado para cifrar la información de nombre de usuario y contraseña enviada a través de la conexión. Este código debe seguir inmediatamente al código anterior. En el ejemplo siguiente se usa el certificado creado por el archivo Setup. bat del ejemplo de [nombre de usuario de seguridad de mensaje](../samples/message-security-user-name.md) :
+2. Especifique el certificado de servidor usado para cifrar la información de nombre de usuario y contraseña enviada a través de la conexión. Este código debe seguir inmediatamente al código anterior. En el ejemplo siguiente se usa el certificado creado por el archivo setup.bat del ejemplo de [nombre de usuario de seguridad de mensaje](../samples/message-security-user-name.md) :
 
     ```csharp
     // ...
@@ -40,7 +41,7 @@ En el cliente, debe pedir al usuario el nombre de usuario y la contraseña y esp
     // ...
     ```
 
-    Puede usar su propio certificado; simplemente modifique el código para hacer referencia al certificado. Para obtener más información acerca de la creación y el uso de certificados, consulte [trabajar con certificados](working-with-certificates.md). Asegúrese de que el certificado está en el almacén de certificados Personas de confianza del equipo local. Para ello, ejecute MMC. exe y seleccione el elemento de menú **archivo**, **Agregar o quitar complemento..** .. En el cuadro de diálogo **Agregar o quitar complementos** , seleccione el **complemento certificados** y haga clic en **Agregar**. En el cuadro de diálogo complemento certificados, seleccione **cuenta de equipo**. De forma predeterminada el certificado generado por el ejemplo de Nombre de usuario de seguridad de mensaje se encuentra en la carpeta Personal/Certificados.  Se mostrará como "localhost" en la columna emitido para de la ventana de MMC. Arrastre y coloque el certificado en la carpeta **personas de confianza** . Esto permitirá a WCF tratar el certificado como certificado de confianza al realizar la autenticación.
+    Puede usar su propio certificado; simplemente modifique el código para hacer referencia al certificado. Para obtener más información acerca de la creación y el uso de certificados, consulte [trabajar con certificados](working-with-certificates.md). Asegúrese de que el certificado está en el almacén de certificados Personas de confianza del equipo local. Para ello, ejecute mmc.exe y seleccione el elemento de menú **archivo**, **Agregar o quitar complemento...** . En el cuadro de diálogo **Agregar o quitar complementos** , seleccione el **complemento certificados** y haga clic en **Agregar**. En el cuadro de diálogo complemento certificados, seleccione **cuenta de equipo**. De forma predeterminada el certificado generado por el ejemplo de Nombre de usuario de seguridad de mensaje se encuentra en la carpeta Personal/Certificados.  Se mostrará como "localhost" en la columna emitido para de la ventana de MMC. Arrastre y coloque el certificado en la carpeta **personas de confianza** . Esto permitirá a WCF tratar el certificado como certificado de confianza al realizar la autenticación.
 
 ## <a name="to-call-the-service-passing-username-and-password"></a>Para llamar al servicio pasando el nombre de usuario y la contraseña
 

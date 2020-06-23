@@ -1,5 +1,6 @@
 ---
 title: Procedimiento para hacer los certificados X.509 accesibles para WCF
+description: Obtenga información acerca de cómo hacer que un certificado X. 509 sea accesible para WCF. El código de aplicación debe especificar el nombre y la ubicación del almacén de certificados. Puede haber otros requisitos.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: e4f1aae021c4be49847b3b6dcd14b5a0a237c899
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5cc1118640bcf1262d88cb8cdb39939ae315cae3
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597051"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246875"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Procedimiento para hacer los certificados X.509 accesibles para WCF
 Para que un certificado X. 509 sea accesible para Windows Communication Foundation (WCF), el código de aplicación debe especificar el nombre y la ubicación del almacén de certificados. En ciertas circunstancias, la identidad del proceso debe tener el acceso al archivo que contiene la clave privada asociada al certificado X.509. Para obtener la clave privada asociada a un certificado X. 509 en un almacén de certificados, WCF debe tener permiso para hacerlo. De forma predeterminada, solo el propietario y la cuenta del sistema pueden tener acceso a la clave privada de un certificado.  
@@ -29,10 +30,10 @@ Para que un certificado X. 509 sea accesible para Windows Communication Foundati
   
         |Uso del certificado X.509|Clave privada|  
         |---------------------------|-----------------|  
-        |Firmar digitalmente un mensaje SOAP saliente.|Sí|  
+        |Firmar digitalmente un mensaje SOAP saliente.|Yes|  
         |Comprobar la firma de un mensaje SOAP entrante.|No|  
         |Cifrar un mensaje SOAP saliente.|No|  
-        |Descifrar un mensaje SOAP entrante.|Sí|  
+        |Descifrar un mensaje SOAP entrante.|Yes|  
   
     2. Determine la ubicación del almacén de certificados y diga dónde está almacenado el certificado.  
   
@@ -62,7 +63,7 @@ Para que un certificado X. 509 sea accesible para Windows Communication Foundati
         |Servicio hospedado en IIS 6,0 (Windows Server 2003) o IIS 7,0 (Windows Vista).|SERVICIO DE RED|  
         |Servicio que se hospeda en IIS 5. X (Windows XP).|Controlado por el elemento `<processModel>` en el archivo Machine.config. La cuenta predeterminada es ASPNET.|  
   
-    5. Conceda acceso de lectura al archivo que contiene la clave privada a la cuenta con la que se está ejecutando WCF mediante una herramienta como icacls. exe.  
+    5. Conceda acceso de lectura al archivo que contiene la clave privada a la cuenta con la que se está ejecutando WCF mediante una herramienta como icacls.exe.  
   
          En el ejemplo de código siguiente se edita la lista de control de acceso discrecional (DACL) del archivo especificado para conceder a la cuenta de servicio de red acceso de lectura (: R) al archivo.  
   

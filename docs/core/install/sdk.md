@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 05/04/2020
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: f8e5cc134d4132c83544effa7f1937f2a2c8d012
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9b170765740600641f96056adc08ff0b69a03338
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596311"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768319"
 ---
 # <a name="install-the-net-core-sdk"></a>Instalación del SDK de .NET Core
 
@@ -124,6 +124,8 @@ Visual Studio para Mac instala el SDK de .NET Core cuando se selecciona la carg
 
 ::: zone-end
 
+::: zone pivot="os-windows,os-macos"
+
 ## <a name="install-alongside-visual-studio-code"></a>Instalación junto con Visual Studio Code
 
 Visual Studio Code es un editor de código fuente ligero y eficaz que se ejecuta en el escritorio. Visual Studio Code está disponible para Windows, macOS y Linux.
@@ -133,6 +135,8 @@ Aunque Visual Studio Code no viene con un instalador automatizado de .NET Core 
 01. [Descargue e instale Visual Studio Code](https://code.visualstudio.com/Download).
 01. [Descargue e instale el SDK de .NET Core](https://dotnet.microsoft.com/download/dotnet-core).
 01. [Instale la extensión de C# desde el Marketplace de Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
+
+::: zone-end
 
 ::: zone pivot="os-windows"
 
@@ -148,7 +152,7 @@ dotnet-install.ps1 -Channel Current
 
 ::: zone-end
 
-::: zone pivot="os-linux,os-macos"
+::: zone pivot="os-macos"
 
 ## <a name="install-with-bash-automation"></a>Instalación mediante la automatización de Bash
 

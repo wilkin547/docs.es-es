@@ -1,16 +1,17 @@
 ---
 title: Procedimiento para crear un servicio básico web HTTP de WCF
+description: Obtenga información sobre cómo crear un servicio que exponga un punto de conexión web en WCF. Los extremos web envían datos mediante XML o JSON. No hay ninguna envoltura SOAP.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 877662d3-d372-4e08-b417-51f66a0095cd
-ms.openlocfilehash: e9646235f9423f2a4df9cfe09a5e83a91dcdcace
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 7481367f27d973ba809dff5ca1c4a4f168fbbb98
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895181"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247109"
 ---
 # <a name="how-to-create-a-basic-wcf-web-http-service"></a>Procedimiento para crear un servicio básico web HTTP de WCF
 
@@ -77,7 +78,7 @@ Windows Communication Foundation (WCF) le permite crear un servicio que exponga 
 
 ## <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a>Para llamar a las operaciones de servicio asignadas a GET en Internet Explorer
 
-1. Abra Internet Explorer y escriba "`http://localhost:8000/EchoWithGet?s=Hello, world!`" y presione Entrar. La dirección URL contiene la dirección base del servicio (`http://localhost:8000/`), la dirección relativa del punto de conexión (""), la operación de servicio que se va a llamar ("EchoWithGet") y un signo de interrogación seguido de una lista de parámetros con nombre separados por una y comercial (&).
+1. Abra Internet Explorer y escriba " `http://localhost:8000/EchoWithGet?s=Hello, world!` " y presione Entrar. La dirección URL contiene la dirección base del servicio ( `http://localhost:8000/` ), la dirección relativa del punto de conexión (""), la operación de servicio que se va a llamar ("EchoWithGet") y un signo de interrogación seguido de una lista de parámetros con nombre separados por una y comercial (&).
 
 ## <a name="to-call-service-operations-in-code"></a>Realización de llamadas a operaciones de servicio mediante código
 

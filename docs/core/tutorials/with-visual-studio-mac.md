@@ -2,12 +2,12 @@
 title: Creación de una aplicación de consola de .NET Core con Visual Studio para Mac
 description: Aprenda a crear una aplicación de consola de .NET Core con Visual Studio para Mac.
 ms.date: 06/02/2020
-ms.openlocfilehash: 57f16e510270b7256b285493b1f978101fc11804
-ms.sourcegitcommit: f6350c2c542e6edd52d7e9d6667b96d85d810e67
+ms.openlocfilehash: 9cab838eaab2c59d8a0270267514f57acb7c60fb
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84717528"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84811670"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio-for-mac"></a>Tutorial: Creación de una aplicación de consola de .NET Core con Visual Studio para Mac
 
@@ -84,7 +84,7 @@ Mejore la aplicación para pedir su nombre al usuario y mostrarlo con la fecha y
 
 1. En *Program.cs*, reemplace el contenido del método `Main`, que es la línea que llama a `Console.WriteLine`, por el código siguiente:
 
-   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="1":::
+   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="MainMethod":::
 
    Este código muestra "What is your name?" en la ventana de la consola y espera a que el usuario escriba una cadena y luego presione <kbd>entrar</kbd>. Almacena esta cadena en una variable denominada `name`. También recupera el valor de la propiedad <xref:System.DateTime.Now?displayProperty=nameWithType>, que contiene la hora local actual, y lo asigna a una variable denominada `date`. Por último, muestra estos valores en la ventana de la consola.
 

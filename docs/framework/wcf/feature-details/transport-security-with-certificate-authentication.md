@@ -1,15 +1,16 @@
 ---
 title: Seguridad del transporte con autenticación de certificados
+description: Obtenga información acerca de cómo usa WFC los certificados para la autenticación de servidor y cliente cuando se usa la seguridad de transporte.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-ms.openlocfilehash: 47322cbcddf9f33101bbfbeaa07a3fab74b9d26a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3da1202a5ad3b953470b50dd5924b2ab45f301eb
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84576023"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244783"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>Seguridad del transporte con autenticación de certificados
 
@@ -26,8 +27,8 @@ En este artículo se describe el uso de certificados X. 509 para la autenticaci�
 |Modo de seguridad|Transporte|  
 |Interoperabilidad|Con clientes y servicios de servicios Web existentes|  
 |Autenticación (servidor)<br /><br /> Autenticación (cliente)|Sí (mediante un certificado SSL)<br /><br /> Sí (mediante un certificado X.509)|  
-|Integridad de datos|Sí|  
-|Confidencialidad de los datos|Sí|  
+|Integridad de datos|Yes|  
+|Confidencialidad de los datos|Yes|  
 |Transporte|HTTPS|  
 |Enlace|<xref:System.ServiceModel.WSHttpBinding>|  
   
