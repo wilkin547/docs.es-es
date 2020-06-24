@@ -5,16 +5,19 @@ helpviewer_keywords:
 - constrained execution regions
 - CERs
 ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
-ms.openlocfilehash: fde2bab99f156ddffec678022a58e7b14e0af01e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3161f77399030c287649ee5757814963b6afb7cf
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716169"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247732"
 ---
 # <a name="constrained-execution-regions"></a>regiones de ejecución restringidas
 Una región de ejecución restringida (CER) es parte de un mecanismo para crear código administrado de confianza. Una CER define un área en la que Common Language Runtime (CLR) no puede producir excepciones fuera de banda que eviten que el código del área se ejecute en su totalidad. Dentro de esa región, el código de usuario no puede ejecutar código que pueda producir excepciones fuera de banda. El método <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> debe ir inmediatamente antes del bloque `try` y marca los bloques `catch`, `finally` y `fault` como regiones de ejecución restringidas. Una vez marcada como región restringida, el código solo debe llamar a otro código con contratos de fiabilidad estables y no debe asignar ni realizar llamadas virtuales a métodos no preparados o no confiables a menos que esté preparado para controlar errores. CLR retrasa las anulaciones de subprocesos del código que se está ejecutando en una CER.  
-  
+
+> [!IMPORTANT]
+> CER solo se admite en .NET Framework. Este artículo no se aplica a .NET Core o .NET 5 y versiones posteriores.
+
  Las regiones de ejecución restringidas se usan de diferentes formas en CLR además de en un bloque anotado `try`, en concreto, finalizadores críticos que se ejecutan en clases derivadas de la clase <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject> y código ejecutado mediante el método <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A>.  
   
 ## <a name="cer-advance-preparation"></a>Preparación anticipada de CER  
@@ -114,4 +117,4 @@ Una región de ejecución restringida (CER) es parte de un mecanismo para crear 
   
 ## <a name="see-also"></a>Vea también
 
-- [Reliability Best Practices (Procedimientos recomendados para la confiabilidad)](reliability-best-practices.md)
+- [Procedimientos recomendados para la confiabilidad](reliability-best-practices.md)

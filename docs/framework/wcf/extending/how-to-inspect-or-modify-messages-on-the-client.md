@@ -1,24 +1,25 @@
 ---
-title: Cómo inspeccionar o modificar mensajes en el cliente
+title: Procedimiento para inspeccionar o modificar mensajes en el cliente
+description: Obtenga información sobre cómo inspeccionar o modificar los mensajes entrantes o salientes a través de un cliente o servicio WCF implementando la interfaz adecuada.
 ms.date: 03/30/2017
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
-ms.openlocfilehash: db1a99d2ed1f765e39815e6b6c70d6ada1db1d15
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6f6a3d20d7f3a9fb79de5cd3e29096e270d0f188
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185535"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247512"
 ---
-# <a name="how-to-inspect-or-modify-messages-on-the-client"></a>Cómo inspeccionar o modificar mensajes en el cliente
-Puede inspeccionar o modificar los mensajes entrantes o <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> salientes a través de un cliente WCF implementando un e insertándolo en el tiempo de ejecución del cliente. Para obtener más información, consulte [Ampliación de clientes](extending-clients.md). La característica equivalente del servicio es <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>. Para obtener un ejemplo de código completo, vea el [inspectores](../samples/message-inspectors.md) de mensajes ejemplo.  
+# <a name="how-to-inspect-or-modify-messages-on-the-client"></a>Procedimiento para inspeccionar o modificar mensajes en el cliente
+Puede inspeccionar o modificar los mensajes entrantes o salientes a través de un cliente WCF implementando <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> e insertando en el tiempo de ejecución del cliente. Para obtener más información, consulte [Extending clients](extending-clients.md). La característica equivalente del servicio es <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>. Para obtener un ejemplo de código completo, vea el ejemplo de [inspectores de mensajes](../samples/message-inspectors.md) .  
   
 ### <a name="to-inspect-or-modify-messages"></a>Inspeccionar o modificar los mensajes  
   
 1. Implemente la interfaz <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>.  
   
-2. Implemente <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> o <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> según el ámbito en el que desee insertar el inspector de mensaje de cliente. <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>le permite cambiar el comportamiento en el nivel de punto final. <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>le permite cambiar el comportamiento a nivel de contrato.  
+2. Implemente <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> o <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> según el ámbito en el que desee insertar el inspector de mensaje de cliente. <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>permite cambiar el comportamiento en el nivel de extremo. <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>permite cambiar el comportamiento en el nivel de contrato.  
   
-3. Inserte el comportamiento antes de llamar al método <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> o <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> en <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Para obtener más información, consulte [Configuración y ampliación del tiempo](configuring-and-extending-the-runtime-with-behaviors.md)de ejecución con comportamientos .  
+3. Inserte el comportamiento antes de llamar al método <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> o <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> en <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Para obtener más información, consulte [configuración y extensión del tiempo de ejecución con comportamientos](configuring-and-extending-the-runtime-with-behaviors.md).  
   
 ## <a name="example"></a>Ejemplo  
  Los siguientes ejemplos de código muestran, en orden:  
@@ -126,7 +127,7 @@ public class SimpleBehaviorExtensionElement : BehaviorExtensionElement
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>

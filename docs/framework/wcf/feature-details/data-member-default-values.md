@@ -1,5 +1,6 @@
 ---
 title: Valores predeterminados de los miembros de datos
+description: Obtenga información acerca de cómo omitir un miembro de datos de datos serializados cuando tiene un .NET Framework valor predeterminado. WCF puede mejorar el rendimiento al no serializar un valor predeterminado.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-ms.openlocfilehash: e4eaaec880ecfcff24d9d5b4e8347a84738e070b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 97946a6b7da14efdcb5229b4cc5d0799eb8d7723
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593489"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247382"
 ---
 # <a name="data-member-default-values"></a>Valores predeterminados de los miembros de datos
 En el .NET Framework, los tipos tienen un concepto de *valores predeterminados*. Por ejemplo, para cualquier tipo de referencia el valor predeterminado es `null`, y para un tipo entero es cero. En ocasiones es deseable omitir un miembro de datos de los datos serializados cuando está establecido en su valor predeterminado. Dado que el miembro tiene un valor predeterminado, no es necesario serializar un valor real; esto es una ventaja en cuanto al rendimiento.  

@@ -1,18 +1,19 @@
 ---
 title: Información general de enlaces de Windows Communication Foundation
+description: Obtenga información sobre los enlaces, que especifican cómo conectarse a un servicio WCF, incluidos los elementos de un enlace y cómo especificar un enlace para un punto de conexión de servicio.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: 8c1e44609a0a20ffcec55af43e49ee62b0842378
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: da8050c4e9aeb111de3a54315b3650bcf09f23ed
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320756"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247719"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Información general de enlaces de Windows Communication Foundation
-Los enlaces son objetos que se utilizan para especificar los detalles de comunicación necesarios para conectarse al extremo de un servicio de Windows Communication Foundation (WCF). Cada punto de conexión de un servicio WCF requiere que un enlace esté bien especificado. En este tema se describen los tipos de datos de comunicación que los enlaces definen, los elementos de un enlace, qué enlaces se incluyen en WCF y cómo se puede especificar un enlace para un extremo.  
+Los enlaces son objetos que se utilizan para especificar los detalles de comunicación necesarios para conectarse al extremo de un servicio de Windows Communication Foundation (WCF). Cada extremo de un servicio WCF requiere que se especifique bien un enlace. En este tema se describen los tipos de datos de comunicación que los enlaces definen, los elementos de un enlace, qué enlaces se incluyen en WCF y cómo se puede especificar un enlace para un extremo.  
   
 ## <a name="what-a-binding-defines"></a>Qué define un enlace  
  La información de un enlace puede ser muy básica o muy compleja. El enlace más básico especifica solo el protocolo de transporte (como HTTP) que se debe utilizar para conectar al extremo. En general, la información que contiene un enlace sobre cómo conectarse a un punto de conexión se divide en una de las siguientes categorías:  
@@ -20,10 +21,10 @@ Los enlaces son objetos que se utilizan para especificar los detalles de comunic
  **Protocolos**  
  Determina el mecanismo de seguridad utilizado: función de la mensajería de confianza o configuración de flujo de contexto de transacción.  
   
- **Codificación**  
+ **Encoding**  
  Determina la codificación del mensaje (por ejemplo, texto o binario).  
   
- **Porta**  
+ **Transporte**  
  Determina el protocolo de transporte subyacente que se utilizará (por ejemplo, TCP o HTTP).  
   
 ## <a name="the-elements-of-a-binding"></a>Los elementos de un enlace  
@@ -36,16 +37,16 @@ Los enlaces son objetos que se utilizan para especificar los detalles de comunic
   
 - <xref:System.ServiceModel.WSHttpBinding>: Un enlace interoperable adecuado para conectar a los extremos que se ajustan a WS - * protocolos.  
   
-- <xref:System.ServiceModel.NetNamedPipeBinding>: usa el .NET Framework para conectarse a otros puntos de conexión de WCF en el mismo equipo.  
+- <xref:System.ServiceModel.NetNamedPipeBinding>: Usa el .NET Framework para conectarse a otros puntos de conexión de WCF en el mismo equipo.  
   
-- <xref:System.ServiceModel.NetMsmqBinding>: utiliza el .NET Framework para crear conexiones de mensajes en cola con otros extremos de WCF.  
+- <xref:System.ServiceModel.NetMsmqBinding>: Utiliza el .NET Framework para crear conexiones de mensajes en cola con otros extremos de WCF.  
 
-- <xref:System.ServiceModel.NetTcpBinding>: este enlace ofrece un mayor rendimiento que los enlaces HTTP y es ideal para su uso en una red local.
+- <xref:System.ServiceModel.NetTcpBinding>: Este enlace ofrece un mayor rendimiento que los enlaces HTTP y es ideal para su uso en una red local.
   
  Para obtener una lista completa, con descripciones, de todos los enlaces proporcionados por WCF, vea [enlaces proporcionados](system-provided-bindings.md)por el sistema.  
   
 ## <a name="using-your-own-bindings"></a>Utilizar sus propios enlaces  
- Si ninguno de los enlaces proporcionados por el sistema incluidos tiene la combinación correcta de características que requiere una aplicación de servicio, puede crear su propio enlace. Existen dos formas de lograr esto. Puede crear un nuevo enlace a partir de elementos de enlace ya existentes mediante un objeto <xref:System.ServiceModel.Channels.CustomBinding> o puede crear un enlace completamente definido por el usuario derivando del enlace <xref:System.ServiceModel.Channels.Binding>. Para obtener más información sobre cómo crear su propio enlace con estos dos enfoques, vea [enlaces personalizados](./extending/custom-bindings.md) y [crear enlaces definidos por el usuario](./extending/creating-user-defined-bindings.md).  
+ Si ninguno de los enlaces proporcionados por el sistema incluidos tiene la combinación correcta de características que requiere una aplicación de servicio, puede crear su propio enlace. Existen dos formas de hacerlo. Puede crear un nuevo enlace a partir de elementos de enlace ya existentes mediante un objeto <xref:System.ServiceModel.Channels.CustomBinding> o puede crear un enlace completamente definido por el usuario derivando del enlace <xref:System.ServiceModel.Channels.Binding>. Para obtener más información sobre cómo crear su propio enlace con estos dos enfoques, vea [enlaces personalizados](./extending/custom-bindings.md) y [crear enlaces definidos por el usuario](./extending/creating-user-defined-bindings.md).  
   
 ## <a name="using-bindings"></a>Utilizar los enlaces  
  El uso de enlaces conlleva dos pasos básicos:  

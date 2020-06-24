@@ -1,16 +1,17 @@
 ---
 title: Procedimiento para habilitar el servicio de uso compartido de puertos Net.TCP
+description: Obtenga información acerca de cómo configurar el servicio de uso compartido de puertos net TCP mediante MMC para habilitar net. TCP, que está deshabilitado de forma predeterminada.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - port sharing [WCF]
 - activation services [WCF]
 ms.assetid: c9175af4-c27c-4765-bf45-b8f7528a7282
-ms.openlocfilehash: 8b305b98d620636328866bce848411f395053485
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0292559e3befde7f0b00b36aa10a2d9615daf049
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593157"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247005"
 ---
 # <a name="how-to-enable-the-nettcp-port-sharing-service"></a>Procedimiento para habilitar el servicio de uso compartido de puertos Net.TCP
 Windows Communication Foundation (WCF) usa un servicio de Windows denominado servicio de uso compartido de puertos net. TCP para facilitar el uso compartido de puertos TCP en varios procesos. Este servicio se instala como parte de WCF, pero el servicio no está habilitado de forma predeterminada como precaución de seguridad y, por lo tanto, debe habilitarse manualmente antes de usarse por primera vez. En este tema se describe cómo configurar el Servicio de uso compartido de puertos Net.TCP mediante el complemento de Microsoft Management Console (MMC).  

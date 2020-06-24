@@ -1,5 +1,6 @@
 ---
 title: Orden de los miembros de datos
+description: Obtenga información sobre el orden de los miembros de datos en WCF. Es posible que las aplicaciones necesiten conocer o cambiar el orden en el que los miembros de datos se envían o se esperan.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], ordering members
 ms.assetid: 0658a47d-b6e5-4ae0-ba72-ababc3c6ff33
-ms.openlocfilehash: 717d7014f4c4a56249ead0c839cf05f4f83a6f5f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5c192d3bda65a7364345df4310dccd96cbe04056
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593469"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247369"
 ---
 # <a name="data-member-order"></a>Orden de los miembros de datos
 En algunas aplicaciones, es útil conocer el orden en el que se envían los datos de los distintos miembros de datos o en el que se espera recibir (como el orden en el que los datos aparecen en el XML serializado). A veces puede ser necesario cambiar este orden. En este tema se explican las reglas de la clasificación.  

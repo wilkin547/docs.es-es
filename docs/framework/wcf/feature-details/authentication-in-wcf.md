@@ -1,16 +1,17 @@
 ---
 title: Autenticación en WCF
+description: Obtenga información sobre varios mecanismos de WCF que proporcionan autenticación, como la autenticación de Windows, los certificados X. 509 y el nombre de usuario y contraseña.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF]
 - security [WCF], authentication
 ms.assetid: 9254d873-843d-4c6e-bea4-8184ac3e44f4
-ms.openlocfilehash: b513c9713bd2c04e125915d1a0a87c86ce249666
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4c3348cfb84b8571dc1f24b774ffcd691aaa5001
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597649"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247525"
 ---
 # <a name="authentication-in-wcf"></a>Autenticación en WCF
 En los temas siguientes se muestran una serie de mecanismos diferentes en Windows Communication Foundation (WCF) que proporcionan autenticación, por ejemplo, la autenticación de Windows, los certificados X. 509 y el nombre de usuario y contraseñas.  

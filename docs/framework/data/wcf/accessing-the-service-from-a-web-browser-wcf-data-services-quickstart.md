@@ -1,13 +1,14 @@
 ---
 title: Acceder al servicio desde un explorador web (Inicio rápido de Data Services de WCF)
+description: Aprenda a iniciar WCF Data Services en Visual Studio y a deshabilitar la lectura de fuentes en un explorador. Obtiene el documento de definición de servicio y obtiene acceso a los recursos del servicio de datos.
 ms.date: 03/30/2017
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
-ms.openlocfilehash: d89f84cd3ea4f56bbae34cbefe0c3891df96fa8b
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 713436c31bc3f622c4f44a83e33fff3fcbba1c1c
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894339"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247783"
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>Acceder al servicio desde un explorador web (Inicio rápido de Data Services de WCF)
 
@@ -69,7 +70,7 @@ Esta es la segunda tarea de la guía de inicio rápido de WCF Data Services. En 
 
      De esta forma, se filtran los pedidos que pertenecen a un cliente determinado, `ALFKI`, de modo que solo se devuelve un pedido concreto dependiendo del valor proporcionado para `OrderID`.
 
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="next-steps"></a>Pasos a seguir
 
 Ha tenido acceso correctamente al WCF Data Services desde un explorador Web, con el explorador emitiendo solicitudes GET de HTTP a los recursos especificados. Un explorador web es un modo sencillo de experimentar con la sintaxis de direccionamiento de las solicitudes y de ver los resultados. Sin embargo, este método no se suele emplear para obtener acceso a un servicio de datos de producción. Habitualmente, las aplicaciones interactúan con el servicio de datos mediante el código de la aplicación o los lenguajes de script. A continuación, creará una aplicación cliente que usa las bibliotecas de cliente para tener acceso a los recursos del servicio de datos como si fueran objetos de Common Language Runtime (CLR):
 

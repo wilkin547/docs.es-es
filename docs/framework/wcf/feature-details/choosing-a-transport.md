@@ -1,15 +1,16 @@
 ---
 title: Elección del transporte
+description: 'Obtenga información sobre los criterios para elegir entre los transportes principales que proporciona WCF: HTTP, TCP y canalizaciones con nombre.'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-ms.openlocfilehash: 7e1f6b2e1905fb92ebfe78be351feeaebb374c11
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e1a92203de25aa399316eea91a758802768442a0
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587071"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247499"
 ---
 # <a name="choosing-a-transport"></a>Elección del transporte
 En este tema se describen los criterios para elegir entre los tres transportes principales que se incluyen en Windows Communication Foundation (WCF): HTTP, TCP y canalizaciones con nombre. WCF también incluye un transporte de Message Queuing (también conocido como MSMQ), pero este documento no cubre Message Queue Server.  
@@ -61,7 +62,7 @@ En este tema se describen los criterios para elegir entre los tres transportes p
 |Throughput|El rendimiento mide la cantidad de datos que se pueden transmitir y se pueden procesar en un período de tiempo especificado. Como la latencia, el transporte escogido puede afectar al rendimiento de las operaciones de servicio. Maximizar el rendimiento de un transporte requiere minimizar tanto la sobrecarga de transmisión de contenido como el tiempo de espera empleado para que se completen los intercambios de mensajes. Tanto los transportes de canalización con nombre y TCP agregan sobrecarga pequeña al cuerpo del mensaje y admiten una forma dúplex nativa que reduce la espera en las respuestas de los mensaje.|TCP, canalización con nombre|  
 |Tooling|Las herramientas representan soporte de aplicaciones de terceros para un protocolo para el desarrollo, diagnóstico, hospedaje y otras actividades. Desarrollar herramientas y software para trabajar con el protocolo HTTP implica una inversión particularmente grande.|HTTP|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.WSHttpBinding>

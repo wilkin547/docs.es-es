@@ -1,16 +1,17 @@
 ---
 title: Información conceptual
+description: Obtenga información sobre el sistema de mensajería de Windows Communication Foundation (WCF) y las clases que admiten su uso.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF [WCF], concepts
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 503fae4b-014c-44df-a9c7-c76ec4ed4229
-ms.openlocfilehash: 4227eaa881c8505cd14265c22451ad872838c83a
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: b84de045e388dde69283a72357949ba779d7fb3c
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72960919"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247693"
 ---
 # <a name="conceptual-overview"></a>Información general conceptual
 

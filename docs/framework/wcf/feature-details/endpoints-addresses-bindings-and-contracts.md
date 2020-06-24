@@ -1,17 +1,18 @@
 ---
 title: 'Puntos de conexión: direcciones, enlaces y contratos'
+description: Obtenga información acerca de cómo se produce toda comunicación con un servicio WCF a través de los puntos de conexión de servicio, que proporcionan a los clientes acceso a la funcionalidad que ofrece el servicio.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - endpoints [WCF]
 - Windows Communication Foundation [WCF], endpoints
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
-ms.openlocfilehash: 3ac7f0b165b99a1ed3702628958f7d4c7702f5b1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ce0874bfed716716b6fd1801b35a4266095cd752
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593521"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247317"
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>Puntos de conexión: direcciones, enlaces y contratos
 
@@ -88,8 +89,8 @@ Describe cómo crear un punto de conexión de servicio mediante configuración
 [Cómo: crear un punto de conexión de servicio en el código](how-to-create-a-service-endpoint-in-code.md)\
 Describe cómo crear un extremo de servicio mediante código.
 
-[Cómo: usar SvcUtil. exe para validar el código de servicio compilado](how-to-use-svcutil-exe-to-validate-compiled-service-code.md)\
-Describe cómo detectar errores en las implementaciones de servicio y las configuraciones sin hospedar el servicio mediante la [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).
+[Cómo: usar Svcutil.exe para validar el código de servicio compilado](how-to-use-svcutil-exe-to-validate-compiled-service-code.md)\
+Describe cómo detectar errores en las implementaciones de servicio y las configuraciones sin hospedar el servicio mediante la [herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).
 
 ## <a name="see-also"></a>Vea también
 

@@ -1,16 +1,17 @@
 ---
 title: Crear un servicio de datos de WCF en Visual Studio
+description: Aprenda a crear un servicio de datos de ejemplo que usa WCF Data Services para exponer una fuente de OData basada en una base de datos de ejemplo.
 ms.date: 08/24/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: 72e3b35465968674a20aa48262d3425a2190ff74
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 739cb6971209792724a2e939ca4f4821d5879c8c
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802265"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247796"
 ---
 # <a name="create-the-data-service"></a>Crear el servicio de datos
 
@@ -28,25 +29,25 @@ En este tema, creará un servicio de datos de ejemplo que utiliza WCF Data Servi
 
 1. En Visual Studio, en el menú **Archivo**, seleccione **Nuevo** > **Proyecto**.
 
-1. En el cuadro de diálogo **nuevo proyecto** , en Visual Basic o visual C# , seleccione la categoría **Web** y, a continuación, seleccione **aplicación Web ASP.net**.
+1. En el cuadro de diálogo **nuevo proyecto** , en Visual Basic o Visual C#, seleccione la categoría **Web** y, a continuación, seleccione **aplicación Web ASP.net**.
 
 1. Escriba `NorthwindService` como nombre del proyecto y seleccione **Aceptar**.
 
 1. En el cuadro de diálogo **nueva aplicación Web de ASP.net** , seleccione **vacío** y, después, haga clic en **Aceptar**.
 
-1. (Opcional) Especifique un número de puerto específico para la aplicación web. Nota: el número de Puerto `12345` se usa en esta serie de temas de inicio rápido.
+1. (Opcional) Especifique un número de puerto específico para la aplicación web. Nota: el número de puerto `12345` se usa en esta serie de temas de inicio rápido.
 
     1. En **Explorador de soluciones**, haga clic con el botón derecho en el proyecto ASP.net que acaba de crear y, a continuación, elija **propiedades**.
 
-    2. Seleccione la pestaña **Web** y establezca el valor del cuadro de texto **puerto específico** en `12345`.
+    2. Seleccione la pestaña **Web** y establezca el valor del cuadro de texto **puerto específico** en `12345` .
 
 ## <a name="define-the-data-model"></a>Definir el modelo de datos
 
-1. En **Explorador de soluciones**, haga clic con el botón secundario en el nombre del proyecto ASP.net y, a continuación, haga clic en **Agregar** > **nuevo elemento**.
+1. En **Explorador de soluciones**, haga clic con el botón secundario en el nombre del proyecto ASP.net y, a continuación, haga clic en **Agregar**  >  **nuevo elemento**.
 
 2. En el cuadro de diálogo **Agregar nuevo elemento** , seleccione la categoría de **datos** y, a continuación, seleccione **ADO.NET Entity Data Model**.
 
-3. Como nombre del modelo de datos, escriba `Northwind.edmx`.
+3. Como nombre del modelo de datos, escriba `Northwind.edmx` .
 
 4. En el **Asistente para Entity Data Model**, seleccione **EF Designer desde base de datos**y, a continuación, haga clic en **siguiente**.
 
@@ -64,7 +65,7 @@ En este tema, creará un servicio de datos de ejemplo que utiliza WCF Data Servi
 
 ## <a name="create-the-wcf-data-service"></a>Crear el servicio de datos de WCF
 
-1. En **Explorador de soluciones**, haga clic con el botón derecho en el proyecto ASP.net y, a continuación, elija **Agregar** > **nuevo elemento**.
+1. En **Explorador de soluciones**, haga clic con el botón derecho en el proyecto ASP.net y, a continuación, elija **Agregar**  >  **nuevo elemento**.
 
 2. En el cuadro de diálogo **Agregar nuevo elemento** , seleccione la plantilla de elemento de **servicio de datos de WCF** en la categoría **Web** .
 
@@ -73,7 +74,7 @@ En este tema, creará un servicio de datos de ejemplo que utiliza WCF Data Servi
    > [!NOTE]
    > La plantilla de **servicio de datos de WCF** está disponible en visual Studio 2015, pero no en visual Studio 2017 o posterior.
 
-3. Como nombre del servicio, escriba `Northwind`.
+3. Como nombre del servicio, escriba `Northwind` .
 
      Visual Studio crea los archivos de código y marcado XML para el nuevo servicio. De forma predeterminada, se abre la ventana del editor de código. En **Explorador de soluciones**, el servicio tiene el nombre Northwind con la extensión *. SVC.CS* o *. SVC. VB*.
 

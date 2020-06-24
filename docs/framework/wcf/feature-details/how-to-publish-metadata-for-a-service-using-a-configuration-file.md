@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para publicar metadatos para un servicio mediante un archivo de configuración
+description: Obtenga información sobre cómo publicar metadatos para un servicio WCF mediante un archivo de configuración. La publicación permite a los clientes obtener esos metadatos mediante una solicitud GET o HTTP/GET.
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-ms.openlocfilehash: 976e1e0bb2c6479f7599165a1c6fe83bae4e17c1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: d5d425be7f02a204476c4f6e81441aca9ea39fcc
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596986"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246823"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Procedimiento para publicar metadatos para un servicio mediante un archivo de configuración
 Este es uno de los dos temas de procedimientos que muestran los metadatos de publicación para un servicio Windows Communication Foundation (WCF). Hay dos maneras de especificar cómo debería publicar metadatos un servicio: mediante un archivo de configuración y mediante código. En este tema se muestra cómo publicar metadatos para un servicio mediante un archivo de configuración.  
