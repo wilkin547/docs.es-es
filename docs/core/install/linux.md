@@ -4,12 +4,12 @@ description: Conozca qué distribuciones de Linux admiten la instalación de .NE
 author: thraka
 ms.author: adegeo
 ms.date: 06/01/2020
-ms.openlocfilehash: fec3cf9e99c2db5d7312280f676bc2a3344f1ae1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e668ad733481c2d9b73994b6344b38768f5851fe
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602673"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903381"
 ---
 # <a name="install-net-core-on-linux"></a>Instalación de .NET Core en Linux
 
@@ -28,6 +28,26 @@ Las siguientes versiones de .NET Core ya no se admiten ❌. Las descargas de est
 - 2.0
 
 Estas versiones no admitidas no se detallan en las secciones siguientes y los resultados pueden variar si intenta instalarlas.
+
+## <a name="alpine"></a>Alpine
+
+No hay instaladores para Alpine. Debe usar el [script de instalación](linux-alpine.md#scripted-install) o seguir las instrucciones de [instalación manual](linux-alpine.md#manual-install).
+
+En la tabla siguiente se muestra una lista de versiones de .NET Core actualmente compatibles y las versiones de Alpine en las que se admiten. Estas versiones siguen siendo compatibles hasta que la versión de [.NET Core llega al fin del soporte técnico](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) o la versión de [Alpine llega al final del ciclo de vida](https://wiki.alpinelinux.org/wiki/Alpine_Linux:Releases).
+
+- Una ✔️ indica que todavía se admite la versión de Alpine o de .NET Core.
+- Una ❌ indica que la versión de Alpine o de .NET Core no se admite en esa versión de Alpine.
+- Cuando una versión de Alpine y una versión de .NET Core tienen una ✔️, se admite esa combinación de sistema operativo y .NET.
+
+| Alpine                      | .NET Core 2.1 | .NET Core 3.1 | .NET 5 (versión preliminar) |
+|-----------------------------|---------------|---------------|----------------|
+| ✔️ [3.12](linux-alpine.md)  | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 (versión preliminar) |
+| ✔️ [3.11](linux-alpine.md)  | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 (versión preliminar) |
+| ✔️ [3.10](linux-alpine.md)  | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 (versión preliminar) |
+| ✔️ [3.9](linux-alpine.md)   | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 (versión preliminar) |
+| ❌ [3.8](linux-alpine.md)   | ✔️ 2.1        | ❌ 3.1        | ❌ 5.0 (versión preliminar) |
+
+Para más información, consulte [Instalación de .NET Core en Alpine](linux-alpine.md).
 
 ## <a name="centos"></a>CentOS
 
@@ -57,6 +77,8 @@ En la tabla siguiente se muestra una lista de versiones de .NET Core actualmente
 | ✔️ [10](linux-debian.md#debian-10-)     | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 (versión preliminar) |
 | ✔️ [9](linux-debian.md#debian-9-)       | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 (versión preliminar) |
 | ❌ [8](linux-debian.md#debian-8-)       | ✔️ 2.1        | ❌ 3.1        | ❌ 5.0 (versión preliminar) |
+
+Para más información, consulte [Instalación de .NET Core en Debian](linux-debian.md).
 
 ## <a name="fedora"></a>Fedora
 
@@ -93,6 +115,8 @@ En la tabla siguiente se muestra una lista de las versiones de .NET Core compati
 |----------------------------|---------------|---------------|----------------|
 | ✔️ [15](linux-opensuse.md#opensuse-15-)     | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 (versión preliminar) |
 
+Para más información, consulte [Instalación de .NET Core en openSUSE](linux-opensuse.md).
+
 ## <a name="red-hat"></a>Red Hat
 
 Red Hat Enterprise Linux (RHEL) usa yum (RHEL 7) y DNF (RHEL 8) como administrador de paquetes.
@@ -108,6 +132,8 @@ En la tabla siguiente se muestra una lista de las versiones de .NET Core compati
 | ✔️ [8](linux-rhel.md#rhel-8-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 (versión preliminar) |
 | ✔️ [7](linux-rhel.md#rhel-7-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 (versión preliminar) |
 
+Para más información, consulte [Instalación de .NET Core en RHEL](linux-rhel.md).
+
 ## <a name="sles"></a>SLES
 
 SLES usa zypper como administrador de paquetes.
@@ -122,6 +148,8 @@ En la tabla siguiente se muestra una lista de las versiones de .NET Core compati
 |------------------------|---------------|---------------|----------------|
 | ✔️ [15](linux-sles.md#sles-15-)     | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 (versión preliminar) |
 | ✔️ [12 SP2](linux-sles.md#sles-12-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 (versión preliminar) |
+
+Para más información, consulte [Instalación de .NET Core en SLES](linux-sles.md).
 
 ## <a name="ubuntu"></a>Ubuntu
 
