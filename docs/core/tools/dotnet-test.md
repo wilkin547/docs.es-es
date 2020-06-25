@@ -2,12 +2,12 @@
 title: Comando dotnet test
 description: El comando “dotnet test” se usa para ejecutar pruebas unitarias en un proyecto determinado.
 ms.date: 04/29/2020
-ms.openlocfilehash: cbe9e7cce1722efb808c68ee49bb9012be6dcff7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 911d10917c2262c0bd32ef30d48da0f85ac39a39
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594457"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803157"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -175,7 +175,7 @@ Donde `Microsoft.NET.Test.Sdk` es el host de prueba y `xunit` es el marco de pru
   dotnet test --logger trx
   ```
 
-- Ejecute las pruebas del proyecto en el directorio actual y genere un archivo de cobertura de código (después de instalar [Coverlet](https://github.com/tonerdo/coverlet/blob/master/README.md)):
+- Ejecute las pruebas del proyecto en el directorio actual y genere un archivo de cobertura de código (después de instalar la integración de recopiladores de [Coverlet](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/VSTestIntegration.md)):
 
   ```dotnetcli
   dotnet test --collect:"XPlat Code Coverage"

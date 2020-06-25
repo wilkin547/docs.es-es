@@ -4,12 +4,12 @@ description: En este tutorial avanzado se describe cómo agregar de forma segura
 ms.date: 05/06/2019
 ms.technlogy: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: 650aea78b421783b3f249b3670578aa60e800ab2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1e73f9001414631975248f1a1658833d2785169b
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156784"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803213"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-methods-in-c-80"></a>Tutorial: Actualización de las interfaces mediante el uso de métodos de interfaz predeterminados en C# 8.0
 
@@ -51,7 +51,7 @@ El equipo estuvo de acuerdo en la más probable implementación predeterminada: 
 
 La actualización debe proporcionar la funcionalidad para establecer dos propiedades: el número de pedidos necesario para poder recibir el descuento y el porcentaje del descuento. Esto lo convierte en un escenario perfecto para los métodos de interfaz predeterminados. Puede agregar un método a la interfaz de `ICustomer` y proporcionar la implementación más probable. Todas las implementaciones existentes y nuevas pueden usar la implementación predeterminada o proporcionar una propia.
 
-Primero, agregue el nuevo método a la implementación:
+En primer lugar, agregue el nuevo método a la interfaz, incluido su cuerpo:
 
 [!code-csharp[InitialOrderInterface](~/samples/snippets/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/ICustomer.cs?name=SnippetLoyaltyDiscountVersionOne)]
 

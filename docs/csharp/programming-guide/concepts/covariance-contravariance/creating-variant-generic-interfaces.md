@@ -2,12 +2,12 @@
 title: Crear interfaces genéricas variantes (C#)
 ms.date: 07/20/2015
 ms.assetid: 30330ec4-9df2-4838-a535-6c406d0ed4df
-ms.openlocfilehash: 27760fd73c8c40fc108106b87b2102ab5e07263c
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: a8e3e010c0e5d5490aee35603cad4fd6c1dc29e0
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241388"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990049"
 ---
 # <a name="creating-variant-generic-interfaces-c"></a>Crear interfaces genéricas variantes (C#)
 
@@ -144,9 +144,9 @@ interface ICovariant<out T> { }
 
 ### <a name="avoiding-ambiguity"></a>Evitar la ambigüedad
 
-Al implementar interfaces genéricas variantes, la varianza a veces puede implicar ambigüedad. Éste debería evitarse.
+Al implementar interfaces genéricas variantes, la varianza a veces puede implicar ambigüedad. Debe evitarse esta ambigüedad.
 
-Por ejemplo, si implementa explícitamente en una clase la misma interfaz genérica variante con distintos parámetros de tipo genérico, puede crear ambigüedad. El compilador no genera ningún error en este caso, pero no se especifica la implementación de interfaz que se elegirá en tiempo de ejecución. Esto podría provocar errores imperceptibles en el código. Observe el siguiente ejemplo de código.
+Por ejemplo, si implementa explícitamente en una clase la misma interfaz genérica variante con distintos parámetros de tipo genérico, puede crear ambigüedad. El compilador no genera ningún error en este caso, pero no se especifica qué implementación de interfaz se va a elegir en tiempo de ejecución. Esta ambigüedad podría provocar errores sutiles en el código. Observe el siguiente ejemplo de código.
 
 ```csharp
 // Simple class hierarchy.

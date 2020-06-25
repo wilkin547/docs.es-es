@@ -7,12 +7,12 @@ helpviewer_keywords:
 - nullable compiler option [C#]
 - /nullable compiler option [C#]
 - -nullable compiler option [C#]
-ms.openlocfilehash: a68255dba18a022784cd4aaf0027c371893c577b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7454bb316507c3aaea208094127552712421dff6
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84449802"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990125"
 ---
 # <a name="-nullable-c-compiler-options"></a>-nullable (opciones del compilador de C#)
 

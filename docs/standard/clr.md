@@ -1,5 +1,6 @@
 ---
 title: 'Introducción a Common Language Runtime (CLR): .NET Framework'
+description: Introducción a Common Language Runtime (CLR), el entorno de tiempo de ejecución de .NET. CLR ejecuta código y proporciona servicios para facilitar el proceso de desarrollo.
 ms.date: 04/02/2019
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - code, runtime functionality
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 ms.custom: updateeachrelease
-ms.openlocfilehash: 74421f79c18f32e121d51c47f3eb32f3c2ed71fd
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ef455ac1c49c1f457d0fa432db91b5375c045840
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289251"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769215"
 ---
 # <a name="common-language-runtime-clr-overview"></a>Introducción a Common Language Runtime
 
@@ -66,7 +67,7 @@ El número de versión de .NET Framework no se corresponde necesariamente con el
 
 ## <a name="related-topics"></a>Temas relacionados
 
-|Título|Description|
+|Title|Descripción|
 |-----------|-----------------|
 |[Proceso de ejecución administrada](managed-execution-process.md)|Describe los pasos requeridos para aprovechar al máximo las ventajas de Common Language Runtime.|
 |[Administración automática de la memoria](automatic-memory-management.md)|Describe cómo asigna y libera memoria el recolector de elementos no utilizados.|

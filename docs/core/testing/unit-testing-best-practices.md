@@ -4,12 +4,12 @@ description: Obtenga información sobre los procedimientos recomendados para esc
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 586373381bcb18384cbf29bb2ca2bd220a2b2d3d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9115ff69b269e3723820fd8505d1a9f8ca278d12
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240966"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989373"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Procedimientos recomendados de pruebas unitarias con .NET Core y .NET Standard
 
@@ -48,6 +48,12 @@ Al escribir pruebas para el código, este se desacopla naturalmente, ya que, de 
 - **Reiterativa**. La ejecución de una prueba unitaria debe ser coherente con sus resultados, es decir, devolver siempre el mismo resultado si no cambia nada entre ejecuciones.
 - **Autocomprobada**. La prueba debe ser capaz de detectar automáticamente si el resultado ha sido correcto o incorrecto sin necesidad de intervención humana.
 - **Oportuna**. Una prueba unitaria no debe tardar un tiempo desproporcionado en escribirse en comparación con el código que se va a probar. Si observa que la prueba del código tarda mucho en comparación con su escritura, considere un diseño más fácil de probar.
+
+## <a name="code-coverage"></a>Cobertura de código
+
+Un alto porcentaje de cobertura de código suele ir asociado a una mayor calidad del código. Pero la medida en sí *no puede* determinar la calidad del código. La configuración de un objetivo de porcentaje de cobertura de código excesivamente ambicioso puede ser contraproducente. Imagine un proyecto complejo con miles de ramas condicionales e imagine que establece un objetivo de cobertura de código del 95 %. Actualmente, el proyecto mantiene una cobertura de código del 90 %. La cantidad de tiempo que lleva cubrir todos los casos del 5 % restante puede ser un esfuerzo enorme y la propuesta de valor disminuye rápidamente.
+
+Un alto porcentaje de cobertura de código no es un indicador de éxito, ni implica una alta calidad del código. Simplemente representa la cantidad de código cubierta por las pruebas unitarias. Para obtener más información, vea [Cobertura de código de pruebas unitarias](unit-testing-code-coverage.md).
 
 ## <a name="lets-speak-the-same-language"></a>Vamos a hablar el mismo idioma
 El término *ficticio* desafortunadamente se emplea muy mal cuando se habla sobre las pruebas. A continuación se definen los tipos más comunes de *emulaciones* al escribir pruebas unitarias:
