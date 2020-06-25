@@ -1,5 +1,6 @@
 ---
 title: Crear controladores de eventos
+description: Obtenga información sobre cómo se pueden asignar eventos en Windows Forms a varios controladores y cómo se pueden cambiar dinámicamente los métodos que controlan eventos concretos.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - event handling [Windows Forms]
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - events [Windows Forms], event handlers
 - event handlers [Windows Forms]
 ms.assetid: 6514e530-c6b8-489c-a8d2-eda7b7072701
-ms.openlocfilehash: 90acb3c7691acbcb528ae66692af67c2fb28eeaf
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 4dca198be69c200ea8dfc741a43801bf8f631b9d
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742336"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85326019"
 ---
-# <a name="creating-event-handlers-in-windows-forms"></a>Crear controladores de eventos en Windows Forms
+# <a name="creating-event-handlers-in-windows-forms"></a>Crear controladores de eventos en formularios Windows Forms
 
 Un controlador de eventos es un procedimiento en el código que determina qué acciones se realizan cuando se produce un evento, por ejemplo, cuando el usuario hace clic en un botón o una cola de mensajes recibe un mensaje. Cuando se genera un evento, se ejecutan los controladores de evento que reciben el evento. Los eventos se pueden asignar a varios controladores y los métodos que controlan eventos determinados se pueden cambiar dinámicamente. También puede usar el Diseñador de Windows Forms de Visual Studio para crear controladores de eventos.
 
@@ -40,8 +41,8 @@ Un controlador de eventos es un procedimiento en el código que determina qué a
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
- [Eventos](../../standard/events/index.md)\
+ [Ceso](../../standard/events/index.md)\
  Proporciona vínculos a temas sobre cómo controlar y generar eventos mediante el .NET Framework.
 
- [Solucionar problemas de controladores de eventos heredados en Visual Basic](../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)\
+ [Solución de problemas de controladores de eventos heredados en Visual Basic](../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)\
  Enumera los problemas habituales que se producen con los controladores de evento en componentes heredados.

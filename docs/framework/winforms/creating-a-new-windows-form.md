@@ -1,25 +1,26 @@
 ---
 title: Crear un nuevos Windows Forms
+description: Busque temas que presenten el vocabulario básico, las instrucciones y las instrucciones que debe comprender cuando empiece a crear una aplicación Windows Forms.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, getting started
 - Windows Forms, creating a new form
 ms.assetid: c725559c-803e-4725-80fa-96aba93de29a
-ms.openlocfilehash: 409dd945ebd26d212f62745ce6751f7507641bb2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f1ef899e46c804cb174814b0abbd9490ce6221d5
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009063"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325952"
 ---
 # <a name="creating-a-new-windows-form"></a>Crear un nuevos Windows Forms
-Este tema contiene vínculos a temas que describen cómo crear su primera aplicación de Windows Forms. Además, los temas de esta sección presentan algunas directrices y vocabulario básico que debe conocer cuando empiece a crear una aplicación de Windows Forms. Para obtener más información acerca de las aplicaciones de Windows Forms, los controles que puede usar en ellos, eventos y control de eventos y cómo controlar la entrada del usuario, consulte la lista de temas relacionados.  
+Este tema contiene vínculos a temas que describen cómo crear su primera aplicación de Windows Forms. Además, los temas de esta sección presentan algunas directrices y vocabulario básico que debe conocer cuando empiece a crear una aplicación de Windows Forms. Para obtener más información sobre Windows Forms aplicaciones, los controles que puede usar en ellos, eventos y control de eventos, y cómo controlar la entrada del usuario, consulte la lista de temas relacionados.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Coordenadas de Windows Forms](windows-forms-coordinates.md).  
+ [Windows Forms coordenadas](windows-forms-coordinates.md).  
  Describe las coordenadas de cliente y de pantalla.  
   
- [Cómo: Crear una aplicación de Windows Forms desde la línea de comandos](how-to-create-a-windows-forms-application-from-the-command-line.md)  
+ [Procedimiento para crear una aplicación de Windows Forms desde la línea de comandos](how-to-create-a-windows-forms-application-from-the-command-line.md)  
  Describe cómo crear un Windows Form básico y compilarlo desde la línea de comandos.  
   
 ## <a name="reference"></a>Referencia  
@@ -36,7 +37,7 @@ Este tema contiene vínculos a temas que describen cómo crear su primera aplica
  [Crear controladores de eventos en Windows Forms](creating-event-handlers-in-windows-forms.md)  
  Contiene vínculos a temas que describen cómo controlar eventos en aplicaciones de Windows Forms.  
   
- [Cambiar la apariencia de Windows Forms](changing-the-appearance-of-windows-forms.md)  
+ [Cambiar la apariencia de formularios Windows Forms](changing-the-appearance-of-windows-forms.md)  
  Contiene vínculos a temas que muestran cómo cambiar la apariencia de las aplicaciones de Windows Forms.  
   
  [Controles de formularios Windows Forms por función](./controls/windows-forms-controls-by-function.md)  

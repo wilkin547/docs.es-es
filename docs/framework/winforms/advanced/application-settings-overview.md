@@ -1,5 +1,6 @@
 ---
 title: Introducción a la configuración de la aplicación
+description: Obtenga información sobre la característica de configuración de la aplicación de Windows Forms, por ejemplo, cómo crear y almacenar los datos de configuración en nombre de la aplicación y los usuarios.
 ms.date: 03/30/2017
 f1_keywords:
 - ApplicationsSettingsOverview
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: 72a15736fd21d1d626f88e728d70b7dd7ee6768f
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 864cab72b26ff7989c570347fb88b4009e7d705a
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990179"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324215"
 ---
 # <a name="application-settings-overview"></a>Introducción a la configuración de la aplicación
 
@@ -48,7 +49,7 @@ En este artículo se describe cómo crear y almacenar los datos de configuració
 
  También puede utilizar la clase <xref:System.Windows.Forms.Binding> para enlazar la configuración con programación a las propiedades de formularios y controles.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>

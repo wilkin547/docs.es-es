@@ -1,23 +1,23 @@
 ---
-title: Mensajes de Protobuf - gRPC para desarrolladores de WCF
-description: Obtenga más información sobre cómo se definen los mensajes de Protobuf en el IDL y se generan en C.
+title: 'Mensajes de protobuf: gRPC para desarrolladores de WCF'
+description: Obtenga información sobre cómo se definen los mensajes de protobuf en el IDL y se generan en C#.
 ms.date: 09/09/2019
-ms.openlocfilehash: 5b3d4383de39a3785ef804fec21939a740f54669
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6fc7b9c34810abaa8d674af56d1517a5cf87521b
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79147989"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325041"
 ---
 # <a name="protobuf-messages"></a>Mensajes de Protobuf
 
-En esta sección se explica cómo declarar mensajes `.proto` de búfer de protocolo (Protobuf) en archivos. En él se explican los conceptos fundamentales de los tipos `protoc` y números de campo y se examina el código de C- que genera el compilador.
+En esta sección se explica cómo declarar mensajes de búfer de protocolo (protobuf) en `.proto` archivos. En él se explican los conceptos fundamentales de los números y tipos de campo, y se examina el código de C# generado por el `protoc` compilador.
 
-El resto del capítulo examinará con más detalle cómo se representan los diferentes tipos de datos en Protobuf.
+En el resto del capítulo veremos con más detalle cómo se representan los distintos tipos de datos en protobuf.
 
 ## <a name="declaring-a-message"></a>Declarar un mensaje
 
-En Windows Communication Foundation `Stock` (WCF), una clase para una aplicación de trading en el mercado de valores podría definirse como en el ejemplo siguiente:
+En Windows Communication Foundation (WCF), una `Stock` clase para una aplicación bursátil de stock market podría definirse como en el ejemplo siguiente:
 
 ```csharp
 namespace TraderSys
@@ -37,10 +37,10 @@ namespace TraderSys
 }
 ```
 
-Para implementar la clase equivalente en Protobuf, `.proto` debe declararla en el archivo. A `protoc` continuación, el compilador generará la clase .NET como parte del proceso de compilación.
+Para implementar la clase equivalente en protobuf, debe declararla en el `.proto` archivo. `protoc`Después, el compilador generará la clase .net como parte del proceso de compilación.
 
 ```protobuf
-syntax "proto3";
+syntax = "proto3";
 
 option csharp_namespace = "TraderSys";
 
@@ -54,28 +54,28 @@ message Stock {
 }  
 ```
 
-La primera línea declara la versión de sintaxis que se está utilizando. La versión 3 del idioma fue lanzada en 2016. Es la versión que recomendamos para los servicios gRPC.
+La primera línea declara la versión de sintaxis que se está usando. La versión 3 del idioma se lanzó en 2016. Es la versión que recomendamos para gRPC Services.
 
-La `option csharp_namespace` línea especifica el espacio de nombres que se usará para los tipos generados de C. Esta opción se omitirá cuando el `.proto` archivo se compile para otros idiomas. Los archivos Protobuf a menudo contienen opciones específicas del idioma para varios idiomas.
+La `option csharp_namespace` línea especifica el espacio de nombres que se va a usar para los tipos de C# generados. Esta opción se omitirá cuando el `.proto` archivo se compile para otros lenguajes. Los archivos protobuf a menudo contienen opciones específicas del idioma para varios idiomas.
 
-La `Stock` definición del mensaje especifica cuatro campos. Cada uno tiene un tipo, un nombre y un número de campo.
+La `Stock` definición del mensaje especifica cuatro campos. Cada tiene un tipo, un nombre y un número de campo.
 
 ## <a name="field-numbers"></a>Números de campo
 
-Los números de campo son una parte importante de Protobuf. Se usan para identificar campos en los datos codificados binarios, lo que significa que no pueden cambiar de versión a versión del servicio. La ventaja es que la compatibilidad con versiones anteriores y la compatibilidad hacia delante son posibles. Los clientes y servicios simplemente ignorarán los números de campo que no conocen, siempre y cuando se maneje la posibilidad de que falten valores.
+Los números de campo son una parte importante de protobuf. Se usan para identificar los campos en los datos codificados binarios, lo que significa que no pueden cambiar de una versión a la versión del servicio. La ventaja es que es posible la compatibilidad con versiones anteriores y versiones posteriores. Los clientes y servicios simplemente omitirán los números de campo que no conozcan, siempre y cuando se controle la posibilidad de que se produzcan valores.
 
-En el formato binario, el número de campo se combina con un identificador de tipo. Los números de campo del 1 al 15 se pueden codificar con su tipo como un solo byte. Los números de 16 a 2.047 toman 2 bytes. Puede ir más alto si necesita más de 2.047 campos en un mensaje por cualquier motivo. Los identificadores de bytes únicos para los números de campo 1 a 15 ofrecen un mejor rendimiento, por lo que debe usarlos para los campos más básicos y de uso frecuente.
+En el formato binario, el número de campo se combina con un identificador de tipo. Los números de campo de 1 a 15 se pueden codificar con su tipo como un solo byte. Los números de 16 a 2.047 toman 2 bytes. Puede continuar si necesita más de 2.047 campos en un mensaje por cualquier motivo. Los identificadores de un solo byte para los números de campo 1 a 15 ofrecen un mejor rendimiento, por lo que debe usarlos para los campos más básicos que se usan con frecuencia.
 
 ## <a name="types"></a>Tipos
 
-Las declaraciones de tipo utilizan los tipos de datos escalares nativos de Protobuf, que se describen con más detalle en [la sección siguiente.](protobuf-data-types.md) El resto de este capítulo tratará los tipos integrados de Protobuf y mostrará cómo se relacionan con los tipos comunes de .NET.
+Las declaraciones de tipos usan los tipos de datos escalares nativos de protobuf, que se describen con más detalle en [la sección siguiente](protobuf-data-types.md). En el resto de este capítulo se tratarán los tipos integrados de protobuf y se mostrará cómo se relacionan con los tipos comunes de .NET.
 
 > [!NOTE]
-> Protobuf no admite de `decimal` forma nativa `double` un tipo, por lo que se usa en su lugar. Para aplicaciones que requieren precisión decimal completa, consulte la [sección decimal en](protobuf-data-types.md#decimals) la siguiente parte de este capítulo.
+> Protobuf no admite de forma nativa un `decimal` tipo, por lo que `double` se usa en su lugar. En el caso de las aplicaciones que requieren una precisión decimal completa, consulte la [sección decimales](protobuf-data-types.md#decimals) en la siguiente parte de este capítulo.
 
 ## <a name="the-generated-code"></a>El código generado
 
-Al compilar la aplicación, Protobuf crea clases para cada uno de los mensajes, asignando sus tipos nativos a tipos de C. El tipo `Stock` generado tendría la siguiente firma:
+Al compilar la aplicación, protobuf crea clases para cada uno de los mensajes, asignando sus tipos nativos a tipos de C#. El `Stock` tipo generado tendría la firma siguiente:
 
 ```csharp
 public class Stock
@@ -87,11 +87,11 @@ public class Stock
 }
 ```
 
-El código real que se genera es mucho más complicado que esto. La razón es que cada clase contiene todo el código necesario para serializar y deserializarse al formato de cable binario.
+El código real que se genera es mucho más complicado que este. La razón es que cada clase contiene todo el código necesario para serializar y deserializar en el formato de conexión binaria.
 
 ### <a name="property-names"></a>Nombres de propiedad
 
-Tenga en cuenta que `PascalCase` el compilador Protobuf `snake_case` se `.proto` aplicó a los nombres de propiedad, aunque estaban en el archivo. La guía de estilo `snake_case` [Protobuf](https://developers.google.com/protocol-buffers/docs/style) recomienda usar en las definiciones de mensajes para que la generación de código para otras plataformas genere el caso esperado para sus convenciones.
+Tenga en cuenta que el compilador protobuf `PascalCase` se aplica a los nombres de propiedad, aunque se encontraban `snake_case` en el `.proto` archivo. La [Guía de estilo de protobuf](https://developers.google.com/protocol-buffers/docs/style) recomienda el uso `snake_case` de en las definiciones de mensaje para que la generación de código para otras plataformas produzca el caso esperado de sus convenciones.
 
 >[!div class="step-by-step"]
 >[Anterior](protocol-buffers.md)

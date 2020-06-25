@@ -1,5 +1,6 @@
 ---
 title: para agregar controles
+description: Obtenga información sobre cómo dibujar un control en Windows Forms. Un control es un componente de un formulario que puede usar para mostrar información o aceptar datos proporcionados por el usuario.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +10,14 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 560089a23fbcccb0f0d5683a95ad06dd9c59556d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: d9ab0d78fa0153cce20fb17d22f6e9e781229ece
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743958"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325886"
 ---
-# <a name="how-to-add-controls-to-windows-forms"></a>Adición de controles a Windows Forms
+# <a name="how-to-add-controls-to-windows-forms"></a>Cómo: Agregar controles a formularios Windows Forms
 
 La mayoría de los formularios se diseñan agregando controles a la superficie del formulario para definir una interfaz de usuario (UI). Un *control* es un componente de un formulario que se usa para mostrar información o para aceptar datos proporcionados por el usuario. Para obtener más información sobre los controles, vea [controles de Windows Forms](index.md).
 
@@ -44,14 +45,14 @@ La mayoría de los formularios se diseñan agregando controles a la superficie d
     > [!NOTE]
     > Puede hacer doble clic en un control en el **cuadro de herramientas** para agregarlo a la esquina superior izquierda del formulario en su tamaño predeterminado.
 
-    También puede Agregar controles de forma dinámica a un formulario en tiempo de ejecución. En el ejemplo de código siguiente, se agregará un control <xref:System.Windows.Forms.TextBox> al formulario cuando se haga clic en un control <xref:System.Windows.Forms.Button>.
+    También puede Agregar controles de forma dinámica a un formulario en tiempo de ejecución. En el ejemplo de código siguiente, se <xref:System.Windows.Forms.TextBox> agregará un control al formulario cuando <xref:System.Windows.Forms.Button> se haga clic en un control.
 
     > [!NOTE]
-    > El procedimiento siguiente requiere la existencia de un formulario con un control **botón** , `Button1`, ya colocado en él.
+    > El procedimiento siguiente requiere la existencia de un formulario con un control **botón** , `Button1` , ya colocado en él.
 
 ## <a name="to-add-a-control-to-a-form-programmatically"></a>Para agregar un control a un formulario mediante programación
 
-1. En el método que controla el evento de `Click` del botón dentro de la clase del formulario, inserte código similar al siguiente para agregar una referencia a la variable de control, establecer el `Location`del control y agregar el control.
+1. En el método que controla el evento del botón `Click` dentro de la clase del formulario, inserte código similar al siguiente para agregar una referencia a la variable de control, establecer la clase del control `Location` y agregar el control.
 
     ```vb
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -85,11 +86,11 @@ La mayoría de los formularios se diseñan agregando controles a la superficie d
     > También puede agregar código para inicializar otras propiedades del control.
 
     > [!IMPORTANT]
-    > Puede exponer el equipo local a un riesgo de seguridad a través de la red haciendo referencia a un `UserControl`malintencionado. Esto solo suponer un problema en el caso de que una persona malintencionada cree un control personalizado perjudicial y, después, lo agregue por error a su proyecto.
+    > Puede exponer el equipo local a un riesgo de seguridad a través de la red haciendo referencia a un malintencionado `UserControl` . Esto solo suponer un problema en el caso de que una persona malintencionada cree un control personalizado perjudicial y, después, lo agregue por error a su proyecto.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Controles de Windows Forms](index.md)
-- [Procedimiento para cambiar el tamaño de los controles en formularios Windows Forms](how-to-resize-controls-on-windows-forms.md)
-- [Establecer el texto mostrado por un control de Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Windows Forms controles](index.md)
+- [Cómo: Cambiar el tamaño de los controles en formularios Windows Forms](how-to-resize-controls-on-windows-forms.md)
+- [Cómo: Establecer el texto mostrado por un control de formularios Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)

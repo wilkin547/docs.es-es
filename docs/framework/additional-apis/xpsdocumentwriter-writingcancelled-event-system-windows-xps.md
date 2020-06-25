@@ -1,6 +1,6 @@
 ---
 title: XpsDocumentWriter. _WritingCancelled evento (System. Windows. XPS)
-description: Lea sobre el evento XpsDocumentWriter. _WritingCancelled, que tiene lugar cuando se cancela una operación de escritura o WriteAsync de XML Paper Specification (XPS) en .NET.
+description: El evento _WritingCancelled se produce cuando se cancela una operación de escritura de XML Paper Specification (XPS) en .NET.
 ms.date: 10/17/2017
 api_location:
 - system.printing.dll
@@ -12,12 +12,12 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: 5e07085ed3573f01acdb63962ca868debb7b49fa
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: abf550a0e9354f3a54f3a2ca2a22c941a1763195
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84903498"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325669"
 ---
 # <a name="xpsdocumentwriter_writingcancelled-event"></a>XpsDocumentWriter. \_ Evento WritingCancelled
 

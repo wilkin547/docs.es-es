@@ -1,6 +1,6 @@
 ---
-title: MDA de jitCompilationStart
-description: Use el Asistente para la depuración administrada (MDA) de jitCompilationStart, que se inicia para informar cuando el compilador Just-in-Time (JIT) comienza a compilar una función de .NET.
+title: Asistente para la depuración administrada de jitCompilationStart (MDA)
+description: El Asistente para la depuración administrada (MDA) jitCompilationStart informa cuando el compilador Just-in-Time (JIT) comienza a compilar una función de .NET.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - JIT compilation
@@ -8,30 +8,31 @@ helpviewer_keywords:
 - JitCompilationStart MDA
 - managed debugging assistants (MDAs), JIT compilation
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
-ms.openlocfilehash: bf2d09f433f0b8e4056fecd1f4e82bf3b91dd2bc
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 13e20c1a940b7bfa777245ba35f3cc1b003d15b2
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84904135"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325532"
 ---
 # <a name="jitcompilationstart-mda"></a>MDA de jitCompilationStart
+
 El Asistente para la depuración administrada (MDA) `jitCompilationStart` se activa para informar del momento en el que el compilador Just-In-Time (JIT) empieza a compilar una función.  
   
 ## <a name="symptoms"></a>Síntomas  
- El conjunto de trabajo aumenta de tamaño para un programa que ya está en formato de imagen nativo porque mscorjit.dll se carga en el proceso.  
+ El tamaño del espacio de trabajo aumenta para un programa que ya está en formato de imagen nativa, porque mscorjit.dll se carga en el proceso.  
   
 ## <a name="cause"></a>Causa  
- No todos los ensamblados de los que depende el programa se han generado en formato nativo o los que sí se han generado no están registrados correctamente.  
-  
+No todos los ensamblados de los que depende el programa se han generado en formato nativo o un ensamblado no se ha registrado correctamente.  
+
 ## <a name="resolution"></a>Solución  
- Al habilitar este MDA, puede determinar qué función va a ser compilada mediante JIT. Determine si el ensamblado que contiene la función se genera en formato nativo y se registra correctamente.  
+ La habilitación de este MDA le permite identificar la función que se va a compilar con JIT. Asegúrese de que el ensamblado que contiene la función se genera en formato nativo y se registra correctamente.
   
-## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
- Este MDA registra un mensaje justo antes de que un método se compile con JIT, por lo que habilitar este MDA tiene un impacto significativo en el rendimiento. Tenga en cuenta que si un método está en línea, este MDA no generará un mensaje independiente.  
+## <a name="effect-on-the-runtime"></a>Efecto en el tiempo de ejecución  
+ Este MDA registra un mensaje justo antes de que un método se compile con JIT, por lo que habilitar este MDA tiene un impacto significativo en el rendimiento. Si un método está alineado, este MDA no generará un mensaje independiente.  
   
 ## <a name="output"></a>Resultados  
- En el ejemplo de código siguiente se muestran los resultados del ejemplo. En este caso, el resultado muestra que en el ensamblado Test el método "m" de la clase "ns2.CO" se compiló con JIT.  
+ En el ejemplo de código siguiente se muestran los resultados del ejemplo. En este caso, el resultado muestra que, en la prueba del ensamblado, el método "m" de la clase "ns2.CO" se compiló JIT.  
   
 ```output
 method name="Test!ns2.C0::m"  
@@ -156,7 +157,7 @@ namespace ns2
 }  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnóstico de errores con asistentes de depuraciones administradas](diagnosing-errors-with-managed-debugging-assistants.md)

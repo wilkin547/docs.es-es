@@ -1,18 +1,19 @@
 ---
 title: Cómo crear un valor de configuración en tiempo de diseño
+description: Obtenga información sobre cómo crear un nuevo Windows Forms valor en tiempo de diseño mediante el diseñador de configuración de Visual Studio.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application settings [Windows Forms], design time
 - application settings [Windows Forms], creating
 ms.assetid: c5d60a66-6507-462f-a81f-e3bc0a804e16
-ms.openlocfilehash: 35a7cd8cc1daaf76a25977751ddc9ec0709e5947
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: ce37b42191999e29de2f2f7f7e7abfa0ec3f4d47
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69037907"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325848"
 ---
-# <a name="how-to-create-a-new-setting-at-design-time"></a>Cómo Crear un nuevo valor de configuración en tiempo de diseño
+# <a name="how-to-create-a-new-setting-at-design-time"></a>Cómo: crear un nuevo valor de configuración en tiempo de diseño
 
 Puede crear un nuevo valor de configuración en tiempo de diseño mediante el diseñador de configuración de Visual Studio. El diseñador de configuración es una interfaz de estilo de cuadrícula que le permite crear nuevas opciones de configuración y especificar propiedades para esas opciones. Debe especificar el nombre, el valor, el tipo y el ámbito de la nueva configuración. Una vez creada la configuración, se puede acceder a ella en el código.
 
@@ -40,4 +41,4 @@ Puede crear un nuevo valor de configuración en tiempo de diseño mediante el di
 
 - [Utilizar valores de configuración de aplicación y de usuario](using-application-settings-and-user-settings.md)
 - [Introducción a la configuración de la aplicación](application-settings-overview.md)
-- [Cómo: Cambiar el valor de una configuración existente en tiempo de diseño](how-to-change-the-value-of-an-existing-setting-at-design-time.md)
+- [Cómo cambiar el valor de una opción de configuración existente en tiempo de diseño](how-to-change-the-value-of-an-existing-setting-at-design-time.md)
