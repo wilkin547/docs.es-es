@@ -1,5 +1,6 @@
 ---
 title: Procedimiento para establecer información sobre herramientas en controles de formularios Windows Forms en tiempo de diseño
+description: Obtenga información sobre cómo establecer la información sobre herramientas para los controles mediante programación o en el Diseñador de Windows Forms en Visual Studio.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,22 +10,22 @@ helpviewer_keywords:
 - tooltips [Windows Forms], for controls
 - examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
-ms.openlocfilehash: 0d6725fc1a00826870e6400bffce63a1788e802c
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 15134b38d11de30d0e6a2f998f6ea266affc40d7
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211686"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325971"
 ---
-# <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a><span data-ttu-id="83266-102">Procedimiento Establecer componentes ToolTip en controles de Windows Forms en tiempo de diseño</span><span class="sxs-lookup"><span data-stu-id="83266-102">How to: Set ToolTips for controls on a Windows Form at design time</span></span>
+# <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a><span data-ttu-id="637bd-103">Cómo: establecer la información sobre herramientas para los controles de Windows Forms en tiempo de diseño</span><span class="sxs-lookup"><span data-stu-id="637bd-103">How to: Set ToolTips for controls on a Windows Form at design time</span></span>
 
-<span data-ttu-id="83266-103">Puede establecer un <xref:System.Windows.Forms.ToolTip> cadena en el código o en el Diseñador de Windows Forms en Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="83266-103">You can set a <xref:System.Windows.Forms.ToolTip> string in code or in the Windows Forms Designer in Visual Studio.</span></span> <span data-ttu-id="83266-104">Para obtener más información sobre la <xref:System.Windows.Forms.ToolTip> componente, vea [información general del componente ToolTip](tooltip-component-overview-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="83266-104">For more information about the <xref:System.Windows.Forms.ToolTip> component, see [ToolTip Component Overview](tooltip-component-overview-windows-forms.md).</span></span>
+<span data-ttu-id="637bd-104">Puede establecer una <xref:System.Windows.Forms.ToolTip> cadena en el código o en el diseñador de Windows Forms en Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="637bd-104">You can set a <xref:System.Windows.Forms.ToolTip> string in code or in the Windows Forms Designer in Visual Studio.</span></span> <span data-ttu-id="637bd-105">Para obtener más información sobre el <xref:System.Windows.Forms.ToolTip> componente, vea información general sobre los [componentes de información sobre herramientas](tooltip-component-overview-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="637bd-105">For more information about the <xref:System.Windows.Forms.ToolTip> component, see [ToolTip Component Overview](tooltip-component-overview-windows-forms.md).</span></span>
 
-## <a name="set-a-tooltip-programmatically"></a><span data-ttu-id="83266-105">Establecer una información sobre herramientas mediante programación</span><span class="sxs-lookup"><span data-stu-id="83266-105">Set a ToolTip programmatically</span></span>
+## <a name="set-a-tooltip-programmatically"></a><span data-ttu-id="637bd-106">Establecer una información sobre herramientas mediante programación</span><span class="sxs-lookup"><span data-stu-id="637bd-106">Set a ToolTip programmatically</span></span>
 
-1. <span data-ttu-id="83266-106">Agregue el control que se mostrará la información sobre herramientas.</span><span class="sxs-lookup"><span data-stu-id="83266-106">Add the control that will display the ToolTip.</span></span>
+1. <span data-ttu-id="637bd-107">Agregue el control que mostrará la información sobre herramientas.</span><span class="sxs-lookup"><span data-stu-id="637bd-107">Add the control that will display the ToolTip.</span></span>
 
-2. <span data-ttu-id="83266-107">Use la <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> método de la <xref:System.Windows.Forms.ToolTip> componente.</span><span class="sxs-lookup"><span data-stu-id="83266-107">Use the <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> method of the <xref:System.Windows.Forms.ToolTip> component.</span></span>
+2. <span data-ttu-id="637bd-108">Use el <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> método del <xref:System.Windows.Forms.ToolTip> componente.</span><span class="sxs-lookup"><span data-stu-id="637bd-108">Use the <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> method of the <xref:System.Windows.Forms.ToolTip> component.</span></span>
 
     ```vb
     ' In this example, Button1 is the control to display the ToolTip.
@@ -41,17 +42,17 @@ ms.locfileid: "65211686"
     toolTip1->SetToolTip(button1, "Save changes");
     ```
 
-## <a name="set-a-tooltip-in-the-designer"></a><span data-ttu-id="83266-108">Establecer una información sobre herramientas en el diseñador</span><span class="sxs-lookup"><span data-stu-id="83266-108">Set a ToolTip in the designer</span></span>
+## <a name="set-a-tooltip-in-the-designer"></a><span data-ttu-id="637bd-109">Establecer una información sobre herramientas en el diseñador</span><span class="sxs-lookup"><span data-stu-id="637bd-109">Set a ToolTip in the designer</span></span>
 
-1. <span data-ttu-id="83266-109">En Visual Studio, agregue un <xref:System.Windows.Forms.ToolTip> componente al formulario.</span><span class="sxs-lookup"><span data-stu-id="83266-109">In Visual Studio, add a <xref:System.Windows.Forms.ToolTip> component to the form.</span></span>
+1. <span data-ttu-id="637bd-110">En Visual Studio, agregue un <xref:System.Windows.Forms.ToolTip> componente al formulario.</span><span class="sxs-lookup"><span data-stu-id="637bd-110">In Visual Studio, add a <xref:System.Windows.Forms.ToolTip> component to the form.</span></span>
 
-2. <span data-ttu-id="83266-110">Seleccione el control que se mostrará la información sobre herramientas, o agréguelo al formulario.</span><span class="sxs-lookup"><span data-stu-id="83266-110">Select the control that will display the ToolTip, or add it to the form.</span></span>
+2. <span data-ttu-id="637bd-111">Seleccione el control que mostrará la información sobre herramientas o agréguelo al formulario.</span><span class="sxs-lookup"><span data-stu-id="637bd-111">Select the control that will display the ToolTip, or add it to the form.</span></span>
 
-3. <span data-ttu-id="83266-111">En el **propiedades** ventana, establezca el **información sobre herramientas en ToolTip1** valor a una cadena de texto adecuada.</span><span class="sxs-lookup"><span data-stu-id="83266-111">In the **Properties** window, set the **ToolTip on ToolTip1** value to an appropriate string of text.</span></span>
+3. <span data-ttu-id="637bd-112">En la ventana **propiedades** , establezca la **información sobre herramientas en** el valor ToolTip1 en una cadena de texto adecuada.</span><span class="sxs-lookup"><span data-stu-id="637bd-112">In the **Properties** window, set the **ToolTip on ToolTip1** value to an appropriate string of text.</span></span>
 
-### <a name="to-remove-a-tooltip-programmatically"></a><span data-ttu-id="83266-112">Para quitar una información sobre herramientas mediante programación</span><span class="sxs-lookup"><span data-stu-id="83266-112">To remove a ToolTip programmatically</span></span>
+### <a name="to-remove-a-tooltip-programmatically"></a><span data-ttu-id="637bd-113">Para quitar una información sobre herramientas mediante programación</span><span class="sxs-lookup"><span data-stu-id="637bd-113">To remove a ToolTip programmatically</span></span>
 
-1. <span data-ttu-id="83266-113">Use la <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> método de la <xref:System.Windows.Forms.ToolTip> componente.</span><span class="sxs-lookup"><span data-stu-id="83266-113">Use the <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> method of the <xref:System.Windows.Forms.ToolTip> component.</span></span>
+1. <span data-ttu-id="637bd-114">Use el <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> método del <xref:System.Windows.Forms.ToolTip> componente.</span><span class="sxs-lookup"><span data-stu-id="637bd-114">Use the <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> method of the <xref:System.Windows.Forms.ToolTip> component.</span></span>
 
     ```vb
     ' In this example, Button1 is the control displaying the ToolTip.
@@ -68,14 +69,14 @@ ms.locfileid: "65211686"
     toolTip1->SetToolTip(button1, NULL);
     ```
 
-## <a name="remove-a-tooltip-in-the-designer"></a><span data-ttu-id="83266-114">Quitar una información sobre herramientas en el diseñador</span><span class="sxs-lookup"><span data-stu-id="83266-114">Remove a ToolTip in the designer</span></span>
+## <a name="remove-a-tooltip-in-the-designer"></a><span data-ttu-id="637bd-115">Quitar una información sobre herramientas en el diseñador</span><span class="sxs-lookup"><span data-stu-id="637bd-115">Remove a ToolTip in the designer</span></span>
 
-1. <span data-ttu-id="83266-115">En Visual Studio, seleccione el control que muestra la información sobre herramientas.</span><span class="sxs-lookup"><span data-stu-id="83266-115">In Visual Studio, select the control that is displaying the ToolTip.</span></span>
+1. <span data-ttu-id="637bd-116">En Visual Studio, seleccione el control que muestra la información sobre herramientas.</span><span class="sxs-lookup"><span data-stu-id="637bd-116">In Visual Studio, select the control that is displaying the ToolTip.</span></span>
 
-2. <span data-ttu-id="83266-116">En el **propiedades** ventana, elimine el texto en el **información sobre herramientas en ToolTip1**.</span><span class="sxs-lookup"><span data-stu-id="83266-116">In the **Properties** window, delete the text in the **ToolTip on ToolTip1**.</span></span>
+2. <span data-ttu-id="637bd-117">En la ventana **propiedades** , elimine el texto de la **información sobre herramientas en ToolTip1**.</span><span class="sxs-lookup"><span data-stu-id="637bd-117">In the **Properties** window, delete the text in the **ToolTip on ToolTip1**.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="83266-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="83266-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="637bd-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="637bd-118">See also</span></span>
 
-- [<span data-ttu-id="83266-118">Información general sobre el componente ToolTip</span><span class="sxs-lookup"><span data-stu-id="83266-118">ToolTip Component Overview</span></span>](tooltip-component-overview-windows-forms.md)
-- [<span data-ttu-id="83266-119">Cómo: Cambiar el retardo del componente ToolTip de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="83266-119">How to: Change the Delay of the Windows Forms ToolTip Component</span></span>](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)
-- [<span data-ttu-id="83266-120">ToolTip (componente)</span><span class="sxs-lookup"><span data-stu-id="83266-120">ToolTip Component</span></span>](tooltip-component-windows-forms.md)
+- [<span data-ttu-id="637bd-119">Información general sobre el componente ToolTip</span><span class="sxs-lookup"><span data-stu-id="637bd-119">ToolTip Component Overview</span></span>](tooltip-component-overview-windows-forms.md)
+- [<span data-ttu-id="637bd-120">Procedimiento para cambiar el retardo del componente ToolTip de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="637bd-120">How to: Change the Delay of the Windows Forms ToolTip Component</span></span>](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)
+- [<span data-ttu-id="637bd-121">ToolTip</span><span class="sxs-lookup"><span data-stu-id="637bd-121">ToolTip Component</span></span>](tooltip-component-windows-forms.md)
