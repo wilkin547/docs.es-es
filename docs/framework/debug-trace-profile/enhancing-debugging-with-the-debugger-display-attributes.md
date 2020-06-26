@@ -1,5 +1,6 @@
 ---
 title: Mejorar la depuración con los atributos de visualización del depurador
+description: Introducción a los atributos de presentación del depurador en .NET, que permiten al desarrollador de tipos especificar también el aspecto que tendrá el tipo cuando se muestre en un depurador.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,16 +14,16 @@ helpviewer_keywords:
 - display attributes for debugger
 - DebuggerBrowsableAttribute attribute
 ms.assetid: 72bb7aa9-459b-42c4-9163-9312fab4c410
-ms.openlocfilehash: ca118bffb045a0e7e3a5084916a0ff8020ebda90
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: f266bf7278f472c51dd355df5ba04a123cbd7df0
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216493"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415971"
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>Mejorar la depuración con los atributos de visualización del depurador
 
-Los atributos de visualización del depurador permiten al desarrollador del tipo, que especifica y mejor comprende el comportamiento del runtime de ese tipo, que especifique también el aspecto que tendrá ese tipo cuando se muestre en un depurador. Además, los atributos de visualización del depurador que proporcionan una propiedad `Target` pueden aplicarse en el nivel de ensamblado por usuarios sin conocimiento del código fuente. El atributo <xref:System.Diagnostics.DebuggerDisplayAttribute> controla la forma en que se muestra un tipo o un miembro en las ventanas de variables del depurador. El atributo <xref:System.Diagnostics.DebuggerBrowsableAttribute> determina si un campo o propiedad se muestra en las ventanas de variables del depurador y cómo se muestra. El atributo <xref:System.Diagnostics.DebuggerTypeProxyAttribute> especifica un tipo sustitutivo, o un proxy, para un tipo y cambia la forma en que se muestra el tipo en las ventanas del depurador. Cuando se ve una variable que tiene un proxy, o un tipo de sustitución, el proxy se corresponde con el tipo original en la ventana de presentación del depurador. En la ventana de las variables del depurador se muestran sólo los miembros públicos del tipo de servidor proxy. No se muestran los miembros privados.  
+Los atributos de visualización del depurador permiten al desarrollador del tipo, que especifica y mejor comprende el comportamiento del runtime de ese tipo, que especifique también el aspecto que tendrá ese tipo cuando se muestre en un depurador. Además, los atributos de visualización del depurador que proporcionan una propiedad `Target` pueden aplicarse en el nivel de ensamblado por usuarios sin conocimiento del código fuente. El atributo <xref:System.Diagnostics.DebuggerDisplayAttribute> controla la forma en que se muestra un tipo o un miembro en las ventanas de variables del depurador. El atributo <xref:System.Diagnostics.DebuggerBrowsableAttribute> determina si un campo o propiedad se muestra en las ventanas de variables del depurador y cómo se muestra. El atributo <xref:System.Diagnostics.DebuggerTypeProxyAttribute> especifica un tipo sustitutivo, o un proxy, para un tipo y cambia la forma en que se muestra el tipo en las ventanas del depurador. Cuando se ve una variable que tiene un proxy, o un tipo sustitutivo, el proxy reemplaza al tipo original en la ventana de presentación del depurador. En la ventana de las variables del depurador se muestran sólo los miembros públicos del tipo de servidor proxy. No se muestran los miembros privados.  
   
 ## <a name="using-the-debuggerdisplayattribute"></a>Usar el atributo DebuggerDisplayAttribute  
 
@@ -95,7 +96,7 @@ class MyHashtable : Hashtable
 
 ### <a name="description"></a>Descripción
 
-El siguiente ejemplo de código se puede ver en Visual Studio para ver los resultados de aplicar los atributos <xref:System.Diagnostics.DebuggerDisplayAttribute>, <xref:System.Diagnostics.DebuggerBrowsableAttribute>y <xref:System.Diagnostics.DebuggerTypeProxyAttribute>.
+El siguiente ejemplo de código se puede ver en Visual Studio para ver los resultados de aplicar <xref:System.Diagnostics.DebuggerDisplayAttribute> los <xref:System.Diagnostics.DebuggerBrowsableAttribute> atributos, y <xref:System.Diagnostics.DebuggerTypeProxyAttribute> .
 
 ### <a name="code"></a>Código
 

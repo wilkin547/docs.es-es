@@ -1,5 +1,6 @@
 ---
 title: MDA de disconnectedContext
+description: Revise el Asistente para la depuración administrada de disconnectedContext en .NET, que se invoca cuando el CLR intenta realizar una transición a un apartamento o contexto desconectado.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DisconnectedContext MDA
@@ -9,15 +10,15 @@ helpviewer_keywords:
 - context disconnections
 - managed debugging assistants (MDAs), disconnected context
 ms.assetid: 1887d31d-7006-4491-93b3-68fd5b05f71d
-ms.openlocfilehash: 3d04e304a6b30fe6fd4deeda5a97007f11ee7b13
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 0b24aadefab7a7cb2a5294f25e674d188beec814
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216548"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85416088"
 ---
 # <a name="disconnectedcontext-mda"></a>MDA de disconnectedContext
-El asistente para la depuración administrada (MDA, por sus siglas en inglés) `disconnectedContext` se activa cuando el CLR intenta realizar una transición a un contexto o apartamento desconectado mientras atiende una solicitud relativa a un objeto COM.  
+El asistente para la depuración administrada (MDA, por sus siglas en inglés) `disconnectedContext` se activa cuando el CLR intenta realizar una transición a un contexto o apartamento desconectado mientras atiende una solicitud relativa a un objeto COM.   
   
 ## <a name="symptoms"></a>Síntomas  
  Las llamadas realizadas en un [contenedor RCW](../../standard/native-interop/runtime-callable-wrapper.md) (RCW) se entregan al componente COM subyacente en el contexto o apartamento actual, en vez de entregarse en el que existen. Esto puede causar daños o pérdida de datos si el componente COM no es multiproceso, como en el caso de componentes de contenedor uniproceso (STA, por sus siglas en inglés). O bien, si el RCW es un proxy, la llamada puede producir una <xref:System.Runtime.InteropServices.COMException> con un HRESULT de RPC_E_WRONG_THREAD.  
@@ -47,5 +48,5 @@ El asistente para la depuración administrada (MDA, por sus siglas en inglés) `
 ## <a name="see-also"></a>Consulte también
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Serialización para interoperabilidad](../interop/interop-marshaling.md)
+- [Diagnóstico de errores con asistentes de depuraciones administradas](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Serialización de interoperabilidad](../interop/interop-marshaling.md)

@@ -1,5 +1,6 @@
 ---
 title: MDA de dllMainReturnsFalse
+description: Obtenga información sobre el Asistente para la depuración administrada de dllMainReturnsFalse en .NET. Este MDA se activa si se produce un error de inicialización de DLL.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - managed debugging assistants (MDAs), DllMain returns false
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - DllMain function
 - MDAs (managed debugging assistants), DllMain returns false
 ms.assetid: e2abdd04-f571-4b97-8c16-2221b8588429
-ms.openlocfilehash: 0b413521e0a2dc06c2ff0be642f080eaf541202f
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 21d5e37d6823876e07cf5b2cbb881c1cf8b47b11
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216438"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85416062"
 ---
 # <a name="dllmainreturnsfalse-mda"></a>MDA de dllMainReturnsFalse
 El asistente para la depuración administrada (MDA) `dllMainReturnsFalse` se activa si la función administrada `DllMain` de un ensamblado de usuario denominado con la razón DLL_PROCESS_ATTACH devuelve FALSE.  
@@ -44,4 +45,4 @@ El asistente para la depuración administrada (MDA) `dllMainReturnsFalse` se act
   
 ## <a name="see-also"></a>Consulte también
 
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnóstico de errores con asistentes de depuraciones administradas](diagnosing-errors-with-managed-debugging-assistants.md)

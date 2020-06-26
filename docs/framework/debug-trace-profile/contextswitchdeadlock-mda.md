@@ -1,5 +1,6 @@
 ---
 title: MDA de contextSwitchDeadlock
+description: Obtenga información sobre el Asistente para la depuración administrada (MDA) de contextSwitchDeadlock en .NET, que se activa cuando se detecta un interbloqueo durante una transición de contexto COM.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - deadlocks [.NET Framework]
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - message pumping
 - context switching deadlocks
 ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
-ms.openlocfilehash: e3fc4a2cb35cdcc713ba0ef362071083af08a27b
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 52db4f2c88bac4e8cac621cca989fa10acb43f94
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217555"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85416023"
 ---
 # <a name="contextswitchdeadlock-mda"></a>MDA de contextSwitchDeadlock
 
@@ -73,5 +74,5 @@ Mensaje que describe el contexto actual y el de destino.
 ## <a name="see-also"></a>Consulte también
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Serialización para interoperabilidad](../interop/interop-marshaling.md)
+- [Diagnóstico de errores con asistentes de depuraciones administradas](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Serialización de interoperabilidad](../interop/interop-marshaling.md)

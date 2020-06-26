@@ -1,5 +1,6 @@
 ---
 title: Depurar, trazar y generar perfiles
+description: Obtenga información sobre la depuración, el seguimiento y la generación de perfiles en .NET. Consulte los artículos que abarcan las aplicaciones de depuración Just-in-Time (JIT), seguimiento e instrumentación, etc.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - debugging [.NET Framework]
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - troubleshooting applications [.NET Framework]
 - application development [.NET Framework], profiling
 ms.assetid: 4a04863e-2475-46f4-bc3f-3c11510c2a4b
-ms.openlocfilehash: 1a43c7fbcb810b22ff9bc409c233d2b1da67370e
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 745f16652c02e3409e7fa7a48beacbf7e777e924
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217401"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415984"
 ---
 # <a name="debugging-tracing-and-profiling"></a>Depurar, trazar y generar perfiles
 Para depurar una aplicación de .NET Framework, el compilador y el entorno de CLR deben configurarse para poder asociar un depurador a la aplicación y para poder producir símbolos y mapas de líneas, si es posible, para la aplicación y su Lenguaje Intermedio de Microsoft (MSIL) correspondiente. Una vez depurada una aplicación administrada, se puede generar un perfil para mejorar el rendimiento. La generación de perfiles evalúa y describe las líneas de código fuente que generan el código que se ejecuta con más frecuencia, y cuánto tiempo se necesita para ejecutarlas.  
@@ -32,10 +33,10 @@ Para depurar una aplicación de .NET Framework, el compilador y el entorno de CL
  [Facilitar la depuración de una imagen](making-an-image-easier-to-debug.md)  
  Muestra cómo activar el seguimiento de JIT y desactivar la optimización para facilitar la depuración de un ensamblado.  
   
- [Traza e instrumentación de aplicaciones](tracing-and-instrumenting-applications.md)  
+ [Seguimiento e instrumentación de aplicaciones](tracing-and-instrumenting-applications.md)  
  Describe cómo supervisar la ejecución de la aplicación mientras se está ejecutando y cómo instrumentarla para mostrar si se ha ejecutado correctamente o si tiene errores.  
   
- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)  
+ [Diagnóstico de errores con asistentes de depuraciones administradas](diagnosing-errors-with-managed-debugging-assistants.md)  
  Describe los asistentes para la depuración administrada (MDA), que ayudan en la depuración y trabajan con Common Language Runtime (CLR) para proporcionar información sobre el estado en tiempo de ejecución.  
   
  [Mejorar la depuración con los atributos de visualización del depurador](enhancing-debugging-with-the-debugger-display-attributes.md)  
@@ -45,7 +46,7 @@ Para depurar una aplicación de .NET Framework, el compilador y el entorno de CL
  Describe los contadores que puede usar para supervisar el rendimiento de una aplicación.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Depuración de aplicaciones de ASP.NET o ASP.NET Core en Visual Studio](/visualstudio/debugger/how-to-enable-debugging-for-aspnet-applications)  
+ [Depuración de aplicaciones de ASP.NET o ASP.NET Core en Visual Studio](/visualstudio/debugger/how-to-enable-debugging-for-aspnet-applications)  
  Indica los requisitos previos y las instrucciones para depurar una aplicación de ASP.NET durante el desarrollo o después de la implementación.  
   
  [Guía de desarrollo](../development-guide.md)  

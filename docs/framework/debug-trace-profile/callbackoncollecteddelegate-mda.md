@@ -1,5 +1,6 @@
 ---
 title: MDA de callbackOnCollectedDelegate
+description: Revise el Asistente para la depuración administrada (MDA) de callbackOnCollectedDelegate en .NET, que se invoca si se produce una devolución de llamada después de que el delegado se recolecta como elemento no utilizado.
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - garbage collection, run-time errors
 - delegates [.NET Framework], garbage collection
 ms.assetid: 398b0ce0-5cc9-4518-978d-b8263aa21e5b
-ms.openlocfilehash: d4ca777fa5b41433eec227762fe315f22ab33cf6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 32f02a4e65455f11f3bfa9260caae8b4e48f494e
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174230"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85416036"
 ---
 # <a name="callbackoncollecteddelegate-mda"></a>MDA de callbackOnCollectedDelegate
 El Asistente para la depuración administrada (MDA) `callbackOnCollectedDelegate` se activa si se serializa un delegado desde código administrado a no administrado como un puntero de función y se coloca una devolución de llamada en dicho puntero después de que el delegado haya sido recolectado como elemento no utilizado.  
@@ -112,6 +113,6 @@ public class Entry
 ## <a name="see-also"></a>Consulte también
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnóstico de errores con asistentes para la depuración administrada](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnóstico de errores con asistentes de depuraciones administradas](diagnosing-errors-with-managed-debugging-assistants.md)
 - [Serialización de interoperabilidad](../interop/interop-marshaling.md)
 - [gcUnmanagedToManaged](gcunmanagedtomanaged-mda.md)

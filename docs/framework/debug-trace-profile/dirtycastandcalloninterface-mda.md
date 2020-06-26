@@ -1,5 +1,6 @@
 ---
 title: MDA de dirtyCastAndCallOnInterface
+description: Revise el Asistente para la depuración administrada de dirtyCastAndCallOnInterface, que se invoca cuando las llamadas de vtable enlazadas en tiempo de compilación se realizan en interfaces de clase solo enlazadas en tiempo de ejecución.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - managed debugging assistants (MDAs), early bound calls AutoDispatch
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), early bound calls AutoDispatch
 - EarlyBoundCallOnAutorDispatchClassInteface MDA
 ms.assetid: aa388ed3-7e3d-48ea-a0b5-c47ae19cec38
-ms.openlocfilehash: 6e4f0074958e8a6a8ca322968e9c29e89481c0c8
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 2ed5589909915a261a22c48490e469ae52659c8c
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216513"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85416075"
 ---
 # <a name="dirtycastandcalloninterface-mda"></a>MDA de dirtyCastAndCallOnInterface
 El Asistente para la depuración administrada (MDA) `dirtyCastAndCallOnInterface` se activa cuando se intenta realizar una llamada enlazada en tiempo de compilación a través de una vtable en una interfaz de clase que se ha marcado solo como enlazada en tiempo de ejecución.  
@@ -50,4 +51,4 @@ El Asistente para la depuración administrada (MDA) `dirtyCastAndCallOnInterface
 ## <a name="see-also"></a>Consulte también
 
 - <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnóstico de errores con asistentes de depuraciones administradas](diagnosing-errors-with-managed-debugging-assistants.md)

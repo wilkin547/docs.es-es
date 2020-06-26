@@ -1,5 +1,6 @@
 ---
 title: MDA de bindingFailure
+description: Obtenga información sobre el Asistente para la depuración administrada (MDA) de bindingFailure, que se activa cuando un ensamblado no se carga en .NET.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - binding failure
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), binding failures
 - BindingFailure MDA
 ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
-ms.openlocfilehash: e3a9a915d25cbe5f052f039055167cf3ae4bf424
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 98c7947c7e5d2a1f0af8c26744d3b292ed8cb4c4
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216925"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415633"
 ---
 # <a name="bindingfailure-mda"></a>MDA de bindingFailure
 
@@ -105,4 +106,4 @@ namespace ConsoleApplication1
 
 ## <a name="see-also"></a>Consulte también
 
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnóstico de errores con asistentes de depuraciones administradas](diagnosing-errors-with-managed-debugging-assistants.md)

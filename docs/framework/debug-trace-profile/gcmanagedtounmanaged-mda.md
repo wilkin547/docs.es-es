@@ -1,5 +1,6 @@
 ---
 title: MDA de gcManagedToUnmanaged
+description: Revise el Asistente para la depuración administrada gcManagedToUnmanaged. Este MDA puede activarse debido a la recolección de elementos no utilizados prematura durante la transición a código no administrado.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), garbage collection
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - garbage collection, run-time errors
 ms.assetid: 7417f837-805e-4fed-a430-ca919c8421dc
-ms.openlocfilehash: f7e6334e20a6e0db1d52307a833de0ecd0d74cc4
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 76c621a1f2bb780d38228f2a84d4c77441774770
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217484"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415919"
 ---
 # <a name="gcmanagedtounmanaged-mda"></a>MDA de gcManagedToUnmanaged
 El asistente para la depuración administrada (MDA) `gcManagedToUnmanaged` produce una recolección de elementos no utilizados siempre que un subproceso realiza la transición de código administrado a no administrado.  
@@ -50,6 +51,6 @@ El asistente para la depuración administrada (MDA) `gcManagedToUnmanaged` produ
 ## <a name="see-also"></a>Consulte también
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Serialización para interoperabilidad](../interop/interop-marshaling.md)
+- [Diagnóstico de errores con asistentes de depuraciones administradas](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Serialización de interoperabilidad](../interop/interop-marshaling.md)
 - [gcUnmanagedToManaged](gcunmanagedtomanaged-mda.md)

@@ -1,16 +1,17 @@
 ---
 title: Habilitar la depuración de adjuntos JIT
+description: Habilite la depuración de adjuntos Just-in-Time (JIT) para adjuntar un depurador a un proceso cuando se encuentre con errores. Se puede desencadenar mediante determinados métodos o funciones.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - JIT-attach debugging
 - debugging [.NET Framework], JIT-attach debugging
 ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
-ms.openlocfilehash: 7adf1316a36d781439d364746fa11795a7fe165a
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: d1190c51a9cc6b5322ec832e0d35bc01dc855b12
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217532"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85416049"
 ---
 # <a name="enabling-jit-attach-debugging"></a>Habilitar la depuración de adjuntos JIT
 La depuración de adjuntos JIT es la frase usada para describir el hecho de adjuntar un depurador a un proceso cuando se detectan errores, o se puede desencadenar mediante métodos o funciones concretos.  
