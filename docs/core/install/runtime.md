@@ -1,17 +1,17 @@
 ---
 title: 'Instalación del entorno de ejecución de .NET Core en Windows, Linux y macOS: .NET Core'
 description: Obtenga información sobre cómo instalar .NET Core en Windows, Linux y macOS. Descubra las dependencias necesarias para ejecutar aplicaciones de .NET Core.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 05/04/2020
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: d3f7083366e2019d01884b5dff6e60d05ed565dd
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 6a0390ff1db900815628e4c7eb69e7a6c5f148a8
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768292"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324601"
 ---
 # <a name="install-the-net-core-runtime"></a>Instalación del entorno de ejecución de .NET Core
 

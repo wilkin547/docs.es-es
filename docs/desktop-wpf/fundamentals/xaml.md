@@ -1,7 +1,7 @@
 ---
 title: Información general sobre XAML
 description: Obtenga información sobre la estructura e implementación del lenguaje XAML en Windows Presentation Foundation (WPF) para .NET Core.
-author: thraka
+author: adegeo
 ms.date: 08/08/2019
 ms.author: adegeo
 dev_langs:
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - content models [XAML]
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
-ms.openlocfilehash: b0a9357b623fbde08731a5b1ddb8fee3a93824c2
-ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
+ms.openlocfilehash: 4ccf107bd56be33d9b195d97ae5edf1a6b85117f
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "81433005"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325697"
 ---
 # <a name="xaml-overview-in-wpf"></a>Información general sobre XAML en WPF
 

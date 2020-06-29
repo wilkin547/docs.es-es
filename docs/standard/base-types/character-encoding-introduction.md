@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 helpviewer_keywords:
 - encoding, understanding
-ms.openlocfilehash: 1b6ec6a7275408d4a8061c0de92cdf6e82dd533a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 85349e1e1c4eca4dd3ef7980f48350a4145fca24
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288048"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599872"
 ---
 # <a name="character-encoding-in-net"></a>Codificación de caracteres de .NET
 
@@ -250,7 +250,7 @@ Tenga en cuenta las instancias de `string` "a", "á". "á" y "`👩🏽‍🚒`
 
 * La instancia "á" de string parece igual que "á" pero está representada por dos valores escalares y contiene dos instancias de `char`.
 
-  * `U+0065 LATIN SMALL LETTER A`
+  * `U+0061 LATIN SMALL LETTER A`
   * `U+0301 COMBINING ACUTE ACCENT`
 
 * Por último, la instancia "`👩🏽‍🚒`" de string está representada por cuatro valores y contiene siete instancias de `char`.

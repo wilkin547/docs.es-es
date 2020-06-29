@@ -5,12 +5,12 @@ ms.date: 10/01/2018
 helpviewer_keywords:
 - Memory&lt;T&gt; and Span&lt;T&gt; best practices
 - using Memory&lt;T&gt; and Span&lt;T&gt;
-ms.openlocfilehash: cb9075a12bb8d842cd8e937e74f8869c910fc0ab
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: d9a50fa18e027b6df7415438e1a5584003f7a094
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201941"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245601"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Instrucciones de uso de Memory\<T> y Span\<T>
 
@@ -121,7 +121,7 @@ Usar un parámetro de tipo <xref:System.Span%601> en lugar de tipo <xref:System.
 
 En ocasiones, tendrá que usar un parámetro <xref:System.Memory%601> en lugar de <xref:System.Span%601>, aunque sea un método completamente sincrónico. Quizás, una API de la que depende solo acepta argumentos <xref:System.Memory%601>. Aunque es correcto, debe ser consciente de los inconvenientes que implica usar <xref:System.Memory%601> sincrónicamente.
 
-<a name="rule-2" />
+<a name="rule-2"></a>
 
 **Regla 2: Use ReadOnlySpan\<T> o ReadOnlyMemory\<T> si el búfer debe ser de solo lectura**.
 

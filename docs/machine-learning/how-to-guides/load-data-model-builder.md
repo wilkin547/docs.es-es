@@ -5,12 +5,12 @@ ms.date: 10/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, mlnet-tooling
-ms.openlocfilehash: 23de2d06090f4c1eaa2c79178ba4c346698d45e1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64e366b3c66427ccd2810324abeb880f6cb9ebc1
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78849164"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602211"
 ---
 # <a name="load-training-data-into-model-builder"></a>Carga de datos de entrenamiento en el Generador de modelos
 
@@ -109,6 +109,6 @@ En la estructura de carpetas que se muestra a continuación, el directorio de ni
 Siga estos tutoriales para crear aplicaciones de aprendizaje automático con el Generador de modelos:
 
 - [Predicción de precios mediante regresión](../tutorials/predict-prices-with-model-builder.md)
-- [Análisis de sentimiento en una aplicación web mediante la clasificación binaria](../tutorials/sentiment-analysis-model-builder.md )
+- [Análisis de sentimiento en una aplicación web mediante la clasificación binaria](../tutorials/sentiment-analysis-model-builder.md)
 
 Si va a entrenar un modelo mediante código, [aprenda a cargar datos mediante la API de ML.NET](load-data-ml-net.md).

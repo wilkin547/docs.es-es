@@ -1,15 +1,15 @@
 ---
 title: Trabajo con la certificación de macOS Catalina
 description: Procedimiento para administrar los problemas de certificación con macOS al instalar el runtime de .NET Core, el SDK y las aplicaciones compiladas con .NET Core.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 02/14/2020
-ms.openlocfilehash: be39c1ea56699f84736a2b37bc958507b16e826b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cd3886b2e772a182156d212aefb9705a3fb5e17c
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146754"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324622"
 ---
 # <a name="macos-catalina-notarization-and-the-impact-on-net-core-downloads-and-projects"></a>Certificación de macOS Catalina y el impacto en las descargas y proyectos de .NET Core
 

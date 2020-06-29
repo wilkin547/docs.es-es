@@ -1,15 +1,15 @@
 ---
 title: Selección de la versión de .NET Core que se va a usar
 description: Obtenga información sobre cómo .NET Core busca y elige las versiones de runtime para el programa. Además, este artículo le enseña cómo forzar una versión específica.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 03/24/2020
-ms.openlocfilehash: 3c3d9b4ec5a68c88bdd0a45acfb49191f22abda4
-ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+ms.openlocfilehash: 5e855adc72f0e75e6f31643f8a8618e6d91be06e
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82595733"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324347"
 ---
 # <a name="select-the-net-core-version-to-use"></a>Selección de la versión de .NET Core que se va a usar
 

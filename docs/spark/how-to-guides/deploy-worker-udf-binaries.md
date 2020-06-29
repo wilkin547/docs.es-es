@@ -4,12 +4,12 @@ description: Aprenda a implementar binarios de trabajo y función definida por e
 ms.date: 01/21/2019
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: f373ccee398149adcadeac91f02d9896214706b0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 042f336431a1c8cad7d94cf10cbe64b72ddfce5b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79187593"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596466"
 ---
 # <a name="deploy-net-for-apache-spark-worker-and-user-defined-function-binaries"></a>Implementación de binarios de trabajo y función definida por el usuario de .NET para Apache Spark
 
@@ -79,4 +79,4 @@ hdfs://<path to your files>/mySparkApp.zip mySparkApp
 ## <a name="next-steps"></a>Pasos siguientes
 
 * [Introducción a .NET para Apache Spark](../tutorials/get-started.md)
-* [Depuración de una aplicación de .NET para Apache Spark en Windows](../how-to-guides/debug.md)
+* [Depuración de una aplicación de .NET para Apache Spark en Windows](debug.md)
