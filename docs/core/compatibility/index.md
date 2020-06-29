@@ -2,12 +2,12 @@
 title: Tipos de cambios importantes
 description: Obtenga más información sobre los esfuerzos de .NET Core por mantener la compatibilidad entre versiones de .NET para los desarrolladores, así como sobre los tipos de cambios que se consideran importantes.
 ms.date: 06/10/2019
-ms.openlocfilehash: bf0cc35d69e6bb501640455604a99a1f48962c4a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bc93316141ae99d8cfedc5e6d88a9e91216f9c6e
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77628597"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415750"
 ---
 # <a name="changes-that-affect-compatibility"></a>Cambios que afectan a la compatibilidad
 
@@ -19,15 +19,14 @@ A lo largo de su historia, .NET ha intentado mantener un alto nivel de compatibi
 
 Junto con la compatibilidad entre las implementaciones de .NET, los desarrolladores esperan un alto nivel de compatibilidad entre las versiones .NET Core. En particular, el código escrito para una versión anterior de .NET Core debería funcionar sin problemas en una versión posterior de .NET Core. De hecho, muchos desarrolladores esperan que las nuevas API que se encuentran en las versiones más recientes de .NET Core también sean compatibles con las versiones preliminares en las que se introdujeron dichas API.
 
-En este artículo se describen las categorías de cambios de compatibilidad (o cambios importantes) y la forma en que el equipo de .NET evalúa los cambios en cada una de estas categorías. Entender cómo el equipo de .NET aborda los posibles cambios importantes es particularmente útil para los desarrolladores que abren solicitudes de incorporación de cambios en el repositorio de GitHub [dotnet/runtime](https://github.com/dotnet/runtime) que tienen por objetivo modificar el comportamiento de las API existentes.
-
-> [!NOTE]
-> Para una definición de las categorías de compatibilidad, como la compatibilidad binaria y la compatibilidad con versiones anteriores, consulte [Categorías de cambios importantes](categories.md).
+En este artículo se describen los cambios que afectan a la compatibilidad y el modo en el que el equipo de .NET evalúa cada tipo de cambio. El hecho de entender cómo el equipo de .NET aborda los posibles cambios importantes es particularmente útil para los desarrolladores que abren solicitudes de incorporación de cambios con el objetivo modificar el comportamiento de las [API de .NET existentes](https://github.com/dotnet/runtime).
 
 En las secciones siguientes se describen las categorías de los cambios realizados en las API de .NET Core y su impacto sobre la compatibilidad de aplicaciones. Los cambios están permitidos ✔️, no permitidos ❌ o requieren un criterio y una evaluación de cuán predecible, obvio y coherente era el comportamiento anterior ❓.
 
 > [!NOTE]
-> Además de servir como guía para evaluar los cambios en las bibliotecas .NET Core, los desarrolladores de bibliotecas también pueden utilizar estos criterios para evaluar los cambios en sus bibliotecas que tienen como objetivo varias implementaciones y versiones de .NET.
+>
+> - Además de servir como guía para evaluar los cambios en las bibliotecas de .NET, los desarrolladores de bibliotecas también pueden utilizar estos criterios para evaluar los cambios en sus bibliotecas que tienen como objetivo varias implementaciones y versiones de .NET.
+> - Para obtener más información sobre las categorías de compatibilidad (por ejemplo, la compatibilidad con versiones anteriores y posteriores), consulte [Compatibilidad](categories.md).
 
 ## <a name="modifications-to-the-public-contract"></a>Modificaciones en el contrato público
 
