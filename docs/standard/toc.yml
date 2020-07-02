@@ -639,6 +639,8 @@
       items:
         - name: Elección entre clases y estructuras
           href: design-guidelines/choosing-between-class-and-struct.md
+        - name: Elección entre tipos de tupla y anónimos
+          href: design-guidelines/choosing-between-anonymous-and-tuple.md
         - name: Diseño de clases abstractas
           href: design-guidelines/abstract-class.md
         - name: Diseño de clases estáticas
