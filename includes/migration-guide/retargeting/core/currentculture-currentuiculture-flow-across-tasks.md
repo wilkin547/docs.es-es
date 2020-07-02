@@ -1,18 +1,36 @@
 ---
-ms.openlocfilehash: efe8a2dd98865f6a24b65ce0f08eb0c574b708f7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 78faa5f4008b41bac75c94ce09a58c8227e5b485
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67804578"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614668"
 ---
 ### <a name="currentculture-and-currentuiculture-flow-across-tasks"></a>CurrentCulture y CurrentUICulture fluyen entre tareas
 
-|   |   |
-|---|---|
-|Detalles|A partir de la versión 4.6 de .NET Framework, <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=name> y <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=name> se almacenan en el <xref:System.Threading.ExecutionContext?displayProperty=name> del subproceso, que fluye entre las operaciones asincrónicas. Esto significa que los cambios en <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=name> o <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=name> se verán reflejados en las tareas que después se ejecutan de forma asincrónica. Esto difiere del comportamiento de las versiones anteriores de .NET Framework (en las que se restablecían <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=name> y <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=name> en todas las tareas asincrónicas).|
-|Sugerencia|Las aplicaciones afectadas por este cambio pueden solucionar el problema si se establece explícitamente el valor <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=name> o <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=name> deseado como la primera operación de una tarea asincrónica. Como alternativa, el comportamiento anterior (de que <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=name>/<xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=name> no fluyan) se puede incluir si se establece el modificador de compatibilidad siguiente:<pre><code class="lang-csharp">AppContext.SetSwitch(&quot;Switch.System.Globalization.NoAsyncCurrentCulture&quot;, true);&#13;&#10;</code></pre>WPF ha solucionado este problema en .NET Framework 4.6.2. También se ha corregido en .NET Framework 4.6, 4.6.1 a través de [KB 3139549](https://support.microsoft.com/kb/3139549). Las aplicaciones destinadas a .NET Framework 4.6 o una versión posterior obtendrán automáticamente el comportamiento correcto en las aplicaciones de WPF: <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=name>/<xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=name>) se conservará entre las operaciones del distribuidor.|
-|Ámbito|Secundaria|
-|Versión|4.6|
-|Tipo|Redestinación|
-|API afectadas|<ul><li><xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=nameWithType></li><li><xref:System.Threading.Thread.CurrentCulture?displayProperty=nameWithType></li><li><xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=nameWithType></li><li><xref:System.Threading.Thread.CurrentUICulture?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Detalles
+
+A partir de la versión 4.6 de .NET Framework, <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=fullName> y <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=fullName> se almacenan en el <xref:System.Threading.ExecutionContext?displayProperty=fullName> del subproceso, que fluye entre las operaciones asincrónicas. Esto significa que los cambios en <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=fullName> o <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=fullName> se verán reflejados en las tareas que después se ejecutan de forma asincrónica. Esto difiere del comportamiento de las versiones anteriores de .NET Framework (en las que se restablecían <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=fullName> y <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=fullName> en todas las tareas asincrónicas).
+
+#### <a name="suggestion"></a>Sugerencia
+
+Las aplicaciones afectadas por este cambio pueden solucionar el problema si se establece explícitamente el valor <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=fullName> o <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=fullName> deseado como la primera operación de una tarea asincrónica. Como alternativa, el comportamiento anterior (de que <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=fullName>/<xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=fullName> no fluyan) se puede incluir si se establece el modificador de compatibilidad siguiente:
+
+```csharp
+AppContext.SetSwitch("Switch.System.Globalization.NoAsyncCurrentCulture", true);
+```
+
+WPF ha solucionado este problema en .NET Framework 4.6.2. También se ha corregido en .NET Framework 4.6, 4.6.1 a través de [KB 3139549](https://support.microsoft.com/kb/3139549). Las aplicaciones destinadas a .NET Framework 4.6 o una versión posterior obtendrán automáticamente el comportamiento correcto en las aplicaciones de WPF: <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=fullName>/<xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=fullName>) se conservará entre las operaciones del distribuidor.
+
+| NOMBRE    | Valor       |
+|:--------|:------------|
+| Ámbito   | Secundaria       |
+| Versión | 4.6         |
+| Tipo    | Redestinación |
+
+#### <a name="affected-apis"></a>API afectadas
+
+- <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=nameWithType>
+- <xref:System.Threading.Thread.CurrentCulture?displayProperty=nameWithType>
+- <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=nameWithType>
+- <xref:System.Threading.Thread.CurrentUICulture?displayProperty=nameWithType>

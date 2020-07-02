@@ -3,14 +3,14 @@ title: Tutorial de análisis de sentimiento con .NET para Apache Spark y ML.NET
 description: En este tutorial, aprenderá a usar ML.NET con .NET para Apache Spark con fin de realizar análisis de sentimiento.
 author: mamccrea
 ms.author: mamccrea
-ms.date: 03/25/2019
+ms.date: 06/25/2020
 ms.topic: tutorial
-ms.openlocfilehash: cdd1214c26a5d5a4b159df3a396ec6f36b9fc0dd
-ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
+ms.openlocfilehash: 69deb30419b98536fa309547d94f59bb266e413c
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80391273"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617590"
 ---
 # <a name="tutorial-sentiment-analysis-with-net-for-apache-spark-and-mlnet"></a>Tutorial: Análisis de sentimiento con .NET para Apache Spark y ML.NET
 
@@ -24,6 +24,8 @@ En este tutorial aprenderá a:
 > * Crear una aplicación de consola de .NET para Apache Spark
 > * Escribir e implementar una función definida por el usuario
 > * Ejecutar una aplicación de consola de .NET para Apache Spark
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prerequisites"></a>Requisitos previos
 

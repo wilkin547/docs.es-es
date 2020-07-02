@@ -1,18 +1,30 @@
 ---
-ms.openlocfilehash: e7154919d6a09a04e650d5546feb2ae6c6cc912f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 986b647047aaa4a185c1403e96e499ae587bea98
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67859182"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617550"
 ---
 ### <a name="httpruntimeappdomainapppath-throws-a-nullreferenceexception"></a>HttpRuntime.AppDomainAppPath inicia una excepción NullReferenceException
 
-|   |   |
-|---|---|
-|Detalles|En .NET Framework 4.6.2, el entorno de ejecución inicia una excepción <code>T:System.NullReferenceException</code> al recuperar un valor <code>P:System.Web.HttpRuntime.AppDomainAppPath</code> que incluye caracteres NULL. En .NET Framework 4.6.1 y versiones anteriores, el entorno de ejecución inicia una excepción <code>T:System.ArgumentNullException</code>.|
-|Sugerencia|Puede hacer lo siguiente para responder a este cambio:<ul><li>Controle <code>T:System.NullReferenceException</code> si la aplicación se ejecuta en .NET Framework 4.6.2.</li><li>Actualice a .NET Framework 4.7, que restaura el comportamiento anterior e inicia una excepción <code>T:System.ArgumentNullException</code>.</li></ul>|
-|Ámbito|Borde|
-|Versión|4.6.2|
-|Tipo|Redestinación|
-|API afectadas|<ul><li><xref:System.Web.HttpRuntime.AppDomainAppPath?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Detalles
+
+En .NET Framework 4.6.2, el entorno de ejecución inicia una excepción `T:System.NullReferenceException` al recuperar un valor `P:System.Web.HttpRuntime.AppDomainAppPath` que incluye caracteres NULL. En .NET Framework 4.6.1 y versiones anteriores, el entorno de ejecución inicia una excepción `T:System.ArgumentNullException`.
+
+#### <a name="suggestion"></a>Sugerencia
+
+Puede hacer lo siguiente para responder a este cambio:
+
+- Controle `T:System.NullReferenceException` si la aplicación se ejecuta en .NET Framework 4.6.2.
+- Actualice a .NET Framework 4.7, que restaura el comportamiento anterior e inicia una excepción `T:System.ArgumentNullException`.
+
+| Nombre    | Valor       |
+|:--------|:------------|
+| Ámbito   | Borde        |
+| Versión | 4.6.2       |
+| Tipo    | Redestinación |
+
+#### <a name="affected-apis"></a>API afectadas
+
+- <xref:System.Web.HttpRuntime.AppDomainAppPath?displayProperty=nameWithType>

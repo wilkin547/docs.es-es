@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: 44cb833fc93caaa79000147421e1c013f755b9cb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f4ff938b2d0e9ead481fdf239aed8a6b918a99b0
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "68238017"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620698"
 ---
 ### <a name="listboxitem-isselected-binding-issue-with-observablecollectionlttgtmove"></a>Problema de enlace de IsSelected de ListBoxItem con ObservableCollection&lt;T&gt;.Move
 
-|   |   |
-|---|---|
-|Detalles|Las llamadas a <xref:System.Collections.ObjectModel.ObservableCollection%601.Move(System.Int32,System.Int32)> o <xref:System.Collections.ObjectModel.ObservableCollection%601.MoveItem(System.Int32,System.Int32)> en una colección enlazada a un control <xref:System.Windows.Controls.ListBox?displayProperty=name> con elementos seleccionados puede provocar un comportamiento incorrecto en la selección o anulación de selecciones futuras de elementos <xref:System.Windows.Controls.ListBox?displayProperty=name>.|
-|Sugerencia|Las llamadas a <xref:System.Collections.ObjectModel.Collection%601.Remove(%600)?displayProperty=name> y <xref:System.Collections.ObjectModel.Collection%601.Insert(System.Int32,%600)?displayProperty=name> en lugar de a <xref:System.Collections.ObjectModel.ObservableCollection%601.Move(System.Int32,System.Int32)> serán la solución alternativa a este problema. Este problema se resolvió en .NET Framework 4.6, por lo que otra posible solución es actualizar a esta versión de .NET Framework.|
-|Ámbito|Secundaria|
+#### <a name="details"></a>Detalles
+
+Las llamadas a <xref:System.Collections.ObjectModel.ObservableCollection%601.Move(System.Int32,System.Int32)> o <xref:System.Collections.ObjectModel.ObservableCollection%601.MoveItem(System.Int32,System.Int32)> en una colección enlazada a un control <xref:System.Windows.Controls.ListBox?displayProperty=fullName> con elementos seleccionados puede provocar un comportamiento incorrecto en la selección o anulación de selecciones futuras de elementos <xref:System.Windows.Controls.ListBox?displayProperty=fullName>.
+
+#### <a name="suggestion"></a>Sugerencia
+
+Las llamadas a <xref:System.Collections.ObjectModel.Collection%601.Remove(%600)?displayProperty=fullName> y <xref:System.Collections.ObjectModel.Collection%601.Insert(System.Int32,%600)?displayProperty=fullName> en lugar de a <xref:System.Collections.ObjectModel.ObservableCollection%601.Move(System.Int32,System.Int32)> serán la solución alternativa a este problema. Este problema se resolvió en .NET Framework 4.6, por lo que otra posible solución es actualizar a esta versión de .NET Framework.
+
+| NOMBRE    | Valor       |
+|:--------|:------------|
+| Ámbito   |Secundaria|
 |Versión|4.5|
-|Tipo|Tiempo de ejecución|
-|API afectadas|<ul><li><xref:System.Collections.ObjectModel.ObservableCollection%601.Move(System.Int32,System.Int32)?displayProperty=nameWithType></li><li><xref:System.Collections.ObjectModel.ObservableCollection%601.MoveItem(System.Int32,System.Int32)?displayProperty=nameWithType></li></ul>|
+|Tipo|Tiempo de ejecución
+
+#### <a name="affected-apis"></a>API afectadas
+
+-<xref:System.Collections.ObjectModel.ObservableCollection%601.Move(System.Int32,System.Int32)?displayProperty=nameWithType></li><li><xref:System.Collections.ObjectModel.ObservableCollection%601.MoveItem(System.Int32,System.Int32)?displayProperty=nameWithType></li></ul>|

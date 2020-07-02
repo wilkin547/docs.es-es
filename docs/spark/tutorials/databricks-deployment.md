@@ -1,15 +1,15 @@
 ---
 title: Implementación de una aplicación de .NET para Apache Spark en Databricks
 description: Sepa cómo implementar una aplicación de .NET para Apache Spark en Databricks.
-ms.date: 05/12/2020
+ms.date: 06/25/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4010f363e8ba606a7294ea32dc34587da6d6c8aa
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 9e0b99b6706bf51adaa6e3795d1c81179e14cb7a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202244"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618342"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>Tutorial: Implementación de una aplicación de .NET para Apache Spark en Databricks
 
@@ -23,6 +23,8 @@ En este tutorial aprenderá a:
 > - Publicar la aplicación de .NET para Apache Spark.
 > - Crear un trabajo y un clúster de Spark.
 > - Ejecutar la aplicación en el clúster de Spark.
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prerequisites"></a>Requisitos previos
 

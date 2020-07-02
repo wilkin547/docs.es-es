@@ -1,17 +1,37 @@
 ---
-ms.openlocfilehash: 0b42e320ba439a4cfc196471fc6dd4b3c15cd9d2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 72d48d1daa85b6891c122f2fcc5279642253b926
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67859109"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614841"
 ---
 ### <a name="workflow-checksums-changed-from-md5-to-sha1"></a>Las sumas de comprobación de flujo de trabajo han cambiado de MD5 a SHA1
 
-|   |   |
-|---|---|
-|Detalles|Para admitir la depuración con Visual Studio, el tiempo de ejecución de flujo de trabajo genera una suma de comprobación para una instancia de flujo de trabajo mediante un algoritmo de hash. En .NET Framework 4.6.2 y versiones anteriores, el hash de suma de comprobación de flujo de trabajo usaba el algoritmo MD5, que causaba problemas en sistemas compatibles con FIPS. A partir de .NET Framework 4.7, el algoritmo es SHA1. Si se han conservado estas sumas de comprobación en el código, serán incompatibles.|
-|Sugerencia|Si el código no puede cargar las instancias de flujo de trabajo debido a un error de suma de comprobación, pruebe a establecer el modificador <code>AppContext</code>&quot;Switch.System.Activities.UseMD5ForWFDebugger&quot; en true. En el código:<pre><code class="lang-csharp">System.AppContext.SetSwitch(&quot;Switch.System.Activities.UseMD5ForWFDebugger&quot;, true);&#13;&#10;</code></pre>O bien, en la configuración:<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Activities.UseMD5ForWFDebugger=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>|
-|Ámbito|Secundaria|
-|Versión|4.7|
-|Tipo|Redestinación|
+#### <a name="details"></a>Detalles
+
+Para admitir la depuración con Visual Studio, el tiempo de ejecución de flujo de trabajo genera una suma de comprobación para una instancia de flujo de trabajo mediante un algoritmo de hash. En .NET Framework 4.6.2 y versiones anteriores, el hash de suma de comprobación de flujo de trabajo usaba el algoritmo MD5, que causaba problemas en sistemas compatibles con FIPS. A partir de .NET Framework 4.7, el algoritmo es SHA1. Si se han conservado estas sumas de comprobación en el código, serán incompatibles.
+
+#### <a name="suggestion"></a>Sugerencia
+
+Si el código no puede cargar las instancias de flujo de trabajo debido a un error de suma de comprobación, pruebe a establecer el modificador `AppContext`&quot;Switch.System.Activities.UseMD5ForWFDebugger&quot; en true. En el código:
+
+```csharp
+System.AppContext.SetSwitch("Switch.System.Activities.UseMD5ForWFDebugger", true);
+```
+
+O bien, en la configuración:
+
+```xml
+<configuration>
+  <runtime>
+    <AppContextSwitchOverrides value="Switch.System.Activities.UseMD5ForWFDebugger=true" />
+  </runtime>
+</configuration>
+```
+
+| Nombre    | Valor       |
+|:--------|:------------|
+| Ámbito   | Secundaria       |
+| Versión | 4.7         |
+| Tipo    | Redestinación |

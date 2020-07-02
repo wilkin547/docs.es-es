@@ -3,14 +3,14 @@ title: Tutorial de procesamiento por lotes con .NET para Apache Spark
 description: Aprenda a realizar el procesamiento por lotes con .NET para Apache Spark.
 author: mamccrea
 ms.author: mamccrea
-ms.date: 12/13/2019
+ms.date: 06/25/2020
 ms.topic: tutorial
-ms.openlocfilehash: b00f560317c085058d791e17954603670fccf60f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: dbc3ab5cc4bd7f438e9f3f8e5d36c764d785ce4b
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594522"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618290"
 ---
 # <a name="tutorial-do-batch-processing-with-net-for-apache-spark"></a>Tutorial: Procesamiento por lotes con .NET para Apache Spark
 
@@ -25,6 +25,8 @@ En este tutorial aprenderá a:
 > * Crear y ejecutar una aplicación de .NET para Apache Spark
 > * Leer datos en DataFrame y prepararlos para su análisis
 > * Procesar los datos mediante Spark SQL
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prerequisites"></a>Requisitos previos
 

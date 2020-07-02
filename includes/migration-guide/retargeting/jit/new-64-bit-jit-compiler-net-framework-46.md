@@ -1,17 +1,51 @@
 ---
-ms.openlocfilehash: ddae1bfdd1a6f67bce111e0f97dd501c82022f36
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0237c848d71150aaea1f9de4f4b16a0cbbc4ab3a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "72887839"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85615750"
 ---
 ### <a name="new-64-bit-jit-compiler-in-the-net-framework-46"></a>Nuevo compilador JIT de 64 bits en .NET Framework 4.6
 
-|   |   |
-|---|---|
-|Detalles|A partir de .NET Framework 4.6, se utiliza un nuevo compilador JIT de 64 bits para la compilación Just-In-Time. En algunos casos, se inicia una excepción inesperada o se observa otro comportamiento que si se ejecuta una aplicación con el compilador de 32 bits o el compilador JIT de 64 bits antiguo. Este cambio no afecta al compilador JIT de 32 bits. Las diferencias conocidas incluyen lo siguiente:<ul><li>En determinadas condiciones, una operación de conversión unboxing puede producir una <xref:System.NullReferenceException> en versiones de lanzamiento con la optimización activada.</li><li>En algunos casos, la ejecución del código de producción en un cuerpo del método de gran tamaño puede producir una <xref:System.StackOverflowException>.</li><li>En determinadas condiciones, las estructuras que se pasan a un método se tratan como tipos de referencia en lugar de tipos de valor en las compilaciones de versión. Una de las manifestaciones de este problema es que los elementos individuales de una colección aparecen en un orden inesperado.</li><li>En determinadas condiciones, la comparación de los valores <xref:System.UInt16> con su conjunto de bits altos es incorrecta si se habilita la optimización.</li><li>En determinadas condiciones, especialmente al indexar los valores de matriz, la inicialización de la memoria mediante la instrucción IL <xref:System.Reflection.Emit.OpCodes.Initblk?displayProperty=nameWithType> puede inicializar la memoria con un valor incorrecto. Esto puede producir una excepción no controlada o resultados incorrectos.</li><li>En determinadas condiciones poco frecuentes, una prueba de bits condicional puede devolver el valor <xref:System.Boolean> incorrecto o producir una excepción si se habilitan las optimizaciones del compilador.</li><li>En determinadas condiciones, si se utiliza una instrucción <code>if</code> para comprobar una condición antes de entrar en un bloque <code>try</code> y en la salida del bloque <code>try</code>, y se evalúa la misma condición en el bloque <code>catch</code> o <code>finally</code>, el compilador JIT de 64 bits nuevo quita la condición <code>if</code> del bloque <code>catch</code> o <code>finally</code> cuando optimiza el código. Como resultado, el código dentro de la instrucción <code>if</code> en el bloque <code>catch</code> o <code>finally</code> se ejecuta de forma incondicional.</li></ul>|
-|Sugerencia|**Mitigación de problemas conocidos** <br/> Si encuentra los problemas mencionados anteriormente, puede solucionarlos realizando las siguientes operaciones:<ul><li>Actualizar a the .NET Framework 4.6.2. El nuevo compilador de 64 bits incluido con .NET Framework 4.6.2 soluciona estos problemas conocidos.</li><li>Asegurarse de que su versión Windows está actualizada ejecutando Windows Update. Las actualizaciones de servicio de .NET Framework 4.6 y 4.6.1 solucionan los problemas excepto <xref:System.NullReferenceException> en una operación de conversión unboxing.</li><li>Compilación con el compilador JIT de 64 bits más antiguo. Vea la sección **Mitigación de otros problemas** sección para obtener más información sobre el procedimiento.</li></ul>**Mitigación de otros problemas** <br/> Si detecta cualquier otra diferencia en el comportamiento entre el código compilado con el compilador de 64 bits antiguo y el compilador de 64 bits nuevo, o entre las versiones de depuración y publicación de la aplicación que se compilan con el nuevo compilador JIT de 64 bits, puede realizar el siguiente procedimiento para compilar la aplicación con el compilador JIT de 64 bits anterior:<ul><li>Según la aplicación, se puede agregar el elemento [<](~/docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md) al archivo de configuración de la aplicación. Lo siguiente deshabilita la compilación con el nuevo compilador JIT de 64 bits y en su lugar usa el compilador JIT de 64 bits hereado.</li></ul><pre><code class="lang-xml">&lt;?xml version =&quot;1.0&quot;?&gt;&#13;&#10;&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;useLegacyJit enabled=&quot;1&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre><ul><li>Según el usuario, puede agregar un valor <code>REG_DWORD</code> con el nombre <code>useLegacyJit</code> a la clave <code>HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework</code> del registro. El valor 1 permite al compilador JIT de 64 bits hereado; un valor de 0 lo deshabilita y habilita el nuevo compilador JIT de 64 bits.</li><li>Según el equipo, puede agregar un valor <code>REG_DWORD</code> con el nombre <code>useLegacyJit</code> a la clave <code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework</code> del registro. El valor de <code>1</code> habilita el compilador JIT de 64 bits heredado; un valor de <code>0</code> lo deshabilita y habilita el compilador JIT de 64 bits nuevo.</li></ul>También puede informar del problema indicándonos el error en [Microsoft Connect](https://connect.microsoft.com/VisualStudio).|
-|Ámbito|Borde|
-|Versión|4.6|
-|Tipo|Redestinación|
+#### <a name="details"></a>Detalles
+
+A partir de .NET Framework 4.6, se utiliza un nuevo compilador JIT de 64 bits para la compilación Just-In-Time. En algunos casos, se inicia una excepción inesperada o se observa otro comportamiento que si se ejecuta una aplicación con el compilador de 32 bits o el compilador JIT de 64 bits antiguo. Este cambio no afecta al compilador JIT de 32 bits. Las diferencias conocidas incluyen lo siguiente:
+
+- En determinadas condiciones, una operación de conversión unboxing puede producir una <xref:System.NullReferenceException> en versiones de lanzamiento con la optimización activada.
+- En algunos casos, la ejecución del código de producción en un cuerpo del método de gran tamaño puede producir una <xref:System.StackOverflowException>.
+- En determinadas condiciones, las estructuras que se pasan a un método se tratan como tipos de referencia en lugar de tipos de valor en las compilaciones de versión. Una de las manifestaciones de este problema es que los elementos individuales de una colección aparecen en un orden inesperado.
+- En determinadas condiciones, la comparación de los valores <xref:System.UInt16> con su conjunto de bits altos es incorrecta si se habilita la optimización.
+- En determinadas condiciones, especialmente al indexar los valores de matriz, la inicialización de la memoria mediante la instrucción IL <xref:System.Reflection.Emit.OpCodes.Initblk?displayProperty=nameWithType> puede inicializar la memoria con un valor incorrecto. Esto puede producir una excepción no controlada o resultados incorrectos.
+- En determinadas condiciones poco frecuentes, una prueba de bits condicional puede devolver el valor <xref:System.Boolean> incorrecto o producir una excepción si se habilitan las optimizaciones del compilador.
+- En determinadas condiciones, si se utiliza una instrucción `if` para comprobar una condición antes de entrar en un bloque `try` y en la salida del bloque `try`, y se evalúa la misma condición en el bloque `catch` o `finally`, el compilador JIT de 64 bits nuevo quita la condición `if` del bloque `catch` o `finally` cuando optimiza el código. Como resultado, el código dentro de la instrucción `if` en el bloque `catch` o `finally` se ejecuta de forma incondicional.
+
+#### <a name="suggestion"></a>Sugerencia
+
+**Mitigación de problemas conocidos** <br/> Si encuentra los problemas mencionados anteriormente, puede solucionarlos realizando las siguientes operaciones:
+
+- Actualizar a the .NET Framework 4.6.2. El nuevo compilador de 64 bits incluido con .NET Framework 4.6.2 soluciona estos problemas conocidos.
+- Asegurarse de que su versión Windows está actualizada ejecutando Windows Update. Las actualizaciones de servicio de .NET Framework 4.6 y 4.6.1 solucionan los problemas excepto <xref:System.NullReferenceException> en una operación de conversión unboxing.
+- Compilación con el compilador JIT de 64 bits más antiguo. Vea la sección **Mitigación de otros problemas** sección para obtener más información sobre el procedimiento.
+**Mitigación de otros problemas** <br/> Si detecta cualquier otra diferencia en el comportamiento entre el código compilado con el compilador de 64 bits antiguo y el compilador de 64 bits nuevo, o entre las versiones de depuración y publicación de la aplicación que se compilan con el nuevo compilador JIT de 64 bits, puede realizar el siguiente procedimiento para compilar la aplicación con el compilador JIT de 64 bits anterior:
+
+- Según la aplicación, se puede agregar el elemento [<](~/docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md) al archivo de configuración de la aplicación. Lo siguiente deshabilita la compilación con el nuevo compilador JIT de 64 bits y en su lugar usa el compilador JIT de 64 bits hereado.
+
+    ```xml
+    <?xml version ="1.0"?>
+    <configuration>
+      <runtime>
+       <useLegacyJit enabled="1" />
+      </runtime>
+    </configuration>
+    ```
+
+- Según el usuario, puede agregar un valor `REG_DWORD` con el nombre `useLegacyJit` a la clave `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` del registro. El valor 1 permite al compilador JIT de 64 bits hereado; un valor de 0 lo deshabilita y habilita el nuevo compilador JIT de 64 bits.
+- Según el equipo, puede agregar un valor `REG_DWORD` con el nombre `useLegacyJit` a la clave `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` del registro. El valor de `1` habilita el compilador JIT de 64 bits heredado; un valor de `0` lo deshabilita y habilita el compilador JIT de 64 bits nuevo.
+También puede informar del problema indicándonos el error en [Microsoft Connect](https://connect.microsoft.com/VisualStudio).
+
+| NOMBRE    | Valor       |
+|:--------|:------------|
+| Ámbito   | Borde        |
+| Versión | 4.6         |
+| Tipo    | Redestinación |

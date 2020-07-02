@@ -1,17 +1,26 @@
 ---
-ms.openlocfilehash: 39a329597ef28e002242103a247515d94761676a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4d410811095786b33580d25f6c6eab3ac2f27148
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59774462"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85616100"
 ---
 ### <a name="resolveassemblyreference-task-now-warns-of-dependencies-with-the-wrong-architecture"></a>La tarea ResolveAssemblyReference ahora advierte sobre dependencias con la arquitectura incorrecta
 
-|   |   |
-|---|---|
-|Detalles|La tarea emite una advertencia, MSB3270, que indica que una referencia o cualquiera de sus dependencias no coincide con la arquitectura de la aplicación. Por ejemplo, esto ocurre si una aplicación compilada con la opción <code>AnyCPU</code> incluye una referencia a x86. Este tipo de escenario podría producir un error de la aplicación en tiempo de ejecución (en este caso, si la aplicación se implementa como un proceso x64).|
-|Sugerencia|Existen dos áreas de impacto:<ul><li>Una nueva compilación genera advertencias que no aparecieron al compilar la aplicación con una versión anterior de MSBuild. Sin embargo, dado que la advertencia identifica un posible origen de errores en el runtime, se debe investigar y solucionar.</li><li>Si las advertencias se tratan como errores, la aplicación no se compilará.</li></ul>|
-|Ámbito|Secundaria|
-|Versión|4.5.1|
-|Tipo|Redestinación|
+#### <a name="details"></a>Detalles
+
+La tarea emite una advertencia, MSB3270, que indica que una referencia o cualquiera de sus dependencias no coincide con la arquitectura de la aplicación. Por ejemplo, esto ocurre si una aplicación compilada con la opción `AnyCPU` incluye una referencia a x86. Este tipo de escenario podría producir un error de la aplicación en tiempo de ejecución (en este caso, si la aplicación se implementa como un proceso x64).
+
+#### <a name="suggestion"></a>Sugerencia
+
+Existen dos áreas de impacto:
+
+- Una nueva compilación genera advertencias que no aparecieron al compilar la aplicación con una versión anterior de MSBuild. Sin embargo, dado que la advertencia identifica un posible origen de errores en el runtime, se debe investigar y solucionar.
+- Si las advertencias se tratan como errores, la aplicación no se compilará.
+
+| NOMBRE    | Valor       |
+|:--------|:------------|
+| Ámbito   | Secundaria       |
+| Versión | 4.5.1       |
+| Tipo    | Redestinación |

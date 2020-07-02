@@ -1,19 +1,21 @@
 ---
 title: Implementación de binarios de trabajo y función definida por el usuario de .NET para Apache Spark
 description: Aprenda a implementar binarios de trabajo y función definida por el usuario de .NET para Apache Spark.
-ms.date: 01/21/2019
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 042f336431a1c8cad7d94cf10cbe64b72ddfce5b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 672a32c430bd702167a294d2b895ac1ac90bf67e
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596466"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617722"
 ---
 # <a name="deploy-net-for-apache-spark-worker-and-user-defined-function-binaries"></a>Implementación de binarios de trabajo y función definida por el usuario de .NET para Apache Spark
 
 En este artículo de procedimientos se proporcionan instrucciones generales sobre cómo implementar binarios de trabajo y función definida por el usuario de .NET para Apache Spark. Se conocen las variables de entorno que se van a configurar, así como algunos parámetros de uso común para iniciar aplicaciones con `spark-submit`.
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="configurations"></a>Configuraciones
 Las configuraciones muestran las variables de entorno generales y la configuración de parámetros para implementar los binarios de trabajo y función definida por el usuario de .NET para Apache Spark.

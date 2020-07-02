@@ -1,16 +1,19 @@
 ---
-ms.openlocfilehash: e0846ebde07d1932c8344f2b1cce1ea398440ec1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f123f37d3f1be7d5b6805ac58529c1872a81f20b
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59805029"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620554"
 ---
 ### <a name="compiler-support-for-type-forwarding-when-multi-targeting-mscorlib"></a>Compatibilidad del compilador con el reenvío de tipos al usar la compatibilidad con múltiples versiones de mscorlib
 
-|   |   |
-|---|---|
-|Detalles|Una nueva característica de CodeDOM permite a un compilador realizar la compilación en la versión de destino de mscorlib.dll en lugar de en la versión de .NET Framework 4.5 de mscorlib.dll.|
-|Ámbito|Borde|
+#### <a name="details"></a>Detalles
+
+Una nueva característica de CodeDOM permite a un compilador realizar la compilación en la versión de destino de mscorlib.dll en lugar de en la versión de .NET Framework 4.5 de mscorlib.dll.
+
+| NOMBRE    | Valor       |
+|:--------|:------------|
+| Ámbito   |Borde|
 |Versión|4.5|
 |Tipo|Tiempo de ejecución|
