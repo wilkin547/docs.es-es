@@ -1,5 +1,6 @@
 ---
 title: Procedimiento para reproducir un sonido desde un formulario Windows Forms
+description: Obtenga información acerca de cómo reproducir un sonido desde Windows Forms en una ruta de acceso determinada en tiempo de ejecución. Además, obtenga información sobre cómo compilar el código y el marco de seguridad de .NET.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - My.Computer.Audio object [Windows Forms], playing sounds
 - examples [Windows Forms], sounds
 ms.assetid: 3d3350b7-1ebd-4e05-a738-48ca1160a19d
-ms.openlocfilehash: 68a68f05b847877641132e540995f6b14bb6e065
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: beb17d994e224f41b2b590ecb1401988cdad314d
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015798"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85613753"
 ---
 # <a name="how-to-play-a-sound-from-a-windows-form"></a>Procedimiento para reproducir un sonido desde un formulario Windows Forms
 En este ejemplo se reproduce un sonido en una ruta de acceso determinada en tiempo de ejecución.
@@ -42,7 +43,7 @@ private void playSimpleSound()
 
 - Que reemplace el nombre de archivo `"c:\Windows\Media\chimes.wav"` por un nombre de archivo válido.
 
-- (C#) Referencia al <xref:System.Media?displayProperty=nameWithType> espacio de nombres.
+- C# Referencia al espacio de <xref:System.Media?displayProperty=nameWithType> nombres.
 
 ## <a name="robust-programming"></a>Programación sólida
  Las operaciones de archivo se deberían agregar dentro de los bloques de control de excepciones estructurado adecuados.
@@ -59,7 +60,7 @@ private void playSimpleSound()
 
 - La ruta de acceso no es válida (clase <xref:System.IO.DirectoryNotFoundException>).
 
-- La ruta de acceso es solo un signo de dos puntos<xref:System.NotSupportedException> , ":" (clase).
+- La ruta de acceso es solo un signo de dos puntos, ":" ( <xref:System.NotSupportedException> clase).
 
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework
  No tome ninguna decisión sobre el contenido del archivo basándose en su nombre. Por ejemplo, es posible que el archivo `Form1.vb` no sea un archivo de código fuente de Visual Basic. Compruebe todas las entradas antes de utilizar los datos en la aplicación.
@@ -67,4 +68,4 @@ private void playSimpleSound()
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Media.SoundPlayer>
-- [Cómo: Cargar un sonido de forma asincrónica en Windows Forms](how-to-load-a-sound-asynchronously-within-a-windows-form.md)
+- [Procedimiento para cargar un sonido de forma asincrónica en un formulario Windows Forms](how-to-load-a-sound-asynchronously-within-a-windows-form.md)

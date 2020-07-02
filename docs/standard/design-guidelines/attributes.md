@@ -6,20 +6,19 @@ helpviewer_keywords:
 - attributes [.NET Framework], about
 - class library design guidelines [.NET Framework], attributes
 ms.assetid: ee0038ef-b247-4747-a650-3c5c5cd58d8b
-ms.openlocfilehash: 12a67d75a5f9642408cca69b2e3764a67f101549
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 3c0e1b8c20042c085d4ace996a084cbd464d3b21
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280587"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617566"
 ---
 # <a name="attributes"></a>Atributos
-
 <xref:System.Attribute?displayProperty=nameWithType>es una clase base que se usa para definir atributos personalizados.
 
- Los atributos son anotaciones que se pueden agregar a elementos de programación como ensamblados, tipos, miembros y parámetros. Se almacenan en los metadatos del ensamblado y se puede tener acceso a ellos en tiempo de ejecución mediante las API de reflexión. Por ejemplo, .NET define el <xref:System.ObsoleteAttribute> atributo, que se puede aplicar a un tipo o un miembro para indicar que el tipo o miembro está en desuso.
+ Los atributos son anotaciones que se pueden agregar a elementos de programación como ensamblados, tipos, miembros y parámetros. Se almacenan en los metadatos del ensamblado y se puede tener acceso a ellos en tiempo de ejecución mediante las API de reflexión. Por ejemplo, el marco de trabajo define <xref:System.ObsoleteAttribute> , que se puede aplicar a un tipo o un miembro para indicar que el tipo o miembro está en desuso.
 
- Los atributos pueden tener una o varias propiedades que contienen datos adicionales relacionados con el atributo. Por ejemplo, `ObsoleteAttribute` podría incluir información adicional sobre la versión en la que un tipo o un miembro quedó en desuso y una descripción de la nueva API que reemplaza a la API obsoleta.
+ Los atributos pueden tener una o varias propiedades que contienen datos adicionales relacionados con el atributo. Por ejemplo, `ObsoleteAttribute` podría incluir información adicional sobre la versión en la que un tipo o un miembro quedó en desuso y la descripción de las nuevas API que reemplazan a la API obsoleta.
 
  Se deben especificar algunas propiedades de un atributo cuando se aplica el atributo. Estas se conocen como las propiedades requeridas o los argumentos necesarios, porque se representan como parámetros de constructor posicional. Por ejemplo, la <xref:System.Diagnostics.ConditionalAttribute.ConditionString%2A> propiedad de <xref:System.Diagnostics.ConditionalAttribute> es una propiedad obligatoria.
 
@@ -49,7 +48,7 @@ ms.locfileid: "84280587"
 
  *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Directrices de diseño de marco](index.md)
 - [Instrucciones de uso](usage-guidelines.md)
