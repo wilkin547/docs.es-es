@@ -1,18 +1,31 @@
 ---
-ms.openlocfilehash: cdcf7f540a9ded4108121b2cd8e855687a0c7e27
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 23e278d38d6904d8afe927e6b54c388d443e41f5
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67858928"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85616097"
 ---
-### <a name="signedxmlgetpublickey-returns-rsacng-on-net462-or-lightup-without-retargeting-change"></a><span data-ttu-id="f3c57-101">SignedXml.GetPublicKey devuelve RSACng en net462 (o Lightup) sin cambios de redestinación</span><span class="sxs-lookup"><span data-stu-id="f3c57-101">SignedXml.GetPublicKey returns RSACng on net462 (or lightup) without retargeting change</span></span>
+### <a name="signedxmlgetpublickey-returns-rsacng-on-net462-or-lightup-without-retargeting-change"></a><span data-ttu-id="c299a-101">SignedXml.GetPublicKey devuelve RSACng en net462 (o Lightup) sin cambios de redestinación</span><span class="sxs-lookup"><span data-stu-id="c299a-101">SignedXml.GetPublicKey returns RSACng on net462 (or lightup) without retargeting change</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="f3c57-102">Detalles</span><span class="sxs-lookup"><span data-stu-id="f3c57-102">Details</span></span>|<span data-ttu-id="f3c57-103">A partir de .NET Framework 4.6.2, se ha cambiado (sin peculiaridades) el tipo concreto del objeto devuelto por el método <xref:System.Security.Cryptography.Xml.SignedXml.GetPublicKey%2A?displayProperty=nameWithType> de una implementación de CryptoServiceProvider a una implementación de Cng.</span><span class="sxs-lookup"><span data-stu-id="f3c57-103">Starting with the .NET Framework 4.6.2, the concrete type of the object returned by the <xref:System.Security.Cryptography.Xml.SignedXml.GetPublicKey%2A?displayProperty=nameWithType> method changed (without a quirk) from a CryptoServiceProvider implementation to a Cng implementation.</span></span> <span data-ttu-id="f3c57-104">Esto se debe a que la implementación ha pasado de usar <code>certificate.PublicKey.Key</code> a usar la <code>certificate.GetAnyPublicKey</code> interna que reenvía a <xref:System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="f3c57-104">This is because the implementation changed from using <code>certificate.PublicKey.Key</code> to using the internal <code>certificate.GetAnyPublicKey</code> which forwards to <xref:System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey%2A?displayProperty=nameWithType>.</span></span>|
-|<span data-ttu-id="f3c57-105">Sugerencia</span><span class="sxs-lookup"><span data-stu-id="f3c57-105">Suggestion</span></span>|<span data-ttu-id="f3c57-106">A partir de las aplicaciones que se ejecutan en .NET Framework 4.7.1, se puede usar la implementación de CryptoServiceProvider que se usa de forma predeterminada en .NET Framework 4.6.1 y versiones anteriores mediante la adición del conmutador siguiente a la sección [runtime](~/docs/framework/configure-apps/file-schema/runtime/runtime-element.md) del archivo de configuración de la aplicación:</span><span class="sxs-lookup"><span data-stu-id="f3c57-106">Starting with apps running on the .NET Framework 4.7.1, you can use the CryptoServiceProvider implementation used by default in the .NET Framework 4.6.1 and earlier versions by adding the following configuration switch to the [runtime](~/docs/framework/configure-apps/file-schema/runtime/runtime-element.md) section of your app config file:</span></span><pre><code class="lang-xml">&lt;AppContextSwitchOverrides value=&quot;Switch.System.Security.Cryptography.Xml.SignedXmlUseLegacyCertificatePrivateKey=true&quot; /&gt;&#13;&#10;</code></pre>|
-|<span data-ttu-id="f3c57-107">Ámbito</span><span class="sxs-lookup"><span data-stu-id="f3c57-107">Scope</span></span>|<span data-ttu-id="f3c57-108">Borde</span><span class="sxs-lookup"><span data-stu-id="f3c57-108">Edge</span></span>|
-|<span data-ttu-id="f3c57-109">Versión</span><span class="sxs-lookup"><span data-stu-id="f3c57-109">Version</span></span>|<span data-ttu-id="f3c57-110">4.6.2</span><span class="sxs-lookup"><span data-stu-id="f3c57-110">4.6.2</span></span>|
-|<span data-ttu-id="f3c57-111">Tipo</span><span class="sxs-lookup"><span data-stu-id="f3c57-111">Type</span></span>|<span data-ttu-id="f3c57-112">Redestinación</span><span class="sxs-lookup"><span data-stu-id="f3c57-112">Retargeting</span></span>|
-|<span data-ttu-id="f3c57-113">API afectadas</span><span class="sxs-lookup"><span data-stu-id="f3c57-113">Affected APIs</span></span>|<ul><li><xref:System.Security.Cryptography.Xml.SignedXml.CheckSignatureReturningKey(System.Security.Cryptography.AsymmetricAlgorithm@)?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a><span data-ttu-id="c299a-102">Detalles</span><span class="sxs-lookup"><span data-stu-id="c299a-102">Details</span></span>
+
+<span data-ttu-id="c299a-103">A partir de .NET Framework 4.6.2, se ha cambiado (sin peculiaridades) el tipo concreto del objeto devuelto por el método <xref:System.Security.Cryptography.Xml.SignedXml.GetPublicKey%2A?displayProperty=nameWithType> de una implementación de CryptoServiceProvider a una implementación de Cng.</span><span class="sxs-lookup"><span data-stu-id="c299a-103">Starting with the .NET Framework 4.6.2, the concrete type of the object returned by the <xref:System.Security.Cryptography.Xml.SignedXml.GetPublicKey%2A?displayProperty=nameWithType> method changed (without a quirk) from a CryptoServiceProvider implementation to a Cng implementation.</span></span> <span data-ttu-id="c299a-104">Esto se debe a que la implementación ha pasado de usar `certificate.PublicKey.Key` a usar la `certificate.GetAnyPublicKey` interna que reenvía a <xref:System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="c299a-104">This is because the implementation changed from using `certificate.PublicKey.Key` to using the internal `certificate.GetAnyPublicKey` which forwards to <xref:System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey%2A?displayProperty=nameWithType>.</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="c299a-105">Sugerencia</span><span class="sxs-lookup"><span data-stu-id="c299a-105">Suggestion</span></span>
+
+<span data-ttu-id="c299a-106">A partir de las aplicaciones que se ejecutan en .NET Framework 4.7.1, se puede usar la implementación de CryptoServiceProvider que se usa de forma predeterminada en .NET Framework 4.6.1 y versiones anteriores mediante la adición del conmutador siguiente a la sección [runtime](~/docs/framework/configure-apps/file-schema/runtime/runtime-element.md) del archivo de configuración de la aplicación:</span><span class="sxs-lookup"><span data-stu-id="c299a-106">Starting with apps running on the .NET Framework 4.7.1, you can use the CryptoServiceProvider implementation used by default in the .NET Framework 4.6.1 and earlier versions by adding the following configuration switch to the [runtime](~/docs/framework/configure-apps/file-schema/runtime/runtime-element.md) section of your app config file:</span></span>
+
+```xml
+<AppContextSwitchOverrides value="Switch.System.Security.Cryptography.Xml.SignedXmlUseLegacyCertificatePrivateKey=true" />
+```
+
+| <span data-ttu-id="c299a-107">Nombre</span><span class="sxs-lookup"><span data-stu-id="c299a-107">Name</span></span>    | <span data-ttu-id="c299a-108">Valor</span><span class="sxs-lookup"><span data-stu-id="c299a-108">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="c299a-109">Ámbito</span><span class="sxs-lookup"><span data-stu-id="c299a-109">Scope</span></span>   | <span data-ttu-id="c299a-110">Borde</span><span class="sxs-lookup"><span data-stu-id="c299a-110">Edge</span></span>        |
+| <span data-ttu-id="c299a-111">Versión</span><span class="sxs-lookup"><span data-stu-id="c299a-111">Version</span></span> | <span data-ttu-id="c299a-112">4.6.2</span><span class="sxs-lookup"><span data-stu-id="c299a-112">4.6.2</span></span>       |
+| <span data-ttu-id="c299a-113">Tipo</span><span class="sxs-lookup"><span data-stu-id="c299a-113">Type</span></span>    | <span data-ttu-id="c299a-114">Redestinación</span><span class="sxs-lookup"><span data-stu-id="c299a-114">Retargeting</span></span> |
+
+#### <a name="affected-apis"></a><span data-ttu-id="c299a-115">API afectadas</span><span class="sxs-lookup"><span data-stu-id="c299a-115">Affected APIs</span></span>
+
+- <xref:System.Security.Cryptography.Xml.SignedXml.CheckSignatureReturningKey(System.Security.Cryptography.AsymmetricAlgorithm@)?displayProperty=nameWithType>

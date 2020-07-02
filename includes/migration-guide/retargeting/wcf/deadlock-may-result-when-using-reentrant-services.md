@@ -1,18 +1,48 @@
 ---
-ms.openlocfilehash: 2f960942bda54505690cbac3151ef74ec0ab5ebb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dd7d3e445772e4b5ec148576ccd1374d56e251bd
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "68235503"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614785"
 ---
-### <a name="deadlock-may-result-when-using-reentrant-services"></a><span data-ttu-id="e926e-101">El uso de servicios reentrantes puede producir un interbloqueo</span><span class="sxs-lookup"><span data-stu-id="e926e-101">Deadlock may result when using Reentrant services</span></span>
+### <a name="deadlock-may-result-when-using-reentrant-services"></a><span data-ttu-id="183e6-101">El uso de servicios reentrantes puede producir un interbloqueo</span><span class="sxs-lookup"><span data-stu-id="183e6-101">Deadlock may result when using Reentrant services</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="e926e-102">Detalles</span><span class="sxs-lookup"><span data-stu-id="e926e-102">Details</span></span>|<span data-ttu-id="e926e-103">Se puede producir un interbloqueo en un servicio reentrante, lo que restringe las instancias del servicio a un subproceso de ejecución a la vez.</span><span class="sxs-lookup"><span data-stu-id="e926e-103">A deadlock may result in a Reentrant service, which restricts instances of the service to one thread of execution at a time.</span></span> <span data-ttu-id="e926e-104">Los servicios propensos a sufrir este problema tendrán el atributo <xref:System.ServiceModel.ServiceBehaviorAttribute> siguiente en su código:</span><span class="sxs-lookup"><span data-stu-id="e926e-104">Services prone to encounter this problem will have the following <xref:System.ServiceModel.ServiceBehaviorAttribute> in their code:</span></span><pre><code class="lang-csharp">[ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Reentrant)]&#13;&#10;</code></pre>|
-|<span data-ttu-id="e926e-105">Sugerencia</span><span class="sxs-lookup"><span data-stu-id="e926e-105">Suggestion</span></span>|<span data-ttu-id="e926e-106">Para solucionar este problema, puede seguir estos pasos:</span><span class="sxs-lookup"><span data-stu-id="e926e-106">To address this issue, you can do the following:</span></span><ul><li><span data-ttu-id="e926e-107">Establezca el modo de simultaneidad del servicio en <xref:System.ServiceModel.ConcurrencyMode.Single?displayProperty=nameWithType> o &lt;System.ServiceModel.ConcurrencyMode.Multiple?displayProperty=nameWithType&gt;.</span><span class="sxs-lookup"><span data-stu-id="e926e-107">Set the service's concurrency mode to <xref:System.ServiceModel.ConcurrencyMode.Single?displayProperty=nameWithType> or &lt;System.ServiceModel.ConcurrencyMode.Multiple?displayProperty=nameWithType&gt;.</span></span> <span data-ttu-id="e926e-108">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="e926e-108">For example:</span></span></li></ul><pre><code class="lang-csharp">[ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Single)]&#13;&#10;</code></pre><ul><li><span data-ttu-id="e926e-109">Instale la actualización más reciente de .NET Framework 4.6.2 o actualice a una versión posterior de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="e926e-109">Install the latest update to the .NET Framework 4.6.2, or upgrade to a later version of the .NET Framework.</span></span> <span data-ttu-id="e926e-110">Esto deshabilita el flujo de <xref:System.Threading.ExecutionContext> en <xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="e926e-110">This disables the flow of the <xref:System.Threading.ExecutionContext> in <xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType>.</span></span> <span data-ttu-id="e926e-111">Este comportamiento se puede configurar; equivale a agregar la configuración de aplicación siguiente al archivo de configuración:</span><span class="sxs-lookup"><span data-stu-id="e926e-111">This behavior is configurable; it is equivalent to adding the following app setting to your configuration file:</span></span></li></ul><pre><code class="lang-xml">&lt;appSettings&gt;&#13;&#10;&lt;add key=&quot;Switch.System.ServiceModel.DisableOperationContextAsyncFlow&quot; value=&quot;true&quot; /&gt;&#13;&#10;&lt;/appSettings&gt;&#13;&#10;</code></pre><span data-ttu-id="e926e-112">El valor de <code>Switch.System.ServiceModel.DisableOperationContextAsyncFlow</code> nunca se debe establecer en <code>false</code> para los servicios reentrantes.</span><span class="sxs-lookup"><span data-stu-id="e926e-112">The value of <code>Switch.System.ServiceModel.DisableOperationContextAsyncFlow</code> should never be set to <code>false</code> for Rentrant services.</span></span>|
-|<span data-ttu-id="e926e-113">Ámbito</span><span class="sxs-lookup"><span data-stu-id="e926e-113">Scope</span></span>|<span data-ttu-id="e926e-114">Secundaria</span><span class="sxs-lookup"><span data-stu-id="e926e-114">Minor</span></span>|
-|<span data-ttu-id="e926e-115">Versión</span><span class="sxs-lookup"><span data-stu-id="e926e-115">Version</span></span>|<span data-ttu-id="e926e-116">4.6.2</span><span class="sxs-lookup"><span data-stu-id="e926e-116">4.6.2</span></span>|
-|<span data-ttu-id="e926e-117">Tipo</span><span class="sxs-lookup"><span data-stu-id="e926e-117">Type</span></span>|<span data-ttu-id="e926e-118">Redestinación</span><span class="sxs-lookup"><span data-stu-id="e926e-118">Retargeting</span></span>|
-|<span data-ttu-id="e926e-119">API afectadas</span><span class="sxs-lookup"><span data-stu-id="e926e-119">Affected APIs</span></span>|<ul><li><xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType></li><li><xref:System.ServiceModel.ConcurrencyMode.Reentrant?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a><span data-ttu-id="183e6-102">Detalles</span><span class="sxs-lookup"><span data-stu-id="183e6-102">Details</span></span>
+
+<span data-ttu-id="183e6-103">Se puede producir un interbloqueo en un servicio reentrante, lo que restringe las instancias del servicio a un subproceso de ejecución a la vez.</span><span class="sxs-lookup"><span data-stu-id="183e6-103">A deadlock may result in a Reentrant service, which restricts instances of the service to one thread of execution at a time.</span></span> <span data-ttu-id="183e6-104">Los servicios propensos a sufrir este problema tendrán el atributo <xref:System.ServiceModel.ServiceBehaviorAttribute> siguiente en su código:</span><span class="sxs-lookup"><span data-stu-id="183e6-104">Services prone to encounter this problem will have the following <xref:System.ServiceModel.ServiceBehaviorAttribute> in their code:</span></span>
+
+```csharp
+[ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Reentrant)]
+```
+
+#### <a name="suggestion"></a><span data-ttu-id="183e6-105">Sugerencia</span><span class="sxs-lookup"><span data-stu-id="183e6-105">Suggestion</span></span>
+
+<span data-ttu-id="183e6-106">Para solucionar este problema, puede seguir estos pasos:</span><span class="sxs-lookup"><span data-stu-id="183e6-106">To address this issue, you can do the following:</span></span>
+
+- <span data-ttu-id="183e6-107">Establezca el modo de simultaneidad del servicio en <xref:System.ServiceModel.ConcurrencyMode.Single?displayProperty=nameWithType> o &lt;System.ServiceModel.ConcurrencyMode.Multiple?displayProperty=nameWithType&gt;.</span><span class="sxs-lookup"><span data-stu-id="183e6-107">Set the service's concurrency mode to <xref:System.ServiceModel.ConcurrencyMode.Single?displayProperty=nameWithType> or &lt;System.ServiceModel.ConcurrencyMode.Multiple?displayProperty=nameWithType&gt;.</span></span> <span data-ttu-id="183e6-108">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="183e6-108">For example:</span></span>
+
+```csharp
+[ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Reentrant)]
+```
+
+- <span data-ttu-id="183e6-109">Instale la actualización más reciente de .NET Framework 4.6.2 o actualice a una versión posterior de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="183e6-109">Install the latest update to the .NET Framework 4.6.2, or upgrade to a later version of the .NET Framework.</span></span> <span data-ttu-id="183e6-110">Esto deshabilita el flujo de <xref:System.Threading.ExecutionContext> en <xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="183e6-110">This disables the flow of the <xref:System.Threading.ExecutionContext> in <xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType>.</span></span> <span data-ttu-id="183e6-111">Este comportamiento se puede configurar; equivale a agregar la configuración de aplicación siguiente al archivo de configuración:</span><span class="sxs-lookup"><span data-stu-id="183e6-111">This behavior is configurable; it is equivalent to adding the following app setting to your configuration file:</span></span>
+
+```xml
+<appSettings>
+  <add key="Switch.System.ServiceModel.DisableOperationContextAsyncFlow" value="true" />
+</appSettings>
+```
+
+<span data-ttu-id="183e6-112">El valor de `Switch.System.ServiceModel.DisableOperationContextAsyncFlow` nunca se debe establecer en `false` para los servicios reentrantes.</span><span class="sxs-lookup"><span data-stu-id="183e6-112">The value of `Switch.System.ServiceModel.DisableOperationContextAsyncFlow` should never be set to `false` for Reentrant services.</span></span>
+
+| <span data-ttu-id="183e6-113">NOMBRE</span><span class="sxs-lookup"><span data-stu-id="183e6-113">Name</span></span>    | <span data-ttu-id="183e6-114">Valor</span><span class="sxs-lookup"><span data-stu-id="183e6-114">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="183e6-115">Ámbito</span><span class="sxs-lookup"><span data-stu-id="183e6-115">Scope</span></span>   | <span data-ttu-id="183e6-116">Secundaria</span><span class="sxs-lookup"><span data-stu-id="183e6-116">Minor</span></span>       |
+| <span data-ttu-id="183e6-117">Versión</span><span class="sxs-lookup"><span data-stu-id="183e6-117">Version</span></span> | <span data-ttu-id="183e6-118">4.6.2</span><span class="sxs-lookup"><span data-stu-id="183e6-118">4.6.2</span></span>       |
+| <span data-ttu-id="183e6-119">Tipo</span><span class="sxs-lookup"><span data-stu-id="183e6-119">Type</span></span>    | <span data-ttu-id="183e6-120">Redestinación</span><span class="sxs-lookup"><span data-stu-id="183e6-120">Retargeting</span></span> |
+
+#### <a name="affected-apis"></a><span data-ttu-id="183e6-121">API afectadas</span><span class="sxs-lookup"><span data-stu-id="183e6-121">Affected APIs</span></span>
+
+- <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType>
+- <xref:System.ServiceModel.ConcurrencyMode.Reentrant?displayProperty=nameWithType>

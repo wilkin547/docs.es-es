@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: 8db115a46df3fcea103e8fa6896542d0116aa256
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cef8096c971da8ae245ff974697022f350cb9195
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67804683"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85616072"
 ---
-### <a name="vbnet-no-longer-supports-partial-namespace-qualification-for-systemwindows-apis"></a><span data-ttu-id="a7e20-101">VB.NET ya no admite la calificación de espacios de nombres parciales para las API de System.Windows</span><span class="sxs-lookup"><span data-stu-id="a7e20-101">VB.NET no longer supports partial namespace qualification for System.Windows APIs</span></span>
+### <a name="vbnet-no-longer-supports-partial-namespace-qualification-for-systemwindows-apis"></a><span data-ttu-id="d24c4-101">VB.NET ya no admite la calificación de espacios de nombres parciales para las API de System.Windows</span><span class="sxs-lookup"><span data-stu-id="d24c4-101">VB.NET no longer supports partial namespace qualification for System.Windows APIs</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="a7e20-102">Detalles</span><span class="sxs-lookup"><span data-stu-id="a7e20-102">Details</span></span>|<span data-ttu-id="a7e20-103">A partir de .NET Framework 4.5.2, los proyectos de VB.NET ya no pueden especificar API de System.Windows con espacios de nombres parciales.</span><span class="sxs-lookup"><span data-stu-id="a7e20-103">Beginning in .NET Framework 4.5.2, VB.NET projects cannot specify System.Windows APIs with partially-qualified namespaces.</span></span> <span data-ttu-id="a7e20-104">Por ejemplo, se producirá un error al hacer referencia a <code>Windows.Forms.DialogResult</code>.</span><span class="sxs-lookup"><span data-stu-id="a7e20-104">For example, referring to <code>Windows.Forms.DialogResult</code> will fail.</span></span> <span data-ttu-id="a7e20-105">En su lugar, el código debe hacer referencia al nombre completo (<xref:System.Windows.Forms.DialogResult>) o importar el espacio de nombres específico y simplemente hacer referencia a <xref:System.Windows.Forms.DialogResult?displayProperty=name>.</span><span class="sxs-lookup"><span data-stu-id="a7e20-105">Instead, code must refer to the fully qualified name (<xref:System.Windows.Forms.DialogResult>) or import the specific namespace and refer simply to <xref:System.Windows.Forms.DialogResult?displayProperty=name>.</span></span>|
-|<span data-ttu-id="a7e20-106">Sugerencia</span><span class="sxs-lookup"><span data-stu-id="a7e20-106">Suggestion</span></span>|<span data-ttu-id="a7e20-107">Debería actualizarse el código para hacer referencia a las API <code>System.Windows</code> con nombres simples (e importar el espacio de nombres correspondiente) o con nombres completos.</span><span class="sxs-lookup"><span data-stu-id="a7e20-107">Code should be updated to refer to <code>System.Windows</code> APIs either with simple names (and importing the relevant namespace) or with fully qualified names.</span></span>|
-|<span data-ttu-id="a7e20-108">Ámbito</span><span class="sxs-lookup"><span data-stu-id="a7e20-108">Scope</span></span>|<span data-ttu-id="a7e20-109">Secundaria</span><span class="sxs-lookup"><span data-stu-id="a7e20-109">Minor</span></span>|
-|<span data-ttu-id="a7e20-110">Versión</span><span class="sxs-lookup"><span data-stu-id="a7e20-110">Version</span></span>|<span data-ttu-id="a7e20-111">4.5.2</span><span class="sxs-lookup"><span data-stu-id="a7e20-111">4.5.2</span></span>|
-|<span data-ttu-id="a7e20-112">Tipo</span><span class="sxs-lookup"><span data-stu-id="a7e20-112">Type</span></span>|<span data-ttu-id="a7e20-113">Redestinación</span><span class="sxs-lookup"><span data-stu-id="a7e20-113">Retargeting</span></span>|
+#### <a name="details"></a><span data-ttu-id="d24c4-102">Detalles</span><span class="sxs-lookup"><span data-stu-id="d24c4-102">Details</span></span>
+
+<span data-ttu-id="d24c4-103">A partir de .NET Framework 4.5.2, los proyectos de VB.NET ya no pueden especificar API de System.Windows con espacios de nombres parciales.</span><span class="sxs-lookup"><span data-stu-id="d24c4-103">Beginning in .NET Framework 4.5.2, VB.NET projects cannot specify System.Windows APIs with partially-qualified namespaces.</span></span> <span data-ttu-id="d24c4-104">Por ejemplo, se producirá un error al hacer referencia a `Windows.Forms.DialogResult`.</span><span class="sxs-lookup"><span data-stu-id="d24c4-104">For example, referring to `Windows.Forms.DialogResult` will fail.</span></span> <span data-ttu-id="d24c4-105">En su lugar, el código debe hacer referencia al nombre completo (<xref:System.Windows.Forms.DialogResult>) o importar el espacio de nombres específico y simplemente hacer referencia a <xref:System.Windows.Forms.DialogResult?displayProperty=fullName>.</span><span class="sxs-lookup"><span data-stu-id="d24c4-105">Instead, code must refer to the fully qualified name (<xref:System.Windows.Forms.DialogResult>) or import the specific namespace and refer simply to <xref:System.Windows.Forms.DialogResult?displayProperty=fullName>.</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="d24c4-106">Sugerencia</span><span class="sxs-lookup"><span data-stu-id="d24c4-106">Suggestion</span></span>
+
+<span data-ttu-id="d24c4-107">Debería actualizarse el código para hacer referencia a las API `System.Windows` con nombres simples (e importar el espacio de nombres correspondiente) o con nombres completos.</span><span class="sxs-lookup"><span data-stu-id="d24c4-107">Code should be updated to refer to `System.Windows` APIs either with simple names (and importing the relevant namespace) or with fully qualified names.</span></span>
+
+| <span data-ttu-id="d24c4-108">NOMBRE</span><span class="sxs-lookup"><span data-stu-id="d24c4-108">Name</span></span>    | <span data-ttu-id="d24c4-109">Valor</span><span class="sxs-lookup"><span data-stu-id="d24c4-109">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="d24c4-110">Ámbito</span><span class="sxs-lookup"><span data-stu-id="d24c4-110">Scope</span></span>   | <span data-ttu-id="d24c4-111">Secundaria</span><span class="sxs-lookup"><span data-stu-id="d24c4-111">Minor</span></span>       |
+| <span data-ttu-id="d24c4-112">Versión</span><span class="sxs-lookup"><span data-stu-id="d24c4-112">Version</span></span> | <span data-ttu-id="d24c4-113">4.5.2</span><span class="sxs-lookup"><span data-stu-id="d24c4-113">4.5.2</span></span>       |
+| <span data-ttu-id="d24c4-114">Tipo</span><span class="sxs-lookup"><span data-stu-id="d24c4-114">Type</span></span>    | <span data-ttu-id="d24c4-115">Redestinación</span><span class="sxs-lookup"><span data-stu-id="d24c4-115">Retargeting</span></span> |
