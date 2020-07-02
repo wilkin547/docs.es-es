@@ -8,22 +8,12 @@ items:
   - name: Instalar
     items:
       - name: Información general
-        href: install/index.md
-      - name: Instalación del SDK
-        href: install/sdk.md
-      - name: Instalación del entorno de ejecución
-        href: install/runtime.md
-      - name: Dependencias y SO admitidos
-        href: install/dependencies.md
-      - name: Eliminación de entornos de ejecución y SDK obsoletos
-        href: install/remove-runtime-sdk-versions.md
-      - name: Administración de plantillas de .NET
-        href: install/templates.md
-      - name: Incidencias de certificación notarial en macOS
-        href: install/macos-notarization-issues.md
-      - name: Cómo comprobar las versiones de .NET Core
-        href: install/how-to-detect-installed-versions.md
-      - name: Linux
+        href: install/index.yml
+      - name: Instalar en Windows
+        href: install/windows.md
+      - name: Instalación en macOS
+        href: install/macos.md
+      - name: Instalar en Linux
         items:
           - name: Información general
             href: install/linux.md
@@ -43,6 +33,14 @@ items:
             href: install/linux-rhel.md
           - name: SLES
             href: install/linux-sles.md
+      - name: Eliminación de entornos de ejecución y SDK obsoletos
+        href: install/remove-runtime-sdk-versions.md
+      - name: Administración de plantillas de .NET
+        href: install/templates.md
+      - name: Incidencias de certificación notarial en macOS
+        href: install/macos-notarization-issues.md
+      - name: Cómo comprobar las versiones de .NET Core
+        href: install/how-to-detect-installed-versions.md
       - name: Instalación de una versión localizada de IntelliSense
         href: install/localized-intellisense.md
   - name: Primeros pasos
