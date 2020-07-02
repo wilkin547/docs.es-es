@@ -3,15 +3,15 @@ title: 'Tutorial: Detección de objetos mediante un modelo de aprendizaje profun
 description: En este tutorial se muestra cómo usar en ML.NET un modelo de aprendizaje profundo de ONNX entrenado previamente para detectar objetos en imágenes.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 01/30/2020
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: b4f6457c4fab8549b3efec2e25f7c23213698414
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 4759a661646b08ea6a93cab030a19af2cfeaca16
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84767785"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803409"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Tutorial: Detección de objetos con ONNX en ML.NET
 
@@ -89,6 +89,8 @@ Ahora que tiene un conocimiento general de lo que es ONNX y de cómo funciona Ti
 1. Cree una **aplicación de consola de .NET Core** denominada "ObjectDetection".
 
 1. Instale el **paquete NuGet Microsoft.ML**:
+
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
     - En el Explorador de soluciones, haga clic con el botón derecho en **Administrar paquetes NuGet**.
     - Elija "nuget.org" como origen del paquete, seleccione la pestaña Examinar y busque **Microsoft.ML**.

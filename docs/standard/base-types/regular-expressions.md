@@ -1,7 +1,7 @@
 ---
-title: Expresiones regulares de .NET Framework
+title: Expresiones regulares de .NET
 description: Use expresiones regulares para buscar patrones de caracteres específicos, validar texto, trabajar con subcadenas de texto y agregar cadenas extraídas en una colección en .NET.
-ms.date: 03/30/2017
+ms.date: 06/30/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-ms.openlocfilehash: d9505cdfb57faf586c714aa7dd537210959f50d8
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: f57199c2ddf6569020554e74b6e70801844da641
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768838"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85802902"
 ---
 # <a name="net-regular-expressions"></a>Expresiones regulares de .NET
 
@@ -67,6 +67,8 @@ Para obtener más información acerca del lenguaje de expresiones regulares, con
 ## <a name="regular-expression-examples"></a>Ejemplos de expresiones regulares
 
 La clase <xref:System.String> incluye varios métodos de búsqueda y reemplazo de cadenas que puede usar cuando desee buscar cadenas literales en una cadena mayor. Las expresiones regulares son muy útiles cuando se desea buscar una de varias subcadenas en una cadena mayor o cuando se desea identificar patrones en una cadena, como se muestra en los ejemplos siguientes.
+
+[!INCLUDE [regex](../../../includes/regex.md)]
 
 > [!TIP]
 > El espacio de nombres <xref:System.Web.RegularExpressions> contiene un número de objetos de expresión regular que implementan modelos de expresión regular predefinidos para el análisis de cadenas a partir de documentos HTML, XML y ASP.NET. Por ejemplo, la clase <xref:System.Web.RegularExpressions.TagRegex> identifica las etiquetas de inicio en una cadena y la clase <xref:System.Web.RegularExpressions.CommentRegex> identifica los comentarios de ASP.NET en una cadena.

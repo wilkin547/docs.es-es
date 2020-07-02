@@ -1,21 +1,23 @@
 ---
 title: Uso de variables de difusión en .NET para Apache Spark
 description: Aprenda a usar variables de difusión en .NET para aplicaciones Apache Spark.
-ms.date: 06/11/2020
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 391e32cda14a9b3186ac96800351ddcb39a3d359
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: d86b160855cc4d3f3a6502f5606d4766b7c06aa0
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105631"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617861"
 ---
 # <a name="use-broadcast-variables-in-net-for-apache-spark"></a>Uso de variables de difusión en .NET para Apache Spark
 
 En este artículo, aprenderá a usar variables de difusión en .NET para Apache Spark. Las [variables de difusión en Apache Spark](https://spark.apache.org/docs/2.2.0/rdd-programming-guide.html#broadcast-variables) son mecanismos para compartir variables entre ejecutores que están diseñados para ser de solo lectura. Las variables de difusión permiten mantener una variable de solo lectura almacenada en caché en cada máquina en lugar de enviar una copia de ella con las tareas. Las variables de difusión son una manera eficaz de asignar a cada nodo una copia de un conjunto de datos de entrada grande.
 
 Dado que los datos se envían solo una vez, las variables de difusión tienen ventajas de rendimiento cuando se comparan con las variables locales que se envían a los ejecutores con cada tarea. Consulte la [documentación oficial de la variable de difusión](https://spark.apache.org/docs/2.2.0/rdd-programming-guide.html#broadcast-variables) para obtener una comprensión más profunda de las variables de difusión y por qué se usan.
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="create-broadcast-variables"></a>Creación de variables de difusión
 

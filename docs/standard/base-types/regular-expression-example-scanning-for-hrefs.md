@@ -1,7 +1,7 @@
 ---
 title: 'Ejemplo de expresiones regulares: Buscar etiquetas HREF'
 description: Vea un ejemplo de expresiones regulares en .NET. En el ejemplo se busca una cadena de entrada y se muestran todos los valores href y sus ubicaciones.
-ms.date: 03/30/2017
+ms.date: 06/30/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -14,17 +14,19 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
-ms.openlocfilehash: 36273901ac9afb762ac70ee5d6dcd80ff0ede11d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7bcc2a4242bfaed3e3340347a30e97e7e4060794
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84583497"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85802862"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Ejemplo de expresiones regulares: Buscar etiquetas HREF
 En el ejemplo siguiente se busca una cadena de entrada y se muestran todos los valores href="…" y sus ubicaciones en la cadena.  
-  
-## <a name="the-regex-object"></a>El objeto Regex  
+
+[!INCLUDE [regex](../../../includes/regex.md)]
+
+## <a name="the-regex-object"></a>El objeto Regex
  Dado que el método `DumpHRefs` puede llamarse varias veces desde el código de usuario, usa el método `static` (`Shared` en Visual Basic) <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>. Esto permite que el motor de expresiones regulares almacene en caché la expresión regular y evita la sobrecarga que se produciría al crear instancias de un nuevo objeto <xref:System.Text.RegularExpressions.Regex> cada vez que se llamara al método. Después, se usa un objeto <xref:System.Text.RegularExpressions.Match> para iterar todas las coincidencias de la cadena.  
   
  [!code-csharp[RegularExpressions.Examples.HREF#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.HREF/cs/example.cs#1)]
