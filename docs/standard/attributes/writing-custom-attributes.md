@@ -1,5 +1,6 @@
 ---
 title: Escribir atributos personalizados
+description: Diseñe sus propios atributos personalizados en .NET. Los atributos personalizados son esencialmente clases tradicionales que se derivan directa o indirectamente de System.Attribute.
 ms.date: 07/17/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - Inherited property
 - attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
-ms.openlocfilehash: d05df02bfc75e9aeb2c583a831bcee8b7b971206
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 3cae8de9b76aa9953b21ad2e23ad003e97555aa9
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276171"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768487"
 ---
 # <a name="writing-custom-attributes"></a>Escribir atributos personalizados
 Para diseñar sus propios atributos personalizados, no necesitará dominar muchos conceptos nuevos. Si está familiarizado con la programación orientada a objetos y sabe cómo diseñar clases, ya tiene la mayoría de los conocimientos necesarios. Los atributos personalizados son esencialmente clases tradicionales que se derivan directa o indirectamente de <xref:System.Attribute?displayProperty=nameWithType>. Como sucede con las clases tradicionales, los atributos personalizados contienen métodos que almacenan y recuperan datos.  
@@ -131,7 +132,7 @@ Para diseñar sus propios atributos personalizados, no necesitará dominar mucho
  [!code-csharp[Conceptual.Attributes.Usage#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#16)]
  [!code-vb[Conceptual.Attributes.Usage#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#16)]  
   
-## <a name="custom-attribute-example"></a>Ejemplo del atributo personalizado  
+## <a name="custom-attribute-example"></a>ejemplo de atributo personalizado  
  En esta sección se incorpora la información anterior y se muestra cómo se diseña un atributo simple que documente información sobre el autor de una sección del código. El atributo de este ejemplo almacena el nombre y el nivel del programador y si se ha revisado el código. Utiliza tres variables privadas para almacenar los valores reales que se deben guardar. Cada variable se representa mediante una propiedad pública que obtiene y establece los valores. Por último, el constructor se define con dos parámetros obligatorios.  
   
  [!code-cpp[Conceptual.Attributes.Usage#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#4)]

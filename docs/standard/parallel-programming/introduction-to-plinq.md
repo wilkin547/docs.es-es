@@ -1,5 +1,6 @@
 ---
 title: Introducción a PLINQ
+description: Aprenda a realizar consultas en paralelo con PLINQ en .NET. PLINQ corresponde a las siglas en inglés de Parallel Language-Integrated Query (LINQ).
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, introduction to
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
-ms.openlocfilehash: e50b2bf15d9a627f70ff01616bf2c72c70d7ff33
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9dbc4fde3f72d01aee91978ed5cb0baf0895de26
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290686"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662464"
 ---
 # <a name="introduction-to-plinq"></a>Introducción a PLINQ
 

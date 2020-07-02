@@ -1,5 +1,6 @@
 ---
-title: 'Cómo: Escribir un bucle Parallel.For simple'
+title: Procedimiento para escribir un bucle Parallel.For simple
+description: Aprenda a escribir bucles Parallel.For en .NET en los que no tiene que cancelar el bucle, interrumpir las iteraciones del bucle ni mantener ningún estado local del subproceso.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,19 +11,19 @@ helpviewer_keywords:
 - for loop, parallel construction in .NET
 - parallel for loops, how to use
 ms.assetid: 9029ba7f-a9d1-4526-8c84-c88716dba5d4
-ms.openlocfilehash: b18e110b86389dd5d28bbc370e207aaaf7571aaf
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8307f2205653fbd213d824acffc405ee97580166
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290738"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662698"
 ---
-# <a name="how-to-write-a-simple-parallelfor-loop"></a>Cómo: Escribir un bucle Parallel.For simple
+# <a name="how-to-write-a-simple-parallelfor-loop"></a>Procedimiento para escribir un bucle Parallel.For simple
 
 Este tema contiene dos ejemplos que ilustran el método <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. El primer ejemplo usa la sobrecarga del método <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType> y el segundo usa la sobrecarga <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType>, las dos sobrecargas más simples del método <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. Puede usar estas dos sobrecargas del método <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> cuando no sea necesario cancelar el bucle, interrumpir las iteraciones del bucle o mantener cualquier estado local de subproceso.
 
 > [!NOTE]
-> En esta documentación, se utilizan expresiones lambda para definir delegados en la TPL. Si no está familiarizado con las expresiones lambda de C# o Visual Basic, consulte [Lambda Expressions in PLINQ and TPL](lambda-expressions-in-plinq-and-tpl.md) (Expresiones lambda en PLINQ y TPL).
+> En esta documentación, se utilizan expresiones lambda para definir delegados en la TPL. Si no está familiarizado con las expresiones lambda de C# o Visual Basic, consulte [Expresiones lambda en PLINQ y TPL](lambda-expressions-in-plinq-and-tpl.md).
 
 El primer ejemplo calcula el tamaño de los archivos de un solo directorio. El segundo calcula el producto de dos matrices.
 
@@ -72,5 +73,5 @@ Copie y pegue este código en un proyecto de Visual Studio.
 
 - <xref:System.Threading.Tasks.Parallel.For%2A>
 - <xref:System.Threading.Tasks.Parallel.ForEach%2A>
-- [Data Parallelism](data-parallelism-task-parallel-library.md) (Paralelismo de datos)
+- [Paralelismo de datos](data-parallelism-task-parallel-library.md)
 - [Programación en paralelo](index.md)

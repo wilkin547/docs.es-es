@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo usar la herramienta Analizador de 
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 815ac8e0f0c4392a3d89530947b0739d06a0b95d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d2a9551565e9ef0a2ed76960c869829fc2e86a1f
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84278368"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903615"
 ---
 # <a name="the-net-portability-analyzer"></a>Analizador de portabilidad de .NET
 
@@ -32,6 +32,20 @@ Para empezar a usar el Analizador de portabilidad de .NET en Visual Studio, prim
 ![Captura de pantalla del analizador de portabilidad.](./media/portability-analyzer/portability-screenshot.png)
 
 También puede usar la aplicación de consola ApiPort, descárguela desde [el repositorio de ApiPort](https://aka.ms/apiportdownload). Puede usar la opción de comando `listTargets` para mostrar la lista de destinos disponible y elegir las plataformas de destino especificando la opción de comando `-t` o `--target`.
+
+### <a name="solution-wide-view"></a>Vista de toda la solución
+
+Un paso útil en el análisis de una solución con muchos proyectos sería visualizar las dependencias para comprender qué subconjunto de ensamblados depende de qué. La recomendación general es aplicar los resultados del análisis en un enfoque de orden ascendente a partir de los nodos hoja de un gráfico de dependencias.
+
+Para recuperarlo, ejecute el siguiente comando:
+
+```
+ApiPort.exe analyze -r DGML -f [directory or file]
+```
+
+El resultado sería similar al siguiente al abrirse en Visual Studio:
+
+![Captura de pantalla del análisis DGML.](./media/portability-analyzer/dgml-example.png)
 
 ### <a name="analyze-portability"></a>Análisis de portabilidad
 Para analizar todo el proyecto en Visual Studio, haga clic con el botón derecho en el proyecto en **Explorador de soluciones** y seleccione **Analyze Assembly Portability** (Analizar la portabilidad del ensamblado). También puede ir al menú **Analizar** y seleccionar **Analyze Assembly Portability** (Analizar la portabilidad del ensamblado). Desde allí, seleccione el ejecutable o DLL del proyecto.

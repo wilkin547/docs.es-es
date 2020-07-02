@@ -1,14 +1,14 @@
 ---
 title: Cómo instalar la herramienta de la interfaz de la línea de comandos (CLI) de ML.NET
 description: Obtenga información sobre cómo instalar, cambiar a una versión anterior y desinstalar la herramienta de la interfaz de la línea de comandos (CLI) de ML.NET.
-ms.date: 12/18/2019
+ms.date: 06/08/2020
 ms.custom: mlnet-tooling
-ms.openlocfilehash: 9f678c7117d32bf817139951db7eef2c3d0f5eb2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 13203246411deadf3ab13a5eba0d2c8e6e9027c5
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78848644"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602276"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>Cómo instalar la herramienta de la interfaz de la línea de comandos (CLI) de ML.NET
 
@@ -21,13 +21,13 @@ La CLI de ML.NET genera código fuente y modelos de ML.NET de buena calidad medi
 
 ## <a name="pre-requisites"></a>Requisitos previos
 
-- [SDK de .NET Core 2.2](https://dotnet.microsoft.com/download/dotnet-core/2.2)
+- [SDK de .NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-- (Opcional) [Visual Studio 2017 o 2019](https://visualstudio.microsoft.com/vs/)
+- (Opcional) [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
 
 Puede ejecutar los proyectos del código de C# generado con Visual Studio presionando la tecla `F5` o con `dotnet run` (CLI de .NET Core).
 
-Nota: Si después de instalar el [SDK de .NET Core 2.2](https://dotnet.microsoft.com/download/dotnet-core/2.2) el comando `dotnet tool` no funciona, cierre la sesión de Windows y vuelva a iniciarla.
+Nota: Si después de instalar el SDK de .NET Core el comando `dotnet tool` no funciona, cierre la sesión de Windows y vuelva a iniciarla.
 
 ## <a name="install"></a>Instalar
 
@@ -54,7 +54,7 @@ Para confirmar que la instalación se realizó correctamente, escriba el comando
 mlnet
 ```
 
-Debería ver la Ayuda de los comandos disponibles para la herramienta de mlnet, como el comando "auto-train".
+Debería ver la Ayuda correspondiente a los comandos disponibles para la herramienta de mlnet, como el comando "classification".
 
 ## <a name="install-a-specific-release-version"></a>Instalar una versión de lanzamiento específica
 

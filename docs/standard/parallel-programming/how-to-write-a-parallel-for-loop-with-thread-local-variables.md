@@ -1,5 +1,6 @@
 ---
-title: 'Cómo: Escribir un bucle Parallel.For con variables locales de subproceso'
+title: Procedimiento para escribir un bucle Parallel.For con variables locales de subproceso
+description: Vea un ejemplo de cómo escribir un bucle Parallel.For en .NET que usa variables locales de subproceso, que almacenan y recuperan el estado en cada tarea independiente del bucle.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +9,14 @@ dev_langs:
 helpviewer_keywords:
 - parallel for loops, how to use local state
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
-ms.openlocfilehash: bb6ac1a64c3a71646946d1af894d1124b12e4769
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9cff507757aab2e5676df2fabb02a237a2172c17
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290764"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599794"
 ---
-# <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Cómo: Escribir un bucle Parallel.For con variables locales de subproceso
+# <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Procedimiento para escribir un bucle Parallel.For con variables locales de subproceso
 En este ejemplo se muestra la forma de usar variables locales para el subproceso para almacenar y recuperar el estado en cada una de las tareas independientes creadas por un bucle <xref:System.Threading.Tasks.Parallel.For%2A>. Mediante el uso de datos locales de subproceso, se puede evitar la sobrecarga que supone la sincronización de un gran número de accesos a un estado compartido. En vez de escribir en un recurso compartido en cada iteración, se calcula y se almacena el valor hasta que finalizan todas las iteraciones de la tarea. A continuación, se escribe una vez el resultado final en el recurso compartido o se pasa a otro método.  
   
 ## <a name="example"></a>Ejemplo  
@@ -44,7 +45,7 @@ Function() new MyClass()
   
 ## <a name="see-also"></a>Vea también
 
-- [Data Parallelism](data-parallelism-task-parallel-library.md) (Paralelismo de datos)
+- [Paralelismo de datos](data-parallelism-task-parallel-library.md)
 - [Programación en paralelo](index.md)
 - [Biblioteca TPL](task-parallel-library-tpl.md)
 - [Expresiones lambda en PLINQ y TPL](lambda-expressions-in-plinq-and-tpl.md)

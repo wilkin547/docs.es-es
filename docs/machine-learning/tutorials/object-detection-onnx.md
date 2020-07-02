@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 199245aa0017d9232e3c9889c7845c3b9ec9877b
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: b4f6457c4fab8549b3efec2e25f7c23213698414
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144752"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767785"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Tutorial: Detección de objetos con ONNX en ML.NET
 
@@ -94,7 +94,7 @@ Ahora que tiene un conocimiento general de lo que es ONNX y de cómo funciona Ti
     - Elija "nuget.org" como origen del paquete, seleccione la pestaña Examinar y busque **Microsoft.ML**.
     - Seleccione el botón **Instalar**.
     - Seleccione el botón **Aceptar** en el cuadro de diálogo **Vista previa de cambios** y, a continuación, seleccione el botón **Acepto** del cuadro de diálogo **Aceptación de la licencia** en caso de que esté de acuerdo con los términos de licencia de los paquetes mostrados.
-    - Repita estos pasos para **Microsoft.ML.ImageAnalytics** y **Microsoft.ML.OnnxTransformer**.
+    - Repita estos pasos para **Microsoft.ML.ImageAnalytics**, **Microsoft.ML.OnnxTransformer** y **Microsoft.ML.OnnxRuntime**.
 
 ### <a name="prepare-your-data-and-pre-trained-model"></a>Preparar los datos y el modelo entrenado previamente
 

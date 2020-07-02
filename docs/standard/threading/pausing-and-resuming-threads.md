@@ -1,5 +1,6 @@
 ---
 title: Pausa e interrupción de subprocesos
+description: Aprenda a pausar e interrumpir subprocesos en .NET. Aprenda a usar métodos como Thread.Sleep y Thread.Interrupt, además de excepciones tales como ThreadInterruptedException.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - threading [.NET Framework], pausing
 - pausing threads
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
-ms.openlocfilehash: 369631603791d90c51244c1dc9907b9d8ec17364
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f7f414ec716bac5f1e840c5e8a0946024e059fb6
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291167"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769124"
 ---
 # <a name="pausing-and-interrupting-threads"></a>Pausa e interrupción de subprocesos
 
@@ -54,4 +55,4 @@ Las maneras más habituales de sincronizar las actividades de los subprocesos so
 - <xref:System.Threading.ThreadAbortException>
 - [Subprocesamiento](index.md)
 - [Usar subprocesos y subprocesamiento](using-threads-and-threading.md)
-- [Información general sobre los primitivos de sincronización](overview-of-synchronization-primitives.md)
+- [Información general sobre las primitivas de sincronización](overview-of-synchronization-primitives.md)

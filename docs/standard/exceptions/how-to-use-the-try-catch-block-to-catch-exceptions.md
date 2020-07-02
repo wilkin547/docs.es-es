@@ -1,5 +1,6 @@
 ---
-title: Utilizar el bloque Try/Catch para detectar excepciones
+title: Procedimiento Uso del bloque Try/Catch para detectar excepciones
+description: Utilice el bloque Try para incluir instrucciones que puedan generar o producir una excepción. Coloque las instrucciones para controlar las excepciones en uno o varios bloques Catch.
 ms.date: 02/06/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - try/catch blocks
 - catch blocks
 ms.assetid: a3ce6dfd-1f64-471b-8ad8-8cfaf406275d
-ms.openlocfilehash: 5a9218d394b76e897f4263708a10f1bc895ad4e1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 60ed213ea777fe35873fd1e67555b7506e3ca587
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75708471"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768916"
 ---
 # <a name="how-to-use-the-trycatch-block-to-catch-exceptions"></a>Cómo usar el bloque Try/Catch para detectar excepciones
 

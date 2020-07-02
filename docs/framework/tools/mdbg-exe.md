@@ -1,16 +1,17 @@
 ---
 title: MDbg.exe (depurador de línea de comandos .NET Framework)
+description: Conozca MDbg.exe, el depurador de línea de comandos para .NET, que ayuda a los proveedores de herramientas y desarrolladores de aplicaciones a encontrar y corregir errores en los programas destinados a CLR.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - command-line debugger [.NET Framework]
 - MDbg.exe
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
-ms.openlocfilehash: 58502626fed6c9cee52acb673ae34f6024f78b9b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1c663474e5084afa1824f0f6b0740ae03a344e92
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75715763"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904226"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (depurador de línea de comandos .NET Framework)
 El Depurador de la línea de comandos de .NET Framework ayuda a los proveedores de herramientas y a los programadores de aplicaciones a encontrar y a corregir los errores que pueden producirse en programas orientados al Common Language Runtime de .NET Framework. Esta herramienta utiliza el runtime de la API de depuración para proporcionar servicios de depuración. Puede utilizar MDbg.exe para depurar solo código administrado; no se admite la depuración de código no administrado.  
@@ -32,7 +33,7 @@ MDbg [ProgramName[arguments]] [options]
   
  Los comandos de MDbg.exe distinguen mayúsculas de minúsculas.  
   
-|Comando|Description|  
+|Comando|Descripción|  
 |-------------|-----------------|  
 |**ap**[**rocess**] [*number*]|Cambia a otro proceso depurado o imprime los procesos disponibles. Los números no son identificadores de proceso reales (PID), sino una lista indizada por 0.|  
 |**a**[**ttach**] [*pid*]|Asocia a un proceso o imprime los procesos disponibles.|  
@@ -55,7 +56,7 @@ MDbg [ProgramName[arguments]] [options]
 |**int**[**ercept**] *FrameNumber*|Revierte el depurador hasta un número de marco especificado.<br /><br /> Si el depurador encuentra una excepción, utilice este comando para revertir el depurador hasta el número de marco especificado. También puede cambiar el estado del programa mediante el comando **set** y seguir usando el comando **go**.|  
 |**k**[**ill**]|Detiene el proceso activo.|  
 |**l**[**ist**] [*modules* &#124; *appdomains* &#124; *assemblies*]|Muestra los módulos, dominios de aplicación o ensamblados cargados.|  
-|**lo**[**ad**] *assemblyName*|Carga una extensión de la forma siguiente: se carga el ensamblado especificado y se intenta ejecutar el método estático `LoadExtension` del tipo `Microsoft.Tools.Mdbg.Extension.Extension`.|  
+|**lo**[**ad**] *assemblyName*|Carga una extensión de la manera siguiente: se carga el ensamblado especificado y se intenta ejecutar el método estático `LoadExtension` del tipo `Microsoft.Tools.Mdbg.Extension.Extension`.|  
 |**log** [*eventType*]|Permite establecer o mostrar los eventos que se van a registrar.|  
 |**mo**[**de**] [*option on/off*]|Establece las distintas opciones de depurador. Utilice `mode` sin opciones para obtener una lista de los modos de depuración y su configuración actual.|  
 |**mon**[**itorInfo**] *monitorReference*|Muestra la información de bloqueo del monitor de objetos.|  

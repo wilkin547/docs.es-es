@@ -1,5 +1,6 @@
 ---
-title: Procedimiento para agregar y quitar elementos de ConcurrentDictionary
+title: para agregar y quitar elementos de ConcurrentDictionary
+description: Vea un ejemplo de cómo agregar, recuperar, actualizar y quitar elementos de la clase de colección ConcurrentDictionary <TKey,TValue> en .NET.
 ms.date: 05/04/2020
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +9,14 @@ dev_langs:
 helpviewer_keywords:
 - thread-safe collections, concurrent dictionary
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
-ms.openlocfilehash: 6c093e907e43f9f2b978624a986dfe5d8a49869f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 0bfc17d93ea3088a7b2e4209e25003856770b9e7
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287905"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325962"
 ---
-# <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Procedimiento para agregar y quitar elementos de ConcurrentDictionary
+# <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Cómo agregar y quitar elementos de ConcurrentDictionary
 
 En este ejemplo se muestra cómo agregar, recuperar, actualizar y quitar elementos de <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>. Esta clase de colección es una implementación segura para subprocesos. Es recomendable que la use cada vez que varios subprocesos puedan intentar tener acceso a los elementos de forma simultánea.
 
@@ -36,9 +37,9 @@ En el ejemplo siguiente se usan dos instancias de <xref:System.Threading.Tasks.T
 
 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> está diseñado para escenarios multiproceso. No es necesario usar bloqueos en el código para agregar o quitar elementos de la colección. Pero siempre es posible que un subproceso recupere un valor y otro subproceso actualice inmediatamente la colección asignándole un nuevo valor a la misma clave.
 
-Además, aunque todos los métodos de <xref:System.Collections.Concurrent.ConcurrentDictionary%602> son seguros para subprocesos, no todos los métodos son atómicos, específicamente <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> y <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>. El delegado del usuario que se pasa a estos métodos se invoca fuera del bloqueo interno del diccionario (para evitar todos los subprocesos se bloqueen debido a código desconocido). Por tanto, es posible que se produzca esta secuencia de eventos:
+Además, aunque todos los métodos de <xref:System.Collections.Concurrent.ConcurrentDictionary%602> son seguros para subprocesos, no todos los métodos son atómicos, específicamente <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> y <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>. Para evitar que todos los subprocesos se bloqueen debido a código desconocido, el delegado del usuario que se pasa a estos métodos se invoca fuera del bloqueo interno del diccionario. Por tanto, es posible que se produzca esta secuencia de eventos:
 
-1. El subproceso _threadA_ llama a <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>, no encuentra ningún elemento y crea un nuevo elemento para agregar invocando el delegado `valueFactory`.
+1. El subproceso _threadA_ llama a <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>, no encuentra ningún elemento y crea un elemento que se agrega invocando el delegado `valueFactory`.
 
 1. Al mismo tiempo, el subproceso _threadB_ llama a <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>, se invoca su delegado `valueFactory` y llega al bloqueo interno antes que el subproceso _threadA_. Por tanto, su nuevo par clave-valor se agrega al diccionario.
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - installutil.exe tool
 ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
 author: ghogen
-ms.openlocfilehash: 8937ef8b4007253b06444e59b292395084e4df2f
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 259b353edc269a77a51e790544018481a53af188
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607924"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596363"
 ---
 # <a name="how-to-install-and-uninstall-windows-services"></a>Procedimiento Instalar y desinstalar servicios de Windows
 
@@ -26,7 +26,7 @@ Si desarrolla un servicio de Windows con .NET Framework, puede instalar rápidam
 > [!WARNING]
 > Si desea desinstalar un servicio del equipo, no siga los pasos descritos en este artículo. En su lugar, averigüe qué paquete de software o programa ha instalado el servicio y, después, haga clic en **Aplicaciones** en Configuración para desinstalar ese programa. Tenga en cuenta que muchos servicios forman parte de Windows; si los quita, podría causar inestabilidad en el sistema.
 
-Para seguir los pasos de este artículo, primero debe agregar un instalador del servicio al servicio de Windows. Para obtener más información, vea [Tutorial: Creación de una aplicación de un servicio de Windows](../windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md).
+Para seguir los pasos de este artículo, primero debe agregar un instalador del servicio al servicio de Windows. Para obtener más información, vea [Tutorial: Creación de una aplicación de un servicio de Windows](walkthrough-creating-a-windows-service-application-in-the-component-designer.md).
 
 Los proyectos de servicio de Windows no se pueden ejecutar directamente desde el entorno de desarrollo de Visual Studio presionando F5. Antes de poder ejecutar el proyecto, tendrá que instalar el servicio en el proyecto.
 
@@ -35,7 +35,7 @@ Los proyectos de servicio de Windows no se pueden ejecutar directamente desde el
 
 ### <a name="install-your-service-manually-using-installutilexe-utility"></a>Instalación manual del servicio con la utilidad InstallUtil. exe
 
-1. Desde el menú **Inicio**, seleccione el directorio **Visual Studio \<*versión*>** y, después **Símbolo del sistema para desarrolladores para VS \<*versión*>** .
+1. Desde el menú **Inicio**, seleccione el directorio **Visual Studio \<*version*>** y luego **Símbolo del sistema para desarrolladores de VS\<*version*>** .
 
      Aparecerá el símbolo del sistema para desarrolladores de Visual Studio.
 
@@ -55,7 +55,7 @@ Los proyectos de servicio de Windows no se pueden ejecutar directamente desde el
 
 ### <a name="uninstall-your-service-manually-using-installutilexe-utility"></a>Desinstalación manual del servicio con la utilidad InstallUtil.exe
 
-1. Desde el menú **Inicio**, seleccione el directorio **Visual Studio \<*versión*>** y, después **Símbolo del sistema para desarrolladores para VS \<*versión*>** .
+1. Desde el menú **Inicio**, seleccione el directorio **Visual Studio \<*version*>** y luego **Símbolo del sistema para desarrolladores para VS\<*version*>** .
 
      Aparecerá el símbolo del sistema para desarrolladores de Visual Studio.
 
@@ -97,7 +97,7 @@ Los proyectos de servicio de Windows no se pueden ejecutar directamente desde el
 
 ## <a name="see-also"></a>Vea también
 
-- [Introducción a las aplicaciones de servicios de Windows](../windows-services/introduction-to-windows-service-applications.md)
-- [Cómo: Crear servicios de Windows](../windows-services/how-to-create-windows-services.md)
-- [Cómo: Agregar instaladores a una aplicación de servicio](../windows-services/how-to-add-installers-to-your-service-application.md)
+- [Introducción a las aplicaciones de servicios de Windows](introduction-to-windows-service-applications.md)
+- [Cómo: Crear servicios de Windows](how-to-create-windows-services.md)
+- [Cómo: Agregar instaladores a una aplicación de servicio](how-to-add-installers-to-your-service-application.md)
 - [Installutil.exe (Herramienta Installer)](../tools/installutil-exe-installer-tool.md)

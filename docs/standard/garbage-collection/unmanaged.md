@@ -1,5 +1,6 @@
 ---
 title: Limpiar recursos no administrados
+description: Vea cómo limpiar recursos no administrados que no controla el recolector de elementos no utilizados de .NET, tales como archivos, ventanas y conexiones de red o de base de datos.
 ms.date: 05/13/2020
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - unmanaged resource cleanup
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
-ms.openlocfilehash: 2d8b22063a184773928e5bc072f51a9f7d5d45ba
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 07a8d754f1fc2612ae53407fa1b12a1eab7e38f2
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396987"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599842"
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>Limpiar recursos no administrados
 
@@ -44,7 +45,7 @@ Los consumidores de su tipo pueden entonces llamar a la implementación <xref:Sy
 
 En [Implementar un método Dispose](implementing-dispose.md) se describe cómo implementar el patrón de eliminación para liberar recursos no administrados.
 
-En [Uso de objetos que implementan `IDisposable`](../../../docs/standard/garbage-collection/using-objects.md) se describe cómo los consumidores de un tipo garantizan que se llame a su implementación de <xref:System.IDisposable.Dispose%2A>. Para realizar este procedimiento, se recomienda usar la instrucción `using` de C# (o la instrucción `Using` de Visual Basic).
+En [Uso de objetos que implementan `IDisposable`](using-objects.md) se describe cómo los consumidores de un tipo garantizan que se llame a su implementación de <xref:System.IDisposable.Dispose%2A>. Para realizar este procedimiento, se recomienda usar la instrucción `using` de C# (o la instrucción `Using` de Visual Basic).
 
 ## <a name="reference"></a>Referencia
 

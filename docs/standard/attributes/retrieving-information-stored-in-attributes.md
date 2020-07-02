@@ -1,5 +1,6 @@
 ---
 title: Recuperar información almacenada en atributos
+description: Aprenda a recuperar información almacenada en atributos, como en el caso de una instancia de atributo, muchas instancias para el mismo ámbito y muchas instancias para distintos ámbitos.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - multiple attribute instances
 - attributes [.NET Framework], retrieving
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
-ms.openlocfilehash: fc8dcb38471d80d01d1f87993783af3d24868506
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: cf147a0ae6833039247c4c0878996973cc3db545
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276140"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84661866"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Recuperar información almacenada en atributos
 La recuperación de un atributo personalizado es un proceso sencillo. En primer lugar, declare una instancia del atributo que desea recuperar. A continuación, utilice el método <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> para inicializar el atributo nuevo en el valor del atributo que desea recuperar. Una vez inicializado el nuevo atributo, basta con usar sus propiedades para obtener los valores.  
   
 > [!IMPORTANT]
-> En este tema se describe cómo recuperar los atributos personalizados del código que se carga en el contexto de ejecución. Para recuperar los atributos del código que se carga en el contexto de solo reflexión, debe utilizar la clase <xref:System.Reflection.CustomAttributeData>, como se muestra en [How to: Load Assemblies into the Reflection-Only Context](../../framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md) (Carga de ensamblados en el contexto de solo reflexión).  
+> En este tema se describe cómo recuperar los atributos personalizados del código que se carga en el contexto de ejecución. Para recuperar los atributos del código que se carga en el contexto de solo reflexión, se debe usar la clase <xref:System.Reflection.CustomAttributeData>, como se muestra en [Cómo: Cargar ensamblados en el contexto de solo reflexión](../../framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
   
  En esta sección se describen los siguientes métodos para recuperar atributos:  
   

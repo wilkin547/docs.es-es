@@ -1,5 +1,6 @@
 ---
 title: Principios básicos del subprocesamiento administrado
+description: Vea vínculos a otros artículos de subprocesamiento administrado, que tratan temas tales como las excepciones, la sincronización de datos, los subprocesos en primer plano y en segundo plano, el almacenamiento local, etc.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
-ms.openlocfilehash: 4d2a96619fd1c48c79b5590efdb52c307d29710c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d4a4ceabf29bd0f6f537e59ba477f9da686b1ef5
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291011"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769098"
 ---
 # <a name="managed-threading-basics"></a>Principios básicos del subprocesamiento administrado
 
@@ -22,7 +23,7 @@ Los cinco primeros temas de esta sección están diseñados para ayudarle a dete
  En el resto de los temas de esta sección se tratan cuestiones más avanzadas, incluida la interacción del subproceso administrado con el sistema operativo Windows.  
   
 > [!NOTE]
-> En .NET Framework 4, la biblioteca TPL y PLINQ proporcionan API para el paralelismo de tareas y datos en programas multiproceso. Para más información, consulte [Parallel Programming](../parallel-programming/index.md) (Programación en paralelo).  
+> En .NET Framework 4, la biblioteca TPL y PLINQ proporcionan API para el paralelismo de tareas y datos en programas multiproceso. Para más información, consulte [Programación en paralelo](../parallel-programming/index.md).  
   
 ## <a name="in-this-section"></a>En esta sección
 
@@ -41,7 +42,7 @@ Los cinco primeros temas de esta sección están diseñados para ayudarle a dete
  [Subprocesamiento administrado y no administrado en Windows](managed-and-unmanaged-threading-in-windows.md)  
  Se describe la relación entre subprocesos administrados y no administrados, se enumeran los administrados equivalentes para las API de subprocesos de Windows y se describe la interacción entre apartamentos COM y subprocesos administrados.  
   
- [Almacenamiento local para el subproceso: Campos estáticos relacionados con subproceso y ranuras de datos](thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
+ [Almacenamiento local para el subproceso: Campos estáticos relacionados con subprocesos y ranuras de datos](thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
  Se describen los mecanismos de almacenamiento relacionados con subprocesos.  
   
 ## <a name="reference"></a>Referencia
@@ -54,7 +55,7 @@ Los cinco primeros temas de esta sección están diseñados para ayudarle a dete
   
 ## <a name="related-sections"></a>Secciones relacionadas
 
- [Información general sobre los primitivos de sincronización](overview-of-synchronization-primitives.md)  
+ [Información general sobre las primitivas de sincronización](overview-of-synchronization-primitives.md)  
  Se describen las clases administradas utilizadas para sincronizar las actividades de varios subprocesos.  
   
  [Procedimientos recomendados para el subprocesamiento administrado](managed-threading-best-practices.md)  

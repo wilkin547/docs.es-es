@@ -1,5 +1,6 @@
 ---
-title: 'Cómo: Usar canalizaciones anónimas para la comunicación local entre procesos'
+title: Procedimiento para usar canalizaciones anónimas para la comunicación local entre procesos
+description: Aprenda a usar canalizaciones anónimas para la comunicación local entre procesos en un equipo local en .NET. Las canalizaciones anónimas requieren menos sobrecarga que las canalizaciones con nombre.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,14 +14,14 @@ helpviewer_keywords:
 - one-way communication [.NET Framework]
 - local computer communication [.NET Framework], pipes
 ms.assetid: e7773c77-c646-4a01-8a96-a003d59fc4c9
-ms.openlocfilehash: 9962471697888041e98e38dd5f7feaecc306894d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 090a25aea4f280fc2ad00cf7777a501c475dfc66
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291791"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594808"
 ---
-# <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>Cómo: Usar canalizaciones anónimas para la comunicación local entre procesos
+# <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>Procedimiento para usar canalizaciones anónimas para la comunicación local entre procesos
 Las canalizaciones anónimas permiten la comunicación entre procesos en un equipo local. Proporcionan menos funcionalidad que las canalizaciones con nombre, pero también tienen menos carga de procesamiento. Puede utilizar las canalizaciones anónimas para facilitar la comunicación entre procesos en un equipo local. No se puede utilizar las canalizaciones anónimas para la comunicación a través de una red.  
   
  Para implementar canalizaciones anónimas, use las clases <xref:System.IO.Pipes.AnonymousPipeServerStream> y <xref:System.IO.Pipes.AnonymousPipeClientStream>.  
@@ -48,4 +49,4 @@ Las canalizaciones anónimas permiten la comunicación entre procesos en un equi
 ## <a name="see-also"></a>Vea también
 
 - [Pipes](pipe-operations.md) (Operaciones de canalización de .NET Framework)
-- [Usar canalizaciones con nombre para la comunicación de red entre procesos](how-to-use-named-pipes-for-network-interprocess-communication.md)
+- [Cómo: Usar canalizaciones con nombre para la comunicación de red entre procesos](how-to-use-named-pipes-for-network-interprocess-communication.md)

@@ -1,18 +1,18 @@
 ---
 title: Información general sobre el enlace de datos
 description: Obtenga información sobre los distintos orígenes de datos que puede agregar al proyecto en Windows Presentation Foundation para .NET Core. Los orígenes de datos se pueden enlazar a elementos XAML para crear aplicaciones dinámicas.
-author: thraka
+author: adegeo
 ms.date: 09/19/2019
 ms.author: adegeo
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 7f17ff094a35c04ba880c87c6966d7d249817516
-ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
+ms.openlocfilehash: 829c93e97990b87e6e568614236de9708ef080d9
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "81433257"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325754"
 ---
 # <a name="data-binding-overview-in-wpf"></a>Introducción al enlace de datos en WPF
 

@@ -1,5 +1,6 @@
 ---
 title: Procedimiento Leer y escribir en un archivo de datos recién creado
+description: Aprenda a leer y escribir en un archivo de datos recién creado en .NET con las clases System.IO.BinaryReader y System.IO.BinaryWriter.
 ms.date: 01/21/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - I/O [.NET Framework], writing data
 - BinaryWriter class, examples
 ms.assetid: e209d949-31e8-44ea-8e38-87f9093f3093
-ms.openlocfilehash: 18f44af81a38a48da3115d2082ef45af39f06529
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9a6b2985b7f532476c0f4c0f998d710f95e55d3a
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291817"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769163"
 ---
 # <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>Procedimiento Leer y escribir en un archivo de datos recién creado
 Las clases <xref:System.IO.BinaryWriter?displayProperty=nameWithType> y <xref:System.IO.BinaryReader?displayProperty=nameWithType> se usan para escribir y leer datos distintos de cadenas de caracteres. En el ejemplo siguiente se muestra cómo se crea un flujo de archivos vacío y cómo se escriben y se leen datos de este.

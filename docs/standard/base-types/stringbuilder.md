@@ -1,5 +1,6 @@
 ---
 title: Utilizar la clase StringBuilder en .NET
+description: Aprenda a utilizar la clase StringBuilder en .NET. Use esta clase para modificar una cadena sin crear un objeto.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - Insert method
 - strings [.NET Framework], StringBuilder object
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
-ms.openlocfilehash: a8116013cc20ead3be13763ce72999d2c608dbce
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 83d4b9327b55c511e2a46486e519e3cd0c77b1a3
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289270"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803225"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>Utilizar la clase StringBuilder en .NET
 El objeto <xref:System.String> es inmutable. Cada vez que se usa uno de los métodos de la clase <xref:System.String?displayProperty=nameWithType>, se crea un objeto de cadena en la memoria, lo que requiere una nueva asignación de espacio para ese objeto. En las situaciones en las que es necesario realizar modificaciones repetidas en una cadena, la sobrecarga asociada a la creación de un objeto <xref:System.String> puede ser costosa. La clase <xref:System.Text.StringBuilder?displayProperty=nameWithType> se puede usar para modificar una cadena sin crear un objeto. Por ejemplo, el uso de la clase <xref:System.Text.StringBuilder> puede mejorar el rendimiento al concatenar muchas cadenas en un bucle.  
@@ -66,7 +67,7 @@ El objeto <xref:System.String> es inmutable. Cada vez que se usa uno de los mét
 |<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>|Reemplaza a un especificador de formato que se pasa en una cadena con texto con formato|  
 |<xref:System.Text.StringBuilder.Insert%2A?displayProperty=nameWithType>|Inserta una cadena o un objeto en el índice especificado del elemento **StringBuilder** actual.|  
 |<xref:System.Text.StringBuilder.Remove%2A?displayProperty=nameWithType>|Quita el número de caracteres especificado del objeto **StringBuilder** actual.|  
-|<xref:System.Text.StringBuilder.Replace%2A?displayProperty=nameWithType>|Reemplaza un carácter concreto en un índice especificado.|  
+|<xref:System.Text.StringBuilder.Replace%2A?displayProperty=nameWithType>|Reemplaza todas las apariciones de un carácter o cadena especificados en la instancia de **StringBuilder** por otro carácter o cadena especificados.|  
   
 ### <a name="append"></a>Anexar  
  El método **Append** se puede usar para agregar texto o la representación de cadena de un objeto al final de una cadena representada por el objeto **StringBuilder** actual. En el ejemplo siguiente, se inicializa **StringBuilder** en "Hello World" y, después, se anexa texto al final del objeto. El espacio se asigna automáticamente según sea necesario.  

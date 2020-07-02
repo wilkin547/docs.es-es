@@ -1,5 +1,6 @@
 ---
 title: Acceso a Internet a través de un proxy
+description: Aprenda a configurar una instancia de proxy para permitir que la aplicación .NET Framework se comunique con el proxy web.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Networking
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - Internet, proxy instances
 - Network Resources
 ms.assetid: cbf46f63-ce28-486d-b827-ec0f1a9d8319
-ms.openlocfilehash: 76566d06cac81d8ba4138369c6ee3ef807a99634
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 77f46cdcedbeb9b1809621d64f239a6681e82590
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71049046"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502748"
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>Acceso a Internet a través de un proxy
 Si el sitio usa un proxy para proporcionar acceso a Internet, debe configurar una instancia de proxy para permitir que la aplicación se comunique con el proxy web.  
@@ -30,7 +31,7 @@ Si el sitio usa un proxy para proporcionar acceso a Internet, debe configurar un
   
 - [Cómo: Habilitar un elemento WebRequest para usar un proxy para comunicarse con Internet](how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
   
-- [Cómo: reemplazar una selección del proxy global](how-to-override-a-global-proxy-selection.md)  
+- [Cómo: Reemplazar una selección del proxy global](how-to-override-a-global-proxy-selection.md)  
   
 ## <a name="see-also"></a>Vea también
 

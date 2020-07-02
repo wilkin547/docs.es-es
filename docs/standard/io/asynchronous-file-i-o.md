@@ -1,5 +1,6 @@
 ---
 title: E/S de archivos asincrónica
+description: Obtenga información sobre la E/S de archivos asincrónica en .NET. Obtenga información sobre métodos asincrónicos para simplificar operaciones asincrónicas, como ReadAsync, WriteAsync, etc.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - multiple I/O requests
 - data streams, synchronous streams
 ms.assetid: dbdd55e7-d6b9-4f9e-8abb-ab0edd4457f7
-ms.openlocfilehash: 66e7d01f37a1119b9d2076a9131aa40f26d15625
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9506a366b6f1e363ec13550e5ed68c7176dd4d0a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75708196"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598624"
 ---
 # <a name="asynchronous-file-io"></a>E/S de archivos asincrónica
 

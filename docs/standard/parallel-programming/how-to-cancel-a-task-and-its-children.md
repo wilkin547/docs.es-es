@@ -1,5 +1,6 @@
 ---
-title: 'Cómo: Cancelar una tarea y sus elementos secundarios'
+title: Procedimiento para cancelar una tarea y sus elementos secundarios
+description: Vea ejemplos de cómo cancelar una tarea y sus elementos secundarios en .NET. En los ejemplos se incluyen los pasos de la creación de tareas cancelables, hasta el aviso de que se canceló la tarea.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +9,14 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to cancel
 ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
-ms.openlocfilehash: ca6b5f10840d935aa45cb660da86685d1c90554b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 66daf00680b65aace1ce6367761e3ed81596d33b
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290037"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662685"
 ---
-# <a name="how-to-cancel-a-task-and-its-children"></a>Cómo: Cancelar una tarea y sus elementos secundarios
+# <a name="how-to-cancel-a-task-and-its-children"></a>Procedimiento para cancelar una tarea y sus elementos secundarios
 En estos ejemplos se muestra cómo realizar las tareas siguientes:  
   
 1. Crear e iniciar una tarea cancelable.  
@@ -43,5 +44,5 @@ En estos ejemplos se muestra cómo realizar las tareas siguientes:
 - <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>
 - <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>
 - [Programación asincrónica basada en tareas](task-based-asynchronous-programming.md)
-- [Attached and Detached Child Tasks](attached-and-detached-child-tasks.md) (Tareas secundarias asociadas y desasociadas)
+- [Tareas secundarias asociadas y desasociadas](attached-and-detached-child-tasks.md)
 - [Expresiones lambda en PLINQ y TPL](lambda-expressions-in-plinq-and-tpl.md)

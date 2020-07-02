@@ -1,5 +1,6 @@
 ---
 title: Procedimiento para compilar un ensamblado de un solo archivo de .NET Framework
+description: Explore cómo compilar un ensamblado de un solo archivo en .NET. Un ensamblado de un solo archivo puede ser una biblioteca (.dll) destinada a .NET o puede ser un archivo ejecutable (.exe).
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assembly manifest, single-file assemblies
@@ -13,12 +14,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
-ms.openlocfilehash: b7cb06da74a21dab6f60f0d4c3ac1748fcbe4526
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 482a973631e899b8d4bfc4640eef1ea26173605e
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644300"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104922"
 ---
 # <a name="how-to-build-a-net-framework-single-file-assembly"></a>Procedimiento para compilar un ensamblado de un solo archivo de .NET Framework
 
@@ -33,7 +34,7 @@ En los procedimientos siguientes se muestra cómo crear ensamblados de único ar
 
 En el símbolo del sistema, escriba el siguiente comando:
 
-\<*comando del compilador*> \<*nombre del módulo*>
+\<*compiler command*> \<*module name*>
 
 En este comando, *comando de compilador* es el comando del compilador del lenguaje usado en el módulo del código, mientras que *nombre del módulo* es el nombre del módulo del código al compilarlo en el ensamblado.
 
@@ -51,7 +52,7 @@ vbc myCode.vb
 
 En el símbolo del sistema, escriba el siguiente comando:
 
-\<*comando del compilador*>  **/out:** \<*nombre del archivo*> \<*nombre del módulo*>
+\<*compiler command*> **/out:** \<*file name*> \<*module name*>
 
 En este comando, *comando del compilador* es el comando del compilador del lenguaje usado en el módulo del código, *nombre del archivo* es el nombre del archivo de salida y *nombre del módulo* es el nombre del módulo del código al compilarlo en el ensamblado.
 
@@ -70,7 +71,7 @@ vbc -out:myAssembly.exe myCode.vb
 
 En el símbolo del sistema, escriba este comando para crear un ensamblado de biblioteca:
 
-\<*comando del compilador*>  **-t:library** \<*nombre del módulo*>
+\<*compiler command*> **-t:library** \<*module name*>
 
 En este comando, *comando de compilador* es el comando del compilador del lenguaje usado en el módulo del código, mientras que *nombre del módulo* es el nombre del módulo del código al compilarlo en el ensamblado. También puede usar otras opciones del compilador, como la opción **-out:** .
 

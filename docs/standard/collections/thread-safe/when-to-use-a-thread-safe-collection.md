@@ -1,34 +1,36 @@
 ---
 title: Cuándo usar una colección segura para subprocesos
+description: Sepa cuándo usar una colección segura para subprocesos en .NET. Hay cinco tipos de colección que están especialmente diseñados para admitir operaciones multiproceso de agregar y quitar.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, when to upgrade
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
-ms.openlocfilehash: e2c5d612abb824c93c611514a836c811e6e65efe
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 499af6d7b8de1decbcffefe0a3b1420cc548488a
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288880"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85326033"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>Cuándo usar una colección segura para subprocesos
-.NET Framework 4 presenta cinco nuevos tipos de colección que están especialmente diseñadas para admitir operaciones multiproceso de agregar y quitar. Para obtener seguridad para los subprocesos, estos nuevos tipos usan diversas clases de mecanismos de sincronización eficientes con bloqueo y sin bloqueo. La sincronización agrega sobrecarga a las operaciones. La cantidad de sobrecarga depende del tipo de sincronización que se use, el tipo de operaciones que se realicen y otros factores, como el número de subprocesos que intentan obtener acceso simultáneamente a la colección.  
+
+.NET Framework 4 presenta cinco nuevos tipos de colección que están especialmente diseñados para admitir operaciones multiproceso de agregar y quitar. Para obtener seguridad para subprocesos, estos nuevos tipos usan diversas clases de mecanismos de sincronización eficientes con bloqueo y sin bloqueo. La sincronización agrega sobrecarga a las operaciones. La cantidad de sobrecarga depende del tipo de sincronización que se use, el tipo de operaciones que se realicen y otros factores, como el número de subprocesos que intentan obtener acceso simultáneamente a la colección.  
   
  En algunos escenarios, la sobrecarga de la sincronización es insignificante y permite que el tipo multiproceso funcione mucho más rápido y aumente de tamaño mucho mejor que su equivalente no seguro para subprocesos cuando está protegido por un bloqueo externo. En otros escenarios, la sobrecarga puede hacer que el tipo seguro para subprocesos funcione y aumente de tamaño más o menos igual o incluso más lentamente que la versión del tipo no segura para subprocesos bloqueada externamente.  
   
  Las secciones siguientes proporcionan instrucciones generales acerca de cuándo usar una colección segura para subprocesos frente a su equivalente no seguro para subprocesos que tiene un bloqueo para la lectura y escritura proporcionado por el usuario. Dado que el rendimiento puede variar según muchos factores, las instrucciones no son específicas y tampoco son necesariamente válidas en todas las circunstancias. Si el rendimiento es muy importante, la mejor manera de determinar qué tipo de colección debe usar es medir el rendimiento en función de cargas y configuraciones de equipo representativas. Este documento usa los términos siguientes:  
   
- *Escenario puro de consumidor-productor*  
+ *Escenario puro de consumidor-productor*\
  Cualquier subproceso dado agrega o quita elementos, pero no realiza ambas operaciones.  
   
- *Escenario puro de consumidor-productor mixto*  
+ *Escenario puro de consumidor-productor mixto*\
  Cualquier subproceso dado agrega y quita elementos.  
   
- *Aceleración*  
+ *Aceleración*\
  Rendimiento algorítmico más rápido con respecto a otro tipo en el mismo escenario.  
   
- *Escalabilidad*  
+ *Escalabilidad*\
  Aumento del rendimiento que es proporcional al número de núcleos del equipo. Un algoritmo que escala funciona más rápido con ocho núcleos que con dos núcleos.  
   
 ## <a name="concurrentqueuet-vs-queuet"></a>ConcurrentQueue(T) frente a Queue(T)  

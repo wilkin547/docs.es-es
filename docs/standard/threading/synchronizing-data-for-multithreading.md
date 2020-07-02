@@ -1,5 +1,6 @@
 ---
 title: Sincronizar datos para subprocesamiento múltiple
+description: Aprenda a sincronizar datos para multithreading en .NET. Elija estrategias tales como regiones de código sincronizado, sincronización manual o contextos sincronizados.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-ms.openlocfilehash: 7f064738472a65ce89f17efc4d7ea00ac98280d0
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 4d528c54816961caa251ce054abf2c6cf07e9d01
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291102"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769111"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Sincronizar datos para multithreading
 
@@ -71,6 +72,6 @@ Solo en aplicaciones de .NET Framework y Xamarin, puede usar <xref:System.Runtim
 
 - <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>
 - [Subprocesos y subprocesamiento](threads-and-threading.md)
-- [Información general sobre los primitivos de sincronización](overview-of-synchronization-primitives.md)
+- [Información general sobre las primitivas de sincronización](overview-of-synchronization-primitives.md)
 - [SyncLock (instrucción)](../../visual-basic/language-reference/statements/synclock-statement.md)
 - [lock (instrucción)](../../csharp/language-reference/keywords/lock-statement.md)

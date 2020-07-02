@@ -1,5 +1,6 @@
 ---
-title: 'Cómo: Controlar excepciones en bucles paralelos'
+title: Procedimiento para controlar excepciones en bucles paralelos
+description: Aprenda a controlar excepciones en bucles paralelos en .NET. Vea un ejemplo de cómo ajustar todas las excepciones del bucle en System.AggregateException.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +9,14 @@ dev_langs:
 helpviewer_keywords:
 - parallel loops, how to handle exceptions
 ms.assetid: 512f0d5a-4636-4875-b766-88f20044f143
-ms.openlocfilehash: 87405425e85ed16d10b3e8b382c6e414fff10ddf
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 61c22d6e82282f8aeb54818c813d4489e3bc9641
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84278537"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768981"
 ---
-# <a name="how-to-handle-exceptions-in-parallel-loops"></a>Cómo: Controlar excepciones en bucles paralelos
+# <a name="how-to-handle-exceptions-in-parallel-loops"></a>Procedimiento para controlar excepciones en bucles paralelos
 Las sobrecargas <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType><xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> no tienen ningún mecanismo especial para controlar las excepciones que puedan iniciarse. En este sentido, se asemejan a bucles `for` y `foreach` normales (`For` y `For Each` en Visual Basic). Una excepción no controlada hace que el bucle termine en cuanto finalicen todas las iteraciones que se estén ejecutando.
   
  Cuando agregue su propia lógica de control de excepciones a los bucles paralelos, tenga en cuenta la posibilidad de que se inicien excepciones similares en varios subprocesos al mismo tiempo y la opción de que una excepción iniciada en un subproceso puede hacer que se inicie otra excepción en otro subproceso. Puede controlar ambos casos ajustando todas las excepciones del bucle en <xref:System.AggregateException?displayProperty=nameWithType>. En el ejemplo siguiente, se muestra un posible enfoque.  
@@ -31,5 +32,5 @@ Las sobrecargas <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nam
   
 ## <a name="see-also"></a>Vea también
 
-- [Data Parallelism](data-parallelism-task-parallel-library.md) (Paralelismo de datos)
+- [Paralelismo de datos](data-parallelism-task-parallel-library.md)
 - [Expresiones lambda en PLINQ y TPL](lambda-expressions-in-plinq-and-tpl.md)
