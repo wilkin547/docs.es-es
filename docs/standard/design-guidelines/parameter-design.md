@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parameters, design guidelines
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
-ms.openlocfilehash: 46c1b8f03d054a63ea837a73fd30eeed163ab0a4
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: e0bc52f5679a7771d5690be9f903e677ce611605
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290102"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621592"
 ---
 # <a name="parameter-design"></a>Diseño de parámetros
 
@@ -40,7 +40,7 @@ En esta sección se proporcionan instrucciones generales sobre el diseño de par
 
  Esto comunica mejor la relación entre los métodos.
 
-### <a name="choose-between-enum-and-boolean-parameters"></a>Elección entre parámetros booleanos y de enumeración
+### <a name="choosing-between-enum-and-boolean-parameters"></a>Elección entre parámetros booleanos y de enumeración  
  ✔️ utilizar enumeraciones si, de lo contrario, un miembro tendría dos o más parámetros booleanos.
 
  ❌No use valores booleanos a menos que esté absolutamente seguro de que nunca habrá una necesidad de más de dos valores.
@@ -49,7 +49,7 @@ En esta sección se proporcionan instrucciones generales sobre el diseño de par
 
  ✔️ considere la posibilidad de usar valores booleanos para los parámetros de constructor que son realmente de dos Estados y que simplemente se utilizan para inicializar las propiedades booleanas.
 
-### <a name="validate-arguments"></a>Validar argumentos
+### <a name="validating-arguments"></a>Validar argumentos
  ✔️ validar los argumentos pasados a miembros públicos, protegidos o implementados explícitamente. Produce <xref:System.ArgumentException?displayProperty=nameWithType> una excepción o una de sus subclases si se produce un error en la validación.
 
  Tenga en cuenta que no es necesario que la validación real se produzca en el propio miembro público o protegido. Podría producirse en un nivel inferior en algunas rutinas internas o privadas. El punto principal es que todo el área expuesta que se expone a los usuarios finales comprueba los argumentos.
@@ -66,10 +66,10 @@ En esta sección se proporcionan instrucciones generales sobre el diseño de par
 
  Si el miembro es sensible a la seguridad, se recomienda hacer una copia y, a continuación, validar y procesar el argumento.
 
-### <a name="pass-parameters"></a>Paso de parámetros
+### <a name="parameter-passing"></a>Paso de parámetros
  Desde la perspectiva de un diseñador de .NET Framework, hay tres grupos principales de parámetros: por valor, parámetros `ref` y parámetros `out` .
 
- Cuando un argumento se pasa a través de un parámetro por valor, el miembro recibe una copia del argumento real pasado. Si el argumento es un tipo de valor, se coloca una copia del argumento en la pila. Si el argumento es un tipo de referencia, se coloca una copia de la referencia en la pila. Los lenguajes CLR más populares, como C#, Visual Basic y C++, pasan de forma predeterminada los parámetros por valor.
+ Cuando un argumento se pasa a través de un parámetro por valor, el miembro recibe una copia del argumento real pasado. Si el argumento es un tipo de valor, se coloca una copia del argumento en la pila. Si el argumento es un tipo de referencia, se coloca una copia de la referencia en la pila. Los lenguajes CLR más populares, como C#, VB.NET y C++, pasan de forma predeterminada los parámetros por valor.
 
  Cuando se pasa un argumento a través de un `ref` parámetro, el miembro recibe una referencia al argumento real pasado. Si el argumento es un tipo de valor, se coloca una referencia al argumento en la pila. Si el argumento es un tipo de referencia, se coloca en la pila una referencia a la referencia. `Ref`los parámetros se pueden usar para permitir que el miembro modifique los argumentos pasados por el autor de la llamada.
 
@@ -151,11 +151,11 @@ public class String {
 
  Por ejemplo, no es necesario pasar el índice de inicio, ya que se puede usar una aritmética de puntero simple para lograr el mismo resultado.
 
- *Partes © 2005, 2009 Microsoft Corporation. Todos los derechos reservados.*
+ *Partes &copy; 2005, 2009 Microsoft Corporation. Todos los derechos reservados.*
 
  *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Instrucciones para el diseño de miembros](member.md)
 - [Directrices de diseño de marco](index.md)

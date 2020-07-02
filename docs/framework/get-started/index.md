@@ -1,17 +1,18 @@
 ---
 title: Introducción a .NET Framework
+description: Empiece a usar .NET, un entorno de ejecución runtime que administra aplicaciones. Contiene Common Language Runtime (CLR) y una extensa biblioteca de clases.
 ms.custom: updateeachrelease
 ms.date: 04/02/2019
 helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
-ms.openlocfilehash: 8708fbd21967c5acb548e0e77ba5d9e060336c50
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: b6ad74d2984443a3b8345c2261996e7ab30acdff
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345044"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621657"
 ---
 # <a name="get-started-with-net-framework"></a>Introducción a .NET Framework
 

@@ -1,5 +1,6 @@
 ---
 title: 'Cómo: conectar varios eventos a un solo controlador de eventos'
+description: Obtenga información sobre cómo conectar varios eventos a un solo controlador de eventos en Windows Forms mediante la vista eventos del ventana Propiedades en C#.
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,15 +11,15 @@ helpviewer_keywords:
 - Windows Forms controls, events
 - menu items [Windows Forms], multicasting event-handling methods
 ms.assetid: 5a20749a-41b5-4acc-8eb1-9e5040b0a2c4
-ms.openlocfilehash: 0591291522ab1da04fef90bf1c0a73cf33ba0518
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: cca85c223b46d9a82dbc3e34e3377fb83c075959
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739610"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621891"
 ---
-# <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>Cómo: Conectar varios eventos con un único controlador de eventos en Windows Forms
-En el diseño de la aplicación, es posible que sea necesario usar un solo controlador de eventos para varios eventos o que varios eventos realicen el mismo procedimiento. Por ejemplo, a menudo es un eficaz ahorro de tiempo para que un comando de menú genere el mismo evento que un botón en el formulario, si expone la misma funcionalidad. Para ello, puede usar la vista eventos del ventana Propiedades en C# o utilizar la palabra clave `Handles` y los cuadros de lista desplegable nombre de **clase** y nombre de **método** en el editor de código Visual Basic.  
+# <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>Procedimiento para conectar varios eventos con un único controlador de eventos en formularios Windows Forms
+En el diseño de la aplicación, es posible que sea necesario usar un solo controlador de eventos para varios eventos o que varios eventos realicen el mismo procedimiento. Por ejemplo, a menudo es un eficaz ahorro de tiempo para que un comando de menú genere el mismo evento que un botón en el formulario, si expone la misma funcionalidad. Para ello, puede usar la vista eventos del ventana Propiedades en C# o la `Handles` palabra clave y los cuadros de lista desplegable **nombre de clase** y **nombre de método** en el editor de código de Visual Basic.  
   
 ### <a name="to-connect-multiple-events-to-a-single-event-handler-in-visual-basic"></a>Para conectar varios eventos a un solo controlador de eventos en Visual Basic  
   
@@ -28,7 +29,7 @@ En el diseño de la aplicación, es posible que sea necesario usar un solo contr
   
 3. En el cuadro de lista desplegable **nombre de método** , seleccione uno de los eventos que desea que controle el controlador de eventos.  
   
-4. El editor de código inserta el controlador de eventos adecuado y coloca el punto de inserción en el método. En el ejemplo siguiente, es el evento <xref:System.Windows.Forms.Control.Click> para el control <xref:System.Windows.Forms.Button>.  
+4. El editor de código inserta el controlador de eventos adecuado y coloca el punto de inserción en el método. En el ejemplo siguiente, es el <xref:System.Windows.Forms.Control.Click> evento del <xref:System.Windows.Forms.Button> control.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -36,7 +37,7 @@ En el diseño de la aplicación, es posible que sea necesario usar un solo contr
     End Sub  
     ```  
   
-5. Anexe los otros eventos que desea que se controlen a la cláusula `Handles`.  
+5. Anexe los otros eventos que desea que se controlen a la `Handles` cláusula.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click, Button2.Click  
@@ -60,7 +61,7 @@ En el diseño de la aplicación, es posible que sea necesario usar un solo contr
   
      Se agregará código al formulario para enlazar el evento al controlador de eventos existente.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Crear controladores de eventos en Windows Forms](creating-event-handlers-in-windows-forms.md)
 - [Información general sobre controladores de eventos](event-handlers-overview-windows-forms.md)

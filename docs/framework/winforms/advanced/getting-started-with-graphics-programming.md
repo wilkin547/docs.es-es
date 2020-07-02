@@ -1,5 +1,6 @@
 ---
 title: Introducción a la programación de gráficos
+description: Comience a usar GDI+ en una aplicación Windows Forms. Obtenga información acerca de cómo completar varias tareas GDI+, como dibujar y rellenar formas y texto.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [Windows Forms], getting started
@@ -7,54 +8,54 @@ helpviewer_keywords:
 - examples [Windows Forms], graphics
 - drawing
 ms.assetid: eb0f6d6f-9e52-4167-9592-ff4b82fb5869
-ms.openlocfilehash: b2a330324085f1a73418cd535f83f2b73e9721c0
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: a61c56b7db40203bbb5102c7f1703c9ab6578c18
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67503945"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622697"
 ---
 # <a name="getting-started-with-graphics-programming"></a>Introducción a la programación de gráficos
-En esta sección se muestra cómo empezar a trabajar con GDI + en una aplicación de Windows Forms. Los temas siguientes muestran cómo completar varias tareas GDI + como dibujar y rellenar formas y texto.  
+En esta sección se muestra cómo empezar a usar GDI+ en una aplicación Windows Forms. En los temas siguientes se muestra cómo completar varias tareas GDI+, como dibujar y rellenar formas y texto.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Cómo: Crear objetos Graphics para dibujar](how-to-create-graphics-objects-for-drawing.md)  
- Muestra cómo crear un <xref:System.Drawing.Graphics> objeto para el dibujo.  
+ [Procedimiento para crear objetos gráficos para dibujar](how-to-create-graphics-objects-for-drawing.md)  
+ Muestra cómo crear un <xref:System.Drawing.Graphics> objeto para dibujar.  
   
- [Cómo: Crear un lápiz](how-to-create-a-pen.md)  
- Se muestra cómo crear un lápiz.  
+ [Procedimiento para crear un lápiz](how-to-create-a-pen.md)  
+ Muestra cómo crear un lápiz.  
   
- [Cómo: Establecer el Color de un lápiz](how-to-set-the-color-of-a-pen.md)  
+ [Procedimiento para establecer el color de un lápiz](how-to-set-the-color-of-a-pen.md)  
  Muestra cómo establecer el color de un lápiz.  
   
- [Cómo: Crear un pincel sólido](how-to-create-a-solid-brush.md)  
+ [Procedimiento para crear un pincel sólido](how-to-create-a-solid-brush.md)  
  Describe cómo crear un pincel sólido.  
   
- [Cómo: Dibujar una línea en un formulario de Windows](how-to-draw-a-line-on-a-windows-form.md)  
+ [Procedimiento para dibujar una línea en un formulario Windows Forms](how-to-draw-a-line-on-a-windows-form.md)  
  Muestra cómo dibujar una línea.  
   
- [Cómo: Dibujar una forma con contorno](how-to-draw-an-outlined-shape.md)  
+ [Procedimiento para dibujar una forma con contorno](how-to-draw-an-outlined-shape.md)  
  Describe cómo dibujar una forma.  
   
- [Cómo: Dibujar un rectángulo relleno en un formulario de Windows](how-to-draw-a-filled-rectangle-on-a-windows-form.md)  
+ [Procedimiento para dibujar un rectángulo con relleno en un formulario Windows Forms](how-to-draw-a-filled-rectangle-on-a-windows-form.md)  
  Explica cómo dibujar un rectángulo.  
   
- [Cómo: Dibujar una elipse con relleno en un formulario de Windows](how-to-draw-a-filled-ellipse-on-a-windows-form.md)  
- Se muestra cómo dibujar una elipse rellena.  
+ [Procedimiento para dibujar una elipse con relleno en un formulario Windows Forms](how-to-draw-a-filled-ellipse-on-a-windows-form.md)  
+ Muestra cómo dibujar una elipse rellena.  
   
- [Cómo: Dibujar texto en un formulario de Windows](how-to-draw-text-on-a-windows-form.md)  
+ [Procedimiento para dibujar texto en un formulario Windows Forms](how-to-draw-text-on-a-windows-form.md)  
  Describe cómo dibujar texto.  
   
- [Cómo: Dibujar texto Vertical en un formulario de Windows](how-to-draw-vertical-text-on-a-windows-form.md)  
+ [Procedimiento para dibujar texto vertical en un formulario Windows Forms](how-to-draw-vertical-text-on-a-windows-form.md)  
  Muestra cómo dibujar texto vertical.  
   
- [Cómo: Representar imágenes con GDI +](how-to-render-images-with-gdi.md)  
+ [Procedimiento para representar imágenes con GDI+](how-to-render-images-with-gdi.md)  
  Muestra cómo dibujar imágenes.  
   
- [Cómo: Crear un formulario de Windows con forma](how-to-create-a-shaped-windows-form.md)  
+ [Procedimiento para crear un formulario Windows Forms con forma](how-to-create-a-shaped-windows-form.md)  
  Explica cómo cambiar la forma de un formulario.  
   
- [Cómo: Copiar píxeles para reducir el parpadeo en formularios de Windows](how-to-copy-pixels-for-reducing-flicker-in-windows-forms.md)  
+ [Procedimiento para copiar píxeles para reducir el parpadeo en formularios Windows Forms](how-to-copy-pixels-for-reducing-flicker-in-windows-forms.md)  
  Explica cómo copiar píxeles de un área a otra.  
   
 ## <a name="reference"></a>Referencia  

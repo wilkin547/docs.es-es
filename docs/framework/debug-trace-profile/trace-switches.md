@@ -1,5 +1,6 @@
 ---
 title: Modificadores de seguimiento
+description: Explore los modificadores de seguimiento, que permiten habilitar, deshabilitar y filtrar los resultados de la traza. .NET proporciona las clases BooleanSwitch, TraceSwitch y SourceSwitch.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - trace switches
 - trace switches, creating custom
 ms.assetid: 8ab913aa-f400-4406-9436-f45bc6e54fbe
-ms.openlocfilehash: a8ce4ee5de4d330b88e98e85cce4b6547e969613
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 29de46afa2a96dd7011cec40f4f76e7bfb8ee454
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181732"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803541"
 ---
 # <a name="trace-switches"></a>Modificadores de seguimiento
 Los modificadores de seguimiento permiten habilitar, deshabilitar y filtrar la salida del seguimiento. Son objetos que existen en el código y que se pueden configurar externamente mediante el archivo config. Hay tres tipos de modificadores de seguimiento en .NET Framework: la clase <xref:System.Diagnostics.BooleanSwitch> , la clase <xref:System.Diagnostics.TraceSwitch> y la clase <xref:System.Diagnostics.SourceSwitch> . La clase <xref:System.Diagnostics.BooleanSwitch> actúa como modificador para alternar que habilita o deshabilita una serie de instrucciones de seguimiento. Las clases <xref:System.Diagnostics.TraceSwitch> y <xref:System.Diagnostics.SourceSwitch> permiten habilitar un modificador de seguimiento para un nivel de seguimiento determinado para que aparezcan los mensajes de <xref:System.Diagnostics.Trace> o <xref:System.Diagnostics.TraceSource> especificados para ese nivel y todos sus niveles inferiores. Si deshabilita el modificador, los mensajes de seguimiento no aparecerán. Todas estas clases derivan de la clase abstracta (**MustInherit**) **Switch**, igual que deberían todos los modificadores desarrollados por el usuario.  
@@ -47,7 +48,7 @@ Los modificadores de seguimiento permiten habilitar, deshabilitar y filtrar la s
   
 |Valor enumerado|Valor entero|Tipo de mensaje que se muestra (o se escribe en un destino de salida especificado)|  
 |----------------------|-------------------|---------------------------------------------------------------------------|  
-|Off|0|None|  
+|Desactivado|0|None|  
 |Error|1|Solo mensajes de error|  
 |Advertencia|2|Mensajes de advertencia y mensajes de error|  
 |Información|3|Mensajes informativos, mensajes de advertencia y mensajes de error|  
@@ -81,8 +82,8 @@ MessageBox.Show(myTraceSwitch.TraceVerbose.ToString());
 ## <a name="developer-defined-switches"></a>Modificadores definidos por el desarrollador  
  Además de proporcionar **BooleanSwitch** y **TraceSwitch**, puede definir sus propios modificadores heredando de la clase **Switch** y reemplazando los métodos de la clase base por métodos personalizados. Para más información sobre cómo crear modificadores definidos por el desarrollador, consulte la clase <xref:System.Diagnostics.Switch> en la referencia de .NET Framework.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Agentes de escucha de seguimiento](trace-listeners.md)
-- [Cómo: Agregar instrucciones de seguimiento al código de una aplicación](how-to-add-trace-statements-to-application-code.md)
+- [Procedimiento para agregar instrucciones de seguimiento al código de una aplicación](how-to-add-trace-statements-to-application-code.md)
 - [Seguimiento e instrumentación de aplicaciones](tracing-and-instrumenting-applications.md)

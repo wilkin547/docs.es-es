@@ -1,5 +1,6 @@
 ---
 title: Agentes de escucha de seguimiento
+description: Explore los agentes de escucha de seguimiento, que son un mecanismo para recopilar y registrar los mensajes de seguimiento enviados en .NET. Un agente de escucha recopila, almacena y enruta los mensajes.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,15 +15,15 @@ helpviewer_keywords:
 - tracing [.NET Framework], trace listeners
 - logs, trace listeners
 ms.assetid: 444b0d33-67ea-4c36-9e94-79c50f839025
-ms.openlocfilehash: a51c046a296fbb62d21c7784cf7c1e78b700f3e9
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: d08f86c782284a296090cf63e4b03c8d446a95fc
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216143"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803528"
 ---
 # <a name="trace-listeners"></a>Agentes de escucha de seguimiento
-Al usar **Trace**, **Debug** y <xref:System.Diagnostics.TraceSource>, debe disponer de un mecanismo para recopilar y grabar los mensajes que se envíen. Los *agentes de escucha* reciben los mensajes de seguimiento. El propósito de un agente de escucha es recopilar, almacenar y transferir mensajes de seguimiento. Los agentes de escucha dirigen el resultado del seguimiento a un destino adecuado, como un registro, una ventana o un archivo de texto.  
+Al usar **Trace**, **Debug** y <xref:System.Diagnostics.TraceSource>, debe disponer de un mecanismo para recopilar y grabar los mensajes que se envíen. Los *agentes de escucha*reciben los mensajes de seguimiento. Un agente de escucha se encarga de recopilar, almacenar y enrutar los mensajes de seguimiento. Los agentes de escucha dirigen los resultados del seguimiento a un destino apropiado, como un registro, una ventana o un archivo de texto.  
   
  Los agentes de escucha están disponibles para las clases **Debug**, **Trace** y <xref:System.Diagnostics.TraceSource>, cada una de las cuales puede enviar sus resultados a una variedad de objetos de escucha. A continuación se indican los agentes de escucha predefinidos más usados:  
   
@@ -34,7 +35,7 @@ Al usar **Trace**, **Debug** y <xref:System.Diagnostics.TraceSource>, debe dispo
   
 - Un <xref:System.Diagnostics.ConsoleTraceListener> dirige los resultados del seguimiento o de la depuración a los resultados estándar o al flujo de error estándar.  
   
-- Un <xref:System.Diagnostics.DelimitedListTraceListener> dirige los resultados del seguimiento o de la depuración a un escritor de texto, como un escritor de secuencias, o a una secuencia, como una secuencia de archivo. La salida del seguimiento se encuentra en un formato de texto delimitado que usa el delimitador especificado por la propiedad <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A>.  
+- Un <xref:System.Diagnostics.DelimitedListTraceListener> dirige los resultados del seguimiento o de la depuración a un escritor de texto, como un escritor de secuencias, o a una secuencia, como una secuencia de archivo. La salida del seguimiento se encuentra en un formato de texto delimitado que usa el delimitador especificado por la <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> propiedad.  
   
 - Un <xref:System.Diagnostics.XmlWriterTraceListener> dirige los resultados del seguimiento o de la depuración como datos codificados en XML a un <xref:System.IO.TextWriter> o a un <xref:System.IO.Stream>, como un <xref:System.IO.FileStream>.  
   
@@ -74,11 +75,11 @@ System.Diagnostics.Trace.Listeners.Add(
 ## <a name="developer-defined-listeners"></a>Agentes de escucha definidos por el desarrollador  
  Puede definir sus propios agentes de escucha heredándolos de la clase base **TraceListener** y reemplazando los métodos de esa clase por métodos personalizados. Para obtener más información sobre cómo crear agentes de escucha definidos por el desarrollador, consulte <xref:System.Diagnostics.TraceListener> en la documentación de .NET Framework.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TraceListener>
-- [Traza e instrumentación de aplicaciones](tracing-and-instrumenting-applications.md)
+- [Seguimiento e instrumentación de aplicaciones](tracing-and-instrumenting-applications.md)
 - [Modificadores de seguimiento](trace-switches.md)

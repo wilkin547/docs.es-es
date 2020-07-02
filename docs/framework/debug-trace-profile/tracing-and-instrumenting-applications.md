@@ -1,5 +1,6 @@
 ---
 title: Seguimiento e instrumentación de aplicaciones
+description: Seguimiento e instrumentación de aplicaciones en .NET. El seguimiento permite supervisar la ejecución de la aplicación mientras se ejecuta. La instrumentación le permite medir el nivel de rendimiento.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - performance monitoring, tracing code
 - Trace class, instrumentation for .NET applications
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
-ms.openlocfilehash: 2dcdbaf50ed053d43fc2df2c80fe7688e7b3e51f
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: d5484129ac17ee20aafe305bea5599f85903dfa2
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77542616"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803552"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Seguimiento e instrumentación de aplicaciones
 El seguimiento es una manera de supervisar la ejecución de la aplicación mientras se está ejecutando. Puede agregar instrumentación de seguimiento y de depuración a la aplicación de .NET Framework cuando la desarrolle, y puede usar dicha instrumentación mientras desarrolla la aplicación y después de implementarla. Puede usar las clases <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> y <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> para registrar información sobre errores y ejecución de la aplicación en registros, archivos de texto u otros dispositivos para su análisis posterior.  
@@ -91,13 +92,13 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
     - Use el menú **Compilación** junto con la página **Depurar** del cuadro de diálogo **Páginas de propiedades** del **Explorador de soluciones**. Use este procedimiento si compila en Visual Studio.  
   
-         \- O bien  
+         \- o -  
   
     - Use las directivas de compilador **Trace** y **Debug** para el método de línea de comandos de compilación. Para más información, vea [Compilación condicional con Trace y Debug](how-to-compile-conditionally-with-trace-and-debug.md). Use este procedimiento si compila desde la línea de comandos.  
   
 7. Si se produce un problema durante el tiempo de ejecución, active el modificador de seguimiento adecuado. Para más información, vea [Configuración de modificadores de seguimiento](how-to-create-initialize-and-configure-trace-switches.md).  
   
-     El código de seguimiento escribe mensajes de seguimiento en un destino especificado, por ejemplo, una pantalla, un archivo de texto o un registro de eventos. El tipo de agente de escucha incluido en la colección de <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> determina el destino.  
+     El código de seguimiento escribe mensajes de seguimiento en un destino especificado, por ejemplo, una pantalla, un archivo de texto o un registro de eventos. El tipo de agente de escucha incluido en la <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> colección determina el destino.  
   
 8. Analice los mensajes de seguimiento para identificar y comprender los problemas de la aplicación.  
   
@@ -114,38 +115,38 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 ## <a name="output-from-tracing"></a>Salida del seguimiento  
  La salida del seguimiento se recopila mediante objetos denominados *agentes de escucha*. Un agente de escucha es un objeto que recibe la salida de seguimiento y la escribe en un dispositivo de salida (normalmente un archivo de texto, registro o ventana). Cuando se crea un agente de escucha, normalmente se agrega a la colección <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType>, lo que le permite recibir toda la salida del seguimiento.  
   
- La información de seguimiento siempre se escribe al menos en el destino de salida predeterminado de <xref:System.Diagnostics.Trace>, que es <xref:System.Diagnostics.DefaultTraceListener>. Si por algún motivo se ha eliminado <xref:System.Diagnostics.DefaultTraceListener> sin agregar otros agentes de escucha a la colección <xref:System.Diagnostics.Trace.Listeners%2A>, no recibirá ningún mensaje de seguimiento. Para más información, vea [Agentes de escucha de seguimiento](trace-listeners.md).  
+ La información de seguimiento siempre se escribe al menos en el destino de salida predeterminado de <xref:System.Diagnostics.Trace>, que es <xref:System.Diagnostics.DefaultTraceListener>. Si por algún motivo se ha eliminado <xref:System.Diagnostics.DefaultTraceListener> sin agregar otros agentes de escucha a la colección <xref:System.Diagnostics.Trace.Listeners%2A>, no recibirá ningún mensaje de seguimiento. Para obtener más información, vea [agentes de escucha de seguimiento](trace-listeners.md).  
   
  En la tabla siguiente se enumeran los seis miembros <xref:System.Diagnostics.Debug> y los métodos <xref:System.Diagnostics.Trace> que escriben información de seguimiento.  
   
 |Método|Output|  
 |------------|------------|  
-|`Assert`|Es el texto especificado o, si no se especifica ninguno, la pila de llamadas. La salida solo se escribe si la condición especificada como argumento en la instrucción `Assert` es **false**.|  
+|`Assert`|Es el texto especificado o, si no se especifica ninguno, la pila de llamadas. La salida solo se escribe si la condición especificada como argumento en la `Assert` instrucción es **falsa**.|  
 |`Fail`|Es el texto especificado o, si no se especifica ninguno, la pila de llamadas.|  
 |`Write`|Es el texto especificado.|  
-|`WriteIf`|El texto especificado si se cumple la condición especificada como argumento en la instrucción `WriteIf`.|  
+|`WriteIf`|El texto especificado si se cumple la condición especificada como argumento en la `WriteIf` instrucción.|  
 |`WriteLine`|Es el texto especificado y un retorno de carro.|  
-|`WriteLineIf`|El texto especificado y un retorno de carro si se satisface la condición especificada como argumento en la instrucción `WriteLineIf`.|  
+|`WriteLineIf`|El texto especificado y un retorno de carro si se satisface la condición especificada como argumento en la `WriteLineIf` instrucción.|  
   
- Todos los agentes de escucha de la colección <xref:System.Diagnostics.Trace.Listeners%2A> reciben los mensajes descritos en la tabla anterior, pero las acciones emprendidas pueden variar según el tipo de agente de escucha que recibe el mensaje. Por ejemplo, el <xref:System.Diagnostics.DefaultTraceListener> muestra un cuadro de diálogo de aserción cuando recibe una notificación de `Assert` `Fail` o con errores, pero un <xref:System.Diagnostics.TextWriterTraceListener> simplemente escribe el resultado en su secuencia.  
+ Todos los agentes de escucha de la colección <xref:System.Diagnostics.Trace.Listeners%2A> reciben los mensajes descritos en la tabla anterior, pero las acciones emprendidas pueden variar según el tipo de agente de escucha que recibe el mensaje. Por ejemplo, <xref:System.Diagnostics.DefaultTraceListener> muestra un cuadro de diálogo de aserción cuando recibe una `Fail` `Assert` notificación o con errores, pero <xref:System.Diagnostics.TextWriterTraceListener> simplemente escribe el resultado en su secuencia.  
   
  Si implementa su propio agente de escucha podrá obtener resultados personalizados. Un agente de escucha de seguimiento personalizado puede, por ejemplo, mostrar los mensajes en un cuadro de mensaje o conectarse a una base de datos para agregar mensajes a una tabla. Todos los agentes de escucha personalizados deben admitir los seis métodos mencionados anteriormente. Para obtener más información sobre cómo crear agentes de escucha definidos por el desarrollador, consulte <xref:System.Diagnostics.TraceListener> en la documentación de .NET Framework.  
   
- Los métodos `Write` y `WriteLine` siempre escriben el texto que especifique. `Assert`, `WriteIf`y `WriteLineIf` requieren un argumento booleano que controla si escriben o no el texto especificado. solo escriben el texto especificado si la expresión es **true** (para `WriteIf` y `WriteLineIf`) o **false** (para `Assert`). El método `Fail` siempre escribe el texto especificado. Para más información, vea [Cómo: Agregar instrucciones de seguimiento al código de la aplicación](how-to-add-trace-statements-to-application-code.md) y la referencia de .NET Framework.  
+ Los `Write` `WriteLine` métodos y siempre escriben el texto que especifique. `Assert`, `WriteIf` y `WriteLineIf` requieren un argumento booleano que controla si escriben o no el texto especificado; solo escriben el texto especificado si la expresión es **true** (para `WriteIf` y `WriteLineIf` ) o **false** (para `Assert` ). El `Fail` método siempre escribe el texto especificado. Para más información, vea [Cómo: Agregar instrucciones de seguimiento al código de la aplicación](how-to-add-trace-statements-to-application-code.md) y la referencia de .NET Framework.  
   
 ## <a name="security-concerns"></a>Cuestiones de seguridad  
  Si no deshabilita el seguimiento y la depuración antes de implementar una aplicación ASP.NET, la aplicación puede revelar información sobre sí misma que podría ser aprovechada por un programa malintencionado. Para más información, vea [Cómo: Realizar compilación condicional con Trace y Debug](how-to-compile-conditionally-with-trace-and-debug.md), [Compilar y generar](/visualstudio/ide/compiling-and-building-in-visual-studio) y [Cómo: Crear, inicializar y configurar modificadores de seguimiento](how-to-create-initialize-and-configure-trace-switches.md). La depuración también es configurable a través de Internet Information Services (IIS).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.TraceSource>
 - [Contratos de código](code-contracts.md)
 - [Tipos de proyectos de C#, F# y Visual Basic](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)
-- [Adición de instrucciones de seguimiento al código de la aplicación](how-to-add-trace-statements-to-application-code.md)
-- [Compilación condicional con Trace y Debug](how-to-compile-conditionally-with-trace-and-debug.md)
-- [Creación, inicialización y configuración de modificadores de seguimiento](how-to-create-initialize-and-configure-trace-switches.md)
-- [Creación e inicialización de orígenes de seguimiento](how-to-create-and-initialize-trace-sources.md)
-- [Uso de TraceSource y filtros con agentes de escucha de seguimiento](how-to-use-tracesource-and-filters-with-trace-listeners.md)
+- [Procedimiento para agregar instrucciones de seguimiento al código de una aplicación](how-to-add-trace-statements-to-application-code.md)
+- [Cómo: Compilación condicional con Trace y Debug](how-to-compile-conditionally-with-trace-and-debug.md)
+- [Procedimiento para crear, inicializar y configurar modificadores de seguimiento](how-to-create-initialize-and-configure-trace-switches.md)
+- [Procedimiento para crear e inicializar orígenes de seguimiento](how-to-create-and-initialize-trace-sources.md)
+- [Procedimiento para usar TraceSource y filtros con agentes de escucha de seguimiento](how-to-use-tracesource-and-filters-with-trace-listeners.md)
 - [Agentes de escucha de seguimiento](trace-listeners.md)
 - [Modificadores de seguimiento](trace-switches.md)
