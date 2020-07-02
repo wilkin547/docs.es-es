@@ -1,5 +1,6 @@
 ---
 title: Agregar y quitar pestañas con TabControl
+description: Obtenga información sobre cómo agregar y quitar pestañas con el control TabControl Windows Forms, que contiene dos controles TabPage. Obtenga acceso a estas pestañas a través de la propiedad TabPages.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,19 +13,19 @@ helpviewer_keywords:
 - tabs [Windows Forms], adding to pages
 - tab pages
 ms.assetid: 66d4dfca-41e8-44e3-9c80-fb7ac4cb1619
-ms.openlocfilehash: 8292d8441f9b47334b98736cf3282c846673dbb4
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 7e67d0bbc13bd7d9c8835dc6fb9b9c5c9333b8bf
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76732718"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618082"
 ---
-# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a>Cómo: Agregar y quitar fichas con el control TabControl de formularios Windows Forms
-De forma predeterminada, un control <xref:System.Windows.Forms.TabControl> contiene dos controles <xref:System.Windows.Forms.TabPage>. Puede tener acceso a estas pestañas a través de la propiedad <xref:System.Windows.Forms.TabControl.TabPages%2A>.  
+# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a>Procedimiento para agregar y quitar fichas con el control TabControl de formularios Windows Forms
+De forma predeterminada, un <xref:System.Windows.Forms.TabControl> control contiene dos <xref:System.Windows.Forms.TabPage> controles. Puede tener acceso a estas pestañas a través de la <xref:System.Windows.Forms.TabControl.TabPages%2A> propiedad.  
   
 ### <a name="to-add-a-tab-programmatically"></a>Para agregar una pestaña mediante programación  
   
-- Use el método <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> de la propiedad <xref:System.Windows.Forms.TabControl.TabPages%2A>.  
+- Use el <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> método de la <xref:System.Windows.Forms.TabControl.TabPages%2A> propiedad.  
   
     ```vb  
     Dim myTabPage As New TabPage()  
@@ -47,11 +48,11 @@ De forma predeterminada, un control <xref:System.Windows.Forms.TabControl> conti
   
 ### <a name="to-remove-a-tab-programmatically"></a>Para quitar una pestaña mediante programación  
   
-- Para quitar las pestañas seleccionadas, use el método <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> de la propiedad <xref:System.Windows.Forms.TabControl.TabPages%2A>.  
+- Para quitar las pestañas seleccionadas, use el <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> método de la <xref:System.Windows.Forms.TabControl.TabPages%2A> propiedad.  
   
-     O bien  
+     o bien  
   
-- Para quitar todas las pestañas, utilice el método <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> de la propiedad <xref:System.Windows.Forms.TabControl.TabPages%2A>.  
+- Para quitar todas las pestañas, utilice el <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> método de la <xref:System.Windows.Forms.TabControl.TabPages%2A> propiedad.  
   
     ```vb  
     ' Removes the selected tab:  
@@ -74,9 +75,9 @@ De forma predeterminada, un control <xref:System.Windows.Forms.TabControl> conti
     tabControl1->TabPages->Clear();  
     ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Información general del control TabControl](tabcontrol-control-overview-windows-forms.md)
-- [Agregar un control a una página de fichas](how-to-add-a-control-to-a-tab-page.md)
-- [Deshabilitar páginas de ficha](how-to-disable-tab-pages.md)
-- [Cambiar la apariencia del control TabControl de Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [Información general sobre el control TabControl](tabcontrol-control-overview-windows-forms.md)
+- [Procedimiento para agregar un control a una ficha](how-to-add-a-control-to-a-tab-page.md)
+- [Procedimiento para deshabilitar fichas](how-to-disable-tab-pages.md)
+- [Procedimiento para cambiar el aspecto apariencia del control TabControl de formularios Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

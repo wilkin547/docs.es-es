@@ -1,5 +1,6 @@
 ---
 title: 'Cómo: Crear y enlazar a una colección ObservableCollection'
+description: Obtenga información sobre cómo crear y enlazar a una colección que deriva de la clase ObservableCollection en Windows Presentation Foundation.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +9,15 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: 596f6ae71e83c5aa3b2b80764f68a8abf08cdb7b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 36e3d2d84aff0ab96c9b2914da28d4c968c32bac
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453519"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617874"
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a>Cómo: Crear y enlazar a una colección ObservableCollection
-En este ejemplo se muestra cómo crear y enlazar a una colección que se deriva de la clase <xref:System.Collections.ObjectModel.ObservableCollection%601>, que es una clase de colección que proporciona notificaciones cuando se agregan o quitan elementos.  
+En este ejemplo se muestra cómo crear y enlazar a una colección que se deriva de la <xref:System.Collections.ObjectModel.ObservableCollection%601> clase, que es una clase de colección que proporciona notificaciones cuando se agregan o quitan elementos.  
   
 ## <a name="example"></a>Ejemplo  
  En el siguiente ejemplo se muestra la implementación de una colección `NameList`:  
@@ -136,7 +137,7 @@ End Class
  La definición de `NameItemTemplate` no se muestra aquí.  
   
 > [!NOTE]
-> Los objetos de la colección deben cumplir los requisitos descritos en la [Información general sobre orígenes de enlaces](binding-sources-overview.md). En concreto, si usa <xref:System.Windows.Data.BindingMode.OneWay> o <xref:System.Windows.Data.BindingMode.TwoWay> (por ejemplo, desea que el [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] se actualice cuando las propiedades de origen cambian dinámicamente), debe implementar un mecanismo de notificación de cambio de propiedad adecuado, como la interfaz de <xref:System.ComponentModel.INotifyPropertyChanged>.  
+> Los objetos de la colección deben cumplir los requisitos descritos en la [Información general sobre orígenes de enlaces](binding-sources-overview.md). En concreto, si usa <xref:System.Windows.Data.BindingMode.OneWay> o <xref:System.Windows.Data.BindingMode.TwoWay> (por ejemplo, desea [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] que actualice cuando las propiedades de origen cambian dinámicamente), debe implementar un mecanismo de notificación de cambio de propiedad adecuado, como la <xref:System.ComponentModel.INotifyPropertyChanged> interfaz.  
   
  Para más información, consulte la sección Enlace a colecciones en [Información general sobre el enlace de datos](../../../desktop-wpf/data/data-binding-overview.md).  
   

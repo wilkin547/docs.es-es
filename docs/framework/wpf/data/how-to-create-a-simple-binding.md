@@ -1,29 +1,30 @@
 ---
 title: 'Cómo: Crear un enlace sencillo'
+description: Cree un enlace simple para las aplicaciones mediante este ejemplo de procedimientos en Windows Presentation Foundation (WPF).
 ms.date: 03/30/2017
 helpviewer_keywords:
 - simple binding [WPF], creating
 - data binding [WPF], creating simple bindings
 - binding data [WPF], creating
 ms.assetid: 69b80f72-6259-44cb-8294-5bdcebca1e08
-ms.openlocfilehash: faef59ed426059eb2d488d0584d3325c8d46d415
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 63dc44b442bb4658382bf12faf57b51c8e0698bb
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453502"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618706"
 ---
 # <a name="how-to-create-a-simple-binding"></a>Cómo: Crear un enlace sencillo
-En este ejemplo se muestra cómo crear un <xref:System.Windows.Data.Binding>simple.  
+En este ejemplo se muestra cómo crear un sencillo <xref:System.Windows.Data.Binding> .  
   
 ## <a name="example"></a>Ejemplo  
- En este ejemplo, tiene un objeto de `Person` con una propiedad de cadena denominada `PersonName`. El objeto de `Person` se define en el espacio de nombres denominado `SDKSample`.  
+ En este ejemplo, tiene un `Person` objeto con una propiedad de cadena denominada `PersonName` . El `Person` objeto se define en el espacio de nombres denominado `SDKSample` .  
   
- La línea resaltada que contiene el elemento `<src>` en el ejemplo siguiente crea una instancia del objeto `Person` con un valor de propiedad `PersonName` de `Joe`. Esto se hace en la sección `Resources` y se le asigna un `x:Key`.  
+ La línea resaltada que contiene el `<src>` elemento en el ejemplo siguiente crea una instancia del `Person` objeto con un `PersonName` valor de propiedad de `Joe` . Esto se hace en la `Resources` sección y se le asigna un `x:Key` .  
   
  [!code-xaml[SimpleBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml?highlight=9,37)]  
   
- La línea resaltada que contiene el elemento `<TextBlock>` enlaza el control de <xref:System.Windows.Controls.TextBlock> a la propiedad `PersonName`. Como resultado, el <xref:System.Windows.Controls.TextBlock> aparece con el valor "Joe".  
+ La línea resaltada que contiene el `<TextBlock>` elemento enlaza el <xref:System.Windows.Controls.TextBlock> control a la `PersonName` propiedad. Como resultado, <xref:System.Windows.Controls.TextBlock> aparece con el valor "Joe".  
   
 ## <a name="see-also"></a>Vea también
 

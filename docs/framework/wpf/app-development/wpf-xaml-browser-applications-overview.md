@@ -1,5 +1,6 @@
 ---
 title: Información general sobre las aplicaciones de explorador XAML
+description: Obtenga información sobre cómo las aplicaciones de explorador XAML combinan las características de las aplicaciones web y las aplicaciones cliente enriquecidas en el Windows Presentation Foundation (WPF).
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: 825b689dea145d18035344cd902ea1b8a50e82c3
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 3395445dd5639e25f62aeef09d070e326704ed40
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124213"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617917"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Información general sobre las aplicaciones de explorador XAML de WPF
 <a name="introduction"></a>Las aplicaciones de explorador XAML (XBAP) combinan características de las aplicaciones web y las aplicaciones cliente enriquecidas. Al igual que las aplicaciones web, las aplicaciones XBAP se pueden implementar en un servidor web e iniciar desde Internet Explorer o Firefox. Al igual que las aplicaciones cliente enriquecidas, las XBAP pueden aprovechar las capacidades de WPF. El desarrollo de aplicaciones XBAP también se parece al desarrollo de clientes enriquecidos. En este tema se proporciona una sencilla introducción de alto nivel al desarrollo de aplicaciones XBAP y se describe en qué se diferencia este del desarrollo estándar de clientes enriquecidos.
@@ -91,19 +92,19 @@ ms.locfileid: "77124213"
 
 <a name="communicating_with_the_host_web_page"></a>
 ## <a name="communicating-with-the-host-web-page"></a>Comunicación con la página web host
- Cuando la aplicación se hospeda en un marco HTML, se puede comunicar con la página web que contiene la aplicación XBAP. Para ello, se recupera la propiedad <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> de <xref:System.Windows.Interop.BrowserInteropHelper>. Esta propiedad devuelve un objeto de script que representa la ventana HTML. Después, puede acceder a las propiedades, los métodos y los eventos en el [objeto window](https://developer.mozilla.org/en-US/docs/Web/API/Window) mediante la sintaxis con punto normal. También puede acceder a los métodos de script y a las variables globales. En el ejemplo siguiente se muestra cómo recuperar el objeto de script y cerrar el explorador.
+ Cuando la aplicación se hospeda en un marco HTML, se puede comunicar con la página web que contiene la aplicación XBAP. Para ello, se recupera la <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> propiedad de <xref:System.Windows.Interop.BrowserInteropHelper> . Esta propiedad devuelve un objeto de script que representa la ventana HTML. Después, puede acceder a las propiedades, los métodos y los eventos en el [objeto window](https://developer.mozilla.org/en-US/docs/Web/API/Window) mediante la sintaxis con punto normal. También puede acceder a los métodos de script y a las variables globales. En el ejemplo siguiente se muestra cómo recuperar el objeto de script y cerrar el explorador.
 
  [!code-csharp[XbapBrowserInterop#10](~/samples/snippets/csharp/VS_Snippets_Wpf/xbapbrowserinterop/cs/page1.xaml.cs#10)]
  [!code-vb[XbapBrowserInterop#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/xbapbrowserinterop/vb/page1.xaml.vb#10)]
 
 ### <a name="debugging-xbaps-that-use-hostscript"></a>Depuración de aplicaciones XBAP que usan HostScript
- Si su aplicación XBAP usa el objeto <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> para comunicarse con la ventana HTML, hay dos opciones que debe especificar para ejecutar y depurar la aplicación en Visual Studio. La aplicación debe tener acceso a su sitio de origen y se debe iniciar la aplicación con la página HTML que contiene la aplicación XBAP. En los pasos siguientes se describe cómo comprobar estas dos configuraciones:
+ Si su aplicación XBAP usa el <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> objeto para comunicarse con la ventana HTML, hay dos opciones que debe especificar para ejecutar y depurar la aplicación en Visual Studio. La aplicación debe tener acceso a su sitio de origen y se debe iniciar la aplicación con la página HTML que contiene la aplicación XBAP. En los pasos siguientes se describe cómo comprobar estas dos configuraciones:
 
 1. En Visual Studio, abra las propiedades del proyecto.
 
 2. En la pestaña **Seguridad**, haga clic en **Opciones avanzadas**.
 
-     Se abre el cuadro de diálogo Configuración de seguridad avanzada.
+     Se abrirá el cuadro de diálogo Configuración de seguridad avanzada.
 
 3. Asegúrese de que la casilla **Conceder a la aplicación acceso al sitio de origen** esté activada y haga clic en **Aceptar**.
 
@@ -113,11 +114,11 @@ ms.locfileid: "77124213"
 
      Aparecerá el cuadro de diálogo Opciones de Internet.
 
-6. Haga clic en la pestaña **Opciones avanzadas**.
+6. Haga clic en la ficha **Opciones avanzadas**.
 
 7. En la lista **Configuración**, bajo **Seguridad**, active la casilla **Permitir que el contenido activo se ejecute en los archivos de mi equipo**.
 
-8. Haga clic en **OK**.
+8. Haga clic en **Aceptar**.
 
      Los cambios surtirán efecto una vez que reinicie Internet Explorer.
 
@@ -128,19 +129,19 @@ ms.locfileid: "77124213"
 ## <a name="xbap-security-considerations"></a>Consideraciones de seguridad para XBAP
  Las aplicaciones XBAP suelen ejecutarse en un espacio aislado con seguridad de confianza parcial que se restringe al conjunto de permisos de zona de Internet. Por consiguiente, la implementación de debe admitir el subconjunto de elementos de WPF que se admiten en la zona de Internet o debe elevar los permisos de la aplicación. Para obtener más información, consulte [Seguridad](../security-wpf.md).
 
- Cuando se usa un control de <xref:System.Windows.Controls.WebBrowser> en la aplicación, WPF crea internamente instancias del control ActiveX WebBrowser nativo. Cuando se trata de una aplicación XBAP de confianza parcial que se ejecuta en Internet Explorer, el control ActiveX se ejecuta en un subproceso dedicado del proceso de Internet Explorer. Por tanto, se aplican las siguientes limitaciones:
+ Cuando se usa un <xref:System.Windows.Controls.WebBrowser> control en la aplicación, WPF crea internamente instancias del control ActiveX WebBrowser nativo. Cuando se trata de una aplicación XBAP de confianza parcial que se ejecuta en Internet Explorer, el control ActiveX se ejecuta en un subproceso dedicado del proceso de Internet Explorer. Por tanto, se aplican las siguientes limitaciones:
 
-- El control de <xref:System.Windows.Controls.WebBrowser> debe proporcionar un comportamiento similar al del explorador host, incluidas las restricciones de seguridad. Algunas de estas restricciones de seguridad se pueden controlar mediante la configuración de seguridad de Internet Explorer. Para obtener más información, consulte [Seguridad](../security-wpf.md).
+- El <xref:System.Windows.Controls.WebBrowser> control debe proporcionar un comportamiento similar al del explorador host, incluidas las restricciones de seguridad. Algunas de estas restricciones de seguridad se pueden controlar mediante la configuración de seguridad de Internet Explorer. Para obtener más información, consulte [Seguridad](../security-wpf.md).
 
 - Se genera una excepción cuando se carga una aplicación XBAP entre dominios en una página HTML.
 
-- La entrada está en un subproceso independiente del <xref:System.Windows.Controls.WebBrowser>de WPF, por lo que no se puede interceptar la entrada de teclado y el estado del IME no se comparte.
+- La entrada está en un subproceso independiente de WPF <xref:System.Windows.Controls.WebBrowser> , por lo que no se puede interceptar la entrada de teclado y el estado del IME no se comparte.
 
 - La sincronización o el orden de navegación pueden variar como consecuencia del control ActiveX que se ejecuta en otro subproceso. Por ejemplo, no siempre se cancela la navegación a una página cuando se inicia otra solicitud de navegación.
 
 - Es posible que un control ActiveX personalizado experimente problemas de comunicación porque la aplicación WPF se esté ejecutando en un subproceso independiente.
 
-- <xref:System.Windows.Interop.HwndHost.MessageHook> no se produce porque <xref:System.Windows.Interop.HwndHost> no puede subclaser una ventana que se ejecuta en otro subproceso o proceso.
+- <xref:System.Windows.Interop.HwndHost.MessageHook>no se produce porque <xref:System.Windows.Interop.HwndHost> no puede subclaser una ventana que se ejecuta en otro subproceso o proceso.
 
 ### <a name="creating-a-full-trust-xbap"></a>Creación de una aplicación XBAP de plena confianza
  Si la aplicación XBAP necesita plena confianza, puede cambiar el proyecto para habilitar este permiso. En los pasos siguientes se describe cómo habilitar la plena confianza:
@@ -153,7 +154,7 @@ ms.locfileid: "77124213"
 
 - En el archivo de proyecto, el valor del elemento `<TargetZone>` se cambia a `Custom`.
 
-- En el manifiesto de aplicación (App. manifest), se agrega un atributo `Unrestricted="true"` al elemento '<xref:System.Security.PermissionSet>.
+- En el manifiesto de aplicación (App. manifest), `Unrestricted="true"` se agrega un atributo al <xref:System.Security.PermissionSet> elemento '.
 
     ```xml
     <PermissionSet class="System.Security.PermissionSet"
@@ -164,13 +165,13 @@ ms.locfileid: "77124213"
     ```
 
 ### <a name="deploying-a-full-trust-xbap"></a>Implementación de una aplicación XBAP de plena confianza
- Al implementar una aplicación XBAP de plena confianza que no sigue el modelo de implementación de confianza de ClickOnce, el comportamiento cuando el usuario ejecute la aplicación dependerá de la zona de seguridad. En algunos casos, el usuario recibirá una advertencia al intentar instalarla. El usuario puede elegir continuar o cancelar la instalación. En la tabla siguiente se describe el comportamiento de la aplicación para cada zona de seguridad y qué se debe hacer para que la aplicación reciba plena confianza.
+ Al implementar una aplicación XBAP de plena confianza que no sigue el modelo de implementación de confianza de ClickOnce, el comportamiento cuando el usuario ejecute la aplicación dependerá de la zona de seguridad. En algunos casos, el usuario recibirá una advertencia al intentar instalarlo. El usuario puede elegir continuar con la instalación o cancelarla. En la tabla siguiente se describe el comportamiento de la aplicación para cada zona de seguridad y qué se debe hacer para que la aplicación reciba plena confianza.
 
 |Zona de seguridad|Comportamiento|Obtener plena confianza|
 |-------------------|--------------|------------------------|
 |Equipo local|Plena confianza automática|No se requiere ninguna acción.|
 |Intranet y sitios de confianza|Pedir plena confianza|Firme la aplicación XBAP con un certificado para que el usuario vea el origen en la petición.|
-|Internet|Error: "Confianza no concedida"|Firme XBAP con un certificado.|
+|Internet|Error: "Confianza no concedida"|Firme la aplicación XBAP con un certificado.|
 
 > [!NOTE]
 > El comportamiento descrito en la tabla anterior es para las aplicaciones XBAP de plena confianza que no sigan el modelo de implementación de confianza de ClickOnce.
@@ -185,7 +186,7 @@ ms.locfileid: "77124213"
 
  Además, la simultaneidad mejorada de la secuencia de descarga de ClickOnce mejora el tiempo de inicio hasta un diez por ciento. Una vez que ClickOnce descarga y valida los manifiestos, se inicia la descarga de la aplicación y la barra de progreso comienza a actualizarse.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Configurar Visual Studio para depurar una aplicación de explorador XAML y llamar a un servicio web](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
+- [Configurar Visual Studio para depurar una aplicación de explorador XAML y llamar a un servicio Web](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
 - [Implementar una aplicación WPF](deploying-a-wpf-application-wpf.md)

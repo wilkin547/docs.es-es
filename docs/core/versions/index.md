@@ -1,13 +1,13 @@
 ---
 title: Creación de versiones del entorno de ejecución y el SDK de .NET Core
 description: En este artículo se le enseña cómo se crean versiones del entorno de ejecución y el SDK de .NET Core (parecido al control de versiones semántico).
-ms.date: 07/26/2018
-ms.openlocfilehash: f166a6dfc1c9127eb629365efd628855489a60cb
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.date: 06/24/2020
+ms.openlocfilehash: 5e315f49227f3c2ea40652a30fabbf566bdfe495
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644392"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619759"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>Introducción a la creación de versiones de .NET Core
 
@@ -103,6 +103,9 @@ Cada versión de .NET Core implementa una versión de .NET Standard. Implementar
 | 2.1       | hasta la versión 2.0     |
 | 2.2       | hasta la versión 2.0     |
 | 3.0       | hasta la versión 2.1     |
+| 3.1       | hasta la versión 2.1     |
+
+Para obtener una tabla interactiva de las versiones de .NET Standard y ver cómo se corresponden con las implementaciones de .NET, vea [Versiones de .NET Standard](https://dotnet.microsoft.com/platform/dotnet-standard#versions).
 
 ## <a name="see-also"></a>Vea también
 

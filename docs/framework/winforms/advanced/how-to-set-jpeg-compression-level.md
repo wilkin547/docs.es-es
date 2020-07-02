@@ -1,5 +1,6 @@
 ---
 title: Procedimiento para establecer el nivel de compresión de imágenes JPEG
+description: Obtenga información sobre cómo ajustar la calidad de una imagen JPEG modificando su nivel de compresión en Windows Forms.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - images [Windows Forms], changing encoder parameters
 - JPEG images [Windows Forms], setting quality level
 ms.assetid: 4b9a74e3-9504-43c1-9f28-ace651d0772e
-ms.openlocfilehash: 1b325c0cb8fe9da4b198d19164c73af9b1609973
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1f6a96e8a05fff40eb08da0ce318faa86a06cc3a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626140"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618719"
 ---
 # <a name="how-to-set-jpeg-compression-level"></a>Procedimiento para establecer el nivel de compresión de imágenes JPEG
-Puede que desee modificar los parámetros de una imagen al guardar la imagen en el disco para minimizar el tamaño de archivo o mejorar su calidad. Puede ajustar la calidad de una imagen JPEG modificando su nivel de compresión. Para especificar el nivel de compresión al guardar una imagen JPEG, debe crear un <xref:System.Drawing.Imaging.EncoderParameters> objeto y pasarlo a la <xref:System.Drawing.Image.Save%2A> método de la <xref:System.Drawing.Image> clase. Inicializar el <xref:System.Drawing.Imaging.EncoderParameters> objeto para que tenga una matriz que consta de uno <xref:System.Drawing.Imaging.EncoderParameter>. Cuando se crea el <xref:System.Drawing.Imaging.EncoderParameter>, especifique el <xref:System.Drawing.Imaging.Encoder.Quality> codificador y el nivel de compresión.  
+Puede que desee modificar los parámetros de una imagen al guardar la imagen en el disco para minimizar el tamaño de archivo o mejorar su calidad. Puede ajustar la calidad de una imagen JPEG modificando su nivel de compresión. Para especificar el nivel de compresión al guardar una imagen JPEG, debe crear un <xref:System.Drawing.Imaging.EncoderParameters> objeto y pasarlo al <xref:System.Drawing.Image.Save%2A> método de la <xref:System.Drawing.Image> clase. Inicialice el <xref:System.Drawing.Imaging.EncoderParameters> objeto para que tenga una matriz formada por uno <xref:System.Drawing.Imaging.EncoderParameter> . Al crear el <xref:System.Drawing.Imaging.EncoderParameter> , especifique el <xref:System.Drawing.Imaging.Encoder.Quality> codificador y el nivel de compresión deseado.  
   
 ## <a name="example"></a>Ejemplo  
- Ejemplo de código siguiente crea un <xref:System.Drawing.Imaging.EncoderParameter> de objetos y guarda tres imágenes JPEG. Cada imagen JPEG se guarda con un nivel de calidad diferente, modificando el `long` valor pasado a la <xref:System.Drawing.Imaging.EncoderParameter> constructor. Un nivel de calidad de 0 corresponde a la máxima compresión y un nivel de calidad de 100 corresponde a la mínima compresión.  
+ En el código de ejemplo siguiente se crea un <xref:System.Drawing.Imaging.EncoderParameter> objeto y se guardan tres imágenes JPEG. Cada imagen JPEG se guarda con un nivel de calidad diferente, modificando el `long` valor pasado al <xref:System.Drawing.Imaging.EncoderParameter> constructor. Un nivel de calidad de 0 corresponde a la máxima compresión y un nivel de calidad de 100 corresponde a la mínima compresión.  
   
 ```csharp  
 private void VaryQualityLevel()  
@@ -125,12 +126,12 @@ End Function
   
 - Una aplicación de Windows Forms.  
   
-- Un <xref:System.Windows.Forms.PaintEventArgs>, que es un parámetro de <xref:System.Windows.Forms.PaintEventHandler>.  
+- Un <xref:System.Windows.Forms.PaintEventArgs> , que es un parámetro de <xref:System.Windows.Forms.PaintEventHandler> .  
   
 - Un archivo de imagen denominado `TestPhoto.jpg` y que se encuentra en **c:\\**.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Determinar los parámetros admitidos por un codificador](how-to-determine-the-parameters-supported-by-an-encoder.md)
+- [Procedimiento para determinar los parámetros que admite un codificador](how-to-determine-the-parameters-supported-by-an-encoder.md)
 - [Tipos de mapas de bits](types-of-bitmaps.md)
 - [Usar codificadores y descodificadores de imagen en la interfaz GDI+ administrada](using-image-encoders-and-decoders-in-managed-gdi.md)

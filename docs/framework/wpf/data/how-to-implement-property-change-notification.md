@@ -1,5 +1,6 @@
 ---
 title: 'Cómo: Implementar la notificación de cambio de propiedad'
+description: Habilite las propiedades para notificar automáticamente a un origen de enlace cuando el valor de propiedad cambie en Windows Presentation Foundation (WPF).
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,23 +11,23 @@ helpviewer_keywords:
 - change notifications [WPF]
 - properties [WPF], change notifications
 ms.assetid: 30b59d9e-8c3a-4349-aa82-4be837e841cf
-ms.openlocfilehash: 4f9ff49a443577e119b0c1079abbe23bd7ede4c4
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 6c298930b7b1f812e94ea6add8f53c67d3453530
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459749"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620786"
 ---
 # <a name="how-to-implement-property-change-notification"></a>Cómo: Implementar la notificación de cambio de propiedad
-Para admitir <xref:System.Windows.Data.BindingMode.OneWay> o <xref:System.Windows.Data.BindingMode.TwoWay> enlace para permitir que las propiedades de destino de enlace reflejen automáticamente los cambios dinámicos del origen de enlace (por ejemplo, para que el panel de vista previa se actualice automáticamente cuando el usuario edita un formulario), la clase debe proporcione las notificaciones de cambio de propiedad correctas. En este ejemplo se muestra cómo crear una clase que implementa <xref:System.ComponentModel.INotifyPropertyChanged>.  
+Para admitir <xref:System.Windows.Data.BindingMode.OneWay> o <xref:System.Windows.Data.BindingMode.TwoWay> enlazar para permitir que las propiedades de destino de enlace reflejen automáticamente los cambios dinámicos del origen de enlace (por ejemplo, para que el panel de vista previa se actualice automáticamente cuando el usuario edita un formulario), la clase debe proporcionar las notificaciones de cambio de propiedad correctas. En este ejemplo se muestra cómo crear una clase que implementa <xref:System.ComponentModel.INotifyPropertyChanged> .  
   
 ## <a name="example"></a>Ejemplo  
- Para implementar <xref:System.ComponentModel.INotifyPropertyChanged> debe declarar el evento <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> y crear el método `OnPropertyChanged`. Por lo tanto, para cada propiedad para las que desee cambiar las notificaciones, calle a `OnPropertyChanged` cuando se actualice la propiedad.  
+ Para implementar <xref:System.ComponentModel.INotifyPropertyChanged> , debe declarar el <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> evento y crear el `OnPropertyChanged` método. Por lo tanto, para cada propiedad para las que desee cambiar las notificaciones, calle a `OnPropertyChanged` cuando se actualice la propiedad.  
   
  [!code-csharp[SimpleBinding#PersonClass](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Person.cs#personclass)]
  [!code-vb[SimpleBinding#PersonClass](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleBinding/VisualBasic/Person.vb#personclass)]  
   
- Para ver un ejemplo de cómo se puede usar la clase `Person` para admitir <xref:System.Windows.Data.BindingMode.TwoWay> enlace, vea [control cuando el texto del cuadro de texto actualiza el origen](how-to-control-when-the-textbox-text-updates-the-source.md).  
+ Para ver un ejemplo de cómo `Person` se puede usar la clase para admitir el <xref:System.Windows.Data.BindingMode.TwoWay> enlace, vea [control cuando el texto de TextBox actualiza el origen](how-to-control-when-the-textbox-text-updates-the-source.md).  
   
 ## <a name="see-also"></a>Vea también
 
