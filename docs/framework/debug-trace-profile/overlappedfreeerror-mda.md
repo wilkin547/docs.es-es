@@ -1,5 +1,6 @@
 ---
 title: MDA de overlappedFreeError
+description: Revise el Asistente para la depuración administrada (MDA) de overlappedFreeError en .NET, que puede activarse en infracciones de acceso o daños en el montón de recolección de elementos no utilizados.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - OverlappedFreeError MDA
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), overlapped structures
 - freeing overlapped structures
 ms.assetid: b6ab2d48-6eee-4bab-97a3-046b3b0a5470
-ms.openlocfilehash: 8a0c72cf26ef8434719ff6661ef15a44f51c8740
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 9be33c59723ecb2743f2bc610d7fb69d24ff388c
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217261"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803925"
 ---
 # <a name="overlappedfreeerror-mda"></a>MDA de overlappedFreeError
 El Asistente para la depuración administrada (MDA) `overlappedFreeError` se activa cuando se llama al método <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29?displayProperty=nameWithType> antes de que se haya completado la operación superpuesta.  
@@ -27,7 +28,7 @@ El Asistente para la depuración administrada (MDA) `overlappedFreeError` se act
   
  Es posible que este MDA no represente un error si la operación superpuesta no se inició correctamente.  
   
-## <a name="resolution"></a>Solución  
+## <a name="resolution"></a>Resolución  
  Asegúrese de que se complete la operación de E/S que usa la estructura superpuesta antes de llamar al método <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29>.  
   
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
@@ -48,8 +49,8 @@ El Asistente para la depuración administrada (MDA) `overlappedFreeError` se act
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Serialización para interoperabilidad](../interop/interop-marshaling.md)
+- [Diagnóstico de errores con asistentes de depuraciones administradas](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Serialización de interoperabilidad](../interop/interop-marshaling.md)

@@ -1,5 +1,6 @@
 ---
 title: MDA de openGenericCERCall
+description: Vea el Asistente para la depuración administrada openGenericCERCall, que puede activarse si el código CER no se ejecuta cuando se anula un subproceso o cuando se descarga un dominio de aplicación.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), CER calls
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), CER calls
 - generics [.NET Framework], open generic CER calls
 ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
-ms.openlocfilehash: 7492a4c0547680a6ace85a5f7c98567770f5575a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4df33b0cdf9759edec47f02b3feb671d03284ec8
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181780"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803942"
 ---
 # <a name="opengenericcercall-mda"></a>MDA de openGenericCERCall
 
@@ -29,13 +30,13 @@ El código de la CER no se ejecuta cuando se anula un subproceso o se descarga u
 
 En tiempo de compilación JIT, una instancia que contiene un tipo de referencia de objeto solo es representativa porque el código resultante es compartido, y cada una de las variables de tipo de referencia de objeto puede ser cualquier tipo de referencia de objeto. Esto puede impedir la preparación de algunos recursos de tiempo de ejecución antes de tiempo.
 
-En concreto, los métodos con variables de tipo genérico pueden asignar lentamente recursos en segundo plano. Estas se denominan entradas de diccionario genéricas. Por ejemplo, para `List<T> list = new List<T>();` `T` la instrucción donde es una variable de tipo genérico, el tiempo de `List<Object>, List<String>`ejecución debe buscar y posiblemente crear la creación de instancias exacta en tiempo de ejecución, por ejemplo, , etc. Esto puede producir un error por diferentes motivos que se escapan al control del desarrollador, como memoria insuficiente.
+En concreto, los métodos con variables de tipo genérico pueden asignar lentamente recursos en segundo plano. Estas se denominan entradas de diccionario genéricas. Por ejemplo, para la instrucción, `List<T> list = new List<T>();` donde `T` es una variable de tipo genérico, el tiempo de ejecución debe buscarse y posiblemente crear la creación de instancias exacta en tiempo de ejecución, por ejemplo,, `List<Object>, List<String>` y así sucesivamente. Esto puede producir un error por diferentes motivos que se escapan al control del desarrollador, como memoria insuficiente.
 
 Solo se debería activar este MDA en tiempo de compilación JIT, no cuando hay una creación de instancias exactas.
 
 Cuando se activa este MDA, los posibles síntomas son que las CER no están habilitadas para la creación de instancias incorrectas. De hecho, el tiempo de ejecución no ha intentado implementar una CER en las circunstancias que provocaron que se activara el MDA. Por tanto, si el desarrollador usa una instancia compartida de la CER, no se detectan los errores de compilación de JIT, los errores de carga de tipos genéricos o las anulaciones de subprocesos dentro de la CER deseada.
 
-## <a name="resolution"></a>Solución
+## <a name="resolution"></a>Resolución
 
 No use variables de tipo genérico que son del tipo de referencia de objeto para los métodos que puede contener una CER.
 
@@ -45,7 +46,7 @@ Este MDA no tiene ningún efecto en el CLR.
 
 ## <a name="output"></a>Output
 
-A continuación se muestra un ejemplo de salida de este MDA:
+A continuación se muestra un ejemplo de la salida de este MDA:
   
  ```output
  Method 'GenericMethodWithCer', which contains at least one constrained execution region, cannot be prepared automatically since it has one or more unbound generic type parameters.
@@ -110,8 +111,8 @@ class MyClass
 }
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution>
-- [Diagnóstico de errores con asistentes para la depuración administrada](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnóstico de errores con asistentes de depuraciones administradas](diagnosing-errors-with-managed-debugging-assistants.md)
