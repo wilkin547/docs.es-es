@@ -1,6 +1,7 @@
 ---
 title: Introducción a WPF en Visual Studio
 titleSuffix: ''
+description: Cree aplicaciones de escritorio de línea de negocio con el modelo de programación unificado proporcionado en Windows Presentation Foundation (WPF).
 ms.date: 01/26/2018
 helpviewer_keywords:
 - typography [WPF]
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - WPF [WPF], about Windows Presentation Foundation
 - 3D rendering [WPF]
 ms.assetid: 582a314e-e23d-4144-b45b-acbbd5579252
-ms.openlocfilehash: fc911d5d33820ba382446d15f8c7fac8f2cebf06
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: 21c5311382b509fc3004f2609b2acc54e919eb56
+ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80112341"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853827"
 ---
 # <a name="introduction-to-wpf-in-visual-studio"></a>Introducción a WPF en Visual Studio
 Windows Presentation Foundation (WPF) en Visual Studio proporciona a los desarrolladores un modelo de programación unificado para crear aplicaciones de escritorio de línea de negocio en Windows.  
