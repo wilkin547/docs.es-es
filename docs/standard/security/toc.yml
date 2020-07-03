@@ -19,8 +19,11 @@
         - name: Suplantar y revertir
           href: impersonating-and-reverting.md
     - name: Modelo de criptografía
-      href: cryptography-model.md
       items:
+        - name: Información general
+          href: cryptography-model.md
+        - name: Criptografía multiplataforma
+          href: cross-platform-cryptography.md
         - name: servicios criptográficos
           href: cryptographic-services.md
         - name: Generar claves para cifrado y descifrado
