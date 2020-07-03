@@ -1,5 +1,6 @@
 ---
 title: Procedimiento Instalar un ensamblado en la caché global de ensamblados
+description: Instale un ensamblado en la caché global de ensamblados (GAC) en .NET de modo que se pueda compartir con muchas aplicaciones. Use Windows Installer o la utilidad GAC.
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Global Assembly Cache tool
 - windows installer, global assembly cache
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
-ms.openlocfilehash: 64878a795a7c5b790c8991064e32b82505685c0c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 08a5475d74327265f28b65676ae56be15afb57d3
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155568"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104677"
 ---
 # <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>Procedimiento Instalar un ensamblado en la caché global de ensamblados
 
@@ -43,9 +44,9 @@ La sintaxis para usar *gacutil.exe* para instalar un ensamblado en la GAC es la 
 gacutil -i <assembly name>
 ```
 
-En este comando, *\<nombre del ensamblado>* es el nombre del ensamblado que se va a instalar en la caché global de ensamblados.
+En este comando, *\<assembly name>* es el nombre del ensamblado que se va a instalar en la caché global de ensamblados.
 
-Si *gacutil.exe* no se encuentra en la ruta de acceso del sistema, use [Símbolo del sistema para desarrolladores de Visual Studio *\<versión>* ](../tools/developer-command-prompt-for-vs.md).
+Si *gacutil.exe* no se encuentra en la ruta de acceso del sistema, use el [Símbolo del sistema para desarrolladores de Visual Studio *\<version>* ](../tools/developer-command-prompt-for-vs.md).
 
 En el ejemplo siguiente se instala un ensamblado con el nombre de archivo *hello.dll* en la caché global de ensamblados.
 

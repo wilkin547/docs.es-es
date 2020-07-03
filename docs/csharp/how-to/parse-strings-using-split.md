@@ -1,6 +1,6 @@
 ---
-title: Procedimiento para analizar cadenas mediante String.Split (Guía de C#)
-description: String.Split devuelve una matriz de cadenas dividida entre un conjunto de delimitadores. Es una manera sencilla de analizar cadenas.
+title: Análisis de cadenas mediante String.Split (Guía de C#)
+description: El método Split devuelve una matriz de cadenas divididas por un conjunto de delimitadores. Es una manera sencilla de analizar cadenas.
 ms.date: 01/03/2018
 helpviewer_keywords:
 - splitting strings [C#]
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - parse strings
 ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 ms.custom: mvc
-ms.openlocfilehash: 4f0056426fb29ec3d76093e57fa45e2046f27a4f
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 7c5d8fa462775c6f3a9981693129997dda6c2286
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662997"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324145"
 ---
 # <a name="how-to-parse-strings-using-stringsplit-in-c"></a>Procedimiento para analizar cadenas mediante String.Split en C\#
 
-El método <xref:System.String.Split%2A?displayProperty=nameWithType> crea una matriz de subcadenas mediante la división de la cadena de entrada en función de uno o varios delimitadores. Suele ser la manera más fácil de separar una cadena en límites de palabras. También sirve para dividir las cadenas en otras cadenas o caracteres específicos.
+El método <xref:System.String.Split%2A?displayProperty=nameWithType> crea una matriz de subcadenas mediante la división de la cadena de entrada en función de uno o varios delimitadores. A menudo, este método es la manera más fácil de separar una cadena en límites de palabras. También sirve para dividir las cadenas en otras cadenas o caracteres específicos.
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
@@ -35,7 +35,7 @@ Este comportamiento facilita formatos como los de los archivos de valores separa
 Puede pasar un parámetro <xref:System.StringSplitOptions.RemoveEmptyEntries?displayProperty=nameWithType> opcional para excluir cualquier cadena vacía en la matriz devuelta. Para un procesamiento más complicado de la colección devuelta, puede usar [LINQ](../programming-guide/concepts/linq/index.md) para manipular la secuencia de resultados.
 
 <xref:System.String.Split%2A?displayProperty=nameWithType> puede usar varios caracteres separadores.
-En este ejemplo se usan espacios, comas, puntos, dos puntos y tabulaciones; están incluidos todos en una matriz que contiene estos caracteres de separación y que se pasa a <xref:System.String.Split%2A>.
+En este ejemplo se usan espacios, comas, puntos, dos puntos y tabulaciones como caracteres de separación, que se pasan a <xref:System.String.Split%2A> en una matriz.
 En el bucle al final del código se muestra cada una de las palabras de la matriz devuelta.
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs" id="Snippet3":::

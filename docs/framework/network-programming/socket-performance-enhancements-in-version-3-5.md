@@ -1,13 +1,14 @@
 ---
 title: Mejoras de rendimiento de socket en la versión 3.5
+description: Obtenga información sobre las mejoras de rendimiento de la clase System.Net.Sockets.Socket en .NET Framework 3.5.
 ms.date: 03/30/2017
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
-ms.openlocfilehash: 577c033fc5639f9d9f50e413fd2cb55a75d48f2c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5a640c58e47bf1630a3a551aed72b9bc9d4fd6fe
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047237"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502150"
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>Mejoras de rendimiento de socket en la versión 3.5
 En la versión 3.5 se ha mejorado la clase <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> para su uso por parte de aplicaciones que usan la E/S de red asincrónica para lograr el máximo rendimiento. Se han agregado una serie de clases como parte de un conjunto de mejoras de la clase <xref:System.Net.Sockets.Socket> que proporcionan un patrón asincrónico alternativo que pueden usar las aplicaciones de socket de alto rendimiento especializadas. Estas mejoras se han diseñado específicamente para las aplicaciones de servidor de red que necesitan un alto rendimiento. Una aplicación puede usar el patrón asincrónico mejorado exclusivamente o solo en áreas activas de destino de su aplicación (al recibir grandes cantidades de datos, por ejemplo).  
@@ -39,5 +40,5 @@ En la versión 3.5 se ha mejorado la clase <xref:System.Net.Sockets.Socket?displ
 - <xref:System.Net.Sockets.SendPacketsElement?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.SocketAsyncOperation?displayProperty=nameWithType>
-- [Ejemplos de programación de red](network-programming-samples.md)
+- [Network Programming Samples (Ejemplos de programación de red)](network-programming-samples.md)
 - [Ejemplos de código de socket](socket-code-examples.md)

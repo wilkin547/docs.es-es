@@ -1,13 +1,14 @@
 ---
 title: Protocolo de resolución de nombres del mismo nivel
+description: Obtenga información sobre el Protocolo de resolución de nombres de mismo nivel (PNRP), un protocolo de registro y resolución de nombres seguro, escalable y dinámico.
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-ms.openlocfilehash: c8b7b2190349323bf212d816a77f5f7810f6ca2c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 72eb63c2c90f398c515d77cd2b2d693237e533a5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74428222"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502228"
 ---
 # <a name="peer-name-resolution-protocol"></a>Protocolo de resolución de nombres del mismo nivel
 En entornos punto a punto, los elementos del mismo nivel usan sistemas de resolución de nombres específicos para resolver sus respectivas ubicaciones de red (direcciones, protocolos y puertos) a partir de nombres u otros tipos de identificadores. Antes, la resolución de nombres del mismo nivel resultaba complicada por la conectividad intrínsecamente transitoria y por otras limitaciones del Sistema de nombres de dominio (DNS).  
@@ -38,7 +39,7 @@ El Protocolo de resolución de nombres de mismo nivel tiene las propiedades sigu
   
 - <xref:System.Net.PeerToPeer.Cloud>: define la información que describe una nube PNRP disponible, incluido su ámbito.  
   
-- <xref:System.Net.PeerToPeer.PeerName>: define un nombre del mismo nivel que puede usarse para registrar y resolver posteriormente un elemento del mismo nivel dentro de una nube.  
+- <xref:System.Net.PeerToPeer.PeerName>: define un nombre del mismo nivel que se puede usar para registrar y resolver posteriormente un elemento del mismo nivel dentro de una nube.  
   
 - <xref:System.Net.PeerToPeer.PeerNameRecord>: define el registro de la nube PNRP que contiene la información de registro de un elemento del mismo nivel, que incluye los puntos de conexión de red en los que se puede establecer contacto con dicho elemento.  
   
@@ -50,7 +51,7 @@ El Protocolo de resolución de nombres de mismo nivel tiene las propiedades sigu
 
 - <xref:System.ServiceModel.PeerResolvers>
 - <xref:System.Net.PeerToPeer>
-- [Ejemplos de programación de red](network-programming-samples.md)
+- [Network Programming Samples (Ejemplos de programación de red)](network-programming-samples.md)
 
 <!-- to-do: review sample links
 - [PeerToPeer Technology Sample](https://go.microsoft.com/fwlink/?LinkID=179571)

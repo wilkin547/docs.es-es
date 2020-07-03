@@ -1,14 +1,14 @@
 ---
 title: Automatizar el entrenamiento del modelo con la CLI de ML.NET
 description: Descubra cómo usar la herramienta de la CLI de ML.NET para entrenar automáticamente el mejor modelo desde la línea de comandos.
-ms.date: 12/17/2019
+ms.date: 06/03/2020
 ms.custom: how-to, mlnet-tooling
-ms.openlocfilehash: 2e8bade898adfc3fc4af92c880b62c646343eb2f
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: d7c6102c2257be1daa613fde0edabce83d04b414
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212417"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589672"
 ---
 # <a name="automate-model-training-with-the-mlnet-cli"></a>Automatizar el entrenamiento del modelo con la CLI de ML.NET
 
@@ -33,24 +33,24 @@ Puede generar dichos recursos desde sus propios conjuntos de datos sin necesidad
 
 Actualmente, las tareas de Machine Learning compatibles con la CLI de ML.NET son:
 
-- `binary-classification`
-- `multiclass-classification`
-- `regression`
-- Futuro: otras tareas de aprendizaje automático, como `recommendation`, `ranking`, `anomaly-detection`, `clustering`
+- Clasificación (binaria y multiclase)
+- Regresión
+- recomendación
+- Futuro: otras tareas de aprendizaje automático, como la clasificación de imágenes, la clasificación, la detección de anomalías y la agrupación en clústeres
 
-Ejemplo de uso:
+Ejemplo de uso (escenario de clasificación):
 
 ```console
-mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" --label-column-name Sentiment
+mlnet classification --dataset "yelp_labelled.txt" --label-col 1 --has-header false --train-time 10
 ```
 
-![imagen](media/automate-training-with-cli/cli-model-generation.gif)
+![imagen](media/automate-training-with-cli/mlnet-classification-powershell.gif)
 
 Se puede ejecutar de la misma manera en *Windows PowerShell*, *macOS/Linux bash* o *Windows CMD*. Sin embargo, Autocompletar tabular (sugerencias de parámetro) no funcionará en *Windows CMD*.
 
 ## <a name="output-assets-generated"></a>Recursos de salida generados
 
-El comando `auto-train` de la CLI genera los siguientes recursos en la carpeta de salida:
+Los comandos de tarea de ML de la CLI generan los siguientes recursos en la carpeta de salida:
 
 - Un archivo .zip de modelo serializado ("mejor modelo") listo para usarse en la ejecución de predicciones.
 - Solución de C# con:
@@ -68,23 +68,15 @@ Al generar un "modelo mejor" con la herramienta de la CLI, verá métricas de ca
 
 Aquí se resumen esas métricas agrupadas por tareas de ML para que pueda comprender la calidad de su "mejor modelo" autogenerado.
 
-### <a name="metrics-for-binary-classification-models"></a>Métricas para los modelos de clasificación binaria
+### <a name="metrics-for-classification-models"></a>Métricas para modelos de clasificación
 
-A continuación, se muestra la lista de métricas de la tarea de ML de clasificación binaria para los cinco principales modelos encontrados por la CLI:
-
-![imagen](media/automate-training-with-cli/cli-binary-classification-metrics.png)
-
-La precisión es una métrica popular en los problemas de clasificación, pero no siempre es la mejor métrica para seleccionar el mejor modelo, tal y como se explica en las siguientes referencias. Hay casos donde es necesario evaluar la calidad del modelo con métricas adicionales.
-
-Para explorar y comprender las métricas que son el resultado de la CLI, consulte [Métricas de evaluación de clasificación binaria](resources/metrics.md#evaluation-metrics-for-binary-classification).
-
-### <a name="metrics-for-multi-class-classification-models"></a>Métricas para modelos de clasificación multiclase
-
-A continuación, se muestra la lista de métricas de la tarea de ML de clasificación multiclase para los cinco principales modelos encontrados por la CLI:
+A continuación, se muestra la lista de métricas de clasificación para los cinco principales modelos encontrados por la CLI:
 
 ![imagen](media/automate-training-with-cli/cli-multiclass-classification-metrics.png)
 
-Para explorar y comprender las métricas que son el resultado de la CLI, consulte [Métricas de evaluación de clasificación multiclase](resources/metrics.md#evaluation-metrics-for-multi-class-classification).
+ La precisión es una métrica popular en los problemas de clasificación, pero no siempre es la mejor métrica para seleccionar el mejor modelo, tal y como se explica en las siguientes referencias. Hay casos donde es necesario evaluar la calidad del modelo con métricas adicionales.
+
+Para explorar y comprender las métricas que son el resultado de la CLI, consulte [Métricas de evaluación de clasificación](resources/metrics.md#evaluation-metrics-for-multi-class-classification).
 
 ### <a name="metrics-for-regression-and-recommendation-models"></a>Métricas para modelos de regresión y recomendación
 

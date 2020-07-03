@@ -1,17 +1,18 @@
 ---
 title: Ejecutar aplicaciones de Intranet con plena confianza
+description: Ejecute aplicaciones de Intranet con plena confianza con .NET 3.5 SP1. Las aplicaciones y sus ensamblados de biblioteca se pueden ejecutar como ensamblados de plena confianza desde un recurso compartido de red.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - full trust, running intranet applications in
 - intranet applications, running in full trust
 - running intranet applications in full trust
 ms.assetid: ee13c0a8-ab02-49f7-b8fb-9eab16c6c4f0
-ms.openlocfilehash: 33b025fa62343277fc96fc7771587e95f556e7a6
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: f4fb3b61e434154b1c7252377c234aeff49f0227
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645445"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104594"
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>Ejecutar aplicaciones de Intranet con plena confianza
 

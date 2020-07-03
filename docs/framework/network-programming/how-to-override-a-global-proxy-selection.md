@@ -1,18 +1,19 @@
 ---
-title: 'Cómo: Reemplazar una selección del Proxy Global'
+title: Procedimiento para reemplazar una selección del proxy global
+description: Siga este ejemplo para invalidar la selección de proxy global mediante el envío de una solicitud WebRequest a una dirección URL, lo que invalida la selección con un servidor proxy.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0da481a9-b414-4230-beb0-e3ceba882fe5
-ms.openlocfilehash: 44845fb67aac4ff9ab9dda8cf4934153c8c4f23c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 91f64775e2f401be9b740fe9e4c41e1087eb9617
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71048271"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502514"
 ---
-# <a name="how-to-override-a-global-proxy-selection"></a>Cómo: Reemplazar una selección del Proxy Global
+# <a name="how-to-override-a-global-proxy-selection"></a>Procedimiento para reemplazar una selección del proxy global
 Este ejemplo envía una **WebRequest** a `www.contoso.com` que reemplaza la selección global de proxy con un servidor proxy denominado `alternateproxy` en el puerto 80.  
   
 ## <a name="example"></a>Ejemplo  

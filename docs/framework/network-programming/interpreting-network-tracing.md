@@ -1,5 +1,6 @@
 ---
 title: Interpretar el seguimiento de red
+description: Obtenga información sobre cómo usar el seguimiento para capturar las llamadas que realiza la aplicación a varios miembros de la clase System.Net en .NET Framework.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TraceMode attribute
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - text, network tracing output
 - includehex
 ms.assetid: ad22b4b8-00af-4778-9cca-cb609ce1f8ff
-ms.openlocfilehash: fd617e152b1e86cc71dd8e3cc8a01f1d2f52c30a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7a17e4ba14d8c5fe136667c4eb5bc5b2fd7a8242
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047900"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502371"
 ---
 # <a name="interpreting-network-tracing"></a>Interpretar el seguimiento de red
 Cuando está habilitado el seguimiento de red, puede usarlo para capturar las llamadas que la aplicación realiza a diversos miembros de clase <xref:System.Net>. La salida de estas llamadas puede ser similar a los ejemplos siguientes.  

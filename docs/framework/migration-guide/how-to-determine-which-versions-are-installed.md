@@ -10,12 +10,12 @@ helpviewer_keywords:
 - versions, determining for .NET Framework
 - .NET Framework, determining version
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
-ms.openlocfilehash: d25e4ae97877462b2a3b90e51262fb656921e392
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 122441e9238fd91199aed255b0125f69081c0a8c
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205497"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990145"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Procedimiento para determinar qué versiones de .NET Framework están instaladas
 
@@ -61,7 +61,7 @@ El valor REG_DWORD de **Release** del Registro representa la versión de .NET F
 | .NET Framework 4.7     | En Windows 10 Creators Update: 460798<br />En todos los demás sistemas operativos Windows (incluidos otros sistemas operativos Windows 10): 460805 |
 | .NET Framework 4.7.1   | En Windows 10 Fall Creators Update y Windows Server, versión 1709: 461308<br/>En todos los demás sistemas operativos Windows (incluidos otros sistemas operativos Windows 10): 461310 |
 | .NET Framework 4.7.2   | En la actualización de Windows 10 de abril de 2018 y Windows Server, versión 1803: 461808<br/>En todos los sistemas operativos diferentes de la Actualización de abril de 2018 de Windows 10 y Windows Server, versión 1803: 461814 |
-| .NET Framework 4.8     | En la actualización de Windows 10 de mayo de 2019 y en la de noviembre de 2019: 528040<br/>En la actualización de mayo de 2020 de Windows 10: 528209<br/>En todos los demás sistemas operativos Windows (incluidos otros sistemas operativos Windows 10): 528049 |
+| .NET Framework 4.8     | En la actualización de Windows 10 de mayo de 2019 y en la de noviembre de 2019: 528040<br/>En la actualización de mayo de 2020 de Windows 10: 528372<br/>En todos los demás sistemas operativos Windows (incluidos otros sistemas operativos Windows 10): 528049 |
 
 ### <a name="minimum-version"></a>Versión mínima
 

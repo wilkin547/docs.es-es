@@ -1,5 +1,6 @@
 ---
 title: Usar flujos en la red
+description: .NET Framework representa los recursos de red como secuencias. La clase NetworkStream implementa la clase Stream para su uso con recursos de red.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - Internet, streams
 - streams
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
-ms.openlocfilehash: 7d5a2e3eec9b49731a09f6eb41a8d8500a59b45c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f8d35b43c9b46a77bfd0c78f7d0118093b6fe824
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180618"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501981"
 ---
 # <a name="using-streams-on-the-network"></a>Usar flujos en la red
 Los recursos de red se representan como secuencias en .NET Framework. Al tratar las secuencias de forma genérica, .NET Framework ofrece lo siguiente:  
@@ -104,5 +105,5 @@ sr.Close()
   
 ## <a name="see-also"></a>Vea también
 
-- [Cómo solicitar datos mediante la clase WebRequest](how-to-request-data-using-the-webrequest-class.md)
+- [Cómo: Solicitar datos mediante la clase WebRequest](how-to-request-data-using-the-webrequest-class.md)
 - [Solicitud de datos](requesting-data.md)

@@ -1,5 +1,6 @@
 ---
 title: Solicitud de datos
+description: Obtenga información sobre la forma en que los protocolos acoplables permiten desarrollar aplicaciones que usan una sola interfaz para recuperar datos de varios protocolos.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - receiving data, about receiving data
 - Internet, requesting data
 ms.assetid: df6f1e1d-6f2a-45dd-8141-4a85c3dafe1d
-ms.openlocfilehash: 1f367caf7656a83597b6262a5746686df15d33b4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 19350d685a81d56657ca0a117d61b50ae24fab6a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047315"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502189"
 ---
 # <a name="requesting-data"></a>Solicitud de datos
 El desarrollo de aplicaciones que se ejecutan en el entorno operativo distribuido de Internet hoy en día requiere un método eficaz y fácil de usar para recuperar datos de recursos de todo tipo. Los protocolos acoplables permiten desarrollar aplicaciones que usan una sola interfaz para recuperar datos de varios protocolos de Internet.  
@@ -55,5 +56,5 @@ sr = New StreamReader(resp.GetResponseStream(), Encoding.ASCII)
 ## <a name="see-also"></a>Vea también
 
 - [Programación para redes en .NET Framework](index.md)
-- [Cómo: solicitar una página web y recuperar los resultados como una secuencia](how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
-- [Cómo: recuperar una WebResponse específica de protocolo que coincida con una WebRequest](how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)
+- [Cómo: Solicitar una página web y recuperar los resultados como una secuencia](how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
+- [Cómo: Recuperar una WebResponse específica de protocolo que coincida con una WebRequest](how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)

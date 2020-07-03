@@ -2,12 +2,12 @@
 title: Cambios importantes de la biblioteca de clases base
 description: Muestra los cambios importantes en las bibliotecas básicas de .NET.
 ms.date: 09/20/2019
-ms.openlocfilehash: 45de0f0d418437cf1677c9a8c7cfc9b6c33a24ef
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 1c56358e69d0dd6e8572a41229c1b9edbcdad795
+ms.sourcegitcommit: 63bb83322814f5e5e5c5b69939b14a3139a6ca7e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144490"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85365626"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>Cambios importantes en las bibliotecas principales de .NET
 
@@ -19,6 +19,7 @@ En esta página se documentan los siguientes cambios importantes:
 | - | :-: |
 | [Los métodos CompareGreaterThan de SSE y SSE2 controlan correctamente las entradas NaN](#sse-and-sse2-comparegreaterthan-methods-properly-handle-nan-inputs) | 5.0 |
 | [CounterSet.CreateCounterSetInstance ahora produce una excepción InvalidOperationException si ya existe la instancia](#countersetcreatecountersetinstance-now-throws-invalidoperationexception-if-instance-already-exists) | 5.0 |
+| [Retirada del paquete Microsoft.DotNet.PlatformAbstractions](#microsoftdotnetplatformabstractions-package-removed) | 5.0 |
 | [Las API que notifican la versión ahora notifican la versión del producto y no la del archivo](#apis-that-report-version-now-report-product-and-not-file-version) | 3.0 |
 | [Las instancias personalizadas de EncoderFallbackBuffer no pueden retroceder de forma recursiva](#custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively) | 3.0 |
 | [Cambios en el comportamientos de formato y análisis de punto flotante](#floating-point-formatting-and-parsing-behavior-changed) | 3.0 |
@@ -48,6 +49,10 @@ En esta página se documentan los siguientes cambios importantes:
 ***
 
 [!INCLUDE [createcountersetinstance-throws-invalidoperation](../../../includes/core-changes/corefx/5.0/createcountersetinstance-throws-invalidoperation.md)]
+
+***
+
+[!INCLUDE [platformabstractions-package-removed](../../../includes/core-changes/corefx/5.0/platformabstractions-package-removed.md)]
 
 ***
 

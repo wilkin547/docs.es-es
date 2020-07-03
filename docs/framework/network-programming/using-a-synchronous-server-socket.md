@@ -1,5 +1,6 @@
 ---
 title: Usar un socket de servidor sincrónico
+description: En este ejemplo se muestra un socket de servidor sincrónico en .NET Framework, que suspende una aplicación hasta que se recibe una solicitud de conexión en el socket.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - sockets, synchronous server sockets
 - Internet, sockets
 ms.assetid: d1ce882e-653e-41f5-9289-844ec855b804
-ms.openlocfilehash: cbc02c755ceefa8f31439f121a98978b82f33fa2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9e7d32595f554b32ecc72bbb1f1a469ad5935467
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047035"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502059"
 ---
 # <a name="using-a-synchronous-server-socket"></a>Usar un socket de servidor sincrónico
 Los sockets de servidor sincrónico suspenden la ejecución de la aplicación hasta que se recibe una solicitud de conexión en el socket. Los sockets de servidor sincrónico no son adecuados para las aplicaciones que hacen un uso intensivo de la red durante su funcionamiento, pero pueden ser adecuados para las aplicaciones de red simple.  

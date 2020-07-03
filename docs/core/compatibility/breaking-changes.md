@@ -2,16 +2,16 @@
 title: Cambios importantes
 description: Obtenga información sobre los cambios de cada versión de .NET Core.
 ms.date: 11/27/2019
-ms.openlocfilehash: 664d83f5bfa455764de8823c4bbdb4a2018e1875
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bc7faae3b00d412aa8d50fe181a26873232a0939
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77093076"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415737"
 ---
 # <a name="breaking-change-selectors"></a>Selectores de cambios importantes
 
-Los siguientes selectores de versión y área proporcionan una lista filtrada de cambios importantes aplicables entre distintas versiones de .NET Core, ASP.NET Core y EF Core. También puede examinar los artículos versión a versión o por categoría en la tabla de contenido.
+Los siguientes selectores de versión y área proporcionan una lista filtrada de cambios importantes aplicables entre distintas versiones de .NET Core, ASP.NET Core y EF Core. También puede examinar los artículos por versión o área de tecnología en la tabla de contenido.
 
 ## <a name="by-version"></a>Por versión
 
@@ -19,7 +19,7 @@ Seleccione la versión de destino actual de .NET y la versión de .NET Core a la
 
 [!INCLUDE[versionselector](~/includes/core-changes/versionselector.md)]
 
-## <a name="by-area"></a>Por área
+## <a name="by-technology-area"></a>Por área de tecnología
 
 Seleccione el área de tecnología de .NET Core que le interesa. Los cambios individuales están ordenados por versión de .NET Core.
 

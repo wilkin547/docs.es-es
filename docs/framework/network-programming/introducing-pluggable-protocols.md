@@ -1,5 +1,6 @@
 ---
 title: Escribir protocolos acoplables
+description: Obtenga información sobre los protocolos conectables. Estos protocolos admiten el desarrollo de aplicaciones que usan recursos de Internet independientemente de los detalles del protocolo que usan los recursos.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data requests, pluggable protocols
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - server identifiers
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
-ms.openlocfilehash: 72b47b8159f9f6f0dc3a19c5cbf94335507d9e7d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0bc2d0d005e50b04aff360866a146f6fe6b0ea02
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047859"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502358"
 ---
 # <a name="introducing-pluggable-protocols"></a>Escribir protocolos acoplables
 Microsoft .NET Framework proporciona una implementación por capas, extensible y administrada de servicios de Internet que se puede integrar rápida y fácilmente en las aplicaciones. Las clases de acceso a Internet de los espacios de nombres <xref:System.Net> y <xref:System.Net.Sockets> se pueden usar para implementar aplicaciones basadas en Internet y en web.  
@@ -68,6 +69,6 @@ Microsoft .NET Framework proporciona una implementación por capas, extensible y
   
 ## <a name="see-also"></a>Vea también
 
-- [Programar protocolos acoplables](programming-pluggable-protocols.md)
+- [Programming Pluggable Protocols (Programar protocolos acoplables)](programming-pluggable-protocols.md)
 - [Programación para redes en .NET Framework](index.md)
-- [Ejemplos de programación de red](network-programming-samples.md)
+- [Network Programming Samples (Ejemplos de programación de red)](network-programming-samples.md)

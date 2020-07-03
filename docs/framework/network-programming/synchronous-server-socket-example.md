@@ -1,5 +1,6 @@
 ---
 title: Ejemplo de sockets de servidor sincrónicos
+description: En este ejemplo de programa de .NET Framework se crea un servidor que recibe conexiones de clientes mediante un socket sincrónico. Se recibe y se repite una cadena.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +10,15 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, synchronous server sockets
 ms.assetid: 5916c764-879f-4716-99fb-1d21c6237f1c
-ms.openlocfilehash: e8924051a7087ac26793722457f934e58a75f23d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0e2fb91dc493b2da4c68a98ac8a62494e78a9fd1
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180662"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502111"
 ---
 # <a name="synchronous-server-socket-example"></a>Ejemplo de sockets de servidor sincrónicos
-El programa de ejemplo siguiente crea un servidor que recibe solicitudes de conexión de clientes. El servidor se ha creado con un socket sincrónico, por lo que se suspende la ejecución de la aplicación de servidor mientras se espera una conexión desde un cliente. La aplicación recibe una cadena desde el cliente, la muestra en la consola y luego la devuelve al cliente. La cadena del cliente debe contener la cadena "\<EOF>" para indicar el final del mensaje.  
+El programa de ejemplo siguiente crea un servidor que recibe solicitudes de conexión de clientes. El servidor se ha creado con un socket sincrónico, por lo que se suspende la ejecución de la aplicación de servidor mientras se espera una conexión desde un cliente. La aplicación recibe una cadena desde el cliente, la muestra en la consola y luego la devuelve al cliente. La cadena del cliente debe contener "\<EOF>" para indicar el final del mensaje.  
   
 ```vb  
 Imports System  

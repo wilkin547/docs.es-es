@@ -1,5 +1,6 @@
 ---
 title: programar protocolos acoplables
+description: Obtenga información sobre la compatibilidad de las clases abstractas WebRequest y WebResponse con protocolos conectables, que permiten a una aplicación obtener datos sin necesidad de especificar un protocolo.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - downloading Internet resources, pluggable protocols
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 66ef8456-7576-4e97-8956-959b216373db
-ms.openlocfilehash: 94dfedd317782b9e518df02c84d9af55b1ef2b69
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 510f616295abc13d93e0e0af5a37aca097d343e3
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047401"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502202"
 ---
 # <a name="programming-pluggable-protocols"></a>programar protocolos acoplables
 Las clases abstractas <xref:System.Net.WebRequest> y <xref:System.Net.WebResponse> proporcionan la base para los protocolos conectables. Al derivar clases específicas del protocolo de <xref:System.Net.WebRequest> y <xref:System.Net.WebResponse>, una aplicación puede solicitar datos desde un recurso de Internet y leer la respuesta sin especificar el protocolo que se está usando.  
@@ -36,4 +37,4 @@ Las clases abstractas <xref:System.Net.WebRequest> y <xref:System.Net.WebRespons
 - [Derivar de WebRequest](deriving-from-webrequest.md)
 - [Derivar de WebResponse](deriving-from-webresponse.md)
 - [Programación para redes en .NET Framework](index.md)
-- [Cómo: convertir una WebRequest a propiedades específicas del protocolo de acceso](how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)
+- [Cómo: Convertir un elemento WebRequest a propiedades específicas del protocolo de acceso](how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)

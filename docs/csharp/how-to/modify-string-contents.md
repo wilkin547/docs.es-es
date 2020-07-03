@@ -3,16 +3,16 @@ title: Procedimiento para modificar el contenido de cadenas - Guía de C#
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: a32665b67cfa73aa7d4753a1427c6955827e1b86
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: e607a8a2e96a73f64463d75a75a2bfe3f518d118
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84663010"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324165"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Procedimiento para modificar el contenido de cadenas en C\#
 
-En este artículo se muestran varias técnicas para producir una `string` modificando una `string` existente. Todas las técnicas mostradas devuelven el resultado de las modificaciones como un objeto `string` nuevo. Para indicarlo de forma clara, en todos los ejemplos se almacena el resultado en una variable nueva. Entonces, podrá examinar tanto la `string` original como la `string` resultante de la modificación al ejecutar cada ejemplo.
+En este artículo se muestran varias técnicas para producir una `string` modificando una `string` existente. Todas las técnicas mostradas devuelven el resultado de las modificaciones como un objeto `string` nuevo. Para demostrar que las cadenas originales y modificadas son instancias distintas, los ejemplos almacenan el resultado en una variable nueva. Al ejecutar cada ejemplo, se puede examinar tanto el objeto `string` original como el objeto `string` nuevo y modificado.
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
@@ -68,7 +68,7 @@ Dado que las cadenas son inmutables, en los ejemplos anteriores se crean cadenas
 
 :::code language="csharp" source="../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs" id="Snippet7":::
 
-Puede modificar una cadena en un bloque fijo con código no seguro, pero es **totalmente** desaconsejable modificar el contenido de la cadena una vez que se ha creado. Si lo hace, puede haber problemas imprevisibles. Por ejemplo, si alguien se conecta a una cadena que tiene el mismo contenido que el suyo, obtendrá una copia y no esperará que usted modifique la cadena.
+Puede modificar una cadena en un bloque fijo con código no seguro, pero es **totalmente** desaconsejable modificar el contenido de la cadena una vez que se ha creado. Si lo hace, puede haber problemas imprevisibles. Por ejemplo, si alguien se conecta a una cadena que tiene el mismo contenido que la suya, esa persona obtendrá la copia de usted y no esperará que usted modifique la cadena.
 
 ## <a name="see-also"></a>Vea también
 

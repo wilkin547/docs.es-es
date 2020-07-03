@@ -1,18 +1,19 @@
 ---
-title: 'Cómo: habilitar un elemento WebRequest para usar un proxy para comunicarse con Internet'
+title: Procedimiento para habilitar un elemento WebRequest para usar un proxy para comunicarse con Internet
+description: Obtenga información sobre cómo crear una instancia de proxy global con el fin de permitir que cualquier WebRequest use un proxy para comunicarse con Internet en .NET Framework.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 63c0ef2c-44b5-4c54-9804-ba0b9b001ac7
-ms.openlocfilehash: 8b38973e4cb2c83ce32b8a08e54d828a8eeef879
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0fc33cea3f5a7fe4669b110e53e71afdb9561c23
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73039540"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502540"
 ---
-# <a name="how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet"></a>Cómo: habilitar un elemento WebRequest para usar un proxy para comunicarse con Internet
+# <a name="how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet"></a>Procedimiento para habilitar un elemento WebRequest para usar un proxy para comunicarse con Internet
 
 En este ejemplo se crea una instancia de proxy global que permitirá que cualquier <xref:System.Net.WebRequest> use un proxy para comunicarse con Internet. En el ejemplo se da por supuesto que el servidor proxy se denomina `webproxy` y que se comunica en el puerto 80, el puerto HTTP estándar.
 

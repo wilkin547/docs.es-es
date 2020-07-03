@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: f5fd61452d6f83bd035b5c6930bd09673c0ded23
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 34f9f2df11f9b7c51fcec2f8475a50ccf4c5e220
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662958"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324122"
 ---
 # <a name="how-to-search-strings"></a>Cómo buscar cadenas
 
@@ -27,7 +27,7 @@ Los métodos <xref:System.String.Contains%2A?displayProperty=nameWithType>, <xre
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs" id="Snippet1":::
 
-En el ejemplo anterior, se muestra un aspecto importante del uso de estos métodos. De manera predeterminada, las búsquedas **distinguen mayúsculas de minúsculas**. Use el valor de enumeración <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType> para especificar que se trata de una búsqueda que no distingue mayúsculas de minúsculas.
+En el ejemplo anterior, se muestra un aspecto importante del uso de estos métodos. De manera predeterminada, las búsquedas **distinguen mayúsculas de minúsculas**. El valor de enumeración <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType> se usa para especificar que se trata de una búsqueda que no distingue mayúsculas de minúsculas.
 
 ## <a name="where-does-the-sought-text-occur-in-a-string"></a>¿Dónde se encuentra el texto buscado en una cadena?
 
@@ -41,7 +41,7 @@ La clase <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType
 
 En el ejemplo de código siguiente, se busca la palabra "the" o "their" en una oración, sin distinción entre mayúsculas y minúsculas. El método estático <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> realiza la búsqueda. Se proporciona la cadena de búsqueda y un patrón de búsqueda. En este caso, un tercer argumento especifica que la búsqueda no distingue mayúsculas de minúsculas. Para obtener más información, vea <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.
 
-El patrón de búsqueda describe el texto que se busca. En la tabla siguiente, se describe cada elemento del patrón de búsqueda. (En la tabla siguiente, se usa el valor único `\` que se deben escribir como `\\` en una cadena de C#).
+El patrón de búsqueda describe el texto que se busca. En la tabla siguiente, se describe cada elemento del patrón de búsqueda. (En la tabla siguiente se usa un único símbolo `\`, que en una cadena de C# debe escribirse como `\\`).
 
 | Modelo  | Significado                          |
 |----------|----------------------------------|

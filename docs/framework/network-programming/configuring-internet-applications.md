@@ -1,5 +1,6 @@
 ---
 title: Configuración de aplicaciones de Internet
+description: Obtenga información sobre el uso del elemento <system.Net> para configurar aplicaciones de Internet en .NET Framework. Este artículo contiene código de ejemplo.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - downloading Internet resources, default proxy
@@ -21,15 +22,15 @@ helpviewer_keywords:
 - network resources, configuring Internet applications
 - Internet, default proxy
 ms.assetid: bb707c72-eed2-4a82-8800-c9e68df2fd4f
-ms.openlocfilehash: ee4dc87383153ae4e8df0a3bed7cce5220e65405
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 760a4ac7cec9abeabfc372c3be5bd3860a6fb03a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71048631"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502644"
 ---
 # <a name="configuring-internet-applications"></a>Configuración de aplicaciones de Internet
-El elemento de configuración [Elemento \<system.Net> (configuración de red)](../configure-apps/file-schema/network/system-net-element-network-settings.md) contiene información de configuración de red para las aplicaciones. Con el [Elemento \<system.Net> (configuración de red)](../configure-apps/file-schema/network/system-net-element-network-settings.md), puede establecer servidores proxy, establecer parámetros de administración de conexiones e incluir módulos personalizados de autenticación y solicitud en la aplicación.  
+El [Elemento \<system.Net> (configuración de red)](../configure-apps/file-schema/network/system-net-element-network-settings.md) contiene información sobre la configuración de red de las aplicaciones. Con el [Elemento \<system.Net> (configuración de red)](../configure-apps/file-schema/network/system-net-element-network-settings.md), puede establecer servidores proxy, establecer parámetros de administración de conexiones e incluir módulos personalizados de autenticación y solicitud en la aplicación.  
   
  El [Elemento \<defaultProxy> (configuración de red)](../configure-apps/file-schema/network/defaultproxy-element-network-settings.md) define el servidor proxy devuelto por la clase `GlobalProxySelection`. Cualquier elemento <xref:System.Net.HttpWebRequest> que no tenga su propia propiedad <xref:System.Net.HttpWebRequest.Proxy%2A> establecida en un valor específico, usa el proxy predeterminado. Además de establecer la dirección de proxy, puede crear una lista de direcciones de servidor que no vayan a usar el proxy y puede indicar que no se debería usar el proxy para direcciones locales.  
   

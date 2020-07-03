@@ -1,5 +1,6 @@
 ---
 title: Autenticación de NTLM y Kerberos
+description: Obtenga información sobre el funcionamiento de la autenticación NTLM predeterminada, la autenticación NTLM no predeterminada y la autenticación Kerberos en una aplicación de .NET Framework.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - classes [.NET Framework], authentication
 - client authentication, NTLM
 ms.assetid: 9ef65560-f596-4469-bcce-f4d5407b55cd
-ms.openlocfilehash: 372101763bdd84b454e6e2db3ec6cf0ebdf3f991
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d91ebca084d84acd4eb8facb82ff08679ec35cd0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180699"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502241"
 ---
 # <a name="ntlm-and-kerberos-authentication"></a>Autenticación de NTLM y Kerberos
 La autenticación NTLM predeterminada y la autenticación Kerberos usan las credenciales de usuario de Microsoft Windows NT asociadas a la aplicación que realiza la llamada para intentar la autenticación con el servidor. Cuando se usa la autenticación NTLM no predeterminada, la aplicación establece el tipo de autenticación en NTLM y usa un objeto <xref:System.Net.NetworkCredential> para pasar el nombre de usuario, la contraseña y el dominio al host, como se muestra en el ejemplo siguiente.  

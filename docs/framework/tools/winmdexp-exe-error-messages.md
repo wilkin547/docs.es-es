@@ -1,5 +1,6 @@
 ---
 title: Mensajes de error de Winmdexp.exe
+description: Información sobre los mensajes de error de Winmdexp.exe (herramienta de exportación de metadatos de Windows Runtime), que solo aparecen durante el proceso de compilación si la compilación de .NET se realiza correctamente.
 ms.date: 03/30/2017
 f1_keywords:
 - WME1095
@@ -157,14 +158,15 @@ helpviewer_keywords:
 - Windows Runtime Metadata Export Tool, error messages
 - error messages, Winmdexp.exe
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
-ms.openlocfilehash: e99bdd106c845964f63915c87617e30eb51488f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1b44273bd5a8868ba426d9ac0eabbefcb725e70f
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74447304"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325606"
 ---
 # <a name="winmdexpexe-error-messages"></a>Mensajes de error de Winmdexp.exe
+
 El proceso de compilación llama a [Winmdexp.exe (herramienta de exportación de metadatos de Windows Runtime)](winmdexp-exe-windows-runtime-metadata-export-tool.md) cuando se usa la plantilla **Componente de Windows Runtime** en Visual Studio 2012, por lo que aparecen mensajes de error de Winmdexp.exe en la **lista de errores**. Winmdexp.exe opera en un módulo compilado con la opción `/target:winmdobj`. Dado que requiere un módulo compilado como entrada, sus mensajes de error no aparecen a menos que la compilación se realice correctamente.  
   
  Los mensajes de error están diseñados para contener toda la información que necesita para solucionar las condiciones de error sobre las que informan. Pero algunos problemas requieren más información de la que cabe en el mensaje. Encontrará información adicional en [Diagnosticar condiciones de error del componente de Windows Runtime](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110)).  

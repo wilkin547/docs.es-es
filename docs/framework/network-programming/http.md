@@ -1,5 +1,6 @@
 ---
 title: HTTP
+description: Obtenga información sobre la compatibilidad total con HTTP que proporciona .NET Framework mediante el uso de las clases HttpWebRequest y HttpWebResponse.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - protocols, HTTP
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - HTTP, about HTTP
 - HttpWebRequest class, sending and receiving data
 ms.assetid: 985fe5d8-eb71-4024-b361-41fbdc1618d8
-ms.openlocfilehash: c8c799a50e5d63bbf411c338eb9e93f85a942bb0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ffb7a5d027ef7691d03caf0ac45d4a3dd9bdb652
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71048009"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502423"
 ---
 # <a name="http"></a>HTTP
 .NET Framework proporciona compatibilidad completa para el protocolo HTTP, que constituye la mayor parte de todo el tráfico de Internet, con las clases <xref:System.Net.HttpWebRequest> y <xref:System.Net.HttpWebResponse>. Estas clases, derivadas de <xref:System.Net.WebRequest> y <xref:System.Net.WebResponse>, se devuelven de manera predeterminada siempre que el método estático <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> detecte un URI que comience por "http" o "https". En la mayoría de los casos, las clases **WebRequest** y **WebResponse** proporcionan todo lo necesario para realizar la solicitud, pero si necesita tener acceso a las características específicas de HTTP expuestas como propiedades, puede convertir estas clases en **HttpWebRequest** o **HttpWebResponse**.  
@@ -35,4 +36,4 @@ ms.locfileid: "71048009"
 
 - [Acceso a Internet a través de un proxy](accessing-the-internet-through-a-proxy.md)
 - [Usar protocolos de aplicaciones](using-application-protocols.md)
-- [Cómo: obtener acceso a propiedades específicas de HTTP](how-to-access-http-specific-properties.md)
+- [Cómo: Acceder a propiedades específicas de HTTP](how-to-access-http-specific-properties.md)

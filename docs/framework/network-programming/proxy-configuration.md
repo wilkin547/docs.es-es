@@ -1,5 +1,6 @@
 ---
 title: Configuración de proxy
+description: Obtenga información sobre cómo configurar servidores proxy adaptables y estáticos. La configuración del proxy controla la manera en que un servidor proxy administra las solicitudes de recursos por parte de los clientes.
 ms.date: 06/18/2018
 helpviewer_keywords:
 - Networking
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-ms.openlocfilehash: 1fbfe25b90e810ff96924a2341582ff3f5ee5e5d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4d62f5736e9aa469be49d101e85851bc01b7c159
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047360"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141610"
 ---
 # <a name="proxy-configuration"></a>Configuración de proxy
 Un servidor proxy controla las solicitudes de cliente de recursos. Un proxy puede devolver un recurso solicitado de su caché o reenviar la solicitud al servidor donde reside el recurso. Los servidores proxy pueden mejorar el rendimiento de la red al reducir el número de solicitudes enviadas a servidores remotos. Los servidores proxy también pueden usarse para restringir el acceso a los recursos.  
@@ -53,7 +54,7 @@ Un servidor proxy controla las solicitudes de cliente de recursos. Un proxy pued
   
  En la siguiente tabla se muestran las opciones de configuración de un proxy estático.  
   
-|Parámetro, atributo o propiedad del archivo de configuración|Description|  
+|Parámetro, atributo o propiedad del archivo de configuración|Descripción|  
 |--------------------------------------------------------|-----------------|  
 |`proxyaddress` o <xref:System.Net.WebProxy.Address>|La dirección de proxy que se va a usar.|  
 |`bypassonlocal` o <xref:System.Net.WebProxy.BypassProxyOnLocal>|Controla si se omite el proxy para direcciones locales.|  
@@ -66,7 +67,7 @@ Un servidor proxy controla las solicitudes de cliente de recursos. Un proxy pued
 <system.net>  
     <defaultProxy>  
         <proxy  proxyaddress="http://proxy.contoso.com:3128"  
-                bypassonlocal="true"  
+                bypassonlocal="True"  
         />  
         <bypasslist>  
             <add address="[a-z]+.blueyonderairlines.com$" />  

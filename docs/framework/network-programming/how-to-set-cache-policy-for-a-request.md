@@ -1,5 +1,6 @@
 ---
-title: Cómo establecer una directiva de caché para una solicitud
+title: Procedimiento para establecer una directiva de caché para una solicitud
+description: Obtenga información sobre cómo establecer una directiva de caché para una solicitud en .NET Framework. Esta directiva de caché permite que se use un recurso de la memoria caché durante período de un día.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-ms.openlocfilehash: 4ad74d69391da0e815faf9c278f2d9bea03937d4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 248cbdd0921564898c5d3459cffa304793e85584
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180765"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502436"
 ---
-# <a name="how-to-set-cache-policy-for-a-request"></a>Cómo establecer una directiva de caché para una solicitud
+# <a name="how-to-set-cache-policy-for-a-request"></a>Procedimiento para establecer una directiva de caché para una solicitud
 En el ejemplo siguiente se muestra cómo establecer una directiva de caché para una solicitud. La entrada de ejemplo es un URI como `http://www.contoso.com/`.  
   
 ## <a name="example"></a>Ejemplo  
@@ -110,5 +111,5 @@ End Namespace
 - [Administración de la memoria caché para aplicaciones de red](cache-management-for-network-applications.md)
 - [Directiva de caché](cache-policy.md)
 - [Location-Based Cache Policies (Directivas de caché basadas en la ubicación)](location-based-cache-policies.md)
-- [Time-Based Cache Policies](time-based-cache-policies.md) (Directivas de caché de duración definida)
+- [Directivas de caché de duración definida](time-based-cache-policies.md)
 - [Elemento \<requestCaching> (configuración de red)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

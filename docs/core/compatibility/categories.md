@@ -1,24 +1,24 @@
 ---
-title: Categorías de cambios importantes
-description: Obtenga información sobre la forma de clasificar los cambios importantes en .NET Core.
+title: Compatibilidad
+description: Obtenga información sobre cómo pueden afectar los cambios en el código a la compatibilidad en .NET.
 ms.date: 06/10/2019
-ms.openlocfilehash: b273ebbb82da803cde66ea34760aa1779c6c1ca5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1cf14b7ff4143367653bd1c305cc1dda6711f980
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77093050"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415698"
 ---
-# <a name="breaking-change-categories"></a>Categorías de cambios importantes
+# <a name="how-code-changes-can-affect-compatibility"></a>Efectos de los cambios de código en la compatibilidad
 
-*Compatibilidad* hace referencia a la capacidad de compilar o ejecutar código en una versión de una implementación .NET distinta a la que se utilizó originalmente para desarrollar el código. Un cambio determinado puede repercutir en la compatibilidad de seis formas distintas. Los [tipos de cambios individuales](index.md) que se tienen en cuenta al evaluar la compatibilidad se clasifican en las siguientes categorías:
+*Compatibilidad* hace referencia a la capacidad de compilar o ejecutar código en una versión de una implementación .NET distinta a la que se utilizó originalmente para desarrollar el código. Un [cambio determinado](index.md) puede repercutir en la compatibilidad de seis formas distintas:
 
-- [cambio de comportamiento](#behavioral-change)
-- [compatibilidad binaria](#binary-compatibility)
-- [compatibilidad de origen](#source-compatibility)
-- [compatibilidad en tiempo de diseño](#design-time-compatibility)
-- [compatibilidad con versiones anteriores](#backwards-compatibility)
-- La [compatibilidad con versiones posteriores](#forward-compatibility) no es un objetivo de .NET Core.
+- [Cambio de comportamiento](#behavioral-change)
+- [Compatibilidad binaria](#binary-compatibility)
+- [Compatibilidad de origen](#source-compatibility)
+- [Compatibilidad en tiempo de diseño](#design-time-compatibility)
+- [Compatibilidad con versiones anteriores](#backwards-compatibility)
+- [Compatibilidad con versiones posteriores](#forward-compatibility) (no es un objetivo de .NET Core)
 
 ## <a name="behavioral-change"></a>Cambio de comportamiento
 

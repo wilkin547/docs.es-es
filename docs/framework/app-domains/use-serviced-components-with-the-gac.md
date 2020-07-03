@@ -1,5 +1,6 @@
 ---
 title: Utilizar componentes con servicio junto con la memoria caché global de ensamblados
+description: Use componentes con servicio (componentes COM+ de código administrado) con la caché global de ensamblados en .NET. Vea si los servicios CLR y COM+ pueden administrar componentes que no son de GAC.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - serviced components, global assembly cache
 - global assembly cache, serviced components
 ms.assetid: 3423e5d9-234c-4571-8161-e35f6d130128
-ms.openlocfilehash: 99627cb14088f037c58bfa1eec72bd4f88d06011
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6b7371865b7b1cedda0ee03b2cc28c74b5c3da0b
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119771"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104473"
 ---
 # <a name="using-serviced-components-with-the-global-assembly-cache"></a>Utilizar componentes con servicio junto con la memoria caché global de ensamblados
 Los componentes con servicio (componentes COM+ de código administrado) deben colocarse en la caché global de ensamblados. En algunos escenarios, Common Language Runtime y los Servicios COM+ pueden controlar los componentes con servicio que no están en la caché global de ensamblados; en otros escenarios no pueden. Estos escenarios ilustran lo siguiente:  

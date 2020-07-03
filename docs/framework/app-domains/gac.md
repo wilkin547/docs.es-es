@@ -1,5 +1,6 @@
 ---
 title: Caché global de ensamblados
+description: Obtenga información sobre la caché global de ensamblados. Se trata de una caché de código donde está instalado Common Language Runtime para .NET.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - global assembly cache, about
 - access control lists [.NET Framework]
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
-ms.openlocfilehash: 22adf103ce38e189a277405af220880d5ce0b1db
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7f08bb4cf279924b12432f259dae8ce5a8474285
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119918"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104907"
 ---
 # <a name="global-assembly-cache"></a>Caché global de ensamblados
 Cada equipo donde está instalado Common Language Runtime tiene una memoria caché de código denominada caché global de ensamblados. La caché global de ensamblados almacena los ensamblados designados específicamente para ser compartidos por varias aplicaciones del equipo.  

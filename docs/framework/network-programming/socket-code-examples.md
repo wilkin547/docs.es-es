@@ -1,5 +1,6 @@
 ---
 title: Ejemplos de código de socket
+description: Revise estos ejemplos de código para ver cómo se usa la clase Socket como cliente para conectarse a servicios de red y como servidor para escuchar las conexiones de los clientes.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application protocols, sockets
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: f3fc7533-6956-42c6-bbc3-73e5a221027d
-ms.openlocfilehash: cbb77907c018b9b8f56895adf21f1f353ab71f88
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0a0911a779ed3d4938ad7ff57f048c176cf677fb
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047298"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502163"
 ---
 # <a name="socket-code-examples"></a>Ejemplos de código de socket
 En los siguientes ejemplos de código se muestra cómo usar la clase <xref:System.Net.Sockets.Socket> como cliente para conectarse a servicios de red remotos y como servidor para escuchar las conexiones desde clientes remotos.  

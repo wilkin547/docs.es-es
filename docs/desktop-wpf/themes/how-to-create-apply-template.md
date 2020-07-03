@@ -1,7 +1,7 @@
 ---
 title: 'Creación de una plantilla en WPF: Escritorio de .NET'
 description: Obtenga información sobre cómo crear una plantilla de control y hacer referencia a esta en Windows Presentation Foundation y .NET Core.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 11/15/2019
 no-loc:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - skinning controls [WPF]
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
-ms.openlocfilehash: c901864d387b8de976bbfa9a9b3c14a7d5a0b4d8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c372659676b450cde789c96e45c7ec5de2aea194
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "81432543"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325728"
 ---
 # <a name="create-a-template-for-a-control"></a>Creación de una plantilla de un control
 
@@ -59,9 +59,9 @@ Cree una aplicación de WPF y, en *MainWindow.xaml* (o en otra ventana de su ele
 
 |     |     |
 | --- | --- |
-| **[!OP.NO-LOC(Title)]**         | `Template Intro Sample` |
-| **[!OP.NO-LOC(SizeToContent)]** | `WidthAndHeight` |
-| **[!OP.NO-LOC(MinWidth)]**      | `250` |
+| **Title**         | `Template Intro Sample` |
+| **SizeToContent** | `WidthAndHeight` |
+| **MinWidth**      | `250` |
 
 Configure el contenido del elemento **\<Window>** en el siguiente código XAML:
 
@@ -83,7 +83,7 @@ Para empezar, agregue un elemento `Window.Resources` al archivo *MainWindow.xaml
 
 [!code-xaml[WindowResStart](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window2.xaml#WindowResStart)]
 
-Cree un elemento **\<ControlTemplate>** con las siguientes propiedades configuradas:
+Cree un valor **\<ControlTemplate>** nuevo con las propiedades siguientes:
 
 |     |     |
 | --- | --- |
@@ -148,7 +148,7 @@ Posiblemente se haya dado cuenta de que el botón no es un círculo perfecto, si
 
 Aunque un botón que tiene una plantilla aplicada tiene un aspecto diferente, se comporta igual que cualquier otro botón. Si se presiona, se activa el evento <xref:System.Windows.Controls.Primitives.ButtonBase.Click>. Pese a ello, posiblemente se haya dado cuenta de que, al mover el ratón por el botón, sus elementos visuales no cambian. Todas estas interacciones visuales están definidas por la plantilla.
 
-Gracias a los sistemas de propiedades y eventos dinámicos que WPF proporciona, se puede ver una propiedad específica de un valor y, después, volver a aplicar el estilo de la plantilla cuando sea necesario. En este ejemplo, veremos la propiedad <xref:System.Windows.UIElement.IsMouseOver> del botón. Cuando el ratón esté sobre el control, aplique el estilo **\<Ellipse>** con un nuevo color. Este tipo de desencadenador se conoce como *PropertyTrigger*.
+Gracias a los sistemas de propiedades y eventos dinámicos que WPF proporciona, se puede ver una propiedad específica de un valor y, después, volver a aplicar el estilo de la plantilla cuando sea necesario. En este ejemplo, veremos la propiedad <xref:System.Windows.UIElement.IsMouseOver> del botón. Cuando el mouse esté sobre el control, aplique el estilo **\<Ellipse>** con un nuevo color. Este tipo de desencadenador se conoce como *PropertyTrigger*.
 
 Para que funcione, hay que agregar un nombre al elemento **\<Ellipse>** al que poder hacer referencia. Asígnele el nombre **backgroundElement**.
 
@@ -162,7 +162,7 @@ Después, agregue un elemento **\<Setter>** al elemento **\<Trigger>** , que cam
 
 [!code-xaml[MouseOver](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window5.xaml#MouseOver)]
 
-Ejecute el proyecto. Fíjese en que, al mover el ratón por el botón, el color de **\<Ellipse>** cambia.
+Ejecute el proyecto. Fíjese en que, al mover el mouse por el botón, el color de **\<Ellipse>** cambia.
 
 ![El ratón se mueve por el botón de WPF para cambiar el color de relleno](media/create-apply-template/mouse-move-over-button.gif)
 
@@ -170,15 +170,15 @@ Ejecute el proyecto. Fíjese en que, al mover el ratón por el botón, el color 
 
 Los estados visuales se definen y desencadenan a través de un control. Por ejemplo, cuando el ratón se mueve por el control, se desencadena el estado `CommonStates.MouseOver`. Los cambios de propiedad se pueden animar en función del estado actual del control. En la sección anterior, usamos un elemento **\<PropertyTrigger>** para cambiar el primer plano del botón a `AliceBlue` cuando la propiedad `IsMouseOver` era `true`. Esta vez, cree un estado visual que anime el cambio de este color a través de una transición suave. Para más información sobre los elementos *VisualState*, vea [Estilos y plantillas en WPF](../fundamentals/styles-templates-overview.md#visual-states).
 
-Para convertir el elemento **\<PropertyTrigger>** a un estado visual animado, quite en primer lugar el elemento **\<ControlTemplate.Triggers>** de la plantilla.
+Para convertir **\<PropertyTrigger>** a un estado visual animado, quite en primer lugar el elemento **\<ControlTemplate.Triggers>** de la plantilla.
 
 [!code-xaml[CleanTemplate](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window5.xaml#CleanTemplate)]
 
-Después, en el elemento raíz **\<Grid>** de la plantilla de control, agregue el elemento **\<VisualStateManager.VisualStateGroups>** con un elemento **\<VisualStateGroup>** para `CommonStates`. Defina dos estados, `Normal` y `MouseOver`.
+A continuación, en la raíz **\<Grid>** de la plantilla de control, agregue el elemento **\<VisualStateManager.VisualStateGroups>** con un **\<VisualStateGroup>** para `CommonStates`. Defina dos estados, `Normal` y `MouseOver`.
 
 [!code-xaml[VisualState](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window6.xaml#VisualState)]
 
-Cuando ese estado se desencadene, se aplicarán las animaciones definidas en el elemento **\<VisualState>** . Cree animaciones para cada estado. Las animaciones se colocan en un elemento **\<Storyboard>** . Para más información sobre los elementos Storyboard, vea [Información general sobre los elementos Storyboard](../../framework/wpf/graphics-multimedia/storyboards-overview.md).
+Cuando ese estado se desencadene, se aplicarán las animaciones definidas en el elemento **\<VisualState>** . Cree animaciones para cada estado. Las animaciones se colocan en un elemento **\<Storyboard>** . Para obtener más información sobre los guiones gráficos, vea [Información general sobre guiones gráficos](../../framework/wpf/graphics-multimedia/storyboards-overview.md).
 
 - Normal
 
@@ -192,11 +192,11 @@ Cuando ese estado se desencadene, se aplicarán las animaciones definidas en el 
 
   [!code-xaml[MouseOverState](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window6.xaml#MouseOverState)]
 
-Ahora, **\<ControlTemplate>** debería tener el siguiente aspecto.
+**\<ControlTemplate>** debería tener ahora un aspecto similar al siguiente.
 
 [!code-xaml[FinalTemplate](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window7.xaml#FinalTemplate)]
 
-Ejecute el proyecto. Fíjese en que, al mover el ratón por el botón, el color de **\<Ellipse>** se anima.
+Ejecute el proyecto. Fíjese en que, al mover el mouse por el botón, el color de **\<Ellipse>** se cobra movimiento.
 
 ![El ratón se mueve por el botón de WPF para cambiar el color de relleno](media/create-apply-template/mouse-move-over-button-visualstate.gif)
 

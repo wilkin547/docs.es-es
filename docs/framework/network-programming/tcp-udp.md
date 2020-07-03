@@ -1,5 +1,6 @@
 ---
 title: TCP-UDP
+description: Obtenga información sobre las clases TcpClient, TcpListener y UdpClient y el modo en que controlan los servicios TCP y UDP, encargados de los detalles de la transferencia de datos en .NET Framework.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - protocols, TCP/UDP
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - requesting data from Internet, TCP/UDP
 - Internet, TCP/UDP
 ms.assetid: df29b4b0-49e8-4923-82b9-13150dfc40f5
-ms.openlocfilehash: d35278ab7feb42453b5a0adbc86c47b7ac3ff5ca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ae6d2f9ced2235aa1b9b8fada8064d7e4be970a0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047110"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502098"
 ---
 # <a name="tcp-udp"></a>TCP-UDP
 Las aplicaciones pueden usar servicios de Protocolo de control de transmisión (TCP) y de Protocolo de datagramas de usuario (UDP) con las clases <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> y <xref:System.Net.Sockets.UdpClient>. Estas clases de protocolo se basan en la clase <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> y se encargan de los detalles de la transferencia de datos.  

@@ -1,5 +1,6 @@
 ---
 title: sockets
+description: Obtenga información sobre la clase Socket de .NET Framework, que es una versión de código administrado de los servicios de socket proporcionados por la API Winsock32.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application protocols, sockets
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 10d22735-bd37-42c1-a2be-c1932f979a7d
-ms.openlocfilehash: cffad6b4677a880bd63f5ae0232c639f7a262c59
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b44409a0fafc770625be55881ccef3b57045acef
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047255"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502137"
 ---
 # <a name="sockets"></a>sockets
 El espacio de nombres <xref:System.Net.Sockets> contiene una implementación administrada de la interfaz de Windows Sockets. Las demás clases de acceso a la red del espacio de nombres <xref:System.Net> se basan en esta implementación de sockets.  
@@ -31,6 +32,6 @@ El espacio de nombres <xref:System.Net.Sockets> contiene una implementación adm
   
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: crear un socket](how-to-create-a-socket.md)
+- [Cómo: Crear un socket](how-to-create-a-socket.md)
 
 - [Usar protocolos de aplicaciones](using-application-protocols.md)

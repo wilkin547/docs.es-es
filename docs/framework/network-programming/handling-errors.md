@@ -1,5 +1,6 @@
 ---
 title: Control de errores
+description: Obtenga información sobre las excepciones del sistema y de la web iniciadas por WebRequest y WebResponse. Use la propiedad Status para entender y resolver el problema.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: f5be5d8e14d7aa2d98009fc10c9cce314e745ed1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 786b2bd8bc4d1b394bcfe920053b2f4f55d1cdea
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180864"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502579"
 ---
 # <a name="handling-errors"></a>Control de errores
 
@@ -46,7 +47,7 @@ Cada **WebException** incluye una propiedad <xref:System.Net.WebException.Status
   
 En la tabla siguiente se describen los valores posibles de la propiedad **Status**.  
   
-|Situación|Description|  
+|Situación|Descripción|  
 |------------|-----------------|  
 |ConnectFailure|No se ha podido contactar con el servicio remoto en el nivel de transporte.|  
 |ConnectionClosed|La conexión ha terminado antes de tiempo.|  

@@ -1,5 +1,6 @@
 ---
 title: Direccionamiento IPv6
+description: Obtenga información sobre la versión 6 del protocolo de Internet (IPv6), las direcciones, la representación de texto y los tipos de dirección.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Internet Protocol version 6, addresses in
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-ms.openlocfilehash: 1bad43b96fc6f66724e5e40cdf0ae6d76b46d867
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fbf68cb5f40450c2f9ecf4900801ee55e326fcb4
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047854"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502345"
 ---
 # <a name="ipv6-addressing"></a>Direccionamiento IPv6
 
@@ -55,7 +56,7 @@ Una dirección de unidifusión de IPv6 se divide en dos partes. La primera parte
 
 A continuación se muestra un ejemplo de una dirección con un prefijo de 64 bits.
 
-`3FFE:FFFF:0:CD30:0:0:0:0/64`Operador
+`3FFE:FFFF:0:CD30:0:0:0:0/64`.
 
 El prefijo de este ejemplo es `3FFE:FFFF:0:CD30`. La dirección también se puede escribir en formato comprimido, como `3FFE:FFFF:0:CD30::/64`.
 
@@ -63,11 +64,11 @@ IPv6 define los siguientes tipos de dirección:
 
 - **Dirección de unidifusión**. Identificador de una única interfaz. Un paquete enviado a esta dirección se entrega a la interfaz identificada. Las direcciones de unidifusión se diferencian de las direcciones de multidifusión por el valor del octeto de orden superior. El octeto de orden superior de las direcciones de multidifusión tiene el valor hexadecimal de FF. Los demás valores de este octeto identifican una dirección de unidifusión. A continuación se muestran diferentes tipos de direcciones de unidifusión:
 
-  - **Direcciones locales de vínculo**. Estas direcciones se usan en un único vínculo y tienen el formato siguiente: FE80::*InterfaceID*. Las direcciones locales de vínculo se usan entre nodos en un vínculo para la configuración de dirección automática, la detección de equipos cercanos o cuando no hay enrutadores presentes. Las direcciones locales de vínculo se usan principalmente en el inicio y cuando el sistema todavía no ha adquirido direcciones de ámbito mayor.
+  - **Direcciones locales de vínculo**. Estas direcciones se usan en un único vínculo y tienen el formato siguiente: FE80::*IdentificadorDeInterfaz*. Las direcciones locales de vínculo se usan entre nodos en un vínculo para la configuración de dirección automática, la detección de equipos cercanos o cuando no hay enrutadores presentes. Las direcciones locales de vínculo se usan principalmente en el inicio y cuando el sistema todavía no ha adquirido direcciones de ámbito mayor.
 
-  - **Direcciones locales de sitio**. Estas direcciones se usan en un único sitio y tienen el formato siguiente: FEC0::*SubnetID*:*InterfaceID*. Las direcciones locales de sitio se usan para el direccionamiento dentro de un sitio sin necesidad de un prefijo global.
+  - **Direcciones locales de sitio**. Estas direcciones se usan en un único sitio y tienen el formato siguiente: FEC0::*IdentificadorDeSubred*:*IdentificadorDeInterfaz*. Las direcciones locales de sitio se usan para el direccionamiento dentro de un sitio sin necesidad de un prefijo global.
 
-  - **Direcciones de unidifusión IPv6 globales**. Estas direcciones pueden usarse en Internet y tienen el formato siguiente: 010(FP, 3 bits) TLA ID (13 bits) Reserved (8 bits) NLA ID (24 bits) SLA ID (16 bits) *InterfaceID* (64 bits).
+  - **Direcciones de unidifusión IPv6 globales**. Estas direcciones se pueden usar en Internet y tienen el formato siguiente: 010(FP, 3 bits) TLA ID (13 bits) Reserved (8 bits) NLA ID (24 bits) SLA ID (16 bits) *IdentificadorDeInterfaz* (64 bits).
 
 - **Dirección de multidifusión**. Identificador para un conjunto de interfaces (normalmente pertenecientes a diferentes nodos). Un paquete enviado a esta dirección se entrega a todas las interfaces identificadas por la dirección. Los tipos de dirección de multidifusión sustituyen a las direcciones de difusión IPv4.
 

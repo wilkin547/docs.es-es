@@ -2,12 +2,12 @@
 title: Scripts de dotnet-install
 description: Obtenga información sobre los scripts de dotnet-install para instalar el SDK de .NET Core y el entorno de ejecución compartido.
 ms.date: 04/30/2020
-ms.openlocfilehash: 9f5cef9cfcca1d8b344021efe803c063a7393f8e
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: d03877d76212f7b22de0a1075cf50fc75bd104b6
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83802722"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324427"
 ---
 # <a name="dotnet-install-scripts-reference"></a>referencia de scripts de dotnet-install
 
@@ -28,7 +28,7 @@ dotnet-install.ps1 [-Architecture <ARCHITECTURE>] [-AzureFeed]
     [-SkipNonVersionedFiles] [-UncachedFeed] [-Verbose]
     [-Version <VERSION>]
 
-dotnet-install.ps1 -Help
+Get-Help ./dotnet-install.ps1
 ```
 
 Linux/macOS:
@@ -44,24 +44,47 @@ dotnet-install.sh  [--architecture <ARCHITECTURE>] [--azure-feed]
 dotnet-install.sh --help
 ```
 
+El script de bash también lee modificadores de PowerShell, por lo que puede usar modificadores de PowerShell con el script en sistemas Linux y macOS.
+
 ## <a name="description"></a>Descripción
 
-Los scripts `dotnet-install` se usan para realizar una instalación sin derechos administrativos del SDK de .NET Core, que incluye la CLI de .NET Core y el entorno de tiempo de ejecución compartido.
+Los scripts `dotnet-install` realizan una instalación sin derechos administrativos del SDK de .NET Core, que incluye la CLI de .NET Core y el entorno de tiempo de ejecución compartido. Hay dos scripts:
+
+* un script de PowerShell que funciona en Windows;
+* un script de Bash que funciona en Linux y macOS.
+
+### <a name="purpose"></a>Propósito
+
+ El uso previsto de los scripts es en escenarios de integración continua (CI), donde:
+
+* el SDK debe instalarse sin interacción del usuario y sin derechos de administrador;
+* no es necesario que la instalación del SDK se mantenga en varias ejecuciones de CI.
+
+  Esta es la secuencia típica de eventos:
+  * Se desencadena la CI.
+  * CI instala el SDK mediante uno de estos scripts.
+  * CI finaliza su trabajo y borra los datos temporales, incluida la instalación del SDK.
+
+Para configurar un entorno de desarrollo o ejecutar aplicaciones, use los instaladores en lugar de estos scripts.
+
+### <a name="recommended-version"></a>Versión recomendada
 
 Se recomienda usar la versión estable de los scripts:
 
 - Bash (Linux/macOS): <https://dot.net/v1/dotnet-install.sh>
 - PowerShell (Windows): <https://dot.net/v1/dotnet-install.ps1>
 
-La utilidad principal de estos scripts está en los escenarios de automatización y las instalaciones sin derechos administrativos. Existen dos scripts: uno es un script de PowerShell que funciona en Windows y el otro es un script de Bash que funciona en Linux y macOS. Ambos scripts tienen el mismo comportamiento. El script de bash también lee modificadores de PowerShell, por lo que puede usar modificadores de PowerShell con el script en sistemas Linux y macOS.
+### <a name="script-behavior"></a>Comportamiento de los scripts
 
-Los scripts de instalación descargan el archivo ZIP o tarball desde las entregas de compilación de la CLI y proceden a instalarlo en la ubicación predeterminada o en una ubicación especificada por `-InstallDir|--install-dir`. De forma predeterminada, los scripts de instalación descargan el SDK y lo instalan. Si desea obtener solo el tiempo de ejecución compartido, especifique el argumento `-Runtime|--runtime`.
+Ambos scripts tienen el mismo comportamiento. Descargan el archivo ZIP o tarball desde las entregas de compilación de la CLI y proceden a instalarlo en la ubicación predeterminada o en una ubicación especificada por `-InstallDir|--install-dir`.
 
-De forma predeterminada, el script agrega la ubicación de instalación a $PATH para la sesión actual. Para invalidar este comportamiento, especifique el argumento `-NoPath|--no-path`.
+De forma predeterminada, los scripts de instalación descargan el SDK y lo instalan. Si desea obtener solo el tiempo de ejecución compartido, especifique el argumento `-Runtime|--runtime`.
+
+De forma predeterminada, el script agrega la ubicación de instalación a $PATH para la sesión actual. Para invalidar este comportamiento, especifique el argumento `-NoPath|--no-path`. El script no establece la variable de entorno `DOTNET_ROOT`.
 
 Antes de ejecutar el script, instale las [dependencias](../install/dependencies.md) necesarias.
 
-Puede instalar una versión específica mediante el argumento `-Version|--version`. La versión debe especificarse como una versión de tres partes (por ejemplo, `2.1.0`). Si no se proporciona, usa la versión `latest`.
+Puede instalar una versión específica mediante el argumento `-Version|--version`. La versión debe especificarse como un número de versión de tres partes, por ejemplo, `2.1.0`. Si no se especifica la versión, el script instala la versión `latest`.
 
 Los scripts de instalación no actualizan el Registro en Windows. Solo descargan los archivos binarios comprimidos y los copian en una carpeta. Si desea que se actualicen los valores de las claves del Registro, use los instaladores de .NET Core.
 
@@ -94,9 +117,9 @@ Los scripts de instalación no actualizan el Registro en Windows. Solo descargan
 
   Se utiliza como una cadena de consulta para anexar a la fuente de Azure. Permite cambiar la dirección URL para usar cuentas de almacenamiento de blobs no público.
 
-- **`-Help|--help`**
+- **`--help`**
 
-  Imprime la ayuda para el script.
+  Imprime la ayuda para el script. Solo se aplica al script de Bash. Para PowerShell, use `Get-Help ./dotnet-install.ps1`.
 
 - **`-InstallDir|--install-dir <DIRECTORY>`**
 

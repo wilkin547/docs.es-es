@@ -1,19 +1,19 @@
 ---
 title: 'Instalación y administración de plantillas de SDK: .NET Core'
 description: Obtenga información sobre cómo instalar plantillas de .NET Core en Windows, Linux y macOS.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 04/24/2020
 zone_pivot_groups: operating-systems-set-one
 no-loc:
 - dotnet new
 - dotnet nuget add source
-ms.openlocfilehash: 0a3c8655d55bf63de1e91337ce3a2ac399b07d0f
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 09acae1409eb0492be10bd3a61b14da5be57c6c7
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200604"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324490"
 ---
 # <a name="manage-net-project-and-item-templates"></a>Administración de plantillas de proyectos y elementos de .NET
 
@@ -23,13 +23,13 @@ Para obtener más información sobre la creación de plantillas, consulte [Tutor
 
 ## <a name="install-template"></a>Instalación de plantillas
 
-Las plantillas se instalan a través del comando [dotnet new](../tools/dotnet-new.md) del SDK con el parámetro `-i`. Puede proporcionar el identificador de paquete NuGet de una plantilla o una carpeta que contenga los archivos de plantilla.
+Las plantillas se instalan mediante el comando [dotnet new](../tools/dotnet-new.md) del SDK con el parámetro `-i`. Puede proporcionar el identificador de paquete NuGet de una plantilla o una carpeta que contenga los archivos de plantilla.
 
 ### <a name="nuget-hosted-package"></a>Paquete hospedado en NuGet
 
 Las plantillas de la CLI de .NET se cargan en [NuGet](https://www.nuget.org/) para una distribución amplia. Las plantillas también se pueden instalar desde una fuente privada. En lugar de cargar una plantilla en una fuente de NuGet, los archivos de plantilla de *nupkg* se pueden distribuir e instalar manualmente, tal como se describe en la sección [Paquete NuGet local](#local-nuget-package).
 
-Para obtener más información sobre la configuración de fuentes de NuGet, consulte [dotnet nuget add source](../tools/dotnet-nuget-add-source.md).
+Para obtener más información sobre cómo configurar las fuentes de NuGet, vea [dotnet nuget add source](../tools/dotnet-nuget-add-source.md).
 
 Para instalar un paquete de plantillas desde la fuente de NuGet predeterminada, use el comando `dotnet new -i {package-id}`:
 
@@ -127,7 +127,7 @@ Currently installed items:
 
 ## <a name="uninstall-template"></a>Desinstalación de plantillas
 
-Las plantillas se desinstalan a través del comando [dotnet new](../tools/dotnet-new.md) del SDK con el parámetro `-u`. Puede proporcionar el identificador de paquete NuGet de una plantilla o una carpeta que contenga los archivos de plantilla.
+Las plantillas se desinstalan mediante el comando [dotnet new](../tools/dotnet-new.md) del SDK con el parámetro `-u`. Puede proporcionar el identificador de paquete NuGet de una plantilla o una carpeta que contenga los archivos de plantilla.
 
 ### <a name="nuget-package"></a>Detección de
 

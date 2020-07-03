@@ -1,5 +1,6 @@
 ---
 title: Procedimiento para compilar un ensamblado de varios archivos
+description: Obtenga información sobre cómo compilar (crear) un ensamblado de varios archivos en .NET con código de ejemplo para ilustrar cada paso del procedimiento.
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
@@ -17,12 +18,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
-ms.openlocfilehash: 0f8c6d57425657e321d80f9edffa20f27bc28770
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a4c298284950ba2989bb73e6d3383b3c4024e6e7
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429557"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104951"
 ---
 # <a name="how-to-build-a-multifile-assembly"></a>Procedimiento para compilar un ensamblado de varios archivos
 
@@ -209,7 +210,7 @@ En este artículo se explica cómo crear un ensamblado de múltiples archivos e 
 
     En el símbolo del sistema, escriba el siguiente comando:
 
-    **al** \<*nombre del módulo*> \<*nombre del módulo*> … **/main:** \<*nombre del método*>  **/out:** \<*nombre del archivo*>  **/target:** \<*tipo de archivo de ensamblado*>
+    **al** \<*module name*> \<*module name*> … **/main:** \<*method name*> **/out:** \<*file name*> **/target:** \<*assembly file type*>
 
     En este comando, los argumentos de *nombre del módulo* especifican el nombre de todos los módulos que se van a incluir en el ensamblado. La opción **/main:** especifica el nombre del método que es el punto de entrada del ensamblado. La opción **/out:** especifica el nombre del archivo de salida, que contiene metadatos del ensamblado. La opción **/target:** especifica que el ensamblado es un archivo ejecutable de aplicación de consola ( *.exe*), un archivo ejecutable de Windows ( *.win*) o un archivo de biblioteca ( *.lib*).
 

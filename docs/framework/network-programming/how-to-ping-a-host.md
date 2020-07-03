@@ -1,17 +1,18 @@
 ---
-title: 'Cómo: hacer ping a un Host'
+title: Procedimiento para hacer ping a un host
+description: Con este código de ejemplo obtendrá información sobre cómo hacer ping a un host remoto en .NET Framework. Para este ejemplo se necesitan referencias al espacio de nombres System.Net.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Ping
 ms.assetid: bbf20f5b-eca1-4661-af04-cb8837f9af05
-ms.openlocfilehash: 09ae830bbef078b94bd28e654d93c10cde6108fd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ac62f58eea41419de2d5651269154d9abb757aba
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180784"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502501"
 ---
-# <a name="how-to-ping-a-host"></a>Cómo: hacer ping a un Host
+# <a name="how-to-ping-a-host"></a>Procedimiento para hacer ping a un host
 En este ejemplo se muestra cómo hacer ping a un host remoto.  
   
 ## <a name="example"></a>Ejemplo  

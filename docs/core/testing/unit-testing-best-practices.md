@@ -4,12 +4,12 @@ description: Obtenga información sobre los procedimientos recomendados para esc
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 9115ff69b269e3723820fd8505d1a9f8ca278d12
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 8a879c16e48dfde617f9cd20f58cab96039361f0
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84989373"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324474"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Procedimientos recomendados de pruebas unitarias con .NET Core y .NET Standard
 
@@ -56,11 +56,11 @@ Un alto porcentaje de cobertura de código suele ir asociado a una mayor calidad
 Un alto porcentaje de cobertura de código no es un indicador de éxito, ni implica una alta calidad del código. Simplemente representa la cantidad de código cubierta por las pruebas unitarias. Para obtener más información, vea [Cobertura de código de pruebas unitarias](unit-testing-code-coverage.md).
 
 ## <a name="lets-speak-the-same-language"></a>Vamos a hablar el mismo idioma
-El término *ficticio* desafortunadamente se emplea muy mal cuando se habla sobre las pruebas. A continuación se definen los tipos más comunes de *emulaciones* al escribir pruebas unitarias:
+Desafortunadamente, el término *ficticio* se emplea de forma incorrecta al referirse a las pruebas. Los puntos siguientes definen los tipos más comunes de *emulaciones* al escribir pruebas unitarias:
 
 *Emulación*: una emulación es un término genérico que se puede usar para describir un stub o un objeto ficticio. Si es un stub o un objeto ficticio depende del contexto en el que se use. Es decir, una emulación puede ser un stub o un objeto ficticio.
 
-*Objeto ficticio*: un objeto ficticio es una emulación del sistema que decide si una prueba unitaria se ha superado o no. Un objeto ficticio comienza como una emulación hasta que se declara en ella.
+*Objeto ficticio*: un objeto ficticio es una emulación del sistema que decide si una prueba unitaria se ha superado o no. Un objeto ficticio comienza como una emulación hasta que se declara una instrucción Assert en ella.
 
 *Stub*: un stub es un reemplazo controlable para una dependencia existente (o colaborador) en el sistema. Con un stub, puede probar el código sin tratar directamente con la dependencia. De forma predeterminada, una emulación empieza como un stub.
 
@@ -75,7 +75,7 @@ purchase.ValidateOrders();
 Assert.True(purchase.CanBeShipped);
 ```
 
-Es un ejemplo de stub al que se hace referencia como un objeto ficticio. En este caso, es un stub. Simplemente está pasando el pedido para poder crear una instancia de `Purchase` (el sistema sometido a prueba). El nombre `MockOrder` también es muy confuso porque, una vez más, el pedido no es un objeto ficticio.
+Es un ejemplo de stub al que se hace referencia como un objeto ficticio. En este caso, es un stub. Simplemente está pasando el pedido para poder crear una instancia de `Purchase` (el sistema sometido a prueba). El nombre `MockOrder` también es confuso porque, una vez más, el pedido no es un objeto ficticio.
 
 Un mejor enfoque sería
 
@@ -88,7 +88,7 @@ purchase.ValidateOrders();
 Assert.True(purchase.CanBeShipped);
 ```
 
-Al cambiar el nombre de la clase `FakeOrder`, la ha convertido en mucho más genérica, con lo que puede usarse como objeto ficticio o stub. Lo que sea mejor para el caso de prueba. En el ejemplo anterior, `FakeOrder` se usa como un stub. No usa `FakeOrder` de ninguna forma durante la aserción. `FakeOrder` simplemente se ha pasado a la clase `Purchase` para satisfacer los requisitos del constructor.
+Al cambiar el nombre de la clase `FakeOrder`, la ha convertido en mucho más genérica, con lo que puede usarse como objeto ficticio o stub. Lo que sea mejor para el caso de prueba. En el ejemplo anterior, `FakeOrder` se usa como un stub. No usa `FakeOrder` de ninguna forma durante la aserción. `FakeOrder` se ha pasado a la clase `Purchase` para satisfacer los requisitos del constructor.
 
 Para usarlo como un objeto ficticio, podría hacer algo parecido a esto:
 
@@ -157,7 +157,7 @@ La entrada que se use en una prueba unitaria debe ser lo más sencilla posible p
 - Las pruebas se hacen más resistentes a los cambios futuros en el código base.
 - Más cercano al comportamiento de prueba que a la implementación.
 
-Las pruebas que incluyen más información de la necesaria para superarse tienen una mayor posibilidad de incorporar errores en la prueba y pueden hacer confusa su intención. Al escribir pruebas, el usuario quiere centrarse en el comportamiento. El establecimiento de propiedades adicionales en los modelos o el empleo de valores distintos de cero cuando no es necesario solo resta de lo que se quiere probar.
+Las pruebas que incluyen más información de la necesaria para superarse tienen una mayor posibilidad de incorporar errores en la prueba y pueden hacer confusa su intención. Al escribir pruebas, queremos centrarnos en el comportamiento. El establecimiento de propiedades adicionales en los modelos o el empleo de valores distintos de cero cuando no es necesario solo resta de lo que se quiere probar.
 
 #### <a name="bad"></a>Malo:
 [!code-csharp[BeforeMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMinimallyPassing)]

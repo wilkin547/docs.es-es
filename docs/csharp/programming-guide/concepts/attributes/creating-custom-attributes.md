@@ -2,12 +2,12 @@
 title: Crear atributos personalizados (C#)
 ms.date: 07/20/2015
 ms.assetid: 500e1977-c6de-462d-abce-78a0eb1eda22
-ms.openlocfilehash: ec959723c339a13a40fd62388421ceacb736dfca
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 3a70b738b376e52482e63f2eb9cc4d7bb62a9b35
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389555"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141623"
 ---
 # <a name="creating-custom-attributes-c"></a>Crear atributos personalizados (C#)
 Para crear sus propios atributos personalizados, defina una clase de atributo derivada directa o indirectamente de <xref:System.Attribute>, que agiliza y facilita la identificación de las definiciones de atributos en los metadatos. Imagínese que desea etiquetar tipos con el nombre del programador que los escribió. Puede definir una clase de atributos `Author` personalizada:  
@@ -16,12 +16,12 @@ Para crear sus propios atributos personalizados, defina una clase de atributo de
 [System.AttributeUsage(System.AttributeTargets.Class |  
                        System.AttributeTargets.Struct)  
 ]  
-public class Author : System.Attribute  
+public class AuthorAttribute : System.Attribute  
 {  
     private string name;  
     public double version;  
   
-    public Author(string name)  
+    public AuthorAttribute(string name)  
     {  
         this.name = name;  
         version = 1.0;  
@@ -29,7 +29,7 @@ public class Author : System.Attribute
 }  
 ```  
   
- El nombre de la clase es el nombre del atributo, `Author`. Se deriva de `System.Attribute`, por lo que es una clase de atributo personalizada. Los parámetros del constructor son los parámetros posicionales del atributo personalizado. En este ejemplo, `name` es un parámetro posicional. Las propiedades o los campos públicos de lectura y escritura son parámetros con nombre. En este caso, `version` es el único parámetro con nombre. Observe el uso del atributo `AttributeUsage` para hacer que el atributo `Author` sea válido solo en las declaraciones de clase y de `struct`.  
+ El nombre de la clase `AuthorAttribute` es el nombre del atributo, `Author`, al que se le agrega el sufijo `Attribute`. Se deriva de `System.Attribute`, por lo que es una clase de atributo personalizada. Los parámetros del constructor son los parámetros posicionales del atributo personalizado. En este ejemplo, `name` es un parámetro posicional. Las propiedades o los campos públicos de lectura y escritura son parámetros con nombre. En este caso, `version` es el único parámetro con nombre. Observe el uso del atributo `AttributeUsage` para hacer que el atributo `Author` sea válido solo en las declaraciones de clase y de `struct`.  
   
  Puede usar este nuevo atributo de la siguiente manera:  
   
@@ -48,7 +48,7 @@ class SampleClass
                        System.AttributeTargets.Struct,  
                        AllowMultiple = true)  // multiuse attribute  
 ]  
-public class Author : System.Attribute  
+public class AuthorAttribute : System.Attribute  
 ```  
   
  En el ejemplo de código siguiente se aplican varios atributos del mismo tipo a una clase.  

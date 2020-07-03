@@ -1,18 +1,18 @@
 ---
 title: Referencia de comandos de la CLI de ML.NET
 description: Información general, ejemplos y referencia del comando de entrenamiento automático en la herramienta de la CLI de ML.NET.
-ms.date: 12/18/2019
+ms.date: 06/03/2020
 ms.custom: mlnet-tooling
-ms.openlocfilehash: bb161c596a76134876ee2bf0a6229bc551e0dad2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 397f6fda8554024624b3ef630856dc8eca9696b2
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78848930"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594548"
 ---
 # <a name="the-mlnet-cli-command-reference"></a>Referencia de comandos de la CLI de ML.NET
 
-El comando `auto-train` es el comando principal proporcionado por la herramienta de la CLI de ML.NET. El comando permite generar un modelo de ML.NET de buena calidad mediante el aprendizaje automático automatizado (AutoML) además del código de C# de ejemplo para ejecutar o calificar dicho modelo. Además, se genera código C# para entrenar el modelo y poder investigar el algoritmo y la configuración del modelo.
+Los comandos `classification`, `regression` y `recommendation` son los comandos principales proporcionados por la herramienta CLI de ML.NET. Estos comandos permiten generar modelos de ML.NET de buena calidad que pueden usarse con fines de clasificación, regresión y recomendación mediante el aprendizaje automático automatizado (AutoML) y el código C# de ejemplo para ejecutar o calificar dicho modelo. Además, se genera código C# para entrenar el modelo y poder investigar el algoritmo y la configuración del modelo.
 
 > [!NOTE]
 > Este tema hace referencia a la CLI de ML.NET y AutoML de ML.NET, que se encuentran actualmente en versión preliminar, por lo que el material está sujeto a cambios.
@@ -22,10 +22,10 @@ El comando `auto-train` es el comando principal proporcionado por la herramienta
 Ejemplo de uso:
 
 ```console
-mlnet auto-train --task regression --dataset "cars.csv" --label-column-name price
+mlnet regression --dataset "cars.csv" --label-col price
 ```
 
-El comando `mlnet auto-train` genera los siguientes recursos:
+Los comandos de la tarea de ML `mlnet` (`classification`, `regression` y `recommendation`) generan los recursos siguientes:
 
 - Un archivo .zip de modelo serializado ("mejor modelo") listo para usarse.
 - Código C# para ejecutar o puntuar el modelo generado.
@@ -37,75 +37,136 @@ El tercer recurso, el código de entrenamiento, le muestra el código de la API 
 
 ## <a name="examples"></a>Ejemplos
 
-El comando de la CLI más sencillo para un problema de clasificación binaria (AutoML infiere la mayor parte de la configuración de los datos proporcionados):
+El comando de la CLI más sencillo para un problema de clasificación (AutoML infiere la mayor parte de la configuración de los datos proporcionados):
 
 ```console
-mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" --label-column-name Sentiment
+mlnet classification --dataset "customer-feedback.tsv" --label-col Sentiment
 ```
 
 Otro comando de CLI sencillo para un problema de regresión:
 
 ``` console
-mlnet auto-train --task regression --dataset "cars.csv" --label-column-name Price
+mlnet regression --dataset "cars.csv" --label-col Price
 ```
 
-Cree y entrene un modelo de clasificación binaria con un conjunto de datos de entrenamiento, un conjunto de datos de prueba y más argumentos explícitos de personalización:
+Cree y entrene un modelo de clasificación con un conjunto de datos de entrenamiento, un conjunto de datos de prueba y más argumentos explícitos de personalización:
 
 ```console
-mlnet auto-train --task binary-classification --dataset "/MyDataSets/Population-Training.csv" --test-dataset "/MyDataSets/Population-Test.csv" --label-column-name "InsuranceRisk" --cache on --max-exploration-time 600
+mlnet classification --dataset "/MyDataSets/Population-Training.csv" --test-dataset "/MyDataSets/Population-Test.csv" --label-col "InsuranceRisk" --cache on --train-time 600
 ```
 
 ## <a name="command-options"></a>Opciones de comando
 
-`mlnet auto-train` entrena varios modelos según el conjunto de datos proporcionado y, por último, selecciona el mejor modelo, lo guarda como archivo .zip serializado y genera código C# relacionado para el entrenamiento y la puntuación.
+Los comandos de la tarea de ML `mlnet` (`classification`, `regression` y `recommendation`) entrenan varios modelos basados en el conjunto de datos proporcionado y en las opciones de la CLI de ML.NET. Estos comandos también seleccionan el mejor modelo, lo guardan como un archivo .zip serializado y generan el código C# correspondiente para la puntuación y el entrenamiento.
+
+### <a name="classification-options"></a>Opciones de clasificación
+
+La ejecución de `mlnet classification` entrenará un modelo de clasificación. Elija este comando si quiere que un modelo de ML clasifique los datos en dos o más clases (por ejemplo, análisis de opiniones).
 
 ```console
-mlnet auto-train
+mlnet classification
 
---task | --mltask | -T <value>
+--dataset <path> (REQUIRED)
 
---dataset | -d <value>
+--label-col <col> (REQUIRED)
 
-[
- [--validation-dataset | -v <value>]
-  --test-dataset | -t <value>
-]
+--cache <option>
 
---label-column-name | -n <value>
-|
---label-column-index | -i <value>
+--has-header (Default: true)
 
-[--ignore-columns | -I <value>]
+--ignore-cols <cols>
 
-[--has-header | -h <value>]
+--log-file-path <path>
 
-[--max-exploration-time | -x <value>]
+--name <name>
 
-[--verbosity | -V <value>]
+-o, --output <path>
 
-[--cache | -c <value>]
+--test-dataset <path>
 
-[--name | -N <value>]
+--train-time <time> (Default: 30 minutes, in seconds)
 
-[--output-path | -o <value>]
+--validation-dataset <path>
 
-[--help | -h]
+-v, --verbosity <v>
+
+-?, -h, --help
+
+```
+
+### <a name="regression-options"></a>Opciones de regresión
+
+La ejecución de `mlnet regression` entrenará un modelo de regresión. Elija este comando si quiere que un modelo de ML prediga un valor numérico (por ejemplo, predicción de precio).
+
+```console
+mlnet classification
+
+--dataset <path> (REQUIRED)
+
+--label-col <col> (REQUIRED)
+
+--cache <option>
+
+--has-header (Default: true)
+
+--ignore-cols <cols>
+
+--log-file-path <path>
+
+--name <name>
+
+-o, --output <path>
+
+--test-dataset <path>
+
+--train-time <time> (Default: 30 minutes, in seconds)
+
+--validation-dataset <path>
+
+-v, --verbosity <v>
+
+-?, -h, --help
+
+```
+
+### <a name="recommendation-options"></a>Opciones de recomendación
+
+La ejecución de `mlnet recommendation` entrenará un modelo de recomendación.  Elija este comando si quiere que un modelo de ML recomiende elementos a los usuarios en función de las clasificaciones (por ejemplo, recomendación de productos).
+
+```console
+mlnet classification
+
+--dataset <path> (REQUIRED)
+
+--item-col <col> (REQUIRED)
+
+--rating-col <col> (REQUIRED)
+
+--user-col <col> (REQUIRED)
+
+--cache <option>
+
+--has-header (Default: true)
+
+--log-file-path <path>
+
+--name <name>
+
+-o, --output <path>
+
+--test-dataset <path>
+
+--train-time <time> (Default: 30 minutes, in seconds)
+
+--validation-dataset <path>
+
+-v, --verbosity <v>
+
+-?, -h, --help
 
 ```
 
 Las opciones de entrada no válidas hacen que la herramienta de la CLI emita una lista de entradas válidas y un mensaje de error.
-
-## <a name="task"></a>Tarea
-
-`--task | --mltask | -T` (cadena)
-
-Una sola cadena que proporciona el problema de ML que debe resolverse. Por ejemplo, cualquiera de las siguientes tareas (la CLI finalmente será compatible con todas las tareas que se admiten en AutoML):
-
-- `regression`: elija si se usará el modelo de ML para predecir un valor numérico
-- `binary-classification`: elija si el resultado del modelo de ML tiene dos posibles valores booleanos categóricos (0 o 1).
-- `multiclass-classification`: elija si el resultado del modelo de ML tiene varios valores posibles categóricos.
-
-Solo debe proporcionarse una sola tarea de ML en este argumento.
 
 ## <a name="dataset"></a>Conjunto de datos
 
@@ -154,27 +215,41 @@ Por lo tanto, la separación de datos podría ser 80/10/10 o 75/15/10. Por ejemp
 
 En cualquier caso, el usuario decidirá los porcentajes mediante la CLI que proporcionará los archivos ya divididos.
 
-## <a name="label-column-name"></a>Nombre de la columna de etiqueta
+## <a name="label-column"></a>Columna de etiqueta
 
-`--label-column-name | -n` (cadena)
+`--label-col` (entero o cadena)
 
-Con este argumento, se puede especificar una columna concreta de destino/objetivo (es decir, la variable que se desea predecir) utilizando el nombre de la columna establecido en el encabezado del conjunto de datos.
+Con este argumento, se puede especificar una columna concreta de destino/objetivo (es decir, la variable que se quiere predecir) utilizando el nombre de la columna establecido en el encabezado del conjunto de datos o bien el índice numérico de la columna en el archivo del conjunto de datos (los valores del índice de la columna empiezan en 0).
 
-Este argumento se utiliza solo para tareas de ML supervisadas, como un *problema de clasificación*. No se puede usar para tareas de ML no supervisadas, como *clústeres*.
+Este argumento se usa para problemas de *clasificación* y *regresión*.
 
-## <a name="label-column-index"></a>Índice de la columna de etiqueta
+## <a name="item-column"></a>Columna de elementos
 
-`--label-column-index | -i` (int)
+`--item-col` (entero o cadena)
 
-Con este argumento, se puede especificar una columna concreta de destino/objetivo (es decir, la variable que se desea predecir) utilizando el índice numérico de la columna en el archivo del conjunto de datos (los valores del índice de la columna empiezan en 1).
+La columna de elementos contiene la lista de elementos que los usuarios califican (los elementos se recomiendan a los usuarios). Esta columna se puede especificar utilizando el nombre de la columna establecido en el encabezado del conjunto de datos o bien el índice numérico de la columna en el archivo del conjunto de datos (los valores del índice de la columna empiezan en 0).
 
-*Nota:* Si el usuario también usa el `--label-column-name`, el `--label-column-name` es el que se va a usar.
+Este argumento solo se usa para la tarea de *recomendación*.
 
-Este argumento se utiliza solo para una tarea de ML supervisada, como un *problema de clasificación*. No se puede usar para tareas de ML no supervisadas, como *clústeres*.
+## <a name="rating-column"></a>Columna de clasificación
+
+`--rating-col` (entero o cadena)
+
+La columna de clasificación contiene la lista de clasificaciones que los usuarios otorgan a los elementos. Esta columna se puede especificar utilizando el nombre de la columna establecido en el encabezado del conjunto de datos o bien el índice numérico de la columna en el archivo del conjunto de datos (los valores del índice de la columna empiezan en 0).
+
+Este argumento solo se usa para la tarea de *recomendación*.
+
+## <a name="user-column"></a>Columna de usuarios
+
+`--user-col` (entero o cadena)
+
+La columna de usuarios contiene la lista de usuarios que califican elementos. Esta columna se puede especificar utilizando el nombre de la columna establecido en el encabezado del conjunto de datos o bien el índice numérico de la columna en el archivo del conjunto de datos (los valores del índice de la columna empiezan en 0).
+
+Este argumento solo se usa para la tarea de *recomendación*.
 
 ## <a name="ignore-columns"></a>Omisión de columnas
 
-`--ignore-columns | -I` (cadena)
+`--ignore-columns` (cadena)
 
 Con este argumento, puede omitir las columnas existentes en el archivo del conjunto de datos, de modo que los procesos de entrenamiento no las carguen ni utilicen.
 
@@ -186,7 +261,7 @@ Ejemplo:
 
 ## <a name="has-header"></a>Tiene encabezado
 
-`--has-header | -h` (bool)
+`--has-header` (bool)
 
 Especifique si los archivos del conjunto de datos tienen una fila de encabezado.
 Los valores posibles son:
@@ -194,15 +269,13 @@ Los valores posibles son:
 - `true`
 - `false`
 
-El valor predeterminado es `true` si el usuario no especifica este argumento.
+La CLI de ML.NET intentará detectar esta propiedad si el usuario no especifica este argumento.
 
-Para poder usar el argumento `--label-column-name`, debe tener un encabezado en el archivo del conjunto de datos y `--has-header` establecido en `true` (el cual es el valor predeterminado).
+## <a name="train-time"></a>Tiempo de entrenamiento
 
-## <a name="max-exploration-time"></a>Tiempo máximo de exploración
+`--train-time` (cadena)
 
-`--max-exploration-time | -x` (cadena)
-
-De forma predeterminada, el tiempo máximo de exploración es de 30 minutos.
+De forma predeterminada, el tiempo máximo de exploración o entrenamiento es de 30 minutos.
 
 Este argumento establece el tiempo máximo (en segundos) para que el proceso explore varios instructores y configuraciones. El tiempo configurado puede superarse so el tiempo proporcionado es demasiado corto (por ejemplo, 2 segundos) para una sola iteración. En este caso, el tiempo real es el tiempo necesario para producir una configuración de modelo en una sola iteración.
 
@@ -210,7 +283,7 @@ El tiempo necesario para las iteraciones puede variar según el tamaño del conj
 
 ## <a name="cache"></a>instancias y claves
 
-`--cache | -c` (cadena)
+`--cache` (cadena)
 
 Si usa almacenamiento en caché, el conjunto de datos de entrenamiento completo se cargará en memoria.
 
@@ -228,7 +301,7 @@ Si no especifica el parámetro `auto`, la configuración `--cache` de la memoria
 
 ## <a name="name"></a>NOMBRE
 
-`--name | -N` (cadena)
+`--name` (cadena)
 
 El nombre de la solución o el proyecto de la salida creada. Si no se especifica ningún nombre, se usará el nombre `sample-{mltask}`.
 
@@ -242,7 +315,7 @@ Ubicación o carpeta para colocar la salida generada. El valor predeterminado es
 
 ## <a name="verbosity"></a>Nivel de detalle
 
-`--verbosity | -V` (cadena)
+`--verbosity | -v` (cadena)
 
 Establece el nivel de detalle de la salida estándar.
 
@@ -252,11 +325,11 @@ Los valores permitidos son:
 - `m[inimal]` (de manera predeterminada)
 - `diag[nostic]` (nivel de información de registro)
 
-De forma predeterminada, la herramienta de la CLI debe mostrar un mínimo de comentarios cuando trabaja, como mencionar que está trabajando y, de ser posible, cuánto tiempo queda o qué porcentaje de tiempo lleva completado.
+De forma predeterminada, la herramienta CLI debe mostrar un mínimo de comentarios (`minimal`) cuando trabaja, como mencionar que está trabajando y, a ser posible, cuánto tiempo queda o qué porcentaje de tiempo lleva completado.
 
 ## <a name="help"></a>Ayuda
 
-`-h|--help`
+`-h |--help`
 
 Imprime la ayuda para el comando con una descripción para el parámetro de cada comando.
 

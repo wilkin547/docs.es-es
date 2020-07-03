@@ -5,12 +5,12 @@ ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: 725441f5399f72b6457af461d51419c35077f4c2
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: d1ea0fc3573714347580a2aaded2d0f3118681a8
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662919"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324186"
 ---
 # <a name="how-to-compare-strings-in-c"></a>Cómo comparar cadenas en C\#
 
@@ -41,7 +41,7 @@ realizan una comparación ordinal con distinción entre mayúsculas y minúscula
 
 La comparación de ordinales predeterminada no tiene en cuenta reglas lingüísticas cuando se comparan cadenas. Compara el valor binario de cada objeto <xref:System.Char> en dos cadenas. Como resultado, la comparación de ordinales predeterminada también distingue mayúsculas de minúsculas.
 
-Tenga en cuenta que la prueba de igualdad con <xref:System.String.Equals%2A?displayProperty=nameWithType> y los operadores `==` y `!=` es diferente de la comparación de cadenas que usa los métodos <xref:System.String.CompareTo%2A?displayProperty=nameWithType> y <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)>. Mientras que las pruebas de igualdad realizan una comparación ordinal que distingue mayúsculas de minúsculas, los métodos de comparación realizan una comparación que distingue mayúsculas de minúsculas y entre referencias culturales usando la referencia cultural actual. Puesto que los métodos de comparación predeterminados suelen realizan diferentes tipos de comparaciones, le recomendamos que especifique claramente la intención de su código llamando a una sobrecarga que especifique explícitamente el tipo de comparación que se realizará.
+La prueba de igualdad con <xref:System.String.Equals%2A?displayProperty=nameWithType> y los operadores `==` y `!=` es diferente de la comparación de cadenas que usa los métodos <xref:System.String.CompareTo%2A?displayProperty=nameWithType> y <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)>. Mientras que las pruebas de igualdad realizan una comparación ordinal que distingue mayúsculas de minúsculas, los métodos de comparación realizan una comparación que distingue mayúsculas de minúsculas y entre referencias culturales usando la referencia cultural actual. Puesto que los métodos de comparación predeterminados suelen realizan diferentes tipos de comparaciones, le recomendamos que especifique claramente la intención de su código llamando a una sobrecarga que especifique explícitamente el tipo de comparación que se realizará.
 
 ## <a name="case-insensitive-ordinal-comparisons"></a>Comparaciones de ordinales sin distinción entre mayúsculas y minúsculas
 
@@ -55,11 +55,11 @@ Al realizar una comparación ordinal que distingue mayúsculas de minúsculas, e
 ## <a name="linguistic-comparisons"></a>Comparaciones lingüísticas
 
 También se pueden ordenar cadenas mediante reglas lingüísticas para la referencia cultural actual.
-Esto se conoce a veces como "criterio de ordenación por palabras". Cuando se realiza una comparación lingüística, algunos caracteres Unicode no alfanuméricos pueden tener asignados pesos especiales. Por ejemplo, el guion ("-") podría tener asignado un peso muy pequeño, por lo que las cadenas "coop" y "co-op" aparecerían una junto a la otra en una ordenación. Además, algunos caracteres Unicode pueden ser equivalentes a una secuencia de instancias de <xref:System.Char>. En este ejemplo se usa una frase en alemán que significa "Bailan en la calle", en alemán, con "ss" (U+0073 U+0073) en una cadena y "ß" (U+00DF) en otra. Lingüísticamente (en Windows), "ss" es igual que el carácter "ß" en alemán en las referencias culturales "en-US" y "de-DE".
+Esto se conoce a veces como "criterio de ordenación por palabras". Cuando se realiza una comparación lingüística, algunos caracteres Unicode no alfanuméricos pueden tener asignados pesos especiales. Por ejemplo, el guion ("-") podría tener asignado un peso pequeño, por lo que las cadenas "coop" y "co-op" aparecerían una junto a la otra en una ordenación. Además, algunos caracteres Unicode pueden ser equivalentes a una secuencia de instancias de <xref:System.Char>. En este ejemplo se usa una frase en alemán que significa "Bailan en la calle", en alemán, con "ss" (U+0073 U+0073) en una cadena y "ß" (U+00DF) en otra. Lingüísticamente (en Windows), "ss" es igual que el carácter "ß" en alemán en las referencias culturales "en-US" y "de-DE".
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs" id="Snippet3":::
 
-Este ejemplo demuestra la naturaleza dependiente del sistema operativo de las comparaciones lingüísticas. El host de la ventana interactiva es un host Linux. Las comparaciones lingüísticas y ordinales producen el mismo resultado. Si se ejecutara este mismo ejemplo en un host de Windows, vería este resultado:
+Este ejemplo demuestra la naturaleza dependiente del sistema operativo de las comparaciones lingüísticas. El host de la ventana interactiva es un host Linux. Las comparaciones lingüísticas y ordinales producen el mismo resultado. Si se ejecuta este mismo ejemplo en un host de Windows, verá este resultado:
 
 ```console
 <coop> is less than <co-op> using invariant culture
@@ -92,7 +92,7 @@ Las comparaciones dependientes de la referencia cultural se usan normalmente par
 <co-op> is less than <cop> using ordinal comparison
 ```
 
-Las comparaciones lingüísticas dependen de la referencia cultural actual y del sistema operativo. Debe tenerlo en cuenta cuando trabaje con comparaciones de cadenas.
+Las comparaciones lingüísticas dependen de la referencia cultural actual y del sistema operativo. Téngalo en cuenta cuando trabaje con comparaciones de cadenas.
 
 ## <a name="linguistic-sorting-and-searching-strings-in-arrays"></a>Ordenación lingüística y búsqueda de cadenas en matrices
 
@@ -122,7 +122,7 @@ Las clases de colección como <xref:System.Collections.Hashtable?displayProperty
 
 ## <a name="reference-equality-and-string-interning"></a>Igualdad de referencia e internamiento de cadena
 
-Ninguno de los ejemplos ha usado <xref:System.Object.ReferenceEquals%2A>. Este método determina si dos cadenas son el mismo objeto. Esto puede conducir a resultados incoherentes en comparaciones de cadenas. En este ejemplo se muestra la característica de *internamiento de cadenas* de C#. Cuando un programa declara dos o más variables de cadena idénticas, el compilador lo almacena todo en la misma ubicación. Mediante una llamada al método <xref:System.Object.ReferenceEquals%2A>, puede ver que las dos cadenas realmente hacen referencia al mismo objeto en memoria. Use el método <xref:System.String.Copy%2A?displayProperty=nameWithType> para evitar el internamiento. Después de hacer la copia, las dos cadenas tienen diferentes ubicaciones de almacenamiento, aunque tengan el mismo valor. Ejecute este ejemplo para mostrar que las cadenas `a` y `b` son *internadas*, lo que significa que comparten el mismo almacenamiento. Las cadenas `a` y `c` no lo son.
+Ninguno de los ejemplos ha usado <xref:System.Object.ReferenceEquals%2A>. Este método determina si dos cadenas son el mismo objeto, lo que puede provocar resultados incoherentes en las comparaciones de cadenas. En este ejemplo se muestra la característica de *internamiento de cadenas* de C#. Cuando un programa declara dos o más variables de cadena idénticas, el compilador lo almacena todo en la misma ubicación. Mediante una llamada al método <xref:System.Object.ReferenceEquals%2A>, puede ver que las dos cadenas realmente hacen referencia al mismo objeto en memoria. Use el método <xref:System.String.Copy%2A?displayProperty=nameWithType> para evitar el internamiento. Después de hacer la copia, las dos cadenas tienen diferentes ubicaciones de almacenamiento, aunque tengan el mismo valor. Ejecute este ejemplo para mostrar que las cadenas `a` y `b` son *internadas*, lo que significa que comparten el mismo almacenamiento. Las cadenas `a` y `c` no lo son.
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs" id="Snippet9":::
 

@@ -1,13 +1,14 @@
 ---
 title: Información acerca de los problemas y excepciones del elemento WebRequest
+description: WebRequest y sus clases derivadas inician excepciones para indicar que existen condiciones anómalas. Las soluciones siguientes pueden ayudarle a resolver estas anomalías en .NET Framework.
 ms.date: 03/30/2017
 ms.assetid: 74a361a5-e912-42d3-8f2e-8e9a96880a2b
-ms.openlocfilehash: 172ad7508bdcac94cc278faab65a2e265b3c6a65
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aa9ab989bad7940e82cc4fd8fd22ca3915f7b800
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76743892"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502085"
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a>Información acerca de los problemas y excepciones del elemento WebRequest
 <xref:System.Net.WebRequest> y sus clases derivadas (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest> y <xref:System.Net.FileWebRequest>) generan excepciones para indicar una condición anormal. A veces, la resolución de estos problemas no es obvia.  
@@ -26,7 +27,7 @@ ms.locfileid: "76743892"
 |<xref:System.Net.WebExceptionStatus.ConnectionClosed>|La aplicación intentó escribir en un socket que ya se ha cerrado.|El cliente o el servidor está sobrecargado. Reduzca la carga.<br /><br /> Aumente el valor de <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A>.<br /><br /> Vea <https://support.microsoft.com/?id=821268> para modificar la configuración de rendimiento del servicio web.|  
 |<xref:System.Net.WebExceptionStatus.MessageLengthLimitExceeded>|Se ha superado el límite establecido (<xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>) en la longitud del mensaje.|Aumente el valor de la propiedad <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>.|  
 |<xref:System.Net.WebExceptionStatus.ProxyNameResolutionFailure>|El servicio de nombres de dominio no pudo resolver el nombre de host del proxy.|Configure el proxy correctamente. Vea <https://support.microsoft.com/?id=318140>.<br /><br /> Fuerce a <xref:System.Net.HttpWebRequest> para que no use ningún proxy estableciendo la propiedad <xref:System.Net.HttpWebRequest.Proxy%2A> en `null`.|  
-|<xref:System.Net.WebExceptionStatus.ServerProtocolViolation>|La respuesta del servidor no es una respuesta HTTP válida. Este problema se produce cuando .NET Framework detecta que la respuesta del servidor no es compatible con la RFC de HTTP 1.1. Este problema puede producirse si la respuesta contiene encabezados o delimitadores de encabezado incorrectos. RFC 2616 define HTTP 1.1 y el formato válido para la respuesta del servidor. Para más información, consulte [RFC 2616 - Hypertext Transfer Protocol -- HTTP/1.1](https://tools.ietf.org/html/rfc2616) (RFC 2616 - Protocolo de transferencia de hipertexto -- HTTP/1.1) en el sitio web de [Internet Engineering Task Force (IETF)](https://www.ietf.org/).|Obtenga un seguimiento de red de la transacción y examine los encabezados de la respuesta.<br /><br /> Si la aplicación requiere la respuesta del servidor sin analizar (podría tratarse de un problema de seguridad), establezca `useUnsafeHeaderParsing` en `true` en el archivo de configuración. Vea [\<httpWebRequest> (Elemento, Configuración de red)](../configure-apps/file-schema/network/httpwebrequest-element-network-settings.md).|  
+|<xref:System.Net.WebExceptionStatus.ServerProtocolViolation>|La respuesta del servidor no es una respuesta HTTP válida. Este problema se produce cuando .NET Framework detecta que la respuesta del servidor no es compatible con la RFC de HTTP 1.1. Este problema puede producirse si la respuesta contiene encabezados o delimitadores de encabezado incorrectos. RFC 2616 define HTTP 1.1 y el formato válido para la respuesta del servidor. Para más información, consulte [RFC 2616 - Hypertext Transfer Protocol -- HTTP/1.1](https://tools.ietf.org/html/rfc2616) (RFC 2616 - Protocolo de transferencia de hipertexto -- HTTP/1.1) en el sitio web de [Internet Engineering Task Force (IETF)](https://www.ietf.org/).|Obtenga un seguimiento de red de la transacción y examine los encabezados de la respuesta.<br /><br /> Si la aplicación requiere la respuesta del servidor sin analizar (podría tratarse de un problema de seguridad), establezca `useUnsafeHeaderParsing` en `true` en el archivo de configuración. Vea [Elemento \<httpWebRequest> (configuración de red)](../configure-apps/file-schema/network/httpwebrequest-element-network-settings.md).|  
   
 ## <a name="see-also"></a>Vea también
 

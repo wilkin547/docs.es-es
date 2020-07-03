@@ -2,15 +2,15 @@
 title: Cambios importantes en ASP.NET Core
 titleSuffix: ''
 description: Enumera los cambios importantes en ASP.NET Core.
-ms.date: 06/11/2020
+ms.date: 06/23/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: a6ddf97f907a1cba57e51d6fd516d1f94272f725
-ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
+ms.openlocfilehash: cf6b2eb46504c12aa670ccfc68531598dd9705a3
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84803272"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325460"
 ---
 # <a name="aspnet-core-breaking-changes"></a>Cambios importantes en ASP.NET Core
 
@@ -45,15 +45,18 @@ En esta página se documentan los siguientes cambios importantes:
 - [HTTP: cambios en la infraestructura del cuerpo de respuesta](#http-response-body-infrastructure-changes)
 - [HTTP: se han cambiado algunos valores predeterminados de cookie de SameSite](#http-some-cookie-samesite-defaults-changed-to-none)
 - [HTTP: se ha deshabilitado la E/S sincrónica de forma predeterminada](#http-synchronous-io-disabled-in-all-servers)
+- [HttpSys: Deshabilitación predeterminada de la renegociación del certificado de cliente](#httpsys-client-certificate-renegotiation-disabled-by-default)
 - [Identidad: se ha quitado la sobrecarga del método AddDefaultUI](#identity-adddefaultui-method-overload-removed)
 - [Identidad: cambio de versión de arranque de IU](#identity-default-bootstrap-version-of-ui-changed)
 - [Identidad: SignInAsync produce una excepción para la identidad no autenticada](#identity-signinasync-throws-exception-for-unauthenticated-identity)
 - [Identidad: el constructor SignInManager acepta un nuevo parámetro](#identity-signinmanager-constructor-accepts-new-parameter)
 - [Identidad: la interfaz de usuario usa la característica de recursos web estáticos](#identity-ui-uses-static-web-assets-feature)
+- [IIS: Mantenimiento de las cadenas de consulta de middleware de UrlRewrite](#iis-urlrewrite-middleware-query-strings-are-preserved)
 - [Kestrel: cambios de configuración en tiempo de ejecución detectados de forma predeterminada](#kestrel-configuration-changes-at-run-time-detected-by-default)
 - [Kestrel: se han quitado los adaptadores de conexión](#kestrel-connection-adapters-removed)
 - [Kestrel: versiones del protocolo TLS admitidas de forma predeterminada cambiadas](#kestrel-default-supported-tls-protocol-versions-changed)
 - [Kestrel: se ha quitado un ensamblado HTTPS vacío](#kestrel-empty-https-assembly-removed)
+- [Kestrel: Deshabilitación de HTTP/2 sobre TLS en versiones de Windows incompatibles](#kestrel-http2-disabled-over-tls-on-incompatible-windows-versions)
 - [Kestrel: se han movido los encabezados de finalizador de solicitud a una nueva recopilación](#kestrel-request-trailer-headers-moved-to-new-collection)
 - [Kestrel: cambios en la capa de abstracción de transporte](#kestrel-transport-abstractions-removed-and-made-public)
 - [Localización: API marcadas como obsoletas](#localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete)
@@ -100,10 +103,22 @@ En esta página se documentan los siguientes cambios importantes:
 
 ***
 
+[!INCLUDE[HttpSys: Client certificate renegotiation disabled by default](~/includes/core-changes/aspnetcore/5.0/httpsys-client-certificate-renegotiation-disabled-by-default.md)]
+
+***
+
+[!INCLUDE[IIS: UrlRewrite middleware query strings are preserved](~/includes/core-changes/aspnetcore/5.0/iis-urlrewrite-middleware-query-strings-are-preserved.md)]
+
+***
+
 [!INCLUDE[Kestrel: Configuration changes at run time detected by default](~/includes/core-changes/aspnetcore/5.0/kestrel-configuration-changes-at-run-time-detected-by-default.md)]
 
 ***
 [!INCLUDE[Kestrel: Default supported TLS protocol versions changed](~/includes/core-changes/aspnetcore/5.0/kestrel-default-supported-tls-protocol-versions-changed.md)]
+
+***
+
+[!INCLUDE[Kestrel: HTTP/2 disabled over TLS on incompatible Windows versions](~/includes/core-changes/aspnetcore/5.0/kestrel-disables-http2-over-tls.md)]
 
 ***
 
