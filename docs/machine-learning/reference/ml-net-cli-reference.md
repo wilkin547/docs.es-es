@@ -1,268 +1,341 @@
 ---
 title: Referencia de comandos de la CLI de ML.NET
 description: Información general, ejemplos y referencia del comando de entrenamiento automático en la herramienta de la CLI de ML.NET.
-ms.date: 12/18/2019
+ms.date: 06/03/2020
 ms.custom: mlnet-tooling
-ms.openlocfilehash: bb161c596a76134876ee2bf0a6229bc551e0dad2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 397f6fda8554024624b3ef630856dc8eca9696b2
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78848930"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594548"
 ---
-# <a name="the-mlnet-cli-command-reference"></a><span data-ttu-id="824b1-103">Referencia de comandos de la CLI de ML.NET</span><span class="sxs-lookup"><span data-stu-id="824b1-103">The ML.NET CLI command reference</span></span>
+# <a name="the-mlnet-cli-command-reference"></a><span data-ttu-id="1bc9a-103">Referencia de comandos de la CLI de ML.NET</span><span class="sxs-lookup"><span data-stu-id="1bc9a-103">The ML.NET CLI command reference</span></span>
 
-<span data-ttu-id="824b1-104">El comando `auto-train` es el comando principal proporcionado por la herramienta de la CLI de ML.NET.</span><span class="sxs-lookup"><span data-stu-id="824b1-104">The `auto-train` command is the main command provided by the ML.NET CLI tool.</span></span> <span data-ttu-id="824b1-105">El comando permite generar un modelo de ML.NET de buena calidad mediante el aprendizaje automático automatizado (AutoML) además del código de C# de ejemplo para ejecutar o calificar dicho modelo.</span><span class="sxs-lookup"><span data-stu-id="824b1-105">The command allows you to generate a good quality ML.NET model using automated machine learning (AutoML) as well as the example C# code to run/score that model.</span></span> <span data-ttu-id="824b1-106">Además, se genera código C# para entrenar el modelo y poder investigar el algoritmo y la configuración del modelo.</span><span class="sxs-lookup"><span data-stu-id="824b1-106">In addition, the C# code to train the model is generated for you to research the algorithm and settings of the model.</span></span>
+<span data-ttu-id="1bc9a-104">Los comandos `classification`, `regression` y `recommendation` son los comandos principales proporcionados por la herramienta CLI de ML.NET.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-104">The `classification`, `regression`, and `recommendation` commands are the main commands provided by the ML.NET CLI tool.</span></span> <span data-ttu-id="1bc9a-105">Estos comandos permiten generar modelos de ML.NET de buena calidad que pueden usarse con fines de clasificación, regresión y recomendación mediante el aprendizaje automático automatizado (AutoML) y el código C# de ejemplo para ejecutar o calificar dicho modelo.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-105">These commands allow you to generate good quality ML.NET models for classification, regression, and recommendation models using automated machine learning (AutoML) as well as the example C# code to run/score that model.</span></span> <span data-ttu-id="1bc9a-106">Además, se genera código C# para entrenar el modelo y poder investigar el algoritmo y la configuración del modelo.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-106">In addition, the C# code to train the model is generated for you to research the algorithm and settings of the model.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="824b1-107">Este tema hace referencia a la CLI de ML.NET y AutoML de ML.NET, que se encuentran actualmente en versión preliminar, por lo que el material está sujeto a cambios.</span><span class="sxs-lookup"><span data-stu-id="824b1-107">This topic refers to ML.NET CLI and ML.NET AutoML, which are currently in Preview, and material may be subject to change.</span></span>
+> <span data-ttu-id="1bc9a-107">Este tema hace referencia a la CLI de ML.NET y AutoML de ML.NET, que se encuentran actualmente en versión preliminar, por lo que el material está sujeto a cambios.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-107">This topic refers to ML.NET CLI and ML.NET AutoML, which are currently in Preview, and material may be subject to change.</span></span>
 
-## <a name="overview"></a><span data-ttu-id="824b1-108">Información general</span><span class="sxs-lookup"><span data-stu-id="824b1-108">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="1bc9a-108">Información general</span><span class="sxs-lookup"><span data-stu-id="1bc9a-108">Overview</span></span>
 
-<span data-ttu-id="824b1-109">Ejemplo de uso:</span><span class="sxs-lookup"><span data-stu-id="824b1-109">Example usage:</span></span>
-
-```console
-mlnet auto-train --task regression --dataset "cars.csv" --label-column-name price
-```
-
-<span data-ttu-id="824b1-110">El comando `mlnet auto-train` genera los siguientes recursos:</span><span class="sxs-lookup"><span data-stu-id="824b1-110">The `mlnet auto-train` command generates the following assets:</span></span>
-
-- <span data-ttu-id="824b1-111">Un archivo .zip de modelo serializado ("mejor modelo") listo para usarse.</span><span class="sxs-lookup"><span data-stu-id="824b1-111">A serialized model .zip ("best model") ready to use.</span></span>
-- <span data-ttu-id="824b1-112">Código C# para ejecutar o puntuar el modelo generado.</span><span class="sxs-lookup"><span data-stu-id="824b1-112">C# code to run/score that generated model.</span></span>
-- <span data-ttu-id="824b1-113">Código de C# con el código de entrenamiento utilizado para generar ese modelo.</span><span class="sxs-lookup"><span data-stu-id="824b1-113">C# code with the training code used to generate that model.</span></span>
-
-<span data-ttu-id="824b1-114">Los dos primeros recursos se pueden usar directamente en las aplicaciones de usuario final (aplicación web ASP.NET Core, servicios, aplicación de escritorio, y mucho más) para realizar predicciones con el modelo.</span><span class="sxs-lookup"><span data-stu-id="824b1-114">The first two assets can directly be used in your end-user apps (ASP.NET Core web app, services, desktop app and more) to make predictions with the model.</span></span>
-
-<span data-ttu-id="824b1-115">El tercer recurso, el código de entrenamiento, le muestra el código de la API de ML.NET que utilizó la CLI para entrenar el modelo generado, de modo que pueda investigar el algoritmo y configuración específicos del modelo.</span><span class="sxs-lookup"><span data-stu-id="824b1-115">The third asset, the training code, shows you what ML.NET API code was used by the CLI to train the generated model, so you can investigate the specific algorithm and settings of the model.</span></span>
-
-## <a name="examples"></a><span data-ttu-id="824b1-116">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="824b1-116">Examples</span></span>
-
-<span data-ttu-id="824b1-117">El comando de la CLI más sencillo para un problema de clasificación binaria (AutoML infiere la mayor parte de la configuración de los datos proporcionados):</span><span class="sxs-lookup"><span data-stu-id="824b1-117">The simplest CLI command for a binary classification problem (AutoML infers most of the configuration from the provided data):</span></span>
+<span data-ttu-id="1bc9a-109">Ejemplo de uso:</span><span class="sxs-lookup"><span data-stu-id="1bc9a-109">Example usage:</span></span>
 
 ```console
-mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" --label-column-name Sentiment
+mlnet regression --dataset "cars.csv" --label-col price
 ```
 
-<span data-ttu-id="824b1-118">Otro comando de CLI sencillo para un problema de regresión:</span><span class="sxs-lookup"><span data-stu-id="824b1-118">Another simple CLI command for a regression problem:</span></span>
+<span data-ttu-id="1bc9a-110">Los comandos de la tarea de ML `mlnet` (`classification`, `regression` y `recommendation`) generan los recursos siguientes:</span><span class="sxs-lookup"><span data-stu-id="1bc9a-110">The `mlnet` ML task commands (`classification`, `regression`, and `recommendation`) generate the following assets:</span></span>
+
+- <span data-ttu-id="1bc9a-111">Un archivo .zip de modelo serializado ("mejor modelo") listo para usarse.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-111">A serialized model .zip ("best model") ready to use.</span></span>
+- <span data-ttu-id="1bc9a-112">Código C# para ejecutar o puntuar el modelo generado.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-112">C# code to run/score that generated model.</span></span>
+- <span data-ttu-id="1bc9a-113">Código de C# con el código de entrenamiento utilizado para generar ese modelo.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-113">C# code with the training code used to generate that model.</span></span>
+
+<span data-ttu-id="1bc9a-114">Los dos primeros recursos se pueden usar directamente en las aplicaciones de usuario final (aplicación web ASP.NET Core, servicios, aplicación de escritorio, y mucho más) para realizar predicciones con el modelo.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-114">The first two assets can directly be used in your end-user apps (ASP.NET Core web app, services, desktop app and more) to make predictions with the model.</span></span>
+
+<span data-ttu-id="1bc9a-115">El tercer recurso, el código de entrenamiento, le muestra el código de la API de ML.NET que utilizó la CLI para entrenar el modelo generado, de modo que pueda investigar el algoritmo y configuración específicos del modelo.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-115">The third asset, the training code, shows you what ML.NET API code was used by the CLI to train the generated model, so you can investigate the specific algorithm and settings of the model.</span></span>
+
+## <a name="examples"></a><span data-ttu-id="1bc9a-116">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="1bc9a-116">Examples</span></span>
+
+<span data-ttu-id="1bc9a-117">El comando de la CLI más sencillo para un problema de clasificación (AutoML infiere la mayor parte de la configuración de los datos proporcionados):</span><span class="sxs-lookup"><span data-stu-id="1bc9a-117">The simplest CLI command for a classification problem (AutoML infers most of the configuration from the provided data):</span></span>
+
+```console
+mlnet classification --dataset "customer-feedback.tsv" --label-col Sentiment
+```
+
+<span data-ttu-id="1bc9a-118">Otro comando de CLI sencillo para un problema de regresión:</span><span class="sxs-lookup"><span data-stu-id="1bc9a-118">Another simple CLI command for a regression problem:</span></span>
 
 ``` console
-mlnet auto-train --task regression --dataset "cars.csv" --label-column-name Price
+mlnet regression --dataset "cars.csv" --label-col Price
 ```
 
-<span data-ttu-id="824b1-119">Cree y entrene un modelo de clasificación binaria con un conjunto de datos de entrenamiento, un conjunto de datos de prueba y más argumentos explícitos de personalización:</span><span class="sxs-lookup"><span data-stu-id="824b1-119">Create and train a binary-classification model with a train dataset, a test dataset, and further customization explicit arguments:</span></span>
+<span data-ttu-id="1bc9a-119">Cree y entrene un modelo de clasificación con un conjunto de datos de entrenamiento, un conjunto de datos de prueba y más argumentos explícitos de personalización:</span><span class="sxs-lookup"><span data-stu-id="1bc9a-119">Create and train a classification model with a train dataset, a test dataset, and further customization explicit arguments:</span></span>
 
 ```console
-mlnet auto-train --task binary-classification --dataset "/MyDataSets/Population-Training.csv" --test-dataset "/MyDataSets/Population-Test.csv" --label-column-name "InsuranceRisk" --cache on --max-exploration-time 600
+mlnet classification --dataset "/MyDataSets/Population-Training.csv" --test-dataset "/MyDataSets/Population-Test.csv" --label-col "InsuranceRisk" --cache on --train-time 600
 ```
 
-## <a name="command-options"></a><span data-ttu-id="824b1-120">Opciones de comando</span><span class="sxs-lookup"><span data-stu-id="824b1-120">Command options</span></span>
+## <a name="command-options"></a><span data-ttu-id="1bc9a-120">Opciones de comando</span><span class="sxs-lookup"><span data-stu-id="1bc9a-120">Command options</span></span>
 
-<span data-ttu-id="824b1-121">`mlnet auto-train` entrena varios modelos según el conjunto de datos proporcionado y, por último, selecciona el mejor modelo, lo guarda como archivo .zip serializado y genera código C# relacionado para el entrenamiento y la puntuación.</span><span class="sxs-lookup"><span data-stu-id="824b1-121">`mlnet auto-train` trains multiple models based on the provided dataset and finally selects the best model, saves it as a serialized .zip file plus generates related C# code for scoring and training.</span></span>
+<span data-ttu-id="1bc9a-121">Los comandos de la tarea de ML `mlnet` (`classification`, `regression` y `recommendation`) entrenan varios modelos basados en el conjunto de datos proporcionado y en las opciones de la CLI de ML.NET.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-121">The `mlnet` ML task commands (`classification`, `regression`, and `recommendation`) train multiple models based on the provided dataset and ML.NET CLI options.</span></span> <span data-ttu-id="1bc9a-122">Estos comandos también seleccionan el mejor modelo, lo guardan como un archivo .zip serializado y generan el código C# correspondiente para la puntuación y el entrenamiento.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-122">These commands also select the best model, save the model as a serialized .zip file, and generate related C# code for scoring and training.</span></span>
+
+### <a name="classification-options"></a><span data-ttu-id="1bc9a-123">Opciones de clasificación</span><span class="sxs-lookup"><span data-stu-id="1bc9a-123">Classification options</span></span>
+
+<span data-ttu-id="1bc9a-124">La ejecución de `mlnet classification` entrenará un modelo de clasificación.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-124">Running `mlnet classification` will train a classification model.</span></span> <span data-ttu-id="1bc9a-125">Elija este comando si quiere que un modelo de ML clasifique los datos en dos o más clases (por ejemplo, análisis de opiniones).</span><span class="sxs-lookup"><span data-stu-id="1bc9a-125">Choose this command if you want an ML Model to categorize data into 2 or more classes (e.g. sentiment analysis).</span></span>
 
 ```console
-mlnet auto-train
+mlnet classification
 
---task | --mltask | -T <value>
+--dataset <path> (REQUIRED)
 
---dataset | -d <value>
+--label-col <col> (REQUIRED)
 
-[
- [--validation-dataset | -v <value>]
-  --test-dataset | -t <value>
-]
+--cache <option>
 
---label-column-name | -n <value>
-|
---label-column-index | -i <value>
+--has-header (Default: true)
 
-[--ignore-columns | -I <value>]
+--ignore-cols <cols>
 
-[--has-header | -h <value>]
+--log-file-path <path>
 
-[--max-exploration-time | -x <value>]
+--name <name>
 
-[--verbosity | -V <value>]
+-o, --output <path>
 
-[--cache | -c <value>]
+--test-dataset <path>
 
-[--name | -N <value>]
+--train-time <time> (Default: 30 minutes, in seconds)
 
-[--output-path | -o <value>]
+--validation-dataset <path>
 
-[--help | -h]
+-v, --verbosity <v>
+
+-?, -h, --help
 
 ```
 
-<span data-ttu-id="824b1-122">Las opciones de entrada no válidas hacen que la herramienta de la CLI emita una lista de entradas válidas y un mensaje de error.</span><span class="sxs-lookup"><span data-stu-id="824b1-122">Invalid input options cause the CLI tool to emit a list of valid inputs and an error message.</span></span>
+### <a name="regression-options"></a><span data-ttu-id="1bc9a-126">Opciones de regresión</span><span class="sxs-lookup"><span data-stu-id="1bc9a-126">Regression options</span></span>
 
-## <a name="task"></a><span data-ttu-id="824b1-123">Tarea</span><span class="sxs-lookup"><span data-stu-id="824b1-123">Task</span></span>
+<span data-ttu-id="1bc9a-127">La ejecución de `mlnet regression` entrenará un modelo de regresión.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-127">Running `mlnet regression` will train a regression model.</span></span> <span data-ttu-id="1bc9a-128">Elija este comando si quiere que un modelo de ML prediga un valor numérico (por ejemplo, predicción de precio).</span><span class="sxs-lookup"><span data-stu-id="1bc9a-128">Choose this command if you want an ML Model to predict a numeric value (e.g. price prediction).</span></span>
 
-<span data-ttu-id="824b1-124">`--task | --mltask | -T` (cadena)</span><span class="sxs-lookup"><span data-stu-id="824b1-124">`--task | --mltask | -T` (string)</span></span>
+```console
+mlnet classification
 
-<span data-ttu-id="824b1-125">Una sola cadena que proporciona el problema de ML que debe resolverse.</span><span class="sxs-lookup"><span data-stu-id="824b1-125">A single string providing the ML problem to solve.</span></span> <span data-ttu-id="824b1-126">Por ejemplo, cualquiera de las siguientes tareas (la CLI finalmente será compatible con todas las tareas que se admiten en AutoML):</span><span class="sxs-lookup"><span data-stu-id="824b1-126">For instance, any of the following tasks (The CLI will eventually support all tasks supported in AutoML):</span></span>
+--dataset <path> (REQUIRED)
 
-- <span data-ttu-id="824b1-127">`regression`: elija si se usará el modelo de ML para predecir un valor numérico</span><span class="sxs-lookup"><span data-stu-id="824b1-127">`regression` - Choose if the ML Model will be used to predict a numeric value</span></span>
-- <span data-ttu-id="824b1-128">`binary-classification`: elija si el resultado del modelo de ML tiene dos posibles valores booleanos categóricos (0 o 1).</span><span class="sxs-lookup"><span data-stu-id="824b1-128">`binary-classification` - Choose if the ML Model result has two possible categorical boolean values (0 or 1).</span></span>
-- <span data-ttu-id="824b1-129">`multiclass-classification`: elija si el resultado del modelo de ML tiene varios valores posibles categóricos.</span><span class="sxs-lookup"><span data-stu-id="824b1-129">`multiclass-classification` - Choose if the ML Model result has multiple categorical possible values.</span></span>
+--label-col <col> (REQUIRED)
 
-<span data-ttu-id="824b1-130">Solo debe proporcionarse una sola tarea de ML en este argumento.</span><span class="sxs-lookup"><span data-stu-id="824b1-130">Only one ML task should be provided in this argument.</span></span>
+--cache <option>
 
-## <a name="dataset"></a><span data-ttu-id="824b1-131">Conjunto de datos</span><span class="sxs-lookup"><span data-stu-id="824b1-131">Dataset</span></span>
+--has-header (Default: true)
 
-<span data-ttu-id="824b1-132">`--dataset | -d` (cadena)</span><span class="sxs-lookup"><span data-stu-id="824b1-132">`--dataset | -d` (string)</span></span>
+--ignore-cols <cols>
 
-<span data-ttu-id="824b1-133">Este argumento proporciona la ruta de acceso del archivo a cualquiera de las siguientes opciones:</span><span class="sxs-lookup"><span data-stu-id="824b1-133">This argument provides the filepath to either one of the following options:</span></span>
+--log-file-path <path>
 
-- <span data-ttu-id="824b1-134">*A: el archivo de conjunto de datos entero:* si utiliza esta opción y el usuario no proporciona `--test-dataset` y `--validation-dataset`, se utilizarán internamente enfoques de validación cruzada (de K iteraciones, etc.) o división de datos automatizada para validar el modelo.</span><span class="sxs-lookup"><span data-stu-id="824b1-134">*A: The whole dataset file:* If using this option and the user is not providing `--test-dataset` and `--validation-dataset`, then cross-validation (k-fold, etc.) or automated data split approaches will be used internally for validating the model.</span></span> <span data-ttu-id="824b1-135">En ese caso, el usuario solo deberá proporcionar la ruta de acceso al archivo del conjunto de datos.</span><span class="sxs-lookup"><span data-stu-id="824b1-135">In that case, the user will just need to provide the dataset filepath.</span></span>
+--name <name>
 
-- <span data-ttu-id="824b1-136">*B: el archivo del conjunto de datos de entrenamiento:* si el usuario también proporciona conjuntos de datos para la validación del modelo (con `--test-dataset` y, opcionalmente, `--validation-dataset`), el argumento `--dataset` significa tener solo el "conjunto de datos de entrenamiento".</span><span class="sxs-lookup"><span data-stu-id="824b1-136">*B: The training dataset file:* If the user is also providing datasets for model validation (using `--test-dataset` and optionally `--validation-dataset`), then the `--dataset` argument means to only have the "training dataset".</span></span> <span data-ttu-id="824b1-137">Por ejemplo, cuando se usa un enfoque de 80-20 % para validar la calidad del modelo y obtener métricas de precisión, el "conjunto de datos de entrenamiento" tendrá un 80 % de los datos y el "conjunto de datos de prueba" tendría un 20 % de los datos.</span><span class="sxs-lookup"><span data-stu-id="824b1-137">For example, when using an 80% - 20% approach to validate the quality of the model and to obtain accuracy metrics, the "training dataset" will have 80% of the data and the "test dataset" would have 20% of the data.</span></span>
+-o, --output <path>
 
-## <a name="test-dataset"></a><span data-ttu-id="824b1-138">Conjunto de datos de prueba</span><span class="sxs-lookup"><span data-stu-id="824b1-138">Test dataset</span></span>
+--test-dataset <path>
 
-<span data-ttu-id="824b1-139">`--test-dataset | -t` (cadena)</span><span class="sxs-lookup"><span data-stu-id="824b1-139">`--test-dataset | -t` (string)</span></span>
+--train-time <time> (Default: 30 minutes, in seconds)
 
-<span data-ttu-id="824b1-140">Ruta de acceso al archivo que apunta al archivo del conjunto de datos de prueba, por ejemplo, cuando se usa un enfoque de 80-20 % al realizar validaciones regulares para obtener métricas de precisión.</span><span class="sxs-lookup"><span data-stu-id="824b1-140">File path pointing to the test dataset file, for example when using an 80% - 20% approach when making regular validations to obtain accuracy metrics.</span></span>
+--validation-dataset <path>
 
-<span data-ttu-id="824b1-141">Si usa `--test-dataset`, también se requiere `--dataset`.</span><span class="sxs-lookup"><span data-stu-id="824b1-141">If using `--test-dataset`, then `--dataset` is also required.</span></span>
+-v, --verbosity <v>
 
-<span data-ttu-id="824b1-142">El argumento `--test-dataset` es opcional, a menos que se utilice --validation-dataset.</span><span class="sxs-lookup"><span data-stu-id="824b1-142">The `--test-dataset` argument is optional unless the --validation-dataset is used.</span></span> <span data-ttu-id="824b1-143">En ese caso, el usuario debe utilizar los tres argumentos.</span><span class="sxs-lookup"><span data-stu-id="824b1-143">In that case, the user must use the three arguments.</span></span>
+-?, -h, --help
 
-## <a name="validation-dataset"></a><span data-ttu-id="824b1-144">Conjunto de datos de validación</span><span class="sxs-lookup"><span data-stu-id="824b1-144">Validation dataset</span></span>
+```
 
-<span data-ttu-id="824b1-145">`--validation-dataset | -v` (cadena)</span><span class="sxs-lookup"><span data-stu-id="824b1-145">`--validation-dataset | -v` (string)</span></span>
+### <a name="recommendation-options"></a><span data-ttu-id="1bc9a-129">Opciones de recomendación</span><span class="sxs-lookup"><span data-stu-id="1bc9a-129">Recommendation options</span></span>
 
-<span data-ttu-id="824b1-146">Ruta de acceso al archivo que apunta al archivo del conjunto de datos de validación.</span><span class="sxs-lookup"><span data-stu-id="824b1-146">File path pointing to the validation dataset file.</span></span> <span data-ttu-id="824b1-147">El conjunto de datos de validación es opcional, en cualquier caso.</span><span class="sxs-lookup"><span data-stu-id="824b1-147">The validation dataset is optional, in any case.</span></span>
+<span data-ttu-id="1bc9a-130">La ejecución de `mlnet recommendation` entrenará un modelo de recomendación.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-130">Running `mlnet recommendation` will train a recommendation model.</span></span>  <span data-ttu-id="1bc9a-131">Elija este comando si quiere que un modelo de ML recomiende elementos a los usuarios en función de las clasificaciones (por ejemplo, recomendación de productos).</span><span class="sxs-lookup"><span data-stu-id="1bc9a-131">Choose this command if you want an ML Model to recommend items to users based on ratings (e.g. product recommendation).</span></span>
 
-<span data-ttu-id="824b1-148">Si usa un `validation dataset`, el comportamiento debería ser el siguiente:</span><span class="sxs-lookup"><span data-stu-id="824b1-148">If using a `validation dataset`, the behavior should be:</span></span>
+```console
+mlnet classification
 
-- <span data-ttu-id="824b1-149">Los argumentos `test-dataset` y `--dataset` también son necesarios.</span><span class="sxs-lookup"><span data-stu-id="824b1-149">The `test-dataset` and `--dataset` arguments are also required.</span></span>
+--dataset <path> (REQUIRED)
 
-- <span data-ttu-id="824b1-150">El conjunto de datos `validation-dataset` se usa para calcular el error de predicción en la selección del modelo.</span><span class="sxs-lookup"><span data-stu-id="824b1-150">The `validation-dataset` dataset is used to estimate prediction error for model selection.</span></span>
+--item-col <col> (REQUIRED)
 
-- <span data-ttu-id="824b1-151">El `test-dataset` se usa para la valoración del error de generalización del último modelo elegido.</span><span class="sxs-lookup"><span data-stu-id="824b1-151">The `test-dataset` is used for assessment of the generalization error of the final chosen model.</span></span> <span data-ttu-id="824b1-152">Idealmente, el conjunto de pruebas se debe mantener en un "almacén" y extraerse solo al final del análisis de datos.</span><span class="sxs-lookup"><span data-stu-id="824b1-152">Ideally, the test set should be kept in a “vault,” and be brought out only at the end of the data analysis.</span></span>
+--rating-col <col> (REQUIRED)
 
-<span data-ttu-id="824b1-153">Básicamente, cuando se usa un `validation dataset`, además del `test dataset`, la fase de validación se divide en dos partes:</span><span class="sxs-lookup"><span data-stu-id="824b1-153">Basically, when using a `validation dataset` plus the `test dataset`, the validation phase is split into two parts:</span></span>
+--user-col <col> (REQUIRED)
 
-1. <span data-ttu-id="824b1-154">En la primera parte, simplemente mira los modelos y selecciona el enfoque con mejor rendimiento mediante los datos de validación (=validación)</span><span class="sxs-lookup"><span data-stu-id="824b1-154">In the first part, you just look at your models and select the best performing approach using the validation data (=validation)</span></span>
-2. <span data-ttu-id="824b1-155">A continuación, calcula la precisión del enfoque seleccionado (=prueba).</span><span class="sxs-lookup"><span data-stu-id="824b1-155">Then you estimate the accuracy of the selected approach (=test).</span></span>
+--cache <option>
 
-<span data-ttu-id="824b1-156">Por lo tanto, la separación de datos podría ser 80/10/10 o 75/15/10.</span><span class="sxs-lookup"><span data-stu-id="824b1-156">Hence, the separation of data could be 80/10/10 or 75/15/10.</span></span> <span data-ttu-id="824b1-157">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="824b1-157">For example:</span></span>
+--has-header (Default: true)
 
-- <span data-ttu-id="824b1-158">el archivo `training-dataset` debe tener un 75 % de los datos.</span><span class="sxs-lookup"><span data-stu-id="824b1-158">`training-dataset` file should have 75% of the data.</span></span>
-- <span data-ttu-id="824b1-159">el archivo `validation-dataset` debe tener un 15 % de los datos.</span><span class="sxs-lookup"><span data-stu-id="824b1-159">`validation-dataset` file should have 15% of the data.</span></span>
-- <span data-ttu-id="824b1-160">el archivo `test-dataset` debe tener un 10 % de los datos.</span><span class="sxs-lookup"><span data-stu-id="824b1-160">`test-dataset` file should have 10% of the data.</span></span>
+--log-file-path <path>
 
-<span data-ttu-id="824b1-161">En cualquier caso, el usuario decidirá los porcentajes mediante la CLI que proporcionará los archivos ya divididos.</span><span class="sxs-lookup"><span data-stu-id="824b1-161">In any case, those percentages will be decided by the user using the CLI who will provide the files already split.</span></span>
+--name <name>
 
-## <a name="label-column-name"></a><span data-ttu-id="824b1-162">Nombre de la columna de etiqueta</span><span class="sxs-lookup"><span data-stu-id="824b1-162">Label column name</span></span>
+-o, --output <path>
 
-<span data-ttu-id="824b1-163">`--label-column-name | -n` (cadena)</span><span class="sxs-lookup"><span data-stu-id="824b1-163">`--label-column-name | -n` (string)</span></span>
+--test-dataset <path>
 
-<span data-ttu-id="824b1-164">Con este argumento, se puede especificar una columna concreta de destino/objetivo (es decir, la variable que se desea predecir) utilizando el nombre de la columna establecido en el encabezado del conjunto de datos.</span><span class="sxs-lookup"><span data-stu-id="824b1-164">With this argument, a specific objective/target column (the variable that you want to predict) can be specified by using the column's name set in the dataset's header.</span></span>
+--train-time <time> (Default: 30 minutes, in seconds)
 
-<span data-ttu-id="824b1-165">Este argumento se utiliza solo para tareas de ML supervisadas, como un *problema de clasificación*.</span><span class="sxs-lookup"><span data-stu-id="824b1-165">This argument is used only for supervised ML tasks such as a *classification problem*.</span></span> <span data-ttu-id="824b1-166">No se puede usar para tareas de ML no supervisadas, como *clústeres*.</span><span class="sxs-lookup"><span data-stu-id="824b1-166">It cannot be used for unsupervised ML Tasks such as *clustering*.</span></span>
+--validation-dataset <path>
 
-## <a name="label-column-index"></a><span data-ttu-id="824b1-167">Índice de la columna de etiqueta</span><span class="sxs-lookup"><span data-stu-id="824b1-167">Label column index</span></span>
+-v, --verbosity <v>
 
-<span data-ttu-id="824b1-168">`--label-column-index | -i` (int)</span><span class="sxs-lookup"><span data-stu-id="824b1-168">`--label-column-index | -i` (int)</span></span>
+-?, -h, --help
 
-<span data-ttu-id="824b1-169">Con este argumento, se puede especificar una columna concreta de destino/objetivo (es decir, la variable que se desea predecir) utilizando el índice numérico de la columna en el archivo del conjunto de datos (los valores del índice de la columna empiezan en 1).</span><span class="sxs-lookup"><span data-stu-id="824b1-169">With this argument, a specific objective/target column (the variable that you want to predict) can be specified by using the column's numeric index in the dataset's file (The column index values start at 1).</span></span>
+```
 
-<span data-ttu-id="824b1-170">*Nota:* Si el usuario también usa el `--label-column-name`, el `--label-column-name` es el que se va a usar.</span><span class="sxs-lookup"><span data-stu-id="824b1-170">*Note:* If the user is also using the `--label-column-name`, the `--label-column-name` is the one being used.</span></span>
+<span data-ttu-id="1bc9a-132">Las opciones de entrada no válidas hacen que la herramienta de la CLI emita una lista de entradas válidas y un mensaje de error.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-132">Invalid input options cause the CLI tool to emit a list of valid inputs and an error message.</span></span>
 
-<span data-ttu-id="824b1-171">Este argumento se utiliza solo para una tarea de ML supervisada, como un *problema de clasificación*.</span><span class="sxs-lookup"><span data-stu-id="824b1-171">This argument is used only for supervised ML task such as a *classification problem*.</span></span> <span data-ttu-id="824b1-172">No se puede usar para tareas de ML no supervisadas, como *clústeres*.</span><span class="sxs-lookup"><span data-stu-id="824b1-172">It cannot be used for unsupervised ML Tasks such as *clustering*.</span></span>
+## <a name="dataset"></a><span data-ttu-id="1bc9a-133">Conjunto de datos</span><span class="sxs-lookup"><span data-stu-id="1bc9a-133">Dataset</span></span>
 
-## <a name="ignore-columns"></a><span data-ttu-id="824b1-173">Omisión de columnas</span><span class="sxs-lookup"><span data-stu-id="824b1-173">Ignore columns</span></span>
+<span data-ttu-id="1bc9a-134">`--dataset | -d` (cadena)</span><span class="sxs-lookup"><span data-stu-id="1bc9a-134">`--dataset | -d` (string)</span></span>
 
-<span data-ttu-id="824b1-174">`--ignore-columns | -I` (cadena)</span><span class="sxs-lookup"><span data-stu-id="824b1-174">`--ignore-columns | -I` (string)</span></span>
+<span data-ttu-id="1bc9a-135">Este argumento proporciona la ruta de acceso del archivo a cualquiera de las siguientes opciones:</span><span class="sxs-lookup"><span data-stu-id="1bc9a-135">This argument provides the filepath to either one of the following options:</span></span>
 
-<span data-ttu-id="824b1-175">Con este argumento, puede omitir las columnas existentes en el archivo del conjunto de datos, de modo que los procesos de entrenamiento no las carguen ni utilicen.</span><span class="sxs-lookup"><span data-stu-id="824b1-175">With this argument, you can ignore existing columns in the dataset file so they are not loaded and used by the training processes.</span></span>
+- <span data-ttu-id="1bc9a-136">*A: el archivo de conjunto de datos entero:* si utiliza esta opción y el usuario no proporciona `--test-dataset` y `--validation-dataset`, se utilizarán internamente enfoques de validación cruzada (de K iteraciones, etc.) o división de datos automatizada para validar el modelo.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-136">*A: The whole dataset file:* If using this option and the user is not providing `--test-dataset` and `--validation-dataset`, then cross-validation (k-fold, etc.) or automated data split approaches will be used internally for validating the model.</span></span> <span data-ttu-id="1bc9a-137">En ese caso, el usuario solo deberá proporcionar la ruta de acceso al archivo del conjunto de datos.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-137">In that case, the user will just need to provide the dataset filepath.</span></span>
 
-<span data-ttu-id="824b1-176">Especifique los nombres de las columnas que desea omitir.</span><span class="sxs-lookup"><span data-stu-id="824b1-176">Specify the columns names that you want to ignore.</span></span> <span data-ttu-id="824b1-177">Use ", " (coma con espacio) o " " (espacio) para separar varios nombres de columna.</span><span class="sxs-lookup"><span data-stu-id="824b1-177">Use ', ' (comma with space) or ' ' (space) to separate multiple column names.</span></span> <span data-ttu-id="824b1-178">Puede usar comillas para los nombres de columna que contienen espacios en blanco (por ejemplo, "inicio de sesión").</span><span class="sxs-lookup"><span data-stu-id="824b1-178">You can use quotes for column names containing whitespace (e.g. "logged in").</span></span>
+- <span data-ttu-id="1bc9a-138">*B: el archivo del conjunto de datos de entrenamiento:* si el usuario también proporciona conjuntos de datos para la validación del modelo (con `--test-dataset` y, opcionalmente, `--validation-dataset`), el argumento `--dataset` significa tener solo el "conjunto de datos de entrenamiento".</span><span class="sxs-lookup"><span data-stu-id="1bc9a-138">*B: The training dataset file:* If the user is also providing datasets for model validation (using `--test-dataset` and optionally `--validation-dataset`), then the `--dataset` argument means to only have the "training dataset".</span></span> <span data-ttu-id="1bc9a-139">Por ejemplo, cuando se usa un enfoque de 80-20 % para validar la calidad del modelo y obtener métricas de precisión, el "conjunto de datos de entrenamiento" tendrá un 80 % de los datos y el "conjunto de datos de prueba" tendría un 20 % de los datos.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-139">For example, when using an 80% - 20% approach to validate the quality of the model and to obtain accuracy metrics, the "training dataset" will have 80% of the data and the "test dataset" would have 20% of the data.</span></span>
 
-<span data-ttu-id="824b1-179">Ejemplo:</span><span class="sxs-lookup"><span data-stu-id="824b1-179">Example:</span></span>
+## <a name="test-dataset"></a><span data-ttu-id="1bc9a-140">Conjunto de datos de prueba</span><span class="sxs-lookup"><span data-stu-id="1bc9a-140">Test dataset</span></span>
+
+<span data-ttu-id="1bc9a-141">`--test-dataset | -t` (cadena)</span><span class="sxs-lookup"><span data-stu-id="1bc9a-141">`--test-dataset | -t` (string)</span></span>
+
+<span data-ttu-id="1bc9a-142">Ruta de acceso al archivo que apunta al archivo del conjunto de datos de prueba, por ejemplo, cuando se usa un enfoque de 80-20 % al realizar validaciones regulares para obtener métricas de precisión.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-142">File path pointing to the test dataset file, for example when using an 80% - 20% approach when making regular validations to obtain accuracy metrics.</span></span>
+
+<span data-ttu-id="1bc9a-143">Si usa `--test-dataset`, también se requiere `--dataset`.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-143">If using `--test-dataset`, then `--dataset` is also required.</span></span>
+
+<span data-ttu-id="1bc9a-144">El argumento `--test-dataset` es opcional, a menos que se utilice --validation-dataset.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-144">The `--test-dataset` argument is optional unless the --validation-dataset is used.</span></span> <span data-ttu-id="1bc9a-145">En ese caso, el usuario debe utilizar los tres argumentos.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-145">In that case, the user must use the three arguments.</span></span>
+
+## <a name="validation-dataset"></a><span data-ttu-id="1bc9a-146">Conjunto de datos de validación</span><span class="sxs-lookup"><span data-stu-id="1bc9a-146">Validation dataset</span></span>
+
+<span data-ttu-id="1bc9a-147">`--validation-dataset | -v` (cadena)</span><span class="sxs-lookup"><span data-stu-id="1bc9a-147">`--validation-dataset | -v` (string)</span></span>
+
+<span data-ttu-id="1bc9a-148">Ruta de acceso al archivo que apunta al archivo del conjunto de datos de validación.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-148">File path pointing to the validation dataset file.</span></span> <span data-ttu-id="1bc9a-149">El conjunto de datos de validación es opcional, en cualquier caso.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-149">The validation dataset is optional, in any case.</span></span>
+
+<span data-ttu-id="1bc9a-150">Si usa un `validation dataset`, el comportamiento debería ser el siguiente:</span><span class="sxs-lookup"><span data-stu-id="1bc9a-150">If using a `validation dataset`, the behavior should be:</span></span>
+
+- <span data-ttu-id="1bc9a-151">Los argumentos `test-dataset` y `--dataset` también son necesarios.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-151">The `test-dataset` and `--dataset` arguments are also required.</span></span>
+
+- <span data-ttu-id="1bc9a-152">El conjunto de datos `validation-dataset` se usa para calcular el error de predicción en la selección del modelo.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-152">The `validation-dataset` dataset is used to estimate prediction error for model selection.</span></span>
+
+- <span data-ttu-id="1bc9a-153">El `test-dataset` se usa para la valoración del error de generalización del último modelo elegido.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-153">The `test-dataset` is used for assessment of the generalization error of the final chosen model.</span></span> <span data-ttu-id="1bc9a-154">Idealmente, el conjunto de pruebas se debe mantener en un "almacén" y extraerse solo al final del análisis de datos.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-154">Ideally, the test set should be kept in a “vault,” and be brought out only at the end of the data analysis.</span></span>
+
+<span data-ttu-id="1bc9a-155">Básicamente, cuando se usa un `validation dataset`, además del `test dataset`, la fase de validación se divide en dos partes:</span><span class="sxs-lookup"><span data-stu-id="1bc9a-155">Basically, when using a `validation dataset` plus the `test dataset`, the validation phase is split into two parts:</span></span>
+
+1. <span data-ttu-id="1bc9a-156">En la primera parte, simplemente mira los modelos y selecciona el enfoque con mejor rendimiento mediante los datos de validación (=validación)</span><span class="sxs-lookup"><span data-stu-id="1bc9a-156">In the first part, you just look at your models and select the best performing approach using the validation data (=validation)</span></span>
+2. <span data-ttu-id="1bc9a-157">A continuación, calcula la precisión del enfoque seleccionado (=prueba).</span><span class="sxs-lookup"><span data-stu-id="1bc9a-157">Then you estimate the accuracy of the selected approach (=test).</span></span>
+
+<span data-ttu-id="1bc9a-158">Por lo tanto, la separación de datos podría ser 80/10/10 o 75/15/10.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-158">Hence, the separation of data could be 80/10/10 or 75/15/10.</span></span> <span data-ttu-id="1bc9a-159">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="1bc9a-159">For example:</span></span>
+
+- <span data-ttu-id="1bc9a-160">el archivo `training-dataset` debe tener un 75 % de los datos.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-160">`training-dataset` file should have 75% of the data.</span></span>
+- <span data-ttu-id="1bc9a-161">el archivo `validation-dataset` debe tener un 15 % de los datos.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-161">`validation-dataset` file should have 15% of the data.</span></span>
+- <span data-ttu-id="1bc9a-162">el archivo `test-dataset` debe tener un 10 % de los datos.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-162">`test-dataset` file should have 10% of the data.</span></span>
+
+<span data-ttu-id="1bc9a-163">En cualquier caso, el usuario decidirá los porcentajes mediante la CLI que proporcionará los archivos ya divididos.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-163">In any case, those percentages will be decided by the user using the CLI who will provide the files already split.</span></span>
+
+## <a name="label-column"></a><span data-ttu-id="1bc9a-164">Columna de etiqueta</span><span class="sxs-lookup"><span data-stu-id="1bc9a-164">Label column</span></span>
+
+<span data-ttu-id="1bc9a-165">`--label-col` (entero o cadena)</span><span class="sxs-lookup"><span data-stu-id="1bc9a-165">`--label-col` (int or string)</span></span>
+
+<span data-ttu-id="1bc9a-166">Con este argumento, se puede especificar una columna concreta de destino/objetivo (es decir, la variable que se quiere predecir) utilizando el nombre de la columna establecido en el encabezado del conjunto de datos o bien el índice numérico de la columna en el archivo del conjunto de datos (los valores del índice de la columna empiezan en 0).</span><span class="sxs-lookup"><span data-stu-id="1bc9a-166">With this argument, a specific objective/target column (the variable that you want to predict) can be specified by using the column's name set in the dataset's header or the column's numeric index in the dataset's file (the column index values start at 0).</span></span>
+
+<span data-ttu-id="1bc9a-167">Este argumento se usa para problemas de *clasificación* y *regresión*.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-167">This argument is used for *classification* and *regression* problems.</span></span>
+
+## <a name="item-column"></a><span data-ttu-id="1bc9a-168">Columna de elementos</span><span class="sxs-lookup"><span data-stu-id="1bc9a-168">Item column</span></span>
+
+<span data-ttu-id="1bc9a-169">`--item-col` (entero o cadena)</span><span class="sxs-lookup"><span data-stu-id="1bc9a-169">`--item-col` (int or string)</span></span>
+
+<span data-ttu-id="1bc9a-170">La columna de elementos contiene la lista de elementos que los usuarios califican (los elementos se recomiendan a los usuarios).</span><span class="sxs-lookup"><span data-stu-id="1bc9a-170">The item column has the list of items that users rate (items are recommended to users).</span></span> <span data-ttu-id="1bc9a-171">Esta columna se puede especificar utilizando el nombre de la columna establecido en el encabezado del conjunto de datos o bien el índice numérico de la columna en el archivo del conjunto de datos (los valores del índice de la columna empiezan en 0).</span><span class="sxs-lookup"><span data-stu-id="1bc9a-171">This column can be specified by using the column's name set in the dataset's header or the column's numeric index in the dataset's file (the column index values start at 0).</span></span>
+
+<span data-ttu-id="1bc9a-172">Este argumento solo se usa para la tarea de *recomendación*.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-172">This argument is used only for the *recommendation* task.</span></span>
+
+## <a name="rating-column"></a><span data-ttu-id="1bc9a-173">Columna de clasificación</span><span class="sxs-lookup"><span data-stu-id="1bc9a-173">Rating column</span></span>
+
+<span data-ttu-id="1bc9a-174">`--rating-col` (entero o cadena)</span><span class="sxs-lookup"><span data-stu-id="1bc9a-174">`--rating-col` (int or string)</span></span>
+
+<span data-ttu-id="1bc9a-175">La columna de clasificación contiene la lista de clasificaciones que los usuarios otorgan a los elementos.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-175">The rating column has the list of ratings that are given to items by users.</span></span> <span data-ttu-id="1bc9a-176">Esta columna se puede especificar utilizando el nombre de la columna establecido en el encabezado del conjunto de datos o bien el índice numérico de la columna en el archivo del conjunto de datos (los valores del índice de la columna empiezan en 0).</span><span class="sxs-lookup"><span data-stu-id="1bc9a-176">This column can be specified by using the column's name set in the dataset's header or the column's numeric index in the dataset's file (the column index values start at 0).</span></span>
+
+<span data-ttu-id="1bc9a-177">Este argumento solo se usa para la tarea de *recomendación*.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-177">This argument is used only for the *recommendation* task.</span></span>
+
+## <a name="user-column"></a><span data-ttu-id="1bc9a-178">Columna de usuarios</span><span class="sxs-lookup"><span data-stu-id="1bc9a-178">User column</span></span>
+
+<span data-ttu-id="1bc9a-179">`--user-col` (entero o cadena)</span><span class="sxs-lookup"><span data-stu-id="1bc9a-179">`--user-col` (int or string)</span></span>
+
+<span data-ttu-id="1bc9a-180">La columna de usuarios contiene la lista de usuarios que califican elementos.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-180">The user column has the list of users that give ratings to items.</span></span> <span data-ttu-id="1bc9a-181">Esta columna se puede especificar utilizando el nombre de la columna establecido en el encabezado del conjunto de datos o bien el índice numérico de la columna en el archivo del conjunto de datos (los valores del índice de la columna empiezan en 0).</span><span class="sxs-lookup"><span data-stu-id="1bc9a-181">This column can be specified by using the column's name set in the dataset's header or the column's numeric index in the dataset's file (the column index values start at 0).</span></span>
+
+<span data-ttu-id="1bc9a-182">Este argumento solo se usa para la tarea de *recomendación*.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-182">This argument is used only for the *recommendation* task.</span></span>
+
+## <a name="ignore-columns"></a><span data-ttu-id="1bc9a-183">Omisión de columnas</span><span class="sxs-lookup"><span data-stu-id="1bc9a-183">Ignore columns</span></span>
+
+<span data-ttu-id="1bc9a-184">`--ignore-columns` (cadena)</span><span class="sxs-lookup"><span data-stu-id="1bc9a-184">`--ignore-columns` (string)</span></span>
+
+<span data-ttu-id="1bc9a-185">Con este argumento, puede omitir las columnas existentes en el archivo del conjunto de datos, de modo que los procesos de entrenamiento no las carguen ni utilicen.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-185">With this argument, you can ignore existing columns in the dataset file so they are not loaded and used by the training processes.</span></span>
+
+<span data-ttu-id="1bc9a-186">Especifique los nombres de las columnas que desea omitir.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-186">Specify the columns names that you want to ignore.</span></span> <span data-ttu-id="1bc9a-187">Use ", " (coma con espacio) o " " (espacio) para separar varios nombres de columna.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-187">Use ', ' (comma with space) or ' ' (space) to separate multiple column names.</span></span> <span data-ttu-id="1bc9a-188">Puede usar comillas para los nombres de columna que contienen espacios en blanco (por ejemplo, "inicio de sesión").</span><span class="sxs-lookup"><span data-stu-id="1bc9a-188">You can use quotes for column names containing whitespace (e.g. "logged in").</span></span>
+
+<span data-ttu-id="1bc9a-189">Ejemplo:</span><span class="sxs-lookup"><span data-stu-id="1bc9a-189">Example:</span></span>
 
 `--ignore-columns email, address, id, logged_in`
 
-## <a name="has-header"></a><span data-ttu-id="824b1-180">Tiene encabezado</span><span class="sxs-lookup"><span data-stu-id="824b1-180">Has header</span></span>
+## <a name="has-header"></a><span data-ttu-id="1bc9a-190">Tiene encabezado</span><span class="sxs-lookup"><span data-stu-id="1bc9a-190">Has header</span></span>
 
-<span data-ttu-id="824b1-181">`--has-header | -h` (bool)</span><span class="sxs-lookup"><span data-stu-id="824b1-181">`--has-header | -h` (bool)</span></span>
+<span data-ttu-id="1bc9a-191">`--has-header` (bool)</span><span class="sxs-lookup"><span data-stu-id="1bc9a-191">`--has-header` (bool)</span></span>
 
-<span data-ttu-id="824b1-182">Especifique si los archivos del conjunto de datos tienen una fila de encabezado.</span><span class="sxs-lookup"><span data-stu-id="824b1-182">Specify if the dataset file(s) have a header row.</span></span>
-<span data-ttu-id="824b1-183">Los valores posibles son:</span><span class="sxs-lookup"><span data-stu-id="824b1-183">Possible values are:</span></span>
+<span data-ttu-id="1bc9a-192">Especifique si los archivos del conjunto de datos tienen una fila de encabezado.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-192">Specify if the dataset file(s) have a header row.</span></span>
+<span data-ttu-id="1bc9a-193">Los valores posibles son:</span><span class="sxs-lookup"><span data-stu-id="1bc9a-193">Possible values are:</span></span>
 
 - `true`
 - `false`
 
-<span data-ttu-id="824b1-184">El valor predeterminado es `true` si el usuario no especifica este argumento.</span><span class="sxs-lookup"><span data-stu-id="824b1-184">The by default value is `true` if this argument is not specified by the user.</span></span>
+<span data-ttu-id="1bc9a-194">La CLI de ML.NET intentará detectar esta propiedad si el usuario no especifica este argumento.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-194">The ML.NET CLI will try to detect this property if this argument is not specified by the user.</span></span>
 
-<span data-ttu-id="824b1-185">Para poder usar el argumento `--label-column-name`, debe tener un encabezado en el archivo del conjunto de datos y `--has-header` establecido en `true` (el cual es el valor predeterminado).</span><span class="sxs-lookup"><span data-stu-id="824b1-185">In order to use the `--label-column-name` argument, you need to have a header in the dataset file and `--has-header` set to `true` (which is by default).</span></span>
+## <a name="train-time"></a><span data-ttu-id="1bc9a-195">Tiempo de entrenamiento</span><span class="sxs-lookup"><span data-stu-id="1bc9a-195">Train time</span></span>
 
-## <a name="max-exploration-time"></a><span data-ttu-id="824b1-186">Tiempo máximo de exploración</span><span class="sxs-lookup"><span data-stu-id="824b1-186">Max exploration time</span></span>
+<span data-ttu-id="1bc9a-196">`--train-time` (cadena)</span><span class="sxs-lookup"><span data-stu-id="1bc9a-196">`--train-time` (string)</span></span>
 
-<span data-ttu-id="824b1-187">`--max-exploration-time | -x` (cadena)</span><span class="sxs-lookup"><span data-stu-id="824b1-187">`--max-exploration-time | -x` (string)</span></span>
+<span data-ttu-id="1bc9a-197">De forma predeterminada, el tiempo máximo de exploración o entrenamiento es de 30 minutos.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-197">By default, the maximum exploration / train time is 30 minutes.</span></span>
 
-<span data-ttu-id="824b1-188">De forma predeterminada, el tiempo máximo de exploración es de 30 minutos.</span><span class="sxs-lookup"><span data-stu-id="824b1-188">By default, the maximum exploration time is 30 minutes.</span></span>
+<span data-ttu-id="1bc9a-198">Este argumento establece el tiempo máximo (en segundos) para que el proceso explore varios instructores y configuraciones.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-198">This argument sets the maximum time (in seconds) for the process to explore multiple trainers and configurations.</span></span> <span data-ttu-id="1bc9a-199">El tiempo configurado puede superarse so el tiempo proporcionado es demasiado corto (por ejemplo, 2 segundos) para una sola iteración.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-199">The configured time may be exceeded if the provided time is too short (say 2 seconds) for a single iteration.</span></span> <span data-ttu-id="1bc9a-200">En este caso, el tiempo real es el tiempo necesario para producir una configuración de modelo en una sola iteración.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-200">In this case, the actual time is the required time to produce one model configuration in a single iteration.</span></span>
 
-<span data-ttu-id="824b1-189">Este argumento establece el tiempo máximo (en segundos) para que el proceso explore varios instructores y configuraciones.</span><span class="sxs-lookup"><span data-stu-id="824b1-189">This argument sets the maximum time (in seconds) for the process to explore multiple trainers and configurations.</span></span> <span data-ttu-id="824b1-190">El tiempo configurado puede superarse so el tiempo proporcionado es demasiado corto (por ejemplo, 2 segundos) para una sola iteración.</span><span class="sxs-lookup"><span data-stu-id="824b1-190">The configured time may be exceeded if the provided time is too short (say 2 seconds) for a single iteration.</span></span> <span data-ttu-id="824b1-191">En este caso, el tiempo real es el tiempo necesario para producir una configuración de modelo en una sola iteración.</span><span class="sxs-lookup"><span data-stu-id="824b1-191">In this case, the actual time is the required time to produce one model configuration in a single iteration.</span></span>
+<span data-ttu-id="1bc9a-201">El tiempo necesario para las iteraciones puede variar según el tamaño del conjunto de datos.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-201">The needed time for iterations can vary depending on the size of the dataset.</span></span>
 
-<span data-ttu-id="824b1-192">El tiempo necesario para las iteraciones puede variar según el tamaño del conjunto de datos.</span><span class="sxs-lookup"><span data-stu-id="824b1-192">The needed time for iterations can vary depending on the size of the dataset.</span></span>
+## <a name="cache"></a><span data-ttu-id="1bc9a-202">instancias y claves</span><span class="sxs-lookup"><span data-stu-id="1bc9a-202">Cache</span></span>
 
-## <a name="cache"></a><span data-ttu-id="824b1-193">instancias y claves</span><span class="sxs-lookup"><span data-stu-id="824b1-193">Cache</span></span>
+<span data-ttu-id="1bc9a-203">`--cache` (cadena)</span><span class="sxs-lookup"><span data-stu-id="1bc9a-203">`--cache` (string)</span></span>
 
-<span data-ttu-id="824b1-194">`--cache | -c` (cadena)</span><span class="sxs-lookup"><span data-stu-id="824b1-194">`--cache | -c` (string)</span></span>
+<span data-ttu-id="1bc9a-204">Si usa almacenamiento en caché, el conjunto de datos de entrenamiento completo se cargará en memoria.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-204">If you use caching, the whole training dataset will be loaded in-memory.</span></span>
 
-<span data-ttu-id="824b1-195">Si usa almacenamiento en caché, el conjunto de datos de entrenamiento completo se cargará en memoria.</span><span class="sxs-lookup"><span data-stu-id="824b1-195">If you use caching, the whole training dataset will be loaded in-memory.</span></span>
+<span data-ttu-id="1bc9a-205">Para conjuntos de datos pequeños y medianos, el uso de memoria caché puede mejorar significativamente el rendimiento del entrenamiento, lo que significa que el tiempo de entrenamiento puede ser más corto que cuando no se usa memoria caché.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-205">For small and medium datasets, using cache can drastically improve the training performance, meaning the training time can be shorter than when you don't use cache.</span></span>
 
-<span data-ttu-id="824b1-196">Para conjuntos de datos pequeños y medianos, el uso de memoria caché puede mejorar significativamente el rendimiento del entrenamiento, lo que significa que el tiempo de entrenamiento puede ser más corto que cuando no se usa memoria caché.</span><span class="sxs-lookup"><span data-stu-id="824b1-196">For small and medium datasets, using cache can drastically improve the training performance, meaning the training time can be shorter than when you don't use cache.</span></span>
+<span data-ttu-id="1bc9a-206">Sin embargo, para conjuntos de datos grandes, cargar todos los datos en memoria puede tener un impacto negativo ya que podría obtener memoria insuficiente.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-206">However, for large datasets, loading all the data in memory can impact negatively since you might get out of memory.</span></span> <span data-ttu-id="1bc9a-207">Cuando se entrene con archivos de conjuntos de datos grandes y no se use la memoria caché, ML.NET transmitirá fragmentos de datos desde la unidad cuando necesite cargar más datos durante el entrenamiento.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-207">When training with large dataset files and not using cache, ML.NET will be streaming chunks of data from the drive when it needs to load more data while training.</span></span>
 
-<span data-ttu-id="824b1-197">Sin embargo, para conjuntos de datos grandes, cargar todos los datos en memoria puede tener un impacto negativo ya que podría obtener memoria insuficiente.</span><span class="sxs-lookup"><span data-stu-id="824b1-197">However, for large datasets, loading all the data in memory can impact negatively since you might get out of memory.</span></span> <span data-ttu-id="824b1-198">Cuando se entrene con archivos de conjuntos de datos grandes y no se use la memoria caché, ML.NET transmitirá fragmentos de datos desde la unidad cuando necesite cargar más datos durante el entrenamiento.</span><span class="sxs-lookup"><span data-stu-id="824b1-198">When training with large dataset files and not using cache, ML.NET will be streaming chunks of data from the drive when it needs to load more data while training.</span></span>
+<span data-ttu-id="1bc9a-208">Puede especificar los siguientes valores:</span><span class="sxs-lookup"><span data-stu-id="1bc9a-208">You can specify the following values:</span></span>
 
-<span data-ttu-id="824b1-199">Puede especificar los siguientes valores:</span><span class="sxs-lookup"><span data-stu-id="824b1-199">You can specify the following values:</span></span>
+<span data-ttu-id="1bc9a-209">`on`: Fuerza el uso de la memoria caché durante el entrenamiento.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-209">`on`: Forces cache to be used when training.</span></span>
+<span data-ttu-id="1bc9a-210">`off`: Fuerza el no uso de la memoria caché durante el entrenamiento.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-210">`off`: Forces cache not to be used when training.</span></span>
+<span data-ttu-id="1bc9a-211">`auto`: Según la heurística de AutoML, se usará o no la memoria caché.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-211">`auto`: Depending on AutoML heuristics, the cache will be used or not.</span></span> <span data-ttu-id="1bc9a-212">Normalmente, los conjuntos de datos pequeños y medianos utilizarán la memoria caché y los conjuntos de datos grandes no la usarán si se usa la opción `auto`.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-212">Usually, small/medium datasets will use cache and large datasets won't use cache if you use the `auto` choice.</span></span>
 
-<span data-ttu-id="824b1-200">`on`: Fuerza el uso de la memoria caché durante el entrenamiento.</span><span class="sxs-lookup"><span data-stu-id="824b1-200">`on`: Forces cache to be used when training.</span></span>
-<span data-ttu-id="824b1-201">`off`: Fuerza el no uso de la memoria caché durante el entrenamiento.</span><span class="sxs-lookup"><span data-stu-id="824b1-201">`off`: Forces cache not to be used when training.</span></span>
-<span data-ttu-id="824b1-202">`auto`: Según la heurística de AutoML, se usará o no la memoria caché.</span><span class="sxs-lookup"><span data-stu-id="824b1-202">`auto`: Depending on AutoML heuristics, the cache will be used or not.</span></span> <span data-ttu-id="824b1-203">Normalmente, los conjuntos de datos pequeños y medianos utilizarán la memoria caché y los conjuntos de datos grandes no la usarán si se usa la opción `auto`.</span><span class="sxs-lookup"><span data-stu-id="824b1-203">Usually, small/medium datasets will use cache and large datasets won't use cache if you use the `auto` choice.</span></span>
+<span data-ttu-id="1bc9a-213">Si no especifica el parámetro `auto`, la configuración `--cache` de la memoria caché se utilizara de manera predeterminada.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-213">If you don't specify the `--cache` parameter, then the cache `auto` configuration will be used by default.</span></span>
 
-<span data-ttu-id="824b1-204">Si no especifica el parámetro `auto`, la configuración `--cache` de la memoria caché se utilizara de manera predeterminada.</span><span class="sxs-lookup"><span data-stu-id="824b1-204">If you don't specify the `--cache` parameter, then the cache `auto` configuration will be used by default.</span></span>
+## <a name="name"></a><span data-ttu-id="1bc9a-214">NOMBRE</span><span class="sxs-lookup"><span data-stu-id="1bc9a-214">Name</span></span>
 
-## <a name="name"></a><span data-ttu-id="824b1-205">NOMBRE</span><span class="sxs-lookup"><span data-stu-id="824b1-205">Name</span></span>
+<span data-ttu-id="1bc9a-215">`--name` (cadena)</span><span class="sxs-lookup"><span data-stu-id="1bc9a-215">`--name` (string)</span></span>
 
-<span data-ttu-id="824b1-206">`--name | -N` (cadena)</span><span class="sxs-lookup"><span data-stu-id="824b1-206">`--name | -N` (string)</span></span>
+<span data-ttu-id="1bc9a-216">El nombre de la solución o el proyecto de la salida creada.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-216">The name for the created output project or solution.</span></span> <span data-ttu-id="1bc9a-217">Si no se especifica ningún nombre, se usará el nombre `sample-{mltask}`.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-217">If no name is specified, the name `sample-{mltask}` is used.</span></span>
 
-<span data-ttu-id="824b1-207">El nombre de la solución o el proyecto de la salida creada.</span><span class="sxs-lookup"><span data-stu-id="824b1-207">The name for the created output project or solution.</span></span> <span data-ttu-id="824b1-208">Si no se especifica ningún nombre, se usará el nombre `sample-{mltask}`.</span><span class="sxs-lookup"><span data-stu-id="824b1-208">If no name is specified, the name `sample-{mltask}` is used.</span></span>
+<span data-ttu-id="1bc9a-218">El archivo del modelo de ML.NET (archivo ZIP) obtendrá el mismo nombre también.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-218">The ML.NET model file (.ZIP file) will get the same name, as well.</span></span>
 
-<span data-ttu-id="824b1-209">El archivo del modelo de ML.NET (archivo ZIP) obtendrá el mismo nombre también.</span><span class="sxs-lookup"><span data-stu-id="824b1-209">The ML.NET model file (.ZIP file) will get the same name, as well.</span></span>
+## <a name="output-path"></a><span data-ttu-id="1bc9a-219">Ruta de acceso de salida</span><span class="sxs-lookup"><span data-stu-id="1bc9a-219">Output path</span></span>
 
-## <a name="output-path"></a><span data-ttu-id="824b1-210">Ruta de acceso de salida</span><span class="sxs-lookup"><span data-stu-id="824b1-210">Output path</span></span>
+<span data-ttu-id="1bc9a-220">`--output-path | -o` (cadena)</span><span class="sxs-lookup"><span data-stu-id="1bc9a-220">`--output-path | -o` (string)</span></span>
 
-<span data-ttu-id="824b1-211">`--output-path | -o` (cadena)</span><span class="sxs-lookup"><span data-stu-id="824b1-211">`--output-path | -o` (string)</span></span>
+<span data-ttu-id="1bc9a-221">Ubicación o carpeta para colocar la salida generada.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-221">Root location/folder to place the generated output.</span></span> <span data-ttu-id="1bc9a-222">El valor predeterminado es el directorio actual.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-222">The default is the current directory.</span></span>
 
-<span data-ttu-id="824b1-212">Ubicación o carpeta para colocar la salida generada.</span><span class="sxs-lookup"><span data-stu-id="824b1-212">Root location/folder to place the generated output.</span></span> <span data-ttu-id="824b1-213">El valor predeterminado es el directorio actual.</span><span class="sxs-lookup"><span data-stu-id="824b1-213">The default is the current directory.</span></span>
+## <a name="verbosity"></a><span data-ttu-id="1bc9a-223">Nivel de detalle</span><span class="sxs-lookup"><span data-stu-id="1bc9a-223">Verbosity</span></span>
 
-## <a name="verbosity"></a><span data-ttu-id="824b1-214">Nivel de detalle</span><span class="sxs-lookup"><span data-stu-id="824b1-214">Verbosity</span></span>
+<span data-ttu-id="1bc9a-224">`--verbosity | -v` (cadena)</span><span class="sxs-lookup"><span data-stu-id="1bc9a-224">`--verbosity | -v` (string)</span></span>
 
-<span data-ttu-id="824b1-215">`--verbosity | -V` (cadena)</span><span class="sxs-lookup"><span data-stu-id="824b1-215">`--verbosity | -V` (string)</span></span>
+<span data-ttu-id="1bc9a-225">Establece el nivel de detalle de la salida estándar.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-225">Sets the verbosity level of the standard output.</span></span>
 
-<span data-ttu-id="824b1-216">Establece el nivel de detalle de la salida estándar.</span><span class="sxs-lookup"><span data-stu-id="824b1-216">Sets the verbosity level of the standard output.</span></span>
-
-<span data-ttu-id="824b1-217">Los valores permitidos son:</span><span class="sxs-lookup"><span data-stu-id="824b1-217">Allowed values are:</span></span>
+<span data-ttu-id="1bc9a-226">Los valores permitidos son:</span><span class="sxs-lookup"><span data-stu-id="1bc9a-226">Allowed values are:</span></span>
 
 - `q[uiet]`
-- <span data-ttu-id="824b1-218">`m[inimal]` (de manera predeterminada)</span><span class="sxs-lookup"><span data-stu-id="824b1-218">`m[inimal]`  (by default)</span></span>
-- <span data-ttu-id="824b1-219">`diag[nostic]` (nivel de información de registro)</span><span class="sxs-lookup"><span data-stu-id="824b1-219">`diag[nostic]` (logging information level)</span></span>
+- <span data-ttu-id="1bc9a-227">`m[inimal]` (de manera predeterminada)</span><span class="sxs-lookup"><span data-stu-id="1bc9a-227">`m[inimal]`  (by default)</span></span>
+- <span data-ttu-id="1bc9a-228">`diag[nostic]` (nivel de información de registro)</span><span class="sxs-lookup"><span data-stu-id="1bc9a-228">`diag[nostic]` (logging information level)</span></span>
 
-<span data-ttu-id="824b1-220">De forma predeterminada, la herramienta de la CLI debe mostrar un mínimo de comentarios cuando trabaja, como mencionar que está trabajando y, de ser posible, cuánto tiempo queda o qué porcentaje de tiempo lleva completado.</span><span class="sxs-lookup"><span data-stu-id="824b1-220">By default, the CLI tool should show some minimum feedback (minimal) when working, such as mentioning that it is working and if possible how much time is left or what % of the time is completed.</span></span>
+<span data-ttu-id="1bc9a-229">De forma predeterminada, la herramienta CLI debe mostrar un mínimo de comentarios (`minimal`) cuando trabaja, como mencionar que está trabajando y, a ser posible, cuánto tiempo queda o qué porcentaje de tiempo lleva completado.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-229">By default, the CLI tool should show some minimum feedback (`minimal`) when working, such as mentioning that it is working and if possible how much time is left or what % of the time is completed.</span></span>
 
-## <a name="help"></a><span data-ttu-id="824b1-221">Ayuda</span><span class="sxs-lookup"><span data-stu-id="824b1-221">Help</span></span>
+## <a name="help"></a><span data-ttu-id="1bc9a-230">Ayuda</span><span class="sxs-lookup"><span data-stu-id="1bc9a-230">Help</span></span>
 
-`-h|--help`
+`-h |--help`
 
-<span data-ttu-id="824b1-222">Imprime la ayuda para el comando con una descripción para el parámetro de cada comando.</span><span class="sxs-lookup"><span data-stu-id="824b1-222">Prints out help for the command with a description for each command's parameter.</span></span>
+<span data-ttu-id="1bc9a-231">Imprime la ayuda para el comando con una descripción para el parámetro de cada comando.</span><span class="sxs-lookup"><span data-stu-id="1bc9a-231">Prints out help for the command with a description for each command's parameter.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="824b1-223">Vea también</span><span class="sxs-lookup"><span data-stu-id="824b1-223">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1bc9a-232">Vea también</span><span class="sxs-lookup"><span data-stu-id="1bc9a-232">See also</span></span>
 
-- [<span data-ttu-id="824b1-224">Cómo instalar la herramienta de la CLI de ML.NET</span><span class="sxs-lookup"><span data-stu-id="824b1-224">How to install the ML.NET CLI tool</span></span>](../how-to-guides/install-ml-net-cli.md)
-- [<span data-ttu-id="824b1-225">Introducción a la CLI de ML.NET</span><span class="sxs-lookup"><span data-stu-id="824b1-225">Overview of the ML.NET CLI</span></span>](../automate-training-with-cli.md)
-- [<span data-ttu-id="824b1-226">Tutorial: Análisis de opiniones mediante la CLI de ML.NET</span><span class="sxs-lookup"><span data-stu-id="824b1-226">Tutorial: Analyze sentiment using the ML.NET CLI</span></span>](../tutorials/sentiment-analysis-cli.md)
-- [<span data-ttu-id="824b1-227">Telemetría en la CLI de ML.NET</span><span class="sxs-lookup"><span data-stu-id="824b1-227">Telemetry in ML.NET CLI</span></span>](../resources/ml-net-cli-telemetry.md)
+- [<span data-ttu-id="1bc9a-233">Cómo instalar la herramienta de la CLI de ML.NET</span><span class="sxs-lookup"><span data-stu-id="1bc9a-233">How to install the ML.NET CLI tool</span></span>](../how-to-guides/install-ml-net-cli.md)
+- [<span data-ttu-id="1bc9a-234">Introducción a la CLI de ML.NET</span><span class="sxs-lookup"><span data-stu-id="1bc9a-234">Overview of the ML.NET CLI</span></span>](../automate-training-with-cli.md)
+- [<span data-ttu-id="1bc9a-235">Tutorial: Análisis de opiniones mediante la CLI de ML.NET</span><span class="sxs-lookup"><span data-stu-id="1bc9a-235">Tutorial: Analyze sentiment using the ML.NET CLI</span></span>](../tutorials/sentiment-analysis-cli.md)
+- [<span data-ttu-id="1bc9a-236">Telemetría en la CLI de ML.NET</span><span class="sxs-lookup"><span data-stu-id="1bc9a-236">Telemetry in ML.NET CLI</span></span>](../resources/ml-net-cli-telemetry.md)

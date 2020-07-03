@@ -1,20 +1,21 @@
 ---
-title: 'Cómo: hacer ping a un Host'
+title: Procedimiento para hacer ping a un host
+description: Con este código de ejemplo obtendrá información sobre cómo hacer ping a un host remoto en .NET Framework. Para este ejemplo se necesitan referencias al espacio de nombres System.Net.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Ping
 ms.assetid: bbf20f5b-eca1-4661-af04-cb8837f9af05
-ms.openlocfilehash: 09ae830bbef078b94bd28e654d93c10cde6108fd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ac62f58eea41419de2d5651269154d9abb757aba
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180784"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502501"
 ---
-# <a name="how-to-ping-a-host"></a><span data-ttu-id="28796-102">Cómo: hacer ping a un Host</span><span class="sxs-lookup"><span data-stu-id="28796-102">How to: Ping a Host</span></span>
-<span data-ttu-id="28796-103">En este ejemplo se muestra cómo hacer ping a un host remoto.</span><span class="sxs-lookup"><span data-stu-id="28796-103">This sample shows how to ping a remote host.</span></span>  
+# <a name="how-to-ping-a-host"></a><span data-ttu-id="dfb8d-104">Procedimiento para hacer ping a un host</span><span class="sxs-lookup"><span data-stu-id="dfb8d-104">How to: Ping a Host</span></span>
+<span data-ttu-id="dfb8d-105">En este ejemplo se muestra cómo hacer ping a un host remoto.</span><span class="sxs-lookup"><span data-stu-id="dfb8d-105">This sample shows how to ping a remote host.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="28796-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="28796-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="dfb8d-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="dfb8d-106">Example</span></span>  
   
 ```csharp
 using System;  
@@ -120,7 +121,7 @@ namespace Examples.System.Net.NetworkInformation.PingTest
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="28796-105">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="28796-105">Compiling the Code</span></span>  
- <span data-ttu-id="28796-106">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="28796-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="dfb8d-107">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="dfb8d-107">Compiling the Code</span></span>  
+ <span data-ttu-id="dfb8d-108">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="dfb8d-108">This example requires:</span></span>  
   
-- <span data-ttu-id="28796-107">Referencias al espacio de nombres **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="28796-107">References to the **System.Net** namespace.</span></span>
+- <span data-ttu-id="dfb8d-109">Referencias al espacio de nombres **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="dfb8d-109">References to the **System.Net** namespace.</span></span>
