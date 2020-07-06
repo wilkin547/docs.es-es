@@ -1,5 +1,6 @@
 ---
 title: Implementar .NET Framework y aplicaciones
+description: Primeros pasos para la implementación de .NET con la aplicación. .NET proporciona aplicaciones carentes de impacto, componentes privados de forma predeterminada, uso compartido de código controlado, etc.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - deploying applications [.NET Framework], packaging
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework, deploying
 - .NET Framework application deployment
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
-ms.openlocfilehash: b1ba9810b4b0d5a1688318db1093a9ce9bdf8fda
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cce888c962c9ab83c13cce4040eb9ba50270972d
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75716461"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803510"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Implementar .NET Framework y aplicaciones
 
@@ -152,13 +153,13 @@ Parte de la información relacionada con el empaquetado y la implementación de 
 
 ### <a name="installation-location"></a>Ubicación de instalación
 
-Para determinar la ubicación donde se van a implementar los ensamblados de la aplicación para que el runtime los encuentre, vea [Cómo el motor en tiempo de ejecución ubica ensamblados](how-the-runtime-locates-assemblies.md).
+Para determinar la ubicación donde se van a implementar los ensamblados de la aplicación para que el entorno de ejecución los encuentre, vea [Cómo el motor en tiempo de ejecución ubica ensamblados](how-the-runtime-locates-assemblies.md).
 
 Las cuestiones de seguridad pueden afectar también al modo en que se implementa la aplicación. Los permisos de seguridad se conceden al código administrado según la ubicación del código. Si se implementa una aplicación o un componente en una ubicación donde reciba poca confianza, como Internet, se verán limitadas las funciones de dicha aplicación o dicho componente. Para obtener más información sobre la implementación y la seguridad, vea [Conceptos básicos sobre la seguridad de acceso del código](../misc/code-access-security-basics.md).
 
 ## <a name="related-topics"></a>Temas relacionados
 
-|Título|Description|
+|Title|Descripción|
 |-----------|-----------------|
 |[Cómo el motor en tiempo de ejecución ubica ensamblados](how-the-runtime-locates-assemblies.md)|Describe la forma en que Common Language Runtime determina el ensamblado que se va a utilizar para llevar a cabo una solicitud de enlace.|
 |[Procedimientos recomendados para cargar ensamblados](best-practices-for-assembly-loading.md)|Aborda formas de evitar problemas de identidad de tipos que pueden causar errores como <xref:System.InvalidCastException> o <xref:System.MissingMethodException>, entre otros.|
