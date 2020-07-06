@@ -10,12 +10,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: 3d4315a09869b77b4ae8cbb43646f9a96280b678
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4715a27a94ac86c5e4955c0e8be95c6ee4a28507
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173476"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619707"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (Referencia de C#)
 
@@ -141,7 +141,7 @@ Una tarea puede encontrarse en un estado de error debido a que ocurrieron varias
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente, el bloque `try` contiene una llamada al método `ProcessString` que puede causar una excepción. La cláusula `catch` contiene el controlador de excepciones que muestra un mensaje en la pantalla. Cuando la  instrucción `throw` se llama desde dentro `MyMethod`, el sistema busca la instrucción `catch` y muestra el mensaje `Exception caught`.
+En el ejemplo siguiente, el bloque `try` contiene una llamada al método `ProcessString` que puede causar una excepción. La cláusula `catch` contiene el controlador de excepciones que muestra un mensaje en la pantalla. Cuando la  instrucción `throw` se llama desde dentro `ProcessString`, el sistema busca la instrucción `catch` y muestra el mensaje `Exception caught`.
 
 [!code-csharp[csrefKeywordsExceptions#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsExceptions/CS/csrefKeywordsExceptions.cs#2)]
 
