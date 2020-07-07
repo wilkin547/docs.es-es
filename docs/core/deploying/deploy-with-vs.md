@@ -6,12 +6,11 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 0fb21b09fbf97f9c9ac2bf2982c391b87e2debc1
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
-ms.translationtype: HT
+ms.openlocfilehash: 7a4ffd5b1b58e6ea7fd46c676e139b77a126aa2b
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614362"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803032"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Implementación de aplicaciones de .NET Core con Visual Studio
 
@@ -98,7 +97,7 @@ La implementación de una implementación independiente sin dependencias de terc
 
    Para habilitar el modo invariable, haga clic con el botón derecho en el proyecto (no en la solución) en el **Explorador de soluciones** y seleccione **Editar SCD.csproj** o **Editar SCD.vbproj**. Luego agregue las siguientes líneas resaltadas al archivo:
 
-   [!code-xml[globalization-invariant-mode](./snippets/deploy-with-vs/xml/invariant.csproj?highlight=6-8)]
+   [!code-xml[globalization-invariant-mode](./snippets/deploy-with-vs/xml/invariant.csproj?highlight=7-9)]
 
 1. Cree una compilación de depuración de la aplicación.
 
@@ -192,9 +191,9 @@ Haga lo siguiente para cada plataforma que sea destino de la aplicación:
 
 1. Seleccione la ubicación en la que Visual Studio publica la aplicación.
 
-   Si solo se va a publicar en una plataforma, se puede aceptar el valor predeterminado del cuadro de texto **Elegir una carpeta**; así, se publica la implementación dependiente del marco de la aplicación en el directorio *\<directorio-del-proyecto>\bin\Release\netcoreapp2.1\publish*.
+   Si solo se va a publicar en una plataforma, se puede aceptar el valor predeterminado del cuadro de texto **Elegir una carpeta**; así, se publica la implementación dependiente del marco de la aplicación en el directorio *\<project-directory>\bin\Release\netcoreapp2.1\publish*.
 
-   Si va a publicar en más de una plataforma, anexe una cadena que identifique a la plataforma de destino. Por ejemplo, si anexa la cadena "linux" a la ruta de acceso de archivo, Visual Studio publica la implementación dependiente del marco de la aplicación en el directorio *\<directorio-del-proyecto>\bin\Release\netcoreapp2.1\publish\linux*.
+   Si va a publicar en más de una plataforma, anexe una cadena que identifique a la plataforma de destino. Por ejemplo, si anexa la cadena "linux" a la ruta de acceso de archivo, Visual Studio publica la implementación dependiente del marco de la aplicación en el directorio *\<project-directory>\bin\Release\netcoreapp2.1\publish\linux*.
 
 1. Para crear el perfil, seleccione el icono de lista desplegable situado junto al botón **Publicar** y luego **Crear perfil**. Después, seleccione el botón **Crear perfil** para crear el perfil.
 

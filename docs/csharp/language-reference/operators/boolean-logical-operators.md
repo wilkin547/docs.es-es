@@ -1,7 +1,7 @@
 ---
 title: Operadores lógicos booleanos (referencia de C#)
 description: Obtenga información sobre los operadores de C# que realizan operaciones lógicas de negación, conjunción (AND) y disyunción inclusiva y exclusiva (OR) con operandos booleanos.
-ms.date: 09/27/2019
+ms.date: 06/29/2020
 author: pkulikov
 f1_keywords:
 - '!_CSharpKeyword'
@@ -32,12 +32,11 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: 5f85b88236c2e643f97453c64173a3f4f7159a35
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
-ms.translationtype: HT
+ms.openlocfilehash: a19c804c624153ef608885bc6493537302275765
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795006"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618199"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Operadores lógicos booleanos (referencia de C#)
 
@@ -115,8 +114,14 @@ El [operador OR lógico](#logical-or-operator-) `|` también calcula el operador
 
 ## <a name="nullable-boolean-logical-operators"></a>Operadores lógicos booleanos que aceptan valores NULL
 
-En el caso de los operandos `bool?`, los operadores `&` y `|` admiten la lógica de tres valores. La semántica de estos operadores se define en la tabla siguiente:  
-  
+En el caso de los operandos `bool?`, los operadores [`&` (AND lógico)](#logical-and-operator-) y [`|` (OR lógico)](#logical-or-operator-) admiten la lógica de tres valores tal como se indica a continuación:
+
+- El operador `&` produce `true` solo si sus dos operandos se evalúan como `true`. Si `x` o `y` se evalúan como `false`, `x & y` produce `false` (aunque otro operando se evalúe como `null`). De lo contrario, el resultado de `x & y` es `null`.
+
+- El operador `|` produce `false` solo si sus dos operandos se evalúan como `false`. Si `x` o `y` se evalúan como `true`, `x | y` produce `true` (aunque otro operando se evalúe como `null`). De lo contrario, el resultado de `x | y` es `null`.
+
+En la tabla siguiente se presenta esta semántica:
+
 |x|y|x e y|x&#124;y|  
 |----|----|----|----|  
 |true|true|true|true|  

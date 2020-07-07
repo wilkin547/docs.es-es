@@ -4,12 +4,11 @@ description: En este artículo se muestran las diversas maneras de instalar el S
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: 3a2ff1ca1519428f42c88048dde22aa11baaaa01
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
-ms.translationtype: HT
+ms.openlocfilehash: 24f0a5b5278d038c2f941b0984efcacd91dcbe31
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324756"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619473"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-opensuse"></a>Instalación del SDK de .NET Core o de .NET Core Runtime en openSUSE
 
@@ -31,7 +30,7 @@ En la tabla siguiente se muestra una lista de las versiones de .NET Core compati
 |----------------------------|---------------|---------------|----------------|
 | ✔️ [15](#opensuse-15-)     | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 (versión preliminar) |
 
-Las siguientes versiones de .NET Core ya no se admiten. Las descargas de estas siguen estando publicadas:
+Las siguientes versiones de .NET Core ya no se admiten. aunque sus descargas siguen estando publicadas:
 
 - 3.0
 - 2.2
@@ -69,7 +68,22 @@ En esta sección se proporciona información sobre los errores comunes que puede
 
 ## <a name="dependencies"></a>Dependencias
 
-[!INCLUDE [linux-install-dependencies](includes/linux-install-dependencies.md)]
+Al realizar la instalación con un administrador de paquetes, estas bibliotecas se instalan automáticamente. Sin embargo, si instala manualmente .NET Core o publica una aplicación independiente, deberá asegurarse de que estas bibliotecas estén instaladas:
+
+- krb5
+- libicu
+- libopenssl1_0_0
+
+Si la versión de OpenSSL del entorno de tiempo de ejecución de destino es 1.1 o más reciente, deberá instalar **compat-openssl10**.
+
+Para obtener más información sobre las dependencias, vea [Aplicaciones de Linux independientes](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md).
+
+En el caso de las aplicaciones de .NET Core que utilizan el ensamblado *System.Drawing.Common*, también se necesitará la dependencia siguiente:
+
+- [libgdiplus (versión 6.0.1 o posterior)](https://www.mono-project.com/docs/gui/libgdiplus/)
+
+  > [!WARNING]
+  > Puede instalar una versión reciente de *libgdiplus* agregando el repositorio Mono al sistema. Para obtener más información, vea <https://www.mono-project.com/download/stable/>.
 
 ## <a name="scripted-install"></a>Instalación con script
 

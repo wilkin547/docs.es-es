@@ -4,12 +4,11 @@ description: En este artículo se muestran las diversas maneras de instalar el S
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: 92753933cbcedae28867b66293d1044f700d7baa
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
-ms.translationtype: HT
+ms.openlocfilehash: 0efe3bbacbe573b77eae8818ea29b5a3867e4570
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324825"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619525"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-alpine"></a>Instalación del SDK de .NET Core o .NET Core Runtime en Alpine
 
@@ -35,7 +34,7 @@ En la tabla siguiente se muestra una lista de versiones de .NET Core actualmente
 | ✔️ 3.9   | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 (versión preliminar) |
 | ❌ 3.8   | ✔️ 2.1        | ❌ 3.1        | ❌ 5.0 (versión preliminar) |
 
-Las siguientes versiones de .NET Core ya no se admiten, aunque sus descargas siguen estando publicadas:
+Las siguientes versiones de .NET Core ya no se admiten. aunque sus descargas siguen estando publicadas:
 
 - 3.0
 - 2.2
@@ -47,12 +46,11 @@ Las siguientes versiones de .NET Core ya no se admiten, aunque sus descargas sig
 
 - icu-libs
 - krb5-libs
+- libgcc
 - libintl
 - libssl1.1 (Alpine 3.9 o superior)
-- libssl1.0 (Alpine 3.8)
+- libssl1.0 (Alpine 3.8 o inferior)
 - libstdc++
-- lttng-ust
-- numactl (opcional)
 - zlib
 
 ## <a name="scripted-install"></a>Instalación con script

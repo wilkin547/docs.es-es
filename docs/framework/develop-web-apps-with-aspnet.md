@@ -1,17 +1,17 @@
 ---
 title: Desarrollar aplicaciones web mediante ASP.NET
+description: Desarrolle aplicaciones web con ASP.NET Core, que es una versión rediseñada de ASP.NET 4.x multiplataforma, más ligera, más modular y unificada para poder compilar interfaces de usuario web y API web.
 ms.date: 09/25/2018
 helpviewer_keywords:
 - ASP.NET
 - .NET Framework, ASP.NET
 - dynamic Web applications [ASP.NET]
 ms.assetid: b7861df0-690a-4a58-bd12-f9d0123e40df
-ms.openlocfilehash: 60d7cf67a21216a8deada2baf0d6a30183c3ee44
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
-ms.translationtype: HT
+ms.openlocfilehash: 82f6b9421abbfd9f547cac1c7e08c63de2b2cf48
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607950"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619382"
 ---
 # <a name="developing-web-apps-with-aspnet"></a>Desarrollo de aplicaciones web con ASP.NET
 

@@ -4,12 +4,11 @@ description: En este artículo se muestran las diversas maneras de instalar el S
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: eef724138f2b908bf8601a509d298a06e55fb13e
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
-ms.translationtype: HT
+ms.openlocfilehash: ed4f5b914d03cfb072ee4ba168c67262e0d40c08
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324739"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619434"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-ubuntu"></a>Instalación del SDK de .NET Core o de .NET Core Runtime en Ubuntu
 
@@ -39,7 +38,7 @@ En la tabla siguiente se muestra una lista de versiones de .NET Core actualmente
 | ❌ [16.10](#1610-)       | ❌ 2.1        | ❌ 3.1        | ❌ 5.0 (versión preliminar) |
 | ✔️ [16.04 (LTS)](#1604-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 (versión preliminar) |
 
-Las siguientes versiones de .NET Core ya no se admiten. Las descargas de estas siguen estando publicadas:
+Las siguientes versiones de .NET Core ya no se admiten. aunque sus descargas siguen estando publicadas:
 
 - 3.0
 - 2.2
@@ -201,16 +200,17 @@ sudo apt-get update; \
 
 Al realizar la instalación con un administrador de paquetes, estas bibliotecas se instalan automáticamente. Sin embargo, si instala manualmente .NET Core o publica una aplicación independiente, deberá asegurarse de que estas bibliotecas estén instaladas:
 
-- liblttng-ust0
-- libcurl3 (para 14.x y 16.x)
-- libcurl4 (para 18.x)
-- libssl1.0.0
-- libkrb5-3
-- zlib1g
+- libc6
+- libgcc1
+- libgssapi-krb5-2
 - libicu52 (para 14.x)
 - libicu55 (para 16.x)
-- libicu57 (para 17.x)
 - libicu60 (para 18.x)
+- libicu66 (para 20.x)
+- libssl1.0.0 (para 14.x, 16.x)
+- libssl1.1 (para 18.x, 20.x)
+- libstdc++6
+- zlib1g
 
 En el caso de las aplicaciones de .NET Core que utilizan el ensamblado *System.Drawing.Common*, también se necesita la dependencia siguiente:
 

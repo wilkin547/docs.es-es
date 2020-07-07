@@ -4,14 +4,19 @@ description: Conozca qué distribuciones de Linux admiten la instalación de .NE
 author: adegeo
 ms.author: adegeo
 ms.date: 06/01/2020
-ms.openlocfilehash: 22c07c5a8263dd6059f415cb4d9e2915811351b0
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
-ms.translationtype: HT
+ms.openlocfilehash: 06a90d7fecfe9f25d26caccb2fe3aedec0176f64
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324640"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803097"
 ---
 # <a name="install-net-core-on-linux"></a>Instalación de .NET Core en Linux
+
+> [!div class="op_single_selector"]
+>
+> - [Instalación en Windows](windows.md)
+> - [Instalación en macOS](macos.md)
+> - [Instalación en Linux](linux.md)
 
 .NET Core está disponible en diferentes distribuciones de Linux. La mayoría de las plataformas y distribuciones de Linux tienen una versión principal cada año, y la mayoría proporcionan un administrador de paquetes que se usa para instalar .NET Core. En este artículo se describe lo que se admite actualmente y el administrador de paquetes que se usa.
 
@@ -174,3 +179,9 @@ En la tabla siguiente se representa el estado de compatibilidad de Ubuntu y .NET
 | ✔️ [16.04 (LTS)](linux-ubuntu.md#1604-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 (versión preliminar) |
 
 Para más información, consulte [Instalación de .NET Core en Ubuntu](linux-ubuntu.md).
+
+## <a name="next-steps"></a>Pasos siguientes
+
+- [Cómo comprobar que .NET Core ya está instalado](how-to-detect-installed-versions.md?pivots=os-linux).
+- [Tutorial: Creación de una aplicación con Visual Studio Code](../tutorials/with-visual-studio-code.md).
+- [Tutorial: Inclusión de una aplicación de .NET Core en un contenedor](../docker/build-container.md).

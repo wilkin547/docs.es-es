@@ -3,13 +3,12 @@ title: Empleo de cobertura de código para pruebas unitarias
 description: Aprenda a usar las capacidades de cobertura de código para pruebas unitarias de .NET.
 author: IEvangelist
 ms.author: dapine
-ms.date: 06/16/2020
-ms.openlocfilehash: d19975283bf60e5cf3a9656c1b6f7966e12d2176
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
-ms.translationtype: HT
+ms.date: 07/01/2020
+ms.openlocfilehash: af64116e86c3f46f37c8d5d079b9c86084095485
+ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105422"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853903"
 ---
 # <a name="use-code-coverage-for-unit-testing"></a>Empleo de cobertura de código para pruebas unitarias
 
@@ -18,6 +17,8 @@ Las pruebas unitarias ayudan a garantizar la funcionalidad y proporcionan una fo
 En este artículo se habla del uso de la cobertura de código para pruebas unitarias con Coverlet y de la generación de informes con ReportGenerator. Aunque este artículo se centra en C# y xUnit como marco de pruebas, MSTest y NUnit también funcionan. Coverlet es un [proyecto de código abierto en GitHub](https://github.com/coverlet-coverage/coverlet) que proporciona un marco de cobertura de código multiplataforma para C#. [Coverlet](https://dotnetfoundation.org/projects/coverlet) es parte de .NET Foundation. Coverlet recopila datos de series de pruebas de cobertura de Cobertura, que se usan para la generación de informes.
 
 Además, en este artículo se detalla cómo usar la información de cobertura de código recopilada de una serie de pruebas de Coverlet para generar un informe. La generación de informes es posible gracias a otro [proyecto de código abierto en GitHub: ReportGenerator](https://github.com/danielpalme/ReportGenerator). ReportGenerator convierte los informes de cobertura generados por Cobertura, entre otros, en informes legibles para el usuario en distintos formatos.
+
+Este artículo se basa en el [proyecto de código fuente de ejemplo](https://docs.microsoft.com/samples/dotnet/samples/unit-testing-code-coverage-cs), disponible en el explorador de ejemplos.
 
 ## <a name="system-under-test"></a>Sistema sometido a prueba
 
@@ -270,7 +271,7 @@ A continuación se muestra el archivo de ejemplo *coverage.cobertura.xml*.
 > ```
 >
 > Se genera el archivo *coverage.cobertura.xml* resultante.  
-> Puede seguir la guía de integración de msbuild [aquí](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/MSBuildIntegration.md)
+> Puede seguir la guía de integración de msbuild [aquí](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/MSBuildIntegration.md).
 
 ## <a name="generate-reports"></a>Generación de informes
 
@@ -300,6 +301,7 @@ Después de ejecutar este comando, un archivo HTML representa el informe generad
 - [Repositorio de GitHub: ReportGenerator](https://github.com/danielpalme/ReportGenerator)
 - [Sitio de proyecto de ReportGenerator](https://danielpalme.github.io/ReportGenerator)
 - [Comando test de la CLI de .NET Core](../tools/dotnet-test.md)
+- [Código fuente de ejemplo](https://docs.microsoft.com/samples/dotnet/samples/unit-testing-code-coverage-cs)
 
 ## <a name="next-steps"></a>Pasos siguientes
 

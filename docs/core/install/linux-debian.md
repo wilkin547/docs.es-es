@@ -4,12 +4,11 @@ description: En este artículo se muestran las diversas maneras de instalar el S
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: ded9d2be72e8ec476d5ace752e44d92eb0ee1028
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
-ms.translationtype: HT
+ms.openlocfilehash: 68a3e848b3d80806e875dfb2fb7e2cbf223f8ad5
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324918"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619499"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-debian"></a>Instalación del SDK de .NET Core o de .NET Core Runtime en Debian
 
@@ -33,7 +32,7 @@ En la tabla siguiente se muestra una lista de versiones de .NET Core actualmente
 | ✔️ [9](#debian-9-)       | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 (versión preliminar) |
 | ❌ [8](#debian-8-)       | ✔️ 2.1        | ❌ 3.1        | ❌ 5.0 (versión preliminar) |
 
-Las siguientes versiones de .NET Core ya no se admiten. Las descargas de estas siguen estando publicadas:
+Las siguientes versiones de .NET Core ya no se admiten. aunque sus descargas siguen estando publicadas:
 
 - 3.0
 - 2.2
@@ -127,7 +126,26 @@ sudo apt-get update; \
 
 ## <a name="dependencies"></a>Dependencias
 
-[!INCLUDE [linux-install-dependencies](includes/linux-install-dependencies.md)]
+Al realizar la instalación con un administrador de paquetes, estas bibliotecas se instalan automáticamente. Sin embargo, si instala manualmente .NET Core o publica una aplicación independiente, deberá asegurarse de que estas bibliotecas estén instaladas:
+
+- libc6
+- libgcc1
+- libgssapi-krb5-2
+- libicu52 (para 8.x)
+- libicu57 (para 9.x)
+- libicu63 (para 10.x)
+- libicu67 (para 11.x)
+- libssl1.0.0 (para 8.x)
+- libssl1.1 (para 9.x-11.x)
+- libstdc++6
+- zlib1g
+
+En el caso de las aplicaciones de .NET Core que utilizan el ensamblado *System.Drawing.Common*, también se necesita la dependencia siguiente:
+
+- libgdiplus (versión 6.0.1 o posteriores)
+
+  > [!WARNING]
+  > Puede instalar una versión reciente de *libgdiplus* agregando el repositorio Mono al sistema. Para obtener más información, vea <https://www.mono-project.com/download/stable/>.
 
 ## <a name="scripted-install"></a>Instalación con script
 
