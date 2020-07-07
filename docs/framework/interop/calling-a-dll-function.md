@@ -1,5 +1,6 @@
 ---
 title: Llamar a una función DLL
+description: Revise los problemas relacionados con la llamada a una función DLL que puede parecer confusa. El proceso de llamada de función difiere en función de si el tipo de valor devuelto se puede transferir en bloque de bits.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - unmanaged functions, calling
@@ -9,12 +10,11 @@ helpviewer_keywords:
 - interoperation with unmanaged code, platform invoke
 - DLL functions
 ms.assetid: 113646de-7ea0-4f0e-8df0-c46dab3e8733
-ms.openlocfilehash: 14589544e05f6c59f4f58f7723fef40e75af9823
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: HT
+ms.openlocfilehash: 90f8f47148e652a9942a35be1564bed94c155216
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123715"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620903"
 ---
 # <a name="calling-a-dll-function"></a>Llamar a una función DLL
 Aunque llamar a funciones DLL no administradas es prácticamente idéntico a llamar a otro código administrado, hay diferencias que pueden hacer que las funciones DLL parezcan confusas al principio. En esta sección se presentan temas que describen algunos de los problemas inusuales relacionados con las llamadas.  

@@ -1,5 +1,6 @@
 ---
 title: Procedimiento para hacer referencia a tipos de .NET desde COM
+description: Referencia a tipos de .NET desde COM Los clientes de VB pueden ver un objeto .NET en el examinador de objetos, pero los clientes de C++ deben hacer referencia a un archivo TLB con la \#directiva de importación.
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -12,12 +13,11 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: 54917f6f-cb18-4103-b622-856b55da93f3
-ms.openlocfilehash: 0223cb25b933cc84af49aa86d90259fdf1fd3efc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: HT
+ms.openlocfilehash: f8d052c7b9bac9c4bab61ab1950e9e89a7c73912
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124173"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618966"
 ---
 # <a name="how-to-reference-net-types-from-com"></a>Procedimiento para hacer referencia a tipos de .NET desde COM
 Desde el punto de vista del código de cliente y servidor, las diferencias entre COM y .NET Framework son prácticamente inapreciables. Los clientes Microsoft Visual Basic pueden ver los objetos de .NET en el Examinador de objetos, que expone los métodos y la sintaxis, las propiedades, y los campos de los objetos exactamente del mismo modo que si se tratase de cualquier otro objeto COM.  

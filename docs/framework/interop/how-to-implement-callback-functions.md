@@ -1,5 +1,6 @@
 ---
 title: Procedimiento para implementar funciones de devolución de llamada
+description: Consulte cómo implementar funciones de devolución de llamada. En este ejemplo, una aplicación administrada, mediante la invocación de plataforma, imprime el valor de identificador de cada ventana en un equipo.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,11 @@ dev_langs:
 helpviewer_keywords:
 - callback function, implementing
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
-ms.openlocfilehash: b7aae1e70ac736d60bed1e79291235db1c220281
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: 31c657372e760c8d57f9714b20178967ad85fcd3
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181414"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619122"
 ---
 # <a name="how-to-implement-callback-functions"></a>Procedimiento para implementar funciones de devolución de llamada
 El procedimiento y el ejemplo siguiente muestran cómo una aplicación administrada, mediante la invocación de la plataforma, puede imprimir el valor del identificador de cada ventana en el equipo local. En concreto, el uso del procedimiento y el ejemplo usan la función **EnumWindows** para recorrer la lista de ventanas y una función de devolución de llamada administrada (denominada CallBack) para imprimir el valor del identificador de ventana.  

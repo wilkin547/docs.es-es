@@ -1,16 +1,16 @@
 ---
 title: Procedimiento para crear contenedores COM
+description: 'Cree contenedores del modelo de objetos componentes (COM) con Visual Studio o con las herramientas de .NET (Tlbimp.exe y Regasm.exe). Ambos métodos generan dos tipos de contenedores COM:'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM,wrappers creating
 - COM,wrappers Visual Studio
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
-ms.openlocfilehash: 035d6439ec90426d7b68e05043ea8b6722f81d28
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
-ms.translationtype: HT
+ms.openlocfilehash: 286526c710287e6efa3e49a7f7c55e3687076e29
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121594"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617397"
 ---
 # <a name="how-to-create-com-wrappers"></a>Procedimiento para crear contenedores COM
 

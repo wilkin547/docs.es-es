@@ -1,21 +1,21 @@
 ---
 title: Configurar la redirección del enlace de ensamblados
+description: Vea cómo configurar la redirección de enlace de ensamblados en .NET mediante el atributo appliesTo en el elemento assemblyBinding de un archivo de configuración de la aplicación.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: d266cbd8-bf91-41d1-baf0-afbc481a741f
-ms.openlocfilehash: 5b24d99aa23358272eecd042c40001413965d7f0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: 8f3e2270d92e11ea467d6cefc2b19b4faff563b4
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181693"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621735"
 ---
 # <a name="configuring-assembly-binding-redirection"></a>Configurar la redirección del enlace de ensamblados
 De forma predeterminada, las aplicaciones usan los ensamblados de .NET Framework que se incluyen con la versión del tiempo de ejecución usada para compilar la aplicación. Puede usar el atributo **appliesTo** en el elemento [\<assemblyBinding>](../configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) de un archivo de configuración de la aplicación para redirigir las referencias de enlace de ensamblados a una versión específica de los ensamblados de .NET Framework. Este atributo opcional usa un número de versión de .NET Framework para indicar a qué versión se aplica. Si no se especifica ningún atributo **appliesTo**, el elemento **\<assemblyBinding>** se aplica a todas las versiones de .NET Framework.  
   
- El atributo **appliesTo** se incorporó en la versión 1.1 de .NET Framework; se pasa por alto en la versión 1.0 de .NET Framework. Esto significa que se aplican todos los elementos **\<assemblyBinding>** cuando se usa la versión 1.0 de .NET Framework, aunque se especifique un atributo **appliesTo**.  
+ El atributo **appliesTo** se incorporó en la versión 1.1 de .NET Framework; se pasa por alto en la versión 1.0 de .NET Framework. Esto significa que se aplican todos los elementos **\<assemblyBinding>** cuando se usa la versión 1.0 de .NET Framework, aunque se especifique un atributo **appliesTo**.  
   
 > [!NOTE]
 > Use el atributo **appliesTo** para limitar la redirección de enlace de ensamblados a una versión específica del tiempo de ejecución.  

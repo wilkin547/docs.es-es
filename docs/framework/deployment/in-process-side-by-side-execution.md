@@ -1,16 +1,16 @@
 ---
 title: Ejecución en paralelo y en proceso
+description: Use el hospedaje en paralelo en el mismo proceso para ejecutar varias versiones de Common Language Runtime (CLR) en un único proceso .NET.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - in-process side-by-side execution
 - side-by-side execution, in-process
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
-ms.openlocfilehash: 5ca2f03576946a23b3133bbe7532d46c4ad758ab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: 078f2eaada8fac57138bef22d46218ef2ccda835
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181661"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622606"
 ---
 # <a name="in-process-side-by-side-execution"></a>Ejecución en paralelo y en proceso
 A partir de .NET Framework 4, puede usar el hospedaje en paralelo en el mismo proceso para ejecutar varias versiones de Common Language Runtime (CLR) en un único proceso. De forma predeterminada, los componentes COM administrados se ejecutan con la versión de .NET Framework con la que se han compilado, independientemente de la versión de .NET Framework que se haya cargado para el proceso.  
@@ -58,7 +58,7 @@ A partir de .NET Framework 4, puede usar el hospedaje en paralelo en el mismo 
   
      Versiones de .NET Framework instaladas: Versión anterior de .NET Framework y .NET Framework 4.  
   
-     Qué se debe hacer: en el [archivo de configuración de la aplicación](../configure-apps/index.md) que está en el directorio de la aplicación, use el [elemento \<startup>](../configure-apps/file-schema/startup/startup-element.md) y el [elemento \<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) establecidos de esta forma:  
+     Qué se debe hacer: En el [archivo de configuración de la aplicación](../configure-apps/index.md) en el directorio de la aplicación, use el elemento [\<startup> ](../configure-apps/file-schema/startup/startup-element.md) y el elemento [\<supportedRuntime> ](../configure-apps/file-schema/startup/supportedruntime-element.md) establecido de esta forma:  
   
     ```xml  
     <configuration>  
@@ -174,4 +174,4 @@ int _tmain(int argc, _TCHAR* argv[])
 ## <a name="see-also"></a>Vea también
 
 - [Elemento \<startup>](../configure-apps/file-schema/startup/startup-element.md)
-- [\<supportedRuntime > Elemento](../configure-apps/file-schema/startup/supportedruntime-element.md)
+- [Elemento \<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md)

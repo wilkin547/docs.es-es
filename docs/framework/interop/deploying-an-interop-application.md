@@ -1,5 +1,6 @@
 ---
 title: Implementar una aplicación interoperativa
+description: Implemente una aplicación de interoperabilidad, que normalmente tiene un ensamblado de cliente de .NET, ensamblados de interoperabilidad de distintas bibliotecas de tipos COM y componentes COM registrados.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - deploying applications [.NET Framework], interop
@@ -14,12 +15,11 @@ helpviewer_keywords:
 - signed assemblies
 - COM interop, exposing COM components
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
-ms.openlocfilehash: 04f8e53220b2e0fa09735400ae84dcb8b1c3478a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: HT
+ms.openlocfilehash: 744307d4175d151d07acbedd5815e538307c8973
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123567"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617488"
 ---
 # <a name="deploying-an-interop-application"></a>Implementar una aplicación interoperativa
 Una aplicación de interoperabilidad suele incluir un ensamblado de cliente de .NET, uno o varios ensamblados de interoperabilidad que representan diferentes bibliotecas de tipos COM, y uno o varios componentes COM registrados. Visual Studio y Windows SDK proporcionan herramientas para importar y convertir una biblioteca de tipos en un ensamblado de interoperabilidad, tal como se describe en [Importar una biblioteca de tipos como un ensamblado](importing-a-type-library-as-an-assembly.md). Hay dos maneras de implementar una aplicación de interoperabilidad:  

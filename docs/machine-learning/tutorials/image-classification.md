@@ -1,15 +1,14 @@
 ---
 title: 'Tutorial: Modelo de clasificación de imágenes de ML.NET de TensorFlow'
 description: Obtenga información sobre cómo transferir el conocimiento de un modelo de TensorFlow existente a un modelo de clasificación de imágenes de ML.NET nuevo. El modelo TensorFlow se entrenó para clasificar las imágenes en mil categorías. El modelo de ML.NET usa el aprendizaje de transferencia para clasificar las imágenes en menos categorías más amplias.
-ms.date: 01/30/2020
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: ae6094d5acd4d26482f3690e174d82bbf1807266
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
-ms.translationtype: HT
+ms.openlocfilehash: 38fa349e743da54a21aeb65b76a0273a17c3fae7
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144440"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85804007"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>Tutorial: Generación de un modelo de clasificación de imágenes de ML.NET desde un modelo entrenado previamente de TensorFlow
 
@@ -122,12 +121,14 @@ Las imágenes de entrenamiento y prueba se encuentran en las carpetas de recurso
 
 1. Instale el **paquete NuGet Microsoft.ML**:
 
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
+
     * En el Explorador de soluciones, haga clic con el botón derecho en **Administrar paquetes NuGet**.
     * Elija "nuget.org" como origen del paquete, seleccione la pestaña Examinar y busque **Microsoft.ML**.
-    * Haga clic en el menú desplegable **Versión**, seleccione el paquete **1.4.0** en la lista y, luego, el botón **Instalar**.
+    * Seleccione el botón **Instalar**.
     * Seleccione el botón **Aceptar** en el cuadro de diálogo **Vista previa de los cambios**.
     * Haga clic en el botón **Acepto** en el cuadro de diálogo **Aceptación de la licencia** si está de acuerdo con los términos de licencia de los paquetes que aparecen.
-    * Repita estos pasos para **Microsoft.ML.ImageAnalytics v1.4.0**, **SciSharp.TensorFlow.Redist v1.15.0** y **Microsoft.ML.TensorFlow v1.4.0**.
+    * Repita estos pasos para **Microsoft.ML.ImageAnalytics**, **SciSharp.TensorFlow.Redist** y **Microsoft.ML.TensorFlow**.
 
 ### <a name="download-assets"></a>Descarga de activos
 

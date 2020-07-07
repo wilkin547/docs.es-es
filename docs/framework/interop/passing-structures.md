@@ -1,5 +1,6 @@
 ---
 title: Pasar estructuras
+description: Aprenda a pasar estructuras y clases a funciones no administradas. Obtenga información sobre el atributo StructLayoutAttribute, que se utiliza para definir tipos con formato.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,11 @@ dev_langs:
 helpviewer_keywords:
 - platform invoke, calling unmanaged functions
 ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
-ms.openlocfilehash: 11e329fa8f0c059b6c2f1c8ccb1d6bd0d0f0030a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: eae28d6746cd89d98b659b9eb957f158e1319190
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181338"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620825"
 ---
 # <a name="passing-structures"></a>Pasar estructuras
 Muchas funciones no administradas esperan que el usuario pase, como parámetro de la función, miembros de estructuras (tipos definidos por el usuario en Visual Basic) o miembros de clases definidos en código administrado. Al pasar estructuras o clases al código no administrado mediante la invocación de plataforma, debe proporcionarse información adicional para mantener la distribución y alineación originales. En este tema se presenta el atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute>, que se utiliza para definir tipos con formato. Para estructuras y clases administradas, se puede seleccionar entre varios comportamientos de distribución previsibles que proporciona la enumeración **LayoutKind**.  

@@ -1,17 +1,17 @@
 ---
 title: Exponer componentes COM en .NET Framework
+description: Conozca el proceso de exposición de componentes COM a .NET. Los componentes COM son valiosos en código administrado como aplicaciones empresariales de nivel medio o funcionalidad aislada.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - exposing COM components to .NET Framework
 - interoperation with unmanaged code, exposing COM components
 - COM interop, exposing COM components
 ms.assetid: e78b14f1-e487-43cd-9c6d-1a07483f1730
-ms.openlocfilehash: 914f72b5e4840555541943620ca2df1f629b0604
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: HT
+ms.openlocfilehash: 459ba7ffed2e4f6c458f89a63b2baa37180d270d
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123522"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620851"
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a>Exponer componentes COM en .NET Framework
 En esta sección se resume el proceso necesario para exponer un componente COM existente a código administrado. Para obtener más detalles sobre cómo escribir servidores COM que se integren estrechamente con .NET Framework, vea [Consideraciones de diseño para interoperaciones](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100)).

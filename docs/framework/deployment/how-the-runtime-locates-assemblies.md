@@ -1,5 +1,6 @@
 ---
 title: Cómo el motor en tiempo de ejecución ubica ensamblados
+description: Aprenda como Common Language Runtime (CLR) localiza los ensamblados que conforman la aplicación en .NET y se enlaza con ellos.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - app.config files, assembly locations
@@ -9,12 +10,11 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
-ms.openlocfilehash: 13e2661b67ba3b717b8917e80118175acb09e756
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: 4cf1e5787fe2e430d20208d8e79b610e9126c67c
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181678"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622632"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Cómo el motor en tiempo de ejecución ubica ensamblados
 
@@ -72,7 +72,7 @@ El comportamiento de enlace de ensamblados puede configurarse en niveles diferen
 
 - Archivo de configuración del equipo.
 
-Estos archivos tienen la misma sintaxis y proporcionan información como las redirecciones de enlaces, la ubicación del código y los modos de enlace de ensamblados concretos. Cada archivo de configuración puede contener un [elemento \<assemblyBinding>](../configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) que redirige el proceso de enlace. Los elementos secundarios del [elemento \<assemblyBinding>](../configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) incluyen el [elemento \<dependentAssembly>](../configure-apps/file-schema/runtime/dependentassembly-element.md). Los elementos secundarios del [elemento \<dependentAssembly>](../configure-apps/file-schema/runtime/dependentassembly-element.md) incluyen el [elemento \<assemblyIdentity>](/visualstudio/deployment/assemblyidentity-element-clickonce-deployment), el [elemento \<bindingRedirect>](../configure-apps/file-schema/runtime/bindingredirect-element.md) y el [elemento \<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md).
+Estos archivos tienen la misma sintaxis y proporcionan información como las redirecciones de enlaces, la ubicación del código y los modos de enlace de ensamblados concretos. Cada archivo de configuración puede contener un elemento [\<assemblyBinding> ](../configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) que redirige el proceso de enlace. Los elementos secundarios del elemento [\<assemblyBinding> ](../configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) incluyen el elemento [\<dependentAssembly> ](../configure-apps/file-schema/runtime/dependentassembly-element.md). Los elementos secundarios del elemento [\<dependentAssembly> ](../configure-apps/file-schema/runtime/dependentassembly-element.md) incluyen el elemento [\<assemblyIdentity> ](/visualstudio/deployment/assemblyidentity-element-clickonce-deployment), el elemento [\<bindingRedirect> ](../configure-apps/file-schema/runtime/bindingredirect-element.md) y el elemento [\<codeBase> ](../configure-apps/file-schema/runtime/codebase-element.md).
 
 > [!NOTE]
 > Puede encontrarse información de configuración en los tres archivos de configuración; no todos los elementos son válidos en todos los archivos de configuración. Por ejemplo, la información sobre el modo de enlace y la ruta de acceso privada solo puede estar en el archivo de configuración de la aplicación. Para obtener una lista completa de la información contenida en cada archivo, consulte [Configurar aplicaciones con archivos de configuración](../configure-apps/index.md).
@@ -136,7 +136,7 @@ Cuando se actualiza un componente compartido y todas las aplicaciones que lo usa
 #### <a name="safe-mode"></a>Modo seguro
 Los archivos de directiva de edición por lo general se instalan explícitamente como parte de un Service Pack o de una actualización del programa. Si hay algún problema con el componente compartido actualizado, puede pasar por alto los reemplazos realizados en el archivo de directiva de edición usando el modo seguro. El modo seguro está determinado por el elemento **\<publisherPolicy apply="yes**&#124;**no"/>** , que se encuentra solo en el archivo de configuración de la aplicación. Especifica si la información de configuración de directiva de edición debe quitarse del proceso de enlace.
 
-El modo seguro se puede establecer para toda la aplicación o para los ensamblados seleccionados. Es decir, puede desactivar la directiva para todos los ensamblados que componen la aplicación, o bien activarla para algunos ensamblados pero no para otros. Para aplicar de forma selectiva la directiva de edición a los ensamblados que componen una aplicación, establezca **\<publisherPolicy apply\=no/>** y especifique los ensamblados que desee que se vean afectados mediante el elemento \<**dependentAssembly**>. Para aplicar la directiva de edición a todos los ensamblados que componen la aplicación, establezca **\<publisherPolicy apply\=no/>** sin elementos de ensamblado dependiente. Para obtener más información acerca de la configuración, consulte [Configurar aplicaciones con archivos de configuración](../configure-apps/index.md).
+El modo seguro se puede establecer para toda la aplicación o para los ensamblados seleccionados. Es decir, puede desactivar la directiva para todos los ensamblados que componen la aplicación, o bien activarla para algunos ensamblados pero no para otros. Para aplicar de forma selectiva la directiva de publicador a los ensamblados que componen una aplicación, establezca **\<publisherPolicy apply\=no/>** y especifique los ensamblados que desee que se vean afectados mediante el elemento \<**dependentAssembly**>. Para aplicar la directiva de edición a todos los ensamblados que componen la aplicación, establezca **\<publisherPolicy apply\=no/>** sin elementos de ensamblado dependiente. Para obtener más información acerca de la configuración, consulte [Configurar aplicaciones con archivos de configuración](../configure-apps/index.md).
 
 ### <a name="machine-configuration-file"></a>Archivo de configuración del equipo
 En tercer lugar, el tiempo de ejecución examina el archivo de configuración del equipo. Este archivo, denominado Machine.config, reside en el equipo local, el subdirectorio Config del directorio raíz donde está instalado el tiempo de ejecución. Los administradores pueden usar este archivo para especificar las restricciones de enlace de ensamblado locales de ese equipo. La configuración incluida en el archivo de configuración del equipo tiene prioridad sobre otras opciones de configuración; sin embargo, esto no significa que todos los valores de configuración deban colocarse en este archivo. La versión determinada por el archivo de directiva del administrador es final y no se puede invalidar. Los reemplazos especificados en el archivo Machine.config afectan a todas las aplicaciones. Para obtener más información acerca de los archivos de configuración, consulte [Configurar aplicaciones con archivos de configuración](../configure-apps/index.md).
@@ -150,7 +150,7 @@ Si el ensamblado solicitado también se solicitó en llamadas anteriores, Common
 Si una solicitud anterior para el ensamblado produjo un error, las solicitudes posteriores para el ensamblado producen un error inmediatamente sin intentar cargar el ensamblado. A partir de .NET Framework versión 2.0, los errores de enlace de ensamblado se almacenan en caché y la información en caché se usa para determinar si se intenta cargar el ensamblado.
 
 > [!NOTE]
-> Para revertir al comportamiento de .NET Framework versiones 1.0 y 1.1, que no almacenaban en caché los errores de enlace, incluya el [elemento \<disableCachingBindingFailures>](../configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md) en el archivo de configuración.
+> Para revertir al comportamiento de .NET Framework versiones 1.0 y 1.1, que no almacenaban en caché los errores de enlace, incluya el elemento [\<disableCachingBindingFailures> ](../configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md) en el archivo de configuración.
 
 <a name="step3"></a>
 
@@ -190,7 +190,7 @@ Si no hay ningún elemento [\<codeBase>](../configure-apps/file-schema/runtime/c
 
 - Nombre, que es el nombre del ensamblado al que se hace referencia.
 
-- Atributo `privatePath` del elemento [\<probing>](../configure-apps/file-schema/runtime/probing-element.md), que es la lista definida por el usuario de subdirectorios bajo la ubicación raíz. Esta ubicación puede especificarse en el archivo de configuración de la aplicación y en el código administrado mediante la propiedad <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> para un dominio de aplicación. Cuando se especifica en código administrado, se sondea primero el código administrado `privatePath` , seguido de la ruta de acceso especificada en el archivo de configuración de la aplicación.
+- El atributo `privatePath` del elemento [\<probing>](../configure-apps/file-schema/runtime/probing-element.md), que es la lista definida por el usuario de subdirectorios bajo la ubicación raíz. Esta ubicación puede especificarse en el archivo de configuración de la aplicación y en el código administrado mediante la propiedad <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> para un dominio de aplicación. Cuando se especifica en código administrado, se sondea primero el código administrado `privatePath` , seguido de la ruta de acceso especificada en el archivo de configuración de la aplicación.
 
 #### <a name="probing-the-application-base-and-culture-directories"></a>Sondear los directorios de base de la aplicación y de referencia cultural
 

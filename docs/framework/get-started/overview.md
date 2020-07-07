@@ -1,5 +1,6 @@
 ---
 title: Información general acerca de .NET Framework
+description: Consulte la información general sobre .NET Framework, que es una tecnología que admite la creación y ejecución de servicios web y aplicaciones Windows.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application development [.NET Framework]
@@ -7,12 +8,11 @@ helpviewer_keywords:
 - common language runtime, about
 - common language runtime, overview
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
-ms.openlocfilehash: ace42738118cde4bcda4b78607d7bdb045d3501e
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
-ms.translationtype: HT
+ms.openlocfilehash: 6beedb8e3fd03049cd58ce1d2dac78d1adb820ef
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80248926"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618758"
 ---
 # <a name="overview-of-net-framework"></a>Información general acerca de .NET Framework
 

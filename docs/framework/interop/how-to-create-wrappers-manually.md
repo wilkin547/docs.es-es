@@ -1,15 +1,15 @@
 ---
 title: Procedimiento para la creación manual de contenedores
+description: Cree contenedores de los tipos COM manualmente. Use un archivo IDL existente o una biblioteca de tipos, o cree declaraciones administradas y exporte el ensamblado a una biblioteca de tipos.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - wrappers, creating manually
 ms.assetid: cc2a70d8-6a58-4071-a8cf-ce28c018c09b
-ms.openlocfilehash: a7818a1c08d8538acfacb22dc270d7ef23a7a582
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: e562a7e963ff744bf9193821d54dd898db521464
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181422"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619590"
 ---
 # <a name="how-to-create-wrappers-manually"></a>Procedimiento para la creación manual de contenedores
 Si decide declarar manualmente los tipos COM en código fuente administrado, lo mejor es empezar con un archivo o una biblioteca de tipos existente del Lenguaje de definición de interfaz (IDL). Cuando no tiene el archivo IDL o no puede generar un archivo de biblioteca de tipos, puede simular los tipos COM si crea declaraciones administradas y exporta el ensamblado resultante a una biblioteca de tipos.  

@@ -1,15 +1,15 @@
 ---
 title: serialización de datos con la interoperabilidad COM
+description: Consulte los artículos que tratan de la serialización de datos con la interoperabilidad COM. Las herramientas Tlbimp.exe y Tlbexp.exe realizan conversiones entre una biblioteca de tipos COM y un ensamblado de interoperabilidad.
 ms.date: 09/07/2017
 helpviewer_keywords:
 - COM interop, data marshaling
 - marshaling data, COM interop
-ms.openlocfilehash: ae41713d5349321725599c0c38d7c6fc515c374b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: eedfb60a75e2fe5fafdaa786dbb54adddf28400e
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181373"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621514"
 ---
 # <a name="marshaling-data-with-com-interop"></a>serialización de datos con la interoperabilidad COM
 La interoperabilidad COM proporciona compatibilidad para usar objetos COM desde código administrado y para exponer objetos administrados en COM. La compatibilidad con el cálculo de referencias de datos desde y hacia COM es exhaustiva y el comportamiento de serialización casi siempre es correcto.  

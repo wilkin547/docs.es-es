@@ -1,5 +1,6 @@
 ---
 title: Procedimiento para configurar componentes COM basados en .NET Framework para la activación sin registro
+description: Configure componentes COM basados en .NET para la activación sin registro. El programa de instalación requiere un manifiesto de aplicación de estilo Win32 y un manifiesto de componente .NET.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - components [.NET Framework], manifest
@@ -8,12 +9,11 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-ms.openlocfilehash: 9e273bd3e4bf2bb6945fe48c850783a54fa9a869
-ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
-ms.translationtype: HT
+ms.openlocfilehash: 5263e042bafdb886b313f05751c29de0f5715211
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80291756"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622203"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Procedimiento para configurar componentes COM basados en .NET Framework para la activación sin registro
 La activación sin registro de los componentes de .NET Framework solo es un poco más complicada que la de los componentes COM. La configuración requiere dos manifiestos:  

@@ -1,5 +1,6 @@
 ---
 title: Procedimiento para agregar referencias a bibliotecas de tipos
+description: Aprenda a agregar referencias a bibliotecas de tipos en Visual Studio o a la compilación de línea de comandos.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - importing type library
@@ -7,12 +8,11 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
-ms.openlocfilehash: 1e82a499b77cc6d1d49eaf13e243201bbdc4c5fe
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: a3c24385c9cc7debe95aa10369b050897415bc46
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181446"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617436"
 ---
 # <a name="how-to-add-references-to-type-libraries"></a>Procedimiento para agregar referencias a bibliotecas de tipos
 Visual Studio genera un ensamblado de interoperabilidad que contiene metadatos cuando se agrega una referencia a una biblioteca de tipos. Si el ensamblado de interoperabilidad principal está disponible, Visual Studio usa el ensamblado existente antes de generar un nuevo ensamblado de interoperabilidad.  

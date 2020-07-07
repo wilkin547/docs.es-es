@@ -1,16 +1,16 @@
 ---
 title: Implementar aplicaciones de .NET Framework
+description: Aprenda a implementar aplicaciones .NET. Consulte los artículos sobre cómo Common Language Runtime localiza ensamblados y procedimientos recomendados para la carga de ensamblados.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - deploying applications [.NET Framework]
 - .NET Framework, deploying apps
 ms.assetid: 139d4cb1-5972-40f4-bdd8-1ce68e4dfb80
-ms.openlocfilehash: c025643b6dd103e35231df5c983a06c899af02b1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: 894248b0a32984c8563dc5357451ea25c4926bea
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75716441"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621553"
 ---
 # <a name="deploying-net-framework-applications"></a>Implementar aplicaciones de .NET Framework
 Esta sección de la documentación de .NET Framework proporciona información esencial para implementar aplicaciones de .NET Framework, incluidas las directrices para cargar ensamblados, resolver referencias de ensamblados y mejorar el rendimiento de la aplicación mediante la generación de imágenes nativas.  

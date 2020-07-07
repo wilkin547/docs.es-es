@@ -1,5 +1,6 @@
 ---
 title: Cálculo de referencias predeterminado para matrices
+description: Comprenda la serialización predeterminada para matrices. Revise las matrices administradas y las matrices no administradas, pasando parámetros de matriz a código de .NET y matrices a COM.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,11 @@ helpviewer_keywords:
 - interop marshaling, arrays
 - arrays, interop marshaling
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
-ms.openlocfilehash: f0094ac572834b2cf0d74fb53c94877da55669e2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: eafed0e0a0150923aae0fa68a1b96e6d9d66b07a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181457"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622567"
 ---
 # <a name="default-marshaling-for-arrays"></a>Cálculo de referencias predeterminado para matrices
 En una aplicación que consta únicamente de código administrado, Common Language Runtime pasa los tipos de matriz como parámetros In/Out. En cambio, el serializador de interoperabilidad pasa una matriz como parámetros In de forma predeterminada.  
@@ -184,7 +184,7 @@ void New3(ref String ar);
 |------------------------|-----------------|  
 |**ELEMENT_TYPE_SZARRAY** **\<** *type* **>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> El tipo se proporciona en la firma. El rango siempre es 1, el límite inferior es siempre 0. El tamaño siempre se conoce en tiempo de ejecución.|  
 |**ELEMENT_TYPE_ARRAY** **\<** *type* **>** **\<** *rank* **>** [ **\<** *bounds* **>** ]|**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> El tipo, el rango y los límites se proporcionan en la firma. El tamaño siempre se conoce en tiempo de ejecución.|  
-|**ELEMENT_TYPE_CLASS** **\<** <xref:System.Array?displayProperty=nameWithType> **>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> El tipo, el rango, los límites y el tamaño siempre se conocen en tiempo de ejecución.|  
+|**ELEMENT_TYPE_CLASS** **\<**<xref:System.Array?displayProperty=nameWithType>** >**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> El tipo, el rango, los límites y el tamaño siempre se conocen en tiempo de ejecución.|  
   
  Hay una limitación en la automatización OLE relacionada con las matrices de estructuras que contienen LPSTR o LPWSTR.  Por tanto, los campos **String** tienen que serializarse como **UnmanagedType.BSTR**. De lo contrario, se producirá una excepción.  
   

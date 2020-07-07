@@ -1,5 +1,6 @@
 ---
 title: Procedimiento para generar ensamblados de interoperabilidad a partir de bibliotecas de tipos
+description: Genere ensamblados de interoperabilidad a partir de bibliotecas de tipos. Use el importador de la biblioteca de tipos (Tlbimp.exe) para convertir coclases e interfaces de una biblioteca de tipos COM en metadatos.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - importing type library
@@ -8,12 +9,11 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: 4afd40c3-68f2-41c5-8ec1-4951bc148b9c
-ms.openlocfilehash: f4f099dfaf5ff02edd3958d7eab9354ce727a239
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: HT
+ms.openlocfilehash: 6f54875d6aadb1da18cf25a1bec0a0e451f4a24c
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281797"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619564"
 ---
 # <a name="how-to-generate-interop-assemblies-from-type-libraries"></a>Procedimiento para generar ensamblados de interoperabilidad a partir de bibliotecas de tipos
 El [importador de la biblioteca de tipos (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md) es una herramienta de línea de comandos que convierte las coclases e interfaces contenidas en una biblioteca de tipos COM en metadatos. Esta herramienta crea automáticamente un ensamblado de interoperabilidad y un espacio de nombres para la información de tipos. Una vez que los metadatos de una clase están disponibles, los clientes administrados pueden crear instancias del tipo COM y llamar a sus métodos, como si se tratara de una instancia de .NET. Tlbimp.exe convierte una biblioteca de tipos completa en metadatos de una vez y no se puede generar información de tipos para un subconjunto de los tipos definidos en una biblioteca de tipos.  
@@ -22,7 +22,7 @@ El [importador de la biblioteca de tipos (Tlbimp.exe)](../tools/tlbimp-exe-type-
   
 1. Use el siguiente comando:  
   
-     **tlbimp** \<*archivo de biblioteca de tipos*>  
+     **tlbimp** \<*type-library-file*>  
   
      Agregar el modificador **/out:** genera un ensamblado de interoperabilidad con un nombre modificado, como LOANLib.dll. Modificar el nombre de ensamblado de interoperabilidad puede ayudar a distinguirlo del archivo DLL original de COM e impedir problemas que pueden producirse al tener nombres duplicados.  
   

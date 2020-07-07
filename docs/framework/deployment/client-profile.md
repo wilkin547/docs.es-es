@@ -1,5 +1,6 @@
 ---
 title: .NET Framework Client Profile
+description: Obtenga información sobre el perfil de cliente de .NET, que era un subconjunto de .NET que se proporcionó en la versión 4 y en las ediciones anteriores.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF [.NET Framework Client Profile]
@@ -9,12 +10,11 @@ helpviewer_keywords:
 - profile [.NET Framework Client Profile]
 - .NET Framework Client Profile
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
-ms.openlocfilehash: 32fc29500a8a2e95b52ba16847020cdb390caceb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: 9678e49cd5f3c37f59c1e5a0eda668e5602fbcb5
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75716570"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621748"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
 El perfil de cliente .NET es un subconjunto de .NET Framework que se proporcionaba con .NET Framework 4 y versiones anteriores, optimizado para las aplicaciones cliente. .NET Framework es una plataforma de desarrollo para Windows, Windows Phone y Microsoft Azure que proporciona un entorno de ejecución de aplicaciones administrado y la biblioteca de clases .NET Framework. En .NET Framework 4 y versiones anteriores se proporcionaban dos opciones de implementación: .NET Framework completo y Client Profile. Client Profile permitía una implementación más rápida y el uso de paquetes de instalación de aplicaciones más pequeños que en la versión completa de .NET Framework.  
@@ -28,6 +28,6 @@ El perfil de cliente .NET es un subconjunto de .NET Framework que se proporciona
 ## <a name="see-also"></a>Vea también
 
 - [.NET Framework Client Profile (.NET Framework 4)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29)
-- [Introducción a la compatibilidad con múltiples versiones (multi-targeting) en Visual Studio](/visualstudio/ide/visual-studio-multi-targeting-overview)
+- [Información general sobre la compatibilidad con múltiples versiones (multi-targeting) en Visual Studio](/visualstudio/ide/visual-studio-multi-targeting-overview)
 - [Solucionar problemas de versión de .NET Framework de destino](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)
-- [Cómo: Usar como destino una versión de .NET Framework](/visualstudio/ide/visual-studio-multi-targeting-overview)
+- [Cómo: Usar una versión de .NET Framework como destino](/visualstudio/ide/visual-studio-multi-targeting-overview)

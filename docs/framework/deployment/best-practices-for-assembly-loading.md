@@ -1,5 +1,6 @@
 ---
 title: Procedimientos recomendados para cargar ensamblados
+description: Explore los procedimientos recomendados para cargar ensamblados en .NET. Evite problemas de identidad de tipos que pueden conducir a conversiones no válidas, métodos que faltan y otras excepciones.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies,binding
@@ -12,12 +13,11 @@ helpviewer_keywords:
 - LoadWithPartialName method
 - load-from context
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
-ms.openlocfilehash: 7575c40edf47e977335bcc34fcd9e49debab0980
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: 8ee5243258ea1b853b4690b79ec032c46d1b3777
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181702"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803512"
 ---
 # <a name="best-practices-for-assembly-loading"></a>Procedimientos recomendados para cargar ensamblados
 En este artículo se abordan formas de evitar problemas de identidad de tipos que pueden causar errores como <xref:System.InvalidCastException> o <xref:System.MissingMethodException>, entre otros. En él se ofrecen las siguientes recomendaciones:  
@@ -42,7 +42,7 @@ En este artículo se abordan formas de evitar problemas de identidad de tipos qu
   
 - El contexto de origen de carga contiene ensamblados que se cargan desde ubicaciones en las que no busca el cargador. Por ejemplo, los complementos podrían instalarse en un directorio que no esté bajo la ruta de acceso de la aplicación. <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>, <xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=nameWithType> y <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> son ejemplos de métodos que cargan por ruta de acceso.  
   
-- El contexto de solo reflexión contiene ensamblados cargados con los métodos <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> y <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>. No se puede ejecutar código en este contexto, por lo que no se trata aquí. Para más información, vea [How to: Load Assemblies into the Reflection-Only Context (Cómo: Cargar ensamblados en el contexto de solo reflexión)](../reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
+- El contexto de solo reflexión contiene ensamblados cargados con los métodos <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> y <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>. No se puede ejecutar código en este contexto, por lo que no se trata aquí. Para obtener más información, vea [Cómo: Cargar ensamblados en el contexto de solo reflexión](../reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
   
 - Si ha generado un ensamblado dinámico transitorio mediante la reflexión de la emisión, el ensamblado no está en ningún contexto. Además, la mayoría de los ensamblados que se carga mediante el método <xref:System.Reflection.Assembly.LoadFile%2A> lo hace sin contexto, mientras que los ensamblados que se cargan desde matrices de bytes lo hacen sin contexto a menos que su identidad (una vez aplicada la directiva) establezca que están en la caché global de ensamblados.  
   

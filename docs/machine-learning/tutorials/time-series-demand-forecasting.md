@@ -1,17 +1,16 @@
 ---
 title: 'Tutorial: Previsión de la demanda de alquiler de bicicletas: serie temporal'
 description: En este tutorial se muestra cómo prever la demanda de un servicio de alquiler de bicicletas mediante el análisis de serie temporal de variable única y ML.NET.
-ms.date: 11/07/2019
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: bceb32f4ea22ade6d3b49b3a99d7ec48a7ba168d
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
-ms.translationtype: HT
+ms.openlocfilehash: 4ea002b690de877fd6f955c05eb8235f46e0a870
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607407"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803226"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>Tutorial: Previsión de la demanda de servicio de alquiler de bicicletas con análisis de serie temporal y ML.NET
 
@@ -46,13 +45,16 @@ El algoritmo que se usa en este tutorial es el [análisis de un solo espectro (S
 ## <a name="create-console-application"></a>Creación de una aplicación de consola
 
 1. Cree una **aplicación de consola de .NET Core de C#** denominada "BikeDemandForecasting".
-1. Instale el paquete NuGet **Microsoft.ML**, versión **1.4.0**.
+1. Instale el paquete NuGet versión **Microsoft.ML**.
+
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
+
     1. En el Explorador de soluciones, haga clic con el botón derecho en **Administrar paquetes NuGet**.
     1. Elija "nuget.org" como origen del paquete, seleccione la pestaña **Examinar** y busque **Microsoft.ML**.
     1. Active la casilla **Incluir versión preliminar**.
     1. Seleccione el botón **Instalar**.
     1. Seleccione el botón **Aceptar** en el cuadro de diálogo **Vista previa de cambios** y, a continuación, seleccione el botón **Acepto** del cuadro de diálogo Aceptación de la licencia en caso de que esté de acuerdo con los términos de licencia de los paquetes mostrados.
-    1. Repita estos pasos para **System.Data.SqlClient** versión **4.7.0** y **Microsoft.ML.TimeSeries** versión **1.4.0**.
+    1. Repita estos pasos para **System.Data.SqlClient** y **Microsoft.ML.TimeSeries**.
 
 ### <a name="prepare-and-understand-the-data"></a>Preparar y entender los datos
 

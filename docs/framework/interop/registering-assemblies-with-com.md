@@ -1,5 +1,6 @@
 ---
 title: Registrar ensamblados con COM
+description: Registre o anule el registro de ensamblados con COM mediante la herramienta de registro de ensamblados (Regasm.exe), que agrega información sobre la clase al registro del sistema.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM interop, registering assemblies
@@ -7,12 +8,11 @@ helpviewer_keywords:
 - interoperation with unmanaged code, registering assemblies
 - registering assemblies
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
-ms.openlocfilehash: 9ff24a5705058d4e303b3b64b454ced8548053a4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: HT
+ms.openlocfilehash: 1b73a79b8167e7f75b8c68f708179e88c575d66a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73113805"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621904"
 ---
 # <a name="registering-assemblies-with-com"></a>Registrar ensamblados con COM
 Puede ejecutar una herramienta de línea de comandos denominada [Registro de ensamblados (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) para registrar un ensamblado o anular su registro para su uso con COM. Regasm.exe agrega información sobre la clase al Registro del sistema, de modo que los clientes COM puedan usar la clase .NET Framework de forma transparente. La clase <xref:System.Runtime.InteropServices.RegistrationServices> proporciona la funcionalidad equivalente.  

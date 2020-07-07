@@ -1,5 +1,6 @@
 ---
 title: Empaquetar un ensamblado de .NET Framework para COM
+description: Empaquete un ensamblado .NET para COM. Recopile la lista de tipos que las aplicaciones COM pueden consumir, las instrucciones de control de versiones e implementación y la biblioteca de tipos.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - exposing .NET Framework components to COM
@@ -16,12 +17,11 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - Reqasm.exe
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
-ms.openlocfilehash: 6866da283cc7cdd180aada252007d67bd72cd862
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: HT
+ms.openlocfilehash: 4963892419fd1caec4483123f820d62967a87dd6
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124092"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620838"
 ---
 # <a name="packaging-a-net-framework-assembly-for-com"></a>Empaquetar un ensamblado de .NET Framework para COM
 

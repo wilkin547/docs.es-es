@@ -1,15 +1,14 @@
 ---
 title: 'Tutorial: Análisis de opinión mediante un modelo TensorFlow'
 description: En este tutorial se muestra cómo usar un modelo de TensorFlow previamente entrenado para clasificar la opinión en comentarios de sitios Web. El clasificador binario de opiniones es una aplicación de consola de C# desarrollada con Visual Studio.
-ms.date: 11/15/2019
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 688c5b83cef8f21eef8fa24521a85449a9cfbd48
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: 9c1e45f183bd5edc488e4f37bea648566d124c65
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78241122"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803266"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>Tutorial: Análisis de la opinión de reseñas de películas con un modelo de TensorFlow entrenado previamente en ML.NET
 
@@ -40,7 +39,9 @@ Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/s
 
 3. Instale el **paquete NuGet Microsoft.ML**:
 
-    En el Explorador de soluciones, haga clic con el botón derecho en **Administrar paquetes NuGet**. Elija "nuget.org" como origen del paquete y luego seleccione la pestaña **Examinar**. Busque **Microsoft.ML**, seleccione el paquete que desee y luego, el botón **Instalar**. Acepte los términos de licencia del paquete que elija para continuar con la instalación. Repita estos pasos para **Microsoft.ML.TensorFlow** y **SciSharp.TensorFlow.Redist**.
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
+
+    En el Explorador de soluciones, haga clic con el botón derecho en **Administrar paquetes NuGet**. Elija "nuget.org" como origen del paquete y luego seleccione la pestaña **Examinar**. Busque **Microsoft.ML**, seleccione el paquete que desee y luego, el botón **Instalar**. Acepte los términos de licencia del paquete que elija para continuar con la instalación. Repita estos pasos para **Microsoft.ML.TensorFlow**, **Microsoft.ML.SampleUtils** y **SciSharp.TensorFlow.Redist**.
 
 ### <a name="add-the-tensorflow-model-to-the-project"></a>Adición del modelo TensorFlow al proyecto
 

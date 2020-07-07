@@ -1,17 +1,17 @@
 ---
 title: Procedimiento para generar ensamblados de interoperabilidad primarios mediante Tlbimp.exe
+description: Obtenga información sobre cómo generar ensamblados de interoperabilidad primarios mediante el importador de la biblioteca de tipos (Tlbimp.exe) que proporciona Windows SDK.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - primary interop assemblies, generating
 - Tlbimp.exe
 - Type Library Importer
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
-ms.openlocfilehash: e46295b89b042452cb6e303302a8b88d68d58426
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: HT
+ms.openlocfilehash: 779b4863b6f1513f3566d4ab31660d88cda1039b
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123910"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619135"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Procedimiento para generar ensamblados de interoperabilidad primarios mediante Tlbimp.exe
 

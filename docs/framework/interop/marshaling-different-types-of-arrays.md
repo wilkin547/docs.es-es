@@ -1,5 +1,6 @@
 ---
 title: Cálculo de referencias de tipos diferentes de matrices
+description: Serialice los distintos tipos de matriz, como enteros por valor o referencia, enteros de dos dimensiones por valor, cadenas por valor y estructuras con enteros o cadenas.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,11 @@ helpviewer_keywords:
 - marshaling, Arrays sample
 - data marshaling, Arrays sample
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
-ms.openlocfilehash: 66c7ba5989952edb55f21aab960ad7395a92ae0d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: f1473c7917189f0b36c96b2adcf20005c5fd6b48
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181360"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621501"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Cálculo de referencias de tipos diferentes de matrices
 Una matriz es un tipo de referencia en código administrado que contiene uno o varios elementos del mismo tipo. Aunque las matrices son tipos de referencia, se pasan como parámetros In a funciones no administradas. Este comportamiento no se corresponde con la manera en que se pasan las matrices administradas a los objetos administrados, que es como parámetros In/Out. Para obtener más información, consulte [Copiar y fijar](copying-and-pinning.md).  

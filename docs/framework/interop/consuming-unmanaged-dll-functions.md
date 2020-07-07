@@ -1,5 +1,6 @@
 ---
 title: Consumir funciones DLL no administradas
+description: Utilice funciones DLL no administradas mediante el servicio de invocación de plataforma, que permite que el código administrado llame a funciones no administradas implementadas en bibliotecas DLL.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - unmanaged functions, calling
@@ -13,12 +14,11 @@ helpviewer_keywords:
 - platform invoke
 - DLL functions
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
-ms.openlocfilehash: 7ec1f129dcc19300dd5a4e7c5e627d9e0edf29a1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: 880cbd4701ae4aee35038f6402b3beb70e60290c
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400954"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622190"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Consumir funciones DLL no administradas
 La invocación de plataforma es un servicio que permite al código administrado llamar a funciones no administradas implementadas en bibliotecas de vínculos dinámicos (DLL), como los de la API de Windows. Busca y llama a una función exportada y calcula las referencias de sus argumentos (enteros, cadenas, matrices, estructuras etc.) a través de los límites de interoperación según sea necesario.  

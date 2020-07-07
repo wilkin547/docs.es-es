@@ -1,5 +1,6 @@
 ---
 title: Ejemplos de invocación de plataforma
+description: Vea un ejemplo de invocación de plataforma que muestra cómo definir y llamar a la función MessageBox en User32.dll.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +14,11 @@ helpviewer_keywords:
 - interoperation with unmanaged code, platform invoke
 - DLL functions
 ms.assetid: 15926806-f0b7-487e-93a6-4e9367ec689f
-ms.openlocfilehash: 358d1ce662d56b8c31124f4b3264ec25a0f94586
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: 97b0720b8954bc24a4058e6a03c32d32bd9e3180
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181329"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620812"
 ---
 # <a name="platform-invoke-examples"></a>Ejemplos de invocación de plataforma
 En los ejemplos siguientes se muestra cómo definir y llamar a la función **MessageBox** en User32.dll, pasando una cadena sencilla como argumento. En los ejemplos, el campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> se establece en **Automático** para permitir que la plataforma de destino determine el ancho de caracteres y la serialización de cadenas.  

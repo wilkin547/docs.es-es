@@ -3,15 +3,14 @@ title: 'Tutorial: Inspección visual automatizada mediante el aprendizaje de tra
 description: En este tutorial se muestra cómo usar el aprendizaje de transferencia para entrenar un modelo de aprendizaje profundo de TensorFlow en ML.NET con la API de detección de imágenes con el fin de clasificar las imágenes de superficies de hormigón como con grietas o sin grietas.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 12/12/2019
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 2915259d7c7031b9e699c7fd0cf65cf723c41680
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
-ms.translationtype: HT
+ms.openlocfilehash: 17fbb8c6714f3af47c0b554aec2c53c8046021bb
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144427"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803747"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>Tutorial: Inspección visual automatizada mediante el aprendizaje de transferencia con la API Image Classification de ML.NET
 
@@ -81,7 +80,10 @@ El modelo previamente entrenado que se usa en este tutorial es la variante de ca
 Ahora que tiene conocimientos generales del aprendizaje de transferencia y de la API Image Classification, es momento de compilar la aplicación.
 
 1. Cree una **Aplicación de consola de .NET Core de C#** llamada "DeepLearning_ImageClassification_Binary".
-1. Instale el paquete NuGet **Microsoft.ML**, versión **1.4.0**:
+1. Instale el paquete NuGet **Microsoft.ML**:
+
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
+
     1. En el Explorador de soluciones, haga clic con el botón derecho en **Administrar paquetes NuGet**.
     1. Elija "nuget.org" como origen del paquete.
     1. Seleccione la pestaña **Examinar**.
@@ -89,7 +91,7 @@ Ahora que tiene conocimientos generales del aprendizaje de transferencia y de la
     1. Busque **Microsoft.ML**.
     1. Seleccione el botón **Instalar**.
     1. Seleccione el botón **Aceptar** en el cuadro de diálogo **Vista previa de cambios** y, a continuación, seleccione el botón **Acepto** del cuadro de diálogo **Aceptación de la licencia** en caso de que esté de acuerdo con los términos de licencia de los paquetes mostrados.
-    1. Repita estos pasos para los paquetes NuGet **Microsoft.ML.Vision**, versión **1.4.0**, **SciSharp.TensorFlow.Redist**, versión **1.15.0** y **Microsoft.ML.ImageAnalytics**, versión **1.4.0**.
+    1. Repita estos pasos para los paquetes NuGet **Microsoft.ML.Vision**, **SciSharp.TensorFlow.Redist** y **Microsoft.ML.ImageAnalytics**.
 
 ### <a name="prepare-and-understand-the-data"></a>Preparar y entender los datos
 

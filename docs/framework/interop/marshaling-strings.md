@@ -1,5 +1,6 @@
 ---
 title: Serialización de cadenas
+description: Revise cómo calcular las referencias de cadenas. Consulte opciones para calcular las cadenas de serialización por valor o referencia, como resultado, en una estructura o clase por valor o referencia, y mucho más.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - marshaling, samples
@@ -11,12 +12,11 @@ helpviewer_keywords:
 - marshaling, platform invoke
 - sample applications [.NET Framework], marshaling strings
 ms.assetid: e21b078b-70fb-4905-be26-c097ab2433ff
-ms.openlocfilehash: 88b6342038f99bf06fa2986c43f422e63cffd31e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: HT
+ms.openlocfilehash: 0be5a5817bd92c5be6b701200a74650ef9de1955
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124378"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621488"
 ---
 # <a name="marshaling-strings"></a>Serialización de cadenas
 La invocación de plataforma copia los parámetros de cadena y los convierte del formato de .NET Framework (Unicode) al formato no administrado (ANSI), si es necesario. Dado que las cadenas administradas son inmutables, la invocación de plataforma no las vuelve a copiar desde la memoria no administrada a la memoria administrada cuando finaliza la función.  

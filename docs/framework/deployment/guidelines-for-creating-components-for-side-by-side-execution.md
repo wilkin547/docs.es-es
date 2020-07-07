@@ -1,16 +1,16 @@
 ---
 title: Instrucciones para crear componentes para la ejecución en paralelo
+description: Revise las instrucciones para crear componentes para la ejecución en paralelo. Por ejemplo, enlace la identidad de tipo a una determinada versión de archivo o usar el almacenamiento con reconocimiento de versiones.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - side-by-side execution, multiple application versions
 - side-by-side execution, multiple component versions
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
-ms.openlocfilehash: 42d0e2d85517d4a8fb443db9b63e6b893267caca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: f0d25984f2444d29d9fc0edb3add23b6adc04c62
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73121586"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622645"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>Instrucciones para crear componentes para la ejecución en paralelo
 Siga estas instrucciones generales para crear aplicaciones administradas o componentes diseñados para la ejecución en paralelo:  

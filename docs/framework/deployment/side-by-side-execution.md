@@ -1,15 +1,15 @@
 ---
 title: Ejecución en paralelo en .NET Framework
+description: Ejecución en paralelo en .NET La ejecución en paralelo le permite ejecutar varias versiones de una aplicación o componente en el mismo equipo.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - side-by-side execution
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
-ms.openlocfilehash: e965702943149d3ed34be39bb2923ad52dcf90ca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: 6cd6fb73b27957fdea85cd9a92bf2aa3bafda1ce
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181643"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619408"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Ejecución en paralelo en .NET Framework
 
@@ -61,7 +61,7 @@ El encabezado del archivo portable ejecutable (PE) de las aplicaciones y compone
   
 ### <a name="runtime-version-information-in-the-application-configuration-file"></a>Información de versión del motor en tiempo de ejecución en el archivo de configuración  
 
-Además de la información en el encabezado del archivo PE, se puede implementar una aplicación con un archivo de configuración de la aplicación que proporciona la información de versión del motor en tiempo de ejecución. El archivo de configuración de la aplicación es un archivo basado en lenguaje XML creado por el desarrollador de aplicaciones y que se suministra con una aplicación. El [elemento \<requiredRuntime>](../configure-apps/file-schema/startup/requiredruntime-element.md) de la [sección \<startup>](../configure-apps/file-schema/startup/startup-element.md), si está presente en este archivo, especifica qué versiones del tiempo de ejecución y de un componente admite la aplicación. También se puede utilizar este archivo para probar la compatibilidad de una aplicación con distintas versiones del motor en tiempo de ejecución.  
+Además de la información en el encabezado del archivo PE, se puede implementar una aplicación con un archivo de configuración de la aplicación que proporciona la información de versión del motor en tiempo de ejecución. El archivo de configuración de la aplicación es un archivo basado en lenguaje XML creado por el desarrollador de aplicaciones y que se suministra con una aplicación. El elemento [\<requiredRuntime> ](../configure-apps/file-schema/startup/requiredruntime-element.md) de la sección [\<startup> ](../configure-apps/file-schema/startup/startup-element.md), si está presente en este archivo, especifica qué versiones del tiempo de ejecución y de un componente admite la aplicación. También se puede utilizar este archivo para probar la compatibilidad de una aplicación con distintas versiones del motor en tiempo de ejecución.  
   
 El código no administrado, incluidas las aplicaciones COM y COM+, puede tener archivos de configuración de la aplicación que el motor en tiempo de ejecución utiliza para interactuar con código administrado. El archivo de configuración de la aplicación afecta a cualquier código administrado que se active mediante COM. Este archivo puede especificar las versiones del motor en tiempo de ejecución que son compatibles, así como las redirecciones de ensamblado. De forma predeterminada, las aplicaciones de interoperabilidad COM que llaman a código administrado utilizan la última versión del motor en tiempo de ejecución instalada en el equipo.  
   
@@ -81,7 +81,7 @@ Common Language Runtime usa el archivo de configuración de la aplicación y el 
   
 Si hay un archivo de configuración de la aplicación, Common Language Runtime determina la versión que debe cargar en función de los resultados del proceso siguiente:  
   
-1. El tiempo de ejecución examina el [elemento \<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) en el archivo de configuración de la aplicación. Si hay una o varias de las versiones del tiempo de ejecución admitidas especificadas en el elemento **\<supportedRuntime>** , el tiempo de ejecución carga la versión del tiempo de ejecución especificada por el primer elemento **\<supportedRuntime>** . Si esta versión no está disponible, el tiempo de ejecución examina el siguiente elemento **\<supportedRuntime>** e intenta cargar la versión del tiempo de ejecución especificada. Si esta versión del tiempo de ejecución no está disponible, se examinan los siguientes elementos **\<supportedRuntime>** . Si ninguna de las versiones del tiempo de ejecución admitidas está disponible, Common Language Runtime no puede cargar una versión del tiempo de ejecución y muestra un mensaje al usuario (consulte el paso 3).  
+1. El tiempo de ejecución examina el elemento [\<supportedRuntime> ](../configure-apps/file-schema/startup/supportedruntime-element.md) en el archivo de configuración de la aplicación. Si hay una o varias de las versiones del tiempo de ejecución admitidas especificadas en el elemento **\<supportedRuntime>** , el tiempo de ejecución carga la versión del tiempo de ejecución especificada por el primer elemento **\<supportedRuntime>** . Si esta versión no está disponible, el tiempo de ejecución examina el siguiente elemento **\<supportedRuntime>** e intenta cargar la versión del tiempo de ejecución especificada. Si esta versión del tiempo de ejecución no está disponible, se examinan los siguientes elementos **\<supportedRuntime>** . Si ninguna de las versiones del tiempo de ejecución admitidas está disponible, Common Language Runtime no puede cargar una versión del tiempo de ejecución y muestra un mensaje al usuario (consulte el paso 3).  
   
 2. Common Language Runtime lee el encabezado del archivo PE del archivo ejecutable de la aplicación. Si la versión del tiempo de ejecución especificada por el encabezado del archivo PE está disponible, Common Language Runtime carga esa versión. Si la versión del tiempo de ejecución especificada no está disponible, Common Language Runtime busca una versión del tiempo de ejecución que Microsoft determine que es compatible con la versión del tiempo de ejecución del encabezado PE. Si no se encuentra esa versión, el proceso continúa en el paso 3.  
   
@@ -118,7 +118,7 @@ publicKeyToken=...,
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Título|Description|  
+|Title|Descripción|  
 |-----------|-----------------|  
 |[Cómo: Habilitar y deshabilitar redireccionamiento de enlaces automático](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Describe cómo enlazar una aplicación a una versión específica de un ensamblado.|  
 |[Configurar el redireccionamiento del enlace de ensamblados](configuring-assembly-binding-redirection.md)|Explica cómo redirigir referencias a enlaces de ensamblados a una versión específica de los ensamblados de .NET Framework.|  
@@ -128,4 +128,4 @@ publicKeyToken=...,
   
 ## <a name="reference"></a>Referencia  
 
-[\<supportedRuntime > Elemento](../configure-apps/file-schema/startup/supportedruntime-element.md)
+[Elemento \<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md)
