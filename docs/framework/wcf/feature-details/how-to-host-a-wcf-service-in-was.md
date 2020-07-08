@@ -2,12 +2,11 @@
 title: Procedimiento para hospedar un servicio WCF en WAS
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: 1e338440b3a630840230df838e46579e3725bb60
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
-ms.translationtype: MT
+ms.openlocfilehash: 40460baeb136345f2532ec6ad5035bd5d3a40254
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593118"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051992"
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Procedimiento para hospedar un servicio WCF en WAS
 En este tema se describen los pasos básicos necesarios para crear un servicio Windows Communication Foundation hospedado de Windows Process Activation Services (también conocido como WAS). WAS es el nuevo servicio de activación de procesos que es una generalización de las características de Internet Information Services (IIS) que funcionan con protocolos de transporte no HTTP. WCF usa la interfaz del adaptador de escucha para comunicar las solicitudes de activación que se reciben a través de los protocolos no HTTP admitidos por WCF, como TCP, canalizaciones con nombre y Message Queue Server.  
@@ -66,7 +65,7 @@ En este tema se describen los pasos básicos necesarios para crear un servicio W
   
 4. Cree un archivo Service.svc que contenga el código siguiente.  
   
-   ```
+   ```aspx-csharp
    <%@ServiceHost language=c# Service="CalculatorService" %>
    ```
   
@@ -74,7 +73,7 @@ En este tema se describen los pasos básicos necesarios para crear un servicio W
   
 ### <a name="to-create-a-client-to-use-the-service"></a>Creación de un cliente para que utilice el servicio  
   
-1. Use la [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) desde la línea de comandos para generar código a partir de los metadatos del servicio.  
+1. Use la [herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) desde la línea de comandos para generar código a partir de los metadatos del servicio.  
   
     ```console
     Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
@@ -100,5 +99,5 @@ En este tema se describen los pasos básicos necesarios para crear un servicio W
   
 ## <a name="see-also"></a>Vea también
 
-- [Activación TCP](../samples/tcp-activation.md)
+- [Activación de TCP](../samples/tcp-activation.md)
 - [Características de hospedaje de Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

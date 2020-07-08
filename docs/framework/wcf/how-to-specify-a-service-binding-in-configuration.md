@@ -6,12 +6,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885037f7-1c2b-4d7a-90d9-06b89be172f2
-ms.openlocfilehash: 92d0834091a1f243df6be214f606fbf0093dca54
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
-ms.translationtype: MT
+ms.openlocfilehash: 3b9dd12f2a28ae2d420e82013459613cee8140f1
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244561"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051953"
 ---
 # <a name="how-to-specify-a-service-binding-in-configuration"></a>Procedimiento para especificar un enlace de servicio en la configuración
 En este ejemplo, se define un contrato `ICalculator` para un servicio de calculadora básico; el servicio se implementa en la clase `CalculatorService` y, después, su punto de conexión se configura en el archivo Web.config, donde se especifica que el servicio usa <xref:System.ServiceModel.BasicHttpBinding>. Para obtener una descripción de cómo configurar este servicio con código en lugar de una configuración, vea [Cómo: especificar un enlace de servicio en el código](how-to-specify-a-service-binding-in-code.md).  
@@ -77,7 +76,7 @@ En este ejemplo, se define un contrato `ICalculator` para un servicio de calcula
   
 4. Cree un archivo Service.svc que contenga la línea siguiente y colóquelo en su directorio virtual de Internet Information Services (IIS).  
   
-    ```  
+    ```aspx-csharp
     <%@ServiceHost language=c# Service="CalculatorService" %>
     ```  
   
