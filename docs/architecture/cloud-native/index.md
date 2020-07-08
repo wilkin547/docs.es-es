@@ -3,12 +3,12 @@ title: Diseño de aplicaciones .NET nativas en la nube para Azure
 description: Guía para crear aplicaciones nativas en la nube con la ayuda de contenedores, microservicios y características sin servidor de Azure.
 author: ardalis
 ms.date: 05/13/2020
-ms.openlocfilehash: b315f097b1584bd93f694c10f36ee7524d7e020a
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 172097b4915deb2d6f0b06441d7c4ca389bbca25
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144388"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051511"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>Diseño de aplicaciones .NET nativas en la nube para Azure
 
@@ -84,7 +84,7 @@ Esta guía empieza definiendo el enfoque nativo en la nube y presenta una aplica
 - Identidad y seguridad
 - DevOps
 
-Esta guía está disponible en formato PDF y en línea. No dude en reenviar este documento o los vínculos a la versión en línea a su equipo para que todos los miembros puedan consultarla. La mayoría de estos temas presentan unos conocimientos sólidos de los principios y los patrones subyacentes, así como los inconvenientes de las decisiones relacionadas con estos temas. Con este documento, nuestro objetivo es facilitar a los equipos y sus responsables la información necesaria para tomar decisiones fundamentadas en lo que respecta al diseño, el desarrollo y el hospedaje de las aplicaciones.
+Esta guía está disponible en formato [PDF](https://dotnet.microsoft.com/download/e-book/cloud-native-azure/pdf) y en línea. No dude en reenviar este documento o los vínculos a la versión en línea a su equipo para que todos los miembros puedan consultarla. La mayoría de estos temas presentan unos conocimientos sólidos de los principios y los patrones subyacentes, así como los inconvenientes de las decisiones relacionadas con estos temas. Con este documento, nuestro objetivo es facilitar a los equipos y sus responsables la información necesaria para tomar decisiones fundamentadas en lo que respecta al diseño, el desarrollo y el hospedaje de las aplicaciones.
 
 ## <a name="send-your-feedback"></a>Envíe sus comentarios
 
