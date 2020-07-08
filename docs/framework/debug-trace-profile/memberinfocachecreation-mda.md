@@ -1,5 +1,6 @@
 ---
 title: MDA de memberInfoCacheCreation
+description: Entender el Asistente para la depuración administrada (MDA) de memberInfoCacheCreation en .NET, que se activa cuando se crea una memoria caché MemberInfo.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - member info cache creation
@@ -10,12 +11,11 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), cache
 - MemberInfo cache
 ms.assetid: 5abdad23-1335-4744-8acb-934002c0b6fe
-ms.openlocfilehash: e5dbc769bd634afae06582ee614addafd611fad9
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: c48be7ac8632b8072981be01e01997ee8c34b6b3
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217312"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051147"
 ---
 # <a name="memberinfocachecreation-mda"></a>MDA de memberInfoCacheCreation
 El asistente para la depuración administrada (MDA) `memberInfoCacheCreation` se activa cuando se crea una caché de <xref:System.Reflection.MemberInfo>. Esto es una indicación clara de un programa que está usando características de reflexión que consumen muchos recursos.  
@@ -26,7 +26,7 @@ El asistente para la depuración administrada (MDA) `memberInfoCacheCreation` se
 ## <a name="cause"></a>Causa  
  Las operaciones de reflexión que implican dos objetos <xref:System.Reflection.MemberInfo> se consideran que consumen muchos recursos porque deben leer metadatos que se almacenan en páginas frías y en general indican que el programa usa algún tipo de escenario enlazado en tiempo de ejecución.  
   
-## <a name="resolution"></a>Solución  
+## <a name="resolution"></a>Resolución  
  Puede determinar dónde se usa la reflexión en su programa si habilita este MDA y, después, ejecuta el código en un depurador o lo adjunta con un depurador cuando se activa el MDA. Bajo un depurador obtendrá un seguimiento de pila en el que se muestra dónde se creó la caché de <xref:System.Reflection.MemberInfo> y desde allí puede determinar dónde usa la reflexión el programa.  
   
  La resolución depende de los objetivos del código. Este MDA le avisa de que el programa tiene un escenario enlazado en tiempo de ejecución. Es posible que quiera determinar si puede sustituir un escenario enlazado en tiempo de compilación o considerar el rendimiento del escenario enlazado en tiempo de ejecución.  
@@ -62,7 +62,7 @@ public class Exe
 }  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Reflection.MemberInfo>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnóstico de errores con asistentes de depuraciones administradas](diagnosing-errors-with-managed-debugging-assistants.md)

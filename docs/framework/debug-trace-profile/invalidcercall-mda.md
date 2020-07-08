@@ -1,5 +1,6 @@
 ---
 title: MDA de invalidCERCall
+description: Revise el Asistente para la depuración administrada (MDA) invalidCERCall, que se activa si hay una llamada no válida en el gráfico de la región de ejecución restringida (CER).
 ms.date: 03/30/2017
 helpviewer_keywords:
 - invalid CER calls
@@ -9,12 +10,11 @@ helpviewer_keywords:
 - CER calls
 - managed debugging assistants (MDAs), CER calls
 ms.assetid: c4577410-602e-44e5-9dab-fea7c55bcdfe
-ms.openlocfilehash: f8e467401f7c50898613c7cf6eca68a8a705431a
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: dec32a81929d72274757b75cb03d6615d9fa948b
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217395"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051797"
 ---
 # <a name="invalidcercall-mda"></a>MDA de invalidCERCall
 El Asistente para la depuración administrada (MDA) `invalidCERCall` se activa cuando hay una llamada desde el gráfico de región de ejecución restringida (CER) a un método que no tiene ningún contrato de confiabilidad o un contrato excesivamente débil. Un contrato débil es el que declara que el peor caso de daño de estado tiene un ámbito mayor que la instancia que se pasa a la llamada, es decir, el estado de <xref:System.AppDomain> o del proceso puede resultar dañado o su resultado no siempre se puede calcular de forma determinista cuando se llama desde dentro de una CER.  
@@ -31,7 +31,7 @@ El Asistente para la depuración administrada (MDA) `invalidCERCall` se activa c
   
  Dado que cualquier método con un contrato débil o inexistente puede producir errores de muchas maneras impredecibles, el tiempo de ejecución no intenta eliminar del método ninguno de sus propios errores impredecibles que se introducen mediante la compilación JIT lenta, la especificación de diccionarios genéricos o la anulación de subprocesos, por ejemplo. Es decir, cuando se activa este MDA, indica que el tiempo de ejecución no incluyó el método llamado en la CER que se está definiendo; el gráfico de llamadas se terminó en este nodo porque continuar la preparación de este subárbol ayudaría a ocultar el posible error.  
   
-## <a name="resolution"></a>Solución  
+## <a name="resolution"></a>Resolución  
  Agregar un contrato de confiabilidad válido a la función o evitar usar esa llamada de función.  
   
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
@@ -52,8 +52,8 @@ El Asistente para la depuración administrada (MDA) `invalidCERCall` se activa c
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnóstico de errores con asistentes de depuraciones administradas](diagnosing-errors-with-managed-debugging-assistants.md)

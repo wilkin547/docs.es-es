@@ -2,12 +2,11 @@
 title: Procedimiento para usar la configuración para agregar un punto de conexión AJAX de ASP.NET
 ms.date: 03/30/2017
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
-ms.openlocfilehash: 0aa59ce04e09d700d853f213c6fc9d3a25cdb43b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
-ms.translationtype: MT
+ms.openlocfilehash: 97f8174161068f2c72b6bd2bc4e8a3044f5bccdd
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601158"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051667"
 ---
 # <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>Procedimiento para usar la configuración para agregar un punto de conexión AJAX de ASP.NET
 Windows Communication Foundation (WCF) le permite crear un servicio que hace que un punto de conexión habilitado para ASP.NET AJAX esté disponible al que se puede llamar desde JavaScript en un sitio web del cliente. Para crear este tipo de punto de conexión, puede usar un archivo de configuración, como con todos los demás extremos de Windows Communication Foundation (WCF), o bien usar un método que no requiera ningún elemento de configuración. En este tema se muestra el enfoque de configuración.  
@@ -90,7 +89,7 @@ Windows Communication Foundation (WCF) le permite crear un servicio que hace que
   
 1. Para hospedar el servicio en IIS, cree un nuevo archivo denominado service con extensión .svc en la aplicación. Edite este archivo agregando la información de directiva de [ \@ ServiceHost](../../configure-apps/file-schema/wcf-directive/servicehost.md) adecuada para el servicio. Por ejemplo, el contenido del archivo de servicio para el ejemplo de `CalculatorService` contiene la siguiente información:  
   
-    ```
+    ```aspx-csharp
     <%@ServiceHost
     language=c#
     Debug="true"

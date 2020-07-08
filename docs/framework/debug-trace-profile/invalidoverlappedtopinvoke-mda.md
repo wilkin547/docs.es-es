@@ -1,5 +1,6 @@
 ---
 title: MDA de invalidOverlappedToPinvoke
+description: Revise el Asistente para la depuración administrada (MDA) de invalidOverlappedToPinvoke en .NET, que puede activarse durante un bloqueo o un montón inexplicable dañado.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - overlapped pointers
@@ -9,12 +10,11 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), overlapped pointers
 - pointers, overlapped
 ms.assetid: 28876047-58bd-4fed-9452-c7da346d67c0
-ms.openlocfilehash: 1f557cc370d5c6121b0ad9a4528bd75dcb70a93c
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: 162efd55bf636cf2e8698706bd011379f2f6f11f
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216288"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051706"
 ---
 # <a name="invalidoverlappedtopinvoke-mda"></a>MDA de invalidOverlappedToPinvoke
 El asistente para la depuración administrada (MDA) `invalidOverlappedToPinvoke` se activa cuando un puntero superpuesto que no se ha creado en el montón de recolección de elementos no utilizados se pasa a funciones de Win32 específicas.  
@@ -30,7 +30,7 @@ El asistente para la depuración administrada (MDA) `invalidOverlappedToPinvoke`
   
  En la tabla siguiente se muestran las funciones de las que realiza el seguimiento este MDA.  
   
-|módulo|Función|  
+|Module|Función|  
 |------------|--------------|  
 |HttpApi.dll|`HttpReceiveHttpRequest`|  
 |IpHlpApi.dll|`NotifyAddrChange`|  
@@ -49,7 +49,7 @@ El asistente para la depuración administrada (MDA) `invalidOverlappedToPinvoke`
   
  La probabilidad de daños en el montón es alta para esta condición porque se podría descargar el <xref:System.AppDomain> que hace la llamada. Si se descarga el <xref:System.AppDomain>, el código de la aplicación liberará la memoria del puntero superpuesto, provocando daños cuando termine la operación, o producirá la pérdida de memoria, lo que más adelante causará dificultades.  
   
-## <a name="resolution"></a>Solución  
+## <a name="resolution"></a>Resolución  
  Use un objeto <xref:System.Threading.Overlapped>, llamando al método <xref:System.Threading.Overlapped.Pack%2A> para obtener una estructura <xref:System.Threading.NativeOverlapped> que se puede pasar a la función. Si se descarga el <xref:System.AppDomain>, CLR espera hasta que la operación asincrónica finalice antes de liberar el puntero.  
   
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
@@ -70,8 +70,8 @@ El asistente para la depuración administrada (MDA) `invalidOverlappedToPinvoke`
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Serialización para interoperabilidad](../interop/interop-marshaling.md)
+- [Diagnóstico de errores con asistentes de depuraciones administradas](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Serialización de interoperabilidad](../interop/interop-marshaling.md)

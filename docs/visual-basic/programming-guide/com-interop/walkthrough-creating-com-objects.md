@@ -8,17 +8,16 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-ms.openlocfilehash: bb312317b2bbcb77bed9e3966db6d9fd5db79e4c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
-ms.translationtype: MT
+ms.openlocfilehash: 6ff23f73af384a1440bcebd4b6bac21714e01756
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396745"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051485"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>Tutorial: Crear objetos COM con Visual Basic
 Al crear nuevas aplicaciones o componentes, es mejor crear ensamblados de .NET Framework. Sin embargo, Visual Basic también facilita la exposición de un componente de .NET Framework a COM. Esto le permite proporcionar nuevos componentes para conjuntos de aplicaciones anteriores que requieren componentes COM. En este tutorial se muestra cómo usar Visual Basic para exponer objetos .NET Framework como objetos COM, con y sin la plantilla de clase COM.  
   
- La forma más fácil de exponer objetos COM es usar la plantilla de clase COM. La plantilla de clase COM crea una nueva clase y, a continuación, configura el proyecto para generar la clase y el nivel de interoperabilidad como un objeto COM y registrarlo en el sistema operativo.  
+ La forma más fácil de exponer objetos COM es usar la plantilla de clase COM. Esta plantilla crea una nueva clase y, a continuación, configura el proyecto para generar la clase con una capa de interoperabilidad como un objeto COM y registrarla en el sistema operativo.  
   
 > [!NOTE]
 > Aunque también puede exponer una clase creada en Visual Basic como un objeto COM para el uso de código no administrado, no es un objeto COM verdadero y Visual Basic no puede usar. Para obtener más información, consulte [interoperabilidad com en aplicaciones .NET Framework](com-interoperability-in-net-framework-applications.md).  
@@ -31,7 +30,7 @@ Al crear nuevas aplicaciones o componentes, es mejor crear ensamblados de .NET F
   
 2. En el cuadro de diálogo **nuevo proyecto** , en el campo **tipos de proyecto** , compruebe que está seleccionada la opción Windows. Seleccione **biblioteca de clases** en la lista **plantillas** y, a continuación, haga clic en **Aceptar**. Se muestra el nuevo proyecto.  
   
-3. Seleccione **Agregar nuevo elemento** en el menú **proyecto** . Se mostrará el cuadro de diálogo **Agregar nuevo elemento** .  
+3. Seleccione **Agregar nuevo elemento** en el menú **proyecto** . Se abrirá el cuadro de diálogo **Agregar nuevo elemento**.  
   
 4. Seleccione **clase com** en la lista de **plantillas** y, a continuación, haga clic en **Agregar**. Visual Basic agrega una nueva clase y configura el nuevo proyecto para la interoperabilidad COM.  
   
@@ -90,7 +89,7 @@ Al crear nuevas aplicaciones o componentes, es mejor crear ensamblados de .NET F
     > [!NOTE]
     > Los objetos COM generados con Visual Basic no pueden ser utilizados por otras aplicaciones Visual Basic porque no son objetos COM verdaderos. Los intentos de agregar referencias a estos objetos COM producirán un error. Para obtener más información, consulte [interoperabilidad com en aplicaciones .NET Framework](com-interoperability-in-net-framework-applications.md).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:Microsoft.VisualBasic.ComClassAttribute>
 - [Interoperabilidad COM](index.md)

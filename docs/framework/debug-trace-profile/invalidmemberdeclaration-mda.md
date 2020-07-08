@@ -1,5 +1,6 @@
 ---
 title: MDA de invalidMemberDeclaration
+description: Revise el Asistente para la depuración administrada invalidMemberDeclaration, que se invoca si se devuelve un valor HRESULT de error a COM sin llamar al método administrado.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - invalid member declaration
@@ -8,12 +9,11 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), marshaling
 - MDAs (managed debugging assistants), marshaling
 ms.assetid: a84dd9a3-d6cf-4824-989a-ecbbf443eeb4
-ms.openlocfilehash: 6033cd4178b2bc493794b5dcc527bc543ba24284
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: 5dbfba2baec3263d91746c06379438e97a81f005
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216298"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051719"
 ---
 # <a name="invalidmemberdeclaration-mda"></a>MDA de invalidMemberDeclaration
 El asistente para la depuración administrada (MDA) de `invalidMemberDeclaration` se activa para informar acerca de un error que se produce a la hora de determinar cómo serializar los parámetros de un miembro al que se va a llamar desde COM.  
@@ -24,7 +24,7 @@ El asistente para la depuración administrada (MDA) de `invalidMemberDeclaration
 ## <a name="cause"></a>Causa  
  Esto probablemente se debe a un atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> incompatible en uno de los parámetros.  
   
-## <a name="resolution"></a>Solución  
+## <a name="resolution"></a>Resolución  
  Especifique los atributos <xref:System.Runtime.InteropServices.MarshalAsAttribute> válidos en los parámetros.  
   
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
@@ -43,8 +43,8 @@ El asistente para la depuración administrada (MDA) de `invalidMemberDeclaration
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Serialización para interoperabilidad](../interop/interop-marshaling.md)
+- [Diagnóstico de errores con asistentes de depuraciones administradas](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Serialización de interoperabilidad](../interop/interop-marshaling.md)

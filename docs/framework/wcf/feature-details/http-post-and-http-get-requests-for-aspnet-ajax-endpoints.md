@@ -2,12 +2,11 @@
 title: Procedimiento para elegir entre solicitudes HTTP POST y HTTP GET para puntos de conexión AJAX de ASP.NET
 ms.date: 03/30/2017
 ms.assetid: b47de82a-4c92-4af6-bceb-a5cb8bb8ede9
-ms.openlocfilehash: 15d7ad43ce9120e97aba9119aff6a6c1a19f301f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
-ms.translationtype: MT
+ms.openlocfilehash: c74b1acdf3802ab680123cd9d676919fe47236e8
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596921"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051589"
 ---
 # <a name="how-to-choose-between-http-post-and-http-get-requests-for-aspnet-ajax-endpoints"></a>Procedimiento para elegir entre solicitudes HTTP POST y HTTP GET para puntos de conexión AJAX de ASP.NET
 
@@ -75,7 +74,7 @@ Windows Communication Foundation (WCF) le permite crear un servicio que exponga 
   
 3. Cree un nuevo archivo denominado servicio con una extensión .svc en la aplicación. Edite este archivo agregando la información de directiva de [ \@ ServiceHost](../../configure-apps/file-schema/wcf-directive/servicehost.md) adecuada para el servicio. Especifique que <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> se va a usar en la Directiva de [ \@ ServiceHost](../../configure-apps/file-schema/wcf-directive/servicehost.md) para configurar automáticamente un punto de conexión de ASP.NET AJAX.  
   
-    ```
+    ```aspx-csharp
     <%@ServiceHost
         language=c#
         Debug="true"

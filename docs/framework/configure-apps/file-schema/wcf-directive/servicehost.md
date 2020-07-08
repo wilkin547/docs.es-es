@@ -2,12 +2,11 @@
 title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-ms.openlocfilehash: fdd6d83836c4ef31a4d7c8e68cb0cc050ac6bea4
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
-ms.translationtype: MT
+ms.openlocfilehash: cb425d9f4dadd97e93946a2b4cd9d059ea8504ce
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "76787800"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051368"
 ---
 # <a name="servicehost"></a>\@ServiceHost
 
@@ -15,7 +14,7 @@ Asocia el generador usado para crear el host del servicio con el servicio que se
 
 ## <a name="syntax"></a>Sintaxis
 
-```xml
+```aspx-csharp
 <% @ServiceHost
 Service = "Service, ServiceNamespace"
 Factory = "Factory, FactoryNamespace"
@@ -35,11 +34,11 @@ El nombre del tipo de CLR del servicio hospedado. Esto debería ser un nombre co
 
 El nombre de tipo de CLR del generador de host de servicio usado para crear instancias del host del servicio. Este atributo es opcional. Si no se especifica, se usa el valor predeterminado <xref:System.ServiceModel.Activation.ServiceHostFactory> que devuelve una instancia de <xref:System.ServiceModel.ServiceHost>.
 
-### <a name="debug"></a>Depurar
+### <a name="debug"></a>Depuración
 
 Indica si el servicio Windows Communication Foundation (WCF) se debe compilar con símbolos de depuración. `true`Si el servicio WCF se debe compilar con símbolos de depuración; en caso contrario, `false` .
 
-### <a name="language"></a>Idioma
+### <a name="language"></a>Lenguaje
 
 Especifica el lenguaje usado al compilar todo el código en línea del archivo (.svc). Los valores pueden representar any. Lenguaje compatible con NET, incluidos `C#` , `VB` y `JS` , que hacen referencia a C#, Visual Basic y JScript .net, respectivamente. Este atributo es opcional.
 
@@ -47,7 +46,7 @@ Especifica el lenguaje usado al compilar todo el código en línea del archivo (
 
 Especifica el archivo de código fuente que implementa el servicio Web XML, cuando la clase que implementa el servicio Web XML no reside en el mismo archivo y no se ha compilado en un ensamblado y colocado en el directorio *\Bin* .
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El <xref:System.ServiceModel.ServiceHost> que se usa para hospedar el servicio es un punto de extensibilidad dentro del modelo de programación de Windows Communication Foundation (WCF). Se usa un patrón del generador para crear <xref:System.ServiceModel.ServiceHost> porque es, potencialmente, un tipo polimórfico del que el entorno de hospedaje no debería crear instancias directamente.
 
@@ -63,7 +62,7 @@ Mantenga las implementaciones del generador tan ligeras como sea posible. Si tie
 
 Por ejemplo, para habilitar un extremo habilitado para AJAX para `MyService` , especifique <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> para el valor del `Factory` atributo, en lugar del valor predeterminado <xref:System.ServiceModel.Activation.ServiceHostFactory> , en la Directiva, `@ServiceHost` tal como se muestra en el ejemplo siguiente:
 
-```xml
+```aspx-csharp
 <% @ServiceHost
 Service="MyService"
 Language="C#"
@@ -72,6 +71,6 @@ Factory="WebScriptServiceHostFactory"
 %>
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Host de servicio personalizado](../../../wcf/samples/custom-service-host.md)

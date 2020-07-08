@@ -4,12 +4,11 @@ description: Aprenda a crear componentes de interfaz de usuario reutilizables co
 author: danroth27
 ms.author: daroth
 ms.date: 09/18/2019
-ms.openlocfilehash: 1a5f6b63143c4fd7a276219b9c4877e9e355c996
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
-ms.translationtype: MT
+ms.openlocfilehash: f6528b1e68b49b6ee3949baca166f4806448718b
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378320"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051457"
 ---
 # <a name="build-reusable-ui-components-with-blazor"></a>Cree componentes de interfaz de usuario reutilizables con un increíble
 
@@ -88,7 +87,7 @@ En la tabla siguiente se resumen las distintas directivas de Razor que se usan e
 |`@namespace` |Establece el espacio de nombres del componente.|`@namespace MyNamespace`|None|
 |`@page`      |Especifica la ruta del componente.|`@page "/product/{id}"`|`<%@ Page %>`|
 |`@typeparam` |Especifica un parámetro de tipo genérico para el componente.|`@typeparam TItem`|Uso de código subyacente|
-|`@using`     |Especifica un espacio de nombres que se va a incluir en el ámbito|`@using MyComponentNamespace`|Agregar espacio de nombres en *Web. config*|
+|`@using`     |Especifica un espacio de nombres que se va a incluir en el ámbito|`@using MyComponentNamespace`|Agregar espacio de nombres en *web.config*|
 
 Los componentes de Razor también hacen un uso intensivo de *los atributos de la Directiva* en los elementos para controlar diversos aspectos de cómo se compilan los componentes (control de eventos, enlace de datos, referencias de elementos & componentes, etc.). Todos los atributos de directiva siguen una sintaxis genérica común en la que los valores entre paréntesis son opcionales:
 
@@ -110,7 +109,7 @@ Los distintos atributos de directiva utilizados por el increíbles ( `@onclick` 
 
 Muchas de las sintaxis que se usan en los archivos *. aspx* y *. ascx* tienen sintaxis paralelas en Razor. A continuación se muestra una comparación sencilla de las sintaxis de los formularios Web Forms de ASP.NET y Razor.
 
-|Característica                      |Formularios Web Forms           |Sintaxis               |Razor         |Sintaxis |
+|Característica                      |formularios Web Forms           |Syntax               |Razor         |Syntax |
 |-----------------------------|--------------------|---------------------|--------------|-------|
 |Directivas                   |`<%@ [directive] %>`|`<%@ Page %>`        |`@[directive]`|`@page`|
 |Bloques de código                  |`<% %>`             |`<% int x = 123; %>` |`@{ }`        |`@{ int x = 123; }`|
@@ -146,7 +145,7 @@ Además del HTML normal, los componentes también pueden usar otros componentes 
 A diferencia de los formularios Web Forms de ASP.NET, los componentes de increíbles:
 
 - No use un prefijo de elemento (por ejemplo, `asp:` ).
-- No es necesario registrarse en la página o en el *archivo Web. config*.
+- No es necesario registrarse en la página o en el *web.config*.
 
 Piense en los componentes de Razor como en los tipos de .NET, ya que eso es exactamente lo que son. Si se hace referencia al ensamblado que contiene el componente, el componente está disponible para su uso. Para poner el espacio de nombres del componente en el ámbito, aplique la `@using` Directiva:
 
@@ -602,8 +601,8 @@ La salida de este componente tiene el siguiente aspecto:
 ```html
 <h1>My list</h1>
 <ul>
-    <li>The message is: message1</li>
-    <li>The message is: message2</li>
+    <li><p>The message is: message1</p></li>
+    <li><p>The message is: message2</p></li>
 <ul>
 ```
 

@@ -1,5 +1,6 @@
 ---
-title: 'Cómo: Crear e inicializar orígenes de seguimiento'
+title: Procedimiento para crear e inicializar orígenes de seguimiento
+description: Crear e inicializar orígenes de seguimiento mediante la clase TraceSource en .NET. Esta clase proporciona métodos para trazar eventos y datos y emitir seguimientos informativos.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +10,13 @@ helpviewer_keywords:
 - initializing trace sources
 - configuration files [.NET Framework], trace sources
 ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
-ms.openlocfilehash: eeccad44bd2719a3cb2a721ba4e32a7bf477636f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.openlocfilehash: 55d7854bff991ba185d3f5d6e4c6e7222c9e3039
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174737"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051277"
 ---
-# <a name="how-to-create-and-initialize-trace-sources"></a>Cómo: Crear e inicializar orígenes de seguimiento
+# <a name="how-to-create-and-initialize-trace-sources"></a>Procedimiento para crear e inicializar orígenes de seguimiento
 Las aplicaciones utilizan la clase <xref:System.Diagnostics.TraceSource> para generar seguimientos que pueden asociarse con la aplicación. <xref:System.Diagnostics.TraceSource> proporciona métodos de traza que permiten rastrear fácilmente eventos y datos, así como emitir seguimientos de información. El resultado del seguimiento de <xref:System.Diagnostics.TraceSource> se puede crear e inicializar con o sin archivos de configuración. En este tema se proporcionan instrucciones para ambas opciones. Sin embargo, se recomienda usar archivos de configuración para facilitar la reconfiguración de las trazas generadas por los orígenes de traza en tiempo de ejecución.  
   
 ### <a name="to-create-and-initialize-a-trace-source-using-a-configuration-file"></a>Para crear e inicializar un origen de traza mediante un archivo de configuración  
@@ -76,7 +76,7 @@ Las aplicaciones utilizan la clase <xref:System.Diagnostics.TraceSource> para ge
      [!code-csharp[TraceSourceExample2#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample2/cs/program.cs#1)]
      [!code-vb[TraceSourceExample2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample2/vb/program.vb#1)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TextWriterTraceListener>

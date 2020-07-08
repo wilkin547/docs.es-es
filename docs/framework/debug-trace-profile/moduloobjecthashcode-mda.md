@@ -1,5 +1,6 @@
 ---
 title: MDA de moduloObjectHashcode
+description: Revise el Asistente para la depuración administrada (MDA) moduloObjectHashcode, que cambia la clase de objeto para obtener un valor de resto en el resultado de un método GetHashCode.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - managed debugging assistants (MDAs), hashcode modulus
@@ -10,12 +11,11 @@ helpviewer_keywords:
 - GetHashCode method
 - modulus of hashcodes
 ms.assetid: b45366ff-2a7a-4b8e-ab01-537b72e9de68
-ms.openlocfilehash: 65bbdfec2d7050d1b474a8186a9ea6e9bb93bd9e
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: a929ec2b9196f1f6cad0528fdf7323839a86fa55
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216178"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052070"
 ---
 # <a name="moduloobjecthashcode-mda"></a>MDA de moduloObjectHashcode
 El Asistente para la depuración administrada (MDA) `moduloObjectHashcode` cambia el comportamiento de la clase <xref:System.Object> para realizar una operación de módulo en el código hash devuelto por el método <xref:System.Object.GetHashCode%2A>. El módulo predeterminado para este MDA es 1, lo que hace que <xref:System.Object.GetHashCode%2A> devuelva 0 para todos los objetos.  
@@ -36,7 +36,7 @@ El Asistente para la depuración administrada (MDA) `moduloObjectHashcode` cambi
   
  El orden de enumeración de una <xref:System.Collections.Hashtable> puede cambiar de una versión del tiempo de ejecución a otra si cambia el algoritmo que se usa para calcular los códigos hash para la clave. Para comprobar si el programa ha tomado una dependencia en el orden de enumeración de claves o valores fuera de una tabla hash, puede habilitar este MDA.  
   
-## <a name="resolution"></a>Solución  
+## <a name="resolution"></a>Resolución  
  Nunca use códigos hash como sustitutos de la identidad de objetos. Implemente la invalidación del método <xref:System.Object.Equals%2A?displayProperty=nameWithType> para no comparar códigos hash.  
   
  No cree dependencias en el orden de las enumeraciones de claves o valores en tablas hash.  
@@ -58,8 +58,8 @@ El Asistente para la depuración administrada (MDA) `moduloObjectHashcode` cambi
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>
 - <xref:System.Object.Equals%2A?displayProperty=nameWithType>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnóstico de errores con asistentes de depuraciones administradas](diagnosing-errors-with-managed-debugging-assistants.md)
