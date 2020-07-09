@@ -13,7 +13,7 @@
     - name: Selección entre .NET Core y .NET Framework para contenedores de Docker
       href: net-core-net-framework-containers/index.md
       items:
-        - name: Orientación general
+        - name: Instrucciones generales
           href: net-core-net-framework-containers/general-guidance.md
         - name: Cuándo elegir .NET Core para contenedores de Docker
           href: net-core-net-framework-containers/net-core-container-scenarios.md
@@ -25,7 +25,7 @@
           href: net-core-net-framework-containers/net-container-os-targets.md
         - name: Imágenes oficiales de Docker de .NET
           href: net-core-net-framework-containers/official-net-docker-images.md
-    - name: Diseño de la arquitectura de aplicaciones basadas en contenedores y microservicios
+    - name: Diseñar la arquitectura de aplicaciones basadas en contenedores y microservicios
       href: architect-microservice-container-applications/index.md
       items:
         - name: Incluir en un contenedor aplicaciones monolíticas
@@ -65,7 +65,7 @@
       items:
         - name: Flujo de trabajo de desarrollo para aplicaciones de Docker
           href: docker-application-development-process/docker-app-development-workflow.md
-    - name: Diseño y desarrollo de aplicaciones .NET basadas en varios contenedores y microservicios
+    - name: Diseñar y desarrollar aplicaciones .NET basadas en varios contenedores y microservicios
       href: multi-container-microservice-net-applications/index.md
       items:
         - name: Diseño de una aplicación orientada a microservicios
@@ -118,14 +118,14 @@
         - name: Diseño de la capa de persistencia de infraestructura
           href: microservice-ddd-cqrs-patterns/infrastructure-persistence-layer-design.md
         - name: Implementación del nivel de persistencia de la infraestructura con Entity Framework Core
-          href: microservice-ddd-cqrs-patterns/infrastructure-persistence-layer-implemenation-entity-framework-core.md
+          href: microservice-ddd-cqrs-patterns/infrastructure-persistence-layer-implementation-entity-framework-core.md
         - name: Uso de bases de datos NoSQL como una infraestructura de persistencia
           href: microservice-ddd-cqrs-patterns/nosql-database-persistence-infrastructure.md
         - name: Diseñar el nivel de aplicación de microservicios y la API web
           href: microservice-ddd-cqrs-patterns/microservice-application-layer-web-api-design.md
         - name: Implementación del nivel de aplicación de microservicios mediante la API web
           href: microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md
-    - name: Implementación de aplicaciones resistentes
+    - name: Implementar aplicaciones resistentes
       href: implement-resilient-applications/index.md
       items:
         - name: Controlar errores parciales
@@ -142,9 +142,9 @@
           href: implement-resilient-applications/implement-http-call-retries-exponential-backoff-polly.md
         - name: Implementación del patrón de interruptor
           href: implement-resilient-applications/implement-circuit-breaker-pattern.md
-        - name: Seguimiento de estado
+        - name: Supervisión del estado
           href: implement-resilient-applications/monitor-app-health.md
-    - name: Protección de microservicios y aplicaciones web .NET
+    - name: Proteger microservicios y aplicaciones web de .NET
       href: secure-net-microservices-web-applications/index.md
       items:
         - name: Acerca de la autorización en microservicios y aplicaciones web de .NET
