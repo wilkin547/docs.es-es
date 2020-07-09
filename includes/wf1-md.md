@@ -6,4 +6,4 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "65635564"
 ---
-<span data-ttu-id="78484-101">WF</span><span class="sxs-lookup"><span data-stu-id="78484-101">WF</span></span>
+<span data-ttu-id="f35af-101">WF</span><span class="sxs-lookup"><span data-stu-id="f35af-101">WF</span></span>
