@@ -10,6 +10,7 @@ helpviewer_keywords:
 ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
 ms.openlocfilehash: 8d55268f2b2106dde4e488a6f0271fd3b17349da
 ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 07/07/2020
 ms.locfileid: "86051654"
@@ -70,6 +71,6 @@ namespace ConsoleApplication1
 }  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Diagnóstico de errores con asistentes de depuraciones administradas](diagnosing-errors-with-managed-debugging-assistants.md)

@@ -4,6 +4,7 @@ ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
 ms.openlocfilehash: 40460baeb136345f2532ec6ad5035bd5d3a40254
 ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 07/07/2020
 ms.locfileid: "86051992"
@@ -97,7 +98,7 @@ En este tema se describen los pasos básicos necesarios para crear un servicio W
   
 6. Compile y ejecute el cliente.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Activación de TCP](../samples/tcp-activation.md)
 - [Características de hospedaje de Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

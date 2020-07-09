@@ -8,6 +8,7 @@ dev_langs:
 ms.assetid: 885037f7-1c2b-4d7a-90d9-06b89be172f2
 ms.openlocfilehash: 3b9dd12f2a28ae2d420e82013459613cee8140f1
 ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 07/07/2020
 ms.locfileid: "86051953"
@@ -93,7 +94,7 @@ En este ejemplo, se define un contrato `ICalculator` para un servicio de calcula
     </wsHttpBinding>  
     ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Utilización de enlaces para configurar servicios y clientes](using-bindings-to-configure-services-and-clients.md)
 - [Especificación de una dirección de punto de conexión](specifying-an-endpoint-address.md)
