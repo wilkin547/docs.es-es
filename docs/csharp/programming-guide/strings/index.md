@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: dd76450c2a6a1726d630285f652d252c5f66183f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7bf5cba51a2e72d3a648f795f018220a452e51f5
+ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711914"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226600"
 ---
 # <a name="strings-c-programming-guide"></a>Cadenas (Guía de programación de C#)
 Una cadena es un objeto de tipo <xref:System.String> cuyo valor es texto. Internamente, el texto se almacena como una colección secuencial de solo lectura de objetos <xref:System.Char>. No hay ningún carácter que finaliza en null al final de una cadena de C#; por lo tanto, la cadena de C# puede contener cualquier número de caracteres nulos insertados ('\0'). La propiedad <xref:System.String.Length%2A> de una cadena representa el número de objetos `Char` que contiene, no el número de caracteres Unicode. Para obtener acceso a los puntos de código Unicode individuales de una cadena, use el objeto <xref:System.Globalization.StringInfo>.  
@@ -92,7 +92,7 @@ Para más información sobre cómo dar formato a los tipos .NET, consulte [Aplic
 ## <a name="substrings"></a>Subcadenas  
  Una subcadena es cualquier secuencia de caracteres que se encuentra en una cadena. Use el método <xref:System.String.Substring%2A> para crear una nueva cadena de una parte de la cadena original. Puede buscar una o más apariciones de una subcadena con el método <xref:System.String.IndexOf%2A>. Use el método <xref:System.String.Replace%2A> para reemplazar todas las apariciones de una subcadena especificada por una nueva cadena. Al igual que el método <xref:System.String.Substring%2A>, <xref:System.String.Replace%2A> devuelve una cadena nueva y no modifica la cadena original. Para más información, consulte [Cómo: Buscar cadenas](../../how-to/search-strings.md) y [Procedimiento para modificar el contenido de cadenas](../../how-to/modify-string-contents.md).
   
- [!code-csharp[csProgGuideStrings#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#9)]  
+ [!code-csharp[csProgGuideStrings#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#7)]  
   
 ## <a name="accessing-individual-characters"></a>Acceso a caracteres individuales  
  Puede utilizar la notación de matriz con un valor de índice para adquirir acceso de solo lectura a caracteres individuales, como en el ejemplo siguiente:  
