@@ -1,17 +1,19 @@
 ---
-title: 'Seguridad: autenticación y autorización en formularios Web Forms ASP.NET y extraordinarias'
-description: Obtenga información sobre cómo controlar la autenticación y la autorización en formularios Web Forms y en ASP.NET.
+title: 'Seguridad: autenticación y autorización en formularios Web Forms de ASP.NET yBlazor'
+description: Obtenga información sobre cómo controlar la autenticación y la autorización en formularios Web Forms de ASP.NET y Blazor .
 author: danroth27
 ms.author: daroth
+no-loc:
+- Blazor
 ms.date: 09/11/2019
-ms.openlocfilehash: c524d8ee76d67654236cf71537bfd5c9f33daef7
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: cacd6df15c7eb18c136491d0667f69b9c2036d66
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "73840806"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173034"
 ---
-# <a name="security-authentication-and-authorization-in-aspnet-web-forms-and-blazor"></a>Seguridad: autenticación y autorización en formularios Web Forms ASP.NET y extraordinarias
+# <a name="security-authentication-and-authorization-in-aspnet-web-forms-and-blazor"></a>Seguridad: autenticación y autorización en formularios Web Forms de ASP.NET yBlazor
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 

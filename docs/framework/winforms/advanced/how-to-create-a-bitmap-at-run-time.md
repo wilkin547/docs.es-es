@@ -1,5 +1,6 @@
 ---
 title: Procedimiento para crear un mapa de bits en tiempo de ejecución
+description: Obtenga información sobre cómo crear un objeto de mapa de bits y mostrarlo en un control PictureBox de Windows Forms existente.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +9,15 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], creating
 - bitmaps [Windows Forms], examples [Visual Basic]
 ms.assetid: 737bae30-e599-4e1d-bf30-bab8280b32be
-ms.openlocfilehash: 3027f87cb56d1fca7756e14ae03e04e31804b6a7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e18f58abb93744aeb567ec8dc1a41004565c2bd3
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624210"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174723"
 ---
 # <a name="how-to-create-a-bitmap-at-run-time"></a>Procedimiento para crear un mapa de bits en tiempo de ejecución
-En este ejemplo se crea y se dibuja un <xref:System.Drawing.Bitmap> objeto y lo muestra en los formularios de Windows existentes <xref:System.Windows.Forms.PictureBox> control.  
+En este ejemplo se crea y se dibuja en un <xref:System.Drawing.Bitmap> objeto y se muestra en un control de Windows Forms existente <xref:System.Windows.Forms.PictureBox> .  
   
 ## <a name="example"></a>Ejemplo  
  [!code-csharp[System.Drawing.CreateBitmapAtRuntime#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CreateBitmapAtRuntime/CS/Form1.cs#1)]
@@ -25,7 +26,7 @@ En este ejemplo se crea y se dibuja un <xref:System.Drawing.Bitmap> objeto y lo 
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
-- Un formulario de Windows que importa los ensamblados System, System.Drawing y System.Windows.Forms.  
+- Windows Forms que importa los ensamblados System, System. Drawing y System. Windows. Forms.  
   
 ## <a name="see-also"></a>Vea también
 

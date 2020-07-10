@@ -1,21 +1,22 @@
 ---
 title: Personalización de la apariencia
+description: Obtenga información sobre cómo personalizar el aspecto de las aplicaciones Windows Forms cambiando el borde, la opacidad, la forma, el estilo o la configuración de una imagen de fondo.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, changing the appearance of
 ms.assetid: 12f35d5b-1587-49cc-ada3-47eec1ff1738
-ms.openlocfilehash: c75fb1849ab9f9a07fcbbe5dd915b965f5aea05d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0aeb783873d01b27fa00717ead0e9c2f9d1d0d0c
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76732363"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174645"
 ---
-# <a name="changing-the-appearance-of-windows-forms"></a>Cambiar la apariencia de Windows Forms
+# <a name="changing-the-appearance-of-windows-forms"></a>Cambiar la apariencia de formularios Windows Forms
 Puede personalizar la apariencia de las aplicaciones de Windows Forms de muchas maneras diferentes, como cambiar el borde, la opacidad, la forma, el estilo o la configuración de una imagen de fondo para la aplicación de Windows Forms.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Cambiar los bordes de Windows Forms](how-to-change-the-borders-of-windows-forms.md)  
+ [Procedimiento para cambiar los bordes de formularios Windows Forms](how-to-change-the-borders-of-windows-forms.md)  
  Muestra cómo cambiar el estilo de borde de un formulario.  
   
 ## <a name="reference"></a>Referencia  
@@ -38,7 +39,7 @@ Puede personalizar la apariencia de las aplicaciones de Windows Forms de muchas 
  Describe esta clase y contiene vínculos a todos sus miembros.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Ajustar el tamaño y la escala de Windows Forms](adjusting-the-size-and-scale-of-windows-forms.md)  
+ [Ajustar el tamaño y la escala de los formularios Windows Forms](adjusting-the-size-and-scale-of-windows-forms.md)  
  Contiene vínculos a temas que muestran cómo cambiar el tamaño y la escala de un formulario.  
   
  [Gráficos y dibujos en Windows Forms](./advanced/graphics-and-drawing-in-windows-forms.md)  

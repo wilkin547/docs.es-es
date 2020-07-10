@@ -1,5 +1,6 @@
 ---
 title: para objetos de capa
+description: Obtenga información sobre cómo disponer objetos en capas Windows Forms controles y formularios secundarios para crear interfaces de usuario más complejas.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,12 +16,12 @@ ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1615b9c4df222edd95cda9bceae622ba6f1d8d78
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 6269b09c56963fefd500b9e1e6c9d7f51f9619cf
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76736345"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174515"
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>Cómo: disponer objetos en capas en Windows Forms
 
@@ -34,9 +35,9 @@ Cuando se crea una interfaz de usuario compleja, o cuando se trabaja con un form
 
 ## <a name="to-layer-controls-programmatically"></a>Para capas de controles mediante programación
 
-Utilice los métodos <xref:System.Windows.Forms.Control.BringToFront%2A> y <xref:System.Windows.Forms.Control.SendToBack%2A> para manipular el orden z de los controles.
+Utilice los <xref:System.Windows.Forms.Control.BringToFront%2A> <xref:System.Windows.Forms.Control.SendToBack%2A> métodos y para manipular el orden z de los controles.
 
-Por ejemplo, si un control de <xref:System.Windows.Forms.TextBox>, `txtFirstName`, está debajo de otro control y desea que esté en primer lugar, use el código siguiente:
+Por ejemplo, si un <xref:System.Windows.Forms.TextBox> control, `txtFirstName` , está bajo otro control y desea que esté en primer lugar, use el código siguiente:
 
 ```vb
 txtFirstName.BringToFront()
@@ -51,11 +52,11 @@ txtFirstName->BringToFront();
 ```
 
 > [!NOTE]
-> Windows Forms admite la *contención de controles*. La contención de controles implica la colocación de varios controles dentro de un control contenedor, como varios controles <xref:System.Windows.Forms.RadioButton> dentro de un control <xref:System.Windows.Forms.GroupBox>. A continuación, puede disponer los controles en el control contenedor. Al mover el cuadro de grupo también se mueven los controles, ya que están incluidos en él.
+> Windows Forms admite la *contención de controles*. La contención de controles implica la colocación de varios controles dentro de un control contenedor, como una serie de <xref:System.Windows.Forms.RadioButton> controles de un <xref:System.Windows.Forms.GroupBox> control. A continuación, puede disponer los controles en el control contenedor. Al mover el cuadro de grupo también se mueven los controles, ya que están incluidos en él.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Controles de Windows Forms](index.md)
+- [Windows Forms controles](index.md)
 - [Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)
 - [Controles de formularios Windows Forms por función](windows-forms-controls-by-function.md)

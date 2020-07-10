@@ -1,5 +1,6 @@
 ---
 title: Margen y relleno en controles
+description: Obtenga información sobre cómo agregar márgenes y relleno en controles de Windows Forms con las propiedades margin y padding.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Padding property [Windows Forms]
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, layout
 - Margin property [Windows Forms]
 ms.assetid: 3781b5a1-3085-4072-bed0-44670c23ffdc
-ms.openlocfilehash: 02cabccd0d51a3501a8aafb8733a5273deef6c49
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 4279f39bb4f89fbda8be472f49c8e60853abcac6
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76728562"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174489"
 ---
 # <a name="margin-and-padding-in-windows-forms-controls"></a>Márgenes y relleno en controles de formularios Windows Forms
 La posición precisa de los controles del formulario es de alta prioridad para muchas aplicaciones. El espacio de nombres <xref:System.Windows.Forms?displayProperty=nameWithType> le ofrece muchas características de diseño para lograrlo. Dos de las más importantes son las propiedades <xref:System.Windows.Forms.Control.Margin%2A> y <xref:System.Windows.Forms.Control.Padding%2A>.  
@@ -23,11 +24,11 @@ La posición precisa de los controles del formulario es de alta prioridad para m
   
  La siguiente ilustración muestra las propiedades <xref:System.Windows.Forms.Control.Padding%2A> y <xref:System.Windows.Forms.Control.Margin%2A> de un control.  
   
- ![Relleno y margen de controles de Windows Forms](./media/vs-winformpadmargin.gif "VS_WinFormPadMargin")  
+ ![Relleno y margen de controles de formularios Windows Forms](./media/vs-winformpadmargin.gif "VS_WinFormPadMargin")  
   
  Hay compatibilidad en tiempo de diseño para esta característica en Visual Studio. Vea también [Tutorial: diseñar Windows Forms controles con relleno, márgenes y la propiedad AutoSize](windows-forms-controls-padding-autosize.md).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.Control.AutoSize%2A>
 - <xref:System.Windows.Forms.Control.Margin%2A>

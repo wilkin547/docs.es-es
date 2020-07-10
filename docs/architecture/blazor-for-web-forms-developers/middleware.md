@@ -3,25 +3,27 @@ title: Módulos, controladores y middleware
 description: Obtenga información sobre cómo controlar las solicitudes HTTP con módulos, controladores y middleware.
 author: danroth27
 ms.author: daroth
+no-loc:
+- Blazor
 ms.date: 10/11/2019
-ms.openlocfilehash: 3ecc109c54f88b5b06a1474f7c6e262d426a78a9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: ff2b3fd41316a1c8c20a0eed9a585e5fd2733af3
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337474"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173190"
 ---
 # <a name="modules-handlers-and-middleware"></a>Módulos, controladores y middleware
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Una aplicación ASP.NET Core se basa en una serie de *middleware*. El middleware es controladores que se organizan en una canalización para controlar solicitudes y respuestas. En una aplicación de formularios Web Forms, los controladores y módulos HTTP solucionan problemas similares. En ASP.NET Core, los módulos, los controladores, *global.asax.CS*y el ciclo de vida de la aplicación se reemplazan por middleware. En este capítulo, aprenderá qué middleware en el contexto de una aplicación increíblemente.
+Una aplicación ASP.NET Core se basa en una serie de *middleware*. El middleware es controladores que se organizan en una canalización para controlar solicitudes y respuestas. En una aplicación de formularios Web Forms, los controladores y módulos HTTP solucionan problemas similares. En ASP.NET Core, los módulos, los controladores, *global.asax.CS*y el ciclo de vida de la aplicación se reemplazan por middleware. En este capítulo, aprenderá qué middleware en el contexto de una Blazor aplicación.
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 La canalización de solicitudes de ASP.NET Core consiste en una secuencia de delegados de solicitud a los que se llama de uno en uno. En el siguiente diagrama se muestra este concepto. El subproceso de ejecución sigue las flechas negras.
 
-![canalización](media/middleware/request-delegate-pipeline.png)
+![pipeline](media/middleware/request-delegate-pipeline.png)
 
 El diagrama anterior carece de un concepto de eventos de ciclo de vida. Este concepto es fundamental para el modo en que se administran las solicitudes de formularios Web Forms de ASP.NET. Este sistema facilita la tarea de pensar en qué proceso está ocurriendo y permite insertar middleware en cualquier momento. El middleware se ejecuta en el orden en que se agrega a la canalización de solicitudes. También se agregan en el código en lugar de en los archivos de configuración, normalmente en *Startup.CS*.
 
@@ -35,7 +37,7 @@ ASP.NET 4. x incluye muchos módulos. De forma similar, ASP.NET Core tiene tambi
 
 En la tabla siguiente se enumeran los componentes y el middleware de reemplazo en ASP.NET Core.
 
-|Module                 |Módulo ASP.NET 4. x           |ASP.NET Core, opción|
+|Módulo                 |Módulo ASP.NET 4. x           |ASP.NET Core, opción|
 |-----------------------|-----------------------------|-------------------|
 |Errores HTTP            |`CustomErrorModule`          |[Middleware de páginas de códigos de estado](/aspnet/core/fundamentals/error-handling#usestatuscodepages)|
 |Documento predeterminado       |`DefaultDocumentModule`      |[Middleware de archivos predeterminados](/aspnet/core/fundamentals/static-files#serve-a-default-document)|
@@ -46,13 +48,13 @@ En la tabla siguiente se enumeran los componentes y el middleware de reemplazo e
 |Almacenamiento en caché de HTTP           |`HttpCacheModule`            |[Middleware de almacenamiento en caché de respuestas](/aspnet/core/performance/caching/middleware)|
 |Registro HTTP           |`HttpLoggingModule`          |[Registro de ASP.NET Core](/aspnet/core/fundamentals/logging/index)|
 |Redirección HTTP       |`HttpRedirectionModule`      |[Middleware de reescritura de dirección URL](/aspnet/core/fundamentals/url-rewriting)|
-|filtros ISAPI          |`IsapiFilterModule`          |[Middleware](/aspnet/core/fundamentals/middleware/index)|
-|ISAPI                  |`IsapiModule`                |[Middleware](/aspnet/core/fundamentals/middleware/index)|
-|Solicitud de filtrado      |`RequestFilteringModule`     |[Middleware de reescritura de URL IRule](/aspnet/core/fundamentals/url-rewriting#irule-based-rule)|
-|Reescritura de URL&#8224;   |`RewriteModule`              |[Middleware de reescritura de dirección URL](/aspnet/core/fundamentals/url-rewriting)|
+|Filtros ISAPI          |`IsapiFilterModule`          |[Software intermedio](/aspnet/core/fundamentals/middleware/index)|
+|ISAPI                  |`IsapiModule`                |[Software intermedio](/aspnet/core/fundamentals/middleware/index)|
+|Filtro de solicitudes      |`RequestFilteringModule`     |[Middleware de reescritura de URL IRule](/aspnet/core/fundamentals/url-rewriting#irule-based-rule)|
+|&#8224; de reescritura de direcciones URL   |`RewriteModule`              |[Middleware de reescritura de dirección URL](/aspnet/core/fundamentals/url-rewriting)|
 |Compresión estática     |`StaticCompressionModule`    |[Middleware de compresión de respuestas](/aspnet/core/performance/response-compression)|
 |Contenido estático         |`StaticFileModule`           |[Middleware de archivos estáticos](/aspnet/core/fundamentals/static-files)|
-|Autorización URL      |`UrlAuthorizationModule`     |[Identidad de ASP.NET Core](/aspnet/core/security/authentication/identity)|
+|Autorización para URL      |`UrlAuthorizationModule`     |[Identidad de ASP.NET Core](/aspnet/core/security/authentication/identity)|
 
 Esta lista no es exhaustiva, pero debe dar una idea de la asignación que existe entre los dos marcos. Para obtener una lista más detallada, vea [módulos de IIS con ASP.net Core](/aspnet/core/host-and-deploy/iis/modules).
 
@@ -88,7 +90,7 @@ public class Startup
 }
 ```
 
-El middleware también se puede definir como clase, ya sea implementando la interfaz de `IMiddleware` o mediante la siguiente Convención de middleware. Para obtener más información, consulte [escritura de middleware de ASP.net Core personalizado](/aspnet/core/fundamentals/middleware/write).
+El middleware también se puede definir como clase, ya sea implementando la `IMiddleware` interfaz o mediante la siguiente Convención de middleware. Para obtener más información, consulte [escritura de middleware de ASP.net Core personalizado](/aspnet/core/fundamentals/middleware/write).
 
 >[!div class="step-by-step"]
 >[Anterior](data.md)

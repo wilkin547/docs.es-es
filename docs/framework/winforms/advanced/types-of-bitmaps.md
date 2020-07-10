@@ -1,5 +1,6 @@
 ---
 title: Tipos de mapas de bits
+description: Obtenga información sobre los tipos de mapas de bits y los formatos de archivo de gráficos GDI+ compatibles, incluidos BMP, JPG, GIF, PNG y TIFF.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - jpeg files
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-ms.openlocfilehash: 2243c9ce2d8ba741143d301c38e8b88d7b196c98
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09b74ef476467b0bba5aac1f58db278b3898ef17
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914824"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174684"
 ---
 # <a name="types-of-bitmaps"></a>Tipos de mapas de bits
 Un mapa de bits es una matriz de bits que especifican el color de cada píxel de una matriz rectangular de píxeles. El número de bits dedicado a un píxel individual determina el número de colores que se pueden asignar a ese píxel. Por ejemplo, si cada píxel se representa mediante 4 bits, a un píxel determinado se le puede asignar uno de 16 colores diferentes (2 ^ 4 = 16). En la tabla siguiente se muestran algunos ejemplos del número de colores que se pueden asignar a un píxel representado por un número determinado de bits.  
@@ -61,16 +62,16 @@ Un mapa de bits es una matriz de bits que especifican el color de cada píxel de
 ### <a name="graphics-interchange-format-gif"></a>Formato de intercambio de gráficos (GIF)  
  GIF es un formato común para las imágenes que aparecen en páginas Web. Los archivos GIF funcionan bien para los dibujos de líneas, imágenes con bloques de color sólido e imágenes con límites nítidos entre los colores. Los archivos GIF se comprimen, pero no se pierde información en el proceso de compresión; una imagen descomprimida es exactamente la misma que la original. Un color de un GIF puede designarse como transparente, de modo que la imagen tendrá el color de fondo de cualquier página web que la muestre. Se puede almacenar una secuencia de imágenes GIF en un solo archivo para formar un GIF animado. Los archivos GIF almacenan a lo sumo 8 bits por píxel, por lo que están limitados a 256 colores.  
   
-### <a name="joint-photographic-experts-group-jpeg"></a>Joint Photographic Experts Group (JPEG)  
+### <a name="joint-photographic-experts-group-jpeg"></a>Formato JPEG (Joint Photographic Experts Group)  
  JPEG es un esquema de compresión que funciona bien con escenas naturales como fotografías digitalizadas. Parte de la información se pierde en el proceso de compresión, pero a menudo la pérdida es imperceptible para el ojo humano. Los archivos JPEG almacenan 24 bits por píxel, por lo que son capaces de mostrar más de 16 millones colores. Los archivos JPEG no admiten transparencia ni animación.  
   
  El nivel de compresión de las imágenes JPEG es configurable, pero los niveles de compresión más altos (archivos más pequeños) producen más pérdida de información. Una razón de compresión 20:1 suele generar una imagen que el ojo humano encuentra difícil de distinguir de la original. En la ilustración siguiente se muestra una imagen BMP y dos imágenes JPEG que se comprimieron a partir de esa imagen BMP. La primera JPEG tiene una relación de compresión de 4:1 y la segunda tiene una relación de compresión de aproximadamente 8:1.  
   
- ![Ejemplos de filetype](./media/aboutgdip03-art03.gif "AboutGdip03_Art03")  
+ ![Ejemplos de tipo de archivo](./media/aboutgdip03-art03.gif "AboutGdip03_Art03")  
   
  La compresión JPEG no funciona bien para los dibujos de líneas, los bloques de color sólido y los límites nítidos. En la ilustración siguiente se muestra un BMP junto con dos archivos JPEG y un GIF. Los archivos JPEG y el GIF se han comprimido a partir del BMP. La razón de compresión es 4:1 para el archivo GIF, 4:1 para el archivo JPEG más pequeño y 8:3 para el archivo JPEG más grande. Tenga en cuenta que el GIF mantiene los límites nítidos a lo largo de las líneas, pero los archivos JPEG tienden a desenfocar los límites.  
   
- ![Filetypes](./media/aboutgdip03-art03a.gif "AboutGdip03_Art03A")  
+ ![Tipos de archivo](./media/aboutgdip03-art03a.gif "AboutGdip03_Art03A")  
   
  JPEG es un esquema de compresión, no un formato de archivo. El formato de intercambio de archivos JPEG (JFIF) es un formato de archivo que se usa normalmente para almacenar y transferir imágenes que se han comprimido según el esquema JPEG. Los archivos JFIF mostrados por los exploradores web utilizan la extensión. jpg.  
   

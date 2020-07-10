@@ -1,13 +1,13 @@
 ---
 title: Tuplas
-description: Obtenga información sobre F# la tupla, una agrupación de valores sin nombre pero ordenados, posiblemente de tipos diferentes.
+description: 'Obtenga información sobre la tupla de F #, una agrupación de valores sin nombre pero ordenados, posiblemente de tipos diferentes.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 7a15d7e0c6c9b42118dd75066f02cbb2e05335fc
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 5d26fd5d7ec5b4939a895a6d2a6a0d7fc6c6c733
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630240"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173294"
 ---
 # <a name="tuples"></a>Tuplas
 
@@ -20,9 +20,9 @@ Una *tupla* es una agrupación de valores sin nombre pero ordenados, posiblement
 struct(element, ... ,element )
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Cada *elemento* de la sintaxis anterior puede ser cualquier expresión F# válida.
+Cada *elemento* de la sintaxis anterior puede ser cualquier expresión de F # válida.
 
 ## <a name="examples"></a>Ejemplos
 
@@ -36,7 +36,7 @@ Puede usar la coincidencia de patrones para obtener acceso y asignar nombres par
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/tuples/basic-examples.fsx#L27-L29)]
 
-También puede deconstruir una tupla a través de la coincidencia de patrones `match` fuera de `let` una expresión a través del enlace:
+También puede deconstruir una tupla a través de la coincidencia de patrones fuera de una `match` expresión a través del `let` enlace:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/tuples/basic-examples.fsx#L34-L37)]
 
@@ -80,17 +80,17 @@ El uso de una tupla como parámetro deshabilita currificación. Para obtener má
 
 ## <a name="names-of-tuple-types"></a>Nombres de tipos de tupla
 
-Cuando se escribe el nombre de un tipo que es una tupla, se usa el `*` símbolo para separar los elementos. Para una tupla que consta de un `int`, un `float` `(10, 10.0, "ten")`y un `string`, como, el tipo se escribiría como se indica a continuación.
+Cuando se escribe el nombre de un tipo que es una tupla, se usa el `*` símbolo para separar los elementos. Para una tupla que consta de un, `int` un `float` y un `string` , como `(10, 10.0, "ten")` , el tipo se escribiría como se indica a continuación.
 
 ```fsharp
 int * float * string
 ```
 
-## <a name="interoperation-with-c-tuples"></a>Interoperación con C# tuplas
+## <a name="interoperation-with-c-tuples"></a>Interoperación con tuplas de C#
 
-C#7,0 se introdujeron tuplas en el lenguaje.  Las tuplas C# de son Structs y son equivalentes a las tuplas F#de struct en.  Si necesita interoperar con C#, debe usar tuplas de struct.
+C# 7,0 presentó tuplas en el lenguaje.  Las tuplas en C# son estructuras y son equivalentes a las tuplas de struct en F #.  Si necesita interoperar con C#, debe utilizar tuplas de struct.
 
-Esto es fácil de hacer.  Por ejemplo, Imagine que tiene que pasar una tupla a una C# clase y, a continuación, usar su resultado, que también es una tupla:
+Esto es fácil de hacer.  Por ejemplo, Imagine que tiene que pasar una tupla a una clase de C# y luego consumir su resultado, que también es una tupla:
 
 ```csharp
 namespace CSharpTupleInterop
@@ -103,7 +103,7 @@ namespace CSharpTupleInterop
 }
 ```
 
-En el F# código, puede pasar una tupla de struct como parámetro y consumir el resultado como una tupla de estructura.
+En el código de F #, puede pasar una tupla de struct como parámetro y consumir el resultado como una tupla de estructura.
 
 ```fsharp
 open TupleInterop
@@ -126,11 +126,11 @@ Debe crear patrones de coincidencia en una tupla y construir la otra con las par
 
 En esta sección se explica la forma de las tuplas cuando se compilan.  Esta información no es necesaria para leer a menos que tenga como destino .NET Framework 3,5 o inferior.
 
-Las tuplas se compilan en objetos de uno de varios tipos genéricos, todos los nombres `System.Tuple`, que están sobrecargados en la aridad o el número de parámetros de tipo. Los tipos de tupla aparecen en este formulario cuando se ven desde otro lenguaje, como C# o Visual Basic, o cuando se usa una herramienta que no es consciente de F# las construcciones. Los `Tuple` tipos se introdujeron en .NET Framework 4. Si el destino es una versión anterior del .NET Framework, el compilador usa versiones de [System. Tuple](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3) de la versión 2,0 de la F# biblioteca principal. Los tipos de esta biblioteca solo se usan para las aplicaciones destinadas a las versiones 2,0, 3,0 y 3,5 del .NET Framework. El reenvío de tipos se usa para garantizar la compatibilidad binaria entre los F# componentes .NET Framework 2,0 y .NET Framework 4.
+Las tuplas se compilan en objetos de uno de varios tipos genéricos, todos los nombres `System.Tuple` , que están sobrecargados en la aridad o el número de parámetros de tipo. Los tipos de tupla aparecen en este formulario cuando se ven desde otro lenguaje, como C# o Visual Basic, o cuando se usa una herramienta que no es consciente de las construcciones de F #. Los `Tuple` tipos se introdujeron en .NET Framework 4. Si el destino es una versión anterior del .NET Framework, el compilador usa versiones de [System. Tuple](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3) de la versión 2,0 de la biblioteca básica de F #. Los tipos de esta biblioteca solo se usan para las aplicaciones destinadas a las versiones 2,0, 3,0 y 3,5 del .NET Framework. El reenvío de tipos se usa para garantizar la compatibilidad binaria entre .NET Framework 2,0 y .NET Framework 4 componentes de F #.
 
 ### <a name="compiled-form-of-struct-tuples"></a>Forma compilada de tuplas de struct
 
-Las tuplas de estructura (por `struct (x, y)`ejemplo,), son fundamentalmente distintas de las tuplas de referencia.  Se compilan en <xref:System.ValueTuple> el tipo, sobrecargado por aridad o el número de parámetros de tipo.  Son equivalentes a [ C# las tuplas 7,0](../../csharp/tuples.md) y [Visual Basic las tuplas 2017](../../visual-basic/programming-guide/language-features/data-types/tuples.md), e interoperan bidireccionalmente.
+Las tuplas de estructura (por ejemplo, `struct (x, y)` ), son fundamentalmente distintas de las tuplas de referencia.  Se compilan en el <xref:System.ValueTuple> tipo, sobrecargado por aridad o el número de parámetros de tipo.  Son equivalentes a las tuplas de [C# 7,0](../../csharp/language-reference/builtin-types/value-tuples.md) y [Visual Basic las tuplas 2017](../../visual-basic/programming-guide/language-features/data-types/tuples.md), e interoperan bidireccionalmente.
 
 ## <a name="see-also"></a>Vea también
 

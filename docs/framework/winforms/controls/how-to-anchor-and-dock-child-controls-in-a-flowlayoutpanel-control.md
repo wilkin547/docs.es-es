@@ -1,5 +1,6 @@
 ---
 title: Procedimiento para delimitar y acoplar controles secundarios en un control FlowLayoutPanel
+description: Obtenga información sobre cómo delimitar y acoplar controles secundarios mediante programación en un Windows Forms control FlowLayoutPanel.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - layout [Windows Forms], child controls
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - controls [Windows Forms], child
 - child controls [Windows Forms], anchoring and docking
 ms.assetid: a2bcdfca-9b63-45e6-9c0e-3411015cba98
-ms.openlocfilehash: 3e9a5be944e199254ddb9cee0772c4d55be8fb77
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b4fb3bf6d148a526a75926bd67c1f967286332bf
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046066"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174541"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>Procedimiento para delimitar y acoplar controles secundarios en un control FlowLayoutPanel
 
@@ -22,11 +23,11 @@ El control <xref:System.Windows.Forms.FlowLayoutPanel> admite las propiedades <x
 
 1. Cree un control <xref:System.Windows.Forms.FlowLayoutPanel> en el formulario.
 
-2. Establezca el <xref:System.Windows.Forms.Control.Width%2A> <xref:System.Windows.Forms.FlowLayoutPanel> valor del control en **300**y establezca su <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> en. <xref:System.Windows.Forms.FlowDirection.TopDown>
+2. Establezca el valor <xref:System.Windows.Forms.Control.Width%2A> del <xref:System.Windows.Forms.FlowLayoutPanel> control en **300**y establezca su <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> en <xref:System.Windows.Forms.FlowDirection.TopDown> .
 
 3. Cree dos controles <xref:System.Windows.Forms.Button> y colóquelos en el control <xref:System.Windows.Forms.FlowLayoutPanel>.
 
-4. Establezca el <xref:System.Windows.Forms.Control.Width%2A> valor del primer botón en **200**.
+4. Establezca el valor <xref:System.Windows.Forms.Control.Width%2A> del primer botón en **200**.
 
 5. Establezca la propiedad <xref:System.Windows.Forms.Control.Dock%2A> del segundo botón en <xref:System.Windows.Forms.DockStyle.Fill>.
 
