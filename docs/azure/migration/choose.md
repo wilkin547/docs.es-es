@@ -4,12 +4,12 @@ description: Vea cuál es la ruta de migración de Azure más adecuada para su a
 author: CESARDELATORRE
 ms.author: cesardl
 ms.date: 03/01/2020
-ms.openlocfilehash: a8ad946b03f97272cb8685620858af6b21a372dc
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 162dc8eb87dfd78d050b93b1c24ac573d7092126
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "81433353"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174301"
 ---
 # <a name="choose-the-right-azure-hosting-option"></a>Elección de la opción de hospedaje de Azure correcta
 
@@ -46,7 +46,7 @@ Hay varias opciones para migrar las bases de datos relacionales a Azure. Consult
 
 ## <a name="networking-and-security-considerations"></a>Consideraciones sobre redes y seguridad
 
-Al implementar aplicaciones en una nube pública como Microsoft Azure, quizás quiera aislar y proteger determinadas redes mediante la [creación de redes perimetrales](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/), por ejemplo, una [red perimetral entre Azure y el entorno local](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-hybrid) o una [red perimetral entre Azure e Internet](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz). Las redes perimetrales se pueden implementar con [Azure Virtual Network](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview).
+Al implementar aplicaciones en una nube pública como Microsoft Azure, quizás quiera aislar y proteger determinadas redes mediante la [creación de redes perimetrales](/azure/architecture/reference-architectures/dmz/), por ejemplo, una [red perimetral entre Azure y el entorno local](/azure/architecture/reference-architectures/dmz/secure-vnet-hybrid) o una [red perimetral entre Azure e Internet](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz). Las redes perimetrales se pueden implementar con [Azure Virtual Network](/azure/virtual-network/virtual-networks-overview).
 
 Azure Virtual Network permite:
 
@@ -57,15 +57,15 @@ Azure Virtual Network permite:
 - Cree topologías de red sofisticadas con aplicaciones virtuales
 - Obtener un entorno aislado y de alta seguridad para las aplicaciones
 
-Para empezar a crear su propia red virtual, consulte la [documentación de Azure Virtual Network](https://docs.microsoft.com/azure/virtual-network/).
+Para empezar a crear su propia red virtual, consulte la [documentación de Azure Virtual Network](/azure/virtual-network/).
 
 ## <a name="authentication-and-authorization-considerations-when-migrating-to-azure"></a>Consideraciones sobre autenticación y autorización para migrar a Azure
 
 Una de las principales preocupaciones de una organización a la hora de trasladarse a la nube es la seguridad. La mayoría de las empresas ha invertido una cantidad considerable de tiempo, dinero e ingeniería en diseñar y desarrollar un modelo de seguridad, y es importante que puedan aprovechar las inversiones existentes, como los almacenes de identidades y las soluciones de inicio de sesión único.
 
-Muchas aplicaciones B2E empresariales de .NET existentes que se ejecutan en entornos locales usan Active Directory para la autenticación y administración de identidades. Azure AD Connect permite integrar sus directorios locales con Azure Active Directory. Para comenzar, consulte [Integración de los directorios locales con Azure Active Directory](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect).
+Muchas aplicaciones B2E empresariales de .NET existentes que se ejecutan en entornos locales usan Active Directory para la autenticación y administración de identidades. Azure AD Connect permite integrar sus directorios locales con Azure Active Directory. Para comenzar, consulte [Integración de los directorios locales con Azure Active Directory](/azure/active-directory/connect/active-directory-aadconnect).
 
-Vea los [requisitos de identidad para su solución de identidad híbrida](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-business-needs) para poder continuar el planeamiento en relación con Azure Active Directory.
+Vea los [requisitos de identidad para su solución de identidad híbrida](/azure/active-directory/active-directory-hybrid-identity-design-considerations-business-needs) para poder continuar el planeamiento en relación con Azure Active Directory.
 
 Otras opciones de protocolo de autenticación son [OAuth](https://en.wikipedia.org/wiki/OAuth) y [OpenID](https://en.wikipedia.org/wiki/OpenID), que son comunes en las aplicaciones orientadas al consumidor. Cuando se utilizan bases de datos de identidad autónomas, como una base de datos SQL de ASP.NET Identity encapsulada por IdentityServer4 que usa OAuth, normalmente no se necesita conectividad a bases de datos o directorios locales.
 

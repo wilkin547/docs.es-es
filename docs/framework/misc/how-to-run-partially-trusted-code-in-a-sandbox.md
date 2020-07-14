@@ -1,5 +1,6 @@
 ---
 title: 'Cómo: Ejecutar código de confianza parcial en un recinto'
+description: Descubra cómo ejecutar código de confianza parcial en un espacio aislado en .NET. La clase AppDomain es una manera eficaz de recintos de las aplicaciones administradas.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - partially trusted code
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - restricted security environment
 - code security, sandboxing
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
-ms.openlocfilehash: b2f5a72e747f6c71743a7b22fe9f1962ac2f6b53
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4f186f1d901b51dd4c61ba6b22197465a41f2c44
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181181"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86282039"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Cómo: Ejecutar código de confianza parcial en un recinto
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -114,7 +115,7 @@ AppDomain.CreateDomain( string friendlyName,
   
     - Puede usar una base de código que apunte a una ubicación que no contenga su ensamblado.  
   
-    - Puede realizar la creación en un <xref:System.Security.CodeAccessPermission.Assert%2A> de plena confianza (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>), lo que le permite crear una instancia de una clase crítica. (Esto sucede siempre que el ensamblado no tiene marcas de transparencia y se carga como de plena confianza.) Por lo tanto, debe tener cuidado de crear solo el código en el que confíe con esta función y le recomendamos que cree solo instancias de clases de plena confianza en el nuevo dominio de aplicación.  
+    - Puede realizar la creación en un <xref:System.Security.CodeAccessPermission.Assert%2A> de plena confianza (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>), lo que le permite crear una instancia de una clase crítica. (Esto sucede cuando el ensamblado no tiene marcas de transparencia y se carga como de plena confianza). Por lo tanto, debe tener cuidado de crear solo código en el que confíe con esta función y se recomienda crear solo instancias de clases de plena confianza en el nuevo dominio de aplicación.  
   
     ```csharp
     ObjectHandle handle = Activator.CreateInstanceFrom(  

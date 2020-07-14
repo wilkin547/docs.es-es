@@ -2,12 +2,12 @@
 title: Diseñar las validaciones en el nivel de modelo de dominio
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedores | Información sobre conceptos clave de las validaciones de modelo de dominio.
 ms.date: 10/08/2018
-ms.openlocfilehash: d2efc5f3b3267c4573409952791c6e883a01aae2
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 94df2d6441581fbbae479da2524d6ffce2037d68
+ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988510"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100917"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>Diseño de validaciones en el nivel de modelo de dominio
 
@@ -53,7 +53,7 @@ Se puede aplicar un enfoque similar en el constructor de la entidad, generando u
 
 ### <a name="use-validation-attributes-in-the-model-based-on-data-annotations"></a>Uso de atributos de validación en el modelo en función de las anotaciones de datos
 
-Las anotaciones de datos, como los atributos MaxLength o Required, se pueden usar para configurar las propiedades de campo de base de datos de EF Core, como se explica en detalle en la sección [Asignación de tabla](infrastructure-persistence-layer-implemenation-entity-framework-core.md#table-mapping), pero [ya no funcionan para la validación de entidades en EF Core](https://github.com/dotnet/efcore/issues/3680) (tampoco funciona el método <xref:System.ComponentModel.DataAnnotations.IValidatableObject.Validate%2A?displayProperty=nameWithType>), tal y como lo han hecho desde EF 4.x en .NET Framework.
+Las anotaciones de datos, como los atributos MaxLength o Required, se pueden usar para configurar las propiedades de campo de base de datos de EF Core, como se explica en detalle en la sección [Asignación de tabla](infrastructure-persistence-layer-implementation-entity-framework-core.md#table-mapping), pero [ya no funcionan para la validación de entidades en EF Core](https://github.com/dotnet/efcore/issues/3680) (tampoco funciona el método <xref:System.ComponentModel.DataAnnotations.IValidatableObject.Validate%2A?displayProperty=nameWithType>), tal y como lo han hecho desde EF 4.x en .NET Framework.
 
 Las anotaciones de datos y la interfaz <xref:System.ComponentModel.DataAnnotations.IValidatableObject> todavía se pueden usar para la validación del modelo durante el enlace de modelos, antes de la invocación de acciones del controlador como de costumbre, pero ese modelo está pensado para ser un ViewModel o DTO, y eso atañe a MVC o la API, no al modelo de dominio.
 

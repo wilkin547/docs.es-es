@@ -1,5 +1,6 @@
 ---
 title: Peticiones de vínculos
+description: Lea acerca de las peticiones de vínculo, que producen una comprobación de seguridad durante la compilación Just-in-Time (JIT) y examine solo el ensamblado de llamada inmediato del código.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,28 +15,28 @@ helpviewer_keywords:
 - caller security checks
 - link demands
 ms.assetid: a33fd5f9-2de9-4653-a4f0-d9df25082c4d
-ms.openlocfilehash: a0466eb5c24840c77a3b191f9b0e001f6b267fca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cd89c4ef27abb92fba567a1f3b490cb9d78fdddd
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181172"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86282065"
 ---
 # <a name="link-demands"></a>Peticiones de vínculos
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  Una petición de vínculo hace que se produzca una comprobación de seguridad durante la compilación Just-In-Time y comprueba solo el ensamblado de llamada inmediato del código. La vinculación se produce cuando el código se enlaza a una referencia de tipo, incluidas las referencias del puntero de función y las llamadas a métodos. Si el ensamblado de llamada no tiene permisos suficientes para vincularse al código, no se permitirá el vínculo y se producirá una excepción en tiempo de ejecución cuando se cargue y ejecute el código. Las peticiones de vínculo pueden reemplazarse en las clases que heredan de su código.  
   
- Tenga en cuenta que no se efectúa ningún recorrido de pila completo con este tipo de petición y que el código sigue siendo vulnerable a ataques. Por ejemplo, si un método del ensamblado A está protegido por una demanda de vínculo, se evalúa un llamador directo en el ensamblado B en función de los permisos del ensamblado B.  Sin embargo, la demanda de vínculo no evaluará un método en el ensamblado C si llama indirectamente al método en el ensamblado A mediante el método en el ensamblado B. La demanda de vínculo especifica solo los permisos que los llamadores directos en el ensamblado de llamada inmediata deben tener que vincularse al código. No especifica los permisos que deben tener todos los llamadores para ejecutar el código.  
+ Tenga en cuenta que no se efectúa ningún recorrido de pila completo con este tipo de petición y que el código sigue siendo vulnerable a ataques. Por ejemplo, si un método del ensamblado A está protegido por una petición de vínculo, se evalúa un llamador directo en el ensamblado B en función de los permisos del ensamblado B.  Sin embargo, la petición de vínculo no evaluará un método en el ensamblado C si llama indirectamente al método en el ensamblado A utilizando el método en el ensamblado B. La petición de vínculo especifica solo los permisos que los llamadores directos en el ensamblado de llamada inmediato deben tener para vincularse al código. No especifica los permisos que deben tener todos los llamadores para ejecutar el código.  
   
  Los modificadores de recorrido de pila <xref:System.Security.CodeAccessPermission.Assert%2A>, <xref:System.Security.CodeAccessPermission.Deny%2A> y <xref:System.Security.CodeAccessPermission.PermitOnly%2A> no afectan a la evaluación de las peticiones de vínculo.  Dado que las peticiones de vínculo no efectúan ningún recorrido de pila, los modificadores de recorrido de pila no tienen ningún efecto sobre las peticiones de vínculo.  
   
- Si se tiene acceso a un método protegido por una demanda de vínculo a través de [Reflection](../reflection-and-codedom/reflection.md), una demanda de vínculo comprueba el llamador inmediato del código al que se tiene acceso a través de la reflexión. Esto es válido tanto para la detección de métodos como para la invocación de métodos efectuados por reflexión. Por ejemplo, supongamos que <xref:System.Reflection.MethodInfo> el código usa la reflexión para devolver un objeto que representa un método protegido por una demanda de vínculo y, a continuación, pasa ese objeto **MethodInfo** a otro código que usa el objeto para invocar el método original. En este caso, la comprobación de la demanda del vínculo se produce dos veces: una para el código que devuelve el objeto **MethodInfo** y otra para el código que lo invoca.  
+ Si se tiene acceso a un método protegido por una petición de vínculo a través de la [reflexión](../reflection-and-codedom/reflection.md), una petición de vínculo comprueba el llamador inmediato del código al que se tiene acceso mediante reflexión. Esto es válido tanto para la detección de métodos como para la invocación de métodos efectuados por reflexión. Por ejemplo, supongamos que el código usa la reflexión para devolver un <xref:System.Reflection.MethodInfo> objeto que representa un método protegido por una petición de vínculo y, a continuación, pasa ese objeto **MethodInfo** a otro código que usa el objeto para invocar el método original. En este caso, la comprobación de la petición de vínculo se produce dos veces: una vez para el código que devuelve el objeto **MethodInfo** y otra para el código que lo invoca.  
   
 > [!NOTE]
 > Una petición de vínculo efectuada en un constructor de clases estáticas no protege el constructor, puesto que el sistema llama a los constructores estáticos, fuera de la ruta de acceso de ejecución del código de la aplicación. Como resultado, al aplicar una petición de vínculo a toda una clase, no puede proteger el acceso a un constructor estático, aunque proteja el resto de la clase.  
   
- El siguiente fragmento de código especifica de manera declarativa que cualquier código vinculado al método `ReadData` debe tener el permiso `CustomPermission`. Este permiso es un permiso personalizado hipotético y no existe en .NET Framework. La demanda se realiza pasando una marca **SecurityAction.LinkDemand** al `CustomPermissionAttribute`archivo .  
+ El siguiente fragmento de código especifica de manera declarativa que cualquier código vinculado al método `ReadData` debe tener el permiso `CustomPermission`. Este permiso es un permiso personalizado hipotético y no existe en .NET Framework. La petición se realiza pasando una marca **SecurityAction. LinkDemand** a `CustomPermissionAttribute` .  
   
 ```vb  
 <CustomPermissionAttribute(SecurityAction.LinkDemand)> _  
@@ -52,7 +53,7 @@ public static string ReadData()
 }  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Atributos](../../standard/attributes/index.md)
-- [Seguridad de acceso al código](code-access-security.md)
+- [Seguridad de acceso del código](code-access-security.md)

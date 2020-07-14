@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo deconstruir tuplas y otros tipos.
 ms.technology: csharp-fundamentals
 ms.date: 11/23/2017
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: d238f6f520653befb1464377094b93e34dde0eca
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 8defd75a7cdff3490d2b0a6097ec2a898576e113
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463124"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174171"
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>Deconstruir tuplas y otros tipos
 
@@ -106,4 +106,4 @@ En el ejemplo siguiente se definen dos métodos de extensión `Deconstruct` para
 ## <a name="see-also"></a>Vea también
 
 - [Descartes](discards.md)
-- [Tuplas](tuples.md)
+- [Tipos de tupla](language-reference/builtin-types/value-tuples.md)

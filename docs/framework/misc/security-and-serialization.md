@@ -1,5 +1,6 @@
 ---
 title: Seguridad y serialización
+description: Lea acerca de la seguridad y la serialización. Use SecurityPermission con la marca SerializationFormatter especificada para ver o modificar los datos de instancia de objeto.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - secure coding, serialization
 - security [.NET Framework], serialization
 ms.assetid: b921bc94-bd3a-4c91-9ede-2c8d4f78ea9a
-ms.openlocfilehash: 634388e3920e0b9dbee85aa3ea555471cee604ca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 79952ceee4c8b771aaadd4fc97a547bc65136770
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181116"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281269"
 ---
 # <a name="security-and-serialization"></a>Seguridad y serialización
 Como la serialización puede permitir que otro código vea o modifique datos de instancias de objeto que de otra forma podrían estar inaccesibles, se requiere un permiso especial del código que realiza la serialización: <xref:System.Security.Permissions.SecurityPermission> con la marca <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> especificada. De acuerdo con la directiva predeterminada, no se concede este permiso al código descargado de Internet o de la intranet; únicamente el código del equipo local tiene garantizado este permiso.  

@@ -2,12 +2,12 @@
 title: Uso de bases de datos NoSQL como una infraestructura de persistencia
 description: Obtenga más información sobre el uso de bases de datos NoSql en general, y Azure Cosmos DB en concreto, como una opción para implementar la persistencia.
 ms.date: 01/30/2020
-ms.openlocfilehash: 9c51e48d82aa0cf0234275f09df43f7a654f0ca8
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: a478809895b0c20824f08f20558f2d47e10223d0
+ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988445"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100813"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>Uso de bases de datos NoSQL como una infraestructura de persistencia
 
@@ -342,5 +342,5 @@ services:
   <https://docs.microsoft.com/azure/cosmos-db/mongodb-mongochef>
 
 >[!div class="step-by-step"]
->[Anterior](infrastructure-persistence-layer-implemenation-entity-framework-core.md)
+>[Anterior](infrastructure-persistence-layer-implementation-entity-framework-core.md)
 >[Siguiente](microservice-application-layer-web-api-design.md)

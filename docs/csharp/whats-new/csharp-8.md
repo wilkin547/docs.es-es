@@ -2,12 +2,12 @@
 title: 'Novedades de C# 8.0: Guía de C#'
 description: Obtenga información general sobre las nuevas características disponibles en C# 8.0.
 ms.date: 04/07/2020
-ms.openlocfilehash: 27c2d7e2d6f0e665e7abe4fdcfb94c140224cc89
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: b4a9a1be0b0b60b0abda0b1f031dc648d831b46a
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895435"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174736"
 ---
 # <a name="whats-new-in-c-80"></a>Novedades de C# 8.0
 
@@ -194,7 +194,7 @@ La coincidencia de patrones crea una sintaxis concisa para expresar este algorit
 
 ### <a name="tuple-patterns"></a>Patrones de tupla
 
-Algunos algoritmos dependen de varias entradas. Los **patrones de tupla** permiten hacer cambios en función de varios valores, expresados como una [tupla](../tuples.md).  El código siguiente muestra una expresión switch del juego *piedra, papel, tijeras*:
+Algunos algoritmos dependen de varias entradas. Los **patrones de tupla** permiten hacer cambios en función de varios valores, expresados como una [tupla](../language-reference/builtin-types/value-tuples.md).  El código siguiente muestra una expresión switch del juego *piedra, papel, tijeras*:
 
 ```csharp
 public static string RockPaperScissors(string first, string second)
@@ -322,7 +322,7 @@ En ambos casos, el compilador genera la llamada a `Dispose()`. El compilador gen
 
 ## <a name="static-local-functions"></a>Funciones locales estáticas
 
-Ahora puede agregar el modificador `static` a funciones locales para asegurarse de que la función local no captura (hace referencia a) las variables del ámbito de inclusión. Si lo hace, se generará un error `CS8421` en el que se indicará que una función local estática no puede contener una referencia a \<variable>.
+Ahora puede agregar el modificador `static` a funciones locales para asegurarse de que la función local no captura (hace referencia a) las variables del ámbito de inclusión. Si lo hace, se genera un error que dice que `CS8421`una función local estática no puede contener una referencia a \<variable>.
 
 Observe el código siguiente. La función local `LocalFunction` accede a la variable `y`, declarada en el ámbito de inclusión (el método `M`). Por lo tanto, `LocalFunction` no se puede declarar con el modificador `static`:
 

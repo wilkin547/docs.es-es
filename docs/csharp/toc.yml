@@ -1,24 +1,24 @@
-- name: 'Documentación de C#'
+- name: Documentación de C#
   href: index.yml
 - name: Primeros pasos
   items:
     - name: Información general
       displayName: get started
       href: getting-started/index.md
-    - name: 'Introducción al lenguaje C# y .NET Framework'
+    - name: Introducción al lenguaje C# y .NET Framework
       href: getting-started/introduction-to-the-csharp-language-and-the-net-framework.md
 - name: Tutoriales
   items:
     - name: Información general
       displayName: tutorials
       href: tutorials/index.md
-    - name: 'Introducción a la programación con C#'
+    - name: Introducción a la programación con C#
       items:
         - name: Elección de la primera lección
           href: tutorials/intro-to-csharp/index.md
         - name: Hola a todos
           href: tutorials/intro-to-csharp/hello-world.yml
-        - name: 'Números en C#'
+        - name: Números en C#
           href: tutorials/intro-to-csharp/numbers-in-csharp.yml
         - name: Bifurcaciones y bucles
           href: tutorials/intro-to-csharp/branches-and-loops.yml
@@ -28,7 +28,7 @@
           items:
             - name: Configuración del entorno
               href: tutorials/intro-to-csharp/local-environment.md
-            - name: 'Números en C#'
+            - name: Números en C#
               href: tutorials/intro-to-csharp/numbers-in-csharp-local.md
             - name: Bifurcaciones y bucles
               href: tutorials/intro-to-csharp/branches-and-loops-local.md
@@ -36,7 +36,7 @@
               href: tutorials/intro-to-csharp/arrays-and-collections.md
             - name: Introducción a las clases
               href: tutorials/intro-to-csharp/introduction-to-classes.md
-    - name: 'Exploración de C# 6'
+    - name: Exploración de C# 6
       href: tutorials/exploration/csharp-6.yml
     - name: 'Exploración de la interpolación de cadenas: tutorial interactivo'
       href: tutorials/exploration/interpolated-strings.yml
@@ -62,13 +62,13 @@
       href: tutorials/console-teleprompter.md
     - name: Cliente REST
       href: tutorials/console-webapiclient.md
-    - name: 'Herencia en C# y .NET'
+    - name: Herencia en C# y .NET
       href: tutorials/inheritance.md
     - name: Uso de LINQ
       href: tutorials/working-with-linq.md
     - name: Uso de atributos
       href: tutorials/attributes.md
-- name: 'Paseo por C#'
+- name: Paseo por C#
   items:
     - name: Introducción
       href: tour-of-csharp/index.md
@@ -90,32 +90,32 @@
       href: tour-of-csharp/delegates.md
     - name: Atributos
       href: tour-of-csharp/attributes.md
-- name: 'Novedades de C#'
+- name: Novedades de C#
   items:
-    - name: 'C# 8.0'
+    - name: C# 8.0
       displayName: what's new
       href: whats-new/csharp-8.md
-    - name: 'C# 7.3'
+    - name: C# 7.3
       href: whats-new/csharp-7-3.md
-    - name: 'C# 7.2'
+    - name: C# 7.2
       href: whats-new/csharp-7-2.md
-    - name: 'C# 7.1'
+    - name: C# 7.1
       href: whats-new/csharp-7-1.md
-    - name: 'C# 7.0'
+    - name: C# 7.0
       href: whats-new/csharp-7.md
-    - name: 'C# 6'
+    - name: C# 6
       href: whats-new/csharp-6.md
     - name: Cambios importantes en el compilador
       href: whats-new/breaking-changes.md
-    - name: 'Historial de versiones de C#'
+    - name: Historial de versiones de C#
       href: whats-new/csharp-version-history.md
     - name: Relaciones entre el lenguaje y el marco
       href: whats-new/relationships-between-language-and-library.md
     - name: Consideraciones sobre versiones y actualizaciones
       href: whats-new/version-update-considerations.md
-- name: 'Conceptos de C#'
+- name: Conceptos de C#
   items:
-    - name: 'Sistema de tipos de C#'
+    - name: Sistema de tipos de C#
       href: programming-guide/types/index.md
     - name: Tipos de referencia que aceptan valores NULL
       href: nullable-references.md
@@ -127,8 +127,6 @@
       href: basic-types.md
     - name: Clases
       href: programming-guide/classes-and-structs/classes.md
-    - name: Tuplas
-      href: tuples.md
     - name: Deconstruir tuplas y otros tipos
       href: deconstruct.md
     - name: Interfaces
@@ -171,9 +169,9 @@
           href: linq/index.md
         - name: Conceptos básicos de las expresiones de consultas
           href: linq/query-expression-basics.md
-        - name: 'LINQ en C#'
+        - name: LINQ en C#
           href: linq/linq-in-csharp.md
-        - name: 'Escribir consultas LINQ en C#'
+        - name: Escribir consultas LINQ en C#
           href: linq/write-linq-queries.md
         - name: Consultar una colección de objetos
           href: linq/query-a-collection-of-objects.md
@@ -237,7 +235,7 @@
       href: codedoc.md
     - name: Control de versiones
       href: versioning.md
-- name: 'Artículos de procedimientos de C#'
+- name: Artículos de procedimientos de C#
   items:
     - name: Índice de artículos
       displayName: how to's
@@ -282,22 +280,22 @@
       items:
         - name: Crear el primer analizador y la corrección de código
           href: roslyn-sdk/tutorials/how-to-write-csharp-analyzer-code-fix.md
-- name: 'Guía de programación de C#'
+- name: Guía de programación de C#
   items:
     - name: Información general
       displayName: programming guide
       href: programming-guide/index.md
-    - name: 'Dentro de un programa de C#'
+    - name: Dentro de un programa de C#
       items:
-        - name: 'Qué hay dentro de un programa de C#'
+        - name: Qué hay dentro de un programa de C#
           href: programming-guide/inside-a-program/index.md
         - name: 'Hello World, su primer programa'
           href: programming-guide/inside-a-program/hello-world-your-first-program.md
-        - name: 'Estructura general de un programa de C#'
+        - name: Estructura general de un programa de C#
           href: programming-guide/inside-a-program/general-structure-of-a-csharp-program.md
         - name: Nombres de identificador
           href: programming-guide/inside-a-program/identifier-names.md
-        - name: 'Convenciones de código de C#'
+        - name: Convenciones de código de C#
           href: programming-guide/inside-a-program/coding-conventions.md
     - name: Main() y argumentos de línea de comandos
       items:
@@ -402,7 +400,7 @@
             - name: Información general
               displayName: LINQ overview
               href: programming-guide/concepts/linq/index.md
-            - name: 'Introducción a LINQ en C#'
+            - name: Introducción a LINQ en C#
               items:
                 - name: Introducción a las consultas LINQ
                   href: programming-guide/concepts/linq/introduction-to-linq-queries.md
@@ -416,7 +414,7 @@
                   href: programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md
                 - name: Sintaxis de consulta y sintaxis de método en LINQ
                   href: programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md
-                - name: 'Características de C# compatibles con LINQ'
+                - name: Características de C# compatibles con LINQ
                   href: programming-guide/concepts/linq/features-that-support-linq.md
                 - name: 'Tutorial: Escribir consultas en C# (LINQ)'
                   href: programming-guide/concepts/linq/walkthrough-writing-queries-linq.md
@@ -544,7 +542,7 @@
                       items:
                         - name: Construcción funcional (LINQ to XML)
                           href: programming-guide/concepts/linq/functional-construction-linq-to-xml.md
-                        - name: 'Crear árboles XML en C# (LINQ to XML)'
+                        - name: Crear árboles XML en C# (LINQ to XML)
                           href: programming-guide/concepts/linq/creating-xml-trees-linq-to-xml-2.md
                         - name: Analizar XML
                           items:
@@ -574,7 +572,7 @@
                           href: programming-guide/concepts/linq/how-to-create-a-document-with-namespaces-linq-to-xml.md
                         - name: 'Procedimiento para: Controlar prefijos de espacio de nombres (LINQ to XML)'
                           href: programming-guide/concepts/linq/how-to-control-namespace-prefixes-linq-to-xml.md
-                        - name: 'Ámbito del espacio de nombres predeterminado de C#'
+                        - name: Ámbito del espacio de nombres predeterminado de C#
                           href: programming-guide/concepts/linq/scope-of-default-namespaces.md
                         - name: Procedimiento para escribir consultas de XML en espacios de nombres
                           href: programming-guide/concepts/linq/how-to-write-queries-on-xml-in-namespaces.md
@@ -860,7 +858,7 @@
           href: programming-guide/concepts/object-oriented-programming.md
         - name: Reflexión
           href: programming-guide/concepts/reflection.md
-        - name: 'Serialización (C#)'
+        - name: Serialización (C#)
           items:
             - name: Información general
               displayName: serialization
@@ -954,7 +952,7 @@
               href: programming-guide/classes-and-structs/constants.md
             - name: Definición de propiedades abstractas
               href: programming-guide/classes-and-structs/how-to-define-abstract-properties.md
-            - name: 'Definición de constantes en C#'
+            - name: Definición de constantes en C#
               href: programming-guide/classes-and-structs/how-to-define-constants.md
         - name: Propiedades
           items:
@@ -1054,7 +1052,7 @@
           href: programming-guide/delegates/using-delegates.md
         - name: Delegados con métodos con nombre y Métodos anónimos
           href: programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md
-        - name: 'Procedimiento para combinar delegados (delegados de multidifusión) (Guía de programación de C#)'
+        - name: Procedimiento para combinar delegados (delegados de multidifusión) (Guía de programación de C#)
           href: programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md
         - name: 'Procedimiento para declarar un delegado, crear instancias del mismo y usarlo'
           href: programming-guide/delegates/how-to-declare-instantiate-and-use-a-delegate.md
@@ -1128,7 +1126,7 @@
           href: programming-guide/generics/generics-and-arrays.md
         - name: Delegados genéricos
           href: programming-guide/generics/generic-delegates.md
-        - name: 'Diferencias entre plantillas de C++ y tipos genéricos de C#'
+        - name: Diferencias entre plantillas de C++ y tipos genéricos de C#
           href: programming-guide/generics/differences-between-cpp-templates-and-csharp-generics.md
         - name: Genéricos en el tiempo de ejecución
           href: programming-guide/generics/generics-in-the-run-time.md
@@ -1264,7 +1262,7 @@
           href: programming-guide/interop/index.md
         - name: Información general sobre interoperabilidad
           href: programming-guide/interop/interoperability-overview.md
-        - name: 'Procedimiento para acceder a objetos de interoperabilidad de Office mediante características de C#'
+        - name: Procedimiento para acceder a objetos de interoperabilidad de Office mediante características de C#
           href: programming-guide/interop/how-to-access-office-onterop-objects.md
         - name: Procedimiento para usar propiedades indizadas en la programación de interoperabilidad COM
           href: programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md
@@ -1281,7 +1279,7 @@
       href: language-reference/index.md
     - name: Configurar la versión del lenguaje
       href: language-reference/configure-language-version.md
-    - name: 'Palabras clave de C#'
+    - name: Palabras clave de C#
       items:
         - name: Información general
           displayName: keywords
@@ -1313,6 +1311,9 @@
                 - name: Tipos de estructura
                   href: language-reference/builtin-types/struct.md
                   displayName: 'struct type, readonly struct, ref struct, readonly ref struct'
+                - name: Tipos de tupla
+                  href: language-reference/builtin-types/value-tuples.md
+                  displayName: 'value tuples, ValueTuple'
                 - name: Tipos de valor que aceptan valores NULL
                   href: language-reference/builtin-types/nullable-value-types.md
                   displayName: '? token, ? symbol'
@@ -1556,7 +1557,7 @@
               href: language-reference/keywords/by.md
             - name: in
               href: language-reference/keywords/in.md
-    - name: 'Operadores y expresiones de C#'
+    - name: Operadores y expresiones de C#
       items:
         - name: Información general
           href: language-reference/operators/index.md
@@ -1639,7 +1640,7 @@
           href: language-reference/operators/true-false-operators.md
         - name: Sobrecarga de operadores
           href: language-reference/operators/operator-overloading.md
-    - name: 'Caracteres especiales de C#'
+    - name: Caracteres especiales de C#
       items:
         - name: Información general
           displayName: special characters
@@ -1662,7 +1663,7 @@
         - name: Análisis estático que admite un valor NULL
           displayName: 'AllowNull, DisallowNull, MaybeNull, NotNull, MaybeNullWhen, NotNullWhen, NotNullIfNotNull, DoesNotReturn, DoesNotReturnIf'
           href: language-reference/attributes/nullable-analysis.md
-    - name: 'Directivas de preprocesador de C#'
+    - name: Directivas de preprocesador de C#
       items:
         - name: Información general
           displayName: preprocessor directives
@@ -1695,7 +1696,7 @@
           href: language-reference/preprocessor-directives/preprocessor-pragma-warning.md
         - name: '#pragma checksum'
           href: language-reference/preprocessor-directives/preprocessor-pragma-checksum.md
-    - name: 'Opciones del compilador de C#'
+    - name: Opciones del compilador de C#
       items:
         - name: Información general
           displayName: compiler options
@@ -1826,11 +1827,11 @@
               href: language-reference/compiler-options/win32manifest-compiler-option.md
             - name: '-win32res'
               href: language-reference/compiler-options/win32res-compiler-option.md
-    - name: 'Errores del compilador de C#'
+    - name: Errores del compilador de C#
       href: language-reference/compiler-messages/index.md
-    - name: 'Borrador de especificación de C# 6.0'
+    - name: Borrador de especificación de C# 6.0
       href: language-reference/specification/
-    - name: 'Propuestas de C# 7.0 - 8.0'
+    - name: Propuestas de C# 7.0 - 8.0
       href: language-reference/proposals/
 - name: Tutoriales
   href: walkthroughs.md

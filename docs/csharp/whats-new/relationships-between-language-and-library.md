@@ -2,12 +2,12 @@
 title: Relación entre características de lenguaje y tipos de biblioteca | Microsoft Docs
 description: Las características de lenguaje suelen basarse en tipos de biblioteca para la implementación. Entienda esa relación.
 ms.date: 07/20/2017
-ms.openlocfilehash: dfae7972af0a251a92700d7d33bd6f971eb1870e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: abf15385da3756c35db2df822cc2e11e9edf5758
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "61706031"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174106"
 ---
 # <a name="relationships-between-language-features-and-library-types"></a>Relaciones entre características de lenguaje y tipos de biblioteca
 
@@ -21,7 +21,7 @@ Esta dependencia de la funcionalidad de la biblioteca estándar ha formado parte
 
 Esa primera versión era simple: el compilador y la biblioteca estándar se distribuían juntos y solo había una versión de cada uno.
 
-Las versiones posteriores de C# a veces han agregado nuevos tipos o miembros a las dependencias. Los ejemplos incluyen: <xref:System.Runtime.CompilerServices.INotifyCompletion>, <xref:System.Runtime.CompilerServices.CallerFilePathAttribute> y <xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>. C# 7.0 continúa esta tendencia al agregar una dependencia a <xref:System.ValueTuple> para implementar la característica de lenguaje [tuplas](../tuples.md).
+Las versiones posteriores de C# a veces han agregado nuevos tipos o miembros a las dependencias. Los ejemplos incluyen: <xref:System.Runtime.CompilerServices.INotifyCompletion>, <xref:System.Runtime.CompilerServices.CallerFilePathAttribute> y <xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>. C# 7.0 continúa esta tendencia al agregar una dependencia a <xref:System.ValueTuple> para implementar la característica de lenguaje [tuplas](../language-reference/builtin-types/value-tuples.md).
 
 El equipo de diseño del lenguaje se esfuerza por minimizar el área expuesta de los tipos y miembros necesarios en una biblioteca estándar compatible. Ese objetivo está equilibrado con un diseño limpio donde las nuevas características de la biblioteca se han incorporado sin problemas al lenguaje. Habrá nuevas características en versiones futuras de C# que exijan nuevos tipos y miembros en una biblioteca estándar. Es importante entender cómo administrar esas dependencias en el trabajo.
 

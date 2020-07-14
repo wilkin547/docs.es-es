@@ -1,5 +1,6 @@
 ---
 title: Consideraciones de seguridad y de interacción remota
+description: Obtenga información sobre las consideraciones de seguridad relativas a la comunicación remota, que le permite configurar la llamada transparente entre dominios de aplicación, procesos o equipos.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - code security, remoting
@@ -7,19 +8,19 @@ helpviewer_keywords:
 - security [.NET Framework], remoting
 - secure coding, remoting
 ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
-ms.openlocfilehash: 7a56c9894da88382f40dcd475e89776a83a59322
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 029f9863ebed94805675b629be7eb10963a7b689
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215782"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281399"
 ---
 # <a name="security-and-remoting-considerations"></a>Consideraciones de seguridad y de interacción remota
 La comunicación remota permite configurar llamadas transparentes entre dominios de aplicación, procesos o equipos. Sin embargo, el recorrido de la pila de seguridad de acceso del código no puede cruzar los límites de los procesos o equipos (se aplica entre dominios de aplicación del mismo proceso).  
   
  Las clases que se pueden usar de forma remota (derivadas de una clase <xref:System.MarshalByRefObject>) deben asumir la responsabilidad de la seguridad. El código debe usarse solo en entornos cerrados donde el código llamador puede ser de confianza de forma implícita, o las llamadas remotas deben diseñarse de modo que no sometan el código protegido a entradas externas que pudieran usarlo de forma malintencionada.  
   
- Por lo general, nunca debe exponer métodos, propiedades o eventos protegidos por [LinkDemand](link-demands.md) declarativo y <xref:System.Security.Permissions.SecurityAction.InheritanceDemand> comprobaciones de seguridad. Con la comunicación remota, estas comprobaciones no se fuerzan. Otras comprobaciones de seguridad, como <xref:System.Security.Permissions.SecurityAction.Demand>, [Assert](using-the-assert-method.md), etc., funcionan entre dominios de aplicación dentro de un proceso, pero no funcionan en escenarios entre procesos o entre equipos.  
+ Por lo general, nunca debe exponer métodos, propiedades o eventos que estén protegidos por las comprobaciones declarativas [LinkDemand](link-demands.md) y <xref:System.Security.Permissions.SecurityAction.InheritanceDemand> Security. Con la comunicación remota, estas comprobaciones no se fuerzan. Otras comprobaciones de seguridad, como <xref:System.Security.Permissions.SecurityAction.Demand> , [Assert](using-the-assert-method.md), etc., funcionan entre dominios de aplicación dentro de un proceso, pero no funcionan en escenarios entre procesos o entre equipos.  
   
 ## <a name="protected-objects"></a>Objetos protegidos  
  Algunos objetos contienen un estado de seguridad en sí mismos. Estos objetos no se deben pasar a código que no sea de confianza, porque este adquiriría una autorización de seguridad más allá de sus propios permisos.  
