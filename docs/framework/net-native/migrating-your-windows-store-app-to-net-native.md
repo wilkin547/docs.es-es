@@ -2,12 +2,12 @@
 title: Migrar la aplicación de la Tienda Windows a .NET Native
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-ms.openlocfilehash: 987669fc51eeaf7e3bdef3e91a2f1ce23164a055
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5e5c655d0e8d6f1730f27d35525692e110b3c80c
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "81389702"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309201"
 ---
 # <a name="migrate-your-windows-store-app-to-net-native"></a>Migrar la aplicación de la tienda Windows a .NET Native
 
@@ -58,7 +58,7 @@ El compilador .NET Native también puede controlar tipos genéricos usados comú
 > [!NOTE]
 > Debe probar exhaustivamente todas las rutas de código dinámicas al migrar la aplicación a .NET Native.
 
-La configuración predeterminada para .NET Native es suficiente para la mayoría de los desarrolladores, pero algunos desarrolladores pueden querer ajustar sus configuraciones mediante un archivo de directivas en tiempo de ejecución (. Rd. xml). Además, en algunos casos, el compilador .NET Native no puede determinar qué metadatos deben estar disponibles para la reflexión y se basa en sugerencias, especialmente en los casos siguientes:
+La configuración predeterminada para .NET Native es suficiente para la mayoría de los desarrolladores, pero algunos desarrolladores pueden querer ajustar sus configuraciones mediante un archivo de directivas en tiempo de ejecución (.rd.xml). Además, en algunos casos, el compilador .NET Native no puede determinar qué metadatos deben estar disponibles para la reflexión y se basa en sugerencias, especialmente en los casos siguientes:
 
 - Algunas construcciones como <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> y <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> no se pueden determinar estáticamente.
 
@@ -79,7 +79,7 @@ En .NET Native:
 
 - No se admite la reflexión privada sobre los tipos y miembros de la biblioteca de clases de .NET Framework. Sin embargo, puede reflejar sobre sus propios tipos y miembros privados, así como sobre los tipos y miembros de bibliotecas de terceros.
 
-- La propiedad <xref:System.Reflection.ParameterInfo.HasDefaultValue%2A?displayProperty=nameWithType> devuelve correctamente `false` para un objeto <xref:System.Reflection.ParameterInfo> que representa un valor devuelto. En .NET para aplicaciones de la Tienda Windows, devuelve `true`. El lenguaje intermedio (IL) no admite esto directamente y se deja la interpretación al lenguaje.
+- La propiedad <xref:System.Reflection.ParameterInfo.HasDefaultValue%2A?displayProperty=nameWithType> devuelve correctamente `false` para un objeto <xref:System.Reflection.ParameterInfo> que representa un valor devuelto. En .NET para aplicaciones de la Tienda Windows, devuelve `true`. El lenguaje intermedio (IL) no admite esto directamente y se deja la interpretación en el lenguaje.
 
 - Los miembros públicos de las estructuras <xref:System.RuntimeFieldHandle> y <xref:System.RuntimeMethodHandle> no son compatibles. Estos tipos solo son compatibles con LINQ, árboles de expresión e inicialización de matrices estáticas.
 
@@ -278,7 +278,7 @@ Otras características de interoperabilidad no compatibles incluyen:
 
 - Delegados
 
-- Cadenas (Unicode, Ansi y HSTRING)
+- Cadenas (Unicode, ANSI y HSTRING)
 
 - Structs (`byref` y `byval`)
 

@@ -2,12 +2,12 @@
 title: Seguridad de Azure para aplicaciones nativas en la nube
 description: Diseño de aplicaciones .NET nativas en la nube para Azure | Seguridad de Azure para aplicaciones nativas en la nube
 ms.date: 05/13/2020
-ms.openlocfilehash: a39b64477eb9e896c6603e5609ede653bfee1e07
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 223d9e77aca611697958981bf2ee3a630fb9fffb
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614258"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374499"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>Seguridad de Azure para aplicaciones nativas en la nube
 
@@ -66,7 +66,7 @@ Este es un ejemplo perfecto de un destino de valor aparentemente bajo que se pue
 
 .NET Framework ya es un marco bastante seguro. Evita algunos de los problemas de código no administrado, como recorrer los extremos de las matrices. El trabajo se realiza activamente para corregir las carencias de seguridad a medida que se detectan. Hay incluso un [programa de recompensa de errores](https://www.microsoft.com/msrc/bounty) que paga a los investigadores a encontrar problemas en el marco y notificarlos en lugar de aprovecharlos.
 
-Hay muchas maneras de hacer que el código .NET sea más seguro. Las instrucciones siguientes, como el artículo [instrucciones de codificación segura para .net](https://docs.microsoft.com/dotnet/standard/security/secure-coding-guidelines) , son un paso razonable para asegurarse de que el código es seguro desde el principio. [OWASP Top 10](https://owasp.org/www-project-top-ten/) es otra guía valiosa para compilar código seguro.
+Hay muchas maneras de hacer que el código .NET sea más seguro. Las instrucciones siguientes, como el artículo [instrucciones de codificación segura para .net](../../standard/security/secure-coding-guidelines.md) , son un paso razonable para asegurarse de que el código es seguro desde el principio. [OWASP Top 10](https://owasp.org/www-project-top-ten/) es otra guía valiosa para compilar código seguro.
 
 El proceso de compilación es un buen lugar para colocar herramientas de detección para detectar problemas en el código fuente antes de que se pongan en producción. La mayoría de los proyectos tiene dependencias en otros paquetes. Una herramienta que puede buscar paquetes obsoletos detectará problemas en una compilación nocturna. Incluso al crear imágenes de Docker, es útil comprobar y asegurarse de que la imagen base no tiene vulnerabilidades conocidas. Otro aspecto que hay que comprobar es que nadie ha protegido accidentalmente las credenciales.
 

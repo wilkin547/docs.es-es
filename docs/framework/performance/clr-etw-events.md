@@ -1,17 +1,18 @@
 ---
 title: Eventos ETW de CLR
+description: 'Vea los artículos acerca de los eventos de seguimiento de eventos de Common Language Runtime (CLR) para Windows (ETW). Hay dos proveedores de eventos: proveedor en tiempo de ejecución y proveedor de detención.'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR ETW events
 - ETW, common language runtime
 - ETW, CLR events
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
-ms.openlocfilehash: e879dcf385acbc522c0a3573cfa374550ea23333
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 22a2f027462d67d5a933972a7420c5f0e38353e5
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504127"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309838"
 ---
 # <a name="clr-etw-events"></a>Eventos ETW de CLR
 Los temas de esta sección describen los eventos de seguimiento de eventos para Windows (ETW). Cada evento tiene una palabra clave y un nivel asociados que se describen en el tema [Palabras clave y niveles ETW de CLR](clr-etw-keywords-and-levels.md). CLR tiene dos proveedores para los eventos:  

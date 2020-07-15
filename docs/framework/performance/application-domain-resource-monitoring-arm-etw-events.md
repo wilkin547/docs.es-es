@@ -1,16 +1,17 @@
 ---
 title: Eventos ETW de supervisión de recursos de dominio de aplicación (ARM)
+description: Lea acerca de los eventos ETW de supervisión de recursos del dominio de aplicación (ARM) en .NET, como ThreadCreated (, AppDomainMemAllocated, AppDomainMemSurvived, etc.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ETW, application domain monitoring events
 - application domain monitoring events [.NET Framework]
 ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
-ms.openlocfilehash: 0e453b2bafffd9e07a1bdddd97282c5b97f5483d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d118b3196b019a804df5399464cb86f7492c61b0
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716218"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309786"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>Eventos ETW de supervisión de recursos de dominio de aplicación (ARM)
 
@@ -22,20 +23,20 @@ Este evento también se genera con el proveedor de informe detallado como `Threa
 
 En la tabla siguiente se muestra la palabra clave y el nivel. Para obtener más información, vea [palabras clave y niveles ETW de CLR](clr-etw-keywords-and-levels.md).
 
-|Palabra clave para generar el evento|Level|
+|Palabra clave para generar el evento|Nivel|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0 x 800)|Informativo (4)|
 |`ThreadingKeyword` (0x10000)|Informativo (4)|
 
 En la siguiente tabla se muestra la información del evento.
 
-|Event|Id. de evento|Se genera cuando|
+|Evento|Id. de evento|Se genera cuando|
 |-----------|--------------|-----------------|
 |`ThreadCreated`|85|Se crea un subproceso para el dominio de aplicación.|
 
 En la siguiente tabla, se muestran los datos del evento:
 
-|Nombre de campo|Tipo de datos|Descripción|
+|Nombre del campo|Tipo de datos|Descripción|
 |----------------|---------------|-----------------|
 |ThreadID|win:UInt64|Se creó el identificador del subproceso.|
 |AppDomainID|win:UInt64|Identificador del dominio de la aplicación para el que se notifica la actividad de subproceso.|
@@ -48,19 +49,19 @@ En la siguiente tabla, se muestran los datos del evento:
 
 En la tabla siguiente se muestra la palabra clave y el nivel.
 
-|Palabra clave para generar el evento|Level|
+|Palabra clave para generar el evento|Nivel|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0 x 800)|Informativo (4)|
 
 En la siguiente tabla se muestra la información del evento.
 
-|Event|Id. de evento|Se genera cuando|
+|Evento|Id. de evento|Se genera cuando|
 |-----------|--------------|-----------------|
 |`AppDomainMemAllocated`|83|Cada vez que se asignan 4 MB de memoria (aproximadamente) en el dominio de aplicación.|
 
 En la siguiente tabla, se muestran los datos del evento:
 
-|Nombre de campo|Tipo de datos|Descripción|
+|Nombre del campo|Tipo de datos|Descripción|
 |----------------|---------------|-----------------|
 |AppDomainID|win:UInt64|Identificador del dominio de la aplicación para el que se notifica el uso de recursos.|
 |Allocated|win:UInt64|Número total de bytes asignado en este dominio de aplicación desde que se creó el dominio de aplicación (sin restar la cantidad de memoria liberada).|
@@ -70,19 +71,19 @@ En la siguiente tabla, se muestran los datos del evento:
 
 En la tabla siguiente se muestra la palabra clave y el nivel.
 
-|Palabra clave para generar el evento|Level|
+|Palabra clave para generar el evento|Nivel|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0 x 800)|Informativo (4)|
 
 En la siguiente tabla se muestra la información del evento.
 
-|Event|Id. de evento|Se genera cuando|
+|Evento|Id. de evento|Se genera cuando|
 |-----------|--------------|-----------------|
 |`AppDomainMemSurvived`|84|Fnalizadas todas las recolecciones de elementos no utilizados.|
 
 En la siguiente tabla, se muestran los datos del evento:
 
-|Nombre de campo|Tipo de datos|Descripción|
+|Nombre del campo|Tipo de datos|Descripción|
 |----------------|---------------|-----------------|
 |AppDomainID|win:UInt64|Identificador del dominio para el que recurso que se notifica el uso de recursos.|
 |Survived|win:UInt64|Número de bytes que sobrevivieron después de la última recolección de elementos no utilizados que se sabe que están contenidos en este dominio de aplicación. Este número es preciso y completo después de una recolección completa, pero puede estar incompleto después de una recolección efímera.|
@@ -93,22 +94,22 @@ En la siguiente tabla, se muestran los datos del evento:
 
 En la tabla siguiente se muestra la palabra clave y el nivel.
 
-|Palabra clave para generar el evento|Level|
+|Palabra clave para generar el evento|Nivel|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0 x 800)|Informativo (4)|
 |`ThreadingKeyword` (0x10000)|Informativo (4)|
 
 En la siguiente tabla se muestra la información del evento.
 
-|Event|Id. de evento|Se genera cuando|
+|Evento|Id. de evento|Se genera cuando|
 |-----------|--------------|-----------------|
 |`ThreadAppDomainEnter`|87|Un subproceso entra en un dominio de aplicación.|
 
 En la siguiente tabla, se muestran los datos del evento:
 
-|Nombre de campo|Tipo de datos|Descripción|
+|Nombre del campo|Tipo de datos|Descripción|
 |----------------|---------------|-----------------|
-|ThreadID|win:UInt64|Identifiador del subproceso.|
+|ThreadID|win:UInt64|Identificador de subproceso.|
 |AppDomainID|win:UInt64|Identificador del dominio de la aplicación.|
 |ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|
 
@@ -116,25 +117,25 @@ En la siguiente tabla, se muestran los datos del evento:
 
 En la tabla siguiente se muestra la palabra clave y el nivel.
 
-|Palabra clave para generar el evento|Level|
+|Palabra clave para generar el evento|Nivel|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0 x 800)|Informativo (4)|
 |`ThreadingKeyword` (0x10000)|Informativo (4)|
 
 En la siguiente tabla se muestra la información del evento.
 
-|Event|Id. de evento|Se genera cuando|
+|Evento|Id. de evento|Se genera cuando|
 |-----------|--------------|-----------------|
 |`ThreadTerminated`|86|Finaliza un subproceso.|
 
 En la siguiente tabla, se muestran los datos del evento:
 
-|Nombre de campo|Tipo de datos|Descripción|
+|Nombre del campo|Tipo de datos|Descripción|
 |----------------|---------------|-----------------|
-|ThreadID|win:UInt64|Identifiador del subproceso.|
+|ThreadID|win:UInt64|Identificador de subproceso.|
 |AppDomainID|win:UInt64|Identificador del dominio de la aplicación.|
 |ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [CLR ETW Events (Eventos ETW de CLR)](clr-etw-events.md)

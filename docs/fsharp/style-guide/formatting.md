@@ -2,12 +2,12 @@
 title: Instrucciones de formato de código de F#
 description: 'Obtenga información sobre las directrices para dar formato a código de F #.'
 ms.date: 11/04/2019
-ms.openlocfilehash: dde69c573f1ef58d398ae47676b9403f588680b6
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: a65600a6c685929aef8582e49caded6340fb09e2
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617274"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309708"
 ---
 # <a name="f-code-formatting-guidelines"></a>Instrucciones de formato de código de F#
 
@@ -102,25 +102,34 @@ let myFunBad (a:decimal)(b)c = a + b + c
 
 ### <a name="place-parameters-on-a-new-line-for-long-member-definitions"></a>Colocar parámetros en una nueva línea para definiciones de miembros largas
 
-Si tiene una definición de miembro muy larga, coloque los parámetros en nuevas líneas y aplíqueles sangría en un ámbito.
+Si tiene una definición de miembro muy larga, coloque los parámetros en nuevas líneas y aplíqueles sangría para que coincidan con el nivel de sangría del parámetro subsiguiente.
 
 ```fsharp
 type C() =
-    member _.LongMethodWithLotsOfParameters(
-        aVeryLongType: AVeryLongTypeThatYouNeedToUse
-        aSecondVeryLongType: AVeryLongTypeThatYouNeedToUse
-        aThirdVeryLongType: AVeryLongTypeThatYouNeedToUse) =
+    member _.LongMethodWithLotsOfParameters(aVeryLongType: AVeryLongTypeThatYouNeedToUse,
+                                            aSecondVeryLongType: AVeryLongTypeThatYouNeedToUse,
+                                            aThirdVeryLongType: AVeryLongTypeThatYouNeedToUse) =
         // ... the body of the method follows
 ```
 
 Esto también se aplica a los constructores:
 
 ```fsharp
-type C(
-    aVeryLongType: AVeryLongTypeThatYouNeedToUse
-    aSecondVeryLongType: AVeryLongTypeThatYouNeedToUse
-    aThirdVeryLongType: AVeryLongTypeThatYouNeedToUse) =
+type C(aVeryLongType: AVeryLongTypeThatYouNeedToUse,
+       aSecondVeryLongType: AVeryLongTypeThatYouNeedToUse,
+       aThirdVeryLongType: AVeryLongTypeThatYouNeedToUse) =
     // ... the body of the class follows
+```
+
+Si hay una anotación de tipo de valor devuelto explícita, puede estar al final de `)` y antes de `=` , o en una línea nueva. Si el tipo de valor devuelto también tiene un nombre largo, el último podría ser preferible:
+
+```fsharp
+type C() =
+    member _.LongMethodWithLotsOfParameters(aVeryLongType: AVeryLongTypeThatYouNeedToUse,
+                                            aSecondVeryLongType: AVeryLongTypeThatYouNeedToUse,
+                                            aThirdVeryLongType: AVeryLongTypeThatYouNeedToUse)
+                                            : AVeryLongReturnType =
+        // ... the body of the method follows
 ```
 
 ### <a name="type-annotations"></a>Anotaciones de tipo

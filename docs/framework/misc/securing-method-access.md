@@ -11,23 +11,23 @@ helpviewer_keywords:
 - security [.NET Framework], method access
 - method access security
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
-ms.openlocfilehash: 287c3651be0272f1941fb2320640970d70a1bd0f
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: a7ef419cf3959cf7a3ffde874353dacd3815c81a
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86282058"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309396"
 ---
 # <a name="securing-method-access"></a>Proteger acceso a métodos
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  Algunos métodos podrían no ser adecuados para llamadas desde código no seguro arbitrario. Estos métodos plantean varios riesgos: el método podría proporcionar información restringida; podría creerse cualquier información que se le pasa; podría no realizar las comprobaciones de errores en los parámetros; o bien, con los parámetros incorrectos, podría funcionar mal o hacer algo perjudicial. Debe tener en cuenta estos casos y tomar medidas para ayudar a proteger el método.  
   
- En algunos casos, deberá restringir los métodos que no están pensados para uso público pero, aún así, deben ser públicos. Por ejemplo, podría tener una interfaz a la que debe llamarse entre sus propios archivos DLL y, por tanto, debe ser pública, pero no desea exponerla públicamente para evitar que los clientes la usen o para evitar que código malintencionado use el punto de entrada del componente. Otro motivo habitual para restringir un método no pensado para uso público (pero que debe ser público) es evitar tener que documentar y dar soporte a lo que podría ser una interfaz muy interna.  
+ En algunos casos, deberá restringir los métodos que no están pensados para uso público pero, aún así, deben ser públicos. Por ejemplo, podría tener una interfaz a la que debe llamarse entre sus propios archivos DLL y, por tanto, debe ser pública, pero no desea exponerla públicamente para evitar que los clientes la usen o para evitar que código malintencionado use el punto de entrada del componente. Otra razón común para restringir un método no diseñado para uso público (pero que debe ser público) es evitar tener que documentar y dar soporte a lo que podría ser una interfaz interna.  
   
  El código administrado ofrece varias maneras de restringir el acceso a un método:  
   
-- Limitar el ámbito de accesibilidad a la clase, el ensamblado o las clases derivadas, si son de confianza. Esta es la manera más sencilla de limitar el acceso a un método. Tenga en cuenta que, por lo general, las clases derivadas pueden ser de menos confianza que la clase de la que derivan, aunque en algunos casos compartan la identidad de la clase primaria. En concreto, no infiere la confianza de la palabra clave **Protected**, que no se utiliza necesariamente en el contexto de seguridad.  
+- Limitar el ámbito de accesibilidad a la clase, el ensamblado o las clases derivadas, si son de confianza. Esta es la manera más sencilla de limitar el acceso a un método. En general, las clases derivadas pueden ser menos confiables que la clase de la que derivan, aunque en algunos casos comparten la identidad de la clase primaria. En concreto, no infiere la confianza de la palabra clave `protected` , que no se utiliza necesariamente en el contexto de seguridad.  
   
 - Limite el acceso al método a los llamadores de una identidad especificada; en esencia, cualquier [evidencia](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd%28v=vs.100%29) determinada (nombre seguro, publicador, zona, etc.) que elija.  
   
@@ -56,7 +56,7 @@ public class Class1
 ```  
   
 ## <a name="excluding-classes-and-members-from-use-by-untrusted-code"></a>Excluir clases y miembros del uso por parte de código que no sea de confianza  
- Use las declaraciones que se muestran en esta sección para evitar que código de confianza parcial use clases y métodos específicos, así como propiedades y eventos. Al aplicar estas declaraciones a una clase, se aplica la protección a todos sus métodos, propiedades y eventos; sin embargo, tenga en cuenta que la seguridad declarativa no afecta al acceso a los campos. Tenga en cuenta también que las peticiones de vínculo protegen solo frente a los llamadores inmediatos y que aún podrían sufrir ataques por señuelo.  
+ Use las declaraciones que se muestran en esta sección para evitar que código de confianza parcial use clases y métodos específicos, así como propiedades y eventos. Al aplicar estas declaraciones a una clase, se aplica la protección a todos sus métodos, propiedades y eventos. Sin embargo, el acceso a los campos no se ve afectado por la seguridad declarativa. Tenga en cuenta también que las peticiones de vínculo protegen solo frente a los llamadores inmediatos y que aún podrían sufrir ataques por señuelo.  
   
 > [!NOTE]
 > Se ha introducido un nuevo modelo de transparencia en el .NET Framework 4. El modelo de [código transparente en seguridad, nivel 2](security-transparent-code-level-2.md) identifica el código seguro con el <xref:System.Security.SecurityCriticalAttribute> atributo. El código crítico para la seguridad requiere que los llamadores y los herederos sean de plena confianza. Los ensamblados que se ejecutan bajo las reglas de seguridad de acceso del código desde versiones anteriores de .NET Framework pueden llamar a los ensamblados de nivel 2. En este caso, los atributos críticos para la seguridad se tratarán como peticiones de vínculo de plena confianza.  
@@ -237,7 +237,7 @@ class Implemented : ICanCastToMe
   
  En las versiones 1,0 y 1,1 de .NET Framework, debe tener en cuenta un Matic de la accesibilidad del sistema de tipos al confirmar que el código no está disponible para otros ensamblados. Un método que se declara **virtual** e **Internal** (**overloads Overridable Friend** en Visual Basic) puede invalidar la entrada vtable de la clase primaria y solo se puede usar dentro del mismo ensamblado porque es interno. Sin embargo, la accesibilidad para el reemplazo viene determinada por la palabra clave **virtual** , y se puede invalidar desde otro ensamblado siempre y cuando ese código tenga acceso a la propia clase. Si la posibilidad de una invalidación supone un problema, use la seguridad declarativa para corregirlo o quite la palabra clave **virtual** si no es estrictamente necesaria.  
   
- Tenga en cuenta que aunque un compilador de lenguaje impida estas invalidaciones con un error de compilación, el código escrito con otros compiladores podría realizar la invalidación.  
+ Incluso si un compilador de lenguaje impide estas invalidaciones con un error de compilación, es posible que el código escrito con otros compiladores invalide.  
   
 ## <a name="see-also"></a>Consulte también
 

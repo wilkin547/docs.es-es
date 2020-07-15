@@ -1,5 +1,6 @@
 ---
-title: 'Cómo: Realizar la inicialización diferida de objetos'
+title: Procedimiento para realizar la inicialización diferida de objetos
+description: Vea cómo realizar la inicialización diferida de objetos mediante la clase System. Lazy <T> . La inicialización diferida significa que no se crean objetos si no se necesitan nunca.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - lazy initialization in .NET, how to perform
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
-ms.openlocfilehash: d89d19a7a3edb57dcd6c0e37e6688701da8b3713
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dbee0d8a5c3075ad7429feb92b87a566fdd35454
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180600"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309734"
 ---
-# <a name="how-to-perform-lazy-initialization-of-objects"></a>Cómo: Realizar la inicialización diferida de objetos
+# <a name="how-to-perform-lazy-initialization-of-objects"></a>Procedimiento para realizar la inicialización diferida de objetos
 La clase <xref:System.Lazy%601?displayProperty=nameWithType> simplifica el trabajo de creación de instancias e inicialización diferida de los objetos. Al inicializar los objetos de manera diferida, se puede evitar su creación en caso de que no sean necesarios o se puede aplazar su inicialización hasta el primer acceso. Para obtener más información, vea [Inicialización diferida](lazy-initialization.md).  
   
 ## <a name="example"></a>Ejemplo  

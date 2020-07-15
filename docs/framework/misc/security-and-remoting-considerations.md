@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [.NET Framework], remoting
 - secure coding, remoting
 ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
-ms.openlocfilehash: 029f9863ebed94805675b629be7eb10963a7b689
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 019773b19eaca2e4364fb79c40fdb923093d4e7e
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281399"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309370"
 ---
 # <a name="security-and-remoting-considerations"></a>Consideraciones de seguridad y de interacción remota
 La comunicación remota permite configurar llamadas transparentes entre dominios de aplicación, procesos o equipos. Sin embargo, el recorrido de la pila de seguridad de acceso del código no puede cruzar los límites de los procesos o equipos (se aplica entre dominios de aplicación del mismo proceso).  
@@ -34,7 +34,7 @@ La comunicación remota permite configurar llamadas transparentes entre dominios
   
  Un dominio de aplicación puede forzar que otro dominio de aplicación cargue un ensamblado y ejecute el código contenido en él llamando a un proxy a un objeto hospedado en el otro dominio de aplicación. Para obtener un proxy de dominio entre aplicaciones, el dominio de aplicación que hospeda el objeto debe distribuir uno mediante un valor devuelto o un parámetro de llamada a método. O bien, si acaba de crear el dominio de aplicación, el creador tiene un proxy al objeto <xref:System.AppDomain> de forma predeterminada. Por lo tanto, para evitar romper el aislamiento del código, un dominio de aplicación con un nivel de confianza mayor no debe distribuir referencias a objetos con cálculo de referencias por referencia (instancias de clases derivadas de <xref:System.MarshalByRefObject>) en su dominio a dominios de aplicación con niveles de confianza inferiores.  
   
- Normalmente, el dominio de aplicación predeterminado crea los dominios de aplicación secundarios con un objeto de control en cada uno de ellos. El objeto de control administra el nuevo dominio de aplicación y, en ocasiones, recibe pedidos del dominio de aplicación predeterminado, pero en realidad no puede contactar con el dominio directamente. En ocasiones, el dominio de aplicación predeterminado llama a su proxy al objeto de control. Sin embargo, puede haber casos en los que es necesario que el objeto de control devuelva la llamada al dominio de aplicación predeterminado. En estos casos, el dominio de aplicación predeterminado pasa un objeto de devolución de llamada de serialización por referencia al constructor del objeto de control. Es responsabilidad del objeto de control proteger este proxy. Si el objeto de control coloca el proxy en un campo estático público de una clase pública o expone el proxy públicamente de cualquier otra forma, abriría un mecanismo peligroso para que otro código devuelva la llamada al dominio de aplicación predeterminado. Por este motivo, los objetos de control siempre son de confianza de forma implícita para que el proxy sea privado.  
+ Normalmente, el dominio de aplicación predeterminado crea los dominios de aplicación secundarios con un objeto de control en cada uno de ellos. El objeto de control administra el nuevo dominio de aplicación y, en ocasiones, recibe pedidos del dominio de aplicación predeterminado, pero en realidad no puede contactar con el dominio directamente. En ocasiones, el dominio de aplicación predeterminado llama a su proxy al objeto de control. Sin embargo, puede haber casos en los que es necesario que el objeto de control devuelva la llamada al dominio de aplicación predeterminado. En estos casos, el dominio de aplicación predeterminado pasa un objeto de devolución de llamada de serialización por referencia al constructor del objeto de control. Es responsabilidad del objeto de control proteger este proxy. Si el objeto de control colocó el proxy en un campo estático público de una clase pública o expone públicamente el proxy, se abriría un mecanismo peligroso para que otro código vuelva a llamar al dominio de aplicación predeterminado. Por este motivo, los objetos de control siempre son de confianza de forma implícita para que el proxy sea privado.  
   
 ## <a name="see-also"></a>Consulte también
 

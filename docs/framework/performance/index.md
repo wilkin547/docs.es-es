@@ -1,16 +1,17 @@
 ---
 title: Rendimiento de .NET Framework
+description: Diseñar y planear el rendimiento de las aplicaciones de .NET. Use las herramientas proporcionadas por Microsoft para medir el rendimiento de la aplicación y hacer mejoras.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - performance [.NET Framework]
 - reliability [.NET Framework]
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
-ms.openlocfilehash: 47d85ae63f0594b778523425631ff54f9f3ca32f
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: ee8260056bd87dfc66d96e394f9b93bb9427afd8
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504093"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309760"
 ---
 # <a name="net-framework-performance"></a>Rendimiento de .NET Framework
 Si desea crear aplicaciones que exhiban un gran rendimiento, debe diseñar y planear ese rendimiento al igual que hace con cualquier otra característica de la aplicación. Puede usar las herramientas proporcionadas por Microsoft para medir el rendimiento de su aplicación y, en caso necesario, realizar mejoras en el uso de la memoria, el rendimiento del código y la respuesta. En este tema se enumeran las herramientas de análisis de rendimiento ofrecidas por Microsoft, y se proporcionan vínculos a otros temas que abordan el rendimiento en áreas específicas del desarrollo de aplicaciones.  
@@ -30,7 +31,7 @@ Si desea crear aplicaciones que exhiban un gran rendimiento, debe diseñar y pla
   
 |Herramienta|Descripción|  
 |----------|-----------------|  
-|Análisis de rendimiento de Visual Studio|Sirve para analizar el uso de CPU de las aplicaciones de .NET Framework que se implementarán en equipos que ejecuten el sistema operativo Windows.<br /><br /> Esta herramienta está disponible en el menú **Depurar** de Visual Studio después de abrir un proyecto. Para obtener más información, consulta [Explorador de rendimiento](/visualstudio/profiling/performance-explorer). **Nota:** Use el análisis de aplicación de Windows Phone (vea la fila siguiente) si la aplicación está diseñada para Windows Phone.|  
+|Análisis de rendimiento de Visual Studio|Sirve para analizar el uso de CPU de las aplicaciones de .NET Framework que se implementarán en equipos que ejecuten el sistema operativo Windows.<br /><br /> Esta herramienta está disponible en el menú **Depurar** de Visual Studio después de abrir un proyecto. Para obtener más información, consulte [Performance Explorer](/visualstudio/profiling/performance-explorer) (Explorador de rendimiento). **Nota:** Use el análisis de aplicación de Windows Phone (vea la fila siguiente) si la aplicación está diseñada para Windows Phone.|  
 |Análisis de aplicación de Windows Phone|Sirve para analizar la CPU y la memoria, la velocidad de transferencia de datos de red, la respuesta de la aplicación y el consumo de batería en las aplicaciones de Windows Phone.<br /><br /> Esta herramienta está disponible en el menú **Depurar** de un proyecto de Windows Phone de Visual Studio después de instalar el [SDK de Windows Phone](https://go.microsoft.com/fwlink/?LinkId=265773). Para obtener más información, consulte [generación de perfiles de aplicaciones para Windows Phone 8](https://docs.microsoft.com/previous-versions/windows/apps/jj215908(v=vs.105)).|  
 |[PerfView](https://www.microsoft.com/download/details.aspx?id=28567)|Sirve para identificar problemas de rendimiento relacionados con la CPU y la memoria. Esta herramienta usa seguimiento de eventos para Windows (ETW) y API de generación de perfiles de CLR para ofrecer análisis avanzados de CPU y memoria, así como información sobre la recolección de elementos no utilizados y la compilación JIT. Para obtener más información sobre cómo usar PerfView, vea el tutorial y consulte los archivos de ayuda que se incluyen con la aplicación, los [videotutoriales de Channel 9](https://channel9.msdn.com/Series/PerfView-Tutorial) y las [entradas de blog](https://docs.microsoft.com/archive/blogs/vancem/).<br /><br /> Para problemas específicos de memoria, vea [Using PerfView for Memory Investigations](https://channel9.msdn.com/Series/PerfView-Tutorial/PerfView-Tutorial-9-NET-Memory-Investigation-Basics-of-GC-Heap-Snapshots) (Usar PerfView para efectuar investigaciones en la memoria).|  
 |[Windows Performance Analyzer](https://www.microsoft.com/download/details.aspx?id=30652)|Sirve para determinar el rendimiento general del sistema; por ejemplo, el uso de memoria y almacenamiento de la aplicación cuando se ejecutan varias aplicaciones en el mismo equipo. Esta herramienta está disponible en el centro de descarga como parte de Windows Assessment and Deployment Kit (ADK) para Windows 8. Para obtener más información, vea [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer).|
@@ -44,13 +45,13 @@ Si desea crear aplicaciones que exhiban un gran rendimiento, debe diseñar y pla
 |Tipo de aplicación|Vea|  
 |--------------|---------|  
 |Aplicaciones de .NET Framework para todas las plataformas|[Recolección de elementos no utilizados y rendimiento](../../standard/garbage-collection/performance.md)<br /><br /> [Consejos de rendimiento](performance-tips.md)|  
-|Aplicaciones de la tienda Windows 8. x C++escritas en, C#y Visual Basic|[Procedimientos recomendados para aplicaciones de la Tienda Windows con C++, C# y Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/hh750313%28v=win.10%29)|  
+|Aplicaciones de la tienda Windows 8. x escritas en C++, C# y Visual Basic|[Procedimientos recomendados para aplicaciones de la Tienda Windows con C++, C# y Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/hh750313%28v=win.10%29)|  
 |Windows Presentation Foundation (WPF)|[WPF Performance Suite](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))|  
 |ASP.NET|[Información general acerca del rendimiento de ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/cc668225(v=vs.100))|  
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Título|Descripción|  
+|Title|Descripción|  
 |-----------|-----------------|  
 |[Almacenamiento en caché en aplicaciones .NET Framework](caching-in-net-framework-applications.md)|Información sobre las técnicas para almacenar datos en la caché a fin de mejorar el rendimiento de la aplicación.|  
 |[Inicialización diferida](lazy-initialization.md)|Información sobre cómo inicializar objetos según sea necesario para mejorar el rendimiento, en concreto al inicio de la aplicación.|  

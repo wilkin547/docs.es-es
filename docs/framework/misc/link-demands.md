@@ -15,19 +15,19 @@ helpviewer_keywords:
 - caller security checks
 - link demands
 ms.assetid: a33fd5f9-2de9-4653-a4f0-d9df25082c4d
-ms.openlocfilehash: cd89c4ef27abb92fba567a1f3b490cb9d78fdddd
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: eaf9ee1bb5cd10c724240bacac014503685a0c8c
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86282065"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309110"
 ---
 # <a name="link-demands"></a>Peticiones de vínculos
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  Una petición de vínculo hace que se produzca una comprobación de seguridad durante la compilación Just-In-Time y comprueba solo el ensamblado de llamada inmediato del código. La vinculación se produce cuando el código se enlaza a una referencia de tipo, incluidas las referencias del puntero de función y las llamadas a métodos. Si el ensamblado de llamada no tiene permisos suficientes para vincularse al código, no se permitirá el vínculo y se producirá una excepción en tiempo de ejecución cuando se cargue y ejecute el código. Las peticiones de vínculo pueden reemplazarse en las clases que heredan de su código.  
   
- Tenga en cuenta que no se efectúa ningún recorrido de pila completo con este tipo de petición y que el código sigue siendo vulnerable a ataques. Por ejemplo, si un método del ensamblado A está protegido por una petición de vínculo, se evalúa un llamador directo en el ensamblado B en función de los permisos del ensamblado B.  Sin embargo, la petición de vínculo no evaluará un método en el ensamblado C si llama indirectamente al método en el ensamblado A utilizando el método en el ensamblado B. La petición de vínculo especifica solo los permisos que los llamadores directos en el ensamblado de llamada inmediato deben tener para vincularse al código. No especifica los permisos que deben tener todos los llamadores para ejecutar el código.  
+ No se realiza un recorrido de pila completo con este tipo de demanda y el código sigue siendo susceptible a ataques señuelo. Por ejemplo, si un método del ensamblado A está protegido por una petición de vínculo, se evalúa un llamador directo en el ensamblado B en función de los permisos del ensamblado B.  Sin embargo, la petición de vínculo no evaluará un método en el ensamblado C si llama indirectamente al método en el ensamblado A utilizando el método en el ensamblado B. La petición de vínculo especifica solo los permisos que los llamadores directos en el ensamblado de llamada inmediato deben tener para vincularse al código. No especifica los permisos que deben tener todos los llamadores para ejecutar el código.  
   
  Los modificadores de recorrido de pila <xref:System.Security.CodeAccessPermission.Assert%2A>, <xref:System.Security.CodeAccessPermission.Deny%2A> y <xref:System.Security.CodeAccessPermission.PermitOnly%2A> no afectan a la evaluación de las peticiones de vínculo.  Dado que las peticiones de vínculo no efectúan ningún recorrido de pila, los modificadores de recorrido de pila no tienen ningún efecto sobre las peticiones de vínculo.  
   

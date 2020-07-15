@@ -1,5 +1,6 @@
 ---
-title: Código transparente de seguridad, nivel 1
+title: Código transparente en seguridad, nivel 1
+description: Revise los ejemplos de modelo de código de transparencia de nivel 1, atributos de transparencia y transparencia de seguridad.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transparent
@@ -9,20 +10,20 @@ helpviewer_keywords:
 - security-transparent code
 - security [.NET Framework], security-transparent code
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
-ms.openlocfilehash: 6f6c6ecd9ecab8c531be971a0e7896994127beb8
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: c44fe3339f3bf24d266fa97487868ce090d51bb1
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645745"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309099"
 ---
-# <a name="security-transparent-code-level-1"></a>Código transparente de seguridad, nivel 1
+# <a name="security-transparent-code-level-1"></a>Código transparente en seguridad, nivel 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- La transparencia ayuda a los desarrolladores a escribir bibliotecas de .NET Framework más seguras que exponen la funcionalidad a código de confianza parcial. La transparencia de nivel 1 se introdujo en .NET Framework versión 2.0 y se usó principalmente solo dentro de Microsoft. A partir de .NET Framework 4, puede usar la transparencia de [nivel 2.](security-transparent-code-level-2.md) Sin embargo, se ha conservado la transparencia de nivel 1 para que pueda identificar código heredado que se debe ejecutar con las reglas de seguridad anteriores.  
+ La transparencia ayuda a los desarrolladores a escribir bibliotecas de .NET Framework más seguras que exponen la funcionalidad a código de confianza parcial. La transparencia de nivel 1 se introdujo en .NET Framework versión 2.0 y se usó principalmente solo dentro de Microsoft. A partir de la .NET Framework 4, puede usar la [transparencia de nivel 2](security-transparent-code-level-2.md). Sin embargo, se ha conservado la transparencia de nivel 1 para que pueda identificar código heredado que se debe ejecutar con las reglas de seguridad anteriores.  
   
 > [!IMPORTANT]
-> Debe especificar la transparencia de nivel 1 solo para la compatibilidad; es decir, especifique el nivel 1 únicamente para el código que se desarrolló con .NET Framework 3.5 o versiones anteriores que usa <xref:System.Security.AllowPartiallyTrustedCallersAttribute> o que no usa el modelo de transparencia. Por ejemplo, use la transparencia de nivel 1 para ensamblados de .NET Framework 2.0 que permiten llamadas de llamadores de confianza parcial (APTCA). Para el código desarrollado para .NET Framework 4, use siempre transparencia de nivel 2.  
+> Debe especificar la transparencia de nivel 1 solo para la compatibilidad; es decir, especifique el nivel 1 únicamente para el código que se desarrolló con .NET Framework 3.5 o versiones anteriores que usa <xref:System.Security.AllowPartiallyTrustedCallersAttribute> o que no usa el modelo de transparencia. Por ejemplo, use la transparencia de nivel 1 para ensamblados de .NET Framework 2.0 que permiten llamadas de llamadores de confianza parcial (APTCA). Para el código que se desarrolla para el .NET Framework 4, use siempre la transparencia de nivel 2.  
   
  Este tema contiene las siguientes secciones:  
   
@@ -62,8 +63,8 @@ ms.locfileid: "81645745"
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |<xref:System.Security.SecurityTransparentAttribute>|Solo se permite en el nivel de ensamblado. Identifica todos los tipos y miembros del ensamblado como transparentes en seguridad. El ensamblado no puede contener ningún código crítico para la seguridad.|  
-|<xref:System.Security.SecurityCriticalAttribute>|Cuando se usa en el nivel de ensamblado sin la propiedad <xref:System.Security.SecurityCriticalAttribute.Scope%2A>, identifica todo el código del ensamblado como transparente en seguridad de forma predeterminada, pero indica que el ensamblado puede contener código crítico para la seguridad.<br /><br /> Cuando se usa en el nivel de clase, identifica la clase o método como crítico para la seguridad, pero no los miembros de la clase. Para que todos los miembros sean críticos para la seguridad, establezca la propiedad <xref:System.Security.SecurityCriticalAttribute.Scope%2A> en <xref:System.Security.SecurityCriticalScope.Everything>.<br /><br /> Cuando se usa en el nivel de miembro, el atributo se aplica solo a ese miembro.<br /><br /> La clase o miembro identificado como crítico para la seguridad puede realizar elevaciones de privilegios. **Importante:**  En la transparencia de nivel 1, los tipos y miembros críticos para la seguridad se tratan como críticos para la seguridad cuando se les llama desde fuera del ensamblado. Debe proteger los tipos y miembros críticos para la seguridad con una petición de vínculo de plena confianza para evitar la elevación de privilegios no autorizada.|  
-|<xref:System.Security.SecuritySafeCriticalAttribute>|Identifica el código crítico para la seguridad al que puede tener acceso el código transparente en seguridad del ensamblado. De lo contrario, el código transparente en seguridad no puede acceder a los miembros críticos para la seguridad privados o internos del mismo ensamblado. Si lo hiciera, podría influir en el código crítico para la seguridad y hacer posibles las elevaciones de privilegios imprevistas. El código crítico para la seguridad y disponible desde código transparente debe someterse a una auditoría de seguridad rigurosa. **Nota:**  Los tipos y miembros críticos para la seguridad deben validar los permisos de los llamadores para determinar si el autor de la llamada tiene autorización para tener acceso a los recursos protegidos.|  
+|<xref:System.Security.SecurityCriticalAttribute>|Cuando se usa en el nivel de ensamblado sin la propiedad <xref:System.Security.SecurityCriticalAttribute.Scope%2A>, identifica todo el código del ensamblado como transparente en seguridad de forma predeterminada, pero indica que el ensamblado puede contener código crítico para la seguridad.<br /><br /> Cuando se usa en el nivel de clase, identifica la clase o método como crítico para la seguridad, pero no los miembros de la clase. Para que todos los miembros sean críticos para la seguridad, establezca la propiedad <xref:System.Security.SecurityCriticalAttribute.Scope%2A> en <xref:System.Security.SecurityCriticalScope.Everything>.<br /><br /> Cuando se usa en el nivel de miembro, el atributo se aplica solo a ese miembro.<br /><br /> La clase o miembro identificado como crítico para la seguridad puede realizar elevaciones de privilegios. **Importante:**  En la transparencia de nivel 1, los tipos y miembros críticos para la seguridad se tratan como críticos para la seguridad y disponible desde el exterior cuando se les llama desde fuera del ensamblado. Debe proteger los tipos y miembros críticos para la seguridad con una petición de vínculo de plena confianza para evitar la elevación de privilegios no autorizada.|  
+|<xref:System.Security.SecuritySafeCriticalAttribute>|Identifica el código crítico para la seguridad al que puede tener acceso el código transparente en seguridad del ensamblado. De lo contrario, el código transparente en seguridad no puede acceder a los miembros críticos para la seguridad privados o internos del mismo ensamblado. Si lo hiciera, podría influir en el código crítico para la seguridad y hacer posibles las elevaciones de privilegios imprevistas. El código crítico para la seguridad y disponible desde código transparente debe someterse a una auditoría de seguridad rigurosa. **Nota:**  Los tipos y miembros críticos para la seguridad y disponible desde acceso seguro deben validar los permisos de los llamadores para determinar si el llamador tiene autoridad para acceder a los recursos protegidos.|  
   
  El atributo <xref:System.Security.SecuritySafeCriticalAttribute> permite que el código transparente en seguridad acceda a los miembros críticos para la seguridad del mismo ensamblado. Considere el código transparente en seguridad y crítico para la seguridad de su ensamblado como si estuviera separado en dos ensamblados. El código transparente en seguridad no sería capaz de ver los miembros privados o internos del código crítico para la seguridad. Además, el código crítico para la seguridad suele auditarse para tener acceso a su interfaz pública. No se espera que un estado privado o interno sea accesible fuera del ensamblado; lo mejor es mantener aislado el estado. El atributo <xref:System.Security.SecuritySafeCriticalAttribute> mantiene el aislamiento del estado entre el código transparente en seguridad y el código crítico para la seguridad, al mismo tiempo que ofrece la capacidad de invalidar el aislamiento si es necesario. El código transparente en seguridad no puede acceder al código crítico para la seguridad privado o interno, a menos que esos miembros se hayan marcado con <xref:System.Security.SecuritySafeCriticalAttribute>. Antes de aplicar <xref:System.Security.SecuritySafeCriticalAttribute>, audite ese miembro como si estuviera expuesto públicamente.  
   
@@ -131,4 +132,4 @@ public class B
 ## <a name="see-also"></a>Consulte también
 
 - [Código transparente en seguridad, nivel 2](security-transparent-code-level-2.md)
-- [Cambios en la seguridad](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)
+- [Cambios de seguridad](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)

@@ -1,16 +1,17 @@
 ---
 title: Código transparente en seguridad
+description: Comprenda el propósito del modelo de código transparente, cómo especificar el nivel de transparencia y el cumplimiento de la transparencia en la seguridad.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transparent code
 - security-transparent code
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
-ms.openlocfilehash: ca251ec3084d40269b107e7bd8bef708e8d49622
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: a167efe12b88f796fba4abc6d60ebffe4693709a
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215829"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309851"
 ---
 # <a name="security-transparent-code"></a>Código transparente en seguridad
 
@@ -33,7 +34,7 @@ El objetivo principal del cumplimiento de la transparencia es proporcionar un me
 La transparencia se introdujo en .NET Framework 2.0 para simplificar el modelo de seguridad y para facilitar la escritura e implementación de aplicaciones y bibliotecas seguras. El código transparente también se usa en Microsoft Silverlight a fin de simplificar el desarrollo de aplicaciones de confianza parcial.
 
 > [!NOTE]
-> Al desarrollar una aplicación de confianza parcial, hay que tener en cuenta los requisitos de permisos para los hosts de destino. Si se desarrolla una aplicación que usa recursos no permitidos por algunos hosts, la aplicación se compilará sin problemas, pero producirá error cuando se cargue en el entorno hospedado. Si ha desarrollado su aplicación con Visual Studio, puede habilitar la depuración en confianza parcial o en un conjunto de permisos restringidos desde el entorno de desarrollo. Para obtener más información, consulta [Cómo: Depurar una aplicación ClickOnce con permisos restringidos](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions). La característica Calcular permisos proporcionada para aplicaciones ClickOnce también está disponible para cualquier aplicación de confianza parcial.
+> Al desarrollar una aplicación de confianza parcial, hay que tener en cuenta los requisitos de permisos para los hosts de destino. Si se desarrolla una aplicación que usa recursos no permitidos por algunos hosts, la aplicación se compilará sin problemas, pero producirá error cuando se cargue en el entorno hospedado. Si ha desarrollado su aplicación con Visual Studio, puede habilitar la depuración en confianza parcial o en un conjunto de permisos restringidos desde el entorno de desarrollo. Para obtener más información, consulta [How to: Debug a ClickOnce Application with Restricted Permissions](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions). La característica Calcular permisos proporcionada para aplicaciones ClickOnce también está disponible para cualquier aplicación de confianza parcial.
 
 ## <a name="specifying-the-transparency-level"></a>Especificar el nivel de transparencia
 
@@ -41,7 +42,7 @@ El atributo <xref:System.Security.SecurityRulesAttribute> de nivel de ensamblado
 
 Los niveles son los siguientes:
 
-- Nivel 2 (<xref:System.Security.SecurityRuleSet.Level2>): las reglas de transparencia de .NET Framework 4.
+- Nivel 2 ( <xref:System.Security.SecurityRuleSet.Level2> ): las reglas de transparencia .NET Framework 4.
 
 - Nivel 1 (<xref:System.Security.SecurityRuleSet.Level1>): las reglas de transparencia de .NET Framework 2.0.
 

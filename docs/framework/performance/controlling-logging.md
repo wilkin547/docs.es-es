@@ -1,15 +1,16 @@
 ---
 title: Controlar el registro de .NET Framework
+description: Use el seguimiento de eventos para Windows (ETW) para controlar los eventos de registro y Common Language Runtime de registros de .NET (CLR). Use herramientas como Logman, tracerpt y Xperf.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR ETW events, logging
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
-ms.openlocfilehash: e7d7d6e60b2f582a579f5811225f4027c37c7876
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 45d9244eb11b914fd203f24057e1b65c6bef18c2
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504098"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309591"
 ---
 # <a name="controlling-net-framework-logging"></a>Controlar el registro de .NET Framework
 
@@ -27,7 +28,7 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.
 ```
 
-Si el proveedor de CLR no aparece en la lista, puede instalarlo en Windows Vista y sistemas operativos posteriores mediante la herramienta de línea de comandos [Wevtutil](/windows-server/administration/windows-commands/wevtutil) de Windows. Abra una ventana del símbolo del sistema como administrador. Cambie el directorio del símbolo del sistema a la carpeta .NET Framework 4 (%WINDIR%\Microsoft.NET\Framework [64] \v4.\<.NET versión > \). Esta carpeta contiene el archivo CLR-ETW.man. En el símbolo del sistema, escriba el siguiente comando para instalar el proveedor de CLR.
+Si el proveedor de CLR no aparece en la lista, puede instalarlo en Windows Vista y sistemas operativos posteriores mediante la herramienta de línea de comandos [Wevtutil](/windows-server/administration/windows-commands/wevtutil) de Windows. Abra una ventana del símbolo del sistema como administrador. Cambie el directorio prompt a la carpeta .NET Framework 4 (%WINDIR%\Microsoft.NET\Framework [64] \v4. \<.NET version> \ ). Esta carpeta contiene el archivo CLR-ETW.man. En el símbolo del sistema, escriba el siguiente comando para instalar el proveedor de CLR.
 
 `wevtutil im CLR-ETW.man`
 

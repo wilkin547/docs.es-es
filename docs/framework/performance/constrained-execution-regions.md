@@ -1,16 +1,17 @@
 ---
 title: regiones de ejecución restringidas
+description: Introducción a las regiones de ejecución restringidas (CER), que forman parte de un mecanismo para la creación de código administrado confiable.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - constrained execution regions
 - CERs
 ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
-ms.openlocfilehash: 3161f77399030c287649ee5757814963b6afb7cf
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: d928c9357af4a02e389d9ffd5df4ad0195edab06
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247732"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309617"
 ---
 # <a name="constrained-execution-regions"></a>regiones de ejecución restringidas
 Una región de ejecución restringida (CER) es parte de un mecanismo para crear código administrado de confianza. Una CER define un área en la que Common Language Runtime (CLR) no puede producir excepciones fuera de banda que eviten que el código del área se ejecute en su totalidad. Dentro de esa región, el código de usuario no puede ejecutar código que pueda producir excepciones fuera de banda. El método <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> debe ir inmediatamente antes del bloque `try` y marca los bloques `catch`, `finally` y `fault` como regiones de ejecución restringidas. Una vez marcada como región restringida, el código solo debe llamar a otro código con contratos de fiabilidad estables y no debe asignar ni realizar llamadas virtuales a métodos no preparados o no confiables a menos que esté preparado para controlar errores. CLR retrasa las anulaciones de subprocesos del código que se está ejecutando en una CER.  
@@ -115,6 +116,6 @@ Una región de ejecución restringida (CER) es parte de un mecanismo para crear 
   
 - Punteros de función y delegados.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Procedimientos recomendados para la confiabilidad](reliability-best-practices.md)

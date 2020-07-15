@@ -8,12 +8,12 @@ helpviewer_keywords:
 - secure coding, wrapper code
 - code security, wrapper code
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
-ms.openlocfilehash: 64c5b2455882ca121a6eeb0c0bbcbc4d04ed88cd
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 4338b3d0ab306501ea252407f386bdf89d191d6d
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281451"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309383"
 ---
 # <a name="securing-wrapper-code"></a>Insertar en el repositorio código de contenedor
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -51,7 +51,7 @@ ms.locfileid: "86281451"
  Para ayudar a evitar este tipo de carencias de seguridad, el Common Language Runtime extiende la comprobación a una demanda completa de recorrido de pila en cualquier llamada indirecta a un método, constructor, propiedad o evento protegido por una **LinkDemand**. Esta protección conlleva algunos costos de rendimiento y cambia la semántica de la comprobación de seguridad; la petición de recorrido de pila completo puede provocar errores que no se producirían en la comprobación rápida de un nivel.  
   
 ## <a name="assembly-loading-wrappers"></a>Contenedores de carga de ensamblados  
- Varios de los métodos usados para cargar código administrado, incluido <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>, cargan ensamblados con la evidencia del llamador. Si encapsula cualquiera de estos métodos, el sistema de seguridad podría usar, para cargar los ensamblados, el permiso concedido al código en lugar de los permisos del llamador para el contenedor. No permita que un código de menor confianza cargue código que tenga permisos superiores a los del llamador en el contenedor.  
+ Varios de los métodos usados para cargar código administrado, incluido <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>, cargan ensamblados con la evidencia del llamador. Si encapsula cualquiera de estos métodos, el sistema de seguridad podría usar, para cargar los ensamblados, el permiso concedido al código en lugar de los permisos del llamador para el contenedor. No permita que el código de menos confianza cargue el código al que se conceden permisos superiores a los del autor de la llamada al contenedor.  
   
  Cualquier código que tenga plena confianza o una confianza significativamente mayor que la de un posible llamador (incluido un llamador con nivel de permisos de Internet) podría debilitar la seguridad de esta manera. Si el código tiene un método público que toma una matriz de bytes y la pasa a **Assembly. Load**, con lo que se crea un ensamblado en nombre del llamador, se podría interrumpir la seguridad.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "86281451"
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
   
 ## <a name="demand-vs-linkdemand"></a>Demand versus LinkDemand  
- La seguridad declarativa ofrece dos tipos de comprobaciones de seguridad que son similares, pero que realizan comprobaciones muy diferentes. Debe entender ambas formas porque la opción incorrecta puede producir la pérdida de rendimiento o una seguridad débil.  
+ La seguridad declarativa ofrece dos tipos de comprobaciones de seguridad que son similares pero realizan comprobaciones diferentes. Es conveniente comprender ambos formatos, ya que la opción equivocada puede dar lugar a una pérdida de rendimiento o seguridad débil.  
   
  La seguridad declarativa ofrece las siguientes comprobaciones de seguridad:  
   

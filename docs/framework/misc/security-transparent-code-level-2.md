@@ -1,5 +1,6 @@
 ---
 title: Código transparente en seguridad, nivel 2
+description: Comprenda el código transparente de nivel 2. Vea ejemplos de uso y comportamientos, invalidar patrones, reglas de herencia, etc.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transparency
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - security-transparent code
 - security-critical code
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
-ms.openlocfilehash: 12e991e4977b0866343158c05681ddf4bd0c869b
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 3b87a48ac3f9925fd868be9e58d5904014ca6c09
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645733"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309214"
 ---
 # <a name="security-transparent-code-level-2"></a>Código transparente en seguridad, nivel 2
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
-La transparencia de nivel 2 se introdujo en .NET Framework 4. Los tres principios de este modelo son código transparente, código crítico para la seguridad y disponible desde código transparente, y código crítico para la seguridad.
+La transparencia de nivel 2 se presentó en el .NET Framework 4. Los tres principios de este modelo son código transparente, código crítico para la seguridad y disponible desde código transparente, y código crítico para la seguridad.
 
 - El código transparente, incluido el código que se ejecuta como de plena confianza, solo puede llamar a otro código transparente o a código crítico para la seguridad y disponible desde código transparente. Solo puede realizar acciones permitidas por el conjunto de permisos de confianza parcial del dominio (si existe). El código transparente no puede hacer lo siguiente:
 
@@ -42,7 +43,7 @@ La transparencia de nivel 2 se introdujo en .NET Framework 4. Los tres principio
 
 ## <a name="usage-examples-and-behaviors"></a>Ejemplos de uso y comportamientos
 
-Para especificar reglas de .NET Framework 4 (transparencia de nivel 2), utilice la anotación siguiente para un ensamblado:
+Para especificar .NET Framework 4 reglas (transparencia de nivel 2), use la siguiente anotación para un ensamblado:
 
 ```csharp
 [assembly: SecurityRules(SecurityRuleSet.Level2)]
@@ -54,7 +55,7 @@ Para bloquear en las reglas de .NET Framework 2.0 (transparencia de nivel 1), us
 [assembly: SecurityRules(SecurityRuleSet.Level1)]
 ```
 
-Si no anota un ensamblado, las reglas de .NET Framework 4 se usan de forma predeterminada. Sin embargo, el procedimiento <xref:System.Security.SecurityRulesAttribute> recomendado es usar el atributo en lugar de depender del valor predeterminado.
+Si no anota un ensamblado, se usan las reglas de .NET Framework 4 de forma predeterminada. Sin embargo, el procedimiento recomendado es usar el <xref:System.Security.SecurityRulesAttribute> atributo en lugar de depender del valor predeterminado.
 
 ### <a name="assembly-wide-annotation"></a>Anotación de todo el ensamblado
 
@@ -68,7 +69,7 @@ Las reglas siguientes se aplican al uso de atributos en el nivel de ensamblado:
 
 - `AllowPartiallyTrustedCallers` (solo nivel 2): el valor predeterminado de todo el código es transparente. Sin embargo, los miembros y tipos individuales pueden tener otros atributos.
 
-En la tabla siguiente se compara el comportamiento del nivel de ensamblado para el nivel 2 con el nivel 1.
+En la tabla siguiente se compara el comportamiento de nivel de ensamblado para el nivel 2 con el nivel 1.
 
 |Atributo de ensamblado|Nivel 2|Nivel 1|
 |------------------------|-------------|-------------|
@@ -165,7 +166,7 @@ El hecho de invocar un método crítico o leer un campo crítico desencadena una
 Se han agregado las siguientes propiedades al espacio de nombres <xref:System.Reflection> para determinar si el tipo, método o campo es `SecurityCritical`, `SecuritySafeCritical` o `SecurityTransparent`: <xref:System.Type.IsSecurityCritical%2A>, <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A> y <xref:System.Reflection.MethodBase.IsSecurityTransparent%2A>. Use estas propiedades para determinar la transparencia mediante la reflexión en lugar de comprobar la presencia del atributo. Las reglas de transparencia son complejas y la comprobación del atributo podría no ser suficiente.
 
 > [!NOTE]
-> Un `SafeCritical` método `true` devuelve <xref:System.Type.IsSecurityCritical%2A> <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>tanto `SafeCritical` y , porque es realmente crítico (tiene las mismas capacidades que el código crítico, pero se puede llamar desde código transparente).
+> Un `SafeCritical` método devuelve `true` para <xref:System.Type.IsSecurityCritical%2A> y <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A> , porque `SafeCritical` es realmente crítico (tiene las mismas funcionalidades que el código crítico, pero se puede llamar desde código transparente).
 
 Los métodos dinámicos heredan la transparencia de los módulos a los que se adjuntan; no heredan la transparencia del tipo (si están conectados a un tipo).
 
@@ -175,9 +176,9 @@ Puede omitir la comprobación para ensamblados transparentes de plena confianza 
 
 `[assembly: SecurityRules(SecurityRuleSet.Level2, SkipVerificationInFullTrust = true)]`
 
-La propiedad <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> es `false` de forma predeterminada, por lo que la propiedad debe establecerse en `true` para omitir la comprobación. Esto debe hacerse únicamente con fines de optimización. Debe asegurarse de que el código transparente del `transparent` ensamblado es comprobable mediante la opción de la [herramienta PEVerify](../tools/peverify-exe-peverify-tool.md).
+La propiedad <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> es `false` de forma predeterminada, por lo que la propiedad debe establecerse en `true` para omitir la comprobación. Esto debe hacerse únicamente con fines de optimización. Debe asegurarse de que el código transparente del ensamblado se puede comprobar mediante la `transparent` opción de la [herramienta peverify](../tools/peverify-exe-peverify-tool.md).
 
 ## <a name="see-also"></a>Consulte también
 
-- [Código transparente de seguridad, nivel 1](security-transparent-code-level-1.md)
-- [Cambios en la seguridad](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)
+- [Código transparente en seguridad, nivel 1](security-transparent-code-level-1.md)
+- [Cambios de seguridad](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)
