@@ -3,12 +3,12 @@ title: Guía de seguridad de DataSet y DataTable
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: c6b32afeadccc3fd22d6611d282840233280440f
-ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
+ms.openlocfilehash: f78b52ede4ec76599d761e5188f39c3e9dae2a4f
+ms.sourcegitcommit: 98548968e89739a37625e72ddbd535fe1e11121e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86382472"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405297"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>Guía de seguridad de DataSet y DataTable
 
@@ -195,7 +195,8 @@ Una vez habilitado el modo de auditoría, puede usar _App.config_ para conectar 
 
 Para obtener más información sobre `TraceSource` y `TraceListener` , vea el documento [Cómo: utilizar TraceSource y filtros con agentes de escucha de seguimiento](/dotnet/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners).
 
-**Nota**: la ejecución de una aplicación en modo auditoría no está disponible en .net Core o en .net 5,0 y versiones posteriores.
+> [!NOTE]
+> La ejecución de una aplicación en modo auditoría no está disponible en .NET Core o en .NET 5,0 y versiones posteriores.
 
 <a name="ratr"></a>
 
@@ -207,7 +208,7 @@ Si una aplicación debe quitar todas las restricciones de limitación de tipos d
 * Las opciones disponibles dependen del marco de trabajo de destino de la aplicación.
 
 > [!WARNING]
-> Al quitar todas las restricciones de tipo, se puede introducir un agujero de seguridad dentro de la aplicación. Al utilizar este mecanismo, asegúrese de que la **not** aplicación no usa `DataSet` o `DataTable` para leer la entrada que no es de confianza. Para obtener más información, vea [CVE-2020-1147](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2020-1147) y la sección siguiente titulada [seguridad con respecto a la entrada que no es de confianza](#swr).
+> Al quitar todas las restricciones de tipo, se puede introducir un agujero de seguridad dentro de la aplicación. Al utilizar este mecanismo, asegúrese de que la **not** aplicación no usa `DataSet` o `DataTable` para leer la entrada que no es de confianza. Para obtener más información, vea [CVE-2020-1147](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2020-1147) y la sección siguiente titulada [seguridad con respecto a la entrada que no es de confianza](#swr).
 
 #### <a name="through-appcontext-configuration-net-framework-46---48-net-core-21-and-later-net-50-and-later"></a>A través de la configuración de AppContext (.NET Framework 4,6-4,8, .NET Core 2,1 y versiones posteriores, .NET 5,0 y versiones posteriores)
 
@@ -269,10 +270,10 @@ Si `AppContext` no está disponible, las comprobaciones de limitación de tipos 
 
 | Tipo  |  Value |
 |---|---|
-| **Clave del Registro** | `HKLM\SOFTWARE\Microsoft\.NETFramework\AppContext` |
+| **Clave del registro** | `HKLM\SOFTWARE\Microsoft\.NETFramework\AppContext` |
 | **Nombre del valor** | `Switch.System.Data.AllowArbitraryDataSetTypeInstantiation` |
 | **Tipo de valor** | `REG_SZ` |
-| **Datos de valor** | `true` |
+| **Datos del valor** | `true` |
 
 En un sistema operativo de 64 bits, es necesario agregar este valor para la clave de 64 bits (mostrada anteriormente) y la clave de 32 bits. La clave de 32 bits se encuentra en `HKLM\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\AppContext` .
 
@@ -463,7 +464,8 @@ public class MyClass
 
 La deserialización de un `DataSet` `DataTable` objeto o de este modo desde un BLOB JSON que no es de confianza no es segura. Este patrón es vulnerable a ataques de denegación de servicio. Este tipo de ataque podría bloquear la aplicación o representar que no responde.
 
-**Nota**: Microsoft no garantiza ni admite la implementación de bibliotecas de terceros como _Newtonsoft.Jsen_. Esta información se proporciona para la integridad y es precisa en el momento de redactar este documento.
+> [!NOTE]
+> Microsoft no garantiza ni admite la implementación de bibliotecas de terceros como _Newtonsoft.Jsen_. Esta información se proporciona para la integridad y es precisa en el momento de redactar este documento.
 
 ## <a name="deserialize-a-dataset-or-datatable-via-binaryformatter"></a>Deserializar un conjunto de DataSet o DataTable a través de BinaryFormatter
 
