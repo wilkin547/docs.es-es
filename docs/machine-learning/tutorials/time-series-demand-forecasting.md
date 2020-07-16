@@ -6,11 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: 4ea002b690de877fd6f955c05eb8235f46e0a870
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: d93bdee8d5a057be0f405fe4334d7edbdc0649ec
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803226"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174411"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>Tutorial: Previsión de la demanda de servicio de alquiler de bicicletas con análisis de serie temporal y ML.NET
 
@@ -32,7 +33,7 @@ En este tutorial aprenderá a:
 
 ## <a name="time-series-forecasting-sample-overview"></a>Información general de un ejemplo de previsión de serie temporal
 
-Este ejemplo es una **aplicación de consola de .NET Core de C#** que prevé la demanda de alquileres de bicicletas con un algoritmo de análisis de serie temporal de variable única conocido como análisis de un solo espectro. El código de este ejemplo se puede encontrar en el [repositorio dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand) en GitHub.
+Este ejemplo es una **aplicación de consola de .NET Core de C#** que prevé la demanda de alquileres de bicicletas con un algoritmo de análisis de serie temporal de variable única conocido como "análisis de un solo espectro". El código de este ejemplo se puede encontrar en el [repositorio dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand) en GitHub.
 
 ## <a name="understand-the-problem"></a>Entender el problema
 

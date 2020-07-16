@@ -3,13 +3,15 @@ title: Tecnologías web comunes del lado cliente
 description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Tecnologías web comunes del lado cliente
 author: ardalis
 ms.author: wiwagn
+no-loc:
+- Blazor
 ms.date: 12/04/2019
-ms.openlocfilehash: 2809c8539b42e8e2250039dceed1389b3cbdcd8a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e8ea035c491fad39d2932572255a19c7c1493418
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77449379"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174359"
 ---
 # <a name="common-client-side-web-technologies"></a>Tecnologías web comunes del lado cliente
 

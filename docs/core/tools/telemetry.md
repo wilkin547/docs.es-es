@@ -3,12 +3,12 @@ title: Telemetría del SDK de .NET Core
 description: Descubra las características de telemetría del SDK de .NET Core que recopilan información de uso para el análisis, qué datos se recopilan y cómo deshabilitarlas.
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: a79b791abc99331ff39f5e281ee0fdc62b258989
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 0917dae23588ccd1809252aaf484c397e84561c7
+ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507287"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226574"
 ---
 # <a name="net-core-sdk-telemetry"></a>Telemetría del SDK de .NET Core
 
@@ -52,7 +52,7 @@ Para deshabilitar este mensaje y el mensaje de bienvenida de .NET Core, establez
 
 La característica de telemetría no recopila datos personales, como direcciones de correo electrónico o nombres de usuario. No examina el código ni extrae datos de nivel de proyecto, como el nombre, el repositorio o el autor. Los datos se envían de forma segura a los servidores de Microsoft con tecnología de [Azure Monitor](https://azure.microsoft.com/services/monitor/), se conservan bajo acceso restringido y se publican bajo controles de seguridad estrictos de sistemas seguros de [Azure Storage](https://azure.microsoft.com/services/storage/).
 
-La protección de su privacidad es importante para nosotros. Si sospecha que la telemetría está recopilando datos confidenciales o que los datos se están tratando de forma no segura o inapropiada, informe de un problema en el repositorio de [dotnet/cli](https://github.com/dotnet/cli/issues) o envíenos un correo electrónico a [dotnet@microsoft.com](mailto:dotnet@microsoft.com) para que lo investiguemos.
+La protección de su privacidad es importante para nosotros. Si sospecha que la telemetría está recopilando datos confidenciales o que los datos se están tratando de forma no segura o inapropiada, informe de un problema en el repositorio de [dotnet/cli](https://github.com/dotnet/sdk/issues) o envíenos un correo electrónico a [dotnet@microsoft.com](mailto:dotnet@microsoft.com) para que lo investiguemos.
 
 La característica de telemetría recopila los siguientes datos:
 
@@ -139,4 +139,4 @@ Por este motivo, las compilaciones personalizadas del SDK de .NET Core no deben 
 ## <a name="see-also"></a>Vea también
 
 - [Telemetría de la CLI de .NET Core: datos del segundo trimestre de 2019](https://dotnet.microsoft.com/platform/telemetry/dotnet-core-cli-2019q2)
-- [Fuente de referencia de telemetría (repositorio dotnet/cli)](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry)
+- [Fuente de referencia de telemetría (repositorio dotnet/sdk)](https://github.com/dotnet/sdk/tree/master/src/Cli/dotnet/Telemetry)

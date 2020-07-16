@@ -2,12 +2,12 @@
 title: Novedades de C# 7.3
 description: Información general sobre las nuevas características en C# 7.3
 ms.date: 05/16/2018
-ms.openlocfilehash: ba4cea302d91b395e88940d087fcaed306920840
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cd8f554516fb5078d9d2ed1eec787f36e8f4c7a7
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74204551"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174762"
 ---
 # <a name="whats-new-in-c-73"></a>Novedades de C# 7.3
 
@@ -141,7 +141,7 @@ El segundo tema proporciona las mejoras a las características del lenguaje. Est
 
 ### <a name="tuples-support--and-"></a>Compatibilidad con tuplas `==` y `!=`
 
-Los tipos de tupla de C# ahora admiten `==` y `!=`. Para más información, vea la sección que trata la [igualdad](../tuples.md#equality-and-tuples) en el artículo sobre [tuplas](../tuples.md).
+Los tipos de tupla de C# ahora admiten `==` y `!=`. Si desea más información, consulte la sección [Igualdad de tupla](../language-reference/builtin-types/value-tuples.md#tuple-equality) del artículo [Tipos de tupla](../language-reference/builtin-types/value-tuples.md).
 
 ### <a name="attach-attributes-to-the-backing-fields-for-auto-implemented-properties"></a>Asociación de atributos a los campos de respaldo para las propiedades autoimplementadas
 

@@ -2,12 +2,12 @@
 title: Novedades de C# 7.1
 description: Información general sobre las nuevas características en C# 7.1.
 ms.date: 04/09/2019
-ms.openlocfilehash: 5d2d6f51b6422f5b4db5c6bd275b5ffce1f695f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fe6e49eb01e24a27bc7970900c05150378ab194a
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398356"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174775"
 ---
 # <a name="whats-new-in-c-71"></a>Novedades de C# 7.1
 
@@ -106,7 +106,7 @@ string label = "Colors used in the map";
 var pair = (count, label); // element names are "count" and "label"
 ```
 
-Encontrará más información sobre esta característica en el artículo sobre [tuplas](../tuples.md).
+Encontrará más información sobre esta característica en el artículo sobre [tipos de tuplas](../language-reference/builtin-types/value-tuples.md).
 
 ## <a name="pattern-matching-on-generic-type-parameters"></a>Coincidencia de patrones en parámetros de tipo genérico
 

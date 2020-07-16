@@ -1,13 +1,16 @@
 ---
 title: Elección entre tipos de tupla y anónimos
 description: Obtenga información sobre cuándo es adecuado elegir entre los tipos anónimos y sobre los tipos de tupla.
+author: IEvangelist
+ms.author: dapine
 ms.date: 07/01/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: 24ab770d709b9f3968f4c7fe4b01eb0729dbd751
-ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
+ms.openlocfilehash: 9c186133a639faf187c89d872856d860a20f5a2d
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85853990"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174223"
 ---
 # <a name="choosing-between-anonymous-and-tuple-types"></a>Elección entre tipos de tupla y anónimos
 
@@ -87,12 +90,7 @@ foreach (var (formatted, ticks) in
 }
 ```
 
-C# proporciona compatibilidad de lenguaje para las tuplas con el tipo <xref:System.ValueTuple>, además de semántica para:
-
-- [Asignación de tuplas](../../csharp/tuples.md#assignment-and-tuples)
-- [Deconstrucción de tuplas](../../csharp/deconstruct.md) (no está limitada a las tuplas)
-- [Comprobaciones de igualdad de tuplas](../../csharp/tuples.md#equality-and-tuples)
-- [Inicializadores de proyección de tupla](../../csharp/tuples.md#tuple-projection-initializers)
+Para obtener más información sobre las tuplas, consulte [Tipos de tupla (referencia de C#)](../../csharp/language-reference/builtin-types/value-tuples.md) o [Tuplas (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/tuples.md).
 
 Todos los ejemplos anteriores son equivalentes funcionalmente; sin embargo, hay pequeñas diferencias en cuanto a su usabilidad y sus implementaciones subyacentes.
 
@@ -102,7 +100,7 @@ Es recomendable que use siempre <xref:System.ValueTuple> en lugar de <xref:Syste
 
 ### <a name="key-differences"></a>Principales diferencias
 
-| NOMBRE                     | Modificador de acceso | Tipo     | Nombre de propiedad personalizada | Compatibilidad con la deconstrucción | Compatibilidad con árboles de expresión |
+| NOMBRE                     | Modificador de acceso | Tipo     | Nombre del miembro personalizado | Compatibilidad con la deconstrucción | Compatibilidad con árboles de expresión |
 |--------------------------|-----------------|----------|----------------------|------------------------|-------------------------|
 | Tipos anónimos          | `internal`      | `class`  | ✔️                   | ❌                     | ✔️                     |
 | <xref:System.Tuple>      | `public`        | `class`  | ❌                   | ❌                     | ✔️                     |
@@ -124,5 +122,6 @@ Al elegir entre los tipos de tupla y los anónimos, como desarrollador es necesa
 
 - [Tipos anónimos (Guía de programación de C#)](../../csharp/programming-guide/classes-and-structs/anonymous-types.md).
 - [Árboles de expresión](../../csharp/expression-trees.md)
-- [Tipos de tupla](../../csharp/tuples.md)
+- [Tipos de tupla (referencia de C#)](../../csharp/language-reference/builtin-types/value-tuples.md)
+- [Tuplas (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/tuples.md)
 - [Instrucciones de diseño de tipos](../design-guidelines/type.md)

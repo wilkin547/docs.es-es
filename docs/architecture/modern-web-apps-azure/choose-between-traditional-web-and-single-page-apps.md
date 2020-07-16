@@ -3,13 +3,16 @@ title: Elección entre aplicaciones web tradicionales y aplicaciones de página 
 description: Obtenga información sobre cómo elegir entre aplicaciones web tradicionales y aplicaciones de página única (SPA) al crear aplicaciones web.
 author: ardalis
 ms.author: wiwagn
+no-loc:
+- Blazor
+- WebAssembly
 ms.date: 12/04/2019
-ms.openlocfilehash: 0aef42b78114a11c70456cb3122d3dcb5143f983
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 4fe889fe86d96a5b2ffa5bd879d2ec1801a3cf20
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662711"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174372"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Elección entre aplicaciones web tradicionales y aplicaciones de página única (SPA)
 
@@ -38,7 +41,7 @@ Además, los marcos de SPA requieren mayores conocimientos de arquitectura y seg
 
 Las mejoras en la experiencia del usuario que posibilita el enfoque de SPA deben ponderarse con estas consideraciones.
 
-## <a name="blazor"></a>Blazor
+## Blazor
 
 ASP.NET Core 3.0 presenta un nuevo modelo para crear interfaces de usuario detalladas, interactivas y que admiten composición, denominadas Blazor. El lado servidor de Blazor permite a los desarrolladores crear una interfaz de usuario con C# y Razor en el servidor, así como la conexión interactiva de la interfaz de usuario al explorador en tiempo real mediante una conexión de SignalR persistente.
 
@@ -52,7 +55,7 @@ Considere la posibilidad de compilar la aplicación web con Blazor en los casos 
 
 - Su equipo está más familiarizado con el desarrollo de .NET que con el desarrollo de JavaScript o TypeScript.
 
-Para más información sobre Blazor, consulte el artículo de [introducción a Blazor](https://blazor.net/docs/get-started.html).
+Para obtener más información sobre Blazor, consulte [Introducción a Blazor](https://blazor.net/docs/get-started.html).
 
 ## <a name="when-to-choose-traditional-web-apps"></a>Casos en los que elegir aplicaciones web tradicionales
 
@@ -111,7 +114,7 @@ Muchos desarrolladores son más productivos con .NET y Razor que con los lenguaj
 
 ## <a name="decision-table"></a>Tabla de decisiones
 
-En siguiente la tabla de decisiones se resumen algunos de los factores básicos que tener en cuenta al elegir entre una aplicación web tradicional, una SPA y una aplicación de Blazor.
+En la siguiente tabla de decisiones se resumen algunos de los factores básicos que tener en cuenta al elegir entre una aplicación web tradicional, una SPA y una aplicación de Blazor.
 
 | **Factor**                                           | **Aplicación web tradicional** | **Aplicación de una sola página** | **Aplicación de Blazor**  |
 | ---------------------------------------------------- | ----------------------- | --------------------------- | --------------- |

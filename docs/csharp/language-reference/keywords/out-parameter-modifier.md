@@ -4,12 +4,12 @@ ms.date: 03/19/2020
 helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
-ms.openlocfilehash: 57308992268e1285cfeb82b28e2abf213e7a831b
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: 30946c85d2b64ead3f42e03da61108fa5b367779
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805859"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174814"
 ---
 # <a name="out-parameter-modifier-c-reference"></a>Modificador del parámetro out (Referencia de C#)
 
@@ -56,7 +56,7 @@ Además, los [métodos de extensión](../../programming-guide/classes-and-struct
 
 ## <a name="declaring-out-parameters"></a>Declaración de parámetros `out`
 
-Declarar un método con el argumento `out` es una solución alternativa clásica para devolver varios valores. A partir de C# 7.0, considere las [tuplas](../../tuples.md) para escenarios similares. En el ejemplo siguiente, se utiliza `out` para devolver tres variables con una única llamada al método. El tercer argumento se asigna a NULL. Esto permite que los métodos devuelvan valores opcionalmente.  
+Declarar un método con el argumento `out` es una solución alternativa clásica para devolver varios valores. A partir de C# 7.0, considere las [tuplas de valor](../builtin-types/value-tuples.md) para escenarios similares. En el ejemplo siguiente, se utiliza `out` para devolver tres variables con una única llamada al método. El tercer argumento se asigna a NULL. Esto permite que los métodos devuelvan valores opcionalmente.  
   
 [!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#3)]  
 

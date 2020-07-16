@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 7dd3e544dc03fb94577892b42aecd1a15a6621ac
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: 011ef8b570a0bbbc38ec71df4286c3b08c3109da
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80110924"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174788"
 ---
 # <a name="equality-operators-c-reference"></a>Operadores de igualdad (referencia de C#)
 
@@ -43,7 +43,7 @@ Dos operandos del mismo tipo [enum](../builtin-types/enum.md) son iguales si los
 
 Los tipos [struct](../builtin-types/struct.md) definidos por el usuario no son compatibles con el operador `==` de forma predeterminada. Para admitir el operador `==`, un elemento struct definido por el usuario debe [sobrecargarlo](operator-overloading.md).
 
-A partir de C# 7.3, los operadores `==` y `!=` son compatibles con las [tuplas](../../tuples.md) de C#. Para obtener más información, vea la sección [Igualdad y tuplas](../../tuples.md#equality-and-tuples) del artículo [Tipos de tupla de C#](../../tuples.md).
+A partir de C# 7.3, los operadores `==` y `!=` son compatibles con las [tuplas](../builtin-types/value-tuples.md) de C#. Si desea más información, consulte la sección [Igualdad de tupla](../builtin-types/value-tuples.md#tuple-equality) del artículo [Tipos de tupla](../builtin-types/value-tuples.md).
 
 ### <a name="reference-types-equality"></a>Igualdad entre tipos de referencia
 

@@ -2,17 +2,18 @@
 title: Programación orientada a objetos (C#)
 ms.date: 05/13/2020
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 98dd5147ab54375ec851ccd9b981a68098a53270
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 83140a9dbd16f60f04f50ba18c71099cdd862f15
+ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241895"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226639"
 ---
 # <a name="object-oriented-programming-c"></a>Programación orientada a objetos (C#)
 
-C# proporciona compatibilidad completa para la programación orientada a objetos incluida la encapsulación, la herencia y el polimorfismo.
+C# proporciona compatibilidad completa para la programación orientada a objetos incluida la abstracción, la encapsulación, la herencia y el polimorfismo.
 
+- La *abstracción* significa ocultar los detalles innecesarios de los consumidores de tipos.
 - La *encapsulación* significa que un grupo de propiedades, métodos y otros miembros relacionados se tratan como una sola unidad u objeto.
 - La *herencia* describe la posibilidad de crear nuevas clases basadas en una clase existente.
 - El *polimorfismo* significa que puede tener múltiples clases que se pueden usar de manera intercambiable, aunque cada clase implementa las mismas propiedades o los mismos métodos de maneras diferentes.
@@ -29,7 +30,7 @@ class SampleClass
 }
 ```
 
-En C# también se proporcionan tipos denominados *estructuras* que son útiles cuando no se necesita compatibilidad con la herencia o el polimorfismo.
+En C# también se proporcionan tipos denominados *estructuras* que son útiles cuando no se necesita compatibilidad con la herencia o el polimorfismo. Para obtener más información, consulte [Selección entre class y struct](../../../standard/design-guidelines/choosing-between-class-and-struct.md).
 
 Para definir una estructura:
 

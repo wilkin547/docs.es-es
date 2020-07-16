@@ -3,13 +3,16 @@ title: Características de las aplicaciones web modernas
 description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Características de las aplicaciones web modernas
 author: ardalis
 ms.author: wiwagn
+no-loc:
+- Blazor
+- WebAssembly
 ms.date: 12/04/2019
-ms.openlocfilehash: d70fa54adeb505fd37807399402281dfda67cf52
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fd6658a6143e132d488660d1aa4a35e427ba2d84
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77451569"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174801"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Características de las aplicaciones web modernas
 
@@ -67,7 +70,7 @@ Las aplicaciones de ASP.NET Core se pueden escribir mediante interfaces de líne
 
 Además de ASP.NET Core, ASP.NET 4.x tradicional sigue siendo una plataforma sólida y confiable para compilar aplicaciones web. ASP.NET es compatible con los modelos de desarrollo de MVC y API web, así como los formularios Web Forms, que resultan muy adecuados para el desarrollo de aplicaciones basadas en páginas y ofrecen un ecosistema enriquecido de componentes de terceros. Desde hace tiempo, Microsoft Azure ofrece una gran compatibilidad con las aplicaciones de ASP.NET 4.x y muchos desarrolladores están familiarizados con esta plataforma.
 
-## <a name="blazor"></a>Blazor
+## Blazor
 
 Blazor se incluye con ASP.NET Core 3.0 y versiones posteriores. Proporciona un nuevo mecanismo para compilar aplicaciones cliente web interactivas enriquecidas con Razor, C# y ASP.NET Core. Asimismo, ofrece otra solución que debe tener en cuenta a la hora de desarrollar aplicaciones web modernas. Hay dos versiones de Blazor que se deben tener en cuenta: lado servidor y lado cliente.
 
@@ -81,7 +84,7 @@ Blazor lado cliente se publicará en 2020 y eliminará la necesidad de represent
 >   <https://docs.microsoft.com/aspnet/core/>
 > - **Pruebas y depuración en ASP.NET Core**  
 >   <https://docs.microsoft.com/aspnet/core/testing/>
-> - **Blazor: introducción**  
+> - **Blazor - Introducción**  
 >   <https://blazor.net/docs/get-started.html>
 
 >[!div class="step-by-step"]

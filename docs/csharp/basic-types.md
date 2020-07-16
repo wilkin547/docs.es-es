@@ -4,12 +4,12 @@ description: Obtenga información sobre los tipos principales (valores numérico
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 468482bd1b4f1a5835df9d66ee483edc33c28f61
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 93a0023969bb8bb089922a9e30fbf599eddc7203
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202207"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174184"
 ---
 # <a name="types-variables-and-values"></a>Tipos, variables y valores
 
@@ -74,7 +74,7 @@ Como se ha mencionado anteriormente, puede asignar implícitamente un tipo a una
   
 En algunos casos, resulta conveniente crear un tipo con nombre para conjuntos sencillos de valores relacionados que no quiera almacenar ni pasar fuera de los límites del método. Puede crear *tipos anónimos* para este fin. Para obtener más información, consulte [Tipos anónimos (Guía de programación de C#)](programming-guide/classes-and-structs/anonymous-types.md).
 
-Es habitual querer devolver más de un valor de un método. Puede crear *tipos de tupla* que devuelven varios valores en una única llamada de método. Para más información, consulte [Tuplas](tuples.md).
+Es habitual querer devolver más de un valor de un método. Puede crear *tipos de tupla* que devuelven varios valores en una única llamada de método. Para obtener más información, consulte [Tipos de tupla](language-reference/builtin-types/value-tuples.md).
 
 ## <a name="the-common-type-system"></a>Common Type System
 

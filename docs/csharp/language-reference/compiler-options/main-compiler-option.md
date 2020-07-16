@@ -8,60 +8,63 @@ helpviewer_keywords:
 - main compiler option [C#]
 - /main compiler option [C#]
 ms.assetid: 975cf4d5-36ac-4530-826c-4aad0c7f2049
-ms.openlocfilehash: 7d3cfce474023907eda0bc40b692e4bbb65ffb96
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 1de3d51953b632e3881db76202b63d3f287b39fe
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83802844"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051875"
 ---
 # <a name="-main-c-compiler-options"></a>-main (Opciones del compilador de C#)
-Esta opción especifica la clase que contiene el punto de entrada al programa si hay más de una clase que contenga un método **Main**.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```console  
--main:class  
-```  
-  
-## <a name="arguments"></a>Argumentos  
+
+Esta opción especifica la clase que contiene el punto de entrada al programa si hay más de una clase que contenga un método **Main**.
+
+## <a name="syntax"></a>Sintaxis
+
+```console
+-main:class
+```
+
+## <a name="arguments"></a>Argumentos
  `class`  
  Tipo que contiene el método **Main**.  
  El nombre de clase proporcionado debe ser completo: debe incluir el espacio de nombres completo que contiene la clase, seguido del nombre de clase. Por ejemplo, cuando el método `Main` se encuentra dentro de la clase `Program` en el espacio de nombres `MyApplication.Core`, la opción del compilador tiene que ser `-main:MyApplication.Core.Program`.
-  
-## <a name="remarks"></a>Comentarios  
- Si la compilación incluye más de un tipo con un método [Main](../../programming-guide/main-and-command-args/index.md), puede especificar el tipo que contiene el método **Main** que quiere usar como punto de entrada en el programa.  
-  
- Esta opción se usa al compilar un archivo .exe.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
-  
-1. Abra la página **Propiedades** del proyecto.  
-  
-2. Haga clic en la página de propiedades **Aplicación**.  
-  
-3. Modifique la propiedad **Objeto de inicio**.  
-  
-     Para establecer esta opción del compilador mediante programación, vea <xref:VSLangProj80.ProjectProperties3.StartupObject%2A>.  
-  
-### <a name="to-set-this-compiler-option-by-manually-editing-the-csproj-file"></a>Para establecer esta opción del compilador editando manualmente el archivo. csproj
-  
+
+## <a name="remarks"></a>Comentarios
+
+Si la compilación incluye más de un tipo con un método [Main](../../programming-guide/main-and-command-args/index.md), puede especificar el tipo que contiene el método **Main** que quiere usar como punto de entrada en el programa.
+
+Esta opción se usa al compilar un archivo *.exe*.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
+
+1. Abra la página **Propiedades** del proyecto.
+
+2. Haga clic en la página de propiedades **Aplicación**.
+
+3. Modifique la propiedad **Objeto de inicio**.
+
+    Para establecer esta opción del compilador mediante programación, vea <xref:VSLangProj80.ProjectProperties3.StartupObject%2A>.
+
+### <a name="to-set-this-compiler-option-by-manually-editing-the-csproj-file"></a>Para establecer esta opción del compilador editando manualmente el archivo *.csproj*
+
 Puede establecer esta opción editando el archivo. csproj y agregando un elemento `StartupObject` dentro de la sección `PropertyGroup`. Por ejemplo:
 
-```
+```xml
   <PropertyGroup>
     ...
     <StartupObject>MyApplication.Core.Program</StartupObject>
   </PropertyGroup>
 ```
 
-## <a name="example"></a>Ejemplo  
- Compile `t2.cs` y `t3.cs` y especifique que el método **Main** se encuentra en `Test2`:  
-  
-```console  
-csc t2.cs t3.cs -main:Test2  
-```  
-  
+## <a name="example"></a>Ejemplo
+
+Compile `t2.cs` y `t3.cs` y especifique que el método **Main** se encuentra en `Test2`:
+
+```console
+csc t2.cs t3.cs -main:Test2
+```
+
 ## <a name="see-also"></a>Vea también
 
 - [Opciones del compilador de C#](./index.md)
