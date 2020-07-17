@@ -35,7 +35,7 @@
         - name: Crear el modelo de objetos
           href: creating-the-object-model.md
           items:
-            - name: 'Procedimiento para generar el modelo de objetos en Visual Basic o C#'
+            - name: Procedimiento para generar el modelo de objetos en Visual Basic o C#
               href: how-to-generate-the-object-model-in-visual-basic-or-csharp.md
             - name: Procedimiento para generar el modelo de objetos como un archivo externo
               href: how-to-generate-the-object-model-as-an-external-file.md

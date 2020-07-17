@@ -289,11 +289,11 @@
               href: how-to-change-the-value-of-an-existing-setting-at-design-time.md
             - name: Cómo cambiar el valor de una opción de configuración entre sesiones de aplicación
               href: how-to-change-the-value-of-a-setting-between-application-sessions.md
-            - name: 'Cómo leer valores de configuración en tiempo de ejecución con C#'
+            - name: Cómo leer valores de configuración en tiempo de ejecución con C#
               href: how-to-read-settings-at-run-time-with-csharp.md
-            - name: 'Cómo escribir valores de configuración de usuario en tiempo de ejecución con C#'
+            - name: Cómo escribir valores de configuración de usuario en tiempo de ejecución con C#
               href: how-to-write-user-settings-at-run-time-with-csharp.md
-            - name: 'Cómo agregar varios conjuntos de valores de configuración a una aplicación en C#'
+            - name: Cómo agregar varios conjuntos de valores de configuración a una aplicación en C#
               href: how-to-add-multiple-sets-of-settings-to-your-application-in-csharp.md
         - name: Procedimiento para crear la configuración de la aplicación
           href: how-to-create-application-settings.md
