@@ -480,7 +480,7 @@
         - name: ICorProfilerModuleEnum (Interfaz)
           href: icorprofilermoduleenum-interface.md
           items:
-            - name: Clone (Método)
+            - name: Método Clone
               href: icorprofilermoduleenum-clone-method.md
             - name: GetCount (Método)
               href: icorprofilermoduleenum-getcount-method.md
@@ -488,12 +488,12 @@
               href: icorprofilermoduleenum-next-method.md
             - name: Reset (Método)
               href: icorprofilermoduleenum-reset-method.md
-            - name: Skip (Método)
+            - name: Método Skip
               href: icorprofilermoduleenum-skip-method.md
         - name: ICorProfilerObjectEnum (Interfaz)
           href: icorprofilerobjectenum-interface.md
           items:
-            - name: Clone (Método)
+            - name: Método Clone
               href: icorprofilerobjectenum-clone-method.md
             - name: GetCount (Método)
               href: icorprofilerobjectenum-getcount-method.md
@@ -501,7 +501,7 @@
               href: icorprofilerobjectenum-next-method.md
             - name: Reset (Método)
               href: icorprofilerobjectenum-reset-method.md
-            - name: Skip (Método)
+            - name: Método Skip
               href: icorprofilerobjectenum-skip-method.md
         - name: ICorProfilerThreadEnum (Interfaz)
           href: icorprofilerthreadenum-interface.md

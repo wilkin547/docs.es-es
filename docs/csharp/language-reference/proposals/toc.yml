@@ -1,6 +1,6 @@
 - name: Especificaciones de las características más recientes
   items:
-    - name: 'Propuestas de especificación de C# 7.0'
+    - name: Propuestas de especificación de C# 7.0
       items:
         - name: Detección de patrones
           href: ../../../../_csharplang/proposals/csharp-7.0/pattern-matching.md
@@ -14,7 +14,7 @@
           href: ../../../../_csharplang/proposals/csharp-7.0/binary-literals.md
         - name: Separadores de dígitos
           href: ../../../../_csharplang/proposals/csharp-7.0/digit-separators.md
-    - name: 'Propuestas de especificación de C# 7.1'
+    - name: Propuestas de especificación de C# 7.1
       items:
         - name: Método async main
           href: ../../../../_csharplang/proposals/csharp-7.1/async-main.md
@@ -24,7 +24,7 @@
           href: ../../../../_csharplang/proposals/csharp-7.1/infer-tuple-names.md
         - name: Coincidencia de patrones con genéricos
           href: ../../../../_csharplang/proposals/csharp-7.1/generics-pattern-match.md
-    - name: 'Propuestas de especificación de C# 7.2'
+    - name: Propuestas de especificación de C# 7.2
       items:
         - name: Referencias readonly
           href: ../../../../_csharplang/proposals/csharp-7.2/readonly-ref.md
@@ -38,7 +38,7 @@
           href: ../../../../_csharplang/proposals/csharp-7.2/conditional-ref.md
         - name: Separador de dígito inicial
           href: ../../../../_csharplang/proposals/csharp-7.2/leading-separator.md
-    - name: 'Propuestas de especificación de C# 7.3'
+    - name: Propuestas de especificación de C# 7.3
       items:
         - name: Restricciones de tipo genérico no administrado
           href: ../../../../_csharplang/proposals/csharp-7.3/blittable.md
@@ -58,7 +58,7 @@
           href: ../../../../_csharplang/proposals/csharp-7.3/tuple-equality.md
         - name: Mejoras en los candidatos de sobrecarga
           href: ../../../../_csharplang/proposals/csharp-7.3/improved-overload-candidates.md
-    - name: 'Propuesta de especificación de C# 8.0'
+    - name: Propuesta de especificación de C# 8.0
       items:
         - name: 'Tipos de referencia que aceptan valores NULL: propuesta'
           href: ../../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md

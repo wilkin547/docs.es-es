@@ -1,7 +1,7 @@
 - name: WCF Data Services 4.5
   href: index.md
   items:
-    - name: Información general
+    - name: Introducción
       href: wcf-data-services-overview.md
     - name: Introducción
       href: getting-started-with-wcf-data-services.md

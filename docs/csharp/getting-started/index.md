@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual C#, getting started
 - getting started, Visual C#
 ms.date: 04/05/2019
-ms.openlocfilehash: aff810aa7ba533682f9976fbb59ef4d7ec43ca58
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: baa21908b85130f8a0dd992b10cdc95c6e42912e
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75713919"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86415911"
 ---
 # <a name="get-started-with-c"></a>Introducción a C\#
 
@@ -30,7 +30,7 @@ Los siguientes temas se encuentran disponibles:
 
 - [Creación de una biblioteca de clases con C# y .NET Standard en Visual Studio](../../core/tutorials/library-with-visual-studio.md)
 
-   Una biblioteca de clases permite definir los tipos y miembros de tipo que se pueden llamar desde otra aplicación. Este tema le permite crear una biblioteca de clases con un único método que determina si una cadena comienza con un carácter en mayúscula. Una vez que haya terminado de compilar la biblioteca, puede desarrollar una [prueba unitaria](../../core/tutorials/testing-library-with-visual-studio.md) para asegurarse de que funciona según lo previsto y, a continuación, puede hacer que esté disponible para [aplicaciones que desean usarla](../../core/tutorials/consuming-library-with-visual-studio.md).
+   Una biblioteca de clases permite definir los tipos y miembros de tipo que se pueden llamar desde otra aplicación. Este tema le permite crear una biblioteca de clases con un único método que determina si una cadena comienza con un carácter en mayúscula. Una vez que haya terminado de compilar la biblioteca, puede desarrollar una [prueba unitaria](../../core/tutorials/testing-library-with-visual-studio.md) para asegurarse de que funciona según lo previsto y, a continuación, puede hacer que esté disponible para [aplicaciones que desean usarla](/nuget/quickstart/install-and-use-a-package-in-visual-studio).
 
 - [Introducción a C# y Visual Studio Code](../../core/tutorials/with-visual-studio-code.md)
 
