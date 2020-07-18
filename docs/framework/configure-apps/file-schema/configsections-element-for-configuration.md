@@ -7,12 +7,12 @@ helpviewer_keywords:
 - configSections Element
 - <configSections> Element
 ms.assetid: 9f963c1b-dc3f-4220-a8b6-2dd7a5a8e039
-ms.openlocfilehash: 55116f1fe6fdffffea8f26d8a4de783c7305ada3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1e4bb7a7cfb0b140ca6d13c162708c3c30bd496d
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79155354"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441692"
 ---
 # <a name="configsections-element-for-configuration"></a>Elemento \<configSections> para \<configuration>
 
@@ -22,7 +22,7 @@ Contiene la sección de configuración y las declaraciones de espacio de nombres
 
 ## <a name="attributes"></a>Atributos
 
-None
+Ninguno
 
 ## <a name="parent-element"></a>Elemento primario
 
@@ -36,10 +36,8 @@ None
 | --- | ----------- |
 | [**\<section>**](section-element.md) | Contiene una declaración de sección de configuración. |
 | [**\<sectionGroup>**](sectiongroup-element-for-configsections.md) | Define un espacio de nombres para las secciones de configuración. |
-| [**\<remove>**](remove-element-for-configsections.md) | Quita una sección o grupo de sección predefinido. |
-| [**\<clear>**](clear-element-for-configsections.md) | Borra todas las secciones y grupos de sección definidos previamente. |
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Si este elemento se encuentra en un archivo de configuración, debe ser el primer elemento secundario del **\<configuration>** elemento.
 
@@ -61,7 +59,7 @@ En el ejemplo siguiente se muestra cómo definir una sección de configuración 
 
 ## <a name="configuration-file"></a>Archivo de configuración
 
-Este elemento puede usarse en el archivo de configuración de la aplicación, el archivo de configuración del equipo (*Machine. config*) y los archivos *Web. config* que no están en el nivel de directorio de la aplicación.
+Este elemento puede usarse en el archivo de configuración de la aplicación, el archivo de configuración del equipo (*Machine.config*) y *Web.config* archivos que no están en el nivel de directorio de la aplicación.
 
 ## <a name="see-also"></a>Consulte también
 

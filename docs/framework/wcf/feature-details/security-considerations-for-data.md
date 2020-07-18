@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 8cb7ee2ea2418602d944c3c08cec2b9279dca3b9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 530bb54936f97f1d7460d63cfa316c760cbd449d
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601067"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441822"
 ---
 # <a name="security-considerations-for-data"></a>Consideraciones de seguridad para datos
 
@@ -284,7 +284,7 @@ Esta situación se puede evitar siendo consciente de los puntos siguientes:
 
 <xref:System.Runtime.Serialization.NetDataContractSerializer> es un motor de serialización que utiliza el acoplamiento apretado a los tipos. Es similar a <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> y <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>. Es decir, determina el tipo del que se crea una instancia leyendo el .NET Framework ensamblado y el nombre de tipo de los datos entrantes. Aunque forma parte de WCF, no hay ninguna manera proporcionada de conectarse a este motor de serialización; se debe escribir código personalizado. `NetDataContractSerializer`Se proporciona principalmente para facilitar la migración de .NET Framework comunicación remota a WCF. Para obtener más información, vea la sección correspondiente en [serialización y deserialización](serialization-and-deserialization.md).
 
-Dado que el propio mensaje puede indicar que se puede cargar cualquier tipo, el mecanismo <xref:System.Runtime.Serialization.NetDataContractSerializer> es inherentemente inseguro y debería utilizarse solo con datos que sean de confianza. Es posible hacerlo seguro escribiendo un enlazador de tipo seguro y que limite el tipo que solo permita que se carguen los tipos seguros (utilizar la propiedad <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> ).
+Dado que el propio mensaje puede indicar que se puede cargar cualquier tipo, el mecanismo <xref:System.Runtime.Serialization.NetDataContractSerializer> es inherentemente inseguro y debería utilizarse solo con datos que sean de confianza. Para obtener más información, vea la [Guía de seguridad BinaryFormatter](/dotnet/standard/serialization/binaryformatter-security-guide).
 
 Incluso cuando se utiliza con datos que son de confianza, los datos entrantes pueden especificar de forma insuficiente el tipo que se debe cargar, sobre todo si la propiedad <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> está establecida en <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple>. Cualquiera con acceso al directorio de la aplicación o a la caché global de ensamblados puede sustituir un tipo malintencionado en lugar del que se supone que debe cargarse. Garantice siempre la seguridad del directorio de su aplicación y de la caché global de ensamblados estableciendo correctamente los permisos.
 
@@ -382,7 +382,7 @@ WCF es un sistema flexible y personalizable. La mayor parte del contenido de est
 
 - En general, al utilizar cualquier componente que acepte una cuota, entienda sus implicaciones de seguridad y establézcalo en un valor seguro.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Xml.XmlDictionaryReader>

@@ -3,12 +3,12 @@ title: Guía de seguridad de DataSet y DataTable
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: f78b52ede4ec76599d761e5188f39c3e9dae2a4f
-ms.sourcegitcommit: 98548968e89739a37625e72ddbd535fe1e11121e
+ms.openlocfilehash: 2fbac625ae0049fc4c363977dc1d3fbcfb376025
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405297"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416205"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>Guía de seguridad de DataSet y DataTable
 
@@ -193,7 +193,7 @@ Una vez habilitado el modo de auditoría, puede usar _App.config_ para conectar 
 </configuration>
 ```
 
-Para obtener más información sobre `TraceSource` y `TraceListener` , vea el documento [Cómo: utilizar TraceSource y filtros con agentes de escucha de seguimiento](/dotnet/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners).
+Para obtener más información sobre `TraceSource` y `TraceListener` , vea el documento [Cómo: utilizar TraceSource y filtros con agentes de escucha de seguimiento](../../../debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md).
 
 > [!NOTE]
 > La ejecución de una aplicación en modo auditoría no está disponible en .NET Core o en .NET 5,0 y versiones posteriores.
@@ -236,7 +236,7 @@ En ASP.NET, el `<AppContextSwitchOverrides>` elemento no está disponible. En su
 </configuration>
 ```
 
-Para obtener más información, vea el [\<AppContextSwitchOverrides>](/dotnet/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element) elemento.
+Para obtener más información, vea el [\<AppContextSwitchOverrides>](../../../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) elemento.
 
 En .NET Core, .NET 5 y ASP.NET Core, este valor se controla mediante _runtimeconfig.jsen_, tal y como se muestra en el siguiente JSON:
 
@@ -268,7 +268,7 @@ Si `AppContext` no está disponible, las comprobaciones de limitación de tipos 
 * Un administrador debe configurar el registro.
 * El uso del registro es un cambio en todo el equipo y afectará a _todas las_ aplicaciones que se ejecutan en la máquina.
 
-| Tipo  |  Value |
+| Tipo  |  Valor |
 |---|---|
 | **Clave del registro** | `HKLM\SOFTWARE\Microsoft\.NETFramework\AppContext` |
 | **Nombre del valor** | `Switch.System.Data.AllowArbitraryDataSetTypeInstantiation` |
@@ -308,7 +308,7 @@ DataSet customers = new DataSet();
 adapter.Fill(customers, "Customers");
 ```
 
-(El ejemplo de código anterior forma parte de un ejemplo más grande que se encuentra en [rellenar un conjunto de elementos a partir de un DataAdapter](/dotnet/framework/data/adonet/populating-a-dataset-from-a-dataadapter)).
+(El ejemplo de código anterior forma parte de un ejemplo más grande que se encuentra en [rellenar un conjunto de elementos a partir de un DataAdapter](../populating-a-dataset-from-a-dataadapter.md)).
 
 > La mayoría de las aplicaciones pueden simplificar y suponer que su nivel de base de datos es de confianza. Sin embargo, si es el hábito del [modelado de amenazas](https://www.microsoft.com/securityengineering/sdl/threatmodeling) de las aplicaciones, puede considerar que el modelo de amenazas es un límite de confianza entre la aplicación (cliente) y el nivel de base de datos (servidor). El uso de la [autenticación mutua](/sql/relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections) o la [autenticación de AAD](/azure/azure-sql/database/authentication-aad-overview) entre el cliente y el servidor es una manera de ayudar a abordar los riesgos asociados a este. En el resto de esta sección se describe el posible resultado de que un cliente se conecte a un servidor que no es de confianza.
 
@@ -487,4 +487,4 @@ Considere la posibilidad de reemplazar el modelo de objetos para utilizar [Entit
 * Aporta [un amplio ecosistema](/ef/core/providers/) de proveedores de bases de datos para facilitar la creación de proyectos de consultas de base de datos a través de los modelos de objetos de Entity Framework.
 * Ofrece protecciones integradas al deserializar datos de orígenes que no son de confianza.
 
-En el caso de las aplicaciones que usan `.aspx` extremos SOAP, considere la posibilidad de cambiar esos puntos de conexión para usar [WCF](/dotnet/framework/wcf/). WCF es un sustituto más completo de `.asmx` servicios Web. Los extremos de WCF [se pueden exponer a través de SOAP](/dotnet/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients) para la compatibilidad con los autores de llamadas existentes.
+En el caso de las aplicaciones que usan `.aspx` extremos SOAP, considere la posibilidad de cambiar esos puntos de conexión para usar [WCF](/dotnet/framework/wcf/). WCF es un sustituto más completo de `.asmx` servicios Web. Los extremos de WCF [se pueden exponer a través de SOAP](../../../wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) para la compatibilidad con los autores de llamadas existentes.

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 1dc9f3d261738a6dff0339c094c7aba5e32680ee
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 7519dce8ed17bc623173f30222296ffaa42b4341
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200059"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416065"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Desarrolle e implemente WCF Data Services
 
@@ -63,14 +63,14 @@ Al desarrollar un servicio de datos de WCF como una aplicación de ASP.NET o un 
 
     - Este servidor no puede administrar flujos HTTP fragmentados, que el cliente WCF Data Services envía de forma predeterminada al obtener acceso a datos binarios grandes desde el servicio de datos. Para obtener más información, consulte [proveedor de streaming](streaming-provider-wcf-data-services.md).
 
-    - Este servidor tiene problemas para procesar el carácter de`.`punto () en una dirección URL, aunque este carácter es compatible con WCF Data Services en valores de clave.
+    - Este servidor tiene problemas para procesar el `.` carácter de punto () en una dirección URL, aunque este carácter es compatible con WCF Data Services en valores de clave.
 
     > [!TIP]
     > Aunque puede usar el Servidor de desarrollo de Visual Studio para probar los servicios de datos durante el desarrollo, debe probarlos de nuevo después de implementarlos en un servidor Web que ejecute IIS.
 
 3. **Entorno de desarrollo de Azure**
 
-     Azure Tools para Visual Studio incluye un conjunto integrado de herramientas para desarrollar servicios de Azure en Visual Studio. Con estas herramientas, puede desarrollar un servicio de datos que se puede implementar en Azure, y puede probar el servicio de datos en el equipo local antes de la implementación. Use estas herramientas cuando use Visual Studio para desarrollar un servicio de datos que se ejecute en la plataforma Azure. Para obtener información sobre la instalación de las herramientas, vea [Azure Tools para Visual Studio 2015](../../../azure/sdk/vs2015-install.md). Para obtener más información sobre el desarrollo de un servicio de datos que se ejecuta en Azure, consulte la entrada de blog sobre la [implementación de un servicio de oData en Azure](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure).
+     Azure Tools para Visual Studio incluye un conjunto integrado de herramientas para desarrollar servicios de Azure en Visual Studio. Con estas herramientas, puede desarrollar un servicio de datos que se puede implementar en Azure, y puede probar el servicio de datos en el equipo local antes de la implementación. Use estas herramientas cuando use Visual Studio para desarrollar un servicio de datos que se ejecute en la plataforma Azure. Para obtener información sobre la instalación de las herramientas, vea [Azure Tools para Visual Studio 2015](../../../azure/vs2015-install.md). Para obtener más información sobre el desarrollo de un servicio de datos que se ejecuta en Azure, consulte la entrada de blog sobre la [implementación de un servicio de oData en Azure](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure).
 
 ### <a name="development-tips"></a>Sugerencias de desarrollo
 
@@ -115,7 +115,7 @@ El servicio de datos de WCF proporciona flexibilidad al elegir el proceso que ho
 
 - **Azure**
 
-     Puede implementar un servicio de datos en Azure mediante [Azure Tools para Visual Studio](../../../azure/sdk/vs2015-install.md). Para obtener más información sobre la implementación de un servicio de datos en Azure, consulte [implementación de un servicio de oData en Azure](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure).
+     Puede implementar un servicio de datos en Azure mediante [Azure Tools para Visual Studio](../../../azure/vs2015-install.md). Para obtener más información sobre la implementación de un servicio de datos en Azure, consulte [implementación de un servicio de oData en Azure](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure).
 
 ### <a name="deployment-considerations"></a>Consideraciones de implementación
 

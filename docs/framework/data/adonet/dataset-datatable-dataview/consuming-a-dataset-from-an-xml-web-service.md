@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: 2c8924ee3374489dded7e819ecde8e4d9da750bb
-ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
+ms.openlocfilehash: e6dc32274cc3b0d7ec9d66a837a422c87fb2468b
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86374391"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416214"
 ---
 # <a name="consume-a-dataset-from-an-xml-web-service"></a>Consumir un conjunto de información desde un servicio Web XML
 
@@ -19,7 +19,7 @@ La arquitectura del <xref:System.Data.DataSet> tiene un diseño desconectado, en
  En el ejemplo siguiente se muestra cómo crear un servicio Web XML y un cliente que utiliza el **conjunto** de datos para transportar datos relacionales (incluidos los datos modificados) y resolver de nuevo las actualizaciones en el origen de datos original.  
   
 > [!NOTE]
-> La transmisión `DataSet` `DataTable` de instancias o como parte de llamadas a servicios Web XML no es segura si la entrada no es de confianza. Para obtener más información, consulte la [Guía de seguridad DataSet y DataTable](/dotnet/framework/data/adonet/dataset-datatable-dataview/security-guidance).
+> La transmisión `DataSet` `DataTable` de instancias o como parte de llamadas a servicios Web XML no es segura si la entrada no es de confianza. Para obtener más información, consulte la [Guía de seguridad DataSet y DataTable](security-guidance.md).
 > También se recomienda tener en cuenta las implicaciones de seguridad al crear un servicio Web XML. Para obtener información sobre cómo proteger un servicio Web XML, vea [proteger los servicios Web XML creados con ASP.net](/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100)).  
   
 ## <a name="create-an-xml-web-service"></a>Crear un servicio Web XML
