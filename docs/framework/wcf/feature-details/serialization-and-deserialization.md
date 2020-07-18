@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: 3927c17a2548a094a63ffd95ff8a3701403de281
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: b770543eb09ed2edc1a028561e0cf41e74fab1cc
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244912"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86444500"
 ---
 # <a name="serialization-and-deserialization"></a>Serialización y deserialización
 Windows Communication Foundation (WCF) incluye un nuevo motor de serialización, el <xref:System.Runtime.Serialization.DataContractSerializer> . <xref:System.Runtime.Serialization.DataContractSerializer>Traduce entre .NET Framework objetos y XML, en ambas direcciones. En este tema se explica cómo funciona el serializador.  
@@ -20,7 +20,13 @@ Windows Communication Foundation (WCF) incluye un nuevo motor de serialización,
   
  Al deserializar XML, el serializador utiliza las clases <xref:System.Xml.XmlReader> y <xref:System.Xml.XmlWriter> . También admite las <xref:System.Xml.XmlDictionaryReader> clases y <xref:System.Xml.XmlDictionaryWriter> para permitirle generar XML optimizado en algunos casos, como cuando se usa el formato XML binario WCF.  
   
- WCF también incluye un serializador complementario, el <xref:System.Runtime.Serialization.NetDataContractSerializer> . <xref:System.Runtime.Serialization.NetDataContractSerializer>Es similar a los <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> serializadores y porque también emite .NET Framework nombres de tipo como parte de los datos serializados. Se utiliza cuando se comparten los mismos tipos en los extremos de serialización y deserialización. <xref:System.Runtime.Serialization.DataContractSerializer> y <xref:System.Runtime.Serialization.NetDataContractSerializer> derivan de una clase base común, <xref:System.Runtime.Serialization.XmlObjectSerializer>.  
+ WCF también incluye un serializador complementario, el <xref:System.Runtime.Serialization.NetDataContractSerializer> . El <xref:System.Runtime.Serialization.NetDataContractSerializer>:
+
+* ***No*** es seguro. Para obtener más información, vea la [Guía de seguridad BinaryFormatter](/dotnet/standard/serialization/binaryformatter-security-guide).
+* Es similar a los <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> serializadores y porque también emite .NET Framework nombres de tipo como parte de los datos serializados.
+* Se usa cuando se comparten los mismos tipos en los extremos de serialización y deserialización.
+
+ <xref:System.Runtime.Serialization.DataContractSerializer>Y <xref:System.Runtime.Serialization.NetDataContractSerializer> derivan de una clase base común, <xref:System.Runtime.Serialization.XmlObjectSerializer> .  
   
 > [!WARNING]
 > <xref:System.Runtime.Serialization.DataContractSerializer> serializa cadenas que contienen caracteres de control con un valor hexadecimal inferior a 20 como entidades XML. Esto puede producir un problema con un cliente que no sea de WCF al enviar estos datos a un servicio WCF.  
@@ -231,7 +237,7 @@ Windows Communication Foundation (WCF) incluye un nuevo motor de serialización,
   
  Sin embargo, pueden producirse varios problemas:  
   
-- Securidad. Se carga cualquier tipo en el XML que se esté deserializando. Esto se puede explotar para forzar la carga de tipos malintencionados. El uso del `NetDataContractSerializer` con datos que no son de confianza solo se debería realizar si se utiliza un *Enlazador de Serialización* (mediante el parámetro del constructor o la propiedad <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> ). El enlazador solo permite cargar tipos seguros. El mecanismo del enlazador es idéntico al que utilizan los tipos en el espacio de nombres de <xref:System.Runtime.Serialization> .  
+- Seguridad. Se carga cualquier tipo en el XML que se esté deserializando. Esto se puede explotar para forzar la carga de tipos malintencionados. El uso del `NetDataContractSerializer` con datos que no son de confianza solo se debería realizar si se utiliza un *Enlazador de Serialización* (mediante el parámetro del constructor o la propiedad <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> ). El enlazador solo permite cargar tipos seguros. El mecanismo del enlazador es idéntico al que utilizan los tipos en el espacio de nombres de <xref:System.Runtime.Serialization> .  
   
 - Control de versiones El uso de nombres de ensamblado y tipos completos en el XML restringe en gran medida el control de versión de los tipos. No se pueden cambiar lo siguientes elementos: nombres de tipos, espacios de nombres, nombres de ensamblados y versiones de ensamblados. Establecer la propiedad <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> o el parámetro de constructor en <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple> en lugar del valor predeterminado de <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Full> permite los cambios de versión de ensamblado, pero no para tipos de parámetros genéricos.  
   
