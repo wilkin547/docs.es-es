@@ -2,12 +2,12 @@
 title: Depuración de una aplicación de consola de .NET Core con Visual Studio para Mac
 description: Aprenda a depurar una aplicación de consola de .NET Core con Visual Studio para Mac.
 ms.date: 06/08/2020
-ms.openlocfilehash: 4941605923a9897d481aca4ec31408ab62e873f3
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 7e2a25266fab40b5ef1d0a38b8bbf06a6843746b
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84713488"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416017"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-for-mac"></a>Tutorial: Depuración de una aplicación de consola de .NET Core con Visual Studio para Mac
 
@@ -15,7 +15,7 @@ En este tutorial se presentan las herramientas de depuración que hay disponible
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Este tutorial funciona con la aplicación de consola que se crea en [Creación de una aplicación de consola de .NET Core en Visual Studio para Mac](using-on-mac-vs.md).
+- Este tutorial funciona con la aplicación de consola que se crea en [Creación de una aplicación de consola de .NET Core en Visual Studio para Mac](with-visual-studio-mac.md).
 
 ## <a name="use-debug-build-configuration"></a>Uso de la configuración de compilación de depuración
 
@@ -27,7 +27,7 @@ De forma predeterminada, Visual Studio usa la configuración de compilación De
 
 1. Inicie Visual Studio para Mac:
 
-1. Abra el proyecto que creó en [Creación de una aplicación de consola de .NET Core en Visual Studio para Mac](using-on-mac-vs.md).
+1. Abra el proyecto que creó en [Creación de una aplicación de consola de .NET Core en Visual Studio para Mac](with-visual-studio-mac.md).
 
    La configuración de compilación actual se muestra en la barra de herramientas. En la siguiente imagen de la barra de herramientas se muestra que Visual Studio está configurado para compilar la versión de depuración de la aplicación:
 

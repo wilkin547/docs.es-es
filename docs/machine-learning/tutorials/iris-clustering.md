@@ -5,12 +5,12 @@ author: pkulikov
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 0cc42a196589a7ffe77300c9f2cd9cb28229a0a9
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 8ee8b177dc9cc89c4f54956b8c0a274b1d093ece
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803981"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86282091"
 ---
 # <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>Tutorial: Clasificación de flores de iris mediante la agrupación en clústeres k-means con ML.NET
 
@@ -77,11 +77,11 @@ Cree clases para los datos de entrada y las predicciones:
 1. En el cuadro de diálogo **Agregar nuevo elemento**, seleccione **Clase** y cambie el campo **Nombre** a *IrisData.cs*. A continuación, seleccione el botón **Agregar**.
 1. Agregue la directiva `using` siguiente al archivo nuevo:
 
-   [!code-csharp[Add necessary usings](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/IrisData.cs#Usings)]
+   [!code-csharp[Add necessary usings](./snippets/iris-clustering/csharp/IrisData.cs#Usings)]
 
 Quite la definición de clase existente y agregue el código siguiente, que define dos clases `IrisData` y `ClusterPrediction`, al archivo *IrisData.cs*:
 
-[!code-csharp[Define data classes](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/IrisData.cs#ClassDefinitions)]
+[!code-csharp[Define data classes](./snippets/iris-clustering/csharp/IrisData.cs#ClassDefinitions)]
 
 `IrisData` es la clase de datos de entrada y tiene definiciones para cada una de las características del conjunto de datos. Use el atributo [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute) para especificar los índices de las columnas de origen en el archivo de conjunto de datos.
 
@@ -102,21 +102,21 @@ Vuelva al archivo *Program.cs* y agregue dos campos para contener las rutas de a
 
 Agregue el código siguiente justo encima del método `Main` para especificar las rutas de acceso:
 
-[!code-csharp[Initialize paths](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#Paths)]
+[!code-csharp[Initialize paths](./snippets/iris-clustering/csharp/Program.cs#Paths)]
 
 Para que el código anterior se compile, agregue las directivas `using` siguientes a la parte superior del archivo *Program.cs*:
 
-[!code-csharp[Add usings for paths](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#UsingsForPaths)]
+[!code-csharp[Add usings for paths](./snippets/iris-clustering/csharp/Program.cs#UsingsForPaths)]
 
 ## <a name="create-ml-context"></a>Creación del contexto de ML
 
 Agregue las directivas `using` adicionales siguientes a la parte superior del archivo *Program.cs*:
 
-[!code-csharp[Add Microsoft.ML usings](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#MLUsings)]
+[!code-csharp[Add Microsoft.ML usings](./snippets/iris-clustering/csharp/Program.cs#MLUsings)]
 
 En el método `Main`, reemplace la línea `Console.WriteLine("Hello World!");` con el código siguiente:
 
-[!code-csharp[Create ML context](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#CreateContext)]
+[!code-csharp[Create ML context](./snippets/iris-clustering/csharp/Program.cs#CreateContext)]
 
 La clase <xref:Microsoft.ML.MLContext?displayProperty=nameWithType> representa el entorno de aprendizaje automático y proporciona mecanismos para puntos de entrada y de registro para la carga de datos, entrenamiento del modelo, predicción y otras tareas. Esto es comparable conceptualmente a usar `DbContext` en Entity Framework.
 
@@ -124,7 +124,7 @@ La clase <xref:Microsoft.ML.MLContext?displayProperty=nameWithType> representa e
 
 Agregue el código siguiente al método `Main` para configurar la manera de cargar los datos:
 
-[!code-csharp[Create text loader](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#CreateDataView)]
+[!code-csharp[Create text loader](./snippets/iris-clustering/csharp/Program.cs#CreateDataView)]
 
 El [`MLContext.Data.LoadFromTextFile` método de extensión](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) genérico deduce el esquema del conjunto de datos del tipo `IrisData` proporcionado y devuelve <xref:Microsoft.ML.IDataView>, que se puede usar como entrada para los transformadores.
 
@@ -137,7 +137,7 @@ Para este tutorial, la canalización de aprendizaje de la tarea de agrupación e
 
 Agregue el código siguiente al método `Main`:
 
-[!code-csharp[Create pipeline](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#CreatePipeline)]
+[!code-csharp[Create pipeline](./snippets/iris-clustering/csharp/Program.cs#CreatePipeline)]
 
 En el código se especifica que el conjunto de datos se debe dividir en tres clústeres.
 
@@ -145,19 +145,19 @@ En el código se especifica que el conjunto de datos se debe dividir en tres cl�
 
 Los pasos que se agregaron en las secciones anteriores prepararon la canalización para el aprendizaje, pero no se ha ejecutado ninguno. Agregue la línea siguiente al método `Main` para realizar la carga de datos y el entrenamiento del modelo:
 
-[!code-csharp[Train the model](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#TrainModel)]
+[!code-csharp[Train the model](./snippets/iris-clustering/csharp/Program.cs#TrainModel)]
 
 ### <a name="save-the-model"></a>Guardado del modelo
 
 En este punto, tiene un modelo que se puede integrar en cualquiera de las aplicaciones de .NET nuevas o existentes. Para guardar el modelo en un archivo .zip, agregue el código siguiente al método `Main`:
 
-[!code-csharp[Save the model](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#SaveModel)]
+[!code-csharp[Save the model](./snippets/iris-clustering/csharp/Program.cs#SaveModel)]
 
 ## <a name="use-the-model-for-predictions"></a>Usar el modelo para las predicciones
 
 Para realizar predicciones, use la clase <xref:Microsoft.ML.PredictionEngine%602>, que toma instancias del tipo de entrada a través de la canalización de transformador y genera instancias del tipo de salida. Agregue la línea siguiente al método `Main` para crear una instancia de esa clase:
 
-[!code-csharp[Create predictor](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#Predictor)]
+[!code-csharp[Create predictor](./snippets/iris-clustering/csharp/Program.cs#Predictor)]
 
 [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) es una API de conveniencia, que le permite realizar una predicción en una única instancia de datos. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) no es seguro para subprocesos. Es aceptable usarlo en entornos de un solo subproceso o prototipo. Para mejorar el rendimiento y la seguridad para subprocesos en entornos de producción, use el servicio `PredictionEnginePool`, que crea un [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) de objetos de [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) para su uso en toda la aplicación. Consulte esta guía sobre cómo [usar `PredictionEnginePool` en una API web de ASP.NET Core](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application).
 
@@ -170,15 +170,15 @@ Cree la clase `TestIrisData` para guardar las instancias de datos de prueba:
 1. En el cuadro de diálogo **Agregar nuevo elemento**, seleccione **Clase** y cambie el campo **Nombre** a *TestIrisData.cs*. A continuación, seleccione el botón **Agregar**.
 1. Modifique la clase para que sea estática, como en el ejemplo siguiente:
 
-   [!code-csharp[Make class static](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/TestIrisData.cs#Static)]
+   [!code-csharp[Make class static](./snippets/iris-clustering/csharp/TestIrisData.cs#Static)]
 
 En este tutorial se presenta una instancia de datos de iris dentro de esta clase. Puede agregar otros escenarios para experimentar con el modelo. Agregue el código siguiente a la clase `TestIrisData`:
 
-[!code-csharp[Test data](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/TestIrisData.cs#TestData)]
+[!code-csharp[Test data](./snippets/iris-clustering/csharp/TestIrisData.cs#TestData)]
 
 Para determinar a qué clúster pertenece el elemento especificado, vuelva al archivo *Program.cs* y agregue el código siguiente al método `Main`:
 
-[!code-csharp[Predict and output results](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#PredictionExample)]
+[!code-csharp[Predict and output results](./snippets/iris-clustering/csharp/Program.cs#PredictionExample)]
 
 Ejecute el programa para ver qué clúster contiene la instancia de datos especificada y las distancias cuadradas desde esa instancia a los centroides de clúster. Los resultados deberían ser similares a los indicados a continuación:
 

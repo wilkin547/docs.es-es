@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 7caeaaa834dc827998d7d1bc3a25ba4e194996f4
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 9f553e9af16be0891f208832c5daa444a1b736e2
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324415"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281516"
 ---
 # <a name="whats-new-in-net-core-30"></a>Novedades de .NET Core 3.0
 
@@ -391,7 +391,7 @@ Cuando está disponible, .NET Core 3.0 utiliza **OpenSSL 1.1.1**, **OpenSSL 
 
 El siguiente ejemplo de C# 8.0 muestra .NET Core 3.0 en Ubuntu 18.10 al conectarse a <https://www.cloudflare.com>:
 
-[!code-csharp[TLSExample](~/samples/snippets/core/whats-new/whats-new-in-30/cs/TLS.cs#TLS)]
+[!code-csharp[TLSExample](./snippets/dotnet-core-3-0/csharp/TLS.cs#TLS)]
 
 ### <a name="cryptography-ciphers"></a>Cifrados de criptografía
 
@@ -399,7 +399,7 @@ El siguiente ejemplo de C# 8.0 muestra .NET Core 3.0 en Ubuntu 18.10 al cone
 
 El código siguiente muestra cómo utilizar cifrado `AesGcm` para cifrar y descifrar datos aleatorios.
 
-[!code-csharp[AesGcm](~/samples/snippets/core/whats-new/whats-new-in-30/cs/Cipher.cs#AesGcm)]
+[!code-csharp[AesGcm](./snippets/dotnet-core-3-0/csharp/Cipher.cs#AesGcm)]
 
 ### <a name="cryptographic-key-importexport"></a>Importación y exportación de claves criptográfica
 
@@ -424,7 +424,7 @@ Las claves RSA también admiten:
 
 Los métodos de exportación generan datos binarios con codificación DER y los métodos de importación esperan lo mismo. Si una clave se almacena en el formato PEM de texto descriptivo, el llamador debe descodificar en base64 el contenido antes de llamar a un método de importación.
 
-[!code-csharp[RSA](~/samples/snippets/core/whats-new/whats-new-in-30/cs/RSA.cs#Rsa)]
+[!code-csharp[RSA](./snippets/dotnet-core-3-0/csharp/RSA.cs#Rsa)]
 
 Los archivos **PKCS#8** se pueden inspeccionar con <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo?displayProperty=nameWithType> y los archivos **PFX/PKCS#12** se pueden inspeccionar con <xref:System.Security.Cryptography.Pkcs.Pkcs12Info?displayProperty=nameWithType>. Los archivos **PFX/PKCS#12** se pueden manipular con <xref:System.Security.Cryptography.Pkcs.Pkcs12Builder?displayProperty=nameWithType>.
 
@@ -553,15 +553,15 @@ El tipo <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> es compat
 
 El protocolo predeterminado sigue siendo HTTP/1.1, pero se puede habilitar HTTP/2 de dos maneras diferentes. En primer lugar, puede establecer el mensaje de solicitud HTTP para usar HTTP/2:
 
-[!code-csharp[Http2Request](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#Request)]
+[!code-csharp[Http2Request](./snippets/dotnet-core-3-0/csharp/http.cs#Request)]
 
 En segundo lugar, puede cambiar <xref:System.Net.Http.HttpClient> para usar HTTP/2 de forma predeterminada:
 
-[!code-csharp[Http2Client](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#Client)]
+[!code-csharp[Http2Client](./snippets/dotnet-core-3-0/csharp/http.cs#Client)]
 
 Muchas veces cuando está desarrollando una aplicación, desea utilizar una conexión no cifrada. Si sabe que el punto de conexión de destino utilizará HTTP/2, puede activar las conexiones no cifradas para HTTP/2. Puede activarlas estableciendo la variable de entorno `DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2UNENCRYPTEDSUPPORT` en `1` o habilitándolas en el contexto de la aplicación:
 
-[!code-csharp[Http2Context](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#AppContext)]
+[!code-csharp[Http2Context](./snippets/dotnet-core-3-0/csharp/http.cs#AppContext)]
 
 ## <a name="next-steps"></a>Pasos siguientes
 

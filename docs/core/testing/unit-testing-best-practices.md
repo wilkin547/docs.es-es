@@ -4,12 +4,12 @@ description: Obtenga información sobre los procedimientos recomendados para esc
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 8a879c16e48dfde617f9cd20f58cab96039361f0
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: ffeaa1e11512cab64695c120f844594b8c5014a8
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324474"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281113"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Procedimientos recomendados de pruebas unitarias con .NET Core y .NET Standard
 
@@ -22,21 +22,25 @@ De [John Reese](https://reese.dev), con agradecimientos especiales a [Roy Oshero
 ## <a name="why-unit-test"></a>El porqué de las pruebas unitarias
 
 ### <a name="less-time-performing-functional-tests"></a>Menos tiempo para realizar pruebas funcionales
+
 Las pruebas funcionales son costosas. Normalmente implican la apertura de la aplicación y la realización de una serie de pasos que usted (u otro usuario) debe seguir para validar el comportamiento esperado. Es posible que estos pasos no sean siempre conocidos para el evaluador, lo que significa tener que recurrir a alguien con más conocimientos en el tema para llevar a cabo la prueba. Las pruebas en sí mismas podrían llevar segundos en el caso de cambios triviales, o minutos en el de cambios más importantes. Por último, este proceso debe repetirse para cada cambio que se realice en el sistema.
 
 Por otra parte, las pruebas unitarias duran milisegundos, se pueden ejecutar con solo presionar un botón y no exigen necesariamente ningún conocimiento del sistema en general. El que la prueba se supere o no depende del ejecutor de pruebas, no del usuario.
 
 ### <a name="protection-against-regression"></a>Protección frente a regresión
+
 Los defectos de regresión son aquellos que se presentan cuando se realiza un cambio en la aplicación. Es habitual que los evaluadores no solo prueben una nueva característica, sino también las ya existentes con el fin de comprobar que siguen funcionando según lo previsto.
 
 Con las pruebas unitarias, es posible volver a ejecutar el conjunto completo de pruebas después de cada compilación o incluso después de cambiar una línea de código. Eso da confianza en que el nuevo código no interrumpa la funcionalidad existente.
 
 ### <a name="executable-documentation"></a>Documentación ejecutable
+
 Es posible que no siempre sea evidente lo que hace un método determinado o cómo se comporta ante una acción concreta. Es posible que se pregunte: ¿cómo se comporta este método si se le pasa una cadena en blanco? ¿Null?
 
 Si tiene un conjunto de pruebas unitarias con un nombre adecuado, cada prueba debe ser capaz de explicar con claridad el resultado esperado de una acción determinada. Además, debe ser capaz de comprobar que funciona.
 
 ### <a name="less-coupled-code"></a>Menos código acoplado
+
 Cuando el código está estrechamente acoplado, puede resultar difícil realizar pruebas unitarias. Sin crear pruebas unitarias para el código que se está escribiendo, el acoplamiento puede ser menos evidente.
 
 Al escribir pruebas para el código, este se desacopla naturalmente, ya que, de otra forma, sería más difícil de probar.
@@ -56,6 +60,7 @@ Un alto porcentaje de cobertura de código suele ir asociado a una mayor calidad
 Un alto porcentaje de cobertura de código no es un indicador de éxito, ni implica una alta calidad del código. Simplemente representa la cantidad de código cubierta por las pruebas unitarias. Para obtener más información, vea [Cobertura de código de pruebas unitarias](unit-testing-code-coverage.md).
 
 ## <a name="lets-speak-the-same-language"></a>Vamos a hablar el mismo idioma
+
 Desafortunadamente, el término *ficticio* se emplea de forma incorrecta al referirse a las pruebas. Los puntos siguientes definen los tipos más comunes de *emulaciones* al escribir pruebas unitarias:
 
 *Emulación*: una emulación es un término genérico que se puede usar para describir un stub o un objeto ficticio. Si es un stub o un objeto ficticio depende del contexto en el que se use. Es decir, una emulación puede ser un stub o un objeto ficticio.
@@ -111,6 +116,7 @@ Lo principal que debe recordar sobre los objetos ficticios frente a los stubs es
 ## <a name="best-practices"></a>Procedimientos recomendados
 
 ### <a name="naming-your-tests"></a>Asignar nombre a las pruebas
+
 El nombre de la prueba debe constar de tres partes:
 
 - Nombre del método que se va a probar.
@@ -124,12 +130,15 @@ El nombre de la prueba debe constar de tres partes:
 Las pruebas van más allá de garantizar que el código funciona, también proporcionan documentación. Con solo mirar el conjunto de pruebas unitarias, debe ser capaz de deducir el comportamiento del código sin ni siquiera mirar el propio código. Además, cuando no se superan las pruebas, puede ver exactamente qué escenarios no cumplen las expectativas.
 
 #### <a name="bad"></a>Malo:
+
 [!code-csharp[BeforeNaming](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeNaming)]
 
 #### <a name="better"></a>Mejor:
+
 [!code-csharp[AfterNamingAndMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterNamingAndMinimallyPassing)]
 
 ### <a name="arranging-your-tests"></a>Organizar las pruebas
+
 **Organizar, actuar, declarar** es un patrón común al realizar pruebas unitarias. Como el propio nombre implica, consta de tres acciones principales:
 
 - *Organizar* los objetos, crearlos y configurarlos según sea necesario.
@@ -144,12 +153,15 @@ Las pruebas van más allá de garantizar que el código funciona, también propo
 La legibilidad es uno de los aspectos más importantes a la hora de escribir una prueba. Al separar cada una de estas acciones dentro de la prueba, se resaltan claramente las dependencias necesarias para llamar al código, la forma de llamarlo y lo que se intenta declarar. Aunque es posible combinar algunos pasos y reducir el tamaño de la prueba, el objetivo principal es que sea lo más legible posible.
 
 #### <a name="bad"></a>Malo:
+
 [!code-csharp[BeforeArranging](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeArranging)]
 
 #### <a name="better"></a>Mejor:
+
 [!code-csharp[AfterArranging](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterArranging)]
 
 ### <a name="write-minimally-passing-tests"></a>Escribir pruebas correctas lo más sencillas posible
+
 La entrada que se use en una prueba unitaria debe ser lo más sencilla posible para comprobar el comportamiento que se está probando.
 
 #### <a name="why"></a>¿Por qué?
@@ -160,12 +172,15 @@ La entrada que se use en una prueba unitaria debe ser lo más sencilla posible p
 Las pruebas que incluyen más información de la necesaria para superarse tienen una mayor posibilidad de incorporar errores en la prueba y pueden hacer confusa su intención. Al escribir pruebas, queremos centrarnos en el comportamiento. El establecimiento de propiedades adicionales en los modelos o el empleo de valores distintos de cero cuando no es necesario solo resta de lo que se quiere probar.
 
 #### <a name="bad"></a>Malo:
+
 [!code-csharp[BeforeMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMinimallyPassing)]
 
 #### <a name="better"></a>Mejor:
+
 [!code-csharp[AfterNamingAndMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterNamingAndMinimallyPassing)]
 
 ### <a name="avoid-magic-strings"></a>Evitar cadenas mágicas
+
 La asignación de nombres a las variables de las pruebas unitarias es tan importante, si no más, que la asignación de nombres a las variables del código de producción. Las pruebas unitarias no deben contener cadenas mágicas.
 
 #### <a name="why"></a>¿Por qué?
@@ -179,12 +194,15 @@ Las cadenas mágicas pueden provocar confusión al lector de las pruebas. Si una
 > Al escribir pruebas, su objetivo debe ser expresar tanta intención como sea posible. En el caso de las cadenas mágicas, un buen enfoque es asignar estos valores a constantes.
 
 #### <a name="bad"></a>Malo:
+
 [!code-csharp[BeforeMagicString](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMagicString)]
 
 #### <a name="better"></a>Mejor:
+
 [!code-csharp[AfterMagicString](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterMagicString)]
 
 ### <a name="avoid-logic-in-tests"></a>Evitar la lógica en las pruebas
+
 Al escribir las pruebas unitarias, evite la concatenación de cadenas manual y las condiciones lógicas como `if`, `while`, `for`, `switch`, etc.
 
 #### <a name="why"></a>¿Por qué?
@@ -198,12 +216,15 @@ Al incorporar lógica al conjunto de pruebas, aumenta considerablemente la posib
 > Si la lógica en la prueba parece inevitable, considere la posibilidad de dividirla en dos o más pruebas diferentes.
 
 #### <a name="bad"></a>Malo:
+
 [!code-csharp[LogicInTests](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#LogicInTests)]
 
 #### <a name="better"></a>Mejor:
+
 [!code-csharp[AfterTestLogic](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterTestLogic)]
 
 ### <a name="prefer-helper-methods-to-setup-and-teardown"></a>Se prefieren métodos auxiliares a la instalación y el desmontaje
+
 Si necesita un objeto o un estado similares para las pruebas, se prefiere un método auxiliar al aprovechamiento de los atributos de instalación y desmontaje, si existen.
 
 #### <a name="why"></a>¿Por qué?
@@ -218,6 +239,7 @@ En los marcos de trabajo de pruebas unitarias, se llama a `Setup` antes de cada 
 > xUnit ha quitado la instalación y el desmontaje a partir de la versión 2.x
 
 #### <a name="bad"></a>Malo:
+
 [!code-csharp[BeforeSetup](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeSetup)]
 
 ```csharp
@@ -227,6 +249,7 @@ En los marcos de trabajo de pruebas unitarias, se llama a `Setup` antes de cada 
 [!code-csharp[BeforeHelperMethod](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeHelperMethod)]
 
 #### <a name="better"></a>Mejor:
+
 [!code-csharp[AfterHelperMethod](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterHelperMethod)]
 
 ```csharp
@@ -236,6 +259,7 @@ En los marcos de trabajo de pruebas unitarias, se llama a `Setup` antes de cada 
 [!code-csharp[AfterSetup](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterSetup)]
 
 ### <a name="avoid-multiple-asserts"></a>Evitar varias aserciones
+
 Al escribir las pruebas, intente incluir solo una aserción por prueba. Los enfoques comunes para usar solo una aserción incluyen:
 
 - Crear una prueba independiente para cada aserción.
@@ -253,12 +277,15 @@ Al incorporar varias aserciones en un caso de prueba, no se garantiza que se eje
 > Una excepción común a esta regla es cuando se declara en un objeto. En este caso, suele ser aceptable que haya varias aserciones en cada propiedad para asegurarse de que el objeto está en el estado que se espera que esté.
 
 #### <a name="bad"></a>Malo:
+
 [!code-csharp[BeforeMultipleAsserts](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMultipleAsserts)]
 
 #### <a name="better"></a>Mejor:
+
 [!code-csharp[AfterMultipleAsserts](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterMultipleAsserts)]
 
 ### <a name="validate-private-methods-by-unit-testing-public-methods"></a>Validar métodos privados mediante la prueba unitaria de métodos públicos
+
 En la mayoría de los casos, no debería haber necesidad de probar un método privado. Los métodos privados son un detalle de implementación. Se puede considerar de esta forma: los métodos privados nunca existen de forma aislada. En algún momento, va a haber un método público que llame al método privado como parte de su implementación. Lo que debería importarle es el resultado final del método público que llama al privado.
 
 Considere el caso siguiente
@@ -281,7 +308,7 @@ Su primera reacción puede ser empezar a escribir una prueba para `TrimInput` po
 La prueba real debe realizarse en el método público `ParseLogLine`, porque eso es lo debe importarle en última instancia.
 
 ```csharp
-public void ParseLogLine_ByDefault_ReturnsTrimmedResult()
+public void ParseLogLine_StartsAndEndsWithSpace_ReturnsTrimmedResult()
 {
     var parser = new Parser();
 
@@ -294,12 +321,13 @@ public void ParseLogLine_ByDefault_ReturnsTrimmedResult()
 Con este punto de vista, si ve un método privado, busque el método público y escriba las pruebas en ese método. Simplemente porque un método privado devuelva el resultado esperado, no significa que el sistema que finalmente llama al método privado use el resultado correctamente.
 
 ### <a name="stub-static-references"></a>Referencias estáticas de stub
+
 Uno de los principios de una prueba unitaria es que debe tener control total del sistema sometido a prueba. Esto puede ser problemático cuando el código de producción incluye llamadas a referencias estáticas (por ejemplo, `DateTime.Now`). Considere el código siguiente
 
 ```csharp
 public int GetDiscountedPrice(int price)
 {
-    if(DateTime.Now.DayOfWeek == DayOfWeek.Tuesday)
+    if (DateTime.Now.DayOfWeek == DayOfWeek.Tuesday)
     {
         return price / 2;
     }
@@ -313,7 +341,7 @@ public int GetDiscountedPrice(int price)
 ¿Cómo se podrían realizar pruebas unitarias de este código? Puede probar un enfoque como
 
 ```csharp
-public void GetDiscountedPrice_ByDefault_ReturnsFullPrice()
+public void GetDiscountedPrice_NotTuesday_ReturnsFullPrice()
 {
     var priceCalculator = new PriceCalculator();
 
@@ -347,7 +375,7 @@ public interface IDateTimeProvider
 
 public int GetDiscountedPrice(int price, IDateTimeProvider dateTimeProvider)
 {
-    if(dateTimeProvider.DayOfWeek() == DayOfWeek.Tuesday)
+    if (dateTimeProvider.DayOfWeek() == DayOfWeek.Tuesday)
     {
         return price / 2;
     }
@@ -361,7 +389,7 @@ public int GetDiscountedPrice(int price, IDateTimeProvider dateTimeProvider)
 El conjunto de pruebas ahora se convierte
 
 ```csharp
-public void GetDiscountedPrice_ByDefault_ReturnsFullPrice()
+public void GetDiscountedPrice_NotTuesday_ReturnsFullPrice()
 {
     var priceCalculator = new PriceCalculator();
     var dateTimeProviderStub = new Mock<IDateTimeProvider>();

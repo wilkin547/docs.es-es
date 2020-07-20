@@ -2,12 +2,12 @@
 title: Creación de una biblioteca de clases .NET Standard mediante Visual Studio Code
 description: Obtenga información sobre cómo crear una biblioteca de clases de .NET Standard mediante Visual Studio Code.
 ms.date: 06/08/2020
-ms.openlocfilehash: f7d2319bcea58f63ca40e43ba39745bdf1b394ce
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 714b5cf2125f1d296adc4a4dc7d1b6c9420417ed
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84701804"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86308889"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio-code"></a>Tutorial: Creación de una biblioteca .NET Standard mediante Visual Studio Code
 
@@ -172,7 +172,7 @@ En un principio, el nuevo proyecto de aplicación de consola no tiene acceso a l
 1. Ejecute el siguiente comando:
 
    ```dotnetcli
-   dotnet add ShowCase/Showcase.csproj reference StringLibrary/StringLibrary.csproj
+   dotnet add ShowCase/ShowCase.csproj reference StringLibrary/StringLibrary.csproj
    ```
 
    La salida del terminal se parece al ejemplo siguiente:

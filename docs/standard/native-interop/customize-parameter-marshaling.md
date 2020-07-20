@@ -2,12 +2,12 @@
 title: 'Personalización de la serialización de parámetros: .NET'
 description: Obtenga información sobre cómo personalizar la forma en que .NET serializa los parámetros de una representación nativa.
 ms.date: 01/18/2019
-ms.openlocfilehash: ff646ad942cf051ce90cd75b24c8562e536182d9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1999cad057875f15b283421f87f485c2e5ca2306
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401164"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374317"
 ---
 # <a name="customizing-parameter-marshaling"></a>Personalización de la serialización de parámetros
 
@@ -40,7 +40,7 @@ Si está interactuando con API de WinRT, puede usar el formato <xref:System.Runt
 
 .NET también proporciona varias maneras de serializar los parámetros de matriz. Si está llamando a una API que toma una matriz de estilo C, use el tipo <xref:System.Runtime.InteropServices.UnmanagedType.LPArray?displayProperty=nameWithType> no administrado. Si los valores de la matriz necesitan una serialización personalizada, puede usar el campo <xref:System.Runtime.InteropServices.MarshalAsAttribute.ArraySubType> en el atributo `[MarshalAs]` de dicho campo.
 
-Si usa API de COM, probablemente tendrá que serializar los parámetros de matriz como `SAFEARRAY*`. Para ello, puede usar el tipo <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType> no administrado. El tipo predeterminado de los elementos de `SAFEARRAY` puede verse en la tabla sobre cómo [personalizar campos `object`](./customize-struct-marshaling.md#marshaling-systemobjects). Puede usar campos <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType?displayProperty=nameWithType> y <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType?displayProperty=nameWithType> para personalizar el tipo de elemento exacto de `SAFEARRAY`.
+Si usa API de COM, probablemente tendrá que serializar los parámetros de matriz como `SAFEARRAY*`. Para ello, puede usar el tipo <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType> no administrado. El tipo predeterminado de los elementos de `SAFEARRAY` puede verse en la tabla sobre cómo [personalizar campos `object`](./customize-struct-marshaling.md#marshal-systemobject). Puede usar campos <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType?displayProperty=nameWithType> y <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType?displayProperty=nameWithType> para personalizar el tipo de elemento exacto de `SAFEARRAY`.
 
 ## <a name="customizing-boolean-or-decimal-parameters"></a>Personalización de los parámetros booleanos o decimales
 
@@ -62,7 +62,7 @@ Además, si el tipo se marca como `[ComVisible(true)]` o si está serializando e
 
 ### <a name="marshaling-to-a-variant"></a>Calcular las referencias a un `VARIANT`
 
-Si la API nativa toma un tipo `VARIANT` de Win32, puede usar el formato <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> en su parámetro `object` para serializar los objetos como `VARIANT`. Consulte la documentación sobre cómo [personalizar campos `object`](customize-struct-marshaling.md#marshaling-systemobjects) para realizar una asignación entre tipos .NET y `VARIANT`.
+Si la API nativa toma un tipo `VARIANT` de Win32, puede usar el formato <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> en su parámetro `object` para serializar los objetos como `VARIANT`. Consulte la documentación sobre cómo [personalizar campos `object`](customize-struct-marshaling.md#marshal-systemobject) para realizar una asignación entre tipos .NET y `VARIANT`.
 
 ### <a name="custom-marshalers"></a>Serializadores personalizados
 

@@ -5,12 +5,12 @@ ms.date: 03/20/2020
 ms.custom: azure-sdk-dotnet
 ms.author: casoper
 author: camsoper
-ms.openlocfilehash: 5a1fb35aeca034a7cdd1caa813a3839919a5f926
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 0b255713bc9c13e0cbdaeb25a3d0fe46e91e815d
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174883"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416024"
 ---
 # <a name="logging-with-the-azure-sdk-for-net"></a>Registro con Azure SDK para .NET
 
@@ -70,7 +70,7 @@ using AzureEventSourceListener listener = AzureEventSourceListener.CreateConsole
 
 ### <a name="log-to-diagnostic-traces"></a>Registro para el seguimiento de diagnósticos
 
-Si implementa agentes de escucha de seguimiento, puede usar el método `CreateTraceLogger` para registrarse en el mecanismo de seguimiento de eventos estándar de .NET ([`System.Diagnostics.Tracing`](/dotnet/api/system.diagnostics.tracing)). Para obtener más información sobre el seguimiento de eventos en .NET, vea [Agentes de escucha de seguimiento](/dotnet/framework/debug-trace-profile/trace-listeners). En este ejemplo se especifica un nivel de registro detallado:
+Si implementa agentes de escucha de seguimiento, puede usar el método `CreateTraceLogger` para registrarse en el mecanismo de seguimiento de eventos estándar de .NET ([`System.Diagnostics.Tracing`](/dotnet/api/system.diagnostics.tracing)). Para obtener más información sobre el seguimiento de eventos en .NET, vea [Agentes de escucha de seguimiento](../framework/debug-trace-profile/trace-listeners.md). En este ejemplo se especifica un nivel de registro detallado:
 
 ```csharp
 using AzureEventSourceListener listener = AzureEventSourceListener.CreateTraceLogger(EventLevel.Verbose);
@@ -99,4 +99,4 @@ using AzureEventSourceListener listener = new AzureEventSourceListener((e, messa
 - [Habilitar el registro de diagnósticos para las aplicaciones en Azure App Service](/azure/app-service/troubleshoot-diagnostic-logs)
 - Revisar las opciones de [auditoría y registro de seguridad de Azure](/azure/security/fundamentals/log-audit)
 - Más información sobre cómo trabajar con los [registros de la plataforma de Azure](/azure/azure-monitor/platform/platform-logs-overview)
-- Más información sobre el [registro y el seguimiento de.NET Core](/dotnet/core/diagnostics/logging-tracing)
+- Más información sobre el [registro y el seguimiento de.NET Core](../core/diagnostics/logging-tracing.md)

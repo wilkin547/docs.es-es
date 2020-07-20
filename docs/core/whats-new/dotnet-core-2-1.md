@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: 3e6f3a921238a5897c7aa4b6034be979724b7167
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 94f3db14046ad5d63975d0ca44425abed5d52062
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84283447"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281542"
 ---
 # <a name="whats-new-in-net-core-21"></a>Novedades de .NET Core 2.1
 
@@ -177,17 +177,17 @@ Sin estos tipos, al pasar tales elementos como una porción de una matriz o una 
 
 En el ejemplo siguiente se usa una instancia de <xref:System.Span%601> y <xref:System.Memory%601> para proporcionar una vista virtual de 10 elementos de una matriz.
 
-[!code-csharp[Span\<T>](~/samples/snippets/core/whats-new/whats-new-in-21/csharp/program.cs)]
+[!code-csharp[Span\<T>](./snippets/dotnet-core-2-1/csharp/program.cs)]
 
-[!code-vb[Memory\<T>](~/samples/snippets/core/whats-new/whats-new-in-21/vb/program.vb)]
+[!code-vb[Memory\<T>](./snippets/dotnet-core-2-1/vb/program.vb)]
 
 ### <a name="brotli-compression"></a>Compresión de Brotli
 
 .NET Core 2.1 agrega compatibilidad con la compresión y descompresión de Brotli. Brotli es un algoritmo de compresión sin pérdida de datos de uso general que se define en [RFC 7932](https://www.ietf.org/rfc/rfc7932.txt) y es compatible con la mayoría de los exploradores web y servidores web principales. Puede usar la clase <xref:System.IO.Compression.BrotliStream?displayProperty=nameWithType> basada en secuencias o las clases <xref:System.IO.Compression.BrotliEncoder?displayProperty=nameWithType> y <xref:System.IO.Compression.BrotliDecoder?displayProperty=nameWithType> basadas en intervalos de alto rendimiento. En el ejemplo siguiente se muestra la compresión con la clase <xref:System.IO.Compression.BrotliStream>:
 
-[!code-csharp[Brotli compression](~/samples/snippets/core/whats-new/whats-new-in-21/csharp/brotli.cs#1)]
+[!code-csharp[Brotli compression](./snippets/dotnet-core-2-1/csharp/brotli.cs#1)]
 
-[!code-vb[Brotli compression](~/samples/snippets/core/whats-new/whats-new-in-21/vb/brotli.vb#1)]
+[!code-vb[Brotli compression](./snippets/dotnet-core-2-1/vb/brotli.vb#1)]
 
 El comportamiento de <xref:System.IO.Compression.BrotliStream> es el mismo que <xref:System.IO.Compression.DeflateStream> y <xref:System.IO.Compression.GZipStream>, lo que facilita la conversión de código que llama a estas API a <xref:System.IO.Compression.BrotliStream>.
 

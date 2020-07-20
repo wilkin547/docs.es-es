@@ -2,12 +2,12 @@
 title: Scripts de dotnet-install
 description: Obtenga información sobre los scripts de dotnet-install para instalar el SDK de .NET Core y el entorno de ejecución compartido.
 ms.date: 04/30/2020
-ms.openlocfilehash: d03877d76212f7b22de0a1075cf50fc75bd104b6
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: cecfbb86c4a2863161d3df7c78201fa8057abfe5
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324427"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86415928"
 ---
 # <a name="dotnet-install-scripts-reference"></a>referencia de scripts de dotnet-install
 
@@ -82,7 +82,7 @@ De forma predeterminada, los scripts de instalación descargan el SDK y lo insta
 
 De forma predeterminada, el script agrega la ubicación de instalación a $PATH para la sesión actual. Para invalidar este comportamiento, especifique el argumento `-NoPath|--no-path`. El script no establece la variable de entorno `DOTNET_ROOT`.
 
-Antes de ejecutar el script, instale las [dependencias](../install/dependencies.md) necesarias.
+Antes de ejecutar el script, instale las [dependencias](../install/windows.md#dependencies) necesarias.
 
 Puede instalar una versión específica mediante el argumento `-Version|--version`. La versión debe especificarse como un número de versión de tres partes, por ejemplo, `2.1.0`. Si no se especifica la versión, el script instala la versión `latest`.
 
