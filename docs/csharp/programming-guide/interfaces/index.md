@@ -5,12 +5,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 5e39279183f7e3745c9373df246d14d69d5ff99b
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: 50f2c5fc3570b6d66ed83206660caf4bd02f1f5b
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805907"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441341"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfaces (Guía de programación de C#)
 
@@ -50,7 +50,7 @@ Una clase base también puede implementar miembros de interfaz mediante el uso d
 
 Una interfaz tiene las propiedades siguientes:
 
-- Normalmente, una interfaz es como una clase base abstracta con solo miembros abstractos. Cualquier clase o estructura que implementa la interfaz debe implementar todos sus miembros. Opcionalmente, una interfaz puede definir implementaciones predeterminadas para algunos o todos sus miembros.
+- Normalmente, una interfaz es como una clase base abstracta con solo miembros abstractos. Cualquier clase o estructura que implementa la interfaz debe implementar todos sus miembros. Opcionalmente, una interfaz puede definir implementaciones predeterminadas para algunos o todos sus miembros. Para obtener más información, vea [Métodos de interfaz predeterminados](../../tutorials/default-interface-methods-versions.md).
 - No se puede crear una instancia de una interfaz directamente. Sus miembros se implementan por medio de cualquier clase o estructura que implementa la interfaz.
 - Una clase o estructura puede implementar varias interfaces. Una clase puede heredar una clase base y también implementar una o varias interfaces.
 
@@ -61,12 +61,13 @@ Una interfaz tiene las propiedades siguientes:
 - [Procedimiento para implementar eventos de interfaz](../events/how-to-implement-interface-events.md)
 - [Clases y structs](../classes-and-structs/index.md)  
 - [Herencia](../classes-and-structs/inheritance.md)  
+- [Interfaces](../../language-reference/keywords/interface.md)
 - [Métodos](../classes-and-structs/methods.md)  
 - [Polimorfismo](../classes-and-structs/polymorphism.md)  
 - [Clases y miembros de clase abstractos y sellados](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
 - [Propiedades](../classes-and-structs/properties.md)  
 - [Eventos](../events/index.md)  
-- [Indizadores](../indexers/index.md)  
+- [Indizadores](../indexers/index.md)
   
 ## <a name="see-also"></a>Vea también
 

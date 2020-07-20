@@ -4,12 +4,12 @@ description: Información sobre ejemplos y tutoriales de .NET Core, ASP.NET Core
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 44ce0d740502686db1801db428a2f79c2250f8c0
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 367b2cbea24ac0da634051bf815c319f3679f79b
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507434"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86417324"
 ---
 # <a name="net-samples-and-tutorials"></a>Ejemplos y tutoriales de .NET
 
@@ -87,9 +87,9 @@ Este tutorial muestra muchas de las características de LINQ y los elementos del
 
 En este tutorial se muestra cómo crear una sencilla aplicación de consola de .NET Core con Visual Studio para Mac.
 
-**[Creación de una solución completa de .NET Core en macOS con Visual Studio para Mac](../core/tutorials/using-on-mac-vs-full-solution.md)**
+**[Creación de una biblioteca de .NET Standard en macOS mediante Visual Studio para Mac](../core/tutorials/library-with-visual-studio-mac.md)**
 
-Este tutorial muestra cómo crear una solución completa de .NET Core que incluye una biblioteca reutilizable y pruebas unitarias.
+En este tutorial se muestra cómo crear una biblioteca de .NET Standard con Visual Studio para Mac.
 
 **[Creación de una aplicación de .NET Core con complementos](../core/tutorials/creating-app-with-plugin-support.md)**
 

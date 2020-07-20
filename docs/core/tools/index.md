@@ -3,12 +3,12 @@ title: CLI de .NET Core
 titleSuffix: ''
 description: Información general de la CLI de .NET Core y sus características.
 ms.date: 02/13/2020
-ms.openlocfilehash: ac5988bacbef41326f2501a2cff6c3f5aa0be798
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: f92151c85b4816fef1859e84ad94945445db1854
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80110846"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86415967"
 ---
 # <a name="net-core-cli-overview"></a>Información general sobre la CLI de .NET Core
 
@@ -16,7 +16,7 @@ ms.locfileid: "80110846"
 
 La interfaz de la línea de comandos (CLI) de .NET Core es una cadena de herramientas multiplataforma para desarrollar, compilar, ejecutar y publicar aplicaciones .NET Core.
 
-La CLI de .NET Core se incluye con el [SDK de .NET Core](../sdk.md). Para más información sobre cómo instalar el SDK de .NET Core, consulte [Instalación del SDK de .NET Core](../install/sdk.md).
+La CLI de .NET Core se incluye con el [SDK de .NET Core](../sdk.md). Para más información sobre cómo instalar el SDK de .NET Core, consulte [Instalación de .NET Core](../install/windows.md).
 
 ## <a name="cli-commands"></a>Comandos de la CLI
 
@@ -104,4 +104,4 @@ Las opciones que se pasan en la línea de comandos son las opciones para el coma
 ## <a name="see-also"></a>Vea también
 
 - [Repositorio de GitHub dotnet/sdk](https://github.com/dotnet/sdk/)
-- [.NET Core installation guide](../install/sdk.md) (Guía de instalación de .NET Core)
+- [.NET Core installation guide](../install/windows.md) (Guía de instalación de .NET Core)

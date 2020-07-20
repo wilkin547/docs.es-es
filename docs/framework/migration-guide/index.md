@@ -1,17 +1,18 @@
 ---
 title: 'Guía de migración a .NET Framework 4.8, 4.7, 4.6 y 4.5 '
+description: Una guía para migrar a versiones de .NET Framework más recientes que incluye recursos para las nuevas características y compatibilidad de aplicaciones.
 ms.custom: updateeachrelease
 ms.date: 04/18/2019
 helpviewer_keywords:
 - .NET Framework, migrating applications to
 - migration, .NET Framework
 ms.assetid: 02d55147-9b3a-4557-a45f-fa936fadae3b
-ms.openlocfilehash: fbaee646f7adcfe1a53d4231790e4258fd95a892
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: a5b632824efacdb5e99228727b8751dc7f17d363
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102637"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86443421"
 ---
 # <a name="migrate-to-net-framework-48-47-46-and-45"></a>Migración a .NET Framework 4.8, 4.7, 4.6 y 4.5
 
