@@ -1,16 +1,17 @@
 ---
 title: Eventos ETW de método
+description: Vea eventos ETW que recopilan información específica de los métodos, como los eventos de método CLR, el marcador de método CLR o los eventos detallados de método CLR, y MethodJittingStarted.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ETW, method events (CLR)
 - method events [.NET Framework]
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
-ms.openlocfilehash: 4937afe8bb23be58b72d082cd5ba200b4948ab4d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: f48867a0aef417ad0b19a15d78e0c0f01a7c30a1
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715994"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474324"
 ---
 # <a name="method-etw-events"></a>Eventos ETW de método
 
@@ -24,7 +25,7 @@ Todos los eventos de método se generan mediante la palabra clave `JITKeyword` (
 
 En la tabla siguiente se muestra la palabra clave y el nivel. Para obtener más información, vea [palabras clave y niveles ETW de CLR](clr-etw-keywords-and-levels.md).
 
-|Palabra clave para generar el evento|Level|
+|Palabra clave para generar el evento|Nivel|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10)|Informativo (4)|
 |`NGenKeyword` (0x20)|Informativo (4)|
@@ -33,7 +34,7 @@ En la tabla siguiente se muestra la palabra clave y el nivel. Para obtener más 
 
 En la siguiente tabla se muestra la información del evento.
 
-|Event|Id. de evento|Descripción|
+|Evento|Id. de evento|Descripción|
 |-----------|--------------|-----------------|
 |`MethodLoad_V1`|136|Se genera cuando un método se carga just-in-time (carga JIT) o se carga una imagen NGEN. Los métodos dinámicos y genéricos no usan esta versión para cargas de método. Los asistentes de JIT nunca usan esta versión.|
 |`MethodUnLoad_V1`|137|Se genera cuando se descarga un módulo o se destruye un dominio de aplicación. Los métodos dinámicos nunca usan esta versión para descargas de método.|
@@ -42,7 +43,7 @@ En la siguiente tabla se muestra la información del evento.
 
 En la siguiente tabla, se muestran los datos del evento:
 
-|Nombre de campo|Tipo de datos|Descripción|
+|Nombre del campo|Tipo de datos|Descripción|
 |----------------|---------------|-----------------|
 |MethodID|win:UInt64|Identificador único de un método. Para los métodos del asistente JIT, se establece en la dirección de inicio del método.|
 |ModuleID|win:UInt64|Identificador del módulo al que pertenece este método (0 para asistentes de JIT).|
@@ -58,7 +59,7 @@ Además, estos eventos solo se generan con el proveedor de detención y signific
 
 En la tabla siguiente se muestra la palabra clave y el nivel.
 
-|Palabra clave para generar el evento|Level|
+|Palabra clave para generar el evento|Nivel|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementRundownKeyword` (0x800)|Informativo (4)|
 |`JitRundownKeyword` (0x10)|Informativo (4)|
@@ -66,7 +67,7 @@ En la tabla siguiente se muestra la palabra clave y el nivel.
 
 En la siguiente tabla se muestra la información del evento.
 
-|Event|Id. de evento|Descripción|
+|Evento|Id. de evento|Descripción|
 |-----------|--------------|----------------|
 |`DCStartInit_V1`|147|Se envía antes del inicio de la enumeración durante un informe detallado de inicio.|
 |`DCStartComplete_V1`|145|Se envía al final de la enumeración durante un informe detallado de inicio.|
@@ -75,7 +76,7 @@ En la siguiente tabla se muestra la información del evento.
 
 En la siguiente tabla, se muestran los datos del evento:
 
-|Nombre de campo|Tipo de datos|Descripción|
+|Nombre del campo|Tipo de datos|Descripción|
 |----------------|---------------|-----------------|
 |ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|
 
@@ -83,7 +84,7 @@ En la siguiente tabla, se muestran los datos del evento:
 
 En la tabla siguiente se muestra la palabra clave y el nivel.
 
-|Palabra clave para generar el evento|Level|
+|Palabra clave para generar el evento|Nivel|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10)|Detallado (5)|
 |`NGenKeyword` (0x20)|Detallado (5)|
@@ -92,7 +93,7 @@ En la tabla siguiente se muestra la palabra clave y el nivel.
 
 En la siguiente tabla se muestra la información del evento.
 
-|Event|Id. de evento|Descripción|
+|Evento|Id. de evento|Descripción|
 |-----------|--------------|-----------------|
 |`MethodLoadVerbose_V1`|143|Se genera cuando la carga de un método es JIT o se carga una imagen NGEN. Los métodos dinámicos y genéricos siempre usan esta versión para cargas de método. Los asistentes de JIT siempre usan esta versión.|
 |`MethodUnLoadVerbose_V1`|144|Se genera cuando se destruye un método dinámico, se descarga un módulo o se destruye un dominio de aplicación. Los métodos dinámicos siempre usan esta versión para descargas de método.|
@@ -101,7 +102,7 @@ En la siguiente tabla se muestra la información del evento.
 
 En la siguiente tabla, se muestran los datos del evento:
 
-|Nombre de campo|Tipo de datos|Descripción|
+|Nombre del campo|Tipo de datos|Descripción|
 |----------------|---------------|-----------------|
 |MethodID|win:UInt64|Identificador único del método. Para los métodos del asistente JIT, se establece en la dirección de inicio del método.|
 |ModuleID|win:UInt64|Identificador del módulo al que pertenece este método (0 para asistentes de JIT).|
@@ -118,7 +119,7 @@ En la siguiente tabla, se muestran los datos del evento:
 
 En la tabla siguiente se muestra la palabra clave y el nivel.
 
-|Palabra clave para generar el evento|Level|
+|Palabra clave para generar el evento|Nivel|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10)|Detallado (5)|
 |`NGenKeyword` (0x20)|Detallado (5)|
@@ -127,13 +128,13 @@ En la tabla siguiente se muestra la palabra clave y el nivel.
 
 En la siguiente tabla se muestra la información del evento.
 
-|Event|Id. de evento|Descripción|
+|Evento|Id. de evento|Descripción|
 |-----------|--------------|-----------------|
 |`MethodJittingStarted`|145|Se genera cuando se está realizando la compilación JIT de un método.|
 
 En la siguiente tabla, se muestran los datos del evento:
 
-|Nombre de campo|Tipo de datos|Descripción|
+|Nombre del campo|Tipo de datos|Descripción|
 |----------------|---------------|-----------------|
 |MethodID|win:UInt64|Identificador único del método.|
 |ModuleID|win:UInt64|Identificador del módulo al que pertenece este método.|
@@ -144,6 +145,6 @@ En la siguiente tabla, se muestran los datos del evento:
 |MethodSignature|win:UnicodeString|Signatura del método (lista separada por comas de nombres de tipo).|
 |ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [CLR ETW Events (Eventos ETW de CLR)](clr-etw-events.md)

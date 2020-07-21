@@ -1,15 +1,16 @@
 ---
 title: Escribir aplicaciones grandes de .NET Framework que respondan
+description: Escriba aplicaciones .NET grandes, con capacidad de respuesta o aplicaciones que procesan una gran cantidad de datos, como archivos o bases de datos.
 ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 57f65feff5260cb83df5354f5d7ee1bad0babb3a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8b1c9ab25299fcbafca6aba7b13217713a941ce8
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180581"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475195"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Escribir aplicaciones grandes de .NET Framework que respondan
 
@@ -24,7 +25,7 @@ En este artículo se ofrecen varias sugerencias para mejorar el rendimiento de l
   
  Cuando los usuarios finales interactúan con la aplicación, esperan una capacidad de respuesta adecuada. La escritura o la gestión de comandos nunca debe bloquearse. La ayuda debe aparecer rápidamente o desaparecer si el usuario continúa escribiendo. La aplicación debe evitar bloquear el subproceso de la interfaz de usuario con largos cálculos que ralenticen la aplicación.
   
- Para obtener más información acerca de los compiladores de Roslyn, vea [.NET Compiler Platform SDK](../../csharp/roslyn-sdk/index.md).
+ Para obtener más información sobre los compiladores de Roslyn, vea [el SDK de .net Compiler Platform](../../csharp/roslyn-sdk/index.md).
   
 ## <a name="just-the-facts"></a>Solo los hechos  
  Tenga en cuenta lo siguiente cuando ajuste el rendimiento y cree aplicaciones de .NET Framework con capacidad de respuesta.
@@ -196,7 +197,7 @@ private bool TrimmedStringStartsWith(string text, int start, string prefix) {
 // etc...
 ```  
   
- La primera versión de `WriteFormattedDocComment()` asignaba una matriz, varias subcadenas y una subcadena recortada junto con una matriz `params` vacía. También comprobó si hay "///". El código revisado solo usa la indización y no realiza ninguna asignación. Encuentra el primer carácter que no es espacio en blanco y, a continuación, comprueba carácter por carácter para ver si la cadena comienza con "///". El nuevo `IndexOfFirstNonWhiteSpaceChar` código <xref:System.String.TrimStart%2A> usa en lugar de devolver el primer índice (después de un índice de inicio especificado) donde se produce un carácter de espacio no en blanco. La corrección no está completa, pero sirve para comprobar cómo se aplican correcciones similares para obtener una solución completa. Al aplicar este enfoque en todo el código, se pueden quitar todas las asignaciones en `WriteFormattedDocComment()`.
+ La primera versión de `WriteFormattedDocComment()` asignaba una matriz, varias subcadenas y una subcadena recortada junto con una matriz `params` vacía. También se ha comprobado "///". El código revisado solo usa la indización y no realiza ninguna asignación. Busca el primer carácter que no sea un espacio en blanco y, a continuación, comprueba el carácter carácter a carácter para ver si la cadena comienza con "///". El nuevo código usa en `IndexOfFirstNonWhiteSpaceChar` lugar de <xref:System.String.TrimStart%2A> para devolver el primer índice (después de un índice de inicio especificado) en el que se produce un carácter que no es un espacio en blanco. La corrección no está completa, pero sirve para comprobar cómo se aplican correcciones similares para obtener una solución completa. Al aplicar este enfoque en todo el código, se pueden quitar todas las asignaciones en `WriteFormattedDocComment()`.
   
  **Ejemplo 4: StringBuilder**  
   
@@ -277,9 +278,9 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
  Esta estrategia simple de almacenamiento en caché respeta el buen diseño de caché porque tiene un límite de tamaño. No obstante, hay más código ahora que en el original, lo que significa un mayor coste de mantenimiento. Únicamente debe adoptar la estrategia de almacenamiento en caché si se ha encontrado con un problema de rendimiento y PerfView muestra que las asignaciones de <xref:System.Text.StringBuilder> suponen una contribución significativa.
   
 ### <a name="linq-and-lambdas"></a>LINQ y lambdas  
-Language-Integrated Query (LINQ), junto con expresiones lambda, es un ejemplo de una característica de productividad. Sin embargo, su uso puede tener un impacto significativo en el rendimiento a lo largo del tiempo, y es posible que necesite volver a escribir el código.
+Language-Integrated Query (LINQ), junto con las expresiones lambda, es un ejemplo de una característica de productividad. Sin embargo, su uso puede tener un impacto significativo en el rendimiento a lo largo del tiempo, y es posible que tenga que volver a escribir el código.
   
- **Ejemplo 5: lambdas, List\<T> e IEnumerable\<T>**  
+ **Ejemplo 5: lambdas, List \<T> e IEnumerable\<T>**  
   
  En este ejemplo se usa [LINQ y código de estilo funcional](https://docs.microsoft.com/archive/blogs/charlie/anders-hejlsberg-on-linq-and-functional-programming) para buscar un símbolo en el modelo del compilador, dada una cadena de nombre:  
   
@@ -413,7 +414,7 @@ class Compilation { /*...*/
   
  **Corrección para el ejemplo 6**  
   
- Para eliminar <xref:System.Threading.Tasks.Task> la asignación completada, puede almacenar en caché el objeto Task con el resultado completado:  
+ Para quitar la asignación completada <xref:System.Threading.Tasks.Task> , puede almacenar en caché el objeto de tarea con el resultado completado:  
   
 ```csharp  
 class Compilation { /*...*/  
@@ -470,4 +471,4 @@ class Compilation { /*...*/
 - [.NET Performance Tips (Sugerencias de rendimiento de .NET)](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v%3dmsdn.10))
 - [Tutoriales de PerfView de Channel 9](https://channel9.msdn.com/Series/PerfView-Tutorial)
 - [SDK de .NET Compiler Platform](../../csharp/roslyn-sdk/index.md)
-- [dotnet/roslyn repo en GitHub](https://github.com/dotnet/roslyn)
+- [repositorio dotnet/Roslyn en GitHub](https://github.com/dotnet/roslyn)

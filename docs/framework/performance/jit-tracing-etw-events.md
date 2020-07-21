@@ -1,38 +1,39 @@
 ---
 title: Eventos ETW de traza JIT
+description: Comprenda los eventos ETW de seguimiento Just-in-Time (JIT). Estos eventos recopilan información relacionada con el éxito o el fracaso de la inclusión JIT y las llamadas de cola JIT.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - JIT tracing events [.NET Framework]
 - ETW, JIT tracing events (CLR)
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
-ms.openlocfilehash: 37bfd09516589f3422ee005233e576b110ef1288
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 568fc942cd0e2188c530d2befb6260083757ec72
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716008"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474467"
 ---
 # <a name="jit-tracing-etw-events"></a>Eventos ETW de traza JIT
-Estos eventos recopilan información relativa a si la inclusión Just-In-Time (JIT) y las llamadas de cola JIT se realizan correctamente o no.
+Estos eventos recopilan información relativa a si la inclusión Just-In-Time (JIT) y las llamadas de cola JIT se realizan correctamente o no. 
 
 ## <a name="jit-inlining-events"></a>Eventos de inclusión JIT
 
 ### <a name="methodjitinliningfailed-event"></a>Evento MethodJitInliningFailed
  En la tabla siguiente se muestra la palabra clave y el nivel. (Para obtener más información, vea [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)).  
   
-|Palabra clave para generar el evento|Level|  
+|Palabra clave para generar el evento|Nivel|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0 x 10)|Detallado (5)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Event|Id. de evento|Se genera cuando|  
+|Evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningFailed`|186|Error de inclusión de JIT.|  
   
  En la siguiente tabla se muestran los datos del evento.  
   
-|Nombre de campo|Tipo de datos|Descripción|  
+|Nombre del campo|Tipo de datos|Descripción|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|win:UnicodeString|Espacio de nombres del método que se está compilando.|  
 |MethodBeingCompiledName|win:UnicodeString|Nombre del método que se está compilando.|  
@@ -50,19 +51,19 @@ Estos eventos recopilan información relativa a si la inclusión Just-In-Time (J
 ### <a name="methodjitinliningsucceeded-event"></a>Evento MethodJitInliningSucceeded  
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
-|Palabra clave para generar el evento|Level|  
+|Palabra clave para generar el evento|Nivel|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0 x 10)|Detallado (5)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Event|Id. de evento|Se genera cuando|  
+|Evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningSucceeded`|185|El método de inclusión se realizó correctamente.|  
   
  En la siguiente tabla se muestran los datos del evento.  
   
-|Nombre de campo|Tipo de datos|Descripción|  
+|Nombre del campo|Tipo de datos|Descripción|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|win:UnicodeString|Espacio de nombres del método que se está compilando.|  
 |MethodBeingCompiledName|win:UnicodeString|Nombre del método que se está compilando.|  
@@ -80,19 +81,19 @@ Estos eventos recopilan información relativa a si la inclusión Just-In-Time (J
 ### <a name="methodjittailcallfailed-event"></a>Evento MethodJITTailCallFailed  
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
-|Palabra clave para generar el evento|Level|  
+|Palabra clave para generar el evento|Nivel|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0 x 10)|Detallado (5)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Event|Id. de evento|Se genera cuando|  
+|Evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallFailed`|189|Error en la llamada de cola del método.|  
   
  En la siguiente tabla se muestran los datos del evento.  
   
-|Nombre de campo|Tipo de datos|Descripción|  
+|Nombre del campo|Tipo de datos|Descripción|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|win:UnicodeString|Espacio de nombres del método que se está compilando.|  
 |MethodBeingCompiledName|win:UnicodeString|Nombre del método que se está compilando.|  
@@ -110,19 +111,19 @@ Estos eventos recopilan información relativa a si la inclusión Just-In-Time (J
 ### <a name="methodjittailcallsucceeded-event"></a>Evento MethodJITTailCallSucceeded  
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
-|Palabra clave para generar el evento|Level|  
+|Palabra clave para generar el evento|Nivel|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0 x 10)|Detallado (5)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Event|Id. de evento|Se genera cuando|  
+|Evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallSucceeded`|188|La llamada de cola del método se realizó correctamente.|  
   
  En la siguiente tabla se muestran los datos del evento.  
   
-|Nombre de campo|Tipo de datos|Descripción|  
+|Nombre del campo|Tipo de datos|Descripción|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|win:UnicodeString|Espacio de nombres del método que se está compilando.|  
 |MethodBeingCompiledName|win:UnicodeString|Nombre del método que se está compilando.|  
@@ -137,6 +138,6 @@ Estos eventos recopilan información relativa a si la inclusión Just-In-Time (J
 |TailCallType|win:UnicodeString|Tipo de llamada de cola.|  
 |ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [CLR ETW Events (Eventos ETW de CLR)](clr-etw-events.md)
