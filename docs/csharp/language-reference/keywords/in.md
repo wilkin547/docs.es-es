@@ -6,16 +6,16 @@ f1_keywords:
 - in_CSharpKeyword
 helpviewer_keywords:
 - in keyword [C#]
-ms.openlocfilehash: 251a330ec327366ce458dd8066061365ab0e1dad
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9edbd76e7b7a249743a201adccb5659bee6e5980
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713452"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441354"
 ---
 # <a name="in-c-reference"></a>in (Referencia de C#)
 
-La palabra clave `in` se usa en cuatro contextos:  
+La palabra clave `in` se usa en los contextos siguientes:  
   
 - [parámetros de tipo genérico](in-generic-modifier.md) en interfaces y delegados genéricos.
 - Como un [modificador de parámetro](in-parameter-modifier.md), que le permite pasar un argumento a un método mediante una referencia en lugar de mediante un valor.

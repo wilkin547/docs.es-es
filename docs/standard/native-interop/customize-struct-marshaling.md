@@ -1,18 +1,18 @@
 ---
 title: 'Personalización de la serialización de estructuras: .NET'
-description: Obtenga información sobre cómo personalizar la forma en que .NET serializa las estructuras de una representación nativa.
+description: Obtenga información sobre cómo personalizar la forma en que .NET serializa estructuras en una representación nativa.
 ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: 8248ca589f41967a9112ba61c09599b337814de7
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: c82e0099c44b8033cad241d69bdd284243711a50
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84003898"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374538"
 ---
-# <a name="customizing-structure-marshaling"></a>Personalización de la serialización de estructuras
+# <a name="customize-structure-marshaling"></a>Personalización de la serialización de estructuras
 
 A veces, las reglas de serialización predeterminadas para las estructuras no es exactamente lo que necesita. Los entornos de ejecución de .NET proporcionan unos puntos de extensión que permiten personalizar el diseño de la estructura y cómo se serializan los campos.
 
@@ -264,7 +264,7 @@ struct BString
 };
 ```
 
-Cuando se usa una API basada en WinRT, es posible que deba serializar una cadena como `HSTRING`.  Mediante el valor <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType>, se puede serializar una cadena como `HSTRING`.
+Cuando se usa una API basada en WinRT, es posible que deba serializar una cadena como `HSTRING`. Mediante el valor <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType>, se puede serializar una cadena como `HSTRING`.
 
 ```csharp
 public struct HString
@@ -317,7 +317,7 @@ struct DefaultString
 
 ## <a name="customizing-decimal-field-marshaling"></a>Personalización de la serialización de campos de decimal
 
-Si está trabajando en Windows, puede encontrar algunas API que usan la estructura [`CY` o `CURRENCY`](/windows/win32/api/wtypes/ns-wtypes-cy~r1) nativa. De forma predeterminada, el tipo `decimal` de .NET serializa a la estructura [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1) nativa. Sin embargo, puede usar <xref:System.Runtime.InteropServices.MarshalAsAttribute> con el valor <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> para indicar al serializador que convierta un valor `decimal` al valor `CY` nativo.
+Si está trabajando en Windows, puede encontrar algunas API que usan la estructura [`CY` o `CURRENCY`](/windows/win32/api/wtypes/ns-wtypes-cy-r1) nativa. De forma predeterminada, el tipo `decimal` de .NET serializa a la estructura [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal-r1) nativa. Sin embargo, puede usar <xref:System.Runtime.InteropServices.MarshalAsAttribute> con el valor <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> para indicar al serializador que convierta un valor `decimal` al valor `CY` nativo.
 
 ```csharp
 public struct Currency
@@ -334,7 +334,7 @@ struct Currency
 };
 ```
 
-## <a name="marshaling-systemobjects"></a>Serialización de `System.Object`
+## <a name="marshal-systemobject"></a>Serialización de `System.Object`
 
 En Windows, puede serializar campos con tipo `object` al código nativo. Puede serializar estos campos a uno de los tres tipos:
 

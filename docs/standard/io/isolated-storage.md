@@ -19,38 +19,19 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: b9915faff2593cc51868c20e1a83a05ffca9f548
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 0de0c7e9843ca8a97392733a68367b1dae8de232
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325931"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416383"
 ---
 # <a name="isolated-storage"></a>Almacenamiento aislado
-<a name="top"></a> Para las aplicaciones de escritorio, el almacenamiento aislado es un mecanismo de almacenamiento de datos que proporciona aislamiento y seguridad mediante la definición de modos estándar de asociar código a los datos guardados. La estandarización ofrece además otras ventajas. Los administradores pueden usar herramientas diseñadas para manipular el almacenamiento aislado para configurar el espacio de almacenamiento de archivos, establecer directivas de seguridad y eliminar los datos no utilizados. Con el almacenamiento aislado, el código ya no requiere rutas de acceso únicas para especificar ubicaciones seguras en el sistema de archivos y los datos están protegidos de otras aplicaciones que solo tienen acceso a un almacenamiento aislado. La información en código que indica la ubicación del área de almacenamiento de la aplicación no es necesaria.
+
+Para las aplicaciones de escritorio, el almacenamiento aislado es un mecanismo de almacenamiento de datos que proporciona aislamiento y seguridad mediante la definición de modos estándar de asociar código a los datos guardados. La estandarización ofrece además otras ventajas. Los administradores pueden usar herramientas diseñadas para manipular el almacenamiento aislado para configurar el espacio de almacenamiento de archivos, establecer directivas de seguridad y eliminar los datos no utilizados. Con el almacenamiento aislado, el código ya no requiere rutas de acceso únicas para especificar ubicaciones seguras en el sistema de archivos y los datos están protegidos de otras aplicaciones que solo tienen acceso a un almacenamiento aislado. La información en código que indica la ubicación del área de almacenamiento de la aplicación no es necesaria.
 
 > [!IMPORTANT]
 > El almacenamiento aislado no está disponible para las aplicaciones de la Tienda Windows 8.x. En su lugar, use las clases de datos de la aplicación de los espacios de nombres `Windows.Storage` incluidas en la API de Windows Runtime para almacenar archivos y datos locales. Para más información, vea [Datos de aplicación](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) en el Centro de desarrollo de Windows.
-
-Este tema contiene las siguientes secciones:
-
-- [Compartimientos y almacenes de datos](#data_compartments_and_stores)
-
-- [Cuotas para el almacenamiento aislado](#quotas)
-
-- [Acceso seguro](#secure_access)
-
-- [Uso permitido y riesgos de seguridad](#allowed_usage)
-
-- [Ubicaciones del almacenamiento aislado](#isolated_storage_locations)
-
-- [Crear, enumerar y eliminar almacenamiento aislado](#isolated_storage_tasks)
-
-- [Escenarios del almacenamiento aislado](#scenarios_for_isolated_storage)
-
-- [Temas relacionados](#related_topics)
-
-- [Referencia](#reference)
 
 <a name="data_compartments_and_stores"></a>
 
@@ -114,11 +95,11 @@ __Esta sección es aplicable a los siguientes marcos:__
 - .NET Core 2.1+
 - .NET 5.0+
 
-Las plataformas .NET Framework y .NET Core ofrecen [almacenamiento aislado](/dotnet/standard/io/isolated-storage) como mecanismo para conservar los datos de un usuario, una aplicación o un componente. Se trata de un componente heredado especialmente diseñado para escenarios de seguridad de acceso del código en desuso.
+Las plataformas .NET Framework y .NET Core ofrecen almacenamiento aislado como mecanismo para conservar los datos de un usuario, una aplicación o un componente. Se trata de un componente heredado especialmente diseñado para escenarios de seguridad de acceso del código en desuso.
 
 Se pueden usar diversas API y herramientas de almacenamiento aislado para leer datos a través de límites de confianza. Por ejemplo, la lectura de datos desde un ámbito de nivel de máquina puede agregar datos de otras cuentas de usuario, posiblemente de menos confianza, a la máquina. Los componentes o las aplicaciones que leen desde ámbitos de almacenamiento aislado de nivel de máquina deben tener en cuenta las consecuencias de leer estos datos.
 
-### <a name="security-sensitive-apis-which-can-read-from-the-machine-wide-scope"></a>API relativas a la seguridad que pueden leer el ámbito de nivel de máquina
+### <a name="security-sensitive-apis-that-can-read-from-the-machine-wide-scope"></a>API relativas a la seguridad que pueden leer el ámbito de nivel de máquina
 
 Los componentes o las aplicaciones que llaman a cualquiera de las siguientes API se leen desde el ámbito de nivel de máquina:
 
@@ -129,7 +110,7 @@ Los componentes o las aplicaciones que llaman a cualquiera de las siguientes API
 * [IsolatedStorageFile.GetStore](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getstore) (pasa un ámbito que incluye la marca IsolatedStorageScope.Machine)
 * [IsolatedStorageFile.Remove](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.remove) (pasa un ámbito que incluye la marca `IsolatedStorageScope.Machine`)
 
-La [herramienta de almacenamiento aislado](/dotnet/framework/tools/storeadm-exe-isolated-storage-tool) `storeadm.exe` se ve afectada si se llama con el modificador `/machine`, tal y como se muestra en el código siguiente:
+La [herramienta de almacenamiento aislado](../../framework/tools/storeadm-exe-isolated-storage-tool.md) `storeadm.exe` se ve afectada si se llama con el modificador `/machine`, tal y como se muestra en el código siguiente:
 
 ```txt
 storeadm.exe /machine [any-other-switches]
@@ -252,7 +233,7 @@ Muchas aplicaciones usan bases de datos para almacenar y aislar los datos y, en 
 
 <a name="related_topics"></a>
 
-## <a name="related-topics"></a>Temas relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
 |Title|Descripción|
 |-----------|-----------------|

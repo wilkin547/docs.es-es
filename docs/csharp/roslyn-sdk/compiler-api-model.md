@@ -1,14 +1,14 @@
 ---
 title: Modelo de objetos y conceptos del SDK de .NET Compiler Platform
 description: En este tema se proporciona la información necesaria para trabajar de forma eficaz con el SDK de .NET Compiler. Aprenderá sobre las capas de API, los tipos principales implicados y el modelo de objetos general.
-ms.date: 10/10/2017
+ms.date: 07/13/2020
 ms.custom: mvc
-ms.openlocfilehash: 529ce6fbdef22964251c8b22abbd5d8aadab633d
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: a65d282dd3c58279bbfd635c0386d50ce3f30055
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82975945"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374473"
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>Descripción del modelo del SDK de .NET Compiler Platform
 
@@ -30,21 +30,19 @@ En correspondencia a cada una de esas fases, el SDK de .NET Compiler Platform ex
 
 Cada compilador combina estos componentes como un único todo.
 
-Estas API son las mismas que usa Visual Studio. Por ejemplo, las características de formato y esquema del código usan los árboles de sintaxis, las características de navegación y el Examinador de objetos usan la tabla de símbolos, las refactorizaciones e Ir a definición usan el modelo semántico y Editar y continuar usa todos ellos, incluida la API de emisión.
+Estas API son las mismas que usa Visual Studio. Por ejemplo, las características de formato y esquema del código usan los árboles de sintaxis, las características de navegación y el **Examinador de objetos** usan la tabla de símbolos, las refactorizaciones e **Ir a definición** usan el modelo semántico, y **Editar y continuar** usa todos ellos, incluida la API de emisión.
 
 ## <a name="api-layers"></a>Capas de API
 
-El SDK de .NET Compiler está formado por dos capas principales de API: API de compilador y API de áreas de trabajo.
-
-![Capas de API representadas por las API de canalización de compilador](media/compiler-api-model/api-layers.png)
+El SDK del compilador de .NET consta de varias capas de API: de compilador, de diagnóstico, de scripting y de área de trabajo.
 
 ### <a name="compiler-apis"></a>API de compilador
 
-La capa de compilador contiene los modelos de objetos que corresponden con la información expuesta en cada fase de la canalización de compilador, sintáctica y semántica. La capa de compilador también contiene una instantánea inmutable de una sola invocación de un compilador, incluidas las referencias de ensamblado, las opciones del compilador y los archivos de código fuente. Hay dos API distintas que representan el lenguaje C# y el lenguaje Visual Basic. Estas dos API son similares en forma, aunque están adaptadas para lograr una alta fidelidad con cada lenguaje. Esta capa no tiene dependencias en componentes de Visual Studio.
+La capa de compilador contiene los modelos de objetos que corresponden con la información expuesta en cada fase de la canalización de compilador, sintáctica y semántica. La capa de compilador también contiene una instantánea inmutable de una sola invocación de un compilador, incluidas las referencias de ensamblado, las opciones del compilador y los archivos de código fuente. Hay dos API distintas que representan el lenguaje C# y el lenguaje Visual Basic. Las dos API son similares en forma, aunque están adaptadas para lograr una alta fidelidad con cada lenguaje. Esta capa no tiene dependencias en componentes de Visual Studio.
 
 ### <a name="diagnostic-apis"></a>API de diagnóstico
 
-Como parte de su análisis, el compilador puede generar un conjunto de diagnósticos que abarcan desde errores de sintaxis, semántica y asignación definitiva hasta distintas advertencias y diagnósticos informativos. La capa de la API de compilador expone diagnósticos a través de una API extensible que permite incluir analizadores definidos por el usuario en el proceso de compilación. Permite generar diagnósticos definidos por el usuario, como los de herramientas como StyleCop o FxCop, junto con diagnósticos definidos por el compilador. La generación de diagnósticos de este modo tiene la ventaja de integrarse de forma natural con herramientas como MSBuild y Visual Studio que dependen de diagnósticos de experiencias como detener una compilación según una directiva y mostrar subrayados ondulados en vivo en el editor y sugerir correcciones de código.
+Como parte de su análisis, el compilador puede generar un conjunto de diagnósticos que abarcan desde errores de sintaxis, semántica y asignación definitiva hasta distintas advertencias y diagnósticos informativos. La capa de la API de compilador expone diagnósticos a través de una API extensible que permite incluir analizadores definidos por el usuario en el proceso de compilación. Permite generar diagnósticos definidos por el usuario, como los de herramientas como StyleCop o FxCop, junto con diagnósticos definidos por el compilador. La generación de diagnósticos de este modo tiene la ventaja de integrarse de forma natural con herramientas como MSBuild y Visual Studio, que dependen de diagnósticos de experiencias como detener una compilación según una directiva y mostrar subrayados ondulados activos en el editor y sugerir correcciones de código.
 
 ### <a name="scripting-apis"></a>API de scripting
 

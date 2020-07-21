@@ -1,5 +1,6 @@
 ---
 title: Especificar un juego de caracteres
+description: Obtenga información sobre cómo especificar un juego de caracteres que usa la codificación estrecha (ANSI) o ancha (Unicode). También puede especificar la selección automática en tiempo de ejecución.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +11,15 @@ helpviewer_keywords:
 - attribute fields in platform invoke, CharSet
 - CharSet field
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
-ms.openlocfilehash: 0db1cd8d75b45f6d718168793c873e5867028269
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 789753742d8714e481f038e323407cbab0499f6c
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125173"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309799"
 ---
-# <a name="specifying-a-character-set"></a>Especificar un juego de caracteres
+# <a name="specify-a-character-set"></a>Especificación de un juego de caracteres
+
 El campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> controla la serialización de cadenas y determina cómo la invocación de plataforma busca nombres de función en un archivo DLL. En este tema se describen ambos comportamientos.  
   
  Algunas API exportan dos versiones de las funciones que toman argumentos de cadena: la versión estrecha (ANSI) y la versión ancha (Unicode). La API de Windows, por ejemplo, incluye los siguientes nombres de punto de entrada para la función **MessageBox**:  
@@ -61,11 +63,12 @@ El campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?display
   
 - La invocación de plataforma elige entre los formatos ANSI y Unicode en tiempo de ejecución en función de la plataforma de destino.  
   
-## <a name="specifying-a-character-set-in-visual-basic"></a>Especificar un juego de caracteres en Visual Basic  
- En el ejemplo siguiente se declara la función **MessageBox** tres veces, cada una de ellas con un comportamiento de juego de caracteres diferente. Para especificar un comportamiento de juego de caracteres en Visual Basic, agregue la palabra clave **Ansi**, **Unicode** o **Auto** a la instrucción de declaración.  
-  
- Si omite la palabra clave del juego de caracteres, tal y como se hace en la primera instrucción de la declaración, el campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> establece como valor predeterminado el juego de caracteres ANSI. En la segunda y tercera instrucciones del ejemplo se especifica explícitamente un juego de caracteres con una palabra clave.  
-  
+## <a name="specify-a-character-set-in-visual-basic"></a>Especificación de un juego de caracteres en Visual Basic
+
+Puede especificar un comportamiento de juego de caracteres en Visual Basic si agrega la palabra clave `Ansi`, `Unicode` o `Auto` a la instrucción de declaración. Si omite la palabra clave del juego de caracteres, el campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> establece como valor predeterminado el juego de caracteres ANSI.
+
+En el ejemplo siguiente se declara la función **MessageBox** tres veces, cada una de ellas con un comportamiento de juego de caracteres diferente. La primera instrucción omite la palabra clave del juego de caracteres, por lo que tiene ANSI como valor predeterminado. En la segunda y tercera instrucciones se especifica explícitamente un juego de caracteres con una palabra clave.
+
 ```vb
 Friend Class NativeMethods
     Friend Declare Function MessageBoxA Lib "user32.dll" (
@@ -88,8 +91,9 @@ Friend Class NativeMethods
 End Class
 ```
   
-## <a name="specifying-a-character-set-in-c-and-c"></a>Especificar un juego de caracteres en C# y C++  
- El campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> identifica el juego de caracteres subyacente como ANSI o Unicode. El juego de caracteres controla cómo se deben serializar los argumentos de cadena en un método. Use uno de los formatos siguientes para indicar el juego de caracteres:  
+## <a name="specify-a-character-set-in-c-and-c"></a>Especificación de un juego de caracteres en C# y C++
+
+El campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> identifica el juego de caracteres subyacente como ANSI o Unicode. El juego de caracteres controla cómo se deben serializar los argumentos de cadena en un método. Use uno de los formatos siguientes para indicar el juego de caracteres:  
   
 ```csharp
 [DllImport("DllName", CharSet = CharSet.Ansi)]

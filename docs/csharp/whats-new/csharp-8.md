@@ -2,12 +2,12 @@
 title: 'Novedades de C# 8.0: Guía de C#'
 description: Obtenga información general sobre las nuevas características disponibles en C# 8.0.
 ms.date: 04/07/2020
-ms.openlocfilehash: b4a9a1be0b0b60b0abda0b1f031dc648d831b46a
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 14df381e17fe89bd862f97522c7efd814857e71e
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174736"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309409"
 ---
 # <a name="whats-new-in-c-80"></a>Novedades de C# 8.0
 
@@ -398,7 +398,7 @@ Puede probar secuencias asincrónicas por su cuenta en nuestro tutorial sobre la
 
 ## <a name="asynchronous-disposable"></a>Asincrónica descartable
 
-A partir C# 8.0, el lenguaje admite tipos descartables asincrónicos que implementan la interfaz <xref:System.IAsyncDisposable?displayProperty=nameWithType>. El operando de una expresión `using` puede implementar <xref:System.IDisposable> o <xref:System.IAsyncDisposable>. En el caso de `IAsyncDisposable`, el compilador genera código para `await` el <xref:System.Threading.Tasks.Task> devuelto desde <xref:System.IAsyncDisposable.DisposeAsync%2A?displayProperty=nameWithType>. Para más información, consulte la [instrucción `using`](../language-reference/keywords/using-statement.md).
+A partir C# 8.0, el lenguaje admite tipos descartables asincrónicos que implementan la interfaz <xref:System.IAsyncDisposable?displayProperty=nameWithType>. Use la instrucción `await using` para trabajar con un objeto descartable de forma asincrónica. Para obtener más información, vea el artículo [Implementación de un método DisposeAsync](../../standard/garbage-collection/implementing-disposeasync.md).
 
 ## <a name="indices-and-ranges"></a>Índices y rangos
 

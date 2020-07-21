@@ -4,11 +4,12 @@ description: Descubra qué versiones de Windows puede instalar en .NET Core.
 author: adegeo
 ms.author: adegeo
 ms.date: 06/22/2020
-ms.openlocfilehash: e26494de7e9246b241cb965d8d735a781aab5478
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 97f67d00b3eb4dafc55256aea51f4295bb0ef06a
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85804463"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86308954"
 ---
 # <a name="install-net-core-on-windows"></a>Instalación de .NET Core en Windows
 
@@ -22,7 +23,8 @@ En este artículo obtendrá información sobre cómo instalar .NET Core en Windo
 
 La versión más reciente de .NET Core es la 3.1.
 
-[Descargar .NET Core](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [Descargar .NET Core](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="supported-releases"></a>Versiones compatibles
 
@@ -70,13 +72,15 @@ Ejecuta aplicaciones de escritorio de .NET Core WPF y NET Core de Windows Forms
 *Entorno de ejecución de .NET Core*\
 Este entorno de ejecución es el más sencillo y no incluye ningún otro. Le recomendamos encarecidamente que instale el *entorno de ejecución de ASP.NET Core* y el *entorno de ejecución de escritorio* para conseguir la mejor compatibilidad con las aplicaciones de .NET Core.
 
-[Descargue el entorno de ejecución de .NET Core.](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [Descarga del entorno de ejecución de .NET Core](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="sdk-information"></a>Información del SDK
 
 El SDK se usa para compilar y publicar aplicaciones y bibliotecas de .NET Core. La instalación del SDK incluye los tres [entornos de ejecución](#runtime-information): el de ASP.NET Core, el de escritorio y el de .NET Core.
 
-[Descargue el SDK de .NET Core.](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [Download .NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core) (Descarga del SDK de .NET Core)
 
 ## <a name="dependencies"></a>Dependencias
 
@@ -217,7 +221,8 @@ Si ya tiene Visual Studio instalado, puede comprobar la versión siguiendo los 
 
 Visual Studio puede instalar el SDK y el entorno de ejecución de .NET Core más recientes.
 
-- [Descargue Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019).
+> [!div class="button"]
+> [Descargue Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019).
 
 ### <a name="select-a-workload"></a>Selección de una carga de trabajo
 

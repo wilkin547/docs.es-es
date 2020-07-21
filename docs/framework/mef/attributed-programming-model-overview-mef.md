@@ -1,5 +1,6 @@
 ---
 title: Información general del modelo de programación con atributos (MEF)
+description: Introducción al modelo de programación con atributos, que es el predeterminado para Managed Extensibility Framework (MEF) en .NET.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - MEF, attributed programming model
 - attributed programming model [MEF]
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
-ms.openlocfilehash: c6b1093d2e821a55cc5513b077a270748a780b71
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: aea3a19ffe6f177901e5c0839b618bb36f573beb
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347626"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281373"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>Información general del modelo de programación con atributos (MEF)
 

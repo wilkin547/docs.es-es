@@ -4,11 +4,12 @@ description: Descubra qué versiones de macOS puede instalar en .NET Core.
 author: adegeo
 ms.author: adegeo
 ms.date: 06/25/2020
-ms.openlocfilehash: bb1a0fa24e2f6e8850cbe59378793ff846f04ba9
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 2900d98dbd30c51f689cdce37ea273ccc4f598b5
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85804462"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86308928"
 ---
 # <a name="install-net-core-on-macos"></a>Instalación de .NET Core en macOS
 
@@ -22,7 +23,8 @@ En este artículo obtendrá información sobre cómo instalar .NET Core en macOS
 
 La versión más reciente de .NET Core es la 3.1.
 
-[Descargar .NET Core](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [Descargar .NET Core](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="supported-releases"></a>Versiones compatibles
 
@@ -58,13 +60,15 @@ Ejecuta aplicaciones de ASP.NET Core. Incluye el entorno de ejecución de .NET C
 *Entorno de ejecución de .NET Core*\
 Este entorno de ejecución es el más sencillo y no incluye ningún otro. Le recomendamos encarecidamente que instale el *entorno de ejecución de ASP.NET Core* para conseguir la mejor compatibilidad con las aplicaciones de .NET Core.
 
-[Descargue el entorno de ejecución de .NET Core.](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [Descarga del entorno de ejecución de .NET Core](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="sdk-information"></a>Información del SDK
 
 El SDK se usa para compilar y publicar aplicaciones y bibliotecas de .NET Core. La instalación del SDK incluye ambos [entornos de ejecución](#runtime-information): ASP.NET Core y .NET Core.
 
-[Descargue el SDK de .NET Core.](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [Download .NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core) (Descarga del SDK de .NET Core)
 
 ## <a name="dependencies"></a>Dependencias
 

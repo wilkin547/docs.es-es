@@ -4,12 +4,12 @@ description: Procedimiento para administrar los problemas de certificación con 
 author: adegeo
 ms.author: adegeo
 ms.date: 02/14/2020
-ms.openlocfilehash: cd3886b2e772a182156d212aefb9705a3fb5e17c
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 905a8b8a4a17836823b1c6574828acb08110d224
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324622"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86415953"
 ---
 # <a name="macos-catalina-notarization-and-the-impact-on-net-core-downloads-and-projects"></a>Certificación de macOS Catalina y el impacto en las descargas y proyectos de .NET Core
 
@@ -77,7 +77,7 @@ Para obtener más información sobre cómo solucionar problemas de certificados 
 
 ## <a name="default-entitlements"></a>Derechos predeterminados
 
-El host predeterminado de .NET Core (el comando `dotnet`) tiene un conjunto de derechos predeterminados. Estos derechos son necesarios para el funcionamiento correcto de .NET Core. Es posible que la aplicación necesite derechos adicionales, en cuyo caso tendrá que generar y usar un archivo [appHost](#apphost-is-disabled-by-default) y, después, agregar los derechos necesarios de forma local.
+El host predeterminado de .NET Core (el comando `dotnet`) tiene un conjunto de derechos predeterminados. Estos derechos son necesarios para el funcionamiento correcto de .NET Core. Es posible que la aplicación necesite derechos adicionales, en cuyo caso tendrá que generar y usar un archivo [appHost](#apphost-is-disabled-by-default) y, después, agregar los derechos necesarios de forma local.
 
 Conjunto predeterminado de derechos para .NET Core:
 
@@ -93,5 +93,4 @@ Si quiere que la aplicación se ejecute en macOS Catalina (versión 10.15) o su
 ## <a name="next-steps"></a>Pasos siguientes
 
 - [Dependencias y requisitos de .NET Core](dependencies.md).
-- [Instalar el SDK de .NET Core](sdk.md).
-- [Instalación del runtime de .NET Core](runtime.md)
+- [Instalación del runtime y SDK de .NET Core](macos.md).

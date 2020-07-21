@@ -1,14 +1,14 @@
 ---
 title: Valores de configuración del recolector de elementos no utilizados
 description: Obtenga información sobre los valores del entorno de ejecución para configurar el modo en el que el recolector de elementos no utilizados administra la memoria de las aplicaciones de .NET Core.
-ms.date: 01/09/2020
+ms.date: 07/10/2020
 ms.topic: reference
-ms.openlocfilehash: 0ce2f70204463c1525ef7d29de21ddf5384d0238
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 6ae5b7447fb0df4978ea9dcaa5e76fcc7a6cc4ca
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202094"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441417"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>Opciones de configuración del entorno de ejecución para la recolección de elementos no utilizados
 
@@ -240,6 +240,7 @@ Ejemplo:
 
 - Especifica el tamaño máximo de confirmación, en bytes, para el montón de GC y la contabilidad de GC.
 - Esta configuración solo se aplica a los equipos de 64 bits.
+- Este valor se omite si se configuran los [límites por cada montón de objetos](#per-object-heap-limits).
 - El valor predeterminado, que solo se aplica en ciertos casos, es el mayor de 20 MB o de 75 % del límite de memoria del contenedor. El valor predeterminado se aplica si:
 
   - El proceso se ejecuta dentro de un contenedor que tiene un límite de memoria especificado.
@@ -271,6 +272,7 @@ Ejemplo:
 - Si también se establece [System.GC.HeapHardLimit](#systemgcheaphardlimitcomplus_gcheaphardlimit), este valor se omite.
 - Esta configuración solo se aplica a los equipos de 64 bits.
 - Si el proceso se ejecuta dentro de un contenedor que tiene un límite de memoria especificado, el porcentaje se calcula como un porcentaje de ese límite de memoria.
+- Este valor se omite si se configuran los [límites por cada montón de objetos](#per-object-heap-limits).
 - El valor predeterminado, que solo se aplica en ciertos casos, es el menor de 20 MB o 75 % del límite de memoria del contenedor. El valor predeterminado se aplica si:
 
   - El proceso se ejecuta dentro de un contenedor que tiene un límite de memoria especificado.
@@ -295,6 +297,40 @@ Ejemplo:
 
 > [!TIP]
 > Si configura la opción en *runtimeconfig.json*, especifique un valor decimal. Si configura la opción como una variable de entorno, especifique un valor hexadecimal. Por ejemplo, para limitar el uso del montón al 30 %, los valores serían 30 para el archivo JSON y 0x1E o 1E para la variable de entorno.
+
+### <a name="per-object-heap-limits"></a>Límites por cada montón de objetos
+
+Puede especificar el uso de montones permitidos de la recolección de elementos no utilizados por cada objeto. Los diferentes montones son el montón de objetos grandes (LOH), el montón de objetos pequeños (SOH) y el montón de objetos anclados (POH).
+
+#### <a name="complus_gcheaphardlimitsoh-complus_gcheaphardlimitloh-complus_gcheaphardlimitpoh"></a>COMPLUS_GCHeapHardLimitSOH, COMPLUS_GCHeapHardLimitLOH, COMPLUS_GCHeapHardLimitPOH
+
+- Si especifica un valor para `COMPLUS_GCHeapHardLimitSOH`, `COMPLUS_GCHeapHardLimitLOH` o `COMPLUS_GCHeapHardLimitPOH`, también debe especificar un valor para `COMPLUS_GCHeapHardLimitSOH` y `COMPLUS_GCHeapHardLimitLOH`. Si no lo hace, el runtime no se inicializará.
+- El valor predeterminado para `COMPLUS_GCHeapHardLimitPOH` es 0. `COMPLUS_GCHeapHardLimitSOH` y `COMPLUS_GCHeapHardLimitLOH` no tienen valores predeterminados.
+
+| | Nombre de valor | Valores | Versión introducida |
+| - | - | - | - |
+| **Variable del entorno** | `COMPLUS_GCHeapHardLimitSOH` | *valor hexadecimal* | .NET 5.0 |
+| **Variable del entorno** | `COMPLUS_GCHeapHardLimitLOH` | *valor hexadecimal* | .NET 5.0 |
+| **Variable del entorno** | `COMPLUS_GCHeapHardLimitPOH` | *valor hexadecimal* | .NET 5.0 |
+
+> [!TIP]
+> Si configura la opción como una variable de entorno, especifique un valor hexadecimal. Por ejemplo, para especificar un límite de montón de 200 mebibytes (MiB), el valor sería 0xC800000 o C800000.
+
+#### <a name="complus_gcheaphardlimitsohpercent-complus_gcheaphardlimitlohpercent-complus_gcheaphardlimitpohpercent"></a>COMPLUS_GCHeapHardLimitSOHPercent, COMPLUS_GCHeapHardLimitLOHPercent, COMPLUS_GCHeapHardLimitPOHPercent
+
+- Si especifica un valor para `COMPLUS_GCHeapHardLimitSOHPercent`, `COMPLUS_GCHeapHardLimitLOHPercent` o `COMPLUS_GCHeapHardLimitPOHPercent`, también debe especificar un valor para `COMPLUS_GCHeapHardLimitSOHPercent` y `COMPLUS_GCHeapHardLimitLOHPercent`. Si no lo hace, el runtime no se inicializará.
+- Estos valores se omiten si se especifican `COMPLUS_GCHeapHardLimitSOH`, `COMPLUS_GCHeapHardLimitLOH` y `COMPLUS_GCHeapHardLimitPOH`.
+- Un valor de 1 significa que la recolección de elementos no utilizados usa el 1 % de la memoria física total para ese montón de objetos.
+- Cada valor debe ser mayor que cero y menor o igual que 100. Además, la suma de los tres valores de porcentaje debe ser inferior a 100. En caso contrario, el runtime no se inicializará.
+
+| | Nombre de valor | Valores | Versión introducida |
+| - | - | - | - |
+| **Variable del entorno** | `COMPLUS_GCHeapHardLimitSOHPercent` | *valor hexadecimal* | .NET 5.0 |
+| **Variable del entorno** | `COMPLUS_GCHeapHardLimitLOHPercent` | *valor hexadecimal* | .NET 5.0 |
+| **Variable del entorno** | `COMPLUS_GCHeapHardLimitPOHPercent` | *valor hexadecimal* | .NET 5.0 |
+
+> [!TIP]
+> Si configura la opción como una variable de entorno, especifique un valor hexadecimal. Por ejemplo, para limitar el uso del montón al 30 %, el valor sería 0x1E o 1E.
 
 ### <a name="systemgcretainvmcomplus_gcretainvm"></a>System.GC.RetainVM/COMPlus_GCRetainVM
 

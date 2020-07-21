@@ -2,12 +2,12 @@
 title: Supervisión de servicios de aplicaciones en contenedor
 description: Conozca algunos aspectos clave de la supervisión de arquitecturas de contenedor
 ms.date: 02/15/2019
-ms.openlocfilehash: e14553d510751d8a75020a1b6beb9fd7bc29596e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e41df53ad94784436442c3cf7defed3fab510455
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "68673462"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374447"
 ---
 # <a name="monitor-containerized-application-services"></a>Supervisión de servicios de aplicaciones en contenedor
 
@@ -47,7 +47,7 @@ Azure cuenta con las herramientas necesarias para administrar y proporcionar una
   - Mantenga los datos de copia de seguridad cifrados en tránsito y en reposo.
   - Garantice el acceso basado en la autenticación multifactor para evitar el uso no autorizado.
 
-- **Recursos locales**. Con [una nube híbrida realmente confiable](https://azure.microsoft.com/resources/truly-consistent-hybrid-cloud-with-microsoft-azure/).
+- **Recursos locales**. Con [soluciones de nube híbrida](https://azure.microsoft.com/solutions/hybrid-cloud-app/).
 
 >[!div class="step-by-step"]
 >[Anterior](manage-production-docker-environments.md)

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d8506893f5b3eefa6f46dc9f773e43b125ee5210
-ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
+ms.openlocfilehash: 19ccdb634d4e53ea66c032502f2adb70423ab121
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80291634"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416255"
 ---
 ### <a name="azure-microsoft-prefixed-azure-integration-packages-removed"></a>Azure: los paquetes de integración de Azure con Microsoft como prefijo se han quitado
 
@@ -41,9 +41,9 @@ En ASP.NET Core 2.1 o proyectos posteriores, reemplace el `Microsoft.*` anterior
 
 | Antiguo | Nuevo |
 |--|--|
-| `Microsoft.AspNetCore.DataProtection.AzureKeyVault` | [Azure.AspNetCore.DataProtection.Keys](https://www.nuget.org/packages/Azure.AspNetCore.DataProtection.Keys) |
-| `Microsoft.AspNetCore.DataProtection.AzureStorage` | [Azure.AspNetCore.DataProtection.Blobs](https://www.nuget.org/packages/Azure.AspNetCore.DataProtection.Blobs) |
-| `Microsoft.Extensions.Configuration.AzureKeyVault` | [Azure.Extensions.Configuration.Secrets](https://www.nuget.org/packages/Azure.Extensions.Configuration.Secrets) |
+| `Microsoft.AspNetCore.DataProtection.AzureKeyVault` | [Azure.Extensions.AspNetCore.DataProtection.Keys](https://www.nuget.org/packages/Azure.Extensions.AspNetCore.DataProtection.Keys) |
+| `Microsoft.AspNetCore.DataProtection.AzureStorage` | [Azure.Extensions.AspNetCore.DataProtection.Blobs](https://www.nuget.org/packages/Azure.Extensions.AspNetCore.DataProtection.Blobs) |
+| `Microsoft.Extensions.Configuration.AzureKeyVault` | [Azure.Extensions.AspNetCore.Configuration.Secrets](https://www.nuget.org/packages/Azure.Extensions.AspNetCore.Configuration.Secrets) |
 
 Los nuevos paquetes usan una nueva versión del SDK de Azure que incluye cambios importantes. Los patrones de uso general no se modifican. Algunas sobrecargas y opciones pueden diferir para adaptarse a los cambios en las API del SDK de Azure subyacentes.
 

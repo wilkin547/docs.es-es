@@ -1,14 +1,15 @@
 ---
-title: Instalación de distribuciones de .NET Core y de Linux
+title: Instalación de .NET Core en distribuciones de Linux
 description: Conozca qué distribuciones de Linux admiten la instalación de .NET Core en Linux.
 author: adegeo
 ms.author: adegeo
 ms.date: 06/01/2020
-ms.openlocfilehash: 06a90d7fecfe9f25d26caccb2fe3aedec0176f64
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: c827dfbb05a7d49ee18209ef2c8b5613f45a4578
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803097"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441418"
 ---
 # <a name="install-net-core-on-linux"></a>Instalación de .NET Core en Linux
 

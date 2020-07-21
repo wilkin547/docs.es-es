@@ -1,5 +1,6 @@
 ---
 title: Equivalencia de tipos y tipos de interoperabilidad incrustados
+description: Comprenda la equivalencia de tipos entre los tipos y miembros de .NET con un ensamblado administrado y los tipos COM que se insertan en ese ensamblado. Para .NET 4 y versiones posteriores.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - type equivalence
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - primary interop assemblies,not necessary in CLR version 4
 - NoPIA
 ms.assetid: 78892eba-2a58-4165-b4b1-0250ee2f41dc
-ms.openlocfilehash: ee9d2d94d62f262ef61edc66ce915e1227532d67
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2d572133c42f01af7d50f6f771588f5173853f9a
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126390"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86282013"
 ---
 # <a name="type-equivalence-and-embedded-interop-types"></a>Equivalencia de tipos y tipos de interoperabilidad incrustados
 

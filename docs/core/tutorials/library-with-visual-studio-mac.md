@@ -2,16 +2,16 @@
 title: Creación de una biblioteca de clases de .NET Standard mediante Visual Studio para Mac
 description: Obtenga información sobre cómo crear una biblioteca de clases de .NET Standard mediante Visual Studio para Mac.
 ms.date: 06/08/2020
-ms.openlocfilehash: 3a107fff2fd6aef5e06d9af3eac334fbf5688fa5
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 8e1e4ca3bc1b12d889b847d80318f3d6cd1bbe46
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84713422"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416007"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio-for-mac"></a>Tutorial: Creación de una biblioteca de .NET Standard mediante Visual Studio para Mac
 
-En este tutorial, creará una sencilla clases de utilidades que contiene un único método de control de cadenas. Lo implementará como un [método de extensión](../../csharp/programming-guide/classes-and-structs/extension-methods.md) de modo que se pueda llamar como si fuera un miembro de la clase <xref:System.String>.
+En este tutorial, creará una biblioteca de clases que contiene un único método de control de cadenas. Lo implementará como un [método de extensión](../../csharp/programming-guide/classes-and-structs/extension-methods.md) de modo que se pueda llamar como si fuera un miembro de la clase <xref:System.String>.
 
 Una *biblioteca de clases* define los tipos y los métodos que se llaman desde una aplicación. Una biblioteca de clases que tenga como destino .NET Standard 2.1 puede usarse por una aplicación que tenga como destino cualquier implementación de .NET que admita la versión 2.1 de .NET Standard. Cuando termine la biblioteca de clases, puede distribuirla como un componente de terceros o como un componente empaquetado con una o varias aplicaciones.
 
