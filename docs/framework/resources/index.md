@@ -1,5 +1,6 @@
 ---
 title: Recursos en aplicaciones .NET
+description: Comprenda los recursos en aplicaciones .NET. Un recurso es cualquier dato no ejecutable que se implemente lógicamente con una aplicación.
 ms.date: 07/25/2018
 helpviewer_keywords:
 - deploying applications [.NET Framework], resources
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - packaging application resources
 - localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
-ms.openlocfilehash: 0620cb16c3233f8ba2a665c9c4cb5f44bc5d5e84
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 105325170389917bfb2022314791aa1ed5923db3
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645679"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865169"
 ---
 # <a name="resources-in-net-apps"></a>Recursos en aplicaciones .NET
 
@@ -28,33 +29,33 @@ Para obtener información sobre los recursos de ASP.NET, vea [Información gener
 
 ## <a name="create-and-localize-resources"></a>Creación y localización de recursos
 
-En una aplicación no localizada, puede usar archivos de recursos como repositorio de los datos de la aplicación, especialmente para las cadenas que de otra manera podrían estar codificadas de forma rígida en varias ubicaciones del código fuente. Lo más común es que los recursos se creen como archivos de texto (.txt) o XML (.resx), y se use [Resgen.exe (Generador de archivo de recursos)](../tools/resgen-exe-resource-file-generator.md) para compilarlos en archivos binarios .resources. Estos archivos después se pueden incrustar en el archivo ejecutable de la aplicación mediante un compilador de lenguaje. Para más información sobre la creación de recursos, consulte [Crear archivos de recursos](creating-resource-files-for-desktop-apps.md).
+En una aplicación no localizada, puede usar archivos de recursos como repositorio de los datos de la aplicación, especialmente para las cadenas que de otra manera podrían estar codificadas de forma rígida en varias ubicaciones del código fuente. Lo más común es que los recursos se creen como archivos de texto (.txt) o XML (.resx), y se use [Resgen.exe (Generador de archivo de recursos)](../tools/resgen-exe-resource-file-generator.md) para compilarlos en archivos binarios .resources. Estos archivos después se pueden insertar en el archivo ejecutable de la aplicación mediante un compilador de lenguaje. Para más información sobre la creación de recursos, consulte [Crear archivos de recursos](creating-resource-files-for-desktop-apps.md).
 
 También puede localizar los recursos de una aplicación para determinadas referencias culturales. Esto le permite compilar versiones localizadas (traducidas) de las aplicaciones. Cuando desarrolle una aplicación que utiliza recursos adaptados, debe designar una referencia cultural que sirva de referencia cultural neutra o de reserva cuyos recursos se utilizarán si no se dispone de recursos apropiados. Normalmente, los recursos de la referencia cultural neutra se almacenan en el ejecutable de la aplicación. Los recursos restantes para las distintas referencias culturales se almacenan en ensamblados satélite independientes. Para más información, consulte [Crear ensamblados satélite](creating-satellite-assemblies-for-desktop-apps.md).
 
-## <a name="package-and-deploy-resources"></a>Empaquetar e implementar recursos
+## <a name="package-and-deploy-resources"></a>Empaquetado e implementación de recursos
 
 Los recursos adaptados de una aplicación se implementan en [ensamblados satélite](packaging-and-deploying-resources-in-desktop-apps.md). Un ensamblado satélite contiene los recursos de una única referencia cultural; no contiene código de la aplicación. En el modelo de implementación de ensamblados satélite, una aplicación se crea con un ensamblado predeterminado (que normalmente es el principal) y un ensamblado satélite para cada referencia cultural que admite la aplicación. Debido a que los ensamblados satélite no forman parte del ensamblado principal, los recursos correspondientes a una referencia cultural específica se pueden reemplazar o actualizar fácilmente sin reemplazar el ensamblado principal de la aplicación.
 
 Es preciso determinar con sumo cuidado qué recursos formarán parte del ensamblado de recursos predeterminado de la aplicación. Como se trata de una parte del ensamblado principal, cualquier cambio que se realice en dicho ensamblado requerirá la reemplazo del ensamblado principal. Si no se proporciona ningún recurso predeterminado, se generará una excepción cuando el [proceso de reserva de recursos](packaging-and-deploying-resources-in-desktop-apps.md) intente buscarlo. En una aplicación diseñada correctamente, el uso de recursos jamás deberá producir una excepción.
 
-Para más información, consulte el artículo [Empaquetar e implementar recursos](packaging-and-deploying-resources-in-desktop-apps.md).
+Para más información, consulte el artículo [Empaquetado e implementación de recursos](packaging-and-deploying-resources-in-desktop-apps.md).
 
-## <a name="retrieve-resources"></a>Recuperar recursos
+## <a name="retrieve-resources"></a>Recuperación de recursos
 
 En tiempo de ejecución, la aplicación carga los recursos adaptados apropiados para cada subproceso, en función de la referencia cultural especificada por la propiedad <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>. El valor de esta propiedad se deriva de la siguiente manera:
 
-- Asignando directamente un objeto <xref:System.Globalization.CultureInfo> que representa la referencia cultural adaptada a la propiedad <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType>.
+- Mediante la asignación directa de un objeto <xref:System.Globalization.CultureInfo> que representa la referencia cultural adaptada a la propiedad <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType>.
 
-- Si no se ha asignado explícitamente una referencia cultural, recuperando la referencia cultural de la interfaz de usuario predeterminada del subproceso de la propiedad <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType>.
+- Si no se ha asignado explícitamente una referencia cultural, mediante la recuperación de la referencia cultural de la interfaz de usuario predeterminada del subproceso de la propiedad <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType>.
 
-- Si no se ha asignado explícitamente ninguna referencia cultural a la interfaz de usuario predeterminada del subproceso, recuperando la referencia cultural del usuario actual del equipo local. Las implementaciones de .NET que se ejecutan en Windows realizan esta operación mediante una llamada a la función [`GetUserDefaultUILanguage`](/windows/desktop/api/winnls/nf-winnls-getuserdefaultuilanguage) de Windows.
+- Si no se ha asignado explícitamente ninguna referencia cultural a la interfaz de usuario predeterminada del subproceso, mediante la recuperación de la referencia cultural del usuario actual del equipo local. Las implementaciones de .NET que se ejecutan en Windows realizan esta operación mediante una llamada a la función [`GetUserDefaultUILanguage`](/windows/desktop/api/winnls/nf-winnls-getuserdefaultuilanguage) de Windows.
 
-Para obtener más información sobre cómo establecer la referencia cultural de la interfaz de usuario actual, vea las páginas de referencia de <xref:System.Globalization.CultureInfo> y de <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>.
+Para obtener más información sobre cómo establecer la referencia cultural de la interfaz de usuario actual, consulte las páginas de referencia de <xref:System.Globalization.CultureInfo> y de <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>.
 
-Puede recuperar los recursos para la referencia cultural de la interfaz de usuario actual o para una referencia cultural concreta usando la clase <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Aunque la clase <xref:System.Resources.ResourceManager> se usa principalmente para recuperar recursos, el espacio de nombres <xref:System.Resources?displayProperty=nameWithType> contiene tipos adicionales que puede usar para recuperar recursos. Se incluyen los siguientes:
+Puede recuperar los recursos para la referencia cultural de la interfaz de usuario actual o para una referencia cultural concreta con la clase <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Aunque la clase <xref:System.Resources.ResourceManager> se usa principalmente para recuperar recursos, el espacio de nombres <xref:System.Resources?displayProperty=nameWithType> contiene tipos adicionales que puede usar para recuperar recursos. Se incluyen los siguientes:
 
-- La clase <xref:System.Resources.ResourceReader>, que permite enumerar recursos incrustados en un ensamblado o almacenados en un archivo binario .resources independiente. Resulta útil cuando no se conocen los nombres exactos de los recursos que están disponibles en tiempo de ejecución.
+- La clase <xref:System.Resources.ResourceReader>, que permite enumerar recursos insertados en un ensamblado o almacenados en un archivo binario .resources independiente. Resulta útil cuando no se conocen los nombres exactos de los recursos que están disponibles en tiempo de ejecución.
 
 - La clase <xref:System.Resources.ResXResourceReader>, que permite recuperar recursos de un archivo XML (.resx).
 
@@ -62,11 +63,11 @@ Puede recuperar los recursos para la referencia cultural de la interfaz de usuar
 
 - La clase <xref:System.Resources.ResXResourceSet>, que permite cargar en la memoria todos los elementos de un archivo de recursos XML.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Globalization.CultureInfo>
 - <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>
-- [Crear archivos de recursos](creating-resource-files-for-desktop-apps.md)
-- [Empaquetar e implementar recursos](packaging-and-deploying-resources-in-desktop-apps.md)
-- [Crear ensamblados satélite](creating-satellite-assemblies-for-desktop-apps.md)
-- [Recuperar recursos](retrieving-resources-in-desktop-apps.md)
+- [Creación de archivos de recursos para aplicaciones .NET](creating-resource-files-for-desktop-apps.md)
+- [Empaquetado e implementación de recursos en aplicaciones .NET](packaging-and-deploying-resources-in-desktop-apps.md)
+- [Crear ensamblados satélite para aplicaciones de escritorio](creating-satellite-assemblies-for-desktop-apps.md)
+- [Recuperar recursos de aplicaciones de escritorio](retrieving-resources-in-desktop-apps.md)

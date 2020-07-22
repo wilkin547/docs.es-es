@@ -1,16 +1,17 @@
 ---
 title: 'Matrices: Guía de programación de C#'
+description: Puede almacenar varias variables del mismo tipo en una estructura de datos de matriz de C#. Declare una matriz especificando un tipo o especifique un objeto para almacenar cualquier tipo.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [C#]
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
-ms.openlocfilehash: bbabc84c144e5b3415c19f346b890782e251662c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e302ff2e4c2488c4899c4eb99a666d2d322119ce
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75715058"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474740"
 ---
 # <a name="arrays-c-programming-guide"></a>Matrices (Guía de programación de C#)
 
@@ -44,11 +45,11 @@ Una matriz tiene las propiedades siguientes:
 - [Utilizar foreach con matrices](using-foreach-with-arrays.md)
 - [Pasar matrices como argumentos](passing-arrays-as-arguments.md)
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Guía de programación de C#](../index.md)
 - [Colecciones](../concepts/collections.md)
