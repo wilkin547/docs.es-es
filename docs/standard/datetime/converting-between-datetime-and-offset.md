@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Date data type, converting
 - local time conversions
 ms.assetid: b605ff97-0c45-4c24-833f-4c6a3e8be64c
-ms.openlocfilehash: cf55db7c22ad2495bdbeb3202fcefb89bae42d69
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 86f2c982d7f87e83102933d1de73d6e13086dc87
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768682"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924908"
 ---
 # <a name="converting-between-datetime-and-datetimeoffset"></a>Conversión entre DateTime y DateTimeOffset
 
@@ -105,7 +105,7 @@ También puede utilizar la <xref:System.DateTimeOffset.LocalDateTime%2A?displayP
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#10](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#10)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#10)]
 
-Cuando se recupera un <xref:System.DateTime> valor mediante la <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> propiedad, el `get` descriptor de acceso de la propiedad convierte primero el <xref:System.DateTimeOffset> valor a UTC y, a continuación, lo convierte a la hora local llamando al <xref:System.DateTimeOffset.ToLocalTime%2A> método. Esto significa que puede recuperar un valor de la <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> propiedad para realizar una conversión de zona horaria al mismo tiempo que realiza una conversión de tipos. También significa que se aplican las reglas de ajuste de zona horaria local para realizar la conversión. En el código siguiente se muestra el uso de la <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> propiedad para realizar una conversión de tipo y de zona horaria.
+Cuando se recupera un <xref:System.DateTime> valor mediante la <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> propiedad, el `get` descriptor de acceso de la propiedad convierte primero el <xref:System.DateTimeOffset> valor a UTC y, a continuación, lo convierte a la hora local llamando al <xref:System.DateTimeOffset.ToLocalTime%2A> método. Esto significa que puede recuperar un valor de la <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> propiedad para realizar una conversión de zona horaria al mismo tiempo que realiza una conversión de tipos. También significa que se aplican las reglas de ajuste de zona horaria local para realizar la conversión. En el código siguiente se muestra el uso de la <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> propiedad para realizar una conversión de tipo y de zona horaria. La salida de ejemplo es para una máquina establecida en la zona horaria del Pacífico (EE. UU. y Canadá). La fecha de noviembre es la hora estándar del Pacífico, que es UTC-8, mientras que la fecha de junio es el horario de verano, que es UTC-7.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#11](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#11)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#11)]

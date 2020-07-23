@@ -1,16 +1,17 @@
 ---
 title: Información general sobre el árbol de la UI Automation
+description: Lea información general sobre los árboles de automatización de la interfaz de usuario. Obtenga información sobre las distintas vistas de un árbol de automatización de la interfaz de usuario, como la vista sin formato, la vista de control y la vista de contenido.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - automation tree
 - UI Automation, tree
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
-ms.openlocfilehash: a0b888e8ecc80e3739c583931a86da3cdb7242d1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0ffe4b4e6157f5bff3284d6978e0ec28641cf72d
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179447"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924557"
 ---
 # <a name="ui-automation-tree-overview"></a>Información general sobre el árbol de la UI Automation
 > [!NOTE]
@@ -18,7 +19,7 @@ ms.locfileid: "79179447"
   
  Los productos de tecnología de asistencia y los scripts de prueba navegan por el árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] para reunir información sobre [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] y sus elementos.  
   
- Dentro [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] del árbol hay un<xref:System.Windows.Automation.AutomationElement.RootElement%2A>elemento raíz ( ) que representa el escritorio actual y cuyos elementos secundarios representan ventanas de aplicación. Cada uno de estos elementos secundarios puede contener elementos que representan partes de [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], como menús, botones, barras de herramientas y cuadros de lista. A su vez, estos elementos pueden contener elementos, como elementos de lista.  
+ En el [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] árbol hay un elemento raíz ( <xref:System.Windows.Automation.AutomationElement.RootElement%2A> ) que representa el escritorio actual y cuyos elementos secundarios representan las ventanas de la aplicación. Cada uno de estos elementos secundarios puede contener elementos que representan partes de [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], como menús, botones, barras de herramientas y cuadros de lista. A su vez, estos elementos pueden contener elementos, como elementos de lista.  
   
  El árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] no es una estructura fija y casi nunca se presenta en su totalidad, ya que podría contener miles de elementos. Partes de él se crean conforme se necesitan y pueden experimentar cambios a medida que se agregan, mueven o quitan elementos.  
   
@@ -36,7 +37,7 @@ ms.locfileid: "79179447"
   
 <a name="uiautomation_raw_view"></a>
 ### <a name="raw-view"></a>Vista sin formato  
- La vista sin formato del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] es el árbol completo de objetos <xref:System.Windows.Automation.AutomationElement> del que el escritorio es la raíz. La vista sin formato sigue estrechamente la estructura de programación nativa de una aplicación y es, por tanto, la vista más detallada disponible. También es la base sobre la que se crean las otras vistas del árbol. Dado que esta vista [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] depende del marco subyacente, la vista sin formato de un [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] botón tendrá una vista sin formato diferente de un botón Win32.  
+ La vista sin formato del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] es el árbol completo de objetos <xref:System.Windows.Automation.AutomationElement> del que el escritorio es la raíz. La vista sin formato sigue estrechamente la estructura de programación nativa de una aplicación y es, por tanto, la vista más detallada disponible. También es la base sobre la que se crean las otras vistas del árbol. Dado que esta vista depende del [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] marco subyacente, la vista sin formato de un [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] botón tendrá una vista sin formato diferente de la de un botón de Win32.  
   
  La vista sin formato se obtiene mediante la búsqueda de elementos sin especificar propiedades o usando el elemento <xref:System.Windows.Automation.TreeWalker.RawViewWalker> para navegar por el árbol.  
   
