@@ -105,7 +105,7 @@ items:
           - name: Instalar y usar un paquete
             href: /nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli
             displayName: 'tutorials, cli'
-          - name: Crear y publicar un paquete
+          - name: Creación y publicación de un paquete
             href: /nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli
             displayName: tutorials
       - name: Uso de Visual Studio para Mac
@@ -304,6 +304,10 @@ items:
         items:
           - name: Depuración de una fuga de memoria
             href: diagnostics/debug-memory-leak.md
+          - name: Depuración del uso elevado de CPU
+            href: diagnostics/debug-highcpu.md
+          - name: Depuración de interbloqueo
+            href: diagnostics/debug-deadlock.md
   - name: Herramientas adicionales de .NET Core
     items:
       - name: Información general
