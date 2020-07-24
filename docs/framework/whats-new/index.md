@@ -1,5 +1,6 @@
 ---
-title: Novedades de .NET Framework
+title: Novedades de .NET Framework
+description: Consulte las novedades de las distintas versiones de .NET Framework. Lea un resumen de las principales características y mejoras nuevas de cada versión.
 ms.custom: updateeachrelease
 ms.date: 04/18/2019
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: ee67e6577c5ad2486a483e3593e4d0a8ecbb0407
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 42f872bba87a88fc92a37879e815ee7068407cf7
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244444"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925597"
 ---
 # <a name="whats-new-in-net-framework"></a>Novedades de .NET Framework
 
