@@ -1,5 +1,6 @@
 ---
 title: Herramientas de .NET Framework
+description: Consulte una lista de las herramientas de .NET Framework que facilitan la creación, implementación y administración de aplicaciones y componentes dirigidos a .NET.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - command line, .NET Framework tools
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - tools [.NET Framework]
 - running .NET Framework tools
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
-ms.openlocfilehash: 60a9cb241f289cacc7437174f112114e843aca47
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 0a5cbcd4fa60b819d3ab07a4f221e77ca106c321
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645562"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166846"
 ---
 # <a name="net-framework-tools"></a>Herramientas de .NET Framework
 
@@ -36,7 +37,7 @@ Genera un archivo que tiene un manifiesto del ensamblado de módulos o archivos 
 Convierte definiciones de tipos de una biblioteca de tipos COM para un control ActiveX en un control de Windows Forms.
 
 - [Caspol.exe (Herramienta de la directiva de seguridad de acceso del código)](caspol-exe-code-access-security-policy-tool.md)  
-Esta herramienta le permite ver y configurar la directiva de seguridad correspondiente a los niveles de directiva de equipo, de usuario y de empresa. En .NET Framework 4 y versiones posteriores, esta herramienta no afecta a la directiva de seguridad de acceso del código (CAS), a menos que el elemento [\<legacyCasPolicy>](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) esté establecido en `true`. Para más información, consulte [Cambios de seguridad](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).
+Esta herramienta le permite ver y configurar la directiva de seguridad correspondiente a los niveles de directiva de equipo, de usuario y de empresa. En .NET Framework 4 y versiones posteriores, esta herramienta no afecta a la directiva de seguridad de acceso del código (CAS) a menos que el elemento [\<legacyCasPolicy> ](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) esté establecido en `true`. Para más información, consulte [Cambios de seguridad](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).
 
 - [Cert2spc.exe (Herramienta de prueba de certificados del publicador de software)](cert2spc-exe-software-publisher-certificate-test-tool.md)  
 Crea un certificado de publicador de software (SPC) a partir de uno o varios certificados X.509. Esta herramienta sólo se utiliza para pruebas.
