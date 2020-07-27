@@ -5,12 +5,12 @@ ms.topic: reference
 ms.date: 06/01/2020
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: d9eb5560ef33f8f80dbe53e17087c606a8697378
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8622b580b7925adfd7895317815021f57960e9ee
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289478"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924583"
 ---
 # <a name="model-builder-azure-training-resources"></a>Recursos de entrenamiento de Azure sobre el generador de modelos
 
@@ -56,7 +56,7 @@ Para crear un área de trabajo de Azure Machine Learning, es necesario lo siguie
 
 ## <a name="training"></a>Aprendizaje
 
-El entrenamiento en Azure solo está disponible para el escenario de clasificación de imágenes del generador de modelos. El algoritmo usado para entrenar estos modelos es una red neuronal profunda basada en la arquitectura ResNet50. El proceso de entrenamiento tarda algún tiempo, y la duración puede variar en función del tamaño del proceso seleccionado, así como de la cantidad de datos. La primera vez que se entrena un modelo, es probable que el tiempo de entrenamiento sea ligeramente mayor porque se deben aprovisionar los recursos. Puede realizar un seguimiento del progreso de las ejecuciones seleccionando el vínculo "Supervisar la ejecución actual en el portal de Azure" en Visual Studio.
+El entrenamiento en Azure solo está disponible para el escenario de clasificación de imágenes del generador de modelos. El algoritmo usado para entrenar estos modelos es una red neuronal profunda basada en la arquitectura ResNet50. El proceso de entrenamiento tarda algún tiempo, y la duración puede variar en función del tamaño del proceso seleccionado, así como de la cantidad de datos. Puede realizar un seguimiento del progreso de las ejecuciones seleccionando el vínculo "Supervisar la ejecución actual en el portal de Azure" en Visual Studio.
 
 ## <a name="results"></a>Resultados
 

@@ -1,5 +1,6 @@
 ---
 title: Obtener atributos de texto mediante UI Automation
+description: Obtenga información sobre cómo obtener atributos de texto mediante la automatización de la interfaz de usuario. Vea un ejemplo de código que obtiene los atributos de texto de un intervalo de texto.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - UI Automation, getting text attributes
 - text attributes, getting
 ms.assetid: fdefc6c3-b836-4cfe-8dec-1484bfdc5551
-ms.openlocfilehash: c338f858f1715d23cad96919db4a21a6ba49710f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b48f773e27088ba4b33ad01b299d77a0992a9159
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446916"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168001"
 ---
 # <a name="obtain-text-attributes-using-ui-automation"></a>Obtener atributos de texto mediante UI Automation
 > [!NOTE]
@@ -36,9 +37,9 @@ ms.locfileid: "74446916"
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre TextPattern en Automatización de la interfaz de usuario](ui-automation-textpattern-overview.md)
-- [Adición de contenido a un cuadro de texto mediante Automatización de la interfaz de usuario](add-content-to-a-text-box-using-ui-automation.md)
-- [Búsqueda y resaltado de texto mediante Automatización de la interfaz de usuario](find-and-highlight-text-using-ui-automation.md)
-- [Información general sobre los patrones de control de la Automatización de la interfaz de usuario](ui-automation-control-patterns-overview.md)
-- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
-- [Obtención de detalles de atributos de texto diversos mediante Automatización de la interfaz de usuario](obtain-mixed-text-attribute-details-using-ui-automation.md)
+- [Información general sobre el modelo de texto de UI Automation](ui-automation-textpattern-overview.md)
+- [Agregar contenido a un cuadro de texto utilizando la UI Automation](add-content-to-a-text-box-using-ui-automation.md)
+- [Buscar y resaltar texto mediante UI Automation](find-and-highlight-text-using-ui-automation.md)
+- [Información general acerca de los patrones de control de UI Automation](ui-automation-control-patterns-overview.md)
+- [Patrones de controles de UI Automation para clientes](ui-automation-control-patterns-for-clients.md)
+- [Obtener detalles de atributos de texto diversos mediante UI Automation](obtain-mixed-text-attribute-details-using-ui-automation.md)

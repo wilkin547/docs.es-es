@@ -1,5 +1,6 @@
 ---
 title: Patrones de control compatibles en un proveedor de UI Automation
+description: Aprenda a implementar patrones de control de compatibilidad en un proveedor de automatización de la interfaz de usuario para que las aplicaciones cliente puedan manipular controles y obtener datos de ellos.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - control patterns, supporting in UI Automation provider
 - UI Automation, supporting control patterns in provider
 ms.assetid: 0d635c35-ffa8-4dc8-bbc9-12fcd5445776
-ms.openlocfilehash: 1200ebd42884220d2611729b87f4bf51e7a903a1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 82300499520be6b820b361ebdeb56bbf3716afab
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446820"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163514"
 ---
 # <a name="support-control-patterns-in-a-ui-automation-provider"></a>Patrones de control compatibles en un proveedor de UI Automation
 
@@ -37,12 +38,12 @@ En el ejemplo siguiente se muestra una implementación de <xref:System.Windows.A
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra una implementación de <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A> que devuelve la clase que implementa <xref:System.Windows.Automation.Provider.ISelectionProvider>. La mayoría de los controles de cuadro de lista también admitirían otros patrones, pero en este ejemplo se devuelve una referencia nula (`Nothing` en Microsoft Visual Basic .NET) para los demás identificadores de patrón.
+En el ejemplo siguiente se muestra una implementación de <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A> que devuelve la clase que implementa <xref:System.Windows.Automation.Provider.ISelectionProvider>. La mayoría de los controles de cuadro de lista también admitirían otros patrones, pero en este ejemplo se devuelve una referencia nula ( `Nothing` en Microsoft Visual Basic .net) para los demás identificadores de patrón.
 
 [!code-csharp[UIAFragmentProvider_snip#120](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAFragmentProvider_snip/CSharp/ListFragment.cs#120)]
 [!code-vb[UIAFragmentProvider_snip#120](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListFragment.vb#120)]
 
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre proveedores de la Automatización de la interfaz de usuario](ui-automation-providers-overview.md)
-- [Implementación del proveedor de automatización de la interfaz de usuario en el servidor](server-side-ui-automation-provider-implementation.md)
+- [Información general sobre proveedores de UI Automation](ui-automation-providers-overview.md)
+- [Implementación del proveedor de UI Automation en el servidor](server-side-ui-automation-provider-implementation.md)

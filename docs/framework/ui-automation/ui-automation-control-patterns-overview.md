@@ -1,16 +1,17 @@
 ---
 title: Información general acerca de los patrones de control de UI Automation
+description: Vea información general sobre los patrones de control de UI Automation. Los patrones de control permiten categorizar y exponer la funcionalidad de un control independientemente de su tipo o apariencia.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: f62631a15dd348b6f6ea27a82d7b45aab92ceed2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d0df24de4f8a877405dfecb6b0d245ff1caf0418
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179948"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163880"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Información general acerca de los patrones de control de UI Automation
 > [!NOTE]
@@ -33,7 +34,7 @@ ms.locfileid: "79179948"
   
 - Las propiedades y los eventos ofrecen información sobre la funcionalidad del patrón de control, así como información sobre el estado del control.  
   
- Los patrones de [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] control se relacionan con las interfaces relacionadas con objetos del modelo de objetos componentes (COM). En COM, puedes consultar a un objeto para preguntar qué interfaces admite y después usar esas interfaces para acceder a la funcionalidad. En [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], los clientes de Automatización de la interfaz de usuario pueden preguntar a un control qué patrones de control admite y, después, interactuar con el control mediante los métodos, propiedades, eventos y estructuras que exponen los patrones de control admitidos. Por ejemplo, para un cuadro de edición multilínea, los proveedores de Automatización de la interfaz de usuario implementan <xref:System.Windows.Automation.Provider.IScrollProvider>. Si un cliente sabe que un elemento <xref:System.Windows.Automation.AutomationElement> admite el patrón de control <xref:System.Windows.Automation.ScrollPattern> , puede utilizar las propiedades, los métodos y los eventos expuestos por este patrón de control para manipular el control o acceder a información sobre el control.  
+ Los patrones de control se refieren a [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] como interfaces relacionadas con los objetos del modelo de objetos componentes (com). En COM, puedes consultar a un objeto para preguntar qué interfaces admite y después usar esas interfaces para acceder a la funcionalidad. En [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], los clientes de Automatización de la interfaz de usuario pueden preguntar a un control qué patrones de control admite y, después, interactuar con el control mediante los métodos, propiedades, eventos y estructuras que exponen los patrones de control admitidos. Por ejemplo, para un cuadro de edición multilínea, los proveedores de Automatización de la interfaz de usuario implementan <xref:System.Windows.Automation.Provider.IScrollProvider>. Si un cliente sabe que un elemento <xref:System.Windows.Automation.AutomationElement> admite el patrón de control <xref:System.Windows.Automation.ScrollPattern> , puede utilizar las propiedades, los métodos y los eventos expuestos por este patrón de control para manipular el control o acceder a información sobre el control.  
   
 <a name="uiautomation_control_pattern_client_provider"></a>
 ## <a name="ui-automation-providers-and-clients"></a>Clientes y proveedores de Automatización de la interfaz de usuario  
@@ -41,7 +42,7 @@ ms.locfileid: "79179948"
   
  Los clientes de Automatización de la interfaz de usuario acceden a métodos y propiedades de clases de patrones de control [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] y los usan para obtener información sobre [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]o para manipular [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Estas clases de patrones de control se encuentran en el espacio de nombres <xref:System.Windows.Automation> (por ejemplo, <xref:System.Windows.Automation.InvokePattern> y <xref:System.Windows.Automation.SelectionPattern>).  
   
- Los <xref:System.Windows.Automation.AutomationElement> clientes usan <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType>métodos (como o ) o los [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] descriptores de acceso de Common Language Runtime (CLR) para tener acceso a las propiedades de un patrón. Cada clase de patrón de control <xref:System.Windows.Automation.InvokePattern.Pattern?displayProperty=nameWithType> <xref:System.Windows.Automation.SelectionPattern.Pattern?displayProperty=nameWithType>tiene un miembro de campo (por ejemplo, <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> o ) que <xref:System.Windows.Automation.AutomationElement>identifica ese patrón de control y se puede pasar como parámetro o para recuperar ese patrón para un archivo .  
+ Los clientes utilizan <xref:System.Windows.Automation.AutomationElement> métodos (como <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> o <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> ) o los descriptores de acceso Common Language Runtime (CLR) para tener acceso a las [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] propiedades de un patrón. Cada clase de patrón de control tiene un miembro de campo (por ejemplo, <xref:System.Windows.Automation.InvokePattern.Pattern?displayProperty=nameWithType> o <xref:System.Windows.Automation.SelectionPattern.Pattern?displayProperty=nameWithType> ) que identifica ese patrón de control y se puede pasar como un parámetro a <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> o <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> para recuperar ese patrón para un <xref:System.Windows.Automation.AutomationElement> .  
   
 <a name="uiautomation_control_patterns_dynamic"></a>
 ## <a name="dynamic-control-patterns"></a>Patrones de control dinámicos  
@@ -55,8 +56,8 @@ ms.locfileid: "79179948"
 |---------------------------|------------------------|-----------------|  
 |<xref:System.Windows.Automation.DockPattern>|<xref:System.Windows.Automation.Provider.IDockProvider>|Se utiliza con los controles que se pueden acoplar en un contenedor de acoplamiento. Por ejemplo, las barras de herramientas o las paletas de herramientas.|  
 |<xref:System.Windows.Automation.ExpandCollapsePattern>|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Se utiliza con los controles que pueden expandir o contraer. Por ejemplo, los elementos de menú de una aplicación como el menú **Archivo** .|  
-|<xref:System.Windows.Automation.GridPattern>|<xref:System.Windows.Automation.Provider.IGridProvider>|Se utiliza con los controles que admiten la funcionalidad de cuadrícula, como el ajuste de tamaño y el movimiento a una celda concreta. Por ejemplo, la vista de icono grande en el Explorador de Windows o tablas simples sin encabezados en Microsoft Word.|  
-|<xref:System.Windows.Automation.GridItemPattern>|<xref:System.Windows.Automation.Provider.IGridItemProvider>|Se utiliza con los controles que tienen celdas dentro de cuadrículas. Las celdas individuales deben admitir el patrón GridItem. Por ejemplo, cada celda de la vista de detalles del Explorador de Microsoft Windows.|  
+|<xref:System.Windows.Automation.GridPattern>|<xref:System.Windows.Automation.Provider.IGridProvider>|Se utiliza con los controles que admiten la funcionalidad de cuadrícula, como el ajuste de tamaño y el movimiento a una celda concreta. Por ejemplo, la vista de iconos grandes en el explorador de Windows o las tablas simples sin encabezados en Microsoft Word.|  
+|<xref:System.Windows.Automation.GridItemPattern>|<xref:System.Windows.Automation.Provider.IGridItemProvider>|Se utiliza con los controles que tienen celdas dentro de cuadrículas. Las celdas individuales deben admitir el patrón GridItem. Por ejemplo, cada celda de la vista de detalle del explorador de Microsoft Windows.|  
 |<xref:System.Windows.Automation.InvokePattern>|<xref:System.Windows.Automation.Provider.IInvokeProvider>|Se utiliza con los controles que se pueden invocar, como un botón.|  
 |<xref:System.Windows.Automation.MultipleViewPattern>|<xref:System.Windows.Automation.Provider.IMultipleViewProvider>|Se utiliza con los controles que pueden cambiar entre varias representaciones del mismo conjunto de información, datos o elementos secundarios. Por ejemplo, un control de vista de lista donde los datos están disponibles en vistas en miniaturas, mosaico, iconos, lista o de detalle.|  
 |<xref:System.Windows.Automation.RangeValuePattern>|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|Se utiliza con los controles que tienen un intervalo de valores que se pueden aplicar al control. Por ejemplo, un control de número que contiene años podría tener un intervalo de 1900 a 2010, mientras que otro control de número que muestra meses tendría un intervalo de 1 a 12.|  
@@ -70,12 +71,12 @@ ms.locfileid: "79179948"
 |<xref:System.Windows.Automation.TogglePattern>|<xref:System.Windows.Automation.Provider.IToggleProvider>|Se utiliza con los controles donde se puede alternar el estado. Por ejemplo, casillas y elementos de menú que pueden activarse.|  
 |<xref:System.Windows.Automation.TransformPattern>|<xref:System.Windows.Automation.Provider.ITransformProvider>|Se utiliza con los controles que se pueden cambiar de tamaño, mover y girar. Los usos típicos del patrón de control Transform se encuentran en diseñadores, formularios, editores gráficos y aplicaciones de dibujo.|  
 |<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.Provider.IValueProvider>|Permite que los clientes obtengan o establezcan un valor en los controles que no admiten un intervalo de valores. Por ejemplo, un selector de fecha y hora.|  
-|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|Expone información específica en ventanas, un concepto fundamental para el sistema operativo Microsoft Windows. Ejemplos de controles que son ventanas son ventanas de aplicación de nivel superior (Microsoft Word, Explorador de Microsoft Windows, etc.), ventanas secundarias de interfaz de varios documentos (MDI) y cuadros de diálogo.|  
+|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|Expone información específica en ventanas, un concepto fundamental para el sistema operativo Microsoft Windows. Ejemplos de controles que son ventanas son las ventanas de aplicación de nivel superior (Microsoft Word, explorador de Microsoft Windows, etc.), las ventanas secundarias de la interfaz de múltiples documentos (MDI) y los cuadros de diálogo.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Patrones de controles de UI Automation para clientes](ui-automation-control-patterns-for-clients.md)
 - [Asignación de patrones de controles para clientes de UI Automation](control-pattern-mapping-for-ui-automation-clients.md)
 - [Información general sobre UI Automation](ui-automation-overview.md)
 - [Propiedades de UI Automation para clientes](ui-automation-properties-for-clients.md)
-- [UI Automation Events for Clients](ui-automation-events-for-clients.md)
+- [Eventos de UI Automation para clientes](ui-automation-events-for-clients.md)

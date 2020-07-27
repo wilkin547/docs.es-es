@@ -1,17 +1,18 @@
 ---
 title: Implementar el patrón de control Selection de UI Automation
+description: Revise las directrices y convenciones para implementar el patrón de control de selección en la automatización de la interfaz de usuario. Consulte los miembros necesarios para la interfaz ISelectionProvider.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Selection control pattern
 - UI Automation, Selection control pattern
 - control patterns, Selection
 ms.assetid: 449c3068-a5d6-4f66-84c6-1bcc7dd4d209
-ms.openlocfilehash: 083a4bb56fe76c1d65015ffabf741d7e1953d2ff
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d3854a401ae6179be4e4e75d86964108d83b0ccf
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180129"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163581"
 ---
 # <a name="implementing-the-ui-automation-selection-control-pattern"></a>Implementar el patrón de control Selection de UI Automation
 > [!NOTE]
@@ -29,12 +30,12 @@ ms.locfileid: "79180129"
   
 - Los controles que tienen un intervalo mínimo, máximo y continuo, como el control deslizante **Volumen** , deben implementar <xref:System.Windows.Automation.Provider.IRangeValueProvider> en lugar de <xref:System.Windows.Automation.Provider.ISelectionProvider>.  
   
-- Los controles de selección única <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>que administran los controles secundarios que implementan , como el control deslizante **Resolución** de <xref:System.Windows.Automation.Provider.ISelectionProvider>pantalla en el cuadro de diálogo Propiedades de **visualización** o el control de selección **Selector** de color de Microsoft Word (ilustrado a continuación), deben implementarse; sus hijos deben <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> <xref:System.Windows.Automation.Provider.ISelectionItemProvider>implementar tanto y .  
+- Los controles de selección única que administran los controles secundarios que implementan <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot> , como el control deslizante de **resolución de pantalla** del cuadro de diálogo **propiedades de pantalla** o el control de selección **selector de colores** de Microsoft Word (se muestra a continuación), deben implementar <xref:System.Windows.Automation.Provider.ISelectionProvider> ; sus elementos secundarios deben implementar <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> y <xref:System.Windows.Automation.Provider.ISelectionItemProvider> .  
   
  ![Selector de color con amarillo resaltado.](./media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 Ejemplo de asignación de cadena de muestrario de colores  
   
-- Los menús no admiten <xref:System.Windows.Automation.SelectionPattern>. Si está trabajando con elementos de menú que incluyen gráficos y texto (como los elementos del <xref:System.Windows.Automation.Provider.IToggleProvider>Panel de vista **previa** en el menú **Ver** en Microsoft Outlook) y necesita transmitir el estado, debe implementar .  
+- Los menús no admiten <xref:System.Windows.Automation.SelectionPattern>. Si está trabajando con elementos de menú que incluyen tanto gráficos como texto (como los elementos del **Panel de vista previa** en el menú **Ver** de Microsoft Outlook) y necesita transmitir el estado, debe implementar <xref:System.Windows.Automation.Provider.IToggleProvider> .  
   
 <a name="Required_Members_for_ISelectionProvider"></a>
 ## <a name="required-members-for-iselectionprovider"></a>Miembros requeridos para ISelectionProvider  
@@ -58,11 +59,11 @@ Ejemplo de asignación de cadena de muestrario de colores
 |<xref:System.Windows.Automation.ElementNotEnabledException>|Si el control no está habilitado.|  
 |<xref:System.InvalidOperationException>|Si el control está oculto.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [Información general acerca de los patrones de control de UI Automation](ui-automation-control-patterns-overview.md)
 - [Patrones de control compatibles en un proveedor de UI Automation](support-control-patterns-in-a-ui-automation-provider.md)
 - [Patrones de controles de UI Automation para clientes](ui-automation-control-patterns-for-clients.md)
 - [Implementación del patrón de control SelectionItem de UI Automation](implementing-the-ui-automation-selectionitem-control-pattern.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [Información general sobre el árbol de la UI Automation](ui-automation-tree-overview.md)
 - [Utilizar el almacenamiento en caché en la UI Automation](use-caching-in-ui-automation.md)

@@ -4,12 +4,12 @@ description: Obtenga información sobre las plataforma de destino para las aplic
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 33beb5606cbf857cc41b739f256482b0298f1fb1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c1fd3a6fe07526d9f6828851c591ed0155c79a19
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398800"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164296"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>Plataformas de destino en proyectos de estilo SDK
 
@@ -129,7 +129,6 @@ Las siguientes plataformas de destino están en desuso. Los paquetes destinados 
 
 ## <a name="see-also"></a>Vea también
 
-- [Paquetes, metapaquetes y marcos de trabajo](../core/packages.md)
 - [Desarrollo de bibliotecas con herramientas multiplataforma](../core/tutorials/libraries.md)
 - [.NET Standard](net-standard.md)
 - [Control de versiones de .NET Core](../core/versions/index.md)

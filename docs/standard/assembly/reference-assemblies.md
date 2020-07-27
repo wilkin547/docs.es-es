@@ -4,12 +4,12 @@ description: Obtenga información sobre los ensamblados de referencia, un tipo e
 author: MSDN-WhiteKnight
 ms.date: 09/12/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 938942caf81c54a8aa9207dbe87559438ffb252e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 43a9dab037f4d0f1926ff67f8f38eaa6734a6d67
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79141073"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164517"
 ---
 # <a name="reference-assemblies"></a>Ensamblados de referencia
 
@@ -25,7 +25,7 @@ Un ensamblado de referencia puede representar también un contrato; es decir, un
 
 Para utilizar ciertas API del proyecto, debe agregar referencias a sus ensamblados. Puede agregar referencias a ensamblados de implementación o a ensamblados de referencia. Se recomienda usar los ensamblados de referencia siempre que estén disponibles. De este modo, se asegurará de que solo usa los miembros de la API admitidos en la versión de destino, diseñada para que la usen los diseñadores de API. El uso del ensamblado de referencia garantiza que no está tomando una dependencia de los detalles de implementación.
 
-Los ensamblados de referencia de las bibliotecas de .NET Framework se distribuyen con los paquetes de destino. Puede obtenerlos descargando un instalador independiente o seleccionando un componente en el instalador de Visual Studio. Para más información, consulte [Instalación de .NET Framework para desarrolladores](../../framework/install/guide-for-developers.md). En .NET Core y .NET Standard, los ensamblados de referencia se descargan automáticamente según sea necesario (a través de NuGet) y se hace referencia a ellos. En .NET Core 3.0 y versiones posteriores, los ensamblados de referencia para la plataforma principal se encuentran en el paquete [Microsoft.NETCore.App.Ref](https://www.nuget.org/packages/Microsoft.NETCore.App.Ref) (el paquete [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) se usa para las versiones anteriores a la 3.0). Para obtener más información, vea [Paquetes, metapaquetes y marcos de trabajo](../../core/packages.md) en la guía de .NET Core.
+Los ensamblados de referencia de las bibliotecas de .NET Framework se distribuyen con los paquetes de destino. Puede obtenerlos descargando un instalador independiente o seleccionando un componente en el instalador de Visual Studio. Para más información, consulte [Instalación de .NET Framework para desarrolladores](../../framework/install/guide-for-developers.md). En .NET Core y .NET Standard, los ensamblados de referencia se descargan automáticamente según sea necesario (a través de NuGet) y se hace referencia a ellos. En .NET Core 3.0 y versiones posteriores, los ensamblados de referencia para la plataforma principal se encuentran en el paquete [Microsoft.NETCore.App.Ref](https://www.nuget.org/packages/Microsoft.NETCore.App.Ref) (el paquete [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) se usa para las versiones anteriores a la 3.0).
 
 Cuando se agregan referencias a ensamblados de .NET Framework en Visual Studio mediante el cuadro de diálogo **Agregar referencia**, se selecciona un ensamblado de la lista y Visual Studio busca automáticamente los ensamblados de referencia correspondientes a la versión de la plataforma de destino seleccionada en el proyecto. Lo mismo se aplica a la hora de agregar referencias directamente en el proyecto de MSBuild mediante el elemento de proyecto [Reference ](/visualstudio/msbuild/common-msbuild-project-items#reference): solo tiene que especificar el nombre del ensamblado, no la ruta de acceso del archivo completa. Al agregar referencias a estos ensamblados en la línea de comandos mediante la opción del compilador `-reference` ([en C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) y en [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md)) o mediante el método <xref:Microsoft.CodeAnalysis.Compilation.AddReferences%2A?displayProperty=nameWithType> en la API de Roslyn, debe especificar manualmente los archivos de ensamblado de referencia para la versión de la plataforma de destino correcta. Los archivos de ensamblado de referencia de .NET Framework se encuentran en el directorio *%ProgramFiles(x86)%\\Reference Assemblies\\Microsoft\\Framework\\.NETFramework*. Para .NET Core, puede forzar la operación de publicación para copiar los ensamblados de referencia de la plataforma de destino en el subdirectorio *publish/refs* del directorio de salida. Para ello, establezca la propiedad de proyecto `PreserveCompilationContext` en `true`. A continuación, puede pasar estos archivos de ensamblado de referencia al compilador. El uso de `DependencyContext` del paquete [Microsoft.Extensions.DependencyModel](https://www.nuget.org/packages/Microsoft.Extensions.DependencyModel/) puede ayudar a localizar sus rutas de acceso.
 

@@ -1,89 +1,90 @@
 ---
 title: Opciones de ajuste de tamaño en el control DataGrid
+description: Obtenga información sobre cómo establecer filas y columnas individuales en el Windows Presentation Foundation control DataGrid para ajustar su contenido o a valores específicos.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGrid control [WPF], sizing
 - size [WPF], DataGrid
 - automatically size DataGrid [WPF]
 ms.assetid: 96a0e47e-b010-4302-98ef-2daac446d8db
-ms.openlocfilehash: 6d100fb17b1ee3e652985a637d333d9f65e20d36
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0f10e385cbf18a26989614363ca6cd9f92bc83ec
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970994"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164748"
 ---
 # <a name="sizing-options-in-the-datagrid-control"></a>Opciones de ajuste de tamaño en el control DataGrid
-Diversas opciones están disponibles para controlar cómo el <xref:System.Windows.Controls.DataGrid> ajusta su tamaño. El <xref:System.Windows.Controls.DataGrid>y filas y columnas individuales en el <xref:System.Windows.Controls.DataGrid>, se pueden establecer para cambiar el tamaño automáticamente a su contenido o se puede establecer en valores específicos. De forma predeterminada, el <xref:System.Windows.Controls.DataGrid> aumentará y reducirá para ajustarse al tamaño de su contenido.  
+Hay varias opciones disponibles para controlar cómo se <xref:System.Windows.Controls.DataGrid> ajustan los tamaños. <xref:System.Windows.Controls.DataGrid>, Y las filas y columnas individuales de <xref:System.Windows.Controls.DataGrid> , se pueden establecer para que el tamaño se ajuste automáticamente a su contenido o se puede establecer en valores específicos. De forma predeterminada, <xref:System.Windows.Controls.DataGrid> crecerá y se reducirá para ajustarse al tamaño de su contenido.  
   
-## <a name="sizing-the-datagrid"></a>Cambiar el tamaño del control DataGrid  
+## <a name="sizing-the-datagrid"></a>Ajustar el tamaño del control DataGrid  
   
 ### <a name="cautions-when-using-automatic-sizing"></a>Precauciones al usar el ajuste de tamaño automático  
- De forma predeterminada, el <xref:System.Windows.FrameworkElement.Height%2A> y <xref:System.Windows.FrameworkElement.Width%2A> propiedades de la <xref:System.Windows.Controls.DataGrid> se establecen en <xref:System.Double.NaN?displayProperty=nameWithType> ("`Auto`" en XAML) y el <xref:System.Windows.Controls.DataGrid> se ajustará al tamaño de su contenido.  
+ De forma predeterminada, <xref:System.Windows.FrameworkElement.Height%2A> las <xref:System.Windows.FrameworkElement.Width%2A> propiedades y de <xref:System.Windows.Controls.DataGrid> se establecen en <xref:System.Double.NaN?displayProperty=nameWithType> (" `Auto` " en XAML) y <xref:System.Windows.Controls.DataGrid> se ajustará al tamaño de su contenido.  
   
- Cuando se coloca dentro de un contenedor que no restringe el tamaño de sus elementos secundarios, como un <xref:System.Windows.Controls.Canvas> o <xref:System.Windows.Controls.StackPanel>, el <xref:System.Windows.Controls.DataGrid> extenderá más allá de los límites visibles del contenedor y no se mostrarán las barras de desplazamiento. Esta condición tiene implicaciones de facilidad de uso y rendimiento.  
+ Cuando se coloca dentro de un contenedor que no restringe el tamaño de sus elementos secundarios, como <xref:System.Windows.Controls.Canvas> o <xref:System.Windows.Controls.StackPanel> , <xref:System.Windows.Controls.DataGrid> se ajustará más allá de los límites visibles del contenedor y no se mostrarán las barras de desplazamiento. Esta condición tiene implicaciones de facilidad de uso y rendimiento.  
   
- Cuando se enlaza a un conjunto de datos, si la <xref:System.Windows.FrameworkElement.Height%2A> de la <xref:System.Windows.Controls.DataGrid> no es restringido, continuará agregar una fila para cada elemento de datos en el conjunto de datos enlazado. Esto puede causar la <xref:System.Windows.Controls.DataGrid> crezca fuera de los límites visibles de la aplicación cuando se agregan filas. El <xref:System.Windows.Controls.DataGrid> no mostrará las barras de desplazamiento en este caso porque su <xref:System.Windows.FrameworkElement.Height%2A> seguirá creciendo para adaptarse a las nuevas filas.  
+ Cuando se enlaza a un conjunto de datos, si el <xref:System.Windows.FrameworkElement.Height%2A> de <xref:System.Windows.Controls.DataGrid> no está restringido, seguirá agregando una fila para cada elemento de datos en el conjunto de datos enlazado. Esto puede hacer que el <xref:System.Windows.Controls.DataGrid> crezca fuera de los límites visibles de la aplicación a medida que se agregan filas. <xref:System.Windows.Controls.DataGrid>En este caso, no mostrará barras de desplazamiento porque su seguirá <xref:System.Windows.FrameworkElement.Height%2A> creciendo para alojar las nuevas filas.  
   
- Se crea un objeto para cada fila de la <xref:System.Windows.Controls.DataGrid>. Si está trabajando con un gran conjunto de datos y permite que el <xref:System.Windows.Controls.DataGrid> para cambiar automáticamente de tamaño, la creación de un gran número de objetos puede afectar al rendimiento de la aplicación.  
+ Se crea un objeto para cada fila de <xref:System.Windows.Controls.DataGrid> . Si está trabajando con un conjunto de datos grande y permite que se <xref:System.Windows.Controls.DataGrid> ajuste automáticamente al tamaño, la creación de un gran número de objetos puede afectar al rendimiento de la aplicación.  
   
- Para evitar estos problemas cuando se trabaja con grandes conjuntos de datos, se recomienda establecer específicamente el <xref:System.Windows.FrameworkElement.Height%2A> de la <xref:System.Windows.Controls.DataGrid> o colocarlo en un contenedor que restrinja su <xref:System.Windows.FrameworkElement.Height%2A>, como un <xref:System.Windows.Controls.Grid>. Cuando el <xref:System.Windows.FrameworkElement.Height%2A> está restringido, el <xref:System.Windows.Controls.DataGrid> creará solo las filas que se ajusten a sus especificado <xref:System.Windows.FrameworkElement.Height%2A>y se reciclará esas filas según sea necesario para mostrar los datos nuevos.  
+ Para evitar estos problemas cuando se trabaja con grandes conjuntos de datos, se recomienda establecer específicamente el <xref:System.Windows.FrameworkElement.Height%2A> de <xref:System.Windows.Controls.DataGrid> o colocarlo en un contenedor que restrinja su <xref:System.Windows.FrameworkElement.Height%2A> , como <xref:System.Windows.Controls.Grid> . Cuando el <xref:System.Windows.FrameworkElement.Height%2A> está restringido, <xref:System.Windows.Controls.DataGrid> solo creará las filas que se ajustarán a su especificado <xref:System.Windows.FrameworkElement.Height%2A> y reciclará esas filas según sea necesario para mostrar los datos nuevos.  
   
-### <a name="setting-the-datagrid-size"></a>Establecer el tamaño de DataGrid  
- El <xref:System.Windows.Controls.DataGrid> puede establecerse automáticamente de tamaño dentro de los límites especificados, o el <xref:System.Windows.Controls.DataGrid> se puede establecer en un tamaño específico. En la tabla siguiente se muestra las propiedades que se pueden establecer para controlar el <xref:System.Windows.Controls.DataGrid> tamaño.  
+### <a name="setting-the-datagrid-size"></a>Establecer el tamaño del control DataGrid  
+ <xref:System.Windows.Controls.DataGrid>Se puede establecer para que se ajuste automáticamente al tamaño dentro de los límites especificados, o bien <xref:System.Windows.Controls.DataGrid> se puede establecer en un tamaño específico. En la tabla siguiente se muestran las propiedades que se pueden establecer para controlar el <xref:System.Windows.Controls.DataGrid> tamaño.  
   
 |Propiedad|Descripción|  
 |--------------|-----------------|  
-|<xref:System.Windows.FrameworkElement.Height%2A>|Establece un alto específico para el <xref:System.Windows.Controls.DataGrid>.|  
-|<xref:System.Windows.FrameworkElement.MaxHeight%2A>|Establece el límite superior para el alto de la <xref:System.Windows.Controls.DataGrid>. El <xref:System.Windows.Controls.DataGrid> crecerá verticalmente hasta que alcanza este alto.|  
-|<xref:System.Windows.FrameworkElement.MinHeight%2A>|Establece el límite inferior para el alto de la <xref:System.Windows.Controls.DataGrid>. El <xref:System.Windows.Controls.DataGrid> se reducirá verticalmente hasta que alcanza este alto.|  
-|<xref:System.Windows.FrameworkElement.Width%2A>|Establece un ancho específico para el <xref:System.Windows.Controls.DataGrid>.|  
-|<xref:System.Windows.FrameworkElement.MaxWidth%2A>|Establece el límite superior para el ancho de la <xref:System.Windows.Controls.DataGrid>. El <xref:System.Windows.Controls.DataGrid> crecerá horizontalmente hasta que llega este ancho.|  
-|<xref:System.Windows.FrameworkElement.MinWidth%2A>|Establece el límite inferior para el ancho de la <xref:System.Windows.Controls.DataGrid>. El <xref:System.Windows.Controls.DataGrid> se reducirá horizontalmente hasta que llega este ancho.|  
+|<xref:System.Windows.FrameworkElement.Height%2A>|Establece un alto específico para <xref:System.Windows.Controls.DataGrid> .|  
+|<xref:System.Windows.FrameworkElement.MaxHeight%2A>|Establece el límite superior para el alto de <xref:System.Windows.Controls.DataGrid> . El <xref:System.Windows.Controls.DataGrid> crecimiento se hará verticalmente hasta que alcance este alto.|  
+|<xref:System.Windows.FrameworkElement.MinHeight%2A>|Establece el límite inferior para el alto de <xref:System.Windows.Controls.DataGrid> . <xref:System.Windows.Controls.DataGrid>Se reducirá verticalmente hasta que alcance este alto.|  
+|<xref:System.Windows.FrameworkElement.Width%2A>|Establece un ancho específico para <xref:System.Windows.Controls.DataGrid> .|  
+|<xref:System.Windows.FrameworkElement.MaxWidth%2A>|Establece el límite superior para el ancho de <xref:System.Windows.Controls.DataGrid> . <xref:System.Windows.Controls.DataGrid>Aumentará horizontalmente hasta que alcance este ancho.|  
+|<xref:System.Windows.FrameworkElement.MinWidth%2A>|Establece el límite inferior para el ancho de <xref:System.Windows.Controls.DataGrid> . <xref:System.Windows.Controls.DataGrid>Se reducirá horizontalmente hasta que alcance este ancho.|  
   
-## <a name="sizing-rows-and-row-headers"></a>Ajustar el tamaño de filas y encabezados de fila  
+## <a name="sizing-rows-and-row-headers"></a>Cambiar el tamaño de filas y encabezados de fila  
   
-### <a name="datagrid-rows"></a>Filas del control DataGrid  
- De forma predeterminada, un <xref:System.Windows.Controls.DataGrid> la fila <xref:System.Windows.FrameworkElement.Height%2A> propiedad está establecida en <xref:System.Double.NaN?displayProperty=nameWithType> ("`Auto`" en XAML), y el alto de fila se expandirá al tamaño de su contenido. El alto de todas las filas de la <xref:System.Windows.Controls.DataGrid> se puede especificar estableciendo el <xref:System.Windows.Controls.DataGrid.RowHeight%2A?displayProperty=nameWithType> propiedad. Los usuarios pueden cambiar el alto de fila arrastrando los divisores de encabezado de fila.  
+### <a name="datagrid-rows"></a>Filas de DataGrid  
+ De forma predeterminada, <xref:System.Windows.Controls.DataGrid> la propiedad de una fila <xref:System.Windows.FrameworkElement.Height%2A> se establece en <xref:System.Double.NaN?displayProperty=nameWithType> (" `Auto` " en XAML) y el alto de la fila se expande hasta el tamaño de su contenido. El alto de todas las filas de <xref:System.Windows.Controls.DataGrid> se puede especificar estableciendo la <xref:System.Windows.Controls.DataGrid.RowHeight%2A?displayProperty=nameWithType> propiedad. Los usuarios pueden cambiar el alto de las filas arrastrando los divisores de encabezado de fila.  
   
 ### <a name="datagrid-row-headers"></a>Encabezados de fila de DataGrid  
- Para mostrar los encabezados de fila, el <xref:System.Windows.Controls.DataGrid.HeadersVisibility%2A> propiedad debe establecerse en <xref:System.Windows.Controls.DataGridHeadersVisibility.Row?displayProperty=nameWithType> o <xref:System.Windows.Controls.DataGridHeadersVisibility.All?displayProperty=nameWithType>. De forma predeterminada, se muestran los encabezados de fila y el tamaño automáticamente para ajustarse a su contenido. Los encabezados de fila se pueden proporcionar un ancho específico estableciendo el <xref:System.Windows.Controls.DataGrid.RowHeaderWidth%2A?displayProperty=nameWithType> propiedad.  
+ Para mostrar los encabezados de fila, la <xref:System.Windows.Controls.DataGrid.HeadersVisibility%2A> propiedad debe establecerse en <xref:System.Windows.Controls.DataGridHeadersVisibility.Row?displayProperty=nameWithType> o <xref:System.Windows.Controls.DataGridHeadersVisibility.All?displayProperty=nameWithType> . De forma predeterminada, se muestran los encabezados de fila y se ajusta su tamaño automáticamente para ajustarse a su contenido. A los encabezados de fila se les puede asignar un ancho específico estableciendo la <xref:System.Windows.Controls.DataGrid.RowHeaderWidth%2A?displayProperty=nameWithType> propiedad.  
   
-## <a name="sizing-columns-and-column-headers"></a>Ajustar el tamaño de las columnas y encabezados de columna  
+## <a name="sizing-columns-and-column-headers"></a>Cambiar el tamaño de columnas y encabezados de columna  
   
-### <a name="datagrid-columns"></a>DataGrid (columnas)  
- El <xref:System.Windows.Controls.DataGrid> usa valores de la <xref:System.Windows.Controls.DataGridLength> y <xref:System.Windows.Controls.DataGridLengthUnitType> estructura para especificar los modos de tamaño automático o absoluto.  
+### <a name="datagrid-columns"></a>Columnas DataGrid  
+ <xref:System.Windows.Controls.DataGrid>Usa los valores de <xref:System.Windows.Controls.DataGridLength> y la <xref:System.Windows.Controls.DataGridLengthUnitType> estructura para especificar los modos de ajuste de tamaño absolutos o automáticos.  
   
- La siguiente tabla muestra los valores proporcionados por el <xref:System.Windows.Controls.DataGridLengthUnitType> estructura.  
+ En la tabla siguiente se muestran los valores proporcionados por la <xref:System.Windows.Controls.DataGridLengthUnitType> estructura.  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|<xref:System.Windows.Controls.DataGridLengthUnitType.Auto>|El valor predeterminado de los tamaños de modo de ajuste automático de <xref:System.Windows.Controls.DataGrid> columnas según el contenido de celdas y encabezados de columna.|  
-|<xref:System.Windows.Controls.DataGridLengthUnitType.SizeToCells>|Automático basado en celdas tamaños del modo de ajuste de tamaño <xref:System.Windows.Controls.DataGrid> columnas según el contenido de las celdas de la columna, sin incluir los encabezados de columna.|  
-|<xref:System.Windows.Controls.DataGridLengthUnitType.SizeToHeader>|Automático basado en encabezados tamaños del modo de ajuste de tamaño <xref:System.Windows.Controls.DataGrid> columnas según el contenido de los encabezados de columna.|  
-|<xref:System.Windows.Controls.DataGridLengthUnitType.Pixel>|Los píxeles con tamaños de modo de ajuste de tamaño <xref:System.Windows.Controls.DataGrid> columnas según el valor numérico proporcionado.|  
-|<xref:System.Windows.Controls.DataGridLengthUnitType.Star>|El modo de tamaño proporcional se utiliza para distribuir el espacio disponible en proporciones ponderadas.<br /><br /> En XAML, los valores en estrella se expresan como n *, donde n representa un valor numérico. 1\* es equivalente a \*. Por ejemplo, si dos columnas en un <xref:System.Windows.Controls.DataGrid> tenía los anchos de \* y 2\*, la primera columna recibiría una parte del espacio disponible y la segunda columna recibiría dos partes del espacio disponible.|  
+|<xref:System.Windows.Controls.DataGridLengthUnitType.Auto>|El modo de ajuste automático de tamaño predeterminado cambia el tamaño <xref:System.Windows.Controls.DataGrid> de las columnas según el contenido de las celdas y de los encabezados de columna.|  
+|<xref:System.Windows.Controls.DataGridLengthUnitType.SizeToCells>|El modo de ajuste de tamaño automático basado en celdas cambia el tamaño <xref:System.Windows.Controls.DataGrid> de las columnas según el contenido de las celdas de la columna, sin incluir los encabezados de columna.|  
+|<xref:System.Windows.Controls.DataGridLengthUnitType.SizeToHeader>|El modo de ajuste de tamaño automático basado en el encabezado cambia <xref:System.Windows.Controls.DataGrid> el tamaño de las columnas en función del contenido de los encabezados de columna.|  
+|<xref:System.Windows.Controls.DataGridLengthUnitType.Pixel>|El modo de ajuste de tamaño basado en píxeles cambia el tamaño <xref:System.Windows.Controls.DataGrid> de las columnas según el valor numérico proporcionado.|  
+|<xref:System.Windows.Controls.DataGridLengthUnitType.Star>|El modo de ajuste de tamaño de estrella se usa para distribuir el espacio disponible mediante proporciones ponderadas.<br /><br /> En XAML, los valores de estrella se expresan como n *, donde n representa un valor numérico. 1 \* es equivalente a \* . Por ejemplo, si dos columnas de una <xref:System.Windows.Controls.DataGrid> tenían anchos de \* y 2 \* , la primera columna recibiría una parte del espacio disponible y la segunda columna recibiría dos partes del espacio disponible.|  
   
- El <xref:System.Windows.Controls.DataGridLengthConverter> clase puede usarse para convertir datos entre valores numéricos o de cadena y <xref:System.Windows.Controls.DataGridLength> valores.  
+ La <xref:System.Windows.Controls.DataGridLengthConverter> clase se puede utilizar para convertir datos entre valores numéricos o de cadena y <xref:System.Windows.Controls.DataGridLength> valores.  
   
- De forma predeterminada, el <xref:System.Windows.Controls.DataGrid.ColumnWidth%2A?displayProperty=nameWithType> propiedad está establecida en <xref:System.Windows.Controls.DataGridLength.SizeToHeader%2A>y el <xref:System.Windows.Controls.DataGridColumn.Width%2A?displayProperty=nameWithType> propiedad está establecida en <xref:System.Windows.Controls.DataGridLength.Auto%2A>. Cuando se establece el modo de ajuste en <xref:System.Windows.Controls.DataGridLength.Auto%2A> o <xref:System.Windows.Controls.DataGridLength.SizeToCells%2A>, columnas crecerá el ancho de su contenido visible más ancho. Al desplazarse, estos modos de ajuste de tamaño hará que las columnas se expandan si el contenido que es mayor que el tamaño actual de la columna se desplaza en la vista. La columna no se reducirá cuando el contenido se desplaza fuera de la vista.  
+ De forma predeterminada, la <xref:System.Windows.Controls.DataGrid.ColumnWidth%2A?displayProperty=nameWithType> propiedad se establece en <xref:System.Windows.Controls.DataGridLength.SizeToHeader%2A> y la <xref:System.Windows.Controls.DataGridColumn.Width%2A?displayProperty=nameWithType> propiedad se establece en <xref:System.Windows.Controls.DataGridLength.Auto%2A> . Cuando el modo de ajuste de tamaño está establecido en <xref:System.Windows.Controls.DataGridLength.Auto%2A> o <xref:System.Windows.Controls.DataGridLength.SizeToCells%2A> , las columnas crecerán hasta el ancho de su contenido visible más amplio. Al desplazarse, estos modos de ajuste de tamaño harán que las columnas se expandan si el contenido que es mayor que el tamaño de la columna actual se desplaza a la vista. La columna no se reducirá después de que el contenido se desplace fuera de la vista.  
   
- Las columnas de la <xref:System.Windows.Controls.DataGrid> también se puede establecer automáticamente el tamaño solo dentro de los límites especificados, o las columnas se pueden establecer en un tamaño específico. En la tabla siguiente muestra las propiedades que se pueden establecer para controlar el tamaño de las columnas.  
+ Las columnas de <xref:System.Windows.Controls.DataGrid> también pueden establecerse de forma que se ajuste automáticamente al tamaño de los límites especificados, o bien las columnas pueden establecerse en un tamaño específico. En la tabla siguiente se muestran las propiedades que se pueden establecer para controlar los tamaños de las columnas.  
   
 |Propiedad|Descripción|  
 |--------------|-----------------|  
-|<xref:System.Windows.Controls.DataGrid.MaxColumnWidth%2A?displayProperty=nameWithType>|Establece el límite superior para todas las columnas de la <xref:System.Windows.Controls.DataGrid>.|  
-|<xref:System.Windows.Controls.DataGridColumn.MaxWidth%2A?displayProperty=nameWithType>|Establece el límite superior para una columna individual. Invalida <xref:System.Windows.Controls.DataGrid.MaxColumnWidth%2A?displayProperty=nameWithType>.|  
-|<xref:System.Windows.Controls.DataGrid.MinColumnWidth%2A?displayProperty=nameWithType>|Establece el límite inferior para todas las columnas de la <xref:System.Windows.Controls.DataGrid>.|  
+|<xref:System.Windows.Controls.DataGrid.MaxColumnWidth%2A?displayProperty=nameWithType>|Establece el límite superior para todas las columnas de <xref:System.Windows.Controls.DataGrid> .|  
+|<xref:System.Windows.Controls.DataGridColumn.MaxWidth%2A?displayProperty=nameWithType>|Establece el límite superior de una columna individual. Invalida <xref:System.Windows.Controls.DataGrid.MaxColumnWidth%2A?displayProperty=nameWithType>.|  
+|<xref:System.Windows.Controls.DataGrid.MinColumnWidth%2A?displayProperty=nameWithType>|Establece el límite inferior para todas las columnas de <xref:System.Windows.Controls.DataGrid> .|  
 |<xref:System.Windows.Controls.DataGridColumn.MinWidth%2A?displayProperty=nameWithType>|Establece el límite inferior de una columna individual. Invalida <xref:System.Windows.Controls.DataGrid.MinColumnWidth%2A?displayProperty=nameWithType>.|  
-|<xref:System.Windows.Controls.DataGrid.ColumnWidth%2A?displayProperty=nameWithType>|Establece un ancho específico para todas las columnas de la <xref:System.Windows.Controls.DataGrid>.|  
+|<xref:System.Windows.Controls.DataGrid.ColumnWidth%2A?displayProperty=nameWithType>|Establece un ancho específico para todas las columnas de <xref:System.Windows.Controls.DataGrid> .|  
 |<xref:System.Windows.Controls.DataGridColumn.Width%2A?displayProperty=nameWithType>|Establece un ancho específico para una columna individual. Invalida <xref:System.Windows.Controls.DataGrid.ColumnWidth%2A?displayProperty=nameWithType>.|  
   
-### <a name="datagrid-column-headers"></a>Encabezados de columna de DataGrid  
- De forma predeterminada, <xref:System.Windows.Controls.DataGrid> se muestran los encabezados de columna. Para ocultar los encabezados de columna, el <xref:System.Windows.Controls.DataGrid.HeadersVisibility%2A> propiedad debe establecerse en <xref:System.Windows.Controls.DataGridHeadersVisibility.Row?displayProperty=nameWithType> o <xref:System.Windows.Controls.DataGridHeadersVisibility.None?displayProperty=nameWithType>. De forma predeterminada, cuando se muestran los encabezados de columna, cambiar automáticamente el tamaño para ajustar su contenido. Los encabezados de columna se pueden proporcionar un alto específico estableciendo el <xref:System.Windows.Controls.DataGrid.ColumnHeaderHeight%2A?displayProperty=nameWithType> propiedad.  
+### <a name="datagrid-column-headers"></a>Encabezados de columna DataGrid  
+ De forma predeterminada, <xref:System.Windows.Controls.DataGrid> se muestran los encabezados de columna. Para ocultar los encabezados de columna, la <xref:System.Windows.Controls.DataGrid.HeadersVisibility%2A> propiedad debe establecerse en <xref:System.Windows.Controls.DataGridHeadersVisibility.Row?displayProperty=nameWithType> o <xref:System.Windows.Controls.DataGridHeadersVisibility.None?displayProperty=nameWithType> . De forma predeterminada, cuando se muestran los encabezados de columna, se ajusta su tamaño automáticamente para ajustarse a su contenido. A los encabezados de columna se les puede asignar un alto determinado estableciendo la <xref:System.Windows.Controls.DataGrid.ColumnHeaderHeight%2A?displayProperty=nameWithType> propiedad.  
   
-### <a name="resizing-with-the-mouse"></a>Cambio de tamaño con el Mouse  
- Pueden cambiar el tamaño de los usuarios <xref:System.Windows.Controls.DataGrid> filas y columnas arrastrando los divisores de encabezado de fila o columna. El <xref:System.Windows.Controls.DataGrid> también admite el cambio de tamaño automático de filas y columnas haciendo doble clic en el divisor de encabezado de fila o columna. Para evitar que un usuario cambiar el tamaño de columnas específicas, establezca el <xref:System.Windows.Controls.DataGridColumn.CanUserResize%2A?displayProperty=nameWithType> propiedad `false` para columnas individuales. Para evitar que los usuarios cambien el tamaño de todas las columnas, establezca el <xref:System.Windows.Controls.DataGrid.CanUserResizeColumns%2A?displayProperty=nameWithType> propiedad `false`. Para evitar que los usuarios cambien el tamaño de todas las filas, establezca el <xref:System.Windows.Controls.DataGrid.CanUserResizeRows%2A?displayProperty=nameWithType> propiedad `false`.  
+### <a name="resizing-with-the-mouse"></a>Cambiar el tamaño con el mouse  
+ Los usuarios pueden cambiar el tamaño de las <xref:System.Windows.Controls.DataGrid> filas y las columnas arrastrando los divisores de los encabezados de fila o de columna. <xref:System.Windows.Controls.DataGrid>También admite el cambio de tamaño automático de filas y columnas haciendo doble clic en el divisor de encabezado de fila o de columna. Para evitar que un usuario cambie el tamaño de las columnas determinadas, establezca la <xref:System.Windows.Controls.DataGridColumn.CanUserResize%2A?displayProperty=nameWithType> propiedad en `false` para las columnas individuales. Para evitar que los usuarios cambien el tamaño de todas las columnas, establezca la <xref:System.Windows.Controls.DataGrid.CanUserResizeColumns%2A?displayProperty=nameWithType> propiedad en `false` . Para evitar que los usuarios cambien el tamaño de todas las filas, establezca la <xref:System.Windows.Controls.DataGrid.CanUserResizeRows%2A?displayProperty=nameWithType> propiedad en `false` .  
   
 ## <a name="see-also"></a>Vea también
 

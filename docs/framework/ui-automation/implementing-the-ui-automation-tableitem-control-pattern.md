@@ -1,17 +1,18 @@
 ---
 title: Implementar el patrón de control TableItem de UI Automation
+description: Revise las directrices y convenciones para implementar el patrón de control TableItem en la automatización de la interfaz de usuario. Conocer los miembros necesarios para la interfaz ITableItemProvider.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, Table Item
 - UI Automation, Table Item control pattern
 - TableItem control pattern
 ms.assetid: ac178408-1485-436f-8d3e-eee3bf80cb24
-ms.openlocfilehash: f35b491c31e8725eac0025dfd6815079d0ea9b79
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3d6d31fe0e041fbba147df14d290a775188755f2
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180077"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163526"
 ---
 # <a name="implementing-the-ui-automation-tableitem-control-pattern"></a>Implementar el patrón de control TableItem de UI Automation
 > [!NOTE]
@@ -24,7 +25,7 @@ ms.locfileid: "79180077"
 <a name="Implementation_Guidelines_and_Conventions"></a>
 ## <a name="implementation-guidelines-and-conventions"></a>Directrices y convenciones de implementación  
   
-- Para obtener información sobre la funcionalidad de elementos de cuadrícula relacionados, vea [Implementación del patrón](implementing-the-ui-automation-griditem-control-pattern.md)de control GridItem de Automatización de la interfaz de usuarioUI Automation .  
+- Para obtener la funcionalidad de elemento de cuadrícula relacionada, vea [implementar el patrón de control GridItem de UI Automation](implementing-the-ui-automation-griditem-control-pattern.md).  
   
 <a name="Required_Members_for_ITableItemProvider"></a>
 ## <a name="required-members-for-itableitemprovider"></a>Miembros requeridos para ITableItemProvider  
@@ -40,12 +41,12 @@ ms.locfileid: "79180077"
 ## <a name="exceptions"></a>Excepciones  
  Este patrón de control no tiene excepciones asociadas.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [Información general acerca de los patrones de control de UI Automation](ui-automation-control-patterns-overview.md)
 - [Patrones de control compatibles en un proveedor de UI Automation](support-control-patterns-in-a-ui-automation-provider.md)
 - [Patrones de controles de UI Automation para clientes](ui-automation-control-patterns-for-clients.md)
 - [Implementar el patrón de control Table de UI Automation](implementing-the-ui-automation-table-control-pattern.md)
 - [Implementar el patrón de control GridItem de UI Automation](implementing-the-ui-automation-griditem-control-pattern.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [Información general sobre el árbol de la UI Automation](ui-automation-tree-overview.md)
 - [Utilizar el almacenamiento en caché en la UI Automation](use-caching-in-ui-automation.md)

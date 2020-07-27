@@ -1,5 +1,6 @@
 ---
 title: Exponer un proveedor de UI Automation en el servidor
+description: Vea un ejemplo que muestra cómo exponer un proveedor de automatización de la interfaz de usuario del lado servidor que se hospeda en una ventana System. Windows. Forms. control.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider, exposing
 - server-side UI Automation provider, exposing
 ms.assetid: 55d419c0-2201-4101-90c9-2888df4dbb47
-ms.openlocfilehash: 49dcae6ccaf749bae8d8a90af850034bb9bd37fb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 66380c31da45b23d24b14154aea9770c6369aaf2
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433617"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168452"
 ---
 # <a name="expose-a-server-side-ui-automation-provider"></a>Exponer un proveedor de UI Automation en el servidor
 > [!NOTE]
@@ -30,5 +31,5 @@ ms.locfileid: "74433617"
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre proveedores de la Automatización de la interfaz de usuario](ui-automation-providers-overview.md)
-- [Implementación del proveedor de automatización de la interfaz de usuario en el servidor](server-side-ui-automation-provider-implementation.md)
+- [Información general sobre proveedores de UI Automation](ui-automation-providers-overview.md)
+- [Implementación del proveedor de UI Automation en el servidor](server-side-ui-automation-provider-implementation.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - threads and fibers [.NET]
 - managed threading
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
-ms.openlocfilehash: 6ab0cc7c1ec2f7bbc633ac966dd18ab3ea7a395b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: de823297540d5ce3740a26614dbb9a82881decf3
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73127540"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924388"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Subprocesamiento administrado y no administrado en Windows
 
@@ -23,9 +23,6 @@ La administración de todos los subprocesos se realiza mediante la clase <xref:S
  Cuando un subproceso no administrado entra en el runtime a través de, por ejemplo, un contenedor CCW, el sistema comprueba el almacén local del subproceso para buscar un objeto <xref:System.Threading.Thread> administrado interno. Si se encuentra uno, el runtime ya tiene en cuenta este subproceso. Si no lo encuentra, el runtime compila un nuevo objeto <xref:System.Threading.Thread> y lo instala en el almacén local de ese subproceso.  
   
  En los subprocesos administrados, <xref:System.Threading.Thread.GetHashCode%2A?displayProperty=nameWithType> es la identificación del subproceso administrado estable. En cuanto a la duración de su subproceso, no estará en conflicto con el valor de ningún otro subproceso, independientemente del dominio de la aplicación del que obtiene este valor.  
-  
-> [!NOTE]
-> Un **ThreadId** de sistema operativo no tiene una relación fija con un subproceso administrado, ya que un host no administrado puede controlar la relación entre subprocesos administrados y no administrados. En concreto, un host sofisticado puede usar la API de fibras para programar muchos subprocesos administrados en el mismo subproceso de sistema operativo o para mover un subproceso administrado entre distintos subprocesos de sistema operativo.  
   
 ## <a name="mapping-from-win32-threading-to-managed-threading"></a>Asignación de subprocesos de Win32 a subprocesos administrados
 

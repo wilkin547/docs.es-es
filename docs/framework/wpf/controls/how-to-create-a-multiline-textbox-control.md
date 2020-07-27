@@ -1,25 +1,26 @@
 ---
-title: Procedimiento Crear un control TextBox multilínea
+title: 'Cómo: Crear un control TextBox multilínea'
+description: Obtenga información sobre cómo usar XAML para definir un control de cuadro de texto que se expande para alojar varias líneas de texto en una aplicación Windows Presentation Foundation.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TextBox control [WPF], multiple lines of text
 ms.assetid: 05914a93-d0ea-4a9a-b693-09df7d4e2ac2
-ms.openlocfilehash: 29fb4c9498fe163c36e71680242d3ef8cf98c089
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0a88d4d768884df135afddb491431650b9ba2d24
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62001278"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166250"
 ---
-# <a name="how-to-create-a-multiline-textbox-control"></a>Procedimiento Crear un control TextBox multilínea
+# <a name="how-to-create-a-multiline-textbox-control"></a>Cómo: Crear un control TextBox multilínea
 En este ejemplo se muestra cómo usar [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] para definir un <xref:System.Windows.Controls.TextBox> control que se expandirá automáticamente para alojar varias líneas de texto.  
   
 ## <a name="example"></a>Ejemplo  
- Establecer el <xref:System.Windows.Controls.TextBox.TextWrapping%2A> atribuir a **ajustar** hará que el texto especificado se ajuste a una nueva línea cuando el borde de la <xref:System.Windows.Controls.TextBox> se alcanza el control, se expande automáticamente el <xref:System.Windows.Controls.TextBox> control para incluir espacio para una nueva línea, si es necesario.  
+ Al establecer el <xref:System.Windows.Controls.TextBox.TextWrapping%2A> atributo en **Wrap** , el texto escrito se ajustará a una nueva línea cuando se alcance el borde del <xref:System.Windows.Controls.TextBox> control, expandiendo automáticamente el <xref:System.Windows.Controls.TextBox> control para que incluya espacio para una nueva línea, si es necesario.  
   
- Establecer el <xref:System.Windows.Controls.Primitives.TextBoxBase.AcceptsReturn%2A> atributo **true** provoca una nueva línea va a insertar cuando se presiona la tecla ENTRAR, se expande automáticamente una vez más la <xref:System.Windows.Controls.TextBox> para incluir espacio para una nueva línea, si es necesario.  
+ <xref:System.Windows.Controls.Primitives.TextBoxBase.AcceptsReturn%2A>Si se establece el atributo en **true** , se insertará una nueva línea cuando se presione la tecla entrar; de esta forma, se expandirá automáticamente el <xref:System.Windows.Controls.TextBox> para incluir el espacio para una nueva línea, si es necesario.  
   
- El <xref:System.Windows.Controls.Primitives.TextBoxBase.VerticalScrollBarVisibility%2A> atributo agrega una barra de desplazamiento a la <xref:System.Windows.Controls.TextBox>, de modo que el contenido de la <xref:System.Windows.Controls.TextBox> se puede desplazar y si el <xref:System.Windows.Controls.TextBox> se expande más allá del tamaño del marco o la ventana que lo contiene.  
+ El <xref:System.Windows.Controls.Primitives.TextBoxBase.VerticalScrollBarVisibility%2A> atributo agrega una barra de desplazamiento a <xref:System.Windows.Controls.TextBox> , de modo que el contenido de <xref:System.Windows.Controls.TextBox> se puede desplazar a través de si el objeto se <xref:System.Windows.Controls.TextBox> expande más allá del tamaño del marco o de la ventana que lo incluye.  
   
  [!code-xaml[TextBox_MiscCode#_MultilineTextBoxXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_multilinetextboxxaml)]  
   
@@ -27,4 +28,4 @@ En este ejemplo se muestra cómo usar [!INCLUDE[TLA#tla_xaml](../../../../includ
 
 - <xref:System.Windows.TextWrapping>
 - [Información general sobre TextBox](textbox-overview.md)
-- [RichTextBox Overview](richtextbox-overview.md) (Introducción a RichTextBox)
+- [Información general sobre el control RichTextBox](richtextbox-overview.md)

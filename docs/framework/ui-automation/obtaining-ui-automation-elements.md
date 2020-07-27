@@ -1,16 +1,17 @@
 ---
 title: Obtener elementos de UI Automation
+description: Revise varias formas de obtener objetos de elemento de automatización de la interfaz de usuario (AutomationElement) para los elementos de la interfaz de usuario.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, obtaining elements
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
-ms.openlocfilehash: eab4e59ee219808a4c0ae9ca5331a14928b66b5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2b741dde3b30334ba8fa990d73044da7e3bdd2da
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179998"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168158"
 ---
 # <a name="obtaining-ui-automation-elements"></a>Obtener elementos de UI Automation
 > [!NOTE]
@@ -96,8 +97,8 @@ ms.locfileid: "79179998"
 ### <a name="from-the-focused-control"></a>Desde el control con el foco  
  Puede recuperar un elemento <xref:System.Windows.Automation.AutomationElement> que representa el control con el foco desde la propiedad estática <xref:System.Windows.Automation.AutomationElement.FocusedElement%2A> .  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Búsqueda de un elemento de Automatización de la interfaz de usuario basada en una condición de propiedad](find-a-ui-automation-element-based-on-a-property-condition.md)
-- [Navegar entre elementos de Automatización de la interfaz de usuario con TreeWalker](navigate-among-ui-automation-elements-with-treewalker.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [Buscar un elemento de UI Automation basándose en una condición de propiedad](find-a-ui-automation-element-based-on-a-property-condition.md)
+- [Navegar entre elementos de UI Automation con TreeWalker](navigate-among-ui-automation-elements-with-treewalker.md)
+- [Información general sobre el árbol de la UI Automation](ui-automation-tree-overview.md)

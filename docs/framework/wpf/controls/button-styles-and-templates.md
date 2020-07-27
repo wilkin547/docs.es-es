@@ -1,5 +1,6 @@
 ---
 title: Estilos y plantillas de Button
+description: Obtenga información sobre los estilos y las plantillas del control de botón de Windows Presentation Foundation. Modifique el ControlTemplate para dar al control una apariencia única.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - states [WPF], Button
@@ -9,21 +10,21 @@ helpviewer_keywords:
 - templates [WPF], Button
 - ControlTemplate [WPF], Button
 ms.assetid: e223c759-f8c4-4717-acfb-b1e40bdf5f3b
-ms.openlocfilehash: ef9f85848ebdda9dc4ae15d0f54847eacd46e24d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 11509adeef397f26eb040e6e98d0edb333b2515f
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283583"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166265"
 ---
 # <a name="button-styles-and-templates"></a>Estilos y plantillas de Button
-En este tema se describen los estilos y las plantillas del control <xref:System.Windows.Controls.Button>. Puede modificar la <xref:System.Windows.Controls.ControlTemplate> predeterminada para dar al control una apariencia única. Para obtener más información, vea [crear una plantilla para un control](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
+En este tema se describen los estilos y las plantillas del <xref:System.Windows.Controls.Button> control. Puede modificar el valor predeterminado <xref:System.Windows.Controls.ControlTemplate> para dar al control una apariencia única. Para obtener más información, vea [crear una plantilla para un control](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
 ## <a name="button-parts"></a>Elementos de botón  
- El control <xref:System.Windows.Controls.Button> no tiene ninguna parte con nombre.  
+ El <xref:System.Windows.Controls.Button> control no tiene ninguna parte con nombre.  
   
 ## <a name="button-states"></a>Estados del botón  
- En la tabla siguiente se enumeran los Estados visuales del control <xref:System.Windows.Controls.Button>.  
+ En la tabla siguiente se enumeran los Estados visuales del <xref:System.Windows.Controls.Button> control.  
   
 |Nombre de VisualState|Nombre de VisualStateGroup|Descripción|  
 |-|-|-|  
@@ -33,12 +34,12 @@ En este tema se describen los estilos y las plantillas del control <xref:System.
 |Deshabilitado|CommonStates|El control está deshabilitado.|  
 |Con foco|FocusStates|El control tiene el foco.|  
 |Sin foco|FocusStates|El control no tiene el foco.|  
-|Válido|ValidationStates|El control utiliza la clase <xref:System.Windows.Controls.Validation> y la propiedad adjunta <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> es `false`.|  
-|InvalidFocused|ValidationStates|La propiedad adjunta <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> es `true` y el control tiene el foco.|  
-|InvalidUnfocused|ValidationStates|La propiedad adjunta <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> es `true` y el control no tiene el foco.|  
+|Válido|ValidationStates|El control utiliza la <xref:System.Windows.Controls.Validation> clase y la <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propiedad adjunta es `false` .|  
+|InvalidFocused|ValidationStates|La <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propiedad adjunta es `true` y el control tiene el foco.|  
+|InvalidUnfocused|ValidationStates|La <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propiedad adjunta es `true` y el control no tiene el foco.|  
   
 ## <a name="button-controltemplate-example"></a>Ejemplo de ControlTemplate de Button  
- En el ejemplo siguiente se muestra cómo definir un <xref:System.Windows.Controls.ControlTemplate> para el control <xref:System.Windows.Controls.Button>.  
+ En el ejemplo siguiente se muestra cómo definir un <xref:System.Windows.Controls.ControlTemplate> para el <xref:System.Windows.Controls.Button> control.  
   
  [!code-xaml[ControlTemplateExamples#Button](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/button.xaml#button)]  
   
@@ -53,6 +54,6 @@ En este tema se describen los estilos y las plantillas del control <xref:System.
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Estilos y plantillas de controles](control-styles-and-templates.md)
-- [Control Customization](control-customization.md) (Personalización de controles)
+- [Personalización de controles](control-customization.md)
 - [Aplicar estilos y plantillas](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Crear una plantilla para un control](../../../desktop-wpf/themes/how-to-create-apply-template.md)
+- [Creación de una plantilla de un control](../../../desktop-wpf/themes/how-to-create-apply-template.md)

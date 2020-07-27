@@ -1,5 +1,6 @@
 ---
 title: Optimizar el rendimiento de la aplicación
+description: Utilice estos recursos para mejorar el rendimiento de las aplicaciones Windows Presentation Foundation, como planear el rendimiento y aprovechar el hardware.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application rendering [WPF], performance
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: ac8c6aa3-3c68-4a24-9827-3b6c829c1ebf
-ms.openlocfilehash: 54d69e87ef2a9c5318e394422e3bcfcabcc76210
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 165caaf102a66988db0254839a947b8e262a386d
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81646248"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166330"
 ---
 # <a name="optimizing-wpf-application-performance"></a>Optimizar WPF: Rendimiento de aplicaciones
-Esta sección está pensada [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] como una referencia para los desarrolladores de aplicaciones que buscan maneras de mejorar el rendimiento de sus aplicaciones. Si es un desarrollador que es nuevo en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Microsoft .NET Framework y , primero debe familiarizarse con ambas plataformas. Esta sección asume el conocimiento práctico de ambos, y está escrita para los programadores que ya saben lo suficiente para poner sus aplicaciones en funcionamiento.  
+Esta sección está pensada como una referencia para [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] los desarrolladores de aplicaciones que buscan maneras de mejorar el rendimiento de sus aplicaciones. Si es un desarrollador que es nuevo en el marco de trabajo de Microsoft .NET y [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , primero debe familiarizarse con ambas plataformas. En esta sección se da por supuesto que tiene conocimientos prácticos de ambos y está escrito para los programadores que ya saben lo suficiente para poner en marcha sus aplicaciones.  
   
 > [!NOTE]
-> Los datos de rendimiento proporcionados [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] en esta sección se basan en aplicaciones que se ejecutan en un PC de 2,8 GHz con 512 RAM y una tarjeta gráfica ATI Radeon 9700.  
+> Los datos de rendimiento que se proporcionan en esta sección se basan en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicaciones que se ejecutan en un equipo 2,8 GHz con 512 de RAM y una tarjeta gráfica ATI Radeon 9700.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Planear para mejorar el rendimiento de aplicaciones](planning-for-application-performance.md)  
@@ -43,7 +44,7 @@ Esta sección está pensada [!INCLUDE[TLA#tla_winclient](../../../../includes/tl
   
  [Tiempo de inicio de una aplicación](application-startup-time.md)  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Media.RenderOptions>
 - <xref:System.Windows.Media.RenderCapability>
@@ -59,7 +60,7 @@ Esta sección está pensada [!INCLUDE[TLA#tla_winclient](../../../../includes/tl
 - [Documentos en WPF](documents-in-wpf.md)
 - [Dibujar texto con formato](drawing-formatted-text.md)
 - [Tipografía en WPF](typography-in-wpf.md)
-- [Descripción general del enlace de datos](../../../desktop-wpf/data/data-binding-overview.md)
+- [Información general sobre el enlace de datos](../../../desktop-wpf/data/data-binding-overview.md)
 - [Información general sobre navegación](../app-development/navigation-overview.md)
 - [Sugerencias y trucos para animaciones](../graphics-multimedia/animation-tips-and-tricks.md)
 - [Tutorial: Almacenar en caché datos de la aplicación en una aplicación de WPF](walkthrough-caching-application-data-in-a-wpf-application.md)

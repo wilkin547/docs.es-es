@@ -1,16 +1,17 @@
 ---
 title: Almacenar en caché en los clientes de automatización de la interfaz de usuario
+description: Obtenga detalles sobre el almacenamiento en caché en los clientes de UI Automation en .NET. El almacenamiento en caché se define como la captura previa de datos.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation caching in clients
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
-ms.openlocfilehash: 186ed77594aadab9e3f49ef30e559e159aee1b60
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4fbb4acabebea54015b11cefdf8a37c7e2dc93f5
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180288"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168255"
 ---
 # <a name="caching-in-ui-automation-clients"></a>Almacenar en caché en los clientes de automatización de la interfaz de usuario
 > [!NOTE]
@@ -20,7 +21,7 @@ ms.locfileid: "79180288"
   
  En [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], almacenamiento en caché implica la captura previa de datos. Así, es posible acceder a los datos sin necesidad de más comunicación entre procesos. Normalmente, el almacenamiento en caché se utiliza en aplicaciones cliente de Automatización de la interfaz de usuario para recuperar los patrones de control y las propiedades de forma masiva. La información se recupera después desde la caché según sea necesario. La aplicación actualiza periódicamente la caché, normalmente en respuesta a eventos que indican que algo en [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] ha cambiado.  
   
- Las ventajas del almacenamiento en caché son más notables con controles de Windows Presentation Foundation (WPF) y controles personalizados que tienen proveedores de automatización de la interfaz de usuario del lado del servidor. Hay menos ventaja al acceder a proveedores del lado cliente, como los proveedores predeterminados para controles Win32.  
+ Las ventajas del almacenamiento en caché son más evidentes con los controles de Windows Presentation Foundation (WPF) y los controles personalizados que tienen proveedores de automatización de la interfaz de usuario del lado servidor. El acceso a los proveedores del lado cliente, como los proveedores predeterminados para los controles Win32, supone menos ventajas.  
   
  El almacenamiento en caché se produce cuando la aplicación activa un elemento <xref:System.Windows.Automation.CacheRequest> y después utiliza cualquier método o propiedad que devuelva un elemento <xref:System.Windows.Automation.AutomationElement>; por ejemplo, <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>, <xref:System.Windows.Automation.AutomationElement.FindAll%2A>. Los métodos de la clase <xref:System.Windows.Automation.TreeWalker> son una excepción; el almacenamiento en caché solo se realiza si se especifica un elemento <xref:System.Windows.Automation.CacheRequest> como un parámetro (por ejemplo, <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>).  
   
@@ -56,7 +57,7 @@ ms.locfileid: "79180288"
 ## <a name="activating-the-cacherequest"></a>Activación de CacheRequest  
  El almacenamiento en caché solo se realiza cuando se recuperan los objetos <xref:System.Windows.Automation.AutomationElement> mientras un elemento <xref:System.Windows.Automation.CacheRequest> está activo para el subproceso actual. Hay dos formas de activar un elemento <xref:System.Windows.Automation.CacheRequest>.  
   
- La manera habitual es llamar a <xref:System.Windows.Automation.CacheRequest.Activate%2A>. Este método devuelve un objeto que implementa <xref:System.IDisposable>. La solicitud permanecerá activa mientras exista el objeto <xref:System.IDisposable> . La forma más fácil de controlar la duración del objeto `using` es incluir `Using` la llamada dentro de un bloque (C) o (Visual Basic). Esto garantiza que la solicitud se extraerá de la pila, aunque se produzca una excepción.  
+ La manera habitual es llamar a <xref:System.Windows.Automation.CacheRequest.Activate%2A>. Este método devuelve un objeto que implementa <xref:System.IDisposable>. La solicitud permanecerá activa mientras exista el objeto <xref:System.IDisposable> . La forma más fácil de controlar la duración del objeto es incluir la llamada dentro de un `using` bloque (C#) o `Using` (Visual Basic). Esto garantiza que la solicitud se extraerá de la pila, aunque se produzca una excepción.  
   
  Otra forma, que resulta útil cuando se quieren anidar solicitudes de almacenamiento en caché, es llamar a <xref:System.Windows.Automation.CacheRequest.Push%2A>. Esto coloca la solicitud en una pila y la activa. La solicitud permanece activa hasta que se quita de la pila mediante <xref:System.Windows.Automation.CacheRequest.Pop%2A>. La solicitud pasa a estar temporalmente inactiva si se inserta otra solicitud en la pila; solo la solicitud superior de la pila está activa.  
   
@@ -101,8 +102,8 @@ ms.locfileid: "79180288"
   
  La actualización de la caché no modifica las propiedades de las referencias <xref:System.Windows.Automation.AutomationElement> existentes.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [UI Automation Events for Clients](ui-automation-events-for-clients.md)
+- [Eventos de UI Automation para clientes](ui-automation-events-for-clients.md)
 - [Utilizar el almacenamiento en caché en la UI Automation](use-caching-in-ui-automation.md)
 - [Ejemplo de FetchTimer](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))

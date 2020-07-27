@@ -1,5 +1,6 @@
 ---
 title: Habilitar la navegación en un proveedor de fragmentos de UI Automation
+description: Lea un ejemplo en el que se muestra cómo habilitar la navegación en un proveedor de automatización de la interfaz de usuario para un elemento que está dentro de un fragmento.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, enabling navigation in provider
 - navigation, enabling in UI Automation provider
 ms.assetid: 3cb6092a-58c9-4ca0-84a5-0e54d5d00a0d
-ms.openlocfilehash: 264a24646f7a3c3b5b20e94fa0ed98a1341f8273
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: bf9e43e9d70b9191fba93e5efa4eae544196c735
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435763"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168482"
 ---
 # <a name="enable-navigation-in-a-ui-automation-fragment-provider"></a>Habilitar la navegación en un proveedor de fragmentos de UI Automation
 > [!NOTE]
@@ -29,5 +30,5 @@ ms.locfileid: "74435763"
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre proveedores de la Automatización de la interfaz de usuario](ui-automation-providers-overview.md)
-- [Implementación del proveedor de automatización de la interfaz de usuario en el servidor](server-side-ui-automation-provider-implementation.md)
+- [Información general sobre proveedores de UI Automation](ui-automation-providers-overview.md)
+- [Implementación del proveedor de UI Automation en el servidor](server-side-ui-automation-provider-implementation.md)

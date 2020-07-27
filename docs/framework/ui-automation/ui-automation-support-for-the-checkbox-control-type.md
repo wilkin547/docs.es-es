@@ -1,17 +1,18 @@
 ---
 title: Compatibilidad de UI Automation para el tipo de control CheckBox
+description: Obtenga información sobre la compatibilidad de UI Automation para el tipo de control CheckBox. Obtenga información sobre la estructura de árbol necesaria, las propiedades y los patrones de control.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CheckBox control type
 - control types, CheckBox
 - UI Automation, CheckBox control type
 ms.assetid: 9c2a0e70-3a39-4ba9-96ea-a7fe531fae9f
-ms.openlocfilehash: 6b196e0cbdbff760d64b70361dbf9031a39e89c8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 787642f34ab50a08bb2f525e6ff11443bb356d27
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179820"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167959"
 ---
 # <a name="ui-automation-support-for-the-checkbox-control-type"></a>Compatibilidad de UI Automation para el tipo de control CheckBox
 > [!NOTE]
@@ -21,7 +22,7 @@ ms.locfileid: "79179820"
   
  Una casilla es un objeto que se usa para indicar un estado con el que los usuarios pueden interactuar para recorrer cíclicamente dicho estado. Las casillas le presentan al usuario una opción binaria (Sí/No), (Activado/Desactivado) o terciaria (Activado, Desactivado, Indeterminado).  
   
- En las secciones siguientes se definen la estructura del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , las propiedades, los patrones de control y los eventos necesarios para el tipo de control CheckBox. Los [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] requisitos se aplican a [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]todos los controles de casilla de verificación, ya sea , Win32 o Windows Forms.  
+ En las secciones siguientes se definen la estructura del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , las propiedades, los patrones de control y los eventos necesarios para el tipo de control CheckBox. Los [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] requisitos de se aplican a todos los controles de casilla, ya sean [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] , Win32 o Windows Forms.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>
 ## <a name="required-ui-automation-tree-structure"></a>Estructura de árbol de Automatización de la interfaz de usuario necesaria  
@@ -56,7 +57,7 @@ ms.locfileid: "79179820"
   
 |Patrón de control|Soporte técnico|Notas|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IToggleProvider>|Obligatorio|Permite que la casilla se recorra cíclicamente por sus estados internos mediante programación.|  
+|<xref:System.Windows.Automation.Provider.IToggleProvider>|Requerido|Permite que la casilla se recorra cíclicamente por sus estados internos mediante programación.|  
   
 <a name="Required_UI_Automation_Events"></a>
 ## <a name="required-ui-automation-events"></a>Eventos de Automatización de la interfaz de usuario necesarios  
@@ -64,19 +65,19 @@ ms.locfileid: "79179820"
   
 |o[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Soporte técnico|Notas|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Obligatorio|None|  
-|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> .|Obligatorio|None|  
-|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Obligatorio|None|  
-|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Obligatorio|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Requerido|None|  
+|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> .|Requerido|None|  
+|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Requerido|None|  
+|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Requerido|None|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Obligatorio|None|  
-|Evento cambiado por propiedad<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> .|Obligatorio|None|  
+|Evento cambiado por propiedad<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> .|Requerido|None|  
   
 <a name="Default_Action"></a>
 ## <a name="default-action"></a>Acción predeterminada  
  La acción predeterminada de la casilla es hacer que un botón de radio reciba el foco y alterne su estado actual. Como se mencionó con anterioridad, las casillas le presentan al usuario una decisión binaria (Sí/No), (Activado/Desactivado) o terciaria (Activado, Desactivado, Indeterminado). Si la casilla es binaria, la acción predeterminada hace que el estado "activado" se convierta en "desactivado" o que el estado "desactivado" pase a "activado". En una casilla de estado terciaria la acción predeterminada recorre cíclicamente los estados de la casilla en el mismo orden que si el usuario hubiera enviado sucesivos clics del mouse al control.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Automation.ControlType.CheckBox>
-- [Información general sobre tipos de control de Automatización de la interfaz de usuario](ui-automation-control-types-overview.md)
+- [Información general sobre tipos de control de UI Automation](ui-automation-control-types-overview.md)
 - [Información general sobre UI Automation](ui-automation-overview.md)

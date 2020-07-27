@@ -1,22 +1,23 @@
 ---
 title: Compatibilidad de UI Automation con controles estándar
+description: Obtenga información sobre la compatibilidad de la automatización de la interfaz de usuario para los controles estándar en las aplicaciones desarrolladas para Windows Presentation Foundation (WPF), Win32 y Windows Forms.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-ms.openlocfilehash: 36028d589e98177f6a0e83092edd656860b1a8d4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17916a6978008439e91caae00d8b6f26045f9018
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179850"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166126"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>Compatibilidad de UI Automation con controles estándar
 > [!NOTE]
 > Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).  
   
- Este tema contiene [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] información sobre la compatibilidad [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]con controles estándar en aplicaciones desarrolladas para los marcos de trabajo , Win32 y Windows Forms.  
+ Este tema contiene información sobre [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] la compatibilidad con los controles estándar de las aplicaciones desarrolladas para los [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] marcos de trabajo, Win32 y Windows Forms.  
   
 <a name="Windows_Presentation_Foundation_Controls"></a>
 ## <a name="windows-presentation-foundation-controls"></a>Controles de Windows Presentation Foundation  
@@ -24,16 +25,16 @@ ms.locfileid: "79179850"
   
 <a name="Win32_Controls"></a>
 ## <a name="win32-controls"></a>Controles de Win32  
- La mayoría de los [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] controles Win32 se exponen a través de proveedores del lado cliente en UIAutomationClientsideProviders.dll. Este ensamblado se registra automáticamente para su uso con aplicaciones de cliente de automatización de la interfaz de usuario.  
+ La mayoría de los controles Win32 se exponen a [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] a través de los proveedores del lado cliente en UIAutomationClientsideProviders.dll. Este ensamblado se registra automáticamente para su uso con aplicaciones de cliente de automatización de la interfaz de usuario.  
   
- La compatibilidad completa solo se proporciona para los controles de la versión 6 de *ComCtrl32.dll*.  
+ Solo se proporciona compatibilidad completa con los controles de la versión 6 de *ComCtrl32.dll*.  
   
  Se admiten los siguientes controles.  
   
 |Nombre de la clase|Tipo de control|  
 |----------------|------------------|  
-|Botón|Botón|  
-|Botón|RadioButton|  
+|Button|Button|  
+|Button|RadioButton|  
 |Botón|Grupo|  
 |Botón|CheckBox|  
 |Botón|Hyperlink|  
@@ -46,7 +47,7 @@ ms.locfileid: "79179850"
 |SysLink|Hyperlink|  
 |estática|Texto|  
 |estática|Imagen|  
-|SysIPAddress32|Personalizado|  
+|SysIPAddress32|Personalizada|  
 |SysHeader32|Header/HeaderItem|  
 |SysListView32|DataGrid|  
 |SysListView32|List|  
@@ -55,7 +56,7 @@ ms.locfileid: "79179850"
 |#32768|Menú|  
 |#32768|MenuItem|  
 |msctls_progress32|ProgressBar|  
-|RichEdit|Documentar. Vea la nota.|  
+|RichEdit|Documentar. Ver nota.|  
 |RichEdit20A|Documento|  
 |RichEdit20W|Documento|  
 |RichEdit50W|Documento|  
@@ -77,7 +78,7 @@ ms.locfileid: "79179850"
 |SysTreeView32|Árbol|  
 |SysTreeView32|TreeItem|  
   
- **Nota** El control RichEdit solo se admite para las versiones incluidas con Windows Vista (en RichEd20.dll versión 3.1 y posteriores, y MsftEdit.dll versión 4.1 y posteriores).  
+ **Nota:** El control RichEdit solo se admite para las versiones incluidas con Windows Vista (en RichEd20.dll versión 3,1 y posteriores, y MsftEdit.dll versión 4,1 y posteriores).  
   
  No se admiten los siguientes controles.  
   
@@ -85,18 +86,18 @@ ms.locfileid: "79179850"
 |----------------|------------------|  
 |SysAnimate32|Imagen|  
 |SysPager|Spinner|  
-|SysDateTimePick32|Personalizado|  
+|SysDateTimePick32|Personalizada|  
 |SysMonthCal32|Calendario|  
 |MS_WINNOTE|Información sobre herramientas|  
 |VBBubble|Información sobre herramientas|  
 |ScrollBar (cuando se usa como control independiente)|Control deslizante|  
-|SuperGrid|Personalizado|  
+|SuperGrid|Personalizada|  
   
 <a name="Windows_Forms_Controls"></a>
 ## <a name="windows-forms-controls"></a>Controles de Windows Forms  
- Los controles de [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] formularios Windows Forms se exponen a través de proveedores del lado cliente en UIAutomationClientsideProviders.dll. Este ensamblado se registra automáticamente para su uso con aplicaciones de cliente de automatización de la interfaz de usuario.  
+ Windows Forms controles se exponen a [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] a través de los proveedores del lado cliente en UIAutomationClientsideProviders.dll. Este ensamblado se registra automáticamente para su uso con aplicaciones de cliente de automatización de la interfaz de usuario.  
   
- Normalmente, los controles de formularios Windows Forms que son [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]contenedores administrados para controles comunes de Win32 son compatibles con . Se admiten los siguientes controles.  
+ Normalmente, se admiten Windows Forms controles que son contenedores administrados para controles comunes Win32 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . Se admiten los siguientes controles.  
   
 |Class Name (Nombre de clase)|  
 |----------------|  
@@ -134,9 +135,9 @@ ms.locfileid: "79179850"
 |Trackbar|  
 |TreeView|  
 |VscrollBar|  
-|ExploradorWeb|  
+|WebBrowser|  
   
- Los siguientes controles [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] se exponen solo a través de su compatibilidad con Microsoft Active Accessibility. Es posible que algunas funciones no estén disponibles.  
+ Los siguientes controles se exponen a [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] solo a través de la compatibilidad de Microsoft Active Accessibility. Es posible que algunas funciones no estén disponibles.  
   
 |Nombre del control|  
 |------------------|  
@@ -167,6 +168,6 @@ ms.locfileid: "79179850"
 |RaftingContainer|  
 |StatusStrip|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Tipos de control de Automatización de la interfaz de usuario](ui-automation-control-types.md)
+- [Tipos de control de UI Automation](ui-automation-control-types.md)

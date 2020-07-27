@@ -1,5 +1,6 @@
 ---
 title: Buscar un elemento de UI Automation para un elemento de lista
+description: Vea un ejemplo en el que se muestra cómo buscar un elemento de automatización de la interfaz de usuario para un elemento de lista cuando se conoce el índice del elemento.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - elements, finding for list items
 - UI Automation, finding elements for List items
 ms.assetid: c326ad2b-2144-4f64-ae4c-d850c74f95c5
-ms.openlocfilehash: 2474edf95bf598ba9284b5f6ac36a9e0af1317a1
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: ec6464bc0ec504fd34ed113c9bed1a54a7d4eaec
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741755"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168409"
 ---
 # <a name="find-a-ui-automation-element-for-a-list-item"></a>Buscar un elemento de UI Automation para un elemento de lista
 > [!NOTE]
@@ -23,7 +24,7 @@ ms.locfileid: "75741755"
  En este tema se muestra cómo recuperar un <xref:System.Windows.Automation.AutomationElement> para un elemento de una lista cuando se conoce el índice del elemento.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestran dos maneras de recuperar un elemento especificado de una lista, uno que usa <xref:System.Windows.Automation.TreeWalker> y el otro mediante <xref:System.Windows.Automation.AutomationElement.FindAll%2A>.  
+ En el ejemplo siguiente se muestran dos maneras de recuperar un elemento especificado de una lista, una con <xref:System.Windows.Automation.TreeWalker> y la otra mediante <xref:System.Windows.Automation.AutomationElement.FindAll%2A> .  
   
  La primera técnica tiende a ser más rápida para los controles Win32, pero la segunda es más rápida para los controles Windows Presentation Foundation (WPF).  
   
@@ -32,4 +33,4 @@ ms.locfileid: "75741755"
   
 ## <a name="see-also"></a>Vea también
 
-- [Obtención de elementos de Automatización de la interfaz de usuario](obtaining-ui-automation-elements.md)
+- [Obtener elementos de UI Automation](obtaining-ui-automation-elements.md)

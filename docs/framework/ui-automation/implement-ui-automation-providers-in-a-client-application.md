@@ -1,5 +1,6 @@
 ---
 title: Implementar proveedores de UI Automation en una aplicación cliente
+description: Vea un ejemplo de cómo implementar un proveedor de automatización de la interfaz de usuario del lado cliente en una aplicación. Tenga en cuenta que se trata de un escenario poco frecuente.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - client-side UI Automation provider, implementation within applications
 - UI Automation, implementing client-side provider within application
 ms.assetid: f325f0d8-1715-41ea-85ca-45b82ffea8bc
-ms.openlocfilehash: 09b33b78ef8f0b62ef4f1e24c56faae783f1e8dc
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c604b68021886abdf06360bfb8afefe3640c12fe
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435472"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164125"
 ---
 # <a name="implement-ui-automation-providers-in-a-client-application"></a>Implementar proveedores de UI Automation en una aplicación cliente
 > [!NOTE]
@@ -31,7 +32,7 @@ ms.locfileid: "74435472"
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre proveedores de la Automatización de la interfaz de usuario](ui-automation-providers-overview.md)
-- [Registro de un ensamblado de proveedor del lado cliente](register-a-client-side-provider-assembly.md)
-- [Creación de un proveedor de Automatización de la interfaz de usuario en el cliente](create-a-client-side-ui-automation-provider.md)
-- [Implementación del proveedor de Automatización de la interfaz de usuario en el cliente](client-side-ui-automation-provider-implementation.md)
+- [Información general sobre proveedores de UI Automation](ui-automation-providers-overview.md)
+- [Registrar un ensamblado de proveedor de cliente](register-a-client-side-provider-assembly.md)
+- [Crear un proveedor de UI Automation en el cliente](create-a-client-side-ui-automation-provider.md)
+- [Implementación del proveedor de UI Automation en el cliente](client-side-ui-automation-provider-implementation.md)

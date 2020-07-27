@@ -1,20 +1,21 @@
 ---
 title: Agrupar controles por categoría
+description: Revise Windows Presentation Foundation controles agrupados en categorías, lo que puede ayudarle a seleccionar el control adecuado mediante la comparación de controles similares.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: 5958793015d409678b67cdc7eedcb4289f5e885c
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 226e037dc26f817b96a5aa869565f08ee6ff6574
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636216"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166285"
 ---
 # <a name="controls-by-category"></a>Agrupar controles por categoría
 Los controles Windows Presentation Foundation (WPF) se pueden agrupar lógicamente en varias categorías. Estas categorías se pueden usar para seleccionar el control adecuado para su escenario al ayudarle a ver qué controles tienen patrones de uso o funcionalidad similares.  
   
-## <a name="layout"></a>Presentación  
+## <a name="layout"></a>Diseño  
  Los controles de diseño se utilizan para administrar el tamaño, las dimensiones, la posición y la disposición de los elementos secundarios.  
   
 - <xref:System.Windows.Controls.Border>  
@@ -56,7 +57,7 @@ Los controles Windows Presentation Foundation (WPF) se pueden agrupar lógicamen
 - <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="buttons"></a>Botones  
- Los botones son uno de los controles de interfaz de usuario más básicos. Las aplicaciones suelen realizar alguna tarea en el evento <xref:System.Windows.Controls.Primitives.ButtonBase.Click> cuando un usuario hace clic en ellos.  
+ Los botones son uno de los controles de interfaz de usuario más básicos. Las aplicaciones suelen realizar alguna tarea en el <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento cuando un usuario hace clic en ellos.  
   
 - <xref:System.Windows.Controls.Button>  
   
@@ -100,7 +101,7 @@ Los controles Windows Presentation Foundation (WPF) se pueden agrupar lógicamen
   
 - <xref:System.Windows.Controls.Slider>  
   
-## <a name="navigation"></a>Navegación de  
+## <a name="navigation"></a>Navegación  
  Los controles de navegación mejoran o amplían la experiencia de navegación en la aplicación, creando marcos de destino o apariencia de una aplicación con fichas.  
   
 - <xref:System.Windows.Controls.Frame>  
@@ -122,7 +123,7 @@ Los controles Windows Presentation Foundation (WPF) se pueden agrupar lógicamen
   
 - <xref:Microsoft.Win32.SaveFileDialog>  
   
-## <a name="user-information"></a>Información de usuario  
+## <a name="user-information"></a>Información del usuario  
  Los controles de información del usuario proporcionan comentarios contextuales o aclaraciones sobre la interfaz de usuario de una aplicación. Normalmente, el usuario no puede interactuar con estos controles.  
   
 - <xref:System.Windows.Controls.AccessText>  
@@ -152,7 +153,7 @@ Los controles Windows Presentation Foundation (WPF) se pueden agrupar lógicamen
   
 - <xref:System.Windows.Controls.StickyNoteControl>  
   
-## <a name="input"></a>Input  
+## <a name="input"></a>Entrada  
  Los controles de entrada permiten al usuario escribir texto y otros contenidos.  
   
 - <xref:System.Windows.Controls.TextBox>  

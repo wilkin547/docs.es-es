@@ -1,23 +1,24 @@
 ---
 title: Información general sobre la seguridad de UI Automation
+description: Lea información general sobre el modelo de seguridad para la automatización de la interfaz de usuario de Microsoft. Comprender el control de cuentas de usuario, las tareas que requieren más privilegios y archivos de manifiesto.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, security model
 - security model, UI Automation
 ms.assetid: 1d853695-973c-48ae-b382-4132ae702805
-ms.openlocfilehash: 70d24c3dcc531abcec6d4dce75b5f0b31757e0c0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d483f282db8ce8e5653d6d83361fa44df05f63f5
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448769"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163140"
 ---
 # <a name="ui-automation-security-overview"></a>Información general sobre la seguridad de UI Automation
 
 > [!NOTE]
 > Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).
 
-En esta información general se describe el modelo de seguridad para [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] en Windows Vista.
+En esta información general se describe el modelo de seguridad de [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] en Windows Vista.
 
 <a name="User_Account_Control"></a>
 
@@ -33,7 +34,7 @@ En Windows Vista, la mayoría de las aplicaciones se proporcionan con un token e
 
 Cuando un usuario intenta realizar una tarea que requiere privilegios administrativos, Windows Vista muestra un cuadro de diálogo que pide al usuario que continúe. Este cuadro de diálogo está protegido contra la comunicación entre procesos, por lo que el software malintencionado no puede simular una entrada de usuario. De forma similar, la pantalla de inicio de sesión de escritorio normalmente no es accesible para otros procesos.
 
-Los clientes de UI Automation debe comunicarse con otros procesos, algunos de los cuales podrían ejecutarse con un nivel de privilegios superior. Los clientes también podrían necesitar acceder a los cuadros de diálogo del sistema que normalmente no son visibles para otros procesos. Por lo tanto, el sistema debe confiar en los clientes de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] y se deben ejecutar con privilegios especiales.
+Los clientes de Automatización de la interfaz de usuario deben comunicarse con otros procesos, algunos de los cuales podrían ejecutarse con un nivel de privilegios superior. Los clientes también podrían necesitar acceder a los cuadros de diálogo del sistema que normalmente no son visibles para otros procesos. Por lo tanto, el sistema debe confiar en los clientes de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] y se deben ejecutar con privilegios especiales.
 
 Para que las aplicaciones sean de confianza y poder comunicarse con aplicaciones que se ejecutan con un nivel de privilegios superior, deben estar firmadas.
 
@@ -41,7 +42,7 @@ Para que las aplicaciones sean de confianza y poder comunicarse con aplicaciones
 
 ## <a name="manifest-files"></a>Archivo de manifiesto
 
-Para obtener acceso a la interfaz de usuario del sistema protegida, las aplicaciones deben compilarse con un archivo de manifiesto que incluya el `uiAccess` atributo en la etiqueta de `requestedExecutionLevel`, como se indica a continuación:
+Para obtener acceso a la interfaz de usuario del sistema protegida, las aplicaciones deben compilarse con un archivo de manifiesto que incluya el `uiAccess` atributo en la `requestedExecutionLevel` etiqueta, como se indica a continuación:
 
 ```xml
 <trustInfo xmlns="urn:schemas-microsoft-com:asm.v3">
@@ -57,4 +58,4 @@ Para obtener acceso a la interfaz de usuario del sistema protegida, las aplicaci
 
 El valor del atributo `level` en este código es solo un ejemplo.
 
-`uiAccess` es "false" de forma predeterminada; es decir, si se omite el atributo o si no hay ningún manifiesto para el ensamblado, la aplicación no podrá obtener acceso a la interfaz de usuario protegida.
+`uiAccess`es "false" de forma predeterminada; es decir, si se omite el atributo o si no hay ningún manifiesto para el ensamblado, la aplicación no podrá obtener acceso a la interfaz de usuario protegida.

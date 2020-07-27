@@ -1,5 +1,6 @@
 ---
 title: Registrar un ensamblado de proveedor de cliente
+description: Revise un ejemplo en el que se muestra cómo registrar un archivo DLL que contiene los proveedores de automatización de la interfaz de usuario del lado cliente.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - UI Automation, registering provider assemblies
 - provider assemblies, registering
 ms.assetid: a03af4d9-2771-43cc-b07b-d468dca23190
-ms.openlocfilehash: 72e1349eee90bbe5078fec037b5f29c51c84b8ec
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 034a109bb69c08883c0943b7b6ef69a397a8e7e1
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438452"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168131"
 ---
 # <a name="register-a-client-side-provider-assembly"></a>Registrar un ensamblado de proveedor de cliente
 > [!NOTE]
@@ -31,4 +32,4 @@ ms.locfileid: "74438452"
   
 ## <a name="see-also"></a>Vea también
 
-- [Creación de un proveedor de Automatización de la interfaz de usuario en el cliente](create-a-client-side-ui-automation-provider.md)
+- [Crear un proveedor de UI Automation en el cliente](create-a-client-side-ui-automation-provider.md)

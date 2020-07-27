@@ -1,16 +1,17 @@
 ---
 title: Asignación de patrones de controles para clientes de UI Automation
+description: Vea una tabla de asignación de patrones de control para clientes de automatización de la interfaz de usuario. Es posible que las acciones para determinados tipos de control se admitan, se admitan condicionalmente o no se admitan.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, for UI Automation clients
 - UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
-ms.openlocfilehash: 689e649343c93d0670c6870098a09f61097f4fb4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7673ce4ac88cc36a7c35e2e946a31d23b2ce6eca
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180228"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164180"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>Asignación de patrones de controles para clientes de UI Automation
 > [!NOTE]
@@ -32,11 +33,11 @@ ms.locfileid: "79180228"
 <a name="control_mapping_clients"></a>
 ## <a name="ui-automation-control-patterns-for-clients"></a>Patrones de controles de UI Automation para clientes  
   
-|Tipo de control|Compatible|Compatibilidad condicional|No compatible|  
+|Tipo de control|Compatible.|Compatibilidad condicional|No compatible|  
 |------------------|---------------|-------------------------|-------------------|  
 |Botón|None|Invoke, Toggle, Expand Collapse|None|  
 |Calendario|Grid, Table|Selection, Scroll|Value|  
-|Casilla|Alternar|None|None|  
+|Casilla|Alternancia|None|None|  
 |Cuadro combinado|Expandir o contraer|Selection, Value|Scroll|  
 |Cuadrícula de datos|Cuadrícula|Scroll, Selection, Table|None|  
 |Data Item|Selection Item|Expand Collapse, Grid Item, Scroll Item, Table, Toggle, Value|None|  
@@ -54,14 +55,14 @@ ms.locfileid: "79180228"
 |Elemento de menú|None|Expand Collapse, Invoke, Selection Item, Toggle|None|  
 |Panel|None|Dock Scroll, Transform|Periodo|  
 |ProgressBar|None|Range Value, Value|None|  
-|Radio Button|Selection Item|None|Alternar|  
+|Radio Button|Selection Item|None|Alternancia|  
 |Scroll Bar|None|RangeValue|Scroll|  
 |Separador|None|None|None|  
 |Control deslizante|None|Range Value, Selection, Value|None|  
 |Spinner|None|Range Value, Selection, Value|None|  
 |Botón de expansión|Invoke, Expand Collapse|None|None|  
 |Barra de estado|None|Cuadrícula|None|  
-|Pestaña|Número de selección|Scroll|None|  
+|Pestaña|Selección|Scroll|None|  
 |Tab Item|Selection Item|None|Invocar|  
 |Tabla|Grid, Grid Item, Table, Table Item|None|None|  
 |Texto|None|Grid Item, Table Item, Text|Value|  
@@ -76,6 +77,6 @@ ms.locfileid: "79180228"
 > [!NOTE]
 > Si un tipo de control no muestra patrones de control compatibles enumerados pero tiene uno o más patrones de control que admitidos condicionalmente, se admitirá en todo momento uno de esos patrones de control condicionales.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Información general sobre UI Automation](ui-automation-overview.md)
