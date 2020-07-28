@@ -1,17 +1,18 @@
 ---
 title: Compatibilidad de la UI Automation para el tipo de control HeaderItem
+description: Obtenga información sobre la compatibilidad de UI Automation para el tipo de control HeaderItem. Obtenga información sobre la estructura de árbol necesaria, las propiedades, los patrones de control y los eventos.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, Header Item control type
 - Header Item control type
 - control types, Header Item
 ms.assetid: 09ce1310-ee31-493c-a71e-010bafc42fcf
-ms.openlocfilehash: 57faebde753f6c18d8b92b0e11f8ff17837393db
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9f9fca9ff8a42b94f0d66ae69a25fecccf69931b
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179778"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167885"
 ---
 # <a name="ui-automation-support-for-the-headeritem-control-type"></a>Compatibilidad de la UI Automation para el tipo de control HeaderItem
 > [!NOTE]
@@ -21,7 +22,7 @@ ms.locfileid: "79179778"
   
  El tipo de control HeaderItem proporciona una etiqueta visual para una fila o una columna de información.  
   
- Los controles de elemento de encabezado son ejemplos de controles que implementan el tipo de control HeaderItem. Los [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] requisitos de las secciones siguientes [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]se aplican a todos los controles de encabezado, ya sea , Win32 o Windows Forms.  
+ Los controles de elemento de encabezado son ejemplos de controles que implementan el tipo de control HeaderItem. Los [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] requisitos de las secciones siguientes se aplican a todos los controles de encabezado, ya sean [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] , Win32 o Windows Forms.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>
 ## <a name="required-ui-automation-tree-structure"></a>Estructura de árbol de Automatización de la interfaz de usuario necesaria  
@@ -65,14 +66,14 @@ ms.locfileid: "79179778"
 |o[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Soporte técnico|Notas|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|Depende|None|  
-|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> .|Obligatorio|None|  
-|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Obligatorio|None|  
-|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Obligatorio|None|  
+|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> .|Requerido|None|  
+|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Requerido|None|  
+|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Requerido|None|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Obligatorio|None|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Obligatorio|None|  
   
 ## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Automation.ControlType.HeaderItem>
-- [Información general sobre tipos de control de Automatización de la interfaz de usuario](ui-automation-control-types-overview.md)
+- [Información general sobre tipos de control de UI Automation](ui-automation-control-types-overview.md)
 - [Información general sobre UI Automation](ui-automation-overview.md)

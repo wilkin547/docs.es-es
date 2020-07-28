@@ -1,17 +1,18 @@
 ---
 title: Compatibilidad de automatización de la IU para el tipo de control Spinner
+description: Obtenga información sobre la compatibilidad de UI Automation para el tipo de control Spinner. Obtenga información sobre la estructura de árbol necesaria, las propiedades, los patrones de control y los eventos.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, Spinner control type
 - Spinner control type
 - control types, Spinner
 ms.assetid: 3a29d185-65d8-42e3-bcc3-7f43e96f40c5
-ms.openlocfilehash: d3cf972afdaaffaf1c0943c9cc11348bee23345d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7d2955758a8d1da40d7ed18da1103b5d99849d03
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179583"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166972"
 ---
 # <a name="ui-automation-support-for-the-spinner-control-type"></a>Compatibilidad de automatización de la IU para el tipo de control Spinner
 > [!NOTE]
@@ -21,7 +22,7 @@ ms.locfileid: "79179583"
   
  Los controles Spinner se usan para seleccionar desde un dominio de elementos o un intervalo de números.  
   
- En las secciones siguientes se define la estructura de árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] necesaria, las propiedades, los patrones de control y los eventos para el tipo de control Spinner. Los [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] requisitos se aplican [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]a todos los controles spinner, ya sea , Win32 o Windows Forms.  
+ En las secciones siguientes se define la estructura de árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] necesaria, las propiedades, los patrones de control y los eventos para el tipo de control Spinner. Los [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] requisitos de se aplican a todos los controles de número, ya sean [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] , Win32 o Windows Forms.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>
 ## <a name="required-ui-automation-tree-structure"></a>Estructura de árbol de Automatización de la interfaz de usuario necesaria  
@@ -31,19 +32,19 @@ ms.locfileid: "79179583"
   
 |Vista de control|Vista de contenido|  
 |------------------|------------------|  
-|Spinner<br /><br /> - Editar (0 o 1)<br />- Botón (2)|Spinner|  
+|Spinner<br /><br /> -Edit (0 o 1)<br />-Botón (2)|Spinner|  
   
  **Selection (patrón de control)**  
   
 |Vista de control|Vista de contenido|  
 |------------------|------------------|  
-|Spinner<br /><br /> - Editar (0 o 1)<br />- Botón (2)<br />- Elemento de lista (0 o más)|Spinner<br /><br /> - ListItem (0 o más)|  
+|Spinner<br /><br /> -Edit (0 o 1)<br />-Botón (2)<br />-Elemento de lista (0 o más)|Spinner<br /><br /> -ListItem (0 o más)|  
   
  Para garantizar que los dos botones del subárbol de la vista de control se pueden distinguir por herramientas de pruebas automatizadas, asigne `SmallIncrement` o `SmallDecrement` `AutomationId` , según corresponda. Para algunas implementaciones, el control Edit asociado puede ser del mismo nivel que el control Spinner.  
   
 <a name="Required_UI_Automation_Properties"></a>
 ## <a name="required-ui-automation-properties"></a>Propiedades de Automatización de la interfaz de usuario necesarias  
- En la tabla siguiente se muestran las propiedades [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] cuyo valor o definición es especialmente relevante para los controles de número. Para obtener [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] más información sobre las propiedades, vea Propiedades de automatización de la interfaz de usuario [para clientes](ui-automation-properties-for-clients.md).  
+ En la tabla siguiente se muestran las propiedades [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] cuyo valor o definición es especialmente relevante para los controles de número. Para obtener más información sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] las propiedades, vea [UI Automation Properties for clients](ui-automation-properties-for-clients.md).  
   
 |Propiedad[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Value|Notas|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
@@ -76,9 +77,9 @@ ms.locfileid: "79179583"
 |o[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Soporte técnico|Notas|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Depende|None|  
-|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> .|Obligatorio|None|  
-|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Obligatorio|None|  
-|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Obligatorio|None|  
+|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> .|Requerido|None|  
+|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Requerido|None|  
+|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Requerido|None|  
 |Evento cambiado por propiedad<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> .|Depende|None|  
 |Evento cambiado por propiedad<xref:System.Windows.Automation.RangeValuePatternIdentifiers.ValueProperty> .|Depende|None|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Obligatorio|None|  
@@ -87,5 +88,5 @@ ms.locfileid: "79179583"
 ## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Automation.ControlType.Spinner>
-- [Información general sobre tipos de control de Automatización de la interfaz de usuario](ui-automation-control-types-overview.md)
+- [Información general sobre tipos de control de UI Automation](ui-automation-control-types-overview.md)
 - [Información general sobre UI Automation](ui-automation-overview.md)

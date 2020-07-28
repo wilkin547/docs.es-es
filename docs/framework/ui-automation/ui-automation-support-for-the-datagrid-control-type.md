@@ -1,17 +1,18 @@
 ---
 title: Compatibilidad de UI Automation para el tipo de control DataGrid
+description: Obtenga información sobre la compatibilidad de UI Automation para el tipo de control DataGrid. Obtenga información sobre la estructura de árbol necesaria, las propiedades, los patrones de control y los eventos.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Data Grid control type
 - control types, Data Grid
 - UI Automation, Data Grid control type
 ms.assetid: a3db4a3f-feb5-4e5f-9b42-aae7fa816e8a
-ms.openlocfilehash: 69532c9836876c25e9f31395213b1a89e0307dcd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 13f265e414383e646f3e138feb890661fa01e2de
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179802"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167998"
 ---
 # <a name="ui-automation-support-for-the-datagrid-control-type"></a>Compatibilidad de UI Automation para el tipo de control DataGrid
 > [!NOTE]
@@ -21,20 +22,20 @@ ms.locfileid: "79179802"
   
  El tipo de control DataGrid permite a un usuario trabajar fácilmente con elementos que contienen metadatos representados en columnas. Los controles de cuadrícula de datos tienen filas de elementos y columnas de información sobre esos elementos. Un control List View en Microsoft Vista Explorer es un ejemplo que admite el tipo de control DataGrid.  
   
- En las secciones siguientes se definen la estructura del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , las propiedades, los patrones de control y los eventos necesarios para el tipo de control DataGrid. Los [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] requisitos se aplican a [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]todos los controles de cuadrícula de datos, ya sea , Win32 o Windows Forms.  
+ En las secciones siguientes se definen la estructura del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , las propiedades, los patrones de control y los eventos necesarios para el tipo de control DataGrid. Los [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] requisitos de se aplican a todos los controles de cuadrícula de datos, ya sean [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] , Win32 o Windows Forms.  
   
 ## <a name="required-ui-automation-tree-structure"></a>Estructura de árbol de Automatización de la interfaz de usuario necesaria  
  En la tabla siguiente se detallan la vista de control y la vista de contenido del árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que pertenece a los controles de cuadrícula de datos y se describe lo que puede incluirse en cada vista. Para más información sobre el árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , vea [UI Automation Tree Overview](ui-automation-tree-overview.md).  
   
 |Árbol de[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] : vista de control|Árbol de[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] : vista de contenido|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|DataGrid<br /><br /> <ul><li>Header (0, 1 o 2)<br /><br /> <ul><li>HeaderItem (número de columnas o filas)</li></ul></li><li>DataItem (0 o más; se puede estructurar en jerarquía)</li></ul>|DataGrid<br /><br /> - DataItem (0 o más; se puede estructurar en jerarquía)|  
+|DataGrid<br /><br /> <ul><li>Header (0, 1 o 2)<br /><br /> <ul><li>HeaderItem (número de columnas o filas)</li></ul></li><li>DataItem (0 o más; se puede estructurar en jerarquía)</li></ul>|DataGrid<br /><br /> -DataItem (0 o más; se puede estructurar en la jerarquía)|  
   
 <a name="Required_UI_Automation_Properties"></a>
 ## <a name="required-ui-automation-properties"></a>Propiedades de Automatización de la interfaz de usuario necesarias  
- En la tabla siguiente se muestran las propiedades que tienen un valor o una definición que es especialmente relevante para los controles de cuadrícula de datos. Para obtener [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] más información sobre las propiedades, vea Propiedades de automatización de la interfaz de usuario [para clientes](ui-automation-properties-for-clients.md).  
+ En la tabla siguiente se muestran las propiedades que tienen un valor o una definición que es especialmente relevante para los controles de cuadrícula de datos. Para obtener más información sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] las propiedades, vea [UI Automation Properties for clients](ui-automation-properties-for-clients.md).  
   
-|Propiedad|Value|Notas|  
+|Propiedad.|Value|Notas|  
 |--------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Vea las notas.|El valor de esta propiedad debe ser único en todos los controles de una aplicación.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Vea las notas.|El rectángulo exterior que contiene el control completo.|  
@@ -73,10 +74,10 @@ ms.locfileid: "79179802"
   
 |o[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Soporte técnico|Notas|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Obligatorio|None|  
-|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> .|Obligatorio|None|  
-|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Obligatorio|None|  
-|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Obligatorio|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Requerido|None|  
+|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> .|Requerido|None|  
+|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Requerido|None|  
+|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Requerido|None|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LayoutInvalidatedEvent>|Depende|None|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Obligatorio|None|  
 |Evento cambiado por propiedad<xref:System.Windows.Automation.MultipleViewPatternIdentifiers.CurrentViewProperty> .|Depende|None|  
@@ -86,7 +87,7 @@ ms.locfileid: "79179802"
 |Evento cambiado por propiedad<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> .|Depende|Si el control admite el patrón Scroll, debe admitir este evento.|  
 |Evento cambiado por propiedad<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> .|Depende|Si el control admite el patrón Scroll, debe admitir este evento.|  
 |Evento cambiado por propiedad<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> .|Depende|Si el control admite el patrón Scroll, debe admitir este evento.|  
-|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Obligatorio|None|  
+|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Requerido|None|  
   
 ## <a name="date-grid-control-type-example"></a>Ejemplo de tipo de control Date Grid  
  En la imagen siguiente se muestra un control List View que implementa el tipo de control DataGrid.  
@@ -97,12 +98,12 @@ ms.locfileid: "79179802"
   
 |Árbol de[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] : vista de control|Árbol de[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] : vista de contenido|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|<ul><li>DataGrid (Table, Grid, Selection)</li><li>Encabezado<br /><br /> <ul><li>HeaderItem "Name" (Invoke)</li><li>HeaderItem "Date Modified" (Invoke)</li><li>HeaderItem "Size" (Invoke)</li></ul></li><li>Grupo "Contoso" (TableItem, GridItem, SelectionItem,\*Table*, Grid )<br /><br /> <ul><li>DataItem "Accounts Receivable.doc" (SelectionItem,\*Invoke,\*TableItem , GridItem )</li><li>DataItem "Accounts Payable.doc" (SelectionItem,\*Invoke,\*TableItem , GridItem )</li></ul></li></ul>|<ul><li>DataGrid (Table, Grid, Selection)</li><li>Grupo "Contoso" (TableItem, GridItem, SelectionItem,\*Table*, Grid )<br /><br /> <ul><li>DataItem "Accounts Receivable.doc" (SelectionItem,\*Invoke,\*TableItem , GridItem )</li><li>DataItem "Accounts Payable.doc" (SelectionItem,\*Invoke,\*TableItem , GridItem )</li></ul></li></ul>|  
+|<ul><li>DataGrid (Table, Grid, Selection)</li><li>Encabezado<br /><br /> <ul><li>HeaderItem "Name" (Invoke)</li><li>HeaderItem "Date Modified" (Invoke)</li><li>HeaderItem "Size" (Invoke)</li></ul></li><li>Grupo "Contoso" (TableItem, GridItem, SelectionItem, Table *, Grid \* )<br /><br /> <ul><li>DataItem "accounts Receivable.doc" (SelectionItem, Invoke, TableItem \* , GridItem \* )</li><li>DataItem "accounts Payable.doc" (SelectionItem, Invoke, TableItem \* , GridItem \* )</li></ul></li></ul>|<ul><li>DataGrid (Table, Grid, Selection)</li><li>Grupo "Contoso" (TableItem, GridItem, SelectionItem, Table *, Grid \* )<br /><br /> <ul><li>DataItem "accounts Receivable.doc" (SelectionItem, Invoke, TableItem \* , GridItem \* )</li><li>DataItem "accounts Payable.doc" (SelectionItem, Invoke, TableItem \* , GridItem \* )</li></ul></li></ul>|  
   
- \*En el ejemplo anterior se muestra un DataGrid que contiene varios niveles de controles. El control Group ("Contoso") contiene dos controles DataItem ("Accounts Receivable.doc" y "Accounts Payable.doc"). Un par de controles DataGrid/GridItem es independiente de un par en otro nivel. Los controles DataItem de un elemento Group también se pueden exponer como un tipo de control ListItem, lo que permite que se presenten más claramente como objetos seleccionables, en lugar de como elementos de datos simples. En este ejemplo no se incluyen los subelementos de los elementos de datos agrupados.  
+ \*En el ejemplo anterior se muestra un control DataGrid que contiene varios niveles de controles. El control Group ("Contoso") contiene dos controles DataItem ("Accounts Receivable.doc" y "Accounts Payable.doc"). Un par de controles DataGrid/GridItem es independiente de un par en otro nivel. Los controles DataItem de un elemento Group también se pueden exponer como un tipo de control ListItem, lo que permite que se presenten más claramente como objetos seleccionables, en lugar de como elementos de datos simples. En este ejemplo no se incluyen los subelementos de los elementos de datos agrupados.  
   
 ## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Automation.ControlType.DataGrid>
-- [Información general sobre tipos de control de Automatización de la interfaz de usuario](ui-automation-control-types-overview.md)
+- [Información general sobre tipos de control de UI Automation](ui-automation-control-types-overview.md)
 - [Información general sobre UI Automation](ui-automation-overview.md)

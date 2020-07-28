@@ -1,17 +1,18 @@
 ---
 title: Implementación del patrón de control Scroll de UI Automation
+description: Revise las directrices y convenciones para implementar el patrón de control scroll en la automatización de la interfaz de usuario. Consulte los miembros necesarios para la interfaz IScrollProvider.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, Scroll control pattern
 - control patterns, Scroll
 - Scroll control pattern
 ms.assetid: 73d64242-6cbb-424c-92dd-dc69530b7899
-ms.openlocfilehash: 0420adaefb91f0c9f0d34d5bdf5863373a0b652b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 830d65286f27302dcad109384b8df187ed4af1a5
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180151"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166994"
 ---
 # <a name="implementing-the-ui-automation-scroll-control-pattern"></a>Implementación del patrón de control Scroll de UI Automation
 > [!NOTE]
@@ -48,12 +49,12 @@ Ejemplo de un control de desplazamiento que no use barras de desplazamiento
   
 |Miembro requerido|Tipo de miembro|Notas|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A>|Propiedad|None|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.VerticalScrollPercent%2A>|Propiedad|None|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalViewSize%2A>|Propiedad|None|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.VerticalViewSize%2A>|Propiedad|None|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontallyScrollable%2A>|Propiedad|None|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.VerticallyScrollable%2A>|Propiedad|None|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A>|Propiedad.|None|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.VerticalScrollPercent%2A>|Propiedad.|None|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalViewSize%2A>|Propiedad.|None|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.VerticalViewSize%2A>|Propiedad.|None|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontallyScrollable%2A>|Propiedad.|None|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.VerticallyScrollable%2A>|Propiedad.|None|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A>|Método|None|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A>|Método|None|  
   
@@ -72,8 +73,8 @@ Ejemplo de un control de desplazamiento que no use barras de desplazamiento
   
 ## <a name="see-also"></a>Consulte también
 
-- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [Información general acerca de los patrones de control de UI Automation](ui-automation-control-patterns-overview.md)
 - [Patrones de control compatibles en un proveedor de UI Automation](support-control-patterns-in-a-ui-automation-provider.md)
 - [Patrones de controles de UI Automation para clientes](ui-automation-control-patterns-for-clients.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [Información general sobre el árbol de la UI Automation](ui-automation-tree-overview.md)
 - [Utilizar el almacenamiento en caché en la UI Automation](use-caching-in-ui-automation.md)

@@ -1,5 +1,6 @@
 ---
 title: UI Automation y Microsoft Active Accessibility
+description: Comprenda las diferencias entre la automatización de la interfaz de usuario y Microsoft Active Accessibility, la solución anterior para que las aplicaciones sean accesibles.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Active Accessibility
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - UI Automation, Microsoft Active Accessibility
 - Active Accessibility, UI Automation compared to
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
-ms.openlocfilehash: 9aa975cf3c6e60fbcc759adbf5a991930bff36d6
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 0685a3f89a6578433641aaf78717f4ff377ff2f9
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144791"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164073"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>UI Automation y Microsoft Active Accessibility
 > [!NOTE]
@@ -74,17 +75,17 @@ Active Accessibility se basa en el modelo de objetos componentes (COM) compatibl
 |ROLE_SYSTEM_CLIENT|Calendario|  
 |ROLE_SYSTEM_CHECKBUTTON|Casilla|  
 |ROLE_SYSTEM_COMBOBOX|Cuadro combinado|  
-|ROLE_SYSTEM_CLIENT|Personalizado|  
+|ROLE_SYSTEM_CLIENT|Personalizada|  
 |ROLE_SYSTEM_LIST|Cuadrícula de datos|  
 |ROLE_SYSTEM_LISTITEM|Elemento de datos|  
 |ROLE_SYSTEM_DOCUMENT|Documento|  
 |ROLE_SYSTEM_TEXT|Editar|  
 |ROLE_SYSTEM_GROUPING|Grupo|  
-|ROLE_SYSTEM_LIST|Header|  
+|ROLE_SYSTEM_LIST|Encabezado|  
 |ROLE_SYSTEM_COLUMNHEADER|Elemento de encabezado|  
 |ROLE_SYSTEM_LINK|Hyperlink|  
 |ROLE_SYSTEM_GRAPHIC|Imagen|  
-|ROLE_SYSTEM_LIST|Lista|  
+|ROLE_SYSTEM_LIST|List|  
 |ROLE_SYSTEM_LISTITEM|Elemento de lista|  
 |ROLE_SYSTEM_MENUPOPUP|Menú|  
 |ROLE_SYSTEM_MENUBAR|Barra de menús|  
@@ -124,7 +125,7 @@ Active Accessibility se basa en el modelo de objetos componentes (COM) compatibl
   
  En la tabla siguiente se muestra la correspondencia entre las propiedades de los dos modelos.  
   
-|Active Accessibility descriptor de acceso de propiedad|Id. de propiedad[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Comentarios|  
+|Active Accessibility descriptor de acceso de propiedad|Id. de propiedad[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Observaciones|  
 |-----------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|-------------|  
 |`get_accKeyboardShortcut`|<xref:System.Windows.Automation.AutomationElement.AccessKeyProperty> o <xref:System.Windows.Automation.AutomationElement.AcceleratorKeyProperty>|`AccessKeyProperty` tiene prioridad si ambos están presentes.|  
 |`get_accName`|<xref:System.Windows.Automation.AutomationElement.NameProperty>||  
@@ -137,11 +138,11 @@ Active Accessibility se basa en el modelo de objetos componentes (COM) compatibl
   
  En la tabla siguiente se muestran las [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] propiedades que corresponden a las constantes de estado de Active Accessibility.  
   
-|Estado de Active Accessibility|Propiedad [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|¿Desencadena el cambio de estado?|  
+|Estado de Active Accessibility|Propiedad de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|¿Desencadena el cambio de estado?|  
 |-----------------------------------------------------------------------|------------------------------------------------------------------------------------|----------------------------|  
-|STATE_SYSTEM_CHECKED|Para casilla, <xref:System.Windows.Automation.TogglePattern.ToggleStateProperty><br /><br /> Para botón de radio, <xref:System.Windows.Automation.SelectionItemPattern.IsSelectedProperty>|Y|  
-|STATE_SYSTEM_COLLAPSED|<xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> = <xref:System.Windows.Automation.ExpandCollapseState.Collapsed>|Y|  
-|STATE_SYSTEM_EXPANDED|<xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> = <xref:System.Windows.Automation.ExpandCollapseState.Expanded> o <xref:System.Windows.Automation.ExpandCollapseState.PartiallyExpanded>|Y|  
+|STATE_SYSTEM_CHECKED|Para casilla, <xref:System.Windows.Automation.TogglePattern.ToggleStateProperty><br /><br /> Para botón de radio, <xref:System.Windows.Automation.SelectionItemPattern.IsSelectedProperty>|esté|  
+|STATE_SYSTEM_COLLAPSED|<xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> = <xref:System.Windows.Automation.ExpandCollapseState.Collapsed>|esté|  
+|STATE_SYSTEM_EXPANDED|<xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> = <xref:System.Windows.Automation.ExpandCollapseState.Expanded> o <xref:System.Windows.Automation.ExpandCollapseState.PartiallyExpanded>|esté|  
 |STATE_SYSTEM_FOCUSABLE|<xref:System.Windows.Automation.AutomationElement.IsKeyboardFocusableProperty>|N|  
 |STATE_SYSTEM_FOCUSED|<xref:System.Windows.Automation.AutomationElement.HasKeyboardFocusProperty>|N|  
 |STATE_SYSTEM_HASPOPUP|<xref:System.Windows.Automation.ExpandCollapsePattern> para elementos de menú|N|  
@@ -156,11 +157,11 @@ Active Accessibility se basa en el modelo de objetos componentes (COM) compatibl
 |STATE_SYSTEM_SELECTABLE|<xref:System.Windows.Automation.SelectionItemPattern> se admite|N|  
 |STATE_SYSTEM_SELECTED|<xref:System.Windows.Automation.SelectionItemPattern.IsSelectedProperty>|N|  
 |STATE_SYSTEM_SIZEABLE|<xref:System.Windows.Automation.TransformPattern.TransformPatternInformation.CanResize%2A>|N|  
-|STATE_SYSTEM_UNAVAILABLE|<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>|Y|  
+|STATE_SYSTEM_UNAVAILABLE|<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>|esté|  
   
  Los siguientes Estados no se implementaron por la mayoría de los servidores de control de Active Accessibility o no tienen equivalente en [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
-|Estado de Active Accessibility|Comentarios|  
+|Estado de Active Accessibility|Observaciones|  
 |-----------------------------------------------------------------------|-------------|  
 |STATE_SYSTEM_BUSY|No disponible en [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
 |STATE_SYSTEM_DEFAULT|No disponible en [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
@@ -191,7 +192,7 @@ Active Accessibility se basa en el modelo de objetos componentes (COM) compatibl
 |EVENT_OBJECT_ACCELERATORCHANGE|Cambio de propiedad<xref:System.Windows.Automation.AutomationElement.AcceleratorKeyProperty>|  
 |EVENT_OBJECT_CONTENTSCROLLED|Cambio de propiedad o  en las barras de desplazamiento asociadas|  
 |EVENT_OBJECT_CREATE|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|  
-|EVENT_OBJECT_DEFACTIONCHANGE|Sin equivalencia|  
+|EVENT_OBJECT_DEFACTIONCHANGE|No equivalente|  
 |EVENT_OBJECT_DESCRIPTIONCHANGE|Ningún equivalente exacto; quizás cambio de propiedad <xref:System.Windows.Automation.AutomationElement.HelpTextProperty> o <xref:System.Windows.Automation.AutomationElement.LocalizedControlTypeProperty>|  
 |EVENT_OBJECT_DESTROY|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|  
 |EVENT_OBJECT_FOCUS|<xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent>|  
@@ -204,19 +205,19 @@ Active Accessibility se basa en el modelo de objetos componentes (COM) compatibl
 |EVENT_OBJECT_SELECTION|<xref:System.Windows.Automation.SelectionItemPattern.ElementSelectedEvent>|  
 |EVENT_OBJECT_SELECTIONADD|<xref:System.Windows.Automation.SelectionItemPattern.ElementAddedToSelectionEvent>|  
 |EVENT_OBJECT_SELECTIONREMOVE|<xref:System.Windows.Automation.SelectionItemPattern.ElementRemovedFromSelectionEvent>|  
-|EVENT_OBJECT_SELECTIONWITHIN|Sin equivalencia|  
+|EVENT_OBJECT_SELECTIONWITHIN|No equivalente|  
 |EVENT_OBJECT_SHOW|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|  
 |EVENT_OBJECT_STATECHANGE|Diversos eventos de cambio de propiedades|  
 |EVENT_OBJECT_VALUECHANGE|Se han cambiado<xref:System.Windows.Automation.RangeValuePattern.ValueProperty?displayProperty=nameWithType> y <xref:System.Windows.Automation.ValuePattern.ValueProperty?displayProperty=nameWithType>|  
-|EVENT_SYSTEM_ALERT|Sin equivalencia|  
-|EVENT_SYSTEM_CAPTUREEND|Sin equivalencia|  
-|EVENT_SYSTEM_CAPTURESTART|Sin equivalencia|  
-|EVENT_SYSTEM_CONTEXTHELPEND|Sin equivalencia|  
-|EVENT_SYSTEM_CONTEXTHELPSTART|Sin equivalencia|  
+|EVENT_SYSTEM_ALERT|No equivalente|  
+|EVENT_SYSTEM_CAPTUREEND|No equivalente|  
+|EVENT_SYSTEM_CAPTURESTART|No equivalente|  
+|EVENT_SYSTEM_CONTEXTHELPEND|No equivalente|  
+|EVENT_SYSTEM_CONTEXTHELPSTART|No equivalente|  
 |EVENT_SYSTEM_DIALOGEND|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|  
 |EVENT_SYSTEM_DIALOGSTART|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|  
-|EVENT_SYSTEM_DRAGDROPEND|Sin equivalencia|  
-|EVENT_SYSTEM_DRAGDROPSTART|Sin equivalencia|  
+|EVENT_SYSTEM_DRAGDROPEND|No equivalente|  
+|EVENT_SYSTEM_DRAGDROPSTART|No equivalente|  
 |EVENT_SYSTEM_FOREGROUND|<xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent>|  
 |EVENT_SYSTEM_MENUEND|<xref:System.Windows.Automation.AutomationElement.MenuClosedEvent>|  
 |EVENT_SYSTEM_MENUPOPUPEND|<xref:System.Windows.Automation.AutomationElement.MenuClosedEvent>|  
@@ -228,20 +229,20 @@ Active Accessibility se basa en el modelo de objetos componentes (COM) compatibl
 |EVENT_SYSTEM_MOVESIZESTART|Cambio de propiedad<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty>|  
 |EVENT_SYSTEM_SCROLLINGEND|Cambio de propiedad o |  
 |EVENT_SYSTEM_SCROLLINGSTART|Cambio de propiedad o |  
-|EVENT_SYSTEM_SOUND|Sin equivalencia|  
+|EVENT_SYSTEM_SOUND|No equivalente|  
 |EVENT_SYSTEM_SWITCHEND|Ningún equivalente, pero un evento <xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent> señala que una nueva aplicación ha recibido el enfoque|  
-|EVENT_SYSTEM_SWITCHSTART|Sin equivalencia|  
-|Sin equivalencia|Cambio de propiedad<xref:System.Windows.Automation.MultipleViewPattern.CurrentViewProperty>|  
-|Sin equivalencia|Cambio de propiedad<xref:System.Windows.Automation.ScrollPattern.HorizontallyScrollableProperty>|  
-|Sin equivalencia|Cambio de propiedad<xref:System.Windows.Automation.ScrollPattern.VerticallyScrollableProperty>|  
-|Sin equivalencia|Cambio de propiedad<xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty>|  
-|Sin equivalencia|Cambio de propiedad<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty>|  
-|Sin equivalencia|Cambio de propiedad<xref:System.Windows.Automation.ScrollPattern.HorizontalViewSizeProperty>|  
-|Sin equivalencia|Cambio de propiedad<xref:System.Windows.Automation.ScrollPattern.VerticalViewSizeProperty>|  
-|Sin equivalencia|Cambio de propiedad<xref:System.Windows.Automation.TogglePattern.ToggleStateProperty>|  
-|Sin equivalencia|Cambio de propiedad<xref:System.Windows.Automation.WindowPattern.WindowVisualStateProperty>|  
-|Sin equivalencia|Evento<xref:System.Windows.Automation.AutomationElement.AsyncContentLoadedEvent>|  
-|Sin equivalencia|<xref:System.Windows.Automation.AutomationElement.ToolTipOpenedEvent>|  
+|EVENT_SYSTEM_SWITCHSTART|No equivalente|  
+|No equivalente|Cambio de propiedad<xref:System.Windows.Automation.MultipleViewPattern.CurrentViewProperty>|  
+|No equivalente|Cambio de propiedad<xref:System.Windows.Automation.ScrollPattern.HorizontallyScrollableProperty>|  
+|No equivalente|Cambio de propiedad<xref:System.Windows.Automation.ScrollPattern.VerticallyScrollableProperty>|  
+|No equivalente|Cambio de propiedad<xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty>|  
+|No equivalente|Cambio de propiedad<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty>|  
+|No equivalente|Cambio de propiedad<xref:System.Windows.Automation.ScrollPattern.HorizontalViewSizeProperty>|  
+|No equivalente|Cambio de propiedad<xref:System.Windows.Automation.ScrollPattern.VerticalViewSizeProperty>|  
+|No equivalente|Cambio de propiedad<xref:System.Windows.Automation.TogglePattern.ToggleStateProperty>|  
+|No equivalente|Cambio de propiedad<xref:System.Windows.Automation.WindowPattern.WindowVisualStateProperty>|  
+|No equivalente|Evento<xref:System.Windows.Automation.AutomationElement.AsyncContentLoadedEvent>|  
+|No equivalente|<xref:System.Windows.Automation.AutomationElement.ToolTipOpenedEvent>|  
   
 <a name="Security_compare"></a>
 ## <a name="security"></a>Seguridad  
@@ -249,6 +250,6 @@ Active Accessibility se basa en el modelo de objetos componentes (COM) compatibl
   
  El modelo [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] elimina la necesidad de que los proveedores realicen llamadas a otro código de proveedor. El servicio principal de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] realiza toda la agregación necesaria.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Aspectos básicos de la automatización de la interfaz de usuario](index.md)
+- [Fundamentos de UI Automation](index.md)

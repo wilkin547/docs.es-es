@@ -1,5 +1,6 @@
 ---
 title: Obtener el estado de alternancia de una casilla mediante UI Automation
+description: Vea un ejemplo de código que muestra cómo obtener el estado de alternancia de un control (por ejemplo, una casilla) mediante la automatización de la interfaz de usuario de Microsoft.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - check boxes, getting toggle states of
 - getting, toggle states of check boxes
 ms.assetid: 84fc31a3-175f-4e93-90a0-dd29d89b77ce
-ms.openlocfilehash: d4a3fa01dcfee2eafbb6dbd46cd67bed9e874a73
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 36ec205a572fd6c9e52eec9d2c3e0618ddb0a07b
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435597"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164147"
 ---
 # <a name="get-the-toggle-state-of-a-check-box-using-ui-automation"></a>Obtener el estado de alternancia de una casilla mediante UI Automation
 > [!NOTE]
@@ -23,7 +24,7 @@ ms.locfileid: "74435597"
  En este tema se muestra cómo usar [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] para obtener el estado de alternancia de un control.  
   
 ## <a name="example"></a>Ejemplo  
- En este ejemplo se usa el método <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> de la clase <xref:System.Windows.Automation.AutomationElement> para obtener un objeto <xref:System.Windows.Automation.TogglePattern> de un control y devolver su propiedad <xref:System.Windows.Automation.ToggleState>.  
+ En este ejemplo se usa el <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> método de la <xref:System.Windows.Automation.AutomationElement> clase para obtener un <xref:System.Windows.Automation.TogglePattern> objeto de un control y devolver su <xref:System.Windows.Automation.ToggleState> propiedad.  
   
  [!code-csharp[NavigatingWithTreeWalker#1200](../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigatingWithTreeWalker/CSharp/ClientClass.cs#1200)]
  [!code-vb[NavigatingWithTreeWalker#1200](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/NavigatingWithTreeWalker/visualbasic/clientclass.vb#1200)]

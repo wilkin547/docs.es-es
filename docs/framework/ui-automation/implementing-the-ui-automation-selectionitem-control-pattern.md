@@ -1,17 +1,18 @@
 ---
 title: Implementación del patrón de control SelectionItem de UI Automation
+description: Consulte directrices y convenciones para implementar el patrón de control SelectionItem en la automatización de la interfaz de usuario. Conocer los miembros necesarios para la interfaz ISelectionItemProvider.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Selection Item control pattern
 - UI Automation, Selection Item control pattern
 - control patterns, Selection Item
 ms.assetid: 76b0949a-5b23-4cfc-84cc-154f713e2e12
-ms.openlocfilehash: 02505224e4673592f1e169c40af1cfb098e5d9bb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 441417aa370563a9ce8b513be6ca4507b21e1e4a
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180102"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163547"
 ---
 # <a name="implementing-the-ui-automation-selectionitem-control-pattern"></a>Implementación del patrón de control SelectionItem de UI Automation
 > [!NOTE]
@@ -19,7 +20,7 @@ ms.locfileid: "79180102"
   
  En este tema se presentan las directrices y convenciones para implementar <xref:System.Windows.Automation.Provider.ISelectionItemProvider>, incluida la información sobre propiedades, métodos y eventos. Al final de la información general se proporcionan vínculos a referencias adicionales.  
   
- El patrón de control <xref:System.Windows.Automation.SelectionItemPattern> se usa para admitir controles que actúan como elementos secundarios individuales y seleccionables de controles de contenedor que implementan <xref:System.Windows.Automation.Provider.ISelectionProvider>. Para ver ejemplos de controles que implementan el patrón de control SelectionItem, vea [Asignación de patrones](control-pattern-mapping-for-ui-automation-clients.md) de control para clientes de automatización de la interfaz de usuario  
+ El patrón de control <xref:System.Windows.Automation.SelectionItemPattern> se usa para admitir controles que actúan como elementos secundarios individuales y seleccionables de controles de contenedor que implementan <xref:System.Windows.Automation.Provider.ISelectionProvider>. Para obtener ejemplos de controles que implementan el patrón de control SelectionItem, vea [asignación de patrones de control para clientes de UI Automation](control-pattern-mapping-for-ui-automation-clients.md) .  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
 ## <a name="implementation-guidelines-and-conventions"></a>Directrices y convenciones de implementación  
@@ -33,8 +34,8 @@ ms.locfileid: "79180102"
   
 |Miembros requeridos|Tipo de miembro|Notas|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|Propiedad|None|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|Propiedad|None|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|Propiedad.|None|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|Propiedad.|None|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.GetSelection%2A>|Método|None|  
 |<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Evento|Se produce cuando una selección de un contenedor ha cambiado de manera considerable y requiere el envío de más eventos <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> y <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> de lo que permite la constante <xref:System.Windows.Automation.Provider.AutomationInteropProvider.InvalidateLimit> .|  
   
@@ -50,10 +51,10 @@ ms.locfileid: "79180102"
   
 ## <a name="see-also"></a>Consulte también
 
-- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [Información general acerca de los patrones de control de UI Automation](ui-automation-control-patterns-overview.md)
 - [Patrones de control compatibles en un proveedor de UI Automation](support-control-patterns-in-a-ui-automation-provider.md)
 - [Patrones de controles de UI Automation para clientes](ui-automation-control-patterns-for-clients.md)
-- [Implementación del patrón de control Selection de Automatización de la interfaz de usuario](implementing-the-ui-automation-selection-control-pattern.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [Implementar el patrón de control Selection de UI Automation](implementing-the-ui-automation-selection-control-pattern.md)
+- [Información general sobre el árbol de la UI Automation](ui-automation-tree-overview.md)
 - [Utilizar el almacenamiento en caché en la UI Automation](use-caching-in-ui-automation.md)
 - [Ejemplo de proveedor de fragmentos](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771502(v=vs.90))

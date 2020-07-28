@@ -1,17 +1,18 @@
 ---
 title: Implementar el patrón de control Table de UI Automation
+description: Revise las directrices y convenciones para implementar el patrón de control Table en la automatización de la interfaz de usuario. Conocer los miembros necesarios para la interfaz ITableProvider.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, Table control pattern
 - control patterns, Table
 - TableControl pattern
 ms.assetid: 880cd85c-aa8c-4fb5-9369-45491d34bb78
-ms.openlocfilehash: 0b3d000112060550734890ad3c4063a26c320b04
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e88ddee04ba887daf1929d855526cd0d062f78d5
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180118"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168246"
 ---
 # <a name="implementing-the-ui-automation-table-control-pattern"></a>Implementar el patrón de control Table de UI Automation
 > [!NOTE]
@@ -32,9 +33,9 @@ ms.locfileid: "79180118"
 - Los encabezados de fila y columna pueden incluir tanto un encabezado principal como cualquier encabezado auxiliar.  
   
 > [!NOTE]
-> Este concepto se hace evidente en una hoja de cálculo de Microsoft Excel donde un usuario ha definido una columna "Nombre". Esta columna tiene ahora dos encabezados: el encabezado "Nombre" definido por el usuario y la designación alfanumérica para esa columna asignada por la aplicación.  
+> Este concepto se vuelve evidente en una hoja de cálculo de Microsoft Excel en la que un usuario ha definido una columna "nombre". Esta columna tiene ahora dos encabezados: el encabezado "Nombre" definido por el usuario y la designación alfanumérica para esa columna asignada por la aplicación.  
   
-- Consulte [Implementación del patrón](implementing-the-ui-automation-grid-control-pattern.md) de control de cuadrícula de automatización de la interfaz de usuario para obtener la funcionalidad de cuadrícula relacionada.  
+- Vea [implementar el patrón de control Grid de UI Automation](implementing-the-ui-automation-grid-control-pattern.md) para la funcionalidad de cuadrícula relacionada.  
   
  ![Tabla con elementos de encabezado complejos.](./media/uia-tablepattern-complex-column-headers.PNG "UIA_TablePattern_Complex_Column_Headers")  
 Ejemplo de una tabla con encabezados de columna compleja  
@@ -48,7 +49,7 @@ Ejemplo de una tabla con propiedad RowOrColumnMajor ambigua
   
 |Miembros requeridos|Tipo de miembro|Notas|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ITableProvider.RowOrColumnMajor%2A>|Propiedad|None|  
+|<xref:System.Windows.Automation.Provider.ITableProvider.RowOrColumnMajor%2A>|Propiedad.|None|  
 |<xref:System.Windows.Automation.Provider.ITableProvider.GetColumnHeaders%2A>|Método|None|  
 |<xref:System.Windows.Automation.Provider.ITableProvider.GetRowHeaders%2A>|Método|None|  
   
@@ -60,10 +61,10 @@ Ejemplo de una tabla con propiedad RowOrColumnMajor ambigua
   
 ## <a name="see-also"></a>Consulte también
 
-- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [Información general acerca de los patrones de control de UI Automation](ui-automation-control-patterns-overview.md)
 - [Patrones de control compatibles en un proveedor de UI Automation](support-control-patterns-in-a-ui-automation-provider.md)
 - [Patrones de controles de UI Automation para clientes](ui-automation-control-patterns-for-clients.md)
 - [Implementar el patrón de control TableItem de UI Automation](implementing-the-ui-automation-tableitem-control-pattern.md)
 - [Implementar el patrón de control Grid de UI Automation](implementing-the-ui-automation-grid-control-pattern.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [Información general sobre el árbol de la UI Automation](ui-automation-tree-overview.md)
 - [Utilizar el almacenamiento en caché en la UI Automation](use-caching-in-ui-automation.md)

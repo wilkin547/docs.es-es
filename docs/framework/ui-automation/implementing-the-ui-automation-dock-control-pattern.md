@@ -1,17 +1,18 @@
 ---
 title: Implementar el patrón de control Dock de UI Automation
+description: Aprenda a implementar el patrón de control Dock de UI Automation. Use el patrón de control DockPattern para exponer las propiedades de acoplamiento de un control. Implemente IDockProvider.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, dock
 - dock control pattern
 - UI Automation, dock control pattern
 ms.assetid: ea3d2212-7c8e-4dd7-bf08-73141ca2d4fb
-ms.openlocfilehash: b1213791609245209fa37e3cdcb0876c963bfeb0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8080d78c7bded3cb884f92948eb1259cda5544dc
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180206"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165895"
 ---
 # <a name="implementing-the-ui-automation-dock-control-pattern"></a>Implementar el patrón de control Dock de UI Automation
 > [!NOTE]
@@ -42,7 +43,7 @@ Ejemplo de acoplamiento de Visual Studio donde la ventana "Vista de clases" es D
   
 |Miembros requeridos|Tipo de miembro|Notas|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IDockProvider.DockPosition%2A>|Propiedad|None|  
+|<xref:System.Windows.Automation.Provider.IDockProvider.DockPosition%2A>|Propiedad.|None|  
 |<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A>|Método|None|  
   
  Este patrón de control no tiene eventos asociados.  
@@ -53,12 +54,12 @@ Ejemplo de acoplamiento de Visual Studio donde la ventana "Vista de clases" es D
   
 |Tipo de excepción|Condición|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A><br /><br /> - Cuando un control no puede ejecutar el estilo de acoplamiento solicitado.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A><br /><br /> : Cuando un control no puede ejecutar el estilo de acoplamiento solicitado.|  
   
 ## <a name="see-also"></a>Consulte también
 
-- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [Información general acerca de los patrones de control de UI Automation](ui-automation-control-patterns-overview.md)
 - [Patrones de control compatibles en un proveedor de UI Automation](support-control-patterns-in-a-ui-automation-provider.md)
 - [Patrones de controles de UI Automation para clientes](ui-automation-control-patterns-for-clients.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [Información general sobre el árbol de la UI Automation](ui-automation-tree-overview.md)
 - [Utilizar el almacenamiento en caché en la UI Automation](use-caching-in-ui-automation.md)

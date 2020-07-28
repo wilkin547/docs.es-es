@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: Mostrar los datos de una base de datos de SQL Server en un control DataGrid'
+description: Obtenga información sobre cómo obtener datos de una base de datos de SQL Server y cómo mostrarlos en un control DataGrid Windows Presentation Foundation mediante este tutorial.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - DataGrid [WPF], displaying data from SQL Server
 - controls [WPF], DataGrid
 ms.assetid: 6810b048-0a23-4f86-bfa5-97f92b3cfab4
-ms.openlocfilehash: 1398d8408a0b85d6603d638312e92ba35c5e77d3
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: cc41979c869021c9c363f3f68ce590d4702e068c
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591038"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167554"
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>Tutorial: Mostrar datos de una base de datos de SQL Server en un control DataGrid
 
@@ -23,7 +24,7 @@ En este tutorial, recuperará datos de una base de datos de SQL Server y mostrar
 
 Necesitará los componentes siguientes para completar este tutorial:
 
-- Visual Studio.
+- Visual Studio.
 
 - Acceso a una instancia en ejecución de SQL Server o SQL Server Express que tenga adjunta la base de datos de ejemplo AdventureWorks. Puede descargar la base de datos AdventureWorks desde [GitHub](https://github.com/Microsoft/sql-server-samples/releases).
 
@@ -47,7 +48,7 @@ Necesitará los componentes siguientes para completar este tutorial:
 
 6. En la pantalla elegir la conexión de datos, proporcione la conexión a la base de datos de AdventureWorksLT2008. Para obtener más información, vea [cuadro de diálogo elegir la conexión de datos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399244(v=vs.100)).
 
-    Asegúrese de que el nombre es `AdventureWorksLT2008Entities` y de que la casilla **Guardar configuración de conexión de entidad en App. config como** está activada y, a continuación, haga clic en **siguiente**.
+    Asegúrese de que el nombre es `AdventureWorksLT2008Entities` y de que está activada la casilla **Guardar configuración de conexión de entidad en App.Config como** y, a continuación, haga clic en **siguiente**.
 
 7. En la pantalla elegir los objetos de base de datos, expanda el nodo tablas y seleccione las tablas **Product** y **ProductCategory** .
 

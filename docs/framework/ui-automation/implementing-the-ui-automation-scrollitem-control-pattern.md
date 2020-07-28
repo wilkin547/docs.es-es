@@ -1,17 +1,18 @@
 ---
 title: Implementar el patrón de control ScrollItem de UI Automation
+description: Revise las directrices y convenciones para implementar el patrón de control ScrollItem en la automatización de la interfaz de usuario. Consulte los miembros necesarios para la interfaz IScrollItemProvider.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, Scroll Item
 - UI Automation, Scroll Item control pattern
 - Scroll Item control pattern
 ms.assetid: 903bab5c-80c1-44d7-bdc2-0a418893b987
-ms.openlocfilehash: 3a0647ab98dcb86306573a0e9826fa7232fa9ad0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a548eb25280d9a8feddc4633a1ba3e7dc022af36
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180138"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163571"
 ---
 # <a name="implementing-the-ui-automation-scrollitem-control-pattern"></a>Implementar el patrón de control ScrollItem de UI Automation
 > [!NOTE]
@@ -33,7 +34,7 @@ ms.locfileid: "79180138"
   
 |Miembros requeridos|Tipo de miembro|Notas|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IScrollItemProvider.ScrollIntoView%2A>|- Método|None|  
+|<xref:System.Windows.Automation.Provider.IScrollItemProvider.ScrollIntoView%2A>|-(Método)|None|  
   
  Este patrón de control no tiene eventos o propiedades asociados.  
   
@@ -47,8 +48,8 @@ ms.locfileid: "79180138"
   
 ## <a name="see-also"></a>Consulte también
 
-- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [Información general acerca de los patrones de control de UI Automation](ui-automation-control-patterns-overview.md)
 - [Patrones de control compatibles en un proveedor de UI Automation](support-control-patterns-in-a-ui-automation-provider.md)
 - [Patrones de controles de UI Automation para clientes](ui-automation-control-patterns-for-clients.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [Información general sobre el árbol de la UI Automation](ui-automation-tree-overview.md)
 - [Utilizar el almacenamiento en caché en la UI Automation](use-caching-in-ui-automation.md)

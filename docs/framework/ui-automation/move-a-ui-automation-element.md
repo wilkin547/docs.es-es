@@ -1,5 +1,6 @@
 ---
 title: Mover un elemento de UI Automation
+description: Vea el código de ejemplo que muestra cómo trasladar un elemento de automatización de la interfaz de usuario a una ubicación de pantalla especificada. Usa los patrones de control WindowPattern y TransformPattern.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - elements, moving
 - UI Automation, moving elements
 ms.assetid: 4042cb44-e27e-4a03-ac36-9be1eed65b47
-ms.openlocfilehash: 72454e355fb9b673a4adafb39ad60c8414573d0e
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 4c8bec4e6d7a241588a3ab261cb80ce9ac242024
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741316"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166148"
 ---
 # <a name="move-a-ui-automation-element"></a>Mover un elemento de UI Automation
 > [!NOTE]
@@ -23,13 +24,13 @@ ms.locfileid: "75741316"
  En este ejemplo se muestra cómo mover un elemento [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] a una ubicación de pantalla especificada.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se usan los patrones de control <xref:System.Windows.Automation.WindowPattern> y <xref:System.Windows.Automation.TransformPattern> para trasladar mediante programación una aplicación de destino Win32 a ubicaciones de pantalla discretas y hacer un seguimiento del <xref:System.Windows.Automation.AutomationElement.AutomationPropertyChangedEvent><xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty>.  
+ En el ejemplo siguiente se usan los <xref:System.Windows.Automation.WindowPattern> <xref:System.Windows.Automation.TransformPattern> patrones de control y para trasladar mediante programación una aplicación de destino Win32 a ubicaciones de pantalla discretas y realizar el seguimiento de <xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> <xref:System.Windows.Automation.AutomationElement.AutomationPropertyChangedEvent> .  
   
  [!code-csharp[WindowMove#1301](../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowMove/CSharp/WindowMove.cs#1301)]
  [!code-vb[WindowMove#1301](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowMove/VisualBasic/windowmove.vb#1301)]  
 [!code-csharp[WindowMove#1300](../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowMove/CSharp/WindowMove.cs#1300)]
 [!code-vb[WindowMove#1300](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowMove/VisualBasic/windowmove.vb#1300)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Ejemplo de WindowPattern](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/WindowMove)

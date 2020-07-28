@@ -1,17 +1,18 @@
 ---
 title: Compatibilidad de UI Automation para el tipo de control ListItem
+description: Obtenga información sobre la compatibilidad de UI Automation para el tipo de control ListItem. Obtenga información sobre la estructura de árbol necesaria, las propiedades, los patrones de control y los eventos.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control types, List
 - List Item control type
 - UI Automation, List Item control type
 ms.assetid: 34f533bf-fc14-4e78-8fee-fb7107345fab
-ms.openlocfilehash: 245f9030897d54a2f1c95d5ce6369b67d23cb319
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf1690b094e9d472fd4213f7fa3df545dca6ebac
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179700"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166056"
 ---
 # <a name="ui-automation-support-for-the-listitem-control-type"></a>Compatibilidad de UI Automation para el tipo de control ListItem
 > [!NOTE]
@@ -21,7 +22,7 @@ ms.locfileid: "79179700"
   
  Los controles de elemento de lista son un ejemplo de controles que implementan el tipo de control ListItem.  
   
- En las secciones siguientes se definen la estructura de árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] necesaria, las propiedades, los patrones de control y los eventos para el tipo de control ListItem. Los [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] requisitos se aplican [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]a todos los controles de lista, ya sea , Win32 o Windows Forms.  
+ En las secciones siguientes se definen la estructura de árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] necesaria, las propiedades, los patrones de control y los eventos para el tipo de control ListItem. Los [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] requisitos de se aplican a todos los controles de lista, ya sean [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] , Win32 o Windows Forms.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>
 ## <a name="required-ui-automation-tree-structure"></a>Estructura de árbol de Automatización de la interfaz de usuario necesaria  
@@ -29,13 +30,13 @@ ms.locfileid: "79179700"
   
 |Vista de control|Vista de contenido|  
 |------------------|------------------|  
-|ListItem<br /><br /> - Imagen (0 o más)<br />- Texto (0 o más)<br />- Editar (0 o más)|ListItem|  
+|ListItem<br /><br /> -Image (0 o más)<br />-Text (0 o más)<br />-Edit (0 o más)|ListItem|  
   
- Los elementos secundarios de un control de elemento de lista en la vista de contenido del árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] siempre deben ser "0". Si la estructura del control es tal que otros elementos están contenidos debajo del elemento de lista, debe seguir los requisitos para la compatibilidad con automatización de la interfaz de usuario para el tipo de control De tipo de [control TreeItem.](ui-automation-support-for-the-treeitem-control-type.md)  
+ Los elementos secundarios de un control de elemento de lista en la vista de contenido del árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] siempre deben ser "0". Si la estructura del control es tal que otros elementos están incluidos debajo del elemento de lista, debe seguir los requisitos de compatibilidad de [UI Automation para el tipo de control TreeItem de tipo de control](ui-automation-support-for-the-treeitem-control-type.md) .  
   
 <a name="Required_UI_Automation_Properties"></a>
 ## <a name="required-ui-automation-properties"></a>Propiedades de Automatización de la interfaz de usuario necesarias  
- En la tabla siguiente se muestran las propiedades [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] cuyo valor o definición es especialmente relevante para los controles de elemento de lista. Para obtener [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] más información sobre las propiedades, vea Propiedades de automatización de la interfaz de usuario [para clientes](ui-automation-properties-for-clients.md).  
+ En la tabla siguiente se muestran las propiedades [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] cuyo valor o definición es especialmente relevante para los controles de elemento de lista. Para obtener más información sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] las propiedades, vea [UI Automation Properties for clients](ui-automation-properties-for-clients.md).  
   
 |Propiedad[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Value|Notas|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
@@ -65,7 +66,7 @@ ms.locfileid: "79179700"
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Depende|Si el elemento se puede manipular para mostrar u ocultar información, se debe implementar este patrón de control.|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|Depende|Si se puede editar el elemento, se debe implementar este patrón de control. Los cambios realizados al control de elemento de lista provocarán cambios en los valores de <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>y <xref:System.Windows.Automation.Provider.IValueProvider.Value%2A>.|  
 |<xref:System.Windows.Automation.Provider.IGridItemProvider>|Depende|Si se admite la navegación espacial de un elemento a otro dentro del contenedor de lista y el contenedor está organizado en filas y columnas, se debe implementar el patrón de control de elemento de cuadrícula.|  
-|<xref:System.Windows.Automation.Provider.IInvokeProvider>|Depende|Si el elemento tiene un comando que se puede ejecutar en él, independiente de la selección, se debe implementar este patrón. Se trata normalmente de una acción asociada a hacer doble clic en el control de elemento de lista. Ejemplos serían iniciar un documento desde el Explorador de Microsoft Windows o reproducir un archivo de música en el Reproductor de Microsoft Windows Media.|  
+|<xref:System.Windows.Automation.Provider.IInvokeProvider>|Depende|Si el elemento tiene un comando que se puede ejecutar en él, independiente de la selección, se debe implementar este patrón. Se trata normalmente de una acción asociada a hacer doble clic en el control de elemento de lista. Algunos ejemplos serían el inicio de un documento desde el explorador de Microsoft Windows o la reproducción de un archivo de música en Microsoft Windows Media Player.|  
   
 <a name="Required_UI_Automation_Events"></a>
 ## <a name="required-ui-automation-events"></a>Eventos de Automatización de la interfaz de usuario necesarios  
@@ -77,9 +78,9 @@ ms.locfileid: "79179700"
 |<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>|Obligatorio|None|  
 |<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|Obligatorio|None|  
 |<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|Obligatorio|None|  
-|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> .|Obligatorio|None|  
-|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Obligatorio|None|  
-|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Obligatorio|None|  
+|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> .|Requerido|None|  
+|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Requerido|None|  
+|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Requerido|None|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Obligatorio|None|  
 |Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.ItemStatusProperty> .|Depende|None|  
 |Evento cambiado por propiedad<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> .|Depende|None|  
@@ -91,5 +92,5 @@ ms.locfileid: "79179700"
 ## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Automation.ControlType.ListItem>
-- [Información general sobre tipos de control de Automatización de la interfaz de usuario](ui-automation-control-types-overview.md)
+- [Información general sobre tipos de control de UI Automation](ui-automation-control-types-overview.md)
 - [Información general sobre UI Automation](ui-automation-overview.md)
