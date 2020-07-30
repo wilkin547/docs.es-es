@@ -3,12 +3,12 @@ title: Definición de nativo en la nube
 description: Obtenga información sobre los pilares básicos que proporcionan el cimientos para sistemas nativos en la nube.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: e8b07fe7758d90f6ba97b81d0efa9d2fb5058d49
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: f50c144d99fae0c4702965342fd76ec22e8bd8c8
+ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614189"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87427039"
 ---
 # <a name="defining-cloud-native"></a>Definir nativo en la nube
 
@@ -34,7 +34,7 @@ Estas son algunas compañías que han implementado estas técnicas. Piense en la
 | :-------- | :-------- |
 | [Netflix](https://www.infoq.com/news/2013/06/netflix/) | Tiene 600 y servicios en producción. Implementa cientos de veces al día. |
 | [Uber](https://eng.uber.com/micro-deploy/) | Tiene más de 1000 servicios en producción. Implementa varios miles de veces cada semana. |
-| [WeChat](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf) | Tiene más de 300 servicios en producción. Implementa 1.000 veces al día. |
+| [WeChat](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf) | Tiene más de 3000 servicios en producción. Implementa 1.000 veces al día. |
 
 Como puede ver, Netflix, Uber y WeChat exponen sistemas que se componen de cientos de microservicios independientes. Este estilo arquitectónico les permite responder rápidamente a las condiciones de mercado. Pueden actualizar de forma instantánea pequeñas áreas de una aplicación dinámica y compleja, y escalarlas individualmente según sea necesario.
 
@@ -123,7 +123,7 @@ Por diseño, cada microservicio encapsula sus propios datos y expone las operaci
 
 Los datos distribuidos se describen en el capítulo 5 de detalles, *patrones de datos nativos de la nube*.
 
-*Identity*
+*Identidad*
 
 ¿Cómo identificará el servicio quién tiene acceso a él y qué permisos tiene?
 
@@ -173,7 +173,7 @@ Los microservicios se pueden crear con cualquier plataforma de desarrollo modern
 
 La plataforma de Microsoft .NET Core es una excelente opción. Gratis y de código abierto, tiene muchas características integradas para simplificar el desarrollo de microservicios. .NET Core es multiplataforma. Las aplicaciones se pueden compilar y ejecutar en Windows, macOS y la mayoría de los tipos de Linux.
 
-.NET Core tiene un alto rendimiento y ha puntuado bien en comparación con node. js y otras plataformas de la competencia. Curiosamente, [TechEmpower](https://www.techempower.com/) llevó a cabo un amplio conjunto de pruebas comparativas de [rendimiento](https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=plaintext) en muchas plataformas y marcos de aplicaciones Web. .NET Core puntuado en las 10 mejores versiones de node. js y en otras plataformas en competencia.
+.NET Core tiene un alto rendimiento y ha puntuado bien en comparación con Node.js y otras plataformas de la competencia. Curiosamente, [TechEmpower](https://www.techempower.com/) llevó a cabo un amplio conjunto de pruebas comparativas de [rendimiento](https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=plaintext) en muchas plataformas y marcos de aplicaciones Web. .NET Core puntuado en las 10 mejores Node.js y otras plataformas de la competencia.
 
 .NET Core es mantenido por Microsoft y la comunidad de .NET en GitHub.
 
@@ -276,7 +276,7 @@ Los proveedores de nube proporcionan las API para que pueda comunicarse con sus 
 
 Los servicios de respaldo se describen en el capítulo 5 de detalle, *patrones de datos nativos de la nube*y el capítulo 4, *patrones de comunicación nativa en la nube*.
 
-## <a name="automation"></a>Automation
+## <a name="automation"></a>Automatización
 
 Como ha visto, los sistemas nativos en la nube adoptan microservicios, contenedores y un diseño moderno del sistema para lograr la velocidad y la agilidad. Pero eso es solo parte de la historia. ¿Cómo se aprovisionan los entornos de nube en los que se ejecutan estos sistemas? ¿Cómo se implementan rápidamente características y actualizaciones de aplicaciones? ¿Cómo se redondea la imagen completa?
 
@@ -331,7 +331,7 @@ Azure Pipelines es un servicio en la nube que combina la integración continua (
 La canalización se define en el código de un archivo YAML junto con el resto del código de la aplicación.
 
 - La versión de la canalización tiene el código y sigue la misma estructura de bifurcación.
-- La validación de los cambios se realiza a través de las revisiones de código de las solicitudes de extracción y las directivas de compilación de rama.
+- La validación de los cambios se obtiene a través de revisiones de código en solicitudes de extracción y directivas de compilación de rama.
 - Cada rama que use puede personalizar la Directiva de compilación modificando el archivo Azure-pipelines. yml.
 - El archivo de canalización se protege en el control de versiones y se puede investigar si hay un problema.
 

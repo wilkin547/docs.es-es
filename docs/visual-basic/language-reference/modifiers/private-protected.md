@@ -1,15 +1,17 @@
 ---
 title: Private Protected
 ms.date: 05/10/2018
+f1_keywords:
+- vb.PrivateProtected
 helpviewer_keywords:
 - Private Protected keyword [Visual Basic]
 - Private Protected keyword [Visual Basic], syntax
-ms.openlocfilehash: b7d9f81e41950b92c787e2e50fb94fe3d7c07559
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8ad1509da71bc80b33700d363ddd4569a0965dff
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84362234"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303470"
 ---
 # <a name="private-protected-visual-basic"></a>Privado protegido (Visual Basic)
 
@@ -68,10 +70,10 @@ El modificador `Private Protected` se puede utilizar en los contextos siguientes
 
 ## <a name="see-also"></a>Consulte también
 
-- [Público](public.md)
+- [Pública](public.md)
 - [Contra](protected.md)
 - [Respecto](friend.md)
-- [Privado](private.md)
+- [Privada](private.md)
 - [Protected Friend](./protected-friend.md)
 - [Niveles de acceso en Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md)
 - [Procedimientos](../../programming-guide/language-features/procedures/index.md)
