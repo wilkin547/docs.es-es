@@ -3,12 +3,12 @@ title: Propiedades de MSBuild para Microsoft.NET.Sdk
 description: Referencia de las propiedades y los elementos de MSBuild admitidos por el SDK de .NET Core.
 ms.date: 02/14/2020
 ms.topic: reference
-ms.openlocfilehash: cda56b3e23592a341d9fe672fc1f1530adcdab49
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 115c4f32e856dee64abe0c607b8ee595a65692e6
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206106"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164385"
 ---
 # <a name="msbuild-reference-for-net-core-sdk-projects"></a>Referencia de MSBuild para proyectos del SDK de .NET Core
 
@@ -25,7 +25,7 @@ Esta página es una referencia de las propiedades y los elementos de MSBuild que
 
 ### <a name="targetframework"></a>TargetFramework
 
-La propiedad `TargetFramework` especifica la versión de la plataforma de destino de la aplicación, que hace referencia de forma implícita a un [metapaquete](../packages.md#metapackages). Para obtener una lista de los monikers de plataforma de destino válidos, vea [Plataformas de destino en proyectos de estilo SDK](../../standard/frameworks.md#supported-target-framework-versions).
+La propiedad `TargetFramework` especifica la versión de la plataforma de destino de la aplicación. Para obtener una lista de los monikers de plataforma de destino válidos, vea [Plataformas de destino en proyectos de estilo SDK](../../standard/frameworks.md#supported-target-framework-versions).
 
 ```xml
 <PropertyGroup>
@@ -55,7 +55,7 @@ Para obtener más información, vea [Plataformas de destino en proyectos de esti
 > [!NOTE]
 > Esta propiedad solo se aplica a los proyectos que usan `netstandard1.x`. No se aplica a los que usan `netstandard2.x`.
 
-Use la propiedad `NetStandardImplicitPackageVersion` si quiere especificar una versión de la plataforma anterior a la del [metapaquete](../packages.md#metapackages). El archivo del proyecto del ejemplo siguiente tiene como destino `netstandard1.3` pero usa la versión 1.6.0 de `NETStandard.Library`.
+Use la propiedad `NetStandardImplicitPackageVersion` si quiere especificar una versión del marco que sea inferior a la de la versión del metapaquete. El archivo del proyecto del ejemplo siguiente tiene como destino `netstandard1.3` pero usa la versión 1.6.0 de `NETStandard.Library`.
 
 ```xml
 <PropertyGroup>
@@ -292,7 +292,7 @@ Puede establecer la propiedad `AssetTargetFallback` en una o varias [versiones d
 
 ### <a name="packagereference"></a>PackageReference
 
-El elemento `PackageReference` define una referencia a un paquete NuGet. Por ejemplo, es posible que quiera hacer referencia a un único paquete en lugar de a un [metapaquete](../packages.md#metapackages).
+El elemento `PackageReference` define una referencia a un paquete NuGet.
 
 El atributo `Include` especifica el identificador del paquete. El atributo `Version` especifica la versión o el intervalo de versiones. Para obtener más información sobre cómo especificar una versión mínima, una máxima, un intervalo o una coincidencia exacta, vea [Intervalos de versiones](/nuget/concepts/package-versioning#version-ranges). También puede agregar los metadatos `IncludeAssets`, `ExcludeAssets` y `PrivateAssets` a una referencia de proyecto.
 

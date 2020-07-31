@@ -2,12 +2,12 @@
 title: Comando dotnet test
 description: El comando “dotnet test” se usa para ejecutar pruebas unitarias en un proyecto determinado.
 ms.date: 04/29/2020
-ms.openlocfilehash: 911d10917c2262c0bd32ef30d48da0f85ac39a39
-ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
+ms.openlocfilehash: 9b1e190579902dda71547b01f31dd5adcc22fe9c
+ms.sourcegitcommit: c8c3e1c63a00b7d27f76f5e50ee6469e6bdc8987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84803157"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87251197"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -21,14 +21,17 @@ ms.locfileid: "84803157"
 
 ```dotnetcli
 dotnet test [<PROJECT> | <SOLUTION> | <DIRECTORY> | <DLL>]
-    [-a|--test-adapter-path <PATH_TO_ADAPTER>] [--blame]
+    [-a|--test-adapter-path <ADAPTER_PATH>] [--blame] [--blame-crash]
+    [--blame-crash-dump-type <DUMP_TYPE>] [--blame-crash-collect-always]
+    [--blame-hang] [--blame-hang-dump-type <DUMP_TYPE>]
+    [--blame-hang-timeout <TIMESPAN>]
     [-c|--configuration <CONFIGURATION>]
-    [--collect <DATA_COLLECTOR_FRIENDLY_NAME>]
-    [-d|--diag <PATH_TO_DIAGNOSTICS_FILE>] [-f|--framework <FRAMEWORK>]
+    [--collect <DATA_COLLECTOR_NAME>]
+    [-d|--diag <LOG_FILE>] [-f|--framework <FRAMEWORK>]
     [--filter <EXPRESSION>] [--interactive]
-    [-l|--logger <LOGGER_URI/FRIENDLY_NAME>] [--no-build]
+    [-l|--logger <LOGGER>] [--no-build]
     [--nologo] [--no-restore] [-o|--output <OUTPUT_DIRECTORY>]
-    [-r|--results-directory <PATH>] [--runtime <RUNTIME_IDENTIFIER>]
+    [-r|--results-directory <RESULTS_DIR>] [--runtime <RUNTIME_IDENTIFIER>]
     [-s|--settings <SETTINGS_FILE>] [-t|--list-tests]
     [-v|--verbosity <LEVEL>] [[--] <RunSettings arguments>]
 
@@ -64,7 +67,7 @@ Donde `Microsoft.NET.Test.Sdk` es el host de prueba y `xunit` es el marco de pru
 
 ## <a name="options"></a>Opciones
 
-- **`-a|--test-adapter-path <PATH_TO_ADAPTER>`**
+- **`-a|--test-adapter-path <ADAPTER_PATH>`**
 
   Ruta de acceso a un directorio en el que se van hacer búsquedas de adaptadores de prueba adicionales. Solo se inspeccionan los archivos *.dll* con el sufijo `.TestAdapter.dll`. Si no se especifica, la búsqueda se realiza en el directorio del archivo *.dll* de la prueba.
 
@@ -72,11 +75,42 @@ Donde `Microsoft.NET.Test.Sdk` es el host de prueba y `xunit` es el marco de pru
 
   Ejecuta las pruebas en el modo de culpabilidad. Esta opción es útil para aislar las pruebas problemáticas que hacen que el host de prueba se bloquee. Cuando se detecta un bloqueo, crea un archivo de secuencia en `TestResults/<Guid>/<Guid>_Sequence.xml` que captura el orden de las pruebas ejecutadas antes del bloqueo.
 
+- **`--blame-crash`** (Disponible desde el SDK de versión preliminar de .NET 5.0)
+
+  Ejecuta las pruebas en modo de culpa y recopila un volcado de memoria cuando el host de prueba se cierra de forma inesperada. Esta opción solo se admite en Windows. Un directorio que contenga *procdump.exe* y *procdump64.exe* debe estar en la variable de entorno PATH o PROCDUMP_PATH. [Descargue las herramientas](https://docs.microsoft.com/sysinternals/downloads/procdump). Implica `--blame`.
+
+- **`--blame-crash-dump-type <DUMP_TYPE>`** (Disponible desde el SDK de versión preliminar de .NET 5.0)
+
+  El tipo de volcado de memoria que se va a recopilar. Implica `--blame-crash`.
+
+- **`--blame-crash-collect-always`** (Disponible desde el SDK de versión preliminar de .NET 5.0)
+
+  Recopila un volcado de memoria en la salida de host de prueba esperada e inesperada.
+
+- **`--blame-hang`** (Disponible desde el SDK de versión preliminar de .NET 5.0)
+
+  Ejecute las pruebas en modo de culpa y recopile un volcado de bloqueo cuando una prueba supere el tiempo de espera especificado.
+
+- **`--blame-hang-dump-type <DUMP_TYPE>`** (Disponible desde el SDK de versión preliminar de .NET 5.0)
+
+  El tipo de volcado de memoria que se va a recopilar. Debe ser `full`, `mini` o `none`. Cuando se especifica `none`, el host de prueba finaliza en el tiempo de espera, pero no se recopila ningún volcado. Implica `--blame-hang`.
+
+- **`--blame-hang-timeout <TIMESPAN>`** (Disponible desde el SDK de versión preliminar de .NET 5.0)
+
+  Tiempo de espera por prueba, después del cual se desencadena un volcado de bloqueo y finaliza el proceso de host de prueba. El valor de tiempo de espera se especifica en uno de los siguientes formatos:
+  
+  - 1,5 h
+  - 90 m
+  - 5400 s
+  - 5 400 000 ms
+
+  Cuando no se usa ninguna unidad (por ejemplo, 5 400 000), se supone que el valor está en milisegundos. Cuando se usa junto con las pruebas basadas en datos, el comportamiento de tiempo de espera depende del adaptador de prueba usado. En xUnit y NUnit, el tiempo de espera se renueva después de cada caso de prueba. En MSTest, el tiempo de espera se utiliza en todos los casos de prueba. Esta opción se admite en Windows con netcoreapp2.1 y versiones posteriores, y en Linux con netcoreapp3.1 y versiones posteriores. macOS no se admite.
+
 - **`-c|--configuration <CONFIGURATION>`**
 
   Define la configuración de compilación. El valor predeterminado es `Debug`, pero la configuración del proyecto podría invalidar esta configuración predeterminada del SDK.
 
-- **`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`**
+- **`--collect <DATA_COLLECTOR_NAME>`**
 
   Habilita el recopilador de datos para la ejecución de pruebas. Para obtener más información, consulte [Monitor and analyze test run](https://aka.ms/vstest-collect) (Supervisar y analizar ejecuciones de pruebas).
   
@@ -84,7 +118,7 @@ Donde `Microsoft.NET.Test.Sdk` es el host de prueba y `xunit` es el marco de pru
 
   En Windows, puede recopilar la cobertura de código mediante la opción `--collect "Code Coverage"`. Esta opción genera un archivo *.coverage*, que se puede abrir en Visual Studio 2019 Enterprise. Para más información, vea [Uso de cobertura de código](/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested) y [Personalización del análisis de cobertura de código](/visualstudio/test/customizing-code-coverage-analysis).
 
-- **`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
+- **`-d|--diag <LOG_FILE>`**
 
   Habilita el modo de diagnóstico de la plataforma de prueba y escribe mensajes de diagnóstico en el archivo especificado y en los archivos que hay junto a él. El proceso que registra los mensajes determina qué archivos se crean, como `*.host_<date>.txt` para el registro del host de prueba y `*.datacollector_<date>.txt` para el registro del recopilador de datos.
 
@@ -104,7 +138,7 @@ Donde `Microsoft.NET.Test.Sdk` es el host de prueba y `xunit` es el marco de pru
 
   Permite que el comando se detenga y espere una entrada o una acción del usuario. Por ejemplo, para completar la autenticación. Disponible desde el SDK de .NET Core 3.0.
 
-- **`-l|--logger <LOGGER_URI/FRIENDLY_NAME>`**
+- **`-l|--logger <LOGGER>`**
 
   Especifica un registrador para los resultados de pruebas. A diferencia de MSBuild, la prueba de dotnet no acepta abreviaturas: en lugar de `-l "console;v=d"` use `-l "console;verbosity=detailed"`.
 
@@ -124,7 +158,7 @@ Donde `Microsoft.NET.Test.Sdk` es el host de prueba y `xunit` es el marco de pru
 
   Directorio donde se encuentran los archivos binarios que se ejecutarán. Si no se especifica la ruta de acceso predeterminada es `./bin/<configuration>/<framework>/`.  En el caso de los proyectos con varias plataformas de destino (a través de la propiedad `TargetFrameworks`), también debe definir `--framework` al especificar esta opción. `dotnet test` siempre ejecuta las pruebas desde el directorio de salida. Puede usar <xref:System.AppDomain.BaseDirectory%2A?displayProperty=nameWithType> para consumir recursos de prueba en el directorio de salida.
 
-- **`-r|--results-directory <PATH>`**
+- **`-r|--results-directory <RESULTS_DIR>`**
 
   El directorio donde se guardarán los resultados de pruebas. Si el directorio especificado no existe, se crea. El valor predeterminado es `TestResults` en el directorio que contiene el archivo del proyecto.
 
@@ -141,7 +175,7 @@ Donde `Microsoft.NET.Test.Sdk` es el host de prueba y `xunit` es el marco de pru
 
 - **`-t|--list-tests`**
 
-  Enumera todas las pruebas detectadas en el proyecto actual.
+  Enumera las pruebas detectadas en vez de ejecutar las pruebas.
 
 - **`-v|--verbosity <LEVEL>`**
 

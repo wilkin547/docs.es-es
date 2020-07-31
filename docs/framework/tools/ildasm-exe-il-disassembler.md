@@ -1,5 +1,6 @@
 ---
 title: Ildasm.exe (Desensamblador de IL)
+description: Use Ildasm.exe (Desensamblador de IL), que toma un archivo portable ejecutable (PE) que contiene código de lenguaje intermedio (IL) y crea un archivo de texto para Ilasm.exe.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - PE files, MSIL Disassembler
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - text files produced by MSIL Disassembler
 - disassembling file for MSIL Assembler input
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
-ms.openlocfilehash: f23f8c48a31dffa7d350c872aed7505da7a36861
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6f2611488e7f653783cab833ad47131978bf74aa
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73105058"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166840"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (Desensamblador de IL)
 

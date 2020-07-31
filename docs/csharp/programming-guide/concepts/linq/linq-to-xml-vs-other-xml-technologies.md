@@ -1,13 +1,14 @@
 ---
 title: LINQ to XML frente a Otras tecnologías XML
+description: En este artículo se compara LINQ to XML con varias tecnologías XML, como XmlReader, XSLT, MSXML y XmlLite, para ayudarle a decidir cuál usar.
 ms.date: 07/20/2015
 ms.assetid: 01b8e746-12d3-471d-b811-7539e4547784
-ms.openlocfilehash: 4cade6ecbee95ee288db34246986858609697731
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0abe6021dae83df0db0d4116eb3c2919d024a62d
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635683"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165330"
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML frente a otras tecnologías XML
 Este tema compara [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] con las siguientes tecnologías XML: <xref:System.Xml.XmlReader>, XSLT, MSXML y XmlLite. Esta información puede ayudarle a decidir la tecnología que utilizará.  
@@ -52,6 +53,6 @@ Este tema compara [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] con las 
   
  XmlLite no está integrado con Language-Integrated Query (LINQ). No proporciona al programador mejoras de productividad que sean la fuerza motivadora detrás de LINQ.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Introducción (LINQ to XML)](./linq-to-xml-overview.md)

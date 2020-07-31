@@ -5,12 +5,12 @@ ms.date: 02/13/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 34074b420547cff802f1835656540be7b8eb58b4
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: b52d69756d85e3e422b798c3ac7d53de3b538b8d
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607485"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167404"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -76,11 +76,11 @@ Un componente determinado, como `System.Runtime`, describe lo siguiente:
 Se proporcionan artefactos derivados para permitir una lectura más cómoda y habilitar ciertos escenarios de desarrollo (por ejemplo, el uso de un compilador).
 
 - [Lista de API en Markdown](https://github.com/dotnet/standard/tree/master/docs/versions)
-- Ensamblados de referencia, distribuidos como [paquetes NuGet](../core/packages.md) y a los que hace referencia el metapaquete [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/).
+- Ensamblados de referencia, distribuidos como paquetes NuGet y a los que hace referencia el metapaquete [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/).
 
 ### <a name="package-representation"></a>Representación de paquetes
 
-El principal vehículo de distribución de los ensamblados de referencia de .NET Standard son los [paquetes NuGet](../core/packages.md). Las implementaciones se entregarán de diversas formas, adecuadas para cada implementación de .NET.
+El principal vehículo de distribución de los ensamblados de referencia de .NET Standard son los paquetes NuGet. Las implementaciones se entregarán de diversas formas, adecuadas para cada implementación de .NET.
 
 Los paquetes NuGet tienen como destino uno o varios [marcos](frameworks.md). Los paquetes de .NET Standard tienen como destino el marco de trabajo ".NET Standard". Puede establecer como destino el marco de .NET Standard mediante el [TFM compacto](frameworks.md)`netstandard` (por ejemplo, `netstandard1.4`). Las bibliotecas diseñadas para ejecutarse en varios entornos de ejecución deben tener como destino este marco de trabajo. Para obtener el conjunto más amplio de API, indique `netstandard2.0` como destino, puesto que el número de API disponibles se ha doblado entre .NET Standard 1.6 y 2.0.
 
@@ -102,7 +102,7 @@ El control de versiones de .NET Standard es importante para su uso. Dada una ver
 
 ## <a name="target-net-standard"></a>.NET Standard como destino
 
-Puede [compilar bibliotecas estándar de .NET](../core/tutorials/libraries.md) mediante una combinación del marco `netstandard` y el metapaquete NETStandard.Library. Puede ver ejemplos de [.NET Standard como destino con herramientas de .NET Core](../core/packages.md).
+Puede [compilar bibliotecas estándar de .NET](../core/tutorials/libraries.md) mediante una combinación del marco `netstandard` y el metapaquete NETStandard.Library.
 
 ## <a name="net-framework-compatibility-mode"></a>Modo de compatibilidad de .NET Framework
 

@@ -1,16 +1,17 @@
 ---
 title: Mage.exe (Herramienta de generación y edición de manifiestos)
+description: Introducción a Mage.exe, la Herramienta de generación y edición de manifiestos. Esta herramienta admite la creación y edición de manifiestos de aplicación e implementación.
 ms.date: 12/06/2018
 helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: b04fda81ae51462d9e686585de1477b4c9af4b26
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 864d3d7bd7cf32b5c2a5ce83819f4e78cd8ce043
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180384"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164263"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Herramienta de generación y edición de manifiestos)
 
@@ -217,7 +218,7 @@ En el ejemplo siguiente se firma un manifiesto de implementación existente medi
 mage -Sign deploy.application -CertFile cert.pfx -KeyContainer keyfile.snk -CryptoProvider "Microsoft Enhanced Cryptographic Provider v1.0"
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Seguridad e implementación ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)
 - [Tutorial: Implementación manual de una aplicación ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)

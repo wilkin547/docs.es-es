@@ -1,13 +1,14 @@
 ---
 title: Errores en código declarativo-imperativo mixto (LINQ to XML) (C#)
+description: Los métodos de LINQ to XML pueden modificar un árbol XML directamente. La iteración a través de uno de los ejes mientras se modifica el árbol XML puede dar lugar a errores impares.
 ms.date: 07/20/2015
 ms.assetid: fada62d0-0680-4e73-945a-2b00d7a507af
-ms.openlocfilehash: 76a9bb5abf6ce2700a2a0698ebc109f65e2b7eb1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4eaed10f0a2e64abeb7725dcd70816d75d8a0423
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168354"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165288"
 ---
 # <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-c"></a>Errores en códigos declarativos/imperativos mixtos (LINQ to XML) (C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] incluye numerosos métodos que le permiten modificar directamente un árbol XML. Puede agregar elementos, eliminarlos, cambiar sus contenidos, agregar atributos, etc. Esta interfaz de programación se describe en [Modificar árboles XML (LINQ to XML) (C#)](./in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md). Si está llevando a cabo una iteración por uno de los ejes, como puede ser <xref:System.Xml.Linq.XContainer.Elements%2A>, y está modificando el árbol XML a medida que recorre el eje, es posible que acabe encontrando errores extraños.  

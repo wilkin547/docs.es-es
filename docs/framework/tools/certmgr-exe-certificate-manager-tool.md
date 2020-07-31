@@ -1,5 +1,6 @@
 ---
 title: Certmgr.exe (Herramienta de administración de certificados)
+description: Explore Certmgr.exe, la herramienta Administrador de certificados. Esta herramienta administra certificados, listas de certificados de confianza (CTL) y listas de revocaciones de certificados (CRL).
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - CTLs
 - certificate revocation lists
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
-ms.openlocfilehash: 06fe3a78d0b19720d4f83111980b88806312205f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 43ab281e6ec28ff23ea584b03fd4278c6682e33e
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73129874"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167261"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (Herramienta de administración de certificados)
 El administrador de certificados (Certmgr.exe) es una herramienta que administra certificados, listas de certificados de confianza (CTL) y listas de revocación de certificados (CRL).  

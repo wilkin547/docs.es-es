@@ -4,12 +4,12 @@ description: Aplicaciones web modernas con ASP.NET Core y Azure | Recomendacione
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/06/2019
-ms.openlocfilehash: 5587b8b20da8a6801d77b722e9c3326f6e695574
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 547654e77812481daffc9a03ccd28d3d2f6b5f09
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73416714"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164426"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Recomendaciones de hospedaje en Azure de aplicaciones web ASP.NET Core
 

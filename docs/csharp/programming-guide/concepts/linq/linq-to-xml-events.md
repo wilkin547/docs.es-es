@@ -1,13 +1,14 @@
 ---
 title: Eventos de LINQ to XML (C#)
+description: Agregue eventos de LINQ to XML en C# a una instancia de cualquier XObject. El controlador de eventos recibe eventos cuando se modifica el árbol XML para ese XObject.
 ms.date: 07/20/2015
 ms.assetid: ce7de951-cba7-4870-9962-733eb01cd680
-ms.openlocfilehash: 8e0cb4519dd0fc2bed443d9a62b9a2545d10e161
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 576b0a5d0472bddd66e01d3bef8f3affa1c9458b
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253173"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165424"
 ---
 # <a name="linq-to-xml-events-c"></a>Eventos de LINQ to XML (C#)
 Los eventos de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] permiten recibir notificaciones cuando se modifica un árbol XML.  
@@ -26,14 +27,14 @@ Los eventos de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] permiten re
   
  Los siguientes eventos se generan cuando se modifica un árbol XML:  
   
-|evento|Description|  
+|Evento|Descripción|  
 |-----------|-----------------|  
 |<xref:System.Xml.Linq.XObject.Changing>|Se produce justo antes de que este <xref:System.Xml.Linq.XObject> o cualquiera de sus descendientes se vayan a modificar.|  
 |<xref:System.Xml.Linq.XObject.Changed>|Se produce cuando ha cambiado un <xref:System.Xml.Linq.XObject> o cualquiera de sus descendientes.|  
   
 ## <a name="example"></a>Ejemplo  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descripción  
  Los eventos resultan útiles cuando desea mantener cierta información de agregado en un árbol XML. Por ejemplo, quizá desee mantener el total de una factura que es la suma de los conceptos de la factura. Este ejemplo utiliza eventos para mantener el total de todos los elementos secundarios que se encuentran bajo el elemento complejo `Items`.  
   
 ### <a name="code"></a>Código  

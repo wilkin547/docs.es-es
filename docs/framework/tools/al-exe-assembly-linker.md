@@ -1,5 +1,6 @@
 ---
 title: Al.exe (Assembly Linker)
+description: Use AI.exe, la herramienta Assembly Linker. Esta herramienta genera un archivo con un manifiesto del ensamblado a partir de uno o varios archivos que son módulos o archivos de recursos.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Al.exe
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - modules, Assembly Linker
 - assembly manifest, Assembly Linker
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
-ms.openlocfilehash: b7081f00e31dfa8ac46909e61c7d389ba7954878
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 66408b11f4e82776058ac19b8454bf50906b4b86
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83611411"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167355"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Assembly Linker)
 

@@ -1,5 +1,6 @@
 ---
 title: Gacutil.exe (Herramienta Caché global de ensamblados)
+description: Obtenga detalles sobre Gacutil.exe, la herramienta Caché global de ensamblados. Esta herramienta le permite ver y manipular la caché global de ensamblados y la caché de descarga.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - global assembly cache, Gacutil.exe
 - Global Assembly Cache tool
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
-ms.openlocfilehash: 87f3cb799ba4e406906759e1facd19d00c8bdace
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1fe79a09aa99c9d91d8223e7642408a56da20dfe
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73107502"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166936"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (Herramienta Caché global de ensamblados)
 
