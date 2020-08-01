@@ -2,12 +2,12 @@
 title: 'Funciones recursivas: palabra clave rec'
 description: "Obtenga información sobre cómo se usa la palabra clave ' Rec ' de F # con la palabra clave ' Let ' para definir una función recursiva."
 ms.date: 05/16/2016
-ms.openlocfilehash: c9a3b7dc27f4ed86948a08b7783d7e8e8b60e57f
-ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
+ms.openlocfilehash: c2374f90b4585327c6f5208a3d6bca75a23d0cbb
+ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87426981"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87455661"
 ---
 # <a name="recursive-functions-the-rec-keyword"></a>Funciones recursivas: palabra clave rec
 
@@ -28,7 +28,7 @@ function2-body
 ...
 ```
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 Las funciones recursivas, las funciones que se llaman a sí mismas, se identifican explícitamente en el lenguaje F #. Esto hace que el identificador que se está definiendo esté disponible en el ámbito de la función.
 
@@ -43,7 +43,7 @@ Los métodos son implícitamente recursivos dentro del tipo; no es necesario agr
 
 ## <a name="tail-recursion"></a>Recursividad de cola
 
-En el caso de algunas funciones recursivas, es necesario refactorizar una definición más "pura" a una que sea [recursiva](https://cs.stackexchange.com/questions/6230/what-is-tail-recursion). Esto evita los recálculos de innecesarios. Por ejemplo, el generador de números de Fibonacci anterior se puede volver a escribir de la siguiente manera:
+En el caso de algunas funciones recursivas, es necesario refactorizar una definición más "pura" a una que sea [recursiva](https://cs.stackexchange.com/questions/6230/what-is-tail-recursion). Esto evita los cálculos innecesarios. Por ejemplo, el generador de números de Fibonacci anterior se puede volver a escribir de la siguiente manera:
 
 ```fsharp
 let fib n =
