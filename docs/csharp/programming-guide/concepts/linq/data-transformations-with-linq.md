@@ -1,5 +1,6 @@
 ---
 title: Transformaciones de datos con LINQ (C#)
+description: Aprenda a usar consultas LINQ en C# para transformar datos. Puede modificar la secuencia mediante la ordenación y la agrupación, y la creación de tipos mediante la cláusula SELECT.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], data transformations
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: d20f5d826620ad8654ddf1e9471ecc894b2c0391
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6844cf2aa589f7516a9e40bc604c5f907ec6d311
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408528"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104015"
 ---
 # <a name="data-transformations-with-linq-c"></a>Transformaciones de datos con LINQ (C#)
 Language-Integrated Query (LINQ) no solo es para recuperar datos. También es una herramienta eficaz para transformarlos. Mediante el uso de un consulta LINQ, se puede usar una secuencia de origen como entrada y modificarla de muchas maneras para crear una nueva secuencia de salida. Por medio de ordenaciones y agrupaciones se puede modificar la propia secuencia sin modificar los elementos. Pero quizás la característica más eficaz de las consultas LINQ es la capacidad para crear nuevos tipos. Esto se realiza en la cláusula [select](../../../language-reference/keywords/select-clause.md). Por ejemplo, puede realizar las tareas siguientes:  

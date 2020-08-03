@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para crear una unión de C o C++ mediante atributos (C#)
+description: Aprenda a usar atributos para personalizar la manera en la que los structs se disponen en la memoria en C#. En este ejemplo se implementa el equivalente de una unión de C/C++.
 ms.date: 07/20/2015
 ms.assetid: 85f35e56-26e0-4d31-9f3a-89bd4005e71a
-ms.openlocfilehash: ff8ce560444581a28b257820573224f89a274cd9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 766a070105441630dfd8fecf7b9f68fa6818fe50
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141575"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925077"
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>Procedimiento para crear una unión de C o C++ mediante atributos (C#)
 

@@ -4,11 +4,12 @@ description: En este artículo se muestran las diversas maneras de instalar el S
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: ed4f5b914d03cfb072ee4ba168c67262e0d40c08
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: c590bd89b718a5cd31dae9f83049eac910cb4049
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619434"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86863896"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-ubuntu"></a>Instalación del SDK de .NET Core o de .NET Core Runtime en Ubuntu
 
@@ -29,7 +30,7 @@ En la tabla siguiente se muestra una lista de versiones de .NET Core actualmente
 | Ubuntu                   | .NET Core 2.1 | .NET Core 3.1 | Versión preliminar de .NET 5 (solo instalación manual) |
 |--------------------------|---------------|---------------|----------------|
 | ✔️ [20.04 (LTS)](#2004-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 (versión preliminar) |
-| ✔️ [19.10](#1910-)       | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 (versión preliminar) |
+| ❌ [19.10](#1910-)       | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 (versión preliminar) |
 | ❌ [19.04](#1904-)       | ✔️ 2.1        | ✔️ 3.1        | ❌ 5.0 (versión preliminar) |
 | ❌ [18.10](#1810-)       | ✔️ 2.1        | ❌ 3.1        | ❌ 5.0 (versión preliminar) |
 | ✔️ [18.04 (LTS)](#1804-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 (versión preliminar) |
@@ -59,7 +60,9 @@ sudo dpkg -i packages-microsoft-prod.deb
 
 [!INCLUDE [linux-apt-install-31](includes/linux-install-31-apt.md)]
 
-## <a name="1910-"></a>19.10 ✔️
+## <a name="1910-"></a>19.10 ❌
+
+[!INCLUDE [linux-not-supported](includes/linux-not-supported-ubuntu.md)]
 
 [!INCLUDE [linux-prep-intro-apt](includes/linux-prep-intro-apt.md)]
 

@@ -1,16 +1,17 @@
 ---
 title: 'Constructores privados: Guía de programación de C#'
+description: Un constructor privado es un constructor de instancia especial de C# que se usa para restringir el modo en el que se puede crear un objeto. Se puede usar con métodos de fábrica u otras expresiones de construcción.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, private constructors
 - private constructors [C#]
 ms.assetid: 29eeaa7d-8d81-453c-94b9-0e2800172621
-ms.openlocfilehash: 2f8b93fbeb7c2996f3e2683fe86f159fbfa61a92
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a6b86ccb870da0262bcbc516e176e00d17724f9f
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705449"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864064"
 ---
 # <a name="private-constructors-c-programming-guide"></a>Constructores privados (Guía de programación de C#)
 Un constructor privado es un constructor de instancia especial. Se usa generalmente en clases que contienen solo miembros estáticos. Si una clase tiene uno o más constructores privados y ningún constructor público, el resto de clases (excepto las anidadas) no podrán crear instancias de esta clase. Por ejemplo:  

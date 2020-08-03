@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para combinar contenido de archivos no similares (LINQ) (C#)
+description: Aprenda a combinar datos de dos archivos delimitados por comas mediante LINQ en C#. Los datos comparten un valor común que se usa como clave coincidente.
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: efe11c31873f21841c28bd393b295eea117d1e46
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 136d10ff5c0bf5f4f18998b50eb7bbee218b00a9
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169095"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104985"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Procedimiento para combinar contenido de archivos no similares (LINQ) (C#)
 
@@ -127,4 +128,4 @@ Tucker, 94, 92, 91, 91
 ## <a name="see-also"></a>Vea también
 
 - [LINQ y cadenas (C#)](./linq-and-strings.md)
-- [LINQ and File Directories (C#)](./linq-and-file-directories.md) (LINQ y directorios de archivos [C#])
+- [LINQ y directorios de archivos (C#)](./linq-and-file-directories.md)

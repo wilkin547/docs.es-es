@@ -1,13 +1,14 @@
 ---
 title: Diferencias entre la programación funcional y La programación imperativa (C#)
+description: En este artículo se compara la programación funcional en C# con el enfoque basado en procedimientos. La programación funcional aplica inmutabilidad por medio de funciones puras.
 ms.date: 07/20/2015
 ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
-ms.openlocfilehash: a163a62912ed2a44d6ea8cad5bc536f03343f15c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bc421d654e532293b522dab9d43920d0fffd7b92
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69594321"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103746"
 ---
 # <a name="functional-programming-vs-imperative-programming-c"></a>Diferencias entre la programación funcional y La programación imperativa (C#)
 Este tema compara y contrasta la programación funcional y la programación imperativa (orientada a procedimientos) más tradicional.  
@@ -50,7 +51,7 @@ Este tema compara y contrasta la programación funcional y la programación impe
   
  Afortunadamente, C# no requiere un salto completo a la programación funcional, ya que admite enfoques de programación imperativos y funcionales. Un desarrollador puede elegir el enfoque más adecuado para una escenario específico. En realidad, los programas suelen combinar ambos enfoques.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Introducción a las transformaciones funcionales puras (C#)](./introduction-to-pure-functional-transformations.md)
 - [Transformaciones XSLT](../../../../standard/data/xml/xslt-transformations.md)

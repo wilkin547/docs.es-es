@@ -1,5 +1,6 @@
 ---
 title: Ilasm.exe (Ensamblador de IL)
+description: Empiece a usar Ilasm.exe, el ensamblador de IL. Esta herramienta genera un archivo ejecutable portable (PE) a partir de lenguaje intermedio (IL).
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MSIL generators
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Ilasm.exe
 - verifying MSIL performance
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
-ms.openlocfilehash: cb995e78e534048043886070536ef0dd0a45c057
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1a85b3bf9509ffba6c2331d14196a6bef2bfa080
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73105098"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166979"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (Ensamblador de IL)
 

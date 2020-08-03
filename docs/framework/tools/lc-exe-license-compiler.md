@@ -1,5 +1,6 @@
 ---
 title: Lc.exe (Compilador de licencias)
+description: Use Lc.exe, el compilador de licencias. Esta herramienta lee los archivos de texto que tienen información de licencia y crea un archivo binario para insertarlo en un ejecutable de CLR como un recurso.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Lc.exe
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: 464514a241cc35fc821049ba0c29bec108d88253
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 45a80ba7c3e24c0f419758315b2d2daafd3890f4
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180394"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164245"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (Compilador de licencias)
 El Compilador de licencias lee archivos de texto que contienen información sobre licencias y crea un archivo binario que se puede incrustar como recurso en un archivo ejecutable de Common Language Runtime.  

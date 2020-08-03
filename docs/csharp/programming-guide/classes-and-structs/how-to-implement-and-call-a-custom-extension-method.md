@@ -1,15 +1,16 @@
 ---
 title: Procedimiento para implementar e invocar un método de extensión personalizado - Guía de programación de C#
+description: Aprenda a implementar métodos de extensión para cualquier tipo de .NET. El código de cliente puede usar los métodos mediante la incorporación de una referencia a un archivo DLL y la adición de una directiva using.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
-ms.openlocfilehash: f9937c4b7c6e66af0ee3bc6f6d9ef3b3b1edd530
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 7856e78713648a42d1c961f50f7e83f2f7ef05b7
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241830"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865065"
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>Procedimiento para implementar e invocar un método de extensión personalizado (Guía de programación de C#)
 En este tema se muestra cómo implementar sus propios métodos de extensión para cualquier tipo de .NET. El código de cliente puede usar los métodos de extensión agregando una referencia a la DLL que los contiene y agregando una directiva [using](../../language-reference/keywords/using-directive.md) que especifique el espacio de nombres en el que se definen los métodos de extensión.  

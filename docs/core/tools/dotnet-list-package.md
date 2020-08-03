@@ -2,12 +2,12 @@
 title: Comando dotnet list package
 description: El comando "dotnet list package" ofrece una opción práctica para mostrar las referencias de paquete de un proyecto o una solución.
 ms.date: 02/14/2020
-ms.openlocfilehash: 12d64600d178ea8cf490a0d6917e67bd3d8c6d21
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 7157e56860936d10aa322854a589ae89e2bc0826
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463663"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164762"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
@@ -21,6 +21,7 @@ ms.locfileid: "81463663"
 
 ```dotnetcli
 dotnet list [<PROJECT>|<SOLUTION>] package [--config <SOURCE>]
+    [--deprecated]
     [--framework <FRAMEWORK>] [--highest-minor] [--highest-patch]
     [--include-prerelease] [--include-transitive] [--interactive]
     [--outdated] [--source <SOURCE>]
@@ -78,6 +79,10 @@ El archivo de proyecto o solución donde se operará. Si no se especifica, el co
 
   Los orígenes de NuGet que se usarán al buscar paquetes más recientes. Requiere la opción `--outdated`.
 
+- **`--deprecated`**
+
+  Muestra los paquetes que han quedado en desuso.
+
 - **`--framework <FRAMEWORK>`**
 
   Muestra solo los paquetes aplicables al [marco de destino](../../standard/frameworks.md) especificado. Para especificar varios marcos, repita la opción varias veces. Por ejemplo: `--framework netcoreapp2.2 --framework netstandard2.0`.
@@ -88,15 +93,15 @@ El archivo de proyecto o solución donde se operará. Si no se especifica, el co
 
 - **`--highest-minor`**
 
-  Considere solo los paquetes con un número de versión principal coincidente al buscar paquetes más recientes. Requiere la opción `--outdated`.
+  Considere solo los paquetes con un número de versión principal coincidente al buscar paquetes más recientes. Requiere la opción `--outdated` o `--deprecated`.
 
 - **`--highest-patch`**
 
-  Considere solo los paquetes con número de versión principal y secundario coincidente al buscar paquetes más recientes. Requiere la opción `--outdated`.
+  Considere solo los paquetes con número de versión principal y secundario coincidente al buscar paquetes más recientes. Requiere la opción `--outdated` o `--deprecated`.
 
 - **`--include-prerelease`**
 
-  Considere los paquetes con versiones preliminares al buscar paquetes más recientes. Requiere la opción `--outdated`.
+  Considere los paquetes con versiones preliminares al buscar paquetes más recientes. Requiere la opción `--outdated` o `--deprecated`.
 
 - **`--include-transitive`**
 
@@ -112,7 +117,7 @@ El archivo de proyecto o solución donde se operará. Si no se especifica, el co
 
 - **`-s|--source <SOURCE>`**
 
-  Los orígenes de NuGet que se usarán al buscar paquetes más recientes. Requiere la opción `--outdated`.
+  Los orígenes de NuGet que se usarán al buscar paquetes más recientes. Requiere la opción `--outdated` o `--deprecated`.
 
 ## <a name="examples"></a>Ejemplos
 

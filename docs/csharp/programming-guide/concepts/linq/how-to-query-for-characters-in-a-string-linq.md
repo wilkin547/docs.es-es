@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para buscar caracteres en una cadena (LINQ) (C#)
+description: En LINQ puede consultar una cadena como una secuencia de caracteres. En este ejemplo de C# se consulta una cadena para determinar el número de dígitos numéricos que contiene.
 ms.date: 07/20/2015
 ms.assetid: 727a1be7-dbec-4ab8-b414-bc2d56feb6ff
-ms.openlocfilehash: d85e488a38a6167505732103b4c540cade6ea9bc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3512be7c30843fcd8e881eab59761706a84a3ac8
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345678"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104554"
 ---
 # <a name="how-to-query-for-characters-in-a-string-linq-c"></a>Procedimiento para buscar caracteres en una cadena (LINQ) (C#)
 Como la clase <xref:System.String> implementa la interfaz <xref:System.Collections.Generic.IEnumerable%601> genérica, cualquier cadena puede consultarse como una secuencia de caracteres. Pero esto no es un uso habitual de LINQ. Para operaciones de coincidencia de patrones complejas, use la clase <xref:System.Text.RegularExpressions.Regex>.  
@@ -57,7 +58,7 @@ class QueryAString
 ## <a name="compiling-the-code"></a>Compilar el código  
  Cree un proyecto de aplicación de consola de C# con directivas `using` para los espacios de nombres System.Linq y System.IO.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [LINQ y cadenas (C#)](./linq-and-strings.md)
 - [Procedimiento para combinar consultas LINQ con expresiones regulares (C#)](./how-to-combine-linq-queries-with-regular-expressions.md)

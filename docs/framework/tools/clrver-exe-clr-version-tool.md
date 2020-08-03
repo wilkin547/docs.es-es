@@ -1,16 +1,17 @@
 ---
 title: Clrver.exe (herramienta de versión de CLR)
+description: Revise Clrver.exe, la herramienta de versión de CLR. Esta herramienta notifica todas las versiones instaladas de Common Language Runtime (CLR) en el equipo.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Clrver.exe
 - CLR Version tool
 ms.assetid: cbc2ee86-bdc8-4a65-a8f1-ba23bce3a699
-ms.openlocfilehash: bfc612ef5455e1b4a03d15fd99a8a1873d2c7c08
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e914034819418df00438c454e209e6c86779ba3c
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75715797"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167274"
 ---
 # <a name="clrverexe-clr-version-tool"></a>Clrver.exe (herramienta de versión de CLR)
 La herramienta de versión de CLR (Clrver.exe) notifica todas las versiones instaladas de Common Language Runtime (CLR) en el equipo.  
@@ -27,7 +28,7 @@ clrver [option]
   
 ## <a name="options"></a>Opciones  
   
-|Opción|Description|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |`-all`|Muestra todos los procesos del equipo que usan CLR.|  
 |*pid*|Muestra las versiones de CLR que utiliza el proceso con el identificador de proceso especificado (PID).|  

@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para generar XML a partir de archivos CSV (C#)
+description: Aprenda a usar LINQ y LINQ to XML en C# para generar XML a partir de un archivo .csv. La consulta usa una cláusula let para dividir las cadenas en matrices de campos.
 ms.date: 07/20/2015
 ms.assetid: 57b9ccde-f983-4a21-ae61-70ecede30307
-ms.openlocfilehash: 643c05cb440165c4461c3e9c80e69701241ab8d1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2fc9954a51fc1f2979c6cce13805ed15cdb88741
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635813"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105181"
 ---
 # <a name="how-to-generate-xml-from-csv-files-c"></a>Procedimiento para generar XML a partir de archivos CSV (C#)
 En este ejemplo se muestra el uso de Language Integrated Query (LINQ) y [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para generar un archivo XML a partir de un archivo de valores separados por comas (CSV).  

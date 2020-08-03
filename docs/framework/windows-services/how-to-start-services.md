@@ -1,17 +1,18 @@
 ---
 title: Procedimiento para iniciar servicios
+description: Aprenda varias formas de iniciar servicios. Después de instalar un servicio, debe iniciarse. Al iniciarse, llama al método OnStart en la clase de servicio.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, starting
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
-ms.openlocfilehash: 75fd3aba88bdffbe536ad5dab14996913d0a9d22
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4a2f9b291e60b12b1465fbb6bbbd1604572359a7
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053571"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925727"
 ---
 # <a name="how-to-start-services"></a>Procedimiento para iniciar servicios
 

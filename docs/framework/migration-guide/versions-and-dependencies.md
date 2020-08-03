@@ -1,16 +1,17 @@
 ---
 title: Versiones de .NET Framework y sistema operativo Windows
+description: Obtenga información sobre las características clave de cada versión de .NET Framework, incluidas las versiones del CLR subyacentes y las versiones instaladas por el sistema operativo Windows.
 ms.custom: updateeachrelease
 ms.date: 01/17/2020
 helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
-ms.openlocfilehash: 486b320ca30323684d301630ad29f8f4615764ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: df44786dfd0a384ae2498a94d14b029612450fee
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77504048"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475481"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>Versiones y dependencias de .NET Framework
 
@@ -42,7 +43,7 @@ En las tablas siguientes se resume el historial de versiones de .NET Framework y
 
 ### <a name="net-framework-48"></a>.NET Framework 4.8
 
-- [Nuevas características:](../whats-new/index.md#whats-new-in-net-framework-48)
+- [Características nuevas](../whats-new/index.md#whats-new-in-net-framework-48)
 - [Novedades de accesibilidad](../whats-new/whats-new-in-accessibility.md#whats-new-in-accessibility-in-net-framework-48)
 - [Notas de la versión](https://github.com/Microsoft/dotnet/tree/master/releases/net48/README.md)
 
@@ -55,7 +56,7 @@ En las tablas siguientes se resume el historial de versiones de .NET Framework y
 
 ### <a name="net-framework-472"></a>.NET Framework 4.7.2
 
-- [Nuevas características:](../whats-new/index.md#whats-new-in-net-framework-472)
+- [Características nuevas](../whats-new/index.md#whats-new-in-net-framework-472)
 - [Novedades de accesibilidad](../whats-new/whats-new-in-accessibility.md#whats-new-in-accessibility-in-net-framework-472)
 - [Notas de la versión](https://github.com/Microsoft/dotnet/tree/master/releases/net472/README.md)
 
@@ -71,7 +72,7 @@ En las tablas siguientes se resume el historial de versiones de .NET Framework y
 
 ### <a name="net-framework-471"></a>.NET Framework 4.7.1
 
-- [Nuevas características:](../whats-new/index.md#whats-new-in-net-framework-471)
+- [Características nuevas](../whats-new/index.md#whats-new-in-net-framework-471)
 - [Novedades de accesibilidad](../whats-new/whats-new-in-accessibility.md#whats-new-in-accessibility-in-net-framework-471)
 - [Notas de la versión](https://github.com/Microsoft/dotnet/tree/master/releases/net471/README.md)
 
@@ -84,7 +85,7 @@ En las tablas siguientes se resume el historial de versiones de .NET Framework y
 
 ### <a name="net-framework-47"></a>.NET Framework 4.7
 
-- [Nuevas características:](../whats-new/index.md#whats-new-in-net-framework-47)
+- [Características nuevas](../whats-new/index.md#whats-new-in-net-framework-47)
 - [Notas de la versión](https://github.com/Microsoft/dotnet/tree/master/releases/net47/README.md)
 
 |||
@@ -96,7 +97,7 @@ En las tablas siguientes se resume el historial de versiones de .NET Framework y
 
 ### <a name="net-framework-462"></a>.NET Framework 4.6.2
 
-- [Nuevas características:](../whats-new/index.md#whats-new-in-net-framework-462)
+- [Características nuevas](../whats-new/index.md#whats-new-in-net-framework-462)
 - [Notas de la versión](https://github.com/Microsoft/dotnet/tree/master/releases/net462/README.md)
 
 |||
@@ -108,7 +109,7 @@ En las tablas siguientes se resume el historial de versiones de .NET Framework y
 
 ### <a name="net-framework-461"></a>.NET Framework 4.6.1
 
-- [Nuevas características:](../whats-new/index.md#whats-new-in-net-framework-461)
+- [Características nuevas](../whats-new/index.md#whats-new-in-net-framework-461)
 - [Notas de la versión](https://github.com/Microsoft/dotnet/tree/master/releases/net461/README.md)
 
 |||
@@ -123,7 +124,7 @@ En las tablas siguientes se resume el historial de versiones de .NET Framework y
 
 ### <a name="net-framework-46"></a>.NET Framework 4.6
 
-- [Nuevas características:](../whats-new/index.md#whats-new-in-net-2015)
+- [Características nuevas](../whats-new/index.md#whats-new-in-net-2015)
 - [Notas de la versión](https://github.com/Microsoft/dotnet/tree/master/releases/net46/README.md)
 
 |||
@@ -136,7 +137,7 @@ En las tablas siguientes se resume el historial de versiones de .NET Framework y
 
 ### <a name="net-framework-452"></a>.NET Framework 4.5.2
 
-- [Nuevas características:](../whats-new/index.md#whats-new-in-net-framework-452)
+- [Características nuevas](../whats-new/index.md#whats-new-in-net-framework-452)
 - [Notas de la versión](https://github.com/Microsoft/dotnet/tree/master/releases/net452/README.md)
 
 |||
@@ -148,7 +149,7 @@ En las tablas siguientes se resume el historial de versiones de .NET Framework y
 
 ### <a name="net-framework-451"></a>.NET Framework 4.5.1
 
-- [Nuevas características:](../whats-new/index.md#whats-new-in-net-framework-451)
+- [Características nuevas](../whats-new/index.md#whats-new-in-net-framework-451)
 - [Notas de la versión](https://github.com/Microsoft/dotnet/tree/master/releases/net451/README.md)
 
 |||
@@ -161,7 +162,7 @@ En las tablas siguientes se resume el historial de versiones de .NET Framework y
 
 ### <a name="net-framework-45"></a>.NET Framework 4.5
 
-- [Nuevas características:](../whats-new/index.md#whats-new-in-net-framework-45)
+- [Características nuevas](../whats-new/index.md#whats-new-in-net-framework-45)
 - [Notas de la versión](https://github.com/Microsoft/dotnet/tree/master/releases/net45/README.md)
 
 |||
@@ -174,7 +175,7 @@ En las tablas siguientes se resume el historial de versiones de .NET Framework y
 
 ### <a name="net-framework-4"></a>.NET Framework 4
 
-[Nuevas características:](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms171868(v=vs.100))
+[Características nuevas](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms171868(v=vs.100))
 
 |||
 |-|-|
@@ -302,7 +303,7 @@ Además, si la aplicación tiene como destino la versión 2.0, 3.0 o 3.5, es po
 
 - Para obtener información sobre cómo determinar qué versiones o actualizaciones están instaladas en un equipo, consulte [Cómo: Determinar qué versiones de .NET Framework están instaladas](how-to-determine-which-versions-are-installed.md) y [Cómo: Determinar qué actualizaciones de .NET Framework están instaladas](how-to-determine-which-net-framework-updates-are-installed.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Compatibilidad de versiones](version-compatibility.md)
 | [Directiva de soporte técnico oficial de .NET Framework](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)

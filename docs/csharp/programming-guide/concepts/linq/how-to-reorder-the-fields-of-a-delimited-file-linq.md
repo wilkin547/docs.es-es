@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para reordenar los campos de un archivo delimitado (LINQ) (C#)
+description: Obtenga información sobre cómo reorganizar los campos de un archivo .csv de LINQ en C#. En el ejemplo se cambia el orden de las columnas, se realizan combinaciones en ellas y se ordenan las filas por un valor de columna.
 ms.date: 07/20/2015
 ms.assetid: 4e62d82c-61b7-4f18-b9a1-86723746d7d2
-ms.openlocfilehash: 6bc502ff12a908edf43f9ff7f5f63f98c3ff29c4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3ebc56b418d2732a296896a19d770136a56e2fbb
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347653"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103407"
 ---
 # <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-c"></a>Procedimiento para reordenar los campos de un archivo delimitado (LINQ) (C#)
 Un archivo de valores separados por comas (CSV) es un archivo de texto que se usa a menudo para almacenar datos de hoja de cálculo u otros datos tabulares que se representan mediante filas y columnas. Mediante el uso del método <xref:System.String.Split%2A> para separar los campos, es muy fácil consultar y manipular los archivos CSV con LINQ. De hecho, la misma técnica puede usarse para reordenar los elementos de cualquier línea estructurada de texto, no se limita a un archivo CSV.  
@@ -78,8 +79,8 @@ class CSVFiles
 ## <a name="compiling-the-code"></a>Compilar el código  
 Cree un proyecto de aplicación de consola de C# con directivas `using` para los espacios de nombres System.Linq y System.IO.
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [LINQ y cadenas (C#)](./linq-and-strings.md)
-- [LINQ and File Directories (C#)](./linq-and-file-directories.md) (LINQ y directorios de archivos [C#])
+- [LINQ y directorios de archivos (C#)](./linq-and-file-directories.md)
 - [Procedimiento para generar XML a partir de archivos CSV (C#)](./how-to-generate-xml-from-csv-files.md)

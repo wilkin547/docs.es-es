@@ -1,5 +1,6 @@
 ---
 title: Símbolo del sistema para desarrolladores de Visual Studio
+description: Aprenda a usar el Símbolo del sistema para desarrolladores de Visual Studio, que permite usar herramientas de .NET más fácilmente. Establece automáticamente variables de entorno específicas.
 ms.date: 01/05/2020
 helpviewer_keywords:
 - command prompt, Windows SDK
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - environment variables, setting for tools
 - developer command prompt
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
-ms.openlocfilehash: f028281d477284acf3ac4dac63f5ddbbd79f5259
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 92416820f47cb778dfcc916b8626df4aa328814c
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75715842"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167179"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Símbolo del sistema para desarrolladores de Visual Studio
 
@@ -91,7 +92,7 @@ Para un acceso más sencillo, puede agregar el Símbolo del sistema para desarro
 
    ![Elemento de menú del símbolo del sistema en Visual Studio](./media/developer-command-prompt-for-vs/command-prompt-vs-menu.png)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Herramientas de .NET Framework](index.md)
 - [Administrar herramientas externas](/visualstudio/ide/managing-external-tools)

@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para buscar el archivo o archivos de mayor tamaño en un árbol de directorios (LINQ) (C#)
+description: En este ejemplo de C# se muestran cinco consultas LINQ relacionadas con el tamaño de archivo en bytes. Puede modificarlas para realizar consultas en otra propiedad del objeto FileInfo.
 ms.date: 07/20/2015
 ms.assetid: 20c8a917-0552-4514-b489-0b8b6a4c3b4c
-ms.openlocfilehash: ed7d610bd292be4062db89f3c94af280e851141f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c06c6017d6fd1efd6412729c5df63a2b819908a6
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168770"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104384"
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>Procedimiento para buscar el archivo o archivos de mayor tamaño en un árbol de directorios (LINQ) (C#)
 En este ejemplo se muestran cinco consultas relacionadas con el tamaño de archivo en bytes:  
@@ -148,4 +149,4 @@ Cree un proyecto de aplicación de consola de C# con directivas `using` para los
 ## <a name="see-also"></a>Vea también
 
 - [LINQ to Objects (C#)](./linq-to-objects.md)
-- [LINQ and File Directories (C#)](./linq-and-file-directories.md) (LINQ y directorios de archivos [C#])
+- [LINQ y directorios de archivos (C#)](./linq-and-file-directories.md)

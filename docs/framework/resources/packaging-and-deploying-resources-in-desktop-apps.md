@@ -1,5 +1,6 @@
 ---
 title: Empaquetado e implementación de recursos en aplicaciones .NET
+description: Empaquete e implemente recursos en aplicaciones .NET con un ensamblado principal (concentrador) y ensamblados satélite (radios). Un radio contiene recursos localizados, pero sin código.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - localizing resources
 - neutral cultures
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
-ms.openlocfilehash: d64e3b5201e34541fdafa5724b0c7e8c3f6c0c0d
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 7b06ca4444b75f0a7002323b32732dd4f855f692
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243055"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166188"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>Empaquetado e implementación de recursos en aplicaciones .NET
 
@@ -71,7 +72,7 @@ Para mejorar el rendimiento de la búsqueda, aplique el atributo <xref:System.Re
 El proceso de reserva de recursos de .NET Framework conlleva los pasos siguientes:
 
 > [!TIP]
-> Es posible que pueda usar el elemento de configuración [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) para optimizar el proceso de reserva de recursos y el proceso mediante el cual el tiempo de ejecución sondea los ensamblados de recursos. Para obtener más información, vea la sección [Optimizar el proceso de reserva de recursos](packaging-and-deploying-resources-in-desktop-apps.md#Optimizing).
+> Es posible que pueda usar el elemento de configuración [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) para optimizar el proceso de reserva de recursos y el proceso mediante el cual el entorno de ejecución sondea los ensamblados de recursos. Para obtener más información, vea la sección [Optimizar el proceso de reserva de recursos](packaging-and-deploying-resources-in-desktop-apps.md#Optimizing).
 
 1. El tiempo de ejecución busca primero en la [caché global de ensamblados](../app-domains/gac.md) un ensamblado que coincida con la referencia cultural solicitada para la aplicación.
 
@@ -126,7 +127,7 @@ Para optimizar el sondeo de ensamblados satélite, incluya el elemento [\<relati
 </configuration>
 ```
 
-El sondeo optimizado de los ensamblados satélite es una característica opcional. Es decir, el tiempo de ejecución sigue los pasos documentados en [El proceso de reserva de recursos](packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1), a menos que el elemento [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) esté presente en el archivo de configuración de la aplicación y su atributo `enabled` esté establecido en `true`. Si este es el caso, el proceso de sondeo de un ensamblado satélite se modifica de la manera siguiente:
+El sondeo optimizado de los ensamblados satélite es una característica opcional. Es decir, el entorno de ejecución sigue los pasos documentados en [Proceso de reserva de recursos](packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1), a menos que el elemento [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) esté presente en el archivo de configuración de la aplicación y su atributo `enabled` esté establecido en `true`. Si este es el caso, el proceso de sondeo de un ensamblado satélite se modifica de la manera siguiente:
 
 - El tiempo de ejecución usa la ubicación del ensamblado de código principal para sondear el ensamblado satélite. Si el ensamblado principal está instalado en la caché global de ensamblados, el tiempo de ejecución sondea la memoria caché, pero no el directorio de la aplicación. Si el ensamblado principal está instalado en un directorio de aplicación, el tiempo de ejecución sondea el directorio de la aplicación, pero no la caché global de ensamblados.
 

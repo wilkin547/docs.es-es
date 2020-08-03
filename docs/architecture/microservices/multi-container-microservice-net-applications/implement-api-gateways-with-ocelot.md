@@ -2,12 +2,12 @@
 title: Implementación de puertas de enlace de API con Ocelot
 description: Obtenga información sobre cómo implementar puertas de enlace de API con Ocelot y cómo usar Ocelot en un entorno basado en contenedores.
 ms.date: 03/02/2020
-ms.openlocfilehash: 28b9ca22d232baf3545d71b876cecf72fea05c92
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f103c1e394a3f829489b61fd17af749798b02f70
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846951"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864103"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Implementación de puertas de enlace de API con Ocelot
 
@@ -84,7 +84,7 @@ public async Task<IActionResult> GetItemById(int id)
 
 La solicitud HTTP terminará ejecutando ese tipo de código de C# que accede a la base de datos de microservicios además de cualquier otra acción requerida.
 
-En lo que respecta a la dirección URL del microservicio, cuando los contenedores se implementan en el equipo de desarrollo local (el host de Docker local), el contenedor de cada microservicio siempre tiene un puerto interno (normalmente el puerto 80) especificado en su Dockerfile, como se muestra en el Dockerfile siguiente:
+En lo que respecta a la dirección URL del microservicio, cuando los contenedores se implementan en el equipo de desarrollo local (el host de Docker local), el contenedor de cada microservicio siempre tiene un puerto interno (normalmente el puerto 80) especificado en su Dockerfile, como en este caso:
 
 ```Dockerfile
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base

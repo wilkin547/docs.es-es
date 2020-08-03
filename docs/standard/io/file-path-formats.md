@@ -10,12 +10,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 2d3ede97b372dd8922a10a377f69155a12f88bda
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5eb9d5127dffd2e80349352ad7a4b57f8848d56b
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447139"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165794"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formatos de ruta de acceso de archivo en los sistemas Windows
 
@@ -124,7 +124,7 @@ Casi todas las rutas de acceso que se pasan a las API de Windows se normalizan. 
 
 Esta normalización se produce de manera implícita, pero se puede realizar de forma explícita mediante una llamada al método <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType>, que encapsula una llamada a la [función GetFullPathName()](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea). También se puede llamar directamente a la [función GetFullPathName()](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) de Windows mediante P/Invoke.
 
-### <a name="identifying-the-path"></a>Identificación de la ruta de acceso
+### <a name="identify-the-path"></a>Identificación de la ruta de acceso
 
 El primer paso de la normalización de la ruta de acceso consiste en identificar el tipo de ruta de acceso. Las rutas de acceso se incluyen en una de estas categorías:
 
@@ -138,13 +138,13 @@ El primer paso de la normalización de la ruta de acceso consiste en identificar
 
 El tipo de la ruta de acceso determina si se aplica o no un directorio actual de alguna manera. También determina lo que es la "raíz" de la ruta de acceso.
 
-### <a name="handling-legacy-devices"></a>Control de dispositivos heredados
+### <a name="handle-legacy-devices"></a>Control de dispositivos heredados
 
 Si la ruta de acceso es un dispositivo DOS heredado como `CON`, `COM1` o `LPT1`, se convierte en una ruta de acceso de dispositivo mediante la anteposición `\\.\` y se devuelve.
 
 Una ruta de acceso que comienza por un nombre de dispositivo heredado se interpreta siempre como un dispositivo heredado por el método <xref:System.IO.Path.GetFullPath(System.String)?displayProperty=nameWithType>. Por ejemplo la ruta de acceso de dispositivo DOS para `CON.TXT` es `\\.\CON`, y la de `COM1.TXT\file1.txt` es `\\.\COM1`.
 
-### <a name="applying-the-current-directory"></a>Aplicación del directorio actual
+### <a name="apply-the-current-directory"></a>Aplicación del directorio actual
 
 Si una ruta de acceso no es completa, Windows le aplica el directorio actual. El directorio actual no se aplica a las rutas de acceso de dispositivo y UNC. Ni tampoco una unidad completa con separador C:\\.
 
@@ -157,11 +157,11 @@ Si la ruta de acceso comienza por un valor distinto de un separador, se aplican 
 > [!IMPORTANT]
 > El uso de rutas de acceso relativas en las aplicaciones multiproceso (es decir, en la mayoría de aplicaciones) es peligroso, porque el directorio actual es un valor de cada proceso. Cualquier subproceso puede cambiar el directorio actual en cualquier momento. A partir de .NET Core 2.1, se puede llamar al método <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> para obtener una ruta de acceso absoluta a partir de una ruta de acceso relativa y la ruta de acceso base (el directorio actual) sobre la que se quiere resolver.
 
-### <a name="canonicalizing-separators"></a>Asignación canónica de separadores
+### <a name="canonicalize-separators"></a>Asignación canónica de separadores
 
 Todas las barras diagonales (`/`) se convierten en el separador estándar de Windows, que es la barra diagonal inversa (`\`). Si están presentes, una serie de barras diagonales que siguen a las dos primeras barras diagonales se contraen en una sola barra diagonal.
 
-### <a name="evaluating-relative-components"></a>Evaluación de componentes relativos
+### <a name="evaluate-relative-components"></a>Evaluación de componentes relativos
 
 Cuando se procesa la ruta de acceso, se evalúan los componentes o segmentos que se componen de un punto o un punto doble (`.` o `..`):
 
@@ -171,7 +171,7 @@ Cuando se procesa la ruta de acceso, se evalúan los componentes o segmentos que
 
    Los directorios principales solo se quitan si no están después de la raíz de la ruta de acceso. La raíz de la ruta de acceso depende del tipo de ruta de acceso. Es la unidad (`C:\`) para las rutas de acceso DOS, el servidor o recurso compartido para las UNC (`\\Server\Share`), y el prefijo de ruta de acceso de dispositivo para las rutas de acceso de dispositivo (`\\?\` o `\\.\`).
 
-### <a name="trimming-characters"></a>Recorte de caracteres
+### <a name="trim-characters"></a>Recorte de caracteres
 
 Junto con las ejecuciones de los separadores y segmentos relativos que se han quitado anteriormente, durante la normalización se quitan algunos caracteres adicionales:
 
@@ -184,7 +184,7 @@ Junto con las ejecuciones de los separadores y segmentos relativos que se han qu
    > [!IMPORTANT]
    > **Nunca** se debe crear un nombre de archivo o directorio con un espacio final. Los espacios finales pueden dificultar o impedir el acceso a un directorio, y se suelen producir errores en las aplicaciones cuando se intenta controlar directorios o archivos con nombres que incluyen espacios.
 
-## <a name="skipping-normalization"></a>Omisión de la normalización
+## <a name="skip-normalization"></a>Omisión de la normalización
 
 Normalmente, todas las rutas de acceso que se pasan a una API de Windows se pasan (de forma efectiva) a la [función GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) y se normalizan. Hay una excepción importante: una ruta de acceso de dispositivo que comienza con un signo de interrogación en lugar de un punto. A menos que la ruta de acceso comience exactamente con `\\?\` (observe el uso de la barra diagonal inversa canónica), se normaliza.
 
@@ -222,4 +222,4 @@ crea un directorio denominado TeStDiReCtOrY. Si modifica el nombre de un directo
 [!code-csharp[case-and-renaming](~/samples/snippets/standard/io/file-names/cs/rename.cs)]
 [!code-vb[case-and-renaming](~/samples/snippets/standard/io/file-names/vb/rename.vb)]
 
-Pero las comparaciones de nombre de directorio y archivo no distinguen mayúsculas de minúsculas. Si busca un archivo denominado "test.txt", las API del sistema de archivos de .NET ignoran las mayúsculas y minúsculas en la comparación. Test.txt, TEST.TXT, test.TXT y cualquier otra combinación de letras mayúsculas y minúsculas coincidirán con "test.txt".
+Pero las comparaciones de nombre de directorio y archivo no distinguen mayúsculas de minúsculas. Si busca un archivo denominado "test.txt", las API del sistema de archivos de .NET ignoran las mayúsculas y minúsculas en la comparación. "Test.txt", "TEST.TXT", "test.TXT" y cualquier otra combinación de letras mayúsculas y minúsculas coincidirán con "test.txt".

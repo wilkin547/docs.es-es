@@ -1,16 +1,17 @@
 ---
 title: 'Constantes: Guía de programación de C#'
+description: En C#, las constantes son valores literales en tiempo de compilación, que no cambian después de compilar el programa. Solo los tipos integrados de C# pueden ser constantes.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
-ms.openlocfilehash: 85f6684617b893bdd85eb5b530aa2481941fbc5d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dd42dcd62bb46898c20f14cdc893b8f5801894f2
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77093557"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474987"
 ---
 # <a name="constants-c-programming-guide"></a>Constantes (Guía de programación de C#)
 Las constantes son valores inmutables que se conocen en tiempo de compilación y que no cambian durante la vida del programa. Las constantes se declaran con el modificador [const](../../language-reference/keywords/const.md). Solo los [tipos integrados](../../language-reference/builtin-types/built-in-types.md) de C# (excluido <xref:System.Object?displayProperty=nameWithType>) pueden declararse como `const`. Los tipos definidos por el usuario, incluidas las clases, las estructuras y las matrices, no pueden ser `const`. Use el modificador [readonly](../../language-reference/keywords/readonly.md) para crear una clase, una estructura o una matriz que se inicialice una vez en tiempo de ejecución (por ejemplo, en un constructor) y que posteriormente no se pueda cambiar.  
@@ -36,7 +37,7 @@ Las constantes son valores inmutables que se conocen en tiempo de compilación y
   
  [!code-csharp[csProgGuideObjects#66](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#66)]  
   
- Las constantes pueden marcarse como [públicas](../../language-reference/keywords/public.md), [privadas](../../language-reference/keywords/private.md), [protegidas](../../language-reference/keywords/protected.md), [internas](../../language-reference/keywords/internal.md), [protegidas internas](../../language-reference/keywords/protected-internal.md)o [privadas protegidas](../../language-reference/keywords/private-protected.md). Estos modificadores de acceso definen cómo los usuarios de la clase pueden acceder a la constante. Para obtener más información, vea [Modificadores de acceso](./access-modifiers.md).  
+ Las constantes pueden marcarse como [públicas](../../language-reference/keywords/public.md), [privadas](../../language-reference/keywords/private.md), [protegidas](../../language-reference/keywords/protected.md), [internas](../../language-reference/keywords/internal.md), [protegidas internas](../../language-reference/keywords/protected-internal.md)o [privadas protegidas](../../language-reference/keywords/private-protected.md). Estos modificadores de acceso definen cómo los usuarios de la clase pueden acceder a la constante. Para más información, vea [Modificadores de acceso](./access-modifiers.md).  
   
  A las constantes se accede como si fueran campos [estáticos](../../language-reference/keywords/static.md) porque el valor de la constante es el mismo para todas las instancias del tipo. No use la palabra clave `static` para declararlas. Las expresiones que no están en la clase que define la constante deben usar el nombre de la clase, un punto y el nombre de la constante para acceder a ella. Por ejemplo:  
   
@@ -52,4 +53,4 @@ Las constantes son valores inmutables que se conocen en tiempo de compilación y
 - [Propiedades](./properties.md)
 - [Tipos](../types/index.md)
 - [readonly](../../language-reference/keywords/readonly.md)
-- [Immutability in C# Part One: Kinds of Immutability (Inmutabilidad en C# (primera parte): tipos de inmutabilidad)](https://docs.microsoft.com/archive/blogs/ericlippert/immutability-in-c-part-one-kinds-of-immutability)
+- [Inmutabilidad en la primera parte de C#: tipos de inmutabilidad](https://docs.microsoft.com/archive/blogs/ericlippert/immutability-in-c-part-one-kinds-of-immutability)

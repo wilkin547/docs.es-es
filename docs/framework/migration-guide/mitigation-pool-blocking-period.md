@@ -1,13 +1,14 @@
 ---
 title: 'Mitigación: período de bloqueo del grupo'
+description: Obtenga información sobre cómo mitigar los problemas causados por la eliminación del período de bloqueo del grupo de conexiones para las conexiones a bases de datos de Azure SQL.
 ms.date: 03/30/2017
 ms.assetid: 92d2de20-79be-4df1-b182-144143a8866a
-ms.openlocfilehash: 98396d4254975d1806a8477cbcd2380cb52ceaf3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: be60fe87952697d964571176743a4e6f839c4894
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73457846"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475416"
 ---
 # <a name="mitigation-pool-blocking-period"></a>Mitigación: período de bloqueo del grupo
 El período de bloqueo del grupo de conexiones se quito de las conexiones a bases de datos SQL de Azure.  

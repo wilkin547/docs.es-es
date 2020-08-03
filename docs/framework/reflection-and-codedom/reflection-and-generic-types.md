@@ -1,5 +1,6 @@
 ---
 title: Reflexión y tipos genéricos
+description: Introducción a la reflexión y a los tipos genéricos en .NET. A diferencia de un tipo ordinario, un tipo genérico está asociado a un conjunto de parámetros o argumentos de tipo.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - types, generic
 - type parameters
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
-ms.openlocfilehash: 4894b5cc64dca431c8d05b638847dd6cb7017bde
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dd0dda92dc4473e05c59072973076cbb06bcaa06
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180488"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865299"
 ---
 # <a name="reflection-and-generic-types"></a>Reflexión y tipos genéricos
 Desde el punto de vista de la reflexión, la diferencia entre un tipo genérico y un tipo normal es que un tipo genérico lleva asociado un conjunto de parámetros de tipo (si es una definición de tipo genérico) o de argumentos de tipo (si es un tipo construido). Un método genérico difiere de un método normal de la misma manera.  

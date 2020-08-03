@@ -1,13 +1,14 @@
 ---
 title: Crear árboles XML en C# (LINQ to XML)
+description: Obtenga información sobre cómo crear árboles XML en C#, incluida la construcción de elementos y el uso de constructores de XElement.
 ms.date: 08/31/2018
 ms.assetid: cc74234a-0bac-4327-9c8c-5a2ead15b595
-ms.openlocfilehash: 4794e4fe019b30d8f2acb3eb255bb77ba2f7f290
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3991f461c4c870a64320853ccd1d45026a8a6bf6
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169550"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105476"
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>Crear árboles XML en C# (LINQ to XML)
 En esta sección encontrará información acerca de cómo crear árboles XML en C#.  
@@ -42,7 +43,7 @@ XElement contacts =
 ## <a name="xelement-constructors"></a>Constructores de XElement  
  La clase <xref:System.Xml.Linq.XElement> utiliza los siguientes constructores para llevar a cabo una construcción funcional. Observe que existen algunos constructores más para <xref:System.Xml.Linq.XElement>, pero, dado que no se utilizan para el proceso de construcción funcional, no se detallarán aquí.  
   
-|Constructor|Description|  
+|Constructor|Descripción|  
 |-----------------|-----------------|  
 |`XElement(XName name, object content)`|Crea una interfaz <xref:System.Xml.Linq.XElement>. El parámetro `name` especifica el nombre del elemento; `content` especifica el contenido del elemento.|  
 |`XElement(XName name)`|Crea un <xref:System.Xml.Linq.XElement> cuyo <xref:System.Xml.Linq.XName> se inicializa con el nombre especificado.|  
@@ -234,6 +235,6 @@ Console.WriteLine("Child2 was {0}",
 //    Child2 was attached  
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Crear árboles XML (C#)](./linq-to-xml-overview.md)
+- [Crear árboles XML en C# ](./linq-to-xml-overview.md)

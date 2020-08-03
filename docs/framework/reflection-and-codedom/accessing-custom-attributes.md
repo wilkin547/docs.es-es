@@ -1,5 +1,6 @@
 ---
 title: Acceso a atributos personalizados
+description: Acceda a atributos personalizados en .NET. Después de asociar atributos a los elementos de un programa, puede usar la reflexión para consultar su existencia y sus valores.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - attributes [.NET Framework], accessing
 - reflection, custom attributes
 ms.assetid: 1d8e3398-00d8-47d5-a084-214f9859d3d7
-ms.openlocfilehash: a5651e9dc8cf40e737dd523ec5d29e876a9c0765
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1197fc5149e144d293deda1173e82ca2dadeda7d
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130297"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475143"
 ---
 # <a name="accessing-custom-attributes"></a>Acceso a atributos personalizados
 Después de asociar atributos a elementos de un programa, puede usar la reflexión para consultar su existencia y sus valores. En .NET Framework versión 1.0 y 1.1, los atributos personalizados se examinan en el contexto de ejecución. .NET Framework versión 2.0 proporciona un nuevo contexto de carga, el contexto de solo reflexión, que puede usarse para examinar el código que no se puede cargar para su ejecución.  

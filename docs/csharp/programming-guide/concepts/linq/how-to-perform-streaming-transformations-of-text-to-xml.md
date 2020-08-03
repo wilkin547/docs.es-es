@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para efectuar transformaciones en streaming de texto en XML (C#)
+description: Obtenga información sobre cómo realizar una transformación de streaming de texto a XML en C#, donde se transmite el archivo de texto una línea de cada vez y se usa una consulta LINQ para procesar el archivo de texto.
 ms.date: 07/20/2015
 ms.assetid: 9b3bd941-d0ff-4f2d-ae41-7c3b81d8fae6
-ms.openlocfilehash: 496535b7f868095a62be2b72b1eea2b082e00a44
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f933064be70d39b59cf7dbe51b4ee92e5226647a
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345795"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104742"
 ---
 # <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a>Procedimiento para efectuar transformaciones en streaming de texto en XML (C#)
 

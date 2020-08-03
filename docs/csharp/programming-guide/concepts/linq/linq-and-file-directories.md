@@ -1,13 +1,14 @@
 ---
 title: LINQ y directorios de archivos (C#)
+description: Estos recursos de LINQ de C# para las operaciones del sistema de archivos no se usan para cambiar el contenido de los archivos o carpetas.
 ms.date: 07/20/2015
 ms.assetid: b66c55e4-0f72-44e5-b086-519f9962335c
-ms.openlocfilehash: fe503584e7d14e8d1dd281eb644f0723782feb4a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ac00e29f90ee1c04ab9978b6ada3ae5f28991a1c
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75714624"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165672"
 ---
 # <a name="linq-and-file-directories-c"></a>LINQ y directorios de archivos (C#)
 

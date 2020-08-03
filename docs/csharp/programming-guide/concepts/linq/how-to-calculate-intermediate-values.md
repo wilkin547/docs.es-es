@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para calcular valores intermedios (C#)
+description: En este ejemplo de LINQ to XML en C# se muestra cómo calcular valores intermedios que se pueden usar para ordenar, filtrar y seleccionar elementos.
 ms.date: 07/20/2015
 ms.assetid: 7fd3001f-f8f9-4bce-879f-d4c7af8a04fe
-ms.openlocfilehash: 3ead3bfb02f7c9192db96996c1f1e01a86a4191a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fc648f20550de13735a1f6da6b2f811fd0d39004
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141449"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103621"
 ---
 # <a name="how-to-calculate-intermediate-values-c"></a>Procedimiento para calcular valores intermedios (C#)
 Este ejemplo muestra cómo calcular valores intermedios que se pueden usar para ordenar, filtrar y seleccionar.  
@@ -15,7 +16,7 @@ Este ejemplo muestra cómo calcular valores intermedios que se pueden usar para 
 ## <a name="example"></a>Ejemplo  
  El siguiente ejemplo utiliza la cláusula `Let`.  
   
- En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: Datos numéricos (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).  
+ Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Datos numéricos (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```csharp  
 XElement root = XElement.Load("Data.xml");  
@@ -42,7 +43,7 @@ foreach (decimal ex in extensions)
 ## <a name="example"></a>Ejemplo  
  El siguiente ejemplo muestra la misma consulta sobre un XML que se encuentra en un espacio de nombres. Para más información, consulte [Información general sobre los espacios de nombres (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).  
   
- En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: Datos numéricos en un espacio de nombres](./sample-xml-file-numerical-data-in-a-namespace.md).  
+ Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Datos numéricos de un espacio de nombres](./sample-xml-file-numerical-data-in-a-namespace.md).  
   
 ```csharp  
 XElement root = XElement.Load("DataInNamespace.xml");  

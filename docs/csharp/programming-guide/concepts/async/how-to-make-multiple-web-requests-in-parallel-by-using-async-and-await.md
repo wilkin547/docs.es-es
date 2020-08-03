@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para realizar varias solicitudes web en paralelo con async y await (C#)
+description: Obtenga información sobre cómo separar la creación de una tarea mediante el operador await en C#, en lugar de aplicarlo cuando se crea una tarea.
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-ms.openlocfilehash: 0cfc1d6d1d59dc74fcf5990abb0a9d980a83d7b0
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 899dfd9165d199a67a5178bb351081ee544b231f
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241804"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925168"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>Procedimiento para realizar varias solicitudes web en paralelo con async y await (C#)
 En un método asincrónico, las tareas se inician en el momento de crearse. El operador [await](../../../language-reference/operators/await.md) se aplica a la tarea en el momento del método en que no se puede continuar el procesamiento hasta que finalice la tarea. A menudo se espera una tarea en cuanto se crea, como se muestra en el ejemplo siguiente.  

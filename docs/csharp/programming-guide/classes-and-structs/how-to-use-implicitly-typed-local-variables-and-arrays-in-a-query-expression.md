@@ -1,15 +1,16 @@
 ---
 title: Procedimiento para usar matrices y variables locales con tipo implícito en expresiones de consulta - Guía de programación de C#
+description: Use variables locales con tipo implícito en C# para hacer que el compilador determine el tipo de una variable local. Tendrá que usarlas para almacenar tipos anónimos.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - implicitly-typed local variables [C#], how to use
 ms.assetid: 6b7354d2-af79-427a-b6a8-f74eb8fd0b91
-ms.openlocfilehash: f4ff71fc4dc1a0b2affa1f032ab1d3d6bb04d297
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b69c646aa878166cca3adc1a568ce16454fb7574
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705566"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864337"
 ---
 # <a name="how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression-c-programming-guide"></a>Procedimiento para usar matrices y variables locales con tipo implícito en expresiones de consulta (Guía de programación de C#)
 Puede usar variables locales con tipo implícito siempre que quiera que el compilador determine el tipo de una variable local. Debe usar variables locales con tipo implícito para almacenar tipos anónimos, que a menudo se usan en las expresiones de consulta. En los ejemplos siguientes, se muestran los usos obligatorios y opcionales de las variables locales con tipo implícito en las consultas.  

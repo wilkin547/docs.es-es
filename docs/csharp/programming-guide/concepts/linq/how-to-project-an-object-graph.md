@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para proyectar un gráfico de objetos (C#)
+description: Aprenda a proyectar o rellenar un gráfico de objetos de XML en C#. En el código de ejemplo se rellena un gráfico de objetos con clases de un archivo XML de ejemplo.
 ms.date: 07/20/2015
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
-ms.openlocfilehash: eafb3d9064159c43fc98e0b241f0045465fca824
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5c2ea0e06d9a46a1b19236eae021a2a153fea1d4
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168965"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104623"
 ---
 # <a name="how-to-project-an-object-graph-c"></a>Procedimiento para proyectar un gráfico de objetos (C#)
 En este tema se ilustra cómo proyectar o rellenar un gráfico de objetos de XML.  

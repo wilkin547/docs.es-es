@@ -1,16 +1,17 @@
 ---
 title: 'Matrices unidimensionales: Guía de programación de C#'
+description: Cree una matriz unidimensional en C# mediante el operador new; para ello, especifique el tipo de elemento de matriz y el número de elementos.
 ms.date: 06/03/2020
 helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: e189253eedc21fa2d51e16407f04b034610bb57b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ada01262d57cbfebc8bfa1a5fee0639a10db5a4b
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410249"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474597"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>Matrices unidimensionales (Guía de programación de C#)
 

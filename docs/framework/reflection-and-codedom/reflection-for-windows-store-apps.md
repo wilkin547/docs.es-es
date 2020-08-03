@@ -1,5 +1,6 @@
 ---
 title: Reflexión en .NET Framework para aplicaciones de la Tienda Windows
+description: Use la reflexión de .NET para aplicaciones de la Tienda Windows. Hay un conjunto de tipos y miembros de reflexión que se pueden usar en las aplicaciones de la Tienda Windows, que están disponibles para la totalidad de .NET.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - reflection, Windows Store apps
 - .NET for Windows Store apps, TypeInfo class
 ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
-ms.openlocfilehash: 42bcfd4a1adc66511a1183807c09e77d1448c754
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 86bb633e97f0f88dc2a2a042b6897695a258cc3c
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715884"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865273"
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Reflexión en .NET Framework para aplicaciones de la Tienda Windows
 

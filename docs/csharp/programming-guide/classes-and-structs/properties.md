@@ -1,5 +1,6 @@
 ---
 title: 'Propiedades: Guía de programación de C#'
+description: Una propiedad de C# es un miembro que usa métodos de descriptor de acceso para leer, escribir o calcular el valor de un campo privado como si fuera un miembro de datos público.
 ms.date: 03/10/2017
 f1_keywords:
 - cs.properties
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: ee530e981e0c85302b2b11cc739d6c51d6650ddd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 231e8e6a11f2655ccdea5489f054910a1ecf2586
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170109"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86863947"
 ---
 # <a name="properties-c-programming-guide"></a>Propiedades (Guía de programación de C#)
 

@@ -1,5 +1,6 @@
 ---
 title: Generación y compilación dinámicas de código fuente
+description: Compile y genere código fuente dinámico en .NET con Code Document Object Model (CodeDOM). Los elementos CodeDOM se vinculan para formar un gráfico CodeDOM.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Code Document Object Model
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - source code in multiple languages
 - languages, multiple language support by CodeDOM
 ms.assetid: d077a3e8-bd81-4bdf-b6a3-323857ea30fb
-ms.openlocfilehash: 7379bac07de9b78369d3742fa3288f6fea6a573f
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 3cdd89ac9745f6af133ca683afff64283f2727d1
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544988"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475104"
 ---
 # <a name="compile-and-generate-dynamic-source-code"></a>Compilación y generación de código fuente dinámico
 

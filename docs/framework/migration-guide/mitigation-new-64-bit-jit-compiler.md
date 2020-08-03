@@ -1,20 +1,21 @@
 ---
 title: 'Mitigación: Nuevo compilador JIT de 64 bits'
+description: Obtenga información sobre el nuevo compilador JIT de 64 bits incluido en .NET Framework 4.6, así como el comportamiento inesperado o las excepciones que pueden producirse durante la compilación.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - JIT compiler, 64-bit
 - JIT compilation, 64-bit
 - RyuJIT compiler
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
-ms.openlocfilehash: 883aaf032bde632b08f965d3450cfbea4feb8e65
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f059cbdd3b2a66ac8a668b7b8a80d9ad1551fa64
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181253"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475234"
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>Mitigación: Nuevo compilador JIT de 64 bits
-A partir de .NET Framework 4.6, el tiempo d ejecución incluye un nuevo compilador JIT de 64 bits para la compilación Just-In-Time. Este cambio no afecta a la compilación con el compilador JIT de 32 bits.  
+A partir de .NET Framework 4.6, el entorno de ejecución incluye un nuevo compilador JIT de 64 bits para la compilación Just-In-Time. Este cambio no afecta a la compilación con el compilador JIT de 32 bits.  
   
 ## <a name="unexpected-behavior-or-exceptions"></a>Comportamiento inesperado o excepciones  
  En algunos casos, la compilación con el nuevo compilador JIT de 64 bits provoca una excepción en tiempo de ejecución o en el comportamiento que no se observa al ejecutar el código compilado por el compilador JIT de 64 bits antiguo. Las diferencias conocidas incluyen lo siguiente:  
@@ -70,4 +71,4 @@ A partir de .NET Framework 4.6, el tiempo d ejecución incluye un nuevo compilad
 ## <a name="see-also"></a>Vea también
 
 - [Compatibilidad de aplicaciones](application-compatibility.md)
-- [Elemento \<useLegacyJIT>](../configure-apps/file-schema/runtime/uselegacyjit-element.md)
+- [Elemento \<useLegacyJit>](../configure-apps/file-schema/runtime/uselegacyjit-element.md)

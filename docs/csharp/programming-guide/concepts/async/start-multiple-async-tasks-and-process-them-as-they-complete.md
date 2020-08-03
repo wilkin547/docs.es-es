@@ -1,13 +1,14 @@
 ---
 title: Procesamiento de tareas asincrónicas a medida que se completan
+description: En este ejemplo se muestra cómo usar Task.WhenAny en C# para iniciar varias tareas y procesar los resultados a medida que finalizan, en lugar de procesarlos en el orden en que se inician.
 ms.date: 09/12/2018
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: b618fd6bf80551231d2b285fd0e8aef688d00d93
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a7cfa0bdf783fe9bb735241ca398fde7895f1493
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "71736726"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925155"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>Iniciar varias tareas asincrónicas y procesarlas a medida que se completan (C#)
 
@@ -20,7 +21,7 @@ En el siguiente ejemplo se usa una consulta para crear una colección de tareas.
 
 ## <a name="download-an-example-solution"></a>Descargue una solución de ejemplo
 
-Puede descargar el proyecto completo de Windows Presentation Foundation (WPF) en [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Ejemplo asincrónico: Ajustar la aplicación [C# y Visual Basic]) y después seguir estos pasos.
+Puede descargar el proyecto completo de Windows Presentation Foundation (WPF) desde [Ejemplo de async: Ajuste de la aplicación](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) y después seguir estos pasos.
 
 > [!TIP]
 > Si no quiere descargar el proyecto, en su lugar, puede revisar el archivo *MainWindow.xaml.cs* al final de este tema.
@@ -85,9 +86,9 @@ Ejecute el programa varias veces para comprobar que las longitudes que se han de
 
 ## <a name="complete-example"></a>Ejemplo completo
 
-El código siguiente es el texto completo del archivo *MainWindow.xaml.cs* para el ejemplo. Los asteriscos marcan los elementos que se han agregado a este ejemplo. Además, observe que debe agregar una referencia para <xref:System.Net.Http>.
+El código siguiente es el texto completo del archivo *MainWindow.xaml.cs* para el ejemplo. Los asteriscos marcan los elementos que se agregaron para este ejemplo. Además, observe que debe agregar una referencia para <xref:System.Net.Http>.
 
-Puede descargar el proyecto de [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Ejemplo asincrónico: Ajustar la aplicación [C# y Visual Basic]).
+Puede descargar el proyecto desde [Ejemplo de async: Ajuste de la aplicación](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).
 
 ```csharp
 using System;
@@ -225,9 +226,9 @@ namespace ProcessTasksAsTheyFinish
 // Downloads complete.
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
-- [Fine-Tuning Your Async Application (C#)](fine-tuning-your-async-application.md) (Ajuste de la aplicación asincrónica [C#])
-- [Asynchronous Programming with async and await (C#)](index.md) (Programación asincrónica con async y await (C#))
-- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Ejemplo asincrónico: Ajustar la aplicación)
+- [Ajustar una aplicación asincrónica (C#)](fine-tuning-your-async-application.md)
+- [Programación asincrónica con Async y Await (C#)](index.md)
+- [Ejemplo de async: Ajuste de la aplicación](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

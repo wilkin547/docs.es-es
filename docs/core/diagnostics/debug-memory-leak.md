@@ -3,16 +3,16 @@ title: Tutorial Depuración de una fuga de memoria
 description: Obtenga información sobre cómo depurar una fuga de memoria en .NET Core.
 ms.topic: tutorial
 ms.date: 04/20/2020
-ms.openlocfilehash: d47992bab9dab64cf7f88ff679eef407dd891b5a
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: ff684f9b9402cb8b7b648e792a1d37ddcc96b399
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021360"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924895"
 ---
-# <a name="tutorial-debug-a-memory-leak-in-net-core"></a>Tutorial: Depuración de una fuga de memoria en .NET Core
+# <a name="debug-a-memory-leak-in-net-core"></a>Depuración de una fuga de memoria en .NET Core
 
-**Este artículo se aplica a:** ✔️ SDK de .NET Core 3.0 y versiones posteriores
+**Este artículo se aplica a:** ✔️ SDK de .NET Core 3.1 y versiones posteriores
 
 En este tutorial se muestran las herramientas para analizar una fuga de memoria de .NET Core.
 
@@ -30,7 +30,7 @@ En este tutorial va a:
 
 En el tutorial se usa:
 
-- [SDK de .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core) o una versión posterior.
+- [SDK de .NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core) o una versión posterior
 - [dotnet-trace](dotnet-trace.md) para mostrar procesos.
 - [dotnet-counters](dotnet-counters.md) para comprobar el uso de memoria administrada.
 - [dotnet-dump](dotnet-dump.md) para recopilar y analizar un archivo de volcado de memoria.
@@ -102,7 +102,7 @@ Establecimiento del foco en esta línea:
 
 Puede ver que la memoria de montón administrado es de 4 MB justo después del inicio.
 
-Ahora, visite la dirección URL `http://localhost:5000/api/diagscenario/memleak/20000`.
+Ahora, visite la dirección URL `https://localhost:5001/api/diagscenario/memleak/20000`.
 
 Observe que el uso de memoria ha aumentado a 30 MB.
 
@@ -133,7 +133,7 @@ Complete
 
 Una vez recopilado el volcado de memoria, debe tener suficiente información para diagnosticar el proceso con errores. Si el proceso con errores se ejecuta en un servidor de producción, ahora es el momento ideal para la corrección a corto plazo reiniciando el proceso.
 
-En este tutorial, ya ha terminado con el [destino de depuración de ejemplo](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) y puede cerrarlo. Vaya al terminal que inició el servidor y presione `Control-C`.
+En este tutorial, ya ha terminado con el [destino de depuración de ejemplo](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) y puede cerrarlo. Vaya al terminal que inició el servidor y presione <kbd>CTRL+C</kbd>.
 
 ### <a name="analyze-the-core-dump"></a>Análisis del volcado de memoria principal
 
@@ -232,14 +232,14 @@ En este tutorial, inició un servidor web de ejemplo. Este servidor debería hab
 
 También puede eliminar el archivo de volcado de memoria que se creó.
 
+## <a name="see-also"></a>Consulte también
+
+- [dotnet-trace](dotnet-trace.md) para mostrar procesos
+- [dotnet-counters](dotnet-counters.md) para comprobar el uso de memoria administrada
+- [dotnet-dump](dotnet-dump.md) para recopilar y analizar un archivo de volcado de memoria
+- [dotnet/diagnostics](https://github.com/dotnet/diagnostics/tree/master/documentation/tutorial)
+
 ## <a name="next-steps"></a>Pasos siguientes
 
-Enhorabuena por completar este tutorial.
-
-Todavía estamos publicando más tutoriales de diagnóstico. Puede leer las versiones de borrador en el repositorio [dotnet/diagnostics](https://github.com/dotnet/diagnostics/tree/master/documentation/tutorial).
-
-En este tutorial se han tratado los aspectos básicos de las herramientas de diagnóstico de .NET clave. Para el uso avanzado, consulte la siguiente documentación de referencia:
-
-* [dotnet-trace](dotnet-trace.md) para mostrar procesos.
-* [dotnet-counters](dotnet-counters.md) para comprobar el uso de memoria administrada.
-* [dotnet-dump](dotnet-dump.md) para recopilar y analizar un archivo de volcado de memoria.
+> [!div class="nextstepaction"]
+> [Depuración del uso elevado de CPU en .NET Core](debug-highcpu.md)

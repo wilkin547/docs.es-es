@@ -1,5 +1,6 @@
 ---
 title: Procedimiento para agregar instaladores a una aplicación de servicio
+description: Vea cómo agregar instaladores a la aplicación de servicio. Visual Studio incluye componentes de instalación que pueden instalar recursos asociados a una aplicación de servicio.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, deploying
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, adding installers to services
 ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
 author: ghogen
-ms.openlocfilehash: 99e2376c50f0b47cc21002b2926818707188805e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f82dd6635555ccb8fcbcdf63cba2495084194731
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053648"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925649"
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>Procedimiento para agregar instaladores a una aplicación de servicio
 Visual Studio incluye componentes de instalación que pueden instalar recursos asociados con sus aplicaciones de servicios. Los componentes de la instalación registran un servicio individual en el sistema en el que se está instalando e informan al Administrador de control de servicios que el servicio existe. Cuando trabaje con una aplicación de servicio, puede seleccionar un vínculo en la ventana Propiedades para agregar automáticamente los instaladores apropiados a su proyecto.  

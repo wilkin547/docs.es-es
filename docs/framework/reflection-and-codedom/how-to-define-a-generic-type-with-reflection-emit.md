@@ -1,5 +1,6 @@
 ---
 title: Procedimiento para definir un tipo genérico con emisión de reflexión
+description: Vea cómo definir un tipo genérico con emisión de reflexión. Cree un tipo genérico con dos parámetros de tipo, aplique restricciones de clase, restricciones de interfaz y mucho más.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - generics [.NET Framework], dynamic types
 - reflection emit, generic types
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
-ms.openlocfilehash: b553fd2235c73cf879474dc4f44f958dddcb649c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fe8fb731fd160ab87e5c65debf367a96bc0dea2a
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130157"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865130"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Procedimiento para definir un tipo genérico con emisión de reflexión
 En este tema se muestra cómo crear un tipo genérico simple con dos parámetros de tipo, cómo aplicar restricciones de clase, restricciones de interfaz y restricciones especiales a los parámetros de tipo, y cómo crear miembros que usen los parámetros de tipo de la clase como tipos de parámetro y tipos de valor devuelto.  

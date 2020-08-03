@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para agrupar archivos por extensión (LINQ) (C#)
+description: Aprenda a usar LINQ para realizar operaciones avanzadas de agrupación y ordenación en listas de archivos o carpetas en C#. En el ejemplo se muestra cómo paginar la salida en la consola.
 ms.date: 07/20/2015
 ms.assetid: 21a98320-a5a1-4981-82d8-6a637e7d9018
-ms.openlocfilehash: 2ee1fa1291f5845c818395dfe038ec5894adc863
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6113392170063cac1fd89017efaf0c7dad3ba34b
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169160"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105028"
 ---
 # <a name="how-to-group-files-by-extension-linq-c"></a>Procedimiento para agrupar archivos por extensión (LINQ) (C#)
 En este ejemplo se muestra cómo se puede usar LINQ para efectuar operaciones avanzadas de agrupación y ordenación en listas de archivos o de carpetas. También muestra cómo paginar la salida en la ventana de consola mediante los métodos <xref:System.Linq.Enumerable.Skip%2A> y <xref:System.Linq.Enumerable.Take%2A>.  
@@ -110,4 +111,4 @@ class GroupByExtension
 ## <a name="see-also"></a>Vea también
 
 - [LINQ to Objects (C#)](./linq-to-objects.md)
-- [LINQ and File Directories (C#)](./linq-and-file-directories.md) (LINQ y directorios de archivos [C#])
+- [LINQ y directorios de archivos (C#)](./linq-and-file-directories.md)

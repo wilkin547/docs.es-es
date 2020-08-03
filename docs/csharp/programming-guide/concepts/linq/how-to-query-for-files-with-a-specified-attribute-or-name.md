@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para buscar archivos con un nombre o atributo especificados (C#)
+description: Obtenga información sobre cómo usar LINQ en C# para buscar archivos que tengan una extensión de nombre de archivo especificada en un árbol de directorios y cómo devolver el archivo más reciente o el más antiguo.
 ms.date: 07/20/2015
 ms.assetid: 560e3879-b0b3-4549-ad02-0a53aff2f83c
-ms.openlocfilehash: fc6456f159887b7ad109e8ad48f0f79999d53e09
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9820b96e19d805b792e18ff242e64dfb6cf4a606
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168874"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104503"
 ---
 # <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a>Procedimiento para buscar archivos con un nombre o atributo especificados (C#)
 En este ejemplo se muestra cómo encontrar todos los archivos con una determinada extensión de nombre de archivo (por ejemplo, ".txt") en un árbol de directorios especificado. También se muestra cómo devolver el archivo más reciente o más antiguo del árbol por fecha de creación.  
@@ -69,4 +70,4 @@ class FindFileByExtension
 ## <a name="see-also"></a>Vea también
 
 - [LINQ to Objects (C#)](./linq-to-objects.md)
-- [LINQ and File Directories (C#)](./linq-and-file-directories.md) (LINQ y directorios de archivos [C#])
+- [LINQ y directorios de archivos (C#)](./linq-and-file-directories.md)

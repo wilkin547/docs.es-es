@@ -1,17 +1,18 @@
 ---
 title: 'Cambios de runtime y redestinación: .NET Framework'
+description: Obtenga información sobre la compatibilidad de las aplicaciones en .NET Framework y cómo se ve afectada por los cambios del entorno de ejecución y la redestinación al migrar a otra versión.
 ms.date: 10/29/2019
 helpviewer_keywords:
 - application compatibility
 - .NET Framework application compatibility
 - .NET Framework changes
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
-ms.openlocfilehash: c46f781d495b87a4f24e77935df7c4814c8567ae
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 26f36dd34c6c5ecae8fc5ab373ff60d9e56f8245
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73196700"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475494"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>Compatibilidad de aplicaciones en .NET Framework
 
@@ -62,7 +63,7 @@ Cambio que afecta a aplicaciones de escenarios muy concretos que no son frecuent
 **Transparente**\
 Cambio que no tiene ningún efecto apreciable en el programador o el usuario de la aplicación. No es necesario modificar la aplicación debido a este cambio.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Versiones y dependencias](versions-and-dependencies.md)
 - [Novedades](../whats-new/index.md)

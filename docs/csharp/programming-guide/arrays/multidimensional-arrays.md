@@ -1,16 +1,17 @@
 ---
 title: 'Matrices multidimensionales: Guía de programación de C#'
+description: Las matrices de C# pueden tener más de una dimensión. En la declaración de este ejemplo se crea una matriz bidimensional de cuatro filas y dos columnas.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [C#], multidimensional
 - multidimensional arrays [C#]
 ms.assetid: 020ce02e-7dff-4273-8e53-bf0b33747232
-ms.openlocfilehash: ee5fae36ff844fadad7e1b6a766020319b67a83c
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: a2f204c0866672b317569fbc620aa8af60829ffd
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021750"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475013"
 ---
 # <a name="multidimensional-arrays-c-programming-guide"></a>Matrices multidimensionales (Guía de programación de C#)
 

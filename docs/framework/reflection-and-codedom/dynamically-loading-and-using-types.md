@@ -1,5 +1,6 @@
 ---
 title: Cargar y utilizar tipos dinámicamente
+description: Cargue y use tipos de forma dinámica en .NET. Use la reflexión, que facilita la infraestructura que usan los compiladores de lenguaje, para implementar el enlace en tiempo de ejecución implícito.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - implicit late binding
 - reflection, dynamically using types
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
-ms.openlocfilehash: 940f334ec6a42c4d8da461d634051ff979b8f98d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 39a4a9a2ff77cb900db7f39a55dc17a5b8c62cf3
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130259"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475091"
 ---
 # <a name="dynamically-loading-and-using-types"></a>Cargar y utilizar tipos dinámicamente
 La reflexión facilita la infraestructura que utilizan los compiladores de lenguaje para implementar el enlace en tiempo de ejecución implícito. El enlace es el proceso de buscar la declaración (es decir, la implementación) que corresponde a un tipo especificado de manera exclusiva. Cuando este proceso se produce en tiempo de ejecución, en lugar de en tiempo de compilación, se denomina enlace en tiempo de ejecución. Visual Basic le permite usar el enlace en tiempo de ejecución implícito en el código; el compilador de Visual Basic llama a un método auxiliar que usa la reflexión para obtener el tipo de objeto. Los argumentos pasados al método del asistente hacen que se invoque el método adecuado en tiempo de ejecución. Estos argumentos son la instancia (un objeto) en la que se invoca el método, el nombre del método invocado (una cadena) y los argumentos pasados al método invocado (una matriz de objetos).  

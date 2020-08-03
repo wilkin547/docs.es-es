@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para detectar errores de análisis (C#)
+description: En este ejemplo de LINQ to XML en C# se detecta XML con formato incorrecto o no válido. LINQ to XML usa XmlReader, que inicia una excepción para XML con formato incorrecto o no válido.
 ms.date: 07/20/2015
 ms.assetid: bfb612d4-5605-48ef-8c93-915cf9d5dcfb
-ms.openlocfilehash: 1a05037892061dec85e7837472e8ec13e076724b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0a891097322ef6acce062ea927692b01cc425e6c
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141487"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105411"
 ---
 # <a name="how-to-catch-parsing-errors-c"></a>Procedimiento para detectar errores de análisis (C#)
 En este tema se describe cómo detectar XML no válido o mal formado.  

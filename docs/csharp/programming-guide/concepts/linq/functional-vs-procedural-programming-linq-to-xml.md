@@ -1,13 +1,14 @@
 ---
 title: Programación funcional frente a programación basada en procedimientos (LINQ to XML) (C#)
+description: Para procesar XML, LINQ to XML admite tanto la modificación del árbol XML en memoria basada en procedimientos como una construcción funcional que usa un enfoque declarativo.
 ms.date: 07/20/2015
 ms.assetid: fc64e39c-a487-4882-9169-da4de97917d9
-ms.openlocfilehash: e87114d2edcda4b2df14eb2d84f62ebe9638b5eb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e19f9311c56f4fe2c5e7e5f228aca6c03c6fe04d
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69594250"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103657"
 ---
 # <a name="functional-vs-procedural-programming-linq-to-xml-c"></a>Programación funcional frente a programación basada en procedimientos (LINQ to XML) (C#)
 Existen varios tipos de aplicaciones XML:  
@@ -40,6 +41,6 @@ Existen varios tipos de aplicaciones XML:
   
  Para obtener un tutorial sobre la escritura de transformaciones funcionales, vea [Pure Functional Transformations of XML (C#) (Transformaciones funcionales puras de XML (C#))](./introduction-to-pure-functional-transformations.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Información general sobre la programación de LINQ to XML (C#)](./linq-to-xml-overview.md)

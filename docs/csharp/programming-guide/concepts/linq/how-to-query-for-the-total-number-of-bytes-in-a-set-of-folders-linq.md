@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para buscar el número total de bytes de un conjunto de carpetas (LINQ) (C#)
+description: Aprenda a usar LINQ en C# para buscar el número total de bytes usados por todos los archivos de una carpeta especificada y sus subcarpetas.
 ms.date: 07/20/2015
 ms.assetid: a01bd1d4-133c-4ca2-aa4e-e93e81d6076c
-ms.openlocfilehash: c6bfe6bb6d76e7ce8ea8887eef85cd64f2a025df
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 964d92a55599d60388f7add937c7f7338f697817
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75344814"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104288"
 ---
 # <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-c"></a>Procedimiento para buscar el número total de bytes de un conjunto de carpetas (LINQ) (C#)
 En este ejemplo se muestra cómo recuperar el número total de bytes usados por todos los archivos en una carpeta especificada y en todas sus subcarpetas.  
@@ -79,4 +80,4 @@ Cree un proyecto de aplicación de consola de C# con directivas `using` para los
 ## <a name="see-also"></a>Vea también
 
 - [LINQ to Objects (C#)](./linq-to-objects.md)
-- [LINQ and File Directories (C#)](./linq-and-file-directories.md) (LINQ y directorios de archivos [C#])
+- [LINQ y directorios de archivos (C#)](./linq-and-file-directories.md)

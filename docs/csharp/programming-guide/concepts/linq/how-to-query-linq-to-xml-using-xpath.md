@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para consultar LINQ to XML mediante XPath (C#)
+description: Puede usar métodos de extensión de C# para consultar un árbol XML mediante XPath. En general, no se recomienda usar XPath con LINQ to XML.
 ms.date: 07/20/2015
 ms.assetid: ee5af263-4ab1-45e5-b792-33a3221b426d
-ms.openlocfilehash: 61878febd9b4880872b7bc58e4de04b37cff96f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fff45a93380b5af85aa640fc690783cc95e6298b
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75344806"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104347"
 ---
 # <a name="how-to-query-linq-to-xml-using-xpath-c"></a>Procedimiento para consultar LINQ to XML mediante XPath (C#)
 Este tema presenta los métodos de extensión que permiten consultar un árbol XML con XPath. Para obtener información detallada acerca del uso de estos métodos de extensión, vea <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.  

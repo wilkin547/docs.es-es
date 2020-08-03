@@ -1,16 +1,17 @@
 ---
 title: 'Pasar parámetros Reference-Type: Guía de programación de C#'
+description: Cuando se pasa un parámetro de tipo de referencia por valor en C#, los datos del objeto al que se hace referencia pueden cambiar, pero no el valor de la propia referencia.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - method parameters [C#], reference types
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
-ms.openlocfilehash: 6fa0e60fafabaa9fb04cdc5d5bf3f9e29490e84f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64a4735eded7a468549862b3221b4fbd0966e64d
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75714721"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864714"
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>Pasar parámetros Reference-Type (Guía de programación de C#)
 Una variable de un [tipo de referencia](../../language-reference/keywords/reference-types.md) no contiene sus datos directamente, contiene una referencia a sus datos. Al pasar un parámetro de tipo de referencia por valor, es posible cambiar los datos que pertenecen al objeto al que se hace referencia, como el valor de un miembro de clase. En cambio, no se puede cambiar el valor de la propia referencia; por ejemplo, no puede usar la misma referencia para asignar memoria para un nuevo objeto y hacer que persista fuera del método. Para ello, pase el parámetro mediante las palabras clave [ref](../../language-reference/keywords/ref.md) u [out](../../language-reference/keywords/out-parameter-modifier.md). Para simplificar, en el ejemplo siguiente se usa `ref`.  

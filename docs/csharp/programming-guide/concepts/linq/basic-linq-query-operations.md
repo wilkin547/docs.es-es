@@ -1,5 +1,6 @@
 ---
 title: Operaciones básicas de consulta LINQ (C#)
+description: Descubra las expresiones de consulta LINQ y algunas de las operaciones que puede realizar en una consulta.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - orderby clause [LINQ in C#]
@@ -17,21 +18,21 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: 91c038303c1ad7c2530964d3102aae49090c4c2a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d9653be8b67ef4d971c157b8dd8d82b2ae3c2287
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635943"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105530"
 ---
 # <a name="basic-linq-query-operations-c"></a>Operaciones básicas de consulta LINQ (C#)
 En este tema se ofrece una breve introducción a las expresiones de consulta LINQ y algunas de las clases de operaciones típicas que se realizan en una consulta. En los temas siguientes se ofrece información más detallada:  
   
  [Expresiones de consulta LINQ](../../../linq/index.md)  
   
- [Standard Query Operators Overview (C#)](./standard-query-operators-overview.md)(Información general sobre operadores de consulta estándar (C#))  
+ [Información general sobre operadores de consulta estándar (C#)](./standard-query-operators-overview.md)  
   
- [Walkthrough: Writing Queries in C#](./walkthrough-writing-queries-linq.md) (Tutorial: Escribir consultas en C#)  
+ [Tutorial: Creación de consultas en C#](./walkthrough-writing-queries-linq.md)  
   
 > [!NOTE]
 > Si ya está familiarizado con un lenguaje de consultas como SQL o XQuery, puede omitir la mayoría de este tema. Lea la parte dedicada a la "cláusula `from`" en la sección siguiente para obtener información sobre el orden de las cláusulas en las expresiones de consulta LINQ.  
@@ -46,7 +47,7 @@ En este tema se ofrece una breve introducción a las expresiones de consulta LIN
 > [!NOTE]
 > Para los orígenes de datos no genéricos, como <xref:System.Collections.ArrayList>, el tipo de la variable de rango debe establecerse explícitamente. Para más información, consulte el [procedimiento para consultar un objeto ArrayList con LINQ (C#)](./how-to-query-an-arraylist-with-linq.md) y [Cláusula from](../../../language-reference/keywords/from-clause.md).  
   
-## <a name="filtering"></a>Filtros  
+## <a name="filtering"></a>Filtrado  
  Probablemente la operación de consulta más común es aplicar un filtro en forma de expresión booleana. El filtro hace que la consulta devuelva solo los elementos para los que la expresión es verdadera. El resultado se genera mediante la cláusula `where`. El filtro aplicado especifica qué elementos se deben excluir de la secuencia de origen. En el ejemplo siguiente, solo se devuelven los `customers` cuya dirección se encuentra en Londres.  
   
  [!code-csharp[csLINQGettingStarted#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#24)]  
@@ -99,9 +100,9 @@ from order in Customer.Orders...
 ## <a name="selecting-projections"></a>Selección (proyecciones)  
  La cláusula `select` genera resultados de consulta y especifica la "forma" o el tipo de cada elemento devuelto. Por ejemplo, puede especificar si sus resultados estarán compuestos de objetos `Customer` completos, un solo miembro, un subconjunto de miembros o algún tipo de resultado completamente diferente basado en un cálculo o en un objeto nuevo. Cuando la cláusula `select` genera algo distinto de una copia del elemento de origen, la operación se denomina *proyección*. El uso de proyecciones para transformar los datos es una función eficaz de las expresiones de consulta LINQ. Para obtener más información, vea [Transformaciones de datos con LINQ (C#)](./data-transformations-with-linq.md) y [select (cláusula)](../../../language-reference/keywords/select-clause.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Expresiones de consulta LINQ](../../../linq/index.md)
-- [Walkthrough: Writing Queries in C#](./walkthrough-writing-queries-linq.md) (Tutorial: Escribir consultas en C#)
+- [Tutorial: Creación de consultas en C#](./walkthrough-writing-queries-linq.md)
 - [Palabras clave para consultas (LINQ)](../../../language-reference/keywords/query-keywords.md)
 - [Tipos anónimos](../../classes-and-structs/anonymous-types.md)

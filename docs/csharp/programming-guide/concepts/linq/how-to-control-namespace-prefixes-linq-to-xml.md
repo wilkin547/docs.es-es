@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para controlar prefijos de espacios de nombres (C#) (LINQ to XML)
+description: Obtenga información sobre cómo controlar los prefijos de espacio de nombres al serializar un árbol XML en LINQ to XML en C#. En algunas situaciones es necesario controlar los prefijos de espacio de nombres.
 ms.date: 07/20/2015
 ms.assetid: 64de5186-b81a-4ddd-8327-8693df59a01b
-ms.openlocfilehash: 9f43c0804d8c830fa75f1e1390cb578c5f5d5106
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b0c5cbfa7488f3a7105595830ef6765e6bfb1f12
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141385"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105301"
 ---
 # <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>Procedimiento para controlar prefijos de espacios de nombres (C#) (LINQ to XML)
 En este tema se describe cómo puede controlar los prefijos de espacios de nombres al serializar un árbol XML.  

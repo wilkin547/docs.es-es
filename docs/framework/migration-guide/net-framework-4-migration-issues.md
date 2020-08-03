@@ -1,16 +1,17 @@
 ---
 title: Problemas de migración de .NET Framework 4
+description: Obtenga información sobre los problemas de migración entre .NET Framework 3.5 Service Pack 1 y .NET Framework 4, incluidas las correcciones y los cambios para el cumplimiento de estándares y la seguridad.
 ms.date: 05/02/2017
 helpviewer_keywords:
 - .NET Framework 4, migration
 - application compatibility
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
-ms.openlocfilehash: 8e83859733f021afbe074a7b4818b155d74efdff
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: bbb9a3803986c922fd1ef04a87cd1e230fc3d623
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420466"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475286"
 ---
 # <a name="net-framework-4-migration-issues"></a>Problemas de migración de .NET Framework 4
 

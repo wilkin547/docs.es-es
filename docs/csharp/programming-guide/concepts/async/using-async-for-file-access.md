@@ -1,13 +1,14 @@
 ---
 title: Usar Async en acceso a archivos (C#)
+description: Aprenda a usar la característica async para acceder a archivos en C#. Puede llamar a métodos asincrónicos sin usar devoluciones de llamada ni dividir el código en métodos.
 ms.date: 07/20/2015
 ms.assetid: bb018fea-5313-4c80-ab3f-7c24b2145bd9
-ms.openlocfilehash: 8e0a62c2263ed3fd11eb4accb54978ef439ac010
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: eb67bd408fe37b99e6c5ffdc2550e8f95110d7eb
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396955"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925129"
 ---
 # <a name="using-async-for-file-access-c"></a>Usar Async en acceso a archivos (C#)
 Puede usar la característica async para acceder a archivos. Con la característica async, se puede llamar a métodos asincrónicos sin usar devoluciones de llamada ni dividir el código en varios métodos o expresiones lambda. Para convertir código sincrónico en asincrónico, basta con llamar a un método asincrónico y no a un método sincrónico y agregar algunas palabras clave al código.  
@@ -78,7 +79,7 @@ await theTask;
  La primera instrucción devuelve una tarea e inicia el procesamiento de archivos. La segunda instrucción con await finaliza el método inmediatamente y devuelve otra tarea. Después, cuando se complete el procesamiento de archivos, la ejecución vuelve a la instrucción que sigue a la instrucción await. Para obtener más información, vea [Control Flow in Async Programs (C#)](./control-flow-in-async-programs.md) (Flujo de control en programas asincrónicos [C#]).  
   
 ## <a name="reading-text"></a>Leer texto  
- En el ejemplo siguiente se lee texto de un archivo. El texto se almacena en búfer y, en este caso, se coloca en un <xref:System.Text.StringBuilder>. A diferencia del ejemplo anterior, la evaluación de la instrucción await genera un valor. El método <xref:System.IO.Stream.ReadAsync%2A> devuelve un <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>, por lo que la evaluación de la espera genera un valor `Int32` (`numRead`) después de que se complete la operación. Para obtener más información, consulte [Tipos de valor devueltos asincrónicos (C#)](./async-return-types.md).  
+ En el ejemplo siguiente se lee texto de un archivo. El texto se almacena en búfer y, en este caso, se coloca en un <xref:System.Text.StringBuilder>. A diferencia del ejemplo anterior, la evaluación de la instrucción await genera un valor. El método <xref:System.IO.Stream.ReadAsync%2A> devuelve <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>, por lo que la evaluación de await genera un valor `Int32` (`numRead`) una vez completada la operación. Para obtener más información, consulte [Tipos de valor devueltos asincrónicos (C#)](./async-return-types.md).  
   
 ```csharp  
 public async Task ProcessReadAsync()  

@@ -1,13 +1,14 @@
 ---
 title: Mantener pares nombre/valor (C#)
+description: LINQ to XML contiene métodos que facilitan el mantenimiento de pares nombre-valor, ya sea como atributos o como un conjunto de elementos secundarios.
 ms.date: 07/20/2015
 ms.assetid: 7b04b0f1-af64-42eb-8737-83f8861b5915
-ms.openlocfilehash: 9c42a154a4c3ed1463e428faab4c7d33197ef4a5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 92a45d160cbb1ef470d93bf740d0b6f584681e72
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69591705"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165274"
 ---
 # <a name="maintaining-namevalue-pairs-c"></a>Mantener pares nombre/valor (C#)
 Son muchas las aplicaciones que necesitan mantener información que se almacena mejor en forma de pares de nombre/valor. Esta información podría contener datos sobre configuración o valores globales. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] incluye métodos que facilitan la operación de mantener un conjunto de pares nombre/valor. Puede almacenar la información como atributos o como un conjunto de elementos secundarios.  

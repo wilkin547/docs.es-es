@@ -1,13 +1,14 @@
 ---
 title: Consultas básicas (LINQ to XML) (C#)
+description: Vea ejemplos de consultas básicas de LINQ to XML, por ejemplo, cómo buscar un elemento con un atributo concreto.
 ms.date: 07/20/2015
 ms.assetid: d333bb7d-20c1-448a-95b7-e5ba07915744
-ms.openlocfilehash: 4cfc29041ab9758bdef04bd7afe3fb2af3d886ff
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c032d8df23731b9c306a7de004678f40d4bdecde
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75346599"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104161"
 ---
 # <a name="basic-queries-linq-to-xml-c"></a>Consultas básicas (LINQ to XML) (C#)
 En esta sección se ofrecen ejemplos de consultas básicas de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -30,6 +31,6 @@ En esta sección se ofrecen ejemplos de consultas básicas de [!INCLUDE[sqltecxl
 |[Procedimiento para escribir una consulta que busca elementos en función del contexto (C#)](./how-to-write-a-query-that-finds-elements-based-on-context.md)|Muestra cómo seleccionar elementos en base a otros elementos del árbol.|  
 |[Procedimiento para depurar conjuntos de resultados de consulta vacíos (C#)](./how-to-debug-empty-query-results-sets.md)|Muestra la solución apropiada cuando se depuran consultas sobre un XML que se encuentra en un espacio de nombres predeterminado.|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Consultar árboles XML (C#)](how-to-find-an-element-with-a-specific-attribute.md)

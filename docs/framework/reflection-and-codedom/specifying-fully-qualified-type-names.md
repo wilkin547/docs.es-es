@@ -1,5 +1,6 @@
 ---
 title: Especificar nombres de tipo completos
+description: Para la entrada válida para las operaciones de reflexión, use nombres de tipo completos, que tienen especificaciones de nombre de ensamblado, especificaciones de espacio de nombres y nombres de tipo.
 ms.date: 02/21/2019
 helpviewer_keywords:
 - names [.NET Framework], fully qualified type names
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - special characters
 - IDENTIFIER
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
-ms.openlocfilehash: 707c71482196d789ed9a88db34af048ec57734fb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ff33b6abd31a82c6b80aa794564c5c48648cde63
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130027"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865234"
 ---
 # <a name="specifying-fully-qualified-type-names"></a>Especificar nombres de tipo completos
 
@@ -187,7 +188,7 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
 
 ## <a name="specifying-generic-types"></a>Especificación de tipos genéricos
 
-SimpleTypeSpec\`NUMBER representa un tipo genérico abierto de 1 a *n* parámetros de tipo genérico. Por ejemplo, para obtener la referencia al tipo genérico abierto List\<T> o el tipo genérico cerrado List\<String>, use ``Type.GetType("System.Collections.Generic.List`1")``; para obtener una referencia al tipo genérico Dictionary\<TKey, TValue>, use ``Type.GetType("System.Collections.Generic.Dictionary`2")``.
+SimpleTypeSpec\`NUMBER representa un tipo genérico abierto de 1 a *n* parámetros de tipo genérico. Por ejemplo, para obtener la referencia al tipo genérico abierto List\<T> o al tipo genérico cerrado List\<String>, use ``Type.GetType("System.Collections.Generic.List`1")``; para obtener una referencia al tipo genérico Dictionary\<TKey,TValue>, use ``Type.GetType("System.Collections.Generic.Dictionary`2")``.
 
 ## <a name="specifying-pointers"></a>Especificación de punteros
 

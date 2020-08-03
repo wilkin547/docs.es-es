@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para leer y escribir un documento codificado (C#)
+description: Aprenda a crear un documento XML codificado en C# mediante la adición de un elemento XDeclaration al árbol XML y el establecimiento de la codificación en el nombre de página de códigos deseado.
 ms.date: 07/20/2015
 ms.assetid: 84f64e71-39a6-42c6-ad68-f052bb158a03
-ms.openlocfilehash: fa28c26845a0c6019943e0532ea0692a6dffd5a9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ed02b7467f4de71455da516a6c894070337684e7
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347662"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104319"
 ---
 # <a name="how-to-read-and-write-an-encoded-document-c"></a>Procedimiento para leer y escribir un documento codificado (C#)
 Para crear un documento XML codificado, se agrega un <xref:System.Xml.Linq.XDeclaration> al árbol XML, estableciendo la codificación en el nombre de página de códigos deseado.  

@@ -1,15 +1,16 @@
 ---
 title: 'Mitigación: diseño de WPF'
+description: Obtenga información sobre cómo mitigar los problemas derivados de un cambio en el diseño de los controles de WPF, como el desplazamiento en un píxel de la posición de un objeto.
 ms.date: 03/30/2017
 ms.assetid: 805ffd7f-8d1e-427e-a648-601ca8ec37a5
-ms.openlocfilehash: 7a074698fd203d0c5f9b799bfee8a6a9cb40800e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e4e4612f7b39eefbf0e76ac86c8eb644c257ba75
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73457789"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475351"
 ---
-# <a name="mitigation-wpf-layout"></a>Mitigación: diseño de WPF
+# <a name="mitigation-wpf-layout"></a>Mitigación: Diseño de WPF
 El diseño de los controles WPF puede cambiar ligeramente.  
   
 ## <a name="impact"></a>Impacto  

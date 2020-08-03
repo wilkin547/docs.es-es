@@ -1,16 +1,17 @@
 ---
 title: 'Control de versiones con las palabras clave Override y New: Guía de programación de C#'
+description: Obtenga información sobre el control de versiones de clases base y derivadas en C# y sobre cómo especificar si un método está pensado para invalidar u ocultar un método heredado.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: 7bcc7e68810c97142cebca7595266a0e4a69ed51
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: c2630741e1055a14dd5b9e4445d660cfd68891b0
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207935"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86863869"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Control de versiones con las palabras clave Override y New (Guía de programación de C#)
 El lenguaje C# está diseñado para que las versiones entre clases [base](../../language-reference/keywords/base.md) y derivadas de diferentes bibliotecas puedan evolucionar y mantener la compatibilidad con versiones anteriores. Esto significa, por ejemplo, que la introducción de un nuevo miembro en una [clase](../../language-reference/keywords/class.md) base con el mismo nombre que un miembro de una clase derivada es totalmente compatible con C# y no lleva a un comportamiento inesperado. Además, implica que una clase debe declarar explícitamente si un método está pensado para reemplazar un método heredado o si se trata de un nuevo método que oculta un método heredado de nombre similar.  

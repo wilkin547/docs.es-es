@@ -1,5 +1,6 @@
 ---
 title: Aximp.exe (Importador de controles ActiveX de Windows Forms)
+description: Obtenga información sobre Aximp.exe, el importador de controles ActiveX de Windows Forms. Esta herramienta convierte definiciones de tipos de una biblioteca de tipos COM para ActiveX en Windows Forms.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ActiveX controls, hosting in Windows Forms
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Aximp.exe
 - Windows Forms ActiveX Control Importer
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
-ms.openlocfilehash: 6d58d1df81780c3033eab7c1ac3e860adeb374b1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d4fd6762195078963b43392178996a61f90feb94
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180426"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167344"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Importador de controles ActiveX de Windows Forms)
 El Importador de controles ActiveX convierte definiciones de tipos de una biblioteca de tipos COM para un control ActiveX en un control de Windows Forms.  
@@ -32,13 +33,13 @@ El Importador de controles ActiveX convierte definiciones de tipos de una biblio
 aximp [options]{file.dll | file.ocx}  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
-|Argumento|Description|  
+|Argumento|Descripción|  
 |--------------|-----------------|  
 |*file*|Nombre del archivo de código fuente que contiene el control ActiveX que se va a convertir. Este argumento debe tener la extensión .ocx o .dll.|  
   
-|Opción|Description|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |`/delaysign`|Especifica que Aximp.exe debe firmar el control resultante mediante la opción de firma retardada. Debe especificar esta opción con la opción `/keycontainer:`, `/keyfile:` o `/publickey:`. Para obtener más información sobre el proceso de firma retardada, vea [Retrasar la firma de un ensamblado](../../standard/assembly/delay-sign.md).|  
 |`/help`|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  

@@ -1,13 +1,14 @@
 ---
 title: Habilitar un origen de datos para realizar consultas LINQ
+description: Obtenga información sobre cómo extender LINQ en C# para habilitar la consulta de cualquier origen de datos en el patrón LINQ, lo que facilita a los clientes la consulta de un origen de datos.
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-ms.openlocfilehash: 9a143f0da74d4e91ef697f468d7fda225e75245b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a3a03aa3c67ef80507de4607e21eee4d247d622d
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635774"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103941"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>Habilitar un origen de datos para realizar consultas LINQ
 Hay varias maneras de extender LINQ para permitir consultar cualquier origen de datos en el modelo LINQ El origen de datos podría ser una estructura de datos, un servicio Web, un sistema de archivos o una base de datos, por nombrar algunos. El modelo LINQ facilita a los clientes las consultas a un origen de datos para el que las consultas LINQ están habilitadas, ya que la sintaxis y el modelo de consulta no cambian. Las maneras en las que LINQ se puede extender a estos orígenes de datos son las siguientes:  
@@ -39,10 +40,10 @@ Hay varias maneras de extender LINQ para permitir consultar cualquier origen de 
   
  Un proveedor `IQueryable` complejo, como el proveedor de [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], podría traducir consultas completas LINQ en un lenguaje de consulta más expresivo, como SQL. Un proveedor complejo es más general que un proveedor menos complejo, porque puede controlar una gran variedad de preguntas en la consulta. También posee un sistema de tipos abierto y, por tanto, debe contener una amplia infraestructura para utilizar tipos definidos por el usuario. El desarrollo de un proveedor complejo requiere un esfuerzo significativo.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Linq.IQueryable%601>
 - <xref:System.Collections.Generic.IEnumerable%601>
 - <xref:System.Linq.Enumerable>
-- [Standard Query Operators Overview (C#)](./standard-query-operators-overview.md)(Información general sobre operadores de consulta estándar (C#))
+- [Información general sobre operadores de consulta estándar (C#)](./standard-query-operators-overview.md)
 - [LINQ to Objects (C#)](./linq-to-objects.md)

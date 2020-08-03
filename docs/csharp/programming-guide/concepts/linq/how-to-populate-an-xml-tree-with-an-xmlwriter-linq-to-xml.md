@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para rellenar un árbol XML con un objeto XmlWriter (LINQ to XML) (C#)
+description: Aprenda a rellenar un árbol XML mediante CreateWriter para crear un objeto XmlWriter y, luego, escriba en él en LINQ to XML en C#.
 ms.date: 07/20/2015
 ms.assetid: cd5674d1-5c54-4efc-ba68-e23b2875295f
-ms.openlocfilehash: f48843af403f2ee0e6d2850deab009a143f55dc7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9639c5947583bccf4f8ba427fc8611e181ef1536
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345770"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104796"
 ---
 # <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-c"></a>Procedimiento para rellenar un árbol XML con un objeto XmlWriter (LINQ to XML) (C#)
 Una forma de rellenar un árbol XML consiste en utilizar <xref:System.Xml.Linq.XContainer.CreateWriter%2A> para crear <xref:System.Xml.XmlWriter> y después escribir en <xref:System.Xml.XmlWriter>. El árbol XML se rellena con todos los nodos que se escriben en <xref:System.Xml.XmlWriter>.  
@@ -67,4 +68,4 @@ Console.WriteLine(newTree);
 - <xref:System.Xml.Linq.XContainer.CreateWriter%2A>
 - <xref:System.Xml.XmlWriter>
 - <xref:System.Xml.Xsl.XslCompiledTransform>
-- [Crear árboles XML (C#)](./linq-to-xml-overview.md)
+- [Crear árboles XML en C# ](./linq-to-xml-overview.md)

@@ -1,5 +1,6 @@
 ---
 title: 'Mitigación: separador de ruta de acceso ZipArchiveEntry.FullName'
+description: Obtenga información sobre cómo ha cambiado el separador de ruta de acceso de la propiedad ZipArchiveEntry.FullName a partir de las aplicaciones destinadas a .NET Framework 4.6.1.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application compatibility
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - .NET Framework 4.6.1 retargeting changes
 - retargeting changes
 ms.assetid: 8d575722-4fb6-49a2-8a06-f72d62dc3766
-ms.openlocfilehash: 3f6c7f258fd5dbf01db4d79b73b88ddd7484f9b2
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 8cd6362038ce0548681f3d3b44724f3ef9ff62cb
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102624"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475299"
 ---
 # <a name="mitigation-ziparchiveentryfullname-path-separator"></a>Mitigación: separador de ruta de acceso ZipArchiveEntry.FullName
 
@@ -27,7 +28,7 @@ A partir de las aplicaciones que tienen como destino .NET Framework 4.6.1, el s
  El impacto de este cambio en los archivos ZIP que se descomprimen en el sistema operativo Windows mediante interfaces API en el espacio de nombres <xref:System.IO> de .NET Framework debe ser mínimo, ya que estas API pueden controlar sin problemas una barra diagonal ("/") o una barra diagonal inversa ("\\") como carácter separador de la ruta de acceso.  
   
 ## <a name="mitigation"></a>Mitigación  
- Si no desea este comportamiento, puede rechazar la adición de un valor de configuración para la sección [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) del archivo de configuración de la aplicación. A continuación se muestra la sección `<runtime>` y el conmutador de rechazo.  
+ Si este comportamiento no es el deseado, puede rechazar la adición de un valor de configuración a la sección [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) del archivo de configuración de la aplicación. A continuación se muestra la sección `<runtime>` y el conmutador de rechazo.  
   
 ```xml  
 <runtime>  
@@ -35,7 +36,7 @@ A partir de las aplicaciones que tienen como destino .NET Framework 4.6.1, el s
 </runtime>  
 ```  
   
- Además, las aplicaciones que tienen como destino versiones anteriores de .NET Framework pero que se ejecutan en .NET Framework 4.6.1 y versiones posteriores pueden participar en este comportamiento si se agrega una opción de configuración a la sección [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) del archivo de configuración de la aplicación. A continuación se muestra la sección `<runtime>` y el conmutador de inclusión.  
+ Además, las aplicaciones que tienen como destino versiones anteriores de .NET Framework, pero que se ejecutan en .NET Framework 4.6.1 y versiones posteriores, pueden participar en este comportamiento si se agrega una opción de configuración a la sección [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) del archivo de configuración de la aplicación. A continuación se muestra la sección `<runtime>` y el conmutador de inclusión.  
   
 ```xml  
 <runtime>  

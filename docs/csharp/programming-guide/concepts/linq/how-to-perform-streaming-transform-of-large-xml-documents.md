@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para realizar una transformación de streaming de documentos XML grandes (C#)
+description: Aprenda a realizar una transformación de streaming de texto a XML en C# para evitar el uso excesivo de memoria en algunos archivos.
 ms.date: 07/20/2015
 ms.assetid: 5f16d1f8-5370-4b55-b0c8-e497df163037
-ms.openlocfilehash: 9eb2e832f798e550ef3b534b0c9a0e3416378b43
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e1ab2866079b2244dc764271d7ba63173349e2f3
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169109"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104868"
 ---
 # <a name="how-to-perform-streaming-transform-of-large-xml-documents-c"></a>Procedimiento para realizar una transformación de streaming de documentos XML grandes (C#)
 A veces tiene que transformar los archivos XML grandes y escribir la aplicación para que sea predecible la superficie en memoria de la aplicación. Si intenta rellenar un árbol XML con un archivo XML de gran tamaño, su utilización de memoria será proporcional al tamaño del archivo (es decir, excesivo). Por consiguiente, debe utilizar en su lugar una técnica de transmisión por secuencias.  

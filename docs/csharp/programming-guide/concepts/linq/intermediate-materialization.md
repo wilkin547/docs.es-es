@@ -1,13 +1,14 @@
 ---
 title: Materialización intermedia (C#)
+description: En este ejemplo de C# se muestra la materialización intermedia, donde una consulta hace que AppendString muestre todo su origen antes de producir el primer elemento.
 ms.date: 07/20/2015
 ms.assetid: 7922d38f-5044-41cf-8e17-7173d6553a5e
-ms.openlocfilehash: af1eb7df7da02d8e72fc102cda4ee5f329dc7974
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 30951aaeea261efbd414205bcc54b63106324344
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253164"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165723"
 ---
 # <a name="intermediate-materialization-c"></a>Materialización intermedia (C#)
 Si no tiene cuidado, en algunas situaciones puede alterar drásticamente el perfil de memoria y rendimiento de su aplicación causando una materialización prematura de las recopilaciones de sus consultas. Algunos operadores de consulta estándar provocan la materialización de su recopilación de origen antes de producir un elemento único. Por ejemplo, <xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> primero recorre en iteración toda la recopilación de origen, después ordena todos los elementos y finalmente produce el primer elemento. Esto significa que resulta caro obtener el primer elemento de una recopilación ordenada; cada elemento posterior no es caro. Esto tiene sentido: sería imposible que el operador de consulta hiciera lo contrario.  
@@ -84,8 +85,8 @@ Main: str >GHI!!!<
   
  Los operadores de consulta estándar también se pueden encadenar juntos. Esto se ilustra en el tema final de este tutorial.  
   
-- [Chaining Standard Query Operators Together (C#)](./chaining-standard-query-operators-together.md) (Encadenar juntos operadores de consulta estándar [C#])  
+- [Encadenar operadores de consulta estándar juntos (C#)](./chaining-standard-query-operators-together.md)  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Tutorial: encadenar cadenas juntas (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [Tutorial: Encadenar cadenas juntas (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

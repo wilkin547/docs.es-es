@@ -1,5 +1,6 @@
 ---
 title: Procedimiento para examinar y crear instancias de tipos genéricos mediante la reflexión
+description: Vea cómo examinar y crear instancias de tipos genéricos mediante la reflexión. Use las propiedades IsGenericType, IsGenericParameter y GenericParameterPosition.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - reflection, generic types
 - generics [.NET Framework], reflection
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
-ms.openlocfilehash: 62e4e066740d0422f8f7045b043a5725278c209c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b57a0ed0c809da442dc9fcf202ad364060971f80
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130131"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865104"
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Procedimiento para examinar y crear instancias de tipos genéricos mediante la reflexión
 La información sobre los tipos genéricos se obtiene de la misma manera que la información sobre otros tipos: mediante el examen de un objeto <xref:System.Type> que representa el tipo genérico. La diferencia principal es que un tipo genérico tiene una lista de objetos <xref:System.Type> que representan sus parámetros de tipo genérico. En el primer procedimiento de esta sección se examinan tipos genéricos.  

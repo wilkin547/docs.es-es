@@ -1,17 +1,18 @@
 ---
 title: LINQ y tipos genéricos (C#)
+description: Obtenga información sobre los conceptos básicos de los tipos genéricos de C# que admiten consultas.  Las consultas LINQ se basan en tipos genéricos.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], generic types
 - generic types [LINQ]
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
-ms.openlocfilehash: 2cbff0b31cac091a57ea35cbd01535b7d0c4b78a
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 98054a4a21704293faa1194dac342bc48aef138d
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241765"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165637"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ y tipos genéricos (C#)
 Las consultas LINQ se basan en tipos genéricos incorporados en la versión 2.0 de .NET Framework. No es necesario tener conocimientos avanzados de genéricos para poder empezar a escribir consultas, aunque debería entender dos conceptos básicos:  

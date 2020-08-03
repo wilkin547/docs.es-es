@@ -1,16 +1,17 @@
 ---
 title: 'Matrices escalonadas: Guía de programación de C#'
+description: Una matriz escalonada de C# es una matriz cuyos elementos son matrices de diferentes dimensiones y tamaños. Aprenda a declarar y inicializar matrices escalonadas, así como a acceder a ellas.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - jagged arrays [C#]
 - arrays [C#], jagged
 ms.assetid: 537c65a6-0e0a-4a00-a2b8-086f38519c70
-ms.openlocfilehash: 56013f0143d5efcb31a476909cb6e92504ff0dbc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 40da9fbda34aef4e69ebf2ae20485e883b79f871
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705709"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474688"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a>Matrices escalonadas (Guía de programación de C#)
 

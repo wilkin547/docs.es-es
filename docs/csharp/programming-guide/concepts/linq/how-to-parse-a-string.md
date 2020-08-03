@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para analizar una cadena (C#)
+description: Aprenda a analizar una cadena para crear un árbol XML en C#. Aprenda a acceder a datos específicos del XML analizado.
 ms.date: 07/20/2015
 ms.assetid: 81e5686c-9658-42d8-a7e3-b11be0a2c98b
-ms.openlocfilehash: 79821eb9e5cd7187ac3c2a93f85eaae45c5c48ac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a4664e090b6a44c52c519e61b66ccdc5d59a71f1
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345808"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104808"
 ---
 # <a name="how-to-parse-a-string-c"></a>Procedimiento para analizar una cadena (C#)
 
@@ -54,6 +55,6 @@ List<XElement> contactNodes = contacts.Elements("Contact").ToList();
 Console.WriteLine(contactNodes[0]);
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Procedimiento para buscar un elemento con un atributo específico (C#)](how-to-find-an-element-with-a-specific-attribute.md)

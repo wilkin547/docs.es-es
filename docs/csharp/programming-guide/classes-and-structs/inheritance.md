@@ -1,5 +1,6 @@
 ---
 title: 'Herencia: Guía de programación de C#'
+description: La herencia de C# permite crear nuevas clases que reutilizan, extienden y modifican el comportamiento definido en otras clases.
 ms.date: 02/07/2020
 helpviewer_keywords:
 - abstract methods [C#]
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: 448b1695a4afc50f4afa20383e5fda280b9f12e9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6b94f58801af188655474f9c7de76b79381e721d
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77626664"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864260"
 ---
 # <a name="inheritance-c-programming-guide"></a>Herencia (Guía de programación de C#)
 

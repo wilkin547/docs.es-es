@@ -1,5 +1,6 @@
 ---
 title: Compatibilidad de versiones en .NET Framework
+description: Obtenga información sobre la compatibilidad entre las versiones de .NET Framework, incluida la compatibilidad con versiones anteriores y la ejecución en paralelo.
 ms.custom: updateeachrelease
 ms.date: 04/02/2019
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-ms.openlocfilehash: c3bc92b89a46fc947b4d7e67644930374eeab2e4
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: dfdc5a977b69af8aa3a0d33ed8b833745cf6bf11
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82796007"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475507"
 ---
 # <a name="version-compatibility"></a>Compatibilidad de versiones
 
@@ -22,7 +23,7 @@ La compatibilidad con versiones anteriores significa que una aplicación desarro
 
 Una aplicación se ejecuta de manera predeterminada en la versión de .NET Framework para la que se creó. Si esa versión no está presente y en el archivo de configuración de la aplicación no se han definido las versiones compatibles, puede producirse un error de inicialización de .NET Framework. En este caso, el intento de ejecutar la aplicación no se realizará correctamente.
 
-Para definir las versiones concretas en las que se ejecuta la aplicación, agregue uno o varios elementos [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) archivo de configuración de la aplicación. Cada elemento `<supportedRuntime>` muestra una versión compatible del runtime; el primer elemento especifica la versión de mayor preferencia y el último, la de menor preferencia.
+Para definir las versiones concretas en las que se ejecuta la aplicación, agregue uno o varios elementos [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) al archivo de configuración de la aplicación. Cada elemento `<supportedRuntime>` muestra una versión compatible del runtime; el primer elemento especifica la versión de mayor preferencia y el último, la de menor preferencia.
 
 ```xml
 <configuration>
@@ -59,7 +60,7 @@ Si la aplicación o el componente no funciona como se esperaba en .NET Framewor
 
 - Si va a volver a compilar código fuente existente para ejecutarlo en .NET Framework 4.5 o en sus versiones secundarias, o si va a desarrollar una nueva versión de una aplicación o un componente para NET Framework 4.5 o sus versiones secundarias a partir de una base de código fuente existente, consulte [Lo obsoleto en la biblioteca de clases .NET Framework](../whats-new/whats-obsolete.md) para conocer los miembros y tipos obsoletos, y aplique las soluciones indicadas. (El código compilado previamente seguirá ejecutándose con los tipos y miembros que se han marcado como obsoletos).
 
-- Si considera que un cambio en .NET Framework 4.5 dañó la aplicación, consulte [Esquema de la configuración de Common Language Runtime](../configure-apps/file-schema/runtime/index.md) y, especialmente, el [\<AppContextSwitchOverrides> Elemento](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md), para determinar si puede usar una configuración en tiempo de ejecución en el archivo de configuración de la aplicación para restaurar el comportamiento anterior.
+- Si considera que un cambio en .NET Framework 4.5 dañó la aplicación, consulte [Esquema de la configuración de Common Language Runtime](../configure-apps/file-schema/runtime/index.md) y, especialmente, el [Elemento \<AppContextSwitchOverrides>](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md), para determinar si puede usar una configuración del entorno de ejecución en el archivo de configuración de la aplicación para restaurar el comportamiento anterior.
 
 - Si se produce un problema que no está documentado, abra un problema en el [sitio de la comunidad de desarrolladores de .NET](https://developercommunity.visualstudio.com/spaces/61/index.html) o en el [repositorio de GitHub de Microsoft/dotnet](https://github.com/microsoft/dotnet/issues).
 

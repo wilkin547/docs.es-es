@@ -1,16 +1,17 @@
 ---
 title: Encadenar operadores de consulta estándar juntos (C#)
+description: En este ejemplo se muestra cómo los operadores de consulta estándar también se pueden encadenar en C#. La consulta no materializa resultados intermedios.
 ms.date: 07/20/2015
 ms.assetid: 66f2b0a9-2c23-4735-988e-bbc9dfb55c7b
-ms.openlocfilehash: 37df654b2bfdcc135460e5ded2ceec1eca33b35a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 41a7e4c7910c783d07181fe16254b0cac6902794
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70204211"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104066"
 ---
 # <a name="chaining-standard-query-operators-together-c"></a>Encadenar operadores de consulta estándar juntos (C#)
-Este es el tema final del tutorial [Tutorial: Chaining Queries Together (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md) (Tutorial: Encadenar consultas juntas [C#]).  
+Este es el tema final de [Tutorial: Encadenar cadenas juntas (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
   
  Los operadores de consulta estándar también se pueden encadenar juntos. Por ejemplo, puede interponer el operador <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> y también funciona de forma diferida. No materializa resultados intermedios.  
   
@@ -19,7 +20,7 @@ Este es el tema final del tutorial [Tutorial: Chaining Queries Together (C#)](./
   
  Una diferencia es que en este caso, el método <xref:System.Linq.Enumerable.Where%2A> recorre en iteración su recopilación de origen, determina que el primer elemento no pasa el predicado y después obtiene el siguiente elemento, que lo pasa. A continuación produce el segundo elemento.  
   
- No obstante, la idea básica es la misma: las recopilaciones intermedias no se materializan a menos que deban hacerlo.  
+ Pero la idea básica es la misma: las colecciones intermedias no se materializan a menos que deban hacerlo.  
   
  Cuando se utilizan expresiones de consulta, se convierten en llamadas a operadores de consulta estándar y se aplican los mismos principios.  
   

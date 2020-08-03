@@ -1,5 +1,6 @@
 ---
 title: 'Mitigación: Compatibilidad del lápiz y la entrada táctil basados en el puntero'
+description: Conozca los efectos que tiene habilitar una pila de lápiz/entrada táctil opcional de WPF para aplicaciones de WPF destinadas a .NET Framework 4.7.
 ms.date: 04/07/2017
 helpviewer_keywords:
 - retargeting changes
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - WPF retargeting changes
 - WPF pointer-based touch and stylus stack
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
-ms.openlocfilehash: 023c38f66611bd0022699d3f62d90c3923585012
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d0c0effeaa727c615dddc3b92cdd34aafde65705
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77094480"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475429"
 ---
-# <a name="mitigation-pointer-based-touch-and-stylus-support"></a>Mitigación: Compatibilidad del lápiz y la entrada táctil basados en el puntero
+# <a name="mitigation-pointer-based-touch-and-stylus-support"></a>Mitigación: compatibilidad del lápiz y la entrada táctil basados en el puntero
 
 Las aplicaciones de WPF que se destinan a .NET Framework 4.7 y que se ejecutan en Windows a partir de Windows 10 Creators Update pueden habilitar la pila de lápiz/entada táctil de WPF basada en `WM_POINTER`.
 

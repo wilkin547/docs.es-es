@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para realizar un recuento de las repeticiones de una palabra en una cadena (LINQ) (C#)
+description: En este ejemplo se muestra cómo usar una consulta LINQ en C# para contar las repeticiones de una palabra concreta en una cadena. Se usa el método Split para crear una matriz de palabras.
 ms.date: 07/20/2015
 ms.assetid: f8e6f546-7c14-4aa1-8a75-e8d09f3b8ccd
-ms.openlocfilehash: 9c3ac2e0d44d52e437586a4d105a022f75c1dc54
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1621e776510e366aa779f1d45468be34b3dec373
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169330"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103375"
 ---
 # <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-c"></a>Procedimiento para realizar un recuento de las repeticiones de una palabra en una cadena (LINQ) (C#)
 En este ejemplo se muestra cómo usar una consulta LINQ para contar las apariciones de una palabra determinada en una cadena. Observe que para realizar el recuento, primero se llama al método <xref:System.String.Split%2A> para crear una matriz de palabras. Existe un costo de rendimiento en el método <xref:System.String.Split%2A>. Si la única operación de la cadena es para contar las palabras, debe considerar la posibilidad de usar en su lugar los métodos <xref:System.Text.RegularExpressions.Regex.Matches%2A> o <xref:System.String.IndexOf%2A>. Pero si el rendimiento no es un problema crítico, o si ya ha dividido la frase para realizar otros tipos de consultas, tiene sentido usar LINQ para además contar las palabras o frases.  
@@ -57,6 +58,6 @@ class CountWords
 ## <a name="compiling-the-code"></a>Compilar el código  
  Cree un proyecto de aplicación de consola de C# con directivas `using` para los espacios de nombres System.Linq y System.IO.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [LINQ y cadenas (C#)](./linq-and-strings.md)

@@ -1,5 +1,6 @@
 ---
 title: Elementos obsoletos en .NET Framework
+description: Vea cómo la biblioteca de clases .NET marca miembros como obsoletos. Entienda el atributo ObsoleteAttribute, cómo administrar tipos y miembros obsoletos, etc.
 ms.custom: updateeachrelease
 ms.date: 04/02/2019
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - what's obsolete [.NET Framework]
 - deprecated [.NET Framework]
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
-ms.openlocfilehash: 7cfebfde859a95495e9d2d5e42bd034ad5d55e61
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f39f5ec614b669f3a0f63677cb6f8a6f9ed11cf
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79143140"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925805"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>Lo obsoleto en la biblioteca de clases de .NET Framework
 
@@ -64,7 +65,7 @@ Para establecer como destino una versión específica de .NET Framework, asigne 
 |4.6 (incluidas 4.6.1 y 4.6.2)|v4.0|
 |4.5 (incluidas 4.5.1 y 4.5.2)|v4.0|
 |4|v4.0|
-|3,5|v2.0.50727|
+|3.5|v2.0.50727|
 |2.0|v2.0.50727|
 |1.1|v1.1.4322|
 |1.0|v1.0.3705|
@@ -83,4 +84,4 @@ Para establecer como destino una versión específica de .NET Framework, asigne 
 
 ## <a name="see-also"></a>Vea también
 
-- [\<supportedRuntime > Elemento](../configure-apps/file-schema/startup/supportedruntime-element.md)
+- [Elemento \<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md)

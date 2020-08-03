@@ -1,5 +1,6 @@
 ---
 title: Procedimiento para escribir servicios mediante programación
+description: Vea cómo escribir servicios mediante programación a través de la configuración manual de la herencia y otros elementos de infraestructura.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Windows Service applications, creating
 ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
 author: ghogen
-ms.openlocfilehash: 5637d569ad5261bff6865af4ab2ed8b7631d2d38
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 9693e3d387f38319519ab04211d8219fe1e5dda1
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053559"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925714"
 ---
 # <a name="how-to-write-services-programmatically"></a>Procedimiento para escribir servicios mediante programación
 Si decide no utilizar la plantilla de proyecto de servicio de Windows, puede escribir sus propios servicios configurando la herencia y otros elementos de infraestructura. Al crear un servicio mediante programación, debe realizar varios pasos que, de lo contrario, la plantilla los controlaría:  

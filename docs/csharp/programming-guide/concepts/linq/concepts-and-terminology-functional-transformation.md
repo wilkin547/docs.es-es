@@ -1,13 +1,14 @@
 ---
 title: Conceptos y terminología (transformación funcional) (C#)
+description: Las funciones de programación funcional facilitan la transformación de XML. Obtenga información sobre los conceptos y la terminología de las transformaciones funcionales puras en C#.
 ms.date: 07/20/2015
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
-ms.openlocfilehash: 3e2ecc4c2f70700ae92ee36b6f122059b922332e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ee972b376f0d0898b7681049b9641b43780ed353
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70040630"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103983"
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a>Conceptos y terminología (transformación funcional) (C#)
 
@@ -76,7 +77,7 @@ Para obtener más información, consulte [Introducción a las consultas LINQ (C#
 
 Estas características del lenguaje se utilizarán en códigos de ejemplo a lo largo de esta sección.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Introducción a las transformaciones funcionales puras (C#)](./introduction-to-pure-functional-transformations.md)
 - [Diferencias entre la programación funcional y la programación imperativa (C#)](./functional-programming-vs-imperative-programming.md)

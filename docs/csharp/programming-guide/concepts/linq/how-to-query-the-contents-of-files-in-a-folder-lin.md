@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para consultar el contenido de los archivos de texto de una carpeta (LINQ) (C#)
+description: Obtenga información sobre cómo usar LINQ en C# para consultar todos los archivos de un árbol de directorios, abrirlos e inspeccionar su contenido.
 ms.date: 07/20/2015
 ms.assetid: f5b4dce7-1a34-4eb4-9bf1-60d5bdda264c
-ms.openlocfilehash: 998fddd3f59ee64df9adcee1acc720d82861c3d9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 216edc2ee6fc43fd06a3c89b1b6b73f693f752f8
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168744"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104264"
 ---
 # <a name="how-to-query-the-contents-of-text-files-in-a-folder-linq-c"></a>Procedimiento para consultar el contenido de los archivos de texto de una carpeta (LINQ) (C#)
 En este ejemplo se muestra cómo consultar todos los archivos en un árbol de directorios especificado, abrir cada archivo e inspeccionar su contenido. Este tipo de técnica puede usarse para crear índices o índices inversos del contenido de un árbol de directorios. En este ejemplo, se realiza una búsqueda de cadena simple. Pero los tipos más complejos de coincidencia de patrones se pueden realizar con una expresión regular. Para obtener más información, vea [Procedimiento para combinar consultas LINQ con expresiones regulares (C#)](./how-to-combine-linq-queries-with-regular-expressions.md).  
@@ -73,7 +74,7 @@ class QueryContents
 ## <a name="compiling-the-code"></a>Compilar el código  
 Cree un proyecto de aplicación de consola de C# con directivas `using` para los espacios de nombres System.Linq y System.IO.
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [LINQ and File Directories (C#)](./linq-and-file-directories.md) (LINQ y directorios de archivos [C#])
+- [LINQ y directorios de archivos (C#)](./linq-and-file-directories.md)
 - [LINQ to Objects (C#)](./linq-to-objects.md)

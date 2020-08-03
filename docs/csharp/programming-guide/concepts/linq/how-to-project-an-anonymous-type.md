@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para proyectar un tipo anónimo (C#)
+description: Obtenga información sobre cómo proyectar una consulta en un tipo anónimo en C#. Usar un tipo anónimo puede ser más sencillo que crear uno nuevo para emplearlo solo de forma breve.
 ms.date: 07/20/2015
 ms.assetid: 5cb9be13-5ac4-4373-a034-b3520a5b2dec
-ms.openlocfilehash: 7797c8bfb12943af1ce7f975b170bf002aa7d6fc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6598796a4ba95362340f2551b1da6ac6d857eaae
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345733"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104635"
 ---
 # <a name="how-to-project-an-anonymous-type-c"></a>Procedimiento para proyectar un tipo anónimo (C#)
 En algunos casos quizás desee proyectar una consulta a un nuevo tipo, aunque sepa que solo utilizará este tipo durante un breve período. Crear un nuevo tipo solamente para usarlo en la proyección conlleva mucho trabajo adicional. En este caso un enfoque más eficiente consiste en proyectar en un tipo anónimo. Los tipos anónimos permiten definir una clase y, a continuación, declarar e inicializar un objeto de esa clase, sin dar un nombre a la clase.  
@@ -28,7 +29,7 @@ Country: USA
 ## <a name="example"></a>Ejemplo  
  En este ejemplo, la cláusula `select` proyecta un tipo anónimo. A continuación, el ejemplo utiliza `var` para crear el objeto `IEnumerable`. En el bucle `foreach`, la variable de iteración se convierte en una instancia del tipo anónimo creado en la expresión de consulta.  
   
- En este ejemplo se usa el siguiente documento XML: [Archivo XML de ejemplo: Clientes y pedidos (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Clientes y pedidos (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XElement custOrd = XElement.Load("CustomersOrders.xml");  

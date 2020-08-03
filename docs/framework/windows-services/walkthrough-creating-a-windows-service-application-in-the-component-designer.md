@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: Creación de una aplicación de servicio de Windows'
+description: En este tutorial se crea una aplicación de servicio de Windows en Visual Studio que escribe mensajes en un registro de eventos. Agregue características, establezca el estado, agregue instaladores, etc.
 ms.date: 03/27/2019
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: e5ff40d8413acf64e7a8a129a7b268f58780d591
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 487a974af2280a02b83fe685324c9464df705585
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053486"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925636"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>Tutorial: Creación de una aplicación de servicio de Windows
 
@@ -51,7 +52,7 @@ Cambie el nombre del servicio **Service1** por **MyNewService**.
 
 2. En la ventana emergente, seleccione **Sí**.
 
-    ![Ventana para cambiar el nombre](./media/windows-service-rename.png "Ventana para cambiar el nombre en el servicio de Windows")
+    ![Solicitud de cambio de nombre](./media/windows-service-rename.png "Solicitud de cambio de nombre del servicio de Windows")
 
 3. En la pestaña **Diseño**, seleccione **Propiedades** en el menú contextual. En la ventana **Propiedades**, cambie el valor **ServiceName** a *MyNewService*.
 
@@ -340,7 +341,7 @@ Para poder ejecutar un servicio de Windows, antes debe instalarlo, lo que lo reg
 
      Este texto aparece en la columna **Descripción** de la ventana **Servicios** y describe el servicio al usuario.
 
-    ![Descripción del servicio en la ventana Servicios](./media/windows-service-description.png "Descripción del servicio")
+    ![Descripción del servicio en la ventana Servicios](./media/windows-service-description.png "Descripción del servicio").
 
 6. Agregue texto a la propiedad <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A>. Por ejemplo, *Nombre para mostrar de MyNewService*.
 
@@ -350,7 +351,7 @@ Para poder ejecutar un servicio de Windows, antes debe instalarlo, lo que lo reg
 
 8. Cuando haya terminado, la ventana **Propiedades** debería tener un aspecto similar al siguiente:
 
-     ![Propiedades de instalador para un servicio de Windows](./media/windows-service-installer-properties.png "Propiedades de instalador de un servicio de Windows")
+     ![Propiedades del instalador de un servicio de Windows](./media/windows-service-installer-properties.png "Propiedades del instalador del servicio de Windows")
 
 9. En la vista **Diseño** de **ProjectInstaller**, seleccione **serviceProcessInstaller1** para un proyecto de Visual C# o **ServiceProcessInstaller1** para un proyecto de Visual Basic. Después, seleccione **Propiedades** en el menú contextual. Establezca la propiedad <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> en <xref:System.ServiceProcess.ServiceAccount.LocalSystem> en la lista desplegable.
 

@@ -1,15 +1,16 @@
 ---
 title: Características de C# compatibles con LINQ
+description: Obtenga información sobre características de C# que se usan con consultas de LINQ y en otros contextos. Estas construcciones de lenguaje se han incorporado en C# 3.0.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: 32ba8f5e60b3ed2efd813a8ae32e5f4009eb790d
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: f72b82180d794086dcea9f11a7a057dc26ab0b26
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202405"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105424"
 ---
 # <a name="c-features-that-support-linq"></a>Características de C# compatibles con LINQ
 

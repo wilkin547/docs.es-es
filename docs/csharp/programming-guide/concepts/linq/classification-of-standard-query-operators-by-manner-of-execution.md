@@ -1,13 +1,14 @@
 ---
 title: Clasificación de operadores de consulta estándar por modo de ejecución (C#)
+description: 'Obtenga información sobre los modos de ejecución del operador de consulta estándar en C# para LINQ to Objects: inmediato, streaming aplazado y no streaming aplazado.'
 ms.date: 07/20/2015
 ms.assetid: b9435ce5-a7cf-4182-9f01-f3468a5533dc
-ms.openlocfilehash: ccf8fced5c92ceaaf84f9240e235da0e2b56ac1e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dd496e232de2c7ed10a8aaa7cec84f8136495cce
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69924293"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105501"
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-c"></a>Clasificación de operadores de consulta estándar por modo de ejecución (C#)
 Las implementaciones de LINQ to Objects de los métodos de operador de consulta estándar se ejecutan de una de dos formas principales: inmediata o aplazada. Los operadores de consulta que usan la ejecución aplazada pueden dividirse además en dos categorías: de streaming y de no streaming. Si sabe cómo se ejecutan los diferentes operadores de consulta, puede servirle para entender los resultados que se obtienen de una consulta determinada. Esto es especialmente cierto si se está cambiando el origen de datos o si se está creando una consulta sobre otra. En este tema se clasifican los operadores de consulta estándar según su modo de ejecución.  
@@ -39,28 +40,28 @@ Las implementaciones de LINQ to Objects de los métodos de operador de consulta 
 |<xref:System.Linq.Enumerable.Aggregate%2A>|TSource|x|||  
 |<xref:System.Linq.Enumerable.All%2A>|<xref:System.Boolean>|x|||  
 |<xref:System.Linq.Enumerable.Any%2A>|<xref:System.Boolean>|x|||  
-|<xref:System.Linq.Enumerable.AsEnumerable%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
+|<xref:System.Linq.Enumerable.AsEnumerable%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
 |<xref:System.Linq.Enumerable.Average%2A>|Valor numérico único|x|||  
 |<xref:System.Linq.Enumerable.Cast%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
 |<xref:System.Linq.Enumerable.Concat%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
 |<xref:System.Linq.Enumerable.Contains%2A>|<xref:System.Boolean>|x|||  
 |<xref:System.Linq.Enumerable.Count%2A>|<xref:System.Int32>|x|||  
 |<xref:System.Linq.Enumerable.DefaultIfEmpty%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
-|<xref:System.Linq.Enumerable.Distinct%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
-|<xref:System.Linq.Enumerable.ElementAt%2A>|TSource|x|||  
+|<xref:System.Linq.Enumerable.Distinct%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
+|<xref:System.Linq.Enumerable.ElementAt%2A>|TSource|X|||  
 |<xref:System.Linq.Enumerable.ElementAtOrDefault%2A>|TSource|x|||  
 |<xref:System.Linq.Enumerable.Empty%2A>|<xref:System.Collections.Generic.IEnumerable%601>|x|||  
-|<xref:System.Linq.Enumerable.Except%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x|x|  
-|<xref:System.Linq.Enumerable.First%2A>|TSource|x|||  
+|<xref:System.Linq.Enumerable.Except%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x|X|  
+|<xref:System.Linq.Enumerable.First%2A>|TSource|X|||  
 |<xref:System.Linq.Enumerable.FirstOrDefault%2A>|TSource|x|||  
 |<xref:System.Linq.Enumerable.GroupBy%2A>|<xref:System.Collections.Generic.IEnumerable%601>|||x|  
 |<xref:System.Linq.Enumerable.GroupJoin%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x|x|  
 <xref:System.Linq.Enumerable.Intersect%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x|x|  
-|<xref:System.Linq.Enumerable.Join%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x|x|  
-|<xref:System.Linq.Enumerable.Last%2A>|TSource|x|||  
+|<xref:System.Linq.Enumerable.Join%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x|X|  
+|<xref:System.Linq.Enumerable.Last%2A>|TSource|X|||  
 |<xref:System.Linq.Enumerable.LastOrDefault%2A>|TSource|x|||  
-|<xref:System.Linq.Enumerable.LongCount%2A>|<xref:System.Int64>|x|||  
-|<xref:System.Linq.Enumerable.Max%2A>|Valor numérico único, TSource o TResult|x|||  
+|<xref:System.Linq.Enumerable.LongCount%2A>|<xref:System.Int64>|X|||  
+|<xref:System.Linq.Enumerable.Max%2A>|Valor numérico único, TSource o TResult|X|||  
 |<xref:System.Linq.Enumerable.Min%2A>|Valor numérico único, TSource o TResult|x|||  
 |<xref:System.Linq.Enumerable.OfType%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
 |<xref:System.Linq.Enumerable.OrderBy%2A>|<xref:System.Linq.IOrderedEnumerable%601>|||x|  
@@ -70,26 +71,26 @@ Las implementaciones de LINQ to Objects de los métodos de operador de consulta 
 |<xref:System.Linq.Enumerable.Reverse%2A>|<xref:System.Collections.Generic.IEnumerable%601>|||x|  
 |<xref:System.Linq.Enumerable.Select%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
 |<xref:System.Linq.Enumerable.SelectMany%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
-|<xref:System.Linq.Enumerable.SequenceEqual%2A>|<xref:System.Boolean>|x|||  
-|<xref:System.Linq.Enumerable.Single%2A>|TSource|x|||  
+|<xref:System.Linq.Enumerable.SequenceEqual%2A>|<xref:System.Boolean>|X|||  
+|<xref:System.Linq.Enumerable.Single%2A>|TSource|X|||  
 |<xref:System.Linq.Enumerable.SingleOrDefault%2A>|TSource|x|||  
 |<xref:System.Linq.Enumerable.Skip%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
-|<xref:System.Linq.Enumerable.SkipWhile%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
+|<xref:System.Linq.Enumerable.SkipWhile%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
 |<xref:System.Linq.Enumerable.Sum%2A>|Valor numérico único|x|||  
 |<xref:System.Linq.Enumerable.Take%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
 <xref:System.Linq.Enumerable.TakeWhile%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
 |<xref:System.Linq.Enumerable.ThenBy%2A>|<xref:System.Linq.IOrderedEnumerable%601>|||x|  
-|<xref:System.Linq.Enumerable.ThenByDescending%2A>|<xref:System.Linq.IOrderedEnumerable%601>|||x|  
+|<xref:System.Linq.Enumerable.ThenByDescending%2A>|<xref:System.Linq.IOrderedEnumerable%601>|||X|  
 |<xref:System.Linq.Enumerable.ToArray%2A>|Matriz de TSource|x|||  
 |<xref:System.Linq.Enumerable.ToDictionary%2A>|<xref:System.Collections.Generic.Dictionary%602>|x|||  
 |<xref:System.Linq.Enumerable.ToList%2A>|<xref:System.Collections.Generic.IList%601>|x|||  
 |<xref:System.Linq.Enumerable.ToLookup%2A>|<xref:System.Linq.ILookup%602>|x|||  
 |<xref:System.Linq.Enumerable.Union%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
-|<xref:System.Linq.Enumerable.Where%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
+|<xref:System.Linq.Enumerable.Where%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Linq.Enumerable>
-- [Standard Query Operators Overview (C#)](./standard-query-operators-overview.md)(Información general sobre operadores de consulta estándar (C#))
+- [Información general sobre operadores de consulta estándar (C#)](./standard-query-operators-overview.md)
 - [Sintaxis de las expresiones de consulta para operadores de consulta estándar (C#)](./query-expression-syntax-for-standard-query-operators.md)
 - [LINQ to Objects (C#)](./linq-to-objects.md)

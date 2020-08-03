@@ -1,13 +1,14 @@
 ---
 title: Usar la varianza en interfaces para las colecciones genéricas (C#)
+description: Aprenda a usar las interfaces covariantes y contravariantes para las colecciones genéricas. Vea ejemplos de conversión y comparación de colecciones genéricas.
 ms.date: 07/20/2015
 ms.assetid: a44f0708-10fa-4c76-82cd-daa6e6b31e8e
-ms.openlocfilehash: 5f5531e17a530ed840108df2cf9bf829b2beb656
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: c2ce849e32520cb91422ff36173e418a010476bd
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241362"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105674"
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-c"></a>Usar la varianza en interfaces para las colecciones genéricas (C#)
 Una interfaz covariante permite que sus métodos devuelvan tipos más derivados que los especificados en la interfaz. Una interfaz contravariante permite que sus métodos acepten parámetros de tipos menos derivados que los especificados en la interfaz.  

@@ -1,15 +1,16 @@
 ---
 title: 'Campos: Guía de programación de C#'
+description: Un campo de C# es una variable de cualquier tipo que se declara directamente en una clase o estructura. Los campos son miembros de su tipo contenedor.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: 46d4f77a4a490b2acdb5da20b9a477f27c38d410
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9bd2e198cd623788a21d4da73e89851a6d77e3bb
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77628246"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474792"
 ---
 # <a name="fields-c-programming-guide"></a>Campos (Guía de programación de C#)
 
@@ -38,13 +39,13 @@ Los campos se inicializan inmediatamente antes de que se llame al constructor pa
 > [!NOTE]
 > Un inicializador de campo no puede hacer referencia a otros campos de instancia.
 
-Se pueden marcar campos como [público](../../language-reference/keywords/public.md), [privado](../../language-reference/keywords/private.md), [protegido](../../language-reference/keywords/protected.md), [interno](../../language-reference/keywords/internal.md), [protegido interno](../../language-reference/keywords/protected-internal.md) o [privado protegido](../../language-reference/keywords/private-protected.md). Estos modificadores de acceso definen cómo los usuarios de la clase pueden obtener acceso a los campos. Para obtener más información, vea [Modificadores de acceso](./access-modifiers.md).
+Se pueden marcar campos como [público](../../language-reference/keywords/public.md), [privado](../../language-reference/keywords/private.md), [protegido](../../language-reference/keywords/protected.md), [interno](../../language-reference/keywords/internal.md), [protegido interno](../../language-reference/keywords/protected-internal.md) o [privado protegido](../../language-reference/keywords/private-protected.md). Estos modificadores de acceso definen cómo los usuarios de la clase pueden obtener acceso a los campos. Para obtener más información, consulte [Modificadores de acceso](./access-modifiers.md).
 
-Opcionalmente, un campo se puede declarar como [static](../../language-reference/keywords/static.md). Esto hace que el campo esté disponible para los llamadores en cualquier momento, aunque no exista ninguna instancia de la clase. Para obtener más información, consulte [Clases estáticas y sus miembros](./static-classes-and-static-class-members.md).
+Opcionalmente, un campo se puede declarar como [static](../../language-reference/keywords/static.md). Esto hace que el campo esté disponible para los llamadores en cualquier momento, aunque no exista ninguna instancia de la clase. Para más información, vea [Clases estáticas y sus miembros](./static-classes-and-static-class-members.md).
 
 Se puede declarar un campo como [readonly](../../language-reference/keywords/readonly.md). Solamente se puede asignar un valor a un campo de solo lectura durante la inicialización o en un constructor. Un campo `static readonly` es muy similar a una constante, salvo que el compilador de C# no tiene acceso al valor de un campo estático de solo lectura en tiempo de compilación, solo en tiempo de ejecución. Para obtener más información, vea [Constants](./constants.md) (Constantes).
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

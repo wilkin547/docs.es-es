@@ -1,37 +1,38 @@
 ---
 title: Procedimiento para combinar dos colecciones (LINQ to XML) (C#)
+description: En este ejemplo de C# se combinan los elementos de LINQ to XML a otros elementos y se genera un nuevo documento XML.
 ms.date: 07/20/2015
 ms.assetid: 7b817ede-911a-4cff-9dd3-639c3fc228c9
-ms.openlocfilehash: a5044778bbfd9529faf5fe63c72076f6a973c815
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 10792ed4907e778b41821c9b32574bd8fc0ab35f
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345860"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104988"
 ---
 # <a name="how-to-join-two-collections-linq-to-xml-c"></a>Procedimiento para combinar dos colecciones (LINQ to XML) (C#)
 
 A veces, un elemento o atributo de un documento XML puede hacer referencia a otro elemento o atributo. Por ejemplo, el documento XML [Archivo XML de muestra: clientes y pedidos (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md) contiene una lista de clientes y una lista de pedidos. Cada elemento `Customer` contiene un atributo `CustomerID`. Cada elemento `Order` contiene un elemento `CustomerID`. El elemento `CustomerID` de cada pedido hace referencia al atributo `CustomerID` de un cliente.
 
-En el tema [Sample XSD File: Customers and Orders](./sample-xsd-file-customers-and-orders1.md) (Archivo XSD de ejemplo: Clientes y pedidos) se incluye un XSD que se puede usar para validar este documento. Usa las características `xs:key` y `xs:keyref` de XSD para establecer que el atributo `CustomerID` del elemento `Customer` es una clave, y para establecer una relación entre el elemento `CustomerID` de cada elemento `Order` y el atributo `CustomerID` de cada elemento `Customer`.
+En el tema [Archivo XSD de ejemplo: Clientes y pedidos](./sample-xsd-file-customers-and-orders1.md) se incluye un XSD que se puede usar para validar este documento. Usa las características `xs:key` y `xs:keyref` de XSD para establecer que el atributo `CustomerID` del elemento `Customer` es una clave, y para establecer una relación entre el elemento `CustomerID` de cada elemento `Order` y el atributo `CustomerID` de cada elemento `Customer`.
 
 Con [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], puede aprovechar esta relación mediante la cláusula `join`.
 
 Como no se dispone de ningún índice, la combinación tendrá un rendimiento en tiempo de ejecución bajo.
 
-Para obtener más información sobre `join`, consulte [Join Operations (C#)](./join-operations.md) (Operaciones de combinación [C#]).
+Para obtener más información sobre `join`, consulte [Operaciones de combinación (C#)](./join-operations.md).
 
 ## <a name="example"></a>Ejemplo
 
 El ejemplo siguiente combina los elementos `Customer` con los elementos `Order`, y genera un nuevo documento XML que incluye el elemento `CompanyName` en los pedidos.
 
-Antes de ejecutar la consulta, el ejemplo valida que el documento cumple el esquema de [Sample XSD File: Customers and Orders](./sample-xsd-file-customers-and-orders1.md) (Archivo XSD de ejemplo: Clientes y pedidos). Esto garantiza que la cláusula de combinación siempre funcionará.
+Antes de ejecutar la consulta, el ejemplo valida que el documento satisface el esquema de [Archivo XSD de ejemplo: Clientes y pedidos](./sample-xsd-file-customers-and-orders1.md). Esto garantiza que la cláusula de combinación siempre funcionará.
 
 Esta consulta recupera primero todos los elementos `Customer`, y luego los combina con los elementos `Order`. Selecciona sólo los pedidos de los clientes con un atributo `CustomerID` mayor que "K". A continuación, proyecta un nuevo elemento `Order` que contiene la información de cliente en cada pedido.
 
-En este ejemplo se usa el siguiente documento XML: [Archivo XML de ejemplo: Clientes y pedidos (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).
+Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Clientes y pedidos (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).
 
-En este ejemplo se usa el siguiente esquema XSD: [Sample XSD File: Customers and Orders](./sample-xsd-file-customers-and-orders1.md) (Archivo XSD de ejemplo: Clientes y pedidos).
+En este ejemplo se usa el siguiente esquema XSD: [Archivo XSD de ejemplo: Clientes y pedidos](./sample-xsd-file-customers-and-orders1.md).
 
 La combinación de este modo no funcionará bien. Las combinaciones se llevan a cabo mediante una búsqueda lineal. No hay tablas o índices hash disponibles para incrementar el rendimiento.
 

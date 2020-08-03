@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strong-named assemblies, about strong-named assemblies
 - assemblies [.NET Framework], strong-named
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
-ms.openlocfilehash: a2db0efcb57226a757796c311309ce8f749a398b
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 069e42af6f8d49363d0264c0f6167b4afa3acd61
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378610"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925662"
 ---
 # <a name="strong-named-assemblies"></a>Ensamblados con nombre seguro
 
@@ -30,9 +30,7 @@ Al crear un ensamblado con nombre seguro, este contiene el nombre de texto simpl
 
 ## <a name="why-strong-name-your-assemblies"></a>¿Por qué asignar nombres seguros a los ensamblados?
 
-Cuando se hace referencia a un ensamblado con nombre seguro, se espera obtener ciertas ventajas, como el control de versiones y la protección de nombres. En .NET Framework, los ensamblados con nombre seguro se pueden instalar en la caché global de ensamblados, lo cual es necesario para permitir algunos escenarios.
-
-Los ensamblados con nombre seguro son útiles en los escenarios siguientes:
+Para .NET Framework, los ensamblados con nombre seguro son útiles en los escenarios siguientes:
 
 - Cuando quiere habilitar los ensamblados para hacer referencia a ensamblados con nombre seguro, o quiere dar acceso `friend` a sus ensamblados desde otros ensamblados con nombre seguro.
 
@@ -42,7 +40,9 @@ Los ensamblados con nombre seguro son útiles en los escenarios siguientes:
 
 - Cuando quiere centralizar el servicio de la aplicación mediante una directiva de edición, lo que significa que el ensamblado se debe instalar en la caché global de ensamblados.
 
-Si es un desarrollador de código abierto y quiere obtener las ventajas de identidad de un ensamblado con nombre seguro, proteja la clave privada asociada con un ensamblado en el sistema de control de código fuente.
+En .NET Core, los ensamblados con nombre seguro no proporcionan ventajas materiales.
+
+Si es un desarrollador de código abierto y quiere obtener las ventajas de identidad de un ensamblado con nombre seguro para mejorar la compatibilidad con .NET Framework, considere la posibilidad de proteger la clave privada asociada con un ensamblado en el sistema de control de código fuente.
 
 ## <a name="see-also"></a>Vea también
 

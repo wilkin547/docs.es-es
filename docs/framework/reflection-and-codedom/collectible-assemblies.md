@@ -1,17 +1,17 @@
 ---
 title: Ensamblados recopilables para la generación dinámica de tipos
-description: ''
+description: Empiece a usar ensamblados recopilables para la generación dinámica de tipos en .NET. Lea sobre la duración y las restricciones de los ensamblados recopilables.
 ms.date: 08/29/2017
 helpviewer_keywords:
 - reflection, dynamic assembly
 - assemblies, collectible
 - collectible assemblies, retrieving
-ms.openlocfilehash: 02c7048e0321282463aa3558287d1d13c5e4f8d2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4981b93dbd49a6da96740bebed0f2ed7b89036c8
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180543"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475130"
 ---
 # <a name="collectible-assemblies-for-dynamic-type-generation"></a>Ensamblados recopilables para la generación dinámica de tipos
 

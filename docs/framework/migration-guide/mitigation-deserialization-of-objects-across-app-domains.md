@@ -1,15 +1,16 @@
 ---
 title: 'Mitigación: Deserialización de objetos en distintos dominios de aplicación'
+description: Aprenda a diagnosticar y mitigar un problema en el que un intento de deserializar objetos en el contexto de una llamada lógica entre dominios de aplicación produce una excepción.
 ms.date: 03/30/2017
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
-ms.openlocfilehash: e2d90a77cab699646bd31eaa162d1bd1744fd51b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 20ea0f2f0b49000b7d1993adb583a803d9f5be6c
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73457924"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475247"
 ---
-# <a name="mitigation-deserialization-of-objects-across-app-domains"></a>Mitigación: Deserialización de objetos en distintos dominios de aplicación
+# <a name="mitigation-deserialization-of-objects-across-app-domains"></a>Mitigación: deserialización de objetos en distintos dominios de aplicación
 En algunos casos, cuando una aplicación usa dos o más dominios de aplicación con distintas bases de aplicación, un intento de deserializar objetos en el contexto de llamada lógico entre dominios de aplicación produce una excepción.  
   
 ## <a name="diagnosing-the-issue"></a>Diagnóstico del problema  

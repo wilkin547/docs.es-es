@@ -1,13 +1,14 @@
 ---
 title: Filtrado de datos (C#)
+description: El filtrado, también conocido como selección, restringe los resultados en función de una condición. Obtenga información sobre los métodos de operador de consulta estándar de LINQ en C# que realizan el filtrado.
 ms.date: 07/20/2015
 ms.assetid: fbaece0d-0f23-47f7-89c5-f3ea8db692b6
-ms.openlocfilehash: 74399244990f8ff2deaa1d10576ea94a57c16bee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f9f6d691da73b566e5135f6692c87ba3a8978005
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75346989"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103929"
 ---
 # <a name="filtering-data-c"></a>Filtrado de datos (C#)
 El filtrado hace referencia a la operación de restringir el conjunto de resultados, de manera que solo contenga los elementos que cumplen una condición especificada. También se conoce como selección.  
@@ -20,9 +21,9 @@ El filtrado hace referencia a la operación de restringir el conjunto de resulta
   
 ## <a name="methods"></a>Métodos  
   
-|Nombre del método|Description|Sintaxis de la expresión de consulta de C#|Más información|  
+|Nombre del método|Descripción|Sintaxis de la expresión de consulta de C#|Más información|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|OfType|Selecciona valores en función de su capacidad para convertirse en un tipo especificado.|No disponible.|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|  
+|OfType|Selecciona valores en función de su capacidad para convertirse en un tipo especificado.|No es aplicable.|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|  
 |Where|Selecciona valores basados en una función de predicado.|`where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>Ejemplo de sintaxis de expresiones de consulta  
@@ -45,10 +46,10 @@ foreach (string str in query)
 */  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Linq>
-- [Standard Query Operators Overview (C#)](./standard-query-operators-overview.md)(Información general sobre operadores de consulta estándar (C#))
+- [Información general sobre operadores de consulta estándar (C#)](./standard-query-operators-overview.md)
 - [where (cláusula)](../../../language-reference/keywords/where-clause.md)
 - [Especificar dinámicamente filtros con predicado en tiempo de ejecución](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)
 - [Procedimiento para consultar los metadatos de un ensamblado con reflexión (LINQ) (C#)](./how-to-query-an-assembly-s-metadata-with-reflection-linq.md)

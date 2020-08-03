@@ -1,16 +1,17 @@
 ---
 title: Uso de foreach con matrices - Guía de programación de C#
+description: La instrucción foreach de C# itera por los elementos de una matriz. En el caso de las matrices unidimensionales, foreach procesa los elementos en orden de índice creciente.
 ms.date: 05/23/2018
 helpviewer_keywords:
 - arrays [C#], foreach
 - foreach statement [C#], using with arrays
 ms.assetid: 5f2da2a9-1f56-4de5-94cc-e07f4f7a0244
-ms.openlocfilehash: bb121b0f5d990ef6e596b34a45606e2abde6811a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d924a3ef3351cbb30b809a1542f35314ee721852
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705683"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474545"
 ---
 # <a name="using-foreach-with-arrays-c-programming-guide"></a>Uso de foreach con matrices (Guía de programación de C#)
 

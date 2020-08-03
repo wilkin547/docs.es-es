@@ -1,5 +1,6 @@
 ---
 title: Procedimiento para especificar el contexto de seguridad de los servicios
+description: Especifique el contexto de seguridad de los servicios. Los servicios que se ejecutan en el contexto predeterminado de la cuenta del sistema tienen derechos de acceso a los recursos del sistema diferentes a los del usuario que ha iniciado sesión.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, security
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - ServiceInstaller class, security context
 ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
 author: ghogen
-ms.openlocfilehash: dd2a9c4485e151d4cb1c9d5ae3a95a69fcc416d4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4ed531cb520a781fd38f8bf5491da6948901a1d5
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053581"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925740"
 ---
 # <a name="how-to-specify-the-security-context-for-services"></a>Procedimiento para especificar el contexto de seguridad de los servicios
 De forma predeterminada, los servicios se ejecutan en un contexto de seguridad diferente al del usuario que ha iniciado sesión. Los servicios se ejecutan en el contexto de la cuenta del sistema predeterminado, llamada `LocalSystem`, que les da diferentes privilegios de acceso a los recursos del sistema que el usuario. Puede cambiar este comportamiento para especificar una cuenta de usuario diferente bajo la cual se debe ejecutar el servicio.  

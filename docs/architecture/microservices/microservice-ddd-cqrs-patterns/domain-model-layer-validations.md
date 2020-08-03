@@ -2,12 +2,12 @@
 title: Diseñar las validaciones en el nivel de modelo de dominio
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedores | Información sobre conceptos clave de las validaciones de modelo de dominio.
 ms.date: 10/08/2018
-ms.openlocfilehash: 94df2d6441581fbbae479da2524d6ffce2037d68
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.openlocfilehash: f1e2d7430c642ad47f79cdd34d3a65e2cc70e239
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100917"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164279"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>Diseño de validaciones en el nivel de modelo de dominio
 
@@ -15,9 +15,9 @@ En el diseño guiado por el dominio (DDD), las reglas de validación se pueden c
 
 Las entidades de dominio siempre deben ser entidades válidas. Hay un número determinado de invariables para un objeto que siempre deben ser verdaderas. Por ejemplo, un objeto de un elemento de pedido siempre debe tener una cantidad que debe constar de un entero positivo, un nombre de artículo y un precio. Por lo tanto, la aplicación de invariables es responsabilidad de las entidades de dominio (en especial de la raíz agregada) y un objeto de entidad no debería poder existir si no es válido. Las reglas invariables se expresan como contratos y, si se infringen, se generan excepciones o notificaciones.
 
-El razonamiento es que se producen muchos errores porque los objetos tienen un estado que no deberían tener nunca. A continuación se muestra una buena explicación de Greg Young, publicada en un [debate en línea](https://jeffreypalermo.com/2009/05/the-fallacy-of-the-always-valid-entity/):
+El razonamiento es que se producen muchos errores porque los objetos tienen un estado que no deberían tener nunca. Encontrará una buena explicación de Greg Young en este [debate en línea](http://codebetter.com/gregyoung/2009/05/22/always-valid/).
 
-Ahora imaginémonos que tenemos un SendUserCreationEmailService que toma un UserProfile… ¿Cómo podemos justificar en ese servicio que Name no es nulo? ¿Lo volvemos a comprobar? O lo que es más probable: no se molesta en comprobarlo y "espera lo mejor" (espera que alguien se haya molestado en validarlo antes de enviárselo). Por supuesto, si usamos TDD, una de las primeras pruebas que deberíamos escribir es que si, al enviar un cliente con un nombre nulo, se generaría un error. Pero una vez que comenzamos a escribir estos tipos de pruebas una y otra vez nos damos cuenta de que… "Espera, si no hubiéramos dejado que Name fuera nulo, no tendríamos todas estas pruebas".
+Ahora imaginémonos que tenemos un SendUserCreationEmailService que toma un UserProfile… ¿Cómo podemos justificar en ese servicio que Name no es nulo? ¿Lo volvemos a comprobar? O lo que es más probable: no se molesta en comprobarlo y "espera lo mejor" (espera que alguien se haya molestado en validarlo antes de enviárselo). Por supuesto, si usamos TDD, una de las primeras pruebas que deberíamos escribir es que si, al enviar un cliente con un nombre nulo, se generaría un error. Pero, una vez que empezamos a escribir estos tipos de pruebas una y otra vez, nos damos cuenta de que… "Espera, si no hubiéramos dejado que Name fuera nulo, no tendríamos todas estas pruebas".
 
 ## <a name="implement-validations-in-the-domain-model-layer"></a>Implementación de validaciones en el nivel de modelo de dominio
 

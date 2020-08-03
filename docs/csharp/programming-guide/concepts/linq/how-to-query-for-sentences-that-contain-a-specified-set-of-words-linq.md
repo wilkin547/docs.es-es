@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para buscar frases que contengan un conjunto especificado de palabras (LINQ) (C#)
+description: Aprenda a usar LINQ en C# para buscar frases de un archivo de texto que contengan coincidencias con cada una de las palabras de un conjunto, que podría rellenarse en tiempo de ejecución.
 ms.date: 07/20/2015
 ms.assetid: 0724b429-4b87-4d26-a7b1-409358f3fc20
-ms.openlocfilehash: df279f57d9965d796397cbcf7a0f3ba05bf9e5c1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c334c7948f19fb857709ff04a83e1dae56fc69da
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168861"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104532"
 ---
 # <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>Procedimiento para buscar frases que contengan un conjunto especificado de palabras (LINQ) (C#)
 En este ejemplo se muestra cómo buscar frases en un archivo de texto que contengan coincidencias con cada uno de los conjuntos de palabras especificados. Aunque la matriz de términos de búsqueda está codificada de forma rígida en este ejemplo, también se podría rellenar dinámicamente en tiempo de ejecución. En este ejemplo, la consulta devuelve las frases que contienen las palabras "Historically", "data" e "integrated".  
@@ -69,6 +70,6 @@ Historically, the world of data and the world of objects have not been well inte
 ## <a name="compiling-the-code"></a>Compilar el código  
 Cree un proyecto de aplicación de consola de C# con directivas `using` para los espacios de nombres System.Linq y System.IO.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [LINQ y cadenas (C#)](./linq-and-strings.md)

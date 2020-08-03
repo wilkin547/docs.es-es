@@ -1,13 +1,14 @@
 ---
 title: Anotaciones de LINQ to XML
+description: Aprenda a usar anotaciones en LINQ to XML para asociar cualquier objeto de cualquier tipo con un componente XML de un árbol XML.
 ms.date: 07/20/2015
 ms.assetid: 54e7b9d0-07f5-488f-9065-b6e6b870f810
-ms.openlocfilehash: 5f1940be2fc126ff9e9c7a4cb37e5cc7fc95d3c3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e7da666139c10b26de37816693202d96498f52d8
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "66689943"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165576"
 ---
 # <a name="linq-to-xml-annotations"></a>Anotaciones de LINQ to XML
 
@@ -21,7 +22,7 @@ Tenga en cuenta que las anotaciones no forman parte del conjunto de información
 
 Puede utilizar los siguientes métodos a la hora de trabajar con anotaciones:
 
-|Método|Description|
+|Método|Descripción|
 |------------|-----------------|
 |<xref:System.Xml.Linq.XObject.AddAnnotation%2A>|Agrega un objeto a la lista de anotaciones de un <xref:System.Xml.Linq.XObject>.|
 |<xref:System.Xml.Linq.XObject.Annotation%2A>|Obtiene el primer objeto de anotación del tipo especificado a partir de un <xref:System.Xml.Linq.XObject>.|

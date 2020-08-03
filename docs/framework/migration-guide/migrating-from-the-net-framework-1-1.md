@@ -1,16 +1,17 @@
 ---
 title: Migración desde .NET Framework 1.1
+description: Obtenga información sobre los pasos necesarios para ejecutar una aplicación compilada con .NET Framework 1.1 en Windows 7 o versiones posteriores.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework 4.5, migrating from 1.1
 - .NET Framework 1.1, migrating to .NET Framework 4.5
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
-ms.openlocfilehash: 11fe9ba36d32a4c9fe363b48f76a8bb2b24f073b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f2b0e21ff5dbeab3395335f52799629859fb2d90
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73974966"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475273"
 ---
 # <a name="migrate-from-the-net-framework-11"></a>Migración desde .NET Framework 1.1
 
@@ -20,7 +21,7 @@ Windows 7 y las versiones posteriores del sistema operativo Windows no admiten 
 
 Hay dos formas para conseguir que una aplicación compilada con NET Framework 1.1 se ejecute en Windows 7 o un sistema operativo de Windows posterior:
 
-- Redestine la aplicación para que se ejecute en .NET Framework 4 y versiones posteriores. Para redestinarla, es necesario agregar un elemento [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) al archivo de configuración de la aplicación que permita ejecutarla en .NET Framework 4 y versiones posteriores. Un archivo de configuración de este tipo tendrá el formato siguiente:
+- Redestine la aplicación para que se ejecute en .NET Framework 4 y versiones posteriores. Para redestinarla, es necesario agregar un elemento [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) al archivo de configuración de la aplicación que permita ejecutarla en .NET Framework 4 y versiones posteriores. Un archivo de configuración de este tipo tendrá el formato siguiente:
 
     ```xml
     <configuration>

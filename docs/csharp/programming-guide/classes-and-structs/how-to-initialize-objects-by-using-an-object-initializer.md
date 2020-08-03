@@ -1,16 +1,17 @@
 ---
 title: Procedimiento para inicializar objetos usando un inicializador de objeto - Guía de programación de C#
+description: Obtenga información sobre cómo usar inicializadores de objeto para inicializar objetos de tipo en C# sin llamar a un constructor. Use un inicializador de objeto para definir un tipo anónimo.
 ms.date: 12/20/2018
 helpviewer_keywords:
 - object initializers [C#], how to use
 - objects [C#], initializing
 ms.assetid: 4b75ebb2-2e29-43de-929c-d736a8f27ce6
-ms.openlocfilehash: a2ecc9df211d0082bd4b413653e374758c877abc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0781b168b0ae8b8383affe19d2721da67f662045
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705592"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865039"
 ---
 # <a name="how-to-initialize-objects-by-using-an-object-initializer-c-programming-guide"></a>Procedimiento para inicializar objetos usando un inicializador de objeto (Guía de programación de C#)
 

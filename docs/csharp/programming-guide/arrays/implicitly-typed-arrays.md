@@ -1,17 +1,18 @@
 ---
 title: 'Matrices con asignación implícita de tipos: Guía de programación de C#'
+description: El tipo de una matriz con tipo implícito en C# se infiere de los elementos del inicializador de matriz. Use matrices con tipo implícito en las expresiones de consulta.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [C#], implicitly-typed
 - implicitly-typed arrays [C#]
 - C# language, implicitly typed arrays
 ms.assetid: e05be95c-6732-403d-ae42-b35f057cbbea
-ms.openlocfilehash: 943760af30422cd333fdff65cdf678108c9d9564
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1f14f68207dfb79c92eaa01ac2a8ffaa08facc03
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705722"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474714"
 ---
 # <a name="implicitly-typed-arrays-c-programming-guide"></a>Matrices con asignación implícita de tipos (Guía de programación de C#)
 

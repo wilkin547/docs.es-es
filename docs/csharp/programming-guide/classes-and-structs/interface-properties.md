@@ -1,16 +1,17 @@
 ---
 title: 'Propiedades de interfaces: Guía de programación de C#'
+description: Las propiedades se pueden declarar en una interfaz de C#. En este ejemplo se declara un descriptor de acceso de propiedad de interfaz.
 ms.date: 01/31/2020
 helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
-ms.openlocfilehash: 5798b80526f34e923e2eaab43847b98f6c64e14b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 920381ae804a6a968bfd667171269377f3d7e448
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77626625"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864974"
 ---
 # <a name="interface-properties-c-programming-guide"></a>Propiedades de interfaces (Guía de programación de C#)
 
@@ -43,7 +44,7 @@ implementa la propiedad `Name` en la interfaz `ICitizen`.
 
 **`210 Hazem Abolrous`**
 
-## <a name="sample-output"></a>Resultados de ejemplo
+## <a name="sample-output"></a>Salida de ejemplo
 
 ```console
 Enter number of employees: 210
@@ -53,7 +54,7 @@ Employee number: 211
 Employee name: Hazem Abolrous
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Guía de programación de C#](../index.md)
 - [Propiedades](./properties.md)

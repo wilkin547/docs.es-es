@@ -1,16 +1,17 @@
 ---
 title: 'Polimorfismo: Guía de programación de C#'
+description: Obtenga información sobre el polimorfismo, un concepto clave en lenguajes de programación orientados a objetos como C#, que describe la relación entre las clases base y derivadas.
 ms.date: 02/08/2020
 helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 65f5c882ec4d7f8cbcc7ec7bf535091febfba64d
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 59b5f5d2d5a8f274845607aeca370c316670bd68
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662659"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925454"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polimorfismo (Guía de programación de C#)
 
@@ -38,7 +39,7 @@ En C#, cada tipo es polimórfico porque todos los tipos, incluidos los definidos
 
 ### <a name="virtual-members"></a>Miembros virtuales
 
-Cuando una clase derivada hereda de una clase base, obtiene todos los métodos, campos, propiedades y eventos de la clase base. El diseñador de la clase derivada puede tener diferentes opciones para el comportamiento de los métodos virtuales:
+Cuando una clase derivada hereda de una clase base, obtiene todos los métodos, campos, propiedades y eventos de la clase base. El diseñador de la clase derivada tiene diferentes opciones para el comportamiento de los métodos virtuales:
 
 - La clase derivada puede invalidar los miembros virtuales de la clase base, y definir un comportamiento nuevo.
 - La clase derivada hereda el método de clase base más cercano sin invalidarlo, para conservar el comportamiento existente, pero permite que más clases derivadas invaliden el método.

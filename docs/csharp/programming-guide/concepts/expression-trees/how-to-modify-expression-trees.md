@@ -1,20 +1,21 @@
 ---
 title: Procedimiento para modificar árboles de expresión (C#)
+description: Aprenda a modificar un árbol de expresión mediante la creación de una copia de un árbol de expresión existente y la realización de los cambios necesarios.
 ms.date: 07/20/2015
 ms.assetid: 9b0cd8c2-457e-4833-9e36-31e79545f442
-ms.openlocfilehash: e921c594497d02f5eb16cc60294e947e83636d7a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 45aea18e253811d4e5c60f23f7f8496d4358f64c
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73969902"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105605"
 ---
 # <a name="how-to-modify-expression-trees-c"></a>Procedimiento para modificar árboles de expresión (C#)
 En este tema se muestra cómo modificar un árbol de expresión. Los árboles de expresiones son inmutables, lo que significa que no pueden modificarse directamente. Para cambiar un árbol de expresión, debe crear una copia de un árbol de expresión existente y, una vez creada la copia, realizar los cambios necesarios. Puede usar la clase <xref:System.Linq.Expressions.ExpressionVisitor> para recorrer un árbol de expresión existente y copiar cada nodo que visita.  
   
 ### <a name="to-modify-an-expression-tree"></a>Para modificar un árbol de expresión  
   
-1. Cree un nuevo proyecto de **Aplicación de consola**.  
+1. Cree un nuevo proyecto de **aplicación de consola**.  
   
 2. Agregue una directiva `using` al archivo para el espacio de nombres `System.Linq.Expressions`.  
   

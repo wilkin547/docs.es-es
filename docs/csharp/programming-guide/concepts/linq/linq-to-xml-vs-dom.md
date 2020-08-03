@@ -1,13 +1,14 @@
 ---
 title: LINQ to XML frente a DOM (C#)
+description: Obtenga información sobre algunas diferencias clave entre LINQ to XML y la API de programación XML de Document Object Model (DOM) de W3C.
 ms.date: 07/20/2015
 ms.assetid: 51c0e3d2-c047-4e6a-a423-d61a882400b7
-ms.openlocfilehash: 92d0da494829d57517d52fe93a3cbcf1398fdbe4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f5fc3fd7869079d47d7c9031e3668afeed7a117b
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168394"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165340"
 ---
 # <a name="linq-to-xml-vs-dom-c"></a>LINQ to XML frente a DOM (C#)
 En esta sección se describen algunas diferencias fundamentales entre [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] y la API de programación XML predominante actual, Document Object Model (DOM) W3C.  
@@ -131,6 +132,6 @@ doc.AppendChild(name);
 ## <a name="support-for-schema-information"></a>Compatibilidad con la información de esquema  
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] proporciona compatibilidad con la validación XSD mediante métodos de extensión en el espacio de nombres <xref:System.Xml.Schema?displayProperty=nameWithType>. Puede validar que un árbol XML sea compatible con un XSD. Puede rellenar el árbol XML con el conjunto de información posterior a la validación del esquema (PSVI). Para más información, consulte [Procedimiento para validar con XSD (LINQ to XML) (C#)](./how-to-validate-using-xsd-linq-to-xml.md) y <xref:System.Xml.Schema.Extensions>.
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Introducción (LINQ to XML)](./linq-to-xml-overview.md)

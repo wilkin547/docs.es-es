@@ -1,13 +1,14 @@
 ---
 title: Introducción a las transformaciones funcionales puras (C#)
+description: Obtenga información a las transformaciones funcionales, incluidos los conceptos subyacentes y los constructores del lenguaje de C#. Estos recursos usan la transformación XML para los ejemplos.
 ms.date: 07/20/2015
 ms.assetid: 8495c9d9-2d02-4aa0-8a10-9e8794b985fe
-ms.openlocfilehash: 34e2fdfae7c0243ca6f59354c453396648c3fa85
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17f9dcb072b5f67521f668b1802d12a455f383fa
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69592104"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165681"
 ---
 # <a name="introduction-to-pure-functional-transformations-c"></a>Introducción a las transformaciones funcionales puras (C#)
 Esta sección ofrece una introducción a las transformaciones funcionales, incluyendo los conceptos subyacentes y los constructores del lenguaje que las hacen posible. Realiza una comparación entre las metodologías de programación de orientación a objetos y de transformación funcional, incluyendo consejos acerca de cómo llevar a cabo la transición a ésta última. Aunque es posible utiliza las transformaciones funcionales en numerosos escenarios, aquí utilizaremos la transformación XML como un ejemplo concreto.  

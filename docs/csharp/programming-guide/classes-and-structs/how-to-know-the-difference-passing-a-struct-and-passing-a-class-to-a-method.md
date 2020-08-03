@@ -1,17 +1,18 @@
 ---
 title: Procedimiento para saber las diferencias entre pasar a un método un struct y una referencia a clase - Guía de programación de C#
+description: El proceso de pasar un struct a un método es diferente de pasar una instancia de clase a un método en C#. En este ejemplo se muestra la instancia de struct y de clase pasada por valor.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], passing as method parameter
 - passing parameters [C#], structs vs. classes
 - methods [C#], passing classes vs. structs
 ms.assetid: 9c1313a6-32a8-4ea7-a59f-450f66af628b
-ms.openlocfilehash: a280a6df873d7c03c204bc5c86468e7e7298d723
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ee4e6adf5c01cea786219407c1c0ffdb73f21b2a
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77673438"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865026"
 ---
 # <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>Procedimiento para saber las diferencias entre pasar a un método un struct y una referencia a clase (Guía de programación de C#)
 En el ejemplo siguiente se muestra cómo pasar un [struct](../../language-reference/builtin-types/struct.md) a un método es diferente de pasar una instancia de [clase](../../language-reference/keywords/class.md) a un método. En el ejemplo, los dos argumentos (struct e instancia de clase) se pasan mediante valor, y ambos métodos cambian el valor de un campo del argumento. En cambio, los resultados de los dos métodos no son los mismos porque lo que se pasa cuando pasa un struct difiere de lo que se pasa cuando pasa una instancia de una clase.  

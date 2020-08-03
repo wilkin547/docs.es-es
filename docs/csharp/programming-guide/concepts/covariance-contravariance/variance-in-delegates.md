@@ -1,13 +1,14 @@
 ---
 title: Varianza en delegados (C#)
+description: Obtenga información sobre la manera en que la compatibilidad de la varianza en .NET Framework 3.5 permite hacer coincidir firmas de método con tipos de delegados en todos los delegados.
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: 7370813179040f54e65adf3b568a1fd914223f1d
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: ef57a7fa7feaef98a47822e3f1c9242d0205932d
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990038"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105652"
 ---
 # <a name="variance-in-delegates-c"></a>Varianza en delegados (C#)
 En .NET Framework 3.5 se presentó por primera vez la compatibilidad con la varianza para hacer coincidir firmas de método con tipos de delegados en todos los delegados en C#. Esto significa que puede asignar a los delegados no solo métodos con firmas coincidentes, sino métodos que devuelven tipos más derivados (covarianza) o que aceptan parámetros con tipos menos derivados (contravarianza) que el especificado por el tipo de delegado. Esto incluye delegados genéricos y no genéricos.  

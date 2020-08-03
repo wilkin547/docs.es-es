@@ -1,5 +1,6 @@
 ---
 title: Consideraciones de seguridad sobre la reflexión
+description: Obtenga información sobre las consideraciones de seguridad para la reflexión en .NET. Se permite obtener información sobre tipos y miembros, pero el acceso a los miembros tiene restricciones.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - permissions [.NET Framework], reflection
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - reflection,partial trust
 - link demands
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
-ms.openlocfilehash: 1bdaf3abd39797274236ace4cb2967d2e7d199b2
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 0465cbd5ceb7d4f44bb6d10865fcbd17b8ed7af6
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644188"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865260"
 ---
 # <a name="security-considerations-for-reflection"></a>Consideraciones de seguridad sobre la reflexión
 

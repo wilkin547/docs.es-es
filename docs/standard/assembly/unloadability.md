@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo usar AssemblyLoadContext recopilab
 author: janvorli
 ms.author: janvorli
 ms.date: 02/05/2019
-ms.openlocfilehash: 267c2209556b66ab3541c9c79c99d7eceb2024da
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9d1f604816dcbd7a84a3692b3cfd24481532789a
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159746"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865351"
 ---
 # <a name="how-to-use-and-debug-assembly-unloadability-in-net-core"></a>Uso y depuración de la descargabilidad de ensamblado en .NET Core
 
@@ -30,7 +30,7 @@ En esta sección se incluye un tutorial detallado paso a paso que muestra una ma
 
 ### <a name="create-a-collectible-assemblyloadcontext"></a>Creación de un AssemblyLoadContext recopilable
 
-Debe derivar la clase del <xref:System.Runtime.Loader.AssemblyLoadContext> y sobrecargar su método <xref:System.Runtime.Loader.AssemblyLoadContext.Load%2A?displayProperty=nameWithType>. Ese método resuelve las referencias a todos los ensamblados que son dependencias de los ensamblados cargados en ese `AssemblyLoadContext`.
+Tendrá que derivar la clase de <xref:System.Runtime.Loader.AssemblyLoadContext> e invalidar su método <xref:System.Runtime.Loader.AssemblyLoadContext.Load%2A?displayProperty=nameWithType>. Ese método resuelve las referencias a todos los ensamblados que son dependencias de los ensamblados cargados en ese `AssemblyLoadContext`.
 
 El código siguiente es un ejemplo del `AssemblyLoadContext` personalizado más sencillo:
 

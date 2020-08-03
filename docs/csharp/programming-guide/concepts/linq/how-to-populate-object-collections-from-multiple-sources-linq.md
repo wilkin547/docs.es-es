@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para rellenar colecciones de objetos de varios orígenes (LINQ) (C#)
+description: Obtenga información sobre cómo combinar datos de orígenes diferentes en una secuencia de tipos nuevos mediante LINQ en C#. En estos ejemplos se usan tipos anónimos y con nombre.
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
-ms.openlocfilehash: 3d841e5ca25afde94674af0fedc9a824c382be5b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9dc9f98ae09e0fe3437b5d2ccab32b3dbcd93714
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345753"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104722"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>Procedimiento para rellenar colecciones de objetos de varios orígenes (LINQ) (C#)
 
@@ -139,7 +140,7 @@ foreach (var student in queryNamesScores2)
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [LINQ y cadenas (C#)](./linq-and-strings.md)
 - [Inicializadores de objeto y colección](../../classes-and-structs/object-and-collection-initializers.md)

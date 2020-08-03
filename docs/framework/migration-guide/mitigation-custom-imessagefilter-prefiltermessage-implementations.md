@@ -1,13 +1,14 @@
 ---
 title: 'Mitigación: personalizar implementaciones de IMessageFilter.PreFilterMessage'
+description: Obtenga información sobre la implementación IMessageFilter.PreFilterMessage personalizada que se incluye en aplicaciones de Windows Forms que tienen como destino .NET Framework 4.6.1 y versiones posteriores.
 ms.date: 03/30/2017
 ms.assetid: 9cf47c5b-0bb2-45df-9437-61cd7e7c2f4d
-ms.openlocfilehash: 7757e8d1fd0258ab2d972b7321082e4afa37f710
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5fe7500d3ed6ff293514495df150a747e7946dda
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398650"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475260"
 ---
 # <a name="mitigation-custom-imessagefilterprefiltermessage-implementations"></a>Mitigación: personalizar implementaciones de IMessageFilter.PreFilterMessage
 
@@ -29,7 +30,7 @@ Para las aplicaciones de Windows Forms destinadas a las versiones anteriores de 
 
 ## <a name="mitigation"></a>Mitigación
 
-Si no quiere este cambio, las aplicaciones que tienen como destino .NET Framework 4.6.1 o una versión posterior pueden optar por no recibirlo agregando el siguiente ajuste de configuración a la sección [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) del archivo de configuración de la aplicación:
+Si no quiere este cambio, las aplicaciones que tienen como destino .NET Framework 4.6.1 o una versión posterior pueden descartarlo si se agrega el siguiente valor de configuración a la sección [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) del archivo de configuración de la aplicación:
 
 ```xml
 <runtime>
@@ -37,7 +38,7 @@ Si no quiere este cambio, las aplicaciones que tienen como destino .NET Framewor
 </runtime>
 ```
 
-Además, las aplicaciones que tienen como destino versiones anteriores de .NET Framework, pero que se ejecutan en .NET Framework 4.6.1 o una versión posterior, pueden optar por recibir en este comportamiento agregando el siguiente ajuste de configuración a la sección [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) del archivo de configuración de la aplicación:
+Además, las aplicaciones que tienen como destino versiones anteriores de .NET Framework, pero que se ejecutan en .NET Framework 4.6.1 o una versión posterior, pueden optar por recibir este comportamiento si se agrega el siguiente valor de configuración a la sección [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) del archivo de configuración de la aplicación:
 
 ```xml
 <runtime>

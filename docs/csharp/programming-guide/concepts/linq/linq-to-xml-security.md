@@ -1,13 +1,14 @@
 ---
 title: Seguridad de LINQ to XML (C#)
+description: Obtenga información sobre los problemas de seguridad asociados a LINQ to XML, incluida orientación sobre cómo minimizar el grado de exposición a esos problemas de seguridad.
 ms.date: 07/20/2015
 ms.assetid: ef2c0dc9-ecf9-4c17-b24e-144184ab725f
-ms.openlocfilehash: 5b7eb815b058cba008f1db2cf683c8934c19b743
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dc9fd13f19dcf6d9cbbb2b0b7608009cc4da1108
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73423369"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165320"
 ---
 # <a name="linq-to-xml-security-c"></a>Seguridad de LINQ to XML (C#)
 Este tema describe los problemas de seguridad asociados a LINQ to XML. Además, proporciona algunas indicaciones para reducir la exposición a esos problemas de seguridad.  
@@ -99,6 +100,6 @@ Este tema describe los problemas de seguridad asociados a LINQ to XML. Además, 
   
  Common Language Runtime (CLR) proporciona cierta seguridad. Por ejemplo, un componente que no incluye una clase privada no puede tener acceso a anotaciones con claves creadas por esa clase. No obstante, las anotaciones pueden ser eliminadas por componentes que no las leen. Esto se podría usar como ataque de manipulación.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Guía de programación (LINQ to XML) (C#)](linq-to-xml-overview.md)

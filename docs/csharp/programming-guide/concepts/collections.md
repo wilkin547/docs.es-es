@@ -1,13 +1,14 @@
 ---
 title: Colecciones (C#)
+description: Obtenga información sobre las colecciones en C#, que se usan para trabajar con grupos de objetos. Las colecciones pueden aumentar y reducirse de forma dinámica a medida que cambien las necesidades de la aplicación.
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: ecab30d50be58f810246e58e637b331d492e4a47
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 2375980e2915d4daa5a221a94eee2aea41959852
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241401"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924934"
 ---
 # <a name="collections-c"></a>Colecciones (C#)
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: fe370b34d311816a815f3b2d419751ac7871f013
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 78a47b01cc8fba4cb45a686adad901784552c1c1
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "83703584"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865338"
 ---
 # <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>Procedimiento para realizar la migración de Newtonsoft.Json a System.Text.Json
 
@@ -318,11 +318,27 @@ Para que se produzca un error en la deserialización si no hay una propiedad `Da
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecastRequiredPropertyConverter.cs)]
 
-Registre este convertidor personalizado [usando un atributo en la clase POCO](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type) o [agregando el convertidor](system-text-json-converters-how-to.md#registration-sample---converters-collection) a la colección <xref:System.Text.Json.JsonSerializerOptions.Converters>.
+Registre este convertidor personalizado [agregando el convertidor](system-text-json-converters-how-to.md#registration-sample---converters-collection) a la colección <xref:System.Text.Json.JsonSerializerOptions.Converters?displayProperty=nameWithType>.
 
-Si sigue este patrón, no pase el objeto de opciones cuando llame a <xref:System.Text.Json.JsonSerializer.Serialize%2A> o <xref:System.Text.Json.JsonSerializer.Deserialize%2A>de forma recursiva. El objeto de opciones contiene la colección <xref:System.Text.Json.JsonSerializerOptions.Converters%2A>. Si lo pasa a `Serialize` o `Deserialize`, el convertidor personalizado se llama a sí mismo, con lo que se crea un bucle infinito que produce una excepción de desbordamiento de pila. Si las opciones predeterminadas no son factibles, cree una nueva instancia de las opciones con la configuración que necesite. Este enfoque será lento, ya que cada instancia nueva se almacena en caché de forma independiente.
+Este patrón de llamada recursiva al convertidor exige que se registre el convertidor mediante <xref:System.Text.Json.JsonSerializerOptions>, no mediante un atributo. Si registra el convertidor mediante un atributo, el convertidor personalizado se llama a sí mismo de forma recursiva. El resultado es un bucle infinito que finaliza en una excepción de desbordamiento de pila.
 
-El código de convertidor anterior es un ejemplo simplificado. Se requeriría lógica adicional si necesita controlar atributos (como [[JsonIgnore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute) u otras opciones (como codificadores personalizados). Además, el código de ejemplo no controla las propiedades para las que se establece un valor predeterminado en el constructor, y este enfoque no distingue entre los siguientes escenarios:
+Al registrar el convertidor mediante el objeto de opciones, evite un bucle infinito; para ello, no pase el objeto de opciones cuando llame a <xref:System.Text.Json.JsonSerializer.Serialize%2A> o <xref:System.Text.Json.JsonSerializer.Deserialize%2A> de forma recursiva. El objeto de opciones contiene la colección <xref:System.Text.Json.JsonSerializerOptions.Converters%2A>. Si lo pasa a `Serialize` o `Deserialize`, el convertidor personalizado se llama a sí mismo, con lo que se crea un bucle infinito que produce una excepción de desbordamiento de pila. Si las opciones predeterminadas no son factibles, cree una nueva instancia de las opciones con la configuración que necesite. Este enfoque será lento, ya que cada instancia nueva se almacena en caché de forma independiente.
+
+Existe un patrón alternativo que puede usar el registro de `JsonConverterAttribute` en la clase que se va a convertir. En este enfoque, el código del convertidor llama a `Serialize` o `Deserialize` en una clase que deriva de la clase que se va a convertir. La clase derivada no tiene ningún elemento `JsonConverterAttribute` aplicado. En el siguiente ejemplo de esta alternativa:
+
+* `WeatherForecastWithRequiredPropertyConverterAttribute` es la clase que se va a deserializar y a la que se le ha aplicado `JsonConverterAttribute`.
+* `WeatherForecastWithoutRequiredPropertyConverterAttribute` es la clase derivada que no tiene el atributo del convertidor.
+* El código del convertidor llama a `Serialize` y `Deserialize` en `WeatherForecastWithoutRequiredPropertyConverterAttribute` para evitar un bucle infinito. Hay un costo de rendimiento en este enfoque aplicado a la serialización debido a una creación de instancias de objeto adicional y la copia de valores de propiedad.
+
+Estos son los tipos `WeatherForecast*`:
+
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithReqPptyConverterAttr)]
+
+Y este es el convertidor:
+
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecastRequiredPropertyConverterForAttributeRegistration.cs)]
+
+El convertidor de propiedades necesario requeriría lógica adicional en el caso de necesitar administrar atributos como [[JsonIgnore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute) u otras opciones, como codificadores personalizados. Además, el código de ejemplo no controla las propiedades para las que se establece un valor predeterminado en el constructor, y este enfoque no distingue entre los siguientes escenarios:
 
 * Falta una propiedad en el objeto JSON.
 * Hay una propiedad para un tipo que no acepta valores NULL en el objeto JSON, pero el valor es el predeterminado para el tipo, como cero para `int`.
@@ -391,7 +407,7 @@ Registre este convertidor personalizado [usando un atributo en la clase](system-
 Si usa un convertidor personalizado que sigue el ejemplo anterior:
 
 * El código `OnDeserializing` no tiene acceso a la nueva instancia POCO. Para manipular la nueva instancia POCO al inicio de la deserialización, coloque ese código en el constructor POCO.
-* No pase el objeto de opciones cuando llame a `Serialize` o `Deserialize`de forma recursiva. El objeto de opciones contiene la colección `Converters`. Si lo pasa a `Serialize` o `Deserialize`, se usará el convertidor, con lo que se crea un bucle infinito que produce una excepción de desbordamiento de pila.
+* Evite un bucle infinito; para ello, registre el convertidor en el objeto de opciones y no pase el objeto de opciones cuando llame a `Serialize` o `Deserialize` de forma recursiva. Para obtener más información, vea la sección [Propiedades obligatorias](#required-properties) más arriba en este artículo.
 
 ### <a name="public-and-non-public-fields"></a>Campos públicos y no públicos
 
