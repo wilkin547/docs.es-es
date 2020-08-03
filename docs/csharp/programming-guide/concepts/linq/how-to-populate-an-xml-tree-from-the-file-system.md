@@ -1,19 +1,20 @@
 ---
 title: Procedimiento para rellenar un árbol XML desde el sistema de archivos (C#)
+description: Aprenda a rellenar un árbol XML desde el sistema de archivos de C#. En este ejemplo se rellena un árbol XML y, después, se consulta el árbol para calcular el tamaño total de todos los archivos.
 ms.date: 07/20/2015
 ms.assetid: 2aa2ccac-4a22-47ae-9107-3bb8df232576
-ms.openlocfilehash: beb44be1a787fa09b091aa48022dbb5b10c4632b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 676261656be7d306294c9912b75edcb51a31cccc
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345784"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104754"
 ---
-# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a><span data-ttu-id="72b6f-102">Procedimiento para rellenar un árbol XML desde el sistema de archivos (C#)</span><span class="sxs-lookup"><span data-stu-id="72b6f-102">How to populate an XML tree from the file system (C#)</span></span>
-<span data-ttu-id="72b6f-103">Una aplicación habitual y útil de los árboles XML es un almacén de datos de nombres y valores jerárquicos.</span><span class="sxs-lookup"><span data-stu-id="72b6f-103">A common and useful application of XML trees is as a hierarchical name/value data store.</span></span> <span data-ttu-id="72b6f-104">Puede rellenar un árbol XML con datos jerárquicos y, a continuación, consultarlo, transformarlo y, si es necesario, serializarlo.</span><span class="sxs-lookup"><span data-stu-id="72b6f-104">You can populate an XML tree with hierarchical data, and then query it, transform it, and if necessary, serialize it.</span></span> <span data-ttu-id="72b6f-105">En este escenario de uso, gran parte de la semántica específica XML (por ejemplo, el comportamiento de los espacios en blanco y los espacios de nombres) no es importante.</span><span class="sxs-lookup"><span data-stu-id="72b6f-105">In this usage scenario, many of the XML specific semantics, such as namespaces and white space behavior, are not important.</span></span> <span data-ttu-id="72b6f-106">En su lugar, usará el árbol XML como una base de datos jerárquica, pequeña y en memoria, de usuario único.</span><span class="sxs-lookup"><span data-stu-id="72b6f-106">Instead, you are using the XML tree as a small, in memory, single user hierarchical database.</span></span>  
+# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a><span data-ttu-id="8f68e-104">Procedimiento para rellenar un árbol XML desde el sistema de archivos (C#)</span><span class="sxs-lookup"><span data-stu-id="8f68e-104">How to populate an XML tree from the file system (C#)</span></span>
+<span data-ttu-id="8f68e-105">Una aplicación habitual y útil de los árboles XML es un almacén de datos de nombres y valores jerárquicos.</span><span class="sxs-lookup"><span data-stu-id="8f68e-105">A common and useful application of XML trees is as a hierarchical name/value data store.</span></span> <span data-ttu-id="8f68e-106">Puede rellenar un árbol XML con datos jerárquicos y, a continuación, consultarlo, transformarlo y, si es necesario, serializarlo.</span><span class="sxs-lookup"><span data-stu-id="8f68e-106">You can populate an XML tree with hierarchical data, and then query it, transform it, and if necessary, serialize it.</span></span> <span data-ttu-id="8f68e-107">En este escenario de uso, gran parte de la semántica específica XML (por ejemplo, el comportamiento de los espacios en blanco y los espacios de nombres) no es importante.</span><span class="sxs-lookup"><span data-stu-id="8f68e-107">In this usage scenario, many of the XML specific semantics, such as namespaces and white space behavior, are not important.</span></span> <span data-ttu-id="8f68e-108">En su lugar, usará el árbol XML como una base de datos jerárquica, pequeña y en memoria, de usuario único.</span><span class="sxs-lookup"><span data-stu-id="8f68e-108">Instead, you are using the XML tree as a small, in memory, single user hierarchical database.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="72b6f-107">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="72b6f-107">Example</span></span>  
- <span data-ttu-id="72b6f-108">El ejemplo siguiente rellena un árbol XML desde el sistema de archivos local mediante la recursividad.</span><span class="sxs-lookup"><span data-stu-id="72b6f-108">The following example populates an XML tree from the local file system using recursion.</span></span> <span data-ttu-id="72b6f-109">A continuación, consulta el árbol y calcula el total de los tamaños de todos los archivos del árbol.</span><span class="sxs-lookup"><span data-stu-id="72b6f-109">It then queries the tree, calculating the total of the sizes of all files in the tree.</span></span>  
+## <a name="example"></a><span data-ttu-id="8f68e-109">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="8f68e-109">Example</span></span>  
+ <span data-ttu-id="8f68e-110">El ejemplo siguiente rellena un árbol XML desde el sistema de archivos local mediante la recursividad.</span><span class="sxs-lookup"><span data-stu-id="8f68e-110">The following example populates an XML tree from the local file system using recursion.</span></span> <span data-ttu-id="8f68e-111">A continuación, consulta el árbol y calcula el total de los tamaños de todos los archivos del árbol.</span><span class="sxs-lookup"><span data-stu-id="8f68e-111">It then queries the tree, calculating the total of the sizes of all files in the tree.</span></span>  
   
 ```csharp  
 class Program  
@@ -46,7 +47,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="72b6f-110">Este ejemplo genera un resultado similar al siguiente:</span><span class="sxs-lookup"><span data-stu-id="72b6f-110">This example produces output similar to the following:</span></span>  
+ <span data-ttu-id="8f68e-112">Este ejemplo genera un resultado similar al siguiente:</span><span class="sxs-lookup"><span data-stu-id="8f68e-112">This example produces output similar to the following:</span></span>  
   
 ```xml  
 <Dir Name="Tmp">  
