@@ -1,16 +1,17 @@
 ---
 title: 'Cadenas: Guía de programación de C#'
+description: Descubra cómo se usan las cadenas en la programación de C#. Obtenga información sobre cómo declarar e inicializar cadenas, la inmutabilidad de objetos de cadena y las secuencias de escape de cadena.
 ms.date: 06/27/2019
 helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 7bf5cba51a2e72d3a648f795f018220a452e51f5
-ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
+ms.openlocfilehash: 8e833bdeefcce2f12c839738b43778df8e54fa5b
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226600"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381611"
 ---
 # <a name="strings-c-programming-guide"></a>Cadenas (Guía de programación de C#)
 Una cadena es un objeto de tipo <xref:System.String> cuyo valor es texto. Internamente, el texto se almacena como una colección secuencial de solo lectura de objetos <xref:System.Char>. No hay ningún carácter que finaliza en null al final de una cadena de C#; por lo tanto, la cadena de C# puede contener cualquier número de caracteres nulos insertados ('\0'). La propiedad <xref:System.String.Length%2A> de una cadena representa el número de objetos `Char` que contiene, no el número de caracteres Unicode. Para obtener acceso a los puntos de código Unicode individuales de una cadena, use el objeto <xref:System.Globalization.StringInfo>.  

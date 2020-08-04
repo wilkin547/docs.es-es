@@ -1,16 +1,17 @@
 ---
 title: 'Delegados: Guía de programación de C#'
+description: Un delegado de C# es un tipo que hace referencia a métodos con una lista de parámetros y un tipo de valor devuelto. Los delegados se utilizan para pasar métodos como argumentos a otros métodos.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: c0f28716926d4c9d74cde58fd00e27d1fdfa7ce1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 94e7c130bd5d8e136d03ccdbaed643bc1a47d112
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75705371"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302170"
 ---
 # <a name="delegates-c-programming-guide"></a>Delegados (Guía de programación de C#)
 Un [delegado](../../language-reference/builtin-types/reference-types.md) es un tipo que representa referencias a métodos con una lista de parámetros determinada y un tipo de valor devuelto. Cuando se crea una instancia de un delegado, puede asociar su instancia a cualquier método mediante una signatura compatible y un tipo de valor devuelto. Puede invocar (o llamar) al método a través de la instancia del delegado.  

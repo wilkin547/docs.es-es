@@ -1,12 +1,13 @@
 ---
 title: Serialización (C#)
+description: La serialización convierte un objeto en una secuencia de bytes para almacenarlo o transmitirlo a la memoria, a una base de datos o a un archivo.
 ms.date: 01/02/2020
-ms.openlocfilehash: b2532ccf281fdfaa951d56675066f1e239f9f480
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 29625648b19c97556c107997ef9ecd3f0f971cbf
+ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241986"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87455753"
 ---
 # <a name="serialization-c"></a>Serialización (C#)
 
@@ -44,6 +45,8 @@ La serialización de JSON serializa las propiedades públicas de un objeto en un
 El espacio de nombres <xref:System.Runtime.Serialization> contiene clases para la serialización y deserialización binaria y XML.
 
 La serialización binaria utiliza la codificación binaria para generar una serialización compacta para usos como almacenamiento o secuencias de red basadas en socket. En la serialización binaria se serializan todos los miembros, incluso aquellos que son de solo lectura, y mejora el rendimiento.
+
+[!INCLUDE [binary-serialization-warning](~/includes/binary-serialization-warning.md)]
 
 La serialización XML serializa las propiedades y los campos públicos de un objeto o los parámetros y valores devueltos de los métodos en una secuencia XML que se ajusta a un documento específico del lenguaje de definición de esquema XML (XSD). La serialización XML produce clases fuertemente tipadas cuyas propiedades y campos públicos se convierten a XML. <xref:System.Xml.Serialization> contiene clases para serializar y deserializar XML. Se aplican atributos a clases y a miembros de clase para controlar la forma en que <xref:System.Xml.Serialization.XmlSerializer> serializa o deserializa una instancia de la clase.
 

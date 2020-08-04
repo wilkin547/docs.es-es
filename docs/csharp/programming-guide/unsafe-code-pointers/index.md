@@ -1,5 +1,6 @@
 ---
 title: 'Código no seguro y punteros: guía de programación de C#'
+Description: Obtenga información sobre el código no seguro y los punteros. Aunque C# no admite punteros, la palabra clave unsafe permite definir un contexto no seguro en el que pueden usarse punteros.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - security [C#], type safety
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - C# language, pointers
 - pointers [C#], about pointers
 ms.assetid: b0fcca10-a92d-4f2a-835b-b0ccae6739ee
-ms.openlocfilehash: 013af4e55c8fc396bbc92058d7fb454484f3263e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5684a97ed6f7b6632d8fe3d52747d9187c4b8cbc
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711836"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381780"
 ---
 # <a name="unsafe-code-and-pointers-c-programming-guide"></a>Código no seguro y punteros (guía de programación de C#)
 
@@ -46,7 +47,7 @@ Para obtener más información, consulte:
 
 - [Búferes de tamaño fijo](fixed-size-buffers.md)
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 Para más información, vea el tema sobre [código no seguro](~/_csharplang/spec/unsafe-code.md) de la [Especificación del lenguaje C#](~/_csharplang/spec/introduction.md).
   

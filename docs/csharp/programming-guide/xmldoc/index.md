@@ -1,5 +1,6 @@
 ---
 title: 'Comentarios de documentación XML: Guía de programación de C#'
+description: Obtenga información sobre los comentarios de documentación XML. Puede crear documentación para el código mediante la inserción de elementos XML en campos de comentario especiales.
 ms.date: 07/20/2015
 f1_keywords:
 - cs.xml
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - C# language, XML code comments
 - XML documentation comments [C#]
 ms.assetid: 803b7f7b-7428-4725-b5db-9a6cff273199
-ms.openlocfilehash: f5a507bc35b0cc0a679fd055bfc255bb3cb9a090
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fbdeb53331d9fc63d24a3322ea13863d7c0a3630
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76789792"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381884"
 ---
 # <a name="xml-documentation-comments-c-programming-guide"></a>Comentarios de documentación XML (Guía de programación de C#)
 
@@ -52,7 +53,7 @@ Para obtener más información, consulte:
 
 - [-doc (Procesamiento de comentarios de documentación)](../../language-reference/compiler-options/doc-compiler-option.md)
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

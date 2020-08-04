@@ -1,16 +1,17 @@
 ---
 title: 'Espacios de nombres: Guía de programación de C#'
+description: Obtenga información sobre el uso de los espacios de nombres en la programación de C#. Vea información general sobre las propiedades de espacio de nombres y otros recursos.
 ms.date: 08/21/2018
 helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: 21452e259596c9ab10b3d653ec1d8fb90fad131d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fca2c641520bd9cd19a48bff2119a6f09c3713ea
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75937611"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87382105"
 ---
 # <a name="namespaces-c-programming-guide"></a>Espacios de nombres (Guía de programación de C#)
 
@@ -41,7 +42,7 @@ Los espacios de nombres tienen las propiedades siguientes:
 - La directiva `using` obvia la necesidad de especificar el nombre del espacio de nombres para cada clase.
 - El espacio de nombres `global` es el espacio de nombres "raíz": `global::System` siempre hará referencia al espacio de nombres <xref:System> de .NET.
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 Para más información, vea la sección [Espacio de nombres](~/_csharplang/spec/namespaces.md) de la [Especificación del lenguaje C#](~/_csharplang/spec/introduction.md).
 
@@ -52,4 +53,4 @@ Para más información, vea la sección [Espacio de nombres](~/_csharplang/spec/
 - [Procedimiento para usar el espacio de nombres My](how-to-use-the-my-namespace.md)
 - [Nombres de identificador](../inside-a-program/identifier-names.md)
 - [using (directiva)](../../language-reference/keywords/using-directive.md)
-- [Operador ::](../../language-reference/operators/namespace-alias-qualifier.md)
+- [:: !](../../language-reference/operators/namespace-alias-qualifier.md)
