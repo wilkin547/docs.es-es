@@ -1,43 +1,43 @@
 ---
 title: Firmas criptográficas
-ms.date: 03/30/2017
+ms.date: 07/14/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - digital signatures
-- cryptography [.NET Framework], signatures
+- cryptography [.NET], signatures
 - digital signatures, XML signing
 - signatures, cryptographic
 - digital signatures, generating
 - verifying signatures
 - generating signatures
 - digital signatures, about
-- encryption [.NET Framework], signatures
-- security [.NET Framework], signatures
+- encryption [.NET], signatures
+- security [.NET], signatures
 - XML signing
 - digital signatures, verifying
 - signing XML
 ms.assetid: aa87cb7f-e608-4a81-948b-c9b8a1225783
-ms.openlocfilehash: 9e69578ceffeeacb73cf059f5b577fe7c137b599
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ce2be1d509da4e399bf87e1c8df7ba061fc2707c
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288399"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87557013"
 ---
 # <a name="cryptographic-signatures"></a>Firmas criptográficas
 
 Las firmas digitales criptográficas usan algoritmos de clave pública para mantener la integridad de los datos. Si firma datos con una firma digital, otra persona puede comprobar la firma y confirmar que los datos provienen de usted y que no se han modificado después de ser firmados. Para más información sobre firmas digitales, vea [Cryptographic Services](cryptographic-services.md).
 
-En este tema se explica cómo generar y comprobar firmas digitales mediante clases en el espacio de nombres <xref:System.Security.Cryptography?displayProperty=nameWithType> .
+En este tema se explica cómo generar y comprobar firmas digitales mediante clases en el espacio de nombres <xref:System.Security.Cryptography> .
 
 ## <a name="generating-signatures"></a>Generación de firmas
 
-Las firmas digitales suelen aplicarse a valores hash que representan datos de mayor volumen. En el siguiente ejemplo se aplica una firma digital a un valor hash. Primero se crea una instancia de la clase <xref:System.Security.Cryptography.RSACryptoServiceProvider> para generar un par de claves pública y privada. Después se pasa <xref:System.Security.Cryptography.RSACryptoServiceProvider> a una nueva instancia de la clase <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> . Con esto se transfiere la clave privada a <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter>, que es el que realmente realiza la firma digital. Antes de poder firmar el código hash, hay que especificar el algoritmo hash que se usará. En este ejemplo se usa el algoritmo SHA1. Por último, se llama al método <xref:System.Security.Cryptography.AsymmetricSignatureFormatter.CreateSignature%2A> para realizar el proceso de firma.
+Las firmas digitales suelen aplicarse a valores hash que representan datos de mayor volumen. En el siguiente ejemplo se aplica una firma digital a un valor hash. Primero se crea una instancia de la clase <xref:System.Security.Cryptography.RSA> para generar un par de claves pública y privada. Después se pasa <xref:System.Security.Cryptography.RSA> a una nueva instancia de la clase <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> . Con esto se transfiere la clave privada a <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter>, que es el que realmente realiza la firma digital. Antes de poder firmar el código hash, hay que especificar el algoritmo hash que se usará. En este ejemplo se usa el algoritmo SHA1. Por último, se llama al método <xref:System.Security.Cryptography.AsymmetricSignatureFormatter.CreateSignature%2A> para realizar el proceso de firma.
 
-Debido a problemas de colisión con SHA1, Microsoft recomienda SHA256 o superior.
+Debido a problemas de colisión con SHA1, se recomienda SHA256 o superior.
 
 ```vb
 Imports System.Security.Cryptography
@@ -51,10 +51,10 @@ Module Module1
         Dim signedHashValue() As Byte
 
         'Generate a public/private key pair.
-        Dim rsa As New RSACryptoServiceProvider()
+        Dim rsa As RSA = RSA.Create()
 
         'Create an RSAPKCS1SignatureFormatter object and pass it
-        'the RSACryptoServiceProvider to transfer the private key.
+        'the RSA instance to transfer the private key.
         Dim rsaFormatter As New RSAPKCS1SignatureFormatter(rsa)
 
         'Set the hash algorithm to SHA1.
@@ -82,10 +82,10 @@ class Class1
       byte[] signedHashValue;
 
       //Generate a public/private key pair.
-      RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
+      RSA rsa = RSA.Create();
 
       //Create an RSAPKCS1SignatureFormatter object and pass it the
-      //RSACryptoServiceProvider to transfer the private key.
+      //RSA instance to transfer the private key.
       RSAPKCS1SignatureFormatter rsaFormatter = new RSAPKCS1SignatureFormatter(rsa);
 
       //Set the hash algorithm to SHA1.
@@ -97,12 +97,6 @@ class Class1
    }
 }
 ```
-
-### <a name="signing-xml-files"></a>Firma de archivos XML
-
-.NET Framework proporciona el espacio de nombres <xref:System.Security.Cryptography.Xml> , que permite firmar XML. Es importante firmar XML cuando se desea comprobar su procedencia. Por ejemplo, si usa un servicio de cotización de acciones que utiliza XML firmado, puede comprobar el origen del XML.
-
-Las clases de este espacio de nombres siguen la [recomendación sobre procesamiento y sintaxis de firma de XML](https://www.w3.org/TR/xmldsig-core/) del World Wide Web Consortium.
 
 ## <a name="verifying-signatures"></a>Comprobación de firmas
 
@@ -116,7 +110,7 @@ Para comprobar que alguien en concreto firmó los datos, es necesaria la informa
 
 - El algoritmo de hash usado por el firmante.
 
-Para comprobar una firma realizada por la clase <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> , use la clase <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> . A la clase <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> debe proporcionársele la clave pública del firmante. Necesitará los valores del módulo y el exponente para especificar la clave pública. (La entidad que generó el par de claves pública y privada debe proporcionar estos valores). En primer lugar <xref:System.Security.Cryptography.RSACryptoServiceProvider> , cree un objeto que contenga la clave pública que comprobará la firma y, a continuación, inicialice una <xref:System.Security.Cryptography.RSAParameters> estructura a los valores de módulo y exponente que especifican la clave pública.
+Para comprobar una firma realizada por la clase <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> , use la clase <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> . A la clase <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> debe proporcionársele la clave pública del firmante. Para RSA, necesitará los valores del módulo y el exponente para especificar la clave pública. (La entidad que generó el par de claves pública y privada debe proporcionar estos valores). En primer lugar <xref:System.Security.Cryptography.RSA> , cree un objeto que contenga la clave pública que comprobará la firma y, a continuación, inicialice una <xref:System.Security.Cryptography.RSAParameters> estructura a los valores de módulo y exponente que especifican la clave pública.
 
 En el código siguiente se muestra la creación de una estructura <xref:System.Security.Cryptography.RSAParameters> . La propiedad `Modulus` se establece en el valor de una matriz de bytes denominada `modulusData` y la propiedad `Exponent` se establece en el valor de una matriz de bytes denominada `exponentData`.
 
@@ -132,12 +126,14 @@ rsaKeyInfo.Modulus = modulusData;
 rsaKeyInfo.Exponent = exponentData;
 ```
 
-Después de crear el objeto <xref:System.Security.Cryptography.RSAParameters> , puede inicializar una nueva instancia de la clase <xref:System.Security.Cryptography.RSACryptoServiceProvider> para los valores especificados en <xref:System.Security.Cryptography.RSAParameters>. <xref:System.Security.Cryptography.RSACryptoServiceProvider> a su vez, se pasa al constructor de un <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> para transferir la clave.
+Una vez creado el <xref:System.Security.Cryptography.RSAParameters> objeto, puede inicializar una nueva instancia de la <xref:System.Security.Cryptography.RSA> clase de implementación con los valores especificados en <xref:System.Security.Cryptography.RSAParameters> . <xref:System.Security.Cryptography.RSA>A su vez, la instancia se pasa al constructor de un <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> para transferir la clave.
 
 El ejemplo siguiente ilustra este proceso. En este ejemplo, `hashValue` y `signedHashValue` son matrices de bytes que proporciona una parte remota. La parte remota firmó el `hashValue` mediante el algoritmo SHA1, produciendo así la firma digital `signedHashValue`. El <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> método comprueba que la firma digital es válida y que se usó para firmar el `hashValue` .
 
+Debido a problemas de colisión con SHA1, se recomienda SHA256 o superior.  Sin embargo, si se utilizó SHA1 para crear la firma, debe utilizar SHA1 para comprobar la firma.
+
 ```vb
-Dim rsa As New RSACryptoServiceProvider()
+Dim rsa As RSA = RSA.Create()
 rsa.ImportParameters(rsaKeyInfo)
 Dim rsaDeformatter As New RSAPKCS1SignatureDeformatter(rsa)
 rsaDeformatter.SetHashAlgorithm("SHA1")
@@ -149,7 +145,7 @@ End If
 ```
 
 ```csharp
-RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
+RSA rsa = RSA.Create();
 rsa.ImportParameters(rsaKeyInfo);
 RSAPKCS1SignatureDeformatter rsaDeformatter = new RSAPKCS1SignatureDeformatter(rsa);
 rsaDeformatter.SetHashAlgorithm("SHA1");
@@ -167,4 +163,7 @@ Este fragmento de código mostrará "`The signature is valid`" si la firma es v�
 
 ## <a name="see-also"></a>Consulte también
 
-- [Servicios criptográficos](cryptographic-services.md)
+- [servicios criptográficos](cryptographic-services.md)
+- [Modelo de criptografía](cryptography-model.md)
+- [Criptografía multiplataforma](cross-platform-cryptography.md)
+- [ASP.NET Core protección de datos](/aspnet/core/security/data-protection/introduction)

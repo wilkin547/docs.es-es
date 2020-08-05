@@ -1,39 +1,39 @@
 ---
 title: Procedimiento para cifrar elementos XML con claves asimétricas
-ms.date: 03/30/2017
+ms.date: 07/14/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- cryptography [.NET Framework], asymmetric keys
+- cryptography [.NET], asymmetric keys
 - AES algorithm
-- System.Security.Cryptography.RSACryptoServiceProvider class
-- asymmetric keys [.NET Framework]
+- System.Security.Cryptography.RSA class
+- asymmetric keys [.NET]
 - System.Security.Cryptography.EncryptedXml class
 - XML encryption
 - key containers
 - Advanced Encryption Standard algorithm
-- Rijndael
-- encryption [.NET Framework], asymmetric keys
+- encryption [.NET], asymmetric keys
 ms.assetid: a164ba4f-e596-4bbe-a9ca-f214fe89ed48
-ms.openlocfilehash: 475446f6206676e93ea72d16e01bcf1067c24e86
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 1c824b00a1df920108cfcd8c4590b680020cdf3e
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84277380"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555792"
 ---
 # <a name="how-to-encrypt-xml-elements-with-asymmetric-keys"></a>Procedimiento para cifrar elementos XML con claves asimétricas
+
 Puede usar las clases en el espacio de nombres <xref:System.Security.Cryptography.Xml> para cifrar un elemento dentro de un documento XML.  El cifrado XML es un método estándar para intercambiar o almacenar datos XML cifrados sin preocuparse de que los datos puedan leerse con facilidad.  Para obtener más información sobre el estándar de cifrado XML, consulte la especificación de World Wide Web Consortium (W3C) para el cifrado XML ubicado en <https://www.w3.org/TR/xmldsig-core/> .  
   
  Puede usar el cifrado de XML para reemplazar cualquier elemento o documento XML con un elemento <`EncryptedData`> que contenga los datos XML cifrados.  El `EncryptedData` elemento <> también puede contener subelementos que incluyan información sobre las claves y los procesos usados durante el cifrado.  El cifrado XML permite que un documento contenga varios elementos cifrados y permite cifrar varias veces un elemento.  En el ejemplo de código de este procedimiento se muestra cómo crear un `EncryptedData` elemento <> junto con otros subelementos que se pueden usar posteriormente durante el descifrado.  
   
- En este ejemplo se cifra un elemento XML mediante dos claves.  Genera un par de claves públicas/privadas RSA y lo guarda en un contenedor de claves seguras.  Después, el ejemplo crea una clave de sesión independiente mediante el algoritmo AES (Estándar de cifrado avanzado), también llamado algoritmo de Rijndael.  El ejemplo usa la clave de sesión AES para cifrar el documento XML y usa la clave pública RSA para cifrar la clave de sesión AES.  Por último, en el ejemplo se guarda la clave de sesión AES cifrada y los datos XML cifrados en el documento XML dentro de un nuevo <`EncryptedData`> elemento.  
+ En este ejemplo se cifra un elemento XML mediante dos claves.  Genera un par de claves públicas/privadas RSA y lo guarda en un contenedor de claves seguras.  A continuación, en el ejemplo se crea una clave de sesión independiente mediante el algoritmo Estándar de cifrado avanzado (AES).  El ejemplo usa la clave de sesión AES para cifrar el documento XML y usa la clave pública RSA para cifrar la clave de sesión AES.  Por último, en el ejemplo se guarda la clave de sesión AES cifrada y los datos XML cifrados en el documento XML dentro de un nuevo <`EncryptedData`> elemento.  
   
  Para descifrar el elemento XML, recupere la clave privada RSA del contenedor de claves, úsela para descifrar la clave de sesión y, posteriormente, descifrar el documento.  Para obtener más información sobre cómo descifrar un elemento XML cifrado mediante este procedimiento, vea [Cómo: descifrar elementos XML con claves asimétricas](how-to-decrypt-xml-elements-with-asymmetric-keys.md).  
   
- Este ejemplo resulta adecuado en aquellas situaciones en las que varias aplicaciones tienen que compartir datos cifrados o en las que una aplicación tiene que guardar datos cifrados entre los intervalos en los que se ejecuta.  
+ Este ejemplo resulta adecuado en aquellas situaciones en las que varias aplicaciones tienen que compartir datos cifrados o en las que una aplicación tiene que guardar datos cifrados entre los intervalos en los que se ejecuta.
   
 ### <a name="to-encrypt-an-xml-element-with-an-asymmetric-key"></a>Para cifrar un elemento XML con una clave asimétrica  
   
@@ -57,7 +57,7 @@ Puede usar las clases en el espacio de nombres <xref:System.Security.Cryptograph
      [!code-csharp[HowToEncryptXMLElementAsymmetric#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#5)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#5)]  
   
-5. Cree una nueva sesión de clave mediante la clase <xref:System.Security.Cryptography.RijndaelManaged>.  Esta clave cifrará el elemento XML, se cifrará ella misma y se colocará en el documento XML.  
+5. Cree una nueva sesión de clave mediante la clase <xref:System.Security.Cryptography.Aes>.  Esta clave cifrará el elemento XML, se cifrará ella misma y se colocará en el documento XML.  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#6](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#6)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#6)]  
@@ -129,18 +129,24 @@ Puede usar las clases en el espacio de nombres <xref:System.Security.Cryptograph
   
 ## <a name="compiling-the-code"></a>Compilar el código  
   
-- Para compilar este ejemplo, debe incluir una referencia a `System.Security.dll`.  
+- En un proyecto que tiene como destino .NET Framework, incluya una referencia a `System.Security.dll` .
+
+- En un proyecto que tenga como destino .NET Core o .NET 5, instale el paquete NuGet [System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml).
   
 - Incluya los siguientes espacios de nombres: <xref:System.Xml>, <xref:System.Security.Cryptography> y <xref:System.Security.Cryptography.Xml>.  
   
-## <a name="net-framework-security"></a>Seguridad de .NET Framework  
- No almacene nunca una clave criptográfica simétrica en texto sin formato ni transfiera una clave simétrica entre equipos en texto sin formato.  Tampoco debe almacenar ni transferir nunca la clave privada de un par de claves asimétricas en texto sin formato.  Para obtener más información acerca de las claves criptográficas simétricas y asimétricas, vea [generar claves para cifrado y descifrado](generating-keys-for-encryption-and-decryption.md).  
+## <a name="net-security"></a>Seguridad de .NET
+
+No almacene nunca una clave criptográfica simétrica en texto sin formato ni transfiera una clave simétrica entre equipos en texto sin formato.  Tampoco debe almacenar ni transferir nunca la clave privada de un par de claves asimétricas en texto sin formato.  Para obtener más información acerca de las claves criptográficas simétricas y asimétricas, vea [generar claves para cifrado y descifrado](generating-keys-for-encryption-and-decryption.md).  
   
- No inserte nunca una clave directamente en el código fuente.  Las claves incrustadas se pueden leer fácilmente desde un ensamblado mediante [Ildasm. exe (desensamblador de IL)](../../framework/tools/ildasm-exe-il-disassembler.md) o abriendo el ensamblado en un editor de texto como el Bloc de notas.  
+No inserte nunca una clave directamente en el código fuente.  Las claves incrustadas se pueden leer fácilmente desde un ensamblado mediante el [Ildasm.exe (desensamblador de IL)](../../framework/tools/ildasm-exe-il-disassembler.md) o abriendo el ensamblado en un editor de texto como el Bloc de notas.  
   
- Cuando termine de usar una clave criptográfica, bórrela de la memoria estableciendo cada byte en cero o llamando al método <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> de la clase criptográfica administrada.  A veces, las claves criptográficas se pueden leer desde la memoria con un depurador o desde un disco duro si la ubicación de memoria se pagina en el disco.  
+Cuando termine de usar una clave criptográfica, bórrela de la memoria estableciendo cada byte en cero o llamando al método <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> de la clase criptográfica administrada.  A veces, las claves criptográficas se pueden leer desde la memoria con un depurador o desde un disco duro si la ubicación de memoria se pagina en el disco.  
   
 ## <a name="see-also"></a>Consulte también
 
-- <xref:System.Security.Cryptography.Xml>
+- [Modelo de criptografía](cryptography-model.md)
+- [servicios criptográficos](cryptographic-services.md)
+- [Criptografía multiplataforma](cross-platform-cryptography.md)- <xref:System.Security.Cryptography.Xml>
 - [Procedimiento para descifrar elementos XML con claves asimétricas](how-to-decrypt-xml-elements-with-asymmetric-keys.md)
+- [ASP.NET Core protección de datos](/aspnet/core/security/data-protection/introduction)

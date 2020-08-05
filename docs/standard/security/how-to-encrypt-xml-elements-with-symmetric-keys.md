@@ -1,30 +1,30 @@
 ---
 title: Procedimiento para cifrar elementos XML con claves simétricas
-ms.date: 03/30/2017
+ms.date: 07/14/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - AES algorithm
-- cryptography [.NET Framework], symmetric keys
-- encryption [.NET Framework], symmetric keys
+- cryptography [.NET], symmetric keys
+- encryption [.NET], symmetric keys
 - symmetric keys
 - System.Security.Cryptography.EncryptedXml class
-- System.Security.Cryptography.RijndaelManaged class
+- System.Security.Cryptography.Aes class
 - XML encryption
 - Advanced Encryption Standard algorithm
-- Rijndael
 ms.assetid: d8461a44-aa2c-4ef4-b3e4-ab7cbaaee1b5
-ms.openlocfilehash: 1ad75b7f36130a9f3acad97f724406650a7fdb68
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: dd69ec6a5317f7f6f800cd225d920a1934c77a0c
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84277328"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555818"
 ---
 # <a name="how-to-encrypt-xml-elements-with-symmetric-keys"></a>Procedimiento para cifrar elementos XML con claves simétricas
-Puede usar las clases en el espacio de nombres <xref:System.Security.Cryptography.Xml> para cifrar un elemento dentro de un documento XML.  El cifrado XML le permite almacenar o transportar información XML confidencial, sin preocuparse de que los datos se puedan leer con facilidad.  Este procedimiento cifra un elemento XML mediante el algoritmo Estándar de cifrado avanzado (AES), también conocido como Rijndael.  
+
+Puede usar las clases en el espacio de nombres <xref:System.Security.Cryptography.Xml> para cifrar un elemento dentro de un documento XML.  El cifrado XML le permite almacenar o transportar información XML confidencial, sin preocuparse de que los datos se puedan leer con facilidad.  Este procedimiento cifra un elemento XML mediante el algoritmo de Estándar de cifrado avanzado (AES).  
   
  Para obtener información sobre cómo descifrar un elemento XML cifrado mediante este procedimiento, vea [Cómo: descifrar elementos XML con claves simétricas](how-to-decrypt-xml-elements-with-symmetric-keys.md).  
   
@@ -34,7 +34,7 @@ Puede usar las clases en el espacio de nombres <xref:System.Security.Cryptograph
   
 ### <a name="to-encrypt-an-xml-element-with-a-symmetric-key"></a>Para cifrar un elemento XML con una clave simétrica  
   
-1. Genere una clave simétrica mediante la clase <xref:System.Security.Cryptography.RijndaelManaged>.  Esta clave se usará para cifrar el elemento XML.  
+1. Genere una clave simétrica mediante la clase <xref:System.Security.Cryptography.Aes>.  Esta clave se usará para cifrar el elemento XML.  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#2)]
      [!code-vb[HowToEncryptXMLElementSymmetric#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#2)]  
@@ -90,16 +90,23 @@ Puede usar las clases en el espacio de nombres <xref:System.Security.Cryptograph
   
 ## <a name="compiling-the-code"></a>Compilar el código  
   
-- Para compilar este ejemplo, debe incluir una referencia a `System.Security.dll`.  
+- En un proyecto que tiene como destino .NET Framework, incluya una referencia a `System.Security.dll` .
+
+- En un proyecto que tenga como destino .NET Core o .NET 5, instale el paquete NuGet [System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml).
   
 - Incluya los siguientes espacios de nombres: <xref:System.Xml>, <xref:System.Security.Cryptography> y <xref:System.Security.Cryptography.Xml>.  
   
-## <a name="net-framework-security"></a>Seguridad de .NET Framework  
- No almacene nunca una clave criptográfica en texto sin formato ni transfiera una clave entre equipos en texto sin formato.  En su lugar, use un contenedor de claves seguro para almacenar las claves criptográficas.  
+## <a name="net-security"></a>Seguridad de .NET
+
+No almacene nunca una clave criptográfica en texto sin formato ni transfiera una clave entre equipos en texto sin formato.  En su lugar, use un contenedor de claves seguro para almacenar las claves criptográficas.  
   
- Cuando termine de usar una clave criptográfica, bórrela de la memoria estableciendo cada byte en cero o llamando al método <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> de la clase criptográfica administrada.  
+Cuando termine de usar una clave criptográfica, bórrela de la memoria estableciendo cada byte en cero o llamando al método <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> de la clase criptográfica administrada.  
   
 ## <a name="see-also"></a>Consulte también
 
+- [Modelo de criptografía](cryptography-model.md) : describe cómo se implementa la criptografía en la biblioteca de clases base.
+- [servicios criptográficos](cryptographic-services.md)
+- [Criptografía multiplataforma](cross-platform-cryptography.md)
 - <xref:System.Security.Cryptography.Xml>
 - [Procedimiento para descifrar elementos XML con claves simétricas](how-to-decrypt-xml-elements-with-symmetric-keys.md)
+- [ASP.NET Core protección de datos](/aspnet/core/security/data-protection/introduction)

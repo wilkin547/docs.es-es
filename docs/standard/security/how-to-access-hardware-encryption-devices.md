@@ -1,6 +1,6 @@
 ---
-title: 'Cómo: Obtener acceso a los dispositivos de cifrado de hardware'
-ms.date: 03/30/2017
+title: Procedimiento para obtener acceso a los dispositivos de cifrado de hardware
+ms.date: 07/14/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -13,17 +13,21 @@ helpviewer_keywords:
 - hardware encryption
 - CspParameters
 ms.assetid: b0e734df-6eb4-4b16-b48c-6f0fe82d5f17
-ms.openlocfilehash: d6ee22fd9fb0c11e22ac01ff83b3269e37e37763
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7cd3aab80a8388c1d4ce08e4ae94aae84cfff239
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706180"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87557143"
 ---
-# <a name="how-to-access-hardware-encryption-devices"></a>Cómo: Obtener acceso a los dispositivos de cifrado de hardware
+# <a name="how-to-access-hardware-encryption-devices"></a>Procedimiento para obtener acceso a los dispositivos de cifrado de hardware
+
+> [!NOTE]
+> Este artículo se aplica a Windows.
+
 Puede usar la clase <xref:System.Security.Cryptography.CspParameters> para obtener acceso a los dispositivos de cifrado de hardware. Por ejemplo, puede usar esta clase para integrar la aplicación con una tarjeta inteligente, un generador de números aleatorios de hardware o una implementación de hardware de un determinado algoritmo criptográfico.  
-  
- La clase <xref:System.Security.Cryptography.CspParameters> crea un proveedor de servicios criptográficos (CSP) que tiene acceso a un dispositivo de cifrado de hardware correctamente instalado.  Puede comprobar la disponibilidad de un CSP inspeccionando la siguiente clave del registro con el Editor del registro (Regedit.exe): HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\Defaults\Provider.  
+
+La clase <xref:System.Security.Cryptography.CspParameters> crea un proveedor de servicios criptográficos (CSP) que tiene acceso a un dispositivo de cifrado de hardware correctamente instalado.  Puede comprobar la disponibilidad de un CSP inspeccionando la siguiente clave del registro con el Editor del registro (Regedit.exe): HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\Defaults\Provider.  
   
 ### <a name="to-sign-data-using-a-key-card"></a>Para firmar datos mediante una tarjeta de claves  
   
@@ -43,12 +47,15 @@ Puede usar la clase <xref:System.Security.Cryptography.CspParameters> para obten
   
 3. Cree un valor aleatorio con el método <xref:System.Security.Cryptography.RNGCryptoServiceProvider.GetBytes%2A> o <xref:System.Security.Cryptography.RNGCryptoServiceProvider.GetNonZeroBytes%2A>.  
   
-## <a name="example"></a>Ejemplo  
- En el siguiente ejemplo de código se muestra cómo firmar datos con una tarjeta inteligente.  El ejemplo de código crea un objeto <xref:System.Security.Cryptography.CspParameters> que expone una tarjeta inteligente e inicializa un objeto <xref:System.Security.Cryptography.RSACryptoServiceProvider> con el CSP.  Después, el ejemplo de código firma y comprueba algunos datos.  
+## <a name="example"></a>Ejemplo
+
+En el siguiente ejemplo de código se muestra cómo firmar datos con una tarjeta inteligente.  El ejemplo de código crea un objeto <xref:System.Security.Cryptography.CspParameters> que expone una tarjeta inteligente e inicializa un objeto <xref:System.Security.Cryptography.RSACryptoServiceProvider> con el CSP.  Después, el ejemplo de código firma y comprueba algunos datos.  
+
+Debido a problemas de colisión con SHA1, se recomienda SHA256 o superior.
   
- [!code-cpp[Cryptography.SmartCardCSP#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Cryptography.SmartCardCSP/CPP/Cryptography.SmartCardCSP.cpp#1)]
- [!code-csharp[Cryptography.SmartCardCSP#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Cryptography.SmartCardCSP/CS/example.cs#1)]
- [!code-vb[Cryptography.SmartCardCSP#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.SmartCardCSP/VB/example.vb#1)]  
+[!code-cpp[Cryptography.SmartCardCSP#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Cryptography.SmartCardCSP/CPP/Cryptography.SmartCardCSP.cpp#1)]
+[!code-csharp[Cryptography.SmartCardCSP#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Cryptography.SmartCardCSP/CS/example.cs#1)]
+[!code-vb[Cryptography.SmartCardCSP#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.SmartCardCSP/VB/example.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
   
@@ -57,3 +64,10 @@ Puede usar la clase <xref:System.Security.Cryptography.CspParameters> para obten
 - Debe tener un lector de tarjetas inteligentes y los controladores correspondientes instalados en el equipo.  
   
 - Debe inicializar el objeto <xref:System.Security.Cryptography.CspParameters> con la información específica de su lector de tarjetas.  Para obtener más información, consulte la documentación de su lector de tarjetas.
+
+## <a name="see-also"></a>Consulte también
+
+- [Modelo de criptografía](cryptography-model.md)
+- [servicios criptográficos](cryptographic-services.md)
+- [Criptografía multiplataforma](cross-platform-cryptography.md)
+- [ASP.NET Core protección de datos](/aspnet/core/security/data-protection/introduction)

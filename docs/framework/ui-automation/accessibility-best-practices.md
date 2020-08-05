@@ -6,38 +6,39 @@ helpviewer_keywords:
 - best practices for accessibility
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
-ms.openlocfilehash: 725bb0c60972e2d0dc6089b4370dd7e3e436e444
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 2980881bbcd34ca82f6cca7723cf976e0890f463
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517066"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87557091"
 ---
-# <a name="accessibility-best-practices"></a>Procedimientos de accesibilidad recomendados
+# <a name="accessibility-best-practices"></a>Prácticas recomendadas de accesibilidad
+
 > [!NOTE]
-> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).  
+> Este artículo está destinado a .NET Framework desarrolladores que desean usar las clases de automatización de la interfaz de usuario administrada definidas en el <xref:System.Windows.Automation> espacio de nombres. Para obtener la información más reciente sobre la automatización de la interfaz de usuario, consulte [API de automatización de Windows: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
   
- La implementación de los siguientes procedimientos recomendados en los controles o las aplicaciones mejorará su accesibilidad para las personas que utilizan dispositivos de tecnología de asistencia. Muchas de estas prácticas recomendadas se centran en lograr un buen diseño de [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] . Cada procedimiento recomendado incluye información de implementación para las aplicaciones o los controles de [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] . En muchos casos, el trabajo que se debe realizar para cumplir estos procedimientos recomendados ya está incluido en los controles [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] .  
+ La implementación de los siguientes procedimientos recomendados en los controles o las aplicaciones mejorará su accesibilidad para las personas que utilizan dispositivos de tecnología de asistencia. Muchas de estas prácticas recomendadas se centran en un buen diseño de la interfaz de usuario (IU). Cada procedimiento recomendado incluye información de implementación de controles o aplicaciones Windows Presentation Foundation (WPF). En muchos casos, el trabajo para cumplir estos procedimientos recomendados ya está incluido en los controles de WPF.  
   
 <a name="Programmatic_Access"></a>
 ## <a name="programmatic-access"></a>Acceso mediante programación  
- Para usar el acceso mediante programación, hay que asegurarse de que todos los elementos [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] tengan etiqueta, de que los valores de las propiedades estén expuestos y de que se generen los eventos adecuados. Con los controles [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] estándar, la mayor parte de este trabajo ya se realiza a través de <xref:System.Windows.Automation.Peers.AutomationPeer>. Los controles personalizados requieren trabajo adicional para comprobar que el acceso mediante programación esté implementado correctamente.  
+ El acceso mediante programación implica asegurarse de que todos los elementos de la interfaz de usuario tienen la etiqueta, los valores de propiedad se exponen y se generan los eventos adecuados. En el caso de los controles estándar de WPF, la mayor parte de este trabajo ya se realiza a través de <xref:System.Windows.Automation.Peers.AutomationPeer> . Los controles personalizados requieren trabajo adicional para comprobar que el acceso mediante programación esté implementado correctamente.  
   
 <a name="Enable_Programmatic_Access_to_all_UI_Elements_and_Text"></a>
 ### <a name="enable-programmatic-access-to-all-ui-elements-and-text"></a>Habilitar el acceso mediante programación a todos los elementos de la interfaz de usuario y el texto  
- Los elementos de la interfaz de usuario (IU) deben habilitar el acceso mediante programación. Si [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] es un control [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] estándar, el acceso mediante programación se incluirá en el control. Si el control es un control personalizado, un control derivado de un control común o un control derivado de Control, debe comprobar la implementación de <xref:System.Windows.Automation.Peers.AutomationPeer> en las áreas que puedan necesitar modificaciones.  
+ Los elementos de la interfaz de usuario (IU) deben habilitar el acceso mediante programación. Si la interfaz de usuario es un control WPF estándar, la compatibilidad con el acceso mediante programación se incluye en el control. Si el control es un control personalizado, un control derivado de un control común o un control derivado de Control, debe comprobar la implementación de <xref:System.Windows.Automation.Peers.AutomationPeer> en las áreas que puedan necesitar modificaciones.  
   
- Seguir este procedimiento recomendado permite a los proveedores de tecnología de asistencia identificar y manipular los elementos de su producto [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] .  
+ Seguir este procedimiento recomendado permite a los proveedores de tecnología de asistencia identificar y manipular los elementos de la interfaz de usuario del producto.  
   
 <a name="Place_Names__Titles_and_Descriptions_on_UI_Objects_"></a>
 ### <a name="place-names-titles-and-descriptions-on-ui-objects-frames-and-pages"></a>Colocar nombres, títulos y descripciones en objetos de interfaz de usuario, marcos y páginas  
- Las tecnologías de asistencia, especialmente los lectores de pantalla, utilizan el título para entender la ubicación del marco, el objeto o la página dentro del esquema de navegación. Por lo tanto, el título debe ser muy descriptivo. Por ejemplo, si el título de una página web es “página web de Microsoft”, será inútil si el usuario navegó hasta un área muy concreta. Los títulos descriptivos son fundamentales para los usuarios ciegos que dependen de los lectores de pantalla. De forma similar, para [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] los controles, <xref:System.Windows.Automation.AutomationProperties.NameProperty> y <xref:System.Windows.Automation.AutomationProperties.HelpTextProperty> son importantes para los dispositivos de tecnología de asistencia.  
+ Las tecnologías de asistencia, especialmente los lectores de pantalla, utilizan el título para entender la ubicación del marco, el objeto o la página dentro del esquema de navegación. Por lo tanto, el título debe ser descriptivo. Por ejemplo, si el título de una página web es “página web de Microsoft”, será inútil si el usuario navegó hasta un área muy concreta. Los títulos descriptivos son fundamentales para los usuarios ciegos que dependen de los lectores de pantalla. De forma similar, para los controles de WPF, <xref:System.Windows.Automation.AutomationProperties.NameProperty> y <xref:System.Windows.Automation.AutomationProperties.HelpTextProperty> son importantes para los dispositivos de tecnología de asistencia.  
   
- Seguir este procedimiento recomendado permite que las tecnologías de asistencia identifiquen y manipulen [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] en los controles y aplicaciones de ejemplo.  
+ Seguir este procedimiento recomendado permite que las tecnologías de asistencia identifiquen y manipulen la interfaz de usuario en controles y aplicaciones de ejemplo.  
   
 <a name="Ensure_Programmatic_Events_are_Triggered_by_all_UI"></a>
 ### <a name="ensure-programmatic-events-are-triggered-by-all-ui-activities"></a>Asegurarse de que todas las actividades de la interfaz de usuario activan eventos mediante programación  
- Seguir este procedimiento recomendado permite a las tecnologías de asistencia escuchar los cambios en la [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] y notificar al usuario acerca de estos cambios.  
+ Seguir este procedimiento recomendado permite a las tecnologías de asistencia escuchar los cambios en la interfaz de usuario y notificar a los usuarios acerca de estos cambios.  
   
 <a name="User_Settings"></a>
 ## <a name="user-settings"></a>Configuración del usuario  
@@ -61,13 +62,13 @@ ms.locfileid: "87517066"
   
 <a name="Support_High_Contrast_and_all_System_Display_Attributes"></a>
 ### <a name="support-high-contrast-and-all-system-display-attributes"></a>Compatibilidad con el contraste alto y todos los atributos de visualización del sistema  
- Las aplicaciones no deben interrumpir ni deshabilitar la configuración de contraste seleccionada por el usuario para todo el sistema, así como las selecciones de color u otros atributos y configuraciones de visualización para todo el sistema. La configuración del sistema adoptada por un usuario mejora la accesibilidad de las aplicaciones, por lo que las aplicaciones no deben deshabilitarla ni ignorarla. El color se debe utilizar en su combinación correcta de primer plano y fondo para proporcionar el contraste apropiado. No se deben mezclar colores no relacionados y no se deben invertir los colores.  
+ Las aplicaciones no deben interrumpir ni deshabilitar la configuración de contraste seleccionada por el usuario para todo el sistema, así como las selecciones de color u otros atributos y configuraciones de visualización para todo el sistema. La configuración del sistema adoptada por un usuario mejora la accesibilidad de las aplicaciones, por lo que las aplicaciones no deben deshabilitarla ni ignorarla. El color se debe utilizar en su combinación correcta de primer plano y fondo para proporcionar el contraste apropiado. No mezcle colores no relacionados ni invierten los colores.  
   
  Muchos usuarios necesitan combinaciones concretas de contraste alto, como texto blanco sobre un fondo negro. Si se dibujan invertidas, por ejemplo, como texto negro sobre un fondo blanco, esto hará que el fondo se superponga al primer plano y puede dificultar la lectura de algunos usuarios.  
   
 <a name="Ensure_all_UI_Correctly_Scales_by_any_DPI_Setting"></a>
 ### <a name="ensure-all-ui-correctly-scales-by-any-dpi-setting"></a>Asegurarse de que toda la interfaz de usuario se escale correctamente con cualquier configuración de PPP  
- Asegúrese de que todo se [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] puede escalar correctamente con cualquier valor de puntos por pulgada (PPP). Además, asegúrese de que [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] los elementos se ajustan en una pantalla de 1024 x 768 con 120 puntos por pulgada (PPP).  
+ Asegúrese de que toda la interfaz de usuario se puede escalar correctamente con cualquier valor de puntos por pulgada (PPP). Además, asegúrese de que los elementos de la interfaz de usuario se ajustan en una pantalla de 1024 x 768 con 120 puntos por pulgada (PPP).  
   
 <a name="Navigation"></a>
 ## <a name="navigation"></a>Navegación  
@@ -75,7 +76,7 @@ ms.locfileid: "87517066"
   
 <a name="Provide_Keyboard_Interface_for_all_UI_Elements"></a>
 ### <a name="provide-keyboard-interface-for-all-ui-elements"></a>Proporcionar la interfaz de teclado a todos los elementos de la interfaz de usuario  
- Las tabulaciones, especialmente cuando se planean cuidadosamente, proporcionan a los usuarios otra manera de navegar por la [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
+ Las tabulaciones, especialmente cuando se planean cuidadosamente, proporcionan a los usuarios otra manera de navegar por la interfaz de usuario.  
   
  Las aplicaciones deben proporcionar las interfaces de teclado siguientes:  
   
@@ -85,7 +86,7 @@ ms.locfileid: "87517066"
   
 <a name="Show_the_Keyboard_Focus"></a>
 ### <a name="show-the-keyboard-focus"></a>Mostrar el foco del teclado  
- Los usuarios necesitan saber qué objeto tiene el foco del teclado para poder prever el efecto de las pulsaciones de teclas. Para resaltar el foco del teclado, utilice colores, fuentes o gráficos como rectángulos o ampliaciones. Para resaltar de forma audible el foco del teclado, cambie el volumen, el tono o la calidad del tono.  
+ Los usuarios necesitan saber qué objeto tiene el foco del teclado para poder prever el efecto de las pulsaciones de teclas. Para resaltar el foco del teclado, utilice colores, fuentes o gráficos como rectángulos o ampliaciones. Para resaltar audiblemente el foco del teclado, cambie el volumen, el tono o la calidad tonal.  
   
  Para evitar confusiones, las aplicaciones deben ocultar todos los indicadores de foco visuales y atenuar las selecciones que se encuentran en las ventanas, o los paneles, inactivos.  
   
@@ -99,7 +100,7 @@ ms.locfileid: "87517066"
   
 <a name="Support_Navigation_Standards_and_Powerful_Navigation"></a>
 ### <a name="support-navigation-standards-and-powerful-navigation-schemes"></a>Compatibilidad con los estándares de navegación y esquemas de navegación eficaces  
- Los diferentes aspectos de la navegación con el teclado proporcionan diversas maneras de navegar por la [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
+ Distintos aspectos de la navegación con el teclado proporcionan diferentes maneras de navegar por la interfaz de usuario.  
   
  Las aplicaciones deben proporcionar las interfaces de teclado siguientes:  
   
@@ -111,17 +112,17 @@ ms.locfileid: "87517066"
   
 <a name="Do_not_let_Mouse_Location_Interfere_with_Keyboard"></a>
 ### <a name="do-not-let-mouse-location-interfere-with-keyboard-navigation"></a>No dejar que la ubicación del mouse interfiera con la navegación mediante el teclado  
- La ubicación del mouse no debe interferir con la navegación mediante el teclado. Por ejemplo, si el mouse está situado en un lugar y el usuario navega con el teclado, no debería producirse un clic del mouse si no lo inicia el usuario.  
+ La ubicación del mouse no debe interferir con la navegación mediante el teclado. Por ejemplo, si se coloca el mouse en algún lugar y el usuario navega con el teclado, no debería producirse un clic del mouse a menos que lo inicie el usuario.  
   
 <a name="Multimodal_Interface"></a>
 ## <a name="multimodal-interface"></a>Interfaz multimodal  
- Los procedimientos recomendados de esta sección sirven para que la aplicación [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] incluya alternativas a los elementos visuales.  
+ Los procedimientos recomendados de esta sección garantizan que la interfaz de usuario de la aplicación incluya alternativas para los elementos visuales.  
   
 <a name="Provide_User_Selectable_Equivalents_for_Non_Text"></a>
 ### <a name="provide-user-selectable-equivalents-for-non-text-elements"></a>Proporcionar equivalentes seleccionables por el usuario para los elementos no textuales  
  Para cada elemento no textual, proporcione un equivalente seleccionable por el usuario para el texto, transcripciones o descripciones de audio, como texto alternativo, títulos o comentarios visuales.  
   
- Los elementos no textuales abarcan una gran variedad de elementos [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] , por ejemplo: imágenes, regiones de mapa de imagen, animaciones, applets, marcos, scripts, botones gráficos, sonidos, archivos de audio independientes y vídeos. Los elementos no textuales son importantes cuando contienen información visual, voz o información de audio general a la que el usuario necesita acceder para entender el contenido de la [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
+ Los elementos que no son de texto cubren una amplia gama de elementos de la interfaz de usuario, como imágenes, regiones de mapa de imagen, animaciones, applets, Marcos, scripts, botones gráficos, sonidos, archivos de audio independientes y vídeo. Los elementos no textuales son importantes cuando contienen información visual, voz o información de audio general a la que el usuario necesita acceder para entender el contenido de la interfaz de usuario.  
   
 <a name="Use_Color_but_also_Provide_Alternatives_to_Color"></a>
 ### <a name="use-color-but-also-provide-alternatives-to-color"></a>Usar color, pero proporcionar también alternativas al color  
@@ -129,9 +130,9 @@ ms.locfileid: "87517066"
   
 <a name="Use_Standard_Input_APIs_with_Devices_Independent"></a>
 ### <a name="use-standard-input-apis-with-device-independent-calls"></a>Usar la API de entrada estándar con llamadas independientes del dispositivo  
- Las llamadas independientes del dispositivo garantizan la igualdad de las características del teclado y del mouse, a la vez que proporcionan una tecnología de asistencia con la información necesaria sobre el [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] .  
+ Las llamadas independientes del dispositivo garantizan la igualdad de las características del teclado y del mouse, a la vez que proporcionan una tecnología de asistencia con la información necesaria sobre la interfaz de usuario.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Automation.Peers>
 - [NumericUpDown Custom Control with Theme and UI Automation Support Sample](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771573(v=vs.90)) (Ejemplo de un control personalizado NumericUpDown y compatibilidad para Automatización de la interfaz de usuario)

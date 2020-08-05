@@ -479,7 +479,5 @@ items:
     href: native-interop/expose-components-to-com.md
   - name: "Hospedaje de .NET\_Core desde código nativo"
     href: tutorials/netcore-hosting.md
-  - name: 'Paquetes, metapaquetes y marcos'
-    href: packages.md
   - name: Integración continua
     href: tools/using-ci-with-cli.md

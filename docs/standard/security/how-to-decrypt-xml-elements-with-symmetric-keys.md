@@ -1,6 +1,6 @@
 ---
 title: Procedimiento para descifrar elementos XML con claves simétricas
-ms.date: 03/30/2017
+ms.date: 07/14/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -8,20 +8,20 @@ dev_langs:
 helpviewer_keywords:
 - symmetric keys
 - System.Security.Cryptography.EncryptedXml class
-- System.Security.Cryptography.RijndaelManaged class
+- System.Security.Cryptography.Aes class
 - XML encryption
-- Rijndael
 - decryption
 ms.assetid: 6038aff0-f92c-4e29-a618-d793410410d8
-ms.openlocfilehash: bb34332d345ee7bcb9037dc7bdf0deebbe70c3c9
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8c9f75442e04b76369b5b2c5c1b266ce2a511a63
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84277432"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555752"
 ---
 # <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a>Procedimiento para descifrar elementos XML con claves simétricas
-Puede usar las clases en el espacio de nombres <xref:System.Security.Cryptography.Xml> para cifrar un elemento dentro de un documento XML.  El cifrado XML le permite almacenar o transportar información XML confidencial, sin preocuparse de que los datos se puedan leer con facilidad.  Este ejemplo de código descifra un elemento XML mediante el algoritmo AES (Estándar de cifrado avanzado), también conocido como Rijndael.  
+
+Puede usar las clases en el espacio de nombres <xref:System.Security.Cryptography.Xml> para cifrar un elemento dentro de un documento XML.  El cifrado XML le permite almacenar o transportar información XML confidencial, sin preocuparse de que los datos se puedan leer con facilidad.  En este ejemplo de código se descifra un elemento XML mediante el algoritmo Estándar de cifrado avanzado (AES).
   
  Para obtener información sobre cómo cifrar un elemento XML mediante este procedimiento, vea [Cómo: cifrar elementos XML con claves simétricas](how-to-encrypt-xml-elements-with-symmetric-keys.md).  
   
@@ -70,16 +70,23 @@ Puede usar las clases en el espacio de nombres <xref:System.Security.Cryptograph
   
 ## <a name="compiling-the-code"></a>Compilar el código  
   
-- Para compilar este ejemplo, debe incluir una referencia a `System.Security.dll`.  
+- En un proyecto que tiene como destino .NET Framework, incluya una referencia a `System.Security.dll` .
+
+- En un proyecto que tenga como destino .NET Core o .NET 5, instale el paquete NuGet [System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml).
   
 - Incluya los siguientes espacios de nombres: <xref:System.Xml>, <xref:System.Security.Cryptography> y <xref:System.Security.Cryptography.Xml>.  
   
-## <a name="net-framework-security"></a>Seguridad de .NET Framework  
- No almacene nunca una clave criptográfica en texto sin formato ni transfiera una clave entre equipos en texto sin formato.  
+## <a name="net-security"></a>Seguridad de .NET
   
- Cuando haya terminado de usar una clave criptográfica simétrica, bórrela de la memoria estableciendo cada byte en cero o llamando al método <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> de la clase criptográfica administrada.  
+No almacene nunca una clave criptográfica en texto sin formato ni transfiera una clave entre equipos en texto sin formato.  
+  
+Cuando haya terminado de usar una clave criptográfica simétrica, bórrela de la memoria estableciendo cada byte en cero o llamando al método <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> de la clase criptográfica administrada.  
   
 ## <a name="see-also"></a>Consulte también
 
+- [Modelo de criptografía](cryptography-model.md)
+- [servicios criptográficos](cryptographic-services.md)
+- [Criptografía multiplataforma](cross-platform-cryptography.md)
 - <xref:System.Security.Cryptography.Xml>
 - [Procedimiento para cifrar elementos XML con claves simétricas](how-to-encrypt-xml-elements-with-symmetric-keys.md)
+- [ASP.NET Core protección de datos](/aspnet/core/security/data-protection/introduction)
