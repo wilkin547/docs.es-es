@@ -1,6 +1,7 @@
 ---
-title: 'Operadores de C#: referencia de C#'
-ms.date: 04/28/2020
+title: Operadores y expresiones de C# (referencia de C#)
+description: Más información sobre las expresiones y los operadores de C#, así como la precedencia y la asociatividad de estos
+ms.date: 08/04/2020
 f1_keywords:
 - cs.operators
 helpviewer_keywords:
@@ -9,18 +10,52 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 96bb97690f8954cce2cc75cad921e21985972798
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 19b5683a7cd334e1203c57fa90d275b659eac873
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301780"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556558"
 ---
-# <a name="c-operators-c-reference"></a>Operadores de C# (referencia de C#)
+# <a name="c-operators-and-expressions-c-reference"></a>Operadores y expresiones de C# (referencia de C#)
 
-C# proporciona una serie de operadores compatibles con los tipos integrados. Por ejemplo, los [operadores aritméticos](arithmetic-operators.md) realizan operaciones aritméticas con operandos numéricos, y los [operadores lógicos booleanos](boolean-logical-operators.md) realizan operaciones lógicas con los operandos [bool](../builtin-types/bool.md). Algunos operadores se pueden [sobrecargar](operator-overloading.md). Con la sobrecarga de operadores, puede especificar el comportamiento del operador para los operandos de un tipo definido por el usuario.
+C# proporciona una serie de operadores. Muchos de ellos son compatibles con los [tipos integrados](../builtin-types/built-in-types.md) y permiten realizar operaciones básicas con valores de esos tipos. Entre estos operadores se incluyen los siguientes grupos:
 
-En una [expresión](../../programming-guide/statements-expressions-operators/expressions.md), la prioridad y la asociatividad de los operadores determinan el orden en el que se realizan las operaciones. Puede usar los paréntesis para cambiar el orden de evaluación impuesto por la prioridad y la asociatividad de operadores.
+- [Operadores aritméticos](arithmetic-operators.md), que realizan operaciones aritméticas con operandos numéricos.
+- [Operadores de comparación](comparison-operators.md), que comparan operandos numéricos.
+- [Operadores lógicos booleanos](boolean-logical-operators.md), que realizan operaciones lógicas con operandos [`bool`](../builtin-types/bool.md).
+- [Operadores bit a bit y de desplazamiento](bitwise-and-shift-operators.md), que realizan operaciones bit a bit o de desplazamiento con operandos de tipos enteros.
+- [Operadores de igualdad](equality-operators.md), que comprueban si sus operandos son iguales o no.
+
+Normalmente, puede [sobrecargar](operator-overloading.md) esos operadores, es decir, puede especificar el comportamiento del operador para los operandos de un tipo definido por el usuario.
+
+Las expresiones más simples de C# son literales (por ejemplo, números [enteros](../builtin-types/integral-numeric-types.md#integer-literals) y [reales](../builtin-types/floating-point-numeric-types.md#real-literals)) y nombres de variables. Puede combinarlas para crear expresiones complejas mediante el uso de operadores. La [precedencia](#operator-precedence) y la [asociatividad](#operator-associativity) de los operadores determinan el orden en el que se realizan las operaciones en una expresión. Puede usar los paréntesis para cambiar el orden de evaluación impuesto por la prioridad y la asociatividad de operadores.
+
+En el código siguiente, se muestran ejemplos de expresiones en el lado derecho de las asignaciones:
+
+[!code-csharp[expression examples](snippets/Overview.cs#Expressions)]
+
+Normalmente, una expresión genera un resultado que se puede incluir en otra expresión. Un método de llamada [`void`](../builtin-types/void.md) es un ejemplo de expresión que no genera un resultado. Solo se puede usar como [instrucción](../../programming-guide/statements-expressions-operators/statements.md), tal como se muestra en el ejemplo siguiente:
+
+```csharp
+Console.WriteLine("Hello, world!");
+```
+
+A continuación se indican otros tipos de expresiones que ofrece C#:
+
+- [Expresiones de cadenas interpoladas](../tokens/interpolated.md), que proporcionan una sintaxis práctica para crear cadenas con formato:
+
+  [!code-csharp-interactive[interpolated string](snippets/Overview.cs#InterpolatedString)]
+
+- [Expresiones lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md), que permiten crear funciones anónimas.
+
+  [!code-csharp-interactive[lambda expression](snippets/Overview.cs#Lambda)]
+
+- [Expresiones de consulta](../keywords/query-keywords.md), que permiten usar capacidades de consulta directamente en C# :
+
+  [!code-csharp-interactive[query expression](snippets/Overview.cs#Query)]
+
+Puede usar una [definición de cuerpo de expresiones](../../programming-guide/statements-expressions-operators/expression-bodied-members.md) para proporcionar una definición concisa para un método, un constructor, una propiedad, un indexador o un finalizador.
 
 ## <a name="operator-precedence"></a>Prioridad de operadores
 
@@ -90,9 +125,13 @@ Normalmente, se evalúan todos los operandos de un operador. Sin embargo, alguno
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
-Para obtener más información, vea la sección sobre [Operadores](~/_csharplang/spec/expressions.md#operators) de la [Especificación del lenguaje C#](~/_csharplang/spec/introduction.md).
+Para más información, vea las secciones siguientes de la [Especificación del lenguaje C#](~/_csharplang/spec/introduction.md):
+
+- [Expresiones](~/_csharplang/spec/expressions.md)
+- [Operadores](~/_csharplang/spec/expressions.md#operators)
 
 ## <a name="see-also"></a>Vea también
 
 - [Referencia de C#](../index.md)
-- [Expresiones](../../programming-guide/statements-expressions-operators/expressions.md)
+- [Sobrecarga de operadores](operator-overloading.md)
+- [Árboles de expresión](../../programming-guide/concepts/expression-trees/index.md)

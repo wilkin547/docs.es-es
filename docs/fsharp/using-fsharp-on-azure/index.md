@@ -3,12 +3,12 @@ title: Uso de F# en Azure
 description: Guía de uso de los servicios de Azure con F#
 author: sylvanc
 ms.date: 07/29/2020
-ms.openlocfilehash: ebf94d724db2c503f27581bf1352bf4fa90f5e2a
-ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
+ms.openlocfilehash: 24ef3fd14a4d0173935fac3e67aadf86110fa6d8
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87455713"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517378"
 ---
 # <a name="using-f-on-azure"></a>Uso de F# en Azure
 
@@ -113,7 +113,7 @@ Los temporizadores pueden implementarse en F# y hospedarse en Azure a través de
 
 Las máquinas virtuales de Azure se pueden implementar y administrar mediante programación desde scripts de F# con los paquetes y API de Microsoft.Azure.Management. Por ejemplo, vea [Introducción a las bibliotecas de administración para .NET](https://msdn.microsoft.com/library/dn722415.aspx) y [Uso de Azure Resource Manager](/azure/azure-resource-manager/resource-manager-deployment-model).
 
-Del mismo modo, también se pueden implementar y administrar otros recursos de Azure desde scripts de F# mediante el uso de los mismos componentes. Por ejemplo, se pueden crear cuentas de almacenamiento, implementar Azure Cloud Services, crear instancias de Azure Cosmos DB y administrar Azure Notifcation Hubs mediante programación desde scripts de F#.
+Del mismo modo, también se pueden implementar y administrar otros recursos de Azure desde scripts de F# mediante el uso de los mismos componentes. Por ejemplo, puede crear cuentas de almacenamiento, implementar Azure Cloud Services, crear instancias de Azure Cosmos DB y administrar Azure Notification Hubs mediante programación a partir de scripts de F#.
 
 Normalmente no es necesario usar scripts de F# para implementar y administrar recursos. Por ejemplo, los recursos de Azure también se pueden implementar directamente desde descripciones de plantillas de JSON, que pueden tener parámetros. Vea [Plantillas de Azure Resource Manager](/azure/azure-resource-manager/resource-manager-template-best-practices) con ejemplos como las [Plantillas de inicio rápido de Azure](https://azure.microsoft.com/resources/templates/).
 

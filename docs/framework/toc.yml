@@ -678,3 +678,39 @@
           href: whats-new/obsolete-types.md
         - name: Miembros obsoletos
           href: whats-new/obsolete-members.md
+- name: Seguridad de acceso del código
+  items:
+    - name: Información general
+      href: misc/code-access-security.md
+    - name: Conceptos básicos sobre la seguridad de acceso del código
+      href: misc/code-access-security-basics.md
+    - name: Compatibilidad con la directiva de seguridad de acceso del código y migración
+      href: misc/code-access-security-policy-compatibility-and-migration.md
+    - name: Permisos peligrosos y administración de directivas
+      href: misc/dangerous-permissions-and-policy-administration.md
+    - name: Procedimiento para ejecutar código de confianza parcial en un espacio aislado
+      href: misc/how-to-run-partially-trusted-code-in-a-sandbox.md
+    - name: Peticiones de vínculos
+      href: misc/link-demands.md
+    - name: Proteger control de excepciones
+      href: misc/securing-exception-handling.md
+    - name: Proteger acceso a métodos
+      href: misc/securing-method-access.md
+    - name: Insertar en el repositorio código de contenedor
+      href: misc/securing-wrapper-code.md
+    - name: Seguridad y campos de matriz públicos de sólo lectura
+      href: misc/security-and-public-read-only-array-fields.md
+    - name: Consideraciones de seguridad y de interacción remota
+      href: misc/security-and-remoting-considerations.md
+    - name: Seguridad y serialización
+      href: misc/security-and-serialization.md
+    - name: "Código transparente en seguridad, nivel\_1"
+      href: misc/security-transparent-code-level-1.md
+    - name: 'Código transparente en seguridad, nivel 2'
+      href: misc/security-transparent-code-level-2.md
+    - name: Código transparente en seguridad
+      href: misc/security-transparent-code.md
+    - name: Utilizar bibliotecas de código que no es de plena confianza
+      href: misc/using-libraries-from-partially-trusted-code.md
+    - name: Utilizar el método Assert
+      href: misc/using-the-assert-method.md
