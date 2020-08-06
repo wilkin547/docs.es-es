@@ -8,14 +8,17 @@ helpviewer_keywords:
 - security [.NET Framework], remoting
 - secure coding, remoting
 ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
-ms.openlocfilehash: 019773b19eaca2e4364fb79c40fdb923093d4e7e
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 3a272b2a8f164aad07413a069e68a2146d0df6a7
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309370"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855717"
 ---
 # <a name="security-and-remoting-considerations"></a>Consideraciones de seguridad y de interacción remota
+
+[!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
+
 La comunicación remota permite configurar llamadas transparentes entre dominios de aplicación, procesos o equipos. Sin embargo, el recorrido de la pila de seguridad de acceso del código no puede cruzar los límites de los procesos o equipos (se aplica entre dominios de aplicación del mismo proceso).  
   
  Las clases que se pueden usar de forma remota (derivadas de una clase <xref:System.MarshalByRefObject>) deben asumir la responsabilidad de la seguridad. El código debe usarse solo en entornos cerrados donde el código llamador puede ser de confianza de forma implícita, o las llamadas remotas deben diseñarse de modo que no sometan el código protegido a entradas externas que pudieran usarlo de forma malintencionada.  

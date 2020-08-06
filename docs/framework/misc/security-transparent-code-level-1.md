@@ -1,5 +1,5 @@
 ---
-title: Código transparente en seguridad, nivel 1
+title: Código transparente en seguridad, nivel 1
 description: Revise los ejemplos de modelo de código de transparencia de nivel 1, atributos de transparencia y transparencia de seguridad.
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -10,14 +10,15 @@ helpviewer_keywords:
 - security-transparent code
 - security [.NET Framework], security-transparent code
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
-ms.openlocfilehash: c44fe3339f3bf24d266fa97487868ce090d51bb1
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 75cf38412f3ba21832c5e63898b10bcf681f5904
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309099"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855704"
 ---
-# <a name="security-transparent-code-level-1"></a>Código transparente en seguridad, nivel 1
+# <a name="security-transparent-code-level-1"></a>Código transparente en seguridad, nivel 1
+
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  La transparencia ayuda a los desarrolladores a escribir bibliotecas de .NET Framework más seguras que exponen la funcionalidad a código de confianza parcial. La transparencia de nivel 1 se introdujo en .NET Framework versión 2.0 y se usó principalmente solo dentro de Microsoft. A partir de la .NET Framework 4, puede usar la [transparencia de nivel 2](security-transparent-code-level-2.md). Sin embargo, se ha conservado la transparencia de nivel 1 para que pueda identificar código heredado que se debe ejecutar con las reglas de seguridad anteriores.  

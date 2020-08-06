@@ -1,14 +1,18 @@
 ---
-ms.openlocfilehash: f70452cbadc8927521f0fcfda693586c277e4d0f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8b0edd9a49ca431355ab4f57fa041c5d1756d7eb
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "70041162"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855676"
 ---
 > [!CAUTION]
-> Seguridad de acceso del código y código de confianza parcial
+> Seguridad de acceso del código (CAS) y código de confianza parcial
 >
-> .NET Framework proporciona seguridad de acceso del código (CAS), que es un mecanismo para el cumplimiento de los distintos niveles de confianza en diferentes códigos que se ejecutan en la misma aplicación.  La seguridad de acceso de código de .NET Framework no debería usarse como mecanismo para reforzar los límites de seguridad basados en el origen del código u otros aspectos de identidad. Estamos actualizando las guías para reflejar que la seguridad de acceso de código y el código transparente de seguridad no se podrán usar como límites de seguridad con código de confianza parcial, especialmente en código con orígenes desconocidos. Le aconsejamos que no cargue ni ejecute código de orígenes desconocidos sin contar con medidas de seguridad alternativas.
+> .NET Framework proporciona seguridad de acceso del código (CAS), que es un mecanismo para el cumplimiento de los distintos niveles de confianza en diferentes códigos que se ejecutan en la misma aplicación.
+>
+> **Las CA no se admiten en .NET Core, .NET 5 o versiones posteriores. Las versiones de C# posteriores a 7,0 no admiten las CA.**
+>
+> Las CA de .NET Framework no deben usarse como mecanismo para aplicar los límites de seguridad basados en el origen del código u otros aspectos de identidad. Las CA y el código transparente en seguridad no se admiten como límites de seguridad con código de confianza parcial, especialmente el código de origen desconocido. Le aconsejamos que no cargue ni ejecute código de orígenes desconocidos sin contar con medidas de seguridad alternativas.
 >
 > Esta directiva se aplica a todas las versiones de .NET Framework, pero no se aplica a la versión de .NET Framework incluida en Silverlight.

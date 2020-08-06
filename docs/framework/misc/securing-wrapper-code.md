@@ -8,14 +8,15 @@ helpviewer_keywords:
 - secure coding, wrapper code
 - code security, wrapper code
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
-ms.openlocfilehash: 4338b3d0ab306501ea252407f386bdf89d191d6d
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: f448cbf55f3ad992ba9dcc53d5be70b364038744
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309383"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855756"
 ---
 # <a name="securing-wrapper-code"></a>Insertar en el repositorio código de contenedor
+
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  El código de contenedor, especialmente cuando el contenedor tiene mayor confianza que el código que lo usa, puede descubrir un conjunto único de vulnerabilidades de seguridad. Todo lo hecho en nombre de un llamador, cuyos permisos limitados no se incluyen en la comprobación de seguridad adecuada, es una vulnerabilidad potencial que puede ser aprovechada.  

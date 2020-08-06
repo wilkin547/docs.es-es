@@ -10,14 +10,17 @@ helpviewer_keywords:
 - secure coding, exception handling
 - exception handling, security
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
-ms.openlocfilehash: 73597f83d7236cd48a18a891c987b4f5d7e1723d
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: c7643bb34da0cbcbd267fc90e6294bc0b565985e
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309045"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855782"
 ---
 # <a name="securing-exception-handling"></a>Proteger control de excepciones
+
+[!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
+
 En Visual C++ y Visual Basic, una expresión de filtro más arriba en la pila se ejecuta antes que cualquier `finally` instrucción. El bloque **catch** asociado a ese filtro se ejecuta después de la `finally` instrucción. Para obtener más información, consulte [uso de excepciones filtradas por el usuario](../../standard/exceptions/using-user-filtered-exception-handlers.md). En esta sección se examinan las implicaciones de seguridad de este orden. Considere el siguiente ejemplo de pseudocódigo que ilustra el orden en el que se ejecutan las instrucciones y instrucciones de filtro `finally` .  
   
 ```cpp  
