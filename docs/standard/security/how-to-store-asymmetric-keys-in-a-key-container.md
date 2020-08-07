@@ -16,19 +16,19 @@ helpviewer_keywords:
 - encryption [.NET], asymmetric keys
 - decryption keys
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
-ms.openlocfilehash: aa6fad815338cbd6316deca7be0a23286630fa56
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 9c04d1ea4d7e7ee46d875b3fa791f3eee2059e52
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556298"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87854729"
 ---
 # <a name="store-asymmetric-keys-in-a-key-container"></a>Almacenar claves asimétricas en un contenedor de claves
 
 Las claves privadas asimétricas nunca deben almacenarse literalmente o en texto sin formato en el equipo local. Si necesita almacenar una clave privada, utilice un contenedor de claves. Para obtener más información acerca de los contenedores de claves, consulte Descripción de los [contenedores de claves RSA de nivel de equipo y de nivel de usuario](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100)).
 
 > [!NOTE]
-> El código de este artículo se aplica a Windows.
+> El código de este artículo se aplica a Windows y usa las características que no están disponibles en .NET Core 2,2 y versiones anteriores. Para obtener más información, consulte [dotnet/Runtime # 23391](https://github.com/dotnet/runtime/issues/23391).
 
 ## <a name="create-an-asymmetric-key-and-save-it-in-a-key-container"></a>Crear una clave asimétrica y guardarla en un contenedor de claves
 
@@ -245,7 +245,7 @@ Key added to container:
 Key deleted.
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Modelo de criptografía](cryptography-model.md)
 - [servicios criptográficos](cryptographic-services.md)

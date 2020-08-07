@@ -2,12 +2,12 @@
 title: Formato de texto sin formato
 description: 'Aprenda a usar printf y otro formato de texto sin formato en aplicaciones y scripts de F #.'
 ms.date: 07/22/2020
-ms.openlocfilehash: a0f2c52431be894c4f74dd2940345a518f620589
-ms.sourcegitcommit: 09bad6ec0cbf18be7cd7f62e77286d305a18b607
+ms.openlocfilehash: 6b14633e074961757d0f0cd258d1b1667f5fd8ee
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87795763"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87854924"
 ---
 # <a name="plain-text-formatting"></a>Formato de texto sin formato
 
@@ -81,15 +81,15 @@ Las especificaciones de formato de los `printf` formatos son cadenas con `%` mar
 | `%f`               | un tipo de punto flotante básico | Con formato como un valor con signo que tiene el formato `[-]dddd.dddd` , donde `dddd` es uno o más dígitos decimales. El número de dígitos que hay delante del separador decimal depende de la magnitud del número y el número de dígitos que hay detrás del separador decimal depende de la precisión solicitada. |
 | `%g`, `%G` | un tipo de punto flotante básico |  Con formato con como valor con signo impreso en `%f` o en `%e` formato, lo que sea más compacto para el valor y la precisión especificados. |
 | `%M` | un `System.Decimal` valor  |    Con formato mediante el `"G"` especificador de formato para`System.Decimal.ToString(format)` |
-| `%O` | cualquier valor  |   Formateado mediante la conversión boxing del objeto y valling su `System.Object.ToString()` método |
+| `%O` | cualquier valor  |   Formateado mediante la conversión boxing del objeto y la llamada a su `System.Object.ToString()` método |
 | `%A` | cualquier valor  |   Con formato de [texto sin formato estructurado](plaintext-formatting.md) con la configuración de diseño predeterminada |
 | `%a` | cualquier valor  |   Requiere dos argumentos: una función de formato que acepte un parámetro de contexto y el valor, y el valor concreto que se va a imprimir. |
-| `%t` | cualquier valor  |   Requiere un argumento, una función de formato que acepta un parámetro de contexto que genera o devuelve el texto adecuado. |
+| `%t` | cualquier valor  |   Requiere un argumento: una función de formato que acepte un parámetro de contexto que genere o devuelva el texto adecuado |
 
 Los tipos enteros básicos son `byte` ( `System.Byte` ), `sbyte` ( `System.SByte` ), `int16` ( `System.Int16` ), `uint16` ( `System.UInt16` ), `int32` ( `System.Int32` ), `uint32` ( `System.UInt32` ), `int64` ( `System.Int64` ), `uint64` ( `System.UInt64` ), `nativeint` ( `System.IntPtr` ) y `unativeint` ( `System.UIntPtr` ).
 Los tipos de punto flotante básicos son `float` ( `System.Double` ) y `float32` ( `System.Single` ).
 
-El ancho opcional es un entero que indica el ancho mínimo del resultado. Por ejemplo, `%6d` imprime un entero, prefijando espacios en blanco para rellenar al menos 6 caracteres. Si el ancho es `*` , se toma un argumento entero adicional para especificar el ancho correspondiente.
+El ancho opcional es un entero que indica el ancho mínimo del resultado. Por ejemplo, `%6d` imprime un entero, prefijando espacios en blanco para rellenar al menos seis caracteres. Si el ancho es `*` , se toma un argumento entero adicional para especificar el ancho correspondiente.
 
 Las marcas válidas son:
 
@@ -161,7 +161,7 @@ Culture 2: 12/31/1999 12:00:00 AM
 
 ### <a name="structured-values"></a>Valores estructurados
 
-Al dar formato a texto sin formato mediante el `%A` especificador, la sangría de bloque se usa para las listas y tuplas de F #. Se muestra en el ejemplo anterior.
+Al dar formato a texto sin formato mediante el `%A` especificador, la sangría de bloque se usa para las listas y tuplas de F #. Esto se muestra en el ejemplo anterior.
 También se utiliza la estructura de matrices, incluidas las matrices multidimensionales.  Las matrices unidimensionales se muestran con `[| ... |]` Sintaxis. Por ejemplo,
 
 ```fsharp
@@ -200,12 +200,12 @@ Obtiene
 [|(1, 1); (2, 4); (3, 9); (4, 16); (5, 25)|]
 ```
 
-Si se especifica un ancho de impresión de 0, no se utilizará ningún ancho de impresión. Se producirá una sola línea de texto, excepto en el caso de que las cadenas incrustadas en la salida contengan saltos.  Por ejemplo
+Si se especifica un ancho de impresión de 0, no se utilizará ningún ancho de impresión. Se producirá una sola línea de texto, excepto donde las cadenas incrustadas en la salida contengan saltos de línea.  Por ejemplo
 
 ```fsharp
 printfn "%0A" [| for i in 1 .. 5 -> (i, i*i) |]
 
-printfn "%0A" [| for i in 1 .. 5 -> "abc\ndef |]
+printfn "%0A" [| for i in 1 .. 5 -> "abc\ndef" |]
 ```
 
 Obtiene
@@ -318,7 +318,7 @@ Obtiene
 
 Los valores diferidos se imprimen como `Value is not created` o texto equivalente cuando el valor aún no se ha evaluado.
 
-Los valores NULL se imprimen como `null` a menos que el tipo estático del valor se determine como un tipo de Unión donde `null` es un representación permitido.
+Los valores NULL se imprimen como `null` a menos que el tipo estático del valor se determine como un tipo de Unión donde `null` es una representación permitida.
 
 Los valores de función de F # se imprimen como su nombre de cierre generado internamente, por ejemplo, `<fun:it@43-7>` .
 
