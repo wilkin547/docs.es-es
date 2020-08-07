@@ -1,18 +1,19 @@
 ---
 title: 'Archivo XML de ejemplo: Configuración de prueba (LINQ to XML)'
+description: Este archivo XML se usa en numerosos ejemplos de la documentación de LINQ to XML. El archivo es un archivo de configuración de prueba.
 ms.date: 07/20/2015
 ms.assetid: 45bfb509-c1d4-4b4f-9690-1cb0c9816516
-ms.openlocfilehash: 713e0b69ea896d9f4198ae68f1a3a258d74f24f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 14402a4d7988e767464a53a159bcb25661dc82f8
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "66487235"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302469"
 ---
-# <a name="sample-xml-file-test-configuration-linq-to-xml"></a><span data-ttu-id="45b54-102">Archivo XML de ejemplo: Configuración de prueba (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="45b54-102">Sample XML File: Test Configuration (LINQ to XML)</span></span>
-<span data-ttu-id="45b54-103">El siguiente archivo XML se usa en numerosos ejemplos de la documentación de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="45b54-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="45b54-104">Se trata de un archivo de configuración de pruebas.</span><span class="sxs-lookup"><span data-stu-id="45b54-104">This is a test configuration file.</span></span>  
+# <a name="sample-xml-file-test-configuration-linq-to-xml"></a><span data-ttu-id="a0807-104">Archivo XML de ejemplo: Configuración de prueba (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="a0807-104">Sample XML File: Test Configuration (LINQ to XML)</span></span>
+<span data-ttu-id="a0807-105">El siguiente archivo XML se usa en numerosos ejemplos de la documentación de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a0807-105">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="a0807-106">Se trata de un archivo de configuración de pruebas.</span><span class="sxs-lookup"><span data-stu-id="a0807-106">This is a test configuration file.</span></span>  
   
-## <a name="testconfigxml"></a><span data-ttu-id="45b54-105">TestConfig.xml</span><span class="sxs-lookup"><span data-stu-id="45b54-105">TestConfig.xml</span></span>  
+## <a name="testconfigxml"></a><span data-ttu-id="a0807-107">TestConfig.xml</span><span class="sxs-lookup"><span data-stu-id="a0807-107">TestConfig.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  

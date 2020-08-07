@@ -1,19 +1,20 @@
 ---
 title: Procedimiento para serializar con DataContractSerializer (C#)
+description: Aprenda a serializar objetos mediante DataContractSerializer. Vea un ejemplo donde se crean objetos, se serializan en archivos de texto y, luego, se deserializan.
 ms.date: 07/20/2015
 ms.assetid: 3320ecbf-cdbe-480e-979c-2c14bbef9988
-ms.openlocfilehash: 0b6d35a2f73ac512f05341f5aaffa61484657576
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b713f36cde594f7cd7011073345d33c6f46585e0
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168705"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301533"
 ---
-# <a name="how-to-serialize-using-datacontractserializer-c"></a><span data-ttu-id="509e6-102">Procedimiento para serializar con DataContractSerializer (C#)</span><span class="sxs-lookup"><span data-stu-id="509e6-102">How to serialize using DataContractSerializer (C#)</span></span>
-<span data-ttu-id="509e6-103">Este tema presenta un ejemplo que serializa y deserializa información mediante <xref:System.Runtime.Serialization.DataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="509e6-103">This topic shows an example that serializes and deserializes using <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
+# <a name="how-to-serialize-using-datacontractserializer-c"></a><span data-ttu-id="d3cf2-104">Procedimiento para serializar con DataContractSerializer (C#)</span><span class="sxs-lookup"><span data-stu-id="d3cf2-104">How to serialize using DataContractSerializer (C#)</span></span>
+<span data-ttu-id="d3cf2-105">Este tema presenta un ejemplo que serializa y deserializa información mediante <xref:System.Runtime.Serialization.DataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="d3cf2-105">This topic shows an example that serializes and deserializes using <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="509e6-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="509e6-104">Example</span></span>  
- <span data-ttu-id="509e6-105">El siguiente ejemplo crea una serie de objetos que contienen a su vez objetos <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="509e6-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="509e6-106">A continuación, los serializa en archivos de texto y después los deserializa a partir de archivos de texto.</span><span class="sxs-lookup"><span data-stu-id="509e6-106">It then serializes them to text files, and then deserializes them from the text files.</span></span>  
+## <a name="example"></a><span data-ttu-id="d3cf2-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="d3cf2-106">Example</span></span>  
+ <span data-ttu-id="d3cf2-107">El siguiente ejemplo crea una serie de objetos que contienen a su vez objetos <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="d3cf2-107">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="d3cf2-108">A continuación, los serializa en archivos de texto y después los deserializa a partir de archivos de texto.</span><span class="sxs-lookup"><span data-stu-id="d3cf2-108">It then serializes them to text files, and then deserializes them from the text files.</span></span>  
   
 ```csharp  
 using System;  
@@ -80,7 +81,7 @@ public class XElementNullContainer
 }  
 ```  
   
- <span data-ttu-id="509e6-107">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="509e6-107">This example produces the following output:</span></span>  
+ <span data-ttu-id="d3cf2-109">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="d3cf2-109">This example produces the following output:</span></span>  
   
 ```output  
 Testing for type: System.Xml.Linq.XElement  
