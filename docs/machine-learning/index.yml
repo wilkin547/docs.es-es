@@ -10,12 +10,12 @@ metadata:
   author: natke
   ms.author: nakersha
   ms.date: 10/30/2019
-  ms.openlocfilehash: 05d357af2088321524841bfc05f94f816f1bc306
-  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.openlocfilehash: da93d48dc36123f8821be37c8c0546b84ab29712
+  ms.sourcegitcommit: 09bad6ec0cbf18be7cd7f62e77286d305a18b607
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 03/15/2020
-  ms.locfileid: "73423939"
+  ms.lasthandoff: 08/05/2020
+  ms.locfileid: "87795494"
 landingContent:
 - title: Aspectos básicos de ML.NET
   linkLists:
@@ -31,17 +31,17 @@ landingContent:
     links:
     - text: Algoritmos y tareas de aprendizaje automático
       url: resources/tasks.md
-    - text: Cómo elegir un algoritmo
+    - text: Elección de un algoritmo
       url: how-to-choose-an-ml-net-algorithm.md
 - title: Empezar a trabajar en 10 minutos
   linkLists:
   - linkListType: quickstart
     links:
-    - text: Configuración del generador de modelos en Visual Studio
-      url: how-to-guides/install-model-builder.md
-    - text: Introducción a la API ML.NET
+    - text: Introducción a la API de ML.NET (code-first)
       url: https://dotnet.microsoft.com/learn/ml-dotnet/get-started-tutorial/intro
-    - text: Instalación de la CLI en Mac OS, Windows o Linux
+    - text: Configuración de Model Builder en Visual Studio (low-code)
+      url: how-to-guides/install-model-builder.md
+    - text: Instalación de la CLI en macOS, Windows o Linux (low-code)
       url: how-to-guides/install-ml-net-cli.md
 - title: Tutoriales
   linkLists:
@@ -67,7 +67,7 @@ landingContent:
       url: tutorials/time-series-demand-forecasting.md
     - text: Creación de un elemento de recomendación de películas (API)
       url: tutorials/movie-recommendation.md
-- title: 'Guías de ayuda y procedimientos:'
+- title: Guías paso a paso
   linkLists:
   - linkListType: how-to-guide
     links:
