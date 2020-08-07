@@ -1,6 +1,8 @@
 ---
 title: Referencia de C#
 ms.date: 02/14/2017
+f1_keywords:
+- _CSharpKeyword
 helpviewer_keywords:
 - Visual C#, language reference
 - language reference [C#]
@@ -8,12 +10,12 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: 4875e53327e24c4b5983a4a3b79b5beced368725
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bed8f430793a8d8544cf0bbb5ea765490945bfc0
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74428606"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855340"
 ---
 # <a name="c-reference"></a>Referencia de C#
 
@@ -61,7 +63,7 @@ Las características que se han implementado en versiones de C# posteriores a 6.
   
 ## <a name="related-sections"></a>Secciones relacionadas  
 
- [Usar el entorno de desarrollo de Visual C#](/visualstudio/get-started/csharp)  
+ [Uso del entorno de desarrollo de Visual Studio para C#](/visualstudio/get-started/csharp)  
  Ofrece vínculos para los temas de tareas y conceptos y temas que describen el IDE y el Editor.  
   
  [Guía de programación de C#](../programming-guide/index.md)  
