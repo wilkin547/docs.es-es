@@ -2,12 +2,12 @@
 title: Opciones interactivas
 description: Obtenga información sobre las opciones de línea de comandos compatibles con F# interactivo, fsi.exe.
 ms.date: 07/22/2020
-ms.openlocfilehash: f9932cac24fad187c332306968fb13981912e80a
-ms.sourcegitcommit: 09bad6ec0cbf18be7cd7f62e77286d305a18b607
+ms.openlocfilehash: abddd1fd990be18ede139ab26ffe80513ba6e0dd
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87795468"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855353"
 ---
 # <a name="f-interactive-options"></a>Opciones de F# interactivo
 
@@ -25,13 +25,13 @@ La extensión de archivo de los archivos de script de F # es `.fsx` .
 
 ## <a name="table-of-f-interactive-options"></a>Tabla de opciones de F# interactivo
 
-En la tabla siguiente se resumen las opciones admitidas por F# interactivo. Puede establecer estas opciones en la línea de comandos o a través del IDE de Visual Studio. Para establecer estas opciones en el IDE de Visual Studio, abra el menú **herramientas** , seleccione **Opciones...**, expanda el nodo herramientas de **F #** y seleccione **F# interactivo**.
+En la tabla siguiente se resumen las opciones admitidas por F# interactivo. Puede establecer estas opciones en la línea de comandos o a través del IDE de Visual Studio. Para establecer estas opciones en el IDE de Visual Studio, abra el menú **herramientas** , seleccione **Opciones**, expanda el nodo **herramientas de F #** y, a continuación, seleccione **F# interactivo**.
 
 Cuando aparecen listas en F# interactivo argumentos de opción, los elementos de lista se separan mediante signos de punto y coma ( `;` ).
 
 |Opción|Descripción|
 |------|-----------|
-|**--**|Se usa para indicar a F# interactivo que trate los argumentos restantes como argumentos de la línea de comandos para el programa o script de F #, al que puede tener acceso en el código mediante la lista **FSI. CommandLineArgs**.|
+|**--**|Se usa para indicar a F# interactivo que trate los argumentos restantes como argumentos de línea de comandos para el programa o script de F #, al que puede tener acceso en el código mediante la lista **FSI. CommandLineArgs**.|
 |**--Checked**[ **+**&#124;**-** ]|Igual que la opción del compilador **fsc.exe** . Para obtener más información, consulte [Opciones del compilador](compiler-options.md).|
 |**--codePage: &lt; int&gt;**|Igual que la opción del compilador **fsc.exe** . Para obtener más información, consulte [Opciones del compilador](compiler-options.md).|
 |**--consolecolors**[ **+**&#124;**-** ]|Genera mensajes de advertencia y error en color.|
@@ -42,7 +42,7 @@ Cuando aparecen listas en F# interactivo argumentos de opción, los elementos de
 |**--exec**|Indica a F # Interactive que se cierre después de cargar los archivos o ejecutar el archivo de script proporcionado en la línea de comandos.|
 |**--fullpaths**|Igual que la opción del compilador **fsc.exe** . Para obtener más información, consulte [Opciones del compilador](compiler-options.md).|
 |**--GUI**[ **+**&#124;**-** ]|Habilita o deshabilita el bucle de eventos Windows Forms. El valor predeterminado es habilitado.|
-|**--Help**<br /><br />**-?**|Se usa para mostrar la sintaxis de la línea de comandos y una breve descripción de cada opción.|
+|**--Help**<br /><br />**-?**|Se usa para mostrar la sintaxis de línea de comandos y una breve descripción de cada opción.|
 |**--lib: &lt; carpeta-lista&gt;**<br /><br />**-I: &lt; lista de carpetas&gt;**|Igual que la opción del compilador **fsc.exe** . Para obtener más información, consulte [Opciones del compilador](compiler-options.md).|
 |**--Load: &lt; nombre de archivo&gt;**|Compila el código fuente especificado en el inicio y carga las construcciones de F # compiladas en la sesión. Si el origen de destino contiene directivas de scripting como **#use** o **#load**, debe usar **--use** o **#use** en lugar de **--Load** o **#load**.|
 |**--mlcompatibility**|Igual que la opción del compilador **fsc.exe** . Para obtener más información, consulte [Opciones del compilador](compiler-options.md).|
@@ -56,7 +56,7 @@ Cuando aparecen listas en F# interactivo argumentos de opción, los elementos de
 |**--ReadLine**[ **+**&#124;**-** ]|Habilitar o deshabilitar la finalización con tabulación en el modo interactivo.|
 |**--Reference: &lt; nombre de archivo&gt;**<br /><br />**-r: &lt; nombre de archivo&gt;**|Igual que la opción del compilador **fsc.exe** . Para obtener más información, consulte [Opciones del compilador](compiler-options.md).|
 |**--tailcalls**[ **+**&#124;**-** ]|Habilitar o deshabilitar el uso de la instrucción IL de cola, que hace que se reutilice el marco de pila para las funciones recursivas de cola. Esta opción está habilitada de manera predeterminada.|
-|**--targetprofile: &lt; cadena&gt;**|Especifica el perfil de la plataforma de destino de este ensamblado. Los valores válidos son mscorlib, netcore o netstandard.  El valor predeterminado es mscorlib.|
+|**--targetprofile: &lt; cadena&gt;**|Especifica el perfil de la plataforma de destino de este ensamblado. Los valores válidos son `mscorlib`, `netcore` o `netstandard`. El valor predeterminado es `mscorlib`.|
 |**--Use: &lt; nombre de archivo&gt;**|Indica al intérprete que use el archivo especificado al iniciar como entrada inicial.|
 |**--utf8output**|Igual que la opción del compilador fsc.exe. Para obtener más información, consulte [Opciones del compilador](compiler-options.md).|
 |**--advertir: &lt; nivel de advertencia&gt;**|Igual que la opción del compilador **fsc.exe** . Para obtener más información, consulte [Opciones del compilador](compiler-options.md).|
@@ -73,7 +73,7 @@ F# interactivo ( `dotnet fsi` ) utiliza una versión extendida de [formato de te
 
 3. Se aplica un límite a la longitud de las cadenas que se muestran, a menos que se evalúe explícitamente esa cadena.
 
-4. Un conjunto de valores definidos por el usuario están disponibles a través del `fsi` objeto.
+4. Un conjunto de valores definidos por el usuario está disponible a través del `fsi` objeto.
 
 La configuración disponible para personalizar la impresión de texto sin formato para los valores indicados es:
 

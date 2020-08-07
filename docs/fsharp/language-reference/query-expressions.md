@@ -2,19 +2,18 @@
 title: Expresiones de consulta
 description: 'Obtenga información sobre la compatibilidad de expresiones de consulta para LINQ en el lenguaje de programación F #.'
 ms.date: 05/16/2016
-ms.openlocfilehash: bbd15352aa89bd1891b409177921a675784a0227
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: c6f33a58bc959745a5f83bdcfe378a4dbbe577c5
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419192"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855041"
 ---
 # <a name="query-expressions"></a>Expresiones de consulta
 
-> [!NOTE]
-> Los vínculos de la referencia de API de este artículo le llevarán a MSDN.  La referencia de API de docs.microsoft.com no está completa.
-
 Las expresiones de consulta permiten consultar un origen de datos y colocar los datos en un formato deseado. Las expresiones de consulta proporcionan compatibilidad con LINQ en F #.
+> [!NOTE]
+> La referencia de la API de docs.microsoft.com para F # no está completa. Si encuentra vínculos rotos, consulte la [documentación de la biblioteca básica de F #](https://fsharp.github.io/fsharp-core-docs/) .
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -2437,8 +2436,8 @@ module Queries2 = begin
 end
 ```
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 
-- [Referencia del lenguaje F #](index.md)
+- [Referencia del lenguaje F#](index.md)
 - [Linq. QueryBuilder (clase)](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)
 - [Expresiones de cálculo](Computation-Expressions.md)
