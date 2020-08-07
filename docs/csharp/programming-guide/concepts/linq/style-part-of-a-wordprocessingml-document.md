@@ -1,13 +1,14 @@
 ---
 title: Componente de estilo de un documento de WordprocessingML
+description: Aprenda sobre la parte de estilo de un documento WordprocessingML de Open XML de Office. Use el identificador de estilo predeterminado para identificar los párrafos que tienen el estilo predeterminado.
 ms.date: 07/20/2015
 ms.assetid: 5458bccf-3898-4661-904b-7d280c9239a9
-ms.openlocfilehash: 56726a7ea7594bfd1c68e5b1f8e45f585138eac6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b2b0b30643a1e8582bc5a7ea8d22c002b78689e6
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "68868623"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302300"
 ---
 # <a name="style-part-of-a-wordprocessingml-document"></a>Componente de estilo de un documento de WordprocessingML
 En este tema se muestra un ejemplo de la parte de estilo del documento WordprocessingML XML  abierto de Office.  

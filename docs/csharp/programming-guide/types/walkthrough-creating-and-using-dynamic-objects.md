@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: Crear y usar objetos dinámicos (C# y Visual Basic)'
+description: En este tutorial, aprenderá a crear y usar objetos dinámicos. Cree un objeto dinámico personalizado y un proyecto que use una biblioteca "IronPython".
 ms.date: 07/20/2015
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-ms.openlocfilehash: 3b5a92948a3e692a734f3ddee3c7238d5d27588f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 144651d3b14f6f6093ab07f1df7be10e6d05ae89
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79157057"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381260"
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>Tutorial: Crear y usar objetos dinámicos (C# y Visual Basic)
 
@@ -158,7 +159,7 @@ El siguiente proyecto que cree en este tutorial tendrá acceso a una biblioteca 
   
 9. Guarde el archivo y presione CTRL+F5 para compilar y ejecutar la aplicación.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Dynamic?displayProperty=nameWithType>
 - <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>

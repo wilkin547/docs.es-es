@@ -1,16 +1,17 @@
 ---
 title: 'Procedimiento Recorrer en iteración un árbol de directorio: Guía de programación de C#'
+description: Aprenda a recorrer en iteración un árbol de directorio. Acceda a cada archivo de cada subdirectorio anidado en una carpeta raíz especificada.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 24a6225527becb0b896017616e2661ab8247c74c
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: c49a9d1eaea9d4d8967b105d753f2a611d80e795
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241609"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301988"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Procedimiento Recorrer en iteración un árbol de directorio (Guía de programación de C#)
 La frase "recorrer en iteración un árbol de directorios" significa obtener acceso a cada uno de los archivos de todos los subdirectorios anidados bajo una carpeta raíz especificada hasta un nivel de profundidad cualquiera. No es necesario abrir cada archivo. Simplemente puede recuperar el nombre del archivo o subdirectorio como un `string`, o puede recuperar información adicional en el formato de un objeto <xref:System.IO.FileInfo?displayProperty=nameWithType> o <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>.  

@@ -1,5 +1,6 @@
 ---
 title: Storeadm.exe (herramienta de almacenamiento aislado)
+description: Lea acerca de Storeadm.exe, la Herramienta de almacenamiento aislado. Esta herramienta enumera o quita todos los almacenes existentes del usuario actual.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Storeadm.exe
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - stores, current user
 - removing stores
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
-ms.openlocfilehash: 46e846eaf92835fb2a9130b85ed20749934ca5a1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 153fc2b4b5a955fd5ed768d1492f053595363e6e
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75715715"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517014"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (herramienta de almacenamiento aislado)
 La herramienta de almacenamiento aislado incluye o quita todos los almacenes existentes del usuario actual.  
@@ -30,7 +31,7 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
   
 ## <a name="parameters"></a>Parámetros  
   
-|Opción|Description|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |**/h**[**elp**]|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
 |**/list**|Muestra todos los almacenes existentes del usuario actual. Entre estos se incluyen los almacenes de todas las aplicaciones o ensamblados ejecutados por este usuario.|  

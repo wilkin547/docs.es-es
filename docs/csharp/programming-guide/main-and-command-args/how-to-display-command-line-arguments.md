@@ -1,18 +1,19 @@
 ---
-title: 'Procedimiento Mostrar argumentos de la línea de comandos: Guía de programación de C#'
+title: 'Visualización de argumentos de la línea de comandos: Guía de programación de C#'
+description: Aprenda a mostrar argumentos de la línea de comandos. Vea un ejemplo de código y examine los recursos adicionales disponibles.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#], displaying
 ms.assetid: b8479f2d-9e05-4d38-82da-2e61246e5437
-ms.openlocfilehash: 210dad71220572535a0325fac925b0453b0d4e03
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1ac5dc5a5f4e974c9202d2ce23f61071494e1977
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712031"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381819"
 ---
-# <a name="how-to-display-command-line-arguments-c-programming-guide"></a>Procedimiento Mostrar argumentos de la línea de comandos (Guía de programación de C#)
-A los argumentos proporcionados a un archivo ejecutable en la línea de comandos se puede tener acceso a través de un parámetro opcional de `Main`. Los argumentos se proporcionan en forma de una matriz de cadenas. Cada elemento de la matriz contiene un argumento. Se quita el espacio en blanco entre los argumentos. Por ejemplo, considere estas invocaciones de línea de comandos de un ejecutable ficticio:  
+# <a name="how-to-display-command-line-arguments-c-programming-guide"></a>Visualización de argumentos de la línea de comandos (Guía de programación de C#)
+El acceso a los argumentos proporcionados para un archivo ejecutable en la línea de comandos se puede realizar a través de un parámetro opcional para `Main`. Los argumentos se proporcionan en forma de una matriz de cadenas. Cada elemento de la matriz contiene un argumento. Se quita el espacio en blanco entre los argumentos. Por ejemplo, considere estas invocaciones de línea de comandos de un ejecutable ficticio:  
   
 |Entrada en la línea de comandos|Matriz de cadenas que se pasa a Main|  
 |----------------------------|-------------------------------------|  
@@ -24,13 +25,13 @@ A los argumentos proporcionados a un archivo ejecutable en la línea de comandos
 > Si se ejecuta una aplicación en Visual Studio, se pueden especificar argumentos de línea de comandos en la [Página Depuración, Diseñador de proyectos](/visualstudio/ide/reference/debug-page-project-designer).  
   
 ## <a name="example"></a>Ejemplo  
- En este ejemplo se muestran los argumentos de línea de comandos pasados a una aplicación de línea de comandos. La salida que se muestra corresponde a la primera entrada de la tabla anterior.  
+ En este ejemplo se muestran los argumentos de la línea de comandos pasados a una aplicación de la línea de comandos. La salida que se muestra corresponde a la primera entrada de la tabla anterior.  
   
  [!code-csharp[csProgGuideMain#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#9)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Guía de programación de C#](../index.md)
 - [Compilar la línea de comandos con csc.exe](../../language-reference/compiler-options/command-line-building-with-csc-exe.md)
-- [Main() y argumentos de la línea de comandos](./index.md)
+- [Main() y argumentos de línea de comandos](./index.md)
 - [Valores devueltos de Main()](./main-return-values.md)

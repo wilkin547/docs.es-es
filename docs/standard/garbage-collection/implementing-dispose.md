@@ -10,16 +10,16 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: c8b4b9a79577776bc049ef77e222d63374178708
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4f0cc9b88947d60638057ca83adb7f2e141c5d14
+ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447178"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87455738"
 ---
 # <a name="implement-a-dispose-method"></a>Implementación de un método Dispose
 
-La implementación del método <xref:System.IDisposable.Dispose%2A> sirve principalmente para publicar recursos no administrados que utiliza su código. Al trabajar con miembros de instancia que son implementaciones de <xref:System.IDisposable>, es habitual hacer llamadas de <xref:System.IDisposable.Dispose%2A> en cascada. Hay otras razones para implementar <xref:System.IDisposable.Dispose%2A>, como deshacer algo que se ha hecho anteriormente. Por ejemplo, liberar la memoria que se asignó, quitar un elemento de una colección que se agregó, señalar el lanzamiento de un bloqueo adquirido, etc.
+La implementación del método <xref:System.IDisposable.Dispose%2A> sirve principalmente para publicar recursos no administrados. Al trabajar con miembros de instancia que son implementaciones de <xref:System.IDisposable>, es habitual hacer llamadas de <xref:System.IDisposable.Dispose%2A> en cascada. Hay otras razones para implementar <xref:System.IDisposable.Dispose%2A>, por ejemplo, para liberar memoria que se ha asignado, quitar un elemento que se ha agregado a una colección o señalar la liberación de un bloqueo adquirido.
 
 El [recolector de elementos no utilizados de .NET](index.md) no asigna ni libera memoria no administrada. El modelo para desechar un objeto, lo que se conoce como patrón de Dispose, sirve para imponer orden sobre la duración de un objeto. El patrón de Dispose se utiliza solo con los objetos que implementan la inferfaz <xref:System.IDisposable>, y es común al interactuar con identificadores de archivo y de canalización, identificadores de registro, identificadores de espera o punteros a bloques de memoria sin administrar. Esto se debe a que el recolector de elementos no utilizados no puede reclamar objetos no administrados.
 

@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para buscar un elemento con un atributo específico (C#)
+description: Aprenda a buscar un elemento que tenga un atributo con un valor específico. Vea ejemplos de código y examine recursos adicionales.
 ms.date: 07/20/2015
 ms.assetid: b92591aa-3cfb-490e-99f6-da8de335e362
-ms.openlocfilehash: 106885b8658c493caab3101e6b4ce921589076eb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 44875ca2104e7a8f83e83da983af49ef85c89f0a
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141163"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303288"
 ---
 # <a name="how-to-find-an-element-with-a-specific-attribute-c"></a>Procedimiento para buscar un elemento con un atributo específico (C#)
 En este tema se muestra cómo buscar un elemento que tiene un atributo con un valor específico.  
@@ -15,7 +16,7 @@ En este tema se muestra cómo buscar un elemento que tiene un atributo con un va
 ## <a name="example"></a>Ejemplo  
  El ejemplo muestra cómo buscar el elemento `Address` que tiene un atributo `Type` con un valor de "Billing".  
   
- En este ejemplo se usa el siguiente documento XML: [Sample XML File: Typical Purchase Order (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) (Archivo XML de ejemplo: pedido de compra común [LINQ to XML]).  
+ Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Pedido de compra común (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrder.xml");  
@@ -43,7 +44,7 @@ foreach (XElement el in address)
 ## <a name="example"></a>Ejemplo  
  El siguiente ejemplo muestra la misma consulta sobre un XML que se encuentra en un espacio de nombres. Para más información, consulte [Información general sobre los espacios de nombres (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).  
   
- En este ejemplo se usa el siguiente documento XML: [Archivo XML de ejemplo: Pedido de compra común en un espacio de nombres](./sample-xml-file-typical-purchase-order-in-a-namespace.md).  
+ Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Pedido de compra común en un espacio de nombres](./sample-xml-file-typical-purchase-order-in-a-namespace.md).  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrderInNamespace.xml");  
@@ -69,9 +70,9 @@ foreach (XElement el in address)
 </aw:Address>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
-- [Standard Query Operators Overview (C#)](./standard-query-operators-overview.md)(Información general sobre operadores de consulta estándar (C#))
-- [Projection Operations (C#)](./projection-operations.md) (Operaciones de proyección [C#])
+- [Información general sobre operadores de consulta estándar (C#)](./standard-query-operators-overview.md)
+- [Operaciones de proyección (C#)](./projection-operations.md)

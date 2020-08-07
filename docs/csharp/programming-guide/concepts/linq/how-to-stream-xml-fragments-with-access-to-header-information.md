@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para hacer streaming de fragmentos XML con acceso a la información del encabezado (C#)
+description: Aprenda a transmitir fragmentos XML con acceso a la información del encabezado. Las técnicas de transmisión ayudan a evitar el uso excesivo de memoria.
 ms.date: 07/20/2015
 ms.assetid: 7f242770-b0c7-418d-894b-643215e1f8aa
-ms.openlocfilehash: 5bc10bcadae0e33ee63f953608ca841d44dd6527
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8bfded96ea1fa6b096d56ae0736002b9062d58b6
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712395"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303223"
 ---
 # <a name="how-to-stream-xml-fragments-with-access-to-header-information-c"></a>Procedimiento para hacer streaming de fragmentos XML con acceso a la información del encabezado (C#)
 A veces debe leer arbitrariamente los archivos XML grandes y escribir la aplicación para que la superficie de memoria de esta sea predecible. Si intenta rellenar un árbol XML con un archivo XML de gran tamaño, su utilización de memoria será proporcional al tamaño del archivo (es decir, excesivo). Por consiguiente, debe utilizar en su lugar una técnica de transmisión por secuencias.  

@@ -1,13 +1,14 @@
 ---
 title: Recuperar el texto de los párrafos (C#)
+description: Aprenda a usar las consultas LINQ para obtener el texto de cada párrafo de un documento WordprocessingML como una cadena en C#. En este ejemplo se usan consultas encadenadas.
 ms.date: 07/20/2015
 ms.assetid: 127d635e-e559-408f-90c8-2bb621ca50ac
-ms.openlocfilehash: 7c47420045def3fe973169e01143646c0f60a8eb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 58a07ab848307c886927815e4e49e90806f61346
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168250"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302599"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-c"></a>Recuperar el texto de los párrafos (C#)
 Este ejemplo se basa en el ejemplo anterior, [Recuperar los párrafos y sus estilos (C#)](./retrieving-the-paragraphs-and-their-styles.md). El nuevo ejemplo recupera el texto de cada párrafo como una cadena.  
@@ -18,12 +19,12 @@ Este ejemplo se basa en el ejemplo anterior, [Recuperar los párrafos y sus esti
   
  Por supuesto, sería posible escribir una única consulta que contuviese la funcionalidad necesaria para recuperar los párrafos, el estilo de cada uno de ellos y su texto. Sin embargo, a menudo resulta útil dividir una consulta más compleja en múltiples consultas, ya que el código resultante será más modular y fácil de mantener. Y lo que es más, si necesitara reutilizar una parte de esa consulta, resultaría más sencillo refactorizarla si las consultas están escritas de esta forma.  
   
- Estas consultas, que están encadenadas unas a otras, usan el modelo de procesamiento que se describe detalladamente en el tema [Tutorial: Chaining Queries Together (C#)](deferred-execution-and-lazy-evaluation-in-linq-to-xml.md) (Tutorial: Encadenar consultas juntas (C#)).  
+ En estas consultas, que están encadenadas unas a otras, se usa el modelo de procesamiento que se describe detalladamente en el tema [Tutorial: Encadenar cadenas juntas (C#)](deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
   
 ## <a name="example"></a>Ejemplo  
  Este ejemplo procesa un documento WordprocessingML, determinando el nodo elemento, el nombre del estilo y el texto de cada párrafo. Este ejemplo se basa en los ejemplos anteriormente vistos en este tutorial. En los comentarios del siguiente código se menciona dónde se encuentra la nueva consulta.  
   
- Para obtener instrucciones sobre cómo crear el documento de origen de este ejemplo, vea [Creating the Source Office Open XML Document (C#)](./creating-the-source-office-open-xml-document.md) (Creación del documento de origen de Office Open XML (C#)).  
+ Para obtener instrucciones sobre cómo crear el documento de origen de este ejemplo, vea [Crear el documento de origen de Office Open XML (C#)](./creating-the-source-office-open-xml-document.md).  
   
  Este ejemplo utiliza las clases que se encuentran en el ensamblado WindowsBase. Utiliza los tipos del espacio de nombres <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -142,7 +143,7 @@ StyleName:Code >Hello World<
   
 - [Refactorizar mediante un método de extensión (C#)](./refactoring-using-an-extension-method.md)  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Tutorial: Manipular contenido en un documento de WordprocessingML (C#)](shape-of-wordprocessingml-documents.md)
+- [Tutorial: Manipulación de contenido en un documento WordprocessingML (C#)](shape-of-wordprocessingml-documents.md)
 - [Ejecución aplazada y evaluación diferida en LINQ to XML (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

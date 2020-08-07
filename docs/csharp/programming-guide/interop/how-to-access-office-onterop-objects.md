@@ -1,5 +1,6 @@
 ---
 title: 'Procedimiento Tener acceso a objetos de interoperabilidad de Office mediante las características de Visual C#: Guía de programación de C#'
+description: Aprenda sobre las características de C# que simplifican el acceso a objetos de la API de Office. Use las nuevas características para escribir código que cree y muestre una hoja de cálculo de Excel.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - optional parameters [C#], Office programming
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: b5d2da011ec6318c8b07f1eb4d383a4d56488239
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bc4b5755bf56a013a0deb4efdb821df18db5a18e
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75700840"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303028"
 ---
 # <a name="how-to-access-office-interop-objects-c-programming-guide"></a>Procedimiento Tener acceso a objetos de interoperabilidad de Office mediante las características de Visual C# (Guía de programación de C#)
 
@@ -46,7 +47,7 @@ Para completar este tutorial, es necesario tener Microsoft Office Excel 2007 y M
 
 ## <a name="to-add-references"></a>Para agregar referencias
 
-1. En el **Explorador de soluciones**, haga clic con el botón derecho en el nombre del proyecto y luego haga clic en **Agregar referencia**. Aparecerá el cuadro de diálogo **Agregar referencia**.
+1. En el **Explorador de soluciones**, haga clic con el botón derecho en el nombre del proyecto y seleccione **Agregar referencia**. Aparecerá el cuadro de diálogo **Agregar referencia**.
 
 2. En la página de **Ensamblados**, seleccione **Microsoft.Office.Interop.Word** en la lista **Nombre de componente** y, después, mantenga presionada la tecla CTRL y seleccione **Microsoft.Office.Interop.Excel**.  Si no ve los ensamblados, asegúrese de que están instalados y que se muestran. Vea [Cómo: Instalación de ensamblados de interoperabilidad primarios de Office](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies).
 
@@ -172,7 +173,7 @@ En el código siguiente se muestra el ejemplo completo.
 
 [!code-csharp[csProgGuideOfficeHowTo#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/walkthrough.cs#18)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Type.Missing?displayProperty=nameWithType>
 - [dynamic](../../language-reference/builtin-types/reference-types.md)

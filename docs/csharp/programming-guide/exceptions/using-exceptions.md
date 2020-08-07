@@ -1,16 +1,17 @@
 ---
 title: 'Usar excepciones: Guía de programación de C#'
+description: Aprenda a usar excepciones. Las excepciones las inicia el código que encuentra un error y las detecta el código que lo corrige.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], about exceptions
 ms.assetid: 71472c62-320a-470a-97d2-67995180389d
-ms.openlocfilehash: a00259dfd5634ad9b9c951c3cd76da97afe5077d
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: fb45381f1c6cfa2f27d036ead8e662b7a0d8d924
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241700"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303379"
 ---
 # <a name="use-exceptions-c-programming-guide"></a>Uso de excepciones (guía de programación de C#)
 

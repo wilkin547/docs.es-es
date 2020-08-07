@@ -1,5 +1,6 @@
 ---
 title: 'Información general sobre interoperabilidad: Guía de programación de C#'
+description: Aprenda sobre la interoperabilidad entre C# y el código no administrado, como la invocación de plataforma, la interoperabilidad de C++, la exposición de componentes COM a C# y la exposición de C# a COM.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - COM interop
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 6546a379d6d851aafbced0931221dc19ca022a72
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 6b1dec96dfb3fc354c614983ed1dafab66c5b007
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241739"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302963"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Información general sobre interoperabilidad (Guía de programación de C#)
 En el tema se describen métodos para habilitar la interoperabilidad entre el código administrado y el código no administrado de C#.  

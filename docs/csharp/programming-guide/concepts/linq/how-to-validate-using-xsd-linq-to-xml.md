@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para realizar validaciones con XSD (LINQ to XML) (C#)
+description: Aprenda a validar un árbol XML con un archivo de lenguaje de definición de esquemas XML (XSD). Vea ejemplos de código y examine recursos adicionales.
 ms.date: 07/20/2015
 ms.assetid: 6a7f83a9-2d74-4c2b-8417-0a8595879516
-ms.openlocfilehash: 29830457b63f36dd401a412364060339344f35cb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3b4d2137d511efbe20e4d31ad27e4975d5444ec9
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347251"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302638"
 ---
 # <a name="how-to-validate-using-xsd-linq-to-xml-c"></a>Procedimiento para realizar validaciones con XSD (LINQ to XML) (C#)
 El espacio de nombres <xref:System.Xml.Schema> contiene métodos de extensión que hacen que sea fácil validar un árbol XML contra un archivo de lenguaje de definición de esquemas XML (XSD). Para obtener más información, vea la documentación del método <xref:System.Xml.Schema.Extensions.Validate%2A>.  
@@ -78,9 +79,9 @@ doc2 did not validate
 ## <a name="example"></a>Ejemplo  
  El siguiente ejemplo valida que el documento XML de [Archivo XML de muestra: clientes y pedidos (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md) sea válido según el esquema de [Archivo XSD de muestra: clientes y pedidos](./sample-xsd-file-customers-and-orders1.md). A continuación modifica el documento XML de origen. Cambia el atributo `CustomerID` del primer cliente. Tras el cambio, los pedidos harán referencia a un cliente que no existe, de forma que el documento XML ya no se validará.  
   
- En este ejemplo se usa el siguiente documento XML: [Archivo XML de ejemplo: Clientes y pedidos (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Clientes y pedidos (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
- En este ejemplo se usa el siguiente esquema XSD: [Sample XSD File: Customers and Orders](./sample-xsd-file-customers-and-orders1.md) (Archivo XSD de ejemplo: Clientes y pedidos).  
+ En este ejemplo se usa el siguiente esquema XSD: [Archivo XSD de ejemplo: Clientes y pedidos](./sample-xsd-file-customers-and-orders1.md).  
   
 ```csharp  
 XmlSchemaSet schemas = new XmlSchemaSet();  
@@ -123,4 +124,4 @@ custOrdDoc did not validate
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Xml.Schema.Extensions.Validate%2A>
-- [Crear árboles XML (C#)](creating-xml-trees-linq-to-xml-2.md)
+- [Crear árboles XML en C# ](creating-xml-trees-linq-to-xml-2.md)

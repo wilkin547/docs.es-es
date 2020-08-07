@@ -1,18 +1,19 @@
 ---
 title: Consultas compiladas estáticamente (LINQ to XML) (C#)
+description: Aprenda sobre las consultas compiladas estáticamente en LINQ to XML en C# y el modo en que se diferencian de las consultas XPath, que deben interpretarse en tiempo de ejecución.
 ms.date: 07/20/2015
 ms.assetid: 3bf558fe-0705-479d-86d4-00188f5fcf9c
-ms.openlocfilehash: 98725cece1006ba13afb64bb8ae17ae6e62c53cf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cd2e6a6507311d5fc17215a22c70bd0449292b6f
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253029"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302313"
 ---
 # <a name="statically-compiled-queries-linq-to-xml-c"></a>Consultas compiladas estáticamente (LINQ to XML) (C#)
 Una de las ventajas de rendimiento más importantes de LINQ to XML, a diferencia de <xref:System.Xml.XmlDocument>, es que las consultas LINQ to XML se compilan estáticamente, mientras que las consultas XPath deben interpretarse durante la ejecución. Esta característica está incorporada en LINQ to XML, de modo que no tiene que efectuar pasos adicionales para aprovecharla, pero resulta útil comprender la distinción a la hora de elegir entre las dos tecnologías. Este tema explica la diferencia.  
   
-## <a name="statically-compiled-queries-vs-xpath"></a>Consultas compiladas de forma estática frente a XPath  
+## <a name="statically-compiled-queries-vs-xpath"></a>Comparación de consultas compiladas de forma estática y XPath  
  En el ejemplo siguiente se muestra cómo obtener los elementos descendientes con un nombre especificado y con un atributo con un valor especificado.  
   
  Esta es la expresión XPath equivalente: `//Address[@Type='Shipping']`
@@ -43,7 +44,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- El método <xref:System.Linq.Enumerable.Where%2A> es una extensión del método. Para más información, vea [Métodos de extensión](../../classes-and-structs/extension-methods.md). Dado que <xref:System.Linq.Enumerable.Where%2A> es un método de extensión, la consulta anterior se compila como si estuviera escrita como se muestra a continuación:  
+ El método <xref:System.Linq.Enumerable.Where%2A> es una extensión del método. Para obtener más información, vea [Métodos de extensión](../../classes-and-structs/extension-methods.md). Dado que <xref:System.Linq.Enumerable.Where%2A> es un método de extensión, la consulta anterior se compila como si estuviera escrita como se muestra a continuación:  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  

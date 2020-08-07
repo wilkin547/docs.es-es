@@ -1,5 +1,6 @@
 ---
 title: Creación y producción de excepciones - Guía de programación de C#
+description: Aprenda a crear e iniciar excepciones. Se usan excepciones para indicar que se ha producido un error mientras se ejecutaba un programa.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - catching exceptions [C#]
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: f775a0917560a219f24329adcb1542f605d47dc2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8ab10dbf686def8d169ef3239492e3b618e9d297
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712304"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302053"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Crear y producir excepciones (Guía de programación de C#)
 Las excepciones se usan para indicar que se ha producido un error mientras se ejecutaba el programa. Se crean los objetos de excepción que describen un error y, luego, se *producen* con la palabra clave [throw](../../language-reference/keywords/throw.md). Después, el tiempo de ejecución busca el controlador de excepciones más compatible.  

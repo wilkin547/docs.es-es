@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para leer datos de objeto de un archivo XML (C#)
+description: En este ejemplo de C# se leen los datos de objetos que se han escrito anteriormente en un archivo XML con la clase XmlSerializer.
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: e2365d1260d3f6e239f294b2af3399c2fb659575
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 525a93812279756b3802d43d85bb5e61d8f7415e
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241882"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302794"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-c"></a>Procedimiento para leer datos de objeto de un archivo XML (C#)
 En este ejemplo se leen los datos de objetos que se han escrito anteriormente en un archivo XML con la clase <xref:System.Xml.Serialization.XmlSerializer>.  

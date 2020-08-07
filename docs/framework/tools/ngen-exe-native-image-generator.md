@@ -1,5 +1,6 @@
 ---
 title: Ngen.exe (Generador de imágenes nativas)
+description: Revise Ngen.exe, el Generador de imágenes nativas. Mejore el rendimiento de las aplicaciones administradas creando imágenes nativas e instalándolas en la caché local de imágenes nativas.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - BypassNGenAttribute
 - System.Runtime.BypassNGenAttribute
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
-ms.openlocfilehash: 297bc3f9182e76523eda4d4be3112f4d1d7e3fee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ae86aed773a9a13f102b1ad111cac5a3ee563508
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75741790"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517274"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Generador de imágenes nativas)
 

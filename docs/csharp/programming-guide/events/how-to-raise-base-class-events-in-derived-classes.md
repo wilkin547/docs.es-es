@@ -1,15 +1,16 @@
 ---
 title: 'Procedimiento Producir eventos de una clase base en clases derivadas: Guía de programación de C#'
+description: Aprenda a generar eventos de una clase base en clases derivadas. Vea un ejemplo de código y examine los recursos adicionales disponibles.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], in derived classes
 ms.assetid: 2d20556a-0aad-46fc-845e-f85d86ea617a
-ms.openlocfilehash: e2d2dfc2809a4de1756bfc362880eebc79076b94
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: b0b0a16a1fd165e437fc79ccacb20d406f5cff63
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84240634"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302105"
 ---
 # <a name="how-to-raise-base-class-events-in-derived-classes-c-programming-guide"></a>Procedimiento Producir eventos de una clase base en clases derivadas (Guía de programación de C#)
 En el siguiente ejemplo sencillo se muestra la forma estándar de declarar eventos en una clase base para que también se puedan generar desde clases derivadas. Este patrón se usa mucho en las clases de Windows Forms de las bibliotecas de clases de .NET.  
@@ -22,7 +23,7 @@ En el siguiente ejemplo sencillo se muestra la forma estándar de declarar event
 ## <a name="example"></a>Ejemplo  
  [!code-csharp[csProgGuideEvents#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEvents/CS/Events.cs#1)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Guía de programación de C#](../index.md)
 - [Eventos](./index.md)

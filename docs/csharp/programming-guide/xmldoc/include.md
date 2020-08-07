@@ -1,5 +1,6 @@
 ---
 title: <include> - Guía de programación de C#
+description: Aprenda sobre la etiqueta XML. <include> . Esta etiqueta le permite hacer referencia a comentarios de otro archivo que describen los tipos y miembros en el código fuente.
 ms.date: 07/20/2015
 f1_keywords:
 - include
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: bf41019c775fed25afe4bdb9453a8e52f44856b5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 15a99444d464594cc91a7c8805c564c703c3b608
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287355"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381910"
 ---
 # <a name="include-c-programming-guide"></a>\<include> (guía de programación de C#)
 
@@ -75,7 +76,7 @@ The summary for this other type.
 
 ## <a name="program-output"></a>Salida del programa
 
-El siguiente resultado se genera al compilar las clases Test y Test2 con la siguiente línea de comandos: `-doc:DocFileName.xml.` En Visual Studio, especifica la opción de comentarios de documentación XML en el panel Compilar del Diseñador de proyectos. Cuando el compilador de C# ve la etiqueta `<include>`, busca los comentarios de documentación en *xml_include_tag.doc* en lugar del archivo de código fuente actual. Después, el compilador genera *DocFileName.xml*, y este es el archivo que usan las herramientas de documentación como [DocFX](https://dotnet.github.io/docfx/) y[ Sandcastle](https://github.com/EWSoftware/SHFB) para generar la documentación final.  
+El siguiente resultado se genera al compilar las clases Test y Test2 con la siguiente línea de comandos: `-doc:DocFileName.xml.` En Visual Studio, especifica la opción de comentarios de documentación XML en el panel Compilar del Diseñador de proyectos. Cuando el compilador de C# ve la etiqueta `<include>`, busca los comentarios de documentación en *xml_include_tag.doc* en lugar del archivo de código fuente actual. Después, el compilador genera *DocFileName.xml* y este es el archivo que usan las herramientas de documentación como [Sandcastle](https://github.com/EWSoftware/SHFB) para generar la documentación final.  
   
 ```xml
 <?xml version="1.0"?>
@@ -98,7 +99,7 @@ The summary for this other type.
 </doc>
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Guía de programación de C#](../index.md)
 - [Etiquetas recomendadas para los comentarios de documentación](./recommended-tags-for-documentation-comments.md)

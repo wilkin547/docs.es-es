@@ -1,13 +1,14 @@
 ---
 title: Información general de la clase XElement (C#)
+description: La clase XElement representa un elemento XML en C#. Esta clase es una de las clases fundamentales de LINQ to XML. Aprenda sobre la funcionalidad que proporciona XElement.
 ms.date: 07/20/2015
 ms.assetid: 2b9f0cd8-a1d1-4037-accf-0f38a410fa11
-ms.openlocfilehash: 6a93dd4bdaf16fddff800b08b0f3146ecb63f9b7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f76f51703de054443f47531294777b43a9c0b004
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167899"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302183"
 ---
 # <a name="xelement-class-overview-c"></a>Información general de la clase XElement (C#)
 La clase <xref:System.Xml.Linq.XElement> es una de las clases fundamentales de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Representa a un elemento XML. Puede utilizar esta clase para crear elementos; cambiar el contenido del elemento; agregar, modificar o eliminar elementos secundarios; agregar atributos a un elemento; o serializar el contenido de un elemento en forma de texto. También puede operar con otras clases de <xref:System.Xml?displayProperty=nameWithType>, como son <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter> y <xref:System.Xml.Xsl.XslCompiledTransform>.  
@@ -21,7 +22,7 @@ Este tema describe la funcionalidad que ofrece la clase <xref:System.Xml.Linq.XE
   
 - Puede analizar XML a partir de diferentes orígenes, incluyendo un <xref:System.IO.TextReader>, archivos de texto o direcciones web (URL). Para obtener más información, consulte [Analizar XML (C#)](./how-to-parse-a-string.md).  
   
-- También puede utilizar un <xref:System.Xml.XmlReader> para rellenar el árbol. Para obtener más información, consulta <xref:System.Xml.Linq.XNode.ReadFrom%2A>.  
+- También puede utilizar un <xref:System.Xml.XmlReader> para rellenar el árbol. Para obtener más información, vea <xref:System.Xml.Linq.XNode.ReadFrom%2A>.  
   
 - Si dispone de un módulo que pueda escribir contenidos en un <xref:System.Xml.XmlWriter>, puede utilizar el método <xref:System.Xml.Linq.XContainer.CreateWriter%2A> para crear un sistema de escritura, para pasar éste al módulo y para utilizar después el contenido que se haya escrito en <xref:System.Xml.XmlWriter> para rellenar el árbol XML.  
   
@@ -95,6 +96,6 @@ Console.WriteLine(xmlTree);
   
  Para obtener más información, consulte [Modificar árboles XML (LINQ to XML) (C#)](./in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Información general sobre la programación de LINQ to XML (C#)](serializing-to-files-textwriters-and-xmlwriters.md)

@@ -1,13 +1,14 @@
 ---
 title: 'Archivo XML de ejemplo: Clientes y pedidos en un espacio de nombres'
+description: Este archivo XML se usa en numerosos ejemplos de la documentación de LINQ to XML. El archivo contiene clientes y pedidos. El XML se encuentra en un espacio de nombres.
 ms.date: 07/20/2015
 ms.assetid: 2da1c474-f658-4dca-a457-c35ef5ba4aff
-ms.openlocfilehash: 80bc052ecc62dfbd78f1dfdffac1925f8a03f31a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 467e00df01d85f1d42b91645cfc6379afac65fc9
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "66483801"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302547"
 ---
 # <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a>Archivo XML de ejemplo: Clientes y pedidos en un espacio de nombres
 El siguiente archivo XML se usa en numerosos ejemplos de la documentación de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este archivo contiene clientes y pedidos. El XML se encuentra en un espacio de nombres.  

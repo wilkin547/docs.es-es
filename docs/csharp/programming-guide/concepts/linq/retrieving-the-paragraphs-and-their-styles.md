@@ -1,13 +1,14 @@
 ---
 title: Recuperar los párrafos y sus estilos (C#)
+description: Aprenda a escribir una consulta que recupere párrafos y, luego, identifique el estilo de cada uno.
 ms.date: 07/20/2015
 ms.assetid: c2f767f8-57b1-4b4b-af04-89ffb1f7067d
-ms.openlocfilehash: 47127b6f1d6bfaa0d8d93333882a0d0b59f1bae6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 94d01a13485f70bc9d9cef55b5f390c3b30d7f14
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168302"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303405"
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-c"></a>Recuperar los párrafos y sus estilos (C#)
 En este ejemplo, se escribe una consulta que recupera los nodos de párrafo de un documento WordprocessingML. También identifica el estilo de cada uno de los párrafos.  
@@ -132,6 +133,6 @@ StyleName:Code
 ## <a name="next-steps"></a>Pasos siguientes  
  En el tema siguiente, [Recuperar el texto de los párrafos (C#)](./retrieving-the-text-of-the-paragraphs.md), podrá crear una consulta para recuperar el texto de los párrafos.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Tutorial: Manipular contenido en un documento de WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md)
+- [Tutorial: Manipulación de contenido en un documento WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md)

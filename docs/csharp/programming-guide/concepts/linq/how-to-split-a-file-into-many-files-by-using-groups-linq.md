@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para dividir un archivo en muchos mediante grupos (LINQ) (C#)
+description: Aprenda a dividir un archivo en varios mediante grupos. Vea un ejemplo de código y examine los recursos adicionales disponibles.
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: 654b444c26f2868c4e2b0e2893a639ebc6cacabf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1db16a48db257069eca83127c0b1fed7e49f19d6
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168575"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301065"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>Procedimiento para dividir un archivo en muchos mediante grupos (LINQ) (C#)
 En este ejemplo se muestra una manera de combinar el contenido de dos archivos y luego crear un conjunto de archivos nuevos que organicen los datos de una forma nueva.  
@@ -128,7 +129,7 @@ class SplitWithGroups
 
 Cree un proyecto de aplicación de consola de C# con directivas `using` para los espacios de nombres System.Linq y System.IO.
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [LINQ y cadenas (C#)](./linq-and-strings.md)
-- [LINQ and File Directories (C#)](./linq-and-file-directories.md) (LINQ y directorios de archivos [C#])
+- [LINQ y directorios de archivos (C#)](./linq-and-file-directories.md)

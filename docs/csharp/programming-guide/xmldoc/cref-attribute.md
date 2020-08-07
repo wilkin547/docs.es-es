@@ -1,15 +1,16 @@
 ---
 title: 'Atributo cref: guía de programación de C#'
+description: Aprenda sobre el atributo cref. El atributo cref significa "referencia de código" y especifica que el texto interno de la etiqueta es un elemento de código.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-ms.openlocfilehash: b06d0c9d447124dec7d8cf3c0cbbfd0daca78fe3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 31fa1a3f182d7b72a1dfbe1ce47386f87fbbff75
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79157018"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87382001"
 ---
 # <a name="cref-attribute-c-programming-guide"></a>Atributo cref (guía de programación de C#)
 
@@ -82,7 +83,7 @@ Cuando se compila, el programa genera el archivo XML siguiente. Observe que, por
 </doc>
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Comentarios de documentación XML](./index.md)
 - [Etiquetas recomendadas para los comentarios de documentación](./recommended-tags-for-documentation-comments.md)

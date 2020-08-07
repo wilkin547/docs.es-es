@@ -1,5 +1,6 @@
 ---
 title: Relaciones entre tipos en operaciones de consulta LINQ (C#)
+description: Aprenda cómo los tipos de variables de una consulta LINQ se relacionan entre sí. Las operaciones de consulta LINQ tienen un establecimiento fuertemente tipado en el origen, en la consulta y en la ejecución de los datos.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inferring type information [LINQ in C#]
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
-ms.openlocfilehash: 41853e6858fae9e8d449aeed95a6a84f343d5874
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 20f0b37a156e3b3f9c63f14cb83d678d26f685ee
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635618"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302287"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>Relaciones entre tipos en operaciones de consulta LINQ (C#)
 Para escribir las consultas eficazmente, es necesario comprender cómo los tipos de las variables en una operación de consulta completa se relacionan entre sí. Si entiende estas relaciones comprenderá más fácilmente los ejemplos de LINQ y los ejemplos de código de la documentación. Además, entenderá lo que sucede en segundo plano cuando los tipos de las variables se declaran implícitamente mediante `var`.  

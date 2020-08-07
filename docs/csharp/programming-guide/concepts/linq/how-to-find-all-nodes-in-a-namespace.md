@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para buscar todos los nodos de un espacio de nombres (C#)
+description: Aprenda a filtrar por el espacio de nombres de cada elemento o atributo para buscar todos los nodos de ese espacio de nombres.
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
-ms.openlocfilehash: 408f4207798720428d0dd3821d33fd3edf2f897e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf739480c6b4e2c53d5c430d47ff833e8995f6a4
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141185"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303314"
 ---
 # <a name="how-to-find-all-nodes-in-a-namespace-c"></a>Procedimiento para buscar todos los nodos de un espacio de nombres (C#)
 Puede filtrar en el espacio de nombres de cada elemento o atributo para buscar todos los nodos de ese espacio de nombres particular.  
@@ -46,7 +47,7 @@ Nodes in the http://www.adventure-works.com namespace
 ## <a name="example"></a>Ejemplo  
  El archivo XML al que tiene acceso la siguiente consulta contiene pedidos de compra en dos espacios de nombres diferentes. La consulta crea un nuevo árbol con solo los elementos de uno de los espacios de nombres.  
   
- En este ejemplo se usa el siguiente documento XML: [Archivo XML de ejemplo: Pedidos de compra consolidados](./sample-xml-file-consolidated-purchase-orders.md).  
+ Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Pedidos de compra consolidados](./sample-xml-file-consolidated-purchase-orders.md).  
   
 ```csharp  
 XDocument cpo = XDocument.Load("ConsolidatedPurchaseOrders.xml");  

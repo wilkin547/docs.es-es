@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para buscar un elemento secundario (XPath-LINQ to XML) (C#)
+description: Aprenda a buscar un elemento secundario comparando el eje del elemento secundario XPath con el método de elemento de LINQ to XML.
 ms.date: 07/20/2015
 ms.assetid: 4fa6182d-6196-4ed1-9c9e-82949ff89c71
-ms.openlocfilehash: 37ce6c9d91d4edf2576ccddabd1d7f14a96b0a33
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 57d1a4e636e3443512020129a76cc2de7bb3f244
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141239"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301741"
 ---
 # <a name="how-to-find-a-child-element-xpath-linq-to-xml-c"></a>Procedimiento para buscar un elemento secundario (XPath-LINQ to XML) (C#)
 En este tema se compara el eje del elemento secundario XPath con el método [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A>.  

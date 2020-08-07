@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para filtrar por un elemento opcional (C#)
+description: Aprenda a filtrar por un elemento opcional, aunque no esté seguro de que existe en el documento XML.
 ms.date: 07/20/2015
 ms.assetid: f99e2f93-fca5-403f-8a0c-770761d4905a
-ms.openlocfilehash: c9f844619cbb3d7a66ca66989baa900e0fd7bc2f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a1cd93b70ea2c077437b58bd341f51f15f014871
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141254"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302872"
 ---
 # <a name="how-to-filter-on-an-optional-element-c"></a>Procedimiento para filtrar por un elemento opcional (C#)
 En ocasiones, deseará filtrar por un elemento dado a pesar de que no está seguro de si existe o no en el documento XML. La consulta debería ejecutarse de forma que si el elemento en particular no tiene ningún elemento secundario, no se produzca una excepción de referencia nula al filtrar por él. En el ejemplo siguiente, el elemento `Child5` no tiene ningún elemento secundario `Type`, pero aún así, la consulta se ejecuta correctamente.  
@@ -95,10 +96,10 @@ Child Two Text
 Child Four Text  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>
-- [Standard Query Operators Overview (C#)](./standard-query-operators-overview.md)(Información general sobre operadores de consulta estándar (C#))
-- [Projection Operations (C#)](./projection-operations.md) (Operaciones de proyección [C#])
+- [Información general sobre operadores de consulta estándar (C#)](./standard-query-operators-overview.md)
+- [Operaciones de proyección (C#)](./projection-operations.md)

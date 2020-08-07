@@ -1,18 +1,19 @@
 ---
 title: 'Archivo XML de ejemplo: Clientes y pedidos (LINQ to XML)'
+description: Este archivo XML se usa en numerosos ejemplos de la documentación de LINQ to XML. El archivo contiene clientes y pedidos.
 ms.date: 07/20/2015
 ms.assetid: d6d1c9ea-be74-4e6d-bfdd-d4bcc2d301cf
-ms.openlocfilehash: 01c1719bd67bbaf0d46dc6e3c23b5031afd271f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0143fa373ee1ad6acecfe99e1a786d5cc90c2eb2
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75346494"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302560"
 ---
 # <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a>Archivo XML de ejemplo: Clientes y pedidos (LINQ to XML)
 El siguiente archivo XML se usa en numerosos ejemplos de la documentación de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este archivo contiene clientes y pedidos.  
   
- En el tema [Sample XSD File: Customers and Orders](./sample-xsd-file-customers-and-orders1.md) (Archivo XSD de ejemplo: Clientes y pedidos) se incluye un XSD que se puede usar para validar este documento. Usa las características `xs:key` y `xs:keyref` de XSD para establecer que el atributo `CustomerID` del elemento `Customer` es una clave, y para establecer una relación entre el elemento `CustomerID` de cada elemento `Order` y el atributo `CustomerID` de cada elemento `Customer`.  
+ En el tema [Archivo XSD de ejemplo: Clientes y pedidos](./sample-xsd-file-customers-and-orders1.md) se incluye un XSD que se puede usar para validar este documento. Usa las características `xs:key` y `xs:keyref` de XSD para establecer que el atributo `CustomerID` del elemento `Customer` es una clave, y para establecer una relación entre el elemento `CustomerID` de cada elemento `Order` y el atributo `CustomerID` de cada elemento `Customer`.  
   
  Para conocer un ejemplo de escritura de consultas LINQ que aprovechan esta relación mediante la cláusula `Join`, consulte [Procedimiento para combinar dos colecciones (LINQ to XML) (C#)](./how-to-join-two-collections-linq-to-xml.md).  
   

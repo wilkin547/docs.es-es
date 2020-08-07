@@ -1,13 +1,14 @@
 ---
 title: Serializar en archivos, escritores de texto y escritores XML
+description: Conozca las opciones para serializar árboles XML en un archivo, TextWriter o XmlWriter en C# mediante los métodos ToString o Save.
 ms.date: 07/20/2015
 ms.assetid: bd3ea6f7-895b-4ff4-a625-fe2bb55b1886
-ms.openlocfilehash: 20cb84a9f79ca8de3e86a996f18c388dc53340ae
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 43c51ae7e9bf1a7848d45fd900424d6186671e53
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "68868857"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302391"
 ---
 # <a name="serializing-to-files-textwriters-and-xmlwriters"></a>Serializar en archivos, escritores de texto y escritores XML
 
@@ -31,6 +32,6 @@ Si desea que la opción no aplique una sangría y conserve los espacios en blanc
 
 Por obtener ejemplos, vea el tema de referencia correspondiente.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Serializar árboles XML (C#)](serializing-to-files-textwriters-and-xmlwriters.md)

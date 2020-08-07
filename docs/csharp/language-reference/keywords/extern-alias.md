@@ -8,12 +8,12 @@ helpviewer_keywords:
 - aliases [C#], extern keyword
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
-ms.openlocfilehash: 86202333484933d7449b0c4d8c5a3f1a63cd7775
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 891e56b064f8a327abe28293223a85b9d95e8fd3
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713546"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301819"
 ---
 # <a name="extern-alias-c-reference"></a>alias externo (Referencia de C#)
 Es posible que deba hacer referencia a dos versiones de ensamblados que tienen los mismos nombres de tipo completos. Por ejemplo, es posible que tenga que usar dos o más versiones de un ensamblado en la misma aplicación. Mediante el uso de un alias de ensamblado externo, los espacios de nombres de cada ensamblado pueden ajustarse en espacios de nombres de nivel de raíz denominados por el alias, lo que permite que se usen en el mismo archivo.  
@@ -37,6 +37,28 @@ Es posible que deba hacer referencia a dos versiones de ensamblados que tienen l
   
  En el ejemplo anterior, `GridV1::Grid` sería el control de cuadrícula de `grid.dll`, y `GridV2::Grid` sería el control de cuadrícula de `grid20.dll`.  
   
+## <a name="using-visual-studio"></a>Uso de Visual Studio
+
+Si usa Visual Studio, los alias se pueden proporcionar de manera similar.
+
+Agregue una referencia de *grid.dll* y *grid20.dll* al proyecto en Visual Studio. Abra una pestaña de propiedades y cambie los alias de global a GridV1 y GridV2, respectivamente.
+
+Use estos alias igual que antes.
+
+```csharp
+ extern alias GridV1;  
+  
+ extern alias GridV2;  
+```
+
+Ahora puede crear un alias para un espacio de nombres o un tipo *mediante la directiva de alias*. Para más información, consulte la [directiva using](using-directive.md).
+
+```csharp
+using Class1V1 = GridV1::Namespace.Class1;
+
+using Class1V2 = GridV2::Namespace.Class1;
+```
+
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
@@ -45,5 +67,5 @@ Es posible que deba hacer referencia a dos versiones de ensamblados que tienen l
 - [Referencia de C#](../index.md)
 - [Guía de programación de C#](../../programming-guide/index.md)
 - [Palabras clave de C#](./index.md)
-- [Operador ::](../operators/namespace-alias-qualifier.md)
+- [:: !](../operators/namespace-alias-qualifier.md)
 - [-reference (Opciones del compilador de C#)](../compiler-options/reference-compiler-option.md)

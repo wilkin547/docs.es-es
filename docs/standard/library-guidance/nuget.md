@@ -2,12 +2,12 @@
 title: NuGet y bibliotecas de .NET
 description: Procedimientos recomendados para el empaquetado con NuGet para bibliotecas de. NET.
 ms.date: 01/15/2019
-ms.openlocfilehash: f1e8d39fe2988f11ce7fd351a4d6bee6d322f2b5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d9f8d7cc4402a87e1429791b57a0306b318dfbe4
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398536"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87382118"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -44,7 +44,7 @@ Las dependencias de paquetes NuGet se tratan detalladamente en el artículo [Dep
 
 Un paquete NuGet admite numerosas [propiedades de metadatos](/nuget/reference/nuspec). La tabla siguiente contiene los metadatos principales que deben proporcionar todos los paquetes de NuGet.org:
 
-| Nombre de la propiedad de MSBuild              | Nombre de nuspec              | Description  |
+| Nombre de la propiedad de MSBuild              | Nombre de nuspec              | Descripción  |
 | ---------------------------------- | ------------------------ | ------------ |
 | `PackageId`                        | `id`                       | Identificador del paquete. Se puede reservar un prefijo del identificador si cumple los [criterios](/nuget/reference/id-prefix-reservation). |
 | `PackageVersion`                   | `version`                  | Versión del paquete NuGet. Para información, vea [NuGet package version](./versioning.md#nuget-package-version) (Versión del paquete NuGet).             |
@@ -52,7 +52,7 @@ Un paquete NuGet admite numerosas [propiedades de metadatos](/nuget/reference/nu
 | `Description`                      | `description`              | Una descripción larga del paquete que se muestra en la interfaz de usuario.             |
 | `Authors`                          | `authors`                  | Una lista separada por comas de los autores de los paquetes, que coinciden con los nombres de perfil de nuget.org.             |
 | `PackageTags`                      | `tags`                     | Una lista delimitada por espacios de etiquetas y palabras clave que describen el paquete. Las etiquetas se usan al buscar paquetes.             |
-| `PackageIconUrl`                   | `iconUrl`                  | Una dirección URL para una imagen que se va a usar como icono para el paquete. La dirección URL debe ser HTTPS y la imagen debe ser de 64x64 y tener un fondo transparente.             |
+| `PackageIcon`                   | `icon`                  | Ruta de acceso a una imagen del paquete que se va a usar como icono del paquete. Más información sobre los [metadatos de `icon`](/nuget/reference/nuspec#icon). |
 | `PackageProjectUrl`                | `projectUrl`               | Una dirección URL para la página principal del proyecto o el repositorio de origen.             |
 | `PackageLicenseExpression`         | `license`                  | El [identificador SPDX](https://spdx.org/licenses/) de la licencia de proyecto. Solo las licencias OSI y FSF aprobadas pueden usar un identificador. Otras licencias deben usar `PackageLicenseFile`. Más información sobre los [metadatos de `license`](/nuget/reference/nuspec#license). |
 

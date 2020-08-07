@@ -1,16 +1,17 @@
 ---
 title: 'Clases genéricas: Guía de programación de C#'
+description: Aprenda sobre las clases genéricas utilizadas en colecciones como listas vinculadas, tablas hash, pilas, colas y árboles.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-ms.openlocfilehash: 1fdfaa833ad32428d341b6f3a61cc7f638036183
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 308f4328540e1001018942738d931be3d8be53ed
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937504"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301923"
 ---
 # <a name="generic-classes-c-programming-guide"></a>Clases genéricas (Guía de programación de C#)
 Las clases genéricas encapsulan operaciones que no son específicas de un tipo de datos determinado. El uso más común de las clases genéricas es con colecciones como listas vinculadas, tablas hash, pilas, colas y árboles, entre otros. Las operaciones como la adición y eliminación de elementos de la colección se realizan básicamente de la misma manera independientemente del tipo de datos que se almacenan.  
@@ -65,7 +66,7 @@ Las clases genéricas encapsulan operaciones que no son específicas de un tipo 
   
  Las clases genéricas son invariables. En otras palabras, si un parámetro de entrada especifica un `List<BaseClass>`, obtendrá un error en tiempo de compilación si intenta proporcionar un `List<DerivedClass>`.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Collections.Generic>
 - [Guía de programación de C#](../index.md)

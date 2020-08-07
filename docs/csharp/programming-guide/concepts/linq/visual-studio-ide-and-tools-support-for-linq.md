@@ -1,13 +1,14 @@
 ---
 title: Compatibilidad del IDE y las herramientas de Visual Studio con LINQ (C#)
+description: Conozca las características de Visual Studio que admiten el desarrollo de LINQ, como Object Relational Designer, la herramienta SQLMetal, el editor de código compatible con LINQ y el depurador.
 ms.date: 07/20/2015
 ms.assetid: c1f6cfdf-c96f-417f-acc8-4a049772ead3
-ms.openlocfilehash: a42d6711e34564f03aaf07c295bc682965513619
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cd0c936624b4d5329cb2eb0f1cdd5215bbc96f23
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69590905"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302248"
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-c"></a>Compatibilidad del IDE y las herramientas de Visual Studio con LINQ (C#)
 El entorno de desarrollo integrado (IDE) de Visual Studio proporciona las siguientes características que admiten el desarrollo de aplicaciones de LINQ:  

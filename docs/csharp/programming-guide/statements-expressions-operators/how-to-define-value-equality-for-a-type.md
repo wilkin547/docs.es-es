@@ -1,5 +1,6 @@
 ---
 title: 'Procedimiento: Definición de la igualdad de valores para un tipo (Guía de programación de C#)'
+description: Aprenda a definir la igualdad de valores para un tipo. Vea ejemplos de código y examine los recursos adicionales disponibles.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - overriding Equals method [C#]
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 140be18698a40be8f394b31fcd42b97d6685cb98
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cf4449618c2b57f21855354f2250d41a403b4d57
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79157096"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381650"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Procedimiento: Definición de la igualdad de valores para un tipo (Guía de programación de C#)
 
@@ -39,11 +40,11 @@ En cualquier caso, tanto en las clases como en las estructuras, la implementaci�
   
 2. Implemente la interfaz <xref:System.IEquatable%601?displayProperty=nameWithType> proporcionando un método `Equals` específico del tipo. Aquí es donde se realiza la comparación de equivalencias propiamente dicha. Por ejemplo, podría decidir que, para definir la igualdad, solo se comparen uno o dos campos del tipo. No genere excepciones desde `Equals`. Solo para las clases: este método debe examinar únicamente los campos que se declaran en la clase. Debe llamar a `base.Equals` para examinar los campos que están en la clase base. (No realice esto si el tipo hereda directamente de <xref:System.Object>, porque la implementación <xref:System.Object> de <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> realiza una comprobación de igualdad de referencia).  
   
-3. Opcional pero recomendado: Sobrecargue los operadores [==](../../language-reference/operators/equality-operators.md#equality-operator-) y [!=](../../language-reference/operators/equality-operators.md#inequality-operator-).  
+3. Opcional, pero recomendado: Sobrecargue los operadores [==](../../language-reference/operators/equality-operators.md#equality-operator-) y [!=](../../language-reference/operators/equality-operators.md#inequality-operator-).  
   
 4. Invalide <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> de manera que dos objetos que tengan igualdad de valor produzcan el mismo código hash.  
   
-5. Opcional: Para admitir definiciones para "mayor que" o "menor que", implemente la interfaz <xref:System.IComparable%601> para el tipo y sobrecargue los operadores [<=](../../language-reference/operators/comparison-operators.md#less-than-or-equal-operator-) y [>=](../../language-reference/operators/comparison-operators.md#greater-than-or-equal-operator-).  
+5. Opcional: Para admitir definiciones para "mayor que" o "menor que", implemente la interfaz <xref:System.IComparable%601> para el tipo y sobrecargue también los operadores [<=](../../language-reference/operators/comparison-operators.md#less-than-or-equal-operator-) y [>=](../../language-reference/operators/comparison-operators.md#greater-than-or-equal-operator-).  
   
  En el primer ejemplo que aparece más abajo se muestra una implementación de clase. En el segundo ejemplo se muestra una implementación de struct.  
 
@@ -67,7 +68,7 @@ En cualquier caso, tanto en las clases como en las estructuras, la implementaci�
   
  Los operadores [==](../../language-reference/operators/equality-operators.md#equality-operator-) y [!=](../../language-reference/operators/equality-operators.md#inequality-operator-) no pueden funcionar en un struct a menos que el struct los sobrecargue explícitamente.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Comparaciones de igualdad](equality-comparisons.md)
 - [Guía de programación de C#](../index.md)

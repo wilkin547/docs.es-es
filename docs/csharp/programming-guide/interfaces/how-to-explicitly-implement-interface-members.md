@@ -1,15 +1,16 @@
 ---
 title: 'Procedimiento Implementar explícitamente miembros de interfaz: Guía de programación de C#'
+description: Aprenda a implementar explícitamente miembros de interfaz en este ejemplo de C#. Se accede a los miembros mediante la instancia de interfaz.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], explicitly implementing
 ms.assetid: 514cde76-f981-474e-8b40-9493619f899c
-ms.openlocfilehash: dff094aca237ed6146bd9b52813c40549bc99b9b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 35b512ff6cbee1dd942f5b3476db660481808297
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77627790"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303080"
 ---
 # <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a>Procedimiento Implementar explícitamente miembros de interfaz (Guía de programación de C#)
 Este ejemplo declara una [interfaz](../../language-reference/keywords/interface.md), `IDimensions`, y una clase, `Box`, que implementa explícitamente los miembros de interfaz `GetLength` y `GetWidth`. Se tiene acceso a los miembros mediante la instancia de interfaz `dimensions`.  
@@ -27,7 +28,7 @@ Este ejemplo declara una [interfaz](../../language-reference/keywords/interface.
   
      [!code-csharp[csProgGuideInheritance#46](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#46)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Guía de programación de C#](../index.md)
 - [Clases y structs](../classes-and-structs/index.md)

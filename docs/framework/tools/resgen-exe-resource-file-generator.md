@@ -1,5 +1,6 @@
 ---
 title: Resgen.exe (Generador de archivos de recursos)
+description: Use Resgen.exe, el Generador de archivos de recursos. Convierta archivos de texto (.txt, .restext) y con formato de recursos XML (.resx) en archivos binarios de tiempo de ejecución de CLR insertables (.resources).
 ms.date: 03/30/2017
 helpviewer_keywords:
 - resource files, .resources files
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - binary resources files
 - embedding files in runtime binary executable
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
-ms.openlocfilehash: b9be030689ecf78b3482743e486e32012e9ca5d4
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: f51ee6c8537abafc82017f3cc29d734e939a254f
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201106"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517235"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (Generador de archivos de recursos)
 El Generador de archivos de recursos (Resgen.exe) convierte archivos de texto (.txt o .restext) y archivos recursos basados en XML (.resx) en archivos binarios de Common Language Runtime (.resources) que se pueden incrustar en un archivo ejecutable binario o en un ensamblado satélite. (Vea [Creación de archivos de recursos](../resources/creating-resource-files-for-desktop-apps.md).)  
@@ -109,7 +110,7 @@ resgen filename.extension [outputDirectory]
 |Archivo de texto (.txt o .restext)|--|Sin problemas|No compatibles|Sin problemas|  
 |Archivo .resx|Se produce un error en la conversión si el archivo contiene recursos de no son de cadena (incluidos vínculos de archivo)|--|No compatibles|Sin problemas|  
 |Archivo .resources|Se produce un error en la conversión si el archivo contiene recursos de no son de cadena (incluidos vínculos de archivo)|Sin problemas|No compatibles|--|  
-|Ensamblado .exe o .dll|No compatibles|No compatibles|Solo los recursos de cadena (incluidos los nombres de ruta de acceso) se reconocen como recursos|No compatibles|  
+|Ensamblado .exe o .dll|No compatible|No compatibles|Solo los recursos de cadena (incluidos los nombres de ruta de acceso) se reconocen como recursos|No compatibles|  
   
 ## <a name="performing-specific-resgenexe-tasks"></a>Realizar tareas específicas de Resgen.exe  
  Puede usar la herramienta Resgen.exe de varias maneras: para compilar un archivo de recursos basado en texto o en XML en un archivo binario, para realizar conversiones entre los distintos formatos de archivo de recursos, y para generar una clase que incluya la funcionalidad <xref:System.Resources.ResourceManager> y proporcione acceso a los recursos. En esta sección se proporciona información detallada sobre cada tarea.  

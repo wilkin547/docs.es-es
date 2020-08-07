@@ -1,13 +1,14 @@
 ---
 title: Operaciones de proyección (C#)
+description: Aprenda sobre las operaciones de proyección. Estas operaciones transforman un objeto en un nuevo formulario que, a menudo, consta únicamente de las propiedades que se usarán más adelante.
 ms.date: 07/20/2015
 ms.assetid: 98df573a-aad9-4b8c-9a71-844be2c4fb41
-ms.openlocfilehash: f76eeeb779ab08a575e758a9d974573b700ae652
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 289100ac9afcfc0d5b93b5f963adc0a123e0a5af
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168341"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87299167"
 ---
 # <a name="projection-operations-c"></a>Operaciones de proyección (C#)
 El término "proyección" hace referencia a la operación de transformar un objeto en una nueva forma que, a menudo, consta solo de aquellas propiedades que se usarán posteriormente. Utilizando la proyección, puede construir un tipo nuevo creado a partir de cada objeto. Se puede proyectar una propiedad y realizar una función matemática en ella. También puede proyectar el objeto original sin cambiarlo.  
@@ -16,7 +17,7 @@ El término "proyección" hace referencia a la operación de transformar un obje
   
 ## <a name="methods"></a>Métodos  
   
-|Nombre del método|Description|Sintaxis de la expresión de consulta de C#|Más información|  
+|Nombre del método|Descripción|Sintaxis de la expresión de consulta de C#|Más información|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |Seleccionar|Proyecta valores basados en una función de transformación.|`select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType>|  
 |SelectMany|Proyecta secuencias de valores que se basan en una función de transformación y después los convierte en una secuencia.|Use varias cláusulas `from`|<xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SelectMany%2A?displayProperty=nameWithType>|  
@@ -159,10 +160,10 @@ static void SelectVsSelectMany()
 }  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Linq>
-- [Standard Query Operators Overview (C#)](./standard-query-operators-overview.md)(Información general sobre operadores de consulta estándar (C#))
+- [Información general sobre operadores de consulta estándar (C#)](./standard-query-operators-overview.md)
 - [select (cláusula)](../../../language-reference/keywords/select-clause.md)
 - [Procedimiento para rellenar colecciones de objetos de varios orígenes (LINQ) (C#)](./how-to-populate-object-collections-from-multiple-sources-linq.md)
 - [Procedimiento para dividir un archivo en varios mediante el uso de grupos (LINQ) (C#)](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)

@@ -1,13 +1,14 @@
 ---
 title: Contenido válido de objetos XElement y XDocument
+description: Conozca los argumentos válidos que se pueden pasar a los constructores y los métodos que se usan para agregar contenido a elementos y documentos.
 ms.date: 07/20/2015
 ms.assetid: 0d253586-2b97-459f-b1a7-f30f38f3ed9f
-ms.openlocfilehash: 1ad5b18e3bbc2143a56f9c8e7b34354761b4e42f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dfafbe76b078db6c22b475770ebadaff38c75ba8
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69590938"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302261"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>Contenido válido de objetos XElement y XDocument
 En este tema se describen los argumentos válidos que se pueden pasar a los constructores y los métodos que se usan para agregar contenido a elementos y documentos.  
@@ -45,7 +46,7 @@ En este tema se describen los argumentos válidos que se pueden pasar a los cons
   
 - <xref:System.Xml.Linq.XAttribute>  
   
-- Cualquier tipo que implemente <xref:System.Collections.Generic.IEnumerable%601>  
+- Cualquier tipo que implemente <xref:System.Collections.Generic.IEnumerable%601>.  
   
  Si un objeto implementa <xref:System.Collections.Generic.IEnumerable%601>, se enumera la colección del objeto y se agregan todos los elementos de la colección. Si la colección contiene objetos <xref:System.Xml.Linq.XNode> o <xref:System.Xml.Linq.XAttribute>, cada elemento de la colección se agrega por separado. Si la colección contiene texto (u objetos convertidos a texto), el texto de la colección se concatena y se agrega como un nodo de texto.  
   
@@ -75,7 +76,7 @@ En este tema se describen los argumentos válidos que se pueden pasar a los cons
 ## <a name="constructors-and-functions-that-allow-adding-content"></a>Constructores y funciones que permiten agregar contenido  
  Los métodos siguientes permiten agregar contenido secundario a un objeto <xref:System.Xml.Linq.XElement> o a un objeto <xref:System.Xml.Linq.XDocument>:  
   
-|Método|Description|  
+|Método|Descripción|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.%23ctor%2A>|Construye un objeto <xref:System.Xml.Linq.XElement>.|  
 |<xref:System.Xml.Linq.XDocument.%23ctor%2A>|Construye un objeto <xref:System.Xml.Linq.XDocument>.|  
@@ -88,6 +89,6 @@ En este tema se describen los argumentos válidos que se pueden pasar a los cons
 |<xref:System.Xml.Linq.XContainer.ReplaceNodes%2A>|Reemplaza los nodos secundarios por contenido nuevo.|  
 |<xref:System.Xml.Linq.XNode.ReplaceWith%2A>|Reemplaza un nodo por contenido nuevo.|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Crear árboles XML (C#)](./linq-to-xml-overview.md)
+- [Crear árboles XML en C# ](./linq-to-xml-overview.md)

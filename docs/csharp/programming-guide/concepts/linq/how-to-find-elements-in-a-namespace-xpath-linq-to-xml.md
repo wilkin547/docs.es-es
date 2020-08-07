@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para buscar elementos de un espacio de nombres (XPath-LINQ to XML) (C#)
+description: Aprenda a buscar elementos en un espacio de nombres mediante una expresión XPath. Vea un ejemplo en el que se lee un árbol XML que contiene dos espacios de nombres.
 ms.date: 07/20/2015
 ms.assetid: cae1c4ac-6cd5-46cf-9b1c-bd85bc9b7ea9
-ms.openlocfilehash: da9d819be5234a2429b6eab276f89bd0d877d4a7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3bf15c4183e3ca339fa7090c21baff83526e37d3
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141070"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303236"
 ---
 # <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-c"></a>Procedimiento para buscar elementos de un espacio de nombres (XPath-LINQ to XML) (C#)
 

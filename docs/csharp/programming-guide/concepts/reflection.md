@@ -1,13 +1,14 @@
 ---
 title: Reflexión (C#)
+description: La reflexión proporciona objetos que describen los ensamblados, módulos y tipos en C#. Si el código incluye atributos, la reflexión le permite acceder a ellos.
 ms.date: 07/20/2015
 ms.assetid: f80a2362-953b-4e8e-9759-cd5f334190d4
-ms.openlocfilehash: a56fb24b63e4d80dbb67b079466b67cd11672023
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4d4f4c082dd2d58e212bae53524e5dd4fd06fb75
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74711660"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302807"
 ---
 # <a name="reflection-c"></a>Reflexión (C#)
 
@@ -47,7 +48,7 @@ La reflexión resulta útil en las siguientes situaciones:
 - Cuando tenga que acceder a atributos en los metadatos del programa. Para obtener más información, consulte [Recuperar información almacenada en atributos](../../../standard/attributes/retrieving-information-stored-in-attributes.md).
 - Para examinar y crear instancias de tipos en un ensamblado.
 - Para generar nuevos tipos en tiempo de ejecución. Usar clases en <xref:System.Reflection.Emit>.
-- Para llevar a cabo métodos de acceso de enlace en tiempo de ejecución en tipos creados en tiempo de ejecución. Consulte el tema [Dynamically Loading and Using Types](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md) (Cargar y usar tipos dinámicamente).
+- Para llevar a cabo métodos de acceso de enlace en tiempo de ejecución en tipos creados en tiempo de ejecución. Consulte el tema [Cargar y utilizar tipos dinámicamente](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md).
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
@@ -55,11 +56,11 @@ Para obtener más información:
 
 - [Reflexión](../../../framework/reflection-and-codedom/reflection.md)
 - [Ver información tipos](../../../framework/reflection-and-codedom/viewing-type-information.md)
-- [Reflection and Generic Types](../../../framework/reflection-and-codedom/reflection-and-generic-types.md) (Reflexión y tipos genéricos)
+- [Reflexión y tipos genéricos](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)
 - <xref:System.Reflection.Emit>
-- [Retrieving Information Stored in Attributes](../../../standard/attributes/retrieving-information-stored-in-attributes.md) (Recuperar la información almacenada en atributos)
+- [Recuperar la información almacenada en atributos](../../../standard/attributes/retrieving-information-stored-in-attributes.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Guía de programación de C#](../index.md)
 - [Ensamblados de .NET](../../../standard/assembly/index.md)

@@ -1,5 +1,6 @@
 ---
 title: TlbImp.exe (Importador de la biblioteca de tipos)
+description: Use TlbImp.exe, el Importador de la biblioteca de tipos. Esta herramienta convierte las definiciones de tipos que se encuentran en una biblioteca de tipos COM en definiciones equivalentes en un ensamblado CLR.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - type libraries [.NET Framework], importing
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - type libraries
 - converting type definitions
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
-ms.openlocfilehash: d942378888b06049022188c75456f438d4b187e3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1e50336e6c159ae56b393098868e4b8f5310b49
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180240"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517001"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>TlbImp.exe (Importador de la biblioteca de tipos)
 El Importador de la biblioteca de tipos convierte las definiciones de tipos encontradas en una biblioteca de tipos COM en las definiciones equivalentes en un ensamblado de Common Language Runtime. El resultado de Tlbimp.exe es un archivo binario (un ensamblado) que contiene los metadatos en tiempo de ejecución para los tipos definidos en la biblioteca de tipos original. Este archivo se puede examinar con herramientas como [Ildasm.exe](ildasm-exe-il-disassembler.md).  

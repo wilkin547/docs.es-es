@@ -1,5 +1,6 @@
 ---
 title: Winres.exe (Editor de recursos para localización de Windows)
+description: Use Winres.exe, el Editor de recursos para localización de Windows. Esta herramienta de diseño visual ayuda a los expertos en localización a localizar los recursos de la interfaz de usuario de Windows Forms que se usan en los formularios.
 ms.date: 08/15/2018
 helpviewer_keywords:
 - Winres.exe
@@ -11,16 +12,16 @@ helpviewer_keywords:
 - resx files
 - .resx files
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
-ms.openlocfilehash: 2cfb2d9874b34eef78fe462e0270fd70307a9f61
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8393eb44246ed1bbc0e4e6acc84ad7bd57041ec0
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75715707"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87516910"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Editor de recursos para localización de Windows)
 
-El Editor de recursos para localización de Windows, Winres.exe, es una herramienta de diseño visual que ayuda a los expertos en localización a traducir los recursos de la interfaz de usuario (IU) de Windows Forms que usan los formularios. Los archivos .resx o .resources que se utilizan como entrada en Winres.exe se pueden crear mediante un entorno de diseño visual como Microsoft Visual Studio. Para obtener información sobre cómo implementar recursos en aplicaciones .NET Framework, vea [Resources in Desktop Apps](../resources/index.md) (Recursos de aplicaciones de escritorio).
+El Editor de recursos para localización de Windows, Winres.exe, es una herramienta de diseño visual que ayuda a los expertos en localización a traducir los recursos de la interfaz de usuario (IU) de Windows Forms que usan los formularios. Los archivos .resx o .resources que se utilizan como entrada en Winres.exe se pueden crear mediante un entorno de diseño visual como Microsoft Visual Studio. Para obtener información sobre cómo implementar recursos en aplicaciones .NET Framework, vea [Recursos en aplicaciones .NET](../resources/index.md).
 
 Winres.exe se instala con Visual Studio. Para ejecutar la herramienta, use el Símbolo del sistema para desarrolladores de Visual Studio. Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).
 
@@ -33,11 +34,11 @@ winres /?
 
 ## <a name="arguments"></a>Argumentos
 
-|Argumento|Description|
+|Argumento|Descripción|
 |--------------|-----------------|
 |`resourceFile`|Archivo de recursos que se va a adaptar. Este archivo debe ser un archivo .resx o .resources de Windows Forms generado por el diseñador de Visual Studio. Winres.exe no puede abrir archivos .resx o .resources genéricos.|
 
-|Opción|Description|
+|Opción|Descripción|
 |------------|-----------------|
 |**/?**|Muestra las opciones y la sintaxis de los comandos para la herramienta.|
 
@@ -74,7 +75,7 @@ Para adaptar mediante Winres.exe, primero se debe desarrollar una aplicación co
 > [!NOTE]
 > Winres.exe no se puede utilizar para editar el archivo de recursos predeterminado. Winres.exe interpreta todas las propiedades cambiadas como propiedades adaptadas y las guarda en el archivo de recursos de la referencia cultural de destino.
 
-Las versiones finales de los archivos de recursos de referencia cultural se pueden utilizar para crear versiones localizadas de la aplicación. Para obtener más información, vea [Resources in Desktop Apps](../resources/index.md) (Recursos de aplicaciones de escritorio).
+Las versiones finales de los archivos de recursos de referencia cultural se pueden utilizar para crear versiones localizadas de la aplicación. Para obtener más información, vea [Recursos en aplicaciones .NET](../resources/index.md).
 
 Winres.exe incluye las siguientes características y funciones:
 
@@ -88,7 +89,7 @@ Winres.exe incluye las siguientes características y funciones:
 
 Debe utilizar la versión de Winres.exe que se comercializó con la versión de .NET Framework que vaya a utilizar. En la siguiente tabla se identifican las versiones compatibles:
 
-|Visual Studio|.NET Framework|Winres.exe|
+|Programa para la mejora|.NET Framework|Winres.exe|
 |-------------------|--------------------|----------------|
 |Visual Studio .NET 2002|1.0|1.0|
 |Visual Studio .NET 2003|1.1|1.1|

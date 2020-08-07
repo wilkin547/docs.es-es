@@ -1,16 +1,17 @@
 ---
 title: 'Procedimiento Implementar eventos de interfaz: Guía de programación de C#'
+description: Aprenda a implementar eventos de interfaz en una clase. Vea ejemplos de código y examine los recursos adicionales disponibles.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-ms.openlocfilehash: 8c0d221ef1272a43e2682ef2af3fa37d2d12d35e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bd86aed4f8d8ac6e291c11fe441f87ac97593b03
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167486"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302131"
 ---
 # <a name="how-to-implement-interface-events-c-programming-guide"></a>Procedimiento Implementar eventos de interfaz (Guía de programación de C#)
 Un [interfaz](../../language-reference/keywords/interface.md) puede declarar un [evento](../../language-reference/keywords/event.md). En el siguiente ejemplo, se muestra cómo implementar eventos de interfaz en una clase. Básicamente, las reglas son las mismas que para implementar cualquier propiedad o método de interfaz.  
@@ -57,7 +58,7 @@ Al proporcionar sus propios descriptores de acceso, puede especificar si los dos
   
  [!code-csharp[csProgGuideEvents#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEvents/CS/Events.cs#10)]
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Guía de programación de C#](../index.md)
 - [Eventos](./index.md)

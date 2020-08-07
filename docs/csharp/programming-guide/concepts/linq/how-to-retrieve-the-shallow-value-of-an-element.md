@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para recuperar el valor superficial de un elemento (C#)
+description: Aprenda a obtener el valor superficial de un elemento. El valor superficial es solo para el elemento específico.
 ms.date: 07/20/2015
 ms.assetid: 924a2699-72f6-4be1-aaa6-de62f8ec73b9
-ms.openlocfilehash: b9b69b5a18106f82d13cb54208c2362f8239711e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 597859e5b66606aa0cff9c1a475e79e6b66c39fc
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347448"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301585"
 ---
 # <a name="how-to-retrieve-the-shallow-value-of-an-element-c"></a>Procedimiento para recuperar el valor superficial de un elemento (C#)
 Este tema muestra cómo obtener el valor superficial de un elemento. El valor superficial es el valor del elemento específico solamente, en oposición al valor profundo, que incluye los valores de todos los elementos descendientes concatenados en una sola cadena.  
@@ -81,4 +82,4 @@ Column  Name="Name"         =Customer.Name
   
 ## <a name="see-also"></a>Vea también
 
-- [LINQ to XML Axes (C#)](./linq-to-xml-axes-overview.md) (Ejes de LINQ to XML [C#])
+- [Ejes de LINQ to XML (C#)](./linq-to-xml-axes-overview.md)

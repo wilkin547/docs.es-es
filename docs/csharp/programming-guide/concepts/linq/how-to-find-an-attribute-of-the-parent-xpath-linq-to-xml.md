@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para buscar un atributo del elemento principal (XPath-LINQ to XML) (C#)
+description: Aprenda a buscar un atributo del elemento principal. Vea un ejemplo de código en el que se usa un documento XML de ejemplo.
 ms.date: 07/20/2015
 ms.assetid: dbef9d89-a5c4-431f-80cc-7a2ebf323f86
-ms.openlocfilehash: bfe7554a5c767adde5e7170c8e1ea0537155f6df
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 03344bb66f617970d9598c91366eb7d69514397a
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141177"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303301"
 ---
 # <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-c"></a>Procedimiento para buscar un atributo del elemento principal (XPath-LINQ to XML) (C#)
 
@@ -21,7 +22,7 @@ La expresión XPath es:
 
 Este ejemplo busca primero un elemento `Author`. Después busca el atributo `id` del elemento primario.
 
-En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: libros (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).
+Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Libros (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).
 
 ```csharp
 XDocument books = XDocument.Load("Books.xml");

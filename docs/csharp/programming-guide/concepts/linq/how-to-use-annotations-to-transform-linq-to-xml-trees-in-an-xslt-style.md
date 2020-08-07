@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para usar anotaciones para transformar árboles LINQ to XML en un estilo XSLT (C#)
+description: Aprenda a usar anotaciones para transformar árboles de LINQ to XML en un estilo XSLT. Vea un ejemplo de transformación de un árbol mediante la función XForm.
 ms.date: 07/20/2015
 ms.assetid: 12a95902-a6b7-4a1e-ad52-04a518db226f
-ms.openlocfilehash: 7d6d646bb9b7b344750c22cb24bc81999da5210d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 844ca08cb2c6b47f7803d388663daeacb65bdb68
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168562"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302885"
 ---
 # <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-c"></a>Procedimiento para usar anotaciones para transformar árboles LINQ to XML en un estilo XSLT (C#)
 Se puede usar anotaciones para facilitar transformaciones de un árbol XML.  

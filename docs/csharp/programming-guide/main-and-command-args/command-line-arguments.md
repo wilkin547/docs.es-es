@@ -1,15 +1,16 @@
 ---
 title: 'Argumento de la línea de comandos: Guía de programación de C#'
+description: Aprenda sobre los argumentos de la línea de comandos. Vea un ejemplo en el que se usan argumentos de la línea de comandos en una aplicación de consola.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: c203716d9bb8298c934a999a496793c294949ddb
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 35ff0425d3f09cf4ad116cf688b943cef3ef02e3
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007759"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381923"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Argumentos de la línea de comandos (Guía de programación de C#)
 

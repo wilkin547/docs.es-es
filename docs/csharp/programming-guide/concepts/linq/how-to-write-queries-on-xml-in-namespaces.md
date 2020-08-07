@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para escribir consultas de XML en espacios de nombres (C#)
+description: Aprenda a escribir consultas en XML en espacios de nombres. Para estas consultas, debe utilizar los objetos XName que tengan el espacio de nombres correcto.
 ms.date: 07/20/2015
 ms.assetid: 7c54df81-15e4-4091-8c81-a87637029130
-ms.openlocfilehash: a8b8d55daaad1ae00e43fed897080ed7a62fafab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64eb9df1cde3b434a11e2e5410aab96993dc0fa1
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75337370"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303184"
 ---
 # <a name="how-to-write-queries-on-xml-in-namespaces-c"></a>Procedimiento para escribir consultas de XML en espacios de nombres (C#)
 Para escribir una consulta en XML que esté en un espacio de nombres, debe usar objetos <xref:System.Xml.Linq.XName> que tengan el espacio de nombres correcto.  

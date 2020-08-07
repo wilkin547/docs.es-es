@@ -1,16 +1,17 @@
 ---
 title: 'Delegados con métodos con nombre y Métodos anónimos: Guía de programación de C#'
+description: Aprenda sobre los delegados con nombre frente a los métodos anónimos. Vea ejemplos de código y examine los recursos adicionales disponibles.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], with named vs. anonymous methods
 - methods [C#], in delegates
 ms.assetid: 98fa8c61-66b6-4146-986c-3236c4045733
-ms.openlocfilehash: 1ec366999ca6457471b705fa83f06fcde4293f4e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 940363b87e17b34feeffaff38ed498d6fcf6850a
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712382"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302755"
 ---
 # <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>Delegados con métodos con nombre y Métodos anónimos (Guía de programación de C#)
 Un [delegado](../../language-reference/builtin-types/reference-types.md) puede asociarse con un método con nombre. Cuando crea una instancia de un delegado mediante un método con nombre, el método se pasa como un parámetro, por ejemplo:  
@@ -36,7 +37,7 @@ Un [delegado](../../language-reference/builtin-types/reference-types.md) puede a
   
  [!code-csharp[csProgGuideDelegates#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#3)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Guía de programación de C#](../index.md)
 - [Delegados](./index.md)

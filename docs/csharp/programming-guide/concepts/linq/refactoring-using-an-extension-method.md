@@ -1,13 +1,14 @@
 ---
 title: Refactorizar mediante un método de extensión (C#)
+description: Aprenda a refactorizar el código mediante un método de extensión. Vea ejemplos de código y examine los recursos adicionales disponibles.
 ms.date: 07/20/2015
 ms.assetid: c5fc123d-af10-4a2f-b8e4-db921efb2639
-ms.openlocfilehash: 8546c2cb834107cf2e099af40f9a7df4d5858b4b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e786f0e1514156535fd6a6033e37ed8879e99709
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253096"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381949"
 ---
 # <a name="refactoring-using-an-extension-method-c"></a>Refactorizar mediante un método de extensión (C#)
 Este ejemplo se basa en el ejemplo anterior, [Recuperar el texto de los párrafos (C#)](./retrieving-the-text-of-the-paragraphs.md), mediante la refactorización de la concatenación de cadenas con una función pura que se implementa como método de extensión.  
@@ -244,9 +245,9 @@ StyleName:Code >Hello World<
 ## <a name="next-steps"></a>Pasos siguientes  
  El siguiente ejemplo muestra cómo refactorizar este código de otra forma, mediante las funciones puras:  
   
-- [Refactorizar mediante una función pura (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
+- [Refactorizar mediante una función pura (C#)](./refactoring-using-a-pure-function.md)
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Tutorial: Manipular contenido en un documento de WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md)
+- [Tutorial: Manipulación de contenido en un documento WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md)
 - [Refactorizar en funciones puras (C#)](./refactoring-into-pure-functions.md)

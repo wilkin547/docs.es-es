@@ -3,12 +3,12 @@ title: Herramientas de .NET Core
 description: Cómo instalar, usar, actualizar y quitar las herramientas de .NET Core. Abarca las herramientas globales, herramientas de ruta de acceso de herramientas y herramientas locales.
 author: KathleenDollard
 ms.date: 02/12/2020
-ms.openlocfilehash: 583dbb461543d1efb7328d55f6ecce4a99afcaca
-ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
+ms.openlocfilehash: 75bdedcbc3ebe9c23477795415076d160ab9a642
+ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226613"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87455721"
 ---
 # <a name="how-to-manage-net-core-tools"></a>Cómo administrar las herramientas de .NET Core
 
@@ -37,11 +37,11 @@ Una herramienta de .NET Core es un paquete especial de NuGet que contiene una a
 
 Actualmente, .NET Core no tiene una característica de búsqueda de herramientas. Estas son algunas formas de encontrar herramientas:
 
+* Busque en el sitio web de [NuGet](https://www.nuget.org) mediante el filtro de tipo de paquete "herramienta .NET". Para más información, vea [Búsqueda y selección de paquetes](/nuget/consume-packages/finding-and-choosing-packages).
 * Consulte la lista de herramientas del repositorio GitHub [natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools).
 * Use [ToolGet](https://www.toolget.net/) para buscar herramientas de .NET.
 * Puede ver el código fuente de las herramientas creado por el equipo de ASP.NET Core en el [directorio de herramientas del repositorio de GitHub dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/tree/master/src/Tools).
 * Obtenga más información sobre las herramientas de diagnóstico en [herramientas de diagnóstico de dotnet de .NET Core ](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools).
-* Busque en el sitio web de [NuGet](https://www.nuget.org). Sin embargo, el sitio de NuGet todavía no tiene una característica que le permita buscar solo paquetes de herramientas.
 
 ## <a name="check-the-author-and-statistics"></a>Comprobar el autor y las estadísticas
 

@@ -1,13 +1,14 @@
 ---
 title: Información general sobre operadores de consulta estándar (C#)
+description: Los operadores de consulta estándar de LINQ ofrecen funcionalidades de consulta, como filtrado, proyección, agregación y ordenación en C#.
 ms.date: 07/20/2015
 ms.assetid: 812fa119-5f65-4139-b4fa-55dccd8dc3ac
-ms.openlocfilehash: 095a0b7a7a8265f235d28a4634ea82cdcd7a60c0
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 8a399f52881e10f8d94263843b5992101f96a5ea
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990013"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302326"
 ---
 # <a name="standard-query-operators-overview-c"></a>Información general sobre operadores de consulta estándar (C#)
 Los *operadores de consulta estándar* son los métodos que constituyen el modelo LINQ. La mayoría de estos métodos funciona en secuencias; donde una secuencia es un objeto cuyo tipo implementa la interfaz <xref:System.Collections.Generic.IEnumerable%601> o la interfaz <xref:System.Linq.IQueryable%601>. Los operadores de consulta estándar ofrecen funcionalidades de consulta, como las funciones de filtrado, proyección, agregación y ordenación, entre otras.  

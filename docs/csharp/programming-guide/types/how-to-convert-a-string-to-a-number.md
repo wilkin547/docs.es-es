@@ -1,5 +1,6 @@
 ---
 title: 'Procedimiento Convertir una cadena en un número: Guía de programación de C#'
+description: Aprenda a convertir una cadena en un número en C# mediante la llamada a los métodos de clase Parse, TryParse o Convert.
 ms.date: 02/11/2019
 helpviewer_keywords:
 - conversions [C#]
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: f1d4a0f36292acafad409bf666f861b7637cd644
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 8c46117579a5b787e5d9f3f317296d33bdd1cce1
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442207"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381975"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Procedimiento Convertir una cadena en un número (Guía de programación de C#)
 
@@ -54,7 +55,7 @@ En la siguiente tabla se muestran algunos de los métodos de la clase <xref:Syst
   
 [!code-csharp[Parsing with Convert methods](~/samples/snippets/csharp/programming-guide/string-to-number/convert/program.cs)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Tipos](./index.md)
 - [Determinación de si una cadena representa un valor numérico](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)

@@ -1,15 +1,16 @@
 ---
 title: 'Excepciones generadas por el compilador: Guía de programación de C#'
+description: Aprenda sobre las excepciones generadas por el compilador. Revise una lista de excepciones iniciadas automáticamente y sus condiciones de error.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions [C#], compiler-generated
 ms.assetid: 53b52f97-b366-4ed7-b05b-9eb78096b7f9
-ms.openlocfilehash: 1d2d561df3e496893657b050fa93b44c56542d97
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 1def83f72e83976ac672ec35169b4950a20ef54e
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84240738"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302066"
 ---
 # <a name="compiler-generated-exceptions-c-programming-guide"></a>Excepciones generadas por el compilador (Guía de programación de C#)
 

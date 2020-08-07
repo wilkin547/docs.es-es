@@ -1,16 +1,17 @@
 ---
 title: Sintaxis de consultas y sintaxis de métodos en LINQ (C#)
+description: Conozca la sintaxis de métodos y consultas de LINQ. Por ejemplo, los métodos de extensión del operador de consulta estándar y las expresiones lambda.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-ms.openlocfilehash: 17280daaf98010245bbd019652a2a46d7f66ab59
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1765a15347aeedb9cc5fa6784abdfad6fafe4016
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635501"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87300766"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>Sintaxis de consultas y sintaxis de métodos en LINQ (C#)
 La mayoría de las consultas de la documentación introductoria de Language Integrated Query (LINK) se escribe con la sintaxis de consulta declarativa de LINQ. Pero la sintaxis de consulta debe traducirse en llamadas de método para .NET Common Language Runtime (CLR) al compilar el código. Estas llamadas de método invocan los operadores de consulta estándar, que tienen nombres tales como `Where`, `Select`, `GroupBy`, `Join`, `Max` y `Average`. Puede llamarlas directamente con la sintaxis de método en lugar de la sintaxis de consulta.  
@@ -32,7 +33,7 @@ La mayoría de las consultas de la documentación introductoria de Language Inte
   
  Para empezar a usar LINK, lo único que realmente debe saber sobre los métodos de extensión es cómo incluirlos en el ámbito de la aplicación mediante el uso correcto de directivas `using`. Desde el punto de vista de la aplicación, un método de extensión y un método de instancia normal son iguales.  
   
- Para obtener más información sobre los métodos de extensión, vea [Métodos de extensión](../../classes-and-structs/extension-methods.md). Para obtener más información sobre los operadores de consulta estándar, vea [Información general sobre operadores de consulta estándar (C#)](./standard-query-operators-overview.md). Algunos proveedores de LINQ, como [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] y [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], implementan sus propios operadores de consulta estándar y otros métodos de extensión además de <xref:System.Collections.Generic.IEnumerable%601>.  
+ Para obtener más información sobre los métodos de extensión, vea [Métodos de extensión](../../classes-and-structs/extension-methods.md). Para obtener más información sobre los operadores de consulta estándar, vea [Información general sobre operadores de consulta estándar (C#)](./standard-query-operators-overview.md). Algunos proveedores de LINK, como [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] y [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], implementan sus propios operadores de consulta estándar y otros métodos de extensión además de <xref:System.Collections.Generic.IEnumerable%601>.  
   
 ## <a name="lambda-expressions"></a>Expresiones lambda  
  En el ejemplo anterior, observe que la expresión condicional (`num % 2 == 0`) se pasa como argumento insertado al método `Where`: `Where(num => num % 2 == 0).` Esta expresión insertada se denomina expresión lambda. Se trata de una forma cómoda de escribir código que, de lo contrario, tendría que escribirse de forma más compleja como un método anónimo, un delegado genérico o un árbol de expresión. En C#, `=>` es el operador lambda, que se lee como "va a". La `num` situada a la izquierda del operador es la variable de entrada que corresponde a `num` en la expresión de consulta. El compilador puede deducir el tipo de `num` porque sabe que `numbers` es un tipo <xref:System.Collections.Generic.IEnumerable%601> genérico. El cuerpo de la expresión lambda es exactamente igual que la expresión de la sintaxis de consulta o de cualquier otra expresión o instrucción de C#; puede incluir llamadas de método y otra lógica compleja. El "valor devuelto" es simplemente el resultado de la expresión.  

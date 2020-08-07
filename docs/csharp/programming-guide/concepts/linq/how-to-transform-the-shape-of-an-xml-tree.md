@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para transformar la forma de un árbol XML (C#)
+description: Aprenda a transformar la forma de un árbol XML. La forma de un árbol XML hace referencia a sus nombres de elemento y atributo, y sus características de jerarquía.
 ms.date: 07/20/2015
 ms.assetid: 93c5d426-dea2-4709-a991-60204de42e8f
-ms.openlocfilehash: 91f91ed6fea5371fae2ce67a413f4825f37af6c3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4fa3cc18f235d061ae1778c177c4ac9b626f4b71
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347306"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302651"
 ---
 # <a name="how-to-transform-the-shape-of-an-xml-tree-c"></a>Procedimiento para transformar la forma de un árbol XML (C#)
 La *forma* de un documento XML hace referencia a sus nombres de elemento, sus nombres de atributo y las características de su jerarquía.  
@@ -23,7 +24,7 @@ La *forma* de un documento XML hace referencia a sus nombres de elemento, sus no
   
  El documento XML de origen de este ejemplo contiene un elemento `Customers` en el elemento `Root` que contiene todos los clientes. También contiene un elemento `Orders` en el elemento `Root` que contiene todos los pedidos. Este ejemplo crea un nuevo árbol XML en el que los pedidos de cada cliente se incluyen en un elemento `Orders` dentro del elemento `Customer`. El documento original también contiene un elemento `CustomerID` en el elemento `Order`; este elemento se quitará del documento con la forma cambiada.  
   
- En este ejemplo se usa el siguiente documento XML: [Archivo XML de ejemplo: Clientes y pedidos (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Clientes y pedidos (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XElement co = XElement.Load("CustomersOrders.xml");  
@@ -90,7 +91,7 @@ Console.WriteLine(newCustOrd);
   
  El código llama a `ConvertAddress`, que devuelve una lista de objetos <xref:System.Xml.Linq.XElement>. El argumento del método es una consulta que determina el elemento complejo `Address` en el que el atributo `Type` tiene un valor `"Shipping"`.  
   
- En este ejemplo se usa el siguiente documento XML: [Sample XML File: Typical Purchase Order (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) (Archivo XML de ejemplo: pedido de compra común [LINQ to XML]).  
+ Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Pedido de compra común (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
   
 ```csharp  
 static IEnumerable<XElement> ConvertAddress(XElement add)  

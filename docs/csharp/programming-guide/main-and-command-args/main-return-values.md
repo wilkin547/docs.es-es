@@ -1,15 +1,16 @@
 ---
 title: 'Valores devueltos de Main(): Guía de programación de C#'
+description: Aprenda sobre los valores devueltos de Main(). Vea ejemplos de código y código generado por compiladores, y examine los recursos adicionales disponibles.
 ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: a3e29903448c3eb5e0b7dda027677d1785a445e7
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: 4458f3cd7c8259c5725cfe5e853f826fe2ef61cc
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86416284"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87382066"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Valores devueltos de Main() (Guía de programación de C#)
 

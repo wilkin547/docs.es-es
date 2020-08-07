@@ -1,15 +1,16 @@
 ---
 title: 'Procedimiento Obtener información sobre archivos, carpetas y unidades: Guía de programación de C#'
+description: Aprenda a obtener información sobre archivos, carpetas y unidades. Vea un ejemplo de código y examine los recursos adicionales disponibles.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [C#], getting information about
 ms.assetid: 22fc2da6-5494-405b-995e-c0b99142a93e
-ms.openlocfilehash: 32aced17634a1406e2fce0af9c2a92f7a5eb9b40
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: f696cd90f197bede1a64949d211a563ce9a18376
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241622"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87299934"
 ---
 # <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>Procedimiento Obtener información sobre archivos, carpetas y unidades (Guía de programación de C#)
 En .NET, puede acceder a información del sistema de archivos mediante las clases siguientes:  

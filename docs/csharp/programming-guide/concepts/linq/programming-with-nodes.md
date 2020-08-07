@@ -1,13 +1,14 @@
 ---
 title: Programar con nodos (C#)
+description: Aprenda sobre la programación con nodos. Los nodos permiten a los desarrolladores escribir programas que funcionan en un nivel de detalle más preciso que los elementos y atributos.
 ms.date: 07/20/2015
 ms.assetid: c38df0f2-c805-431a-93ff-9103a4284c2f
-ms.openlocfilehash: 05c2e95fe97effda7b537a7ac2d8f5780f4e212b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8a31d6459ab644a682d480239cabc3d88fd7dc14
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168319"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301689"
 ---
 # <a name="programming-with-nodes-c"></a>Programar con nodos (C#)
 Los desarrolladores de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] que deben escribir programar como un editor de XML, un sistema de transformación o un sistema de escritura de informes a menudo deben escribir programas que funcionan en un nivel de granularidad más fino que los elementos y los atributos. A menudo deben trabajar en el nivel del nodo, manipulando nodos de texto, procesando instrucciones y comentarios. En este tema se proporcionan algunos detalles acerca de la programación en el nivel del nodo.  

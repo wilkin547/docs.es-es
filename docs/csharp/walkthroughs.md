@@ -1,17 +1,18 @@
 ---
 title: Tutoriales de C#
+description: Vea las instrucciones paso a paso de escenarios comunes. Estos tutoriales de C# son un buen punto de partida para empezar a conocer un producto o un área de características determinada.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - walkthroughs [C#]
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: f563e5ed1b14831f9fea6575ced0f7a95d9157fc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 746fe35e6d6d4a75f363ccb82ae8dc6106854d8d
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77626365"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381897"
 ---
 # <a name="c-walkthroughs"></a>Tutoriales de C#
 
@@ -71,7 +72,7 @@ Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes, l
 - [Ejemplos y tutoriales de implementación](/visualstudio/deployment/clickonce-deployment-samples-and-walkthroughs)\
   Proporciona ejemplos detallados de escenarios comunes de implementación.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Guía de programación de C#](./programming-guide/index.md)
 - [Ejemplos de Visual Studio](/visualstudio/ide/visual-studio-ide)

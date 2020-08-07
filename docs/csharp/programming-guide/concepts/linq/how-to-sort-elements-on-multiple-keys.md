@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para ordenar elementos por varias claves (C#)
+description: Aprenda a ordenar elementos por varias claves. Vea ejemplos de ordenación de elementos que usan documentos XML de ejemplo.
 ms.date: 07/20/2015
 ms.assetid: 3b2760b6-d607-4ac7-b784-5c6524e2a0e0
-ms.openlocfilehash: ddfeab4bf9b67231296ca90df1244a3b8a441440
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 486aac38a27cf064553894a548722a54c58c21b6
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347382"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301507"
 ---
 # <a name="how-to-sort-elements-on-multiple-keys-c"></a>Procedimiento para ordenar elementos por varias claves (C#)
 
@@ -17,7 +18,7 @@ En este tema se describe cómo ordenar en varias claves.
 
 En este ejemplo los resultados se ofrecen primero por código postal de envío y después por fecha de ordenación.
 
-En este ejemplo se usa el siguiente documento XML: [Archivo XML de ejemplo: Clientes y pedidos (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).
+Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Clientes y pedidos (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).
 
 ```csharp
 XElement co = XElement.Load("CustomersOrders.xml");
@@ -67,7 +68,7 @@ CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997
 
 El siguiente ejemplo muestra la misma consulta sobre un XML que se encuentra en un espacio de nombres. Para más información, consulte [Información general sobre los espacios de nombres (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).
 
-En este ejemplo se usa el siguiente documento XML: [Archivo XML de ejemplo: Clientes y pedidos en un espacio de nombres](./sample-xml-file-customers-and-orders-in-a-namespace.md).
+Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Clientes y pedidos en un espacio de nombres](./sample-xml-file-customers-and-orders-in-a-namespace.md).
 
 ```csharp
 XElement co = XElement.Load("CustomersOrdersInNamespace.xml");

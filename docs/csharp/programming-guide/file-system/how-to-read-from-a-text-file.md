@@ -1,5 +1,6 @@
 ---
 title: 'Procedimiento Leer de un archivo de texto: Guía de programación de C#'
+description: Aprenda a leer de un archivo de texto mediante métodos estáticos de la clase File. Vea un ejemplo de código y examine los recursos adicionales disponibles.
 ms.date: 07/20/2015
 f1_keywords:
 - StreamReader.ReadToEnd
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - reading data, text files
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
-ms.openlocfilehash: 8f79d22a86390ca931b05262e50865d852c154c7
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 80ac6f8412f456b23d05ee87882dca8e16a132c3
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241752"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301663"
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a>Procedimiento Leer de un archivo de texto (Guía de programación de C#)
 En este ejemplo se lee el contenido de un archivo de texto con los métodos estáticos <xref:System.IO.File.ReadAllText%2A> y <xref:System.IO.File.ReadAllLines%2A> de la clase <xref:System.IO.File?displayProperty=nameWithType>.  

@@ -1,5 +1,6 @@
 ---
 title: Mgmtclassgen.exe (Generador de clases fuertemente tipadas para administración)
+description: Conozca Mgmtclassgen.exe, el Generador de clases fuertemente tipadas para administración. Esta herramienta le permite generar rápidamente una clase administrada enlazada en tiempo de compilación para una clase WMI.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Mgmtclassgen.exe
 - early-bound managed classes
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
-ms.openlocfilehash: d6de28694a1fdcd22cc2baa8cff66387c601414c
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 89facd4369dad6168e46febd3e34d7f7c235faf0
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201861"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517300"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Generador de clases fuertemente tipadas para administración)
 La herramienta Generador de clases fuertemente tipadas para administración permite generar con rapidez una clase administrada en tiempo de compilación para una clase especificada de Instrumental de administración de Windows (WMI). La clase generada simplifica el código que se debe escribir para tener acceso a una instancia de la clase de WMI.  

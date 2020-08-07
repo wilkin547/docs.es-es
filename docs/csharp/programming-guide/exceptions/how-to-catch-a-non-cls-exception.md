@@ -1,15 +1,16 @@
 ---
 title: Procedimiento para detectar excepciones no compatibles con CLS
+description: Aprenda a detectar excepciones no compatibles con CLS. Vea un ejemplo de código y examine los recursos adicionales disponibles.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions [C#], non-CLS
 ms.assetid: db4630b3-5240-471a-b3a7-c7ff6ab31e8d
-ms.openlocfilehash: 635cf0a9142f56dea4b2722fbf3f3eda505d85ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 255de4cab9a72491eb3b9624d968539d432e0442
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75346275"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302014"
 ---
 # <a name="how-to-catch-a-non-cls-exception"></a>Procedimiento para detectar excepciones no compatibles con CLS
 Algunos lenguajes. NET, incluido C++/CLI, permiten que los objetos inicien excepciones que no se derivan de <xref:System.Exception>. Dichas excepciones se denominan *excepciones de no compatibilidad con CLS* o *no excepciones*. En C# no se pueden producir excepciones de no compatibilidad con CLS, pero se pueden detectar de dos formas:  
@@ -49,7 +50,7 @@ catch (RuntimeWrappedException e)
 }
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Runtime.CompilerServices.RuntimeWrappedException>
 - [Excepciones y control de excepciones](./index.md)

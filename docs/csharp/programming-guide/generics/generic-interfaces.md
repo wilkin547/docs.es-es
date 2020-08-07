@@ -1,16 +1,17 @@
 ---
 title: 'Interfaces genéricas: Guía de programación de C#'
+description: Aprenda a usar interfaces genéricas en C#. Vea ejemplos de código y examine los recursos adicionales disponibles.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, generic interfaces
 - generics [C#], interfaces
 ms.assetid: a8fa49a1-6e78-4a09-87e5-84a0b9f5ffbe
-ms.openlocfilehash: 4cce23da7579e30ecff80b3afb92a5a58795c1bd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 43817a236e95b3ab8fd0ba94da98457eeec2396c
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712213"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301897"
 ---
 # <a name="generic-interfaces-c-programming-guide"></a>Interfaces genéricas (Guía de programación de C#)
 A menudo es útil definir interfaces para las clases de colección genéricas o para las clases genéricas que representan los elementos de la colección. Lo preferible para las clases genéricas es usar interfaces genéricas, como <xref:System.IComparable%601> en lugar de <xref:System.IComparable>, para evitar las operaciones de conversión boxing y unboxing en los tipos de valor. La biblioteca de clases .NET Framework define varias interfaces genéricas para usarlas con las clases de colección del espacio de nombres <xref:System.Collections.Generic>.  
@@ -43,7 +44,7 @@ A menudo es útil definir interfaces para las clases de colección genéricas o 
   
  Las reglas que controlan la sobrecarga de métodos son las mismas para los métodos incluidos en las clases genéricas, los structs genéricos o las interfaces genéricas. Para obtener más información, vea [Métodos genéricos](./generic-methods.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Guía de programación de C#](../index.md)
 - [Introducción a los genéricos](./index.md)

@@ -1,15 +1,16 @@
 ---
 title: 'Estructura general de un programa de C#: Guía de programación de C#'
+description: Aprenda sobre la estructura de un programa de C# mediante un programa esqueleto que contiene todos los elementos necesarios para un programa.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, program structure
 ms.assetid: 5ae964a5-0ef0-40fe-88fb-6d1793371d0d
-ms.openlocfilehash: 4a2340c29527ac09ba53daee03e06420b269df56
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1d7662d18acee60050800eaf3873cd1c11ef5157
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77673347"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301845"
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a>Estructura general de un programa de C# (Guía de programación de C#)
 Los programas de C# pueden constar de uno o más archivos. Cada archivo puede contener cero o más espacios de nombres. Un espacio de nombres puede contener tipos como clases, structs, interfaces, enumeraciones y delegados, además de otros espacios de nombres. El siguiente es el esqueleto de un programa de C# que contiene todos estos elementos.  
@@ -21,7 +22,7 @@ Los programas de C# pueden constar de uno o más archivos. Cada archivo puede co
   
 - [Clases](../classes-and-structs/classes.md)  
   
-- [Estructuras](../../language-reference/builtin-types/struct.md)  
+- [Structs](../../language-reference/builtin-types/struct.md)  
   
 - [Espacios de nombres](../namespaces/index.md)  
   

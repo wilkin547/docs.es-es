@@ -1,19 +1,20 @@
 ---
 title: Procedimiento para ordenar elementos (C#)
+description: Aprenda a ordenar elementos. Vea ejemplos de cómo escribir una consulta que ordene sus resultados en un documento XML.
 ms.date: 07/20/2015
 ms.assetid: aee6fbbc-81fd-4b3e-b40f-6ed7b3bd3fee
-ms.openlocfilehash: 7fad9fcb43905072c88a5704c56672917bfc377c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 669d9cf583e6ab70c93be39ad271eaf104f88718
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347362"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301442"
 ---
 # <a name="how-to-sort-elements-c"></a>Procedimiento para ordenar elementos (C#)
 Este ejemplo muestra cómo escribir una consulta que ordene sus resultados.  
   
 ## <a name="example"></a>Ejemplo  
- En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: Datos numéricos (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).  
+ Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Datos numéricos (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```csharp  
 XElement root = XElement.Load("Data.xml");  
@@ -41,7 +42,7 @@ foreach (decimal el in prices)
 ## <a name="example"></a>Ejemplo  
  El siguiente ejemplo muestra la misma consulta sobre un XML que se encuentra en un espacio de nombres. Para más información, consulte [Información general sobre los espacios de nombres (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).  
   
- En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: Datos numéricos en un espacio de nombres](./sample-xml-file-numerical-data-in-a-namespace.md).  
+ Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Datos numéricos de un espacio de nombres](./sample-xml-file-numerical-data-in-a-namespace.md).  
   
 ```csharp  
 XElement root = XElement.Load("DataInNamespace.xml");  
@@ -67,6 +68,6 @@ foreach (decimal el in prices)
 89.99  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Ordenación de datos [C#]](./sorting-data.md)
+- [Ordenación de datos (C#)](./sorting-data.md)

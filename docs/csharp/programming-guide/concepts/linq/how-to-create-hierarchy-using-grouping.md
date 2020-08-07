@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para crear una jerarquía mediante la agrupación (C#)
+description: Aprenda a agrupar datos para, posteriormente, generar un nuevo archivo XML donde la jerarquía XML refleje la agrupación.
 ms.date: 07/20/2015
 ms.assetid: 0213d59e-5f76-438c-9cab-4bf11f7b971d
-ms.openlocfilehash: c5a96b02595446b2efa01868cc88377c3a5151c9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d9470ce9b9b7702cf9b835cb2143b6a36f3a254f
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141306"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302924"
 ---
 # <a name="how-to-create-hierarchy-using-grouping-c"></a>Procedimiento para crear una jerarquía mediante la agrupación (C#)
 Este ejemplo muestra cómo agrupar datos y después generar XML basado en la agrupación.  
@@ -15,7 +16,7 @@ Este ejemplo muestra cómo agrupar datos y después generar XML basado en la agr
 ## <a name="example"></a>Ejemplo  
  Este ejemplo agrupa primero los datos por categorías y, a continuación, genera un nuevo archivo XML en el que la jerarquía XML refleja la agrupación.  
   
- En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: Datos numéricos (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).  
+ Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Datos numéricos (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```csharp  
 XElement doc = XElement.Load("Data.xml");  

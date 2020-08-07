@@ -1,13 +1,13 @@
 ---
 title: Cambios importantes de la biblioteca de clases base
 description: Muestra los cambios importantes en las bibliotecas básicas de .NET.
-ms.date: 09/20/2019
-ms.openlocfilehash: 64510809a1cf69ea0e4c4816eb2df54233e8eceb
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.date: 07/27/2020
+ms.openlocfilehash: 558aa1d76831cd15e2028c17d2b0b2e82f64ef9a
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281319"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517337"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>Cambios importantes en las bibliotecas principales de .NET
 
@@ -17,6 +17,9 @@ En esta página se documentan los siguientes cambios importantes:
 
 | Cambio importante | Versión introducida |
 | - | :-: |
+| [Los métodos de serialización BinaryFormatter están obsoletos y se prohíben en las aplicaciones ASP.NET](#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps) | 5.0 |
+| [Las rutas de acceso al código UTF-7 están obsoletas](#utf-7-code-paths-are-obsolete) | 5.0 |
+| [Vector\<T> siempre inicia una excepción NotSupportedException en el caso de tipos no admitidos](#vectort-always-throws-notsupportedexception-for-unsupported-types) | 5.0 |
 | [El valor predeterminado de ActivityIdFormat es W3C](#default-activityidformat-is-w3c) | 5.0 |
 | [Cambio de comportamiento de Vector2.Lerp y Vector4.Lerp](#behavior-change-for-vector2lerp-and-vector4lerp) | 5.0 |
 | [Los métodos CompareGreaterThan de SSE y SSE2 controlan correctamente las entradas NaN](#sse-and-sse2-comparegreaterthan-methods-properly-handle-nan-inputs) | 5.0 |
@@ -30,7 +33,6 @@ En esta página se documentan los siguientes cambios importantes:
 | [Al reemplazar las secuencias de bytes UTF-8 con formato incorrecto se siguen las instrucciones de Unicode](#replacing-ill-formed-utf-8-byte-sequences-follows-unicode-guidelines) | 3.0 |
 | [Se ha movido TypeDescriptionProviderAttribute a otro ensamblado](#typedescriptionproviderattribute-moved-to-another-assembly) | 3.0 |
 | [ZipArchiveEntry ya no controla los archivos con tamaños de entrada incoherentes](#ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes) | 3.0 |
-| [Tipo de excepción del serializador JSON cambiado de JsonException a NotSupportedException](#json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception) | 3.0 |
 | [Cambio en la semántica de (string)null en Utf8JsonWriter](#change-in-semantics-of-stringnull-in-utf8jsonwriter) | 3.0 |
 | [Los métodos JsonEncodedText.Encode tienen un argumento JavaScriptEncoder adicional](#jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument) | 3.0 |
 | [Ha cambiado la firma de JsonFactoryConverter.CreateConverter](#jsonfactoryconvertercreateconverter-signature-changed) | 3.0 |
@@ -45,6 +47,18 @@ En esta página se documentan los siguientes cambios importantes:
 | [Process.StartInfo produce una excepción InvalidOperationException para los procesos que no se iniciaron](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1.0 |
 
 ## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [binaryformatter-serialization-obsolete](../../../includes/core-changes/corefx/5.0/binaryformatter-serialization-obsolete.md)]
+
+***
+
+[!INCLUDE [utf-7-code-paths-obsolete](../../../includes/core-changes/corefx/5.0/utf-7-code-paths-obsolete.md)]
+
+***
+
+[!INCLUDE [vectort-throws-notsupportedexception](../../../includes/core-changes/corefx/5.0/vectort-throws-notsupportedexception.md)]
+
+***
 
 [!INCLUDE [default-activityidformat-changed](../../../includes/core-changes/corefx/5.0/default-activityidformat-changed.md)]
 
@@ -97,10 +111,6 @@ En esta página se documentan los siguientes cambios importantes:
 ***
 
 [!INCLUDE[ZipArchiveEntry no longer handles archives with inconsistent entry sizes](~/includes/core-changes/corefx/3.0/ziparchiveentry-and-inconsistent-entry-sizes.md)]
-
-***
-
-[!INCLUDE[JSON serializer exception type changed from JsonException to NotSupportedException](~/includes/core-changes/corefx/3.0/serializer-throws-notsupportedexception.md)]
 
 ***
 

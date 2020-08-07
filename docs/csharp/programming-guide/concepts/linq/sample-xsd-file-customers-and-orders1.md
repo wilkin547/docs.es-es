@@ -1,16 +1,17 @@
 ---
 title: 'Archivo XSD de ejemplo: Clientes y pedidos'
+description: Este archivo XSD se usa en numerosos ejemplos de la documentación de LINQ to XML. Se trata de una definición de esquema de un archivo XML de ejemplo que contiene clientes y pedidos.
 ms.date: 07/20/2015
 ms.assetid: ef9911a3-7ac4-44fd-b36e-a0c0ad0a157d
-ms.openlocfilehash: 2e8fdcd9100ea608828371ff5dce6cf0d040292f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2fd4ce6ebc4c9b5d222ac86fe8dc6746d9126da0
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167951"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302430"
 ---
-# <a name="sample-xsd-file-customers-and-orders"></a>Archivo XSD de ejemplo: Clientes y pedidos
-El siguiente archivo XSD se usa en numerosos ejemplos de la documentación de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este archivo contiene una definición de esquema del [Archivo XML de ejemplo: Clientes y pedidos (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md). El esquema usa las características `xs:key` y `xs:keyref` de XSD para establecer que el atributo `CustomerID` del elemento `Customer` es una clave, y para establecer una relación entre el elemento `CustomerID` de cada elemento `Order` y el atributo `CustomerID` de cada elemento `Customer`.  
+# <a name="sample-xsd-file-customers-and-orders"></a>Archivo XSD de muestra: Clientes y pedidos
+El siguiente archivo XSD se usa en numerosos ejemplos de la documentación de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este archivo contiene una definición de esquema para el [Archivo XML de ejemplo: Clientes y pedidos (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md). El esquema usa las características `xs:key` y `xs:keyref` de XSD para establecer que el atributo `CustomerID` del elemento `Customer` es una clave, y para establecer una relación entre el elemento `CustomerID` de cada elemento `Order` y el atributo `CustomerID` de cada elemento `Customer`.  
   
  Para conocer un ejemplo de escritura de consultas LINQ que aprovechan esta relación mediante la cláusula `Join`, consulte [Procedimiento para combinar dos colecciones (LINQ to XML) (C#)](./how-to-join-two-collections-linq-to-xml.md).  
   

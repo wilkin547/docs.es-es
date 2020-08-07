@@ -1,16 +1,17 @@
 ---
 title: 'Control de excepciones: Guía de programación de C#'
+description: Aprenda sobre el control de excepciones. Vea ejemplos de instrucciones try-catch, try-finally y try-catch-finally.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], handling
 ms.assetid: b4e4ecf2-b907-4e58-891f-2563762258e9
-ms.openlocfilehash: ee1e5bd15183dad9ffe97824f9b194668e9d3b17
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8e55b44573c40f594e567fc5a4501689e66c7af4
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705306"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302040"
 ---
 # <a name="exception-handling-c-programming-guide"></a>Control de excepciones (Guía de programación de C#)
 Los programadores de C# usan un bloque [try](../../language-reference/keywords/try-catch.md) para separar el código que podría verse afectado por una excepción. Los bloques [catch](../../language-reference/keywords/try-catch.md) asociados se usan para controlar las excepciones resultantes. Los bloques [finally](../../language-reference/keywords/try-finally.md) contienen código que se ejecuta independientemente de si se produce una excepción en el bloque `try`, como la liberación de recursos asignados en el bloque `try`. Los bloques `try` requieren uno o varios bloques `catch` asociados, un bloque `finally` o ambos.  

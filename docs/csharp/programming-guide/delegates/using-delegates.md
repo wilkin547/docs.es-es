@@ -1,15 +1,16 @@
 ---
 title: 'Utilizar delegados: Guía de programación de C#'
+description: Aprenda a usar delegados. Los delegados son un tipo orientado a objetos, con seguridad de tipos y seguro que encapsula un método de forma segura.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: 9a81ee5ccdc2697ca435d40be27568b651977f96
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: a9b625b8c0785ed2f446be27c11dc76108bc4bce
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241596"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302157"
 ---
 # <a name="using-delegates-c-programming-guide"></a>Utilizar delegados (Guía de programación de C#)
 
@@ -67,7 +68,7 @@ La comparación de delegados de dos tipos distintos asignados en tiempo de compi
 
 [!code-csharp[csProgGuideDelegates#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#30)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Guía de programación de C#](../index.md)
 - [Delegados](./index.md)

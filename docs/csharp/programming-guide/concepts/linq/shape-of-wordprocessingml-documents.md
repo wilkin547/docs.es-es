@@ -1,13 +1,14 @@
 ---
 title: Forma de documentos WordprocessingML (C#)
+description: Conozca el formato de un documento WordprocessingML. En varios ejemplos de C# se usa un documento WordprocessingML.
 ms.date: 07/20/2015
 ms.assetid: 3791b5e0-c502-469b-bb75-a7bf6fdd0a94
-ms.openlocfilehash: 58c028fed465f45fdcf8f63f2119eb8e8b201e32
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4a7716d775a634c5ad3719714be68fce67d5cbfe
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76732675"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302352"
 ---
 # <a name="shape-of-wordprocessingml-documents-c"></a>Forma de documentos WordprocessingML (C#)
 En este tema se presenta la forma XML de un documento WordprocessingML.  
@@ -94,6 +95,6 @@ using (Package wdPackage = Package.Open("SampleDoc.docx", FileMode.Open, FileAcc
 - [Anatomía de un archivo WordProcessingML](http://officeopenxml.com/anatomyofOOXML.php)
 - [Introducción a WordprocessingML](https://ericwhite.com/blog/introduction-to-wordprocessingml-series/)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Tutorial: Manipular contenido en un documento de WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md)
+- [Tutorial: Manipulación de contenido en un documento WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md)

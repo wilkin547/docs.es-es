@@ -1,13 +1,14 @@
 ---
 title: Operaciones cuantificadoras (C#)
+description: Aprenda sobre las operaciones cuantificadoras. Estas operaciones devuelven un valor booleano que indica si algunos o todos los elementos de una secuencia satisfacen una condición.
 ms.date: 07/20/2015
 ms.assetid: 84ac2ac2-7a63-4581-bc4c-14e34be1493b
-ms.openlocfilehash: 5c931e0971a2ae7970415905be8772a64a82ee39
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ce06f887d3ad7b10cbdedf9e33072df2c0819ef1
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635488"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87299154"
 ---
 # <a name="quantifier-operations-c"></a>Operaciones cuantificadoras (C#)
 Las operaciones cuantificadoras devuelven un valor <xref:System.Boolean> que indica si algunos o todos los elementos de una secuencia cumplen una condición.  
@@ -20,11 +21,11 @@ Las operaciones cuantificadoras devuelven un valor <xref:System.Boolean> que ind
   
 ## <a name="methods"></a>Métodos  
   
-|Nombre del método|Description|Sintaxis de la expresión de consulta de C#|Más información|  
+|Nombre del método|Descripción|Sintaxis de la expresión de consulta de C#|Más información|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|Todas|Determina si todos los elementos de una secuencia cumplen una condición.|No disponible.|<xref:System.Linq.Enumerable.All%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.All%2A?displayProperty=nameWithType>|  
-|Cualquiera|Determina si algunos de los elementos de una secuencia cumplen una condición.|No disponible.|<xref:System.Linq.Enumerable.Any%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Any%2A?displayProperty=nameWithType>|  
-|Contiene|Determina si una secuencia contiene un elemento especificado.|No disponible.|<xref:System.Linq.Enumerable.Contains%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Contains%2A?displayProperty=nameWithType>|  
+|Todas|Determina si todos los elementos de una secuencia cumplen una condición.|No es aplicable.|<xref:System.Linq.Enumerable.All%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.All%2A?displayProperty=nameWithType>|  
+|Cualquiera|Determina si algunos de los elementos de una secuencia cumplen una condición.|No es aplicable.|<xref:System.Linq.Enumerable.Any%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Any%2A?displayProperty=nameWithType>|  
+|Contiene|Determina si una secuencia contiene un elemento especificado.|No es aplicable.|<xref:System.Linq.Enumerable.Contains%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Contains%2A?displayProperty=nameWithType>|  
 
 ## <a name="query-expression-syntax-examples"></a>Ejemplos de sintaxis de expresiones de consulta  
   
@@ -43,9 +44,9 @@ En el ejemplo siguiente se usa `Contains` para comprobar que una matriz tenga un
   
 [!code-csharp[Contains](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQQuantifier/CS/Quantifier.cs#Contains)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Linq>
-- [Standard Query Operators Overview (C#)](./standard-query-operators-overview.md)(Información general sobre operadores de consulta estándar (C#))
+- [Información general sobre operadores de consulta estándar (C#)](./standard-query-operators-overview.md)
 - [Especificar dinámicamente filtros con predicado en tiempo de ejecución](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)
 - [Procedimiento para buscar frases que contengan un conjunto especificado de palabras (LINQ) (C#)](./how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md)

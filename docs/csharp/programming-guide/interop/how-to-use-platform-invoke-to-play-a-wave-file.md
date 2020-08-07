@@ -1,5 +1,6 @@
 ---
 title: 'Procedimiento Utilizar la invocación de plataforma para reproducir un archivo de sonido: Guía de programación de C#'
+description: En el ejemplo de código de C# se muestra cómo se usan los servicios de invocación de plataforma para reproducir un archivo de sonido WAV en el sistema operativo Windows.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - platform invoke, sound files
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - wav files
 - .wav files
 ms.assetid: f7f62f53-e026-4c40-b221-3a26adb0c2c5
-ms.openlocfilehash: 3ea90f0739ad45c31e4f25836c9de8e708dff2cc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b30cb08e2dcde0eb85e8d88a690ae24bf7ae7f22
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75700827"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302989"
 ---
 # <a name="how-to-use-platform-invoke-to-play-a-wav-file-c-programming-guide"></a>Procedimiento Utilizar la invocación de plataforma para reproducir un archivo de sonido (Guía de programación de C#)
 
@@ -40,7 +41,7 @@ El cuadro de diálogo **Abrir archivos** se puede filtrar con los siguientes val
 
 4. Compile y ejecute el código.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Guía de programación de C#](../index.md)
 - [Información general sobre interoperabilidad](interoperability-overview.md)

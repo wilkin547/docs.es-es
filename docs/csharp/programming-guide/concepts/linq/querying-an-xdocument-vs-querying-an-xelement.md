@@ -1,13 +1,14 @@
 ---
 title: Diferencias entre realizar consultas de un XDocument Realizar consultas de un XElement (C#)
+description: Conozca las diferencias entre consultar un objeto XDocument y consultar un objeto XElement. Revise los ejemplos de código que muestran estas diferencias.
 ms.date: 07/20/2015
 ms.assetid: 46221ff5-62ee-4de8-93ba-66465facb5c1
-ms.openlocfilehash: 475c77934ad535bad9ef79ff58bbddf991dc8f5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0c81768f06148308a639f96f4041e464b24edd33
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253138"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87300324"
 ---
 # <a name="querying-an-xdocument-vs-querying-an-xelement-c"></a>Diferencias entre realizar consultas de un XDocument Realizar consultas de un XElement (C#)
 Cuando carga un documento mediante <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>, observará que es necesario escribir las consultas de forma ligeramente diferente a como lo haría en caso de cargar el documento mediante <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.  

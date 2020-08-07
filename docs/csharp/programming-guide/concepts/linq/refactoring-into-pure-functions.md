@@ -1,13 +1,14 @@
 ---
 title: Refactorizar en funciones puras (C#)
+description: Aprenda a refactorizar el código con funciones puras. Vea ejemplos de código y examine los recursos adicionales disponibles.
 ms.date: 07/20/2015
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
-ms.openlocfilehash: 4cf91ff078bd1c4582daa05475a91c4a4ecaba3e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cc5dd26923e2edaed34c8f1b742b3dfa1e935e68
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253111"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87300233"
 ---
 # <a name="refactoring-into-pure-functions-c"></a>Refactorizar en funciones puras (C#)
 
@@ -24,7 +25,7 @@ Un aspecto importante de las transformaciones funcionales puras es aprender cóm
   
  Una forma de realizar una transición a la programación funcional es refactorizar código existente para eliminar efectos secundarios innecesarios y dependencias externas. De esta forma puede crear versiones de función pura del código existente.  
   
- En este tema se trata qué es una función pura y qué no es. En [Tutorial: Manipulación de contenido en un documento WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md) se muestra cómo manipular un documento de WordprocessingML y se incluyen dos ejemplos de cómo refactorizar mediante una función pura.  
+ En este tema se trata qué es una función pura y qué no es. El tutorial [Tutorial: Manipular contenido en un documento de WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md) muestra cómo manipular un documento de WordprocessingML e incluye dos ejemplos de cómo refactorizar usando una función pura.  
   
 ## <a name="eliminating-side-effects-and-external-dependencies"></a>Eliminar efectos secundarios y dependencias externas  
  Los siguientes ejemplos contraponen dos funciones no puras y una función pura.  
@@ -112,7 +113,7 @@ class Program
   
  Para obtener más información, vea [Standard Query Operators Overview (C#)](./standard-query-operators-overview.md)(Información general sobre operadores de consulta estándar (C#)).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Introducción a las transformaciones funcionales puras (C#)](./introduction-to-pure-functional-transformations.md)
 - [Diferencias entre la programación funcional y la programación imperativa (C#)](./functional-programming-vs-imperative-programming.md)

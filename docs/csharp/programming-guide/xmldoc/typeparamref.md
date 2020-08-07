@@ -1,5 +1,6 @@
 ---
 title: <typeparamref> - Guía de programación de C#
+description: Aprenda sobre la etiqueta XML <typeparamref>. Esta etiqueta permite que los consumidores del archivo de documentación den formato a la palabra de alguna manera distinta, por ejemplo, en cursiva.
 ms.date: 07/20/2015
 f1_keywords:
 - typeparamref
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - typeparamref C# XML tag
 - <typeparamref> C# XML tag
 ms.assetid: 6d8ffc58-12c5-4688-8db6-833a7ded5886
-ms.openlocfilehash: 266eadad322fd3c4167c7a911cb57ef1e1333012
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a39e896f1242452c7bcc94faa1e7ef3086ae2149
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789657"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87380727"
 ---
-# <a name="typeparamref-c-programming-guide"></a>\<typeparamref> (Guía de programación de C#)
+# <a name="typeparamref-c-programming-guide"></a>\<typeparamref> (guía de programación de C#)
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -26,7 +27,7 @@ ms.locfileid: "76789657"
 
 - `name`
 
-  Nombre del parámetro de tipo. Ponga el nombre entre comillas dobles (" ").
+  El nombre del parámetro de tipo. Ponga el nombre entre comillas dobles (" ").
 
 ## <a name="remarks"></a>Comentarios
 

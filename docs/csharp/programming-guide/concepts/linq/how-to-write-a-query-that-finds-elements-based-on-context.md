@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para escribir una consulta que busca elementos en función del contexto (C#)
+description: Aprenda a escribir una consulta que busque elementos en función del contexto. Vea ejemplos de código y examine recursos adicionales.
 ms.date: 07/20/2015
 ms.assetid: 3ff79ef0-fc8b-42fe-8cc0-10dc32b06b4e
-ms.openlocfilehash: 3fc131fdeb8dbf8871bfa455bc54eab0eeca7022
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64f09a41c2c1d01b0be8f776461f9be9df9ecb5f
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75348367"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303197"
 ---
 # <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>Procedimiento para escribir una consulta que busca elementos en función del contexto (C#)
 Es posible que alguna vez tenga que escribir una consulta que seleccione elementos basándose en su contexto. Quizás desea filtrar basándose en elementos de mismo nivel precedentes o siguientes. Quizás desea filtrar basándose e elementos secundarios o elementos antecesores.  
@@ -98,7 +99,7 @@ id = 3
 id = 6  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Xml.Linq.XElement.Parse%2A>
 - <xref:System.Xml.Linq.XContainer.Descendants%2A>

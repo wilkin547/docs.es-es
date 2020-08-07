@@ -1,16 +1,17 @@
 ---
 title: 'Delegados genéricos: Guía de programación de C#'
+description: Aprenda a usar delegados genéricos en C#. Vea ejemplos de código y examine los recursos adicionales disponibles.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], delegates
 - delegates [C#], generic
 ms.assetid: bdea509c-44c1-4309-aaa9-15c7aee009df
-ms.openlocfilehash: 4e57256328fc81a485670b47fcf8fd1c38e26fac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d99271ca9f12e95743d633caac16aaa4151e9c41
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712226"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301910"
 ---
 # <a name="generic-delegates-c-programming-guide"></a>Delegados genéricos (Guía de programación de C#)
 Un [delegado](../../language-reference/builtin-types/reference-types.md) puede definir sus propios parámetros de tipo. El código que hace referencia al delegado genérico puede especificar el tipo de argumento para crear un tipo construido abierto, igual que al crear una instancia de una clase genérica o al llamar a un método genérico, como se muestra en el siguiente ejemplo:  
@@ -33,7 +34,7 @@ Un [delegado](../../language-reference/builtin-types/reference-types.md) puede d
   
  [!code-csharp[csProgGuideGenerics#40](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#40)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Collections.Generic>
 - [Guía de programación de C#](../index.md)

@@ -1,17 +1,18 @@
 ---
 title: 'Convenciones de código de C#: Guía de programación de C#'
+description: Aprenda sobre las convenciones de código en C#. Las convenciones de código crean una apariencia coherente del código y facilitan la copia, la modificación y el mantenimiento del código.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - coding conventions, C#
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: 77b173a420f26834855e0bdca3c8d04406ac65d4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 772aebff0b8c7aebe7c7d5c7634cd2931f4570b1
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398380"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301858"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>Convenciones de código de C# (Guía de programación de C#)
 
@@ -170,7 +171,7 @@ Si va a definir un controlador de eventos que no es necesario quitar más tarde,
   
 ### <a name="static-members"></a>Miembros estáticos  
   
-Llame a miembros [estáticos](../../language-reference/keywords/static.md) con el nombre de clase *ClassName.StaticMember*. Esta práctica hace que el código sea más legible al clarificar el acceso estático.  No califique un miembro estático definido en una clase base con el nombre de una clase derivada.  Mientras el código se compila, su legibilidad se presta a confusión, y puede interrumpirse en el futuro si se agrega a un miembro estático con el mismo nombre a la clase derivada.  
+Llame a miembros [estáticos](../../language-reference/keywords/static.md) con el nombre de clase: *ClassName.StaticMember*. Esta práctica hace que el código sea más legible al clarificar el acceso estático.  No califique un miembro estático definido en una clase base con el nombre de una clase derivada.  Mientras el código se compila, su legibilidad se presta a confusión, y puede interrumpirse en el futuro si se agrega a un miembro estático con el mismo nombre a la clase derivada.  
   
 ### <a name="linq-queries"></a>Consultas LINQ  
   
@@ -204,7 +205,7 @@ Llame a miembros [estáticos](../../language-reference/keywords/static.md) con e
 
 Siga las instrucciones de [Instrucciones de codificación segura](../../../standard/security/secure-coding-guidelines.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Convenciones de código de Visual Basic](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)
 - [Instrucciones de codificación segura](../../../standard/security/secure-coding-guidelines.md)

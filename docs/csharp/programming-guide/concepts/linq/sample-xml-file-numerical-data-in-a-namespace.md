@@ -1,18 +1,19 @@
 ---
 title: 'Archivo XML de ejemplo: Datos numéricos de un espacio de nombres'
+description: Este archivo XML se usa en numerosos ejemplos de la documentación de LINQ to XML. Contiene datos para sumar, hallar la media y agrupar. El XML se encuentra en un espacio de nombres.
 ms.date: 07/20/2015
 ms.assetid: 51750cab-3c66-4511-90fb-b9d211308d31
-ms.openlocfilehash: 02788b73a7af9922b5a50237f2d2e401cba8abe2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fe467604840851c2af2533a620f9b7e32367fbb3
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "66483702"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302508"
 ---
 # <a name="sample-xml-file-numerical-data-in-a-namespace"></a>Archivo XML de ejemplo: Datos numéricos de un espacio de nombres
 El siguiente archivo XML se usa en numerosos ejemplos de la documentación de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este archivo contiene datos numéricos para realizar sumas, promedios y agrupaciones. El XML se encuentra en un espacio de nombres.  
   
-## <a name="data"></a>data  
+## <a name="data"></a>Datos  
   
 ```xml  
 <Root xmlns='http://www.adatum.com'>  

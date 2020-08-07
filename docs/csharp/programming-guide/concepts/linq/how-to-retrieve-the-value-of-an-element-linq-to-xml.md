@@ -1,13 +1,14 @@
 ---
 title: Procedimiento para recuperar el valor de un elemento (LINQ to XML) (C#)
+description: Aprenda a obtener el valor de los elementos. Vea ejemplos en los que se usa la conversión de cadenas, la conversión de enteros y la propiedad Value.
 ms.date: 07/20/2015
 ms.assetid: 4228c007-07c9-4cf2-a45b-e7074c109581
-ms.openlocfilehash: c4bb78e937fe0de08242923cdd7cd638abf571c7
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: eb750927d74c3068d7ab06caba9835110bd77a09
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805831"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301546"
 ---
 # <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>Procedimiento para recuperar el valor de un elemento (LINQ to XML) (C#)
 

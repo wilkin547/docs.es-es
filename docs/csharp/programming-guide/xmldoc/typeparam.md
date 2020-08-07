@@ -1,5 +1,6 @@
 ---
 title: <typeparam> - Guía de programación de C#
+description: Aprenda sobre la etiqueta XML <typeparam> . Esta etiqueta se usa en el comentario de una declaración de método o tipo genérico para describir un parámetro de tipo.
 ms.date: 07/20/2015
 f1_keywords:
 - typeparam
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - <typeparam> C# XML tag
 - typeparam C# XML tag
 ms.assetid: 9b99d400-e911-4e55-99c6-64367c96aa4f
-ms.openlocfilehash: 867ecacf58f95533395ded203a8f17bc92558ccf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5e5333e384e8c77b500f74ab7c6038146df6e2c0
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76793362"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87380792"
 ---
-# <a name="typeparam-c-programming-guide"></a>\<typeparam> (Guía de programación de C#)
+# <a name="typeparam-c-programming-guide"></a>\<typeparam> (guía de programación de C#)
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -26,7 +27,7 @@ ms.locfileid: "76793362"
 
 - `name`
 
-  Nombre del parámetro de tipo. Ponga el nombre entre comillas dobles (" ").
+  El nombre del parámetro de tipo. Ponga el nombre entre comillas dobles (" ").
 
 - `description`
 

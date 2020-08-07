@@ -1,17 +1,18 @@
 ---
 title: 'Procedimiento para leer un archivo de texto de línea en línea: guía de programación de C#'
+description: Aprenda a leer un archivo de texto línea a línea. Vea un ejemplo de código y examine los recursos adicionales disponibles.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - ReadLine method [C#]
 - reading text files, line by line
 - text files [C#]
 ms.assetid: d62e22c5-a13c-48db-af9b-f10c801b0cb1
-ms.openlocfilehash: b54d072ce9837f9b15694f2d7100817de62e9762
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 1e29013b1008e1000c23804dc3056014cc7c104b
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241778"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301962"
 ---
 # <a name="how-to-read-a-text-file-one-line-at-a-time-c-programming-guide"></a>Procedimiento para leer un archivo de texto de línea en línea (guía de programación de C#)
 En este ejemplo se lee el contenido de un archivo de texto línea a línea en una cadena mediante el método `ReadLine` de la clase `StreamReader`. Cada línea de texto se almacena en la cadena `line` y se muestra en la pantalla.  

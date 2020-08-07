@@ -1,17 +1,18 @@
 ---
 title: 'Procedimiento Suscribir y cancelar la suscripción a eventos: Guía de programación de C#'
+description: Aprenda a suscribir y cancelar la suscripción a eventos. Suscríbase a eventos mediante el IDE de Visual Studio, mediante programación o por medio de un método anónimo.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event handlers [C#], creating
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: d917ea097cf9253a65c1907efdca71a640df9497
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: f228cc2e4fd719f4d79c56d65aa45b2a3031cba7
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84240673"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302092"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Procedimiento Suscribir y cancelar la suscripción a eventos (Guía de programación de C#)
 La suscripción a un evento publicado por otra clase se realiza cuando quiere escribir código personalizado al que se llama cuando se produce ese evento. Por ejemplo, puede suscribirse al evento `click` de un botón para que la aplicación realice alguna operación cuando el usuario haga clic en el botón.  

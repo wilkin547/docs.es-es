@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: Escribir consultas en C# (LINQ)'
+description: En este tutorial se muestra cómo se usan las características del lenguaje C# en las expresiones de consulta de LINQ. En este artículo se usa Visual Studio como entorno de desarrollo.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], walkthroughs
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: f2135c6c3649ba2fc87e3b49770439688a58269b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d49cb725c9ce9a417f78f638795e98a75a086893
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73418055"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302222"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>Tutorial: Escribir consultas en C# (LINQ)
 Este tutorial muestra las características del lenguaje C# que se usan para escribir expresiones de consulta de LINQ.  
@@ -34,7 +35,7 @@ Este tutorial muestra las características del lenguaje C# que se usan para escr
   
 4. En el cuadro de texto **Nombre**, escriba otro nombre o acepte el predeterminado y luego elija el botón **Aceptar**.  
   
-     El nuevo proyecto aparece en el **Explorador de soluciones**.  
+     El proyecto nuevo aparece en el **Explorador de soluciones**.  
   
 5. Observe que el proyecto tiene una referencia a System.Core.dll y una directiva `using` para el espacio de nombres <xref:System.Linq?displayProperty=nameWithType>.  
   

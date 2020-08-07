@@ -1,16 +1,17 @@
 ---
 title: SignTool.exe (Herramienta de firma)
+description: Aprenda sobre SignTool.exe, la Herramienta de firma. Esta herramienta de línea de comandos firma los archivos digitalmente, comprueba sus firmas y les aplica marcas de tiempo.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Sign tool
 - SignTool.exe
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
-ms.openlocfilehash: 8ce31b1399700906d6d6e2a369dcfc4b61fe9646
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1254f345a8b3bb796217442cbad36d2e942b403
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180324"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517209"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (Herramienta de firma)
 La herramienta Firmar es una herramienta de la línea de comandos que firma archivos digitalmente, comprueba firmas en archivos o archivos con marcas de tiempo.  
@@ -35,7 +36,7 @@ signtool [command] [options] [file_name | ...]
   
  La herramienta Firmar admite los siguientes comandos. Cada comando se utiliza con conjuntos distintos de opciones, que se enumeran en las secciones respectivas.  
   
-|Comando|Descripción|  
+|Get-Help|Descripción|  
 |-------------|-----------------|  
 |`catdb`|Agrega un archivo de catálogo a una base de datos de catálogo o bien lo quita de esta. Las bases de datos de catálogo se utilizan para la búsqueda automática de archivos de catálogo y se identifican mediante un GUID. Para obtener una lista de las opciones admitidas por el comando `catdb`, vea [Opciones del comando catdb](signtool-exe.md#catdb).|  
 |`sign`|Firma archivos digitalmente. Las signaturas digitales protegen los archivos contra la manipulación y permiten a los usuarios comprobar el firmante en función de un certificado de firma. Para obtener una lista de las opciones admitidas por el comando `sign`, vea [Opciones del comando sign](signtool-exe.md#sign).|  
