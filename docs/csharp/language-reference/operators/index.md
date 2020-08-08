@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 19b5683a7cd334e1203c57fa90d275b659eac873
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 9ada39a2144e5565a76a25df0f83424710ad939f
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556558"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916822"
 ---
 # <a name="c-operators-and-expressions-c-reference"></a>Operadores y expresiones de C# (referencia de C#)
 
@@ -33,7 +33,7 @@ Las expresiones más simples de C# son literales (por ejemplo, números [enteros
 
 En el código siguiente, se muestran ejemplos de expresiones en el lado derecho de las asignaciones:
 
-[!code-csharp[expression examples](snippets/Overview.cs#Expressions)]
+[!code-csharp[expression examples](snippets/shared/Overview.cs#Expressions)]
 
 Normalmente, una expresión genera un resultado que se puede incluir en otra expresión. Un método de llamada [`void`](../builtin-types/void.md) es un ejemplo de expresión que no genera un resultado. Solo se puede usar como [instrucción](../../programming-guide/statements-expressions-operators/statements.md), tal como se muestra en el ejemplo siguiente:
 
@@ -45,15 +45,15 @@ A continuación se indican otros tipos de expresiones que ofrece C#:
 
 - [Expresiones de cadenas interpoladas](../tokens/interpolated.md), que proporcionan una sintaxis práctica para crear cadenas con formato:
 
-  [!code-csharp-interactive[interpolated string](snippets/Overview.cs#InterpolatedString)]
+  [!code-csharp-interactive[interpolated string](snippets/shared/Overview.cs#InterpolatedString)]
 
 - [Expresiones lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md), que permiten crear funciones anónimas.
 
-  [!code-csharp-interactive[lambda expression](snippets/Overview.cs#Lambda)]
+  [!code-csharp-interactive[lambda expression](snippets/shared/Overview.cs#Lambda)]
 
 - [Expresiones de consulta](../keywords/query-keywords.md), que permiten usar capacidades de consulta directamente en C# :
 
-  [!code-csharp-interactive[query expression](snippets/Overview.cs#Query)]
+  [!code-csharp-interactive[query expression](snippets/shared/Overview.cs#Query)]
 
 Puede usar una [definición de cuerpo de expresiones](../../programming-guide/statements-expressions-operators/expression-bodied-members.md) para proporcionar una definición concisa para un método, un constructor, una propiedad, un indexador o un finalizador.
 
