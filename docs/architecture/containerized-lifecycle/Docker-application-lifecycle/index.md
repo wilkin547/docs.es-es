@@ -1,13 +1,13 @@
 ---
 title: Introducción al ciclo de vida de aplicaciones de Docker
 description: Comience aquí el proceso de desarrollo de aplicaciones en contenedor.
-ms.date: 11/23/2018
-ms.openlocfilehash: 825226e0004af16deccfe1418596d91d6438b076
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 08/06/2020
+ms.openlocfilehash: 65a707eb76c79c6ae774cdbbed096d6e42680ff5
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "70294920"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916049"
 ---
 # <a name="introduction-tothe-docker-application-life-cycle"></a>Introducción al ciclo de vida de aplicaciones de Docker
 
