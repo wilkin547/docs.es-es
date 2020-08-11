@@ -1,14 +1,17 @@
 - name: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
   href: index.md
   items:
-    - name: ¿Qué es Docker?
-      href: what-is-docker.md
-    - name: Terminología de Docker
-      href: docker-terminology.md
-    - name: 'Contenedores, imágenes y registros de Docker'
-      href: docker-containers-images-and-registries.md
-    - name: El camino hacia las aplicaciones modernas basadas en contenedores
-      href: road-to-modern-applications-based-on-containers.md
+    - name: Introducción a Containers y Docker
+      href: introduction-to-containers-and-docker.md
+      items:
+        - name: ¿Qué es Docker?
+          href: what-is-docker.md
+        - name: Terminología de Docker
+          href: docker-terminology.md
+        - name: 'Contenedores, imágenes y registros de Docker'
+          href: docker-containers-images-and-registries.md
+        - name: El camino hacia las aplicaciones modernas basadas en contenedores
+          href: road-to-modern-applications-based-on-containers.md
     - name: Introducción al ciclo de vida de aplicaciones de Docker
       href: Docker-application-lifecycle/index.md
       items:
@@ -41,14 +44,14 @@
           href: design-develop-containerized-apps/visual-studio-tools-for-docker.md
         - name: Uso de comandos de Windows PowerShell en un archivo DockerFile para configurar contenedores de Windows (basado en Docker estándar)
           href: design-develop-containerized-apps/set-up-windows-containers-with-powershell.md
-        - name: "Compilación de aplicaciones de ASP.NET Core\_2.0 implementadas como contenedores de Linux en el orquestador de AKS/Kubernetes"
+        - name: Compilación de aplicaciones ASP.NET Core implementadas como contenedores de Linux en el orquestador de AKS/Kubernetes
           href: design-develop-containerized-apps/build-aspnet-core-applications-linux-containers-aks-kubernetes.md
     - name: Flujo de trabajo de DevOps para aplicaciones de Docker con herramientas de Microsoft
       href: docker-devops-workflow/index.md
       items:
         - name: Pasos del flujo de trabajo de DevOps de bucle externo para una aplicación de Docker
           href: docker-devops-workflow/docker-application-outer-loop-devops-workflow.md
-        - name: "Creación de canalizaciones de CI/CD en Azure DevOps Services para una aplicación .NET Core\_2.0 en contenedores e implementación en un clúster de Kubernetes"
+        - name: Creación de canalizaciones de CI/CD en Azure DevOps Services para una aplicación ASP.NET Core en contenedores e implementación en un clúster de Kubernetes
           href: docker-devops-workflow/create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md
     - name: 'Ejecución, administración y supervisión de entornos de producción de Docker'
       href: run-manage-monitor-docker-environments/index.md
