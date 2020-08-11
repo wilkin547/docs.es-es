@@ -1,31 +1,89 @@
 ---
-title: Introducción a Containers y Docker
-description: Consulte una introducción de alto nivel a las principales ventajas del uso de Docker.
-ms.date: 02/15/2019
-ms.openlocfilehash: 9ac08a64cd2465b4b88a266c1ec0925f37680bf9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+title: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
+description: Obtenga información general de alto nivel del proceso de desarrollo e implementación para desarrollar e implementar aplicaciones en contenedores con la plataforma y las herramientas de Microsoft y Docker.
+ms.date: 07/30/2020
+ms.openlocfilehash: d8055315b25f73d7b0b355026ab6b2c4767f9d89
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73738175"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915171"
 ---
-# <a name="introduction-to-containers-and-docker"></a>Introducción a Containers y Docker
+# <a name="containerized-docker-application-lifecycle-with-microsoft-platform-and-tools"></a>Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
 
-*La creación de contenedores es un enfoque de desarrollo de software en el que una aplicación o un servicio, sus dependencias y su configuración (extraídos como archivos de manifiesto de implementación) se empaquetan como una imagen de contenedor. Puede probar la aplicación en contenedor como una unidad e implementarla como una instancia de imagen de contenedor en el sistema operativo host.*
+![Portada del libro](./media/devops-book-cover-large-we.png)
 
-Del mismo modo que los contenedores de mercancías permiten su transporte por barco, tren o camión independientemente de la carga de su interior, los contenedores de software actúan como una unidad estándar de implementación de software que puede contener diferentes dependencias y código. De esta manera, la inclusión del software en contenedor permite a los desarrolladores y los profesionales de TI implementarlo en entornos con pocas modificaciones o ninguna en absoluto.
+**EDICIÓN v3.1**: actualizada a ASP.NET Core 3.1
 
-Los contenedores también aíslan las aplicaciones entre sí en un sistema operativo compartido. Las aplicaciones en contenedor se ejecutan sobre un host de contenedor que a su vez se ejecuta en el sistema operativo (Linux o Windows). Por lo tanto, los contenedores tienen una superficie mucho menor que las imágenes de máquina virtual (VM).
+En esta guía se incluye información general para desarrollar e implementar aplicaciones ASP.NET Core en contenedores con Docker, mediante la plataforma y las herramientas de Microsoft. En ella también se incluye una presentación de alto nivel de Azure DevOps, a fin de implementar canalizaciones de CI/CD, así como Azure Container Registry (ACR) y Azure Kubernetes Services (AKS) para la implementación.
 
-Cada contenedor puede ejecutar una aplicación web o un servicio al completo, como se muestra en la figura 1-1. En este ejemplo, el host de Docker es un host de contenedor, y App 1, App 2, Svc 1 y Svc 2 son aplicaciones o servicios en contenedor.
+Para obtener detalles de bajo nivel relacionados con el desarrollo, puede ver la guía [Microservicios de .NET: Arquitectura para aplicaciones .NET en contenedor](https://docs.microsoft.com/dotnet/architecture/microservices/) y su aplicación de referencia relacionada, [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers).
 
-![Diagrama en el que se muestran cuatro contenedores que se ejecutan en una máquina virtual o un servidor.](./media/index/multiple-containers-single-host.png)
+## <a name="send-us-your-feedback"></a>Envíenos sus comentarios.
 
-**Figura 1-1**. Varios contenedores ejecutándose en un host de contenedor.
+Hemos creado esta guía para ayudarle a entender la arquitectura de aplicaciones y microservicios en contenedor en .NET. La guía y la aplicación de referencia relacionada irán evolucionando, por lo que le agradecemos sus comentarios. Si tiene comentarios sobre cómo se puede mejorar esta guía, envíelos a <https://aka.ms/ebookfeedback>.
 
-Otra ventaja derivada de la inclusión en contenedores es la escalabilidad. La creación de contenedores para tareas a corto plazo permite escalar horizontalmente con gran rapidez. Desde el punto de vista de la aplicación, la creación de instancias de una imagen (la creación de un contenedor) es similar a la creación de instancias de un proceso como un servicio o una aplicación web. Pero con fines de confiabilidad, cuando ejecute varias instancias de la misma imagen en varios servidores host, seguramente le interesará que cada contenedor (instancia de imagen) se ejecute en un servidor host o máquina virtual diferente en dominios de error distintos.
+## <a name="credits"></a>Créditos
 
-En resumen, los contenedores ofrecen las ventajas del aislamiento, la portabilidad, la agilidad, la escalabilidad y el control a lo largo de todo el flujo de trabajo del ciclo de vida de la aplicación. La ventaja más importante es el aislamiento del entorno que se proporciona entre el desarrollo y las operaciones.
+Autor:
+
+> **Cesar de la Torre**, administrador de programas sénior del equipo de producto de .NET, Microsoft Corp.
+
+Editor de adquisiciones:
+
+> **Janine Patrick**
+
+Editor de desarrollo:
+
+> **Bob Russell**, profesional de soluciones en Microsoft
+>
+> [**Octal Publishing, Inc.** ](http://www.octalpub.com/)
+
+Producción editorial:
+
+> [Dianne Russell](http://www.octalpub.com/)
+>
+> **Octal Publishing, Inc.**
+
+Revisor:
+
+> **Bob Russell**, profesional de soluciones en Microsoft
+
+Participantes y revisores:
+
+> **Nish Anil**, director de administración de programas, equipo de .NET, Microsoft
+>
+> **Miguel Veloso**, ingeniero de desarrollo de software en Plain Concepts
+>
+> **Sumit Ghosh**, asesor principal en Neudesic
+
+## <a name="copyright"></a>Copyright
+
+PUBLICADO POR
+
+Equipos de producto de la División de desarrolladores de Microsoft, .NET y Visual Studio
+
+División de Microsoft Corporation
+
+One Microsoft Way
+
+Redmond, Washington 98052-6399
+
+Copyright &copy; 2020 de Microsoft Corporation
+
+Todos los derechos reservados. No se puede reproducir ni transmitir de ninguna forma ni por ningún medio ninguna parte del contenido de este libro sin la autorización por escrito del publicador.
+
+Este libro se proporciona “tal cual” y expresa las opiniones del autor. Las opiniones y la información expresados en este libro, incluidas las direcciones URL y otras referencias a sitios web de Internet, pueden cambiar sin previo aviso.
+
+Algunos ejemplos descritos aquí se proporcionan únicamente con fines ilustrativos y son ficticios. No debe deducirse ninguna asociación ni conexión reales.
+
+Microsoft y las marcas comerciales indicadas en <https://www.microsoft.com> en la página web "Marcas comerciales" pertenecen al grupo de empresas de Microsoft.
+
+Mac y macOS son marcas comerciales de Apple Inc.
+
+El logotipo de la ballena de Docker es una marca registrada de Docker, Inc. Se usa con permiso.
+
+El resto de marcas y logotipos pertenece a sus respectivos propietarios.
 
 >[!div class="step-by-step"]
->[Siguiente](what-is-docker.md)
+>[Siguiente](introduction-to-containers-and-docker.md)

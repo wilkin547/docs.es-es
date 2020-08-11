@@ -1,13 +1,13 @@
 ---
 title: Introducción a la plataforma y las herramientas de Microsoft para aplicaciones en contenedor
 description: Descubra las ofertas de Microsoft compatibles con el ciclo de vida de aplicaciones de Docker.
-ms.date: 02/15/2019
-ms.openlocfilehash: 84f4136c6b6c284dd5ecb3fc174ac825857a567e
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.date: 08/06/2020
+ms.openlocfilehash: 72b98f945494936b7775a525297a17c5ce72c69a
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158507"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916065"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Introducción a la plataforma y las herramientas de Microsoft para aplicaciones en contenedor
 
@@ -15,37 +15,35 @@ ms.locfileid: "82158507"
 
 En la figura 3-1 se muestran los principales pilares del ciclo de vida de las aplicaciones de Docker clasificadas por el tipo de trabajo entregado por varios equipos (desarrollo de aplicaciones, procesos de infraestructuras de DevOps y operaciones y administración de TI). Por lo general, en la empresa, los perfiles del "rol" responsable de cada área son diferentes. Sus aptitudes también lo son.
 
-:::image type="complex" source="./media/index/microsoft-tools-contanerized-docker-app.png" alt-text="Diagrama en el que se muestran las herramientas de Microsoft necesarias para mantener aplicaciones de Docker.":::
-Herramientas de Microsoft. Para la carga de trabajo de desarrollo y diseño: motor de Docker para Windows, Visual Studio, Visual Studio Code, .NET Core y Azure Kubernetes Service. Para la carga de trabajo de compilación, prueba y envío: Azure DevOps, Team Foundation Server, la CLI de Docker y Azure Kubernetes Service. Para la carga de trabajo de ejecución, supervisión y administración: Azure Monitor, Azure Portal, Azure Kubernetes Services, Service Fabric y otros orquestadores.
-:::image-end:::
+![Ventana para agregar nuevo proyecto en Visual Studio, con la aplicación web de ASP.NET Core seleccionada.](media/index/microsoft-tools-contanerized-docker-app.png)
 
 **Figura 3-1.** Pilares principales del ciclo de vida de las aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft.
 
 Un flujo de trabajo del ciclo de vida de aplicaciones de Docker en contenedor, en principio, puede ser prescriptivo en función de "opciones de productos predeterminadas", de tal forma que los desarrolladores pueden comenzar más rápido, pero es fundamental que, como opción alternativa, haya un marco abierto para que sea un flujo de trabajo flexible capaz de adaptarse a los diferentes contextos de cada organización o empresa. La infraestructura de flujo de trabajo (componentes y productos) debe ser lo suficientemente flexible para abarcar el entorno que cada empresa tendrá en el futuro, con la capacidad incluso de cambiar los productos de desarrollo o DevOps por otros. Esta flexibilidad, receptividad y amplia selección de tecnologías en la plataforma e infraestructura son precisamente las prioridades de Microsoft para aplicaciones de Docker en contenedor, como se explica en los capítulos siguientes.
 
-En la tabla 3-1 se muestra que la intención de las operaciones de DevOps de Microsoft para aplicaciones de Docker en contenedor es ofrecer un flujo de trabajo abierto de DevOps para poder elegir qué productos usar para cada fase (Microsoft o terceros), al mismo tiempo que se ofrece un flujo de trabajo simplificado que proporciona "productos predeterminados" ya conectados; por tanto, puede comenzar rápidamente con el flujo de trabajo de DevOps de nivel empresarial para aplicaciones de Docker.
+En la tabla 3-1 se muestra que la intención de las operaciones de Azure DevOps para aplicaciones de Docker en contenedor es ofrecer un flujo de trabajo abierto de DevOps para poder elegir qué productos usar para cada fase (Microsoft o terceros), al mismo tiempo que se ofrece un flujo de trabajo simplificado que proporciona "productos predeterminados" ya conectados; por tanto, puede comenzar rápidamente con el flujo de trabajo de DevOps de nivel empresarial para aplicaciones de Docker.
 
-**Tabla 3-1.** Flujos de trabajo de DevOps, abiertos para cualquier tecnología.
+**Tabla 3-1.** Flujos de trabajo de Azure DevOps, abiertos para cualquier tecnología
 
-| administrador de flujos de trabajo | Tecnologías de Microsoft | Aplicaciones de terceros: acoplables a Azure |
+| administrador de flujos de trabajo | Tecnologías de Microsoft | Aplicaciones de terceros (acoplables a Azure) |
 | ---------------------------| ----------------------------------------------------| --------------------------------------------------------------------------------|
-| Plataforma para aplicaciones de Docker   | • Microsoft Visual Studio y Visual Studio Code<br /> • .NET<br /> • Microsoft Azure Kubernetes Service (AKS)<br /> • Azure Service Fabric<br /> • Azure Container Registry<br /> | • Cualquier editor de código (por ejemplo, Sublime)<br /> • Cualquier lenguaje (Node.js, Java, Go, etc.)<br /> • Cualquier orquestrator y programador<br /> • Cualquier registro de Docker<br /> |
-| DevOps para aplicaciones de Docker     | • Azure DevOps Services<br /> • Microsoft Team Foundation Server<br /> • Azure Kubernetes Service (AKS)<br /> • Azure Service Fabric<br /> | • GitHub, Git, Subversion, etc.<br /> • Jenkins, Chef, Puppet, Velocity, CircleCI, TravisCI, etc.<br /> • Centro de datos de Docker local, Docker Swarm, Mesos DC/OS, Kubernetes, etc.<br /> |
+| Plataforma para aplicaciones de Docker   | • Microsoft Visual Studio y Visual Studio Code<br /> • .NET<br /> • Microsoft Azure Kubernetes Service (AKS)<br /> • Azure Container Registry<br /> | • Cualquier editor de código (por ejemplo, Sublime)<br /> • Cualquier lenguaje (Node.js, Java, Go, etc.)<br /> • Cualquier orquestrator y programador<br />  • Cualquier registro de Docker<br /> |
+| DevOps para aplicaciones de Docker     | • Azure DevOps Services<br /> • Microsoft Team Foundation Server<br /> • Azure Kubernetes Service (AKS)<br /> | • GitHub, Git, Subversion, etc.<br /> • Jenkins, Chef, Puppet, Velocity, CircleCI, TravisCI, etc.<br /> • Centro de datos de Docker local, Kubernetes, Mesos DC/OS, etc.<br /> |
 | Administración y supervisión  | • Azure Monitor | • Marathon, Chronos, etc.<br />|
 
 La plataforma y las herramientas de Microsoft para aplicaciones de Docker en contenedor, como se define en la tabla 3-1, constan de los siguientes componentes:
 
 - **Plataforma de desarrollo de aplicaciones de Docker**. El desarrollo de un servicio una colección de servicios que componen una "aplicación". La plataforma de desarrollo ofrece todo el trabajo que los desarrolladores necesitan antes de insertar el código en un repositorio de código compartido. El desarrollo de servicios, implementados como contenedores, es similar al desarrollo de las mismas aplicaciones o servicios sin Docker. Puede seguir usando su lenguaje favorito (.NET, Node.js, Go, etc.) y su editor o IDE preferidos, como Visual Studio o Visual Studio Code. Sin embargo, en lugar de considerar Docker como un destino de implementación, los servicios se desarrollan en el entorno de Docker. El código se compila, ejecuta, prueba y depura en contenedores a nivel local, proporcionando el entorno de destino en la fase de desarrollo. Al proporcionar el entorno de destino local, los contenedores de Docker configuran lo que ayudará significativamente a mejorar el ciclo de vida de DevOps. Visual Studio y Visual Studio Code disponen de extensiones para integrar los contenedores de Docker en el proceso de desarrollo.
 
-- **DevOps para las aplicaciones de Docker**. Los desarrolladores que crean aplicaciones de Docker pueden usar [Azure DevOps Services](https://azure.microsoft.com/services/devops/) o cualquier otro producto de terceros, como Jenkins, para crear una administración integral y automatizada del ciclo de vida de las aplicaciones.
+- **DevOps para las aplicaciones de Docker**. Los desarrolladores que crean aplicaciones de Docker pueden usar [Azure DevOps](https://azure.microsoft.com/services/devops/) o cualquier otro producto de terceros, como Jenkins, para crear una administración integral y automatizada del ciclo de vida de las aplicaciones.
 
-  Con Azure DevOps Services, los desarrolladores pueden crear DevOps centradas en contenedores para un proceso rápido e iterativo que abarque el control del código fuente desde cualquier plataforma (Azure DevOps Services-Git, GitHub, cualquier repositorio Git remoto o Subversion), integración continua (CI), pruebas unitarias internas, pruebas de integración entre contenedores y servicios, entrega continua (CD) y administración de versiones. Los desarrolladores también pueden automatizar las versiones de las aplicaciones de Docker en Azure Kubernetes Service (AKS), desde entornos de desarrollo hasta almacenamiento provisional y producción.
+  Con Azure DevOps, los desarrolladores pueden crear DevOps centradas en contenedores para un proceso rápido e iterativo que abarque el control del código fuente desde cualquier plataforma (Azure DevOps-Git, GitHub, cualquier repositorio Git remoto o Subversion), integración continua (CI), pruebas unitarias internas, pruebas de integración entre contenedores y servicios, entrega continua (CD) y administración de versiones. Los desarrolladores también pueden automatizar las versiones de las aplicaciones de Docker en Azure Kubernetes Service (AKS), desde entornos de desarrollo a almacenamiento provisional y producción.
 
 - **Administración y supervisión**. Los equipos de TI pueden administrar y supervisar aplicaciones y servicios de producción de varias maneras, mediante la integración de ambas perspectivas en una experiencia consolidada.
 
-  - **Azure Portal** Si usa orquestadores de código abierto, Azure Kubernetes Service (AKS), Service Fabric y otros orquestadores le ayudarán a configurar y mantener los entornos de Docker. Si usa Azure Service Fabric, la herramienta Service Fabric Explorer permite visualizar y configurar el clúster.
+  - **Azure Portal** Azure Kubernetes Service (AKS) ayuda a configurar y mantener los entornos de Docker. También puede usar otros orquestadores para visualizar y configurar el clúster.
 
-  - **Herramientas de Docker** Puede administrar las aplicaciones de contenedor con herramientas conocidas. No es necesario cambiar sus prácticas de administración de Docker existentes para mover cargas de trabajo de contenedor a la nube. Use las herramientas de administración de aplicaciones con las que ya está familiarizado y conéctelas a través de los puntos de conexión de API para el orquestador de su elección. También puede usar otras herramientas de terceros para administrar las aplicaciones de Docker, como Docker Datacenter o las herramientas de Docker para la CLI.
+  - **Herramientas de Docker** Puede administrar las aplicaciones de contenedor con herramientas conocidas. No es necesario cambiar sus prácticas de administración de Docker existentes para mover cargas de trabajo de contenedor a la nube. Use las herramientas de administración de aplicaciones con las que ya está familiarizado y conéctelas a través de los puntos de conexión de API para el orquestador de su elección. También puede usar otras herramientas de terceros para administrar las aplicaciones de Docker o las herramientas de Docker para la CLI.
 
     Incluso si está familiarizado con los comandos de Linux, puede administrar las aplicaciones de contenedor mediante Microsoft Windows y PowerShell con una línea de comandos del subsistema de Linux y los productos (Docker, Kubernetes, etc.) que los clientes ejecutan en esta funcionalidad del subsistema de Linux. Más adelante en este libro obtendrá más información sobre el uso de estas herramientas en el subsistema de Linux con su sistema operativo favorito de Microsoft Windows.
 

@@ -82,3 +82,35 @@
           href: ../../../../_csharplang/proposals/csharp-8.0/readonly-instance-members.md
         - name: Elemento stackalloc anidado
           href: ../../../../_csharplang/proposals/csharp-8.0/nested-stackalloc.md
+    - name: Propuesta de especificación de C# 9.0
+      items:
+        - name: Registros
+          href: ../../../../_csharplang/proposals/csharp-9.0/records.md
+        - name: Instrucciones de nivel superior
+          href: ../../../../_csharplang/proposals/csharp-9.0/top-level-statements.md
+        - name: Mejoras de coincidencia de patrones
+          href: ../../../../_csharplang/proposals/csharp-9.0/patterns3.md
+        - name: Establecedores de solo inicialización
+          href: ../../../../_csharplang/proposals/csharp-9.0/init.md
+        - name: Expresiones nuevas con tipo de destino
+          href: ../../../../_csharplang/proposals/csharp-9.0/target-typed-new.md
+        - name: Inicializadores de módulo
+          href: ../../../../_csharplang/proposals/csharp-9.0/module-initializers.md
+        - name: Extender métodos parciales
+          href: ../../../../_csharplang/proposals/csharp-9.0/extending-partial-methods.md
+        - name: Funciones anónimas estáticas
+          href: ../../../../_csharplang/proposals/csharp-9.0/static-anonymous-functions.md
+        - name: Expresión condicional con tipos de destino
+          href: ../../../../_csharplang/proposals/csharp-9.0/target-typed-conditional-expression.md
+        - name: Tipos de valor devueltos de covariante
+          href: ../../../../_csharplang/proposals/csharp-9.0/covariant-returns.md
+        - name: Parámetros de descarte lambda
+          href: ../../../../_csharplang/proposals/csharp-9.0/lambda-discard-parameters.md
+        - name: Atributos en funciones locales
+          href: ../../../../_csharplang/proposals/csharp-9.0/local-function-attributes.md
+        - name: Enteros con tamaño nativos
+          href: ../../../../_csharplang/proposals/csharp-9.0/native-integers.md
+        - name: Punteros de función
+          href: ../../../../_csharplang/proposals/csharp-9.0/function-pointers.md
+        - name: Supresión de la emisión de la marca localsinit
+          href: ../../../../_csharplang/proposals/csharp-9.0/skip-localsinit.md

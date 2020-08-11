@@ -105,7 +105,7 @@ items:
           - name: Instalar y usar un paquete
             href: /nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli
             displayName: 'tutorials, cli'
-          - name: Creación y publicación de un paquete
+          - name: Crear y publicar un paquete
             href: /nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli
             displayName: tutorials
       - name: Uso de Visual Studio para Mac
@@ -290,6 +290,8 @@ items:
         href: diagnostics/index.md
       - name: Depuradores administrados
         href: diagnostics/managed-debuggers.md
+      - name: EventCounters
+        href: diagnostics/event-counters.md
       - name: Registro y seguimiento
         href: diagnostics/logging-tracing.md
       - name: Herramientas globales de la CLI de .NET Core
@@ -302,6 +304,8 @@ items:
             href: diagnostics/dotnet-trace.md
       - name: Tutoriales de diagnóstico de .NET Core
         items:
+          - name: Obtención de métricas de rendimiento con EventCounters
+            href: diagnostics/event-counter-perf.md
           - name: Depuración de una fuga de memoria
             href: diagnostics/debug-memory-leak.md
           - name: Depuración del uso elevado de CPU
