@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: 829e7dce4801508a8311f7bcbfeccbc36184cffc
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: eee04959493914018904b61b0e5a289f172f2f18
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286642"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063723"
 ---
 # <a name="queries-in-linq-to-dataset"></a>Consultas en LINQ to DataSet
 Una consulta es una expresión que recupera datos de un origen de datos. Las consultas se suelen expresar en un lenguaje de consulta especializado, como SQL para bases de datos relacionales y XQuery para XML. Por lo tanto, los programadores han tenido que aprender un lenguaje de consultas nuevo para cada tipo de origen de datos o formato de datos que consultan. Language-Integrated Query (LINQ) ofrece un modelo coherente y más sencillo para trabajar con los datos de varios formatos y orígenes de datos. En una consulta de LINQ siempre se trabaja con objetos de programación.  
@@ -29,7 +29,7 @@ Una consulta es una expresión que recupera datos de un origen de datos. Las con
 ## <a name="queries"></a>Consultas  
  LINQ to DataSet consultas se pueden formular en dos sintaxis diferentes: sintaxis de expresiones de consulta y sintaxis de consulta basada en métodos.  
   
-### <a name="query-expression-syntax"></a>Sintaxis de expresión de consulta  
+### <a name="query-expression-syntax"></a>Sintaxis de expresiones de consulta  
  Las expresiones de consulta son una sintaxis de consulta declarativa. Esta sintaxis permite a un desarrollador escribir consultas en C# o Visual Basic en un formato similar a SQL. Si se utiliza la sintaxis de expresiones de consulta, se pueden realizar incluso operaciones complejas de filtrado, ordenación y agrupamiento en orígenes de datos con código mínimo. Para obtener más información, vea [expresiones de consulta LINQ](../../../csharp/linq/index.md#query-expression-overview) y [operaciones básicas de consulta (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
   
  El Common Language Runtime de .NET Framework (CLR) no puede leer la sintaxis de expresiones de consulta en sí. Por lo tanto, en tiempo de compilación, las expresiones de consulta se traducen a algo que CLR no comprende: las llamadas a métodos. Estos métodos se conocen como operadores de *consulta estándar*. Como programador, tiene la opción de llamarlos directamente utilizando la sintaxis de método en lugar de la sintaxis de consulta. Para obtener más información, vea [Query Syntax and Method Syntax in LINQ](../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md) (Sintaxis de consulta y sintaxis de método en LINQ). Para obtener más información acerca de los operadores de consulta estándar, vea [información general sobre operadores de consulta estándar](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md).  
@@ -40,7 +40,7 @@ Una consulta es una expresión que recupera datos de un origen de datos. Las con
  [!code-vb[DP LINQ to DataSet Examples#SelectSimple1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#selectsimple1)]  
   
 ### <a name="method-based-query-syntax"></a>Sintaxis de consultas basadas en métodos  
- La otra forma de formular consultas LINQ to DataSet es mediante el uso de consultas basadas en métodos. La sintaxis de consultas basadas en métodos es una secuencia de llamadas directas a los métodos de operador de LINQ que pasan expresiones lambda como parámetros. Para obtener más información, vea [Expresiones lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
+ La otra forma de formular consultas LINQ to DataSet es mediante el uso de consultas basadas en métodos. La sintaxis de consultas basadas en métodos es una secuencia de llamadas directas a los métodos de operador de LINQ que pasan expresiones lambda como parámetros. Para obtener más información, vea [Expresiones lambda](../../../csharp/language-reference/operators/lambda-expressions.md).  
   
  Este ejemplo usa <xref:System.Linq.Enumerable.Select%2A> para devolver todas las filas de `Product` y mostrar los nombres de producto.  
   
@@ -60,7 +60,7 @@ Una consulta es una expresión que recupera datos de un origen de datos. Las con
  [!code-csharp[DP LINQ to DataSet Examples#ToArray2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#toarray2)]
  [!code-vb[DP LINQ to DataSet Examples#ToArray2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#toarray2)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
 - [Guía de programación](programming-guide-linq-to-dataset.md)
 - [Consulta de conjuntos de datos](querying-datasets-linq-to-dataset.md)

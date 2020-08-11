@@ -1,13 +1,13 @@
 ---
-title: Formato de texto sin formato
+title: Texto sin formato
 description: 'Aprenda a usar printf y otro formato de texto sin formato en aplicaciones y scripts de F #.'
 ms.date: 07/22/2020
-ms.openlocfilehash: 6b14633e074961757d0f0cd258d1b1667f5fd8ee
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 90a861736dae69dfbc199a19e24f587c42404737
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87854924"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063788"
 ---
 # <a name="plain-text-formatting"></a>Formato de texto sin formato
 
@@ -68,7 +68,7 @@ Técnicamente hablando, al usar `printf` y otras funciones relacionadas, una reg
 
 Las especificaciones de formato de los `printf` formatos son cadenas con `%` marcadores que indican el formato. Los marcadores de posición de formato se componen de `%[flags][width][.precision][type]` que el tipo se interpreta de la siguiente manera:
 
-| Especificador de formato   | Tipos (s)        | Observaciones                      |
+| Especificador de formato   | Tipos (s)        | Comentarios                      |
 |:-------------------|:---------------|:-----------------------------|
 | `%b`               | bool      | Con formato `true` o`false`                |
 | `%s`               | string    | Con formato de contenido sin escape         |
@@ -85,6 +85,7 @@ Las especificaciones de formato de los `printf` formatos son cadenas con `%` mar
 | `%A` | cualquier valor  |   Con formato de [texto sin formato estructurado](plaintext-formatting.md) con la configuración de diseño predeterminada |
 | `%a` | cualquier valor  |   Requiere dos argumentos: una función de formato que acepte un parámetro de contexto y el valor, y el valor concreto que se va a imprimir. |
 | `%t` | cualquier valor  |   Requiere un argumento: una función de formato que acepte un parámetro de contexto que genere o devuelva el texto adecuado |
+| `%%` | (ninguno)  |   No requiere ningún argumento e imprime un signo de porcentaje sin formato:`%` |
 
 Los tipos enteros básicos son `byte` ( `System.Byte` ), `sbyte` ( `System.SByte` ), `int16` ( `System.Int16` ), `uint16` ( `System.UInt16` ), `int32` ( `System.Int32` ), `uint32` ( `System.UInt32` ), `int64` ( `System.Int64` ), `uint64` ( `System.UInt64` ), `nativeint` ( `System.IntPtr` ) y `unativeint` ( `System.UIntPtr` ).
 Los tipos de punto flotante básicos son `float` ( `System.Double` ) y `float32` ( `System.Single` ).
@@ -93,7 +94,7 @@ El ancho opcional es un entero que indica el ancho mínimo del resultado. Por ej
 
 Las marcas válidas son:
 
-| Marca   | Efecto        | Observaciones                      |
+| Marca   | Efecto        | Comentarios                      |
 |:-------------------|:---------------|:-----------------------------|
 | `0`  | Agregue ceros en lugar de espacios para crear el ancho necesario |    |
 | `-` |  Justificar a la izquierda el resultado dentro del ancho especificado |   |
@@ -417,6 +418,6 @@ Estos atributos se omiten en el formato de texto sin formato de F #, pero puede 
 ## <a name="see-also"></a>Vea también
 
 - [Cadenas](strings.md)
-- [Informes](records.md)
+- [Registros](records.md)
 - [Uniones discriminadas](discriminated-unions.md)
-- [F# interactivo](fsharp-interactive-options.md)
+- [F# Interactive](fsharp-interactive-options.md)

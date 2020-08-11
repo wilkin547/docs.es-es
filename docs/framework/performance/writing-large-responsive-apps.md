@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 8b1c9ab25299fcbafca6aba7b13217713a941ce8
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 4a9f5d50ad78b2b0bef0ece3c4fce47d2925aca5
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475195"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063762"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Escribir aplicaciones grandes de .NET Framework que respondan
 
@@ -306,7 +306,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- En la primera línea, la [expresión lambda](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [cierra](https://docs.microsoft.com/archive/blogs/ericlippert/what-are-closures) la variable local `name`. Esto significa que, además de asignar un objeto para el [delegado](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type) que contiene `predicate`, el código asigna una clase estática para contener el entorno que captura el valor de `name`. El compilador genera código como el siguiente:  
+ En la primera línea, la [expresión lambda](../../csharp/language-reference/operators/lambda-expressions.md) `s => s.Name == name` [cierra](https://docs.microsoft.com/archive/blogs/ericlippert/what-are-closures) la variable local `name`. Esto significa que, además de asignar un objeto para el [delegado](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type) que contiene `predicate`, el código asigna una clase estática para contener el entorno que captura el valor de `name`. El compilador genera código como el siguiente:  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  
@@ -463,7 +463,7 @@ class Compilation { /*...*/
   
 - La clave son las asignaciones: es donde el equipo de la plataforma de compiladores invirtió más tiempo en mejorar el rendimiento de los nuevos compiladores.
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
 - [Vídeo de presentación de este tema](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
 - [Guía básica para la generación de perfiles de rendimiento](/visualstudio/profiling/beginners-guide-to-performance-profiling)

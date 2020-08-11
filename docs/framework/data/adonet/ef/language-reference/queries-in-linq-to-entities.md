@@ -3,12 +3,12 @@ title: Consultas en LINQ to Entities
 description: Obtenga información sobre cómo LINQ ofrece un modelo sencillo y coherente para trabajar con datos en varios tipos de orígenes de datos y formatos con objetos de programación.
 ms.date: 03/30/2017
 ms.assetid: c015a609-29eb-4e95-abb1-2ca721c6e2ad
-ms.openlocfilehash: 048fd56fc687dd715292fb3bb09405130de09779
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: eaf44cf6c995be335c6127f42d7aaec0dd98527c
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286823"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063736"
 ---
 # <a name="queries-in-linq-to-entities"></a>Consultas en LINQ to Entities
 Una consulta es una expresión que recupera datos de un origen de datos. Las consultas se suelen expresar en un lenguaje de consulta especializado, como SQL para bases de datos relacionales y XQuery para XML. Por lo tanto, los programadores han tenido que aprender un lenguaje de consultas nuevo para cada tipo de origen de datos o formato de datos que consultan. Language-Integrated Query (LINQ) ofrece un modelo coherente y más sencillo para trabajar con los datos de varios formatos y orígenes de datos. En una consulta de LINQ siempre se trabaja con objetos de programación.  
@@ -22,7 +22,7 @@ Una consulta es una expresión que recupera datos de un origen de datos. Las con
 ## <a name="query-syntax"></a>Sintaxis de las consultas  
  Las consultas de LINQ to Entities se pueden formular en dos sintaxis diferentes: sintaxis de expresiones de consulta y sintaxis de consultas basadas en métodos. La sintaxis de expresiones de consulta es nueva en C# 3.0 y Visual Basic 9.0, y consta de un conjunto de cláusulas escritas en una sintaxis declarativa similar a Transact-SQL o XQuery. Sin embargo, el Common Language Runtime de .NET Framework (CLR) no puede leer la sintaxis de expresiones de consulta en sí. Por lo tanto, en tiempo de compilación, las expresiones de consulta se traducen a algo que CLR no comprende: las llamadas a métodos. Estos métodos se conocen como *operadores de consulta estándar*. Como programador, tiene la opción de llamarlos directamente utilizando la sintaxis de método en lugar de la sintaxis de consulta. Para obtener más información, vea [Query Syntax and Method Syntax in LINQ](../../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md) (Sintaxis de consulta y sintaxis de método en LINQ).  
   
-### <a name="query-expression-syntax"></a>Sintaxis de expresión de consulta  
+### <a name="query-expression-syntax"></a>Sintaxis de expresiones de consulta  
  Las expresiones de consulta son una sintaxis de consulta declarativa. Esta sintaxis permite a un programador escribir consultas en un lenguaje de alto nivel que tenga un formato similar al de Transact-SQL. Si se utiliza la sintaxis de expresiones de consulta, se pueden realizar incluso operaciones complejas de filtrado, ordenación y agrupamiento en orígenes de datos con código mínimo. Para obtener más información, [consulte operaciones básicas de consulta (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md). Para obtener ejemplos que muestran cómo utilizar la sintaxis de expresiones de consulta, vea los siguientes temas:  
   
 - [Ejemplos de sintaxis de expresiones de consulta: Proyección](query-expression-syntax-examples-projection.md)  
@@ -44,7 +44,7 @@ Una consulta es una expresión que recupera datos de un origen de datos. Las con
 - [Ejemplos de sintaxis de expresiones de consulta: Navegar por relaciones](query-expression-syntax-examples-navigating-relationships.md)  
   
 ### <a name="method-based-query-syntax"></a>Sintaxis de consultas basadas en métodos  
- Otra forma de crear consultas LINQ to Entities es mediante el uso de consultas basadas en métodos. La sintaxis de consultas basadas en métodos es una secuencia de llamadas directas a los métodos de operador de LINQ que pasan expresiones lambda como parámetros. Para obtener más información, vea [Expresiones lambda](../../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md). Para obtener ejemplos que muestran cómo utilizar la sintaxis basada en métodos, vea los siguientes temas:  
+ Otra forma de crear consultas LINQ to Entities es mediante el uso de consultas basadas en métodos. La sintaxis de consultas basadas en métodos es una secuencia de llamadas directas a los métodos de operador de LINQ que pasan expresiones lambda como parámetros. Para obtener más información, vea [Expresiones lambda](../../../../../csharp/language-reference/operators/lambda-expressions.md). Para obtener ejemplos que muestran cómo utilizar la sintaxis basada en métodos, vea los siguientes temas:  
   
 - [Ejemplos de sintaxis de consulta basada en métodos: Proyección](method-based-query-syntax-examples-projection.md)  
   
@@ -66,7 +66,7 @@ Una consulta es una expresión que recupera datos de un origen de datos. Las con
   
 - [Ejemplos de sintaxis de consulta basada en métodos: Navegar por relaciones](method-based-query-syntax-examples-navigating-relationships.md)  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
 - [LINQ to Entities](linq-to-entities.md)
 - [Introducción a LINQ en C#](../../../../../csharp/programming-guide/concepts/linq/index.md)
