@@ -7,12 +7,12 @@ f1_keywords:
 - default
 helpviewer_keywords:
 - default keyword [C#]
-ms.openlocfilehash: 2adfd8d24066e9dad50c3c18407d3ade71b4b68e
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: f03971efa87bf03967c79512e44d22134dd80c17
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507183"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916864"
 ---
 # <a name="default-value-expressions-c-reference"></a>Expresiones de valor predeterminado (referencia de C#)
 
@@ -24,7 +24,7 @@ También se usa la palabra clave `default` como etiqueta de mayúsculas y minús
 
 El argumento del operador `default` debe ser el nombre de un tipo o un parámetro de tipo, como se muestra en el ejemplo siguiente:
 
-[!code-csharp-interactive[default of T](snippets/DefaultOperator.cs#WithOperand)]
+[!code-csharp-interactive[default of T](snippets/shared/DefaultOperator.cs#WithOperand)]
 
 ## <a name="default-literal"></a>Literal default
 
@@ -37,7 +37,7 @@ A partir C# de 7.1, puede usar el literal `default` para generar el valor predet
 
 En el ejemplo siguiente se muestra el uso del literal `default`:
 
-[!code-csharp-interactive[default literal](snippets/DefaultOperator.cs#DefaultLiteral)]
+[!code-csharp-interactive[default literal](snippets/shared/DefaultOperator.cs#DefaultLiteral)]
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
@@ -48,6 +48,6 @@ Para más información sobre el literal `default`, consulte la [nota de propuest
 ## <a name="see-also"></a>Vea también
 
 - [Referencia de C#](../index.md)
-- [Operadores de C#](index.md)
+- [Operadores y expresiones de C#](index.md)
 - [Valores predeterminados de los tipos de C#](../builtin-types/default-values.md)
 - [Elementos genéricos en .NET](../../../standard/generics/index.md)

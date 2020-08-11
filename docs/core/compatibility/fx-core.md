@@ -3,12 +3,12 @@ title: Cambios importantes de .NET Framework a .NET Core
 titleSuffix: ''
 description: Enumera los cambios importantes de .NET Framework a .NET Core.
 ms.date: 05/05/2020
-ms.openlocfilehash: f830d4571f21752900b35a7462bf0881673d6d2e
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 5f7424fdd959044b729dfb04f4f0147fbc946bfd
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420453"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556311"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>Cambios importantes para la migración desde .NET Framework a .NET Core
 
@@ -96,8 +96,6 @@ Se ha agregado compatibilidad con Windows Forms a .NET Core, versión 3.0. Si v
 - [No se admite el modificador de compatibilidad EnableVisualStyleValidation](#enablevisualstylevalidation-compatibility-switch-not-supported)
 - [No se admite el modificador de compatibilidad UseLegacyContextMenuStripSourceControlValue](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported)
 - [No se admite el modificador de compatibilidad UseLegacyImages](#uselegacyimages-compatibility-switch-not-supported)
-- [Se ha cambiado el acceso para AccessibleObject.RuntimeIDFirstItem](#change-of-access-for-accessibleobjectruntimeidfirstitem)
-- [Se han quitado las API duplicadas de Windows Forms](#duplicated-apis-removed-from-windows-forms)
 
 ### <a name="net-core-31"></a>.NET Core 3.1
 
@@ -152,14 +150,6 @@ Se ha agregado compatibilidad con Windows Forms a .NET Core, versión 3.0. Si v
 ***
 
 [!INCLUDE[UseLegacyImages compatibility switch not supported](~/includes/core-changes/windowsforms/3.0/deprecate-uselegacyimages.md)]
-
-***
-
-[!INCLUDE[Change of access for AccessibleObject.RuntimeIDFirstItem](~/includes/core-changes/windowsforms/3.0/changed-access-for-runtimeidfirstitem.md)]
-
-***
-
-[!INCLUDE[Duplicated APIs removed from Windows Forms](~/includes/core-changes/windowsforms/3.0/remove-duplicated-apis.md)]
 
 ***
 

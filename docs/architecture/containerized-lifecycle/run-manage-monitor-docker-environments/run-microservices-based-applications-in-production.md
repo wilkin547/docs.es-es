@@ -1,13 +1,13 @@
 ---
 title: Ejecución de aplicaciones basadas en microservicios y compuestas en entornos de producción
 description: Conozca los componentes clave para ejecutar aplicaciones basadas en contenedores en producción
-ms.date: 02/15/2019
-ms.openlocfilehash: 69df3d39a00b91cbe59c96e5fcab841a60943bcc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 08/06/2020
+ms.openlocfilehash: a045804e2e40dcf401a697d3e58b13f05ca61b94
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "68672922"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915052"
 ---
 # <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>Ejecución de aplicaciones basadas en microservicios y compuestas en entornos de producción
 

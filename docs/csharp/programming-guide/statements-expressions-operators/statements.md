@@ -6,12 +6,12 @@ helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-ms.openlocfilehash: b941e46f959167f78f1366a3863aca4240810013
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 3f8ac88525c44f9572f4f647145ad251537aba57
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381767"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556753"
 ---
 # <a name="statements-c-programming-guide"></a>Instrucciones (Guía de programación de C#)
 
@@ -28,7 +28,7 @@ En la tabla siguiente se muestran los distintos tipos de instrucciones de C# y s
 |Categoría|Palabras clave de C# / notas|
 |--------------|---------------------------|
 |[Instrucciones de declaración](#declaration-statements)|Una instrucción de declaración introduce una variable o constante nueva. Una declaración de variable puede asignar opcionalmente un valor a la variable. En una declaración de constante, se requiere la asignación.|
-|[Instrucciones de expresión](expressions.md)|Las instrucciones de expresión que calculan un valor deben almacenar el valor en una variable. Para obtener más información, vea [Instrucciones de expresión](#expression-statements).|
+|[Instrucciones de expresión](#expression-statements)|Las instrucciones de expresión que calculan un valor deben almacenar el valor en una variable.|
 |Instrucciones de selección|Las instrucciones de selección permiten crear bifurcaciones a diferentes secciones de código, en función de una o varias condiciones especificadas. Para obtener más información, vea los temas siguientes: <ul><li>[if](../../language-reference/keywords/if-else.md)</li><li>[else](../../language-reference/keywords/if-else.md)</li><li>[switch](../../language-reference/keywords/switch.md)</li><li>[case](../../language-reference/keywords/switch.md)</li></ul>|
 |Instrucciones de iteración|Las instrucciones de iteración permiten recorrer en bucle colecciones, como matrices, o realizar el mismo conjunto de instrucciones repetidas veces hasta que se cumpla una condición especificada. Para obtener más información, vea los temas siguientes: <ul><li>[do](../../language-reference/keywords/do.md)</li><li>[for](../../language-reference/keywords/for.md)</li><li>[foreach](../../language-reference/keywords/foreach-in.md)</li><li>[in](../../language-reference/keywords/foreach-in.md)</li><li>[while](../../language-reference/keywords/while.md)</li></ul>|
 |Instrucciones de salto|Las instrucciones de salto transfieren el control a otra sección de código. Para obtener más información, vea los temas siguientes: <ul><li>[break](../../language-reference/keywords/break.md)</li><li>[continue](../../language-reference/keywords/continue.md)</li><li>[default](../../language-reference/keywords/switch.md)</li><li>[goto](../../language-reference/keywords/goto.md)</li><li>[return](../../language-reference/keywords/return.md)</li><li>[yield](../../language-reference/keywords/yield.md)</li></ul>|
@@ -92,5 +92,5 @@ Para más información, vea la sección [Instrucciones](~/_csharplang/spec/state
 ## <a name="see-also"></a>Consulte también
 
 - [Guía de programación de C#](../index.md)
-- [Palabras clave de instrucciones](../../language-reference/keywords/statement-keywords.md)  
-- [Expresiones](expressions.md)  
+- [Palabras clave de instrucciones](../../language-reference/keywords/statement-keywords.md)
+- [Operadores y expresiones de C#](../../language-reference/operators/index.md)

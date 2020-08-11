@@ -7,12 +7,12 @@ helpviewer_keywords:
 - garbage collection, server
 - workstation garbage collection
 - server garbage collection
-ms.openlocfilehash: 5ff2b1fe2f997913e071f35ec5abb167ed757608
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: 640b5f42c1f841c2537284e4721e827248e3d300
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84306700"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87917007"
 ---
 # <a name="workstation-and-server-garbage-collection"></a>Recolección de elementos no utilizados de estación de trabajo y de servidor
 
@@ -40,7 +40,7 @@ Estas son algunas consideraciones sobre subprocesos y rendimiento para la recole
 
 - La recolección se produce en el subproceso del usuario que desencadenó la recolección de elementos no utilizados y permanece en la misma prioridad. Como los subprocesos de usuario suelen ejecutarse con prioridad normal, el recolector de elementos no utilizados (que se ejecuta en un subproceso de prioridad normal) debe competir con otros subprocesos por el tiempo de la CPU. (Los subprocesos que ejecutan código nativo no se suspenden en la recolección de elementos no utilizados de servidor o de estación de trabajo).
 
-- La recolección de elementos no utilizados de estación de trabajo siempre se utiliza en un equipo que tiene un solo procesador, sin tener en cuenta el [valor de configuración](../../core/run-time-config/garbage-collector.md#systemgcservercomplus_gcserver).
+- La recolección de elementos no utilizados de estación de trabajo siempre se utiliza en un equipo que tiene un solo procesador, sin tener en cuenta el [valor de configuración](../../core/run-time-config/garbage-collector.md#workstation-vs-server).
 
 ### <a name="server-gc"></a>Servidor de catálogo global
 

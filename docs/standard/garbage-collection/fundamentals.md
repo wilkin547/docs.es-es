@@ -11,12 +11,12 @@ helpviewer_keywords:
 - garbage collection, workstation
 - garbage collection, managed heap
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
-ms.openlocfilehash: 438188b6d694bdeab772c43ef92e5621c68facff
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 322e079a1be556efb536b24e216e480c1950bd8c
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990223"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87917025"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Fundamentos de la recolección de elementos no utilizados
 
@@ -186,7 +186,7 @@ Una recolección de elementos no utilizados tiene las siguientes fases:
   Normalmente, el montón de objetos grandes no se compacta, porque al copiar objetos grandes se reduce el rendimiento. Sin embargo, en .NET Core y en .NET Framework 4.5.1 y versiones posteriores, se puede utilizar la propiedad <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> para compactar el montón de objetos grandes a petición. Además, el montón de objetos grandes se compacta automáticamente cuando se establece un límite máximo mediante la especificación de:
 
   - un límite de memoria en un contenedor.
-  - Las opciones de configuración en tiempo de ejecución [GCHeapHardLimit](../../core/run-time-config/garbage-collector.md#systemgcheaphardlimitcomplus_gcheaphardlimit) o [GCHeapHardLimitPercent](../../core/run-time-config/garbage-collector.md#systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent).
+  - Las opciones de configuración en tiempo de ejecución [GCHeapHardLimit](../../core/run-time-config/garbage-collector.md#heap-limit) o [GCHeapHardLimitPercent](../../core/run-time-config/garbage-collector.md#heap-limit-percent).
 
 El recolector de elementos no utilizados utiliza la siguiente información para determinar si los objetos están activos:
 

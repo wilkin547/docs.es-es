@@ -1,13 +1,13 @@
 ---
 title: Orquestación de microservicios y aplicaciones de varios contenedores para una alta escalabilidad y disponibilidad
 description: Las aplicaciones de producción real deben implementarse y administrarse con orquestadores que controlen el mantenimiento, la carga de trabajo y los ciclos de vida de todos los contenedores.
-ms.date: 02/15/2019
-ms.openlocfilehash: 459a445258a8d66834814f7b084fd969d005ff45
-ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
+ms.date: 08/06/2020
+ms.openlocfilehash: 61c66e1f3835df543cbc9ba23d9c098ad52c90cd
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86374486"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915465"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orquestación de microservicios y aplicaciones de varios contenedores para una alta escalabilidad y disponibilidad
 
@@ -62,7 +62,7 @@ En la figura 4-7 se muestra la estructura de un clúster de Kubernetes, donde u
 
 ## <a name="development-environment-for-kubernetes"></a>Entorno de desarrollo para Kubernetes
 
-En el entorno de desarrollo, [Docker anunció en julio de 2018](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/) que Kubernetes también puede ejecutarse en un único equipo de desarrollo (Windows 10 o macOS). Basta con instalar [Docker Desktop](https://www.docker.com/community-edition). Puede implementar posteriormente en la nube (AKS) para obtener más pruebas de integración, como se muestra en la figura 4-8.
+En el entorno de desarrollo, [Docker anunció en julio de 2018](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/) que Kubernetes también puede ejecutarse en un único equipo de desarrollo (Windows 10 o macOS). Basta con instalar [Docker Desktop](https://www.docker.com/products/docker-desktop). Puede implementar posteriormente en la nube (AKS) para obtener más pruebas de integración, como se muestra en la figura 4-8.
 
 ![Diagrama que muestra Kubernetes en una máquina de desarrollo y, luego, implementado en AKS.](./media/orchestrate-high-scalability-availability/kubernetes-development-environment.png)
 

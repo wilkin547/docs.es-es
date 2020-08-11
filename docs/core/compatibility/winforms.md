@@ -2,12 +2,12 @@
 title: Cambios importantes en Windows Forms
 description: Enumera los cambios importantes en Windows Forms para .NET Core.
 ms.date: 01/08/2020
-ms.openlocfilehash: bd87e438ecf9930bfcd5377f9a3799d5f3693f49
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: beb9a42e4b5007f03480cd74f57bbfbbfc3f48b1
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84702473"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556253"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Cambios importantes en Windows Forms
 
@@ -34,8 +34,6 @@ En esta página se documentan los siguientes cambios importantes:
 | [No se admite el modificador de compatibilidad EnableVisualStyleValidation](#enablevisualstylevalidation-compatibility-switch-not-supported) | 3.0 |
 | [No se admite el modificador de compatibilidad UseLegacyContextMenuStripSourceControlValue](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported) | 3.0 |
 | [No se admite el modificador de compatibilidad UseLegacyImages](#uselegacyimages-compatibility-switch-not-supported) | 3.0 |
-| [Se ha cambiado el acceso para AccessibleObject.RuntimeIDFirstItem](#change-of-access-for-accessibleobjectruntimeidfirstitem) | 3.0 |
-| [Se han quitado las API duplicadas de Windows Forms](#duplicated-apis-removed-from-windows-forms) | 3.0 |
 
 ## <a name="net-50"></a>.NET 5.0
 
@@ -108,14 +106,6 @@ En esta página se documentan los siguientes cambios importantes:
 ***
 
 [!INCLUDE[Switch.System.Windows.Forms.UseLegacyImages compatibility switch not supported](~/includes/core-changes/windowsforms/3.0/deprecate-uselegacyimages.md)]
-
-***
-
-[!INCLUDE[Change of access for AccessibleObject.RuntimeIDFirstItem](~/includes/core-changes/windowsforms/3.0/changed-access-for-runtimeidfirstitem.md)]
-
-***
-
-[!INCLUDE[Duplicated APIs removed from Windows Forms](~/includes/core-changes/windowsforms/3.0/remove-duplicated-apis.md)]
 
 ***
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - cheat sheet
 - .NET Framework regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
-ms.openlocfilehash: a2fc2c56eeb29f5e89dc0b9f94636408ff10700f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4788c84be76a5cc9a9a6327fcd054e08db4d1872
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446371"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556805"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Lenguaje de expresiones regulares - Referencia rápida
 
@@ -94,8 +94,8 @@ Las construcciones de agrupamiento definen subexpresiones de una expresión regu
 |Construcción de agrupamiento|Descripción|Modelo|Coincidencias|
 |------------------------|-----------------|-------------|-------------|
 |`(` *subexpresión* `)`|Captura la subexpresión coincidente y le asigna un número ordinal basado en uno.|`(\w)\1`|`"ee"` en `"deep"`|
-|`(?<` *nombre* `>` *subexpresión* `)`|Captura la subexpresión coincidente en un grupo con nombre.|`(?<double>\w)\k<double>`|`"ee"` en `"deep"`|
-|`(?<` *nombre1* `-` *nombre2* `>` *subexpresión* `)`|Define una definición de grupo de equilibrio. Para obtener más información, consulte la sección "Definiciones de grupos de equilibrio" en [Construcciones de agrupamiento](grouping-constructs-in-regular-expressions.md).|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|`"((1-3)*(3-1))"` en `"3+2^((1-3)*(3-1))"`|
+|`(?<` *nombre* `>` *subexpresión* `)`<br /> o <br />`(?'` *nombre* `'` *subexpresión* `)`|Captura la subexpresión coincidente en un grupo con nombre.|`(?<double>\w)\k<double>`|`"ee"` en `"deep"`|
+|`(?<` *nombre1* `-` *nombre2* `>` *subexpresión* `)` <br /> o <br /> `(?'` *nombre1* `-` *nombre2* `'` *subexpresión* `)`|Define una definición de grupo de equilibrio. Para obtener más información, consulte la sección "Definiciones de grupos de equilibrio" en [Construcciones de agrupamiento](grouping-constructs-in-regular-expressions.md).|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|`"((1-3)*(3-1))"` en `"3+2^((1-3)*(3-1))"`|
 |`(?:` *subexpresión* `)`|Define un grupo sin captura.|`Write(?:Line)?`|`"WriteLine"` en `"Console.WriteLine()"`<br /><br /> `"Write"` en `"Console.Write(value)"`|
 |`(?imnsx-imnsx:` *subexpresión* `)`|Aplica o deshabilita las opciones especificadas dentro de *subexpresión*. Para obtener más información, consulte [Opciones de expresiones regulares](regular-expression-options.md).|`A\d{2}(?i:\w+)\b`|`"A12xl"`, `"A12XL"` en `"A12xl A12XL a12xl"`|
 |`(?=` *subexpresión* `)`|Aserción de búsqueda anticipada positiva de ancho cero.|`\w+(?=\.)`|`"is"`, `"ran"` y `"out"` en `"He is. The dog ran. The sun is out."`|

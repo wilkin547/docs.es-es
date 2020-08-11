@@ -7,12 +7,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 76c6b24c1cd061585c7a6964d30bc81cc5fc5975
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 20fc492e45b2d248602de59682e752026d421e06
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86308850"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916922"
 ---
 # <a name="await-operator-c-reference"></a>Operador await (referencia de C#)
 
@@ -20,7 +20,7 @@ El operador `await` suspende la evaluación del método [async](../keywords/asyn
 
 En el ejemplo siguiente, el método <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=nameWithType> devuelve la instancia `Task<byte[]>`, que representa una operación asincrónica que genera una matriz de bytes cuando se completa. Hasta que se complete la operación, el operador `await` suspende el método `DownloadDocsMainPageAsync`. Cuando se suspende `DownloadDocsMainPageAsync`, se devuelve el control `Main` al método, que es el autor de la llamada a `DownloadDocsMainPageAsync`. El método `Main` se ejecuta hasta que necesita el resultado de la operación asincrónica realizada por el método `DownloadDocsMainPageAsync`. Cuando <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> obtiene todos los bytes, se evalúa el resto del método `DownloadDocsMainPageAsync`. Después, se evalúa el resto del método `Main`.
 
-[!code-csharp[await example](snippets/AwaitOperator.cs)]
+[!code-csharp[await example](snippets/shared/AwaitOperator.cs)]
 
 En el ejemplo anterior se usa el método [async `Main`](../../programming-guide/main-and-command-args/index.md), lo que es posible a partir de C# 7.1. Para obtener más información, vea la sección [Operador await en el método Main](#await-operator-in-the-main-method).
 
@@ -54,7 +54,7 @@ Para obtener más información, vea la sección [Expresiones await](~/_csharplan
 ## <a name="see-also"></a>Vea también
 
 - [Referencia de C#](../index.md)
-- [Operadores de C#](index.md)
+- [Operadores y expresiones de C#](index.md)
 - [async](../keywords/async.md)
 - [Modelo de programación asincrónica de tareas](../../programming-guide/concepts/async/task-asynchronous-programming-model.md)
 - [Programación asincrónica](../../async.md)

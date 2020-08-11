@@ -9,12 +9,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 1a17ba092d4228ba909c8774a2f7e15c2c50cfdc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fcde0476935108122d7f7e825d701e48952873f6
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398218"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916856"
 ---
 # <a name="-operator-c-reference"></a>Operador ?: (referencia de C#)
 
@@ -51,7 +51,7 @@ a ? b : (c ? d : e)
 
 En el siguiente ejemplo se muestra el uso del operador condicional:
 
-[!code-csharp-interactive[non ref conditional](snippets/ConditionalOperator.cs#ConditionalValue)]
+[!code-csharp-interactive[non ref conditional](snippets/shared/ConditionalOperator.cs#ConditionalValue)]
 
 ## <a name="conditional-ref-expression"></a>Expresión condicional ref
 
@@ -69,13 +69,13 @@ En el caso de la expresión condicional ref, los tipos de `consequent` y `altern
 
 En el siguiente ejemplo se muestra el uso de la expresión condicional ref:
 
-[!code-csharp-interactive[conditional ref](snippets/ConditionalOperator.cs#ConditionalRef)]
+[!code-csharp-interactive[conditional ref](snippets/shared/ConditionalOperator.cs#ConditionalRef)]
 
 ## <a name="conditional-operator-and-an-ifelse-statement"></a>Operador condicional y una instrucción `if..else`
 
 Es posible que el uso del operador condicional en lugar de una instrucción [if-else](../keywords/if-else.md) genere código más conciso en aquellos casos en los que tenga que calcular un valor condicionalmente. El ejemplo siguiente muestra dos maneras de clasificar un entero como negativo o no negativo:
 
-[!code-csharp[conditional and if-else](snippets/ConditionalOperator.cs#CompareWithIf)]
+[!code-csharp[conditional and if-else](snippets/shared/ConditionalOperator.cs#CompareWithIf)]
 
 ## <a name="operator-overloadability"></a>Posibilidad de sobrecarga del operador
 
@@ -90,7 +90,7 @@ Para más información sobre la expresión condicional ref, vea la [nota de prop
 ## <a name="see-also"></a>Vea también
 
 - [Referencia de C#](../index.md)
-- [Operadores de C#](index.md)
+- [Operadores y expresiones de C#](index.md)
 - [Instrucción if-else](../keywords/if-else.md)
 - [Operadores ?. y ?[]](member-access-operators.md#null-conditional-operators--and-)
 - [Operadores ?? y ??=](null-coalescing-operator.md)

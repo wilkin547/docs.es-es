@@ -3,12 +3,12 @@ title: Historia de C# - Guía de C#
 description: ¿Qué aspecto tenía el lenguaje en sus primeras versiones y cómo ha evolucionado desde entonces?
 author: erikdietrich
 ms.date: 04/08/2020
-ms.openlocfilehash: ed9555bcef1c71964937c2bc18fedbc7da94f0db
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 96d6e07d5553d65e95144a0cede7cab86b4c5ef7
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738151"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556858"
 ---
 # <a name="the-history-of-c"></a>Historia de C\#
 
@@ -42,7 +42,7 @@ Las principales características de C# 1.0 incluían lo siguiente:
 - [Eventos](../events-overview.md)
 - [Propiedades](../properties.md)
 - [Delegados](../delegates-overview.md)
-- [Expresiones](../programming-guide/statements-expressions-operators/expressions.md)
+- [Operadores y expresiones](../language-reference/operators/index.md)
 - [Instrucciones](../programming-guide/statements-expressions-operators/statements.md)
 - [Atributos](../programming-guide/concepts/attributes/index.md)
 

@@ -5,17 +5,19 @@ ms.date: 07/09/2019
 f1_keywords:
 - explicit_CSharpKeyword
 - implicit_CSharpKeyword
+- explicit
+- implicit
 helpviewer_keywords:
 - explicit keyword [C#]
 - implicit keyword [C#]
 - conversion operator [C#]
 - user-defined conversion [C#]
-ms.openlocfilehash: b59fc27be31f1a38e2a6c3cabd82598933b5ed53
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: a0eb11d55ad9e9cccde1704ba4c5ae8acb609989
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121402"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916629"
 ---
 # <a name="user-defined-conversion-operators-c-reference"></a>Operadores de conversión definidos por el usuario (referencia de C#)
 
@@ -29,7 +31,7 @@ Use las palabras clave `operator` y `implicit` o `explicit` para definir una con
 
 En el ejemplo siguiente se muestra cómo se define una conversión implícita y explícita:
 
-[!code-csharp[implicit an explicit conversions](snippets/UserDefinedConversions.cs)]
+[!code-csharp[implicit an explicit conversions](snippets/shared/UserDefinedConversions.cs)]
 
 Use también la palabra clave `operator` para sobrecargar un operador predefinido en C#. Para obtener más información, vea [Sobrecarga de operadores](operator-overloading.md).
 
@@ -45,7 +47,7 @@ Para más información, vea las secciones siguientes de la [Especificación del 
 ## <a name="see-also"></a>Vea también
 
 - [Referencia de C#](../index.md)
-- [Operadores de C#](index.md)
+- [Operadores y expresiones de C#](index.md)
 - [Sobrecarga de operadores](operator-overloading.md)
 - [Operadores de conversión y prueba de tipos](type-testing-and-cast.md)
 - [Conversiones de tipos](../../programming-guide/types/casting-and-type-conversions.md)

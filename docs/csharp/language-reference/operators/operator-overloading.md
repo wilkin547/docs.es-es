@@ -4,15 +4,16 @@ description: Obtenga información sobre cómo sobrecargar un operador de C# y qu
 ms.date: 07/05/2019
 f1_keywords:
 - operator_CSharpKeyword
+- operator
 helpviewer_keywords:
 - operator keyword [C#]
 - operator overloading [C#]
-ms.openlocfilehash: 1324a4a3610b96f7258a856609dc4090b9751e52
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 4fde25cac21b2cb32efc9282578f32102a0f607f
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301767"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916730"
 ---
 # <a name="operator-overloading-c-reference"></a>Sobrecarga de operadores (referencia de C#)
 
@@ -25,7 +26,7 @@ Use la palabra clave `operator` para declarar un operador. Una declaración de o
 
 En el ejemplo siguiente se muestra una estructura simplificada para representar un número racional. La estructura sobrecarga algunos de los [operadores aritméticos](arithmetic-operators.md):
 
-[!code-csharp[fraction example](snippets/OperatorOverloading.cs)]
+[!code-csharp[fraction example](snippets/shared/OperatorOverloading.cs)]
 
 Puede ampliar el ejemplo anterior mediante la [definición de una conversión implícita](user-defined-conversion-operators.md) de `int` a `Fraction`. A continuación, los operadores sobrecargados admiten argumentos de esos dos tipos. Es decir, sería posible agregar un valor entero a una fracción y obtener como resultado una fracción.
 
@@ -62,7 +63,7 @@ Para más información, vea las secciones siguientes de la [Especificación del 
 ## <a name="see-also"></a>Vea también
 
 - [Referencia de C#](../index.md)
-- [Operadores de C#](index.md)
+- [Operadores y expresiones de C#](index.md)
 - [Operadores de conversión definidos por el usuario](user-defined-conversion-operators.md)
 - [Directrices de diseño: sobrecargas de operador](../../../standard/design-guidelines/operator-overloads.md)
 - [Directrices de diseño: operadores de igualdad](../../../standard/design-guidelines/equality-operators.md)

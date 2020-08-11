@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-ms.openlocfilehash: 53457f7f99d96c288b002f58c9db36f431ba863a
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 132518b9d8d22efecfcf3ed14e8b5969aa768cd4
+ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381312"
+ms.lasthandoff: 08/08/2020
+ms.locfileid: "88024594"
 ---
 # <a name="chaining-tasks-using-continuation-tasks"></a>Encadenamiento de tareas mediante tareas de continuación
 
@@ -145,7 +145,7 @@ En ocasiones, puede que deba encadenar una continuación que devuelve un tipo <x
 En el ejemplo siguiente se muestra cómo usar continuaciones que encapsulan funciones adicionales que devuelven tareas. Cada continuación se puede desencapsular, de modo que se expone la tarea interna que se encapsuló.
 
 :::code language="csharp" source="snippets/cs/unwrap.cs":::
-:::code language="csharp" source="snippets/vb/unwrap.vb":::
+:::code language="vb" source="snippets/vb/unwrap.vb":::
 
 Para más información sobre el uso de <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A>, consulte [Cómo: Desencapsular una tarea anidada](how-to-unwrap-a-nested-task.md).
 
