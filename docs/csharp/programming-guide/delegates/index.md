@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: 94e7c130bd5d8e136d03ccdbaed643bc1a47d112
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 2c1be56b67528c17a6cf1d8d8517817ff93b2aa5
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302170"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063643"
 ---
 # <a name="delegates-c-programming-guide"></a>Delegados (Guía de programación de C#)
 Un [delegado](../../language-reference/builtin-types/reference-types.md) es un tipo que representa referencias a métodos con una lista de parámetros determinada y un tipo de valor devuelto. Cuando se crea una instancia de un delegado, puede asociar su instancia a cualquier método mediante una signatura compatible y un tipo de valor devuelto. Puede invocar (o llamar) al método a través de la instancia del delegado.  
@@ -40,7 +40,7 @@ Un [delegado](../../language-reference/builtin-types/reference-types.md) es un t
   
 - No es necesario que los métodos coincidan exactamente con el tipo de delegado. Para obtener más información, consulte [Usar varianza en delegados](../concepts/covariance-contravariance/using-variance-in-delegates.md).  
   
-- La versión 2.0 de C# presentó el concepto de los [métodos anónimos](../../language-reference/operators/delegate-operator.md), los cuales permiten pasar bloques de código como parámetros en lugar de un método definido por separado. En C# 3.0 se presentaron las expresiones lambda como una manera más concisa de escribir bloques de código alineado. Tanto los métodos anónimos como las expresiones lambda (en ciertos contextos) se compilan en tipos de delegado. Juntas, estas características se conocen ahora como funciones anónimas. Para más información sobre las expresiones lambda, consulte [Expresiones lambda](../statements-expressions-operators/lambda-expressions.md).
+- La versión 2.0 de C# presentó el concepto de los [métodos anónimos](../../language-reference/operators/delegate-operator.md), los cuales permiten pasar bloques de código como parámetros en lugar de un método definido por separado. En C# 3.0 se presentaron las expresiones lambda como una manera más concisa de escribir bloques de código alineado. Tanto los métodos anónimos como las expresiones lambda (en ciertos contextos) se compilan en tipos de delegado. Juntas, estas características se conocen ahora como funciones anónimas. Para más información sobre las expresiones lambda, consulte [Expresiones lambda](../../language-reference/operators/lambda-expressions.md).
   
 ## <a name="in-this-section"></a>En esta sección  
   
