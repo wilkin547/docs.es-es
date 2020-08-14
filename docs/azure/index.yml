@@ -7,21 +7,21 @@ metadata:
   description: Ejemplos, tutoriales y educación de .NET en Azure
   ms.topic: hub-page
   ms.prod: azure-dotnet
-  ms.date: 07/31/2020
-  ms.openlocfilehash: 114f12dd33a565ec8332f24c965a74b083bd32c7
-  ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+  ms.date: 08/12/2020
+  ms.openlocfilehash: 041b2124dde5ea5a1d6c04947fe14b1f72f6dacc
+  ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 08/07/2020
-  ms.locfileid: "87916276"
+  ms.lasthandoff: 08/13/2020
+  ms.locfileid: "88187940"
 highlightedContent:
   items:
   - itemType: overview
     title: Introducción a Azure y .NET
     url: intro.md
   - itemType: quickstart
-    title: Implementación de una aplicación web ASP.NET
-    url: https://docs.microsoft.com/azure/app-service/app-service-web-get-started-dotnet
+    title: Creación de una aplicación web ASP.NET Core en Azure
+    url: /azure/app-service/quickstart-dotnetcore
   - itemType: quickstart
     title: Compilación de una función sin servidor
     url: /azure/azure-functions/functions-create-your-first-function-visual-studio
@@ -30,16 +30,16 @@ highlightedContent:
     url: /visualstudio/containers/container-tools?view=vs-2019
   - itemType: deploy
     title: Implementación de una aplicación .NET con Azure DevOps
-    url: https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/dotnet-core?view=azure-devops
+    url: /azure/devops/pipelines/ecosystems/dotnet-core?view=azure-devops
   - itemType: tutorial
     title: Autenticación de un extremo a otro en App Service
-    url: https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-auth-aad
+    url: /azure/app-service/app-service-web-tutorial-auth-aad
   - itemType: learn
     title: Protección de API personalizadas con Microsoft Identity
-    url: https://docs.microsoft.com/learn/modules/identity-secure-custom-api/
+    url: /learn/modules/identity-secure-custom-api/
   - itemType: learn
     title: Aspectos básicos de Azure
-    url: https://docs.microsoft.com/learn/paths/azure-fundamentals/
+    url: /learn/paths/azure-fundamentals/
 conceptualContent:
   title: Contenido destacado
   summary: Aprenda a desarrollar aplicaciones .NET que aprovechan una gran variedad de servicios de Azure.
