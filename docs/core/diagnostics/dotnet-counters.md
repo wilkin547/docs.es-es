@@ -2,12 +2,12 @@
 title: 'dotnet-counters: .Net Core'
 description: Obtenga información sobre cómo instalar y usar la herramienta de línea de comandos dotnet-counter.
 ms.date: 02/26/2020
-ms.openlocfilehash: dc95297478784ca06fe442a939f8489a40b29da7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 71e3c4f0a60960c4e672b95000bc0d67bd427514
+ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79147183"
+ms.lasthandoff: 08/08/2020
+ms.locfileid: "88024633"
 ---
 # <a name="dotnet-counters"></a>dotnet-counters
 
@@ -44,11 +44,11 @@ dotnet-counters [-h|--help] [--version] <command>
 ## <a name="commands"></a>Comandos
 
 | Comando                                             |
-| --------------------------------------------------- |
+|-----------------------------------------------------|
 | [dotnet-counters collect](#dotnet-counters-collect) |
 | [dotnet-counters list](#dotnet-counters-list)       |
 | [dotnet-counters monitor](#dotnet-counters-monitor) |
-| [dotnet-counters ps](#dotnet-counters-ps) |
+| [dotnet-counters ps](#dotnet-counters-ps)           |
 
 ## <a name="dotnet-counters-collect"></a>dotnet-counters collect
 
@@ -107,17 +107,38 @@ dotnet-counters list [-h|--help]
 
 ```console
 > dotnet-counters list
+Showing well-known counters only. Specific processes may support additional counters.
 
-    Showing well-known counters only. Specific processes may support additional counters.
-    System.Runtime
-        cpu-usage                    Amount of time the process has utilized the CPU (ms)
-        working-set                  Amount of working set used by the process (MB)
-        gc-heap-size                 Total heap size reported by the GC (MB)
-        gen-0-gc-count               Number of Gen 0 GCs / sec
-        gen-1-gc-count               Number of Gen 1 GCs / sec
-        gen-2-gc-count               Number of Gen 2 GCs / sec
-        exception-count              Number of Exceptions / sec
+System.Runtime
+    cpu-usage                                    Amount of time the process has utilized the CPU (ms)
+    working-set                                  Amount of working set used by the process (MB)
+    gc-heap-size                                 Total heap size reported by the GC (MB)
+    gen-0-gc-count                               Number of Gen 0 GCs / min
+    gen-1-gc-count                               Number of Gen 1 GCs / min
+    gen-2-gc-count                               Number of Gen 2 GCs / min
+    time-in-gc                                   % time in GC since the last GC
+    gen-0-size                                   Gen 0 Heap Size
+    gen-1-size                                   Gen 1 Heap Size
+    gen-2-size                                   Gen 2 Heap Size
+    loh-size                                     LOH Heap Size
+    alloc-rate                                   Allocation Rate
+    assembly-count                               Number of Assemblies Loaded
+    exception-count                              Number of Exceptions / sec
+    threadpool-thread-count                      Number of ThreadPool Threads
+    monitor-lock-contention-count                Monitor Lock Contention Count
+    threadpool-queue-length                      ThreadPool Work Items Queue Length
+    threadpool-completed-items-count             ThreadPool Completed Work Items Count
+    active-timer-count                           Active Timers Count
+
+Microsoft.AspNetCore.Hosting
+    requests-per-second                  Request rate
+    total-requests                       Total number of requests
+    current-requests                     Current number of requests
+    failed-requests                      Failed number of requests
 ```
+
+> [!NOTE]
+> Los contadores de `Microsoft.AspNetCore.Hosting` se muestran cuando hay procesos identificados que admiten estos contadores, por ejemplo, cuando una aplicación ASP.NET Core se está ejecutando en el equipo host.
 
 ## <a name="dotnet-counters-monitor"></a>dotnet-counters monitor
 
@@ -172,7 +193,7 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
       GC Heap Size (MB)                            811
   ```
 
-- Supervisión de los valores `EventCounter` del elemento `EventSource` definido por el usuario. Para obtener más información, consulte [Tutorial: Cómo medir el rendimiento de eventos muy frecuentes con EventCounters](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md).
+- Supervisión de los valores `EventCounter` del elemento `EventSource` definido por el usuario. Para obtener más información, consulte [Tutorial: Medición del rendimiento mediante EventCounters en .NET Core](event-counter-perf.md).
 
   ```console
   > dotnet-counters monitor --process-id 1902 Samples-EventCounterDemos-Minimal

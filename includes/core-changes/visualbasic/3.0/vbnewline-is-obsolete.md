@@ -1,22 +1,22 @@
 ---
-ms.openlocfilehash: 535a73c6b748166a1e4a4661a6bab0671c653278
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 072ed716910e2e1f1f98dbddc56d5bd097b75acc
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83721411"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555920"
 ---
 ### <a name="microsoftvisualbasicconstantsvbnewline-is-obsolete"></a>Microsoft.VisualBasic.Constants.vbNewLine está obsoleto
 
-La constante <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName> está marcada como [\[obsoleta\]](xref:System.ObsoleteAttribute) a partir de .NET Core 3.0 (versión preliminar 8).
+La constante <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName> está marcada como [\[obsoleta\]](xref:System.ObsoleteAttribute) a partir de .NET Core 3.0.
 
 #### <a name="version-introduced"></a>Versión introducida
 
-3.0 (versión preliminar 8)
+3.0
 
 #### <a name="change-description"></a>Descripción del cambio
 
-A partir de .NET Core 3.0 (versión preliminar 8), se ha aplicado el atributo [Obsolete](xref:System.ObsoleteAttribute) a la constante <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName>. El uso de la constante genera una advertencia del compilador. En .NET Framework y versiones anteriores de .NET Core, no estaba marcada como obsoleta.
+A partir de .NET Core 3.0, se ha aplicado el atributo [Obsolete](xref:System.ObsoleteAttribute) a la constante <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName>. El uso de la constante genera una advertencia del compilador. En .NET Framework y versiones anteriores de .NET Core, no estaba marcada como obsoleta.
 
 Este cambio se realizó para admitir Visual Basic como lenguaje para el desarrollo multiplataforma. La constante <xref:Microsoft.VisualBasic.Constants.vbNewLine> equivale a `\r\n`, la secuencia de caracteres de nueva línea en Windows. En los sistemas basados en Unix, el carácter de nueva línea es `\n`.
 

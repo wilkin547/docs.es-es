@@ -3,12 +3,12 @@ title: Comando dotnet nuget push
 description: El comando dotnet nuget push inserta un paquete en el servidor y lo publica.
 author: karann-msft
 ms.date: 02/14/2020
-ms.openlocfilehash: 608cd05d94dd6b5cdc53d582cfaa0407f011ff37
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 50a4a542c2d192bfbd927845489d04fd1b6c6cf3
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925519"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555128"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -133,23 +133,26 @@ El comando inserta un paquete existente. No crea un paquete. Para crear un paque
 - Inserte todos los archivos *.nupkg*  del directorio actual en el origen de inserción predeterminado:
 
   ```dotnetcli
-  dotnet nuget push *.nupkg
+  dotnet nuget push "*.nupkg"
   ```
 
   > [!NOTE]
   > Si este comando no funciona, es posible que se deba a un error presente en versiones anteriores del SDK (SDK de .NET Core 2.1 y versiones anteriores).
-  > Para solucionar este problema, actualice la versión de su SDK o ejecute el siguiente comando en su lugar: `dotnet nuget push **/*.nupkg`
+  > Para solucionar este problema, actualice la versión de su SDK o ejecute el siguiente comando en su lugar: `dotnet nuget push "**/*.nupkg"`
+  
+  > [!NOTE]
+  > Las comillas de inclusión son necesarias para los shells como bash que usan comodines de archivo. Para obtener más información, vea [NuGet/Home#4393](https://github.com/NuGet/Home/issues/4393#issuecomment-667618120).
 
 - Inserte todos los archivos *.nupkg*, aunque un servidor HTTP(S) devuelva una respuesta de conflicto 409:
 
   ```dotnetcli
-  dotnet nuget push *.nupkg --skip-duplicate
+  dotnet nuget push "*.nupkg" --skip-duplicate
   ```
 
 - Inserte todos los archivos *.nupkg*  del directorio actual en un directorio de fuente local:
 
   ```dotnetcli
-  dotnet nuget push *.nupkg -s c:\mydir
+  dotnet nuget push "*.nupkg" -s c:\mydir
   ```
 
   Este comando no almacena paquetes en una estructura de carpetas jerárquica, lo que se recomienda para optimizar el rendimiento. Para obtener más información, vea [Fuentes locales](/nuget/hosting-packages/local-feeds).  

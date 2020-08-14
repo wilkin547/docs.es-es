@@ -3,18 +3,18 @@ title: Descripción de la autenticación en las bibliotecas de Azure para .NET
 description: Explica las distintas formas de autenticarse con el SDK de Azure para .NET.
 ms.date: 06/19/2020
 ms.custom: azure-sdk-dotnet
-ms.openlocfilehash: 727842b34faa37558220a3035ac5228fae196201
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: e588499a789fc5e7da7eb51009f97090ca75e562
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301624"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916604"
 ---
 # <a name="authenticate-with-the-azure-sdk-for-net"></a>Autenticación con SDK de Azure para .NET
 
 ## <a name="recommended-azureidentity"></a>Se recomienda: Azure.Identity
 
-Los paquetes más recientes de SDK de Azure para .NET usan un paquete de autenticación común para autenticarse, `Azure.Identity`. Se recomienda usar `Azure.Identity` sobre otros mecanismos de autenticación que se describen más adelante en este documento. Los paquetes que admiten las credenciales proporcionadas por `Azure.Identity` tienen identificadores de paquete que comienzan por *Azure*. [Para obtener más información, consulte las versiones más recientes de SDK de Azure para .NET](https://azure.github.io/azure-sdk/releases/latest/index.html#net).
+Los paquetes más recientes de SDK de Azure para .NET usan un paquete de autenticación común para autenticarse, `Azure.Identity`. Se recomienda usar `Azure.Identity` sobre otros mecanismos de autenticación que se describen más adelante en este documento. Los paquetes que admiten las credenciales proporcionadas por `Azure.Identity` se basan en `Azure.Core` y tienen identificadores de paquete que comienzan por *Azure*. [Vea la lista de paquetes](packages.md) para obtener un inventario de los paquetes que usan `Azure.Core`.
 
 Para obtener instrucciones completas sobre cómo usar `Azure.Identity` en el proyecto, consulte la documentación de [Azure Identity Client para .NET](/dotnet/api/overview/azure/identity-readme).
 

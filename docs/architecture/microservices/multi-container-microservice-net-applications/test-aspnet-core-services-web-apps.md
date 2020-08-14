@@ -1,13 +1,13 @@
 ---
 title: Probar aplicaciones web y servicios ASP.NET Core
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Descubra una arquitectura para probar aplicaciones web y servicios ASP.NET Core en contenedores.
-ms.date: 01/30/2020
-ms.openlocfilehash: f66d6184d913405c9372904f8072dda1dbfbe6ac
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.date: 08/07/2020
+ms.openlocfilehash: a27b3b8d392c5e1a7d1961307e6de95659cd823e
+ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988237"
+ms.lasthandoff: 08/08/2020
+ms.locfileid: "88024607"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Probar aplicaciones web y servicios ASP.NET Core
 
@@ -198,11 +198,11 @@ Como puede ver, estos archivos docker-compose solo inician los microservicios Re
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
-- **Archivo LÉAME de las pruebas** en el repositorio de eShopOnContainers en GitHub \
-    <https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test>
+- **Pruebas unitarias y de integración** en eShopOnContainers \
+    <https://github.com/dotnet-architecture/eShopOnContainers/wiki/Unit-and-integration-testing>
 
-- **Archivo LÉAME de las pruebas de carga** en el repositorio de eShopOnContainers en GitHub \
-    <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/>
+- **Pruebas de carga** en eShopOnContainers \
+    <https://github.com/dotnet-architecture/eShopOnContainers/wiki/Load-testing>
 
 > [!div class="step-by-step"]
 > [Anterior](subscribe-events.md)

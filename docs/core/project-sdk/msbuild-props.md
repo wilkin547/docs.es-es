@@ -3,12 +3,12 @@ title: Propiedades de MSBuild para Microsoft.NET.Sdk
 description: Referencia de las propiedades y los elementos de MSBuild admitidos por el SDK de .NET Core.
 ms.date: 02/14/2020
 ms.topic: reference
-ms.openlocfilehash: 115c4f32e856dee64abe0c607b8ee595a65692e6
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 7980369b87d606d3876fe043e929a65da1d0d92b
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164385"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916256"
 ---
 # <a name="msbuild-reference-for-net-core-sdk-projects"></a>Referencia de MSBuild para proyectos del SDK de .NET Core
 
@@ -182,7 +182,7 @@ Puede configurar algunos comportamientos del tiempo de ejecución si especifica 
 
 ### <a name="concurrentgarbagecollection"></a>ConcurrentGarbageCollection
 
-La propiedad `ConcurrentGarbageCollection` configura si está habilitada la [recolección de elementos no utilizados en segundo plano (simultánea)](../../standard/garbage-collection/background-gc.md). Establezca el valor en `false` para deshabilitar la recolección de elementos no utilizados en segundo plano. Para obtener más información, consulte [System.GC.Concurrent/COMPlus_gcConcurrent](../run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent).
+La propiedad `ConcurrentGarbageCollection` configura si está habilitada la [recolección de elementos no utilizados en segundo plano (simultánea)](../../standard/garbage-collection/background-gc.md). Establezca el valor en `false` para deshabilitar la recolección de elementos no utilizados en segundo plano. Para obtener más información, vea [Recolección de elementos no utilizados en segundo plano](../run-time-config/garbage-collector.md#background-gc).
 
 ```xml
 <PropertyGroup>
@@ -202,7 +202,7 @@ La propiedad `InvariantGlobalization` configura si la aplicación se ejecuta en 
 
 ### <a name="retainvmgarbagecollection"></a>RetainVMGarbageCollection
 
-La propiedad `RetainVMGarbageCollection` configura el recolector de elementos no utilizados para colocar los segmentos de memoria eliminados en una lista en espera para su uso futuro o para liberarlos. Al establecer el valor en `true`, se indica al recolector de elementos no utilizados que coloque los segmentos en una lista en espera. Para obtener más información, consulte [System.GC.RetainVM/COMPlus_GCRetainVM](../run-time-config/garbage-collector.md#systemgcretainvmcomplus_gcretainvm).
+La propiedad `RetainVMGarbageCollection` configura el recolector de elementos no utilizados para colocar los segmentos de memoria eliminados en una lista en espera para su uso futuro o para liberarlos. Al establecer el valor en `true`, se indica al recolector de elementos no utilizados que coloque los segmentos en una lista en espera. Para obtener más información, vea [Retain VM (Conservar VM)](../run-time-config/garbage-collector.md#retain-vm).
 
 ```xml
 <PropertyGroup>
@@ -212,7 +212,7 @@ La propiedad `RetainVMGarbageCollection` configura el recolector de elementos no
 
 ### <a name="servergarbagecollection"></a>ServerGarbageCollection
 
-La propiedad `ServerGarbageCollection` configura si la aplicación usa la [recolección de elementos no utilizados de estación de trabajo o la de servidor](../../standard/garbage-collection/workstation-server-gc.md). Establezca el valor en `true` para usar la recolección de elementos no utilizados de servidor. Para obtener más información, consulte [System.GC.Server/COMPlus_gcServer](../run-time-config/garbage-collector.md#systemgcservercomplus_gcserver).
+La propiedad `ServerGarbageCollection` configura si la aplicación usa la [recolección de elementos no utilizados de estación de trabajo o la de servidor](../../standard/garbage-collection/workstation-server-gc.md). Establezca el valor en `true` para usar la recolección de elementos no utilizados de servidor. Para obtener más información, vea [Estación de trabajo frente a servidor](../run-time-config/garbage-collector.md#workstation-vs-server).
 
 ```xml
 <PropertyGroup>

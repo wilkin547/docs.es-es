@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: fbd3c8062892f106ec17d0fef86d5ad7f1207d20
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 4390f46492ada4b15d187be4c43a4f7865f64a80
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87303483"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916974"
 ---
 # <a name="how-to-migrate-from-no-locnewtonsoftjson-to-no-locsystemtextjson"></a>Procedimiento para realizar la migración de Newtonsoft.Json a System.Text.Json
 
@@ -91,7 +91,7 @@ Esta no es una lista exhaustiva de características de `Newtonsoft.Json`. La lis
 
 Durante la deserialización, `Newtonsoft.Json` realiza de forma predeterminada la coincidencia de nombres de propiedad sin distinción entre mayúsculas y minúsculas. El valor predeterminado de <xref:System.Text.Json> distingue entre mayúsculas y minúsculas, lo que proporciona un mejor rendimiento, ya que realiza una coincidencia exacta. Para obtener información sobre cómo realizar la coincidencia sin distinción entre mayúsculas y minúsculas, vea [Coincidencia de propiedades sin distinción entre mayúsculas y minúsculas](system-text-json-how-to.md#case-insensitive-property-matching).
 
-Si usa `System.Text.Json` indirectamente mediante ASP.NET Core, no es necesario hacer nada para obtener un comportamiento como `Newtonsoft.Json`. ASP.NET Core especifica los valores para los [nombres de propiedad con grafía Camel](system-text-json-how-to.md#use-camel-case-for-all-json-property-names) y la coincidencia sin distinción entre mayúsculas y minúsculas cuando usa `System.Text.Json`.
+Si usa `System.Text.Json` indirectamente mediante ASP.NET Core, no es necesario hacer nada para obtener un comportamiento como `Newtonsoft.Json`. ASP.NET Core especifica los valores para los [nombres de propiedad con grafía Camel](system-text-json-how-to.md#use-camel-case-for-all-json-property-names) y la coincidencia sin distinción entre mayúsculas y minúsculas cuando usa `System.Text.Json`. Los valores predeterminados se establecen en la [clase JsonOptions](https://github.com/dotnet/aspnetcore/blob/1f56888ea03f6a113587a6c4ac4d8b2ded326ffa/src/Mvc/Mvc.Core/src/JsonOptions.cs#L22-L28).
 
 ### <a name="minimal-character-escaping"></a>Mínimo escape de caracteres
 
@@ -128,6 +128,8 @@ Para más información sobre el registro de convertidores personalizados, vea [R
 ### <a name="maximum-depth"></a>Profundidad máxima
 
 De forma predeterminada, `Newtonsoft.Json` no tiene un límite de profundidad máxima. Par <xref:System.Text.Json> hay un límite predeterminado de 64, y se puede configurar mediante el valor <xref:System.Text.Json.JsonSerializerOptions.MaxDepth?displayProperty=nameWithType>.
+
+Si usa `System.Text.Json` indirectamente mediante ASP.NET Core, el límite predeterminado de profundidad máxima es de 32. El valor predeterminado es el mismo que para el enlace de modelos y se establece en la [clase JsonOptions](https://github.com/dotnet/aspnetcore/blob/1f56888ea03f6a113587a6c4ac4d8b2ded326ffa/src/Mvc/Mvc.Core/src/JsonOptions.cs#L17-L20).
 
 ### <a name="json-strings-property-names-and-string-values"></a>Cadenas JSON (nombres de propiedad y valores de cadena)
 

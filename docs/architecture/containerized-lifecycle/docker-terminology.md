@@ -1,13 +1,13 @@
 ---
 title: Terminología de Docker
 description: Descubra la terminología básica que se usa habitualmente al trabajar con Docker.
-ms.date: 04/16/2020
-ms.openlocfilehash: 34e50596eca21ec5b5505493414056814455d745
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.date: 08/06/2020
+ms.openlocfilehash: b47639a2995c3a0a30ea7111c16bbea21f1048ba
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507330"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915197"
 ---
 # <a name="docker-terminology"></a>Terminología de Docker
 
@@ -29,7 +29,7 @@ docker build
 
 **Etiqueta**: una marca o una etiqueta que se puede aplicar a las imágenes para que se puedan identificar diferentes imágenes o versiones de la misma imagen (según el número de versión o el entorno de destino).
 
-**Compilación de varias fases**: es una característica, desde Docker 17.05 o versiones posteriores, que ayuda a reducir el tamaño de las imágenes finales. En pocas palabras, con la compilación de varias fases se puede usar, por ejemplo, una imagen base grande, que contiene el SDK, para compilar y publicar la aplicación y, después, usar la carpeta de publicación con una imagen base pequeña solo en tiempo de ejecución, para generar una imagen final mucho más pequeña.
+**Compilación de varias fases**: es una característica, desde Docker 17.05 o versiones posteriores, que ayuda a reducir el tamaño de las imágenes finales. Por ejemplo, se puede usar una imagen base grande que contenga el SDK para compilar y publicar y una imagen base pequeña solo de tiempo de ejecución para hospedar la aplicación.
 
 **Repositorio**: una colección de imágenes de Docker relacionadas, etiquetadas con una etiqueta que indica la versión de la imagen. Algunos repositorios contienen varias variantes de una imagen específica, como una imagen que contiene SDK (más pesada), una imagen que solo contiene runtimes (más ligera), etcétera. Estas variantes se pueden marcar con etiquetas. Un solo repositorio puede contener variantes de plataforma, como una imagen de Linux y una imagen de Windows.
 
@@ -41,7 +41,7 @@ docker build
 
 **Azure Container Registry**: recurso público para trabajar con imágenes de Docker y sus componentes en Azure. Esto proporciona un registro cercano a las implementaciones en Azure que le proporciona control sobre el acceso, lo que le permite usar los grupos y los permisos de Azure Active Directory.
 
-**Docker Trusted Registry (DTR)** : servicio del registro de Docker (ofrecido por Docker) que se puede instalar de forma local, por lo que se encuentra en el centro de datos y la red de la organización. Es ideal para imágenes privadas que deben administrarse dentro de la empresa. Docker Trusted Registry se incluye como parte del producto Docker Datacenter. Para más información, vea [Docker Trusted Registry (DTR)](https://docs.docker.com/docker-trusted-registry/overview/).
+**Docker Trusted Registry (DTR)** : servicio del registro de Docker (ofrecido por Docker) que se puede instalar de forma local, por lo que se encuentra en el centro de datos y la red de la organización. Es ideal para imágenes privadas que deben administrarse dentro de la empresa. Docker Trusted Registry se incluye como parte del producto Docker Datacenter. Para más información, vea [Docker Trusted Registry (DTR)](https://www.docker.com/sites/default/files/Docker%20Trusted%20Registry.pdf).
 
 **Docker Community Edition (CE)** : herramientas de desarrollo para Windows y MacOS para compilar, ejecutar y probar contenedores localmente. Docker CE para Windows proporciona entornos de desarrollo para contenedores de Windows y Linux. El host de Docker de Linux en Windows se basa en una máquina virtual [Hyper-V](https://www.microsoft.com/cloud-platform/server-virtualization). El host para los contenedores de Windows se basa directamente en Windows. Docker CE para Mac se basa en el marco del hipervisor de Apple y el [hipervisor xhyve](https://github.com/mist64/xhyve), lo que proporciona una máquina virtual de host de Docker de Linux en Mac OS X. Docker CE para Windows y para Mac sustituye a Docker Toolbox, que se basaba en Oracle VirtualBox.
 

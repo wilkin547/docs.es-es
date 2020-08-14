@@ -3,12 +3,12 @@ title: Valores de configuración del recolector de elementos no utilizados
 description: Obtenga información sobre los valores del entorno de ejecución para configurar el modo en el que el recolector de elementos no utilizados administra la memoria de las aplicaciones de .NET Core.
 ms.date: 07/10/2020
 ms.topic: reference
-ms.openlocfilehash: 6ae5b7447fb0df4978ea9dcaa5e76fcc7a6cc4ca
-ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
+ms.openlocfilehash: 91d155b638c7e69b3d2c0216266a7c0c0410db4c
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86441417"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915997"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>Opciones de configuración del entorno de ejecución para la recolección de elementos no utilizados
 
@@ -30,7 +30,10 @@ Los subtipos de la recolección de elementos no utilizados son en segundo plano 
 
 Use la configuración siguiente para seleccionar los tipos de la recolección de elementos no utilizados:
 
-### <a name="systemgcservercomplus_gcserver"></a>System.GC.Server/COMPlus_gcServer
+- [Recolección de elementos no utilizados de estación de trabajo y de servidor](#workstation-vs-server)
+- [GC en segundo plano](#background-gc)
+
+### <a name="workstation-vs-server"></a>Estación de trabajo frente a servidor
 
 - Configura si la aplicación usa la recolección de elementos no utilizados de estación de trabajo o la de servidor.
 - Predeterminado: recolección de elementos no utilizados de estación de trabajo. Esto es equivalente a establecer el valor en `false`.
@@ -42,7 +45,7 @@ Use la configuración siguiente para seleccionar los tipos de la recolección de
 | **Variable del entorno** | `COMPlus_gcServer` | `0`: estación de trabajo.<br/>`1`: servidor. | .NET Core 1.0 |
 | **app.config para .NET Framework** | [GCServer](../../framework/configure-apps/file-schema/runtime/gcserver-element.md) | `false`: estación de trabajo.<br/>`true`: servidor. |  |
 
-### <a name="examples"></a>Ejemplos
+#### <a name="examples"></a>Ejemplos
 
 Archivo *runtimeconfig.json*:
 
@@ -68,7 +71,7 @@ Archivo del proyecto:
 </Project>
 ```
 
-### <a name="systemgcconcurrentcomplus_gcconcurrent"></a>System.GC.Concurrent/COMPlus_gcConcurrent
+### <a name="background-gc"></a>GC en segundo plano
 
 - Configura si está habilitada la recolección de elementos no utilizados en segundo plano (simultánea).
 - Predeterminado: uso de GC en segundo plano. Esto es equivalente a establecer el valor en `true`.
@@ -81,7 +84,7 @@ Archivo del proyecto:
 | **Variable del entorno** | `COMPlus_gcConcurrent` | `1`: GC en segundo plano.<br/>`0`: GC no simultáneo. | .NET Core 1.0 |
 | **app.config para .NET Framework** | [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) | `true`: GC en segundo plano.<br/>`false`: GC no simultáneo. |  |
 
-### <a name="examples"></a>Ejemplos
+#### <a name="examples"></a>Ejemplos
 
 Archivo *runtimeconfig.json*:
 
@@ -109,16 +112,28 @@ Archivo del proyecto:
 
 ## <a name="manage-resource-usage"></a>Administración del uso de recursos
 
-Use los valores descritos en esta sección para administrar el uso del procesador y la memoria del recolector de elementos no utilizados.
+Use la siguiente configuración para administrar el uso del procesador y la memoria del recolector de elementos no utilizados:
+
+- [Affinitize](#affinitize) (Afinidad)
+- [Affinitize mask](#affinitize-mask) (Máscara de afinidad)
+- [Affinitize ranges](#affinitize-ranges) (Intervalos de afinidad)
+- [Grupos de CPU](#cpu-groups)
+- [Heap count](#heap-count) (Recuento de montones)
+- [Heap limit](#heap-limit) (Límite del montón)
+- [Heap limit percent](#heap-limit-percent) (Límite del montón (porcentaje))
+- [High memory percent](#high-memory-percent) (Uso de memoria alto (porcentaje))
+- [Límites por cada montón de objetos](#per-object-heap-limits)
+- [Per-object-heap limit percents](#per-object-heap-limit-percents) (Límite por montón de objetos (porcentaje))
+- [Retain VM](#retain-vm) (Conservar VM)
 
 Para obtener más información sobre algunos de estos valores, vea la entrada de blog en la que se detalla el [término medio entre la GC de la estación de trabajo y del servidor](https://devblogs.microsoft.com/dotnet/middle-ground-between-server-and-workstation-gc/).
 
-### <a name="systemgcheapcountcomplus_gcheapcount"></a>System.GC.HeapCount/COMPlus_GCHeapCount
+### <a name="heap-count"></a>Heap count (Recuento de montones)
 
 - Limita el número de montones creados por el recolector de elementos no utilizados.
 - Solo se aplica a la recolección de elementos no utilizados del servidor.
-- Si la [afinidad del procesador de GC](#systemgcnoaffinitizecomplus_gcnoaffinitize) está habilitada (el valor predeterminado) el valor del recuento de montones establece afinidad entre `n` montones o subprocesos de GC en los primeros `n` procesadores. (Use los valores [affinitize mask](#systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask) o [affinitize ranges](#systemgcgcheapaffinitizerangescomplus_gcheapaffinitizeranges) para especificar exactamente los procesadores entre los que se va a establecer afinidad).
-- Si la [afinidad del procesador de GC](#systemgcnoaffinitizecomplus_gcnoaffinitize) está deshabilitada, esta configuración limita el número de montones de GC.
+- Si la [afinidad del procesador de GC](#affinitize) está habilitada (el valor predeterminado) el valor del recuento de montones establece afinidad entre `n` montones o subprocesos de GC en los primeros `n` procesadores. (Use los valores [affinitize mask](#affinitize-mask) o [affinitize ranges](#affinitize-ranges) para especificar exactamente los procesadores entre los que se va a establecer afinidad).
+- Si la [afinidad del procesador de GC](#affinitize) está deshabilitada, esta configuración limita el número de montones de GC.
 - Para obtener más información, vea la sección [Comentarios de GCHeapCount](../../framework/configure-apps/file-schema/runtime/gcheapcount-element.md#remarks).
 
 | | Nombre de valor | Valores | Versión introducida |
@@ -142,10 +157,10 @@ Ejemplo:
 > [!TIP]
 > Si configura la opción en *runtimeconfig.json*, especifique un valor decimal. Si configura la opción como una variable de entorno, especifique un valor hexadecimal. Por ejemplo, para limitar el número de montones a 16, los valores serían 16 para el archivo JSON y 0x10 o 10 para la variable de entorno.
 
-### <a name="systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask"></a>System.GC.HeapAffinitizeMask/COMPlus_GCHeapAffinitizeMask
+### <a name="affinitize-mask"></a>Affinitize mask (Máscara de afinidad)
 
 - Especifica los procesadores exactos que deben usar los subprocesos del recolector de elementos no utilizados.
-- Si la [afinidad del procesador de GC](#systemgcnoaffinitizecomplus_gcnoaffinitize) está deshabilitada, esta configuración se ignora.
+- Si la [afinidad del procesador de GC](#affinitize) está deshabilitada, esta configuración se ignora.
 - Solo se aplica a la recolección de elementos no utilizados del servidor.
 - El valor es una máscara de bits que define los procesadores que están disponibles para el proceso. Por ejemplo, un valor decimal de 1023 (o un valor hexadecimal de 0x3FF o 3FF si utiliza la variable de entorno) es 0011 1111 1111 en notación binaria. Esto especifica que se usarán los 10 primeros procesadores. Para especificar los 10 procesadores siguientes, es decir, los procesadores 10-19, especifique un valor decimal de 1047552 (o un valor hexadecimal de 0xFFC00 o FFC00), que es equivalente a un valor binario de 1111 1111 1100 0000 0000.
 
@@ -167,12 +182,12 @@ Ejemplo:
 }
 ```
 
-### <a name="systemgcgcheapaffinitizerangescomplus_gcheapaffinitizeranges"></a>System.GC.GCHeapAffinitizeRanges/COMPlus_GCHeapAffinitizeRanges
+### <a name="affinitize-ranges"></a>Affinitize ranges (Intervalos de afinidad)
 
 - Especifica la lista de procesadores que se van a usar para los subprocesos del recolector de elementos no utilizados.
-- Este valor es similar a [System.GC.HeapAffinitizeMask](#systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask), salvo que permite especificar más de 64 procesadores.
+- Este valor es similar a [System.GC.HeapAffinitizeMask](#affinitize-mask), salvo que permite especificar más de 64 procesadores.
 - En el caso de los sistemas operativos Windows, agregue el prefijo con el [grupo de CPU](/windows/win32/procthread/processor-groups) correspondiente al número o el rango del procesador, por ejemplo, "0:1-10,0:12,1:50-52,1:70".
-- Si la [afinidad del procesador de GC](#systemgcnoaffinitizecomplus_gcnoaffinitize) está deshabilitada, esta configuración se ignora.
+- Si la [afinidad del procesador de GC](#affinitize) está deshabilitada, esta configuración se ignora.
 - Solo se aplica a la recolección de elementos no utilizados del servidor.
 - Para obtener más información, vea el artículo del blog de Maoni Stephens sobre la [mejora de la configuración de la CPU para la GC en máquinas con > 64 CPU](https://devblogs.microsoft.com/dotnet/making-cpu-configuration-better-for-gc-on-machines-with-64-cpus/).
 
@@ -193,7 +208,7 @@ Ejemplo:
 }
 ```
 
-### <a name="complus_gccpugroup"></a>COMPlus_GCCpuGroup
+### <a name="cpu-groups"></a>Grupos de CPU
 
 - Configura si el recolector de elementos no utilizados usa [grupos de CPU](/windows/win32/procthread/processor-groups) o no.
 
@@ -205,14 +220,14 @@ Ejemplo:
 
 | | Nombre de valor | Valores | Versión introducida |
 | - | - | - | - |
-| **runtimeconfig.json** | N/D | N/D | N/D |
+| **runtimeconfig.json** | `System.GC.CpuGroup` | `0`: deshabilitado.<br/>`1`: habilitado. | .NET 5.0 |
 | **Variable del entorno** | `COMPlus_GCCpuGroup` | `0`: deshabilitado.<br/>`1`: habilitado. | .NET Core 1.0 |
 | **app.config para .NET Framework** | [GCCpuGroup](../../framework/configure-apps/file-schema/runtime/gccpugroup-element.md) | `false`: deshabilitado.<br/>`true`: habilitado. |  |
 
 > [!NOTE]
 > Para configurar Common Language Runtime (CLR) con el fin de distribuir también los subprocesos del grupo de subprocesos entre todos los grupos de CPU, habilite la opción [Elemento Thread_UseAllCpuGroups](../../framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md). En el caso de las aplicaciones de .NET Core, se puede habilitar esta opción estableciendo el valor de la variable de entorno `COMPlus_Thread_UseAllCpuGroups` en `1`.
 
-### <a name="systemgcnoaffinitizecomplus_gcnoaffinitize"></a>System.GC.NoAffinitize/COMPlus_GCNoAffinitize
+### <a name="affinitize"></a>Affinitize (Afinidad)
 
 - Especifica si *establecer afinidad* entre subprocesos de recolección de elementos no utilizados con procesadores. El hecho de establecer afinidad entre un subproceso de GC significa que solo puede ejecutarse en su CPU concreta. Se crea un montón para cada subproceso de GC.
 - Solo se aplica a la recolección de elementos no utilizados del servidor.
@@ -236,7 +251,7 @@ Ejemplo:
 }
 ```
 
-### <a name="systemgcheaphardlimitcomplus_gcheaphardlimit"></a>System.GC.HeapHardLimit/COMPlus_GCHeapHardLimit
+### <a name="heap-limit"></a>Heap limit (Límite del montón)
 
 - Especifica el tamaño máximo de confirmación, en bytes, para el montón de GC y la contabilidad de GC.
 - Esta configuración solo se aplica a los equipos de 64 bits.
@@ -244,7 +259,7 @@ Ejemplo:
 - El valor predeterminado, que solo se aplica en ciertos casos, es el mayor de 20 MB o de 75 % del límite de memoria del contenedor. El valor predeterminado se aplica si:
 
   - El proceso se ejecuta dentro de un contenedor que tiene un límite de memoria especificado.
-  - No se ha establecido [System.GC.HeapHardLimitPercent](#systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent).
+  - No se ha establecido [System.GC.HeapHardLimitPercent](#heap-limit-percent).
 
 | | Nombre de valor | Valores | Versión introducida |
 | - | - | - | - |
@@ -266,17 +281,17 @@ Ejemplo:
 > [!TIP]
 > Si configura la opción en *runtimeconfig.json*, especifique un valor decimal. Si configura la opción como una variable de entorno, especifique un valor hexadecimal. Por ejemplo, para especificar un límite de montón de 200 mebibytes (MiB), los valores serían 209715200 para el archivo JSON y 0xC800000 o C800000 para la variable de entorno.
 
-### <a name="systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent"></a>System.GC.HeapHardLimitPercent/COMPlus_GCHeapHardLimitPercent
+### <a name="heap-limit-percent"></a>Heap limit percent (Límite del montón (porcentaje))
 
 - Especifica el uso del montón de GC permitido como porcentaje de la memoria física total.
-- Si también se establece [System.GC.HeapHardLimit](#systemgcheaphardlimitcomplus_gcheaphardlimit), este valor se omite.
+- Si también se establece [System.GC.HeapHardLimit](#heap-limit), este valor se omite.
 - Esta configuración solo se aplica a los equipos de 64 bits.
 - Si el proceso se ejecuta dentro de un contenedor que tiene un límite de memoria especificado, el porcentaje se calcula como un porcentaje de ese límite de memoria.
 - Este valor se omite si se configuran los [límites por cada montón de objetos](#per-object-heap-limits).
 - El valor predeterminado, que solo se aplica en ciertos casos, es el menor de 20 MB o 75 % del límite de memoria del contenedor. El valor predeterminado se aplica si:
 
   - El proceso se ejecuta dentro de un contenedor que tiene un límite de memoria especificado.
-  - No se ha establecido [System.GC.HeapHardLimit](#systemgcheaphardlimitcomplus_gcheaphardlimit).
+  - No se ha establecido [System.GC.HeapHardLimit](#heap-limit).
 
 | | Nombre de valor | Valores | Versión introducida |
 | - | - | - | - |
@@ -302,21 +317,30 @@ Ejemplo:
 
 Puede especificar el uso de montones permitidos de la recolección de elementos no utilizados por cada objeto. Los diferentes montones son el montón de objetos grandes (LOH), el montón de objetos pequeños (SOH) y el montón de objetos anclados (POH).
 
-#### <a name="complus_gcheaphardlimitsoh-complus_gcheaphardlimitloh-complus_gcheaphardlimitpoh"></a>COMPLUS_GCHeapHardLimitSOH, COMPLUS_GCHeapHardLimitLOH, COMPLUS_GCHeapHardLimitPOH
-
 - Si especifica un valor para `COMPLUS_GCHeapHardLimitSOH`, `COMPLUS_GCHeapHardLimitLOH` o `COMPLUS_GCHeapHardLimitPOH`, también debe especificar un valor para `COMPLUS_GCHeapHardLimitSOH` y `COMPLUS_GCHeapHardLimitLOH`. Si no lo hace, el runtime no se inicializará.
 - El valor predeterminado para `COMPLUS_GCHeapHardLimitPOH` es 0. `COMPLUS_GCHeapHardLimitSOH` y `COMPLUS_GCHeapHardLimitLOH` no tienen valores predeterminados.
 
 | | Nombre de valor | Valores | Versión introducida |
 | - | - | - | - |
+| **runtimeconfig.json** | `System.GC.HeapHardLimitSOH` | *valor decimal* | .NET 5.0 |
 | **Variable del entorno** | `COMPLUS_GCHeapHardLimitSOH` | *valor hexadecimal* | .NET 5.0 |
+
+| | Nombre de valor | Valores | Versión introducida |
+| - | - | - | - |
+| **runtimeconfig.json** | `System.GC.HeapHardLimitLOH` | *valor decimal* | .NET 5.0 |
 | **Variable del entorno** | `COMPLUS_GCHeapHardLimitLOH` | *valor hexadecimal* | .NET 5.0 |
+
+| | Nombre de valor | Valores | Versión introducida |
+| - | - | - | - |
+| **runtimeconfig.json** | `System.GC.HeapHardLimitPOH` | *valor decimal* | .NET 5.0 |
 | **Variable del entorno** | `COMPLUS_GCHeapHardLimitPOH` | *valor hexadecimal* | .NET 5.0 |
 
 > [!TIP]
-> Si configura la opción como una variable de entorno, especifique un valor hexadecimal. Por ejemplo, para especificar un límite de montón de 200 mebibytes (MiB), el valor sería 0xC800000 o C800000.
+> Si configura la opción en *runtimeconfig.json*, especifique un valor decimal. Si configura la opción como una variable de entorno, especifique un valor hexadecimal. Por ejemplo, para especificar un límite de montón de 200 mebibytes (MiB), los valores serían 209715200 para el archivo JSON y 0xC800000 o C800000 para la variable de entorno.
 
-#### <a name="complus_gcheaphardlimitsohpercent-complus_gcheaphardlimitlohpercent-complus_gcheaphardlimitpohpercent"></a>COMPLUS_GCHeapHardLimitSOHPercent, COMPLUS_GCHeapHardLimitLOHPercent, COMPLUS_GCHeapHardLimitPOHPercent
+### <a name="per-object-heap-limit-percents"></a>Per-object-heap limit percents (Límite por montón de objetos (porcentaje))
+
+Puede especificar el uso de montones permitidos de la recolección de elementos no utilizados por cada objeto. Los diferentes montones son el montón de objetos grandes (LOH), el montón de objetos pequeños (SOH) y el montón de objetos anclados (POH).
 
 - Si especifica un valor para `COMPLUS_GCHeapHardLimitSOHPercent`, `COMPLUS_GCHeapHardLimitLOHPercent` o `COMPLUS_GCHeapHardLimitPOHPercent`, también debe especificar un valor para `COMPLUS_GCHeapHardLimitSOHPercent` y `COMPLUS_GCHeapHardLimitLOHPercent`. Si no lo hace, el runtime no se inicializará.
 - Estos valores se omiten si se especifican `COMPLUS_GCHeapHardLimitSOH`, `COMPLUS_GCHeapHardLimitLOH` y `COMPLUS_GCHeapHardLimitPOH`.
@@ -325,14 +349,40 @@ Puede especificar el uso de montones permitidos de la recolección de elementos 
 
 | | Nombre de valor | Valores | Versión introducida |
 | - | - | - | - |
+| **runtimeconfig.json** | `System.GC.HeapHardLimitSOHPercent` | *valor decimal* | .NET 5.0 |
 | **Variable del entorno** | `COMPLUS_GCHeapHardLimitSOHPercent` | *valor hexadecimal* | .NET 5.0 |
+
+| | Nombre de valor | Valores | Versión introducida |
+| - | - | - | - |
+| **runtimeconfig.json** | `System.GC.HeapHardLimitLOHPercent` | *valor decimal* | .NET 5.0 |
 | **Variable del entorno** | `COMPLUS_GCHeapHardLimitLOHPercent` | *valor hexadecimal* | .NET 5.0 |
+
+| | Nombre de valor | Valores | Versión introducida |
+| - | - | - | - |
+| **runtimeconfig.json** | `System.GC.HeapHardLimitPOHPercent` | *valor decimal* | .NET 5.0 |
 | **Variable del entorno** | `COMPLUS_GCHeapHardLimitPOHPercent` | *valor hexadecimal* | .NET 5.0 |
 
 > [!TIP]
-> Si configura la opción como una variable de entorno, especifique un valor hexadecimal. Por ejemplo, para limitar el uso del montón al 30 %, el valor sería 0x1E o 1E.
+> Si configura la opción en *runtimeconfig.json*, especifique un valor decimal. Si configura la opción como una variable de entorno, especifique un valor hexadecimal. Por ejemplo, para limitar el uso del montón al 30 %, los valores serían 30 para el archivo JSON y 0x1E o 1E para la variable de entorno.
 
-### <a name="systemgcretainvmcomplus_gcretainvm"></a>System.GC.RetainVM/COMPlus_GCRetainVM
+### <a name="high-memory-percent"></a>High memory percent (Uso de memoria alto (porcentaje))
+
+La carga de memoria se indica mediante el porcentaje de memoria física en uso. De forma predeterminada, cuando la carga de memoria física alcanza el **90 %** , la recolección de elementos no utilizados se vuelve más agresiva a la hora de realizar recolecciones de elementos no utilizados completas y compactas para evitar la paginación. Cuando la carga de memoria está por debajo del 90 %, la recolección de elementos no utilizados favorece las recolecciones en segundo plano de recolecciones de elementos no utilizados completas, que tienen pausas más cortas pero no reducen mucho el tamaño total del montón. En los equipos con una cantidad de memoria considerable (80 GB o más), el umbral de carga predeterminado está entre el 90 % y el 97 %.
+
+El umbral de carga de uso de memoria alto se puede ajustar mediante la variable de entorno `COMPlus_GCHighMemPercent` o la opción de configuración JSON `System.GC.HighMemoryPercent`. Considere la posibilidad de ajustar el umbral si quiere controlar el tamaño del montón. Por ejemplo, en el proceso dominante de un equipo con 64 GB de memoria, es razonable que la recolección de elementos no utilizados empiece a reaccionar cuando haya un 10 % de memoria disponible. Pero en el caso de procesos más pequeños, por ejemplo, un proceso que solo usa 1 GB de memoria, la recolección de elementos no utilizados puede ejecutarse cómodamente con menos del 10 % de memoria disponible. En estos procesos más pequeños, considere la posibilidad de establecer un umbral más alto. Por otro lado, si quiere que los procesos más grandes tengan tamaños de montón más pequeños (incluso cuando haya mucha memoria física disponible), la reducción de este umbral es una manera eficaz de que la recolección de elementos no utilizados reaccione antes para reducir el montón.
+
+> [!NOTE]
+> En el caso de los procesos que se ejecutan en un contenedor, la recolección de elementos no utilizados considera la memoria física según el límite del contenedor.
+
+| | Nombre de valor | Valores | Versión introducida |
+| - | - | - | - |
+| **runtimeconfig.json** | `System.GC.HighMemoryPercent` | *valor decimal* | .NET 5.0 |
+| **Variable del entorno** | `COMPlus_GCHighMemPercent` | *valor hexadecimal* | |
+
+> [!TIP]
+> Si configura la opción en *runtimeconfig.json*, especifique un valor decimal. Si configura la opción como una variable de entorno, especifique un valor hexadecimal. Por ejemplo, para establecer el umbral de uso de memoria alto en el 75 %, los valores serían 75 para el archivo JSON y 0x4B o 4B para la variable de entorno.
+
+### <a name="retain-vm"></a>Retain VM (Conservar VM)
 
 - Configura si los segmentos que se deben eliminar se ponen en una lista en espera para usarlos en el futuro o se devuelven al sistema operativo (SO).
 - Predeterminado: devolver los segmentos al sistema operativo. Esto es equivalente a establecer el valor en `false`.
@@ -343,7 +393,7 @@ Puede especificar el uso de montones permitidos de la recolección de elementos 
 | **Propiedad de MSBuild** | `RetainVMGarbageCollection` | `false`: liberar al sistema operativo.<br/>`true`: poner en espera. | .NET Core 1.0 |
 | **Variable del entorno** | `COMPlus_GCRetainVM` | `0`: liberar al sistema operativo.<br/>`1`: poner en espera. | .NET Core 1.0 |
 
-### <a name="examples"></a>Ejemplos
+#### <a name="examples"></a>Ejemplos
 
 Archivo *runtimeconfig.json*:
 
@@ -371,8 +421,6 @@ Archivo del proyecto:
 
 ## <a name="large-pages"></a>Páginas grandes
 
-### <a name="complus_gclargepages"></a>COMPlus_GCLargePages
-
 - Especifica si se deben usar páginas grandes cuando se establece un límite máximo de montones.
 - Predeterminado: no utilizar páginas grandes cuando se establezca un límite rígido de montones. Esto es equivalente a establecer el valor en `0`.
 - Se trata de un valor de configuración experimental.
@@ -382,9 +430,7 @@ Archivo del proyecto:
 | **runtimeconfig.json** | N/D | N/D | N/D |
 | **Variable del entorno** | `COMPlus_GCLargePages` | `0`: deshabilitado.<br/>`1`: habilitado. | .NET Core 3.0 |
 
-## <a name="large-objects"></a>Objetos grandes
-
-### <a name="complus_gcallowverylargeobjects"></a>COMPlus_gcAllowVeryLargeObjects
+## <a name="allow-large-objects"></a>Allow large objects (Permitir objetos grandes)
 
 - Configura la compatibilidad del recolector de elementos no utilizados en plataformas de 64 bits para matrices de más de 2 gigabytes (GB) de tamaño total.
 - Predeterminado: GC admite matrices de más de 2 GB. Esto es equivalente a establecer el valor en `1`.
@@ -397,8 +443,6 @@ Archivo del proyecto:
 | **app.config para .NET Framework** | [gcAllowVeryLargeObjects](../../framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md) | `1`: habilitado.<br/> `0`: deshabilitado. | .NET Framework 4.5 |
 
 ## <a name="large-object-heap-threshold"></a>Umbral del montón de objetos grandes
-
-### <a name="systemgclohthresholdcomplus_gclohthreshold"></a>System.GC.LOHThreshold/COMPlus_GCLOHThreshold
 
 - Especifica el tamaño del umbral, en bytes, que provoca que los objetos vayan al montón de objetos grandes (LOH).
 - El valor predeterminado del umbral es de 85 000 bytes.
@@ -426,8 +470,6 @@ Ejemplo:
 > Si configura la opción en *runtimeconfig.json*, especifique un valor decimal. Si configura la opción como una variable de entorno, especifique un valor hexadecimal. Por ejemplo, para establecer un tamaño de umbral de 120 000 bytes, los valores serían 120000 para el archivo JSON y 0x1D4C0 o 1D4C0 para la variable de entorno.
 
 ## <a name="standalone-gc"></a>GC independiente
-
-### <a name="complus_gcname"></a>COMPlus_GCName
 
 - Especifica una ruta de acceso a la biblioteca que contiene el recolector de elementos no utilizados que el entorno de ejecución pretende cargar.
 - Para obtener más información, vea [Diseño del cargador de GC independiente](https://github.com/dotnet/runtime/blob/master/docs/design/features/standalone-gc-loading.md).

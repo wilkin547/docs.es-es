@@ -5,18 +5,18 @@ ms.date: 04/21/2020
 helpviewer_keywords:
 - garbage collection, background
 - background garbage collection
-ms.openlocfilehash: 780503288d3474cd99a595bdbd52c3a5abba5308
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: bf88c14b2aeed94a548b6116749fa8669576afe1
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990231"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87917002"
 ---
 # <a name="background-garbage-collection"></a>Recolección de elementos no utilizados en segundo plano
 
 En la recolección de elementos no utilizados (GC) en segundo plano, las generaciones efímeras (0 y 1) se recolectan según sea necesario mientras la recolección de la generación 2 está en curso. La recolección de elementos no utilizados en segundo plano se realiza en uno o más subprocesos dedicados, en función de si se trata de GC en segundo plano o de servidor, y solo se aplica a las recolecciones de la generación 2.
 
-La recolección de elementos no utilizados en segundo plano está habilitada de forma predeterminada. Se puede habilitar o deshabilitar con la opción de configuración [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) o la opción [System.GC.Concurrent](../../core/run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent) en aplicaciones de .NET Core.
+La recolección de elementos no utilizados en segundo plano está habilitada de forma predeterminada. Se puede habilitar o deshabilitar con la opción de configuración [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) en aplicaciones de .NET Framework o la opción [System.GC.Concurrent](../../core/run-time-config/garbage-collector.md#background-gc) en aplicaciones de .NET Core y .NET 5 y posterior.
 
 > [!NOTE]
 > La recolección de elementos no utilizados en segundo plano reemplaza la [recolección simultánea de elementos no utilizados](#concurrent-garbage-collection) en .NET Framework 4 y versiones posteriores. En .NET Framework 4, solo se admite para la recolección de elementos no utilizados de *estación de trabajo*. A partir de .NET Framework 4.5, la recolección de elementos no utilizados en segundo plano está disponible para *estaciones de trabajo* y *servidores*.

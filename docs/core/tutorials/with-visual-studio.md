@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 3c8fc7c4702b786c05e14397dc36d994c77e114d
-ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
+ms.openlocfilehash: fbe0b3491260e787c08b98b320b19408f2c897eb
+ms.sourcegitcommit: 09bad6ec0cbf18be7cd7f62e77286d305a18b607
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84811657"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87795390"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio"></a>Tutorial: Creación de una aplicación de consola de .NET Core con Visual Studio
 
@@ -79,7 +79,7 @@ Si no se muestra el idioma que quiere usar, cambie el selector de idioma en la p
 
 ## <a name="run-the-app"></a>Ejecutar la aplicación
 
-1. Presione <kbd>Mayús</kbd>+<kbd>F5</kbd> para ejecutar el programa sin depuración.
+1. Presione <kbd>Ctrl</kbd>+<kbd>F5</kbd> para ejecutar el programa sin depurar.
 
    Se abre la ventana de la consola con el texto "Hello World" impreso en la pantalla y parte de la información de depuración de Visual Studio.
 
@@ -102,7 +102,7 @@ Mejore la aplicación para pedir su nombre al usuario y mostrarlo con la fecha y
 
    El signo de dólar (`$`) delante de una cadena permite colocar expresiones como nombres de variable entre llaves en la cadena. El valor de la expresión se inserta en la cadena en lugar de la expresión. Esta sintaxis se conoce como [cadenas interpoladas](../../csharp/language-reference/tokens/interpolated.md).
 
-1. Presione <kbd>Mayús</kbd>+<kbd>F5</kbd> para ejecutar el programa sin depuración.
+1. Presione <kbd>Ctrl</kbd>+<kbd>F5</kbd> para ejecutar el programa sin depurar.
 
 1. Responda a la solicitud escribiendo un nombre y presionando la tecla <kbd>Entrar</kbd>.
 

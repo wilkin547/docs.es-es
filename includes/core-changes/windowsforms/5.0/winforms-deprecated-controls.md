@@ -1,18 +1,18 @@
 ---
-ms.openlocfilehash: c9720f51e40ada4cd2cf6997ba7006a232893553
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: d3bfeda8309af83d8e4199999ed91263a17caeea
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83702469"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556258"
 ---
 ### <a name="removed-status-bar-controls"></a>Controles de barra de estado quitados
 
-A partir de la versión preliminar 1 de .NET 5.0, algunos controles de Windows Forms ya no están disponibles.
+A partir de .NET 5.0, algunos controles de Windows Forms ya no están disponibles.
 
 #### <a name="change-description"></a>Descripción del cambio
 
-A partir de la versión preliminar 1 de .NET 5.0, algunos de los controles de Windows Forms relacionados con la barra de estado ya no están disponibles. Los controles de reemplazo, con un mejor diseño y soporte técnico, se introdujeron en .NET Framework 2.0. Los controles en desuso se eliminaron previamente de los cuadros de herramientas del diseñador, pero todavía estaban disponibles para su uso. Ahora, se han quitado por completo.
+A partir de .NET 5.0, algunos de los controles de Windows Forms relacionados con la barra de estado ya no están disponibles. Los controles de reemplazo, con un mejor diseño y soporte técnico, se introdujeron en .NET Framework 2.0. Los controles en desuso se eliminaron previamente de los cuadros de herramientas del diseñador, pero todavía estaban disponibles para su uso. Ahora, se han quitado por completo.
 
 Los siguientes tipos ya no están disponibles:
 

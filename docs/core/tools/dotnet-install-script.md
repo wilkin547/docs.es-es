@@ -2,12 +2,12 @@
 title: Scripts de dotnet-install
 description: Obtenga información sobre los scripts de dotnet-install para instalar el SDK de .NET Core y el entorno de ejecución compartido.
 ms.date: 04/30/2020
-ms.openlocfilehash: cecfbb86c4a2863161d3df7c78201fa8057abfe5
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: c3aa6549a0b521db7fc19c6ff44665e3c4ba0c5f
+ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86415928"
+ms.lasthandoff: 08/08/2020
+ms.locfileid: "88024659"
 ---
 # <a name="dotnet-install-scripts-reference"></a>referencia de scripts de dotnet-install
 
@@ -23,7 +23,7 @@ Windows:
 dotnet-install.ps1 [-Architecture <ARCHITECTURE>] [-AzureFeed]
     [-Channel <CHANNEL>] [-DryRun] [-FeedCredential]
     [-InstallDir <DIRECTORY>] [-JSonFile <JSONFILE>]
-    [-NoCdn] [-NoPath] [-ProxyAddress]
+    [-NoCdn] [-NoPath] [-ProxyAddress] [-ProxyBypassList <LIST_OF_URLS>]
     [-ProxyUseDefaultCredentials] [-Runtime <RUNTIME>]
     [-SkipNonVersionedFiles] [-UncachedFeed] [-Verbose]
     [-Version <VERSION>]
@@ -140,6 +140,10 @@ Los scripts de instalación no actualizan el Registro en Windows. Solo descargan
 - **`-ProxyAddress`**
 
   Si se establece, el instalador usa el proxy al realizar solicitudes web. (Solo es válido para Windows).
+
+- **`-ProxyBypassList <LIST_OF_URLS>`**
+
+  Si se establece con `ProxyAddress`, proporciona una lista de direcciones URL separadas por comas que omiten el proxy. (Solo es válido para Windows).
 
 - **`ProxyUseDefaultCredentials`**
 
