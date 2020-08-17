@@ -7,16 +7,14 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/11/2019
-ms.openlocfilehash: 8ef2c7d66d50abb34e536b6333e3aa68ee2bb07d
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: a5aae6cf02ccec84ac8642b6ce8d9c919755e868
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173138"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267573"
 ---
-# <a name="an-introduction-to-blazor-for-aspnet-web-forms-developers"></a>Una introducción a Blazor para desarrolladores de formularios Web Forms de ASP.net
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+# <a name="an-introduction-to-no-locblazor-for-aspnet-web-forms-developers"></a>Una introducción a Blazor para desarrolladores de formularios Web Forms de ASP.net
 
 El marco de trabajo de formularios Web Forms de ASP.NET ha sido una grapa del desarrollo web de .NET, dado que el .NET Framework se envió por primera vez en 2002. De nuevo, cuando la web todavía se encontraba en su gran cantidad de aplicaciones Web, los formularios Web Forms ASP.NET crearon muchos de los patrones que se usaban para el desarrollo de escritorio. En los formularios Web Forms de ASP.NET, las páginas web se pueden crear rápidamente a partir de controles de interfaz de usuario reutilizables. Las interacciones del usuario se administran de forma natural como eventos. Existe un completo ecosistema de controles de interfaz de usuario de formularios Web Forms que proporcionan los proveedores de Microsoft y de control. Los controles facilitan los esfuerzos de conectarse a orígenes de datos y mostrar visualizaciones de datos enriquecidas. En el caso de la inclinación visual, el diseñador de formularios Web Forms proporciona una sencilla interfaz de arrastrar y colocar para administrar controles.
 
@@ -53,17 +51,17 @@ Sin embargo, los exploradores se han convertido en plataformas versátiles. Impl
 
 Pero el puente de dos plataformas y ecosistemas diferentes (.NET y JavaScript) se incluye con un costo. La experiencia es necesaria en dos mundos en paralelo con diferentes lenguajes, marcos y herramientas. El código y la lógica no se pueden compartir fácilmente entre el cliente y el servidor, lo que produce una sobrecarga de ingeniería y duplicación. También puede ser difícil mantenerse al día con el ecosistema de JavaScript, que tiene un historial de evolución a velocidad vértigo. Las preferencias del marco front-end y de la herramienta de compilación cambian rápidamente. El sector ha observado la progresión desde la imparte a Gulp a WebPack, etc. Se ha producido la misma renovación de Restless con Marcos front-end como jQuery, Knockout, angular, reAct y Vue. Pero dado el monopolio del explorador de JavaScript, había pocas opciones en la materia. Es decir, hasta que la comunidad web se reunió y causó que se produjera un *Miracle* .
 
-## <a name="webassembly-fulfills-a-need"></a>WebAssemblysatisface una necesidad
+## <a name="no-locwebassembly-fulfills-a-need"></a>WebAssembly satisface una necesidad
 
-En 2015, los principales proveedores de exploradores se han unido a las fuerzas de un grupo de la comunidad de W3C para crear un nuevo estándar abierto denominado WebAssembly . WebAssemblyes un código de bytes para la Web. Si puede compilar el código en WebAssembly , se puede ejecutar en cualquier explorador de cualquier plataforma a la velocidad nativa. Esfuerzos iniciales centrados en C/C++. El resultado era una demostración dramática de la ejecución directa de motores de gráficos 3D nativos en el explorador sin complementos. WebAssemblyha sido normalizado e implementado por todos los exploradores principales.
+En 2015, los principales proveedores de exploradores se han unido a las fuerzas de un grupo de la comunidad de W3C para crear un nuevo estándar abierto denominado WebAssembly . WebAssembly es un código de bytes para la Web. Si puede compilar el código en WebAssembly , se puede ejecutar en cualquier explorador de cualquier plataforma a la velocidad nativa. Esfuerzos iniciales centrados en C/C++. El resultado era una demostración dramática de la ejecución directa de motores de gráficos 3D nativos en el explorador sin complementos. WebAssembly ha sido normalizado e implementado por todos los exploradores principales.
 
 El trabajo en ejecución de .NET en WebAssembly se anunció a finales de 2017 y se espera que se distribuya en 2020, incluido el soporte técnico de .net 5. La capacidad de ejecutar código .NET directamente en el explorador habilita el desarrollo web de pila completa con .NET.
 
-## <a name="blazor-full-stack-web-development-with-net"></a>Blazor: desarrollo web de pila completa con .NET
+## <a name="no-locblazor-full-stack-web-development-with-net"></a>Blazor: desarrollo web de pila completa con .NET
 
-Por su cuenta, la capacidad de ejecutar código .NET en un explorador no proporciona una experiencia de un extremo a otro para crear aplicaciones web del lado cliente. Aquí es donde Blazor entra. Blazores un marco de interfaz de usuario Web del lado cliente basado en C# en lugar de JavaScript. Blazorse puede ejecutar directamente en el explorador mediante WebAssembly . No se requiere ningún complemento de explorador. Como alternativa, las Blazor aplicaciones pueden ejecutar el lado servidor en .net Core y administrar todas las interacciones del usuario a través de una conexión en tiempo real con el explorador.
+Por su cuenta, la capacidad de ejecutar código .NET en un explorador no proporciona una experiencia de un extremo a otro para crear aplicaciones web del lado cliente. Aquí es donde Blazor entra. Blazor es una plataforma de interfaz de usuario web del lado cliente basada en C#, en lugar de JavaScript. Blazor se puede ejecutar directamente en el explorador mediante WebAssembly . No se requiere ningún complemento de explorador. Como alternativa, las Blazor aplicaciones pueden ejecutar el lado servidor en .net Core y administrar todas las interacciones del usuario a través de una conexión en tiempo real con el explorador.
 
-Blazortiene una gran compatibilidad con las herramientas en Visual Studio y Visual Studio Code. El marco también incluye un modelo completo de componentes de interfaz de usuario y tiene funciones integradas para:
+Blazor tiene una gran compatibilidad con las herramientas en Visual Studio y Visual Studio Code. El marco también incluye un modelo completo de componentes de interfaz de usuario y tiene funciones integradas para:
 
 - Formularios y validación
 - Inserción de dependencias
@@ -72,7 +70,7 @@ Blazortiene una gran compatibilidad con las herramientas en Visual Studio y Visu
 - Depuración en el explorador
 - Interoperabilidad de JavaScript
 
-Blazortiene mucho en común con los formularios Web Forms de ASP.NET. Ambos marcos ofrecen modelos de programación de interfaz de usuario con estado basados en componentes, controlados por eventos. La principal diferencia arquitectónica es que ASP.NET Web Forms solo se ejecuta en el servidor. Blazorse puede ejecutar en el cliente en el explorador. Pero si procede de un fondo de formularios Web Forms ASP.NET, hay mucho en Blazor que le resultará familiar. Blazores una solución natural para los desarrolladores de formularios Web Forms de ASP.NET que buscan una manera de aprovechar el desarrollo del lado cliente y el futuro de .NET multiplataforma de código abierto.
+Blazor tiene mucho en común con los formularios Web Forms de ASP.NET. Ambos marcos ofrecen modelos de programación de interfaz de usuario con estado basados en componentes, controlados por eventos. La principal diferencia arquitectónica es que ASP.NET Web Forms solo se ejecuta en el servidor. Blazor se puede ejecutar en el cliente en el explorador. Pero si procede de un fondo de formularios Web Forms ASP.NET, hay mucho en Blazor que le resultará familiar. Blazor es una solución natural para los desarrolladores de formularios Web Forms de ASP.NET que buscan una manera de aprovechar el desarrollo del lado cliente y el futuro de .NET multiplataforma de código abierto.
 
 Este libro proporciona una introducción a Blazor que se ofrece específicamente a los desarrolladores de formularios Web Forms de ASP.net. Cada Blazor concepto se presenta en el contexto de las características y procedimientos de formularios Web Forms análogos de ASP.net. Al final de este libro, tendrá conocimientos sobre:
 
@@ -81,7 +79,7 @@ Este libro proporciona una introducción a Blazor que se ofrece específicamente
 - Cómo Blazor se relaciona con .net Core.
 - Estrategias razonables para migrar aplicaciones de formularios Web Forms de ASP.NET existentes a Blazor cuando corresponda.
 
-## <a name="get-started-with-blazor"></a>Introducción a los Blazor
+## <a name="get-started-with-no-locblazor"></a>Introducción a los Blazor
 
 Empezar a trabajar con Blazor es fácil. Vaya a <https://blazor.net> y siga los vínculos para instalar el SDK de .net Core y Blazor las plantillas de proyecto correspondientes. También encontrará instrucciones para configurar las Blazor herramientas en Visual Studio o Visual Studio Code.
 

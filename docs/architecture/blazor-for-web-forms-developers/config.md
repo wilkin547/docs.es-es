@@ -1,21 +1,19 @@
 ---
-title: Configuración de aplicaciones
+title: Configuración de la aplicación
 description: Obtenga información sobre cómo configurar Blazor aplicaciones sin usar ConfigurationManager.
 author: csharpfritz
 ms.author: jefritz
 no-loc:
 - Blazor
 ms.date: 04/01/2020
-ms.openlocfilehash: a13f663c2c6908ba906e42cb939c3b8707b8cccd
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 6154b4f8c7a5bff42e603b12d5ef85468b80224e
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173320"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267508"
 ---
-# <a name="app-configuration"></a>Configuración de aplicaciones
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+# <a name="app-configuration"></a>Configuración de la aplicación
 
 La forma principal de cargar la configuración de la aplicación en formularios Web Forms es con entradas del archivo de *web.config* &mdash; en el servidor o en un archivo de configuración relacionado al que hace referencia *web.config*. Puede usar el objeto estático `ConfigurationManager` para interactuar con la configuración de la aplicación, las cadenas de conexión del repositorio de datos y otros proveedores de configuración extendidos que se agregan a la aplicación. Es habitual ver las interacciones con la configuración de la aplicación, tal como se muestra en el código siguiente:
 

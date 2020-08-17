@@ -6,16 +6,14 @@ ms.author: jefritz
 no-loc:
 - Blazor
 ms.date: 04/26/2020
-ms.openlocfilehash: 4bf9bee21ce1db828dbe0aeb156d5e15cae4f703
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 8bd326e6952708b2099c3a575d6811990335df17
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173309"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267599"
 ---
 # <a name="work-with-data"></a>Trabajar con datos
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 El acceso a datos es la red troncal de una aplicación de formularios Web Forms ASP.NET. Si va a crear formularios para la web, ¿qué ocurre con los datos? Con los formularios Web Forms, había varias técnicas de acceso a datos que podría usar para interactuar con una base de datos:
 
@@ -57,8 +55,8 @@ public class Product
 El producto tiene una clave principal y tres campos adicionales que se crearían en nuestra base de datos:  
 
 - EF identificará la `Id` propiedad como clave principal por Convención.
-- `Name`se almacenará en una columna configurada para el almacenamiento de texto. El `[Required]` atributo que decora esta propiedad agregará una `not null` restricción para ayudar a exigir este comportamiento declarado de la propiedad.
-- `Description`se almacenará en una columna configurada para el almacenamiento de texto y tendrá una longitud máxima configurada de 4000 caracteres como indica el `[MaxLength]` atributo. El esquema de la base de datos se configurará con una columna denominada `MaxLength` con el tipo de datos `varchar(4000)` .
+- `Name` se almacenará en una columna configurada para el almacenamiento de texto. El `[Required]` atributo que decora esta propiedad agregará una `not null` restricción para ayudar a exigir este comportamiento declarado de la propiedad.
+- `Description` se almacenará en una columna configurada para el almacenamiento de texto y tendrá una longitud máxima configurada de 4000 caracteres como indica el `[MaxLength]` atributo. El esquema de la base de datos se configurará con una columna denominada `MaxLength` con el tipo de datos `varchar(4000)` .
 - La `Price` propiedad se almacenará como moneda. El `[Range]` atributo generará las restricciones adecuadas para evitar el almacenamiento de datos fuera de los valores mínimo y máximo declarados.
 
 Necesitamos agregar esta `Product` clase a una clase de contexto de base de datos que defina las operaciones de conexión y traducción con nuestra base de datos.

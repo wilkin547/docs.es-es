@@ -4,16 +4,14 @@ description: Obtenga información sobre cómo definir la lógica de inicio de la
 author: csharpfritz
 ms.author: jefritz
 ms.date: 02/25/2020
-ms.openlocfilehash: 3d460750c36f64b8ad343755bd63b47af5c310d9
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: ea2ea458011d8351a834aa12db02e5d2bac2dc65
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87914885"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267703"
 ---
 # <a name="app-startup"></a>Inicio de la aplicación
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Las aplicaciones escritas para ASP.NET suelen tener un `global.asax.cs` archivo que define el `Application_Start` evento que controla qué servicios están configurados y están disponibles para la representación en HTML y el procesamiento de .net. En este capítulo se examina el modo en que las cosas son ligeramente diferentes con el servidor de ASP.NET Core y el increíble.
 
@@ -21,10 +19,10 @@ Las aplicaciones escritas para ASP.NET suelen tener un `global.asax.cs` archivo 
 
 El método predeterminado de formularios Web Forms `Application_Start` ha crecido en el propósito de los años para administrar muchas tareas de configuración.  Un nuevo proyecto de formularios Web Forms con la plantilla predeterminada en Visual Studio 2019 ahora contiene la lógica de configuración siguiente:
 
-- `RouteConfig`-Enrutamiento de URL de la aplicación
-- `BundleConfig`-Agrupación de CSS y JavaScript y minificación
+- `RouteConfig` -Enrutamiento de URL de la aplicación
+- `BundleConfig` -Agrupación de CSS y JavaScript y minificación
 
-Cada uno de estos archivos individuales reside en la `App_Start` carpeta y solo se ejecuta una vez al principio de la aplicación.  `RouteConfig`en la plantilla de proyecto predeterminada, agrega el `FriendlyUrlSettings` para formularios Web Forms para permitir que las direcciones URL de la aplicación omitan la `.ASPX` extensión de archivo.  La plantilla predeterminada también contiene una directiva que proporciona códigos de estado de redirección HTTP permanente (HTTP 301) para las `.ASPX` páginas a la dirección URL descriptiva con el nombre de archivo que omite la extensión.
+Cada uno de estos archivos individuales reside en la `App_Start` carpeta y solo se ejecuta una vez al principio de la aplicación.  `RouteConfig` en la plantilla de proyecto predeterminada, agrega el `FriendlyUrlSettings` para formularios Web Forms para permitir que las direcciones URL de la aplicación omitan la `.ASPX` extensión de archivo.  La plantilla predeterminada también contiene una directiva que proporciona códigos de estado de redirección HTTP permanente (HTTP 301) para las `.ASPX` páginas a la dirección URL descriptiva con el nombre de archivo que omite la extensión.
 
 Con ASP.NET Core y increíbles, estos métodos se han simplificado y consolidado en la `Startup` clase o se eliminan en favor de las tecnologías web comunes.
 

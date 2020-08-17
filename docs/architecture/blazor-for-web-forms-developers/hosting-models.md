@@ -1,5 +1,5 @@
 ---
-title: Blazormodelos de hospedaje de aplicaciones
+title: Blazor modelos de hospedaje de aplicaciones
 description: Obtenga información sobre las distintas formas de hospedar una Blazor aplicación, incluida en el explorador en WebAssembly o en el servidor.
 author: danroth27
 ms.author: daroth
@@ -7,47 +7,45 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/11/2019
-ms.openlocfilehash: a0d37392a65cfcbff9642476d9fdb1e5c662e66a
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 2ebb021d2fce46a91a006227ccf9ba0cbcc5eea5
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173268"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267612"
 ---
-# <a name="blazor-app-hosting-models"></a>Blazormodelos de hospedaje de aplicaciones
+# <a name="no-locblazor-app-hosting-models"></a>Blazor modelos de hospedaje de aplicaciones
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
-Blazorlas aplicaciones pueden hospedarse en IIS, al igual que las aplicaciones de formularios Web Forms de ASP.NET. Blazorlas aplicaciones también se pueden hospedar de una de las siguientes maneras:
+Blazor las aplicaciones pueden hospedarse en IIS, al igual que las aplicaciones de formularios Web Forms de ASP.NET. Blazor las aplicaciones también se pueden hospedar de una de las siguientes maneras:
 
 - En el lado cliente en el explorador de WebAssembly .
 - Del lado servidor en una aplicación ASP.NET Core.
 
-## <a name="blazor-webassembly-apps"></a>BlazorWebAssemblyaplicaciones de
+## <a name="no-locblazor-no-locwebassembly-apps"></a>BlazorWebAssemblyaplicaciones de
 
 BlazorWebAssemblylas aplicaciones se ejecutan directamente en el explorador en un entorno de WebAssembly tiempo de ejecución .net basado en. Blazorlas WebAssembly aplicaciones funcionan de una manera similar a los marcos de trabajo de JavaScript de front-end, como angular o reAct. Sin embargo, en lugar de escribir JavaScript, escriba C#. El tiempo de ejecución de .NET se descarga con la aplicación junto con el ensamblado de la aplicación y las dependencias necesarias. No se requiere ningún complemento o extensión de explorador.
 
 Los ensamblados descargados son ensamblados .NET normales, como se usaría en cualquier otra aplicación de .NET. Dado que el tiempo de ejecución admite .NET Standard, puede usar las bibliotecas de .NET Standard existentes con su Blazor WebAssembly aplicación. Sin embargo, estos ensamblados se seguirán ejecutando en el espacio aislado de seguridad del explorador. Algunas funciones pueden producir un <xref:System.PlatformNotSupportedException> , como intentar tener acceso al sistema de archivos o abrir conexiones de red arbitrarias.
 
-Cuando se carga la aplicación, se inicia el tiempo de ejecución de .NET y apunta al ensamblado de la aplicación. La lógica de inicio de la aplicación se ejecuta y se representan los componentes raíz. Blazorcalcula las actualizaciones de la interfaz de usuario basadas en la salida representada de los componentes. Después se aplican las actualizaciones del DOM.
+Cuando se carga la aplicación, se inicia el tiempo de ejecución de .NET y apunta al ensamblado de la aplicación. La lógica de inicio de la aplicación se ejecuta y se representan los componentes raíz. Blazor calcula las actualizaciones de la interfaz de usuario basadas en la salida representada de los componentes. Después se aplican las actualizaciones del DOM.
 
-![Blazor WebAssembly](media/hosting-models/blazor-webassembly.png)
+![::: no-LOC (increíble):::::: no-LOC (webassembly):::](media/hosting-models/blazor-webassembly.png)
 
 Blazorlas WebAssembly aplicaciones se ejecutan exclusivamente en el lado cliente. Estas aplicaciones pueden implementarse en soluciones de hospedaje de sitios estáticos, como páginas de GitHub o el hospedaje de sitios web estáticos de Azure. .NET no es necesario en el servidor. La vinculación profunda a partes de la aplicación normalmente requiere una solución de enrutamiento en el servidor. La solución de enrutamiento redirige las solicitudes a la raíz de la aplicación. Por ejemplo, esta redirección se puede controlar mediante reglas de reescritura de URL en IIS.
 
-Para obtener todas las ventajas de Blazor y el desarrollo web de .net de pila completa, hospede su Blazor WebAssembly aplicación con ASP.net Core. Con .NET en el cliente y el servidor, puede compartir código fácilmente y compilar la aplicación con un conjunto coherente de lenguajes, marcos y herramientas. Blazorproporciona plantillas convenientes para configurar una solución que contiene una Blazor WebAssembly aplicación y un proyecto de host ASP.net Core. Cuando se compila la solución, los archivos estáticos compilados de la Blazor aplicación se hospedan en la aplicación ASP.net Core con el enrutamiento de reserva ya configurado.
+Para obtener todas las ventajas de Blazor y el desarrollo web de .net de pila completa, hospede su Blazor WebAssembly aplicación con ASP.net Core. Con .NET en el cliente y el servidor, puede compartir código fácilmente y compilar la aplicación con un conjunto coherente de lenguajes, marcos y herramientas. Blazor proporciona plantillas convenientes para configurar una solución que contiene una Blazor WebAssembly aplicación y un proyecto de host ASP.net Core. Cuando se compila la solución, los archivos estáticos compilados de la Blazor aplicación se hospedan en la aplicación ASP.net Core con el enrutamiento de reserva ya configurado.
 
-## <a name="blazor-server-apps"></a>BlazorAplicaciones de servidor
+## <a name="no-locblazor-server-apps"></a>Blazor Aplicaciones de servidor
 
-Recuerde en la descripción de la [ Blazor arquitectura](architecture-comparison.md#blazor) que Blazor los componentes representan su salida en una abstracción intermedia denominada `RenderTree` . BlazorA continuación, el marco de trabajo compara lo que se representó con lo que se representó previamente. Las diferencias se aplican al DOM. Blazorlos componentes se desacoplan de la manera en que se aplica la salida representada. Por lo tanto, los propios componentes no tienen que ejecutarse en el mismo proceso que el proceso de actualización de la interfaz de usuario. De hecho, ni siquiera tienen que ejecutarse en el mismo equipo.
+Recuerde en la descripción de la [ Blazor arquitectura](architecture-comparison.md#blazor) que Blazor los componentes representan su salida en una abstracción intermedia denominada `RenderTree` . BlazorA continuación, el marco de trabajo compara lo que se representó con lo que se representó previamente. Las diferencias se aplican al DOM. Blazor los componentes se desacoplan de la manera en que se aplica la salida representada. Por lo tanto, los propios componentes no tienen que ejecutarse en el mismo proceso que el proceso de actualización de la interfaz de usuario. De hecho, ni siquiera tienen que ejecutarse en el mismo equipo.
 
 En las Blazor aplicaciones de servidor, los componentes se ejecutan en el servidor en lugar de en el lado cliente en el explorador. Los eventos de interfaz de usuario que se producen en el explorador se envían al servidor a través de una conexión en tiempo real. Los eventos se envían a las instancias de componente correctas. Los componentes se representan y la diferencia de IU calculada se serializa y se envía al explorador donde se aplica al DOM.
 
-![BlazorServidor](media/hosting-models/blazor-server.png)
+![::: no-LOC (increíble)::: Server](media/hosting-models/blazor-server.png)
 
-El Blazor modelo de hospedaje del servidor puede resultar más familiar si ha usado ASP.NET AJAX y el <xref:System.Web.UI.UpdatePanel> control. El `UpdatePanel` control administra la aplicación de actualizaciones parciales de página en respuesta a eventos desencadenadores en la página. Cuando se desencadena, `UpdatePanel` solicita una actualización parcial y, a continuación, la aplica sin necesidad de actualizar la página. El estado de la interfaz de usuario se administra mediante `ViewState` . BlazorLas aplicaciones de servidor son ligeramente diferentes en que la aplicación requiere una conexión activa con el cliente. Además, todo el estado de la interfaz de usuario se mantiene en el servidor. Aparte de estas diferencias, los dos modelos son conceptualmente similares.
+El Blazor modelo de hospedaje del servidor puede resultar más familiar si ha usado ASP.NET AJAX y el <xref:System.Web.UI.UpdatePanel> control. El `UpdatePanel` control administra la aplicación de actualizaciones parciales de página en respuesta a eventos desencadenadores en la página. Cuando se desencadena, `UpdatePanel` solicita una actualización parcial y, a continuación, la aplica sin necesidad de actualizar la página. El estado de la interfaz de usuario se administra mediante `ViewState` . Blazor Las aplicaciones de servidor son ligeramente diferentes en que la aplicación requiere una conexión activa con el cliente. Además, todo el estado de la interfaz de usuario se mantiene en el servidor. Aparte de estas diferencias, los dos modelos son conceptualmente similares.
 
-## <a name="how-to-choose-the-right-blazor-hosting-model"></a>Cómo elegir el modelo de Blazor hospedaje adecuado
+## <a name="how-to-choose-the-right-no-locblazor-hosting-model"></a>Cómo elegir el modelo de Blazor hospedaje adecuado
 
 Tal y como se describe en los [ Blazor documentos del modelo de hospedaje](/aspnet/core/blazor/hosting-models), los distintos modelos de Blazor Hospedaje tienen diferentes inconvenientes.
 
@@ -84,7 +82,7 @@ La lista anterior de compensaciones puede estar intimidando, pero el modelo de h
 
 ## <a name="deploy-your-app"></a>Implementación de la aplicación
 
-Las aplicaciones de formularios Web Forms ASP.NET normalmente se hospedan en IIS en un clúster o un equipo con Windows Server. Blazorlas aplicaciones también pueden:
+Las aplicaciones de formularios Web Forms ASP.NET normalmente se hospedan en IIS en un clúster o un equipo con Windows Server. Blazor las aplicaciones también pueden:
 
 - Estar hospedado en IIS, ya sea como archivos estáticos o como una aplicación ASP.NET Core.
 - Aproveche la flexibilidad de ASP.NET Core para hospedarse en varias plataformas e infraestructuras de servidores. Por ejemplo, puede hospedar una Blazor aplicación con [nginx](/aspnet/core/host-and-deploy/linux-nginx) o [Apache](/aspnet/core/host-and-deploy/linux-apache) en Linux. Para obtener más información sobre cómo publicar e implementar Blazor aplicaciones, consulte la Blazor documentación de [hospedaje e implementación](/aspnet/core/host-and-deploy/blazor/) .

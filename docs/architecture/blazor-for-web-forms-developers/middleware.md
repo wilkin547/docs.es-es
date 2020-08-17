@@ -6,16 +6,14 @@ ms.author: daroth
 no-loc:
 - Blazor
 ms.date: 10/11/2019
-ms.openlocfilehash: ff2b3fd41316a1c8c20a0eed9a585e5fd2733af3
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 639755dd78892df1b70ea5245a9584e575fbf691
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173190"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267885"
 ---
 # <a name="modules-handlers-and-middleware"></a>Módulos, controladores y middleware
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Una aplicación ASP.NET Core se basa en una serie de *middleware*. El middleware es controladores que se organizan en una canalización para controlar solicitudes y respuestas. En una aplicación de formularios Web Forms, los controladores y módulos HTTP solucionan problemas similares. En ASP.NET Core, los módulos, los controladores, *global.asax.CS*y el ciclo de vida de la aplicación se reemplazan por middleware. En este capítulo, aprenderá qué middleware en el contexto de una Blazor aplicación.
 
@@ -37,7 +35,7 @@ ASP.NET 4. x incluye muchos módulos. De forma similar, ASP.NET Core tiene tambi
 
 En la tabla siguiente se enumeran los componentes y el middleware de reemplazo en ASP.NET Core.
 
-|Módulo                 |Módulo ASP.NET 4. x           |ASP.NET Core, opción|
+|Module                 |Módulo ASP.NET 4. x           |ASP.NET Core, opción|
 |-----------------------|-----------------------------|-------------------|
 |Errores HTTP            |`CustomErrorModule`          |[Middleware de páginas de códigos de estado](/aspnet/core/fundamentals/error-handling#usestatuscodepages)|
 |Documento predeterminado       |`DefaultDocumentModule`      |[Middleware de archivos predeterminados](/aspnet/core/fundamentals/static-files#serve-a-default-document)|

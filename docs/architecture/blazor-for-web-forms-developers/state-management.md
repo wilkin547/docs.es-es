@@ -4,16 +4,14 @@ description: Obtenga información sobre los distintos enfoques para administrar 
 author: csharpfritz
 ms.author: jefritz
 ms.date: 05/15/2020
-ms.openlocfilehash: bac2f00330113725f09259ca31bdf857a8769f24
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 2ca811f886c6a245ac16c2bd66a68ff16e5bfc44
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062345"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267729"
 ---
 # <a name="state-management"></a>Administración de estado
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 La administración de Estados es un concepto clave de las aplicaciones de formularios Web Forms, que facilitan el estado de vista, el estado de la sesión, el estado de la aplicación y las características de postback. Estas características con estado de Framework ayudaron a ocultar la administración de Estados necesaria para una aplicación y permitir a los desarrolladores de aplicaciones centrarse en la entrega de su funcionalidad. Con ASP.NET Core y extraordinaria, algunas de estas características se han reubicado y algunas se han quitado por completo. En este capítulo se describe cómo mantener el estado y ofrecer la misma funcionalidad con las nuevas características de extraordinarias.
 
@@ -84,8 +82,8 @@ El `MyApplicationState` objeto se crea solo una vez en el servidor, y el valor `
 
 Los datos de la aplicación también se pueden almacenar en el lado cliente en el dispositivo del usuario para que esté disponible más adelante. Hay dos características del explorador que permiten la persistencia de los datos en diferentes ámbitos del explorador del usuario:
 
-- `localStorage`-ámbito en el explorador completo del usuario. Si se vuelve a cargar la página, el explorador se cierra y se vuelve a abrir, o bien se abre otra pestaña con la misma dirección URL, el `localStorage` Explorador lo proporciona
-- `sessionStorage`-ámbito de la pestaña del explorador actual del usuario. Si se vuelve a cargar la pestaña, el estado persiste. Sin embargo, si el usuario abre otra pestaña en la aplicación o cierra y vuelve a abrir el explorador, se pierde el estado.
+- `localStorage` -ámbito en el explorador completo del usuario. Si se vuelve a cargar la página, el explorador se cierra y se vuelve a abrir, o bien se abre otra pestaña con la misma dirección URL, el `localStorage` Explorador lo proporciona
+- `sessionStorage` -ámbito de la pestaña del explorador actual del usuario. Si se vuelve a cargar la pestaña, el estado persiste. Sin embargo, si el usuario abre otra pestaña en la aplicación o cierra y vuelve a abrir el explorador, se pierde el estado.
 
 Puede escribir código JavaScript personalizado para interactuar con estas características, o hay una serie de paquetes de NuGet que puede usar para proporcionar esta funcionalidad. Uno de estos paquetes es [Microsoft. AspNetCore. ProtectedBrowserStorage](https://www.nuget.org/packages/Microsoft.AspNetCore.ProtectedBrowserStorage).
 

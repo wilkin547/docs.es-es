@@ -6,22 +6,20 @@ ms.author: daroth
 no-loc:
 - Blazor
 ms.date: 09/19/2019
-ms.openlocfilehash: fc1f6f9420c7149b6e67123f2f68bef75667aa0c
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 714ba0be7c2014895a75250a47e6ce448863eb6c
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173112"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267794"
 ---
 # <a name="pages-routing-and-layouts"></a>Páginas, enrutamiento y diseños
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Las aplicaciones de formularios Web Forms de ASP.NET se componen de páginas definidas en archivos *. aspx* . La dirección de cada página se basa en su ruta de acceso física del archivo en el proyecto. Cuando un explorador realiza una solicitud a la página, el contenido de la página se representa dinámicamente en el servidor. Las cuentas de representación para el marcado HTML de la página y sus controles de servidor.
 
 En Blazor , cada página de la aplicación es un componente, que normalmente se define en un archivo *. Razor* , con una o varias rutas especificadas. El enrutamiento se produce principalmente en el lado cliente sin implicar una solicitud de servidor específica. En primer lugar, el explorador realiza una solicitud a la dirección raíz de la aplicación. `Router`Después, un componente raíz de la Blazor aplicación controla las solicitudes de navegación de interceptación y el componente correcto.
 
-Blazortambién admite la *vinculación profunda*. La vinculación profunda se produce cuando el explorador realiza una solicitud a una ruta específica distinta de la raíz de la aplicación. Las solicitudes de vínculos profundos enviados al servidor se enrutan a la Blazor aplicación, que, a continuación, enruta el lado cliente de la solicitud al componente correcto.
+Blazor también admite la *vinculación profunda*. La vinculación profunda se produce cuando el explorador realiza una solicitud a una ruta específica distinta de la raíz de la aplicación. Las solicitudes de vínculos profundos enviados al servidor se enrutan a la Blazor aplicación, que, a continuación, enruta el lado cliente de la solicitud al componente correcto.
 
 Una página simple de formularios Web Forms de ASP.NET podría contener el marcado siguiente:
 
@@ -94,7 +92,7 @@ Para crear una página en Blazor , cree un componente y agregue la `@page` Direc
 
 El parámetro de la plantilla de ruta es obligatorio. A diferencia de los formularios Web Forms de ASP.NET, la ruta a un Blazor componente *no se* deduce de su ubicación de archivo (aunque puede tratarse de una característica agregada en el futuro).
 
-La sintaxis de la plantilla de ruta es la misma sintaxis básica que se usa para el enrutamiento en ASP.NET Web Forms. Los parámetros de ruta se especifican en la plantilla mediante llaves. Blazorenlazará los valores de ruta a los parámetros de componente con el mismo nombre (sin distinción de mayúsculas y minúsculas).
+La sintaxis de la plantilla de ruta es la misma sintaxis básica que se usa para el enrutamiento en ASP.NET Web Forms. Los parámetros de ruta se especifican en la plantilla mediante llaves. Blazor enlazará los valores de ruta a los parámetros de componente con el mismo nombre (sin distinción de mayúsculas y minúsculas).
 
 ```razor
 @page "/product/{id}"
@@ -156,9 +154,9 @@ protected void NavigateButton_Click(object sender, EventArgs e)
 }
 ```
 
-Normalmente, no es posible devolver una respuesta de redirección en Blazor . Blazorno usa un modelo de solicitud-respuesta. Sin embargo, puede desencadenar directamente las navegaciones del explorador, como se puede hacer con JavaScript.
+Normalmente, no es posible devolver una respuesta de redirección en Blazor . Blazor no usa un modelo de solicitud-respuesta. Sin embargo, puede desencadenar directamente las navegaciones del explorador, como se puede hacer con JavaScript.
 
-Blazorproporciona un `NavigationManager` servicio que se puede usar para:
+Blazor proporciona un `NavigationManager` servicio que se puede usar para:
 
 - Obtener la dirección del explorador actual
 - Obtención de la dirección base

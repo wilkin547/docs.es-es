@@ -1,5 +1,5 @@
 ---
-title: Migre desde formularios Web Forms de ASP.NET aBlazor
+title: Migre desde formularios Web Forms de ASP.NET a Blazor
 description: Aprenda a enfocar la migración de una aplicación de formularios Web Forms de ASP.NET existente a Blazor .
 author: twsouthwick
 ms.author: tasou
@@ -7,16 +7,14 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/19/2019
-ms.openlocfilehash: 464d2f535acd3b9774fe240b4feeda1875f98022
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: ca3d8747b02602c89aec187ea0826e658fb0cbc4
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173151"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267807"
 ---
-# <a name="migrate-from-aspnet-web-forms-to-blazor"></a>Migre desde formularios Web Forms de ASP.NET aBlazor
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+# <a name="migrate-from-aspnet-web-forms-to-no-locblazor"></a>Migre desde formularios Web Forms de ASP.NET a Blazor
 
 La migración de una base de código de formularios Web Forms de ASP.NET a Blazor es una tarea que requiere mucho tiempo y requiere planeación. En este capítulo se describe el proceso. Algo que puede facilitar la transición es asegurarse de que la aplicación se adhiera a una arquitectura de *N niveles* , donde el modelo de la aplicación (en este caso, los formularios Web Forms) es independiente de la lógica de negocios. Esta separación lógica de las capas permite desactivar lo que necesita pasar a .NET Core y Blazor .
 
@@ -24,8 +22,8 @@ En este ejemplo, se usa la aplicación de eShop disponible en [GitHub](https://g
 
 ¿Por qué se debe migrar a una aplicación en funcionamiento Blazor ? Muchas veces, no es necesario. Los formularios Web Forms de ASP.NET seguirán siendo compatibles durante muchos años. Sin embargo, muchas de las características que Blazor proporciona solo se admiten en una aplicación migrada. Estas características incluyen:
 
-- Mejoras de rendimiento en el marco de trabajo como`Span<T>`
-- Capacidad para ejecutarse comoWebAssembly
+- Mejoras de rendimiento en el marco de trabajo como `Span<T>`
+- Capacidad para ejecutarse como WebAssembly
 - Compatibilidad entre plataformas para Linux y macOS
 - Implementación local de la aplicación o implementación de un marco compartido sin afectar a otras aplicaciones
 
@@ -41,7 +39,7 @@ Como se describe en el capítulo [modelos de hospedaje](hosting-models.md) , una
 
 En el momento de escribir este documento, el modelo del lado servidor se parece más al de los formularios Web Forms. La mayor parte de este capítulo se centra en el modelo de hospedaje del lado servidor, ya que está listo para la producción.
 
-## <a name="create-a-new-project"></a>Creación de un proyecto
+## <a name="create-a-new-project"></a>Creación de un nuevo proyecto
 
 Este paso de migración inicial consiste en crear un nuevo proyecto. Este tipo de proyecto se basa en los proyectos de estilo SDK de .NET Core y simplifica gran parte del texto reutilizable que se usó en los formatos de proyecto anteriores. Para obtener más información, consulte el capítulo sobre la [estructura del proyecto](project-structure.md).
 
@@ -525,7 +523,7 @@ Cuando se convierte en Blazor , la página de formularios Web Forms se convierte
 
 Observe que el código y el marcado están en el mismo archivo. Los servicios necesarios se hacen accesibles con el `@inject` atributo. Según la `@page` Directiva, se puede tener acceso a esta página en la `Catalog/Details/{id}` ruta. El valor del marcador de posición de la ruta se ha `{id}` restringido a un entero. Como se describe en la sección [enrutamiento](pages-routing-layouts.md) , a diferencia de los formularios Web Forms, un componente Razor indica explícitamente su ruta y los parámetros que se incluyen. Es posible que muchos controles de formularios Web Forms no tengan homólogos exactos en Blazor . A menudo hay un fragmento de código HTML equivalente que tendrá el mismo propósito. Por ejemplo, el `<asp:Label />` control se puede reemplazar por un `<label>` elemento HTML.
 
-### <a name="model-validation-in-blazor"></a>Validación de modelos enBlazor
+### <a name="model-validation-in-no-locblazor"></a>Validación de modelos en Blazor
 
 Si el código de formularios Web Forms incluye validación, puede transferir gran parte de lo que tiene con cambios poco a no. Una ventaja de ejecutar en Blazor es que se puede ejecutar la misma lógica de validación sin necesidad de JavaScript personalizado. Las anotaciones de datos permiten la validación sencilla del modelo.
 
