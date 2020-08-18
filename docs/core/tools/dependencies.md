@@ -1,23 +1,24 @@
 ---
-title: ''
-description: ''
+title: Administración de dependencias en .NET Core
+description: Se explica cómo administrar las dependencias del proyecto para una aplicación .NET Core.
 no-loc:
 - dotnet add package
 - dotnet remove package
 - dotnet list package
-ms.date: ''
-ms.openlocfilehash: 667b2d4d68edd82a4d18c370e45ea18f4d4b379a
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.topic: how-to
+ms.date: 02/25/2020
+ms.openlocfilehash: 2aeedb56f774b51076764c2772eb02b2fa095d92
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83702842"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062865"
 ---
 # <a name="manage-dependencies-in-net-core-applications"></a>Administración de dependencias en aplicaciones .NET Core
 
 En este artículo se explica cómo agregar y quitar dependencias mediante la modificación del archivo de proyecto o mediante la CLI.
 
-## <a name="the-packagereference-element"></a>Elemento \<PackageReference>
+## <a name="the-packagereference-element"></a>El elemento \<PackageReference>
 
 El archivo del proyecto `<PackageReference>` tiene la estructura siguiente:
 

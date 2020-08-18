@@ -1,13 +1,14 @@
 ---
 title: Cambios importantes en el compilador de C#
 description: Busque los cambios importantes en el compilador de C# que use.
+ms.topic: troubleshooting
 ms.date: 12/12/2019
-ms.openlocfilehash: 1b1f5d57c5fa6e86878d8aa59f602a92f59288d9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 539282441a407e348f214981e4117c357effa682
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75437946"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267976"
 ---
 # <a name="learn-about-any-breaking-changes-in-the-c-compiler"></a>Conozca los cambios más importantes en el compilador de C#.
 
