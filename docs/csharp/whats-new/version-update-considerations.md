@@ -1,13 +1,14 @@
 ---
 title: Consideraciones sobre versiones y actualizaciones para desarrolladores de C#
 description: La incorporación de nuevas características de lenguajes en la biblioteca puede afectar al código que la utiliza.
+ms.topic: reference
 ms.date: 09/19/2018
-ms.openlocfilehash: 3ffe2f6fd64a391fddf28233dccb022c95851884
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f7db7c79792d04bcf592bc1858e1f0f05cb34402
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398152"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88268132"
 ---
 # <a name="version-and-update-considerations-for-c-developers"></a>Consideraciones sobre versiones y actualizaciones para desarrolladores de C#
 

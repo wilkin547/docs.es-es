@@ -10,19 +10,19 @@ helpviewer_keywords:
 - Action delegate, creating with lambda expression
 - lambda expressions, with Action and Func
 ms.assetid: 645b2c17-29d0-4ffa-8684-430743cc2f2d
-ms.openlocfilehash: 3d985a003fe613699c89e38583f84be9e21b383d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 469c164630e1dab84b3d54c16c43d031ebf560ed
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290673"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063775"
 ---
 # <a name="lambda-expressions-in-plinq-and-tpl"></a>Expresiones lambda en PLINQ y TPL
 
 La biblioteca TPL contiene muchos métodos que adoptan una de las familias <xref:System.Func%601?displayProperty=nameWithType> o <xref:System.Action?displayProperty=nameWithType> de delegados como parámetros de entrada. Puede usar estos delegados para pasar de la lógica personalizada del programa al bucle, tarea o consulta en paralelo. Los ejemplos de código de TPL, igual que igual que de PLINQ, usan expresiones lambda para crear instancias de esos delegados como bloques de código insertados. En este tema se proporciona una breve introducción a Func y Action, y muestra cómo usar las expresiones lambda en la biblioteca TPL y PLINQ.
 
 > [!NOTE]
-> Para más información sobre los delegados en general, vea [Delegados](../../csharp/programming-guide/delegates/index.md) y [Delegados](../../visual-basic/programming-guide/language-features/delegates/index.md). Para obtener más información sobre las expresiones lambda en C# y Visual Basic, vea [Expresiones lambda](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) y [Expresiones lambda](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).
+> Para más información sobre los delegados en general, vea [Delegados](../../csharp/programming-guide/delegates/index.md) y [Delegados](../../visual-basic/programming-guide/language-features/delegates/index.md). Para obtener más información sobre las expresiones lambda en C# y Visual Basic, vea [Expresiones lambda](../../csharp/language-reference/operators/lambda-expressions.md) y [Expresiones lambda](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).
 
 ## <a name="func-delegate"></a>Func (delegado)
 

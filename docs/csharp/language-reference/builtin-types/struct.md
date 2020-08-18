@@ -8,12 +8,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: dbe9b47625589de834b7a8021640885ca0920b96
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 515b8d9adc1359581625f0d822e254d2c1df3b58
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "82021272"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062501"
 ---
 # <a name="structure-types-c-reference"></a>Tipos de estructura (Referencia de C#)
 
@@ -111,7 +111,7 @@ A partir de C# 7.2, puede usar el modificador `ref` en la declaración de un ti
 - Una estructura `ref` no puede implementar interfaces.
 - En una estructura `ref` no se puede aplicar una conversión boxing a <xref:System.ValueType?displayProperty=nameWithType> ni <xref:System.Object?displayProperty=nameWithType>.
 - Una estructura `ref` no puede ser un argumento de tipo.
-- Una `ref` variable de estructura no se puede capturar mediante una [expresión lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) o una [función local](../../programming-guide/classes-and-structs/local-functions.md).
+- Una `ref` variable de estructura no se puede capturar mediante una [expresión lambda](../operators/lambda-expressions.md) o una [función local](../../programming-guide/classes-and-structs/local-functions.md).
 - Una variable de estructura `ref` no se puede usar en un método [`async`](../keywords/async.md). Aunque se pueden usar variables de estructura `ref` en métodos sincrónicos, como, por ejemplo, en los que devuelven <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601>.
 - Una variable de estructura `ref` no se puede usar en [iteradores](../../iterators.md).
 

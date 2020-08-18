@@ -1,13 +1,14 @@
 ---
 title: Adiciones al formato csproj para .NET Core
 description: Conozca las diferencias entre los archivos csproj de .NET Core y los existentes
+ms.topic: reference
 ms.date: 04/08/2019
-ms.openlocfilehash: a0cbead27e52af3114d9c44fd19c966e665a2850
-ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
+ms.openlocfilehash: 4f45362fbb3df053b95156b8e633903f011a85ad
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87427013"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062878"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Adiciones al formato csproj para .NET Core
 

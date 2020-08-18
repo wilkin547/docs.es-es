@@ -7,18 +7,18 @@ helpviewer_keywords:
 - anonymous functions [C#]
 - anonymous methods [C#]
 ms.assetid: 6ce3f04d-0c71-4728-9127-634c7e9a8365
-ms.openlocfilehash: ae8bda3c68542637b1430587ca4a537980c028bc
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 1fde7d535054f09d55018a010468776622ebfba7
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381676"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063268"
 ---
 # <a name="anonymous-functions-c-programming-guide"></a>Funciones anónimas (Guía de programación de C#)
 
 Una función anónima es una instrucción o expresión "alineada" que se puede usar siempre que se espera un tipo delegado. Se puede usar para inicializar un delegado con nombre o se puede pasar como un parámetro de método en lugar de un tipo delegado con nombre.
 
-Puede usar una [expresión lambda](lambda-expressions.md) o un [método anónimo](../../language-reference/operators/delegate-operator.md) para crear una función anónima. Se recomienda usar expresiones lambda porque proporcionan una manera más concisa y expresiva para escribir código alineado. A diferencia de los métodos anónimos, algunos tipos de expresiones lambda se pueden convertir en los tipos de árbol de expresión.
+Puede usar una [expresión lambda](../../language-reference/operators/lambda-expressions.md) o un [método anónimo](../../language-reference/operators/delegate-operator.md) para crear una función anónima. Se recomienda usar expresiones lambda porque proporcionan una manera más concisa y expresiva para escribir código alineado. A diferencia de los métodos anónimos, algunos tipos de expresiones lambda se pueden convertir en los tipos de árbol de expresión.
 
 ## <a name="the-evolution-of-delegates-in-c"></a>La evolución de los delegados en C\#
 
@@ -35,6 +35,6 @@ Para obtener más información, vea la sección [Expresiones de función anónim
 ## <a name="see-also"></a>Vea también
 
 - [Instrucciones, expresiones y operadores](./index.md)
-- [Expresiones lambda](./lambda-expressions.md)
+- [Expresiones lambda](../../language-reference/operators/lambda-expressions.md)
 - [Delegados](../delegates/index.md)
 - [Árboles de expresión (C#)](../concepts/expression-trees/index.md)

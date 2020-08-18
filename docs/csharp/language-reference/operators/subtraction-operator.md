@@ -12,12 +12,12 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: a00957c8d36a96b5ee23b9e5a309b6139b33fd36
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: c126837309b5fe3495a5e9e6af589892670b62c3
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916692"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063086"
 ---
 # <a name="--and---operators-c-reference"></a>Operadores - y -= (referencia de C#)
 
@@ -37,7 +37,7 @@ Para los operandos del mismo tipo [delegado](../builtin-types/reference-types.md
 
   [!code-csharp-interactive[delegate removal with no effect](snippets/shared/SubtractionOperator.cs#DelegateRemovalNoChange)]
 
-  El ejemplo anterior también demuestra que, durante la eliminación de delegados, se comparan las instancias de delegados. Por ejemplo, los delegados que se producen de la evaluación de [expresiones lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) idénticas no son iguales. Para obtener más información acerca de la igualdad de delegados, consulte la sección [Operadores de igualdad de delegado](~/_csharplang/spec/expressions.md#delegate-equality-operators) de la [especificación del lenguaje C#](~/_csharplang/spec/introduction.md).
+  El ejemplo anterior también demuestra que, durante la eliminación de delegados, se comparan las instancias de delegados. Por ejemplo, los delegados que se producen de la evaluación de [expresiones lambda](lambda-expressions.md) idénticas no son iguales. Para obtener más información acerca de la igualdad de delegados, consulte la sección [Operadores de igualdad de delegado](~/_csharplang/spec/expressions.md#delegate-equality-operators) de la [especificación del lenguaje C#](~/_csharplang/spec/introduction.md).
 
 - Si el operando izquierdo es `null`, el resultado de la operación es `null`. Si el operando derecho es `null`, el resultado de la operación es el operando izquierdo.
 

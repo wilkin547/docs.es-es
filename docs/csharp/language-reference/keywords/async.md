@@ -8,16 +8,16 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: 89133339a75c70e3ac86d627065e78d555bff71d
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 279ea2f9875681401c9c7acab922d9e4424e6827
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507209"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062540"
 ---
 # <a name="async-c-reference"></a>async (Referencia de C#)
 
-Use el modificador `async` para especificar que un método, una [expresión lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) o un [método anónimo](../operators/delegate-operator.md) es asincrónico. Si usa este modificador en un método o una expresión, se hace referencia al mismo como un *método asincrónico*. En el ejemplo siguiente se define un método asincrónico denominado `ExampleMethodAsync`:
+Use el modificador `async` para especificar que un método, una [expresión lambda](../operators/lambda-expressions.md) o un [método anónimo](../operators/delegate-operator.md) es asincrónico. Si usa este modificador en un método o una expresión, se hace referencia al mismo como un *método asincrónico*. En el ejemplo siguiente se define un método asincrónico denominado `ExampleMethodAsync`:
   
 ```csharp  
 public async Task<int> ExampleMethodAsync()  

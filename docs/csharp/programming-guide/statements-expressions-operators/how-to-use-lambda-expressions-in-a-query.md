@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [C#], in LINQ
 ms.assetid: 3cac4d25-d11f-4abd-9e7c-0f02e97ae06d
-ms.openlocfilehash: 501e67011707e2d165a3b9c1ff9f206db7f55448
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: ef8a7e3b4cd5302d6c928ad7ad81811797777b4a
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381637"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063255"
 ---
 # <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Procedimiento Usar expresiones lambda en una consulta (Guía de programación de C#)
 No se pueden usar expresiones lambda directamente en la sintaxis de consulta, pero sí en llamadas de método, y las expresiones de consulta pueden contener llamadas de método. De hecho, algunas operaciones de consulta solo se pueden expresar con la sintaxis de método. Para obtener más información sobre la diferencia entre la sintaxis de consulta y la sintaxis de método, vea [Sintaxis de consultas y sintaxis de métodos en LINQ](../concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
@@ -32,5 +32,5 @@ No se pueden usar expresiones lambda directamente en la sintaxis de consulta, pe
   
 ## <a name="see-also"></a>Consulte también
 
-- [Expresiones lambda](./lambda-expressions.md)
+- [Expresiones lambda](../../language-reference/operators/lambda-expressions.md)
 - [Árboles de expresión (C#)](../concepts/expression-trees/index.md)

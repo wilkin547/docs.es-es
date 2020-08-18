@@ -3,12 +3,12 @@ title: Escribir consultas LINQ en C#
 description: Obtenga información sobre cómo escribir consultas de LINQ en C#.
 ms.date: 12/01/2016
 ms.assetid: 30703f79-cf3a-4d02-b892-c95d58a1d9ed
-ms.openlocfilehash: ed32543b0422e0664a8577f2c27f7c7c00a719a1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bd7da81f2873c6a25570cab32fafecc66fd98be4
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "65632870"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063450"
 ---
 # <a name="write-linq-queries-in-c"></a>Escribir consultas LINQ en C\#
 
@@ -43,7 +43,7 @@ Algunas operaciones de consulta deben expresarse como una llamada a método. Los
 
 [!code-csharp[csProgGuideLINQ#6](~/samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_2.cs)]
 
-Si el método tiene parámetros Action o Func, se proporcionan en forma de expresión [lambda](../programming-guide/statements-expressions-operators/lambda-expressions.md), como se muestra en el ejemplo siguiente:
+Si el método tiene parámetros Action o Func, se proporcionan en forma de expresión [lambda](../language-reference/operators/lambda-expressions.md), como se muestra en el ejemplo siguiente:
 
 [!code-csharp[csProgGuideLINQ#7](~/samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_3.cs)]
 

@@ -4,12 +4,12 @@ ms.date: 07/18/2019
 helpviewer_keywords:
 - delegate [C#]
 - anonymous method [C#]
-ms.openlocfilehash: f7cd7caf11d9f076a5d6e82aae696c914bd60e44
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 33c438b88f1e993f4648786da9b20b91961b7ee1
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916845"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062995"
 ---
 # <a name="delegate-operator-c-reference"></a>Operador delegate (referencia de C#)
 
@@ -22,7 +22,7 @@ El operador `delegate` crea un método anónimo que se puede convertir en un tip
 >
 > [!code-csharp-interactive[lambda expression](snippets/shared/DelegateOperator.cs#Lambda)]
 >
-> Para más información sobre las características de las expresiones lambda, como capturar las variables externas, consulte [Expresiones lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md).
+> Para más información sobre las características de las expresiones lambda, como capturar las variables externas, consulte [Expresiones lambda](lambda-expressions.md).
 
 Al usar el operador `delegate`, puede omitir la lista de parámetros. Si lo hace, el método anónimo creado se puede convertir en un tipo delegado con cualquier lista de parámetros, tal como se muestra en el ejemplo siguiente:
 

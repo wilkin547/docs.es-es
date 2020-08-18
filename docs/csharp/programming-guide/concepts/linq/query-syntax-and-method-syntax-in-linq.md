@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-ms.openlocfilehash: 1765a15347aeedb9cc5fa6784abdfad6fafe4016
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 46b0e44182d22158aa5fa54a0f44bae70aa8ddd9
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87300766"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063047"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>Sintaxis de consultas y sintaxis de métodos en LINQ (C#)
 La mayoría de las consultas de la documentación introductoria de Language Integrated Query (LINK) se escribe con la sintaxis de consulta declarativa de LINQ. Pero la sintaxis de consulta debe traducirse en llamadas de método para .NET Common Language Runtime (CLR) al compilar el código. Estas llamadas de método invocan los operadores de consulta estándar, que tienen nombres tales como `Where`, `Select`, `GroupBy`, `Join`, `Max` y `Average`. Puede llamarlas directamente con la sintaxis de método en lugar de la sintaxis de consulta.  
@@ -38,7 +38,7 @@ La mayoría de las consultas de la documentación introductoria de Language Inte
 ## <a name="lambda-expressions"></a>Expresiones lambda  
  En el ejemplo anterior, observe que la expresión condicional (`num % 2 == 0`) se pasa como argumento insertado al método `Where`: `Where(num => num % 2 == 0).` Esta expresión insertada se denomina expresión lambda. Se trata de una forma cómoda de escribir código que, de lo contrario, tendría que escribirse de forma más compleja como un método anónimo, un delegado genérico o un árbol de expresión. En C#, `=>` es el operador lambda, que se lee como "va a". La `num` situada a la izquierda del operador es la variable de entrada que corresponde a `num` en la expresión de consulta. El compilador puede deducir el tipo de `num` porque sabe que `numbers` es un tipo <xref:System.Collections.Generic.IEnumerable%601> genérico. El cuerpo de la expresión lambda es exactamente igual que la expresión de la sintaxis de consulta o de cualquier otra expresión o instrucción de C#; puede incluir llamadas de método y otra lógica compleja. El "valor devuelto" es simplemente el resultado de la expresión.  
   
- Para empezar a usar LINK, no es necesario emplear muchas expresiones lambda. Pero determinadas consultas solo se pueden expresar en sintaxis de método y algunas requieren expresiones lambda. Cuando esté más familiarizado con las expresiones lambda, verá que se trata de una herramienta eficaz y flexible del cuadro de herramientas de LINK. Para obtener más información, vea [Expresiones lambda](../../statements-expressions-operators/lambda-expressions.md).  
+ Para empezar a usar LINK, no es necesario emplear muchas expresiones lambda. Pero determinadas consultas solo se pueden expresar en sintaxis de método y algunas requieren expresiones lambda. Cuando esté más familiarizado con las expresiones lambda, verá que se trata de una herramienta eficaz y flexible del cuadro de herramientas de LINK. Para obtener más información, vea [Expresiones lambda](../../../language-reference/operators/lambda-expressions.md).  
   
 ## <a name="composability-of-queries"></a>Capacidad de composición de consultas  
  En el ejemplo de código anterior, tenga en cuenta que el método `OrderBy` se invoca mediante el operador de punto en la llamada a `Where`. `Where` crea una secuencia filtrada y, luego, `Orderby` actúa en dicha secuencia ordenándola. Dado que las consultas devuelven un `IEnumerable`, redáctelas con la sintaxis de método encadenando las llamadas de método. Es lo que el compilador hace en segundo plano cuando se escriben consultas con la sintaxis de consulta. Y dado que una variable de consulta no almacena los resultados de la consulta, puede modificarla o usarla como base para una nueva consulta en cualquier momento, incluso después de que se haya ejecutado.  

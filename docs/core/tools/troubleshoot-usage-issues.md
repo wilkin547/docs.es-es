@@ -2,13 +2,14 @@
 title: Solución de problemas de uso de herramientas de .NET Core
 description: Descubra los problemas comunes que se producen al ejecutar herramientas de .NET Core y sus posibles soluciones.
 author: kdollard
+ms.topic: troubleshooting
 ms.date: 02/14/2020
-ms.openlocfilehash: ed6243f802c4d3ce56a742916a1a28676e3cd876
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b98b2735770c8259c2daf94575fc087b91bb61fd
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146455"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062641"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>Solución de problemas de uso de herramientas de .NET Core
 
