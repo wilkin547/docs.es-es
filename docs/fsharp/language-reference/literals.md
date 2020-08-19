@@ -1,20 +1,17 @@
 ---
 title: Literales
 description: 'Obtenga información sobre los tipos literales en el lenguaje de programación F #.'
-ms.date: 06/28/2019
-ms.openlocfilehash: 98d609a1cf0beb00c0dd4d45ea343aaa2280b62e
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.date: 08/15/2020
+ms.openlocfilehash: 15f73db3c36f7c60ab1eeba96c63a28ebc6d7f01
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855028"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559159"
 ---
 # <a name="literals"></a>Literales
 
 En este artículo se proporciona una tabla que muestra cómo especificar el tipo de un literal en F #.
-
-> [!NOTE]
-> La referencia de la API de docs.microsoft.com para F # no está completa. Si encuentra vínculos rotos, consulte la [documentación de la biblioteca básica de F #](https://fsharp.github.io/fsharp-core-docs/) .
 
 ## <a name="literal-types"></a>Tipos literales
 
@@ -42,11 +39,11 @@ En la tabla siguiente se muestran los tipos literales de F #. Los caracteres que
 |String|Cadena de Unicode|ninguno|`"text\n"`<br /><br />or<br /><br />`@"c:\filename"`<br /><br />or<br /><br />`"""<book title="Paradise Lost">"""`<br /><br />or<br /><br />`"string1" + "string2"`<br /><br />Vea también [cadenas](Strings.md).|
 |byte|Carácter ASCII|B|`'a'B`|
 |byte[]|Cadena ASCII|B|`"text"B`|
-|Cadena o Byte []|cadena textual|@ prefix|`@"\\server\share"`Unicode<br /><br />`@"\\server\share"B`ASCII|
+|Cadena o Byte []|cadena textual|@ prefix|`@"\\server\share"` Unicode<br /><br />`@"\\server\share"B` ASCII|
 
 ## <a name="named-literals"></a>Literales con nombre
 
-Los valores que están diseñados para ser constantes se pueden marcar con el atributo [literal](https://msdn.microsoft.com/library/465f36ce-d146-41c0-b425-679c509cd285) . Este atributo tiene el efecto de hacer que un valor se compile como una constante.
+Los valores que están diseñados para ser constantes se pueden marcar con el atributo [literal](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-literalattribute.html) . Este atributo tiene el efecto de hacer que un valor se compile como una constante.
 
 En las expresiones de coincidencia de patrones, los identificadores que comienzan con caracteres en minúsculas siempre se tratan como variables que se van a enlazar, en lugar de como literales, por lo que generalmente debe usar mayúsculas iniciales al definir los literales.
 
@@ -67,7 +64,7 @@ let Literal2 = 1 ||| 64
 let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 ```
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 Las cadenas Unicode pueden contener codificaciones explícitas que puede especificar mediante `\u` el uso seguido de una codificación de código hexadecimal de 16 bits (0000-ffff) o UTF-32 que puede especificar mediante `\U` un código hexadecimal de 32 bits que representa cualquier punto de código Unicode (00000000-0010FFFF).
 
@@ -93,7 +90,3 @@ let valueAsBits = 0b1101_1110_1010_1101_1011_1110_1110_1111
 
 let exampleSSN = 123_456_7890
 ```
-
-## <a name="see-also"></a>Vea también
-
-- [Clase Core. Literalattribute (](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.literalattribute-class-%5bfsharp%5d)

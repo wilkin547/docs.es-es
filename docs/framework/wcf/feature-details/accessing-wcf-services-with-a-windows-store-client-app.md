@@ -2,14 +2,15 @@
 title: Obtener acceso a los servicios WCF con una aplicación cliente de la Tienda Windows
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: ff6638936f476bd8fe75a065d3e61e96790cb7f4
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ed13a88e3a534cd586d9386396802d7457de56e7
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597701"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558977"
 ---
-# <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Obtener acceso a los servicios WCF con una aplicación cliente de la Tienda Windows
+# <a name="access-wcf-services-with-a-windows-store-client-app"></a>Acceder a servicios WCF con una aplicación cliente de la tienda Windows
+
 Windows 8 presenta un nuevo tipo de aplicaciones denominadas aplicaciones de la Tienda Windows. Estas aplicaciones están diseñadas para una interfaz de pantalla táctil. .NET Framework 4.5 permite que las aplicaciones de la Tienda Windows llamen a servicios WCF.  
   
 ## <a name="wcf-support-in-windows-store-applications"></a>Compatibilidad de WCF en aplicaciones de la Tienda Windows  
@@ -19,7 +20,7 @@ Windows 8 presenta un nuevo tipo de aplicaciones denominadas aplicaciones de la 
 > Use las API de distribución de WinRT en lugar de las expuestas por WCF. Para obtener más información, vea [API de distribución de WinRT](xref:Windows.Web.Syndication)  
   
 > [!WARNING]
-> No se admite el uso de Agregar referencia de servicio para agregar una referencia de servicio web a un componente de Windows en tiempo de ejecución.  
+> No se admite el uso de Agregar referencia de servicio para agregar una referencia de servicio Web a un componente de Windows Runtime.  
   
 ### <a name="supported-bindings"></a>Enlaces admitidos  
  Los siguientes enlaces de WCF se admiten en aplicaciones de la Tienda Windows:  
@@ -139,7 +140,7 @@ En las aplicaciones de la tienda Windows se admiten los siguientes tipos de cred
  Para que las aplicaciones de la Tienda Windows tengan acceso y envíen las credenciales de Windows predeterminadas, debe habilitar esta funcionalidad en el archivo Package.appmanifest. Abra este archivo y seleccione la pestaña capacidades y seleccione "credenciales de Windows predeterminadas". Esto permite que la aplicación se conecte a recursos de la intranet que necesitan credenciales de dominio.  
   
 > [!IMPORTANT]
-> Para que las aplicaciones de la tienda Windows realicen llamadas entre equipos, debe habilitar otra función denominada "redes domésticas o de trabajo". Esta configuración también se encuentra en el archivo package. AppManifest en la pestaña capacidades. Seleccione la casilla Home/Work networking. Esto permite el acceso de entrada y de salida de la aplicación a redes de ubicaciones de confianza del usuario como domésticas y de trabajo. Los puertos críticos de entrada siempre se bloquean. Para tener acceso a servicios de Internet también debe habilitar la capacidad de Internet (cliente).  
+> Para que las aplicaciones de la tienda Windows realicen llamadas entre equipos, debe habilitar otra función denominada "redes domésticas o de trabajo". Esta configuración también se encuentra en el archivo package. AppManifest en la pestaña capacidades. Seleccione la casilla Home/Work networking. Esto proporciona a la aplicación acceso entrante y saliente a las redes de los sitios de confianza del usuario, como casa y el trabajo. Los puertos críticos de entrada siempre se bloquean. Para tener acceso a servicios de Internet también debe habilitar la capacidad de Internet (cliente).  
   
 ### <a name="misc"></a>Varios  
  El uso de las clases siguientes se admite para las aplicaciones de la Tienda Windows:  
@@ -174,11 +175,7 @@ void async SomeMethod()
   
  Observe el uso de la palabra clave async en el método que realiza la llamada asincrónica y la palabra clave await al llamar al método asincrónico.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Blog sobre WCF en aplicaciones de la Tienda Windows](https://docs.microsoft.com/archive/blogs/piyushjo/wcf-in-windows-8-metro-styled-apps-absolutely-supported)
-- [Seguridad y clientes de la Tienda Windows de WCF](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-adding-security)
-- [Aplicaciones de la tienda Windows y llamadas entre equipos](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario)
-- [Llamar a un servicio WCF implementado en Azure desde una aplicación de la Tienda Windows](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario)
 - [Programación de la seguridad de WCF](programming-wcf-security.md)
 - [Enlaces](../bindings.md)
