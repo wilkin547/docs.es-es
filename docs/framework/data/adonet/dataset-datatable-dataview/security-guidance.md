@@ -3,12 +3,12 @@ title: Guía de seguridad de DataSet y DataTable
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: 2fbac625ae0049fc4c363977dc1d3fbcfb376025
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: f0fa43c467cc7866e69115acb5f807e6487fda7a
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86416205"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608534"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>Guía de seguridad de DataSet y DataTable
 
@@ -16,7 +16,7 @@ Este artículo se aplica a:
 
 * .NET Framework (todas las versiones)
 * .NET Core y versiones posteriores
-* .NET 5,0 y versiones posteriores
+* .NET 5.0 y versiones posteriores
 
 Los tipos [DataSet](/dotnet/api/system.data.dataset) y [DataTable](/dotnet/api/system.data.datatable) son componentes de .net heredados que permiten representar conjuntos de datos como objetos administrados. Estos componentes se introdujeron en .NET 1,0 como parte de la [infraestructura de ADO.net](/dotnet/framework/data/adonet/dataset-datatable-dataview/)original. Su objetivo era proporcionar una vista administrada a través de un conjunto de datos relacional, extraabstraendo si el origen subyacente de los datos era XML, SQL u otra tecnología.
 
@@ -29,7 +29,7 @@ En todas las versiones compatibles de .NET Framework, .NET Core y .NET, `DataSet
 * Tipos primitivos y equivalentes primitivos:,,,,,,,,,,,,,,,,,,, `bool` `char` `sbyte` `byte` `short` `ushort` `int` `uint` `long` `ulong` `float` `double` `decimal` `DateTime` `DateTimeOffset` `TimeSpan` `string` `Guid` `SqlBinary` `SqlBoolean` , `SqlByte` , `SqlBytes` ,,,, `SqlChars` , `SqlDateTime` `SqlDecimal` `SqlDouble` `SqlGuid` `SqlInt16` `SqlInt32` `SqlInt64` `SqlMoney` `SqlSingle` `SqlString` ,,,,, y.
 * No primitivos usados comúnmente: `Type` , `Uri` y `BigInteger` .
 * Tipos _System. Drawing_ usados comúnmente: `Color` , `Point` , `PointF` , `Rectangle` , `RectangleF` , `Size` y `SizeF` .
-* `Enum`distintos.
+* `Enum` distintos.
 * Matrices y listas de los tipos anteriores.
 
 Si los datos XML entrantes contienen un objeto cuyo tipo no está en esta lista:
@@ -252,7 +252,7 @@ En .NET Core, .NET 5 y ASP.NET Core, este valor se controla mediante _runtimecon
 
 Para obtener más información, vea ["opciones de configuración en tiempo de ejecución de .net Core"](/dotnet/core/run-time-config/).
 
-`AllowArbitraryDataSetTypeInstantiation`también se puede establecer mediante programación a través de [AppContext. SetSwitch](/dotnet/api/system.appcontext.setswitch) en lugar de usar un archivo de configuración, como se muestra en el código siguiente:
+`AllowArbitraryDataSetTypeInstantiation` también se puede establecer mediante programación a través de [AppContext. SetSwitch](/dotnet/api/system.appcontext.setswitch) en lugar de usar un archivo de configuración, como se muestra en el código siguiente:
 
 ```cs
 // Warning: setting the following switch can introduce a security problem.
@@ -268,9 +268,9 @@ Si `AppContext` no está disponible, las comprobaciones de limitación de tipos 
 * Un administrador debe configurar el registro.
 * El uso del registro es un cambio en todo el equipo y afectará a _todas las_ aplicaciones que se ejecutan en la máquina.
 
-| Tipo  |  Valor |
+| Tipo  |  Value |
 |---|---|
-| **Clave del registro** | `HKLM\SOFTWARE\Microsoft\.NETFramework\AppContext` |
+| **Clave del Registro** | `HKLM\SOFTWARE\Microsoft\.NETFramework\AppContext` |
 | **Nombre del valor** | `Switch.System.Data.AllowArbitraryDataSetTypeInstantiation` |
 | **Tipo de valor** | `REG_SZ` |
 | **Datos del valor** | `true` |
@@ -289,7 +289,7 @@ While `DataSet` y `DataTable` imponen limitaciones predeterminadas en los tipos 
 * El `DataSet.ReadXml` `DataTable.ReadXml` método o se utiliza para leer un archivo XML que contiene información de columnas y filas.
 * Una `DataSet` instancia de o `DataTable` se serializa como parte de un punto de conexión de WCF o servicios Web ASP.net (SOAP).
 * Un serializador como `XmlSerializer` se utiliza para deserializar una `DataSet` `DataTable` instancia de o de una secuencia XML.
-* Un serializador como `JsonConvert` se usa para deserializar una `DataSet` `DataTable` instancia de o de un flujo JSON. `JsonConvert`es un método de la conocida [Newtonsoft.Jsde terceros en](https://www.newtonsoft.com/json) la biblioteca.
+* Un serializador como `JsonConvert` se usa para deserializar una `DataSet` `DataTable` instancia de o de un flujo JSON. `JsonConvert` es un método de la conocida [Newtonsoft.Jsde terceros en](https://www.newtonsoft.com/json) la biblioteca.
 * Un serializador como `BinaryFormatter` se usa para deserializar una `DataSet` `DataTable` instancia de o a partir de una secuencia de bytes sin formato.
 
 En este documento se describen las consideraciones de seguridad para los escenarios anteriores.
@@ -488,3 +488,28 @@ Considere la posibilidad de reemplazar el modelo de objetos para utilizar [Entit
 * Ofrece protecciones integradas al deserializar datos de orígenes que no son de confianza.
 
 En el caso de las aplicaciones que usan `.aspx` extremos SOAP, considere la posibilidad de cambiar esos puntos de conexión para usar [WCF](/dotnet/framework/wcf/). WCF es un sustituto más completo de `.asmx` servicios Web. Los extremos de WCF [se pueden exponer a través de SOAP](../../../wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) para la compatibilidad con los autores de llamadas existentes.
+
+## <a name="code-analyzers"></a>Analizadores de código
+
+Las reglas de seguridad del analizador de código, que se ejecutan cuando se compila el código fuente, pueden ayudar a encontrar vulnerabilidades relacionadas con este problema de seguridad en C# y Visual Basic código. Microsoft. CodeAnalysis. FxCopAnalyzers es un paquete de NuGet de analizadores de código que se distribuye en [Nuget.org](https://www.nuget.org/).
+
+Para obtener información general sobre los analizadores de código, vea [información general de los analizadores de código fuente](https://docs.microsoft.com/visualstudio/code-quality/roslyn-analyzers-overview).
+
+Habilite las siguientes reglas de Microsoft. CodeAnalysis. FxCopAnalyzers:
+
+- [CA2350](https://docs.microsoft.com/visualstudio/code-quality/ca2350): no usar DataTable. ReadXml () con datos que no son de confianza
+- [CA2351](https://docs.microsoft.com/visualstudio/code-quality/ca2351): no usar DataSet. ReadXml () con datos que no son de confianza
+- [CA2352](https://docs.microsoft.com/visualstudio/code-quality/ca2352): un conjunto de seguridad no seguro o un DataTable en un tipo serializable pueden ser vulnerables a ataques de ejecución remota de código.
+- [CA2353](https://docs.microsoft.com/visualstudio/code-quality/ca2353): conjunto de seguridad no seguro o DataTable en tipo serializable
+- [CA2354](https://docs.microsoft.com/visualstudio/code-quality/ca2354): un conjunto de objetos no seguro o DataTable en el gráfico de objetos deserializados puede ser vulnerable a ataques de ejecución remota de código.
+- [CA2355](https://docs.microsoft.com/visualstudio/code-quality/ca2355): el tipo de DataTable o el conjunto de texto no seguro que se encuentra en el gráfico de objetos deserializables
+- [CA2356](https://docs.microsoft.com/visualstudio/code-quality/ca2356): tipo de objeto DataTable o DataSet no seguro en el gráfico de objetos deserializables Web
+- [CA2361](https://docs.microsoft.com/visualstudio/code-quality/ca2361): Asegúrese de que la clase generada automáticamente que contiene DataSet. ReadXml () no se utiliza con datos que no son de confianza
+- [CA2362](https://docs.microsoft.com/visualstudio/code-quality/ca2362): el conjunto de seguridad no seguro o DataTable en el tipo serializable generado automáticamente puede ser vulnerable a ataques de ejecución remota de código.
+
+Para obtener más información sobre cómo configurar las reglas, consulte [usar analizadores de código](https://docs.microsoft.com/visualstudio/code-quality/use-roslyn-analyzers).
+
+Las nuevas reglas de seguridad están disponibles en los siguientes paquetes NuGet:
+
+- Microsoft. CodeAnalysis. FxCopAnalyzers 3.3.0: para Visual Studio 2019 versión 16,3 o posterior
+- Microsoft. CodeAnalysis. FxCopAnalyzers 2.9.11: para Visual Studio 2017 versión 15,9 o posterior
