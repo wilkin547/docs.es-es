@@ -1,13 +1,13 @@
 ---
 title: Interfaces
-description: Obtenga información F# sobre cómo las interfaces especifican conjuntos de miembros relacionados que otras clases implementan.
-ms.date: 05/16/2016
-ms.openlocfilehash: 8f054a668ad0fbc2453a45883e8052471280eca3
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+description: 'Obtenga información sobre cómo las interfaces de F # especifican conjuntos de miembros relacionados que otras clases implementan.'
+ms.date: 08/15/2020
+ms.openlocfilehash: 36272b52fcff83e8e8a54ccc4e6ecd1252a91819
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627651"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558132"
 ---
 # <a name="interfaces"></a>Interfaces
 
@@ -43,21 +43,31 @@ let class-name (argument-list) =
 
 ## <a name="remarks"></a>Comentarios
 
-Las declaraciones de interfaz son similares a las declaraciones de clase, salvo que no se implementa ningún miembro. En su lugar, todos los miembros son abstractos, como se indica `abstract`en la palabra clave. No se proporciona un cuerpo de método para los métodos abstractos. Sin embargo, puede proporcionar una implementación predeterminada al incluir también una definición independiente del miembro como un método junto con la `default` palabra clave. Hacerlo es equivalente a crear un método virtual en una clase base en otros lenguajes .NET. Este tipo de método virtual se puede invalidar en las clases que implementan la interfaz.
+Las declaraciones de interfaz son similares a las declaraciones de clase, salvo que no se implementa ningún miembro. En su lugar, todos los miembros son abstractos, como se indica en la palabra clave `abstract` . No se proporciona un cuerpo de método para los métodos abstractos. Sin embargo, puede proporcionar una implementación predeterminada al incluir también una definición independiente del miembro como un método junto con la `default` palabra clave. Hacerlo es equivalente a crear un método virtual en una clase base en otros lenguajes .NET. Este tipo de método virtual se puede invalidar en las clases que implementan la interfaz.
 
-La accesibilidad predeterminada para las interfaces `public`es.
+La accesibilidad predeterminada para las interfaces es `public` .
 
-Opcionalmente, puede asignar un nombre a cada parámetro de método F# usando la sintaxis normal:
+Opcionalmente, puede asignar un nombre a cada parámetro de método mediante la sintaxis de F # normal:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet24032.fs)]
 
-En el ejemplo `ISprintable` anterior, el `Print` método tiene un único parámetro del tipo `string` con el nombre `format`.
+En el `ISprintable` ejemplo anterior, el `Print` método tiene un único parámetro del tipo `string` con el nombre `format` .
 
 Hay dos maneras de implementar interfaces: mediante el uso de expresiones de objeto y el uso de tipos de clase. En cualquier caso, el tipo de clase o la expresión de objeto proporciona cuerpos de método para los métodos abstractos de la interfaz. Las implementaciones son específicas de cada tipo que implementa la interfaz. Por lo tanto, los métodos de interfaz en tipos diferentes pueden ser diferentes entre sí.
 
-Las palabras `interface` clave `end`y, que marcan el inicio y el final de la definición, son opcionales cuando se usa la sintaxis ligera. Si no usa estas palabras clave, el compilador intenta deducir si el tipo es una clase o una interfaz mediante el análisis de las construcciones que se usan. Si define un miembro o usa otra sintaxis de clase, el tipo se interpreta como una clase.
+Las palabras clave `interface` y `end` , que marcan el inicio y el final de la definición, son opcionales cuando se usa la sintaxis ligera. Si no usa estas palabras clave, el compilador intenta deducir si el tipo es una clase o una interfaz mediante el análisis de las construcciones que se usan. Si define un miembro o usa otra sintaxis de clase, el tipo se interpreta como una clase.
 
-El estilo de codificación de .NET consiste en comenzar todas las interfaces `I`con una letra mayúscula.
+El estilo de codificación de .NET consiste en comenzar todas las interfaces con una letra mayúscula `I` .
+
+Puede especificar varios parámetros de dos maneras: F #-Style y. Estilo de red. Ambos se compilarán de la misma manera para los consumidores de .NET, pero F #-Style forzará a los autores de llamadas de F # a usar la aplicación de parámetros de estilo F # y. El estilo de red obliga a los autores de llamadas de F # a usar la aplicación de argumentos de tupla.
+
+```fsharp
+type INumeric1 =
+    abstract Add: x: int -> y: int -> int
+
+type INumeric2 =
+    abstract Add: x: int * y: int -> int
+```
 
 ## <a name="implementing-interfaces-by-using-class-types"></a>Implementar interfaces mediante tipos de clase
 
@@ -69,9 +79,9 @@ Las implementaciones de interfaz se heredan, por lo que las clases derivadas no 
 
 ## <a name="calling-interface-methods"></a>Llamar a métodos de interfaz
 
-Solo se puede llamar a los métodos de interfaz a través de la interfaz, no a través de ningún objeto del tipo que implementa la interfaz. Por lo tanto, es posible que tenga que convertir al tipo de interfaz mediante `:>` el operador o `upcast` el operador para llamar a estos métodos.
+Solo se puede llamar a los métodos de interfaz a través de la interfaz, no a través de ningún objeto del tipo que implementa la interfaz. Por lo tanto, es posible que tenga que convertir al tipo de interfaz mediante el `:>` operador o el `upcast` operador para llamar a estos métodos.
 
-Para llamar al método de interfaz cuando tiene un objeto de tipo `SomeClass`, debe convertir el objeto al tipo de interfaz, como se muestra en el código siguiente.
+Para llamar al método de interfaz cuando tiene un objeto de tipo `SomeClass` , debe convertir el objeto al tipo de interfaz, como se muestra en el código siguiente.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2802.fs)]
 

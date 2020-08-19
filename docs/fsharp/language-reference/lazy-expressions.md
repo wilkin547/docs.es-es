@@ -19,7 +19,7 @@ Las *expresiones diferidas* son expresiones que no se evalúan inmediatamente, p
 let identifier = lazy ( expression )
 ```
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 En la sintaxis anterior, *Expression* es un código que solo se evalúa cuando se requiere un resultado y *Identifier* es un valor que almacena el resultado. El valor es de tipo [`Lazy<'T>`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-lazy-1-0.html) , donde el tipo real que se utiliza para `'T` se determina a partir del resultado de la expresión.
 

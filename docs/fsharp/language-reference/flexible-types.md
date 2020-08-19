@@ -1,13 +1,13 @@
 ---
 title: Tipos flexibles
-description: Aprenda a usar F# una anotación de tipo flexible, que indica que un parámetro, una variable o un valor tiene un tipo que es compatible con un tipo especificado.
-ms.date: 05/16/2016
-ms.openlocfilehash: bf05f78f163d1f9c73c667df60925b66a5315627
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+description: 'Obtenga información sobre cómo usar la anotación de tipo flexible de F #, que indica que un parámetro, una variable o un valor tiene un tipo que es compatible con un tipo especificado.'
+ms.date: 08/15/2020
+ms.openlocfilehash: 44241ad082cd7f3de9e0cc6a48b8a8946e7b33d3
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71083061"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557755"
 ---
 # <a name="flexible-types"></a>Tipos flexibles
 
@@ -31,13 +31,13 @@ Un tipo flexible es equivalente a un tipo genérico que tiene una restricción q
 'T when 'T :> SomeType
 ```
 
-Los tipos flexibles son útiles en varios tipos de situaciones. Por ejemplo, si tiene una función de orden superior (una función que toma una función como argumento), a menudo resulta útil que la función devuelva un tipo flexible. En el ejemplo siguiente, el uso de un tipo flexible con un argumento de secuencia `iterate2` en permite que la función de orden superior funcione con funciones que generan secuencias, matrices, listas y cualquier otro tipo Enumerable.
+Los tipos flexibles son útiles en varios tipos de situaciones. Por ejemplo, si tiene una función de orden superior (una función que toma una función como argumento), a menudo resulta útil que la función devuelva un tipo flexible. En el ejemplo siguiente, el uso de un tipo flexible con un argumento de secuencia en `iterate2` permite que la función de orden superior funcione con funciones que generan secuencias, matrices, listas y cualquier otro tipo Enumerable.
 
 Tenga en cuenta las dos funciones siguientes, una de las cuales devuelve una secuencia, la otra devuelve un tipo flexible.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4101.fs)]
 
-Como otro ejemplo, considere la función de biblioteca [Seq. concat](https://msdn.microsoft.com/library/2eeb69a9-fc2f-4b7d-8dee-101fa2b00712) :
+Como otro ejemplo, considere la función de biblioteca [Seq. concat](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#concat) :
 
 ```fsharp
 val concat: sequences:seq<#seq<'T>> -> seq<'T>
@@ -51,7 +51,7 @@ Puede pasar cualquiera de las secuencias enumerables siguientes a esta función:
 - Una matriz de secuencias
 - Cualquier otra combinación de secuencias enumerables
 
-En el código siguiente `Seq.concat` se usa para mostrar los escenarios que se pueden admitir mediante el uso de tipos flexibles.
+En el código siguiente se usa `Seq.concat` para mostrar los escenarios que se pueden admitir mediante el uso de tipos flexibles.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4102.fs)]
 
@@ -65,7 +65,7 @@ seq [1; 2; 3; 4; ...]
 seq [1; 2; 3; 4; ...]
 ```
 
-En F#, como en otros lenguajes orientados a objetos, hay contextos en los que los tipos derivados o tipos que implementan interfaces se convierten automáticamente en un tipo base o de interfaz. Estas conversiones automáticas se producen en argumentos directos, pero no cuando el tipo está en una posición subordinada, como parte de un tipo más complejo, como un tipo de valor devuelto de un tipo de función, o como un argumento de tipo. Por lo tanto, la notación de tipos flexibles es principalmente útil cuando el tipo al que se aplica es parte de un tipo más complejo.
+En F #, como en otros lenguajes orientados a objetos, hay contextos en los que los tipos derivados o tipos que implementan interfaces se convierten automáticamente en un tipo base o de interfaz. Estas conversiones automáticas se producen en argumentos directos, pero no cuando el tipo está en una posición subordinada, como parte de un tipo más complejo, como un tipo de valor devuelto de un tipo de función, o como un argumento de tipo. Por lo tanto, la notación de tipos flexibles es principalmente útil cuando el tipo al que se aplica es parte de un tipo más complejo.
 
 ## <a name="see-also"></a>Vea también
 

@@ -7,12 +7,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/19/2019
-ms.openlocfilehash: ca3d8747b02602c89aec187ea0826e658fb0cbc4
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: ba6dbfdf9a4fa9973dfe84cf5d58f1300f5d0cb4
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267807"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557547"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-no-locblazor"></a>Migre desde formularios Web Forms de ASP.NET a Blazor
 
@@ -559,10 +559,6 @@ En Blazor , el marcado equivalente se proporciona en un archivo *Create. Razor* 
 ```
 
 El `EditForm` contexto incluye compatibilidad con la validación y se puede ajustar en torno a la entrada. Las anotaciones de datos son una manera común de agregar validación. Esta compatibilidad de validación se puede Agregar a través del `DataAnnotationsValidator` componente. Para obtener más información sobre este mecanismo, consulte [ASP.net Core Blazor Forms and Validation](/aspnet/core/blazor/forms-validation).
-
-## <a name="migrate-built-in-web-forms-controls"></a>Migrar controles de formularios Web Forms integrados
-
-*Este contenido estará disponible próximamente.*
 
 ## <a name="migrate-configuration"></a>Migración de la configuración
 

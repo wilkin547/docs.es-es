@@ -1,41 +1,40 @@
 ---
 title: Tipos básicos
-description: Detectar los tipos básicos fundamentales que se usan en el F# lenguaje.
-ms.date: 07/09/2018
-ms.openlocfilehash: fb9f275490cb402ff36e959774cd65450de77115
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+description: 'Descubra los tipos básicos fundamentales que se usan en el lenguaje F #.'
+ms.date: 08/15/2020
+ms.openlocfilehash: 659ac8424c62985affcca1741e1b2a74c9c3ee8d
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645588"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557703"
 ---
 # <a name="basic-types"></a>Tipos básicos
 
-Este tema enumeran los tipos básicos que se definen en el F# lenguaje. Estos tipos son las más importantes en F#, forman la base de casi todos F# programa. Son un superconjunto de los tipos primitivos. NET.
+En este tema se enumeran los tipos básicos que se definen en el lenguaje F #. Estos tipos son los más fundamentales en F #, que forman la base de casi todos los programas de F #. Son un superconjunto de tipos primitivos de .NET.
 
-|Tipo|Tipo de .NET|Descripción|
-|----|---------|-----------|
-|`bool`|<xref:System.Boolean>|Los valores posibles son `true` y `false`.|
-|`byte`|<xref:System.Byte>|Valores de 0 a 255.|
-|`sbyte`|<xref:System.SByte>|Valores de -128 a 127.|
-|`int16`|<xref:System.Int16>|Valores de -32768 a 32767.|
-|`uint16`|<xref:System.UInt16>|Valores de 0 a 65535.|
-|`int`|<xref:System.Int32>|Valores entre -2.147.483.648 a 2.147.483.647.|
-|`uint32`|<xref:System.UInt32>|Valores entre 0 y 4.294.967.295.|
-|`int64`|<xref:System.Int64>|Valores comprendidos entre -9.223.372.036.854.775.808 a + 9.223.372.036.854.775.807.|
-|`uint64`|<xref:System.UInt64>|Valores de 0 a 18,446,744,073,709,551,615.|
-|`nativeint`|<xref:System.IntPtr>|Un puntero nativo como un entero con signo.|
-|`unativeint`|<xref:System.UIntPtr>|Un puntero nativo como un entero sin signo.|
-|`char`|<xref:System.Char>|Valores de caracteres Unicode.|
-|`string`|<xref:System.String>|Texto Unicode.|
-|`decimal`|<xref:System.Decimal>|Tipo de datos que tiene al menos 28 dígitos significativos de punto flotante.|
-|`unit`|No aplicable|Indica la ausencia de un valor real. El tipo tiene un único valor formal, que se indica `()`. El valor de unidad, `()`, a menudo se usa como marcador de posición donde se necesita un valor pero ningún valor real está disponible o que tenga sentido.|
-|`void`|<xref:System.Void>|No indica que ningún tipo de valor.|
-|`float32`, `single`|<xref:System.Single>|Tipo de punto flotante de 32 bits.|
-|`float`, `double`|<xref:System.Double>|Tipo de punto flotante de 64 bits.|
+|Tipo|Tipo de .NET|Descripción|Ejemplo|
+|----|---------|-----------|-------|
+|`bool`|<xref:System.Boolean>|Los valores posibles son `true` y `false`.|`true`/`false`|
+|`byte`|<xref:System.Byte>|Valores de 0 a 255.|`1uy`|
+|`sbyte`|<xref:System.SByte>|Valores de-128 a 127.|`1y`|
+|`int16`|<xref:System.Int16>|Valores de-32768 a 32767.|`1s`|
+|`uint16`|<xref:System.UInt16>|Valores de 0 a 65535.|`1us`|
+|`int`|<xref:System.Int32>|Valores de-2.147.483.648 a 2.147.483.647.|`1`|
+|`uint`|<xref:System.UInt32>|Valores de 0 a 4.294.967.295.|`1u`|
+|`int64`|<xref:System.Int64>|Valores de-9223372036854775808 a 9.223.372.036.854.775.807.|`1L`|
+|`uint64`|<xref:System.UInt64>|Valores de 0 a 18446744073709551615.|`1UL`|
+|`nativeint`|<xref:System.IntPtr>|Puntero nativo como entero con signo.|`nativeint 1`|
+|`unativeint`|<xref:System.UIntPtr>|Puntero nativo como entero sin signo.|`unativeint 1`|
+|`decimal`|<xref:System.Decimal>|Un tipo de datos de punto flotante que tiene al menos 28 dígitos significativos.|`1.0`|
+|`float`, `double`|<xref:System.Double>|Tipo de punto flotante de 64 bits.|`1.0`|
+|`float32`, `single`|<xref:System.Single>|Tipo de punto flotante de 32 bits.|`1.0f`|
+|`char`|<xref:System.Char>|Valores de caracteres Unicode.|`'c'`|
+|`string`|<xref:System.String>|Texto Unicode.|`"str"`|
+|`unit`|no aplicable|Indica la ausencia de un valor real. El tipo solo tiene un valor formal, que se indica `()` . El valor de unidad, `()` , se usa a menudo como un marcador de posición en el que se necesita un valor, pero no hay ningún valor real disponible o tiene sentido.|`()`|
 
 > [!NOTE]
-> Puede realizar cálculos con números enteros demasiado grandes para el tipo de entero de 64 bits mediante el [bigint](https://msdn.microsoft.com/library/dc8be18d-4042-46c4-b136-2f21a84f6efa) tipo. `bigint` no se considera un tipo básico; es la abreviatura de `System.Numerics.BigInteger`.
+> Puede realizar cálculos con enteros demasiado grandes para el tipo entero de 64 bits mediante el tipo [BIGINT](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-bigint.html) . `bigint` no se considera un tipo básico; es una abreviatura de `System.Numerics.BigInteger` .
 
 ## <a name="see-also"></a>Vea también
 

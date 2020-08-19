@@ -1,13 +1,13 @@
 ---
 title: Registros
-description: Obtenga información F# sobre cómo los registros representan agregados simples de valores con nombre, opcionalmente con miembros.
-ms.date: 06/09/2019
-ms.openlocfilehash: 874c5fa30a36f2778f7a43266316deb8c59d1d72
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+description: 'Obtenga información sobre cómo los registros de F # representan agregados simples de valores con nombre, opcionalmente con miembros.'
+ms.date: 08/15/2020
+ms.openlocfilehash: 182b2e83c3940c866197052af102787a96e49c54
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216793"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559055"
 ---
 # <a name="records"></a>Registros
 
@@ -34,7 +34,7 @@ A continuación se muestran algunos ejemplos.
 
 Cuando cada etiqueta está en una línea independiente, el punto y coma es opcional.
 
-Puede establecer valores en expresiones conocidas como *expresiones de registro*. El compilador deduce el tipo a partir de las etiquetas utilizadas (si las etiquetas son suficientemente distintas de las de otros tipos de registro). Las llaves ({}) incluyen la expresión de registro. En el código siguiente se muestra una expresión de registro que inicializa un registro con tres elementos Float `x`con `y` etiquetas `z`, y.
+Puede establecer valores en expresiones conocidas como *expresiones de registro*. El compilador deduce el tipo a partir de las etiquetas utilizadas (si las etiquetas son suficientemente distintas de las de otros tipos de registro). Las llaves ({}) incluyen la expresión de registro. En el código siguiente se muestra una expresión de registro que inicializa un registro con tres elementos Float con etiquetas `x` , `y` y `z` .
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1907.fs)]
 
@@ -42,7 +42,7 @@ No utilice la forma abreviada si puede haber otro tipo que también tenga las mi
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1903.fs)]
 
-Las etiquetas del tipo declarado más recientemente tienen prioridad sobre las del tipo declarado previamente, por lo que en el ejemplo anterior, `mypoint3D` se deduce `Point3D`que es. Puede especificar explícitamente el tipo de registro, como en el código siguiente.
+Las etiquetas del tipo declarado más recientemente tienen prioridad sobre las del tipo declarado previamente, por lo que en el ejemplo anterior, `mypoint3D` se deduce que es `Point3D` . Puede especificar explícitamente el tipo de registro, como en el código siguiente.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1908.fs)]
 
@@ -94,9 +94,9 @@ let rr3 = { defaultRecord1 with Field2 = 42 }
 
 En algún momento al crear un registro, puede que desee que dependa de otro tipo que le gustaría definir después. Se trata de un error de compilación a menos que defina los tipos de registro para que sean recursivos mutuamente.
 
-La definición de registros recursivos mutuamente se realiza `and` con la palabra clave. Esto le permite vincular 2 o más tipos de registro juntos.
+La definición de registros recursivos mutuamente se realiza con la `and` palabra clave. Esto le permite vincular 2 o más tipos de registro juntos.
 
-Por ejemplo, el código siguiente define un `Person` tipo `Address` y como recursivo mutuamente:
+Por ejemplo, el código siguiente define un `Person` `Address` tipo y como recursivo mutuamente:
 
 ```fsharp
 // Create a Person type and use the Address type that is not defined
@@ -128,6 +128,39 @@ Point is on the x-axis. Value is 100.000000.
 Point is at (10.000000, 0.000000, -1.000000).
 ```
 
+## <a name="records-and-members"></a>Registros y miembros
+
+Puede especificar miembros en registros de forma muy parecida a como se hace con las clases. No se admiten los campos. Un enfoque común consiste en definir un `Default` miembro estático para facilitar la construcción de registros:
+
+```fsharp
+type Person =
+  { Name: string
+    Age: int
+    Address: string }
+
+    static member Default =
+        { Name = "Phillip"
+          Age = 12
+          Address = "123 happy fun street" }
+
+let defaultPerson = Person.Default
+```
+
+Si utiliza un identificador propio, ese identificador hace referencia a la instancia del registro cuyo miembro se llama:
+
+```fsharp
+type Person =
+  { Name: string
+    Age: int
+    Address: string }
+
+    member this.WeirdToString() =
+        this.Name + this.Address + string this.Age
+
+let p = { Name = "a"; Age = 12; Address = "abc123 }
+let weirdString = p.WeirdToString()
+```
+
 ## <a name="differences-between-records-and-classes"></a>Diferencias entre los registros y las clases
 
 Los campos de registro difieren de las clases en que se exponen automáticamente como propiedades y se usan en la creación y copia de registros. La construcción de registros también difiere de la construcción de clases. En un tipo de registro, no se puede definir un constructor. En su lugar, se aplica la sintaxis de construcción que se describe en este tema. Las clases no tienen ninguna relación directa entre los parámetros de constructor, los campos y las propiedades.
@@ -142,11 +175,11 @@ El resultado de este código es el siguiente:
 The records are equal.
 ```
 
-Si escribe el mismo código con clases, los dos objetos de clase no serían iguales porque los dos valores representarían dos objetos en el montón y solo se compararían las direcciones (a menos que el tipo de `System.Object.Equals` clase invalide el método).
+Si escribe el mismo código con clases, los dos objetos de clase no serían iguales porque los dos valores representarían dos objetos en el montón y solo se compararían las direcciones (a menos que el tipo de clase invalide el `System.Object.Equals` método).
 
-Si necesita igualdad de referencia para los registros, agregue el `[<ReferenceEquality>]` atributo encima del registro.
+Si necesita igualdad de referencia para los registros, agregue el atributo `[<ReferenceEquality>]` encima del registro.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Tipos en F#](fsharp-types.md)
 - [Clases](classes.md)

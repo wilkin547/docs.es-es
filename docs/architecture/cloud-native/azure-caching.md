@@ -3,12 +3,12 @@ title: Almacenamiento en caché en una aplicación nativa en la nube
 description: Obtenga información sobre las estrategias de almacenamiento en caché en una aplicación nativa en la nube.
 author: robvet
 ms.date: 05/17/2020
-ms.openlocfilehash: a109db59d7b2005ea97922eef07ae4869e4894a7
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: a33f143499b5f9545493bc4bc757cc3d152f7aa9
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614297"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557521"
 ---
 # <a name="caching-in-a-cloud-native-app"></a>Almacenamiento en caché en una aplicación nativa en la nube
 
@@ -57,7 +57,7 @@ La caché de Azure para Redis es más que un servidor de caché simple. Puede ad
   
 En el caso de escenarios avanzados, una copia de los datos en caché puede [almacenarse en el disco](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-how-to-premium-persistence). Si un evento catastrófico deshabilita las cachés principal y de réplica, la memoria caché se reconstruye a partir de la instantánea más reciente.
 
-Azure Redis Cache está disponible en varias configuraciones predefinidas y planes de tarifa.  El [nivel Premium](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-premium-tier-intro) incluye muchas características de nivel empresarial, como la agrupación en clústeres, la persistencia de datos, la replicación geográfica y el aislamiento de red virtual.
+Azure Redis Cache está disponible en varias configuraciones predefinidas y planes de tarifa. El [nivel Premium](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-overview#service-tiers) incluye muchas características de nivel empresarial, como la agrupación en clústeres, la persistencia de datos, la replicación geográfica y el aislamiento de red virtual.
 
 >[!div class="step-by-step"]
 >[Anterior](relational-vs-nosql-data.md)

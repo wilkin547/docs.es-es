@@ -2,12 +2,12 @@
 title: Seguridad de Azure para aplicaciones nativas en la nube
 description: Diseño de aplicaciones .NET nativas en la nube para Azure | Seguridad de Azure para aplicaciones nativas en la nube
 ms.date: 05/13/2020
-ms.openlocfilehash: 223d9e77aca611697958981bf2ee3a630fb9fffb
-ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
+ms.openlocfilehash: 996c7075b252466a3b3374f1e75e64315fdd6fc7
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86374499"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557651"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>Seguridad de Azure para aplicaciones nativas en la nube
 
@@ -201,7 +201,7 @@ kubectl apply -f ./secret.yaml
 
 Estos secretos se pueden montar en volúmenes o exponerse a los procesos de contenedor mediante variables de entorno. El enfoque de [aplicación de doce factores](https://12factor.net/) para la creación de aplicaciones sugiere el uso del denominador común más bajo para transmitir la configuración a una aplicación. Las variables de entorno son el denominador común más bajo, ya que se admiten independientemente del sistema operativo o de la aplicación.
 
-Una alternativa a usar los secretos de Kubernetes integrados es acceder a los secretos en Azure Key Vault desde Kubernetes. La manera más sencilla de hacerlo es asignar un rol de RBAC al contenedor que quiera cargar los secretos. A continuación, la aplicación puede usar las API de Azure Key Vault para tener acceso a los secretos. Sin embargo, este enfoque requiere modificaciones en el código y no sigue el patrón de uso de variables de entorno. En su lugar, es posible insertar valores en un contenedor mediante el uso del inyector de [Azure Key Vault](https://mrdevops.io/introducing-azure-key-vault-to-kubernetes-931f82364354). Este enfoque es realmente más seguro que usar los secretos de Kubernetes directamente, ya que los usuarios pueden tener acceso a ellos en el clúster.
+Una alternativa a usar los secretos de Kubernetes integrados es acceder a los secretos en Azure Key Vault desde Kubernetes. La manera más sencilla de hacerlo es asignar un rol de RBAC al contenedor que quiera cargar los secretos. A continuación, la aplicación puede usar las API de Azure Key Vault para tener acceso a los secretos. Sin embargo, este enfoque requiere modificaciones en el código y no sigue el patrón de uso de variables de entorno. En su lugar, es posible insertar valores en un contenedor. Este enfoque es realmente más seguro que usar los secretos de Kubernetes directamente, ya que los usuarios pueden tener acceso a ellos en el clúster.
 
 ## <a name="encryption-in-transit-and-at-rest"></a>Cifrado en tránsito y en reposo
 

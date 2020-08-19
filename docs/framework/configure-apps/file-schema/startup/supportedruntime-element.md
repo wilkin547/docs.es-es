@@ -1,7 +1,6 @@
 ---
-title: '<supportedRuntime>elemento de configuración: .NET'
+title: '<supportedRuntime> elemento de configuración: .NET'
 ms.date: 04/02/2019
-ms.custom: updateeachrelease
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#supportedRuntime
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/startup/supportedRuntime
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-ms.openlocfilehash: ecbe73593e5b8b87909499f6fff7e865e29b1ec8
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: cc221c71b68c21b61b5fa27e0972b9e9156dbc3b
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "82796046"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558678"
 ---
 # <a name="supportedruntime-element"></a>Elemento \<supportedRuntime>
 
@@ -65,10 +64,10 @@ El `runtime` atributo especifica la versión de Common Language Runtime (CLR) ne
 |1.1|"v1.1.4322"|
 |2.0|"v2.0.50727"|
 |3.0|"v2.0.50727"|
-|3.5|"v2.0.50727"|
+|3,5|"v2.0.50727"|
 |4-4.8|"v4.0"|
 
-## <a name="sku-id-values"></a><a name="sku"></a>valores de "SKU ID"
+## <a name="sku-id-values"></a><a name="sku"></a> valores de "SKU ID"
 
 El `sku` atributo usa un moniker de la plataforma de destino (TFM) para indicar la versión de la .NET Framework que la aplicación tiene como destino y que necesita para ejecutarse. En la tabla siguiente se enumeran los valores válidos que admite el `sku` atributo, comenzando por el .NET Framework 4.
 
@@ -82,10 +81,10 @@ El `sku` atributo usa un moniker de la plataforma de destino (TFM) para indicar 
 |4.0, Client Profile, actualización 2|". NETFramework, version = v 4.0.2, Profile = Client "|
 |4.0, actualización 3 de la plataforma|". NETFramework, versión = v 4.0.3 "|
 |4.0, Client Profile, actualización 3|". NETFramework, versión = v 4.0.3, perfil = cliente "|
-|4.5|".NETFramework,Version=v4.5"|
+|4.5.|".NETFramework,Version=v4.5"|
 |4.5.1|".NETFramework,Version=v4.5.1"|
 |4.5.2|".NETFramework,Version=v4.5.2"|
-|4.6|".NETFramework,Version=v4.6"|
+|4,6|".NETFramework,Version=v4.6"|
 |4.6.1|".NETFramework,Version=v4.6.1"|
 |4.6.2|". NETFramework, versión = v 4.6.2 "|
 |4,7|". NETFramework, versión = v 4.7 "|
@@ -113,4 +112,4 @@ Este elemento se puede utilizar en el archivo de configuración de la aplicació
 
 - [Esquema de la configuración de inicio](index.md)
 - [Esquema de los archivos de configuración](../index.md)
-- [Ejecución en paralelo y en proceso](../../../deployment/in-process-side-by-side-execution.md)
+- [Ejecución en paralelo en proceso](../../../deployment/in-process-side-by-side-execution.md)
