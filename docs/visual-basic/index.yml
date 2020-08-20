@@ -7,12 +7,12 @@ metadata:
   ms.topic: landing-page
   ms.date: 08/13/2020
   ms.custom: contperfq1
-  ms.openlocfilehash: 507ee5cfc579a75231bf49b1db0d28ec32927ecd
-  ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+  ms.openlocfilehash: dff262ba8646427baa0021dbe4b3f859d22459cd
+  ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 08/17/2020
-  ms.locfileid: "88268158"
+  ms.lasthandoff: 08/18/2020
+  ms.locfileid: "88559211"
 landingContent:
 - title: Primeros pasos
   linkLists:
@@ -22,10 +22,10 @@ landingContent:
       url: https://dotnet.microsoft.com/download
   - linkListType: get-started
     links:
-    - text: Compilación de una aplicación "Hola mundo"
-      url: ../core/tutorials/vb-with-visual-studio.md
-    - text: Compilación de una biblioteca de clases
-      url: ../core/tutorials/vb-library-with-visual-studio.md
+    - text: Creación de una aplicación de consola de .NET Core con Visual Studio
+      url: ../core/tutorials/with-visual-studio.md
+    - text: Creación de una biblioteca .NET Standard con Visual Studio
+      url: ../core/tutorials/library-with-visual-studio.md
     - text: Tutoriales
       url: walkthroughs.md
     - text: Recursos adicionales
