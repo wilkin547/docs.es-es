@@ -1,17 +1,17 @@
 ---
-title: Resultados
-description: Obtenga información sobre cómo usar F# el tipo ' result ' para ayudarle a escribir código tolerante a errores.
-ms.date: 04/24/2017
-ms.openlocfilehash: 187aa26ccbaac7e0ec998756377bb7b0489eb1ab
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+title: Results
+description: 'Obtenga información sobre cómo usar el tipo de "resultado" de F # para ayudarle a escribir código tolerante a errores.'
+ms.date: 08/13/2020
+ms.openlocfilehash: d69e6ddc37bcf5cb5fc28644d59a11a822b83faa
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424852"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656923"
 ---
-# <a name="results"></a>Resultados
+# <a name="results"></a>Results
 
-A partir F# de 4,1, hay un tipo de `Result<'T,'TFailure>` que puede usar para escribir código tolerante a errores que se puede componer.
+El `Result<'T,'TFailure>` tipo le permite escribir código tolerante a errores que se puede componer.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -27,9 +27,11 @@ type Result<'T,'TError> =
 
 ## <a name="remarks"></a>Comentarios
 
-Tenga en cuenta que el tipo de resultado es una [Unión discriminada de struct](discriminated-unions.md#struct-discriminated-unions), que es F# otra característica presentada en 4,1.  La semántica de igualdad estructural se aplica aquí.
+Vea el [`Result`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-resultmodule.html) módulo para los combinadores integrados para `Result` . .
 
-El tipo de `Result` se usa normalmente en el control de errores de Monad, que a menudo se conoce como [programación orientada a ferrocarriles](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) dentro de la F# comunidad.  En el siguiente ejemplo trivial se muestra este enfoque.
+Tenga en cuenta que el tipo de resultado es una [Unión discriminada de struct](discriminated-unions.md#struct-discriminated-unions). La semántica de igualdad estructural se aplica aquí.
+
+El `Result` tipo se usa normalmente en el control de errores de Monad, que a menudo se conoce como [programación orientada a ferrocarril](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) en la comunidad de F #.  En el siguiente ejemplo trivial se muestra este enfoque.
 
 ```fsharp
 // Define a simple type which has fields that can be validated
@@ -80,9 +82,9 @@ let test() =
 test()
 ```
 
-Como puede ver, es muy fácil encadenar varias funciones de validación si las obliga a que devuelvan un `Result`.  Esto le permite dividir la funcionalidad como esta en pequeñas piezas que son comparables según sea necesario.  También tiene el valor agregado de *exigir* el uso de la [coincidencia de patrones](pattern-matching.md) al final de una ronda de validación, que a su vez exige un mayor grado de corrección del programa.
+Como puede ver, es muy fácil encadenar varias funciones de validación si las obliga a que devuelvan `Result` .  Esto le permite dividir la funcionalidad como esta en pequeñas piezas que son comparables según sea necesario.  También tiene el valor agregado de *exigir* el uso de la [coincidencia de patrones](pattern-matching.md) al final de una ronda de validación, que a su vez exige un mayor grado de corrección del programa.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Uniones discriminadas](discriminated-unions.md)
 - [Coincidencia de patrones](pattern-matching.md)

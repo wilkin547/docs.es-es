@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 530bb54936f97f1d7460d63cfa316c760cbd449d
-ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
+ms.openlocfilehash: 8b54aea1409f2b4c0a3d39d215922ba62c2a3563
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86441822"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656975"
 ---
 # <a name="security-considerations-for-data"></a>Consideraciones de seguridad para datos
 
@@ -90,7 +90,7 @@ El codificador del mensaje de MTOM también tiene un valor `MaxBufferSize` . Al 
 
 ## <a name="xml-based-streaming-attacks"></a>Ataques de la transmisión por secuencias basados en XML
 
-`MaxBufferSize`por sí solo no es suficiente para asegurarse de que no se puede forzar a WCF en el almacenamiento en búfer cuando se espera la transmisión por secuencias. Por ejemplo, los lectores XML de WCF siempre almacenan en búfer la etiqueta inicial del elemento XML completa al empezar a leer un nuevo elemento. Se hace esto para que se procesen los espacios de nombres y atributos correctamente. Si `MaxReceivedMessageSize` se configura para ser grande (por ejemplo, para habilitar un escenario de transmisión por secuencias de archivo grande directo a disco), se puede construir un mensaje malintencionado donde el cuerpo entero del mensaje sea una etiqueta inicial de elemento XML grande. Un intento para leerlo provocará <xref:System.OutOfMemoryException>. Se trata de uno de los muchos posibles ataques de denegación de servicio basados en XML que se pueden mitigar mediante cuotas de lector XML, que se describen en la sección "usar XML con seguridad" más adelante en este tema. En la transmisión por secuencias, es especialmente importante establecer todas estas cuotas.
+`MaxBufferSize` por sí solo no es suficiente para asegurarse de que no se puede forzar a WCF en el almacenamiento en búfer cuando se espera la transmisión por secuencias. Por ejemplo, los lectores XML de WCF siempre almacenan en búfer la etiqueta inicial del elemento XML completa al empezar a leer un nuevo elemento. Se hace esto para que se procesen los espacios de nombres y atributos correctamente. Si `MaxReceivedMessageSize` se configura para ser grande (por ejemplo, para habilitar un escenario de transmisión por secuencias de archivo grande directo a disco), se puede construir un mensaje malintencionado donde el cuerpo entero del mensaje sea una etiqueta inicial de elemento XML grande. Un intento para leerlo provocará <xref:System.OutOfMemoryException>. Se trata de uno de los muchos posibles ataques de denegación de servicio basados en XML que se pueden mitigar mediante cuotas de lector XML, que se describen en la sección "usar XML con seguridad" más adelante en este tema. En la transmisión por secuencias, es especialmente importante establecer todas estas cuotas.
 
 ### <a name="mixing-streaming-and-buffering-programming-models"></a>Mezclar los modelos de programación de transmisión por secuencias y almacenamiento en búfer
 
@@ -284,7 +284,7 @@ Esta situación se puede evitar siendo consciente de los puntos siguientes:
 
 <xref:System.Runtime.Serialization.NetDataContractSerializer> es un motor de serialización que utiliza el acoplamiento apretado a los tipos. Es similar a <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> y <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>. Es decir, determina el tipo del que se crea una instancia leyendo el .NET Framework ensamblado y el nombre de tipo de los datos entrantes. Aunque forma parte de WCF, no hay ninguna manera proporcionada de conectarse a este motor de serialización; se debe escribir código personalizado. `NetDataContractSerializer`Se proporciona principalmente para facilitar la migración de .NET Framework comunicación remota a WCF. Para obtener más información, vea la sección correspondiente en [serialización y deserialización](serialization-and-deserialization.md).
 
-Dado que el propio mensaje puede indicar que se puede cargar cualquier tipo, el mecanismo <xref:System.Runtime.Serialization.NetDataContractSerializer> es inherentemente inseguro y debería utilizarse solo con datos que sean de confianza. Para obtener más información, vea la [Guía de seguridad BinaryFormatter](/dotnet/standard/serialization/binaryformatter-security-guide).
+Dado que el propio mensaje puede indicar que se puede cargar cualquier tipo, el mecanismo <xref:System.Runtime.Serialization.NetDataContractSerializer> es inherentemente inseguro y debería utilizarse solo con datos que sean de confianza. Para obtener más información, vea la [Guía de seguridad BinaryFormatter](../../../standard/serialization/binaryformatter-security-guide.md).
 
 Incluso cuando se utiliza con datos que son de confianza, los datos entrantes pueden especificar de forma insuficiente el tipo que se debe cargar, sobre todo si la propiedad <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> está establecida en <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple>. Cualquiera con acceso al directorio de la aplicación o a la caché global de ensamblados puede sustituir un tipo malintencionado en lugar del que se supone que debe cargarse. Garantice siempre la seguridad del directorio de su aplicación y de la caché global de ensamblados estableciendo correctamente los permisos.
 

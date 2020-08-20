@@ -1,17 +1,21 @@
 ---
 title: Referencia del lenguaje
 description: Aquí encontrará información de características del lenguaje F# como tokens del lenguaje, conceptos, tipos, expresiones y temas de constructos compatibles con el compilador.
-ms.date: 05/16/2016
-ms.openlocfilehash: 43272c6684c8fc763e8f99611901f35695f48981
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.date: 08/13/2020
+ms.openlocfilehash: 02711489c214c1fcdb2da80f30bff63d67769c17
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87854963"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558158"
 ---
 # <a name="f-language-reference"></a>Referencia del lenguaje F#
 
 Esta sección es una referencia al lenguaje F#, un lenguaje de programación multiparadigmático con .NET como destino. El lenguaje F# admite los modelos de programación funcional, orientada a objetos e imperativa.
+
+## <a name="f-core-library-api-reference"></a>Referencia de la API de la biblioteca principal de F#
+
+La [referencia de la API de la biblioteca principal de F# (FSharp.Core)](https://fsharp.github.io/fsharp-core-docs/) alude a todos los espacios de nombres, módulos, tipos y funciones de la biblioteca principal de F#.
 
 ## <a name="f-tokens"></a>Tokens de F#
 
@@ -27,7 +31,7 @@ En la tabla siguiente se muestran artículos de referencia que proporcionan tabl
 
 En la tabla siguiente se muestran los temas de referencia disponibles que describen los conceptos del lenguaje.
 
-|Title|Descripción|
+|Título|Descripción|
 |-----|-----------|
 |[Funciones](./functions/index.md)|Las funciones son la unidad fundamental de la ejecución del programa en cualquier lenguaje de programación. Al igual que en otros lenguajes, una función de F# tiene un nombre, puede tener parámetros y tomar argumentos, y tiene un cuerpo. F# también admite construcciones de programación funcional como el tratamiento de las funciones como valores, el uso de funciones sin nombre en expresiones, la composición de funciones para crear nuevas funciones, funciones currificadas y la definición implícita de funciones mediante la aplicación parcial de argumentos de función.|
 |[Tipos en F#](fsharp-types.md)|Describe los tipos que se usan en F#, cómo se les asigna un nombre y se describen.|
@@ -57,7 +61,7 @@ En la tabla siguiente se muestran los temas de referencia disponibles que descri
 
 En la tabla siguiente se muestran los temas de referencia disponibles que describen los tipos admitidos por el lenguaje F#.
 
-|Title|Descripción|
+|Título|Descripción|
 |-----|-----------|
 |[Valores](./values/index.md)|Describe los valores, que son cantidades inmutables que tienen un tipo específico. Los valores pueden ser números enteros o de punto flotante, caracteres o texto, listas, secuencias, matrices, tuplas, uniones discriminadas, registros, tipos de clase o valores de función.|
 |[Tipos básicos](basic-types.md)|Describe los tipos básicos fundamentales que se usan en el lenguaje F#. También se proporcionan los tipos de .NET correspondientes y los valores máximos y mínimos para cada tipo.|
@@ -88,7 +92,7 @@ En la tabla siguiente se muestran los temas de referencia disponibles que descri
 
 En la tabla siguiente se muestran los temas que describen las expresiones de F#.
 
-|Title|Descripción|
+|Título|Descripción|
 |-----|-----------|
 |[Expresiones condicionales: `if...then...else`](conditional-expressions-if-then-else.md)|Describe la expresión `if...then...else`, que ejecuta diferentes ramas de código y también se evalúa como un valor distinto según la expresión booleana especificada.|
 |[Expresiones de coincidencia](match-expressions.md)|Describe la expresión `match`, que proporciona control de rama basado en la comparación de una expresión con un conjunto de patrones.|

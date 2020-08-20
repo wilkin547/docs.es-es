@@ -4,12 +4,12 @@ description: Información general sobre las herramientas adicionales que puede i
 author: mlacouture
 ms.date: 02/13/2020
 ms.custom: mvc
-ms.openlocfilehash: c0224a1cc6cbb9ae6fa88e5f869c47a1e84289e0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f7bfa660f7521adf4950d5bbdd59628bb88cca4d
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77451530"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557937"
 ---
 # <a name="net-core-additional-tools-overview"></a>Herramientas adicionales de .NET Core
 
@@ -24,6 +24,8 @@ La [herramienta de desinstalación de .NET Core](https://github.com/dotnet/cli-l
 [dotnet-counters](../diagnostics/dotnet-counters.md) es una herramienta diseñada para la investigación del rendimiento y la supervisión del estado de primer nivel.
 
 [dotnet-dump](../diagnostics/dotnet-dump.md) permite recopilar y analizar los volcados de Windows y Linux sin necesidad de un depurador nativo.
+
+[dotnet-gcdump](../diagnostics/dotnet-gcdump.md) permite recopilar volcados de memoria de GC (recolector de elementos no utilizados) de procesos de .NET dinámicos.
 
 [dotnet-trace](../diagnostics/dotnet-trace.md) recopila datos de generación de perfiles de la aplicación que pueden ayudar en escenarios en los que es necesario averiguar lo que causa que una aplicación se ejecute lentamente.
 

@@ -1,13 +1,13 @@
 ---
 title: Creación de un microservicio CRUD sencillo controlado por datos
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Obtenga más información sobre la creación de un microservicio CRUD sencillo (controlado por datos) en el contexto de una aplicación de microservicios.
-ms.date: 01/30/2020
-ms.openlocfilehash: b72d7defed81e57e2971c5e2b53df2d86b2dc947
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 08/14/2020
+ms.openlocfilehash: 4d475ba42cb0f86b57b2467549635556cab1136d
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77502349"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267963"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Creación de un microservicio CRUD sencillo controlado por datos
 
@@ -47,7 +47,7 @@ Para crear un proyecto de API web de ASP.NET Core, seleccione primero una aplica
 
 **Figura 6-7**. Dependencias en un microservicio API Web de CRUD sencillo
 
-El proyecto de API incluye referencias al paquete NuGet Microsoft.AspNetCore.App, que incluye referencias a todos los paquetes esenciales. También podría incluir otros paquetes.
+El proyecto de API incluye referencias al paquete NuGet Microsoft.AspNetCore.App, que a su vez incluye referencias a todos los paquetes esenciales. También podría incluir otros paquetes.
 
 ### <a name="implementing-crud-web-api-services-with-entity-framework-core"></a>Implementación de servicios API Web de CRUD con Entity Framework Core
 
@@ -57,7 +57,7 @@ El microservicio de catálogo usa EF y el proveedor de SQL Server porque su base
 
 #### <a name="the-data-model"></a>El modelo de datos
 
-Con EF Core, el acceso a datos se realiza utilizando un modelo. Un modelo se compone de clases de entidad (modelo de dominio) y un contexto derivado (DbContext) que representa una sesión con la base de datos, lo que permite consultar y guardar los datos. Puede generar un modelo a partir de una base de datos existente, codificar manualmente un modelo para que coincida con la base de datos, o bien usar migraciones de EF para crear una base de datos a partir del modelo, mediante el enfoque Code First (que facilita que la base de datos evolucione a medida que el modelo cambia en el tiempo). Para el microservicio de catálogo, usamos el último enfoque. Puede ver un ejemplo de la clase de entidad CatalogItem en el ejemplo de código siguiente, que es una clase de entidad de objeto CLR estándar ([POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)).
+Con EF Core, el acceso a datos se realiza utilizando un modelo. Un modelo se compone de clases de entidad (modelo de dominio) y un contexto derivado (DbContext) que representa una sesión con la base de datos, lo que permite consultar y guardar los datos. Puede generar un modelo a partir de una base de datos existente, codificar manualmente un modelo para que coincida con la base de datos, o bien usar técnicas de migración de EF para crear una base de datos a partir del modelo, mediante el enfoque Code First, que facilita que la base de datos evolucione a medida que el modelo cambia en el tiempo. Para el microservicio de catálogo, se ha utilizado el último enfoque. Puede ver un ejemplo de la clase de entidad CatalogItem en el ejemplo de código siguiente, que es una clase de entidad de objeto CLR estándar ([POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)).
 
 ```csharp
 public class CatalogItem
@@ -185,15 +185,14 @@ _context.SaveChanges();
 
 En ASP.NET Core, puede usar la inserción de dependencias desde el principio. No es necesario que configure un contenedor de inversión de control (IoC) de terceros, aunque, si lo desea, puede conectar su contenedor de IoC preferido a la infraestructura de ASP.NET Core. En este caso, puede insertar directamente el DBContext de EF requerido o los repositorios adicionales a través del constructor del controlador.
 
-En el ejemplo anterior de la clase `CatalogController`, vamos a insertar un objeto del tipo `CatalogContext` junto con otros objetos a través del constructor `CatalogController()`.
+En la clase `CatalogController` mencionada anteriormente, el tipo `CatalogContext`, que se hereda de `DbContext`, se inserta junto con los demás objetos necesarios en el constructor `CatalogController()`.
 
-Una opción importante que hay que configurar en el proyecto de Web API es el registro de la clase DbContext en el contenedor de IoC del servicio. Normalmente se hace en la clase `Startup`, mediante una llamada al método `services.AddDbContext<DbContext>()` dentro del método `ConfigureServices()`, como se muestra en el siguiente ejemplo **simplificado**:
+Una opción importante que hay que configurar en el proyecto de Web API es el registro de la clase DbContext en el contenedor de IoC del servicio. Normalmente se hace en la clase `Startup`, mediante una llamada al método `services.AddDbContext<CatalogContext>()` dentro del método `ConfigureServices()`, como se muestra en el siguiente ejemplo **simplificado**:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
 {
     // Additional code...
-
     services.AddDbContext<CatalogContext>(options =>
     {
         options.UseSqlServer(Configuration["ConnectionString"],
@@ -317,7 +316,7 @@ Este mecanismo de control de versiones es sencillo y depende del servidor que en
 
 ## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>Generación de metadatos de descripción de Swagger desde la API web de ASP.NET Core
 
-[Swagger](https://swagger.io/) es un marco de código abierto de uso común, respaldado por una gran variedad de herramientas que le permite diseñar, compilar, documentar y utilizar las API RESTful. Se está convirtiendo en el estándar para el dominio de metadatos de la descripción de API. Debe incluir los metadatos de descripción de Swagger con cualquier tipo de microservicio, tanto si está controlado por datos como si está controlado por dominios de forma más avanzada (como se explica en la sección siguiente).
+[Swagger](https://swagger.io/) es un marco de código abierto de uso común, respaldado por una gran variedad de herramientas que le permite diseñar, compilar, documentar y utilizar las API RESTful. Se está convirtiendo en el estándar para el dominio de metadatos de la descripción de API. Debe incluir los metadatos de descripción de Swagger con cualquier tipo de microservicio, tanto si está controlado por datos como si está controlado por dominios de forma más avanzada, tal como se explica en la sección siguiente.
 
 El núcleo de Swagger es su especificación, que son los metadatos de descripción de la API en un archivo JSON o YAML. La especificación crea el contrato RESTful para la API, donde se detallan todos sus recursos y operaciones en formatos legibles por máquinas y por humanos, para que se puedan desarrollar, descubrir e integrar de forma sencilla.
 

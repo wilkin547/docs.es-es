@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c5204e8c80cb737338b053c39083c0cc43786447
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 7cb146d19486618a4cee9976abe2220ea4b72790
+ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517338"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88204092"
 ---
 ### <a name="binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps"></a>Los métodos de serialización BinaryFormatter están obsoletos y se prohíben en las aplicaciones ASP.NET
 
@@ -12,7 +12,7 @@ Los métodos `Serialize` y `Deserialize` en <xref:System.Runtime.Serialization.F
 
 #### <a name="change-description"></a>Descripción del cambio
 
-Debido a las [vulnerabilidades de seguridad](../../../../docs/standard/serialization/binaryformatter-security-guide.md#binaryformatter-security-vulnerabilities) de <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>, los siguientes métodos ahora están obsoletos. Además, en las aplicaciones ASP.NET 5.0 y versiones posteriores, iniciarán una excepción <xref:System.NotSupportedException>, a menos que la aplicación web haya vuelto a habilitar la funcionalidad <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>.
+Debido a las [vulnerabilidades de seguridad](../../../../docs/standard/serialization/binaryformatter-security-guide.md#binaryformatter-security-vulnerabilities) de <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>, los siguientes métodos ahora están obsoletos. Además, en las aplicaciones ASP.NET Core 5.0 y versiones posteriores, iniciarán una excepción <xref:System.NotSupportedException>, a menos que la aplicación web haya vuelto a habilitar la funcionalidad <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>.
 
 - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize%2A?displayProperty=nameWithType>
 - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A?displayProperty=nameWithType>
