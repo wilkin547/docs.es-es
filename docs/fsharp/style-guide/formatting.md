@@ -2,12 +2,12 @@
 title: Instrucciones de formato de código de F#
 description: 'Obtenga información sobre las directrices para dar formato a código de F #.'
 ms.date: 11/04/2019
-ms.openlocfilehash: fe8da6070e1c92bb5205e9cb408b8ac75372b061
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: dc871b0a8461ed93550ab02cc2c66b143285a3e3
+ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558314"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88720155"
 ---
 # <a name="f-code-formatting-guidelines"></a>Instrucciones de formato de código de F#
 
@@ -936,3 +936,47 @@ let MyUrl = "www.mywebsitethatiamworkingwith.com"
 ```
 
 Evite colocar el atributo en la misma línea que el valor.
+
+## <a name="formatting-computation-expression-operations"></a>Operaciones de expresiones de cálculo de formato
+
+Al crear operaciones personalizadas para [expresiones de cálculo](../language-reference/computation-expressions.md) , se recomienda usar la nomenclatura CamelCase:
+
+```fsharp
+type MathBuilder () =
+    member _.Yield _ = 0
+
+    [<CustomOperation("addOne")>]
+    member _.AddOne (state: int) =
+        state + 1
+
+    [<CustomOperation("subtractOne")>]
+    member _.SubtractOne (state: int) =
+        state - 1
+
+    [<CustomOperation("divideBy")>]
+    member _.DivideBy (state: int, divisor: int) =
+        state / divisor
+
+    [<CustomOperation("multiplyBy")>]
+    member _.MultiplyBy (state: int, factor: int) =
+        state * factor
+
+let math = MathBuilder()
+
+// 10
+let myNumber =
+    math {
+        addOne
+        addOne
+        addOne
+
+        subtractOne
+
+        divideBy 2
+
+        multiplyBy 10
+    }
+```
+
+En última instancia, la Convención de nomenclatura utilizada debe estar controlada por el dominio que se está modelando.
+Si es idiomático usar una Convención diferente, se debe usar esa Convención en su lugar.

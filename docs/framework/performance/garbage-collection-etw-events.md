@@ -7,12 +7,12 @@ helpviewer_keywords:
 - garbage collection events [.NET Framework]
 - ETW, garbage collection events (CLR)
 ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
-ms.openlocfilehash: 58ad874ef6a12c18c404640aa66577c391573534
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 2e1e0fda5c1a80627c8dde7f49954a867b9a2b66
+ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309747"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88720142"
 ---
 # <a name="garbage-collection-etw-events"></a>Eventos ETW de recolección de elementos no utilizados
 
@@ -23,6 +23,7 @@ Esta categoría consta de los siguientes eventos:
 - [Evento GCStart_V1](#gcstart_v1-event)
 - [Evento GCEnd_V1](#gcend_v1-event)
 - [Evento GCHeapStats_V1](#gcheapstats_v1-event)
+- [Evento GCHeapStats_V2](#gcheapstats_v2-event)
 - [Evento GCCreateSegment_V1](#gccreatesegment_v1-event)
 - [Evento GCFreeSegment_V1](#gcfreesegment_v1-event)
 - [Evento GCRestartEEBegin_V1](#gcrestarteebegin_v1-event)
@@ -30,6 +31,7 @@ Esta categoría consta de los siguientes eventos:
 - [Evento GCSuspendEE_V1](#gcsuspendee_v1-event)
 - [Evento GCSuspendEE_V1](#gcsuspendeeend_v1-event)
 - [Evento GCAllocationTick_V2](#gcallocationtick_v2-event)
+- [Evento GCAllocationTick_V3](#gcallocationtick_v3-event)
 - [Evento GCFinalizersBegin_V1](#gcfinalizersbegin_v1-event)
 - [Evento GCFinalizersEnd_V1](#gcfinalizersend_v1-event)
 - [Evento GCCreateConcurrentThread_V1](#gccreateconcurrentthread_v1-event)
@@ -113,6 +115,41 @@ En la siguiente tabla, se muestran los datos del evento:
 |SinkBlockCount|win:UInt32|Número de bloques de sincronización en uso.|
 |GCHandleCount|win:UInt32|Número de controles de recolección de elementos no utilizados en uso.|
 |ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|
+  
+## <a name="gcheapstats_v2-event"></a>Evento GCHeapStats_V2
+
+En la tabla siguiente se muestra la palabra clave y el nivel.
+
+|Palabra clave para generar el evento|Nivel|
+|-----------------------------------|-----------|
+|`GCKeyword` (0x1)|Informativo (4)|
+
+En la siguiente tabla se muestra la información del evento.
+
+|Evento|Id. de evento|Descripción|
+|-----------|--------------|-----------------|
+|`GCHeapStats_V2`|4|Muestra las estadísticas del montón al final de cada recolección de elementos no utilizados.|
+
+En la siguiente tabla, se muestran los datos del evento:
+
+|Nombre del campo|Tipo de datos|Descripción|
+|----------------|---------------|-----------------|
+|GenerationSize0|win:UInt64|Tamaño, en bytes, de la memoria de la generación 0.|
+|TotalPromotedSize0|win:UInt64|Número de bytes que se promueven de generación 0 a generación 1.|
+|GenerationSize1|win:UInt64|Tamaño, en bytes, de la memoria de la generación 1.|
+|TotalPromotedSize1|win:UInt64|Número de bytes que se promueven de generación 1 a generación 2.|
+|GenerationSize2|win:UInt64|Tamaño, en bytes, de la memoria de la generación 2.|
+|TotalPromotedSize2|win:UInt64|Número de bytes que sobrevivieron en la generación 2 después de la última recolección.|
+|GenerationSize3|win:UInt64|Tamaño, en bytes, del montón de objetos grandes.|
+|TotalPromotedSize3|win:UInt64|Número de bytes que sobrevivieron en el montón de objetos grandes después de la última recolección.|
+|FinalizationPromotedSize|win:UInt64|Tamaño total, en bytes, de los objetos que están listos para la finalización.|
+|FinalizationPromotedCount|win:UInt64|Número de objetos que están listos para la finalización.|
+|PinnedObjectCount|win:UInt32|Número de objetos anclados (inamovibles).|
+|SinkBlockCount|win:UInt32|Número de bloques de sincronización en uso.|
+|GCHandleCount|win:UInt32|Número de controles de recolección de elementos no utilizados en uso.|
+|ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|
+|GenerationSize4|win:UInt64|Tamaño, en bytes, del montón de objetos anclados.|
+|TotalPromotedSize4|win:UInt64|Número de bytes que sobrevivieron en el montón de objetos anclados después de la última recolección.|
   
 ## <a name="gccreatesegment_v1-event"></a>Evento GCCreateSegment_V1
 
@@ -256,6 +293,33 @@ En la siguiente tabla, se muestran los datos del evento:
 |TypeName|win:UnicodeString|Nombre del tipo que se asignó. Cuando durante este evento se asignaron varios tipos de objetos, este es el tipo del último objeto asignado (es decir, el objeto que hizo que se supere el umbral de 100 KB).|
 |HeapIndex|win:UInt32|Montón al que se ha asignado el objeto. Este valor es 0 (cero) cuando se ejecuta con la recolección de elementos no utilizados de estación de trabajo.|
 
+## <a name="gcallocationtick_v3-event"></a>Evento GCAllocationTick_V3
+
+En la tabla siguiente se muestra la palabra clave y el nivel.
+
+|Palabra clave para generar el evento|Nivel|
+|-----------------------------------|-----------|
+|`GCKeyword` (0x1)|Informativo (4)|
+
+En la siguiente tabla se muestra la información del evento.
+
+|Evento|Id. de evento|Se genera cuando|
+|-----------|--------------|-----------------|
+|`GCAllocationTick_V3`|10|Cada vez se asignan aproximadamente 100 KB.|
+
+En la siguiente tabla, se muestran los datos del evento:
+
+|Nombre del campo|Tipo de datos|Descripción|
+|----------------|---------------|-----------------|
+|AllocationAmount|win:UInt32|Tamaño de la asignación, en bytes. Este valor es preciso para las asignaciones que son menores que la longitud de ULONG (4.294.967.295 bytes). Si la asignación es mayor, este campo contiene un valor truncado. Use `AllocationAmount64` para asignaciones muy grandes.|
+|AllocationKind|win:UInt32|0x0: asignación de objetos pequeños (la asignación está en un montón de objetos pequeños).<br /><br /> 0x1: asignación de objetos grandes (la asignación está en un montón de objetos grandes).|
+|ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|
+|AllocationAmount64|win:UInt64|Tamaño de la asignación, en bytes. Este valor es preciso para asignaciones muy grandes.|
+|TypeId|win:Pointer|Dirección de la MethodTable. Cuando durante este evento se asignaron varios tipos de objetos, esta es la dirección de la MethodTable que corresponde al último objeto asignado (es decir, el objeto que hizo que se supere el umbral de 100 KB).|
+|TypeName|win:UnicodeString|Nombre del tipo que se asignó. Cuando durante este evento se asignaron varios tipos de objetos, este es el tipo del último objeto asignado (es decir, el objeto que hizo que se supere el umbral de 100 KB).|
+|HeapIndex|win:UInt32|Montón al que se ha asignado el objeto. Este valor es 0 (cero) cuando se ejecuta con la recolección de elementos no utilizados de estación de trabajo.|
+|Dirección|win:Pointer|Dirección del último objeto asignado.|
+
 ## <a name="gcfinalizersbegin_v1-event"></a>Evento GCFinalizersBegin_V1
 
 En la tabla siguiente se muestra la palabra clave y el nivel.
@@ -327,6 +391,6 @@ En la siguiente tabla se muestra la información del evento.
 
 Sin datos del evento.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [CLR ETW Events (Eventos ETW de CLR)](clr-etw-events.md)
