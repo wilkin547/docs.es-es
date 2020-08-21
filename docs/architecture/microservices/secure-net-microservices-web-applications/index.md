@@ -3,16 +3,16 @@ title: Proteger microservicios y aplicaciones web de .NET
 description: 'Seguridad en microservicios y aplicaciones web .NET: familiarícese con las opciones de autenticación en las aplicaciones web ASP.NET Core.'
 author: mjrousos
 ms.date: 08/07/2020
-ms.openlocfilehash: 9ce62039374f2256cd9adbddbb850aa4135af9f4
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: 1dcdb5d2987360ac583fa700a387d977f498d1d9
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88024620"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608100"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Protección de microservicios y aplicaciones web .NET
 
-Hay tantos aspectos sobre la seguridad en los microservicios y las aplicaciones web que fácilmente se podrían dedicar al tema varios libros como este por lo que, en esta sección, se centrará en la autenticación, la autorización y los secretos de aplicación.
+Hay tantos aspectos sobre la seguridad de los microservicios y las aplicaciones web que se podrían escribir varios libros como este al respecto. Por tanto, en esta sección nos centraremos en la autenticación, la autorización y los secretos de aplicación.
 
 ## <a name="implement-authentication-in-net-microservices-and-web-applications"></a>Implementación de la autenticación en microservicios y aplicaciones web .NET
 

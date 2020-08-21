@@ -4,12 +4,12 @@ description: Siga los tutoriales para aprender a compilar aplicaciones y bibliot
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: c26d3e2e55723fed98f2013fe7131d2b06f910d2
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: 4bba8d48b3da7acb643ffa6a08468f40f1b1b415
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86415944"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656734"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Explore estos tutoriales para obtener información sobre las herramientas de .NET Core y el SDK de .NET Core
 
@@ -41,7 +41,7 @@ Elija estos tutoriales si quiere usar Visual Studio Code u otro editor de códi
 
 ## <a name="use-visual-studio-for-mac"></a>Uso de Visual Studio para Mac
 
-- [Creación de una aplicación de consola](using-on-mac-vs.md)
+- [Creación de una aplicación de consola](with-visual-studio-mac.md)
 - [Creación y prueba unitaria de una biblioteca](library-with-visual-studio-mac.md)
 - [Instalación y uso de un paquete](/nuget/quickstart/install-and-use-a-package-in-visual-studio-mac)
 
