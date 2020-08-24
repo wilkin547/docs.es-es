@@ -4,12 +4,12 @@ description: Obtenga información sobre los indexadores de C# y cómo implementa
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: e9b1cb18157982f068f1c1e4546e637f2bd707cb
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 1369740404c500d8b44b4706959bf4640c26aa2d
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83394696"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656116"
 ---
 # <a name="indexers"></a>Indizadores
 
@@ -46,7 +46,7 @@ La presencia de argumentos para hacer referencia a un elemento en un conjunto de
 Tendría que definir *indizadores* en el tipo si su API modela alguna colección en la que se definen los argumentos de esa colección. Los indizadores pueden (o no) asignarse directamente a los tipos de colección que forman parte del marco de trabajo principal de .NET. El tipo puede tener otras responsabilidades, además de tener que modelar una colección.
 Los indizadores le permiten proporcionar la API que coincida con la abstracción de su tipo sin tener que exponer la información interna de cómo se almacenan o se calculan los valores de dicha abstracción.
 
-Veamos algunos de los escenarios habituales en los que se usan los *indizadores*. Puede obtener acceso a la [carpeta de ejemplo para indexadores](https://github.com/dotnet/samples/tree/master/csharp/indexers). Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Veamos algunos de los escenarios habituales en los que se usan los *indizadores*. Puede obtener acceso a la [carpeta de ejemplo para indexadores](https://github.com/dotnet/samples/tree/master/csharp/indexers). Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../samples-and-tutorials/index.md#view-and-download-samples).
 
 ### <a name="arrays-and-vectors"></a>Matrices y vectores
 

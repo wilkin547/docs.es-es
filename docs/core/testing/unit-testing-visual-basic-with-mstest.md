@@ -4,16 +4,16 @@ description: 'Aprenda los conceptos de pruebas unitarias en .NET Core: cree una 
 author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
-ms.openlocfilehash: df167e0559c841510df17ba39801e43315036241
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9654d05754b83033bcaef6d8b8f24e3ba1d8bb2f
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240940"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656454"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>Bibliotecas de .NET Core de prueba unitaria de Visual Basic con pruebas de dotnet y MSTest
 
-Este tutorial le guía por una experiencia interactiva de creación de una solución de ejemplo paso a paso para aprender los conceptos de pruebas unitarias. Si prefiere seguir el tutorial con una solución precompilada, [vea o descargue el código de ejemplo](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-vb-mstest/) antes de comenzar. Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Este tutorial le guía por una experiencia interactiva de creación de una solución de ejemplo paso a paso para aprender los conceptos de pruebas unitarias. Si prefiere seguir el tutorial con una solución precompilada, [vea o descargue el código de ejemplo](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-vb-mstest/) antes de comenzar. Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../../samples-and-tutorials/index.md#view-and-download-samples).
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 

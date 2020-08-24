@@ -3,17 +3,17 @@ title: Ejemplos y tutoriales de .NET
 description: Información sobre ejemplos y tutoriales de .NET Core, ASP.NET Core y el lenguaje C# que lo ayuda a conocer más sobre .NET.
 author: BillWagner
 ms.author: wiwagn
-ms.date: 04/11/2017
-ms.openlocfilehash: 367b2cbea24ac0da634051bf815c319f3679f79b
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.date: 08/19/2020
+ms.openlocfilehash: 587365aae1c2069c3e94ad0452da9c31dc6e89f0
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86417324"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656962"
 ---
 # <a name="net-samples-and-tutorials"></a>Ejemplos y tutoriales de .NET
 
-La documentación de .NET contiene una serie de ejemplos y tutoriales con información sobre .NET. En este tema se describe cómo buscar, ver y descargar los tutoriales y ejemplos de .NET Core, ASP.NET Core y C#. Puede encontrar recursos para obtener información sobre el lenguaje de programación F# en el [sitio de la Fundación F#](https://fsharp.org/learn.html). Si le interesa explorar C# usando un editor de código en línea, comience con [este tutorial interactivo](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1) y continúe con el [tutorial interactivo de C#](../csharp/tutorials/intro-to-csharp/index.md). Para obtener instrucciones sobre cómo ver y descargar código de ejemplo, vea la sección [Consulta y descarga de ejemplos](#viewing-and-downloading-samples).
+La documentación de .NET contiene una serie de ejemplos y tutoriales con información sobre .NET. En este tema se describe cómo buscar, ver y descargar los tutoriales y ejemplos de .NET Core, ASP.NET Core y C#. Puede encontrar recursos para obtener información sobre el lenguaje de programación F# en el [sitio de la Fundación F#](https://fsharp.org/learn/). Si le interesa explorar C# usando un editor de código en línea, comience con [este tutorial interactivo](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1) y continúe con el [tutorial interactivo de C#](../csharp/tutorials/intro-to-csharp/index.md). Para obtener instrucciones sobre cómo ver y descargar código de ejemplo, vea la sección [Consulta y descarga de ejemplos](#view-and-download-samples).
 
 ## <a name="net-core"></a>.NET Core
 
@@ -25,9 +25,9 @@ En esta guía se explica cómo crear una aplicación web de ASP.NET Core y las p
 
 ### <a name="tutorials"></a>Tutoriales
 
-**[Escritura de aplicaciones de consola .NET Core con la CLI de .NET Core: una guía paso a paso](../core/tutorials/cli-create-console-app.md)**
+**[Tutorial: Depuración de una aplicación de consola de .NET Core con Visual Studio Code](../core/tutorials/with-visual-studio-code.md)**
 
-En esta guía se ofrece información sobre cómo usar las herramientas de la CLI de .NET Core para crear aplicaciones de consola multiplataforma. Se empieza con una aplicación de consola básica y finalmente abarca varios proyectos, incluidas las pruebas. Puede agregar características paso a paso, lo que le permitirá ampliar sus conocimientos a medida que avanza. El [ejemplo completo](https://github.com/dotnet/samples/tree/master/core/console-apps) está disponible en el repositorio dotnet/samples de GitHub.
+En este tutorial se explica cómo crear y ejecutar una aplicación de consola de .NET Core mediante Visual Studio Code y la CLI de .NET Core. Las tareas de proyecto, como crear, compilar y ejecutar un proyecto, se realizan mediante la CLI de .NET Core.
 
 **[Escribir bibliotecas con herramientas multiplataforma](../core/tutorials/libraries.md)**
 
@@ -83,7 +83,7 @@ En este tutorial se muestran las comunicaciones web, la serialización de JSON y
 
 Este tutorial muestra muchas de las características de LINQ y los elementos del lenguaje compatibles. El [ejemplo completo](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-linq) está disponible en el repositorio dotnet/samples de GitHub.
 
-**[Introducción a .NET Core en macOS con Visual Studio para Mac ](../core/tutorials/using-on-mac-vs.md)**
+**[Tutorial: Creación de una aplicación de consola de .NET Core con Visual Studio para Mac](../core/tutorials/with-visual-studio-mac.md)**
 
 En este tutorial se muestra cómo crear una sencilla aplicación de consola de .NET Core con Visual Studio para Mac.
 
@@ -101,13 +101,13 @@ En este tutorial se le muestra cómo crear una aplicación sencilla en .NET Core
 
 En este tutorial se muestra cómo implementar una aplicación MVC de ASP.NET existente en un contenedor de Docker de Windows. El [ejemplo completo](https://github.com/dotnet/samples/tree/master/framework/docker/MVCRandomAnswerGenerator) está disponible en el repositorio dotnet/samples de GitHub.
 
-## <a name="viewing-and-downloading-samples"></a>Consulta y descarga de ejemplos
+## <a name="view-and-download-samples"></a>Visualización y descarga de ejemplos
 
 Muchos temas muestran el código fuente y los ejemplos que están disponibles para consultarlos o descargarlos desde GitHub. Para consultar un ejemplo, siga el vínculo de ejemplo. Para descargar el código, siga estas instrucciones:
 
 1. Descargue el repositorio que contiene el código de ejemplo mediante la ejecución de uno de los procedimientos siguientes:
    * Descargue un archivo ZIP del repositorio en el sistema local. Descomprima el archivo comprimido.
-   * [Bifurque](https://help.github.com/articles/fork-a-repo/) el repositorio y [clone](https://help.github.com/articles/cloning-a-repository/) la bifurcación en el sistema local. La bifurcación y clonación permiten realizar contribuciones a la documentación mediante la confirmación de los cambios realizados en la bifurcación, para después crear una solicitud de incorporación de cambios en el repositorio oficial de documentos. Para más información, consulte la [Guía de contribución a la documentación de .NET](https://docs.microsoft.com/contribute/dotnet/dotnet-contribute) y la [Guía de contribución a documentos de ASP.NET Core](https://github.com/aspnet/AspNetCore.Docs/blob/master/CONTRIBUTING.md).
+   * [Bifurque](https://help.github.com/articles/fork-a-repo/) el repositorio y [clone](https://help.github.com/articles/cloning-a-repository/) la bifurcación en el sistema local. La bifurcación y clonación permiten realizar contribuciones a la documentación mediante la confirmación de los cambios realizados en la bifurcación, para después crear una solicitud de incorporación de cambios en el repositorio oficial de documentos. Para más información, consulte la [Guía de contribución a la documentación de .NET](https://docs.microsoft.com/contribute/dotnet/dotnet-contribute) y la [Guía de contribución a documentos de ASP.NET Core](https://github.com/dotnet/AspNetCore.Docs/blob/master/CONTRIBUTING.md).
    * Clone el repositorio en modo local. Si se clona un repositorio de documentos directamente en el sistema local, no se podrán realizar confirmaciones directamente en el repositorio oficial, por lo que no será posible realizar contribuciones a la documentación más adelante. Use el procedimiento de bifurcación y clonación descrito anteriormente si desea seguir teniendo la oportunidad de contribuir a la documentación más adelante.
 1. Navegue por las carpetas del repositorio hasta la ubicación del ejemplo. La ruta de acceso relativa a la ubicación del ejemplo aparece en la barra de direcciones del explorador si sigue el vínculo al ejemplo.
 1. Para ejecutar un ejemplo, cuenta con varias opciones:

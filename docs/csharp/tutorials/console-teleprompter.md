@@ -4,12 +4,12 @@ description: Este tutorial le enseña varias características de .NET Core y el 
 ms.date: 03/06/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 06affa01b67edeea09088834cf131adb55650bbb
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: dbe64fe0a01ddab9e7a3ad0a9118b3fe59fba8aa
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794668"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656988"
 ---
 # <a name="console-app"></a>Aplicación de consola
 
@@ -55,7 +55,7 @@ namespace TeleprompterConsole
 
 ## <a name="reading-and-echoing-the-file"></a>Lectura y reflejo del archivo
 
-La primera característica que se va a agregar es la capacidad de leer un archivo de texto y visualizar todo ese texto en la consola. En primer lugar, vamos a agregar un archivo de texto. Copie el archivo [sampleQuotes.txt](https://github.com/dotnet/samples/raw/master/csharp/getting-started/console-teleprompter/sampleQuotes.txt) del repositorio de GitHub de este [ejemplo](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter) en su directorio del proyecto. Servirá como script para la aplicación. Si quiere obtener información sobre cómo descargar la aplicación de ejemplo de este tema, vea las instrucciones del tema [Ejemplos y tutoriales](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+La primera característica que se va a agregar es la capacidad de leer un archivo de texto y visualizar todo ese texto en la consola. En primer lugar, vamos a agregar un archivo de texto. Copie el archivo [sampleQuotes.txt](https://github.com/dotnet/samples/raw/master/csharp/getting-started/console-teleprompter/sampleQuotes.txt) del repositorio de GitHub de este [ejemplo](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter) en su directorio del proyecto. Servirá como script para la aplicación. Si quiere obtener información sobre cómo descargar la aplicación de ejemplo de este tema, vea las instrucciones del tema [Ejemplos y tutoriales](../../samples-and-tutorials/index.md#view-and-download-samples).
 
 Luego, agregue el siguiente método a la clase `Program` (justo debajo del método `Main`):
 

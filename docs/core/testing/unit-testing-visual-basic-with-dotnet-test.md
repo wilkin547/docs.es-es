@@ -4,16 +4,16 @@ description: 'Aprenda los conceptos de pruebas unitarias en .NET Core: cree paso
 author: billwagner
 ms.author: wiwagn
 ms.date: 05/18/2020
-ms.openlocfilehash: d87550d692e0b7f3bfee1633bd00cbf501cc2e67
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d384bf08f0b6031a519a8430c876eafc05d03a2e
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502761"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656428"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-xunit"></a>Bibliotecas de .NET Core de prueba unitaria de Visual Basic con pruebas de dotnet y xUnit
 
-En este tutorial se muestra cómo compilar una solución que contiene un proyecto de prueba unitaria y un proyecto de biblioteca. Para seguir el tutorial con una solución precompilada, [vea o descargue el código de ejemplo](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-using-dotnet-test/). Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+En este tutorial se muestra cómo compilar una solución que contiene un proyecto de prueba unitaria y un proyecto de biblioteca. Para seguir el tutorial con una solución precompilada, [vea o descargue el código de ejemplo](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-using-dotnet-test/). Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../../samples-and-tutorials/index.md#view-and-download-samples).
 
 ## <a name="create-the-solution"></a>Creación de la solución
 

@@ -1,17 +1,16 @@
 ---
 title: Versiones de .NET Framework y sistema operativo Windows
 description: Obtenga información sobre las características clave de cada versión de .NET Framework, incluidas las versiones del CLR subyacentes y las versiones instaladas por el sistema operativo Windows.
-ms.custom: updateeachrelease
 ms.date: 01/17/2020
 helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
-ms.openlocfilehash: df44786dfd0a384ae2498a94d14b029612450fee
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: fe652e4cc3a996586d01cdfc4c5749decb51e9db
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475481"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557352"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>Versiones y dependencias de .NET Framework
 
@@ -31,8 +30,9 @@ CLR se identifica mediante su propio número de versión. El número de versión
 
 En las tablas siguientes se resume el historial de versiones de .NET Framework y se relaciona cada versión con Visual Studio, Windows y Windows Server. Visual Studio admite múltiples versiones (multi-targeting), por lo que no está limitado a la versión de .NET Framework que se muestra.
 
-- El icono de marca de verificación ✔️ denota las versiones del sistema operativo en las que está instalado .NET Framework, pero debe estar habilitado [en el panel de control](../install/dotnet-35-windows-10.md) (para Windows) o a través del Administrador del servidor (para Windows Server).
+- El icono de marca de verificación ✔️ denota las versiones del sistema operativo en las que .NET Framework está instalado de forma predeterminada.
 - El icono de signo más ➕ denota las versiones del sistema operativo en las que no está instalado .NET Framework, pero en las que se puede instalar.
+- El asterisco **\*** denota las versiones del sistema operativo en las que .NET Framework (preinstalado o no) debe estar habilitado [en el Panel de control](../install/dotnet-35-windows-10.md) o, en el caso de Windows Server, mediante el Administrador del servidor.
 
 | | |
 | - | - |

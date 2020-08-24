@@ -24,12 +24,12 @@ helpviewer_keywords:
 - compiling satellite assemblies
 - re-signing assemblies
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
-ms.openlocfilehash: be6603f3a593d9756d55204024214660b2220af3
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 3e515028919518cb93cdbec3417eef061a512832
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166208"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558418"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Crear ensamblados satélite para aplicaciones de escritorio
 
@@ -95,8 +95,13 @@ A continuación se incluye un ejemplo sencillo de "Hola a todos" que muestra un 
 
 2. Para indicar que el inglés (en) es la referencia cultural predeterminada de la aplicación, agregue el siguiente atributo <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> al archivo AssemblyInfo de la aplicación o al archivo de código fuente principal que se compilará en el ensamblado principal de la aplicación.
 
-    [!code-csharp[Conceptual.Resources.Locating#2](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)]
-    [!code-vb[Conceptual.Resources.Locating#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]  
+    ```csharp
+    [assembly: NeutralResourcesLanguageAttribute("en")]
+    ```
+
+    ```vb
+    <Assembly: NeutralResourcesLanguageAttribute("en")>
+    ```
   
 3. Agregue compatibilidad para referencias culturales adicionales (en-US, fr-FR y ru-RU) a la aplicación de la manera siguiente:  
   

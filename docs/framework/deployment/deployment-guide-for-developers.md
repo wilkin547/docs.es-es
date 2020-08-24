@@ -1,17 +1,17 @@
 ---
 title: Guía de implementación de .NET Framework para desarrolladores
 description: Lea la guía de implementación para desarrolladores de .NET. Use esta información si quiere instalar cualquier versión de .NET de la versión 4.5 a 4.8 con sus aplicaciones.
-ms.custom: updateeachrelease
 ms.date: 01/17/2020
 helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 95c2cacc062bbe05ce0bc5c3e832bfe3006cf412
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 47946121334fe45132a7469894f30081045e3a68
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622671"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558834"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Guía de implementación de .NET Framework para desarrolladores
 En este tema se proporciona información a los desarrolladores que quieren instalar cualquier versión de .NET Framework a partir de .NET Framework 4.5 en [!INCLUDE[net_current](../../../includes/net-current-version.md)] con sus aplicaciones.

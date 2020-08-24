@@ -4,12 +4,12 @@ description: En este tutorial se enseña cómo generar secuencias con LINQ, escr
 ms.date: 10/29/2018
 ms.technology: csharp-linq
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: ece001e82c0aa44a91999bea78d2fd695ff9362b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9bc17700e22ea29b1861945a220e397a90b9a7c1
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240020"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88657001"
 ---
 # <a name="work-with-language-integrated-query-linq"></a>Uso de Language-Integrated Query (LINQ)
 
@@ -27,7 +27,7 @@ Los magos usan esta técnica porque cada carta está en una ubicación conocida 
 
 Para el propósito sobre el que trata este artículo, resulta divertido ocuparnos de la manipulación de secuencias de datos. La aplicación que se va a crear compilará una baraja de cartas y después realizará una secuencia de órdenes aleatorios, que escribirá cada vez la secuencia completa. También podrá comparar el orden actualizado con el original.
 
-Este tutorial consta de varios pasos. Después de cada paso, puede ejecutar la aplicación y ver el progreso. También puede ver el [ejemplo completo](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq) en el repositorio dotnet/samples de GitHub. Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Este tutorial consta de varios pasos. Después de cada paso, puede ejecutar la aplicación y ver el progreso. También puede ver el [ejemplo completo](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq) en el repositorio dotnet/samples de GitHub. Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../../samples-and-tutorials/index.md#view-and-download-samples).
 
 ## <a name="prerequisites"></a>Requisitos previos
 

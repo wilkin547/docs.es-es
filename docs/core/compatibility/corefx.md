@@ -2,12 +2,12 @@
 title: Cambios importantes de la biblioteca de clases base
 description: Muestra los cambios importantes en las bibliotecas básicas de .NET.
 ms.date: 07/27/2020
-ms.openlocfilehash: 0667d975ce5bba5692fe5d179341235bd3c61790
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: c8eb5ec7d2bb1879a38a18337463230c7b731d29
+ms.sourcegitcommit: d3c09791297f0edc468a4849a5f11ef62e0e90fd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88024710"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88137499"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>Cambios importantes en las bibliotecas principales de .NET
 
@@ -17,6 +17,7 @@ En esta página se documentan los siguientes cambios importantes:
 
 | Cambio importante | Versión introducida |
 | - | :-: |
+| [Aumento de la complejidad de LINQ OrderBy.First{OrDefault}](#complexity-of-linq-orderbyfirstordefault-increased) | 5.0 |
 | [IntPtr y UIntPtr implementan IFormattable](#intptr-and-uintptr-implement-iformattable) | 5.0 |
 | [PrincipalPermissionAttribute está obsoleto como error](#principalpermissionattribute-is-obsolete-as-error) | 5.0 |
 | [Los métodos de serialización BinaryFormatter están obsoletos y se prohíben en las aplicaciones ASP.NET](#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps) | 5.0 |
@@ -45,6 +46,10 @@ En esta página se documentan los siguientes cambios importantes:
 | [Process.StartInfo produce una excepción InvalidOperationException para los procesos que no se iniciaron](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1.0 |
 
 ## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [orderby-firstordefault-complexity-increase](../../../includes/core-changes/corefx/5.0/orderby-firstordefault-complexity-increase.md)]
+
+***
 
 [!INCLUDE [intptr-uintptr-implement-iformattable](../../../includes/core-changes/corefx/5.0/intptr-uintptr-implement-iformattable.md)]
 

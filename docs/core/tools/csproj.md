@@ -3,12 +3,12 @@ title: Adiciones al formato csproj para .NET Core
 description: Conozca las diferencias entre los archivos csproj de .NET Core y los existentes
 ms.topic: reference
 ms.date: 04/08/2019
-ms.openlocfilehash: 4f45362fbb3df053b95156b8e633903f011a85ad
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 82174b2976abda2337a4a9b5a5a5e1f60a1094fb
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062878"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608331"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Adiciones al formato csproj para .NET Core
 
@@ -56,7 +56,7 @@ Cuando haga referencia al paquete `Microsoft.AspNetCore.App` o al paquete `Micro
 
 > Problema conocido: el SDK de .NET Core 2.1 solo admite esta sintaxis cuando el proyecto también usa Microsoft.NET.Sdk.Web. Esto se resuelve en el SDK de .NET Core 2.2.
 
-Estas referencias a los metapaquetes de ASP.NET Core tienen un comportamiento ligeramente distinto de los paquetes más habituales de NuGet. Las [implementaciones dependientes del marco](../deploying/index.md#publish-runtime-dependent) de las aplicaciones que usan estos metapaquetes aprovechan automáticamente el marco de uso compartido de ASP.NET Core. Al usar los metapaquetes, **no** se implementa ningún recurso de los paquetes NuGet de ASP.NET Core a los que se hace referencia con la aplicación, porque el marco de uso compartido de ASP.NET Core ya contiene estos recursos. Los recursos del marco de uso compartido están optimizados para que la plataforma de destino mejore el tiempo de inicio de la aplicación. Para más información sobre el marco de uso compartido, consulte [Empaquetado de distribución de .NET Core](../distribution-packaging.md).
+Estas referencias a los metapaquetes de ASP.NET Core tienen un comportamiento ligeramente distinto de los paquetes más habituales de NuGet. Las [implementaciones dependientes del marco](../deploying/index.md#publish-framework-dependent) de las aplicaciones que usan estos metapaquetes aprovechan automáticamente el marco de uso compartido de ASP.NET Core. Al usar los metapaquetes, **no** se implementa ningún recurso de los paquetes NuGet de ASP.NET Core a los que se hace referencia con la aplicación, porque el marco de uso compartido de ASP.NET Core ya contiene estos recursos. Los recursos del marco de uso compartido están optimizados para que la plataforma de destino mejore el tiempo de inicio de la aplicación. Para más información sobre el marco de uso compartido, consulte [Empaquetado de distribución de .NET Core](../distribution-packaging.md).
 
 Si *se especifica* una versión, se trata como la versión *mínima* del marco de uso compartido de ASP.NET Core para las implementaciones dependientes del marco y como una versión *exacta* de las implementaciones autocontenidas. Esto puede deberse a las siguientes consecuencias:
 

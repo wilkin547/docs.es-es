@@ -2,12 +2,12 @@
 title: Comando dotnet publish
 description: El comando dotnet publish publica el proyecto o la solución de .NET Core en un directorio.
 ms.date: 02/24/2020
-ms.openlocfilehash: 59fdbfa875dad13963ae198acc6a31b537279dfe
-ms.sourcegitcommit: c8c3e1c63a00b7d27f76f5e50ee6469e6bdc8987
+ms.openlocfilehash: 4ff49452e4d941b3e06ad511507b1dc429ab459f
+ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87251184"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88187970"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -51,7 +51,9 @@ La salida del comando `dotnet publish` está lista para la implementación en un
 
 Con el comando `dotnet publish` se llama a MSBuild, lo que invoca el destino `Publish`. Todos los parámetros pasados a `dotnet publish` se pasan a MSBuild. Los parámetros `-c` y `-o` se asignan respectivamente a las propiedades `Configuration` y `PublishDir` de MSBuild.
 
-El comando `dotnet publish` acepta opciones de MSBuild, como `-p` para establecer propiedades y `-l` para definir un registrador. Por ejemplo, se puede establecer una propiedad de MSBuild mediante el uso del formato: `-p:<NAME>=<VALUE>`. También se pueden establecer las propiedades relacionadas con la publicación si se hace referencia a un archivo *.pubxml*, por ejemplo:
+El comando `dotnet publish` acepta opciones de MSBuild, como `-p` para establecer propiedades y `-l` para definir un registrador. Por ejemplo, se puede establecer una propiedad de MSBuild mediante el uso del formato: `-p:<NAME>=<VALUE>`.
+
+También se pueden establecer las propiedades relacionadas con la publicación si se hace referencia a un archivo *.pubxml* (disponible a partir del SDK de .NET Core 3.1). Por ejemplo:
 
 ```dotnetcli
 dotnet publish -p:PublishProfile=FolderProfile

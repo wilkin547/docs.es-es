@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo hospedar el entorno de tiempo de e
 author: mjrousos
 ms.topic: how-to
 ms.date: 12/21/2018
-ms.openlocfilehash: 2324b61bcffb686a455fcfd154284a2b78aa746b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 3b24ade694e25040d77e411bead3f454e9d5cdef
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84283499"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656181"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Escritura de un host personalizado de .NET Core para controlar el entorno de tiempo de ejecución de .NET desde el código nativo
 
@@ -34,7 +34,7 @@ Hay tres API distintas que pueden usarse para hospedar .NET Core. En este artíc
 
 ## <a name="sample-hosts"></a>Hosts de ejemplo
 
-Hay [hosts de ejemplo](https://github.com/dotnet/samples/tree/master/core/hosting) que muestran los pasos descritos en los tutoriales siguientes en el repositorio dotnet/samples de GitHub. Los comentarios de los ejemplos asocian claramente los pasos numerados de estos tutoriales con el lugar donde se realizan en el ejemplo. Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Hay [hosts de ejemplo](https://github.com/dotnet/samples/tree/master/core/hosting) que muestran los pasos descritos en los tutoriales siguientes en el repositorio dotnet/samples de GitHub. Los comentarios de los ejemplos asocian claramente los pasos numerados de estos tutoriales con el lugar donde se realizan en el ejemplo. Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../../samples-and-tutorials/index.md#view-and-download-samples).
 
 Tenga en cuenta que los hosts de ejemplo están pensados para usarse con fines de aprendizaje, por lo que pasan por encima de la comprobación de errores y están diseñados para enfatizar la legibilidad sobre la eficacia.
 

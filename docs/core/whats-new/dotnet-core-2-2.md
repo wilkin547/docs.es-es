@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 12/04/2018
-ms.openlocfilehash: 64cb561acd72ff5d4a11fcae7ce59eaad750f74e
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 656ef9aa2745c935c37b69ae5a54b8d126700e55
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644370"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608295"
 ---
 # <a name="whats-new-in-net-core-22"></a>Novedades de .NET Core 2.2
 
@@ -18,7 +18,7 @@ ms.locfileid: "81644370"
 
 ## <a name="new-deployment-mode"></a>Nuevo modo de implementación
 
-A partir de .NET Core 2.2, puede implementar [archivos ejecutables dependientes del marco](../deploying/index.md#publish-runtime-dependent), que son archivos **.exe** en lugar de **.dll**. Los archivos ejecutable dependientes del marco (FDE), que funcionan de forma similar a las implementaciones dependientes del marco, todavía se basan en la presencia de una versión compartida por todo el sistema de .NET Core para ejecutar. Su aplicación contiene solo el código y cualquier dependencia de terceros. A diferencia de las implementaciones dependientes del marco, los FDE son específicos de la plataforma.
+A partir de .NET Core 2.2, puede implementar [archivos ejecutables dependientes del marco](../deploying/index.md#publish-framework-dependent), que son archivos **.exe** en lugar de **.dll**. Los archivos ejecutable dependientes del marco (FDE), que funcionan de forma similar a las implementaciones dependientes del marco, todavía se basan en la presencia de una versión compartida por todo el sistema de .NET Core para ejecutar. Su aplicación contiene solo el código y cualquier dependencia de terceros. A diferencia de las implementaciones dependientes del marco, los FDE son específicos de la plataforma.
 
 Este nuevo modo de implementación tiene la ventaja de compilar un archivo ejecutable en lugar de una biblioteca, lo que significa que puede ejecutar la aplicación directamente sin invocar `dotnet` primero.
 

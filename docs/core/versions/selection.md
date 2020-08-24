@@ -4,11 +4,12 @@ description: Obtenga información sobre cómo .NET Core busca y elige las versio
 author: adegeo
 ms.author: adegeo
 ms.date: 03/24/2020
-ms.openlocfilehash: faaa638905bb3c8e9cd4c09af83979d90698df3d
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 82b5522601b0ed5d3f4faf6e6c6c970ba285b11f
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803123"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608198"
 ---
 # <a name="select-the-net-core-version-to-use"></a>Selección de la versión de .NET Core que se va a usar
 
@@ -77,7 +78,7 @@ Las plataformas de destino de .NET Standard también se limitan a la plataforma 
 
 ## <a name="framework-dependent-apps-roll-forward"></a>Puesta al día de las aplicaciones dependientes de la plataforma
 
-Cuando una aplicación se ejecuta desde el origen con [`dotnet run`](../tools/dotnet-run.md), desde una [**implementación dependiente del marco**](../deploying/index.md#publish-runtime-dependent) con [`dotnet myapp.dll`](../tools/dotnet.md#description) o desde un [**ejecutable dependiente del marco**](../deploying/index.md#publish-runtime-dependent) con `myapp.exe`, el ejecutable `dotnet` es el **host** de la aplicación.
+Cuando una aplicación se ejecuta desde el origen con [`dotnet run`](../tools/dotnet-run.md), desde una [**implementación dependiente del marco**](../deploying/index.md#publish-framework-dependent) con [`dotnet myapp.dll`](../tools/dotnet.md#description) o desde un [**ejecutable dependiente del marco**](../deploying/index.md#publish-framework-dependent) con `myapp.exe`, el ejecutable `dotnet` es el **host** de la aplicación.
 
 El host elige la versión de revisión más reciente instalada en el equipo. Por ejemplo, si se especifica `netcoreapp3.0` en el archivo de proyecto, y `3.0.2` es el runtime de .NET instalado más reciente, se usa el runtime `3.0.2`.
 

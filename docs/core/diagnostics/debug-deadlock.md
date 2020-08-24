@@ -3,12 +3,12 @@ title: 'Depuración de un interbloqueo: .NET Core'
 description: Tutorial del proceso de depuración de un problema de bloqueo en .NET Core.
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: 247521176297254180d794d4d4fc850f30e343b0
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 6f060e1ae801eb4eacbbd1fb67110f827c37f597
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86926383"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557885"
 ---
 # <a name="debug-a-deadlock-in-net-core"></a>Depuración de un interbloqueo en .NET Core
 
@@ -51,7 +51,7 @@ dotnet-trace ps
 
 Anote el identificador de proceso de la salida del comando. El identificador de proceso era `4807`, pero el suyo será diferente. Vaya a la siguiente dirección URL, que es un punto de conexión de API en el sitio de ejemplo:
 
-[https://localhost:5001/api/diagscenario/deadlock](https://localhost:5001/api/diagscenario/deadlock)
+`https://localhost:5001/api/diagscenario/deadlock`
 
 La solicitud de API al sitio se bloquea y no responde. Deje que la solicitud se ejecute durante unos 10 o 15 segundos. Luego, cree el volcado de núcleo mediante el siguiente comando:
 

@@ -4,12 +4,12 @@ description: Descubra los problemas comunes que se producen al ejecutar herramie
 author: kdollard
 ms.topic: troubleshooting
 ms.date: 02/14/2020
-ms.openlocfilehash: b98b2735770c8259c2daf94575fc087b91bb61fd
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: db88958e1605fef589c5dbcb12065a6318183705
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062641"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608310"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>Solución de problemas de uso de herramientas de .NET Core
 
@@ -74,7 +74,7 @@ El nombre del archivo ejecutable determina cómo se invoca la herramienta. En la
 
 ### <a name="runtime-not-found"></a>No se encontró el runtime
 
-Las herramientas de .NET Core son [aplicaciones dependientes del marco](../deploying/index.md#publish-runtime-dependent), lo que significa que se basan en un runtime de .NET Core instalado en el equipo. Si no se encuentra el runtime esperado, se siguen las reglas normales de puesta al día de runtime de .NET Core:
+Las herramientas de .NET Core son [aplicaciones dependientes del marco](../deploying/index.md#publish-framework-dependent), lo que significa que se basan en un runtime de .NET Core instalado en el equipo. Si no se encuentra el runtime esperado, se siguen las reglas normales de puesta al día de runtime de .NET Core:
 
 * Una aplicación avanza a la versión de revisión más alta de las versiones principal y secundaria especificadas.
 * Si no hay ningún runtime que coincida con un número de versión principal y secundaria, se usa la siguiente versión secundaria más alta.

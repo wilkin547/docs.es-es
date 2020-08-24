@@ -4,12 +4,12 @@ description: Procedimiento para administrar los problemas de certificación con 
 author: adegeo
 ms.author: adegeo
 ms.date: 02/14/2020
-ms.openlocfilehash: 905a8b8a4a17836823b1c6574828acb08110d224
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: a7741727ad46216ebd9936515d8af29b6d7049c2
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86415953"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656532"
 ---
 # <a name="macos-catalina-notarization-and-the-impact-on-net-core-downloads-and-projects"></a>Certificación de macOS Catalina y el impacto en las descargas y proyectos de .NET Core
 
@@ -92,5 +92,5 @@ Si quiere que la aplicación se ejecute en macOS Catalina (versión 10.15) o su
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-- [Dependencias y requisitos de .NET Core](dependencies.md).
+- [Dependencias y requisitos de .NET Core](macos.md#dependencies).
 - [Instalación del runtime y SDK de .NET Core](macos.md).

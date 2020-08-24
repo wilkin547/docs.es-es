@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-ms.openlocfilehash: 132518b9d8d22efecfcf3ed14e8b5969aa768cd4
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: d42d244e644bf3ee1f45b25a71d60bbb2ef8e590
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88024594"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063840"
 ---
 # <a name="chaining-tasks-using-continuation-tasks"></a>Encadenamiento de tareas mediante tareas de continuación
 
@@ -52,7 +52,7 @@ Se puede crear una continuación que se ejecute una vez completado su antecedent
 
 También puede crear una continuación que se ejecutará cuando se haya completado una tarea o un grupo de tareas. Para ejecutar una continuación cuando se hayan completado todas las tareas antecedentes, llame al método estático`Shared` ( <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> en Visual Basic) o al método de instancia <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType> . Para ejecutar una continuación cuando cualquiera de las tareas antecedentes se haya completado, llame al método estático`Shared` ( <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> en Visual Basic) o al método de instancia <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A?displayProperty=nameWithType> .
 
-Tenga en cuenta que las llamadas a las sobrecargas <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> no bloquean el subproceso que realiza la llamada. Sin embargo, se suele llamar a todos menos a los métodos <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Task.WhenAll%28System.Threading.Tasks.Task%5B%5D%29?displayProperty=nameWithType> para recuperar la propiedad <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> devuelta, que bloquea el subproceso que realiza la llamada.
+Las llamadas a las sobrecargas <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> no bloquean el subproceso que realiza la llamada. Sin embargo, se suele llamar a todos menos a los métodos <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Task.WhenAll%28System.Threading.Tasks.Task%5B%5D%29?displayProperty=nameWithType> para recuperar la propiedad <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> devuelta, que bloquea el subproceso que realiza la llamada.
 
 En el ejemplo siguiente se llama al método <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> para crear una tarea de continuación que refleje los resultados de sus diez tareas antecedentes. Cada tarea antecedente eleva al cuadrado un valor de índice que varía entre uno y diez. Si los antecedentes se completan correctamente (su propiedad <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> es <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType>), la propiedad <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> de la continuación es una matriz de los valores <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> devueltos por cada antecedente. En el ejemplo se suman para calcular el total de los cuadrados de todos los números entre uno y diez.
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
-ms.openlocfilehash: dd42dcd62bb46898c20f14cdc893b8f5801894f2
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 1252e214be03f8a180fadb7667ee59f36a862040
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474987"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558431"
 ---
 # <a name="constants-c-programming-guide"></a>Constantes (Guía de programación de C#)
 Las constantes son valores inmutables que se conocen en tiempo de compilación y que no cambian durante la vida del programa. Las constantes se declaran con el modificador [const](../../language-reference/keywords/const.md). Solo los [tipos integrados](../../language-reference/builtin-types/built-in-types.md) de C# (excluido <xref:System.Object?displayProperty=nameWithType>) pueden declararse como `const`. Los tipos definidos por el usuario, incluidas las clases, las estructuras y las matrices, no pueden ser `const`. Use el modificador [readonly](../../language-reference/keywords/readonly.md) para crear una clase, una estructura o una matriz que se inicialice una vez en tiempo de ejecución (por ejemplo, en un constructor) y que posteriormente no se pueda cambiar.  
@@ -24,7 +24,7 @@ Las constantes son valores inmutables que se conocen en tiempo de compilación y
   
  [!code-csharp[csProgGuideObjects#64](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#64)]  
   
- En este ejemplo la constante `months` siempre es 12 y ni siquiera la propia clase la puede cambiar. De hecho, cuando el compilador detecta un identificador de constante en el código fuente de C# (por ejemplo, `months`), sustituye directamente el valor literal en el código de lenguaje intermedio (IL) que genera. Dado que no hay ninguna dirección de variable asociada a una constante en tiempo de ejecución, no se pueden pasar los campos `const` por referencia ni pueden aparecer como un valor L en una expresión.  
+ En este ejemplo la constante `Months` siempre es 12 y ni siquiera la propia clase la puede cambiar. De hecho, cuando el compilador detecta un identificador de constante en el código fuente de C# (por ejemplo, `Months`), sustituye directamente el valor literal en el código de lenguaje intermedio (IL) que genera. Dado que no hay ninguna dirección de variable asociada a una constante en tiempo de ejecución, no se pueden pasar los campos `const` por referencia ni pueden aparecer como un valor L en una expresión.  
   
 > [!NOTE]
 > Tenga cuidado al hacer referencia a valores de constante definidos en otro código como archivos DLL. Si una nueva versión del archivo DLL define un nuevo valor para la constante, el programa conservará el valor literal anterior hasta que se vuelva a compilar con la versión nueva.  
