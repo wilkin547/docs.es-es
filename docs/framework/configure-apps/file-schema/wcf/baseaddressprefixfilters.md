@@ -2,18 +2,18 @@
 title: <baseAddressPrefixFilters>
 ms.date: 03/30/2017
 ms.assetid: 8cab2a9a-c51f-4283-bb60-2ad0c274fd46
-ms.openlocfilehash: 0673507b72690c3a5c7dcc35442c05e378dba43c
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 635e4f02f4d286b63c4f4845563ba1953d23592a
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153040"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811904"
 ---
 # \<baseAddressPrefixFilters>
 Representa una colección de elementos de configuración que especifican los filtros de paso a través, que proporcionan un mecanismo para seleccionar los enlaces de Internet Information Services (IIS) adecuados al hospedar la aplicación Windows Communication Foundation (WCF) en IIS.  
   
 > [!WARNING]
-> \<baseAddressPrefixFilters>no reconoce "localhost"; en su lugar, use el nombre completo de la máquina.  
+> \<baseAddressPrefixFilters> no reconoce "localhost"; en su lugar, use el nombre completo de la máquina.  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
@@ -57,7 +57,7 @@ Representa una colección de elementos de configuración que especifican los fil
   
  Por ejemplo, su sitio puede contener las siguientes direcciones base:
   
-```
+```http
 http://testl.fabrikam.com/Service.svc  
 http://test2.fabrikam.com/Service.svc  
 ```  

@@ -2,12 +2,12 @@
 title: Opciones interactivas
 description: Obtenga información sobre las opciones de línea de comandos compatibles con F# interactivo, fsi.exe.
 ms.date: 08/15/2020
-ms.openlocfilehash: da2251c1d2e57090ed926e501cebf3c53ac58052
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: adc8dc86f14366720e1acbf35115d4e318a76aef
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558613"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810538"
 ---
 # <a name="f-interactive-options"></a>Opciones de F# interactivo
 
@@ -52,10 +52,10 @@ Cuando aparecen listas en F# interactivo argumentos de opción, los elementos de
 |**--Optimize**[ **+**&#124;**-** ]|Igual que la opción del compilador **fsc.exe** . Para obtener más información, consulte [Opciones del compilador](compiler-options.md).|
 |**--preferreduilang: &lt; lang&gt;**| Especifica el nombre de la referencia cultural del lenguaje de salida preferido (por ejemplo, es-ES, ja-JP). |
 |**--Quiet**|Suprima la salida de F# interactivo al flujo **stdout** .|
-|**--Quotations-Debug**|Especifica que debe emitirse información de depuración adicional para las expresiones que se derivan de los literales de Comillas de F # y las definiciones reflejadas. La información de depuración se agrega a los atributos personalizados de un nodo de árbol de expresión de F #. Vea [expresiones de código delimitadas](code-quotations.md) y [expr. CustomAttributes](https://msdn.microsoft.com/library/eb89943f-5f5b-474e-b125-030ca412edb3).|
+|**--Quotations-Debug**|Especifica que debe emitirse información de depuración adicional para las expresiones que se derivan de los literales de Comillas de F # y las definiciones reflejadas. La información de depuración se agrega a los atributos personalizados de un nodo de árbol de expresión de F #. Vea [expresiones de código delimitadas](code-quotations.md) y [expr. CustomAttributes](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-quotations-fsharpexpr.html#CustomAttributes).|
 |**--ReadLine**[ **+**&#124;**-** ]|Habilitar o deshabilitar la finalización con tabulación en el modo interactivo.|
 |**--Reference: &lt; nombre de archivo&gt;**<br /><br />**-r: &lt; nombre de archivo&gt;**|Igual que la opción del compilador **fsc.exe** . Para obtener más información, consulte [Opciones del compilador](compiler-options.md).|
-|**--tailcalls**[ **+**&#124;**-** ]|Habilitar o deshabilitar el uso de la instrucción IL de cola, que hace que se reutilice el marco de pila para las funciones recursivas de cola. Esta opción está habilitada de manera predeterminada.|
+|**--tailcalls**[ **+**&#124;**-** ]|Habilitar o deshabilitar el uso de la instrucción IL de cola, que hace que se reutilice el marco de pila para las funciones recursivas de cola. Esta opción está habilitada de forma predeterminada.|
 |**--targetprofile: &lt; cadena&gt;**|Especifica el perfil de la plataforma de destino de este ensamblado. Los valores válidos son `mscorlib`, `netcore` o `netstandard`. De manera predeterminada, es `mscorlib`.|
 |**--Use: &lt; nombre de archivo&gt;**|Indica al intérprete que use el archivo especificado al iniciar como entrada inicial.|
 |**--utf8output**|Igual que la opción del compilador fsc.exe. Para obtener más información, consulte [Opciones del compilador](compiler-options.md).|

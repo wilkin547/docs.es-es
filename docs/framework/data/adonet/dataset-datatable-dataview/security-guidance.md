@@ -3,12 +3,12 @@ title: Guía de seguridad de DataSet y DataTable
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: f0fa43c467cc7866e69115acb5f807e6487fda7a
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 24c8a830f8638bc2d9dd20c2384c8230a682d817
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608534"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812242"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>Guía de seguridad de DataSet y DataTable
 
@@ -34,7 +34,14 @@ En todas las versiones compatibles de .NET Framework, .NET Core y .NET, `DataSet
 
 Si los datos XML entrantes contienen un objeto cuyo tipo no está en esta lista:
 
-* Se inicia una excepción.
+* Se produce una excepción con el siguiente mensaje y seguimiento de la pila.  
+Mensaje de error:  
+System. InvalidOperationException: type ' \<Type Name\> , version = \<n.n.n.n\> , Culture = \<culture\> , PublicKeyToken = \<token value\> ' no se permite aquí. Vea [https://go.microsoft.com/fwlink/?linkid=2132227](https://go.microsoft.com/fwlink/?linkid=2132227) para obtener más detalles.  
+Seguimiento de la pila:  
+en System. Data. TypeLimiter. EnsureTypeIsAllowed (tipo Type, TypeLimiter capturedLimiter)  
+en System. Data. DataColumn. UpdateColumnType (tipo Type, StorageType typeCode)  
+en System. Data. DataColumn. set_DataType (tipo valor)  
+
 * Se produce un error en la operación de deserialización.
 
 Al cargar XML en una `DataSet` instancia de o existente `DataTable` , también se tienen en cuenta las definiciones de columna existentes. Si la tabla ya contiene una definición de columna de un tipo personalizado, ese tipo se agrega temporalmente a la lista de permitidos mientras dure la operación de deserialización de XML.
@@ -268,9 +275,9 @@ Si `AppContext` no está disponible, las comprobaciones de limitación de tipos 
 * Un administrador debe configurar el registro.
 * El uso del registro es un cambio en todo el equipo y afectará a _todas las_ aplicaciones que se ejecutan en la máquina.
 
-| Tipo  |  Value |
+| Tipo  |  Valor |
 |---|---|
-| **Clave del Registro** | `HKLM\SOFTWARE\Microsoft\.NETFramework\AppContext` |
+| **Clave del registro** | `HKLM\SOFTWARE\Microsoft\.NETFramework\AppContext` |
 | **Nombre del valor** | `Switch.System.Data.AllowArbitraryDataSetTypeInstantiation` |
 | **Tipo de valor** | `REG_SZ` |
 | **Datos del valor** | `true` |

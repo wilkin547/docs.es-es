@@ -1,22 +1,19 @@
 ---
 title: Cadenas
 description: "Obtenga información sobre cómo el tipo de F # ' cadena ' representa texto inmutable como una secuencia de caracteres Unicode."
-ms.date: 07/05/2019
-ms.openlocfilehash: 67a6506b4b8c479da1022c069a7f53402f904b4d
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.date: 08/15/2020
+ms.openlocfilehash: f6ec36feeb197bf785c702e7b626cf5cf80696ab
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855418"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812216"
 ---
 # <a name="strings"></a>Cadenas
 
 El `string` tipo representa el texto inmutable como una secuencia de caracteres Unicode. `string` es un alias de `System.String` en .NET.
 
-> [!NOTE]
-> La referencia de la API de docs.microsoft.com para F # no está completa. Si encuentra vínculos rotos, consulte la [documentación de la biblioteca básica de F #](https://fsharp.github.io/fsharp-core-docs/) .
-
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 Los literales de cadena se delimitan mediante el carácter de Comillas ("). El carácter de barra diagonal inversa ( \\ ) se usa para codificar determinados caracteres especiales. La barra diagonal inversa y el siguiente carácter juntos se conocen como una *secuencia de escape*. En la tabla siguiente se muestran las secuencias de escape que se admiten en literales de cadena de F #.
 
@@ -32,10 +29,10 @@ Los literales de cadena se delimitan mediante el carácter de Comillas ("). El c
 |Barra diagonal inversa|`\\`|
 |Comillas|`\"`|
 |Apóstrofo|`\'`|
-|carácter Unicode|`\DDD`(donde `D` indica un dígito decimal; intervalo de 000-255; por ejemplo, `\231` = "ç")|
-|carácter Unicode|`\xHH`(donde `H` indica un dígito hexadecimal; intervalo de 00-FF; por ejemplo, `\xE7` = "ç")|
-|carácter Unicode|`\uHHHH`(UTF-16) (donde `H` indica un dígito hexadecimal; intervalo de 0000-ffff;  por ejemplo, `\u00E7` = "ç")|
-|carácter Unicode|`\U00HHHHHH`(UTF-32) (donde `H` indica un dígito hexadecimal; intervalo de 000000-10FFFF;  por ejemplo, `\U0001F47D` = " 👽 ")|
+|carácter Unicode|`\DDD` (donde `D` indica un dígito decimal; intervalo de 000-255; por ejemplo, `\231` = "ç")|
+|carácter Unicode|`\xHH` (donde `H` indica un dígito hexadecimal; intervalo de 00-FF; por ejemplo, `\xE7` = "ç")|
+|carácter Unicode|`\uHHHH` (UTF-16) (donde `H` indica un dígito hexadecimal; intervalo de 0000-ffff;  por ejemplo, `\u00E7` = "ç")|
+|carácter Unicode|`\U00HHHHHH` (UTF-32) (donde `H` indica un dígito hexadecimal; intervalo de 000000-10FFFF;  por ejemplo, `\U0001F47D` = " 👽 ")|
 
 > [!IMPORTANT]
 > La `\DDD` secuencia de escape es notación decimal, no notación octal, como en la mayoría de los demás lenguajes. Por lo tanto, los dígitos `8` y `9` son válidos, y una secuencia de `\032` representa un espacio (U + 0020), mientras que el mismo punto de código en la notación octal sería `\040` .
@@ -69,7 +66,7 @@ Puede tener acceso a caracteres individuales de una cadena mediante la sintaxis 
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1002.fs)]
 
-El resultado es `b`
+La salida es `b`.
 
 O bien, puede extraer subcadenas mediante la sintaxis de segmento de matriz, como se muestra en el código siguiente.
 
@@ -102,7 +99,7 @@ Mediante el uso `Chars` de la propiedad de `System.String` , se puede tener acce
 
 ## <a name="string-module"></a>Módulo de cadena
 
-En el `String` módulo del espacio de nombres se incluye funcionalidad adicional para el control de cadenas `FSharp.Core` . Para obtener más información, vea [módulo Core. String](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.string-module-%5bfsharp%5d).
+En el `String` módulo del espacio de nombres se incluye funcionalidad adicional para el control de cadenas `FSharp.Core` . Para obtener más información, vea [String (módulo](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-stringmodule.html)).
 
 ## <a name="see-also"></a>Vea también
 

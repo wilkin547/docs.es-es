@@ -2,12 +2,12 @@
 title: Registro con pila elástica
 description: Registro con la pila elástica, Logstash y Kibana
 ms.date: 05/13/2020
-ms.openlocfilehash: e886141fa691b75b882b5d67eae4ceb242e8089f
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 32d9d0dae175d8d45d48b56d17f133b4cc432363
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613855"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811176"
 ---
 # <a name="logging-with-elastic-stack"></a>Registro con pila elástica
 
@@ -81,7 +81,7 @@ Los mensajes de registro que se han diseñado para contener parámetros o que ha
 
 En la figura 7-9 se muestra una consulta que busca las 10 páginas principales visitadas por `jill@example.com` .
 
-```
+```json
 "query": {
     "match": {
       "user": "jill@example.com"

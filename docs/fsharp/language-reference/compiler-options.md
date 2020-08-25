@@ -2,12 +2,12 @@
 title: Opciones del compilador
 description: 'Use las opciones de línea de comandos del compilador de F # para controlar la compilación de las aplicaciones y bibliotecas de F #.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 7f7b7dac2060213cd7d783669cb4de2b96a88968
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: c10808e97d31bd3bdb469fc2a8e57a4650170dec
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557365"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812151"
 ---
 # <a name="compiler-options"></a>Opciones del compilador
 
@@ -19,7 +19,7 @@ El entorno de compilación también se puede controlar estableciendo las propied
 
 En la tabla siguiente se muestran las opciones del compilador ordenadas alfabéticamente. Algunas de las opciones del compilador de F # son similares a las opciones del compilador de C#. En ese caso, se proporciona un vínculo al tema Opciones del compilador de C#.
 
-|Opción del compilador|Descripción|
+|Opción del compilador|Description|
 |---------------|-----------|
 |`-a filename.fs`|Genera una biblioteca a partir del archivo especificado. Esta opción es una forma abreviada de `--target:library filename.fs` .|
 |`--baseaddress:address`|Especifica la dirección base preferida para cargar una DLL.<br /><br />Esta opción del compilador es equivalente a la opción del compilador de C# con el mismo nombre. Para obtener más información, vea [&#47;baseaddress &#40;C&#35; opciones del Compilador&#41;](../../csharp/language-reference/compiler-options/baseaddress-compiler-option.md).|
@@ -52,7 +52,7 @@ En la tabla siguiente se muestran las opciones del compilador ordenadas alfabét
 |`--pdb:pdb-filename`|Asigna un nombre al archivo PDB de depuración de salida (base de datos de programa). Esta opción solo se aplica cuando `--debug` también está habilitada.<br /><br />Esta opción del compilador es equivalente a la opción del compilador de C# con el mismo nombre. Para obtener más información, vea [&#47;pdb &#40;C&#35; opciones del Compilador&#41;](../../csharp/language-reference/compiler-options/pdb-compiler-option.md).|
 |`--platform:platform-name`|Especifica que el código generado solo se ejecutará en la plataforma especificada ( `x86` , `Itanium` o `x64` ), o bien, si se elige el nombre de la plataforma `anycpu` , especifica que el código generado puede ejecutarse en cualquier plataforma.<br /><br />Esta opción del compilador es equivalente a la opción del compilador de C# con el mismo nombre. Para obtener más información, vea [&#47;platform &#40;C&#35; opciones del Compilador&#41;](../../csharp/language-reference/compiler-options/platform-compiler-option.md).|
 |`--preferreduilang:lang`| Especifica el nombre de la referencia cultural del lenguaje de salida preferido (por ejemplo,  `es-ES` , `ja-JP` ). |
-|`--quotations-debug`|Especifica que debe emitirse información de depuración adicional para las expresiones que se derivan de los literales de Comillas de F # y las definiciones reflejadas. La información de depuración se agrega a los atributos personalizados de un nodo de árbol de expresión de F #. Vea [expresiones de código delimitadas](code-quotations.md) y [expr. CustomAttributes](https://msdn.microsoft.com/visualfsharpdocs/conceptual/expr.customattributes-property-%5bfsharp%5d).|
+|`--quotations-debug`|Especifica que debe emitirse información de depuración adicional para las expresiones que se derivan de los literales de Comillas de F # y las definiciones reflejadas. La información de depuración se agrega a los atributos personalizados de un nodo de árbol de expresión de F #. Vea [expresiones de código delimitadas](code-quotations.md) y [expr. CustomAttributes](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-quotations-fsharpexpr.html#CustomAttributes).|
 |`--reference:assembly-filename`<br /><br />`-r:assembly-filename`|Hace que el código de un ensamblado de F # o .NET Framework esté disponible para el código que se está compilando.<br /><br />Esta opción del compilador es equivalente a la opción del compilador de C# con el mismo nombre. Para obtener más información, vea [ referencia de&#47;&#40;opciones del compilador de C&#35;&#41;](../../csharp/language-reference/compiler-options/reference-compiler-option.md).|
 |`--resource:resource-filename`|Incrusta un archivo de recursos administrado en el ensamblado generado.<br /><br />Esta opción del compilador es equivalente a la opción del compilador de C# con el mismo nombre. Para obtener más información, vea [&#47;resource &#40;C&#35; opciones del Compilador&#41;](../../csharp/language-reference/compiler-options/resource-compiler-option.md).|
 |`--sig:signature-filename`|Genera un archivo de signatura basado en el ensamblado generado. Para obtener más información acerca de los archivos de firma, consulte [firmas](signature-files.md).|
@@ -60,7 +60,7 @@ En la tabla siguiente se muestran las opciones del compilador ordenadas alfabét
 |`--standalone`|Especifica que se genere un ensamblado que contenga todas sus dependencias para que se ejecute por sí solo sin necesidad de ensamblados adicionales, como la biblioteca de F #.|
 |`--staticlink:assembly-name`|Vincula estáticamente el ensamblado especificado y todos los archivos DLL a los que se hace referencia que dependen de este ensamblado. Use el nombre de ensamblado, no el nombre del archivo DLL.|
 |`--subsystemversion`|Especifica la versión del subsistema del sistema operativo que va a usar el ejecutable generado. Use 6,02 para Windows 8.1, 6,01 para Windows 7, 6,00 para Windows Vista. Esta opción solo se aplica a los ejecutables, no a las dll y solo se debe usar si la aplicación depende de características de seguridad específicas disponibles solo en determinadas versiones del sistema operativo. Si se usa esta opción y un usuario intenta ejecutar la aplicación en una versión anterior del sistema operativo, se producirá un mensaje de error.|
-|<code>--tailcalls[+&#124;-]</code>|Habilita o deshabilita el uso de la instrucción IL de cola, que hace que se reutilice el marco de pila para las funciones recursivas de cola. Esta opción está habilitada de manera predeterminada.|
+|<code>--tailcalls[+&#124;-]</code>|Habilita o deshabilita el uso de la instrucción IL de cola, que hace que se reutilice el marco de pila para las funciones recursivas de cola. Esta opción está habilitada de forma predeterminada.|
 |<code>--target:[exe&#124;winexe&#124;library&#124;module] filename</code>|Especifica el tipo y el nombre de archivo del código compilado generado.<ul><li>`exe` significa una aplicación de consola.<br /></li><li>`winexe` significa una aplicación Windows, que difiere de la aplicación de consola en que no tiene definidos los flujos de entrada/salida estándar (stdin, stdout y stderr).<br /></li><li>`library` es un ensamblado sin un punto de entrada.<br /></li><li>`module` es un módulo de .NET Framework (. netmodule) que se puede combinar posteriormente con otros módulos en un ensamblado.<br /></li><ul/>Esta opción del compilador es equivalente a la opción del compilador de C# con el mismo nombre. Para obtener más información, vea [&#47;destino &#40;C&#35; opciones del Compilador&#41;](../../csharp/language-reference/compiler-options/target-compiler-option.md).|
 |`--times`|Muestra información de tiempo para la compilación.|
 |`--utf8output`|Habilita la impresión del resultado del compilador en la codificación UTF-8.|
