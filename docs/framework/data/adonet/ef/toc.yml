@@ -77,38 +77,17 @@
               href: sqlclient-for-ef-types.md
             - name: Problemas conocidos en SqlClient para Entity Framework
               href: known-issues-in-sqlclient-for-entity-framework.md
-    - name: Escribir un proveedor de datos de Entity Framework
-      href: writing-an-ef-data-provider.md
+    - name: Consideraciones de desarrollo e implementación
+      href: development-and-deployment-considerations.md
       items:
-        - name: Generación de SQL
-          href: sql-generation.md
-          items:
-            - name: Forma de los árboles de comandos
-              href: the-shape-of-the-command-trees.md
-            - name: 'Generar SQL a partir de árboles de comandos: procedimientos recomendados'
-              href: generating-sql-from-command-trees-best-practices.md
-            - name: Generación de SQL en el proveedor de ejemplo
-              href: sql-generation-in-the-sample-provider.md
-              items:
-                - name: Arquitectura y diseño
-                  href: architecture-and-design.md
-                - name: 'Tutorial: Generación de SQL'
-                  href: walkthrough-sql-generation.md
-        - name: Generar SQL de modificación
-          href: modification-sql-generation.md
-        - name: Especificación del manifiesto del proveedor
-          href: provider-manifest-specification.md
-- name: Consideraciones de desarrollo e implementación
-  href: development-and-deployment-considerations.md
-  items:
-    - name: Consideraciones de seguridad
-      href: security-considerations.md
-    - name: Consideraciones sobre el rendimiento
-      href: performance-considerations.md
-    - name: Consideraciones de migración
-      href: migration-considerations.md
-    - name: Consideraciones de implementación
-      href: deployment-considerations.md
+        - name: Consideraciones de seguridad
+          href: security-considerations.md
+        - name: Consideraciones sobre el rendimiento
+          href: performance-considerations.md
+        - name: Consideraciones de migración
+          href: migration-considerations.md
+        - name: Consideraciones de implementación
+          href: deployment-considerations.md
 - name: Recursos de Entity Framework
   href: resources.md
 - name: Terminología de Entity Framework
