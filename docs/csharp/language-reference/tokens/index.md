@@ -3,6 +3,7 @@ title: 'Caracteres especiales: referencia de C#'
 ms.date: 02/14/2017
 f1_keywords:
 - cs.special characters
+- '@$_CSharpKeyword'
 helpviewer_keywords:
 - special characters [C#]
 - C# language, special characters
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - '@ character (C#)'
 - $ character (C#)
 ms.assetid: 4c5c0539-2e37-40b7-91ce-75af5aabd3f9
-ms.openlocfilehash: 241f973baac1671a30da391fb8c3f055fb3ad754
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea0e1ee2ccbf95e3e0c8901564061e6bce481120
+ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79173385"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88957468"
 ---
 # <a name="c-special-characters"></a>Caracteres especiales de C#
 
@@ -25,7 +26,7 @@ Los caracteres especiales son caracteres contextuales predefinidos que modifican
 
 - [$](./interpolated.md), el carácter de cadena interpolada.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Referencia de C#](../index.md)
 - [Guía de programación de C#](../../programming-guide/index.md)
