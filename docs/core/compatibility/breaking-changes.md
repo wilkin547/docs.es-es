@@ -2,12 +2,12 @@
 title: Cambios importantes
 description: Obtenga información sobre los cambios de cada versión de .NET Core.
 ms.date: 11/27/2019
-ms.openlocfilehash: 550553ef14cd0635fbe4a5346c457a41264a4b82
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 73c1576aa92f0e236ead0ca1a12ac26efcbf3cbe
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916259"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810903"
 ---
 # <a name="breaking-change-selectors"></a>Selectores de cambios importantes
 
@@ -33,6 +33,7 @@ Seleccione el área de tecnología de .NET Core que le interesa. Los cambios ind
 > [!div class="op_single_selector"]
 >
 > - [ASP.NET Core](aspnetcore.md)
+> - [Análisis de código](code-analysis.md)
 > - [Bibliotecas de Core .NET](corefx.md)
 > - [Criptografía](cryptography.md)
 > - [EF Core](/ef/core/what-is-new/ef-core-3.0/breaking-changes)

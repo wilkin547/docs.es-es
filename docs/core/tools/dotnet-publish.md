@@ -2,12 +2,12 @@
 title: Comando dotnet publish
 description: El comando dotnet publish publica el proyecto o la solución de .NET Core en un directorio.
 ms.date: 02/24/2020
-ms.openlocfilehash: 4ff49452e4d941b3e06ad511507b1dc429ab459f
-ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
+ms.openlocfilehash: 45bf8504fd882286041794d27ecb56464fc8d13d
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88187970"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656670"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -123,7 +123,7 @@ Para obtener más información, vea los siguientes recursos:
 
   Especifica la ruta de acceso del directorio de salida.
   
-  Si no se especifica, el valor predeterminado es *[project_file_folder]./bin/[configuration]/[framework]/publish/* para un archivo ejecutable dependiente del tiempo de ejecución y archivos binarios multiplataforma. El valor predeterminado es *[project_file_folder]/bin/[configuration]/[framework]/[runtime]/publish/* para un archivo ejecutable autocontenido.
+  Si no se especifica, el valor predeterminado es *[project_file_folder]./bin/[configuration]/[framework]/publish/* para un archivo ejecutable dependiente del marco y archivos binarios multiplataforma. El valor predeterminado es *[project_file_folder]/bin/[configuration]/[framework]/[runtime]/publish/* para un archivo ejecutable autocontenido.
 
   En un proyecto web, si la carpeta de salida se encuentra en la carpeta del proyecto, los comandos `dotnet publish` posteriores dan como resultado carpetas de salida anidadas. Por ejemplo, si la carpeta del proyecto es *myproject* y la carpeta de salida de la publicación es *myproject/publish*, y ejecuta `dotnet publish` dos veces, la segunda ejecución coloca los archivos de contenido, como *.config* y *.json*, en *myproject/publish/publish*. Para evitar el anidamiento de carpetas de publicación, especifique una que no esté **directamente** en la carpeta del proyecto, o bien excluya la carpeta de publicación del proyecto. Para excluir una carpeta de publicación denominada *publishoutput*, agregue el elemento siguiente a un elemento `PropertyGroup` en el archivo *.csproj*:
 
@@ -159,7 +159,7 @@ Para obtener más información, vea los siguientes recursos:
 
 - **`-p:PublishTrimmed=true`**
 
-  Recorta las bibliotecas no utilizadas para reducir el tamaño de implementación de una aplicación cuando se publica un ejecutable independiente. Para obtener más información, vea [Recorte de implementaciones autocontenidas y ejecutables](../deploying/trim-self-contained.md). Disponible desde el SDK de .NET Core 3.0.
+  Recorta las bibliotecas no utilizadas para reducir el tamaño de implementación de una aplicación cuando se publica un ejecutable independiente. Para obtener más información, vea [Recorte de implementaciones autocontenidas y ejecutables](../deploying/trim-self-contained.md). Disponible a partir del SDK de .NET Core 3.0 como una característica en versión preliminar.
 
   Se recomienda especificar esta opción en un perfil de publicación en lugar de hacerlo en la línea de comandos. Para obtener más información, vea [MSBuild](#msbuild).
 
@@ -187,13 +187,13 @@ Para obtener más información, vea los siguientes recursos:
 
 ## <a name="examples"></a>Ejemplos
 
-- Cree un [archivo binario multiplataforma dependiente del tiempo de ejecución ](../deploying/index.md#produce-a-cross-platform-binary) para el proyecto en el directorio actual:
+- Cree un [archivo binario multiplataforma dependiente del marco](../deploying/index.md#produce-a-cross-platform-binary) para el proyecto en el directorio actual:
 
   ```dotnetcli
   dotnet publish
   ```
 
-  A partir del SDK de .NET Core 3.0, en este ejemplo también se crea un [ ejecutable dependiente del tiempo de ejecución](../deploying/index.md#publish-runtime-dependent) para la plataforma actual.
+  A partir del SDK de .NET Core 3.0, en este ejemplo también se crea un [ejecutable dependiente del marco](../deploying/index.md#publish-framework-dependent) para la plataforma actual.
 
 - Cree un [ejecutable independiente](../deploying/index.md#publish-self-contained) para el proyecto en el directorio actual, para un tiempo de ejecución específico:
 
@@ -203,7 +203,7 @@ Para obtener más información, vea los siguientes recursos:
 
   El RID debe estar en el archivo del proyecto.
 
-- Cree un [ejecutable dependiente del tiempo de ejecución](../deploying/index.md#publish-runtime-dependent) para el proyecto en el directorio actual, para una plataforma específica:
+- Cree un [ejecutable dependiente del marco](../deploying/index.md#publish-framework-dependent) para el proyecto en el directorio actual, para una plataforma específica:
 
   ```dotnetcli
   dotnet publish --runtime osx.10.11-x64 --self-contained false

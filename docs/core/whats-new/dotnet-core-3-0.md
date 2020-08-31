@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 9f553e9af16be0891f208832c5daa444a1b736e2
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: bf712e88d96a5c2c80c3ff50283d44e9c7717abb
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281516"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608212"
 ---
 # <a name="whats-new-in-net-core-30"></a>Novedades de .NET Core 3.0
 
@@ -54,7 +54,7 @@ Si usa Visual Studio, necesita [Visual Studio 2019](https://visualstudio.micr
 
 ### <a name="default-executables"></a>Archivos ejecutables predeterminados
 
-Ahora .NET Core compila [archivos ejecutables dependientes del entorno de ejecución](../deploying/index.md#publish-runtime-dependent) de forma predeterminada. Este comportamiento es nuevo en las aplicaciones que usan una versión de .NET Core instalada globalmente. Anteriormente, solo las [implementaciones independientes](../deploying/index.md#publish-self-contained) generarían un archivo ejecutable.
+.NET Core compila ahora [archivos ejecutables dependientes del marco](../deploying/index.md#publish-framework-dependent) de forma predeterminada. Este comportamiento es nuevo en las aplicaciones que usan una versión de .NET Core instalada globalmente. Anteriormente, solo las [implementaciones independientes](../deploying/index.md#publish-self-contained) generarían un archivo ejecutable.
 
 Durante `dotnet build` o `dotnet publish`, se crea un archivo ejecutable (conocido como **appHost**) que coincide con el entorno y la plataforma del SDK que se usa. Estos ejecutables funcionan de la misma forma que los ejecutables nativos:
 
@@ -69,7 +69,7 @@ A partir del SDK de .NET Core 3.0 para macOS certificado, el valor para genera
 
 Cuando la configuración de appHost está habilitada, .NET Core genera un ejecutable Mach-O nativo al compilar o publicar. La aplicación se ejecuta en el contexto de appHost cuando se ejecuta desde el código fuente con el comando `dotnet run` o mediante el inicio directo del ejecutable Mach-O.
 
-Sin appHost, la única manera en que un usuario puede iniciar una aplicación [dependiente del entorno de ejecución](../deploying/index.md#publish-runtime-dependent) es con el comando `dotnet <filename.dll>`. Siempre se crea un instancia de appHost al publicar la aplicación de manera [independiente](../deploying/index.md#publish-self-contained).
+Sin appHost, la única manera en la que un usuario puede iniciar una aplicación [dependiente del marco](../deploying/index.md#publish-framework-dependent) es con el comando `dotnet <filename.dll>`. Siempre se crea un instancia de appHost al publicar la aplicación de manera [independiente](../deploying/index.md#publish-self-contained).
 
 Puede configurar appHost en el nivel de proyecto, o bien cambiar la instancia de appHost de un comando `dotnet` específico con el parámetro `-p:UseAppHost`:
 

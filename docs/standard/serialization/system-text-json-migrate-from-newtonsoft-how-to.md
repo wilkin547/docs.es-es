@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 4390f46492ada4b15d187be4c43a4f7865f64a80
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 11de13a6674411bbad52678b59879ed26366e0f1
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916974"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811059"
 ---
 # <a name="how-to-migrate-from-no-locnewtonsoftjson-to-no-locsystemtextjson"></a>Procedimiento para realizar la migración de Newtonsoft.Json a System.Text.Json
 
@@ -147,7 +147,7 @@ Durante la deserialización, `Newtonsoft.Json` acepta nombres de propiedad entre
 
 Un valor entre comillas simples da como resultado una [JsonException](xref:System.Text.Json.JsonException) con el siguiente mensaje:
 
-```
+```output
 ''' is an invalid start of a value.
 ```
 
@@ -174,7 +174,7 @@ public class ExampleClass
 
 `System.Text.Json` no deserializa valores que no son de cadena en propiedades de cadena. Un valor que no sea de cadena recibido para un campo de cadena da como resultado una [JsonException](xref:System.Text.Json.JsonException) con el siguiente mensaje:
 
-```
+```output
 The JSON value could not be converted to System.String.
 ```
 

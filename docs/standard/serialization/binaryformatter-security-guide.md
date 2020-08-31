@@ -4,12 +4,12 @@ description: En este artículo se describen los riesgos de seguridad inherentes 
 ms.date: 07/11/2020
 ms.author: levib
 author: GrabYourPitchforks
-ms.openlocfilehash: f6a54b34bbf1e19212fe37aadb448a1722fe9ff0
-ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
+ms.openlocfilehash: 2c76a81650e5b83677f6c4df64770bd1ef5f775e
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86444755"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88607935"
 ---
 # <a name="binaryformatter-security-guide"></a>Guía de seguridad de BinaryFormatter
 
@@ -87,7 +87,6 @@ __Considere una aplicación que pase de un modelo de instalación de escritorio 
 ## <a name="further-resources"></a>Recursos adicionales
 
 * [YSoSerial.Net](https://github.com/pwntester/ysoserial.net) para investigar cómo los adversarios atacan las aplicaciones que usan `BinaryFormatter`.
-* [Modelado de amenazas](/securityengineering/sdl/threatmodeling) para obtener información sobre las aplicaciones y los servicios de modelado de amenazas.
 * Información general sobre vulnerabilidades de deserialización:
   * [OWASP Top 10: A8:2017 - Deserialización no segura](https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A8-Insecure_Deserialization)
   * [CWE-502: Deserialización de datos que no son de confianza](https://cwe.mitre.org/data/definitions/502.html)

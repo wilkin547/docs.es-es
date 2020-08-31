@@ -2,12 +2,12 @@
 title: Comando dotnet test
 description: El comando “dotnet test” se usa para ejecutar pruebas unitarias en un proyecto determinado.
 ms.date: 04/29/2020
-ms.openlocfilehash: 9b1e190579902dda71547b01f31dd5adcc22fe9c
-ms.sourcegitcommit: c8c3e1c63a00b7d27f76f5e50ee6469e6bdc8987
+ms.openlocfilehash: d67521084330b206afca89baf59228b99ca799a1
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87251197"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656760"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -104,7 +104,7 @@ Donde `Microsoft.NET.Test.Sdk` es el host de prueba y `xunit` es el marco de pru
   - 5400 s
   - 5 400 000 ms
 
-  Cuando no se usa ninguna unidad (por ejemplo, 5 400 000), se supone que el valor está en milisegundos. Cuando se usa junto con las pruebas basadas en datos, el comportamiento de tiempo de espera depende del adaptador de prueba usado. En xUnit y NUnit, el tiempo de espera se renueva después de cada caso de prueba. En MSTest, el tiempo de espera se utiliza en todos los casos de prueba. Esta opción se admite en Windows con netcoreapp2.1 y versiones posteriores, y en Linux con netcoreapp3.1 y versiones posteriores. macOS no se admite.
+  Cuando no se usa ninguna unidad (por ejemplo, 5 400 000), se supone que el valor está en milisegundos. Cuando se usa junto con las pruebas basadas en datos, el comportamiento de tiempo de espera depende del adaptador de prueba usado. En xUnit y NUnit, el tiempo de espera se renueva después de cada caso de prueba. En MSTest, el tiempo de espera se usa en todos los casos de prueba. Esta opción se admite en Windows con netcoreapp2.1 y versiones posteriores, y en Linux con netcoreapp3.1 y versiones posteriores. macOS no se admite.
 
 - **`-c|--configuration <CONFIGURATION>`**
 

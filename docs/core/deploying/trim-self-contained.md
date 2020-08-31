@@ -4,23 +4,23 @@ description: Obtenga información sobre cómo recortar aplicaciones autocontenid
 author: jamshedd
 ms.author: jamshedd
 ms.date: 04/03/2020
-ms.openlocfilehash: bb8ac88c5e16b7fd20a7670e4ad76dbe4b44da1b
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 0fde409e9e5911213855ab206368d302b73eebb3
+ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242932"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88720129"
 ---
 # <a name="trim-self-contained-deployments-and-executables"></a>Recorte de implementaciones autocontenidas y ejecutables
 
-Al publicar una aplicación autocontenida, el tiempo de ejecución de .NET Core se agrupa junto con la aplicación. Esta agrupación agrega una cantidad considerable de contenido a la aplicación empaquetada. En lo que respecta a la implementación de la aplicación, el tamaño suele ser un factor importante. Mantener lo más pequeño posible el tamaño de la aplicación del paquete suele ser un objetivo para los desarrolladores de aplicaciones.
+El [modelo de implementación dependiente del marco](index.md#publish-framework-dependent) ha sido el modelo de implementación más eficaz desde el inicio de .NET. En este escenario, el desarrollador de la aplicación agrupa solo la aplicación y los ensamblados de terceros con la expectativa de que las bibliotecas del entorno de ejecución y el marco de .NET estén disponibles en el equipo cliente. Este modelo de implementación sigue siendo el dominante en .NET Core, pero hay algunos escenarios en los que el modelo dependiente del marco no es óptimo. La alternativa es publicar una [aplicación independiente](index.md#publish-self-contained), donde el entorno de ejecución y el marco de .NET Core están agrupados con la aplicación y ensamblados de terceros.
 
-En función de la complejidad de la aplicación, solo se necesita un subconjunto del tiempo de ejecución para ejecutarla. Estas partes sin usar del tiempo de ejecución no son necesarias y se pueden recortar de la aplicación empaquetada.
+El modelo de implementación trim independiente es una versión especializada del modelo de implementación independiente que está optimizado para reducir el tamaño de la implementación. Minimizar el tamaño de la implementación es un requisito fundamental para algunos escenarios del lado cliente, como las aplicaciones Blazor. En función de la complejidad de la aplicación, solo se necesita un subconjunto de ensamblados de marco para ejecutarla. Estas partes sin usar de la biblioteca no son necesarias y se pueden recortar de la aplicación empaquetada. No obstante, existe el riesgo de que el análisis del tiempo de compilación de la aplicación pueda causar errores en tiempo de ejecución, debido a que no puede analizar de forma confiable diversos patrones de código problemáticos (centrados en gran medida en el uso de la reflexión). Dado que no se puede garantizar la confiabilidad, este modelo de implementación se ofrece como una característica en versión preliminar. El motor de análisis en tiempo de compilación proporciona advertencias al desarrollador de los patrones de código problemáticos, con la expectativa de que se corrijan estos patrones de código. Siempre que sea posible, se recomienda que mueva las dependencias de reflexión en tiempo de ejecución de la aplicación para compilar el tiempo mediante código que cumpla los mismos requisitos.
 
-La característica recorte funciona examinando los archivos binarios de la aplicación para descubrir y compilar un gráfico de los ensamblados en tiempo de ejecución necesarios. Se excluyen los ensamblados en tiempo de ejecución restantes a los que no se hace referencia.
+El modo de recorte de las aplicaciones puede configurarse a través de TrimMode y su valor predeterminado (`copyused`) para agrupar los ensamblados que se usan en la aplicación. Las aplicaciones WebAssembly de Blazor usarán un modo más agresivo (`link`) que recortará el código no usado dentro de los ensamblados. Las advertencias de análisis de recorte proporcionan información sobre patrones de código en los que no es posible realizar análisis de dependencias completas. Estas advertencias se suprimen de forma predeterminada y se pueden activar estableciendo la marca `SuppressTrimAnalysisWarnings` en "false". Puede encontrar más información sobre las opciones de recorte que hay disponibles en la [página de ILLinker](https://github.com/mono/linker/blob/master/docs/illink-options.md).
 
 > [!NOTE]
-> El recorte es una característica experimental en .NET Core 3.1 y _solo_ está disponible para las aplicaciones que se publican autocontenidas.
+> El recorte es una característica experimental en .NET Core 3.1, 5.0 y _solo_ está disponible para las aplicaciones que se publican independientes.
 
 ## <a name="prevent-assemblies-from-being-trimmed"></a>Impedir que los ensamblados se recorten
 
@@ -39,13 +39,25 @@ Cuando el código hace referencia indirectamente a un ensamblado mediante la ref
 Recorte la aplicación mediante el comando [dotnet publish](../tools/dotnet-publish.md). Al publicar la aplicación, establezca las tres opciones siguientes:
 
 - Publicación como independiente: `--self-contained true`
-- Deshabilitar la publicación de un solo archivo: `-p:PublishSingleFile=false`
 - Habilitar recorte: `p:PublishTrimmed=true`
 
-En el ejemplo siguiente se publica una aplicación para Windows 10 como independiente y se recorta la salida.
+En este ejemplo se publica una aplicación para Windows como independiente y se recorta la salida.
 
-```dotnetcli
-dotnet publish -c Release -r win10-x64 --self-contained true -p:PublishSingleFile=false -p:PublishTrimmed=true
+```xml
+<ItemGroup>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+    <PublishTrimmed>true</PublishTrimmed>
+</ItemGroup>
+```
+
+En este ejemplo se publica una aplicación en el modo de recorte agresivo en el que el código no usado dentro de los ensamblados se desactivará y se habilitarán las advertencias de recorte.
+
+```xml
+<ItemGroup>
+    <TrimMode>link</TrimMode>
+    <SuppressTrimAnalysisWarnings>false</SuppressTrimAnalysisWarnings>
+</ItemGroup>
 ```
 
 Para obtener más información, vea [Publicación de aplicaciones .NET Core con la CLI de .NET Core](deploy-with-cli.md).

@@ -2,17 +2,16 @@
 title: Solución de problemas en instalaciones y desinstalaciones bloqueadas de .NET Framework
 description: Solucione los problemas que encuentre que impidan la instalación del .NET Framework. Consulte los mensajes de estado para obtener información de solución de problemas.
 ms.date: 04/18/2019
-ms.custom: updateeachrelease
 helpviewer_keywords:
 - .NET Framework, troubleshooting blocked installations
 - blocked .NET Framework installations, troubleshooting
 ms.assetid: c3fdfbc1-ed99-4202-a2b0-8c4f1646385d
-ms.openlocfilehash: 70cefb53d29c7a895a3e242776bae39b7636fd65
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: e6f5dbce6bd10ae68b2033a135660d1e31aceff9
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79506962"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558457"
 ---
 # <a name="troubleshoot-blocked-net-framework-installations-and-uninstallations"></a>Solución de problemas en instalaciones y desinstalaciones bloqueadas de .NET Framework
 
@@ -36,7 +35,7 @@ En esta tabla, 4.5.x hace referencia a .NET Framework 4.5 y sus versiones secun
 |.NET Framework 4.5.x/4.6.x/4.7.x/4.8 no se puede desinstalar con este paquete. Para desinstalar .NET Framework 4.5.x/4.6.x/4.7.x/4.8 en el equipo, vaya a **Panel de control**, elija **Programas y características**, **Ver actualizaciones instaladas**, seleccione Actualización para Microsoft Windows (KB2828152) y, por último, elija **Desinstalar**.|El paquete que está instalando no desinstala la versión Preview o RC de .NET Framework.<br /><br /> Desinstale la versión Preview o RC desde el Panel de control.|  
 |No se puede desinstalar .NET Framework 4.5.x/4.6.x/4.7.x/4.8. Otras aplicaciones del equipo dependen de este programa.|En general, no debe desinstalar ninguna versión de .NET Framework que esté instalada en el equipo, ya que puede haber aplicaciones que dependan de una versión concreta de .NET Framework. Para obtener más información, vea la sección [.NET Framework para usuarios](../get-started/index.md#ForUsers) en la guía *Introducción*.|  
 |El paquete redistribuible de .NET Framework 4.5.x/4.6.x/4.7.x/4.8 no es válido para este sistema operativo. Descargue .NET Framework 4.5.x/4.6.x/4.7.x/4.8 para su sistema operativo desde la página de descarga de .NET Framework.|Es posible que esté intentando instalar .NET Framework 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 o 4.8 en una plataforma no compatible o que haya elegido un paquete de instalación que no incluye los componentes para todos los sistemas operativos compatibles. Vuelva a ejecutar la instalación por medio del instalador sin conexión ([para 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=309493), [para 4.5.2](https://dotnet.microsoft.com/download/dotnet-framework/net452), [para 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46), [para 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461), para [4.6.2](https://go.microsoft.com/fwlink/p/?LinkId=780604), para [4.7](https://go.microsoft.com/fwlink/p/?LinkId=825306)), para [4.7.1](https://go.microsoft.com/fwlink/p/?LinkId=852090), para [4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472) o para [4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48). Para obtener más información, consulte la [guía de instalación](guide-for-developers.md) y los [requisitos del sistema](../get-started/system-requirements.md) para los sistemas operativos compatibles.|  
-|La actualización correspondiente a KB\<*número*> debe estar instalada para poder instalar este producto.|La instalación de .NET Framework requiere que haya una actualización KB instalada antes de instalar .NET Framework. Instale la actualización y luego inicie la instalación de .NET Framework de nuevo.<br /><br /> Por ejemplo, la instalación de las versiones actualizadas de .NET Framework en Windows 8.1, Windows RT 8.1 y Windows Server 2012 R2 requiere que la actualización correspondiente a [KB 2919355](https://support.microsoft.com/kb/2919355) esté instalada.|  
+|La actualización correspondiente a KB\<*number*> debe estar instalada para poder instalar este producto.|La instalación de .NET Framework requiere que haya una actualización KB instalada antes de instalar .NET Framework. Instale la actualización y luego inicie la instalación de .NET Framework de nuevo.<br /><br /> Por ejemplo, la instalación de las versiones actualizadas de .NET Framework en Windows 8.1, Windows RT 8.1 y Windows Server 2012 R2 requiere que la actualización correspondiente a [KB 2919355](https://support.microsoft.com/kb/2919355) esté instalada.|  
 |El equipo está ejecutando actualmente una instalación Server Core del sistema operativo Windows Server 2008. .NET Framework 4.5.x requiere una versión posterior del sistema operativo. Instale Windows Server 2008 R2 SP1 o posterior y vuelva a ejecutar el programa de instalación de .NET Framework 4.5.x.|.NET Framework 4.5.1 y 4.5.2 se admiten en el rol Server Core con Windows Server 2008 R2 SP1 o versiones posteriores. Consulte [Requisitos del sistema](../get-started/system-requirements.md).|  
 |No tiene privilegios suficientes para completar esta operación para todos los usuarios de este equipo. Inicie sesión como administrador y ejecute de nuevo el **programa de instalación**.|Tiene que ser administrador del equipo para instalar .NET Framework.|  
 |El programa de instalación no puede continuar porque una instalación anterior requiere reiniciar el equipo. Reinicie el equipo y ejecute de nuevo el programa de instalación.|Siempre es necesario reiniciar para completar una instalación. Siga las instrucciones para reiniciar el equipo y vuelva a ejecutar el programa de instalación.<br /><br /> En raras ocasiones, se le pedirá que reinicie el sistema más de una vez si Windows ha detectado que faltan instalaciones y se está reiniciando para instalar la actualización siguiente en la cola.|  

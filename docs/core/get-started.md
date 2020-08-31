@@ -5,12 +5,12 @@ author: adegeo
 ms.author: adegeo
 ms.date: 12/03/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: ddbee0764897b511cac0c4142354ba995d94a2b6
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: 56eebc0fc5bad6f57d93358cbbef389d6355d66b
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86416054"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656695"
 ---
 # <a name="get-started-with-net-core"></a>Introducción a .NET Core
 
@@ -35,7 +35,7 @@ Debería ver los siguientes resultados:
 Hello World!
 ```
 
-¡Enhorabuena! Ha creado una sencilla aplicación .NET Core. También puede usar [Visual Studio Code](./tutorials/with-visual-studio-code.md), [Visual Studio ](./tutorials/with-visual-studio.md) (solo Windows) o [Visual Studio para Mac](./tutorials/using-on-mac-vs.md) (solo macOS), para crear una aplicación .NET Core.
+¡Enhorabuena! Ha creado una sencilla aplicación .NET Core. También puede usar [Visual Studio Code](./tutorials/with-visual-studio-code.md), [Visual Studio ](./tutorials/with-visual-studio.md) (solo Windows) o [Visual Studio para Mac](tutorials/with-visual-studio-mac.md) (solo macOS), para crear una aplicación .NET Core.
 
 ## <a name="tutorials"></a>Tutoriales
 
@@ -47,7 +47,7 @@ Para comenzar a desarrollar aplicaciones .NET Core, puede seguir estos tutoriale
 
 - [Creación de su primera aplicación de consola con .NET Core en Visual Studio 2019](./tutorials/with-visual-studio.md)
 - [Compilación de una biblioteca de clases con .NET Standard en Visual Studio](./tutorials/library-with-visual-studio.md)
-- [Introducción a .NET Core mediante la CLI de .NET Core](./tutorials/cli-create-console-app.md)
+- [Tutorial: Depuración de una aplicación de consola de .NET Core con Visual Studio Code](tutorials/with-visual-studio-code.md)
 
 |   |   |
 |---|---|
@@ -60,7 +60,7 @@ Vea el artículo [Dependencias y requisitos de .NET Core](install/dependencies.m
 
 Para comenzar a desarrollar aplicaciones .NET Core, puede seguir estos tutoriales paso a paso:
 
-- [Introducción a .NET Core con la línea de comandos](./tutorials/cli-create-console-app.md)
+- [Tutorial: Depuración de una aplicación de consola de .NET Core con Visual Studio Code](tutorials/with-visual-studio-code.md)
 
 |   |   |
 |---|---|
@@ -72,9 +72,8 @@ Vea el artículo [Dependencias y requisitos de .NET Core](install/dependencies.m
 
 Para comenzar a desarrollar aplicaciones .NET Core, puede seguir estos tutoriales paso a paso:
 
-- [Introducción a .NET Core en macOS con Visual Studio Code](./tutorials/using-on-macos.md)
-- [Introducción a .NET Core con la línea de comandos](./tutorials/cli-create-console-app.md)
-- [Introducción a .NET Core en macOS con Visual Studio para Mac](./tutorials/using-on-mac-vs.md)
+- [Tutorial: Depuración de una aplicación de consola de .NET Core con Visual Studio Code](tutorials/with-visual-studio-code.md)
+- [Tutorial: Creación de una aplicación de consola de .NET Core con Visual Studio para Mac](tutorials/with-visual-studio-mac.md)
 - [Creación de una biblioteca de .NET Standard en macOS mediante Visual Studio para Mac](tutorials/library-with-visual-studio-mac.md)
 
 |   |   |

@@ -1,6 +1,6 @@
 ---
-title: Introducción a la codificación de caracteres en .NET
-description: Obtenga información sobre la codificación y descodificación de caracteres en .NET.
+title: Introducción a la codificación character en .NET
+description: Obtenga información sobre la codificación y descodificación de character en .NET.
 ms.date: 03/09/2020
 no-loc:
 - Rune
@@ -10,20 +10,20 @@ dev_langs:
 - csharp
 helpviewer_keywords:
 - encoding, understanding
-ms.openlocfilehash: 85349e1e1c4eca4dd3ef7980f48350a4145fca24
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a5d838176bf4437a295ebe6c2cea8b1fe0eeeb61
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599872"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656298"
 ---
 # <a name="character-encoding-in-net"></a>Codificación de caracteres de .NET
 
-En este artículo se proporciona una introducción a los sistemas de codificación de caracteres que se usan con .NET. Se explica cómo funcionan los tipos <xref:System.String>, <xref:System.Char>, <xref:System.Text.Rune> y <xref:System.Globalization.StringInfo> con Unicode, UTF-16 y UTF-8.
+En este artículo se proporciona una introducción a los sistemas de codificación de character que se usan con .NET. Se explica cómo funcionan los tipos <xref:System.String>, <xref:System.Char>, <xref:System.Text.Rune> y <xref:System.Globalization.StringInfo> con Unicode, UTF-16 y UTF-8.
 
-El término *carácter* se usa aquí en el sentido general de *lo que un lector percibe como un solo elemento de presentación*. Algunos ejemplos comunes son la letra "a", el símbolo "@" y el emoji "🐂". A veces, lo que parece un carácter consta en realidad de varios elementos de visualización independientes, como se explica en la sección sobre los [clústeres de grafemas](#grapheme-clusters).
+El término *character* se usa aquí en el sentido general de *lo que un lector percibe como un solo elemento de presentación*. Algunos ejemplos comunes son la letra "a", el símbolo "@" y el emoji "🐂". A veces, lo que parece un charcter consta en realidad de varios elementos de visualización independientes, como se explica en la sección sobre los [clústeres de grafemas](#grapheme-clusters).
 
-## <a name="the-string-and-char-types"></a>Tipos string y char
+## <a name="the-no-locstring-and-no-locchar-types"></a>Tipos string y char
 
 Una instancia de la clase [string](xref:System.String) representa texto. Un elemento `string` es de forma lógica una secuencia de valores de 16 bits, cada uno de los cuales es una instancia de la estructura [char](xref:System.Char). La propiedad [string.Length](xref:System.String.Length) devuelve el número de instancias `char` de la instancia `string`.
 
@@ -46,7 +46,7 @@ s[3] = 'l' ('\u006c')
 s[4] = 'o' ('\u006f')
 ```
 
-Cada carácter se representa mediante un solo valor de `char`. Ese patrón se aplica a la mayoría de los idiomas del mundo. Por ejemplo, esta es la salida de dos caracteres chinos que suenan como *nǐ hǎo* y significan *Hello*:
+Cada `char`acter se representa mediante un solo valor de char. Ese patrón se aplica a la mayoría de los idiomas del mundo. Por ejemplo, esta es la salida de dos acter chinos que suenan como char*nǐ hǎo* y significan *Hola*:
 
 ```csharp
 PrintChars("你好");
@@ -58,7 +58,7 @@ s[0] = '你' ('\u4f60')
 s[1] = '好' ('\u597d')
 ```
 
-Sin embargo, en algunos lenguajes y en algunos símbolos y emoji, se necesitan dos instancias de `char` para representar un único carácter. Por ejemplo, compare los caracteres y las instancias de `char` de la palabra que significa *Osage* en el idioma Osage:
+Pero en algunos idiomas, símbolos y emoji, se necesitan dos instancias de `char` para representar un único character. Por ejemplo, compare los acter y las instancias de char de la palabra que significa `char`*Osage* en el idioma osage:
 
 ```csharp
 PrintChars("𐓏𐓘𐓻𐓘𐓻𐓟 𐒻𐓟");
@@ -85,7 +85,7 @@ s[15] = '�' ('\ud801')
 s[16] = '�' ('\udcdf')
 ```
 
-En el ejemplo anterior, cada carácter excepto el espacio se representa mediante dos instancias de `char`.
+En el ejemplo anterior, cada character excepto el espacio se representa mediante dos instancias de `char`.
 
 Un solo emoji Unicode se representa mediante dos instancias de `char`, tal como se ilustra en el ejemplo siguiente, que muestra un emoji de buey:
 
@@ -95,17 +95,17 @@ s[0] = '�' ('\ud83d')
 s[1] = '�' ('\udc02')
 ```
 
-En estos ejemplos se muestra que el valor de `string.Length`, que indica el número de instancias de `char`, no indica necesariamente el número de caracteres mostrados. Una sola instancia de `char` no representa necesariamente un carácter.
+En estos ejemplos se muestra que el valor de `string.Length`, que indica el número de instancias de `char`, no indica necesariamente el número de character mostrados. Una sola instancia de `char` no representa necesariamente un character.
 
-Los pares de `char` que se asignan a un único carácter se denominan *pares suplentes*. Para entender cómo funcionan, debe comprender la codificación Unicode y UTF-16.
+Los pares de `char` que se asignan a un único acter se denominan char*pares suplentes*. Para entender cómo funcionan, debe comprender la codificación Unicode y UTF-16.
 
 ## <a name="unicode-code-points"></a>Puntos de código Unicode
 
 Unicode es un estándar de codificación internacional que se usa en varias plataformas y con varios idiomas y scripts.
 
-El estándar Unicode define más de 1,1 millones de [puntos de código](https://www.unicode.org/glossary/#code_point). Un punto de código es un valor entero comprendido entre 0 y `U+10FFFF` (decimal 1.114.111). Algunos puntos de código se asignan a letras, símbolos o emoji. Otros se asignan a acciones que controlan el modo en que se muestra el texto o los caracteres, como el avance a una nueva línea. Muchos puntos de código todavía no se han asignado.
+El estándar Unicode define más de 1,1 millones de [puntos de código](https://www.unicode.org/glossary/#code_point). Un punto de código es un valor entero comprendido entre 0 y `U+10FFFF` (decimal 1.114.111). Algunos puntos de código se asignan a letras, símbolos o emoji. Otros se asignan a acciones que controlan el modo en el que se muestra el texto o los character, como el avance a una nueva línea. Muchos puntos de código todavía no se han asignado.
 
-Estos son algunos ejemplos de asignaciones de puntos de código, con vínculos a gráficos Unicode en los que aparecen:
+Estos son algunos ejemplos de asignaciones de puntos de código, con vínculos a charst Unicode en los que aparecen:
 
 |Decimal|Hex       |Ejemplo|Descripción|
 |------:|----------|-------|-----------|
@@ -124,11 +124,11 @@ Dentro del intervalo completo de puntos de código hay dos subintervalos:
 
 En el diagrama siguiente se ilustra la relación entre el BMP y los puntos de código suplementarios.
 
-:::image type="content" source="media/character-encoding-introduction/bmp-and-supplementary.svg" alt-text="BMP y puntos de código suplementarios":::
+:::image type="content" source="media/character-encoding-introduction/bmp-and-supplementary.svg" alt-text="BMP y puntos de código complementarios":::
 
 ## <a name="utf-16-code-units"></a>Unidades de código UTF-16
 
-El formato de transformación Unicode de 16 bits ([UTF-16](https://www.unicode.org/faq/utf_bom.html#UTF16)) es un sistema de codificación de caracteres que emplea *unidades de código* de 16 bits para representar puntos de código Unicode. .NET usa UTF-16 para codificar el texto de una instancia de `string`. Una instancia de `char` representa una unidad de código de 16 bits.
+El formato de transformación Unicode de 16 bits ([UTF-16](https://www.unicode.org/faq/utf_bom.html#UTF16)) es un sistema de codificación de acter que emplea char*unidades de código* de 16 bits para representar puntos de código Unicode. .NET usa UTF-16 para codificar el texto de una instancia de `string`. Una instancia de `char` representa una unidad de código de 16 bits.
 
 Una sola unidad de código de 16 bits puede representar cualquier punto de código en el intervalo de 16 bits del plano básico multilingüe. Sin embargo, un punto de código en el intervalo suplementario necesita dos instancias de `char`.
 
@@ -138,7 +138,7 @@ La conversión de dos valores de 16 bits en un único valor de 21 bits se facili
 
 En el diagrama siguiente se ilustra la relación entre el BMP y los puntos de código suplentes.
 
-:::image type="content" source="media/character-encoding-introduction/bmp-and-surrogate.svg" alt-text="BMP y los puntos de código suplentes":::
+:::image type="content" source="media/character-encoding-introduction/bmp-and-surrogate.svg" alt-text="BMP y puntos de código suplentes":::
 
 Cuando un punto de código *suplente superior* (`U+D800..U+DBFF`) va seguido inmediatamente por un punto de código *suplente inferior* (`U+DC00..U+DFFF`), el par se interpreta como un punto de código suplementario mediante la fórmula siguiente:
 
@@ -180,13 +180,13 @@ En el ejemplo anterior se muestra que `"\ud83c\udf39"` es la codificación UTF-1
 
 ## <a name="unicode-scalar-values"></a>Valores escalares Unicode
 
-El término [valor escalar Unicode](https://www.unicode.org/glossary/#unicode_scalar_value) hace referencia a todos los puntos de código distintos de los puntos de código suplentes. En otras palabras, un valor escalar es cualquier punto de código al que se le asigna un carácter o se le puede asignar en el futuro. Aquí "carácter" hace referencia a todo lo que se puede asignar a un punto de código, lo que incluye cosas como acciones que controlan cómo se muestra el texto o los caracteres.
+El término [valor escalar Unicode](https://www.unicode.org/glossary/#unicode_scalar_value) hace referencia a todos los puntos de código distintos de los puntos de código suplentes. En otras palabras, un valor escalar es cualquier punto de código al que se le asigna un character o se le puede asignar un character en el futuro. Aquí "carácter" hace referencia a todo lo que se puede asignar a un punto de código, lo que incluye cosas como acciones que controlan cómo se muestra el texto o character.
 
 En el diagrama siguiente se muestran los puntos de código de valor escalar.
 
 :::image type="content" source="media/character-encoding-introduction/scalar-values.svg" alt-text="Valores escalares":::
 
-### <a name="the-rune-type-as-a-scalar-value"></a>El tipo Rune como un valor escalar.
+### <a name="the-no-locrune-type-as-a-scalar-value"></a>El tipo Rune como un valor escalar.
 
 A partir de .NET Core 3.0, el tipo <xref:System.Text.Rune?displayProperty=fullName> representa un valor escalar Unicode. **`Rune` no está disponible en .NET Core 2. x o .NET Framework 4.x.**
 
@@ -202,7 +202,7 @@ En el siguiente ejemplo se produce una excepción porque el punto de código est
 
 :::code language="csharp" source="snippets/character-encoding-introduction/csharp/InstantiateRunes.cs" id="SnippetInvalidHigh":::
 
-### <a name="rune-usage-example-changing-letter-case"></a>Ejemplo de uso de Rune: cambio de las mayúsculas y minúsculas.
+### <a name="no-locrune-usage-example-changing-letter-case"></a>Ejemplo de uso de Rune: cambio de las mayúsculas y minúsculas.
 
 Una API que toma una instancia de `char` y da por supuesto que trabaja con un punto de código que es un valor escalar no funciona correctamente si `char` procede de un par suplente. Por ejemplo, considere el siguiente método que llama a <xref:System.Char.ToUpperInvariant%2A?displayProperty=nameWithType> en cada char en una instancia de string:
 
@@ -217,7 +217,7 @@ A continuación se muestran dos opciones para convertir correctamente una instan
 
   :::code language="csharp" source="snippets/character-encoding-introduction/csharp/ConvertToUpper.cs" id="SnippetGoodExample":::
 
-### <a name="other-rune-apis"></a>Otras API de Rune
+### <a name="other-no-locrune-apis"></a>Otras API de Rune
 
 El tipo `Rune` expone las analogías de muchas de las API de `char`. Por ejemplo, los métodos siguientes reflejan las API estáticas en el tipo `char`:
 
@@ -236,9 +236,9 @@ Para más información sobre el tipo `Rune` de .NET, consulte la referencia de A
 
 ## <a name="grapheme-clusters"></a>Clústeres de grafemas
 
-Lo que parece un carácter podría ser el resultado de una combinación de varios puntos de código, por lo que un término más descriptivo que se usa a menudo en lugar de "carácter" es [clúster de grafemas](https://www.unicode.org/glossary/#grapheme_cluster). El término equivalente en .NET es [elemento de texto](xref:System.Globalization.StringInfo.GetTextElementEnumerator%2A).
+Lo que parece un [acter podría ser el resultado de una combinación de varios puntos de código, por lo que un término más descriptivo que se usa a menudo en lugar de "](https://www.unicode.org/glossary/#grapheme_cluster)acter" es charclúster de grafemaschar. El término equivalente en .NET es [elemento de texto](xref:System.Globalization.StringInfo.GetTextElementEnumerator%2A).
 
-Tenga en cuenta las instancias de `string` "a", "á". "á" y "`👩🏽‍🚒`". Si el sistema operativo las trata como se especifica en el estándar Unicode, cada una de estas instancias de `string` aparece como un solo elemento de texto o clúster de grafemas. Sin embargo, las dos últimas están representadas por más de un punto de código de valor escalar.
+Tenga en cuenta las instancias de `string` "a", "á", "á" y "`👩🏽‍🚒`". Si el sistema operativo las trata como se especifica en el estándar Unicode, cada una de estas instancias de `string` aparece como un solo elemento de texto o clúster de grafemas. Sin embargo, las dos últimas están representadas por más de un punto de código de valor escalar.
 
 * La instancia "a" de string está representada por un valor escalar y contiene una instancia de `char`.
 
@@ -260,11 +260,11 @@ Tenga en cuenta las instancias de `string` "a", "á". "á" y "`👩🏽‍🚒`
   * `U+200D ZERO WIDTH JOINER`
   * `U+1F692 FIRE ENGINE` (intervalo suplementario, requiere un par suplente)
 
-En algunos de los ejemplos anteriores, como el de la combinación del modificador del acento o el modificador del tono de piel, el punto de código no se muestra como un elemento independiente en la pantalla, sino que sirve para modificar el aspecto de un elemento de texto que venía antes. En estos ejemplos se muestra que puede tomar varios valores escalares para componer lo que consideramos un solo "carácter" o un "clúster de grafemas".
+En algunos de los ejemplos anteriores, como el de la combinación del modificador del acento o el modificador del tono de piel, el punto de código no se muestra como un elemento independiente en la pantalla, sino que sirve para modificar el aspecto de un elemento de texto que venía antes. En estos ejemplos se muestra que puede tomar varios valores escalares para componer lo que consideramos un solo "character" o un "clúster de grafemas".
 
 Para enumerar los clústeres de grafemas de una instancia de `string`, use la clase <xref:System.Globalization.StringInfo> como se muestra en el ejemplo siguiente. Si está familiarizado con Swift, el tipo `StringInfo` de .NET es conceptualmente similar al tipo `character` de [Swift](https://developer.apple.com/documentation/swift/character).
 
-### <a name="example-count-char-rune-and-text-element-instances"></a>Ejemplo: recuento de instancias de elementos char, Rune y de texto
+### <a name="example-count-no-locchar-no-locrune-and-text-element-instances"></a>Ejemplo: recuento de instancias de elementos char, Rune y de texto
 
 En las API de .NET, un clúster de grafemas se conoce como *elemento de texto*. El método siguiente muestra las diferencias entre las instancias de elementos `char`, `Rune` y de texto en una instancia de `string`:
 
@@ -274,9 +274,9 @@ En las API de .NET, un clúster de grafemas se conoce como *elemento de texto*. 
 
 Si ejecuta este código en .NET Framework o .NET Core 3.1 o una versión anterior, el recuento de elementos de texto para el emoji muestra `4`. Esto se debe a un error en la clase `StringInfo` que se ha corregido en .NET 5.
 
-### <a name="example-splitting-string-instances"></a>Ejemplo: división de las instancias de string
+### <a name="example-splitting-no-locstring-instances"></a>Ejemplo: división de las instancias de string
 
-Al dividir las instancias de `string`, evite dividir los pares suplentes y los clústeres de grafemas. Considere el siguiente ejemplo de código incorrecto, que intenta insertar saltos de línea cada 10 caracteres en una instancia de string:
+Al dividir las instancias de `string`, evite dividir los pares suplentes y los clústeres de grafemas. Considere el siguiente ejemplo de código incorrecto, que intenta insertar saltos de línea cada 10 caracteres en una instancia de char:
 
 :::code language="csharp" source="snippets/character-encoding-introduction/csharp/InsertNewlines.cs" id="SnippetBadExample":::
 
@@ -365,16 +365,16 @@ En .NET, las instancias de `string` casi siempre contienen datos UTF-16 con un f
   const string s = "\ud800";
   ```
 
-* Una subcadena que divide un par suplente:
+* Una subcadena zzstring que divide un par suplente:
 
   ```csharp
   string x = "\ud83e\udd70"; // "🥰"
   string y = x.Substring(1, 1); // "\udd70" standalone low surrogate
   ```
 
-Las API como [`Encoding.UTF8.GetString`](xref:System.Text.UTF8Encoding.GetString%2A) nunca devuelven instancias de `string` con un formato incorrecto. Los métodos `Encoding.GetString` y `Encoding.GetBytes` detectan secuencias con un formato incorrecto en la entrada y realizan la sustitución de caracteres al generar la salida. Por ejemplo, si [`Encoding.ASCII.GetString(byte[])`](xref:System.Text.ASCIIEncoding.GetString%2A) observa un byte no ASCII en la entrada (fuera del intervalo de U+0000..U+007F), inserta un "?" en la instancia de `string` devuelta. [`Encoding.UTF8.GetString(byte[])`](xref:System.Text.UTF8Encoding.GetString%2A) reemplaza las secuencias UTF-8 con un formato incorrecto por `U+FFFD REPLACEMENT CHARACTER ('�')` en la instancia de `string` devuelta. Para más información, consulte [el estándar Unicode](https://www.unicode.org/versions/latest/), secciones 5.22 y 3.9.
+Las API como [`Encoding.UTF8.GetString`](xref:System.Text.UTF8Encoding.GetString%2A) nunca devuelven instancias de `string` con un formato incorrecto. Los métodos `Encoding.GetString` y `Encoding.GetBytes` detectan secuencias con un formato incorrecto en la entrada y realizan la sustitución de caracteres zzchar al generar la salida. Por ejemplo, si [`Encoding.ASCII.GetString(byte[])`](xref:System.Text.ASCIIEncoding.GetString%2A) observa un byte no ASCII en la entrada (fuera del intervalo de U+0000..U+007F), inserta un "?" en la instancia de `string` devuelta. [`Encoding.UTF8.GetString(byte[])`](xref:System.Text.UTF8Encoding.GetString%2A) reemplaza las secuencias UTF-8 con un formato incorrecto por `U+FFFD REPLACEMENT CHARACTER ('�')` en la instancia de `string` devuelta. Para más información, consulte [el estándar Unicode](https://www.unicode.org/versions/latest/), secciones 5.22 y 3.9.
 
-Las clases `Encoding` integradas también se pueden configurar para producir una excepción en lugar de realizar la sustitución de caracteres cuando se observan secuencias con un formato incorrecto. Este enfoque se suele usar en aplicaciones que dependen de la seguridad donde la sustitución de caracteres podría no ser aceptable.
+Las clases `Encoding` integradas también se pueden configurar para producir una excepción en lugar de realizar la sustitución de caracteres zzchar cuando se observan secuencias con un formato incorrecto. Este enfoque se suele usar en aplicaciones que dependen de la seguridad donde la sustitución de caracteres zzchar podría no ser aceptable.
 
 ```csharp
 byte[] utf8Bytes = ReadFromNetwork();
@@ -382,7 +382,7 @@ UTF8Encoding encoding = new UTF8Encoding(encoderShouldEmitUTF8Identifier: false,
 string asString = encoding.GetString(utf8Bytes); // will throw if 'utf8Bytes' is ill-formed
 ```
 
-Para información sobre cómo usar las clases `Encoding` integradas, consulte [Uso de las clases de codificación de caracteres en .NET](character-encoding.md).
+Para leer información sobre cómo usar las clases `Encoding` integradas, vea [Uso de las clases de codificación de caracteres en .NETzzchar](character-encoding.md).
 
 ## <a name="see-also"></a>Vea también
 

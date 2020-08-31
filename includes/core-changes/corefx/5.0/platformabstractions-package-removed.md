@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d85fb8df7afdc5f4c3faecebcd24d11677798bc9
-ms.sourcegitcommit: 63bb83322814f5e5e5c5b69939b14a3139a6ca7e
+ms.openlocfilehash: a635e2ed6a735b5234c92fd8f5ffa1685fe9373e
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85365625"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558193"
 ---
 ### <a name="microsoftdotnetplatformabstractions-package-removed"></a>Retirada del paquete Microsoft.DotNet.PlatformAbstractions
 
@@ -39,7 +39,7 @@ Los escenarios habilitados por la biblioteca <xref:Microsoft.DotNet.PlatformAbst
   | `RuntimeEnvironment.OperatingSystemVersion` | <xref:System.Runtime.InteropServices.RuntimeInformation.OSDescription?displayProperty=nameWithType> y <xref:System.Environment.OSVersion?displayProperty=nameWithType> |
 
   > [!NOTE]
-  > La finalidad de la mayoría de los casos de uso de `RuntimeEnvironment.OperatingSystem` y `RuntimeEnvironment.OperatingSystemVersion` es de visualización (por ejemplo, mostrar a un usuario el registro y la telemetría). No se recomienda tomar decisiones en tiempo de ejecución basadas en una versión del sistema operativo (SO). Ahora, <xref:System.Environment.OSVersion?displayProperty=nameWithType> devuelve la versión correcta para los sistemas operativos Windows y macOS. En cambio, para la mayoría de las distribuciones de UNIX, no queda tan claro lo que se considera "versión del sistema operativo". Por ejemplo, podría ser la versión del kernel de Linux o podría ser la versión de distribución. En la mayoría de las plataformas UNIX, <xref:System.Environment.OSVersion?displayProperty=nameWithType> y <xref:System.Runtime.InteropServices.RuntimeInformation.OSDescription?displayProperty=nameWithType> devuelven la versión devuelta por `uname`. Para obtener el nombre y la versión de la distribución de Linux, lo recomendado es leer el archivo */etc/os-release*.
+  > La finalidad de la mayoría de los casos de uso de `RuntimeEnvironment.OperatingSystem` y `RuntimeEnvironment.OperatingSystemVersion` es de visualización (por ejemplo, mostrar a un usuario el registro y la telemetría). No se recomienda tomar decisiones en tiempo de ejecución basadas en una versión del sistema operativo (SO). Ahora, <xref:System.Environment.OSVersion?displayProperty=nameWithType> [devuelve la versión correcta](../../../../docs/core/compatibility/corefx.md#environmentosversion-returns-the-correct-operating-system-version) para los sistemas operativos Windows y macOS. En cambio, para la mayoría de las distribuciones de UNIX, no queda tan claro lo que se considera "versión del sistema operativo". Por ejemplo, podría ser la versión del kernel de Linux o podría ser la versión de distribución. En la mayoría de las plataformas UNIX, <xref:System.Environment.OSVersion?displayProperty=nameWithType> y <xref:System.Runtime.InteropServices.RuntimeInformation.OSDescription?displayProperty=nameWithType> devuelven la versión devuelta por `uname`. Para obtener el nombre y la versión de la distribución de Linux, lo recomendado es leer el archivo */etc/os-release*.
 
 #### <a name="category"></a>Categoría
 

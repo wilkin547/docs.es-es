@@ -2,12 +2,12 @@
 title: Prueba de una biblioteca de clases .NET Standard con .NET Core mediante Visual Studio Code
 description: Cree un proyecto de prueba unitaria para una biblioteca de clases de .NET Core. Compruebe que la biblioteca de clases de .NET Core funciona correctamente con pruebas unitarias.
 ms.date: 06/08/2020
-ms.openlocfilehash: a61fd952eea2dec0d5a9f351d3f3d01c738e8fad
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: b5f394b5dea2bf0b4af6e8b119df3fa0ec113dd3
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84701038"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811722"
 ---
 # <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio-code"></a>Tutorial: Prueba de una biblioteca de clases .NET Standard con .NET Core mediante Visual Studio Code
 
@@ -112,7 +112,7 @@ Para crear los métodos de prueba:
 
    en la salida del terminal se indica que se han superado todas las pruebas.
 
-   ```
+   ```output
    Starting test execution, please wait...
 
    A total of 1 test files matched the specified pattern.
@@ -142,7 +142,7 @@ Si está realizando el desarrollo controlado por pruebas (TDD), escribirá las p
 
    en la salida del terminal se indica que una de las pruebas no se supera y se proporciona un mensaje de error al respecto: "Error de Assert.IsFalse. Se esperaba para "Error": false; real: True". Debido al error, no se probaron todas las cadenas de la matriz después de "Error".
 
-   ```
+   ```output
    Starting test execution, please wait...
 
    A total of 1 test files matched the specified pattern.

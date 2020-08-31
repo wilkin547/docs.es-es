@@ -4,12 +4,12 @@ description: Información general de la lógica de sondeo System.Runtime.Loader.
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
-ms.openlocfilehash: 1e347c716c2d739a1bd03be056b57fdbda6c678f
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 13ce4c7de5f6ce1b76b2e61db810c0f19717540f
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82859515"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608423"
 ---
 # <a name="default-probing"></a>Sondeo predeterminado
 
@@ -38,9 +38,11 @@ Existen dos escenarios principales para rellenar las propiedades, en función de
 
 Además, los archivos *\*.deps.json* para cualquier marco al que se hace referencia se analizan de forma similar.
 
-Por último, se puede usar la variable de entorno `ADDITIONAL_DEPS` para agregar dependencias adicionales.
+Por último, se puede usar la variable de entorno `ADDITIONAL_DEPS` para agregar dependencias adicionales.  `dotnet.exe` también contiene un parámetro `--additional-deps` opcional para establecer este valor en el inicio de la aplicación.
 
 Las propiedades `APP_PATHS` y `APP_NI_PATHS` no se rellenan de forma predeterminada y se omiten en la mayoría de las aplicaciones.
+
+Se puede tener acceso a la lista de todos los archivos *\*.deps.json* usados por la aplicación a través de `System.AppContext.GetData("APP_CONTEXT_DEPS_FILES")`.
 
 ### <a name="how-do-i-see-the-probing-properties-from-managed-code"></a>Cómo ver las propiedades de sondeo desde un código administrado
 

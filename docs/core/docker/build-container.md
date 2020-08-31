@@ -4,12 +4,12 @@ description: En este tutorial obtendrá información sobre cómo incluir una apl
 ms.date: 04/27/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c5e6648539af45f3ce615bfc183e6f95a62b085a
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 99bbc67096d98622ca5c0dc83d8b1be44a9995e5
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200033"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810552"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Tutorial: Incluir una aplicación de .NET Core en un contenedor
 
@@ -73,7 +73,7 @@ La plantilla predeterminada crea una aplicación que imprime en el terminal y te
 > [!TIP]
 > Si está utilizando Visual Studio Code, en la sesión de Terminal anterior, escriba el siguiente comando:
 >
-> ```
+> ```console
 > code .
 > ```
 >

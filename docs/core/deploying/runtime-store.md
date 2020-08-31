@@ -2,12 +2,12 @@
 title: Almacenamiento de paquetes en tiempo de ejecución
 description: Aprenda a usar el almacenamiento de paquetes en tiempo de ejecución para destinar manifiestos que usa .NET Core.
 ms.date: 08/12/2017
-ms.openlocfilehash: 4395370c3bb2d97511d549a63813022fb8cac4b7
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: e9e27ef535dbd9e7197c323f7e49a9960aeff0f9
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158299"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608354"
 ---
 # <a name="runtime-package-store"></a>Almacenamiento de paquetes en tiempo de ejecución
 
@@ -114,7 +114,7 @@ Cuando la implementación se *reduce* en su publicación, solo las versiones esp
 
 ## <a name="specifying-target-manifests-in-the-project-file"></a>Especificar los manifiestos de destino en el archivo del proyecto
 
-Una alternativa de especificar manifiestos de destino con el comando [`dotnet publish`](../tools/dotnet-publish.md) es especificarlos en el archivo de proyecto como una lista de rutas separadas por punto y coma en una etiqueta **\<TargetManifestFiles>** .
+Una alternativa a especificar manifiestos de destino con el comando [`dotnet publish`](../tools/dotnet-publish.md) es especificarlos en el archivo de proyecto como una lista de rutas separadas por punto y coma en una etiqueta **\<TargetManifestFiles>** .
 
 ```xml
 <PropertyGroup>
@@ -128,11 +128,11 @@ Especifique los manifiestos de destino en el archivo de proyecto solo cuando el 
 
 El almacenamiento implícito de ASP.NET Core solo se aplica a ASP.NET Core 2.0. Se recomienda encarecidamente que las aplicaciones usen ASP.NET Core 2.1 y versiones posteriores, que **no** usan almacenamiento implícito. ASP.NET Core 2.1 y versiones posteriores usan el marco de trabajo compartido.
 
-En el caso de .NET Core 2.0, una aplicación de ASP NET Core usa implícitamente la característica de almacenamiento de paquetes en tiempo de ejecución cuando la aplicación se implementa como aplicación de [implementación dependiente del entorno de ejecución](index.md#publish-runtime-dependent). Los destinos en [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk) incluyen manifiestos que hacen referencia al almacenamiento de paquetes implícito en el sistema de destino. Además, cualquier aplicación dependiente del entorno de ejecución que dependa del paquete `Microsoft.AspNetCore.All` se traducirá en una aplicación publicada que solo contiene la aplicación y sus recursos, pero no los paquetes que se muestran en el metapaquete `Microsoft.AspNetCore.All`. Se presupone que esos paquetes están presentes en el sistema de destino.
+En el caso de .NET Core 2.0, una aplicación de ASP NET Core usa implícitamente la característica de almacenamiento de paquetes en tiempo de ejecución cuando la aplicación se implementa como aplicación de [implementación dependiente del marco](index.md#publish-framework-dependent). Los destinos en [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk) incluyen manifiestos que hacen referencia al almacenamiento de paquetes implícito en el sistema de destino. Además, cualquier aplicación dependiente del marco que dependa del paquete `Microsoft.AspNetCore.All` se traducirá en una aplicación publicada que solo contiene la aplicación y sus recursos, pero no los paquetes que se muestran en el metapaquete `Microsoft.AspNetCore.All`. Se presupone que esos paquetes están presentes en el sistema de destino.
 
 El almacenamiento de paquetes en tiempo de ejecución está instalado en el host cuando el SDK de .NET Core está instalado. Otros instaladores pueden proporcionar el almacenamiento de paquetes en tiempo de ejecución, incluidas las instalaciones Zip/tarball del SDK de .NET Core, `apt-get`, Red Hat Yum, la agrupación de hospedaje de Windows Server para .NET Core y las instalaciones manuales de almacenamiento de paquetes en tiempo de ejecución.
 
-Al implementar una aplicación de [implementación dependiente del entorno de ejecución](index.md#publish-runtime-dependent), asegúrese de que el entorno de destino tiene el SDK de .NET Core instalado. Si la aplicación se implementa en un entorno que no incluye ASP.NET Core, puede rechazar el almacenamiento implícito especificando **\<PublishWithAspNetCoreTargetManifest>** en `false` en el archivo de proyecto como se muestra en el ejemplo siguiente:
+Al implementar una aplicación de [implementación dependiente del marco](index.md#publish-framework-dependent), asegúrese de que el entorno de destino tiene el SDK de .NET Core instalado. Si la aplicación se implementa en un entorno que no incluye ASP.NET Core, puede rechazar el almacenamiento implícito especificando **\<PublishWithAspNetCoreTargetManifest>** en `false` en el archivo de proyecto como se muestra en este ejemplo:
 
 ```xml
 <PropertyGroup>
@@ -141,7 +141,7 @@ Al implementar una aplicación de [implementación dependiente del entorno de ej
 ```
 
 > [!NOTE]
-> En el caso de las aplicaciones de [implementación independiente](index.md#publish-self-contained), se presupone que el sistema de destino no contiene necesariamente los paquetes de manifiesto necesarios. Por lo tanto, **\<PublishWithAspNetCoreTargetManifest>** no puede establecerse en `true` para una aplicación independiente.
+> En el caso de las aplicaciones de [implementación independiente](index.md#publish-self-contained), se presupone que el sistema de destino no contiene necesariamente los paquetes de manifiesto necesarios. Por lo tanto, no se puede establecer **\<PublishWithAspNetCoreTargetManifest>** en `true` para una aplicación independiente.
 
 ## <a name="see-also"></a>Vea también
 

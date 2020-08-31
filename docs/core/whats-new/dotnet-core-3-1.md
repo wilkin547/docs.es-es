@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 2373b21e92c6ca68aac33684a9bd0912a2e642b3
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 42d4f7e8800bf2d13d584084f8a41bad2ada534f
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324276"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608131"
 ---
 # <a name="whats-new-in-net-core-31"></a>Novedades de .NET Core 3.1
 
@@ -45,7 +45,7 @@ A partir del SDK de .NET Core 3.1 para macOS, la configuración de appHost est�
 
 Cuando la configuración de appHost está habilitada, .NET Core genera un ejecutable Mach-O nativo al compilar o publicar. La aplicación se ejecuta en el contexto de appHost cuando se ejecuta desde el código fuente con el comando `dotnet run` o mediante el inicio directo del ejecutable Mach-O.
 
-Sin appHost, la única manera en que un usuario puede iniciar una aplicación [dependiente del entorno de ejecución](../deploying/index.md#publish-runtime-dependent) es con el comando `dotnet <filename.dll>`. Siempre se crea un instancia de appHost al publicar la aplicación de manera [independiente](../deploying/index.md#publish-self-contained).
+Sin appHost, la única manera en la que un usuario puede iniciar una aplicación [dependiente del marco](../deploying/index.md#publish-framework-dependent) es con el comando `dotnet <filename.dll>`. Siempre se crea un instancia de appHost al publicar la aplicación de manera [independiente](../deploying/index.md#publish-self-contained).
 
 Puede configurar appHost en el nivel de proyecto, o bien cambiar la instancia de appHost de un comando `dotnet` específico con el parámetro `-p:UseAppHost`:
 

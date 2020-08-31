@@ -4,12 +4,12 @@ description: Aprenda a compilar una aplicación de .NET para Apache Spark en Wi
 ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: how-to
-ms.openlocfilehash: 6d52e5be8c8e528880eece5a9b46fb08933c1eb3
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: d4755ff94ffc1f678bc078e382e353c203caba87
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617670"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812255"
 ---
 # <a name="learn-how-to-build-your-net-for-apache-spark-application-on-windows"></a>Aprenda a compilar una aplicación de .NET para Apache Spark en Windows
 
@@ -53,7 +53,7 @@ Si ya cumple con todos los requisitos previos siguientes, vaya a los pasos de [c
      - Confirme que puede ejecutar `spark-shell` desde la línea de comandos.
         Salida de la consola de ejemplo:
 
-        ```
+        ```output
         Welcome to
               ____              __
              / __/__  ___ _____/ /__

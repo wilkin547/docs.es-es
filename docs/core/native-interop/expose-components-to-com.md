@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 17d85b9e9734fae0bb69f94da8c08669216ab0ae
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 346776ebae3a6077fd39f26d5bd19d599d163db2
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242873"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608342"
 ---
 # <a name="exposing-net-core-components-to-com"></a>Exposición de los componentes de .NET Core a COM
 
@@ -93,6 +93,6 @@ Puede encontrar un [ejemplo de servidor COM](https://github.com/dotnet/samples/t
 
 A diferencia de lo que ocurre en .NET Framework, .NET Core no admite la generación de una biblioteca de tipos COM (TLB) a partir de un ensamblado de .NET Core. La instrucción es escribir manualmente un archivo IDL o un encabezado C/C++ para las declaraciones nativas de las interfaces COM.
 
-No se admiten [implementaciones autocontenidas](../deploying/index.md#publish-self-contained) de componentes COM. Solo se admiten las [implementaciones dependientes del runtime](../deploying/index.md#publish-runtime-dependent) de los componentes COM.
+No se admiten [implementaciones autocontenidas](../deploying/index.md#publish-self-contained) de componentes COM. Solo se admiten las [implementaciones dependientes del marco](../deploying/index.md#publish-framework-dependent) de los componentes COM.
 
 Además, la carga de .NET Framework y .NET Core en el mismo proceso presenta limitaciones de diagnóstico. La limitación principal es la depuración de componentes administrados, ya que no es posible depurar .NET Framework y .NET Core al mismo tiempo. Asimismo, las dos instancias en tiempo de ejecución no comparten ensamblados administrados. Esto significa que no es posible compartir tipos de .NET reales entre los dos tiempos de ejecución, por lo que todas las interacciones deben restringirse a los contratos de interfaz COM expuestos.

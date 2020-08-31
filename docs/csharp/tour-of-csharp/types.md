@@ -2,12 +2,12 @@
 title: 'Definición de tipos y sus miembros: un recorrido por C#'
 description: Los bloques de creación de los programas son los tipos. Aprenda a crear clases, estructuras, interfaces y mucho más en C#.
 ms.date: 08/06/2020
-ms.openlocfilehash: 69d6f0fe1e11f287fb5e385761fc210a61929d10
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: efd353fe8c1e6a57952bcb2586a05ad38ecd52b9
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88068494"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559120"
 ---
 # <a name="types-and-members"></a>Tipos y miembros
 

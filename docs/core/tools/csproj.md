@@ -3,12 +3,12 @@ title: Adiciones al formato csproj para .NET Core
 description: Conozca las diferencias entre los archivos csproj de .NET Core y los existentes
 ms.topic: reference
 ms.date: 04/08/2019
-ms.openlocfilehash: 82174b2976abda2337a4a9b5a5a5e1f60a1094fb
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 7760dc095fa894b1f356c939eb030e675f58a876
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608331"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810890"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Adiciones al formato csproj para .NET Core
 
@@ -20,13 +20,13 @@ Se hace una referencia implícita a los metapaquetes basándose en los marcos de
 
 ```xml
  <PropertyGroup>
-   <TargetFramework>netcoreapp2.1</TargetFramework>
+   <TargetFramework>netcoreapp3.1</TargetFramework>
  </PropertyGroup>
  ```
 
  ```xml
  <PropertyGroup>
-   <TargetFrameworks>netcoreapp2.1;net462</TargetFrameworks>
+   <TargetFrameworks>netcoreapp3.1;net462</TargetFrameworks>
  </PropertyGroup>
  ```
 
@@ -116,11 +116,15 @@ Para deshabilitar **todos los globs implícitos**, puede establecer la propiedad
 
 Aunque dichos cambios de csproj simplifican considerablemente los archivos de proyecto, quizá desee visualizar el proyecto totalmente expandido tal y como MSBuild lo ve después de haber incluido el SDK y sus destinos. Preprocese el proyecto con [el conmutador `/pp`](/visualstudio/msbuild/msbuild-command-line-reference#preprocess) del comando [`dotnet msbuild`](dotnet-msbuild.md), que muestra qué archivos se han importado, sus orígenes y sus contribuciones a la compilación sin tener que compilar el proyecto realmente:
 
-`dotnet msbuild -pp:fullproject.xml`
+```dotnetcli
+dotnet msbuild -pp:fullproject.xml
+```
 
 Si el proyecto tiene varios marcos de destino, los resultados del comando deben centrarse solo en uno de ellos, especificándolo como una propiedad de MSBuild:
 
-`dotnet msbuild -p:TargetFramework=netcoreapp2.0 -pp:fullproject.xml`
+```dotnetcli
+dotnet msbuild -p:TargetFramework=netcoreapp3.1 -pp:fullproject.xml
+```
 
 ## <a name="additions"></a>Adiciones
 
@@ -218,10 +222,10 @@ En el ejemplo siguiente se proporcionan los elementos Fallback para todos los de
 </PackageTargetFallback >
 ```
 
-En el ejemplo siguiente se especifican los elementos Fallback solo para el destino `netcoreapp2.1`:
+En el ejemplo siguiente se especifican los elementos Fallback solo para el destino `netcoreapp3.1`:
 
 ```xml
-<PackageTargetFallback Condition="'$(TargetFramework)'=='netcoreapp2.1'">
+<PackageTargetFallback Condition="'$(TargetFramework)'=='netcoreapp3.1'">
     $(PackageTargetFallback);portable-net45+win8+wpa81+wp8
 </PackageTargetFallback >
 ```
