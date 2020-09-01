@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 helpviewer_keywords:
 - encoding, understanding
-ms.openlocfilehash: a5d838176bf4437a295ebe6c2cea8b1fe0eeeb61
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: d1f9878c7e7c07944a943c0b05e557ceaa5d1b2f
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656298"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812125"
 ---
 # <a name="character-encoding-in-net"></a>Codificación de caracteres de .NET
 
@@ -89,7 +89,7 @@ En el ejemplo anterior, cada character excepto el espacio se representa mediante
 
 Un solo emoji Unicode se representa mediante dos instancias de `char`, tal como se ilustra en el ejemplo siguiente, que muestra un emoji de buey:
 
-```
+```output
 "🐂".Length = 2
 s[0] = '�' ('\ud83d')
 s[1] = '�' ('\udc02')
