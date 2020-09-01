@@ -1,4 +1,5 @@
 ---
+description: -unsafe (Opciones del compilador de C#)
 title: -unsafe (Opciones del compilador de C#)
 ms.date: 04/25/2018
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - -unsafe compiler option [C#]
 - unsafe compiler option [C#]
 - /unsafe compiler option [C#]
-ms.openlocfilehash: 146299fda103567b111c66400c17edf36addd843
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0f6d94dd25a020d96430746c4b5e7aefd0f679da
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "65877994"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89140846"
 ---
 # <a name="-unsafe-c-compiler-options"></a>-unsafe (Opciones del compilador de C#)
 
@@ -24,7 +25,7 @@ La opción del compilador **-unsafe** permite la compilación de código en el q
 -unsafe  
 ```  
   
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Para obtener más información sobre el código no seguro, vea [Código no seguro y punteros](../../programming-guide/unsafe-code-pointers/index.md).  
   
@@ -59,4 +60,4 @@ csc -unsafe in.cs
 ## <a name="see-also"></a>Vea también
 
 - [Opciones del compilador de C#](index.md)
-- [Administrar propiedades de proyectos y de soluciones](/visualstudio/ide/managing-project-and-solution-properties)
+- [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)

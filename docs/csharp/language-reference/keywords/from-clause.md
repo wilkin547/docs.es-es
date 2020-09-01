@@ -1,4 +1,5 @@
 ---
+description: from (cláusula) - Referencia de C#
 title: from (cláusula) - Referencia de C#
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - from clause [C#]
 - from keyword [C#]
 ms.assetid: 1aefd18c-1314-47f8-99ec-9bcefb09e699
-ms.openlocfilehash: 388b9c0245b112d619fc173f6019b3f7dbf59940
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 474b22f5a9d8f12c8a4365159817f878761b563c
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75715289"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89140794"
 ---
 # <a name="from-clause-c-reference"></a>from (Cláusula, Referencia de C#)
 
@@ -35,7 +36,7 @@ El compilador deduce el tipo de la variable de rango cuando el origen de datos i
 
 En el ejemplo anterior, `num` se deduce que es de tipo `int`. Como la variable de rango está fuertemente tipada, puede llamar a los métodos en ella o usarla en otras operaciones. Por ejemplo, en lugar de escribir `select num`, podría escribir `select num.ToString()` para hacer que la expresión de consulta devuelva una secuencia de cadenas en lugar de enteros. O podría escribir `select num + 10` para hacer que la expresión devuelva la secuencia 14, 11, 13, 12, 10. Para obtener más información, vea [Cláusula select](select-clause.md).
 
-La variable de rango es como una variable de iteración en una instrucción [foreach](foreach-in.md) excepto por una diferencia muy importante: una variable de rango realmente nunca almacena datos del origen. Es solo una comodidad sintáctica que permite a la consulta describir lo que ocurrirá cuando se ejecute la consulta. Para obtener más información, vea [Introduction to LINQ queries (C#)](../../programming-guide/concepts/linq/introduction-to-linq-queries.md) [Introducción a las consultas LINQ (C#)].
+La variable de rango es como una variable de iteración en una instrucción [foreach](foreach-in.md) excepto por una diferencia muy importante: una variable de rango realmente nunca almacena datos del origen. Es solo una comodidad sintáctica que permite a la consulta describir lo que ocurrirá cuando se ejecute la consulta. Para obtener más información, vea [Introducción a las consultas LINQ (C#)](../../programming-guide/concepts/linq/introduction-to-linq-queries.md).
 
 ## <a name="compound-from-clauses"></a>Cláusulas From compuestas
 
