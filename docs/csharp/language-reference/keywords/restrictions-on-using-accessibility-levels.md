@@ -1,15 +1,16 @@
 ---
+description: 'Restricciones en el uso de los niveles de accesibilidad: Referencia de C#'
 title: 'Restricciones en el uso de los niveles de accesibilidad: Referencia de C#'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
-ms.openlocfilehash: 8082dbd7398b6634b68f1dd2887cd55d6798a5d9
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 542e463e41c70f2e8aed5c20dc1294e296a88518
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795162"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89137009"
 ---
 # <a name="restrictions-on-using-accessibility-levels-c-reference"></a>Restricciones en el uso de los niveles de accesibilidad (Referencia de C#)
 
@@ -22,7 +23,7 @@ public class MyClass: BaseClass {...} // Error
 
 En la tabla siguiente se resumen las restricciones en los niveles de accesibilidad declarados.
 
-|Contexto|Comentarios|
+|Context|Observaciones|
 |-------------|-------------|
 |[Clases](../../programming-guide/classes-and-structs/classes.md)|La clase base directa de un tipo de clase debe ser al menos igual de accesible que el propio tipo de clase.|
 |[Interfaces](../../programming-guide/interfaces/index.md)|Las interfaces base explícitas de un tipo de interfaz deben ser al menos igual de accesibles que el propio tipo de interfaz.|
@@ -103,7 +104,7 @@ public class A
 }
 ```
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

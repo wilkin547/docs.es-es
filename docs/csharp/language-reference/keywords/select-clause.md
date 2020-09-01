@@ -1,4 +1,5 @@
 ---
+description: 'Cláusula select: Referencia de C#'
 title: 'Cláusula select: Referencia de C#'
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - select keyword [C#]
 - select clause [C#]
 ms.assetid: df01e266-5781-4aaa-80c4-67cf28ea093f
-ms.openlocfilehash: 68ea7ad6fc7cf5580dbdd0ae7f012f36566db0dc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d67c99cc841c08a63cc83843a07a46e80199b9d1
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173515"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89136907"
 ---
 # <a name="select-clause-c-reference"></a>select (Cláusula, Referencia de C#)
 
@@ -33,7 +34,7 @@ En el ejemplo siguiente, se muestran las distintas formas que puede tener una cl
 
 Como se muestra en `studentQuery8` en el ejemplo anterior, a veces es posible que quiera que los elementos de la secuencia devuelta contengan solo un subconjunto de las propiedades de los elementos de origen. Al mantener la secuencia devuelta lo más pequeña posible, puede reducir los requisitos de memoria y aumentar la velocidad de ejecución de la consulta. Puede hacerlo al crear un tipo anónimo en la cláusula `select` y usar un inicializador de objeto para inicializarlo con las propiedades adecuadas del elemento de origen. Para obtener un ejemplo de cómo hacerlo, consulte [Inicializadores de objeto y de colección](../../programming-guide/classes-and-structs/object-and-collection-initializers.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 En tiempo de compilación, la cláusula `select` se convierte en una llamada de método al operador de consulta estándar <xref:System.Linq.Enumerable.Select%2A>.
 

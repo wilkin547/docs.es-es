@@ -1,16 +1,17 @@
 ---
+description: 'Palabras clave de consulta: Referencia de C#'
 title: 'Palabras clave de consulta: Referencia de C#'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - query keywords [C#]
 - LINQ [C#], query keywords
 ms.assetid: 6c9bec16-dbd7-4a7c-a060-fe4600b2021f
-ms.openlocfilehash: 01134eda540c5141afbd11b2c89ff779da495a9a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0beea8634d13222aa18f14d79fdbd95a35cc832e
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173528"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89137141"
 ---
 # <a name="query-keywords-c-reference"></a>Palabras clave de consulta (Referencia de C#)
 
@@ -18,7 +19,7 @@ En esta sección, se incluyen las palabras clave contextuales que se usan en exp
 
 ## <a name="in-this-section"></a>En esta sección
 
-|Cláusula|Description|
+|Cláusula|Descripción|
 |------------|-----------------|
 |[from](from-clause.md)|Especifica un origen de datos y una variable de rango (similar a una variable de iteración).|
 |[where](where-clause.md)|Filtra los elementos de origen en función de una o varias expresiones booleanas separadas por operadores lógicos AND y OR (`&&` o <code>&#124;&#124;</code>).|

@@ -1,4 +1,5 @@
 ---
+description: 'Modificador sealed: Referencia de C#'
 title: 'Modificador sealed: Referencia de C#'
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - sealed keyword [C#]
 ms.assetid: 8e4ed5d3-10be-47db-9488-0da2008e6f3f
-ms.openlocfilehash: 686afd5d9d0394bb1a802551b65083732599f384
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5b945503c6f6546f571a2422ae77760da0363b08
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713110"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89136972"
 ---
 # <a name="sealed-c-reference"></a>sealed (Referencia de C#)
 
@@ -55,7 +56,7 @@ El resultado es un mensaje de error:
 
 `'MyDerivedC': cannot derive from sealed type 'SealedClass'`
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Para determinar si se debe sellar una clase, un método o una propiedad, por lo general debe tener en cuenta los dos puntos siguientes:
 
@@ -63,7 +64,7 @@ Para determinar si se debe sellar una clase, un método o una propiedad, por lo 
 
 - La posibilidad de que las clases derivadas modifiquen las clases de tal manera que no funcionen correctamente o del modo esperado.
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

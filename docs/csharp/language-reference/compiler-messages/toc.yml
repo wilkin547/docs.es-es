@@ -1,275 +1,277 @@
-- name: 'Errores del compilador de C#'
+- name: Mensajes del compilador de C#
   href: index.md
   items:
-    - name: Error del compilador CS0001
+    - name: "Error del compilador\_CS0001"
       href: cs0001.md
-    - name: Error del compilador CS0006
+    - name: "Error del compilador\_CS0006"
       href: cs0006.md
-    - name: Error del compilador CS0007
+    - name: "Error del compilador\_CS0007"
       href: cs0007.md
-    - name: Error del compilador CS0015
+    - name: "Error del compilador\_CS0015"
       href: cs0015.md
-    - name: Error del compilador CS0016
+    - name: "Error del compilador\_CS0016"
       href: cs0016.md
-    - name: Error del compilador CS0019
+    - name: "Error del compilador\_CS0019"
       href: cs0019.md
-    - name: Error del compilador CS0029
+    - name: "Error del compilador\_CS0029"
       href: cs0029.md
-    - name: Error del compilador CS0034
+    - name: "Error del compilador\_CS0034"
       href: cs0034.md
-    - name: Error del compilador CS0038
+    - name: "Error del compilador\_CS0038"
       href: cs0038.md
-    - name: Error del compilador CS0039
+    - name: "Error del compilador\_CS0039"
       href: cs0039.md
-    - name: Error del compilador CS0050
+    - name: "Error del compilador\_CS0050"
       href: cs0050.md
-    - name: Error del compilador CS0051
+    - name: "Error del compilador\_CS0051"
       href: cs0051.md
-    - name: Error del compilador CS0052
+    - name: "Error del compilador\_CS0052"
       href: cs0052.md
-    - name: Error del compilador CS0071
+    - name: "Error del compilador\_CS0071"
       href: cs0071.md
-    - name: Error del compilador CS0103
+    - name: "Error del compilador\_CS0103"
       href: cs0103.md
-    - name: Error del compilador CS0106
+    - name: "Error del compilador\_CS0106"
       href: cs0106.md
-    - name: Error del compilador CS0115
+    - name: "Error del compilador\_CS0115"
       href: cs0115.md
-    - name: Error del compilador CS0116
+    - name: "Error del compilador\_CS0116"
       href: cs0116.md
-    - name: Error del compilador CS0120
+    - name: "Error del compilador\_CS0120"
       href: cs0120.md
-    - name: Error del compilador CS0122
+    - name: "Error del compilador\_CS0122"
       href: cs0122.md
-    - name: Error del compilador CS0134
+    - name: "Error del compilador\_CS0134"
       href: cs0134.md
-    - name: Error del compilador CS0151
+    - name: "Error del compilador\_CS0151"
       href: cs0151.md
-    - name: Error del compilador CS0163
+    - name: "Error del compilador\_CS0163"
       href: cs0163.md
-    - name: Error del compilador CS0165
+    - name: "Error del compilador\_CS0165"
       href: cs0165.md
-    - name: Error del compilador CS0173
+    - name: "Error del compilador\_CS0173"
       href: cs0173.md
-    - name: Error del compilador CS0178
+    - name: "Error del compilador\_CS0178"
       href: cs0178.md
-    - name: Error del compilador CS0188
+    - name: "Error del compilador\_CS0188"
       href: cs0188.md
-    - name: Error del compilador CS0201
+    - name: "Error del compilador\_CS0201"
       href: cs0201.md
-    - name: Error del compilador CS0229
+    - name: "Error del compilador\_CS0229"
       href: cs0229.md
-    - name: Error del compilador CS0233
+    - name: "Error del compilador\_CS0233"
       href: cs0233.md
-    - name: Error del compilador CS0234
+    - name: "Error del compilador\_CS0234"
       href: cs0234.md
-    - name: Error del compilador CS0246
+    - name: "Error del compilador\_CS0246"
       href: cs0246.md
-    - name: Error del compilador CS0260
+    - name: "Error del compilador\_CS0260"
       href: cs0260.md
-    - name: Error del compilador CS0266
+    - name: "Error del compilador\_CS0266"
       href: cs0266.md
-    - name: Error del compilador CS0269
+    - name: "Error del compilador\_CS0269"
       href: cs0269.md
-    - name: Error del compilador CS0270
+    - name: "Error del compilador\_CS0270"
       href: cs0270.md
-    - name: Error del compilador CS0304
+    - name: "Error del compilador\_CS0304"
       href: cs0304.md
-    - name: Error del compilador CS0310
+    - name: "Error del compilador\_CS0310"
       href: cs0310.md
-    - name: Error del compilador CS0311
+    - name: "Error del compilador\_CS0311"
       href: cs0311.md
-    - name: Error del compilador CS0413
+    - name: "Error del compilador\_CS0413"
       href: cs0413.md
-    - name: Error del compilador CS0417
+    - name: "Error del compilador\_CS0417"
       href: cs0417.md
-    - name: Error del compilador CS0433
+    - name: "Error del compilador\_CS0433"
       href: cs0433.md
-    - name: Error del compilador CS0445
+    - name: "Error del compilador\_CS0445"
       href: cs0445.md
-    - name: Error del compilador CS0446
+    - name: "Error del compilador\_CS0446"
       href: cs0446.md
-    - name: Error del compilador CS0504
+    - name: "Error del compilador\_CS0504"
       href: cs0504.md
-    - name: Error del compilador CS0507
+    - name: "Error del compilador\_CS0507"
       href: cs0507.md
-    - name: Error del compilador CS0518
+    - name: "Error del compilador\_CS0518"
       href: cs0518.md
-    - name: Error del compilador CS0523
+    - name: "Error del compilador\_CS0523"
       href: cs0523.md
-    - name: Error del compilador CS0545
+    - name: "Error del compilador\_CS0545"
       href: cs0545.md
-    - name: Error del compilador CS0552
+    - name: "Error del compilador\_CS0552"
       href: cs0552.md
-    - name: Error del compilador CS0563
+    - name: "Error del compilador\_CS0563"
       href: cs0563.md
-    - name: Error del compilador CS0570
+    - name: "Error del compilador\_CS0570"
       href: cs0570.md
-    - name: Error del compilador CS0571
+    - name: "Error del compilador\_CS0571"
       href: cs0571.md
-    - name: Error del compilador CS0579
+    - name: "Error del compilador\_CS0579"
       href: cs0579.md
-    - name: Error del compilador CS0592
+    - name: "Error del compilador\_CS0592"
       href: cs0592.md
-    - name: Error del compilador CS0616
+    - name: "Error del compilador\_CS0616"
       href: cs0616.md
-    - name: Error del compilador CS0650
+    - name: "Error del compilador\_CS0650"
       href: cs0650.md
-    - name: Error del compilador CS0686
+    - name: "Error del compilador\_CS0686"
       href: cs0686.md
     - name: Error del compilador CS0702
       href: cs0702.md
-    - name: Error del compilador CS0703
+    - name: "Error del compilador\_CS0703"
       href: cs0703.md
-    - name: Error del compilador CS0731
+    - name: "Error del compilador\_CS0731"
       href: cs0731.md
-    - name: Error del compilador CS0826
+    - name: "Error del compilador\_CS0826"
       href: cs0826.md
-    - name: Error del compilador CS0834
+    - name: "Error del compilador\_CS0834"
       href: cs0834.md
-    - name: Error del compilador CS0840
+    - name: "Error del compilador\_CS0840"
       href: cs0840.md
-    - name: Error del compilador CS0843
+    - name: "Error del compilador\_CS0843"
       href: cs0843.md
-    - name: Error del compilador CS0845
+    - name: "Error del compilador\_CS0845"
       href: cs0845.md
-    - name: Error del compilador CS1001
+    - name: "Error del compilador\_CS1001"
       href: cs1001.md
-    - name: Error del compilador CS1009
+    - name: "Error del compilador\_CS1009"
       href: cs1009.md
-    - name: Error del compilador CS1018
+    - name: "Error del compilador\_CS1018"
       href: cs1018.md
-    - name: Error del compilador CS1019
+    - name: "Error del compilador\_CS1019"
       href: cs1019.md
-    - name: Error del compilador CS1026
+    - name: "Error del compilador\_CS1026"
       href: cs1026.md
-    - name: Error del compilador CS1029
+    - name: "Error del compilador\_CS1029"
       href: cs1029.md
-    - name: Error del compilador CS1061
+    - name: "Error del compilador\_CS1061"
       href: cs1061.md
-    - name: Error del compilador CS1112
+    - name: "Error del compilador\_CS1112"
       href: cs1112.md
-    - name: Error del compilador CS1501
+    - name: "Error del compilador\_CS1501"
       href: cs1501.md
-    - name: Error del compilador CS1502
+    - name: "Error del compilador\_CS1502"
       href: cs1502.md
-    - name: Error del compilador CS1519
+    - name: "Error del compilador\_CS1519"
       href: cs1519.md
-    - name: Error del compilador CS1540
+    - name: "Error del compilador\_CS1540"
       href: cs1540.md
-    - name: Error del compilador CS1546
+    - name: "Error del compilador\_CS1546"
       href: cs1546.md
-    - name: Error del compilador CS1548
+    - name: "Error del compilador\_CS1548"
       href: cs1548.md
-    - name: Error del compilador CS1564
+    - name: "Error del compilador\_CS1564"
       href: cs1564.md
-    - name: Error del compilador CS1567
+    - name: "Error del compilador\_CS1567"
       href: cs1567.md
-    - name: Error del compilador CS1579
+    - name: "Error del compilador\_CS1579"
       href: cs1579.md
-    - name: Error del compilador CS1612
+    - name: "Error del compilador\_CS1612"
       href: cs1612.md
-    - name: Error del compilador CS1614
+    - name: "Error del compilador\_CS1614"
       href: cs1614.md
-    - name: Error del compilador CS1640
+    - name: "Error del compilador\_CS1640"
       href: cs1640.md
-    - name: Error del compilador CS1644
+    - name: "Error del compilador\_CS1644"
       href: cs1644.md
-    - name: Error del compilador CS1656
+    - name: "Error del compilador\_CS1656"
       href: cs1656.md
-    - name: Error del compilador CS1674
+    - name: "Error del compilador\_CS1674"
       href: cs1674.md
-    - name: Error del compilador CS1703
+    - name: "Error del compilador\_CS1703"
       href: cs1703.md
-    - name: Error del compilador CS1704
+    - name: "Error del compilador\_CS1704"
       href: cs1704.md
-    - name: Error del compilador CS1705
+    - name: "Error del compilador\_CS1705"
       href: cs1705.md
-    - name: Error del compilador CS1708
+    - name: "Error del compilador\_CS1708"
       href: cs1708.md
-    - name: Error del compilador CS1716
+    - name: "Error del compilador\_CS1716"
       href: cs1716.md
-    - name: Error del compilador CS1721
+    - name: "Error del compilador\_CS1721"
       href: cs1721.md
-    - name: Error del compilador CS1726
+    - name: "Error del compilador\_CS1726"
       href: cs1726.md
-    - name: Error del compilador CS1729
+    - name: "Error del compilador\_CS1729"
       href: cs1729.md
-    - name: Error del compilador CS1919
+    - name: "Error del compilador\_CS1919"
       href: cs1919.md
-    - name: Error del compilador CS1921
+    - name: "Error del compilador\_CS1921"
       href: cs1921.md
-    - name: Error del compilador CS1926
+    - name: "Error del compilador\_CS1926"
       href: cs1926.md
-    - name: Error del compilador CS1933
+    - name: "Error del compilador\_CS1933"
       href: cs1933.md
-    - name: Error del compilador CS1936
+    - name: "Error del compilador\_CS1936"
       href: cs1936.md
-    - name: Error del compilador CS1941
+    - name: "Error del compilador\_CS1941"
       href: cs1941.md
-    - name: Error del compilador CS1942
+    - name: "Error del compilador\_CS1942"
       href: cs1942.md
-    - name: Error del compilador CS1943
+    - name: "Error del compilador\_CS1943"
       href: cs1943.md
-    - name: Error del compilador CS1946
+    - name: "Error del compilador\_CS1946"
       href: cs1946.md
-    - name: Error del compilador CS2032
+    - name: "Error del compilador\_CS2032"
       href: cs2032.md
-    - name: Error del compilador CS7003
+    - name: "Error del compilador\_CS7003"
       href: cs7003.md
-    - name: Advertencia del compilador (nivel 1) CS0420
+    - name: "Advertencia del compilador (nivel\_1)\_CS0420"
       href: cs0420.md
-    - name: Advertencia del compilador (nivel 1) CS0465
+    - name: "Advertencia del compilador (nivel\_1)\_CS0465"
       href: cs0465.md
-    - name: Advertencia del compilador (nivel 1) CS1058
+    - name: "Advertencia del compilador (nivel\_1)\_CS1058"
       href: cs1058.md
-    - name: Advertencia del compilador (nivel 1) CS1060
+    - name: "Advertencia del compilador (nivel\_1)\_CS1060"
       href: cs1060.md
-    - name: Advertencia del compilador (nivel 1) CS1598
+    - name: "Advertencia del compilador (nivel\_1)\_CS1598"
       href: cs1598.md
-    - name: Advertencia del compilador (nivel 1) CS1607
+    - name: "Advertencia del compilador (nivel\_1)\_CS1607"
       href: cs1607.md
-    - name: Advertencia del compilador (nivel 1) CS1616
+    - name: "Advertencia del compilador (nivel\_1)\_CS1616"
       href: cs1616.md
-    - name: Advertencia del compilador (nivel 1) CS1658
+    - name: "Advertencia del compilador (nivel\_1)\_CS1658"
       href: cs1658.md
-    - name: Advertencia del compilador (nivel 1) CS1683
+    - name: "Advertencia del compilador (nivel\_1)\_CS1683"
       href: cs1683.md
-    - name: Advertencia del compilador (nivel 1) CS1685
+    - name: "Advertencia del compilador (nivel\_1)\_CS1685"
       href: cs1685.md
-    - name: Advertencia del compilador (nivel 1) CS1690
+    - name: "Advertencia del compilador (nivel\_1)\_CS1690"
       href: cs1690.md
-    - name: Advertencia del compilador (nivel 1) CS1691
+    - name: "Advertencia del compilador (nivel\_1)\_CS1691"
       href: cs1691.md
-    - name: Advertencia del compilador (nivel 1) CS1699
+    - name: "Advertencia del compilador (nivel\_1)\_CS1699"
       href: cs1699.md
-    - name: Advertencia del compilador (nivel 1) CS1762
+    - name: "Advertencia del compilador (nivel\_1)\_CS1762"
       href: cs1762.md
-    - name: Advertencia del compilador (nivel 1) CS1956
+    - name: "Advertencia del compilador (nivel\_1)\_CS1956"
       href: cs1956.md
-    - name: Advertencia del compilador (nivel 1) CS3003
+    - name: "Advertencia del compilador (nivel\_1)\_CS3003"
       href: cs3003.md
-    - name: Advertencia del compilador (nivel 1) CS3007
+    - name: "Advertencia del compilador (nivel\_1)\_CS3007"
       href: cs3007.md
-    - name: Advertencia del compilador (nivel 1) CS3009
+    - name: "Advertencia del compilador (nivel\_1)\_CS3009"
       href: cs3009.md
-    - name: Advertencia del compilador (nivel 1) CS4014
+    - name: "Advertencia del compilador (nivel\_1)\_CS4014"
       href: cs4014.md
-    - name: Advertencia del compilador (nivel 2) CS0108
+    - name: "Advertencia del compilador (nivel\_2)\_CS0108"
       href: cs0108.md
-    - name: Advertencia del compilador (nivel 2) CS0467
+    - name: "Advertencia del compilador (nivel\_2)\_CS0467"
       href: cs0467.md
-    - name: Advertencia del compilador (nivel 2) CS0618
+    - name: "Advertencia del compilador (nivel\_2)\_CS0618"
       href: cs0618.md
-    - name: Advertencia del compilador (nivel 2) CS1701
+    - name: "Advertencia del compilador (nivel\_2)\_CS1701"
       href: cs1701.md
-    - name: Advertencia del compilador (nivel 3) CS0675
+    - name: "Advertencia del compilador (nivel\_3)\_CS0675"
       href: cs0675.md
-    - name: Advertencia del compilador (nivel 3) CS1700
+    - name: "Advertencia del compilador (nivel\_3)\_CS1700"
       href: cs1700.md
-    - name: Advertencia del compilador (nivel 4) CS0429
+    - name: "Advertencia del compilador (nivel\_4)\_CS0429"
       href: cs0429.md
-    - name: Advertencia del compilador (nivel 4) CS1591
+    - name: "Advertencia del compilador (nivel\_4)\_CS1591"
       href: cs1591.md
-    - name: Advertencia del compilador (nivel 4) CS1610
+    - name: "Advertencia del compilador (nivel\_4)\_CS1610"
       href: cs1610.md
+    - name: "Advertencia del compilador (nivel\_5)\_CS8892"
+      href: cs8892.md
