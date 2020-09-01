@@ -1,4 +1,5 @@
 ---
+description: '#warning: Referencia de C#'
 title: '#warning: Referencia de C#'
 ms.date: 07/20/2015
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#warning directive [C#]'
 ms.assetid: e6fb496d-bb8b-4018-baf6-5b60a0c8902b
-ms.openlocfilehash: 38c3807a696599390667060d3bf374c68845fed0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ab2cc5120492fc2a4b94296eb85e563c0a1d5ad3
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75715070"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89137843"
 ---
 # <a name="warning-c-reference"></a>#warning (Referencia de C#)
 `#warning` permite generar una advertencia del compilador [CS1030](../../misc/cs1030.md) de nivel uno desde una ubicación específica en el código. Por ejemplo:  
@@ -20,7 +21,7 @@ ms.locfileid: "75715070"
 #warning Deprecated code in this method.  
 ```  
   
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
  Un uso común de `#warning` es en una directiva condicional. También es posible generar un error definido por el usuario con [#error](./preprocessor-error.md).  
   
 ## <a name="example"></a>Ejemplo  

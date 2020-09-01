@@ -1,4 +1,5 @@
 ---
+description: 'Modificador extern: Referencia de C#'
 title: 'Modificador extern: Referencia de C#'
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - DllImport attribute
 - extern keyword [C#]
 ms.assetid: 9c3f02c4-51b8-4d80-9cb2-f2b6e1ae15c7
-ms.openlocfilehash: c121d810e64b5fa27f105f814253c0752e028a95
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 25eb5e6642d8b608bedcb4e9adadde4d84c2bae9
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713536"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89138974"
 ---
 # <a name="extern-c-reference"></a>extern (Referencia de C#)
 
@@ -83,7 +84,7 @@ En este ejemplo se muestra un programa de C# que llama a una biblioteca de C (un
     SampleMethod() returns 50.
     ```
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

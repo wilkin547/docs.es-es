@@ -1,4 +1,5 @@
 ---
+description: 'Palabra clave checked: Referencia de C#'
 title: 'Palabra clave checked: Referencia de C#'
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - checked keyword [C#]
 ms.assetid: 718a1194-988d-48a3-b089-d6ee8bd1608d
-ms.openlocfilehash: 5963bb85ef4b61c1dc478667fb0e2e5438f3e4ad
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4dd8bc02d3af89d6bab3aef55a88cb8b40704da6
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713701"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89138285"
 ---
 # <a name="checked-c-reference"></a>checked (Referencia de C#)
 
@@ -36,7 +37,7 @@ En este ejemplo, se muestra cómo usar `checked` para habilitar la comprobación
 
 [!code-csharp[csrefKeywordsChecked#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsChecked/CS/csrefKeywordsChecked.cs#1)]
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
@@ -45,5 +46,5 @@ En este ejemplo, se muestra cómo usar `checked` para habilitar la comprobación
 - [Referencia de C#](../index.md)
 - [Guía de programación de C#](../../programming-guide/index.md)
 - [Palabras clave de C#](./index.md)
-- [Checked y Unchecked](./checked-and-unchecked.md)
+- [Checked y unchecked](./checked-and-unchecked.md)
 - [unchecked](./unchecked.md)

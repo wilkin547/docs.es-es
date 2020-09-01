@@ -1,4 +1,5 @@
 ---
+description: '#pragma warning: Referencia de C#'
 title: '#pragma warning: Referencia de C#'
 ms.date: 07/20/2015
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#pragma warning [C#]'
 ms.assetid: 723493d5-9753-4cec-babb-54e2b8eb36b6
-ms.openlocfilehash: 5620ea9e5f31c22e26bee95a450335bb179ced25
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3085c21db386ca215d48bbe8ade83cd26732242c
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712473"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89137973"
 ---
 # <a name="pragma-warning-c-reference"></a>#pragma warning (Referencia de C#)
 `#pragma warning` puede habilitar o deshabilitar determinadas advertencias.  

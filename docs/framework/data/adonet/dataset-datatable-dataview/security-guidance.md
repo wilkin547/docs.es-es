@@ -3,12 +3,12 @@ title: Guía de seguridad de DataSet y DataTable
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: 24c8a830f8638bc2d9dd20c2384c8230a682d817
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 4fe8a062c762cc70d33243e3443aa9bf55635f98
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812242"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89137622"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>Guía de seguridad de DataSet y DataTable
 
@@ -45,6 +45,9 @@ en System. Data. DataColumn. set_DataType (tipo valor)
 * Se produce un error en la operación de deserialización.
 
 Al cargar XML en una `DataSet` instancia de o existente `DataTable` , también se tienen en cuenta las definiciones de columna existentes. Si la tabla ya contiene una definición de columna de un tipo personalizado, ese tipo se agrega temporalmente a la lista de permitidos mientras dure la operación de deserialización de XML.
+
+> [!NOTE]
+> Una vez que se agregan columnas a `DataTable` , `ReadXml` no se leerá el esquema del XML y, si el esquema no coincide, tampoco se leerán en los registros, por lo que tendrá que agregar todas las columnas para usar este método.
 
 ```cs
 XmlReader xmlReader = GetXmlReader();
@@ -275,10 +278,10 @@ Si `AppContext` no está disponible, las comprobaciones de limitación de tipos 
 * Un administrador debe configurar el registro.
 * El uso del registro es un cambio en todo el equipo y afectará a _todas las_ aplicaciones que se ejecutan en la máquina.
 
-| Tipo  |  Valor |
+| Tipo  |  Value |
 |---|---|
 | **Clave del registro** | `HKLM\SOFTWARE\Microsoft\.NETFramework\AppContext` |
-| **Nombre del valor** | `Switch.System.Data.AllowArbitraryDataSetTypeInstantiation` |
+| **Nombre de valor** | `Switch.System.Data.AllowArbitraryDataSetTypeInstantiation` |
 | **Tipo de valor** | `REG_SZ` |
 | **Datos del valor** | `true` |
 
