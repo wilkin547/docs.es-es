@@ -1,4 +1,5 @@
 ---
+description: '#define: Referencia de C#'
 title: '#define: Referencia de C#'
 ms.date: 06/30/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#define directive [C#]'
 ms.assetid: 23638b8f-779c-450e-b600-d55682de7d01
-ms.openlocfilehash: c08d6f42c11184a4d14aa6712f9f0f8706a72cab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a37f883a249ec74b66769ee40b84b20e8568c451
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173437"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89132344"
 ---
 # <a name="define-c-reference"></a>#define (Referencia de C#)
 Usa `#define` para definir un símbolo. Si usa el símbolo como expresión que se pasa a la directiva [#if](./preprocessor-if.md), la expresión se evaluará como `true`, como se muestra en el siguiente ejemplo:  
@@ -20,7 +21,7 @@ Usa `#define` para definir un símbolo. Si usa el símbolo como expresión que s
  #define DEBUG
  ```
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]
 > La directiva `#define` no puede usarse para declarar valores constantes como suele hacerse en C y C++. En C#, las constantes se definen mejor como miembros estáticos de una clase o struct. Si tiene varias constantes de este tipo, puede considerar la posibilidad de crear una clase "Constants" independiente donde incluirlas.  
@@ -69,6 +70,6 @@ public class TestDefine
 - [Guía de programación de C#](../../programming-guide/index.md)
 - [Directivas de preprocesador de C#](./index.md)
 - [const](../keywords/const.md)
-- [Compilación condicional con Trace y Debug](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
+- [Cómo: Compilación condicional con Trace y Debug](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
 - [#undef](./preprocessor-undef.md)
 - [#if](./preprocessor-if.md)
