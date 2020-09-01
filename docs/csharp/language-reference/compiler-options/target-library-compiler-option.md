@@ -1,4 +1,5 @@
 ---
+description: -target:library (Opciones del compilador de C#)
 title: -target:library (Opciones del compilador de C#)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - target compiler options [C#], /target:library
 - /target compiler options [C#], /target:library
 ms.assetid: c5670e88-2126-47c1-8d1c-217923837d17
-ms.openlocfilehash: c947b2015c19d0809cab4535e989ee83ebf17fd9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 953249c4d0168ed3d279d03a0b2fb63d8ff6d5f5
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69606396"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89128483"
 ---
 # <a name="-targetlibrary-c-compiler-options"></a>-target:library (Opciones del compilador de C#)
 La opción **-target:library** hace que el compilador cree una biblioteca de vínculos dinámicos (DLL) en lugar de un archivo ejecutable (EXE).  
@@ -24,7 +25,7 @@ La opción **-target:library** hace que el compilador cree una biblioteca de ví
 -target:library  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  El archivo DLL se creará con la extensión .dll.  
   
  A menos que se especifique lo contrario con la opción [-out](./out-compiler-option.md), el archivo de salida adopta el nombre del primer archivo de entrada.  

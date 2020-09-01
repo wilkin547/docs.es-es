@@ -1,4 +1,5 @@
 ---
+description: -warnaserror (Opciones del compilador de C#)
 title: -warnaserror (Opciones del compilador de C#)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -warnaserror compiler option [C#]
 - warnaserror compiler option [C#]
 ms.assetid: 04680ec3-08d6-4e2e-a274-38310e10e33c
-ms.openlocfilehash: 7d43941629e933ac5a9e9c9d6a1388b6194f8d99
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3ccd4546402dbc8e5d9245af6411ba2d831d4959
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503479"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89127248"
 ---
 # <a name="-warnaserror-c-compiler-options"></a>-warnaserror (Opciones del compilador de C#)
 La opción **-warnaserror+** trata todas las advertencias como errores  
@@ -24,10 +25,10 @@ La opción **-warnaserror+** trata todas las advertencias como errores
 -warnaserror[+ | -][:warning-list]  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Cualquier mensaje que se notificaría de manera normal como una advertencia se notifica en su lugar como un error, y el proceso de compilación se detiene (no se compila ningún archivo de salida).  
   
- De manera predeterminada, **-warnaserror-** está en vigor, lo que provoca que las advertencias no impidan la generación de un archivo de salida. **-warnaserror**, que es igual que **-warnaserror+** , hace que las advertencias se traten como errores.  
+ De manera predeterminada, **-warnaserror-** está en vigor, lo que provoca que las advertencias no impidan la generación de un archivo de salida. **-warnaserror**, que es igual que **-warnaserror+**, hace que las advertencias se traten como errores.  
   
  Opcionalmente, si solo quiere que algunas advertencias específicas se traten como errores, puede especificar una lista separada por comas de números de advertencia que se tratarán como errores. Se puede especificar el conjunto de todas las advertencias de nulabilidad con la abreviatura **nullable**.
   
@@ -54,4 +55,4 @@ csc -warnaserror:642,649,652,nullable in.cs
 ## <a name="see-also"></a>Vea también
 
 - [Opciones del compilador de C#](./index.md)
-- [Administrar propiedades de proyectos y de soluciones](/visualstudio/ide/managing-project-and-solution-properties)
+- [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)

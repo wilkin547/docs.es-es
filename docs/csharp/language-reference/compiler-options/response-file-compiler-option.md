@@ -1,4 +1,5 @@
 ---
+description: '@ (Opciones del compilador de C#)'
 title: '@ (Opciones del compilador de C#)'
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - response files, specifying for compilation [C#]
 - '@ compiler option'
 ms.assetid: dda4fa9f-a02c-400f-8b6a-d58834e13d7f
-ms.openlocfilehash: d8e5c0ec148754c3e4cebfa32ad9f44a0bb0119e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 89a057cba6e0d23c15fc9b652e5bfbc89b6ecbaa
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70202913"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89128652"
 ---
 # <a name="-c-compiler-options"></a>@ (Opciones del compilador de C#)
 La opción @ le permite especificar un archivo que contiene opciones del compilador y archivos de código fuente para compilar.  
@@ -27,7 +28,7 @@ La opción @ le permite especificar un archivo que contiene opciones del compila
  `response_file`  
  Un archivo que enumera las opciones del compilador o los archivos de código fuente que se compilarán.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  El compilador procesará las opciones del compilador y los archivos de código fuente como si se hubieran especificado en la línea de comandos.  
   
  Para especificar más de un archivo de respuesta en una compilación, especifique varias opciones de archivo de respuesta. Por ejemplo:  

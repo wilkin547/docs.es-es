@@ -1,4 +1,5 @@
 ---
+description: 'Instrucción goto: Referencia de C#'
 title: 'Instrucción goto: Referencia de C#'
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - goto keyword [C#]
 ms.assetid: 2c03c9c1-8119-44ef-b740-fb3d287a42fe
-ms.openlocfilehash: 076f793e880a7b4d1e8872d80e88c44cdf077541
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: de95e477bd7e76f549130643c8d4b70a0e2f015c
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75715270"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89128431"
 ---
 # <a name="goto-c-reference"></a>goto (Referencia de C#)
 
@@ -34,7 +35,7 @@ En el ejemplo siguiente se muestra cómo usar `goto` para salir de bucles anidad
 
 [!code-csharp[csrefKeywordsJump#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#5)]
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

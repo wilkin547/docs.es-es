@@ -1,13 +1,14 @@
 ---
+description: -subsystemversion (Opciones del compilador de C#)
 title: -subsystemversion (Opciones del compilador de C#)
 ms.date: 07/20/2015
 ms.assetid: a99fce81-9d92-4813-9874-bee777041445
-ms.openlocfilehash: d76c9424340b4b6f3c211c849b466be55eb79d1e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e8001d8db214123e75fec4e1d1117ef90a9df606
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74802034"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89128600"
 ---
 # <a name="-subsystemversion-c-compiler-options"></a>-subsystemversion (Opciones del compilador de C#)
 
@@ -37,7 +38,7 @@ En la tabla siguiente se enumeran las versiones de subsistema habituales de Wind
 |Versión de Windows|Versión de subsistema|
 |---------------------|-----------------------|
 |Windows 2000|5.00|
-|Windows XP|5,01|
+|Windows XP|5.01|
 |Windows Server 2003|5.02|
 |Windows Vista|6.00|
 |Windows 7|6.01|

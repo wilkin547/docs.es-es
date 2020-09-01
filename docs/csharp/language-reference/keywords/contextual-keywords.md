@@ -1,21 +1,22 @@
 ---
+description: 'Palabras clave contextuales: Referencia de C#'
 title: 'Palabras clave contextuales: Referencia de C#'
 ms.date: 03/07/2017
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-ms.openlocfilehash: 1de8fbccfa9485a546689233ea8a601a8bd697a5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ccd9bcfe2702083573cef979b40ff4d7167e8041
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713654"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89128406"
 ---
 # <a name="contextual-keywords-c-reference"></a>Palabras clave contextuales (Referencia de C#)
 
 Las palabras clave contextuales se usan para proporcionar un significado específico en el código, pero no son una palabra reservada en C#. En esta sección se presentan las siguientes palabras clave contextuales:  
   
-|Palabra clave|Description|  
+|Palabra clave|Descripción|  
 |-------------|-----------------|  
 |[add](./add.md)|Define un descriptor de acceso de eventos personalizado que se invoca cuando el código de cliente se suscribe al evento.|  
 |[async](./async.md)|Indica que el método modificado, una expresión lambda o un método anónimo es asincrónico.|  
