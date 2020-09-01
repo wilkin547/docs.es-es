@@ -1,4 +1,5 @@
 ---
+description: 'is: Referencia de C#'
 title: 'is: Referencia de C#'
 ms.date: 06/21/2019
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: e64b690482419963a92764b2c97a42dbb231fbfc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3508f08857f88fd34478f968a71bae0121d54d1c
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398308"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89134515"
 ---
 # <a name="is-c-reference"></a>is (Referencia de C#)
 
@@ -70,7 +71,7 @@ El código equivalente sin coincidencia de patrones requiere una asignación ind
 
 ### <a name="constant-pattern"></a>Patrón de constante
 
-Al realizar la coincidencia de patrones con el patrón constante, `is` comprueba si una expresión es igual a una constante especificada. En C# 6 y versiones anteriores, la instrucción [switch](switch.md) admite el patrón de constante. A partir de C# 7.0, la instrucción `is` también lo admite. Su sintaxis es:
+Al realizar la coincidencia de patrones con el patrón constante, `is` comprueba si una expresión es igual a una constante especificada. En C# 6 y versiones anteriores, la instrucción [switch](switch.md) admite el patrón de constante. A partir de C# 7.0, la instrucción `is` también lo admite. La sintaxis es:
 
 ```csharp
    expr is constant
@@ -78,7 +79,7 @@ Al realizar la coincidencia de patrones con el patrón constante, `is` comprueba
 
 donde *expr* es la expresión que se va a evaluar y *constant* es el valor que se va a comprobar. *constant* puede ser cualquiera de las expresiones de constante siguientes:
 
-- Un valor literal.
+- Un valor literal
 
 - El nombre de una variable `const` declarada.
 
@@ -94,7 +95,7 @@ En el ejemplo siguiente se combinan los patrones de tipo y de constante para pro
 
 [!code-csharp[is#7](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern7.cs#7)]
 
-La búsqueda de `null` puede realizarse con el patrón de constante. La palabra clave `null` es compatible con la instrucción `is`. Su sintaxis es:
+La búsqueda de `null` puede realizarse con el patrón de constante. La palabra clave `null` es compatible con la instrucción `is`. La sintaxis es:
 
 ```csharp
    expr is null
@@ -106,7 +107,7 @@ En el ejemplo siguiente se muestra una comparación de comprobaciones `null`:
 
 ### <a name="var-pattern"></a>Patrón var
 
-Una coincidencia de patrones con el patrón `var` siempre se realiza correctamente. Su sintaxis es:
+Una coincidencia de patrones con el patrón `var` siempre se realiza correctamente. La sintaxis es:
 
 ```csharp
    expr is var varname

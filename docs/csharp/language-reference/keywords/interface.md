@@ -1,4 +1,5 @@
 ---
+description: ':::no-loc text=interface::: (Referencia de C#)'
 title: 'interface: Referencia de C#'
 ms.date: 01/17/2020
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - interface keyword [C#]
 ms.assetid: 7da38e81-4f99-4bc5-b07d-c986b687eeba
-ms.openlocfilehash: 869f1398ae0af3c7379655aa018a9f4aacb934d7
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 24f95e828522f467c519c0c8a7ba9410aa97af4e
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85243976"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89134593"
 ---
 # <a name="no-loc-textinterface-c-reference"></a>:::no-loc text="interface"::: (Referencia de C#)
 
@@ -65,7 +66,7 @@ En el ejemplo siguiente se muestra la implementación de una interfaz. En este e
 
 [!code-csharp[csrefKeywordsTypes#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#15)]
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 Para obtener más información, vea la sección [Interfaces](~/_csharplang/spec/interfaces.md) de [Especificación del lenguaje C#](~/_csharplang/spec/introduction.md) y la especificación de características de [Miembros de interfaz predeterminados (C# 8.0)](~/_csharplang/proposals/csharp-8.0/default-interface-methods.md)
 

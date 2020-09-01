@@ -1,4 +1,5 @@
 ---
+description: 'Palabra clave params para matrices de parámetros: referencia de C#'
 title: 'Palabra clave params para matrices de parámetros: referencia de C#'
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - params keyword [C#]
 - parameter array
 ms.assetid: 1690815e-b52b-4967-8380-5780aff08012
-ms.openlocfilehash: 77d7fd19ff57f80f401191027e2fae95026e1966
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: a2726c725508cd297001aaabddeff414704d1115
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738836"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89134476"
 ---
 # <a name="params-c-reference"></a>params (Referencia de C#)
 

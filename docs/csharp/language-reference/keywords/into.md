@@ -1,4 +1,5 @@
 ---
+description: 'into: Referencia de C#'
 title: 'into: Referencia de C#'
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - into keyword [C#]
 ms.assetid: 81ec62c1-f0b1-4755-8a31-959876e77f65
-ms.openlocfilehash: f0f5ff1e56a65e83385f814df2fadd957f53561e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4712a6906195c5d8bc09c7b734dba0df4d2b08c8
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713626"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89134528"
 ---
 # <a name="into-c-reference"></a>into (Referencia de C#)
 
