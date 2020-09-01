@@ -1,4 +1,5 @@
 ---
+description: 'Cláusula where: Referencia de C#'
 title: 'Cláusula where: Referencia de C#'
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-ms.openlocfilehash: 33616e4eacb484b9c6eda3862cd86fdd1e6df165
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 58a8dc226bb2720b6a8251f028712a80f74e893c
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173489"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89141691"
 ---
 # <a name="where-clause-c-reference"></a>where (Cláusula, Referencia de C#)
 
@@ -36,7 +37,7 @@ Puede que una cláusula `where` contenga uno o más métodos que devuelvan valor
 
 [!code-csharp[cscsrefQueryKeywords#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Where.cs#7)]
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La cláusula `where` es un mecanismo de filtrado. Se puede colocar prácticamente en cualquier parte en una expresión de consulta, pero no puede ser la primera ni la última cláusula. Puede que una cláusula `where` aparezca antes o después de una cláusula [group](group-clause.md), en función de que haya que filtrar los elementos de origen antes o después de agruparlos.
 

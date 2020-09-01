@@ -1,4 +1,5 @@
 ---
+description: unchecked (palabra clave) - Referencia de C#
 title: unchecked (palabra clave) - Referencia de C#
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - unchecked keyword [C#]
 ms.assetid: 0c021f7c-923f-4b3d-a58f-55336f5ac27e
-ms.openlocfilehash: 6dad0dfd508fb390dd0a52d1b48d70b4c5725513
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb66639e3657b247b9ebcad1594daf1f57a5c76b
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713006"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89141990"
 ---
 # <a name="unchecked-c-reference"></a>unchecked (Referencia de C#)
 
@@ -34,7 +35,7 @@ En este ejemplo se muestra cómo usar la palabra clave `unchecked`.
 
 [!code-csharp[csrefKeywordsChecked#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsChecked/CS/csrefKeywordsChecked.cs#2)]
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
@@ -43,5 +44,5 @@ En este ejemplo se muestra cómo usar la palabra clave `unchecked`.
 - [Referencia de C#](../index.md)
 - [Guía de programación de C#](../../programming-guide/index.md)
 - [Palabras clave de C#](index.md)
-- [Checked y Unchecked](checked-and-unchecked.md)
+- [Checked y unchecked](checked-and-unchecked.md)
 - [checked](checked.md)

@@ -1,16 +1,17 @@
 ---
+description: 'Palabra clave out (modificador genérico): Referencia de C#'
 title: 'Palabra clave out (modificador genérico): Referencia de C#'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - covariance, out keyword [C#]
 - out keyword [C#]
 ms.assetid: f8c20dec-a8bc-426a-9882-4076b1db1e00
-ms.openlocfilehash: 97ddae2efe55be89840f7a483c18d61259020283
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 84f3647309c0772f6ae61d3614f8649fe277f153
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713286"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89142341"
 ---
 # <a name="out-generic-modifier-c-reference"></a>out (Modificador genérico) (Referencia de C#)
 
@@ -22,7 +23,7 @@ Una interfaz con un parámetro de tipo covariante permite que sus métodos devue
 
 A un delegado covariante se le puede asignar otro delegado del mismo tipo, pero con un parámetro de tipo genérico más derivado.
 
-Para obtener más información, vea [Covariance and Contravariance](../../programming-guide/concepts/covariance-contravariance/index.md) (Covarianza y contravarianza).
+Para obtener más información, vea [Covarianza y contravarianza](../../programming-guide/concepts/covariance-contravariance/index.md).
 
 ## <a name="example---covariant-generic-interface"></a>Ejemplo: interfaz genérica covariante
 
@@ -47,7 +48,7 @@ En el ejemplo siguiente se muestra cómo declarar, invocar y crear instancias de
 
 En un delegado genérico, un tipo se puede declarar como covariante si se usa solamente como tipo de valor devuelto por un método y no se usa para los argumentos de método.
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

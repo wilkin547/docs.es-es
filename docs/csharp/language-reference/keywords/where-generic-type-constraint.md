@@ -1,4 +1,5 @@
 ---
+description: 'where (restricción de tipo genérico): Referencia de C#'
 title: 'where (restricción de tipo genérico): Referencia de C#'
 ms.date: 04/15/2020
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: 406c710cd884363c32b98336717732a09b3d1fc1
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 78f784135c6bf01ea9724fcf92be234e6b86ff07
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401880"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89141912"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (restricción de tipo genérico) (Referencia de C#)
 

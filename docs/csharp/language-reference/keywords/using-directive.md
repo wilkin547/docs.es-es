@@ -1,15 +1,16 @@
 ---
+description: using (Directiva, Referencia de C# Reference)
 title: using (Directiva, Referencia de C# Reference)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-ms.openlocfilehash: 4f7ddad8c3dc12391ef6bf345a73ebb384400b38
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f22a67348b19b8c97513ca685b2b10b34b1fd6fd
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77093154"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89141951"
 ---
 # <a name="using-directive-c-reference"></a>using (Directiva, Referencia de C# Reference)
 
@@ -29,7 +30,7 @@ La directiva `using` tiene tres usos:
 
     Para obtener más información, vea [using static (Directiva)](using-static.md).
 
-- Para crear un alias para un espacio de nombre o un tipo. Esto se conoce como *alias using (Directiva)* .
+- Para crear un alias para un espacio de nombre o un tipo. Esto se conoce como *alias using (Directiva)*.
 
     ```csharp
     using Project = PC.MyCompany.Project;
@@ -53,7 +54,7 @@ class Program
 }
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El ámbito de una directiva `using` se limita al archivo en el que aparece.
 
@@ -89,7 +90,7 @@ En el ejemplo siguiente se muestra cómo definir una directiva `using` y un alia
 
 [!code-csharp[csrefKeywordsNamespace#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace2.cs#9)]
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 Para obtener más información, vea la sección [Directivas using](~/_csharplang/spec/namespaces.md#using-directives) de la [Especificación del lenguaje C#](/dotnet/csharp/language-reference/language-specification/introduction). La especificación del lenguaje es la fuente definitiva de la sintaxis y el uso de C#.
 

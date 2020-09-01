@@ -1,4 +1,5 @@
 ---
+description: volatile - Referencia de C#
 title: volatile - Referencia de C#
 ms.date: 10/24/2018
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - volatile keyword [C#]
 ms.assetid: 78089bc7-7b38-4cfd-9e49-87ac036af009
-ms.openlocfilehash: c7a6c442c33ac2b41f652805837f455a957819de
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb89e99e8e28ff1e263817f498619dbfae700a50
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712850"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89141704"
 ---
 # <a name="volatile-c-reference"></a>volatile (Referencia de C#)
 
@@ -43,7 +44,7 @@ En el ejemplo siguiente se muestra cómo crear un subproceso auxiliar o de traba
 
 Con el modificador `volatile` que se agrega a la declaración de `_shouldStop` en su lugar, siempre obtendrá los mismos resultados (similar al fragmento que se muestra en el código anterior). Sin embargo, sin ese modificador en el miembro `_shouldStop`, el comportamiento es imprevisible. El método `DoWork` puede optimizar el acceso a los miembros, lo que provoca la lectura de datos obsoletos. Dada la naturaleza de la programación multiproceso, el número de lecturas obsoletas es imprevisible. Distintas ejecuciones del programa generarán resultados ligeramente diferentes.
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

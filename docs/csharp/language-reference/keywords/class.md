@@ -1,4 +1,5 @@
 ---
+description: 'Palabra clave class: Referencia de C#'
 title: 'Palabra clave class: Referencia de C#'
 ms.date: 07/18/2017
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 500160d3bc9280b866e5f5ba24c5edc623e752c1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 67c9c4be55cce25edf9ecb84b257a8523f193bec
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77673100"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89142120"
 ---
 # <a name="class-c-reference"></a>class (Referencia de C#)
 
@@ -26,14 +27,14 @@ class TestClass
 }
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Solo la herencia simple se permite en C#. En otras palabras, una clase puede heredar la implementación solo de una clase base. En cambio, una clase puede implementar más de una interfaz. En la tabla siguiente se muestran ejemplos de herencia de clases e implementación de interfaces:
 
 |Herencia|Ejemplo|
 |-----------------|-------------|
 |None|`class ClassA { }`|
-|Single|`class DerivedClass : BaseClass { }`|
+|Único|`class DerivedClass : BaseClass { }`|
 |Ninguna, implementa dos interfaces|`class ImplClass : IFace1, IFace2 { }`|
 |Única, implementa una interfaz|`class ImplDerivedClass : BaseClass, IFace1 { }`|
 
