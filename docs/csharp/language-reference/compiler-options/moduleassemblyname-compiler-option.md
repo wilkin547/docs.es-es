@@ -1,4 +1,5 @@
 ---
+description: -moduleassemblyname (Opción del compilador de C#)
 title: -moduleassemblyname (Opción del compilador de C#)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-ms.openlocfilehash: 1477eeb0f2e16e18cb86009739bc8e7d9dee2ac0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d669a1687abe496b921d5670b9149b0e933b2d95
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173723"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125259"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname (Opción del compilador de C#)
 Especifica un ensamblado con tipos no públicos a los que puede acceder un archivo .netmodule.  
@@ -28,7 +29,7 @@ Especifica un ensamblado con tipos no públicos a los que puede acceder un archi
  `assembly_name`  
  El nombre del ensamblado a cuyos tipos no públicos .netmodule puede tener acceso.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Se debería usar **-moduleassemblyname** al compilar un .netmodule cuando se den las condiciones siguientes:  
   
 - .netmodule necesita tener acceso a los tipos no públicos de un ensamblado existente.  
@@ -98,4 +99,4 @@ class A {
 ## <a name="see-also"></a>Vea también
 
 - [Opciones del compilador de C#](./index.md)
-- [Administrar propiedades de proyectos y de soluciones](/visualstudio/ide/managing-project-and-solution-properties)
+- [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)

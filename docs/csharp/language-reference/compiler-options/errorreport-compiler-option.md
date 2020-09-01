@@ -1,4 +1,5 @@
 ---
+description: -errorreport (Opciones del compilador de C#)
 title: -errorreport (Opciones del compilador de C#)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - errorreport compiler option [C#]
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
-ms.openlocfilehash: 52b58aac5e82d4228dfda9c4d77c1d1c5de3e0cd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5b3143f4da81ac693626778263c277e3a484c45e
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253894"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125727"
 ---
 # <a name="-errorreport-c-compiler-options"></a>-errorreport (Opciones del compilador de C#)
 Esta opción proporciona una forma cómoda de notificar un error interno del compilador de C# a Microsoft.
@@ -28,7 +29,7 @@ Esta opción proporciona una forma cómoda de notificar un error interno del com
 ```
 
 ## <a name="arguments"></a>Argumentos
- **none**  
+ **Ninguna**  
  No se recopilarán informes sobre errores internos del compilador ni se enviarán a Microsoft.
 
  **prompt**: pregunta si desea enviar un informe cuando recibe un error interno del compilador. **prompt** es el valor predeterminado cuando se compila una aplicación en el entorno de desarrollo.
@@ -37,7 +38,7 @@ Esta opción proporciona una forma cómoda de notificar un error interno del com
 
  **send**: envía automáticamente informes de errores internos del compilador a Microsoft. Para habilitar esta opción, debe aceptar la directiva de recopilación de datos de Microsoft. La primera vez que especifique **-errorreport:send** en un equipo, un mensaje del compilador le remitirá a un sitio web que contiene la directiva de recopilación de datos de Microsoft.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
  Cuando el compilador no puede procesar un archivo de código fuente, se produce un error interno del compilador (ICE). Cuando se produce un ICE, el compilador no genera un archivo de salida ni otro tipo de diagnóstico útil que pueda usar para corregir el código.
 
  En versiones anteriores, cuando recibía un ICE, se le recomendaba que se pusiera en contacto con los servicios de soporte técnico de Microsoft para informar del problema. Mediante el uso de **-errorreport**, puede proporcionar información sobre los ICE al equipo de Visual C#. Sus informes de error pueden ayudar a mejorar las futuras versiones del compilador.
@@ -50,7 +51,7 @@ Esta opción proporciona una forma cómoda de notificar un error interno del com
 
 2. Haga clic en la página de propiedades de **Compilar**.
 
-3. Haga clic en el botón **Avanzada** .
+3. Haga clic en el botón **Avanzadas** .
 
 4. Modifique la propiedad **Informe de errores internos del compilador**.
 

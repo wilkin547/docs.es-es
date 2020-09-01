@@ -1,4 +1,5 @@
 ---
+description: -lib (Opciones del compilador de C#)
 title: -lib (Opciones del compilador de C#)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -lib compiler option [C#]
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
-ms.openlocfilehash: 0c230147be055170ca015f27bd42bb096399405d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e53c54dc446d9fea87a9b7a336a38ffaa31704e9
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69606824"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125454"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib (Opciones del compilador de C#)
 La opción **-lib** especifica la ubicación de los ensamblados a los que se hace referencia mediante la opción [-reference (Opciones del compilador de C#)](./reference-compiler-option.md).  
@@ -31,7 +32,7 @@ La opción **-lib** especifica la ubicación de los ensamblados a los que se hac
  `dir2`  
  Uno o varios directorios adicionales para buscar las referencias a ensamblados. Separe los nombres de directorio adicionales con una coma y sin espacio en blanco entre ellos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  El compilador busca referencias a ensamblados que no presentan la ruta completa en el siguiente orden:  
   
 1. Directorio de trabajo actual. Es el directorio desde donde se invoca al compilador.  
@@ -70,4 +71,4 @@ csc -lib:c:\ -reference:t2.dll t2.cs
 ## <a name="see-also"></a>Vea también
 
 - [Opciones del compilador de C#](./index.md)
-- [Administrar propiedades de proyectos y de soluciones](/visualstudio/ide/managing-project-and-solution-properties)
+- [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)

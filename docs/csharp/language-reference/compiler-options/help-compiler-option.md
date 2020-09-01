@@ -1,4 +1,5 @@
 ---
+description: -help, -? (Opciones del compilador de C#)
 title: -help, -? (Opciones del compilador de C#)
 ms.date: 07/20/2015
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - /help compiler option [C#]
 - -? compiler option [C#]
 ms.assetid: 8d53f6ba-5c3b-4183-976e-9c0f26fd3680
-ms.openlocfilehash: bbf4fd6fd13ee267dcbc80568577d5f8aa7d625e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7e51f8848bbd0b57ac083dccb6813e3f39fd9a74
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69602908"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125688"
 ---
 # <a name="-help---c-compiler-options"></a>-help, -? (Opciones del compilador de C#)
 Esta opción envía un listado de opciones del compilador, y una breve descripción de cada opción, para stdout.  
@@ -29,7 +30,7 @@ Esta opción envía un listado de opciones del compilador, y una breve descripci
 -?  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si esta opción se incluye en una compilación, no se creará ningún archivo de salida y no tendrá lugar ninguna compilación.  
   
  Esta opción del compilador no está disponible en Visual Studio y no se puede cambiar mediante programación.  
@@ -37,4 +38,4 @@ Esta opción envía un listado de opciones del compilador, y una breve descripci
 ## <a name="see-also"></a>Vea también
 
 - [Opciones del compilador de C#](./index.md)
-- [Administrar propiedades de proyectos y de soluciones](/visualstudio/ide/managing-project-and-solution-properties)
+- [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)

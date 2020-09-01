@@ -1,4 +1,5 @@
 ---
+description: -checked (Opciones del compilador de C#)
 title: -checked (Opciones del compilador de C#)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -checked compiler option [C#]
 - /checked compiler option [C#]
 ms.assetid: fb7475d3-e6a6-4e6d-b86c-69e7a74c854b
-ms.openlocfilehash: cb4dbadfa4efd0750ffd3dea88a3f661e2f85a8e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5c90696edd3031271e16cd2c1a332da5b605f81f
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173775"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125948"
 ---
 # <a name="-checked-c-compiler-options"></a>-checked (Opciones del compilador de C#)
 La opción **-checked** especifica si una instrucción aritmética de enteros que produce un valor fuera del intervalo del tipo de datos y que no está en el ámbito de las palabras clave [checked](../keywords/checked.md) o [unchecked](../keywords/unchecked.md) provocará una excepción en tiempo de ejecución.  
@@ -24,7 +25,7 @@ La opción **-checked** especifica si una instrucción aritmética de enteros qu
 -checked[+ | -]  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Una instrucción aritmética de enteros que está en el ámbito de la palabra clave `checked` o `unchecked` no está sujeta al efecto de la opción **-checked**.  
   
  Si una instrucción aritmética de enteros que no está en el ámbito de la palabra clave `checked` o `unchecked` produce un valor fuera del intervalo del tipo de datos, y si se usa **-checked+** (o **-checked**) en la compilación, la instrucción provoca una excepción en tiempo de ejecución. Si se usa **-checked-** en la compilación, la instrucción no produce una excepción en tiempo de ejecución.  
@@ -39,7 +40,7 @@ La opción **-checked** especifica si una instrucción aritmética de enteros qu
   
 2. Haga clic en la página de propiedades de **Compilar**.  
   
-3. Haga clic en el botón **Avanzada** .  
+3. Haga clic en el botón **Avanzadas** .  
   
 4. Modifique la propiedad **Comprobar el desbordamiento aritmético**.  
   

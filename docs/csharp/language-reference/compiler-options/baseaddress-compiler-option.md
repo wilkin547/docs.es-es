@@ -1,4 +1,5 @@
 ---
+description: -baseaddress (Opciones del compilador de C#)
 title: -baseaddress (Opciones del compilador de C#)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -baseaddress compiler option [C#]
 - /baseaddress compiler option [C#]
 ms.assetid: ce13c965-dfe4-4433-94f5-63b476e3a608
-ms.openlocfilehash: f138f445b8a335c7505e25b34f560c4da40ab2dd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 42b1891c29457745689542a4c9e0482ec5e918fa
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937209"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89126013"
 ---
 # <a name="-baseaddress-c-compiler-options"></a>-baseaddress (Opciones del compilador de C#)
 La opción **-baseaddress** permite especificar la dirección base preferida para cargar un archivo DLL. Para obtener más información sobre cuándo y por qué usar esta opción, vea el [blog de Larry Osterman](https://docs.microsoft.com/archive/blogs/larryosterman/why-should-i-even-bother-to-use-dlls-in-my-system).  
@@ -28,7 +29,7 @@ La opción **-baseaddress** permite especificar la dirección base preferida par
  `address`  
  La dirección base del archivo DLL. Esta dirección puede especificarse como un número octal, hexadecimal o decimal.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  La dirección base predeterminada para un archivo DLL se establece mediante Common Language Runtime de .NET Framework.  
   
  Tenga en cuenta que la palabra de orden inferior en esta dirección se redondeará. Por ejemplo, si especifica 0x11110001, se redondeará a 0x11110000.  
@@ -41,7 +42,7 @@ La opción **-baseaddress** permite especificar la dirección base preferida par
   
 2. Haga clic en la página de propiedades de **Compilar**.  
   
-3. Haga clic en el botón **Avanzada** .  
+3. Haga clic en el botón **Avanzadas** .  
   
 4. Modifique la propiedad **Dirección base del archivo DLL**.  
   
@@ -51,4 +52,4 @@ La opción **-baseaddress** permite especificar la dirección base preferida par
 
 - <xref:System.Diagnostics.ProcessModule.BaseAddress%2A?displayProperty=nameWithType>
 - [Opciones del compilador de C#](./index.md)
-- [Administrar propiedades de proyectos y de soluciones](/visualstudio/ide/managing-project-and-solution-properties)
+- [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)

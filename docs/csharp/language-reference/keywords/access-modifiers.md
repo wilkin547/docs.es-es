@@ -1,15 +1,16 @@
 ---
+description: 'Modificadores de acceso: Referencia de C#'
 title: 'Modificadores de acceso: Referencia de C#'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#]
 ms.assetid: 61c3fa51-c00f-48cb-9b49-c805dedd62d7
-ms.openlocfilehash: 754949e42771de30cc2dce7e4e610f70ada6dfd4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2ea7a65c23b6a1edee572f6f6ff6c52d14358408
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713840"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89127157"
 ---
 # <a name="access-modifiers-c-reference"></a>Modificadores de acceso (Referencia de C#)
 Los modificadores de acceso son palabras clave que se usan para especificar la accesibilidad declarada de un miembro o un tipo. En esta sección se presentan los cuatro modificadores de acceso:  
@@ -21,17 +22,17 @@ Los modificadores de acceso son palabras clave que se usan para especificar la a
   
  Pueden especificarse los siguientes seis niveles de accesibilidad con los modificadores de acceso:  
   
-- [`public`](public.md): el acceso no está restringido.  
+- [`public`](public.md): El acceso no está restringido.  
   
-- [`protected`](protected.md): el acceso está limitado a la clase contenedora o a los tipos derivados de la clase contenedora.  
+- [`protected`](protected.md): El acceso está limitado a la clase contenedora o a los tipos derivados de la clase contenedora.  
   
-- [`internal`](internal.md): el acceso está limitado al ensamblado actual.  
+- [`internal`](internal.md): El acceso está limitado al ensamblado actual.  
   
-- [`protected internal`](protected-internal.md): el acceso está limitado al ensamblado actual o a los tipos derivados de la clase contenedora.  
+- [`protected internal`](protected-internal.md): El acceso está limitado al ensamblado actual o a los tipos derivados de la clase contenedora.  
   
-- [`private`](private.md): el acceso está limitado al tipo contenedor.  
+- [`private`](private.md): El acceso está limitado al tipo contenedor.  
 
-- [`private protected`](private-protected.md): el acceso está limitado a la clase contenedora o a los tipos derivados de la clase contenedora que hay en el ensamblado actual.  
+- [`private protected`](private-protected.md): El acceso está limitado a la clase contenedora o a los tipos derivados de la clase contenedora que hay en el ensamblado actual.  
   
  En esta sección también se presenta lo siguiente:  
   

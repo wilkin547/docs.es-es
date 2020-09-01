@@ -1,4 +1,5 @@
 ---
+description: -keyfile (Opciones del compilador de C#)
 title: -keyfile (Opciones del compilador de C#)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -keyfile compiler option [C#]
 - keyfile compiler option [C#]
 ms.assetid: 0815f9de-ace4-4e98-b4c6-13c55dea40c2
-ms.openlocfilehash: bf271cc6b6887e930911071d4603b51daed55e61
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a97fc00201be1cf8043fc353b20ef447468a06bf
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70970260"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125493"
 ---
 # <a name="-keyfile-c-compiler-options"></a>-keyfile (Opciones del compilador de C#)
 Especifica el nombre de archivo que contiene la clave criptográfica.  
@@ -30,7 +31,7 @@ Especifica el nombre de archivo que contiene la clave criptográfica.
 |----------|----------------|  
 |`file`|El nombre del archivo que contiene la clave de nombre seguro.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Cuando se usa esta opción, el compilador inserta la clave pública del archivo especificado en el manifiesto del ensamblado y, después, firma el último ensamblado con la clave privada. Para generar un archivo de clave, escriba sn -k `file` en la línea de comandos.  
   
  Si se compila con la opción **-target:module**, el nombre del archivo de claves se mantiene en el módulo y se incorpora en el ensamblado que se crea al compilar un ensamblado con la opción [-addmodule](./addmodule-compiler-option.md).  
@@ -41,7 +42,7 @@ Especifica el nombre de archivo que contiene la clave criptográfica.
   
  Tenga en cuenta que un archivo de clave puede contener solo la clave pública.  
   
- Para obtener más información, vea [Crear y usar ensamblados con nombre seguro](../../../standard/assembly/create-use-strong-named.md) y [Delay Signing an Assembly](../../../standard/assembly/delay-sign.md) (Retrasar la firma de un ensamblado).  
+ Para obtener más información, vea [Crear y usar ensamblados con nombre seguro](../../../standard/assembly/create-use-strong-named.md) y [Retraso de la firma de un ensamblado](../../../standard/assembly/delay-sign.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
@@ -56,4 +57,4 @@ Especifica el nombre de archivo que contiene la clave criptográfica.
 ## <a name="see-also"></a>Vea también
 
 - [Opciones del compilador de C#](./index.md)
-- [Administrar propiedades de proyectos y de soluciones](/visualstudio/ide/managing-project-and-solution-properties)
+- [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)

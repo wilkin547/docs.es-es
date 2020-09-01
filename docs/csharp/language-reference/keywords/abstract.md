@@ -1,4 +1,5 @@
 ---
+description: 'abstract: Referencia de C#'
 title: 'abstract: Referencia de C#'
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: 96e8bbce2e67c316d5cd1cd78e3e2506dabead25
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 095c4dea838aff4f14833d78fb10a2f831cf5173
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713861"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89127209"
 ---
 # <a name="abstract-c-reference"></a>abstract (Referencia de C#)
 El modificador `abstract` indica que lo que se modifica carece de implementación o tiene una implementación incompleta. El modificador abstract puede usarse con clases, métodos, propiedades, indexadores y eventos. Use el modificador `abstract` en una declaración de clase para indicar que una clase está diseñada como clase base de otras clases, no para crear instancias por sí misma. Los miembros marcados como abstractos deben implementarse con clases no abstractas derivadas de la clase abstracta.
@@ -56,7 +57,7 @@ El modificador `abstract` indica que lo que se modifica carece de implementació
   
 - Una propiedad abstracta heredada se puede invalidar en una clase derivada incluyendo una declaración de propiedad que use el modificador [override](./override.md).  
   
- Para obtener más información sobre las clases abstractas, vea [Clases y miembros de clase abstractos y sellados ](../../programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
+ Para obtener más información sobre las clases abstractas, vea [Clases y miembros de clase abstractos y sellados (Guía de programación de C#)](../../programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
  Una clase abstracta debe proporcionar implementación para todos los miembros de interfaz.  
   

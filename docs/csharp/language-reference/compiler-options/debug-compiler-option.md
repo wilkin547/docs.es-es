@@ -1,4 +1,5 @@
 ---
+description: -debug (Opciones del compilador de C#)
 title: -debug (Opciones del compilador de C#)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -debug compiler option [C#]
 - /debug compiler option [C#]
 ms.assetid: e2b48c07-01bc-45cc-a52c-92e9085eb969
-ms.openlocfilehash: 8bb2b411dc867b6a43e52058dccf2ac980cf0b1e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 164530a5ec99e7d5b9f34dbcdfb18d80f3102308
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69922512"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125922"
 ---
 # <a name="-debug-c-compiler-options"></a>-debug (Opciones del compilador de C#)
 La opción **-debug** da lugar a que el compilador genere información de depuración y la incluya en el archivo o los archivos de salida.  
@@ -50,7 +51,7 @@ La opción **-debug** da lugar a que el compilador genere información de depura
   
 2. Haga clic en la página de propiedades de **Compilar**.  
   
-3. Haga clic en el botón **Avanzada** .  
+3. Haga clic en el botón **Avanzadas** .  
   
 4. Modifique la propiedad **Información de depuración**.  
   
@@ -66,4 +67,4 @@ csc -debug -pdb:app.pdb test.cs
 ## <a name="see-also"></a>Vea también
 
 - [Opciones del compilador de C#](./index.md)
-- [Administrar propiedades de proyectos y de soluciones](/visualstudio/ide/managing-project-and-solution-properties)
+- [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)

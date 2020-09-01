@@ -1,4 +1,5 @@
 ---
+description: -appconfig (Opciones del compilador de C#)
 title: -appconfig (Opciones del compilador de C#)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -appconfig compiler option [C#]
 - appconfig compiler option [C#]
 ms.assetid: 1cdbcbcc-7813-4010-b5b8-e67c107c5a98
-ms.openlocfilehash: 7a7e8e61f65704a2e99385a1be320048d950324c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 287d41105199057add1dad78d480b083adb745b2
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69922519"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89126117"
 ---
 # <a name="-appconfig-c-compiler-options"></a>-appconfig (Opciones del compilador de C#)
 La opción del compilador **-appconfig** permite a una aplicación de C# especificar la ubicación del archivo de configuración de la aplicación de un ensamblado (app.config) al Common Language Runtime (CLR) en tiempo de enlace del ensamblado.  
@@ -28,7 +29,7 @@ La opción del compilador **-appconfig** permite a una aplicación de C# especif
  `file`  
  Obligatorio. El archivo de configuración de la aplicación que contiene los valores de enlace del ensamblado.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Un uso de **-appconfig** es el de escenarios avanzados en los que un ensamblado tiene que hacer referencia a la versión de .NET Framework y a la versión de .NET Framework para Silverlight de un ensamblado de referencia determinado al mismo tiempo. Por ejemplo, un diseñador de XAML escrito en Windows Presentation Foundation (WPF) podría tener que hacer referencia al escritorio de WPF, para la interfaz de usuario del diseñador, y al subconjunto de WPF que se incluye con Silverlight. El mismo ensamblado del diseñador tiene que tener acceso a ambos ensamblados. De forma predeterminada, las referencias independientes producen un error del compilador, ya que el enlace del ensamblado considera los dos ensamblados equivalentes.  
   
  La opción del compilador **-appconfig** permite especificar la ubicación de un archivo app.config que deshabilita el comportamiento predeterminado usando una etiqueta `<supportPortability>`, como se muestra en el siguiente ejemplo.  
@@ -56,5 +57,5 @@ La opción del compilador **-appconfig** permite a una aplicación de C# especif
   
 ## <a name="see-also"></a>Vea también
 
-- [\<supportPortability> Element](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md) (Elemento <supportPortability>)
+- [Elemento \<supportPortability>](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md)
 - [Opciones del compilador de C#, por orden alfabético](./listed-alphabetically.md)
