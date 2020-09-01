@@ -3,12 +3,12 @@ title: Elasticsearch en aplicaciones nativas de la nube
 description: Obtenga información sobre cómo agregar funcionalidades de búsqueda elástica a aplicaciones nativas de la nube.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: e956f28877d88ce5279944964a877efc324918b6
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 70d1925d6b8c7bbe515ee4f178513dc61212ebce
+ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614089"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89271807"
 ---
 # <a name="elasticsearch-in-a-cloud-native-app"></a>Elasticsearch en una aplicación nativa en la nube
 
@@ -74,7 +74,7 @@ En este capítulo se describe detalladamente los datos de los sistemas nativos e
 
 - [Vitess](https://vitess.io/)
 
-- [Elasticsearch: The Definitive Guide (Elasticsearch: la guía definitiva).](http://shop.oreilly.com/product/0636920028505.do)
+- [Elasticsearch: The Definitive Guide (Elasticsearch: la guía definitiva).](https://shop.oreilly.com/product/0636920028505.do)
   
 - [Introducción a Apache Lucene](https://www.baeldung.com/lucene)
 
