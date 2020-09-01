@@ -1,4 +1,5 @@
 ---
+description: 'default: Referencia de C#'
 title: 'default: Referencia de C#'
 ms.date: 08/04/2017
 f1_keywords:
@@ -7,22 +8,22 @@ f1_keywords:
 helpviewer_keywords:
 - default keyword [C#]
 ms.assetid: 14c48aaa-7d35-4058-a1a4-f53353050579
-ms.openlocfilehash: d133b0a6db1105e2cbad569ce96ceafa711b23ac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 51735b818ba05b7d83c7a391136ef97e9b903021
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713617"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89138246"
 ---
-# <a name="default-c-reference"></a><span data-ttu-id="9732f-102">default (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="9732f-102">default (C# Reference)</span></span>
+# <a name="default-c-reference"></a><span data-ttu-id="f8fa8-103">default (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="f8fa8-103">default (C# Reference)</span></span>
 
-<span data-ttu-id="9732f-103">La palabra clave `default` se puede usar de dos maneras:</span><span class="sxs-lookup"><span data-stu-id="9732f-103">The `default` keyword can be used in two ways:</span></span>
+<span data-ttu-id="f8fa8-104">La palabra clave `default` se puede usar de dos maneras:</span><span class="sxs-lookup"><span data-stu-id="f8fa8-104">The `default` keyword can be used in two ways:</span></span>
 
-- <span data-ttu-id="9732f-104">Para especificar la etiqueta predeterminada en la [instrucción `switch`](switch.md).</span><span class="sxs-lookup"><span data-stu-id="9732f-104">To specify the default label in the [`switch` statement](switch.md).</span></span>
-- <span data-ttu-id="9732f-105">Como el [operador predeterminado o literal](../operators/default.md) para generar el valor predeterminado de un tipo.</span><span class="sxs-lookup"><span data-stu-id="9732f-105">As the [default operator or literal](../operators/default.md) to produce the default value of a type.</span></span>
+- <span data-ttu-id="f8fa8-105">Para especificar la etiqueta predeterminada en la [instrucción `switch`](switch.md).</span><span class="sxs-lookup"><span data-stu-id="f8fa8-105">To specify the default label in the [`switch` statement](switch.md).</span></span>
+- <span data-ttu-id="f8fa8-106">Como el [operador predeterminado o literal](../operators/default.md) para generar el valor predeterminado de un tipo.</span><span class="sxs-lookup"><span data-stu-id="f8fa8-106">As the [default operator or literal](../operators/default.md) to produce the default value of a type.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="9732f-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="9732f-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f8fa8-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="f8fa8-107">See also</span></span>
 
-- [<span data-ttu-id="9732f-107">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="9732f-107">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="9732f-108">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="9732f-108">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="9732f-109">Palabras clave de C#</span><span class="sxs-lookup"><span data-stu-id="9732f-109">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="f8fa8-108">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="f8fa8-108">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="f8fa8-109">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="f8fa8-109">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="f8fa8-110">Palabras clave de C#</span><span class="sxs-lookup"><span data-stu-id="f8fa8-110">C# Keywords</span></span>](index.md)
