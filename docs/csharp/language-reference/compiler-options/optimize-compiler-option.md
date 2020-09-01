@@ -1,4 +1,5 @@
 ---
+description: -optimize (Opciones del compilador de C#)
 title: -optimize (Opciones del compilador de C#)
 ms.date: 07/20/2015
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - compiler optimization [C#]
 - o compiler option [C#]
 ms.assetid: 6dd5b6f2-cd1d-4593-a9f4-1c2ed9404ca0
-ms.openlocfilehash: bec99ca582070a99fd8b734ef8a7b9e71d945488
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6fd268414c4e54e7b4865733480f8917389015d0
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69606598"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125038"
 ---
 # <a name="-optimize-c-compiler-options"></a>-optimize (Opciones del compilador de C#)
 La opción **-optimize** habilita o deshabilita las optimizaciones realizadas por el compilador para que el archivo de salida sea menor, más rápido y más eficaz.  
@@ -28,7 +29,7 @@ La opción **-optimize** habilita o deshabilita las optimizaciones realizadas po
 -optimize[+ | -]  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **-optimize** también indica a Common Language Runtime que optimice el código en tiempo de ejecución.  
   
  De forma predeterminada, las optimizaciones están deshabilitadas. Especifique **-optimize+** para habilitar las optimizaciones.  
@@ -59,4 +60,4 @@ csc t2.cs -optimize
 ## <a name="see-also"></a>Vea también
 
 - [Opciones del compilador de C#](./index.md)
-- [Administrar propiedades de proyectos y de soluciones](/visualstudio/ide/managing-project-and-solution-properties)
+- [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)

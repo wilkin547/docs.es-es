@@ -1,4 +1,5 @@
 ---
+description: -reference (Opciones del compilador de C#)
 title: -reference (Opciones del compilador de C#)
 ms.date: 07/20/2015
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: 3e6a999d528be111ba2b92886f4e6e3ebf185d5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7b84953f85545c0400c7136c258849f259e8b48a
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173671"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89124804"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference (Opciones del compilador de C#)
 La opción **-reference** hace que el compilador importe información de tipo [public](../keywords/public.md) del archivo especificado al proyecto actual, lo que permite hacer referencia a metadatos de los archivos de ensamblado especificados.  
@@ -37,7 +38,7 @@ La opción **-reference** hace que el compilador importe información de tipo [p
  `alias`  
  Un identificador de C# válido que representa un espacio de nombres raíz que contendrá todos los espacios de nombres del ensamblado.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Para importar desde más de un archivo, incluya una opción **-reference** para cada archivo.  
   
  Los archivos que se importen deben contener un manifiesto; el archivo de salida debe haberse compilado con una de las opciones [-target](./target-compiler-option.md) distinta de [-target:module](./target-module-compiler-option.md).  
@@ -61,7 +62,7 @@ La opción **-reference** hace que el compilador importe información de tipo [p
  De forma predeterminada se usa el archivo de respuesta (.rsp) csc, que hace referencia a los ensamblados de .NET Framework usados habitualmente. Use [-noconfig](./noconfig-compiler-option.md) si no quiere que el compilador use csc.rsp.  
   
 > [!NOTE]
-> En Visual Studio, use el cuadro de diálogo **Agregar referencia**. Para obtener más información, consulta [How to: Add or Remove References By Using the Reference Manager](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager). Para garantizar un comportamiento equivalente entre agregar referencias mediante `-reference` y agregar referencias mediante el cuadro de diálogo **Agregar referencia**, establezca la propiedad **Incrustar tipos de interoperabilidad** en **False** para el ensamblado que se va a agregar. El valor predeterminado de la propiedad es **True**.  
+> En Visual Studio, use el cuadro de diálogo **Agregar referencia**. Para obtener más información, consulta [Procedimiento para agregar o quitar referencias mediante el Administrador de referencias](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager). Para garantizar un comportamiento equivalente entre agregar referencias mediante `-reference` y agregar referencias mediante el cuadro de diálogo **Agregar referencia**, establezca la propiedad **Incrustar tipos de interoperabilidad** en **False** para el ensamblado que se va a agregar. El valor predeterminado de la propiedad es **True**.  
   
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se muestra cómo usar la característica [alias externo](../keywords/extern-alias.md).  
@@ -95,4 +96,4 @@ GridV2::Grid
 ## <a name="see-also"></a>Vea también
 
 - [Opciones del compilador de C#](./index.md)
-- [Administrar propiedades de proyectos y de soluciones](/visualstudio/ide/managing-project-and-solution-properties)
+- [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)

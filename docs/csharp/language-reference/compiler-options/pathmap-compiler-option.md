@@ -1,4 +1,5 @@
 ---
+description: -pathmap (opciones del compilador de C#)
 title: -pathmap (opciones del compilador de C#)
 ms.date: 05/16/2018
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - -pathmap compiler option [C#]
 - pathmap compiler option [C#]
 - /pathmap compiler option [C#]
-ms.openlocfilehash: 48e96d2ec2ccbea83d573c0eb3630b1591c407a9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 707a37c6946cfcaf429552f0aeece6b87f3ad71d
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69606627"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125012"
 ---
 # <a name="-pathmap-c-compiler-options"></a>-pathmap (opciones del compilador de C#)
 
@@ -32,7 +33,7 @@ La opción **-pathmap** del compilador especifica cómo asignar rutas físicas a
 
 Para especificar varias rutas de acceso de origen asignadas, sepárelas con una coma.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El compilador escribe la ruta de acceso de origen en la salida por las razones siguientes:
 
@@ -53,4 +54,4 @@ csc -pathmap:C:\work\tests=\publish t.cs
 ## <a name="see-also"></a>Vea también
 
 - [Opciones del compilador de C#](./index.md)
-- [Administrar propiedades de proyectos y de soluciones](/visualstudio/ide/managing-project-and-solution-properties)
+- [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)

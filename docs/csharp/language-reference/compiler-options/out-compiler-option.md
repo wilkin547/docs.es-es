@@ -1,4 +1,5 @@
 ---
+description: -out (Opciones del compilador de C#)
 title: -out (Opciones del compilador de C#)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: 6c8408c0c613e361dae0c1db19f854e9421ca467
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d1b79879639e1cbdc3dc040977d9fcd0c3a73602
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70970377"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125025"
 ---
 # <a name="-out-c-compiler-options"></a>-out (Opciones del compilador de C#)
 La opción **-out** especifica el nombre del archivo de salida.  
@@ -28,7 +29,7 @@ La opción **-out** especifica el nombre del archivo de salida.
  `filename`  
  El nombre del archivo de salida creado por el compilador.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  En la línea de comandos, es posible especificar varios archivos de salida de una compilación. El compilador espera encontrar al menos un archivo de código fuente después de la opción **-out**. Posteriormente, todos los archivos de código fuente se compilarán en el archivo de salida especificado por la opción **-out**.  
   
  Hay que especificar el nombre completo y la extensión del archivo que se quiere crear.  
@@ -68,4 +69,4 @@ csc t.cs -out:mymodule.netmodule -target:module t2.cs
 
 - [Opciones del compilador de C#](./index.md)
 - [Ensamblados de confianza](../../../standard/assembly/friend.md)
-- [Administrar propiedades de proyectos y de soluciones](/visualstudio/ide/managing-project-and-solution-properties)
+- [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)
