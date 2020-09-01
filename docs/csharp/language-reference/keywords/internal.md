@@ -1,4 +1,5 @@
 ---
+description: 'internal: Referencia de C#'
 title: 'internal: Referencia de C#'
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: e5a5ca18828b689241abbb6d80c5adc51efb073c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 14722d66a65eb5f96118acf017dc877e657b2dd9
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173606"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89134580"
 ---
-# <a name="internal-c-reference"></a><span data-ttu-id="eb0ee-102">internal (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="eb0ee-102">internal (C# Reference)</span></span>
-<span data-ttu-id="eb0ee-103">La palabra clave `internal` es un [modificador de acceso](./access-modifiers.md) para tipos y miembros de tipo.</span><span class="sxs-lookup"><span data-stu-id="eb0ee-103">The `internal` keyword is an [access modifier](./access-modifiers.md) for types and type members.</span></span>
+# <a name="internal-c-reference"></a><span data-ttu-id="0aa55-103">internal (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="0aa55-103">internal (C# Reference)</span></span>
+<span data-ttu-id="0aa55-104">La palabra clave `internal` es un [modificador de acceso](./access-modifiers.md) para tipos y miembros de tipo.</span><span class="sxs-lookup"><span data-stu-id="0aa55-104">The `internal` keyword is an [access modifier](./access-modifiers.md) for types and type members.</span></span>
   
- > <span data-ttu-id="eb0ee-104">Esta página trata sobre el modificador de acceso `internal`.</span><span class="sxs-lookup"><span data-stu-id="eb0ee-104">This page covers `internal` access.</span></span> <span data-ttu-id="eb0ee-105">La palabra clave `internal` también forma parte del modificador de acceso [`protected internal`](./protected-internal.md).</span><span class="sxs-lookup"><span data-stu-id="eb0ee-105">The `internal` keyword is also part of the [`protected internal`](./protected-internal.md) access modifier.</span></span>
+ > <span data-ttu-id="0aa55-105">Esta página trata sobre el modificador de acceso `internal`.</span><span class="sxs-lookup"><span data-stu-id="0aa55-105">This page covers `internal` access.</span></span> <span data-ttu-id="0aa55-106">La palabra clave `internal` también forma parte del modificador de acceso [`protected internal`](./protected-internal.md).</span><span class="sxs-lookup"><span data-stu-id="0aa55-106">The `internal` keyword is also part of the [`protected internal`](./protected-internal.md) access modifier.</span></span>
   
-<span data-ttu-id="eb0ee-106">Solo se puede tener acceso a los tipos internos o los miembros desde los archivos del mismo ensamblado, como en este ejemplo:</span><span class="sxs-lookup"><span data-stu-id="eb0ee-106">Internal types or members are accessible only within files in the same assembly, as in this example:</span></span>  
+<span data-ttu-id="0aa55-107">Solo se puede tener acceso a los tipos internos o los miembros desde los archivos del mismo ensamblado, como en este ejemplo:</span><span class="sxs-lookup"><span data-stu-id="0aa55-107">Internal types or members are accessible only within files in the same assembly, as in this example:</span></span>  
   
 ```csharp  
 public class BaseClass
@@ -29,16 +30,16 @@ public class BaseClass
 }  
 ```  
 
- <span data-ttu-id="eb0ee-107">Para obtener una comparación de `internal` con los demás modificadores de acceso, vea [Niveles de accesibilidad](./accessibility-levels.md) y [Modificadores de acceso](../../programming-guide/classes-and-structs/access-modifiers.md).</span><span class="sxs-lookup"><span data-stu-id="eb0ee-107">For a comparison of `internal` with the other access modifiers, see [Accessibility Levels](./accessibility-levels.md) and [Access Modifiers](../../programming-guide/classes-and-structs/access-modifiers.md).</span></span>  
+ <span data-ttu-id="0aa55-108">Para obtener una comparación de `internal` con los demás modificadores de acceso, vea [Niveles de accesibilidad](./accessibility-levels.md) y [Modificadores de acceso](../../programming-guide/classes-and-structs/access-modifiers.md).</span><span class="sxs-lookup"><span data-stu-id="0aa55-108">For a comparison of `internal` with the other access modifiers, see [Accessibility Levels](./accessibility-levels.md) and [Access Modifiers](../../programming-guide/classes-and-structs/access-modifiers.md).</span></span>  
   
- <span data-ttu-id="eb0ee-108">Para más información sobre los ensamblados, consulte [Ensamblados en .NET](../../../standard/assembly/index.md).</span><span class="sxs-lookup"><span data-stu-id="eb0ee-108">For more information about assemblies, see [Assemblies in .NET](../../../standard/assembly/index.md).</span></span>  
+ <span data-ttu-id="0aa55-109">Para más información sobre los ensamblados, consulte [Ensamblados en .NET](../../../standard/assembly/index.md).</span><span class="sxs-lookup"><span data-stu-id="0aa55-109">For more information about assemblies, see [Assemblies in .NET](../../../standard/assembly/index.md).</span></span>  
   
- <span data-ttu-id="eb0ee-109">Un uso común del acceso interno se da en el desarrollo basado en componentes porque permite que un grupo de componentes cooperen de manera privada sin estar expuesto al resto del código de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="eb0ee-109">A common use of internal access is in component-based development because it enables a group of components to cooperate in a private manner without being exposed to the rest of the application code.</span></span> <span data-ttu-id="eb0ee-110">Por ejemplo, un marco para crear interfaces gráficas de usuario podría proporcionar las clases `Control` y `Form` que cooperan mediante miembros con acceso interno.</span><span class="sxs-lookup"><span data-stu-id="eb0ee-110">For example, a framework for building graphical user interfaces could provide `Control` and `Form` classes that cooperate by using members with internal access.</span></span> <span data-ttu-id="eb0ee-111">Como estos miembros son internos, no se exponen al código que usa el marco de trabajo.</span><span class="sxs-lookup"><span data-stu-id="eb0ee-111">Since these members are internal, they are not exposed to code that is using the framework.</span></span>  
+ <span data-ttu-id="0aa55-110">Un uso común del acceso interno se da en el desarrollo basado en componentes porque permite que un grupo de componentes cooperen de manera privada sin estar expuesto al resto del código de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="0aa55-110">A common use of internal access is in component-based development because it enables a group of components to cooperate in a private manner without being exposed to the rest of the application code.</span></span> <span data-ttu-id="0aa55-111">Por ejemplo, un marco para crear interfaces gráficas de usuario podría proporcionar las clases `Control` y `Form` que cooperan mediante miembros con acceso interno.</span><span class="sxs-lookup"><span data-stu-id="0aa55-111">For example, a framework for building graphical user interfaces could provide `Control` and `Form` classes that cooperate by using members with internal access.</span></span> <span data-ttu-id="0aa55-112">Como estos miembros son internos, no se exponen al código que usa el marco de trabajo.</span><span class="sxs-lookup"><span data-stu-id="0aa55-112">Since these members are internal, they are not exposed to code that is using the framework.</span></span>  
   
- <span data-ttu-id="eb0ee-112">Es un error hacer referencia a un tipo o miembro con acceso interno fuera del ensamblado en el que se definió.</span><span class="sxs-lookup"><span data-stu-id="eb0ee-112">It is an error to reference a type or a member with internal access outside the assembly within which it was defined.</span></span>  
+ <span data-ttu-id="0aa55-113">Es un error hacer referencia a un tipo o miembro con acceso interno fuera del ensamblado en el que se definió.</span><span class="sxs-lookup"><span data-stu-id="0aa55-113">It is an error to reference a type or a member with internal access outside the assembly within which it was defined.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="eb0ee-113">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="eb0ee-113">Example</span></span>  
- <span data-ttu-id="eb0ee-114">Este ejemplo contiene dos archivos, `Assembly1.cs` y `Assembly1_a.cs`.</span><span class="sxs-lookup"><span data-stu-id="eb0ee-114">This example contains two files, `Assembly1.cs` and `Assembly1_a.cs`.</span></span> <span data-ttu-id="eb0ee-115">El primer archivo contiene una clase base interna, `BaseClass`.</span><span class="sxs-lookup"><span data-stu-id="eb0ee-115">The first file contains an internal base class, `BaseClass`.</span></span> <span data-ttu-id="eb0ee-116">En el segundo archivo, un intento de crear una instancia de `BaseClass` producirá un error.</span><span class="sxs-lookup"><span data-stu-id="eb0ee-116">In the second file, an attempt to instantiate `BaseClass` will produce an error.</span></span>  
+## <a name="example"></a><span data-ttu-id="0aa55-114">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="0aa55-114">Example</span></span>  
+ <span data-ttu-id="0aa55-115">Este ejemplo contiene dos archivos, `Assembly1.cs` y `Assembly1_a.cs`.</span><span class="sxs-lookup"><span data-stu-id="0aa55-115">This example contains two files, `Assembly1.cs` and `Assembly1_a.cs`.</span></span> <span data-ttu-id="0aa55-116">El primer archivo contiene una clase base interna, `BaseClass`.</span><span class="sxs-lookup"><span data-stu-id="0aa55-116">The first file contains an internal base class, `BaseClass`.</span></span> <span data-ttu-id="0aa55-117">En el segundo archivo, un intento de crear una instancia de `BaseClass` producirá un error.</span><span class="sxs-lookup"><span data-stu-id="0aa55-117">In the second file, an attempt to instantiate `BaseClass` will produce an error.</span></span>  
   
 ```csharp  
 // Assembly1.cs  
@@ -61,8 +62,8 @@ class TestAccess
 }  
 ```  
   
-## <a name="example"></a><span data-ttu-id="eb0ee-117">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="eb0ee-117">Example</span></span>  
- <span data-ttu-id="eb0ee-118">En este ejemplo, use los mismos archivos usados en el ejemplo 1 y cambie el nivel de accesibilidad de `BaseClass` a `public`.</span><span class="sxs-lookup"><span data-stu-id="eb0ee-118">In this example, use the same files you used in example 1, and change the accessibility level of `BaseClass` to `public`.</span></span> <span data-ttu-id="eb0ee-119">Cambie también el nivel de accesibilidad del miembro `intM` a `internal`.</span><span class="sxs-lookup"><span data-stu-id="eb0ee-119">Also change the accessibility level of the member `intM` to `internal`.</span></span> <span data-ttu-id="eb0ee-120">En este caso, se puede crear una instancia de la clase, pero no se puede tener acceso al miembro interno.</span><span class="sxs-lookup"><span data-stu-id="eb0ee-120">In this case, you can instantiate the class, but you cannot access the internal member.</span></span>  
+## <a name="example"></a><span data-ttu-id="0aa55-118">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="0aa55-118">Example</span></span>  
+ <span data-ttu-id="0aa55-119">En este ejemplo, use los mismos archivos usados en el ejemplo 1 y cambie el nivel de accesibilidad de `BaseClass` a `public`.</span><span class="sxs-lookup"><span data-stu-id="0aa55-119">In this example, use the same files you used in example 1, and change the accessibility level of `BaseClass` to `public`.</span></span> <span data-ttu-id="0aa55-120">Cambie también el nivel de accesibilidad del miembro `intM` a `internal`.</span><span class="sxs-lookup"><span data-stu-id="0aa55-120">Also change the accessibility level of the member `intM` to `internal`.</span></span> <span data-ttu-id="0aa55-121">En este caso, se puede crear una instancia de la clase, pero no se puede tener acceso al miembro interno.</span><span class="sxs-lookup"><span data-stu-id="0aa55-121">In this case, you can instantiate the class, but you cannot access the internal member.</span></span>  
   
 ```csharp  
 // Assembly2.cs  
@@ -86,18 +87,18 @@ public class TestAccess
 }  
 ```  
   
-## <a name="c-language-specification"></a><span data-ttu-id="eb0ee-121">Especificación del lenguaje C#</span><span class="sxs-lookup"><span data-stu-id="eb0ee-121">C# Language Specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="0aa55-122">Especificación del lenguaje C#</span><span class="sxs-lookup"><span data-stu-id="0aa55-122">C# Language Specification</span></span>  
 
-<span data-ttu-id="eb0ee-122">Para obtener más información, vea la sección [Accesibilidad declarada](~/_csharplang/spec/basic-concepts.md#declared-accessibility) de la [Especificación del lenguaje C#](/dotnet/csharp/language-reference/language-specification/introduction).</span><span class="sxs-lookup"><span data-stu-id="eb0ee-122">For more information, see [Declared accessibility](~/_csharplang/spec/basic-concepts.md#declared-accessibility) in the [C# Language Specification](/dotnet/csharp/language-reference/language-specification/introduction).</span></span> <span data-ttu-id="eb0ee-123">La especificación del lenguaje es la fuente definitiva de la sintaxis y el uso de C#.</span><span class="sxs-lookup"><span data-stu-id="eb0ee-123">The language specification is the definitive source for C# syntax and usage.</span></span>
+<span data-ttu-id="0aa55-123">Para obtener más información, vea la sección [Accesibilidad declarada](~/_csharplang/spec/basic-concepts.md#declared-accessibility) de la [Especificación del lenguaje C#](/dotnet/csharp/language-reference/language-specification/introduction).</span><span class="sxs-lookup"><span data-stu-id="0aa55-123">For more information, see [Declared accessibility](~/_csharplang/spec/basic-concepts.md#declared-accessibility) in the [C# Language Specification](/dotnet/csharp/language-reference/language-specification/introduction).</span></span> <span data-ttu-id="0aa55-124">La especificación del lenguaje es la fuente definitiva de la sintaxis y el uso de C#.</span><span class="sxs-lookup"><span data-stu-id="0aa55-124">The language specification is the definitive source for C# syntax and usage.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="eb0ee-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="eb0ee-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0aa55-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="0aa55-125">See also</span></span>
 
-- [<span data-ttu-id="eb0ee-125">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="eb0ee-125">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="eb0ee-126">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="eb0ee-126">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="eb0ee-127">Palabras clave de C#</span><span class="sxs-lookup"><span data-stu-id="eb0ee-127">C# Keywords</span></span>](./index.md)
-- [<span data-ttu-id="eb0ee-128">Modificadores de acceso</span><span class="sxs-lookup"><span data-stu-id="eb0ee-128">Access Modifiers</span></span>](./access-modifiers.md)
-- [<span data-ttu-id="eb0ee-129">Niveles de accesibilidad</span><span class="sxs-lookup"><span data-stu-id="eb0ee-129">Accessibility Levels</span></span>](./accessibility-levels.md)
-- [<span data-ttu-id="eb0ee-130">Modificadores</span><span class="sxs-lookup"><span data-stu-id="eb0ee-130">Modifiers</span></span>](index.md)
-- [<span data-ttu-id="eb0ee-131">public</span><span class="sxs-lookup"><span data-stu-id="eb0ee-131">public</span></span>](./public.md)
-- [<span data-ttu-id="eb0ee-132">private</span><span class="sxs-lookup"><span data-stu-id="eb0ee-132">private</span></span>](./private.md)
-- [<span data-ttu-id="eb0ee-133">protected</span><span class="sxs-lookup"><span data-stu-id="eb0ee-133">protected</span></span>](./protected.md)
+- [<span data-ttu-id="0aa55-126">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="0aa55-126">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="0aa55-127">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="0aa55-127">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="0aa55-128">Palabras clave de C#</span><span class="sxs-lookup"><span data-stu-id="0aa55-128">C# Keywords</span></span>](./index.md)
+- [<span data-ttu-id="0aa55-129">Modificadores de acceso</span><span class="sxs-lookup"><span data-stu-id="0aa55-129">Access Modifiers</span></span>](./access-modifiers.md)
+- [<span data-ttu-id="0aa55-130">Niveles de accesibilidad</span><span class="sxs-lookup"><span data-stu-id="0aa55-130">Accessibility Levels</span></span>](./accessibility-levels.md)
+- [<span data-ttu-id="0aa55-131">Modificadores</span><span class="sxs-lookup"><span data-stu-id="0aa55-131">Modifiers</span></span>](index.md)
+- [<span data-ttu-id="0aa55-132">public</span><span class="sxs-lookup"><span data-stu-id="0aa55-132">public</span></span>](./public.md)
+- [<span data-ttu-id="0aa55-133">private</span><span class="sxs-lookup"><span data-stu-id="0aa55-133">private</span></span>](./private.md)
+- [<span data-ttu-id="0aa55-134">protected</span><span class="sxs-lookup"><span data-stu-id="0aa55-134">protected</span></span>](./protected.md)
