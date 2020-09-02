@@ -2,12 +2,12 @@
 title: Seguridad de Azure para aplicaciones nativas en la nube
 description: Diseño de aplicaciones .NET nativas en la nube para Azure | Seguridad de Azure para aplicaciones nativas en la nube
 ms.date: 05/13/2020
-ms.openlocfilehash: 996c7075b252466a3b3374f1e75e64315fdd6fc7
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 7780b005d84124f202049deeb5be876364e6c5fa
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557651"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89358978"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>Seguridad de Azure para aplicaciones nativas en la nube
 
@@ -147,7 +147,7 @@ Las reglas de denegación tienen prioridad sobre las reglas de permiso. Ahora qu
 
 ## <a name="checking-access"></a>Comprobando el acceso
 
-Como puede imaginar, tener un gran número de roles y ámbitos puede hacer que la determinancia del permiso efectivo de una entidad de servicio sea bastante difícil. Apilar las reglas de denegación en la parte superior, solo sirve para aumentar la complejidad. Afortunadamente, hay una calculadora de permisos que puede mostrar los permisos efectivos de cualquier entidad de servicio. Normalmente se encuentra en la pestaña IAM del portal, como se muestra en la figura 10-3.
+Como puede imaginar, tener un gran número de roles y ámbitos puede hacer que la determinancia del permiso efectivo de una entidad de servicio sea bastante difícil. Apilar las reglas de denegación en la parte superior, solo sirve para aumentar la complejidad. Afortunadamente, hay una [calculadora de permisos](https://docs.microsoft.com/azure/role-based-access-control/check-access) que puede mostrar los permisos efectivos de cualquier entidad de servicio. Normalmente se encuentra en la pestaña IAM del portal, como se muestra en la figura 10-3.
 
 ![Figura 9-4 calculadora de permisos para una aplicación de App Service](./media/check-rbac.png)
 
