@@ -9,19 +9,19 @@ helpviewer_keywords:
 - 3D graphics [WPF]
 - graphics [WPF], 3D
 ms.assetid: 67f31ed4-e36b-4b02-9889-dcce245d7afc
-ms.openlocfilehash: 51da6a1ed6d5e98b99c64ee23be52f7b2385897f
-ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
+ms.openlocfilehash: aa4f45ac426c59b829b6be9e63e8f0ed50512661
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85853880"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89358926"
 ---
 # <a name="3d-graphics-overview"></a>Información general sobre gráficos 3D
-<a name="introduction"></a>La funcionalidad 3D de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] permite a los desarrolladores dibujar, transformar y animar gráficos 3D en el código de marcado y en el de procedimientos. Los desarrolladores pueden combinar gráficos 2D y 3D para crear controles enriquecidos, proporcionar ilustraciones complejas de datos o mejorar la experiencia del usuario de la interfaz de una aplicación. la compatibilidad con 3D en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no está diseñada para proporcionar una plataforma de desarrollo de juegos con todas las características. En este tema se proporciona información general sobre la funcionalidad 3D en el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema de gráficos.  
+<a name="introduction"></a> La funcionalidad 3D de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] permite a los desarrolladores dibujar, transformar y animar gráficos 3D en el código de marcado y en el de procedimientos. Los desarrolladores pueden combinar gráficos 2D y 3D para crear controles enriquecidos, proporcionar ilustraciones complejas de datos o mejorar la experiencia del usuario de la interfaz de una aplicación. la compatibilidad con 3D en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no está diseñada para proporcionar una plataforma de desarrollo de juegos con todas las características. En este tema se proporciona información general sobre la funcionalidad 3D en el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema de gráficos.  
 
 <a name="threed_in_2d"></a>
 ## <a name="3d-in-a-2d-container"></a>3D en un contenedor 2D  
- el contenido de gráficos 3D de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] se encapsula en un elemento, <xref:System.Windows.Controls.Viewport3D> , que puede participar en la estructura de elementos bidimensionales. El sistema de gráficos trata <xref:System.Windows.Controls.Viewport3D> como un elemento visual bidimensional, como muchos otros en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] . <xref:System.Windows.Controls.Viewport3D>funciona como una ventana (una ventanilla) en una escena tridimensional. Más concretamente, es una superficie en la que se proyecta una escena 3D.  
+ el contenido de gráficos 3D de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] se encapsula en un elemento, <xref:System.Windows.Controls.Viewport3D> , que puede participar en la estructura de elementos bidimensionales. El sistema de gráficos trata <xref:System.Windows.Controls.Viewport3D> como un elemento visual bidimensional, como muchos otros en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] . <xref:System.Windows.Controls.Viewport3D> funciona como una ventana (una ventanilla) en una escena tridimensional. Más concretamente, es una superficie en la que se proyecta una escena 3D.  
   
  En una aplicación 2D convencional, use <xref:System.Windows.Controls.Viewport3D> como lo haría con otro elemento contenedor como Grid o Canvas.  Aunque puede usar <xref:System.Windows.Controls.Viewport3D> con otros objetos de dibujo 2D en el mismo gráfico de escena, no puede interpenetrar objetos 2D y 3D en un <xref:System.Windows.Controls.Viewport3D> .  Este tema se centrará en cómo dibujar gráficos 3D dentro de <xref:System.Windows.Controls.Viewport3D> .  
   
@@ -40,12 +40,12 @@ Representaciones convencionales del sistema de coordenadas 2D y 3D
   
  Otra forma de entender cómo se representa una escena 3D en una superficie 2D es describir la escena como una proyección en la superficie de visualización. <xref:System.Windows.Media.Media3D.ProjectionCamera>Permite especificar proyecciones diferentes y sus propiedades para cambiar el modo en que espectador ve los modelos 3D. Un <xref:System.Windows.Media.Media3D.PerspectiveCamera> especifica una proyección que escorzo la escena.  En otras palabras, el <xref:System.Windows.Media.Media3D.PerspectiveCamera> proporciona una perspectiva de punto de fuga.  Puede especificar la posición de la cámara en el espacio de coordenadas de la escena, la dirección y el campo de visión de la cámara y un vector que define la dirección de "arriba" en la escena. En el diagrama siguiente se muestra la <xref:System.Windows.Media.Media3D.PerspectiveCamera> proyección de.  
   
- Las <xref:System.Windows.Media.Media3D.ProjectionCamera.NearPlaneDistance%2A> <xref:System.Windows.Media.Media3D.ProjectionCamera.FarPlaneDistance%2A> propiedades y de <xref:System.Windows.Media.Media3D.ProjectionCamera> limitan el intervalo de proyección de la cámara. Dado que las cámaras se pueden ubicar en cualquier parte de la escena, es posible situarlas dentro de un modelo o muy cerca de él, con lo que resultaría difícil distinguir correctamente los objetos.  <xref:System.Windows.Media.Media3D.ProjectionCamera.NearPlaneDistance%2A>permite especificar una distancia mínima desde la cámara más allá de la cual no se dibujarán los objetos.  Por el contrario, <xref:System.Windows.Media.Media3D.ProjectionCamera.FarPlaneDistance%2A> permite especificar una distancia desde la cámara más allá de la cual no se dibujarán objetos, lo que garantiza que los objetos que estén demasiado lejos para ser reconocibles no se incluirán en la escena.  
+ Las <xref:System.Windows.Media.Media3D.ProjectionCamera.NearPlaneDistance%2A> <xref:System.Windows.Media.Media3D.ProjectionCamera.FarPlaneDistance%2A> propiedades y de <xref:System.Windows.Media.Media3D.ProjectionCamera> limitan el intervalo de proyección de la cámara. Dado que las cámaras se pueden ubicar en cualquier parte de la escena, es posible situarlas dentro de un modelo o muy cerca de él, con lo que resultaría difícil distinguir correctamente los objetos.  <xref:System.Windows.Media.Media3D.ProjectionCamera.NearPlaneDistance%2A> permite especificar una distancia mínima desde la cámara más allá de la cual no se dibujarán los objetos.  Por el contrario, <xref:System.Windows.Media.Media3D.ProjectionCamera.FarPlaneDistance%2A> permite especificar una distancia desde la cámara más allá de la cual no se dibujarán objetos, lo que garantiza que los objetos que estén demasiado lejos para ser reconocibles no se incluirán en la escena.  
   
  ![Colocación de la cámara](./media/coordsystem-6.png "CoordSystem-6")  
 Posición de la cámara  
   
- <xref:System.Windows.Media.Media3D.OrthographicCamera>especifica una proyección ortogonal de un modelo 3D en una superficie visual 2D. Al igual que otras cámaras, especifica una posición, dirección de visualización y dirección "hacia arriba". Sin embargo, a diferencia de, <xref:System.Windows.Media.Media3D.PerspectiveCamera> <xref:System.Windows.Media.Media3D.OrthographicCamera> describe una proyección que no incluye el escorzo de la perspectiva. En otras palabras, <xref:System.Windows.Media.Media3D.OrthographicCamera> describe un cuadro de visualización cuyos lados son paralelos, en lugar de uno cuyos lados se encuentran en un punto de la cámara. En la imagen siguiente se muestra el mismo modelo que el que se ve mediante <xref:System.Windows.Media.Media3D.PerspectiveCamera> y <xref:System.Windows.Media.Media3D.OrthographicCamera> .  
+ <xref:System.Windows.Media.Media3D.OrthographicCamera> especifica una proyección ortogonal de un modelo 3D en una superficie visual 2D. Al igual que otras cámaras, especifica una posición, dirección de visualización y dirección "hacia arriba". Sin embargo, a diferencia de, <xref:System.Windows.Media.Media3D.PerspectiveCamera> <xref:System.Windows.Media.Media3D.OrthographicCamera> describe una proyección que no incluye el escorzo de la perspectiva. En otras palabras, <xref:System.Windows.Media.Media3D.OrthographicCamera> describe un cuadro de visualización cuyos lados son paralelos, en lugar de uno cuyos lados se encuentran en un punto de la cámara. En la imagen siguiente se muestra el mismo modelo que el que se ve mediante <xref:System.Windows.Media.Media3D.PerspectiveCamera> y <xref:System.Windows.Media.Media3D.OrthographicCamera> .  
   
  ![Proyección ortográfica y en perspectiva](./media/camera-projections4.png "Camera_projections4")  
 Proyecciones ortográfica y en perspectiva  
@@ -58,7 +58,7 @@ Proyecciones ortográfica y en perspectiva
 <a name="models_meshes"></a>
 ## <a name="model-and-mesh-primitives"></a>Elementos primitivos de modelo y de malla  
   
- <xref:System.Windows.Media.Media3D.Model3D>es la clase base abstracta que representa un objeto 3D genérico. Para compilar una escena 3D, necesita algunos objetos para verlos y los objetos que componen el gráfico de escena derivan de <xref:System.Windows.Media.Media3D.Model3D> . Actualmente, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] admite las geometrías de modelado con <xref:System.Windows.Media.Media3D.GeometryModel3D> . La <xref:System.Windows.Media.Media3D.GeometryModel3D.Geometry%2A> propiedad de este modelo toma una primitiva de malla.  
+ <xref:System.Windows.Media.Media3D.Model3D> es la clase base abstracta que representa un objeto 3D genérico. Para compilar una escena 3D, necesita algunos objetos para verlos y los objetos que componen el gráfico de escena derivan de <xref:System.Windows.Media.Media3D.Model3D> . Actualmente, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] admite las geometrías de modelado con <xref:System.Windows.Media.Media3D.GeometryModel3D> . La <xref:System.Windows.Media.Media3D.GeometryModel3D.Geometry%2A> propiedad de este modelo toma una primitiva de malla.  
   
  Para crear un modelo, comience por crear un elemento primitivo, o malla. Un primitivo 3D es una colección de vértices que forman una única entidad 3D. La mayoría de los sistemas 3D proporcionan primitivas modeladas en la figura cerrada más simple: un triángulo definido por tres vértices.  Dado que los tres puntos de un triángulo son coplanares, puede seguir agregando triángulos para modelar formas más complejas, denominadas mallas.  
   
@@ -70,7 +70,7 @@ Proyecciones ortográfica y en perspectiva
   
  Puede seguir definiendo el modelo especificando valores para las <xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A> propiedades y <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A> .  Para representar la superficie del modelo, el sistema de gráficos necesita información sobre en qué dirección mira la superficie de cualquier triángulo dado. Utiliza esta información para realizar los cálculos de iluminación del modelo: las superficies que miran directamente hacia una fuente de luz parecen más luminosas que las que tienen un ángulo que las oculta de la luz. Aunque [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] puede determinar los vectores normales predeterminados utilizando las coordenadas de posición, también es posible especificar vectores normales diferentes para crear un aspecto más aproximado de las superficies curvas.  
   
- La <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A> propiedad especifica una colección de <xref:System.Windows.Point> s que indican al sistema de gráficos cómo asignar las coordenadas que determinan cómo se dibuja una textura en los vértices de la malla. <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>se especifican como un valor entre cero y 1, ambos incluidos.  Al igual que con la <xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A> propiedad, el sistema de gráficos puede calcular las coordenadas de textura predeterminadas, pero puede optar por establecer distintas coordenadas de textura para controlar la asignación de una textura que incluye parte de un patrón de repetición, por ejemplo. Encontrará más información sobre coordenadas de textura en los temas siguientes o en el SDK de Managed Direct3D.  
+ La <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A> propiedad especifica una colección de <xref:System.Windows.Point> s que indican al sistema de gráficos cómo asignar las coordenadas que determinan cómo se dibuja una textura en los vértices de la malla. <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A> se especifican como un valor entre cero y 1, ambos incluidos.  Al igual que con la <xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A> propiedad, el sistema de gráficos puede calcular las coordenadas de textura predeterminadas, pero puede optar por establecer distintas coordenadas de textura para controlar la asignación de una textura que incluye parte de un patrón de repetición, por ejemplo. Encontrará más información sobre coordenadas de textura en los temas siguientes o en el SDK de Managed Direct3D.  
   
  En el ejemplo siguiente se muestra cómo crear una cara del modelo del cubo en código de procedimiento. Puede dibujar todo el cubo como un único GeometryModel3D; en este ejemplo se dibuja la superficie del cubo como un modelo distinto para aplicar texturas independientes a cada uno de ellos más adelante.  
   
@@ -87,11 +87,11 @@ Proyecciones ortográfica y en perspectiva
   
  Para definir las características de la superficie de un modelo, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] utiliza la <xref:System.Windows.Media.Media3D.Material> clase abstracta. Las subclases concretas de Material determinan algunas de las características del aspecto de la superficie del modelo y, además, cada una de ellas proporciona una propiedad Brush a la que puede pasar SolidColorBrush, TileBrush o VisualBrush.  
   
-- <xref:System.Windows.Media.Media3D.DiffuseMaterial>Especifica que el pincel se aplicará al modelo como si dicho modelo estuviese iluminado de forma difusa. El uso de DiffuseMaterial es más parecido al uso de los pinceles directamente en los modelos 2D; las superficies del modelo no reflejan la luz como si fuesen brillantes.  
+- <xref:System.Windows.Media.Media3D.DiffuseMaterial> Especifica que el pincel se aplicará al modelo como si dicho modelo estuviese iluminado de forma difusa. El uso de DiffuseMaterial es más parecido al uso de los pinceles directamente en los modelos 2D; las superficies del modelo no reflejan la luz como si fuesen brillantes.  
   
-- <xref:System.Windows.Media.Media3D.SpecularMaterial>Especifica que el pincel se aplicará al modelo como si la superficie del modelo fuera difícil o brillante, capaz de reflejar los resaltados. Puede establecer el grado en el que la textura sugerirá esta calidad reflectante o "brilla" especificando un valor para la <xref:System.Windows.Media.Media3D.SpecularMaterial.SpecularPower%2A> propiedad.  
+- <xref:System.Windows.Media.Media3D.SpecularMaterial> Especifica que el pincel se aplicará al modelo como si la superficie del modelo fuera difícil o brillante, capaz de reflejar los resaltados. Puede establecer el grado en el que la textura sugerirá esta calidad reflectante o "brilla" especificando un valor para la <xref:System.Windows.Media.Media3D.SpecularMaterial.SpecularPower%2A> propiedad.  
   
-- <xref:System.Windows.Media.Media3D.EmissiveMaterial>permite especificar que la textura se aplique como si el modelo emitira luz igual al color del pincel. Esto no convierte el modelo en una luz; sin embargo, participará de manera diferente en el sombreado que si se aplica textura con DiffuseMaterial o SpecularMaterial.  
+- <xref:System.Windows.Media.Media3D.EmissiveMaterial> permite especificar que la textura se aplique como si el modelo emitira luz igual al color del pincel. Esto no convierte el modelo en una luz; sin embargo, participará de manera diferente en el sombreado que si se aplica textura con DiffuseMaterial o SpecularMaterial.  
   
  Para mejorar el rendimiento, las <xref:System.Windows.Media.Media3D.GeometryModel3D> caras opuestas de un (las caras que están fuera de la vista porque están en el lado opuesto del modelo de la cámara) se seleccionan de la escena.  Para especificar un <xref:System.Windows.Media.Media3D.Material> que se va a aplicar a la parte frontal de un modelo como un plano, establezca la propiedad del modelo <xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A> .  
   
@@ -100,9 +100,9 @@ Proyecciones ortográfica y en perspectiva
  En los siguientes ejemplos de código se muestra cómo aplicar un color sólido y un dibujo como pinceles a modelos 3D.  
   
  [!code-xaml[basic3d#Basic3DXAML3DN5](~/samples/snippets/xaml/VS_Snippets_Wpf/Basic3D/XAML/Window1.xaml#basic3dxaml3dn5)]  
-  ' [!code-xaml[3doverview#3DOverview3DN9](~/samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/app.xaml#3doverview3dn9)]  
- ' [!code-csharp[3doverview#3DOverview3DN8](~/samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn8)]
-  [!code-vb[3doverview#3DOverview3DN8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn8)]  
+ [!code-xaml[3doverview#3DOverview3DN9](~/samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/app.xaml#3doverview3dn9)]  
+ [!code-csharp[3doverview#3DOverview3DN8](~/samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn8)]  
+ [!code-vb[3doverview#3DOverview3DN8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn8)]  
   
 <a name="lights"></a>
 ## <a name="illuminating-the-scene"></a>Iluminación de la escena  
@@ -114,7 +114,7 @@ Proyecciones ortográfica y en perspectiva
   
 - <xref:System.Windows.Media.Media3D.DirectionalLight>: Ilumina como una fuente de luz distanl.  Las luces direccionales tienen un <xref:System.Windows.Media.Media3D.DirectionalLight.Direction%2A> especificado como Vector3D, pero no una ubicación especificada.  
   
-- <xref:System.Windows.Media.Media3D.PointLight>: Se ilumina como una fuente de luz cercana. Las luces puntuales tienen posición y emiten la luz desde esa posición. Los objetos de la escena se iluminan dependiendo de su posición y distancia con respecto a la luz. <xref:System.Windows.Media.Media3D.PointLightBase>expone una <xref:System.Windows.Media.Media3D.PointLightBase.Range%2A> propiedad, que determina una distancia más allá de la cual los modelos no se iluminarán por la luz. PointLight también expone propiedades de atenuación, que determinan cómo disminuye la intensidad de la luz con la distancia. Puede especificar interpolaciones constantes, lineales o cuadráticas para la atenuación de la luz.  
+- <xref:System.Windows.Media.Media3D.PointLight>: Se ilumina como una fuente de luz cercana. Las luces puntuales tienen posición y emiten la luz desde esa posición. Los objetos de la escena se iluminan dependiendo de su posición y distancia con respecto a la luz. <xref:System.Windows.Media.Media3D.PointLightBase> expone una <xref:System.Windows.Media.Media3D.PointLightBase.Range%2A> propiedad, que determina una distancia más allá de la cual los modelos no se iluminarán por la luz. PointLight también expone propiedades de atenuación, que determinan cómo disminuye la intensidad de la luz con la distancia. Puede especificar interpolaciones constantes, lineales o cuadráticas para la atenuación de la luz.  
   
 - <xref:System.Windows.Media.Media3D.SpotLight>: Hereda de <xref:System.Windows.Media.Media3D.PointLight> . Los focos de luz iluminan como las luces puntuales, y tienen posición y dirección. Proyectan la luz en un área cónica establecida por <xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A> <xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A> las propiedades y, que se especifican en grados.  
   
@@ -167,7 +167,7 @@ Proyecciones ortográfica y en perspectiva
   
  [!code-xaml[hostingwpfusercontrolinwf#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/HostingWpfUserControlInWf/ConeControl.xaml#1)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Controls.Viewport3D>
 - <xref:System.Windows.Media.Media3D.PerspectiveCamera>
@@ -175,6 +175,6 @@ Proyecciones ortográfica y en perspectiva
 - <xref:System.Windows.Media.Media3D.Material>
 - [Información general sobre transformaciones de modelos 3D](3-d-transformations-overview.md)
 - [Maximizar el rendimiento de representación 3D en WPF](maximize-wpf-3d-performance.md)
-- [Temas "Cómo..."](3-d-graphics-how-to-topics.md)
+- [Temas de procedimientos](3-d-graphics-how-to-topics.md)
 - [Información general sobre formas y dibujo básico en WPF](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Pintar con imágenes, dibujos y elementos visuales](painting-with-images-drawings-and-visuals.md)
