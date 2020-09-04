@@ -12,12 +12,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: 17d33b25867f75419a0e65ab0d75950bad13af57
-  ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+  ms.openlocfilehash: 72198287028c73f0e518d7bcfd0b694bb267e132
+  ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 08/17/2020
-  ms.locfileid: "88267404"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88812281"
 items:
 - durationInMinutes: 1
   content: >
@@ -52,7 +52,7 @@ items:
     > Este ejercicio le ayudará a aprender la estructura del código de C#.
 
 
-    El primer programa está limitado a la impresión de un mensaje. Puede escribir programas más útiles mediante **variables**. Una **variable** es un símbolo que se puede usar para ejecutar el mismo código con valores diferentes. Vamos a probarla. Reemplace el código que ha escrito en la ventana interactiva con el código siguiente:
+    El primer programa está limitado a la impresión de un mensaje. Puede escribir programas más útiles mediante *variables*. Una *variable* es un símbolo que se puede usar para ejecutar el mismo código con valores diferentes. Vamos a probarla. Reemplace el código que ha escrito en la ventana interactiva con el código siguiente:
 
 
     ```csharp
@@ -149,11 +149,11 @@ items:
 
     > [!TIP]
 
-    > Es un buen momento para que explore por su cuenta. Ha aprendido que `Console.WriteLine()` escribe texto en la pantalla. Ahora también sabe cómo declarar variables y concatenar cadenas de forma conjunta. Experimente en la ventana interactiva. La ventana tiene una característica denominada **IntelliSense** que realiza sugerencias sobre lo que puede hacer. Escriba `.` después de `d` en `firstFriend`. Verá una lista de sugerencias para las propiedades y los métodos que puede usar.
+    > Es un buen momento para que explore por su cuenta. Ha aprendido que `Console.WriteLine()` escribe texto en la pantalla. Ahora también sabe cómo declarar variables y concatenar cadenas de forma conjunta. Experimente en la ventana interactiva. La ventana tiene una característica denominada *IntelliSense* que realiza sugerencias sobre lo que puede hacer. Escriba `.` después de `d` en `firstFriend`. Verá una lista de sugerencias para las propiedades y los métodos que puede usar.
 - title: Otras operaciones con cadenas
   durationInMinutes: 5
   content: >
-    Ya ha utilizado un **método**, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, para imprimir los mensajes. Un **método** es un bloque de código que implementa alguna acción. Tiene un nombre, por lo que puede acceder a él.
+    Ya ha utilizado un *método*, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, para imprimir los mensajes. Un *método* es un bloque de código que implementa alguna acción. Tiene un nombre, por lo que puede acceder a él.
 
 
     Supongamos que las cadenas tienen espacios iniciales o finales que no desea mostrar. Desea **recortar** los espacios de las cadenas.
@@ -234,7 +234,7 @@ items:
     ```
 
 
-    El método <xref:System.String.Contains%2A> devuelve un valor **booleano** que indica si se encontró la cadena que buscaba. Un **booleano** almacena un valor `true` o `false`. Cuando se muestra como salida de texto, se escriben en mayúsculas: `True` y `False`, respectivamente. Obtendrá más información sobre los valores **booleanos** en una lección posterior.
+    El método <xref:System.String.Contains%2A> devuelve un valor *booleano* que indica si se encontró la cadena que buscaba. Un *booleano* almacena un valor `true` o `false`. Cuando se muestra como salida de texto, se escriben en mayúsculas: `True` y `False`, respectivamente. Obtendrá más información sobre los valores *booleanos* en una lección posterior.
 
 
     ***Desafío***

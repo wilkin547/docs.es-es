@@ -217,6 +217,16 @@
       href: cs2032.md
     - name: "Error del compilador\_CS7003"
       href: cs7003.md
+    - name: "Error del compilador\_CS8400"
+      href: cs8400.md
+    - name: "Error del compilador\_CS8401"
+      href: cs8401.md
+    - name: "Error del compilador\_CS8403"
+      href: cs8403.md
+    - name: "Error del compilador\_CS8410"
+      href: cs8410.md
+    - name: "Error del compilador\_CS8411"
+      href: cs8411.md
     - name: "Advertencia del compilador (nivel\_1)\_CS0420"
       href: cs0420.md
     - name: "Advertencia del compilador (nivel\_1)\_CS0465"

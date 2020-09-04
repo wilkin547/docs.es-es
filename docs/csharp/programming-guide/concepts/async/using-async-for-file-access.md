@@ -1,182 +1,91 @@
 ---
-title: Usar Async en acceso a archivos (C#)
+title: Acceso asincrónico a archivos (C#)
 description: Aprenda a usar la característica async para acceder a archivos en C#. Puede llamar a métodos asincrónicos sin usar devoluciones de llamada ni dividir el código en métodos.
-ms.date: 07/20/2015
+ms.date: 08/19/2020
 ms.assetid: bb018fea-5313-4c80-ab3f-7c24b2145bd9
-ms.openlocfilehash: eb67bd408fe37b99e6c5ffdc2550e8f95110d7eb
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 9a8db6004e8fff2cb39f0c350b403b56ea619e54
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925129"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812047"
 ---
-# <a name="using-async-for-file-access-c"></a><span data-ttu-id="1e700-104">Usar Async en acceso a archivos (C#)</span><span class="sxs-lookup"><span data-stu-id="1e700-104">Using Async for File Access (C#)</span></span>
-<span data-ttu-id="1e700-105">Puede usar la característica async para acceder a archivos.</span><span class="sxs-lookup"><span data-stu-id="1e700-105">You can use the async feature to access files.</span></span> <span data-ttu-id="1e700-106">Con la característica async, se puede llamar a métodos asincrónicos sin usar devoluciones de llamada ni dividir el código en varios métodos o expresiones lambda.</span><span class="sxs-lookup"><span data-stu-id="1e700-106">By using the async feature, you can call into asynchronous methods without using callbacks or splitting your code across multiple methods or lambda expressions.</span></span> <span data-ttu-id="1e700-107">Para convertir código sincrónico en asincrónico, basta con llamar a un método asincrónico y no a un método sincrónico y agregar algunas palabras clave al código.</span><span class="sxs-lookup"><span data-stu-id="1e700-107">To make synchronous code asynchronous, you just call an asynchronous method instead of a synchronous method and add a few keywords to the code.</span></span>  
-  
- <span data-ttu-id="1e700-108">Podrían considerarse los siguientes motivos para agregar asincronía a las llamadas de acceso a archivos:</span><span class="sxs-lookup"><span data-stu-id="1e700-108">You might consider the following reasons for adding asynchrony to file access calls:</span></span>  
-  
-- <span data-ttu-id="1e700-109">La asincronía hace que las aplicaciones de interfaz de usuario tengan mayor capacidad de respuesta porque el subproceso de interfaz de usuario que inicia la operación puede realizar otro trabajo.</span><span class="sxs-lookup"><span data-stu-id="1e700-109">Asynchrony makes UI applications more responsive because the UI thread that launches the operation can perform other work.</span></span> <span data-ttu-id="1e700-110">Si el subproceso de interfaz de usuario debe ejecutar código que tarda mucho tiempo (por ejemplo, más de 50 milisegundos), puede inmovilizar la interfaz de usuario hasta que la E/S se complete y el subproceso de interfaz de usuario pueda volver a procesar la entrada de teclado y de mouse y otros eventos.</span><span class="sxs-lookup"><span data-stu-id="1e700-110">If the UI thread must execute code that takes a long time (for example, more than 50 milliseconds), the UI may freeze until the I/O is complete and the UI thread can again process keyboard and mouse input and other events.</span></span>  
-  
-- <span data-ttu-id="1e700-111">La asincronía mejora la escalabilidad de ASP.NET y otras aplicaciones basadas en servidor reduciendo la necesidad de subproceso.</span><span class="sxs-lookup"><span data-stu-id="1e700-111">Asynchrony improves the scalability of ASP.NET and other server-based applications by reducing the need for threads.</span></span> <span data-ttu-id="1e700-112">Si la aplicación usa un subproceso dedicado por respuesta y se procesa un millar de solicitudes simultáneamente, se necesitan mil subprocesos.</span><span class="sxs-lookup"><span data-stu-id="1e700-112">If the application uses a dedicated thread per response and a thousand requests are being handled simultaneously, a thousand threads are needed.</span></span> <span data-ttu-id="1e700-113">Las operaciones asincrónicas no suelen necesitar un subproceso durante la espera.</span><span class="sxs-lookup"><span data-stu-id="1e700-113">Asynchronous operations often don’t need to use a thread during the wait.</span></span> <span data-ttu-id="1e700-114">Usan el subproceso existente de finalización de E/S brevemente al final.</span><span class="sxs-lookup"><span data-stu-id="1e700-114">They use the existing I/O completion thread briefly at the end.</span></span>  
-  
-- <span data-ttu-id="1e700-115">Puede que la latencia de una operación de acceso a archivos sea muy baja en las condiciones actuales, pero puede aumentar mucho en el futuro.</span><span class="sxs-lookup"><span data-stu-id="1e700-115">The latency of a file access operation might be very low under current conditions, but the latency may greatly increase in the future.</span></span> <span data-ttu-id="1e700-116">Por ejemplo, se puede mover un archivo a un servidor que está a escala mundial.</span><span class="sxs-lookup"><span data-stu-id="1e700-116">For example, a file may be moved to a server that's across the world.</span></span>  
-  
-- <span data-ttu-id="1e700-117">La sobrecarga resultante de usar la característica Async es pequeña.</span><span class="sxs-lookup"><span data-stu-id="1e700-117">The added overhead of using the Async feature is small.</span></span>  
-  
-- <span data-ttu-id="1e700-118">Las tareas asincrónicas se pueden ejecutar fácilmente en paralelo.</span><span class="sxs-lookup"><span data-stu-id="1e700-118">Asynchronous tasks can easily be run in parallel.</span></span>  
-  
-## <a name="running-the-examples"></a><span data-ttu-id="1e700-119">Ejecutar los ejemplos</span><span class="sxs-lookup"><span data-stu-id="1e700-119">Running the Examples</span></span>  
- <span data-ttu-id="1e700-120">Para ejecutar los ejemplos de este tema, puede crear una **aplicación WPF** o una **aplicación de Windows Forms** y luego agregar un **botón**.</span><span class="sxs-lookup"><span data-stu-id="1e700-120">To run the examples in this topic, you can create a **WPF Application** or a **Windows Forms Application** and then add a **Button**.</span></span> <span data-ttu-id="1e700-121">En el evento `Click` del botón, agregue una llamada al primer método de cada ejemplo.</span><span class="sxs-lookup"><span data-stu-id="1e700-121">In the button's `Click` event, add a call to the first method in each example.</span></span>  
-  
- <span data-ttu-id="1e700-122">En los ejemplos siguientes, se incluyen las directivas `using` siguientes.</span><span class="sxs-lookup"><span data-stu-id="1e700-122">In the following examples, include the following `using` directives.</span></span>  
-  
-```csharp  
-using System;  
-using System.Collections.Generic;  
-using System.Diagnostics;  
-using System.IO;  
-using System.Text;  
-using System.Threading.Tasks;  
-```  
-  
-## <a name="use-of-the-filestream-class"></a><span data-ttu-id="1e700-123">Uso de la clase FileStream</span><span class="sxs-lookup"><span data-stu-id="1e700-123">Use of the FileStream Class</span></span>  
- <span data-ttu-id="1e700-124">En los ejemplos de este tema se usa la clase <xref:System.IO.FileStream>, que tiene una opción que hace que la E/S asincrónica se produzca en el nivel del sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="1e700-124">The examples in this topic use the <xref:System.IO.FileStream> class, which has an option that causes asynchronous I/O to occur at the operating system level.</span></span> <span data-ttu-id="1e700-125">Si usa esta opción, puede evitar bloquear un subproceso ThreadPool en muchos casos.</span><span class="sxs-lookup"><span data-stu-id="1e700-125">By using this option, you can avoid blocking a ThreadPool thread in many cases.</span></span> <span data-ttu-id="1e700-126">Para habilitar esta opción, especifique el argumento `useAsync=true` o `options=FileOptions.Asynchronous` en la llamada al constructor.</span><span class="sxs-lookup"><span data-stu-id="1e700-126">To enable this option, you specify the `useAsync=true` or `options=FileOptions.Asynchronous` argument in the constructor call.</span></span>  
-  
- <span data-ttu-id="1e700-127">No puede usar esta opción con <xref:System.IO.StreamReader> y <xref:System.IO.StreamWriter> si los abre directamente al especificar una ruta de acceso de archivo.</span><span class="sxs-lookup"><span data-stu-id="1e700-127">You can’t use this option with <xref:System.IO.StreamReader> and <xref:System.IO.StreamWriter> if you open them directly by specifying a file path.</span></span> <span data-ttu-id="1e700-128">En cambio, puede usar esta opción si les proporciona un <xref:System.IO.Stream> que ha abierto la clase <xref:System.IO.FileStream>.</span><span class="sxs-lookup"><span data-stu-id="1e700-128">However, you can use this option if you provide them a <xref:System.IO.Stream> that the <xref:System.IO.FileStream> class opened.</span></span> <span data-ttu-id="1e700-129">Tenga en cuenta que las llamadas asincrónicas son más rápidas en aplicaciones de interfaz de usuario aunque un subproceso ThreadPool se bloquee, porque el subproceso de interfaz de usuario no se bloquea durante la espera.</span><span class="sxs-lookup"><span data-stu-id="1e700-129">Note that asynchronous calls are faster in UI apps even if a ThreadPool thread is blocked, because the UI thread isn’t blocked during the wait.</span></span>  
-  
-## <a name="writing-text"></a><span data-ttu-id="1e700-130">Escribir texto</span><span class="sxs-lookup"><span data-stu-id="1e700-130">Writing Text</span></span>  
- <span data-ttu-id="1e700-131">En el ejemplo siguiente se escribe texto en un archivo.</span><span class="sxs-lookup"><span data-stu-id="1e700-131">The following example writes text to a file.</span></span> <span data-ttu-id="1e700-132">En cada instrucción await, el método finaliza inmediatamente.</span><span class="sxs-lookup"><span data-stu-id="1e700-132">At each await statement, the method immediately exits.</span></span> <span data-ttu-id="1e700-133">Cuando se complete la E/S de archivo, el método se reanuda en la instrucción que sigue a la instrucción await.</span><span class="sxs-lookup"><span data-stu-id="1e700-133">When the file I/O is complete, the method resumes at the statement that follows the await statement.</span></span> <span data-ttu-id="1e700-134">Tenga en cuenta que el modificador async se encuentra en la definición de métodos que usan la instrucción await.</span><span class="sxs-lookup"><span data-stu-id="1e700-134">Note that the async modifier is in the definition of methods that use the await statement.</span></span>  
-  
-```csharp  
-public async Task ProcessWriteAsync()  
-{  
-    string filePath = @"temp2.txt";  
-    string text = "Hello World\r\n";  
-  
-    await WriteTextAsync(filePath, text);  
-}  
-  
-private async Task WriteTextAsync(string filePath, string text)  
-{  
-    byte[] encodedText = Encoding.Unicode.GetBytes(text);  
-  
-    using (FileStream sourceStream = new FileStream(filePath,  
-        FileMode.Append, FileAccess.Write, FileShare.None,  
-        bufferSize: 4096, useAsync: true))  
-    {  
-        await sourceStream.WriteAsync(encodedText, 0, encodedText.Length);  
-    };  
-}  
-```  
-  
- <span data-ttu-id="1e700-135">El ejemplo original incluye la instrucción `await sourceStream.WriteAsync(encodedText, 0, encodedText.Length);`, que es una contracción de las dos instrucciones siguientes:</span><span class="sxs-lookup"><span data-stu-id="1e700-135">The original example has the statement `await sourceStream.WriteAsync(encodedText, 0, encodedText.Length);`, which is a contraction of the following two statements:</span></span>  
-  
-```csharp  
-Task theTask = sourceStream.WriteAsync(encodedText, 0, encodedText.Length);  
-await theTask;  
-```  
-  
- <span data-ttu-id="1e700-136">La primera instrucción devuelve una tarea e inicia el procesamiento de archivos.</span><span class="sxs-lookup"><span data-stu-id="1e700-136">The first statement returns a task and causes file processing to start.</span></span> <span data-ttu-id="1e700-137">La segunda instrucción con await finaliza el método inmediatamente y devuelve otra tarea.</span><span class="sxs-lookup"><span data-stu-id="1e700-137">The second statement with the await causes the method to immediately exit and return a different task.</span></span> <span data-ttu-id="1e700-138">Después, cuando se complete el procesamiento de archivos, la ejecución vuelve a la instrucción que sigue a la instrucción await.</span><span class="sxs-lookup"><span data-stu-id="1e700-138">When the file processing later completes, execution returns to the statement that follows the await.</span></span> <span data-ttu-id="1e700-139">Para obtener más información, vea [Control Flow in Async Programs (C#)](./control-flow-in-async-programs.md) (Flujo de control en programas asincrónicos [C#]).</span><span class="sxs-lookup"><span data-stu-id="1e700-139">For more information, see  [Control Flow in Async Programs (C#)](./control-flow-in-async-programs.md).</span></span>  
-  
-## <a name="reading-text"></a><span data-ttu-id="1e700-140">Leer texto</span><span class="sxs-lookup"><span data-stu-id="1e700-140">Reading Text</span></span>  
- <span data-ttu-id="1e700-141">En el ejemplo siguiente se lee texto de un archivo.</span><span class="sxs-lookup"><span data-stu-id="1e700-141">The following example reads text from a file.</span></span> <span data-ttu-id="1e700-142">El texto se almacena en búfer y, en este caso, se coloca en un <xref:System.Text.StringBuilder>.</span><span class="sxs-lookup"><span data-stu-id="1e700-142">The text is buffered and, in this case, placed into a <xref:System.Text.StringBuilder>.</span></span> <span data-ttu-id="1e700-143">A diferencia del ejemplo anterior, la evaluación de la instrucción await genera un valor.</span><span class="sxs-lookup"><span data-stu-id="1e700-143">Unlike in the previous example, the evaluation of the await produces a value.</span></span> <span data-ttu-id="1e700-144">El método <xref:System.IO.Stream.ReadAsync%2A> devuelve <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>, por lo que la evaluación de await genera un valor `Int32` (`numRead`) una vez completada la operación.</span><span class="sxs-lookup"><span data-stu-id="1e700-144">The <xref:System.IO.Stream.ReadAsync%2A> method returns a <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>, so the evaluation of the await produces an `Int32` value (`numRead`) after the operation completes.</span></span> <span data-ttu-id="1e700-145">Para obtener más información, consulte [Tipos de valor devueltos asincrónicos (C#)](./async-return-types.md).</span><span class="sxs-lookup"><span data-stu-id="1e700-145">For more information, see [Async Return Types (C#)](./async-return-types.md).</span></span>  
-  
-```csharp  
-public async Task ProcessReadAsync()  
-{  
-    string filePath = @"temp2.txt";  
-  
-    if (File.Exists(filePath) == false)  
-    {  
-        Debug.WriteLine("file not found: " + filePath);  
-    }  
-    else  
-    {  
-        try  
-        {  
-            string text = await ReadTextAsync(filePath);  
-            Debug.WriteLine(text);  
-        }  
-        catch (Exception ex)  
-        {  
-            Debug.WriteLine(ex.Message);  
-        }  
-    }  
-}  
-  
-private async Task<string> ReadTextAsync(string filePath)  
-{  
-    using (FileStream sourceStream = new FileStream(filePath,  
-        FileMode.Open, FileAccess.Read, FileShare.Read,  
-        bufferSize: 4096, useAsync: true))  
-    {  
-        StringBuilder sb = new StringBuilder();  
-  
-        byte[] buffer = new byte[0x1000];  
-        int numRead;  
-        while ((numRead = await sourceStream.ReadAsync(buffer, 0, buffer.Length)) != 0)  
-        {  
-            string text = Encoding.Unicode.GetString(buffer, 0, numRead);  
-            sb.Append(text);  
-        }  
-  
-        return sb.ToString();  
-    }  
-}  
-```  
-  
-## <a name="parallel-asynchronous-io"></a><span data-ttu-id="1e700-146">E/S asincrónica en paralelo</span><span class="sxs-lookup"><span data-stu-id="1e700-146">Parallel Asynchronous I/O</span></span>  
- <span data-ttu-id="1e700-147">En el ejemplo siguiente se muestra el procesamiento paralelo escribiendo 10 archivos de texto.</span><span class="sxs-lookup"><span data-stu-id="1e700-147">The following example demonstrates parallel processing by writing 10 text files.</span></span> <span data-ttu-id="1e700-148">Para cada archivo, el método <xref:System.IO.Stream.WriteAsync%2A> devuelve una tarea que luego se agrega a una lista de tareas.</span><span class="sxs-lookup"><span data-stu-id="1e700-148">For each file, the <xref:System.IO.Stream.WriteAsync%2A> method returns a task that is then added to a list of tasks.</span></span> <span data-ttu-id="1e700-149">La instrucción `await Task.WhenAll(tasks);` finaliza el método y se reanuda en el método cuando el procesamiento de archivos se completa para todas las tareas.</span><span class="sxs-lookup"><span data-stu-id="1e700-149">The `await Task.WhenAll(tasks);` statement exits the method and resumes within the method when file processing is complete for all of the tasks.</span></span>  
-  
- <span data-ttu-id="1e700-150">Tras completar las tareas, el ejemplo cierra todas las instancias de <xref:System.IO.FileStream> de un bloque `finally`.</span><span class="sxs-lookup"><span data-stu-id="1e700-150">The example closes all <xref:System.IO.FileStream> instances in a `finally` block after the tasks are complete.</span></span> <span data-ttu-id="1e700-151">Si en lugar de ello, cada `FileStream` se ha creado en una instrucción `using`, la `FileStream` se podría desechar antes de completarse la tarea.</span><span class="sxs-lookup"><span data-stu-id="1e700-151">If each `FileStream` was instead created in a `using` statement, the `FileStream` might be disposed of before the task was complete.</span></span>  
-  
- <span data-ttu-id="1e700-152">Tenga en cuenta que cualquier aumento del rendimiento se debe casi por completo al procesamiento en paralelo y no al procesamiento asincrónico.</span><span class="sxs-lookup"><span data-stu-id="1e700-152">Note that any performance boost is almost entirely from the parallel processing and not the asynchronous processing.</span></span> <span data-ttu-id="1e700-153">Las ventajas de la asincronía estriban en que no inmoviliza varios subprocesos ni el subproceso de interfaz de usuario.</span><span class="sxs-lookup"><span data-stu-id="1e700-153">The advantages of asynchrony are that it doesn’t tie up multiple threads, and that it doesn’t tie up the user interface thread.</span></span>  
-  
-```csharp  
-public async Task ProcessWriteMultAsync()  
-{  
-    string folder = @"tempfolder\";  
-    List<Task> tasks = new List<Task>();  
-    List<FileStream> sourceStreams = new List<FileStream>();  
-  
-    try  
-    {  
-        for (int index = 1; index <= 10; index++)  
-        {  
-            string text = "In file " + index.ToString() + "\r\n";  
-  
-            string fileName = "thefile" + index.ToString("00") + ".txt";  
-            string filePath = folder + fileName;  
-  
-            byte[] encodedText = Encoding.Unicode.GetBytes(text);  
-  
-            FileStream sourceStream = new FileStream(filePath,  
-                FileMode.Append, FileAccess.Write, FileShare.None,  
-                bufferSize: 4096, useAsync: true);  
-  
-            Task theTask = sourceStream.WriteAsync(encodedText, 0, encodedText.Length);  
-            sourceStreams.Add(sourceStream);  
-  
-            tasks.Add(theTask);  
-        }  
-  
-        await Task.WhenAll(tasks);  
-    }  
-  
-    finally  
-    {  
-        foreach (FileStream sourceStream in sourceStreams)  
-        {  
-            sourceStream.Close();  
-        }  
-    }  
-}  
-```  
-  
- <span data-ttu-id="1e700-154">Al usar los métodos <xref:System.IO.Stream.WriteAsync%2A> y <xref:System.IO.Stream.ReadAsync%2A>, puede especificar un <xref:System.Threading.CancellationToken>, que puede usar para cancelar la operación en mitad de la secuencia.</span><span class="sxs-lookup"><span data-stu-id="1e700-154">When using the <xref:System.IO.Stream.WriteAsync%2A> and <xref:System.IO.Stream.ReadAsync%2A> methods, you can specify a <xref:System.Threading.CancellationToken>, which you can use to cancel the operation mid-stream.</span></span> <span data-ttu-id="1e700-155">Para obtener más información, vea [Ajustar una aplicación asincrónica (C#)](./fine-tuning-your-async-application.md) y [Cancelación en subprocesos administrados](../../../../standard/threading/cancellation-in-managed-threads.md).</span><span class="sxs-lookup"><span data-stu-id="1e700-155">For more information, see [Fine-Tuning Your Async Application (C#)](./fine-tuning-your-async-application.md) and [Cancellation in Managed Threads](../../../../standard/threading/cancellation-in-managed-threads.md).</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="1e700-156">Vea también</span><span class="sxs-lookup"><span data-stu-id="1e700-156">See also</span></span>
+# <a name="asynchronous-file-access-c"></a><span data-ttu-id="9319d-104">Acceso asincrónico a archivos (C#)</span><span class="sxs-lookup"><span data-stu-id="9319d-104">Asynchronous file access (C#)</span></span>
 
-- [<span data-ttu-id="1e700-157">Programación asincrónica con Async y Await (C#)</span><span class="sxs-lookup"><span data-stu-id="1e700-157">Asynchronous Programming with async and await (C#)</span></span>](./index.md)
-- [<span data-ttu-id="1e700-158">Tipos de valor devueltos asincrónicos (C#)</span><span class="sxs-lookup"><span data-stu-id="1e700-158">Async Return Types (C#)</span></span>](./async-return-types.md)
-- [<span data-ttu-id="1e700-159">Controlar el flujo en los programas asincrónicos (C#)</span><span class="sxs-lookup"><span data-stu-id="1e700-159">Control Flow in Async Programs (C#)</span></span>](./control-flow-in-async-programs.md)
+<span data-ttu-id="9319d-105">Puede usar la característica async para acceder a archivos.</span><span class="sxs-lookup"><span data-stu-id="9319d-105">You can use the async feature to access files.</span></span> <span data-ttu-id="9319d-106">Con la característica async, se puede llamar a métodos asincrónicos sin usar devoluciones de llamada ni dividir el código en varios métodos o expresiones lambda.</span><span class="sxs-lookup"><span data-stu-id="9319d-106">By using the async feature, you can call into asynchronous methods without using callbacks or splitting your code across multiple methods or lambda expressions.</span></span> <span data-ttu-id="9319d-107">Para convertir código sincrónico en asincrónico, basta con llamar a un método asincrónico y no a un método sincrónico y agregar algunas palabras clave al código.</span><span class="sxs-lookup"><span data-stu-id="9319d-107">To make synchronous code asynchronous, you just call an asynchronous method instead of a synchronous method and add a few keywords to the code.</span></span>
+
+<span data-ttu-id="9319d-108">Podrían considerarse los siguientes motivos para agregar asincronía a las llamadas de acceso a archivos:</span><span class="sxs-lookup"><span data-stu-id="9319d-108">You might consider the following reasons for adding asynchrony to file access calls:</span></span>
+
+> [!div class="checklist"]
+>
+> - <span data-ttu-id="9319d-109">La asincronía hace que las aplicaciones de interfaz de usuario tengan mayor capacidad de respuesta porque el subproceso de interfaz de usuario que inicia la operación puede realizar otro trabajo.</span><span class="sxs-lookup"><span data-stu-id="9319d-109">Asynchrony makes UI applications more responsive because the UI thread that launches the operation can perform other work.</span></span> <span data-ttu-id="9319d-110">Si el subproceso de interfaz de usuario debe ejecutar código que tarda mucho tiempo (por ejemplo, más de 50 milisegundos), puede inmovilizar la interfaz de usuario hasta que la E/S se complete y el subproceso de interfaz de usuario pueda volver a procesar la entrada de teclado y de mouse y otros eventos.</span><span class="sxs-lookup"><span data-stu-id="9319d-110">If the UI thread must execute code that takes a long time (for example, more than 50 milliseconds), the UI may freeze until the I/O is complete and the UI thread can again process keyboard and mouse input and other events.</span></span>
+> - <span data-ttu-id="9319d-111">La asincronía mejora la escalabilidad de ASP.NET y otras aplicaciones basadas en servidor reduciendo la necesidad de subproceso.</span><span class="sxs-lookup"><span data-stu-id="9319d-111">Asynchrony improves the scalability of ASP.NET and other server-based applications by reducing the need for threads.</span></span> <span data-ttu-id="9319d-112">Si la aplicación usa un subproceso dedicado por respuesta y se procesa un millar de solicitudes simultáneamente, se necesitan mil subprocesos.</span><span class="sxs-lookup"><span data-stu-id="9319d-112">If the application uses a dedicated thread per response and a thousand requests are being handled simultaneously, a thousand threads are needed.</span></span> <span data-ttu-id="9319d-113">Las operaciones asincrónicas no suelen necesitar un subproceso durante la espera.</span><span class="sxs-lookup"><span data-stu-id="9319d-113">Asynchronous operations often don't need to use a thread during the wait.</span></span> <span data-ttu-id="9319d-114">Usan el subproceso existente de finalización de E/S brevemente al final.</span><span class="sxs-lookup"><span data-stu-id="9319d-114">They use the existing I/O completion thread briefly at the end.</span></span>
+> - <span data-ttu-id="9319d-115">Puede que la latencia de una operación de acceso a archivos sea muy baja en las condiciones actuales, pero puede aumentar mucho en el futuro.</span><span class="sxs-lookup"><span data-stu-id="9319d-115">The latency of a file access operation might be very low under current conditions, but the latency may greatly increase in the future.</span></span> <span data-ttu-id="9319d-116">Por ejemplo, se puede mover un archivo a un servidor que está a escala mundial.</span><span class="sxs-lookup"><span data-stu-id="9319d-116">For example, a file may be moved to a server that's across the world.</span></span>
+> - <span data-ttu-id="9319d-117">La sobrecarga resultante de usar la característica Async es pequeña.</span><span class="sxs-lookup"><span data-stu-id="9319d-117">The added overhead of using the Async feature is small.</span></span>
+> - <span data-ttu-id="9319d-118">Las tareas asincrónicas se pueden ejecutar fácilmente en paralelo.</span><span class="sxs-lookup"><span data-stu-id="9319d-118">Asynchronous tasks can easily be run in parallel.</span></span>
+
+## <a name="use-appropriate-classes"></a><span data-ttu-id="9319d-119">Uso de las clases adecuadas</span><span class="sxs-lookup"><span data-stu-id="9319d-119">Use appropriate classes</span></span>
+
+<span data-ttu-id="9319d-120">Los ejemplos sencillos de este tema muestran cómo usar los métodos <xref:System.IO.File.WriteAllTextAsync%2A?displayProperty=nameWithType> y <xref:System.IO.File.ReadAllTextAsync%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="9319d-120">The simple examples in this topic demonstrate <xref:System.IO.File.WriteAllTextAsync%2A?displayProperty=nameWithType> and <xref:System.IO.File.ReadAllTextAsync%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="9319d-121">Para tener control finito sobre las operaciones de E/S de archivos, use la clase <xref:System.IO.FileStream>, que tiene una opción que hace que la E/S asincrónica se produzca en el nivel del sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="9319d-121">For finite control over the file I/O operations, use the <xref:System.IO.FileStream> class, which has an option that causes asynchronous I/O to occur at the operating system level.</span></span> <span data-ttu-id="9319d-122">Si usa esta opción, puede evitar bloquear un subproceso del grupo de subprocesos en muchos casos.</span><span class="sxs-lookup"><span data-stu-id="9319d-122">By using this option, you can avoid blocking a thread pool thread in many cases.</span></span> <span data-ttu-id="9319d-123">Para habilitar esta opción, especifique el argumento `useAsync=true` o `options=FileOptions.Asynchronous` en la llamada al constructor.</span><span class="sxs-lookup"><span data-stu-id="9319d-123">To enable this option, you specify the `useAsync=true` or `options=FileOptions.Asynchronous` argument in the constructor call.</span></span>
+
+<span data-ttu-id="9319d-124">No puede usar esta opción con <xref:System.IO.StreamReader> y <xref:System.IO.StreamWriter> si los abre directamente al especificar una ruta de acceso de archivo.</span><span class="sxs-lookup"><span data-stu-id="9319d-124">You can't use this option with <xref:System.IO.StreamReader> and <xref:System.IO.StreamWriter> if you open them directly by specifying a file path.</span></span> <span data-ttu-id="9319d-125">En cambio, puede usar esta opción si les proporciona un <xref:System.IO.Stream> que ha abierto la clase <xref:System.IO.FileStream>.</span><span class="sxs-lookup"><span data-stu-id="9319d-125">However, you can use this option if you provide them a <xref:System.IO.Stream> that the <xref:System.IO.FileStream> class opened.</span></span> <span data-ttu-id="9319d-126">Las llamadas asincrónicas son más rápidas en aplicaciones de interfaz de usuario aunque un subproceso del grupo de subprocesos se bloquee, porque el subproceso de interfaz de usuario no se bloquea durante la espera.</span><span class="sxs-lookup"><span data-stu-id="9319d-126">Asynchronous calls are faster in UI apps even if a thread pool thread is blocked, because the UI thread isn't blocked during the wait.</span></span>
+
+## <a name="write-text"></a><span data-ttu-id="9319d-127">Escritura de texto</span><span class="sxs-lookup"><span data-stu-id="9319d-127">Write text</span></span>
+
+<span data-ttu-id="9319d-128">En los siguientes ejemplos se escribe texto en un archivo.</span><span class="sxs-lookup"><span data-stu-id="9319d-128">The following examples write text to a file.</span></span> <span data-ttu-id="9319d-129">En cada instrucción await, el método finaliza inmediatamente.</span><span class="sxs-lookup"><span data-stu-id="9319d-129">At each await statement, the method immediately exits.</span></span> <span data-ttu-id="9319d-130">Cuando se complete la E/S de archivo, el método se reanuda en la instrucción que sigue a la instrucción await.</span><span class="sxs-lookup"><span data-stu-id="9319d-130">When the file I/O is complete, the method resumes at the statement that follows the await statement.</span></span> <span data-ttu-id="9319d-131">El modificador async se encuentra en la definición de métodos que usan la instrucción await.</span><span class="sxs-lookup"><span data-stu-id="9319d-131">The async modifier is in the definition of methods that use the await statement.</span></span>
+
+### <a name="simple-example"></a><span data-ttu-id="9319d-132">Ejemplo sencillo</span><span class="sxs-lookup"><span data-stu-id="9319d-132">Simple example</span></span>
+
+:::code language="csharp" source="snippets/file-access/Program.cs" id="SimpleWrite":::
+
+### <a name="finite-control-example"></a><span data-ttu-id="9319d-133">Ejemplo de control finito</span><span class="sxs-lookup"><span data-stu-id="9319d-133">Finite control example</span></span>
+
+:::code language="csharp" source="snippets/file-access/Program.cs" id="WriteText":::
+
+<span data-ttu-id="9319d-134">El ejemplo original incluye la instrucción `await sourceStream.WriteAsync(encodedText, 0, encodedText.Length);`, que es una contracción de las dos instrucciones siguientes:</span><span class="sxs-lookup"><span data-stu-id="9319d-134">The original example has the statement `await sourceStream.WriteAsync(encodedText, 0, encodedText.Length);`, which is a contraction of the following two statements:</span></span>
+
+```csharp
+Task theTask = sourceStream.WriteAsync(encodedText, 0, encodedText.Length);
+await theTask;
+```
+
+<span data-ttu-id="9319d-135">La primera instrucción devuelve una tarea e inicia el procesamiento de archivos.</span><span class="sxs-lookup"><span data-stu-id="9319d-135">The first statement returns a task and causes file processing to start.</span></span> <span data-ttu-id="9319d-136">La segunda instrucción con await finaliza el método inmediatamente y devuelve otra tarea.</span><span class="sxs-lookup"><span data-stu-id="9319d-136">The second statement with the await causes the method to immediately exit and return a different task.</span></span> <span data-ttu-id="9319d-137">Después, cuando se complete el procesamiento de archivos, la ejecución vuelve a la instrucción que sigue a la instrucción await.</span><span class="sxs-lookup"><span data-stu-id="9319d-137">When the file processing later completes, execution returns to the statement that follows the await.</span></span>
+
+## <a name="read-text"></a><span data-ttu-id="9319d-138">Lectura de texto</span><span class="sxs-lookup"><span data-stu-id="9319d-138">Read text</span></span>
+
+<span data-ttu-id="9319d-139">En los ejemplos siguientes se lee texto de un archivo.</span><span class="sxs-lookup"><span data-stu-id="9319d-139">The following examples read text from a file.</span></span>
+
+### <a name="simple-example"></a><span data-ttu-id="9319d-140">Ejemplo sencillo</span><span class="sxs-lookup"><span data-stu-id="9319d-140">Simple example</span></span>
+
+:::code language="csharp" source="snippets/file-access/Program.cs" id="SimpleRead":::
+
+### <a name="finite-control-example"></a><span data-ttu-id="9319d-141">Ejemplo de control finito</span><span class="sxs-lookup"><span data-stu-id="9319d-141">Finite control example</span></span>
+
+<span data-ttu-id="9319d-142">El texto se almacena en búfer y, en este caso, se coloca en un <xref:System.Text.StringBuilder>.</span><span class="sxs-lookup"><span data-stu-id="9319d-142">The text is buffered and, in this case, placed into a <xref:System.Text.StringBuilder>.</span></span> <span data-ttu-id="9319d-143">A diferencia del ejemplo anterior, la evaluación de la instrucción await genera un valor.</span><span class="sxs-lookup"><span data-stu-id="9319d-143">Unlike in the previous example, the evaluation of the await produces a value.</span></span> <span data-ttu-id="9319d-144">El método <xref:System.IO.Stream.ReadAsync%2A> devuelve <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>, por lo que la evaluación de await genera un valor `Int32` (`numRead`) una vez completada la operación.</span><span class="sxs-lookup"><span data-stu-id="9319d-144">The <xref:System.IO.Stream.ReadAsync%2A> method returns a <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>, so the evaluation of the await produces an `Int32` value `numRead` after the operation completes.</span></span> <span data-ttu-id="9319d-145">Para obtener más información, consulte [Tipos de valor devueltos asincrónicos (C#)](async-return-types.md).</span><span class="sxs-lookup"><span data-stu-id="9319d-145">For more information, see [Async Return Types (C#)](async-return-types.md).</span></span>
+
+:::code language="csharp" source="snippets/file-access/Program.cs" id="ReadText":::
+
+## <a name="parallel-asynchronous-io"></a><span data-ttu-id="9319d-146">E/S asincrónica en paralelo</span><span class="sxs-lookup"><span data-stu-id="9319d-146">Parallel asynchronous I/O</span></span>
+
+<span data-ttu-id="9319d-147">En los siguientes ejemplos se muestra el procesamiento paralelo escribiendo 10 archivos de texto.</span><span class="sxs-lookup"><span data-stu-id="9319d-147">The following examples demonstrate parallel processing by writing 10 text files.</span></span>
+
+### <a name="simple-example"></a><span data-ttu-id="9319d-148">Ejemplo sencillo</span><span class="sxs-lookup"><span data-stu-id="9319d-148">Simple example</span></span>
+
+:::code language="csharp" source="snippets/file-access/Program.cs" id="SimpleParallelWrite":::
+
+### <a name="finite-control-example"></a><span data-ttu-id="9319d-149">Ejemplo de control finito</span><span class="sxs-lookup"><span data-stu-id="9319d-149">Finite control example</span></span>
+
+<span data-ttu-id="9319d-150">Para cada archivo, el método <xref:System.IO.Stream.WriteAsync%2A> devuelve una tarea que luego se agrega a una lista de tareas.</span><span class="sxs-lookup"><span data-stu-id="9319d-150">For each file, the <xref:System.IO.Stream.WriteAsync%2A> method returns a task that is then added to a list of tasks.</span></span> <span data-ttu-id="9319d-151">La instrucción `await Task.WhenAll(tasks);` finaliza el método y se reanuda en el método cuando el procesamiento de archivos se completa para todas las tareas.</span><span class="sxs-lookup"><span data-stu-id="9319d-151">The `await Task.WhenAll(tasks);` statement exits the method and resumes within the method when file processing is complete for all of the tasks.</span></span>
+
+<span data-ttu-id="9319d-152">Tras completar las tareas, el ejemplo cierra todas las instancias de <xref:System.IO.FileStream> de un bloque `finally`.</span><span class="sxs-lookup"><span data-stu-id="9319d-152">The example closes all <xref:System.IO.FileStream> instances in a `finally` block after the tasks are complete.</span></span> <span data-ttu-id="9319d-153">Si en lugar de ello, cada `FileStream` se ha creado en una instrucción `using`, la `FileStream` se podría desechar antes de completarse la tarea.</span><span class="sxs-lookup"><span data-stu-id="9319d-153">If each `FileStream` was instead created in a `using` statement, the `FileStream` might be disposed of before the task was complete.</span></span>
+
+<span data-ttu-id="9319d-154">Cualquier aumento del rendimiento se debe casi por completo al procesamiento en paralelo y no al procesamiento asincrónico.</span><span class="sxs-lookup"><span data-stu-id="9319d-154">Any performance boost is almost entirely from the parallel processing and not the asynchronous processing.</span></span> <span data-ttu-id="9319d-155">Las ventajas de la asincronía radican en que no inmoviliza varios subprocesos ni el subproceso de interfaz de usuario.</span><span class="sxs-lookup"><span data-stu-id="9319d-155">The advantages of asynchrony are that it doesn't tie up multiple threads, and that it doesn't tie up the user interface thread.</span></span>
+
+:::code language="csharp" source="snippets/file-access/Program.cs" id="ParallelWriteText":::
+
+<span data-ttu-id="9319d-156">Al usar los métodos <xref:System.IO.Stream.WriteAsync%2A> y <xref:System.IO.Stream.ReadAsync%2A>, puede especificar un <xref:System.Threading.CancellationToken>, que puede usar para cancelar la operación en mitad de la secuencia.</span><span class="sxs-lookup"><span data-stu-id="9319d-156">When using the <xref:System.IO.Stream.WriteAsync%2A> and <xref:System.IO.Stream.ReadAsync%2A> methods, you can specify a <xref:System.Threading.CancellationToken>, which you can use to cancel the operation mid-stream.</span></span> <span data-ttu-id="9319d-157">Para más información, consulte [Cancelación de subprocesos administrados](../../../../standard/threading/cancellation-in-managed-threads.md).</span><span class="sxs-lookup"><span data-stu-id="9319d-157">For more information, see [Cancellation in managed threads](../../../../standard/threading/cancellation-in-managed-threads.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="9319d-158">Vea también</span><span class="sxs-lookup"><span data-stu-id="9319d-158">See also</span></span>
+
+- [<span data-ttu-id="9319d-159">Programación asincrónica con async y await (C#)</span><span class="sxs-lookup"><span data-stu-id="9319d-159">Asynchronous programming with async and await (C#)</span></span>](index.md)
+- [<span data-ttu-id="9319d-160">Tipos de valor devueltos asincrónicos (C#)</span><span class="sxs-lookup"><span data-stu-id="9319d-160">Async return types (C#)</span></span>](async-return-types.md)

@@ -1,4 +1,5 @@
 ---
+description: Aprenda a crear descriptores de acceso de eventos personalizados mediante la palabra clave "add" en C#.
 title: 'add: Referencia de C#'
 ms.date: 07/20/2015
 f1_keywords:
@@ -6,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - add event accessor [C#]
 ms.assetid: faf30b99-10e8-45cd-ab9a-57585d4d1d8d
-ms.openlocfilehash: 323064dcbe7596b5f1d2f0f6aa566b07cee45789
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 520267574320af7f85f2ee07e2778f8bebd01e4b
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713810"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89127014"
 ---
-# <a name="add-c-reference"></a><span data-ttu-id="07bf5-102">add (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="07bf5-102">add (C# Reference)</span></span>
-<span data-ttu-id="07bf5-103">La palabra clave contextual `add` se usa para definir un descriptor de acceso de eventos personalizado que se invoca cuando el código de cliente se suscribe a su [evento](./event.md).</span><span class="sxs-lookup"><span data-stu-id="07bf5-103">The `add` contextual keyword is used to define a custom event accessor that is invoked when client code subscribes to your [event](./event.md).</span></span> <span data-ttu-id="07bf5-104">Si proporciona un descriptor de acceso `add` personalizado, también debe proporcionar un descriptor de acceso [remove](./remove.md).</span><span class="sxs-lookup"><span data-stu-id="07bf5-104">If you supply a custom `add` accessor, you must also supply a [remove](./remove.md) accessor.</span></span>  
+# <a name="add-c-reference"></a><span data-ttu-id="24aae-103">add (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="24aae-103">add (C# Reference)</span></span>
+<span data-ttu-id="24aae-104">La palabra clave contextual `add` se usa para definir un descriptor de acceso de eventos personalizado que se invoca cuando el código de cliente se suscribe a su [evento](./event.md).</span><span class="sxs-lookup"><span data-stu-id="24aae-104">The `add` contextual keyword is used to define a custom event accessor that is invoked when client code subscribes to your [event](./event.md).</span></span> <span data-ttu-id="24aae-105">Si proporciona un descriptor de acceso `add` personalizado, también debe proporcionar un descriptor de acceso [remove](./remove.md).</span><span class="sxs-lookup"><span data-stu-id="24aae-105">If you supply a custom `add` accessor, you must also supply a [remove](./remove.md) accessor.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="07bf5-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="07bf5-105">Example</span></span>  
-<span data-ttu-id="07bf5-106">En el ejemplo siguiente se muestra un evento que tiene descriptores de acceso `add` y [remove](./remove.md) personalizados.</span><span class="sxs-lookup"><span data-stu-id="07bf5-106">The following example shows an event that has custom `add` and [remove](./remove.md) accessors.</span></span> <span data-ttu-id="07bf5-107">Para obtener el ejemplo completo, consulte [Procedimiento Implementar eventos de interfaz](../../programming-guide/events/how-to-implement-interface-events.md).</span><span class="sxs-lookup"><span data-stu-id="07bf5-107">For the full example, see [How to implement interface events](../../programming-guide/events/how-to-implement-interface-events.md).</span></span>
+## <a name="example"></a><span data-ttu-id="24aae-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="24aae-106">Example</span></span>  
+<span data-ttu-id="24aae-107">En el ejemplo siguiente se muestra un evento que tiene descriptores de acceso `add` y [remove](./remove.md) personalizados.</span><span class="sxs-lookup"><span data-stu-id="24aae-107">The following example shows an event that has custom `add` and [remove](./remove.md) accessors.</span></span> <span data-ttu-id="24aae-108">Para obtener el ejemplo completo, consulte [Procedimiento Implementar eventos de interfaz](../../programming-guide/events/how-to-implement-interface-events.md).</span><span class="sxs-lookup"><span data-stu-id="24aae-108">For the full example, see [How to implement interface events](../../programming-guide/events/how-to-implement-interface-events.md).</span></span>
   
 [!code-csharp[csrefKeywordsContextual#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#15)]
   
- <span data-ttu-id="07bf5-108">Normalmente, no necesita proporcionar sus propios descriptores de acceso de eventos personalizados.</span><span class="sxs-lookup"><span data-stu-id="07bf5-108">You do not typically need to provide your own custom event accessors.</span></span> <span data-ttu-id="07bf5-109">Los descriptores de acceso que se generan automáticamente mediante el compilador cuando declara un evento son suficientes para la mayoría de escenarios.</span><span class="sxs-lookup"><span data-stu-id="07bf5-109">The accessors that are automatically generated by the compiler when you declare an event are sufficient for most scenarios.</span></span>  
+ <span data-ttu-id="24aae-109">Normalmente, no necesita proporcionar sus propios descriptores de acceso de eventos personalizados.</span><span class="sxs-lookup"><span data-stu-id="24aae-109">You do not typically need to provide your own custom event accessors.</span></span> <span data-ttu-id="24aae-110">Los descriptores de acceso que se generan automáticamente mediante el compilador cuando declara un evento son suficientes para la mayoría de escenarios.</span><span class="sxs-lookup"><span data-stu-id="24aae-110">The accessors that are automatically generated by the compiler when you declare an event are sufficient for most scenarios.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="07bf5-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="07bf5-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="24aae-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="24aae-111">See also</span></span>
 
-- [<span data-ttu-id="07bf5-111">Eventos</span><span class="sxs-lookup"><span data-stu-id="07bf5-111">Events</span></span>](../../programming-guide/events/index.md)
+- [<span data-ttu-id="24aae-112">Eventos</span><span class="sxs-lookup"><span data-stu-id="24aae-112">Events</span></span>](../../programming-guide/events/index.md)

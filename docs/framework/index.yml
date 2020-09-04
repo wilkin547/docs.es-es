@@ -11,12 +11,12 @@ metadata:
   helpviewer_keywords:
   - .NET Framework guide
   ms.date: 04/22/2020
-  ms.openlocfilehash: 67e1549395ab5657a5d609b186fc1816211c5af3
-  ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+  ms.openlocfilehash: 47781bbc5b1b1a2f4c0bc44929c5bb29fe3e7978
+  ms.sourcegitcommit: b78018c850590dfc0348301e1748b779c28604cc
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 04/24/2020
-  ms.locfileid: "82135911"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89379179"
 landingContent:
 - title: Información sobre .NET Framework
   linkLists:
@@ -74,24 +74,16 @@ landingContent:
     links:
     - text: Instalar y desinstalar servicios de Windows
       url: windows-services/how-to-install-and-uninstall-services.md
-- title: Creación de aplicaciones de Windows Forms
+- title: Creación de aplicaciones de escritorio
   linkLists:
   - linkListType: overview
     links:
-    - text: Información general sobre Windows Forms
-      url: winforms/index.md
-  - linkListType: tutorial
-    links:
-    - text: Introducción a Diseñador de Windows Forms
-      url: /visualstudio/designers/walkthrough-windows-forms-designer
-    - text: Creación de una aplicación de Windows Forms desde la línea de comandos
-      url: winforms/how-to-create-a-windows-forms-application-from-the-command-line.md
-  - linkListType: how-to-guide
-    links:
-    - text: Adición y eliminación de elementos de un control ComboBox, ListBox o CheckedListBox
-      url: winforms/controls/add-and-remove-items-from-a-wf-combobox.md
-    - text: Realización de llamadas seguras para subprocesos a controles
-      url: winforms/controls/how-to-make-thread-safe-calls-to-windows-forms-controls.md
+    - text: Introducción a la guía de escritorio
+      url: /dotnet/desktop/
+    - text: WPF de .NET Framework
+      url: wpf/index.md
+    - text: Windows Forms de .NET Framework
+      url: /dotnet/desktop/winforms/?view=netframework-4-8
 - title: Creación de aplicaciones de WPF
   linkLists:
   - linkListType: overview
