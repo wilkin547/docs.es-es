@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 743603cb037406948190c7090ca3527bfc40db18
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 4e408d5bd0976d88f368615860ac373142d0fe1e
+ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84702072"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88957230"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio"></a>Tutorial: Depuración de una aplicación de consola de .NET Core con Visual Studio
 
@@ -19,7 +19,7 @@ En este tutorial se presentan las herramientas de depuración que hay disponible
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Este tutorial funciona con la aplicación de consola que se crea en [Creación de una aplicación de consola de .NET Core en Visual Studio 2019](with-visual-studio.md).
+- Este tutorial funciona con la aplicación de consola que se crea en [Creación de una aplicación de consola de .NET Core con Visual Studio](with-visual-studio.md).
 
 ## <a name="use-debug-build-configuration"></a>Uso de la configuración de compilación de depuración
 
@@ -27,11 +27,11 @@ En este tutorial se presentan las herramientas de depuración que hay disponible
 
 En la configuración de depuración, el programa se compila sin optimizar y con toda la información de depuración simbólica. La optimización complica la depuración, ya que la relación entre el código fuente y las instrucciones generadas es más compleja. La configuración de versión del programa no contiene información de depuración simbólica y está totalmente optimizada.
 
- De forma predeterminada, Visual Studio Code usa la configuración de compilación Depuración, por lo que no es necesario cambiarla antes de depurar.
+ De forma predeterminada, Visual Studio usa la configuración de compilación Depuración, por lo que no es necesario cambiarla antes de depurar.
 
 1. Inicie Visual Studio.
 
-1. Abra el proyecto que creó en [Creación de una aplicación de consola de .NET Core en Visual Studio 2019](with-visual-studio.md).
+1. Abra el proyecto que ha creado en [Creación de una aplicación de consola de .NET Core con Visual Studio](with-visual-studio.md).
 
    La configuración de compilación actual se muestra en la barra de herramientas. En la siguiente imagen de la barra de herramientas se muestra que Visual Studio está configurado para compilar la versión de depuración de la aplicación:
 
@@ -41,7 +41,7 @@ En la configuración de depuración, el programa se compila sin optimizar y con 
 
 Un *punto de interrupción* interrumpe temporalmente la ejecución de la aplicación antes de que se ejecute la línea con el punto de interrupción.
 
-1. Establezca un *punto de interrupción* en la línea que muestre el nombre, la fecha y la hora; para ello, haga clic en el margen izquierdo de la ventana de código de esa línea. El margen izquierdo está a la izquierda de los números de línea.  Otra manera de establecer un punto de interrupción consiste en colocar el cursor en la línea de código y después elegir **Depuración** > **Alternar punto de interrupción** en la barra de menús.
+1. Establezca un *punto de interrupción* en la línea que muestre el nombre, la fecha y la hora; para ello, haga clic en el margen izquierdo de la ventana de código de esa línea. El margen izquierdo está a la izquierda de los números de línea.  Otras maneras de establecer un punto de interrupción consisten en colocar el cursor en la línea de código y, después, presionar <kbd>F9</kbd> o seleccionar **Depurar** > **Alternar punto de interrupción** en la barra de menú.
 
    En esta imagen vemos que, para indicar la línea en la que se establece el punto de interrupción, Visual Studio lo resalta y muestra un punto rojo en el margen izquierdo.
 
@@ -127,7 +127,7 @@ El programa muestra la cadena que escribe el usuario. ¿Qué sucede si el usuari
 
 1. Presione cualquier tecla para cerrar la ventana de consola y detener la depuración.
 
-1. Para borrar el punto de interrupción, haga clic en el punto en el margen izquierdo de la ventana de código. Otra manera de hacerlo es elegir **Depurar > Alternar punto de interrupción** mientras se selecciona la línea de código.
+1. Para borrar el punto de interrupción, haga clic en el punto en el margen izquierdo de la ventana de código. Otras formas de borrar un punto de interrupción consisten en presionar <kbd>F9</kbd> o elegir **Depurar > Alternar punto de interrupción** mientras se selecciona la línea de código.
 
 ## <a name="step-through-a-program"></a>Ejecución paso a paso de un programa
 

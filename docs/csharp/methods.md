@@ -4,14 +4,14 @@ description: Información general sobre métodos, parámetros de método y valor
 ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 09a287b3d74e1b8dbdaf4a53cb207dfe1fad8a0c
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 8c33bcb9dd4052589222c2cb1b375d94d6792ba2
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063359"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810578"
 ---
-# <a name="methods"></a>Métodos
+# <a name="methods-in-c"></a>Métodos de C#
 
 Un método es un bloque de código que contiene una serie de instrucciones. Un programa hace que se ejecuten las instrucciones al llamar al método y especificando los argumentos de método necesarios. En C#, todas las instrucciones ejecutadas se realizan en el contexto de un método. El método `Main` es el punto de entrada para cada aplicación de C# y se llama mediante Common Language Runtime (CLR) cuando se inicia el programa.
 
@@ -32,7 +32,7 @@ Los métodos se declaran en una `class` o `struct` al especificar:
 
 Todas estas partes forman la firma del método.
 
-> [!NOTE]
+> [!IMPORTANT]
 > Un tipo de valor devuelto de un método no forma parte de la firma del método con el objetivo de sobrecargar el método. Sin embargo, forma parte de la firma del método al determinar la compatibilidad entre un delegado y el método que señala.
 
 En el siguiente ejemplo se define una clase denominada `Motorcycle` que contiene cinco métodos:
@@ -243,17 +243,17 @@ Mediante la característica asincrónica, puede invocar métodos asincrónicos s
 Si marca un método con el modificador [async](language-reference/keywords/async.md), puede usar el operador [await](language-reference/operators/await.md) en el método. Cuando el control llega a una expresión `await` en el método asincrónico, el control se devuelve al autor de la llamada si la tarea en espera no se ha completado y se suspende el progreso del método con la palabra clave `await` hasta que dicha tarea se complete. Cuando se completa la tarea, la ejecución puede reanudarse en el método.
 
 > [!NOTE]
-> Un método asincrónico vuelve al autor de llamada cuando encuentra el primer objeto esperado que aún no se ha completado o cuando llega al final del método asincrónico, lo que ocurra primero.
+> Un método asincrónico vuelve al autor de la llamada cuando encuentra el primer objeto esperado que aún no se ha completado o cuando llega al final del método asincrónico, lo que ocurra primero.
 
 Un método asincrónico puede tener un tipo de valor devuelto de <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> o `void`. El tipo de valor devuelto `void` se usa principalmente para definir controladores de eventos, donde se requiere un tipo de valor devuelto `void`. No se puede esperar un método asincrónico que devuelve `void` y el autor de llamada a un método que no devuelve ningún valor no puede capturar ninguna excepción producida por este. A partir de la versión C# 7.0, el método asincrónico puede tener [cualquier tipo de valor devuelto similar a una tarea ](./whats-new/csharp-7.md#generalized-async-return-types).
 
 En el ejemplo siguiente, `DelayAsync` es un método asincrónico que contiene una instrucción return que devuelve un entero. Como se trata de un método asincrónico, su declaración de método debe tener un tipo de valor devuelto de `Task<int>`. Dado que el tipo de valor devuelto es `Task<int>`, la evaluación de la expresión `await` en `DoSomethingAsync` genera un entero, como se demuestra en la instrucción `int result = await delayTask` siguiente.
 
-[!code-csharp[csSnippets.Methods#102](../../samples/snippets/csharp/concepts/methods/async1.cs#102)]
+:::code language="csharp" source="programming-guide/classes-and-structs/snippets/classes-and-structs/methods/Program.cs":::
 
 Un método asincrónico no puede declarar ningún parámetro [in](language-reference/keywords/in-parameter-modifier.md), [ref](language-reference/keywords/ref.md) o [out](language-reference/keywords/out-parameter-modifier.md), pero puede llamar a los métodos que tienen estos parámetros.
 
- Para obtener más información sobre los métodos asincrónicos, vea [Programación asincrónica con Async y Await](async.md), [Controlar el flujo en los programas asincrónicos](programming-guide/concepts/async/control-flow-in-async-programs.md) y [Tipos de valor devueltos asincrónicos](programming-guide/concepts/async/async-return-types.md).
+ Para obtener más información sobre los métodos asincrónicos, consulte los artículos [Programación asincrónica con async y await](async.md) y [Tipos de valor devueltos asincrónicos](programming-guide/concepts/async/async-return-types.md).
 
 <a name="expr"></a>
 

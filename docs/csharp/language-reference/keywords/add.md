@@ -1,4 +1,5 @@
 ---
+description: Aprenda a crear descriptores de acceso de eventos personalizados mediante la palabra clave "add" en C#.
 title: 'add: Referencia de C#'
 ms.date: 07/20/2015
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - add event accessor [C#]
 ms.assetid: faf30b99-10e8-45cd-ab9a-57585d4d1d8d
-ms.openlocfilehash: 323064dcbe7596b5f1d2f0f6aa566b07cee45789
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 520267574320af7f85f2ee07e2778f8bebd01e4b
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713810"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89127014"
 ---
 # <a name="add-c-reference"></a>add (Referencia de C#)
 La palabra clave contextual `add` se usa para definir un descriptor de acceso de eventos personalizado que se invoca cuando el código de cliente se suscribe a su [evento](./event.md). Si proporciona un descriptor de acceso `add` personalizado, también debe proporcionar un descriptor de acceso [remove](./remove.md).  

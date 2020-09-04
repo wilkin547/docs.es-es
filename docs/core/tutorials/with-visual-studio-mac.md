@@ -2,12 +2,12 @@
 title: Creación de una aplicación de consola de .NET Core con Visual Studio para Mac
 description: Aprenda a crear una aplicación de consola de .NET Core con Visual Studio para Mac.
 ms.date: 06/02/2020
-ms.openlocfilehash: 9cab838eaab2c59d8a0270267514f57acb7c60fb
-ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
+ms.openlocfilehash: 8ffcb05ad85f53180ca1aaefbd2dfc7496946142
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84811670"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867664"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio-for-mac"></a>Tutorial: Creación de una aplicación de consola de .NET Core con Visual Studio para Mac
 
@@ -86,7 +86,7 @@ Mejore la aplicación para pedir su nombre al usuario y mostrarlo con la fecha y
 
    :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="MainMethod":::
 
-   Este código muestra "What is your name?" en la ventana de la consola y espera a que el usuario escriba una cadena y luego presione <kbd>entrar</kbd>. Almacena esta cadena en una variable denominada `name`. También recupera el valor de la propiedad <xref:System.DateTime.Now?displayProperty=nameWithType>, que contiene la hora local actual, y lo asigna a una variable denominada `date`. Por último, muestra estos valores en la ventana de la consola.
+   Este código muestra un mensaje en la ventana de la consola y espera a que el usuario escriba una cadena y, luego, presione <kbd>Entrar</kbd>. Almacena esta cadena en una variable denominada `name`. También recupera el valor de la propiedad <xref:System.DateTime.Now?displayProperty=nameWithType>, que contiene la hora local actual, y lo asigna a una variable denominada `date`. Asimismo, muestra estos valores en la ventana de la consola. Por último, muestra un mensaje en la ventana de la consola y llama al método <xref:System.Console.ReadKey(System.Boolean)?displayProperty=nameWithType> para esperar a la entrada del usuario.
 
    El símbolo `\n` representa un carácter de nueva línea.
 
@@ -105,4 +105,4 @@ Mejore la aplicación para pedir su nombre al usuario y mostrarlo con la fecha y
 En este tutorial, ha creado una aplicación de consola de .NET Core. En el siguiente tutorial, depurará la aplicación.
 
 > [!div class="nextstepaction"]
-> [Depuración de una aplicación de consola de .NET Core con Visual Studio](debugging-with-visual-studio-mac.md)
+> [Depuración de una aplicación de consola de .NET Core con Visual Studio para Mac](debugging-with-visual-studio-mac.md)

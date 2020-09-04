@@ -1,4 +1,5 @@
 ---
+description: Obtenga información sobre el tipo de carácter integrado en C#.
 title: 'Tipo char: Referencia de C#'
 ms.date: 05/11/2020
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: f771626e9777deab30e798559d847615d6124e6d
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 5c15cfb8050bc93e055dbde53308f9460ff90bc8
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205781"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89126390"
 ---
 # <a name="char-c-reference"></a>char (referencia de C#)
 

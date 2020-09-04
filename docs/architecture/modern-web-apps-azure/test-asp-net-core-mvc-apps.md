@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Pru
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: fa87fdba830398786cce8951d353e86bc4ff7491
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: 947a3bc7da0949781ae89ed74a87edb2637daf73
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80111054"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89126520"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Prueba de aplicaciones ASP.NET Core MVC
 
@@ -155,14 +155,14 @@ La mayoría de las pruebas de integración en las aplicaciones ASP.NET Core debe
 
 Para las aplicaciones ASP.NET Core, la clase `TestServer` facilita considerablemente la escritura de pruebas funcionales. Para configurar un elemento `TestServer`, use directamente `WebHostBuilder` (o `HostBuilder`), como lo haría para su aplicación, o bien el tipo `WebApplicationFactory` (disponible a partir de la versión 2.1). Intente que el host de prueba coincida lo máximo posible con el host de producción para que las pruebas ejecuten un comportamiento similar al que tendrá la aplicación en la fase de producción. La clase `WebApplicationFactory` es útil para configurar ContentRoot de TestServer, que ASP.NET Core usa para localizar recursos estáticos como las vistas.
 
-Puede crear pruebas funcionales sencillas si crea una clase de prueba que implemente IClassFixture\<WebApplicationFactory\<TEntry>> donde TEntry es la clase de inicio de la aplicación web. Después de agregar esto, el accesorio de prueba puede crear un cliente con el método CreateClient de la fábrica:
+Puede crear pruebas funcionales sencillas si crea una clase de prueba que implemente IClassFixture\<WebApplicationFactory\<TEntry>>, donde TEntry es la clase Startup de la aplicación web. Después de agregar esto, el accesorio de prueba puede crear un cliente con el método CreateClient de la fábrica:
 
 ```cs
 public class BasicWebTests : IClassFixture<WebApplicationFactory<Startup>>
 {
     protected readonly HttpClient _client;
 
-    public BaseWebTest(WebApplicationFactory<Startup> factory)
+    public BasicWebTests(WebApplicationFactory<Startup> factory)
     {
         _client = factory.CreateClient();
     }

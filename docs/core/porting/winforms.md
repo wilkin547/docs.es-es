@@ -4,12 +4,12 @@ description: Se detalla cómo migrar una aplicación de Windows Forms de .NET Fr
 author: Thraka
 ms.author: adegeo
 ms.date: 01/24/2020
-ms.openlocfilehash: efa73428c816eddc00c62c2275d3457c92284388
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 71bd5740e1ea380fdde86328a5aed71fded64765
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206133"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89118551"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Procedimiento para: Migrar una aplicación de escritorio de Windows Forms a .NET Core
 
@@ -26,7 +26,7 @@ En este artículo, se usan diferentes nombres para identificar los tipos de arch
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- [Visual Studio 2019 16.5, versión preliminar 1](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=community&ch=pre&rel=16) o una versión posterior para cualquier trabajo de diseñador que se quiera realizar. Se recomienda actualizar a la [versión preliminar de Visual Studio](https://visualstudio.microsoft.com/vs/preview/) más reciente.
+- [Visual Studio 2019 versión 16.5 o posteriores](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=community&rel=16) para cualquier trabajo de diseñador que se quiera realizar. Se recomienda [actualizar Visual Studio a la versión más reciente](https://visualstudio.microsoft.com/vs/).
 
   Instale las cargas de trabajo de Visual Studio siguientes:
   
@@ -37,7 +37,7 @@ En este artículo, se usan diferentes nombres para identificar los tipos de arch
 - Un proyecto codificado en C#.
 
 > [!NOTE]
-> Los proyectos de .NET Core 3.0 solo se admiten en **Visual Studio 2019** o una versión posterior. A partir de **Visual Studio 2019 16.5, versión preliminar 1**, también se admite el diseñador de Windows Forms de .NET Core.
+> Los proyectos de Windows Forms de .NET Core son compatibles con Visual Studio 2019 y versiones posteriores. También se admite el diseñador de Windows Forms de .NET Core a partir de la versión 16.5 de Visual Studio 2019.
 >
 > Para habilitar el diseñador, vaya a **Herramientas** > **Opciones** > **Entorno** > **Características de vista previa** y seleccione la opción **Usar la versión preliminar del diseñador de Windows Forms del para aplicaciones .NET Core**.
 

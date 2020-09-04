@@ -3,12 +3,12 @@ title: 'Control de versiones del lenguaje C#: Guía de C#'
 description: Obtenga información sobre cómo se determina la versión del lenguaje C# en función del proyecto y los motivos de esa decisión. Obtenga información sobre cómo invalidar el valor predeterminado de forma manual.
 ms.custom: updateeachrelease
 ms.date: 05/20/2020
-ms.openlocfilehash: a27f3210f399f1bed190c18d778cf3824772d576
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 24797c564890b034683d2989010bc694aabc423c
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656857"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811956"
 ---
 # <a name="c-language-versioning"></a>Control de versiones del lenguaje C#
 
@@ -37,6 +37,9 @@ El compilador determina un valor predeterminado según estas reglas:
 | .NET Framework   | todo     | C# 7.3                      |
 
 Cuando el proyecto tiene como destino un marco en versión preliminar que tenga una versión de lenguaje preliminar correspondiente, la versión de lenguaje que se usa es la que está en versión preliminar. Puede usar las características más recientes con esa versión preliminar en cualquier entorno, sin que afecte a los proyectos que tienen como destino una versión de .NET Core publicada.
+
+> [!TIP]
+> Para saber qué versión de lenguaje está usando actualmente, incluya `#error version` (con distinción de mayúsculas y minúsculas) en el código. Esto hace que el compilador genere un diagnóstico, CS8304, con un mensaje que contiene la versión del compilador que se usa y la versión del lenguaje seleccionada actualmente.
 
 ## <a name="override-a-default"></a>Invalidación de un valor predeterminado
 

@@ -1,13 +1,13 @@
 ---
 title: Implementar objetos de valor
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Obtenga los detalles y las opciones para implementar objetos de valor mediante las características nuevas de Entity Framework.
-ms.date: 01/30/2020
-ms.openlocfilehash: 4a8a92a8dabcf09654ecd0e5dea2a7df25d7abf7
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.date: 08/21/2020
+ms.openlocfilehash: 02eed7baaa364c62aa2df599f1d8b0e700dd215f
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805736"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811124"
 ---
 # <a name="implement-value-objects"></a>Implementación de objetos de valor
 
@@ -56,7 +56,7 @@ public abstract class ValueObject
         return !(EqualOperator(left, right));
     }
 
-    protected abstract IEnumerable<object> GetAtomicValues();
+    protected abstract IEnumerable<object> GetEqualityComponents();
 
     public override bool Equals(object obj)
     {
@@ -65,31 +65,16 @@ public abstract class ValueObject
             return false;
         }
 
-        ValueObject other = (ValueObject)obj;
-        IEnumerator<object> thisValues = GetAtomicValues().GetEnumerator();
-        IEnumerator<object> otherValues = other.GetAtomicValues().GetEnumerator();
-        while (thisValues.MoveNext() && otherValues.MoveNext())
-        {
-            if (ReferenceEquals(thisValues.Current, null) ^
-                ReferenceEquals(otherValues.Current, null))
-            {
-                return false;
-            }
+        var other = (ValueObject)obj;
 
-            if (thisValues.Current != null &&
-                !thisValues.Current.Equals(otherValues.Current))
-            {
-                return false;
-            }
-        }
-        return !thisValues.MoveNext() && !otherValues.MoveNext();
+        return this.GetEqualityComponents().SequenceEqual(other.GetEqualityComponents());
     }
 
     public override int GetHashCode()
     {
-        return GetAtomicValues()
-         .Select(x => x != null ? x.GetHashCode() : 0)
-         .Aggregate((x, y) => x ^ y);
+        return GetEqualityComponents()
+            .Select(x => x != null ? x.GetHashCode() : 0)
+            .Aggregate((x, y) => x ^ y);
     }
     // Other utility methods
 }
@@ -106,7 +91,7 @@ public class Address : ValueObject
     public String Country { get; private set; }
     public String ZipCode { get; private set; }
 
-    private Address() { }
+    public Address() { }
 
     public Address(string street, string city, string state, string country, string zipcode)
     {
@@ -117,7 +102,7 @@ public class Address : ValueObject
         ZipCode = zipcode;
     }
 
-    protected override IEnumerable<object> GetAtomicValues()
+    protected override IEnumerable<object> GetEqualityComponents()
     {
         // Using a yield return statement to return each element one at a time
         yield return Street;
@@ -133,7 +118,7 @@ Puede ver cómo esta implementación de objeto de valor de Address no tiene ning
 
 El hecho de no tener que disponer de un campo de identificador para su uso en Entity Framework (EF) no fue posible hasta EF Core 2.0, lo que ayuda a implementar mejor los objetos de valor sin identificador. Eso es precisamente la explicación de la sección siguiente.
 
-Se podría argumentar que los objetos de valor, al ser inmutables, deben ser de solo lectura (es decir, tener propiedades get-only), y así es. Pero los objetos de valor normalmente se serializan y deserializan para recorrer colas de mensajes. Asimismo, si fueran de solo lectura, el deserializador no podría asignar los valores, por lo que simplemente se dejan como `private set`, lo cual ofrece un nivel de solo lectura suficiente para que resulte práctico.
+Se podría argumentar que los objetos de valor, al ser inmutables, deben ser de solo lectura (es decir, tener propiedades get-only), y así es. Pero los objetos de valor normalmente se serializan y deserializan para recorrer colas de mensajes. Asimismo, si fueran de solo lectura, el deserializador no podría asignar los valores, por lo que simplemente se dejan como `private set`, lo cual ofrece un nivel de solo lectura suficiente para que resulte práctico.
 
 ## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20-and-later"></a>Procedimiento para conservar objetos de valor en la base de datos con EF Core 2.0 y versiones posteriores
 
@@ -170,7 +155,7 @@ La función del tipo de entidad de propiedad se agregó a EF Core a partir de la
 
 Un tipo de entidad de propiedad permite asignar tipos que no tienen su propia identidad definida de forma explícita en el modelo de dominio y que se usan como propiedades (como los objetos de valor) en cualquiera de las entidades. Un tipo de entidad de propiedad comparte el mismo tipo CLR con otro tipo de entidad (es decir, solo es una clase convencional). La entidad que contiene la navegación definitoria es la entidad del propietario. Al consultar al propietario, los tipos de propiedad se incluyen de forma predeterminada.
 
-Si se examina el modelo de dominio, parece que los tipos de propiedad no tienen ninguna identidad pero, en el fondo, los tipos de propiedad tienen identidad, aunque la propiedad de navegación del propietario forma parte de esta identidad.
+Si se examina el modelo de dominio, parece que los tipos de propiedad no tienen ninguna identidad pero, en el fondo, la tienen, aunque la propiedad de navegación del propietario forma parte de esta identidad.
 
 La identidad de las instancias de los tipos de propiedad no es totalmente suya. Consta de tres componentes:
 
@@ -180,7 +165,7 @@ La identidad de las instancias de los tipos de propiedad no es totalmente suya. 
 
 - En el caso de las colecciones de tipos de propiedad, un componente independiente (compatible con EF Core 2.2 y versiones posteriores).
 
-Por ejemplo, en el modelo de dominio Ordering de eShopOnContainers, como parte de la entidad Order, el objeto de valor Address se implementa como un tipo de entidad de propiedad dentro de la entidad del propietario, que es la entidad Order. Address es un tipo sin ninguna propiedad de identidad definida en el modelo de dominio. Se usa como propiedad del tipo Order para especificar la dirección de envío de un pedido en concreto.
+Por ejemplo, en el modelo de dominio Ordering de eShopOnContainers, como parte de la entidad Order, el objeto de valor Address se implementa como un tipo de entidad de propiedad dentro de la entidad del propietario, que es la entidad Order. `Address` es un tipo sin ninguna propiedad de identidad definida en el modelo de dominio. Se usa como propiedad del tipo Order para especificar la dirección de envío de un pedido en concreto.
 
 Por convención, se crea una clave principal paralela para el tipo de propiedad y se asignará a la misma tabla que el propietario mediante la división de tabla. Esto permite usar tipos de propiedad de forma similar al modo en que se usan los tipos complejos en EF6 en el .NET Framework tradicional.
 

@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet,contperfq1
-ms.openlocfilehash: 595e93d8d8d22478c6770ddd4f70a0214653f5b9
-ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
+ms.openlocfilehash: 45a44dcd73e1abcc8dfd75cd54da5a2310f027c4
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88187945"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89118265"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio"></a>Tutorial: Creación de una biblioteca .NET Standard con Visual Studio
 
@@ -70,7 +70,7 @@ Para crear la solución en blanco:
 
    `StartsWithUpper` se implementa como un [método de extensión](../../csharp/programming-guide/classes-and-structs/extension-methods.md), de modo que se pueda llamar como si fuera un miembro de la clase <xref:System.String>.
 
-1. En la barra de menús, seleccione **Compilar** > **Compilar solución** para comprobar que el proyecto se compila sin errores.
+1. En la barra de menú, seleccione **Compilar** > **Compilar solución**, o bien presione <kbd>Ctrl</kbd>+<kbd>Mayús</kbd>+<kbd>B</kbd>, para comprobar que el proyecto se compila sin errores.
 
 ## <a name="add-a-console-app-to-the-solution"></a>Incorporación de una aplicación de consola a la solución
 

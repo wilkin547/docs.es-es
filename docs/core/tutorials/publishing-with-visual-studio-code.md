@@ -2,12 +2,12 @@
 title: Publicación de una aplicación de consola de .NET Core con Visual Studio Code
 description: La publicación crea el conjunto de archivos que se necesitan para ejecutar una aplicación de .NET Core.
 ms.date: 07/04/2020
-ms.openlocfilehash: 8fd9975e8a88704b9dea45b40127c8dc03f7d09f
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: a84e66126806e2ab45c14527df1b931fa9980468
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051888"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867651"
 ---
 # <a name="tutorial-publish-a-net-core-console-application-using-visual-studio-code"></a>Tutorial: Publicación de una aplicación de consola de .NET Core con Visual Studio Code
 
@@ -17,13 +17,13 @@ La CLI de .NET Core se usa para publicar la aplicación, por lo que puede seguir
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Este tutorial funciona con la aplicación de consola que se crea en [Creación de una aplicación de consola de .NET Core en Visual Studio Code](with-visual-studio-code.md).
+- Este tutorial funciona con la aplicación de consola que se crea en [Creación de una aplicación de consola de .NET Core con Visual Studio Code](with-visual-studio-code.md).
 
 ## <a name="publish-the-app"></a>Publicar la aplicación
 
 1. Inicie Visual Studio Code.
 
-1. Abra la carpeta de proyecto *HelloWorld* que creó en [Creación de una aplicación de consola de .NET Core en Visual Studio Code](with-visual-studio-code.md).
+1. Abra la carpeta de proyecto *HelloWorld* que ha creado en [Creación de una aplicación de consola de .NET Core con Visual Studio Code](with-visual-studio-code.md).
 
 1. Elija **Ver** > **Terminal** en el menú principal.
 
@@ -39,7 +39,7 @@ La CLI de .NET Core se usa para publicar la aplicación, por lo que puede seguir
 
    La salida del comando es similar al ejemplo siguiente:
 
-   ```
+   ```output
    Microsoft (R) Build Engine version 16.6.0+5ff7b0c9e for .NET Core
    Copyright (C) Microsoft Corporation. All rights reserved.
 
@@ -112,4 +112,4 @@ En los pasos siguientes, examinará los archivos creados por el proceso de publi
 En este tutorial, ha publicado una aplicación de consola. En el siguiente tutorial, creará una biblioteca de clases.
 
 > [!div class="nextstepaction"]
-> [Creación de una biblioteca de .NET Standard en Visual Studio Code](library-with-visual-studio-code.md)
+> [Creación de una biblioteca .NET Standard mediante Visual Studio Code](library-with-visual-studio-code.md)

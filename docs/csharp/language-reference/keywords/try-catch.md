@@ -1,4 +1,5 @@
 ---
+description: 'try-catch: Referencia de C#'
 title: 'try-catch: Referencia de C#'
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: 4715a27a94ac86c5e4955c0e8be95c6ee4a28507
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: e3154da2103029f704abd6873d16d372f1ae19ac
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619707"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89142003"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (Referencia de C#)
 
@@ -131,9 +132,9 @@ Para obtener más información sobre la captura,vea [try-catch-finally](try-catc
 
 Un método asincrónico está marcado por un modificador [async](async.md) y normalmente contiene una o más instrucciones o expresiones await. Una expresión await aplica el operador [await](../operators/await.md) a <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601>.
 
-Cuando el control alcanza un `await` en el método asincrónico, el progreso del método se suspende hasta que la tarea esperada se completa. Cuando se completa la tarea, la ejecución puede reanudarse en el método. Para más información, vea [Programación asincrónica con Async y Await](../../programming-guide/concepts/async/index.md) y [Controlar el flujo en los programas asincrónicos](../../programming-guide/concepts/async/control-flow-in-async-programs.md).
+Cuando el control alcanza un `await` en el método asincrónico, el progreso del método se suspende hasta que la tarea esperada se completa. Cuando se completa la tarea, la ejecución puede reanudarse en el método. Para obtener más información, consulte [Programación asincrónica con Async y Await](../../programming-guide/concepts/async/index.md).
 
-La tarea completada a la que se aplica `await` puede encontrarse en un estado de error debido a una excepción no controlada en el método que devuelve la tarea. La espera de la tarea produce una excepción. Una tarea también puede terminar en un estado cancelado si se cancela el proceso asincrónico que devuelve. La espera de una tarea cancelada devuelve una `OperationCanceledException`. Para obtener más información sobre cómo cancelar un proceso asincrónico, vea [Ajustar una aplicación asincrónica (C# y Visual Basic)](../../programming-guide/concepts/async/fine-tuning-your-async-application.md).
+La tarea completada a la que se aplica `await` puede encontrarse en un estado de error debido a una excepción no controlada en el método que devuelve la tarea. La espera de la tarea produce una excepción. Una tarea también puede terminar en un estado cancelado si se cancela el proceso asincrónico que devuelve. La espera de una tarea cancelada devuelve una excepción `OperationCanceledException`.
 
 Para detectar la excepción, espere la tarea en un bloque `try` y detéctela en el bloque asociado `catch`. Para obtener un ejemplo, vea la sección [Ejemplo de método async](#async-method-example).
 

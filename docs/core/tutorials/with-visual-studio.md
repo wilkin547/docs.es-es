@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: fbe0b3491260e787c08b98b320b19408f2c897eb
-ms.sourcegitcommit: 09bad6ec0cbf18be7cd7f62e77286d305a18b607
+ms.openlocfilehash: 4cd18aca4396f902268d59867760424d65ddcf6d
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87795390"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867638"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio"></a>Tutorial: Creación de una aplicación de consola de .NET Core con Visual Studio
 
@@ -96,7 +96,7 @@ Mejore la aplicación para pedir su nombre al usuario y mostrarlo con la fecha y
    :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="MainMethod":::
    :::code language="vb" source="./snippets/with-visual-studio/vb/Program.vb" id="MainMethod":::
 
-   Este código muestra "What is your name?" en la ventana de la consola y espera a que el usuario escriba una cadena y luego presione <kbd>Entrar</kbd>. Almacena esta cadena en una variable denominada `name`. También recupera el valor de la propiedad <xref:System.DateTime.Now?displayProperty=nameWithType>, que contiene la hora local actual, y lo asigna a una variable denominada `date` (`currentDate` en Visual Basic). Por último, muestra estos valores en la ventana de la consola.
+   Este código muestra un mensaje en la ventana de la consola y espera a que el usuario escriba una cadena y, luego, presione <kbd>Entrar</kbd>. Almacena esta cadena en una variable denominada `name`. También recupera el valor de la propiedad <xref:System.DateTime.Now?displayProperty=nameWithType>, que contiene la hora local actual, y lo asigna a una variable denominada `date` (`currentDate` en Visual Basic). Asimismo, muestra estos valores en la ventana de la consola. Por último, muestra un mensaje en la ventana de la consola y llama al método <xref:System.Console.ReadKey(System.Boolean)?displayProperty=nameWithType> para esperar a la entrada del usuario.
 
    El símbolo `\n` (`vbCrLf` en Visual Basic) representa un carácter de nueva línea.
 

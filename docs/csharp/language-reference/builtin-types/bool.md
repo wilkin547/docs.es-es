@@ -1,4 +1,5 @@
 ---
+description: Obtenga información sobre el tipo booleano integrado en C#.
 title: 'bool (tipo): Referencia de C#'
 ms.date: 11/26/2019
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - bool data type [C#]
 - Boolean [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: 4623dc7d6c8c6c437c78aee45f0eeee8a92e3200
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 23e5bc34f1751b0a706c20dae340920239fcda9d
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87854885"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89126468"
 ---
 # <a name="bool-c-reference"></a>bool (Referencia de C#)
 
@@ -43,7 +44,7 @@ Para más información sobre los tipos de valor que admiten un valor NULL, consu
 
 C# solo proporciona dos conversiones que implican al tipo `bool`. Son una conversión implícita al tipo `bool?` que acepta valores NULL correspondiente y una conversión explícita del tipo `bool?`. Sin embargo, .NET proporciona métodos adicionales que se pueden usar para realizar una conversión al tipo `bool`, o bien revertirla. Para obtener más información, vea la sección [Convertir a y desde valores booleanos](/dotnet/api/system.boolean#converting-to-and-from-boolean-values) de la página de referencia de la API <xref:System.Boolean?displayProperty=nameWithType>.
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 Para obtener más información, vea la sección [Tipo bool](~/_csharplang/spec/types.md#the-bool-type) de la [especificación del lenguaje C#](~/_csharplang/spec/introduction.md).
 
@@ -51,4 +52,4 @@ Para obtener más información, vea la sección [Tipo bool](~/_csharplang/spec/t
 
 - [Referencia de C#](../index.md)
 - [Tipos de valor](value-types.md)
-- [Operadores true y false](../operators/true-false-operators.md)
+- [operadores true y false](../operators/true-false-operators.md)

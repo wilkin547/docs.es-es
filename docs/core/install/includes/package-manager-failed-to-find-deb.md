@@ -1,13 +1,13 @@
 ---
-ms.openlocfilehash: 7d398df060c031ae891218b82a2712d74f4c33b7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9d4c031eda291b0a8832c824789efdffe4084926
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602751"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89132954"
 ---
 
-Si recibe un mensaje de error similar a **No se puede encontrar el paquete (netcore-package)** , ejecute los comandos siguientes.
+Si recibe un mensaje de error similar a **No se puede encontrar el paquete {netcore-package}** o **No se han podido instalar algunos paquetes**, ejecute los comandos siguientes.
 
 Hay dos marcadores de posición en el siguiente conjunto de comandos.
 
@@ -17,12 +17,11 @@ Representa el paquete de .NET Core que va a instalar, como `aspnetcore-runtime-3
 - `{os-version}`\
 Representa la versión de Linux en la que está. Se usa en el comando `wget` siguiente.
 
-Pruebe a purgar la lista de paquetes:
+Primero, pruebe a purgar la lista de paquetes:
 
 ```bash
 sudo dpkg --purge packages-microsoft-prod && sudo dpkg -i packages-microsoft-prod.deb
 sudo apt-get update
-sudo apt-get install {dotnet-package}
 ```
 
-Si eso no funciona, puede ejecutar una instalación manual con los comandos siguientes:
+Después, intente instalar .NET Core de nuevo. Si eso no funciona, puede ejecutar una instalación manual con los comandos siguientes:

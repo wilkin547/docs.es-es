@@ -1,4 +1,5 @@
 ---
+description: 'var: Referencia de C#'
 title: 'var: Referencia de C#'
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - var keyword [C#]
 ms.assetid: 0777850a-2691-4e3e-927f-0c850f5efe15
-ms.openlocfilehash: ff8348a725f43fa8789c73fa58549da26126369c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 303a880a54a79e50515060e0ea28e8d021fa1b76
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712889"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89141717"
 ---
 # <a name="var-c-reference"></a>var (Referencia de C#)
 
@@ -24,6 +25,9 @@ int i = 10; // Explicitly typed.
 ```
 
 Para obtener más información, vea [Variables locales con asignación implícita de tipos](../../programming-guide/classes-and-structs/implicitly-typed-local-variables.md) y [Relaciones entre tipos en operaciones de consulta LINQ](../../programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md).
+
+> [!IMPORTANT]
+> Cuando `var` se usa con tipos de referencia que aceptan valores NULL, siempre implica un tipo de referencia que acepta valores NULL, aunque el tipo de expresión no los acepte.
 
 ## <a name="example"></a>Ejemplo
 

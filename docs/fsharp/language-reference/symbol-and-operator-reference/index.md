@@ -1,22 +1,19 @@
 ---
 title: Referencia de símbolos y operadores
 description: Obtenga información sobre los símbolos y operadores utilizados en el lenguaje de programación F#.
-ms.date: 02/11/2019
+ms.date: 08/15/2020
 fl_keywords:
 - '|>_FS'
-ms.openlocfilehash: 4c3af80e8f5a686535b7c09579d29bb3da8591a3
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 5943352f0a1710ba7a666a79b7871b7269c75a6b
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855404"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359095"
 ---
 # <a name="symbol-and-operator-reference"></a>Referencia de símbolos y operadores
 
 En este artículo se incluye una tabla de símbolos y operadores que se utilizan en el lenguaje F#.
-
-> [!NOTE]
-> La referencia de API de docs.microsoft.com para F# no está completa. Si encuentra vínculos rotos, en su lugar, consulte la referencia [Documentación de la biblioteca principal de F#](https://fsharp.github.io/fsharp-core-docs/).
 
 ## <a name="table-of-symbols-and-operators"></a>Tabla de símbolos y operadores
 
@@ -76,9 +73,12 @@ En la siguiente tabla se describen los símbolos utilizados en el lenguaje F# y 
 |`<>?`|[Operadores que aceptan valores NULL](nullable-operators.md)|<ul><li>Calcula la operación “no es igual a” cuando el lado derecho es un tipo que acepta valores NULL.<br /></li></ul>|
 |`<=`|[Operadores aritméticos](arithmetic-operators.md)|<ul><li>Devuelve `true` si el lado izquierdo es menor o igual que el lado derecho; de lo contrario, devuelve `false`.<br /></li></ul>|
 |`<=?`|[Operadores que aceptan valores NULL](nullable-operators.md)|<ul><li>Calcula la operación “menor o igual que” cuando el lado derecho es un tipo que acepta valores NULL.<br /></li></ul>|
+|<code>&#124;></code>|[Funciones](../functions/index.md)|<ul><li>Pasa el resultado del lado izquierdo a la función del lado derecho (operador de canalización hacia delante).<br /></li></ul>|
+|<code>&#124;&#124;></code>|[&#40; &#124;&#124;&#62; &#41;&#60;'T1,'T2,'U&#62; Función](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#(%20%7C%7C%3E%20))|<ul><li>Pasa la tupla de dos argumentos del lado izquierdo a la función del lado derecho.<br /></li></ul>|
+|<code>&#124;&#124;&#124;></code>|[&#40; &#124;&#124;&#124;&#62; &#41;&#60;'T1,'T2,'T3,'U&#62; Función](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#(%20%7C%7C%7C%3E%20))|<ul><li>Pasa la tupla de tres argumentos del lado izquierdo a la función del lado derecho.<br /></li></ul>|
 |<code>&lt;&#124;</code>|[Funciones](../functions/index.md)|<ul><li>Pasa el resultado de la expresión de la derecha a la función de la izquierda (operador de canalización hacia atrás).<br /></li></ul>|
-|<code>&lt;&#124;&#124;</code>|[Operadores.&#40; &#60;&#124;&#124; &#41;&#60;'T1,'T2,'U&#62; Función](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-%5bhh-%5d%5b%27t1%2c%27t2%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>Pasa la tupla de dos argumentos del lado derecho a la función del lado izquierdo.<br /></li></ul>|
-|<code>&lt;&#124;&#124;&#124;</code>|[Operadores.&#40; &#60;&#124;&#124;&#124; &#41;&#60;'T1,'T2,'T3,'U&#62; Función](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-%5bhhh-%5d%5b%27t1%2c%27t2%2c%27t3%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>Pasa la tupla de tres argumentos del lado derecho a la función del lado izquierdo.<br /></li></ul>|
+|<code>&lt;&#124;&#124;</code>|[&#40; &#60;&#124;&#124; &#41;&#60;'T1,'T2,'U&#62; Función](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#(%20%3C%7C%7C%20))|<ul><li>Pasa la tupla de dos argumentos del lado derecho a la función del lado izquierdo.<br /></li></ul>|
+|<code>&lt;&#124;&#124;&#124;</code>|[&#40; &#60;&#124;&#124;&#124; &#41;&#60;'T1,'T2,'T3,'U&#62; Función](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#(%20%3C%7C%7C%7C%20))|<ul><li>Pasa la tupla de tres argumentos del lado derecho a la función del lado izquierdo.<br /></li></ul>|
 |`<@...@>`|[Expresiones de código delimitadas](../code-quotations.md)|<ul><li>Delimita una expresión de código con tipos.<br /></li></ul>|
 |`<@@...@@>`|[Expresiones de código delimitadas](../code-quotations.md)|<ul><li>Delimita una expresión de código sin tipos.<br /></li></ul>|
 |`=`|[Operadores aritméticos](arithmetic-operators.md)|<ul><li>Devuelve `true` si el lado izquierdo es igual que el lado derecho; de lo contrario, devuelve `false`.<br /></li></ul>|
@@ -108,9 +108,6 @@ En la siguiente tabla se describen los símbolos utilizados en el lenguaje F# y 
 |<code>&#124;</code>|[Expresiones de coincidencia](../match-expressions.md)|<ul><li>Delimita casos de coincidencia individuales, casos de unión discriminada individuales y valores de la enumeración.<br /></li></ul>|
 |<code>&#124;&#124;</code>|[Operadores booleanos](boolean-operators.md)|<ul><li>Calcula la operación OR booleana.<br /></li></ul>|
 |<code>&#124;&#124;&#124;</code>|[Operadores bit a bit](bitwise-operators.md)|<ul><li>Calcula la operación OR bit a bit.<br /></li></ul>|
-|<code>&#124;></code>|[Funciones](../functions/index.md)|<ul><li>Pasa el resultado del lado izquierdo a la función del lado derecho (operador de canalización hacia delante).<br /></li></ul>|
-|<code>&#124;&#124;></code>|[Operadores.&#40; &#124;&#124;&#62; &#41;&#60;'T1,'T2,'U&#62; Función](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-hh%5d-%5d%5b%27t1%2c%27t2%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>Pasa la tupla de dos argumentos del lado izquierdo a la función del lado derecho.<br /></li></ul>|
-|<code>&#124;&#124;&#124;></code>|[Operadores.&#40; &#124;&#124;&#124;&#62; &#41;&#60;'T1,'T2,'T3,'U&#62; Función](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-hhh%5d-%5d%5b%27t1%2c%27t2%2c%27t3%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>Pasa la tupla de tres argumentos del lado izquierdo a la función del lado derecho.<br /></li></ul>|
 |`~~`|[Sobrecarga de operadores](../operator-overloading.md)|<ul><li>Se utiliza para declarar una sobrecarga para el operador unario de negación.<br /></li></ul>|
 |`~~~`|[Operadores bit a bit](bitwise-operators.md)|<ul><li>Calcula la operación NOT bit a bit.<br /></li></ul>|
 |`~-`|[Sobrecarga de operadores](../operator-overloading.md)|<ul><li>Se utiliza para declarar una sobrecarga para el operador unario menos.<br /></li></ul>|

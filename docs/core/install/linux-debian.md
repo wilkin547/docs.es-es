@@ -4,11 +4,12 @@ description: En este artículo se muestran las diversas maneras de instalar el S
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: 68a3e848b3d80806e875dfb2fb7e2cbf223f8ad5
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: d4a54a8a5354a1430141d2c06d4aa90dbafc3edf
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619499"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89134944"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-debian"></a>Instalación del SDK de .NET Core o de .NET Core Runtime en Debian
 
@@ -48,7 +49,7 @@ Las siguientes versiones de .NET Core ya no se admiten. aunque sus descargas sig
 
 ```bash
 wget https://packages.microsoft.com/config/debian/10/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-dpkg -i packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
 ```
 
 [!INCLUDE [linux-apt-install-31](includes/linux-install-31-apt.md)]
@@ -98,7 +99,7 @@ sudo apt-get upgrade
 
 En esta sección se proporciona información sobre los errores comunes que puede recibir al usar ATP para instalar .NET Core.
 
-### <a name="unable-to-locate"></a>No se encuentra el elemento
+### <a name="unable-to-locate--some-packages-could-not-be-installed"></a>No se puede encontrar el paquete \\ No se han podido instalar algunos paquetes
 
 [!INCLUDE [package-manager-failed-to-find-deb](includes/package-manager-failed-to-find-deb.md)]
 

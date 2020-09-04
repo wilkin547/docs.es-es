@@ -3,12 +3,13 @@ title: Propiedades de MSBuild para Microsoft.NET.Sdk
 description: Referencia de las propiedades y los elementos de MSBuild admitidos por el SDK de .NET Core.
 ms.date: 02/14/2020
 ms.topic: reference
-ms.openlocfilehash: 7980369b87d606d3876fe043e929a65da1d0d92b
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.custom: updateeachrelease
+ms.openlocfilehash: 39cbd18121d2b8659b2f5270f39624798f4ebbdc
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916256"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810530"
 ---
 # <a name="msbuild-reference-for-net-core-sdk-projects"></a>Referencia de MSBuild para proyectos del SDK de .NET Core
 
@@ -165,6 +166,50 @@ La propiedad `LangVersion` permite especificar una versión concreta del lenguaj
 ```
 
 Para obtener más información, vea [Control de versiones del lenguaje C#](../../csharp/language-reference/configure-language-version.md#override-a-default).
+
+## <a name="code-analysis-properties"></a>Propiedades de análisis de código
+
+### <a name="analysislevel"></a>AnalysisLevel
+
+La propiedad `AnalysisLevel` permite especificar un nivel de análisis de código. Por ejemplo, si quiere acceder a la versión preliminar de los analizadores de código, establezca `AnalysisLevel` en `preview`. El valor predeterminado es `latest`.
+
+```xml
+<PropertyGroup>
+  <AnalysisLevel>preview</AnalysisLevel>
+</PropertyGroup>
+```
+
+En la siguiente tabla se muestran las opciones disponibles.
+
+| Value | Significado |
+|-|-|
+| `latest` | Se usan los analizadores de código que se han publicado más recientemente. Este es el valor predeterminado. |
+| `preview` | Se usan los analizadores de código más recientes, incluso si están en versión preliminar. |
+| `5.0` | Se usa el conjunto de reglas que se habilitó para .NET 5,0, incluso si hay reglas más recientes disponibles. |
+| `5` | Se usa el conjunto de reglas que se habilitó para .NET 5,0, incluso si hay reglas más recientes disponibles. |
+
+### <a name="codeanalysistreatwarningsaserrors"></a>CodeAnalysisTreatWarningsAsErrors
+
+La propiedad `CodeAnalysisTreatWarningsAsErrors` le permite configurar si las advertencias de análisis de código se deben tratar como advertencias e interrumpir la compilación. Si usa la marca `-warnaserror` al compilar los proyectos, las advertencias de [análisis de código de .NET](../../fundamentals/productivity/code-analysis.md) también se tratan como errores. Si solo quiere que las advertencias del compilador se traten como errores, puede establecer la propiedad `CodeAnalysisTreatWarningsAsErrors` de MSBuild en `false` en el archivo del proyecto.
+
+```xml
+<PropertyGroup>
+  <CodeAnalysisTreatWarningsAsErrors>false</CodeAnalysisTreatWarningsAsErrors>
+</PropertyGroup>
+```
+
+### <a name="enablenetanalyzers"></a>EnableNETAnalyzers
+
+De forma predeterminada, el [análisis de código de .NET](../../fundamentals/productivity/code-analysis.md) está habilitado para los proyectos que tienen como destino .NET 5.0 o una versión posterior. Puede habilitar el análisis de código de .NET para los proyectos que tienen como destino versiones anteriores de .NET estableciendo la propiedad `EnableNETAnalyzers` en "true". Para deshabilitar el análisis de código en cualquier proyecto, establezca esta propiedad en `false`.
+
+```xml
+<PropertyGroup>
+  <EnableNETAnalyzers>true</EnableNETAnalyzers>
+</PropertyGroup>
+```
+
+> [!TIP]
+> Otra forma de habilitar el análisis de código de .NET en proyectos que tienen como destino versiones de .NET anteriores a .NET 5.0 es establecer la propiedad [AnalysisLevel](#analysislevel) en `latest`.
 
 ## <a name="run-time-configuration-properties"></a>Propiedades de configuración del tiempo de ejecución
 

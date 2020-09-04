@@ -1,16 +1,17 @@
 ---
+description: Compilar la línea de comandos con csc.exe
 title: Compilar la línea de comandos con csc.exe
 ms.date: 04/19/2017
 helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: f692e66672b1804a309c6ac04c158af948a1b1ab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9ffd164602862fce7f5e4f0982d3eda7cb403e60
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789869"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125935"
 ---
 # <a name="command-line-build-with-cscexe"></a>Compilar la línea de comandos con csc.exe
 
@@ -18,13 +19,13 @@ Puede invocar el compilador de C# escribiendo el nombre de su archivo ejecutable
 
 Si usa la ventana **Símbolo del sistema para desarrolladores de Visual Studio**, todas las variables de entorno necesarias se establecen automáticamente. Para obtener información sobre cómo acceder a esta herramienta, vea el tema [Símbolo del sistema para desarrolladores de Visual Studio](../../../framework/tools/developer-command-prompt-for-vs.md).
 
-Si usa una ventana de símbolo del sistema estándar, debe ajustar la ruta de acceso antes de poder invocar *csc.exe* desde cualquier subdirectorio del equipo. También debe ejecutar *vsvars32.bat* para establecer las variables de entorno adecuadas para admitir las compilaciones desde la línea de comandos. Para obtener más información sobre *vsvars32.bat*, incluidas las instrucciones sobre cómo buscarlo y ejecutarlo, vea [Procedimiento para establecer variables de entorno para la línea de comandos de Visual Studio](./how-to-set-environment-variables-for-the-visual-studio-command-line.md).
+Si usa una ventana de símbolo del sistema estándar, debe ajustar la ruta de acceso antes de poder invocar *csc.exe* desde cualquier subdirectorio del equipo. También debe ejecutar *VsDevCmd.bat* para establecer las variables de entorno adecuadas para admitir las compilaciones desde la línea de comandos. Para obtener más información sobre *VsDevCmd.bat*, incluidas las instrucciones sobre cómo buscarlo y ejecutarlo, vea [Establecimiento de variables de entorno para la línea de comandos de Visual Studio](./how-to-set-environment-variables-for-the-visual-studio-command-line.md).
 
 Si trabaja en un equipo que solo tiene el kit de desarrollo de software (SDK) de Windows, puede usar el compilador de C# en el **símbolo del sistema de SDK**, que puede abrir desde la opción de menú **Microsoft .NET Framework SDK**.
 
 También puede usar MSBuild para compilar programas de C# mediante programación. Para obtener más información, vea [MSBuild](/visualstudio/msbuild/msbuild).
 
-El archivo ejecutable *csc.exe* suele encontrarse en la carpeta Microsoft.NET\Framework\\ *\<Versión>* del directorio de *Windows*. Su ubicación puede variar, según la configuración exacta de un equipo concreto. Si se instala más de una versión de .NET Framework en el equipo, encontrará varias versiones de este archivo. Para obtener más información sobre estas instalaciones, vea [Cómo: Determinar qué versiones de .NET Framework están instaladas](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md).
+El archivo ejecutable *csc.exe* suele encontrarse en la carpeta Microsoft.NET\Framework\\ *\<Version>* en el directorio *Windows*. Su ubicación puede variar, según la configuración exacta de un equipo concreto. Si se instala más de una versión de .NET Framework en el equipo, encontrará varias versiones de este archivo. Para obtener más información sobre estas instalaciones, vea [Cómo: Determinar qué versiones de .NET Framework están instaladas](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md).
 
 > [!TIP]
 > Al compilar un proyecto mediante el IDE de Visual Studio, puede mostrar el comando **csc** y las opciones del compilador asociadas en la ventana **Salida**. Para mostrar esta información, siga las instrucciones de [Cómo: Ver, guardar y configurar archivos de registro de compilación](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log) para cambiar el nivel de detalle de los datos del registro a **Normal** o **Detallado**. Una vez recompilado el proyecto, busque **csc** en la ventana **Salida** para localizar la invocación del compilador de C#.
@@ -104,5 +105,5 @@ No se crean archivos objeto ( *.obj*) como resultado de invocar el compilador de
 - [Opciones del compilador de C#, por categoría](./listed-by-category.md)
 - [Main() y argumentos de la línea de comandos](../../programming-guide/main-and-command-args/index.md)
 - [Argumentos de la línea de comandos](../../programming-guide/main-and-command-args/command-line-arguments.md)
-- [Procedimiento Mostrar argumentos de la línea de comandos](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+- [Procedimiento para mostrar argumentos de la línea de comandos](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
 - [Valores devueltos de Main()](../../programming-guide/main-and-command-args/main-return-values.md)

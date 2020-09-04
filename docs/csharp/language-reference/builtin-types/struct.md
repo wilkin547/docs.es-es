@@ -1,4 +1,5 @@
 ---
+description: Obtenga información sobre el tipo de estructura en C#.
 title: 'Tipos de estructura: Referencia de C#'
 ms.date: 04/21/2020
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 515b8d9adc1359581625f0d822e254d2c1df3b58
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 7f3940ce487b9e382150234f317cf1dba34bb060
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062501"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89132734"
 ---
 # <a name="structure-types-c-reference"></a>Tipos de estructura (Referencia de C#)
 
@@ -38,14 +39,14 @@ Todos los miembros de datos de una estructura `readonly` debe ser de solo lectur
 - Cualquier declaración de campo debe tener el [modificador `readonly`](../keywords/readonly.md)
 - Cualquier propiedad, incluidas las implementadas automáticamente, deben ser de solo lectura
 
-Esto garantiza que ningún miembro de una estructura `readonly` modifique el estado de la misma.
+Esto garantiza que ningún miembro de una estructura `readonly` modifique el estado de la misma. En C# 8.0 y en versiones posteriores, eso significa que otros miembros de instancia, excepto los constructores, son implícitamente [`readonly`](#readonly-instance-members).
 
 > [!NOTE]
 > En una estructura `readonly`, un miembro de datos de un tipo de referencia mutable puede seguir mutando su propio estado. Por ejemplo, no puede reemplazar una instancia de <xref:System.Collections.Generic.List%601>, pero puede agregarle nuevos elementos.
 
 ## <a name="readonly-instance-members"></a>Miembros de instancia de `readonly`
 
-A partir de C# 8.0, también puede usar el modificador `readonly` para declarar que un miembro de instancia no modifica el estado de una estructura. Si no puede declarar el tipo de estructura completa como `readonly`, use el modificador `readonly` para marcar los miembros de instancia que no modifican el estado de la estructura. En una estructura `readonly`, cada miembro de instancia es `readonly` de forma implícita.
+A partir de C# 8.0, también puede usar el modificador `readonly` para declarar que un miembro de instancia no modifica el estado de una estructura. Si no puede declarar el tipo de estructura completa como `readonly`, use el modificador `readonly` para marcar los miembros de instancia que no modifican el estado de la estructura.
 
 Dentro de un miembro de instancia `readonly`, no se puede realizar la asignación a campos de instancia de la estructura. Pero un miembro `readonly` puede llamar a un miembro que no sea `readonly`. En ese caso, el compilador crea una copia de la instancia de la estructura y llama al miembro que no es `readonly` en esa copia. Como resultado, la instancia de la estructura original no se modifica.
 

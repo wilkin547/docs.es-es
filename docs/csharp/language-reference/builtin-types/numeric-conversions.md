@@ -1,4 +1,5 @@
 ---
+description: Obtenga información sobre las conversiones implícitas y explícitas entre los tipos numéricos integrados en C#.
 title: 'Conversiones numéricas integradas: referencia de C#'
 ms.date: 10/22/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - numeric conversions [C#], explicit
 - conversions [C#], implicit numeric
 - conversions [C#], explicit numeric
-ms.openlocfilehash: b7d53e508e4d585c746a3cc61824cdace7707deb
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: ee5def3b5e0e067919a8c8335db701dbb6dd4d88
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121450"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89142250"
 ---
 # <a name="built-in-numeric-conversions-c-reference"></a>Conversiones numéricas integradas (referencia de C#)
 

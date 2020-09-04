@@ -1,527 +1,205 @@
 ---
-title: Cancelar una tarea asincrónica o una lista de tareas (C#)
-description: Use estos ejemplos para agregar un botón que cancele una aplicación asincrónica antes de que finalice. Esta aplicación de C# descarga el contenido de uno o más sitios web.
-ms.date: 07/20/2015
+title: Cancelación de una lista de tareas (C#)
+description: Aprenda a usar tokens de cancelación para indicar una solicitud de cancelación a una lista de tareas.
+ms.date: 08/19/2020
+ms.topic: tutorial
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-ms.openlocfilehash: 21bdbc3bc7c3b752fab160429d71356fb87d9976
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 30bef5d1a5082fbd3757377dbedb8f9b9d17e218
+ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925351"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89053098"
 ---
-# <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a>Cancelar una tarea asincrónica o una lista de tareas (C#)
+# <a name="cancel-a-list-of-tasks-c"></a>Cancelación de una lista de tareas (C#)
 
-Puede configurar un botón para cancelar una aplicación asincrónica si no quiere esperar a que termine. Mediante los ejemplos de este tema, puede agregar un botón de cancelación a una aplicación que descargue el contenido de un sitio web o una lista de sitios web.
+Puede cancelar una aplicación de consola asincrónica si no quiere esperar a que termine. Mediante el ejemplo de este tema, puede agregar una cancelación a una aplicación que descargue el contenido de una lista de sitios web. Puede cancelar muchas tareas asociando la instancia de <xref:System.Threading.CancellationTokenSource> a cada tarea. Si se presiona la tecla <kbd>Entrar</kbd>, se cancelan todas las tareas que aún no se han completado.
 
-En los ejemplos se usa la interfaz de usuario que se describe en [Ajustar una aplicación asincrónica (C#)](./fine-tuning-your-async-application.md).
+Esta tutorial abarca lo siguiente:
 
-> [!NOTE]
-> Para ejecutar los ejemplos, debe tener Visual Studio 2012 o posterior, y .NET Framework 4.5 o posterior, instalado en el equipo.
+> [!div class="checklist"]
+>
+> - Creación de una aplicación de consola de .NET
+> - Escritura de una aplicación asincrónica que admite la cancelación
+> - Demostración de la señalización de una cancelación
 
-## <a name="cancel-a-task"></a>Cancelar una tarea
+## <a name="prerequisites"></a>Requisitos previos
 
-En el primer ejemplo se asocia el botón **Cancelar** a una sola tarea de descarga. Si elige el botón mientras la aplicación descarga contenido, se cancela la descarga.
+Este tutorial requiere lo siguiente:
 
-### <a name="download-the-example"></a>Descargar el ejemplo
+- [.NET 5.0 o un SDK posterior](https://dotnet.microsoft.com/download/dotnet/5.0)
+- Entorno de desarrollo integrado (IDE)
+  - [Se recomienda usar Visual Studio, Visual Studio Code o Visual Studio para Mac](https://visualstudio.microsoft.com).
 
-Puede descargar el proyecto completo de Windows Presentation Foundation (WPF) desde [Ejemplo de async: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Ejemplo de Async: Ajuste de la aplicación) y después seguir estos pasos.
+### <a name="create-example-application"></a>Creación de una aplicación de ejemplo
 
-1. Descomprima el archivo descargado y, a continuación, inicie Visual Studio.
+Cree una nueva aplicación de consola de .NET Core. Puede crear una mediante el comando [`dotnet new console`](../../../../core/tools/dotnet-new.md#console) o desde [Visual Studio](/visualstudio/install/install-visual-studio). Abra el archivo *Program.cs* en su editor de código favorito.
 
-2. En la barra de menús, elija **Archivo** > **Abrir** > **Proyecto/Solución**.
+### <a name="replace-using-statements"></a>Reemplazo de instrucciones using
 
-3. En el cuadro de diálogo **Abrir proyecto**, abra la carpeta que contiene el código de ejemplo que descomprimió y, a después, abra el archivo de solución (.sln) para AsyncFineTuningCS.
-
-4. En el **Explorador de soluciones**, abra el menú contextual del proyecto **CancelATask** y, después, elija **Establecer como proyecto de inicio**.
-
-5. Presione la tecla **F5** para ejecutar el proyecto, o bien presione las teclas **Ctrl**+**F5** para ejecutar el proyecto sin depurarlo.
-
-> [!TIP]
-> Si no quiere descargar el proyecto, puede revisar los archivos MainWindow.xaml.cs al final de este tema.
-
-### <a name="build-the-example"></a>Compilar el ejemplo
- Los cambios siguientes agregan un botón **Cancelar** a una aplicación que descarga un sitio web. Si no quiere descargar ni generar el ejemplo, puede revisar el producto final en la sección "Ejemplos completos" al final de este tema. Los cambios en el código se marcan con asteriscos.
-
- Para generar su propio ejemplo, paso a paso, siga las instrucciones de la sección "Descargar el ejemplo", pero elija **StarterCode** como **Proyecto de inicio** en lugar de **CancelATask**.
-
- Luego, realice los cambios siguientes en el archivo MainWindow.xaml.cs del proyecto.
-
-1. Declare una variable de `CancellationTokenSource`, `cts`, que esté en el ámbito de todos los métodos que acceden a ella.
-
-    ```csharp
-    public partial class MainWindow : Window
-    {
-        // ***Declare a System.Threading.CancellationTokenSource.
-        CancellationTokenSource cts;
-    ```
-
-2. Agregue el controlador de eventos siguiente para el botón **Cancelar**. El controlador de eventos usa el método <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> para notificar `cts` cuando el usuario solicita la cancelación.
-
-    ```csharp
-    // ***Add an event handler for the Cancel button.
-    private void cancelButton_Click(object sender, RoutedEventArgs e)
-    {
-        if (cts != null)
-        {
-            cts.Cancel();
-        }
-    }
-    ```
-
-3. Realice los siguientes cambios en el controlador de eventos para el botón **Iniciar**, `startButton_Click`.
-
-    - Cree una instancia de `CancellationTokenSource`, `cts`.
-
-        ```csharp
-        // ***Instantiate the CancellationTokenSource.
-        cts = new CancellationTokenSource();
-        ```
-
-    - En la llamada a `AccessTheWebAsync`, que descarga el contenido de un sitio web especificado, envíe la propiedad <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> de `cts` como un argumento. La propiedad `Token` propaga el mensaje si se solicita la cancelación. Agregue un bloque catch que muestre un mensaje si el usuario decide cancelar la operación de descarga. En el código siguiente se muestran los cambios.
-
-        ```csharp
-        try
-        {
-            // ***Send a token to carry the message if cancellation is requested.
-            int contentLength = await AccessTheWebAsync(cts.Token);
-            resultsTextBox.Text += $"\r\nLength of the downloaded string: {contentLength}.\r\n";
-        }
-        // *** If cancellation is requested, an OperationCanceledException results.
-        catch (OperationCanceledException)
-        {
-            resultsTextBox.Text += "\r\nDownload canceled.\r\n";
-        }
-        catch (Exception)
-        {
-            resultsTextBox.Text += "\r\nDownload failed.\r\n";
-        }
-        ```
-
-4. En `AccessTheWebAsync`, use la sobrecarga <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> del método `GetAsync` en el tipo <xref:System.Net.Http.HttpClient> para descargar el contenido de un sitio web. Pase `ct`, el parámetro <xref:System.Threading.CancellationToken> de `AccessTheWebAsync`, como el segundo argumento. El token lleva el mensaje si el usuario elige el botón **Cancelar**.
-
-     En el código siguiente se muestran los cambios en `AccessTheWebAsync`.
-
-    ```csharp
-    // ***Provide a parameter for the CancellationToken.
-    async Task<int> AccessTheWebAsync(CancellationToken ct)
-    {
-        HttpClient client = new HttpClient();
-
-        resultsTextBox.Text += "\r\nReady to download.\r\n";
-
-        // You might need to slow things down to have a chance to cancel.
-        await Task.Delay(250);
-
-        // GetAsync returns a Task<HttpResponseMessage>.
-        // ***The ct argument carries the message if the Cancel button is chosen.
-        HttpResponseMessage response = await client.GetAsync("https://msdn.microsoft.com/library/dd470362.aspx", ct);
-
-        // Retrieve the website contents from the HttpResponseMessage.
-        byte[] urlContents = await response.Content.ReadAsByteArrayAsync();
-
-        // The result of the method is the length of the downloaded website.
-        return urlContents.Length;
-    }
-    ```
-
-5. Si no lo cancela, el programa produce el resultado siguiente.
-
-    ```text
-    Ready to download.
-    Length of the downloaded string: 158125.
-    ```
-
-     Si elige el botón **Cancelar** antes de que el programa termine de descargar el contenido, el programa produce el resultado siguiente.
-
-    ```text
-    Ready to download.
-    Download canceled.
-    ```
-
-## <a name="cancel-a-list-of-tasks"></a>Cancelar una lista de tareas
-
-Puede ampliar el ejemplo anterior para cancelar muchas tareas asociando la misma instancia de `CancellationTokenSource` a cada tarea. Si elige el botón **Cancelar**, cancela todas las tareas que aún no se han completado.
-
-### <a name="download-the-example"></a>Descargar el ejemplo
-
-Puede descargar el proyecto completo de Windows Presentation Foundation (WPF) desde [Ejemplo de async: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Ejemplo de Async: Ajuste de la aplicación) y después seguir estos pasos.
-
-1. Descomprima el archivo descargado y, a continuación, inicie Visual Studio.
-
-2. En la barra de menús, elija **Archivo** > **Abrir** > **Proyecto/Solución**.
-
-3. En el cuadro de diálogo **Abrir proyecto**, abra la carpeta que contiene el código de ejemplo que descomprimió y, a después, abra el archivo de solución (.sln) para AsyncFineTuningCS.
-
-4. En el **Explorador de soluciones**, abra el menú contextual del proyecto **CancelAListOfTasks** y, después, elija **Establecer como proyecto de inicio**.
-
-5. Presione la tecla **F5** para ejecutar el proyecto.
-
-     Presione las teclas **Ctrl**+**F5** para ejecutar el proyecto sin depurarlo.
-
-Si no quiere descargar el proyecto, puede revisar los archivos MainWindow.xaml.cs al final de este tema.
-
-### <a name="build-the-example"></a>Compilar el ejemplo
-
-Para ampliar el ejemplo personalmente, paso a paso, siga las instrucciones de la sección "Descargar el ejemplo", pero elija **CancelATask** como el **Proyecto de inicio**. Agregue los siguientes cambios a ese proyecto. Los cambios en el programa se marcan con asteriscos.
-
-1. Agregue un método para crear una lista de direcciones web.
-
-    ```csharp
-    // ***Add a method that creates a list of web addresses.
-    private List<string> SetUpURLList()
-    {
-        List<string> urls = new List<string>
-        {
-            "https://msdn.microsoft.com",
-            "https://msdn.microsoft.com/library/hh290138.aspx",
-            "https://msdn.microsoft.com/library/hh290140.aspx",
-            "https://msdn.microsoft.com/library/dd470362.aspx",
-            "https://msdn.microsoft.com/library/aa578028.aspx",
-            "https://msdn.microsoft.com/library/ms404677.aspx",
-            "https://msdn.microsoft.com/library/ff730837.aspx"
-        };
-        return urls;
-    }
-    ```
-
-2. Llame al método en `AccessTheWebAsync`.
-
-    ```csharp
-    // ***Call SetUpURLList to make a list of web addresses.
-    List<string> urlList = SetUpURLList();
-    ```
-
-3. Agregue el siguiente bucle en `AccessTheWebAsync` para procesar cada dirección web de la lista.
-
-    ```csharp
-    // ***Add a loop to process the list of web addresses.
-    foreach (var url in urlList)
-    {
-        // GetAsync returns a Task<HttpResponseMessage>.
-        // Argument ct carries the message if the Cancel button is chosen.
-        // ***Note that the Cancel button can cancel all remaining downloads.
-        HttpResponseMessage response = await client.GetAsync(url, ct);
-
-        // Retrieve the website contents from the HttpResponseMessage.
-        byte[] urlContents = await response.Content.ReadAsByteArrayAsync();
-
-        resultsTextBox.Text +=
-            $"\r\nLength of the downloaded string: {urlContents.Length}.\r\n";
-    }
-    ```
-
-4. Como `AccessTheWebAsync` muestra las duraciones, el método no tiene que devolver nada. Quite la instrucción Return y cambie el tipo de valor devuelto del método a <xref:System.Threading.Tasks.Task> en lugar de <xref:System.Threading.Tasks.Task%601>.
-
-    ```csharp
-    async Task AccessTheWebAsync(CancellationToken ct)
-    ```
-
-     Llame al método desde `startButton_Click` mediante una instrucción en lugar de una expresión.
-
-    ```csharp
-    await AccessTheWebAsync(cts.Token);
-    ```
-
-5. Si no lo cancela, el programa produce el resultado siguiente.
-
-    ```text
-    Length of the downloaded string: 35939.
-
-    Length of the downloaded string: 237682.
-
-    Length of the downloaded string: 128607.
-
-    Length of the downloaded string: 158124.
-
-    Length of the downloaded string: 204890.
-
-    Length of the downloaded string: 175488.
-
-    Length of the downloaded string: 145790.
-
-    Downloads complete.
-    ```
-
-     Si elige el botón **Cancelar** antes de que se completen las descargas, la salida contiene las duraciones de las descargas completadas antes de la cancelación.
-
-    ```text
-    Length of the downloaded string: 35939.
-
-    Length of the downloaded string: 237682.
-
-    Length of the downloaded string: 128607.
-
-    Downloads canceled.
-    ```
-
-## <a name="complete-examples"></a>Ejemplos completos
-
-Las secciones siguientes contienen el código para cada uno de los ejemplos anteriores. Observe que debe agregar una referencia para <xref:System.Net.Http>.
-
-Puede descargar los proyectos desde [Async Sample: Ajuste de la aplicación](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).
-
-### <a name="example---cancel-a-task"></a>Ejemplo: Cancelar una tarea
-
-El código siguiente es el archivo MainWindow.xaml.cs completo del ejemplo que cancela una sola tarea.
+Reemplace las instrucciones using existentes por estas declaraciones:
 
 ```csharp
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
-// Add a using directive and a reference for System.Net.Http.
+using System.Diagnostics;
 using System.Net.Http;
-
-// Add the following using directive for System.Threading.
-
 using System.Threading;
-namespace CancelATask
-{
-    public partial class MainWindow : Window
-    {
-        // ***Declare a System.Threading.CancellationTokenSource.
-        CancellationTokenSource cts;
-
-        public MainWindow()
-        {
-            InitializeComponent();
-        }
-
-        private async void startButton_Click(object sender, RoutedEventArgs e)
-        {
-            // ***Instantiate the CancellationTokenSource.
-            cts = new CancellationTokenSource();
-
-            resultsTextBox.Clear();
-
-            try
-            {
-                // ***Send a token to carry the message if cancellation is requested.
-                int contentLength = await AccessTheWebAsync(cts.Token);
-                resultsTextBox.Text +=
-                    $"\r\nLength of the downloaded string: {contentLength}.\r\n";
-            }
-            // *** If cancellation is requested, an OperationCanceledException results.
-            catch (OperationCanceledException)
-            {
-                resultsTextBox.Text += "\r\nDownload canceled.\r\n";
-            }
-            catch (Exception)
-            {
-                resultsTextBox.Text += "\r\nDownload failed.\r\n";
-            }
-
-            // ***Set the CancellationTokenSource to null when the download is complete.
-            cts = null;
-        }
-
-        // ***Add an event handler for the Cancel button.
-        private void cancelButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (cts != null)
-            {
-                cts.Cancel();
-            }
-        }
-
-        // ***Provide a parameter for the CancellationToken.
-        async Task<int> AccessTheWebAsync(CancellationToken ct)
-        {
-            HttpClient client = new HttpClient();
-
-            resultsTextBox.Text += "\r\nReady to download.\r\n";
-
-            // You might need to slow things down to have a chance to cancel.
-            await Task.Delay(250);
-
-            // GetAsync returns a Task<HttpResponseMessage>.
-            // ***The ct argument carries the message if the Cancel button is chosen.
-            HttpResponseMessage response = await client.GetAsync("https://msdn.microsoft.com/library/dd470362.aspx", ct);
-
-            // Retrieve the website contents from the HttpResponseMessage.
-            byte[] urlContents = await response.Content.ReadAsByteArrayAsync();
-
-            // The result of the method is the length of the downloaded website.
-            return urlContents.Length;
-        }
-    }
-
-    // Output for a successful download:
-
-    // Ready to download.
-
-    // Length of the downloaded string: 158125.
-
-    // Or, if you cancel:
-
-    // Ready to download.
-
-    // Download canceled.
-}
+using System.Threading.Tasks;
 ```
 
-### <a name="example---cancel-a-list-of-tasks"></a>Ejemplo: Cancelar una lista de tareas
+## <a name="add-fields"></a>Adición de campos
 
-El código siguiente es el archivo MainWindow.xaml.cs completo del ejemplo que cancela una lista de tareas.
+Dentro de la definición de la clase `Program`, agregue estos tres campos:
 
 ```csharp
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+static readonly CancellationTokenSource s_cts = new CancellationTokenSource();
 
-// Add a using directive and a reference for System.Net.Http.
-using System.Net.Http;
-
-// Add the following using directive for System.Threading.
-using System.Threading;
-
-namespace CancelAListOfTasks
+static readonly HttpClient s_client = new HttpClient
 {
-    public partial class MainWindow : Window
+    MaxResponseContentBufferSize = 1_000_000
+};
+
+static readonly IEnumerable<string> s_urlList = new string[]
+{
+    "https://docs.microsoft.com",
+    "https://docs.microsoft.com/aspnet/core",
+    "https://docs.microsoft.com/azure",
+    "https://docs.microsoft.com/azure/devops",
+    "https://docs.microsoft.com/dotnet",
+    "https://docs.microsoft.com/dynamics365",
+    "https://docs.microsoft.com/education",
+    "https://docs.microsoft.com/enterprise-mobility-security",
+    "https://docs.microsoft.com/gaming",
+    "https://docs.microsoft.com/graph",
+    "https://docs.microsoft.com/microsoft-365",
+    "https://docs.microsoft.com/office",
+    "https://docs.microsoft.com/powershell",
+    "https://docs.microsoft.com/sql",
+    "https://docs.microsoft.com/surface",
+    "https://docs.microsoft.com/system-center",
+    "https://docs.microsoft.com/visualstudio",
+    "https://docs.microsoft.com/windows",
+    "https://docs.microsoft.com/xamarin"
+};
+```
+
+<xref:System.Threading.CancellationTokenSource> se usa para indicar una cancelación solicitada a un token de cancelación (<xref:System.Threading.CancellationToken>). `HttpClient` expone la capacidad de enviar solicitudes HTTP y de recibir respuestas HTTP. `s_urlList` contiene todas las direcciones URL que planea procesar la aplicación.
+
+## <a name="update-application-entry-point"></a>Actualización del punto de entrada de la aplicación
+
+El punto de entrada principal de la aplicación de consola es el método `Main`. Reemplace el método existente por lo siguiente:
+
+```csharp
+static async Task Main()
+{
+    Console.WriteLine("Application started.");
+    Console.WriteLine("Press the ENTER key to cancel...\n");
+
+    Task cancelTask = Task.Run(() =>
     {
-        // Declare a System.Threading.CancellationTokenSource.
-        CancellationTokenSource cts;
-
-        public MainWindow()
+        while (Console.ReadKey().Key != ConsoleKey.Enter)
         {
-            InitializeComponent();
+            Console.WriteLine("Press the ENTER key to cancel...");
         }
 
-        private async void startButton_Click(object sender, RoutedEventArgs e)
-        {
-            // Instantiate the CancellationTokenSource.
-            cts = new CancellationTokenSource();
+        Console.WriteLine("\nENTER key pressed: cancelling downloads.\n");
+        s_cts.Cancel();
+    });
 
-            resultsTextBox.Clear();
+    Task sumPageSizesTask = SumPageSizesAsync();
 
-            try
-            {
-                await AccessTheWebAsync(cts.Token);
-                // ***Small change in the display lines.
-                resultsTextBox.Text += "\r\nDownloads complete.";
-            }
-            catch (OperationCanceledException)
-            {
-                resultsTextBox.Text += "\r\nDownloads canceled.";
-            }
-            catch (Exception)
-            {
-                resultsTextBox.Text += "\r\nDownloads failed.";
-            }
+    await Task.WhenAny(new[] { cancelTask, sumPageSizesTask });
 
-            // Set the CancellationTokenSource to null when the download is complete.
-            cts = null;
-        }
-
-        // Add an event handler for the Cancel button.
-        private void cancelButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (cts != null)
-            {
-                cts.Cancel();
-            }
-        }
-
-        // Provide a parameter for the CancellationToken.
-        // ***Change the return type to Task because the method has no return statement.
-        async Task AccessTheWebAsync(CancellationToken ct)
-        {
-            // Declare an HttpClient object.
-            HttpClient client = new HttpClient();
-
-            // ***Call SetUpURLList to make a list of web addresses.
-            List<string> urlList = SetUpURLList();
-
-            // ***Add a loop to process the list of web addresses.
-            foreach (var url in urlList)
-            {
-                // GetAsync returns a Task<HttpResponseMessage>.
-                // Argument ct carries the message if the Cancel button is chosen.
-                // ***Note that the Cancel button can cancel all remaining downloads.
-                HttpResponseMessage response = await client.GetAsync(url, ct);
-
-                // Retrieve the website contents from the HttpResponseMessage.
-                byte[] urlContents = await response.Content.ReadAsByteArrayAsync();
-
-                resultsTextBox.Text +=
-                    $"\r\nLength of the downloaded string: {urlContents.Length}.\r\n";
-            }
-        }
-
-        // ***Add a method that creates a list of web addresses.
-        private List<string> SetUpURLList()
-        {
-            List<string> urls = new List<string>
-            {
-                "https://msdn.microsoft.com",
-                "https://msdn.microsoft.com/library/hh290138.aspx",
-                "https://msdn.microsoft.com/library/hh290140.aspx",
-                "https://msdn.microsoft.com/library/dd470362.aspx",
-                "https://msdn.microsoft.com/library/aa578028.aspx",
-                "https://msdn.microsoft.com/library/ms404677.aspx",
-                "https://msdn.microsoft.com/library/ff730837.aspx"
-            };
-            return urls;
-        }
-    }
-
-    // Output if you do not choose to cancel:
-
-    //Length of the downloaded string: 35939.
-
-    //Length of the downloaded string: 237682.
-
-    //Length of the downloaded string: 128607.
-
-    //Length of the downloaded string: 158124.
-
-    //Length of the downloaded string: 204890.
-
-    //Length of the downloaded string: 175488.
-
-    //Length of the downloaded string: 145790.
-
-    //Downloads complete.
-
-    // Sample output if you choose to cancel:
-
-    //Length of the downloaded string: 35939.
-
-    //Length of the downloaded string: 237682.
-
-    //Length of the downloaded string: 128607.
-
-    //Downloads canceled.
+    Console.WriteLine("Application ending.");
 }
 ```
+
+El método `Main` actualizado ahora se considera un método [Async main](../../../whats-new/csharp-7-1.md#async-main), el cual permite un punto de entrada asincrónico en el archivo ejecutable. Escribe algunos mensajes informativos en la consola y, luego, declara una instancia de <xref:System.Threading.Tasks.Task> denominada `cancelTask`, la cual leerá las pulsaciones de teclas de la consola. Si se presiona la tecla <kbd>Entrar</kbd>, se realiza una llamada a <xref:System.Threading.CancellationTokenSource.Cancel?displayProperty=nameWithType>. Esto indicará la cancelación. Después, se asigna la variable `sumPageSizesTask` desde el método `SumPageSizesAsync` y ambas tareas se pasan a <xref:System.Threading.Tasks.Task.WhenAny(System.Threading.Tasks.Task[])?displayProperty=nameWithType>, que continuará cuando se complete cualquiera de las dos tareas.
+
+## <a name="create-the-asynchronous-sum-page-sizes-method"></a>Creación de un método SumPageSizes asincrónico
+
+Agregue el método `SumPageSizesAsync` después del método `Main`:
+
+```csharp
+static async Task SumPageSizesAsync()
+{
+    var stopwatch = Stopwatch.StartNew();
+
+    int total = 0;
+    foreach (string url in s_urlList)
+    {
+        int contentLength = await ProcessUrlAsync(url, s_client, s_cts.Token);
+        total += contentLength;
+    }
+
+    stopwatch.Stop();
+
+    Console.WriteLine($"\nTotal bytes returned:  {total:#,#}");
+    Console.WriteLine($"Elapsed time:          {stopwatch.Elapsed}\n");
+}
+```
+
+El método comienza creando una instancia e iniciando una clase <xref:System.Diagnostics.Stopwatch>. Luego, recorre en bucle cada dirección URL en `s_urlList` y llama a `ProcessUrlAsync`. Con cada iteración, se pasa el token `s_cts.Token` al método `ProcessUrlAsync` y el código devuelve una clase <xref:System.Threading.Tasks.Task%601>, donde `TResult` es un entero:
+
+```csharp
+int total = 0;
+foreach (string url in s_urlList)
+{
+    int contentLength = await ProcessUrlAsync(url, s_client, s_cts.Token);
+    total += contentLength;
+}
+```
+
+## <a name="add-process-method"></a>Adición de un método de proceso
+
+Agregue el siguiente método `ProcessUrlAsync` después del método `SumPageSizesAsync`:
+
+```csharp
+static async Task<int> ProcessUrlAsync(string url, HttpClient client, CancellationToken token)
+{
+    HttpResponseMessage response = await client.GetAsync(url, token);
+    byte[] content = await response.Content.ReadAsByteArrayAsync(token);
+    Console.WriteLine($"{url,-60} {content.Length,10:#,#}");
+
+    return content.Length;
+}
+```
+
+Para cualquier dirección URL, el método usará la instancia de `client` proporcionada para obtener la respuesta como `byte[]`. La instancia de <xref:System.Threading.CancellationToken> se pasa a los métodos <xref:System.Net.Http.HttpClient.GetAsync(System.String,System.Threading.CancellationToken)?displayProperty=nameWithType> y <xref:System.Net.Http.HttpContent.ReadAsByteArrayAsync(System.Threading.CancellationToken)?displayProperty=nameWithType>. El token (`token`) se usa para registrar la cancelación solicitada. La longitud se devuelve después de que la dirección URL y la longitud se escriban en la consola.
+
+### <a name="example-application-output"></a>Ejemplo de resultado de la aplicación
+
+```console
+Application started.
+Press the ENTER key to cancel...
+
+https://docs.microsoft.com                                       37,357
+https://docs.microsoft.com/aspnet/core                           85,589
+https://docs.microsoft.com/azure                                398,939
+https://docs.microsoft.com/azure/devops                          73,663
+https://docs.microsoft.com/dotnet                                67,452
+https://docs.microsoft.com/dynamics365                           48,582
+https://docs.microsoft.com/education                             22,924
+
+ENTER key pressed: cancelling downloads.
+
+Application ending.
+```
+
+## <a name="complete-example"></a>Ejemplo completo
+
+El código siguiente es el texto completo del archivo *Program.cs* para el ejemplo.
+
+:::code language="csharp" source="snippets/cancel-tasks/cancel-tasks/Program.cs":::
 
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.Threading.CancellationTokenSource>
 - <xref:System.Threading.CancellationToken>
-- [Programación asincrónica con Async y Await (C#)](./index.md)
-- [Ajustar una aplicación asincrónica (C#)](./fine-tuning-your-async-application.md)
-- [Ejemplo de async: Ajuste de la aplicación](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- <xref:System.Threading.CancellationTokenSource>
+- [Programación asincrónica con async y await (C#)](index.md)
+
+## <a name="next-steps"></a>Pasos siguientes
+
+> [!div class="nextstepaction"]
+> [Cancelar tareas asincrónicas tras un período de tiempo (C#)](cancel-async-tasks-after-a-period-of-time.md)

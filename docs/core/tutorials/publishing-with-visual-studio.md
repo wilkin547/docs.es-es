@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 44646a307d230db395b55b9dec5acfd168605940
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: e0033d52ab54259ce5e4ccf2a25bf4e3d4f244de
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84701289"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867560"
 ---
 # <a name="tutorial-publish-a-net-core-console-application-using-visual-studio"></a>Tutorial: Publicación de una aplicación de consola de .NET Core con Visual Studio
 
@@ -19,13 +19,13 @@ En este tutorial se muestra cómo publicar una aplicación de consola para que o
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Este tutorial funciona con la aplicación de consola que se crea en [Creación de una aplicación de consola de .NET Core en Visual Studio 2019](with-visual-studio.md).
+- Este tutorial funciona con la aplicación de consola que se crea en [Creación de una aplicación de consola de .NET Core con Visual Studio](with-visual-studio.md).
 
 ## <a name="publish-the-app"></a>Publicar la aplicación
 
 1. Inicie Visual Studio.
 
-1. Abra el proyecto *HelloWorld* que creó en [Creación de una aplicación de consola de .NET Core en Visual Studio](with-visual-studio.md).
+1. Abra el proyecto *HelloWorld* que creó en [Creación de una aplicación de consola de .NET Core con Visual Studio](with-visual-studio.md).
 
 1. Asegúrese de que Visual Studio usa la configuración de compilación de versión. Si es necesario, cambie la configuración de compilación en la barra de herramientas de **Depurar** a **Versión**.
 
@@ -87,7 +87,7 @@ En los pasos siguientes, examinará los archivos creados por el proceso de publi
 
 1. Abra un símbolo del sistema y vaya a la carpeta *Publicar*. Para ello, escriba `cd` y pegue la ruta de acceso completa. Por ejemplo:
 
-   ```
+   ```console
    cd C:\Projects\HelloWorld\bin\Release\netcoreapp3.1\publish\
    ```
 
@@ -112,4 +112,4 @@ En los pasos siguientes, examinará los archivos creados por el proceso de publi
 En este tutorial, ha publicado una aplicación de consola. En el siguiente tutorial, creará una biblioteca de clases.
 
 > [!div class="nextstepaction"]
-> [Creación de una biblioteca de .NET Standard en Visual Studio](library-with-visual-studio.md)
+> [Creación de una biblioteca .NET Standard con Visual Studio](library-with-visual-studio.md)

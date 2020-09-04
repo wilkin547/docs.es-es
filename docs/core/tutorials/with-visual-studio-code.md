@@ -2,12 +2,12 @@
 title: Creación de una aplicación de consola de .NET Core con Visual Studio Code
 description: Aprenda a crear una aplicación de consola de .NET Core con Visual Studio Code y la CLI de .NET Core.
 ms.date: 05/22/2020
-ms.openlocfilehash: 466a1353b574711a73570428569b58eab7ad8135
-ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
+ms.openlocfilehash: e936c23d8525e42a9d2781cc680067c9da2ce42f
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84811698"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811931"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio-code"></a>Tutorial: Depuración de una aplicación de consola de .NET Core con Visual Studio Code
 
@@ -40,7 +40,7 @@ Cree un proyecto de aplicación de consola de .NET Core denominado "HelloWorld".
    dotnet new console
    ```
 
-La plantilla crea una aplicación "Hola mundo" sencilla. Llama al método <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> para mostrar "Hola mundo" en la ventana de la consola.
+La plantilla crea una aplicación "Hola mundo" sencilla. Llama al método <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> para mostrar ":::no-loc text="Hello World!":::" en la ventana de la consola.
 
 El código de plantilla define una clase, `Program`, con un solo método, `Main`, que toma una matriz de <xref:System.String> como argumento:
 
@@ -91,7 +91,7 @@ Mejore la aplicación para pedir su nombre al usuario y mostrarlo con la fecha y
 
    :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="MainMethod":::
 
-   Este código muestra "What is your name?" en la ventana de la consola y espera a que el usuario escriba una cadena y luego presione <kbd>Entrar</kbd>. Almacena esta cadena en una variable denominada `name`. También recupera el valor de la propiedad <xref:System.DateTime.Now?displayProperty=nameWithType>, que contiene la hora local actual, y lo asigna a una variable denominada `date`. Por último, muestra estos valores en la ventana de la consola.
+   Este código muestra un mensaje en la ventana de la consola y espera a que el usuario escriba una cadena y, luego, presione <kbd>Entrar</kbd>. Almacena esta cadena en una variable denominada `name`. También recupera el valor de la propiedad <xref:System.DateTime.Now?displayProperty=nameWithType>, que contiene la hora local actual, y lo asigna a una variable denominada `date`. Asimismo, muestra estos valores en la ventana de la consola. Por último, muestra un mensaje en la ventana de la consola y llama al método <xref:System.Console.ReadKey(System.Boolean)?displayProperty=nameWithType> para esperar a la entrada del usuario.
 
    El símbolo `\n` representa un carácter de nueva línea.
 

@@ -1,4 +1,5 @@
 ---
+description: -doc (Opciones del compilador de C#)
 title: -doc (Opciones del compilador de C#)
 ms.date: 07/20/2015
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - -doc compiler option [C#]
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
-ms.openlocfilehash: 01ea71f3de9e30abe25184e38a59f3707b54bd5a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 366bad1029904b3571be0a76d827ff0213d776bb
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73422971"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125753"
 ---
 # <a name="-doc-c-compiler-options"></a>-doc (Opciones del compilador de C#)
 La opción **-doc** permite insertar comentarios de documentación en un archivo XML.  
@@ -32,7 +33,7 @@ La opción **-doc** permite insertar comentarios de documentación en un archivo
  `file`  
  Archivo de salida para XML, que se llena con los comentarios de los archivos de código fuente de la compilación.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  En los archivos de código fuente, es posible procesar y agregar al archivo XML los comentarios de documentación que preceden a lo siguiente:  
   
 - Tipos definidos por el usuario como una [clase](../keywords/class.md), un [delegado](../builtin-types/reference-types.md#the-delegate-type) o una [interfaz](../keywords/interface.md)  
@@ -43,7 +44,7 @@ La opción **-doc** permite insertar comentarios de documentación en un archivo
   
  Para usar el archivo .xml generado con la función [IntelliSense](/visualstudio/ide/using-intellisense), deje que el nombre del archivo .xml sea igual que el del ensamblado que quiere admitir y, después, asegúrese de que el archivo .xml se encuentra en el mismo directorio que el ensamblado. De este modo, cuando se hace referencia al ensamblado en el proyecto de Visual Studio, también se encuentra el archivo .xml. Vea [Proporcionar comentarios del código](/visualstudio/ide/reference/generate-xml-documentation-comments) para obtener más información.  
   
- A menos que compile con [-target:module](./target-module-compiler-option.md), `file` contendrá etiquetas \<assembly>\</assembly> que especifican el nombre del archivo que contiene el manifiesto del ensamblado para el archivo de salida de la compilación.  
+ A menos que realice la compilación con [-target:module](./target-module-compiler-option.md), `file` contendrá etiquetas \<assembly>\</assembly> que especifican el nombre del archivo que incluye el manifiesto del ensamblado para el archivo de salida de la compilación.  
   
 > [!NOTE]
 > La opción -doc se aplica a todos los archivos de entrada o, si se establece en la configuración del proyecto, a todos los archivos del proyecto. Para deshabilitar las advertencias relacionadas con los comentarios de documentación para un archivo específico o una sección de código, use [#pragma warning](../preprocessor-directives/preprocessor-pragma-warning.md).  
@@ -63,4 +64,4 @@ La opción **-doc** permite insertar comentarios de documentación en un archivo
 ## <a name="see-also"></a>Vea también
 
 - [Opciones del compilador de C#](./index.md)
-- [Administrar propiedades de proyectos y de soluciones](/visualstudio/ide/managing-project-and-solution-properties)
+- [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)

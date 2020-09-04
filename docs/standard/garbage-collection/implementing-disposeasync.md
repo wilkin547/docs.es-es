@@ -1,27 +1,27 @@
 ---
 title: Implementación de un método DisposeAsync
-description: ''
+description: Obtenga información sobre cómo implementar los métodos DisposeAsync y DisposeAsyncCore para realizar una limpieza de recursos asincrónica.
 author: IEvangelist
 ms.author: dapine
-ms.date: 06/02/2020
+ms.date: 08/25/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 helpviewer_keywords:
 - DisposeAsync method
 - garbage collection, DisposeAsync method
-ms.openlocfilehash: 0f6370d37703509681dd9fb818af8e7e2f3a1085
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 268cea7584040ad92e2da75e5e03112480cda93c
+ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608083"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89053183"
 ---
 # <a name="implement-a-disposeasync-method"></a>Implementación de un método DisposeAsync
 
 La interfaz <xref:System.IAsyncDisposable?displayProperty=nameWithType> se presentó como parte de C# 8.0. El método <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType> se implementa cuando se necesita realizar una limpieza de recursos, tal como se haría a la hora de [implementar un método Dispose](implementing-dispose.md). Sin embargo, una de las principales diferencias es que esta implementación permite operaciones de limpieza asincrónicas. El elemento <xref:System.IAsyncDisposable.DisposeAsync> devuelve un elemento <xref:System.Threading.Tasks.ValueTask> que representa la operación de eliminación asincrónica.
 
-Resulta habitual que, al implementar la interfaz <xref:System.IAsyncDisposable>, las clases también implementen la interfaz <xref:System.IDisposable>. Debe prepararse un buen patrón de implementación de la interfaz <xref:System.IAsyncDisposable> para la eliminación sincrónica o asincrónica. Todas las instrucciones para implementar el patrón de eliminación se aplican a la implementación asincrónica. En este artículo se supone que ya se ha familiarizado con el modo de [implementar un método Dispose](implementing-dispose.md).
+Es habitual que, al implementar la interfaz <xref:System.IAsyncDisposable>, las clases también implementen la interfaz <xref:System.IDisposable>. Debe prepararse un buen patrón de implementación de la interfaz <xref:System.IAsyncDisposable> para la eliminación sincrónica o asincrónica. Todas las instrucciones para implementar el patrón de eliminación se aplican también a la implementación asincrónica. En este artículo se supone que ya se ha familiarizado con el modo de [implementar un método Dispose](implementing-dispose.md).
 
 ## <a name="disposeasync-and-disposeasynccore"></a>DisposeAsync() y DisposeAsyncCore()
 
@@ -30,17 +30,15 @@ La interfaz <xref:System.IAsyncDisposable> declara un único método sin paráme
 - Una implementación de <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType> `public` que no tenga parámetros.
 - Un método `protected virtual ValueTask DisposeAsyncCore()` cuya signatura sea:
 
-```csharp
-protected virtual ValueTask DisposeAsyncCore()
-{
-}
-```
-
-El método `DisposeAsyncCore()` es `virtual` para que las clases derivadas puedan definir la limpieza adicional en sus invalidaciones.
+  ```csharp
+  protected virtual ValueTask DisposeAsyncCore()
+  {
+  }
+  ```
 
 ### <a name="the-disposeasync-method"></a>El método DisposeAsync()
 
-Se llama de forma implícita al método `DisposeAsync()` sin parámetros `public` en una instrucción `await using`, y su propósito consiste en liberar recursos no administrados, realizar una limpieza general e indicar que el finalizador, si existe, no necesita ejecutarse. La liberación de la memoria asociada a un objeto administrado siempre corresponde al [recolector de elementos no utilizados](index.md). Debido a esto, se realiza una implementación estándar:
+Se llama de forma implícita al método `DisposeAsync()` sin parámetros `public` en una instrucción `await using`, y su propósito consiste en liberar los recursos no administrados, realizar una limpieza general e indicar que el finalizador, si existe, no necesita ejecutarse. La liberación de la memoria asociada a un objeto administrado siempre corresponde al [recolector de elementos no utilizados](index.md). Debido a esto, se realiza una implementación estándar:
 
 ```csharp
 public async ValueTask DisposeAsync()
@@ -57,6 +55,13 @@ public async ValueTask DisposeAsync()
 
 > [!NOTE]
 > Una diferencia principal en el patrón de eliminación asincrónica en comparación con el patrón de eliminación es que la llamada desde <xref:System.IAsyncDisposable.DisposeAsync> al método de sobrecarga `Dispose(bool)` recibe el valor `false` como argumento. Sin embargo, al implementar el método <xref:System.IDisposable.Dispose?displayProperty=nameWithType>, se pasa el valor `true`. Esto ayuda a garantizar la equivalencia funcional con el patrón de eliminación sincrónico y garantiza aún más que se invoquen las rutas de acceso al código finalizador. En otras palabras, el método `DisposeAsyncCore()` eliminará los recursos administrados de forma asincrónica, por lo que no querrá eliminarlos también de forma sincrónica. Por tanto, llame a `Dispose(false)` en lugar de a `Dispose(true)`.
+
+### <a name="the-disposeasynccore-method"></a>Método DisposeAsyncCore()
+
+El método `DisposeAsyncCore()` está diseñado para realizar la limpieza asincrónica de los recursos administrados o para hacer llamadas en cascada a `DisposeAsync()`. Encapsula las operaciones de limpieza asincrónica comunes cuando una subclase hereda una clase base que es una implementación de <xref:System.IAsyncDisposable>. El método `DisposeAsyncCore()` es `virtual` para que las clases derivadas puedan definir la limpieza adicional en sus invalidaciones.
+
+> [!TIP]
+> Si una implementación de <xref:System.IAsyncDisposable> es `sealed`, el método `DisposeAsyncCore()` no es necesario y la limpieza asincrónica se puede realizar directamente en el método <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType>.
 
 ## <a name="implement-the-async-dispose-pattern"></a>Implementación del patrón de eliminación asincrónica
 

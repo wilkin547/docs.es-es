@@ -4,12 +4,12 @@ description: Descubra qué versiones de macOS puede instalar en .NET Core.
 author: adegeo
 ms.author: adegeo
 ms.date: 06/25/2020
-ms.openlocfilehash: 951e9b6a64d55274729e233b4a2d7728c75d05d4
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 19d5ca77b0308533c8f228be70c61daf1b7f82d9
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302937"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89132760"
 ---
 # <a name="install-net-core-on-macos"></a>Instalación de .NET Core en macOS
 
@@ -159,7 +159,7 @@ Este enfoque le permite instalar diferentes versiones en ubicaciones independien
 
 ## <a name="install-with-visual-studio-for-mac"></a>Instalación con Visual Studio para Mac
 
-Visual Studio para Mac instala el SDK de .NET Core cuando se selecciona la carga de trabajo **.NET Core**. Para empezar con el desarrollo en .NET Core en macOS, vea [Instalación de Visual Studio 2019 para Mac](/visualstudio/mac/installation). Para obtener la versión más reciente, .NET Core 3.1, se debe usar la versión preliminar de Visual Studio para Mac 8.4.
+Visual Studio para Mac instala el SDK de .NET Core cuando se selecciona la carga de trabajo **.NET Core**. Para empezar con el desarrollo en .NET Core en macOS, vea [Instalación de Visual Studio 2019 para Mac](/visualstudio/mac/installation). Para obtener la versión más reciente, .NET Core 3.1, se debe usar la versión de Visual Studio para Mac 8.4.
 
 [![Visual Studio 2019 para Mac de macOS con la característica de carga de trabajo de .NET Core](media/install-sdk/mac-install-selection.png)](media/install-sdk/mac-install-selection.png#lightbox)
 

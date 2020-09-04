@@ -2,21 +2,21 @@
 title: 'dotnet-dump: .NET Core'
 description: Instalación y uso de la herramienta de línea de comandos dotnet-trace.
 ms.date: 10/14/2019
-ms.openlocfilehash: c78ddb6447021f61f2452c075733b7d33e051ca0
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: 5489011538a4a11d60b333f0230a718c88722c97
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888207"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89140937"
 ---
-# <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>Utilidad de recopilación y análisis de volcado (`dotnet-dump`)
+# <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>Utilidad de recopilación y análisis de volcado de memoria (dotnet-dump)
 
 **Este artículo se aplica a:** ✔️ SDK de .NET Core 3.0 y versiones posteriores
 
 > [!NOTE]
 > `dotnet-dump` no se admite en macOS.
 
-## <a name="installing-dotnet-dump"></a>Instalación de `dotnet-dump`
+## <a name="install-dotnet-dump"></a>Instalación de dotnet-dump
 
 Para instalar la versión de lanzamiento más reciente del [paquete NuGet](https://www.nuget.org/packages/dotnet-dump) de `dotnet-dump`, use el comando [dotnet tool install](../tools/dotnet-tool-install.md):
 
@@ -223,3 +223,8 @@ En Microsoft SDK de .NET Core imágenes de Docker de SDK de Linux, algunos coman
 > Excepción no controlada: System.DllNotFoundException: No se puede cargar la biblioteca compartida "libdl.so" o una de su excepción de dependencias.
 
 Para solucionar este problema, instale el paquete "libc6-dev".
+
+## <a name="see-also"></a>Vea también
+
+- [Entrada de blog sobre la recopilación y el análisis de volcados de memoria](https://devblogs.microsoft.com/dotnet/collecting-and-analyzing-memory-dumps/)
+- [Herramienta de análisis del montón (dotnet-gcdump)](dotnet-gcdump.md)

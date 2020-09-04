@@ -2,21 +2,27 @@
 title: Cambios importantes en ASP.NET Core
 titleSuffix: ''
 description: Enumera los cambios importantes en ASP.NET Core.
-ms.date: 07/17/2020
+ms.date: 08/25/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 1506e0aa27778d44497252231028689259f48896
-ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
+ms.openlocfilehash: 443494291f4ec58aecd7c8d8ed42cb4086e64095
+ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88720246"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88957735"
 ---
 # <a name="aspnet-core-breaking-changes"></a>Cambios importantes en ASP.NET Core
 
 ASP.NET Core proporciona las características de desarrollo de aplicaciones web que usa .NET Core.
 
-En esta página se documentan los siguientes cambios importantes:
+Seleccione uno de los siguientes vínculos para conocer los cambios importantes en una versión específica:
+
+* [ASP.NET Core 5.0](#aspnet-core-50)
+* [ASP.NET Core 3.1](#aspnet-core-31)
+* [ASP.NET Core 3.0](#aspnet-core-30)
+
+En esta página se documentan los siguientes cambios importantes en ASP.NET Core 3.0, 3.1 y 5.0:
 
 - [Se han quitado las API Antiforgery, CORS, Diagnostics, MVC y Routing obsoletas](#obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed)
 - [Autenticación: Google+ en desuso](#authentication-google-deprecated-and-replaced)
@@ -69,11 +75,13 @@ En esta página se documentan los siguientes cambios importantes:
 - [Localización: Se ha quitado el constructor obsoleto en el middleware de localización de solicitudes](#localization-obsolete-constructor-removed-in-request-localization-middleware)
 - [Localización: se han eliminado la clase ResourceManagerWithCultureStringLocalizer y el miembro de interfaz WithCulture](#localization-resourcemanagerwithculturestringlocalizer-class-and-withculture-interface-member-removed)
 - [Registro: la clase DebugLogger se ha convertido en interna](#logging-debuglogger-class-made-internal)
+- [Middleware: página de errores de la base de datos marcada como obsoleta](#middleware-database-error-page-marked-as-obsolete)
 - [MVC: se ha quitado el sufijo Async de acción de controlador](#mvc-async-suffix-trimmed-from-controller-action-names)
 - [MVC: JsonResult se ha trasladado a Microsoft.AspNetCore.Mvc.Core](#mvc-jsonresult-moved-to-microsoftaspnetcoremvccore)
 - [MVC: herramienta de precompilación en desuso](#mvc-precompilation-tool-deprecated)
 - [MVC: los tipos se han cambiado a internal](#mvc-pubternal-types-changed-to-internal)
 - [MVC: se han quitado las correcciones de compatibilidad (shim) con la API web](#mvc-web-api-compatibility-shim-removed)
+- [Razor: API RazorTemplateEngine eliminada](#razor-razortemplateengine-api-removed)
 - [Razor: la compilación en tiempo de ejecución se ha movido a un paquete](#razor-runtime-compilation-moved-to-a-package)
 - [Seguridad: Se ha quitado la codificación de nombre de cookie](#security-cookie-name-encoding-removed)
 - [Seguridad: Se han actualizado las versiones del paquete NuGet IdentityModel](#security-identitymodel-nuget-package-versions-updated)
@@ -159,6 +167,10 @@ En esta página se documentan los siguientes cambios importantes:
 ***
 
 [!INCLUDE[Localization: ResourceManagerWithCultureStringLocalizer class and WithCulture interface member removed](~/includes/core-changes/aspnetcore/5.0/localization-members-removed.md)]
+
+***
+
+[!INCLUDE[Middleware: Database error page marked as obsolete](~/includes/core-changes/aspnetcore/5.0/middleware-database-error-page-obsolete.md)]
 
 ***
 
@@ -343,6 +355,10 @@ En esta página se documentan los siguientes cambios importantes:
 ***
 
 [!INCLUDE[MVC: Web API compatibility shim removed](~/includes/core-changes/aspnetcore/3.0/mvc-webapi-compat-shim-removed.md)]
+
+***
+
+[!INCLUDE[Razor: RazorTemplatEengine API removed](~/includes/core-changes/aspnetcore/3.0/razor-razortemplateengine-api-removed.md)]
 
 ***
 
