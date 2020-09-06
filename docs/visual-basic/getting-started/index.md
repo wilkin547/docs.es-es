@@ -5,12 +5,12 @@ helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-ms.openlocfilehash: f52432bde84ab7c1ec30ff4033ce95c80606636e
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: a56532a33bc0ef0aae73de7f80e533038212c5ec
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243198"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89495491"
 ---
 # <a name="get-started-with-visual-basic"></a>Introducción a Visual Basic
 
@@ -24,7 +24,7 @@ Esta sección de la documentación sirve como introducción al desarrollo de apl
 
 ## <a name="additional-information"></a>Información adicional
 
-- [Novedades de Visual Basic](whats-new.md) Se enumeran las características nuevas de cada versión de Visual Basic .NET.
+- [Novedades de Visual Basic](../whats-new/index.md) Se enumeran las características nuevas de cada versión de Visual Basic .NET.
 
 - [Recursos adicionales para programadores de Visual Basic](additional-resources.md) Se proporciona una lista de sitios web y grupos de noticias que ayudan a encontrar respuestas a problemas comunes.
 

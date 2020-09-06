@@ -11,12 +11,12 @@ metadata:
   helpviewer_keywords:
   - .NET Framework guide
   ms.date: 04/22/2020
-  ms.openlocfilehash: 47781bbc5b1b1a2f4c0bc44929c5bb29fe3e7978
-  ms.sourcegitcommit: b78018c850590dfc0348301e1748b779c28604cc
+  ms.openlocfilehash: da7d48173b17692e5139eb69586fa4d9705d4d12
+  ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89379179"
+  ms.lasthandoff: 09/05/2020
+  ms.locfileid: "89495452"
 landingContent:
 - title: Información sobre .NET Framework
   linkLists:
@@ -81,19 +81,19 @@ landingContent:
     - text: Introducción a la guía de escritorio
       url: /dotnet/desktop/
     - text: WPF de .NET Framework
-      url: wpf/index.md
+      url: /dotnet/desktop/wpf/?view=netframeworkdesktop-4.8
     - text: Windows Forms de .NET Framework
-      url: /dotnet/desktop/winforms/?view=netframework-4-8
+      url: /dotnet/desktop/winforms/?view=netframeworkdesktop-4.8
 - title: Creación de aplicaciones de WPF
   linkLists:
   - linkListType: overview
     links:
     - text: Información general sobre WPF
-      url: wpf/index.md
+      url: /dotnet/desktop/wpf/?view=netframeworkdesktop-4.8
   - linkListType: tutorial
     links:
     - text: Creación de la primera aplicación de WPF en Visual Studio
-      url: wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md
+      url: /dotnet/desktop/wpf/getting-started/walkthrough-my-first-wpf-desktop-application/?view=netframeworkdesktop-4.8
 - title: Trabajo con datos mediante ADO.NET
   linkLists:
   - linkListType: overview
