@@ -1,26 +1,25 @@
-- name: Pantalla de inicio
-  href: welcome.md
-- name: Novedades de la documentación de .NET
-  href: whats-new/index.yml
-- name: Guía de .NET
-  href: standard/
-- name: Guía de .NET Core
-  href: core/
-- name: Guía de .NET Framework
-  href: framework/
-- name: 'Guía de escritorio de .NET: WPF'
-  href: desktop-wpf/
-- name: 'Guía de C#'
-  href: csharp/index.yml
-- name: 'Guía de F#'
-  href: fsharp/index.yml
-- name: "Guía de Visual\_Basic"
-  href: visual-basic/index.yml
-- name: Guía de ML.NET
-  href: machine-learning/index.yml
-- name: Guía de .NET para Apache Spark
-  href: spark/index.yml
-- name: Guía de la arquitectura de aplicaciones .NET
-  href: architecture/index.yml
-- name: Ejemplos y tutoriales
-  href: samples-and-tutorials/index.md
+items:
+  - name: Pantalla de inicio
+    href: welcome.md
+  - name: Novedades de la documentación de .NET
+    href: whats-new/index.yml
+  - name: Aspectos básicos de .NET
+    href: fundamentals/
+  - name: Guía de .NET Framework
+    href: framework/
+  - name: 'Guía de escritorio de .NET: WPF'
+    href: desktop-wpf/
+  - name: Guía de C#
+    href: csharp/index.yml
+  - name: Guía de F#
+    href: fsharp/index.yml
+  - name: "Guía de Visual\_Basic"
+    href: visual-basic/index.yml
+  - name: Guía de ML.NET
+    href: machine-learning/index.yml
+  - name: Guía de .NET para Apache Spark
+    href: spark/index.yml
+  - name: Guía de la arquitectura de aplicaciones .NET
+    href: architecture/index.yml
+  - name: Ejemplos y tutoriales
+    href: samples-and-tutorials/index.md

@@ -1,0 +1,1323 @@
+items:
+  - name: Documentación de .NET
+    href: index.yml
+  - name: "Introducción (día\_1)"
+    items:
+      - name: Hola mundo
+        href: ../core/get-started.md
+      - name: Tutoriales de introducción
+        href: ../standard/get-started.md
+      - name: "Vídeos de .NET\_101"
+        href: 'https://www.youtube.com/playlist?list=PLdo4fOcmZ0oWoazjhXQzBKMrFuArxpW80'
+      - name: Cómo instalar
+        items:
+          - name: Información general
+            href: ../core/install/index.yml
+          - name: Instalar en Windows
+            href: ../core/install/windows.md
+          - name: Instalación en macOS
+            href: ../core/install/macos.md
+          - name: Instalar en Linux
+            items:
+              - name: Información general
+                href: ../core/install/linux.md
+              - name: Ubuntu
+                href: ../core/install/linux-ubuntu.md
+              - name: Alpine
+                href: ../core/install/linux-alpine.md
+              - name: CentOS
+                href: ../core/install/linux-centos.md
+              - name: Debian
+                href: ../core/install/linux-debian.md
+              - name: Fedora
+                href: ../core/install/linux-fedora.md
+              - name: OpenSUSE
+                href: ../core/install/linux-opensuse.md
+              - name: Red Hat Enterprise Linux
+                href: ../core/install/linux-rhel.md
+              - name: SLES
+                href: ../core/install/linux-sles.md
+          - name: Eliminación de entornos de ejecución y SDK obsoletos
+            href: ../core/install/remove-runtime-sdk-versions.md
+          - name: Administración de plantillas de .NET
+            href: ../core/install/templates.md
+          - name: Incidencias de certificación notarial en macOS
+            href: ../core/install/macos-notarization-issues.md
+          - name: Cómo comprobar las versiones de .NET Core
+            href: ../core/install/how-to-detect-installed-versions.md
+          - name: Instalación de una versión localizada de IntelliSense
+            href: ../core/install/localized-intellisense.md
+  - name: "Información general (semana\_1)"
+    items:
+      - name: Paseo por .NET
+        href: ../standard/tour.md
+      - name: Componentes de la arquitectura .NET
+        href: ../standard/components.md
+      - name: Bibliotecas de clases de .NET
+        href: ../standard/class-libraries.md
+      - name: Información general sobre .NET Core
+        href: ../core/introduction.md
+      - name: Información general de .NET Standard
+        href: ../standard/net-standard.md
+      - name: Glosario de .NET
+        href: ../standard/glossary.md
+      - name: Tutoriales
+        items:
+          - name: Usar Visual Studio
+            items:
+              - name: Crear una aplicación de consola
+                href: ../core/tutorials/with-visual-studio.md
+                displayName: 'tutorials, visual studio, vs'
+              - name: Depuración de una aplicación
+                href: ../core/tutorials/debugging-with-visual-studio.md
+                displayName: 'tutorials, visual studio, vs'
+              - name: Publicar una aplicación
+                href: ../core/tutorials/publishing-with-visual-studio.md
+                displayName: 'tutorials, visual studio, vs'
+              - name: Creación de una biblioteca
+                href: ../core/tutorials/library-with-visual-studio.md
+                displayName: 'tutorials, visual studio, vs'
+              - name: Prueba unitaria de una biblioteca
+                href: ../core/tutorials/testing-library-with-visual-studio.md
+                displayName: 'tutorials, visual studio, vs'
+              - name: Instalar y usar un paquete
+                href: /nuget/quickstart/install-and-use-a-package-in-visual-studio
+                displayName: 'tutorials, visual studio, vs'
+              - name: Crear y publicar un paquete
+                href: /nuget/quickstart/create-and-publish-a-package-using-visual-studio
+                displayName: 'tutorials, visual studio, vs'
+          - name: Usar Visual Studio Code
+            items:
+              - name: Crear una aplicación de consola
+                href: ../core/tutorials/with-visual-studio-code.md
+                displayName: 'tutorials, visual studio code, vs code, cli'
+              - name: Depuración de una aplicación
+                href: ../core/tutorials/debugging-with-visual-studio-code.md
+                displayName: 'tutorials, visual studio code, vs code'
+              - name: Publicar una aplicación
+                href: ../core/tutorials/publishing-with-visual-studio-code.md
+                displayName: 'tutorials, visual studio code, vs code'
+              - name: Creación de una biblioteca
+                href: ../core/tutorials/library-with-visual-studio-code.md
+                displayName: 'tutorials, visual studio code, vs code'
+              - name: Prueba unitaria de una biblioteca
+                href: ../core/tutorials/testing-library-with-visual-studio-code.md
+                displayName: 'tutorials, visual studio code, vs code'
+              - name: Instalar y usar un paquete
+                href: /nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli
+                displayName: 'tutorials, cli'
+              - name: Crear y publicar un paquete
+                href: /nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli
+                displayName: tutorials
+          - name: Uso de Visual Studio para Mac
+            items:
+              - name: Crear una aplicación de consola
+                href: ../core/tutorials/with-visual-studio-mac.md
+                displayName: 'tutorials, visual studio for mac, vs for mac, cli'
+              - name: Depuración de una aplicación
+                href: ../core/tutorials/debugging-with-visual-studio-mac.md
+                displayName: 'tutorials, visual studio for mac, vs for mac'
+              - name: Publicar una aplicación
+                href: ../core/tutorials/publishing-with-visual-studio-mac.md
+                displayName: 'tutorials, visual studio for mac, vs for mac'
+              - name: Creación de una biblioteca
+                href: ../core/tutorials/library-with-visual-studio-mac.md
+                displayName: 'tutorials, visual studio for mac, vs for mac'
+              - name: Prueba unitaria de una biblioteca
+                href: ../core/tutorials/testing-library-with-visual-studio-mac.md
+                displayName: 'tutorials, visual studio for mac, vs for mac'
+              - name: Instalar y usar un paquete
+                href: /nuget/quickstart/install-and-use-a-package-in-visual-studio-mac
+                displayName: 'tutorials, visual studio for mac, vs for mac'
+              - name: Crear y publicar un paquete
+                href: /nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli
+                displayName: tutorials
+          - name: Más tutoriales
+            href: ../core/tutorials/index.md
+  - name: Novedades
+    items:
+      - name: "Novedades de .NET\_Core 3.1"
+        href: ../core/whats-new/dotnet-core-3-1.md
+      - name: Novedades de .NET Core 3.0
+        href: ../core/whats-new/dotnet-core-3-0.md
+      - name: Novedades de .NET Core 2.2
+        href: ../core/whats-new/dotnet-core-2-2.md
+      - name: Novedades de .NET Core 2.1
+        href: ../core/whats-new/dotnet-core-2-1.md
+      - name: Novedades de .NET Core 2.0
+        href: ../core/whats-new/dotnet-core-2-0.md
+      - name: Novedades de .NET Standard
+        href: ../standard/whats-new/whats-new-in-dotnet-standard.md
+  - name: Componentes de entorno y de tiempo de ejecución
+    items:
+      - name: Herramientas y productividad
+        items:
+          - name: Información general sobre el SDK de .NET Core
+            href: ../core/sdk.md
+          - name: CLI de .NET Core
+            items:
+              - name: Información general
+                href: ../core/tools/index.md
+              - name: Referencia
+                items:
+                  - name: dotnet
+                    href: ../core/tools/dotnet.md
+                  - name: dotnet build
+                    href: ../core/tools/dotnet-build.md
+                  - name: dotnet build-server
+                    href: ../core/tools/dotnet-build-server.md
+                  - name: dotnet clean
+                    href: ../core/tools/dotnet-clean.md
+                  - name: dotnet help
+                    href: ../core/tools/dotnet-help.md
+                  - name: dotnet migrate
+                    href: ../core/tools/dotnet-migrate.md
+                  - name: dotnet msbuild
+                    href: ../core/tools/dotnet-msbuild.md
+                  - name: dotnet new
+                    href: ../core/tools/dotnet-new.md
+                  - name: dotnet nuget
+                    items:
+                      - name: dotnet nuget delete
+                        href: ../core/tools/dotnet-nuget-delete.md
+                      - name: dotnet nuget locals
+                        href: ../core/tools/dotnet-nuget-locals.md
+                      - name: dotnet nuget push
+                        href: ../core/tools/dotnet-nuget-push.md
+                      - name: dotnet nuget add source
+                        href: ../core/tools/dotnet-nuget-add-source.md
+                      - name: dotnet nuget disable source
+                        href: ../core/tools/dotnet-nuget-disable-source.md
+                      - name: dotnet nuget enable source
+                        href: ../core/tools/dotnet-nuget-enable-source.md
+                      - name: dotnet nuget list source
+                        href: ../core/tools/dotnet-nuget-list-source.md
+                      - name: dotnet nuget remove source
+                        href: ../core/tools/dotnet-nuget-remove-source.md
+                      - name: dotnet nuget update source
+                        href: ../core/tools/dotnet-nuget-update-source.md
+                  - name: dotnet pack
+                    href: ../core/tools/dotnet-pack.md
+                  - name: dotnet publish
+                    href: ../core/tools/dotnet-publish.md
+                  - name: dotnet restore
+                    href: ../core/tools/dotnet-restore.md
+                  - name: dotnet run
+                    href: ../core/tools/dotnet-run.md
+                  - name: dotnet sln
+                    href: ../core/tools/dotnet-sln.md
+                  - name: dotnet store
+                    href: ../core/tools/dotnet-store.md
+                  - name: dotnet test
+                    href: ../core/tools/dotnet-test.md
+                  - name: dotnet tool
+                    items:
+                      - name: dotnet tool install
+                        href: ../core/tools/dotnet-tool-install.md
+                      - name: dotnet tool list
+                        href: ../core/tools/dotnet-tool-list.md
+                      - name: dotnet tool restore
+                        href: ../core/tools/dotnet-tool-restore.md
+                      - name: dotnet tool run
+                        href: ../core/tools/dotnet-tool-run.md
+                      - name: dotnet tool uninstall
+                        href: ../core/tools/dotnet-tool-uninstall.md
+                      - name: dotnet tool update
+                        href: ../core/tools/dotnet-tool-update.md
+                  - name: dotnet vstest
+                    href: ../core/tools/dotnet-vstest.md
+                  - name: Scripts de dotnet-install
+                    href: ../core/tools/dotnet-install-script.md
+                  - name: Comandos de referencia del proyecto
+                    items:
+                      - name: dotnet add reference
+                        href: ../core/tools/dotnet-add-reference.md
+                      - name: dotnet list reference
+                        href: ../core/tools/dotnet-list-reference.md
+                      - name: dotnet remove reference
+                        href: ../core/tools/dotnet-remove-reference.md
+                  - name: Comandos del paquete del proyecto
+                    items:
+                      - name: dotnet add package
+                        href: ../core/tools/dotnet-add-package.md
+                      - name: dotnet list package
+                        href: ../core/tools/dotnet-list-package.md
+                      - name: dotnet remove package
+                        href: ../core/tools/dotnet-remove-package.md
+              - name: Herramientas globales y locales
+                items:
+                  - name: Administración de herramientas
+                    href: ../core/tools/global-tools.md
+                  - name: Herramientas de solución de problemas
+                    href: ../core/tools/troubleshoot-usage-issues.md
+                  - name: Creación de herramientas para la CLI
+                    items:
+                      - name: 1 - Creación de una herramienta
+                        displayName: 'tools, tutorials, cli'
+                        href: ../core/tools/global-tools-how-to-create.md
+                      - name: 2 - Uso de una herramienta global
+                        displayName: 'tools, tutorials, cli'
+                        href: ../core/tools/global-tools-how-to-use.md
+                      - name: 3- Uso de una herramienta local
+                        href: ../core/tools/local-tools-how-to-use.md
+                        displayName: 'tools, tutorials, cli'
+              - name: Información general de global.json
+                href: ../core/tools/global-json.md
+              - name: Telemetría
+                href: ../core/tools/telemetry.md
+              - name: Acceso elevado
+                href: ../core/tools/elevated-access.md
+              - name: Habilitación de la finalización con tabulación
+                href: ../core/tools/enable-tab-autocomplete.md
+          - name: Integración continua con la CLI
+            href: ../core/tools/using-ci-with-cli.md
+          - name: Desarrollo de bibliotecas con la CLI
+            href: ../core/tutorials/libraries.md
+          - name: Creación de plantillas para la CLI
+            items:
+              - name: Plantillas personalizadas
+                href: ../core/tools/custom-templates.md
+              - name: 1 - Crear una plantilla de elemento
+                href: ../core/tutorials/cli-templates-create-item-template.md
+                displayName: 'tutorials, cli'
+              - name: 2 - Crear una plantilla de proyecto
+                href: ../core/tutorials/cli-templates-create-project-template.md
+                displayName: 'tutorials, cli'
+              - name: 3 - Crear un paquete de plantillas
+                href: ../core/tutorials/cli-templates-create-template-pack.md
+                displayName: 'tutorials, cli'
+          - name: Herramientas adicionales de .NET Core
+            items:
+              - name: Información general
+                href: ../core/additional-tools/index.md
+              - name: Herramienta de desinstalación de .NET Core
+                href: ../core/additional-tools/uninstall-tool.md
+              - name: Proveedor de WCF Web Service Reference
+                href: ../core/additional-tools/wcf-web-service-reference-guide.md
+              - name: dotnet-svcutil
+                href: ../core/additional-tools/dotnet-svcutil-guide.md
+              - name: dotnet-svcutil.xmlserializer
+                href: ../core/additional-tools/dotnet-svcutil.xmlserializer-guide.md
+              - name: Generador de serializador XML
+                href: ../core/additional-tools/xml-serializer-generator.md
+          - name: Herramientas de diagnóstico
+            items:
+              - name: Información general
+                href: ../core/diagnostics/index.md
+              - name: Depuradores administrados
+                href: ../core/diagnostics/managed-debuggers.md
+              - name: EventCounters
+                href: ../core/diagnostics/event-counters.md
+              - name: Registro y seguimiento
+                href: ../core/diagnostics/logging-tracing.md
+              - name: Herramientas globales de la CLI de .NET Core
+                items:
+                  - name: dotnet-counters
+                    href: ../core/diagnostics/dotnet-counters.md
+                  - name: dotnet-dump
+                    href: ../core/diagnostics/dotnet-dump.md
+                  - name: dotnet-gcdump
+                    href: ../core/diagnostics/dotnet-gcdump.md
+                  - name: dotnet-trace
+                    href: ../core/diagnostics/dotnet-trace.md
+              - name: Tutoriales de diagnóstico de .NET Core
+                items:
+                  - name: Obtención de métricas de rendimiento con EventCounters
+                    href: ../core/diagnostics/event-counter-perf.md
+                  - name: Depuración de una fuga de memoria
+                    href: ../core/diagnostics/debug-memory-leak.md
+                  - name: Depuración del uso elevado de CPU
+                    href: ../core/diagnostics/debug-highcpu.md
+                  - name: Depuración de interbloqueo
+                    href: ../core/diagnostics/debug-deadlock.md
+          - name: Análisis de código
+            items:
+              - name: Información general
+                href: productivity/code-analysis.md
+                displayName: 'code analysis, analyzers'
+              - name: Configuración de reglas
+                href: productivity/configure-code-analysis-rules.md
+              - name: Analizador de API
+                href: ../standard/analyzers/api-analyzer.md
+              - name: Analizador de portabilidad
+                href: ../standard/analyzers/portability-analyzer.md
+      - name: Modelo de ejecución
+        items:
+          - name: Common Language Runtime (CLR)
+            href: ../standard/clr.md
+          - name: Proceso de ejecución administrada
+            href: ../standard/managed-execution-process.md
+          - name: Ensamblados de .NET
+            href: ../standard/assembly/
+          - name: Metadatos y componentes autodescriptivos
+            href: ../standard/metadata-and-self-describing-components.md
+          - name: Carga de dependencias
+            items:
+              - name: Carga de dependencias
+                href: ../core/dependency-loading/overview.md
+              - name: Descripción de AssemblyLoadContext
+                href: ../core/dependency-loading/understanding-assemblyloadcontext.md
+              - name: Detalles de la carga de dependencias
+                items:
+                  - name: Sondeo de dependencia predeterminado
+                    href: ../core/dependency-loading/default-probing.md
+                  - name: Carga de ensamblados administrados
+                    href: ../core/dependency-loading/loading-managed.md
+                  - name: Carga de ensamblados satélite
+                    href: ../core/dependency-loading/loading-resources.md
+                  - name: Carga de bibliotecas no administradas
+                    href: ../core/dependency-loading/loading-unmanaged.md
+              - name: Tutoriales
+                items:
+                  - name: Creación de una aplicación de .NET Core con complementos
+                    href: ../core/tutorials/creating-app-with-plugin-support.md
+                  - name: Uso y depuración de la descargabilidad de ensamblado en .NET Core
+                    href: ../core/../standard/assembly/unloadability.md
+          - name: Control de versiones
+            items:
+              - name: Información general
+                href: ../core/versions/index.md
+              - name: Selección de la versión de .NET Core
+                href: ../core/versions/selection.md
+          - name: Configuración del entorno en tiempo de ejecución
+            items:
+              - name: Configuración
+                href: ../core/run-time-config/index.md
+              - name: Configuración de la compilación
+                href: ../core/run-time-config/compilation.md
+              - name: Depuración y configuración de perfiles
+                href: ../core/run-time-config/debugging-profiling.md
+              - name: Nombre de recolector de elementos no utilizados
+                href: ../core/run-time-config/garbage-collector.md
+              - name: Configuración de la globalización
+                href: ../core/run-time-config/globalization.md
+              - name: Configuración de redes
+                href: ../core/run-time-config/networking.md
+              - name: Configuración de subprocesos
+                href: ../core/run-time-config/threading.md
+      - name: Modelos de implementación
+        items:
+          - name: Información general
+            href: ../core/deploying/index.md
+          - name: "Implementación de aplicaciones con Visual\_Studio"
+            href: ../core/deploying/deploy-with-vs.md
+          - name: Publicación de aplicaciones con la CLI
+            href: ../core/deploying/deploy-with-cli.md
+          - name: Creación de un paquete NuGet con la CLI
+            href: ../core/deploying/creating-nuget-packages.md
+          - name: Puesta al día del runtime de implementación autocontenida
+            href: ../core/deploying/runtime-patch-selection.md
+          - name: Recorte de implementaciones autocontenidas y ejecutables
+            href: ../core/deploying/trim-self-contained.md
+          - name: Almacenamiento de paquetes en tiempo de ejecución
+            href: ../core/deploying/runtime-store.md
+          - name: Catálogo de identificadores de tiempo de ejecución (RID)
+            href: ../core/rid-catalog.md
+          - name: Nombres del manifiesto de recurso
+            href: ../core/resources/manifest-file-names.md
+          - name: Docker
+            items:
+              - name: Introducción a .NET y Docker
+                href: ../core/docker/introduction.md
+              - name: Incluir una aplicación de .NET Core en un contenedor
+                href: ../core/docker/build-container.md
+              - name: Herramientas de contenedor de Visual Studio
+                href: /visualstudio/containers/overview
+      - name: MSBuild y archivos del proyecto
+        items:
+          - name: SDK de proyecto
+            items:
+              - name: Información general
+                href: ../core/project-sdk/overview.md
+              - name: Referencia
+                items:
+                  - name: Microsoft.NET.Sdk
+                    href: ../core/project-sdk/msbuild-props.md
+                  - name: Microsoft.NET.Sdk.Web
+                    href: /aspnet/core/razor-pages/web-sdk?toc=/dotnet/core/toc.json&bc=/dotnet/breadcrumb/toc.json
+                  - name: Microsoft.NET.Sdk.Razor
+                    href: /aspnet/core/razor-pages/sdk?toc=/dotnet/core/toc.json&bc=/dotnet/breadcrumb/toc.json
+          - name: Versiones de .NET Framework de destino
+            href: ../standard/frameworks.md
+          - name: Adiciones al formato csproj
+            href: ../core/tools/csproj.md
+          - name: Administración de dependencias
+            href: ../core/tools/dependencies.md
+  - name: Componentes fundamentales de la codificación
+    items:
+      - name: Información general de los tipos base
+        items:
+          - name: Common Type System y Common Language Specification
+            href: ../standard/common-type-system.md
+          - name: Sistema de tipos comunes
+            href: ../standard/base-types/common-type-system.md
+          - name: Independencia de lenguaje
+            href: ../standard/language-independence.md
+          - name: Componentes independientes del lenguaje
+            href: ../standard/language-independence-and-language-independent-components.md
+          - name: Conversión de tipos en .NET
+            href: ../standard/base-types/type-conversion.md
+          - name: Tablas de conversión de tipos
+            href: ../standard/base-types/conversion-tables.md
+          - name: Bibliotecas del marco
+            href: ../standard/framework-libraries.md
+          - name: Introducción a la biblioteca de clases
+            href: ../standard/class-library-overview.md
+      - name: Tipos genéricos
+        items:
+          - name: Información general
+            href: ../standard/generics/index.md
+          - name: Introducción a los tipos genéricos
+            href: ../standard/generics.md
+          - name: Colecciones genéricas en .NET
+            href: ../standard/generics/collections.md
+          - name: Delegados genéricos para manipular matrices y listas
+            href: ../standard/generics/delegates-for-manipulating-arrays-and-lists.md
+          - name: Interfaces genéricas
+            href: ../standard/generics/interfaces.md
+          - name: Covarianza y contravarianza
+            href: ../standard/generics/covariance-and-contravariance.md
+      - name: Colecciones y estructuras de datos
+        items:
+          - name: Información general
+            href: ../standard/collections/index.md
+            displayName: 'collections, data structures'
+          - name: Seleccione una clase de colección
+            href: ../standard/collections/selecting-a-collection-class.md
+          - name: Tipos de colección utilizados normalmente
+            href: ../standard/collections/commonly-used-collection-types.md
+          - name: Cuándo utilizar colecciones genéricas
+            href: ../standard/collections/when-to-use-generic-collections.md
+          - name: Comparaciones y ordenaciones en colecciones
+            href: ../standard/collections/comparisons-and-sorts-within-collections.md
+          - name: Tipos de colecciones ordenadas
+            href: ../standard/collections/sorted-collection-types.md
+          - name: Tipos Hashtable y Dictionary
+            href: ../standard/collections/hashtable-and-dictionary-collection-types.md
+          - name: Colecciones seguras para subprocesos
+            href: ../standard/collections/thread-safe/
+      - name: Delegados y expresiones lambda
+        href: ../standard/delegates-lambdas.md
+      - name: Events
+        items:
+          - name: Información general
+            href: ../standard/events/index.md
+            displayName: events
+          - name: Provocación y consumo de eventos
+            href: ../standard/events/how-to-raise-and-consume-events.md
+          - name: Control de varios eventos mediante propiedades de evento
+            href: ../standard/events/how-to-handle-multiple-events-using-event-properties.md
+          - name: Modelo de diseño de observador
+            items:
+              - name: Información general
+                href: ../standard/events/observer-design-pattern.md
+                displayName: Observer design pattern
+              - name: Procedimientos recomendados
+                href: ../standard/events/observer-design-pattern-best-practices.md
+              - name: Procedimiento Implementación de un proveedor
+                href: ../standard/events/how-to-implement-a-provider.md
+              - name: Procedimiento Implementación de un observador
+                href: ../standard/events/how-to-implement-an-observer.md
+      - name: Excepciones
+        items:
+          - name: Información general
+            href: ../standard/exceptions/index.md
+            displayName: exceptions
+          - name: Clase Exception y propiedades
+            href: ../standard/exceptions/exception-class-and-properties.md
+          - name: Temas procedimentales
+            items:
+              - name: Uso del bloque Try/Catch para detectar excepciones
+                href: ../standard/exceptions/how-to-use-the-try-catch-block-to-catch-exceptions.md
+              - name: Uso de excepciones específicas en un bloque Catch
+                href: ../standard/exceptions/how-to-use-specific-exceptions-in-a-catch-block.md
+              - name: Inicio de excepciones explícitamente
+                href: ../standard/exceptions/how-to-explicitly-throw-exceptions.md
+              - name: Creación de excepciones definidas por el usuario
+                href: ../standard/exceptions/how-to-create-user-defined-exceptions.md
+              - name: Creación de excepciones definidas por el usuario con mensajes de excepción localizados
+                href: ../standard/exceptions/how-to-create-localized-exception-messages.md
+              - name: Uso de bloques Finally
+                href: ../standard/exceptions/how-to-use-finally-blocks.md
+          - name: Uso de controladores de excepciones filtradas por el usuario
+            href: ../standard/exceptions/using-user-filtered-exception-handlers.md
+          - name: Control de excepciones de interoperabilidad COM
+            href: ../standard/exceptions/handling-com-interop-exceptions.md
+          - name: Procedimientos recomendados
+            href: ../standard/exceptions/best-practices-for-exceptions.md
+      - name: Tipos numéricos
+        href: ../standard/numerics.md
+      - name: 'Fechas, horas y zonas horarias'
+        href: ../standard/datetime/
+      - name: 'Formato de números, fechas y otros tipos'
+        items:
+          - name: Información general
+            href: ../standard/base-types/formatting-types.md
+          - name: Cadenas con formato numérico estándar
+            href: ../standard/base-types/standard-numeric-format-strings.md
+          - name: Cadenas con formato numérico personalizado
+            href: ../standard/base-types/custom-numeric-format-strings.md
+          - name: Cadenas con formato de fecha y hora estándar
+            href: ../standard/base-types/standard-date-and-time-format-strings.md
+          - name: Cadenas con formato de fecha y hora personalizado
+            href: ../standard/base-types/custom-date-and-time-format-strings.md
+          - name: Cadenas de formato TimeSpan estándar
+            href: ../standard/base-types/standard-timespan-format-strings.md
+          - name: Cadenas de formato TimeSpan personalizado
+            href: ../standard/base-types/custom-timespan-format-strings.md
+          - name: Cadenas de formato de enumeración
+            href: ../standard/base-types/enumeration-format-strings.md
+          - name: Formatos compuestos
+            href: ../standard/base-types/composite-formatting.md
+          - name: Temas procedimentales
+            items:
+              - name: Relleno de un número con ceros a la izquierda
+                href: ../standard/base-types/how-to-pad-a-number-with-leading-zeros.md
+              - name: Extracción del día de la semana de una fecha
+                href: ../standard/base-types/how-to-extract-the-day-of-the-week-from-a-specific-date.md
+              - name: Uso de proveedores de formato numérico personalizado
+                href: ../standard/base-types/how-to-define-and-use-custom-numeric-format-providers.md
+              - name: Aplicación de acciones de ida y vuelta a valores de fecha y hora
+                href: ../standard/base-types/how-to-round-trip-date-and-time-values.md
+              - name: Visualización de los milisegundos en valores de fecha y hora
+                href: ../standard/base-types/how-to-display-milliseconds-in-date-and-time-values.md
+              - name: Visualización de las fechas en calendarios no gregorianos
+                href: ../standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md
+      - name: Manipulación de las cadenas
+        items:
+          - name: Codificación de caracteres de .NET
+            href: ../standard/base-types/character-encoding-introduction.md
+          - name: Procedimiento para usar las clases de codificación de caracteres
+            href: ../standard/base-types/character-encoding.md
+          - name: Procedimientos recomendados para el uso de cadenas
+            href: ../standard/base-types/best-practices-strings.md
+          - name: Operaciones básicas de cadenas
+            items:
+              - name: Información general
+                href: ../standard/base-types/basic-string-operations.md
+                displayName: string operations
+              - name: Creación de nuevas cadenas
+                href: ../standard/base-types/creating-new.md
+              - name: Recorte y eliminación de caracteres
+                href: ../standard/base-types/trimming.md
+              - name: Relleno de cadenas
+                href: ../standard/base-types/padding.md
+              - name: Comparación de cadenas
+                href: ../standard/base-types/comparing.md
+              - name: Cambio de mayúsculas y minúsculas
+                href: ../standard/base-types/changing-case.md
+              - name: Uso de la clase StringBuilder
+                href: ../standard/base-types/stringbuilder.md
+              - name: Procedimiento para realizar manipulaciones básicas de cadena
+                href: ../standard/base-types/basic-manipulations.md
+          - name: Expresiones regulares en .NET
+            items:
+              - name: Información general
+                href: ../standard/base-types/regular-expressions.md
+                displayName: regular expressions
+              - name: Referencia del lenguaje
+                items:
+                  - name: Información general
+                    href: ../standard/base-types/regular-expression-language-quick-reference.md
+                  - name: Escapes de carácter
+                    href: ../standard/base-types/character-escapes-in-regular-expressions.md
+                  - name: Clase de caracteres
+                    href: ../standard/base-types/character-classes-in-regular-expressions.md
+                  - name: Delimitadores
+                    href: ../standard/base-types/anchors-in-regular-expressions.md
+                  - name: Construcciones de agrupamiento
+                    href: ../standard/base-types/grouping-constructs-in-regular-expressions.md
+                  - name: Cuantificadores
+                    href: ../standard/base-types/quantifiers-in-regular-expressions.md
+                  - name: Construcciones de referencia inversa
+                    href: ../standard/base-types/backreference-constructs-in-regular-expressions.md
+                  - name: Construcciones de alternancia
+                    href: ../standard/base-types/alternation-constructs-in-regular-expressions.md
+                  - name: Sustituciones
+                    href: ../standard/base-types/substitutions-in-regular-expressions.md
+                  - name: Opciones de expresiones regulares
+                    href: ../standard/base-types/regular-expression-options.md
+                  - name: Construcciones misceláneas
+                    href: ../standard/base-types/miscellaneous-constructs-in-regular-expressions.md
+              - name: Procedimientos recomendados con expresiones regulares
+                href: ../standard/base-types/best-practices.md
+              - name: Modelo de objetos de expresiones regulares
+                href: ../standard/base-types/the-regular-expression-object-model.md
+              - name: Comportamiento de expresiones regulares
+                items:
+                  - name: Información general
+                    href: ../standard/base-types/details-of-regular-expression-behavior.md
+                  - name: Retroceso
+                    href: ../standard/base-types/backtracking-in-regular-expressions.md
+                  - name: Compilación y reutilización
+                    href: ../standard/base-types/compilation-and-reuse-in-regular-expressions.md
+                  - name: Seguridad para subprocesos
+                    href: ../standard/base-types/thread-safety-in-regular-expressions.md
+              - name: Ejemplos
+                items:
+                  - name: Búsqueda de HREF
+                    href: ../standard/base-types/regular-expression-example-scanning-for-hrefs.md
+                  - name: Cambio de formatos de fecha
+                    href: ../standard/base-types/regular-expression-example-changing-date-formats.md
+                  - name: Extracción de un protocolo y un número de puerto de una URL
+                    href: ../standard/base-types/how-to-extract-a-protocol-and-port-number-from-a-url.md
+                  - name: Eliminación de caracteres no válidos de una cadena
+                    href: ../standard/base-types/how-to-strip-invalid-characters-from-a-string.md
+                  - name: comprobar que las cadenas están en un formato de correo electrónico válido
+                    href: ../standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md
+      - name: Análisis de las cadenas
+        items:
+          - name: Información general
+            href: ../standard/base-types/parsing-strings.md
+          - name: Análisis de cadenas numéricas
+            href: ../standard/base-types/parsing-numeric.md
+          - name: Análisis de cadenas de fecha y hora
+            href: ../standard/base-types/parsing-datetime.md
+          - name: Análisis de otras cadenas
+            href: ../standard/base-types/parsing-other.md
+      - name: Atributos
+        items:
+          - name: Información general
+            href: ../standard/attributes/index.md
+            displayName: attributes
+          - name: Aplicación de atributos
+            href: ../standard/attributes/applying-attributes.md
+          - name: Escritura de atributos personalizados
+            href: ../standard/attributes/writing-custom-attributes.md
+          - name: Recuperación de la información almacenada en atributos
+            href: ../standard/attributes/retrieving-information-stored-in-attributes.md
+      - name: Elección entre tipos de tupla y anónimos
+        href: ../standard/base-types/choosing-between-anonymous-and-tuple.md
+  - name: Extensiones de Microsoft
+    items:
+      - name: Configuración
+        href: /aspnet/core/fundamentals/configuration/
+      - name: Inserción de dependencias
+        href: /aspnet/core/fundamentals/dependency-injection/
+      - name: Registro
+        href: /aspnet/core/fundamentals/logging/
+  - name: Acceso a datos
+    items:
+      - name: LINQ
+        href: ../standard/using-linq.md
+      - name: Documentos y datos XML
+        href: ../standard/data/xml/
+      - name: Microsoft.Data.Sqlite
+        href: ../standard/data/sqlite/
+  - name: 'Procesamiento paralelo, simultaneidad y asincronía'
+    items:
+      - name: Información general
+        href: ../standard/parallel-processing-and-concurrency.md
+        displayName: 'Parallel processing, concurrency, async'
+      - name: Programación asincrónica
+        items:
+          - name: Información general
+            href: ../standard/async.md
+          - name: Programación asincrónica en detalle
+            href: ../standard/async-in-depth.md
+          - name: Patrones para la programación asincrónica
+            href: ../standard/asynchronous-programming-patterns/
+      - name: Programación en paralelo
+        items:
+          - name: Información general
+            href: ../standard/parallel-programming/index.md
+          - name: Biblioteca de procesamiento paralelo basado en tareas (TPL)
+            href: ../standard/parallel-programming/task-parallel-library-tpl.md
+            items:
+              - name: Paralelismo de datos
+                href: ../standard/parallel-programming/data-parallelism-task-parallel-library.md
+                items:
+                  - name: Procedimiento para escribir un bucle Parallel.For simple
+                    href: ../standard/parallel-programming/how-to-write-a-simple-parallel-for-loop.md
+                  - name: Procedimiento para escribir un bucle Parallel.ForEach sencillo
+                    href: ../standard/parallel-programming/how-to-write-a-simple-parallel-foreach-loop.md
+                  - name: Procedimiento para escribir un bucle Parallel.For con variables locales de subproceso
+                    href: ../standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md
+                  - name: Procedimiento para escribir un bucle Parallel.ForEach con variables locales de partición
+                    href: ../standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md
+                  - name: Procedimiento para cancelar un bucle Parallel.For o ForEach
+                    href: ../standard/parallel-programming/how-to-cancel-a-parallel-for-or-foreach-loop.md
+                  - name: Procedimiento para controlar excepciones en bucles paralelos
+                    href: ../standard/parallel-programming/how-to-handle-exceptions-in-parallel-loops.md
+                  - name: Procedimiento para acelerar cuerpos de bucle pequeños
+                    href: ../standard/parallel-programming/how-to-speed-up-small-loop-bodies.md
+                  - name: Procedimiento Iteración de directorios de archivos con la clase Parallel
+                    href: ../standard/parallel-programming/how-to-iterate-file-directories-with-the-parallel-class.md
+              - name: Programación asincrónica basada en tareas
+                href: ../standard/parallel-programming/task-based-asynchronous-programming.md
+                items:
+                  - name: Encadenar tareas mediante tareas de continuación
+                    href: ../standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md
+                  - name: Tareas secundarias asociadas y desasociadas
+                    href: ../standard/parallel-programming/attached-and-detached-child-tasks.md
+                  - name: Cancelación de tareas
+                    href: ../standard/parallel-programming/task-cancellation.md
+                  - name: Control de excepciones
+                    href: ../standard/parallel-programming/exception-handling-task-parallel-library.md
+                  - name: Procedimiento para usar Parallel.Invoke para ejecutar operaciones en paralelo
+                    href: ../standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md
+                  - name: Procedimiento para devolver un valor a partir de una tarea
+                    href: ../standard/parallel-programming/how-to-return-a-value-from-a-task.md
+                  - name: Procedimiento para cancelar una tarea y sus elementos secundarios
+                    href: ../standard/parallel-programming/how-to-cancel-a-task-and-its-children.md
+                  - name: Procedimiento Creación de tareas precalculadas
+                    href: ../standard/parallel-programming/how-to-create-pre-computed-tasks.md
+                  - name: Procedimiento para recorrer un árbol binario con tareas en paralelo
+                    href: ../standard/parallel-programming/how-to-traverse-a-binary-tree-with-parallel-tasks.md
+                  - name: Procedimiento para desencapsular una tarea anidada
+                    href: ../standard/parallel-programming/how-to-unwrap-a-nested-task.md
+                  - name: Procedimiento Evitar que una tarea secundaria se adjunte a su elemento primario
+                    href: ../standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md
+              - name: Flujo de datos
+                href: ../standard/parallel-programming/dataflow-task-parallel-library.md
+                items:
+                  - name: Procedimiento Escritura y lectura de mensajes en un bloque de flujo de datos
+                    href: ../standard/parallel-programming/how-to-write-messages-to-and-read-messages-from-a-dataflow-block.md
+                  - name: Procedimiento Implementación de un modelo de flujo de datos productor-consumidor
+                    href: ../standard/parallel-programming/how-to-implement-a-producer-consumer-dataflow-pattern.md
+                  - name: Procedimiento Toma de medidas cuando un bloque de flujos de datos recibe datos
+                    href: ../standard/parallel-programming/how-to-perform-action-when-a-dataflow-block-receives-data.md
+                  - name: 'Tutorial: Creación de una canalización de flujos de datos'
+                    href: ../standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md
+                  - name: Procedimiento Desvinculación de bloques de flujos de datos
+                    href: ../standard/parallel-programming/how-to-unlink-dataflow-blocks.md
+                  - name: 'Tutorial: Uso de flujos de datos en aplicaciones de Windows Forms'
+                    href: ../standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md
+                  - name: Procedimiento para cancelar un bloque de flujo de datos
+                    href: ../standard/parallel-programming/how-to-cancel-a-dataflow-block.md
+                  - name: 'Tutorial: Creación de tipos de bloques de flujos de datos personalizados'
+                    href: ../standard/parallel-programming/walkthrough-creating-a-custom-dataflow-block-type.md
+                  - name: Procedimiento Uso de JoinBlock para leer datos de diferentes orígenes
+                    href: ../standard/parallel-programming/how-to-use-joinblock-to-read-data-from-multiple-sources.md
+                  - name: Procedimiento Especificación del grado de paralelismo en un bloque de flujos de datos
+                    href: ../standard/parallel-programming/how-to-specify-the-degree-of-parallelism-in-a-dataflow-block.md
+                  - name: Procedimiento para especificar un programador de tareas en un bloque de flujos de datos
+                    href: ../standard/parallel-programming/how-to-specify-a-task-scheduler-in-a-dataflow-block.md
+                  - name: 'Tutorial: Uso de BatchBlock y BatchedJoinBlock para mejorar la eficacia'
+                    href: ../standard/parallel-programming/walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency.md
+              - name: Usar TPL con otros patrones asincrónicos
+                href: ../standard/parallel-programming/using-tpl-with-other-asynchronous-patterns.md
+                items:
+                  - name: TPL y la programación asincrónica tradicional de .NET Framework
+                    href: ../standard/parallel-programming/tpl-and-traditional-async-programming.md
+                  - name: Procedimiento para encapsular patrones de EAP en una tarea
+                    href: ../standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md
+              - name: Problemas potenciales en el paralelismo de datos y tareas
+                href: ../standard/parallel-programming/potential-pitfalls-in-data-and-task-parallelism.md
+          - name: Parallel LINQ (PLINQ)
+            items:
+              - name: Introducción a PLINQ
+                href: ../standard/parallel-programming/introduction-to-plinq.md
+              - name: Introducción a la velocidad en PLINQ
+                href: ../standard/parallel-programming/understanding-speedup-in-plinq.md
+              - name: Conservar el orden en PLINQ
+                href: ../standard/parallel-programming/order-preservation-in-plinq.md
+              - name: Opciones de fusión mediante combinación en PLINQ
+                href: ../standard/parallel-programming/merge-options-in-plinq.md
+              - name: Posibles problemas con PLINQ
+                href: ../standard/parallel-programming/potential-pitfalls-with-plinq.md
+              - name: Procedimiento para crear y ejecutar una consulta PLINQ simple
+                href: ../standard/parallel-programming/how-to-create-and-execute-a-simple-plinq-query.md
+              - name: Procedimiento para controlar la ordenación en una consulta PLINQ
+                href: ../standard/parallel-programming/how-to-control-ordering-in-a-plinq-query.md
+              - name: Procedimiento para combinar consultas LINQ paralelas y secuenciales
+                href: ../standard/parallel-programming/how-to-combine-parallel-and-sequential-linq-queries.md
+              - name: Procedimiento para controlar excepciones en una consulta PLINQ
+                href: ../standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md
+              - name: Procedimiento para cancelar una consulta PLINQ
+                href: ../standard/parallel-programming/how-to-cancel-a-plinq-query.md
+              - name: Procedimiento para escribir una función de agregado personalizada de PLINQ
+                href: ../standard/parallel-programming/how-to-write-a-custom-plinq-aggregate-function.md
+              - name: Procedimiento para especificar el modo de ejecución en PLINQ
+                href: ../standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md
+              - name: Procedimiento para especificar opciones de fusión mediante combinación en PLINQ
+                href: ../standard/parallel-programming/how-to-specify-merge-options-in-plinq.md
+              - name: Procedimiento para iterar directorios con PLINQ
+                href: ../standard/parallel-programming/how-to-iterate-file-directories-with-plinq.md
+              - name: Procedimiento para medir el rendimiento de consultas PLINQ
+                href: ../standard/parallel-programming/how-to-measure-plinq-query-performance.md
+              - name: Ejemplo de datos de PLINQ
+                href: ../standard/parallel-programming/plinq-data-sample.md
+          - name: Estructuras de datos para la programación paralela
+            href: ../standard/parallel-programming/data-structures-for-parallel-programming.md
+          - name: Herramientas de diagnóstico paralelo
+            href: ../standard/parallel-programming/parallel-diagnostic-tools.md
+          - name: Particionadores personalizados para PLINQ y TPL
+            items:
+              - name: Información general
+                href: ../standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md
+                displayName: custom partitioners
+              - name: Procedimiento para implementar particiones dinámicas
+                href: ../standard/parallel-programming/how-to-implement-dynamic-partitions.md
+              - name: Procedimiento para implementar un particionador para particionamiento estático
+                href: ../standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md
+          - name: Expresiones lambda en PLINQ y TPL
+            href: ../standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md
+          - name: Información adicional
+            href: ../standard/parallel-programming/for-further-reading-parallel-programming.md
+      - name: Subprocesos
+        href: ../standard/threading/
+  - name: Serialización
+    items:
+      - name: Información general
+        href: ../standard/serialization/index.md
+      - name: Serialización de JSON
+        items:
+          - name: Información general
+            href: ../standard/serialization/system-text-json-overview.md
+            displayName: json serialization
+          - name: Cómo serializar y deserializar JSON
+            href: ../standard/serialization/system-text-json-how-to.md
+          - name: Procedimientos para escribir convertidores personalizados
+            href: ../standard/serialization/system-text-json-converters-how-to.md
+          - name: Migración desde Newtonsoft.json
+            href: ../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md
+      - name: Serialización binaria
+        items:
+          - name: Información general
+            href: ../standard/serialization/binary-serialization.md
+            displayName: binary serialization
+          - name: Guía de seguridad de BinaryFormatter
+            href: ../standard/serialization/binaryformatter-security-guide.md
+          - name: Conceptos de serialización
+            href: ../standard/serialization/serialization-concepts.md
+          - name: Serialización básica
+            href: ../standard/serialization/basic-serialization.md
+          - name: Serialización selectiva
+            href: ../standard/serialization/selective-serialization.md
+          - name: Serialización personalizada
+            href: ../standard/serialization/custom-serialization.md
+          - name: Pasos del proceso de serialización
+            href: ../standard/serialization/steps-in-the-serialization-process.md
+          - name: Serialización tolerante a versiones
+            href: ../standard/serialization/version-tolerant-serialization.md
+          - name: Directrices de serialización
+            href: ../standard/serialization/serialization-guidelines.md
+          - name: Procedimiento Fragmentación de datos serializados
+            href: ../standard/serialization/how-to-chunk-serialized-data.md
+          - name: Procedimiento para determinar si un objeto de .NET Standard es serializable
+            href: ../standard/serialization/how-to-determine-if-netstandard-object-is-serializable.md
+          - name: Ejemplo
+            href: ../standard/serialization/basic-serialization-technology-sample.md
+      - name: Serialización de SOAP y XML
+        items:
+          - name: Información general
+            href: ../standard/serialization/xml-and-soap-serialization.md
+          - name: Serialización XML en profundidad
+            href: ../standard/serialization/introducing-xml-serialization.md
+          - name: Ejemplos
+            href: ../standard/serialization/examples-of-xml-serialization.md
+          - name: Herramienta de definición de esquemas XML
+            href: ../standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md
+          - name: Control de la serialización XML mediante atributos
+            href: ../standard/serialization/controlling-xml-serialization-using-attributes.md
+          - name: Atributos que controlan la serialización XML
+            href: ../standard/serialization/attributes-that-control-xml-serialization.md
+          - name: Serialización XML con servicios web XML
+            href: ../standard/serialization/xml-serialization-with-xml-web-services.md
+          - name: Atributos que controlan la serialización SOAP codificada
+            href: ../standard/serialization/attributes-that-control-encoded-soap-serialization.md
+          - name: Temas procedimentales
+            items:
+              - name: Serialización de un objeto
+                href: ../standard/serialization/how-to-serialize-an-object.md
+              - name: Deserialización de un objeto
+                href: ../standard/serialization/how-to-deserialize-an-object.md
+              - name: Uso de la herramienta de definición de esquemas XML para generar clases y documentos de esquema XML
+                href: ../standard/serialization/xml-schema-def-tool-gen.md
+              - name: Control de la serialización de clases derivadas
+                href: ../standard/serialization/how-to-control-serialization-of-derived-classes.md
+              - name: Especificación de un nombre de elemento alternativo para una secuencia XML
+                href: ../standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md
+              - name: Calificación del elemento XML y los nombres del atributo XML
+                href: ../standard/serialization/how-to-qualify-xml-element-and-xml-attribute-names.md
+              - name: Serialización de un objeto como secuencia XML con codificación SOAP
+                href: ../standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md
+              - name: Invalidación de la serialización XML SOAP codificada
+                href: ../standard/serialization/how-to-override-encoded-soap-xml-serialization.md
+          - name: Elementos de serialización XML
+            items:
+              - name: system.xml.serialization
+                href: ../standard/serialization/system-xml-serialization-element.md
+              - name: dateTimeSerialization
+                href: ../standard/serialization/datetimeserialization-element.md
+              - name: schemaImporterExtensions
+                href: ../standard/serialization/schemaimporterextensions-element.md
+              - name: agregar elemento para schemaImporterExtensions
+                href: ../standard/serialization/add-element-for-schemaimporterextensions.md
+              - name: xmlSerializer
+                href: ../standard/serialization/xmlserializer-element.md
+          - name: Herramientas
+            items:
+              - name: Herramienta Generador de serializador XML (Sgen.exe)
+                href: ../standard/serialization/xml-serializer-generator-tool-sgen-exe.md
+              - name: Herramienta Definición de esquemas XML (Xsd.exe)
+                href: ../standard/serialization/xml-schema-definition-tool-xsd-exe.md
+  - name: E/S de archivos y secuencias
+    items:
+      - name: Información general
+        href: ../standard/io/index.md
+      - name: Formatos de ruta de acceso de archivo en los sistemas Windows
+        href: ../standard/io/file-path-formats.md
+      - name: Tareas de E/S comunes
+        href: ../standard/io/common-i-o-tasks.md
+        items:
+          - name: Procedimiento para copiar directorios
+            href: ../standard/io/how-to-copy-directories.md
+          - name: Procedimiento para enumerar directorios y archivos
+            href: ../standard/io/how-to-enumerate-directories-and-files.md
+          - name: Procedimiento para leer y escribir en un archivo de datos recién creado
+            href: ../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md
+          - name: Procedimiento para abrir y anexar a un archivo de registro
+            href: ../standard/io/how-to-open-and-append-to-a-log-file.md
+          - name: Procedimiento para escribir texto en un archivo
+            href: ../standard/io/how-to-write-text-to-a-file.md
+          - name: Procedimiento para leer texto de un archivo
+            href: ../standard/io/how-to-read-text-from-a-file.md
+          - name: Procedimiento para leer caracteres de una cadena
+            href: ../standard/io/how-to-read-characters-from-a-string.md
+          - name: Procedimiento para escribir caracteres en una cadena
+            href: ../standard/io/how-to-write-characters-to-a-string.md
+          - name: Procedimiento para agregar o quitar entradas de la lista de control de acceso
+            href: ../standard/io/how-to-add-or-remove-access-control-list-entries.md
+          - name: Procedimiento para comprimir y extraer archivos
+            href: ../standard/io/how-to-compress-and-extract-files.md
+          - name: Crear secuencias
+            href: ../standard/io/composing-streams.md
+          - name: Procedimiento para convertir flujos de .NET Framework en flujos de Windows Runtime y viceversa
+            href: ../standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md
+      - name: E/S de archivos asincrónica
+        href: ../standard/io/asynchronous-file-i-o.md
+      - name: Control de errores de E/S de disco
+        href: ../standard/io/handling-io-errors.md
+      - name: Almacenamiento aislado
+        href: ../standard/io/isolated-storage.md
+        items:
+          - name: Tipos de aislamiento
+            href: ../standard/io/types-of-isolation.md
+          - name: Procedimiento para obtener los almacenes de almacenamiento aislado
+            href: ../standard/io/how-to-obtain-stores-for-isolated-storage.md
+          - name: Procedimiento para enumerar los almacenes de almacenamiento aislado
+            href: ../standard/io/how-to-enumerate-stores-for-isolated-storage.md
+          - name: Procedimiento para eliminar almacenes de almacenamiento aislado
+            href: ../standard/io/how-to-delete-stores-in-isolated-storage.md
+          - name: Procedimiento para prever condiciones de espacio insuficiente con almacenamiento aislado
+            href: ../standard/io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md
+          - name: Procedimiento para crear archivos y directorios en almacenamiento aislado
+            href: ../standard/io/how-to-create-files-and-directories-in-isolated-storage.md
+          - name: Procedimiento para buscar archivos y directorios existentes en almacenamiento aislado
+            href: ../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md
+          - name: Procedimiento para leer y escribir en archivos en almacenamiento aislado
+            href: ../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md
+          - name: Procedimiento para eliminar archivos y directorios en almacenamiento aislado
+            href: ../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md
+      - name: Canalizaciones
+        href: ../standard/io/pipe-operations.md
+        items:
+          - name: Procedimiento para usar canalizaciones anónimas para la comunicación local entre procesos
+            href: ../standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md
+          - name: Procedimiento para usar canalizaciones con nombre para la comunicación de red entre procesos
+            href: ../standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md
+      - name: Canalizaciones
+        href: ../standard/io/pipelines.md
+      - name: Trabajo con búferes
+        href: ../standard/io/buffers.md
+      - name: Archivos asignados a memoria
+        href: ../standard/io/memory-mapped-files.md
+  - name: Pruebas unitarias
+    displayName: 'xUnit,NUnit,MSTest,unit testing,testing'
+    items:
+      - name: Información general
+        href: ../core/testing/index.md
+      - name: Procedimientos recomendados para pruebas unitarias
+        href: ../core/testing/unit-testing-best-practices.md
+      - name: xUnit
+        items:
+          - name: Pruebas unitarias de C#
+            href: ../core/testing/unit-testing-with-dotnet-test.md
+          - name: Pruebas unitarias de F#
+            href: ../core/testing/unit-testing-fsharp-with-dotnet-test.md
+          - name: Pruebas unitarias de VB
+            href: ../core/testing/unit-testing-visual-basic-with-dotnet-test.md
+          - name: Organización de un proyecto y prueba con xUnit
+            href: ../core/tutorials/testing-with-cli.md
+            displayName: 'tutorials, cli'
+      - name: NUnit
+        items:
+          - name: Pruebas unitarias de C#
+            href: ../core/testing/unit-testing-with-nunit.md
+          - name: Pruebas unitarias de F#
+            href: ../core/testing/unit-testing-fsharp-with-nunit.md
+          - name: Pruebas unitarias de VB
+            href: ../core/testing/unit-testing-visual-basic-with-nunit.md
+      - name: MSTest
+        items:
+          - name: Pruebas unitarias de C#
+            href: ../core/testing/unit-testing-with-mstest.md
+          - name: Pruebas unitarias de F#
+            href: ../core/testing/unit-testing-fsharp-with-mstest.md
+          - name: Pruebas unitarias de VB
+            href: ../core/testing/unit-testing-visual-basic-with-mstest.md
+      - name: Ejecución de pruebas unitarias selectivas
+        href: ../core/testing/selective-unit-tests.md
+      - name: Ordenación de pruebas unitarias
+        href: ../core/testing/order-unit-tests.md
+      - name: Cobertura de código de prueba unitaria
+        href: ../core/testing/unit-testing-code-coverage.md
+      - name: Salida publicada de una prueba unitaria
+        href: ../core/testing/unit-testing-published-output.md
+      - name: "Pruebas unitarias dinámicas de proyectos de .NET Core con Visual\_Studio"
+        href: /visualstudio/test/live-unit-testing-start
+  - name: Seguridad
+    href: ../standard/security/
+  - name: Temas avanzados
+    items:
+      - name: Rendimiento
+        items:
+          - name: Administración de memoria
+            items:
+              - name: ¿Qué es el "código administrado"?
+                href: ../standard/managed-code.md
+              - name: Administración de memoria automática
+                href: ../standard/automatic-memory-management.md
+              - name: Limpieza de recursos no administrados
+                items:
+                  - name: Información general
+                    href: ../standard/garbage-collection/unmanaged.md
+                    displayName: 'unmanaged resources, memory management'
+                  - name: Implementación de un método Dispose
+                    href: ../standard/garbage-collection/implementing-dispose.md
+                    displayName: 'using, Dispose, dispose pattern, IDisposable'
+                  - name: Implementación de un método DisposeAsync
+                    href: ../standard/garbage-collection/implementing-disposeasync.md
+                    displayName: 'await using, DisposeAsync, async dispose pattern, IAsyncDisposable'
+                  - name: Uso de objetos que implementan IDisposable
+                    href: ../standard/garbage-collection/using-objects.md
+              - name: Recolección de elementos no utilizados
+                items:
+                  - name: Información general
+                    href: ../standard/garbage-collection/index.md
+                    displayName: garbage collection
+                  - name: Aspectos básicos
+                    href: ../standard/garbage-collection/fundamentals.md
+                  - name: Estación de trabajo y GC de servidor
+                    href: ../standard/garbage-collection/workstation-server-gc.md
+                  - name: GC en segundo plano
+                    href: ../standard/garbage-collection/background-gc.md
+                  - name: El montón de objetos grandes
+                    href: ../standard/garbage-collection/large-object-heap.md
+                  - name: Recolección de elementos no utilizados y rendimiento
+                    href: ../standard/garbage-collection/performance.md
+                  - name: Recolecciones inducidas
+                    href: ../standard/garbage-collection/induced.md
+                  - name: Modos de latencia
+                    href: ../standard/garbage-collection/latency.md
+                  - name: Optimización de hospedaje web compartido
+                    href: ../standard/garbage-collection/optimization-for-shared-web-hosting.md
+                  - name: Notificaciones de recolección de elementos no utilizados
+                    href: ../standard/garbage-collection/notifications.md
+                  - name: Supervisión de recursos de dominio de aplicación
+                    href: ../standard/garbage-collection/app-domain-resource-monitoring.md
+                  - name: Referencias parciales
+                    href: ../standard/garbage-collection/weak-references.md
+          - name: Tipos relacionados con el intervalo y la memoria
+            items:
+              - name: Información general
+                href: ../standard/memory-and-spans/index.md
+              - name: Instrucciones de uso de Memory<T> y Span<T>
+                href: ../standard/memory-and-spans/memory-t-usage-guidelines.md
+          - name: Tipos habilitados para SIMD
+            href: ../standard/simd.md
+      - name: Interoperabilidad nativa
+        items:
+          - name: Información general
+            href: ../standard/native-interop/index.md
+            displayName: Native interop
+          - name: P/Invoke
+            href: ../standard/native-interop/pinvoke.md
+          - name: Serialización de tipos
+            href: ../standard/native-interop/type-marshaling.md
+          - name: Personalización de la serialización de estructuras
+            href: ../standard/native-interop/customize-struct-marshaling.md
+          - name: Personalización de la serialización de parámetros
+            href: ../standard/native-interop/customize-parameter-marshaling.md
+          - name: Guía de interoperabilidad
+            href: ../standard/native-interop/best-practices.md
+          - name: Juegos de caracteres y serialización
+            href: ../standard/native-interop/charset.md
+          - name: "Exposición de los componentes de .NET\_Core a COM"
+            href: ../core/native-interop/expose-components-to-com.md
+          - name: "Hospedaje de .NET\_Core desde código nativo"
+            href: ../core/tutorials/netcore-hosting.md
+          - name: Interoperabilidad COM
+            items:
+              - name: Información general
+                href: ../standard/native-interop/cominterop.md
+                displayName: COM interop
+              - name: Contenedores COM
+                items:
+                  - name: Información general
+                    href: ../standard/native-interop/com-wrappers.md
+                    displayName: COM wrappers
+                  - name: Contenedor al que se puede llamar en tiempo de ejecución
+                    href: ../standard/native-interop/runtime-callable-wrapper.md
+                  - name: Contenedor CCW (COM callable wrapper)
+                    href: ../standard/native-interop/com-callable-wrapper.md
+              - name: Habilitación de tipos de .NET para la interoperabilidad COM
+                href: ../standard/native-interop/qualify-net-types-for-interoperation.md
+          - name: Aplicación de atributos de interoperabilidad
+            href: ../standard/native-interop/apply-interop-attributes.md
+          - name: Excepciones
+            href: ../standard/native-interop/exceptions-interoperability.md
+      - name: Empaquetado de distribución de .NET Core
+        href: ../core/distribution-packaging.md
+      - name: Globalización y localización
+        href: ../standard/globalization-localization/
+      - name: Guía de la biblioteca de código abierto
+        href: ../standard/library-guidance/
+      - name: Instrucciones de diseño de los marcos
+        items:
+          - name: Información general
+            href: ../standard/design-guidelines/index.md
+          - name: Directrices de nomenclatura
+            href: ../standard/design-guidelines/naming-guidelines.md
+            items:
+              - name: Normas referentes al uso de minúsculas y mayúsculas
+                href: ../standard/design-guidelines/capitalization-conventions.md
+              - name: Convenciones generales de nomenclatura
+                href: ../standard/design-guidelines/general-naming-conventions.md
+              - name: Nombres de ensamblados y DLL
+                href: ../standard/design-guidelines/names-of-assemblies-and-dlls.md
+              - name: Nombres de espacios de nombres
+                href: ../standard/design-guidelines/names-of-namespaces.md
+              - name: 'Nombres de clases, estructuras e interfaces'
+                href: ../standard/design-guidelines/names-of-classes-structs-and-interfaces.md
+              - name: Nombres de miembros de tipos
+                href: ../standard/design-guidelines/names-of-type-members.md
+              - name: Asignación de nombres a parámetros
+                href: ../standard/design-guidelines/naming-parameters.md
+              - name: Asignación de nombres a recursos
+                href: ../standard/design-guidelines/naming-resources.md
+          - name: Instrucciones de diseño de tipos
+            href: ../standard/design-guidelines/type.md
+            items:
+              - name: Elección entre clases y estructuras
+                href: ../standard/design-guidelines/choosing-between-class-and-struct.md
+              - name: Diseño de clases abstractas
+                href: ../standard/design-guidelines/abstract-class.md
+              - name: Diseño de clases estáticas
+                href: ../standard/design-guidelines/static-class.md
+              - name: Diseño de interfaces
+                href: ../standard/design-guidelines/interface.md
+              - name: Diseño de estructuras
+                href: ../standard/design-guidelines/struct.md
+              - name: Diseño de enumeraciones
+                href: ../standard/design-guidelines/enum.md
+              - name: Tipos anidados
+                href: ../standard/design-guidelines/nested-types.md
+          - name: Instrucciones de diseño de miembros
+            href: ../standard/design-guidelines/member.md
+            items:
+              - name: Sobrecarga de miembros
+                href: ../standard/design-guidelines/member-overloading.md
+              - name: Diseño de propiedades
+                href: ../standard/design-guidelines/property.md
+              - name: Diseño de constructores
+                href: ../standard/design-guidelines/constructor.md
+              - name: Diseño de eventos
+                href: ../standard/design-guidelines/event.md
+              - name: Diseño de campos
+                href: ../standard/design-guidelines/field.md
+              - name: Métodos de extensión
+                href: ../standard/design-guidelines/extension-methods.md
+              - name: Sobrecargas de operadores
+                href: ../standard/design-guidelines/operator-overloads.md
+              - name: Diseño de parámetros
+                href: ../standard/design-guidelines/parameter-design.md
+          - name: Diseño para la extensibilidad
+            href: ../standard/design-guidelines/designing-for-extensibility.md
+            items:
+              - name: Clases no selladas
+                href: ../standard/design-guidelines/unsealed-classes.md
+              - name: Miembros protegidos
+                href: ../standard/design-guidelines/protected-members.md
+              - name: Eventos y devoluciones de llamadas
+                href: ../standard/design-guidelines/events-and-callbacks.md
+              - name: Miembros virtuales
+                href: ../standard/design-guidelines/virtual-members.md
+              - name: Abstracciones (tipos e interfaces abstractos)
+                href: ../standard/design-guidelines/abstractions-abstract-types-and-interfaces.md
+              - name: Clases base para la implementación de abstracciones
+                href: ../standard/design-guidelines/base-classes-for-implementing-abstractions.md
+              - name: Sellar
+                href: ../standard/design-guidelines/sealing.md
+          - name: Instrucciones de diseño de excepciones
+            href: ../standard/design-guidelines/exceptions.md
+            items:
+              - name: Generación de excepciones
+                href: ../standard/design-guidelines/exception-throwing.md
+              - name: Uso de tipos de excepciones estándar
+                href: ../standard/design-guidelines/using-standard-exception-types.md
+              - name: Excepciones y rendimiento
+                href: ../standard/design-guidelines/exceptions-and-performance.md
+          - name: Instrucciones de uso
+            href: ../standard/design-guidelines/usage-guidelines.md
+            items:
+              - name: Matrices
+                href: ../standard/design-guidelines/arrays.md
+              - name: Atributos
+                href: ../standard/design-guidelines/attributes.md
+              - name: Colecciones
+                href: ../standard/design-guidelines/guidelines-for-collections.md
+              - name: Serialización
+                href: ../standard/design-guidelines/serialization.md
+              - name: Uso de System.Xml
+                href: ../standard/design-guidelines/system-xml-usage.md
+              - name: Operadores de igualdad
+                href: ../standard/design-guidelines/equality-operators.md
+          - name: Patrones de diseño comunes
+            href: ../standard/design-guidelines/common-design-patterns.md
+            items:
+              - name: Propiedades de dependencia
+                href: ../standard/design-guidelines/dependency-properties.md
+  - name: Guía de migración
+    items:
+      - name: Últimos cambios
+        displayName: app compatibility
+        href: ../core/compatibility/
+      - name: Migración
+        items:
+          - name: .NET Core 2.0 a 2.1
+            href: ../core/migration/20-21.md
+          - name: Migración desde project.json
+            href: ../core/migration/index.md
+          - name: Asignación entre project.json y csproj
+            href: ../core/tools/project-json-to-csproj.md
+          - name: Cambios en la información general de la CLI
+            href: ../core/tools/cli-msbuild-architecture.md
+          - name: Migración desde DNX
+            href: ../core/migration/from-dnx.md
+      - name: Portabilidad de .NET Framework
+        items:
+          - name: Información general
+            href: ../core/porting/index.md
+          - name: Análisis de las dependencias de terceros
+            href: ../core/porting/third-party-deps.md
+          - name: Portabilidad de las bibliotecas
+            href: ../core/porting/libraries.md
+          - name: Organización de proyectos para .NET Core
+            href: ../core/porting/project-structure.md
+          - name: Tecnologías no disponibles
+            href: ../core/porting/net-framework-tech-unavailable.md
+          - name: Herramientas
+            href: ../core/porting/tools.md
+          - name: Uso del paquete de compatibilidad de Windows
+            href: ../core/porting/windows-compat-pack.md
+          - name: Portabilidad de los proyectos de Windows Forms
+            href: ../core/porting/winforms.md
+          - name: Portabilidad de los proyectos de WPF
+            href: ../core/../desktop-wpf/migration/convert-project-from-net-framework.md
+          - name: Portabilidad de los proyectos de C++/CLI
+            href: ../core/porting/cpp-cli.md
+      - name: Selección entre .NET Core y .NET Framework para aplicaciones de servidor
+        href: ../standard/choosing-core-framework-server.md
