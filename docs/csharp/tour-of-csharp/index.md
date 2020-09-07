@@ -2,12 +2,12 @@
 title: Un paseo por C# - Guía de C#
 description: ¿Nuevo en C#? Conozca los conceptos básicos del lenguaje.
 ms.date: 08/06/2020
-ms.openlocfilehash: 9fa292e8e85832d831f36cf0f21512aa0cf32580
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 84775a436deb0958d3c05ec7d0207e76be28f27c
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656233"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465005"
 ---
 # <a name="a-tour-of-the-c-language"></a>Paseo por el lenguaje C#
 
@@ -37,7 +37,7 @@ Hay dos clases de tipos en C#: *tipos de valor* y *tipos de referencia*. Las var
 
 Un ***identificador*** es un nombre de variable. Un identificador es una secuencia de caracteres Unicode sin ningún espacio en blanco. Un identificador puede ser una palabra reserva de C# si tiene el prefijo `@`. Esto puede ser útil al interactuar con otros lenguajes.
 
-Los tipos de valor de C# se dividen en *tipos simples*, *tipos de enumeración*, *tipos de estructura* y *tipos de valor que aceptan valores NULL*. Los tipos de referencia de C# se dividen en *tipos de clase*, *tipos de interfaz*, *tipos de matriz* y *tipos delegados*.
+Los tipos de valor de C# se dividen en *tipos simples*, *tipos de enumeración*, *tipos de estructura* y *tipos de valor que aceptan valores NULL* y *tipos de valor de tupla*. Los tipos de referencia de C# se dividen en *tipos de clase*, *tipos de interfaz*, *tipos de matriz* y *tipos delegados*.
 
 En el esquema siguiente se ofrece información general del sistema de tipos de C#.
 
@@ -65,11 +65,11 @@ En el esquema siguiente se ofrece información general del sistema de tipos de C
   - [Tipos de interfaz](../language-reference/keywords/interface.md)
     - Tipos definidos por el usuario con el formato `interface I {...}`
   - [Tipos de matriz](../programming-guide/arrays/index.md)
-    - Unidimensional, multidimensional y escalonada; por ejemplo, `int[]`, `int[,]` y `int[][]`
+    - Unidimensional, multidimensional y escalonada. Por ejemplo, `int[]`, `int[,]` y `int[][]`.
   - [Tipos delegados](../language-reference/builtin-types/reference-types.md#the-delegate-type)
     - Tipos definidos por el usuario con el formato `delegate int D(...)`
 
-Los programas de C# utilizan *declaraciones de tipos* para crear nuevos tipos. Una declaración de tipos especifica el nombre y los miembros del nuevo tipo. Cinco de las categorías de tipos de C# las define el usuario: tipos de clase, tipos de estructura, tipos de interfaz, tipos de enumeración y tipos delegados.
+Los programas de C# utilizan *declaraciones de tipos* para crear nuevos tipos. Una declaración de tipos especifica el nombre y los miembros del nuevo tipo. Seis de las categorías de tipos de C# las define el usuario: tipos de clase, tipos de estructura, tipos de interfaz, tipos de enumeración, tipos de delegado y tipos de valor de tupla.
 
 - A tipo `class` define una estructura de datos que contiene miembros de datos (campos) y miembros de función (métodos, propiedades y otros). Los tipos de clase admiten herencia única y polimorfismo, mecanismos por los que las clases derivadas pueden extender y especializar clases base.
 - Un tipo `struct` es similar a un tipo de clase, por el hecho de que representa una estructura con miembros de datos y miembros de función. Pero a diferencia de las clases, las estructuras son tipos de valor y no suelen requerir la asignación del montón. Los tipos de estructura no admiten la herencia especificada por el usuario y todos se heredan implícitamente del tipo `object`.
@@ -78,7 +78,7 @@ Los programas de C# utilizan *declaraciones de tipos* para crear nuevos tipos. U
 
 Los tipos `class`, `struct`, `interface` y `delegate` admiten parámetros genéricos, mediante los que se pueden parametrizar con otros tipos.
 
-C# admite matrices unidimensionales y multidimensionales de cualquier tipo. A diferencia de los tipos enumerados antes, no es necesario declarar los tipos de matriz antes de usarlos. En su lugar, los tipos de matriz se crean mediante un nombre de tipo entre corchetes. Por ejemplo, `int[]` es una matriz unidimensional de `int`, `int[,]` es una matriz bidimensional de `int` y `int[][]` es una matriz unidimensional de la matriz unidimensional o la matriz "escalonada" de `int`.
+C# admite matrices unidimensionales y multidimensionales de cualquier tipo. A diferencia de los tipos enumerados antes, no es necesario declarar los tipos de matriz antes de usarlos. En su lugar, los tipos de matriz se crean mediante un nombre de tipo entre corchetes. Por ejemplo, `int[]` es una matriz unidimensional de `int`, `int[,]` es una matriz bidimensional de `int` y `int[][]` es una matriz unidimensional de las matrices unidimensionales, o la matriz "escalonada", de `int`.
 
 Los tipos que aceptan valores NULL no requieren una definición independiente. Para cada tipo `T` que no acepta valores NULL, existe un tipo `T?` que acepta valores NULL correspondiente, que puede tener un valor adicional, `null`. Por ejemplo, `int?` es un tipo que puede contener cualquier entero de 32 bits o el valor `null` y `string?` es un tipo que puede contener cualquier `string` o el valor `null`.
 

@@ -3,12 +3,12 @@ title: Covarianza y contravarianza (C#)
 description: Obtenga información sobre la covarianza y la contravarianza, y sobre cómo afectan a la compatibilidad de las asignaciones. Consulte un ejemplo de código en el que se muestran las diferencias que existen entre ellas.
 ms.date: 07/20/2015
 ms.assetid: 066d9a3c-aab7-4ea6-826d-0b1a85399c74
-ms.openlocfilehash: 65c75029c27b6c9a5ddc96f01622b520e8698f55
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: ad4b2a7d7925d7893eb5a8e1d2d7c9ee3dcbd527
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105700"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465668"
 ---
 # <a name="covariance-and-contravariance-c"></a>Covarianza y contravarianza (C#)
 En C#, la covarianza y la contravarianza habilitan la conversión de referencias implícita de tipos de matriz, tipos de delegado y argumentos de tipo genérico. La covarianza conserva la compatibilidad de asignaciones y la contravarianza la invierte.  
@@ -84,9 +84,9 @@ IEnumerable<Object> objects = strings;
   
 |Title|Descripción|  
 |-----------|-----------------|  
-|[Varianza en interfaces genéricas (C#)](./variance-in-generic-interfaces.md)|Describe la covarianza y contravarianza en las interfaces genéricas y proporciona una lista de interfaces genéricas variantes en .NET Framework.|  
+|[Varianza en interfaces genéricas (C#)](./variance-in-generic-interfaces.md)|Describe la covarianza y contravarianza en las interfaces genéricas y proporciona una lista de interfaces genéricas variantes en .NET.|  
 |[Crear interfaces genéricas variantes (C#)](./creating-variant-generic-interfaces.md)|Se muestra cómo crear interfaces variantes personalizadas.|  
 |[Usar la varianza en interfaces para las colecciones genéricas (C#)](./using-variance-in-interfaces-for-generic-collections.md)|Se muestra cómo la compatibilidad de covarianza y contravarianza en las interfaces <xref:System.Collections.Generic.IEnumerable%601> y <xref:System.IComparable%601> puede ayudarle a volver a usar el código.|  
-|[Varianza en delegados (C#)](./variance-in-delegates.md)|Se describe la covarianza y contravarianza en delegados genéricos y no genéricos y se proporciona una lista de delegados genéricos variantes en .NET Framework.|  
+|[Varianza en delegados (C#)](./variance-in-delegates.md)|Se describe la covarianza y contravarianza en delegados genéricos y no genéricos y se proporciona una lista de delegados genéricos variantes en .NET.|  
 |[Usar varianza en delegados (C#)](./using-variance-in-delegates.md)|Se muestra cómo usar la compatibilidad de covarianza y contravarianza en los delegados no genéricos para que coincidan las firmas de método con los tipos de delegado.|  
 |[Usar varianza para los delegados genéricos Func y Action (C#)](./using-variance-for-func-and-action-generic-delegates.md)|Se muestra cómo la compatibilidad de covarianza y contravarianza en los delegados `Func` y `Action` puede ayudarle a volver a usar el código.|
