@@ -2,12 +2,12 @@
 title: Programación asincrónica en C#
 description: Información general sobre la compatibilidad con el lenguaje C# para la programación asincrónica mediante async, await, Task y Task<T>
 ms.date: 06/04/2020
-ms.openlocfilehash: 992ccd3a015653ea9ee13dfc309d47711ad0fca4
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 853019c39880b1f4ef6536aed5841ecab53d7304
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619720"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414986"
 ---
 # <a name="asynchronous-programming-with-async-and-await"></a>Programación asincrónica con async y await
 
@@ -45,7 +45,7 @@ Si quiere que el equipo ejecute las instrucciones anteriores de forma asincróni
 
 Estas cuestiones son importantes para los programas que se escriben hoy en día. Al escribir programas cliente, le interesa que la interfaz de usuario responda a la entrada del usuario. La aplicación no debería hacer que un teléfono parezca congelado mientras descarga datos de la Web. Al escribir programas de servidor, no le conviene que los subprocesos se bloqueen. La intención es que puedan atender también otras solicitudes. El uso de código sincrónico cuando existen alternativas asincrónicas va en detrimento de la capacidad de escalar horizontalmente a un menor coste. Al final, los subprocesos bloqueados pasarán factura.
 
-Las aplicaciones modernas de más éxito requieren código asincrónico. Sin la compatibilidad con los lenguajes, la escritura de código asincrónico requería devoluciones de llamada, eventos de finalización u otros medios que impedían ver claramente la intención original del código. La ventaja del código sincrónico es que resulta fácil de entender. Las acciones detalladas hacen que sea fácil examinar el código y comprenderlo. Los modelos asincrónicos tradicionales obligaban a centrarse en la naturaleza asincrónica del código, no en las acciones fundamentales.
+Las aplicaciones modernas de más éxito requieren código asincrónico. Sin la compatibilidad con los lenguajes, la escritura de código asincrónico requería devoluciones de llamada, eventos de finalización u otros medios que impedían ver claramente la intención original del código. La ventaja del código sincrónico es que las acciones paso a paso facilitan el análisis y la comprensión. Los modelos asincrónicos tradicionales obligaban a centrarse en la naturaleza asincrónica del código, no en las acciones fundamentales.
 
 ## <a name="dont-block-await-instead"></a>Uso de await para evitar los bloqueos
 
