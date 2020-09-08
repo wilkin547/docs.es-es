@@ -1,7 +1,9 @@
 - name: Guía de Visual Basic
   href: index.yml
 - name: Novedades de Visual Basic
-  href: getting-started/whats-new.md
+  href: whats-new/index.md
+- name: Cambios importantes en el compilador
+  href: whats-new/breaking-changes.md
 - name: Primeros pasos
   href: getting-started/index.md
   items:
@@ -535,7 +537,7 @@
               href: language-reference/operators/addition-operator.md
             - name: += (Operador)
               href: language-reference/operators/addition-assignment-operator.md
-            - name: = (Operador)
+            - name: '= (Operador)'
               href: language-reference/operators/assignment-operator.md
             - name: '- Operador'
               href: language-reference/operators/subtraction-operator.md
@@ -877,7 +879,7 @@
       items:
         - name: '''#ElseIf'' debe ir precedida de la instrucción ''#If'' o ''#ElseIf'' correspondiente'
           href: language-reference/error-messages/elseif-must-be-preceded-by-a-matching-if-or-elseif.md
-        - name: 'Las instrucciones "#Region" y "#End Region" no son válidas en los cuerpos de método y operaciones lambda de varias líneas'
+        - name: Las instrucciones "#Region" y "#End Region" no son válidas en los cuerpos de método y operaciones lambda de varias líneas
           href: language-reference/error-messages/region-and-end-region-are-not-valid-within-method-bodies-multiline-lambdas.md
         - name: No se puede aplicar '<attribute>' porque el formato del GUID '<number>' no es correcto
           href: language-reference/error-messages/attribute-cannot-be-applied-because-the-format-of-the-guid-is-not-correct.md

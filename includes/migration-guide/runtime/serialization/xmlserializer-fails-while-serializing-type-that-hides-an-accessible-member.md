@@ -1,27 +1,51 @@
 ---
-ms.openlocfilehash: eafbdd2d42977381fb4d77748a3c9a2595ff2936
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 75c7385bceec2595683d1c0d97a7df9264e3bf0b
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620656"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496945"
 ---
-### <a name="xmlserializer-fails-while-serializing-a-type-that-hides-an-accessible-member-with-an-inaccessible-one"></a><span data-ttu-id="fb02a-101">Se produce un error en XmlSerializer al serializar un tipo que oculta un miembro accesible con otro inaccesible</span><span class="sxs-lookup"><span data-stu-id="fb02a-101">XmlSerializer fails while serializing a type that hides an accessible member with an inaccessible one</span></span>
+### <a name="xmlserializer-fails-while-serializing-a-type-that-hides-an-accessible-member-with-an-inaccessible-one"></a><span data-ttu-id="1c06c-101">Se produce un error en XmlSerializer al serializar un tipo que oculta un miembro accesible con otro inaccesible</span><span class="sxs-lookup"><span data-stu-id="1c06c-101">XmlSerializer fails while serializing a type that hides an accessible member with an inaccessible one</span></span>
 
-#### <a name="details"></a><span data-ttu-id="fb02a-102">Detalles</span><span class="sxs-lookup"><span data-stu-id="fb02a-102">Details</span></span>
+#### <a name="details"></a><span data-ttu-id="1c06c-102">Detalles</span><span class="sxs-lookup"><span data-stu-id="1c06c-102">Details</span></span>
 
-<span data-ttu-id="fb02a-103">Al serializar un tipo derivado, se puede producir un error en <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> si el tipo contiene un campo o una propiedad inaccesible que oculta (a través de la palabra clave "new") un campo o una propiedad del mismo nombre que previamente era accesible (public, por ejemplo) en el tipo base.</span><span class="sxs-lookup"><span data-stu-id="fb02a-103">When serializing a derived type, the <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> can fail if the type contains an inaccessible field or property that hides (via the 'new' keyword) a field or property of the same name that was previously accessible (public, for example) on the base type.</span></span>
+<span data-ttu-id="1c06c-103">Al serializar un tipo derivado, se puede producir un error en <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> si el tipo contiene un campo o una propiedad inaccesible que oculta (a través de la palabra clave "new") un campo o una propiedad del mismo nombre que previamente era accesible (public, por ejemplo) en el tipo base.</span><span class="sxs-lookup"><span data-stu-id="1c06c-103">When serializing a derived type, the <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> can fail if the type contains an inaccessible field or property that hides (via the 'new' keyword) a field or property of the same name that was previously accessible (public, for example) on the base type.</span></span>
 
-#### <a name="suggestion"></a><span data-ttu-id="fb02a-104">Sugerencia</span><span class="sxs-lookup"><span data-stu-id="fb02a-104">Suggestion</span></span>
+#### <a name="suggestion"></a><span data-ttu-id="1c06c-104">Sugerencia</span><span class="sxs-lookup"><span data-stu-id="1c06c-104">Suggestion</span></span>
 
-<span data-ttu-id="fb02a-105">Este problema se puede resolver si el nuevo miembro que realiza la ocultación se convierte en accesible para <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> (marcándolo como público, por ejemplo). Como alternativa, la opción de configuración siguiente volverá al comportamiento de <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> de 4.0, lo que solucionará el problema:</span><span class="sxs-lookup"><span data-stu-id="fb02a-105">This problem can be solved by making the new, hiding member accessible to the <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> (by marking it public, for example).Alternatively, the following config setting will revert to 4.0 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> behavior, which will fix the problem:</span></span><pre><code class="lang-xml">&lt;system.xml.serialization&gt;&#13;&#10;&lt;xmlSerializer useLegacySerializerGeneration=&quot;true&quot; /&gt;&#13;&#10;&lt;/system.xml.serialization&gt;&#13;&#10;</code></pre>
+<span data-ttu-id="1c06c-105">Este problema se puede resolver si el nuevo miembro que realiza la ocultación se convierte en accesible para <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> (marcándolo como público, por ejemplo). Como alternativa, la opción de configuración siguiente volverá al comportamiento de <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> de 4.0, lo que solucionará el problema:</span><span class="sxs-lookup"><span data-stu-id="1c06c-105">This problem can be solved by making the new, hiding member accessible to the <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> (by marking it public, for example).Alternatively, the following config setting will revert to 4.0 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> behavior, which will fix the problem:</span></span><pre><code class="lang-xml">&lt;system.xml.serialization&gt;&#13;&#10;&lt;xmlSerializer useLegacySerializerGeneration=&quot;true&quot; /&gt;&#13;&#10;&lt;/system.xml.serialization&gt;&#13;&#10;</code></pre>
 
-| <span data-ttu-id="fb02a-106">NOMBRE</span><span class="sxs-lookup"><span data-stu-id="fb02a-106">Name</span></span>    | <span data-ttu-id="fb02a-107">Valor</span><span class="sxs-lookup"><span data-stu-id="fb02a-107">Value</span></span>       |
+| <span data-ttu-id="1c06c-106">NOMBRE</span><span class="sxs-lookup"><span data-stu-id="1c06c-106">Name</span></span>    | <span data-ttu-id="1c06c-107">Valor</span><span class="sxs-lookup"><span data-stu-id="1c06c-107">Value</span></span>       |
 |:--------|:------------|
-| <span data-ttu-id="fb02a-108">Ámbito</span><span class="sxs-lookup"><span data-stu-id="fb02a-108">Scope</span></span>   |<span data-ttu-id="fb02a-109">Secundaria</span><span class="sxs-lookup"><span data-stu-id="fb02a-109">Minor</span></span>|
-|<span data-ttu-id="fb02a-110">Versión</span><span class="sxs-lookup"><span data-stu-id="fb02a-110">Version</span></span>|<span data-ttu-id="fb02a-111">4.5</span><span class="sxs-lookup"><span data-stu-id="fb02a-111">4.5</span></span>|
-|<span data-ttu-id="fb02a-112">Tipo</span><span class="sxs-lookup"><span data-stu-id="fb02a-112">Type</span></span>|<span data-ttu-id="fb02a-113">Tiempo de ejecución</span><span class="sxs-lookup"><span data-stu-id="fb02a-113">Runtime</span></span>
+| <span data-ttu-id="1c06c-108">Ámbito</span><span class="sxs-lookup"><span data-stu-id="1c06c-108">Scope</span></span>   |<span data-ttu-id="1c06c-109">Secundaria</span><span class="sxs-lookup"><span data-stu-id="1c06c-109">Minor</span></span>|
+|<span data-ttu-id="1c06c-110">Versión</span><span class="sxs-lookup"><span data-stu-id="1c06c-110">Version</span></span>|<span data-ttu-id="1c06c-111">4.5</span><span class="sxs-lookup"><span data-stu-id="1c06c-111">4.5</span></span>|
+|<span data-ttu-id="1c06c-112">Tipo</span><span class="sxs-lookup"><span data-stu-id="1c06c-112">Type</span></span>|<span data-ttu-id="1c06c-113">Tiempo de ejecución</span><span class="sxs-lookup"><span data-stu-id="1c06c-113">Runtime</span></span>|
 
-#### <a name="affected-apis"></a><span data-ttu-id="fb02a-114">API afectadas</span><span class="sxs-lookup"><span data-stu-id="fb02a-114">Affected APIs</span></span>
+#### <a name="affected-apis"></a><span data-ttu-id="1c06c-114">API afectadas</span><span class="sxs-lookup"><span data-stu-id="1c06c-114">Affected APIs</span></span>
 
--<xref:System.Xml.Serialization.XmlSerializer.Serialize(System.IO.Stream,System.Object)?displayProperty=nameWithType></li><li><xref:System.Xml.Serialization.XmlSerializer.Serialize(System.IO.TextWriter,System.Object)?displayProperty=nameWithType></li><li><xref:System.Xml.Serialization.XmlSerializer.Serialize(System.Object,System.Xml.Serialization.XmlSerializationWriter)?displayProperty=nameWithType></li><li><xref:System.Xml.Serialization.XmlSerializer.Serialize(System.Xml.XmlWriter,System.Object)?displayProperty=nameWithType></li><li><xref:System.Xml.Serialization.XmlSerializer.Serialize(System.IO.Stream,System.Object,System.Xml.Serialization.XmlSerializerNamespaces)?displayProperty=nameWithType></li><li><xref:System.Xml.Serialization.XmlSerializer.Serialize(System.IO.TextWriter,System.Object,System.Xml.Serialization.XmlSerializerNamespaces)?displayProperty=nameWithType></li><li><xref:System.Xml.Serialization.XmlSerializer.Serialize(System.Xml.XmlWriter,System.Object,System.Xml.Serialization.XmlSerializerNamespaces)?displayProperty=nameWithType></li><li><xref:System.Xml.Serialization.XmlSerializer.Serialize(System.Xml.XmlWriter,System.Object,System.Xml.Serialization.XmlSerializerNamespaces,System.String)?displayProperty=nameWithType></li><li><xref:System.Xml.Serialization.XmlSerializer.Serialize(System.Xml.XmlWriter,System.Object,System.Xml.Serialization.XmlSerializerNamespaces,System.String,System.String)?displayProperty=nameWithType></li></ul>|
+- <xref:System.Xml.Serialization.XmlSerializer.Serialize(System.IO.Stream,System.Object)?displayProperty=nameWithType>
+- <xref:System.Xml.Serialization.XmlSerializer.Serialize(System.IO.TextWriter,System.Object)?displayProperty=nameWithType>
+- <xref:System.Xml.Serialization.XmlSerializer.Serialize(System.Object,System.Xml.Serialization.XmlSerializationWriter)?displayProperty=nameWithType>
+- <xref:System.Xml.Serialization.XmlSerializer.Serialize(System.Xml.XmlWriter,System.Object)?displayProperty=nameWithType>
+- <xref:System.Xml.Serialization.XmlSerializer.Serialize(System.IO.Stream,System.Object,System.Xml.Serialization.XmlSerializerNamespaces)?displayProperty=nameWithType>
+- <xref:System.Xml.Serialization.XmlSerializer.Serialize(System.IO.TextWriter,System.Object,System.Xml.Serialization.XmlSerializerNamespaces)?displayProperty=nameWithType>
+- <xref:System.Xml.Serialization.XmlSerializer.Serialize(System.Xml.XmlWriter,System.Object,System.Xml.Serialization.XmlSerializerNamespaces)?displayProperty=nameWithType>
+- <xref:System.Xml.Serialization.XmlSerializer.Serialize(System.Xml.XmlWriter,System.Object,System.Xml.Serialization.XmlSerializerNamespaces,System.String)?displayProperty=nameWithType>
+- <xref:System.Xml.Serialization.XmlSerializer.Serialize(System.Xml.XmlWriter,System.Object,System.Xml.Serialization.XmlSerializerNamespaces,System.String,System.String)?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `M:System.Xml.Serialization.XmlSerializer.Serialize(System.IO.Stream,System.Object)`
+- `M:System.Xml.Serialization.XmlSerializer.Serialize(System.IO.TextWriter,System.Object)`
+- `M:System.Xml.Serialization.XmlSerializer.Serialize(System.Object,System.Xml.Serialization.XmlSerializationWriter)`
+- `M:System.Xml.Serialization.XmlSerializer.Serialize(System.Xml.XmlWriter,System.Object)`
+- `M:System.Xml.Serialization.XmlSerializer.Serialize(System.IO.Stream,System.Object,System.Xml.Serialization.XmlSerializerNamespaces)`
+- `M:System.Xml.Serialization.XmlSerializer.Serialize(System.IO.TextWriter,System.Object,System.Xml.Serialization.XmlSerializerNamespaces)`
+- `M:System.Xml.Serialization.XmlSerializer.Serialize(System.Xml.XmlWriter,System.Object,System.Xml.Serialization.XmlSerializerNamespaces)`
+- `M:System.Xml.Serialization.XmlSerializer.Serialize(System.Xml.XmlWriter,System.Object,System.Xml.Serialization.XmlSerializerNamespaces,System.String)`
+- `M:System.Xml.Serialization.XmlSerializer.Serialize(System.Xml.XmlWriter,System.Object,System.Xml.Serialization.XmlSerializerNamespaces,System.String,System.String)`
+
+-->
