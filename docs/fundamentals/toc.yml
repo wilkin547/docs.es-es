@@ -409,6 +409,8 @@ items:
             href: ../core/deploying/creating-nuget-packages.md
           - name: Puesta al día del runtime de implementación autocontenida
             href: ../core/deploying/runtime-patch-selection.md
+          - name: Implementación de archivo único y ejecutable
+            href: ../core/deploying/single-file.md
           - name: Recorte de implementaciones autocontenidas y ejecutables
             href: ../core/deploying/trim-self-contained.md
           - name: Almacenamiento de paquetes en tiempo de ejecución
