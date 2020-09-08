@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 86169b5c9a20678647153c951550e590a5bce588
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 8dc1b4d94d01813a8124d1340b50fa78a9b157f8
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622278"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497078"
 ---
 ### <a name="resizing-a-grid-can-hang"></a>El cambio de tamaño de una cuadrícula puede dejar de responder
 
@@ -21,3 +21,15 @@ Actualice a .NET Framework 4.7.1.  Como alternativa, si ya no necesita el algori
 | Ámbito   |Borde|
 |Versión|4.7|
 |Tipo|Tiempo de ejecución|
+
+#### <a name="affected-apis"></a>API afectadas
+
+No detectable a través del análisis de la API.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

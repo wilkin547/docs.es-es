@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 0470cefc05fb5da6a6195ee0a96f04feef01fd10
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: a61005e317020c47a283dae292236624ec6057ce
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620689"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496803"
 ---
 ### <a name="flowdocument-may-show-an-extra-line-of-text"></a>FlowDocument puede mostrar una línea de texto adicional
 
@@ -20,8 +20,24 @@ En algunos casos, reducir la propiedad PageHeight del elemento de visualización
 |:--------|:------------|
 | Ámbito   |Borde|
 |Versión|4.5|
-|Tipo|Tiempo de ejecución
+|Tipo|Tiempo de ejecución|
 
 #### <a name="affected-apis"></a>API afectadas
 
--<xref:System.Windows.Documents.FlowDocument.%23ctor></li><li><xref:System.Windows.Documents.FlowDocument.%23ctor(System.Windows.Documents.Block)></li><li><xref:System.Windows.Controls.FlowDocumentReader.%23ctor></li><li><xref:System.Windows.Controls.FlowDocumentPageViewer.%23ctor></li><li><xref:System.Windows.Controls.Primitives.DocumentPageView.%23ctor></li></ul>|
+- <xref:System.Windows.Documents.FlowDocument.%23ctor>
+- <xref:System.Windows.Documents.FlowDocument.%23ctor(System.Windows.Documents.Block)>
+- <xref:System.Windows.Controls.FlowDocumentReader.%23ctor>
+- <xref:System.Windows.Controls.FlowDocumentPageViewer.%23ctor>
+- <xref:System.Windows.Controls.Primitives.DocumentPageView.%23ctor>
+
+<!--
+
+#### Affected APIs
+
+- `M:System.Windows.Documents.FlowDocument.#ctor`
+- `M:System.Windows.Documents.FlowDocument.#ctor(System.Windows.Documents.Block)`
+- `M:System.Windows.Controls.FlowDocumentReader.#ctor`
+- `M:System.Windows.Controls.FlowDocumentPageViewer.#ctor`
+- `M:System.Windows.Controls.Primitives.DocumentPageView.#ctor`
+
+-->

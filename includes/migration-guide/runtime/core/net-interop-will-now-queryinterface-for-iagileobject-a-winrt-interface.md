@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 150b94b55fa8f2a29f1da7cf7ac7bf6dd06b9666
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 65fa5d8629ce8e426cf1623590a056e5cad0b91f
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622081"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497670"
 ---
 ### <a name="net-interop-will-now-queryinterface-for-iagileobject-a-winrt-interface"></a>La interoperabilidad de .NET se ejecutará ahora con QueryInterface para IAgileObject (una interfaz de WinRT)
 
@@ -21,3 +21,15 @@ Si habilitar el QI para IAgileObject interrumpe la ejecución, puede deshabilita
 | Ámbito   |Borde|
 |Versión|4.8|
 |Tipo|Tiempo de ejecución|
+
+#### <a name="affected-apis"></a>API afectadas
+
+No detectable a través del análisis de la API.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

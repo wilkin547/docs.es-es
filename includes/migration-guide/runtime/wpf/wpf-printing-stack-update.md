@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5e2e8d1ec5d698d1c1649c2a0a1b4b77dbdf4022
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: e42bce91afab68e509cb35a8992fa3ca2f096872
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621407"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497303"
 ---
 ### <a name="wpf-printing-stack-update"></a>Actualización de la pila de impresión de WPF
 
@@ -21,3 +21,15 @@ Para usar la pila antigua en Windows 10 Creators Update, establezca el valor <co
 | Ámbito   |Borde|
 |Versión|4.7|
 |Tipo|Tiempo de ejecución|
+
+#### <a name="affected-apis"></a>API afectadas
+
+No detectable a través del análisis de la API.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

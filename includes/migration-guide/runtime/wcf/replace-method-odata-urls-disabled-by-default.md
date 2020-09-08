@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b2fcacdb02c411c4dcb12051bf0c6759faccdea2
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: fccf349517133245ec85ae3c25cedbfb27a7dd8b
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620665"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496639"
 ---
 ### <a name="the-replace-method-in-odata-urls-is-disabled-by-default"></a>El método Replace de las direcciones URL de OData está deshabilitado de forma predeterminada
 
@@ -20,8 +20,16 @@ Si el método Replace es necesario (lo que es poco frecuente), se puede volver a
 |:--------|:------------|
 | Ámbito   |Borde|
 |Versión|4.5|
-|Tipo|Tiempo de ejecución
+|Tipo|Tiempo de ejecución|
 
 #### <a name="affected-apis"></a>API afectadas
 
--<xref:System.Data.Services.DataService%601?displayProperty=nameWithType></li></ul>|
+- <xref:System.Data.Services.DataService%601?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- ``T:System.Data.Services.DataService`1``
+
+-->

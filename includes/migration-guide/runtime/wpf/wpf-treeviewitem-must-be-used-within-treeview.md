@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: af8cb9435be078351e3430dc8ded3f7cac377948
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: e9f769af6d85403c2a6f085cbc3462cf549adae9
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620722"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496825"
 ---
 ### <a name="wpf-treeviewitem-must-be-used-within-a-treeview"></a>El elemento TreeViewItem de WPF se debe usar dentro de una instancia de TreeView
 
@@ -21,3 +21,15 @@ Se lanzará una revisión para esta solucionar esta situación.
 | Ámbito   |Secundaria|
 |Versión|4.5|
 |Tipo|Tiempo de ejecución|
+
+#### <a name="affected-apis"></a>API afectadas
+
+No detectable a través del análisis de la API.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

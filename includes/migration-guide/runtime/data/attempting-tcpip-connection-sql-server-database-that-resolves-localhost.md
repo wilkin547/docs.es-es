@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 87cb2570d3d47a2acb85b5557141c0fef885516a
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: bbeca87b3f498213b91d942cc4f197c9d80457a8
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621819"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497404"
 ---
 ### <a name="attempting-a-tcpip-connection-to-a-sql-server-database-that-resolves-to-localhost-fails"></a>No se puede intentar una conexión TCP/IP a una base de datos de SQL Server que se resuelve en `localhost`
 
@@ -21,3 +21,15 @@ Este problema se ha resuelto y se ha restaurado el comportamiento anterior, en .
 | Ámbito   |Secundaria|
 |Versión|4.6|
 |Tipo|Tiempo de ejecución|
+
+#### <a name="affected-apis"></a>API afectadas
+
+No detectable a través del análisis de la API.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

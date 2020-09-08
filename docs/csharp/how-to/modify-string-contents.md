@@ -4,12 +4,12 @@ description: Revise ejemplos de varias técnicas para modificar el contenido de 
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: ecce8857befc66353deea341d81f8c6e4313b951
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: bae54757fdb6f02cdc0dc8fc15ad3f7583c230a7
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86473973"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465057"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Procedimiento para modificar el contenido de cadenas en C\#
 
@@ -73,5 +73,5 @@ Puede modificar una cadena en un bloque fijo con código no seguro, pero es **to
 
 ## <a name="see-also"></a>Vea también
 
-- [Expresiones regulares de .NET Framework](../../standard/base-types/regular-expressions.md)
+- [Expresiones regulares de .NET](../../standard/base-types/regular-expressions.md)
 - [Lenguaje de expresiones regulares: referencia rápida](../../standard/base-types/regular-expression-language-quick-reference.md)

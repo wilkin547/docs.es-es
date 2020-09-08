@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3aafb14b65f7c0f9e5d77927809547f9d4b96e1c
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 26facb645de175d7ef0432394fc2b84f59e8437d
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620653"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497326"
 ---
 ### <a name="error-codes-for-maxrequestlength-or-maxreceivedmessagesize-are-different"></a>Los códigos de error para maxRequestLength o maxReceivedMessageSize son diferentes
 
@@ -21,3 +21,15 @@ Este cambio facilita la depuración en casos donde la longitud del mensaje super
 | Ámbito   |Borde|
 |Versión|4.5|
 |Tipo|Tiempo de ejecución|
+
+#### <a name="affected-apis"></a>API afectadas
+
+No detectable a través del análisis de la API.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

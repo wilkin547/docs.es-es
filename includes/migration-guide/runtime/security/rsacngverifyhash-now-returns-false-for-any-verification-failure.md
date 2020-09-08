@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: fa5cf2280cdd9535962568a6272d047d261eeba5
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: b7b16e39fa5df9732fa769f2bcd3696dff3b2a49
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621381"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497065"
 ---
 ### <a name="rsacngverifyhash-now-returns-false-for-any-verification-failure"></a>RSACng.VerifyHash ahora devuelve False para los errores de comprobación
 
@@ -20,8 +20,16 @@ Se debe ejecutar el código cuya ejecución dependa del control de <xref:System.
 |:--------|:------------|
 | Ámbito   |Secundaria|
 |Versión|4.6.2|
-|Tipo|Tiempo de ejecución
+|Tipo|Tiempo de ejecución|
 
 #### <a name="affected-apis"></a>API afectadas
 
--<xref:System.Security.Cryptography.RSACng.VerifyHash(System.Byte[],System.Byte[],System.Security.Cryptography.HashAlgorithmName,System.Security.Cryptography.RSASignaturePadding)?displayProperty=nameWithType></li></ul>|
+- <xref:System.Security.Cryptography.RSACng.VerifyHash(System.Byte[],System.Byte[],System.Security.Cryptography.HashAlgorithmName,System.Security.Cryptography.RSASignaturePadding)?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `M:System.Security.Cryptography.RSACng.VerifyHash(System.Byte[],System.Byte[],System.Security.Cryptography.HashAlgorithmName,System.Security.Cryptography.RSASignaturePadding)`
+
+-->

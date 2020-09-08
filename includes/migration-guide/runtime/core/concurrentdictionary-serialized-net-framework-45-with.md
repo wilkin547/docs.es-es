@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ae0f68a19d6eae53998d61e924cfef3aaaec1784
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 450bfc56c99a3df9be71be2ef7df6e4e12d4ed76
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620569"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497903"
 ---
 ### <a name="a-concurrentdictionary-serialized-in-net-framework-45-with-netdatacontractserializer-cannot-be-deserialized-by-net-framework-451-or-452"></a>Un elemento ConcurrentDictionary serializado en .NET Framework 4.5 con NetDataContractSerializer no se puede deserializar en .NET Framework 4.5.1 ni 4.5.2
 
@@ -21,3 +21,15 @@ Si es necesario serializar y deserializar <xref:System.Collections.Concurrent.Co
 | Ámbito   |Secundaria|
 |Versión|4.5.1|
 |Tipo|Tiempo de ejecución|
+
+#### <a name="affected-apis"></a>API afectadas
+
+No detectable a través del análisis de la API.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

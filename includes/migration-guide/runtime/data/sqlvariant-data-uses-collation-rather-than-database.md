@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d606fbc4048421bc572cfe3db2e06bbcd4529e25
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: fb339fb35cdcbba4f1c860fae9c17162c4cff596
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620605"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497203"
 ---
 ### <a name="sql_variant-data-uses-sql_variant-collation-rather-than-database-collation"></a>Los datos de sql_variant usan la intercalación de sql_variant en lugar de la intercalación de base de datos
 
@@ -21,3 +21,15 @@ Este cambio soluciona posibles daños en los datos si la intercalación de la ba
 | Ámbito   |Transparente|
 |Versión|4.5|
 |Tipo|Tiempo de ejecución|
+
+#### <a name="affected-apis"></a>API afectadas
+
+No detectable a través del análisis de la API.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

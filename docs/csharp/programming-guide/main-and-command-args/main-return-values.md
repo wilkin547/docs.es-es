@@ -5,12 +5,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 4458f3cd7c8259c5725cfe5e853f826fe2ef61cc
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 469ed872c1c8c4eb41eecd04277d4fc53fb3d112
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87382066"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414648"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Valores devueltos de Main() (Guía de programación de C#)
 
@@ -26,7 +26,7 @@ Si el valor devuelto de `Main` no se usa, la devolución de `void` permite conta
 
 ## <a name="example"></a>Ejemplo
 
-En este ejemplo se usan las herramientas de línea de comandos de [.NET Core](../../../core/index.yml). Si no está familiarizado con las herramientas de línea de comandos de .NET Core, puede obtener información sobre ellas en este [artículo de introducción](../../../core/tutorials/with-visual-studio-code.md).
+En este ejemplo se usan las herramientas de línea de comandos de [.NET Core](../../../core/introduction.md). Si no está familiarizado con las herramientas de línea de comandos de .NET Core, puede obtener información sobre ellas en este [artículo de introducción](../../../core/tutorials/with-visual-studio-code.md).
 
 Modifique el método `Main` en *program.cs* como se indica a continuación:
 

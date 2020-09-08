@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a3ba42868577ac20ea2e082f90fc4973a1bfe108
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: d6405573e476ce18513938b500041adefbeeef1b
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622382"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496841"
 ---
 ### <a name="ribbongroup-background-is-set-to-transparent-in-localized-builds"></a>El fondo de RibbonGroup se establece en transparente en las compilaciones localizadas
 
@@ -16,8 +16,20 @@ El fondo de <xref:System.Windows.Controls.Ribbon.RibbonGroup?displayProperty=ful
 
 Actualizar a .NET Framework 4.7
 
-| Nombre    | Valor       |
+| NOMBRE    | Valor       |
 |:--------|:------------|
 | Ámbito   |Borde|
 |Versión|4.6.2|
 |Tipo|Tiempo de ejecución|
+
+#### <a name="affected-apis"></a>API afectadas
+
+No detectable a través del análisis de la API.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

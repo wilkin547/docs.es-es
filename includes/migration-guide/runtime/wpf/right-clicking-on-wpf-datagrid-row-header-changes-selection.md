@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 6d804dd335cb18d5febc2ca5f794af92963bece1
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: e1faee846627b22b88eb888d6241d47d8ea6ea06
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620719"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497124"
 ---
 ### <a name="right-clicking-on-a-wpf-datagrid-row-header-changes-the-datagrid-selection"></a>Al hacer clic con el botón derecho en un encabezado de fila de DataGrid de WPF se cambia la selección del control DataGrid
 
@@ -20,8 +20,16 @@ Este problema se ha corregido en .NET Framework 4.6 y se puede solucionar median
 |:--------|:------------|
 | Ámbito   |Borde|
 |Versión|4.5|
-|Tipo|Tiempo de ejecución
+|Tipo|Tiempo de ejecución|
 
 #### <a name="affected-apis"></a>API afectadas
 
--<xref:System.Windows.Controls.DataGrid.%23ctor></li></ul>|
+- <xref:System.Windows.Controls.DataGrid.%23ctor>
+
+<!--
+
+#### Affected APIs
+
+- `M:System.Windows.Controls.DataGrid.#ctor`
+
+-->

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f8e5dee9e97956cea78b7c8ec999af1afe9ac66b
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: b23182ad1da8208a69b78fc7bc872780d386a59a
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620650"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496285"
 ---
 ### <a name="minfreememorypercentagetoactiveservice-is-now-respected"></a>Ahora se respeta MinFreeMemoryPercentageToActiveService
 
@@ -21,3 +21,15 @@ Se produce una excepción si la memoria libre disponible en el servidor web es m
 | Ámbito   |Secundaria|
 |Versión|4.5.1|
 |Tipo|Tiempo de ejecución|
+
+#### <a name="affected-apis"></a>API afectadas
+
+No detectable a través del análisis de la API.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

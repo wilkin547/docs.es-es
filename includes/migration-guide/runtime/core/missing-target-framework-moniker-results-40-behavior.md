@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 26a001ec2009a1a66dd9038b9bd3a42d7bcefb73
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 49740d3b1890d72935e6e329a4f4be836ed70b25
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620584"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496767"
 ---
 ### <a name="missing-target-framework-moniker-results-in-40-behavior"></a>La ausencia de moniker de la plataforma de destino da lugar a un comportamiento de la versión 4.0
 
@@ -21,3 +21,15 @@ Se debe proporcionar un atributo <xref:System.Runtime.Versioning.TargetFramework
 | Ámbito   |Major|
 |Versión|4.5|
 |Tipo|Tiempo de ejecución|
+
+#### <a name="affected-apis"></a>API afectadas
+
+No detectable a través del análisis de la API.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

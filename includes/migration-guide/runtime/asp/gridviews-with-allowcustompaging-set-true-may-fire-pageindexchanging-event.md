@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3b329bf5ba2af4d3ab9c3e203e99daba8ca0d0c0
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 4d210eeedd2f228017634d29f11554deb6ed8079
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620533"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497880"
 ---
 ### <a name="gridviews-with-allowcustompaging-set-to-true-may-fire-the-pageindexchanging-event-when-leaving-the-final-page-of-the-view"></a>GridView con AllowCustomPaging establecido en true puede desencadenar el evento PageIndexChanging al salir de la última página de la vista
 
@@ -20,8 +20,16 @@ Este problema se ha corregido en .NET Framework 4.6 y se puede solucionar median
 |:--------|:------------|
 | Ámbito   |Secundaria|
 |Versión|4.5|
-|Tipo|Tiempo de ejecución
+|Tipo|Tiempo de ejecución|
 
 #### <a name="affected-apis"></a>API afectadas
 
--<xref:System.Web.UI.WebControls.GridView.AllowCustomPaging?displayProperty=nameWithType></li></ul>|
+- <xref:System.Web.UI.WebControls.GridView.AllowCustomPaging?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `P:System.Web.UI.WebControls.GridView.AllowCustomPaging`
+
+-->

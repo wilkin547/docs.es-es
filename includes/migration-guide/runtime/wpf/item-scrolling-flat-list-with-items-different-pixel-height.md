@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: fbf3c0c8f1d11f9f5997a4d1027242c4710c7107
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: d23d7821e19b9d7f2db13a6bfdf868a8414cf721
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621827"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496906"
 ---
 ### <a name="item-scrolling-a-flat-list-with-items-of-different-pixel-height"></a>Desplazamiento de elementos de una lista plana con elementos con alto en píxeles diferente
 
@@ -20,8 +20,16 @@ Si la iteración se produce en .NET Framework 4.6.1, pero no en versiones anteri
 |:--------|:------------|
 | Ámbito   |Secundaria|
 |Versión|4.6.1|
-|Tipo|Tiempo de ejecución
+|Tipo|Tiempo de ejecución|
 
 #### <a name="affected-apis"></a>API afectadas
 
--<xref:System.Windows.Controls.VirtualizingStackPanel?displayProperty=nameWithType></li></ul>|
+- <xref:System.Windows.Controls.VirtualizingStackPanel?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `T:System.Windows.Controls.VirtualizingStackPanel`
+
+-->

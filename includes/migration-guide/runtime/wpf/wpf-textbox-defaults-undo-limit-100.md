@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 13d3799aeede86b01aa81ce1cd69b3c4c22311ca
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 9d960774161fc44810f90ca30f56eb98f98de3ff
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620713"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496483"
 ---
 ### <a name="wpf-textbox-defaults-to-undo-limit-of-100"></a>Los cuadros de texto de WPF tienen como valor predeterminado un límite de 100 para la fase de reversión
 
@@ -20,8 +20,16 @@ Si el límite de 100 para la fase de reversión es demasiado bajo, se puede esta
 |:--------|:------------|
 | Ámbito   |Borde|
 |Versión|4.5|
-|Tipo|Tiempo de ejecución
+|Tipo|Tiempo de ejecución|
 
 #### <a name="affected-apis"></a>API afectadas
 
--<xref:System.Windows.Controls.TextBox?displayProperty=nameWithType></li></ul>|
+- <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `T:System.Windows.Controls.TextBox`
+
+-->

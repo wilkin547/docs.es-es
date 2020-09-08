@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d7a18a0b457c2a38f40c1da3b2f0bfc578259475
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: c27c63e5bbd4a144b9482a0b1cb74250ae78d91c
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621370"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496174"
 ---
 ### <a name="connection-pool-blocking-period-for-azure-sql-databases-is-removed"></a>Se ha quitado el período de bloqueo del grupo de conexiones para Azure SQL Database
 
@@ -20,8 +20,20 @@ Si no quiere este comportamiento, se puede configurar el período de bloqueo del
 |:--------|:------------|
 | Ámbito   |Secundaria|
 |Versión|4.6.2|
-|Tipo|Tiempo de ejecución
+|Tipo|Tiempo de ejecución|
 
 #### <a name="affected-apis"></a>API afectadas
 
--<xref:System.Data.Common.DbConnection.OpenAsync?displayProperty=nameWithType></li><li><xref:System.Data.SqlClient.SqlConnection.Open?displayProperty=nameWithType></li><li><xref:System.Data.SqlClient.SqlConnection.OpenAsync(System.Threading.CancellationToken)?displayProperty=nameWithType></li></ul>|
+- <xref:System.Data.Common.DbConnection.OpenAsync?displayProperty=nameWithType>
+- <xref:System.Data.SqlClient.SqlConnection.Open?displayProperty=nameWithType>
+- <xref:System.Data.SqlClient.SqlConnection.OpenAsync(System.Threading.CancellationToken)?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `M:System.Data.Common.DbConnection.OpenAsync`
+- `M:System.Data.SqlClient.SqlConnection.Open`
+- `M:System.Data.SqlClient.SqlConnection.OpenAsync(System.Threading.CancellationToken)`
+
+-->

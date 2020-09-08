@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: beaac7b14535335a665add4fa056a60793879753
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 51ac10e6b4cc9c757cb7f68d7d665982bcb57d4e
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620674"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496871"
 ---
 ### <a name="systemactivities-is-now-aptca"></a>System.Activities ahora es APTCA
 
@@ -21,3 +21,15 @@ Las clases derivadas no se pueden marcar con el atributo <xref:System.Security.S
 | Ámbito   |Borde|
 |Versión|4.5|
 |Tipo|Tiempo de ejecución|
+
+#### <a name="affected-apis"></a>API afectadas
+
+No detectable a través del análisis de la API.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

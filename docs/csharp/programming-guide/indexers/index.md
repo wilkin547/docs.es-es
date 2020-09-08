@@ -8,12 +8,12 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 07e0ae4294373817e10bb79920c73ec1e275d169
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: ea95eef7bb9ba232e4d59e3f833b82e98398fc33
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87303119"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89495309"
 ---
 # <a name="indexers-c-programming-guide"></a>Indizadores (Guía de programación de C#)
 
@@ -46,7 +46,7 @@ A partir de C# 7.0, los descriptores de acceso get y set se pueden implementar c
   
 - La palabra clave [this](../../language-reference/keywords/this.md) se usa para definir los indizadores.  
   
-- La palabra clave [value](../../language-reference/keywords/value.md) se usa para definir el valor asignado por el indizador `set`.  
+- La palabra clave [value](../../language-reference/keywords/value.md) se usa para definir el valor que va a asignar el descriptor de acceso `set`.  
   
 - Los indizadores no tienen que ser indizados por un valor entero; depende de usted cómo definir el mecanismo de búsqueda concreto.  
   

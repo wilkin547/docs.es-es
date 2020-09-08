@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a20fad5f9c95e59c14ffd91f4921cf8bfab443cd
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: f389a9e9bcf4ac1777db66731a085d74889c4a98
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621374"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496230"
 ---
 ### <a name="unicode-standard-version-80-categories-now-supported"></a>Ahora se admiten las categorías de la versión 8.0 del estándar Unicode
 
@@ -20,8 +20,20 @@ Revise el código y quite o cambie la lógica que depende de categorías de cara
 |:--------|:------------|
 | Ámbito   |Secundaria|
 |Versión|4.6.2|
-|Tipo|Tiempo de ejecución
+|Tipo|Tiempo de ejecución|
 
 #### <a name="affected-apis"></a>API afectadas
 
--<xref:System.Char.GetUnicodeCategory(System.Char)?displayProperty=nameWithType></li><li><xref:System.Globalization.CharUnicodeInfo.GetUnicodeCategory(System.Char)?displayProperty=nameWithType></li><li><xref:System.Globalization.CharUnicodeInfo.GetUnicodeCategory(System.String,System.Int32)?displayProperty=nameWithType></li></ul>|
+- <xref:System.Char.GetUnicodeCategory(System.Char)?displayProperty=nameWithType>
+- <xref:System.Globalization.CharUnicodeInfo.GetUnicodeCategory(System.Char)?displayProperty=nameWithType>
+- <xref:System.Globalization.CharUnicodeInfo.GetUnicodeCategory(System.String,System.Int32)?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `M:System.Char.GetUnicodeCategory(System.Char)`
+- `M:System.Globalization.CharUnicodeInfo.GetUnicodeCategory(System.Char)`
+- `M:System.Globalization.CharUnicodeInfo.GetUnicodeCategory(System.String,System.Int32)`
+
+-->

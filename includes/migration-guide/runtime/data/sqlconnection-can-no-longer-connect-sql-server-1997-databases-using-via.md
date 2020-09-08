@@ -1,9 +1,10 @@
 ---
-ms.openlocfilehash: 241184d61d718fedfea396260e739d2dbc05c305
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 8dc947f584d3433f0638a72f4db86ac2680c8dbf
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620602"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496486"
 ---
 ### <a name="sqlconnection-can-no-longer-connect-to-sql-server-1997-or-databases-using-the-via-adapter"></a>SqlConnection ya no se puede conectar a SQL Server 1997 o a bases de datos mediante el adaptador VIA
 
@@ -19,8 +20,18 @@ El protocolo VIA está en desuso, por lo que se debe usar un protocolo alternati
 |:--------|:------------|
 | Ámbito   |Borde|
 |Versión|4.5|
-|Tipo|Tiempo de ejecución
+|Tipo|Tiempo de ejecución|
 
 #### <a name="affected-apis"></a>API afectadas
 
--<xref:System.Data.SqlClient.SqlConnection.%23ctor(System.String)></li><li><xref:System.Data.SqlClient.SqlConnection.%23ctor(System.String,System.Data.SqlClient.SqlCredential)></li></ul>|
+- <xref:System.Data.SqlClient.SqlConnection.%23ctor(System.String)>
+- <xref:System.Data.SqlClient.SqlConnection.%23ctor(System.String,System.Data.SqlClient.SqlCredential)>
+
+<!--
+
+#### Affected APIs
+
+- `M:System.Data.SqlClient.SqlConnection.#ctor(System.String)`
+- `M:System.Data.SqlClient.SqlConnection.#ctor(System.String,System.Data.SqlClient.SqlCredential)`
+
+-->

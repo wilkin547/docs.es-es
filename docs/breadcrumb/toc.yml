@@ -314,28 +314,6 @@ items:
                   - name: Controles de Windows Forms
                     tocHref: /dotnet/framework/winforms/controls/
                     topicHref: /dotnet/framework/winforms/controls/index
-              - name: Windows Presentation Foundation
-                tocHref: /dotnet/framework/wpf/
-                topicHref: /dotnet/framework/wpf/index
-                items:
-                  - name: Avanzadas
-                    tocHref: /dotnet/framework/wpf/advanced/
-                    topicHref: /dotnet/framework/wpf/advanced/index
-                  - name: Desarrollo de aplicaciones
-                    tocHref: /dotnet/framework/wpf/app-development/
-                    topicHref: /dotnet/framework/wpf/app-development/index
-                  - name: Controles
-                    tocHref: /dotnet/framework/wpf/controls/
-                    topicHref: /dotnet/framework/wpf/controls/index
-                  - name: Datos
-                    tocHref: /dotnet/framework/wpf/data/
-                    topicHref: /dotnet/framework/wpf/data/index
-                  - name: Introducción (WPF)
-                    tocHref: /dotnet/framework/wpf/getting-started/
-                    topicHref: /dotnet/framework/wpf/getting-started/index
-                  - name: Gráficos y multimedia
-                    tocHref: /dotnet/framework/wpf/graphics-multimedia/
-                    topicHref: /dotnet/framework/wpf/graphics-multimedia/index
               - name: Servicios XAML
                 tocHref: /dotnet/framework/xaml-services/
                 topicHref: /dotnet/framework/xaml-services/index

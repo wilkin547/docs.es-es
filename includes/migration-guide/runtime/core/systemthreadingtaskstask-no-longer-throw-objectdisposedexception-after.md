@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3eab96149be1e40d528cfd552bbe05ca766cf4e8
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 58dbb54d42d89b450134758072e3133ae4e6b13d
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620593"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496679"
 ---
 ### <a name="systemthreadingtaskstask-no-longer-throw-objectdisposedexception-after-object-is-disposed"></a>System.Threading.Tasks.Task ya no inicia una excepción ObjectDisposedException después de desechar un objeto
 
@@ -21,3 +21,15 @@ Tenga en cuenta que es posible que los métodos Task ya no inicien excepciones <
 | Ámbito   |Secundaria|
 |Versión|4.5|
 |Tipo|Tiempo de ejecución|
+
+#### <a name="affected-apis"></a>API afectadas
+
+No detectable a través del análisis de la API.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

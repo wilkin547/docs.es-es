@@ -2,12 +2,12 @@
 title: 'Recorrido por C#: áreas principales del lenguaje'
 description: ¿Nuevo en C#? Conozca los conceptos básicos del lenguaje.
 ms.date: 08/06/2020
-ms.openlocfilehash: f0e9bff144cc3c853a82f2ee6b400049df60683d
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: e1e533982757c10085f0444197ff97ee7487391f
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88068487"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414908"
 ---
 # <a name="major-language-areas"></a>Áreas principales del lenguaje
 
@@ -60,7 +60,7 @@ La [***interpolación de cadenas***](../language-reference/tokens/interpolated.m
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="StringInterpolation":::
 
-Una cadena interpolada se declara mediante el token `$`. La interpolación de cadenas evalúa las expresiones entre `{` y `}`, convierte el resultado en un elemento `string` y reemplaza el texto entre corchetes por el resultado de cadena de la expresión. El elemento `:` presente en la primera expresión, `{weatherData.Data:MM-DD-YYYY}`, especifica la *cadena de formato*. En el ejemplo anterior, especifica que la fecha debe imprimirse en formato "MM-DD-AAAA".
+Una cadena interpolada se declara mediante el token `$`. La interpolación de cadenas evalúa las expresiones entre `{` y `}`, convierte el resultado en un elemento `string` y reemplaza el texto entre corchetes por el resultado de cadena de la expresión. El elemento `:` presente en la primera expresión, `{weatherData.Date:MM-DD-YYYY}`, especifica la *cadena de formato*. En el ejemplo anterior, especifica que la fecha debe imprimirse en formato "MM-DD-AAAA".
 
 ## <a name="pattern-matching"></a>Detección de patrones
 

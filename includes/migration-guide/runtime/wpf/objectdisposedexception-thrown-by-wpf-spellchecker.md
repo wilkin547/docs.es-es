@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b836b26f3f52e9d0cc78feb764629bd2fa306657
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 3244913e06a744dafc4440f824ebe6bed25b8dd1
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621834"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497304"
 ---
 ### <a name="objectdisposedexception-thrown-by-wpf-spellchecker"></a>El corrector ortográfico de WPF inicia la excepción ObjectDisposedException
 
@@ -21,3 +21,15 @@ Actualizar a .NET Framework 4.7
 | Ámbito   |Borde|
 |Versión|4.6.1|
 |Tipo|Tiempo de ejecución|
+
+#### <a name="affected-apis"></a>API afectadas
+
+No detectable a través del análisis de la API.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

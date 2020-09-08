@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 51208762cea2a5688c5d43e5d444d4e014e5f0b4
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 7f8f97adcca7e66fa5756212bb977daadd92b8b6
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621428"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497559"
 ---
 ### <a name="x509certificate2tostringboolean-does-not-throw-now-when-net-cannot-handle-the-certificate"></a>X509Certificate2.ToString(Boolean) ahora no se inicia cuando .NET no puede controlar el certificado
 
@@ -20,8 +20,16 @@ Cualquier código que dependa de <xref:System.Security.Cryptography.X509Certific
 |:--------|:------------|
 | Ámbito   |Borde|
 |Versión|4.6|
-|Tipo|Tiempo de ejecución
+|Tipo|Tiempo de ejecución|
 
 #### <a name="affected-apis"></a>API afectadas
 
--<xref:System.Security.Cryptography.X509Certificates.X509Certificate2.ToString(System.Boolean)?displayProperty=nameWithType></li></ul>|
+- <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.ToString(System.Boolean)?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `M:System.Security.Cryptography.X509Certificates.X509Certificate2.ToString(System.Boolean)`
+
+-->

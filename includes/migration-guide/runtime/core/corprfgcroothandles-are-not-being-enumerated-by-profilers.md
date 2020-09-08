@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4f52535e54607cc824500f9c6a14964a1dec9d32
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 25437dcc0c814ed2265b2efb34316af48b372ebd
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620557"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496189"
 ---
 ### <a name="cor_prf_gc_root_handles-are-not-being-enumerated-by-profilers"></a>Los generadores de perfiles no enumeran COR_PRF_GC_ROOT_HANDLE
 
@@ -21,3 +21,15 @@ Este problema se ha corregido en .NET Framework 4.6 y se puede solucionar median
 | Ámbito   |Secundaria|
 |Versión|4.5.1|
 |Tipo|Tiempo de ejecución|
+
+#### <a name="affected-apis"></a>API afectadas
+
+No detectable a través del análisis de la API.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

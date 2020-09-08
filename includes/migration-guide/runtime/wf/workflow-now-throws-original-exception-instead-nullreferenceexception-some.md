@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ae0c7322b7415157838278b5568e6e49936e9a93
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 61d5885c19e39b138090c1a98fa26348724893c5
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621393"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496373"
 ---
 ### <a name="workflow-now-throws-original-exception-instead-of-nullreferenceexception-in-some-cases"></a>El flujo de trabajo ahora inicia la excepción original en lugar de NullReferenceException en algunos casos
 
@@ -20,8 +20,22 @@ Si el código se basa en el control de la excepción <xref:System.NullReferenceE
 |:--------|:------------|
 | Ámbito   |Secundaria|
 |Versión|4.7|
-|Tipo|Tiempo de ejecución
+|Tipo|Tiempo de ejecución|
 
 #### <a name="affected-apis"></a>API afectadas
 
--<xref:System.Activities.CodeActivity.Execute(System.Activities.CodeActivityContext)?displayProperty=nameWithType></li><li><xref:System.Activities.AsyncCodeActivity.BeginExecute(System.Activities.AsyncCodeActivityContext,System.AsyncCallback,System.Object)?displayProperty=nameWithType></li><li><xref:System.Activities.AsyncCodeActivity%601.BeginExecute(System.Activities.AsyncCodeActivityContext,System.AsyncCallback,System.Object)?displayProperty=nameWithType></li><li><xref:System.Activities.WorkflowInvoker.Invoke?displayProperty=nameWithType></li></ul>|
+- <xref:System.Activities.CodeActivity.Execute(System.Activities.CodeActivityContext)?displayProperty=nameWithType>
+- <xref:System.Activities.AsyncCodeActivity.BeginExecute(System.Activities.AsyncCodeActivityContext,System.AsyncCallback,System.Object)?displayProperty=nameWithType>
+- <xref:System.Activities.AsyncCodeActivity%601.BeginExecute(System.Activities.AsyncCodeActivityContext,System.AsyncCallback,System.Object)?displayProperty=nameWithType>
+- <xref:System.Activities.WorkflowInvoker.Invoke?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `M:System.Activities.CodeActivity.Execute(System.Activities.CodeActivityContext)`
+- `M:System.Activities.AsyncCodeActivity.BeginExecute(System.Activities.AsyncCodeActivityContext,System.AsyncCallback,System.Object)`
+- ``M:System.Activities.AsyncCodeActivity`1.BeginExecute(System.Activities.AsyncCodeActivityContext,System.AsyncCallback,System.Object)``
+- `M:System.Activities.WorkflowInvoker.Invoke`
+
+-->

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 662c140f019add66ff6605d47ad1f32c3f50d711
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 99a7fa0fcfce6d490a182f85709b5dd0e0e8c86f
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620575"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496750"
 ---
 ### <a name="eventsourcewriteevent-impls-must-pass-writeevent-the-same-parameters-that-it-received-plus-id"></a>Las implementaciones EventSource.WriteEvent deben pasar a WriteEvent los mismos parámetros que recibió (además del identificador)
 
@@ -21,3 +21,15 @@ Se produce una excepción <xref:System.IndexOutOfRangeException?displayProperty=
 | Ámbito   |Secundaria|
 |Versión|4.5.1|
 |Tipo|Tiempo de ejecución|
+
+#### <a name="affected-apis"></a>API afectadas
+
+No detectable a través del análisis de la API.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

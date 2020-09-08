@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 22b5abbe769733e8d5ca3e78dd9e6e13b2363737
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 346fb6ecd43f7f93529e45f169c79b7acacc9c1f
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620617"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497083"
 ---
 ### <a name="opt-in-break-to-revert-from-different-45-sql-generation-to-simpler-40-sql-generation"></a>Permitir interrupción para revertir desde otra generación de SQL de la versión 4.5 a la generación de SQL más sencilla de la versión 4.0
 
@@ -21,3 +21,15 @@ Esta característica está deshabilitada de manera predeterminada. Si Entity Fra
 | Ámbito   |Transparente|
 |Versión|4.5.2|
 |Tipo|Tiempo de ejecución|
+
+#### <a name="affected-apis"></a>API afectadas
+
+No detectable a través del análisis de la API.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

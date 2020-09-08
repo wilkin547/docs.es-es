@@ -15,12 +15,12 @@ helpviewer_keywords:
 - constructs, alternation
 - .NET Framework regular expressions, alternation constructs
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
-ms.openlocfilehash: 02664bd2812f89649ec933483161263bae530a75
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 506c1cdeb577452628d67ab00df20dd30881f406
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159694"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89495439"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Construcciones de alternancia en expresiones regulares
 
@@ -60,7 +60,7 @@ La expresión regular `\b(\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` se interpreta como s
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
 |<code>(\d{2}-\d{7}&#124;\d{3}-\d{2}-\d{4})</code>|Coincide con cualquiera de las siguientes opciones: dos dígitos decimales seguidos de un guión seguido de siete dígitos decimales; o tres dígitos decimales, un guión, dos dígitos decimales, otro guión y cuatro dígitos decimales.|  
-|`\d`|Finalizar la búsqueda de coincidencias en un límite de palabras.|  
+|`\b`|Finalizar la búsqueda de coincidencias en un límite de palabras.|  
   
 <a name="Conditional_Expr"></a>
 ## <a name="conditional-matching-with-an-expression"></a>Coincidencia condicional con una expresión
