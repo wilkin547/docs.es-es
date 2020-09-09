@@ -76,6 +76,9 @@ items:
               - name: Globalización y localización
                 tocHref: /dotnet/standard/globalization-localization/
                 topicHref: /dotnet/standard/globalization-localization/index
+              - name: LINQ
+                tocHref: /dotnet/standard/linq/
+                topicHref: /dotnet/standard/linq/index
               - name: Seguridad en .NET
                 tocHref: /dotnet/standard/security/
                 topicHref: /dotnet/standard/security/index
