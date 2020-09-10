@@ -10,12 +10,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 5eb9d5127dffd2e80349352ad7a4b57f8848d56b
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 8cbb687b0c7cfb69d3f3807c083f1c25e9d39594
+ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87165794"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89271794"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formatos de ruta de acceso de archivo en los sistemas Windows
 
@@ -33,19 +33,19 @@ Si los tres componentes están presentes, la ruta de acceso es absoluta. Si no s
 
 |Ruta de acceso  |Descripción  |
 | -- | -- |
-| `C:\Documents\Newsletters\Summer2018.pdf` | Ruta de acceso de archivo absoluta desde la raíz de la unidad C:. |
+| `C:\Documents\Newsletters\Summer2018.pdf` | Ruta de acceso de archivo absoluta desde la raíz de la unidad `C:`. |
 | `\Program Files\Custom Utilities\StringFinder.exe` | Ruta de acceso absoluta desde la raíz de la unidad actual. |
 | `2018\January.xlsx` | Ruta de acceso relativa a un archivo en un subdirectorio del directorio actual. |
 | `..\Publications\TravelBrochure.pdf` | Ruta de acceso relativa a un archivo en un directorio del mismo nivel del directorio actual. |
-| `C:\Projects\apilibrary\apilibrary.sln` | Ruta de acceso absoluta a un archivo desde la raíz de la unidad C: |
-| `C:Projects\apilibrary\apilibrary.sln` | Ruta de acceso relativa desde el directorio actual de la unidad C:. |
+| `C:\Projects\apilibrary\apilibrary.sln` | Ruta de acceso absoluta a un archivo desde la raíz de la unidad `C:`. |
+| `C:Projects\apilibrary\apilibrary.sln` | Ruta de acceso relativa desde el directorio actual de la unidad `C:`. |
 
 > [!IMPORTANT]
-> Observe la diferencia entre las dos últimas rutas de acceso. En ambas figura el especificador de volumen opcional (C: en ambos casos), pero la primera comienza por la raíz del volumen especificado, mientras que la segunda, no. Como resultado, la primera es una ruta de acceso absoluta desde el directorio raíz de la unidad C:, mientras que la segunda es una ruta de acceso relativa desde el directorio actual de la unidad C:. El uso de la segunda forma cuando está previsto el de la primera suele ser motivo de errores que implican rutas de acceso de archivo de Windows.
+> Observe la diferencia entre las dos últimas rutas de acceso. En ambas figura el especificador de volumen opcional (`C:` en ambos casos), pero la primera comienza por la raíz del volumen especificado, mientras que la segunda no. Como resultado, la primera es una ruta de acceso absoluta desde el directorio raíz de la unidad `C:`, mientras que la segunda es una ruta de acceso relativa desde el directorio actual de la unidad `C:`. El uso de la segunda forma cuando está previsto el de la primera suele ser motivo de errores que implican rutas de acceso de archivo de Windows.
 
 Puede determinar si una ruta de acceso de archivo es un nombre completo (es decir, si la ruta de acceso es independiente del directorio actual y no cambia cuando cambia el directorio actual) mediante una llamada al método <xref:System.IO.Path.IsPathFullyQualified%2A?displayProperty=nameWthType>. Tenga en cuenta que una ruta de acceso de este tipo puede incluir segmentos de directorio relativos (`.` y `..`) y seguir siendo completa si la ruta de acceso resuelta siempre apunta a la misma ubicación.
 
-En el ejemplo siguiente se muestra la diferencia entre las rutas de acceso absolutas y relativas. Se supone que existe el directorio D:\FY2018\ y que aún no ha establecido ningún directorio actual para D:\ desde el símbolo del sistema antes de ejecutar el ejemplo.
+En el ejemplo siguiente se muestra la diferencia entre las rutas de acceso absolutas y relativas. Se supone que existe el directorio `D:\FY2018\` y que aún no ha establecido ningún directorio actual para `D:\` desde el símbolo del sistema antes de ejecutar el ejemplo.
 
 [!code-csharp[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/cs/paths.cs)]
 [!code-vb[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/vb/paths.vb)]
@@ -56,8 +56,8 @@ En el ejemplo siguiente se muestra la diferencia entre las rutas de acceso absol
 
 Las rutas de acceso de convención de nomenclatura universal (UNC), que se usan para acceder a los recursos de red, tienen el formato siguiente:
 
-- Un nombre de servidor o host que va precedido por \\\\. El nombre del servidor puede ser un nombre de equipo NetBIOS o una dirección IP o FQDN (se admiten tanto IPv4 como v6).
-- Un nombre de recurso compartido, que se separa del nombre de host mediante \\. Juntos, el nombre del servidor y el del recurso compartido forman el volumen.
+- Un nombre de servidor o host que va precedido por `\\`. El nombre del servidor puede ser un nombre de equipo NetBIOS o una dirección IP o FQDN (se admiten tanto IPv4 como v6).
+- Un nombre de recurso compartido, que se separa del nombre de host mediante `\`. Juntos, el nombre del servidor y el del recurso compartido forman el volumen.
 - Un nombre de directorio. El [carácter separador de directorio](<xref:System.IO.Path.DirectorySeparatorChar>) separa los subdirectorios dentro de la jerarquía de directorios anidados.
 - Un nombre de archivo opcional. El [carácter separador de directorio](<xref:System.IO.Path.DirectorySeparatorChar>) separa la ruta de acceso y el nombre del archivo.
 
@@ -65,8 +65,8 @@ A continuación se muestran algunos ejemplos de rutas de acceso UNC:
 
 |Ruta de acceso  |Descripción  |
 | -- | -- |
-| `\\system07\C$\` | Directorio raíz de la unidad C: en `system07`. |
-| `\\Server2\Share\Test\Foo.txt` | El archivo Foo.txt en el directorio Test del volumen \\\\Server2\\Share.|
+| `\\system07\C$\` | Directorio raíz de la unidad `C:` en `system07`. |
+| `\\Server2\Share\Test\Foo.txt` | Archivo `Foo.txt` en el directorio Prueba del volumen `\\Server2\Share`.|
 
 Las rutas de acceso UNC siempre deben ser completas. Pueden incluir segmentos de directorio relativos (`.` y `..`), pero estos deben formar parte de una ruta de acceso completa. Solo puede usar rutas de acceso relativas mediante la asignación de una ruta de acceso UNC a una letra de unidad.
 
@@ -101,7 +101,7 @@ La ruta de acceso de dispositivo DOS consta de los componentes siguientes:
   `\\.\UNC\Server\Share\Test\Foo.txt`
   `\\?\UNC\Server\Share\Test\Foo.txt`
 
-    Para las UNC de dispositivo, la parte del servidor o recurso compartido forma el volumen. Por ejemplo, en `\\?\server1\e:\utilities\\filecomparer\`, la parte del servidor o recurso compartido es server1\utilities. Esto es importante cuando se llama a un método como <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> con segmentos de directorio relativos, pues nunca se puede ir más allá del volumen.
+    Para las UNC de dispositivo, la parte del servidor o recurso compartido forma el volumen. Por ejemplo, en `\\?\server1\e:\utilities\\filecomparer\`, la parte del servidor o recurso compartido es `server1\utilities`. Esto es importante cuando se llama a un método como <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> con segmentos de directorio relativos, pues nunca se puede ir más allá del volumen.
 
 Por definición, las rutas de acceso de dispositivo DOS son completas. No se permiten los segmentos de directorio relativos (`.` y `..`). Los directorios actuales nunca entran en uso.
 
@@ -146,7 +146,7 @@ Una ruta de acceso que comienza por un nombre de dispositivo heredado se interpr
 
 ### <a name="apply-the-current-directory"></a>Aplicación del directorio actual
 
-Si una ruta de acceso no es completa, Windows le aplica el directorio actual. El directorio actual no se aplica a las rutas de acceso de dispositivo y UNC. Ni tampoco una unidad completa con separador C:\\.
+Si una ruta de acceso no es completa, Windows le aplica el directorio actual. El directorio actual no se aplica a las rutas de acceso de dispositivo y UNC. Ni tampoco una unidad completa con separador `C:\`.
 
 Si la ruta de acceso comienza por un único separador de componente, se aplica la unidad desde el directorio actual. Por ejemplo, si la ruta de acceso de archivo es `\utilities` y el directorio actual es `C:\temp\`, la normalización genera `C:\utilities`.
 
