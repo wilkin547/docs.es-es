@@ -1,19 +1,19 @@
 ---
 title: Introducción a .NET para Apache Spark
-description: Descubra cómo ejecutar una aplicación .NET para Apache Spark con .NET Core en Windows, MacOS y Ubuntu.
+description: Descubra cómo ejecutar una aplicación .NET para Apache Spark con .NET Core en Windows, macOS y Ubuntu.
 ms.date: 06/25/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: be150bcef0029f69136e21c35791c863220af244
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: d7297b11a2b5b21420fcb2f0f9ae823cb29b88d1
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617657"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359004"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>Tutorial: Introducción a .NET para Apache Spark
 
-En este tutorial aprenderá a ejecutar una aplicación .NET para Apache Spark con .NET Core en Windows, MacOS y Ubuntu.
+En este tutorial aprenderá a ejecutar una aplicación .NET para Apache Spark con .NET Core en Windows, macOS y Ubuntu.
 
 En este tutorial aprenderá a:
 
@@ -41,9 +41,9 @@ Si el comando se ejecuta e imprime información sobre cómo usar dotnet, puede p
 
 ### <a name="2-install-java"></a>2. Instalación de Java
 
-Instale [Java 8.1](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) para Windows y MacOS, o [OpenJDK 8](https://openjdk.java.net/install/) para Ubuntu.
+Instale [Java 8.1](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) para Windows y MacOS, o bien [OpenJDK 8](https://openjdk.java.net/install/) para Ubuntu.
 
-Seleccione la versión adecuada según su sistema operativo. Por ejemplo, seleccione **jdk-8u201-windows-x64.exe** para una máquina Windows x64 (tal como se muestra debajo) o **jdk-8u231-macosx-x64.dmg** para MacOS. Después, use el comando `java` para comprobar la instalación.
+Seleccione la versión adecuada según su sistema operativo. Por ejemplo, seleccione **jdk-8u201-windows-x64.exe** para una máquina Windows x64 (tal como se muestra debajo) o **jdk-8u231-macosx-x64.dmg** para macOS. Después, use el comando `java` para comprobar la instalación.
 
 ![Descarga de Java](https://dotnet.microsoft.com/static/images/java-jdk-downloads-windows.png?v=6BbJHoNyDO-PyYVciImr5wzh2AW_YHNcyb3p093AwPA)
 
@@ -80,7 +80,7 @@ setx HADOOP_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
 setx SPARK_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
 ```
 
-Ejecute los comandos siguientes para establecer las variables de entorno que se usan para buscar Apache Spark en **MacOS** y **Ubuntu**:
+Ejecute los comandos siguientes para establecer las variables de entorno que se usan para buscar Apache Spark en **macOS** y **Ubuntu**:
 
 ```bash
 export SPARK_HOME=~/bin/spark-2.4.1-bin-hadoop2.7/
@@ -123,7 +123,7 @@ Ejecute uno de los comandos siguientes para establecer la Variable de entorno `D
 
 En **Windows**, cree una [variable de entorno nueva](https://www.java.com/en/download/help/path.xml) llamada `DOTNET_WORKER_DIR` y establézcala en el directorio donde se ha descargado y extraído Microsoft.Spark.Worker (por ejemplo, `C:\bin\Microsoft.Spark.Worker\`).
 
-En **MacOS**, cree una variable de entorno nueva mediante `export DOTNET_WORKER_DIR <your_path>` y establézcala en el directorio donde se ha descargado y extraído Microsoft.Spark.Worker (por ejemplo, *~/bin/Microsoft.Spark.Worker/* ).
+En **macOS**, cree una variable de entorno nueva mediante `export DOTNET_WORKER_DIR <your_path>` y establézcala en el directorio donde se ha descargado y extraído Microsoft.Spark.Worker (por ejemplo, *~/bin/Microsoft.Spark.Worker/* ).
 
 En **Ubuntu**, cree una [variable de entorno nueva](https://help.ubuntu.com/community/EnvironmentVariables) llamada `DOTNET_WORKER_DIR` y establézcala en el directorio donde se ha descargado y extraído Microsoft.Spark.Worker (por ejemplo, *~/bin/Microsoft.Spark.Worker*).
 

@@ -1,13 +1,13 @@
 ---
 title: Catálogo de identificadores de entorno de ejecución (RID) de .NET Core
-description: Obtenga información sobre el identificador en tiempo de ejecución (RID) y sobre cómo se usan los RID en .NET Core.
+description: Obtenga información sobre el identificador en tiempo de ejecución (RID) y sobre cómo se usan los RID en .NET Core.
 ms.date: 02/22/2019
-ms.openlocfilehash: 903dd9c619008c9e3c6149a471ba814bdc9c97cc
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 719c84248b955ec05d7cd9b361c7e5ebea6aa37b
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84903290"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414570"
 ---
 # <a name="net-core-rid-catalog"></a>Catálogo de identificadores de entorno de ejecución (RID) de .NET Core
 
@@ -72,7 +72,7 @@ A la larga, todos los RID se asignarán de vuelta al RID `any` raíz.
 
 Hay algunas consideraciones sobre los RID que debe tener en cuenta cuando trabaja con ellos:
 
-- Los RID son **cadenas opacas** y se deben tratar como cajas negras.
+- No intente analizar los RID para recuperar partes de componentes.
 - No compile RID mediante programación.
 - Use RID que ya estén definidos para la plataforma.
 - Los RID deben ser específicos, por lo que no se recomienda presuponer nada a partir del valor de RID real.

@@ -2,12 +2,12 @@
 title: Prueba de una biblioteca de clases .NET Standard con .NET Core mediante Visual Studio para Mac
 description: Cree un proyecto de prueba unitaria para una biblioteca de clases de .NET Core. Compruebe que la biblioteca de clases de .NET Core funciona correctamente con pruebas unitarias.
 ms.date: 06/08/2020
-ms.openlocfilehash: a183049623df44cbb8c4abd47ce6e78d91adae12
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: d3c8a5e01d16047949e977f3af6a429970d996d0
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84713308"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359225"
 ---
 # <a name="test-a-net-standard-class-library-with-net-core-using-visual-studio"></a>Prueba de una biblioteca de clases .NET Standard con .NET Core mediante Visual Studio
 
@@ -15,7 +15,7 @@ En este tutorial se muestra cómo automatizar las pruebas unitarias mediante la 
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Este tutorial funciona con la solución que se crea en [Creación de una biblioteca .NET Standard en Visual Studio para Mac](library-with-visual-studio-mac.md).
+- Este tutorial funciona con la solución que se crea en [Creación de una biblioteca .NET Standard con Visual Studio para Mac](library-with-visual-studio-mac.md).
 
 ## <a name="create-a-unit-test-project"></a>Crear un proyecto de prueba unitaria
 
@@ -23,7 +23,7 @@ Las pruebas unitarias proporcionan pruebas de software automatizadas durante el 
 
 1. Inicie Visual Studio para Mac:
 
-1. Abra la solución `ClassLibraryProjects` que creó en [Creación de una biblioteca .NET Standard en Visual Studio para Mac](library-with-visual-studio-mac.md).
+1. Abra la solución `ClassLibraryProjects` que creó en [Creación de una biblioteca .NET Standard con Visual Studio para Mac](library-with-visual-studio-mac.md).
 
 1. En el panel **Solución**, presione <kbd>Ctrl</kbd>, haga clic en la solución `ClassLibraryProjects` y seleccione **Agregar** > **Nuevo proyecto**.
 

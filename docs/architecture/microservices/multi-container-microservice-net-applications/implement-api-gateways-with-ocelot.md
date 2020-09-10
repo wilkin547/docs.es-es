@@ -2,12 +2,12 @@
 title: Implementación de puertas de enlace de API con Ocelot
 description: Obtenga información sobre cómo implementar puertas de enlace de API con Ocelot y cómo usar Ocelot en un entorno basado en contenedores.
 ms.date: 03/02/2020
-ms.openlocfilehash: f103c1e394a3f829489b61fd17af749798b02f70
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 3611ffa7a163ff632ca854fafb910fcd3e228306
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864103"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89358991"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Implementación de puertas de enlace de API con Ocelot
 
@@ -15,6 +15,7 @@ ms.locfileid: "86864103"
 > Actualmente, la aplicación de microservicios de referencia [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) usa características proporcionadas por [Envoy](https://www.envoyproxy.io/) para implementar la puerta de enlace de API en lugar de [Ocelot](https://github.com/ThreeMammals/Ocelot), al que ya se ha hecho referencia anteriormente.
 > El motivo de esta decisión de diseño es la compatibilidad integrada de Envoy con el protocolo WebSocket, necesaria para las nuevas comunicaciones entre servicios de gRPC implementadas en eShopOnContainers.
 > Sin embargo, hemos conservado esta sección en la guía para que pueda considerar Ocelot como una puerta de enlace de API sencilla, compatible, ligera y adecuada para escenarios de nivel de producción.
+> Además, la versión más reciente de Ocelot contiene un cambio importante en su esquema JSON. Considere el uso de Ocelot < v16.0.0 o use los valores Routes clave en lugar de ReRoutes.
 
 ## <a name="architect-and-design-your-api-gateways"></a>Arquitectura y diseño de las puertas de enlace de API
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: d1218e5db2ee4fc0ec044c6e0aa16187390708b0
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 8de15dc033ecda3137f5f3ea37b9e35ac9df7e13
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134385"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359303"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Procedimientos recomendados sobre la seguridad de la capa de transporte (TLS) con .NET Framework
 
@@ -236,7 +236,7 @@ Windows Registry Editor Version 5.00
 
 Puede utilizar el registro para un control más preciso sobre los protocolos que negocia la aplicación servidor o cliente. Las redes de la aplicación pasan a través de Schannel (que es otro nombre para [canal seguro](/windows/desktop/SecAuthN/secure-channel)). Mediante la configuración de `Schannel`, puede configurar el comportamiento de la aplicación.
 
-Inicie con la clave del Registro `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols`. Bajo esa clave, puede crear cualquier subclave en el conjunto `SSL 2.0`, `SSL 3.0`, `TLS 1.0`, `TLS 1.1` y `TLS 1.2`. En cada una de esas subclaves, puede crear subclaves `Client` o `Server`. En `Client` y `Server`, puede crear valores DWORD `DisabledByDefault` (0 o 1) y `Enabled` (0 o 0xFFFFFFFF).
+Inicie con la clave del Registro `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols`. Bajo esa clave, puede crear cualquier subclave en el conjunto `SSL 2.0`, `SSL 3.0`, `TLS 1.0`, `TLS 1.1` y `TLS 1.2`. En cada una de esas subclaves, puede crear subclaves `Client` o `Server`. En `Client` y `Server`, puede crear valores DWORD `DisabledByDefault` (0 o 1) y `Enabled` (0 o 1).
 
 ## <a name="the-sch_use_strong_crypto-flag"></a><a name="the-sch_use_strong_crypto-flag"></a>La marca SCH_USE_STRONG_CRYPTO
 

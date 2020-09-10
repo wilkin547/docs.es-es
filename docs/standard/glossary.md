@@ -3,12 +3,12 @@ title: Glosario de .NET
 description: Descubra el significado de algunos de los términos usados en la documentación de .NET.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 59e338de99510759e3e7acfd782915ed6dc5d988
-ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
+ms.openlocfilehash: b79580baa12cc8081346678f06d49a9d0455375c
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88957578"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89415016"
 ---
 # <a name="net-glossary"></a>Glosario de .NET
 
@@ -161,7 +161,7 @@ El término que engloba [.NET Standard](#net-standard) y todas las cargas de tra
 
 Cuando se publique [.NET 5](#net-5-and-later-versions) (actualmente en versión preliminar), será la implementación de .NET recomendada para todo el nuevo desarrollo de .NET, por lo que en algunos contextos ".NET" implicará ".NET 5 y versiones posteriores".
 
-Vea la [Guía de .NET](index.yml).
+Vea [Aspectos básicos de .NET](../fundamentals/index.yml).
 
 ## <a name="net-5-and-later-versions"></a>.NET 5 y versiones posteriores
 
@@ -169,7 +169,7 @@ Una implementación multiplataforma, de alto rendimiento y de código abierto de
 
 Las versiones anteriores de esta implementación de .NET se conocen como .NET Core. .NET 5.0 es la siguiente versión después de .NET Core 3.1. La versión 4 se ha omitido para no confundir esta nueva implementación de .NET con la implementación anterior conocida como [.NET Framework](#net-framework). La versión actual de .NET Framework es 4.8.
 
-Vea [.NET](../core/index.yml).
+Vea [Aspectos básicos de .NET](../fundamentals/index.yml).
 
 ## <a name="net-cli"></a>CLI de .NET
 
@@ -294,8 +294,7 @@ Una implementación de .NET que se usa para compilar aplicaciones Windows modern
 
 ## <a name="see-also"></a>Vea también
 
-- [Guía de .NET](index.yml)
+- [Aspectos básicos de .NET](../fundamentals/index.yml)
 - [Guía de .NET Framework](../framework/index.yml)
-- [Núcleo de .NET](../core/index.yml)
 - [ASP.NET Overview](/aspnet/index#pivot=aspnet) (Información general de ASP.NET)
 - [ASP.NET Core Overview](/aspnet/index#pivot=core) (Información general de ASP.NET Core)

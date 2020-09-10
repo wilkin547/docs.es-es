@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: f20b089fd22794d5aaeff34502e960fe41a565e1
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 049f0636b1c2c2df33461714aea5a11810ef00ad
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84700974"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359199"
 ---
 # <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio"></a>Tutorial: Prueba de una biblioteca de clases .NET Standard con .NET Core mediante Visual Studio
 
@@ -19,7 +19,7 @@ En este tutorial se muestra cómo automatizar las pruebas unitarias mediante la 
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Este tutorial funciona con la solución que se crea en [Creación de una biblioteca de .NET Standard en Visual Studio](library-with-visual-studio.md).
+- Este tutorial funciona con la solución que se crea en [Creación de una biblioteca de .NET Standard con Visual Studio](library-with-visual-studio.md).
 
 ## <a name="create-a-unit-test-project"></a>Crear un proyecto de prueba unitaria
 
@@ -27,7 +27,7 @@ Las pruebas unitarias proporcionan pruebas de software automatizadas durante el 
 
 1. Inicie Visual Studio.
 
-1. Abra la solución `ClassLibraryProjects` que creó en [Creación de una biblioteca de .NET Standard en Visual Studio](library-with-visual-studio.md).
+1. Abra la solución `ClassLibraryProjects` que creó en [Creación de una biblioteca de .NET Standard con Visual Studio](library-with-visual-studio.md).
 
 1. Agregue un nuevo proyecto de prueba unitaria denominado "StringLibraryTest" a la solución.
 

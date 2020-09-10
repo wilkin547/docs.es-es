@@ -3,12 +3,12 @@ title: Selección entre .NET Core y .NET Framework para aplicaciones de servidor
 description: Guía para ayudarle a decidir qué implementación de .NET usar al compilar una aplicación de servidor.
 author: cartermp
 ms.date: 04/28/2020
-ms.openlocfilehash: 30157276bce53ed44dca5b660172e5556dab14f8
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: a3c15e8f2198b1bcc4e623a7dc7f5cddca9c83f6
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507447"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89415025"
 ---
 # <a name="net-core-vs-net-framework-for-server-apps"></a>Diferencias entre .NET Core y .NET Framework en cuanto a aplicaciones de servidor
 
@@ -111,7 +111,7 @@ Algunas plataformas de terceros o de Microsoft no son compatibles con .NET Core.
 - [Elegir entre ASP.NET y ASP.NET Core](/aspnet/core/choose-aspnet-framework)
 - [ASP.NET Core con .NET Framework como destino](/aspnet/core/introduction-to-aspnet-core#aspnet-core-targeting-net-framework)
 - [Marcos de trabajo de destino](frameworks.md)
-- [Guía de .NET Core](../core/index.yml)
+- [Introducción a .NET Core](../core/introduction.md)
 - [Portabilidad de .NET Framework a .NET Core](../core/porting/index.md)
 - [Introducción a .NET y Docker](../core/docker/introduction.md)
 - [Introducción a los componentes de .NET](components.md)

@@ -3,12 +3,12 @@ title: Telemetría del SDK de .NET Core
 description: Descubra las características de telemetría del SDK de .NET Core que recopilan información de uso para el análisis, qué datos se recopilan y cómo deshabilitarlas.
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: 0917dae23588ccd1809252aaf484c397e84561c7
-ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
+ms.openlocfilehash: 01376cabc4f59f64c59a78dcff061fb6ec11e3c3
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226574"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359238"
 ---
 # <a name="net-core-sdk-telemetry"></a>Telemetría del SDK de .NET Core
 
@@ -138,5 +138,5 @@ Por este motivo, las compilaciones personalizadas del SDK de .NET Core no deben 
 
 ## <a name="see-also"></a>Vea también
 
-- [Telemetría de la CLI de .NET Core: datos del segundo trimestre de 2019](https://dotnet.microsoft.com/platform/telemetry/dotnet-core-cli-2019q2)
+- [Datos de telemetría de la CLI de .NET Core](https://dotnet.microsoft.com/platform/telemetry)
 - [Fuente de referencia de telemetría (repositorio dotnet/sdk)](https://github.com/dotnet/sdk/tree/master/src/Cli/dotnet/Telemetry)

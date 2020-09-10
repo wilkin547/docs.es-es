@@ -1,13 +1,13 @@
 ---
 title: Uso de IHttpClientFactory para implementar solicitudes HTTP resistentes
 description: Aprenda a utilizar IHttpClientFactory, disponible a partir de .NET Core 2.1, para crear instancias de `HttpClient`, lo que le facilita su uso en sus aplicaciones.
-ms.date: 03/03/2020
-ms.openlocfilehash: ade26208a931faa456c8e267def2caef7a3f32de
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.date: 08/31/2020
+ms.openlocfilehash: 1df5432f215371b60722212cf706c28a4a5bb5f6
+ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507304"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89271833"
 ---
 # <a name="use-ihttpclientfactory-to-implement-resilient-http-requests"></a>Uso de IHttpClientFactory para implementar solicitudes HTTP resistentes
 
@@ -21,7 +21,7 @@ Aunque esta clase implementa `IDisposable`, no se aconseja declarar y crear inst
 
 Por tanto, `HttpClient` está diseñado para que se cree una instancia una vez y se reutilice durante la vida de una aplicación. Crear una instancia de una clase `HttpClient` para cada solicitud agotará el número de sockets disponibles bajo cargas pesadas. Ese problema generará errores `SocketException`. Los enfoques posibles para solucionar ese problema se basan en la creación del objeto `HttpClient` como singleton o estático, como se explica en este [artículo de Microsoft sobre el uso de HttpClient](../../../csharp/tutorials/console-webapiclient.md). Puede tratarse de una buena solución para las aplicaciones de consola de corta duración o elementos similares que se ejecutan varias veces al día.
 
-Otro problema al que los desarrolladores deben hacer frente es cuando se usa una instancia compartida de `HttpClient` en procesos de larga duración. En una situación en la que se crean instancias del HttpClient como un singleton o un objeto estático, los cambios de DNS no se pueden controlar, tal y como se describe en esta [incidencia](https://github.com/dotnet/runtime/issues/18348) del repositorio de GitHub sobre dotnet/runtime.
+Otra incidencia a la que los desarrolladores deben hacer frente es cuando se usa una instancia compartida de `HttpClient` en procesos de larga duración. En una situación en la que se crean instancias del HttpClient como un singleton o un objeto estático, los cambios de DNS no se pueden controlar, tal y como se describe en esta [incidencia](https://github.com/dotnet/runtime/issues/18348) del repositorio de GitHub sobre dotnet/runtime.
 
 Realmente el problema no está en `HttpClient`, sino en el [constructor predeterminado de HttpClient](https://docs.microsoft.com/dotnet/api/system.net.http.httpclient.-ctor?view=netcore-3.1#System_Net_Http_HttpClient__ctor), ya que crea una instancia concreta de <xref:System.Net.Http.HttpMessageHandler>, que es la que plantea los problemas de *agotamiento de sockets* y los cambios de DNS mencionados anteriormente.
 
@@ -151,13 +151,13 @@ public class CatalogService : ICatalogService
 }
 ```
 
-El cliente con tipo (`CatalogService` en el ejemplo) se activa mediante la inserción de dependencias, lo que significa que puede aceptar cualquier servicio registrado en su constructor, además de `HttpClient`.
+El cliente con tipo (`CatalogService` en el ejemplo) se activa mediante DI (inserción de dependencias), lo que significa que puede aceptar cualquier servicio registrado en su constructor, además de `HttpClient`.
 
-Un cliente con tipo es, de hecho, un objeto transitorio, lo que significa que se crea una instancia cada vez que se necesita una y que recibirá una instancia de `HttpClient` nueva cada vez se construya. Pero los objetos `HttpMessageHandler` del grupo son los objetos que varias instancias de `HttpClient` reutilizan.
+Un cliente con tipo es realmente un objeto transitorio, lo que significa que, cada vez que se necesita uno, se crea una instancia. Recibe una nueva instancia de `HttpClient` cada vez que se construye. Pero los objetos `HttpMessageHandler` del grupo son los objetos que varias instancias de `HttpClient` reutilizan.
 
 ### <a name="use-your-typed-client-classes"></a>Usar las clases de cliente con tipo
 
-Por último, una vez que las clases con tipo se implementan y se registran y configuran con `AddHttpClient()`, se pueden usar en cualquier lugar donde haya servicios insertados mediante la inserción de dependencias, por ejemplo, en cualquier código de Razor Pages o cualquier controlador de una aplicación web MVC, como en el código siguiente de eShopOnContainers:
+Por último, una vez que haya implementado las clases con tipo, puede registrarlas y configurarlas con `AddHttpClient()`. Después, puede usarlas dondequiera que los servicios se inserten mediante DI. por ejemplo, en cualquier código de Razor Pages o cualquier controlador de una aplicación web MVC, como en el código siguiente de eShopOnContainers:
 
 ```csharp
 namespace Microsoft.eShopOnContainers.WebMVC.Controllers
@@ -186,7 +186,7 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
 }
 ```
 
-Hasta el momento, el código que se ha mostrado solo realiza solicitudes HTTP convencionales, pero la "magia" aparecerá en las secciones siguientes donde, con tan solo agregar directivas y controladores de delegación a los clientes con tipo registrados, todas las solicitudes HTTP que `HttpClient` va a realizar se comportarán teniendo en cuenta las directivas de resistencia como los reintentos con retroceso exponencial, los interruptores o cualquier otro controlador de delegación personalizado para implementar características de seguridad adicionales, como el uso de tokens de autenticación, o bien cualquier otra característica personalizada.
+Hasta ahora, el fragmento de código anterior solo ha mostrado el ejemplo de realizar solicitudes HTTP normales. Pero la "magia" viene en las secciones siguientes, donde se muestra cómo todas las solicitudes HTTP que realiza `HttpClient` pueden tener directivas resistentes como, por ejemplo, reintentos con retroceso exponencial, disyuntores, características de seguridad que usan tokens de autenticación o incluso cualquier otra característica personalizada. Y todo esto se puede hacer simplemente agregando directivas y delegando controladores a los clientes con tipo registrados.
 
 ## <a name="additional-resources"></a>Recursos adicionales
 

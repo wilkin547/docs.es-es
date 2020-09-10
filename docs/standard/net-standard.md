@@ -5,12 +5,12 @@ ms.date: 02/13/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: b52d69756d85e3e422b798c3ac7d53de3b538b8d
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: e96a03ca55682d3e30bc13fb20a8e443105301fc
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87167404"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359316"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -92,7 +92,7 @@ La especificación no es única, sino que se trata de un conjunto de API con ver
 
 .NET Standard no es específico de ninguna implementación de .NET ni coincide con el esquema de control de versiones de ningún entorno de ejecución.
 
-Las API agregadas a cualquier implementación (por ejemplo, .NET Framework, .NET Core y Mono) pueden considerarse candidatas para agregarse a la especificación, sobre todo si se consideran fundamentales por su naturaleza. Las nuevas [versiones de .NET Standard](https://github.com/dotnet/standard/blob/master/docs/versions.md) se crean en función de las versiones de la implementación de .NET, lo que permite establecer como destino nuevas API desde una PCL de .NET Standard. Los mecanismos de control de versiones se describen con más detalle en [Control de versiones de .NET Core](../core/versions/index.md).
+Las API agregadas a cualquier implementación de .NET (por ejemplo, .NET Framework, .NET Core y Mono) pueden considerarse candidatas para agregarse a la especificación, sobre todo si se consideran fundamentales por su naturaleza. Las nuevas [versiones de .NET Standard](https://github.com/dotnet/standard/blob/master/docs/versions.md) se crean en función de las versiones de la implementación de .NET, lo que permite establecer como destino nuevas API desde una Biblioteca de clases portable (PLC) de .NET Standard. Los mecanismos de control de versiones se describen con más detalle en [Control de versiones de .NET Core](../core/versions/index.md).
 
 El control de versiones de .NET Standard es importante para su uso. Dada una versión de .NET Standard, puede usar bibliotecas que tengan como destino esa misma versión o una inferior. En el enfoque siguiente se describe el flujo de trabajo para el uso de PCL de .NET Standard específicas para tener como destino .NET Standard.
 

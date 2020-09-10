@@ -4,12 +4,12 @@ description: Describe los componentes de la arquitectura .NET, como .NET Standar
 author: cartermp
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 027fdb4cec47550f88f6930a4bbdff4ab5cdfb36
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 2fc8bcea59cd2ba652b88644677f077d62994ca4
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344164"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414739"
 ---
 # <a name="net-architectural-components"></a>Componentes de la arquitectura .NET
 
@@ -38,7 +38,7 @@ Hay cuatro implementaciones principales de .NET que Microsoft desarrolla y manti
 
 .NET Core es una implementación multiplataforma de .NET diseñada para controlar cargas de trabajo de servidor y en la nube a escala. Se ejecuta en Windows, macOS y Linux. Implementa .NET Standard, de forma que cualquier código que tenga como destino .NET Standard se puede ejecutar en .NET Core. [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core), [Windows Forms](../framework/winforms/windows-forms-overview.md) y [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) se ejecutan todos en .NET Core.
 
-Para obtener más información sobre .NET Core, consulte [Guía de .NET Core](../core/index.yml) y [Selección entre .NET Core y .NET Framework para aplicaciones de servidor](choosing-core-framework-server.md).
+Para obtener más información sobre .NET Core, consulte [Guía de .NET Core](../core/introduction.md) y [Selección entre .NET Core y .NET Framework para aplicaciones de servidor](choosing-core-framework-server.md).
 
 ### <a name="net-framework"></a>.NET Framework
 
@@ -106,8 +106,8 @@ Los documentos ISO/IEC oficiales están disponibles en la página ISO/IEC [Está
 ## <a name="see-also"></a>Vea también
 
 - [Selección entre .NET Core y .NET Framework para aplicaciones de servidor](choosing-core-framework-server.md)
-- [.NET Standard](net-standard.md)
-- [Guía de .NET Core](../core/index.yml)
+- [Introducción a .NET Standard](net-standard.md)
+- [Introducción a .NET Core](../core/introduction.md)
 - [Guía de .NET Framework](../framework/index.yml)
 - [Guía de C#](../csharp/index.yml)
 - [Guía de F#](../fsharp/index.yml)

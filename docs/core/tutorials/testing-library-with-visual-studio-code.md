@@ -2,12 +2,12 @@
 title: Prueba de una biblioteca de clases .NET Standard con .NET Core mediante Visual Studio Code
 description: Cree un proyecto de prueba unitaria para una biblioteca de clases de .NET Core. Compruebe que la biblioteca de clases de .NET Core funciona correctamente con pruebas unitarias.
 ms.date: 06/08/2020
-ms.openlocfilehash: b5f394b5dea2bf0b4af6e8b119df3fa0ec113dd3
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: f49974e1b918424ae5b5d7f3969f52c371e37154
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811722"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359173"
 ---
 # <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio-code"></a>Tutorial: Prueba de una biblioteca de clases .NET Standard con .NET Core mediante Visual Studio Code
 
@@ -15,7 +15,7 @@ En este tutorial se muestra cómo automatizar las pruebas unitarias mediante la 
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Este tutorial funciona con la solución que se crea en [Creación de una biblioteca de .NET Standard en Visual Studio Code](library-with-visual-studio-code.md).
+- Este tutorial funciona con la solución que se crea en [Creación de una biblioteca de .NET Standard con Visual Studio Code](library-with-visual-studio-code.md).
 
 ## <a name="create-a-unit-test-project"></a>Crear un proyecto de prueba unitaria
 
@@ -23,7 +23,7 @@ Las pruebas unitarias proporcionan pruebas de software automatizadas durante el 
 
 1. Inicie Visual Studio Code.
 
-1. Abra la solución `ClassLibraryProjects` que creó en [Creación de una biblioteca de .NET Standard en Visual Studio](library-with-visual-studio.md).
+1. Abra la solución `ClassLibraryProjects` que creó en [Creación de una biblioteca .NET Standard con Visual Studio Code](library-with-visual-studio-code.md).
 
 1. Cree un proyecto de prueba unitaria denominado "StringLibraryTest".
 
@@ -193,4 +193,4 @@ Si publica una biblioteca como un paquete NuGet, otros usuarios pueden instalarl
 No es necesario distribuir una biblioteca como un paquete. Se puede agrupar con una aplicación de consola que la use. Para aprender a publicar una aplicación de consola, vea el tutorial anterior de esta serie:
 
 > [!div class="nextstepaction"]
-> [Publicación de una aplicación de consola de .NET Core con Visual Studio Code](publishing-with-visual-studio-code.md)
+> [Publicación de una aplicación de consola de .NET Core con Visual Studio Code](publishing-with-visual-studio-code.md)

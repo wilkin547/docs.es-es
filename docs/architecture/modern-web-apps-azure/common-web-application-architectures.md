@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Exp
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: c9a8e9450d81ac2e63a8c8ea54592ed81e646e05
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: de90db9061d0b7bd15141b277ae4272b5208f76b
+ms.sourcegitcommit: b78018c850590dfc0348301e1748b779c28604cc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988133"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89379166"
 ---
 # <a name="common-web-application-architectures"></a>Arquitecturas de aplicaciones web comunes
 
@@ -145,28 +145,34 @@ Para las aplicaciones monolíticas, los proyectos de núcleo de la aplicación, 
 
 En una solución de arquitectura limpia, cada proyecto tiene responsabilidades claras. Por tanto, algunos tipos pertenecen a cada proyecto y con frecuencia encontrará las carpetas correspondientes a estos tipos en el proyecto adecuado.
 
+#### <a name="application-core"></a>Núcleo de aplicación
+
 El núcleo de la aplicación contiene el modelo de negocio, que incluye entidades, servicios e interfaces. Estas interfaces incluyen abstracciones para las operaciones que se llevarán a cabo mediante la infraestructura, como el acceso a datos, el acceso al sistema de archivos, las llamadas de red, etc. En ocasiones los servicios o interfaces definidos en este nivel tendrán que trabajar con tipos sin entidad que no tienen dependencias en la interfaz de usuario o la infraestructura. Estos se pueden definir como Objetos de transferencia de datos (DTO) simples.
 
-### <a name="application-core-types"></a>Tipos de núcleo de la aplicación
+##### <a name="application-core-types"></a>Tipos de núcleo de la aplicación
 
 - Entidades (las clases de modelo de negocio que se conservan)
 - Interfaces
 - Servicios
 - DTO
 
+#### <a name="infrastructure"></a>Infraestructura
+
 El proyecto de infraestructura incluye normalmente las implementaciones de acceso a datos. En una aplicación web ASP.NET Core típica, estas implementaciones incluyen DbContext de Entity Framework (EF), todos los objetos `Migration` de EF Core que se hayan definido y las clases de implementación de acceso a datos. La manera más común de abstraer el código de implementación de acceso a datos consiste en usar el [modelo de diseño de repositorio](https://deviq.com/repository-pattern/).
 
 Además de las implementaciones de acceso a datos, el proyecto de infraestructura debe contener las implementaciones de los servicios que tienen que interactuar con los intereses de infraestructura. Estos servicios deben implementar interfaces definidas en el núcleo de la aplicación, por lo que la infraestructura deberá tener una referencia al proyecto del núcleo de la aplicación.
 
-### <a name="infrastructure-types"></a>Tipos de infraestructura
+##### <a name="infrastructure-types"></a>Tipos de infraestructura
 
 - Tipos de EF Core (`DbContext`, `Migration`)
 - Tipos de implementación de acceso a datos (Repositorios)
 - Servicios específicos de la infraestructura (por ejemplo, `FileLogger` o `SmtpNotifier`)
 
+#### <a name="ui-layer"></a>Capa de interfaz de usuario
+
 La capa de interfaz de usuario en una aplicación ASP.NET Core MVC es el punto de entrada para la aplicación. Este proyecto debe hacer referencia al proyecto Application Core y sus tipos deben interactuar con la infraestructura estrictamente a través de las interfaces definidas en Application Core. En la capa de interfaz de usuario no se debe permitir la creación de instancias directas o llamadas estáticas a los tipos de la capa de infraestructura.
 
-### <a name="ui-layer-types"></a>Tipos de capa de interfaz de usuario
+##### <a name="ui-layer-types"></a>Tipos de capa de interfaz de usuario
 
 - Controladores
 - Filtros

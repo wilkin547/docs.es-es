@@ -3,12 +3,12 @@ title: Propiedades
 description: Obtenga información sobre las propiedades de C#, que incluyen características para la validación, valores calculados, evaluación diferida y notificaciones de cambio de propiedad.
 ms.technology: csharp-fundamentals
 ms.date: 04/25/2018
-ms.openlocfilehash: bda8a4f58f71b57248296dd4ba9f9bf4cbed40d4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 28050a77e1f7b0ac148bba6112aa79ef4d46b710
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398692"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89358913"
 ---
 # <a name="properties"></a>Propiedades
 
@@ -73,7 +73,7 @@ Esa asignación produce una excepción `ArgumentException`. Dado que un descript
 
 Se puede extender esta misma sintaxis para todo lo que se necesite en el escenario. Se pueden comprobar las relaciones entre las diferentes propiedades o validar con respecto a cualquier condición externa. Todas las instrucciones de C# válidas son válidas en un descriptor de acceso de propiedad.
 
-### <a name="read-only"></a>De sólo lectura
+### <a name="read-only"></a>Solo lectura
 
 Hasta ahora, todas las definiciones de propiedad que se vieron son propiedades de lectura y escritura con descriptores de acceso públicos. No es la única accesibilidad válida para las propiedades.
 Se pueden crear propiedades de solo lectura, o proporcionar accesibilidad diferente a los descriptores de acceso set y get. Suponga que su clase `Person` solo debe habilitar el cambio del valor de la propiedad `FirstName` desde otros métodos de esa clase. Podría asignar al descriptor de acceso set la accesibilidad `private` en lugar de `public`:

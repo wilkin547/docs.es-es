@@ -2,12 +2,12 @@
 title: Bloques de creación de "programas" de C#
 description: Obtenga información sobre miembros, expresiones e instrucciones de C#. Los tipos contienen miembros que se escriben. Estos miembros se crean a partir de instrucciones y expresiones.
 ms.date: 08/06/2020
-ms.openlocfilehash: 142fe7b5a3424a8925638bfb4e4437392347f4c6
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: 3bdc6a4da6ae76148c7d1d5cb8ccb65d91fda61a
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88268145"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89358822"
 ---
 # <a name="program-building-blocks"></a>Bloques de creación de programas
 
@@ -192,8 +192,6 @@ Las *propiedades* son una extensión natural de los campos. Ambos son miembros c
 Una propiedad se declara como un campo, salvo que la declaración finaliza con un descriptor de acceso get o un descriptor de acceso set escrito entre los delimitadores `{` y `}` en lugar de finalizar en un punto y coma. Una propiedad que tiene un descriptor de acceso get y un descriptor de acceso set es una *propiedad de lectura y escritura*, una propiedad que tiene solo un descriptor de acceso get es una *propiedad de solo lectura* y una propiedad que tiene solo un descriptor de acceso set es una *propiedad de solo escritura*.
 
 Un descriptor de acceso get corresponde a un método sin parámetros con un valor devuelto del tipo de propiedad. Un descriptor de acceso set corresponde a un método con un solo parámetro denominado value y ningún tipo de valor devuelto. El descriptor de acceso get calcula el valor de la propiedad. El descriptor de acceso set proporciona un nuevo valor para la propiedad. Cuando la propiedad es el destino de una asignación, o el operando de `++` o `--`, se invoca al descriptor de acceso set. En otros casos en los que se hace referencia a la propiedad, se invoca al descriptor de acceso get.
-
- Cuando se hace referencia a una propiedad como el destino de una asignación o como el operando de ++ o--, el descriptor de acceso set se invoca con un argumento que proporciona el nuevo valor.
 
 La clase `MyList<T>` declara dos propiedades, `Count` y `Capacity`, que son de solo lectura y de lectura y escritura, respectivamente. El código siguiente es un ejemplo de uso de estas propiedades:
 

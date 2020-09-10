@@ -5,26 +5,26 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ff226ce3-f6b5-47a1-8d22-dc78b67e07f5
-ms.openlocfilehash: f3e28adc2cf7c24cee9ee344eb78404f01b79793
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2ec9415f63151443d5008fbce471fabeb89cdb91
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780721"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89656176"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>SqlDependency en una aplicación ASP.NET
-En el ejemplo de esta sección se muestra cómo utilizar <xref:System.Data.SqlClient.SqlDependency> de forma indirecta aprovechando el objeto <xref:System.Web.Caching.SqlCacheDependency> de ASP:NET. El objeto <xref:System.Web.Caching.SqlCacheDependency> utiliza <xref:System.Data.SqlClient.SqlDependency> para escuchar notificaciones y de actualizar correctamente la caché.  
+En el ejemplo de esta sección se muestra cómo usar <xref:System.Data.SqlClient.SqlDependency> indirectamente aprovechando el objeto <xref:System.Web.Caching.SqlCacheDependency> de ASP.NET. El objeto <xref:System.Web.Caching.SqlCacheDependency> usa <xref:System.Data.SqlClient.SqlDependency> para escuchar notificaciones y actualizar correctamente la memoria caché.  
   
 > [!NOTE]
 > En el código de ejemplo se supone que ha habilitado las notificaciones de consulta ejecutando los scripts en [habilitando las notificaciones de consulta](enabling-query-notifications.md).  
   
 ## <a name="about-the-sample-application"></a>Acerca de la aplicación de ejemplo  
- La aplicación de ejemplo utiliza una única página web de ASP.net para mostrar información de productos de la base de <xref:System.Web.UI.WebControls.GridView> datos de SQL Server AdventureWorks en un control. Cuando se carga la página, el código escribe la hora actual en un control <xref:System.Web.UI.WebControls.Label>. A continuación, se define un objeto <xref:System.Web.Caching.SqlCacheDependency> y se establecen las propiedades del objeto <xref:System.Web.Caching.Cache> para almacenar los datos de la caché durante tres minutos como máximo. Entonces el código se conecta a la base de datos y recupera los datos. Cuando la página está cargada y la aplicación se está ejecutando, ASP.NET recuperará datos de la caché, lo cual podrá comprobar si observa que la hora de la página no cambia. Si los datos que se supervisan cambian, ASP.NET invalida la caché y vuelve a llenar el control `GridView` con datos nuevos, actualizando la hora que se muestra en el control `Label`.  
+ La aplicación de ejemplo usa una única página web de ASP.NET para mostrar información de producto de la base de datos **AdventureWorks** de SQL Server en un control <xref:System.Web.UI.WebControls.GridView>. Cuando se carga la página, el código escribe la hora actual en un control de <xref:System.Web.UI.WebControls.Label>. A continuación, define un objeto de <xref:System.Web.Caching.SqlCacheDependency> y establece propiedades en el objeto <xref:System.Web.Caching.Cache> para almacenar los datos de la memoria caché durante un máximo de tres minutos. Después, el código se conecta a la base de datos y recupera los datos. Cuando se carga la página y la aplicación se ejecuta, ASP.NET recuperará los datos de la memoria caché, lo cual se puede comprobar observando que la hora de la página no cambia. Si los datos que se supervisan cambian, ASP.NET invalida la memoria caché y vuelve a rellenar el control `GridView` con datos nuevos, actualizando la hora que se muestra en el control `Label`.  
   
 ## <a name="creating-the-sample-application"></a>Crear la aplicación de ejemplo  
- Para crear y ejecutar la aplicación de ejemplo, siga estos pasos:  
+ Siga estos pasos para crear y ejecutar la aplicación de ejemplo:  
   
-1. Cree un nuevo sitio web ASP.NET.  
+1. Cree un nuevo sitio web de ASP.NET.  
   
 2. Agregue un control <xref:System.Web.UI.WebControls.Label> y <xref:System.Web.UI.WebControls.GridView> a la página Default.aspx.  
   
@@ -42,22 +42,26 @@ En el ejemplo de esta sección se muestra cómo utilizar <xref:System.Data.SqlCl
     using System.Web.Caching;  
     ```  
   
-4. Agregue el siguiente código al evento `Page_Load` de la página:  
+4. Agregue el siguiente código en el evento `Page_Load` de la página:  
   
      [!code-csharp[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#1)]
      [!code-vb[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#1)]  
   
-5. Agregue dos métodos del asistente: `GetConnectionString` y `GetSQL`. La cadena de conexión definida utiliza seguridad integrada. Tendrá que comprobar que la cuenta que está usando tiene los permisos de base de datos necesarios y que la base de datos de ejemplo, **AdventureWorks**, tiene habilitadas las notificaciones.
+5. Agregue dos métodos del asistente, `GetConnectionString` y `GetSQL`. La cadena de conexión definida usa seguridad integrada. Debe comprobar que la cuenta que usa dispone de los permisos de base de datos necesarios y que la base de datos de ejemplo, **AdventureWorks**, tiene habilitadas las notificaciones.
   
      [!code-csharp[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#2)]
      [!code-vb[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#2)]  
   
 ### <a name="testing-the-application"></a>Probar la aplicación  
- La aplicación almacena en caché los datos mostrados en el formulario web y los actualiza cada tres minutos si no hay ninguna actividad Si se produce un cambio en la base de datos, la caché se actualiza inmediatamente. Ejecute la aplicación desde Visual Studio, que carga la página en el explorador. La hora de actualización de la caché que se muestra indica la hora de la última actualización. Espere tres minutos y, a continuación, actualice la página, lo que dará lugar a un evento postback de datos. Observe que la hora que se muestra en la página ha cambiado. Si actualiza la página sin esperar los tres minutos, la hora mostrada será la misma.  
+ La aplicación almacena en caché los datos que se muestran en el formulario web y los actualiza cada tres minutos si no hay ninguna actividad. Si se produce un cambio en la base de datos, la caché se actualiza inmediatamente. Ejecute la aplicación desde Visual Studio, que carga la página en el explorador. La hora de actualización de la caché que se muestra indica cuándo se actualizó la memoria caché por última vez. Espere tres minutos y, a continuación, actualice la página, lo que hará que se produzca un evento de postback. Observe que la hora que se muestra en la página ha cambiado. Si actualiza la página en menos de tres minutos, la hora que se muestra en la página seguirá siendo la misma.  
   
- A continuación, actualice los datos de la base de datos mediante un comando UPDATE deTransact-SQL y actualice la página. La hora que se muestra indica ahora que la caché se ha actualizado con los datos nuevos de la base de datos. Tenga en cuenta que, aunque la caché está actualizada, la hora que se muestra en la página no cambia hasta que se produce un evento postback de datos.  
-  
-## <a name="see-also"></a>Vea también
+ Ahora, actualice los datos de la base de datos mediante un comando UPDATE de Transact-SQL y actualice la página. La hora que se muestra ahora indica que la memoria caché se ha actualizado con los nuevos datos de la base de datos. Tenga en cuenta que aunque la memoria caché se actualiza, la hora que se muestra en la página no cambia hasta que se produce un evento de postback.  
+
+## <a name="distributed-cache-synchronization-using-sql-dependency"></a>Sincronización de caché distribuida mediante la dependencia de SQL
+
+Algunas de las memorias caché distribuidas de terceros, como [NCache](https://www.alachisoft.com/ncache) , proporcionan compatibilidad para sincronizar la base de datos SQL y la memoria caché mediante la [dependencia de SQL](https://www.alachisoft.com/resources/docs/ncache/prog-guide/sql-dependency.html). Para obtener más información y un ejemplo de implementación de código fuente, vea [ejemplo de dependencia SQL de caché distribuida](https://github.com/Alachisoft/NCache-Samples/tree/master/dotnet/Dependencies/SQLDependency).
+
+## <a name="see-also"></a>Consulte también
 
 - [Notificaciones de consulta en SQL Server](query-notifications-in-sql-server.md)
-- [Información general sobre ADO.NET](../ado-net-overview.md)
+- [Información general de ADO.NET](../ado-net-overview.md)

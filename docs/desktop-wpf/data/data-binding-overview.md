@@ -7,12 +7,12 @@ ms.author: adegeo
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 829c93e97990b87e6e568614236de9708ef080d9
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 3c9615d7d79b5da1c180bb505f5f37b99aeae775
+ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325754"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89272002"
 ---
 # <a name="data-binding-overview-in-wpf"></a>Introducción al enlace de datos en WPF
 
@@ -173,12 +173,12 @@ Puede ser necesario aplicar lógica personalizada para que los datos sean signif
 
 Antes de entrar en otras características y usos del enlace de datos, resulta útil presentar la clase <xref:System.Windows.Data.BindingExpression>. Como hemos visto en las secciones anteriores, la clase <xref:System.Windows.Data.Binding> es la clase de alto nivel para la declaración de un enlace; proporciona muchas propiedades que permiten especificar las características de un enlace. Una clase relacionada, <xref:System.Windows.Data.BindingExpression>, es el objeto subyacente que mantiene la conexión entre el origen y el destino. Un enlace contiene toda la información que se puede compartir entre varias expresiones de enlace. Un <xref:System.Windows.Data.BindingExpression> es una expresión de instancia que no se puede compartir y contiene toda la información de instancia del <xref:System.Windows.Data.Binding>.
 
-En el ejemplo siguiente, `myDataObject` es una instancia de la clase `MyData`, `myBinding` es el objeto <xref:System.Windows.Data.Binding> de origen y `MyData` es una clase definida que contiene una propiedad de cadena denominada `MyDataProperty`. Aquí se enlaza el contenido de texto de `myText`, una instancia de <xref:System.Windows.Controls.TextBlock>, a `MyDataProperty`.
+En el ejemplo siguiente, `myDataObject` es una instancia de la clase `MyData`, `myBinding` es el objeto <xref:System.Windows.Data.Binding> de origen y `MyData` es una clase definida que contiene una propiedad de cadena denominada `ColorName`. Aquí se enlaza el contenido de texto de `myText`, una instancia de <xref:System.Windows.Controls.TextBlock>, a `ColorName`.
 
 [!code-csharp[CodeOnlyBinding](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/ManualBinding.cs#CodeOnlyBinding)]
 [!code-vb[CodeOnlyBinding](~/samples/snippets/desktop-guide/wpf/data-binding-overview/vb/ManualBinding.vb#CodeOnlyBinding)]
 
-Puede usar el mismo objeto *myBinding* para crear otros enlaces. Por ejemplo, puede usar el objeto *myBinding* para enlazar el contenido de texto de una casilla a *MyDataProperty*. En ese escenario, habrá dos instancias de <xref:System.Windows.Data.BindingExpression> que comparten el objeto *myBinding*.
+Puede usar el mismo objeto *myBinding* para crear otros enlaces. Por ejemplo, puede usar el objeto *myBinding* para enlazar el contenido de texto de una casilla a *ColorName*. En ese escenario, habrá dos instancias de <xref:System.Windows.Data.BindingExpression> que comparten el objeto *myBinding*.
 
 Se devuelve un objeto <xref:System.Windows.Data.BindingExpression> mediante una llamada a <xref:System.Windows.Data.BindingOperations.GetBindingExpression%2A> en un objeto enlazado a datos. En los artículos siguientes se muestran algunos de los usos de la clase <xref:System.Windows.Data.BindingExpression>:
 

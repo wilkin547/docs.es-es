@@ -2,12 +2,12 @@
 title: Cuándo elegir .NET Framework para contenedores de Docker
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Cuándo elegir .NET Framework para contenedores de Docker
 ms.date: 01/30/2020
-ms.openlocfilehash: 2697ae56eda104a0ee8e7bfcd79d3972943d1f79
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 116ba02878a60487f1af3c2b2e084307fad29618
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344990"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414427"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Cuándo elegir .NET Framework para contenedores de Docker
 
@@ -49,8 +49,8 @@ Mientras tanto, si cualquier plataforma o servicio en Azure todavía no es compa
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
-- **Guía de .NET Core** \
-  [https://docs.microsoft.com/dotnet/core/index](../../../core/index.yml)
+- **Aspectos básicos de .NET** \
+  [https://docs.microsoft.com/dotnet/fundamentals](../../../fundamentals/index.yml)
 
 - **Portabilidad a .NET Core desde .NET Framework** \
   [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)
