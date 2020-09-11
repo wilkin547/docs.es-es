@@ -3,12 +3,12 @@ title: 'Información general de las herramientas de diagnóstico: .NET Core'
 description: Información general de las herramientas y técnicas disponibles para diagnosticar las aplicaciones de .NET Core.
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: ae3b9a1961f331c9cdea786bd5fe06b7bfa10927
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 568f237e131cde18dad7c87ddff2fdd3d4bc5b8b
+ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558119"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89597980"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>¿Qué herramientas de diagnóstico están disponibles en .NET Core?
 
@@ -28,7 +28,11 @@ El [registro y seguimiento](logging-tracing.md) son técnicas relacionadas. Hace
 
 Las [pruebas unitarias](../testing/index.md) son un componente clave de la integración continua y la implementación de software de alta calidad. Las pruebas unitarias están diseñadas para brindarle una advertencia temprana cuando se daña algo.
 
-## <a name="net-core-dotnet-diagnostic-global-tools"></a>Herramientas globales de diagnóstico de dotnet de .NET Core
+## <a name="debug-linux-dumps"></a>Depuración de volcados de Linux
+
+[Depuración de volcados de Linux](debug-linux-dumps.md) explica cómo recopilar y analizar volcados en Linux.
+
+## <a name="net-core-diagnostic-global-tools"></a>Herramientas globales de diagnóstico de .NET Core
 
 ### <a name="dotnet-counters"></a>dotnet-counters
 
@@ -45,6 +49,14 @@ La herramienta [dotnet-gcdump](dotnet-gcdump.md) permite recopilar volcados de m
 ### <a name="dotnet-trace"></a>dotnet-trace
 
 .NET Core incluye lo que se denomina `EventPipe`, a través del cual se exponen los datos de diagnóstico. La herramienta [dotnet-trace](dotnet-trace.md) permite consumir datos interesantes sobre la generación de perfiles a partir de su aplicación, lo cual puede resultar útil para analizar la causa principal de que una aplicación se ejecute con lentitud.
+
+### <a name="dotnet-symbol"></a>dotnet-symbol
+
+[dotnet-symbol](dotnet-symbol.md) descarga archivos (símbolos, DAC/DBI, archivos de host, etc.) necesarios para abrir un volcado de núcleo o minivolcado. Use esta herramienta si necesita símbolos y módulos para depurar un archivo de volcado capturado en otro equipo.
+
+### <a name="dotnet-sos"></a>dotnet-sos
+
+[dotnet-SOS](dotnet-sos.md) se usa para instalar la [extensión de depuración de SOS](https://docs.microsoft.com/dotnet/framework/tools/sos-dll-sos-debugging-extension) en Linux o MacOS (o en Windows si se usan herramientas de depuración anteriores).
 
 ## <a name="net-core-diagnostics-tutorials"></a>Tutoriales de diagnóstico de .NET Core
 
