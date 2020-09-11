@@ -2,14 +2,14 @@
 title: Tutoriales de .NET Core
 description: Siga los tutoriales para aprender a compilar aplicaciones y bibliotecas de .NET Core en Mac, Linux y Windows.
 author: richlander
-ms.date: 03/16/2017
+ms.date: 09/09/2020
 titleSuffix: ''
-ms.openlocfilehash: 4bba8d48b3da7acb643ffa6a08468f40f1b1b415
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 84c8daa735df0255b0e383244f1abd8db4fe21fe
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656734"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89656163"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Explore estos tutoriales para obtener información sobre las herramientas de .NET Core y el SDK de .NET Core
 
@@ -42,8 +42,12 @@ Elija estos tutoriales si quiere usar Visual Studio Code u otro editor de códi
 ## <a name="use-visual-studio-for-mac"></a>Uso de Visual Studio para Mac
 
 - [Creación de una aplicación de consola](with-visual-studio-mac.md)
-- [Creación y prueba unitaria de una biblioteca](library-with-visual-studio-mac.md)
+- [Depuración de una aplicación](debugging-with-visual-studio-mac.md)
+- [Publicación de una aplicación](publishing-with-visual-studio-mac.md)
+- [Creación de una biblioteca de clases](library-with-visual-studio-mac.md)
+- [Prueba unitaria de una biblioteca de clases](testing-library-with-visual-studio-mac.md)
 - [Instalación y uso de un paquete](/nuget/quickstart/install-and-use-a-package-in-visual-studio-mac)
+- [Creación de una aplicación de consola en F#](../../fsharp/get-started/get-started-with-visual-studio-for-mac.md)
 
 ## <a name="advanced-topics"></a>Temas avanzados
 
